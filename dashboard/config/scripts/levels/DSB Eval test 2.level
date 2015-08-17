@@ -42,7 +42,7 @@
           <mutation>
             <arg name="a"/>
             <arg name="b"/>
-            <outputtype>string</outputtype>
+            <outputtype>String</outputtype>
           </mutation>
           <title name="NAME">concat</title>
           <functional_input name="STACK">
@@ -50,7 +50,7 @@
               <functional_input name="FIRST">
                 <block type="functional_parameters_get">
                   <mutation>
-                    <outputtype>string</outputtype>
+                    <outputtype>String</outputtype>
                   </mutation>
                   <title name="VAR">a</title>
                 </block>
@@ -58,7 +58,7 @@
               <functional_input name="SECOND">
                 <block type="functional_parameters_get">
                   <mutation>
-                    <outputtype>string</outputtype>
+                    <outputtype>String</outputtype>
                   </mutation>
                   <title name="VAR">b</title>
                 </block>

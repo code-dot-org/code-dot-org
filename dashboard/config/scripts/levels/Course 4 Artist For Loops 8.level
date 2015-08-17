@@ -21,7 +21,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "The smallest line of this square spiral is 10, the largest is 200, and each line is 10 pixels longer than the last. \r\n\r\n<br/>\r\nCan you fill in the missing blocks to complete this awesome picture?\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -127,6 +136,11 @@
           </block>
           <block type="variables_get">
             <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
           </block>
         </category>
       </xml>

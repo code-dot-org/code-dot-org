@@ -14,6 +14,14 @@ social:
   "og:video:type": ""
 ---
 
+# Parceiros de Brasil
+
+<%= view :logos_with_description, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'br_long') %>
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'br_short') %>
+
+---
+
 # Principais parceiros dos EUA e doadores corporativos
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major') %>

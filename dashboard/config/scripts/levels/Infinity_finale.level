@@ -1,0 +1,104 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-01-20T02:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "infinity",
+    "background": "grassy",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "maze": "[[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Create anything you like and share it!",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "min_workspace_height": "900"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setSprite">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"anna"</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">any_actor</title>
+        </block>
+        <block type="studio_repeatForever"/>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">hit</title>
+        </block>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"projectile_hiro"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there!</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

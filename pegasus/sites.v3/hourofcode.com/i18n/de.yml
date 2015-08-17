@@ -25,7 +25,7 @@ de:
   company_teachforamerica: Teach for America
   company_tntp: TNTP
   prizes_all: Preise für jeden Veranstalter
-  prizes_every_organizer: 'Jeder Veranstalter einer Hour of Code erhält Guthaben von Dropbox oder Skype  als Dankeschön'
+  prizes_every_organizer: 'Jeder Hour of Code Veranstalter erhält Dropbox- oder Skype-Guthaben  als Dankeschön'
   prizes_technology: In jedem US-Bundesstaat sowie in Washington DC gewinnt je eine staatliche Schule Preise im Wert von 10.000 US-Dollar
   prizes_tech_chats: '# Klassen werden Video-Chats mit besonderen Gästen gewinnen'
   prizes_robots: 100 Klassen werden einen Satz programmierbarer Roboten gewinnen
@@ -38,6 +38,10 @@ de:
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Eine Hour of Code fördern</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>absolvierten eine</h3><h2>HOUR of CODE</h2>'
   anybody_can_learn: Jeder kann es lernen.
+  share_on_facebook: Auf Facebook teilen
+  share_on_twitter: Über Twitter teilen
+  beyond_an_hour: Über eine Stunde Code
+  get_started: Start
   register_now: Jetzt registrieren
   front_join_us_heading: Eine Hour of Code für jeden Schüler.
   front_join_us_description: Informatik ist Grundlagenwissen für jeden Schüler. Helfen Sie uns, dieses Wissen 100 Millionen Schülern weiterzugeben.
@@ -89,12 +93,12 @@ de:
   signup_thank_you_message: Wir schicken dir eine Bestätigungsmail, mit Informationen um dir beim Einstieg zu helfen.
   map_header: Hour of Code Veranstaltungen auf der ganzen Welt
   map_header_company: '# von Firmen organisiert'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Suche nach Hour of Code Veranstaltungen
+  map_search_search: Suche
+  map_search_reset: Zurücksetzen
+  meta_tag_og_title: Die Hour of Code ist hier
   meta_tag_og_description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Die Hour of Code ist hier
   meta_tag_twitter_description: Die Hour of Code ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Ländern mit über 30 Sprachen erreicht. Alter von 4 bis 104 Jahre.
   twitter_default_text: 'Ich nehme dieses Jahr an der #HourOfCode teil, und Du? @codeorg'
   hardware_prizes_form_name_label: Dein Name
@@ -144,7 +148,7 @@ de:
   hoc_faq_frozen_q: Wo ist das Tutorial mit Anna und Elsa?
   hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -191,7 +195,7 @@ de:
   events_orgs_title: Alle Hour-of-Code-Veranstaltungen von Partnerorganisationen
   event: Veranstaltung
   events: Veranstaltungen
-  footer_copyright_message: Copyright 2014 Code.org. Alle Rechte vorbehalten.
+  footer_copyright_message: Copyright 2015 Code.org. Alle Rechte vorbehalten.
   footer_trademark_message: Hour of Code™ ist eine Marke von Code.org.
   footer_menu_partners: Partner
   footer_menu_contact: Kontakt

@@ -44,11 +44,11 @@ ru:
           Jigsaw: Этап 1
         Step Levels:
           desc: Лабиринт (бета)
-          MazeStep: Stage Step
+          MazeStep: Шаг этапа
         edit-code:
           desc: Редактировать код (beta)
           MazeEC: Этап 1
-          Webapp: Этап 2
+          Applab: Этап 2
           ArtistEC: Этап 3
           StudioEC: Этап 4
         events:
@@ -66,7 +66,7 @@ ru:
           Jigsaw: Этап 1
         step:
           desc: Лабиринт (бета)
-          MazeStep: Stage Step
+          MazeStep: Шаг этапа
         wordsearch:
           desc: Пишущая пчела (бета)
           WordSearch: Этап 1
@@ -98,11 +98,13 @@ ru:
         Flappy: Порхающая птичка
         Jigsaw: Головоломки
         MazeStep: 'Лабиринт: Пошаговый режим'
-        Wordsearch: Wordsearch
-        Webapp: Веб приложение
+        Wordsearch: Поиск по слову
+        Webapp: Лаборатория Программ
         ArtistEC: Художник
-        TextMatch: Text Match
+        TextMatch: Совпадения
         StudioEC: Лаборатория игр
+        Applab: Лаборатория Программ
+        NetSim: Интернет симулятор
     trophy:
       name:
         Bronze: Бронзовый
@@ -203,7 +205,7 @@ ru:
         turtle_3_5: 'Теперь создай новую процедуру «нарисовать дом» и используй её, чтобы обеспечить  двух кошек жильём. Подсказка: Создай новую процедуру с помощью блока «выполнить что-то» и введи свой  текст в  названии блока.'
         turtle_3_6: 'Используя «нарисовать квадрат» в качестве примера, добавь параметр с именем «длина» в процедуру «нарисовать треугольник». Затем нарисуй треугольники разных размеров. (Подсказка: нажми на звездочку для добавления параметра к процедуре)'
         turtle_3_7: Добавь параметр с именем «длина» в процедуре «нарисовать дом» и построй большой дом для слона (со сторонами длиной 150)
-        turtle_3_8: 'Здесь есть все блоки из предыдущей головоломки.  Измени «нарисовать дом» так, чтобы после рисования нового дома я оказывался в правом нижнем углу. Используй эту изменённую процедуру, чтобы нарисовать три дома.'
+        turtle_3_8: Измените «нарисовать дом» так, чтобы после рисования нового дома я находился в правом нижнем углу. Используйте эту функцию, чтобы нарисовать три дома.
         turtle_3_9: 'Сможешь ли ты самостоятельно переделать процедуру "нарисовать дом"? Попытайся, а потом нарисуй ряд домов.'
         turtle_3_10: Ты многое узнал! Теперь используй своё знание, чтобы нарисовать то, что хочешь. Попробуй, например, нарисовать звезду, спираль или необычную снежинку.
         maze_karel_debug_seq_1: Добро пожаловать на отладку! Мой код не работает, как положено. Можешь найти ошибку и исправить её, чтобы я смогла выровнять поле для посадки?
@@ -225,36 +227,36 @@ ru:
         maze_3_2: Напиши мне программу, чтобы я мог добраться до свиньи.
         maze_3_3: Как мне добраться до хрюшки? Позаботься о том, чтобы я не влетел в ящик со взрывчаткой!
         maze_3_4: А-а-а-а! Напиши мне программу, чтобы я обошёл взрывчатку и добрался до свиньи.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Добавьте блок, "когда правая стрелка" и, "когда левая стрелка". Переместите весло, чтобы достигнуть конца обеих целей.'
-        bounce_3: 'Теперь попробуйте что-то типа "когда стрелка вверх". Переместите весло к финишу на самом верху.'
-        bounce_4: В этот раз тебе нужно добавить четыре блока. Перемести весло ко всем четырем конечным целям , чтобы решить эту головоломку.
+        bounce_1: 'Прикрепите блок к блоку "когда левая стрелка" и нажмите "Выполнить". Двигайте платформу, используя левую стрелку, чтобы достичь цели.'
+        bounce_2: 'Добавьте блоки "когда правая стрелка" и "когда левая стрелка". Переместите платформу, чтобы достичь конца обеих целей.'
+        bounce_3: 'Теперь попробуйте что-то типа блока "когда стрелка вверх". Переместите платформу к конечной цели на самом верху.'
+        bounce_4: В этот раз тебе нужно добавить четыре блока. Перемести платформу ко всем четырем конечным целям , чтобы решить эту головоломку.
         bounce_5: 'Мы собираемся отправить мячик в полет в низ до касания с веслом. Добавь блок "когда мячик врежется в весло",  чтобы обеспечить мячику путь до цели.'
         bounce_6: 'Теперь достижение цели на самом верху. Вам нужно добавить блок к обоим блокам "когда мяч ударяется", чтобы решить головоломку.'
         bounce_7: 'Добавь блок "когда" к каждому из блоков. Мячик будет скакать, пока не достигнет цели.'
-        bounce_10: 'Теперь цель наверху. Добавьте блок "зарабатывают очко", и "заработать очко сопернику" к блокам "когда шар у цели" и, "когда шар промазал", чтобы сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем Ваш противник забьет в двое больше.'
-        bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
-        bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        bounce_10: 'Теперь цель наверху. Добавьте блок "заработать очко", и "добавить очко сопернику" к блокам "когда шар у цели" и "когда шар промазал", чтобы сделать игру. Посмотрите, сколько очков Вы можете заработать, прежде чем Ваш противник забьет в двое больше.'
+        bounce_11: 'Теперь вы можете прикреплять другие блоки к блоку "когда запущено". Вы должны прикрепить новый блок "запустить новый мяч" в более чем одном месте. Кроме того, попробуйте изменить сцену или скорость ракетки и мяча, чтобы увидеть, сколько очков вы можете заработать, прежде чем ваш противник забьет дважды.'
+        bounce_12: Создайте собственную игру с мячиком. Вы можете менять любые визуальные эффекты и правила. Когда закончите, нажмите кнопку Готово, чтобы друзья могли попробовать вашу игру на своих телефонах.
+        Custom_builder: 'Перетаскивайте блоки из панели инструментов в рабочую область, чтобы создать уровень. Нажмите "Запустить", когда вы будете готовы.'
+        flappy_1: 'Прикрепите блок к блоку "когда клик", затем нажмите "Запустить". Нажмите на экран, чтобы передвинуть Флаппи к цели.'
         flappy_2: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
-        flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_3: 'Блок «при запуске» позволяет запускать код при запуске игры.  Попробуйте настроить уровень скорости и взмахов до цели.'
         flappy_4: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'
         flappy_5: 'Давайте сделаем доску очков и подсчитаем очки, когда Птичка пересекает последнее препятствие. Добавьте команду "когда пройдешь препятствие", и тогда получи очко за пролет Птички через определенное количество труб. '
-        flappy_6: Посмотри можешь ли ты заработать очко в более маленьком или более большом разрыве труб.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_6: Посмотрим, сможешь ли ты заработать очко делая взмах Flappy, либо более маленьким или более большим значением.
+        flappy_7: Далее, попробуйте изменить сцену, присоединив другой блок к блоку «при запуске».
         flappy_8: Визуальные эффекты можно задать в любое время, не только при запуске игры. Попробуй установить СЛУЧАЙНАЯ сцена, когда происходят другие события, например, когда проходятся препятствия.
-        flappy_9: 'Чтобы разнообразить игру, попробуйте когда птичка врежется об препятствие или ударится о землю вместо "конец игры" задать "присвоить значение очков 0".'
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
+        flappy_9: Сейчас, если ударишся об препятствие, то игра закончится. Вместо этого, установи количество очков на 0.
+        flappy_11: Создайте собственную игру Flappy. Вы можете изменить все визуальные эффекты и правила, даже гравитацию. Когда закончите, нажмите кнопку Готово, чтобы друзья могли попробовать вашу игру на своих телефонах.
+        flappy_k1_1: Сыграйте во Flappy
+        flappy_k1_2: 'Прикрепите блок к блоку "когда клик", затем нажмите "Запустить". Нажмите на экран, чтобы передвинуть Флаппи к цели.'
         flappy_k1_3: 'Мы также добавили немного земли. Добавь блок "когда коснется земли". Ваш код должен содержать "закончить игру", когда Птичка касается земли.'
-        flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
+        flappy_k1_4: 'Блок «при запуске» позволяет запускать код при запуске игры.  Попробуйте настроить уровень скорости и взмахов до цели.'
         flappy_k1_5: 'Птичка будет лететь через препятствие до тех пор, как вы не вставите команду, чтобы она могла разбиться. Подключите блок "когда врежешься в препятствие". Вам надо закончить игру, когда Птичка врежется на определенном количестве препятствий.'
         flappy_k1_6: 'Давайте сделаем доску очков и подсчитаем очки, когда Птичка пересекает последнее препятствие. Добавьте команду "когда пройдешь препятствие", и тогда получи очко за пролет Птички через определенное количество труб. '
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
-        flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
+        flappy_k1_7: Попробуй заработать несколько очков за преодоление препятствия
+        flappy_k1_8: Далее, попробуйте изменить сцену, присоединив другой блок к блоку «при запуске».
+        flappy_k1_9: Попробуйте изменить игрока, прикрепив блок «выбрать игрока» в блоке «при запуске».
         jigsaw_1: Нажмите на блок
         jigsaw_2: Перетащите блок к цели
         jigsaw_3: Собери картинку из блоков
@@ -280,40 +282,40 @@ ru:
         studio_c2_5: Можешь написать программу, чтобы осьминог сказал «Привет», при выборе его мышкой?
         studio_c2_6: Вы можете написать программу, чтобы заставить пингвина передвигаться с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
         studio_c2_7: Блок «repeat forever» позволяет запускать код непрерывно. Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз несколько раз?
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c2_8: 'Сможете заставить пингвина сказать "Ай!" и исполнить "звук удара", если он наткнется на динозавра, а затем передвинуть его с помощью стрелок, чтобы это произошло?'
+        studio_c2_9: Сможете добавить блок, чтобы добавить очки, когда пингвин натыкается на осьминога, а затем передвинуть его с помощью стрелок, чтобы заработать очки?
+        studio_c2_10: Сможете добавить блоки, чтобы изменить задний фон и скорость пингвина, а затем передвинуть его с помощью стрелок, чтобы заработать очки?
+        studio_c2_11: Создайте свою собственную историю. Когда закончите, нажмите кнопку Готово, чтобы друзья могли попробовать ваш рассказ на своих телефонах.
         studio_c3_story_1: Вы можете заставить собаку сказать «hello world»?
-        studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_c3_story_2: Можешь сделать так, чтобы сначала заговорила собака, а потом и кошка?
         studio_c3_story_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
         studio_c3_story_4: Вы можете написать программу, которая заставит собаку подойти к кошке, и сказать «hello», когда собака подойдет к нему?
-        studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
+        studio_c3_story_5: Можешь добавить блок, чтобы осьминог стал счастлив?
+        studio_c3_story_6: Создайте свою собственную историю. Когда закончите, нажмите кнопку Готово, чтобы друзья могли попробовать ваш рассказ на своих телефонах.
         studio_c3_game_1: Можешь написать программу, чтобы осьминог сказал «Привет», при выборе его мышкой?
         studio_c3_game_2: Вы можете написать программу, чтобы заставить пингвина передвигаться с помощью клавиш вверх / вниз / влево / вправо и поразить все цели?
         studio_c3_game_3: Блок «repeat forever» позволяет запускать код непрерывно. Вы сможете прикрепить блоки, чтобы переместить этого динозавра вверх и вниз несколько раз?
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
-        studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?
-        studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
-        studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_c3_game_4: 'Сможете заставить пингвина сказать "Ай!" и исполнить "звук удара", если он наткнется на динозавра, а затем передвинуть его с помощью стрелок, чтобы это произошло?'
+        studio_c3_game_5: Сможете добавить блок, чтобы добавить очки, когда пингвин натыкается на осьминога, а затем передвинуть его с помощью стрелок, чтобы заработать очки?
+        studio_c3_game_6: Сможете добавить блоки, чтобы изменить задний фон и скорость пингвина, а затем передвинуть его с помощью стрелок, чтобы заработать очки?
+        studio_c3_game_7: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
+        studio_playlab_1: 'Пингвин хочет сказать «Привет» - сможете помочь ему?'
+        studio_playlab_2: 'Пещерный Мальчик (актер 1) и Пещерная Девочка (актер 2) хотят сказать друг другу "привет". Можете помочь им, используя блок "сказать" дважды?'
+        studio_playlab_3: Поможете Теннисистке добраться до флага?
+        studio_playlab_4: 'Поможете Теннисисту (актер 1) добраться до Теннисистки (актер 2) и исполнить  звук, когда он доберется туда?'
+        studio_playlab_5: 'Поможете Космоботу сказать "приветствую, земляне" при щелчке мыши на нём? Не забудьте щёлкнуть мышкой после того, как выполните "Запустить"'
+        studio_playlab_6: Поможете Ведьме двигаться с помощь стрелок вверх/вниз/влево/вправо, чтобы добраться до всех волшебных огненных шаров?
+        studio_playlab_7: 'Блок "повторять бесконечно" позволяет исполнять код непрерывно. Сможете прикрепить к нему блок, чтобы помочь волшебнику двигаться влево и вправо многократно?'
+        studio_playlab_8: Можете разместить блоки так, чтобы добавлялся балл и исполнялся звук каждый раз, когда единорог прикасается к волшебнику, и переместить его стрелками, чтобы проверить свою программу?
+        studio_playlab_9: Установите фон для сцены инопланетного вторжения, и помогите Космоботу добраться до Инопланетянина быстрее, изменяя его скорость. Затем с помощью стрелок переместите Инопланетянина в Космобота и предупредите всех о вторжении
+        studio_playlab_10: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
+        studio_full_sandbox: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
         studio_k1_1: Вы можете заставить собаку сказать «hello world»?
-        studio_k1_2: Can you make the dog say something and then have the cat say something afterwards?
+        studio_k1_2: Можешь сделать так, чтобы сначала заговорила собака, а потом и кошка?
         studio_k1_3: Ты можешь написать программу, чтобы собака двигалась к кошке?
-        studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
-        studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        studio_k1_4: 'Сделай так, чтобы собака подошла к коту. После того как собака подойдет, кот должен сказать "привет".'
+        studio_k1_5: Можешь добавить блок, чтобы осьминог стал счастлив?
+        studio_k1_6: Создай свою собственную историю! Перемести кошку и собаку и сделай так, чтобы они говорили.
         maze_wordsearch_k_1: Перемести меня по буквам EAST
         maze_wordsearch_k_2: Перемести меня по буквам SOUTH
         maze_wordsearch_k_3: Перемести меня по буквам WEST
@@ -324,88 +326,16 @@ ru:
         maze_wordsearch_k_15: Перемести меня в одном направлении, потом в другом, по буквам ABOVE
         maze_wordsearch_k_16: Перемести меня в одном направлении, потом в другом, по буквам BELOW
         maze_wordsearch_k_20: Это проверка! Перемести меня в одном направлении, потом в другом, по буквам STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
-        turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
-        turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: 'Привет! Я - Эльза из Эренделла. Помоги мне провести простую линию.'
-      frozen perpendicular:
-        instructions: 'Теперь давай посмотрим, сможем ли мы провести две линии, находящиеся под углом 90 градусов друг к другу. Тебе нужно будет использовать блок "Повернуть" помимо блока "Двигаться вперёд".'
-      frozen square iterative:
-        instructions: Похоже, мы на полпути к тому, чтобы нарисовать квадрат. Давай соединим вместе 4 линии, чтобы получился квадрат.
-      frozen square loop:
-        instructions: 'Привет, я - Анна из Эренделла! Давай сделаем квадрат, используя блок "Повторить", так нам понадобится меньше блоков. Сколько раз (???)  блок "Повторить" должен повторить команды входящих в него блоков, чтобы получился квадрат?'
-      frozen square loop 3x:
-        instructions: Давай создадим три квадрата, поворачивая после каждого. Обязательно поворачивай на 120 градусов перед каждым новым квадратом.
-      frozen square snowflake:
-        instructions: 'Сможешь создать снежинку, используя блок "Повторить", чтобы 10 раз сделать квадрат, и блок "Повернуть", чтобы повернуть на 36 градусов между каждым квадратом?'
-      frozen cross:
-        instructions: Используй блок «Повторить», чтобы создать знак плюс. Обрати внимание, что Эльза может двигаться вперед и назад.
-      frozen cross rotate:
-        instructions: Теперь попробуй повторить это 10 раз. На сколько градусов необходимо повернуть между каждой линией?
-      frozen cross rotate dense:
-        instructions: 'Повторим это 90 раз! Сколько раз по 90 в 360? Подсказка: Это очень небольшое число.'
-      frozen diamond:
-        instructions: 'Создадим параллелограмм. Он похож на квадрат, но с разными углами: его углы 60 и 120 градусов вместо 90 градусов.'
-      frozen diamond mini snowflake:
-        instructions: Ты знаешь, что все снежинки разной формы? Давай создадим новую снежинку, используя блок «Повторить», чтобы 4 раза повторить параллелограмм, и поворачивая на 90 градусов вправо между каждым параллелограммом.
-      frozen diamond snowflake:
-        instructions: 'Теперь создадим новую снежинку с помощью блока "Повторить", чтобы повторить параллелограмм 10 раз, и поворачивая на 36 градусов между каждым из них.'
-      frozen circle:
-        instructions: 'Круг - это особая фигура. Можешь вычислить, какое число нужно поставить вместо вопросительных знаков, чтобы нарисовать круг?'
-      frozen circle function:
-        instructions: Используй новый блок «Создать круг» для создания 10 пересекающихся кругов. Не забывай прыгать вперед между кругами.
-      frozen circle function in circle:
-        instructions: Теперь создадим 20 пересекающихся кругов, поворачивая на 18 градусов после каждого круга.
-      frozen circle function with parameter:
-        instructions: Вот блок «Создать круг», который может делать круги разных размеров. Можете ли вы использовать его для создания маленького круга размером 5 и большего круга размером 10?
-      frozen snowflower:
-        instructions: Замысловатые снежные узоры можно создать с помощью очень простых форм. Сможете сделать шаблон, повторяя 5 кругов размером 5 и 5 кругов размером 10?
-      frozen snowflake branch:
-        instructions: 'Попробуй блок "Создать снежинку-ветвь", чтобы создать три луча, из которых почти получается снежинка.'
-      frozen snowflake full:
-        instructions: Теперь повторите 8 раз, чтобы сделать красивую снежинку!
-      frozen freeplay:
-        instructions: 'Теперь ты - настоящий художник! Создай зимнюю Страну чудес и поделись с друзьями.'
-      scrat 16:
-        instructions: 'Жёлудь! Жёлудь! Жёлудь! Используй блок "если", чтобы мне добраться до него с наименьшим количеством блоков.'
-      scrat 17:
-        instructions: 'Хорошо, давай ещё раз для тренировки - это задание не слишком отличается, но следи, чтобы я не упал!'
-      scrat 18:
-        instructions: 'Блоки "если/иначе" проверяют условие, после чего выполняют либо одно, ЛИБО другое действие. Чтобы помочь мне добраться до желудя, попробуй использовать новый блок.'
-      scrat 19:
-        instructions: 'Ещё один случай для использования блока "если/иначе"; сможешь сделать правильно с  первой попытки?'
-      scrat 20:
-        instructions: Сможешь добавить только 3 блока, чтобы помочь мне решить более сложный лабиринт? Если сделаешь правильно, я смогу пройти любой извилистый путь какой угодно длины. Поспеши! Лёд тает!
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        applab_ec_simple: Создай своё приложение используя блоки в панели инструментов.
+        turtle_ec_1_2: 'Теперь нарисуй квадрат. Примечание: Используй твой любимый цвет. Ты можешь выбрать его в новом блоке «Нов_цвет_пера».'
+        turtle_ec_1_10: 'Получилось! Теперь рисуй всё, что хочешь. Есть идеи: фигурка, снежинка или спираль. Попробуй также новый блок "установить ширину". Приятного рисования!'
+        studio_ec_sandbox: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
     video:
       name:
         maze_intro: 'Лабиринт - Введение'
         artist_intro: 'Художник - Введение'
         farmer_intro: 'Фермер - Введение'
-        flappy_intro: Вступление для летящей птички
+        flappy_intro: Вступление для Flappy
         loop_times: 'Блок "повторить несколько раз"'
         loop_until: 'Блок "повторять до"'
         if: 'Блок "если"'
@@ -428,20 +358,20 @@ ru:
         Unplug10: интернет
         Unplug11: Итоги
         C1_happy_maps_unplugged: Весёлые карты
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Переместить это, переместить это
         C1_bigevent_unplugged: Большое Событие
         C1_getting_loopy: Зацикливание
         C1_pair_programming: Программирование в парах
-        C1_maze_intro_sequencing: Maze Sequencing Intro
+        C1_maze_intro_sequencing: 'Лабиринт: введение в последовательности'
         C1_maze_debugging: 'Лабиринт: Отладка'
-        C1_bee_level_intro: 'Bee Level - Intro'
+        C1_bee_level_intro: 'Уровень пчелки: введение'
         C1_artist_intro: 'Художник - Введение'
         C1_spelling_bee_intro: 'Пишущая пчела: Введение'
         C1_zuck_repeat_loop: 'Лабиринт: Циклы'
         C1_bee_loops: 'Пчела: Циклы'
         C1_maze_loops: 'Лабиринт: Циклы'
         C1_playlab_storytelling: 'Лаборатория игр: Создай историю'
-        C1_planting_seed: Planting a Seed
+        C1_planting_seed: Посади семечко
         C1_building_foundation: Создание основы
         C1_going_places_safely: Безопасное путешествие
         C2_maze_intro: 'Лабиринт - Введение'
@@ -459,6 +389,7 @@ ru:
         C2_relay_programming: Эстафетное программирование
         C2_paper_airplanes: Бумажные самолётики
         C2_digital_footprint: Твой цифровой отпечаток
+        C2_digital_footprint_v2: Твой цифровой отпечаток
         C3_maze_level_4: 'Лабиринт: Циклы'
         C3_artist_intro: 'Художник - Введение'
         C3_artist_functions: 'Художник: Процедуры'
@@ -472,44 +403,76 @@ ru:
         C3_bounce: Прыжок
         C3_playlab_create_game: 'Лаборатория игр: Создай игру'
         C3_computational_thinking: Вычислительное мышление
-        C3_dice_race: Dice Race
+        C3_dice_race: Гонки Кубиков
         C3_internet: интернет
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
-        C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C3_crowdsourcing: Краудсорсинг
+        C3_functional_suncatchers: Функциональные витражи
+        C3_songwriting_with_parameters: Написание песен, используя параметры
+        C4_intro: Введение
+        C4_loops_zombie: Циклы
         C4_bee_conditional: 'Пчела: Условные команды'
-        C4_variables_artist: 'Variables - Artist'
-        C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
-        C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_variables_artist: 'Переменные: Художник'
+        C4_variables_playlab: 'Переменные: Лаборатория игр'
+        C4_for_loops: Циклы с параметром
+        C4_math_artist: Программирование Художника используя математику
+        C4_function_edit: Редактирование процедур
+        C4_function_create: Создание процедур
         C4_function_parameters: Процедуры с параметрами
         C4_conditionals: Условные команды
-        C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_algorithms: Алгоритмы с танграмами
+        C4_unplugged_madlibs: Пропуски
+        C4_unplugged_variables: Переменные в конвертах
+        C4_unplugged_forloops: Циклы с параметром
         C4_unplugged_parameters: Написание песен с параметрами
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Двоичный
         frozen_intro: Введение в Час кода
         frozen_loops: Знакомство с циклами
         frozen_functions: Знакомство с функциями
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_intro: Введение в лабораторию игр
+        playlab_events: 'Лаборатория игр - события'
+        playlab_repeat_forever: 'Лаборатория игр: Повторять бесконечно'
+        tutorial_puzzle_challenge: 'Урок - Головоломка'
+        infinity_playlab_intro: 'Лаборатория игр - введение'
+        infinity_playlab_events: 'Лаборатория игр - события'
+        infinity_playlab_repeat_forever: 'Лаборатория игр - повторять бесконечно'
+        csp_concept_rgb: Немного о пикселях
+        csp_pixelation_color_1: 'Инструмент пикселизации цвета - часть 1'
+        csp_pixelation_color_2: 'Инструмент пикселизации цвета - часть 2'
+        csp_pixelation_color_3: 'Инструмент пикселизации цвета - часть 3'
+        csp_pixelation_bw: Инструмент пикселизации чёрного и белого
+        csp_U1L14_tipstricks: 'Модуль 1, урок 14: советы для учителей'
+        csp_textcompression: Виджет сжатия текста
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
+        alg_1_intro: 'Информатика в Алгебре - Введение'
+        alg_2_eval_block: 'Информатика в Алгебре - Блоки Оценивания'
+        alg_3_pemdas: 'Информатика в Алгебре - Порядок Операций'
+        alg_4_data_types: 'Информатика в Алгебре - Типы Данных'
+        alg_5_contracts: 'Информатика в Алгебре - Контракты'
+        alg_6_variables: 'Информатика в Алгебре - Переменные'
+        alg_7_function: 'Информатика в Алгебре - Функции'
+        alg_8_design_recipe: 'Информатика в Алгебре - Набор правил Структуры кода'
+        alg_9_booleans: 'Информатика в Алгебре - Логические значения'
+        alg_10_conditionals: 'Информатика в Алгебре - Условные команды'
+        alg_11_coordinate_plane: 'Информатика в Алгебре - Плоскость Координат'
+        alg_12_biggame_variables: 'Информатика в Алгебре - Большая Игра: Переменные'
+        alg_13_biggame_animation: 'Информатика в Алгебре - Большая Игра: Анимация'
+        alg_14_biggame_booleans: 'Информатика в Алгебре - Большая Игра: Логические значения'
+        alg_15_biggame_update_player: 'Информатика в Алгебре - Большая Игра: Обновление Игрока'
+        alg_16_biggame_collision_detection: 'Информатика в Алгебре - Большая Игра: Обнаружение Конфликтов'
+        alg_17_sambat_compound_booleans: 'Информатика в Алгебре - Составные Логические значения'
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
         run: Нажмите «Выполнить», чтобы протестировать вашу программу
         watch_again: Нажмите здесь, чтобы посмотреть видео еще раз
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
+        gray_block_explanation: Серые блоки нельзя удалять. Сможете решить головоломку не удаляя серые блоки?
         show_code_explanation: Нажмите здесь, чтобы увидеть код программы, которую вы делаете
         instructions_repeat_explanation: Инструкции для каждой головоломки здесь повторяются
         category_explanation: У вас есть все те же блоки, но сейчас они разложены по категориям
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: Type what you want your actor to say within these quotes
+        set_sprite_image: 'Прикрепите блок "установить изображение персонажа" к блоку "когда начнется история", чтобы использовать персонажа для этой истории'
+        studio_say_text: Между этими кавычками напишите фразу для вашего персонажа
         jigsaw_click: Нажмите этот блок!
         move_elsa_forward: 'Возьми блок "двигаться вперёд" и прицепи его к блоку "При запуске", чтобы Эльза пошла вперёд'
         turn_elsa: 'Используй блок "повернуть", чтобы Эльза повернулась. Число в выпадающем меню определяет, как сильно Эльза повернётся'
@@ -520,49 +483,53 @@ ru:
         repeat_blocks_2: '(2) Передвинь сюда блок "повторить" и помести серые блоки ему внутрь'
         snowflake_dropdown: Используй это меню для создания разных снежинок!
         degrees_per_side: Раздели 360 на число сторон, чтобы получить значение градуса каждого угла.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
+        set_sides: 'Воспользуйтесь этим блоком для установления числа "стороны", чтобы решить эту головоломку.'
+        set_length: 'Воспользуйтесь этим блоком, чтобы задать правильное значение "длины".'
+        which_equation: 'Какое уравнение сделает каждую сторону короче у  фигур с большим количеством сторон?'
+        get_nectar: 'Используйте новый блок "собрать нектар".'
+        actions_category: 'Панель инструментов теперь выглядит по новому! Используйте здесь блок "Действия".'
+        draw_square_hint: 'Подсказка: используйте цикл для квадрата, который вы создали в предыдущей головоломке.'
+        edit_function: Нажмите здесь для редактирования процедуры.
+        create_function: 'Нажмите здесь, чтобы открыть меню "Процедуры". Затем нажмите на кнопку "Создать Процедуру".'
+        house_hint: Ничего, если изображение пока не похоже на лошадку. Мы это исправим в следующей головоломке.
+        edit_draw_square: Используйте эту кнопку, чтобы редактировать процедуру и добавить цикл.
+        edit_get_nectar: Используйте эту кнопку, чтобы отредактировать процедуру и изменить направление полета пчелы для получения нектара.
+        logic_category: 'Откройте окно "Логика", чтобы найти блок "если/иначе".'
+        length_parameter: 'Можете изменить эту функцию, чтобы она использовала параметр "длина"?'
         frozen_diamond_repeat: 'Используй блок "повторить" для создания этой фигуры.'
         frozen_circle_function_in_circle_turn: Не забывай поворачивать после создания каждого круга.
         frozen_circle_function_with_parameter_circle: 'Используй блок "создать круг" и меняй размер.'
-        frozen_snowflake_branch: 'Используй блок "создать снежинку-ветвь"'
+        frozen_snowflake_branch: 'Используй блок "создать ветвь снежинки"'
         frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        playlab_drag_say: 'Перенесите сюда блок "говорить" и напишите "привет"'
+        playlab_use_twice: Используйте этот блок дважды, и не забудте изменить номер персонажа
+        playlab_move_girl: 'Используйте блок "переместить вправо", чтобы переместить теннисистку'
+        playlab_play_sound: 'Добавить блок "исполнить звук" здесь'
+        playlab_arrow_keys: 'Не забудьте использовать их, чтобы передвигать ведьму после нажатия на кнопку "Запустить"'
+        playlab_add_move: 'Добавьте блоки "переместить" во внутрь блока "повторять"'
+        playlab_add_score: Добавить блок результатов тут
+        playlab_add_blocks: Добавить блоки тут
+        set_variable: Перенесите сюда блок с числом, чтобы присвоить значение переменной
+        place_variable: Перенесите переменную во внутрь этого блока
+        bee_for_loop: Перенесите сюда наибольшее количество нектара, которое может забрать пчёлка
+        place_counter_variable: Перенесите переменную счётчика во внутрь этого блока
+        function_editor_draw_square: 'Это определение вашей процедуры. Эти блоки выполняются каждый раз, когда вы используете блок "нарисовать квадрат"'
+        change_here: Внести изменения
+        write_draw_square_function: Перенесите сюда блоки из панели инструментов, чтобы нарисовать квадрат
+        write_draw_triangle_function: Перенесите сюда блоки из панели инструментов, чтобы нарисовать треугольник
+        edit_add_parameter: Нажмите Редактировать, чтобы добавить параметр в вашу процедуру
+        add_and_drag_parameter: Напишите здесь название параметра, нажмите добавить, и затем перенесите его в определение процедуры
+        fill_in_actor: Заполните ??? числами, которые соответствуют каждому персонажу (1, 2, и 3)
+        repeat: Разместите блоки внутри цикла, чтобы команды повторялись
+        if_bee_nectar: 'Используйте блок "если", чтобы решить когда пчелка должна взять нектар'
+        if_else_bee: 'Ипользуйте блок "если/иначе" так, чтобы пчелка взяла нектар из цветка. А если это не цветок, чтобы сделала мёд'
+        repeat_full_circle: Введите сколько раз зомби должен переместиться, чтобы пройти по кругу
+        place_length_variable: Перенесите переменную длины сюда, чтобы заменить ею вопросительные знаки
+        arrows_move_actor: Используйте стрелки для перемещения персонажа
+        right_arrow_fireball: Используйте стрелку вправо для стрельбы огненными шарами
+        name_function: Напишите здесь название вашей процедуры
+        Infinity_move_right_runbutton: 'Добавьте сюда блок "двигаться"'
+        Infinity_move_directions_callout: Какой блок сделают Baymax переместить при нажатии стрелки вверх?
+        Infinity_move_directions_callout_arrow: Используйте эти стрелки, чтобы управлять
+        Infinity_move_collide_callout: Воспроизведение звука, когда происходит данное событие.
+        Infinity_repeat_callout: Место переместить блоки внутри здесь

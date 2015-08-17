@@ -55,7 +55,7 @@
         og smelltu á staðfestingarkrækjuna til að ljúka staðfestingu á nýju netfangi.
       updated: Breytingin á reikningi þínum tókst.
     sessions:
-      signed_in: Innskráning tókst.
+      signed_in: ''
       signed_out: Útskráning tókst.
     unlocks:
       send_instructions: Þú færð tölvupóst innan nokkurra mínútna með leiðbeiningum
@@ -75,3 +75,25 @@
       not_saved:
         one: '1 villa kom í veg fyrir vistun %{resource}:'
         other: '%{count} villur komu í veg fyrir vistun %{resource}:'
+    invitations:
+      send_instructions: Tölvupóstur með boði hefur verið sendur á %{email}.
+      invitation_token_invalid: Uppgefnar boðsupplýsingar passa ekki!
+      updated: Stilling lykilorðs tókst. Þú ert nú skráð/ur inn.
+      no_invitations_remaining: Engin boð eftir
+      invitation_removed: Boðið til þín var fjarlægt.
+      new:
+        header: Senda boð
+        submit_button: Senda boð
+      edit:
+        header: Stilla lykilorð
+        submit_button: Stilla lykilorðið mitt
+    mailer:
+      invitation_instructions:
+        subject: Leiðbeiningar varðandi boð
+        hello: Hæ %{email}
+        someone_invited_you: Einhver hefur boðið þér á %{url}. Þú getur þekkst boðið
+          í gegnum tengilinn hér fyrir neðan.
+        accept: Þekkjast boðið
+        ignore: Hunsaðu þennan tölvupóst ef þú vilt ekki þekkjast boðið.<br/>Aðgangur
+          þinn verður ekki búinn til nema að þú notir tengilinn hér fyrir neðan til
+          að stilla lykilorð þitt.

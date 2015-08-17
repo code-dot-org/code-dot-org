@@ -5,9 +5,8 @@ require 'cdo/graphics/certificate_image'
 module ApplicationHelper
 
   include LocaleHelper
-  include VideosHelper
   include ScriptLevelsHelper
-  include StagesHelper
+  include ViewOptionsHelper
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -41,62 +40,64 @@ module ApplicationHelper
     end
   end
 
-  def bullet_html
-    #raw "&#9679;"
-    image_tag('white-dot-grid.png')
-  end
-
   def check_mark_html
     #raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))
+  end
+
+  def activity_css_class(result)
+    if result.nil?
+      'not_tried'
+    elsif result >= Activity::SUBMITTED_RESULT
+      'submitted'
+    elsif result >= Activity::FREE_PLAY_RESULT
+      'perfect'
+    elsif result >= Activity::MINIMUM_PASS_RESULT
+      'passed'
+    else
+      'attempted'
+    end
   end
 
   def level_info(user, script_level)
     result =
       if user
         script_level.try(:user_level).try(:best_result)
-      elsif (session[:progress] && session[:progress][script_level.level_id])
-        result = session[:progress][script_level.level_id]
+      elsif session[:progress] && session[:progress][script_level.level_id]
+        session[:progress][script_level.level_id]
       end
-
-    css_class = if result.nil?
-                  'not_tried'
-                elsif result >= Activity::FREE_PLAY_RESULT
-                  'perfect'
-                elsif result >= Activity::MINIMUM_PASS_RESULT
-                  'passed'
-                else
-                  'attempted'
-                end
-    link = build_script_level_url(script_level)
-    [css_class, link]
+    activity_css_class(result)
   end
 
   def show_flashes
-    ret = ""
+    ret = ''
     if notice.present?
-      ret += content_tag(:div, flash.notice, {class: "alert alert-success"})
+      ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
       flash.notice = nil
     end
 
     if alert.present?
-      ret += content_tag(:div, flash.alert, {class: "alert alert-danger"})
+      ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
       flash.alert = nil
     end
 
     ret
   end
 
-  def canonical_hostname(domain)
-    CDO.canonical_hostname(domain)
-  end
-
   def code_org_root_path
-    'http://' + canonical_hostname('code.org')
+    CDO.code_org_url
   end
 
   def teacher_dashboard_url
-    "//#{canonical_hostname('code.org')}/teacher-dashboard"
+    CDO.code_org_url '/teacher-dashboard'
+  end
+
+  def teacher_dashboard_section_progress_url(section)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}"
+  end
+
+  def teacher_dashboard_student_progress_url(section, user)
+    CDO.code_org_url "/teacher-dashboard#/sections/#{section.id}/student/#{user.id}"
   end
 
   # used by devise to redirect user after signing in
@@ -120,26 +121,22 @@ module ApplicationHelper
     end
   end
 
-  def meta_image_url(params)
-    level_source = params[:level_source]
-    if level_source
-      app = level_source.level.game.app
-    else
-      app = params[:app]
-    end
-    
+  def meta_image_url(opts = {})
+    app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
+
     # playlab/studio and artist/turtle can have images
-    if level_source.try(:level_source_image).try(:image)
+    if opts[:level_source].try(:level_source_image).try(:image)
+      level_source = opts[:level_source]
       if level_source.level_source_image.s3?
-        if app == Game::ARTIST then
+        if app == Game::ARTIST
           level_source.level_source_image.s3_framed_url
         else
           level_source.level_source_image.s3_url
         end
       else
-        url_for(controller: "level_sources", action: "generate_image", id: level_source.id, only_path: false)
+        url_for(controller: 'level_sources', action: 'generate_image', id: level_source.id, only_path: false)
       end
-    elsif app == Game::FLAPPY || app == Game::BOUNCE || app == Game::STUDIO
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
@@ -181,14 +178,6 @@ module ApplicationHelper
     is_k1
   end
 
-  def playlab_freeplay_path
-    script_stage_script_level_path(*is_k1? ? ['course1', 16, 6] : ['playlab', 1, 10])
-  end
-
-  def artist_freeplay_path
-    script_stage_script_level_path(*is_k1? ? ['course1', 18, 10] : ['artist', 1, 10])
-  end
-  
   def script_certificate_image_url(user, script)
     if script.hoc?
       script_name = 'hoc'
@@ -198,5 +187,10 @@ module ApplicationHelper
       script_name = data_t_suffix('script.name', script.name, "title")
     end
     certificate_image_url(name: user.name, course: script_name)
+  end
+
+  def minifiable_shared_path(path)
+    return path if Rails.configuration.pretty_sharedjs
+    path.sub(/\.js$/, '.min.js')
   end
 end

@@ -2,6 +2,8 @@
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
 %script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,geometry&v=3.7"}
+%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 /[if lt IE 9]
@@ -86,12 +88,12 @@
       %label.control-label{for: "school-address"} Address (optional for online programs)
       %span.form-required-field *
       %div
-        %textarea#school-address.form-control{name: "school_address_s", placeholder: "School or program address", type: "text", required: true}
-          =school_address_s
+        %input#school-address.form-control{name: "school_address_s", placeholder: "School or program address", type: "text", required: true, value: school_address_s}/
     .form-group
       %label.control-label{for: "school-website"} Website
       %span.form-required-field *
-      %a{href: school_website_s[/\Ahttp:\/\//] || school_website_s[/\Ahttps:\/\//] ? school_website_s : "http://#{school_website_s}", target: "_blank", style: "float: right;"} (Open in new window)
+      - if mode == 'review'
+        %a{href: school_website_s[/\Ahttp:\/\//] || school_website_s[/\Ahttps:\/\//] ? school_website_s : "http://#{school_website_s}", target: "_blank", style: "float: right;"} (Open in new window)
       %div
         %input#school-website.form-control{name: "school_website_s", placeholder: "School or program website", type: "text", required: "", value: school_website_s}/
     .form-group
@@ -162,8 +164,12 @@
   %p Thank you for submitting information about your computer science program.
 
 :javascript
+  var geocomplete;
+
   $(document).ready(function() {
     $('#submit-school-form select').selectize();
+
+    geocomplete = $("#school-address").geocomplete();
 
     $('#class-format').change(function() {
       if ($(this).val().toString().match(/_other$/i)) {

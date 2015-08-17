@@ -6,17 +6,17 @@ title: "Maze: Sequence" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>3, :title=> 'Maze: Sequence', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this series of puzzles students will build on the understanding of algorithms learned in the Graph Paper Programming and Real-Life Algorithms Unplugged activities. Featuring characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of the maze to the pig at the other side. To do this they will stack blocks together in a linear sequence to move straight or turn left and right.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this series of puzzles students will build on the understanding of algorithms
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -45,7 +45,7 @@ In this series of puzzles students will build on the understanding of algorithms
   * Use pair programming to complete collaborative tasks with or without a computer
   * Identify situations when the rules of pair programming are not followed
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -58,15 +58,15 @@ Ask your students if they are familiar with the game Angry Birds. Explain that t
   * Getting the bird to the pig will require putting your directions in a very specific order or sequence.
   * Can you solve the puzzles using the fewest blocks possible?
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Some students may struggle with turning their bird in the correct direction, particularly when the bird isn't facing up. Remind students that when we say turn left or right, we're talking about it from the bird's point of view.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -76,7 +76,7 @@ Some students may struggle with turning their bird in the correct direction, par
 
 As your students work through the puzzles, observe how they plan the path for the bird. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems. You may want to go through a few puzzles on the projector. While doing this you can ask one student to trace the path on the screen while another writes the directions on a whiteboard.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -91,7 +91,7 @@ As your students work through the puzzles, observe how they plan the path for th
 
 In small groups, let students design their own mazes and challenge each other to write programs to solve them. For added fun, make life-size mazes with students as the pig and bird.
 
-[/together]
+[/juntos]
 
 [standards]
 

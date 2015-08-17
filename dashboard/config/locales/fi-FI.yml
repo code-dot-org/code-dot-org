@@ -1,4 +1,7 @@
 "fi":
+  errors:
+    messages:
+      not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: ei voi olla tulevaisuudessa
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
+  submit: Jatka
   add_teacher_form:
     code:
       label: 'Lisää opettaja:'
@@ -61,6 +65,8 @@
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
   signup_form:
+    student_count: '%{count} oppilasta on jo rekisteröitynyt.'
+    teacher_count: '%{count} opettajaa on jo rekisteröitynyt.'
     overview_student: Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi
       käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso
       lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.
@@ -97,7 +103,7 @@
     teacher_terms: Sitoudun noudattamaan Code.org <a href='http://code.org/tos'>käyttöehtoja</a>.
     additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
   signin_form:
-    title: Oletko jo liittynyt? Kirjaudu sisään
+    title: Oletko jo rekisteröitynyt? Kirjaudu sisään
     login: Sähköpostiosoite tai käyttäjätunnus
     password: Salasana
     remember: Muista minut
@@ -239,8 +245,10 @@
       free_play:
         playlab: Tee sovellus
         artist: Piirrä jotakin
+        calculate: Calculate Something
     user:
       classroom: Opettajan kotisivu
+      district_dashboard: District Dashboard
       label: Hei %{username}
       stats: Minun edistymiseni
       settings: Tilini
@@ -250,6 +258,7 @@
       signup: Luo käyttäjätunnus
       already_registered: Jo rekisteröitynyt?
     popup:
+      progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
       lines: 'Koodirivien yhteismäärä: %{lines}'
       close: SULJE
@@ -313,7 +322,7 @@
       section_code: Ryhmän tunnus
       add_section_code: Lisää oppilaiden ryhmän tunnus
       secret: Salainen tyyppi
-      grade: Arvosana
+      grade: Taso
       course: Kurssi
       rename: nimeä uudelleen
       edit: muokkaa
@@ -329,15 +338,24 @@
       sillä et ole rekisteröinyt sähköpostiosoitetta'
     student_teacher_disassociated: Opettaja %{teacher_name} on poistettu oppilaalta
       %{student_name}
+    panel:
+      answer_viewer: Answer Viewer
+      student: Oppilas
+      viewing_solution: Vastauksen katselu
+      try_it_yourself: Kokeile itse
+      section: Ryhmä
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
+    email_confirm_needed_required: 'Sinun sähköpostiosoitetta %{email} ei ole vahvistettu:'
+    email_confirm_wrong_email: (Väärä sähköpostiosoite?)
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
     new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
     current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
-    cancel:
-      title: Tilin poistaminen
-      hint: Onneton?
-      button: Poista tili
+    delete: Poista tilisi
+    delete_text: Klikkaamalla alla olevaa painiketta poistat tilisi.
+    delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi
+      käyttäjätilejä.'
+    delete_confirm: Oletko varma, että haluat poistaa käyttäjätilisi?
   user_level:
     completed: Valmis
     tried: Kokeili
@@ -347,6 +365,10 @@
     classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: Jo rekisteröitynyt? %{link}
@@ -372,6 +394,7 @@
     local_school: koulu
     online: online
     see_details: Lisätietoja
+    view_course: Näytä kurssi
     prize_info: 'Palkinnot osallistumisesta (vain USA): Jopa 1000 dollaria luokkahuonepalkintoja.'
     tryfirst: 'Tai, voit kokeilla ensin ja rekisteröityä myöhemmin:'
     trynow: Kokeile nyt
@@ -387,6 +410,9 @@
     heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
     heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
     your_gallery: Galleria
+    no_primary_course: Kokeile kurssia Code Studiossa
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Mies
     female: Nainen
@@ -478,9 +504,13 @@
       title: Flappy Code
       body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code
         -oppituntia!
-    20hour:
-      title: Johdantokurssi
-      body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
+    20-hour:
+      title: Accelerated Course
+      body: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin
+        käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä
+        on hauskaa opittavaa kaiken ikäisille.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
       try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
@@ -489,6 +519,9 @@
       body: Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Pelilabra
+      body: Tee Pelilabrassa tarina tai peli jonka pääosassa on Disneyn Infinity hahmot.
   gallery:
     students_drew_these_with_code: Oppilaat piirsivät nämä koodilla!
     students_made_these_with_code: Oppilaat tekivät nämä koodilla!
@@ -520,13 +553,27 @@
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi ratkaisu ei ole oikea. Yritä uudestaan!
     correct_title: Oikein
     correct_body: Tämä on oikea vastaus.
+  contract_match:
+    wrong_title: Väärä vastaus
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
+    open_response_title: Kiitos
+    open_response_body: Kiitos vastauksestasi!
   dialog:
     ok: OK
   time:
@@ -542,7 +589,7 @@
             ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa,
             mutta siinä on hauskaa opittavaa kaiken ikäisille.
         Hour of Code:
-          title: Koodaustunti
+          title: Kooditunti 2013
           description: ''
         edit-code:
           title: Muokkaa koodia
@@ -578,11 +625,47 @@
     -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä
     meihin puolestasi.
   progress:
-    not_completed: kesken
+    not_started: ei aloitettu
+    in_progress: käynnissä
     completed_too_many_blocks: valmis, liian monta lohkoa
     completed_perfect: valmis, täydellinen
     furthest_level_attempted: vaikein taso jota yritetty
+    assessment: arviointi
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurssit, joita työstät
+    completed_courses: Valmiit kurssit
+    all_courses: Kaikki kurssit
+  project:
+    projects: Projektit
+    create: Luo projekti
+    create_a_project: 'Luo uusi projekti:'
+    new: Luo uusi
+    rename: Nimeä uudelleen
+    save: Tallenna
+    delete: Poista
+    exit: Takaisin kurssiin
+    my_projects: Omat projektit
+    share: Jaa
+    share_title: Jaa projektisi
+    share_copy_link: 'Kopioi linkki:'
+    close: Sulje
+    more: Lisää
+    name: Nimi
+    updated: Päivitetty
+    project_type: Projektityyppi
+    help_text: Klikkaa <strong>Tee Sovellus</strong> tai <strong>Piirrä Jotain</strong>
+      alla tehdäksesi uuden Pelilabra tai Taiteilija projektin! <br/>Voit tulla myöhemmin
+      takaisin ja jatkaa projektiesi työstämistä milloin tahansa.
+    need_help: Tarvitsetko apua alkutoimissa?
+    really_delete: Poista?
+    delete_yes: Kyllä
+    delete_no: Ei
+    saved: Tallennettu
+    not_saved: Ei tallenneta
+    cancel: Peru
+    delete_confirm_title: Oletko varma, että haluat poistaa tämän projektin?
+    delete_confirm_text: Projektin poistaminen pysyvästi poistaa sen Omat projektit-luettelosta.
+      Kukaan kenelle olet jakanut linkin ei enää voi katsella projektiasi.
+    view_all: Katso omia projektejasi
+    remix: Remix
+    click_to_remix: Klikkaa "Remix" ja tee oma versiosi!

@@ -23,7 +23,7 @@
   "holePresent":"地上有一个坑",
   "honey":"做蜂蜜",
   "honeyAvailable":"蜂蜜",
-  "honeyTooltip":"做花酿蜂蜜",
+  "honeyTooltip":"用花粉酿蜂蜜",
   "honeycombFullError":"这蜂窝没有房间放置更多的蜂蜜。",
   "ifCode":"如果",
   "ifInRepeatError":"你需要放一个”如果“块在”重复“块里。如果你忘记了怎么做，重新试试上一题，看看你是怎么做的。",
@@ -69,8 +69,8 @@
   "repeatUntilBlocked":"当前面有路",
   "repeatUntilFinish":"重复直到完成",
   "step":"踏步",
-  "totalHoney":"所有蜂蜜",
-  "totalNectar":"所有花蜜",
+  "totalHoney":"蜂蜜总量",
+  "totalNectar":"花蜜总量",
   "turnLeft":"向左转",
   "turnRight":"向右转",
   "turnTooltip":"把我向左或者向右转90度。",
@@ -80,5 +80,5 @@
   "whileTooltip":"重复块所包含的操作直到完成。",
   "word":"找到一个单词",
   "yes":"是",
-  "youSpelled":"你拼写"
+  "youSpelled":"你拼写的"
 }

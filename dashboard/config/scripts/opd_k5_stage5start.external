@@ -1,0 +1,28 @@
+name 'OPD-K5 Stage5Start'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+
+### CONDITIONALS > Stage Overview
+
+<img src="https://images.code.org/83f3d3381ab1285d9fd4e01fd30133f8-image-1434396985981.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<br><br>
+So far, you've written a simple program and added loops to increase efficiency. In this stage, we'll explore "conditionals" or "if-statements" which begin to add logic to your program.
+<br><br>
+By completing Stage 6, you will:
+
+- Define "conditionals" and explain their importance
+- Practice coding simple conditionals
+- Reflect on classroom application
+
+<br/>
+>**What to Expect in this Stage:** As in the previous stage, we'll first present a program that does not use conditionals, then introduce some video instruction on conditionals. Next, we'll introduce a series of puzzles and ask you to apply your learning using conditionals. We'll close with an opportunity to review resources and reflect. You should spend between 20-45 minutes on this stage.
+
+<br><br>
+Ready? Let's go!
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

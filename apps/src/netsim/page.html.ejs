@@ -1,0 +1,72 @@
+<%
+  var msg = require('../locale');
+%>
+
+<div id="rotateContainer" style="background-image: url(<%= assetUrl('media/turnphone_horizontal.png') %>)">
+  <div id="rotateText">
+    <p><%= msg.rotateText() %><br><%= msg.orientationLock() %></p>
+  </div>
+</div>
+
+<% var instructions = function() { -%>
+  <div id="bubble" class="clearfix">
+    <table id="prompt-table">
+      <tr>
+        <td id="prompt-icon-cell">
+          <img id="prompt-icon"/>
+        </td>
+        <td id="prompt-cell">
+          <p id="prompt">
+          </p>
+        </td>
+      </tr>
+    </table>
+    <div id="ani-gif-preview-wrapper">
+      <div id="ani-gif-preview">
+      </div>
+    </div>
+  </div>
+<% }; -%>
+
+<div id="appcontainer">
+  <!-- Should disable spell-check on all netsim elements -->
+  <div id="netsim" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false">
+
+    <div id="netsim-disconnected">
+      <div class="lobby-panel"></div>
+    </div>
+
+
+    <div id="netsim-connected">
+      <div id="netsim-leftcol">
+        <div class="column-width-limiter">
+
+          <div id="netsim-status"></div>
+
+          <div id="netsim-visualization"></div>
+
+          <div id="netsim-tabs"></div>
+
+        </div>
+      </div>
+
+      <div id="netsim-rightcol">
+        <div id="netsim-logs">
+          <div id="netsim-received"></div>
+          <div id="netsim-sent"></div>
+        </div>
+        <div id="netsim-send"></div>
+      </div>
+    </div>
+
+    <div id="router-log-modal" class="modal fade"></div>
+
+  </div>
+  <div id="footers" dir="<%= data.localeDirection %>">
+  </div>
+  <div class="hidden">
+    <% instructions(); %>
+  </div>
+</div>
+
+<div class="clear"></div>

@@ -1,5 +1,9 @@
 %h1= @page_title = "Editing script #{@script.name}"
 %h4 Note: There are currently unsolved issues with renaming stages (see #<a href="https://www.pivotaltracker.com/story/show/76999866">76999866</a> #<a href="https://www.pivotaltracker.com/story/show/82514628">82514628</a>). For now, ask an engineer to adjust the value in the English localization file (config/locales/scripts.en.yml; use <a href="http://guides.rubyonrails.org/i18n.html">Rails I18n API</a> for reference) rather than changing it in this form.
+%h4
+  By default, scripts are hidden from teachers in the teacher dashboard. To make a script visible to teachers, add a line
+  %code hidden 'false'
+  to the top of the script. It will show up in the teacher dashboard once it hits staging (or the next time levelbuilder gets rebuilt).
 = render 'form'
 = link_to t('crud.show'), @script
 |

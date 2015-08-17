@@ -52,7 +52,7 @@
         swój nowy adres mailowy.
       updated: Pomyślnie uaktualniłeś swoje konto.
     sessions:
-      signed_in: Pomyślnie zalogowałeś się.
+      signed_in: ''
       signed_out: Pomyślnie wylogowałeś się.
     unlocks:
       send_instructions: Za kilka minut otrzymasz e-mail ze wskazówkami, jak odblokować
@@ -71,3 +71,25 @@
       not_saved:
         one: '1 błąd zabrania temu %{resource}, by został zapisany:'
         other: '%{count} błędów zabrania temu %{resource}, by został zapisany:'
+    invitations:
+      send_instructions: Zaproszenie mailem zostało wysłane do %{email}.
+      invitation_token_invalid: Przesłany znacznik (token) zaproszenia nie jest ważny!
+      updated: Twoje hasło zostało zmienione. Jesteś teraz zalogowany.
+      no_invitations_remaining: Nie ma żadnego zaproszenia
+      invitation_removed: Twoje zaproszenie zostało usunięte.
+      new:
+        header: Wyślij zaproszenie
+        submit_button: Wyślij zaproszenie
+      edit:
+        header: Ustaw swoje hasło
+        submit_button: Ustaw moje hasło
+    mailer:
+      invitation_instructions:
+        subject: Instrukcje zaproszenia
+        hello: Witaj %{email}
+        someone_invited_you: Ktoś zaprosił Cię do %{url}, możesz przyjąć to zaproszenie
+          korzystając z linku poniżej.
+        accept: Przyjmij zaproszenie
+        ignore: Jeśli nie chcesz przyjąć zaproszenia, zignoruj ten mail. <br /> Twoje
+          konto nie zostanie utworzone, dopóki nie przejdziesz pod wskazany powyżej
+          link i nie ustalisz hasła.

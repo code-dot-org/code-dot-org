@@ -1,0 +1,12 @@
+name 'ECSPD2 question'
+title 'title'
+question 'Question'
+right 'wrong answer'
+right 'right answer'
+
+markdown <<MARKDOWN
+## What do you think?
+a;lsdkjf;asldkfj;alsdkfjaklsdjfha;lsdjf;lkj
+
+
+MARKDOWN

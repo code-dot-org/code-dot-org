@@ -1,0 +1,79 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-01-20T02:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "infinity",
+    "background": "grassy",
+    "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    Studio.vanishActor({spriteIndex: 1});\r\n    \r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Hiro is \"actor 1\".  Move him right to Baymax, and play a sound when they touch.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "first_sprite_index": "2",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_move_collide_callout\",\r\n  \"callout_text\": \"Play a sound when this event occurs.\",\r\n  \"element_id\": \"[block-id='2']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 340,\r\n     \"y\": 50\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "timeout_failure_tick": "100"
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" y="14"/>
+        <block type="studio_whenSpriteCollided" deletable="false" movable="false" id="eventBlock" y="114">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">200</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">winpoint2</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"leafy"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">200</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Studio>

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish drawing the right half of the last window. Each square of the window is 25 pixels. ",
+    "instructions": "Finish drawing the right half of the last window. Each square window pane is 25 pixels wide. ",
     "x": "290",
     "y": "200",
     "start_direction": "90",
@@ -15,11 +15,23 @@
     "ideal": "12",
     "slider_speed": "0.4",
     "free_play": "false",
-    "permittedErrors": 10,
     "permitted_errors": "10",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "impressive": "false"
+    "impressive": "false",
+    "embed": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "markdown_instructions": "Finish drawing the right half of the last window. Each square window pane is 25 pixels wide. \r\n\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -95,51 +107,45 @@
               <title name="DIR">moveForward</title>
               <title name="VALUE">25</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveBackward</title>
-                  <title name="VALUE">25</title>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
                   <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">25</title>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">25</title>
                               <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">25</title>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
                                   <next>
-                                    <block type="draw_turn_by_constant">
-                                      <title name="DIR">turnRight</title>
-                                      <title name="VALUE">90</title>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
                                       <next>
-                                        <block type="draw_move_by_constant">
-                                          <title name="DIR">moveForward</title>
-                                          <title name="VALUE">50</title>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
                                           <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnRight</title>
-                                              <title name="VALUE">90</title>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">25</title>
                                               <next>
-                                                <block type="draw_move_by_constant">
-                                                  <title name="DIR">moveForward</title>
-                                                  <title name="VALUE">25</title>
+                                                <block type="draw_turn_by_constant">
+                                                  <title name="DIR">turnLeft</title>
+                                                  <title name="VALUE">90</title>
                                                   <next>
-                                                    <block type="draw_turn_by_constant">
-                                                      <title name="DIR">turnRight</title>
-                                                      <title name="VALUE">90</title>
-                                                      <next>
-                                                        <block type="draw_move_by_constant">
-                                                          <title name="DIR">moveForward</title>
-                                                          <title name="VALUE">25</title>
-                                                        </block>
-                                                      </next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveForward</title>
+                                                      <title name="VALUE">25</title>
                                                     </block>
                                                   </next>
                                                 </block>

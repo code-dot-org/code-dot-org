@@ -1,0 +1,11 @@
+name 'U3L20 Assessment2'
+title 'Conditional Basics Question 2'
+question 'Which program statement reacts to actions by the user?'
+wrong 'sequential statements'
+wrong 'function calls'
+right 'event handlers'
+wrong 'conditionals'
+
+markdown <<MARKDOWN
+
+MARKDOWN

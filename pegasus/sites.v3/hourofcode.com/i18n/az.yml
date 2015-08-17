@@ -4,7 +4,7 @@ az:
   front_title: Tarixin ən böyük təhsil layihəsinə siz də qoşulun, 8-14 dekabr 2014
   coming_soon: Tezliklə
   front_header_banner: Tarix boyu ən böyük öyrənmə olayında siz də iştirak edin, Dek 8-14-2014
-  front_intro_default: 'Kod Saatı 180-dən çox ölkədən milyonlarla tələbənin iştirak etdiyi global bir hərəkatdır. İstənilən yerdə, hər kəs Kod Saatı təşkil edə bilər. Bir saatlıq dərsliklər 30-dan çox dilə tərcümə edilib. Heç bir təcrübəyə ehtiyac yoxdur.  <strong>4 yaşından 104 yaşına qədər.</strong>'
+  front_intro_default: 'Kod Saatı 180-dən çox ölkədən milyonlarla tələbənin iştirak etdiyi qlobal bir hərəkatdır. İstənilən yerdə, hər kəs Kod Saatı təşkil edə bilər. Bir saatlıq dərsliklər 30-dan çox dilə tərcümə edilib. Heç bir təcrübəyə ehtiyac yoxdur.  <strong>4 yaşından 104 yaşına qədər.</strong>'
   front_intro_default_uk: 'Kod Saatı 180-dən çox ölkədən on milyonlarla insanın iştirak etdiyi qlobal bir hərəkatdır. Hər kəs Kod Saatı təşkil edə bilər. İlk Kod Saatında Birləşmiş Krallıqdan 3 milyon insan iştirak etdi. Gəlin, dekabrda bu sayı iki qatına çatdıraq! <strong>Heç bir təcrübə tələb olunmur. 4 yaşından 104 yaşına qədər hər kəs üçün.</strong>'
   front_watch_video: Yeni videoya baxın
   header_menu_resources: Resurslar
@@ -38,6 +38,10 @@ az:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Kod Saatını təbliğ edin</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>Kod Saatını</h3><h2>təcrübədən keçirdi</h2>'
   anybody_can_learn: Hər kəs öyrənə bilər.
+  share_on_facebook: '"Facebook"da bölüşün'
+  share_on_twitter: '"Twitter"də bölüşün'
+  beyond_an_hour: Beyond an Hour of Code
+  get_started: Start
   register_now: Qeydiyyatdan keçin
   front_join_us_heading: Hər bir şagird üçün Kod Saatı.
   front_join_us_description: İnformatika hər bir şagird üçün təməl bilikdir. Bunu 100 milyonlara çatdırmağımıza kömək edin.
@@ -116,7 +120,7 @@ az:
   hardware_prizes_form_plan_file_description: 'Məktəbinizdəki hər bir şagirdi Kod Saatına cəlb etmək üçün fəaliyyət planı qurun. Nümunə üçün bura baxa bilərsiniz: #PDF# | #Word#'
   hardware_prizes_form_submit_label: Göndər
   hoc_faq_title: Tez-tez verilən suallar
-  hoc_faq_what_is_hoc_q: Hour of Code nədir?
+  hoc_faq_what_is_hoc_q: Kod Saatı nədir?
   hoc_faq_what_is_hoc_a: "Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək, hər kəsin onun əsaslarını öyrənə biləcəyini göstərmək üçün hazırlanmış informatikaya bir saatlıq giriş kursudur. <a href='http://code.org/learn'>Dərslikləri nəzərdən keçirin</a>."
   hoc_faq_last_year: Dərslikləri sınaqdan keçirin
   hoc_faq_when_is_hoc_q: Kod Saatı nə vaxtdır?
@@ -147,7 +151,7 @@ az:
   hoc_faq_frozen_q: Anna və Elza olan dərslik haradadır?
   hoc_faq_frozen_a: "O, indi <a href='http://code.org/learn'>Code.org/learn</a> ünvanında nəşr edilib. Ümid edirik ki, xoşunuza gəlir!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -194,7 +198,7 @@ az:
   events_orgs_title: Tərəfdaş təşkilatların təşkil etdiyi bütün Kod Saatı təədbirləri
   event: tədbir
   events: tədbirlər
-  footer_copyright_message: Copyright 2014 Code.org. Bütün hüquqları qorunur.
+  footer_copyright_message: Copyright 2015 Code.org. Bütün hüquqları qorunur.
   footer_trademark_message: 'Hour of Code™ "Code.org"-a aid ticarət markasıdır.'
   footer_menu_partners: Tərəfdaşlar
   footer_menu_contact: Bizimlə əlaqə

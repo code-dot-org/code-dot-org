@@ -1,6 +1,6 @@
 {
-  "bounceBall":"bounce ball",
-  "bounceBallTooltip":"Bounce a ball off of an object.",
+  "bounceBall":"bounce գնդակը",
+  "bounceBallTooltip":"Bounce գնդակ դուրս օբյեկտ.",
   "continue":"Continue",
   "dirE":"E",
   "dirN":"N",
@@ -10,7 +10,7 @@
   "elseCode":"else",
   "finalLevel":"Congratulations! You have solved the final puzzle.",
   "heightParameter":"height",
-  "ifCode":"if",
+  "ifCode":"եթե",
   "ifPathAhead":"if path ahead",
   "ifTooltip":"If there is a path in the specified direction, then do some actions.",
   "ifelseTooltip":"If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.",

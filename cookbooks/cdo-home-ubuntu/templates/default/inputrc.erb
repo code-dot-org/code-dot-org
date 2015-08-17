@@ -1,0 +1,22 @@
+# Readline init file
+# Documentation: https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+# Any user can customize programs that use Readline by putting commands in an inputrc file, conventionally in his home directory.
+# The name of this file is taken from the value of the shell variable INPUTRC.
+# If that variable is unset, the default is ~/.inputrc.
+# If that file does not exist or cannot be read, the ultimate default is /etc/inputrc.
+
+# This directive takes a single filename as an argument and reads commands and bindings from that file.
+$include /etc/inputrc
+
+# https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html
+# Search forward through the history for the string of characters between the start of the current line and the point. The search string must match at the beginning of a history line. This is a non-incremental search.
+"\e[B": history-search-forward
+
+# Search backward through the history for the string of characters between the start of the current line and the point. The search string must match at the beginning of a history line. This is a non-incremental search.
+"\e[A": history-search-backward
+
+# If set to ‘on’, Readline performs filename matching and completion in a case-insensitive fashion.
+set completion-ignore-case on
+
+# This alters the default behavior of the completion functions. If set to ‘on’, words which have more than one possible completion cause the matches to be listed immediately instead of ringing the bell.
+set show-all-if-ambiguous on

@@ -1,6 +1,6 @@
 * * *
 
-title: "Artist: Nested Loops" view: page_curriculum theme: none
+title: "Artista: Laços aninhados" view: page_curriculum theme: none
 
 * * *
 
@@ -8,60 +8,60 @@ title: "Artist: Nested Loops" view: page_curriculum theme: none
 live preview (once saved to dropbox) is at http://staging.code.org/curriculum/k-1.  don't share this URL!
 -->
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>11, :title=> 'Artist: Nested Loops', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>11, :title=> 'Artista dos laços aninhados', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-Students use the Artist environment to write programs that have looped statements inside another loop, which is called a nested loop.
+Os alunos usam o ambiente do artista para escrever programas que têm laços dentro de outro laço, o que é chamado de laço aninhado.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Artist: Nested Loops**
+### **Atividade: Artista: laços aninhados**
 
-[Artist: Nested Loops](#Activity)
+[Artista: laços aninhados](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Count the number of times an action should be repeated and represent it as a loop
-  * Divide the number of degrees in a circle into even segments
-  * Given a number of segments, calculate the degrees need to complete a circle
-  * Break complex tasks into smaller repeatable sections
-  * Combine simple shapes into complex designs with nested loops
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
+  * Contar o número de vezes que uma ação deve ser repetida e representá-la como um laço
+  * Dividir o número de graus de um círculo em segmentos iguais
+  * Dado um número de segmentos, calcular os graus necessários para completar um círculo
+  * Dividir tarefas complexas em seções menores que podem ser repetidas
+  * Combinar formas simples em projetos complexos com laços aninhados
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Artist: Nested Loops](http://learn.code.org/s/course3/stage/11/puzzle/1)
+### <a name="GetStarted"></a> Introdução
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Artista: laços aninhados](http://learn.code.org/s/course3/stage/11/puzzle/1)
 
 [/together]
 
@@ -70,80 +70,80 @@ Students use the Artist environment to write programs that have looped statement
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions. 
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CT.L2-14. Examinar as conexões entre elementos de matemática e ciência da computação, inclusive números binários, lógica, conjuntos e funções. 
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
-  * 3.G.A.2 - Partition shapes into parts with equal areas. Express the area of each part as a unit fraction of the whole.
-  * 4.NBT.B.4 - Fluently add and subtract multi-digit whole numbers using the standard algorithm.
-  * 4.MD.A.3 - Apply the area and perimeter formulas for rectangles in real world and mathematical problems.
-  * 4.MD.C.5 - Recognize angles as geometric shapes that are formed wherever two rays share a common endpoint, and understand concepts of angle measurement.
-  * 4.MD.C.7 - Recognize angle measure as additive.
-  * 4.G.A.1 - Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines.
-  * 4.G.A.2 - Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or absence of angles of a specified size.
-  * 4.G.A.3 - Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded along the line into matching part.
-  * 5.NBT.B.5 - Fluently multiply multi-digit whole numbers using the standard algorithm.
-  * 5.G.A.2 - Represent real world and mathematical problems by graphing points in the first quadrant of the coordinate plane, and interpret coordinate values of points in the context of the situation.
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
+  * 3.G.A.2 - Dividir formas em partes com áreas iguais. Expressar a área de cada parte em uma fração de unidade do todo.
+  * 4.NBT.B. 4 - Somar e subtrair números inteiros com vários dígitos usando o algoritmo padrão com facilidade.
+  * 4.MD.A. 3 - Aplicar fórmulas de área e perímetro de retângulos em problemas matemáticos e no mundo real.
+  * 4.MD.C. 5 - Reconhecer ângulos como formas geométricas que se formam sempre que dois raios compartilham uma extremidade comum e compreender conceitos de medida de ângulo.
+  * 4.MD.C. 7 - Reconhecer medidas de ângulo como aditivas.
+  * 4.G.A.1 - Traçar pontos, retas, segmentos de reta, raios, ângulos (reto, agudo, obtuso) e retas perpendiculares e paralelas.
+  * 4.G.A.2 - Classificar figuras bidimensionais baseadas na presença ou ausência de retas paralelas ou perpendiculares, ou a presença ou ausência de ângulos de um determinado tamanho.
+  * 4.G.A.3 - Reconhecer uma linha de simetria de uma figura bidimensional como uma reta que marca o local em que ela pode ser dobrada sobre a parte correspondente.
+  * 5.NBT.B.5 - Multiplicar números inteiros com vários algarismos usando o algoritmo padrão com facilidade.
+  * 5.G.A.2 - Representar problemas matemáticos e do mundo real marcando pontos no primeiro quadrante do plano cartesiano e interpretar os valores das coordenadas dos pontos no contexto da situação.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

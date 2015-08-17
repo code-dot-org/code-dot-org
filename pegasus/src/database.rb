@@ -1,33 +1,5 @@
 require 'cdo/db'
-DB = PEGASUS_DB
-
-class Properties
-
-  def initialize()
-    @table = DB[:properties]
-  end
-
-  def get(key)
-    i = @table.where(key:key.to_s).first
-    return nil unless i
-    JSON.load(StringIO.new(i[:value]))
-  end
-
-  def set(key, value)
-    key = key.to_s
-
-    i = @table.where(key:key).first
-    if i.nil?
-      @table.insert(key:key, value:value.to_json)
-    else
-      @table.where(key:key).update(value:value.to_json)
-    end
-
-    value
-  end
-
-end
-PROPERTIES = Properties.new
+require 'cdo/properties'
 
 class Tutorials
 
@@ -36,7 +8,7 @@ class Tutorials
   end
 
   def launch_url_for(code,domain)
-    return DB[:beyond_tutorials].where(code:code).first[:url] if @table == :beyond_tutorials
+    return DB[:beyond_tutorials].where(code: code).first[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
     api_domain = api_domain.gsub('al.code.org','code.org')
@@ -45,6 +17,7 @@ class Tutorials
     api_domain = api_domain.gsub('eu.code.org','code.org')
     api_domain = api_domain.gsub('ro.code.org','code.org')
     api_domain = api_domain.gsub('uk.code.org','code.org')
+    api_domain = api_domain.gsub('za.code.org','code.org')
     "http://#{api_domain}/api/hour/begin/#{code}"
   end
 
@@ -74,11 +47,11 @@ class Tutorials
 end
 
 def event_whitelisted?(name, type)
-  DB[:cdo_events_whitelist].where(organization_name_s:name.to_s.strip).and(event_type_s:type).count == 0
+  DB[:cdo_events_whitelist].where(organization_name_s: name.to_s.strip).and(event_type_s: type).count == 0
 end
 
 def country_from_code(code)
-  DB[:geography_countries].where(code_s:code.to_s.strip.upcase).first
+  DB[:geography_countries].where(code_s: code.to_s.strip.upcase).first
 end
 def country_name_from_code(code)
   country = country_from_code(code)
@@ -86,10 +59,19 @@ def country_name_from_code(code)
   country[:name_s]
 end
 def no_credit_count
-    DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
+  DB[:cdo_state_promote].where(cs_counts_t: 'No').exclude(state_code_s: 'DC').count
+end
+def credit_count
+  50 - no_credit_count
+end
+def jobs_nationwide
+  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
+end
+def grads_nationwide
+  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
 end
 def us_state_from_code(code)
-  DB[:geography_us_states].where(code_s:code.to_s.strip.upcase).first
+  DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
 end
 def us_state_code?(code)
   !us_state_from_code(code).nil?
@@ -101,37 +83,10 @@ def us_state_name_from_code(code)
 end
 
 def zip_code_from_code(code)
-  DB[:geography_us_zip_codes].where(code_s:code.to_s.strip).first
+  DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end
 def zip_code?(code)
   !zip_code_from_code(code).nil?
-end
-
-def fetch_metrics()
-  metrics = PROPERTIES.get(:metrics)||{
-    'created_at'=>"2013-12-31T23:59:59+00:00",
-    'created_on'=>"2013-12-31",
-    'csedweek_organizers'=>0,
-    'csedweek_teachers'=>0,
-    'csedweek_entire_schools'=>0,
-    'csedweek_students'=>0,
-    'csedweek_countries'=>0,
-    'petition_signatures'=>0,
-    'lines_of_code'=>0,
-  }
-  metrics
-end
-
-def fetch_hoc_metrics()
-  metrics = PROPERTIES.get(:hoc_metrics)||{
-    'started'=>0,
-    'finished'=>0,
-    'tutorials'=>{'codeorg'=>0},
-    'cities'=>{'Seattle'=>0},
-    'countries'=>{'United States'=>0},
-  }
-  metrics['started'] += 409216
-  metrics
 end
 
 require 'cdo/geocoder'
@@ -160,17 +115,21 @@ def geocode_zip_code(code)
 end
 
 
-require 'data_mapper'
-require 'dm-migrations'
-require 'dm-timestamps'
-require 'dm-transactions'
-require 'dm-types'
-require 'dm-validations'
 require 'securerandom'
 require 'json'
 
-DataMapper.setup(:default, CDO.pegasus_db_writer)
-require src_dir 'database/validation_error'
-require src_dir 'database/hour_of_activity'
-require src_dir 'database/form'
-DataMapper.finalize
+class Form2 < OpenStruct
+
+  def initialize(params={})
+    params = params.dup
+    params[:data] = JSON.load(params[:data])
+    params[:processed_data] = JSON.load(params[:processed_data])
+    super params
+  end
+
+  def self.from_row(row)
+    return nil unless row
+    self.new row
+  end
+
+end

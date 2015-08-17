@@ -38,6 +38,10 @@ id:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promosikan Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>telah mencoba</h3><h2>HOUR of CODE</h2>'
   anybody_can_learn: Siapa pun bisa belajar.
+  share_on_facebook: Berbagi melalui Facebook
+  share_on_twitter: Berbagi melalui Twitter
+  beyond_an_hour: Setelah Satu Jam Kode
+  get_started: Mulai
   register_now: Daftar Sekarang
   front_join_us_heading: Hour of Code diperuntukan untuk setiap pelajar.
   front_join_us_description: Ilmu komputer adalah dasar untuk setiap pelajar. Bantu kami memperkenalkannya kepada 100 juta pelajar.
@@ -147,7 +151,7 @@ id:
   hoc_faq_frozen_q: Dimana tutorial dengan Anna dan Elsa?
   hoc_faq_frozen_a: "Itu sekarang telah dipublish pada <a href='http://code.org/learn'>Code.org/learn</a>. Kami harap anda menikmatinya!"
   hoc_faq_high_school_q: Aktivitas apa yang harus saya lakukan dengan pelajar SMA?
-  hoc_faq_high_school_a: "Untuk segala umur, kami merekomendasikan untuk mencoba tutorial untuk pemla pada  <a href='http://code.org/learn'>Code.org/learn</a> untuk permulaan, seperti tutorial dengan Angry Birds atau dengan Anna dan Elsa. Pelajar SMA seharusnya bisa menyelesaikannya damam 30 menit dan dapat mencoba tutorial yang tingkat lanjut dalam Javascript, seperti KhanAcademy atau CodeHS."
+  hoc_faq_high_school_a: "Untuk segala umur, kami merekomendasikan untuk mencoba tutorial untuk pemla pada  <a href='http://code.org/learn'>Code.org/learn</a> untuk permulaan, seperti tutorial dengan Angry Birds atau dengan Anna dan Elsa. Pelajar SMA seharusnya bisa menyelesaikannya damam 30 menit dan dapat mencoba tutorial yang tingkat lanjut dalam Javascript, seperti Khan Academy atau CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

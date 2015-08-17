@@ -6,17 +6,17 @@ title: "Farmer: While Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>12, :title=> 'Farmer: While Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lecci√≥n
 
 Using while loops, students control a farmer shovel dirt into holes until they‚Äôre full and remove dirt from piles until it‚Äôs all gone.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## S√≠ntesis de Ense√±anza
 
 ### **Getting Started**
 
@@ -31,16 +31,16 @@ Using while loops, students control a farmer shovel dirt into holes until they‚Ä
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lecci√≥n
 
 ### Students will:
 
   * Distinguish between loops that repeat a fixed number of times and loops that repeat until a condition is met
   * Use a while loop to create programs that can solve problems with unknown values
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -48,7 +48,7 @@ Using while loops, students control a farmer shovel dirt into holes until they‚Ä
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Using while loops, students control a farmer shovel dirt into holes until they‚Ä
 
 ### <a name="Activity"></a> [Farmer: While Loops](http://learn.code.org/s/course3/stage/12/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -79,7 +79,7 @@ Using while loops, students control a farmer shovel dirt into holes until they‚Ä
   * Can your class find the loops?
   * Try the same thing with songs! 
 
-[/together]
+[/juntos]
 
 [standards]
 

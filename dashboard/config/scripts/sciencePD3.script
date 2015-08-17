@@ -1,0 +1,28 @@
+pd 'true'
+title 'Computer Science in Science PD'
+description 'Phase 3 Professional Development'
+description_short 'Phase 3 Professional Development'
+
+stage 'Welcome'
+level 'sciPD3 intro'
+level 'sciPD3 logistics'
+
+stage 'Curricular Modules'
+level 'sciPD3 resource module1'
+level 'sciPD3 resource module2'
+level 'sciPD3 resource module3'
+level 'sciPD3 resource module4'
+
+stage 'Common Forms'
+level 'sciPD2 resource common'
+
+stage 'Guides and Resources'
+level 'sciPD2 resource reference'
+
+stage 'Discussion Forums'
+level 'sciPD2 discussion lesson1'
+level 'sciPD2 discussion lesson2'
+level 'sciPD2 discussion lesson3'
+level 'sciPD2 discussion lesson4'
+level 'sciPD2 discussion lesson5'
+level 'sciPD2 discussion wrapup'

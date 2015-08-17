@@ -1,66 +1,74 @@
 "mt":
+  errors:
+    messages:
+      not_saved: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: hija meħtieġa
     attributes:
       user:
-        name: Display Name
-        email: Email
-        username: Username
+        name: Isem li jintwera
+        email: Ittre
+        username: Isem l-utent
         password: Password
-        password_confirmation: Password confirmation
-        current_password: Current password
-        locale: Language
-        age: Age
-        gender: Gender
-        edit_header: Edit Account Details
+        password_confirmation: Konfermazzjoni tal-password
+        current_password: Il-password eziztenti
+        locale: Lingwa
+        age: Età
+        gender: Sess
+        edit_header: Editja id-dettalji tal-Account
         error:
-          future: can't be in the future
-  hello: Hello world
-  welcome_back: Welcome back, %{name}
+          future: ma tistax tkun fil-futur
+  hello: Haw Lilly
+  welcome_back: Merħba lura, %{name}
+  submit: Submit
   add_teacher_form:
     code:
-      label: 'Add a teacher by section code:'
-      placeholder: Code (ABCDEF)
-    submit: Add teacher
+      label: 'Żid Għalliem:'
+      placeholder: Sezzjoni kodiċi (ABCDEF)
+    submit: Żid għalliem
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
-  appname: Code.org
-  stage: Stage
-  stage_number: Stage %{number}
-  puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
-  of: of
-  more: MORE
-  less: LESS
-  beta: beta
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
-  demos: 'Admin: All Demos'
+    placeholder: Daħħal suġġeriment tiegħek hawn
+    submit: Żid suġġeriment
+  appname: Core.org
+  stage: Stadju
+  stage_number: Stadju numru %{number}
+  puzzle: Loghba
+  trophies: Trofej
+  courses: Korsijiet
+  of: ta'
+  more: AKTAR
+  less: ANQAS
+  beta: verzjoni beta
+  try_hoc: 'Ipprova l-Hour of Code, ikklikkja hawn >> '
+  try_k8intro: Ipprova il-kors 'Introduzzjoni tax-xjenza tal-kompjuter' ghal studenti
+    tal-primarja (15-25 siegha)
+  k8intro: Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja
+    (15-25 siegha)
+  already_started: 'Diġà bdejt? Kompli hawn >> '
+  demos: 'Admin: Demos kollha'
   continue: Continue
-  prize: prize
-  more_info: More info
+  prize: premju
+  more_info: Aktar informazzjoni
   auth:
-    sign_in_with: Sign in with %{provider}
-    signed_in: Signed in!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
-    already_signedup: Already signed up?
-    notyet_signedup: Haven't joined yet?
-    google_oauth2: Google Account
+    sign_in_with: Idħol bl-%{provider}
+    signed_in: Dhalt!
+    signed_out: Inti hrigt mis-sit <a href="%{url}">Code.org</a>.
+    sign_out_of: Inti użajt %{provider} biex tidhol fis sit. <a href="%{url}"> Ikklikkja
+      hawnhekk</a> biex toħroġ minn %{provider}.
+    already_signedup: Diga miktub bhala user?
+    notyet_signedup: Ghadek ma inghaqadx?
+    google_oauth2: Account tal-Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Forgot your password?
-    need_confirmation: Didn't receive confirmation instructions?
-    need_unlock: Didn't receive unlock instructions?
+    windowslive: Account tal-Microsoft
+    forgot_password: Insejt il-Password?
+    need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
+    need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Sign up for an account to track your progress. Your email is
       primarily used to allow you to log in and for password recovery. For more information,
       see our <a href="http://code.org/privacy">Privacy Policy</a>.
@@ -79,7 +87,7 @@
     address_placeholder: address, city, state, zip
     gender: Gender (optional)
     birthday: Birthday (optional)
-    age: Age
+    age: Età
     user_type: Are you a student or teacher?
     submit: Sign up
     teacher: Are you a teacher?
@@ -116,7 +124,7 @@
     login: Sign in
   password:
     reset_form:
-      title: Forgot your password?
+      title: Insejt il-Password?
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -145,49 +153,54 @@
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      blank_code: Daħħal kodiċi tas-Sezzjoni
+      cant_join_own_section: Jiddispjaċina, ma tistax tinghaqad mas-sezzjoni tiegħek
+        stess.
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: Inghaqad mal klassi ta %{teacher_name} at Code.org!
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as
-          your student.'
+        subject: 'Notifika minghand Code.org: %{student_name} m''għadux assoċjat bhala
+          student tiegħek.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as
-          your teacher.'
+        subject: 'Notifika ta '' Code.org: %{teacher_name} m''għadux assoċjat bħala
+          l''għalliem tiegħek.'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: M'għandekx aċċess għal istatistici ta' din il-persuna
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    title: 'Ifdi Premjijiet: %{name}'
+    provider: 'Fornitur:'
+    code: 'Kodiċi:'
+    redeem_header: 'Biex tifdi:'
+    donorschoose_register: Irregistra bhala ghalliem fuq DonorsChoose.org
+    donorschoose_project: Ippowstja Progett
+    donorschoose_how_to: Kif tuża l-kodiċi tiegħek
+    success: Il-Premju tieghi gie mifdi, ara il-kodici hawn taht.
+    error: Il-Premju tieghi ma setghax jigi merbuh, jekk joghbok erga prova.
+    error_us_only: Il-premju offerta hija biss valida għall users tal Istati Uniti.
+    error_not_earned: Ghadek ma mmeritajtx dan il-premju.
+    error_already_redeemed: Il-Premju tieghek diga gie merbuh.
+    no_prizes_available: Jiddispjaċina, imma bħalissa m'għandna l-ebda premjijiet
+      disponibbli.
+    teacher_info_required: 'Premjijiet ta '' l-għalliema jeħtieġ informazzjoni ta
+      '' isem u indirizz ta '' l-iskola:'
+    teacher_email_required: 'Premjijiet tal-ghalliema jeħtieġu indirizz ikkonfermat
+      tal-email:'
     confirm:
-      title: Please Confirm
+      title: Jekk jogħġbok ikkonferma
       'no': 'No'
       'yes': 'Yes'
-      msg: Are you sure you want to claim the %{prize_name} prize?
-      msg_student: 'NOTE: You can only choose one type of prize.'
-      msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: Visit website
+      msg: Żgur li tixtieq tikklejmja l-premju %{prize_name}?
+      msg_student: 'Nota: Tista'' biss tagħżel tip wieħed ta premju.'
+      msg_publicschool: Jekk jogħġbok ikkonferma li int għalliem fi skola pubblika
+        Amerikana.
+      msg_visit_website: Żur is-sit elettroniku
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB of Dropbox Space
+      dropbox: 10GB ta' spazju fuq Dropbox
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
@@ -197,12 +210,14 @@
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: You have earned a prize! (U.S. students only)
-      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
-        trophies, and earn real-world prizes. You can choose between 10GB of free
-        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
-        only valid to U.S. students, and only as long as supplies last.'
+      earned: Inti akwistajt premju! (Studenti Amerikani biss)
+      not_earned_title: Tlesti l-Lezzjoni, ottjeni benefiċċji (studenti Amerikani
+        biss)
+      not_earned: 'Tghallem il kuncetti kollha tax-Xjenza tal-Kompjuter, ikkolezzjona
+        %{num_trophies} trofej, u ikseb premijiet ta'' vera. Tistgha taghzel bejn
+        10GB ta spazju b''xejn fuq id-Dropbox. $10 fi kreditu fuq skype u downloads
+        ta loghob b''xejn. NOTA: l''offerti huma validi ghal studenti Amerikani biss
+        u sa kemm jispiccaw.'
       teacher:
         earned: 15 or more students collected all %{num_trophies} trophies. You have
           won a teacher prize! (U.S. teachers only)
@@ -232,27 +247,29 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
             used by teachers in U.S. public schools.
   crud:
-    new_model: New %{model}
-    show: Show
-    edit: Edit
-    edit_model: Edit %{model}
-    update: Update
-    destroy: Destroy
-    back: Back
-    confirm: Are you sure?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: You do not have access to this %{model}.
+    new_model: '%{model} ġdid'
+    show: Uri
+    edit: Editja
+    edit_model: Editja l-%{model}
+    update: Aggorna
+    destroy: Eqred
+    back: Lura
+    confirm: Cert?
+    created: '%{model} kien maħluq.'
+    updated: '%{model} ġie aġġornat.'
+    destroyed: '%{model} gie imħassar.'
+    access_denied: M'għandekx aċċess għal %{model}.
   nav:
     header:
-      finished_hoc: I've finished my Hour of Code
-      sign_in_to_save: Sign in to save progress
+      finished_hoc: Jien lestejt l'Hour of Code tieghi
+      sign_in_to_save: Idħol biex tissejvja l-progress
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: Hi %{username}
       stats: My progress
       settings: My account
@@ -262,6 +279,7 @@
       signup: Sign up
       already_registered: Already registered?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: CLOSE
@@ -290,10 +308,10 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: Trophies
+      trophies: Trofej
     students:
       name: Name
-      username: Username
+      username: Isem l-utent
       password: Password
       manage: Manage students
       dashboard: Go to Teacher Dashboard
@@ -317,69 +335,83 @@
       add: Add section
       manage: Manage sections
       section: Section
-      students: Students
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
+      students: Studenti
+      section_code: Kodici tas-Sezzjoni
+      add_section_code: Żid kodiċi tat-Taqsima tal-istudenti
+      secret: Tip ta' Sigriet
+      grade: Grad
+      course: Kors
+      rename: Ibdel l-isem
+      edit: editja
+      delete: ħassar
+      confirm_delete: Żgur tixtieq tħassar din is-Sezzjoni?
+      email: Ibgħat bil-posta elettronika
     rollup: Progress Dashboard
-    activity: Recent class activity
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    activity: L-attività riċenti tal-klassi
+    user_not_found: L-għalliem jew student ma nstabx
+    cant_remove_student_no_email: '%{student_name} ma jistax jitneħħa bħala student
+      tiegħek għax %{student_name} ma irregistrax l-indirizz elettroniku tieghu'
+    cant_remove_teacher_no_email: '%{teacher_name} ma jistax jitneħħa bħala għalliem
+      tiegħek għax inti ma rreġistrajtx indirizz elettroniku'
+    student_teacher_disassociated: '%{teacher_name} tneħħa bħala għalliem ta'' %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Student
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_resend_confirm: Resend confirmation instructions
-    new_password_hint: (leave blank if you don't want to change it)
-    current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    email_confirm_needed: 'Indirizz elettroniku ma giex ikkonfermat:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
+    email_resend_confirm: Erga ibghat l'istruzzjonijiet tal-konferma
+    new_password_hint: (ħalli vojt jekk ma tixtieqx tibdel)
+    current_password_hint: (neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
+      tiegħek)
+    delete: Ħassar l'Account tiegħek
+    delete_text: Meta tikklikkja l-buttuna hawn taħt jithassarlek l'Account.
+    delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
+      il-kontijiet ta'' l-istudenti tiegħek.'
+    delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
   user_level:
-    completed: Completed
-    tried: Tried
+    completed: Lesta
+    tried: Ppruvat
   user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
-    classroom_activity: Unplugged Activity
+    recent_activity: Attività riċenti
+    show_more: Uri aktar
+    classroom_activity: Attivita bla kompjuter
   home:
-    title: Code Studio
-    all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
-    signin_message: Already registered? %{link}
-    student_reg_link: Student Sign Up
-    teacher_reg_link: Teacher Sign Up
-    signin_directions: Use an account to track progress.<br/> Teachers, track your
-      entire class.
-    teacher_dashboard: See progress dashboard
-    teacher_student_count_one: You have %{count} student.
-    teacher_student_count: You have %{count} students.
-    teacher_averages: On average your students have earned %{trophy_average} out of
-      %{trophy_max} "Concept Mastery" trophies.
-    teacher_print_certificates: Print certificates for students who finish this course
-    teacher_read_blog: Read about news and updates to our materials at our Educator
-      Blog
-    classroom: Your classroom
-    student_progress: Your learning progress
-    student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
-      trophies.
-    student_left_off: 'Where you left off:'
-    student_finished: You've completed all tutorials, pick another class %{online_link}
-      or at a %{local_school_link}
-    local_school: local school
+    title: Code Stuwdjo
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
+    all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
+    lesson_plans: Pjanijiet tal-Lezzjoni
+    signin_message: Diġà rreġistrat? %{link}
+    student_reg_link: Registrazzjoni ta' lis-Studenti
+    teacher_reg_link: Registrazzjoni ta' l-ghalliema
+    signin_directions: Uża Account biex issegwei il-progress.<br/> Għalliema, segwu
+      il-klassi taghkhom kollha.
+    teacher_dashboard: Ara l-progress dashboard
+    teacher_student_count_one: Għandek %{count} l-istudent.
+    teacher_student_count: Għandek %{count} l-istudenti.
+    teacher_averages: Fuq medja l-istudenti tiegħek akkwistaw %{trophy_average} mill-%{trophy_max}
+      trofej "Concept Mastery".
+    teacher_print_certificates: Pprintja certifikati ghal studenti li jtemmu dan il-kors
+    teacher_read_blog: Aqra aħbarijiet u aġġornamenti tal-materjali tagħna fil-Blog
+      ta l'Edukaturi
+    classroom: Il-Klassi tiegħek
+    student_progress: L-progress tat-tagħlim tiegħek
+    student_stats: Int akwistajt %{trophy_count} minn %{trophy_max} trofej "Concept
+      Master".
+    student_left_off: 'Fejn ħallejt:'
+    student_finished: Lestejt l-lezzjonijiet kollha, agħżel klassi ohra %{online_link}
+      jew fil-%{local_school_link}
+    local_school: skola lokali
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -392,10 +424,14 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
+    no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -454,63 +490,70 @@
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: Attività downloadable gejja daqt.
+  video_coming_soon: Filmat Ġej Daqt!
   share_code:
-    title: Click 'Run' to see my program in action
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
-    og_description: I wrote the code myself with Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    title: Ikklikkja 'Ħaddem' biex tara l-programm
+    bounce_og_title: Ara il-loghba tieghi Bounce Game
+    flappy_og_title: Ara il-loghba tieghi Flappy
+    studio_og_title: Ara l'App tieghi Play Lab
+    check_out_what_i_made: Ara x'ghamilt
+    og_description: Ktibt il-programm jien stess b'Code.org
+    phone_number_not_allowed: Jidher li hemm numru tat-telefown fih. Prova biddel
+      it-test.
+    address_not_allowed: Jidher li hemm indirizz fih. Prova biddel it-test.
+    email_not_allowed: Jidher li hemm indirizz tal-posta elettronika fih. Prova biddel
+      it-test.
+    profanity_not_allowed: Jidher li hemm kliem hazin fih. Prova biddel it-test.
   builder:
-    created: You created a new script.
-    destroyed: You destroyed a script.
-    manage: Build Levels
-    view: View
-    back: Back to scripts
-    success: You successfully edited the blocks.
+    created: Inti hloqt script gdid.
+    destroyed: Inti qridt script.
+    manage: Livelli ta' bini
+    view: Ara
+    back: Lura lejn l-iskripts
+    success: Irnexxielek teditja il-blokki.
     level:
-      create: Create new level
-      current: Current Levels
-      unused: Unused Levels
+      create: Ohloq livell gdid
+      current: Livelli kurrenti
+      unused: Livelli mhux użati
   upsell:
     hoc:
       title: Hour of Code
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Ipprova dan it-taghlim baziku tax-xjenza tal-kompjuter. Milljuni bhalek
+        pprovaw diga.
     flappy:
-      title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
-        tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: Code ta' Flappy
+      body: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova il-lezzjoni
+        ta' Flappy Code!
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Prova il-kors gdid Hour of Code fis-sezzjoni beta
+      try_frozen: Artist ma' Anna u Elsa mil film Frozen
     gallery:
       title: Gallery
-      body: View a gallery of app and artist images created by our users
+      body: Ara it-tpingijiet u stampi krejati mil-users taghna
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
+    students_drew_these_with_code: Studenti pingewhom billi jiprogrammaw!
+    students_made_these_with_code: Studenti ghamluhom billi jiprogrammaw!
+    picture_count: Fil-passat<b>%{days}</b>, l-istudenti pingew <b>%{count}</b> stampi
+      billi kitbu programmi tal-kompjuter taghhom. Ikklikkja fuq l-istampi biex tara
+      kull programm jahdem.
+    activity_count: Fil-passat <b>%{days}</b> il-gurnata, l-istudenti għamlu <b>%{count}</b>
+      app u stampi biilli kitbu il-programmi tal-kompjuter taghhom stess. Ikklikkja
+      fuq l-istampi u screenshots biex tara kull programm jahdem.
+    want_to_make_your_own: Tixtieq tikteb il-porgramm tieghek stess?
+    more: Aktar &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
@@ -531,13 +574,27 @@
     wrong_body: The answer you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:
@@ -548,7 +605,8 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja
+            (15-25 siegha)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
@@ -565,9 +623,9 @@
           title: Builder
           description: ''
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
+          title: Code ta' Flappy
+          description: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova
+            il-lezzjoni ta' Flappy Code!
         jigsaw:
           title: Jigsaw
           description: ''
@@ -590,11 +648,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: Share
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: More
+    name: Name
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: 'Yes'
+    delete_no: 'No'
+    saved: Saved
+    not_saved: Not saved
+    cancel: Cancel
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

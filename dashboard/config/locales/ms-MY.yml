@@ -1,35 +1,39 @@
 "ms":
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: adalah diperlukan
     attributes:
       user:
-        name: Nama
+        name: Nama Paparan
         email: E-mel
         username: nama pengguna
         password: kata laluan
         password_confirmation: Pengesahan kata laluan
         current_password: Kata laluan semasa
         locale: Bahasa
-        age: Age
+        age: Umur
         gender: Jantina
         edit_header: Edit Maklumat Akaun
         error:
           future: tidak boleh ada di masa depan
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
+  submit: Hantar
   add_teacher_form:
     code:
-      label: 'Tambah guru mengikut bahagian Kod:'
-      placeholder: Kod (ABCDEF)
+      label: 'Tambahkan guru:'
+      placeholder: Kod Seksyen (ABCDEF)
     submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
   appname: Code.org
   stage: peringkat
-  stage_number: Stage %{number}
+  stage_number: Peringkat %{number}
   puzzle: Teka-teki
   trophies: Piala
   courses: kursus-kursus
@@ -48,22 +52,27 @@
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
+    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
+      di sini</a> untuk mendaftar keluar daripada %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
-    google_oauth2: Google Account
+    google_oauth2: Akaun Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Akaun Microsoft
     forgot_password: Lupa kata laluan anda?
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
   signup_form:
-    overview_student: Daftar akaun menyemak perkembangan anda.
-    overview_teacher: Ajarkan sains komputer di bilik darjah dengan mendaftar akaun.
-      <p/> Anda boleh menyemak kemajuan pelajar-pelajar anda dan dapatkan hadiah.
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
+    overview_student: Daftarkan akaun untuk menjejaki kemajuan anda. Email anda digunakan
+      terutamanya untuk membenarkan anda untuk mendaftar masuk dan memulihan kata
+      laluan. Untuk maklumat lanjut, lihat  <a href="http://code.org/privacy">Polisi
+      Privasi</a>.
+    overview_teacher: Ajar sains komputer di dalam kelas anda dengan mendaftarkan
+      akaun.<p/> Anda boleh menambah pelajar-pelajar dan menjejaki kemajuan mereka.
     no_signup_message: Anda boleh <a target="_blank" href="http://learn.code.org">
       layari pelbagai tahap dan susun-suai</a>, tetapi anda perlu mendaftar untuk
       menyimpan perkembangan anda.
@@ -77,8 +86,8 @@
     address_placeholder: alamat, bandar, Negeri, zip
     gender: Jantina (pilihan)
     birthday: Hari Lahir (pilihan)
-    age: Umur (tidak wajib)
-    user_type: Are you a student or teacher?
+    age: Umur
+    user_type: Adakah anda seorang pelajar atau guru?
     submit: Mendaftar
     teacher: Adakah anda seorang guru?
     valid_username: Boleh digunakan!
@@ -87,11 +96,13 @@
     valid_password: Kata laluan sah!
     invalid_password: Kata laluan mestilah sekurang-kurangnya 6 aksara
     mismatch_password: Dua kata laluan yang anda masukkan tidak sepadan
-    student_terms: Saya bersetuju untuk terikat dengan terma perkhidmatan Code.org.
-      Jika saya di bawah umur 13 tahun, saya mengesahkan dengan mengemukakan borang
-      ini bahawa saya telah mendapat kebenaran ibu bapa atau penjaga yang sah untuk
-      menggunakan Perkhidmatan Code.org.
-    teacher_terms: Saya bersetuju untuk terikat dengan terma-terma perkhidmatan Code.org.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
@@ -105,9 +116,9 @@
     try_hoc: Cuba satu jam kod dahulu
     try_20hours: Cuba 20 jam pengenalan kepada Sains komputer kami
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
+    welcome: Selamat datang ke %{section_name}
+    name: Pilih nama anda
+    picture: Sekarang cari gambar rahsia anda
     words: Now enter your secret words
     login: Log masuk
   password:
@@ -154,8 +165,8 @@
       access_denied: Anda tidak mempunyai akses kepada statistik orang ini
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
+    provider: 'Penyedia:'
+    code: 'Kod:'
     redeem_header: 'To redeem:'
     donorschoose_register: Daftar sebagai guru pada DonorsChoose.org
     donorschoose_project: Poskan projek
@@ -247,8 +258,10 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Laman Utama Guru
+      district_dashboard: District Dashboard
       label: Hi %{username}
       stats: Kemajuan saya
       settings: Akaun saya
@@ -258,6 +271,7 @@
       signup: Mendaftar
       already_registered: Already registered?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
       close: TUTUP
@@ -333,16 +347,25 @@
       guru anda kerana anda belum mendaftarkan alamat e-mel'
     student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: pelajar
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Hantar semula arahan pengesahan
     new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
     current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)
-    cancel:
-      title: Batalkan akaun saya
-      hint: Tidak berpuas hati?
-      button: Batalkan akaun saya
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -351,7 +374,11 @@
     show_more: Tunjukkan Lagi
     classroom_activity: Cabut aktiviti
   home:
-    title: Code Studio
+    title: Kemajuan saya
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Sudah mendaftar? %{link}
@@ -377,6 +404,7 @@
     local_school: sekolah tempatan
     online: online
     see_details: Lihat butiran
+    view_course: View Course
     prize_info: 'Hadiah untuk penyertaan (guru-guru sekolah awam A.S. sahaja): sehingga
       $1,000 dalam ganjaran bilik darjah.'
     tryfirst: 'Atau, anda boleh cuba dahulu, dan mendaftar kemudian:'
@@ -389,10 +417,14 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
+    no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Lelaki
     female: Perempuan
@@ -401,14 +433,11 @@
     student: pelajar
     teacher: Guru
   footer:
-    help_from_html: Jurutera daripada <a href="http://www.google.com">Google</a>,
-      <a href="http://www.microsoft.com">Microsoft</a>, <a href="http://www.facebook.com">Facebook</a>,
-      and <a href="http://www.twitter.com">Twitter</a> telah membantu mencipta tutorial
-      ini.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. Hak Cipta Terpelihara.<br/> Plants vs. Zombies&trade;
-      & &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. Hak Cipta
-      Terpelihara.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Sediakan maklum balas
     translate: Bantu kami menterjemahkan ke bahasa anda
@@ -423,7 +452,7 @@
     teacher: Lihat penyelesaian
     auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
     submit: Kemaskini Lokasi Pelukis
-    direction: Mulakan hala tuju
+    direction: Start Direction (in degrees)
   video:
     tab: Video.
     notes: Tiada video? Lihat nota.
@@ -460,7 +489,7 @@
     title: Klik 'Mainkan' untuk lihat program saya berfungsi
     bounce_og_title: Semak permainan Lantun saya
     flappy_og_title: Semak permainan Flappy saya
-    studio_og_title: Lihat cerita saya
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: Saya menulis kod sendiri dengan Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -483,15 +512,19 @@
       unused: Tahap yang tidak digunakan
   upsell:
     hoc:
-      title: Satu Jam Kod
+      title: Hour of Code
       body: Cuba asas-asas sains komputer. Ramai yang telah mencuba.
     flappy:
       title: Kod Flappy
       body: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit?
         Cuba tutorial kod Flappy kami!
-    20hour:
-      title: Kursus Pengenalan
-      body: Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami.
+    20-hour:
+      title: Accelerated Course
+      body: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming.
+        Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia
+        adalah menyeronokkan untuk belajar di semua peringkat umur.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -500,6 +533,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
     students_made_these_with_code: Students made these with code!
@@ -517,7 +553,9 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
@@ -529,13 +567,27 @@
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Penyelesaian salah
     wrong_body: Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!
     correct_title: Betul
     correct_body: Itulah jawapan yang betul.
+  contract_match:
+    wrong_title: Jawapan yang salah
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:
@@ -557,7 +609,7 @@
           title: Edit kod
           description: ''
         events:
-          title: Events
+          title: Acara-acara
           description: ''
         builder:
           title: Builder
@@ -588,11 +640,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Simpan
+    delete: Padam
+    exit: Return to Course
+    my_projects: My Projects
+    share: Kongsi
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Lagi
+    name: Nama
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Padam?
+    delete_yes: Ya
+    delete_no: Tidak
+    saved: Saved
+    not_saved: Not saved
+    cancel: Batal
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

@@ -1,0 +1,58 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-20T15:15:39.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "button": null,
+      "textInput": null,
+      "textLabel": null,
+      "dropdown": null,
+      "getText": null,
+      "setText": null,
+      "image": null,
+      "showElement": null,
+      "hideElement": null,
+      "deleteElement": null,
+      "setPosition": null,
+      "write": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "declareAssign_x": null,
+      "assign_x": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "This app is only SLIGHTLY different from the previous one, but much more dynamic.  See if you can figure out how and why the count is going up.  Once you've figured it out then you should be able to DO THIS: add a button to the app that when clicked makes the count go down, and updates the label.  When you're done the app should work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "start_blocks": "button(\"myButton\",\"go up\");\r\nvar count = 0;\r\ntextLabel(\"myLabel\", \"Count is: \"+count);\r\n\r\nonEvent(\"myButton\", \"click\", function(){\r\n   count = count+1;\r\n   setText(\"myLabel\", \"Count is: \"+count);\r\n});\r\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

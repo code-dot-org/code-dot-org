@@ -1,4 +1,7 @@
 km:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@ km:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
   hello: សួស្ដី​ពិភពលោក
   welcome_back: 'ស្វាគមន៍​ការ​មក​វិញ, %{name}'
+  submit: បញ្ជូន
   add_teacher_form:
     code:
       label: បន្ថែម​គ្រូ​ម្នាក់៖
@@ -60,6 +64,8 @@ km:
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'បង្កើត​គណនី​មួយ​សម្រាប់​កត់ត្រា​ដំណើរ​របស់​អ្នក។ អ៊ីមែល​របស់​អ្នក​នឹង​ត្រូវបាន​ប្រើ​សម្រាប់​ការ​ចូល​គណនី និង​សម្រាប់​ការ​កំណត់​ពាក្យ​សម្ងាត់​ឡើង​វិញូ។ សម្រាប់​ព័ត៌មាន​បន្ថែម សូម​មើល <a href="http://code.org/privacy">គោលការណ៍​ភាព​ឯកជន</a> របស់​យើង។'
     overview_teacher: 'បង្រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​ក្នុង​ថ្នាក់​របស់​អ្នក ដោយ​គ្រាន់​តែ​បង្កើត​គណនី​មួយ។<p/> អ្នក​ថែម​ទាំងអាច​បន្ថែម​សិស្ស និង​តាមដាន​ដំណើរការ​របស់​ពួកគេ​ថែម​ទៀត​ផង។'
     no_signup_message: 'អ្នក​អាច​<a target="_blank" href="http://learn.code.org">រក​មើល​ដំណាក់កាល​និង​ល្បែង​ប្រាជ្ញា​ជា​ច្រើន​បាន</a>, ប៉ុន្តែ​អ្នក​ត្រូវ​ចុះឈ្មោះ ដើម្បី​រក្សាទុក​ដំណើរការ​របស់​អ្នក។'
@@ -213,8 +219,10 @@ km:
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: 'Hi %{username}'
       stats: ដំណើការ​របស់​ខ្ញុំ
       settings: គណនី​របស់​ខ្ញុំ
@@ -224,6 +232,7 @@ km:
       signup: ចុះឈ្មោះ
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: ដំណើរការ​របស់​អ្នក
       lines: 'បន្ទាត់​កូដ​សរុប៖ %{lines}'
       close: បិទ
@@ -291,15 +300,23 @@ km:
     cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Student
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: បោះបង់​គណនី​របស់​ខ្ញុំ
-      hint: មិន​សប្បាយ​ចិត្ត?
-      button: បោះបង់​គណនី​របស់​ខ្ញុំ
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: បាន​បញ្ចប់
     tried: បាន​ព្យាយាម
@@ -308,7 +325,10 @@ km:
     show_more: បង្ហាញ​ច្រើន​ទៀត
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: ដំណើការ​របស់​ខ្ញុំ
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}'
@@ -326,23 +346,27 @@ km:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
+    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: Try now
+    trynow: សាកល្បង​ឥឡូវ
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -421,9 +445,10 @@ km:
     flappy:
       title: Flappy កូដ
       body: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -432,6 +457,9 @@ km:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -456,13 +484,25 @@ km:
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ
     wrong_body: ដំណោះស្រាយ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
+  contract_match:
+    wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: យល់ព្រម
   time:
@@ -476,7 +516,7 @@ km:
           title: K-8 Intro to Computer Science Course (15-25 hours)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: ពេលវេលា​នៃ​កូដ
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Edit Code
@@ -494,7 +534,7 @@ km:
           title: Jigsaw
           description: ""
         step:
-          title: Step
+          title: ជំហាន
           description: ""
         sample_level_builder:
           title: Sample Level Builder
@@ -506,11 +546,44 @@ km:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: ចែក​រំលែក
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: More
+    name: ឈ្មោះ
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: យល់ព្រម
+    delete_no: ទេ
+    saved: Saved
+    not_saved: Not saved
+    cancel: បោះបង់
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

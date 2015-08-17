@@ -1,52 +1,76 @@
+require 'digest/sha1'
+
 module LevelsHelper
-
-  def build_script_level_path(script_level)
-    if script_level.script.name == 'hourofcode'
-      return hoc_chapter_path(script_level.chapter)
-    end
-
-    case script_level.script_id
-    when Script::HOC_ID
-      script_puzzle_path(script_level.script, script_level.chapter)
-    when Script::TWENTY_HOUR_ID
-      script_level_path(script_level.script, script_level)
-    when Script::EDIT_CODE_ID
-      editcode_chapter_path(script_level.chapter)
-    when Script::TWENTY_FOURTEEN_LEVELS_ID
-      twenty_fourteen_chapter_path(script_level.chapter)
-    when Script::BUILDER_ID
-      builder_chapter_path(script_level.chapter)
-    when Script::FLAPPY_ID
-      flappy_chapter_path(script_level.chapter)
-    when Script::JIGSAW_ID
-      jigsaw_chapter_path(script_level.chapter)
+  include ApplicationHelper
+  def build_script_level_path(script_level, params = {})
+    if script_level.script.name == Script::HOC_NAME
+      hoc_chapter_path(script_level.chapter, params)
+    elsif script_level.script.name == Script::FLAPPY_NAME
+      flappy_chapter_path(script_level.chapter, params)
     else
-      if script_level.stage
-        script_stage_script_level_path(script_level.script, script_level.stage, script_level.position)
-      else
-        script_puzzle_path(script_level.script, script_level.chapter)
-      end
+      script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     end
   end
 
-  def build_script_level_url(script_level)
-    url_from_path(build_script_level_path(script_level))
+  def build_script_level_url(script_level, params = {})
+    url_from_path(build_script_level_path(script_level, params))
   end
 
   def url_from_path(path)
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def set_videos_and_blocks_and_callouts_and_instructions
-    select_and_track_autoplay_video
+  # Create a new channel.
+  # @param [Hash] data Data to store in the channel.
+  # @param [String] src Optional source channel to copy data from, instead of
+  #   using the value from the `data` param.
+  def create_channel(data = {}, src = nil)
 
-    if @level.is_a? Blockly
-      @toolbox_blocks = @toolbox_blocks || @level.toolbox_blocks
-      @start_blocks = initial_blocks(current_user, @level) || @start_blocks || @level.start_blocks
+    result = ChannelsApi.call(request.env.merge(
+      'REQUEST_METHOD' => 'POST',
+      'PATH_INFO' => '/v3/channels',
+      'REQUEST_PATH' => '/v3/channels',
+      'QUERY_STRING' => src ? "src=#{src}" : '',
+      'CONTENT_TYPE' => 'application/json;charset=utf-8',
+      'rack.input' => StringIO.new(data.to_json)
+    ))
+    headers = result[1]
+
+    # Return the newly created channel ID.
+    headers['Location'].split('/').last
+  end
+
+  def set_channel
+    # This only works for logged-in users because the storage_id cookie is not
+    # sent back to the client if it is modified by ChannelsApi.
+    return unless current_user
+
+    # The channel should be associated with the template level, if present.
+    # Otherwise the current level.
+    host_level = @level.project_template_level || @level
+
+    if @user
+      # "answers" are in the channel so instead of doing
+      # set_level_source to load answers when looking at another user,
+      # we have to load the channel here.
+
+      channel_token = ChannelToken.find_by(level: host_level, user: @user)
+      view_options readonly_workspace: true, callouts: []
+    else
+      # If `create` fails because it was beat by a competing request, a second
+      # `find_by` should succeed.
+      channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        # your own channel
+        ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
+          # Get a new channel_id.
+          ct.channel = create_channel(hidden: true)
+        end
+      end
     end
 
-    select_and_remember_callouts(@script_level.nil?)
-    localize_levelbuilder_instructions
+    if channel_token
+      view_options channel: channel_token.channel
+    end
   end
 
   def select_and_track_autoplay_video
@@ -57,7 +81,7 @@ module LevelsHelper
 
     if is_legacy_level
       autoplay_video = @level.related_videos.find { |video| !seen_videos.include?(video.key) }
-    elsif @level.is_a?(Blockly) && @level.specified_autoplay_video
+    elsif @level.specified_autoplay_video
       unless seen_videos.include?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
       end
@@ -67,221 +91,186 @@ module LevelsHelper
 
     seen_videos.add(autoplay_video.key)
     session[:videos_seen] = seen_videos
-    @autoplay_video_info = video_info(autoplay_video) unless params[:noautoplay]
+    autoplay_video.summarize unless params[:noautoplay]
   end
 
   def select_and_remember_callouts(always_show = false)
-    session[:callouts_seen] ||= Set.new()
-    available_callouts = []
-    if @level.custom?
-      unless @level.try(:callout_json).blank?
-        available_callouts = JSON.parse(@level.callout_json).map do |callout_definition|
-          Callout.new(element_id: callout_definition['element_id'],
-              localization_key: callout_definition['localization_key'],
-              qtip_config: callout_definition['qtip_config'].to_json,
-              on: callout_definition['on'])
-        end
-      end
-    else
-      available_callouts = @script_level.callouts if @script_level
-    end
-    @callouts_to_show = available_callouts
-      .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
-      .each { |c| session[:callouts_seen].add(c.localization_key) }
-    @callouts = make_localized_hash_of_callouts(@callouts_to_show)
-  end
-
-  def make_localized_hash_of_callouts(callouts)
-    callouts.map do |callout|
+    session[:callouts_seen] ||= Set.new
+    # Filter if already seen (unless always_show)
+    callouts_to_show = @level.available_callouts(@script_level).
+      reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }.
+      each { |c| session[:callouts_seen].add(c.localization_key) }
+    # Localize
+    callouts_to_show.map do |callout|
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
-      callout_hash['localized_text'] = data_t('callout.text', callout.localization_key)
+      callout_text = data_t('callout.text', callout.localization_key)
+      if I18n.locale == 'en-us' || callout_text.nil?
+        callout_hash['localized_text'] = callout.callout_text
+      else
+        callout_hash['localized_text'] = callout_text
+      end
       callout_hash
     end
   end
 
-  # this defines which levels should be seeded with th last result from a different level
-  def initial_blocks(user, level)
-    if params[:initial_code]
-      return params[:initial_code]
+  # Options hash for all level types
+  def app_options
+    set_channel if @level.channel_backed?
+
+    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
+    # Set videos and callouts.
+    view_options(
+      autoplay_video: select_and_track_autoplay_video,
+      callouts: callouts
+    )
+
+    # External project levels are any levels of type 'external' which use
+    # the projects code to save and load the user's progress on that level.
+    view_options(is_external_project_level: true) if @level.pixelation?
+
+    view_options(is_channel_backed: true) if @level.channel_backed?
+
+    if @level.is_a? Blockly
+      blockly_options
+    elsif @level.is_a? DSLDefined
+      dsl_defined_options
+    else
+      # currently, all levels are Blockly or DSLDefined except for Unplugged
+      view_options.camelize_keys
     end
+  end
 
-    if user
-      if level.game.app == Game::TURTLE
-        from_level_num = case level.level_num
-          when '3_8' then '3_7'
-          when '3_9' then '3_8'
-        end
+  # Options hash for DSLDefined
+  def dsl_defined_options
+    app_options = {}
 
-        if from_level_num
-          from_level = Level.find_by_game_id_and_level_num(level.game_id, from_level_num)
-          return user.last_attempt(from_level).try(:level_source).try(:data)
-        end
+    level_options = app_options[:level] ||= Hash.new
+
+    level_options[:lastAttempt] = @last_attempt
+    level_options.merge! @level.properties.camelize_keys
+
+    app_options.merge! view_options.camelize_keys
+
+    app_options
+  end
+
+  # Options hash for Blockly
+  def blockly_options
+    l = @level
+    throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
+    # Level-dependent options
+    app_options = l.blockly_options.dup
+    level_options = app_options[:level] = app_options[:level].dup
+
+    # Locale-dependent option
+    # Fetch localized strings
+    if l.custom?
+      loc_val = data_t("instructions", "#{l.name}_instruction")
+      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+        level_options['instructions'] = loc_val
+      end
+    else
+      %w(instructions).each do |label|
+        val = [l.game.app, l.game.name].map { |name|
+          data_t("level.#{label}", "#{name}_#{l.level_num}")
+        }.compact.first
+        level_options[label] ||= val unless val.nil?
       end
     end
-    nil
+
+    # Script-dependent option
+    script = @script
+    app_options[:scriptId] = script.id if script
+
+    # ScriptLevel-dependent option
+    script_level = @script_level
+    level_options['puzzle_number'] = script_level ? script_level.position : 1
+    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+
+    # LevelSource-dependent options
+    app_options[:level_source_id] = @level_source.id if @level_source
+    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
+
+    # Edit blocks-dependent options
+    if level_view_options[:edit_blocks]
+      # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
+      level_options['edit_blocks'] = level_view_options[:edit_blocks]
+      level_options['edit_blocks_success'] = t('builder.success')
+      level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['embed'] = false
+      level_options['hideSource'] = false
+    end
+
+    if @level.game.uses_pusher?
+      app_options['usePusher'] = CDO.use_pusher
+      app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
+    # Process level view options
+    level_overrides = level_view_options.dup
+    if level_options['embed'] || level_overrides[:embed]
+      level_overrides.merge!(hide_source: true, show_finish: true)
+    end
+    if level_overrides[:embed]
+      view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
+    end
+    view_options(no_footer: true) if level_overrides[:share] && browser.mobile?
+
+    level_overrides.merge!(no_padding: view_options[:no_padding])
+
+    # Add all level view options to the level_options hash
+    level_options.merge! level_overrides.camelize_keys
+    app_options.merge! view_options.camelize_keys
+
+    # Move these values up to the app_options hash
+    %w(hideSource share noPadding embed).each do |key|
+      if level_options[key]
+        app_options[key.to_sym] = level_options.delete key
+      end
+    end
+
+    # User/session-dependent options
+    app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
+    app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:isMobile] = true if browser.mobile?
+    app_options[:applabUserId] = applab_user_id if @game == Game.applab
+    app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
+    app_options[:showExampleTestButtons] = true if enable_examples?
+    app_options[:rackEnv] = CDO.rack_env
+    app_options[:report] = {
+        fallback_response: @fallback_response,
+        callback: @callback,
+    }
+    level_options[:lastAttempt] = @last_attempt
+
+    # Request-dependent option
+    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+
+    app_options
   end
 
-  # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
-  # must be specified to bust the CDN cache. CloudFront is enabled to forward
-  # query params. Don't cache bust during dev, so breakpoints work.
-  # See where ::CACHE_BUST is initialized for more details.
-  def blockly_cache_bust
-    if ::CACHE_BUST.blank?
-      false
+  LevelViewOptions = Struct.new *%i(
+    success_condition
+    start_blocks
+    toolbox_blocks
+    edit_blocks
+    skip_instructions_popup
+    embed
+    share
+    hide_source
+  )
+  # Sets custom level options to be used by the view layer. The option hash is frozen once read.
+  def level_view_options(opts = nil)
+    @level_view_options ||= LevelViewOptions.new
+    if opts.blank?
+      @level_view_options.freeze.to_h.delete_if { |k, v| v.nil? }
     else
-      ::CACHE_BUST
+      opts.each{|k, v| @level_view_options[k] = v}
     end
-  end
-
-  def numeric?(val)
-    Float(val) != nil rescue false
-  end
-
-  def integral?(val)
-    Integer(val) != nil rescue false
-  end
-
-  def boolean?(val)
-    val == boolean_string_true || val == boolean_string_false
-  end
-
-  def blockly_value(val)
-    if integral?(val)
-      Integer(val)
-    elsif numeric?(val)
-      Float(val)
-    elsif boolean?(val)
-      val == boolean_string_true
-    else
-      val
-    end
-  end
-
-  def boolean_string_true
-    "true"
-  end
-
-  def boolean_string_false
-    "false"
-  end
-
-  def localize_levelbuilder_instructions
-    loc_val = data_t("levelbuilder.#{@level.name}", "instructions")
-    @level.properties['instructions'] = loc_val unless loc_val.nil?
-  end
-
-  # Code for generating the blockly options hash
-  def blockly_options(local_assigns={})
-    # Use values from properties json when available (use String keys instead of Symbols for consistency)
-    level = @level.properties.dup || {}
-
-    # Set some specific values
-    level['puzzle_number'] = @script_level ? @script_level.stage_or_game_position : 1
-    level['stage_total'] = @script_level ? @script_level.stage_or_game_total : @level.game.levels.count
-    if @level.is_a?(Maze) && @level.step_mode
-      @level.step_mode = blockly_value(@level.step_mode)
-      level['step'] = @level.step_mode == 1 || @level.step_mode == 2
-      level['stepOnly'] = @level.step_mode == 2
-    end
-
-    # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-    level['edit_blocks'] = params[:type]
-    level['edit_blocks_success'] = t('builder.success')
-
-    # Map Dashboard-style names to Blockly-style names in level object.
-    # Dashboard underscore_names mapped to Blockly lowerCamelCase, or explicit 'Dashboard:Blockly'
-    Hash[%w(
-      start_blocks
-      solution_blocks
-      predraw_blocks
-      slider_speed
-      start_direction
-      instructions
-      initial_dirt
-      final_dirt
-      nectar_goal
-      honey_goal
-      flower_type
-      skip_instructions_popup
-      is_k1
-      required_blocks:levelBuilderRequiredBlocks
-      toolbox_blocks:toolbox
-      x:initialX
-      y:initialY
-      maze:map
-      artist_builder:builder
-      ani_gif_url:aniGifURL
-      shapeways_url
-      images
-      free_play
-      min_workspace_height
-      slider_speed
-      permitted_errors
-      disable_param_editing
-      disable_variable_editing
-      success_condition:fn_successCondition
-      failure_condition:fn_failureCondition
-      first_sprite_index
-      protaganist_sprite_index
-      timeout_failure_tick
-      soft_buttons
-      edge_collisions
-      projectile_collisions
-      allow_sprites_outside_playspace
-      sprites_hidden_to_start
-      coordinate_grid_background
-      use_modal_function_editor
-      use_contract_editor
-      impressive
-      open_function_definition
-      callout_json
-      disable_sharing
-    ).map{ |x| x.include?(':') ? x.split(':') : [x,x.camelize(:lower)]}]
-    .each do |dashboard, blockly|
-      # Select first valid value from 1. local_assigns, 2. property of @level object, 3. named instance variable, 4. properties json
-      # Don't override existing valid (non-nil/empty) values
-      property = local_assigns[dashboard].presence ||
-        @level[dashboard].presence ||
-        instance_variable_get("@#{dashboard}").presence ||
-        level[dashboard.to_s].presence
-      value = blockly_value(level[blockly.to_s] || property)
-      level[blockly.to_s] = value unless value.nil? # make sure we convert false
-    end
-
-    level['images'] = JSON.parse(level['images']) if level['images'].present?
-
-    # Blockly requires startDirection as an integer not a string
-    level['startDirection'] = level['startDirection'].to_i if level['startDirection'].present?
-    level['sliderSpeed'] = level['sliderSpeed'].to_f if level['sliderSpeed']
-    level['scale'] = {'stepSpeed' =>  @level.properties['step_speed'].to_i } if @level.properties['step_speed'].present?
-
-    # Blockly requires these fields to be objects not strings
-    %w(map initialDirt finalDirt goal soft_buttons).each do |x|
-      level[x] = JSON.parse(level[x]) if level[x].is_a? String
-    end
-
-    # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
-    if level['fn_successCondition'] || level['fn_failureCondition']
-      level['goal'] = {fn_successCondition: level['fn_successCondition'], fn_failureCondition: level['fn_failureCondition']}
-      level.delete('fn_successCondition')
-      level.delete('fn_failureCondition')
-    end
-
-    # Fetch localized strings
-    %w(instructions).each do |label|
-      val = [@level.game.app, @level.game.name].map { |name|
-        data_t("level.#{label}", "#{name}_#{@level.level_num}")
-      }.compact.first
-      level[label] ||= val unless val.nil?
-    end
-
-    # Set some values that Blockly expects on the root of its options string
-    app_options = {'levelId' => @level.level_num}
-    app_options['scriptId'] = @script.id if @script
-    app_options['levelGameName'] = @level.game.name if @level.game
-    app_options['scrollbars'] = blockly_value(@level.scrollbars) if @level.is_a?(Blockly) && @level.scrollbars
-    [level, app_options]
   end
 
   def string_or_image(prefix, text)
@@ -294,19 +283,21 @@ module LevelsHelper
       ext = File.extname(path)
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
+      block_type = ext.slice(1..-1)
       content_tag(:iframe, '', {
-          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: ext.slice(1..-1)).strip,
+          src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
       })
+
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
       content_tag(:div,
         content_tag(:iframe, '', {
-          src: url_for(id: level.id, controller: :levels, action: :show, embed: true).strip,
+          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
           width: (width ? width.strip : '100%'),
           scrolling: 'no',
           seamless: 'seamless',
@@ -326,11 +317,24 @@ module LevelsHelper
   end
 
   def level_title
-    if (script = @script_level.try(:script)) && !(script.default_script?)
-      "#{data_t_suffix('script.name', script.name, 'title')}: #{@script_level.name} ##{@script_level.stage_or_game_position}"
+    if @script_level
+      script =
+        if @script_level.script.flappy?
+          data_t 'game.name', @game.name
+        else
+          data_t_suffix 'script.name', @script_level.script.name, 'title'
+        end
+      stage = @script_level.name
+      position = @script_level.position
+      if @script_level.script.stages.many?
+        "#{script}: #{stage} ##{position}"
+      elsif @script_level.position != 1
+        "#{script} ##{position}"
+      else
+        script
+      end
     else
-      level_num = "##{@script_level.try(:game_chapter) || @level.level_num} " unless @game.name == "Flappy" and @level.level_num == "1"
-      "#{data_t('game.name', @game.name)} #{level_num}"
+      @level.key
     end
   end
 
@@ -353,7 +357,7 @@ module LevelsHelper
   end
 
   def boolean_check_box(f, field_name_symbol)
-    f.check_box field_name_symbol, {}, boolean_string_true, boolean_string_false
+    f.check_box field_name_symbol, {}, JSONValue.boolean_string_true, JSONValue.boolean_string_false
   end
 
   SoftButton = Struct.new(:name, :value)
@@ -364,5 +368,20 @@ module LevelsHelper
         SoftButton.new('Down', 'downButton'),
         SoftButton.new('Up', 'upButton'),
     ]
+  end
+
+  # Unique, consistent ID for a user of an applab app.
+  def applab_user_id
+    channel_id = "1337" # Stub value, until storage for channel_id's is available.
+    user_id = current_user ? current_user.id.to_s : session.id
+    Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+  end
+
+  def enable_scrolling?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
+  end
+
+  def enable_examples?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
   end
 end

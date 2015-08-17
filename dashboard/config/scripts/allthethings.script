@@ -1,0 +1,99 @@
+title 'All the Things!'
+description 'All the level types for UI testing'
+description_short 'All the level types for UI testing'
+
+stage 'Jigsaw'
+level 'blockly:Jigsaw:3'
+
+stage 'Maze'
+level 'k-1 maze 1'
+level 'K-1 Maze Loops 3'
+level '2-3 Maze 1'
+level '4-5 Maze 4'
+level '4-5 Maze Conditionals 3'
+
+stage 'Artist'
+level 'K-1 Artist1 1'
+level '2-3 Artist 1 new'
+level '2-3 Artist Functions 4'
+level 'NEW Course 4 Artist Vars 2'
+level 'NEW Course 4 Artist Functions 3'
+
+stage 'Bee'
+level 'K-1 Bee 1'
+level 'blockly:CustomMaze:wordsearch_k_1'
+level '2-3 Bee Loops 2A'
+level '2-3 Bee Conditionals 5'
+
+stage 'PlayLab'
+level 'blockly:Studio:k1_1'
+level 'blockly:Studio:c2_1'
+level 'Course 4 Play Labs For Loops 1'
+level 'Course 4 Play Lab Params 2'
+
+stage 'Farmer'
+level '4-5 While Loops 4'
+
+stage 'Flappy'
+level 'blockly:Flappy:1'
+
+stage 'Bounce'
+level 'blockly:Bounce:1'
+
+stage 'Multi'
+level 'K-1 Happy Maps Multi 1'
+
+stage 'Multi2'
+level 'Choose 2 Test'
+
+stage 'Match'
+level 'K-1 Maze Match 1'
+
+stage 'TextMatch'
+level 'Blocks to Math 1'
+level 'PDK5 Strategies O'
+
+stage 'CSinA'
+level 'Calc Circles of Eval .2'
+level 'Eval Strings Images .2'
+level 'Eval Contracts F'
+level 'Eval Contracts A'
+level 'Calc Vars 1'
+level 'Big Game Vars 1'
+level 'Eval Define Funcs 3'
+level 'Eval Booleans 2'
+level 'Sam the Butterfly 2'
+level "Luigi's Pizza 1"
+level 'Eval Define Funcs Test'
+
+stage 'Netsim'
+level 'U1L4 NetSim SendAB'
+level 'U2L5 NetSim Classroom Internet'
+level 'U2L7 NetSim Need for Packets'
+level 'U2L10 NetSim Automatic DNS'
+
+stage 'Odometer'
+level 'Odometer'
+
+stage 'Text Compression'
+level 'U1L13 Text Compression'
+
+stage 'Pixelation'
+level 'Pixelation - Lesson 14 - Make the Letter A'
+level 'Pixelation - Lesson 15 - Complete 3-bit color'
+
+stage 'AppLab'
+level 'U3L2 Using Simple Commands'
+level 'U3L03 Define and use turnAround'
+level 'U3L07 - Starry Night Starter Code'
+level 'U3L08 - Enchantment Under the Sea'
+level 'U3L13 - Turtle move with button'
+level 'U3L16 - use images'
+
+stage 'Online PD'
+level 'PDK5 Intro C'
+level 'PDK5 Foundations F'
+
+stage 'Markdown Details'
+level 'Test External Markdown'
+

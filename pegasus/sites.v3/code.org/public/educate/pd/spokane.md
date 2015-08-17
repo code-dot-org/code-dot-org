@@ -6,11 +6,6 @@ nav: pd_nav
 
 # Professional Development - Spokane
 
-- [I'm attending High School PD...](#hs)
-- [I'm attending Administrator / Counselor PD...](#admin)
-
-<a id="hs"></a>
-
 ## High School Professional Development
 
 ### Phase 1: Preparation and Reflection
@@ -22,56 +17,44 @@ Milestone Complete!
 Milestone Complete!
 
 ### Phase 3: Academic Year Development
-Phase 3 is designed to provide teachers with professional support, guidance, and feedback during the school year and experiences with an online community of practice.
 
-#### Save The Dates:
+Milestone Complete! 
 
-2/28/2015
+### Phase 4: Post Year Development
+
+#### Save the Dates
+Thursday, June 18th - Saturday, June 20th
 <br />
-4/25/2015
+**Th - 2:00pm - 7:00pm**
 <br />
-
-8:30am - 3:30pm
+F & S - 8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
+<br />
 
-#### February 28th Location 
-
+#### Location
+Please note that the Locaiton has changed form the usual locaiton of PACCAR 107 to PACCAR **007**
+<br />
+<br />
 Gonzaga University
 <br />
-502 E. Boone Avenue 
+PACCAR **007**
 <br />
-Spokane WA 99258
+502 E. Boone Avenue
 <br />
+Spokane, WA 99258
 
-Parking will be free on level 3 and 4 of the BARC Parking Garage on Hamilton and Boone Ave.
+Parking will be free on level 3 and 4 of the BARC parking garage on Hamilton and Boone Ave.
 
-#### What do I bring to Phase 3 PD? ####
+#### What do I bring to Phase 4 PD? ####
 Exploring Computer Science binder with curriculum
 <br />
 Green Code.org journal
 <br />
 Laptop
 
-### Phase 4: Post Year Development
-Coming Summer 2015  	
 
 [**Back to the top**](#top)
-
-
-<a id="admin"></a>
-## Administrator and Counselor Professional Development
-
-### Phase 1: Preparation and Reflection
-
-Milestone Complete!
-
-### Phase 2: Teaching and Learning Studio
-
-Milestone Complete!
-
-[**Back to the top**](#top)
-
 
 ----------
 Please visit [FAQs](/educate/pd/faq) for more information.

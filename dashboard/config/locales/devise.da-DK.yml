@@ -28,14 +28,13 @@
       failure: Kunne ikke godkende dig fra %{kind}, fordi "%{reason}".
       success: Succesfuldt godkendt fra %{kind} konto.
     passwords:
-      no_token: Du kan ikke få adgang til denne side uden at komme fra en password
-        reset e-mail. Hvis du kommer fra en password reset e-mail, skal du sørge for
-        at du brugte den fulde webadresse du fik.
+      no_token: Du kan kun tilgå denne side via linket fra en "password reset e-mail".
+        Kommer fra et sådant link, skal du sikre dig, at den fulde URL er benyttet.
       send_instructions: Du vil modtage en e-mail med instruktioner om hvordan du
         nulstiller din adgangskode om et par minutter.
       send_paranoid_instructions: Hvis din e-mail-adresse findes i vores database,
-        vil du om et par minutter modtage et link til at lave en ny adgangskode i
-        din e-mail.
+        vil du om et par minutter modtage en e-mail indeholdende et link til gendannelse
+        af adgangskode.
       updated: Adgangskoden blev ændret succesfuldt. Du er nu logget på.
       updated_not_active: Adgangskoden blev ændret succesfuldt.
     registrations:
@@ -45,15 +44,15 @@
         dig på fordi din konto ikke er aktiveret endnu.
       signed_up_but_locked: Du har tilmeldt dig succesfuldt. Men vi kunne ikke logge
         dig fordi din konto er låst.
-      signed_up_but_unconfirmed: En besked med et bekræftelses link er sendt til din
-        e-mailadresse. Åbn linket for at aktivere din konto.
-      update_needs_confirmation: Du opdaterede din konto, men vi har brug for at bekræfte
-        din nye e-mail adresse. Kontroller din e-mail, og klik på bekræft linket for
-        endeligt at bekræfte din nye e-mailadresse.
+      signed_up_but_unconfirmed: En e-mail, indeholdende et bekræftelses-link, er
+        tilsendt din e-mailadresse. Åbn venligst linket for at aktivere din konto.
+      update_needs_confirmation: Du har opdateret din konto, men vi har behov for
+        at bekræfte din nye e-mailadresse. Tjek venligst din e-mail, og tryk på bekræftelses-linket
+        for at færdiggøre bekræftelsen af din nye e-mailadresse.
       updated: Du opdaterede din konto succesfuldt.
     sessions:
-      signed_in: Logged på succesfuldt.
-      signed_out: Logged ud succesfuldt.
+      signed_in: ''
+      signed_out: Logget ud.
     unlocks:
       send_instructions: Du vil modtage en e-mail med instruktioner om, hvordan du
         bekræfter din konto om et par minutter.
@@ -71,3 +70,25 @@
       not_saved:
         one: '1 fejl forhindrede denne %{resource} i at blive gemt:'
         other: '%{count} fejl forhindrede denne %{resource} i at blive gemt:'
+    invitations:
+      send_instructions: En invitationse-mail er blevet tilsendt %{email}.
+      invitation_token_invalid: Den benyttede invitationspolet er ugyldig!
+      updated: Din adgangskode er indstillet. Du er nu logget ind.
+      no_invitations_remaining: Ingen invitationer resterer
+      invitation_removed: Din invitation blev fjernet.
+      new:
+        header: Send invitation
+        submit_button: Afsend en invitation
+      edit:
+        header: Indstil din adgangskode
+        submit_button: Indstil min adgangskode
+    mailer:
+      invitation_instructions:
+        subject: Invitationsinstruktioner
+        hello: Hej %{email}
+        someone_invited_you: Nogen har inviteret dig til %{url}. Du kan acceptere
+          den via linket nedenfor.
+        accept: Acceptér invitation
+        ignore: Ønsker du ikke at acceptere invitationen, ignorér da enligst denne
+          e-mail. <br/>Din konto vil ikke blive oprettet, før du benytter linket ovenfor,
+          og indstiller din adgangskode.

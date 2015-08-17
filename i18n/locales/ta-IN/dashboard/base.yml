@@ -1,4 +1,7 @@
 ta:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@ ta:
           future: "can't be in the future"
   hello: ஹலோ உலகம்
   welcome_back: 'மீண்டும் வருக, %{name}'
+  submit: சமர்ப்பிக்க
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -60,6 +64,8 @@ ta:
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'You can <a target="_blank" href="http://learn.code.org">browse the various stages and puzzles</a>, but you will need to sign up to save your progress.'
@@ -213,10 +219,12 @@ ta:
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Teacher Home Page
+      district_dashboard: District Dashboard
       label: 'வணக்கம் %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: எனது கணக்கு
       prizes: பரிசுகள்
       logout: வெளியேறு
@@ -224,6 +232,7 @@ ta:
       signup: Sign up
       already_registered: Already registered?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: மூடு
@@ -291,15 +300,23 @@ ta:
     cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: மாணவர்
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: அதிருப்தியா?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
@@ -309,6 +326,9 @@ ta:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -326,10 +346,11 @@ ta:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
+    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: இப்பொழுது முயற்சிக்கவும்
@@ -339,10 +360,13 @@ ta:
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -421,9 +445,10 @@ ta:
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -432,6 +457,9 @@ ta:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -456,13 +484,25 @@ ta:
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: சரி
   time:
@@ -476,7 +516,7 @@ ta:
           title: K-8 Intro to Computer Science Course (15-25 hours)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: குறியீட்டை திருத்து
@@ -494,7 +534,7 @@ ta:
           title: Jigsaw
           description: ""
         step:
-          title: Step
+          title: அடி
           description: ""
         sample_level_builder:
           title: Sample Level Builder
@@ -506,11 +546,44 @@ ta:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Save
+    delete: Delete
+    exit: Return to Course
+    my_projects: My Projects
+    share: பகிர்
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: More
+    name: பெயர்
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Delete?
+    delete_yes: ஆம்
+    delete_no: இல்லை
+    saved: Saved
+    not_saved: Not saved
+    cancel: ரத்து செய்
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

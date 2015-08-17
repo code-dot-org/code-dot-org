@@ -1,9 +1,9 @@
 "sl-SI":
   hello: Pozdravljen svet
   select_language: Prosimo izberite vaš jezik
-  computer_science: Računalništvo
+  en: računalniška znanost, računalništvo
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: 9-15 December 2013
+  csedweek_dates: 8. - 14. december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ura za kodo</a> prihaja. Pozivamo vse učitelje in organizatorje,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -11,11 +11,14 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ste učitelj računalništva in informatike? Oglejte si tudi
     druge CSEdWeek vire</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>je poskusilo</h3><h2>Uro za kodo</h2>
+  n_have_learned_an_hoc: <h1>Poizkusi</h1><h2>Uro za kodo</h2><h3># served</h3>
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
   petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
+  petition_sign_message_support: 'Če nas podpirate, se podpišite. Pridružite se #
+    ostalim.'
+  petition_join_others: 'Pridruži se # ostalim'
   name: Ime
   email: Elektronska pošta
   zipcode: Poštna številka ali ime države
@@ -30,7 +33,7 @@
   hoc2014_teachers: Učitelji
   hoc2014_host: Organizirajte
   hoc2014_everyone: Kdorkoli
-  hoc2014_support: Podprite
+  hoc2014_support: Podprite &#x25BE;
   hoc2014_whatishoc: Kaj je Ura za kodo?
   twentyhours_trynow: Poskusite zdaj
   california_heading: Prosite vašo šolo naj poučuje računalništvo
@@ -57,6 +60,7 @@
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
+  enter_valid_age: Prosimo, izberite veljavno starost
   enter_valid_email: Vnesite veljaven email naslov
   get_a_certificate_message: Poslali vam bomo potrdilo in informacije o tem, kako
     se lahko učite<a href='/learn/beyond'> tudi po Uri za kodo</a>
@@ -111,6 +115,8 @@
   learn_classes: Poišči lokalne tečaje
   hoc_is_here: '#UraZaKodo je tu! @codeorg'
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
+  twitter_teach_cs: "Zakaj več šol ne poučuje računalništva? To lahko spremenimo.
+    \ \nhttp://youtu.be/nKIu9yen5nc. Obiščite http://code.org/ in izvedeli boste več.\n"
   learn_hoc: Več o Uri za kodo
   beyond_hoc: Po Uri za kodo
   what_gender: Izberite vaš spol
@@ -126,7 +132,14 @@
     %{lines} vrstic kode.'
   start_hoc: Začni Uro za kodo zdaj
   contact_form_topic_press: Tisk/mediji (intervju ali ustno udejstvovanje)
+  stats_nina: '"Vsak dan je prinesel enake rezultate&mdash;100% angažiranost." - Nina
+    Nichols Peery, učiteljica'
+  stats_student: '"Vedela sem, da gre<b>za priložnost, ki jo</b>dobiš enkrat v življenju."
+    - Mariana Alzate, učenka 5. razreda'
+  stats_michael: '"Še nikoli <b>nisem</b>videl, da bi moji učenci pokazali toliko
+    navdušenja za učenje." - Michael Clark, učitelj'
   studiobar_title: Raziščite <a href='http://studio.code.org'> Studio za kodo</a>
+  studiobar_title_nolink: Raziščite Studio za kodo
   studiobar_elementary_title: Osnovni tečaji
   studiobar_elementary_body: Naši trije novi tečaji za K&#8209;5
   studiobar_hoc_title: Ura za kodo
@@ -139,6 +152,93 @@
   studiobar_frozen_body: Ustvari čudežni svet z Anno in Elso
   studiobar_donate_title: Doniraj
   studiobar_donate_body: En otrok se nauči programirati za vsak doniran dolar
+  studiobar_shop_title: trgovina
+  studiobar_shop_body: Razbij stereotipe. Ponosno nosi naš logo.
+  homepage_hero_text_malala: "&ldquo;Pozivam vsa dekleta v vseh državah sveta da sodelujejo
+    pri Hour of Code&rdquo; \nMalala, dobitnica Nobelove nagrade za mir\n"
+  homepage_hero_text_susan: |
+    &ldquo;Če lahko spremeniš tehnologijo, lahko spremeniš svet.&rdquo;
+    Susan, generalna direktorica YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Ne se le igratiu s telefonom, programirajte ga.&rdquo;
+    Predsednik ZDA, Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Naši otroci &mdash; tudi dekleta &mdash;
+    potrebujejo možnost, da se naučijo računalništva.&rdquo;
+    Sheryl, direktorica pri podjetju Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Računalništvo nam lahko odklene najboljše priložnosti na svetu.&rdquo;
+    Satya, glavni direktor podjetja Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Če znaš programirati, lahko izbereš smer svojega življenja.&rdquo;
+    Chris Bosh
+  homepage_hero_text_student1: |
+    &ldquo;Ta znanja so spremenila mojo prihodnost. In da sploh ne govorimo o tem, kako
+    zabavno je vse skupaj. &rdquo;
+    Luna, 7. razred
+  homepage_hero_text_student2: |
+    &ldquo;Še nokoli in nikdar nisem videl svojih učencev
+    tako navdušenih nad učenjem.&rdquo;
+    Michael, učitelj
+  homepage_hero_text_student3: |
+    &ldquo;Računalništvo je področje za katerega ne moreš
+    vedti, če ti je všeč, ne da bi ga preizkusil.&rdquo;
+    Jackson, 6. razred
+  homepage_hero_text_student4: "&ldquo;S programiranjem lahko narediš vse, kar si
+    zamisliš.&rdquo; \nMaya, 2. razred\n"
+  homepage_hero_text_student5: "&ldquo;Računalništvo ni za nekoga drugega. Je zate,
+    tukaj, sedaj.&rdquo; \nGeraldo, učitelj\n"
+  homepage_hero_text_teacher1: |
+    &ldquo;Računalništvo razvije kreativnost, navdih in inovacije &mdash; vse to je bitvenega pomena za vsako kariero.&rdquo;
+    Floresa, učiteljica
+  homepage_hero_text_teacher2: |
+    &ldquo;Ta program je k aktivnemu sodelovanju pritegnil prav vse moje učence .&rdquo;
+    Adam, učitelj
+  homepage_hero_text_stat_loc: 'učenci so napisali #loc vrstic kode'
+  homepage_hero_text_stat_students: 'učenci imajo na Code Studio #student_count računov'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served sodelujočih'
+  homepage_slot_text_hoc: Ura za kodo
+  homepage_slot_text_frozen: Frozen (Ledeno kraljestvo) z Ano in Elso
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: Vsi naši vodiči
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_shop: trgovina
+  homepage_slot_text_flappy: Program za Plahutača (Flappyja)
+  homepage_action_text_codevideo: Oglej si video
+  homepage_action_text_teachervideo: Oglej si video
+  homepage_action_text_learn: Začni z učenjem
+  homepage_action_text_signpetition: Podpiši peticijo
+  homepage_signpetition_dropdown: Strinjam se &#x25BE;
+  homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju
+    raznolikosti računalništva.
+  homepage_banner_text_link: Več o tem
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Več o tem
+  homepage_slot_text_title_hoc: Ura kode
+  homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
+  homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
+  homepage_slot_text_link_host: Organiziraj Hour of Code
+  homepage_slot_text_link_hocserved: '# uporabnikov'
+  homepage_slot_text_title_students: Učenci
+  homepage_slot_text_blurb_students: Razišči vse naše vodiče
+  homepage_slot_text_link_codestudio: Poskusi Code Studio
+  homepage_slot_text_link_local: Poišči razred v bližini
+  homepage_slot_text_link_othercourses: Ostali spletni tečaji
+  homepage_slot_text_title_educators: Učitelji
+  homepage_slot_text_blurb_educators: Nauči svoje učence
+  homepage_slot_text_link_k5: Tečaji za vrtce in nižje razrede osnovne šole
+  homepage_slot_text_link_fullcurriculum: Glej naš celoten učni načrt
+  homepage_slot_text_link_pd: Strokovni razvoj
+  homepage_slot_text_title_advocates: Zagovarja
+  homepage_slot_text_blurb_advocates: Podpri naše delo
+  homepage_slot_text_link_stats: Glej statistične podatke
+  homepage_slot_text_link_buy: Pridruži se
+  homepage_slot_text_link_donate: Prispevaj
+  homepage_header_codestudio: Izdelki učencev v Code Studio
+  homepage_header_donors: Code.org se zahvaljuje podpornikom
+  homepage_donors_seall: Oglejte si vse
+  homepage_donors_donate: Doniraj
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
   contact_form_topic_teacher: Sem učitelj/vzgojitelj
@@ -222,15 +322,56 @@
   dashboard_landing_available_title: Tečaji na voljo
   dashboard_landing_available_courses: Tukaj so tečaji trenutno na voljo za vas in
     vaše učence.
+  dashboard_landing_more_tutorials: Bi rad videl še več poučnih primerov?
+  dashboard_landing_more_tutorials_desc: Naši partnerji <a href="/learn/beyond"> ponujajo
+    še več vaj. .</a> Naučite se programirati z roboti, ustvariti spletno stran, izdelati
+    svojo aplikacijo ali raziskujte programske jezike kot so C++, Ruby ali Python!
+  dashboard_hoc_courses: Ura za kodo za vse starosti
+  dashboard_hoc_courses_desc: Skupaj z učenci poglejte nekaj krajših, enournih, poučnih
+    prikazov!
+  dashboard_k5_courses: 20-urni tečaji za osnovnošolce do 5. razreda
+  dashboard_k5_courses_desc: Ti tečaji združujejo spletne vaje, pri katerih si sami
+    prilagajate tempo in čas, z "izštekanimi" aktivnostmi, za katere sploh ne potrebujete
+    računalnika. Vsak tečaj je sestavljen iz 20 lekcij, ki se lahko izvajajo skupaj,
+    naenkrat ali tekom celega semestra. Sodelujejo lahko celo predšolski otroci, ki
+    še ne znajo brati. Za lažji začetek vam ponujamo visoko kakovostne strokovne delavnice,
+    ki so po celih ZDA brezplačne. <a href="/professional-development-workshops">Poiščite
+    takšno, ki je blizu vas!</a>
+  dashboard_middle_courses: 20-urni tečaji za srednje šole
+  dashboard_middle_courses_desc: 'Naš kurikulum za srednje šole uporablja računalništvo
+    in programiranje v kontekstu srednješolske matematike in naravoslovja - kot orodje
+    za učenje matematičnih in naravoslovnih konceptov. Če se želite prijaviti na delavnice
+    strokovnega izpopolnjevanja, zaprosite za <a href="/educate/districts">partnerstvo
+    s Code.org. '
+  dashboard_high_courses: Celoletni gimnazijski tečaji
+  dashboard_high_courses_desc: Naš program za gimnazije pomaga šolskim okolišem, da
+    ponudijo redni predmet računalništva, in sicer tako, da pripravi obstoječe učitelje
+    na predajo tega znanja. Za prijavo na delavnice strokovnega usposabljanja, zaprosite
+    za <a href="/educate/districts">partnerstvo s</a> Code.org.
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org je v sodelovanju z Bootstrap razvila kurikulum,
+    ki vključuje učenje konceptov iz geometrije in algebre preko računalniškega programiranja.
+  dashboard_course_csins: Računalništvo v znanosti
+  dashboard_course_csins_desc: Code. org v sodelovanju s Project GUTS ponuja uvod
+    v koncepte računalništva v kontekstu modeliranja in simulacije.
+  dashboard_course_ecs: Raziskovanje računalništva
+  dashboard_course_ecs_desc: 'Raziskovanje računalništva je celoletni tečaj, ki je
+    sestavljen iz 6 enot: Interakcija človeka z računalnikom, Reševanje problemov,
+    Spletno oblikovanje, Programiranje, Računalništvo in analiza podatkov in Robotika.'
+  dashboard_course_csp: AP® računalniški principi
+  dashboard_course_csp_desc: Code.org je izdelala zahteven, temeljit in dostopen tečaj,
+    ki raziskuje temeljne ideje računalništva.
   dashboard_landing_loading: Nalaganje...
   dashboard_action_edit: Uredi
   dashboard_action_save: Shrani
   dashboard_action_save_all: Shrani vse
   dashboard_action_cancel: Prekliči
   dashboard_action_delete: Izbriši
-  dashboard_action_confirm: Izbriši?
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
+  dashboard_action_confirm: Izbriši?
+  dashboard_action_remove: Odstrani
+  dashboard_action_remove_confirm: Odstrani?
   dashboard_action_done: Končano
   dashboard_action_required: zahtevano
   dashboard_navigation_home_page: Učiteljeva domača stran
@@ -278,6 +419,7 @@
     z gumbi <b>Dodaj učenca</b> in <b>Dodaj več učencev</b> zgoraj.
   dashboard_students_placeholder_name: Ime učenca
   dashboard_students_name: Ime
+  dashboard_students_progress: Napredek
   dashboard_students_age: Starost
   dashboard_students_gender: Spol
   dashboard_students_male: Moški
@@ -295,10 +437,12 @@
   dashboard_students_share_section: 'Delite vstopno stran za ta razdelek s svojimi
     učenci:'
   dashboard_students_print_info: Natisnite kartice s podatki za prijavo učencev.
+  dashboard_students_secret_picture_title: Skrivna slika
   dashboard_students_secret_picture: Skrivna slika
   dashboard_students_reset_picture: Skrivno sliko učenca kadarkoli lahko ponastavite
     tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>.
     Novo skrivna slika, bo ustvarjena za učenca, ko se bo prijavil.
+  dashboard_students_secret_word_title: Skrivna beseda
   dashboard_students_secret_word: Skrivna beseda
   dashboard_students_reset_word: 'Skrivno besedo učenca kadarkoli lahko ponastavite
     tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>.
@@ -313,11 +457,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Kliknite tukaj</a> za dokument o zasebnosti, ki se lahko delite ali natisnite
     za svoje učence.
-  dashboard_curriculum_overview: Pregled učnega načrta za K-5
+  dashboard_curriculum_k5_title: Gradivo za učitelje prve petletke
+  dashboard_curriculum_middle_title: Gradiva za srednješolske učitelje
+  dashboard_curriculum_high_title: Gradiva za gimnazijske učitelje
+  dashboard_lesson_plans: Učni načrti
   dashboard_view_all_lesson_plans: Poglej si vse učne načrte
   dashboard_course1: 'Tečaj 1:'
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
+  dashboard_course4: 'Tečaj 4 (beta): '
+  dashboard_curriculum: kurikulum
+  dashboard_curriculum_overview: Pregled učnega načrta za K-5
+  dashboard_overview: Pregled
   dashboard_sequence: Zaporedje
   dashboard_framework: Ogrodje
   dashboard_standards: Standardi
@@ -328,12 +479,22 @@
   dashboard_puzzle_solving: 'Reševanje uganke:'
   dashboard_student_worksheet: delovni list učenca
   dashboard_teacher_worksheet: delovni list učitelja
+  dashboard_curriculum_csina: 'Računalništvo v računstvu:'
+  dashboard_curriculum_csins: 'Računalništvo v znanosti:'
+  dashboard_curriculum_csp: 'AP® računalniški principi:'
+  dashboard_curriculum_ecs: 'Raziskovanje računalništva:'
   dashboard_grade_k: K
   dashboard_grade_other: Drugi
   dashboard_login_word: Beseda
   dashboard_login_picture: Slika
   dashboard_login_none: Elektronska pošta
   dashboard_new_password: Novo geslo
+  dashboard_progress_not_started: ni začeto
+  dashboard_progress_in_progress: v teku
+  dashboard_progress_not_completed: ni dokončano
+  dashboard_progress_completed_too_many_blocks: dokončano, imate preveč blokov
+  dashboard_progress_completed_perfect: dokončano, odlično
+  dashboard_progress_furthest_level_attempted: poskusili ste najvišji nivo
   stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo
     v enem tednu:'
   stats_hoc_2013_image_alt: Statistika Ure za kodo 2013
@@ -352,6 +513,7 @@
   dashboard_sections_login_type_explanation: Ta tabela pomaga razložiti, katero vrsto
     prijave <b>sliko, besedo, ali e-pošte</b>, boste želeli izbrati za razdelek.
   dashboard_faq: Pogosto zastavljena vprašanja
+  dashboard_faq_k5: Pogosta vprašanja, prva petletka
   code_hoc_coming: Ura za kodo je tu - 8. do 14. december!
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
@@ -373,6 +535,7 @@
   carousel_heading_robots: Nauči se programirati z roboti
   carousel_heading_ide: Platforme, ki so priljubljena med učitelji
   educator_notes: Zapiski učitelja
+  how_to_teach_hoc: Kako poučevati Uro za kodo
   more_resources_educators: Več virov za učitelje in vzgojitelje
   participants: udeleženci
   teachers_notes: Zapiski učitelja
@@ -565,11 +728,11 @@
     To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
     Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
     stavke in osnovne algoritme. Na voljo v 34 jezikih.
-  thinkersmithspanish_longdescription: Z uporabo naprej določenega "Robotskega besednjaka"
-    bodo učenci odkrili kako voditi drug drugega, da bodo opravili določene naloge,
-    ne da bi se o njih prej pogovarjali. Ta lekcija uči učence povezavo med simboli
-    in dejanji, kot tudi neprecenljivo veščino razhroščevanja. "Moji robotski prijatelji"
-    najbolje deluje kot skupinska dejavnost in vsebuje tudi pripravo za učitelja.
+  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
+    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
+    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
+    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem zabavnih
     risb s svojo kodo. To naredite sami ali v svojem razredu!
   khanes_longdescription: Nauči se osnov JavaScript programiranja med ustvarjanjem
@@ -691,9 +854,9 @@
   frozen_longdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice. You will create snowflakes and patterns as you ice-skate
     and make a winter wonderland that you can then share with your friends!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: Ustvarite zgodbo ali igro z Play Labom! Ustvarite živali,
+    pirate, zombije, nindže in številne druge like, ki se bodo premikali, govorili,
+    dosegali točke in celo vihteli ognjene krogle!
   codeorg_beyond_name: Uvod v računalništvo (razredi K-8)
   khan_beyond_name: Nauči se računalniškega programiranja
   tynker_beyond_name: Nauči se programiranja doma
@@ -1005,3 +1168,8 @@
   sphero_beyond_longdescription: Ne glede na to ali ste vzgojitelj ali starš, SPRK
     lekcije dajejo otrokom zabaven uvod v programiranje robotov in hkrati ostrijo
     njihove spretnosti v matematiki in znanosti.
+  compatibility_https_header: Prosimo, omogočite HTTPS za Code.org.
+  compatibility_https_message: Da bi povečali varnost, smo prešli na HTTPS, dne %{https_date}.
+    Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'>
+    Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org.
+  compatibility_https_hide_this_warning: Skrij to opozorilo

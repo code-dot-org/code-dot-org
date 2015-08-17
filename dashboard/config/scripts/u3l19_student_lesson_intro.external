@@ -1,0 +1,23 @@
+name 'U3L19 Student Lesson Intro'
+title 'Clicker V.1'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 19 - Clicker V.1
+
+# Background
+
+You probably have many ideas about how the quick double-clicker game could be more fun and challenging. The good news is that over the next few lessons, you will learn how to add some of your ideas by using a variety of techniques to keep track of game details, make calculations and decisions, keep track of time, and store information about the game from one session to the next. 
+
+# Lesson
+
+* Understand the power of variables.
+* Learn programming statements to create, initialize, and change variables. 
+
+
+# Resources
+* Worksheet: <a href="https://docs.google.com/document/d/16Ds_Cpo8Dz5KVt52hg1Dk1WNiidx8WpllXmgirW5BiE" target="_blank">Q & A About Variables
+</a>
+</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

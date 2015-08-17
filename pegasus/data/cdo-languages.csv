@@ -1,39 +1,42 @@
-code_s!,name_s
-ar,لعربية
-az,Azərbaycan dili
-bg,български
-ca,Català
-cs,Čeština
-da,Dansk
-de,Deutsch
-el,ελληνικά
-en,English
-es,Español
-fa,فارسی
-fi,Suomi
-fr,Français
-he,עברית
-hr,Hrvatski
-hu,Magyar
-id,Bahasa Indonesia
-is,Íslenska
-it,Italiano
-ja,日本語
-ko,한국어
-lt,Lietuvių
-lv,Latviešu
-nl,Nederlands
-nn,Nynorsk
-no,Norsk
-pl,Język polski
-pt-br,Português (Brasil)
-pt-pt,Português (Portugal)
-ro,Română
-ru,Pусский
-sl,Slovenščina
-sr,Cрпски
-sv,Svenska
-tr,Türkçe
-uk,Українська
-zh-tw,繁體字
-zh-cn,简体字
+code_s!,four_letter_code_s,name_s,english_name_s
+ar,ar-SA,العربية,Arabic
+az,az-AZ,Azərbaycan dili,Azerbaijani
+bg,bg-BG,български,Bulgarian
+bs,bs-BA,Босански,Bosnian
+ca,ca-ES,Català,Catalan
+cs,cs-CZ,Čeština,Czech
+da,da-DK,Dansk,Danish
+de,de-DE,Deutsch,German
+el,el-GR,Ελληνικά,Greek
+en,en-US,English,English
+es,es-ES,Español,Spanish
+fa,fa-IR,فارسی,Persian
+fi,fi-FI,Suomi,Finnish
+fr,fr-FR,Français,French
+he,he-IL,עברית,Hebrew
+hr,hr-HR,Hrvatski,Croatian
+hu,hu-HU,Magyar,Hungarian
+id,id-ID,Bahasa Indonesia,Indonesian
+is,is-IS,Íslenska,Icelandic
+it,it-IT,Italiano,Italian
+ja,ja-JP,日本語,Japanese
+ko,ko-KR,한국어,Korean
+lt,lt-LT,Lietuvių,Lithuanian
+lv,lv-LV,Latviešu,Latvian
+nl,nl-NL,Nederlands,Dutch
+nn,nn-NO,Nynorsk,Norwegian
+no,no-NO,Norsk,Norwegian (Nynorsk)
+pl,pl-PL,Polski,Polish
+pt-br,pt-BR,Português (Brasil),Portuguese (Brazil)
+pt-pt,pt-PT,Português (Portugal),Portuguese (Portugal)
+ro,ro-RO,Română,Romanian
+ru,ru-RU,Pусский,Russian
+sl,sl-SI,Slovenščina,Slovenian
+sq,sq-AL,Shqip,Albanian
+sr,sr-SP,Cрпски,Serbian
+sv,sv-SE,Svenska,Swedish
+tr,tr-TR,Türkçe,Turkish
+uk,uk-UA,Українська,Ukrainian
+vi,vi-VN,Tiếng Việt,Vietnamese
+zh-cn,zh-CN,简体字,Chinese (Simplified)
+zh-tw,zh-TW,繁體字,Chinese (Traditional)

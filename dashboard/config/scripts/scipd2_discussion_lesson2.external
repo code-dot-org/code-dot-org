@@ -1,0 +1,13 @@
+name 'sciPD2 discussion lesson2'
+title 'Lesson 1 Discussion'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+### Lesson 2 Discussion
+
+**Observe the model and decode the model using the model observation form.**
+
+<br><br>
+<div id="discourse-comments"></div><br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

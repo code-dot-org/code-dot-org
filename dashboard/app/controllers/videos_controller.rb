@@ -12,7 +12,19 @@ class VideosController < ApplicationController
 
   def embed
     set_video_by_key
-    render layout: false
+    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
+      params[:fallback_only] = true
+      begin
+        require 'cdo/video/youtube'
+        Youtube.process @video.key
+      rescue Exception => e
+        render layout: false, text: "Error processing video: #{e}. Contact an engineer for support.", status: 500 and return
+      end
+    end
+    video_info = @video.summarize(params.has_key?(:autoplay))
+    video_info[:enable_fallback] = !params.has_key?(:youtube_only)
+    video_info[:force_fallback] = params.has_key?(:fallback_only)
+    render layout: false, locals: {video_info: video_info}
   end
 
   def index
@@ -68,26 +80,34 @@ class VideosController < ApplicationController
   end
 
   private
-    def allow_iframe
-      response.headers.except! 'X-Frame-Options'
-    end
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_video
-      @video = Video.find(params[:id])
-    end
+  def allow_iframe
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_video
+    @video = Video.find(params[:id])
+  end
 
   def set_video_by_key
-      @video = Video.find_by_key(params[:key])
-    end
+    key = params[:key]
+    # Create a temporary video object from default attributes if an entry isn't found in the DB.
+    @video = Video.find_by_key(key) ||
+      Video.new(
+        key: key,
+        youtube_code: key,
+        download: Video.download_url(key)
+      )
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def video_params
-      params.require(:video).permit(:name, :key, :youtube_code)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def video_params
+    params.require(:video).permit(:name, :key, :youtube_code)
+  end
 
-    # this is to fix a ForbiddenAttributesError cancan issue
-    prepend_before_filter do
-      params[:video] &&= video_params
-    end
+  # This is to fix a ForbiddenAttributesError CanCan issue.
+  prepend_before_filter do
+    params[:video] &&= video_params
+  end
 end

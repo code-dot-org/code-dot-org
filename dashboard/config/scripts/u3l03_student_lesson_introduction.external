@@ -1,0 +1,25 @@
+name 'U3L03 Student Lesson Introduction'
+title 'Creating Procedures Part 1'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 03 - Creating Procedures Part 1
+
+# Background
+
+Functions and procedures enable the programmer to “package up” a group of commands for easy and repeated use in a computer program. Procedures/functions are a way of “naming” chunks of code, that you can call (execute) as many times as needed. Procedures/function are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger, more logical segments. Basically, they make your life easier. Programming without functions is like trying to explain the word “school” without using the words “class,” “grade,” “teacher,” or “student.”
+
+# Lesson
+
+* Write procedures and functions with names that describe what the function does in solving the problem.
+* Design a program requiring more than one function/procedure and more than one level of abstraction. 
+
+
+# Resources
+* Worksheet: <a href="https://docs.google.com/document/d/1IuRx8-WrIl3mOo8upbzvIZgsoCZxlooq5RXXi4GouP8" target="_blank">
+ Procedure Design </a> 
+* Rubric: <a href="https://docs.google.com/document/d/1qTkcvKzcC3Zgji-ITd9mEranpIjIMX8UdKFpZOYPi0E" target="_blank">
+ Procedure Design </a> 
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

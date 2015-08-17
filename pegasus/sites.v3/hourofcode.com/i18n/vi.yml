@@ -37,6 +37,10 @@ vi:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>đã cố gắng/ trải qua một</h3><h2>THỜI ĐIỂM CỦA CODE</h2>'
+  share_on_facebook: Chia sẻ lên Facebook
+  share_on_twitter: Chia sẻ lên Twitter
+  beyond_an_hour: Beyond an Hour of Code
+  get_started: Start
   anybody_can_learn: Bất cứ ai cũng có thể tìm hiểu.
   register_now: Đăng ký ngay bây giờ
   front_join_us_heading: Một giờ cho mã lập trình dành cho tất cả học sinh.
@@ -144,7 +148,7 @@ vi:
   hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
   hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Hour of Code là một giờ học giới thiệu về khoa học máy tính, được thiết kế để làm sáng tỏ việc lập trình và chỉ ra rằng mọi người có thể học những thứ căn bản.  <a href='http://uk.code.org/learn'>Tham gia vào các khóa học</a>, và tìm ra những điều mới mẻ sắp tới của Hour of Code 2014."

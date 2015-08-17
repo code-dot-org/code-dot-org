@@ -1,0 +1,25 @@
+name 'sciPD class models video'
+title 'Using Models in the Classroom'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+### Using Models in the Classroom
+
+In this lesson, you will build your background knowledge on using computer models in classroom settings by watching a video and checking your understanding by answering a few quiz questions. 
+
+<iframe width="600" height="338" src="https://youtubeeducation.com/embed/eiMascD1h2A" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/3q0zecatu6xyo31/Models%20in%20the%20Classroom%20-%20SCI%20PD%206_1.mp4)**
+
+<br>
+
+<span style="color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;">This </span><a href="http://edx.code.org/c4x/Code.org/Project_GUTS/asset/WhyModel.pdf" style="-webkit-transition: all 0.1s linear 0s; color: #1d9dd9; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; font-stretch: normal; line-height: 1.4em; text-decoration: none; transition: all 0.1s linear 0s;">"Why Model?"</a><span style="color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;"> paper presents many good reasons why we model in addition to making predictions.</span>
+<br>
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

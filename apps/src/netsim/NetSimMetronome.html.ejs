@@ -1,0 +1,86 @@
+<%
+  function moveCommand(x, y) {
+    return 'M' + x + ' ' + y;
+  }
+
+  function lineCommand(x, y) {
+    return 'L ' + x + ' ' + y;
+  }
+
+  function arcCommand(rX, rY, rot, largeArcFlag, sweepFlag, finalX, finalY) {
+    return 'A ' + rX + ' ' + rY + ', ' + rot + ', ' + largeArcFlag + ', ' + sweepFlag + ', ' + finalX + ' ' + finalY;
+  }
+
+  function closeShapeCommand() {
+    return 'Z';
+  }
+
+  /**
+   * Outer radius of progress meter
+   * @type {number}
+   * @const
+   */
+  var OUTER_RADUS = 45;
+
+  /**
+   * Inner radius of progress meter, and maximum radius of pulse dot
+   * @type {number}
+   * @const
+   */
+  var INNER_RADIUS = 30;
+
+  /**
+   * How long (in ms) it takes the pulse circle to shrink back to nothing after it appears
+   * @type {number}
+   * @const
+   */
+  var PULSE_FALLOFF_MS = 500;
+
+  /**
+   * Radius of the inner pulse dot, based on the pulse age.  Starts full size, then shrinks
+   * to r=0 over PULSE_FALLOFF_MS.
+   * @type {number}
+   */
+  var pulseFalloffNormalizedProgress = Math.min(pulseAge/ PULSE_FALLOFF_MS, 1);
+  var pulseDotRadius = INNER_RADIUS * (1 - pulseFalloffNormalizedProgress);
+
+
+  /**
+   * Given a certain percentage (as a value in the range [0.0-1.0]) this
+   * generates a data string for a "path" svg object that draws a partially-filled arc
+   * sweeping the appropriate percentage of a circle.
+   * Progress begins its sweep at "east" and proceeds clockwise.
+   * @param {number} normalizedProgress - number from 0.0 to 1.0
+   * @returns {string} data string of commands for SVG path
+   */
+  function progressMeterSvgPathData(normalizedProgress) {
+    var terminalRadians = 2 * Math.PI * normalizedProgress
+    var largeArc = (normalizedProgress >= 0.5) ? 1 : 0;
+    var sinAngle = Math.sin(terminalRadians);
+    var cosAngle = Math.cos(terminalRadians);
+    var outerTerminalX = OUTER_RADUS * cosAngle;
+    var outerTerminalY = OUTER_RADUS * sinAngle;
+    var innerTerminalX = INNER_RADIUS * cosAngle;
+    var innerTerminalY = INNER_RADIUS * sinAngle;
+    return [
+      moveCommand(OUTER_RADUS, 0),
+      arcCommand(OUTER_RADUS, OUTER_RADUS, 0, largeArc, 1, outerTerminalX, outerTerminalY),
+      lineCommand(innerTerminalX, innerTerminalY),
+      arcCommand(INNER_RADIUS, INNER_RADIUS, 0, largeArc, 0, INNER_RADIUS, 0),
+      closeShapeCommand()
+    ].join(' ');
+  }
+%>
+<div class="netsim-metronome">
+  <svg version="1.1" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <g id="centered-group" transform="translate(50,50)">
+      <circle r="48" cx="0" cy="0" fill="darkgray"></circle>
+      <circle r="48" cx="-1" cy="1" fill="lightgray"></circle>
+      <circle r="46" cx="0" cy="0" fill="#f5f5f5"></circle>
+      <circle class="pulse-dot" r="<%= pulseDotRadius %>" cx="0" cy="0"></circle>
+      <g transform="rotate(-90)">
+        <path class="progress-meter" d="<%= progressMeterSvgPathData(progress) %>"></path>
+      </g>
+    </g>
+  </svg>
+</div>

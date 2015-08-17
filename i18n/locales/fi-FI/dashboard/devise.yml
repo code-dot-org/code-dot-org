@@ -55,3 +55,22 @@ fi:
       not_saved:
         one: 'Virhe esti tämän %{resource} tallentamisen:'
         other: '%{count} virhettä esti tämän %{resource} tallentamisen:'
+    invitations:
+      send_instructions: 'Sähköpostikutsu on lähetetty osoitteeseen %{email}.'
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Salasanasi määritys onnistui. Olet nyt kirjautunut sisään.
+      no_invitations_remaining: Ei kutsuja jäljellä
+      invitation_removed: Kutsusi poistettiin.
+      new:
+        header: Lähetä kutsu
+        submit_button: Lähetä kutsu
+      edit:
+        header: Aseta salasanasi
+        submit_button: Aseta salasanani
+    mailer:
+      invitation_instructions:
+        subject: Ohjeet kutsumiseen
+        hello: 'Hei %{email}'
+        someone_invited_you: 'Joku on kutsunut sinut %{url}. Voit hyväksyä kutsun oheisesta linkistä klikkaamalla.'
+        accept: Hyväksy kutsu
+        ignore: 'Jos et halua vastaanottaa kutsua, jätä email huomiotta.<br />Sinun tilisi luodaan vasta, kun olet klikannut yllä olevaa linkkiä ja määrittänyt salasanan.'

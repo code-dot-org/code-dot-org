@@ -1,4 +1,7 @@
 "sv":
+  errors:
+    messages:
+      not_saved: 'Rätta följande fel:'
   activerecord:
     errors:
       messages:
@@ -20,6 +23,7 @@
           future: kan inte vara i framtiden
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
+  submit: Skicka in
   add_teacher_form:
     code:
       label: 'Lägg till lärare:'
@@ -62,6 +66,8 @@
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
   signup_form:
+    student_count: '%{count} elever har redan kommit med.'
+    teacher_count: '%{count} lärare har redan kommit med.'
     overview_student: Registrera dig för ett konto för att spåra dina framsteg. Din
       e-post används främst för att inloggning och för återställning av lösenord.
       För mer information, se vår <a href="http://code.org/privacy"> Sekretesspolicy</a>.
@@ -247,8 +253,10 @@
       free_play:
         playlab: Skapa en App
         artist: Rita något
+        calculate: Calculate Something
     user:
       classroom: Lärare hemsida
+      district_dashboard: Distrikt Dashboard
       label: Hej %{username}
       stats: Mina framsteg
       settings: Mitt konto
@@ -258,6 +266,7 @@
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
+      progress_for_user: '%{name}''s framsteg'
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -333,15 +342,24 @@
       eftersom du inte har registrerat en e-postadress'
     student_teacher_disassociated: '%{teacher_name} har tagits bort som lärare för
       %{student_name}'
+    panel:
+      answer_viewer: Svar ruta
+      student: Student
+      viewing_solution: Visa lösning
+      try_it_yourself: Prova det själv
+      section: Grupp
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
+    email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
+    email_confirm_wrong_email: (Fel e-postadress?)
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
     new_password_hint: (lämna tomt om du inte vill ändra det)
     current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
-    cancel:
-      title: Ta bort mitt konto
-      hint: Missnöjd?
-      button: Ta bort mitt konto
+    delete: Ta bort ditt konto
+    delete_text: Ett klick på knappen nedan kommer att ta bort ditt konto.
+    delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
+      konton bort.'
+    delete_confirm: Är du säker du vill ta bort ditt konto?
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -351,6 +369,10 @@
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} RADER KOD SKRIVEN AV STUDENTER'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
@@ -376,6 +398,7 @@
     local_school: närliggande skola
     online: Online
     see_details: Se detaljer
+    view_course: View Course
     prize_info: 'Priser för deltagande (endast USA): upp till $1.000 i klassrums-
       belöningar.'
     tryfirst: 'Eller, du kan prova  först och registrera dig senare:'
@@ -393,6 +416,9 @@
     heading_apps: <h2>Kul för</h2><h1>Alla</h1>
     heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
     your_gallery: Galleri
+    no_primary_course: Prova en kurs på Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Skriv ut intyg
   gender:
     male: Man
     female: Kvinna
@@ -489,9 +515,13 @@
       title: Flappy kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
-    20hour:
-      title: Grundkurs
-      body: Prova vår 20-timmars grundkurs i programmering.
+    20-hour:
+      title: Accelerated Course
+      body: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp.
+        Kursen är utformad för användning i klassrummet från förskoleklass till årskurs
+        8, men det är roligt att lära sig i alla åldrar.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
       try_frozen: Konstnären, med Anna och Elsa från Frost
@@ -500,6 +530,10 @@
       body: Se ett galleri av app och artist bilder som skapats av våra användare
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Play Lab
+      body: Använd Play Lab för att skapa en berättelse eller ett spel med Disney
+        Infinity karaktärer i huvudrollen .
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -531,13 +565,26 @@
     wrong_body: Svaret du angett är inte korrekt.  Försök igen!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Fel lösning
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
     correct_title: Rätt
     correct_body: Det är det rätta svaret.
+  contract_match:
+    wrong_title: Felaktigt svar
+    badname: Ditt kontrakt har fel namn.
+    badname_case: Funktionsnamn är skiftlägeskänsliga. Prova att ändra ditt kontraktsnamn.
+    badrange: Ditt kontrakt har fel omfång.
+    baddomainsize: Ditt kontrakt har inte rätt antal objekt i domänen.
+    baddomainname: En eller flera av dina domän objekt har fel namn.
+    baddomaintype: En eller flera av dina domän objekt har fel typ, eller de är i
+      fel ordning.
   text_match:
     placeholder: Skriv in ditt svar här
+    open_response_title: Tack
+    open_response_body: Tack för ditt svar!
   dialog:
     ok: Ok
   time:
@@ -554,7 +601,7 @@
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
             åldrar.
         Hour of Code:
-          title: Timmen med Kod
+          title: Timme av Kod 2013
           description: ''
         edit-code:
           title: Redigera kod
@@ -590,11 +637,48 @@
     Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att
     logga in eller be din förälder eller lärare att kontakta oss.
   progress:
-    not_completed: Ej avklarad
+    not_started: inte startat
+    in_progress: pågående
     completed_too_many_blocks: Avklarad med för många block
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
+    assessment: Test
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
     all_courses: Alla kurser
+  project:
+    projects: Projekt
+    create: Skapa projekt
+    create_a_project: 'Skapa ett nytt projekt:'
+    new: Skapa ny
+    rename: Ändra namn
+    save: Spara
+    delete: Ta bort
+    exit: Tillbaka till kursen
+    my_projects: Mina projekt
+    share: Dela
+    share_title: Dela ditt projekt
+    share_copy_link: 'Kopiera länken:'
+    close: Avsluta
+    more: Mer
+    name: Namn
+    updated: Uppdaterad
+    project_type: Projekttyp
+    help_text: Klicka på <strong>Gör en App</strong> eller <strong>Rita något</strong>
+      nedan för att göra ett nytt Spel Lab eller Artist projekt! <br/>Du kan komma
+      tillbaka och arbeta med ditt projekt när som helst.
+    need_help: Behöver du hjälp att komma igång?
+    really_delete: Ta bort?
+    delete_yes: Ja
+    delete_no: Nej
+    saved: Sparade
+    not_saved: Inte sparad
+    cancel: Avbryt
+    delete_confirm_title: Är du säker på att du vill ta bort detta projekt?
+    delete_confirm_text: Genom att Ta bort ditt projekt kommer det att tas bort permanent
+      från listan Mina projekt. Någon du har delat länken till kommer inte längre
+      att kunna se ditt projekt.
+    view_all: Titta på mina projekt
+    remix: Remix
+    click_to_remix: Klicka på "Remix" för att göra en spin-off som din egen version!

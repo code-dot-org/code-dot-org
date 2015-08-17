@@ -6,17 +6,17 @@ title: Going Places Online view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Going Places Online', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) This lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 20 minutes
 
@@ -37,9 +37,9 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
 
 7) [Keep It Private Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -49,28 +49,29 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
   * Understand that they should never give out private information on the Internet
   * Learn to create effective usernames that protect their private information
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Pens, Pencils and Paper
   * [Keep It Private Assessment](Assessment17-KeepItPrivate.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/AG23gWMEB98?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * [Download](http://video.commonsensemedia.org/digitalcitizenship/MyOnlineNeighborhood.mp4) or [prepare](https://www.commonsensemedia.org/video/modal/2102075) the "My Online Neighborhood" video
   * Live access or print-off of [SecretBuilders](http://www.secretbuilders.com/gameplay/gameplay.html) sign-up page 
       * (Click “New Player,” select an age, and then select “I’m a Girl” or “I’m a Boy.”)
   * Print one [Keep It Private Assessment](Assessment17-KeepItPrivate.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -90,24 +91,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Username** - Say it with me: Yews-er-naym   
 A name you make up so that you can see or do things on a website, sometimes called a “screen name”
@@ -132,7 +133,7 @@ Play [My Online Neighborhood](https://www.commonsensemedia.org/video/modal/21020
 
 Now, let's see what more we can do to keep ourselves safe.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -184,19 +185,19 @@ Distribute paper and place students in pairs.
 > 
 > 4) Encourage students to respond to one another’s usernames, confirming that each name follows the rules they have learned.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -207,13 +208,13 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 Take the time to discuss again what is appropriate information to share on the Internet, and what is not: ![](info.png)
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -226,7 +227,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -237,7 +238,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -252,7 +253,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
 
-[/together]
+[/juntos]
 
 [standards]
 

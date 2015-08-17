@@ -1,0 +1,182 @@
+#hero
+
+  -# Generate a random set of hero images alternating between non-celeb and celeb.
+  - heroes = DB[:cdo_homepage].where(type_s: "widehero", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+
+  - if rack_env != :production && request.params["preview"]
+    -# on non-production, special "?preview=true" flag shows all heroes, and more quickly, for easier previewing
+    - heroes_arranged = heroes
+    - hero_display_time = 6 * 1000
+  - else
+    - # The order alternates person & stat.  Person alternates non-celeb and celeb.  Non-celeb is student or teacher.
+    - # We open with a celeba.
+    - # i.e. celeba, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat, etc.
+    - heroes.shuffle!
+    - heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:param2_s]}
+    - heroes_celeb = heroes.select {|hero| hero[:param2_s] == "celeb"}
+    - heroes_stat = heroes.select {|hero| hero[:param2_s] == "stat"}
+    - if heroes_stat.length > 0
+      - heroes_arranged = heroes_stat.zip(heroes_nonceleb.zip(heroes_celeb).flatten).flatten.compact.first(6)
+    - else
+      - heroes_arranged = heroes_nonceleb.zip(heroes_celeb).flatten.compact.first(6)
+    - heroes_celeba = heroes.select {|hero| hero[:param2_s] == "celeba"}
+    - if heroes_celeba.length > 0
+      - heroes_celeba.shuffle!
+      - heroes_arranged.unshift(heroes_celeba.first)
+    - hero_display_time = 13 * 1000
+
+    -# handy debug output:
+    -# heroes_arranged.each do |hero|
+      - puts hero[:param2_s]
+
+
+  - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
+  - if newsbanner
+    #newsbanner
+      .container_responsive
+        != I18n.t(newsbanner[:text1_s])
+        %a{href: newsbanner[:param2_s], target: "_blank"}
+          = I18n.t(newsbanner[:param1_s])
+
+  - heroes_arranged.each_with_index do |entry, index|
+    -# note: this gsheet display parameter unused due to IE8 fix.
+    - display = entry[:active_s] == "hide" ? "none" : "block"
+    .widehero{id: "fullwidth#{index}", "data-background-image"=> "url(#{entry[:image_t]})", style: "background-position: #{entry[:param1_s]}"}
+
+  #fullwidth
+    .thegap{style: "height: 1px"}
+      &nbsp;
+    #desktop-header.desktop-feature
+      = view :header, variant: "desktop"
+    #mobile-header.mobile-feature
+      = view :header, variant: "mobile"
+
+  #caption_container.container_responsive
+    .col-66{style: "position:relative;"}
+      - heroes_arranged.each_with_index do |entry, index|
+        -# note: this gsheet display parameter unused due to IE8 fix.
+        - display = entry[:active_s] == "hide" ? "none" : "block"
+        - unless entry[:text1_s].nil_or_empty?
+          - text = I18n.t(entry[:text1_s])
+
+          - # Replace special tags
+          - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
+          - text.gsub!("#served", format_integer_with_commas(fetch_hoc_metrics['started']))
+          - text.gsub!("#loc", format_integer_with_commas(fetch_metrics['lines_of_code']))
+
+          - unless text.nil_or_empty?
+            - lines = text.lines
+            - if entry[:param3_s] == "bottom"
+              - position_class = "homepage-caption-bottom"
+            .captionarea{id: "captionarea#{index}", class: position_class}
+              -# Nokogiri::HTML is use to strip any HTML tags.
+              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+              .caption.caption1{style: "left: 50px; top: 50px"}
+                = Nokogiri::HTML(lines[0])
+              .caption.caption2{style: "left: 30px; top: 95px"}
+                = Nokogiri::HTML(lines[1])
+              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                = Nokogiri::HTML(lines[2])
+
+      &nbsp;
+
+      -# Maintains a large empty chunk so that the hero image remains large and visible at all browser sizes.
+      #blankspaceleftdesktop.desktop-feature
+      #blankspaceleftmobile.mobile-feature
+
+    #actions.col-33  
+      - actions = DB[:cdo_homepage].where(type_s: "action", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).all
+      - actions.each_with_index do |entry, index|
+        - display = entry[:active_s] == "hide" ? "none" : "block"
+        .action{style: "display: #{display}; opacity: 0"}
+          - if entry[:param1_s] == "video"
+            %img#playimage{src: "/shared/images/play-button.png", width:"40", onclick: "return showVideo_mainvideo();"}
+            %span#playtext{onclick: "return showVideo_mainvideo();"}
+              = I18n.t(entry[:text1_s])
+          - elsif entry[:param1_s] == "learn"
+            %a#herolearnlink{href: "/learn"}
+              %button#herolearnbutton
+                = I18n.t(entry[:text1_s])
+          -# elsif entry[:param1_s] == "petition"
+            %span#petitionaction{onclick: "expandPetition(); adjustScroll('petitionblock');"}
+              = I18n.t(entry[:text1_s])
+          .actiongap
+            &nbsp;
+
+:javascript
+  var petition;
+
+  $(document).ready()
+  {
+    // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
+    // set opacity to 0, ready for code to start showing them by fading them in.
+    $(".caption").css({display: "block", opacity: 0});
+    $(".widehero").css({display: "block", opacity: 0});
+
+    $("#fullwidth0").fadeTo(4000, 1);
+
+    showQuote(null, 0);
+
+    // Use retina versions of the hero background images if on a retina display.
+    $(".widehero").each(function()
+    {
+      var imageUrl = $(this).data('background-image');
+      if (window.devicePixelRatio >= 2)
+      {
+        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
+      }
+      $(this).css('background-image', imageUrl);
+    });
+  }
+
+  function showQuote(lastImage, nextImage)
+  {
+    if (lastImage !== null)
+    {
+      var lastImageId = "#captionarea" + lastImage;
+      //console.log("hiding", lastImageId);
+      $(lastImageId + " .caption1").animate({left: "50px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption2").animate({left: "30px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
+    }
+
+    if (nextImageId !== null) 
+    {
+      var nextImageId = "#captionarea" + nextImage;
+      //console.log("showing", nextImageId);
+      $(nextImageId + " .caption1").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
+    }
+
+    $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
+  }
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+
+  function cycleImage()
+  {
+    var numWideHeroes = $(".widehero").length;
+
+    var lastImage = currentImage;
+    var nextImage = (currentImage + 1) % numWideHeroes;
+    $("#fullwidth" + currentImage).fadeTo(4000, 0);
+    $("#fullwidth" + nextImage).fadeTo(4000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+
+    showQuote(lastImage, currentImage);
+  }
+
+  $.ready()
+  {
+    timerId = setInterval(cycleImage, #{hero_display_time});
+  }

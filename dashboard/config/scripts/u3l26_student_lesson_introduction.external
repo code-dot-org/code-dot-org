@@ -1,0 +1,25 @@
+name 'U3L26 Student Lesson Introduction'
+title 'Strings and Substrings'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 25 - Strings and Substrings
+
+# Background
+
+You know how to detect a single word or phrase within a string. This is very useful for your digital assistant, but what if your digital assistant is expecting the keyword “programming” and the user types “Programming” or “PrOgraMMinG?” Your digital assistant should still treat these the same. What about if you want to know if the keyword is at the beginning or end of a sentence? How about if you want to use part of the input sentence as part of your output? We will explore many types of string manipulation today. In this lesson, you will use a variety of other functions to manipulate strings including str.length, str.indexOf(), str.substring(), str.toUpperCase(), and str.toLowerCase().
+
+# Lesson
+
+* Explore a variety of string operations
+* Manipulate strings within the digital assistant
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1flqB9Lew9CIzBf5ALgi--hzdEdnPqg7D3vSYyfbGzgc/edit?usp=sharing" target="_blank">
+String Exploration
+</a>
+* Rubric: <a href="https://docs.google.com/document/d/1MvrtJUAhzauLNjQMLxd6Cjiq_3uuDXsYmUMz7iy4ric/edit?usp=sharing" target="_blank">Digital Assistant</a> (for reference - entire project is not due until all concepts have been covered)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+

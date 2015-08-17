@@ -10,7 +10,6 @@ HOC_COUNTRIES = hoc_load_countries()
 def hoc_load_i18n()
   i18n = {}
   Dir.glob(hoc_dir('i18n/*.yml')).each do |string_file|
-    language = File.basename(string_file, File.extname(string_file))
     i18n.merge!(YAML.load_file(string_file))
   end
   i18n
@@ -23,7 +22,7 @@ def hoc_s(id)
 end
 
 def hoc_canonicalized_i18n_path(uri)
-  empty, possible_country_or_company, possible_language, path = uri.split('/',4)
+  _, possible_country_or_company, possible_language, path = uri.split('/',4)
 
   if HOC_COUNTRIES[possible_country_or_company]
     @country = possible_country_or_company
@@ -55,7 +54,7 @@ def hoc_canonicalized_i18n_path(uri)
 
   path = uri if resolve_document(uri)
 
-  return "/#{path.to_s}"
+  return "/#{path}"
 end
 
 def hoc_detect_country()
@@ -80,28 +79,61 @@ def hoc_uri(uri)
   File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
 end
 
-def codeorg_url() 
+def codeorg_url()
   if @country == 'ar'
     return 'ar.code.org'
   elsif @country == 'br'
     return 'br.code.org'
-  elsif @country == 'ro' 
+  elsif @country == 'ro'
     return 'ro.code.org'
-  elsif @country == 'uk' 
+  elsif @country == 'uk'
     return 'uk.code.org'
   else
     return 'code.org'
   end
 end
 
+def resolve_url(url)
+  if url.downcase.include? "code.org"
+    partner_page = HOC_COUNTRIES[@country]['partner_page']
+    return url.gsub('code.org', partner_page)
+  else
+    File.join(['/', (@company or @country), @user_language, url].select{|i| !i.nil_or_empty?})
+  end
+end
+
+def resolve_file(path)
+  # TODO: search for localized files or show EN
+  return path
+end
+
+def resolve_image(path)
+  # TODO: search for localized files or show EN
+  return path
+end
+
+def campaign_date(format)
+  case format
+  when "start-short"
+    return HOC_COUNTRIES[@country]['campaign_date_start_short']
+  when "start-long"
+    return HOC_COUNTRIES[@country]['campaign_date_start_long']
+  when "short"
+    return HOC_COUNTRIES[@country]['campaign_date_short']
+  when "full"
+    return HOC_COUNTRIES[@country]['campaign_date_full']
+  else
+    return HOC_COUNTRIES[@country]['campaign_date_full']
+  end
+end
+
 def company_count(company)
   company_count = 0;
-  DB[:forms].where(kind:'HocSignup2014').each do |i|
+  DB[:forms].where(kind: 'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
-      if data['hoc_company_s'] == company
-        company_count += 1
-      end
+    if data['hoc_company_s'] == company
+      company_count += 1
+    end
   end
   return company_count
 end
-

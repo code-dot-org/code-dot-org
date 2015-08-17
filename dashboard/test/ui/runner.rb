@@ -17,7 +17,7 @@ $options.os_version = nil
 $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
-$options.dashboard_domain = 'test.learn.code.org'
+$options.dashboard_domain = 'test-studio.code.org'
 $options.tunnel = nil
 $options.local = nil
 $options.html = nil
@@ -52,7 +52,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost:9393") do |d|
     $options.pegasus_domain = d
   end
-  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for learn.code.org, e.g. localhost:3000") do |d|
+  opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost:3000") do |d|
     $options.dashboard_domain = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
@@ -69,6 +69,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("--html", "Use html reporter") do
     $options.html = true
+  end
+  opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
+    $options.run_eyes_tests = true
   end
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
@@ -129,12 +132,21 @@ def log_browser_error(msg)
 end
 
 def run_tests(arguments)
-  Open3.popen2("cucumber #{arguments}") do |stdin, stdout, wait_thr|
+  start_time = Time.now
+  puts "cucumber #{arguments}"
+  Open3.popen3("cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
     stdin.close
-    return_value = stdout.read
+    stdout = stdout.read
+    stderr = stderr.read
     succeeded = wait_thr.value.exitstatus == 0
-    return succeeded, return_value
+    return succeeded, stdout, stderr, Time.now - start_time
   end
+end
+
+def format_duration(duration)
+  minutes = (duration / 60).to_i
+  seconds = duration - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
 # Kind of hacky way to determine if we have access to the database
@@ -152,12 +164,12 @@ end
 
 Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   browser_name = browser['name'] || 'UnknownBrowser'
-  test_start_time = Time.now
+  test_run_string = browser_name + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{browser_name}</b> (changes detected)"
-    HipChat.log message, color:'yellow'
-    HipChat.developers message, color:'yellow' if CDO.hip_chat_logging
+    message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
+    HipChat.log message, color: 'yellow'
+    HipChat.developers message, color: 'yellow' if CDO.hip_chat_logging
     next
   end
 
@@ -171,8 +183,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
     next
   end
 
-  HipChat.log "Testing <b>dashboard</b> UI with <b>#{browser_name}</b>..."
-  print "Starting UI tests for #{browser_name}\n"
+  HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
+  print "Starting UI tests for #{test_run_string}\n"
 
   ENV['SELENIUM_BROWSER'] = browser['browser']
   ENV['SELENIUM_VERSION'] = browser['browser_version']
@@ -188,53 +200,97 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
 
+  if $options.html
+    html_output_filename = test_run_string + "_output.html"
+  end
+
   arguments = ''
   arguments += "#{$options.feature}" if $options.feature
+  arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
-  arguments += " -t ~@chrome" if browser['browser'] != 'chrome'
+  arguments += " -t ~@chrome" if browser['browser'] != 'chrome' && !$options.local
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
   arguments += " -t ~@dashboard_db_access" unless $options.dashboard_db_access
   arguments += " -S" # strict mode, so that we fail on undefined steps
-  arguments += " -f html -o #{browser['name']}_output.html" if $options.html
+  arguments += " --format html --out #{html_output_filename} -f pretty" if $options.html # include the default (-f pretty) formatter so it does both
 
-  succeeded, return_value = run_tests(arguments)
+  # return all text after "Failing Scenarios"
+  def output_synopsis(output_text)
+    # example output:
+    # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
+    #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
+    #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+    #  "\n",
+    #  "Failing Scenarios:\n",
+    #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
+    #  "\n",
+    #  "3 scenarios (1 failed, 2 skipped)\n",
+    #  "41 steps (1 failed, 38 skipped, 2 passed)\n",
+    #  "0m1.548s\n"]
+
+    lines = output_text.lines
+
+    failing_scenarios = lines.rindex("Failing Scenarios:\n")
+    if failing_scenarios
+      lines[failing_scenarios..-1].join
+    else
+      lines.last(3).join
+    end
+  end
+
+  # if autorertrying, output a rerun file so on retry we only run failed tests
+  rerun_filename = test_run_string + ".rerun"
+  first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
+
+  FileUtils.rm rerun_filename, force: true
+
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments)
 
   if !succeeded && $options.auto_retry
-    print "UI tests for #{browser_name} failed, retrying\n"
-    HipChat.log "Retrying <b>dashboard</b> UI with <b>#{browser_name}</b>..."
-    succeeded, return_value = run_tests(arguments)
+    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
+    HipChat.log "<pre>#{output_stderr}</pre>"
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
+
+    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + second_time_arguments)
   end
 
   $lock.synchronize do
     if succeeded
       log_success Time.now
       log_success browser.to_yaml
-      log_success return_value
+      log_success output_stdout
+      log_success output_stderr
     else
       log_error Time.now
       log_error browser.to_yaml
-      log_error return_value
+      log_error output_stdout
+      log_error output_stderr
       log_browser_error browser.to_yaml
     end
   end
 
-  test_duration = Time.now - test_start_time
-  minutes = (test_duration / 60).to_i
-  seconds = test_duration - (minutes * 60)
-  elapsed = "%.1d:%.2d minutes" % [minutes, seconds]
   if succeeded
-    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{browser_name}</b> (#{elapsed})"
+    HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
   else
-    message = "<b>dashboard</b> UI tests failed with <b>#{browser_name}</b> (#{elapsed})"
-    HipChat.log message, color:'red'
-    HipChat.developers message, color:'red' if CDO.hip_chat_logging
+    HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
+    HipChat.log "<pre>#{output_stderr}</pre>"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)})"
+
+    if $options.html
+      link = "https://test-studio.code.org/ui_test/" + html_output_filename
+      message += " <a href='#{link}'>☁ html output</a>"
+    end
+    HipChat.log message, color: 'red'
+    HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end
   result_string = succeeded ? "succeeded".green : "failed".red
-  print "UI tests for #{browser_name} #{result_string} (#{elapsed})\n"
+  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
 
   succeeded
 end.each { |result| result ? $suite_success_count += 1 : $suite_fail_count += 1 }
@@ -246,9 +302,9 @@ $errbrowserfile.close
 $suite_duration = Time.now - $suite_start_time
 $average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-puts "#{$suite_success_count.to_s} succeeded.  #{$suite_fail_count.to_s} failed.  " +
-  "Test count: #{($suite_success_count + $suite_fail_count).to_s}.  " +
-  "Total duration: #{$suite_duration.round(2).to_s} seconds.  " +
-  "Average test duration: #{$average_test_duration.round(2).to_s} seconds."
+puts "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
+  "Test count: #{($suite_success_count + $suite_fail_count)}.  " +
+  "Total duration: #{$suite_duration.round(2)} seconds.  " +
+  "Average test duration: #{$average_test_duration.round(2)} seconds."
 
 exit $suite_fail_count

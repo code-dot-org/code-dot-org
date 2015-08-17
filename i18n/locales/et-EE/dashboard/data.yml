@@ -3,145 +3,146 @@ et:
     script:
       name:
         20-hour:
-          desc: K-8 Intro to Computer Science Course
-          Unplug1: Stage 1
-          Maze: Stage 2
-          Unplug2: Stage 3
-          Unplug3: Stage 4
-          Artist: Stage 5
-          Unplug4: Stage 6
-          Artist2: Stage 7
-          Unplug5: Stage 8
-          Farmer: Stage 9
-          Unplug6: Stage 10
-          Artist3: Stage 11
-          Unplug7: Stage 12
-          Farmer2: Stage 13
-          Unplug8: Stage 14
-          Artist4: Stage 15
-          Unplug9: Stage 16
-          Farmer3: Stage 17
-          Unplug10: Stage 18
-          Artist5: Stage 19
-          Unplug11: Stage 20
+          desc: K-8 sissejuhatus arvutiteaduse kursusesse
+          Unplug1: Etapp 1
+          Maze: Etapp 2
+          Unplug2: Etapp 3
+          Unplug3: Etapp 4
+          Artist: Etapp 5
+          Unplug4: Etapp 6
+          Artist2: Etapp 7
+          Unplug5: Etapp 8
+          Farmer: Etapp 9
+          Unplug6: Etapp 10
+          Artist3: Etapp 11
+          Unplug7: Etapp 12
+          Farmer2: Etapp 13
+          Unplug8: Etapp 14
+          Artist4: Etapp 15
+          Unplug9: Etapp 16
+          Farmer3: Etapp 17
+          Unplug10: Etapp 18
+          Artist5: Etapp 19
+          Unplug11: Etapp 20
         Hour of Code:
           desc: Koodi Tund
-          Maze: Stage 1
+          Maze: Etapp 1
         Edit Code:
           desc: Muuda koodi (beeta)
-          MazeEC: Stage 1
+          MazeEC: Etapp 1
         2014 Levels:
-          desc: Bounce (beta)
-          Bounce: Stage 1
+          desc: Bounce (beetaversioon)
+          Bounce: Etapp 1
         Builder Levels:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Kasutaja loodud mõistatused (beetaversioon)
+          Custom: Etapp 1
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapp 1
         Jigsaw Levels:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Jigsaw (beetaversioon)
+          Jigsaw: Etapp 1
         Step Levels:
           desc: Labürint (beeta)
-          MazeStep: Stage Step
+          MazeStep: Etapi samm
         edit-code:
           desc: Muuda koodi (beeta)
-          MazeEC: Stage 1
-          Webapp: Stage 2
-          ArtistEC: Stage 3
-          StudioEC: Stage 4
+          MazeEC: Etapp 1
+          Applab: Etapp 2
+          ArtistEC: Etapp 3
+          StudioEC: Etapp 4
         events:
-          desc: Bounce (beta)
-          Bounce: Stage 1
-          Studio: Stage 2
+          desc: Bounce (beetaversioon)
+          Bounce: Etapp 1
+          Studio: Etapp 2
         builder:
-          desc: User-Created Puzzles (beta)
-          Custom: Stage 1
+          desc: Kasutaja loodud mõistatused (beetaversioon)
+          Custom: Etapp 1
         flappy:
           desc: Flappy Bird
-          Flappy: Stage 1
+          Flappy: Etapp 1
         jigsaw:
-          desc: Jigsaw (beta)
-          Jigsaw: Stage 1
+          desc: Jigsaw (beetaversioon)
+          Jigsaw: Etapp 1
         step:
           desc: Labürint (beeta)
-          MazeStep: Stage Step
+          MazeStep: Etapi samm
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: Stage 1
+          WordSearch: Etapp 1
     game:
       name:
         Unplug1: Sissejuhatus arvutiõpetusse
         Maze: Labürint
         Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
+        Unplug2: Arvutuslik mõtlemine
         Unplug3: Graph Paper Programming
-        Artist: The Artist
+        Artist: Kunstnik
         Unplug4: Algoritmid
-        Artist2: The Artist 2
+        Artist2: Kunstnik tase 2
         Unplug5: Funktsioonid
-        Farmer: The Farmer
+        Farmer: Talunik
         Unplug6: Tingimuslaused
-        Artist3: The Artist 3
+        Artist3: Kunstnik tase 3
         Unplug7: Laulu kirjutamine
-        Farmer2: The Farmer 2
+        Farmer2: Talunik tase 2
         Unplug8: Abstraction
-        Artist4: The Artist 4
+        Artist4: Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
         Unplug10: Internet
-        Artist5: The Artist 5
+        Artist5: Artist 5
         Unplug11: Kokkuvõte
         MazeEC: Labürint
-        Bounce: Bounce
+        Bounce: Põrkama
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
+        Jigsaw: Pusle
         MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: Webapp
-        ArtistEC: The Artist
-        TextMatch: Text Match
+        Wordsearch: Sõnaotsing
+        Webapp: Rakenduste labor
+        ArtistEC: Kunstnik
+        TextMatch: Teksti vaste
         StudioEC: Play Lab
+        Applab: Rakenduste labor
+        NetSim: Interneti simulaator
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Pronks
+        Silver: Hõbe
+        Gold: Kuld
     concept:
       description:
         sequence: Sequence
-        if: If block
+        if: '"kui" plokk'
         if_else: If-else block
         loop_times: Repeat times block
-        loop_until: Repeat until block
+        loop_until: Korda kuni plokk
         loop_while: While block
         loop_for: Counter block
         function: Funktsioonid
         parameters: Functions with parameters
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get angry!
-        maze_2_5: "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: 'Help me banish this bad piggy using the fewest number of blocks. Try using more than one "repeat times" block.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'Ok, try the new "repeat until" block - it will repeat until I reach the annoying pig.'
-        maze_2_10: 'Ok, one last time for practice - can you solve this one using only 4 blocks?'
-        maze_2_11: 'Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?'
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only 5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.'
-        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
-        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
+        maze_2_2: 'Kas sa saad aidata mul ulakas siga kinni püüda? Sea paar "liigu edasi" plokki kokku ja vajuta "Käivita" et mind sinna aidata. '
+        maze_2_1: See siga ajab mu suled turri. Aita mul ta leida!
+        maze_2_2_5: Jälgi rada ja juhi mind rumala sea juurde. Väldi dünamiiti või suled lendavad!
+        maze_2_3: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
+        maze_2_4: Ole rahulik ja aita mul paha siga leida. Muidu ma võin vihaseks saada!
+        maze_2_5: On viis, kasutades ainult 2 plokki, jõudmiseks sea juurde. Kas saad sellele pihta?
+        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult kolme plokki.
+        maze_2_7: 'Aita mul see paha siga pagendada, kasutades miinimum arv plokke. Proovi kasutada "korda" plokki rohkem kui üks kord.'
+        maze_2_8: 'Kui plokk on hall, tähendab see seda, et sa ei saa seda kustutada. Lahenda see pusle kasutades "korda" plokki mis kordab 3 korda. Proovi asetada need 3 plokki: liigu, liigu, keera,  halli "korda" ploki sisse.'
+        maze_2_9: 'Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist kuni ma jõuan tüütu seani.'
+        maze_2_10: 'Hea küll, viimane kord harjutada - kas sa saad lahendada selle kasutades ainult 4 plokki?'
+        maze_2_11: Kallis inimene. Mina zombi. Mina näljane. Pean... saama... päevalillele...Kas sa saad mind sinna ainult 5 plokiga?
+        maze_2_12: Hea küll, see on sarnane, kuid siiski veidike erinev. Kas sa saad seda teha ainult 5 plokiga?
+        maze_2_13: 'Kasuta uut "kui" plokki, et lasta mul otsustada kuna keerama peab. Vihje: sa vajad ainult ühte lisaplokki agaõpi kuidas me selle sätime, nii et sa suudad seda järgmine kord ise teha.'
+        maze_2_14: 'Hea küll, see on nagu viimane mõistatus aga sa pead meelde jätma kuidas sa kasutasid "kui" plokki ja "korda" plokki koos.'
+        maze_2_15: 'Ma tahtma päevalille! Kasuta "kui" plokki et saada mind vähima plokkide arvuga sinna.'
+        maze_2_16: 'Hea küll, teeme seda harjutamiseks uuesti - see ei ole väga erinev, kuid taimede eest!'
+        maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja siis teeb vastavalt ühte või teist asja. Et saada mind päevalilleni kasuta seda uut plokki.'
+        maze_2_18: 'Üks harjutamine veel "kui-teine" plokiga, kas sa saad esimese korraga õigesti?'
+        maze_2_19: Kas sa saad lisada 3 plokki et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikk see on.
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
         turtle_1_3: Make a square using only 3 blocks.
@@ -152,11 +153,10 @@ et:
         turtle_1_7: "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
         turtle_1_8: 'Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.'
         turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
+        turtle_1_10: 'Sa said sellega hakkama. Nüüd võid joonistada mida ise tahad. Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada uut "määra laius" plokki. Lõbutsege!'
+        turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades ainult kolme plokki? Vihje: kasuta "korda" plokki.'
         turtle_4_2: 'Add a "turn right by 90 degrees" block somewhere in the middle of the program already out on the workspace to draw these triangles.'
-        turtle_4_3: |-
-          Ok, here's the code you wrote to draw a single triangle. Can you add a "repeat" and "turn" block to make a pretty flower?
+        turtle_4_3: 'Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks. Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?'
         turtle_4_4: "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
         turtle_4_5: "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
         turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
@@ -215,14 +215,14 @@ et:
         turtle_3_5: 'Now create a new "draw a house" function and use it to house two cats. Hint: create a new function using the "do something" block, and type your own text to name the block.'
         turtle_3_6: 'Using "draw a square" as an example, add an input named "length" to "draw a triangle". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)'
         turtle_3_7: 'Add an input named "length" to "draw a house" and build a big house for the elephant (with edges 150 pixels long)'
-        turtle_3_8: 'Here are all of the blocks from the previous puzzle.  Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: 'Can you re-create the "draw a house" function without help? Try it, and then draw a row of houses.'
-        turtle_3_10: "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        maze_karel_debug_seq_1: "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        maze_karel_debug_seq_2: "What's wrong with this program? How should you fix it so I can remove that pile?"
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice and flat.
-        maze_karel_debug_while: How should you change this program to help me fill the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely flat.
+        turtle_3_10: Oled palju õppinud! Kasuta õpitut millegi huvitava joonistamiseks. Proovi joonistada täht, spiraal või lumehelves.
+        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta õigesti. Kas sa leiaksid probleemi ja parandaksid selle, nii et ma saaksin oma põllu siledaks ning istutamiseks valmis?
+        maze_karel_debug_seq_2: MIs sellel programmil viga on? Kuidas sa peaksid seda parandama, et see eemaldaks selle kuhja?
+        maze_karel_debug_repeat: Paranda seda programmi nii et minu põld oleks kena ja sile.
+        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma et aidata mul täita see auk?
+        maze_karel_debug_if: Appi! Paranda seda programm nii, et minu põld oleks täiesti sile.
         maze_karel_debug_if_else: De-bug this program so I can fill in the holes and remove all the piles.
         maze_karel_debug_function_1: What should you change about this program to help me remove all the piles?
         maze_karel_debug_function_2: Can you de-bug this program for me so I can make my field flat?
@@ -257,10 +257,10 @@ et:
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_5: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either a smaller or larger amount.
-        flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_6: Vaata kas sa ikka suudad punkte saada, kui paned Flappy vähemal või rohkemal määral tiibu lehvitama.
+        flappy_7: 'Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki "kui käib" plokile.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0.
+        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
         flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
         flappy_k1_1: Play Flappy
         flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
@@ -272,21 +272,21 @@ et:
         flappy_k1_6: |-
           Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the "when pass an obstacle" block, and then score a point by flying Flappy through the first set of pipes.
         flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: 'Next, try changing the scene by attaching another block to the "when run" block.'
+        flappy_k1_8: 'Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki "kui käib" plokile.'
         flappy_k1_9: 'Try changing the player by attaching a "set player" block to the "when run" block.'
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
+        jigsaw_1: Kliki plokil
+        jigsaw_2: Lohista plokk sihtmärgile
+        jigsaw_3: Korrasta plokke, et tekiks pilt
+        jigsaw_4: Korrasta plokke, et tekiks pilt
+        jigsaw_5: Korrasta plokke, et tekiks pilt
+        jigsaw_6: Korrasta plokke, et tekiks pilt
+        jigsaw_7: Korrasta plokke, et tekiks pilt
+        jigsaw_8: Korrasta plokke, et tekiks pilt
+        jigsaw_9: Korrasta plokke, et tekiks pilt
+        jigsaw_10: Korrasta plokke, et tekiks pilt
+        jigsaw_11: Korrasta plokke, et tekiks pilt
+        jigsaw_12: Korrasta plokke, et tekiks pilt
+        jigsaw_13: Paranda pusle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
@@ -297,11 +297,11 @@ et:
         studio_c2_3: Can you write a program to make this dog move to the cat?
         studio_c2_4: 'Can you write a program that makes the dog move to the cat, and have the cat say "hello" when the dog reaches him?'
         studio_c2_5: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c2_6: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c2_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c2_8: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c2_9: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c2_8: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_story_1: 'Can you make this dog say "hello world"?'
         studio_c3_story_2: Can you make the dog say something and then have the cat say something afterwards?
@@ -310,14 +310,14 @@ et:
         studio_c3_story_5: Can you add a block to make the octopus happy?
         studio_c3_story_6: "Create your own story. When you're done, click Finish to let friends try your story on their phones."
         studio_c3_game_1: 'Can you write a program to make the octopus say "hello" when it is clicked?'
-        studio_c3_game_2: Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: Can you write a program to make Waddles move around using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?'
-        studio_c3_game_4: 'Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?
+        studio_c3_game_4: 'Can you have Waddles say "Ouch!" and play a "hit" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?'
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_6: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_playlab_1: 'Waddles wants to say "hello" - can you help him?'
+        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
@@ -343,82 +343,10 @@ et:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
         studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: Hei! Minu nimi on Elsa. Aita mul joonistada üks joon.
-      frozen perpendicular:
-        instructions: 'Nüüd vaatame, kas meil õnnestub joonistada kaks joont, mis oleksid üksteise suhtes 90 kraadise nurgaga. Sul on vaja kasutada "Keera" plokki ja "Liigu" plokki.'
-      frozen square iterative:
-        instructions: Tundub, et me oleme poolel teel, et teha ruut. Paneme 4 joont kokku, et joonistada ruut.
-      frozen square loop:
-        instructions: 'Hei, minu nimi on Anna! Teeme ühe ruudu "Korda" ploki abil, mis kasutaks vähem plokke. Kui mitu korda (???) peaks "Korda" plokk sisemisi plokke läbima, et valmistada ruut?'
-      frozen square loop 3x:
-        instructions: Teeme kolm ruutu, pöörates pärast igat ruutu. Kontrolli, et sa pöörad 120 kraadi enne igat uut ruutu.
-      frozen square snowflake:
-        instructions: 'Kas sa suudad teha lumehelbe, kasutades "Korda" plokki 10 korda ruutu tegemiseks ja "Keera" plokki et pöörata 36 kraadi iga ruudu vahel?'
-      frozen cross:
-        instructions: 'Kasuta "Korda" plokki, et teha plussmärk. Kas sa panid tähele, et Elsa saab liikuda nii edasi kui ka tagasi?'
-      frozen cross rotate:
-        instructions: Nüüd proovi seda korrata 10 korda. Mitu kraadi sa pead iga joone vahel pöörama?
-      frozen cross rotate dense:
-        instructions: 'Kordame seda 90 korda! Mitu korda mahub 360 sisse 90? Vihje: See on väga väike number.'
-      frozen diamond:
-        instructions: 'Teeme rööpküliku. See on muidu nagu ruut aga sellel on erinevad nurgad: 90 kraadiste nurkade asemel on 60 ja 120 kraadised nurgad.'
-      frozen diamond mini snowflake:
-        instructions: 'Kas sa teadsid, et iga lumehelves on erineva kujuga?Teeme uue lumehelbe kasutades "Korda" plokki et teha rööpkülikut 4 korda, keerates iga rööpküliku vahel 90 kraadi võrra paremale.'
-      frozen diamond snowflake:
-        instructions: 'Nüüd, teeme uue lumehelbe, kasutades "Korda" plokki, et korrata rööpkülikut 10 korda, pöörates igaühe vahel 36 kraadi paremale.'
-      frozen circle:
-        instructions: Ring on eriline kujund. Kas sa suudad välja mõelda, mis numbriga tuleks küsimärgid asendada, et joonistada ring?
-      frozen circle function:
-        instructions: 'Kasuta uut "Loo ring" plokki, et teha 10 osaliselt kattuvat ringi. Ära unusta ringide vahel edasi hüpata.'
-      frozen circle function in circle:
-        instructions: Nüüd loome 20 osaliselt kattuvat ringi, pöörates iga ringi vahel 18 kraadi.
-      frozen circle function with parameter:
-        instructions: 'Siin on "Loo ring" plokk, mis suudab teha erinevate suurustega ringe. Kas sa saaksid seda kasutades luua väikse ringi suurusega 5 ja suurema ringi suurusega 10?'
-      frozen snowflower:
-        instructions: Keerulisemaid lumemustreid saab teha väga lihtsate kujunditega. Kas sa saaksid teha mustri, tehes viis korda ringi suurusega 5 ja viis korda ringi suurusega 10?
-      frozen snowflake branch:
-        instructions: 'Proovi kasutada "Tee lumehelbe haru" plokki, et luua 3 haru, mis hakkaks meenutama lumehelvest.'
-      frozen snowflake full:
-        instructions: Nüüd kordame seda 8 korda, et teha ilus lumehelves!
-      frozen freeplay:
-        instructions: Sa oled saanud ametlikult meister-kunstnikuks! Loo oma talve võlumaailma ja jaga seda oma sõpradega.
-      scrat 16:
-        instructions: 'Tammetõru! Tammetõru! Tammetõru! Kasuta "kui" plokki, et aidata mul jõuda tammetõruni vähima arvu plokkide abil.'
-      scrat 17:
-        instructions: 'Olgu, teeme seda praktika mõttes korra veel - see ei ole eriti teistmoodi, aga pea silmas seinu!'
-      scrat 18:
-        instructions: '"Kui-siis" plokid kontrollivad tingimusi ja seejärel teevad kas ühte asja VÕI teist. Et aidata mind tammetõruni, proovi seda uut plokki kasutada.'
-      scrat 19:
-        instructions: 'One more practice of the "if-else" block, can you get it right on your first try?'
-      scrat 20:
-        instructions: Kas sa saaksid lisada täpselt 3 plokki, et aidata mul lahendada keerulisemat labürinti? Kui sa teed seda õigesti, siis ma saan kõnida igat loogelist teed pidi, vahet pole kui pikalt. Kiirusta! Jää on sulamas!
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
     video:
       name:
         maze_intro: Maze Intro
@@ -436,7 +364,7 @@ et:
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
+        Unplug2: Arvutuslik mõtlemine
         Unplug3: Graph Paper Programming
         Unplug4: Algoritmid
         Unplug5: Funktsioonid
@@ -478,6 +406,7 @@ et:
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
@@ -488,15 +417,16 @@ et:
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Põrkama
         C3_playlab_create_game: 'Play Lab - Create a Game'
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
+        C4_loops_zombie: Tsüklid
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
@@ -512,12 +442,43 @@ et:
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_intro: Kooditunni sissejuhatus
+        frozen_loops: Sissejuhatus loops
+        frozen_functions: Funktsioonide tutvustus
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        infinity_playlab_intro: 'Mängu Labor - sissejuhatus'
+        infinity_playlab_events: 'Mängu Labor - Üritused'
+        infinity_playlab_repeat_forever: 'Mängu Labor - Korda Igavesti'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        csp_textcompression: Text compression widget
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'
@@ -552,11 +513,11 @@ et:
         edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: Kasuta kordus plokki et see kujund luua.
+        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist keerata.
+        frozen_circle_function_with_parameter_circle: 'Kasuta " loo ring" plokki ja muuda suurus.'
+        frozen_snowflake_branch: 'Kasuta "joonista lumehelbe võrestik" plokki'
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
@@ -585,3 +546,8 @@ et:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
+        Infinity_move_right_runbutton: Lisa liigutamise plokk siia
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma kui üles noole klahvile on vajutatud?
+        Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
+        Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
+        Infinity_repeat_callout: Aseta Liigu plokid siia sisse

@@ -177,19 +177,27 @@ it:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videogiochi e Piani Cartesiani
-        desc: Descrizione della lezione Videogiochi e Piani Cartesiani
+        desc: |
+          Scopri come i videogiochi che ami sono controllati dall'algebra! 
+          Scopri come le espressioni algebriche e il piano cartesiano possono aiutarci a capire il funzionamento dei videogiochi. Dopodichè inizierai a progettare il tuo videogioco.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Contratti
-        desc: 'Descrizione della lezione "senza rete": Contratti'
+        title: Contratti, Dominio e Range
+        desc: "I contratti ci danno l'opportunità di capire e discutere le funzioni. In questa lezione vedremo come i contratti possono aiutarci a capire i nuovi linguaggi di programmazione e le funzioni."
+        video: alg_5_contracts
       DesignRecipe:
         title: La Ricetta della Progettazione
-        desc: 'Descrizione della lezione: La Ricetta della Progettazione'
+        desc: 'In questa ultima lezione gli studenti hanno scitto alcune funzioni molto semplici - ma più sofisticate funzioni richiedono un approccio più riflessivo. La Design Recipe è un approccio strutturato alla scrittura di funzioni che include la scrittura di controlli per assicurarsi che la funzione funzioni nel modo atteso.'
+        video: alg_8_design_recipe
       Booleans:
-        title: Valori Booleani
-        desc: 'Descrizione della lezione: Valori Booleani'
+        title: Valori booleani e logica
+        desc: "I valori booleani sono l'ultimo tipo di dato che impareremo a conoscere in questo corso. In questa attività potrete conoscere cosa si intenda per valori booleani e come possono aiutarci a scrivere funzioni che pensano logicamente"
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Istruzioni Condizionali e Funzioni a Tratti
-        desc: 'Descrizione della lezione: Istruzioni Condizionali e Funzioni a Tratti'
+        desc: I parametri che si passano alle funzioni ritornano dei dati in uscita che utilizzando uno schema rigido. Supponiamo che alcuni parametri creino un dato in uscita secondo un modello ma altri valori utilizzino un modello diverso. Questo è il caso dove sono necessarie istruzioni condizionali...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Rilevamento delle Collisioni
-        desc: 'Descrizione della lezione: Rilevamento delle Collisioni'
+        title: Rilevamento delle collisioni e il teorema di Pitagora
+        desc: Determinare quando si toccano degli oggetti sullo schermo è un aspetto importante della maggior parte dei giochi. In questa lezione vedremo come il teorema di Pitagora e la formula per la distanza possono essere utilizzati per misurare la distanza tra due punti sul piano e poi decidere quando questi due punti o personaggi del gioco si toccano.
+        video: alg_16_biggame_collision_detection

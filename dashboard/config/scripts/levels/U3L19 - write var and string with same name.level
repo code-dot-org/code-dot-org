@@ -1,0 +1,37 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-18T01:19:52.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "assign_x": null,
+      "write": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Now look at this example. We’ve added another write statement.  Before you run the code, see if you can predict what the output will be.  Seriously, write it down. THEN run the code, mess with it if you like, and continue to the next page for an explanation.",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(foo);\r\nwrite(\"foo\");",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

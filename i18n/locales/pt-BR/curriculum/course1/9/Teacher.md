@@ -1,68 +1,69 @@
 * * *
 
-title: Building a Foundation view: page_curriculum theme: none
+title: Criando uma base view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Building a Foundation', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
+<%= partial('curriculum_header', :title=> 'Criando uma base', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed.
+Problemas novos e não resolvidos geralmente são muito difíceis. Se quisermos ter alguma chance de fazer algo criativo, útil e inteligente, precisamos estar dispostos a atacar problemas difíceis, mesmo que isso signifique falhar algumas vezes antes de alcançar o sucesso.
 
-This lesson teaches that failure is not the end of a journey, but a hint for how to succeed. [summary]
+Essa aula ensina que a falha não é o fim da jornada, mas uma dica para como alcançar o sucesso. [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 20 minutes
+### **Primeiros passos** - 20 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Try, Try Again](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Tente outra vez](#GetStarted)
 
-### **Activity: Building a Foundation** - 30 minutes
+### **Atividade: Criando uma base** - 30 minutos
 
-4) [Building a Foundation](#Activity1)
+4) [Criando uma base](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Outline steps to complete a structural engineering challenge
-  * Predict and discuss potential issues in structure creation
-  * Build a structure based on team plan
-  * Revise both plan and structure until they satisfy challenge
+  * Traçar os passos para completar um desafio de engenharia estrutural
+  * Prever e discutir potenciais problemas na criação da estrutura
+  * Criar uma estrutura com base em um plano de equipe
+  * Revisar o plano e a estrutura até que satisfaçam as condições do desafio
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Building Elements 
-      * Gumdrops and Toothpicks (approx 30 each group) or
-      * Marshmallows and Popsicle Sticks (approx 30 each group) or
-      * Paper and Tape (approx 10 pieces per group)
-  * Mini Paper Cup for checking height (1 per group)
-  * Book for testing strength (1 per group)
+  * Criação de elementos 
+      * Gomas e palitos de dente (aproximadamente 30 por grupo) ou
+      * Marshmallows e palitos de sorvete (aproximadamente 30 por grupo) ou
+      * Papel e fita (aproximadamente 10 peças por grupo)
+  * Copo de plástico para verificar a altura (1 por grupo)
+  * Livro para testar a força (1 por grupo)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/J7y0o6VxMXQ?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print [Building a Foundation Packet](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
   * Gather enough building elements for each group 
@@ -72,33 +73,33 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -107,42 +108,42 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Persistence** - Say it with me: Per-sis-tence   
-Trying again and again, even when something is very hard
+**Persistência** - Repita comigo: per-sis-tên-cia   
+Tentar de novo, e de novo, mesmo quando algo é muito difícil
 
-### <a name="GetStarted"></a> 3) Try, Try Again
+### <a name="GetStarted"></a> 3) Tente, e tente outra vez
 
-  * Does everyone get everything right the first time?
-  * When I was a baby learning to walk, did I stand up and run off on my first try?
+  * Todo mundo acerta tudo na primeira tentativa?
+  * Quando eu era um bebê e estava aprendendo a andar, eu fiquei de pé e saí correndo na primeira tentativa?
     
-      * Video of [baby learning to scoot, sit, walk](https://www.youtube.com/watch?v=BqQiOOC7_Rs). 
+      * Vídeo do [bebê aprendendo a sentar e a andar](https://www.youtube.com/watch?v=BqQiOOC7_Rs). 
 
-  * Sometimes, the best and most useful things to do are the hardest to learn.
+  * Às vezes, as melhores coisas e as mais úteis são as mais difíceis de se aprender.
     
-      * It can take a while to learn hard things
-      * If you don't do something well at first, does it mean that you never will?
-      * Can you think of something that was hard at first, but that you can now do pretty easily? 
-          * Walking
-          * Talking
-          * Riding a bike
+      * Pode ser demorado aprender coisas difíceis
+      * Se você não faz algo bem na primeira tentativa, significa que você nunca vai conseguir fazer?
+      * Você consegue pensar em alguma coisa que foi difícil no começo, mas que agora você consegue fazer com facilidade? 
+          * Andar
+          * Falar
+          * Andar de bicicleta
 
-  * When you fail at doing something, you get a hint at what went wrong. You just need to look for it.
+  * Sempre que você falha ao fazer alguma coisa, você tem uma dica do que deu errado. Basta procurar.
     
-      * If your bike tips over, next time you need to work on balance.
-      * If you're filling a balloon and it pops, next time you need less air.
-  * Think of the mistakes as chances to learn how to do something better next time.
+      * Se você leva um tombo de bicicleta, na próxima vez você precisa trabalhar mais o equilíbrio.
+      * Se você estiver enchendo um balão e ele estourar, na próxima vez você vai precisar de menos ar.
+  * Pense nos erros como oportunidades de aprender como fazer algo melhor na próxima vez.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
   
-Here are some great resources to prep your class with the concept of persistence before you turn them loose on this project:
+Estes são alguns recursos ótimos para que você possa preparar sua turma, apresentando o conceito de persistência antes de realizar o projeto:
 
-  * [Mouse Wants a Cracker](https://www.youtube.com/watch?v=jyfyVen4Bdw)
-  * [Fall 7 Times, Stand Up 8](http://mattandjojang.files.wordpress.com/2012/08/never-give-up.jpg)
-  * [Never Ever Give Up](http://www.neeny.com/contents/member/xconfig/photos/NeverGiveUp-cf8470.jpg)
-  * [If You Quit Too Soon](http://ic.pics.livejournal.com/jend0s/20784172/18398/18398_original.jpg)
+  * [O rato quer pegar a bolacha](https://www.youtube.com/watch?v=jyfyVen4Bdw)
+  * [Cair 7 vezes, levantar 8](http://mattandjojang.files.wordpress.com/2012/08/never-give-up.jpg)
+  * [Nunca desista](http://www.neeny.com/contents/member/xconfig/photos/NeverGiveUp-cf8470.jpg)
+  * [Se você desistir cedo demais](http://ic.pics.livejournal.com/jend0s/20784172/18398/18398_original.jpg)
 
 [/tip]
 
@@ -150,48 +151,48 @@ Here are some great resources to prep your class with the concept of persistence
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [Building a Foundation Activity](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
+### <a name="Activity1"></a> 4) [Atividade: Criando uma base](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
 
-Have you ever started on a task, then discovered that it was much harder than you thought it would be? Hard tasks can make us want to give up, but if we stick to our goal and keep trying, then we just might make something better than we’ve ever made before!
+Você já começou a fazer uma tarefa e descobriu que ela era muito mais difícil do que você imaginava? Tarefas difíceis podem nos fazer querer desistir, mas se nos mantivermos firmes em nosso objetivo e continuarmos tentando, então provavelmente vamos fazer algo melhor do que jamais fizemos!
 
-In this challenge, we’ll work to construct towers that are strong enough to hold a textbook for at least 10 seconds, using everyday materials.
+Neste desafio, vamos construir torres que sejam fortes o suficiente para suportar o peso de um livro por pelo menos 10 segundos, usando materiais que usamos no cotidiano.
 
-**Rules:**
+**Regras:**
 
-> 1) Use only the supplies provided to build a tower.
+> 1) Use apenas o material fornecido para construir uma torre.
 > 
-> 2) The tower can be any shape, but it has to be at least as tall as the paper cup.
+> 2) A torre pode ter qualquer forma, mas deve ter pelo menos a altura de um copinho de plástico.
 > 
-> 3) The tower must support the weight of a book for a full 10 seconds.
+> 3) A torre deve suportar o peso de um livro por 10 segundos.
 
   
 
 
-**Directions:**
+**Instruções:**
 
-> 1) Divide students into groups of 3 or 4.
+> 1) Divida os alunos em grupos de 3 ou 4.
 > 
-> 2) Explain the rules of the challenge, given above.
+> 2) Explique as regras do desafio descritas acima.
 > 
-> 3) Provide each group with limited supplies and make it known that they will get no more.
+> 3) Forneça uma quantidade limitada dos materiais a cada grupo, e informe-os que eles não receberão nada além disso.
 > 
-> 4) Challenge the class to think ahead to the problem and plan out their method of building their first tower.
+> 4) Desafie a turma a pensar no problema e a planejar o método de construção da primeira torre.
 > 
-> 5) Encourage students to begin building, then have them alert you when they think they’ve met the challenge described by the rules.
+> 5) Incentive os alunos a começar a construir, e então peça para que eles avisem quando acharem que cumpriram o desafio descrito nas regras.
 > 
-> 6) Test each structure. Is it taller than the cup? Does it hold a book?
+> 6) Teste cada estrutura. Ela é maior que um copo? Ela suporta o peso de um livro?
 > 
-> 7) If not, have students enter a cycle of planning, fixing, testing, and planning again until the challenge has been met.
+> 7) Se não, peça aos alunos que façam um ciclo de planejamento, correção, teste, e novamente planejamento, até que o desafio tenha sido cumprido.
 > 
-> 8) Congratulate the students as they succeed and take pictures of the successful towers (if possible) to upload to the Code.org site!
+> 8) Parabenize os alunos quando eles conseguirem completar o desafio e tire fotos das torres (se possível) para enviar para a Code.org!
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-The planning stage can be difficult for young students. It may be helpful for you to place some idea "examples" at the front of the room. Do not announce that they are there. Simply encourage students to take a walk if they get frustrated. Try to encourage students to locate the tips on their own if at all possible.
+A fase de planejamento pode ser difícil para os alunos mais jovens. Você pode ajudar se der alguns "exemplos" com ideias para toda a turma. Não anuncie a todos o progresso dos grupos. Simplesmente incentive-os a dar uma volta se ficarem frustrados. Tente incentivar os alunos a encontrar as dicas sozinhos, se possível.
 
 [/tip]
 
@@ -199,44 +200,44 @@ The planning stage can be difficult for young students. It may be helpful for yo
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * Were you proud of what you made?
-  * Do you think you could make a tower as tall as a chair that could hold a person? 
-      * How many gumdrops do you think you would need?
-  * Was there a time that you thought about giving up? 
-      * How did you get past that feeling?
+  * Você está orgulhoso do que fez?
+  * Você acha que poderia fazer uma torre tão alta quanto uma cadeira, que pudesse suportar o peso de uma pessoa? 
+      * Quantas gomas você acha que seriam necessárias?
+  * Houve algum momento em que você pensou em desistir? 
+      * Como você superou esse sentimento?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam ao mundo e ao futuro dos alunos. Use os conhecimentos que tem sobre sua sala de aula para decidir se vocês vão discutir isso em turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "Going around the earth along the full circumference"   
-> "Getting help from a large group of people to finish something faster"   
-> "Trying again and again, even when something is very hard"  
+> "Dar uma volta na terra com uma circunferência completa"   
+> "Obter ajuda de um grupo grande de pessoas para terminar algo mais rápido"   
+> "Tentar de novo, e de novo, mesmo quando algo é muito difícil"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (0 min)
+## Avaliação (0 min)
 
-### <a name="Assessment"></a>7) No Indivdual Assessment
+### <a name="Assessment"></a>7) No Individual Assessment
 
-  * The final assessment of this lesson is the result of the previous activity.
+  * A avaliação final dessa aula é o resultado da atividade anterior.
 
 [/together]
 
@@ -245,73 +246,73 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Try It Again!
+### Tente outra vez!
 
-  * Try doing the same activity with different materials.
+  * Tente fazer a mesma atividade com materiais diferentes.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.b - Create original works as a means of personal or group expression.
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
-  * 6.c - Troubleshoot systems and applications.
+  * 1.b - Criar trabalhos originais como meio de expressão pessoal ou em grupo.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
-  * CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
-  * CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises.
-  * CT.L1:6-05 - Make a list of sub-problems to consider while addressing a larger problem.
-  * CL.L1:6-03 - Identify ways that teamwork and collaboration can support problem solving and innovation.
-  * CL.L2-04 - Exhibit dispositions necessary for collaboration: providing useful feedback, integrating feedback, understanding and accepting multiple perspectives, socialization.
+  * CPP.L1:3-04 - Construir um conjunto de comandos para realizar uma tarefa simples. 
+  * CT.L1:6-01 - Entender e usar os passos básicos na resolução de um problema com um algoritmo. 
+  * CT.L1:6-02 - Desenvolver uma compreensão simples de algoritmo usando exercícios que não precisem de computador.
+  * CT.L1:6-05 - Fazer uma lista de subproblemas que devem ser considerados ao se tratar um problema maior.
+  * CL.L1:6-03 - Identificar como o trabalho em equipe e a colaboração podem ajudar na inovação e na resolução de problemas.
+  * CL.L2-04 - Mostrar o que é necessário para a colaboração: fornecer feedback útil, integrar os feedbacks, compreender e aceitar perspectivas diferentes, socialização.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-ETS1-1. Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool. 
-  * K-2-ETS1-2. Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem. 
-  * K-2-ETS1-3. Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.
+  * K-2-ETS1-1. Fazer perguntas, observações e reunir informações sobre uma situação que as pessoas querem mudar para definir um problema simples que pode ser resolvido com o desenvolvimento de uma ferramenta ou objeto novo, ou melhorado. 
+  * K-2-ETS1-2. Desenvolver um esboço, desenho, ou modelo físico simples para ilustrar como a forma de um objeto ajuda no seu funcionamento adequado para resolver um dado problema. 
+  * K-2-ETS1-3. Analisar os dados de testes de dois objetos desenvolvidos para resolver o mesmo problema e comparar os pontos fortes e fracos de cada um.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Construct viable arguments and critique the reasoning of others.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Construir argumentos plausíveis e fazer críticas ao raciocínio dos outros.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.CC.4 - Understand the relationship between numbers and quantities; connect counting to cardinality.
-  * K.MD.1 - Describe measurable attributes of objects, such as length or weight. Describe several measurable attributes of a single object.
-  * K.MD.2 - Directly compare two objects with a measurable attribute in common, to see which object has “more of”/“less of” the attribute, and describe the difference.
+  * K.CC.4 - Entender a relação entre números e quantidades; relacionar contagem e cardinalidade.
+  * K.MD.1 - Descrever atributos mensuráveis de objetos, como comprimento ou peso. Descrever vários atributos mensuráveis de um único objeto.
+  * K.MD.2 - Fazer uma comparação direta de dois objetos com um atributo mensurável em comum, para ver qual objeto tem "mais"/"menos" desse atributo, e descrever a diferença.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.2 - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
-  * SL.K.5 - Add drawings or other visual displays to descriptions as desired to provide additional detail.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * SL.1.5 - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.2 - Confirmar a compreensão de um texto lido em voz alta ou de informações apresentadas de forma oral por outro tipo de mídia, perguntando e respondendo questões sobre detalhes importantes e pedindo explicações se algo não for entendido.
+  * SL.K.5 - Adicionar desenhos ou outros elementos visuais às descrições para fornecer detalhes adicionais.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * SL.1.5 - Adicionar desenhos ou outros elementos visuais às descrições para esclarecer ideias, pensamentos e sentimentos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

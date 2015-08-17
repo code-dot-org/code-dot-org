@@ -1,0 +1,11 @@
+name 'U3L02 Assessment'
+title 'Assessment Question'
+
+
+markdown <<MARKDOWN
+Define efficiency from the perspective of drawing with “building blocks” in AppLab. 
+
+List two examples outside of computer science in which you have heard the term “efficiency” described or rated. 
+
+How are the non-CS examples of efficiency similar in meaning to your definition of efficiency in creating code to draw images?
+MARKDOWN

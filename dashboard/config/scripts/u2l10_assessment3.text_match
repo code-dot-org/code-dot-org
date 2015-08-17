@@ -1,0 +1,6 @@
+name 'U2L10 Assessment3'
+title 'Assessment Question 3'
+
+markdown <<MARKDOWN
+Why do multiple websites at your school and the computers in your classroom all have IP addresses that start with the same two sets of numbers?
+MARKDOWN

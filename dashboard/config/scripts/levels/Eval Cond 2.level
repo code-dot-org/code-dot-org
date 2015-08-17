@@ -34,7 +34,8 @@
         </block>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_cond_3" inline="false" movable="false" editable="false">
+            <block type="functional_cond" inline="false" movable="false" editable="false">
+              <mutation pairs="0,1,2"/>
               <functional_input name="COND0">
                 <block type="functional_number_equals" inline="false" movable="false" editable="false">
                   <functional_input name="ARG1">
@@ -169,7 +170,7 @@
         <block type="functional_greater_than" inline="false"/>
         <block type="functional_less_than" inline="false"/>
         <block type="functional_number_equals" inline="false"/>
-        <block type="functional_cond_3" inline="false"/>
+        <block type="functional_cond" inline="false"/>
         <block type="functional_call">
           <mutation name="sides"/>
         </block>

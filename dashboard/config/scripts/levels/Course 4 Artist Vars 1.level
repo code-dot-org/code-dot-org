@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you help me draw a triangle? It's 100 pixels long on each side.",
+    "instructions": "Can you help me draw an equilateral triangle? It has to be exactly 100 pixels long on each side.",
     "x": "150",
     "y": "225",
     "start_direction": "90",
@@ -20,8 +20,18 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[{\"localization_key\": \"repeat_blocks\", \"element_id\": \"[block-id='4']\", \"qtip_config\": {\"position\": {\"my\": \"left center\", \"at\": \"right center\"}}}]",
-    "impressive": "false"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"repeat_blocks\",\r\n  \"callout_text\": \"Use the \\\"Repeat\\\" block and wrap it around the blocks in the workspace\",\r\n  \"element_id\": \"[block-id='4']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "markdown_instructions": "Can you help me draw an equilateral triangle? It has to be exactly 100 pixels long on each side.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

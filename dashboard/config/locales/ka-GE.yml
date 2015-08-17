@@ -1,0 +1,679 @@
+"ka":
+  errors:
+    messages:
+      not_saved: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'
+  activerecord:
+    errors:
+      messages:
+        blank: საჭიროა
+    attributes:
+      user:
+        name: სახელი სისტემაში
+        email: ელექტრონული ფოსტა
+        username: მომხმარებლის სახელი
+        password: პაროლი
+        password_confirmation: პაროლის დადასტურება
+        current_password: მიმდინარე პაროლი
+        locale: ენა
+        age: ასაკი
+        gender: სქესი
+        edit_header: ანგარიშის მონაცემების შესწორება
+        error:
+          future: არ შეიძლება იყოს მომავალში
+  hello: ჰეი, სამყარო
+  welcome_back: კარგია, რომ დაბრუნდით, %{name}
+  submit: გაგზავნა
+  add_teacher_form:
+    code:
+      label: 'მასწავლებლის დამატება:'
+      placeholder: სექციის კოდი (ABCDEF)
+    submit: მასწავლებლის დამატება
+  add_hint_form:
+    placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
+    submit: მინიშნების დამატება
+  appname: Code.org
+  stage: ეტაპი
+  stage_number: ეტაპი %{number}
+  puzzle: თავსატეხი
+  trophies: ჯილდოები
+  courses: კურსები
+  of: -ის
+  more: მაჩვენე მეტი
+  less: მაჩვენე ნაკლები
+  beta: ბეტა-ვერსია
+  try_hoc: 'ნახეთ ჩვენი "კოდის ერთი საათი", გადადით აქ >> '
+  try_k8intro: გაეცანით ჩვენს  K-8 შესავალ კურს ინფორმატიკაში (15-25 საათი)
+  k8intro: K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)
+  already_started: 'უკვე დაიწყე? გააგრძელე აქ >> '
+  demos: 'ადმინი: ყველა დემო-ვერსია'
+  continue: გაგრძელება
+  prize: პრიზი
+  more_info: მეტი ინფორმაცია
+  auth:
+    sign_in_with: შესვლა %{provider}-ით
+    signed_in: აი, შემოხვედით!
+    signed_out: თქვენ გამოხვედით თქვენი ანგარიშიდან <a href="%{url}">Code.org-ზე</a>.
+    sign_out_of: შესასვლელად თქვენ გამოიყენეთ %{provider}. <a href="%{url}">დააჭირეთ
+      აქ </a> %{provider}-დან გასასვლელად.
+    already_signedup: უკვე დარეგისტრირდით?
+    notyet_signedup: ჯერ არ დარეგისტრირებულხართ?
+    google_oauth2: Google  ანგარიში
+    twitter: Twitter
+    facebook: Facebook
+    windowslive: Microsoft  ანგარიში
+    forgot_password: დაგავიწყდათ თქვენი პაროლი?
+    need_confirmation: არ მოგსვლიათ დადასტურების ინსტრუქციები?
+    need_unlock: არ მოგსვლიათ განბლოკვის ინსტრუქციები?
+  signup_form:
+    student_count: უკვე დარეგისტრირდა %{count} სტუდენტი.
+    teacher_count: უკვე დარეგისტრირდა %{count} მასწავლებელი.
+    overview_student: დარეგისტრირდით და ადევნეთ თვალყური თქვენს მიღწევებს. თქვენი
+      ელ.ფოსტის მისამართი ძირითადად გამოიყენება საიტზე შესვლისთვის და პაროლის აღსადგენად.
+      მეტი ინფორმაციისთვის გაეცანით ჩვენს <a href="http://code.org/privacy"> კონფიდენციალურობის
+      პოლიტიკას</a>.
+    overview_teacher: ასწავლეთ ინფორმატიკა თქვენს კლასში - დარეგისტრირდით ჩვენთან.
+      <p/> თქვენ შეძლებთ დაამატოთ თქვენი მოსწავლეები და თვალყური ადევნოთ მათ პროგრესს.
+    no_signup_message: თქვენ შეგიძლიათ <a target="_blank" href="http://learn.code.org">
+      სხვადასხვა ეტაპებისა და თავსატეხების ჩატვირთვა</a>, მაგრამ პროგრესის შესანახად
+      რეგისტრაცია დაგჭირდებათ.
+    teacher_educator_guide: ნახეთ მასწავლებლის გაიდი
+    teacher_pitch: მასწავლებლების რეგისტრაცია Code.org-ზე
+    teacher_title: მასწავლებლის რეგისტრაცია
+    student_pitch: მოსწავლის რეგისტრაცია Code.org-ზე
+    student_title: მოსწავლის რეგისტრაცია
+    school_name: სკოლის სახელი (არასავალდებულო)
+    school_address: სკოლის მისამართი (არასავალდებულო)
+    address_placeholder: მისამართი, ქალაქი, ინდექსი
+    gender: სქესი (არასავალდებულო)
+    birthday: დაბადების თარიღი (არასავალდებულო)
+    age: ასაკი
+    user_type: მასწავლებელი ხართ თუ მოსწავლე?
+    submit: რეგისტრაცია
+    teacher: მასწავლებელი ხართ?
+    valid_username: მისაწვდომია!
+    invalid_username: მომხმარებლის სახელი მინიმუმ ხუთნიშნა უნდა იყოს
+    taken_username: ეს სახელი უკვე დაკავებულია
+    valid_password: პაროლი დასაშვებია!
+    invalid_password: პაროლი მინიმუმ ექვსნიშნა უნდა იყოს
+    mismatch_password: თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა
+    student_terms: მე ვეთანხმები code.org-ის <a href='http://code.org/tos'>მომსახურების
+      პირობებს</a>.  თუ მე 13 წელზე უმცროსი ვარ, ვადასტურებ, რომ მაქვს ჩემი მშობლისა
+      ან ლეგალური მეურვის ნებართვა code.org-ის გამოყენებაზე. <br/> 13 წელზე უმცროსი
+      მომხმარებლების ელ.ფოსტის მისამართები არ ინახება ფორმით, რომელიც მათთან დაკავშირების
+      საშუალებას იძლევა.
+    teacher_terms: მე ვეთანხმები code.org-ის <a href='http://code.org/tos'>მომსახურების
+      პირობებს</a>.
+    additional_information: რეგისტრაციის გასაგრძელებლად დამატებითი ინფორმაცია გვჭირდება.
+  signin_form:
+    title: უკვე გაქვთ ანგარიში? შემოდით
+    login: ელ.ფოსტა ან მომხმარებლის სახელი
+    password: პაროლი
+    remember: დამიმახსოვრე
+    submit: შესვლა
+  signin:
+    try_heading: გინდათ, სცადოთ კოდის წერა რეგისტრაციის გარეშე?
+    try_hoc: ჯერ  სცადე "კოდის ერთი საათი"
+    try_20hours: ნახეთი ჩვენი ოცსაათიანი შესავალი ინფორმატიკაში
+  signinsection:
+    welcome: მოგესალმებით სექციაში %{section_name}
+    name: აირჩიეთ თქვენი სახელი
+    picture: იპოვეთ თქვენი საიდუმლო სურათი
+    words: შეიყვანეთ თქვენი საიდუმლო სიტყვები
+    login: შესვლა
+  password:
+    reset_form:
+      title: დაგავიწყდათ თქვენი პაროლი?
+      email: ელ.ფოსტის მისამართი
+      submit: გამომიგზავნეთ პაროლის შეცვლის ინსტრუქციები
+    change_form:
+      title: პაროლის შეცვლა
+      new_password: ახალი პაროლი
+      confirm_password: ახალი პაროლის დადასტურება
+      submit: პაროლის შეცვლა
+  welcome_email:
+    subject: შეურთდით ჩემს კლასს ( Code.org-ზე)
+    body: |
+      გადადი ქვემოთ მოცემულ ბმულზე და დარეგისტრირდი პროგრამირების კურსებზე  Code.org-ზე (მე ვიქნები შენი "მასწავლებელი)
+
+      %{link}
+
+      ტუტორიალები სახალისოა და პროგრამირების საფუძვლებს გასწავლის, მარტივი, თამაშის მსგავსი მეთედებით. ისწავლე კოდის წერა ბილ გეითსისგან, მარკ ცუკერბერგისგან, Angry Birds, და Plants vs. Zombies!  თამაშებით! :-)
+
+      %{name}
+  follower:
+    invite_sent: მოწვევა გაგზავნილია
+    added_teacher: '%{name} გიმატებთ, როგორც მასწავლებელს'
+    registered: თქვენ დარეგისტრირდით სექციაში %{section_name}.
+    error:
+      signed_in: თუ შეიძლება, გაგრძელებამდე, გამოდით თქვენი ანგარიშიდან
+      username_not_found: მომხმარებლის სახელი %{username} არ მოიძებნა
+      username_in_use: '%{username} უკვე დაკავებულია, აირჩიეთ სხვა'
+      no_teacher: ამ მონაცემებით "%{teacher_email_or_code}" ვერავინ ვერ მოიძებნა.
+        უთხარით, რომ გაიარონ რეგისტრაცია და შემდეგ თავიდან სცადეთ დამატება
+      section_not_found: სექცია კოდით "%{section_code}" ვერ მოიძებნა.
+      blank_code: შეიყვანეთ სექციის კოდი
+      cant_join_own_section: ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით.
+    mail:
+      invite_student:
+        subject: შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!
+      student_disassociated:
+        subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
+      teacher_disassociated:
+        subject: 'Code.org-ის შეტყობინება: %{teacher_name} აღარ არის თქვენი მასწავლებელი.'
+  reports:
+    error:
+      access_denied: თქვენ არ გაქვთ წვდომა ამ მომხმარებლის სტატისტიკაზე
+  redeem_prizes:
+    title: 'პრიზების მიღება: %{name}'
+    provider: 'მომწოდებელი:'
+    code: 'კოდი:'
+    redeem_header: 'მოთხოვნა:'
+    donorschoose_register: დარეგისტრირდით DonorsChoose.org-ზე როგორც მასწავლებელი
+    donorschoose_project: პროექტის გამოქვეყნება
+    donorschoose_how_to: როგორ შეიძლება თქვენი კოდის გამოყენება
+    success: თქვენი პრიზი წარმატებითაა განაღდებული, კოდი იხილეთ ქვემოთ.
+    error: თქვენი პრიზის განაღდება შუეძლებელია, სცადეთ კიდევ ერთხელ.
+    error_us_only: ეს პრიზი მხოლოდ აშშ-დან მომხმარებლებისთვის არის მისაწვდომი.
+    error_not_earned: ეს პრიზი ჯერ არ მოგიპოვებიათ.
+    error_already_redeemed: ეს პრიზი უკვე განაღდებულია.
+    no_prizes_available: ვწუხვართ, მაგრამ ახლა არ გვაქვს პრიზები.
+    teacher_info_required: 'პრიზის მისაღებად მასწავლებელმა სკოლა და მისამართი უნდა
+      დაასახელოს:'
+    teacher_email_required: 'პრიზის მისაღებად მასწავლებელს ელ.ფოსტის დადასტურებული
+      მისამართი სჭირდება:'
+    confirm:
+      title: დაადასტურეთ
+      'no': არა
+      'yes': დიახ
+      msg: დარწმუნებული ხართ, რომ გინდათ %{prize_name} პრიზის განაღდება?
+      msg_student: 'მინიშნება: მხოლოდ ერთი ტიპის პრიზის აღჩევა შეგიძლიათ.'
+      msg_publicschool: თუ შეიძლება, დაადასტურეთ, რომ აშშ-ს საჯარო სკოლის მასწავლებელი
+        ხართ.
+      msg_visit_website: ეწვიეთ ვებ-საიტს
+    providers:
+      apple_itunes: $10 iTunes Gift Card
+      donors_choose: DonorsChoose.org $750 credit
+      donors_choose_bonus: DonorsChoose.org $250 credit
+      dropbox: 10GB Dropbox Space-ზე
+      valve: Portal 2 (PC or Mac game download)
+      ea_bejeweled: Bejeweled 3 (PC game download)
+      ea_fifa: FIFA Soccer 13 (PC game download)
+      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
+      ea_pvz: Plants vs. Zombies (PC game download)
+      skype: $10 Skype credit
+    msg:
+      choose: 'Choose a prize:'
+      choose_teacher: 'Click on the logo below to claim your prize:'
+      earned: თქვენ მოიგეთ პრიზი! (მხოლოდ აშშ-ს მოსწავლეებისთვის)
+      not_earned_title: დაასრულეთ ტუტორიალი და მიიღეთ ჯილდო (მხოლოდ აშშ-ს მოსწავლეებისთვის)
+      not_earned: 'ისწავლეთ პროგრამირების საფუძვლები, დააგორევეთ %{num_trophies}-ივე
+        ჯილდო და მიიღეთ ნამდვილი პრიზები. შეგიძლიათ აირჩიოთ 10GB Dropbox space-ზე,  $10
+        Skype ანგარიშზე და თამაშების უფასო გადმოწერა. მინიშნება: ეს შეთავაზება ძალაშია
+        მხოლოდ აშშ-ს მოსწავლეებისთვის და მხოლოდ პრიზების ამოწურვამდე.'
+      teacher:
+        earned: 15-მა ან მეტმა სტუდენტმა დააგროვა %{num_trophies}-ვე ჯილდო. თქვენ
+          მოიგეთ მასწვლებლის პრიზი! (მხოლოდ აშშ-ის მასწავლებლებისთვს)
+        not_earned_title: ასწავლეთ კლასს და მიიღეთ 1,000 დოლარამდე ჯილდო ორგანიზაციისგან
+          <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (მხოლოდ
+          აშშ-ის მასწავლებლებისთვის)
+        not_earned: პროგრამირების ახალი მასწავლებლების წასახალისებლად<a href="http://DonorsChoose.org">DonorsChoose.org</a>  აჯილდოვებს
+          მათ 1,000 დოლარამდე პრიზით. ამისთვის თქვენს კლასთნ ერთად შესავალი კურსი
+          უნდა გაიაროთ. კლასში უნდა იყოს მინიმუმ 15 მოსწავლე და მინიმუმ 15-მა უნდა
+          დაასრულოს ყველა ტუტორიალი და მიიღოს %{num_trophies}-ვე ჯილდო. თუ მათგან,
+          ვინც ყველა ჯილდო მიიღო 7 ან მეტი არის გოგო, მაშინ თქვენ 1,000 დოლარს მიიღებთ
+          <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის
+          კრედიტებში. სხვა შემთხვევაში თქვენი ჯილდო იქნება 750 დოლარი <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში.   <a
+          target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების
+          გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.
+        bonus:
+          not_earned_title: დამატებით 250 დოლარის <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            -ის კრედიტებში მოგება ჯერ კიდევ შეგიძლიათ (მხოლოდ აშშ-ის მასწავლებლებისთვის)
+          earned: იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა, 7 ან მეტი
+            არის გოგო. თქვენ მოიგეთ ბონუს-პრიზიც! (მხოლოდ აშშ-ის მასწავლებლებისთვის)
+          not_earned: თუ იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა
+            7 მაინც იქნება გოგო, თქვენ მიიღებთ დამატებით 250 დოლარს <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში.   <a
+            target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის
+            კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.
+  crud:
+    new_model: ახალი %{model}
+    show: ჩვენება
+    edit: ჩასწორება
+    edit_model: ჩაასწორეთ %{model}
+    update: განახლება
+    destroy: განადგურება
+    back: უკან
+    confirm: დარწმუნებული ხართ?
+    created: '%{model} წარმატებით შეიქმნა.'
+    updated: '%{model} წარმატებით განახლდა.'
+    destroyed: '%{model} წარმატებით წაიშალა.'
+    access_denied: თქვენ არ გაქვთ წვდომა ამ %{model}-ზე.
+  nav:
+    header:
+      finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
+      sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
+      free_play:
+        playlab: აპლიკაციის შექმნა
+        artist: რამის დახატვა
+        calculate: Calculate Something
+    user:
+      classroom: მასწავლებლის მთავარი გვერდი
+      district_dashboard: განყოფილების მართვის პანელი
+      label: გამარჯობა %{username}
+      stats: კოდის სტუდია
+      settings: ჩემი ანგარიში
+      prizes: პრიზები
+      logout: გასვლა
+      signin: შესვლა
+      signup: რეგისტრაცია
+      already_registered: უკვე გაქვთ ანგარიში?
+    popup:
+      progress_for_user: '%{name}-ს პროგრესი'
+      progress: თქვენი პროგრესი
+      lines: სულ %{lines} კოდის სტრიქონი
+      close: დახურვა
+      mastery: ძირითადი ცნებები
+      puzzle_map: ეტაპები
+      prizes: დააგროვეთ %{total_trophies} ჯილდო და მოიგეთ პრიზები!
+      prize_earned: მთელი %{total_trophies} ჯილდო დაგოროვებულია. პრიზი თქვენია!
+      prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
+      prizes_link: მეტი ინფორმაცია
+  teacher:
+    title:
+      one: 'თქვენი მასწავლებელი:'
+      other: 'თქვენი მასწავლებლები:'
+    remove: (მასწავლებლის წაშლა)
+    confirm:
+      remove: დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?
+    tools: მასწავლებლის იარაღები
+    followers:
+      section: 'სექცია:'
+      stages: 'გამოვაჩინოთ ეტაპე(ბ)ი:'
+      show_past: 'მოსწავლის (%{bullet_html}) ძველი აქტივობის ჩვენება:'
+      levels_key: დონეების მნიშვნელი
+      perfect: დასრულებულია, იდეალურად
+      completed: დასრულებულია, მაგრამ ზედმეტად ბევრი ბლოკის გამოყენებით
+      tried: დაწყებულია, მაგრამ არა დასრულებული
+      not_tried: ჯერ არც კი გიცდია
+      activity: გაჩვენებთ მოსწავლის აქტივობას ბოლო %{hours} %{plural}
+      no_section: არ არის მიკუთვნებული სექცია
+      trophies: ჯილდოები
+    students:
+      name: სახელი
+      username: მომხმარებლის სახელი
+      password: პაროლი
+      manage: მოსწავლეების მართვა
+      dashboard: მასწავლებლის მართვის პანელზე გადასვლა
+      add: მოსწავლეების დამატება
+      remove: მოსწავლის წაშლა
+      confirm_remove: დარწმუნებული ხართ, რომ ამ მოსწავლის წაშლა გინდათ?
+      help_reassign: კლასის სხვადასხვა სექციებად დასაყოფად აირჩიეთ სტუდენტები და გადაიყვანეთ
+        ახალ სექციაში.
+      help_register: არ დახარჯოთ დრო თქვენი მოსწავლეების მონაცემების შეყვანაზე, უბრალოდ,
+        სთხოვეთ მათ, რომ დარეგისტრირდნენ. მათ დასჭირდებათ მომხმარებლის სახელისა და
+        პაროლის შერჩევა, მაგრამ ელ.ფოსტის შეყვანა აუცილებელი არ არის. თუ რომელიმეს
+        დაავიწყდება თავისი პაროლი, თქვენ შეძლებთ მის აღდგენას.
+      register: სთხოვეთ მოსწავლეებს დამოუკიდებლად დარეგისტრირება
+      vist: შესთავაზეთ თქვენს მოსწავლეებს ეწვიონ საიტს
+      section_code: 'და შეიყვანონ თავიანთი სექციის კოდი:'
+      first_please: თავდაპირველად, %{add_section}
+      for: -სთვის
+      enter: 'შეიყვანეთ:'
+    sections:
+      add: დაამატეთ სექცია
+      manage: სექციების მართვა
+      section: სექცია
+      students: მოსწვლეები
+      section_code: სექციის კოდი
+      add_section_code: სტუდენტებისთვის სექციის კოდის დამატება
+      secret: საიდუმლო
+      grade: შეფასება
+      course: კურსი
+      rename: სახელის შეცვლა
+      edit: რედაქტირება
+      delete: წაშლა
+      confirm_delete: დარწმუნებული ხართ, რომ ამ სექციის წაშლა გინდათ?
+      email: ელ.ფოსტით გაგზავნა
+    rollup: პროგრესის მართვის პანელი
+    activity: კლასის უკანასკნელი აქტივობა
+    user_not_found: მასწავლებელი ან მოსწავლე არ მოიძებნა
+    cant_remove_student_no_email: '%{student_name} ვერ წაიშლება თქვენი მოსწავლეების
+      სიიდან, იმიტომ რომ %{student_name}-მა არ დაარეგისტრირა ელ.ფოსტა'
+    cant_remove_teacher_no_email: '%{teacher_name} ვერ წაიშლება თქვენი მასწავლებლებიდან,
+      იმიტომ რომ თქვენ არ დაგირეგისტრირებიათ ელ.ფოსტა'
+    student_teacher_disassociated: '%{teacher_name} აღარ არის %{student_name}-ს მასწავლებელი'
+    panel:
+      answer_viewer: პასუხების ნახვა
+      student: მოსწავლე
+      viewing_solution: ამონახსნის ნახვა
+      try_it_yourself: სცადეთ დამოუკდიებლად
+      section: სექცია
+  user:
+    email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
+    email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
+    email_confirm_wrong_email: (ელ. ფოსტის მისამართი არასწორია?)
+    email_resend_confirm: დადასტურების ინსტრუქციების თავიდან გაგზავნა
+    new_password_hint: (დატოვეთ ცარიელი თუ შეცვლა არ გინდათ)
+    current_password_hint: (ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)
+    delete: ანგარიშის წაშლა
+    delete_text: ქვემოთ ღილაკზე დაჭერა წაშლის თქვენს ანგარიშს.
+    delete_text_teacher_note: 'გაითვალისწინეთ: თქვენი ანგარიშის წაშლა არ წაშლის თქვენი
+      მოსწავლეების ანგარიშებს.'
+    delete_confirm: დარწმუნებული ხართ, რომ თქვენი ანგარიშის წაშლა გინდათ?
+  user_level:
+    completed: დასრულებულია
+    tried: ნაცადია
+  user_stats:
+    recent_activity: უკანასკნელი აქტივობა
+    show_more: მაჩვენე მეტი
+    classroom_activity: აქტივობა უკომპიუტეროდ
+  home:
+    title: კოდის სტუდია
+    description: კოდის სტუდიაში ინახება Code.org-ის მიერ შექმნილ ონლაინ-კურსები
+    lines_of_code: მოსწავლეების მიერ დაწერილია კოდის %{lines_count}  ხაზი
+    lines_of_code_linebreak: '%{students_count} მილიონი მოსწავლის მიერ<br/> დაწერილია
+      კოდის %{lines_count} ხაზი'
+    all_courses: მიმოხილვა კურსებისა 1,2 და 3
+    lesson_plans: გაკვეთილების გეგმები
+    signin_message: უკვე გაქვთ ანგარიში? %{link}
+    student_reg_link: მოსწავლის რეგისტრაცია
+    teacher_reg_link: მასწავლებლის რეგისტრაცია
+    signin_directions: პროგრესისთვის თვალყურის სადევნად, გამოიყენეთ თქვენი ანგარიში.<br/>
+      მასწავლებლებს შეუძლიათ აკონტროლონ მთელი კლასი.
+    teacher_dashboard: ნახეთ პროგრესის მართვის პანელი
+    teacher_student_count_one: თქვენ გყავთ %{count} მოსწავლე.
+    teacher_student_count: თქვენ გყავთ %{count} მოსწავლე.
+    teacher_averages: საშუალოდ  "ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან
+      თქვენმა მოსწავლეებმა მოიპოვეს %{trophy_average}.
+    teacher_print_certificates: ამოუბეჭდეთ სერტიფიკატები იმ მოსწავლეებს, რომლებმაც
+      დაასრულეს ეს კურსი
+    teacher_read_blog: ჩვენი ახალი ამბებისა და მასალის განახლების შესახებს წაიკითხეთ
+      Educator ბლოგში
+    classroom: თქვენი საკლასო ოთახი
+    student_progress: თქვენი სასწავლო პროცესი
+    student_stats: '"ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან შენ მოიპოვე
+      %{trophy_count}.'
+    student_left_off: 'სად გაჩერდით:'
+    student_finished: შენ დაასრულე ყველა ტუტორიალი. აირჩიე სხვა კლასი აქ %{online_link}
+      ან აქ %{local_school_link}
+    local_school: ადგილობრივი სკოლა
+    online: ონლაინ
+    see_details: დეტალების ნახვა
+    view_course: კურსის ნახვა
+    prize_info: პრიზები მონაწილეობისთვის ( მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებისთვის)
+      1,000 დოლარამდე თით კლასისთვის.
+    tryfirst: 'ან, შეგიძლიათ ჯერ სცადოთ და მოგვიანებით დარეგისტრირდეთ:'
+    trynow: სცადე ახლა
+    add_hint_help: დაგვეხმარეთ Code.org-ის ტუტორიალებისთვის სასარგებლო მინიშნებების
+      დამატებაში
+    20hour_overview: ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად ცნებებს
+      გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი მეშვეობით სწავლა
+      ნებისმიერ ასაკშია სახალისო.
+    test_videos_help: გატესტეთ ჩვენი ახალი ვიდეო-პლეიერი თქვენს სკოლაში
+    try_beta_courses: სიახლე! სცადეთ ჩვენი ბეტა-კურსები K-5 მოსწავლეებისთვის
+    use_as_teacher: გამოიყენეთ ეს საიტი, როგორც მასწვლებელმა
+    heading_hoc2014: <h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>
+    heading_elementary: '<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>'
+    heading_apps: <h2>გასართობი</h2><h1>ყველასთვის</h1>
+    heading_legacy: <h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>
+    your_gallery: გალერეა
+    no_primary_course: ნახეთ კურსი კოდის სტუდიაში
+    choose_next_course: სცადე Code Studio კურსი ქვემოთ ერთის არჩევით
+    print_certificate: სერტიფიკატის ამობეჭდვა
+  gender:
+    male: მამრობითი
+    female: მდედრობითი
+    none: პასუხისგან თავის შეკავება
+  user_type:
+    student: მოსწავლე
+    teacher: მასწავლებელი
+  footer:
+    help_from_html: ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook,
+      დაTwitter-ის პროგრამისტები.
+    art_from_html: Angry Birds&trade; & &copy; 2009-2014 Rovio Entertainment Ltd.
+      ყველა უფლება დაცულია. <br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. ყველა უფლება დაცულია.
+    powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+    feedback: უკუკავშირი
+    translate: დაგვეხმარეთ, ვთარგმნოთ თქვენს ენაზე
+    support: ტექ. მხარდაჭერა
+    support_url: http://support.code.org
+    tos: პირობები
+    privacy: კონფიდენციალურობის პოლიტიკა
+    secure: დაცული ვერსია
+  reference_area:
+    title: გჭირდებათ დახმარება?
+    subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
+    teacher: ნახეთ გადაწყვეტა
+    auth_error: თქვენ არ გაქვთ ამ გადაწყვეტის ნახვის უფლება.
+    submit: განაახლეთ მხატვრის ადგილმდებარეობა
+    direction: საწყისი მიმართულებია (გრადუსებში)
+  video:
+    tab: ვიდეო.
+    notes: არ არის ვიდეო? ნახეთ ჩანაწერები.
+    notes_coming_soon: ამ ვიდეოს აღწერა მალე დაიდება.
+    autoplay_option: ვიდეოების ავტომატური ჩართვა
+    download: ვიდეოს გადმოწერა
+  compatability:
+    working:
+      header: უკვე ვმუშაობთ თქვენი ბრაუზერის მხარდაჭერაზე.
+      message: Code.org იყენებს თანამედროვე ვებ-ტექნოლოგიებს, რის შედეგადაც საიტი
+        გაცილებით სწრაფად მუშაობს. თქვენი ბრაუზერი არ უზრუნველყოფს ყველა საჭირო ფუნქციას,
+        ამიტომ საიტის ამ ნაწილის გამოყენება შეიძლება რთული იყოს თქვენთვის. თქვენ შეგიძლიათ
+        დაგვეხმაროთ, <a href='%{report_issue_url}'>ნაპოვნი პრობმლებემის შესახებ შეტყობინებით</a>
+        , ან <a href='%{supported_browsers_url}'>განაახლოთ თქვენი ბრაუზერი</a>.
+      hide_this_warning: ამ გაფრთხილების გათიშვა
+    upgrade:
+      header: განაახლეთ თქვენი ბრაუზერი.
+      message: Code.org იყენებს თანამედროვე ვებ-ტექნოლოგიებს, რის შედეგადაც საიტი
+        გაცილებით სწრაფად მუშაობს. თქვენი ბრაუზერი არ უზრუნველყოფს საიტის ამ ნაწილის
+        გასაშვებად საჭირო ფუნქციებს. <br/><br/> დააყენეთ რომელიმე ბრაუზერი ჩვენ მიერ
+        მხარდაჭერილი ბრაუზერების სიიდან. შეგიძლიათ <a href='#'> სცადოთ გვერდზე გადასვლა</a>,
+        მაგრამ მზად უნდა იყოთ ხარვეზებისთვის.
+      button: მაჩვენეთ რეკომენდირებული ბრაუზერების სია
+  slow_loading: ჰმ.. პროცესს ჩვეულზე მეტი დრო მიაქვს...
+  try_reloading: სცადეთ გვერდის გადატვირთვა
+  next_stage: დასრულებულია! შემდეგ ეტაპზე გადასვლა
+  download_pdf: გაკვეთილის გეგმის გახსნა
+  lesson_plan: გაკვეთილის გეგმა
+  view_lesson_plan: გაკვეთილის გეგმის ნახვა
+  pdf_download: გადმოიწერეთ PDF
+  download_coming_soon: მალე შესაძლებელი გახდება ჩამოტვირთვაც.
+  video_coming_soon: ვიდეო მალე დაემატება!
+  share_code:
+    title: დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა
+    bounce_og_title: ნახეთ ჩემი Bounce Game
+    flappy_og_title: ნახეთ ჩემი Flappy Game
+    studio_og_title: ნახეთ ჩემი თამაშების ლაბორატორიის აპლიკაცია
+    check_out_what_i_made: ნახეთ, რა გავაკეთე
+    og_description: ეს კოდი დამოუკიდებლად დავწერე Code.org-ზე
+    phone_number_not_allowed: როგორც ჩანს, აქ მითითებულია ტელეფონის ნომერი. სცადეთ
+      ტექსტის შეცვლა.
+    address_not_allowed: როგორც ჩანს, აქ მითითებულია მისამართი. სცადეთ ტექსტის შეცვლა.
+    email_not_allowed: როგორც ჩანს, აქ მითითებულია ელ.ფოსტის მისამართი. სცადეთ ტექსტის
+      შეცვლა.
+    profanity_not_allowed: როგორც ჩანს, აქ რაღაც უზუსტობებია. სცადეთ ტექსტის შეცვლა.
+  builder:
+    created: თქვენ შექმენით ახალი სქრიპტი.
+    destroyed: თქვენ გაანადგურეთ სქრიპტი.
+    manage: დონეების შექმნა
+    view: ნახვა
+    back: დავუბრუნდეთ სქრიპტებს
+    success: თქვენ წარმატებით შეცვალეთ ბლოკები.
+    level:
+      create: ახალი დონის შექმნა
+      current: მიმდინარე დონეები
+      unused: გამოუყენებელი დონეები
+  upsell:
+    hoc:
+      title: კოდის ერთი საათი
+      body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
+    flappy:
+      title: Flappy კოდი
+      body: გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy
+        Code"!
+    20-hour:
+      title: დაჩქარებული კურსი
+      body: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერებისა და პროგრამირების
+        ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის.
+        ნახეთ კურსები 2-4 უფრო სრული გამოცდილებისთვის!
+      body_short: ისწავლეთ ინფორმატიკის საფუძვლები 2-4 კურსების დაჩქარებულ ვერსიაში.
+    hoc2014:
+      try_new_tutorial: ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია
+      try_frozen: ხატე "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად
+    gallery:
+      title: გალერეა
+      body: ნახეთ ჩვენი მომხმარებლების მეირ შემქნილი აპლიკაციებისა და სურათების გალერეა
+    frozen:
+      title: '"გაყინული"'
+    infinity:
+      title: თამაშების ლაბორატორია Infinity
+      body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს
+        პერსონაჟების მონაწილეობით.
+  gallery:
+    students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
+    students_made_these_with_code: მოსწავლეებმა ეს კოდით შექმნეს!
+    picture_count: გასულ <b>%{days}</b> დღეში მოსწავლეებმა დახატეს <b>%{count} </b>
+      ნახატი მათი საკუთარი პროგრამების შექმნით. დააჭირე ნახატებს და ნახე, როგორ მოქმედებს
+      თითოეული პროგრამა.
+    activity_count: გასულ <b>%{days}</b> დღეში მოსწავლეებმა შექმნეს <b>%{count}</b>
+      აპლიკაცია და ნახატი მათი საკუთარი პროგრამის შექმნით. დააჭირე ნახატებს და სქრინშოტებს
+      და ნახე, როგორ მოქმედებს თითოეული პროგრამა.
+    want_to_make_your_own: გინდა, შენი შექმნა?
+    more: მეტი &rarr;
+    caption_by_name_age: 'შემქმნელი: %{name}, ასაკი %{age}'
+    caption_time_ago: '%{time_ago} წინ'
+    header: გალერეა
+    header_playlab: თამაშების ლაბორატორია
+    header_artist: მხატვარი
+  landing:
+    prerelease: ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს
+      არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე.
+    prerelease_hoc2014: ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>.
+      ანუ, ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე.
+    feedback: უკუკავშირი
+    report_bug: შეცდომის შესახებ შეტყობინება
+    support: დახმარების მიღება
+    support_url: //support.code.org
+  multi:
+    wrong_title: პასუხი არასწორია
+    wrong_body: ეს პასუხი არასწორია. სცადე კიდევ ერთხელ!
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
+  match:
+    wrong_title: არასწორი გადაწყვეტაა
+    wrong_body: გადაწყვეტა, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
+    correct_title: სწორია
+    correct_body: ეს პასუხი სწორია.
+  contract_match:
+    wrong_title: პასუხი არასწორია
+    badname: თქვენს განსაზღვრებას არასწორი სახელი აქვს.
+    badname_case: ფუნქციების სახელებში რეგისტრი მნიშვნელოვანია. სცადეთ რეგისტრის შეცვლა
+      თქვენი განსაზღვრების სახელში.
+    badrange: თქვენს განსაზღვრებას აქვს არასწორი დიაპაზონი.
+    baddomainsize: თქვენს განსაზღვრებას დომენში ელემენტების არასწორი რაოდენობა აქვს.
+    baddomainname: თქვენს დომენში ერთ ან მეტ ელემენტს არასწორი სახელი აქვს.
+    baddomaintype: თქვენს დომენში ერთი ან მეტი ელემენტი არასწორი ტიპისაა, ან არასწორი
+      თანმიმდევრობითაა.
+  text_match:
+    placeholder: შეიყვანეთ პასუხი აქ
+    open_response_title: მადლობა
+    open_response_body: მადლობა თქვენი პასუხისთვის!
+  dialog:
+    ok: OK
+  time:
+    hour: 1 საათი
+    day: დღე
+    week: კვირა
+  data:
+    script:
+      name:
+        20-hour:
+          title: K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)
+          description: ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად
+            ცნებებს გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი
+            მეშვეობით სწავლა ნებისმიერ ასაკშია სახალისო.
+        Hour of Code:
+          title: კოდის ერთი საათი 2013
+          description: ''
+        edit-code:
+          title: კოდის რედაქტირება
+          description: ''
+        events:
+          title: მოვლენები
+          description: ''
+        builder:
+          title: კონსტრუქტორი
+          description: ''
+        flappy:
+          title: Flappy კოდი
+          description: გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი
+            "Flappy Code"!
+        jigsaw:
+          title: ფაზლი
+          description: ''
+        step:
+          title: ნაბიჯი
+          description: ''
+        sample_level_builder:
+          title: საცდელი დონის კონსტრუქტორი
+          description: ''
+  age_interstitial:
+    age: თქვენი ასაკი
+    header: ანგარიშის ინფორმაციის განახლება
+    message: ჩვენ ვაახლებთ საიტს, რათა დაცულობის კიდევ უფრო მაღალი დონე უზრუნველვყოთ.
+      ამისთვის გვჭირდება, რომ მომხმარებლებმა მიუთითონ თავიანთი ასაკი აქ. <br/> როგორც
+      ყოველთვის,  code.org არასდროს გაუზიარებს ამ ინფორმაციას მესამე პირებს.
+    sign_out: თუ არ გინდათ თქვენი ასაკის დასახელება, შეგიძლიათ <a href="%{url}"> გახვიდეთ
+      </a>.
+  zendesk_too_young_message: სამწუხაროდ, თქვენი ასაკის მომხმარებლებისთვის ეს გვერდი
+    მიუწვდომელია. შეგიძლიათ ეწვიოთ გვერდს <a href="http://support.code.org">support.code.org</a>  ავტორიზაციის
+    გარეშე, ან სთხოვოთ თქვენს მშობელს ან მასწავლებელს თქვენ მაგივრად დაგვიკავშირდნენ.
+  progress:
+    not_started: არ არის დაწყებული
+    in_progress: დაწყებულია
+    completed_too_many_blocks: დასრულებულია, ბლოკი ძალიან ბევრია
+    completed_perfect: დასრულებულია, იდეალურად
+    furthest_level_attempted: ეს დონე ძალიან მაღალია
+    assessment: შეფასება
+  studio:
+    courses_working_on: კურსები, რომელთაც გადიხარ
+    completed_courses: დასრულებული კურსები
+    all_courses: ყველა კურსი
+  project:
+    projects: პროექტები
+    create: პროექტის შექმნა
+    create_a_project: 'ახალი პროექტის შექმნა:'
+    new: შექმენით ახალი
+    rename: სახელის შეცვლა
+    save: შენახვა
+    delete: წაშლა
+    exit: დავუბრუნდეთ კურსს
+    my_projects: ჩემი პროექტები
+    share: გაზიარება
+    share_title: თქვენი პროექტის გაზიარება
+    share_copy_link: 'დააკოპირეთ ლინკი:'
+    close: დახურვა
+    more: მეტი
+    name: სახელი
+    updated: განახლებულია
+    project_type: პროექტის ტიპი
+    help_text: აირჩიე <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატე რამე</strong>
+      და შექმენი ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება
+      და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლება.
+    need_help: გჭირდებათ დახმარება დასაწყებად?
+    really_delete: წავშალოთ?
+    delete_yes: დიახ
+    delete_no: არა
+    saved: შენახულია
+    not_saved: არაა შენახული
+    cancel: გაუქმება
+    delete_confirm_title: დარწმუნებული ხართ, რომ ამ პროექტის წაშლა გინდათ?
+    delete_confirm_text: პროექტის წაშლა სამუდამოდ ამოშლის მას შენი პროექტების სიიდან.
+      მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ.
+    view_all: ჩემი პროექტების ნახვა
+    remix: რემიქსი
+    click_to_remix: დააჭირეთ "რემიქსს" და გაუშვით საკუთარი ვერსია!

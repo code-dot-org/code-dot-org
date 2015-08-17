@@ -1,16 +1,18 @@
 pl-PL:
   hello: Witaj świecie
   select_language: Wybierz język
-  computer_science: Informatyka
+  en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
-  csedweek_dates: 9-15 Grudnia 2013
+  csedweek_dates: 8-14 grudnia 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>. Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> zaplanujcie swoją Godzinę Kodowania (Hour of Code)</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek</a>'
-  n_have_learned_an_hoc: '<h1>#</h1><h3>próbowało</h3><h2>Godziny Kodowania</h2>'
+  n_have_learned_an_hoc: '<h1>Spróbuj</h1><h2>Godziny kodowania</h2><h3>#</h3>'
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do # innych.'
+  petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz do # innych.'
+  petition_join_others: 'Dołącz do # innych'
   name: Imię/Nazwisko
   email: Adres e-mail
   zipcode: Kod pocztowy lub kraj
@@ -23,7 +25,7 @@ pl-PL:
   hoc2014_teachers: Nauczyciele
   hoc2014_host: Zorganizuj
   hoc2014_everyone: Wszyscy
-  hoc2014_support: Udziel wsparcia
+  hoc2014_support: 'Udziel wsparcia &#x25BE;'
   hoc2014_whatishoc: Czym jest Godzina Kodowania?
   twentyhours_trynow: Spróbuj teraz
   california_heading: Poproś swoją szkołę, by uczono informatyki
@@ -42,8 +44,9 @@ pl-PL:
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania (One Hour of Code)
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
+  enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: "Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować naukę po tej godzinie (One Hour)</a>"
   get_a_certificate_message_after: "Kliknij na świadectwie, aby je pobrać lub wydrukować. Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."
@@ -66,7 +69,7 @@ pl-PL:
   thanks_for_voting: Dziękujemy za głosowanie!
   share_on_facebook: Udostępnij na Facebooku
   share_on_twitter: Udostępnij na Twitterze
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: Poza Godziną Kodowania
   get_started: Start
   i_agree: Zgadzam się
   participant_select: -Wybierz-
@@ -75,9 +78,9 @@ pl-PL:
   participant_educator: Nauczyciel
   participant_engineer: Programista
   participant_other: Żaden z powyższych
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Drukuj wszystko
+  print_ice_art: Drukuj swoje lodowe kompozycje
+  create_art_with_zombie: lub utwórz zaawansowane kompozycje z zombie
   i_am_a: Jestem
   never_spam: Nigdy nie wysyłamy spamu
   enter_country: Podaj kraj, jeśli inny niż Stany Zjednoczone
@@ -86,11 +89,12 @@ pl-PL:
   petition_thankyou: Dziękujemy za podpisanie petycji
   continue_learning_header: Kontynuuj naukę poza One Hour
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole albo na obozie letnim.
-  learn_next_level: Przejdź na następny poziom
+  learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
   hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
+  twitter_teach_cs: Dlaczego więcej szkół nie uczy informatyki? Możemy to zmienić. http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza One Hour
   what_gender: Jakiej jesteś płci?
@@ -105,7 +109,11 @@ pl-PL:
   students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of Code)  i napisało %{lines} linii kodu.'
   start_hoc: Rozpocznij teraz godzinę programowania (Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
+  stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania." - Nina Nichols Peery, nauczycielka'
+  stats_student: '"Taka szansa zdarza się <b>tylko raz w życiu</b> ."- Mariana Alzate, uczennica 5 klasy'
+  stats_michael: '"<b>Nigdy</b> nie widziałem swoich uczniów tak podekscytowanych nauką." - Michael Clark, nauczyciel'
   studiobar_title: "Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>"
+  studiobar_title_nolink: Wykorzystaj Studio Kodowania
   studiobar_elementary_title: Kursy podstawowe
   studiobar_elementary_body: 'Nasze trzy nowe kursy dla K &#8209;5'
   studiobar_hoc_title: Godzina Kodowania
@@ -114,10 +122,93 @@ pl-PL:
   studiobar_flappy_body: "Utwórz i udostępnij swoją grę Flappy'ego"
   studiobar_teacher_title: Dla nauczycieli
   studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
-  studiobar_frozen_title: Godzina kodowania
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_frozen_title: Godzina kodowania (Hour of Code)
+  studiobar_frozen_body: Twórz z Anną i Elsą zimową krainę czarów
+  studiobar_donate_title: Podaruj
+  studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
+  studiobar_shop_title: Sklep
+  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
+  homepage_hero_text_malala: |
+    &ldquo;Wzywam dziewczęta z wszystkich krajów do nauki podczas Godziny Kodowania.&rdquo; 
+    Malala, laureat Pokojowej Nagrody Nobla
+  homepage_hero_text_susan: |
+    &ldquo;Jeśli potrafisz zmienić technologię, potrafisz zmienić świat.&rdquo;
+    Susan,  YouTube CEO
+  homepage_hero_text_fistbump: |
+    &ldquo;Nie tylko graj na swoim telefonie,
+    zaprogramuj go.&rdquo;
+    Prezydent Barack Obama
+  homepage_hero_text_sheryl: |
+    &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
+    potrzebują możliwości, by uczyć się informatyki.&rdquo;
+    Sheryl, COO Facebook
+  homepage_hero_text_satya: '&ldquo;Informatyka może odblokować najlepsze możliwości na świecie.&rdquo; Satya, CEO firmy Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę swojego życia&rdquo; Chris Bosh'
+  homepage_hero_text_student1: '"Te umiejętności zmieniły moją przyszłość. Nie wspominając, że jest to po prostu świetna zabawa." Luna, 7 klasa'
+  homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych uczeniem się." Michael, nauczyciel'
+  homepage_hero_text_student3: |
+    &ldquo;Informatyka jest dziedziną, o której nie będziesz wiedzieć, 
+    czy ją lubisz, zanim jej nie spróbujesz .&rdquo;
+    Jackson, 6. klasa
+  homepage_hero_text_student4: |
+    &ldquo;Możesz zrobić wszystko, co ci przyjdzie do
+    głowy za pomocą programowania.&rdquo; 
+    Maya, 2nd grade
+  homepage_hero_text_student5: |
+    &ldquo;Informatyka nie jest dla kogoś
+    innego. Jest ona dla ciebie, tu i teraz.&rdquo; 
+    Geraldo, nauczyciel
+  homepage_hero_text_teacher1: |
+    &ldquo;Programowanie to twórczość, inspiracja i innowacje, &mdash; 
+    a to wszystko ma podstawowe znaczenie dla jakiejkolwiek kariery.&rdquo;
+    Floresa, nauczyciel
+  homepage_hero_text_teacher2: |
+    &ldquo;Ten program zainteresował i zaangażował do 
+    uczestnictwa 100% moich uczniów.&rdquo;
+    Adam, nauczyciel
+  homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
+  homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
+  homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
+  homepage_slot_text_hoc: Godzina Kodowania
+  homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
+  homepage_slot_text_teacher: Panel nauczyciela
+  homepage_slot_text_studio: Wszystkie nasze poradniki
+  homepage_slot_text_course4: Kurs 4
+  homepage_slot_text_shop: Sklep
+  homepage_slot_text_flappy: Kod Flappiego
+  homepage_action_text_codevideo: Obejrzyj wideo
+  homepage_action_text_teachervideo: Obejrzyj wideo
+  homepage_action_text_learn: Rozpocznij naukę
+  homepage_action_text_signpetition: Podpisz petycję
+  homepage_signpetition_dropdown: 'Zgadzam się &#x25BE;'
+  homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
+  homepage_banner_text_link: Ucz się więcej
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Ucz się więcej
+  homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
+  homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
+  homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
+  homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
+  homepage_slot_text_link_hocserved: '# spróbowało'
+  homepage_slot_text_title_students: Uczniowie
+  homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
+  homepage_slot_text_link_codestudio: Wypróbuj Studio Kodowania
+  homepage_slot_text_link_local: Znajdź klasę w okolicy
+  homepage_slot_text_link_othercourses: Pozostałe kursy online
+  homepage_slot_text_title_educators: Nauczyciele
+  homepage_slot_text_blurb_educators: Naucz twoich uczniów/studentów
+  homepage_slot_text_link_k5: Kursy dla szkoły podstawowej
+  homepage_slot_text_link_fullcurriculum: Zobacz nasz pełny program nauczania
+  homepage_slot_text_link_pd: Rozwój zawodowy
+  homepage_slot_text_title_advocates: Zwolennicy
+  homepage_slot_text_blurb_advocates: Wspieraj różnorodność w informatyce
+  homepage_slot_text_link_stats: Zobacz statystyki
+  homepage_slot_text_link_buy: Angażuj się
+  homepage_slot_text_link_donate: Ofiaruj darowiznę
+  homepage_header_codestudio: Twórczość uczniów Studia Kodowania
+  homepage_header_donors: Code.org dziękuje za wsparcie
+  homepage_donors_seall: Zobacz wszystkich
+  homepage_donors_donate: Podaruj
   contact_form_topic_student: Jestem uczniem
   contact_form_topic_parent: Jestem rodzicem
   contact_form_topic_teacher: Jestem nauczycielem/edukatorem
@@ -178,7 +269,7 @@ pl-PL:
   dashboard_landing_news_title: Zasoby nauczyciela w K-5 (tylko po angielsku)
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
-  dashboard_landing_useful_links: Inne przydatne linki (tylko po angielsku)
+  dashboard_landing_useful_links: Inne przydatne linki
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
@@ -189,24 +280,44 @@ pl-PL:
   dashboard_landing_view_progress: 'Przejrzyj postęp w %{biggest_section}'
   dashboard_landing_available_title: Dostępne kursy
   dashboard_landing_available_courses: 'Tutaj są kursy dostępne obecnie dla Ciebie i dla  Twoich uczniów.'
+  dashboard_landing_more_tutorials: Chcesz zobaczyć jeszcze więcej poradników/samouczków?
+  dashboard_landing_more_tutorials_desc: 'Dostępnych jest więcej poradników <a href="/learn/beyond"> oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak C++, Ruby i Python!'
+  dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
+  dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych samouczków!
+  dashboard_k5_courses: 20-godzinne kursy dla K-5
+  dashboard_k5_courses_desc: 'To są mieszane kursy online, poradniki do samodzielnej pracy we własnym tempie, z aktywnościami "unplugged", czyli takimi, które nie wymagają komputera. Każdy kurs składa się z około 20 lekcji, które mogą być zrealizowane jako jedna jednostka lub semestralny kurs. Uczestniczyć mogą nawet dzieci z przedszkola, które nie potrafi czytać. Aby Ci pomóc wystartować, oferujemy wysokiej jakości warsztaty rozwoju zawodowego, bezpłatne w USA. <a href="/professional-development-workshops"> Znajdź w pobliżu!</a>'
+  dashboard_middle_courses: 20-godzinne kursy dla gimnazjum
+  dashboard_middle_courses_desc: 'Nasz program nauczania dla gimnazjum wykorzystuje informatykę i programowanie w kontekście matematyki i przyrody - jako narzędzie nauczania pojęć wywodzących się z matematyki i przyrody. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts"> do partnerstwa w Twoim okręgu</a> z Code.org.'
+  dashboard_high_courses: Całoroczne kursy dla liceum
+  dashboard_high_courses_desc: 'Nasz program dla szkół ponadgimnazjalnych pomaga przygotować pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts"> do partnerstwa w Twoim okregu</a> z Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org współpracuje z Bootstrap przy opracowaniu programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem programowania.
+  dashboard_course_csins: Informatyki w przyrodzie
+  dashboard_course_csins_desc: Code.org współpracuje z Project GUTS przy wprowadzeniu pojęć informatycznych z wykorzystaniem modelowania i symulacji.
+  dashboard_course_ecs: Poznawanie informatyki
+  dashboard_course_ecs_desc: 'Poznawanie informatyki jest całoroczny kursem, na który składa się z 6 jednostek: interakcja człowieka z komputerem, rozwiązywanie problemów, projektowanie stron www, programowanie, analiza danych i robotyka.'
+  dashboard_course_csp: AP ® Prawa Informatyki
+  dashboard_course_csp_desc: Code.org zaprojektował rygorystyczny, angażujący i przystępny kurs, służący poznaniu podstawowych idei informatyki.
   dashboard_landing_loading: Trwa pobieranie ...
   dashboard_action_edit: Edytuj
   dashboard_action_save: Zapisz
   dashboard_action_save_all: Zapisz wszystko
   dashboard_action_cancel: Anuluj
   dashboard_action_delete: Usuń
-  dashboard_action_confirm: Usunąć?
   dashboard_action_delete_yes: Tak
   dashboard_action_delete_no: Nie
+  dashboard_action_confirm: Usunąć?
+  dashboard_action_remove: Usuń
+  dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
   dashboard_action_required: wymagane
   dashboard_navigation_home_page: Domowa strona nauczyciela
   dashboard_navigation_section_student_progress: Konta i postępy ucznia
-  dashboard_navigation_section_teacher_progress: Your Course Progress
+  dashboard_navigation_section_teacher_progress: Twoje postępy w kursie
   dashboard_navigation_section_lesson_plans: Plany lekcji i zasoby
-  dashboard_navigation_section_community: Help and Community
-  dashboard_navigation_section_pd: Professional Development
-  dashboard_navigation_section_speakers: 'Computer Science <br/> Guest Speakers'
+  dashboard_navigation_section_community: Pomoc i Wspólnoty
+  dashboard_navigation_section_pd: Rozwój zawodowy
+  dashboard_navigation_section_speakers: 'Informatyka <br/> Gościnni mówcy'
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Przejrzy postępy
   dashboard_navigation_add_students: Dodaj uczniów
@@ -236,6 +347,7 @@ pl-PL:
   dashboard_students_new_section: 'Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b> powyżej.'
   dashboard_students_placeholder_name: Imię ucznia
   dashboard_students_name: Imię/Nazwisko
+  dashboard_students_progress: Postęp
   dashboard_students_age: Wiek
   dashboard_students_gender: Płeć
   dashboard_students_male: Mężczyzna
@@ -252,20 +364,29 @@ pl-PL:
   dashboard_students_reset_password: Resetuj hasło
   dashboard_students_share_section: 'Udostępnij swoim uczniom stronę logowania do tej sekcji:'
   dashboard_students_print_info: Wydrukuj karty z Informacjami o logowaniu dla swoich uczniów.
-  dashboard_students_secret_picture: Tajny Obrazek
+  dashboard_students_secret_picture_title: Tajny Obrazek
+  dashboard_students_secret_picture: 'W tej sekcji <b>słowo</b> jest użyte jako tajny typ.  Oznacza to, że każdy Twój uczeń ma parę tajnych słów użytych zamiast hasła do logowania.  Do zalogowania się, uczniowie powinni używać adresu strony logowania, podanego powyżej.'
   dashboard_students_reset_picture: 'Możesz zresetować tajny obrazek ucznia w dowolnym momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowy tajny obrazek zostanie wygenerowane dla tego ucznia, gdy będzie się logował.'
-  dashboard_students_secret_word: Tajne Słowo
+  dashboard_students_secret_word_title: Tajne Słowo
+  dashboard_students_secret_word: 'W tej sekcji <b>słowo</b> jest użyte jako tajny typ.  Oznacza to, że każdy Twój uczeń ma parę tajnych słów użytych zamiast hasła do logowania.  Do zalogowania się, uczniowie powinni używać adresu strony logowania, podanego powyżej.'
   dashboard_students_reset_word: 'Możesz zresetować tajne słowa ucznia w dowolnym momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowa para tajnych słów zostanie wygenerowana dla tego ucznia, gdy będzie się logował. '
   dashboard_students_join_link: Powiedz swoim uczniom, by utworzyli własne konta i dołączyli do Twojej sekcji w
   dashboard_students_no_email: 'Jeśli Twoi uczniowie nie mają adresów e-mail lub Ty chcesz utworzyć dla nich konta, to zmień typ tajności dla tej sekcji na <b>słowo</b> lub <b>obrazek</b>.'
   dashboard_students_print_page: Wydrukuj tę stronę
   dashboard_students_url: Adres URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Kliknij tutaj</a>, aby prywatne dokumenty mogły być udostępnione lub drukowane dla Twoich uczniów.'
-  dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
-  dashboard_view_all_lesson_plans: Zobacz wszystkie plany lekcji
+  dashboard_curriculum_k5_title: Zasoby dla edukatorów w K-5
+  dashboard_curriculum_middle_title: Zasoby dla edukatorów w gimnazjum
+  dashboard_curriculum_high_title: Zasoby dla edukatorów w liceum
+  dashboard_lesson_plans: Plany lekcji
+  dashboard_view_all_lesson_plans: Pobierz kompletne programy nauczania dla Kursów 1-3
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Program nauczania
+  dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
+  dashboard_overview: Streszczenie
   dashboard_sequence: Sekwencja (ciąg)
   dashboard_framework: Ramy
   dashboard_standards: Standardy
@@ -276,12 +397,22 @@ pl-PL:
   dashboard_puzzle_solving: 'Rozwiązywanie zagadek (łamigłówek):'
   dashboard_student_worksheet: arkusz ucznia
   dashboard_teacher_worksheet: arkusz nauczyciela
+  dashboard_curriculum_csina: 'Informatyka w algebrze:'
+  dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
+  dashboard_curriculum_csp: 'AP ® Prawa Informatyki:'
+  dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
   dashboard_login_picture: Obrazek/Zdjęcie
   dashboard_login_none: e-mail
   dashboard_new_password: nowe hasło
+  dashboard_progress_not_started: nierozpoczęte
+  dashboard_progress_in_progress: w toku
+  dashboard_progress_not_completed: nie została zakończona
+  dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
+  dashboard_progress_completed_perfect: zakończona, doskonale
+  dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania. W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   dashboard_teacher: Nauczyciel
@@ -297,7 +428,8 @@ pl-PL:
   dashboard_sections_password_account_creation: Hasło w postaci tekstu utworzone przez ucznia
   dashboard_sections_login_type_explanation: 'Ta tabela pomaga wyjaśnić, który z tych typów logowania, <b>obrazek, słowo lub e-mail</b>, będziesz chciał wybrać dla sekcji.'
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
-  code_hoc_coming: 'The Hour of Code is here - December 8-14!'
+  dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
+  code_hoc_coming: 'Godzina Kodowania jest tutaj - 8-14 grudnia!'
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej (CS Education Week)
   learn_more: Naucz się więcej
   hoc2014_try_new_tutorials: Wypróbuj nasze nowe samouczki Godziny Kodowania
@@ -317,6 +449,7 @@ pl-PL:
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
+  how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
@@ -364,7 +497,7 @@ pl-PL:
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  hourofcode_name: Placeholder for new code.org/hoc
+  hourofcode_name: Symbol zastępczy dla nowego code.org/hoc
   playlab_name: Play Lab
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
@@ -416,14 +549,14 @@ pl-PL:
   khanfr_platformtext: Nowoczesne przeglądarki sieci
   khanpl_platformtext: Nowoczesne przeglądarki sieci
   tynker_platformtext: Nowoczesne przeglądarki sieci
-  scratch_platformtext: Desktop-only web browsers (not tablets)
+  scratch_platformtext: Przeglądarki tylko na komputery stacjonarne (nie na tablety)
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
   condcards_platformtext: Odłączony (unplugged)/Bez komputera
   lightbotintl_platformtext: iOS, Android (lub przeglądarki sieci web)
   codehs_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   codecademy_platformtext: Nowoczesne przeglądarki. Aplikacje w systemach iOS i Android
-  codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
+  codecombat_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   codemonkey_platformtext: Nowoczesne przeglądarki sieci Web
   codeavengers_platformtext: Nowoczesne przeglądarki sieci Web
   processing_platformtext: Nowoczesne przeglądarki sieci Web
@@ -475,7 +608,7 @@ pl-PL:
   tynkerapp_shortdescription: 'Ucz się programować rozwiązując zabawne łamigłówki kodowania. '
   robomindnl_shortdescription: Napisz kod dla wirtualnego robota
   flappy_shortdescription: 'Utwórz swoją własną grę - fruwający (Flappy) ptak, rekin lub okręt podwodny'
-  bitsbox_shortdescription: Code a series of apps to play and share, using real JavaScript.
+  bitsbox_shortdescription: Koduj aplikacje posługując się rzeczywistym JavaScript, by grać i udostępniać je innym.
   makegameswithus_shortdescription: Utwórz grę na iPhona! Poznaj kodując, jak nauczyć Twojego potwora nowych ruchów!
   touchdevelop_shortdescription: 'Rozwiązuj zagadki, twórz gry i ucz się kodować, a wszystko na swoim telefonie. '
   appinventor_shortdescription: Utwórz swoją własna aplikację! (tylko dla systemu Android)
@@ -483,9 +616,9 @@ pl-PL:
   thinkersmith2_shortdescription: Dowiedz się, jak informacje są reprezentowane w komputerze za pomocą cyfr 1 i 0.
   kodableunplugged_shortdescription: Zabawne ćwiczenie bez komputera
   projguts_shortdescription: Wypróbuj modelowanie i symulację wykorzystując kamień, papier, nożyce
-  hourofcode_shortdescription: Placeholder for new code.org/hoc
+  hourofcode_shortdescription: Symbol zastępczy dla nowego code.org/hoc
   frozen_shortdescription: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających się magią i pięknem lodu.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  playlab_shortdescription: Utwórz historyjkę lub grę z Play Lab!
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach.
   codeintl_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -515,17 +648,17 @@ pl-PL:
   tynkerapp_longdescription: Ucz się programować rozwiązując zabawne łamigłówki kodowania. Możesz łatwo tworzyć gry i opowiadania wykorzystując tematyczną grafikę, 10+ zestawy do gier i konfigurowalne postacie. Nie jest wymagane połączenie z Internetem. Możesz również mieć dostęp do swoich kreacji w Internecie.
   robomindnl_longdescription: 'Uczniowie poznają podstawy programowania kontrolując swoje własne wirtualne roboty. Kurs jest online i całkowicie samowystarczalny, zawiera krótkie prezentacje, filmy, quizy i automatyczne wskazówki, które pomagają przy wykonywaniu ćwiczeń z programowania. '
   flappy_longdescription: Posługując się programowaniem metodą przeciągnij i upuść, utwórz swoje własne gry z ptakiem Flappy i spowoduj, by różnie wyglądały (Flappy rekin, Flappy Mikołaj, cokolwiek). Dodaj grę do swojego telefonu w jednym kliknięciu.
-  bitsbox_longdescription: "Customize your very own virtual tablet, then code a series of apps to play and share. Simple walkthroughs make it possible for even young kids to program real JavaScript, and the more advanced you are the further you'll go."
-  makegameswithus_longdescription: 'Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!'
+  bitsbox_longdescription: Dostosuj swój własny wirtualny tablet, a następnie twórz aplikacje do gry i udostępniaj je innym. Jest to możliwe, nawet małe dzieci programują w Javascript, a im bardziej jesteś zaawansowany w programowaniu, tym dalej zajdziesz.
+  makegameswithus_longdescription: Naucz się programować tworząc grę dla iPhona za pomocą nowego i przyjaznego dla początkujących języka programowania o nazwie Swift! Utwórz grę akcji inspirowaną przez grę Pokemon i napisz kod, by nauczyć Twojego potwora nowych ruchów. Dowiesz się, jak używać zmiennych, metod i obiektów, aby pomóc Twojemu potworowi wygrać!
   touchdevelop_longdescription: 'Przyjazny edytor dotykowy poprowadzi Cię przy tworzeniu dzieł złożonych z pikseli, w rozwiązywaniu łamigłówek niedźwiedzia lub przy tworzeniu własnej gry z podskakującym ptakiem. '
   appinventor_longdescription: Zabawne samouczki wideo prowadzą Cię przez trzy proste aplikacje dla Twojego telefonu z Androidem lub dla tabletu. Przeznaczona dla początkujących jak i dla ekspertów, ta Godzina Kodowania przygotuje Cię do tworzenia własnych aplikacji, zanim będziesz o tym wiedział. Wyobraź sobie, że dzielisz się swoim kreowaniem aplikacji z przyjaciółmi! Te aktywności są odpowiednie dla pojedynczych osób i dla nauczycieli prowadzących zajęcia.
   blockly_longdescription: 'Czy masz komputer z powolnym (lub żadnym) dostępem do Internetu? Pobierz Poradniki Blockly , które był prekursorem poradników dla Code.org - jeden plik ZIP o wielkości 3MB może być załadowany na dowolny komputer lub używany z pen-drive'
   thinkersmith2_longdescription: Uczniowie poznają binarną reprezentację liter jako funkcję. Na koniec zajęć uczniowie w klasie kodują własne inicjały, by zabrać je do domu.
   kodableunplugged_longdescription: 'FuzzFamily Frenzy, przeznaczony do wykorzystania na zwykłym papierze, jest wprowadzenie do logiki programowania dla dzieci w wieku 5 i więcej. Nauczyciel powinien objaśnić grę, a następnie uczniowie programują partnera, aby ukończyć prosty tor przeszkód. '
   projguts_longdescription: Działania unplugged (czyli bez komputera) pomagają uczniom w modelowaniu i symulacji. Grupa uczniów wykonuje różne wersje gry kamień, papier, nożyczki i obserwuje wyniki jako różne efekty eksperymentów z modelowaniem.
-  hourofcode_longdescription: Placeholder for new code.org/hoc
+  hourofcode_longdescription: Symbol zastępczy dla nowego code.org/hoc
   frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+  playlab_longdescription: Utwórz historyjkę lub grę posługując się Play Lab! Twórz zwierzęta, piratów, zombie, ninja i wiele innych postaci przejść, twórz dźwięki, zbieraj punkty, a nawet ciskaj ognistymi kulami!
   codeorg_beyond_name: Wprowadzenie do informatyki (dla klas K-8)
   khan_beyond_name: Naucz się programować komputer
   tynker_beyond_name: Ucz się programowania w domu
@@ -711,3 +844,6 @@ pl-PL:
   processing_beyond_longdescription: Processing jest językiem programowania, rozwoju środowiska i społeczności online. Od 2001 roku, Processing promuje kompetencje programowania w obrębie sztuk wizualnych i wizualne kompetencje w obrębie technologii. Początkowo służył jako szkicownik oprogramowania w nauce podstaw programowania w kontekście wizualnym, rozwinął się jako narzędzie dla profesjonalistów. Obecnie, dziesiątki tysięcy studentów, artystów, projektantów, naukowców i hobbystów używa Processing dla nauki, prototypowania i produkcji.
   alice_beyond_longdescription: Alice Project, stosując innowacyjne środowisko programowania do wspomagania tworzenia animacji 3D, oferuje narzędzia i materiały do nauczania i uczenia się myślenia komputacyjnego, rozwiązywania problemów i programowania dla spektrum wieków i poziomów kształcenia.
   sphero_beyond_longdescription: Obojętne, czy jesteś pedagogiem czy rodzicem, lekcje z SPRK są kursem programowania robotów dla dzieci, rozwijającym ich umiejętności matematyczne i przyrodnicze.
+  compatibility_https_header: Proszę włączyć obsługę protokołu HTTPS dla Code.org.
+  compatibility_https_message: "Aby zwiększyć bezpieczeństwo, przestawiamy się na https na %{https_date}. Nie będziesz w stanie uzyskać dostęp do Code.org po tej dacie. <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć HTTPS dla Code.org."
+  compatibility_https_hide_this_warning: Ukryj to ostrzeżenie

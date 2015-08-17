@@ -1,4 +1,7 @@
 "id":
+  errors:
+    messages:
+      not_saved: 'Mohon Perbaiki kesalahan berikut:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: tidak mungkin di masa depan
   hello: Halo dunia
   welcome_back: Selamat datang kembali, %{name}
+  submit: Kirim
   add_teacher_form:
     code:
       label: 'Tambahkan seorang guru:'
@@ -62,6 +66,8 @@
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
+    student_count: '%{count} Pelajar sudah terdaftar.'
+    teacher_count: '%{count} Guru sudah terdaftar.'
     overview_student: Daftarkan untuk akun untuk melacak kemajuan Anda. Email utama
       anda akan digunakan untuk menginjinkan anda untuk masuk dan pemulihan password.
       Untuk selengkapnya <a href="<a href="http://code.org/privacy">Kebijakan privasi</a>
@@ -260,8 +266,10 @@
       free_play:
         playlab: Buat App
         artist: Gambarlah Sesuatu
+        calculate: Calculate Something
     user:
       classroom: Beranda Guru
+      district_dashboard: Wilayah Dashboard
       label: Halo %{username}
       stats: Kemajuan saya
       settings: Akun saya
@@ -271,6 +279,7 @@
       signup: Daftar
       already_registered: Apa Sudah Terdaftar?
     popup:
+      progress_for_user: '%{name} kemajuan'
       progress: Kemajuan Anda
       lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
@@ -346,16 +355,25 @@
       Anda karena Anda belum mendaftarkan e-mail'
     student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari
       %{student_name}'
+    panel:
+      answer_viewer: Menjawab Pembaca
+      student: siswa
+      viewing_solution: Melihat Solusi
+      try_it_yourself: Lakukan itu sendiri
+      section: Sesi
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
+    email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
+    email_confirm_wrong_email: (Alamat email salah?)
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
     new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
     current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi
       perubahan Anda)
-    cancel:
-      title: Batalkan akun saya
-      hint: Tidak Puas?
-      button: Batalkan akun saya
+    delete: Hapuslah akun anda
+    delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
+    delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus
+      akun murid-murid Anda.'
+    delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
   user_level:
     completed: Selesai
     tried: Telah mencoba
@@ -365,6 +383,10 @@
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
+    description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org
+    lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
+    lines_of_code_linebreak: '%{lines_count} baris kode <br/> DITULIS oleh %{students_count}
+      jutaan siswa'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
@@ -391,6 +413,7 @@
     local_school: sekolah lokal
     online: online
     see_details: Lihat rincian
+    view_course: Lihat Kursus
     prize_info: 'Hadiah untuk partisipasi (hanya untuk guru sekolah umum dari US):
       maximal $1.000 imbalan.'
     tryfirst: 'Atau, Anda dapat mencobanya dulu kemudian mendaftar:'
@@ -409,6 +432,10 @@
     heading_apps: <h2>Menyenagkan bagi</h2><h1>Semua orang</h1>
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
+    no_primary_course: Coba kursus di Code Studio
+    choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
+      ini
+    print_certificate: Cetak Sertifikat
   gender:
     male: Laki-laki
     female: Wanita
@@ -497,12 +524,17 @@
       title: Jam kode
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
     flappy:
-      title: Kode Flappy
+      title: Flappy Code
       body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
         Tutorial Flappy code kami!
-    20hour:
-      title: Kursus perkenalan
-      body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
+    20-hour:
+      title: Kursus akselerasi
+      body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan
+        konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas
+        untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk
+        semua usia.
+      body_short: mendapatkan ilmu komputer dasar dalam versi yang dipercepat dari
+        kursus 2-4.
     hoc2014:
       try_new_tutorial: Cobalah pedoman Hour of Code baru kami dalam versi beta
       try_frozen: Seniman bersama Anna dan Elsa, dari Frozen
@@ -511,6 +543,10 @@
       body: Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami
     frozen:
       title: Frozen
+    infinity:
+      title: Play Lab tak tebatas
+      body: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi
+        karakter Disney tak terbatas.
   gallery:
     students_drew_these_with_code: Siswa-siswa telah menggambar ini dengan kode!
     students_made_these_with_code: Siswa membuat ini dengan kode program!
@@ -525,7 +561,7 @@
     caption_by_name_age: oleh %{name}, usia %{age}
     caption_time_ago: '%{time_ago} yang lalu'
     header: Galeri
-    header_playlab: Play Lab
+    header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
   landing:
     prerelease: Kursus ini dalam <span class='betatext'>beta</span>.  Ini bukan berarti
@@ -542,13 +578,27 @@
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solusi yang salah
     wrong_body: Solusi yang anda masukkan salah, Coba Lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
+  contract_match:
+    wrong_title: Jawaban Salah
+    badname: Kontrak Anda memiliki nama yang salah.
+    badname_case: Nama-nama fungsi bersifat case-sensitive. Cobalah mengubah bentuk
+      nama kontrak Anda.
+    badrange: Kontrak Anda memiliki jarak yang salah.
+    baddomainsize: Kontrak Anda tidak memiliki jumlah yang tepat dari item dalam domain.
+    baddomainname: Satu atau lebih dari item domain Anda memiliki nama yang salah.
+    baddomaintype: Satu atau lebih item domain Anda memiliki Tipe yang salah, atau
+      dalam urutan yang salah.
   text_match:
     placeholder: Masukkan jawaban Anda di sini
+    open_response_title: Terima kasih
+    open_response_body: Terima kasih atas responmu!
   dialog:
     ok: Oke!
   time:
@@ -565,7 +615,7 @@
             di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
             dipelajari untuk semua usia.
         Hour of Code:
-          title: Jam kode
+          title: Koding satu jam 2013
           description: ''
         edit-code:
           title: Mengedit kode
@@ -603,11 +653,48 @@
     tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami.
     u.
   progress:
-    not_completed: belum selesai
+    not_started: belum dimulai
+    in_progress: sedang berlangsung
     completed_too_many_blocks: selesai, terlalu banyak blok
     completed_perfect: selesai, sempurna
     furthest_level_attempted: tingkat terjauh yang dicoba
+    assessment: penilaian
   studio:
     courses_working_on: Kursus yang sedang Anda kerjakan
     completed_courses: Kursus yang telah diselesaikan
     all_courses: Semua kursus
+  project:
+    projects: Proyek
+    create: Buat proyek
+    create_a_project: 'Buat proyek baru:'
+    new: Buat baru
+    rename: Ubah Nama
+    save: Simpan
+    delete: Hapus
+    exit: Kembali ke Kursus
+    my_projects: Project Saya
+    share: Bagikan
+    share_title: Bagikan proyek Anda
+    share_copy_link: 'Salin link:'
+    close: Tutup
+    more: Lebih
+    name: Nama
+    updated: Diperbarui
+    project_type: Jenis proyek
+    help_text: Klik <strong>Buat aplikasi</strong> atau <strong>Menggambar sesuatu</strong>
+      di bawah ini untuk membuat sebuah proyek Play Lab  atau artis baru! <br/>Anda
+      dapat kembali dan bekerja pada proyek Anda setiap saat.
+    need_help: Perlu bantuan untuk memulai?
+    really_delete: Hapus?
+    delete_yes: Ya
+    delete_no: Tidak
+    saved: Disimpan
+    not_saved: Tidak disimpan
+    cancel: Batal
+    delete_confirm_title: Apakah Anda yakin Anda ingin menghapus proyek ini?
+    delete_confirm_text: Saat menghapus proyek Anda akan menghapusnya secara permanen
+      dari daftar proyek anda. Siapa saja yang telah Anda bagikan link tidak akan
+      lagi dapat melihat proyek Anda.
+    view_all: Lihat proyek saya
+    remix: Remix
+    click_to_remix: Klik 'Remix' untuk mematikan putaran versi Anda sendiri!

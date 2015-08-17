@@ -1,15 +1,18 @@
 da:
+  errors:
+    messages:
+      not_saved: 'Ret venligst følgende fejl:'
   activerecord:
     errors:
       messages:
-        blank: påkrævet
+        blank: krævet
     attributes:
       user:
         name: Brugernavn
         email: E-mail
         username: brugernavn
-        password: adgangskode
-        password_confirmation: Adgangskode bekræftelse
+        password: Adgangskode
+        password_confirmation: Bekræft adgangskode
         current_password: Nuværende adgangskode
         locale: Sprog
         age: Alder
@@ -19,6 +22,7 @@ da:
           future: kan ikke være i fremtiden
   hello: Hej verden
   welcome_back: 'Velkommen tilbage %{name}'
+  submit: Indsend
   add_teacher_form:
     code:
       label: 'Tilføje en lærer:'
@@ -57,14 +61,16 @@ da:
     facebook: Facebook
     windowslive: Microsoft-konto
     forgot_password: Glemt din adgangskode?
-    need_confirmation: Har ikke modtaget bekræftelses instruktioner?
+    need_confirmation: Har du ikke modtaget bekræftelsesinstruktioner?
     need_unlock: Ikke modtaget lås op instruktioner?
   signup_form:
+    student_count: '%{count} elever har allerede tilmeldt sig.'
+    teacher_count: '%{count} lærere har allerede tilmeldt sig.'
     overview_student: 'Tilmeld dig en konto for at spore dine fremskridt. Din email bruges primært til at tillade log ind og til gendannelse af din adgangskode. For mere information, se vores <a href="http://code.org/privacy">Privat Politik</a>.'
-    overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremdrift.'
+    overview_teacher: 'Undervis i programmering i din klasse ved at oprette en konto. <p/> Så kan du tilføje dine elever og følge deres fremskridt.'
     no_signup_message: 'Du kan <a target="_blank" href="http://learn.code.org">gennemse de forskellige trin og øvelser</a>, men du bliver nødt til at tilmelde dig for at gemme dine fremskridt.'
     teacher_educator_guide: Se lærerens guide
-    teacher_pitch: Lærer-tilmelding til Code.org
+    teacher_pitch: Lærertilmelding til Code.org
     teacher_title: Lærer-tilmelding
     student_pitch: Elev tilmelding til Code.org
     student_title: Tilmelding for elever
@@ -84,7 +90,7 @@ da:
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
     student_terms: "Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>. Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at kontakte dem."
-    teacher_terms: "Jeg accepterer at være tilsluttet Code.org <a href='http://code.org/tos'> Servicevilkår</a>."
+    teacher_terms: "Jeg accepterer <a href='http://code.org/tos'> Servicevilkårene</a> for code.org."
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig.
   signin_form:
     title: Har du allerede en konto? Log på
@@ -133,7 +139,7 @@ da:
       no_teacher: "Vi kunne ikke finde nogen brugere der er logget ind med %{teacher_email_or_code}'. Vær venlig og spørg dem om at lave en bruger, og derefter prøv at tilføje dem."
       section_not_found: "Kunne ikke finde en sektion med kode '%{section_code}'."
       blank_code: Angiv en sektions kode
-      cant_join_own_section: Desværre, kan ikke kan du deltage i dit eget afsnit.
+      cant_join_own_section: Desværre, du kan ikke deltage i dit eget afsnit.
     mail:
       invite_student:
         subject: 'Tilmeld dig en klasse med %{teacher_name} på Code.org!'
@@ -213,8 +219,10 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
+        calculate: Calculate Something
     user:
-      classroom: Lærerens Startside
+      classroom: Lærerens startside
+      district_dashboard: Særskilt betjeningspanel
       label: 'Hej %{username}'
       stats: Mine fremskridt
       settings: Min konto
@@ -224,6 +232,7 @@ da:
       signup: Tilmeld
       already_registered: Allerede registreret?
     popup:
+      progress_for_user: '%{name}s fremskridt'
       progress: Dine fremskridt
       lines: 'Total linjer kode: %{lines}'
       close: LUK
@@ -264,7 +273,7 @@ da:
       confirm_remove: Sikker på, at du ønsker at fjerne denne elev?
       help_reassign: For at opdele din klasse i flere grupper, skal du vælge de elever du ønsker at flytte til en ny gruppe.
       help_register: I stedet for at du bruger en masse tid individuelt på at indlæse elevernes data, kan du oprette din klasse hurtigt ved at spørge dem om selv at tilmelde sig. Eleverne skal vælge brugernavne og adgangskoder, men de vil ikke være forpligtet til at angive en e-mail-adresse. Hvis en elev glemmer sin adgangskode, vil du kunne nulstille det til dem.
-      register: Spørg dine elever om at registrere sig selv
+      register: Bed dine elever om selv at registrere sig
       vist: Spørg dine elever til at besøge
       section_code: 'og indtaste deres afsnit-kode:'
       first_please: 'Først, venligst %{add_section}'
@@ -291,15 +300,23 @@ da:
     cant_remove_student_no_email: '%{student_name} kan ikke fjernes som din elev, fordi %{student_name} ikke har registreret en e-mailadresse'
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer, fordi du ikke har registreret en e-mailadresse'
     student_teacher_disassociated: '%{teacher_name} er blevet fjernet som lærer for %{student_name}'
+    panel:
+      answer_viewer: Svar Viser
+      student: Elev
+      viewing_solution: Vis løsningsforslag
+      try_it_yourself: Prøv selv
+      section: Afsnit
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
-    email_resend_confirm: Gensend bekræftelses instruktioner
+    email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
+    email_confirm_wrong_email: (Forkert e-mail?)
+    email_resend_confirm: Gensend bekræftelsesmail
     new_password_hint: (Efterlad blank hvis du ikke ønsker at ændre det)
     current_password_hint: (vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)
-    cancel:
-      title: Annuller min konto
-      hint: Ulykkelig?
-      button: Annuller min konto
+    delete: Slet din konto
+    delete_text: Klikkes på knappen nedenfor, slettes din konto.
+    delete_text_teacher_note: 'Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti.'
+    delete_confirm: Sikker på, at du vil slette din konto?
   user_level:
     completed: Fuldført
     tried: Forsøgt
@@ -309,12 +326,15 @@ da:
     classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
+    description: Code Studio er hjem for online kurser lavet af Code.org
+    lines_of_code: '%{lines_count} LINJER KODE SKREVET AF ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE <br/> SKREVET AF %{students_count} MILLIONER STUDERENDE'
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: 'Allerede registreret? %{link}'
     student_reg_link: Tilmelding for elever
     teacher_reg_link: Tilmelding for lærere
-    signin_directions: 'Brug en konto til at følge op på fremdriften. <br/> Lærere, spor hele din klasse.'
+    signin_directions: 'Brug en konto til at følge dine fremskridt. <br/> Lærere, følg med i hvordan det går hele din klasse.'
     teacher_dashboard: Se fremskridts oversigt
     teacher_student_count_one: 'Du har %{count} elever.'
     teacher_student_count: 'Du har %{count} elever.'
@@ -329,6 +349,7 @@ da:
     local_school: lokal skole
     online: online
     see_details: Se detaljer
+    view_course: View Course
     prize_info: 'Præmier for deltagelse (kun amerikanske offentlige skolelærere): op til $1.000 i klasseværelset belønninger.'
     tryfirst: 'Eller du kan prøve det først, og tilmeld dig bagefter:'
     trynow: Prøv nu
@@ -342,6 +363,9 @@ da:
     heading_apps: '<h2>Sjov for</h2><h1>Alle</h1>'
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
+    no_primary_course: Prøv et kursusforløb på Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Udskriv certifikat
   gender:
     male: Mand
     female: Kvinde
@@ -420,9 +444,10 @@ da:
     flappy:
       title: Flappy kode
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!
-    20hour:
-      title: Introkursus
-      body: Prøv vores 20-timers Introduktionskursus til programmering og datalogi.
+    20-hour:
+      title: Accelereret kursus
+      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
+      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
     hoc2014:
       try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
       try_frozen: Kunstner med Anna og Elsa, fra Frozen
@@ -431,11 +456,14 @@ da:
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Brug Play Lab til at skabe en historie eller et spil med karakterer fra Disneys Infinity
   gallery:
     students_drew_these_with_code: Elever har tegnet disse med kode!
     students_made_these_with_code: Elever har lavet disse med kode!
-    picture_count: 'I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at se hvert program i aktion.'
-    activity_count: 'I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip at se hvert program i aktion.'
+    picture_count: 'I de seneste <b>%{days}</b> dage, har elever tegnet <b>%{count}</b> billeder ved at skrive deres egne computerprogrammer. Klik på billederne for at prøve programmerne.'
+    activity_count: 'I de seneste <b>%{days}</b> dage, har elever lavet <b>%{count}</b> apps og billeder ved at skrive deres egne computerprogrammer. Klik på billeder og skærmklip for at prøve programmerne.'
     want_to_make_your_own: Vil du lave dit eget?
     more: 'Mere &rarr;'
     caption_by_name_age: 'af %{name}, alder %{age}'
@@ -444,7 +472,7 @@ da:
     header_playlab: Play Lab
     header_artist: Kunstner
   landing:
-    prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, og er undergivet revision som feedback modtages og forbedringer."
+    prerelease: "Dette kursus er i <span class='betatext'> beta</span>.  Dette betyder, at det ikke er den endelige version af kurset, men at ændringer vil forekomme efterhånden som feedback modtages og forbedringer foretages."
     prerelease_hoc2014: "Denne øvelse er i <span class='betatext'> beta</span>.  Det er undergivet revision så feedback modtages og der arbejdes på forbedringer."
     feedback: Giv feedback
     report_bug: Rapporter fejl
@@ -455,13 +483,25 @@ da:
     wrong_body: 'Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!'
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Forkert løsning
     wrong_body: 'Den løsning, du har angivet er ikke korrekte.  Prøv venligst igen!'
     correct_title: Rigtigt
     correct_body: Det er det korrekte svar.
+  contract_match:
+    wrong_title: Forkert svar
+    badname: Din kontrakt har det forkert navn.
+    badname_case: Funktionsnavne er store og små bogstaver. Forsøg at ændre casen for dit kontraktnavn.
+    badrange: Din kontrakt har det forkert navn.
+    baddomainsize: Din kontrakt har ikke det rigtige antal elementer i domænet.
+    baddomainname: Én eller flere af dine domæneelementer har det forkert navn.
+    baddomaintype: En eller flere af dine domæne elementer har en forkert type, eller de er i forkert rækkefølge.
   text_match:
     placeholder: Skriv dit svar her
+    open_response_title: Tak
+    open_response_body: Tak for dit svar!
   dialog:
     ok: Ok
   time:
@@ -475,7 +515,7 @@ da:
           title: Grundskole introduktion til datalogi kursus (15-25 timer)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
         Hour of Code:
-          title: Hour of Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Rediger kode
@@ -505,11 +545,44 @@ da:
     sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
   progress:
-    not_completed: ikke afsluttet
+    not_started: ikke startet
+    in_progress: i gang
     completed_too_many_blocks: afsluttet, for mange blokke
     completed_perfect: Afsluttet, perfekt
     furthest_level_attempted: længst opnåede niveau
+    assessment: vurdering
   studio:
     courses_working_on: Kurser du er i gang med
     completed_courses: Afsluttede kurser
     all_courses: Alle kurser
+  project:
+    projects: Projekter
+    create: Opret projekt
+    create_a_project: 'Opret et nyt projekt:'
+    new: Opret nyt
+    rename: Omdøb
+    save: Gem
+    delete: Slet
+    exit: Vend tilbage til kursus
+    my_projects: Mine projekter
+    share: Del
+    share_title: Del dit projekt
+    share_copy_link: 'Kopiér linket:'
+    close: Luk
+    more: Mere
+    name: Navn
+    updated: Opdateret
+    project_type: Projekttype
+    help_text: 'Klik på <strong>Lav en App</strong> eller <strong>Tegn noget</strong> nedenfor for at lave et nyt Play Lab eller Kunstnerprojekt! <br/>Du kan til enhver tid vende tilbage og arbejde videre på dine projekter.'
+    need_help: Brug for hjælp til at komme i gang?
+    really_delete: Slet?
+    delete_yes: Ja
+    delete_no: Nej
+    saved: Gemt
+    not_saved: Ikke gemt
+    cancel: Annuller
+    delete_confirm_title: Sikker på, at du vil slette dette projekt?
+    delete_confirm_text: Sletning af dit projekt vil permanent fjerne det fra listen Mine Projekter. Enhver du har delt linket med vil ikke længere kunne se dit projekt.
+    view_all: Se Mine Projekter
+    remix: Bland igen
+    click_to_remix: "Klik 'Bland igen' oprette et spin-off i din egen version!"

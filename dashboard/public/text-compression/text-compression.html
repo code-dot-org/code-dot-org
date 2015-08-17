@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Text compression widget. Original code written by Baker Franke. -->
+<html>
+<head>
+  <style>
+    .full_container {
+      position: absolute;
+      top: 85px;
+      bottom: 150px;
+      left: 0;
+      right: 0;
+    }
+    #external {
+      width: 100%;
+      height: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+    #widgetMain {
+      display: table-row;
+      height: 100%;
+    }
+    #widgetMainWrapper {
+      height: 100%;
+      width: 100%;
+      table-layout: fixed;
+    }
+    #widgetMainWrapper > tbody > tr, #widgetMainWrapper > tbody > tr > td {
+      height: 100%;
+    }
+    .widgetLeft #output {
+      height: 100%;
+    }
+    .widgetMiddle {
+      width: 10px;
+    }
+    .widgetRight {
+      width: 33%;
+    }
+    .widgetLeftHeader, .widgetRightHeader {
+      height: 40px;
+      padding: 0 10px;
+      background: #7665a0;
+      color: #fff;
+    }
+    .widgetInner {
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+    }
+    #menu > * {
+      margin: 0 0 8px 0;
+      display: inline-block;
+    }
+    #finished {
+      float: right;
+    }
+    #compressedPoem {
+      padding: 10px;
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      font-size: 14pt;
+      line-height: 1.4em;
+      word-wrap: break-word;
+      overflow-y: scroll;
+      vertical-align: top;
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+    #data {
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font: 13pt monospace;
+      line-height: 1.2em;
+      background-color: #000;
+      color: #fff;
+    }
+    #data .positive {
+      color: #0c0;
+    }
+    #data .negative {
+      color: #c00;
+    }
+    #data .error {
+      color: #c00;
+    }
+    mark, .CodeMirror-gutters {
+      background-color: #ff9;
+    }
+    .CodeMirror-linenumber {
+      color: #000;
+      text-align: center;
+    }
+    .CodeMirror {
+      font-size: 14pt;
+      line-height: 1.4em;
+      min-height: 200px;
+    }
+    .dict-error {
+      background-color: #f99;
+    }
+    #selfEnteredPoem {
+      box-sizing: border-box;
+      width: 100%;
+    }
+    #poemsList {
+      width: 300px;
+    }
+    #dictionary {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="widgetTop">
+    <p id="widgetInstructions">Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.</p>
+    <div id="reference_area_target" data-minimal="true"></div>
+    <div id="menu">
+      <label for="poemsList" class="choosePoem">Choose text:</label>
+      <select id="poemsList" class="choosePoem" onChange="poemChanged();"></select>
+      <button id="writeYourOwn" class="btn choosePoem">Write your own</button>
+      <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>
+    </div>
+  </div>
+  <div id="widgetMain">
+    <table id="widgetMainWrapper">
+      <tr>
+        <td class="widgetLeft">
+          <table class="widgetInner">
+            <tr><td class="widgetLeftHeader">Compressed:</td></tr>
+            <tr id="output">
+              <td id="compressedPoem"></td>
+            </tr>
+            <tr>
+              <td id="data"></td>
+            </tr>
+          </table>
+        </td>
+        <td class="widgetMiddle"></td>
+        <td class="widgetRight">
+          <table class="widgetInner">
+            <tr><td class="widgetRightHeader">Dictionary:</td></tr>
+            <tr>
+              <td id="symbolEditorWrapper" style="position: relative;">
+                <div style="position: absolute; top: 0; right: 0; left: 0; bottom: 0;">
+                <textarea id="dictionary"></textarea>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="/text-compression/text-compression.js"></script>
+  <!--[if IE 9]>
+  <script>
+    function fixIE9 () {
+      var $widgetMain = $('#widgetMain');
+      $('#widgetMainWrapper')
+          .css('position', 'absolute')
+          .css('top', $widgetMain.position().top)
+          .css('width', $widgetMain.width())
+          .css('height', $widgetMain.height());
+      $('.CodeMirror').height($('#symbolEditorWrapper').height());
+      editor.refresh();
+    }
+    $(document).ready(fixIE9);
+    $(window).resize(fixIE9);
+  </script>
+  <![endif]-->
+</body>
+</html>

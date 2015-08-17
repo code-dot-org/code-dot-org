@@ -29,7 +29,6 @@ In this activity, students will have the opportunity to play with variables in a
 
 [Extension Activities](#Extended)
 
-
 [/summary]
 
 ## Lesson Objectives 

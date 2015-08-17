@@ -18,8 +18,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "instructions": "Which binary string, repeated 10 times, will draw this image?",
-    "use_modal_function_editor": "false",
-    "maze_data": null
+    "use_modal_function_editor": "false"
   }
 }]]></config>
   <blocks>

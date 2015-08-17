@@ -1,15 +1,24 @@
 ---
 project_identifier: codeorg
 api_key: <%= CDO.crowdin_codeorg_api_key %>
+base_url: https://api.crowdin.com
 base_path: '../locales'
 
 files:
   - 
-    source: 'en-US/**/*.yml'
-    translation: '%locale%/**/%original_file_name%'
+    source: '/source/**/*.yml'
+    translation: '/%language%/**/%original_file_name%'
+    update_option: 'update_as_unapproved'
     ignore:
-      - 'en-US/hourofcode'
-      - 'en-US/hourofcode/en.yml'
+      - /source/hourofcode
+      
   - 
-    source: 'en-US/**/*.json'
-    translation: '%locale%/**/%original_file_name%'
+    source: '/source/**/*.json'
+    translation: '/%language%/**/%original_file_name%'
+    update_option: 'update_as_unapproved'
+    ignore:
+      - /source/hourofcode
+      - /source/blockly-mooc/applab.json
+      - /source/blockly-mooc/calc.json
+      - /source/blockly-mooc/eval.json
+      - /source/blockly-mooc/netsim.json

@@ -10,7 +10,7 @@ class CsvToSqlTable
   end
 
   def up_to_date?()
-    seed = DB[:seed_info].where(table:@table.to_s).first
+    seed = DB[:seed_info].where(table: @table.to_s).first
     return false unless seed
 
     mtime = File.mtime(@path)
@@ -31,7 +31,7 @@ class CsvToSqlTable
     CSV.open(@path, 'rb') do |csv|
       table, columns = create_table(csv.shift)
       while(values = csv.shift)
-        table.insert(hash_from_keys_and_values(columns, values).merge({id:at+=1}))
+        table.insert(hash_from_keys_and_values(columns, values).merge({id: at+=1}))
       end
     end
 
@@ -45,8 +45,8 @@ class CsvToSqlTable
   private
 
   def hash_from_keys_and_values(keys, values)
-    h={}
-    for i in 0..keys.count-1
+    h = {}
+    (0..keys.count-1).each do |i|
       key_name = keys[i].to_s
       case key_name[key_name.rindex('_')..-1]
       when '_b'
@@ -67,11 +67,11 @@ class CsvToSqlTable
   def create_table(columns)
     schema = columns.map{|column| column_name_to_schema(column)}
 
-    DB.create_table!(@table, charset:'utf8') do
+    DB.create_table!(@table, charset: 'utf8') do
       primary_key :id
 
       schema.each do |column|
-        add_column column[:name], type:column[:type]
+        add_column column[:name], type: column[:type]
         index column[:name] if column[:index]
         unique column[:name] if column[:unique]
       end
@@ -91,27 +91,27 @@ class CsvToSqlTable
     type_info = name[i..-1]
 
     type = {
-      '_b'=>{type:'boolean'},
-      '_dt'=>{type:'datetime'},
-      '_f'=>{type:'float'},
-      '_i'=>{type:'integer'},
-      '_s'=>{type:'varchar(255)'},
-      '_ss'=>{type:'varchar(255)'},
-      '_t'=>{type:'text'},
-    }[type_info] || {type:'varchar(255)'}
+      '_b'=>{type: 'boolean'},
+      '_dt'=>{type: 'datetime'},
+      '_f'=>{type: 'float'},
+      '_i'=>{type: 'integer'},
+      '_s'=>{type: 'varchar(255)'},
+      '_ss'=>{type: 'varchar(255)'},
+      '_t'=>{type: 'text'},
+    }[type_info] || {type: 'varchar(255)'}
 
-    type = type.merge(unique:true) if type_flag == '!'
-    type = type.merge(index:true) if type_flag == '*'
+    type = type.merge(unique: true) if type_flag == '!'
+    type = type.merge(index: true) if type_flag == '*'
 
-    type.merge({name:name.to_sym})
+    type.merge({name: name.to_sym})
   end
 
   def set_table_mtime(mtime)
     seed_info = DB[:seed_info]
-    if seed = seed_info.where(table:@table.to_s).first
-      seed_info.where(table:@table.to_s).update(mtime:mtime)
+    if seed_info.where(table: @table.to_s).first
+      seed_info.where(table: @table.to_s).update(mtime: mtime)
     else
-      seed_info.insert(table:@table.to_s, mtime:mtime)
+      seed_info.insert(table: @table.to_s, mtime: mtime)
     end
   end
 
@@ -132,7 +132,7 @@ class GSheetToCsv
   def up_to_date?()
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
     unless @file
-      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color:'red', notify:1
+      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
       return
     end
 
@@ -141,7 +141,7 @@ class GSheetToCsv
       ctime = File.mtime(@csv_path).utc if File.file?(@csv_path)
       return mtime.to_s == ctime.to_s
     rescue GoogleDrive::Error => e
-      HipChat.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color:'yellow'
+      HipChat.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
       true # Assume the current thing is up to date.
     end
   end
@@ -156,17 +156,22 @@ class GSheetToCsv
 
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
     unless @file
-      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color:'red', notify:1
+      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
       return
     end
 
-    buf = @file.spreadsheet.export_as_string('csv')
+    begin
+      buf = @file.spreadsheet_csv
+    rescue GoogleDrive::Error => e
+      puts "Error on file: #{@gsheet_path}, #{e}"
+      throw e
+    end
     if @exclude_columns.empty?
       IO.write(@csv_path, buf)
     else
       CSV.open(@csv_path, 'wb') do |csv|
         columns = nil
-        CSV.parse(buf, headers:true) do |row|
+        CSV.parse(buf, headers: true) do |row|
           unless columns
             columns = row.headers - @exclude_columns
             csv << columns
@@ -204,7 +209,7 @@ namespace :seed do
     auto_id = db.columns.include?(:id)
 
     count = 0
-    CSV.foreach(path, headers:true) do |data|
+    CSV.foreach(path, headers: true) do |data|
       record = {}
       db.columns.each{|column| record[column] = csv_smart_value(data[column.to_s])}
 
@@ -217,7 +222,7 @@ namespace :seed do
   end
 
   def stub_path(table)
-    cache_dir(".#{table.to_s}-imported")
+    cache_dir(".#{table}-imported")
   end
 
   def gdrive()
@@ -227,9 +232,9 @@ namespace :seed do
   sync_tasks = []
 
   imports = {
-    beyond_tutorials:'Data/HocBeyondTutorials.gsheet',
-    tutorials:'Data/HocTutorials.gsheet',
-    uk_tutorials:'Data/UkHocTutorials.gsheet',
+    beyond_tutorials: 'Data/HocBeyondTutorials.gsheet',
+    tutorials: 'Data/HocTutorials.gsheet',
+    uk_tutorials: 'Data/UkHocTutorials.gsheet',
   }
 
   imports.each_pair do |table,path|
@@ -237,7 +242,6 @@ namespace :seed do
     if extname == '.gsheet'
       gsheet = path[0..-(extname.length+1)]
       path = "cache/#{path.gsub(File::SEPARATOR,'_')}.csv"
-      extname = File.extname(path)
 
       sync = "sync:#{table}"
       task sync do
@@ -246,11 +250,11 @@ namespace :seed do
           ctime = File.mtime(path).utc if File.file?(path)
           unless mtime.to_s == ctime.to_s
             puts "gdrive #{path}"
-            file.spreadsheet.export_as_file(path, nil, 0)
+            IO.write(path, file.spreadsheet_csv)
             File.utime(File.atime(path), mtime, path)
           end
         else
-          HipChat.log "Google Drive file <b>#{gsheet}</b> not found.", color:'red', notify:1
+          HipChat.log "Google Drive file <b>#{gsheet}</b> not found.", color: 'red', notify: 1
         end
       end
       sync_tasks << sync

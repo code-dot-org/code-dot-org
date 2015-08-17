@@ -363,7 +363,7 @@
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hei, jeg heter Lyndsey. Jeg modell, skuespiller og skrive mine egene
+        text: Hei, jeg heter Lyndsey. Jeg er modell, skuespiller og skriver mine egene
           apper. La oss bruke kode til å utforske isens magi og skjønnhet sammen med
           Anna og Elsa.
       2:
@@ -416,10 +416,10 @@
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hei, jeg Paola! Datamaskiner er flinke til å gjenta handlinger. Du kan
-          telle til 10, 20 eller 100. Men en datamaskin kan telle til en milliard
+        text: Hei, jeg heter Paola! Datamaskiner er flinke til å gjenta handlinger.
+          Du kan telle til 10, 20 eller 100. Men en datamaskin kan telle til en milliard
           eller billion. Den vil ikke gå lei og det tar bare noen sekunder. Om det
-          er telling, eller tegning, eller noe annet - datamaskiner kan gjenta ting
+          er telling, eller tegning, eller noe annet – datamaskiner kan gjenta ting
           hundrevis eller milliarder av ganger.
       2:
         image: notes/frozen2_2.jpg
@@ -444,27 +444,27 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hei, jeg er Chris Bosh. Jeg er en profesjonell basketballspiller og
+        text: Hei, jeg heter Chris Bosh. Jeg er profesjonell basketballspiller og
           jeg programmerte på skolen.
       2:
         image: notes/frozen3_2.jpg
         text: En av de viktigste konseptene i datavitenskap er hvordan definere nye
-          kommandoer. De fleste språk har bare 100 ord eller kommandoer. Og virkelig,
-          kunsten og magien er p definere dine egne, nye ord ut av disse byggeklossene.
+          kommandoer. De fleste språk har bare 100 ord eller kommandoer. Og det som
+          er kunsten og magien er å definere dine egne, nye ord med disse byggeklossene.
       3:
         image: notes/frozen3_3.jpg
-        text: Når du har lært en datamaskin hvordan gjøre en handling en gang ved
-          bruk av denne sekvensen av kommandoer så kan du navngi den handlingen selv,
-          slik at det er lett å gjenta den senere. Når du definerer dine egne kommandoer
-          og gir dem navn kalles det en funksjon.
+        text: Når du har lært en datamaskin hvordan den skal gjøre en handling en
+          gang ved bruk av denne rekkefølgen av kommandoer så kan du navngi den handlingen
+          selv, slik at det er lett å gjenta den senere. Når du definerer dine egne
+          kommandoer og gir dem navn kalles det en funksjon.
       4:
         image: notes/frozen3_4.jpg
-        text: Hei, jeg er Jess. Når du programmerer med blokker bruker du funksjoner
-          hvis det er et sett med handlinger du vil gjøre mange ganger. For eksempel
-          har du skrevet kode for å lage en firkant.
+        text: Hei, jeg heter Jess. Når du programmerer med blokker bruker du funksjoner
+          som er et sett med handlinger du vil gjøre mange ganger. For eksempel har
+          du skrevet kode for å lage en firkant.
       5:
         image: notes/frozen3_5.jpg
-        text: 'Du kan definere dette som en funksjon kalt "opprett en firkant" '
+        text: 'Du kan definere dette som en funksjon som heter "opprett en firkant" '
       6:
         image: notes/frozen3_6.jpg
         text: Nå har du en ny blokk som du kan bruke flere ganger for å opprette flere
@@ -474,7 +474,8 @@
         text: Mange enkle figurer kan brukes til å lage mer komplekse mønstre. I den
           neste gåten vil koden du nylig skrev for å lage en sirkel være tilgjengelig
           som en ny funksjon som kan lage sirkler i forskjellige størrelser. Kan du
-          bruke den for å hjelpe Elsa opprette komplekse og vakre mønstre i snøen?
+          bruke den for å hjelpe Elsa til å opprette komplekse og vakre mønstre i
+          snøen?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png

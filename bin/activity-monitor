@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+#
+# This script monitors level completion rates and issues HipChat complaints if a significant
+# number of browsers has attempted a level without anybody finishing it successfully.
+#
+# Currently data is sent to LogEntries for collection and collation via TCP-based log. This
+# script collects a 1 hour period worth of data, analyzes it, and reports.
+#
+# FUTURE THOUGHTS: This is the only reason we use LogEntries. We could probably just use a
+#   an RDS database, MongoDB, or even just a regular log file and eliminate the cost of
+#   LogEntries.
+#
 # including dashboard environment doesn't work if not in the dashboard dir
 Dir.chdir(File.expand_path('../../dashboard', __FILE__))
 require_relative '../dashboard/config/environment'
@@ -13,6 +24,7 @@ OneDay = 24 * OneHour
 
 ExcludedBrowsers = [
   'bingbot',
+  'Chrome Frame',
   'Epiphany',
   'Googlebot',
   'IE 6.0',
@@ -24,7 +36,9 @@ ExcludedBrowsers = [
   'TwitterBot',
   'Yandex Browser',
   'YandexBot',
-  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0'
+  'Mo%20PTT/50 CFNetwork/672.1.15 Darwin/14.0.0',
+  'AppleMail',
+  /Edmodo/, # edmodo customer support said we can ignore this
 ]
 
 ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
@@ -34,6 +48,7 @@ HardLevelAttemptsPerHour = {
   54 => 20,
   57 => 10,
   71 => 20,
+  72 => 20,
   949 => 10,
   1008 => 10,
   1108 => 10,
@@ -43,7 +58,7 @@ HardLevelAttemptsPerHour = {
   1441 => 10
 }
 
-MinimumAttemptsPerHour = 5
+MinimumAttemptsPerHour = 10
 
 HoursToTest = 2
 
@@ -65,7 +80,7 @@ end
 class Collater
 
   def initialize()
-    @results = {browsers:{}, locales:{}}
+    @results = {browsers: {}, locales: {}}
   end
 
   def each_by_browser()
@@ -73,19 +88,19 @@ class Collater
     browsers.keys.sort.each do |browser|
       browsers[browser].keys.sort.each do |level|
         i = browsers[browser][level]
-        yield i.merge(browser:browser, level:level)
+        yield i.merge(browser: browser, level: level)
       end
     end
   end
 
   def insert(level, tag, browser, locale)
     @results[:browsers][browser] = {} unless @results[:browsers].has_key?(browser)
-    @results[:browsers][browser][level] = {starts:0, finishes:0} unless @results[:browsers][browser].has_key?(level)
+    @results[:browsers][browser][level] = {starts: 0, finishes: 0} unless @results[:browsers][browser].has_key?(level)
     @results[:browsers][browser][level][:starts] += 1 if tag == :activity_start
     @results[:browsers][browser][level][:finishes] += 1 if tag == :activity_finish
 
     @results[:locales][locale] = {} unless @results[:locales].has_key?(locale)
-    @results[:locales][locale][level] = {starts:0, finishes:0} unless @results[:locales][locale].has_key?(level)
+    @results[:locales][locale][level] = {starts: 0, finishes: 0} unless @results[:locales][locale].has_key?(level)
     @results[:locales][locale][level][:starts] += 1 if tag == :activity_start
     @results[:locales][locale][level][:finishes] += 1 if tag == :activity_finish
   end
@@ -138,8 +153,8 @@ class Monitor
 
   def fetch()
     puts "Fetching..." if rack_env?(:development)
-    reader = Slog::Reader.new(secret:CDO.logentries_secret, hosts:@hosts)
-    reader.get(filter: 'tag=activity_start OR tag=activity_finish', start:@start, end:@finish)
+    reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
+    reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
   end
 
 end
@@ -164,6 +179,16 @@ def browserstack_url(browser, destination_url)
   "http://www.browserstack.com/start#" + URI.encode_www_form(params.merge(resolution: '2048x1536', url: destination_url))
 end
 
+def excluded_browser?(ua_string)
+  ExcludedBrowsers.any? do |r|
+    if r.is_a? Regexp
+      ua_string.match r
+    else
+      ua_string == r
+    end
+  end
+end
+
 def main()
   now = DateTime.now.new_offset(0)
 
@@ -171,33 +196,33 @@ def main()
   finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
   start = finish - (hours * OneHour)
 
-    Monitor.collate(start:start, finish:finish).each_by_browser do |i|
-      next if ExcludedBrowsers.include?(i[:browser])
-      next if ExcludedLevels.include?(i[:level])
+  Monitor.collate(start: start, finish: finish).each_by_browser do |i|
+    next if excluded_browser?(i[:browser])
+    next if ExcludedLevels.include?(i[:level])
 
-      starts = i[:starts]
-      finishes = [starts, i[:finishes]].min
+    starts = i[:starts]
+    finishes = [starts, i[:finishes]].min
 
-      minAttemptsPerHour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
+    min_attempts_per_hour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
 
-      status = :pass if finishes > 0 || starts == 0
-      status ||= :fail if starts > (minAttemptsPerHour * hours)
-      status ||= :warn
+    status = :pass if finishes > 0 || starts == 0
+    status ||= :fail if starts > (min_attempts_per_hour * hours)
+    status ||= :warn
 
-      rate = starts == 0 ? 1.0 : finishes.to_f / starts.to_f
+    starts == 0 ? 1.0 : finishes.to_f / starts.to_f
 
-      if status == :fail
-        level_url = "http://learn.code.org/levels/#{i[:level]}"
+    if status == :fail
+      level_url = "http://learn.code.org/levels/#{i[:level]}"
 
-        log_string = %Q[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
-        sl = Level.find(i[:level]).script_levels.first
-        if sl
-          level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
-        end
-        log_string += %Q[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">&#x2708; Repro It</a>]
-        HipChat.developers log_string, color:'red', notify:1
-        HipChat.log log_string, color:'red'
+      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{hours} hour(s)]
+      sl = Level.find(i[:level]).script_levels.first
+      if sl
+        level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
       end
+      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
+      HipChat.notify('ActivityMonitor', log_string, color: 'red', notify: 1)
+      HipChat.log log_string, color: 'red'
+    end
   end
 end
 

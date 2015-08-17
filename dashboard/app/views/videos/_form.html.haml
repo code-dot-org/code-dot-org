@@ -2,7 +2,7 @@
   - if @video.errors.any?
     #error_explanation
       %h2
-        = pluralize(@video.errors.count, "error")
+        = pluralize(@video.errors.count, 'error')
         prohibited this video from being saved:
       %ul
         - @video.errors.full_messages.each do |msg|

@@ -454,9 +454,10 @@
           näistä rakennuspalikoista.
       3:
         image: notes/frozen3_3.jpg
-        text: Opetettuasi tietokoneen tekemään toiminnon käyttäen tätä toimintosarjaa,
-          voit keksiä sille nimen ja sillä tavalla tehdä sen toistamisesta helpompaa.
-          Kun määritellä oman käskysi ja antaa sille nimen, sitä kutsutaan funktioksi.
+        text: Kun olet kerran opettanut tietokoneen tekemään toiminnon käyttäen tätä
+          toimintosarjaa, voit keksiä oman nimesi toiminnolle niin että sen toistamisen
+          myöhemmin on helppoa. Voit myös määritellä oman käskysi ja antaa sille nimen,
+          tätä kutsutaan funktioksi.
       4:
         image: notes/frozen3_4.jpg
         text: Hei, olen Jess. Ohjelmoidessasi lohkoilla, voit käyttää funktioita kun
@@ -492,72 +493,70 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Aiomme luoda pelejä käyttäen Play Lab:ia. Hyvissä peleissä on tarina
+          ja jokaisessa tarinassa on hahmoja. Me opimme, kuinka voimme saada hahmojemme,
+          kuten noidat tai avaruusoliot puhumaan, liikkumaan ja vaikuttamaan toisiinsa.
+          Tämän opetusohjelman loppuun mennessä osaat rakentaa pelin tyhjästä ja voit
+          jakaa sen ystäviesi kanssa.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Näyttösi on jaettu 3 osaan. Vasemmalla on pelin tila, jossa ohjelmasi
+          suoritetaan. Ohjeet jokaiselle tasolle kirjoitetaan alla.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Keskialue on työkaluvalikko, ja jokainen näistä lohkoista on koodinpätkä.
+          Valkoista aluetta oikealla kutsutaan työtilaksi ja siinä me rakennamme ohjelmaamme.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Aloittaaksesi sinun täytyy liittää lohkosi oranssiin "suoritettaessa"
+          lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet
+          keltaisen viivan ja sitten ne kohdistuvat yhteen.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Ensimmäisessä palapelissä meidän hahmomme on pingviini ja me saamme
+          sen sanomaan  "Hei!" vetämällä sanonta -lohko ulos ja liittämällä se suoritettaessa
+          -lohkoon ja kirjoittamalla "Hei." Voimme myös saada pingviinin liikkumaan
+          käyttämällä siirrä oikealle ja siirrä vasemmalle -lohkoja. Kun olet saanut
+          lohkot on paikalleen, niin klikkaa suorita nappia ja näet mitä olet ohjelmoinut.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: 'Aloita, niin loppuun päästyäsi osaat luoda oman pelin kaikenlaisille
+          pelaajille, jotka voivat: olla vuorovaikutuksessa, vaihtua onnellisiksi
+          tai surullisiksi,  kerätä pisteitä tai heittää tulipalloja tai jopa kadota
+          yksi kerrallaan. Se on kaikki sinusta kiinni, mitä haluat pelisi tekevän.'
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Nyt aiomme oppia jotain, mitä kaikki pelisuunnittelijat käyttävät päivittäin.
+          Niitä kutsutaan tapahtumiksi. Tapahtuma kertoo ohjelmallesi, että se kuuntelee
+          kun jotakin tapahtuu. Kun se asia tapahtuu, tapahtuma suorittaa toiminnon.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Joitakin tapahtumien esimerkkejä on hiiren napsautuksen kuuntelu,  nuoli-painikkeen
+          käyttö tai näytön napautus.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Tässä me aiomme tehdä avaruusbotin tervehtimään maanasukkeja, kun pelaaja
+          klikkaa häntä. Me käytämme "kun napsautetaan" -lohkoa ja liitämme "sano"
+          -lohko siihen. Kun pelaaja klikkaa avaruusbottia, niin kaikki "kun napsautetaan"
+          -lohkoon  liitetty tapahtumalohko suoritetaan. Mitä sinun avaruusolio sanoo?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: On myös "kun nuoli" -lohkoja. Jos linkität "siirrä"-lohkot näihin, voit
+          aloittaa siirtämään sinun näyttelijöitä ylös, alas, vasemmalle tai oikealle.
+          Askel askeleelta pelistäsi tulee enemmän vuorovaikutteinen.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Tämä on "toista ikuisesti" -lohko. Kaikki tämän lohkon sisäiset tapahtumat
+          jatkuvat pelissä ikuisesti.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Jos haluat näyttelijäsi tekevän jotain toistuvasti ilman että pelaaja  joutuu
+          tekemään mitään, niin me laitamme ne lohkot "toista ikuisesti" -lohkon sisään.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Tässä seuraavassa tehtävässä tavoitteenamme on auttaa velhoa  partiomaan
+          valtakunnan rajoja, vasemmalle ja oikealle jatkuvasti. Oppiessasi miten
+          toista -komennot toimivat, tulet säästämään huomattavasti aikaasi  kun myöhemmin
+          rakennat omaa peliäsi.

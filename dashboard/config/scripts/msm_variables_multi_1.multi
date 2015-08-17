@@ -1,0 +1,6 @@
+name 'msm variables multi 1'
+title 'x = 15<br>a = 2<br>b = 6'
+question 'What is the value of x?'
+wrong 'a function'
+right '15'
+wrong 'x'

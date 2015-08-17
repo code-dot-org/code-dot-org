@@ -1,71 +1,72 @@
 * * *
 
-title: Digital Citizenship view: page_curriculum theme: none
+title: Cidadania digital view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unplugged=>true, :title=> 'Digital Citizenship',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
+<%= partial('curriculum_header', :unplugged=>true, :title=> 'Cidadania digital',:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
+Com a colaboração da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), esta aula ajuda os alunos a desenvolver o pensamento crítico sobre as informações de usuário solicitadas por alguns sites. Os alunos aprendem a diferença entre informação privada e pessoal, distinguindo o que é seguro do que não é seguro para compartilhar on-line.
 
-Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
+Os alunos também vão explorar o que significa ser responsável e respeitoso com relação às comunidades offline e on-line, como um passo na direção do aprendizado de como ser bons cidadãos digitais.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Personal vs. Private Online](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Pessoal vs. privado on-line](#GetStarted)
 
-### **Activity: Digital Citizens** - 30 minutes
+### **Atividade: Cidadãos digitais** - 30 minutos
 
-4) [Digital Citizens](#Activity1)
+4) [Cidadãos digitais](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [Digital Citizens Assessment](#Assessment)
+7) [Avaliação de cidadãos digitais](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Compare and contrast their responsibilities to their online and offline communities
-  * Understand what type of information can put them at risk for identity theft and other scams
-  * Reflect on the characteristics that make someone an upstanding citizen
-  * Devise resolutions to digital dilemmas
+  * Comparar e contrastar suas responsabilidades com relação às comunidades on-line e offline
+  * Compreender que tipo de informação pode colocá-los em risco para identificar roubos e outras fraudes
+  * Refletir sobre as características que tornam alguém um cidadão exemplar
+  * Chegar a soluções sobre dilemas digitais
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
-  * Pens, Pencils, & Scissors
-  * [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student
+  * [Super-heróis de papel](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
+  * Canetas, lápis e tesoura
+  * [Avaliação do supercidadão digital](Assessment20-DigitalCitizenship.pdf) para cada aluno
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/fIlqt3P8Nsg?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * A good selection of male and female [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635) sheets for the whole class
   * Print one [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student
@@ -74,33 +75,33 @@ Students will also explore what it means to be responsible and respectful to the
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -109,74 +110,74 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Digital Citizen** - Say it with me: Dih-jih-tal Sit-i-zen   
-Someone who acts safely, responsibly, and respectfully online
+**Cidadão digital** - Repita comigo: ci-da-dão di-gi-tal   
+Alguém que age de forma segura, responsável e respeitável quando está on-line
 
-### <a name="GetStarted"></a> 3) Personal vs. Private Online
+### <a name="GetStarted"></a> 3) Pessoal vs. privado on-line
 
-  * Ask "What types of information do you think are okay to share publicly online or on a profile that others will see?"
-  * What are some examples of websites where you must register in order to participate? 
-      * Write the names of the websites on the board. 
-      * What information is required and why do you think it is required? 
-          * Information may be required to help distinguish one person from another.
-          * The website may keep a record of who uses it.
-      * Explain that it’s important to know that sharing some kinds of user information can put you and your family’s privacy at risk.
-      * Point out that you do not have to fill out fields on websites if they are not required. 
-          * Required fields are usually marked by an asterisk (*) or are highlighted in red.
-  * Elementary school students should never register for sites that require private information without the approval and guidance of a parent or guardian.
-  * Here is an example of public versus private information:
+  * Pergunte: "Quais tipos de informação você considera viáveis para compartilhar publicamente on-line, ou em um perfil que os outros podem ver?"
+  * Quais são alguns exemplos de sites nos quais você deve se registrar para participar? 
+      * Escreva os nomes dos sites na lousa. 
+      * Quais informações são necessárias e por que você acha que são necessárias? 
+          * As informações são necessárias para ajudar a distinguir uma pessoa da outra.
+          * O site pode manter um registro de quem o usa.
+      * Explique que é importante saber que compartilhar alguns tipos de informação pode colocar sua privacidade e de sua família em risco.
+      * Destaque que você não precisa preencher campos de informações em sites se eles não forem necessários. 
+          * Campos obrigatórios geralmente são marcados com um asterisco (*) ou são destacados em vermelho.
+  * Alunos do ensino fundamental nunca devem registrar-se em sites que exigem informações privadas sem a aprovação e a orientação dos pais ou de um responsável.
+  * Temos aqui um exemplo de informação pública comparada com informação privada:
 
 ![](info.png)
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If you have access to a computer, feel free to navigate to a site that might require this type of information, such as Gmail or Facebook.
+Se você tiver acesso a um computador, fique à vontade para acessar um site que pode exigir este tipo de informação, tal como o Gmail ou o Facebook.
 
 [/tip]
 
-  * Explain that some people will actively try to get you to share this kind of information so that they can use it to take over your identity. Once a thief has taken someone’s identity, he or she can use that person’s name to get a driver’s license or buy things, even if the person whose identity they stole isn’t old enough to do these things! 
-      * It’s often not until much later that people realize that their identity has been stolen. Identity thieves may also apply for credit cards in other people’s names and run up big bills that they don’t pay off. Let students know that identity thieves often target children and teens because they have a clean credit history and their parents are unlikely to be aware that someone is taking on their child’s identity.
+  * Explique que algumas pessoas vão tentar força-lo a compartilhar esse tipo de informação, de forma que elas possam usá-la para assumir a sua identidade. Depois que um ladrão tomou a identidade de alguém, ele ou ela pode usar o nome da pessoa para obter uma carteira de motorista ou comprar as coisas, mesmo que a pessoa cuja identidade foi roubada não tenha idade para fazer essas coisas! 
+      * Às vezes, as pessoas só percebem que sua identidade foi roubada depois de muito tempo. Ladrões de identidade também podem solicitar cartões de crédito no nome de outras pessoas e até pedir empréstimos grandes que não pagam. Avise aos alunos que o alvo dos ladrões de identidade frequentemente são crianças e adolescentes, porque eles têm um histórico de crédito limpo e seus pais geralmente não estão cientes de que alguém vai tentar assumir a identidade de seus filhos.
 
-Now, let's see what we can do to keep ourselves safe.
+Agora, vamos ver o que podemos fazer para ficarmos seguros.
 
 [/together]
 
 [together]
 
-## Activities: (20 min)
+## Atividades: (20 min)
 
-### <a name="Activity1"></a> 4) [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
+### <a name="Activity1"></a> 4) [Super-heróis de papel](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
 
-  * Spiderman says "With great power comes great responsibility." This is also true when working or playing on the Internet.
-  * The things we read, see, and hear online can lead people to have all sorts of feelings (e.g., happy, hurt, excited, angry, curious). 
-      * What we do and say online can be powerful. 
-  * The Internet allows us to learn about anything, talk to people at any time (no matter where they are in the world), and share our knowledge and creative projects with other people. 
-      * This also means that negative comments can spread very quickly to friends of all ages.
-  * CREATE a three-column chart with the terms “Safe,” “Responsible,” and “Respectful” written at the top of each column. Invite students to shout out words or phrases that describe how people can act safely, responsibly, and respectfully online, and then write them in the appropriate column.
+  * Segundo o Homem-Aranha, "Grandes poderes trazem grandes responsabilidades." Isso também é verdadeiro quando se trabalha ou se joga na internet.
+  * As coisas que lemos, vemos, e ouvimos on-line podem levar as pessoas a ter todo tipo de sentimento (por exemplo, felicidade, tristeza, empolgação, raiva, curiosidade). 
+      * O que podemos fazer e dizer on-line tem um grande poder. 
+  * A internet nos permite aprender sobre qualquer coisa, falar com as pessoas, a qualquer momento (não importa onde eles estão no mundo) e compartilhar nosso conhecimento e projetos criativos com outras pessoas. 
+      * Isto também significa que comentários negativos podem se espalhar muito rapidamente entre amigos de todas as idades.
+  * CRIE um gráfico de três colunas com os termos "Seguro", "Responsável" e "Respeitoso" escritos na parte superior de cada coluna. Convide os alunos a dizer palavras ou frases que descrevem como as pessoas podem agir com segurança, responsabilidade e respeitosamente on-line e, em seguida, escreva-os na coluna adequada.
 
 ![](chart.png)
 
-Now, let's really make sure we understand how to be a Super Digital Citizen!
+Agora, vamos ver se entendemos como deve agir um super cidadão digital!
 
-**Directions:**
+**Instruções:**
 
-> 1) Have each student grab a small selection of papercraft sheets and encourage them to blend the pieces to make their very own super hero.
+> 1) Faça com que cada aluno pegue uma pequena seleção de folhas para montar super-heróis de papel e incentive-os a misturar as peças para fazer seu próprio super-herói.
 > 
-> 2) Allow plenty of time for students to cut, glue, and color.
+> 2) Dê tempo suficiente para os alunos cortarem, colarem e pintarem.
 > 
-> 3) Give students a 5 minute warning to wrap up.
+> 3) Avise os alunos quando estiver faltando 5 minutos para encerrar a atividade.
 > 
-> 4) Separate students into groups of 2-4 and tell them to use their super heroes and leftover supplies to stage a scene in which one superhero sees an act of poor digital citizenship. Then have the superhero fix the problem … and save the day!
+> 4) Separe os alunos em grupos de 2 a 4 e diga-lhes para usar os seus super-heróis e as sobras do material para encenar uma cena na qual um super-herói vê um mau exemplo de cidadania digital. Em seguida, o super-herói deve corrigir o problema … e salvar o dia!
 > 
-> 5) Go around the room, having each student explain their scene to the class.
+> 5) Percorra a sala pedindo que cada aluno explique sua cena para a classe.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
+Para desenvolver módulos mais aprofundados, você pode encontrar elementos adicionais a esse currículo na página da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), em Scope e Sequence.
 
 [/tip]
 
@@ -184,44 +185,44 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * What is a good way to act responsibly online?
-  * What kinds of personal information could you share about yourself without showing your identity?
-  * What kinds of superpowers or qualities did your digital superheroes have in common?
-  * What does Spider-Man’s motto “With great power comes great responsibility” mean to you, as someone who uses the Internet?
+  * Qual é uma boa maneira de agir responsavelmente on-line?
+  * Quais os tipos de informações pessoais você poderia compartilhar sobre si mesmo, sem mostrar sua identidade?
+  * Que tipos de superpoderes ou qualidades seus super-heróis digitais têm em comum?
+  * O que o lema do Homem-Aranha, "Grandes poderes trazem grandes responsabilidades", significa para você, como alguém que usa a internet?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use seus conhecimentos sobre sua sala de aula para decidir se você quer discutir isso como uma turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "One who is afraid of spiders"   
-> "A baby horse"   
-> "Someone who acts safely, responsibly, and respectfully online"  
+> "Aquele que tem medo de aranhas"   
+> "Um cavalinho"   
+> "Alguém que age de forma segura, responsável, e respeitável quando está on-line"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf)
+### <a name="Assessment"></a>7) [Avaliação de cidadão digital](Assessment20-DigitalCitizenship.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -230,48 +231,48 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
 ### Common Sense Media
 
-  * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
+  * Visite o [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) para aprender mais sobre como manter seus alunos seguros nessa era digital.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
-  * 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
-  * 5.d. - Exhibit leadership for digital citizenship.
-  * 6.a - Understand and use technology systems.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 5.a - Defender e praticar o uso seguro, legal e responsável da informação e da tecnologia.
+  * 5.b - Mostrar uma atitude positiva em relação ao uso da tecnologia que apoia a colaboração, aprendizagem e produtividade.
+  * 5.d. - Mostre liderança na cidadania digital.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CI.L1:3-01. Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
-  * CI.L1:6-01. Discuss basic issues related to responsible use of technology and information, and the consequences of inappropriate use.
-  * CI.L1:6-02. Identify the impact of technology (e.g. social networking, cyber bullying, mobile computing and communication, web technologies, cyber security, and virtualization) on personal life and society.
-  * CI.L1:6-04. Understand ethical issues that relate to computers and networks (e.g., equity of access, security, privacy, copyright, and intellectual property).
-  * CI.L2-01. Exhibit legal and ethical behaviors when using information and technology and discuss the consequences of misuse.
-  * CI.L2-05. Describe ethical issues that relate to computers and networks (e.g., security, privacy, ownership, and information sharing).
-  * CPP.L2-06. Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
+  * CI.L1:3-01. Praticar a cidadania digital responsável (comportamentos legais e éticos) no uso dos sistemas de tecnologia e softwares.
+  * CI.L1:6-01. Discuta questões básicas relacionadas ao uso responsável da tecnologia e informação, e as consequências do uso inadequado.
+  * CI.L1:6-02. Identifique o impacto da tecnologia (por exemplo, redes sociais, cyberbullying, computação móvel e comunicação, tecnologias web, segurança cibernética e virtualização) na vida da pessoas e na sociedade.
+  * CI.L1:6-04. Compreenda as questões éticas que se relacionam aos computadores e redes (por exemplo, a equidade de acesso, segurança, privacidade, propriedade intelectual e direitos autorais).
+  * CI.L2-01. Tenha comportamento legal e ético ao usar a tecnologia e as informação, e discuta as consequências do uso indevido.
+  * CI.L2-05. Descreva as questões éticas que se relacionam aos computadores e redes (por exemplo, segurança, privacidade, propriedade e compartilhamento de informações).
+  * CPP.L2-06. Demonstrar boas práticas em segurança de informação pessoal: usar senhas, encriptação e transações seguras.
 
-### Common Core Language Arts
+### Artes e linguagens do Common Core
 
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * SL.4.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * SL.5.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * SL.4.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quarto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * SL.5.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quinto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

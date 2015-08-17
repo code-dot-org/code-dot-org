@@ -48,7 +48,7 @@
         edit-code:
           desc: Kodu Düzenle (beta)
           MazeEC: 1. Aşama
-          Webapp: Bölüm 2
+          Applab: Bölüm 2
           ArtistEC: 3. Aşama
           StudioEC: 4. Aşama
         events:
@@ -99,10 +99,12 @@
         Jigsaw: Yapboz
         MazeStep: Labirent Adım Modu
         Wordsearch: Kelime arama
-        Webapp: Web Uygulaması
+        Webapp: Uygulama Laboratuvarı
         ArtistEC: Sanatçı
         TextMatch: Metin Eşleştirmesi
-        StudioEC: Play Lab
+        StudioEC: Oyun Laboratuvarı
+        Applab: Uygulama Laboratuvarı
+        NetSim: İnternet Simülatörü
     trophy:
       name:
         Bronze: Bronz
@@ -318,9 +320,8 @@
           yıldız simgesine tıklayın.)'
         turtle_3_7: '"Ev çiz" fonksiyonuna "uzunluk" adında yeni bir girdi ekleyin
           ve fil için yeterince büyük bir ev çizin (kenarları 150 piksel uzunluğunda)'
-        turtle_3_8: işte bir önceki  bulmacanın tüm blokları. "Ev çiz" fonksiyonunu
-          çizimi evin sağ alt köşesinde bitirebilmem için değiştirin.  Sonra bu yeni
-          fonksiyonu kullanarak 3 ev çizin.
+        turtle_3_8: Yeni bir ev çizdikten sonra tamamlamak için sağ alt köşedeki  "Ev
+          çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
         turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
@@ -409,8 +410,8 @@
         flappy_8: Görünümleri sadece oyun başlarken değil, isteğin an değiştirebilirsin.
           Diğer olaylar olduğunda rastgele görünümler ayarlamaya çalış. mesela bir
           engeli geçince.
-        flappy_9: Bir engele veya yere çarptığında oyunu sonlandırmak yerine skoru
-          0 yapmayı deneyin.
+        flappy_9: Bir cisme vurduğun zaman, engellere çarpıp oyun bittiğinde karışıklık
+          oluşmaması için skoru 0 yap.
         flappy_11: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları hatta
           yer çekimini değiştirebilirsiniz. Bitirdiğinizde, "BİTİR" düğmesine tıklayıp,
           arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
@@ -513,13 +514,15 @@
           yardım edebilir misin? Çalıştır'a tıkladıktan sonra üzerine tıklamayı unutma
         studio_playlab_6: Yukarı/aşağı/sağ/sol ok tuşlarını kullanarak cadının etrafta
           dolaşıp bütün büyülü ateştoplarını toplamasına yardım edebilir misin?
-        studio_playlab_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
-          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
-          sağlayan blokları ekleyebilir misin?'
-        studio_playlab_8: Pengueni etrafta hareket ettirip (ok tuşları ile); penguen
-          ahtapota dokunduğunda skor puanı yaptırabilir misin?
-        studio_playlab_9: Pengueni etrafta hareket ettirip (ok tuşları ile); arkaplanı
-          ve penguenin hızını değiştiren blokları ekleyebilir misin?
+        studio_playlab_7: '"Tekrar sonsuza dek" bloğu sürekli kod çalıştırmasına olanak
+          sağlar. Sihirbazı sağ ve sola sürekli hareket ettirmeye yardım etmek için
+          blokları iliştirebilir misin?'
+        studio_playlab_8: Puan almak için bir blok ekle ve tek boynuzlu at sihirbaza
+          çarpınca ses oynatmak için bir blok ekle, ve sonra onu ok tuşlarıyla puan
+          alana kadar hareket ettirebilir misin?
+        studio_playlab_9: Uzaylı istilası için arka plan ayarla ve uzaylıyı hemen
+          yakalamak için uzay aracına hızını değiştirerek yardım et. Sonra uzaylıyı
+          ok tuşlarıyla kontrol ederek bota ulaş ve diğer herkesi uyar
         studio_playlab_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
         studio_full_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
@@ -553,7 +556,8 @@
           sonra diğer yöne hareket ettir
         maze_wordsearch_k_20: Bu bir test! Beni STORY kelimesini oluşturacak şekilde
           bir yöne, sonra diğer yöne hareket ettir
-        webapp_ec_simple: createHtmlBlock kullanarak web uygulamanızı oluşturun.
+        applab_ec_simple: Araçlar kutusundaki blokları kullanarak kendi uygulamalarını
+          oluştur.
         turtle_ec_1_2: 'Şimdi, bir kare çizin. NOT: yeni "penColor" bloğundan seçerek
           en sevdiğiniz rengi kullanın.'
         turtle_ec_1_10: 'Başardınız! Şimdi, istediğiniz herhangi bir şey çizin. İşte
@@ -561,124 +565,6 @@
           bloğunu da deneyin. Eğlenmenize bakın!'
         studio_ec_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-    levelbuilder:
-      frozen line:
-        instructions: Merhaba! Ben Elsa Arendelle.Bana tek bir çizgi çizmek için yardım
-          edin.
-      frozen perpendicular:
-        instructions: Şimdi bakalım birbirine 90 derecelik açı yapan iki çizgiyi nasıl
-          oluşturacağız. Bunun için "Dön" ve "İlerle" bloklarını kullanmanız gerekecek.
-      frozen square iterative:
-        instructions: Karenin yarısı yapmışız gibi görünüyor. Bir kare oluşturmak
-          için 4 satırı bir araya getirelim.
-      frozen square loop:
-        instructions: Merhaba, ben Arendelle, Anna! Daha az blokları kullanarak "Tekrarlayan"
-          bir kare yapalım. Bir kare yapmak için, blokların içinde "Tekrarlayan" bloklar
-          kaç keç döngü oluşturmalı (?) ?
-      frozen square loop 3x:
-        instructions: Her bir karenin dönümünden sonra üç kare oluşturalım. Her yeni
-          kareden önce, 120 derece çevirmek için emin olun.
-      frozen square snowflake:
-        instructions: '"Tekrar" bloğunu 10 tane kare oluşturmak için kullanıp her
-          kareden sonra 36 derece dönerek bir kar tanesi oluşturabilir misiniz?'
-      frozen cross:
-        instructions: '"Tekrarlayan" blok kullanarak bir artı işareti oluşturunuz.
-          Elsa''nın ileri ve geri hareket edebildini farkettiniz mi?'
-      frozen cross rotate:
-        instructions: Şimdi, bu işlemi 10 kez deneyerek tekrarlayınız. Her bir çizgi
-          arasını dönmek için kaç dereceye ihtiyacınız var?
-      frozen cross rotate dense:
-        instructions: 'Bu işlemi 90 kez tekrarlayalım! Kaç kere de 90''dan 360''a
-          varılır? İpucu: cevabı gerçekten çok küçük bir sayı.'
-      frozen diamond:
-        instructions: Bir paralelkenar oluşturalım. oluşturduğumuz şekil, bir kare
-          gibi fakat, 90 derece yerine 60 ve 120 derece gibi açı farkları var.
-      frozen diamond mini snowflake:
-        instructions: Her kar tanesinin birbirinden farklı olduğunu biliyor muydunuz?
-          "Dönen" blok kullarak, bir paralelkenarı 4 kez, her bir paralel kenar arasında
-          90 derece olacak şekilde sağa doğru döndürerek yeni bir kar tanesi oluşturalım.
-      frozen diamond snowflake:
-        instructions: Şimdi, tekrarla bloğunu kullanarak yeni kar taneleri oluşturalım.
-          Tekrarla bloğu ile 10 tane paralelkenar çizelim her paralelkenar çizildikten
-          sonra sağa doğru 36 derece dönelim.
-      frozen circle:
-        instructions: Çember özel bir şekildir. Bir çember çizmek için soru işareti
-          yerine kaç gelmesi gerektiğini bulabilir misiniz?
-      frozen circle function:
-        instructions: 10 tane üst üste çember oluşturmak için "Çember oluştur" bloğunu
-          kullanın. Çemberler arasında ileri zıplamayı unutmayın.
-      frozen circle function in circle:
-        instructions: Şimdi herbirini çizdikten sonra 18 derece bırakacağınız 20 tane
-          çember oluşturun.
-      frozen circle function with parameter:
-        instructions: '"Çember oluştur" bloğuyla farklı büyüklüklerde çemberler oluşturabilirsiniz.
-          Bunu 5 birim ve 10 birimlik çemberler çizmek için kullanır mısınız?'
-      frozen snowflower:
-        instructions: Karmaşık kar tanecikleri aslında basit şekillerle oluşturulur.
-          Bu modeli 5 birim uzunlukta 5 çember ve 10 birim uzunluktaki 5 çember ile
-          oluşturabilir misiniz?
-      frozen snowflake branch:
-        instructions: Üç tane dal oluşturmak için "Kar taneciği dalı oluştur" bloğunu
-          deneyin gitgide kar taneciğine benziyor.
-      frozen snowflake full:
-        instructions: Şimdi bunu kar taneciği yapmak için 8 kere tekrar edin!
-      frozen freeplay:
-        instructions: Resmen bir usta sanatçı haline geldiniz! Kış harikalar diyarı
-          yaratın.
-      scrat 16:
-        instructions: Acorn! Acorn! Acorn! Beni oraya  ulaştırmak için bir "Eğer"
-          bloğu kullanın ve en az sayıda komutu kullanmaya çalışın.
-      scrat 17:
-        instructions: Tamam, pratik yapmak için tekrar yapalım - bu çok farklı değil
-          fakat duvarlara dikkat edin!
-      scrat 18:
-        instructions: '"Eğer-Değilse" bloğu koşulu kontrol eder ve birini ya da diğerini
-          yapar. Meşe palamuduna ulaşmam için bu yeni bloğu kullanın.'
-      scrat 19:
-        instructions: '"Eğer değilse" bloğunun bir örneğini daha, ilk denemenizde
-          doğru yapabildiniz mi?'
-      scrat 20:
-        instructions: Bu bulmacayı çözmem için 3 blok daha ekleyebilir misiniz? Eğer
-          doğru yaptıysan, Bu kıvrımlı yolu uzunluğu ne olursa olsun yürüyebilirim.
-          Acele et! Buzlar Eriyor!
-      Standalone_Artist_1:
-        instructions: Welcome to Artist! First off, let's try to make a simple square
-          using the turn right block and move forward block. Each side should be 100
-          pixels long.
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel
-          long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree
-          turns?
-      Standalone_Artist_4:
-        instructions: Now you've got a new block to play with, the loop. This will
-          repeat a set of commands. What happens if you loop these commands 6 times?
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the
-          flower?
-      Standalone_Artist_5.5:
-        instructions: 'Notice how we simplified the diamond code by turning it into
-          a loop. You can loop that whole sequence 12 times to draw the flower. Hint:
-          You''ll need to turn 30 degrees after your diamond loop so you don''t keep
-          drawing over the same diamond.'
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: 'Labirent: Tanıtım'
@@ -738,6 +624,7 @@
         C2_relay_programming: Röle Programlama
         C2_paper_airplanes: Kağıt Uçaklar
         C2_digital_footprint: Dijital İziniz
+        C2_digital_footprint_v2: Dijital İziniz
         C3_maze_level_4: Labirent Döngüleri
         C3_artist_intro: 'Ressam: Giriş'
         C3_artist_functions: Aktör Fonksiyonları
@@ -757,27 +644,59 @@
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
         C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
         C4_intro: Giriş
+        C4_loops_zombie: Döngüler
         C4_bee_conditional: Arı Koşullandırmaları
         C4_variables_artist: Değişkenler - Sanatçı
         C4_variables_playlab: Değişkenler - Oyun laboratuarı
-        C4_for_loops: For Loops
+        C4_for_loops: For Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
         C4_function_edit: Düzenleme fonksiyonları
         C4_function_create: Oluşturma Fonksiyonları
         C4_function_parameters: Fonksiyon parametreleri
         C4_conditionals: Koşullar
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_madlibs: Çılgın Kütüphaneler
+        C4_unplugged_variables: Zarfların içindeki Değişkenler
+        C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: İkili
         frozen_intro: Kodlama Saati Giriş
         frozen_loops: Döngülere Giriş
         frozen_functions: Fonksiyonlara Giriş
         playlab_intro: Oyun laboratuarı için giriş
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_events: Laboratuvar Olaylarını Oynatın
+        playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
+        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
+        infinity_playlab_intro: Play Lab - Introduction
+        infinity_playlab_events: Play Lab - Events
+        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: Color pixelation widget - Part 1
+        csp_pixelation_color_2: Color pixelation widget - Part 2
+        csp_pixelation_color_3: Color pixelation widget - Part 3
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
+        csp_textcompression: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -810,65 +729,72 @@
         repeat_blocks_2: (2) "Tekrarla" bloğunu buraya taşı ve gri bloklar içine yerleştir
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
         degrees_per_side: 360'ı kenar sayısına bölerek her açının derecesini bulun.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Use this button to edit the function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        set_sides: Bulmacayı tamamlamakta gerekli olan kenarların sayısını atamak
+          için bu bloğu kullan.
+        set_length: '"Uzunluğu" doğru değerine ayarlamak için bu bloğu kullan.'
+        which_equation: Hangi denklem daha çok kenarı olan şekiller için her kenarı
+          daha kısa yapar?
+        get_nectar: Yeni "nektarı al" bloğunu kullan.
+        actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
+          artık burada.
+        draw_square_hint: 'İpucu: Son bulmacada yaptığın kare döngüsünü kullan.'
+        edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
+        create_function: '"Fonksiyonlar" açılır penceresini açmak için buraya tıkla,
+          ardından "Yeni bir fonksiyon oluştur" butonuna tıkla.'
+        house_hint: Resim henüz bir ev gibi görünmüyorsa sorun yok. Bunu sonraki bulmacada
+          düzelteceğiz.
+        edit_draw_square: Döngü eklemek ve fonksiyonu düzenlemek için bu butonu kullan.
+        edit_get_nectar: Fonksiyonu düzenlemek ve arıyı nektara ulaştırmak için yönünü
+          düzeltmekte bu butonu kullan.
+        logic_category: '"if/else" bloğunu bulmak için "Mantık" açılır penceresini
+          aç.'
+        length_parameter: Bu fonksiyonu güncelleyebilir misin? Böylece "uzunluk" parametresini
+          kullanabilir.
+        frozen_diamond_repeat: Bu şekli oluşturmak için yineleme bloğunu kullan.
+        frozen_circle_function_in_circle_turn: Her daireyi oluşturduktan sonra dönmeyi
+          unutma.
+        frozen_circle_function_with_parameter_circle: '"Bir daire oluştur" bloğunu
+          kullan ve ölçüyü değiştir.'
+        frozen_snowflake_branch: '"Kar tanesi dalı oluştur" bloğunu kullan'
+        frozen_create_square: Kare oluşturmak için daha fazla blok ekle
+        playlab_drag_say: '"de" blokunu buraya sürükleyin ve "merhaba" yazın'
+        playlab_use_twice: Bu blok ikilisini kullan ve oyuncunun numarasını değiştirmeyi
+          unutma
+        playlab_move_girl: Tenisçi kızı yürütmek için "sağa git" bloğunu kullan
         playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
+        playlab_arrow_keys: Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
+          kullanmayı unutma
         playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
         playlab_add_score: Skor bloklarını buraya ekle
         playlab_add_blocks: Bloklarını buraya ekle
         set_variable: Değişkenini atamak için bir sayı bloğunu buraya sürükle
         place_variable: Değişkenini bloğun içine sürükle
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        bee_for_loop: Arının toplaması için nektar sayısını istediğiniz sayıya sürükleyin
+        place_counter_variable: Sayaç değişkenini bu blokun içine sürükle
+        function_editor_draw_square: Bu, fonksiyonunuzun tanımı. Bu bloklar "kare
+          çiz" bloğunu her kullandığınız zaman çalışır
         change_here: Değişikliği burada yap
         write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
           sürükle
         write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
           sürükle
         edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
+        add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
+          ve ardından fonksiyonunuzun tanımına sürükleyin
+        fill_in_actor: '"???" kısmını her oyuncuya karşılık gelen sayılarla (1,2 ve
+          3) doldurun'
+        repeat: Komutları tekrarlamak için blokları döngünün içine sürükleyin
+        if_bee_nectar: Arının nektarı alması gerekiyorsa "if" bloğunu kullanın
+        if_else_bee: '"if/else" bloğunu kullan, böylece arı bir çiçekten nektarı alır
+          ve "eğer" çiçek değilse bal yapar'
+        repeat_full_circle: Zombinin kaç kez tam daire yapacağını girin
         place_length_variable: Soru işaretlerinin yerine uzunluk değişkenini sürükle
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
         right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
         name_function: Fonksiyonunun ismini buraya yaz
+        Infinity_move_right_runbutton: Add move block here
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+        Infinity_repeat_callout: Place Move blocks inside here

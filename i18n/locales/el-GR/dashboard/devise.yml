@@ -55,3 +55,22 @@ el:
       not_saved:
         one: '1 σφάλμα απέτρεψε το  %{resource} να αποθηκευτεί:'
         other: '%{count} σφάλματα απέτρεψαν την αποθήκευση του %{resource}:'
+    invitations:
+      send_instructions: 'Έχει αποσταλεί ένα email πρόσκληση στο %{email}.'
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: Δεν απομένουν άλλες προσκλήσεις
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Αποστολή πρόσκλησης
+        submit_button: Στείλτε μια πρόσκληση
+      edit:
+        header: Ορισμός κωδικού πρόσβασης σας
+        submit_button: Ορισμός κωδικού πρόσβασης μου
+    mailer:
+      invitation_instructions:
+        subject: Οδηγίες πρόσκλησης
+        hello: 'Γεια σας %{email}'
+        someone_invited_you: 'Κάποιος σας προσκάλεσε στο %{url}, μπορείτε να την αποδεχτείτε μέσω του παρακάτω συνδέσμου.'
+        accept: Αποδοχή πρόσκλησης
+        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."

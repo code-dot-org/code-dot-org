@@ -3,273 +3,281 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Miresevini ne oren tuaj te pare te kodimit! Te te zhytemi ne shijimin
-          e tuaj te pare te programimit.
+        text: Mirësevini ne orën tuaj të parë të kodimit! Le të zhytemi në shijen
+          tuaj të parë të programimit.
       2:
         image: notes/hoc1_2.jpg
-        text: Do te perdorim nje gjuhe programimi vizuale te quajtur Blockly, ku mund
-          te terheqim e leshojme blloqe per te shkruajtur kode.
+        text: Do të përdorim një gjuhë programimi vizuale të quajtur Blockly, ku mund
+          të lëvizim blloqe për të shkruajtur kod.
       3:
         image: notes/hoc1_3.jpg
-        text: Kodi shkruhet, por Blockly eshte menyre paraqitjeje vizuale. Cdo bllok
-          i korrespondon nje rreshti kodi real.
+        text: Shumica e kodit shkruhet, por Blockly është mënyrë paraqitjeje vizuale.
+          Çdo bllok i korrespondon një rreshti real kodi.
       4:
         image: notes/hoc1_4.jpg
-        text: You'll learn the foundations of computer science, concepts which are
-          used anywhere from making apps to controlling the Mars rover.
+        text: Ti do mësosh bazat e shkencës kompjuterike, konceptet, të cilat janë
+          përdorur kudo, nga krijimi i aplikacioneve tek kontrolli i makinës në Mars.
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: Një program është një grumbull udhëzimesh që ndjek kompjuteri juaj.
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze
-          to hit a Green Pig.
+        text: Qëllimi i programit tuaj të parë, është të çojë një Angry Bird ndërmjet
+          një tuneli për të gjuajtur një Derrkuc të Gjelbër.
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions
-          for each puzzle are below the maze.
+        text: Ana e majtë është tuneli ku ekzekutohet programi juaj. Udhëzimet për
+          çdo puzzle janë poshtë tunelit.
       8:
         image: notes/hoc1_8.jpg
-        text: The middle toolbox has the commands for the Angry Bird. You'll use these
-          to build your code.
+        text: Toolbox-i i mesit ka komandat e Angry Bird. Ti do të përdorësh ato për
+          të ndërtuar kodin tënd.
       9:
         image: notes/hoc1_9.jpg
-        text: On the right is your workspace where you'll drag blocks from the toolbox
-          to build your program. To delete a block, drag it to the trash in the corner.
+        text: Djathtas është vendi tënd i punës ku ti do lëvizësh blloqet nga toolboxi
+          për të ndërtuar programin tënd. Për të fshirë një bllok, lëvize atë tek
+          koshi në cep.
       10:
         image: notes/hoc1_10.jpg
-        text: Each block is one instruction. If you drag a "move forward" block to
-          your workspace and press "Run Program", the bird moves one space on the
-          maze.
+        text: Çdo bllok është një udhëzim. Nëse ti lëviz një bllok "move forward"
+          tek zona jote e punës dhe shtyp "Run Program", zogu do lëvizë një hapësirë
+          në tunel.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many block to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: Për të bërë më shumë se një veprim, ti mund të lëvizësh shumë blloqe
+          tek zona jote e punës dhe bashkoji ato bashkë. Zogu do bëjë komandat nga
+          lart poshtë.
       12:
         image: notes/hoc1_12.jpg
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
+        text: Nëse ti ekzekuton një program dhe dëshiron ta rregullosh atë dhe ta
+          përsërisësh, shtyp butonin "Reset".
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: Le të shkojmë ti kapim ata derrkuca!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: Pëshëndetje! Unë jam JR! Çdo ekip garash makine ka nevojë shkencëtarë
+          kompjuterash për të fituar. Ata analizojnë të dhëna nga makina për ta bërë
+          atë të ecë më shpejt.
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: Në këto puzzle-a. ti do të jesh një artist që vizaton një vijë mbrapa
+          atyre kudo që shkojnë ata.
       3:
         image: notes/stage5_3.jpg
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
+        text: Ky bllok thotë "move forward by 100 pixels". Pikselat janë pika vërtet
+          të vogla në ekranin tënd.
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: Ky bllok thotë "turn right by 90 degrees." Kjo do të kthejë artistin
+          tënd në të njëjtën sasi si blloqet "turn" në puzzle-at maze.
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
+        text: Kliko tek shigjeta në secilën nga këto blloqe për të ndryshuar vlerën
+          e artistit kur ecën përpara ose kthehet. Luaj për tu familjarizuar me këto
+          blloqe të reja.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
-          field completely flat to start planting crops.
+        text: Përshëndetje, unë jam Paola! Në këto puzzle, ti je një fermer, i cili
+          duhet të bëjë fushën komplet të sheshtë për të filluar mbjelljen e prodhimeve.
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
+        text: Ti duhet ta ndihmosh atë të heqë të gjithë grumbujt me dhe dhe të mbushë
+          të gjitha gropat.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: Blloku i ri heq 1 lopatë dhe nga grumbulli dhe mbush me të një gropë.
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
+        text: Grumbujt dhe gropat janë të madhësive të ndryshme, kështu që ti duhet
+          ti thuash fermerit se sa lopata duhet të përdorë.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Përshëndetje, unë jam Katie! Një nga gjërat më emocionuese rreth shkencës
+          kompjuterike është që një program kompjuterik mund të jetë interaktiv.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: Çdo moment kur dikush klikon ose shtyp në një kompjuter ose telefon,
+          kjo do gjenerojë një EVENT, dhe ka pjesë kodi që vendosin çfarë bëhet kur
+          ndodh një EVENT.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'Për shembull, ti mund të kesh një EVENT-HANDLER që thotë "kur mouse
+          klikohet, luaj një muzikë" '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: A ke dëgjuar ndonjëherë për lojën FlappyBird? Duke përdorur Event handlers,
+          ne do të mësojmë të programojmë versionin tonë të FlappyBird!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: Kodi që do shkruash përfshin lëvizjen e blloqeve që përfaqësojnë komandat
+          për kompjuterin. Në të vërtetë, secili nga këto blloqe përfaqësohet nga
+          kodi i vërtetë.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Nëse hedh një vështrim tek vendi jot i punës, ka disa blloqe të gjelbër
+          që janë mbushur për ty - këto janë "event handlers" '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: Nëse do që zogu të PËRPLASET kur ti KLIKON mouse-in, ti mund ta bësh
+          atë duke bashkuar bllokun "FLAP" tek event handler-i i përshtatshëm dhe
+          tani në lojën tënde kurdo që ti klikon mouse-in, zogu do përplaset.
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: Në çdo puzzle të këtij aktiviteti ne do të prezantojmë tipe të reja
+          eventesh si blloqe të gjelbra në vendin tënd të punës, dhe ti mund të vendosësh
+          blloqet e përshtatshëm për ti shtuar në përgjigje të këtyre eventeve.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: Kur të shohësh një shigjetë drop down si kjo, kjo nënkupton që ti mund
+          të ndryshosh konfigurimet - si për shembull çfarë muzike të luash kur flappy
+          prek tokën.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: Në puzzle përfundimtar, ti do të kesh mundësi të krijosh lojën tënde
+          dhe ta ndash atë me shokët e tu. Bëfsh qejf!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer
-          to repeat any set of actions over and over, thousands or even billions of
-          times.
+        text: Përshëndetje, unë jam Mark! Le të mësojmë rreth cikleve. Duke përdorur
+          ciklet, ti mund ti thuash kompjuterit të përsërisë një grup veprimesh herë
+          pas here, mijëra ose biliona herë.
       2:
         image: notes/hoc2_2.jpg
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get
-          to the pig.
+        text: Në këtë puzzle, ne duam të bëjmë zogun që të ecë 5 hapësira përpara
+          për të arritur derrkucin.
       3:
         image: notes/hoc2_3.jpg
-        text: We can use the new "repeat" block to help us out.
+        text: Ne mund të përdorim bllokun e ri "repeat" për të na ndihmuar.
       4:
         image: notes/hoc2_4.jpg
-        text: Instead of dragging out 5 "move forward" blocks...
+        text: Në vend që të lëvizësh 5 blloqe "move forward"...
       5:
         image: notes/hoc2_5.jpg
-        text: We can put the "move forward" block inside the "repeat" block and write
-          a number in the block to tell it how many times to repeat.
+        text: Ne mund të vendosim bllokun "move forward" brenda bllokut "repeat" dhe
+          shkruaj një numër në bllok për ti thënë sa herë të përsëritet.
       6:
         image: notes/hoc2_6.jpg
-        text: 'And this is important: you can put more than one command inside a "repeat"
-          block.'
+        text: 'Dhe kjo është e rëndësishme: ti mund të vendosësh më shumë se një komandë
+          brenda bllokut "repeat".'
       7:
         image: notes/hoc2_7.jpg
-        text: Enjoy using your new "repeat" block!
+        text: Argëtohu duke përdorur bllokun tënd të ri "repeat"!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: Përshëndetje, unë jam Chris. Përpara se të bashkohesha me Miami Heat,
+          unë shkova në Georgia Tech për të studiuar Shkenca Kompjuterike. Le të provojmë
+          bllokun tonë të ri "repeat until".
       2:
         image: notes/hoc3_2.jpg
-        text: What if we didn't know how far the bird had to move to get to the pig?
+        text: Po sikur ne nuk do e dinim sa larg duhej të lëvizte zogu për të arritur
+          te derrkuci?
       3:
         image: notes/hoc3_3.jpg
-        text: If we put a "move forward" block inside the "repeat until" block, the
-          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
+        text: Nëse ne vendosim një bllok "move forward" brenda bllokut "repeat until",
+          zogu do të ecë përpara DERISA të arrijë derrkucin (ose të përplaset me ndonjë
+          mur).
       4:
         image: notes/hoc3_4.jpg
-        text: 'And this is important: just like before, we can put multiple blocks
-          inside the "repeat until" block, and they will all be repeated.'
+        text: 'Dhe kjo është shumë e rëndësishme: si më përpara, ne mund të vendosim
+          blloqe të shumtë brenda bllokut "repeat until" dhe të gjithë do të përsëriten.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
-          This is how computers make decisions.'
+        text: 'Përshëndetje, unë jam Bill! Le të mësojmë një koncept bazë: deklaratat
+          "If". Kjo është se si kompjuterat marrin vendime.'
       2:
         image: notes/hoc4_2.jpg
-        text: You use "If" statements yourself everday. Before you go outside each
-          morning, you say IF it's raining outside, I need to wear my jacket.
+        text: Ti i përdor deklaratat "If" vetes çdo ditë. Përpara se të dalësh çdo
+          mëngjes, ti thua NËSE është duke rënë shi jashtë, unë duhet të vesh xhaketën
+          time.
       3:
         image: notes/hoc4_3.jpg
-        text: We can tell the zombie to check IF there's path to the left, and if
-          he finds a path to the left, we can have him turn in that direction.
+        text: Ne mund ti themi zombie-t të kontrollojë NËSE ka rrugë nga e majta,
+          dhe nëse gjen një rrugë majtas, ne mund ta bëjmë atë të kthehet në atë drejtim.
       4:
         image: notes/hoc4_4.jpg
-        text: To write the code for this, let's drag out our "if" block and put a
-          "turn left" block inside it.
+        text: Për të shkruar kodin për këtë, le të zhvendosim bllokun tonë "if" dhe
+          vendosim një bllok "turn left" brenda tij.
       5:
         image: notes/hoc4_5.jpg
-        text: Now, if we put a "move forward" block above it and a "repeat" block
-          around everything, each time the zombie moves, he'll check if there's a
-          path to the left and turn. The "repeat" command is critical, to check for
-          a turn at every step.
+        text: Tani, nëse ne vendosim një bllok "move forward" mbi atë dhe një bllok
+          "repeat" për rreth çdo gjëje, çdo herë lëviz zombie, ai do të kontrollojë
+          nëse ka rrugë majtas dhe kthehet. Komanda "repeat" është kritike, për të
+          kontrolluar për një kthim në çdo hap.
       6:
         image: notes/hoc4_6.jpg
-        text: If statements are really important in computer science. One of the first
-          programs I wrote was a tic-tac-toe game, and there was a If statement that
-          said IF the other person is about to win, block the spot that lets them
-          win.
+        text: Përcaktimet If janë shumë të rëndësishme në shkencën kompjuterike. Një
+          nga programet e para që shkruajta ishte një lojë tic-tac-toe, dhe ishte
+          një përcaktim If që thoshte NËSE personi tjetër po fiton, blloko vendin
+          që le atë të fitojë.
       7:
         image: notes/hoc4_7.jpg
-        text: Have fun using the "if" block!
+        text: Argëtohu duke përdorur bllokun "if"!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: Përshëndetje, emri im është Saloni. Unë përdor shkencën kompjuterike
+          për të ndihmuar në zgjidhjen e problemeve në shëndet dhe mjekësi. Le të
+          mësojmë rreth bllokut "if else". Duket si blloku "if", por ka një pjesë
+          shtesë në fund që thotë "else".
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: Nëse unë vendos një bllok "move forward" në vendin ku thotë "do" dhe
+          një bllok "turn left" ku thotë "else" kjo do të thotë qe zombie do të zgjedhë
+          ndërmjet dy mundësive. NËSE ka rrugë përpara, zombie do të ecë përpara,
+          dhe PËRNDRYSHE (nëse nuk ka rrugë përpara), zombie do të kthehet majtas.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: Si blloku "if", ne mund të vendosim blloqet "if else" brenda një blloku
+          "repeat" në mënyrë që zombiet të vazhdojnë lëvizjen dhe blloku "if else"
+          do të vazhdojë të kontrollojë nëse ka për tu kthyer diku.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Tani, ço zombiet aty ku atyre ju takon!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: Një përcaktim if else është një vendim midis dy gjërave. Le të shohim
+          se si ne mund të përdorim një përcaktim if-else me shokun tonë, ketrin Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: Ky bllok duket njësoj me bllokun "if", por ka një pjesë shtesë në fund
+          që thotë "else". Nëse unë vendos një bllok "move forward" ku thotë "do"
+          dhe një bllok "turn left" ku thotë "else", kjo nënkupton që ketri Scrat
+          do të ecë përpara nëse ka rrugë. Nëse nuk ka rrugë, Scrat do kthehet majtas.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Të marrësh një vendim dhe të bësh një nga dy vendimet bazuar në atë
+          vendim. Dhe njësoj si blloqet "if", ti mund të vendosësh blloqet "if-else"
+          brenda blloqeve "repeat".
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Tani, le ta ndihmojmë ketrin Scrat të marrë atë lajthi!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
-          of code that you want to use over and over again, so instead of writing
-          that code out everytime, you can just use one block.
+        text: Përshëndetje, unë jam Brina, një inxhiniere tek Instagram. Një funksion
+          është një kod me rreshta që ti do ti përdorësh disa herë, kështu që në vënd
+          të shkruash atë kod gjithë ato herë, ti mund të përdorësh një bllok.
       2:
         image: notes/stage13_2.jpg
-        text: We're going to learn how to define functions. Function definitions have
-          a star in the corner. The name of the function is written on the top line.
+        text: Ne do të mësojmë si të përcaktojmë funksionet. Përcaktimet e funksionit
+          kanë një yll në cep. Emri i funksionit shkruhet në rreshtin kryesor.
       3:
         image: notes/stage13_3.jpg
-        text: The blocks that go inside the definition tell us what it does. So this
-          function definition is called "fill 5" and it's made up of a "repeat" block
-          and a "fill" block.
+        text: Blloqet që shkojnë brenda përcaktimit na thotë cfarë të bëjmë. Kështu
+          që përcaktimi i funksionit quhet "mbush 5" dhe përbëhet nga blloku "repeat"
+          dhe blloku "fill".
       4:
         image: notes/stage13_4.jpg
-        text: The definition sits on the workspace, but our farmer won't run the function
-          until we drag out our "fill 5" function block from functions category.
+        text: Pëcaktimi qëndron në zonën tënde të punës, por fermeri ynë nuk e ekzekuton
+          funksionin derisa ne të lëvizim bllokun e funksionit tonë "fill 5" nga kategoria
+          funksioneve.
       5:
         image: notes/stage13_5.jpg
         text: Let's put the "fun" back in "FUNction!"
@@ -279,288 +287,298 @@
         text: Hi, I'm Makinde! Let's learn about the "while block."
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: Blloku "while" do bëjë gjithçka që ti vendos brenda atij PËR SA KOHË
+          që përcaktimi lart është I VËRTETË.
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: Për shembull, nëse fermeri është duke qëndruar në një grumbull, ajo
+          do të vazhdojë të heqë 1 lopatë NDËRKOHË që ka ende një gropë rreth saj.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: Përshëndetje, unë jam Trina dhe punoj për Pixar. Kam punuar në shumë
+          filma, duke përfshirë Shrek.
       2:
         image: notes/stage11_2.jpg
-        text: This is our new "counter" loop. It will perform actions over and over
-          again and you can make the actions change slightly each time.
+        text: Ky ështëcikli ynë i ri "counter". Do të kryejë veprime herë pas here
+          dhe ti mund ti ndryshosh veprimet çdo herë nga pak.
       3:
         image: notes/stage11_3.jpg
-        text: In this example, our "counter" loop says "count with counter from 50
-          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
-          "counter" block from the "Variables" section into the "length" spot.
+        text: Në këtë shembull, cikli jonë "counter" thotë "numëro me numëruesin nga
+          50 tek 90 me 10" dhe brenda tij ne kemi një bllok "draw a square". Lëviz
+          bllokun "counter" nga pjesa "Variablave" në vendin e "gjatësisë".
       4:
         image: notes/stage11_4.jpg
-        text: This means our artist is going to draw a square that has 50 pixel length
-          sides, then it will add 10 to that and draw a square with 60 pixel length
-          sides. Then it will keep adding 10 and drawing squares until it reaches
-          90. So we'll have squares of 50, 60, 70, 80, and 90.
+        text: Kjo nënkupton që artisti jonë do të vizatojë një katror që ka gjatësi
+          brinjësh 50 piksela , më pas do të shtojë 10 tek ajo dhe do të vizatojë
+          një katror me gjatësi brinjësh 60 piksela. Më pas do vazhdojë të shtojë
+          nga 10 dhe të vizatojë katorrë derisa të arrijë 90. Kështu që ne do kemi
+          katrorë 50, 60, 70, 80 dhe 90.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: Përshëndetje, unë jam Janete dhe jam inxhiniere tek Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths
-          be different sizes?
+        text: Po nëse ne duam të vizatojmë një grup trekëndorësh dhe ti kemi me madhësi
+          të ndryshme?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
+        text: Ne mund të shkruanim gjithe kodin me dorë ose ne mund të përdorim një
+          funksion me parametra.
       4:
         image: notes/stage15_4.jpg
-        text: To do this, click the blue star on the "draw a triangle" function definition.
-          Then drag "input name" into the "input" block.
+        text: Për ta bërë këtë, kliko yllin blu në përcaktimin e funksionit "draw
+          a triangle". Më pas, ço bllokun "input name" në bllokun "input".
       5:
         image: notes/stage15_5.jpg
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
+        text: Më pas, nëse ti shkruan "gjatësi" në vendin ku thotë "x" dhe shtyp "Enter",
+          ti do të krijosh një length input për funksionin tënd.
       6:
         image: notes/stage15_6.jpg
-        text: Then click on the star. Now, you want to click on the variables category
-          and drag the "length" block into the "move forward" block of your function
-          definition. And drag away the old number block.
+        text: Më pas kliko tek ylli. Tani, ti dëshiron të klikosh në kategorinë e
+          variablave dhe të lëvizësh bllokun "gjatësi" në bllokun "move forward" të
+          funksionit tënd.  Dhe hiq bllokun e numrit të vjetër.
       7:
         image: notes/stage15_7.jpg
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
+        text: Për të përdorur funksionin tënd me parametra, kliko në kategorinë e
+          funksioneve dhe lëviz funksionin tënd " draw a triangle with length".
       8:
         image: notes/stage15_8.jpg
-        text: Now you can use the math block to input different numbers to draw triangles
-          of different sizes.
+        text: Tani ti mund të përdorësh bllokun e matematikës për të futur numra të
+          ndryshëm, që të vizatos trekëndorë me madhësi të ndryshme.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
+        text: Urime! Me puzlle-in e fundit që zgjidhe, ti sapo shkruajte kodin që
+          mund ti thuash ÇDO pajisje se si të gjejë rrugën e tij midis një maze ose
+          tuneli të pa-degëzuar të çdo gjatësie, edhe nëse është një zombie, një zog,
+          një makinë marsi ose edhe një makinë që e nget vetë.
       2:
         image: notes/hoc6_2.jpg
-        text: The basic concepts you used are at the heart of every program or app
-          you'll ever try.  We learned about repeat loops, repeat until statements,
-          if statements, and if else statements.
+        text: Konceptet bazë që ti përdore, janë zemra e çdo programi ose apliakcioni
+          që ti do provosh gjithmonë.  Ne mësuam rreth cikleve përsërit, përcaktimeve
+          pësërit derisa, përcaktimeve nëse dhe përcaktimeve if else.
       3:
         image: notes/hoc6_3.jpg
-        text: If you liked your first hour of code, visit code.org to continue your
-          education into computer science! Once you complete our 20 hour course, you'll
-          have mastered the basics of programming, and can start learning how to write
-          phone apps, robot instructions, games, you name it.
+        text: Nëse ti e pëlqeve orën tënde të parë të kodimit, vizito code.org për
+          të vazhduar edukimin tënd në shkenca kompjterike! Sapo ti të përfundosh
+          kursin tonë prej 20 orësh, ti do të kesh përvetësuar bazat e programimit
+          dhe mund të fillosh të mësosh se si të shkruah aplikacione telefoni, instruksione
+          robotike, lojëra, përcaktoje vetë.
       4:
         image: notes/hoc6_4.jpg
-        text: 'Technology is changing everything we do and it doesn''t matter if you''re
-          young or old: programming is fun, it''s creative, and anyone can learn!'
+        text: 'Teknologjia po ndryshon gjithçka që ne bëjmë dhe nuk ka rëndësi nëse
+          je i ri apo i vjetër: programimi është argëtues, kreativ dhe mund ta mësojë
+          kushdo!'
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Show notes coming soon!
+        text: Shfaq shënimet vjen së shpejti!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Përshëndetje, emri im është Lyndey. Unë modeloj, aktroj dhe shkruaj
+          aplikacionet e mia. Le të përdorim kod për të lidhur Anna-n dhe Elsa-n ndërkohë
+          që ato eksplorojnë magjinë dhe bukurinë e akullit.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Ti do të krijosh flokë dëbore dhe modele ndërkohë që patinon dhe bën
+          një magji dimërore që mund ta ndash më pas me shokët e tu.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Në orën tjetër, ti do të mësosh bazat se si të kodosh. Programimi tradicional
+          është zakonisht në tekst, por ne do të përodrim Blockly, që përdor blloqe
+          të dukshëm që ti mund ti lëvizësh sa andej këndej për të shkruar programe.
+          Kjo është se si studentët e universiteteve mësojnë bazat. Ti gjithsesi je
+          duke krijuar kod.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Një program është një grup udhëzimesh që i thotë kompjuterit çfarë të
+          bëjë. Le të ndërtojmë një kod ose një program që do ndihmojë Elsan të krijojë
+          një rresht të thjeshtë. Ne do ta përdorim këtë më vonë për të krijuar modele
+          më komplekse.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Ekrani jot është ndarë në 3 pjesë kryesore. Majtas, është hapsira e
+          akullit ku ti do ekzekutosh programin tënd. Udhëzimet për çdo nivel janë
+          shkruar poshtë hapsirës.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Kjo fushë e mesit është toolboxi dhe secili nga këto blloqe është një
+          veprim që mund të bëjë Anna dhe Elsa.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Hapsira  e bardhë në të djathtë quhet zona e punës dhe këtu ne do të
+          ndërtojmë programin tonë. Për të lëvizur rreth sipërfaqes së akullt, ti
+          do të përdorësh bllokun "Move forward".
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: Këtu, blloku "Move forward" thotë, "move forward by 100 pixels." Kur
+          ne shtypim "Run", çfarë ndodh? Elsa ecën përpara në një masë të caktuar
+          në ekran, 100 piksela në fakt! Pikselat janë shumë katrorë të vegjël në
+          ekranin e kompjuterit tënd.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Blloku tjetër që ne kemi në këtë puzzle thotë "turn right by 90 degrees."
+          Dhe kur ta përdorim këtë bllok "Turn Right", që bën Elsën të kthehet në
+          një masë të caktuar. Mund të luash se sa larg do që të kthehet Elsa. Këndi
+          matet nga rruga përpara Elsës. Kështu që ky është një kthim 90 gradësh.
+          Dhe ky, është një kthim 120 gradësh.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Kujtohu, ti mund të ndryshosh numrin e pikselave dhe gradët duke klikuar
+          shigjetat anash tyre.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Përshëndetje, unë jam Paola! Kompjuterat janë vërtet të mirë në përsëritjen
+          e veprimeve. Ti mund të numërosh në 10, 20 ose 100. Por, një kompjuter mund
+          të numërojë deri në biliona ose trilona. Nuk do mërzitet dhe do e bëjë për
+          pak sekonda. Edhe nëse është duke numëruar ose vizatuar ose diçka tjetër--kompjuterat
+          mund të përsërisin gjëra në qindra ose madje edhe biliona herë.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: Në programim, ne e quajmë këtë një cikël. Nj cikël është se si ti e
+          përsërit kodin tënd herë pas here. Për puzzle-in tënd, çelsi jot është të
+          ndihmosh Anna-n të krijojë një katror me bllokun "Repeat".
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Çdo bllok kodi që ti fut brenda bllokut "Repeat" do të përsëritet në
+          sekuencë, aq herë sa ti dëshiron.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Për të vizatuar një katror, ti mund të përdorësh bllokun "Move Forward"
+          dhe "Turn right" 4 herë. Por, mënyra më e lehtë është ti thuash kompjuterit
+          "Move Forward" dhe "Turn right by 90 degrees" njëherë, dhe më ps thuaji
+          të përsërisë këtë grup veprimesh 4 herë. Për ta bërë këtë, ti duhet të vendosësh
+          bllokun "Move Forward" dhe "Turn right" brenda një blloku "Repeat".
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Kujtohu, ti mund të ndryshosh numrin në bllokun "Repeat" në çfarëdo,
+          dhe ti do të përsërisësh çfarë ka brenda bllokut shumë herë.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Përshëndetje, unë jam Chris Bosh. Unë jam një basketbollist profesionist
+          dhe kodoja në kolegj.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Një nga konceptet më të rëndësishme në shkencën kompjuterike është se
+          si të përcaktojë komandat e reja. Shumë gjuhë kompjuterike kanë vetëm 100
+          fjalë ose komanda. Dhe me të vërtetë, arti dhe magjia është në përcaktimin
+          e fjalëve të tua të reja jashtë nga ndërtimi i blloqeve.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Sapo ti i mëson një kompjuteri se si ta bëjë një veprim njëherë duke
+          përdorur këtë sekuencë komandash, ti mund të bësh emrin tënd për atë veprim
+          kështu që është e lehtë për ta përsëritur më vonë.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Përshëndetje, unë jam Jess. Kur programon me blloqe, ti do të përdorësh
+          funksionet if. Janë një grup veprimesh që ti do dëshirosh ti përdorësh shumë
+          herë. Për shembull, ti ke shkruar kod për të krijuar një katror.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Ti mund të përcaktosh këtë si një funksion të quajtur "create a square." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Tani ke një bllok të ri që ti mund ta përdorësh disa herë për të krijuar
+          katrorë të shumëfishtë.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Shumë forma të thjeshta mund të përdoren për të krijuar modele shumë
+          më të komplikuara. Në puzzle-in tjetër, kodi që ti sapo shkruajte për të
+          bërë një rreth është i vlefshëm për ty si një funksion i ri që mund të bëjë
+          rrathë të madhësive të ndryshme. A mund ta përdorësh atë për të ndihmuar
+          Elsa-n të krijojë modele të ndërlikuara edhe të bukura në dëborë?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Deri tani ti ke qënë duke bërë një animim ose një histori që bën të
+          njëjtën gjë sa herë që ti ekzekuton atë. Tani ti mund të bësh një lojë interaktive
+          që ti mund ta luash.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Këtu është blloku "when arrow" dhe blloku "move actor." Ti mund ti vendosësh
+          këto blloqe bashkë për të lëvizur aktorët rreth e rrotull me tastat e shigjetave.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: Dhe ka disa blloqe që bëjnë gjëra kur aktorët përplasen ose klikohen.
+          Shikoji dhe argëtohu!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Ne do të krijojmë lojëra duke përdorur Play Lab. Lojrat e mira kanë
+          një histori dhe çdo histori ka aktorë. Ne do të mësojmë si ti bëjmë aktorët
+          tanë si magjistarë, alienë, dhe kafshë që flasin, të lëvizin dhe të bashkëveprojnë
+          me njëri tjetrin. Në fund të këtij tutoriali, ti mund të ndërtosh një lojë
+          dhe ta shpërndash me shokët e tu.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Ekrani jot është ndarë në 3 pjesë kryesore. Në të majtë është hapsira
+          e lojës ku do ekzekutohet programi jot. Udhëzimet për çdo nivel janë shkruar
+          poshtë.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Hapsira e mesit është toolboxi dhe secili nga këto blloqe është një
+          pjesë kodi. Hapsira e bardhë djathtas quhet zona e punës dhe këtu ne do
+          të ndërtojmë programin tonë.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Për të filluar, ti duhet të lidhësh blloqet e tua tek blloku portokalli
+          "when run". Ti mund të lidhësh shumë blloqe bashkë duke i lëvizur ato derisa
+          ti të shohësh vijën e verdhë dhe më pas ato do të lidhen bashkë.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Në këtë puzzle të parë, aktori jonë është një pinguin dhe ne do ta bëjmë
+          atë të thotë "Përshëndetje!" duke lëvizur bllokun, duke e lidhur atë me
+          bllokun "when run" dhe duke shtypur "Përshëndetje." Ne, gjithashtu, mund
+          të bëjmë pinguinin të lëvizë duke përdorur blloqet "move right" dhe "move
+          left". Sapo ti ke vendosur blloqet në vend, shtyp butonin "Run" për të parë
+          se çfarë ke programuar.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Fillo dhe deri në fund, ti do të kesh mundësinë të krijosh lojën tënde
+          me të gjithë llojet e lojtarëve qëmund të bashkëveprojnë, të bëhen të lumutr
+          ose të mërzitur, të shënosh pikë ose të hedhësh topa zjarri, ose madje edhe
+          të zhdukësh secilin. Është e gjitha në dorën tënde dhe në lojën që ti dëshirosh
+          të bësh.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Tani, ne do të mësojmë rreth diçkaje që të gjithë programuesit e lojërave
+          përdorin çdo ditë. Ato quhen evente. Një event i thotë programit tënd të
+          dëgjojë kur diçka ndodh. Kur ajo ndodh, kryen një veprim.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Disa she,buj eventesh janë duke dëgjuar për një klikim muse, një buton
+          shigjete ose një shkelje në ekran.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Këtu, ne do të bëjmë një anije kozmike të përshëndesë tokësorët kur
+          një lojtar klikon në të. Ne do të përodrim bllokun "when clicked" dhe do
+          bashkojmë bllokun "say" me të. Kur lojtari klikon në anijen kozmike, gjithçka
+          e bashkuar me këtë bblok eventi "when clicked", do të kryhet. Çfarë thotë
+          alieni jot?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Ka gjithashtu blloqe "when arrows". Nëse ti lidh blloqet "move" me ato,
+          ti mund të fillosh ti lëvizësh aktorët lart, poshtë, majtas ose djathtas.
+          Hap pas hapi, loja jote është duke u bërë më interaktive.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Ky është blloku "repeat forever". Gjithçka brenda këtij blloku do të
+          ndodhë gjiithmonë në lojë.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Nëse ne duam një aktor të bëjë diçka në mënyrë të herë pas hershme,
+          pa bërë asgjë lojtari, ne do të vendosim këto blloqe brenda bllokut "repeat
+          forever".
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: Në këtë puzzle-in tjetër, qëllimi jonë është të ndihmojmë magjistarin
+          të patrullojë kufijtë e mbretërisë, majtas dhe djathtas vazhdimisht. Duke
+          mësuar se si komandat repeat punojnë, do të ruajnë ty shumë kohë kur ti
+          të ndërtosh lojën tënde.

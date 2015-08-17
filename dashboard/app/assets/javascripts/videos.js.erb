@@ -1,7 +1,12 @@
+//= require ../../../../shared/js/url_test/url_test.js
 
-function createVideoWithFallback(options, width, height) {
+function createVideoWithFallback(parentElement, options, width, height) {
+  upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
+  if(parentElement) {
+    parentElement.append(video);
+  }
   setupVideoFallback(options, width, height);
   return video;
 }
@@ -19,6 +24,7 @@ function createVideo(options) {
 //   name - a string.
 //   redirect - the redirect page after the video is dismissed.
 function showVideoDialog(options) {
+  upgradeInsecureOptions(options);
   var widthRatio = .8;
   var heightRatio = .8;
   var aspectRatio = 16 / 9;
@@ -69,7 +75,7 @@ function showVideoDialog(options) {
   var download = $('<a/>').append($('<img src="<%= asset_path 'download_button.png' %>"/>'))
       .addClass('download-video')
       .attr('href', options.download);
-  var nav = $('.ui-tabs-nav');
+  var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
   // Resize modal to fit constraining dimension.
@@ -125,6 +131,7 @@ function stopTrackingVideoJSProgress() {
   fallbackPlayer.stopTrackingCurrentTime();
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
   shouldStillAddCallback = shouldStillAddCallback || function() { return true };
 
@@ -146,16 +153,17 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
 }
 
 function onYouTubeBlocked(callback) {
-  onURLBlocked(youTubeAvailabilityEndpointURL(), callback);
+  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
 }
 
 function youTubeAvailabilityEndpointURL() {
   if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
-    return 'http://unreachable-test-subdomain.example.com/favicon.ico'
+    return 'https://unreachable-test-subdomain.example.com/favicon.ico';
   }
   return "https://www.youtube.com/favicon.ico";
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
   var playerCode =
@@ -169,7 +177,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       '</video></div>';
 
   // Swap current #video with new code
-  replaceWithElement('video', playerCode);
+  $('#video').replaceWith(playerCode);
 
   videojs.options.flash.swf = "<%= asset_path("video-js.swf") %>";
   videojs.options.techOrder = ["flash", "html5"];
@@ -208,4 +216,14 @@ function getShowNotes(key, container) {
     url: '/notes/' + key,
     success: callback
   });
+}
+
+// Convert http:// video urls to protocol-relative // urls to prevent mixed-content loads on https pages.
+function upgradeInsecureOptions(options) {
+  if(options.src) {
+    options.src = options.src.replace(/^http:\/\//, '//');
+  }
+  if (options.download) {
+    options.download = options.download.replace(/^http:\/\//, '//');
+  }
 }

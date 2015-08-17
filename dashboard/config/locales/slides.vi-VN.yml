@@ -46,9 +46,9 @@
           trong mê cung.
       11:
         image: notes/hoc1_11.jpg
-        text: Để làm nhiều hơn một hành động, bạn có thể kéo nhiều khối vào không
-          gian làm việc và gắn chúng với nhau. Con chim sẽ thực hiện những dòng lệnh
-          từ trên đến dưới.
+        text: để làm nhiều hơn một việc, bạn có thể kéo nhiều khối vào vùng làm việc
+          của bạn và gắn chúng vào với nhau. con chim sẽ thực hiện các dòng lệnh từ
+          trên xuống dưới.
       12:
         image: notes/hoc1_12.jpg
         text: Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi
@@ -223,20 +223,20 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Chào, tên tôi là Saloni. Tôi sử dụng khoa học máy tính để giúp giải
-          quyết các vấn đề sức khỏe và y học. Hãy tìm hiểu về các khối "if else".
-          Cũng giống như khối "if", nhưng nó có một phần phụ vào cuối là "else".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: Nếu tôi đặt một khối "di chuyển về phía trước" ở vị trí "làm" và một
-          khối "rẽ trái" ở vị trí "khác" có nghĩa là các zombie sẽ lựa chọn giữa 2
-          lựa chọn. Nếu có một con đường phía trước, zombie sẽ di chuyển về phía trước,
-          và nếu không (không có một con đường phía trước), zombie sẽ rẽ trái.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Giống như các khối "nếu", chúng tôi có thể đặt khối "nếu khác" bên trong
-          khối "lặp lại", zombie sẽ giữ di chuyển và các "nếu khối khác" sẽ kiểm tra
-          nếu có một nơi nào đó để chuyển, sẽ di chuyển theo hướng đó.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
         text: Now, get those zombies where they belong!

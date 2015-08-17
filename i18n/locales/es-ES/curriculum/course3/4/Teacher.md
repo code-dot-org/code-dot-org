@@ -6,17 +6,17 @@ title: Functional Suncatchers view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unplugged=>true, :title=> 'Functional Suncatchers',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to “abstract out” the details of their specific materials and create vague terms for an individual’s supplies. This use of generic placeholders is a wonderful introduction to variables.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -37,9 +37,9 @@ In this lesson, students will make a suncatcher out of string, beads, and a spec
 
 7) [Functional Skills Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,15 +47,15 @@ In this lesson, students will make a suncatcher out of string, beads, and a spec
   * Think about an artistic task in a different way
   * Interpret symbols as they relate to physical manipulatives
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * One foot of string, thread, or fishing line per student
   * 2-4 beads per student
@@ -65,14 +65,15 @@ In this lesson, students will make a suncatcher out of string, beads, and a spec
   * One [Skills Sheet](Activity4-FunctionalSuncatchers.pdf) per group
   * [Fun-ctional Skills Assessment](Assessment4-FunctionalSkills.pdf) for each student
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/VmIcnmPjNgw?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print one [Skills Sheet](Activity4-FunctionalSuncatchers.pdf) per group
   * Print one [Fun-ctional Skills Assessment](Assessment4-FunctionalSkills.pdf) for each student
   * Gather a variety of beading supplies as described above. (These can easily be found at craft warehouses, dollar stores, or even online.)
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -92,24 +93,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has two new and important words:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Function** - Say it with me: Func-shun   
 A piece of code that you can easily call over and over again
@@ -140,7 +141,7 @@ Begin by holding up your example suncatcher.
 
 Now you can move in to discussing how you made your sparkling piece of art.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -205,11 +206,11 @@ Now you can move in to discussing how you made your sparkling piece of art.
 > 
 > 6) Let the students get started on their suncatchers!
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -219,13 +220,13 @@ Now you can move in to discussing how you made your sparkling piece of art.
   * Can you think of anything else that we could group together once and call easily over and over again? 
       * What about the chorus of a song?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -238,7 +239,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -249,7 +250,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -267,7 +268,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
 ![](hskt.png)
 
-[/together]
+[/juntos]
 
 [standards]
 

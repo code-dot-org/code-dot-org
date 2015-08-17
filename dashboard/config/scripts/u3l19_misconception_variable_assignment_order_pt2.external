@@ -1,0 +1,83 @@
+name 'U3L19 - misconception variable assignment order pt2'
+title 'U3L19 - misconception variable assignment order pt2'
+description 'description here'
+
+markdown <<MARKDOWN
+# Misconceptions about variables
+
+## Explanation: 
+**What's happening here?**
+On the previous page you saw that the output of this code...
+<pre>
+var a = 3;
+var b = 7;
+a=b;
+b=a;
+write("The value of a is: " + a);
+write("The value of b is: " + b);
+</pre>
+
+was this...
+
+<pre>
+The value of a is: 7
+The value of b is: 7
+</pre>
+
+How could this be?
+
+First, let's point out that in this example we also showed you something new. We showed you that *you can set the value of a variable to the value of another variable.*  
+
+When you do something like this:
+<pre>a = b;</pre>
+it copies the *current* value of b into a.
+
+Notice that direction of assignment is always the same.  Whether you have...
+<pre>
+a = 7;
+</pre>
+or
+<pre>
+a = b;
+</pre>
+
+#### Key understanding:
+**...JavaScript always takes the *value* on the right, and *assigns* it into a variable on the left.**
+
+### Tip: read the = sign as "gets"
+
+Don't let the = sign confuse you into thinking that a = b is a statement of mathematical equality.  It's not. It's an instruction to move memory around.  One tip is to read the statement *a=b* as: ***a gets the value of b*** or just ***a gets b***.  Another example: read *a=b+7*  as ***a gets b plus 7*** and so on.  
+
+When you read the = sign as "gets", and say it out loud that way, you'll prevent confusing yourself, and other programmers will know what you're talking about.
+
+
+Back to the example.
+
+If this were math class these two statements would mean the same thing:
+<pre>
+a=b
+b=a
+</pre>
+But as a helpful reminder: THIS IS NOT MATH CLASS! In computer science it’s very different. 
+
+These are instructions to the computer. Each line of code executes one at a time, and changes the state of the world after each line is completed.
+
+**The key to understanding** is to realize that the value of **a** changes first THEN the value of **b** changes, but it uses the new value of **a**, the one that was set in the line before, not the original value it was set to.  
+
+Here is an animation that shows the state of things as each line of code executes.
+
+<img src="https://code.org/educate/csp/images/codeStudio/U3L19%20-%20overwriteVariables3.gif">
+
+## How could you have figured this out on your own?
+You actually already have the tools in your programming toolbelt to be able to figure these things out on your own...
+
+The technique is to insert write and console.log statements into the code to inspect the state of things for yourself.  
+
+This is a **major debugging technique** -- printing out information *for yourself* to make your program tell things about it while it's running.  Then once you're satisfied it works right, you might remove (or comment out) the statements that display all that extra information.
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue to see this debugging technique in action</a>
+
+
+
+MARKDOWN

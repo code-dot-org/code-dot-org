@@ -20,8 +20,11 @@ git pull
 ### Dashboard
 
 orig_dir=../../dashboard/config/locales
-loc_dir=../locales/en-US/dashboard
+loc_dir=../locales/source/dashboard
 mkdir -p $loc_dir
+
+# Pull in the levelbuilder made level instructions
+ruby ./lib/sync-instructions.rb
 
 # Special case the un-prefixed Yaml file.
 cp_in $orig_dir/en.yml $loc_dir/base.yml
@@ -32,11 +35,10 @@ for file in $(find $orig_dir -name '*.en.yml'); do
   cp_in $file $loc_dir${relname%.en.yml}.yml
 done
 
-
 ### Blockly Mooc
 
-orig_dir=../../blockly/i18n
-loc_dir=../locales/en-US/blockly-mooc
+orig_dir=../../apps/i18n
+loc_dir=../locales/source/blockly-mooc
 mkdir -p $loc_dir
 
 # Copy JSON files.
@@ -49,7 +51,7 @@ done
 ### Blockly Core
 
 orig_dir=../../blockly-core/i18n/locales/en-US
-loc_dir=../locales/en-US/blockly-core
+loc_dir=../locales/source/blockly-core
 mkdir -p $loc_dir
 
 # Copy JSON files.
@@ -62,7 +64,7 @@ done
 ### Pegasus
 
 orig_dir=../../pegasus/cache/i18n
-loc_dir=../locales/en-US/pegasus
+loc_dir=../locales/source/pegasus
 mkdir -p $loc_dir
 
 perl -i ./lib/fix-ruby-yml.pl $orig_dir/en-US.yml

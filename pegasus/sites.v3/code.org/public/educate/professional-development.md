@@ -14,20 +14,22 @@ Code.org is offering 1-day workshops to prepare educators and content-area teach
 
 These workshops will be facilitated by experienced computer science educators in over 60 cities across the United States.
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a workshop (for K-5 teachers)</button>](/professional-development-workshops)
+[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a local workshop (for K-5 teachers)</button>](/professional-development-workshops)
+<br><br>
+Can't find a workshop in your area? Consider completing our free, self-paced [online workshop.](/educate/professional-development-online)
 
 ---
 ## Professional development for middle school math or science teachers
 
-Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of a full school district partnership with Code.org.
+Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of [a full school district partnership with Code.org](/educate/districts). 
 
 ### Phase 1
 
-Multi-hour (approximately 10) online component focused on both pedagogy and computer science content in the context of middle school math and science.
+Online component focused on both pedagogy and computer science content in the context of middle school math and science.
 
 ### Phase 2
 
-Multi-day in person professional development workshop.
+Multi-day in-person professional development workshop.
 
 - Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Generation Science Standards.
 - Exploration of specific curricular tools.
@@ -45,26 +47,26 @@ One day in-person and/or online professional development workshops combined with
 ---
 ## Professional development for high school teachers to teach computer science
 
-Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development programs is only available in the context of a full school district partnership with Code.org.
+Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development program is only available in the context of [a full school district partnership with Code.org](/educate/districts).
 
 ### Phase 1
-Multi-hour (approximately 10hr) online course focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
+Online component focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
 
 ### Phase 2
-Summer 5 day in person professional development workshop.
+Summer 5 day in-person professional development workshop, followed by online material.
 
 - Focused on quality computer science pedagogy—Teaching content through inquiry and equity
 - Explore lessons using Teacher/Learner/Observer Model
 - Creating a professional learning community that will extend beyond the Code.org partnership.
 
 ### Phase 3
-Quarterly in person and/or online professional development workshops combined with online support.
+Quarterly in-person and/or online professional development workshops combined with online support.
 
 - Provide content and pedagogical support for upcoming units
 - Continued use of the Teacher/Learner/Observer Model
 
 ### Phase 4
-- Multi-day in person professional development workshop
+- Multi-day in-person professional development workshop
 - Reflection and follow up on the academic year
 - Preparation for teachers to continue their own personal development as the structured PD model comes to a close.
 
@@ -72,4 +74,4 @@ Quarterly in person and/or online professional development workshops combined wi
 
 
 ---
-For the intellectually curious, we've also published our [professional development philosophy](/educate/professional-development-philosophy), which we use to guide our own team's effort as well as our work with our education partners.
+For the intellectually curious, we've also published our [professional development philosophy](/educate/professional-development-philosophy), which we use to guide our own team's effort as well as our work with our education partners. 

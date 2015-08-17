@@ -37,6 +37,10 @@ nl:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hoe doe je een HOUR of CODE</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promoot de HOUR of CODE</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>probeerde een</h3><h2>Uur van de Code</h2>'
+  share_on_facebook: Delen op Facebook
+  share_on_twitter: Delen op Twitter
+  beyond_an_hour: Na het Uur Code
+  get_started: Start
   anybody_can_learn: Iedereen kan leren.
   register_now: Maak nu een account
   front_join_us_heading: Een Uur van de Code voor elke student.
@@ -89,12 +93,12 @@ nl:
   signup_thank_you_message: We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen.
   map_header: '# Uur van Code gebeurtenissen rond de wereld'
   map_header_company: '# door bedijfsorganisatoren'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Zoek Uur Code events
+  map_search_search: Zoek
+  map_search_reset: Resetten
+  meta_tag_og_title: Het Uur Code is hier
   meta_tag_og_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Het Uur Code is hier
   meta_tag_twitter_description: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
   twitter_default_text: 'Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg'
   hardware_prizes_form_name_label: Je naam
@@ -144,7 +148,7 @@ nl:
   hoc_faq_frozen_q: Waar is de handleiding met Anna en Elsa?
   hoc_faq_frozen_a: "Deze is nu gepubliceerd op <a href='http://code.org/learn'>Code.org/learn</a>. We hopen dat je het leuk vindt!"
   hoc_faq_high_school_q: Welke activiteit doe ik best met leerlingen van een middelbare school?
-  hoc_faq_high_school_a: "Ongeacht de leeftijd raden we aan om te beginnen bij een van de beginnershandleidingen op <a href='http://code.org/learn'Code.org/learn</a> om te beginnen met een handleiding zoals Angry Birds of met Anna en Elsa. Een leerling van het middelbaar zou in staat moeten zijn om zo'n handleiding af te werken in een 30-tal minuten en dan kunnen ze verder gaan met een meer geavanceerde handleiding in Javascript zoals KhanAcademy of CodeHS."
+  hoc_faq_high_school_a: "Ongeacht de leeftijd raden we aan om te beginnen bij een van de beginnershandleidingen op <a href='http://code.org/learn'Code.org/learn</a> om te beginnen met een handleiding zoals Angry Birds of met Anna en Elsa. Een leerling van het middelbaar zou in staat moeten zijn om zo'n handleiding af te werken in een 30-tal minuten en dan kunnen ze verder gaan met een meer geavanceerde handleiding in Javascript zoals Khan Academy of CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -191,7 +195,7 @@ nl:
   events_orgs_title: Alle HOUR of CODE evenementen georganiseerd door Partner Organizations
   event: evenement
   events: evenementen
-  footer_copyright_message: Copyright 2014 Code.org. Alle rechten voorbehouden.
+  footer_copyright_message: Copyright 2015 Code.org. Alle rechten voorbehouden.
   footer_trademark_message: Uur van Code ™ is een handelsmerk van Code.org.
   footer_menu_partners: Partners
   footer_menu_contact: Neem contact op

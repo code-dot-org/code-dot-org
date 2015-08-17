@@ -113,8 +113,8 @@ Statements that only run under certain conditions
      - If you were, the condition would be true, and you would get the reward.
      - If you weren't, the condition would be false, so the reward woud not apply.
   - Can we come up with another conditional?
-     - If I say "question," you raise your hand
-     - If I sneeze, you say "Gesundheit."
+     - If you can guess my age correctly, the class can give you applause.
+     - If I know an answer, I can raise my hand.
      - What examples can you come up with?
 - Sometimes, we want to have an extra condition, in case the "IF" statement is not true.
   - This extra condition is called an "ELSE" statement
@@ -315,9 +315,9 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a>
+<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a>
 
 [/content]
 

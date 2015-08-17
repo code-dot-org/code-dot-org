@@ -1,11 +1,10 @@
 var gmap,
-  markers = [],
+  markers = {},
   info_window;
 
 $(document).ready(function() {
   initializeMap();
   loadWorkshops();
-  addGeocomplete();
 });
 
 function initializeMap() {
@@ -57,7 +56,7 @@ function loadWorkshops() {
         }
       }
     });
-  }).fail(displayQueryError);
+  }).done(addGeocomplete).fail(displayQueryError);
 }
 
 function compileHtml(workshop, first) {
@@ -101,6 +100,23 @@ function addGeocomplete() {
   $("#geocomplete").geocomplete(geocomplete_options)
     .bind("geocode:result", function(event, result){
       gmap.fitBounds(result.geometry.viewport);
+
+      var bounds = gmap.getBounds();
+      var marker_found = false;
+
+      while (!marker_found && gmap.getZoom() > 4) {
+        $.each(markers, function(index, marker) {
+          if( bounds.contains(marker.getPosition()) ){
+            marker_found = true;
+          }
+        });
+
+        if (!marker_found) {
+          gmap.setZoom(gmap.getZoom() - 1);
+          bounds = gmap.getBounds();
+        }
+      }
+
       if (html5_storage_supported()) {
         localStorage['geocomplete'] = result.formatted_address;
       }

@@ -1,0 +1,6 @@
+name 'U2L10 Free Response Getting Started'
+title 'DNS in the Real World: Getting Started'
+
+markdown <<MARKDOWN
+Explain the similarities between DNS and the Postal Service.  Describe their analogous hierarchical structure.
+MARKDOWN

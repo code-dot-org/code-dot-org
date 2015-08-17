@@ -1,0 +1,7 @@
+name 'Pixelation 3 Bit Colors'
+title 'title'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '3'
+data '000001000000001000000011000111100010001'

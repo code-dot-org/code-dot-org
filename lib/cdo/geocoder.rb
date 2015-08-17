@@ -23,6 +23,10 @@ module Geocoder
     return nil if number_to_end_search.empty?
 
     first_number_to_end = number_to_end_search.first.first
+
+    return nil if Float(first_number_to_end) rescue false # is a number
+    return nil if first_number_to_end.length <= 6 # too short to be an address
+
     results = Geocoder.search(first_number_to_end)
     return nil if results.empty?
 
@@ -54,7 +58,7 @@ def geocoder_config
     timeout: 10,
     units: :km,
   }.tap do |config|
-    config[:cache] = Redis.connect(url:CDO.geocoder_redis_url) if CDO.geocoder_redis_url
+    config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
 
     if CDO.google_maps_client_id && CDO.google_maps_secret
       config[:lookup] = :google_premier
@@ -64,4 +68,3 @@ def geocoder_config
 end
 
 Geocoder.configure(geocoder_config)
-

@@ -5,6 +5,8 @@ require_relative '../../lib/cdo/geocoder'
 
 class GeocoderTest < Minitest::Unit::TestCase
   def test_finding_potential_addresses
+    return if CDO.rack_env == :development # Geocoder doesn't always work in development, only test on test
+
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
     assert(Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
@@ -13,5 +15,12 @@ class GeocoderTest < Minitest::Unit::TestCase
     assert_equal('123, Post Road, Westport, CT and other stuff', Geocoder.find_potential_street_address('Hi I live at 123, Post Road, Westport, CT and other stuff'))
     assert_nil(Geocoder.find_potential_street_address('I am the luckiest 1st 2 and 3rd person in California'))
     assert_nil(Geocoder.find_potential_street_address('Hi I am dog I live at 3 Rover Road in Christmasville MA 12346'))
+    assert_nil(Geocoder.find_potential_street_address('1b'))
+    assert_nil(Geocoder.find_potential_street_address('300b'))
+    assert_nil(Geocoder.find_potential_street_address('300'))
+    assert_nil(Geocoder.find_potential_street_address('250'))
+    assert_nil(Geocoder.find_potential_street_address('400'))
+    assert_nil(Geocoder.find_potential_street_address('1500000000'))
+    assert_nil(Geocoder.find_potential_street_address('1500000001230b'))
   end
 end

@@ -20,8 +20,7 @@
     "ideal": "42",
     "instructions": "Try using your new function to collect all of this nectar.",
     "use_modal_function_editor": "true",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

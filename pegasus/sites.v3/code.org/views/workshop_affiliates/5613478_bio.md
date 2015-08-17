@@ -1,0 +1,5 @@
+## Shane Asselstine
+
+[asselstine@pd.code.org](mailto:asselstine@pd.code.org)
+
+Shane is the curriculum and technology coordinator at Momilani Elementary School in Pearl City, Hawaii. When he first started at Momilani in 2004, Shane taught in the 4th grade, where he maximized the fifteen available computers in his lessons. Part of his responsibilities now include maintaining, planning, and integrating the over 500 computers in the 1:1 program. Besides teaching staff to utilize computers to increase productivity, Shane teaches 240 students each week from third to sixth grade, with a focus on technology, computer science, and CCSS through game-based learning. An advocate of game based learning, he has used several programs including Code Studio Courses, to expose students to a wide range of concepts. Prior to becoming a teacher, Shane worked in private industry as a network engineer in Michigan, working with Cisco and Novell systems. Experiences before and after becoming a teacher, combined with his love for teaching provide an excellent foundation for helping to encourage others to incorporate coding and Code Studio into the classroom.

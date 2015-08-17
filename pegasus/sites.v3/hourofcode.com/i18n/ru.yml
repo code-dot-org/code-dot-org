@@ -37,6 +37,10 @@ ru:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Как запустить Час Программирования</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Продвигайте Час Программирования</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>приняли участие в</h3><h2>ЧАСЕ ПРОГРАММИРОВАНИЯ</h2>'
+  share_on_facebook: Поделиться на Facebook
+  share_on_twitter: Поделиться в Twitter
+  beyond_an_hour: Помимо Часа программирования
+  get_started: Начать
   anybody_can_learn: Все могут научиться.
   register_now: Зарегистрируйтесь сейчас
   front_join_us_heading: Час Программирования для каждого ученика или студента.
@@ -89,12 +93,12 @@ ru:
   signup_thank_you_message: Мы выслали Вам электронное письмо с информацией, которая поможет Вам начать готовиться к проведению мероприяния.
   map_header: '# Час Программирования по всему миру'
   map_header_company: '# с помощью организаторов компании'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Искать мероприятия, посвященные Часу Кода
+  map_search_search: Найти
+  map_search_reset: Очистить
+  meta_tag_og_title: Час Программирования начался
   meta_tag_og_description: 'Час Программирования - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах, говорящих более, чем на 30 языках. В возрасте от 4 до 104 лет.'
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Час Программирования начался
   meta_tag_twitter_description: 'Час Кода - это глобальное движение, охватывающее десятки миллионов учеников в более чем 180 странах и более чем на 30 языках. В возрасте от 4 до 104.'
   twitter_default_text: 'Я участвую в этом году в #HourOfCode, а ты? @codeorg'
   hardware_prizes_form_name_label: Ваше имя
@@ -117,8 +121,8 @@ ru:
   hardware_prizes_form_submit_label: Отправить
   hoc_faq_title: Часто задаваемые вопросы
   hoc_faq_what_is_hoc_q: Что такое Час Кода?
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
-  hoc_faq_last_year: Try the tutorials
+  hoc_faq_what_is_hoc_a: "Час программирования - это часовое введение в информатику, призванное развеять мифы о сложности программирования и показать, что  каждый может научиться его основам. <a href='http://code.org/learn'>Перейти к обучению</a>."
+  hoc_faq_last_year: Начать обучение
   hoc_faq_when_is_hoc_q: Когда пройдет Час Кода?
   hoc_faq_when_is_hoc_a: "Каждый может организовать Час Кода в любое время, но изначальная цель кампании - участие десятков миллионов учеников в Часе Кода 8-14 декабря 2014 года, как празднование <a href='http://csedweek.org'>Недели Образования в Информатике</a>. Это единственное <i>время</i>? Нет Вы можете попробовать Час Кода в любое время в течение недели. (И если Вы не можете в течение этой неделе, участвуйте на неделю раньше или позже)."
   hoc_faq_why_cs_q: Почему информатика?
@@ -137,14 +141,14 @@ ru:
   hoc_faq_tutorial_a: "Если вы хотите стать нашим партнером по проведению уроков, <a href='targetHOC'>прочитайте наши инструкции</a>. Мы хотели бы провести множество вариантов, но основной целью является оптимизация уроков для учеников и учителей без опыта в информатике."
   hoc_faq_more_questions_q: У вас ещё остались вопросы?
   hoc_faq_more_questions_a: "Попробуйте найти ответ на нашем <a href='http://support.code.org'>форуме</a>."
-  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
-  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
-  hoc_faq_account_q: Do students need to log on using an account?
-  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_scratch_q: Я использую систему Scratch для проведения Часа Программирования, что если у моих учеников будут iPad-ы, а не ноутбуки?
+  hoc_faq_scratch_a: "Scratch не портирован на планшеты. Если вы обучаете детей, они могут использовать приложение для iPad, ScratchjR (для юных слушателей). Если вы посмотрите материалы на <a href='http://code.org/learn'>Code.org/learn</a>, то сможете найти обучающие курсы. работающие на iPad - от Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: Требуется ли обучающимся авторизироваться в системе?
+  hoc_faq_account_a: "Нет. Для участия в Часе Программирования учащимся не нужно создавать никакого аккаунта. Однако регистрация будет полезна для сохранения прогресса учащегося почти во всех <a href='http://code.org/learn/beyond'>курсах для продолжающих</a>."
   hoc_faq_frozen_q: Где находится урок с Анной и Эльзой?
   hoc_faq_frozen_a: "Теперь он опубликован здесь:<a href='http://code.org/learn'>Code.org/learn</a>. Надеемся, он вам понравится!"
-  hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_q: Какие упражнения стоит выполнять c учащимися средних и старших классов?
+  hoc_faq_high_school_a: "Учащимся всех возрастов мы рекомендуем начать с простых уроков на <a href='http://code.org/learn'>Code.org/learn</a>, таких как обучение с персонажами Angry Birds или Анной и Эльзой. Учащиеся старших классов способны справиться с ними за полчаса, а затем они могут попробовать более сложные уроки по javaScript, такие как Khan Academy или CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

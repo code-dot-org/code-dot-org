@@ -38,6 +38,10 @@ ca:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>has provat una</h3><h2>Hora de Codi</h2>'
   anybody_can_learn: Qualsevol pot aprendre.
+  share_on_facebook: Comparteix a Facebook
+  share_on_twitter: Comparteix a Twitter
+  beyond_an_hour: Més enllà d'una Hora del Codi
+  get_started: Inici
   register_now: "Registra't ara"
   front_join_us_heading: Una Hora de Codi per a cada alumne.
   front_join_us_description: "La informàtica és la base per a tots els estudiants. Ajuda'ns a arribar als 100 milions."
@@ -90,11 +94,11 @@ ca:
   map_header: "# Esdeveniments d'Hora de Codi de tot el món"
   map_header_company: '# by company organizers'
   map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
+  map_search_search: Cerca
   map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  meta_tag_og_title: "L'Hora de Codi és aquí"
   meta_tag_og_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: "L'Hora de Codi és aquí"
   meta_tag_twitter_description: "L'Hora de Codi és un moviment mundial que arriba a desenes de milions d'estudiants en més de 180 països i més de 30 llengües. Edat 4 a 104."
   twitter_default_text: 'Jo estic participant en aquest any de #HourOfCode, i tu? @codeorg'
   hardware_prizes_form_name_label: El teu nom
@@ -144,7 +148,7 @@ ca:
   hoc_faq_frozen_q: "On és el tutorial amb l' Anna i l' Elsa?"
   hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -167,7 +171,8 @@ ca:
   stats_girls_million: Més de 10 milions de noies en 2013
   stats_nina: '"Cada dia dona els mateixos resultats &mdash; 100% addictiu."-Nina Nichols Peery, professora'
   stats_student: '"Sabia que era una oportunitat <b>irrepetible</b>."-Mariana Alzate, 5è curs'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: |-
+    <b>Mai</b> no havia vist els meus alumnes tan entusiasmats amb l'aprenentatge." -Michael Clark, professor
   resources_how_to: Manual per a professors
   resources_how_to_events: Event how-to guide
   resources_how_to_districts: How-to guide for districts
@@ -191,7 +196,7 @@ ca:
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: Esdeveniment
   events: Esdeveniments
-  footer_copyright_message: Copyright 2014 Code.org. Tots els drets reservats.
+  footer_copyright_message: Copyright 2015 Code.org. Tots els drets reservats.
   footer_trademark_message: Hora de Codi ™ és una marca registrada de Code.org.
   footer_menu_partners: Col·laboradors
   footer_menu_contact: "Contacta'ns"

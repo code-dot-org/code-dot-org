@@ -1,0 +1,14 @@
+name 'U3L05 Assessment1'
+title 'Programming Efficiency Question 1'
+description 'What does it mean to write efficient code? Match the concepts with their meanings.'
+question 'Effort'
+answer 'The amount of labor it takes to write the code'
+question 'Space'
+answer 'The number of lines of code'
+question 'Time'
+answer 'The number of "turtle moves" it takes to complete the task'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

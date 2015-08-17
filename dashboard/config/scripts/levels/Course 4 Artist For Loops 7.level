@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "What happens if you remove the \"Repeat 3\" from this algorithm, keeping the \"move\" and \"turn\" blocks in the for loop? In this spiraling triangle, each side is a 10 pixels longer than the last.",
+    "instructions": "What happens if you remove the \"Repeat 3\" from this algorithm, keeping the \"move\" and \"turn\" blocks in the for loop? In this spiraling triangle, each side is a 20 pixels longer than the last.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -19,7 +19,18 @@
     "slider_speed": ".8",
     "ideal": "9",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "embed": "false",
+    "disable_sharing": "false",
+    "markdown_instructions": "What happens if you remove the \"Repeat 3\" from this algorithm, keeping the \"move\" and \"turn\" blocks in the for loop? \r\n\r\n<br/>\r\nIn this spiraling triangle, each side is a 20 pixels longer than the last.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

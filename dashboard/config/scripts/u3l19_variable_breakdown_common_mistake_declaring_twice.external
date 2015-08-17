@@ -1,0 +1,33 @@
+name 'U3L19 - variable breakdown - common mistake - declaring twice'
+title 'U3L19 - variable breakdown - common mistake - declaring twice'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variable Breakdown
+
+## Common Mistake: Declaring a variable twice
+
+In JavaScript you should just think of the word <span style="font-family: monospace">var</span> as shorthand for **“create a variable”.**  
+
+Once you’ve created it, you don’t need to create it again. You can just refer to it by its name.
+
+So, let’s say you wanted to create a variable called ‘foo’ with the value 7 and then later change it to 17.  This code is considered bad form...
+
+<pre>
+var foo = 7;
+var foo = 17;
+</pre>
+
+The correct way to do this would be:
+
+<pre>
+var foo = 7;
+foo = 17;
+</pre>
+
+I know, I know, it’s tempting to want to type <span style="font-family: monospace">var foo</span> the second time because you want to tell the computer, "Hey, I want to use the *variable foo*."    But you don’t have to. As we saw earlier, once the variable is made, you can just refer to it by its name.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Next: new ways to read the value inside a variable</a>
+
+
+MARKDOWN

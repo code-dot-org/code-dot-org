@@ -1,6 +1,7 @@
 def validate_form(kind, data)
 
   def csv_multivalue(value)
+    return value if value.class == FieldError
     begin
       CSV.parse_line(value.to_s) || []
     rescue
@@ -27,6 +28,17 @@ def validate_form(kind, data)
     return value if value.class == FieldError
     return FieldError.new(value, :invalid) unless allowed.include?(value)
     value
+  end
+
+  def integer(value)
+    return value if value.class == FieldError
+    return nil if value.nil_or_empty?
+
+    s_value = value.to_s.strip
+    i_value = s_value.to_i
+    return FieldError.new(value, :invalid) unless i_value.to_s == s_value
+
+    i_value
   end
 
   def nil_if_empty(value)
@@ -58,6 +70,7 @@ def validate_form(kind, data)
   end
 
   def email_address(value)
+    return value if value.class == FieldError
     email = downcased stripped value
     return nil if email.nil_or_empty?
     return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
@@ -65,9 +78,16 @@ def validate_form(kind, data)
   end
 
   def zip_code(value)
+    return value if value.class == FieldError
     value = stripped value
     return nil if value.nil_or_empty?
     return FieldError.new(value, :invalid) unless zip_code?(value)
+    value
+  end
+
+  def confirm_match(value, value2)
+    return value if value.class == FieldError
+    return FieldError.new(value, :mismatch) if value != value2
     value
   end
 
@@ -83,11 +103,11 @@ def validate_form(kind, data)
 end
 
 def delete_form(kind, secret)
-  form = DB[:forms].where(kind:kind, secret:secret).first
+  form = DB[:forms].where(kind: kind, secret: secret).first
   return false unless form
 
-  DB[:forms].where(id:form[:id]).delete
-  Solr::Server.new(host:CDO.solr_server).delete_by_id(form[:id]) if CDO.solr_server
+  DB[:forms].where(id: form[:id]).delete
+  Solr::Server.new(host: CDO.solr_server).delete_by_id(form[:id]) if CDO.solr_server
 
   true
 end
@@ -100,22 +120,28 @@ def insert_form(kind, data, options={})
 
   data = validate_form(kind, data)
 
-  form = Form.new
-  form.secret = SecureRandom.hex
-  form.parent_id = options[:parent_id]
-  form.user_id = dashboard_user[:id] if dashboard_user
-  form.email = data[:email_s].to_s.strip.downcase
-  form.name = data[:name_s].to_s.strip
-  form.kind = kind
-  form.data = data
-  form.created_ip = form.updated_ip = request.ip
-  raise ValidationError.new(form) unless form.save
+  timestamp = DateTime.now
 
-  form
+  row = {
+    secret: SecureRandom.hex,
+    parent_id: options[:parent_id],
+    email: data[:email_s].to_s.strip.downcase,
+    name: data[:name_s].to_s.strip,
+    kind: kind,
+    data: data.to_json,
+    created_at: timestamp,
+    created_ip: request.ip,
+    updated_at: timestamp,
+    updated_ip: request.ip,
+  }
+  row[:user_id] = dashboard_user[:id] if dashboard_user
+  row[:id] = DB[:forms].insert(row)
+
+  row
 end
 
 def update_form(kind, secret, data)
-  return nil unless form = Form.first(kind:kind, secret:secret)
+  return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
 
   if dashboard_user && !dashboard_user[:admin]
     data[:email_s] ||= dashboard_user[:email]
@@ -124,18 +150,19 @@ def update_form(kind, secret, data)
 
   data = validate_form(kind, data)
 
-  form.user_id = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
-  form.email = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
-  form.name = data[:name_s].to_s.strip if data.has_key?(:name_s)
-  form.data = data
-  form.updated_ip = request.ip
-  form.processed_at = nil
-  form.indexed_at = nil
-  form.review= nil
-  form.reviewed_at = nil
-  form.reviewed_by = nil
-  form.reviewed_ip = nil
-  raise ValidationError.new(form) unless form.save
+  form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
+  form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)
+  form[:name] = data[:name_s].to_s.strip if data.has_key?(:name_s)
+  form[:data] = data.to_json
+  form[:updated_at] = DateTime.now
+  form[:updated_ip] = request.ip
+  form[:processed_at] = nil
+  form[:indexed_at] = nil
+  form[:review] = nil
+  form[:reviewed_at] = nil
+  form[:reviewed_by] = nil
+  form[:reviewed_ip] = nil
+  DB[:forms].where(id: form[:id]).update(form)
 
   form
 end

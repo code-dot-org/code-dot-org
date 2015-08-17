@@ -1,4 +1,7 @@
 sl:
+  errors:
+    messages:
+      not_saved: 'Prosim popravite sledeče napake:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@ sl:
           future: ne more biti v prihodnosti
   hello: Pozdravljen svet
   welcome_back: 'Dobrodošel/a nazaj, %{name}'
+  submit: Pošlji
   add_teacher_form:
     code:
       label: 'Dodaj učitelja/ico:'
@@ -60,6 +64,8 @@ sl:
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
   signup_form:
+    student_count: '%{count} študentov se je že prijavilo.'
+    teacher_count: '%{count} učiteljev se je že prijavilo.'
     overview_student: 'Registrirajte se, če želite spremljati svoj napredek. Vaš email bo služil za ponovni vpis ali novo geslo, če ga pozabite. Če želite več informacij, si oglejte našo <a href="http://code.org/privacy"> Politiko zasebnosti</a>.'
     overview_teacher: 'Pripravite učno uro računalništva v vašem razredu; registrirajte se. <p/> Lahko dodate tudi svoje učence in sledite njihovemu napredku.'
     no_signup_message: 'Lahko  <a target="_blank" href="http://learn.code.org"> brskaš po različnih stopnjah in ugankah</a>, a se boš moral vpisati, da shraniš svoj napredek.'
@@ -213,8 +219,10 @@ sl:
       free_play:
         playlab: Izdelja App
         artist: Nariši kaj
+        calculate: Calculate Something
     user:
       classroom: Učiteljeva domača stran
+      district_dashboard: District Dashboard
       label: 'Živjo %{username}'
       stats: Moj napredek
       settings: Moj račun
@@ -224,6 +232,7 @@ sl:
       signup: Prijava
       already_registered: Že registrirani?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: Tvoj napredek
       lines: 'Skupno število vrstic kode: %{lines}'
       close: ZAPRI
@@ -291,15 +300,23 @@ sl:
     cant_remove_student_no_email: 'Ne morete odstraniti %{student_name} kot vašega učenca, ker %{student_name} nima registriranega e-poštnega naslova'
     cant_remove_teacher_no_email: 'Ne moreš odstraniti %{teacher_name} kot svojo učiteljico/učitelja, ker se sam nisi registriral/a s svojim e-poštnim naslovom'
     student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: Učenec
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Razdelek
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Ponovno pošlji potrditvena navodila
     new_password_hint: (pusti prazno, če tega nočeš spremeniti)
     current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
-    cancel:
-      title: Prekliči moj račun
-      hint: Nezadovoljen?
-      button: Prekliči moj račun
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -309,6 +326,9 @@ sl:
     classroom_activity: Dejavnost brez prijave
   home:
     title: Studio za kodiranje
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: 'Že registrirani? %{link}'
@@ -329,6 +349,7 @@ sl:
     local_school: lokalna šola
     online: na spletu
     see_details: Glej podrobnosti
+    view_course: View Course
     prize_info: 'Nagrade za sodelovanje (le za učitelje v ameriških javnih šolah): do 1.000 $ v obliki nagrad razredu.'
     tryfirst: 'Ali pa takoj poskusite in se registrirate kasneje:'
     trynow: Poskusite zdaj
@@ -342,6 +363,9 @@ sl:
     heading_apps: '<h2>Zabavno učenje za</h2><h1>vsakogar</h1>'
     heading_legacy: '<h2>Naš tečaj za</h2><h1>vse starosti</h1>'
     your_gallery: Galerija
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Moški
     female: Ženska
@@ -420,9 +444,10 @@ sl:
     flappy:
       title: Program za Plahutača (Flappyja)
       body: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
-    20hour:
-      title: Uvodni tečaj
-      body: Preizkusite začetniški 20-urni tečaj računalništva.
+    20-hour:
+      title: Accelerated Course
+      body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
       try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
@@ -431,6 +456,9 @@ sl:
       body: Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši uporabniki
     frozen:
       title: Zmrznjenka (Frozen)
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Učenci so to narisali s svojimi programi!
     students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
@@ -455,13 +483,25 @@ sl:
     wrong_body: 'Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!'
     correct_title: Pravilno
     correct_body: To je pravilen odgovor.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nepravilna rešitev
     wrong_body: 'Rešitev, ki si jo vnesel, ni pravilna.  Prosim, poskusi znova!'
     correct_title: Pravilno
     correct_body: To je pravilen odgovor.
+  contract_match:
+    wrong_title: Nepravilen odgovor
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Vnesite vaš odgovor tukaj
+    open_response_title: Hvala
+    open_response_body: Hvala za vaš odgovor!
   dialog:
     ok: Vredu
   time:
@@ -475,7 +515,7 @@ sl:
           title: Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)
           description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
         Hour of Code:
-          title: Ura kode
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: Uredi kodo
@@ -505,11 +545,44 @@ sl:
     sign_out: 'Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.'
   zendesk_too_young_message: 'Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa brez prijave brskate po <a href="http://support.code.org">support.code.org</a>, ali pa zaprosite starše ali učitelje, da nas kontaktirajo.'
   progress:
-    not_completed: ni dokončano
+    not_started: ni začeto
+    in_progress: v teku
     completed_too_many_blocks: dokončano, imate preveč blokov
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
+    assessment: ocenjevanje
   studio:
     courses_working_on: Tečaji, ki jih še nisi dokončal/a
     completed_courses: Tečaji, ki si jih dokončal/a
     all_courses: Vsi tečaji
+  project:
+    projects: Projekti
+    create: Ustvari projekt
+    create_a_project: 'Ustvari nov projekt:'
+    new: Ustvari novo
+    rename: Preimenuj
+    save: Shrani
+    delete: Izbriši
+    exit: Vrni se na tečaj
+    my_projects: Moji projekti
+    share: Deli
+    share_title: Deli svoj projekt
+    share_copy_link: 'Kopiraj povezavo:'
+    close: Zapri
+    more: Več
+    name: Ime
+    updated: Posodobljeno
+    project_type: Vrsta projekta
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: Izbriši?
+    delete_yes: Da
+    delete_no: Ne
+    saved: Shranjeno
+    not_saved: Ni shranjeno
+    cancel: Prekliči
+    delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: Poglej si Moji projekti
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

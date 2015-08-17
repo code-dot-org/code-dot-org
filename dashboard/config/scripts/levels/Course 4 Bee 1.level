@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee can't tell if this is a flower or a honeycomb. Check first if it is a flower or a honeycomb, and then only gather nectar from it if it is a flower. ",
+    "instructions": "The bee can't tell what's under the cloud! First, check if it is a flower or a honeycomb. Then only gather nectar from it if it is a flower. ",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,9 +21,16 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"if_bee_nectar\", \"element_id\": \"#if_bee_nectar_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}}\r\n  }\r\n]",
-    "maze_data": null,
-    "video_key": "C4_bee_conditional"
+    "callout_json": "[\r\n  {\"localization_key\":\"if_bee_nectar\",\"callout_text\":\"Use the \\\"if\\\" block to decide if the bee should get nectar\",\"element_id\":\"#if_bee_nectar_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"right center\",\"at\":\"left center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "video_key": "C4_bee_conditional",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

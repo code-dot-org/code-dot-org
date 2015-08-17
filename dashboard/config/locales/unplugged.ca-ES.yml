@@ -3,14 +3,13 @@
     unplugged:
       Unplug1:
         title: Introducció a la informàtica
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Aquesta unitat introdueix el concepte informàtica i explica que fan
+          els informàtics. També dona als estudiants l’oportunitat d’assumir el rol
+          d’un informàtic. Al final de l’activitat cada estudiant podrà emportar-se
+          a casa una mostra del que ha après. Com a mestre tu pots estar temptat a
+          no ensenyar el vocabulari clau associat a la lliçó als més petitons, però
+          recorda que si intentes presentar-la ara de manera divertida i amena serà
+          molt més productiu que no pas deixar-ho per a oportunitats futures.
         pdfs:
         - unplug1
         video: Unplug1
@@ -31,11 +30,11 @@
         video: Unplug2
       Unplug3:
         title: Programació de paper quadriculat
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: Els alumnes començaran a entendre en que consisteix la programació programant-se
+          entre ells per pintar dibuixos. La classe començarà amb els alumnes intercanviant
+          instruccions per pintar quadrats en un full quadriculat amb la finalitat
+          de reproduir una imatge. Si queda temps al final de la sessió els alumnes
+          poden acabar utilitzant els seus propis dibuixos per programar.
         pdfs:
         - unplug3
         video: Unplug3
@@ -84,14 +83,9 @@
         video: Unplug7
       Unplug8:
         title: Abstracció
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: This activity combines your students' everyday routine and a Mad-Lib
+          style thinking game to help your class learn about the effectiveness of
+          abstraction.
         pdfs:
         - unplug8
         video: Unplug8
@@ -182,9 +176,10 @@
         video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmes de la vida quotidiana: Avions de paper'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        desc: Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida
+          diària, concretament fent avions de paper. La unitat també se centra en
+          un panorama més ampli de la informàtica i com els algoritmes juguen un rol
+          essencial.
         video: C2_avions_paper
       BinaryBracelets:
         title: Polseres binàries
@@ -199,9 +194,9 @@
         video: C2_empremta_digital
       ComputationalThinking:
         title: Pensament computacional
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Els alumnes usen les passes del pensament computacional (descomposar,
+          relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un
+          joc que no duu instruccions.
         video: C3_pensament_computacional
       FunctionalSuncatchers:
         title: Functional Suncatchers
@@ -227,7 +222,7 @@
         video: C3_internet
       Crowdsourcing:
         title: Col·laboració oberta
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
+        desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
@@ -280,18 +275,24 @@
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Veritat o fals
         desc: Unitat de descripció de veritat o fals
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Descripció de la unitat de Condicionals i Funcions definides a trossos
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
+        video: alg_16_biggame_collision_detection

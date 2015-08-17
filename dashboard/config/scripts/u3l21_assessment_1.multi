@@ -1,0 +1,13 @@
+name 'U3L21 Assessment 1'
+title 'More Variables Question 1'
+
+question 'NEED TO FIX Which of the following is a numeric value that can be assigned to a variable?'
+wrong "\'4 * 7\'"
+right '56*61\3+2'
+wrong "\''101\''"
+wrong 'fifteen'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

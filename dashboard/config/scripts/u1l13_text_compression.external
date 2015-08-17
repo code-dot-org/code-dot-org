@@ -1,0 +1,4 @@
+name 'U1L13 Text Compression'
+title 'U1L13 Text Compression'
+description 'Compress text by identifying repeated patterns.'
+href 'text-compression/text-compression.html'

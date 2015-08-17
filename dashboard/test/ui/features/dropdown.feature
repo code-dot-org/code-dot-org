@@ -11,5 +11,6 @@ Scenario: Drag a dropdown and select a different option.
   And I press the dropdown
   Then the dropdown is visible
   Then I select the crash item from the dropdown
+  And I wait for 1 seconds
   Then the dropdown is hidden
   And the dropdown field has text "crash ▼"

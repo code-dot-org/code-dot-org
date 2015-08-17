@@ -2,6 +2,12 @@
   display:none;
 }
 
+/* for homepage 2.0.. */
+#homepage .clear {
+  clear: both;
+}
+/* ..end homepage 2.0 */
+
 h1 {
   color: #7665a0;
   font-size: 32px;
@@ -22,8 +28,8 @@ h2 {
 
 h3 {
   color: #5b6770;
-  font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-size: 18px;
+  font-family: 'Gotham 4r', sans-serif;
   margin-top:25px;
   margin-bottom:12px;
   line-height: 1.2em;
@@ -95,6 +101,11 @@ body {
   font-weight: normal;
   color: dimgray;
   margin: 0;
+}
+
+li > ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -187,6 +198,7 @@ th a:link, th a:visited, th a:hover, th a:active {
   text-decoration: underline;
 }
 
+
 #index #gap {
   height: 20px
 }
@@ -214,17 +226,17 @@ th a:link, th a:visited, th a:hover, th a:active {
 
 #index .count h1 {
   font-family: 'Gotham 5r', sans-serif;
-  color: white; font-size: 56px; line-height: 56px; font-weight: normal; margin: 0px;
+  color: white; font-size: 40px; line-height: 40px; font-weight: normal; margin: 0px;
   margin-top:0px; margin-bottom:0px;
 }
 #index .count h2 {
   font-family: 'Gotham 5r', sans-serif;
-  color: white; font-size: 36px; line-height: 36px; font-weight: normal; margin-top:5px; margin-bottom: 0px;
+  color: white; font-size: 48px; line-height: 48px; font-weight: normal; margin-top:5px; margin-bottom: 0px;
   margin-top:0px; margin-bottom:0px;
 }
 #index .count h3 {
   font-family: 'Gotham 5r', sans-serif;
-  color: white; font-size: 32px; line-height: 32px; font-weight: normal; margin-top:5px; margin-bottom:0px;
+  color: white; font-size: 32px; line-height: 56px; font-weight: normal; margin-top:5px; margin-bottom:0px;
   margin-top:0px; margin-bottom:0px;
 }
 #index .count h4 {
@@ -335,6 +347,93 @@ th a:link, th a:visited, th a:hover, th a:active {
   color: white;
 }
 
+
+.tight-heading h1 {
+  margin-top:30px;
+  margin-bottom:15px;
+}
+
+.mainbar {
+  padding-right: 40px;
+}
+
+.mainbar h2 {
+  margin-topp: 30px;
+}
+
+.mainbar h3 {
+  margin-left: 10px;
+}
+
+.mainbar p {
+  margin-left:30px;
+}
+
+.sidebar {
+  background-color: #eee;
+  margin-top:30px;
+  padding-top:30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  padding-bottom:30px;
+}
+
+.sidebar h2 {
+  margin-top: 0px;
+}
+
+.sidebar h3 {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 18px;
+}
+
+.sidebar p {
+  margin-left:20px;
+}
+
+.courseblock {
+  background-color: #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.courseblock a {
+  text-decoration: none;
+  font-weight: normal;
+  color: dimgray;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.courseblock h3 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24px;
+}
+
+.courseblock img {
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  max-height: 150px;
+  width: auto;
+}
+
+.teacher-button {
+  background-color: #59b9dc; border-color: #59b9dc
+}
+
+.district-button {
+  background-color: #a69bc1; border-color: #a69bc1
+}
+
 #about_nav {
   margin: 50px 0 0 0;
 }
@@ -409,30 +508,30 @@ a.about_list_item {
 
 /* for homepage studio bar.. */
 
-#studiobar h1 {
+.studiobar h1 {
   color: rgb(88, 103, 113);
   margin: 0px;
   padding: 0px;
   padding-bottom: 5px;
   margin-top: 26px;
-  /* background-color: rgb(255, 128, 0); color:white */
+  /* background-color: rgb(255, 164, 0); color:white */
 }
 
-#studiobar a:link, #studiobar a:visited, #studiobar a:hover, #studiobar a:active {
+.studiobar a:link, .studiobar a:visited, .studiobar a:hover, .studiobar a:active {
   text-decoration: none;
   color: rgb(88, 103, 113);
 }
 
-#studiobar .outerblock {
+.studiobar .outerblock {
   width: 223px;
   margin-bottom: 36px;
 }
 
-#studiobar .innerblock {
+.studiobar .innerblock {
   background-color: rgba(88, 103, 113, 0.1)
 }
 
-#studiobar .title {
+.studiobar .title {
   font-size: 20px;
   font-family: 'Gotham 5r', sans-serif;
   padding-left: 10px;
@@ -443,7 +542,7 @@ a.about_list_item {
   padding-top: 10px;
 }
 
-#studiobar .body {
+.studiobar .body {
   font-family: 'Gotham 4r', sans-serif;
   padding: 10px;
   padding-top: 4px;
@@ -515,8 +614,8 @@ a.about_list_item {
 }
 
 #congrats .button_enabled {
-  background-color: rgb(255, 128, 0) !important;
-  border-color: rgb(255, 128, 0) !important;
+  background-color: rgb(255, 164, 0) !important;
+  border-color: rgb(255, 164, 0) !important;
   color: white !important;
 }
 
@@ -562,8 +661,8 @@ button {
   -webkit-user-select: none;
   -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 128, 0) ;
-  border-color: rgb(255, 128, 0) ;
+  background-color: rgb(255, 164, 0) ;
+  border-color: rgb(255, 164, 0) ;
   background-image: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -715,22 +814,26 @@ label {
 }
 @media screen and (max-width: 450px) {
   #index .count h1 {
-    font-size: 46px;
-    line-height: 46px;
+    font-size: 32px;
+    line-height: 32px;
   }
 
   #index .count h2 {
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   #index .count h3 {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 32px;
+    line-height: 48px;
   }
 
   #index .count h4 {
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+.video_caption_link {
+  font-family: 'Gotham 5r', sans-serif;
 }

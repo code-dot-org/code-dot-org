@@ -1,7 +1,7 @@
 - unplugged = @level.type == 'Unplugged' ? @level.name : @game.name
 - video_key = try_t("data.unplugged.#{unplugged}.video")
 - pdfs = try_t("data.unplugged.#{unplugged}.pdfs")
-- has_pegasus_lesson_plan = @script_level && @script_level.script.k5_course?
+- has_pegasus_lesson_plan = @script_level && @script_level.script.has_lesson_plan?
 - video =  video_key ? Video.find_by_key(video_key) : nil
 - page_width = 800
 - is_student = current_user && current_user.student?
@@ -43,9 +43,9 @@
     .lesson-plan
       %h2
         = t('lesson_plan')
-      %a.btn.pdf-button{href: lesson_plan_html_url(@script_level.stage), target: '_blank'}
+      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_html_url, target: '_blank'}
         = t('view_lesson_plan')
-      %a.btn.pdf-button{href: lesson_plan_pdf_url(@script_level.stage), target: '_blank'}
+      %a.btn.pdf-button{href: @script_level.stage.lesson_plan_pdf_url, target: '_blank'}
         = t('pdf_download')
 
 :javascript
@@ -73,7 +73,6 @@
 
 - if video
   :javascript
-    var videoOptions = #{video_info(video, false).to_json};
+    var videoOptions = #{video.summarize(false).to_json};
     var videoHeight = #{page_width} / (16 / 9);
-    var video = createVideoWithFallback(videoOptions, #{page_width}, videoHeight);
-    $('.video-container').append(video);
+    createVideoWithFallback($('.video-container'), videoOptions, #{page_width}, videoHeight);

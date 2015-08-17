@@ -4,19 +4,19 @@ title: Bounce view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>15, :title=> 'Bounce', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>15, :title=> 'Bounce', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this special level students get to build their own Flappy Bird clone. By using event handlers to detect mouse clicks and object collisions.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this special level students get to build their own Flappy Bird clone. By usin
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ In this special level students get to build their own Flappy Bird clone. By usin
   * Create a game using event handlers
   * Share a creative artifact with other students
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -49,15 +49,15 @@ In this special level students get to build their own Flappy Bird clone. By usin
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -67,7 +67,7 @@ Students will have the opportunity to share their final product with a link. Thi
 
 In the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -90,7 +90,7 @@ When you share a link to your game, you also share all of the code that goes beh
       * What would you like to try?
   * Choose someone else's game and build on it. (Don't worry; the original game will be safe.)
 
-[/together]
+[/juntos]
 
 [standards]
 

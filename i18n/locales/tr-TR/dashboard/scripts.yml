@@ -10,6 +10,7 @@ tr:
           Math Image: Matematik Görseli
           title: Deneme Kursu
           description: Sadece dahili bir deneme kursu.
+          description_short: Sadece dahili bir deneme kursu.
         course1:
           "Jigsaw: Learn to drag and drop": 'Yapboz: Nasıl sürükleyip bırakacağınızı öğrenin'
           "Maze: Sequence": 'Labirent: Sıra'
@@ -22,9 +23,9 @@ tr:
           "Maze 2: Loops": 'Labirent 2: Döngüler'
           "Bee 2: Loops": 'Arı 2: Döngüler'
           Multi & Match: 'Çoklu & Eşleştirme'
-          K-1 Flappy: K-1 Salınım
+          K-1 Flappy: K-1 Flappy
           Flappy non blockly: Bloksuz salınma
-          title: Course 1
+          title: Ders 1
           Artist 2: Aktör 2
           Happy Maps: Mutlu Haritalar
           Move it, Move it: Oynat, Oynat
@@ -33,7 +34,7 @@ tr:
           Getting Loopy: Döngüselleşme
           The Big Event: Büyük Olay
           Going Places Safely: Biryerlere Güvenle Gitmek
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: Ders 1, küçük okuyucuların bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler, paylaşabilecekleri kendi farklı hikayelerini veya oyunlarını oluşturabilecekler. K-1 sınıfları için önerilir.
           "Bee: Sequence": 'Arı: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Shapes": 'Aktör: Şekiller'
@@ -41,8 +42,8 @@ tr:
           "Bee: Loops": 'Arı: Döngüler'
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
           "Artist: Loops": 'Aktör: Döngüler'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          description_audience: 4 yaş üstü (çocuk okuyucular)
+          description_short: Ders 1 çocuklar için tasarlanmıştır.
         course2:
           The Maze: Labirent
           Suzi: Suzi
@@ -68,7 +69,7 @@ tr:
           Binary Bracelets: İkilik Bileklikler
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler sorunlarını çözmek ve paylaşabilecekleri hikayeler ile interaktif oyun oluşturabilecekler. 2-5. Sınıflar için tavsiye edilir.
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Maze: Loops": 'Labirent: Döngüler'
@@ -80,8 +81,8 @@ tr:
           "Artist: Sequence2": 'Aktör: Sıra2'
           "Maze: Sequence2": 'Labirent: Sıra2'
           "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: 6 yaş ve üstü (okuma becerisi gerekir)
+          description_short: Ders 2, okuma bilen öğrenciler için tasarlanmıştır.
         course3:
           The Maze: Labirent
           "Studio: Create a Story": 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
@@ -101,13 +102,13 @@ tr:
           Artist Functions with Parameters: Parametreli Aktör Fonksiyonları
           Computational Thinking: Sayısal Düşünme
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
-          Songwriting Parameters: Songwriting Parameters
+          Songwriting Parameters: Müzik yazarlığı parametreleri
           Dice Race: Zar Yarışı
           Internet: İnternet
           Crowdsourcing: "Kalabalık Kaynaklandırma 'Crowdsourcing'"
           Digital Citizenship: Sayısal Vatandaşlık
           Farmer - While Loops: 'Çiftçi - While Döngüleri'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: "Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
           "Studio: Create a Game": 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
           Maze: Labirent
           Artist: Aktör
@@ -129,140 +130,63 @@ tr:
           "Farmer: While Loops2": 'Çiftçi: While Döngüleri2'
           "Bee: Nested Loops2": 'Arı: Yerleştirilmiş Döngüler2'
           "Bee: Debugging2": 'Arı: Ayıklama2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Artist: Patterns": 'Sanatçı: Desenler'
           Songwriting: Şarkı yazma
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
-        msm:
-          title: Ortaokul Matematiği
-          description: Ortaokul Matematiği için özel çalışma sürüyor.
-          Graph Paper Programming: Grafik kağıdı programlama
-          Assessments: Değerlendirmeler
-          Unit 1: Ünite 1
-          Unit 2: İkinci Ünite
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
-          "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          description_audience: 8 yaş ve üstü (Ders 2 sonrası)
+          description_short: "Ders 3, Ders 2'nin devamıdır."
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
-          description_short: Create a story or make a game with Play Lab!
+          title: Oyun Laboratuvarı
+          description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+          Play Lab: Oyun Laboratuvarı
+          description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
         artist:
           title: Aktör
-          description: Draw cool pictures and designs with the Artist!
+          description: Sanatçı ile harika resimler ve tasarımlar yap!
           Artist: Aktör
-          description_short: Draw cool pictures and designs with the Artist!
-        scrat:
-          title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
-          "Maze: Sequence": 'Labirent: Sıra'
+          description_short: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           Maze: Labirent
           title: Saat Kodu
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Angry Birds, Plants vs. Zombies karakterlerini ve Buz Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını dene!
+          description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar biliminin temel öğelerini dene!
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+          title: Anna ve Elsa ile kodlama yap
+          description: "Hadi kod kullanarak sihri ve buzun güzelliğini keşfedecek olan Anna ve Elsa'ya katıl. Buz kayağı ve kış harikalar diyarı gibi kar taneleri ve desenler oluşturacaksın sonra bunları arkadaşlarınla paylaşabileceksin!"
           Artist: Aktör
           description_short: "Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım."
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
-          title: Course 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          description_short: "Ders 4'ü alan öğrenciler Ders 2 ve 3'ü almış olmalıdır."
+          description: "Ders 4, Ders 3 ve Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4-8. sınıflar için önerilir."
+          "Artist: Variables": 'Sanatçı: Değişkenler'
+          "Bee: For Loops": 'Arı: For Döngüleri'
+          title: Ders 4
+          "Algorithms: Tangrams": 'Algoritmalar: Tangramlar'
           Variables: Değişkenler
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Play Lab: Variables": 'Oyun Laboratuvarı: Değişkenler'
+          "Play Lab: Functions with Parameters": 'Oyun Laboratuvarı: Fonksiyonlar ve Parametreler'
+          "Bee: Functions with Parameters": 'Arı: Fonksiyonlar ve Parametreler'
+          "Artist: For Loops": 'Sanatçı: For Döngüleri'
+          "Play Lab: For Loops": 'Oyun Laboratuvarı: For Döngüleri'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
+          "Unplugged: Tangrams": 'Unplugged: Tangramlar'
           Artist: Aktör
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          Bee: Arı
+          "Unplugged: Envelope Variables": 'Bağımsız: Fişteki Değişkenler'
+          "Unplugged: Madlibs": 'Bağımsız: Madlibs'
+          "Unplugged: For Loop Fun": 'Bağımsız: Döngü Eğlencesi İçin'
+          "Unplugged: Songwriting with Parameters": 'Unplugged: Parametrelerle şarkı yazarlığı'
+          "Artist: Functions with Parameters": 'Sanatçı: Fonksiyonlar ve Parametreler'
+          "Unplugged: Binary": 'Unplugged: İkili Taban'
+          Bee Binary: Arı İkili Taban
+          Farmer Binary: Çiftçi İkili Taban
+          Maze and Bee: Labirent ve Arı
+          Artist Binary: Sanaçtı İkili Taban
+          description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
         Course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Labirent: Sıra'
-          "Artist: Sequence": 'Aktör: Sıra'
-          "Artist: Loops": 'Aktör: Döngüler'
-          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
-          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
-          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
-          "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Bee: Debugging": 'Arı: Ayıklama'
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": 'Labirent: Sıra'
-          "Artist: Sequence": 'Aktör: Sıra'
-          "Artist: Loops": 'Aktör: Döngüler'
-          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
-          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
-          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
-          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
-          "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Bee: Debugging": 'Arı: Ayıklama'
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: Ders 4 Ön Koşulu
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          description: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
           "Maze: Sequence": 'Labirent: Sıra'
           "Artist: Sequence": 'Aktör: Sıra'
           "Artist: Loops": 'Aktör: Döngüler'
@@ -273,21 +197,907 @@ tr:
           "Artist: Functions": 'Aktör: Fonksiyonlar'
           "Bee: Debugging": 'Arı: Ayıklama'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Intro: Giriş
+          Variables and For Loops: Değişkenler ve For Döngüleri
+          Functions and Functions with Parameters: Fonsiyonlar ve Parametreleri Verilen Fonksiyonlar
+          title: Kullanılabilirlik Testi
           description_short: ""
-          description: A selection of Course 4 levels for usability testing.
+          description: Kullanılabilirlik testi için Ders 4 seviyelerinden bir seçim.
           Variables: Değişkenler
-          For Loops: For Loops
+          For Loops: For Döngüleri
+          Binary: İkili
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: özel
+          description_short: özel
+          description: özel
+          Special: Özel
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: özel
+          description_short: özel
+          description: özel
+          Special: Özel
+          Binary: İkili
+        algebra:
+          title: Cebirde Bilgisayar Bilimi
+          description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Diziler ve Görüntüler
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Yazılı sözleşmeler
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'Büyük oyun - değişkenler'
+          "Eval: Defining Functions": Bileşik fonksiyonlar
+          "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
+          "Play Lab: Defining Functions": Roket yüksekliği
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'Büyük oyun - animasyon'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
+          "Eval: Conditionals": Koşullar
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'Büyük oyun - çarpışma algılama'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
+          description: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
+          Play Lab: Oyun Laboratuvarı
+          Infinity: Sonsuz
+        algebrademo:
+          title: Cebir Demo
+          description_short: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          Algebra Demo: Cebir Demo
+          Evaluation Blocks: Değerlendirme Blokları
+          Making Pictures: Resim Yapma
+          Defining Variables: Değişkenler Tanımlama
+          Defining Simple Functions: Basit Fonksiyonları Tanımlama
+          The Design Recipe: Tasarım Tarifi
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Blockly Basics: "Balockly'nin temelleri"
+          Writing computer programs: Bilgisayar programları yazma
+          Navigating the teacher dashboard: Öğretmen panosunda gezinme
+          Unplugged lessons: Bağımsız dersler
+          Classroom Culture: Sınıf kültürü
+          Ways to go beyond Courses 1, 2, and 3: kurs 1,2 ve 3 ünde ilersine gitmek için yollar
+          K-5 Courses: K-5 dersleri
+          Writing computer programs in Blockly: Bloklarla bilgisayar programı yazma
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Kişisel yansıma
+          Next Steps: Sonraki Adımlar
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Events": 'Programming Concept: Events'
+        netsim:
+          title: İnternet Simülatörü
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
+          Internet Simulator: İnternet Simülatörü
+          Unit 1: Ünite 1
+          Unit 2: İkinci Ünite
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
+        pixelation:
+          title: Pikselleşme
+          description: Bitler ve baytlar ile görüntüler oluştur.
+          description_short: Bitler ve baytlar ile görüntüler oluştur.
+          Pixelation: Pikselleşme
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: 20 saat giriş kursu
+          description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
+          description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
+          The Maze: Labirent
+          Computational Thinking: Sayısal Düşünme
+          Graph Paper Programming: Grafikli Kağıdıyla Programlama
+          The Artist: Sanatçı
+          Algorithms: Algoritmalar
+          The Artist 2: Sanatçı 2
+          Functions: Fonksiyonlar
+          The Farmer: Çiftçi
+          Conditionals: Koşullar
+          The Artist 3: Sanatçı 3
+          Song Writing: Şarkı Yazma
+          The Farmer 2: Çiftçi 2
+          Abstraction: Soyutlama
+          The Artist 4: Sanatçı 4
+          Relay Programming: Röle Programlama
+          The Farmer 3: Çiftçi 3
+          The Internet: İnternet
+          The Artist 5: Sanatçı 5
+          Wrap-up: Özet
+        edit-code:
+          title: Kodu Düzenle
+          description: Kodu Düzenle
+          description_short: Kodu Düzenle
+          The Maze: Labirent
+          Applab: Applab
+          The Artist: Sanatçı
+          Play Lab: Oyun Laboratuvarı
+          Play Lab 2015: Play Lab 2015
+        events:
+          title: Olaylar
+          description: Olaylar
+          description_short: Olaylar
+          Bounce: Sıçrama
+          Studio: Stüdyo
+          Calc: Kireç
+          Eval: Eval
+        flappy:
+          title: Flappy Kod
+          description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
+          description_short: Write your own Flappy game in less than 10 minutes!
+          Flappy Code: Flappy Kod
+        jigsaw:
+          title: Yapboz
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
+          Jigsaw: Yapboz
+        step:
+          title: Adım
+          description: Step tutorial
+          description_short: Step tutorial
+          Step: Adım
+        Hour of Code:
+          title: Kodlama Saati 2013
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar biliminin temel öğelerini dene!
+          Hour of Code 2013: Kodlama Saati 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: Ders 4 Ön Koşulu
+          description_short: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          description: "Ders 2 ve 3'ü almamış öğrenciler için kavramların artırılması."
+          Course 4 Prerequisite: Ders 4 Ön Koşulu
+          "Maze: Sequence": 'Labirent: Sıra'
+          "Artist: Sequence": 'Aktör: Sıra'
+          "Artist: Loops": 'Aktör: Döngüler'
+          "Bee: Conditionals": 'Arı: Koşullandırıcılar'
+          "Artist: Nested Loops": 'Aktör: Yerleştirilmiş Döngüler'
+          "Farmer: While Loops": 'Çiftçi: While Döngüleri'
+          "Bee: Nested Loops": 'Arı: Yerleştirilmiş Döngüler'
+          "Artist: Functions": 'Aktör: Fonksiyonlar'
+          "Bee: Debugging": 'Arı: Ayıklama'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Ders 14
+          Lesson 14: Ders 14
+          Lesson 14 v2: Ders 14 v2
+          Lesson 15: Ders 15
+          Lesson 8: Ders 8
+          Lesson 5: Ders 5
+          Lesson 3: Ders 3
+          Lesson 4: Ders 4
+          Lesson 6: Ders 6
+          Lesson 2: Ders 2
+          Lesson 7: Ders 7
+          Lesson 1: Ders 1
+          Innovation: Yenilik
+          Sending Binary Messages: İkili Mesajları Gönderiyor
+          Sending More Complex Messages: Daha fazla kompleks mesaj gönderiyor
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Sayı Sistemleri
+          Binary Numbers: İkili Sayılar
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
+          "Calc: Evaluation Blocks": 'Calc: Değerlendirme Blokları'
+          "Eval: Strings and Images": 'Eval: Diziler ve Görüntüler'
+          "Unplugged: Contracts": 'Unplugged: Teknikler'
+          "Eval: Writing Contracts": 'Eval: Yazım Teknikleri'
+          "Calc: Defining Variables": 'Hesaplama: Değişkenleri Tanımlama'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Değişkenleri Tanımlama (Büyük Oyun)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: Tasarım Tarifi'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animasyon (Büyük Oyun)'
+          "Unplugged: Booleans": 'Unplugged: Boolean Değerleri'
+          "Eval: Boolean Operators": 'Eval: Boolean Operatörleri'
+          "Play Lab: Booleans": 'Play Lab: Boolean Değerleri'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Büyük Oyun)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Şartlar ve Parçalı Fonksiyonlar'
+          "Eval: Conditionals": 'Eval: Şartlar'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kaza Algılama ve Mesafe Formülü'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Contracts: Teknikler
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: Tasarım Tarifi
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean Değerleri
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Koşullar ve Parçalı Fonksiyonlar
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean Değerleri
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi'nin Pizacısı"
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kaza Algılama (Büyük Oyun)'
+          Your Game - Player Movement: Senin Oyunun-Karakter Hareketleri
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: yeni kademe
+          Introduction to PD: Kişisel Geliştirme Giriş
+          title: Computer Science Principles PD
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
+          Lesson 14: Ders 14
+          Lesson 15: Ders 15
+        ECSPD:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          Getting to know AppLab: Getting to know AppLab
+          Functions: Fonksiyonlar
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
+          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
+          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Değerlendirme Blokları
+          The Big Game: The Big Game
+          Strings and Images: Diziler ve Görüntüler
+          The Design Recipe: Tasarım Tarifi
+          Next Steps: Sonraki Adımlar
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+        Glenallan Career Day Demo:
+          new stage: yeni kademe
+          title: Glenallan Career Day Demo
+          description_short: "Let's make some puzzles!"
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Evaluation Blocks: Değerlendirme Blokları
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Kişisel Geliştirme Giriş
+          Evaluation Blocks: Değerlendirme Blokları
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Kişisel Geliştirme Giriş
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Çoklu
+          Big Game: Big Game
+          new stage: yeni kademe
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: yeni kademe
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: 'CSP Unit 2 - The Internet'
+          description_short: İnternet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: İnternet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+        algebraPD2a:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Defining Variables: Değişkenler Tanımlama
+          Big Game - Variables: 'Big Game - Variables'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          The Design Recipe: Tasarım Tarifi
+          Big Game - Animation: 'Big Game - Animation'
+          Booleans: Boolean Değerleri
+          Sam the Bat: Sam the Bat
+          Big Game - Booleans: 'Big Game - Booleans'
+          Luigi's Pizza: "Luigi'nin Pizacısı"
+          Big Game - Player Movement: 'Big Game - Player Movement'
+          Big GAme - Collision Detection: 'Big GAme - Collision Detection'
+          Rocket-Height: Rocket-Height
+          Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Ücretsiz Oyna
+        allthethings:
+          Jigsaw: Yapboz
+          Maze: Labirent
+          Artist: Aktör
+          Bee: Arı
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Sıçrama
+          Multi: Çoklu
+          Match: Eşleştir
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: Her şey!
+          description: Kulanıcı arayüzü testi için tüm seviye tipleri
+          description_short: Kulanıcı arayüzü testi için tüm seviye tipleri
+          Odometer: Kilometre sayacı
+          Text Compression: Text Compression
+          Pixelation: Pikselleşme
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: "Algebra PD'de Bilgisayar Bilimi"
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Writing Contracts: Yazılı sözleşmeler
+          Defining Variables: Değişkenler Tanımlama
+          Defining Functions: Fonksiyonlar Tanımlama
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean Değerleri
+          "Eval: Conditionals": 'Eval: Şartlar'
+          Next Steps: Sonraki Adımlar
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: İnternet Simülatörü
+          App Lab: Uygulama Laboratuvarı
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Hoşgeldiniz!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Hoşgeldiniz!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: İnternet Simülatörü
+          App Lab: Uygulama Laboratuvarı
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Sonraki Adımlar
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Hoşgeldiniz!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Özet
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Kodlama saati 2015
+          description_short: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
+          description: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
+          Hour of Code: Saat Kodu
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Writing Contracts: Yazılı sözleşmeler
+          Defining Variables: Değişkenler Tanımlama
+          Defining Functions: Fonksiyonlar Tanımlama
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean Değerleri
+          "Eval: Conditionals": 'Eval: Şartlar'
+          Next Steps: Sonraki Adımlar
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Hoşgeldiniz!
+          The Design Recipe: Tasarım Tarifi
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Hoşgeldiniz!
+          Wrap-Up: paketlemek
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Hoşgeldiniz!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: paketlemek
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Sonraki Adımlar
+        sciencePD2b-iZone:
+          Welcome!: Hoşgeldiniz!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: paketlemek
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Hoşgeldiniz!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Özet
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Hoşgeldiniz!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Özet
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

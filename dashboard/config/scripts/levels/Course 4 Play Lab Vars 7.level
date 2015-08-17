@@ -28,8 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "embed": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>

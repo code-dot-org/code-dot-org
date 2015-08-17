@@ -1,0 +1,86 @@
+{
+  "name": "blockly-mooc",
+  "version": "0.0.161",
+  "repository": "code-dot-org/code-dot-org",
+  "license" : "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=0.10.25 <0.13",
+    "npm": "^2.9.1"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "test": "grunt build && grunt test"
+  },
+  "browser": {
+    "blockly": "./build/package/js/blockly.js"
+  },
+  "browserify": {
+    "transform": [
+      "require-globify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "blockly": {
+      "exports": "Blockly"
+    }
+  },
+  "devDependencies": {
+    "@cdo/apps": "file:src",
+    "@cdo/shared": "file:../shared/js",
+    "browserify": "10.2.4",
+    "browserify-shim": "3.8.10",
+    "chai": "1.10.0",
+    "connect-livereload": "0.5.3",
+    "ejs": "0.8.4",
+    "ejsify": "1.0.0",
+    "express": "4.11.2",
+    "factor-bundle": "2.3.3",
+    "glob": "5.0.14",
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-concurrent": "1.0.1",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-copy": "0.7.0",
+    "grunt-contrib-uglify": "0.7.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-exec": "0.4.6",
+    "grunt-express": "1.4.1",
+    "grunt-jsxhint": "0.6.0",
+    "grunt-lodash": "0.3.0",
+    "grunt-newer": "1.1.1",
+    "grunt-notify": "0.4.1",
+    "grunt-sass": "1.0.0",
+    "grunt-strip-code": "0.1.2",
+    "handlebars-runtime": "1.0.12",
+    "http-proxy": "1.11.1",
+    "jquery": "2.1.4",
+    "jquery-ui": "1.10.5",
+    "jsdom": "0.8.6",
+    "linklocal": "2.5.2",
+    "load-grunt-tasks": "2.0.0",
+    "lodash": "2.4.2",
+    "lodash-cli": "2.4.2",
+    "messageformat": "0.2.2",
+    "mkdirp": "0.5.1",
+    "mochify": "2.9.0",
+    "moment": "2.10.6",
+    "node-sass": "1.2.2",
+    "npm-which": "2.0.0",
+    "phantomjs": "wjordan/phantomjs#v2.0.0",
+    "react": "0.13.3",
+    "react-tools": "0.13.3",
+    "reactify": "1.1.1",
+    "require-globify": "1.2.1",
+    "rfile": "1.0.0",
+    "seedrandom": "2.4.2",
+    "through": "2.3.8",
+    "uglify-js": "2.4.24",
+    "watchify": "3.2.3",
+    "which": "1.1.1",
+    "wrench": "1.5.8",
+    "xmldom": "0.1.19",
+    "Base64": "0.3.0"
+  }
+}

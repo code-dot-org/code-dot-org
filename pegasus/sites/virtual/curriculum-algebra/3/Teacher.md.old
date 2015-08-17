@@ -1,0 +1,100 @@
+---
+title: Eval Strings and Images
+view: page_curriculum
+theme: none
+---
+
+
+<%= partial('curriculum_header', :unittitle=> 'MSM', :lesson=> 3, :unplugged=>false, :title=> 'Eval: Strings and Images',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>('30-60')) %>
+
+[content]
+
+[together]
+
+## Lesson Overview
+Students will use the Eval app to learn about two new data types, Strings (any string of alphanumeric characters) and Images.
+
+[summary]
+
+## Teaching Summary
+### **Getting Started**
+ 
+1) [Vocabulary](#Vocab)<br/>
+2) [Introduction](#GetStarted)  
+
+### **Activity: Eval Strings and Images**  
+
+3) [Online Puzzles](#Activity1)
+
+[/summary]
+
+## Lesson Objectives 
+### Students will:
+- write and evaluate expressions for generating Strings and Images
+
+[/together]
+
+[together]
+
+# Teaching Guide
+
+## Getting Started
+
+
+### <a name="Vocab"></a> 1) Vocabulary
+This lesson has four new and important words:<br/>
+
+- **String** - any sequence of characters between quotation marks (examples: "hello", "42", "this is a string!")
+- **Image** - a type of data for pictures
+- **Produce** - to compute a value from an expression
+- **Type** - refers to a general kind of data, like Number, String, Image, or Boolean
+
+### <a name="GetStarted"></a> 2) Introduction
+
+In the previous stage, you only worked with a single type of value - Numbers. In this next stage you'll get a chance to write programs that with new data types to output text (Strings) and pictures (Images).
+
+[/together]
+
+[together]
+
+## Activity: Eval Strings and Images
+### <a name="Activity1"></a> 3) Online Puzzles
+
+In this activity you'll use the new data types String and Image to compose art with Blocks of Evaluation - head to [MSM Stage 3](http://studio.code.org/s/algebra/stage/3/puzzle/1) in Code Studio to get started programming.
+
+[/together]
+
+
+[standards]
+
+<details>
+<summary>Standards Alignment</summary>
+
+### Common Core Mathematical Practices
+ 
+- 1. Make sense of problems and persevere in solving them.
+- 2. Reason abstractly and quantitatively.
+- 3. Construct viable arguments and critique the reasoning of others.
+- 4. Model with mathematics.
+- 5. Use appropriate tools strategically.
+- 6. Attend to precision.
+- 7. Look for and make use of structure.
+- 8. Look for and express regularity in repeated reasoning.
+
+### Common Core Math Standards
+
+- A-SSE.1-2: The student interprets the structure of expressions to solve problems in context.
+- F-IF.1-3: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range.
+- N-Q: The student reasons quantitatively in using units to solve problems.
+
+### CSTA K-12 Computer Science Standards
+
+- L1:6:CPP.6: Implement problem solutions using a block-based visual programming language. 
+
+</details>
+
+[/standards]
+
+[/content]
+
+<link rel="stylesheet" type="text/css" href="../docs/morestyle.css"/>

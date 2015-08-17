@@ -4,6 +4,7 @@ class Blockly < Level
     level_url
     skin
     instructions
+    markdown_instructions
     start_blocks
     toolbox_blocks
     required_blocks
@@ -19,8 +20,21 @@ class Blockly < Level
     disable_variable_editing
     use_modal_function_editor
     use_contract_editor
+    default_num_example_blocks
     open_function_definition
-    callout_json
+    contract_highlight
+    contract_collapse
+    examples_highlight
+    examples_collapse
+    examples_required
+    definition_highlight
+    definition_collapse
+    disable_examples
+    project_template_level_name
+    is_project_level
+    edit_code
+    code_functions
+    failure_message_override
   )
 
   before_validation {
@@ -44,14 +58,13 @@ class Blockly < Level
     self.class.pretty_print(xml_node.to_xml)
   end
 
-  def load_level_xml(xml)
-    xml_node = Nokogiri::XML(xml, &:noblanks)
-    block_nodes = xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove)
-    super(xml_node.to_xml)
+  def load_level_xml(xml_node)
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//'+x}.join(' | ')).map(&:remove) : []
+    level_properties = super(xml_node)
     block_nodes.each do |attr_node|
-      self.send("#{attr_node.name}=", attr_node.child.to_xml)
+      level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
     end
-    self.tap(&:save!)
+    level_properties
   end
 
   def filter_level_attributes(level_hash)
@@ -126,5 +139,103 @@ class Blockly < Level
   def update_ideal_level_source
     return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
     self.ideal_level_source_id = LevelSource.find_identical_or_create(self, solution_blocks).id
+  end
+
+  # What blocks should be embedded for the given block_xml. Default behavior is to change nothing.
+  def blocks_to_embed(block_xml)
+    return block_xml
+  end
+
+  # Return a Blockly-formatted 'appOptions' hash derived from the level contents
+  def blockly_options
+    options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
+      level = self
+      level_prop = {}
+
+      # Map Dashboard-style names to Blockly-style names in level object.
+      # Dashboard sample_property will be mapped to Blockly sampleProperty by default.
+      # To override the default camelization add an entry to this hash.
+      overrides = {
+        required_blocks: 'levelBuilderRequiredBlocks',
+        toolbox_blocks: 'toolbox',
+        x: 'initialX',
+        y: 'initialY',
+        maze: 'map',
+        ani_gif_url: 'aniGifURL',
+        success_condition: 'fn_successCondition',
+        failure_condition: 'fn_failureCondition',
+      }
+      level.properties.keys.each do |dashboard|
+        blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
+        # Select value from properties json
+        # Don't override existing valid (non-nil/empty) values
+        value = JSONValue.value(level.properties[dashboard].presence)
+        level_prop[blockly] = value unless value.nil? # make sure we convert false
+      end
+
+      # Set some specific values
+
+      if level.is_a? Blockly
+        level_prop['startBlocks'] = level.try(:project_template_level).try(:start_blocks) || level.start_blocks
+        level_prop['toolbox'] = level.try(:project_template_level).try(:toolbox_blocks) || level.toolbox_blocks
+        level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
+      end
+
+      if level.is_a?(Maze) && level.step_mode
+        step_mode = JSONValue.value(level.step_mode)
+        level_prop['step'] = step_mode == 1 || step_mode == 2
+        level_prop['stepOnly'] = step_mode == 2
+      end
+
+      level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
+
+      # Blockly requires startDirection as an integer not a string
+      level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
+      level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
+      level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
+
+      # Blockly requires these fields to be objects not strings
+      %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
+        level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
+      end
+
+      # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
+      if level_prop['fn_successCondition'] || level_prop['fn_failureCondition']
+        level_prop['goal'] = {fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']}
+        level_prop.delete('fn_successCondition')
+        level_prop.delete('fn_failureCondition')
+      end
+
+      app_options = {}
+
+      app_options[:levelGameName] = level.game.name if level.game
+      app_options[:skinId] = level.skin if level.is_a?(Blockly)
+
+      # Set some values that Blockly expects on the root of its options string
+      non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
+      app_options.merge!({
+                             baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+                             app: level.game.try(:app),
+                             levelId: level.level_num,
+                             level: non_nil_level_prop,
+                             cacheBust: level.class.cache_bust,
+                             droplet: level.game.try(:uses_droplet?),
+                             pretty: Rails.configuration.pretty_apps ? '' : '.min',
+                         })
+    end
+    options[:level].freeze
+    options.freeze
+  end
+
+  # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
+  # must be specified to bust the CDN cache. CloudFront is enabled to forward
+  # query params. Don't cache bust during dev, so breakpoints work.
+  # See where ::CACHE_BUST is initialized for more details.
+  def self.cache_bust
+    if ::CACHE_BUST.blank?
+      false
+    else
+      ::CACHE_BUST
+    end
   end
 end

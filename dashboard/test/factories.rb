@@ -14,6 +14,13 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
+      birthday Date.new(1980, 03, 14)
+      factory :facilitator do
+        name 'Facilitator Person'
+      end
+      factory :district_contact do
+        name 'District Contact Person'
+      end
     end
 
     factory :student do
@@ -59,13 +66,17 @@ FactoryGirl.define do
 
   factory :match, :parent => Level, :class => Match do
     game {create(:game, app: "match")}
-    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text:'test'}]}}
+    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :artist, :parent => Level, :class => Artist do
   end
 
   factory :maze, :parent => Level, :class => Maze do
+  end
+
+  factory :applab, :parent => Level, :class => Applab do
+    game {Game.applab}
   end
 
   factory :level_source do
@@ -80,17 +91,13 @@ FactoryGirl.define do
   end
 
   factory :script do
-    sequence(:name) { |n| "Bogus Script #{n}" }
+    sequence(:name) { |n| "bogus_script_#{n}" }
   end
 
   factory :script_level do
-    script
-
-    trait :with_stage do
-      stage
-      script do |script_level|
-        script_level.stage.script
-      end
+    stage
+    script do |script_level|
+      script_level.stage.script
     end
 
     trait :with_autoplay_video do
@@ -101,10 +108,6 @@ FactoryGirl.define do
 
     chapter do |script_level|
       (script_level.script.script_levels.maximum(:chapter) || 0) + 1
-    end
-
-    game_chapter do |script_level|
-      (script_level.script.script_levels.maximum(:game_chapter) || 0) + 1
     end
 
     position do |script_level|
@@ -175,5 +178,50 @@ FactoryGirl.define do
   factory :user_script do
     user {create :student}
     script
+  end
+
+  factory :cohorts_district do
+    cohort
+    district
+    max_teachers 5
+  end
+
+  factory :cohort do
+    name 'Test Cohort'
+  end
+
+  factory :district do
+    sequence(:name) { |n| "District #{n}" }
+    location 'Panem'
+    contact {create(:district_contact).tap{|dc|dc.permission = 'district_contact'}}
+  end
+
+  factory :workshop do
+    name 'My Workshop'
+    program_type '1'
+    location 'Somewhere, USA'
+    instructions 'Test workshop instructions.'
+    facilitators {[
+      create(:facilitator).tap{|f| f.permission = 'facilitator'}
+    ]}
+    cohorts {[
+        create(:cohort)
+    ]}
+    after :create do |workshop, _|
+      create_list :segment, 1, workshop: workshop
+    end
+  end
+
+  factory :segment do
+    workshop
+    start DateTime.now
+    self.send(:end, DateTime.now + 1.day)
+  end
+
+  factory :attendance, class: WorkshopAttendance do
+    segment
+    teacher {create :teacher}
+
+    status 'present'
   end
 end

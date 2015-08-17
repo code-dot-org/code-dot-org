@@ -1,28 +1,3 @@
-/**
- * Replaces element with ID oldID with the HTML at newHTML
- * Copies over attributes of old element into new one
- * @param oldID
- * @param newHTML
- */
-function replaceWithElement(oldID, newHTML) {
-  var $oldElement = $('#' + oldID);
-
-  if (!$oldElement.length) {
-    throw new Error("Can't find element #" + oldID + " to replace");
-  }
-
-  var oldAttributes = $oldElement.prop("attributes");
-
-  var $newElement = $(newHTML);
-  $oldElement.before($newElement);
-  $oldElement.remove();
-  $newElement.attr('id', oldID);
-
-  $.each(oldAttributes, function() {
-    $newElement.attr(this.name, this.value);
-  });
-}
-
 var addClickTouchEvent = function(element, handler) {
   var wrapper = function(e) {
     handler(e);
@@ -34,10 +9,29 @@ var addClickTouchEvent = function(element, handler) {
   });
 };
 
-function onURLBlocked(base_url, callback) {
-  $("<img width=0 height=0>")
-      .on("error", callback)
-      .attr("src", base_url + "?" + Math.random())
-      .css("position", "absolute")
-      .appendTo("body");
-}
+/**
+ * Wrap a function so that it will only be executed a certain amount of time
+ * after it's originally called, to avoid multiple calls in quick succession.
+ * Subsequent calls to the returned function will reset its timer.
+ * Note: Would reuse lodash's debounce method here, but we don't appear to
+ * have access to it here.
+ * @param {function} callback - to be called after the given delay
+ * @param {number} delay - How long to wait after the _last_ call before executing the callback
+ * @returns {function}
+ */
+var debounce = function (callback, delay) {
+  return (function () {
+    // Scope the key to this particular call to debounce, but outside
+    // the call of the returned function.
+    var timerKey;
+    return function () {
+      if (timerKey) {
+        clearTimeout(timerKey);
+      }
+      timerKey = setTimeout(function () {
+        timerKey = undefined;
+        callback();
+      }, delay);
+    };
+  })();
+};

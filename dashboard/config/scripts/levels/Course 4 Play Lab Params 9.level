@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Here's one of the games we were working on earlier. We've added a function called \"score_points\" that takes a parameter \"points.\" Edit the function so that the \"points\" parameter is added to the \"player_points\" variable. Have the Dog score 10 points to move on to the next puzzle. ",
+    "instructions": "You may recognize this game from an earlier level. \r\n\r\nWe've added a function called \"score_points\" that takes the parameter \"points\". \r\n\r\nEdit the function so that the \"points\" parameter is added to the \"player_points\" variable. \r\n\r\nWhen you're done, click \"Run\" to play.  When Dog scores 10 points, you will move on to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -31,7 +31,17 @@
     "open_function_definition": "score_points",
     "embed": "false",
     "disable_sharing": "false",
-    "maze_data": null
+    "markdown_instructions": "You may recognize this game from an earlier level. \r\n\r\nWe've added a function called `score_points` that takes the parameter `points`.\r\n\r\nEdit the function so that the `points` parameter is added to the `player_points` variable. \r\n\r\nWhen you're done, click \"Run\" to play.  When Dog reaches 10 points, you will move on to the next puzzle. ",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

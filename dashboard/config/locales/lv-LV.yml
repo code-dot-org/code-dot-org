@@ -1,4 +1,7 @@
 "lv":
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: nevar būt nākotnē
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
+  submit: Iesniegt
   add_teacher_form:
     code:
       label: 'Pievienot skolotāju:'
@@ -61,6 +65,8 @@
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
   signup_form:
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
     overview_student: Pierakstaties, lai sekotu līdzi savam progresam, Jūsu e-pasts
       primāri tiek izmantots, lai pierakstītos un paroles atgūšanai. Lai iegūtu vairāk
       informāciju, apskatat mūsu <a href="http://code.org/privacy">konfidencialitātes
@@ -242,8 +248,10 @@
       free_play:
         playlab: Izveidot aplikāciju
         artist: Uzzīmēt kaut ko
+        calculate: Calculate Something
     user:
       classroom: Skolotāju mājas lapa
+      district_dashboard: District Dashboard
       label: Sveiki, %{username}
       stats: Mans progress
       settings: Mans konts
@@ -253,6 +261,7 @@
       signup: Piereģistrēties
       already_registered: Jau reģistrējies?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Jūsu progress
       lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
@@ -328,16 +337,25 @@
       jo jūs neesat reģistrējis e-pasta adresi'
     student_teacher_disassociated: Pasniedzējs %{teacher_name} ir noņemts no skolēna
       %{student_name}
+    panel:
+      answer_viewer: Answer Viewer
+      student: Students
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Sadaļa
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
     new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
     current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu
       izmaiņas)
-    cancel:
-      title: Atcelt savu kontu
-      hint: Nelaimīgs?
-      button: Atcelt savu kontu
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Pabeigts
     tried: Mēģināts
@@ -347,6 +365,10 @@
     classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -372,6 +394,7 @@
     local_school: vietējā skola
     online: tiešsaiste
     see_details: Sīkāka informācija
+    view_course: View Course
     prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000
       savā klasē.'
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
@@ -388,6 +411,9 @@
     heading_apps: <h2>Izklaide </h2><h1>visiem</h1>
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
+    no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Vīrietis
     female: Sieviete
@@ -480,9 +506,13 @@
       title: Flappy kods
       body: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy
         koda apmācību!
-    20hour:
-      title: Ievadkurss
-      body: Izmēģini mūsu 20 stundu ievadu Datorzinātņu kursā.
+    20-hour:
+      title: Accelerated Course
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+        Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
+        prieku mācīties visos vecumos.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā
       try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"
@@ -491,6 +521,9 @@
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
       title: Ledus sirds
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
     students_made_these_with_code: Skolēni izveidoja šos ar kodu!
@@ -522,13 +555,27 @@
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nepareizs risinājums
     wrong_body: Ievadītais risinājums nav pareizs. Lūdzu mēģini vēl!
     correct_title: Pareizi
     correct_body: Tā ir pareizā atbilde.
+  contract_match:
+    wrong_title: Nepareiza atbilde
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Ievadi savu atbildi šeit
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: Labi
   time:
@@ -581,11 +628,48 @@
     bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar
     mums tavā vietā.
   progress:
-    not_completed: Nav pabeigts
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli
     furthest_level_attempted: tālākais līmenis mēģināts
+    assessment: assessment
   studio:
     courses_working_on: Kursi, pie kuriem tu strādā
     completed_courses: Pabeigtie kursi
     all_courses: Visi kursi
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Saglabāt
+    delete: Izdzēst
+    exit: Return to Course
+    my_projects: My Projects
+    share: Ieteikt
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Vairāk
+    name: Vārds
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Izdzēst?
+    delete_yes: Jā
+    delete_no: Nē
+    saved: Saved
+    not_saved: Not saved
+    cancel: Atcelt
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

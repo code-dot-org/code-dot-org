@@ -6,17 +6,17 @@ title: Building a Foundation view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Building a Foundation', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed.
 
 This lesson teaches that failure is not the end of a journey, but a hint for how to succeed. [summary]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 20 minutes
 
@@ -28,14 +28,14 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
 
 4) [Building a Foundation](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 6) [Vocab Shmocab](#Shmocab)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -44,15 +44,15 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
   * Build a structure based on team plan
   * Revise both plan and structure until they satisfy challenge
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Building Elements 
       * Gumdrops and Toothpicks (approx 30 each group) or
@@ -61,14 +61,15 @@ This lesson teaches that failure is not the end of a journey, but a hint for how
   * Mini Paper Cup for checking height (1 per group)
   * Book for testing strength (1 per group)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/J7y0o6VxMXQ?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print [Building a Foundation Packet](/curriculum/course1/9/Activity9-BuildingFoundation.pdf)
   * Gather enough building elements for each group 
       * You don't have to give any certain amount; just make sure you put some limit on materials.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -88,24 +89,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Persistence** - Say it with me: Per-sis-tence   
 Trying again and again, even when something is very hard
@@ -132,9 +133,9 @@ Trying again and again, even when something is very hard
       * If you're filling a balloon and it pops, next time you need less air.
   * Think of the mistakes as chances to learn how to do something better next time.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
   
 Here are some great resources to prep your class with the concept of persistence before you turn them loose on this project:
@@ -144,9 +145,9 @@ Here are some great resources to prep your class with the concept of persistence
   * [Never Ever Give Up](http://www.neeny.com/contents/member/xconfig/photos/NeverGiveUp-cf8470.jpg)
   * [If You Quit Too Soon](http://ic.pics.livejournal.com/jend0s/20784172/18398/18398_original.jpg)
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -187,19 +188,19 @@ In this challenge, we’ll work to construct towers that are strong enough to ho
 > 
 > 8) Congratulate the students as they succeed and take pictures of the successful towers (if possible) to upload to the Code.org site!
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 The planning stage can be difficult for young students. It may be helpful for you to place some idea "examples" at the front of the room. Do not announce that they are there. Simply encourage students to take a walk if they get frustrated. Try to encourage students to locate the tips on their own if at all possible.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -209,13 +210,13 @@ The planning stage can be difficult for young students. It may be helpful for yo
   * Was there a time that you thought about giving up? 
       * How did you get past that feeling?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -228,17 +229,17 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
 ## Assessment (0 min)
 
-### <a name="Assessment"></a>7) No Indivdual Assessment
+### <a name="Assessment"></a>7) No Individual Assessment
 
   * The final assessment of this lesson is the result of the previous activity.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -253,7 +254,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Try doing the same activity with different materials.
 
-[/together]
+[/juntos]
 
 [standards]
 

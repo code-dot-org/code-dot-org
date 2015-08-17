@@ -6,17 +6,17 @@ title: "Artist: Shapes" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>10, :title=> 'Artist: Shapes', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Returning to the Artist, the puzzles in this stage are focused on drawing, combining, and dividing squares and rectangles.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Returning to the Artist, the puzzles in this stage are focused on drawing, combi
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -43,7 +43,7 @@ Returning to the Artist, the puzzles in this stage are focused on drawing, combi
   * Correctly identify shapes regardless of their overall size
   * Compare and contrast squares and rectangles by their number of sides and side lengths
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Before beginning this lesson, students should have a basic understanding of squa
   * How do you make a square? A rectangle?
   * What happens when you put two squares next to each other?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -66,7 +66,7 @@ Before beginning this lesson, students should have a basic understanding of squa
 
 If students struggle to use the correct number of blocks to draw a line, point out that each line segment has a dot on both ends.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -84,7 +84,7 @@ If students struggle to use the correct number of blocks to draw a line, point o
   * On the second sheet draw instructions for recreating that image using a series of arrows
   * Trade instruction sheets and attempt to recreate the image using only the provided instructions.
 
-[/together]
+[/juntos]
 
 [standards]
 

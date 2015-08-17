@@ -218,24 +218,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Labas, mano vardas Saloni. Aš naudoju informatiką medicinoje bei sveikatos
-          apsaugoje. Susipažinkime su „jei-priešingu atveju“ blokeliu. Jis atrodo
-          taip, kaip ir „jei“ blokelis, tačiau jis turi papildomą dalį gale, kuri
-          sako, kas įvyks „priešingu atveju“.
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: Jeigu įdėsi  „judėk į priekį“ į pirmą vietą, o  „pasisuk į kairę“ prie
-          „kito atvejo“, tai zombis rinksis vieną iš dviejų dalykų. Kai kelias bus
-          priekyje, zombis žengs į priekį; KITU ATVEJU (jei kelio priekyje nebus)
-          zombis pasisuks į kairę.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Panašiai kaip ir su „jei“ blokeliu, aplink šį blokelį galima apgaubti
-          blokelį „kartok, kol“, kad zombis vis judėdamas tikrintų, kur yra kelias
-          ir kur reikia pasisukti.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Nagi, pajudink tuos zombius!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -255,7 +254,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Padėk tai voverei pasiekti gilę!
     function:
       1:
         image: notes/stage13_1.jpg

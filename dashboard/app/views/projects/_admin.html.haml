@@ -1,0 +1,6 @@
+- if current_user && current_user.admin?
+  = render layout: 'shared/admin' do
+    %h3 Debug
+    %h4 projects ({{projects.length}} total including hidden)
+    %pre
+      {{ projects | json }}

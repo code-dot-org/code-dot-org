@@ -23,8 +23,10 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
-    "maze_data": null,
-    "embed": "false"
+    "embed": "false",
+    "disable_sharing": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "true"
   }
 }]]></config>
   <blocks>

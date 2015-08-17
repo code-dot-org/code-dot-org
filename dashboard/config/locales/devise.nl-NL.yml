@@ -51,7 +51,7 @@
         om je nieuwe adres te bevestigen.
       updated: Je account is bijgewerkt.
     sessions:
-      signed_in: Je bent ingelogd.
+      signed_in: ''
       signed_out: Je bent uitgelogd.
     unlocks:
       send_instructions: Binnen een paar minuten krijg je een email met uitleg over
@@ -70,3 +70,25 @@
       not_saved:
         one: 'Door 1 fout kon %{resource} niet opgeslagen worden:'
         other: 'Door %{count} fouten kon deze %{resource} niet worden opgeslagen:'
+    invitations:
+      send_instructions: Een uitnodigingsmail is verzonden naar %{email}.
+      invitation_token_invalid: De gegeven uitnodigingstoken is niet geldig!
+      updated: Je wachtwoord is aangepast. Je bent nu ingelogd.
+      no_invitations_remaining: Geen openstaande uitnodigingen
+      invitation_removed: Je uitnodiging is verwijderd.
+      new:
+        header: Uitnodiging verzenden
+        submit_button: Een uitnodiging verzenden
+      edit:
+        header: Kies je wachtwoord
+        submit_button: Kies mijn wachtwoord
+    mailer:
+      invitation_instructions:
+        subject: Instructies voor uitnodigingen
+        hello: Hallo %{email}
+        someone_invited_you: Iemand heeft je uitgenodigd op %{url}, je kan deze accepteren
+          via onderstaande link.
+        accept: Accepteer uitnodiging
+        ignore: Als je de uitnodiging niet wilt accepteren, kunt je deze mail negeren.
+          <br /> Je account zal niet gemaakt worden totdat je de link hierboven bezoekt
+          en een wachtwoord instelt.

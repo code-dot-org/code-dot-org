@@ -33,7 +33,7 @@ ro:
         text: 'Fiecare bloc este o instrucție. Dacă tragi un bloc de tip "mută înainte" către spațiul tău de lucru și apeși pe "Execută Programul" pasărea se mută cu un spațiu pe labirint.'
       11:
         image: notes/hoc1_11.jpg
-        text: Pentru a face mai multe acţiuni, puteţi muta mai multe blocuri în spaţiul de lucru atasandu-le împreună. Pasarea va face comenzile de sus în jos.
+        text: Pentru a face mai multe acţiuni, puteţi trage mai multe blocuri în spaţiul de lucru atașându-le împreună. Pasărea va executa comenzile de sus în jos.
       12:
         image: notes/hoc1_12.jpg
         text: 'Dacă rulezi un program și vrei să îl repari pentru ca apoi să-l încerci din nou, apasă pe butonul "Reset".'
@@ -160,26 +160,26 @@ ro:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 'Salut, numele meu este Saloni. Eu folosesc programarea să pot ajuta și găsi soluții în medicină și sănătate. Hai să învățăm despre blocul "IF - ELSE" (Daca-Altfel). Arată la fel ca blocul "IF (Daca)", dar are o parte în plus la sfârșit care spune "altfel".'
+        text: 'Salut, numele meu este Saloni. Eu folosesc informatica să pot ajuta și găsi soluții în medicină și sănătate. Hai să învățăm  despre blocul "dacă altfel". Arată ca blocul "dacă", dar are o parte în plus la sfârșit care spune "altfel".'
       2:
         image: notes/hoc5_2.jpg
-        text: 'Dacă pun un bloc "mută înainte" în locul unde spune "execută" și un bloc "ia-o la stânga" unde spune "altfel" asta înseamnă că zombie-ul va alege între 2 opțiuni. DACĂ există o cale în față, zombie-ul se va mișca înainte și ALTFEL (nu există o cale înainte), zombie-ul se va întoarce la stânga.'
+        text: 'Dacă pun un bloc "mută înainte" în locul unde spune "execută" și un bloc "întoarce la stânga" unde spune "altfel" asta înseamnă că zombie-ul va alege între 2 opțiuni. DACĂ există o cale în față, zombie-ul se va mișca înainte și ALTFEL (nu există o cale înainte), zombie-ul se va întoarce la stânga.'
       3:
         image: notes/hoc5_3.jpg
-        text: 'La fel ca blocul "dacă", putem pune blocuri "IF-ELSE (Dacă-Altfel)" în interiorul blocului "repetare", astfel încât zombie continua sa se mişte şi blocul "dacă-altfel" va continua să verifice dacă există o posibilitate de întoarcere.'
+        text: 'La fel ca blocul "dacă", putem pune blocuri "dacă altfel" în interiorul blocului "repetare", astfel încât zombie continuă să se mişte şi blocul "dacă altfel" va continua să verifice dacă există o posibilitate de întoarcere.'
       4:
         image: notes/hoc5_4.jpg
         text: Acum , condu-i pe zombie unde le este locul!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: O instrucţiune if-else este o decizie între două lucruri. Să vedem cum putem folosi o instrucţiune if-else cu amicul nostru veverita Scrat.
+        text: O instrucţiune dacă-altfel este o decizie între două lucruri. Hai să vedem cum putem folosi o instrucţiune dacă-altfel cu amicul nostru veverița Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: 'Acest bloc arată la fel ca blocul "dacă", dar există o ramură suplimentară în partea de jos care spune "altfel". Dacă punem un bloc "mergi înainte" unde scrie "execută" şi un bloc "întoarce la stânga" unde scrie "altfel",  atunci veverița Scrat va merge înainte dacă este posibil. Dacă nu există drum înainte, Scrat se va întoarce la stânga.'
+        text: 'Acest bloc arată la fel ca blocul "dacă", dar există o ramură suplimentară în partea de jos care spune "altfel". Dacă punem un bloc "mută înainte" unde scrie "execută" şi un bloc "întoarce la stânga" unde scrie "altfel",  atunci veverița Scrat va merge înainte dacă este posibil. Dacă nu există drum înainte, Scrat se va întoarce la stânga.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: 'Înseamna luarea unei decizii și a face una dintre două acţiuni pe baza acestei decizii. Şi la fel ca blocurile "dacă", puteţi pune blocuri "if-else" în interiorul blocurilor "repeta".'
+        text: 'Înseamnă luarea unei decizii și a face una dintre două acţiuni pe baza acelei decizii. Şi la fel ca blocurile "dacă", puteţi pune blocuri "dacă-altfel" în interiorul blocurilor "repetare".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: Acum, haideţi să o ajutăm pe veverița Scrat să obțină acea ghindă!
@@ -267,44 +267,44 @@ ro:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Buna, numele meu este Lyndsey. Sunt model, actriță şi imi programez propriile mele aplicații. Să folosim programarea și să ne alăturam personajelor Anna şi Elsa în explorarea magiei şi frumuseţii gheții.
+        text: Bună, numele meu este Lyndsey. Sunt model, actriță şi imi programez propriile mele aplicații. Hai să folosim codul și să ne alăturăm personajelor Anna şi Elsa în explorarea magiei şi frumuseţii gheții.
       2:
         image: notes/frozen1_2.jpg
-        text: Veţi crea fulgi de zăpadă şi modele în gheaţă in timp ce patinați. Apoi puteti construi un paradis de iarnă, pe care îl puteţi împartăși cu prietenii.
+        text: 'Veţi crea fulgi de zăpadă şi modele în gheaţă in timp ce patinați și  apoi puteti construi un paradis de iarnă, pe care îl puteţi distribui prietenilor.'
       3:
         image: notes/frozen1_3.jpg
-        text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe. Acest mod este folosit și de studenţi în universități pentru a învăța bazele programării. Sub capota, de fapt scrieți cod.
+        text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe. Acest mod este folosit și de studenţi în universități pentru a învăța bazele programării. Sub capotă, de fapt scrieți cod.
       4:
         image: notes/frozen1_4.jpg
         text: Un program este un set de instrucţiuni care îi spune unui computer ce să facă. Să construim un cod sau un program, care o va ajuta pe Elsa să creeze o linie simplă. Vom folosi acest lucru mai târziu pentru a crea modele mai complexe.
       5:
         image: notes/frozen1_5.jpg
-        text: Ecranul este împărţit în trei părţi principale. În stânga, este suprafaţa de gheaţăunde va rula programul tău. Instrucţiunile pentru fiecare nivel sunt scrise chiar sub suprafaţă.
+        text: Ecranul tău este împărţit în trei părţi principale. În stânga, este suprafaţa de gheaţăunde va rula programul tău. Instrucţiunile pentru fiecare nivel sunt scrise chiar sub suprafaţă.
       6:
         image: notes/frozen1_6.jpg
-        text: Aceasta zonă de mijloc este setul de instrumente, şi fiecare din aceste blocuri este o acţiune care Elsa şi Anna o pot face.
+        text: Aceasta zonă de mijloc este setul de instrumente, şi fiecare din aceste blocuri reprezintă o acţiune pe care Elsa şi Anna o pot face.
       7:
         image: notes/frozen1_7.jpg
-        text: 'Spaţiul alb din dreapta este numit spațiul de lucru, şi aceasta este zona în care vom construi programul nostru. Pentru a muta suprafața de gheață veţi utiliza blocul de "Mută înainte".'
+        text: 'Spaţiul alb din dreapta este numit spațiul de lucru şi acesta este locul în care vom construi programul nostru. Pentru a muta suprafața de gheață vei utiliza blocul de "Mută înainte".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Aici, blocul "Mută înainte", spune, "merge mai departe 100 pixeli." Ce se întâmplă atunci când am apăsaţi "Execută" ? Elsa avansează o anumită zonă pe ecran, 100 pixeli de fapt! Practic, pixelii sunt pătrate foarte mici pe ecranul computerului.'
+        text: 'Aici, blocul "Mută înainte", spune, "merge înainte cu 100 pixeli." Ce se întâmplă atunci când am apăsaţi "Execută" ? Elsa avansează o anumită porțiune pe ecran, de fapt 100 pixeli! De fapt, pixelii sunt pătrate foarte mici pe ecranul computerului.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'Alt bloc pe care îl avem în acest puzzle spune "întoarce dreapta 90 de grade." Şi când vom folosi acest bloc "întoarce dreapta", Elsa se întoarce un anumit unghi. Vă puteți juca cu unghiul de rotire al Elsei. Unghiul este măsurat de la pozitia actuală a Elsei. Deci, acesta este un viraj la 90 de grade. Şi acesta este un viraj de 120 de grade.'
+        text: 'Alt bloc pe care îl avem în acest puzzle spune "întoarce dreapta 90 de grade." Şi când vom folosi acest bloc "întoarce dreapta", Elsa se întoarce un anumit unghi. Vă puteți juca cu unghiul de rotire al Elsei. Unghiul este măsurat față de poziția inițială a Elsei. Deci, acesta este un viraj la 90 de grade. Şi acesta este un viraj de 120 de grade.'
       10:
         image: notes/frozen1_10.jpg
         text: Amintiţi-vă, puteţi schimba numărul de pixeli şi grade făcând clic pe săgeţile de lângă ei.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Bună, eu sunt Paola! Computerele sunt foarte bune la repetarea acţiunilor. Voi puteţi număra până 10, 20 sau 100. Dar un calculator poate număra un miliard sau un trilioan. Nu se va plictisi şi va dura doar câteva secunde. Dacă este de numărat, de desenat sau orice altceva --computerele poat repeta lucruri sute sau chiar miliarde de ori.
+        text: Bună, eu sunt Paola! Computerele sunt foarte bune la repetarea acţiunilor. Voi puteţi număra până 10, 20 sau 100. Dar un calculator poate număra un miliard sau un trilion. Nu se va plictisi şi îi va doar câteva secunde. Fie că este de numărat, de desenat sau orice altceva --computerele pot repeta lucruri sute sau chiar miliarde de ori.
       2:
         image: notes/frozen2_2.jpg
         text: 'În programare, numim aceasta o buclă. O buclă repetă codul respectiv de mai multe ori. Pentru următorul puzzle-ului, trebuie să o ajuți pe Anna să creeze un pătrat cu blocul "Repetă".'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Orice bloc de cod ai pus in interiorul blocului "Repetă" va fi repetat în secvenţă, ori de câte ori doriţi.'
+        text: 'Orice bloc de cod pui in interiorul blocului "Repetă" va fi repetat în secvenţă, ori de câte ori dorești.'
       4:
         image: notes/frozen2_4.jpg
         text: 'Pentru a desena un pătrat, puteţi folosi "Muta înainte" şi "Întoarce dreapta" de 4 ori. Dar modul mai simplu este de a spune computerului sa repete actiunea pereche "Muta înainte" şi "Întoarce dreapta la 90 de grade"  de 4 ori. Pentru a face acest lucru, trebuie sa inseram blocul "Muta înainte" şi "Întoarce Dreapta" în interiorul unui bloc "Repetare".'
@@ -371,11 +371,10 @@ ro:
         text: Cateva exeple de evenimente sunt de ascultare pentru un clic de mouse, un buton segeata sau un robinet pe ecran.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Uite, il vom determina pe extraterestru să-l salute pe umanoid când jucătorul apasă pe el. Vom folosi blocul "când s-a apăsat", atașându-i blocul "spune". Când jucătorul apasă pe extraterestru, tot ce este atașat acestui bloc "când s-a apăsat" va fi executat. Ce va zice extraterestrul tău?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Exista, de asemena blocuri "când săgeți". Daca conectezi blocurile "muta" la acestea, poți sa începi sa muti actorii în sus, în jos, în stânga, în dreapta. Pas cu pas, jocul tău devine mult mai atractiv.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
@@ -385,4 +384,4 @@ ro:
         text: 'Dacă vrem ca un actor să facă ceva în mod repetat, fără ca jucătorul să trebuiască să facă ceva, vom pune aceste blocuri în interiorul blocului "repetă pentru totdeauna".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
+        text: In următorul puzzle, scopul nostru este de a-l ajuta pe Vrăjitor sa patruleze granițele regatului, în stânga și în dreapta în continuu. Învățând cum sa folosești comenzile de repetare, vei salva a groaza de timp când iți vei construi propriul joc.

@@ -27,23 +27,27 @@ sq:
   prizes_all: Shpërblimet për secilin organizator
   prizes_every_organizer: Secili organizator i Orës së Kodimit do të marrë shpërblesë nga Dropbox apo Skype në shenjë falënderimi
   prizes_technology: Një shkollë publike në secilin shtet të SHBA (dhe Washington DC) do të fitojë teknologji në vlerë $10,000
-  prizes_tech_chats: '# klasëve do të fitojnë mundësinë për video komunikim me musafir të vecantë'
+  prizes_tech_chats: '# klasat/ do të fitojnë mundësinë për video komunikim me të ftuar special'
   prizes_robots: 100 klasë do të fitojnë set robotësh me programator
   prizes_brilliant: Një shkollë në secilën zonë apo territor do të fitojë $2000 për një Projekt Brilant
   prizes_actua: 15 shkolla nga Kanadaja do të fitojnë 2 ndihmës për STEM punëtoritë nga një prej anëtarëve Actua
   prizes_details: Detajet
-  whats_next_header: Cfarë është në radhë?
+  whats_next_header: Cfarë është më pas?
   whats_next_description: "Do ju dergojmë materiale dhe këshilla të dobishme për eventin tuaj. Tutorialet e reja të 2014 së shpejti do të arrijnë për çfarëdo browser-i, smartphone -apo edhe pa kompjuter! <a href='http://code.org/learn'>provo tutorialet aktual</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Si të realizojmë Orën e Kodimit</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promovo Orën e Kodimit</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>ju provuat</h3><h2>ORA e KODIMIT</h2>'
+  share_on_facebook: Shperndaje ne Facebook
+  share_on_twitter: Shperndaje ne Twitter
+  beyond_an_hour: Përtej një Ore Kodimi
+  get_started: Fillo
   anybody_can_learn: çdokush mund të mësoj.
   register_now: Regjistrohu tani
   front_join_us_heading: ORA e KODIMIT për çdo pjesëmarrës.
   front_join_us_description: "Shkencat kompjuterike jane bazamenti për çdo nxënës. Na ndihmoni t'ua ofrojmë 100 milionë pjesëmarrësve."
   front_join_us_button: Bashkohu me ne
   front_what_is_hoc: Çfarë është Ora e Kodimit?
-  front_join_us_header: çdo kush mund të mesojë gjërat elementare dhe të ndjejë kënaqësi duke mësuar!
+  front_join_us_header: Çdo kush mund të mësojë gjërat elementare dhe të ndjejë kënaqësi duke mësuar!
   front_join_us_header_uk: "Kurdo gjatë periudhës 8-14 dhjetor, organizo eventin Ora e Kodimit për të dëshmuar se gjithësecili mund t'i mësojë gjërat bazike, dhe të ndjej kënaqësi në te!"
   front_join_us_teacher: A je mësimdhënës?
   front_join_us_inspire: Motivoni nxënësit me
@@ -52,7 +56,7 @@ sq:
   front_join_us_ask_link: Kërko nga shkolla juaj lokale
   front_join_us_ask: të organizoni Orën e Kodimit.
   front_join_us_computer_science: Vërtet i dua Shkencat Kompjuterike?
-  front_join_us_spread: përhape fjalën.
+  front_join_us_spread: Përhape fjalën.
   front_join_us_organize: Apo organizo vetë eventin Ora e Kodimit.
   front_join_us_how_to_run: Ja si realizohet Ora e Kodimit
   front_join_us_help_promote: Ndihmo të promovohet Ora e Kodimit
@@ -89,12 +93,12 @@ sq:
   signup_thank_you_message: Ua dërguam email konfirmimin me informacionin që ju ndihmon të filloni.
   map_header: '# Eventi Ora e Kodimit nëpër botë'
   map_header_company: '# nga organizator kompanie'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Kërko për eventet e Orës së Kodimit
+  map_search_search: Kërko
+  map_search_reset: Rivendos
+  meta_tag_og_title: Ora e Kodimit është këtu
   meta_tag_og_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 30 gjuhë. Mosha 4 deri 104.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Ora e Kodimit është këtu
   meta_tag_twitter_description: Ora e Kodimit është lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 30 gjuhë. Moshat 4 deri 104.
   twitter_default_text: 'këtë vit jam pjesëmarres në #OraeKodimit, po ju? @codeorg'
   hardware_prizes_form_name_label: Emri juaj
@@ -144,7 +148,7 @@ sq:
   hoc_faq_frozen_q: Ku është tutoriali me Anna dhe Elsa?
   hoc_faq_frozen_a: "Tanimë është i publikuar në <a href='http://code.org/learn'>Code.org/learn</a>. Shpresojmë të ju pëlqej!"
   hoc_faq_high_school_q: çfarë aktiviteteti të realizoj me nxënesit e shkollës së mesme?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Për të gjitha moshat, ne rekomandojmë të provoni një nga tutorialet fillestar në  <a href='http://code.org/learn'>Code.org/learn</a> për të filluar, si tutoriali i Angry Birds ose me Anna dhe Elsa. Një student gjimnazi duhet të jetë i aftë të përfundojë një nga këto në 30 minuta dhe më pas mund të provojë një tutorial më të avancuar në JavaScript, si Khan Academy ose CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -155,7 +159,7 @@ sq:
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: Statistikat nga Ora e Kodimit 2013
-  stats_growth: Ishte mënyra më e shpejtë për të pasur 15 milion përdorues.
+  stats_growth: "Ishte më e shpejta për t'i arritur 15 milion përdorues."
   stats_tumblr: 'Tumblr: 3.5 vjet'
   stats_facebook: 'Facebook: 3 vite'
   stats_twitter: 'Twitter: 2.5 vjet'
@@ -167,28 +171,28 @@ sq:
   stats_girls_million: Në 2013-tën më shumë se 10 milion vajza
   stats_nina: '"Cdo ditë kishte të njëjtat rezultate&mdash;me një angazhim 100%." - - Nina Nichols Peery, Mësuese'
   stats_student: '"E dija që kjo ishte një mundësi që të vjen <b>një herë në jetë</b>." - Mariana Alzate, nxënëse e klasës së 5-të'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"Nuk i kam parë<b> kurrë më parë</b> studentët e mi kaq të emocionuar për të mësuar." - Micheal Clark, Mësuese'
   resources_how_to: Udhëzues për mësimdhënës
-  resources_how_to_events: Event how-to guide
-  resources_how_to_districts: How-to guide for districts
-  resources_how_to_officials: How-to guide for public officials
+  resources_how_to_events: Event udhëzues
+  resources_how_to_districts: Si të udhëzojmë për të ndaluar
+  resources_how_to_officials: Si të udhëzojmë për zyrtarët publikë
   resources_handouts: Fletushka për të shpërndarë fjalën
   resources_videos: Videot
   resources_posters: Posterat
   resources_social: Sociale
   resources_banners: Banerat
   resources_emails: Formatet e-mailave
-  resources_stats: Useful stats and blurbs
+  resources_stats: Statistikat e dobishme dhe njoftimet
   resources_press_kit: Press Kit
   events_title: Të gjitha eventet e Orës së Kodimit
   events_nav_all: Të gjitha eventet
   events_nav_whole_schools: Të gjitha shkollat
   events_nav_special: Evente speciale
-  events_nav_orgs: Organizations
+  events_nav_orgs: Organizatat
   events_all_title: Të gjitha eventet e Orës së Kodimit
   events_whole_school_title: Eventet e Orës së Kodimit në të gjithë shkollën
   events_special_title: Eventet speciale të Orës së Kodimit
-  events_orgs_title: All Hour of Code events organized by Partner Organizations
+  events_orgs_title: Të gjitha eventet e Orës së Kodimit nga organizatat bashkëpunuese
   event: Event
   events: Evente
   footer_copyright_message: E drejta e autorit 2014 Code.org. Të gjitha të drejtat e rezervuara.

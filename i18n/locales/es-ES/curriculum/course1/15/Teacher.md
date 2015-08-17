@@ -6,15 +6,15 @@ title: The Big Event view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'The Big Event', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -26,7 +26,7 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
 
 4) [The Big Event](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
@@ -35,11 +35,11 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
 
 6) [The Big Event Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
 [together]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,26 +47,27 @@ Events are a great way to add variety to a pre-written algorithm. Sometimes you 
   * Recognize actions of the teacher as signals to initiate commands
   * Practice differentiating pre-defined actions and event-driven ones
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Assessment Worksheet: [The Big Event Assessment](/curriculum/course1/15/Assessment15-TheBigEvent.pdf)
   * Pens/Pencils/Markers
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/8PN8aPWZ2sY?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print one [The Big Event Activity Worksheet](/curriculum/course1/15/Activity15-TheBigEvent.pdf) and Event Controller
   * Print Assessment Worksheet: [The Big Event Assessment](/curriculum/course1/15/Assessment15-TheBigEvent.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -86,29 +87,29 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has one new and important vocabulary word:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Event** - Say it with me: E-vent   
 An action that causes something to happen
 
-[/together]
+[/juntos]
 
 ### <a name="GetStarted"></a> 3) A Series of Events
 
@@ -153,23 +154,23 @@ An action that causes something to happen
 
 In earlier lessons, we created algorithms that allowed us to control a friend or Flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.
 
-[/tip]
+[/sugerencia]
 
 > **Directions:**
 > 
 >   1. Project the Event Controller onto your classroom screen.
 
-[centerIt]
+[céntrala]
 
 ![](eventomatic.png)
 
-[/centerIt]
+[/céntrala]
 
 >   1. Decide with your class what each button does. We suggest: 
 >       * Pink Button -> Say “Wooooo!”
@@ -184,7 +185,7 @@ If your students seem confused, talk about their favorite games and all of the w
 >   6. Once their plan is underway, interject button presses sporadically. 
 >   7. Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven. 
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -195,7 +196,7 @@ If your students seem confused, talk about their favorite games and all of the w
   * Why do we need to be able to handle events in a program?
   * What are some other kinds of events that you can think of?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -206,7 +207,7 @@ If your students seem confused, talk about their favorite games and all of the w
   * Hand out the assessment activity and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -222,7 +223,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos! 
 
-[/together]
+[/juntos]
 
 [standards]
 

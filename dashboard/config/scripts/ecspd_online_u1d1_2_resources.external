@@ -1,0 +1,24 @@
+name 'ECSPD Online U1D1-2 Resources'
+title 'Unit 1 Day 1-2 Resources'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## What Is a Computer?
+
+Unit 1, Days 1-2 tackles the question of what a computer actually is. Consider how you might introduce this concept to your students.
+
+### Suggested Media Resources
+You might consider integrating videos into your instructions. Watch the video below which defines a computer. When you are finished watching it, think about how many computers you interact with each day. Do you have a programmable alarm clock? Does your refrigerator dispense ice and water? How many computers do you think are [in your car](http://www.nytimes.com/2010/02/05/technology/05electronics.html?_r=0)? 
+
+<br/>
+
+<iframe width="850" height="480" src="https://www.youtube.com/embed/_rYaIJnAZ5I" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Click here](http://videos.code.org/ecs-pd2-online/what-is-a-computer.mp4).*
+
+<br/>
+> Reflect: How might you use this video or other resources to explain the concept of "what is a computer" to your students? Make note of your ideas to share later.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

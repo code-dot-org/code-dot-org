@@ -8,33 +8,39 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require jquery.ui.all
- *= require jquery.qtip.min
+ * Gem assets
+ *= require jquery-ui
  *= require video-js
+ *
+ * Vendor assets
+ *= require add2home
+ *= require gotham-font
+ *= require jquery.qtip.min
+ *
+ * Application assets
  *= require_self
  *= require_directory .
+ *
+ * Shared
+ *= require user-menu
+ *= require user-progress
+ *= require user-hero
+ *= require buttons
+ *= require course-blocks
+ *= require details-polyfill
  */
 
-$baseFontFamily: 'Gotham 4r', sans-serif;
+@import "color";
+@import "font";
+@import "mixins";
+
+$baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
-$btnPrimaryBackground: orange;
-$btnPrimaryBackgroundHighlight: orange;
+$btnPrimaryBackground: $orange;
+$btnPrimaryBackgroundHighlight: $orange;
 
 @import "bootstrap";
-@import "color";
 @import "font-awesome";
-
-@mixin unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-@mixin selectable {
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-}
 
 p,pre,span {
   @include selectable;
@@ -43,50 +49,63 @@ p,pre,span {
 body {
   @include unselectable;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  padding: 10px;
+  padding: 0px;
   font-style: normal;
 }
 
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
-  color: #7665a0;
+  color: $purple;
 }
 
 h2 {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
 hr {
-  border-color: #0094ca;
+  border-color: $teal;
   border-bottom: none;
 }
 
 th {
-  background-color: #5b6770;
+  background-color: $charcoal;
   color: white;
   border: 1px solid white;
   text-align: left;
   font-size: 120%;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
+  font-family: $gotham-italics;
   font-style: normal;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: $gotham-extra-bold-italics;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clear {
@@ -95,10 +114,6 @@ em strong {
 
 .navbar {
   margin-bottom: 30px;
-}
-
-.production {
-  background-color: lightgray;
 }
 
 .trophy_gold {
@@ -145,184 +160,24 @@ em strong {
   height: 35px;
 }
 
-.level_link, .level_link:link, level_link:visited {
-  border-radius: 20px;
-  min-width: 22px;
-  line-height: 22px;
-  padding: 4px;
-  font-size: 16px;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  margin: 2px;
-  font-family: 'Gotham 4r', sans-serif;
-  font-weight: normal;
-  color: white;
-}
-
-.level_link.not_tried, .level_link.not_tried:link, .level_link.not_tried:visited {
-  background-color: $level_not_tried;
-  color: #666 !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
-}
-
-.level_link.attempted, .level_link.attempted:link, .level_link.attempted:visited {
-  background-color: $level_attempted;
-  color: #666 !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
-}
-
-.level_link.perfect, .level_link.perfect:link, .level_link.perfect:visited {
-  background-color: $level_perfect;
-  color: white !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
-}
-
-
-.level_link.passed, .level_link.passed:link, .level_link.passed:visited {
-  background-color: $level_passed;
-  color: white !important;
-  &:hover {
-    background-color: $level_current;
-    color: white;
-    text-decoration: none;
-  }
-}
-
-.puzzle_outer_level,
-.puzzle_outer_assessment,
-.puzzle_outer_current {
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.puzzle_outer_level {
-  background-color: #ccc;
-}
-
-.puzzle_outer_current {
-  background-color: $level_current;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.puzzle_outer_assessment {
-  background-color: yellow;
-  padding: 1px;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.user-stats-block
-{
-  display:inline-block;
-  position:relative;
-  overflow:hidden;
-  float:left;
-  width:100%;
-}
-
-.stage-lesson-plan-link a
-{
-  font-size: 10px;
-  color: $purple;
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-}
-
-.game-group {
-  border-bottom: 2px solid #ccc;
-  background-color: #eee;
-  display: table;
-  table-layout: fixed;
-  padding: 10px;
-  width: 100%;
-  .stage {
-    display: table-cell;
-    width: 200px;
-    vertical-align: middle;
-    margin-right: 5px;
-    .game-title {
-      font-family: 'Gotham 5r', sans-serif;
-      font-weight: normal;
-    }
-  }
-  .games {
-    display: table-cell;
-    vertical-align: middle;
-    box-sizing: border-box;
-    padding-right: 10px;
-    .level {
-      margin: 1px;
-      display: inline-block;
-      .puzzle-number {
-        position: relative;
-        top: 1px;
-      }
-    }
-  }
-}
-
-.puzzle-named {
-  font-size: 13px;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
 .header-wrapper {
-  padding-top: 30px;
-  min-height: 100px;
-  @media screen and (max-width: 1150px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-    min-height: 70px;
-  }
-  @media screen and (max-device-width: 900px) {
-    padding-top: 15px;
-    &.feedback-bug-links {
-      padding-top: 30px;
-    }
-  }
+  padding-top: 15px;
+  min-height: 70px;
 }
 
 .header {
   padding-top: 0;
   padding-bottom: 0;
-  height: 52px;
-  @media screen and (max-width: 1150px) {
-    height: 44px;
-  }
+  height: 44px;
   background-color: $bkgnd_color;
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
-  //a:hover {color:#FF00FF;}  /* mouse over link */
-  //a:active {color:#0000FF;}  /* selected link */
-
-  #betainfo {
-    font-size: 11px;
-  }
 }
 
 .header.hide_on_mobile,
 .header-wrapper.hide_on_mobile {
-  @media screen and (max-device-width: 900px) {
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     display: none;
   }
 }
@@ -337,7 +192,7 @@ em strong {
 }
 
 a.header_status_bar:hover {
-  background-color: orange;
+  background-color: $orange;
 }
 
 .header_text {
@@ -347,18 +202,17 @@ a.header_status_bar:hover {
 
 #betainfo {
   position: absolute;
-  font-size: 11px;
-  top: 5px;
-  right: 25px;
+  font-size: 10px;
+  top: -1px;
+  right: 33px;
 }
 
 .main {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
+  padding: 10px;
+  a:link {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
 }
 
@@ -385,10 +239,10 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:visited {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:hover {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
   select {
     width: auto;
     font-size:11px;
@@ -396,15 +250,130 @@ html, body {
     margin-bottom: 4px
     }
   .fineprint {
-    a:link {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:visited {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:hover {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:active {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:link {font-family: $gotham-bold; font-weight: normal;}
+    a:visited {font-family: $gotham-bold; font-weight: normal;}
+    a:hover {font-family: $gotham-bold; font-weight: normal;}
+    a:active {font-family: $gotham-bold; font-weight: normal;}
   }
   .dim {
     display: inline-block;
     opacity: 0.5;
   }
+}
+
+/* Styling that keeps the small footer consistent with other page elements */
+$codeApp-left-margin: 25px;
+$small-footer-horizontal-margin: 15px;
+$small-footer-standard-width: 400px;
+
+/* Shared styles so flyout looks like footer */
+.small-footer, #copyright-flyout, #more-menu {
+  background-color: #ddd; /* Matches blockly flyout */
+  color: $light_gray;
+  font-size: 14px;
+  a {
+    font-family: $gotham-bold;
+    font-weight: normal;
+    &:link {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:hover {
+      color:$dark_charcoal;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &:active {
+      color:$light_gray;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+.small-footer {
+  position: absolute;
+  bottom: 0;
+  width: $small-footer-standard-width;
+  overflow: hidden;
+  padding-left: $codeApp-left-margin;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
+
+  form {
+    float: left;
+    margin-right: $small-footer-horizontal-margin;
+  }
+
+  select {
+    width: 80px;
+    font-size:11px;
+    height: 18px;
+    margin-bottom: 0;
+  }
+
+  small {
+    display: block;
+    float: right;
+    margin-right: $small-footer-horizontal-margin;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+}
+
+#copyright-flyout {
+  display: none; /* Invisible until summoned. */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 625px;
+  max-width: 50%;
+  min-width: 300px;
+  padding: 1em;
+}
+
+#more-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Prevent default unordered-list style */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li > a {
+    display: block;
+    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    border-bottom: solid thin $lightest_gray;
+
+    &:hover {
+      background-color: $dark_charcoal;
+      color: $lightest_gray;
+      text-decoration: none;
+    }
+  }
+}
+
+/* All three major components of .small-footer are stacked: */
+#more-menu {
+  z-index: 1;
+}
+#copyright-flyout {
+  z-index: 2;
+}
+.small-footer {
+  z-index: 3;
 }
 
 #locale {
@@ -423,16 +392,8 @@ html, body {
   display: inline-block;
 }
 
-.user_menu {
-  a:hover { background-color: transparent; text-decoration: none; display: inline-block; }
-}
-
-.user_menu a {
-  vertical-align: bottom;
-}
-
-.user_options {
-  display: inline-block;
+.user_options, .project_more_popup {
+  display: none;
   background-color: white;
   a:link {color:black;}
   a:visited {color:black;}
@@ -455,11 +416,38 @@ html, body {
 }
 
 .full_container {
-  padding: 25px;
+  padding: 0px 25px 25px 25px;
 }
 
+$default-modal-width: 640px;
+
 .modal {
-  a:hover {color:#FF0000; background-color: white; }
+  a:hover {color:$red; background-color: white; }
+
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
+    position: absolute;
+    top: 50px; // top of the dialog
+
+    // make dialog auto-center regardless of width
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    // margin-bottom is reused in JavaScript to determine
+    // how close to get to the bottom of the viewport.
+    margin-bottom: 25px;
+
+    z-index: 1050;
+  }
+  .modal-image {
+    margin-top: -100px;
+  }
 }
 
 .modal-body {
@@ -467,8 +455,8 @@ html, body {
 }
 
 .dash_modal {
-  width: 640px;
-  margin-left: -320px;
+  width: $default-modal-width;
+  margin-left: -($default-modal-width / 2);
 }
 
 .dash_modal_body {
@@ -477,7 +465,7 @@ html, body {
 
 .btn#dataConfirmOK:hover {
   color: white;
-  background-color: orange;
+  background-color: $orange;
 }
 
 #video {
@@ -514,28 +502,89 @@ html, body {
   }
 }
 
-.header_row {
-//  min-height: 85px;
-  @media screen and (max-width: 1150px) {
-//    min-height: 75px;
+.header_left {
+  position: absolute;
+  left: 25px;
+  z-index: 2;
+  .header_button, .header_input, .header_text {
+    margin-left: 10px;
   }
 }
 
+.header_left, .header_right {
+  margin-top: 5px;
+}
+
 .header_logo {
-  position: absolute;
   float: left;
-  left: 25px;
-  width: 86px;
-  max-width: 86px;
-  min-width: 86px;
   z-index: 1;
-  margin-top: -15px;
-  @media screen and (max-width: 1150px) {
-    width: 55px;
-    max-width: 55px;
-    min-width: 55px;
-    padding-top: 10px;
-    min-width: 0px;
+  margin-top: -24px;
+  padding-top: 14px;
+  min-width: 0px;
+  max-width: 55px;
+  width: 55px;
+
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+
+.project_info {
+  .header_text, .header_button {
+    float: left;
+  }
+  .project_name_wrapper .header_text {
+    float: left;
+    clear: left;
+  }
+  // TODO: Remove when applab is no longer in beta
+  .beta-notice {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 7px 0;
+    font-family: $gotham-extra-bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff176;
+  }
+}
+
+.project_name {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.project_updated_at {
+  font-size: 10px;
+}
+
+.project_save[disabled] {
+  background: $light_gray;
+}
+
+#project-share .social-buttons a {
+  display: inline-block;
+  &:hover, & {
+    text-decoration: none;
+  }
+  i {
+    display: table-cell;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: $purple;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24pt;
+    &:hover {
+      box-shadow: 2px 2px 5px $light_gray;
+    }
   }
 }
 
@@ -543,6 +592,9 @@ html, body {
   position: absolute;
   left: 0;
   right: 0;
+  .header_button {
+    margin-top: 3px;
+  }
 }
 
 .header_level_container {
@@ -550,38 +602,40 @@ html, body {
 }
 
 .header_level {
-  padding-top: 6px;
+  padding-top: 2px;
   padding-bottom: 0;
   text-align: center;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
-  @media screen and (max-width: 1150px) {
-    padding-top: 2px;
-  }
 
   .progress_container {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: $lightest_gray;
+    border: 1px solid $lighter_gray;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 4px 8px;
     border-radius: 5px;
-  }
-  /* current and last are large dots */
-  .puzzle_outer_current,
-  .puzzle_outer_level.last,
-  .puzzle_outer_assessment.last {
-    margin: 0 -1px;
-    vertical-align: middle;
-    border-radius: 20px;
 
+    .puzzle_outer_level,
+    .puzzle_outer_assessment,
+    .puzzle_outer_current {
+      vertical-align: middle;
+      margin: 0 -2px;
+    }
+  }
+
+
+  /* current puzzle is a large dot */
+  .puzzle_outer_current {
     .level_link {
-      border-radius: 20px;
-      height: 18px;
-      min-width: 18px;
-      width: 18px;
+      box-sizing: border-box;
+      border-radius: 28px;
+      height: 28px;
+      min-width: 28px;
+      width: 28px;
       font-size: 14px;
-      padding: 0 2px 4px 2px;
+      line-height: 24px;
+      padding: 0px;
       text-align: center;
       display: inline-block;
     }
@@ -594,21 +648,18 @@ html, body {
     }
   }
 
-  /* all others are small dot */
+  /* other puzzles are small dot */
   .puzzle_outer_level,
   .puzzle_outer_assessment {
-    margin: 0 -1px;
-    vertical-align: middle;
-    border-radius: 11px;
     line-height: 1px;
-
     .level_link {
-      min-width: 1px;
-      width: 1px;
-      height: 1px;
-      border-radius: 9px;
+      box-sizing: border-box;
+      min-width: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
       padding: 3px;
-      margin: 1px;
+      margin: 0px;
       /* hack to hide the number: */
       font-size: 0px;
       color: transparent;
@@ -619,52 +670,71 @@ html, body {
     text-decoration: none;
     background-color: $level_current;
   }
-
-  .puzzle_outer_current,
-  .puzzle_outer_current .level_link {
-    background-color: $level_current;
-    color: white !important;
-  }
-
 }
 
-
-.header_user {
+.header_right {
   position: absolute;
   float: left;
   right: 25px;
-  text-align: right;
-  margin-top: 9px;
-  @media screen and (max-width: 1150px) {
-    margin-top: 5px;
+}
+
+.freeplay_links {
+  display: inline-block;
+  text-align: center;
+}
+
+.header_button {
+  &.header_button_light {
+    background-color: $lightish_teal;
   }
-  background-color: rgb(255, 164, 0);
+  display: inline-block;
+  background-color: $orange;
   border-radius: 5px;
   padding: 7px 14px;
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
+  cursor: pointer;
   a:hover {
     text-decoration: none;
-    background-color: rgb(255, 164, 0);
+    background-color: $orange;
   }
 }
+
+input.header_input {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.header_user {
+  text-align: right;
+  margin-left: 5px;
+}
+
 .header_popup {
-  display:none;
-  top:auto;
-  position:absolute;
-  left:50%;
-  width:635px;
-  margin-left:-337px;
-  margin-top:-20px;
+  display: none;
+  position: absolute;
+  // Set to exactly line up with the bottom of the header
+  top: 44px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
+  margin-bottom: 20px;
+  width: 635px;
   border: 20px solid $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
+  border-radius: 0 0 6px 6px;
   z-index: 1050;
   background-color: white;
   overflow: hidden;
+}
+
+.header_popup_scrollable {
+  max-height: 560px;
+  overflow-y: auto;
 }
 
 .header_popup_header {
@@ -675,13 +745,18 @@ html, body {
   background-color: $hdr_color;
   font-size: 22px;
   cursor: pointer;
+
+  span {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_popup_body {
   position: relative;
-  overflow-y: auto;
   display: block;
-  min-height: 1100px;
+  color: $charcoal;
 
   .loading {
     height: 400px;
@@ -691,7 +766,8 @@ html, body {
 }
 
 .header_popup_footer {
-  padding: 12px 15px;
+  height: 20px;
+  padding: 10px 15px;
   margin-bottom: 0;
   text-align: right;
   color: $header_text;
@@ -708,19 +784,8 @@ html, body {
   cursor: pointer;
 }
 
-.transparent_backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: transparent;
-}
-
-.header_trophy_link:hover {
-  background-color: transparent;
-  text-decoration: none;
+.header_trophy_link {
+  cursor: pointer;
 }
 
 .header_finished_link {
@@ -740,7 +805,7 @@ html, body {
 
 .header_popup_link_glyph {
   font-size: 22px;
-  color: orange;
+  color: $orange;
   line-height: 10px;
 }
 
@@ -757,23 +822,18 @@ html, body {
 }
 
 #alert {
-  color: red;
+  color: $red;
   font-size: 130%;
   border-style: solid;
   border-width: 2px;
   padding: 5px;
 }
 
-.modal-body {
-  height: 100%;
-  overflow: visible;
-}
-
-#blocklyApp {
+#codeApp {
+  position: relative;
 
   .loading {
     height: 520px;
-    margin: 20px;
     background: image-url("spinner-big.gif") no-repeat center center;
   }
 
@@ -783,15 +843,33 @@ html, body {
     position: relative;
     top: -230px;
   }
+}
 
+#codeApp.pin_bottom {
+  position: absolute;
+  top: 85px;
+  left: $codeApp-left-margin;
+  right: 25px;
+  bottom: 10px;
+  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+    top: 10px;
+  }
+
+  &.embed_hidesource {
+    position: relative;
+    top: 0px;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
+  }
 }
 
 .reference_area {
   margin-top: 20px;
 
   .help_title {
-    color: #1180be;
-    font-family: 'Gotham 7r', sans-serif;
+    color: $cyan;
+    font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
     display: inline-block;
@@ -809,7 +887,6 @@ html, body {
 
   .video_name {
     text-align: center;
-    width: 183px;
   }
 
   .help_subtitle {
@@ -855,11 +932,15 @@ html, body {
         background: $dark_color;
         color: white;
         &:hover {
-          color: $light_green;
+          color: $green;
         }
         &:focus {
           outline: 0;
         }
+      }
+
+      html[dir=rtl] & {
+        float: right;
       }
     }
 
@@ -884,21 +965,37 @@ html, body {
   position: absolute;
   cursor: pointer;
   z-index: 1;
+  background: image-url("x_button.png") no-repeat center center;
+  background-size: 100% auto;
 
   top: $cornerOffset;
   right: $cornerOffset;
+  width: $startWidth;
+  height: $startHeight;
   &:hover {
     top: $cornerOffset - $movement;
     right: $cornerOffset - $movement;
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
   }
 
-  img {
-    width: $startWidth;
-    height: $startHeight;
-    &:hover {
-      width: $startWidth + $growth;
-      height: $startHeight + $growth;
-    }
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: $cornerOffset;
+  }
+  html[dir=rtl] &:hover, .flip-x-close &:hover {
+    right: auto;
+    left: $cornerOffset - $movement;
+  }
+
+  html[dir=rtl] .flip-x-close & {
+    left: auto;
+    right: $cornerOffset;
+  }
+
+  html[dir=rtl] .flip-x-close &:hover {
+    left: auto;
+    right: $cornerOffset - $movement;
   }
 }
 
@@ -909,8 +1006,8 @@ html, body {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: #7E5BA0;
-  font-family: 'Gotham 5r', sans-serif;
+  color: $purple;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -920,11 +1017,11 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background-color: white;
+  color: $charcoal;
+  border: 1px solid $charcoal;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
 }
 
@@ -934,17 +1031,13 @@ html[dir=rtl] .qtip-content {
 
 .cdo-qtips {
   z-index: 1;
+}
 
-
-  .tooltip-x-close {
-    @include close-button($cornerOffset: -35px);
-    background: none;
-    color: none;
-  }
+.tooltip-x-close.qtip-icon {
+  @include close-button($cornerOffset: -35px);
 }
 
 a.download-video {
-  float: left;
   z-index: 1;
   cursor: pointer;
   width: 40px;
@@ -969,11 +1062,11 @@ a.download-video {
   padding: 5px 20px;
   font-size: 28px;
   line-height: 32px;
-  background-color: orange;
+  background-color: $orange;
   text-align: center;
   color: white;
   a, a:visited {
-    color: #08c;
+    color: $cyan;
   }
   a:hover {
     background: transparent;
@@ -988,6 +1081,10 @@ a.download-video {
   @include warning-banner;
 }
 
+#warning-banner-https {
+  @include warning-banner;
+}
+
 #warning-banner-chrome {
   @include warning-banner;
   color: white;
@@ -998,7 +1095,7 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: 'Gotham 4r', sans-serif; font-weight: normal; }
+  a:link { font-family: $gotham-regular; font-weight: normal; }
 }
 
 .fixed_width_cell {
@@ -1009,13 +1106,60 @@ a.download-video {
 }
 
 #landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: hidden;
+  }
+
+  .welcomeleft {
+    float: left;
+    text-align: center;
+    width: 190px;
+    img {
+    padding-left: 50px;
+    }
+  }
+
+  .welcomeright {
+    float: left;
+    text-align: center;
+  }
+
+  .lines_of_code_header {
+    width: 100%;
+    color: white;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  a.lines_of_code_link {
+    color: white;
+    text-decoration: none;
+    font-family: $gotham-bold;
+    font-weight: normal;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .row#continue {
-    background-color: #00adbc;
+    background-color: $teal;
     color: white;
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: $gotham-extra-bold; font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1050,7 +1194,7 @@ a.download-video {
       height: 154px;
       width: 154px;
       img {
-        border: 2px solid #ccc;
+        border: 2px solid $lighter_gray;
         background-color: white;
       }
     }
@@ -1066,8 +1210,8 @@ a.download-video {
 
   .row.navcontainer {
     margin: 30px 0 10px -20px;
-    background-color: #eee;
-  }  
+    background-color: $lightest_gray;
+  }
 
   ul.nav.nav-pills {
     text-transform: uppercase;
@@ -1078,8 +1222,8 @@ a.download-video {
 
     li.active a, li.active a:hover, li.active a:link {
       background-color: white;
-      color: #7665a0;
-      border: 2px solid #7665a0;
+      color: $purple;
+      border: 2px solid $purple;
     }
     li a:hover, a:focus {
       text-decoration: none;
@@ -1097,15 +1241,15 @@ a.download-video {
       font-size:18px; line-height:30px;
     }
     #maintext {
-      text-align:left; padding-left:20px; color:#666;
+      text-align:left; padding-left:20px; color:$charcoal;
     }
     #helptext {
-      text-align:right; padding-right:20px; color:#888;
+      text-align:right; padding-right:20px; color:$light_gray;
     }
   }
 
   #lesson {
-    background-color:rgb(88, 103, 113);
+    background-color: $charcoal;
     #heading {
       -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 20px 10px 0px;
       .whitetext {
@@ -1121,8 +1265,8 @@ a.download-video {
         margin-bottom:5px;
       }
       a {
-        color: #ddd;
-        font-family: 'Gotham 4r', sans-serif; font-weight: normal;
+        color: $lightest_gray;
+        font-family: $gotham-regular; font-weight: normal;
       }
       .white {
         color:white;
@@ -1132,26 +1276,18 @@ a.download-video {
       color:white; font-size:15px;
     }
     .lightgreytext {
-      color: #ddd;
+      color: $lightest_gray;
     }
   }
   #stats {
-    background-color:#eeeeee;
+    background-color:$lightest_gray;
     #rightside {
       -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
     }
   }
-  .twolineheader {
-    h2 {
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: #7665a0; font-size: 24px; margin-bottom: 0px; line-height: 30px;
-    }
-    h1 {
-      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
-    }
-  }
 
   #edit_teachers {
-    background-color: #eee;
+    background-color: $lightest_gray;
     margin: 20px 0 20px -20px;
     form {
       margin: 0;
@@ -1159,94 +1295,8 @@ a.download-video {
   }
 }
 
-.betatext {
-  color: yellow;
-}
-
-.miniblock {
-  background-color:#ddd;
-  height:100px;
-  .heading {
-    -moz-box-sizing:border-box; box-sizing:border-box; padding: 10px 0px 10px 0px;
-  }
-  h3 {
-    margin: 0;
-    color:rgb(88, 103, 113);
-  }
-  .smalltext {
-    font-size:13px;
-    padding-right:10px;
-    font-family: 'Gotham 4r', sans-serif;
-    font-weight:normal;
-    color:rgb(88, 103, 113);
-  }
-  .whitetext {
-    color:#ddd;
-  }
-  .greytext {
-    color:rgb(88, 103, 113);
-  }
-  .imgspan {
-    margin-left: 0px;
-    text-align: right;
-  }
-}
-
-.miniblock-short {
-  height:150px;
-}
-
-.miniblock-tall {
-  height:232px;
-
-  .heading {
-    padding-left: 10px;
-    padding-right:10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  h3 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Gotham 5r', sans-serif;
-    font-weight: normal;
-    display: block;
-    float: left;
-    width: 200px;
-  }
-
-  .beta
-  {
-    .heading {
-      padding-right: 0px;
-    }
-
-    h3 {
-      width: 140px;
-    }
-
-    .betatext {
-      text-align: center;
-      display: block;
-      float: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: rgba(116, 128, 136, 0.37);
-      padding-left: 5px;
-      padding-right: 5px;
-      font-size: 24.5px;
-      height: 35px;
-      line-height: 40px;
-      width: 60px;
-    }
-  }
-}
-
-.miniblock-tall-audiencerow {
-  height:258px;
+.course_progress {
+  margin: 10px 0;
 }
 
 #signin {
@@ -1254,7 +1304,7 @@ a.download-video {
     margin-bottom:10px;
     a {
       font-size:18px;
-      font-family: 'Gotham 4r', sans-serif;
+      font-family: $gotham-regular;
       font-weight: normal;
     }
   }
@@ -1272,9 +1322,9 @@ a.download-video {
   ul.students li,
   ul.pictures li {
     list-style-type: none;
-    border: 1px solid #ccc;
+    border: 1px solid $lighter_gray;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: $lightest_gray;
     float: left;
     margin: 5px;
     padding: 5px;
@@ -1283,18 +1333,18 @@ a.download-video {
 
   ul.students li:hover,
   ul.pictures li:hover {
-    background-color: lightyellow;
+    background-color: $light_yellow;
   }
 
   ul.students li.selected,
   ul.pictures li.selected {
-    background-color: yellow;
+    background-color: $yellow;
   }
 }
 
 #signup {
   .signupblock {
-    background-color: #fafafa;
+    background-color: $lightest_gray;
   }
   .signupform {
     padding:20px;
@@ -1331,15 +1381,21 @@ a.download-video {
     display:inline-block
   }
   button {
-    font-size:16px; 
+    font-size:16px;
     height:40px;
   }
   .registertext {
-    display:inline-block; 
-    font-size:16px; 
-    color:#586771; 
+    display:inline-block;
+    font-size:16px;
+    color:$charcoal;
     margin-top:15px;
   }
+}
+
+@mixin yTranslation($offset) {
+  -webkit-transform: translateY($offset);
+  -ms-transform: translateY($offset);
+  transform: translateY($offset);
 }
 
 .match {
@@ -1350,8 +1406,13 @@ a.download-video {
     width: 260px;
     float: left;
     img {
-      height: 100%;
+      position: relative;
+      top: 50%;
+      @include yTranslation(-50%);
+      height: auto;
       width: auto;
+      max-height: 100%;
+      max-width: 100%;
     }
   }
   .draggablecolumn {
@@ -1360,20 +1421,24 @@ a.download-video {
     -ms-touch-action: none;
   }
   li {
-    padding-top: 7px;
-    padding-bottom: 7px;
-    background-color: lightgrey;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: $lighter_gray;
+    padding-left: 4px;
+    padding-right: 4px;
     width: 220px;
     margin-top:2px;
     margin-bottom:2px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 6px;
   }
   #questions {
     list-style-type: none;
     margin-left:0px;
     li {
-      background-color: lightgrey;
+      background-color: white;
+      border-color: $lighter_gray;
     }
   }
   li {
@@ -1383,30 +1448,51 @@ a.download-video {
     list-style-type: none;
     margin-left: 0px;
     .emptyslot {
-      background-color: #eee;
+      background-color: $lightest_gray;
+      border-color: $lightest_gray;
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: 'Gotham 5r', sans-serif; font-weight: normal;
+          font-family: $gotham-bold; font-weight: normal;
         }
       }
     }
     .active {
-      background-color: lightyellow;
+      border-style: dotted;
+      border-color: $light_yellow;
+    }
+    .active.emptyslot {
+      background-color: $lighter_yellow;
     }
   }
   .answer {
-    background-color: lightblue;
-    .active {
-      background-color: green;
-    }
+    background-color: white;
+    border-color: $lighter_cyan;
+  }
+  .answer:hover {
+    border-color: $light_green;
+    cursor: move;
   }
   #answerdest {
     width: 240px;
   }
+  .answerlist {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
+  }
   #answers {
     list-style-type: none;
     margin-left: 0px;
+  }
+  .answerslot {
+    h4 {
+      position: relative;
+      top: 25%;
+      @include yTranslation(-50%);
+    }
   }
   #correctmarkscolumn
   {
@@ -1422,8 +1508,47 @@ a.download-video {
     width: 30px;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: white;
+    background-color: transparent;
   }
+}
+
+.text-match {
+  #markdown {
+    // By default, nothing in the page body is selectable.
+    // On text-match levels there may be a reason to paste part of the
+    // level markdown (the question) into the answer box, so we want it
+    // to be selectable.
+    @include selectable;
+  }
+}
+
+.external
+.text-match {
+  #markdown.teacher {
+    max-width: 800px;
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold; font-weight: normal;
+      color: white;
+      background: $cyan;
+      margin: 0;
+    }
+  }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
 }
 
 #current-script-levels, #all-levels {
@@ -1433,7 +1558,7 @@ a.download-video {
   }
 }
 #script-updated {
-  color: green;
+  color: $green;
   display: none;
 }
 #edit-script-content {
@@ -1459,7 +1584,7 @@ a.download-video {
 .edit_level {
   .field {
     margin-bottom: 10px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid $lightest_gray;
     padding-top: 10px;
   }
 
@@ -1484,7 +1609,7 @@ div.gallery_activity {
     border: $img_border_size groove lightgray;
   }
   .caption {
-    color: #666;
+    color: $charcoal;
     margin: 0 auto;
     clear: both;
     max-width: $img_size;
@@ -1510,12 +1635,11 @@ div.mini_gallery_activity {
 }
 
 .infobox {
-  background-color: rgb(88, 103, 113);
-  margin-left: 0px;
+  background-color: $charcoal;
   color: white;
   font-size: 13px;
   padding-right: 10px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular;
   font-weight: normal;
   padding: 10px;
 }
@@ -1530,6 +1654,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
 .multi {
 
   margin: auto;
+
+  h2 {
+    text-align: center;
+  }
 
   .question {
     float: left;
@@ -1557,6 +1685,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
     @media #{$information-desktop} {
       width: 55%;
     }
+    .multi-question {
+      width: 90%;
+      font-size: 17px;
+    }
   }
   .mainblock {
     margin-left: 0px;
@@ -1578,18 +1710,23 @@ $information-desktop: "only screen and (min-width: 1024px)";
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
+    @include yTranslation(-35%);
   }
-  .item-cross {
+  .item-mark {
     display: inline-block;
     float: left;
-    width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
+    font-size: 21px;
   }
   .item-label {
     display: inline-block;
+    text-align: left;
     float: left;
+    label {
+      font-size: 15px;
+    }
   }
   .answerbutton {
     margin-top: 15px;
@@ -1601,13 +1738,20 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
-/* moved over from blockly */
-
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
+$modal-no-icon-gap: 22px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
+  html[dir=rtl] & {
+    margin-left: 0;
+    margin-right: $modal-image-width + $modal-image-margin-gap;
+  }
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1623,13 +1767,7 @@ $modal-image-margin-gap: 10px;
     display: block;
     margin: 0px auto 6px;
     position: relative;
-    left: -50px;
     z-index: -1;
-  }
-
-  .unindentContent {
-    position: relative;
-    left: -50px;
   }
 
   .feedback-image {
@@ -1644,15 +1782,50 @@ $modal-image-margin-gap: 10px;
   .feedback-links {
     margin-top: 15px;
   }
+
+  .feedback-callout {
+    border: solid;
+    border-radius: 10px;
+    border-color: $red;
+
+    p {
+      margin: 15px;
+      color: $red;
+      padding-right: 20%;
+    }
+
+    .congrats {
+      font-size: 24px;
+      line-height: 27px;
+    }
+
+    .hint-header {
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
+    }
+
+    .hint-image {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .lines-of-code-message {
+    font-size: 20px;
+    line-height: normal;
+    color: $charcoal;
+    margin: 0 0 8px;
+  }
 }
 
 .dialog-title {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 
 #ok-button {
   background-color: $orange;
+  border: 1px solid $orange;
   color: white;
   min-width: 100px;
 }
@@ -1676,6 +1849,12 @@ $modal-image-margin-gap: 10px;
   height: auto;
   margin-top: -60px;
   float: left;
+  html[dir=rtl] & {
+    float: right;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }
 .modal-header {
   border: none;
@@ -1685,33 +1864,74 @@ $modal-image-margin-gap: 10px;
   height: 100%;
   overflow: visible;
 }
+
+.modal-content.markdown-instructions-container {
+  margin-left: $modal-no-icon-gap;
+  margin-right: $modal-no-icon-gap;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  float: left;
+  padding: 0 0 15px;
+  background-color: white;
+  $outside-margin-side: 15px;
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
+}
+
+.instructions-markdown {
+  padding-top: 19px;
+  p {
+    line-height: 25px;
+    font-size: initial;
+    color: initial;
+  }
+}
+
+.markdown-level-header-text {
+  margin-left: $modal-image-width + $modal-image-margin-gap;
+  font-weight: normal;
+  line-height: 27px;
+  font-size: 24px;
+  color: #7665a0;
+
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+}
+
 #feedbackBlocks {
   margin-left: 50px;
   height: 100px;
   border: none;
 }
 
-/* also moved over from blockly */
+#feedbackButtons:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
 
 .farSide {
   text-align: right;
+  html[dir=rtl] & {
+    text-align: left;
+  }
 }
 
-/* Buttons from blockly */
+/* Buttons from apps */
 
 button {
   margin: 5px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid $lightest_gray;
   font-size: large;
-  background-color: #eee;
+  background-color: $lightest_gray;
   color: #000;
 }
 button.launch {
-  border: 1px solid #FFA000;
-  background-color: #FFA000;
-  color: #fff;
+  border: 1px solid $orange;
+  background-color: $orange;
+  color: white;
   font-size: large;
   min-width: 96px;
   margin-left: 0px;
@@ -1734,14 +1954,14 @@ button:hover>img {
   opacity: 1;
 }
 button:active {
-  border: 1px solid #888 !important;
+  border: 1px solid $light_gray !important;
 }
 button:hover {
-  @include box-shadow(2px 2px 5px #888);
+  @include box-shadow(2px 2px 5px $shadow);
 }
 button.disabled, button[disabled=disabled] {
-  border: 1px solid #C7C7C7;
-  background-color: #C7C7C7;
+  border: 1px solid $lighter_gray;
+  background-color: $lighter_gray;
   @include box-shadow(none);
 }
 button.disabled:hover>img {
@@ -1759,7 +1979,7 @@ button.notext {
 }
 
 @mixin rounded-border {
-  border: 2px solid #A4A4A4;
+  border: 2px solid $light_gray;
   border-radius: 25px;
 }
 

@@ -8,10 +8,9 @@ class ActivitiesController < ApplicationController
   # TODO: milestone is the only action so the below lines essentially do nothing. commenting out bc
   # the TODO is to figure out why (forgery protection is useful -- why can't we use it? blockly?)
   # protect_from_forgery except: :milestone
-  before_filter :nonminimal
 
   MAX_INT_MILESTONE = 2147483647
-  USER_ENTERED_TEXT_TITLE_NAMES = %w(TITLE TEXT)
+  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
@@ -31,6 +30,7 @@ class ActivitiesController < ApplicationController
       begin
         share_failure = find_share_failure(params[:program])
       rescue OpenURI::HTTPError => share_checking_error
+        # If WebPurify fails, the program will be allowed
       end
 
       unless share_failure
@@ -39,7 +39,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if params[:lines] 
+    if params[:lines]
       params[:lines] = params[:lines].to_i
       params[:lines] = 0 if params[:lines] < MIN_LINES_OF_CODE
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
@@ -50,7 +50,7 @@ class ActivitiesController < ApplicationController
       @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
       unless @level_source_image
         @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-        if !@level_source_image.save_to_s3(Base64.decode64(params[:image]))
+        unless @level_source_image.save_to_s3(Base64.decode64(params[:image]))
           @level_source_image = nil
         end
       end
@@ -94,7 +94,7 @@ class ActivitiesController < ApplicationController
   private
 
   def find_share_failure(program)
-    return nil unless program.match /(#{USER_ENTERED_TEXT_TITLE_NAMES.join('|')})/
+    return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
@@ -132,11 +132,10 @@ class ActivitiesController < ApplicationController
                                  attempt: params[:attempt].to_i,
                                  lines: lines,
                                  time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-                                 level_source_id: @level_source.try(:id) )
+                                 level_source_id: @level_source.try(:id))
 
     if @script_level
       @new_level_completed = current_user.track_level_progress(@script_level, test_result)
-      current_user.track_script_progress(@script_level.script)
     end
 
     passed = Activity.passing?(test_result)
@@ -152,9 +151,9 @@ class ActivitiesController < ApplicationController
     end
 
     begin
-       trophy_check(current_user) if passed
-    rescue Exception => e
-       Rails.logger.error "Error updating trophy exception: #{e.inspect}"
+      trophy_check(current_user) if passed && @script_level && @script_level.script.trophies
+    rescue StandardError => e
+      Rails.logger.error "Error updating trophy exception: #{e.inspect}"
     end
   end
 
@@ -186,7 +185,7 @@ class ActivitiesController < ApplicationController
   def trophy_check(user)
     @trophy_updates ||= []
     # called after a new activity is logged to assign any appropriate trophies
-    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by { |ut| ut.concept }
+    current_trophies = user.user_trophies.includes([:trophy, :concept]).index_by(&:concept)
     progress = user.concept_progress
 
     progress.each_pair do |concept, counts|
@@ -219,15 +218,15 @@ class ActivitiesController < ApplicationController
   end
 
   def log_milestone(level_source, params)
-    log_string = "Milestone Report:"
-    if (current_user || session.id)
-      log_string += "\t#{(current_user ? current_user.id.to_s : ("s:" + session.id))}"
+    log_string = 'Milestone Report:'
+    if current_user || session.id
+      log_string += "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id))}"
     else
       log_string += "\tanon"
     end
     log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" +
                   "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
-    log_string += level_source.try(:id) ? "\t#{level_source.id.to_s}" : "\t"
+    log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
     log_string += "\t#{request.user_agent}"
 
     milestone_logger.info log_string

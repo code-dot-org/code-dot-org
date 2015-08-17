@@ -1,0 +1,19 @@
+name 'CSPPD materials overview'
+title 'CSP materials walkthrough'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Overview of curricular materials
+
+Check out this video, which walks through the types of materials available for a lesson. 
+<br>
+<iframe width="960" height="720" src="https://www.youtube.com/embed/gS9TlF_PRRM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+<br>
+**[having trouble viewing this video? click here to watch it!](https://drive.google.com/file/d/0B60yN79VbSzTellvZGp5ekZNaVk/view?usp=sharing)**
+<br>
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+ 
+MARKDOWN

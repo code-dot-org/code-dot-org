@@ -1,0 +1,17 @@
+name 'U3L18 Controlling Memory and Program Flow 3'
+title 'Controlling Memory and Control Quiz'
+type 'multi2'
+description ''
+
+question 'Select two (2) of the programming categories below that are the best fit for desired behavior of the game described at left. '
+right ‘Remember things during play’
+wrong ‘Make decisions’
+right ‘Make calculations’
+right ‘Keep track of time’
+wrong ‘Store information permanently’
+
+markdown <<MARKDOWN
+### Desired program behavior
+
+Show how long it took to click 10 times.
+MARKDOWN

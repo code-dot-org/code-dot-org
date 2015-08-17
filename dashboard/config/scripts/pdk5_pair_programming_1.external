@@ -1,0 +1,31 @@
+name 'PDK5 Pair Programming 1'
+title 'Pair Programming'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+## Pair Programming
+
+Pair programming is when two students use one computer to write a program together. The National Center for Women & Information Technology (NCWIT) has a [great resource about the benefits of pair programming](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf). 
+
+Research results show that pair programming:
+
+- Leads to higher-quality student programs relative to non-paired
+students’ programs
+- Reduces the so-called “confidence gap” between female and
+male students, while increasing the programming confidence
+of all students;
+
+Not only is pair programming beneficial for students, it is also something that is practiced by some professional computer programmers. Watch this video to learn how to introduce pair programming to your students.
+
+<iframe width="640" height="390" src="https://youtubeeducation.com/embed/vgkahOzFH2Q" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/sh/tx54pndpjcgio7q/AADwcPUzffrCvv2DuzVIwSyha/Curriculum/Pair_Programming_09112014.mp4)**
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

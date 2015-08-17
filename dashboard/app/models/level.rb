@@ -7,6 +7,8 @@ class Level < ActiveRecord::Base
   belongs_to :user
   has_many :level_sources
 
+  before_validation :strip_name
+
   validates_length_of :name, within: 1..70
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
@@ -16,7 +18,11 @@ class Level < ActiveRecord::Base
   include StiFactory
   include SerializedProperties
 
-  serialized_attrs %w(video_key embed)
+  serialized_attrs %w(
+    video_key
+    embed
+    callout_json
+  )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -50,6 +56,10 @@ class Level < ActiveRecord::Base
     game && game.unplugged?
   end
 
+  def finishable?
+    !unplugged?
+  end
+
   # Overriden by different level types.
   def self.start_directions
   end
@@ -66,41 +76,36 @@ class Level < ActiveRecord::Base
     Naturally.sort_by(Level.where.not(user_id: nil), :name)
   end
 
+  # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
+  # All custom levels will have a user_id, except for DSLDefined levels.
   def custom?
-    user_id.present?
+    user_id.present? || is_a?(DSLDefined)
   end
 
-  def self.load_custom_levels
-    Dir.glob(Rails.root.join('config/scripts/**/*.level')).sort.map do |path|
-      load_custom_level(File.basename(path, File.extname(path)))
+  def available_callouts(script_level)
+    if custom?
+      unless self.callout_json.blank?
+        return JSON.parse(self.callout_json).map do |callout_definition|
+          Callout.new(
+              element_id: callout_definition['element_id'],
+              localization_key: callout_definition['localization_key'],
+              callout_text: callout_definition['callout_text'],
+              qtip_config: callout_definition['qtip_config'].to_json,
+              on: callout_definition['on']
+          )
+        end
+      end
+    elsif script_level
+      # Legacy levels have callouts associated with the ScriptLevel, not Level.
+      return script_level.callouts
     end
+    []
   end
 
-  def self.level_file_path(name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level"))
-    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
-    level_paths.first
-  end
-
-  def self.load_custom_level(name)
-    level_path = level_file_path(name) || raise("Level #{name} not found")
-    load_custom_level_xml(File.read(level_path), name)
-  end
-
-  def self.load_custom_level_xml(xml, name)
-    level_xml = Nokogiri::XML(xml)
-    type = level_xml.root.name
-    transaction do
-      level = Level.find_or_create_by(name: name).with_type(type)
-      level.load_level_xml(xml)
-    end
-  end
-
-  def load_level_xml(xml)
-    json = Nokogiri::XML(xml, &:noblanks).xpath('//../config').first.text
-    level_hash = JSON.parse(json)
-    update!(level_hash)
-    self
+  # Input: xml level file definition
+  # Output: Hash of level properties
+  def load_level_xml(xml_node)
+    JSON.parse(xml_node.xpath('//../config').first.text)
   end
 
   def self.write_custom_levels
@@ -111,13 +116,13 @@ class Level < ActiveRecord::Base
 
   def write_custom_level_file
     if write_to_file?
-      file_path = self.class.level_file_path(name) || Rails.root.join("config/scripts/levels/#{name}.level")
+      file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
     end
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(self.type) do
         xml.config do
@@ -137,27 +142,20 @@ class Level < ActiveRecord::Base
   end
 
   def filter_level_attributes(level_hash)
-    %w(name id updated_at type ideal_level_source_id).each {|field| level_hash.delete field }
-    level_hash.reject! { |k, v| v.nil? }
+    %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
+    level_hash.reject!{|_, v| v.nil?}
     level_hash
+  end
+
+  def report_bug_url(request)
+    message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
+    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
   def delete_custom_level_file
     if write_to_file?
       file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
-      File.delete(file_path) if file_path && File.exists?(file_path)
-    end
-  end
-
-  def self.update_unplugged
-    # Unplugged level data is specified in 'unplugged.en.yml' file
-    unplugged = I18n.t('data.unplugged')
-    unplugged_game = Game.find_by(name: 'Unplugged')
-    unplugged.map do |name,_|
-      Level.where(name: name).first_or_create.update(
-        type: 'Unplugged',
-        game: unplugged_game
-      )
+      File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
 
@@ -170,9 +168,61 @@ class Level < ActiveRecord::Base
     self.update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
 
+  def self.find_by_key(key)
+    # this is the key used in the script files, as a way to uniquely
+    # identify a level that can be defined by the .level file or in a
+    # blockly levels.js. for example, from hourofcode.script:
+    # level 'blockly:Maze:2_14'
+    # level 'scrat 16'
+    self.find_by(key_to_params(key))
+  end
+
+  def self.key_to_params(key)
+    if key.start_with?('blockly:')
+      _, game_name, level_num = key.split(':')
+      {game_id: Game.by_name(game_name), level_num: level_num}
+    else
+      {name: key}
+    end
+  end
+
+  # Returns true if this is a pixelation level.
+  def pixelation?
+    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
+    # eliminating this fragile test of 'href'.
+    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
+  end
+
+  # Returns whether this level is backed by a channel, whose id may
+  # be passed to the client, typically to save and load user progress
+  # on that level.
+  def channel_backed?
+    self.project_template_level || self.game == Game.applab || self.pixelation?
+  end
+
+  def key
+    if level_num == 'custom'
+      name
+    else
+      ["blockly", game.name, level_num].join(':')
+    end
+  end
+
+  # Project template levels are used to persist use progress
+  # across multiple levels, using a single level name as the
+  # storage key for that user.
+  def project_template_level
+    return nil if self.try(:project_template_level_name).nil?
+    Level.find_by_key(project_template_level_name)
+  end
+
+  def strip_name
+    self.name = name.to_s.strip unless name.nil?
+  end
+
   private
 
   def write_to_file?
-    custom? && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
   end
 end

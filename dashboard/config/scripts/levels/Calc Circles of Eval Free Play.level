@@ -23,6 +23,9 @@
         <block type="functional_minus" inline="false"/>
         <block type="functional_times" inline="false"/>
         <block type="functional_dividedby" inline="false"/>
+        <block type="functional_sqrt" inline="false"/>
+        <block type="functional_squared" inline="false"/>
+        <block type="functional_pow" inline="false"/>
         <block type="functional_math_number">
           <title name="NUM">0</title>
         </block>

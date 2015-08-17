@@ -1,0 +1,11 @@
+name 'Test Markdown level'
+title 'Enter title here'
+content1 'Enter prompt here'
+
+markdown <<MARKDOWN
+# Test Markdown title
+
+Test Markdown prompt
+
+
+MARKDOWN

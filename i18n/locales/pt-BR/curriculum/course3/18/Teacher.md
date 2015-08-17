@@ -1,69 +1,70 @@
 * * *
 
-title: The Internet view: page_curriculum theme: none
+title: A internet view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'The Internet', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
+<%= partial('curriculum_header', :title=> 'A internet', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>15) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this lesson, students will pretend to flow through the Internet, all the while learning about Internet connections, URLs, IP Addresses, and the DNS.
+Nesta aula, os alunos vão fingir navegar na internet, enquanto aprendem sobre conexões da internet, URLs, Endereços IP, e DNS.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 25 minutes
+### **Primeiros passos** - 25 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Getting the Message](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Recebendo a mensagem](#GetStarted)
 
-### **Activity: The Internet** - 15 minutes
+### **Atividade: A internet** - 15 minutos
 
-4) [The Internet](#Activity1)
+4) [A internet](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [The Internet Assessment](#Assessment)
+7) [Avaliação da internet](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Learn about the complexity of sending messages over the Internet
-  * Translate URLs into IP Addresses 
-  * Practice creative problem solving
+  * Aprender sobre a complexidade do envio de mensagens pela internet
+  * Transformar URLs em endereços IP 
+  * Praticar a resolução criativa de problemas
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Paper for writing messages to send
-  * Paper for creating a sign to "label" each "server"
-  * Pens & Pencils
-  * IP Address and Delivery Type Cards [Found Here](Activity18-Internet.pdf)
+  * Papel para escrever as mensagens para enviar
+  * Papel para criar um cartaz para "identificar" cada "servidor"
+  * Canetas e lápis
+  * Endereços IP e cartões de entrega [encontrados aqui](Activity18-Internet.pdf)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/Z6CEAOFZRRk?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print enough [IP Address Cards and Delivery Type Cards](Activity18-Internet.pdf) for each group to draw
   * Print one [Internet Assessment](Assessment18-Internet.pdf) for each student
@@ -73,33 +74,33 @@ In this lesson, students will pretend to flow through the Internet, all the whil
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has several new and important words:  
+Nesta lição há várias palavras novas e importantes:  
 
 
 [centerIt]
@@ -108,188 +109,188 @@ This lesson has several new and important words:
 
 [/centerIt]
 
-**IP Address** - Say it with me: I-P Add-ress   
-A number assigned to any item that is connected to the Internet
+**Endereço IP** - Repita comigo: en-de-re-ço IP   
+Um número atribuído a qualquer item que esteja conectado à internet
 
-**DNS (Domain Name Service)** - Say it with me: D-N-S   
-The service that translates URLs to IP addresses
+**DNS (Domain Name Service)** - Repita comigo: D-N-S   
+O serviço que traduz URLs para endereços IP
 
-**URL (Universal Resource Locator)** - Say it with me: U-R-L   
-An easy-to-remember address for calling a web page (like www.code.org)
+**URL (Universal Resource Locator)** - Repita comigo: U-R-L   
+Um endereço fácil de lembrar para acessar uma página (como www.code.org)
 
-**Internet** - Say it with me: In-ter-net   
-A group of computers and servers that are connected to each other
+**Internet** - Repita comigo: In-ter-net   
+Um grupo de computadores e servidores que estão conectados uns aos outros
 
-**Servers** - Say it with me: Ser-vers   
-Computers that exist only to provide things to others
+**Servidores** - Repita comigo: Ser-vi-do-res   
+Computadores que existem apenas para fornecer coisas aos outros
 
-**Fiber Optic Cable** - Say it with me: Fye-ber Op-tic Cay-bl   
-A connection that uses light to transmit information
+**Cabo de fibra ótica** - Repita comigo: ca-bo-de-fi-bra-ó-ti-ca   
+Uma conexão que usa luz para transmitir informações
 
-**Wi-Fi** - Say it with me: Wye-Fye   
-A wireless method of sending information using radio waves
+**Wi-Fi** - Repita comigo: uai-fai   
+Um método sem fio de enviar informações usando ondas de rádio
 
-**DSL/Cable** - Say it with me: D-S-L / Cay-bl   
-A method of sending information using telephone or television cables
+**DSL/Cabo** - Repita comigo: D-S-L / Ca-bo  
+Um método de enviar informações usando cabos telefônicos ou de televisão
 
-**Packets** - Say it with me: Pack-ets   
-Small chunks of information that have been carefully formed from larger chunks of information
+**Pacotes** - Repita comigo: Pa-co-tes   
+Pequenas porções de informação que foram cuidadosamente formadas a partir de porções maiores de informação
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a "see if you can spot these during the day" type of heads-up.
+Um rápido resumo é tudo o que você precisa aqui. Essas palavras vão ser explicadas como parte da aula, então seria menos confuso fazer uma breve introdução às palavras, como "veja se você as encontra durante o dia".
 
 [/tip]
 
-### <a name="GetStarted"></a> 3) Getting the Message
+### <a name="GetStarted"></a> 3) Recebendo a mensagem
 
-  * It's quite likely that your students are aware of what the Internet is, but they may not really *understand* what the Internet is. 
-      * Ask "What is the Internet?"
-      * Is the Internet a public place or a private place?  
-        (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)
-      * How does information get from place to place?  
+  * É bastante provável que seus alunos estejam conscientes do que é a internet, mas talvez eles não *compreendam* realmente o que é a internet. 
+      * Pergunte "o que é a internet?"
+      * A internet é um lugar público ou privado?  
+        (Na verdade, muitas pessoas acham que ela pode ser ambos, mas ela deve ser vista como um lugar público, não importa a configuração).
+      * Como as informações são enviadas de um lugar para outro?  
         
-  * Let's say that I want to look at the webpage for Code.org. What do you suppose the process is like for me to send the message to request that page? 
-      * What do I do as a user?
-      * What do you think happens inside the Internet?
+  * Vamos supor que eu queira acessar a página da Code.org. Como você acha que é o processo para que eu mande a mensagem para requisitar essa página? 
+      * O que eu faço como usuário?
+      * O que você acha que acontece dentro da internet?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-There are some great YouTube videos on this subject that can make this lesson a little easier to understand. You can show them to the class in advance, or just watch them yourself.  
-[Here is one of the most clear and entertaining versions.](http://youtu.be/7_LPdttKXPc)   
-(We recommend stopping the video at 2:59, if possible.)
+Existem alguns vídeos excelentes no YouTube sobre esse assunto que podem tornar a aula mais fácil de entender. Você pode mostrá-los à classe, ou assistir aos vídeos antes da aula.  
+[Esse é o link para uma das versões mais claras e divertidas.](http://youtu.be/7_LPdttKXPc)   
+(Recomendamos pausar o vídeo em 2:59, se possível).
 
 [/tip]
 
-Sending a message over the Internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!
+Enviar uma mensagem pela internet seria bem parecido com enviar uma mensagem pelo correio... se todas as cartas enviadas necessitassem de milhares de envelopes!
 
-Every message we send through the Internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those "packets." Packets are specially formed chunks of information that are able to easily flow through any of the Internet's channels.
+Toda mensagem que mandamos pela internet é cortada em vários pedaços, e cada um deles é embrulhado em sua própria versão de um envelope. Chamamos isso de "pacotes". Os pacotes são formados especialmente por informações que podem facilmente navegar por quaisquer canais da internet.
 
-Sometimes, a few of those packets will get lost, because the Internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.
+Às vezes, alguns desses pacotes se perdem, porque a internet é um lugar maluco. Nesse caso, os pacotes precisam ser reenviados, e toda mensagem aguarda até que eles cheguem.
 
-Where do you think those packets are headed?
+Para onde você acha que esses pacotes vão?
 
-  * Even if you're sending messages to another person, they first have to go to at least one "server."  
-      * A server is a special computer that is supposed to be always on and ready to send and receive information.
-      * Every website has a server.
-      * Even email goes through servers.
+  * Mesmo se você está enviando mensagens para outra pessoa, primeiro eles precisam ir pelo menos para um "servidor".  
+      * Um servidor é um computador especial que supostamente está sempre ligado e pronto para enviar e receber informações.
+      * Todo site tem um servidor.
+      * Até mesmo os e-mails passam por servidores.
 
-Servers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.
+Os servidores não têm nomes como você e eu. Na verdade eles são endereçados usando números. Esses números são chamados de endereços IP, e eles parecem um pouco estranhos.
 
-  * For example: One of Code.org's IP addresses is 54.243.71.82
+  * Por exemplo, um dos endereços IP da Code.org é 54.243.71.82
 
-There are many ways to reach the Internet from your house, school, or place of business.
+Há muitas formas de acessar a internet da sua casa, escola, ou local de trabalho.
 
-  * You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic) 
-  * Or you can connect using radio waves over the air through Wi-Fi
+  * Você pode se conectar diretamente usando um cabo (que pode ser DSL, cabo, ou fibra ótica) 
+  * Ou você pode se conectar por meio de ondas de rádio, usando Wi-Fi
 
-Direct connections are most reliable, but they can be inconvenient.
+Conexões diretas são mais confiáveis, mas elas podem ser inconvenientes.
 
-  * Can you figure out why? 
-      * (You have to be attached to a cable!)
+  * Você pode adivinhar por quê? 
+      * (Você precisa estar conectado usando um cabo!)
 
-Wi-Fi connections are super convenient, but the aren't always reliable.
+Conexões Wi-Fi são muito convenientes, mas nem sempre são confiáveis.
 
-  * Can you figure out why not? 
-      * (Radio waves bounce all over the place and can get lost.)
+  * Você pode adivinhar por que não? 
+      * (Ondas de rádio se espalham por todo lado e podem se perder).
 
-So, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the Internet as we know it!
+Então, se você está acostumado a mandar informações para URLs (como www.code.org) e os servidores na verdade são endereçados com endereços IP (como 54.243.71.82), como a internet transforma uma coisa na outra? É para isso que serve o DNS. O DNS (Sistema de Nomes de Domínios, do inglês Domain Name Server) tem tabelas que permitem que o sistema transforme URLs em endereços IP e vice-versa. Se o DNS parar de funcionar, toda a internet como a conhecemos também pararia!
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If you're thinking that this is a lot of text and it would be extremely boring to try to lecture this to a class full of elementary school kids, you're absolutely right!
+Se você acha que isso é muito texto e seria extremamente chato passar isso para uma sala cheia de crianças, você está absolutamente certo!
 
-If you're unable to show a YouTube video in class to help explain it all, I highly recommend drawing pictures to explain each idea above, or choosing students as volunteers to act out what you describe while you're explaining. They're not expected to get every detail and definition at this point, only to gain exposure.
+Se você não puder mostrar um vídeo do YouTube na sala para ajudar na explicação, recomendamos que você desenhe imagens para explicar cada ideia acima, ou escolha alunos como voluntários para demonstrar o que você está descrevendo enquanto explica. Eles não esperam obter todos os detalhes e definições agora, esperam apenas ser expostos ao assunto.
 
 [/tip]
 
-With that said, let's try to understand what the DNS does by making a little DNS table ourselves.
+Dito isso, vamos tentar compreender o que o DNS faz criando uma pequena tabela DNS.
 
-Pull out a piece of paper and draw a grid similar to that in the Internet activity:
+Pegue um pedaço de papel e desenhe um gráfico semelhante ao da atividade da internet:
 
 ![](grid.png)
 
-First, we need to fill in this table.
+Primeiramente, precisamos preencher essa tabela.
 
-  * Survey the class for their favorite websites and write the URLs in the left column
-  * Use a site like getip.com to find the IP addresses for those sites and write them in the corresponding rows of the right column.
+  * Pergunte os sites favoritos da turma e anote as URLs na coluna à esquerda
+  * Use um site, como getip.com, para encontrar o endereço IP desses sites e escreva os endereços nas linhas correspondentes da coluna à direita.
 
-Now let's take this DNS Table and pretend to send messages through the Internet!
+Agora, vamos pegar essa tabela DNS e fingir que estamos enviando mensagens pela internet!
 
 [/together]
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [The Internet](Activity18-Internet.pdf)
+### <a name="Activity1"></a> 4) [A internet](Activity18-Internet.pdf)
 
-**Directions:**
+**Instruções:**
 
-> 1) Create your own DNS table, similar to what is shown above.
+> 1) Crie sua própria tabela DNS, semelhante à mostrada acima.
 > 
-> 2) Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.getip.com.
+> 2) Peça que a turma o ajude a preencher os espaços na tabela. Escolha suas URLs favoritas e encontre seus endereços IP usando um site como www.getip.com.
 > 
-> 3) Divide into groups of 3 to 5.
+> 3) Divida os alunos em grupos de 3 a 5.
 > 
-> 4) Assign each group an IP address from the table, and each person in the group a position:
+> 4) Atribua um endereço IP da tabela a cada grupo, e a cada pessoa do grupo atribua uma posição:
 > 
->   * The Message Writer
->   * The Internet
->   * The Server (carries the IP address)
->   * The Return Internet (optional)
->   * The Message Receiver (optional)
+>   * O escritor da mensagem
+>   * A internet
+>   * O servidor (carrega o endereço IP)
+>   * O retorno da internet (opcional)
+>   * O receptor da mensagem (opcional)
 > 
-> 5) Each group will draw an [IP Address Card and a Delivery Card](Activity18-Internet.pdf) to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.
+> 5) Cada grupo vai desenhar um [cartão de endereço IP e um cartão de entrega](Activity18-Internet.pdf) para descobrir para onde sua mensagem vai e qual será o método de entrega (Wi-Fi, cabo/DSL, ou cabo de fibra óptica).
 > 
-> 6) The Message Writer will craft a note to send to the server.
+> 6) O escritor da mensagem vai fazer uma nota para enviar ao servidor.
 > 
-> 7) The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.
+> 7) A internet vai cortar a mensagem em 4 pequenos pedaços chamados pacotes, e então entregar um pacote por vez ao servidor, com o endereço IP que foi desenhado a partir da pilha de cartões de endereço IP.
 > 
-> 8) The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).
+> 8) O servidor vai garantir que a mensagem chegue em ordem, e então vai enviar cada pacote, um por vez, com o retorno da internet (pode ser a mesma pessoa que fez o papel da internet, ou alguém diferente).
 > 
-> 9) The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.
+> 9) O retorno da internet vai entregar cada pedaço ao receptor da mensagem (pode ser a mesma pessoa que enviou a mensagem, ou alguém diferente) e vai juntar todos os pedaços.
 > 
-> 10) The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!
+> 10) O receptor da mensagem vai esperar que todos os pedaços cheguem, e então vai ler a mensagem para ver se ela chegou corretamente!
 
-**Rules:**
+**Regras:**
 
-> 1) The Internet must rip the message into exactly four packets.
+> 1) A internet deve dividir a mensagem em exatamente quatro pacotes.
 > 
-> 2) If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.
+> 2) Se a internet perder um pacote, ela vai ter que pegá-lo de volta e voltar ao início para entregá-lo.
 > 
-> 3) The server has to wait for all of the message pieces to arrive before it can begin to send the message along.
+> 3) O servidor precisa esperar que todas as partes da mensagem cheguem antes de começar e reenviá-la.
 
-**Info:**
+**Informações:**
 
-> 1) **Wi-Fi:** Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.  
-> Simulation: Internet must carry each packet on their shoulder (no hands).
+> 1) **Wi-Fi:** Conveniente, mas irregular. O Wi-Fi não requer cabos, mas como o sinal oscila, os pacotes podem se perder facilmente.  
+> Simulação: a internet deve carregar os pacotes nos ombros (sem usar as mãos).
 > 
-> 2) **Cable/DSL:** Fairly good at delivering messages, but you must be connected to a wire.  
-> Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.
+> 2) **Cabo/DSL:** Muito boa para entregar mensagens, mas você deve estar conectado por um fio.  
+> Simulação: a internet deve carregar os pacotes nas costas de uma das mãos, enquanto mantém a outra mão tocando na parede, na mesa, na cadeira ou no chão, o tempo todo.
 > 
-> 3) **Fiber Optic Cable:** The best at delivering messages, but you must be connected to a wire.  
-> Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times.
+> 3) **Cabo de fibra óptica:** A melhor para entregar as mensagens, mas você deve estar conectado por um fio.  
+> Simulação: a internet pode carregar os pacotes nas mãos, mas deve manter a outra mão tocando na parede, na mesa, na cadeira ou no chão, o tempo todo.
 
-To play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.
+Para jogar esse jogo, você pode reunir e organizar seus grupos da forma que quiser, mas na primeira vez é menos confuso organizar os grupos em uma linha reta.
 
-  * Line up the servers on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).
-  * Have the everyone else line up across from their server at the other side of the room.
-  * The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:
+  * Alinhe os servidores no fundo da sala (segurando seus endereços IP). Os jogadores que fazem o papel de retorno da internet podem ficar lá também (se você tiver bastante gente em cada grupo).
+  * Peça aos demais que façam uma fila do seu servidor até o outro lado da sala.
+  * Os remetentes da mensagem vão enviar suas mensagens para um servidor diferente do seu, assim os que fazem o papel da internet vão transitar entre os grupos. A atividade vai se parecer com o diagrama abaixo:
 
 ![](layout.png)
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If it feels like there are too many rules to explain outright, feel free to post them on the board and just explain the game as you go. You can play multiple rounds until the class really understands.
+Se parece que há muitas regras para explicar de uma vez, fique à vontade para escrevê-las na lousa e explicá-las conforme o andamento do jogo. Você pode fazer várias rodadas, até que a turma entenda.
 
 [/tip]
 
@@ -297,49 +298,49 @@ If it feels like there are too many rules to explain outright, feel free to post
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? 
-      * Why?
-  * Why might it take your message a long time to get somewhere?
+  * Que tipo de conexão você prefere (Wi-Fi, DSL/cabo, ou fibra óptica)? 
+      * Por quê?
+  * Por que sua mensagem pode levar um bom tempo para chegar a algum lugar?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Perguntas do Bate-papo pretendem incentivar reflexões sobre como as aulas se relacionam ao mundo e ao futuro dos alunos. Use seus conhecimentos sobre sua sala de aula para decidir se você quer discutir isso como uma turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "A piece of code that you can call over and over again"   
-> "Computers that exist only to provide information to others"   
-> "The bottom leg of a triangle"  
+> "Um trecho de código que você pode chamar várias vezes"   
+> "Computadores que existem apenas para fornecer informações aos outros"   
+> "O cateto inferior de um triângulo"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
-  * What was your favorite new word?
+  * Qual foi sua palavra nova favorita?
 
-  * Is there a word that we learned today whose meaning you remember, but don't remember the word?
+  * Há alguma palavra que aprendemos hoje cujo significado você se lembra, mas não se lembra da palavra?
 
-  * Is there a word that we learned where you remember the word, but not what it means?
+  * Há alguma palavra que aprendemos hoje que você se lembra, mas não lembra o que ela significa?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [The Internet Assessment](Assessment18-Internet.pdf)
+### <a name="Assessment"></a>7) [Avaliação da internet](Assessment18-Internet.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -348,30 +349,30 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
-  * 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
-  * 6.a - Understand and use technology systems.
+  * 5.a - Defender e praticar o uso seguro, legal e responsável da informação e da tecnologia.
+  * 5.b - Mostrar uma atitude positiva em relação ao uso da tecnologia que apoia a colaboração, aprendizagem e produtividade.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CI.L1:3-01. Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
-  * CPP.L2-06. Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
-  * CD.L1:6-04. Identify that information is coming to the computer from many sources over a network.
-  * CD.L2-06. Describe the major components and functions of computer systems and networks.
+  * CI.L1:3-01. Praticar a cidadania digital responsável (comportamentos legais e éticos) no uso dos sistemas de tecnologia e softwares.
+  * CPP.L2-06. Demonstrar boas práticas em segurança de informação pessoal: usar senhas, encriptação e transações seguras.
+  * CD.L1:6-04. Identificar qual informação está chegando ao computador a partir de várias fontes de uma rede.
+  * CD.L2-06. Descrever os principais componentes e funções de um sistema de computadores e redes.
 
-### Common Core Language Arts
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * SL.4.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * SL.5.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * SL.4.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quarto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * SL.5.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quinto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

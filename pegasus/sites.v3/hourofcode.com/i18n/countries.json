@@ -1,206 +1,479 @@
 {
   "ac": {
     "full_name": "Africa",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ad": {
     "full_name": "Andorra",
-    "default_language": "ca"
+    "default_language": "ca",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "af": {
     "full_name": "Afghanistan",
-    "default_language": "af"
+    "default_language": "af",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "al": {
     "full_name": "Albania",
-    "default_language": "sq"
+    "default_language": "sq",
+    "partner_page": "al.code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ap": {
     "full_name": "Asia Pacific",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ar": {
     "full_name": "Argentina",
-    "default_language": "es"
+    "default_language": "es",
+    "partner_page": "ar.code.org",
+    "campaign_date_start_short": "5 de oct",
+    "campaign_date_start_long": "5 de octubre",
+    "campaign_date_short": "5-11 de oct",
+    "campaign_date_full": "5-11 de octubre"
   },
   "au": {
     "full_name": "Australia",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "az": {
     "full_name": "Azerbaijan",
-    "default_language": "az"
+    "default_language": "az",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "bg": {
     "full_name": "Bulgaria",
-    "default_language": "bg"
+    "default_language": "bg",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "br": {
     "full_name": "Brazil",
-    "default_language": "pt"
+    "default_language": "pt",
+    "partner_page": "br.code.org",
+    "campaign_date_start_short": "5 de out",
+    "campaign_date_start_long": "5 de outubro",
+    "campaign_date_short": "5-11 de out",
+    "campaign_date_full": "5-11 de outubro"
   },
   "ca": {
     "full_name": "Canada",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "cn": {
     "full_name": "China",
-    "default_language": "cn"
+    "default_language": "cn",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "co": {
     "full_name": "Colombia",
-    "default_language": "es"
+    "default_language": "es",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "cz": {
     "full_name": "Czech Republic",
-    "default_language": "cs"
+    "default_language": "cs",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "de": {
     "full_name": "Germany",
-    "default_language": "de"
+    "default_language": "de",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "dk": {
     "full_name": "Denmark",
-    "default_language": "da"
+    "default_language": "da",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "eg": {
     "full_name": "Egypt",
-    "default_language": "ar"
+    "default_language": "ar",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "es": {
-    "full_name": "Spain and Latin America",
-    "default_language": "es"
+    "full_name": "Spain",
+    "default_language": "es",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "7 de dic",
+    "campaign_date_start_long": "7 de diciembre",
+    "campaign_date_short": "7-13 de dic",
+    "campaign_date_full": "7-13 de diciembre"
   },
   "eu": {
     "full_name": "European Union",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "fr": {
     "full_name": "France",
-    "default_language": "fr"
+    "default_language": "fr",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "gr": {
     "full_name": "Greece",
-    "default_language": "el"
+    "default_language": "el",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "hk": {
     "full_name": "Hong Kong",
-    "default_language": "zh"
+    "default_language": "zh",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "hr": {
     "full_name": "Croatia",
-    "default_language": "hr"
+    "default_language": "hr",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "hu": {
     "full_name": "Hungary",
-    "default_language": "hu"
+    "default_language": "hu",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "id": {
     "full_name": "Indonesia",
-    "default_language": "id"
+    "default_language": "id",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ie": {
     "full_name": "Ireland",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "in": {
     "full_name": "India",
-    "default_language": "hi"
+    "default_language": "hi",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ir": {
     "full_name": "Iran",
-    "default_language": "fa"
+    "default_language": "fa",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "it": {
     "full_name": "Italy",
-    "default_language": "it"
+    "default_language": "it",
+    "partner_page": "italia.code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "jp": {
     "full_name": "Japan",
-    "default_language": "ja"
+    "default_language": "ja",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "kr": {
     "full_name": "Korea",
-    "default_language": "ko"
+    "default_language": "ko",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
+  },
+  "la": {
+    "full_name": "Latin America",
+    "default_language": "es",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "5 de oct",
+    "campaign_date_start_long": "5 de octubre",
+    "campaign_date_short": "5-11 de oct",
+    "campaign_date_full": "5-11 de octubre"
   },
   "lv": {
     "full_name": "Latvia",
-    "default_language": "lv"
+    "default_language": "lv",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "me": {
     "full_name": "Middle East",
-    "default_language": "ar"
+    "default_language": "ar",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "my": {
     "full_name": "Malaysia",
-    "default_language": "ms"
+    "default_language": "ms",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "mz": {
     "full_name": "Mozambique",
-    "default_language": "po"
+    "default_language": "po",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "nl": {
     "full_name": "Netherlands",
-    "default_language": "nl"
+    "default_language": "nl",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "no": {
     "full_name": "Norway",
-    "default_language": "no"
+    "default_language": "no",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "np": {
     "full_name": "Nepal",
-    "default_language": "ne"
+    "default_language": "ne",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "nz": {
     "full_name": "New Zealand",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "pe": {
     "full_name": "Peru",
-    "default_language": "es"
+    "default_language": "es",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "pl": {
     "full_name": "Poland",
-    "default_language": "pl"
+    "default_language": "pl",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ps": {
     "full_name": "Palestine",
-    "default_language": "ar"
+    "default_language": "ar",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "pt": {
     "full_name": "Portugal",
-    "default_language": "po"
+    "default_language": "po",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ro": {
     "full_name": "Romania",
-    "default_language": "ro"
+    "default_language": "ro",
+    "partner_page": "ro.code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ru": {
     "full_name": "Russia",
-    "default_language": "ru"
+    "default_language": "ru",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "si": {
     "full_name": "Slovenia",
-    "default_language": "sl"
+    "default_language": "sl",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "tr": {
     "full_name": "Turkey",
-    "default_language": "tr"
+    "default_language": "tr",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "ua": {
     "full_name": "Ukraine",
-    "default_language": "uk"
+    "default_language": "uk",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "uk": {
     "full_name": "United Kingdom",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "uk.code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "us": {
     "full_name": "United States",
-    "default_language": "en"
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   },
   "vn": {
     "full_name": "Vietnam",
-    "default_language": "vi"
+    "default_language": "vi",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
+  },
+  "za": {
+    "full_name": "South Africa",
+    "default_language": "en",
+    "partner_page": "code.org",
+    "campaign_date_start_short": "Dec. 7",
+    "campaign_date_start_long": "December 7",
+    "campaign_date_short": "Dec. 7-13",
+    "campaign_date_full": "December 7-13"
   }
 }

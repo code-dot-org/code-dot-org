@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Use the arrow keys to control the Dog and collect all of the flags.",
+    "instructions": "Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control the Dog and collect all of the flags.",
     "first_sprite_index": "0",
     "embed": "false",
     "soft_buttons": [
@@ -31,8 +31,18 @@
       "upButton"
     ],
     "disable_sharing": "false",
+    "protaganist_sprite_index": "0",
+    "markdown_instructions": "Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control the Dog and collect all of the flags.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
     "maze_data": null,
-    "protaganist_sprite_index": "0"
+    "timeout_after_when_run": "false",
+    "scrollbars": "true"
   }
 }]]></config>
   <blocks>

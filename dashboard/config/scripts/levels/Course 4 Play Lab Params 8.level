@@ -21,10 +21,26 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Use a \"when touching\" block to send the Dog back to the top-left if the Dog touches any of the other actors.",
+    "instructions": "Use a \"when touching\" block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "first_sprite_index": "0",
     "embed": "false",
     "disable_sharing": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false",
+    "markdown_instructions": "Use a `when touching` block to send Dog back to the top-left ONLY if Dog touches any of the other actors.",
     "maze_data": null
   }
 }]]></config>

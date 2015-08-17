@@ -53,17 +53,19 @@ nav: educate_nav
 
 <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/5oHe0ozN7Oc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
             
-            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</strong></p>
+            <p><a href="https://www.youtube.com/watch?5oHe0ozN7Oc"><strong>Chris Bosh on computer science</a></strong></p>
             
           </div>
 
 <div style='clear:both'></div>
-<a id="posters"></a>
+
 ## 2. Student of the Week and Teacher of the Month
+
 Share these inspiring stories about students and teachers who are changing the face of computer science right now. Nominate one you know.
 
 [<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
 
+<a id="posters"></a>
 ## 3. Put up these posters:
 
 [![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
@@ -79,9 +81,11 @@ Share these inspiring stories about students and teachers who are changing the f
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
 - [NCWIT outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
-- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435) 
+- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435)
+- [Awards and recognition for girls engaged in coding](http://www.aspirations.org) 
 
 ## 5. Other Materials
+
 - Video library: [Use these videos to teach computer science in any class worldwide.](/educate/videos)
 - One-pager: [What can you do with CS?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 

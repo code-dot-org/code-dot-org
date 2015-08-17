@@ -1,0 +1,21 @@
+name 'CSPPD PD overview'
+title 'CSP PD Overview'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## CSP PD Overview
+
+The Code.org CS Principles (CSP) PD program supports teachers with diverse teaching backgrounds to teach the AP&reg; CSP course. Whether you are new to teaching CS or have other CS teaching experience, this PD program is designed to promote growth in your teaching practice, providing space for you to become comfortable with the curricular materials and pedagogy.
+
+### Program features:
+
++ **One Cohesive Set of Resources:** Code.org provides PD and curriculum that flow seamlessly together, empowering teachers to deliver the course with confidence. Since the PD program lives both in-person and online, the program supports participants throughout their first year of teaching CSP with PD that is “job-embedded.”
+
++ **Teaching and Learning in Context:** Our PD model enables participants to engage with the curriculum both as teachers and as learners. Through experiencing curriculum content as an active learner, participants gain important insight into the experiences their students will have during the academic year. Additionally, by interacting with curriculum content as instructors, participants gain essential experience planning and delivering lessons.
+
++ **A Collaborative, Participant-Centric Approach:** Workshops and activities encourage participants and facilitators to share their expertise from the field and collaborate on strategies to bring to CSP. Our PD program provides an opportunity to learn from everyone in the room. Facilitators model behavior and pedagogical approaches, and participants share their own approaches by planning and delivering lessons. Rather than framing facilitators as gurus, these workshop leaders guide participants through the course preparation process. 
+
+<br />
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

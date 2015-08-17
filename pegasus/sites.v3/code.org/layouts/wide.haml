@@ -1,0 +1,31 @@
+.wrapper
+  -if header['theme'] == 'responsive_wide'
+    #desktop-header.desktop-feature
+      -#= view :header
+    #mobile-header.mobile-headers.mobile-feature
+      -#= view :mobile_header_responsive
+  -else
+    = view :header
+
+  -containerClass = "container_fullwidth"
+
+  .containerClass
+
+    -if header['theme'] == 'responsive_wide'
+      =body
+
+      #clearboth{:style=>"clear:both"}
+      .desktop-feature
+
+  .push
+
+-if header['theme'] == 'responsive_wide'
+  -if page_translated? && !partner_site?
+    = view :mobile_footer_responsive
+  -else
+    .desktop-feature
+      = view :footer
+    .mobile-headers.mobile-feature
+      = view :mobile_footer_responsive
+-else
+  = view :footer

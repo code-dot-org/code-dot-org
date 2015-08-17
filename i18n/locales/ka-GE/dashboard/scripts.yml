@@ -1,0 +1,1103 @@
+ka:
+  data:
+    script:
+      name:
+        test:
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          The Maze: ლაბირინთი
+          Multi: Multi
+          Match: Match
+          Math Image: Math Image
+          title: Test Course
+          description: Just an internal test course.
+          description_short: Just an internal test course.
+        course1:
+          "Jigsaw: Learn to drag and drop": 'Jigsaw: Learn to drag and drop'
+          "Maze: Sequence": 'ლაბირინთი: მწკრივი'
+          "Maze: Debugging": 'ლაბირინთი: ბაგების გამოსწორება'
+          "Artist 1: Intro": 'მხატვარი 1: შესავალი'
+          Artists 2: მხატვრები 2
+          Spelling Bee: შეჯიბრი დამარცვლაში
+          Spelling Bee not blockly: შეჯიბრი დამარცვლაში არა blockly
+          "Bee 1: Intro": 'ფუტკარი 1: შესავალი'
+          "Maze 2: Loops": 'ლაბირინთი 2: ციკლები'
+          "Bee 2: Loops": 'ფუტკარი 2: ციკლები'
+          Multi & Match: სიმრავლე და შესაბამისობა
+          K-1 Flappy: K-1 Flappy
+          Flappy non blockly: Flappy blockly-ს გარეშე
+          title: კურსი 1
+          Artist 2: მხატვარი 2
+          Happy Maps: ბედნიერი რუკები
+          Move it, Move it: გაინძერი, გაინძერი
+          "Real-life Algorithms: Plant a Seed": 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+          Building a Foundation: ფუნდამენტის აშენება
+          Getting Loopy: ჩაციკლვა
+          The Big Event: დიდი მოვლენა
+          Going Places Safely: უსაფრთხო მგზავრობა
+          description: კურსი 1 ადრეული მკითხველებისთვისაა. მოსწავლეები შექმნიან კომპიუტერულ პროგრამებს, რომლებიც მათ სხვებთან ერთად მუშაობაში დაეხმარებათ, განუვითარებთ ამოცანების ამოხსნის და რთულ დავალებებზე მუშაობის უნარებს. კურსის ბოლოს მოსწავლეები ქმნიან თავიანთ თამაშს ან ისტორიას, რომელთა გაზიარება შეეძლებათ. რეკოენდებულია K-1 კლასებისთვის.
+          "Bee: Sequence": 'ფუტკარი: მწკრივი'
+          "Artist: Sequence": 'მხატვარი: მწკრივი'
+          "Artist: Shapes": 'მხატვარი: ფორმები'
+          "Maze: Loops": 'ლაბირინთი: ციკლები'
+          "Bee: Loops": 'ფუტკარი: ციკლები'
+          "Studio: Create a Story": 'თამაშების ლაბორატორია: ისტორიის შექმნა'
+          "Artist: Loops": 'მხატვარი: ციკლები'
+          description_audience: 4-დან 6-მდე წლები
+          description_short: კურსი 1 შექმნილია ადრეული მკითხველებისთვის.
+        course2:
+          The Maze: ლაბირინთი
+          Suzi: Suzi
+          The Artist: მხატვარი
+          Artist Debugging: მხატვრის ბაგების გამოსწორება
+          Bounce: ხტუნვა
+          "Studio: Create a Story": 'თამაშების ლაბორატორია: ისტორიის შექმნა'
+          Artist Loops: მხატვრის ციკლები
+          Bee Conditionals: ფუტკრის პირობითი ბრძანებები
+          Flappy: Flappy
+          title: კურსი 2
+          Bee Loops: ფუტკრის ციკლები
+          Artist Functions: მხატვრის ფუნქციები
+          The Artist Debugging: მხატვრის ბაგების გამოსწორება
+          Bee Debugging: ფუტკრის ბაგების გამოსწორება
+          Bee Functions: ფუტკრის ფუნქციები
+          Maze Loops: ლაბირინთის ციკლები
+          Graph Paper Programming: გრაფიკული პროგრამირება
+          "Real-life Algorithms: Paper Planes": 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
+          Getting Loopy: ჩაციკლვა
+          Relay programming: პროგრამირება ცვლაში
+          Conditionals: პირობები
+          Binary Bracelets: ორობითი სამაჯურები
+          The Big Event: დიდი მოვლენა
+          Your Digital Footprint: შენი ციფრული ნაკვალევი
+          description: კურსი 2 შექმნილია მოსწავლეებისთვის, რომელთაც შეუძლიათ კითხვა და არ აქვთ გამოცდილება პროგრამირებაში. ამ კურსში მოსწავლეები შექმნიან ამოცანების ამომხსნელ პროგრამებს და განავითარებენ ინტერაქტიულ თამაშებს ან ისტორიებს, რომელთა გაზიარება შეეძლებათ. რეკომენდებულია 2-5 კლასებისთვის.
+          "Maze: Sequence": 'ლაბირინთი: მწკრივი'
+          "Artist: Sequence": 'მხატვარი: მწკრივი'
+          "Maze: Loops": 'ლაბირინთი: ციკლები'
+          "Artist: Loops": 'მხატვარი: ციკლები'
+          "Bee: Loops": 'ფუტკარი: ციკლები'
+          "Bee: Debugging": 'ფუტკარი: ბაგების გამოსწორება'
+          "Artist: Debugging": 'მხატვარი: ბაგების გამოსწორება'
+          "Bee: Conditionals": 'ფუტკარი: პირობითი ბრძანებები'
+          "Artist: Sequence2": 'მხატვარი: მწკრივი2'
+          "Maze: Sequence2": 'ლაბირინთი: მწკრივი2'
+          "Artist: Nested Loops": 'მხატვარი: ჩასმული ციკლები'
+          description_audience: 6-18 წლის
+          description_short: კურსი 2 შექმნილია მოსწავლეებისთვის, რომელთაც კითხვა შეუძლიათ.
+        course3:
+          The Maze: ლაბირინთი
+          "Studio: Create a Story": 'თამაშების ლაბორატორია: ისტორიის შექმნა'
+          The Artist: მხატვარი
+          title: კურსი 3
+          Artist Functions: მხატვრის ფუნქციები
+          Artist For Loops: 'მხატვარი: For ციკლები'
+          Artist Nested Loops: 'მხატვარი: ჩასმული ციკლები'
+          Bee Conditionals: ფუტკრის პირობითი ბრძანებები
+          Bee Nested Loops: 'ფუტკარი: ჩასმული ციკლები'
+          Bee Debuggin: 'ფუტკარი: ბაგების გამოსწორება'
+          Bee Debugging: ფუტკრის ბაგების გამოსწორება
+          Bee Functions: ფუტკრის ფუნქციები
+          Artist Functions with Params: მხატვრის ფუნქციები პარამეტრებით
+          Bounce: ხტუნვა
+          Maze Conditionals: 'ლაბირინთი: პირობითი ბრძანებები'
+          Artist Functions with Parameters: მხატვრის ფუნქციები პარამეტრებით
+          Computational Thinking: გამოთვლითი აზროვნება
+          Functional Suncatchers: ფუნქციური ვიტრაჟები
+          Songwriting Parameters: სიმღერის წერის პარამეტრები
+          Dice Race: კამათლების შეჯიბრი
+          Internet: ინტერნეტი
+          Crowdsourcing: ქრაუდსორსინგი
+          Digital Citizenship: ციფრული მოქალაქეობა
+          Farmer - While Loops: 'ფერმერი - While ციკლები'
+          description: კურსი 3 შექმნილია მოსწავლეებისთვის, რომელთაც გაიარეს კურსი 2. მოსწავლეები უფრო ღრმად გაერევიან წინა კურსებში წამოჭრილ პროგრამირების საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები ქმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის.
+          "Studio: Create a Game": 'თამაშების ლაბორატორია: შექმენი თამაში'
+          Maze: ლაბირინთი
+          Artist: მხატვარი
+          "Artist: Functions": 'მხატვარი: ფუნქციები'
+          "Bee: Functions": 'ფუტკარი: ფუნქციები'
+          "Bee: Conditionals": 'ფუტკარი: პირობითი ბრძანებები'
+          "Maze: Conditionals": 'ლაბირინთი: პირობითი ბრძანებები'
+          "Artist: Nested Loops": 'მხატვარი: ჩასმული ციკლები'
+          "Farmer: While Loops": 'ფერმერი - While ციკლები'
+          "Bee: Nested Loops": 'ფუტკარი: ჩასმული ციკლები'
+          "Bee: Debugging": 'ფუტკარი: ბაგების გამოსწორება'
+          Maze2: ლაბირინთი2
+          Artist2: მხატვარი2
+          "Artist: Functions2": 'მხატვარი: ფუნქციები2'
+          "Bee: Functions2": 'ფუტკარი: ფუნქციები2'
+          "Bee: Conditionals2": 'ფუტკარი: პირობითი ბრძანებები2'
+          "Maze: Conditionals2": 'ლაბირინთი: პირობითი ბრძანებები2'
+          "Artist: Nested Loops2": 'მხატვარი: ჩასმული ციკლები2'
+          "Farmer: While Loops2": 'ფერმერი - While ციკლები2'
+          "Bee: Nested Loops2": 'ფუტკარი: ჩასმული ციკლები2'
+          "Bee: Debugging2": 'ფუტკარი: ბაგების გამოსწორება2'
+          "Artist: Patterns": 'მხატვარი: ნიმუშები'
+          Songwriting: სიმღერის დაწერა
+          description_audience: 8-18 წლის
+          description_short: კურსი 3 არის კურსი 2-ის გაგრძელება.
+        playlab:
+          title: თამაშების ლაბორატორია
+          description: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+          Play Lab: თამაშების ლაბორატორია
+          description_short: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+        artist:
+          title: მხატვარი
+          description: დახატე მაგარი სურათები და შექმენი დიზაინები მხატვართან ერთად!
+          Artist: მხატვარი
+          description_short: დახატე მაგარი სურათები და შექმენი დიზაინები მხატვართან ერთად!
+        hourofcode:
+          Maze: ლაბირინთი
+          title: კოდის ერთი საათი
+          description: სცადე კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ს Scrat-თან ერთად!
+          description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო პერსონაჟთან ერთად!
+        frozen:
+          title: წერეთ კოდი ანასა და ელზასთან ერთად
+          description: გამოვიყენოთ კოდი რათა შევუერთდეთ ანასა და ელზას, რომლებიც მაგიასა და ყინულის მშვენიერებას იკვლევენ. თქვენ შექმნით ფიფქებსა და ფიგურებს, ისრიალებთ ციგურებზე და შექმნით ზამთრის საოცნებო სამყაროს, რომლის მეგობრებთან გაზიარება შეგეძლებათ!
+          Artist: მხატვარი
+          description_short: გამოიყენე კოდი და შეუერთდი ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
+        course4:
+          description_short: კურსი 4-ის მოსწავლეებს გავლილი უნდა ჰქონდეთ კურსები 2 და 3.
+          description: კურსი 4 არის მოსწავლეებისთვის, რომელთაც გაიარეს კურსები 2 და 3. სტუდენტები უფრო ღრმად ჩაერთვებიან წინა კურსებში წამოჭრილ პროგრამირების საკითხებში და იპოვიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები ქმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომდენდებულია 4-8 კლასებისთვის.
+          "Artist: Variables": 'მხატვარი: ცვლადები'
+          "Bee: For Loops": 'ფუტკარი: For ციკლები'
+          title: კურსი 4
+          "Algorithms: Tangrams": 'ალგორითმები: tangrams'
+          Variables: ცვლადები
+          "Play Lab: Variables": 'თამაშების ლაბორატორია: ცვლადები'
+          "Play Lab: Functions with Parameters": 'თამაშების ლაბორატორია: ფუნქციები პარამეტრებით'
+          "Bee: Functions with Parameters": 'ფუტკარი: ფუნქციები პარამეტრებით'
+          "Artist: For Loops": 'მხატვარი: For ციკლები'
+          "Play Lab: For Loops": 'თამაშების ლაბორატორია: For ციკლები'
+          "Artist: Functions": 'მხატვარი: ფუნქციები'
+          "Unplugged: Tangrams": 'გაკვეთილი კომპიუტერის გარეშე: Tangrams'
+          Artist: მხატვარი
+          Bee: ფუტკარი
+          "Unplugged: Envelope Variables": 'გაკვეთილი კომპიუტერის გარეშე: კონვერტული ცვლადები'
+          "Unplugged: Madlibs": 'გაკვეთილი კომპიუტერის გარეშე: Madlibs'
+          "Unplugged: For Loop Fun": 'გაკვეთილი კომპიუტერის გარეშე: For ციკლი სახალისოდ'
+          "Unplugged: Songwriting with Parameters": 'გაკვეთილი კომპიუტერის გარეშე: სიმღერის წერა პარამეტრებით'
+          "Artist: Functions with Parameters": 'მხატვარი: ფუნქციები პარამეტრებით'
+          "Unplugged: Binary": 'გაკვეთილი კომპიუტერის გარეშე: ორობითი'
+          Bee Binary: 'ფუტკარი: ორობითი'
+          Farmer Binary: 'ფერმერი: ორობითი'
+          Maze and Bee: ლაბირინთი და ფუტკარი
+          Artist Binary: 'მხატვარი: ორობითი'
+          description_audience: 10-18 წლის
+        Course4pre:
+          title: კურსი 4-ის პრერეკვიზიტი
+          description_short: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები 2 და 3.
+          description: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები 2 და 3.
+          Course 4 Prerequisite: კურსი 4-ის პრერეკვიზიტი
+          "Maze: Sequence": 'ლაბირინთი: მწკრივი'
+          "Artist: Sequence": 'მხატვარი: მწკრივი'
+          "Artist: Loops": 'მხატვარი: ციკლები'
+          "Bee: Conditionals": 'ფუტკარი: პირობითი ბრძანებები'
+          "Artist: Nested Loops": 'მხატვარი: ჩასმული ციკლები'
+          "Farmer: While Loops": 'ფერმერი - While ციკლები'
+          "Bee: Nested Loops": 'ფუტკარი: ჩასმული ციკლები'
+          "Artist: Functions": 'მხატვარი: ფუნქციები'
+          "Bee: Debugging": 'ფუტკარი: ბაგების გამოსწორება'
+        usability:
+          Intro: შესავალი
+          Variables and For Loops: ცვლადები და For ციკლები
+          Functions and Functions with Parameters: ფუნქციები და ფუნქციები პარამეტრებით
+          title: Usability Testing
+          description_short: ""
+          description: A selection of Course 4 levels for usability testing.
+          Variables: ცვლადები
+          For Loops: For ციკლები
+          Binary: ორობითი
+        potus:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+        special:
+          title: special
+          description_short: special
+          description: special
+          Special: Special
+          Binary: ორობითი
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          description_short: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'გაკვეთილი კომპიუტერის გარეშე: ვიდეო თამაშები და საკოორდინატო სიბრტყეები'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": String-ები და სურათები
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'გაკვეთილი კომპიუტერის გარეშე: დიზაინის რეცეპტი'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'გაკვეთილი კომპიუტერის გარეშე: პირობითი ბრძანებები და ნაწილობითი ფუნქციები'
+          "Eval: Conditionals": პირობები
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: დისნეის Infinity თამაშების ლაბორატორია
+          description_short: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+          description: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+          Play Lab: თამაშების ლაბორატორია
+          Infinity: უსასრულობა
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: შეფასების ბლოკები
+          Making Pictures: Making Pictures
+          Defining Variables: ცვლადების განსაზღვრა
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: დიზაინის რეცეპტი
+        K5PD:
+          title: K5 Professional Development
+          description: Professional Development for K5 Courses
+          description_short: Professional Development for K5 Courses
+          Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Events": 'Programming Concept: Events'
+        netsim:
+          title: ინტერნეტ-სიმულატორი
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
+          Internet Simulator: ინტერნეტ-სიმულატორი
+          Unit 1: მოდული 1
+          Unit 2: მოდული 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          description_short: Create images with bits and bytes.
+          Pixelation: Pixelation
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: აჩქარებული შესავალი CS კურსში
+          description_audience: 10-18 წლის
+          description: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. ნახეთ კურსები 2-4 უფრო სრული გამოცდილებისთვის!
+          description_short: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერების და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4.
+          Introduction to Computer Science: ინფორმატიკის შესავალი
+          The Maze: ლაბირინთი
+          Computational Thinking: გამოთვლითი აზროვნება
+          Graph Paper Programming: გრაფიკული პროგრამირება
+          The Artist: მხატვარი
+          Algorithms: ალგორითმები
+          The Artist 2: მხატვარი 2
+          Functions: ფუნქციები
+          The Farmer: ფერმერი
+          Conditionals: პირობები
+          The Artist 3: მხატვარი 3
+          Song Writing: სიმღერის დაწერა
+          The Farmer 2: ფერმერი 2
+          Abstraction: აბსტრაქცია
+          The Artist 4: მხატვარი 4
+          Relay Programming: პროგრამირება ცვლაში
+          The Farmer 3: ფერმერი 3
+          The Internet: ინტერნეტი
+          The Artist 5: მხატვარი 5
+          Wrap-up: შედეგები
+        edit-code:
+          title: კოდის რედაქტირება
+          description: კოდის რედაქტირება
+          description_short: კოდის რედაქტირება
+          The Maze: ლაბირინთი
+          Applab: Applab
+          The Artist: მხატვარი
+          Play Lab: თამაშების ლაბორატორია
+          Play Lab 2015: თამაშების ლაბორატორია 2015
+        events:
+          title: მოვლენები
+          description: მოვლენები
+          description_short: მოვლენები
+          Bounce: ხტუნვა
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy კოდი
+          description: 'გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy Code"!'
+          description_short: დაწერე შენი Flappy თამაში 10 წუთზე ნაკლებში!
+          Flappy Code: Flappy კოდი
+        jigsaw:
+          title: ფაზლი
+          description: სცადეთ ჩვენი პაზლის გაკვეთილი
+          description_short: სცადეთ ჩვენი პაზლის გაკვეთილი
+          Jigsaw: ფაზლი
+        step:
+          title: ნაბიჯი
+          description: ნაბიჯის გაკვეთილი
+          description_short: ნაბიჯის გაკვეთილი
+          Step: ნაბიჯი
+        Hour of Code:
+          title: კოდის ერთი საათი 2013
+          description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ისა და Plants vs Zombies-ის პერსონაჟებთან ერთად!
+          description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო პერსონაჟთან ერთად!
+          Hour of Code 2013: კოდის ერთი საათი 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: კურსი 4-ის პრერეკვიზიტი
+          description_short: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები 2 და 3.
+          description: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები 2 და 3.
+          Course 4 Prerequisite: კურსი 4-ის პრერეკვიზიტი
+          "Maze: Sequence": 'ლაბირინთი: მწკრივი'
+          "Artist: Sequence": 'მხატვარი: მწკრივი'
+          "Artist: Loops": 'მხატვარი: ციკლები'
+          "Bee: Conditionals": 'ფუტკარი: პირობითი ბრძანებები'
+          "Artist: Nested Loops": 'მხატვარი: ჩასმული ციკლები'
+          "Farmer: While Loops": 'ფერმერი - While ციკლები'
+          "Bee: Nested Loops": 'ფუტკარი: ჩასმული ციკლები'
+          "Artist: Functions": 'მხატვარი: ფუნქციები'
+          "Bee: Debugging": 'ფუტკარი: ბაგების გამოსწორება'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          "Unplugged: Video Games and Coordinate Planes": 'გაკვეთილი კომპიუტერის გარეშე: ვიდეო თამაშები და საკოორდინატო სიბრტყეები'
+          "Calc: Evaluation Blocks": 'კალკულატორი: შეფასების ბლოკები'
+          "Eval: Strings and Images": 'შეფასება: String-ები და სურათები'
+          "Unplugged: Contracts": 'გაკვეთილი კომპიუტერის გარეშე: კონტრაქტები'
+          "Eval: Writing Contracts": 'შეფასება: კონტრაქტების წერა'
+          "Calc: Defining Variables": 'კალკულატორი: ცვლადების განსაზღვრა'
+          "Play Lab: Defining Variables (Big Game)": 'თამაშების ლაბორატორია: ცვლადების განსაზღვრა (დიდი თამაში)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'გაკვეთილი კომპიუტერის გარეშე: დიზაინის რეცეპტი'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'თამაშების ლაბორატორია: ანიმაცია (დიდი თამაში)'
+          "Unplugged: Booleans": 'გაკვეთილი კომპიუტერის გარეშე: Boolean-ები'
+          "Eval: Boolean Operators": 'შეფასება: Boolean ოპერატორები'
+          "Play Lab: Booleans": 'თამაშების ლაბორატორია: Boolean-ები'
+          "Play Lab: Boolean (Big Game)": 'თამაშების ლაბორატორია: Boolean (დიდი თამაში)'
+          "Unplugged: Conditionals and Piecewise Functions": 'გაკვეთილი კომპიუტერის გარეშე: პირობითი ბრძანებები და ნაწილობითი ფუნქციები'
+          "Eval: Conditionals": 'შეფასება: პირობითი ბრძანებები'
+          "Unplugged: Collision Detection and the Distance Formula": 'გაკვეთილი კომპიუტერის გარეშე: შეჯახების დაფიქსირება და მანძილის ფორმულა'
+          "Play Lab: Collision Detection (Big Game)": 'თამაშების ლაბორატორია: შეჯახების დაფიქსირება (დიდი თამაში)'
+          Evaluation Blocks: შეფასების ბლოკები
+          Strings and Images: String-ები და სურათები
+          Contracts: კონტრაქტები
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: დიზაინის რეცეპტი
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean-ები
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: პირობითი ბრძანებები და ნაწილობითი ფუნქციები
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
+          Evaluation Blocks: შეფასების ბლოკები
+          Strings and Images: String-ები და სურათები
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Boolean-ები
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'თამაშების ლაბორატორია: შეჯახების დაფიქსირება (დიდი თამაში)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+          title: Computer Science Principles PD
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: Introduction to PD
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          Getting to know AppLab: Getting to know AppLab
+          Functions: ფუნქციები
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
+          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
+          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: შეფასების ბლოკები
+          The Big Game: The Big Game
+          Strings and Images: String-ები და სურათები
+          The Design Recipe: დიზაინის რეცეპტი
+          Next Steps: Next Steps
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+        Glenallan Career Day Demo:
+          new stage: new stage
+          title: Glenallan Career Day Demo
+          description_short: "Let's make some puzzles!"
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: შეფასების ბლოკები
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: შეფასების ბლოკები
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Multi
+          Big Game: Big Game
+          new stage: new stage
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: new stage
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: 'CSP Unit 2 - The Internet'
+          description_short: ინტერნეტი
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: ინტერნეტი
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+        algebraPD2a:
+          title: Computer Science in Algebra PD
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Evaluation Blocks: შეფასების ბლოკები
+          Strings and Images: String-ები და სურათები
+          Defining Variables: ცვლადების განსაზღვრა
+          Big Game - Variables: 'Big Game - Variables'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          The Design Recipe: დიზაინის რეცეპტი
+          Big Game - Animation: 'Big Game - Animation'
+          Booleans: Boolean-ები
+          Sam the Bat: Sam the Bat
+          Big Game - Booleans: 'Big Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          Big Game - Player Movement: 'Big Game - Player Movement'
+          Big GAme - Collision Detection: 'Big GAme - Collision Detection'
+          Rocket-Height: Rocket-Height
+          Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: თავისუფალი თამაში
+        allthethings:
+          Jigsaw: ფაზლი
+          Maze: ლაბირინთი
+          Artist: მხატვარი
+          Bee: ფუტკარი
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: ხტუნვა
+          Multi: Multi
+          Match: Match
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          description_short: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Computer Science in Algebra PD
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: შეფასების ბლოკები
+          Strings and Images: String-ები და სურათები
+          Writing Contracts: Writing Contracts
+          Defining Variables: ცვლადების განსაზღვრა
+          Defining Functions: ფუნქციების განსაზღვრა
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean-ები
+          "Eval: Conditionals": 'შეფასება: პირობითი ბრძანებები'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: ინტერნეტ-სიმულატორი
+          App Lab: აპლიკაციების ლაბორატორია
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: ინტერნეტ-სიმულატორი
+          App Lab: აპლიკაციების ლაბორატორია
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: შედეგები
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: კოდის საათი 2015
+          description_short: გამოიყენე თამაშების ლაბორატორია ისტორიის ან თამაშის შესაქმნელად.
+          description: გამოიყენე თამაშების ლაბორატორია ისტორიის ან თამაშის შესაქმნელად.
+          Hour of Code: კოდის ერთი საათი
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: შეფასების ბლოკები
+          Strings and Images: String-ები და სურათები
+          Writing Contracts: Writing Contracts
+          Defining Variables: ცვლადების განსაზღვრა
+          Defining Functions: ფუნქციების განსაზღვრა
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean-ები
+          "Eval: Conditionals": 'შეფასება: პირობითი ბრძანებები'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          The Design Recipe: დიზაინის რეცეპტი
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Wrap-Up: შეჯამება
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: შეჯამება
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: შეჯამება
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: შედეგები
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: შედეგები
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

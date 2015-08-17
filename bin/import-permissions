@@ -11,7 +11,7 @@ $log = Logger.new STDOUT
 $log.level = Logger::WARN
 
 def change_user_type(user, type)
-  USERS.where(id:user[:id]).update(user_type:type) unless user[:user_type] == type
+  USERS.where(id: user[:id]).update(user_type: type) unless user[:user_type] == type
   true
 end
 
@@ -20,7 +20,7 @@ def grant_permission(email, permission_name)
   raise ArgumentError, 'No email' if email.empty?
   permission_name = permission_name.to_s.strip.downcase
   raise ArgumentError, 'No permission_name' if permission_name.empty?
-  user = USERS.where(email:email).first
+  user = USERS.where(email: email).first
   raise ArgumentError, 'No user with that email' unless user
 
   # Special cases, dependencies
@@ -31,10 +31,10 @@ def grant_permission(email, permission_name)
     raise ArgumentError, "'create_professional_development_workshop' requires 'teacher'" if user[:user_type] != 'teacher'
   end
 
-  return false if PERMISSIONS.where(user_id:user[:id], permission:permission_name).first
+  return false if PERMISSIONS.where(user_id: user[:id], permission: permission_name).first
 
   created_at = DateTime.now
-  PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
+  PERMISSIONS.insert(user_id: user[:id], permission: permission_name, created_at: created_at, updated_at: created_at)
   true
 end
 
@@ -48,7 +48,7 @@ def main()
   DASHBOARD_DB.transaction do
     PERMISSIONS.delete
 
-    CSV.parse(file.spreadsheet.export_as_string('csv', 0), headers:true) do |i|
+    CSV.parse(file.spreadsheet_csv, headers: true) do |i|
       begin
         puts "'#{i['email_s']}' already granted '#{i['permission_s']}' permission; Duplicate entries in the gsheet?" unless grant_permission i['email_s'], i['permission_s']
       rescue => e

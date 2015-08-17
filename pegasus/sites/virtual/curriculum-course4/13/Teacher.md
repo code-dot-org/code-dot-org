@@ -111,7 +111,7 @@ An extra piece of information that you pass to the function to customize it for 
 - Let the class know that today is song day!
 - We're going to learn a song together. 
    - Start with a simple song either written out or projected on the screen
-   - Point to the chorus and be sure that the class knows how it goes before you begin on the song
+   - Point to the chorus and be sure that the class knows how it goes before you begin on the rest of the song
    - Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus
    
    ![](chorus.png)
@@ -138,7 +138,7 @@ What about songs where the chorus isn't exactly the same every time?  You can st
 
 >> chorus(parameter1, parameter2)
       
-Feel like this is starting to get complicated? Don't worry. We're going to play with songs a little more, to try to really understand how this technique is used!
+Feel like this is starting to get complicated? Don't worry. We're going to play with songs a little more to try to really understand how this technique is used!
 
 [tip]
 

@@ -1,0 +1,417 @@
+@import 'color';
+@import 'font';
+
+/* HEADERS */
+
+.twolineheader {
+    h2 {
+      font-family: $gotham-regular;
+      font-weight: normal; 
+      color: $purple; 
+      font-size: 24px; 
+      margin-bottom: 0px; 
+      line-height: 30px;
+    }
+    h1 {
+      margin-top: 0px;
+      line-height: 30px; 
+      font-size: 30px;   
+      font-family: $gotham-bold; 
+      font-weight: normal;
+    }
+} 
+
+.coursesheader {
+  h1 + h2 {
+    margin-top: 10px;
+  }
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
+#landingpage h3 img.logo,
+.course_progress h3 img.logo {
+  height: 40px;
+}
+
+.betatext {
+  color: $realyellow;
+  background-color: $charcoal;
+  border-radius: 5px;
+}
+
+/* COURSEBLOCKS */
+
+.courseblock-span1 {  width: 60px;  }
+.courseblock-span2 {  width: 140px;  }
+.courseblock-span3 {  width: 220px;  }
+.courseblock-span4 {  width: 300px;  }
+.courseblock-span5 {  width: 380px;  }
+.courseblock-span6 {  width: 460px;  }
+.courseblock-span7 {  width: 540px;  }
+.courseblock-span8 {  width: 620px;  }
+.courseblock-span9 {  width: 700px;  }
+.courseblock-span10 {  width: 780px;  }
+.courseblock-span11 {  width: 860px;  }
+.courseblock-span12 {  width: 940px;  }
+
+.courseblock-tall {
+  background-color: white;
+  height: 280px;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+
+  .heading {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow:hidden;
+    padding: 0 10px
+  }
+
+  a {
+      &:hover, &:link, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+
+  a.whitelink {
+    &:hover, &:link, &:active, &:visited {
+      color:white;
+    }
+  }
+
+  .imgspan {
+    margin: 0 0 5px 0;
+    text-align: left;
+    float: left;
+    width: 100%;
+  }
+
+  h3 {
+    margin: 5px 0;
+    color: $charcoal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: $gotham-bold;
+    font-weight: normal;
+    display: block;
+    float: left;
+    font-size: 24px;
+    width: 200px;
+  }
+
+  .beta
+  {
+    .heading {
+      padding-right: 0px;
+    }
+
+    h3 {
+      width: 135px;
+      padding-left: 10px;
+      float: left;
+    }
+
+    .betatext {
+      text-align: center;
+      display: block;
+      float: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: $light_gray;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 24px;
+      height: 35px;
+      line-height: 40px;
+      width: 60px;
+      border-radius: 4px;
+    }
+  }
+
+  .smalltext {
+    font-size: 13px;
+    line-height: 17px;
+    margin-left: 10px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
+  .audiencebar {
+    width: 100%;
+    padding: 4px 10px;
+    margin: 0;
+    bottom: 25px;
+    float: left;
+    text-align: left;
+    position: absolute;
+  }
+
+  .bottombar {
+    width: 100%;
+    padding: 4px 10px;
+    margin: 0;
+    bottom: 0;
+    float: left;
+    text-align: left;
+    position: absolute;
+  }
+
+  .audience {
+    background-color: $light_gray;
+    color: white;
+  }
+  .continue {
+    background-color: $yellow;
+    color: white;
+  }
+  .trynow {
+    background-color: $green;
+    color: white;
+  }
+  .printcertificate {
+    background-color: $cyan;
+    color: white;
+  }
+}
+
+.courseblock-wide-small {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+
+  .heading {
+    width: 280px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+    float: right;
+    height: 100%;
+    width: auto;
+  }
+
+  .imgspan {
+    margin-left: 0;
+    float: right;
+    text-align: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+    float: left;
+    width: 94%;
+  }
+
+  h4 {
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+    float: left;
+  }
+
+  .smalltext {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .audiencebar {
+    width: 100%;
+    padding: 4px 30px;
+    margin: 0;
+    bottom: 25px;
+    float: left;
+    text-align: left;
+    position: absolute;
+  }
+
+  .bottombar {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    margin: 0;
+    bottom: 0;
+    float: left;
+    text-align: left;
+    position: absolute;
+  }
+
+  .bottombartext {
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+    padding-left: 10px;
+  }
+
+  .audience {
+    background-color: $light_gray;
+    color: white;
+  }
+
+  .continue {
+    background-color: $yellow;
+    color: white;
+  }
+  .trynow {
+    background-color: $green;
+    color: white;
+  }
+  .printcertificate {
+    background-color: $cyan;
+    color: white;
+  }
+  .continuelight {
+    background-color: $light_yellow;
+    color: white;
+  }
+  .trynowlight {
+    background-color: $light_green;
+    color: white;
+  }
+  .printcertificatelight {
+    background-color: $light_cyan;
+    color: white;
+  }
+}
+
+.courseblock-wide-large {
+  background-color: white;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  border: solid 1px #bbb;
+  border-radius:5px;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    box-sizing: content-box;
+  }
+
+  .imgspan {
+    margin-top: 20px;
+    float: right;
+  }
+
+  h3 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 24px;
+    font-family: $gotham-bold;
+  }
+
+  h4 {
+    margin: 10px 0 0 10px;
+    color: $charcoal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 14px;
+    font-family: $gotham-bold;
+  }
+
+  .smalltext {
+    margin: 10px 0 0 10px;
+    padding-right: 5px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+  }
+
+  .betatext {
+    color: $realyellow;
+    background-color: $light_gray;
+    border-radius: 4px;
+    padding: 0 5px;
+  }
+
+  .bottombar {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+  }
+
+  .trynow {
+    background-color: $green;
+    color: white;
+  }
+}
+
+.courseblock-tall + .courseblock-tall {
+  margin-left: 20px;
+}
+
+.courseblock-wide-small + .courseblock-wide-small {
+  margin-left: 20px;
+}
+
+.courseblock-wide-large + .courseblock-wide-large {
+  margin-left: 20px;
+}
+
+.courseblock-noaction {
+  border-bottom: solid 1px $lighter_gray;
+}

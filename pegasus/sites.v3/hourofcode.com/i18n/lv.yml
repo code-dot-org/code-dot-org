@@ -40,6 +40,10 @@ lv:
   whats_next_promote: |-
     <a href='http://hourofcode.com/resources'>Reklamēt "Programmēšanas stundu"</a>
   n_have_learned_an_hoc: '<h1>#</h1><h3>ir mēģinājuši</h3><h2>"Programmēšanas stunda"</h2>'
+  share_on_facebook: Dalīties ar Facebook
+  share_on_twitter: Share ar Twitter
+  beyond_an_hour: Pēc Programmēšanas stundas
+  get_started: Sākt
   anybody_can_learn: Jebkurš var iemācīties.
   register_now: Reģistrējies tagad
   front_join_us_heading: '"Programmēšanas stunda" katram skolēnam.'
@@ -92,12 +96,12 @@ lv:
   signup_thank_you_message: Mēs jums aizsūtijām apstiprinājuma epastu ar informāciju, lai palīdzētu uzsākt.
   map_header: '#"Programmēšans stunda" pasākumi visā pasaulē'
   map_header_company: '# sabiedrību organizatori'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Meklēt programmēšanas stundas pasākumus
+  map_search_search: Mekēt
+  map_search_reset: Atiestatīt
+  meta_tag_og_title: Programmēšanas stunda ir klāt
   meta_tag_og_description: Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Programmēšanas stunda ir klāt
   meta_tag_twitter_description: Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4 līdz 104 gadiem.
   twitter_default_text: 'Es esmu šī gada #"Programmēšanas stunda" dalībnieks, vai tu esi? @codeorg'
   hardware_prizes_form_name_label: Jūsu vārds
@@ -153,7 +157,7 @@ lv:
   hoc_faq_frozen_q: Kur ir pamācība ar Annu un Elzu?
   hoc_faq_frozen_a: "Tā ir publicēta <a href='http://code.org/learn'>Code.org/learn</a>. Mēs ceram, ka tev patiks!"
   hoc_faq_high_school_q: Kādas nodarbības būtu piemērotas vidusskolēniem?
-  hoc_faq_high_school_a: "Neskatoties uz vecumu, iesakām izmēģināt kādu no iesācēju pamācībām <a href='http://code.org/learn'>Code.org/learn</a>, lai iesāktu, piemēram, pamācību ar pikatjiem putniem vai Annu un Elzu. Vidusskolēniem tās varētu aizņemt 30 minūtes, un tad viņi var pamēģināt sarežģītākas pamācības JavaScript, piemēram, KhanAcademy vai CodeHS."
+  hoc_faq_high_school_a: "Neskatoties uz vecumu, iesakām izmēģināt kādu no iesācēju pamācībām <a href='http://code.org/learn'>Code.org/learn</a>, lai iesāktu, piemēram, pamācību ar pikatjiem putniem vai Annu un Elzu. Vidusskolēniem tās varētu aizņemt 30 minūtes, un tad viņi var pamēģināt sarežģītākas pamācības JavaScript, piemēram, Khan Academy vai CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

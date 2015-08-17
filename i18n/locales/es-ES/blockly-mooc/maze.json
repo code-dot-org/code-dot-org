@@ -10,7 +10,7 @@
   "dirS":"S",
   "dirW":"O",
   "doCode":"haz",
-  "elseCode":"sino",
+  "elseCode":"si no",
   "fill":"llenar 1",
   "fillN":"llenar {shovelfuls}",
   "fillStack":"llena la pila de {shovelfuls} agujeros",

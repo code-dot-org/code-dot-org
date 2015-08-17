@@ -37,6 +37,10 @@ tr:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Bir Kodlama Saati nasıl çalıştırılır</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Kodlama Saatini Tanıtın</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>kez</h3><h2>Kodlama Saati</h2>uygulaması denendi'
+  share_on_facebook: Facebook'ta paylaş
+  share_on_twitter: Twitter'da paylaş
+  beyond_an_hour: Kod saatinin ötesi
+  get_started: Başlayın
   anybody_can_learn: Herkes öğrenebilir.
   register_now: Şimdi kayıt olun
   front_join_us_heading: Hour of Code her öğrenci içindir.
@@ -144,7 +148,7 @@ tr:
   hoc_faq_frozen_q: "Anna ve Elsa'nın olduğu öğretici nerede?"
   hoc_faq_frozen_a: "An itibariyle <a href='http://code.org/learn'>Code.org/learn</a> adresinde yayında. Umarız beğenirsiniz!"
   hoc_faq_high_school_q: Lise öğrencileriyle hangi aktiviteyi yapmamı önerirsiniz?
-  hoc_faq_high_school_a: "Tüm yaşlar için, ilk aşamada <a href='http://code.org/learn'>Code.org/learn</a> adresindeki başlangıç öğreticilerinden herhangi birini denemenizi öneririz, örneğin Angry Birds'lü veya Anna ve Elsa'nın olduğu öğretici gibi. Bir lise öğrencisi bunlardan birini 30 dakika içinde bitirebilecek seviyede olmalıdır, ancak bundan sonra KhanAcademy ya da CodeHS gibi daha ileri seviye JavaScript öğreticileri deneyebilir."
+  hoc_faq_high_school_a: "Tüm yaşlar için, ilk aşamada <a href='http://code.org/learn'>Code.org/learn</a> adresindeki başlangıç öğreticilerinden herhangi birini denemenizi öneririz, örneğin Angry Birds'lü veya Anna ve Elsa'nın olduğu öğretici gibi. Bir lise öğrencisi bunlardan birini 30 dakika içinde bitirebilecek seviyede olmalıdır, ancak bundan sonra Khan Academy ya da CodeHS gibi daha ileri seviye JavaScript öğreticileri deneyebilir."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
@@ -191,7 +195,7 @@ tr:
   events_orgs_title: Tüm Kodlama Saati etkinlikleri Partner Organizasyonlar tarafından organize edilmektedir
   event: etkinlik
   events: etkinlikler
-  footer_copyright_message: Copyright 2014 Code.org. Tüm hakları saklıdır.
+  footer_copyright_message: Copyright 2015 Code.org. Tüm hakları saklıdır.
   footer_trademark_message: Hour of Code™ Code.org markasıdır.
   footer_menu_partners: Ortaklar
   footer_menu_contact: Bize Ulaşın

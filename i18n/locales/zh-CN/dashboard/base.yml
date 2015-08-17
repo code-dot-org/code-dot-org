@@ -1,8 +1,11 @@
 zh:
+  errors:
+    messages:
+      not_saved: '请更正以下错误:'
   activerecord:
     errors:
       messages:
-        blank: 需要
+        blank: 必填
     attributes:
       user:
         name: 显示名称
@@ -19,14 +22,15 @@ zh:
           future: 不能在未来
   hello: 世界你好
   welcome_back: '欢迎回来，%{name}'
+  submit: 提交
   add_teacher_form:
     code:
-      label: '加上老师:'
+      label: '加上一个老师:'
       placeholder: 代码节(ABCDEF)
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的提示
-    submit: 增加提示
+    submit: 添加提示
   appname: Code.org
   stage: 阶段
   stage_number: '阶段 %{number}'
@@ -36,7 +40,7 @@ zh:
   of: 的
   more: 更多
   less: 更少
-  beta: 试用版
+  beta: 测试版
   try_hoc: '尝试一小时代码，请单击此处 >>'
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
@@ -54,12 +58,14 @@ zh:
     notyet_signedup: 还未注册吗？
     google_oauth2: 谷歌帐户
     twitter: 推特
-    facebook: 脸谱
+    facebook: Facebook
     windowslive: 微软账户
     forgot_password: 忘记了您的密码吗？
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 没收到解锁指令吗？
   signup_form:
+    student_count: '%{count} 学生身份已经在登录状态。'
+    teacher_count: '%{count}教师身份已经在登录状态。'
     overview_student: '注册一个帐户来记录你的进度. 您的电子邮件是主要用来让您登录和密码恢复. 欲了解更多信息，请参阅我们的 <a href="http://code.org/privacy"> 隐私政策</a>.'
     overview_teacher: '通过注册一个帐号来在你的教室教计算机科学. <p/>你将能够添加你的学生，并跟踪其进度.'
     no_signup_message: '您可以 <a target="_blank"href="http://learn.code.org"> 浏览各个阶段和谜题</a>，但您将需要注册以保存您的进度。'
@@ -210,8 +216,10 @@ zh:
       free_play:
         playlab: 构建一个应用程序
         artist: 绘画一些东西
+        calculate: Calculate Something
     user:
       classroom: 教师主页
+      district_dashboard: 选区的仪表盘
       label: '你好%{username}'
       stats: 我的进程
       settings: 我的账户
@@ -221,6 +229,7 @@ zh:
       signup: 登陆
       already_registered: 已经注册？
     popup:
+      progress_for_user: '%{name}的进度'
       progress: 您的进度
       lines: '代码总行数： %{lines}'
       close: 关闭
@@ -288,15 +297,23 @@ zh:
     cant_remove_student_no_email: '因为 %{student_name} 未注册电子邮件地址， %{student_name}不能移动为你的学生。'
     cant_remove_teacher_no_email: '因为您还没有注册的电子邮件地址，%{teacher_name}不能移为你的老师。'
     student_teacher_disassociated: '%{teacher_name} 已被移为 %{student_name}的一位老师'
+    panel:
+      answer_viewer: 答案查看器
+      student: 学生
+      viewing_solution: 查看解决方案
+      try_it_yourself: 自己试一试
+      section: 节点
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
+    email_confirm_needed_required: '你的电子邮件地址尚未确认 %{email}：'
+    email_confirm_wrong_email: （错误的电子邮件地址？）
     email_resend_confirm: 重新发送确认指令
     new_password_hint: （如果你不想改变它，留空白）
     current_password_hint: （我们需要您的当前密码以确认您的更改）
-    cancel:
-      title: 取消我的帐户
-      hint: 不开心吗？
-      button: 取消我的帐户
+    delete: 删除你的帐号
+    delete_text: 点击下面的按钮将会删除你的帐号
+    delete_text_teacher_note: 请注意：删除你的帐号并不会同时删除你学生的帐号。
+    delete_confirm: 你确定删除这个帐号吗？
   user_level:
     completed: 已完成
     tried: 试过了
@@ -306,7 +323,10 @@ zh:
     classroom_activity: 不用电脑的活动
   home:
     title: 代码工作室
-    all_courses: 1、 2 和 3 的课程概要
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} 这行代码由学生编写'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: '已经注册了吗？%{link}'
     student_reg_link: 学生 注册
@@ -326,6 +346,7 @@ zh:
     local_school: 本地学校
     online: 在线
     see_details: 查看详细信息
+    view_course: View Course
     prize_info: 奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。
     tryfirst: 或者，你也可以先试一试，晚些再注册：
     trynow: 现在就试试
@@ -339,6 +360,9 @@ zh:
     heading_apps: '<h2>为乐趣</h2><h1>每个人</h1>'
     heading_legacy: '<h2>我们的一般课程</h2><h1>所有年龄</h1>'
     your_gallery: 画廊
+    no_primary_course: 试试在 Code Studio 参加一个课程
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: 男性
     female: 女性
@@ -417,9 +441,10 @@ zh:
     flappy:
       title: 飞扬的代码
       body: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
-    20hour:
-      title: 课程简介
-      body: 尝试我们 20 小时计算机科学课程简介 。
+    20-hour:
+      title: Accelerated Course
+      body: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: 试试我们新的beta 版的一小时代码教程
       try_frozen: 艺术家与冻结的安娜和艾尔莎
@@ -428,6 +453,9 @@ zh:
       body: 查看由我们用户创建的应用程序和艺术家图片的画廊
     frozen:
       title: 冻结
+    infinity:
+      title: 无限发挥实验室
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: 学生使用代码画这些!
     students_made_these_with_code: 学生使用代码做这些!
@@ -439,7 +467,7 @@ zh:
     caption_time_ago: '%{time_ago}之前'
     header: 画廊
     header_playlab: 播放实验室
-    header_artist: Artist
+    header_artist: 艺术家
   landing:
     prerelease: "本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 当收到 反馈, 它会受修订并改善."
     prerelease_hoc2014: "本教程是在 <span class='betatext'> beta 版</span> 中. 当收到 反馈, 它会受修订并改善."
@@ -452,13 +480,25 @@ zh:
     wrong_body: 你已输入的答案不是正确的。请再试一次 ！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: 不正确的解决方案
     wrong_body: 您输入的解决方案不是正确的。请再试一次 ！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+  contract_match:
+    wrong_title: 不正确的答案
+    badname: 你的合同中含有错误的名称。
+    badname_case: 函数的名称是区分大小写的。试着改变一下你的联系人名称。
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: 在这里输入你的答案
+    open_response_title: 感谢
+    open_response_body: 感谢您的回复！
   dialog:
     ok: 确定
   time:
@@ -472,7 +512,7 @@ zh:
           title: K-8计算机科学入门课程（15-25小时）
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
         Hour of Code:
-          title: 编程一小时
+          title: 编程一小时2013
           description: ""
         edit-code:
           title: 编辑代码
@@ -502,11 +542,44 @@ zh:
     sign_out: '如果你不想提供你的年龄你可以 <a href="%{url}">签出</a>。'
   zendesk_too_young_message: '对不起，年轻的用户不能登录到我们的支持站点。你无需登录能浏览 <a href="http://support.code.org"> support.code.org</a> 或询问你的父母或老师为你与我们联系。'
   progress:
-    not_completed: 未完成
+    not_started: 未启动
+    in_progress: 正在进行
     completed_too_many_blocks: 完成，使用太多块
     completed_perfect: 完成了, 完美
     furthest_level_attempted: 尝试过最远的水平
+    assessment: 评价
   studio:
     courses_working_on: 您正在进行的课程
     completed_courses: 已完成的课程
     all_courses: 所有的课程
+  project:
+    projects: 项目
+    create: 创建项目
+    create_a_project: 创建一个新项目：
+    new: 新建
+    rename: 重命名
+    save: 保存​​
+    delete: 刪除
+    exit: 返回课程
+    my_projects: 我的项目
+    share: 分享
+    share_title: 分享您的项目
+    share_copy_link: 复制链接：
+    close: 关闭
+    more: 更多
+    name: 姓名
+    updated: 最后更新于
+    project_type: 项目类型
+    help_text: '单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 下面去制作一个新的Play Lab或者是艺术家项目<br/>您可以在任何时候回到您的项目工作。'
+    need_help: 需要获得帮助以开始吗？
+    really_delete: 要删除吗？
+    delete_yes: 是
+    delete_no: 不
+    saved: 已保存
+    not_saved: 没有保存
+    cancel: 取消
+    delete_confirm_title: 您确认您要删除此项目吗？
+    delete_confirm_text: 您的项目将从我的项目列表中永久删除。任何人将不再能够通过您已共享的链接查看您的项目。
+    view_all: 查看我的项目
+    remix: 混合
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

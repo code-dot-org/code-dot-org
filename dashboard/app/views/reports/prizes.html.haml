@@ -7,11 +7,6 @@
   %h4 #{t('home.classroom')}:
 
   %p
-    = link_to t('home.teacher_student_count', count: current_user.students.length), manage_followers_path
-    = t('home.teacher_averages', trophy_average: ("%.1f" % current_user.average_student_trophies), trophy_max: Trophy::TROPHY_MAX)
-    %br/
-    %br/
-
   - if current_user.teacher_prize.nil? && current_user.teacher_bonus_prize.nil?
     %h4
       %strong DonorsChoose.org rewards are no longer available as of June 15, 2014. Please refer to this

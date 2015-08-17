@@ -27,6 +27,10 @@ body {
   margin: 0 0 30px 0;
 }
 
+.pageheader_translucent {
+  background-color: rgba(0, 178, 192, 0.5) ! important;
+}
+
 #pageheader .content {
   width: 970px;
   margin: 0 auto; 
@@ -63,6 +67,8 @@ body {
   font-size: 18px;
   margin: 0.9375em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
+  color: white;
+  text-decoration: none;
 }
 
 .headerlink:link,
@@ -74,12 +80,16 @@ body {
 .headerlink:hover,
 .headerlink:active {
   color: white;
-  border-bottom: solid 4px rgb(255, 138, 0);
+  border-bottom: solid 2px rgb(255, 164, 0);
+}
+
+.learnoption:hover {
+  text-decoration: underline;
 }
 
 #pagefooter {
   width: 100%; 
-  height: 80px;
+  height: 90px;
   padding: 20px; 
   overflow: hidden; 
   background-color: #7665a0;
@@ -119,49 +129,10 @@ body {
 
 
 /* styling for the embedded dashboard components... */
-
-a.user-menu-link {
-  font-family: 'Gotham 4r', sans-serif;
-  padding-left:10px;
-}
-
-.user_menu > a:link,
-.user_menu > a:active,
-.user_menu > a:hover,
-.user_menu > a:visited {
-  color:white;
-}
-
-.user_menu a:link,
-.user_menu a:visited,
-.user_menu a:hover,
-.user_menu a:active  {
-  text-decoration: none;
-}
-
-#user_hero #welcome {
-  margin-top:10px;
-  margin-bottom:5px;
-  font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
-}
-
-#user_hero #student_progress {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #left_off {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #classroom {
-  font-family: 'Gotham 5r', sans-serif;
-  font-size:16px;
-  margin-top:10px;
+#user_hero #contents {
+  margin: 10px 0px;
+  padding-left: 5px;
+  width: 100%;
 }
 
 #sign_in_or_user .button-signin {
@@ -232,7 +203,7 @@ a.user-menu-link {
 }
 
 .mobile-headers #pageheader #left {
-  margin: -8px 0 0 10px;
+  margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
   width: 37px;

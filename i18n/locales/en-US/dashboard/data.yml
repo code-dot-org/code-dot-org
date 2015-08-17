@@ -1,582 +1,533 @@
-# See en.yml for general localization information.
-#
-# This file provides localizations for keys which come from the database.
-# TODO: Ideally, these strings would be database driven too, so that they
-# could evolve in the Admin without having to deploy a new build.
-#
-# Note that all the data-driven keys are quoted. Localized keys are converted
-# to symbols, but they might not be valid identifies (often include spaces).
-
 en:
   data:
     script:
       name:
-        '20-hour':
-          desc: 'K-8 Intro to Computer Science Course'
-          'Unplug1': 'Stage 1'
-          'Maze': 'Stage 2'
-          'Unplug2': 'Stage 3'
-          'Unplug3': 'Stage 4'
-          'Artist': 'Stage 5'
-          'Unplug4': 'Stage 6'
-          'Artist2': 'Stage 7'
-          'Unplug5': 'Stage 8'
-          'Farmer': 'Stage 9'
-          'Unplug6': 'Stage 10'
-          'Artist3': 'Stage 11'
-          'Unplug7': 'Stage 12'
-          'Farmer2': 'Stage 13'
-          'Unplug8': 'Stage 14'
-          'Artist4': 'Stage 15'
-          'Unplug9': 'Stage 16'
-          'Farmer3': 'Stage 17'
-          'Unplug10': 'Stage 18'
-          'Artist5': 'Stage 19'
-          'Unplug11': 'Stage 20'
-        'Hour of Code':
-          desc: 'Hour of Code'
-          'Maze': 'Stage 1'
-        'Edit Code':
-          desc: 'Edit Code (beta)'
-          'MazeEC': 'Stage 1'
-        '2014 Levels':
-          desc: 'Bounce (beta)'
-          'Bounce': 'Stage 1'
-        'Builder Levels':
-          desc: 'User-Created Puzzles (beta)'
-          'Custom': 'Stage 1'
-        'Flappy Levels':
-          desc: 'Flappy Bird'
-          'Flappy': 'Stage 1'
-        'Jigsaw Levels':
-          desc: 'Jigsaw (beta)'
-          'Jigsaw': 'Stage 1'
-        'Step Levels':
-          desc: 'Maze (beta)'
-          'MazeStep': 'Stage Step'
-        'edit-code':
-          desc: 'Edit Code (beta)'
-          'MazeEC': 'Stage 1'
-          'Webapp': 'Stage 2'
-          'ArtistEC': 'Stage 3'
-          'StudioEC': 'Stage 4'
-        'events':
-          desc: 'Bounce (beta)'
-          'Bounce': 'Stage 1'
-          'Studio': 'Stage 2'
-        'builder':
-          desc: 'User-Created Puzzles (beta)'
-          'Custom': 'Stage 1'
-        'flappy':
-          desc: 'Flappy Bird'
-          'Flappy': 'Stage 1'
-        'jigsaw':
-          desc: 'Jigsaw (beta)'
-          'Jigsaw': 'Stage 1'
-        'step':
-          desc: 'Maze (beta)'
-          'MazeStep': 'Stage Step'
-        'wordsearch':
-          desc: 'Spelling Bee (beta)'
-          'WordSearch': 'Stage 1'
+        20-hour:
+          desc: crwdns3861:0crwdne3861:0
+          Unplug1: crwdns3966:0crwdne3966:0
+          Maze: crwdns3967:0crwdne3967:0
+          Unplug2: crwdns3968:0crwdne3968:0
+          Unplug3: crwdns3969:0crwdne3969:0
+          Artist: crwdns3970:0crwdne3970:0
+          Unplug4: crwdns3971:0crwdne3971:0
+          Artist2: crwdns3972:0crwdne3972:0
+          Unplug5: crwdns3973:0crwdne3973:0
+          Farmer: crwdns3974:0crwdne3974:0
+          Unplug6: crwdns3975:0crwdne3975:0
+          Artist3: crwdns3976:0crwdne3976:0
+          Unplug7: crwdns3977:0crwdne3977:0
+          Farmer2: crwdns3978:0crwdne3978:0
+          Unplug8: crwdns3979:0crwdne3979:0
+          Artist4: crwdns3980:0crwdne3980:0
+          Unplug9: crwdns3981:0crwdne3981:0
+          Farmer3: crwdns3982:0crwdne3982:0
+          Unplug10: crwdns3983:0crwdne3983:0
+          Artist5: crwdns3984:0crwdne3984:0
+          Unplug11: crwdns3985:0crwdne3985:0
+        Hour of Code:
+          desc: crwdns3871:0crwdne3871:0
+          Maze: crwdns3872:0crwdne3872:0
+        Edit Code:
+          desc: crwdns4906:0crwdne4906:0
+          MazeEC: crwdns3874:0crwdne3874:0
+        2014 Levels:
+          desc: crwdns4907:0crwdne4907:0
+          Bounce: crwdns4908:0crwdne4908:0
+        Builder Levels:
+          desc: crwdns4909:0crwdne4909:0
+          Custom: crwdns4910:0crwdne4910:0
+        Flappy Levels:
+          desc: crwdns4648:0crwdne4648:0
+          Flappy: crwdns4911:0crwdne4911:0
+        Jigsaw Levels:
+          desc: crwdns4912:0crwdne4912:0
+          Jigsaw: crwdns4913:0crwdne4913:0
+        Step Levels:
+          desc: crwdns5101:0crwdne5101:0
+          MazeStep: crwdns5102:0crwdne5102:0
+        edit-code:
+          desc: crwdns5346:0crwdne5346:0
+          MazeEC: crwdns5347:0crwdne5347:0
+          Applab: crwdns27899:0crwdne27899:0
+          ArtistEC: crwdns21451:0crwdne21451:0
+          StudioEC: crwdns23432:0crwdne23432:0
+        events:
+          desc: crwdns5348:0crwdne5348:0
+          Bounce: crwdns5349:0crwdne5349:0
+          Studio: crwdns5350:0crwdne5350:0
+        builder:
+          desc: crwdns5351:0crwdne5351:0
+          Custom: crwdns5352:0crwdne5352:0
+        flappy:
+          desc: crwdns5353:0crwdne5353:0
+          Flappy: crwdns5354:0crwdne5354:0
+        jigsaw:
+          desc: crwdns5355:0crwdne5355:0
+          Jigsaw: crwdns5356:0crwdne5356:0
+        step:
+          desc: crwdns5357:0crwdne5357:0
+          MazeStep: crwdns5358:0crwdne5358:0
+        wordsearch:
+          desc: crwdns5359:0crwdne5359:0
+          WordSearch: crwdns5360:0crwdne5360:0
     game:
       name:
-        'Unplug1': 'Introduction to Computer Science'
-        'Maze': 'The Maze'
-        'Multi': 'Multiple Choice Stuffs'
-        'Unplug2': 'Computational Thinking'
-        'Unplug3': 'Graph Paper Programming'
-        'Artist': 'The Artist'
-        'Unplug4': 'Algorithms'
-        'Artist2': 'The Artist 2'
-        'Unplug5': 'Functions'
-        'Farmer': 'The Farmer'
-        'Unplug6': 'Conditionals'
-        'Artist3': 'The Artist 3'
-        'Unplug7': 'Song Writing'
-        'Farmer2': 'The Farmer 2'
-        'Unplug8': 'Abstraction'
-        'Artist4': 'The Artist 4'
-        'Unplug9': 'Relay Programming'
-        'Farmer3': 'The Farmer 3'
-        'Unplug10': 'The Internet'
-        'Artist5': 'The Artist 5'
-        'Unplug11': 'Wrap-up'
-        'MazeEC': 'The Maze'
-        'Bounce': 'Bounce'
-        'Flappy': 'Flappy Bird'
-        'Jigsaw': 'Jigsaw'
-        'MazeStep': 'Maze Step Mode'
-        'Wordsearch': 'Wordsearch'
-        'Webapp': 'Webapp'
-        'ArtistEC': 'The Artist'
-        'TextMatch': 'Text Match'
-        'StudioEC': 'Play Lab'
+        Unplug1: crwdns3875:0crwdne3875:0
+        Maze: crwdns2630:0crwdne2630:0
+        Multi: crwdns5103:0crwdne5103:0
+        Unplug2: crwdns3876:0crwdne3876:0
+        Unplug3: crwdns3877:0crwdne3877:0
+        Artist: crwdns2631:0crwdne2631:0
+        Unplug4: crwdns3878:0crwdne3878:0
+        Artist2: crwdns2632:0crwdne2632:0
+        Unplug5: crwdns4164:0crwdne4164:0
+        Farmer: crwdns2633:0crwdne2633:0
+        Unplug6: crwdns3880:0crwdne3880:0
+        Artist3: crwdns2634:0crwdne2634:0
+        Unplug7: crwdns3881:0crwdne3881:0
+        Farmer2: crwdns2635:0crwdne2635:0
+        Unplug8: crwdns3882:0crwdne3882:0
+        Artist4: crwdns2636:0crwdne2636:0
+        Unplug9: crwdns3883:0crwdne3883:0
+        Farmer3: crwdns2637:0crwdne2637:0
+        Unplug10: crwdns3884:0crwdne3884:0
+        Artist5: crwdns2638:0crwdne2638:0
+        Unplug11: crwdns3885:0crwdne3885:0
+        MazeEC: crwdns3886:0crwdne3886:0
+        Bounce: crwdns4458:0crwdne4458:0
+        Flappy: crwdns4650:0crwdne4650:0
+        Jigsaw: crwdns4914:0crwdne4914:0
+        MazeStep: crwdns5104:0crwdne5104:0
+        Wordsearch: crwdns5361:0crwdne5361:0
+        Webapp: crwdns27900:0crwdne27900:0
+        ArtistEC: crwdns21452:0crwdne21452:0
+        TextMatch: crwdns22211:0crwdne22211:0
+        StudioEC: crwdns23433:0crwdne23433:0
+        Applab: crwdns27901:0crwdne27901:0
+        NetSim: crwdns28006:0crwdne28006:0
     trophy:
       name:
-        'Bronze': 'Bronze'
-        'Silver': 'Silver'
-        'Gold': 'Gold'
+        Bronze: crwdns2640:0crwdne2640:0
+        Silver: crwdns2641:0crwdne2641:0
+        Gold: crwdns2642:0crwdne2642:0
     concept:
       description:
-        # Keyed by name
-        'sequence': 'Sequence'
-        'if': 'If block'
-        'if_else': 'If-else block'
-        'loop_times': 'Repeat times block'
-        'loop_until': 'Repeat until block'
-        'loop_while': 'While block'
-        'loop_for': 'Counter block'
-        'function': 'Functions'
-        'parameters': 'Functions with parameters'
+        sequence: crwdns2643:0crwdne2643:0
+        if: crwdns2644:0crwdne2644:0
+        if_else: crwdns2645:0crwdne2645:0
+        loop_times: crwdns2646:0crwdne2646:0
+        loop_until: crwdns2647:0crwdne2647:0
+        loop_while: crwdns2648:0crwdne2648:0
+        loop_for: crwdns2649:0crwdne2649:0
+        function: crwdns2650:0crwdne2650:0
+        parameters: crwdns2651:0crwdne2651:0
     level:
       instructions:
-        # Keyed by "#{game.name}_#{level.level_num}" with fallback "#{game.app}_#{level.level_num}"
-        'maze_2_2': "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there. "
-        'maze_2_1': "This pig is ruffling my feathers. Help me to find him!"
-        'maze_2_2_5': "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!"
-        'maze_2_3': "Guide me to the green evilness! (Watch out for TNT)"
-        'maze_2_4': "Keep calm and help me to find the bad pig. Otherwise I might get angry!"
-        'maze_2_5': "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        'maze_2_6': "Try to get me to the green intruder using only three blocks."
-        'maze_2_7': "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block."
-        'maze_2_8': "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn."
-        'maze_2_9': "Ok, try the new \"repeat until\" block - it will repeat until I reach the annoying pig."
-        'maze_2_10': "Ok, one last time for practice - can you solve this one using only 4 blocks?"
-        'maze_2_11': "Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?"
-        'maze_2_12': "Ok, this is similar, but slightly different. Can you do it in only 5 blocks?"
-        'maze_2_13': "Use the new \"if\" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time."
-        'maze_2_14': "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
-        'maze_2_15': "Me want sunflower! Use an \"if\" block to get me there with the fewest number of blocks."
-        'maze_2_16': "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        'maze_2_17': "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block."
-        'maze_2_18': "One more practice of the \"if-else\" block, can you get it right on your first try?"
-        'maze_2_19': "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length."
-        'turtle_1_1': "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        'turtle_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"set color\" block."
-        'turtle_1_3': "Make a square using only 3 blocks."
-        'turtle_1_4': "Draw a triangle whose sides are all in different colors, using the \"random color\" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block."
-        'turtle_1_5': "Now, for practice, draw a triangle and then a square to draw an envelope."
-        'turtle_1_6': "Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square."
-        'turtle_1_7': "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
-        'turtle_1_8': "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time."
-        'turtle_1_9': "Can you figure out what number to replace the question marks with to draw a circle?"
-        'turtle_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"set width\" block. Have fun!"
-        'turtle_4_1': "Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a \"repeat\" block."
-        'turtle_4_2': "Add a \"turn right by 90 degrees\" block somewhere in the middle of the program already out on the workspace to draw these triangles."
-        'turtle_4_3': "Ok, here's the code you wrote to draw a single triangle. Can you add a \"repeat\" and \"turn\" block to make a pretty flower?"
-        'turtle_4_4': "Here's the same code from the previous puzzle, but turning only 36 degrees after drawing each triangle. How many times does this need to repeat? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        'turtle_4_5': "Here's the same code from the previous puzzle, but repeating the turns 36 times. How many degrees should the turns be? (Hint: after 360 degrees of turning the drawing will come full circle)"
-        'turtle_4_6': "Using only 3 blocks, can you draw a square with edges of 20 pixels?"
-        'turtle_4_7': "Here's the code for drawing the square from last puzzle. Can you repeat it to draw 10 adjacent squares like a ladder? Hint: you only need 2 more blocks."
-        'turtle_4_8': "Here's the solution to the previous puzzle. Can you add just 2 more blocks to complete the drawing?"
-        'turtle_4_9': "Here's the solution to the previous puzzle. How many degrees should you turn to complete the drawing? (You probably need to guess a few times)"
-        'turtle_4_10': "Here's the solution to the previous puzzle. How many times should you repeat to complete the drawing?"
-        'turtle_4_11': "Try changing the numbers in the \"turn\" and \"repeat\" blocks to make different patterns. Or, experiment changing the rest of the code to draw anything you want."
-        'maze_karel_1_1': "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
-        'maze_karel_1_2': "Next, move me to the hole and fill it with TWO shovelfuls of dirt, using the \"fill\" block."
-        'maze_karel_1_3': "Move me to the pile of dirt and tell me how many shovelfuls to remove using as few blocks as possible."
-        'maze_karel_1_4': "Can you help me remove all four piles of dirt? Hint: use a repeat block if you can."
-        'maze_karel_1_5': "Help me fill in all these holes with 5 shovelfuls of dirt. Hint: you can put a \"repeat\" block inside the \"while\" block."
-        'maze_karel_1_6': "Remove all the piles of dirt, using as few blocks as possible. The new options in the dropdown menu on the \"while\" block tell me if I'm standing on a pile or a hole."
-        'maze_karel_1_7': "Wow, I found a really deep hole! I don't know how many shovelfuls of dirt it needs. Can you write a program that fills it until the ground is even?"
-        'maze_karel_1_8': "Help me fill in the hole at the end of the field, using as few blocks as possible."
-        'maze_karel_1_9': "Make me remove all these piles of dirt. Try to use as few blocks as possible. Hint: try using a \"while\" block."
-        'maze_karel_1_10': "I'm working late, so it's dark out, and I can't tell how large the piles are. Now I don't have all the options I used to have on the while block. Move me along the field, and if there is a pile, remove it."
-        'maze_karel_1_11': "It's still dark outside. Move me along the field. If there is a pile, remove it, and if there is a hole, fill it in. Hint: use the dropdown menu of options on the \"if\" block."
-        'turtle_2_1': "Hello. Me zombie artist. Me love drawing! Help me draw a square in a special color. Important note: you have all the same blocks but they've now been arranged in categories."
-        'turtle_2_2': "Welcome to using functions, which let you define new blocks! Try the new \"draw a square\" block, found in the \"Functions\" category, to draw a small 50x50 green square."
-        'turtle_2_3': "Use the \"repeat\" block (in the \"Loops\" category) to draw 3 squares of size 100, each 120 degrees apart. And do it in 3 different, random colors."
-        'turtle_2_4': "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
-        'turtle_2_5': "Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the \"draw a square\" function five times."
-        'turtle_2_6': "Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the \"counter\" block. Hint: It's in the Variables category."
-        'turtle_2_7': "Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a \"count with\" block (in the Loops category) and \"counter\" block (in the Variables category) to draw the same spiral."
-        'turtle_2_7_5': "There's a new \"draw a snowman\" function (in the Functions category). Draw two snowmen, of height 250 and 100."
-        'turtle_2_8': "This one's a bit tricky. Use the \"draw a snowman\" function and the new \"jump forward\" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart."
-        'turtle_2_9': "Use a \"count with\" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart."
-        'turtle_2_10': "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
-        'maze_karel_2_1': "Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop."
-        'maze_karel_2_2': "We've defined our own block called \"fill 5\", which is now in the Functions category. Use it to help me fill in this hole."
-        'maze_karel_2_3': "Use the new \"fill 5\" function block to make me fill in all the holes. You'll have to drag out the \"fill 5\" block out from the Functions category."
-        'maze_karel_2_4': "Define a new function that removes 7 shovelfuls. Then use it to write a program that helps me remove all the piles."
-        'maze_karel_2_5': "Create a new function that removes 6 shovelfuls from a pile, and use it to help me level out all the piles."
-        'maze_karel_2_6': "Use two new functions, \"fill 8\" and \"remove 8\", to help me level out the pile and fill in the hole."
-        'maze_karel_2_7': "There's a cow in my field! Write a new function that helps me avoid the cow and remove the pile. Put all your blocks inside the new function."
-        'maze_karel_2_8': "Use this new function, \"avoid the cow and remove 1\", to help me remove all the piles."
-        'maze_karel_2_9': "Ok, here's a function that removes 4 different piles of dirt in a vertical column. Try putting this function inside a loop, so that you remove all the piles of dirt using only a few new blocks."
-        'maze_karel_2_10': "Move me across the field, and use these two functions to help me remove all the piles and fill all the holes."
-        'turtle_3_1': "This puzzle shows you how the \"draw a square\" and \"draw a circle\" functions are defined.  Defining a function doesn't run its blocks.  You have to pull out the \"draw a square\" block to actually draw a square."
-        'turtle_3_2': "Using the \"draw a square\" function as an example, create a \"draw a triangle\" function and use it."
-        'turtle_3_3': "Draw triangular fences around the cats and a square fence around the cow.  Tip: test the program as you go along."
-        'turtle_3_4': "See if you can figure out how to use \"draw a square\" and \"draw a triangle\" (and some other blocks) to draw a house around the lion."
-        'turtle_3_5': "Now create a new \"draw a house\" function and use it to house two cats. Hint: create a new function using the \"do something\" block, and type your own text to name the block."
-        'turtle_3_6': "Using \"draw a square\" as an example, add an input named \"length\" to \"draw a triangle\". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)"
-        'turtle_3_7': "Add an input named \"length\" to \"draw a house\" and build a big house for the elephant (with edges 150 pixels long)"
-        'turtle_3_8': "Here are all of the blocks from the previous puzzle.  Modify \"draw a house\" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses."
-        'turtle_3_9': "Can you re-create the \"draw a house\" function without help? Try it, and then draw a row of houses."
-        'turtle_3_10': "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        'maze_karel_debug_seq_1': "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        'maze_karel_debug_seq_2': "What's wrong with this program? How should you fix it so I can remove that pile?"
-        'maze_karel_debug_repeat': "De-bug this program for me so my field will be nice and flat."
-        'maze_karel_debug_while': "How should you change this program to help me fill the hole?"
-        'maze_karel_debug_if': "Help! Fix the program so my field will be completely flat."
-        'maze_karel_debug_if_else': "De-bug this program so I can fill in the holes and remove all the piles."
-        'maze_karel_debug_function_1': "What should you change about this program to help me remove all the piles?"
-        'maze_karel_debug_function_2': "Can you de-bug this program for me so I can make my field flat?"
-        'maze_karel_debug_function_3': "Edit this program so I'll remove all the piles on my field. "
-        'turtle_5_1': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_2': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_3': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_4': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_5': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'turtle_5_6': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
-        'maze_3_1': "I need to get to that pig! Type in a couple of calls to move(); so I can get my eggs back."
-        'maze_3_2': "Write me a program, so I can make it all the way to the pig."
-        'maze_3_3': "How should I get to the pig? Make sure I don't run into the box of TNT!"
-        'maze_3_4': "Argh! Write me a program that gets me around the TNT and to the pig."
-        'bounce_1': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the paddle using the left arrow to reach the finish target."
-        'bounce_2': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets."
-        'bounce_3': "Now try something similar with the \"when up arrow\" block. Move the paddle to the finish target at the top."
-        'bounce_4': "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle."
-        'bounce_5': "We're going to send a ball flying down towards the paddle. Attach a block to the \"when ball hits paddle\" block to ensure the ball reaches the finish target."
-        'bounce_6': "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the finish target."
-        'bounce_10': "There is a now a goal at the top. Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses paddle\" blocks to make a game. See how many points you can score before your opponent scores twice."
-        'bounce_11': "You can now attach blocks to the \"when run\" block. You have to attach the new \"launch new ball\" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice."
-        'bounce_12': "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
-        'Custom_builder': "Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press \"Run\" when you are ready."
-        'flappy_1': "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
-        'flappy_2': "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
-        'flappy_3': "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
-        'flappy_4': "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
-        'flappy_5': "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
-        'flappy_6': "See if you can still score a point after making Flappy flap either a smaller or larger amount."
-        'flappy_7': "Next, try changing the scene by attaching another block to the \"when run\" block."
-        'flappy_8': "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle."
-        'flappy_9': "To mix things up, when hitting an obstacle or the ground, instead of ending the game try setting the score back to 0."
-        'flappy_11': "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        'flappy_k1_1': "Play Flappy"
-        'flappy_k1_2': "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
-        'flappy_k1_3': "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes."
-        'flappy_k1_4': "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target."
-        'flappy_k1_5': "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes."
-        'flappy_k1_6': "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes."
-        'flappy_k1_7': "See if you can score multiple points for making it past an obstacle"
-        'flappy_k1_8': "Next, try changing the scene by attaching another block to the \"when run\" block."
-        'flappy_k1_9': "Try changing the player by attaching a \"set player\" block to the \"when run\" block."
-        'jigsaw_1': "Click the block"
-        'jigsaw_2': "Drag the block to the target"
-        'jigsaw_3': "Arrange the blocks to form the image"
-        'jigsaw_4': "Arrange the blocks to form the image"
-        'jigsaw_5': "Arrange the blocks to form the image"
-        'jigsaw_6': "Arrange the blocks to form the image"
-        'jigsaw_7': "Arrange the blocks to form the image"
-        'jigsaw_8': "Arrange the blocks to form the image"
-        'jigsaw_9': "Arrange the blocks to form the image"
-        'jigsaw_10': "Arrange the blocks to form the image"
-        'jigsaw_11': "Arrange the blocks to form the image"
-        'jigsaw_12': "Arrange the blocks to form the image"
-        'jigsaw_13': "Fix the puzzle!"
-        'mazestep_1': "Maze step description here"
-        'mazestep_2': "Maze step description here"
-        'mazestep_3': "Maze step description here"
-        'mazestep_4': "Maze step description here"
-        'mazestep_5': "Maze step description here"
-        'studio_c2_1': "Can you make this dog say \"hello world\"?"
-        'studio_c2_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_c2_3': "Can you write a program to make this dog move to the cat?"
-        'studio_c2_4': "Can you write a program that makes the dog move to the cat, and have the cat say \"hello\" when the dog reaches him?"
-        'studio_c2_5': "Can you write a program to make the octopus say \"hello\" when it is clicked?"
-        'studio_c2_6': "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
-        'studio_c2_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
-        'studio_c2_8': "Can you have the penguin say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
-        'studio_c2_9': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        'studio_c2_10': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_c2_11': "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        'studio_c3_story_1': "Can you make this dog say \"hello world\"?"
-        'studio_c3_story_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_c3_story_3': "Can you write a program to make this dog move to the cat?"
-        'studio_c3_story_4': "Can you write a program that makes the dog move to the cat, and have the cat say \"hello\" when the dog reaches him?"
-        'studio_c3_story_5': "Can you add a block to make the octopus happy?"
-        'studio_c3_story_6': "Create your own story. When you're done, click Finish to let friends try your story on their phones."
-        'studio_c3_game_1': "Can you write a program to make the octopus say \"hello\" when it is clicked?"
-        'studio_c3_game_2': "Can you write a program to make this penguin move around using the up / down / left /right keys to hit all of the targets?"
-        'studio_c3_game_3': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to move this dinosaur up and down repeatedly?"
-        'studio_c3_game_4': "Can you have the penguin say \"Ouch!\" and play a \"hit\" sound if he runs into the dinosaur, and then move him with the arrows to make that happen?"
-        'studio_c3_game_5': "Can you add a block to score a point when the penguin runs into the octopus, and then move him with the arrows until you score?"
-        'studio_c3_game_6': "Can you add blocks to change the background and the speed of the penguin, and then move him with the arrows until you score?"
-        'studio_c3_game_7': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_playlab_1': "Penguin wants to say \"hello\" - can you help him?"
-        'studio_playlab_2': "Cave Boy (actor 1) and Cave Girl (actor 2) would like to say \"hello\" to each other. Can you help them by using the \"say\" block twice?"
-        'studio_playlab_3': "Can you help Tennis Girl get to the flag?"
-        'studio_playlab_4': "Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?"
-        'studio_playlab_5': "Can you help the Spacebot say \"greetings earthlings\" when it is clicked? Don’t forget to click it after you click Run"
-        'studio_playlab_6': "Can you help the Witch move around using the up/down/right/left arrow keys to get to all the magical fireballs?"
-        'studio_playlab_7': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?"
-        'studio_playlab_8': "Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?"
-        'studio_playlab_9': "Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else"
-        'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_full_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        'studio_k1_1': "Can you make this dog say \"hello world\"?"
-        'studio_k1_2': "Can you make the dog say something and then have the cat say something afterwards?"
-        'studio_k1_3': "Can you write a program to make this dog move to the cat?"
-        'studio_k1_4': "Make the dog move to the cat and the cat say \"hello\" when he gets there."
-        'studio_k1_5': "Can you add a block to make the octopus happy?"
-        'studio_k1_6': "Create your own story! Move around the cat and dog, and make them say things."
-        'maze_wordsearch_k_1': "Move me to spell the word EAST"
-        'maze_wordsearch_k_2': "Move me to spell the word SOUTH"
-        'maze_wordsearch_k_3': "Move me to spell the word WEST"
-        'maze_wordsearch_k_4': "Move me to spell the word NORTH"
-        'maze_wordsearch_k_6': "Move me East and then South to spell the word JUMP"
-        'maze_wordsearch_k_9': "Move me one way, then another to spell the word CODE"
-        'maze_wordsearch_k_13': "Move me one way, then another to spell the word DEBUG"
-        'maze_wordsearch_k_15': "Move me one way, then another to spell the word ABOVE"
-        'maze_wordsearch_k_16': "Move me one way, then another to spell the word BELOW"
-        'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
-        'webapp_ec_simple': "Create your web app by using createHtmlBlock."
-        'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
-        'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
-        'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      'frozen line':
-        instructions: "Hi! I'm Elsa of Arendelle. Help me create a single line."
-      'frozen perpendicular':
-        instructions: "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block."
-      'frozen square iterative':
-        instructions: "It seems like we're halfway to making a square. Let's put 4 lines together to create a square."
-      'frozen square loop':
-        instructions: "Hi, I'm Anna of Arendelle! Let's make a square with the \"Repeat\" block, which uses fewer blocks. How many times (???) should the \"Repeat\" block loop the blocks inside it to make a square?"
-      'frozen square loop 3x':
-        instructions: "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square."
-      'frozen square snowflake':
-        instructions: "Can you create a snowflake using the \"Repeat\" block to make a square 10 times, and the \"Turn\" block to turn 36 degrees between each square?"
-      'frozen cross':
-        instructions: "Use the \"Repeat\" block to create a plus sign. Did you notice Elsa can move forward and backward?"
-      'frozen cross rotate':
-        instructions: "Now try repeating it 10 times. How many degrees do you need to turn between each line?"
-      'frozen cross rotate dense':
-        instructions: "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
-      'frozen diamond':
-        instructions: "Let's create a parallelogram. It's just like a square but has different angles: 60 and 120 degree angles instead of 90 degree angles."
-      'frozen diamond mini snowflake':
-        instructions: "Did you know every snowflake is a different shape? Let's create a new snowflake by using the \"Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram."
-      'frozen diamond snowflake':
-        instructions: "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one."
-      'frozen circle':
-        instructions: "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?"
-      'frozen circle function':
-        instructions: "Use the new \"Create a circle\" block to create 10 overlapping circles. Don't forget to jump forward between circles."
-      'frozen circle function in circle':
-        instructions: "Now let's create 20 overlapping circles, turning 18 degrees between each circle."
-      'frozen circle function with parameter':
-        instructions: "Here's a \"Create circle\" block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?"
-      'frozen snowflower':
-        instructions: "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?"
-      'frozen snowflake branch':
-        instructions: "Try using the \"Create a snowflake branch\" block to create three branches, which starts to look like a snowflake."
-      'frozen snowflake full':
-        instructions: "Now let's repeat it 8 times to make a beautiful snowflake!"
-      'frozen freeplay':
-        instructions: "You've officially become a master artist! Create a winter wonderland."
-      'scrat 16':
-        instructions: "Acorn! Acorn! Acorn! Use an \"if\" block to get me there with the fewest number of blocks."
-      'scrat 17':
-        instructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!"
-      'scrat 18':
-        instructions: "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the acorn try to use this new block."
-      'scrat 19':
-        instructions: "One more practice of the \"if-else\" block, can you get it right on your first try?"
-      'scrat 20':
-        instructions: "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length. Hurry! The ice is melting!"
-      'Standalone_Artist_1':
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      'Standalone_Artist_2':
-        instructions: "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides."
-      'Standalone_Artist_3':
-        instructions: "Can you draw this hexagon with 100 pixel sides and 60 degree turns?"
-      'Standalone_Artist_4':
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      'Standalone_Artist_5':
-        instructions: "How many times do you need to loop this diamond to draw the flower?"
-      'Standalone_Artist_5.5':
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      'Standalone_Artist_6':
-        instructions: "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping."
-      'Standalone_Artist_7':
-        instructions: "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart"
-      'Standalone_Artist_8':
-        instructions: "Here's a function called \"Draw a shape\" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?"
-      'Standalone_Artist_9':
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        maze_2_2: crwdns5297:0crwdne5297:0
+        maze_2_1: crwdns3945:0crwdne3945:0
+        maze_2_2_5: crwdns3946:0crwdne3946:0
+        maze_2_3: crwdns3947:0crwdne3947:0
+        maze_2_4: crwdns3948:0crwdne3948:0
+        maze_2_5: crwdns3949:0crwdne3949:0
+        maze_2_6: crwdns3950:0crwdne3950:0
+        maze_2_7: crwdns3951:0crwdne3951:0
+        maze_2_8: crwdns5362:0crwdne5362:0
+        maze_2_9: crwdns3952:0crwdne3952:0
+        maze_2_10: crwdns3047:0crwdne3047:0
+        maze_2_11: crwdns3048:0crwdne3048:0
+        maze_2_12: crwdns2663:0crwdne2663:0
+        maze_2_13: crwdns2664:0crwdne2664:0
+        maze_2_14: crwdns2665:0crwdne2665:0
+        maze_2_15: crwdns2666:0crwdne2666:0
+        maze_2_16: crwdns2667:0crwdne2667:0
+        maze_2_17: crwdns2668:0crwdne2668:0
+        maze_2_18: crwdns2669:0crwdne2669:0
+        maze_2_19: crwdns2670:0crwdne2670:0
+        turtle_1_1: crwdns4916:0crwdne4916:0
+        turtle_1_2: crwdns3136:0crwdne3136:0
+        turtle_1_3: crwdns2673:0crwdne2673:0
+        turtle_1_4: crwdns2980:0crwdne2980:0
+        turtle_1_5: crwdns2675:0crwdne2675:0
+        turtle_1_6: crwdns2676:0crwdne2676:0
+        turtle_1_7: crwdns3049:0crwdne3049:0
+        turtle_1_8: crwdns2678:0crwdne2678:0
+        turtle_1_9: crwdns2679:0crwdne2679:0
+        turtle_1_10: crwdns2982:0crwdne2982:0
+        turtle_4_1: crwdns3766:0crwdne3766:0
+        turtle_4_2: crwdns4917:0crwdne4917:0
+        turtle_4_3: crwdns3768:0crwdne3768:0
+        turtle_4_4: crwdns3769:0crwdne3769:0
+        turtle_4_5: crwdns3770:0crwdne3770:0
+        turtle_4_6: crwdns3771:0crwdne3771:0
+        turtle_4_7: crwdns3772:0crwdne3772:0
+        turtle_4_8: crwdns3773:0crwdne3773:0
+        turtle_4_9: crwdns3774:0crwdne3774:0
+        turtle_4_10: crwdns3775:0crwdne3775:0
+        turtle_4_11: crwdns3776:0crwdne3776:0
+        maze_karel_1_1: crwdns2685:0crwdne2685:0
+        maze_karel_1_2: crwdns2686:0crwdne2686:0
+        maze_karel_1_3: crwdns2687:0crwdne2687:0
+        maze_karel_1_4: crwdns2987:0crwdne2987:0
+        maze_karel_1_5: crwdns2689:0crwdne2689:0
+        maze_karel_1_6: crwdns2988:0crwdne2988:0
+        maze_karel_1_7: crwdns2989:0crwdne2989:0
+        maze_karel_1_8: crwdns2692:0crwdne2692:0
+        maze_karel_1_9: crwdns3887:0crwdne3887:0
+        maze_karel_1_10: crwdns2694:0crwdne2694:0
+        maze_karel_1_11: crwdns2695:0crwdne2695:0
+        turtle_2_1: crwdns2696:0crwdne2696:0
+        turtle_2_2: crwdns2697:0crwdne2697:0
+        turtle_2_3: crwdns2698:0crwdne2698:0
+        turtle_2_4: crwdns2699:0crwdne2699:0
+        turtle_2_5: crwdns2700:0crwdne2700:0
+        turtle_2_6: crwdns2701:0crwdne2701:0
+        turtle_2_7: crwdns2702:0crwdne2702:0
+        turtle_2_7_5: crwdns3050:0crwdne3050:0
+        turtle_2_8: crwdns3051:0crwdne3051:0
+        turtle_2_9: crwdns2705:0crwdne2705:0
+        turtle_2_10: crwdns2990:0crwdne2990:0
+        maze_karel_2_1: crwdns2991:0crwdne2991:0
+        maze_karel_2_2: crwdns2708:0crwdne2708:0
+        maze_karel_2_3: crwdns2992:0crwdne2992:0
+        maze_karel_2_4: crwdns2710:0crwdne2710:0
+        maze_karel_2_5: crwdns2711:0crwdne2711:0
+        maze_karel_2_6: crwdns2712:0crwdne2712:0
+        maze_karel_2_7: crwdns2713:0crwdne2713:0
+        maze_karel_2_8: crwdns2714:0crwdne2714:0
+        maze_karel_2_9: crwdns2715:0crwdne2715:0
+        maze_karel_2_10: crwdns2716:0crwdne2716:0
+        turtle_3_1: crwdns2717:0crwdne2717:0
+        turtle_3_2: crwdns2718:0crwdne2718:0
+        turtle_3_3: crwdns2993:0crwdne2993:0
+        turtle_3_4: crwdns2720:0crwdne2720:0
+        turtle_3_5: crwdns2721:0crwdne2721:0
+        turtle_3_6: crwdns2994:0crwdne2994:0
+        turtle_3_7: crwdns3817:0crwdne3817:0
+        turtle_3_8: crwdns35062:0crwdne35062:0
+        turtle_3_9: crwdns2996:0crwdne2996:0
+        turtle_3_10: crwdns2997:0crwdne2997:0
+        maze_karel_debug_seq_1: crwdns2727:0crwdne2727:0
+        maze_karel_debug_seq_2: crwdns2728:0crwdne2728:0
+        maze_karel_debug_repeat: crwdns2729:0crwdne2729:0
+        maze_karel_debug_while: crwdns2730:0crwdne2730:0
+        maze_karel_debug_if: crwdns2731:0crwdne2731:0
+        maze_karel_debug_if_else: crwdns2732:0crwdne2732:0
+        maze_karel_debug_function_1: crwdns2733:0crwdne2733:0
+        maze_karel_debug_function_2: crwdns2734:0crwdne2734:0
+        maze_karel_debug_function_3: crwdns2735:0crwdne2735:0
+        turtle_5_1: crwdns3848:0crwdne3848:0
+        turtle_5_2: crwdns3849:0crwdne3849:0
+        turtle_5_3: crwdns3850:0crwdne3850:0
+        turtle_5_4: crwdns3851:0crwdne3851:0
+        turtle_5_5: crwdns3852:0crwdne3852:0
+        turtle_5_6: crwdns3853:0crwdne3853:0
+        maze_3_1: crwdns3751:0crwdne3751:0
+        maze_3_2: crwdns3752:0crwdne3752:0
+        maze_3_3: crwdns3753:0crwdne3753:0
+        maze_3_4: crwdns3754:0crwdne3754:0
+        bounce_1: crwdns5298:0crwdne5298:0
+        bounce_2: crwdns4841:0crwdne4841:0
+        bounce_3: crwdns4486:0crwdne4486:0
+        bounce_4: crwdns4487:0crwdne4487:0
+        bounce_5: crwdns4488:0crwdne4488:0
+        bounce_6: crwdns4489:0crwdne4489:0
+        bounce_7: crwdns4842:0crwdne4842:0
+        bounce_10: crwdns4843:0crwdne4843:0
+        bounce_11: crwdns7343:0crwdne7343:0
+        bounce_12: crwdns8503:0crwdne8503:0
+        Custom_builder: crwdns5299:0crwdne5299:0
+        flappy_1: crwdns5300:0crwdne5300:0
+        flappy_2: crwdns4845:0crwdne4845:0
+        flappy_3: crwdns7344:0crwdne7344:0
+        flappy_4: crwdns4808:0crwdne4808:0
+        flappy_5: crwdns4655:0crwdne4655:0
+        flappy_6: crwdns4656:0crwdne4656:0
+        flappy_7: crwdns7345:0crwdne7345:0
+        flappy_8: crwdns4847:0crwdne4847:0
+        flappy_9: crwdns28007:0crwdne28007:0
+        flappy_11: crwdns8504:0crwdne8504:0
+        flappy_k1_1: crwdns5363:0crwdne5363:0
+        flappy_k1_2: crwdns5364:0crwdne5364:0
+        flappy_k1_3: crwdns5365:0crwdne5365:0
+        flappy_k1_4: crwdns7346:0crwdne7346:0
+        flappy_k1_5: crwdns5367:0crwdne5367:0
+        flappy_k1_6: crwdns5368:0crwdne5368:0
+        flappy_k1_7: crwdns5369:0crwdne5369:0
+        flappy_k1_8: crwdns7347:0crwdne7347:0
+        flappy_k1_9: crwdns7348:0crwdne7348:0
+        jigsaw_1: crwdns4920:0crwdne4920:0
+        jigsaw_2: crwdns4921:0crwdne4921:0
+        jigsaw_3: crwdns4922:0crwdne4922:0
+        jigsaw_4: crwdns4923:0crwdne4923:0
+        jigsaw_5: crwdns4924:0crwdne4924:0
+        jigsaw_6: crwdns4925:0crwdne4925:0
+        jigsaw_7: crwdns4926:0crwdne4926:0
+        jigsaw_8: crwdns4927:0crwdne4927:0
+        jigsaw_9: crwdns4928:0crwdne4928:0
+        jigsaw_10: crwdns4929:0crwdne4929:0
+        jigsaw_11: crwdns4930:0crwdne4930:0
+        jigsaw_12: crwdns5105:0crwdne5105:0
+        jigsaw_13: crwdns5591:0crwdne5591:0
+        mazestep_1: crwdns5106:0crwdne5106:0
+        mazestep_2: crwdns5107:0crwdne5107:0
+        mazestep_3: crwdns5108:0crwdne5108:0
+        mazestep_4: crwdns5109:0crwdne5109:0
+        mazestep_5: crwdns5110:0crwdne5110:0
+        studio_c2_1: crwdns8605:0crwdne8605:0
+        studio_c2_2: crwdns8606:0crwdne8606:0
+        studio_c2_3: crwdns8607:0crwdne8607:0
+        studio_c2_4: crwdns8608:0crwdne8608:0
+        studio_c2_5: crwdns8609:0crwdne8609:0
+        studio_c2_6: crwdns8610:0crwdne8610:0
+        studio_c2_7: crwdns8611:0crwdne8611:0
+        studio_c2_8: crwdns8612:0crwdne8612:0
+        studio_c2_9: crwdns8613:0crwdne8613:0
+        studio_c2_10: crwdns8614:0crwdne8614:0
+        studio_c2_11: crwdns8615:0crwdne8615:0
+        studio_c3_story_1: crwdns8616:0crwdne8616:0
+        studio_c3_story_2: crwdns8617:0crwdne8617:0
+        studio_c3_story_3: crwdns8618:0crwdne8618:0
+        studio_c3_story_4: crwdns8619:0crwdne8619:0
+        studio_c3_story_5: crwdns8620:0crwdne8620:0
+        studio_c3_story_6: crwdns8621:0crwdne8621:0
+        studio_c3_game_1: crwdns8622:0crwdne8622:0
+        studio_c3_game_2: crwdns8623:0crwdne8623:0
+        studio_c3_game_3: crwdns8624:0crwdne8624:0
+        studio_c3_game_4: crwdns8625:0crwdne8625:0
+        studio_c3_game_5: crwdns8626:0crwdne8626:0
+        studio_c3_game_6: crwdns8627:0crwdne8627:0
+        studio_c3_game_7: crwdns23434:0crwdne23434:0
+        studio_playlab_1: crwdns24731:0crwdne24731:0
+        studio_playlab_2: crwdns24791:0crwdne24791:0
+        studio_playlab_3: crwdns24733:0crwdne24733:0
+        studio_playlab_4: crwdns24792:0crwdne24792:0
+        studio_playlab_5: crwdns24793:0crwdne24793:0
+        studio_playlab_6: crwdns24736:0crwdne24736:0
+        studio_playlab_7: crwdns24737:0crwdne24737:0
+        studio_playlab_8: crwdns24738:0crwdne24738:0
+        studio_playlab_9: crwdns24739:0crwdne24739:0
+        studio_playlab_10: crwdns23435:0crwdne23435:0
+        studio_full_sandbox: crwdns23436:0crwdne23436:0
+        studio_k1_1: crwdns5375:0crwdne5375:0
+        studio_k1_2: crwdns5376:0crwdne5376:0
+        studio_k1_3: crwdns8640:0crwdne8640:0
+        studio_k1_4: crwdns6269:0crwdne6269:0
+        studio_k1_5: crwdns5379:0crwdne5379:0
+        studio_k1_6: crwdns8641:0crwdne8641:0
+        maze_wordsearch_k_1: crwdns5979:0crwdne5979:0
+        maze_wordsearch_k_2: crwdns5980:0crwdne5980:0
+        maze_wordsearch_k_3: crwdns5981:0crwdne5981:0
+        maze_wordsearch_k_4: crwdns5982:0crwdne5982:0
+        maze_wordsearch_k_6: crwdns5984:0crwdne5984:0
+        maze_wordsearch_k_9: crwdns5987:0crwdne5987:0
+        maze_wordsearch_k_13: crwdns5991:0crwdne5991:0
+        maze_wordsearch_k_15: crwdns5993:0crwdne5993:0
+        maze_wordsearch_k_16: crwdns5994:0crwdne5994:0
+        maze_wordsearch_k_20: crwdns5998:0crwdne5998:0
+        applab_ec_simple: crwdns27902:0crwdne27902:0
+        turtle_ec_1_2: crwdns23293:0crwdne23293:0
+        turtle_ec_1_10: crwdns22212:0crwdne22212:0
+        studio_ec_sandbox: crwdns23437:0crwdne23437:0
     video:
       name:
-        # Keyed by video.key
-        # How to check that this is file is up to date:
-        # irb> file_keys = YAML.load(File.read('config/locales/data.en.yml'))['en']['data']['video']['name'].keys
-        # irb> db_keys = Video.all.collect(&:key)
-        # irb> file_keys - db_keys
-        # irb> db_keys - file_keys
-        'maze_intro': "Maze Intro"
-        'artist_intro': "Artist Intro"
-        'farmer_intro': "Farmer Intro"
-        'flappy_intro': "Flappy Intro"
-        'loop_times': "Repeat Times Block"
-        'loop_until': "Repeat Until Block"
-        'if': "If Block"
-        'if_else': "If/else Block"
-        'if_else_scrat': "If/else Block"
-        'function': "Functions"
-        'loop_while': "While Block"
-        'loop_for': "Counter Block"
-        'parameters': "Functions with Parameters"
-        'hoc_wrapup': "Hour of Code Wrapup"
-        'Unplug1': 'What is CS?'
-        'Unplug2': 'Computational Thinking'
-        'Unplug3': 'Graph Paper Programming'
-        'Unplug4': 'Algorithms'
-        'Unplug5': 'Functions'
-        'Unplug6': 'Conditionals'
-        'Unplug7': 'Songwriting'
-        'Unplug8': 'Abstraction'
-        'Unplug9': 'Relay programming'
-        'Unplug10': 'Internet'
-        'Unplug11': 'Wrap-up'
-        'C1_happy_maps_unplugged': 'Happy Maps'
-        'C1_moveitmoveit_unplugged': 'Move It, Move It'
-        'C1_bigevent_unplugged': 'The Big Event'
-        'C1_getting_loopy': 'Getting Loopy'
-        'C1_pair_programming': 'Pair Programming'
-        'C1_maze_intro_sequencing': 'Maze Sequencing Intro'
-        'C1_maze_debugging': 'Maze Debugging'
-        'C1_bee_level_intro': 'Bee Level - Intro'
-        'C1_artist_intro': 'Artist Intro'
-        'C1_spelling_bee_intro': 'Spelling Bee Intro'
-        'C1_zuck_repeat_loop': 'Maze Loops'
-        'C1_bee_loops': 'Bee Loops'
-        'C1_maze_loops': 'Maze Loops'
-        'C1_playlab_storytelling': 'Play Lab - Create a Story'
-        'C1_planting_seed': 'Planting a Seed'
-        'C1_building_foundation': 'Building a Foundation'
-        'C1_going_places_safely': 'Going Places Safely'
-        'C2_maze_intro': 'Maze Intro'
-        'C2_artist_intro': 'Artist Intro'
-        'C2_zuck_repeat_loop': 'Maze Loops'
-        'C2_artist_loops': 'Artist Loops'
-        'C2_artist_debugging': 'Artist Debugging'
-        'C2_bee_loops': 'Bee Loops'
-        'C2_bee_debugging': 'Bee Debugging'
-        'C2_bee_conditionals': 'Bee Conditionals'
-        'C2_playlab_createstory': 'Play Lab - Create a Story'
-        'C2_graph_paper': 'Graph Paper Programming'
-        'C2_conditionals_with_cards' : 'Conditionals'
-        'C2_binary_bracelets': 'Binary Bracelets'
-        'C2_relay_programming': 'Relay Programming'
-        'C2_paper_airplanes': 'Paper Airplanes'
-        'C2_digital_footprint': 'Your Digital Footprint'
-        'C3_maze_level_4': 'Maze Loops'
-        'C3_artist_intro': 'Artist Intro'
-        'C3_artist_functions': 'Artist Functions'
-        'C3_bee_functions': 'Bee Functions'
-        'C3_bee_conditionals': 'Bee Conditionals'
-        'C3_maze_conditionals': 'Maze Conditionals'
-        'C3_artist_nested_loops': 'Nested Loops'
-        'C3_farmer_while': 'While Loops'
-        'C3_bee_nested_loops': 'Nested Loops'
-        'C3_bee_debugging': 'Bee Debugging'
-        'C3_bounce': 'Bounce'
-        'C3_playlab_create_game': 'Play Lab - Create a Game'
-        'C3_computational_thinking': 'Computational Thinking'
-        'C3_dice_race': 'Dice Race'
-        'C3_internet': 'Internet'
-        'C3_crowdsourcing': 'Crowdsourcing'
-        'C3_functional_suncatchers': 'Functional Suncatchers'
-        'C3_songwriting_with_parameters': 'Songwriting With Parameters'
-        'C4_intro' : 'Introduction'
-        'C4_bee_conditional' : 'Bee Conditionals'
-        'C4_variables_artist' : 'Variables - Artist'
-        'C4_variables_playlab' : 'Variables - Play Lab'
-        'C4_for_loops' : 'For Loops'
-        'C4_math_artist' : 'Programming the Artist with Math'
-        'C4_function_edit' : 'Editing Functions'
-        'C4_function_create' : 'Creating Functions'
-        'C4_function_parameters' : 'Functions with Parameters'
-        'C4_conditionals': 'Conditionals'
-        'C4_unplugged_algorithms' : 'Algorithms with Tangrams'
-        'C4_unplugged_madlibs' : 'Mad Libs'
-        'C4_unplugged_variables' : 'Variables in Envelopes'
-        'C4_unplugged_forloops' : 'For Loops'
-        'C4_unplugged_parameters' : 'Songwriting with Parameters'
-        'C4_unplugged_binary' : 'Binary'
-        'frozen_intro': 'Hour of Code Intro'
-        'frozen_loops': 'Introduction to Loops'
-        'frozen_functions': 'Introduction to Functions'
-        'playlab_intro' : 'Introduction to Play Lab'
-        'playlab_events' : 'Play Lab Events'
-        'playlab_repeat_forever' : 'Play Lab Repeat Forever'
+        maze_intro: crwdns2737:0crwdne2737:0
+        artist_intro: crwdns2738:0crwdne2738:0
+        farmer_intro: crwdns2739:0crwdne2739:0
+        flappy_intro: crwdns4659:0crwdne4659:0
+        loop_times: crwdns3052:0crwdne3052:0
+        loop_until: crwdns3053:0crwdne3053:0
+        if: crwdns3054:0crwdne3054:0
+        if_else: crwdns3055:0crwdne3055:0
+        if_else_scrat: crwdns24765:0crwdne24765:0
+        function: crwdns2744:0crwdne2744:0
+        loop_while: crwdns3056:0crwdne3056:0
+        loop_for: crwdns3057:0crwdne3057:0
+        parameters: crwdns3058:0crwdne3058:0
+        hoc_wrapup: crwdns3059:0crwdne3059:0
+        Unplug1: crwdns7352:0crwdne7352:0
+        Unplug2: crwdns7353:0crwdne7353:0
+        Unplug3: crwdns7354:0crwdne7354:0
+        Unplug4: crwdns7355:0crwdne7355:0
+        Unplug5: crwdns7356:0crwdne7356:0
+        Unplug6: crwdns7357:0crwdne7357:0
+        Unplug7: crwdns7358:0crwdne7358:0
+        Unplug8: crwdns7359:0crwdne7359:0
+        Unplug9: crwdns7360:0crwdne7360:0
+        Unplug10: crwdns7361:0crwdne7361:0
+        Unplug11: crwdns7362:0crwdne7362:0
+        C1_happy_maps_unplugged: crwdns8694:0crwdne8694:0
+        C1_moveitmoveit_unplugged: crwdns7533:0crwdne7533:0
+        C1_bigevent_unplugged: crwdns8695:0crwdne8695:0
+        C1_getting_loopy: crwdns22213:0crwdne22213:0
+        C1_pair_programming: crwdns8697:0crwdne8697:0
+        C1_maze_intro_sequencing: crwdns7534:0crwdne7534:0
+        C1_maze_debugging: crwdns7535:0crwdne7535:0
+        C1_bee_level_intro: crwdns7536:0crwdne7536:0
+        C1_artist_intro: crwdns7537:0crwdne7537:0
+        C1_spelling_bee_intro: crwdns8698:0crwdne8698:0
+        C1_zuck_repeat_loop: crwdns7538:0crwdne7538:0
+        C1_bee_loops: crwdns7539:0crwdne7539:0
+        C1_maze_loops: crwdns7540:0crwdne7540:0
+        C1_playlab_storytelling: crwdns7541:0crwdne7541:0
+        C1_planting_seed: crwdns8788:0crwdne8788:0
+        C1_building_foundation: crwdns22214:0crwdne22214:0
+        C1_going_places_safely: crwdns24766:0crwdne24766:0
+        C2_maze_intro: crwdns7542:0crwdne7542:0
+        C2_artist_intro: crwdns7543:0crwdne7543:0
+        C2_zuck_repeat_loop: crwdns7544:0crwdne7544:0
+        C2_artist_loops: crwdns8700:0crwdne8700:0
+        C2_artist_debugging: crwdns22215:0crwdne22215:0
+        C2_bee_loops: crwdns22216:0crwdne22216:0
+        C2_bee_debugging: crwdns22217:0crwdne22217:0
+        C2_bee_conditionals: crwdns7545:0crwdne7545:0
+        C2_playlab_createstory: crwdns8510:0crwdne8510:0
+        C2_graph_paper: crwdns8701:0crwdne8701:0
+        C2_conditionals_with_cards: crwdns8702:0crwdne8702:0
+        C2_binary_bracelets: crwdns8703:0crwdne8703:0
+        C2_relay_programming: crwdns22218:0crwdne22218:0
+        C2_paper_airplanes: crwdns8789:0crwdne8789:0
+        C2_digital_footprint: crwdns24767:0crwdne24767:0
+        C2_digital_footprint_v2: crwdns33886:0crwdne33886:0
+        C3_maze_level_4: crwdns22219:0crwdne22219:0
+        C3_artist_intro: crwdns8706:0crwdne8706:0
+        C3_artist_functions: crwdns8707:0crwdne8707:0
+        C3_bee_functions: crwdns8708:0crwdne8708:0
+        C3_bee_conditionals: crwdns8709:0crwdne8709:0
+        C3_maze_conditionals: crwdns8710:0crwdne8710:0
+        C3_artist_nested_loops: crwdns8711:0crwdne8711:0
+        C3_farmer_while: crwdns8712:0crwdne8712:0
+        C3_bee_nested_loops: crwdns8713:0crwdne8713:0
+        C3_bee_debugging: crwdns8714:0crwdne8714:0
+        C3_bounce: crwdns8715:0crwdne8715:0
+        C3_playlab_create_game: crwdns8716:0crwdne8716:0
+        C3_computational_thinking: crwdns8717:0crwdne8717:0
+        C3_dice_race: crwdns8718:0crwdne8718:0
+        C3_internet: crwdns8719:0crwdne8719:0
+        C3_crowdsourcing: crwdns8720:0crwdne8720:0
+        C3_functional_suncatchers: crwdns8721:0crwdne8721:0
+        C3_songwriting_with_parameters: crwdns8722:0crwdne8722:0
+        C4_intro: crwdns25650:0crwdne25650:0
+        C4_loops_zombie: crwdns43223:0crwdne43223:0
+        C4_bee_conditional: crwdns25651:0crwdne25651:0
+        C4_variables_artist: crwdns25652:0crwdne25652:0
+        C4_variables_playlab: crwdns25653:0crwdne25653:0
+        C4_for_loops: crwdns24821:0crwdne24821:0
+        C4_math_artist: crwdns25654:0crwdne25654:0
+        C4_function_edit: crwdns25655:0crwdne25655:0
+        C4_function_create: crwdns25656:0crwdne25656:0
+        C4_function_parameters: crwdns26808:0crwdne26808:0
+        C4_conditionals: crwdns26136:0crwdne26136:0
+        C4_unplugged_algorithms: crwdns25657:0crwdne25657:0
+        C4_unplugged_madlibs: crwdns25658:0crwdne25658:0
+        C4_unplugged_variables: crwdns25659:0crwdne25659:0
+        C4_unplugged_forloops: crwdns25660:0crwdne25660:0
+        C4_unplugged_parameters: crwdns25661:0crwdne25661:0
+        C4_unplugged_binary: crwdns25662:0crwdne25662:0
+        frozen_intro: crwdns24768:0crwdne24768:0
+        frozen_loops: crwdns24769:0crwdne24769:0
+        frozen_functions: crwdns24770:0crwdne24770:0
+        playlab_intro: crwdns25663:0crwdne25663:0
+        playlab_events: crwdns25664:0crwdne25664:0
+        playlab_repeat_forever: crwdns25665:0crwdne25665:0
+        tutorial_puzzle_challenge: crwdns35063:0crwdne35063:0
+        infinity_playlab_intro: crwdns35943:0crwdne35943:0
+        infinity_playlab_events: crwdns35944:0crwdne35944:0
+        infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_concept_rgb: crwdns36227:0crwdne36227:0
+        csp_pixelation_color_1: crwdns36228:0crwdne36228:0
+        csp_pixelation_color_2: crwdns36229:0crwdne36229:0
+        csp_pixelation_color_3: crwdns36230:0crwdne36230:0
+        csp_pixelation_bw: crwdns36231:0crwdne36231:0
+        csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
+        csp_textcompression: crwdns36303:0crwdne36303:0
+        csp_internetsimulator_1: crwdns41507:0crwdne41507:0
+        csp_internetsimulator_2: crwdns41508:0crwdne41508:0
+        csp_internetsimulator_3: crwdns41899:0crwdne41899:0
+        alg_1_intro: crwdns36304:0crwdne36304:0
+        alg_2_eval_block: crwdns36305:0crwdne36305:0
+        alg_3_pemdas: crwdns36306:0crwdne36306:0
+        alg_4_data_types: crwdns36307:0crwdne36307:0
+        alg_5_contracts: crwdns36308:0crwdne36308:0
+        alg_6_variables: crwdns36309:0crwdne36309:0
+        alg_7_function: crwdns36310:0crwdne36310:0
+        alg_8_design_recipe: crwdns36311:0crwdne36311:0
+        alg_9_booleans: crwdns36312:0crwdne36312:0
+        alg_10_conditionals: crwdns36313:0crwdne36313:0
+        alg_11_coordinate_plane: crwdns36314:0crwdne36314:0
+        alg_12_biggame_variables: crwdns36315:0crwdne36315:0
+        alg_13_biggame_animation: crwdns36316:0crwdne36316:0
+        alg_14_biggame_booleans: crwdns36317:0crwdne36317:0
+        alg_15_biggame_update_player: crwdns36318:0crwdne36318:0
+        alg_16_biggame_collision_detection: crwdns36319:0crwdne36319:0
+        alg_17_sambat_compound_booleans: crwdns36320:0crwdne36320:0
     callout:
       text:
-        # Keyed by #{callout.localization_key}
-        drag_blocks: 'Drag a "move" block and snap it below the other block'
-        run: 'Hit "Run" to try your program'
-        watch_again: 'Click here to watch the video again'
-        gray_block_explanation: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?"
-        show_code_explanation: "Click here to see the code for the program you're making"
-        instructions_repeat_explanation: 'The instructions for each puzzle are repeated here'
-        category_explanation: "You have all the same blocks but they've now been arranged in categories"
-        set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
-        studio_say_text: "Type what you want your actor to say within these quotes"
-        jigsaw_click: 'Click this block!'
-        move_elsa_forward: 'Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward'
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        repeat_blocks_1: '(1) Use this block and put it around the grey blocks in the workspace'
-        repeat_blocks_2: '(2) Move the "Repeat" block here, and place the gray blocks inside'
-        snowflake_dropdown: 'Use this drop-down to create different snowflakes!'
-        degrees_per_side: 'Divide 360 by the number of sides to get the size of each angle in degrees.'
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: 'Which equation makes each side shorter for shapes with more sides?'
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: 'Click here to edit your function.'
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: 'Use this button to edit the function and add the loop.'
-        edit_get_nectar: 'Use this button to edit the function and change the direction the Bee will turn to get the nectar.'
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: 'Use the repeat block to create this shape.'
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: "Use the \"create a circle\" block and change the size."
-        frozen_snowflake_branch: "Use the \"create a snowflake branch\" block"
-        frozen_create_square: "Attach more blocks here to create a square"
-        playlab_drag_say: "Drag the \"say\" block here and type \"hello\""
-        playlab_use_twice: "Use this block twice and remember to change the actor number"
-        playlab_move_girl: "Use the \"move right\" block to move Tennis Girl"
-        playlab_play_sound: "Add \"play sound\" block here"
-        playlab_arrow_keys: "Remember to use these to move the witch after clicking on Run"
-        playlab_add_move: "Add \"move\" blocks inside this repeat block"
-        playlab_add_score: "Add score blocks here"
-        playlab_add_blocks: "Add your blocks here"
-        set_variable: "Drag a number block here to set your variable"
-        place_variable: "Drag your variable inside this block"
-        bee_for_loop: "Drag the largest number of nectar you want the bee to collect here"
-        place_counter_variable: "Drag your counter variable inside this block"
-        function_editor_draw_square: "This is your function definition. These blocks run everytime you use the \"draw a square\" block"
-        change_here: "Make your change here"
-        write_draw_square_function: "Drag blocks from the toolbox into here that draw a square"
-        write_draw_triangle_function: "Drag blocks from the toolbox into here that draw a triangle"
-        edit_add_parameter: "Click edit to add a parameter in your function"
-        add_and_drag_parameter: "Write in the name of your parameter here, click add, and then drag it into your function definition"
-        fill_in_actor: "Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)"
-        repeat: "Put blocks inside the loop to repeat commands"
-        if_bee_nectar: "Use the \"if\" block to decide if the bee should get nectar"
-        if_else_bee: "Use the \"if/else\" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower"
-        repeat_full_circle: "Enter in the number of times the zombie has to move to make a full circle"
-        place_length_variable: "Drag the length variable here to replace the question marks"
-        arrows_move_actor: "Use the arrows to move the actor"
-        right_arrow_fireball: "Use the right arrow to shoot fireballs"
-        name_function: "Write the name of your function here"
+        drag_blocks: crwdns4931:0crwdne4931:0
+        run: crwdns4932:0crwdne4932:0
+        watch_again: crwdns4933:0crwdne4933:0
+        gray_block_explanation: crwdns5405:0crwdne5405:0
+        show_code_explanation: crwdns4935:0crwdne4935:0
+        instructions_repeat_explanation: crwdns4936:0crwdne4936:0
+        category_explanation: crwdns4937:0crwdne4937:0
+        set_sprite_image: crwdns5118:0crwdne5118:0
+        studio_say_text: crwdns5119:0crwdne5119:0
+        jigsaw_click: crwdns5301:0crwdne5301:0
+        move_elsa_forward: crwdns23294:0crwdne23294:0
+        turn_elsa: crwdns23295:0crwdne23295:0
+        replace_questions: crwdns23296:0crwdne23296:0
+        replace_questions_degree: crwdns23297:0crwdne23297:0
+        repeat_blocks: crwdns23298:0crwdne23298:0
+        repeat_blocks_1: crwdns25189:0crwdne25189:0
+        repeat_blocks_2: crwdns25190:0crwdne25190:0
+        snowflake_dropdown: crwdns23299:0crwdne23299:0
+        degrees_per_side: crwdns23506:0crwdne23506:0
+        set_sides: crwdns23507:0crwdne23507:0
+        set_length: crwdns23508:0crwdne23508:0
+        which_equation: crwdns25191:0crwdne25191:0
+        get_nectar: crwdns23510:0crwdne23510:0
+        actions_category: crwdns23511:0crwdne23511:0
+        draw_square_hint: crwdns23512:0crwdne23512:0
+        edit_function: crwdns25192:0crwdne25192:0
+        create_function: crwdns23514:0crwdne23514:0
+        house_hint: crwdns23515:0crwdne23515:0
+        edit_draw_square: crwdns23516:0crwdne23516:0
+        edit_get_nectar: crwdns23517:0crwdne23517:0
+        logic_category: crwdns23518:0crwdne23518:0
+        length_parameter: crwdns23519:0crwdne23519:0
+        frozen_diamond_repeat: crwdns24771:0crwdne24771:0
+        frozen_circle_function_in_circle_turn: crwdns24772:0crwdne24772:0
+        frozen_circle_function_with_parameter_circle: crwdns24773:0crwdne24773:0
+        frozen_snowflake_branch: crwdns24774:0crwdne24774:0
+        frozen_create_square: crwdns24785:0crwdne24785:0
+        playlab_drag_say: crwdns24823:0crwdne24823:0
+        playlab_use_twice: crwdns24824:0crwdne24824:0
+        playlab_move_girl: crwdns24825:0crwdne24825:0
+        playlab_play_sound: crwdns24826:0crwdne24826:0
+        playlab_arrow_keys: crwdns24827:0crwdne24827:0
+        playlab_add_move: crwdns24828:0crwdne24828:0
+        playlab_add_score: crwdns24829:0crwdne24829:0
+        playlab_add_blocks: crwdns24830:0crwdne24830:0
+        set_variable: crwdns25193:0crwdne25193:0
+        place_variable: crwdns25194:0crwdne25194:0
+        bee_for_loop: crwdns25195:0crwdne25195:0
+        place_counter_variable: crwdns25196:0crwdne25196:0
+        function_editor_draw_square: crwdns25197:0crwdne25197:0
+        change_here: crwdns25198:0crwdne25198:0
+        write_draw_square_function: crwdns25199:0crwdne25199:0
+        write_draw_triangle_function: crwdns25666:0crwdne25666:0
+        edit_add_parameter: crwdns25667:0crwdne25667:0
+        add_and_drag_parameter: crwdns25668:0crwdne25668:0
+        fill_in_actor: crwdns25669:0crwdne25669:0
+        repeat: crwdns25670:0crwdne25670:0
+        if_bee_nectar: crwdns25671:0crwdne25671:0
+        if_else_bee: crwdns25672:0crwdne25672:0
+        repeat_full_circle: crwdns25673:0crwdne25673:0
+        place_length_variable: crwdns25674:0crwdne25674:0
+        arrows_move_actor: crwdns25675:0crwdne25675:0
+        right_arrow_fireball: crwdns25676:0crwdne25676:0
+        name_function: crwdns25677:0crwdne25677:0
+        Infinity_move_right_runbutton: crwdns36218:0crwdne36218:0
+        Infinity_move_directions_callout: crwdns36219:0crwdne36219:0
+        Infinity_move_directions_callout_arrow: crwdns36321:0crwdne36321:0
+        Infinity_move_collide_callout: crwdns36220:0crwdne36220:0
+        Infinity_repeat_callout: crwdns36221:0crwdne36221:0

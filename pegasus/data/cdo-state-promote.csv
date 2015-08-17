@@ -1,52 +1,53 @@
 state_code_s!,cs_jobs_i,growth_vs_average_f,cs_graduates_i,count_schools_teach_cs_i,job_student_gap_i,cs_counts_t,cs_teacher_cert_s,cs_standards_s,text_t,petition_url_t,action_url_s,action_text_s
-AK,919,3.2,17,5,-902,No,No,No,,,,
-AL,4145,3.6,592,26,-3553,Yes,No,No,,,,
-AR,2250,3.4,326,19,-1924,No,No,No,,,http://www.change.org/petitions/arkansas-state-board-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
-AZ,10523,3.4,678,33,-9845,Yes,Yes,No,,,,
-CA,81083,4.1,5127,311,-75956,Yes,No,No,,,,
-CO,15457,2.9,914,69,-14543,No,No,No,,,https://www.change.org/petitions/colorado-state-board-of-education-and-colorado-school-districts-make-computer-science-courses-count-toward-graduation-credits,Take Action
-CT,9736,4.9,486,65,-9250,No,No,No,,,https://www.change.org/petitions/connecticut-state-department-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
-DC,10891,4.8,191,12,-10700,Yes,No,No,,,,
-DE,3484,5.8,486,11,-2998,No,No,No,,,,
-FL,21924,3.6,2511,125,-19413,Yes,No,No,,,,
-GA,21388,4.9,1836,133,-19552,Yes,Yes,Yes,,,https://www.change.org/petitions/georgia-higher-education-alliance-make-computer-science-courses-count-toward-graduation-credits,Take Action
-HI,1190,3.4,137,8,-1053,No,No,No,,,,
-IA,4922,3.3,600,33,-4322,No,No,No,,,,
-ID,1652,3.1,309,7,-1343,Yes,No,No,,,,
-IL,26967,4.6,3119,132,-23848,Yes,Yes,No,,,,
-IN,6160,4,1605,54,-4555,Yes,No,No,,,https://www.change.org/petitions/indiana-state-board-of-education-make-computer-science-count,Take Action
-KS,4084,3.9,425,43,-3659,No,No,No,,,https://www.change.org/petitions/kansas-board-of-education-allow-computer-science-to-count-towards-high-school-math-or-science-credits,Take Action
-KY,3581,4.4,444,34,-3137,Yes,Yes,No,,,,
-LA,2849,4.6,458,26,-2391,No,Yes,No,,,,
-MA,20882,3.2,2444,120,-18438,No,No,No,,,http://www.change.org/petitions/department-of-higher-education-in-massachusetts-let-computer-science-count-toward-a-math-entrance-requirement-for-all-massachusetts-public-higher-education-institutions,Take Action
-MD,19297,4.2,3929,122,-15368,Yes,Yes,No,,,,
-ME,1984,4,89,24,-1895,No,No,No,,,https://www.change.org/petitions/maine-state-board-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
-MI,15104,3.6,2098,78,-13006,Yes,Yes,No,,,,
-MN,13859,3.4,939,39,-12920,No,No,No,,,https://www.change.org/petitions/minnesota-department-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science-in-minnesota,Take Action
-MO,10221,4.1,1170,47,-9051,Yes,No,No,,,,
-MS,1179,4.5,209,14,-970,No,Yes,No,,,http://www.change.org/petitions/mississippi-board-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science-3,Take Action
-MT,963,2.5,97,10,-866,No,Yes,No,,,,
-NC,18694,5.1,1768,71,-16926,Yes,No,No,,,,
-ND,1074,3.2,151,5,-923,No,Yes,No,,,,
-NE,3498,2.9,557,36,-2941,No,Yes,No,,,https://www.change.org/petitions/nebraska-make-computer-science-courses-count-toward-graduation-credits,Take Action
-NH,2433,2.9,331,24,-2102,No,No,No,,,https://www.change.org/petitions/new-hampshire-state-board-of-education-please-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science,Take Action
-NJ,24011,4.9,1535,165,-22476,No,No,No,,,https://www.change.org/petitions/new-jersey-state-board-of-education-please-help-make-computer-science-count-towards-high-school-graduation-requirements-in-math-or-science,Take Action
-NM,1866,3.3,200,40,-1666,No,No,No,,,https://www.change.org/petitions/new-mexico-public-education-commission-make-computer-science-courses-count-toward-graduation-creditsplease-help-us-make-computer-science-satisfy-existing-high-school-graduation-requirements-for-math-or-science-3,Take Action
-NV,3199,4.8,172,17,-3027,No,Yes,No,,,,
-NY,36952,4.8,5680,186,-31272,Yes,Yes,No,,,,
-OH,16888,3.6,1367,139,-15521,Yes,Yes,No,,,,
-OK,3418,3.6,512,49,-2906,Yes,No,No,,,,
-OR,8288,4.1,444,26,-7844,Yes,No,No,,,https://www.change.org/petitions/oregon-university-system-state-board-of-higher-education-help-us-make-rigorous-computer-science-count-as-a-math-or-science-entrance-requirement-at-oregon-colleges-and-universities,Take Action
-PA,20633,4,4155,191,-16478,No,No,No,,,https://www.change.org/petitions/pa-state-system-of-higher-education-make-computer-science-courses-count-toward-graduation-credits,Take Action
-RI,2216,3.9,351,13,-1865,Yes,No,No,,,,
-SC,4222,3.8,487,51,-3735,No,No,No,,,,
-SD,1045,3.1,212,19,-833,No,No,No,,,http://www.change.org/petitions/south-dakota-board-of-education-make-computer-science-courses-count-toward-graduation-credits,Take Action
-TN,7163,4.7,666,30,-6497,Yes,No,No,,,https://www.change.org/petitions/tennessee-higher-education-commission-please-help-us-make-computer-science-count-as-a-math-or-science-entrance-requirement-at-tennessee-colleges-and-universities,Take Action
-TX,43476,3.8,3615,376,-39861,Yes,No,Yes,Texas is the only state to require high schools to offer computer science to all students.,,,
-UT,5040,2.8,1825,18,-3215,Yes,Yes,No,,,http://www.change.org/petitions/utah-state-board-of-regents-please-make-computer-science-count-as-a-math-or-science-requirement-for-utah-s-regents-scholarship,Take Action
-VA,32023,3.9,1958,102,-30065,Yes,Yes,No,,,,
-VT,780,2.7,220,10,-560,Yes,Yes,No,,,,
-WA,22023,3.3,1199,62,-20824,Yes,No,No,,,http://www.change.org/petitions/washington-state-board-of-education-offer-computer-science-courses-in-all-high-schools-in-washington-state,Take Action
-WI,10096,3.8,887,67,-9209,Yes,Yes,No,,,,
-WV,1034,3.6,206,10,-828,No,No,No,,,,
-WY,504,4.4,30,3,-474,No,Yes,No,,,,
+AK,762,2.8,17,5,-745,No,No,No,,,,
+AL,4161,3.2,592,26,-3569,Yes,No,No,,,,
+AR,1781,2.8,326,19,-1455,No,No,No,,,http://congressweb.com/Code/14,Add your support
+AZ,10801,3.1,678,33,-10123,Yes,Yes,No,,,,
+CA,79212,3.8,5127,311,-74085,Yes,No,No,,,,
+CO,15301,2.9,914,69,-14387,No,No,No,,,,
+CT,9730,4.3,486,65,-9244,No,No,No,,,,
+DC,11781,4.4,191,12,-11590,Yes,No,No,,,,
+DE,3051,4.5,486,11,-2565,No,No,No,,,,
+FL,22353,3.6,2511,125,-19842,Yes,No,No,,,,
+GA,22370,4.5,1836,133,-20534,Yes,Yes,Yes,,,,
+HI,1179,4.3,137,8,-1042,No,No,No,,,,
+IA,4357,3,600,33,-3757,No,No,No,,,,
+ID,1445,2.2,309,7,-1136,Yes,No,No,,,,
+IL,24799,4.2,3119,132,-21680,Yes,Yes,No,,,,
+IN,5707,3.6,1605,54,-4102,Yes,No,No,,,,Sign petition 
+KS,3691,3.2,425,43,-3266,No,No,No,,,,
+KY,3599,3.8,444,34,-3155,Yes,Yes,No,,,,
+LA,2560,4.3,458,26,-2102,No,Yes,No,,,,
+MA,21975,3.2,2444,120,-19531,No,No,No,,,,
+MD,19597,4.1,3929,122,-15668,Yes,Yes,No,,,,
+ME,1465,3.2,89,24,-1376,No,No,No,,,,
+MI,15467,3.6,2098,78,-13369,Yes,Yes,No,,,,
+MN,14752,3.3,939,39,-13813,Yes,No,No,,,,Add your support
+MO,10054,3.8,1170,47,-8884,Yes,No,No,,,,
+MS,1228,4.3,209,14,-1019,No,Yes,No,,,,
+MT,842,2,97,10,-745,No,Yes,No,,,,
+NC,18527,4.7,1768,71,-16759,Yes,No,No,,,,
+ND,952,3.3,151,5,-801,No,Yes,No,,,,
+NE,3420,2.7,557,36,-2863,No,Yes,No,,,,
+NH,2172,2.9,331,24,-1841,No,No,No,,,,
+NJ,23663,4.6,1535,165,-22128,No,No,No,,,http://congressweb.com/Code/10,Add your support
+NM,1815,2.8,200,40,-1615,No,No,No,,,,
+NV,2971,4.7,172,17,-2799,No,Yes,No,,,,
+NY,38890,4.7,5680,186,-33210,Yes,Yes,No,,,,
+OH,18394,3.8,1367,139,-17027,Yes,Yes,No,,,,
+OK,3086,3.8,512,49,-2574,Yes,No,No,,,,
+OR,7640,3.4,444,26,-7196,Yes,No,No,,,,
+PA,19315,3.6,4155,191,-15160,No,No,No,,,,
+RI,2157,3.4,351,13,-1806,Yes,No,No,,,,
+SC,4018,3.2,487,51,-3531,No,No,No,,,,
+SD,881,2.6,212,19,-669,No,No,No,,,,
+TN,7701,4.8,666,30,-7035,Yes,No,No,,,,
+TX,43179,3.8,3615,376,-39564,Yes,Yes,Yes,,,,Add your support
+UT,5595,2.9,1825,18,-3770,Yes,Yes,No,,,,
+VA,33069,4,1958,102,-31111,Yes,Yes,No,,,,
+VT,677,2.7,220,10,-457,Yes,Yes,No,,,,
+WA,19794,2.8,1199,62,-18595,Yes,No,No,,,,Add your support
+WI,9600,3.4,887,67,-8713,Yes,Yes,No,,,,
+WV,1172,3.6,206,10,-966,No,No,No,,,,
+WY,447,3.4,30,3,-417,No,Yes,No,,,,
+Sum_states,583155,,59764,,,,,,,,,

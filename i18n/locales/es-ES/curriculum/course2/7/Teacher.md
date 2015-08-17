@@ -6,17 +6,17 @@ title: "Artist: Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>7, :title=> 'Artist: Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Returning to the artist, students learn to draw more complex images by looping simple sequences of instructions.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Returning to the artist, students learn to draw more complex images by looping s
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ Returning to the artist, students learn to draw more complex images by looping s
   * Decompose a shape into its smallest repeatable sequence
   * Create a program that draws complex shapes by repeating simple sequences
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -54,7 +54,7 @@ Returning to the artist, students learn to draw more complex images by looping s
       * How would you explain to someone how to draw that shape?
       * How could you draw this using a loop?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -64,7 +64,7 @@ Returning to the artist, students learn to draw more complex images by looping s
 
 In the Artist levels students will no longer be constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -83,7 +83,7 @@ In the Artist levels students will no longer be constrained to 90 degree angles.
   * Trade instruction sheets and attempt to recreate the shape using only the provided instructions. 
       * Can you predict what shape will be drawn just by reading the instructions?
 
-[/together]
+[/juntos]
 
 [standards]
 

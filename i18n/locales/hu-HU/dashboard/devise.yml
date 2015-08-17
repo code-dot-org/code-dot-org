@@ -3,9 +3,9 @@ hu:
     confirmations:
       confirmed: Az e-mail cím megerősítése sikeresen megtörtént.
       send_instructions: Néhány percen belül kapsz egy e-mailt arról, hogy miként erősítsd meg a fiókod.
-      send_paranoid_instructions: Ha az email címe létezik az a adatbázisunkban, akkor pár perc múlva kapni fog egy emailt a fiókja megerősítési instrukcióival.
+      send_paranoid_instructions: Ha az e-mail címe létezik az adatbázisunkban, akkor pár perc múlva kapni fog egy e-mailt a fiókja megerősítéséhez szükséges információkkal.
     failure:
-      already_authenticated: Ön már bejelentkezett.
+      already_authenticated: Már bejelentkeztél.
       inactive: Fiókja még nincs aktiválva.
       invalid: Érvénytelen e-mail cím vagy jelszó.
       invalid_token: Érvénytelen azonosító.
@@ -28,8 +28,8 @@ hu:
       no_token: Ezt az oldalt csak egy jelszó megváltoztatása e-mailen keresztül érheted el. Ha egy jelszó megváltoztatásai e-mail-en keresztül jutottál ide, kérünk ellenőrizd le, hogy a kapott URL-címet teljes egészében megadtad-e.
       send_instructions: Néhány percen belül kapni fogsz egy e-mailt arról, hogy miként tudod beállítani jelszavad.
       send_paranoid_instructions: Ha az e-mail címed létezik adatbázisunkban, néhány percen belül kapni fogsz egy jelszó-beállítási hivatkozást a e-mail címedre.
-      updated: A jelszót sikeresen megváltoztatta. Most bejelentkezett.
-      updated_not_active: A jelszót sikeresen megváltoztatta.
+      updated: A jelszót sikeresen megváltoztattad. Most be vagy jelentkezve.
+      updated_not_active: A jelszót sikeresen megváltoztattad.
     registrations:
       destroyed: Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan újra találkozunk.
       signed_up: Üdvözlet! Sikeresen feliratkoztál.
@@ -55,3 +55,22 @@ hu:
       not_saved:
         one: '1 hiba tilos a  %{resource}  mentése:'
         other: '%{count} hiba tiltja a %{resource} mentését :'
+    invitations:
+      send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: A jelszavadat sikeresen beállítottad. Most már be vagy jelentkezve.
+      no_invitations_remaining: Nincs fel nem használt meghívód
+      invitation_removed: A meghívód törölve lett.
+      new:
+        header: Meghívó küldése
+        submit_button: Meghívó küldése
+      edit:
+        header: Állítsd be a jelszavad
+        submit_button: Jelszavam beállítása
+    mailer:
+      invitation_instructions:
+        subject: Meghívási instrukciók
+        hello: 'Üdv %{email}'
+        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
+        accept: Meghívó elfogadása
+        ignore: 'Ha nem akarod elfogadni a meghívást, kérlek hagyd figyelmen kívül ezt az emailt. <br /> A fiókod addig nem készül el, amíg nem kattintasz a linkre és nem állítod be a jelszavadat.'

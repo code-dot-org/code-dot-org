@@ -1,165 +1,166 @@
 * * *
 
-title: Happy Maps view: page_curriculum theme: none
+título: Mapas Alegres vista: página del currículum tema: ninguno
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Happy Maps', :lesson=>1, :unplugged=>true, :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Mapas Alegres', :lección=>1, :desenchufado=>verdadero, :no responsable=>'El tiempo básico de la lección incluye sólo la actividad. Sugerencias de introducción y cierre pueden ser usadas para profundizar más cuando el tiempo lo permita.', :tiempo=>20)%>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
-At the root of all computer science is something called an algorithm. The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result. To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms.
+En la raíz de la ciencia de la computación está algo llamado algoritmo. La palabra "algoritmo" puede sonar como algo complicado, pero realmente es sólo una lista de instrucciones que alguien puede seguir para lograr un resultado. Para proporcionar una base sólida para el resto de la educación en ciencias de la computación de tus estudiantes, vamos a centrarnos en construir una relación segura con los algoritmos.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
-### **Getting Started** - 10 minutes
+### **Empezando** - 10 minutes
 
-1) [Vocabulary](#Vocab)   
-2) [Step-by-Step](#GetStarted)
+1) [Vocabulario](#Vocab)   
+2) [Paso a paso](#GetStarted)
 
-### **Activity: Happy Maps** - 20 minutes
+### **Actividad: Mapas alegres** - 20 minutes
 
-3) [Happy Maps: Single-Step Adventure](#Activity1)
+3) [Mapas Alegres: Aventura de un solo paso](#Activity1)
 
 <!-- 
 4) [Double-Step Adventure](#Activity2)
 -->
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
-4) [Flash Chat](#WrapUp) - What did we learn?  
-5) [Vocab Shmocab](#Shmocab)
+4) [Flash Chat](#WrapUp) - ¿Qué aprendimos?u  
+5) [Vocabulario Shmocab](#Shmocab)
 
-### **Assessment** - 10 minutes
+### **Evaluación** - 10 minutos
 
-6) [Move the Flurbs Assessment](#Assessment)
+6) [Evaluación Mueve los Flurbs ](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
-### Students will:
+### Los estudiantes podrán:
 
-  * List steps to move character around a map
-  * Arrange directions to reach predetermined goal
-  * Predict where character will land, given a list of steps
+  * Hacer una lista de los pasos para mover al personaje alrededor del mapa
+  * Acomodar las instrucciones para alcanzar el objetivo predeterminado
+  * Predecir dónde aterrizará el personaje, dada una lista de pasos
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
-## Materials, Resources and Prep
+## Materiales, recursos y preparación
 
-### For the Student
+### Para el Estudiante
 
-  * Maps and arrows from [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf)
-  * Game Pieces: Flurbs, Arrows, and Things 
-  * Assessment Worksheet: [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
-  * Scissors
-  * Glue
+  * Mapas y flechas desde [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf)
+  * Piezas del Juego: Flurbs, Flechas y Cosas 
+  * Hoja de Evaluaciónt: [Evaluación Mueve los Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
+  * Tijeras
+  * Pegamento
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/En6Bshuqljg?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * Print one [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf) for each group
   * Print one [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
-## Getting Started (10 min)
+## Empezar (10 min)
 
-### <a name="Vocab"></a> 1) Vocabulary
+### <a name="Vocab"></a> 1) Vocabulario
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
-**Algorithm** - Say it with me: Al-go-ri-thm   
-A list of steps that you can follow to finish a task.
+**Algoritmo** - Dilo conmigo: Al-go-rit-mo   
+Una lista de pasos que puedes seguir para terminar una tarea.
 
-### <a name="GetStarted"></a> 2) Step-by-Step
+### <a name="GetStarted"></a> 2) Paso A Paso
 
-  * Ask your students for directions to the chalkboard. 
-      * If they start shouting simultaneously, explain that you can only hear one instruction at a time. Call on students individually if that helps. 
-  * When you reach the board, ask for instructions to draw a smiley face. 
-      * Again, request one step at a time.
-  * Explain that many tasks can be described using a specific list of instructions. That list is called an algorithm. 
-  * Challenge your students to work together in small groups to come up with algorithms for their single-step and double-step mazes.
+  * Pide a tus alumnos instrucciones para llegar al pizarrón, 
+      * Si empiezan a gritar al mismo tiempo, explica que sólo puedes oír una instrucción a la vez. Pide que hablen a algunos individualmente si eso ayuda. 
+  * Cuando llegues al pizarrón, pide instrucciones para dibujar una carita feliz. 
+      * De nuevo, pide una instrucción a la vez.
+  * Explica que muchas tareas pueden ser descritas usando una lista específica de instrucciones. Esta lista se llama algoritmo. 
+  * Desafía a tus estudiantes a trabajar juntos en grupos pequeños para idear algoritmos para sus laberintos de uno y dos pasos.
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Students can work in pairs to create the adventures, then work in pairs to solve the adventures of others. If this feels too chaotic you can work together as a class and create the adventure on a document camera, then work together to solve it.
+Los estudiantes pueden trabajar en parejas para crear las aventuras, luego trabajar en parejas para resolver las aventuras de los demás. Si esto se siente muy caótico, pueden trabajar todos juntos como grupo y crear la aventura en una cámara de documentos, y luego trabajar juntos para resolverla.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
-## Activities: (20 min)
+## Actividades: (20 min)
 
-### <a name="Activity1"></a> 3) [Happy Maps: Single-Step Adventure](Activity1-HappyMaps.pdf)
+### <a name="Activity1"></a> 3) [Mapas alegres: una aventura de un único paso](Activity1-HappyMaps.pdf)
 
-  * This worksheet helps teach students how to think ahead in order to plan a short route from the Flurb’s start location to the final location, just one square away.
-  * Print out an activity packet for every group (ideally 2 to 4 students) and cut the Maps apart. Leave the arrow symbols for the students to cut apart.
-  * Explain the rules to the class, making sure to emphasise the new word "algorithm."
+  * Esta hoja de trabajo ayuda a enseñar a los estudiantes cómo anticiparse para planear una pequeña ruta desde la posición inicial del Flurb hasta la posición final, justo un cuadro adelante.
+  * Imprime un paquete de actividades para cada grupo (idealmente de 2 a 4 estudiantes) y corta los Mapas por separado. Deja las flechas para que los estudiantes las corten por separado.
+  * Explica las reglas a la clase, asegurándote de enfatizar la nueva palabra "algoritmo."
 
-> Flurbs are happy, fuzzy little things.
+> Los Flurbs son cositas felices y confusas.
 > 
-> Flurbs love to eat fruit. Fruit is hard to find in Flurb Town. Use the maps to help the Flurb find some fruit.
+> A los Flurbs les encanta comer fruta. La fruta es difícil de encontrarse en Flurb Town. Usa los mapas para ayudar al Flurb a encontrar algo de fruta.
 > 
-> Work with your group to decide which direction the Flurb needs to step to get to the fruit.
+> Trabaja con tu grupo para decidir en qué dirección necesita caminar el Flurb para llegar a la fruta.
 
-**Directions for Class:**
+**Indicaciones para la clase:**
 
-> 1) Cut out an arrow for each member of your team.
+> 1) Corta una flecha para cada miembro de tu equipo.
 
-[centerIt]
+[céntrala]
 
 ![](arrows.png)
 
-[/centerIt]
+[/céntrala]
 
   
   
 
 
-> 2) Start with Map 1 to help the Flurb look for fruit.
+> 2) Empieza con el Mapa 1 para ayudar al Flurb a buscar la fruta.
 
-[centerIt]
+[céntrala]
 
 ![](flurbStep.png)
 
-[/centerIt]
+[/céntrala]
 
   
   
 
 
-> 3) Have each member of your group put an arrow next to the map to vote for which way the Flurb should step.
+> 3) Haz que cada miembro de tu grupo ponga una flecha al lado del mapa para votar por cuál camino debe caminar el Flurb.
 > 
-> 4) If not all arrows are pointing the same way, talk to each other and decide as a group which way the arrow should point.
+> 4) Si no todas las flechas apuntan en la misma dirección, hablen unos con otros para decidir hacia dónde debe apuntar la flecha.
 > 
-> 5) When your whole group agrees on a direction, your team can share your answer with the teacher.
+> 5) Cuando todo el grupo esté de acuerdo acerca de una dirección, tu equipo puede compartir su respuesta con el maestro.
 > 
-> 6) If your answer is correct, move on to the next map.
+> 6) Si su respuesta es correcta, avancen al mapa que sigue.
 
   
   
@@ -170,57 +171,57 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 - The Double-Step sheet encourages students to take their knowledge just a little bit further as they find algorithms that will lead their Flurbs to their goal which is two or more steps away. 
 -->
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
-### <a name="WrapUp"></a> 4) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 4) Flash Chat: ¿Qué aprendimos?
 
-  * Did you feel like you were actually telling the Flurb what to do?
-  * What would it be like to control a robot that way?
-  * What would you create if it were that easy to tell a computer what to do?
+  * ¿Sientes que en realidad le estabas diciendo al Flurb qué hacer?
+  * ¿Cómo se sentirá controla a un robot de esa manera?
+  * ¿Qué inventarías tú si fuera así de fácil decirle a una computadora qué hacer?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Usa el conocimiento de tu clase para decidir si quieres discutir esto com una clase, en grupos o en parejas.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 5) Vocab Shmocab
 
-  * Which one of these definitions did we learn a word for today?
+  * ¿Para cuál de estas definiciones aprendimos una palabra para hoy?
 
-> "Breaking something into exactly two pieces"   
-> "A list of steps that you can follow to finish a task"   
-> "The plastic coating on the end of a shoelace"  
+> "separar algo en exactamente dos partes"   
+> "Una lista de pasos que puedes seguir para terminar una tarea de"   
+> "El recubrimiento de plástico en el extremo de una agujeta"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ¿... y cual es la palabra que hemos aprendido?
 
-[/together]
+[/juntos]
 
 [together]
 
-## Assessment (10 min)
+## Evaluación (10 min)
 
 ### <a name="Assessment"></a>6) [Move the Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
 
-  * Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained. 
+  * Repartir la hoja titulada "Mover el Flurbs" y permitir a los estudiantes completar la actividad independientemente después de que las instrucciones han sido bien explicadas. 
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
 
 [together]
 
-## Extended Learning
+## Aprendizaje extendido
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Usa estas actividades para mejorar el aprendizaje del estudiante. Pueden ser utilizadas como actividades fuera de clase o cualquier otro tipo de refuerzo.
 
 ### Create Your Own
 
@@ -230,7 +231,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Cycle quickly through single-step puzzles on your projector. Have the students hold up an arrow card or simply point in the direction that they think the Flurb should move. 
 
-[/together]
+[/juntos]
 
 [standards]
 

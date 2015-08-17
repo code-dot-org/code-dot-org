@@ -3,7 +3,7 @@ class Section < ActiveRecord::Base
 
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers
-  
+
   has_many :students, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
@@ -31,7 +31,7 @@ class Section < ActiveRecord::Base
        student_user_attributes: student
       }
     end
-    
+
     self.followers_attributes = follower_params
   end
 
@@ -42,9 +42,9 @@ class Section < ActiveRecord::Base
   end
 
   def random_code
-    loop do 
+    loop do
       code = random_text(6)
       return code unless Section.exists?(code: code)
-    end 
+    end
   end
 end

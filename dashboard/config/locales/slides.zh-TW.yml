@@ -33,7 +33,8 @@
         text: 每個塊是一條指令。如果您將一個"向前"塊拖動到您的工作區，然後按"運行程式"，這只鳥將在迷宮上移動一個空格。
       11:
         image: notes/hoc1_11.jpg
-        text: 要做多個操作，您可以將許多塊拖到您的工作區，並將它們連接在一起。這只鳥會從頭到尾地執行命令。
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: 如果您運行一個程式，並且想要修正它，然後再試，按"重置"按鈕。
@@ -160,17 +161,21 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 你好，我的名字是 Saloni。我使用電腦科學來協助解決在衛生和醫學的問題。讓我們認識"如果-否則"程式積木。它看起來很像"如果"程式積木，但它後面多了一部分寫著"否則"。
+        text: 你好，我是 Saloni。我使用電腦科學來幫忙解決一些衛生和醫學的問題。讓我們學習 "如果-否則" 這個程式積木。它看起來跟程式積木"如果"很像，不過它後面還多了個"否則"。
       2:
         image: notes/hoc5_2.jpg
-        text: 如果我把放著"向前"塊寫在"做"和"向左轉"塊寫在"其他"區域，這意味著僵屍將在 2 選項之間進行選擇。如果有一條向前路徑，僵屍將移動向前，和以其他方式
-          （不存在向前的路徑），僵屍會左轉。
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: 就像"如果"程式積木一樣，我們可以把"如果--否則"程式積木放在"重複"程式積木裡面，這樣的話僵屍會持續移動，而"如果--否則"程式積木會不斷檢查是否有什麼地方要轉向。
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: 現在，讓這些僵屍到屬於他們的地方 ！
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -357,8 +362,7 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: 嗨，我是 Chris Bosh。我是一個職業籃球運動員，讀大學時我也寫過程式。
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define

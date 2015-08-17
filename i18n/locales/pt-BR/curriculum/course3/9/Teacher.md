@@ -1,67 +1,68 @@
 * * *
 
-title: Songwriting view: page_curriculum theme: none
+title: Escrevendo músicas view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Songwriting', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Escrevendo músicas', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.
+Uma das estruturas mais magníficas do mundo da ciência da computação é a função. Funções (às vezes chamadas de procedimentos) são como pequenos programas que você pode usar várias vezes dentro de um programa maior. Esta aula ajudará os estudantes a compreenderem intuitivamente por que combinar pedaços de código em funções é uma prática tão útil.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 20 minutes
+### **Primeiros passos** - 20 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Sing a Song](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Cante uma canção](#GetStarted)
 
-### **Activity: Songwriting** - 20 minutes
+### **Atividade: Escrevendo música** - 20 minutos
 
-4) [Songwriting](#Activity1)
+4) [Escrevendo música](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [Songwriting Assessment](#Assessment)
+6) [Avaliação de escrevendo músicas](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Locate repeating phrases inside song lyrics
-  * Identify sections of a song to pull into a function (chorus)
-  * Describe how functions can make programs easier to write
+  * Localizar frases repetidas frases dentro das letras de música
+  * Identificar as seções de uma música para colocar em uma função (refrão)
+  * Descrever como as funções podem tornar programas mais fáceis de escrever
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * [Songwriting Worksheet](Activity9-Songwriting.pdf)
-  * Pens & Pencils
+  * [Folha de atividade Escrevendo músicas](Activity9-Songwriting.pdf)
+  * Canetas e lápis
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/TaH7myEVHz0?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print several [Songwriting Worksheets](Activity9-Songwriting.pdf) for each group
   * Print one [Songwriting Assessment](Assessment9-Songwriting.pdf) for each student. 
@@ -71,33 +72,33 @@ One of the most magnificent structures in the computer science world is the func
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -106,39 +107,39 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Function** - Say it with me: Func-shun   
-A piece of code that you can call over and over again
+**Função** - Repita comigo: Fun-ção   
+Uma parte de código que você pode chamar várias vezes facilmente
 
-### <a name="GetStarted"></a> 3) Sing a Song
+### <a name="GetStarted"></a> 3) Cante uma canção
 
-  * Let the class know that today is song day!
-  * We're going to learn a song together.
+  * Avise a classe que hoje é dia de música!
+  * Vamos aprender uma música juntos.
     
-      * Start with a simple song, either written out or projected on the screen.
-      * Point to the chorus and be sure that the class knows how it goes before you begin on the song.
-      * Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus.
+      * Comece com uma canção simples, escrita na lousa ou projetada na tela.
+      * Aponte para o refrão e tenha certeza de que a classe sabe como cantá-lo antes de começar a música.
+      * Comece animadamente, cantando com eles no início, depois veja o que acontece quando você chegar à parte do refrão.
     
     ![](chorus.png)
     
     ![](lyrics.png)
     
-      * It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit. 
-          * Stop the song once that happens, and explicitly highlight what just happened. 
-              * You defined the chorus.
-              * You called the chorus.
-              * They sang the chorus.
-      * Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung. 
-          * What are other benefits of only writing the chorus once when you sing it many times?
+      * É bastante provável que a maior parte da classe vai cantar a letra do refrão quando você apontar para essa parte. 
+          * Quando isso acontecer, pare a música e destaque claramente o que acabou de acontecer. 
+              * Você definiu o refrão.
+              * Você chamou o refrão.
+              * Eles cantaram o refrão.
+      * Pergunte aos alunos por que eles acham que você só escreveu o refrão uma vez no topo da página em vez de escrever várias vezes toda vez que tinha que ser cantado. 
+          * Quais são os outros benefícios de escrever o refrão apenas uma vez quando você canta muitas vezes?
 
-Now, imagine that this song is a computer program. Defining a title (like "chorus") for a little piece of code that you use over and over again is called creating a *function*. This is helpful to computer scientists for the some of the same reasons that it is helpful to songwriters. - It saves time not having to write all the code over and over in the program. - If you make a mistake, you only have to change it one place. - The program feels less complicated with the repeating pieces defined just once at the top.
+Agora, imagine que essa música é um programa de computador. Definir um título (como "refrão") para um pequeno pedaço de código que você usa várias vezes é o mesmo que criar uma *função*. Isto é útil para os cientistas da computação pelos mesmos motivos que é útil para os compositores. - Economiza tempo não ter que escrever o código inteiro várias vezes no programa. - Se você errar, você só tem que alterá-lo em um lugar. - O programa parece menos complicado com os trechos de repetição definidos apenas uma vez, no topo.
 
-We are going to play with songs a little more, to try to really understand how often this technique is used!
+Vamos brincar com músicas um pouco mais, para realmente entender como muitas vezes esta técnica é usada!
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-To hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.
+Para fazer o mesmo em casa, você pode procurar a letra de algumas canções populares na Internet. Mostre aos alunos que o padrão para repetir as letras é definir o refrão no topo e chamá-lo de dentro do corpo da música.
 
 [/tip]
 
@@ -146,41 +147,41 @@ To hit this point home, you can look up the lyrics for some popular songs on the
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [Songwriting](Activity9-Songwriting.pdf)
+### <a name="Activity1"></a> 4) [Escrevendo música](Activity9-Songwriting.pdf)
 
-  * A fantastic way to compare functions to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a "chorus." 
+  * Uma maneira fantástica de comparar funções a algo que vemos em nosso cotidiano é analisar músicas. Geralmente, as músicas têm certos versos que se repetem várias vezes. Chamamos esse grupo de "refrão". 
 
-**Directions:**
+**Instruções:**
 
-> 1) Divide into groups of 4, 5, or 6.
+> 1) Divida os alunos em grupos de 4, 5 ou 6.
 > 
-> 2) Give each group several copies of the Songwriting Worksheet.
+> 2) Dê várias cópias da Folha de atividade Escrevendo músicas a cada grupo.
 > 
-> 3) Play a short song for the class that contains a clear chorus that does not change from verse to verse.
+> 3) Passe uma canção curta para a classe que contenha um refrão claro e que não mude de um verso para o outro.
 > 
-> 4) Challenge the class to identify (and write down) the chorus.
+> 4) Desafie a classe a identificar (e anotar) o refrão.
 > 
-> 5) Compare results from each group.
+> 5) Compare os resultados de cada grupo.
 > 
->   * Did everyone get the same thing? 
->   * Sing your choruses together to find out!
+>   * Todo mundo conseguiu a mesma coisa? 
+>   * Cantem os refrões juntos para descobrir!
 
-Play this game over and over until the class has little trouble identifying the choruses.
+Jogue este jogo várias vezes até que a classe não tenha problemas para identificar os refrões.
 
-  * It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement. 
+  * Muitas vezes é mais fácil a classe apenas ouvir (ou assistir) a canção e, em seguida, votar qual é o refrão cantando juntos, em vez de escrever tudo. Se você escolher esse método, considere pedir à sala que escreva um refrão para a última música para ter certeza que os alunos que aprendem através da visualização tenham condições apropriadas de aprender. 
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-It's most exciting for students to do this lesson with popular music from the radio, but if you're having a hard time finding appropriate songs where the lyrics repeat exactly, here are a few timeless options:
+A aula fica ainda mais legal se os alunos usam uma música popular do rádio, mas se você está tendo dificuldades para encontrar músicas cujo refrão se repete, aqui estão algumas opções de músicas em inglês:
 
-  * [You Are My Sunshine](https://www.youtube.com/watch?v=OnqhP-ZayOU)
-  * [Boom, Boom, Ain't it Great](https://www.youtube.com/watch?v=usaa6AJFtOE)
-  * [How Much Is That Doggie in the Window](https://www.youtube.com/watch?v=iApAn0whVZE)
-  * [I Love Trash](https://www.youtube.com/watch?v=rxgWHzMvXOY)
+  * [Cinco macaquinhos (Cantiga de roda)](https://www.youtube.com/watch?v=OnqhP-ZayOU)
+  * [ O sítio do seu Lobato (A turma do seu Lobato)](https://www.youtube.com/watch?v=usaa6AJFtOE)
+  * [A velha a fiar (Cantiga de roda)](https://www.youtube.com/watch?v=iApAn0whVZE)
+  * [Se você é jovem ainda (Turma do Chaves)](https://www.youtube.com/watch?v=rxgWHzMvXOY)
 
 [/tip]
 
@@ -188,43 +189,43 @@ It's most exciting for students to do this lesson with popular music from the ra
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * Would you rather write lyrics over and over again or define a chorus?
-  * Do you think it's possible to make multiple choruses for the same song?
-  * Does it make sense to make a new chorus for every time it's needed in a song?
+  * Vocês preferem escrever letras repetidamente ou definir um refrão?
+  * Você acha que é possível fazer vários refrões para a mesma música?
+  * Faz sentido fazer um novo refrão cada vez que ele é necessário em uma música?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use seus conhecimentos sobre sua sala de aula para decidir se você quer isso como uma turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "A piece of code that you can call over and over again"   
-> "A baby horse"   
-> "Getting help from a large group of people to finish something faster"  
+> "Uma parte de código que você pode chamar várias vezes facilmente"   
+> "Um cavalinho"   
+> "Obter ajuda de um grupo grande de pessoas para terminar algo mais rapidamente"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [Songwriting Assessment](Assessment9-Songwriting.pdf)
+### <a name="Assessment"></a>7) [Avaliação de escrevendo músicas](Assessment9-Songwriting.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -233,73 +234,73 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Create Your Song
+### Crie sua própria música
 
-  * Start by creating a chorus together, then repeat it between verses of a song that you develop around it.
-  * Make a change to the chorus, and ponder how much easier it is to change in just one place.
-  * Change the chorus again, making it much longer than it was originally.
-  * Add a second chorus and alternate between them in your verses. 
+  * Comece criando um refrão juntos e, em seguida, o repita entre os versos de uma canção desenvolvida em torno dele.
+  * Faça uma alteração no refrão e reflita sobre o quanto é mais fácil fazer a alteração em um só lugar.
+  * Altere o refrão novamente, deixando-o muito mais longo do que era originalmente.
+  * Adicione um segundo refrão e alterne entre eles em seus versos. 
 
-### Songwriting a Program
+### Escrevendo um programa
 
-  * What if we acted out songs instead of singing them? All of a sudden, our chorus would be a function of repeated actions, rather than words.
-  * Use the concepts of the arrows from the [Graph Paper Programming](http://staging.code.org/curriculum/course2/1/Teacher) lesson and create a program with lots of repeating instructions.  
-      * Circle those repeating actions so that the class can see where they are.
-      * Define a function called "Chorus" above the program.
-      * Cross out everywhere the repeating actions appear in the program and write "Chorus" instead.
-  * Repeat until the class can go through this process with little direction.
+  * E se representarmos as canções em vez de cantá-las? De repente, nosso refrão se tornaria uma função de ações repetidas, em vez de palavras.
+  * Utilize os conceitos das setas da aula de [Programação em papel quadriculado](http://staging.code.org/curriculum/course2/1/Teacher) e crie um programa cheio de instruções repetidas.  
+      * Circule as ações repetidas para que a classe possa ver onde elas estão.
+      * Defina uma função chamada "Refrão" acima do programa.
+      * Risque as ações repetidas que aparecem no programa e escreva "Refrão" em cima.
+  * Repita até que a classe possa passar por este processo sem depender tanto de você.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1 a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 2.d - Contribute to project teams to produce original works or solve problems.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 2.d - Contribuir com equipes de projeto para produzir trabalhos originais ou resolver problemas.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CPP.L1:6.05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub-problems.
-  * CT.L3A-3. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
-  * CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores.
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
+  * CT.L2-14. Examinar as conexões entre elementos de matemática e ciência da computação, inclusive números binários, lógica, conjuntos e funções.
 
 ### Next-Gen Science Standards
 
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * SL.4.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 4 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * SL.5.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 5 topics and texts, building on others' ideas and expressing their own clearly.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * SL.4.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quarto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * SL.5.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do quinto ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Write a function inside the block called \"check flower make honey.\" Your function should check how much nectar the purple flower has and collect it, move forward, and then make honey.",
+    "instructions": "Write inside the function \"check flower make honey\". Your function should check if the purple flower has 3, 2, or 1 nectar and collect all of the nectar. Then, move forward and make honey.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -18,7 +18,19 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "honey_goal": "2",
     "ideal": "20",
-    "disable_param_editing": "true"
+    "disable_param_editing": "true",
+    "markdown_instructions": "Write inside the function `check flower make honey`. Your function should check if the purple flower has 3, 2, or 1 nectar and collect all of the nectar. Then, move forward and make honey.",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

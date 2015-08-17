@@ -36,7 +36,9 @@ Online lessons are in regular text and unplugged activities are in **bolded** te
 | 14 | Bee: Loops                         | Students write programs in the Bee environment that involve using a loop.                                                                                                                                                                                          |
 | 15 | **The Big Event**                  | Students are introduced to the programming concept of “events,” which are actions that a computer constantly monitors for. The teacher will press buttons on a fake remote, and students have to shout specific phases depending on which button is pressed.        |
 | 16 | Play Lab: Create a Story           | Students write event-driven programs that create games or tell stories. There are puzzles with certain goals and at the end, students are encouraged to express their creativity to create whatever they’d like.                                                   |
-| 17 | **Going Places Online**            | The Internet is a powerful, but sometimes dangerous place. Teachers introduce to students how to stay safe while navigating the Internet.                                                                                                                          |
+| 17 | **Going Places Safely**            | The Internet is a powerful, but sometimes dangerous place. Teachers introduce to students how to stay safe while navigating the Internet.                                                                                                                          |
+| 18 | Artist: Loops            | Students write programs that draw interesting and beautiful patterns using loops.                                                                                                                          |
+
 
 [/lesson-table]
 

@@ -6,17 +6,17 @@ title: Crowdsourcing view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Crowdsourcing', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In computer science, we face some big, daunting problems. Challenges like finding large prime numbers or sequencing DNA are almost impossible to do alone. Adding the power of others makes these tasks managable. This lesson will show your students how helpful teamwork can really be.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 20 minutes
 
@@ -28,14 +28,14 @@ In computer science, we face some big, daunting problems. Challenges like findin
 
 4) [Working Together](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 6) [Vocab Shmocab](#Shmocab)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -43,25 +43,29 @@ In computer science, we face some big, daunting problems. Challenges like findin
   * Rearrange a large task into several smaller tasks
   * Build a complete solution from several smaller solutions
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Playing Cards (1 Deck per group)
 
-[tip]
+### Para el Maestro
+
+  * [Lesson Video](http://youtu.be/UXCaokAHN1U?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
+
+[sugerencia]
 
 # Materials Tip
 
 Playing cards usually come in multi-packs at the dollar store, but if you're rushed you can [print some from online](http://printerprojects.com/playingcards/deck.html) onto cardstock and cut them out with a slicer.
 
-[/tip]
+[/sugerencia]
 
 ### For the Teacher
 
@@ -69,7 +73,7 @@ Playing cards usually come in multi-packs at the dollar store, but if you're rus
   * [Crowdsourcing Activity](Activity19-Crowdsourcing.pdf):Working Together
   * Jar of lots of something (Pennies, Buttons, Slips of Paper)
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -89,24 +93,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Crowdsourcing** - Say it with me: Crowd-sore-sing   
 Getting help from a large group of people to finish something faster
@@ -123,15 +127,15 @@ Getting help from a large group of people to finish something faster
   * Comment on how fast the task went. 
       * Have the class reflect on how long it might have taken or how hard it may have felt to do alone.
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Jars of buttons and pennies work nicely, but if you find yourself with little time to prepare, you can cut slips of paper and put them in a ziplock bag or even a pencil box.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -159,9 +163,9 @@ Jars of buttons and pennies work nicely, but if you find yourself with little ti
 > 
 > 7) Repeat the game over and over until you think you have found the fastest way of crowdsourcing the card sorting activity.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 It can be challenging for students to figure out how to break apart large tasks at first. Students might find it helpful to have some ideas handed to them after working for a while. One great division for sorting cards is as follows:
 
@@ -172,13 +176,13 @@ It can be challenging for students to figure out how to break apart large tasks 
   * One person manages Spades.
   * (If there's another, they can put all sorted suits back together again.)
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -186,13 +190,13 @@ It can be challenging for students to figure out how to break apart large tasks 
   * Do you think it was easier or harder to have help?
   * What other things do you have to do sometimes that would be easier with help?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -205,7 +209,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -216,7 +220,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Since crowdsourcing is not meant to be done alone, there is no individual assessment. 
   * The final assessment of this lesson is the result of the previous activity.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -249,7 +253,7 @@ Use these activities to enhance student learning. They can be used as outside of
           * The last person will put all four piles together.
   * This version may not save a lot of time, but it still divides the work and lets each individual have more free time!
 
-[/together]
+[/juntos]
 
 [standards]
 

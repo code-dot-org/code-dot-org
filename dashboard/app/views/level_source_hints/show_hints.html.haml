@@ -6,6 +6,6 @@
   %br
     = link_to 'Add Hints for Other Puzzles', frequent_unsuccessful_level_sources_path
 
-= render partial: "levels/blockly", locals: { start_blocks: @start_blocks, app: @game.app, hide_source: @hide_source, share: @share }
+= render partial: "levels/blockly"
 
 .fb-comments{:data=> {:href => request.original_url, :numposts => 10, :colorscheme => "light"} }

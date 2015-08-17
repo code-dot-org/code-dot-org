@@ -12,7 +12,7 @@ class ProfessionalDevelopmentWorkshop
     result[:location_name_s] = required stripped data[:location_name_s]
     result[:location_address_s] = required stripped data[:location_address_s]
     result[:grade_level_s] = 'K-5'
-    result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private'])
+    result[:type_s] = required enum(data[:type_s].to_s.strip, ['Public', 'Private', 'District'])
     result[:capacity_s] = required stripped data[:capacity_s]
     result[:notes_s] = stripped data[:notes_s]
     result[:section_id_s] = stripped data[:section_id_s]
@@ -24,7 +24,7 @@ class ProfessionalDevelopmentWorkshop
     if data[:stopped]
       result[:stopped_dt] = DateTime.now.to_solr
     end
-    
+
     result
   end
 
@@ -76,10 +76,10 @@ class ProfessionalDevelopmentWorkshop
           begin
             Poste2.send_message('professional-development-workshop-section-receipt',
                                 Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
-                                workshop_id:row[:id],
-                                location_name:data['location_name_s'],
-                                facilitator_name:data['name_s'],
-                                start_date:data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
+                                workshop_id: row[:id],
+                                location_name: data['location_name_s'],
+                                facilitator_name: data['name_s'],
+                                start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
           rescue => e
             puts "#{recipient[:name]} <#{recipient[:email]}> couldn't be sent a pd certificate because: #{e.message}"
           end
@@ -117,7 +117,7 @@ class ProfessionalDevelopmentWorkshop
       kind_s: self.name,
       type_s: 'Public',
       first_date_dt: '[NOW TO *]',
-    }.map{|key,value| "#{key.to_s}:#{value.to_s}"}.join(' AND ')
+    }.map{|key,value| "#{key}:#{value}"}.join(' AND ')
 
     {
       q: "*:*",

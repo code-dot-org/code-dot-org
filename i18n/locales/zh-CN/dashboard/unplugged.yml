@@ -3,25 +3,25 @@ zh:
     unplugged:
       Unplug1:
         title: 计算机概论
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: 本课将介绍计算机科学的概念并解释一个计算机科学家的工作内容。它也将给学生一个机会承担一个计算机科学家的角色。该活动结束后，每个学生将带来他们所学的内容的回执。你可以会跳过教幼儿下面课程相关的单词，但现在提高他们的兴趣比等待更好的机会更有效率。
         pdfs:
           - unplug1
         video: Unplug1
       Unplug2:
         title: 计算性思维
-        desc: With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract different details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?
+        desc: 除了纸和笔不用带别的东西，学生将学习计算思维的四个步骤。经过简短的介绍，学生应分成的组，在那里他们将为其他已经选择了特定项目的学生（预先选定的怪物目录）创建规划。整个任务必须分解，然后团队将分析所有的项目，并外出目录、从项目中抽象的不同的细节，然后使用这些信息来创建算法 （规划），另一个团队去绘制某些特定的项目。团队将交换两组的算法然后依此制定项目。依据队伍的初衷绘制？
         pdfs:
           - unplug2
         video: Unplug2
       Unplug3:
         title: 方格纸编程
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: 编程就像是画画，学生开始去了解什么是编程真正含义。班里的学生在相互的指引下，根据已有的一张图自己在在图表上涂上颜色进行模仿。如果有更多的时间，课程允许学生自己的创作他们自己的作品。
         pdfs:
           - unplug3
         video: Unplug3
       Unplug4:
         title: 算法
-        desc: 'This lesson covers algorithms.  Using tangram shapes and graph paper, the first exercise will show how important it is to make each instruction as clear and unambiguous as possible.  Afterward, the class will explore how many ways you can fold paper into a rectangle, noting how some methods can take more or fewer folds than others.'
+        desc: 覆盖算法这一课。使用七巧板和方格纸，首先练习每一条指令要清晰，不含糊是很重要的。然后学生要探索有多少处方法，把纸拆成一个长方形，注意一下有那些方法可以得到更多或更少的拆痕。
         pdfs:
           - unplug4
         video: Unplug4
@@ -33,7 +33,7 @@ zh:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: 條件
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -58,34 +58,34 @@ zh:
         video: Unplug9
       Unplug10:
         title: 互联网
-        desc: In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.
+        desc: 在本课中，学生们会假装流通过互联网，都在学习有关 web 地址，ip 地址和 DNS。
         pdfs:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: 总结
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: 幸福地图
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: 移动它，移动它
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 真实算法： 播种一颗种子
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: 打基础
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: 越来越糊涂
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
         video: C1_getting_loopy
       RelayProgramming:
@@ -98,11 +98,11 @@ zh:
         desc: 'To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."'
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: 大事件
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: 去安全的地方
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
@@ -138,7 +138,7 @@ zh:
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: 互联网
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:
@@ -146,7 +146,7 @@ zh:
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
+        title: 数字公民
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
         title: Tangram Algorithms
@@ -174,19 +174,25 @@ zh:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Contracts, Domain, and Range
+        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
+        title: 设计食谱
+        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        video: alg_8_design_recipe
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Booleans and Logic
+        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Collision Detection and the Pythagorean Theorem
+        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        video: alg_16_biggame_collision_detection

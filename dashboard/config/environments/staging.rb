@@ -63,7 +63,7 @@ Dashboard::Application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'staging.learn.code.org' }
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
@@ -78,6 +78,9 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Whether or not to display pretty blockly.
-  config.pretty_blockly = true
+  # Whether or not to display pretty apps (formerly called blockly).
+  config.pretty_apps = true
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = true
 end

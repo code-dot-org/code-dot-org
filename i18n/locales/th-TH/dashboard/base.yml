@@ -1,93 +1,99 @@
 th:
+  errors:
+    messages:
+      not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: จำเป็น
     attributes:
       user:
-        name: Display Name
+        name: ชื่อที่ใช้แสดง
         email: อีเมล
         username: ชื่อผู้ใช้
         password: รหัสผ่าน
         password_confirmation: ยืนยันรหัสผ่าน
         current_password: รหัสผ่านปัจจุบัน
         locale: ภาษา
-        age: Age
+        age: อายุ
         gender: เพศ
         edit_header: แก้ไขรายละเอียดบัญชี
         error:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
   welcome_back: 'ยินดีต้อนรับอีกครั้ง, % {name}'
+  submit: เสนอ
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'เพิ่มครู:'
+      placeholder: ส่วนรหัส (ABCDEF)
     submit: เพิ่มครู
   add_hint_form:
     placeholder: กรุณาป้อนคำแนะนำของคุณที่นี่
     submit: เพิ่มคำแนะนำ
   appname: Code.org
   stage: ขั้นตอน
-  stage_number: 'Stage %{number}'
+  stage_number: 'ขั้นตอน %{number}'
   puzzle: ปริศนา
   trophies: ถ้วยรางวัล
   courses: คอร์ส
   of: ของ
   more: เพิ่มเติม
   less: น้อย
-  beta: beta
+  beta: Beta
   try_hoc: 'ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>'
   try_k8intro: 'ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)'
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
   already_started: 'พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้'
   demos: 'Admin: ตัวสาธิตทั้งหมด'
   continue: ต่อไป
-  prize: prize
+  prize: รางวัล
   more_info: ข้อมูลเพิ่มเติม
   auth:
     sign_in_with: 'ลงทะเบียนด้วย %{provider}'
     signed_in: ลงชื่อเข้าใช้
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.'
+    sign_out_of: 'คุณใช้ %{provider} ในการเข้าสู่ระบบ <a href="%{url}">คลิกที่นี่</a>เพื่อลงชื่อออกจาก%{provider}.'
     already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
     notyet_signedup: สมัครใช้งานหรือยัง?
-    google_oauth2: Google Account
+    google_oauth2: บัญชี Google
     twitter: ทวิตเตอร์
     facebook: เฟซบุค
-    windowslive: Microsoft Account
+    windowslive: บัญชี Microsoft
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    student_count: '%{count} นักเรียนได้ลงทะเบียนไว้แล้ว'
+    teacher_count: 'ครู %{count} ได้ลงทะเบียนไว้แล้ว'
+    overview_student: 'สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ อีเมล์ของคุณส่วนใหญ่ไว้เพื่อให้คุณสามารถเข้าสู่ระบบ และ สำหรับการกู้คืนรหัสผ่าน สำหรับข้อมูลเพิ่มเติม ดู<a href="http://code.org/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา'
+    overview_teacher: 'สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยลงนามในบัญชี. <p/> คุณจะสามารถเพิ่มนักเรียนของคุณ และติดตามความคืบหน้าของพวกเขา'
     no_signup_message: 'คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ'
     teacher_educator_guide: ดูคำแนะนำสำหรับผู้ฝึกสอน
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: คุณครูสมัคร Code.org
     teacher_title: สมัครเป็นครู
     student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
     student_title: สมัครเป็นนักเรียน
     school_name: ชื่อโรงเรียน (ถ้ามี)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
-    age: Age
-    user_type: Are you a student or teacher?
+    school_address: ที่อยู่โรงเรียน (ถ้ามี)
+    address_placeholder: ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์
+    gender: เพศ (เลือกได้)
+    birthday: วันเกิด (ปล่อยว่างไว้ได้)
+    age: อายุ
+    user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
     teacher: คุณเป็นครูหรือ
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
     taken_username: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
-    valid_password: Valid password!
+    valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    student_terms: "ฉันยอมรับ <a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a> ของ Code.org ถ้าฉันอายุต่ำกว่า 13 ปี ฉันยืนยัน โดยการส่งแบบฟอร์มนี้ที่มีสิทธิ์ของผู้ปกครองเพื่อการใช้บริการ Code.org <br/> สำหรับผู้ที่อายุต่ำกว่า 13 ที่อยู่อีเมล์จะไม่ถูกเก็บไว้ในแบบฟอร์มที่ช่วยให้เราสามารถติดต่อ"
+    teacher_terms: "ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ Code.org"
+    additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
   signin_form:
-    title: Have an account already? Sign in
+    title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล หรือ ชื่อผู้ใช้งาน
     password: รหัสผ่าน
     remember: จำฉัน
@@ -97,10 +103,10 @@ th:
     try_hoc: 'ลอง  Hour of Code ก่อนเป็นอันดับแรก'
     try_20hours: 'ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์'
   signinsection:
-    welcome: 'Welcome to %{section_name}'
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: 'ยินดีต้อนรับสู่ %{section_name}'
+    name: เลือกชื่อของคุณ
+    picture: หารูปภาพลับ
+    words: ป้อนคำศัพท์ลับของคุณ
     login: เข้าสู่ระบบ
   password:
     reset_form:
@@ -150,7 +156,7 @@ th:
     code: 'Code:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    donorschoose_project: ส่งโครงงาน
     donorschoose_how_to: วิธีการใช้โค้ดของคุณ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
@@ -213,10 +219,12 @@ th:
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: หน้าแรกของคุณครู
+      district_dashboard: District Dashboard
       label: 'Hi %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: My account
       prizes: รางวัล
       logout: ออกจากระบบ
@@ -224,6 +232,7 @@ th:
       signup: สมัครสมาชิก
       already_registered: Already registered?
     popup:
+      progress_for_user: "%{name}'s progress"
       progress: ความคืบหน้าของคุณ
       lines: 'Total lines of code: %{lines}'
       close: ปิด
@@ -291,15 +300,23 @@ th:
     cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
     cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: นักเรียน
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    cancel:
-      title: Cancel my account
-      hint: Unhappy?
-      button: Cancel my account
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
     tried: Tried
@@ -309,6 +326,9 @@ th:
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'Already registered? %{link}'
@@ -326,10 +346,11 @@ th:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
+    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: ลองตอนนี้
@@ -339,10 +360,13 @@ th:
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -421,9 +445,10 @@ th:
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -432,6 +457,9 @@ th:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -443,7 +471,7 @@ th:
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: ศิลปิน
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
@@ -456,13 +484,25 @@ th:
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: "The solution you've entered is not correct.  Please try again!"
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: ตกลง
   time:
@@ -476,13 +516,13 @@ th:
           title: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
           description: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
         Hour of Code:
-          title: ชั่วโมงแห่ง Code
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: แก้ไข Code
           description: ""
         events:
-          title: Events
+          title: เหตุการณ์
           description: ""
         builder:
           title: Builder
@@ -506,11 +546,44 @@ th:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: บันทึก
+    delete: ลบ
+    exit: Return to Course
+    my_projects: My Projects
+    share: แบ่งปัน
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: เพิ่มเติม
+    name: ชื่อ
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: ลบหรือไม่?
+    delete_yes: ใช่
+    delete_no: ไม่ใช่
+    saved: Saved
+    not_saved: Not saved
+    cancel: ยกเลิก
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

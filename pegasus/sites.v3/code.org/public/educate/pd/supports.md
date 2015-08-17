@@ -9,18 +9,55 @@ nav: pd_nav
 ## Click below to access program supports for your classroom ##
 
 - [High School](#hs)
-- [Middle School Science](#mss)
+- [Middle School Science](#science)
 - [Middle School Math](#msm)
 - [Elementary School](#es)
 
 <a id="hs"></a>
 
+## Computer Science Principles
+
+Find the Computer Science Principles curriculum at [https://code.org/educate/csp](https://code.org/educate/csp).
+
+### What are the technical requirements to teach Computer Science Principles?
+
+Computer lab with 1:1 computers setup in such a way that group work is
+possible OR an additional non computer classroom that the teacher can
+use for group work.
+	
+The following domains white-listed for access:
+<br/>
+• `Code.org`
+<br/>
+• `youtube.com/education`
+<br/>
+• `https://api.pusherapp.com` and `wss://ws.pusherapp.com`
+
+We support the following combinations of operating systems and
+browsers:
+
+* Chrome 33.x and higher
+	- XP & Windows 7 and higher
+	- Mac OS 10.6 and higher
+	- Android 4.1.2 and higher
+* Safari 7.0.x and higher
+    - Mac OS 10.6 and higher
+    - iOS 7.x and higher
+* Internet Explorer 9, 10, 11
+	- Windows 7 and higher
+	- Mac OS 10.6 and higher
+* Firefox 25.x and higher
+    - Windows 7 and higher
 
 ## Exploring Computer Science Supports
 
 Find the ECS curriculum at [www.exploringcs.org/curriculum](http://www.exploringcs.org/curriculum). Download this [supply list](/files/ECSsupplies.pdf) for items needed to effectively teach ECS.
 
 ### What are the technical requirements to teach Exploring Computer Science?
+
+Computer lab with 1:1 computers setup in such a way that group work is
+possible OR an additional non computer classroom that the teacher can
+use for group work.
 	
 The following domains white-listed for access:
 <br/>
@@ -28,28 +65,7 @@ The following domains white-listed for access:
 <br/>
 • youtube.com/education
 
-At this time, there are no minimum requirements for computers.
-
-### Office Hours
-
-Office hours will be available bi-weekly from 5:00pm-6:00pm in both Eastern and Pacific Time Zones. 
-
-The virtual meetings will be hosted via Blue Jeans Video Conference. If this is your first time using Blue Jeans, we recommend clicking on the meeting link 5 minutes prior to the start time as you will be prompted to download a plugin, which is required to access the virtual meeting. No login or account is required to join the virtual meeting.
-
-### November Office Hours
-
-Tuesday, November 4th
-<br/>
-- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/757225757) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 757225757. 
-<br/>
-- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/612114978) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 612114978.
-
-Thursday, November 20th
-<br/>
-- Eastern Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/727972202) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 727972202.
-<br/>
-- Pacific Time: 5:00 PM - 6:00 PM - [Click here](https://bluejeans.com/188278137) to join virtual meeting. To join via phone, dial: 408-740-7256 and enter Conference ID: 188278137.
-<br/>
+Computers must have online connectivity at a minimum of 10MB/sec and modern browsers (IE9+, or Firefox, Chrome, Safari, Mobile Safari, Android tablets)
 
 ### Additional ECS Resources
 
@@ -58,14 +74,18 @@ Coming Soon
 
 [**Back to the top**](#top)
 
-<a id="mss"></a>
+<a id="science"></a>
 
 
 ## Project GUTS Supports
 
-Find the Project GUTS curriculum and other resources at [code.org/curriculum/mss](http://code.org/curriculum/mss).
+Find the Project GUTS curriculum and other resources at [code.org/curriculum/science](http://code.org/curriculum/science).
 
 ### What are the technical requirements to teach Project GUTS?
+
+Computer lab with 1:1 computers setup in such a way that group work is
+possible OR an additional non computer classroom that the teacher can
+use for group work.
 
 Minimum requirements for computers:
 
@@ -110,6 +130,10 @@ Internet connection with bandwidth capable of supporting downloads of 5 megabits
 Find the Bootstrap curriculum and addition resources at [code.org/curriculum/msm](http://code.org/curriculum/msm). To post your questions and offer support go to the Bootstrap discussion forum [here](https://groups.google.com/forum/#!forum/bootstrap-discuss).
 
 ### What are the technical requirements to teach Bootstrap? 
+
+Computer lab with 1:1 computers setup in such a way that group work is
+possible OR an additional non computer classroom that the teacher can
+use for group work.
 
 Browser made after 2009 (Ex: IE9+, Chrome, Firefox).
 

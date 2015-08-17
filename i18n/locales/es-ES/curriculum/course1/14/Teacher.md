@@ -6,17 +6,17 @@ title: "Bee: Loops" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>14, :title=> 'Bee: Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In the last stage students used loops to repeat simple movements. Now they're going to add to that the looping of actions in order to help the bee collect more nectar and make more honey.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In the last stage students used loops to repeat simple movements. Now they're go
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
   * Identify when a loop can be used to simplify a repetitive action
   * Employ a combination of sequential and looped commands to move and perform actions
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -55,7 +55,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
   * It's obviously far more efficient to do this activity as a loop, instead of laboriously giving all of the instructions for getting a cookie 5 times.
   * We're going to help the bee be more efficient by looping the instructions to get lots of nectar and make lots of honey.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -63,7 +63,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
 
 ### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course1/stage/14/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -86,7 +86,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
   * Can your class find the loops?
   * Try the same thing with songs! 
 
-[/together]
+[/juntos]
 
 [standards]
 

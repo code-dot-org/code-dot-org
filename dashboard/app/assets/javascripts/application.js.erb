@@ -6,17 +6,35 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+// Gem assets
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery-ui
 //= require video
-//= require_directory .
-// Loads all Bootstrap javascripts
 //= require bootstrap
-//= require_self
+
+// Vendor assets
+//= require add2home
+//= require jquery.mask.min
+//= require jquery.placeholder
+//= require jquery.qtip.min
+//= require jquery.query-object
+//= require jquery.simulate
+//= require jquery.ui.touch-punch
+//= require jquery.timeago.js
+//= require jquery.overlaps
 //= require md5
-//= require hash_email
+
+// Shared assets
+//= require details-polyfill/jquery.details
+//= require details-polyfill/details-polyfill
+
+// Application assets
+//= require namespace
+//= require utils.js.erb
+//= require_directory .
+//= require_self
 
 <% environment.context_class.instance_eval { include ApplicationHelper } %>
 
@@ -56,7 +74,7 @@ $(document).keydown(function(e) {
 });
 
 setTimeout(function() {
-  $('#blocklyApp .slow_load').show();
+  $('#codeApp .slow_load').show();
 }, 10000);
 
 function cache_bust_only() {

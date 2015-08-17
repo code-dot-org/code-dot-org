@@ -187,7 +187,7 @@ lt:
           It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: Padėk tai voverei pasiekti gilę!
     function:
       1:
         image: notes/stage13_1.jpg

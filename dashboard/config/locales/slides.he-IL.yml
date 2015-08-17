@@ -42,8 +42,8 @@
           על "הפעל תוכנית", הציפור תנוע צעד אחד על המבוך.
       11:
         image: notes/hoc1_11.jpg
-        text: כדי לבצע יותר מפעולה אחת, ניתן לגרור בלוקים רבים אל סביבת העבודה שלך
-          ולחבר אותם יחדיו. הציפור תבצע את הפקודות מלמעלה כלפי מטה.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
         text: אם אתה מפעיל תוכנית ורוצה לתקן אותה ולנסות שוב, לחץ על לחצן "איפוס".
@@ -198,21 +198,23 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: הי, שמי סלוני. אני משתמשת במדעי המחשב כדי לפתור בעיות בריאות ורפואה.
-          בואו נלמד על בלוק ״אם-אחרת". הוא נראה דומה לבלוק "אם", אבל בסופו יש חלק
-          נוסף האומר "אחרת".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: אם אשים בלוק "התקדם" היכן שכתוב "עשה", ובלוק "פנה שמאלה" היכן שכתוב
-          "אחרת", הזומבי יבחר בין שתי אפשרויות. אם קיימת דרך לפנים, הזומבי יתקדם הלאה,
-          אחרת (אין דרך לפנים), הזומבי יפנה שמאלה.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: בדיוק כמו בבלוק "אם", נוכל לשים בלוקי ״אם-אחרת" בתוך בלוקי "חזור",  כך
-          שהזומבי יצעד ובלוק ה- "אם-אחרת" ימשיך לבדוק אם יש מקום בו ניתן לפנות.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: עכשיו, הצעידו את הזומבים למקום אליו הם שייכים!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

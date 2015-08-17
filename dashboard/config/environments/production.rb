@@ -13,6 +13,12 @@ Dashboard::Application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+  if CDO.memcached_hosts.present?
+    config.cache_store = :mem_cache_store, CDO.memcached_hosts
+  else
+    config.cache_store = :memory_store, { size: 64.megabytes }
+  end
+
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -57,13 +63,12 @@ Dashboard::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'learn.code.org' }
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
@@ -78,6 +83,13 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Whether or not to display pretty blockly.
-  config.pretty_blockly = false
+  # Whether or not to display pretty apps (formerly called blockly).
+  config.pretty_apps = false
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = false
+
+  # Serve a production version of React
+  config.react.variant = :production
+  config.lograge.enabled = true
 end

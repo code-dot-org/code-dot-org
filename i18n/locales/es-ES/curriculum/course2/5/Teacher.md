@@ -6,15 +6,15 @@ title: Getting Loopy view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Getting Loopy', :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>15) %>
 
-[content]
+[contenido]
 
 ## K-1 Lesson Overview
 
 Loops are a handy way of describing actions that repeat a certain number of times. In this lesson, students will practice converting sets of actions into a single loop.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -35,11 +35,11 @@ Loops are a handy way of describing actions that repeat a certain number of time
 
 6) [Getting Loopy Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
 [together]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,27 +47,28 @@ Loops are a handy way of describing actions that repeat a certain number of time
   * Translate a picture program into a live-action dance
   * Convert a series of multiple actions into a single loop
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Open Space for Dancing/Moving
   * Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course2/5/Assessment5-GettingLoopy.pdf)
   * Pens/Pencils/Markers
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/HcW7bs6p0Uo?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Teacher Lesson Guide
   * Print one [Getting Loopy Activity Worksheet](/curriculum/course2/5/Activity5-GettingLoopy.pdf) for the class
   * Print Assessment Worksheet: [Getting Loopy Assessment](/curriculum/course2/5/Assessment5-GettingLoopy.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -87,29 +88,29 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has one new and important vocabulary word:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Loop** - Say it with me: Loop   
 The action of doing something over and over again
 
-[/together]
+[/juntos]
 
 ### <a name="GetStarted"></a> 3) Repeat After Me
 
@@ -150,9 +151,9 @@ Example:
 > 
 > > *“Please play my song four times.”*
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Looking for some good music?  
 Here are some great places to find some:
@@ -160,7 +161,7 @@ Here are some great places to find some:
   * [Radio Disney](http://music.disney.com/radio-disney)
   * [Kidz Bop Radio](http://www.jango.com/music/Kidz+Bop+Kids?l=0)
 
-[/tip]
+[/sugerencia]
 
 > **Directions:**
 > 
@@ -176,7 +177,7 @@ Here are some great places to find some:
 >       * What if we repeated the main part 4 times?
 >   5. Can you find anything else in the dance that we could use a loop for? 
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -190,7 +191,7 @@ Here are some great places to find some:
   * Do you know any dances that are done inside a loop?
   * What was your favorite part about that activity?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -201,7 +202,7 @@ Here are some great places to find some:
   * Hand out the worksheet titled "Getting Loopy" and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -221,7 +222,7 @@ Use these activities to enhance student learning. They can be used as outside of
   * Can your class find the loops?
   * Try the same thing with songs! 
 
-[/together]
+[/juntos]
 
 [standards]
 

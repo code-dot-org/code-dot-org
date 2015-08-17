@@ -1,4 +1,7 @@
 ru:
+  errors:
+    messages:
+      not_saved: 'Пожалуйста, исправьте следующие ошибки:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@ ru:
           future: не может быть в будущем
   hello: Привет, мир!
   welcome_back: 'С возвращением, %{name}'
+  submit: Отправить
   add_teacher_form:
     code:
       label: 'Добавить учителя:'
@@ -36,7 +40,7 @@ ru:
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ
-  beta: beta
+  beta: Бета-версия
   try_hoc: 'Для участия в "Часе кода" нажми здесь >> '
   try_k8intro: 'Попробуйте наш курс "Введение в информатику" (15-25 часов)'
   k8intro: 'Курс "Введение в информатику" (15-25 часов)'
@@ -52,7 +56,7 @@ ru:
     sign_out_of: 'Вы использовали %{provider}, чтобы зайти.  <a href="%{url}">Нажмите здесь</a>, чтобы выйти из %{provider}.'
     already_signedup: Уже зарегистрировались?
     notyet_signedup: Еще не присоединились?
-    google_oauth2: Аккаунт Google
+    google_oauth2: Учетная запись Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Учетная запись Майкрософт
@@ -60,6 +64,8 @@ ru:
     need_confirmation: Не получили письмо для подтверждения?
     need_unlock: Не получили письмо-инструкцию для разблокировки?
   signup_form:
+    student_count: 'Зарегистрировано учеников: %{count}.'
+    teacher_count: 'Зарегистрировано учителей: %{count}.'
     overview_student: 'Зарегистрироваться, чтобы отслеживать свои успехи. Ваш электронный адрес используется, главным образом, для  входа в систему и для восстановления пароля. Дополнительную информацию смотрите в наших <a href="http://code.org/privacy">Правилах  конфиденциальности</a>.'
     overview_teacher: 'Зарегистрируйтесь для преподавания информатики в Вашем классе. <p/> Вы сможете включать Ваших учеников и отслеживать их прогресс.'
     no_signup_message: 'Вы можете <a target="_blank" href="http://learn.code.org"> просматривать различные этапы и головоломки</a>, но Вам нужно зарегистрироваться, чтобы сохранять свои  результаты.'
@@ -93,7 +99,7 @@ ru:
     remember: Запомнить меня
     submit: Вход
   signin:
-    try_heading: Начать кодирование без регистрации
+    try_heading: Хотите начать программировать без регистрации?
     try_hoc: Попробуйте сначала один Час Кода
     try_20hours: 'Попробуйте наше двадцатичасовое "Введение в информатику"'
   signinsection:
@@ -143,7 +149,7 @@ ru:
     code: 'Код:'
     redeem_header: 'Востребовать:'
     donorschoose_register: Зарегистрируйтесь как учитель на DonorsChoose.org
-    donorschoose_project: опубликовать проект
+    donorschoose_project: Опубликовать проект
     donorschoose_how_to: Как использовать Ваш код
     success: Ваш приз был успешно реализован, см. код ниже.
     error: Ваш приз не может быть реализован, пожалуйста, попробуйте еще раз.
@@ -154,7 +160,7 @@ ru:
     teacher_info_required: 'Для награды учителю требуется сообщить название и адрес школы:'
     teacher_email_required: 'Для награда учителю требуется подтверждённый адрес электронной почты:'
     confirm:
-      title: Будь любезен, подтверди
+      title: Пожалуйста, подтвердите
       "no": Нет
       "yes": Да
       msg: 'Вы уверены, что хотите востребовать приз %{prize_name}?'
@@ -162,19 +168,19 @@ ru:
       msg_publicschool: Пожалуйста, подтвердите, что Вы являетесь учителем государственной школы США.
       msg_visit_website: Посетите веб-сайт
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
+      apple_itunes: $10 iTunes Подарочная карта
+      donors_choose: Кредит DonorsChoose.org $750
+      donors_choose_bonus: Кредит DonorsChoose.org $250
       dropbox: 10GB на Dropbox Space
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      valve: Portal 2 (PC или Mac игра скачать)
+      ea_bejeweled: Bejeweled 3 (PC-игра скачать)
+      ea_fifa: FIFA Soccer 13 (PC-игра скачать)
+      ea_simcity: SimCity 4 Deluxe Edition (PC-игра скачать)
+      ea_pvz: Растения против зомби (PC-игра скачать)
+      skype: $10 в Skype
     msg:
-      choose: 'Choose a prize:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
+      choose: 'Выберите приз:'
+      choose_teacher: 'Нажмите на логотип ниже, чтобы потребовать ваш приз:'
       earned: Вы заработали приз! (Только для учеников в США)
       not_earned_title: Закончите учебник, заработайте призы (только для учащихся в США)
       not_earned: 'Изучите основы информатики, соберите все %{num_trophies} кубков, и получите реальные призы. Вы можете выбрать 10GB на Dropbox, $10 кредит Skype или бесплатное скачивание игр. ПРИМЕЧАНИЕ: действительно только для учеников в США, пока призы не закончатся.'
@@ -208,8 +214,10 @@ ru:
       free_play:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
+        calculate: Calculate Something
     user:
       classroom: Домашняя страница Преподавателя
+      district_dashboard: Панель управления области
       label: 'Привет, %{username}'
       stats: Мои результаты
       settings: Моя регистрация
@@ -219,6 +227,7 @@ ru:
       signup: Зарегистрироваться
       already_registered: Уже зарегистрированы?
     popup:
+      progress_for_user: 'прогресс студента %{name}'
       progress: Ваши результаты
       lines: 'Всего строк кода: %{lines}'
       close: ЗАКРЫТЬ
@@ -240,13 +249,13 @@ ru:
       section: 'Раздел:'
       stages: 'Этап(ы) для отображения:'
       show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
-      levels_key: Levels key
+      levels_key: Ключевые уровни
       perfect: Завершено, отлично
       completed: Завершено, но использовано слишком много блоков
       tried: Пытался, но не завершено
       not_tried: Ещё не пытался
       activity: 'Показывает активность студента за последние %{plural} %{hours}'
-      no_section: No assigned section
+      no_section: Нет назначенного раздела
       trophies: трофеи
     students:
       name: Имя
@@ -261,7 +270,7 @@ ru:
       help_register: Вместо того, чтобы терять время на добавление данных о своих студентах, Вы можете быстро получить информацию о своих учениках попросив их зарегистрироваться на сайте. Вашим студентам потребуется выбрать имя пользователя и пароль, но им НЕ НУЖНО предоставлять адрес электронной почты. Если студент забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
       register: Попросите ваших учеников зарегистрироваться самостоятельно
       vist: Предложите Вашим ученикам посетить
-      section_code: 'and enter their section-code:'
+      section_code: 'И ввести их в section-code:'
       first_please: 'Во-первых, пожалуйста %{add_section}'
       for: Для
       enter: 'введите:'
@@ -271,7 +280,7 @@ ru:
       section: Раздел
       students: Ученики
       section_code: Код раздела
-      add_section_code: Add Students Section-Code
+      add_section_code: Добавить раздел Студенты в раздел кода
       secret: Секретный тип
       grade: Оценка
       course: Курс
@@ -286,15 +295,23 @@ ru:
     cant_remove_student_no_email: '%{student_name} не может быть удален из списка Ваших  учеников,, поскольку %{student_name} не зарегистрировал адрес электронной почты'
     cant_remove_teacher_no_email: 'Учитель %{teacher_name} не может быть удален, поскольку  Вы не зарегистрировали адрес электронной почты'
     student_teacher_disassociated: 'Учитель %{teacher_name} удалён у ученика %{student_name}'
+    panel:
+      answer_viewer: Просмотр ответов
+      student: Ученик
+      viewing_solution: Просмотр решения
+      try_it_yourself: Попробуйте сами
+      section: Раздел
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
+    email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
+    email_confirm_wrong_email: (Неверный адрес электронной почты?)
     email_resend_confirm: Выслать инструкции для подтверждения
     new_password_hint: (оставьте пустым, если не хотите ничего менять)
     current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
-    cancel:
-      title: Аннулировать регистрацию
-      hint: Недоволен?
-      button: Аннулирование регистрации
+    delete: Удалить свою учетную запись
+    delete_text: Нажатие на кнопку ниже удалит вашу учетную запись.
+    delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших студентов.'
+    delete_confirm: Вы действительно хотите удалить вашу учетную запись?
   user_level:
     completed: Завершено
     tried: Пытался
@@ -304,6 +321,9 @@ ru:
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
+    description: Code Studio является домом для онлайн курсов, созданных Code.org
+    lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
+    lines_of_code_linebreak: '%{lines_count} строк кода <br/> НАПИСАНЫ %{students_count} миллионами студентов'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
@@ -324,6 +344,7 @@ ru:
     local_school: местная школа
     online: онлайн
     see_details: Подробнее
+    view_course: View Course
     prize_info: 'Призы за участие (только для учителей государственных школ США): до $1000 на  класс.'
     tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
     trynow: Попробуйте сейчас
@@ -332,11 +353,14 @@ ru:
     test_videos_help: Протестировать наш новый видео-плеер в вашей школе
     try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной школы
     use_as_teacher: Используйте этот сайт как учитель
-    heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_hoc2014: '<h2>Час Кода для</h2><h1>Для всех возрастов</h1>'
+    heading_elementary: '<h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
     heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
+    no_primary_course: Попробуйте курс Студии Кода
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Распечатать сертификат
   gender:
     male: Мужской
     female: Женский
@@ -346,8 +370,8 @@ ru:
     teacher: Учитель
   footer:
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
-    powered_by_aws: Powered by Amazon Web Services
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Все права защищены.'
+    powered_by_aws: Создано с помощью Amazon Web Services
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
@@ -371,32 +395,32 @@ ru:
   compatability:
     working:
       header: Мы работаем над поддержкой для Вашего браузера.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
+      message: "Code.org использует современные Web-технологии. Это делает сайт быстрее в использовании. Ваш браузер не поддерживает все необходимые функции, поэтому могут возникнуть проблемы при использовании этой части сайта. Пожалуйста, помогите нам, <a href='%{report_issue_url}'> сообщая любые проблемы, которые вы обнаружите</a>. Вы также можете <a href='%{supported_browsers_url}'> обновить ваш браузер до поддерживаемой версии</a>."
       hide_this_warning: Скрыть это предупреждение
     upgrade:
       header: Пожалуйста, обновите Ваш браузер.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
+      message: "Code.org использует современные Web-технологии. Это делает сайт быстрее в использовании. К сожалению, ваш браузер не поддерживает все функции, необходимые для работы этой части сайта. <br/> <br/>Установите браузер из нашего списка поддерживаемых браузеров, чтобы продолжить. Вы можете, <a href='#'> попробуйте зайти на страницу</a>, но ожидать некорректной работы функционала."
+      button: Добавьте меня в список поддерживаемых браузеров
   slow_loading: Это занимает больше времени, чем обычно...
   try_reloading: Попробуйте перезагрузить страницу
-  next_stage: Закончил! Перейти к следующему этапу
+  next_stage: Завершено! Перейти к следующему этапу
   download_pdf: Показать план урока
   lesson_plan: План урока
   view_lesson_plan: Посмотреть план урока
   pdf_download: Скачать PDF
-  download_coming_soon: Downloadable activity coming soon.
-  video_coming_soon: Video Coming Soon!
+  download_coming_soon: 'Возможность загрузки появится в  ближайшее время.'
+  video_coming_soon: Данное видео скоро появится!
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Проверь мои Flappy игру
-    studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
+    bounce_og_title: Оцените мою Bounce игру
+    flappy_og_title: Оцените мою Flappy игру
+    studio_og_title: Оцените приложение Play Lab
+    check_out_what_i_made: Оцените, что я сделал
     og_description: 'Я сам написал код  на Code.org'
     phone_number_not_allowed: Похоже, здесь есть номер телефона. Попробуйте изменить текст.
     address_not_allowed: Похоже, здесь есть адрес. Попробуйте изменить текст.
     email_not_allowed: Похоже, здесь есть адрес электронной почты. Попробуйте изменить текст.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    profanity_not_allowed: Кажется, в коде есть неточности. Попробуйте изменить текст.
   builder:
     created: Вы создали новый скрипт.
     destroyed: Вы уничтожили скрипт.
@@ -415,32 +439,36 @@ ru:
     flappy:
       title: Порхающий код
       body: 'Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник "Порхающий  код"!'
-    20hour:
-      title: Вводный курс
-      body: Попробуйте наш 20-часовой курс Введение в информатику.
+    20-hour:
+      title: Ускоренный курс
+      body: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
+      body_short: Освойте азы программирования по ускоренной версии курсов 2-4.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: 'Попробуй наше новое пособие "Час кода" в бета-версии'
       try_frozen: 'Рисуй вместе с Анной и Эльзой из "Холодного сердца"'
     gallery:
       title: Галерея
-      body: View a gallery of app and artist images created by our users
+      body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    infinity:
+      title: Лаборатория игр Infinity
+      body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
     picture_count: 'За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b> рисунков, написав свои собственные компьютерные программы. Нажмите на картинку, чтобы увидеть каждую программу в действии.'
-    activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
+    activity_count: 'За последние несколько <b>%{days}</b> дней, студенты сделали  <b>%{count}</b> приложений и картинок, посредством написания своих собственных компьютерных программ. Нажмите на картинки и скриншоты, чтобы увидеть каждую программу в действии.'
     want_to_make_your_own: Хотите сделать свой собственный?
     more: 'Больше &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_by_name_age: 'Создатель %{name}, возраст %{age}'
     caption_time_ago: '%{time_ago} назад'
     header: Галерея
     header_playlab: Лаборатория игр
     header_artist: Художник
   landing:
     prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает, что это не окончательный вариант курса,  и он будет дорабатываться, с учётом полученных отзывов."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_hoc2014: "Этот учебник находится в <span class='betatext'> бета-версии</span>.  Он подлежит пересмотру для получения обратной связи и улучшений."
     feedback: Оставить отзыв
     report_bug: Сообщить об ошибке
     support: Получить помощь
@@ -450,13 +478,25 @@ ru:
     wrong_body: 'Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще раз!'
     correct_title: Верно
     correct_body: Это правильный ответ.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Неправильное решение
     wrong_body: 'Твоё решение неверно.  Пожалуйста, попробуй еще раз!'
     correct_title: Верно
     correct_body: Это правильный ответ.
+  contract_match:
+    wrong_title: Неправильный ответ
+    badname: Ваше определение имеет неправильное имя.
+    badname_case: В именах функций учитывается регистр. Попробуйте изменить регистр букв в имени вашего определения.
+    badrange: Ваше определение имеет неправильный диапазон.
+    baddomainsize: Ваше определение имеет неправильное число элементов в домене.
+    baddomainname: Один или несколько элементов в вашем домене имеют неправильное имя.
+    baddomaintype: Один или несколько элементов домена имеет неверный тип, или они находятся в неправильном порядке.
   text_match:
-    placeholder: Enter your answer here
+    placeholder: Внеси сюда свой ответ
+    open_response_title: Спасибо
+    open_response_body: Спасибо за ваш ответ!
   dialog:
     ok: Продолжить
   time:
@@ -470,7 +510,7 @@ ru:
           title: 'Курс "Введение в информатику" (15-25 часов)'
           description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
         Hour of Code:
-          title: Hour of Code
+          title: Час кода 2013
           description: ""
         edit-code:
           title: Редактирование кода
@@ -479,7 +519,7 @@ ru:
           title: События
           description: ""
         builder:
-          title: Builder
+          title: Конструктор
           description: ""
         flappy:
           title: Порхающий код
@@ -491,7 +531,7 @@ ru:
           title: Шаг
           description: ""
         sample_level_builder:
-          title: Sample Level Builder
+          title: Пример строителя уровня
           description: ""
   age_interstitial:
     age: Ваш возраст
@@ -500,11 +540,44 @@ ru:
     sign_out: 'Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}"> выйти</a>.'
   zendesk_too_young_message: 'Извини, но пользователи твоего возраста не могут авторизоваться на нашем сайте технической поддержки. Ты можешь зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
   progress:
-    not_completed: not completed
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
+    not_started: не начато
+    in_progress: в процессе
+    completed_too_many_blocks: Завершено, слишком много блоков
+    completed_perfect: Завершено, отлично
+    furthest_level_attempted: запрошен слишком высокий уровень
+    assessment: оценка
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Курсы, в процессе изучения
+    completed_courses: Завершенные курсы
+    all_courses: Все курсы
+  project:
+    projects: Проекты
+    create: Создать проект
+    create_a_project: 'Создать новый проект:'
+    new: Создать новый
+    rename: Переименовать
+    save: Сохранить
+    delete: Удалить
+    exit: Вернуться к курсу
+    my_projects: Мои проекты
+    share: Поделитесь
+    share_title: Поделитесь вашим проектом
+    share_copy_link: 'Скопировать ссылку:'
+    close: Закрыть
+    more: Ещё
+    name: Имя
+    updated: Обновлено
+    project_type: Тип проекта
+    help_text: 'Нажмите кнопку <strong>Сделать приложение</strong> или <strong>Нарисовать что-то</strong> ниже, чтобы создать новый проект лаборатории игр или художника! <br/>Вы можете вернуться и работать над вашими проектами в любое время.'
+    need_help: Нужна помощь, чтобы начать работать?
+    really_delete: Удалить?
+    delete_yes: Да
+    delete_no: Нет
+    saved: Сохранено
+    not_saved: Не сохранено
+    cancel: Отмена
+    delete_confirm_title: Вы уверены, что хотите удалить этот проект?
+    delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у них больше не будет доступа к этому проекту.
+    view_all: Посмотреть Мои проекты
+    remix: Ремикс
+    click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!

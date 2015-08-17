@@ -1,68 +1,68 @@
 * * *
 
-title: "Maze: Conditionals" view: page_curriculum theme: none
+title: "Labirinto: condicionais" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>8, :title=> 'Bee: Conditionals', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>8, :title=> 'Maze: Conditionals', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-Using the Maze environment, students write programs using conditionals.
+Usando o ambiente do labirinto, os alunos escrevem programas usando condicionais.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Maze: Conditionals**
+### **Atividade: Labirinto: condicionais**
 
-[Maze: Conditionals](#Activity)
+[Labirinto: condicionais](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Compare properties and values using >, =, < symbols
-  * Translate spoken language conditional statements into a program
-  * Execute an algorithm with a conditional statement
-  * Use conditional statements to make logic-based choices
-  * Nest conditionals to analyze multiple value conditions using if, else if, else logic
-  * Write functions that execute nested conditionals
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-Similar to the last previous conditionals stage, only this time we're helping the zombie reach the sunflower.
+  * Comparar propriedades e valores usando os símbolos >, =, <
+  * Traduzir comandos condicionais da linguagem falada para um programa
+  * Executar um algoritmo com um comando condicional
+  * Use instruções condicionais para fazer escolhas com base em lógica
+  * Aninhar condicionais para analisar várias condições de valor, utilizando a lógica: se, senão se, senão
+  * Escrever funções que executem condicionais aninhadas
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Maze: Conditionals](http://learn.code.org/s/course3/stage/8/puzzle/1)
+### <a name="GetStarted"></a> Introdução
 
-The conditionals in this stage pertain to whether or not there is a path available to the right, left, or ahead. If there is chomper in the way, the conditional will report that there is no path available in that direction.
+Semelhante à última fase de condicionais, só que desta vez estamos ajudando o zumbi a chegar ao girassol.
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Labirinto: condicionais](http://learn.code.org/s/course3/stage/8/puzzle/1)
+
+Nesta fase, os condicionais se referem a haver ou não um caminho disponível à direita, à esquerda, ou à frente. Se houver uma planta carnívora no caminho, a condicional relatará que não há nenhum caminho disponível naquela direção.
 
 [/together]
 
@@ -71,98 +71,98 @@ The conditionals in this stage pertain to whether or not there is a path availab
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### True/False Tag
+### Tag Verdadeiro/Falso
 
-  * Line students up as if to play [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
-  * Select one person to stand in front as the Caller.
-  * The Caller chooses a condition and asks everyone who meets that condition to take a step forward. 
-      * If you have a red belt, step forward.
-      * If you are wearing sandals, take a step forward.
-  * Try switching it up by saying things like "If you are *not* blonde, step forward."
+  * Organize os alunos como se eles fossem jogar [Sinal vermelho / Sinal verde](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).
+  * Selecione uma pessoa para ficar na frente, como o mestre.
+  * O mestre escolhe uma condição e pede para que todos que satisfazem a condição deem um passo à frente. 
+      * Se você tem um cinto vermelho, dê um passo à frente.
+      * Se você estiver usando sandálias, dê um passo à frente.
+  * Troque as frases, e diga coisas como "Se você *não* for loiro, dê um passo à frente".
 
-### Nesting
+### Aninhamento
 
-  * Break students up into pairs or small groups.
-  * Have them write if statements for playing cards on strips of paper, such as: 
-      * If the suit is clubs
-      * If the color is red
-  * Have students create similar strips for outcomes. 
-      * Add one point
-      * Subtract one point
-  * Once that's done, have students choose three of each type of strip and three playing cards, paying attention to the order selected.
-  * Using three pieces of paper, have students write three different programs using only the sets of strips that they selected, in any order. 
-      * Encourage students to put some if statements inside other if statements.
-  * Now, students should run through all three programs using the cards that they drew, in the same order for each program.  
-      * Did any two programs return the same answer?
-      * Did any return something different?
+  * Divida os alunos em pares ou pequenos grupos.
+  * Peça que eles escrevam os comandos "se" para jogar cartas em tiras de papel, como: 
+      * Se o naipe for de paus
+      * Se a cor for vermelha
+  * Peça para os alunos criarem tiras semelhantes para os resultados. 
+      * Some um ponto
+      * Subtraia um ponto
+  * Quando tiver terminado, peça aos alunos que escolham três de cada tipo de tira, e três cartas para jogar, prestando atenção à ordem selecionada.
+  * Usando três pedaços de papel, peça aos alunos que escrevam três programas diferentes, usando somente os conjuntos de tiras que eles escolheram, em qualquer ordem. 
+      * Incentive os alunos a colocar alguns comandos "se" dentro de outros comandos "se".
+  * Agora, os alunos devem executar todos os três programas usando as cartas que eles pegaram, na mesma ordem para cada programa.  
+      * Dois programas retornaram a mesma resposta?
+      * Algum programa retornou algo diferente?
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select and drag / slide
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar e arrastar / deslizar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-07. Represent data in a variety of ways: text, sounds, pictures, numbers.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
-  * CT.L2-14. Examine connections between elements of mathematics and computer science including binary numbers, logic, sets, and functions. 
-  * CT.L3A-03. Explain how sequence, selection, iteration, and recursion are building blocks of algorithms.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-07. Representar dados de várias formas: textos, sons, imagens, números.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
+  * CT.L2-14. Examinar as conexões entre elementos de matemática e ciência da computação, inclusive números binários, lógica, conjuntos e funções. 
+  * CT.L3A-03. Explicar como sequência, seleção, iteração, e recursividade são blocos de construção de algoritmos.
 
 ### Next-Gen Science Standards
 
-  * 3-5-ETS1-2. Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * 3-5-ETS1-2. Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 3.OA.3 - Use multiplication and division within 100 to solve word problems in situations involving equal groups, arrays, and measurement quantities.
-  * 4.NBT.B.4 - Fluently add and subtract multi-digit whole numbers using the standard algorithm.
-  * 5.NBT.B.5 - Fluently multiply multi-digit whole numbers using the standard algorithm.
+  * 3.OA.3 - Usar multiplicação e divisão até 100 para resolver os problemas em situações envolvendo grupos iguais, arrays e unidades de medida.
+  * 4.NBT.B. 4 - Somar e subtrair números inteiros com vários dígitos usando o algoritmo padrão com facilidade.
+  * 5.NBT.B.5 - Multiplicar números inteiros com vários algarismos usando o algoritmo padrão com facilidade.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
-  * L.4.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal precise actions, emotions, or states of being and that are basic to a particular topic.
-  * L.5.6 - Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases, including those that signal contrast, addition, and other logical relationships.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
+  * L.4.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam ações, emoções, ou estados de espírito precisos, e que sejam básicos em um tópico em particular.
+  * L.5.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam contraste, adição e outras relações lógicas.
 
 [/standards]
 

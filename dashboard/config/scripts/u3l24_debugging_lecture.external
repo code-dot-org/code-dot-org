@@ -1,0 +1,28 @@
+name 'U3L24 Debugging Lecture'
+
+markdown <<MARKDOWN
+# Debugging and Testing
+
+## Why Is Debugging and Testing Important?
+
+Would you trust a car whose breaks had never been tested? Would you buy a game that was known to consistently crash at the end of the first of 20 levels? Would you eat something that you didn't know was edible? More importantly, would you give any of these things to a friend? The breaks in the car should be proven to work, the game should always be able to be finished, and the food should definitely be edible. Software developers think the same things about their code. If they know there is a bug (error) in their code, they will fix it. If the code hasn't been tested, they will rigorously test it.
+
+## What Is Debugging and Testing?
+
+When you test software, you give it a set of reasonable and unreasonable inputs to see if the program correctly handles them. If your tests find a problem, you need to debug your software. Debugging is the process of finding and fixing errors in a program.
+
+<details>
+<summary>*Why is it called debugging?*</summary>
+Back when computers were made of vacuum tubes and bare wires, bugs would often crawl inside the computer and need to be cleaned out by hand. Engineers would have to de-bug their computers to keep them running. The term debugging was used before that time, but it became famous when engineers working with Grace Hopper found a moth inside the computer.
+</details>
+
+<br/>
+
+
+Over the next several levels, you will learn some important debugging techniques that you will need to use to be successful while building your digital assistant. Use the activity guide linked below as you go through these levels.
+
+* <a href="https://docs.google.com/document/d/1hkcIWr0YwJUMxNI8mKeV1LdHCHSx2eOfyJTlEqykevo/edit?usp=sharing">Debugging Activity Guide</a>
+
+<br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

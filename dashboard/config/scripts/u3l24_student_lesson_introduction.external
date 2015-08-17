@@ -1,0 +1,24 @@
+name 'U3L24 Student Lesson Introduction'
+title 'Chained Conditionals'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 24 - Chained and Nested Conditionals
+
+# Background
+To make your digital assistant respond to user input, you must evaluate keywords within the input using conditionals (also known as selection). More complex conditionals - chained and nested if-statements - will enable your digital assistant to generate unique responses to a specific set of keywords. Once your digital assistant is able to respond to multiple different inputs, you need to prove it works correctly.
+
+# Lesson
+
+* Add chained and nested conditionals to the digital assistant project
+* Test and debug a program with logic errors
+* Use boolean functions within an if statement to direct the logical flow of a program
+  
+# Resources
+* Worksheet: <a href="https://docs.google.com/document/d/1K8I7CDCGf4V5Z4m8DoKeamxC_IUid3mtsCRmo9hTokY/edit?usp=sharing" target="_blank">Warm Up</a>
+* Activity Guide: <a href="https://docs.google.com/document/d/1hkcIWr0YwJUMxNI8mKeV1LdHCHSx2eOfyJTlEqykevo/edit?usp=sharing" target="_blank">Debugging Conditionals</a>
+* Rubric: <a href="https://docs.google.com/document/d/1MvrtJUAhzauLNjQMLxd6Cjiq_3uuDXsYmUMz7iy4ric/edit?usp=sharing" target="_blank">Digital Assistant</a> (for reference - entire project is not due until all concepts have been covered)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+

@@ -62,7 +62,7 @@ pt-BR:
         text: Oi, eu sou a Paola! Nesses desafios, você é uma fazendeira que precisa deixar seu terreno completamente plano para começar o plantio.
       2:
         image: notes/stage9_2.jpg
-        text: Você precisa ajudá-la a remover todas os montes de terra e preencher todos os buracos.
+        text: Você precisa ajudá-la a remover todos os montes de terra e preencher todos os buracos.
       3:
         image: notes/stage9_3.jpg
         text: Os novos blocos removem 1 pá de terra de um monte, e preenchem o buraco com 1 pá de terra.
@@ -78,7 +78,7 @@ pt-BR:
         text: Sempre que alguém clica, digita, ou toca na tela de um celular, é gerado um EVENTO, e existe alguns códigos que decidem o que fazer quando um EVENTO ocorre.
       3:
         image: notes/flappy03.jpg
-        text: 'Por exemplo, você poderia ter um MANIPULAR DE EVENTOS que diz "quando o mouse for clicado, toque um som" '
+        text: 'Por exemplo, você poderia ter um MANIPULADOR DE EVENTOS que diz "quando o mouse for clicado, toque um som" '
       4:
         image: notes/flappy04.jpg
         text: Você já ouviu falar do jogo Flappy Bird? Usando manipuladores de eventos, vamos aprender a programar nossa própria versão do Flappy Bird!
@@ -370,7 +370,7 @@ pt-BR:
         image: notes/playlab_events_2.png
         text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar uma tecla de direção ou tocar a tela.'
       3:
-        image: notes/playlab_events_3.png
+        image: notes/playlab_events_2.png
         text: 'Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento "quando clicado" será realizado. O que seu alienígena diz?'
       4:
         image: notes/playlab_events_4.png

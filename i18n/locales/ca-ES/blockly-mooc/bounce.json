@@ -15,7 +15,7 @@
   "ifTooltip":"Si hi ha un camí en la direcció especificada, fer algunes accions.",
   "ifelseTooltip":"Si hi ha un camí en la direcció específicada, fer el primer bloc d'accions. En cas contrari, fer el segon bloc d'accions.",
   "incrementOpponentScore":"punt de puntuació per l'oponent",
-  "incrementOpponentScoreTooltip":"Afegeix u a la puntuació de l'oponent.",
+  "incrementOpponentScoreTooltip":"Incrementar en u la puntuació de l'oponent actual.",
   "incrementPlayerScore":"punt",
   "incrementPlayerScoreTooltip":"Afegeix u a la puntuació del jugador.",
   "isWall":"és una paret",

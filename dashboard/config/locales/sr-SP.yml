@@ -1,4 +1,7 @@
 "sr":
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   activerecord:
     errors:
       messages:
@@ -19,10 +22,11 @@
           future: не може бити у будућности
   hello: Здраво свете
   welcome_back: Добродошао назад, %{name}
+  submit: Пошаљи
   add_teacher_form:
     code:
       label: 'Додај наставника:'
-      placeholder: Шифра (ABCDEF)
+      placeholder: Section Code (ABCDEF)
     submit: Додај наставника
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
@@ -61,9 +65,13 @@
     need_confirmation: Нисте примили инструкције за потврду?
     need_unlock: Нисте примили инструкције за откључавање?
   signup_form:
-    overview_student: Sign up for an account to track your progress.
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
+    overview_student: Sign up for an account to track your progress. Your email is
+      primarily used to allow you to log in and for password recovery. For more information,
+      see our <a href="http://code.org/privacy">Privacy Policy</a>.
     overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to track your students' progress and get rewards.
+      account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: Можете <a target="_blank" href="http://learn.code.org">претраживати
       разне нивое и загонетке</a>, али ће те морати да се пријавите како бих запамтили
       ваш напредак.
@@ -87,10 +95,13 @@
     valid_password: Валидна лозинка!
     invalid_password: Лозинка мора имати барем 6 знакова
     mismatch_password: Лозинке се не поклапају
-    student_terms: Слажем се и обавезујем са Code.org условима коришћења. Ако сам
-      млађи од 13 година, овом пријавом потврђујем да имам дозволу родитеља или старатеља
-      за коришћења Code.org услуга.
-    teacher_terms: Слажем се и обавезујем са Code.org условима коришћења.
+    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>. If I am under 13 years of age, I confirm by submitting this
+      form that I have my parent or legal guardian's permission to use the Code.org
+      services.<br/>For users under 13, email addresses are not stored in a form that
+      allows us to contact them.
+    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
+      of service</a>.
     additional_information: We need some additional information to continue signing
       you up.
   signin_form:
@@ -140,7 +151,7 @@
       no_teacher: Нисмо нашли никога пријавлјеног са '%{teacher_email_or_code}'. Молимо
         затражите да се поновно пријаве и онда их покушајте поновно додати
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Молимо унесите шифру или учитељеву имејл адресу
+      blank_code: Please enter a section code
       cant_join_own_section: Sorry, you can't join your own section.
     mail:
       invite_student:
@@ -199,8 +210,8 @@
         Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
         only valid to U.S. students, and only as long as supplies last.'
       teacher:
-        earned: 10 или више студената је сакупило све %{num_trophies} трофеје. Освојили
-          сте учитељску награду!(Само за учитеље из САД-а)
+        earned: 15 or more students collected all %{num_trophies} trophies. You have
+          won a teacher prize! (U.S. teachers only)
         not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
           only)
@@ -246,8 +257,10 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Почетна страница за учитеље
+      district_dashboard: District Dashboard
       label: Здраво %{username}
       stats: Мој напредак
       settings: Мој рачун
@@ -257,6 +270,7 @@
       signup: Региструј се
       already_registered: Already registered?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Напредак
       lines: 'Укупно линија кода: %{lines}'
       close: ЗАТВОРИ
@@ -332,16 +346,25 @@
       because you have not registered an e-mail address'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: студент
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (остави празно ако не желиш промијенити)
     current_password_hint: (потребна нам је твоја тренутна лозинка како би потврдили
       твоје промјене)
-    cancel:
-      title: Угаси мој рачун
-      hint: Незадоволјни?
-      button: Угаси мој рачун
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Готово
     tried: Покушао
@@ -350,14 +373,18 @@
     show_more: Покажи још
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: Мој напредак
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
-    signin_message: Или ако сте већ регистровани, %{link}
+    signin_message: Already registered? %{link}
     student_reg_link: Регистрација за Ученике
     teacher_reg_link: Регистрација за Учитеље
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
     teacher_dashboard: Видјети плочу напретка
     teacher_student_count_one: Имате %{count} студената.
     teacher_student_count: Ви имате %{count} студената.
@@ -376,8 +403,9 @@
     local_school: локална школа
     online: пријавлјен
     see_details: Погледај деталје
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
+    view_course: View Course
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 'Или, можеш прво да пробаш, а да се региструјеш касније:'
     trynow: Испробај сада
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -388,10 +416,14 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our previous course for</h2><h1>Existing Students</h1>
+    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
+    no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Мушко
     female: Женско
@@ -400,19 +432,17 @@
     student: студент
     teacher: Учитељ
   footer:
-    help_from_html: Инженјери са <a href="http://www.google.com">Google</a>, <a href="http://www.microsoft.com">Microsoft</a>,
-      <a href="http://www.facebook.com">Facebook</a>, и <a href="http://www.twitter.com">Twitter</a>
-      су помогли направити овај туторијал.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 <a href="http://www.rovio.com">Rovio
-      Entertainment Ltd</a>. All Rights Reserved.<br/> Plants vs. Zombies&trade; &
-      &copy; 2013 <a href="http://www.ea.com">Electronic Arts Inc.</a>. All Rights
-      Reserved.
+    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create this tutorial.
+    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
+      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. All Rights Reserved.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Обезбедити податке о резултатима
     translate: Помози нам превести на твој језик
     support: Support
     support_url: http://support.code.org
-    tos: Увјети кориштенја
+    tos: Terms
     privacy: Политика приватности
     secure: Secure Version
   reference_area:
@@ -421,7 +451,7 @@
     teacher: Погледај решење
     auth_error: Ниси овлашћен/а да видиш решење.
     submit: Update Artist Location
-    direction: Start Direction
+    direction: Start Direction (in degrees)
   video:
     tab: Видео.
     notes: Нема видеа? Покаћи забилјешке.
@@ -455,10 +485,10 @@
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Click 'Run program' to see my program in action
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: I wrote the code myself with Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -471,7 +501,7 @@
   builder:
     created: You created a new script.
     destroyed: You destroyed a script.
-    manage: Manage Scripts
+    manage: Build Levels
     view: View
     back: Back to scripts
     success: You successfully edited the blocks.
@@ -487,9 +517,13 @@
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: Овај 20-часовни  курс представља срж компјутерских наука и програмерских
+        основа. Курс је дизајниран за употребу у учионицама за разреде К-8, али је
+        забавно учити у било којем животном периоду.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -498,6 +532,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Students made these with code!
@@ -515,7 +552,9 @@
     header_playlab: Play Lab
     header_artist: Artist
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Give Feedback
@@ -527,13 +566,27 @@
     wrong_body: The answer you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Incorrect solution
     wrong_body: The solution you've entered is not correct.  Please try again!
     correct_title: Correct
     correct_body: That is the correct answer.
+  contract_match:
+    wrong_title: Incorrect answer
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: У реду
   time:
@@ -568,7 +621,7 @@
           title: Слагалица
           description: ''
         step:
-          title: Step
+          title: Корак
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -586,11 +639,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Сачувај
+    delete: Обриши
+    exit: Return to Course
+    my_projects: My Projects
+    share: Подели
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Више
+    name: Име
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Желите ли да избришете?
+    delete_yes: Да
+    delete_no: не
+    saved: Saved
+    not_saved: Not saved
+    cancel: Откажи
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

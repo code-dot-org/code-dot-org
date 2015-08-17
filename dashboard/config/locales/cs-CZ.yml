@@ -1,4 +1,7 @@
 "cs":
+  errors:
+    messages:
+      not_saved: 'Oprav prosím následující chyby:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: nemůže být v budoucnosti
   hello: Ahoj světe
   welcome_back: Vítej zpět, %{name}
+  submit: Odeslat
   add_teacher_form:
     code:
       label: 'Přidat učitele:'
@@ -61,6 +65,8 @@
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
     need_unlock: Nezískal si instrukce pro odemčení?
   signup_form:
+    student_count: Již se registrovalo %{count} studentů.
+    teacher_count: Již se přihlásilo %{count} učitelů.
     overview_student: Vytvořte si účet, abyste mohli sledovat svůj postup.. Váš email
       slouží především k přihlášení a pro obnovení hesla. Další informace naleznete
       v našich <a hrefshttp://code.org/privacy"> Zásadách ochrany osobních údajů</a>.
@@ -70,9 +76,10 @@
       různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil
       tvůj pokrok.
     teacher_educator_guide: Podívat se na průvodce učitele
-    teacher_pitch: Vyučuj K-8 Úvod do Počítačových Věd ve své třídě
+    teacher_pitch: Registrace učitelů  zde.
     teacher_title: Registrace učitele
-    student_pitch: 'Po 1 hodině: vyzkoušej náš K-8 Úvod do Počítačových Věd'
+    student_pitch: |
+      Registrace studentů zde.
     student_title: Student přihlásit se
     school_name: Název školy (volitelné)
     school_address: Adresa školy (volitelné)
@@ -89,12 +96,12 @@
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
     mismatch_password: Zadaná hesla se neshodují
-    student_terms: Závazně souhlasím s podmínkami služeb Code.org. Je-li mi méně než
-      13 let, stvrzuji odesláním tohoto formuláře, že mám svolení svých rodičů či
-      právních zástupců k používání služeb na Code.org.
-    teacher_terms: Závazně souhlasím s podmínkami služeb Code.org.
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: Souhlasím s <a href="http://code.org">podmínkami</a> Code.org.
+      Pokud jsem mladší 13 let, Potvrzuji odesláním formuláře, že moji rodiče mi dovolují
+      používat Code.org <br/> Uživatelům mladším 13 let není uchovávána emailovová
+      adresa.
+    teacher_terms: Souhlasím s  <a href='http://code.org/tos'>podmínkami</a> Code.org
+    additional_information: Potřebujeme další informace pro pokračování vaši registrace.
   signin_form:
     title: Máš již účet? Přihlaš se
     login: Uživatelské jméno nebo e-mail
@@ -102,11 +109,11 @@
     remember: Zapamatuj si mne
     submit: Přihlásit
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Chcete zkusit kódovat bez registrace?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
     try_20hours: Vyzkoušej náš 20ti hodinový Úvod do počítačové vědy
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: Vítejte v %{section_name}
     name: Vyberte si své jméno
     picture: Now find your secret picture
     words: Now enter your secret words
@@ -244,8 +251,10 @@
       free_play:
         playlab: Vytvořit aplikaci
         artist: Nakresli něco
+        calculate: Calculate Something
     user:
       classroom: Domovská stránka pro učitele
+      district_dashboard: District Dashboard
       label: Ahoj %{username}
       stats: Můj pokrok
       settings: Můj účet
@@ -255,6 +264,7 @@
       signup: Registrace
       already_registered: Už jste zaregistrováni?
     popup:
+      progress_for_user: '%{name}''s progress'
       progress: Tvůj pokrok
       lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
@@ -330,15 +340,24 @@
       učitel, protože jsi nezaregistroval e-mailovou adresu'
     student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro
       %{student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: student
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
     new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
     current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změny)
-    cancel:
-      title: Zrušit účet
-      hint: Nešťastný?
-      button: Zrušit účet
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: 'Please note: deleting your account will not delete
+      your students'' accounts.'
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Dokončeno
     tried: Snažil se
@@ -348,19 +367,23 @@
     classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Přehled kurzů 1, 2 a 3
     lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
     student_reg_link: Přihlásit se jako student
     teacher_reg_link: Přihlásit se jako učitel
-    signin_directions: Use an account to track progress and get rewards.<br/> Teachers,
-      track your entire class.
+    signin_directions: Use an account to track progress.<br/> Teachers, track your
+      entire class.
     teacher_dashboard: Zobrazit tabulku pokroku
     teacher_student_count_one: Máš %{count} studenta.
     teacher_student_count: Máš %{count} studentů.
     teacher_averages: Tví studenti v průměru získali %{trophy_average} z %{trophy_max}
       trofejí "Mistrovství Pojetí".
-    teacher_print_certificates: Vytisknout certifikáty pro studenty, kteří dokončili
+    teacher_print_certificates: Vytisknout  osvědčení pro studenty, kteří dokončili
       tento kurz
     teacher_read_blog: Přečti si o novinkách a aktualizacích našich materiálů na našem
       blogu Educator
@@ -374,8 +397,9 @@
     local_school: místní škola
     online: online
     see_details: Viz podrobnosti
-    prize_info: 'Prizes for participation (U.S. only): $10 gift cards for student
-      completion and up to $1,000 in classroom rewards for public school teachers'
+    view_course: View Course
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
+      $1,000 in classroom rewards.'
     tryfirst: 'Nebo to můžeš nejdřív zkusit a zaregistrovat se později:'
     trynow: Vyzkoušej hned
     add_hint_help: Please help us to add smart hints to Code.org tutorials
@@ -386,10 +410,14 @@
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Elementary Students</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
     your_gallery: Galerie
+    no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Muž
     female: Žena
@@ -451,10 +479,10 @@
   download_coming_soon: Aktivita ke stažení již brzy.
   video_coming_soon: Video Coming Soon!
   share_code:
-    title: Klikni na "Spustit program" a uvidíš můj program v akci
+    title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Podívej se na moji hru Flappy
-    studio_og_title: Check out my story
+    studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
     og_description: Napsal jsem kód s Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
@@ -483,9 +511,13 @@
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
-    20hour:
-      title: Úvodní kurz
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd
+        a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
+        ale jistě bude bavit studenty jakéhokoliv věku.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -494,6 +526,9 @@
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Studenti tyto nakreslili kódem!
     students_made_these_with_code: Studenti tyto vytvořili kódem!
@@ -509,9 +544,11 @@
     caption_time_ago: před %{time_ago}
     header: Galerie
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: Umělec
   landing:
-    prerelease: This page is still under development.
+    prerelease: This course is in <span class='betatext'>beta</span>.  This means
+      it is not the final version of the course, and is subject to revision as feedback
+      is received and improvements are made.
     prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
       is subject to revision as feedback is received and improvements are made.
     feedback: Poskytnout zpětnou vazbu
@@ -523,13 +560,27 @@
     wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
     correct_title: Správně
     correct_body: To je správná odpověď.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nesprávné řešení
     wrong_body: Řešení, které jste zadali, není správné.  Opakujte akci!
     correct_title: Správně
     correct_body: To je správná odpověď.
+  contract_match:
+    wrong_title: Nesprávná odpověď
+    badname: Your contract has the wrong name.
+    badname_case: Function names are case-sensitive. Try changing the case of your
+      contract's name.
+    badrange: Your contract has the wrong range.
+    baddomainsize: Your contract doesn't have the right number of items in the domain.
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are
+      in the wrong order.
   text_match:
     placeholder: Zadejte svou odpověď zde
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: OK
   time:
@@ -582,11 +633,48 @@
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
   progress:
-    not_completed: nedokončeno
+    not_started: not started
+    in_progress: rozpracováno
     completed_too_many_blocks: dokončeno, až příliš mnoho bloků
     completed_perfect: dokončeno, perfektní
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: Courses you're working on
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: Uložit
+    delete: Odstranit
+    exit: Return to Course
+    my_projects: My Projects
+    share: Sdílet
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: Více
+    name: Jméno
+    updated: Updated
+    project_type: Project Type
+    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
+      below to make a new Play Lab or Artist project!<br/>You can come back and work
+      on your projects at any time.
+    need_help: Need help getting started?
+    really_delete: Odstranit?
+    delete_yes: Ano
+    delete_no: Ne
+    saved: Saved
+    not_saved: Not saved
+    cancel: Storno
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your
+      My Projects list. Anyone you have shared the link to will no longer be able
+      to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: Click 'Remix' to spin-off your own version!

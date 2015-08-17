@@ -1,0 +1,25 @@
+name 'U3L30 Student Lesson Introduction'
+title 'An Introduction to Arrays'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 30 - An Introduction to Arrays
+
+# Background
+
+Variables are ill-suited for storing lists. However, arrays can solve many of the shortcomings of trying to use a variable to store multiple items. The array index is important. It begins at 0 and is used to access the items in an array and it defines the length of an array.
+
+# Lesson
+
+* Learn how to design arrays to hold a variety of information.
+* Create an array in App Lab. 
+
+
+
+# Resources
+* Activity: <a href="https://docs.google.com/document/d/1DxxduJEKepEWUu2qH_pEtGPqfZmvL_k_iNYAGUaE41s" target="_blank">
+My Favorite Things
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

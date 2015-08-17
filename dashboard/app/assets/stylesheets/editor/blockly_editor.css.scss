@@ -1,7 +1,7 @@
 /*
  *= require codemirror
  *= require_self
- *= require_directory .
+ *= require jquery.handsontable.full
  */
 .CodeMirror {
   border: 1px solid #eee;
@@ -13,4 +13,33 @@
 }
 .CodeMirror-matchingtag {
   background: rgba(255, 150, 0, .3);
+}
+
+.contract-editor-config td {
+  text-align: center;
+}
+
+h2, h3 {
+  margin: 0;
+  border-top: 2px solid #EEE;
+}
+
+h2 {
+  padding-top: 2em;
+}
+
+h3 {
+  padding-top: 1em;
+}
+
+table.checkboxes {
+  td, th {
+    padding: 0 0.5em;
+    vertical-align: top;
+  }
+
+  label {
+    font-size: 13px;
+    font-weight: bold;
+  }
 }

@@ -2,15 +2,36 @@
 title: About Us
 nav: about_nav
 ---
+
+<%
+  stats = Properties.get_user_metrics
+%>
+
 # About Us
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
+
+[col-25]
+
+# Diversity across 6M students in our courses
+
+[/col-25]
+
+[col-75]
+
+![image](/images/infographics/fit-500/diversity-courses.png)
+
+[/col-75]
+
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning.
+
+<br />
 
 [col-50]
 
 **Code.org's work covered by CBS This Morning:**
 
-<embed src="http://www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="375" height="246" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=http://www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
+<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
 
 [/col-50]
 
@@ -29,28 +50,35 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
-| Inspire students | Over 75 million students have tried the [Hour of Code](/learn). |
-| Create fantastic  courses | 99% of teachers recommend the Code.org [intro CS curriculum](http://learn.code.org) |
-| Reach classrooms | Our [intro course](http://studio.code.org) is in 70,000 classrooms, reaching 3M students |
-| Improve diversity in CS | In our online courses, [41% of the students are girls](http://codeorg.tumblr.com/post/98856300118/diversity), and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity) |
-| Prep new CS teachers | We've prepared 3,000 new teachers across grades K-12. |
-| Change school district curriculum | [60+ districts](/educate/partner-districts) are adding [CS classes](/educate/curriculum) with us, including all the largest 7 in the US|
+| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
+| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
+| Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
+| Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
+| Prep new CS teachers | We've prepared 9,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
+| Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 30+ languages, used in all 180+ countries. |
 
+<br/>
+<br/>
+
+<%= view :testimonials %>
 
 <br/>
 <br/>
+
 ## More information, history, and philosophy
-Code.org launched in 2013 as a project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. To support that goal, we are doing work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
+Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few. 
+
+To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
-- [Code.org overview brochure (PDF)](/files/Code.orgOverview.pdf)
-- [A letter from our founder addressing our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
+- [Code.org 2014 Annual Report](/about/2014)
+- [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
+- [A letter from our founder addressing misconceptions about our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
 
-
-We believe that a quality computer science education should be available to every child, not just a lucky few. All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 <hr/>
 
@@ -97,17 +125,7 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 <hr/>
 
 
-## Advocacy
-
-For federal and local advocacy, Code.org collaborates with our sister organization, [Computing in the Core](http://computinginthecore.org). 
-
-Computing in the Core (CinC) is a non-partisan advocacy coalition of associations, corporations, scientific societies, and other non-profits that strive to elevate computer science education to a core academic subject in K-12 education. [Learn more about Computing in the Core](http://computinginthecore.org).
-
-
-<hr/>
-
-
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="http://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
-</a>
+</a> [![image](/images/fit-100/privacy.jpg)](http://studentprivacypledge.org/)
 

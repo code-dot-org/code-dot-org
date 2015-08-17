@@ -6,17 +6,17 @@ title: "Bee: Conditionals" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>7, :title=> 'Bee: Conditionals', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In the Bee environment, students write programs with conditional statements. Students originally learned this concept in Course 2, but this lesson introduces more complex implementations of conditionals.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In the Bee environment, students write programs with conditional statements. Stu
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -44,7 +44,7 @@ In the Bee environment, students write programs with conditional statements. Stu
   * Nest conditionals to analyze multiple value conditions using if, else if, else logic
   * Write functions that execute nested conditionals
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -58,7 +58,7 @@ Review conditional statements with students.
   * When are they useful?
   * What conditional did we use in the Course 2 Bee Conditionals?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -68,7 +68,7 @@ Review conditional statements with students.
 
 In the Course 2 Bee Conditionals, we only looked at simple conditionals called "if statments," such as "if there is one nectar, collect it." Bascially, we are saying if a statement is true, do something. In this stage we are going to look at what to if that statement is *not* true, we call these "if, else" statements.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -104,7 +104,7 @@ In the Course 2 Bee Conditionals, we only looked at simple conditionals called "
       * Did any two programs return the same answer?
       * Did any return something different?
 
-[/together]
+[/juntos]
 
 [standards]
 

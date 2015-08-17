@@ -1,0 +1,15 @@
+/ This partial contains general content-display code applicable across all of our content-based level types.
+/ Set 'data' and 'app' to use this partial.
+- app, data, content_class = %i(app data content_class).map{ |x| local_assigns[x] }
+
+%h2!= string_or_image(app, data['title']) unless app == 'external'
+%div.content-level{class: (content_class unless content_class.blank?)}
+  - unless app == 'external'
+    %p.content1!= string_or_image(app, data['content1']) unless data['content1'].blank?
+    %p.content2!= string_or_image(app, data['content2']) unless data['content2'].blank?
+    %p.content3!= string_or_image(app, data['content3']) unless data['content3'].blank?
+  / Markdown support using the 'markdown' property.
+  - if data['markdown'].present?
+    #markdown
+      / Render markdown text through the ActionView template engine.
+      = ActionView::Base.new.render(inline: data['markdown'], type: :md)

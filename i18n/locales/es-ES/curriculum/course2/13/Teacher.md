@@ -6,17 +6,17 @@ title: "Bee: Conditionals" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>13, :title=> 'Bee: Conditionals', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Up until this point all the programs your students have written should run exactly the same way every time - reliable, but not very flexible. In this stage we introduce the conditional statement, code that functions differently depending on the conditions it encounters.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Up until this point all the programs your students have written should run exact
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -43,7 +43,7 @@ Up until this point all the programs your students have written should run exact
   * Execute an algorithm with a conditional statement
   * Solve puzzles using a combination of looped sequences and conditionals
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -59,7 +59,7 @@ Review the Conditionals with Cards activity with your students.
 
 Now we're going to use conditionals with our bee to help us deal with some mysterious purple flowers. We don't know if those flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -67,7 +67,7 @@ Now we're going to use conditionals with our bee to help us deal with some myste
 
 ### <a name="Activity"></a> [Bee: Conditionals](http://learn.code.org/s/course2/stage/13/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -103,7 +103,7 @@ Now we're going to use conditionals with our bee to help us deal with some myste
       * Did any two programs return the same answer?
       * Did any return something different?
 
-[/together]
+[/juntos]
 
 [standards]
 

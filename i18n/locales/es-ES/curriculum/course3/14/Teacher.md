@@ -4,19 +4,19 @@ title: "Bee: Debugging" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>10, :title=> 'Bee: Debugging', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>14, :title=> 'Bee: Debugging', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors including missing blocks, extra blocks, and misordered blocks.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Debugging is an essential element of learning to program. In this lesson, studen
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -42,7 +42,7 @@ Debugging is an essential element of learning to program. In this lesson, studen
   * Identify an algorithm that is unsuccessful when the steps are out of order
   * Reflect on the debugging process in an age-appropriate way
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -58,7 +58,7 @@ Ask students about problems they solve in everyday life.
   * We call the problems in these programs "bugs," and it will be your job to "debug" them.
   * Brainstorm different ways to find and fix bugs.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -68,7 +68,7 @@ Ask students about problems they solve in everyday life.
 
 As your students work through the puzzles, observe how they search for bugs. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems. Have students follow the path described by the code with their fingers to find potential bugs.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -83,7 +83,7 @@ As your students work through the puzzles, observe how they search for bugs. Ide
 
 Have students go back through previous levels, purposfully adding bugs to their solutions. They can then ask other students to debug their work. This can also be done with paper puzzles.
 
-[/together]
+[/juntos]
 
 [standards]
 

@@ -59,3 +59,24 @@ he:
       not_saved:
         one: 'שגיאה 1 עצרה את תהליך השמירה עבור %{resource}:'
         other: '%{count} שגיאות עצרו את תהליך השמירה עבור %{resource}:'
+    invitations:
+      send_instructions: 'הודעת הזמנה נשלחה ל%{email}.'
+      invitation_token_invalid: אסימון ההזמנה שסופק אינו תקין!
+      updated: הסיסמה שונתה בהצלחה. אתה עכשיו מחובר.
+      no_invitations_remaining: לא נותרו הזמנות
+      invitation_removed: ההזמנה שלך הוסרה.
+      new:
+        header: שלח הזמנה
+        submit_button: שלח הזמנה
+      edit:
+        header: קבע את הסיסמה שלך
+        submit_button: קבע את הסיסמה שלי
+    mailer:
+      invitation_instructions:
+        subject: הוראות הזמנה
+        hello: 'שלום %{email}'
+        someone_invited_you: 'מישהו הזמין אותך ל%{url}, אתה יכול לאשר זאת בעזרת הקישור למטה.'
+        accept: אשר הזמנה
+        ignore: |
+          אם אתה לא רוצה לאשר את ההזמנה, אנא התעלם ממייל זה.<br />
+          לא ניתן ליצור את החשבון שלך עד שתיכנס לקישור למעלה ותקבע את הסיסמה שלך.

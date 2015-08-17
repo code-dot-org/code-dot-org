@@ -6,17 +6,17 @@ title: "Play Lab: Create a Story" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 2', :lesson=>17, :title=> 'Play Lab: Create a Story', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this culminating plugged activity, students will have the opportunity to apply all of the coding skills they've learned to create an animated story. It's time to get creative and create a story in the Play Lab!
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ In this culminating plugged activity, students will have the opportunity to appl
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ In this culminating plugged activity, students will have the opportunity to appl
   * Create an animated, interactive story using sequence, loops, and event-handlers
   * Share a creative artifact with other students
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -55,15 +55,15 @@ Review the event handling students did in Flappy:
   * Now you're going to animate multiple characters using events triggered by the arrow keys to tell a story.
   * This is your chance to get really creative!
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!
 
-[/tip]
+[/sugerencia]
 
 [together]
 
@@ -73,7 +73,7 @@ Students will have the opportunity to share their final product with a link. Thi
 
 This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, partiularly for students who are overwhelmed by too many options.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -96,7 +96,7 @@ When you share a link to your story, you also share all of the code that goes be
       * What would you like to try?
   * Choose someone else's story and build on it. (Don't worry; the original story will be safe.)
 
-[/together]
+[/juntos]
 
 [standards]
 

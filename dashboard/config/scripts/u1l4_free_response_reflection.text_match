@@ -1,0 +1,12 @@
+name 'U1L4 Free Response Reflection'
+title 'Reflect on this lesson'
+content1 ''
+placeholder 'Enter your reflection here.'
+
+
+markdown <<MARKDOWN
+A binary message was recorded as a wave as shown in the image below. Can you decode the message? Explain what information you would need in order to successfully decode the message into A’s and B’s.
+
+![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
+
+MARKDOWN

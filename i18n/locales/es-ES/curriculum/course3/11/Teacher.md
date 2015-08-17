@@ -10,17 +10,17 @@ live preview (once saved to dropbox) is at http://staging.code.org/curriculum/k-
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>11, :title=> 'Artist: Nested Loops', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Students use the Artist environment to write programs that have looped statements inside another loop, which is called a nested loop.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -35,9 +35,9 @@ Students use the Artist environment to write programs that have looped statement
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,7 +47,7 @@ Students use the Artist environment to write programs that have looped statement
   * Break complex tasks into smaller repeatable sections
   * Combine simple shapes into complex designs with nested loops
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -55,7 +55,7 @@ Students use the Artist environment to write programs that have looped statement
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -63,7 +63,7 @@ Students use the Artist environment to write programs that have looped statement
 
 ### <a name="Activity"></a> [Artist: Nested Loops](http://learn.code.org/s/course3/stage/11/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -74,7 +74,7 @@ Students use the Artist environment to write programs that have looped statement
 
 <a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
-[/together]
+[/juntos]
 
 [standards]
 

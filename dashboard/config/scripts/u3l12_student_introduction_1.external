@@ -1,0 +1,22 @@
+name 'U3L12 - Student Introduction 1'
+title 'Events Unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 12 - Events Unplugged
+# Background
+
+Modern programming is often event-driven rather than sequential. Sequential programs are predictable; they start at a beginning point and progress to the end point with occasional branches to control structures or functions. Event-driven programs do not progress in a predictable order. Events outside of the program, such as mouse clicks and key presses, control the asynchronous execution of the program and can create unique issues.
+
+
+# Lesson
+
+* Participate in an event-driven programming simulation using playing cards.
+* Examine the problems that can arise in event-driven programming.
+
+# Resources
+
+* Activity Guide: <a href="https://docs.google.com/document/d/1mcoLUM7mIQalnlrnm_MANVybvT4lbBR2My3kQmB1hrc/edit?usp=sharing" target="_blank">Mission Unsortable</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

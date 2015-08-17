@@ -6,17 +6,17 @@ title: Songwriting view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Songwriting', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 20 minutes
 
@@ -28,7 +28,7 @@ One of the most magnificent structures in the computer science world is the func
 
 4) [Songwriting](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 6) [Vocab Shmocab](#Shmocab)
@@ -37,9 +37,9 @@ One of the most magnificent structures in the computer science world is the func
 
 7) [Songwriting Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,27 +47,28 @@ One of the most magnificent structures in the computer science world is the func
   * Identify sections of a song to pull into a function (chorus)
   * Describe how functions can make programs easier to write
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * [Songwriting Worksheet](Activity9-Songwriting.pdf)
   * Pens & Pencils
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/TaH7myEVHz0?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * Print several [Songwriting Worksheets](Activity9-Songwriting.pdf) for each group
   * Print one [Songwriting Assessment](Assessment9-Songwriting.pdf) for each student. 
   * Access to the internet, or pre-downloaded songs and lyrics for activity
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -87,24 +88,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Function** - Say it with me: Func-shun   
 A piece of code that you can call over and over again
@@ -134,15 +135,15 @@ Now, imagine that this song is a computer program. Defining a title (like "choru
 
 We are going to play with songs a little more, to try to really understand how often this technique is used!
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 To hit this point home, you can look up the lyrics for some popular songs on the Internet. Show the students that the standard for repeating lyrics is to define the chorus at the top and call it from within the body of the song.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -171,9 +172,9 @@ Play this game over and over until the class has little trouble identifying the 
 
   * It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement. 
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 It's most exciting for students to do this lesson with popular music from the radio, but if you're having a hard time finding appropriate songs where the lyrics repeat exactly, here are a few timeless options:
 
@@ -182,13 +183,13 @@ It's most exciting for students to do this lesson with popular music from the ra
   * [How Much Is That Doggie in the Window](https://www.youtube.com/watch?v=iApAn0whVZE)
   * [I Love Trash](https://www.youtube.com/watch?v=rxgWHzMvXOY)
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -196,13 +197,13 @@ It's most exciting for students to do this lesson with popular music from the ra
   * Do you think it's possible to make multiple choruses for the same song?
   * Does it make sense to make a new chorus for every time it's needed in a song?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -215,7 +216,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -226,7 +227,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -253,7 +254,7 @@ Use these activities to enhance student learning. They can be used as outside of
       * Cross out everywhere the repeating actions appear in the program and write "Chorus" instead.
   * Repeat until the class can go through this process with little direction.
 
-[/together]
+[/juntos]
 
 [standards]
 

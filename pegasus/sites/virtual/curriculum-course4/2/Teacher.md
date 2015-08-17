@@ -20,9 +20,9 @@ This course is a review of maze concepts from Courses 2 and 3. Students will fir
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Maze**
+### **Activity: Maze and Bee**
 
-[Maze](#Activity)
+[Maze and Bee](#Activity)
 
 ### **Extended Learning**
 
@@ -58,7 +58,7 @@ Review with students the basic maze navigation, particularly:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze](http://learn.code.org/s/course4/stage/2/puzzle/1)
+### <a name="Activity"></a> [Maze and Bee](http://learn.code.org/s/course4/stage/2/puzzle/1)
 
 As your students work through the puzzles, observe how they plan the path for the zombie or bee. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 You may want to go through a few puzzles on the projector. While doing this you can ask a one student to trace the path on the screen while another writes the directions on a whiteboard.

@@ -7,7 +7,7 @@
           ilk zevkli adımlarını atalım.
       2:
         image: notes/hoc1_2.jpg
-        text: Kod yazmak için blokları sürükleyip bırakacağınız bir görsel programlama
+        text: Kod yazmak için, blokları sürükleyip bırakacağınız bir görsel programlama
           dili olan Blockly'i kullanacağız.
       3:
         image: notes/hoc1_3.jpg
@@ -40,12 +40,12 @@
       10:
         image: notes/hoc1_10.jpg
         text: Her blok bir talimattır. Eğer "ileri taşı" bloğunu çalışma alanına sürükleyip
-          "Programı Çalıştır"a basarsanız, kuş labirent üzerinde bir boşluk hareket
-          eder.
+          "Programı Çalıştır"a basarsanız, kuş labirent üzerinde bir boşluk kadar
+          hareket eder.
       11:
         image: notes/hoc1_11.jpg
-        text: Bir hareket daha yapmak için, çalışma alanınızda birçok blok sürükleyebilir
-          ve onları birlikte ekleyebilirsiniz. Kuş yukarıdan aşağıya doğru komutları
+        text: Birden fazla eylem yapmak için, birden fazla bloğu çalışma alanına sürükleyebilir
+          ve birbirlerine ekleyebilirsiniz. Kuş komutları yukarıdan aşağıya doğru
           yapacaktır.
       12:
         image: notes/hoc1_12.jpg
@@ -86,8 +86,7 @@
           etmelisin.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: Yeni bloklar, bir kürek dolusu toprağı yığından alıp deliğe doldurur.
       4:
         image: notes/stage9_4.jpg
         text: Farklı boyutlarda yığın ve delikler olduğu için çiftçiye kaç kürek dolusu
@@ -95,8 +94,8 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: Merhabai Ben Katie! Bilgisayar bilimi hakkında en heyecan verici şeylerden
+          birisi bilgisayar programının etkileşimli olabilmesidir.
       2:
         image: notes/flappy02.jpg
         text: Any time somebody clicks or taps or types on a computer or phone, that
@@ -117,8 +116,8 @@
           by real code.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'Workspace''e bir göz atarsanız, sizin için doldurulan bazı yeşil bloklar
+          göreceksiniz - bunlar "event handlers" '
       7:
         image: notes/flappy07.jpg
         text: If you want the bird to FLAP when you CLICK the mouse, you can do that
@@ -214,24 +213,24 @@
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Selam, benim adım Saloni. Bilgisayar Bilimlerini sağlık ve ilaç sorunlarını
-          çözmeye yardımcı olmak için kullanıyorum. Hadi "eğer değilse" bloğu hakkında
-          bir şeyler öğrenelim. "eğer" bloğu gibi görünüyor ama sonunda "değilse"
+        text: Selam, benim adım Saloni. Bilgisayar bilimlerini sağlıksal ve tıbbi
+          sorunları çözmeye yardımcı olmak için kullanıyorum. Hadi "if else" bloğu
+          hakkında bir şeyler öğrenelim. "if" bloğu gibi görünüyor ama sonunda "else"
           diyen fazladan bir parçası var.
       2:
         image: notes/hoc5_2.jpg
-        text: Eğer "yap" diyen noktaya "ilerle" blogu ve "başka" diyen noktaya da
-          "sola dön" blogu yerleştirirsem bu demektir ki zombi iki seçenekten birini
-          seçecektir. EĞER önünde yol varsa, zombi ileri hareket edecek, aksi takdirde
-          (önünde yol yoksa), zombi sola dönecektir.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: '"eğer" bloğu gibi, "eğer değilse" bloğunu da "tekrar" bloğunun içine
-          yerleştirebiliriz, bu sayede zombi hareket etmeye devam edecek ve aynı zamanda
-          "eğer değilse" bloğu da dönülecek bir yer olup olmadığını kontrol edecek.'
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Şimdi, bu zombileri ait oldukları yere sok!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

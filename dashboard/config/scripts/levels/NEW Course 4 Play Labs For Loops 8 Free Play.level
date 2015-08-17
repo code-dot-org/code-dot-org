@@ -52,6 +52,9 @@
           <block type="studio_setBackground">
             <title name="VALUE">"cave"</title>
           </block>
+          <block type="studio_whenArrow">
+            <title name="VALUE">up</title>
+          </block>
           <block type="studio_moveDistanceParams" inline="true">
             <title name="DIR">1</title>
             <value name="DISTANCE">
@@ -147,6 +150,9 @@
               </block>
             </value>
           </block>
+          <block type="controls_whileUntil" inline="false">
+            <title name="MODE">WHILE</title>
+          </block>
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>
@@ -157,6 +163,35 @@
           </block>
           <block type="math_arithmetic" inline="true">
             <title name="OP">ADD</title>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">i</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">points</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">points</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false"/>
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation" inline="true">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
           </block>
         </category>
       </xml>

@@ -3,18 +3,12 @@ class HomeController < ApplicationController
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
-    redirect_to params[:return_to].to_s
-  end
-
-  def check_username
-    if !params[:username] || params[:username].length < 5
-      render json: { message: I18n.t('signup_form.invalid_username'), available: false }
+    if params[:i18npath]
+      redirect_to "/#{params[:i18npath]}"
+    elsif params[:return_to]
+      redirect_to params[:return_to].to_s
     else
-      if User.exists?(username: params[:username])
-        render json: { message: I18n.t('signup_form.taken_username'), available: false }
-      else
-        render json: { message: I18n.t('signup_form.valid_username'), available: true }
-      end
+      redirect_to '/'
     end
   end
 
@@ -33,14 +27,14 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
   def index
     if current_user
-      @gallery_activities = 
+      @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
   end
 
   def gallery_activities
     if current_user
-      @gallery_activities = 
+      @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
     end
     render partial: 'home/gallery_content'

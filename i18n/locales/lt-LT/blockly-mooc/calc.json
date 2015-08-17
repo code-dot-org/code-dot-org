@@ -1,8 +1,0 @@
-{
-  "compute":"skaičiuoti",
-  "equivalentExpression":"Pamėgink pertvarkyti argumentus, kad gautum lygiai tokį pat reiškinį.",
-  "extraTopBlocks":"Turite nesujungtų blokelių. Gal norėjote juos prikabinti prie blokelio „skaičiuoti“?",
-  "goal":"Tikslas:",
-  "reinfFeedbackMsg":"Štai tavo istorija! Tęsk darbą su ja arba pereik prie kito galvosūkio!",
-  "yourExpression":"Tavo reiškinys:"
-}

@@ -6,17 +6,17 @@ title: "Bee: Functions" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>6, :title=> 'Bee: Functions', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Using the Bee environment, students use and modify functions to help the bee collect nectar and make honey.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Using the Bee environment, students use and modify functions to help the bee col
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -41,7 +41,7 @@ Using the Bee environment, students use and modify functions to help the bee col
   * Modify an existing function to complete a different task
   * Create a function from scratch
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -49,7 +49,7 @@ Using the Bee environment, students use and modify functions to help the bee col
 
 ### <a name="GetStarted"></a> Introduction
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -57,7 +57,7 @@ Using the Bee environment, students use and modify functions to help the bee col
 
 ### <a name="Activity"></a> [Bee: Functions](http://learn.code.org/s/course3/stage/6/puzzle/1)
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -75,7 +75,7 @@ Using the Bee environment, students use and modify functions to help the bee col
   * Each group will write the daily activity as a function and create a poster with that function's "code"
   * As a whole class you can then write a program for a typical day in class, calling each group's function as necessary
 
-[/together]
+[/juntos]
 
 [standards]
 

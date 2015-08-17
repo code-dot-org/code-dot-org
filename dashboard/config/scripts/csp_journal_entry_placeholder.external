@@ -1,0 +1,13 @@
+name 'CSP Journal Entry Placeholder'
+title 'CSP Journal Entry Placeholder'
+description 'Eventually replace this with a free-response journal entry level'
+
+markdown <<MARKDOWN
+#Journal Response
+
+Hey this is some stuff
+
+* one
+* two 
+* three
+MARKDOWN

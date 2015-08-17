@@ -1,0 +1,49 @@
+<%
+  var i18n = require('./locale');
+  var NetSimConstants = require('./NetSimConstants');
+  var DataConverters = require('./DataConverters');
+
+  var getEncodingLabel = require('./NetSimUtils').getEncodingLabel;
+
+  var EncodingType = NetSimConstants.EncodingType;
+  var PacketUIColumnType = NetSimConstants.PacketUIColumnType;
+
+  /**
+   * @param {EncodingType} encodingType
+   * @param {string} encodedContent
+   */
+  function logRow(encodingType, encodedContent) {
+    %>
+    <tr class="<%= encodingType %>">
+      <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+      <td class="<%= PacketUIColumnType.MESSAGE %>"><%= encodedContent %></td>
+    </tr>
+    <%
+  }
+%>
+<div class="scroll-area bit-log-scroll-area">
+  <div class="packet">
+    <table>
+      <tbody>
+        <%
+          logRow(EncodingType.ASCII, DataConverters.binaryToAscii(binary, chunkSize));
+
+          logRow(EncodingType.DECIMAL, DataConverters.alignDecimal(DataConverters.binaryToDecimal(binary, chunkSize)));
+
+          logRow(EncodingType.HEXADECIMAL, DataConverters.formatHex(DataConverters.binaryToHex(binary), chunkSize));
+
+          logRow(EncodingType.BINARY, DataConverters.formatBinary(binary, chunkSize));
+
+          logRow(EncodingType.A_AND_B, DataConverters.formatAB(DataConverters.binaryToAB(binary), chunkSize));
+        %>
+      </tbody>
+    </table>
+  </div>
+  <% if (showReadWireButton) { %>
+    <div class="panel-footer bit-log-panel-footer">
+      <div class="right-side-controls">
+        <span class="netsim-button large-button" id="read-wire-button"><%= i18n.readWire() %></span>
+      </div>
+    </div>
+  <% } %>
+</div>

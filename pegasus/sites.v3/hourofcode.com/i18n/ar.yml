@@ -38,6 +38,10 @@ ar:
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>قد جرَبت</h3><h2>ساعة من الكود البرمجي</h2>'
   anybody_can_learn: أي شخص يستطيع أن يتعلم.
+  share_on_facebook: انشرها على الفيس بوك
+  share_on_twitter: انشرها على التويتر
+  beyond_an_hour: أبعد من ساعة من البرمجة >
+  get_started: إبدأ
   register_now: سجِّل الآن
   front_join_us_heading: '"ساعة من الكود البرمجي" لكل طالب.'
   front_join_us_description: إن علوم الحاسوب هو أساس لكل طالب. ساعدنا لنقدمه لمئة مليون.
@@ -124,7 +128,8 @@ ar:
   hoc_faq_why_cs_q: لماذا علوم الحاسوب؟
   hoc_faq_why_cs_a: "ينبغي على<i>كل</i> طالب الحصول على الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس للنجاح في أي مسار وظيفي خلال القرن الحادي والعشرين. راجع إحصائيات أكثر في <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: كيفية القيام بالمشاركة في ساعة البرمجة؟
-  hoc_faq_how_participate_a: "قم بالتسجيل لاستضافة حدث ساعة من البرمجة <a href='http://hourofcode.org'> هنا</a> و <a href='target-resources-how-to'>ابدأ التخطيط</a>. يمكنك تنظيم حدث ساعة من البرمجة في المدرسة أو في محيطك &mdash؛ مثلا كمنهج إضافي أو نادٍ لا يستهدف الربح، أو في مكان العمل. أو جربها بنفسك عندما يصبح 8 كانون الأول/ديسمبر."
+  hoc_faq_how_participate_a: |-
+    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك - مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
   hoc_faq_behind_hoc_q: من يقف وراء ساعة البرمجة؟
   hoc_faq_behind_hoc_a: "ساعة البرمجة تنظمه <a href='http://code.org'> Code.org</a>، و هي منظمة عامة تتبع نظام 501c3  غير هادفة للربح تهدف لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من الاقليات.  <a href='http://code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> بدعم حدث ساعة البرمجة، أيضا &mdash; بما في ذلك Microsoft، أبل، الأمازون، أندية الفتية و الفتيات في أمريكا ومجلس الكلية."
   hoc_faq_host_q: أنا لا أعرف أي شيء حول البرمجة. هل يمكن ان استضيف حدثاً؟
@@ -144,14 +149,14 @@ ar:
   hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
   hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "ساعة البرمجة هي مقدمة لعلوم الحاسوب و تدوم ساعة، مصممة لإزالة الغموض عن مجال البرمجة، وتبين أن أي شخص يمكن أن يتعلم الأساسيات. <a href='http://code.org/learn'> الق نظرة على الدروس</a>، وابحث عن الدروس الجديدة لدورة عام 2014 من ساعة البرمجة."
   hoc_faq_when_is_hoc_uk_a: "حدث ساعة البرمجة سيكون خلال 8-14 كانون الأول/ديسمبر، من سنة 2014. هل هناك <i>ساعة</i> محددة؟ لا. يمكنك القيام بساعة البرمجة في أي وقت خلال ذلك الأسبوع. حدث ساعة البرمجة في المملكة المتحدة سيتم في نفس الوقت كما هو الحال في الولايات المتحدة و هو يناسب الاحتفال السنوي <a href='http://csedweek.org'> لأسبوع تعليم علوم الحاسوب-</a>"
   hoc_faq_why_cs_uk_a: 'ينبغي أن يكون <i>لكل</i> طالب الفرصة لتعلم علوم الحاسوب. فذلك يساعد على تنمية مهارات حل المشاكل والمنطق والإبداع. بالبدء في وقت مبكر، سوف تتاح للطلاب أسس النجاح في أي مسار وظيفي خلال القرن الحادي والعشرين.'
   hoc_faq_how_participate_uk_a: |-
-    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك &mdash; مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
+    قم بالتسجيل لاستضافة حدث ساعة البرمجة <a href='http://hourofcode.org'> هنا</a> وابدء التخطيط. يمكنك تنظيم حدث "ساعة البرمجة في المدرسة أو في محيطك - مثلا في نادٍ لا يستهدف الربح، أو في مكان العمل. أو جرب بنفسك عندما نصل إلى 8 كانون الأول/ديسمبر.
   hoc_faq_behind_hoc_uk_a: "حدث ساعة البرمجة تنظمه <a href='http://uk.code.org'> Code.org</a>وهي منظمة عامة تحت اطار 501C3  غير هادفة للربح مكرسة لتوسيع نطاق المشاركة في علوم الحاسوب بجعلها متاحة في أكبر عدد من المدارس، وزيادة مشاركة النساء والطلاب من مختلف الاعراق.  <a href='http://uk.code.org/about/partners'> تحالف لم يسبق له مثيل من الشركاء</a> يدعم ساعة البرمجة، &mdash; بما في ذلك مايكروسوفت، جوجل،منشورات جامعة كامبريدج ، مدينة التكنولوجيا ووزارة التربية والتعليم."
   hoc_faq_host_uk_a: "طبعًا. أنشطة ساعة البرمجة ذات توجيه الذاتي. كل ما عليك القيام به هو اختيار البرنامج التعليمي الذي تريده ثم اختر الساعة &mdash; سنقوم بالبقية. ولدينا أيضا خيارات لكل العمر ومستوى الخبرة، بدءاً من رياض الأطفال واكثر. <a href='http://code.org/learn'> جرب الدروس الحالية</a>."
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود البرمجي" الذي حدث السنة الماضية. في أسبوع واحد فقط:'

@@ -38,10 +38,10 @@
           desc: Teka-teki buatan pengguna (beta)
           Custom: Tahap 1
         Flappy Levels:
-          desc: Burung Flappy
+          desc: Flappy Bird
           Flappy: Tahap 1
         Jigsaw Levels:
-          desc: Teka-teki (beta)
+          desc: Jigsaw (beta)
           Jigsaw: Tahap 1
         Step Levels:
           desc: Labirin (beta)
@@ -49,7 +49,7 @@
         edit-code:
           desc: Edit kode (beta)
           MazeEC: Tahap 1
-          Webapp: Tahap 2
+          Applab: Tahap 2
           ArtistEC: Tahap 3
           StudioEC: Tahap 4
         events:
@@ -100,10 +100,12 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplikasi Web
+        Webapp: Aplikasi Lab
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
+        Applab: Aplikasi Lab
+        NetSim: Simulator Internet
     trophy:
       name:
         Bronze: Perunggu
@@ -331,10 +333,9 @@
           ukuran. (Tips: Klik bintang untuk menambahkan masukan ke fungsi)'
         turtle_3_7: Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun
           sebuah rumah yang besar untuk gajah (panjang 150 pixel)
-        turtle_3_8: Berikut adalah semua blok dari teka-teki sebelumnya.  Modifikasi
-          "gambar rumah" sehingga saya berada di sudut kanan bawah setelah mengambar
-          rumah baru. Gunakan fungsi yang telah dimodifikasi ini untuk menggambar
-          tiga rumah.
+        turtle_3_8: Memodifikasi "menggambar rumah" jadi saya berakhir di sudut kanan
+          bawah setelah menggambar sebuah rumah baru. Gunakan fungsi memodifikasi
+          ini untuk menggambar tiga rumah.
         turtle_3_9: Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa
           bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.
         turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar
@@ -435,9 +436,8 @@
         flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika
           permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika
           event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk membuat permainan lebih bervariasi, jika mengenai hambatan
-          atau suatu permukaan, Anda dapat membuat permainan kembali ke skor 0, daripada
-          mengakhiri permainan.
+        flappy_9: Untuk mencampurkan hal-hal, ketika memukul sebuah benda, daripada
+          mengakhiri permainan cobalah mengatur nilai kembali ke 0.
         flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
           dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
           agar ia mencoba pada ponselnya.
@@ -585,7 +585,7 @@
           BELOW
         maze_wordsearch_k_20: Ini adalah tes! Gerakkan saya lurus, kemudian akan mengeja
           kata STORY
-        webapp_ec_simple: Buatlah aplikasi web anda dengan memakai createHtmlBlock.
+        applab_ec_simple: Buat aplikasimu menggunakan blok dalam toolbox.
         turtle_ec_1_2: 'Sekarang, gambarlah sebuah bujur sangkar. CATATAN: gunakan
           warna favorit Anda dengan memilihnya dalam blok "penColor" yang baru.'
         turtle_ec_1_10: 'Anda berhasil! Sekarang, gambarlah apapun yang Anda mau.
@@ -593,130 +593,6 @@
           juga blok "penWidth" yang baru. Selamat menikmati!'
         studio_ec_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
-    levelbuilder:
-      frozen line:
-        instructions: Halo. Aku Elsa dari Arendelle. Bantu aku membuat sebuah garis.
-      frozen perpendicular:
-        instructions: Sekarang mari kita lihat apakah kita bisa membuat dua garis
-          yang tegak lurus 90 derajat satu dengan yang lain. Kamu akan menggunakan
-          blok "Belok" dan juga blok "Bergerak".
-      frozen square iterative:
-        instructions: Sepertinya kita sudah setengah jalan untuk membuat persegi.
-          Mari kita tempatkan 4 garis bersama untuk membuat sebuah persegi.
-      frozen square loop:
-        instructions: Halo. Aku Anna dari Arendelle! Mari membuat sebuah persegi dengan
-          blok "Ulangi", yang menggunakan blok lebih sedikit. Berapa kali (???) blok
-          "Ulangi" mengulangi blok-blok di dalamnya untuk membuat persegi?
-      frozen square loop 3x:
-        instructions: Mari kita membuat tiga persegi, berputar setelah setiap persegi.
-          Pastikan untuk berputar 120 derajat sebelum membuat setiap persegi baru.
-      frozen square snowflake:
-        instructions: Bisakah kamu membuat kepingan salju menggunakan blok "Ulangi"
-          untuk membuat persegi 10 kali dan blok "Belok" untuk berbelok 36 derajat
-          di antara setiap persegi?
-      frozen cross:
-        instructions: Gunakan blok "Ulangi" untuk membuat tanda tambah. Apakah kamu
-          perhatikan Elsa bisa bergerak maju dan mundur?
-      frozen cross rotate:
-        instructions: Sekarang coba ulangi 10 kali. Berapa derajat yang diperlukan
-          untuk berbelok antara setiap garis?
-      frozen cross rotate dense:
-        instructions: 'Mari kita ulangi 90 kali. Berapa kali 90 menjadi 360?  Petunjuk:
-          Ini angka yang sangat kecil.'
-      frozen diamond:
-        instructions: 'Mari membuat jajar genjang. Itu mirip persegi tetapi memiliki
-          sudut yang berbeda: 60 dan 120 derajat, bukan 90 derajat.'
-      frozen diamond mini snowflake:
-        instructions: Tahukah kamu setiap kepingan salju berbeda bentuk? Mari membuat
-          kepingan salju baru menggunakan blok "Ulangi" untuk mengulangi pembuatan
-          jajar genjang 4 kali, berbelok 90 derajat antara setiap jajar genjang.
-      frozen diamond snowflake:
-        instructions: Sekarang, mari kita membuat kepingan salju baru menggunakan
-          blok ulangi untuk mengulangi pembuatan jajar genjang 10 kali, berbelok 36
-          derajat antara masing-masing bentuk.
-      frozen circle:
-        instructions: Lingkaran adalah bentuk yang khusus. Bisakah kamu menebak angka
-          yang dapat menggantikan tanda tanya  itu untuk menggambar lingkaran?
-      frozen circle function:
-        instructions: Gunakan blok baru "Buat sebuah lingkaran" untuk membuat 10 lingkaran
-          yang tumpang tindih. Jangan lupa untuk lompat maju antara lingkaran.
-      frozen circle function in circle:
-        instructions: Sekarang mari kita membuat 20 lingkaran yang tumpang tindih,
-          berbelok 18 derajat antara setiap lingkaran.
-      frozen circle function with parameter:
-        instructions: Ini adalah blok "Buat lingkaran" yang dapat membuat lingkara-lingkaran
-          dengan ukuran yang berbeda. Bisakah kamu menggunakannya untuk membuat sebuah
-          lingkaran kecil berukuran 5 dan lingkaran yang lebih besar berukuran 10?
-      frozen snowflower:
-        instructions: Pola salju yang rumit dapat dibuang dengan bentuk yang sangat
-          sederhana. Bisakah kamu membuat pola dengan mengulangi membuat 5 lingkaran
-          berukuran 5 dan 5 lingkaran berukuran 10?
-      frozen snowflake branch:
-        instructions: Cobalah menggunakan "Buat cabang kepingan salju" untuk membuat
-          tiga cabang, yang mulai terlihat seperti kepingan salju.
-      frozen snowflake full:
-        instructions: Sekarang mari kita ulangi 8 kali untuk membuat kepingan salju
-          yang indah!
-      frozen freeplay:
-        instructions: Kamu telah resmi menjadi seniman ahli! Buatlah dunia musim dingin
-          dan bagikan dengan teman-temanmu.
-      scrat 16:
-        instructions: Biji ek! Gunakan blok "jika" (if) untuk mengantar saya ke sana
-          dengan jumlah blok paling sedikit.
-      scrat 17:
-        instructions: OK, mari kita coba lagi latihan itu - ini tidak terlalu berbeda,
-          tapi waspada temboknya!
-      scrat 18:
-        instructions: Blok "jika tidak" (if-else) memeriksa persyaratan, lalu melakukan
-          satu hal ATAU yang lain, Untuk menjalankan saya ke biji ek tersebut cobalah
-          gunakan blok baru ini.
-      scrat 19:
-        instructions: Cobalah sekali lagi praktekkan blok "jika tidak" (if-else),
-          bisakah Anda mendapatkannya jawaban yang benar pada percobaan pertama?
-      scrat 20:
-        instructions: Bisakah kamu menambahkan 3 blok saja untuk membantuku menyelesaikan
-          labirin yang lebih rumit? Kalau kamu melakukannya dengan benar, aku bisa
-          berjalan di jalan yang melengkung berapapun panjangnya. Cepat! Esnya meleleh!
-      Standalone_Artist_1:
-        instructions: |
-          Selamat datang, Seniman!
-          Pertama-tama, marilah kita mencoba membuat kotak sederhana dengan menggunakan blok 'belok kanan' dan blok 'maju'. Tiap sisinya harus sebesar 100 piksel.
-      Standalone_Artist_2:
-        instructions: "Gambarlah berlian ini \ndengan sudut 120 & 60 derajat, \nserta
-          sisi sepanjang 150 piksel.\n"
-      Standalone_Artist_3:
-        instructions: Dapat Anda ambil ini hexagon dengan 100 pixel sisi dan 60 derajat
-          berubah?
-      Standalone_Artist_4:
-        instructions: Sekarang Anda sudah mendapatkan blok baru, loop, untuk dipakai.
-          Blok ini akan mengulangi seperangkat perintah. Apa yang terjadi jika Anda
-          loop (ulang) perintah ini sebanyak 6 kali?
-      Standalone_Artist_5:
-        instructions: Berapa banyak kali Anda perlu loop (mengulangi) berlian untuk
-          menggambar bunga?
-      Standalone_Artist_5.5:
-        instructions: 'Perhatikan bagaimana kami disederhanakan kode berlian dengan
-          mengubahnya menjadi sebuah loop. Anda dapat mengulang (loop) seluruh urutan
-          12 kali untuk menggambar bunga. Petunjuk: Anda akan perlu untuk mengeser
-          30 derajat setelah berlian Anda ulangi (loop) sehingga Anda tidak perlu
-          menggambar atas berlian sama.'
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many
-          degrees will you need to turn each time? Hint: divide the number of degrees
-          in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating
-          yourself. This function draws a flower, so you can use it any time you want
-          to draw a flower. Use this and the new jump block to draw these flowers.
-          Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: Here's a function called "Draw a shape" that we've programmed
-          to draw hexagons. Run the code to see what it does and then experiment with
-          the function to see what happens. Can you make it draw a pattern of squares,
-          triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: Now go ahead and make whatever picture you'd like! You've even
-          got an empty function that you can make do whatever you want!
     video:
       name:
         maze_intro: Introduksi labirin
@@ -776,6 +652,7 @@
         C2_relay_programming: Pemrograman relay
         C2_paper_airplanes: Pesawat kertas
         C2_digital_footprint: Digital Footprint Kamu
+        C2_digital_footprint_v2: Digital Footprint Kamu
         C3_maze_level_4: Pengulangan labirin
         C3_artist_intro: Introduksi Artis
         C3_artist_functions: Fungsi Artis
@@ -795,6 +672,7 @@
         C3_functional_suncatchers: Fungsional pengkap matahari
         C3_songwriting_with_parameters: Parameter penulis lagu
         C4_intro: Pendahuluan
+        C4_loops_zombie: Loop
         C4_bee_conditional: kondisi lebah
         C4_variables_artist: Variabel - artis
         C4_variables_playlab: Variabel - permainan Lab
@@ -808,7 +686,7 @@
         C4_unplugged_madlibs: Mad libs
         C4_unplugged_variables: Variabel dalam amplop
         C4_unplugged_forloops: Untuk Pengulangan
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
         frozen_intro: Perkenalan Hour of Code
         frozen_loops: Pengantar loop
@@ -816,6 +694,41 @@
         playlab_intro: Pengantar Lab Permainan
         playlab_events: 'Lab Permainan Event '
         playlab_repeat_forever: Lab Permainan Ulangi Selamanya
+        tutorial_puzzle_challenge: Tutorial tantangan teka-teki
+        infinity_playlab_intro: Play Lab - Pendahuluan
+        infinity_playlab_events: Play Lab - Kegiatan
+        infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
+        csp_concept_rgb: Sedikit tentang piksel
+        csp_pixelation_color_1: widget pixelation Warna - Bagian 1
+        csp_pixelation_color_2: widget pixelation Warna - Bagian 2
+        csp_pixelation_color_3: widget pixelation Warna - Bagian 3
+        csp_pixelation_bw: widget pixelation Hitam dan Putih - Bagian 1
+        csp_U1L14_tipstricks: Unit 1 pelajaran 14 Tips & Trik guru
+        csp_textcompression: widget Teks kompresi
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: CS didalam Aljabar - Pendahuluan
+        alg_2_eval_block: CS didalam Aljabar - Block Evaluasi
+        alg_3_pemdas: CS didalam Aljabar - Perintah Operasi
+        alg_4_data_types: CS didalam Aljabar - Tipe Data
+        alg_5_contracts: CS didalam Aljabar - Kontrak
+        alg_6_variables: CS didalam Aljabar -  Variabel
+        alg_7_function: CS didalam Aljabar - Fungsi
+        alg_8_design_recipe: CS didalam Aljabar - Resep Disain
+        alg_9_booleans: CS didalam Aljabar - Booleans
+        alg_10_conditionals: CS didalam Aljabar - Kondisional
+        alg_11_coordinate_plane: CS didalam Aljabar - Bidang Koordinate
+        alg_12_biggame_variables: CS didalam Aljabar - Variabel Big Game/Permainan
+          Besar
+        alg_13_biggame_animation: CS didalam Aljabar - Animasi Big Game/Permainan
+          Besar
+        alg_14_biggame_booleans: CS didalam Aljabar - Boolean Big Game/Permainan Besar
+        alg_15_biggame_update_player: CS didalam Aljabar - Perbaharui Pemain Big Game/Permainan
+          Besar
+        alg_16_biggame_collision_detection: CS didalam Aljabar - Deteksi Benturan
+          Big Game/Permainan Besar
+        alg_17_sambat_compound_booleans: CS didalam Aljabar - GabunganBoolean
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -834,56 +747,60 @@
         studio_say_text: Tuliskan apa yang anda inginkan untuk aktor katakan dalam
           tanda kutip tersebut
         jigsaw_click: Klik blok ini!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
-        replace_questions: Use the drop-down to replace "???" with a number
-        replace_questions_degree: Use the drop-down to replace "???" with the correct
-          degree to turn
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
+        move_elsa_forward: Tarik blok "Maju" dan pasang di bawah blok "Jalankan" untuk
+          membuat Elsa maju
+        turn_elsa: Gunakan block "Belok" untuk membuat Elsa berputar. Jumlah dalam
+          drop-down menentukan berapa banyak putaran Elsa
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+        replace_questions_degree: Gunakan drop-down untuk menggantikan"???" dengan
+          derajat yang tepat untuk memutar
+        repeat_blocks: Gunakan blok "Ulangi" dan membungkusnya di sekitar blok ruang
+          kerja
+        repeat_blocks_1: (1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu
+          didalam ruang kerja
+        repeat_blocks_2: (2)Gerakkan blok "Ulangi" di sini, dan tempatkan blok abu-abu
+          di dalamnya
+        snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+        degrees_per_side: Bagilah 360 Dari jumlah sisi untuk mendapatkan ukuran masing-masing
+          sudut dalam derajat.
         set_sides: Gunakan blok ini untuk menetapkan "sisi" jumlah yang diperlukan
           untuk menyelesaikan teka-teki.
         set_length: Gunakan blok ini untuk menetapkan "panjang" dengan nilai yang
           benar.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
+        which_equation: persamaan manakah yang membuat tiap sisi lebih pendek untuk
+          bentuk dengan banyak sisi?
         get_nectar: Gunakan blok baru "dapatkan nektar".
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
+        actions_category: Kotak alat ini punya tampilan baru! Blok "Tindakan" berada
+          di sini sekarang.
         draw_square_hint: 'Petunjuk: Menggunakan loop persegi yang baru saja Anda
           buat dalam teka-teki terakhir.'
         edit_function: Klik di sini untuk mengedit fungsi Anda.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
+        create_function: Klik di sini untuk membuka flyout "Fungsi", kemudian klik
+          tombol "Membuat fungsi".
+        house_hint: Tidak apa jika gambar tidak terlihat seperti rumah lagi. Kami
+          akan memperbaikinya dalam teka-teki berikutnya.
+        edit_draw_square: Gunakan tombol ini untuk mengedit fungsi dan menambahkan
+          loop.
+        edit_get_nectar: Gunakan tombol ini untuk mengedit fungsi dan mengubah arah
+          lebah akan berbalik untuk mendapatkan nektarnya.
+        logic_category: Buka flyout "Logika" untuk menemukan blok "jika/kecuali".
+        length_parameter: Dapatkah Anda memperbarui fungsi ini sehingga dapat menggunakan
+          parameter "panjang" ?
+        frozen_diamond_repeat: Gunakan blok ulangi untuk membuat bentuk ini.
+        frozen_circle_function_in_circle_turn: Jangan lupa untuk mengubahnya setelah
+          membuat setiap lingkaran.
+        frozen_circle_function_with_parameter_circle: Gunakan blok "create a circle"
+          dan ubahlah ukuran.
+        frozen_snowflake_branch: Menggunakan blok "create a snowflake branch"
+        frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
+        playlab_drag_say: Seret blok "say" di sini dan ketik "Hello"
+        playlab_use_twice: Gunakan blok ini dua kali dan ingat untuk mengubah nomor
+          aktor
+        playlab_move_girl: Gunakan "pindah kanan" blok untuk memindahkan gadis Tenis
         playlab_play_sound: Tambahkan "putar suara" blok di sini
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
+        playlab_arrow_keys: Ingatlah untuk menggunakan ini untuk memindahkan penyihir
+          setelah mengklik jalankan
         playlab_add_move: Tambahkan blok "gerak" dalam blok berulang (repeat) ini
         playlab_add_score: Tambahkan Skor blok di sini
         playlab_add_blocks: Tambahkan blok anda disini
@@ -891,26 +808,34 @@
         place_variable: Tarik Anda variabel di dalam blok ini
         bee_for_loop: Tarik jumlah terbesar nektar lebah yang Anda inginkan disini
         place_counter_variable: Tarik variabel counter di dalam blok ini
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        function_editor_draw_square: Ini adalah definisi fungsi Anda. Blok ini dijalankan
+          setiap kali Anda menggunakan blok "draw a square"
         change_here: Buat perubahan Anda di sini
         write_draw_square_function: Tarik blok dari toolbox ke sini untuk menggambar
           persegi
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
+        write_draw_triangle_function: Tarik blok dari toolbox ke sini yang menggambar
+          segitiga
+        edit_add_parameter: Klik edit untuk menambahkan parameter ke dalam fungsi
+          Anda
+        add_and_drag_parameter: Tulis nama parameter Anda di sini, klik Tambahkan,
+          dan kemudian tarik ke definisi fungsi Anda
+        fill_in_actor: Isikan ??? dengan angka yang sesuai dengan masing-masing aktor
+          (1, 2, dan 3)
+        repeat: Menempatkan blok dalam loop untuk mengulangi perintah
+        if_bee_nectar: Gunakan blok "jika" untuk memutuskan apakah lebah harus mendapatkan
+          nektar
+        if_else_bee: Gunakan blok "jika/kecuali" sehingga lebah mendapat nektar dari
+          bunga, dan membuat madu jika bukan bunga
+        repeat_full_circle: Masukkan jumlah waktu zombie harus bergerak untuk membuat
+          lingkaran penuh
+        place_length_variable: Tariklah panjang variabel berikut untuk menggantikan
+          tanda tanya
         arrows_move_actor: Gunakan panah untuk memindahkan aktor
         right_arrow_fireball: Gunakan panah kanan untuk menembak bola api
         name_function: Menulis nama fungsi Anda di sini
+        Infinity_move_right_runbutton: Menambahkan blok gerak di sini
+        Infinity_move_directions_callout: Blok manakah yang akan membuat Baymax naik
+          ketika panah atas ditekan?
+        Infinity_move_directions_callout_arrow: Gunakan panah untuk mengarahkan
+        Infinity_move_collide_callout: Mainkan suara ketika peristiwa ini terjadi.
+        Infinity_repeat_callout: Tempat blok gerak di sini

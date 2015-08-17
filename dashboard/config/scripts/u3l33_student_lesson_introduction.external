@@ -1,0 +1,21 @@
+name 'U3L33 Student Lesson Introduction'
+title 'Arrays and Loops: Altering Images'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 33 - Arrays and Loops: Altering Images
+
+# Background
+
+A for-loop can be used to iterate through an image array. Cool visual effects can be achieved by changing targeted elements of the array. Specific color channels of an image can be modified by controlling the initial value and increment of an iterator variable.
+
+# Lesson
+
+* Create visual effects by alter the elements of an array.
+* Refine the visual effect by accessing specific color channels in the image. 
+
+
+# Resources
+none listed at this time
+  
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

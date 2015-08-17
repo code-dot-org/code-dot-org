@@ -1,0 +1,4 @@
+.CodeMirror {
+    /* Makes e.g. single line comments not take up the whole height */
+    height: auto;
+}

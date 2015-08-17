@@ -1,70 +1,71 @@
 * * *
 
-title: Real-Life Algorithms | Paper Airplanes view: page_curriculum theme: none
+title: Algoritmos da vida real | Aviões de papel view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Real-Life Algorithms: Paper Airplanes', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Algoritmos da vida real: aviões de papel', :unplugged=>true,:disclaimer=>'O tempo de aula inclui apenas a atividade. As sugestões de introdução e resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this lesson, students will relate the concept of algorithms back to everyday real-life activities by making paper airplanes. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
+Nesta aula, os alunos vão relacionar o conceito de algoritmos à vida cotidiana fazendo aviões de papel. O objetivo aqui é começar a construir as habilidades para traduzir situações da vida real para o mundo on-line, e vice-versa.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Review](#Review)   
-2) [Vocabulary](#Vocab)  
-3) [What We Do Daily](#GetStarted)
+1) [Revisão](#Review)   
+2) [Vocabulário](#Vocab)  
+3) [O que fazemos diariamente](#GetStarted)
 
-### **Activity: Real-Life Algorithms** - 20 minutes
+### **Atividade: Algoritmos da vida real** - 20 minutos
 
-4) [Real-Life Algorithms](#Activity1): Paper Airplanes
+4) [Algoritmos da vida real](#Activity1): Aviões de papel
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
 
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [Daily Algorithms](#Assessment)
+6) [Algoritmos do cotidiano](#Assessment)
 
 [/summary]
 
 [together]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Name various activities that make up their day
-  * Decompose large activities into a series of smaller events
-  * Arrange sequential events into their logical order
+  * Listar várias atividades que compõem seu dia
+  * Decompor atividades maiores em uma série de eventos menores
+  * Organizar eventos sequenciais em ordem lógica
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Paper for folding into airplane
-  * [Real-Life Algorithms Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
-  * Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf)
-  * Scissors
-  * Glue
+  * Papel para fazer o avião
+  * [Folha de atividade de algoritmos da vida real](Activity2-RealLifeAlgorithms.pdf): Aviões de papel
+  * Folha de avaliação: [Algoritmos do cotidiano](Assessment2-EverydayAlgorithms.pdf)
+  * Tesoura
+  * Cola
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/EEwe28TF1VE?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Teacher Lesson Guide
   * [Real-Life Algorithms Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
   * Print Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf) for each student
@@ -73,33 +74,33 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 [together]
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. We suggest you alternate between asking questions of the whole class and having students talk about their answers in small groups.
+Este é um excelente momento para revisar a última aula que você deu à turma. Sugerimos que você faça perguntas sobre a aula anterior e depois divida os alunos em pequenos grupos para discutir as respostas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one vocabulary word that is important to review:  
+Nessa aula, há uma palavra que é muito importante revisar:  
 
 
 [centerIt]
@@ -108,49 +109,49 @@ This lesson has one vocabulary word that is important to review:
 
 [/centerIt]
 
-**Algorithm** - Say it with me: Al-go-ri-thm   
-A list of steps that you can follow to finish a task
+**Algoritmo** - Repita comigo: Al-go-rit-mo   
+Uma lista de passos que você pode seguir para concluir uma tarefa
 
-### <a name="GetStarted"></a> 3) What We Do Daily
+### <a name="GetStarted"></a> 3) O que fazemos diariamente
 
-  * Ask your students what they did to get ready for school this morning. 
-      * Write their answers on the board.
-      * If possible, put numbers next to their responses to indicate the order that they happen. 
-          * If students give responses out of order, have them help you put them in some kind of logical order.
-          * Point out places where order matters and places where it doesn't.  
+  * Pergunte aos alunos o que eles fizeram para se preparar para a escola esta manhã. 
+      * Escreva as respostas no quadro.
+      * Se possível, coloque números próximos às respostas para indicar a ordem na qual elas ocorreram. 
+          * Se os alunos derem respostas fora de ordem, peça que eles ajudem você a colocá-las em uma espécie de ordem lógica.
+          * Aponte lugares onde a ordem importa e lugares onde ela não importa.  
               
             
-  * Introduce students to the idea that it is possible to create algorithms for the things that we do everyday. 
-      * Give them a couple of examples, such as making breakfast, brushing teeth, and planting a flower.   
+  * Apresente aos alunos a ideia de que é possível criar algoritmos para coisas que fazemos todos os dias. 
+      * Dê a eles alguns exemplos, como preparar o café da manhã, escovar os dentes e plantar uma flor.   
           
         
-  * Let's try doing this with a new and fun activity, like making paper airplanes!
+  * Vamos tentar fazer isso com uma atividade nova e divertida, como fazer aviões de papel!
 
 [/together]
 
 [together]
 
-## Activity: (20 min)
+## Atividade: (20 min)
 
-### <a name="Activity1"></a> 4) [Real-Life Algorithm Worksheet](Activity2-RealLifeAlgorithms.pdf): Paper Airplanes
+### <a name="Activity1"></a> 4) [Folha de atividade de algoritmos da vida real](Activity2-RealLifeAlgorithms.pdf): Aviões de papel
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.
+Você conhece bem sua turma. Como professor, decida se os alunos devem fazer a atividade individualmente ou se devem trabalhar em duplas ou em pequenos grupos.
 
 [/tip]
 
-  * You can use algorithms to help describe things that people do every day. In this activity, we will create an algorithm to help each other fold a paper airplane.
+  * Você pode usar algoritmos para ajudar a descrever coisas que as pessoas fazem todos os dias. Nessa atividade, vamos criar um algoritmo para ajudar a fazer um avião de papel.
 
-> **Directions:**
+> **Instruções:**
 > 
->   1. Cut out the steps for making a paper airplane [provided worksheet](Activity2-RealLifeAlgorithms.pdf).
->   2. Work together to choose the six correct steps from the nine total options.
->   3. Glue the six correct steps, in order, onto a separate piece of paper.
->   4. Trade the finished algorithm with another person or group and let them use it to make their plane!
->   5. If you are concerned about injury when your students begin flying their paper airplanes, we recommend having them blunt the tip of the plane by either folding it inward or ripping it off and covering the ripped edges with tape. 
+>   1. Destaque os passos para fazer um avião de papel da [folha de atividade fornecida](Activity2-RealLifeAlgorithms.pdf).
+>   2. Trabalhe em conjunto para escolher os seis passos corretos dentre as nove opções.
+>   3. Cole os seis passos corretos, em ordem, em um papel separado.
+>   4. Troque o algoritmo finalizado com outra pessoa ou grupo, e deixe que os outros o usem para fazer seu avião!
+>   5. Se estiver preocupado que seus alunos se machuquem quando eles começarem a jogar seus aviões de papel, faça-os dobrar ou cortar a ponta do avião e depois cobri-la com uma fita. 
 
 [/together]
 
@@ -158,9 +159,9 @@ You know your classroom best. As the teacher, decide if students should do this 
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If deciding on the correct steps seems too difficult for your students, do that piece together as a class before you break up into teams.
+Se decidir quais são os passos corretos for muito difícil para seus alunos, faça isso com toda a turma antes de dividi-la em grupos.
 
 [/tip]
 
@@ -168,100 +169,100 @@ If deciding on the correct steps seems too difficult for your students, do that 
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * How many of you were able to follow your classmates' algorithms to make your airplanes?
-  * Did the exercise leave anything out? 
-      * What would you have added to make the algorithm even better?
-      * What if the algorithm had been only one step: "Fold a Paper Airplane"? 
-          * Would it have been easier or harder?
-          * What if it were forty steps?
-  * What was your favorite part about that activity?
-
-[/together]
-
-[together]
-
-## Assessment (15 min)
-
-### <a name="Assessment"></a>6) Assessment Worksheet: [Daily Algorithms](Assessment2-EverydayAlgorithms.pdf)
-
-  * Hand out the worksheet titled "Daily Algorithms" and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Quantos de vocês conseguiram seguir os algoritmos de seus colegas de classe para fazer aviões de papel?
+  * Faltou alguma coisa nesse exercício? 
+      * O que você poderia ter adicionado para tornar o algoritmo ainda melhor?
+      * E se o algoritmo tivesse apenas um passo: "faça um avião de papel"? 
+          * Teria sido mais fácil, ou mais difícil?
+          * E se ele tivesse quarenta passos?
+  * Qual foi a parte da atividade que você mais gostou?
 
 [/together]
 
 [together]
 
-## Extended Learning
+## Avaliação (15 min)
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+### <a name="Assessment"></a>6) Folha de avaliação: [Algoritmos do cotidiano](Assessment2-EverydayAlgorithms.pdf)
 
-### Go Figure
+  * Distribua a folha de atividade "Algoritmos do cotidiano" e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
-  * Break the class up into teams.
-  * Have each team come up with several steps that they can think of to complete a task.
-  * Gather teams back together into one big group and have one team share their steps, without letting anyone know what the activity was that they had chosen.
-  * Allow the rest of the class to try to guess what activity the algorithm is for.
+[/together]
+
+[together]
+
+## Aprendizagem estendida
+
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
+
+### Adivinhação
+
+  * Divida a classe em equipes.
+  * Peça que cada equipe sugira vários passos para completar uma tarefa.
+  * Junte as equipes em um grande grupo e peça para que uma das equipes compartilhe seus passos, sem deixar ninguém saber que atividade foi escolhida por eles.
+  * Deixe que o resto da turma tente adivinhar para qual atividade o algoritmo serve.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes 
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.b - Communicate information and ideas effectively to multiple audiences using a variety of media and formats.
-  * 2.d - Contribute to project teams to produce original works or solve problems.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos. 
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.b - Comunicar informações e ideias de forma eficaz para vários públicos usando diversas mídias e formatos.
+  * 2.d - Contribuir com equipes de projeto para produzir trabalhos originais ou resolver problemas.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-03. Understand how to arrange information into useful order without using a computer.
-  * CT.L1:6-01. Understand and use the basic steps in algorithmic problem-solving.
-  * CT.L1:6-02. Develop a simple understanding of an algorithm using computer-free exercise.
-  * CT.L1:6-05. Make a list of sub-problems to consider while addressing a larger problem.
-  * CPP.L1:3-04. Construct a set of statements to be acted out to accomplish a simple task. 
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out (e.g., make a peanut butter and jelly sandwich activity).
-  * CT.L2-03. Define an algorithm as a sequence of instructions that can be processed by a computer.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
+  * CT.L1:3-03. Entender como é possível organizar informações em uma ordem útil sem usar um computador.
+  * CT.L1:6-01. Entender e usar os passos básicos na resolução de um problema com um algoritmo.
+  * CT.L1:6-02. Desenvolver uma compreensão simples de um algoritmo com exercícios que não usem computador.
+  * CT.L1:6-05. Fazer uma lista de subproblemas que devem ser considerados ao se tratar um problema maior.
+  * CPP.L1:3-04. Construir um conjunto de comandos para realizar uma tarefa simples. 
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções passo a passo (por exemplo, uma atividade para fazer um sanduíche de queijo com presunto).
+  * CT.L2-03. Definir um algoritmo como uma sequência de instruções que podem ser processadas por um computador.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem. 
-      * 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico. 
+      * 3-5-ETS1-2 - Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Construct viable arguments and critique the reasoning of others
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Construir argumentos viáveis e fazer críticas ao raciocínio dos outros
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 1.G.1 - Distinguish between defining attributes versus non-defining attributes; build and draw shapes to possess defining attributes.
-  * 2.G.3 - Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths.
+  * 1.G.1 - Diferenciar atributos de definição de atributos que não são de definição; criar e desenhar formas para mostrar atributos de definição.
+  * 2.G.3 - Fragmentar círculos e retângulos em duas, três ou quatro partes iguais, descrever cada parte usando as expressões "metade", "terço", "metade de", "terço de", etc. e descrever o todo como duas metades, três terços, quatro quartos.
 
-### Common Core Language Arts
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

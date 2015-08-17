@@ -11,19 +11,19 @@ fa:
   header_menu_faq: پرسش و پاسخ
   header_menu_prizes: جوایز
   header_menu_uk_code_org: uk.code.org
-  company_4-H: 4-H Youth Development
-  company_asa: Afterschool Alliance
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
-  company_mesa: Mathematics Engineering Science Achievement
-  company_napcs: National Alliance of Public Charter Schools
-  company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
-  company_tntp: TNTP
+  company_4-H: توسعه جوانان 4-H
+  company_asa: اتحاد پس از مدرسه‌ای
+  company_bgca: باشگاه پسران و دختران آمریکا
+  company_bsusa: پسران پیشاهنگ آمریکا
+  company_cgcs: شورای مدارس بزرگ شهر
+  company_gsusa: دختران پیشاهنگ آمریکا
+  company_khanacademy: خان آکادمی
+  company_mesa: دستاورد علم ریاضیات مهندسی
+  company_napcs: اتحاد ملی مدارس عمومی
+  company_ngcp: پروژه مشترک ملی دختران
+  company_teachforall: آموزش برای همه
+  company_teachforamerica: آموزش برای آمریکا
+  company_tntp: پروژه جدید آموزشی
   prizes_all: جايزه هر برگزار كننده
   prizes_every_organizer: 'هر برگزار كننده "ساعت كد نويسي" بعنوان تشكر اعتباري در Dropbox يا Skype دريافت خواهد كرد'
   prizes_technology: يك مدرسه دولتي در هر ايالت امريكا( و واشنگتن دي سي) برنده فن آوري اي به ارزش ١٠٠٠٠ دلار خواهد شد
@@ -38,6 +38,10 @@ fa:
   whats_next_promote: "<a href='http://hourofcode.com/resources'> یک ساعت کدزدن را ارتقا دهید </a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>تجربه كرده اند</h3><h2>ساعت كد نويسي</h2>'
   anybody_can_learn: هر کس می تواند یاد بگیرد.
+  share_on_facebook: به اشتراک گذاشتن در فیس بوک
+  share_on_twitter: به اشتراک گذاشتن در توییتر
+  beyond_an_hour: فراتر از یک ساعت کد نویسی
+  get_started: شروع
   register_now: همين حالا ثبت نام كنيد
   front_join_us_heading: 'يك "ساعت كدنويسي" براي هر دانش آموز.'
   front_join_us_description: علوم كامپيوتر، مورد نیاز هر دانش آموزی است. به ما كمك كنيد آن را به ١٠٠ميليون نفر معرفی كنيم.
@@ -89,12 +93,12 @@ fa:
   signup_thank_you_message: ما يك ايميل تاييد بهمراه اطلاعاتي براي كمك به شروع فعاليت برايتان ارسال كرديم.
   map_header: 'رويدادهاي "ساعت كدنويسي" در سراسر دنيا'
   map_header_company: '# بوسیله ی سازماندهان شرکتی'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: برای رویدادهای ساعت کدنویسی جستجو کن
+  map_search_search: جستجو کن
+  map_search_reset: راه اندازی مجدد
+  meta_tag_og_title: ساعت کد اینجا است
   meta_tag_og_description: ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: ساعت کد اینجا است
   meta_tag_twitter_description: ساعت کد نويسي يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور با بيش از ٣٠ زبان است. براي سنین ٤ تا ١٠٤ سال.
   twitter_default_text: 'من در"ساعت كد نويسي" #HourOfCode امسال شركت مي كنم، شما چطور؟ @codeorg'
   hardware_prizes_form_name_label: نام شما
@@ -117,8 +121,8 @@ fa:
   hardware_prizes_form_submit_label: ارسال
   hoc_faq_title: سوالات متداول
   hoc_faq_what_is_hoc_q: '"ساعت كدنويسي" چيست؟'
-  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
-  hoc_faq_last_year: Try the tutorials
+  hoc_faq_what_is_hoc_a: "ساعت کد معرفی یک ساعته علوم کامپیوتر، طراحی شده برای ساده کردن کد و نشان  دادن این که هر کسی می تواند  اصول اولیه را یاد بگیرد. <a href='http://code.org/learn'> این آموزشات را بررسی کنید.</a>."
+  hoc_faq_last_year: آموزشات را امتحان کنید.
   hoc_faq_when_is_hoc_q: '"ساعت كد نويسي" چه زماني است؟'
   hoc_faq_when_is_hoc_a: |-
     هر كس در هر زمان مي تواند ميزبان "ساعت كد نويسي" باشد، با اين حال هدف اين كمپين مردمي، رسيدن به تعداد ده ها ميليون دانش آموز است كه در فاصله زماني ٢٣-١٧ آذرماه (١٤-٨ دسامبر) براي گراميداشت<a href='http://csedweek.org'> هفته آموزش كامپيوتر </a>، يك "ساعت كد نويسي" را تجربه كنند. آيا يك <i> ساعت </i> مشخصي دارد؟ خير. شما هر زماني در طول اين هفته مي توانيد "ساعت كد نويسي" را انجام دهيد. (حتي اگر نمي توانيد در اين هفته شركت كنيد، يك هفته قبل يا بعد آن را انجام دهيد).
@@ -146,7 +150,7 @@ fa:
   hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
   hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as KhanAcademy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

@@ -3,42 +3,43 @@ hu:
     script:
       name:
         test:
-          "Jigsaw: Learn to drag and drop": 'Kirakós játék: Tanuljuk, hogy fogd és vidd technikát!'
+          "Jigsaw: Learn to drag and drop": 'Kirakós játék: Tanuld meg a vonszolást'
           The Maze: A labirintus
           Multi: Feleletválasztás
           Match: Párosítás
           Math Image: Matematikai kép
           title: Teszttanfolyam
           description: Csak egy belső teszttanfolyam.
+          description_short: Csak egy belső teszttanfolyam.
         course1:
-          "Jigsaw: Learn to drag and drop": 'Kirakós játék: Tanuljuk, hogy fogd és vidd technikát!'
+          "Jigsaw: Learn to drag and drop": 'Kirakós játék: Tanuld meg a vonszolást'
           "Maze: Sequence": 'Labirintus: sorozat'
           "Maze: Debugging": 'Labirintus: hibakeresés'
-          "Artist 1: Intro": '1. szereplő: Bevezetés'
+          "Artist 1: Intro": 'Művész 1 - Bevezető'
           Artists 2: Művészek 2
           Spelling Bee: Betüző méh
           Spelling Bee not blockly: A Betüző méh nem blockly
-          "Bee 1: Intro": 'Méh 1: Bevezetés'
+          "Bee 1: Intro": 'Méh 1: Bevezető'
           "Maze 2: Loops": 'Labirintus 2: ciklusok'
-          "Bee 2: Loops": 'Méh 2: Ciklusok'
+          "Bee 2: Loops": 'Méh 2: ciklusok'
           Multi & Match: Feleletválasztás és párosítás
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy blokkok nélkül
           title: 1. tanfolyam
           Artist 2: Művész 2
-          Happy Maps: Boldog térképek
+          Happy Maps: Vidám térképek
           Move it, Move it: Gyerünk, gyerünk!
           "Real-life Algorithms: Plant a Seed": 'Valós algoritmusok: Ültess el egy magot!'
-          Building a Foundation: Az alap megépítése
+          Building a Foundation: Alapozás
           Getting Loopy: Ciklikusság
           The Big Event: A nagy esemény
           Going Places Safely: Biztonságos utazás
           description: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült számítógépes programok elkészítése céljából, amely segít számukra megtanulni a másokkal való együttműködést, fejleszteni a problémamegoldó készségeket és legyőzni a nehézségeket. A tanfolyam végére a tanulók létrehoznak egy egyedi saját játékot vagy egy történetet, amit majd meg tudnak osztani. 1. osztályosok számára ajánlott.
-          "Bee: Sequence": 'Méh: Sorozat'
+          "Bee: Sequence": 'Méh: sorozat'
           "Artist: Sequence": 'Művész: sorozat'
           "Artist: Shapes": 'Művész: alakzatok'
           "Maze: Loops": 'Labirintus: ciklusok'
-          "Bee: Loops": 'Méh: Ciklusok'
+          "Bee: Loops": 'Méh: ciklusok'
           "Studio: Create a Story": 'Játéklabor: hozz létre egy történetet'
           "Artist: Loops": 'Művész: ciklusok'
           description_audience: 'Korosztály: 4+ (nemolvasók)'
@@ -54,11 +55,11 @@ hu:
           Bee Conditionals: Méh Feltételes mód
           Flappy: Flappy
           title: 2. tanfolyam
-          Bee Loops: Méh Ciklusok
+          Bee Loops: 'Méh: ciklusok'
           Artist Functions: 'Művész: függvények'
           The Artist Debugging: 'Művész: hibakeresés'
-          Bee Debugging: Méh Hibakeresés
-          Bee Functions: Méh Funkciók
+          Bee Debugging: 'Méh: hibakeresés'
+          Bee Functions: 'Méh: függvények'
           Maze Loops: 'Labirintus: ciklusok'
           Graph Paper Programming: Grafikus programozás
           "Real-life Algorithms: Paper Planes": 'Hétköznapi algoritmusok: Papírrepülők'
@@ -73,8 +74,8 @@ hu:
           "Artist: Sequence": 'Művész: sorozat'
           "Maze: Loops": 'Labirintus: ciklusok'
           "Artist: Loops": 'Művész: ciklusok'
-          "Bee: Loops": 'Méh: Ciklusok'
-          "Bee: Debugging": 'Méh: Hibakeresés'
+          "Bee: Loops": 'Méh: ciklusok'
+          "Bee: Debugging": 'Méh: hibakeresés'
           "Artist: Debugging": 'Művész: hibakeresés'
           "Bee: Conditionals": 'Méh: Feltételes mód'
           "Artist: Sequence2": 'Művész: sorozat 2'
@@ -93,14 +94,14 @@ hu:
           Bee Conditionals: Méh Feltételes mód
           Bee Nested Loops: Méh Beágyazott ciklusok
           Bee Debuggin: Méh Hibakeresés
-          Bee Debugging: Méh Hibakeresés
-          Bee Functions: Méh Funkciók
+          Bee Debugging: 'Méh: hibakeresés'
+          Bee Functions: 'Méh: függvények'
           Artist Functions with Params: 'Művész: paraméteres függvények'
           Bounce: Ugrál
           Maze Conditionals: 'Labirintus: feltételes utasítások'
           Artist Functions with Parameters: 'Művész: paraméteres függvények'
           Computational Thinking: Számítógépes gondolkodás
-          Functional Suncatchers: Funkcionális Dekor
+          Functional Suncatchers: Hasznos díszek
           Songwriting Parameters: Dalszerző-paraméterek
           Dice Race: Kocka verseny
           Internet: Internet
@@ -112,91 +113,37 @@ hu:
           Maze: Labirintus
           Artist: Művész
           "Artist: Functions": 'Művész: függvények'
-          "Bee: Functions": 'Méh: Funkciók'
+          "Bee: Functions": 'Méh: függvények'
           "Bee: Conditionals": 'Méh: Feltételes mód'
           "Maze: Conditionals": 'Labirintus: feltételes utasítások'
           "Artist: Nested Loops": 'Művész: egymásba ágyazott ciklusok'
           "Farmer: While Loops": 'Farmer: előtesztelő ciklusok'
           "Bee: Nested Loops": 'Méh: Beágyazott ciklusok'
-          "Bee: Debugging": 'Méh: Hibakeresés'
+          "Bee: Debugging": 'Méh: hibakeresés'
           Maze2: Labirintus 2
           Artist2: Művész 2
           "Artist: Functions2": 'Művész: függvények 2'
-          "Bee: Functions2": 'Méh: Funkciók2'
+          "Bee: Functions2": 'Méh: függvények 2'
           "Bee: Conditionals2": 'Méh: Feltételes mód2'
           "Maze: Conditionals2": 'Labirintus: feltételes utasítások 2'
           "Artist: Nested Loops2": 'Művész: egymásba ágyazott ciklusok 2'
           "Farmer: While Loops2": 'Farmer: előtesztelő ciklusok 2'
           "Bee: Nested Loops2": 'Méh: Beágyazott ciklusok2'
-          "Bee: Debugging2": 'Méh: Hibakeresés2'
+          "Bee: Debugging2": 'Méh: hibakeresés 2'
           "Artist: Patterns": 'Művész: minták'
           Songwriting: Dalszerzés
           description_audience: 'Korosztály: 8+ (a 2. tanfolyam elvégzése után)'
           description_short: A 3. tanfolyam a 2. tanfolyam folytatása.
-        msm:
-          title: Középiskolai matematika
-          description: Önállómunka zajlik középiskolai matematikából.
-          Graph Paper Programming: Grafikus programozás
-          Assessments: Felmérők
-          Unit 1: 1. rész
-          Unit 2: 2. rész
-          Ninja Cat and the Coordinate Plane: Ninja-macska és a koordináta sík
-          "Calc: Circles of Evaluation": 'Számológép: Kiértékelő körök'
-          "Artist: Strings and Images": 'Művész: szöveg és a képek'
-          Contracts: Szerződések
-          "Artist: Writing Contracts": 'Előadó: Szerződések írása'
-          "Calc: Defining Variables": 'Számológép: Változók deklarációja'
-          "Play Lab: Defining Variables": 'Játéklabor: Változók deklarálása'
-          The Design Recipe: A dizájn receptje
-          "Artist: Defining Functions": 'Művész: függvénydeklaráció'
-          "Play Lab: Defining Functions": 'Játéklabor: a dizájn receptje'
-          "Artist: Functions": 'Művész: függvények'
-          "Play Lab: Animation": 'Játéklabor: animáció'
-          Booleans: Logikai adattípus
-          "Play Lab: Booleans": 'Játéklabor: a logikai típus'
-          "Calc: Boolean Operators": 'Számológép: Logikai műveletek'
-          "Play Lab: Boolean Operators": 'Játéklabor: Logikai műveletek'
-          Conditionals and Piecewise Functions: Feltételes utasítások és összetett függvények
-          "Artist: Conditionals": 'Művész: feltételes utasítások'
-          Collision Detection and the Distance Formula: Ütközés észlelése és a távolság képlete
-          "Play Lab: Collision Detection": 'Játéklabor: Ütközés észlelése'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Gép nélküli feladatok: Ninja-macska és koordináta sík'
-          "Eval: Strings and Images": 'Kiértékelés: Szöveges típus és a képek'
-          "Unplugged: Contracts": 'Számítógép nélkül: Szerződések'
-          "Eval: Writing Contracts": 'Kiértékelés: Szerződések írása'
-          "Unplugged: The Design Recipe": 'Gép nélküli feladatok: a dizájn receptje'
-          "Eval: Defining Functions": 'Kiértékelés: Gyors függvények'
-          "Eval: Functions": 'Kiértékelés: A recept dizájnja'
-          "Unplugged: Booleans": 'Gép nélküli feladatok: logikai változók'
-          "Unplugged: Conditionals and Piecewise Functions": 'Gép nélküli feladatok: Feltételes utasítások és összetett függvények'
-          "Eval: Conditionals": 'Kiértékelés: feltételes utasítások'
-          "Unplugged: Collision Detection and the Distance Formula": 'Gép nélküli feladatok: Ütközés észlelése és a távolság képlete'
-          "Calc: Evaluation Blocks": 'Számológép: Kiértékelési blokkok'
-          "Unplugged: Video Games and Coordinate Planes": 'Gép nélküli feladatok: videojátékok és a koordináta síkok'
-          "Eval: Boolean Operators": 'Kiértékelés: Logikai műveletek'
-          Blocks to Math: Matematikai blokkok
-          "Play Lab: Defining Variables (Big Game)": 'Játéklabor: változók deklarálása (A Nagy Játék)'
-          "Play Lab: Animation (Big Game)": 'Játéklabor: Animáció (A Nagy Játék)'
-          "Play Lab: Boolean (Big Game)": 'Játéklabor: logikai változók (A Nagy Játék)'
-          "Play Lab: Collision Detection (Big Game)": 'Játéklabor: az ütközés észlelése (A Nagy Játék)'
-          "Eval: Fast Functions": 'Kiértékelés: Gyors függvények'
-          "Play Lab: Design Recipe": 'Játéklabor: a dizájn receptje'
-          "Eval: Design Recipe": 'Kiértékelés: A recept dizájnja'
         playlab:
           title: Játéklabor
-          description: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
+          description: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
           Play Lab: Játéklabor
-          description_short: Hozz létre egy történetet vagy készíts egy játékok a Játéklaborral!
+          description_short: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
         artist:
           title: Művész
           description: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
           Artist: Művész
           description_short: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
-        scrat:
-          title: Motkány
-          description_short: Motkány. Rövid leírás.
-          description: Motkány. Hosszú leírás
-          "Maze: Sequence": 'Labirintus: sorozat'
         hourofcode:
           Maze: Labirintus
           title: A kódolás órája
@@ -211,17 +158,16 @@ hu:
           description_short: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már befejezték a 2. és a 3. tanfolyamot.
           description: A 4. tanfolyam azoknak a tanulóknak ajánlott, akik már elvégezték a 2. és a 3. tanfolyamot. A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteteket és játékokat hoznak létre, amit bárkivel megoszthatnak. 4.-8. osztályosok számára ajánlott.
           "Artist: Variables": 'Művész: változók'
-          "Bee: For Loops": 'Bee: For ciklusok'
+          "Bee: For Loops": 'Méh: for ciklusok'
           title: 4. tanfolyam
-          "Algorithms: Tangrams": 'Algoritmusok: Tangram'
+          "Algorithms: Tangrams": 'Algoritmusok: tangram'
           Variables: Változók
           "Play Lab: Variables": 'Játéklabor: változók'
-          "Play Lab: Functions with Parameters": 'Játéklabor: Függvények paraméterrel'
-          "Bee: Functions with Parameters": 'Méh: Függvények paraméterekkel'
+          "Play Lab: Functions with Parameters": 'Játéklabor: függvények paraméterekkel'
+          "Bee: Functions with Parameters": 'Méh: függvények paraméterekkel'
           "Artist: For Loops": 'Művész: számláló ciklusok'
           "Play Lab: For Loops": 'Játéklabor: számláló ciklusok'
           "Artist: Functions": 'Művész: függvények'
-          "Artist: Functions with Paraqmeters": 'Művész: paraméteres függvények'
           "Unplugged: Tangrams": 'Gép nélküli feladatok: Tangram'
           Artist: Művész
           Bee: Méh
@@ -237,7 +183,9 @@ hu:
           Artist Binary: 'Művész: a kettes számrendszer'
           description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
         Course4pre:
+          title: A 4. tanfolyam előfeltétel
           description_short: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
           Course 4 Prerequisite: A 4. tanfolyam előfeltétel
           "Maze: Sequence": 'Labirintus: sorozat'
           "Artist: Sequence": 'Művész: sorozat'
@@ -247,31 +195,7 @@ hu:
           "Farmer: While Loops": 'Farmer: előtesztelő ciklusok'
           "Bee: Nested Loops": 'Méh: Beágyazott ciklusok'
           "Artist: Functions": 'Művész: függvények'
-          "Bee: Debugging": 'Méh: Hibakeresés'
-        course4pre:
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          "Maze: Sequence": 'Labirintus: sorozat'
-          "Artist: Sequence": 'Művész: sorozat'
-          "Artist: Loops": 'Művész: ciklusok'
-          "Bee: Conditionals": 'Méh: Feltételes mód'
-          "Artist: Nested Loops": 'Művész: egymásba ágyazott ciklusok'
-          "Farmer: While Loops": 'Farmer: előtesztelő ciklusok'
-          "Bee: Nested Loops": 'Méh: Beágyazott ciklusok'
-          "Artist: Functions": 'Művész: függvények'
-          "Bee: Debugging": 'Méh: Hibakeresés'
-        Course4pre (Case Conflict):
-          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
-          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
-          "Maze: Sequence": 'Labirintus: sorozat'
-          "Artist: Sequence": 'Művész: sorozat'
-          "Artist: Loops": 'Művész: ciklusok'
-          "Bee: Conditionals": 'Méh: Feltételes mód'
-          "Artist: Nested Loops": 'Művész: egymásba ágyazott ciklusok'
-          "Farmer: While Loops": 'Farmer: előtesztelő ciklusok'
-          "Bee: Nested Loops": 'Méh: Beágyazott ciklusok'
-          "Artist: Functions": 'Művész: függvények'
-          "Bee: Debugging": 'Méh: Hibakeresés'
+          "Bee: Debugging": 'Méh: hibakeresés'
         usability:
           Intro: Bevezető
           Variables and For Loops: Változók és számláló ciklusok
@@ -281,6 +205,7 @@ hu:
           description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági teszthez.
           Variables: Változók
           For Loops: Számláló ciklusok
+          Binary: Bináris
         potus:
           title: különleges
           description_short: különleges
@@ -291,3 +216,888 @@ hu:
           description_short: különleges
           description: különleges
           Special: Különleges
+          Binary: Bináris
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          description_short: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Gép nélküli feladatok: videojátékok és a koordináta síkok'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Húrok és Képek
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Gép nélküli feladatok: a dizájn receptje'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": Boolean Operators
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Gép nélküli feladatok: Feltételes utasítások és összetett függvények'
+          "Eval: Conditionals": Feltételek
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity játéklabor
+          description_short: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+          description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+          Play Lab: Játéklabor
+          Infinity: Végtelen
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Értékelési blokk
+          Making Pictures: Making Pictures
+          Defining Variables: Változók definiálása
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: A dizájn receptje
+        K5PD:
+          title: Szakmai fejlődés tanítóknak
+          description: Szakmai fejlődés alsó tagozatos kurzusokhoz
+          description_short: Szakmai fejlődés alsó tagozatos kurzusokhoz
+          Introduction to PD: Introduction to PD
+          Blockly Basics: Blockly Basics
+          Writing computer programs: Writing computer programs
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: Ways to go beyond Courses 1, 2, and 3
+          K-5 Courses: Alsó tagozatos tanfolyamok
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Events": 'Programming Concept: Events'
+        netsim:
+          title: Internet szimulátor
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
+          Internet Simulator: Internet szimulátor
+          Unit 1: 1. rész
+          Unit 2: 2. rész
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
+        pixelation:
+          title: Pixelation
+          description: Create images with bits and bytes.
+          description_short: Create images with bits and bytes.
+          Pixelation: Pixelation
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: Gyorsított bemutató a CS tanfolyamra
+          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+          description_short: A 20 órás tanfolyam kiterjed az alapvető számítógépes tudományra és a programozási fogalmakra a 2-4. tanfolyamban.
+          Introduction to Computer Science: Bevezetés a számítástechnikába
+          The Maze: A labirintus
+          Computational Thinking: Számítógépes gondolkodás
+          Graph Paper Programming: Grafikus programozás
+          The Artist: A művész
+          Algorithms: algoritmusok
+          The Artist 2: A művész 2
+          Functions: Függvények
+          The Farmer: A Farmer
+          Conditionals: Feltételek
+          The Artist 3: A művész 3
+          Song Writing: Dalírás
+          The Farmer 2: A Farmer 2
+          Abstraction: Változó
+          The Artist 4: A művész 4
+          Relay Programming: Váltó programozás
+          The Farmer 3: A Farmer 3
+          The Internet: Az internet
+          The Artist 5: A Művész 5
+          Wrap-up: Összefoglaló
+        edit-code:
+          title: Kód szerkesztése
+          description: Kód szerkesztése
+          description_short: Kód szerkesztése
+          The Maze: A labirintus
+          Applab: Applab
+          The Artist: A művész
+          Play Lab: Játéklabor
+          Play Lab 2015: Játéklabor 2015
+        events:
+          title: Események
+          description: Események
+          description_short: Események
+          Bounce: Visszapattanós
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy kód
+          description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!
+          description_short: Írd meg a saját Flappy játékod kevesebb, mint 10 perc alatt!
+          Flappy Code: Flappy kód
+        jigsaw:
+          title: Kirakós játék
+          description: Próbáld ki a kirakós játék bemutatóját
+          description_short: Próbáld ki a kirakós játék bemutatóját
+          Jigsaw: Kirakós játék
+        step:
+          title: Lépés
+          description: Lépésről-lépésre bemutató
+          description_short: Lépésről-lépésre bemutató
+          Step: Lépés
+        Hour of Code:
+          title: Kódolás órája 2013
+          description: Próbáld ki az alapvető számítógépes tudományokat az Angry Birds, a növények vs zombik alapján!
+          description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
+          Hour of Code 2013: Kódolás órája 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: Challenge yourself!
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        course4pre:
+          title: A 4. tanfolyam előfeltétel
+          description_short: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
+          description: A fogalmak egy rövid összefoglalása azon tanulók számára, akik nem vettek részt a 2. és 3. tanfolyamon.
+          Course 4 Prerequisite: A 4. tanfolyam előfeltétel
+          "Maze: Sequence": 'Labirintus: sorozat'
+          "Artist: Sequence": 'Művész: sorozat'
+          "Artist: Loops": 'Művész: ciklusok'
+          "Bee: Conditionals": 'Méh: Feltételes mód'
+          "Artist: Nested Loops": 'Művész: egymásba ágyazott ciklusok'
+          "Farmer: While Loops": 'Farmer: előtesztelő ciklusok'
+          "Bee: Nested Loops": 'Méh: Beágyazott ciklusok'
+          "Artist: Functions": 'Művész: függvények'
+          "Bee: Debugging": 'Méh: hibakeresés'
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: Lesson 8
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          "Unplugged: Video Games and Coordinate Planes": 'Gép nélküli feladatok: videojátékok és a koordináta síkok'
+          "Calc: Evaluation Blocks": 'Számológép: Kiértékelési blokkok'
+          "Eval: Strings and Images": 'Kiértékelés: Szöveges típus és a képek'
+          "Unplugged: Contracts": 'Számítógép nélkül: Szerződések'
+          "Eval: Writing Contracts": 'Kiértékelés: Szerződések írása'
+          "Calc: Defining Variables": 'Számológép: Változók deklarációja'
+          "Play Lab: Defining Variables (Big Game)": 'Játéklabor: változók deklarálása (A Nagy Játék)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Gép nélküli feladatok: a dizájn receptje'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Játéklabor: Animáció (A Nagy Játék)'
+          "Unplugged: Booleans": 'Gép nélküli feladatok: logikai változók'
+          "Eval: Boolean Operators": 'Kiértékelés: Logikai műveletek'
+          "Play Lab: Booleans": 'Játéklabor: a logikai típus'
+          "Play Lab: Boolean (Big Game)": 'Játéklabor: logikai változók (A Nagy Játék)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Gép nélküli feladatok: Feltételes utasítások és összetett függvények'
+          "Eval: Conditionals": 'Kiértékelés: feltételes utasítások'
+          "Unplugged: Collision Detection and the Distance Formula": 'Gép nélküli feladatok: Ütközés észlelése és a távolság képlete'
+          "Play Lab: Collision Detection (Big Game)": 'Játéklabor: az ütközés észlelése (A Nagy Játék)'
+          Evaluation Blocks: Értékelési blokk
+          Strings and Images: Húrok és Képek
+          Contracts: Szerződések
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: A dizájn receptje
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Conditionals and Piecewise Functions: Feltételes utasítások és összetett függvények
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: Introduction to PD
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
+          Evaluation Blocks: Értékelési blokk
+          Strings and Images: Húrok és Képek
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 'Your Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          "Play Lab: Collision Detection (Big Game)": 'Játéklabor: az ütközés észlelése (A Nagy Játék)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 'Your Game - Collision Detection'
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: Introduction to PD
+          title: Computer Science Principles PD
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: Introduction to PD
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          Getting to know AppLab: Getting to know AppLab
+          Functions: Függvények
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
+          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
+          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Értékelési blokk
+          The Big Game: The Big Game
+          Strings and Images: Húrok és Képek
+          The Design Recipe: A dizájn receptje
+          Next Steps: Next Steps
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+        Glenallan Career Day Demo:
+          new stage: new stage
+          title: Glenallan Career Day Demo
+          description_short: "Let's make some puzzles!"
+          description: Try out these fun coding puzzles. Do your best!
+          Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: Introduction to PD
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Értékelési blokk
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: Introduction to PD
+          Evaluation Blocks: Értékelési blokk
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: Introduction to PD
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: Introduction to PD
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Feleletválasztás
+          Big Game: Big Game
+          new stage: new stage
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: new stage
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: 'CSP Unit 2 - The Internet'
+          description_short: Az internet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: Az internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+        algebraPD2a:
+          title: Computer Science in Algebra PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Evaluation Blocks: Értékelési blokk
+          Strings and Images: Húrok és Képek
+          Defining Variables: Változók definiálása
+          Big Game - Variables: 'Big Game - Variables'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          The Design Recipe: A dizájn receptje
+          Big Game - Animation: 'Big Game - Animation'
+          Booleans: Logikai adattípus
+          Sam the Bat: Sam the Bat
+          Big Game - Booleans: 'Big Game - Booleans'
+          Luigi's Pizza: "Luigi's Pizza"
+          Big Game - Player Movement: 'Big Game - Player Movement'
+          Big GAme - Collision Detection: 'Big GAme - Collision Detection'
+          Rocket-Height: Rocket-Height
+          Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Ingyenes Játék
+        allthethings:
+          Jigsaw: Kirakós játék
+          Maze: Labirintus
+          Artist: Művész
+          Bee: Méh
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: Visszapattanós
+          Multi: Feleletválasztás
+          Match: Párosítás
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: AppLab
+          Online PD: Online PD
+          title: All the Things!
+          description: All the level types for UI testing
+          description_short: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Computer Science in Algebra PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Értékelési blokk
+          Strings and Images: Húrok és Képek
+          Writing Contracts: Writing Contracts
+          Defining Variables: Változók definiálása
+          Defining Functions: Funkciók meghatározása
+          Rocket-Height: Rocket-Height
+          Booleans: Logikai adattípus
+          "Eval: Conditionals": 'Kiértékelés: feltételes utasítások'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet szimulátor
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Üdvözlünk!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Üdvözlünk!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet szimulátor
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Üdvözlünk!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Összefoglaló
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: A kódolás órája 2015
+          description_short: Használd a játéklabort, hogy létrehozz egy történetet vagy játékot.
+          description: Használd a játéklabort, hogy létrehozz egy történetet vagy játékot.
+          Hour of Code: A kódolás órája
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Értékelési blokk
+          Strings and Images: Húrok és Képek
+          Writing Contracts: Writing Contracts
+          Defining Variables: Változók definiálása
+          Defining Functions: Funkciók meghatározása
+          Rocket-Height: Rocket-Height
+          Booleans: Logikai adattípus
+          "Eval: Conditionals": 'Kiértékelés: feltételes utasítások'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Üdvözlünk!
+          The Design Recipe: A dizájn receptje
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Üdvözlünk!
+          Wrap-Up: Összegzés
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Üdvözlünk!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Összegzés
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: Üdvözlünk!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Összegzés
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Üdvözlünk!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Összefoglaló
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Üdvözlünk!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Összefoglaló
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

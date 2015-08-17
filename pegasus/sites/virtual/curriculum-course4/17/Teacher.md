@@ -48,7 +48,6 @@ Students will:
 - Identify methods for encoding images into binary
 - Relate images to a peer using binary encoding
 - Reproduce an image, based on binary code
-- Distinguish multiple colors using only their binary encoding
 
 
 # Teaching Guide

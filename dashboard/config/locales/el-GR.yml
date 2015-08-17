@@ -1,4 +1,7 @@
 "el":
+  errors:
+    messages:
+      not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: δεν μπορεί να είναι στο μέλλον
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
+  submit: Υποβολή
   add_teacher_form:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
@@ -36,7 +40,7 @@
   of: του
   more: ΠΕΡΙΣΣΟΤΕΡΑ
   less: ΛΙΓΟΤΕΡΑ
-  beta: beta
+  beta: βήτα
   try_hoc: Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> 
   try_k8intro: Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών
     (15-25 ώρες)
@@ -62,6 +66,8 @@
     need_confirmation: Δεν έλαβες τις οδηγίες επιβεβαίωσης;
     need_unlock: Δεν έλαβες τις οδηγίες ξεκλειδώματος;
   signup_form:
+    student_count: '%{count} μαθητές έχουν ήδη εγγραφεί.'
+    teacher_count: '%{count} καθηγητές έχουν ήδη εγγραφεί.'
     overview_student: Δημιουργήστε λογαριασμό για να βλέπετε την πρόοδό σας. Το email
       σας χρησιμοποιείται κυρίως για να σας επιτρέπει να συνδέεστε και για την ανάκτηση
       του κωδικού. Για περισσότερες πληροφορίες δείτε την <a href="http://code.org/privacy">Πολιτική
@@ -267,8 +273,10 @@
       free_play:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
+        calculate: Calculate Something
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
+      district_dashboard: Περιοχή Ταμπλό
       label: Γεια σου %{username}
       stats: Η πρόοδός μου
       settings: Ο λογαριασμός μου
@@ -278,6 +286,7 @@
       signup: Εγγραφή
       already_registered: Έχετε εγγραφεί ήδη;
     popup:
+      progress_for_user: πρόοδος του %{name}
       progress: Η πρόοδός σου
       lines: 'Συνολικές γραμμές κώδικα: %{lines}'
       close: ΚΛΕΙΣΙΜΟ
@@ -354,16 +363,27 @@
       σας, επειδή δεν έχετε καταχωρήσει μια διεύθυνση email
     student_teacher_disassociated: Ο %{teacher_name} αφαιρέθηκε από τους δασκάλους
       του %{student_name}
+    panel:
+      answer_viewer: Εμφάνιση Απαντήσεων
+      student: φοιτητής/μαθητής
+      viewing_solution: Προβολή λύσης
+      try_it_yourself: Δοκίμασέ το μόνος σου
+      section: Ενότητα
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
+    email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
+      %{email}  δεν έχει επιβεβαιωθεί:'
+    email_confirm_wrong_email: (Λάθος διεύθυνση ηλεκτρονικού ταχυδρομείου;)
     email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: (άστο κενό εάν δεν θέλεις να τον αλλάξεις)
     current_password_hint: (χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
       οι αλλαγές)
-    cancel:
-      title: Ακύρωση του λογαριαμού μου
-      hint: Δυσαρεστημένος;
-      button: Ακύρωση του λογαριαμού μου
+    delete: Διαγράψτε τον λογαριασμό σας
+    delete_text: Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό
+      σας.
+    delete_text_teacher_note: 'Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα
+      διαγραφεί ο λογαριασμός των μαθητών σας.'
+    delete_confirm: Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε
@@ -373,6 +393,10 @@
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: Ήδη εγγεγραμμένος; %{link}
@@ -398,6 +422,7 @@
     local_school: τοπικό σχολείο
     online: σε σύνδεση
     see_details: Δείτε λεπτομέρειες
+    view_course: View Course
     prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια
       σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
     tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
@@ -416,6 +441,9 @@
     heading_apps: <h2>Διασκέδαση για</h2><h1>όλους</h1>
     heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
     your_gallery: Συλλογή φωτογραφιών
+    no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -513,9 +541,13 @@
       title: Flappy κώδικα
       body: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε
         το σεμινάριο μας για τον Flappy κώδικα!
-    20hour:
-      title: Εισαγωγικό Μάθημα
-      body: Δοκιμάστε το εισαγωγικό 20 ωρών μάθημα στην  επιστήμη των  υπολογιστών.
+    20-hour:
+      title: Accelerated Course
+      body: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού
+        . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού,
+        αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική
         μορφή
@@ -526,6 +558,9 @@
         από τους χρήστες μας
     frozen:
       title: Ψυχρά κι ανάποδα
+    infinity:
+      title: αιώνιο εργαστήρι παιχνιδιού
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
     students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
@@ -560,14 +595,28 @@
       ξανά!
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Λανθασμένη λύση
     wrong_body: Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
       ξανά!
     correct_title: Σωστό
     correct_body: Αυτή είναι η σωστή απάντηση.
+  contract_match:
+    wrong_title: Λανθασμένη απάντηση
+    badname: Η σύμβασή σας έχει λανθασμένο όνομα.
+    badname_case: Τα ονόματα των συναρτήσεων κάνουν διάκριση πεζών-κεφαλαίων. Δοκίμασε
+      να αλλάξεις τα πεζά ή τα κεφαλαία του ονόματος της σύμβασή σου.
+    badrange: Η σύμβασή σου έχει λάθος περιοχή.
+    baddomainsize: Η σύμβασή σου δεν έχει το σωστό πλήθος αντικειμένων στον τομέα.
+    baddomainname: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο όνομα.
+    baddomaintype: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο τύπο
+      ή είναι σε λάθος σειρά.
   text_match:
     placeholder: Εισάγετε την απάντησή σας εδώ
+    open_response_title: Ευχαριστούμε
+    open_response_body: Ευχαριστούμε για την απάντησή σου!
   dialog:
     ok: OΚ
   time:
@@ -583,7 +632,7 @@
             και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
             τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
         Hour of Code:
-          title: Ώρα του Κώδικα
+          title: Ώρα του Κώδικα 2013
           description: ''
         edit-code:
           title: Επεξεργασία κώδικα
@@ -622,11 +671,48 @@
     χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
     μαζί μας.
   progress:
-    not_completed: δεν έχει ολοκληρωθεί
+    not_started: δεν έχει ξεκινήσει
+    in_progress: σε εξέλιξη
     completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
     completed_perfect: ολοκληρώθηκε, τέλειο
     furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+    assessment: αξιολόγηση
   studio:
     courses_working_on: Μαθήματα τα οποία παρακολουθείτε
     completed_courses: Μαθήματα που ολοκληρώσατε
     all_courses: Όλα τα μαθήματα
+  project:
+    projects: Έργα
+    create: Δημιουργία Έργου
+    create_a_project: 'Δημιουργία ενός νέου έργου:'
+    new: Δημιουργία Νέου
+    rename: Μετονομασία
+    save: αποθήκευση
+    delete: Διαγραφή
+    exit: Επιστροφή στο Μάθημα
+    my_projects: Τα Έργα μου
+    share: Μοιράσου
+    share_title: Μοιράσου το έργο σου
+    share_copy_link: 'Αντιγραφή του συνδέσμου:'
+    close: Κλείσιμο
+    more: Περισσότερα
+    name: Όνομα
+    updated: Ενημερωμένο
+    project_type: Τύπος Έργου
+    help_text: Κάνε κλικ στο <strong>Φτιάξε μία Εφαρμογή</strong> ή στο <strong>Σχεδίασε
+      Κάτι</strong> παρακάτω να δημιουργήσεις ένα νέο έργο Play Lab ή Καλλιτέχνης!<br/>
+      Μπορείς να επιστρέψεις και να εργαστείς στα έργα σου οποιαδήποτε στιγμή.
+    need_help: Χρειάζεστε βοήθεια για να ξεκινήσετε?
+    really_delete: Διαγραφή;
+    delete_yes: Ναι
+    delete_no: Όχι
+    saved: Αποθηκευμένο
+    not_saved: Δεν έχει αποθηκευτεί
+    cancel: Άκυρο
+    delete_confirm_title: Είστε σίγουροι οτι θέλετε να διαγράψετε αυτό το έργο?
+    delete_confirm_text: Η διαγραφή του έργου σου θα το διαγράψει για πάντα από τον
+      κατάλογο Τα Έργα Μου. Οποιοσδήποτε με τον οποίο έχεις μοιραστεί τον σύνδεσμό
+      του δε θα μπορεί να δει το έργο σου.
+    view_all: Δείξε τα Έργα μου
+    remix: Μιξάρισμα
+    click_to_remix: Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!

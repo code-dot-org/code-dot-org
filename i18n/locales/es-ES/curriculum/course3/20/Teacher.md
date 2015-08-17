@@ -6,19 +6,19 @@ title: Digital Citizenship view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unplugged=>true, :title=> 'Digital Citizenship',:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
 
 Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -39,9 +39,9 @@ Students will also explore what it means to be responsible and respectful to the
 
 7) [Digital Citizens Assessment](#Assessment)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -50,27 +50,28 @@ Students will also explore what it means to be responsible and respectful to the
   * Reflect on the characteristics that make someone an upstanding citizen
   * Devise resolutions to digital dilemmas
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635)
   * Pens, Pencils, & Scissors
   * [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/fIlqt3P8Nsg?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * This Teacher Lesson Guide
   * A good selection of male and female [Papercraft Super Heroes](https://www.google.com/search?q=cubeecraft+superheroes&es_sm=119&tbm=isch&tbo=u&source=univ&sa=X&ei=v9SxU4TnJdHroATI5YDYCA&ved=0CCEQsAQ&biw=1273&bih=635) sheets for the whole class
   * Print one [Super Digital Citizen Assessment](Assessment20-DigitalCitizenship.pdf) for each student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -90,24 +91,24 @@ Here are some questions that you can ask in review:
 
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
-This lesson has one new and important word:  
+Esta lección tiene una palabra nueva e importante:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Digital Citizen** - Say it with me: Dih-jih-tal Sit-i-zen   
 Someone who acts safely, responsibly, and respectfully online
@@ -128,20 +129,20 @@ Someone who acts safely, responsibly, and respectfully online
 
 ![](info.png)
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 If you have access to a computer, feel free to navigate to a site that might require this type of information, such as Gmail or Facebook.
 
-[/tip]
+[/sugerencia]
 
   * Explain that some people will actively try to get you to share this kind of information so that they can use it to take over your identity. Once a thief has taken someone’s identity, he or she can use that person’s name to get a driver’s license or buy things, even if the person whose identity they stole isn’t old enough to do these things! 
       * It’s often not until much later that people realize that their identity has been stolen. Identity thieves may also apply for credit cards in other people’s names and run up big bills that they don’t pay off. Let students know that identity thieves often target children and teens because they have a clean credit history and their parents are unlikely to be aware that someone is taking on their child’s identity.
 
 Now, let's see what we can do to keep ourselves safe.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -172,19 +173,19 @@ Now, let's really make sure we understand how to be a Super Digital Citizen!
 > 
 > 5) Go around the room, having each student explain their scene to the class.
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
 
-[/tip]
+[/sugerencia]
 
-[/together]
+[/juntos]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -193,13 +194,13 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
   * What kinds of superpowers or qualities did your digital superheroes have in common?
   * What does Spider-Man’s motto “With great power comes great responsibility” mean to you, as someone who uses the Internet?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+Las preguntas de Flash Chat están diseñadas para provocar pensamiento con una visión más completa acerca de cómo se relaciona la lección con un mundo más amplio y un futuro más grande para los estudiantes. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Shmocab"></a> 6) Vocab Shmocab
 
@@ -212,7 +213,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 > 
 > > ...and what is the word that we learned?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -223,7 +224,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -238,7 +239,7 @@ Use these activities to enhance student learning. They can be used as outside of
 
   * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
 
-[/together]
+[/juntos]
 
 [standards]
 

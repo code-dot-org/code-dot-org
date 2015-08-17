@@ -120,9 +120,9 @@ XML
 
   test 'converts from and to XML level format' do
     name = 'Test level convert'
-    level = Level.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), name)
+    level = LevelLoader.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
     xml = level.to_xml
-    xml2 = Level.load_custom_level_xml(xml, name).to_xml
+    xml2 = LevelLoader.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
     level.destroy
     assert_equal xml, xml2
   end

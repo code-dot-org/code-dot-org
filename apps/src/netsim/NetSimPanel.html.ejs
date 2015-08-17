@@ -1,0 +1,14 @@
+<div id="netsim-panel-<%= instanceID %>"
+     class="netsim-panel <%= className %>">
+  <h1>
+    <div class="panel-controls"></div>
+    <div class="single-line-with-ellipsis<% if (userToggleable) { %> minimizer<% } %>">
+      <% if (userToggleable) { %>
+        <i class="fa fa-minus-square"></i>
+      <% } %>
+      <span class="title-text"><%= panelTitle %></span>
+    </div>
+  </h1>
+  <div class="panel-body">
+  </div>
+</div>

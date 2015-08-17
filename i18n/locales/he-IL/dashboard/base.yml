@@ -1,4 +1,7 @@
 he:
+  errors:
+    messages:
+      not_saved: 'נא תקן את השגיאות הבאות:'
   activerecord:
     errors:
       messages:
@@ -19,24 +22,25 @@ he:
           future: לא יכול להיות בעתיד
   hello: שלום עולם
   welcome_back: 'ברוך שובך, %{name}'
+  submit: שלח
   add_teacher_form:
     code:
       label: 'הוסף מורה:'
-      placeholder: Section Code (ABCDEF)
+      placeholder: אזור קוד (אבגדהו)
     submit: הוסף מורה
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
     submit: הוסף רמז
   appname: Code.org
   stage: שלב
-  stage_number: 'Stage %{number}'
+  stage_number: 'שלב %{number}'
   puzzle: חידה
   trophies: גביעי ניצחון
   courses: מסלולים
   of: של
   more: יותר
   less: פחות
-  beta: beta
+  beta: בטא
   try_hoc: 'נסה את שעת הקוד, לחץ כאן >> '
   try_k8intro: "נסה את הקורס מבוא למדעי המחשב לכיתות גן-ח'(15-25 שעות)"
   k8intro: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
@@ -48,8 +52,8 @@ he:
   auth:
     sign_in_with: 'היכנס באמצעות %{provider}'
     signed_in: נכנסת!
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out: 'התנתקת מ<a href="%{url}">Code.org</a>.'
+    sign_out_of: 'השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי לצאת מ- %{provider}.'
     already_signedup: כבר נרשמת?
     notyet_signedup: לא הצטרפת עדיין?
     google_oauth2: חשבון גוגל
@@ -60,8 +64,10 @@ he:
     need_confirmation: 'לא קיבלת את  ההוראות האישור?'
     need_unlock: לא קיבלת את ההוראות הפתיחה?
   signup_form:
-    overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
-    overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
+    student_count: '%{count} תלמידים כבר נרשמו.'
+    teacher_count: '%{count} מורים כבר נרשמו.'
+    overview_student: 'הירשם כדי לעקוב אחרי ההתקדמות שלך. כתובת המייל שלך תשמש לכניסה למערכת ולשחזור סיסמא . למידע נוסף ראה  <a href="http://code.org/privacy">מדיניות הפרטיות</a>.'
+    overview_teacher: 'תוכל ללמד מדעי המחשב בכיתה שלך באמצעות יצירת החשבון. <p/>תוכל להוסיף את תלמידי כיתתך ולעקוב אחרי התקדמותם.'
     no_signup_message: 'אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.'
     teacher_educator_guide: ראה מדריך למחנך
     teacher_pitch: הירשמות מורה ל code.org
@@ -85,7 +91,7 @@ he:
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
   signin_form:
     title: כבר יצרת משתמש? היכנס למערכת
     login: דוא ל או שם משתמש
@@ -97,7 +103,7 @@ he:
     try_hoc: נסה קודם את שעת הקוד
     try_20hours: 'נסה את קורס ה-20 שעות שלנו - מבוא למדעי המחשב'
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'ברוך הבא ל%{section_name}'
     name: בחר את השם שלך
     picture: עכשיו מצא את התמונה הסודית שלך
     words: כעת הכנס את המילים הסודיות שלך
@@ -134,9 +140,9 @@ he:
       no_teacher: |
         לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
-      section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: Please enter a section code
-      cant_join_own_section: "Sorry, you can't join your own section."
+      section_not_found: "לא היתה אפשרות למצוא את מקטע קוד '%{section_code}'."
+      blank_code: אנא הזן קוד סעיף
+      cant_join_own_section: מצטערים, לא תוכל להוסיף מקטע משלך.
     mail:
       invite_student:
         subject: 'הצטרף לכיתה עם %{teacher_name} ב-Code.org!'
@@ -151,12 +157,12 @@ he:
     title: 'פדה פרסים: %{name}'
     provider: 'ספק:'
     code: 'קוד:'
-    redeem_header: 'To redeem:'
+    redeem_header: 'כדי לקבל:'
     donorschoose_register: הירשם כמורה ב donorschoose.org
     donorschoose_project: פרסם פרוייקט
     donorschoose_how_to: איך להשתמש בקוד שלך
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: השגת את הפרס בהצלחה, הקוד מצורף מטה.
+    error: לא הצלחת לזכות בפרס, נסה שנית.
     error_us_only: הפרס הזה תקף אך ורק לתושבי ארצות הברית.
     error_not_earned: עדיין לא השגת את הפרס הזה.
     error_already_redeemed: הפרס שלך כבר נפדה.
@@ -215,10 +221,12 @@ he:
       finished_hoc: סיימתי את שעת הקוד שלי
       sign_in_to_save: התחבר כדי לשמור את התקדמות
       free_play:
-        playlab: Make an App
+        playlab: צור אפליקציה
         artist: Draw Something
+        calculate: Calculate Something
     user:
-      classroom: Teacher Home Page
+      classroom: דף הבית של המורה
+      district_dashboard: District Dashboard
       label: 'היי %{username}'
       stats: ההתקדמות שלי
       settings: החשבון שלי
@@ -226,8 +234,9 @@ he:
       logout: התנתק
       signin: התחבר
       signup: הירשם
-      already_registered: Already registered?
+      already_registered: כבר נרשמת?
     popup:
+      progress_for_user: 'ההתקדמות של %{name}'
       progress: ההתקדמות שלך
       lines: 'סה כ שורות קוד: %{lines}'
       close: קרוב
@@ -247,13 +256,13 @@ he:
     tools: כלים למורה
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      stages: 'שלב(ים) להצגה:'
+      show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
+      completed: הושלם, אך היה שימוש בבלוקים רבים מדי
+      tried: ניסה אך לא השלים
+      not_tried: טרם ניסה
       activity: 'Indicates student activity in the last %{hours} %{plural}'
       no_section: No assigned section
       trophies: גביעי ניצחון
@@ -262,10 +271,10 @@ he:
       username: שם משתמש
       password: סיסמה
       manage: נהל תלמידים
-      dashboard: Go to Teacher Dashboard
+      dashboard: לגשת לתצגת המורה
       add: הוסף תלמיד
       remove: הסר סטודנט
-      confirm_remove: Are you sure you want to remove this student?
+      confirm_remove: האם הנך בטוח שהנך רוצה להסיר את התלמיד?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
@@ -283,7 +292,7 @@ he:
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: קורס
       rename: שינוי שם
       edit: עריכה
       delete: מחק
@@ -295,15 +304,23 @@ he:
     cant_remove_student_no_email: '%{student_name} לא יכול להיות מוסר מרשימת התלמידים שלך בגלל ש %{student_name} לא נרשם עם כתובת מייל'
     cant_remove_teacher_no_email: '%{teacher_name} לא יכול להימחק מרשימת המורים שלך מכיוון שלא נרשמת עם כתובת מייל'
     student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
+    panel:
+      answer_viewer: Answer Viewer
+      student: תלמיד
+      viewing_solution: Viewing Solution
+      try_it_yourself: Try it yourself
+      section: Section
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
     current_password_hint: (אנחנו צריכים את הסיסמה הנוכחית שלך כדי לאשר את השינויים שלך)
-    cancel:
-      title: בטל את החשבון שלי
-      hint: לא שמח?
-      button: בטל את החשבון שלי
+    delete: Delete your account
+    delete_text: Clicking the button below will delete your account.
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: הושלם
     tried: נוסה
@@ -312,7 +329,10 @@ he:
     show_more: הצג יותר
     classroom_activity: פעילות לא מחוברת
   home:
-    title: Code Studio
+    title: ההתקדמות שלי
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: 'כבר רשום?  %{link}'
@@ -333,6 +353,7 @@ he:
     local_school: 'בה"ס מקומי'
     online: באינטרנט
     see_details: ראה פרטים
+    view_course: View Course
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
     trynow: נסה עכשיו
@@ -342,17 +363,20 @@ he:
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: גלריה
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: גבר
     female: אישה
     none: מעדיף לא לענות
   user_type:
     student: תלמיד
-    teacher: Teacher
+    teacher: מורה
   footer:
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
@@ -424,9 +448,10 @@ he:
     flappy:
       title: קוד מתנופף
       body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
-    20hour:
-      title: קורס מבוא
-      body: נסה את קורס מדעי המחשב בן 20 השעות שלנו.
+    20-hour:
+      title: Accelerated Course
+      body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen
@@ -435,6 +460,9 @@ he:
       body: View a gallery of app and artist images created by our users
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: Students made these with code!
@@ -459,13 +487,25 @@ he:
     wrong_body: התשובה שענית אינה נכונה.נא נסה שנית!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: פתרון לא נכון
     wrong_body: הפתרון שענית אינו נכון.נא נסה שנית!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
+  contract_match:
+    wrong_title: תשובה לא נכונה
+    badname: Your contract has the wrong name.
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: Your contract has the wrong range.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Enter your answer here
+    open_response_title: Thanks
+    open_response_body: Thanks for your response!
   dialog:
     ok: אישור
   time:
@@ -479,7 +519,7 @@ he:
           title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         Hour of Code:
-          title: שעה של קוד
+          title: Hour of Code 2013
           description: ""
         edit-code:
           title: עריכת קוד
@@ -509,11 +549,44 @@ he:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_completed: not completed
+    not_started: not started
+    in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
     completed_perfect: completed, perfect
     furthest_level_attempted: furthest level attempted
+    assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: Completed courses
     all_courses: All courses
+  project:
+    projects: Projects
+    create: Create Project
+    create_a_project: 'Create a new project:'
+    new: Create New
+    rename: Rename
+    save: שמור
+    delete: מחק
+    exit: Return to Course
+    my_projects: My Projects
+    share: שתף
+    share_title: Share your project
+    share_copy_link: 'Copy the link:'
+    close: Close
+    more: יותר
+    name: שם
+    updated: Updated
+    project_type: Project Type
+    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    need_help: Need help getting started?
+    really_delete: למחוק?
+    delete_yes: כן
+    delete_no: לא
+    saved: Saved
+    not_saved: Not saved
+    cancel: בטל
+    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    view_all: View My Projects
+    remix: Remix
+    click_to_remix: "Click 'Remix' to spin-off your own version!"

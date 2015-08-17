@@ -280,19 +280,43 @@
         video: C4_binario_sin_conexión
       VideoGamesCoordinatePlanes:
         title: Videojuegos y planos de coordenadas
-        desc: Descripción de la clase sobre videojuegos y planos de coordenadas
+        desc: Descubre cómo los videojuegos que tu amas en realidad son regidos por
+          el álgebra.Explora cómo las expresiones algebraicas y el plano de cartesiano
+          puede ayudarnos a entender cómo funcionan los videojuegos y comienza a planificar
+          el videojuego que tu crearás.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Contratos
-        desc: Descripción de la clase sin conexión sobre contratos
+        title: Contratos, dominio y rango
+        desc: Los contratos nos dan una manera de entender y discutir las funciones.
+          En esta lección analizaremos cómo contratos pueden ayudarnos a dar sentido
+          a un nuevo lenguaje de programación o una función.
+        video: alg_5_contracts
       DesignRecipe:
         title: La receta de diseño
-        desc: Descripción de la clase sobre receta de diseño
+        desc: En la última etapa los estudiantes escribieron algunas funciones muy
+          simples - pero más sofisticadas funciones exigen un enfoque más reflexivo.
+          La receta de diseño es un enfoque estructurado para escribir funciones que
+          incluye escribir casos de prueba para asegurar que la función funciona como
+          se espera.
+        video: alg_8_design_recipe
       Booleans:
-        title: Valores booleanos
-        desc: Descripción de la clase sobre booleanos
+        title: Booleanos y Lógica
+        desc: Valores booleanos son el cuarto y último tipo de datos que aprenderás
+          en este curso. En esta actividad tu aprenderás acerca de lo que son valores
+          booleanos, y cómo pueden ayudarnos a escribir funciones que piensan lógicamente
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Funciones por partes y condicionales
-        desc: Descripción de la clase sobre funciones por partes y condicionales
+        desc: Los parámetros que le pasamos a funciones causan las salidas variadas
+          basadas en un patrón muy rígido. Supongamos que queremos parámetros con
+          algunos valores para crear salidas usando un patrón pero otros valores a
+          utilizar un patrón diferente. Esto es donde condicionales son necesarios...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Detección de colisiones
-        desc: Descripción de la clase sobre detección de colisiones
+        title: Detección de colisiones y el teorema de Pitágoras
+        desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante
+          de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula
+          de la distancia y el teorema de Pitágoras se pueden utilizar para medir
+          la distancia entre dos puntos en el avión y luego decidir si se toca los
+          dos puntos (o juego de caracteres) son tocados.
+        video: alg_16_biggame_collision_detection

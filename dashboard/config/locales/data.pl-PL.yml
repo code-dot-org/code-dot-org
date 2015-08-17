@@ -26,16 +26,16 @@
           Artist5: Etap 19
           Unplug11: Etap 20
         Hour of Code:
-          desc: Godzina kodowania
+          desc: Godzina kodowania (Hour of Code)
           Maze: Etap 1
         Edit Code:
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
         2014 Levels:
-          desc: Łamigłówki 2014 (beta)
+          desc: Bounce (beta)
           Bounce: Etap 1
         Builder Levels:
-          desc: Puzzle utworzone przez użytkowników (beta)
+          desc: Łamigłówki utworzone przez użytkowników (beta)
           Custom: Etap 1
         Flappy Levels:
           desc: Flappy Bird
@@ -49,7 +49,7 @@
         edit-code:
           desc: Edytuj kod (beta)
           MazeEC: Etap 1
-          Webapp: Etap 2
+          Applab: Etap 2
           ArtistEC: Etap 3
           StudioEC: Etap 4
         events:
@@ -104,6 +104,8 @@
         ArtistEC: Artysta/Postać
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
+        Applab: App Lab
+        NetSim: Symulator internetowy
     trophy:
       name:
         Bronze: Brąz
@@ -166,8 +168,8 @@
           labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą
           ścieżkę bez względu na jej długość.
         turtle_1_1: Witaj, jestem artystą. Pisząc kod możesz sprawić, że narysuję
-          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować po szarych liniach
-          na obrazku.
+          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować wzdłuż szarych
+          linii na obrazku.
         turtle_1_2: 'A teraz narysuj kwadrat. Wskazówka: użyj swojego ulubionego koloru,
           wybierając go z nowego bloku ustaw kolor.'
         turtle_1_3: Narysuj kwadrat używając jedynie 3 bloków.
@@ -193,8 +195,8 @@
           ustaw szerokość. Baw się dobrze!'
         turtle_4_1: 'Czy możesz narysować trójkąt (z bokami o długości 100 pikseli)
           używając tylko 3 bloków? Wskazówka: Użyj bloku powtórz.'
-        turtle_4_2: Dodaj blok "Skręć w prawo o 90 stopni" gdzieś w środku programu
-          na obszarze roboczym, żeby rysować trójkąty.
+        turtle_4_2: Dodaj blok "skręć w prawo o 90 stopni" gdzieś w środku programu
+          na obszarze roboczym, żeby narysować te trójkąty.
         turtle_4_3: OK,  tutaj jest kod, który napisałeś, aby narysować pojedynczy
           trójkąt. Czy możesz dodać bloki powtórz i obróć, aby otrzymać ładny kwiat?
         turtle_4_4: 'Tutaj jest kod z poprzedniej łamigłówki, ale wykonujący obrót
@@ -316,9 +318,9 @@
           rozmiarach. (Wskazówka: kliknij gwiazdkę, aby dodać wejście do funkcji)'
         turtle_3_7: Dodaj wejście o nazwie długość do funkcji narysuj dom i zbuduj
           duży dom dla słonia (z krawędziami o długości 150 pikseli)
-        turtle_3_8: Tutaj są wszystkie bloki z poprzedniej łamigłówki. Zmodyfikuj
-          funkcję narysuj dom tak, aby rysowanie kończy się w prawym dolnym rogu.
-          Użyj tej zmodyfikowanej funkcji do narysowania trzech domów.
+        turtle_3_8: Modyfikuj "draw a house" (narysuj dom) tak, aby rysowanie kończyło
+          się w prawym dolnym rogu. Użyj tej zmodyfikowanej funkcji do narysowania
+          trzech domów.
         turtle_3_9: Czy mógłbyś ponownie utworzyć funkcję narysuj dom bez niczyjej
           pomocy? Spróbuj, a następnie narysuj szereg domów.
         turtle_3_10: Dużo się już nauczyłeś! Teraz narysuj, co chcesz. Spróbuj narysować
@@ -368,7 +370,7 @@
           doprowadzi mnie do świnki.
         bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
           Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
-        bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "Kiedy strzałka
+        bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy strzałka
           w lewo". Przesuń paletkę, aby osiągnąć ostateczne cele.
         bounce_3: Teraz spróbuj czegoś podobnego z blokiem "kiedy strzałka w górę".
           Przenieś paletki do miejsca końcowego na górze.
@@ -407,7 +409,7 @@
           powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie rur.
         flappy_5: Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody.
           Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
-          przelatując Flappym przez pierwsz zestaw rur.
+          przelatując Flappym przez pierwszy zestaw rur.
         flappy_6: Zobacz, czy potrafisz zdobywać punkty, gdy Flappy fruwa na małą
           lub dużą wysokość.
         flappy_7: Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po
@@ -415,8 +417,8 @@
         flappy_8: Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy
           gra się zaczyna.  Spróbuj ustawić losową scenę, gdy dzieje się coś innego,
           na przykład, gdy Flappy mija przeszkodę.
-        flappy_9: Można mieszać różne polecenia, po uderzeniu w przeszkodę lub w ziemię,
-          zamiast kończyć grę, spróbujmy ustawić wynik z powrotem na 0.
+        flappy_9: Dla zmyłki, po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
+          ustawić wynik z powrotem na 0.
         flappy_11: Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty
           wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
           przycisk Zakończ, aby swoim znajomym udostępnić grę na telefony.
@@ -473,14 +475,15 @@
         studio_c2_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
           Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę
           i w dół w nieskończoność?
-        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit",
-          gdy wpadnie na dinozaura, a następnie przenieś go za pomocą strzałek, aby
+        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia,
+          gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby
           się to stało?
         studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada
           na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
           punkt?
-        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tło i prędkość pingwina, a
-          następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
+          a następnie poruszać nim za pomocą przycisków ze strzałkami, aż zdobędziesz
+          punkt?
         studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
@@ -516,21 +519,21 @@
         studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_playlab_1: Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?
-        studio_playlab_2: Chłopiec z jaskini (aktor 1) i dziewczyna z jaskini (aktor
+        studio_playlab_2: Chłopiec z jaskini (postać 1) i dziewczyna z jaskini (postać
           2) chcieliby powiedzieć "hello" do siebie. Czy mógłbyś im pomóc wykorzystując
           dwa razy blok "powiedz"?
         studio_playlab_3: Czy mógłbyś pomóc tenisistce dostać się do flagi?
-        studio_playlab_4: Czy mógłbyś pomóc tenisiście (aktor 1) dotrzeć do tenisistki
-          (aktor 2) i odtworzyć dźwięk, gdy tam dotrze?
-        studio_playlab_5: Czy mógłbyś pomóc Spacebot powiedzieć "greetings earthlings"
-          (pozdrowienia dla Ziemian) po kliknięciu na nim? Nie zapomnij kliknąć na
-          nim, po kliknięciu przycisku Uruchom
-        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać za pomocą
+        studio_playlab_4: Czy możesz pomóc tenisiście (postać 1) dotrzeć do tenisistki
+          (postać 2) i odtworzyć dźwięk, gdy tam dotrze?
+        studio_playlab_5: Czy możesz pomóc, by Spacebot powiedział "pozdrowienia dla
+          Ziemian" po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu
+          przycisku "Uruchom"
+        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać się za pomocą
           klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne
           kule ogniste?
-        studio_playlab_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
-          Czy mógłbyś dołączyć do niego bloki powodujące, że  kreatora porusza się
-          w górę i w dół bez przerwy?
+        studio_playlab_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej
+          porusza się w górę i w dół bez przerwy?
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
           dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą
           strzałek aż zdobędziesz punkt?
@@ -550,20 +553,25 @@
           gdy dociera do niego pies.
         studio_k1_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje się
           szczęśliwa?
-        studio_k1_6: Utwórz własną historię! Przesuwaj dookoła kota i psa i powoduj,
-          że coś mówią.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
+        studio_k1_6: Utwórz własną historię! Przesuwaj kota i psa i spraw, że będą
+          mówić.
+        maze_wordsearch_k_1: Przesuwaj mnie, żeby przeliterować słowo EAST
+        maze_wordsearch_k_2: Przesuwaj mnie, żeby przeliterować słowo  SOUTH
+        maze_wordsearch_k_3: Przesuwaj mnie, żeby przeliterować słowo WEST
+        maze_wordsearch_k_4: Przesuwaj mnie, żeby przeliterować słowo NORTH
+        maze_wordsearch_k_6: Przesuwaj mną na wschód (East) a potem na południe (South),
+          żeby przeliterować słowo JUMP
+        maze_wordsearch_k_9: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo CODE
+        maze_wordsearch_k_13: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo DEBUG
+        maze_wordsearch_k_15: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo ABOVE
+        maze_wordsearch_k_16: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
+          słowo BELOW
         maze_wordsearch_k_20: To jest test! Przenieś mnie w jedną stronę, a później
-          w drugą by wypowiedzieć słowo STORY
-        webapp_ec_simple: Utwórz swoją aplikację sieciową przy użyciu createHtmlBlock.
+          w inną, by przeliterować słowo STORY
+        applab_ec_simple: Utwórz własną aplikację używając bloków z przybornika.
         turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
           go w nowym bloku "kolor pisaka".'
         turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
@@ -571,129 +579,6 @@
           pisaka". Baw się dobrze!'
         studio_ec_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-    levelbuilder:
-      frozen line:
-        instructions: Hi! jestem Elsa z Arendelle. Proszę pomóż mi utworzyć pojedynczą
-          linię.
-      frozen perpendicular:
-        instructions: Teraz zobaczmy, czy potrafimy utworzyć dwie linie leżące pod
-          kątem 90 stopni do siebie. Będziesz musiał użyć bloków Obróć (Turn) oraz
-          Przesuń (Move).
-      frozen square iterative:
-        instructions: Wygląda na to, że jesteśmy w połowie drogi do utworzenia kwadratu.
-          Umieść 4 linie tak, aby utworzyły kwadrat.
-      frozen square loop:
-        instructions: Cześć, jestem Anna z Arendelle! Zróbmy kwadrat używając bloku
-          Powtórz (Repeat), co pozwoli użyć mniej bloków. Ile razy (???) powinny wykonać
-          się bloki wewnątrz bloku pętli Powtórz (Repeat), żeby powstał kwadrat?
-      frozen square loop 3x:
-        instructions: Utwórzmy trzy kwadraty, obracając każdy z nich. Upewnij się
-          przed każdym nowym kwadratem, że obrót ma 120 stopni.
-      frozen square snowflake:
-        instructions: Czy potrafisz utworzyć śnieżynkę używając bloku Powtórz (Repeat),
-          aby narysować kwadrat 10 razy, oraz bloku Obróć (Turn), aby obrócić się
-          o 36 stopni pomiędzy każdym z kwadratów?
-      frozen cross:
-        instructions: Użyj bloku Powtórz (Repeat), aby utworzyć znak plus. Czy zauważyłeś,
-          że Elsa może poruszać się do przodu i do tyły?
-      frozen cross rotate:
-        instructions: Teraz spróbuj powtórzyć to 10 razy. O ile stopni musisz się
-          obrócić miedzy każdą z linii?
-      frozen cross rotate dense:
-        instructions: 'Powtórzmy to 90 razy! Ile razy 90 zmieści się w 360? Podpowiedź:
-          To naprawdę mała liczba.'
-      frozen diamond:
-        instructions: 'Utwórzmy równoległobok. To figura podobna do kwadratu, ale
-          ma inne kąty: 60 i 120 stopni zamiast 90 stopni.'
-      frozen diamond mini snowflake:
-        instructions: Czy wiesz, że każdy płatek śniegu ma inny kształt? Utwórzmy
-          nową śnieżynkę używając bloku Powtórz (Repeat), aby powtórzyć równoległobok
-          4 razy, obracając go za każdym razem o 90 stopni w prawo.
-      frozen diamond snowflake:
-        instructions: Teraz utwórzmy nową śnieżynkę, używając bloku powtórzenia, żeby
-          powtórzyć równoległobok 10 razy, obracając go za każdym razem o 36 stopni
-          w prawo.
-      frozen circle:
-        instructions: Okrąg jest specjalnym kształtem. Czy potrafisz znaleźć liczbę,
-          którą należy zastąpić pytajniki, aby narysować okrąg?
-      frozen circle function:
-        instructions: Użyj nowego bloku Utwórz okrąg (Create a circle), aby narysować
-          10 nakładających się na siebie okręgów. Nie zapomnij skoczyć do przodu pomiędzy
-          okręgami.
-      frozen circle function in circle:
-        instructions: Teraz utwórzmy 20 nakładających się na siebie okręgów, skręcając
-          o 18 stopni przy każdym okręgu.
-      frozen circle function with parameter:
-        instructions: Oto blok Utwórz okrąg (Create a circle), który potrafi tworzyć
-          okręgi o różnych rozmiarach. Czy potrafisz użyć go do utworzenia małego
-          okręgu o rozmiarze 5 i większego o rozmiarze 10?
-      frozen snowflower:
-        instructions: Wymyślne śnieżne wzory mogą być utworzone z bardzo prostych
-          kształtów. Czy potrafisz utworzyć wzór powtarzając 5 okręgów rozmiaru 5
-          i 5 okręgów rozmiaru 10?
-      frozen snowflake branch:
-        instructions: Spróbuj użyć bloku Utwórz ramię płatka śniegu (Create a snowflake
-          branch), aby utworzyć 3 ramiona, które zaczną wyglądać jak płatek śniegu.
-      frozen snowflake full:
-        instructions: Teraz powtórzymy to 8 razy, aby utworzyć piękny płatek śniegu!
-      frozen freeplay:
-        instructions: Oficjalnie stałeś się mistrzem artystą! Utwórz zimową krainę
-          cudów i podziel się nią z przyjaciółmi.
-      scrat 16:
-        instructions: Żołądź! Żołądź! Żołądź! Użyj bloku Jeśli (if), by sprowadzić
-          mnie tam przy użyciu jak najmniejszej liczby bloków.
-      scrat 17:
-        instructions: Ok, zróbmy to jeszcze raz dla poćwiczenia - nie różni się to
-          zbytnio, ale uważaj na ścianę!
-      scrat 18:
-        instructions: Bloki jeśli-w przeciwnym razie (if-else) sprawdzają warunek,
-          a następnie wykonują jedną rzecz LUB drugą. By sprowadzić mnie do żołędzia,
-          spróbuj użyć tego nowego bloku.
-      scrat 19:
-        instructions: Jeszcze jedno ćwiczenie z bloków jeśli-w przeciwnym razie. Czy
-          potrafisz użyć ich prawidłowo przy pierwszym podejściu?
-      scrat 20:
-        instructions: Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej
-          skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą
-          drogę bez względu na jej długość. Pospiesz się! Lód się topi!
-      Standalone_Artist_1:
-        instructions: Zapraszamy do Artysty! Najpierw, spróbujmy wykonać kwadrat używając
-          bloków "obróć w prawo" i "przesuń do przodu". Każdy bok powinien mieć długość
-          100 pikseli.
-      Standalone_Artist_2:
-        instructions: Narysuj ten diament z kontami 120 i 60 stopni i długościami
-          boków 150 pikseli.
-      Standalone_Artist_3:
-        instructions: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
-          i obrotami 60 stopni?
-      Standalone_Artist_4:
-        instructions: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
-          zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
-          6 razy?
-      Standalone_Artist_5:
-        instructions: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
-      Standalone_Artist_5.5:
-        instructions: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując pętlę.
-          Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat. Wskazówka:
-          Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować cały
-          czas tego samego diamentu.'
-      Standalone_Artist_6:
-        instructions: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór. O
-          ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
-          liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
-      Standalone_Artist_7:
-        instructions: 'Funkcja jest kolejnym narzędziem programowania, które pomaga
-          unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej za
-          każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
-          by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
-      Standalone_Artist_8:
-        instructions: Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy,
-          by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie
-          eksperymentuj z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować,
-          by rysowała wzory złożone z kwadratów, trójkątów lub ośmiokątów?
-      Standalone_Artist_9:
-        instructions: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet pustą
-          funkcja, którą możesz wykorzystać, by robiła, co chcesz!
     video:
       name:
         maze_intro: Labirynt - wprowadzenie
@@ -726,39 +611,40 @@
         C1_bigevent_unplugged: Wielkie wydarzenie
         C1_getting_loopy: Dostać Loopy
         C1_pair_programming: Programowanie w parach
-        C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
-        C1_bee_level_intro: Bee Level - Intro
+        C1_maze_intro_sequencing: Labirynt Sekwencji - Wprowadzenie
+        C1_maze_debugging: 'Labirynt: debugowanie'
+        C1_bee_level_intro: Poziom pszczoły - Wprowadzenie
         C1_artist_intro: Artysta - wprowadzenie
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_spelling_bee_intro: Pszczółka literuje - Wprowadzenie
+        C1_zuck_repeat_loop: 'Labirynt: Pętle'
+        C1_bee_loops: 'Pszczółka: Pętle'
+        C1_maze_loops: 'Labirynt: Pętle'
         C1_playlab_storytelling: Play Lab - Utwórz opowieść
-        C1_planting_seed: Zasadzenie nasiona
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_planting_seed: Sadzenie nasiona
+        C1_building_foundation: Budowanie solidnych podstaw
+        C1_going_places_safely: Bezpiecznie dotrzeć na miejsce
         C2_maze_intro: Labirynt - wprowadzenie
         C2_artist_intro: Artysta - wprowadzenie
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_zuck_repeat_loop: 'Labirynt: Pętle'
+        C2_artist_loops: 'Artysta: Pętle'
+        C2_artist_debugging: 'Artysta: Debugowanie'
+        C2_bee_loops: 'Pszczółka: Pętle'
+        C2_bee_debugging: 'Pszczółka: Debugowanie'
+        C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
         C2_playlab_createstory: Play Lab - Utwórz opowieść
         C2_graph_paper: Programowanie na papierze milimetrowym
         C2_conditionals_with_cards: Warunkowe
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binarne bransoletki
         C2_relay_programming: Programowanie przekaźnika
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
+        C2_digital_footprint_v2: Twój cyfrowy ślad
         C3_maze_level_4: Pętle w labiryncie
         C3_artist_intro: Artysta - wprowadzenie
         C3_artist_functions: Funkcje Artysty
         C3_bee_functions: Funkcje Pszczoły
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
+        C3_maze_conditionals: 'Labirynt: Wyrażenia warunkowe'
         C3_artist_nested_loops: Zagnieżdżające się  pętle
         C3_farmer_while: Pętle Dopóki (While)
         C3_bee_nested_loops: Zagnieżdżające się  pętle
@@ -772,7 +658,8 @@
         C3_functional_suncatchers: Funkcjonalne Suncatchers
         C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
         C4_intro: Wstęp
-        C4_bee_conditional: Bee Conditionals
+        C4_loops_zombie: Pętle
+        C4_bee_conditional: 'Pszczółka: Wyrażenia warunkowe'
         C4_variables_artist: Zmienne - Artysta
         C4_variables_playlab: Zmienne - Play Lab
         C4_for_loops: Pętle dla (for)
@@ -785,105 +672,152 @@
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Zmienne w Kopertach
         C4_unplugged_forloops: Pętle dla (for)
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Pisanie Piosenek z parametrami
         C4_unplugged_binary: Binarny
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
         frozen_functions: Wprowadzenie do Funkcji
         playlab_intro: Wprowadzenie do Play Lab
-        playlab_events: Zdarzenia Play Gry Lab
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_events: Zdarzenia Play Lab
+        playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        tutorial_puzzle_challenge: Wyzwanie łamigłówek samouczka
+        infinity_playlab_intro: Play Lab - Wprowadzenie
+        infinity_playlab_events: Play Lab - Zdarzenia
+        infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        csp_concept_rgb: Trochę o pikselach
+        csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
+        csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
+        csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3
+        csp_pixelation_bw: Czarno-biały pikselowy gadżet
+        csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
+        csp_textcompression: Gadżet do kompresji tekstu
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: Informatyka w algebrze - wprowadzenie
+        alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
+        alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
+        alg_4_data_types: Informatyka w algebrze - typy danych
+        alg_5_contracts: Informatyka w algebrze - umowy
+        alg_6_variables: Informatyka w algebrze - zmienne
+        alg_7_function: Informatyka w algebrze - funkcje
+        alg_8_design_recipe: Informatyka w algebrze - przepis na projekt
+        alg_9_booleans: Informatyka w algebrze - wartości logiczne
+        alg_10_conditionals: Informatyka w algebrze - instrukcje warunkowe
+        alg_11_coordinate_plane: Informatyka w algebrze - płaszczyzna współrzędnych
+        alg_12_biggame_variables: Informatyka w Algebrze - zmienne Wielkiej Gry (Big
+          Game)
+        alg_13_biggame_animation: Informatyka w Algebrze - animacja Wielkiej Gry (Big
+          Game)
+        alg_14_biggame_booleans: Informatyka w Algebrze - wartości logiczne Wielkiej
+          Gry (Big Game)
+        alg_15_biggame_update_player: Informatyka w Algebrze - uaktualniony gracz
+          Wielkiej Gry (Big Game)
+        alg_16_biggame_collision_detection: Informatyka w Algebrze - wykrywanie kolizji
+          w Wielkiej Grze (Big Game)
+        alg_17_sambat_compound_booleans: Informatyka w Algebrze - złożone wartości
+          logiczne
     callout:
       text:
-        drag_blocks: Drag a "move" block and snap it below the other block
+        drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
         run: Kliknij na "Uruchom", aby uruchomić program
-        watch_again: Kliknij tutaj, aby obejrzeć film ponownie
+        watch_again: Kliknij tutaj, aby ponownie obejrzeć film
         gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś
           jakkolwiek rozwiązać tę łamigłówkę?
         show_code_explanation: Kliknij tutaj, aby zobaczyć kod programu, który tworzysz
         instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane
           tutaj
-        category_explanation: Masz te same bloki, ale teraz są one ułożone w kategorie
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
-        studio_say_text: Type what you want your actor to say within these quotes
+        category_explanation: Masz te same bloki, ale teraz są one uporządkowane kategoriami
+        set_sprite_image: Dołącz blok "wstaw postać" do bloku "kiedy rozpoczyna się
+          historia", aby włączyć postać do tej historii
+        studio_say_text: W te cudzysłowy wpisz to, co ma powiedzieć Twoja postać
         jigsaw_click: Kliknij ten blok!
-        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
-          Run" block to make Elsa move forward
-        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
-          determines how much Elsa turns
+        move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu",
+          aby Elsa poszła naprzód
+        turn_elsa: Użyj bloku "skręć", aby Elsa obróciła się. Liczba wybrana z listy
+          rozwijanej, określa o ile stopni Elsa ma się obrócić
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
         replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez
           prawidłową liczbę stopni obrotu
-        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
-          workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
-        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
-          inside
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?  Try each equation!
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
+        repeat_blocks: Użyj bloku "powtórz" i otocz nim inne bloki w obszarze roboczym
+        repeat_blocks_1: (1) Użyj tego bloku i umieść go dookoła szarych bloków w
+          obszarze roboczym
+        repeat_blocks_2: (2) Przesuń blok "powtórz" tutaj i umieść szare bloki wewnątrz
+          niego
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+        degrees_per_side: Podziel 360 przez liczbę boków, aby uzyskać miarę każdego
+          kąta w stopniach.
+        set_sides: Użyj tego bloku, aby przypisać "sides" (boki) liczbę, potrzebną
+          do ukończenia łamigłówki.
+        set_length: Użyj tego bloku, aby nadać "length" (długość) poprawną wartość.
+        which_equation: Które równanie skraca każdy bok w kształtach o większej liczbie
+          boków?
+        get_nectar: Użyj nowego bloku "zbierz nektar".
+        actions_category: Przybornik ma nowy wygląd! Pojawiły się bloki "Actions"
+          (Akcje).
+        draw_square_hint: 'Wskazówka: Użyj pętli, którą utworzyłeś w poprzedniej łamigłówce.'
         edit_function: Kliknij tutaj, aby edytować swoją funkcję.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: Drag the "say" block here and type "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        create_function: Kliknij tutaj, aby otworzyć menu "Functions" (Funkcje), następnie
+          kliknij przycisk "Utwórz funkcję".
+        house_hint: Nie przejmuj się, jeśli obrazek nie wygląda jeszcze jak dom. Poprawimy
+          go w następnej łamigłówce.
+        edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
+        edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
+          w którym Pszczółka skręci, aby zebrać nektar.
+        logic_category: Otwórz "Logika", by znaleźć blok "jeśli/w przeciwnym razie".
+        length_parameter: Czy potrafisz zmodyfikować tę funkcję tak, aby używała parametru
+          "długość" (length)?
+        frozen_diamond_repeat: Użyj bloku "powtarzaj", aby utworzyć ten kształt.
+        frozen_circle_function_in_circle_turn: Nie zapomnij skręcić po utworzeniu
+          każdego okregu.
+        frozen_circle_function_with_parameter_circle: Użyj bloku "utwórz okrąg" i
+          zmień jego rozmiar.
+        frozen_snowflake_branch: Użyj bloku "utwórz płatek śnieżynki"
+        frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
+        playlab_drag_say: Przeciągnij blok "powiedz" i wpisz "hello"
+        playlab_use_twice: Użyj tego bloku dwa razy i pamiętaj, aby zmienić numer
+          postaci
+        playlab_move_girl: Użyj bloku "przesuń w prawo", aby przenieść tenisistkę
+        playlab_play_sound: Dodać "Odtwórz dźwięk" blok tutaj
+        playlab_arrow_keys: Pamiętaj, aby z nich korzystać do przesuwania czarownicy
+          po kliknięciu "Uruchom"
+        playlab_add_move: Dodaj bloki "przenieś" wewnątrz tego bloku "powtórz"
+        playlab_add_score: Dodaj tutaj bloki wyniku
+        playlab_add_blocks: Dodaj tutaj swoje bloki
+        set_variable: Przeciągnij tutaj blok z liczbą, aby ustalić zmienną
+        place_variable: Przeciągnij zmienną do wnętrza tego bloku
+        bee_for_loop: Przeciągnij największą liczbę nektaru, jaką chcesz, by pszczółka
+          zebrała tutaj
+        place_counter_variable: Przeciągnij zmienną "licznik" (counter) do wnętrza
+          tego bloku
+        function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki są
+          wykonywane za każdym razem, gdy używasz bloku "draw a square" (narysuj kwadrat)
         change_here: Popraw tutaj
         write_draw_square_function: Przeciągnij tutaj bloki z przybornika, które narysują
           kwadrat
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        write_draw_triangle_function: Przeciągnij tutaj bloki z przybornika, aby narysować
+          trójkąt
+        edit_add_parameter: Kliknij przycisk "edytuj", aby dodać parametr w swojej
+          funkcji
+        add_and_drag_parameter: Wpisz tutaj nazwę swojego parametru, kliknij "dodaj"
+          (add), a następnie przeciągnij do definicji swojej funkcji
+        fill_in_actor: Wypełnij ??? liczbami, które odpowiadają każdej postaci (1,
+          2 i 3)
+        repeat: Umieść bloki wewnątrz pętli, aby powtórzyć polecenia
+        if_bee_nectar: Użyj bloku "jeśli", aby zdecydować, czy pszczółka powinna dostać
+          nektar
+        if_else_bee: Użyj bloku "jeśli-w przeciwnym razie", aby pszczółka mogła zebrać
+          nektar z kwiatu lub zrobić miód, gdy nie jest to kwiat
+        repeat_full_circle: Wpisz, ile razy zombie musi wykonać ruch, aby zrobić pełne
+          koło
+        place_length_variable: Przeciągnij tutaj zmienną "length" (długość), aby zastąpić
+          znaki zapytania
+        arrows_move_actor: Używaj strzałek, aby przesunąć postać
+        right_arrow_fireball: Użyj strzałki w prawo, aby strzelać ognistymi kulami
+        name_function: Wpisz tutaj nazwę swojej funkcji
+        Infinity_move_right_runbutton: Dodaj tutaj blok przesunięcia
+        Infinity_move_directions_callout: Który blok powoduje, że Baymax porusza się
+          do góry, po naciśnięciu strzałki w górę?
+        Infinity_move_directions_callout_arrow: Użyj tych strzałek do sterowania
+        Infinity_move_collide_callout: Odtwórz dźwięk, gdy wystąpi to zdarzenie.
+        Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia

@@ -17,8 +17,7 @@
     "step_mode": "0",
     "step_speed": "2",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "maze_data": null
+    "use_contract_editor": "false"
   }
 }]]></config>
   <blocks>

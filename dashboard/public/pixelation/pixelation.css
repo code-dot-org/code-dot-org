@@ -1,0 +1,108 @@
+#external {
+  clear: both;
+}
+
+#visualization {
+  overflow: hidden;
+}
+
+#visualizationColumn {
+  width: 400px;
+  float: left;
+}
+
+#below_viz_instructions {
+  margin: 15px 0;
+}
+
+.right {
+  float: right;
+}
+
+#save_image {
+  margin: 3px 0 5px 0;
+}
+
+#actual_size_label {
+  margin-top: 9px;
+}
+
+#actual_size {
+  margin: 0;
+}
+
+#pixel_format {
+  color: #fff;
+  background: #000;
+  font: bold 14pt monospace;
+  padding: 1px 7px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#pixel_format .r {
+  color: #f00;
+}
+
+#pixel_format .g {
+  color: #0f0;
+}
+
+#pixel_format .b {
+  color: #00f;
+}
+
+#pixel_format .unknown {
+  color: #999;
+}
+
+#pixel_data {
+  width: 100%;
+  height: 350px;
+  font-family: monospace;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+#file_format div {
+  padding: 3px 5px;
+  border: 1px solid #000;
+  max-width: 230px;
+  background: #fff;
+}
+
+#file_format .byte {
+  border-bottom: 0;
+  width: 140px;
+}
+
+#image_controls td {
+  white-space: nowrap;
+}
+
+#image_controls td:nth-child(2) {
+  padding: 0 5px;
+}
+
+#image_controls td:last-child {
+  width: 100%;
+}
+
+input[type=radio] {
+  margin: 0 3px;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+.label_group label {
+  display: inline-block;
+}

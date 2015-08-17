@@ -1,0 +1,12 @@
+{
+  "name": "@cdo/apps/test",
+  "version": "0.0.1",
+  "description": "Tests for cdo apps",
+  "browserify": {
+    "transform": [
+      "require-globify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": "./util/browserifyShim.config.js"
+}

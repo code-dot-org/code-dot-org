@@ -58,7 +58,7 @@ ja:
         edit-code:
           desc: コードを編集する(ベータ版)
           MazeEC: ステージ 1
-          Webapp: ステージ 2
+          Applab: ステージ 2
           ArtistEC: ステージ 3
           StudioEC: ステージ 4
         events:
@@ -109,10 +109,12 @@ ja:
         Jigsaw: ジグソーパズル
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: アーティスト
         TextMatch: Text Match
-        StudioEC: Play Lab
+        StudioEC: プレイラボ
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: 銅
@@ -121,8 +123,8 @@ ja:
     concept:
       description:
         sequence: シークエンス
-        if: もしもブロック
-        if_else: If else ブロック
+        if: もしブロック
+        if_else: もし/でなければブロック
         loop_times: 回ブロックを繰り返す
         loop_until: までブロックを繰り返します
         loop_while: の間にブロック
@@ -142,14 +144,14 @@ ja:
         maze_2_8: 灰色のブロックを消すことはできません。「繰り返し」ブロックを使い、3回繰り返し、このパズルを解きましょう。「動く」「動く」「曲がる」の3つのブロックを灰色の「繰り返し」ブロックにいれてみましょう
         maze_2_9: OK。新しい「まで繰り返す(Repeat until)」ブロックを試しましょう。いらいらさせるブタにたどりつくまで繰り返します
         maze_2_10: 最後の問題です。4つのブロックだけを使いパズルを解けますか？
-        maze_2_11: 人間のあなた。わたしはzmbie。おなかが減っています。。。ヒマワリが必要です。5つの ブロックだけでわたしを連れていけますか？
+        maze_2_11: 人間のあなた。わたしはゾンビ。おなかが減っています。。。ヒマワリが必要です。5つのブロックだけでわたしを連れていけますか？
         maze_2_12: OK。似ていますが、ちょっと違います。ブロック5つだけでできますか？
-        maze_2_13: '新しい"if"ブロックを使い、いつ曲がるかを決めてください。ヒント: あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります'
-        maze_2_14: 'OK。さっきのパズルと同じです、でもどうやって"if"ブロックと"repeat"ブロックを一緒に使ったかをもう一度思い出してみましょう'
-        maze_2_15: 'ヒマワリがほしい！一番小さいk座右のの"if"ブロックを使いそこまで連れていってください'
+        maze_2_13: '新しい"もし"ブロックを使い、いつ曲がるかを決めてください。ヒント: あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります'
+        maze_2_14: 'OK。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう'
+        maze_2_15: 'ヒマワリがほしい！"もし"ブロックを使って最小限のブロック数で私をそこまで連れていってください。'
         maze_2_16: OK 練習のためにもう一度。 ー　それほど違いはないけれど、 チャンパーたちに気をつけて！
-        maze_2_17: '"If-else"ブロックは条件をきめて、なにかしらのことをします。ヒマワリをとってくるために、新しいブロックを試しましょう'
-        maze_2_18: '"if-else"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
+        maze_2_17: '"もし/でなければ"ブロックは条件を確かめて、あること、あるいは別のあることをします。ヒマワリをとってくるためにこの新しいブロックを試しましょう。'
+        maze_2_18: '"もし/でなければ"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
         maze_2_19: ブロックをあと3つ足して、難しい迷路を解くのをたすけてくれますか？もしそれができれば、どんな長くカーブした道でも歩けるようになります
         turtle_1_1: こんにちは、はアーティストです。プログラムを作ればどんな形でも描くことができます。ブロックをいくつか使い、灰色の線をなぞらせてください
         turtle_1_2: '四角形を描きます。注: 新しい「色の設定」ブロックで選択して、好きな色を使用する'
@@ -182,7 +184,7 @@ ja:
         maze_karel_1_8: できる限り少ない数のブロックで、畑のはじの穴を埋めるのを手伝ってください。
         maze_karel_1_9: 'これらすべての泥山をなくしましょう。できる限り少ない数のブロックを使ってください。ヒント："while"ブロックを使ってみてください'
         maze_karel_1_10: 遅くまで仕事をしていたので外は真っ暗、積み上がった山がどのくらい大きいのかわかりません。whileブロックにあったようなオプションはもうありません。畑にそって私を移動させ、山があれば移動させます
-        maze_karel_1_11: '外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"if"ブロックでオプションのドロップ ダウン メニューを使います'
+        maze_karel_1_11: '外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"もし"ブロックでオプションのドロップ ダウン メニューを使います'
         turtle_2_1: 'こんにちは。私、zombieアーティスト。私、描くのが大好き ！特別な色で四角形を描くのを手伝ってください。重要: ブロックはみんな同じですが、カテゴリーに分かれています'
         turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「機能」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな 50 x 50 の緑の四角形を描きましょう
         turtle_2_3: 繰り返し」ブロック を使い、「ループ」カテゴリにある、サイズが100、それぞれ120度離れている四角形を３つ描きます。そして３つのランダムで違う色で描いてください
@@ -218,7 +220,7 @@ ja:
         turtle_3_5: さあ、新しい「家を描く」機能を作って、猫の家を描いてみましょう。ヒント：「何かをする」ブロックを使い、新しい機能を作成する。ブロックに自分でつけた名前をテキスト入力します
         turtle_3_6: 「四角形を描く」を手本として、「三角形を描く」という機能を作ってください。「長さ」という名前の入力を追加します。その後、様々なサイズの三角形を描画して見てくださ。 （ヒント：関数に入力を追加するには、星をクリックしてください）
         turtle_3_7: 「家を描く」に「長さ」という入力名を追加します。(エッジ 150 ピクセルの長さ) の大きな象の家を建てましょう
-        turtle_3_8: パズルからのブロック、すべてがあります。「家を描く」を修正し、新しい家を描いた後は右下隅で終了するようにしています。この修正機能を使い、3 つの家を描いてみます
+        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
         turtle_3_9: ひとりで「家を描く」機能を作れますか。試してみて、住宅の列を作ります
         turtle_3_10: あなたはたくさんのことを学びました！星、スパイイラル、または派手なスノーフレークなど自由に描きましょう
         maze_karel_debug_seq_1: デバッグのせかいへようこそ ！プログラムがただしくうごいてくれません。じめんをたいらにしてたねまきができるように、まちがっているところをみつけて、なおしてもらえませんか？
@@ -254,14 +256,14 @@ ja:
         flappy_1: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
         flappy_2: いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です
         flappy_3: 「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください
-        flappy_4: もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲーム終了」のコードが必要になります
+        flappy_4: もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。
         flappy_5: とくてんひょうをつくり、Flappyがどかんをとおりぬけたときのてんすうをかぞえましょう。「どかんをとおりぬけたとき」のブロックにぶろっくをくっつけて、とんでいるFlappyがどかんのあいだをとおりぬけたときにてんすうがふえるようにしてください
-        flappy_6: Flappyがふらふら飛ぶ量を小さくしたり大きくした後、まだ得点しているかどうか見てください
+        flappy_6: フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。
         flappy_7: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください
         flappy_8: |
           ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
           
-        flappy_9: 物事をミックスするため、障害物や地面にヒットした時に、ゲーム終了の代わりに得点を０に戻してください。
+        flappy_9: 色々な組み合わせを試してみましょう。障害物や地面にヒットした時に、ゲーム終了のかわりにスコアが0にもどるように設定して下さい。
         flappy_11: じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。
         flappy_k1_1: Flappyであそぶ
         flappy_k1_2: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
@@ -272,18 +274,18 @@ ja:
         flappy_k1_7: どかんをとおりぬけるたびになんかいもてんすうがふえるかどうか、かくにんしてください。
         flappy_k1_8: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください
         flappy_k1_9: 「実行時」ブロックに「プレイヤーをセット」のブロックをくっつけて、プレイヤーのみためをかえてみてください。
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_1: ブロックをクリックします。
+        jigsaw_2: ブロックをターゲットまでドラッグします。
+        jigsaw_3: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_4: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_5: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_6: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_7: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_8: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_9: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_10: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_11: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_12: 絵が完成するようにブロックを配置しましょう。
         jigsaw_13: パズルをといて！
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
@@ -313,9 +315,9 @@ ja:
         studio_c3_game_4: まず、ペンギンが恐竜にぶつかったら「痛い！」としゃべり、同時に「ヒット」の音が鳴るようにブロックを組み立ててください。それから矢印を使ってペンギンをうごかし、恐竜にぶつけてみましょう。
         studio_c3_game_5: ペンギンがタコにさわったらポイントがもらえるようにブロックをくみたててから、矢印をつかってポイントがもらえるまでタコを動かしましょう。
         studio_c3_game_6: このゲームのはいけいと、ペンギンのうごくはやさをかえるブロックをついかしてから、ポイントがもらえるまで矢印をつかってペンギンをうごかしましょう。
-        studio_c3_game_7: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_playlab_1: 'Penguin wants to say "hello" - can you help him?'
-        studio_playlab_2: 'Cave Boy (actor 1) and Cave Girl (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
+        studio_c3_game_7: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
+        studio_playlab_1: 'ペンギンが「今日は」と言いたい - 彼を助けることができますか'
+        studio_playlab_2: 'Cave Boy (actor 1) and Jasmine (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor 2) and play a sound when he gets there?
         studio_playlab_5: 'Can you help the Spacebot say "greetings earthlings" when it is clicked? Don’t forget to click it after you click Run'
@@ -323,8 +325,8 @@ ja:
         studio_playlab_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help the wizard move right and left repeatedly?'
         studio_playlab_8: Can you add a block to score a point and a block to play a sound when the unicorn runs into the wizard, and then move him with the arrows until you score?
         studio_playlab_9: Set the background for this alien invasion and help the Spacebot get to the alien faster by changing its speed. Then move him with the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-        studio_full_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
+        studio_playlab_10: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
+        studio_full_sandbox: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
         studio_k1_1: いぬに「こんにちは」といわせてみましょう。
         studio_k1_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
         studio_k1_3: いぬがねこのところに行くプログラムを作ってみてください。
@@ -341,82 +343,10 @@ ja:
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
         maze_wordsearch_k_20: This is a test! Move me one way, then another to spell the word STORY
-        webapp_ec_simple: Create your web app by using createHtmlBlock.
+        applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
-        studio_ec_sandbox: "Create your own game. When you're done, click Finish to let friends try your game on their phones."
-    levelbuilder:
-      frozen line:
-        instructions: こんにちは！アレンデール王国のエルサです。１本線を描くのを手伝ってください。
-      frozen perpendicular:
-        instructions: こんどは、２本の線が９０度になるように描画してみましょう。”移動”ブロックだけでなく、”回転”ブロックも使ってください。
-      frozen square iterative:
-        instructions: 正方形の描画にはまだ道半ばですね。４本の線を使って正方形を作ってみましょう。
-      frozen square loop:
-        instructions: こんにちは、アレンデール王国のアナです。”繰り返し”ブロックを使って正方形を描いてみましょう。そうすると少ない数のブロックで同じことができます。正方形を作るには、”繰り返し”ブロックの中を何回(???)繰り返せばよいかしら？
-      frozen square loop 3x:
-        instructions: 傾いた正方形を３つ作ってみましょう。それぞれの正方形を描画する前に１２０度回転させてくださいね。
-      frozen square snowflake:
-        instructions: ”繰り返し”ブロックを使い、正方形を１０回描画したら、雪の結晶をつくれるかしら？それぞれの正方形を描画するときに、”回転”ブロックをつかって、３６度回転してくださいね。
-      frozen cross:
-        instructions: ”繰り返し”ブロックを使って、プラス記号（足し算記号）を描いてください。エルサが前にすすんだり、後ろにすすんだりできることに気がついた？
-      frozen cross rotate:
-        instructions: では１０回くりかえしてみましょう。それぞれの線を描くときに何度回転したらよいかわかるかしら？
-      frozen cross rotate dense:
-        instructions: ９０回くりかえしてみましょう！９０を何倍すると３６０度になるかしら？ヒント：とても小さい数ですよ。
-      frozen diamond:
-        instructions: 平行四辺形を描いてみましょう。正方形みたいだけど角度がちがいます。９０度の代わりに６０度と１２０度をつかいましょう。
-      frozen diamond mini snowflake:
-        instructions: 雪の結晶の形はぜんぶ違うって知ってたかしら？平行四辺形を９０度回転しながら４回描画して、新しい雪の結晶を描いてみましょう。そのとき、”繰り返し”ブロックをつかってくださいね。
-      frozen diamond snowflake:
-        instructions: では、平行四辺形を３６度回転しながら１０回繰り返して描くことで新しい雪の結晶を描いてみましょう。
-      frozen circle:
-        instructions: '円は特別な形です。円を描くのにどんな数字で"???"を置きかえればよいかわかりますか？'
-      frozen circle function:
-        instructions: ”円を描く”ブロックを使って１０個の重なった円を描画してみましょう。円を描くたびに移動することを忘れないでね。
-      frozen circle function in circle:
-        instructions: では、２０個の重なった円を描いてみましょう。それぞれの円を描くたびに１８度回転させてくださいね。
-      frozen circle function with parameter:
-        instructions: ”円を描く”ブロックは色々なサイズの円を描くことができます。サイズが５の小さい円とサイズ１０の大きい円を描くことができるかしら？
-      frozen snowflower:
-        instructions: ふくざつな雪の結晶もシンプルな形の組み合わせで描くことができます。サイズ５の円を５回、サイズ１０の円を５回くりかえして、模様を描くことができますか？
-      frozen snowflake branch:
-        instructions: ”結晶の枝を描く”ブロックを使って、３つの枝を描いてみましょう。雪の結晶のように見えてきました。
-      frozen snowflake full:
-        instructions: では、８回繰り返して美しい雪の結晶を描いてみましょう！
-      frozen freeplay:
-        instructions: あなたはもう芸術家ですね！あなたの作品を友達に見てもらいましょう。
-      scrat 16:
-        instructions: 'どんぐり！どんぐり！どんぐり！"if"ブロックを使って、できるだけ少ない数のブロックで私をそこへ連れていってください。'
-      scrat 17:
-        instructions: いいですね！もういちど練習しましょう。そんなに違いはありません。でも壁には気を付けてね！
-      scrat 18:
-        instructions: '"if-else"ブロックは条件をチェックして、どちらかの処理を実行するものです。このブロックを使って、僕をドングリまでつれていってください。'
-      scrat 19:
-        instructions: '"if-else"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
-      scrat 20:
-        instructions: ３つのブロックを追加するだけでもっと難しい迷路を解けますか？あなたがちゃんとしてくれれば、私はどんな曲がりくねった道でも、どんなに長くても、歩いて行けるんです。いそいで！氷がとけちゃう！
-      Standalone_Artist_1:
-        instructions: "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
-      Standalone_Artist_2:
-        instructions: Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.
-      Standalone_Artist_3:
-        instructions: Can you draw this hexagon with 100 pixel sides and 60 degree turns?
-      Standalone_Artist_4:
-        instructions: "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
-      Standalone_Artist_5:
-        instructions: How many times do you need to loop this diamond to draw the flower?
-      Standalone_Artist_5.5:
-        instructions: "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
-      Standalone_Artist_6:
-        instructions: 'Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.'
-      Standalone_Artist_7:
-        instructions: 'A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart'
-      Standalone_Artist_8:
-        instructions: |-
-          Here's a function called "Draw a shape" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9:
-        instructions: "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!"
+        studio_ec_sandbox: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
     video:
       name:
         maze_intro: 迷路入門
@@ -425,9 +355,9 @@ ja:
         flappy_intro: Flappy入門編
         loop_times: 回ブロックを繰り返す
         loop_until: までブロックを繰り返します
-        if: もしもブロック
-        if_else: もしも/他にブロック
-        if_else_scrat: もしも/他にブロック
+        if: もしブロック
+        if_else: もし/でなければブロック
+        if_else_scrat: もし/でなければブロック
         function: 関数
         loop_while: の間にブロック
         loop_for: 数える ブロック
@@ -442,9 +372,9 @@ ja:
         Unplug7: Songwriting
         Unplug8: 抽象化
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: インターネット
         Unplug11: ラップアップ
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -455,7 +385,7 @@ ja:
         C1_artist_intro: アーティスト紹介
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
+        C1_bee_loops: 'みつばち: ループ'
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: 'Play Lab - Create a Story'
         C1_planting_seed: Planting a Seed
@@ -464,9 +394,9 @@ ja:
         C2_maze_intro: 迷路入門
         C2_artist_intro: アーティスト紹介
         C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
+        C2_artist_loops: アーティスト ループ
+        C2_artist_debugging: アーティスト デバッグ
+        C2_bee_loops: 'みつばち: ループ'
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: 'Play Lab - Create a Story'
@@ -476,6 +406,7 @@ ja:
         C2_relay_programming: プログラミングをリレーする
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
+        C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: Maze Loops
         C3_artist_intro: アーティスト紹介
         C3_artist_functions: Artist Functions
@@ -487,14 +418,15 @@ ja:
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: バウンド
-        C3_playlab_create_game: 'Play Lab - Create a Game'
+        C3_playlab_create_game: プレイラボ：ゲームを作りましょう
         C3_computational_thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: インターネット
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: はじめに
+        C4_loops_zombie: ループ
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
@@ -516,14 +448,45 @@ ja:
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        infinity_playlab_intro: 'Play Lab - Introduction'
+        infinity_playlab_events: 'Play Lab - Events'
+        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        csp_concept_rgb: A Little Bit About Pixels
+        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
+        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
+        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
+        csp_pixelation_bw: Black and white pixelation widget
+        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
+        csp_textcompression: Text compression widget
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
+        alg_1_intro: 'CS in Algebra - Introduction'
+        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
+        alg_3_pemdas: 'CS in Algebra - Order of Operations'
+        alg_4_data_types: 'CS in Algebra - Data Types'
+        alg_5_contracts: 'CS in Algebra - Contracts'
+        alg_6_variables: 'CS in Algebra - Variables'
+        alg_7_function: 'CS in Algebra - Functions'
+        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
+        alg_9_booleans: 'CS in Algebra - Booleans'
+        alg_10_conditionals: 'CS in Algebra - Conditionals'
+        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
+        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
+        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
+        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
+        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
+        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
+        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
     callout:
       text:
         drag_blocks: 「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。
         run: 「実行」ボタンをおして、プログラムをうごかしてみてください。
-        watch_again: Click here to watch the video again
+        watch_again: ここをクリックするともう一度ビデオを見られます
         gray_block_explanation: 灰色のブロックは消すことができません。それでもパズルをとくことができるでしょうか？
         show_code_explanation: 自分で書いたプログラムコードを表示する
-        instructions_repeat_explanation: それぞれのパズルについてのプログラムはくりかえしになります。
+        instructions_repeat_explanation: 各パズルの説明はここに再度表示されます
         category_explanation: 前と同じブロックがすべてそろっていますが、種類別になっています
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
@@ -535,7 +498,7 @@ ja:
         repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
         repeat_blocks_1: (1)このブロックを使います。作業領域にある灰色のブロック達のあたりに置いてください
         repeat_blocks_2: '(2)"繰り返し"ブロックをここに移動させて、灰色のブロック達を内側に置いてください'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
         degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
         set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
         set_length: 'Use this block to set "length" to the correct value.'
@@ -582,4 +545,9 @@ ja:
         place_length_variable: Drag the length variable here to replace the question marks
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        name_function: ここで関数の名前を書く
+        Infinity_move_right_runbutton: うごかすブロックをここに足してください。
+        Infinity_move_directions_callout: どのブロックが上矢印を押したときにベイマックスを上に動かすでしょうか。
+        Infinity_move_directions_callout_arrow: これらの矢印を使って操縦してください。
+        Infinity_move_collide_callout: このイベントが起きたときに音を鳴らしてください。
+        Infinity_repeat_callout: 移動ブロックをこの中に置いてください

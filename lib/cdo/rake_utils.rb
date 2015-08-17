@@ -7,30 +7,35 @@ module RakeUtils
 
   def self.system__(command)
     puts command
-    Kernel::system "#{command} 2>&1"
-    $?.exitstatus
+    output = `#{command} 2>&1`
+    status = $?.exitstatus
+    [status, output]
   end
 
   def self.command_(*args)
     # BUGBUG: Should escape for shell here and verify no callers do that.
-    args.map{|i|i.to_s}.join(' ')
+    args.map(&:to_s).join(' ')
   end
 
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux?
+    sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux?
+    sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
   end
 
   def self.system_(*args)
-    system__ command_ *args
+    status, _ = system__ command_ *args
+    status
   end
 
   def self.system(*args)
     command = command_ *args
-    status = system__ command
-    raise RuntimeError, "'#{command}' returned #{status}" unless status == 0
+    status, output = system__ command
+    unless status == 0
+      error = RuntimeError.new("'#{command}' returned #{status}")
+      raise error, error.message, CDO.filter_backtrace([output])
+    end
   end
 
   def self.bundle_exec(*args)
@@ -39,7 +44,7 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
-    if OS.linux?
+    if CDO.bundler_use_sudo
       sudo 'bundle', '--without', *without, '--quiet', *args
     else
       system 'bundle', '--without', *without, '--quiet', *args
@@ -92,10 +97,16 @@ module RakeUtils
     end
   end
 
+  # Updates list of global npm packages if outdated
+  def self.npm_update_g(*args)
+    output = `npm outdated --global --parseable --long --depth=0 #{args.join ' '}`.strip
+    RakeUtils.sudo 'npm', 'update', '--quiet', '-g', *args unless output.empty?
+  end
+
   def self.npm_install(*args)
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands << 'sudo' if OS.linux?
+    commands << 'sudo' if CDO.npm_use_sudo
     commands << 'npm'
     commands << 'install'
     commands << '--quiet'
@@ -103,8 +114,10 @@ module RakeUtils
     RakeUtils.system *commands
   end
 
+  # Installs list of global npm packages if not already installed
   def self.npm_install_g(*args)
-    RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args
+    output = `npm list --global --parseable --long --depth=0 #{args.join ' '}`.strip
+    RakeUtils.sudo 'npm', 'install', '--quiet', '-g', *args if output.empty?
   end
 
   def self.rake(*args)

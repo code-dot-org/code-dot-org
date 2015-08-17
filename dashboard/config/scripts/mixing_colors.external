@@ -1,0 +1,7 @@
+name 'Mixing Colors'
+title 'title'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '3'
+data '000000100000001000000110110000001010111000100010'

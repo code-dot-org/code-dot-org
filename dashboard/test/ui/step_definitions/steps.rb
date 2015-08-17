@@ -2,12 +2,17 @@ require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
-    url = url.gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
+    url = url.
+      gsub(/\/\/learn.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/").
+      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
   end
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
-  url
+  # Convert http to https
+  url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
+  # Convert x.y.code.org to x-y.code.org
+  url.gsub(/(\w+)\.(\w+)\.code\.org/,'\1-\2.code.org')
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
@@ -15,10 +20,18 @@ Given /^I am on "([^"]*)"$/ do |url|
   @browser.navigate.to "#{url}"
 end
 
-When /^I wait to see "([.#])([^"]*)"$/ do |selector_symbol, name|
+When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until { @browser.find_element(selection_criteria) }
+end
+
+When /^I close the dialog$/ do
+  # Add a wait to closing dialog because it's sometimes animated, now.
+  steps %q{
+    When I press "x-close"
+    And I wait for 0.75 seconds
+  }
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -26,9 +39,9 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   @browser.find_element(selection_criteria)
 end
 
-When /^I wait until element "([^"]*)" has text "([^"]*)"$/ do |selector, text|
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
-  wait.until { element_has_text(selector, text) }
+  wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
@@ -41,8 +54,13 @@ Then /^check that I am on "([^"]*)"$/ do |url|
   @browser.current_url.should eq url
 end
 
-When /^I wait for (\d+) seconds?$/ do |seconds|
-  sleep seconds.to_i
+Then /^check that the URL contains "([^"]*)"$/ do |url|
+  url = replace_hostname(url)
+  @browser.current_url.should include url
+end
+
+When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
+  sleep seconds.to_f
 end
 
 When /^I submit$/ do
@@ -65,12 +83,70 @@ When /^I press "([^"]*)"$/ do |button|
   @button.click
 end
 
+When /^I press the first "([^"]*)" element$/ do |selector|
+  @element = @browser.find_element(:css, selector)
+  begin
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
+  end
+end
+
+When /^I press the "([^"]*)" button$/ do |buttonText|
+  @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  @button.click
+end
+
 When /^I press "([^"]*)" using jQuery$/ do |selector|
   @browser.execute_script("$('" + selector + "').click()");
 end
 
+When /^I press SVG selector "([^"]*)"$/ do |selector|
+  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
+end
+
+When /^I press the last button with text "([^"]*)"$/ do |name|
+  name_selector = "button:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I press the SVG text "([^"]*)"$/ do |name|
+  name_selector = "text:contains(#{name})"
+  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I open the topmost blockly category "([^"]*)"$/ do |name|
+  name_selector = ".blocklyTreeLabel:contains(#{name})"
+  # seems we usually have two of these item, and want the second if the function
+  # editor is open, the first if it isn't
+  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " +
+    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
+  @browser.execute_script(script)
+end
+
+And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
+  # jQuery needs \\s to allow :s and .s in ID selectors
+  # Escaping those gives us \\\\ per-character
+  category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
+end
+
+When /^I press dropdown button with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
+end
+
+When /^I press dropdown item with text "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
+end
+
+When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
+  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+end
+
 When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){})");
+  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -82,9 +158,29 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
 end
 
+When /^I press delete$/ do
+  script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
+  script +="{"
+  script +="  target: {},"
+  script +="  preventDefault: function() {},"
+  script +="  keyCode: $.simulate.keyCode['DELETE']"
+  script +="})"
+  @browser.execute_script(script)
+end
+
 When /^I hold key "([^"]*)"$/ do |keyCode|
   script ="$(window).simulate('keydown',  {keyCode: $.simulate.keyCode['#{keyCode}']})"
   @browser.execute_script(script)
+end
+
+When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
+  @browser.execute_script("$('" + selector + "').val('" + inputText + "')")
+  @browser.execute_script("$('" + selector + "').keyup()")
+  @browser.execute_script("$('" + selector + "').change()")
+end
+
+When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
+  @browser.execute_script("editor.setValue('#{inputText}')")
 end
 
 Then /^I should see title "([^"]*)"$/ do |title|
@@ -99,6 +195,17 @@ end
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_has_text(selector, expectedText)
+end
+
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    Then I wait to see a ".dialog-title"
+    And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
+Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
+  element_has_i18n_text(selector, language, locKey)
 end
 
 Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
@@ -123,11 +230,23 @@ Then /^element "([^"]*)" is hidden$/ do |selector|
   visible.should eq false
 end
 
+def has_class(selector, className)
+  @browser.execute_script("return $('#{selector}').hasClass('#{className}')")
+end
+
+Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, className|
+  has_class(selector, className).should eq true
+end
+
+Then /^element "([^"]*)" (?:does not|doesn't) have class "([^"]*)"$/ do |selector, className|
+  has_class(selector, className).should eq false
+end
+
 def is_disabled(selector)
   @browser.execute_script("return $('#{selector}')[0].getAttribute('disabled') !== null || $('#{selector}').hasClass('disabled')")
 end
 
-Then /^element "([^"]*)" is not disabled$/ do |selector|
+Then /^element "([^"]*)" is (?:enabled|not disabled)$/ do |selector|
   is_disabled(selector).should eq false
 end
 
@@ -175,7 +294,7 @@ Then(/^"([^"]*)" should be in front of "([^"]*)"$/) do |selector_front, selector
 end
 
 Then(/^I set slider speed to medium/) do
-  @browser.execute_script("Turtle.speedSlider.setValue(0.8)");
+  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.8)");
 end
 
 Then(/^I slow down execution speed$/) do
@@ -194,18 +313,29 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
   undone
 end
 
-def encrypted_cookie(user_id)
+Then(/^I reload the page$/) do
+  @browser.navigate.refresh
+end
+
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+  @child_item = @browser.find_element(:css, child)
+  @parent_item = @browser.find_element(:css, parent)
+  @actual_parent_item = @child_item.find_element(:xpath, "..")
+  @parent_item.should eq @actual_parent_item
+end
+
+def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
-      iterations:1000
+      iterations: 1000
     )
 
-    encryptor = ActiveSupport::MessageEncryptor.new(
-      key_generator.generate_key('encrypted cookie'),
-      key_generator.generate_key('signed encrypted cookie')
-    )
+  encryptor = ActiveSupport::MessageEncryptor.new(
+    key_generator.generate_key('encrypted cookie'),
+    key_generator.generate_key('signed encrypted cookie')
+  )
 
-  cookie = {'warden.user.user.key' => [[user_id]]}
+  cookie = {'warden.user.user.key' => [[user.id], user.authenticatable_salt]}
 
   encrypted_data = encryptor.encrypt_and_sign(cookie)
 
@@ -213,20 +343,24 @@ def encrypted_cookie(user_id)
 end
 
 def log_in_as(user)
-  params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user.id)}
+  params = {
+    name: "_learn_session_#{Rails.env}",
+    value: encrypted_cookie(user)
+  }
+  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
 end
 
 Given(/^I am a teacher$/) do
-  @teacher = User.find_or_create_by!(email: 'teacher@testing.xx') do |teacher|
-    teacher.name = "Test teacher"
+  @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
+    teacher.name = "TestTeacher Teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
     teacher.age = 40
@@ -234,7 +368,76 @@ Given(/^I am a teacher$/) do
   log_in_as(@teacher)
 end
 
+Given(/^I am a student$/) do
+  @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
+    user.name = "TestStudent Student"
+    user.password = SecureRandom.base64
+    user.user_type = 'student'
+    user.age = 16
+  end
+  log_in_as(@student)
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
+end
+
+And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
+  element = @browser.find_element(:css, selector)
+  element.send_keys(make_symbol_if_colon(key))
+end
+
+def make_symbol_if_colon(key)
+  # Available symbol keys:
+  # https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/keys.rb?name=selenium-2.26.0
+  key.start_with?(':') ? key[1..-1].to_sym : key
+end
+
+When /^I press keys "([^"]*)"$/ do |keys|
+  # Note: Safari webdriver does not support actions API
+  @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+
+  if redirect_source == 'pushState'
+    state = { "modified" => true }
+  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+    state = nil
+  end
+  @browser.execute_script("return window.history.state").should eq state
+end
+
+last_shared_url = nil
+Then /^I navigate to the share URL$/ do
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I navigate to the last shared URL$/ do
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I append "([^"]*)" to the URL$/ do |append|
+  url = @browser.current_url + append
+  @browser.navigate.to "#{url}"
+end
+
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq true
+end
+
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq false
 end

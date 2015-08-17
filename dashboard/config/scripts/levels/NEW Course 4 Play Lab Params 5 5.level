@@ -24,7 +24,17 @@
     "coordinate_grid_background": "false",
     "free_play": "false",
     "disable_sharing": "false",
-    "instructions": "Fill in actor parameter inputs with numbers (1, 2, and 3) to make these actors patrol. "
+    "instructions": "Let's try that again, but with less help. What do you need to edit this time to make the actors patrol?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

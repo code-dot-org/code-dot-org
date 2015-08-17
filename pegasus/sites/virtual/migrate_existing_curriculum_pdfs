@@ -15,7 +15,7 @@ puts "Found #{generated_pdf_templates.length} templates"
 generated_pdf_templates.each do |template_path|
   pdf_path = template_path.sub('.md', '.pdf').sub('.collate', '.pdf')
 
-  next unless File.exists?(pdf_path)
+  next unless File.exist?(pdf_path)
 
   new_outfile = pdf_path.sub(pegasus_dir('sites/virtual/curriculum-'), sites_v3_dir('code.org/public/curriculum/'))
   RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_path, "#{new_outfile}.fetch", bucket: 'cdo-fetch')

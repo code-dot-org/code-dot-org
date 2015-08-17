@@ -34,7 +34,7 @@
   "playSoundLaser":"пушти го ласерскиот звук",
   "playSoundTooltip":"Пушти го избраниот звук.",
   "reinfFeedbackMsg":"Можете да го притиснете \"Обиди се повторно\" копчето за да се врати во игра на својата игра.",
-  "scoreText":"Резулта:{Резултатотна играчот}",
+  "scoreText":"Резулта: {playerScore}",
   "setBackground":"постави сцена",
   "setBackgroundRandom":"постави ја сцената по случајност",
   "setBackgroundFlappy":"поставија сцената на градот(ден)",

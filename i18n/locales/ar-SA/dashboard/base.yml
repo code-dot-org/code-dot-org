@@ -1,4 +1,7 @@
 ar:
+  errors:
+    messages:
+      not_saved: 'من فضلك، قم بتصحيح الأخطاء التالية:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@ ar:
           future: لا يمكن أن يكون في المستقبل
   hello: مرحبا بالعالم
   welcome_back: 'أهلا بكم من جديد, %{name}'
+  submit: تسجيل
   add_teacher_form:
     code:
       label: 'أضف مدرسا:'
@@ -36,7 +40,7 @@ ar:
   of: من
   more: أكثر
   less: أقل
-  beta: beta
+  beta: تجريبي
   try_hoc: 'قم بتجربة ساعة من البرمجة, انقر هنا>> '
   try_k8intro: 'جرب مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
   k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
@@ -60,6 +64,8 @@ ar:
     need_confirmation: لم استلم تعليمات تأكيد الحساب؟
     need_unlock: لم أستلم تعليمات فتح الحساب؟
   signup_form:
+    student_count: '%{count} الطلاب المسجلين حالياً.'
+    teacher_count: '%{count}المعلمين المسجلين حالياً.'
     overview_student: 'قم بالتسجيل للحصول على حساب لتتابع تقدمك. يستخدم البريد الالكتروني الخاص بك بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من المعلومات, شاهد <a href="http://code.org/privacy">سياسة الخصوصية</a>.'
     overview_teacher: 'قم بتدريس علوم الكمبيوتر في صفك بالتسجيل للحصول على حساب.<p/> سوف يصبح بإمكانك إضافة طلابك و متابعة تقدمهم .'
     no_signup_message: 'يمكنك<a target="_blank" href="http://learn.code.org"> تصفح مختلف المراحل والالغاز</a>, ولكن سوف تحتاج إلى التسجيل لحفظ تقدمك.'
@@ -214,8 +220,10 @@ ar:
       free_play:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
+        calculate: Calculate Something
     user:
       classroom: الصفحة الرئيسية المعلم
+      district_dashboard: جزء لوحة المعلومات
       label: 'مرحباً %{username}'
       stats: انجازاتي
       settings: حسابي
@@ -225,6 +233,7 @@ ar:
       signup: تسجيل
       already_registered: مسجل بالفعل ؟
     popup:
+      progress_for_user: 'تقدم %{name}'
       progress: إنجازاتك
       lines: 'عدد أسطر الكود البرمجي : %{lines}'
       close: إغلاق
@@ -292,15 +301,23 @@ ar:
     cant_remove_student_no_email: 'لا يمكن إزالة % {student_name} كالطالب الخاص بك لأن % {student_name} لم يتم تسجيل عنوان البريد الإلكتروني'
     cant_remove_teacher_no_email: 'لا يمكن إزالة % {teacher_name} كالمعلم الخاص بك لأنه ليس لديك تسجيل عنوان بريد إلكتروني'
     student_teacher_disassociated: 'تم إزالة % {teacher_name} كمدرس ل % {student_name}'
+    panel:
+      answer_viewer: عارض الجواب
+      student: طالب
+      viewing_solution: Viewing Solution
+      try_it_yourself: جربها بنفسك
+      section: القسم
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
+    email_confirm_needed_required: 'لم يتم تأكيد عنوانك البريدي البريد الإلكتروني%{email}:'
+    email_confirm_wrong_email: (عنوان بريد إلكتروني خاطئ؟)
     email_resend_confirm: إعادة إرسال رسالة تأكيد تعليمات
     new_password_hint: (اتركه فارغاً إذا كنت لا ترغب في تغييره)
     current_password_hint: (أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)
-    cancel:
-      title: إلغاء حسابي
-      hint: غير سعيد؟
-      button: إلغاء حسابي
+    delete: إحذف الحساب الخاص بك
+    delete_text: 'بالنقر على  الزر أدناه سيتم حذف الحساب الخاص بك.'
+    delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك.
+    delete_confirm: هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟
   user_level:
     completed: أكمل
     tried: حاول
@@ -310,6 +327,9 @@ ar:
     classroom_activity: نشاط موصول
   home:
     title: ستوديو كود
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: '%{lines_count} الأسطر من التعليمات البرمجية التي كتبها الطلاب'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: مراجعة للدروس 1,2, و 3
     lesson_plans: خطط الدرس
     signin_message: 'مسجل مسبقاً؟ %{link}'
@@ -330,6 +350,7 @@ ar:
     local_school: مدرسة محلية
     online: متصل
     see_details: مشاهدة التفاصيل
+    view_course: View Course
     prize_info: 'جوائز للمشاركة (معلمي المدارس العامة الولايات المتحدة فقط): تصل إلى 1000 $ في المكافآت الفصول الدراسية.'
     tryfirst: 'أو، يمكنك تجربة لأول مرة، والتسجيل في وقت لاحق:'
     trynow: جرب الآن
@@ -343,6 +364,9 @@ ar:
     heading_apps: '<h2>المتعة</h2><h1>للجميع</h1>'
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
+    no_primary_course: 'جرب الدورة تدريبية في "الاستوديو التعليمات البرمجية"'
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: ذكر
     female: أنثى
@@ -421,9 +445,10 @@ ar:
     flappy:
       title: رمز لعبة flappy
       body: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy التعليمية الخاصة بنا!
-    20hour:
-      title: دورة مقدمة
-      body: حاول 20 ساعة دورة مقدمة لعلوم الحاسب الآلي.
+    20-hour:
+      title: Accelerated Course
+      body: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: 'جرب درس ساعة الكود الجديد ب"بيتا"'
       try_frozen: الفنان مع آنا و إنسا, من Frozen
@@ -432,12 +457,15 @@ ar:
       body: 'عرض معرض صور "تطبيق" و "الفنان" التي تم إنشاؤها من قبل مستخدمينا'
     frozen:
       title: ملكة الثلج Frozen
+    infinity:
+      title: جولة لعب لا نهائية
+      body: Use Play Lab to create a story or game starring Disney Infinity characters.
   gallery:
     students_drew_these_with_code: ووجه الطلاب هذه بالكود!
     students_made_these_with_code: طلاب صنعوا هذا بالكود!
     picture_count: 'في الماضي <b>% {يوما}</b> أيام، قد رسمها الطلاب الصور <b>% {عد}</b> بكتابة برامج الكمبيوتر الخاصة بهم. اضغط على الصور لمشاهدة كل البرنامج في العمل.'
     activity_count: 'في <b>%{days}</b> خلال الأيام الماضية، جعلت الطلاب تطبيقات <b>%{count}</b> والصور بكتابة برامج الكمبيوتر الخاصة بهم. انقر فوق الصور والمزيد من الصور لمشاهدة كل البرنامج في العمل.'
-    want_to_make_your_own: هل ترغب في جعل الخاصة بك؟
+    want_to_make_your_own: هل ترغب في إنجاز مشروعك الخاص؟
     more: 'أكثر &rarr;'
     caption_by_name_age: 'طريق %{name}، %{age} العمر'
     caption_time_ago: '%{time_ago} قبل'
@@ -456,13 +484,25 @@ ar:
     wrong_body: 'أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: الحل غير صحيح
     wrong_body: 'الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!'
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  contract_match:
+    wrong_title: الإجابة غير صحيحة
+    badname: العقد الخاص بك بالاسم غير صحيح.
+    badname_case: أسماء الدلالات حساسة للغاية، حاول تغيير حالة إسم عقدك.
+    badrange: العقد الخاص بك فيه مجموعة من الأخطاء.
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: One or more of your domain items has the wrong name.
+    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: 'ادخل إجابتك هنا '
+    open_response_title: شكرا،
+    open_response_body: شكرا لردكم!
   dialog:
     ok: موافق
   time:
@@ -476,7 +516,7 @@ ar:
           title: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
           description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن أنها متعة للتعلم لكل الإعمار.
         Hour of Code:
-          title: ساعة البرمجة
+          title: ساعة من البرمجة 2013
           description: ""
         edit-code:
           title: تعديل كود البرنامج
@@ -506,11 +546,44 @@ ar:
     sign_out: 'إذا كنت لاترغب بالإدلاء بعمرك يمكن <a href="%{url}"> تسجيل الخروج</a>.'
   zendesk_too_young_message: 'عذرا ، المستخدمين الصغار لايمكنهم تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> بدون تسجيل الدخول أو أطلب من والديك أو معلمك لتواصل معنا نيابة عنك.'
   progress:
-    not_completed: غير مكتمل
+    not_started: لم تبدأ
+    in_progress: في طور التقدم
     completed_too_many_blocks: أكملت، كتل كثيرة جداً
     completed_perfect: مكتمل, ممتاز
     furthest_level_attempted: حاول المستوى الأبعد
+    assessment: تقييم
   studio:
-    courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: إذا كنت تعمل على الدورات
+    completed_courses: الدورات المكتملة
+    all_courses: جميع الدورات
+  project:
+    projects: المشاريع
+    create: إنشاء مشروع
+    create_a_project: 'إنشاء مشروع جديد:'
+    new: إنشاء جديد
+    rename: إعادة تسمية
+    save: حفظ
+    delete: حذف
+    exit: العودة إلى الدورة التدريبية
+    my_projects: مشاريعي
+    share: مشاركة الآخرين
+    share_title: شارك مشاريعك
+    share_copy_link: 'إنسخ الرابط:'
+    close: أغلق
+    more: المزيد
+    name: الاسم
+    updated: تحديث
+    project_type: نوع المشروع
+    help_text: 'اضغط<strong> اصنع تطبيق</strong> أو <strong>ارسم شيئاً</strong> في الأسفل لتبدأ مشروع مختبر لعب أو رسام جديد<br/>بإمكانك العودة والعمل على مشروعك في أي وقت.'
+    need_help: هل أنت بحاجة إلى المساعدة لتبدأ؟
+    really_delete: حذف؟
+    delete_yes: نعم
+    delete_no: لا
+    saved: تم الحفظ
+    not_saved: لم يتم الحفظ
+    cancel: إلغاء
+    delete_confirm_title: هل أنت متأكد من أنك تريد حذف هذا المشروع؟
+    delete_confirm_text: بحذفك لمشروعك سيتم إزالته نهائياً من قائمة المشاريع الخاصة بك، ولن يتمكن أي شخص قمت بمشاركت الرابط معه قادراً على عرض المشروع الخاص بك.
+    view_all: عرض مشاريعي
+    remix: مزيج
+    click_to_remix: "انقر فوق 'مزيج' لعرض نسخة معدلة خاصة بك!"

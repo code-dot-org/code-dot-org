@@ -1,0 +1,7 @@
+name 'msm variables multi 6'
+title '/script_assets/msm/define_xpq.png, 600'
+question 'What is the value of string-length(q)?'
+wrong '1'
+wrong 'hello'
+right '5'
+

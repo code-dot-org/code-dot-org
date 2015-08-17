@@ -56,22 +56,6 @@ class ExperimentActivity < ActiveRecord::Base
 
   def self.is_experimenting_feedback?(level_source)
     false
-=begin
-    return false if not level_source
-    level = level_source.level
-
-    # Stanford hints only exist for two levels:
-    # http://learn.code.org/s/1/level/5 (level_id == 3 in prod) and
-    # http://learn.code.org/s/1/level/19 (level_id == 17 in prod)
-    level.game.name == 'Maze' &&
-        (level.name == 'Level3' && level.level_num == '2_3' ||
-            level.name == 'Level17' && level.level_num == '2_17')
-=end
-  end
-
-  def self.feedback_experiment_param(url)
-    x = self.try_get_int_parameter(url, 'feedback_experiment')
-    return x && x != 0
   end
 
   FEEDBACK_EXPERIMENT_SOURCES = [LevelSourceHint::CROWDSOURCED,
@@ -91,10 +75,6 @@ class ExperimentActivity < ActiveRecord::Base
 
   def self.is_experimenting_hint_visibility?(level_source)
     false
-=begin
-    return false if not level_source
-    EXPERIMENT_LEVEL_NUMS.include? level_source.level.level_num
-=end
   end
 
   def self.feedback_experiment_param(url)
@@ -109,7 +89,7 @@ class ExperimentActivity < ActiveRecord::Base
 
   # Return the penultimate section of an ip address, as an int, to use as a hash value.
   # This returns nil if the parameter is not in the form 'n.n.n.n', where each n
-  # is a possibly distinct integer.  We don't use the last section, since we 
+  # is a possibly distinct integer.  We don't use the last section, since we
   # want everyone in the same classroom to have the same hash value.
   def self.ip_to_hash_value(ip)
     return nil unless ip

@@ -1,69 +1,70 @@
 * * *
 
-title: Going Places Online view: page_curriculum theme: none
+title: Visitando lugares on-line view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Going Places Online', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
+<%= partial('curriculum_header', :title=> 'Visitando lugares on-line', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir', :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) This lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
+Com a colaboração da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), esta aula ajuda os alunos a aprender que vários sites pedem informações privadas, e discute como lidar com isso de forma responsável. Os alunos também vão descobrir que eles podem visitar lugares incríveis on-line, mas que eles precisam seguir algumas regras para se manterem seguros.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 20 minutes
+### **Primeiros passos** - 20 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Where We Go](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Para onde vamos](#GetStarted)
 
-### **Activity: Keep It Private** - 30 minutes
+### **Atividade: Mantenha a privacidade** - 30 minutos
 
-4) [Keep It Private](#Activity1)
+4) [Mantenha a privacidade](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [Keep It Private Assessment](#Assessment)
+7) [Avaliação de mantenha a privacidade](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Understand that being safe when they visit websites is similar to staying safe in real life
-  * Learn to recognize websites that are alright for them to visit
-  * Recognize the kind of information that is private.
-  * Understand that they should never give out private information on the Internet
-  * Learn to create effective usernames that protect their private information
+  * Compreender que se manter seguro ao visitar sites na internet é parecido com se manter seguro na vida real
+  * Aprender a reconhecer sites que eles podem visitar
+  * Reconhecer que tipo de informação é privada.
+  * Compreender que eles nunca devem fornecer informações privadas na internet
+  * Aprender a criar nomes de usuário eficientes que protejam suas informações privadas
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * Pens, Pencils and Paper
-  * [Keep It Private Assessment](Assessment17-KeepItPrivate.pdf)
+  * Canetas, lápis e papel
+  * [Avaliação de mantenha a privacidade](Assessment17-KeepItPrivate.pdf)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/AG23gWMEB98?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
   * Teacher Lesson Guide
   * [Download](http://video.commonsensemedia.org/digitalcitizenship/MyOnlineNeighborhood.mp4) or [prepare](https://www.commonsensemedia.org/video/modal/2102075) the "My Online Neighborhood" video
   * Live access or print-off of [SecretBuilders](http://www.secretbuilders.com/gameplay/gameplay.html) sign-up page 
@@ -74,33 +75,33 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -109,86 +110,86 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Username** - Say it with me: Yews-er-naym   
-A name you make up so that you can see or do things on a website, sometimes called a “screen name”
+**Nome de usuário** - Repita comigo: no-me-de-u-su-á-rio   
+Um nome que você cria para poder visualizar ou fazer coisas em um site, às vezes chamado simplesmente de “usuário”
 
-### <a name="GetStarted"></a> 3) Where We Go
+### <a name="GetStarted"></a> 3) Para onde vamos
 
-  * Invite students to talk about places they have visited on a class field trip. 
-      * If students have limited experience with field trips, provide some examples of the types of places they could visit as a class, such as museums, science centers, or zoos.
-      * Have students choose a place they would like to go on a class field trip.
-  * Have students take an imaginary field trip to their chosen place. 
-      * Narrate the preparations while having students pantomime what’s happening – For example: put on your jacket; climb on/off the bus; get your ticket checked; go inside. 
-          * Have students describe what they think they might see and do once they arrive.
-  * Let the students sit back down, then ask: "What do you need to do to stay safe when you visit new places?"
+  * Peça para os alunos falarem sobre lugares que visitaram em uma excursão com a turma. 
+      * Se os alunos tiverem pouca experiência com passeios e excursões, forneça alguns exemplos de tipos de lugares que eles poderiam visitar em turma, como museus, centros de ciência, ou zoológicos.
+      * Peça aos alunos que escolham um lugar para onde gostariam de ir em uma excursão com a turma.
+  * Peça aos alunos que façam uma viagem imaginária ao local escolhido. 
+      * Narre os preparativos enquanto os alunos encenam o que está acontecendo – Por exemplo: coloquem seus casacos; subam/desçam do ônibus; peguem seus ingressos; entrem. 
+          * Peça aos alunos que descrevam o que eles pensam que podem ver e fazer assim que chegarem.
+  * Peça aos alunos que voltem aos seus lugares, e então pergunte: "O que vocês precisam fazer para ficar em segurança quando visitam lugares novos?"
 
-Play [My Online Neighborhood](https://www.commonsensemedia.org/video/modal/2102075) video.
+Reproduza o vídeo [Meu vizinho on-line](https://www.commonsensemedia.org/video/modal/2102075).
 
-  * What three rules does Jeremiah follow when he goes places online?
+  * Quais são as três regras que Jeremiah segue quando visita lugares on-line?
 
-> 1) Always ask your parent (or teacher) first  
-> 2) Only talk to people you know  
-> 3) Stick to places that are just right for you
+> 1) Sempre pedir permissão para os pais (ou professor) antes de ir  
+> 2) Conversar apenas com pessoas conhecidas  
+> 3) Ficar em lugares que são certos para você
 
-Now, let's see what more we can do to keep ourselves safe.
+Agora, vamos ver o que mais podemos fazer para ficarmos seguros.
 
 [/together]
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) Keep It Private
+### <a name="Activity1"></a> 4) Mantenha a privacidade
 
-Access [SecretBuilders](http://www.secretbuilders.com/gameplay/gameplay.html) sign-up page live, or project a print-out on the board for the class to see.
+Acesse a página de autenticação do [SecretBuilders](http://www.secretbuilders.com/gameplay/gameplay.html), ou projete-a na lousa para que a sala toda veja.
 
-  * Invite students to give examples of information that they should keep private. 
-      * Write down their responses on the board or chart paper so that you can return to them later in the lesson. 
-  * Make sure they understand that private information includes the following: 
-      * full name
-      * age
-      * address
-      * telephone number
-      * email address (or parents’ email addresses)
-      * where they go to school or after school
-      * where their parents work
-  * Encourage students to discuss why it is important to keep this information private. 
-      * Stress that it is never safe to give out private information to people they don’t know. 
-      * Students should always ask a parent or caregiver before they give out private information to anyone.
-  * Refer back to the sign-up page. 
-      * Ask "Do you think you should use your real name, or something that includes your real name, when you make up a username?"
+  * Peça aos alunos para dar exemplos de informações que eles devem manter privadas. 
+      * Escreva as respostas na lousa ou em um papel, para que você possa voltar a elas mais tarde. 
+  * Verifique se eles compreenderam que as informações privadas incluem: 
+      * nome completo
+      * idade
+      * endereço
+      * telefone
+      * endereço de e-mail (ou e-mail dos pais)
+      * onde eles estudam ou onde frequentam após a escola
+      * onde seus pais trabalham
+  * Incentive os alunos a discutir porque é importante manter a privacidade dessas informações. 
+      * Destaque que nunca é seguro dar informações privadas a pessoas desconhecidas. 
+      * Os alunos sempre devem perguntar aos pais ou ao responsável antes de fornecer informações privadas a qualquer pessoa.
+  * Volte à página de autenticação. 
+      * Pergunte "Vocês acham que devem usar seu nome real, ou algo que inclua seu nome real, quando você cria um nome de usuário?"
 
-Guide students through the following rules and tips for creating usernames:
+Oriente os alunos sobre as seguintes regras e dicas para criar nomes de usuário:
 
-**Rules:**
+**Regras:**
 
-> 1) Ask a parent or other trusted adult before you create a username. 2) Never include any private information in your username, such as your real name, age, birthday, the name of your school or hometown, parts of your address or phone number, or email address. 3) Avoid using symbols or spaces, as they are usually not allowed in usernames.
+> 1) Pergunte aos pais ou a algum adulto em quem você confia antes de criar um nome de usuário. 2) Nunca use informações privadas em seu nome de usuário, como seu nome real, idade, aniversário, o nome da sua escola ou cidade natal, partes do seu endereço ou número de telefone, ou endereço de e-mail. 3) Evite usar símbolos ou espaços, porque eles geralmente não são permitidos em nomes de usuário.
 > 
-> **Tips**
+> **Dicas**
 > 
-> > 1) Include the name of something that will help you remember your username, like your favorite animal, character, or toy. You might have to combine this with other words or numbers.
+> > 1) Use o nome de alguma coisa que vai ser útil para que você lembre do seu nome de usuário, como seu animal, personagem, ou brinquedo preferido. Você deve combinar essas palavras com números ou outras palavras.
 > > 
-> > 2) If the username you create is already taken, you will have to come up with another one.
+> > 2) Se o nome de usuário que você escolheu já estiver em uso, você vai ter que criar outro.
 > > 
-> > 3) Write down your username and password and, with the help of a parent, find a safe place to keep it in case you forget them.
+> > 3) Escreva seu nome de usuário e senha e, com a ajuda dos pais, encontre um lugar seguro para guardá-los para o caso de você os esquecer.
 
-Distribute paper and place students in pairs.
+Distribua folhas de papel para os alunos e os divida em duplas.
 
-**Directions:**
+**Instruções:**
 
-> 1) Have students interview their partner using the following questions, and write down their responses: - What is your favorite pet or animal? - What is your favorite TV show, book, or movie character? - What are your favorite numbers?
+> 1) Peça aos alunos que entrevistem seu colega e anotem suas respostas, usando as perguntas a seguir: - Qual é seu animal favorito? - Qual é seu programa de TV, livro ou personagem de filme preferido? - Quais são seus números preferidos?
 > 
-> 2) Instruct students to make up three safe usernames for their partner using information from their interview responses. - They should not include their partner’s name, age, school, email address, birthday, or any other private information.
+> 2) Instrua os alunos a criar três nomes de usuário seguros para seu colega usando as informações das respostas da entrevista. - Os nomes de usuário não devem incluir nome, idade, escola, endereço de e-mail, aniversário, ou qualquer outra informação pessoal do colega.
 > 
-> 3) Invite students to share one or more of their usernames with the class.
+> 3) Peça aos alunos que compartilhem um ou mais nomes de usuário com a sala.
 > 
-> 4) Encourage students to respond to one another’s usernames, confirming that each name follows the rules they have learned.
+> 4) Incentive os alunos a comentar os nomes de usuário uns dos outros, confirmando se estão seguindo as regras aprendidas.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
+Para desenvolver módulos mais aprofundados, você pode encontrar elementos adicionais a esse currículo na página da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), em Scope e Sequence.
 
 [/tip]
 
@@ -196,46 +197,46 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * What information should you always keep private when you are using the computer?
-  * What rules should you follow when you make up a username?
-  * What can the Internet be used for?
-  * What rules do we have for visiting places online?
+  * Quais informações você sempre deve manter privadas quando estiver usando o computador?
+  * Que regras você deve seguir ao criar um nome de usuário?
+  * Para que a internet pode ser usada?
+  * Quais regras devemos seguir para visitar lugares on-line?
 
-Take the time to discuss again what is appropriate information to share on the Internet, and what is not: ![](info.png)
+Use o tempo para, novamente, discutir quais informações são apropriadas para compartilhar na internet, e quais não são: ![](info.png)
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use os conhecimentos que tem sobre sua sala de aula para decidir se vocês vão discutir isso em turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "Traveling at the speed of light"   
-> "A name you make up so that you can see or do things on a website, sometimes called a 'screen name'"  
-> "A digital environment that looks real"  
+> "Viajando na velocidade da luz"   
+> "Um nome que você cria para poder visualizar ou fazer coisas em um site, às vezes chamado simplesmente de 'usuário'"  
+> "Um ambiente digital que parece real"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [Keep It Private Assessment](Assessment17-KeepItPrivate.pdf)
+### <a name="Assessment"></a>7) [Avaliação de mantenha a privacidade](Assessment17-KeepItPrivate.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -244,42 +245,42 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
 ### Common Sense Media
 
-  * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
+  * Visite o [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) para aprender mais sobre como manter seus alunos seguros nessa era digital.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 5a - Advocate and practice safe, legal, and responsible use of information and technology.
-  * 5b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
-  * 6.a - Understand and use technology systems. 
+  * 5a - Defender e praticar o uso seguro, legal e responsável da informação e da tecnologia.
+  * 5b - Mostrar uma atitude positiva em relação ao uso da tecnologia que apoia a colaboração, aprendizagem e produtividade.
+  * 6.a - Entender e usar sistemas tecnológicos. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CI.L1:3-01 - Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
-  * CPP.L2-06 - Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
+  * CI.L1:3-01 - Praticar a cidadania digital responsável (comportamentos legais e éticos) no uso dos sistemas de tecnologia e softwares.
+  * CPP.L2-06 - Demonstrar boas práticas em segurança de informação pessoal: usar senhas, encriptação e transações seguras.
 
-### Common Core Math & Language Arts
+### Matemática, língua e literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.2 - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.2 - Confirmar a compreensão de um texto lido em voz alta ou de informações apresentadas de forma oral por outro tipo de mídia, perguntando e respondendo questões sobre detalhes importantes e pedindo explicações se algo não for entendido.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

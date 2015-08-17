@@ -39,6 +39,10 @@ zh:
   n_have_learned_an_hoc: '<h1>#</h1><h3>已經試過</h3><h2>Hour of Code</h2>'
   anybody_can_learn: 任何人皆可學習。
   register_now: 馬上註冊！
+  share_on_facebook: 在 Facebook 上分享
+  share_on_twitter: 在 Twitter 上分享
+  beyond_an_hour: 一個小時的代碼的進階
+  get_started: 開始
   front_join_us_heading: 每位學生上Hour of Code課程
   front_join_us_description: 對每一個學生而言，電腦科學是基礎學科。協助我們將它介紹給 1 億個學生。
   front_join_us_button: 加入我們
@@ -89,12 +93,12 @@ zh:
   signup_thank_you_message: 我們已經寄給您確認的電子郵件，內容包含了可以幫助您入門的相關資訊。
   map_header: '# 小時的編碼活動在世界各地'
   map_header_company: '# 由公司主辦'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: 搜尋Hour of Code活動
+  map_search_search: 搜尋
+  map_search_reset: 清除
+  meta_tag_og_title: Hour of Code在此處
   meta_tag_og_description: 一小時編程是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Hour of Code在此處
   meta_tag_twitter_description: 一小時程式設計是一個全球性的活動，觸及數千萬個來自180多個國家，30多種語言，由4歲到104 歲的學生。
   twitter_default_text: '我將要參加今年的 #HourOfCode，你呢？@codeorg'
   hardware_prizes_form_name_label: 您的姓名
@@ -144,7 +148,7 @@ zh:
   hoc_faq_frozen_q: 安娜和艾爾莎的教學課程在哪裡？
   hoc_faq_frozen_a: "它現在公佈在<a href='http://code.org/learn'> Code.org/learn</a>。我們希望你會喜歡！"
   hoc_faq_high_school_q: 哪些活動適合高中生？
-  hoc_faq_high_school_a: "跨越所有年齡，我們建議你在<a href='http://code.org/learn'> Code.org/learn</a>從初學者課程開始嘗試，如憤怒鳥或安娜和艾爾莎課程。一名高中學生應該能夠在30分鐘內完成其中之一，然後可以在JavaScript中嘗試更進階的教學課程，如可汗學院(KhanAcademy)或CodeHS。"
+  hoc_faq_high_school_a: "跨越所有年齡，我們建議你在<a href='http://code.org/learn'> Code.org/learn</a>從初學者課程開始嘗試，如憤怒鳥或安娜和艾爾莎課程。一名高中學生應該能夠在30分鐘內完成其中之一，然後可以在JavaScript中嘗試更進階的教學課程，如可汗學院(Khan Academy)或CodeHS。"
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."

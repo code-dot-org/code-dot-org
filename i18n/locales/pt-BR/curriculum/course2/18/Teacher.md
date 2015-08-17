@@ -1,69 +1,70 @@
 * * *
 
-title: Your Digital Footprint view: page_curriculum theme: none
+title: Seu rastro digital view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Your Digital Footprint', :unplugged=>true, :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>30) %>
+<%= partial('curriculum_header', :title=> 'Seu rastro digital', :unplugged=>true, :disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.
+Com a colaboração da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), esta aula ajuda os alunos a aprender que vários sites pedem informações privadas, e discute como lidar com isso de forma responsável. Os alunos também vão aprender que a informação que eles fornecem on-line deixam um rastro digital, ou "trilha". Essa trilha pode ser grande ou pequena, útil ou perigosa, dependendo de como ela é gerenciada.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 20 minutes
+### **Primeiros passos** - 20 minutos
 
-1) [Review](#Review)  
-2) [Vocabulary](#Vocab)   
-3) [Pause and Think](#GetStarted)
+1) [Revisão](#Review)  
+2) [Vocabulário](#Vocab)   
+3) [Pare e pense](#GetStarted)
 
-### **Activity: Follow the Digital Trail** - 30 minutes
+### **Atividade: Siga o rastro digital** - 30 minutos
 
-4) [Follow the Digital Trail](#Activity1)
+4) [Siga o rastro digital](#Activity1)
 
-### **Wrap-up** - 10 minutes
+### **Resumo** - 10 minutos
 
-5) [Flash Chat](#WrapUp) - What did we learn?  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo](#WrapUp) - o que aprendemos?  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 5 minutes
+### **Avaliação** - 5 minutos
 
-7) [Digital Footprint Assessment](#Assessment)
+6) [Avaliação do rastro digital](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Understand that being safe when they visit websites is similar to staying safe in real life
-  * Learn to recognize websites that are alright for them to visit
-  * Recognize if they should ask an adult they trust before they visit a particular website
-  * Explore what information is appropriate to be put online
+  * Compreender que se manter seguro ao visitar sites na internet é parecido com se manter seguro na vida real
+  * Aprender a reconhecer sites que eles podem visitar
+  * Reconhecer se eles devem perguntar a um adulto de confiança antes de visitar um site em particular
+  * Explorar quais informações são apropriadas e podem ser fornecidas on-line
 
 [/together]
 
 [together]
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * One [Animal Tracks Chart](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) (page 7)
-  * Pens & Pencils
-  * [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
+  * Um [Quadro com trilhas de animais](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) (page 7)
+  * Canetas e lápis
+  * [Avaliação do rastro digital](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/qjusxfefJdM?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * This Teacher Lesson Guide
   * [Download](http://d1pmarobgdhgjx.cloudfront.net/education/pause-think-online-2.mp4) or [prepare](https://www.commonsensemedia.org/videos/pause-think-online) the "Pause and Think" video
   * Common Sense Media's [Follow the Digital Trail](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) game 
@@ -75,33 +76,33 @@ In collaboration with [Common Sense Media](https://www.commonsensemedia.org/educ
 
 [together]
 
-## Getting Started (20 min)
+## Primeiros passos (20 min)
 
-### <a name="Review"></a> 1) Review
+### <a name="Review"></a> 1) Revisão
 
-This is a great time to review the last lesson that you went through with your class. You can do this as one large group or have students discuss with an elbow partner.
+Este é um excelente momento para revisar a última aula que você deu à turma. Você pode fazer isso com a turma toda ou pedir para que os alunos discutam em duplas.
 
-Here are some questions that you can ask in review:
+Temos aqui algumas perguntas que você pode fazer na revisão:
 
-  * What did we do last time?
+  * O que fizemos da última vez?
 
-  * What do you wish we had had a chance to do?
+  * O que você gostaria que tivéssemos feito?
 
-  * Did you think of any questions after the lesson that you want to ask?
+  * Você teve alguma dúvida após a aula que gostaria de perguntar?
 
-  * What was your favorite part of the last lesson?
+  * Qual foi a parte da última aula que você mais gostou?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
+Terminar a revisão perguntando o que os alunos mais gostaram deixa uma impressão positiva do exercício anterior, aumentando a expectativa para a atividade que virá a seguir.
 
 [/tip]
 
-### <a name="Vocab"></a> 2) Vocabulary
+### <a name="Vocab"></a> 2) Vocabulário
 
-This lesson has one new and important word:  
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -110,73 +111,73 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Digital Footprint** - Say it with me: Dih-jih-tal Foot-print   
-The information about someone on the Internet
+**Rastro digital** - Repita comigo: ras-tro-di-gi-tal   
+As informações sobre alguém na internet
 
-### <a name="GetStarted"></a> 3) Pause and Think
+### <a name="GetStarted"></a> 3) Pare e pense
 
-  * Ask What does it mean to be safe?
-  * When you walk down the street or play in your neighborhood without a trusted adult there, how do you stay safe?
-  * Tell students that just as they should stay safe in the real world, they should stay safe when they go into the online world (visiting websites). Make parallels between the answers students gave you about their neighborhood and the online world.
+  * Pergunte: o que significa estar seguro?
+  * Quando você anda ou brinca na rua sem um adulto em quem você confia, como você se mantém seguro?
+  * Diga aos alunos que, assim como eles devem ficar seguros no mundo real, eles devem ficar seguros quando eles entram no mundo on-line (visitando sites). Faça paralelos entre as respostas dadas pelos alunos sobre a vida real e o mundo on-line.
 
-Play [Pause and Think Online](https://www.commonsensemedia.org/videos/pause-think-online) video.
+Exiba o vídeo [Pare e pense](https://www.commonsensemedia.org/videos/pause-think-on-line).
 
-  * Introduce the idea that there are three different kinds of websites that students may have the opportunity to visit. 
-      * Green: A “green” website is: 
-          * A good site for kids your age to visit
-          * Fun, with things for you to do and see
-          * Has appropriate words
-          * Doesn’t let you talk to people you don’t know
-      * Yellow: A “yellow” website is: 
-          * A site you are not sure is right for you
-          * One that asks for information such as who you are, where you live, your phone number or email address, etc.
-          * A place where you are allowed to communicate freely with others
-      * Red: A “red” website is: 
-          * A site that is not right for you
-          * A place you might have gone to by accident
-          * Filled with things that are for older kids or adults
-      * Discuss examples of each of these kinds of sites.
+  * Introduza a ideia de que há tipos diferentes de sites que os alunos têm a oportunidade de visitar. 
+      * Verde: um site "verde" é: 
+          * Um bom site para ser acessado por crianças da sua idade
+          * Divertido, com coisas para ver e fazer
+          * Tem um vocabulário adequado
+          * Não permite que você fale com pessoas que você não conhece
+      * Amarelo: um site "amarelo" é: 
+          * Um site que você não tem certeza se é bom para você
+          * Pede informações sobre quem é você, onde você mora, seu número de telefone ou endereço de e-mail, etc.
+          * Um lugar onde você pode se comunicar livremente com os outros
+      * Vermelho: um site "vermelho" é: 
+          * Um site que não é apropriado para você
+          * Um lugar para onde você pode ter ido sem querer
+          * Cheio de coisas que são para crianças maiores ou adultos
+      * Discuta exemplos de cada um desses tipos de sites.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-If you have access to a computer, feel free to navigate to sites that might showcase each of these types (using extreme caution with your RED selection).
+Se você tiver acesso a um computador, fique à vontade para navegar por sites que podem ser exemplos de cada um dos tipos de site (tenha extremo cuidado com o exemplo de site VERMELHO).
 
 [/tip]
 
-Now, let's see what we can do to keep ourselves safe.
+Agora, vamos ver o que podemos fazer para ficarmos seguros.
 
 [/together]
 
 [together]
 
-## Activities: (20 min)
+## Atividades (20 min)
 
-### <a name="Activity1"></a> 4) [Follow the Digital Trail](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf)
+### <a name="Activity1"></a> 4) [Siga o rastro digital](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf)
 
-  * Peruse the [Follow the Digital Trail](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) lesson on the Common Sense Media webpage.
-  * Give each student an [Animal Tracks Chart](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) (page 7).
+  * Leia a aula sobre [Siga o rastro digital](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) na página da Common Sense Media.
+  * Dê um [Quadro com trilhas de animais](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) para cada aluno (página 7).
 
 ![](chart.png)
 
-**Directions:**
+**Instruções:**
 
-> 1) Place the Digital Trail Squares on the ground, face down, in two different trails, keeping Mizzle the Mouse and Electra the Elephant’s trails separate from one another.
+> 1) Coloque os quadrados de rastro digital no chão, virados para baixo, formado duas trilhas diferentes, mantendo o camundongo Chuvisco e a elefanta Electra em trilhas separadas.
 > 
-> 2) Share the stories of Mizzle and Electra. These animals decided it would be fun to put some information about themselves online. They went onto www.wildkingdom.com and posted information. The only problem is that they forgot to ask their parents if it was okay first.
+> 2) Compartilhe as histórias de Chuvisco e Electra. Esses animais decidiram que seria divertido fornecer algumas informações sobre si mesmos on-line. Eles acessaram www.wildkingdom.com e publicaram as informações. O único problema é que eles esqueceram de pedir autorização para os pais antes de fazer isso.
 > 
-> 3) Explain to students that they are from the “Things Big and Small” Detective Agency. An evil hunter has hired them to find out as much as possible about Mizzle the Mouse and Electra the Elephant. The more the detectives learn, the better for their plan to take over the animal kingdom.
+> 3) Explique aos alunos que eles são da agência de detetives "Coisas grandes e pequenas". Um caçador malvado os contratou para encontrar o maior número de informações possível sobre Chuvisco e Electra. Quanto mais os detetives descobrirem, melhor é para caçador, que planeja dominar o reino animal.
 > 
-> 4) Divide students into groups of four. Tell them that each group should have a detective that will keep detailed notes.
+> 4) Divida os alunos em grupos de quatro integrantes. Cada grupo deve ter um detetive que vai anotar todos os detalhes.
 > 
-> 5) Invite students to go on a hunt for information. Let them know that the information that Mizzle and Electra post can be seen by anyone, including the detectives. Each group should follow the digital trail of both animals, starting with the mouse and then the elephant. Stagger the groups so they are on the trail at slightly different times. Students should fill out their handout as they go.
+> 5) Convide os alunos para uma caça às informações. Diga a eles que as informações fornecidas por Chuvisco e Electra podem ser vistas por qualquer um, inclusive pelos detetives. Cada grupo deve seguir o rastro digital de ambos os animais, começando com o camundongo, e depois indo para a elefanta. Organize os grupos para que eles persigam os rastros em momentos um pouco diferentes. Os alunos devem preencher o quadro conforme fazem a atividade.
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-For more in-depth modules, you can find additions to this curriculum at the [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) page on Scope and Sequence.
+Para desenvolver módulos mais aprofundados, você pode encontrar elementos adicionais a esse currículo na página da [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence), em Scope e Sequence.
 
 [/tip]
 
@@ -184,46 +185,46 @@ For more in-depth modules, you can find additions to this curriculum at the [Com
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 5) Bate-papo: o que aprendemos?
 
-  * Who can the detectives find out more about, and why?
-  * Which animal has a bigger digital footprint?
-  * Mizzle says some interesting things about himself on the Internet. What are they?
-  * Is there anything that Electra posted on the Internet that could become a problem for her? If so, what and why?
+  * Sobre quem os detetives podem descobrir mais informações, e por quê?
+  * Qual animal deixa um rastro digital maior?
+  * Chuvisco disse algumas coisas interessantes sobre ele na internet. Que coisas são essas?
+  * Há alguma coisa que Electra publicou na internet que poderia ser um problema para ela? Se sim, o que foi, e por quê?
 
-Take the time to discuss what is appropriate information to share on the Internet, and what is not: ![](info.png)
+Separe algum tempo para discutir quais informações são apropriadas para compartilhar na internet, e quais não são: ![](info.png)
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow-partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use seus conhecimentos sobre sua sala de aula para decidir se você quer discutir isso como uma turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 6) Vocab Shmocab
+### <a name="Shmocab"></a> 6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "The information about someone on the Internet"   
-> "Changing the sun's light to energy"   
-> "A person who is under the age of 21"  
+> "As informações sobre alguém na internet"   
+> "Transformar a luz do sol em energia"   
+> "Uma pessoa que tem menos de 21 anos"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (5 min)
+## Avaliação (5 min)
 
-### <a name="Assessment"></a>7) [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
+### <a name="Assessment"></a>7) [Avaliação do rastro digital](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
 
-  * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
-  * This should feel familiar, thanks to the previous activities.
+  * Distribua a folha de avaliação e deixe que os alunos completem a atividade individualmente depois que as instruções forem bem explicadas. 
+  * Essa parte deve parecer familiar, graças às duas atividades anteriores.
 
 [/together]
 
@@ -232,42 +233,42 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
 ### Common Sense Media
 
-  * Visit [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) to learn more about how you can keep your students safe in this digital age.
+  * Visite o [Common Sense Media](https://www.commonsensemedia.org/educators/scope-and-sequence) para aprender mais sobre como manter seus alunos seguros nessa era digital.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 5.a - Advocate and practice safe, legal, and responsible use of information and technology.
-  * 5.b - Exhibit a positive attitude toward using technology that supports collaboration, learning, and productivity.
-  * 6.a - Understand and use technology systems.
+  * 5.a - Defender e praticar o uso seguro, legal e responsável da informação e da tecnologia.
+  * 5.b - Mostrar uma atitude positiva em relação ao uso da tecnologia que apoia a colaboração, aprendizagem e produtividade.
+  * 6.a - Entender e usar sistemas tecnológicos.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CI.L1:3-01 - Practice responsible digital citizenship (legal and ethical behaviors) in the use of technology systems and software.
-  * CPP.L2-06 - Demonstrate good practices in personal information security: using passwords, encryption, secure transactions.
+  * CI.L1:3-01 - Praticar a cidadania digital responsável (comportamentos legais e éticos) no uso dos sistemas de tecnologia e softwares.
+  * CPP.L2-06 - Demonstrar boas práticas em segurança de informação pessoal: usar senhas, encriptação e transações seguras.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

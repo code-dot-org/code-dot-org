@@ -84,14 +84,9 @@
         video: Unplug7
       Unplug8:
         title: Abstrakcija
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: This activity combines your students' everyday routine and a Mad-Lib
+          style thinking game to help your class learn about the effectiveness of
+          abstraction.
         pdfs:
         - unplug8
         video: Unplug8
@@ -226,7 +221,7 @@
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
+        desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
@@ -279,18 +274,24 @@
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
         title: Booleans
         desc: Booleans lesson description
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
+        video: alg_16_biggame_collision_detection

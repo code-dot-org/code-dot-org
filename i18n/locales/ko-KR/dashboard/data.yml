@@ -48,7 +48,7 @@ ko:
         edit-code:
           desc: 코드 수정(beta)
           MazeEC: 1 단계
-          Webapp: 2 단계
+          Applab: 2 단계
           ArtistEC: 3 단계
           StudioEC: 4 단계
         events:
@@ -99,10 +99,12 @@ ko:
         Jigsaw: 퍼즐 맞추기
         MazeStep: 미로 단계별 모드
         Wordsearch: 단어 탐색
-        Webapp: 웹 앱
+        Webapp: 앱 연구실
         ArtistEC: The Artist
         TextMatch: 글자 맞추기
         StudioEC: Play Lab
+        Applab: 앱 연구실
+        NetSim: 인터넷 시뮬레이터
     trophy:
       name:
         Bronze: 동
@@ -201,7 +203,7 @@ ko:
         turtle_3_5: '이제, "집 그리기" 블럭을 새로 만들고, 그 블럭을 이용해서 고양이 2마리를 위한 집을 만들어 보세요. 힌트: "함수 이름" 이 적혀있는 블럭을 이용해서 새로운 블럭을 만들고, 원하는 이름을 넣어서 사용하면 됩니다.'
         turtle_3_6: '"사각형 그리기" 블럭을 살펴보고, "삼각형 그리기" 함수에 "길이" 값을 전달할 수 있도록 추가해 보세요. 그 다음에 다른 크기의 삼각형들을 그리면 됩니다. (힌트: 별 모양을 눌러 함수에게 어떤 값을 사용하도록 할 수 있습니다.)'
         turtle_3_7: '"집 그리기" 함수에 "길이"를 전달할 수 있도록 추가해서 코끼리 집을 만들어 보세요. (각 선의 길이는 150 픽셀)'
-        turtle_3_8: '이전 퍼즐에서 사용된 블럭들이 모두 있습니다. "집 그리기" 함수를 수정해서 사용하고, 모든 집을 그린 후에는 마지막 집의 오른쪽 아래에 위치할 수 있도록 해보세요. 주어진 함수 블럭을 수정해서 3개의 집을 지으면 됩니다.'
+        turtle_3_8: '새로운 집 그리기가 완료되면 오른쪽 하단에서 끝나도록 "집 그리기"를 수정하세요. 이 수정된 함수를 사용해서 3개의 집을 그리세요.'
         turtle_3_9: '"집 그리기" 함수를 아무 도움 없이 스스로 만들 수 있을까요? 도전해 보세요.'
         turtle_3_10: 지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진 것들을 상상하고 그려보세요.
         maze_karel_debug_seq_1: 잘못된 곳 찾기! 퍼즐에 오신 것을 환영합니다! 만들어져 있는 코드가 제대로 동작하지 않아요. 틀린 부분을 찾고, 수정해서밭을 평평하게 만들 수 있도록 도와줄 수 있겠어요?
@@ -242,7 +244,7 @@ ko:
         flappy_6: 플래피 버드의 펄럭이면 점수가 어떻게 올라가는지 확인해보세요.
         flappy_7: '자 이번에는 "실행하면" 블럭에 다른 블럭을 붙여 배경 그림을 바꾸어보세요.'
         flappy_8: 화면에 보이는 것들은 언제 든지 바꿀 수 있습니다. 물체를 피해 통과하는 것과 같은 이벤트들이 발생했을 때 랜덤 배경으로 바뀌도록 해보세요.
-        flappy_9: 게임을 끝내지 말고 땅에 떨어지거나 물체에 닿거나 등등 여러 가지 상황에 대해서 생각해서, 점수를 0점이 되게 해 보세요.
+        flappy_9: 사물들을 뒤섞으려면, 장애물에 부딪혔을 때 게임을 끝내는 대신 점수를 0으로 설정하세요.
         flappy_11: 자신만의 플래피 게임을 만들어보세요. 화면에 보이는 것들과 규칙들, 떨어지는 중력마저도 마음대로 만들어보세요. 친구들이 스마트폰에서 해볼 수 있도록 공유해 보세요.
         flappy_k1_1: 플래피 버드
         flappy_k1_2: '"클릭되면"블럭을 붙인 후 "실행하기"를 누르세요. 플래피 버드가 목표 지점에 도착할 수 있도록 화면을 클릭하거나 터치하면 됩니다.'
@@ -322,81 +324,10 @@ ko:
         maze_wordsearch_k_15: '어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.'
         maze_wordsearch_k_16: '어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.'
         maze_wordsearch_k_20: '테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.'
-        webapp_ec_simple: HtmlBlock 을 사용해 웹 앱 만들기
+        applab_ec_simple: 도구 상자에 있는 블록을 사용하여 당신의 앱을 만드십시오.
         turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양, 나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
         studio_ec_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록 할 수 있습니다.
-    levelbuilder:
-      frozen line:
-        instructions: 안녕하세요! 저는 아렌델의 엘사입니다. 선 1개를 그릴 수 있도록 도와주세요.
-      frozen perpendicular:
-        instructions: '이제 두 개의 선을 90도 만큼 교차시켜 그릴 수 있는지 살펴보세요. "회전"블럭과 "이동" 블럭을 사용해야 할 것 입니다.'
-      frozen square iterative:
-        instructions: 사각형을 만들기 위한 과정에 반정도 왔습니다. 모아서 사각형을 만들기 위해 4개의 선을 그려보세요.
-      frozen square loop:
-        instructions: '안녕하세요! 저는 아렌델의 안나에요! 적은 "반복" 블럭을 이용해 사각형을 만들어 볼까요? 사각형을 만들기 위해서 반복 블럭 안에 몇 번의 "반복" 블럭을 넣어야 할까요???'
-      frozen square loop 3x:
-        instructions: 이제 3개의 사각형을 회전시킨 것을 만들어 보아요! 새로운 사각형을 그리기 전에 120도 만큼 회전하는 것을 잊지 마세요.
-      frozen square snowflake:
-        instructions: '"반복" 블럭을 10번 이용하고, 36도 만큼씩 사각형들을 회전시켜 그려서 눈송이를 그릴 수 있겠어요?'
-      frozen cross:
-        instructions: '"덧셈기호"를 그리기 위해서 "반복" 블럭을 사용해 보세요. 엘사가 앞뒤로 이동할 수 있다는 것 아시죠?'
-      frozen cross rotate:
-        instructions: 이제 10번 반복세 보세요. 각 선들을 그리면서 회전하기 위해서 몇 도가 필요할까요?
-      frozen cross rotate dense:
-        instructions: '이제 90번 반복해 보세요. 360도를 회전하려면 90도를 몇 번 회전해야 할까요? 힌트: 생각보다 작은 수입니다.'
-      frozen diamond:
-        instructions: '평행사변형을 그려보아요! 사각형하고 비슷하지만 각이 다릅니다: 사각형은 모두 90도이지만 60도, 120도의 각을 이루고 있습니다.'
-      frozen diamond mini snowflake:
-        instructions: '모든 눈송이들이 서로 다른 모양을 하고 있다는 것을 아시나요? 평행 사변형을 4번 그리기 위해 "반복"블럭을 사용하고, 각각을 90도 만큼씩 회전시켜 새로운 눈송이를 만들어보겠습니다.'
-      frozen diamond snowflake:
-        instructions: 이제, 평행 사변형을 10번 그릴 수 있도록 반복 블럭을 사용하고, 각각을 36도 만큼씩 오른쪽으로 돌려 새로운 눈송이를 그려보겠습니다.
-      frozen circle:
-        instructions: 원은 특별한 도형입니다. 원을 그리기 위해서 물음표 부분에 어떤 수가 들어가야 할까요?
-      frozen circle function:
-        instructions: '새로운 "원 그리기" 블럭을 이용해 10개의 원을 겹쳐 그리세요. 원을 그리기 위해 점프 하는 것을 잊지 마세요.'
-      frozen circle function in circle:
-        instructions: 이제 20개의 원을 겹치고, 각각을 18도씩 회전시키세요.
-      frozen circle function with parameter:
-        instructions: '원하는 크기로 그릴 수 있는 "원 그리기" 블럭이 있습니다. 이 블럭을 사용해 5 크기의 원과 10 크기의 원을 그릴 수 있겠어요?'
-      frozen snowflower:
-        instructions: 아주 복잡한 눈송이 모양도 아주 간단한 모양들을 이용해 만들 수 있습니다. 5크기의 원을 5개, 10크기의 원을 5개 이용해 패턴을 만들 수 있겠어요?
-      frozen snowflake branch:
-        instructions: '"눈송이 가지 만들기" 블럭을 이용해 3개의 가지로 뻗어나가는 그럴 듯한 눈송이를 만들어보세요.'
-      frozen snowflake full:
-        instructions: 이제 이쁜 눈송이를 만들기 위해 8번 반복해 보세요.
-      frozen freeplay:
-        instructions: 와~ 여러분은 이제 진짜 예술가가 된 것 같아요! 겨울왕국을 만들고 친구들에게 공유해 보세요.
-      scrat 16:
-        instructions: '도토리! 도토리! 도토리! "만약" 블럭을 이용하고, 가장 적은 갯수의 블럭들을 이용해서 도토리가 있는 곳으로 보내주세요.'
-      scrat 17:
-        instructions: '좋아요, 다시 한 번 해봅시다. - 크게 다르지는 않지만, 벽을 조심해야 해요!'
-      scrat 18:
-        instructions: '"만약(if)-아니면(else)" 블럭은 조건을 검사하고, 두 가지 중 하나만 실행합니다. 도토리가 있는 위치로 이동시키기 위해 이 새로운 블럭을 사용하세요.'
-      scrat 19:
-        instructions: '"조건/선택" 블럭을 다시 한 번 사용해 보자~, 한 번에 성공할 수 있을까?'
-      scrat 20:
-        instructions: 좀 더 복잡한 미로를 해결할 수 있도록 3개의 블럭만 더 더해줄 수 있나요? 그렇게 해준다면, 길이가 얼마나 길던지 상관없이 꺽인 길에서 회전할 수 있게 됩니다. 빨리 빨리요! 얼음이 녹고 있어요!
-      Standalone_Artist_1:
-        instructions: 예술가 퍼즐에 오신 것을 환영합니다. 처음으로 오른쪽으로 이동 블럭과 앞으로 이동 블럭을 이용해서 간단한 사각형을 만들어 보겠습니다. 각 면의 길이는 정확히 100 픽셀이 되어야 합니다.
-      Standalone_Artist_2:
-        instructions: 120도, 60도의 각과 150 픽셀 만큼의 길이로 이 다이아몬드를 그려보세요.
-      Standalone_Artist_3:
-        instructions: 100 픽셀 길이와 60도 회전으로 이 육각형을 그려 줄 수 있나요?
-      Standalone_Artist_4:
-        instructions: 이제 반복(loop) 이라는 새로운 블럭을 이용할 수 있습니다. 이 블럭은 원하는 명령어들을 반복시켜줄 것입니다. 이 명령어들을 6번 반복하면 어떻게 될까요?
-      Standalone_Artist_5:
-        instructions: 이 다이아몬드 모양을 이용해서 꽃을 그리려면 반복(loop)을 몇 번 시켜야 할까요?
-      Standalone_Artist_5.5:
-        instructions: '다이아몬드 모양을 반복 블럭 안에 넣어서 회전시키면서 아주 쉽게 코드를 만드는 방법을 잘 보세요. 순서대로 실행시켜야하는 명령어들을 12번 반복시킬 수 있습니다. 힌트: 다이아몬드 반복(loop)를 30도만큼 회전시키면 됩니다. 다이아몬드를 또 그릴 필요가 없습니다.'
-      Standalone_Artist_6:
-        instructions: '이 6각형 코드를 반복적으로 이용해서 디자인 해보세요. 한 번 실행할 때마다 몇 도를 회전시켜야 할까요? 힌트: 원의 각도를 반복시키려고 하는 횟수로 나누면 됩니다.'
-      Standalone_Artist_7:
-        instructions: '함수는 한번 만들어둔 것을 다시 사용하는 프로그래밍 방법입니다. 이 함수는 꽃을 그려주는데, 이 함수를 이용하면 원하는 만큼의 꽃을 편리하게 그릴 수 있습니다. 이 함수와 점프 블럭을 이용해서 이 꽃들을 그려주세요. 힌트: 꽃들은 150 픽셀만큼 떨어져 있습니다.'
-      Standalone_Artist_8:
-        instructions: '"모양 그리기" 라는 이름의 6각형 그리기 함수 블럭이 있습니다. 일단 먼저 코드를 실행시켜 어떻게 실행되는지 살펴보고, 실험해 보세요. 사각형, 삼각형, 8각형을 그릴 수 있겠어요?'
-      Standalone_Artist_9:
-        instructions: 자 이제 계속해서, 원하는 그림을 마음껏 그려보세요! 원하는 것이 어떤 것이든지, 빈 함수를 이용해 마음대로 만들고 사용할 수 있습니다.
     video:
       name:
         maze_intro: 미로 퍼즐 소개
@@ -456,6 +387,7 @@ ko:
         C2_relay_programming: 릴레이 프로그래밍
         C2_paper_airplanes: 종이 비행기
         C2_digital_footprint: 디지털 개인정보 흔적
+        C2_digital_footprint_v2: 디지털 개인정보 흔적
         C3_maze_level_4: 미로 퍼즐 반복
         C3_artist_intro: 예술가 퍼즐 소개
         C3_artist_functions: 예술가 함수
@@ -475,6 +407,7 @@ ko:
         C3_functional_suncatchers: 기능성 색유리
         C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
         C4_intro: 소개
+        C4_loops_zombie: 반복
         C4_bee_conditional: 꿀벌 조건선택
         C4_variables_artist: '변수 - 예술가'
         C4_variables_playlab: '변수 - 플레이 랩'
@@ -496,6 +429,37 @@ ko:
         playlab_intro: 플레이 랩 소개
         playlab_events: 플레이 랩 이벤트
         playlab_repeat_forever: 플레이 랩 무한 반복
+        tutorial_puzzle_challenge: 튜토리얼 퍼즐 첼린지
+        infinity_playlab_intro: '플레이 랩 - 소개'
+        infinity_playlab_events: '플레이 랩 - 이벤트'
+        infinity_playlab_repeat_forever: '플레이 랩 - 무한 반복'
+        csp_concept_rgb: 픽셀에 관해서 조금
+        csp_pixelation_color_1: '픽셀 색상 위젯 - 1부'
+        csp_pixelation_color_2: '픽셀 색상 위젯 - 2부'
+        csp_pixelation_color_3: '픽셀 색상 위젯 - 3부'
+        csp_pixelation_bw: 흑백 픽셀 위젯
+        csp_U1L14_tipstricks: '유닛 1 레슨 14 교사 팁 & 트릭'
+        csp_textcompression: 텍스트 압축 도구
+        csp_internetsimulator_1: 'Internet Simulator - Part 1'
+        csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
+        alg_1_intro: '대수학 CS - 소개'
+        alg_2_eval_block: '대수학 CS - 블록 평가'
+        alg_3_pemdas: '대수학 CS - 작업 순서'
+        alg_4_data_types: '대수학 CS - 데이터 형식'
+        alg_5_contracts: '대수학 CS - 계약'
+        alg_6_variables: '대수학 CS - 변수'
+        alg_7_function: '대수학 CS - 함수'
+        alg_8_design_recipe: '대수학 CS - 디자인 레시피'
+        alg_9_booleans: '대수학 CS - 부울 :1과0만 사용'
+        alg_10_conditionals: '대수학 CS - 조건문'
+        alg_11_coordinate_plane: '대수학 CS - 좌표 평면'
+        alg_12_biggame_variables: '대수학 CS - 빅게임 변수'
+        alg_13_biggame_animation: '대수학 CS - 빅게임 영상'
+        alg_14_biggame_booleans: '대수학 CS - 빅게임 불: 1과0만 사용'
+        alg_15_biggame_update_player: '대수학 CS - 빅게임 플레이어 업데이트'
+        alg_16_biggame_collision_detection: '대수학 CS - 빅게임 충돌 감지'
+        alg_17_sambat_compound_booleans: '대수학 CS - 복합 부울'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
@@ -562,3 +526,8 @@ ko:
         arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
         right_arrow_fireball: 파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요.
         name_function: 함수의 이름을 여기에 작성하세요.
+        Infinity_move_right_runbutton: 이곳에 이동 블록을 추가합니다.
+        Infinity_move_directions_callout: "어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게 할까요?"
+        Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
+        Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
+        Infinity_repeat_callout: "여기로 '이동 블록'을 이동 시키세요"

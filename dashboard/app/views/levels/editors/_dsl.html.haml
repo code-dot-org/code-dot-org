@@ -1,8 +1,53 @@
-:css
-  textarea { width: 100% }
-- if @filename
-  = "Filename: #{@filename}"
+:scss
+  $cyan: #0094ca;
+  $light_cyan: #59b9dc;
+  $lighter_cyan: #a6daed;
+  $lightest_cyan: #d9eff7;
+
+  .script_text textarea { width: 100%; height: 100px}
+  .markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .markdown.teacher {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+  }
+
+- if @level.filename
+  = "Filename: #{@level.filename}"
+.field
+  = f.label :encrypted, 'Encrypt this entire file'
+  %p Use this if you want to prevent devious students from finding answers in our git repo
+  = boolean_check_box f, :encrypted
 .script_text
-  - cols = @dsl_file ? @dsl_file.lines.max_by(&:length).length : 20
-  - rows = @dsl_file ? @dsl_file.lines.count + 1 : 10
-  = text_area_tag('level[dsl_text]', @dsl_file || (@level.dsl_default), rows: rows, cols: cols, style: 'width:500px')
+  = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
+
+- if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
+
+  .markdown
+    %p Edit Markdown:
+
+    %textarea#level_markdown_textarea
+    #markdown-preview
+
+  .markdown.teacher
+    %p Edit Teacher Only Markdown:
+
+    %textarea#level_teacher_markdown_textarea
+    #teacher-markdown-preview
+
+  = javascript_include_tag 'editor/embedded_markdown_editor'
+  :javascript
+    dashboard.initializeEmbeddedMarkdownEditor(
+      $('#level_dsl_text'),
+      'markdown_textarea',
+      $('#markdown-preview'),
+      'markdown');
+    dashboard.initializeEmbeddedMarkdownEditor(
+      $('#level_dsl_text'),
+      'teacher_markdown_textarea',
+      $('#teacher-markdown-preview'),
+      'teacher_markdown');

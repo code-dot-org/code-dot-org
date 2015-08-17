@@ -1,9 +1,9 @@
 - @page_title = t('gallery.students_made_these_with_code')
-- content_for :head do
+- content_for :og do
   = tag 'meta', property: 'og:title', content: @page_title
   = tag 'meta', property: 'og:image', content: image_url('gallery_thumbnail.png')
   = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)))
- 
+
 .row
   %h1{style: 'text-align:center;'}
     = link_to t('gallery.students_made_these_with_code'), gallery_activities_path
@@ -29,6 +29,8 @@
   .span{style: 'float:right;'}
     = link_to t('gallery.more').html_safe, app: Game::PLAYLAB
 
+  %a{name: "artist"}
+
   .row
     .span12
       %h2{style: 'text-align:center;'}= t('gallery.header_artist')
@@ -44,6 +46,6 @@
     = t('gallery.want_to_make_your_own')
 .row
   .span3
-  = render partial: 'shared/course_tall_block', locals: { id: "playlab" }
-  = render partial: 'shared/course_tall_block', locals: { id: "artist" }
+  = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+  = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
   .span3

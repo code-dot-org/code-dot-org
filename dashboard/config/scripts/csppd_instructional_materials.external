@@ -1,0 +1,41 @@
+name 'CSPPD instructional materials'
+title 'CSPPD instructional materials'
+
+markdown <<MARKDOWN
+## CSP Instructional Materials
+
+Each lesson in our CSP curriculum comes with a set of instructional materials, ranging from the teacher lesson plan to support videos that explain CS concepts. All of these materials are available through Code Studio, so you and your students can both access everything you need from one place. Read on for details on the different types of materials found in the curriculum! 
+
+# Teacher lesson plans
+
+The lesson plan is a printable page that contains a summary of concepts, a set of resources, and a detailed description of the activities your students will do for the lesson. They are structured to be a good guide for running the lesson while being flexible enough for teachers to make decisions about what will work best for their students.
+
+# Student-facing activities
+
+There are several types of student-facing activities designed to help them learn CS concepts and build their computational skills, including: 
+
+* Widgets
+* Unplugged activities
+* App Lab (programming) activities
+* Assessments
+* Projects
+
+# Content videos
+
+These videos are designed to build on the activities done in the classroom. Concept videos help explain key points behind CS concepts that might be hard to explain or understand.
+
+# Video tutorials for widgets and tools
+
+These videos give an overview of how a widget or tool works. A tutorial video will often show how to set up a widget, and walk through how it works. 
+
+# Teaching tip videos
+
+These videos are designed to walk through lessons that have some component that is tricky. For example, lessons that have students using new tools or working on large projects will often have a teaching tips video to help clarify what students are doing. 
+<br>
+<br>
+<strong> On the next page we'll see more about these different resources and how they fit together in one lesson. </strong>
+<br>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

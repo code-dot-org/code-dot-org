@@ -2,21 +2,119 @@ require 'digest/md5'
 require 'cdo/user_helpers'
 
 class User < ActiveRecord::Base
+  include SerializedProperties
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender survey2015_value survey2015_comment)
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
-  devise :database_authenticatable, :registerable, :omniauthable, :confirmable,
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable, :confirmable,
          :recoverable, :rememberable, :trackable
 
+  acts_as_paranoid # use deleted_at column instead of deleting rows
+
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word 
+  PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
   OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
-  
+
+  # :user_type is locked/deprecated. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
   TYPE_TEACHER = 'teacher'
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, on: :create
+
+  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
+
+  # Teachers can be in multiple cohorts
+  has_and_belongs_to_many :cohorts
+
+  # workshops that I am attending
+  has_many :workshops, through: :cohorts
+  has_many :segments, through: :workshops
+
+  has_and_belongs_to_many :workshops_as_facilitator,
+    class_name: Workshop,
+    foreign_key: :facilitator_id,
+    join_table: :facilitators_workshops
+
+  # you can be associated with a district if you are the district contact
+  has_one :district_as_contact,
+    class_name: 'District',
+    foreign_key: 'contact_id'
+
+  belongs_to :invited_by, :polymorphic => true
+
+  # TODO: I think we actually want to do this
+  # you can be associated with distrits through cohorts
+#   has_many :districts, through: :cohorts
+
+  def facilitator?
+    permission? UserPermission::FACILITATOR
+  end
+
+  def delete_permission(permission)
+    permission = permissions.find_by(permission: permission)
+    permissions.delete permission if permission
+  end
+
+  def permission=(permission)
+    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
+  end
+
+  def permission?(permission)
+    permissions.exists?(permission: permission)
+  end
+
+  def district_contact?
+    district_as_contact.present?
+  end
+
+  def district
+    District.find(district_id) if district_id
+  end
+
+  def district_name
+    district.try(:name)
+  end
+
+  def User.find_or_create_teacher(params, invited_by_user, permission = nil)
+    user = User.find_by_email_or_hashed_email(params[:email])
+    unless user
+      # initialize new users with name and school
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+      params[:school] ||= params[:ops_school]
+
+      user = User.invite!(email: params[:email],
+                          user_type: TYPE_TEACHER, age: 21)
+      user.invited_by = invited_by_user
+    end
+
+    user.update!(params.merge(user_type: TYPE_TEACHER))
+
+    if permission
+      user.permission = permission
+      user.save!
+    end
+    user
+  end
+
+  def User.find_or_create_district_contact(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
+  end
+
+  def User.find_or_create_facilitator(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
+  end
+
+  # a district contact can see the teachers from their district that are part of a cohort
+  def district_teachers(cohort = nil)
+    return nil unless district_contact?
+    teachers = district.users
+    (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
+  end
 
   GENDER_OPTIONS = [[nil, ''], ['gender.male', 'm'], ['gender.female', 'f'], ['gender.none', '-']]
 
@@ -25,7 +123,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
-  has_many :user_levels
+  has_many :user_levels, -> {order 'id desc'}
   has_many :activities
 
   has_many :gallery_activities, -> {order 'id desc'}
@@ -47,9 +145,7 @@ class User < ActiveRecord::Base
 
   belongs_to :secret_picture
   before_create :generate_secret_picture
-  
-  belongs_to :secret_word_1, class_name: SecretWord
-  belongs_to :secret_word_2, class_name: SecretWord
+
   before_create :generate_secret_words
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
@@ -68,7 +164,7 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -79,14 +175,24 @@ class User < ActiveRecord::Base
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
-  
-  after_create :codeorg_admin unless Rails.env.production?
-  def codeorg_admin
-    require 'mail'
-    update(admin: true) if Mail::Address.new(email).domain.try(:downcase) == 'code.org'
+
+  before_save :dont_reconfirm_emails_that_match_hashed_email
+  def dont_reconfirm_emails_that_match_hashed_email
+    # we make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
   end
 
-  before_save :hash_email, :hide_email_for_younger_users # order is important here ;)
+  before_save :make_teachers_21, :dont_reconfirm_emails_that_match_hashed_email, :hash_email, :hide_email_for_younger_users # order is important here ;)
+
+  def make_teachers_21
+    return unless user_type == TYPE_TEACHER
+    self.age = 21
+  end
 
   def User.hash_email(email)
     Digest::MD5.hexdigest(email.downcase)
@@ -226,28 +332,34 @@ class User < ActiveRecord::Base
     end
   end
 
-  def levels_from_script(script, game_index=nil, stage=nil)
-    ul_map = self.user_levels.includes({level: [:game, :concepts]}).index_by(&:level_id)
-    q = script.script_levels.includes({ level: :game }, :script, :stage).order((stage ? :position : :chapter))
+  def user_levels_by_level(script)
+    user_levels.
+      where(script_id: script.id).
+      index_by(&:level_id)
+  end
+
+  def user_level_for(script_level)
+    user_levels.find_by(script_id: script_level.script_id,
+                        level_id: script_level.level_id)
+  end
+
+  def levels_from_script(script, stage = nil)
+    ul_map = user_levels_by_level(script)
+    q = script.script_levels.includes(:level, :script, :stage).order(:position)
 
     if stage
-      q = q.where(['stages.id = :stage_id', { :stage_id => stage}]).references(:stage)
-    elsif game_index
-      q = q.where(['games.id = :game_id', { :game_id => game_index}]).references(:game)
+      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
     end
 
     q.each do |sl|
-      ul = ul_map[sl.level_id]
-      sl.user_level = ul
+      sl.user_level = ul_map[sl.level_id]
     end
   end
 
   def next_unpassed_progression_level(script)
-    user_levels_by_level = self.user_levels.index_by(&:level_id)
-    cached_script = script
-    cached_script = Script.get_from_cache(script.id) if script.should_be_cached?
-    
-    cached_script.script_levels.detect do |script_level|
+    user_levels_by_level = user_levels_by_level(script)
+
+    script.script_levels.detect do |script_level|
       user_level = user_levels_by_level[script_level.level_id]
       is_unpassed_progression_level(script_level, user_level)
     end
@@ -263,8 +375,6 @@ class User < ActiveRecord::Base
     #broze id: 1, silver id: 2 and gold id: 3
     User.connection.select_one(<<SQL)
 select
-  count(case when ul.best_result >= #{Activity::MINIMUM_PASS_RESULT} then 1 else null end) as current_levels,
-  count(*) as max_levels,
   (select coalesce(sum(trophy_id), 0) from user_trophies where user_id = #{self.id}) as current_trophies,
   (select count(*) * 3 from concepts) as max_trophies
 from script_levels sl
@@ -291,15 +401,6 @@ SQL
 
   def last_attempt(level)
     Activity.where(user_id: self.id, level_id: level.id).order('id desc').first
-  end
-
-  # returns a map from section to the users in that section
-  def students_by_section
-    class_map = Hash.new{ |h,k| h[k] = [] }
-    self.followers.includes([:section, :student_user]).each do |f|
-      class_map[f.section] << f.student_user
-    end
-    class_map
   end
 
   def average_student_trophies
@@ -331,6 +432,15 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
+  def authorized_teacher?
+    # you are "really" a teacher if you are in any cohort for an ops workshop
+    admin? || cohorts.present?
+  end
+
+  def student_of?(teacher)
+    followeds.find_by_user_id(teacher.id).present?
+  end
+
   def locale
     read_attribute(:locale).try(:to_sym)
   end
@@ -343,7 +453,7 @@ SQL
   end
 
   def confirmation_required?
-    (self.teacher? || self.students.length > 0) && !self.confirmed?
+    self.teacher? && !self.confirmed?
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -357,7 +467,7 @@ SQL
 
   def age=(val)
     @age = val
-    val = val.to_i
+    val = val.to_i rescue 0 # sometimes we get age: {"Pr" => nil}
     return unless val > 0
     return unless val < 200
     return if birthday && val == age # don't change birthday if we want to stay the same age
@@ -421,6 +531,7 @@ SQL
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
+  attr_accessor :raw_token
   def User.send_reset_password_instructions(attributes={})
     # override of Devise method
     if attributes[:email].blank?
@@ -431,11 +542,13 @@ SQL
 
     user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
     if user && user.persisted?
-      user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
+    else
+      user.errors.add :email, :not_found
     end
     user
   end
-  
+
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
 
@@ -458,14 +571,8 @@ SQL
     save!
   end
 
-  def secret_words
-    return nil unless secret_word_1 && secret_word_2
-    "#{secret_word_1.word} #{secret_word_2.word}"
-  end
-
   def generate_secret_words
-    self.secret_word_1 = SecretWord.random
-    self.secret_word_2 = SecretWord.random
+    self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
   def reset_secret_words
@@ -473,16 +580,52 @@ SQL
     save!
   end
 
+  def advertised_scripts
+    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script,
+      Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script,
+      Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+  end
+
+  def unadvertised_user_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  end
+
+  def all_advertised_scripts_completed?
+    advertised_scripts.all? { |script| completed?(script) }
+  end
+
+  def completed?(script)
+    user_script = user_scripts.where(script_id: script.id).first
+    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+  end
+
+  def not_started?(script)
+    !completed?(script) && !a_level_passed?(script)
+  end
+
+  def a_level_passed?(script)
+    user_levels_by_level = user_levels_by_level(script)
+    script.script_levels.detect do |script_level|
+      user_level = user_levels_by_level[script_level.level_id]
+      is_passed = (user_level && user_level.passing?)
+      script_level.valid_progression_level? && is_passed
+    end
+  end
+
+  def working_on?(script)
+    working_on_scripts.include?(script)
+  end
+
   def working_on_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    scripts.where('user_scripts.completed_at is null')
+    scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   def completed_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    scripts.where('user_scripts.completed_at is not null')
+    scripts.where('user_scripts.completed_at is not null').map(&:cached)
   end
 
   def working_on_user_scripts
@@ -498,7 +641,7 @@ SQL
   end
 
   def primary_script
-    working_on_scripts.first
+    working_on_scripts.first.try(:cached)
   end
 
   def needs_to_backfill_user_scripts?
@@ -510,7 +653,7 @@ SQL
     followeds.each do |follower|
       script = follower.section && follower.section.script
       next unless script
-        
+
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
         user_script.assigned_at = follower.created_at if
@@ -551,53 +694,39 @@ SQL
 
   def track_script_progress(script)
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script).first_or_create
+      user_script = UserScript.where(user: self, script: script).first_or_create!
       time_now = Time.now
 
-      # doing this (instead of just user_script.save) avoids wrapping
-      # the update in a transaction (which could be an epty
-      # transaction (?!)
+      user_script.started_at = time_now unless user_script.started_at
+      user_script.last_progress_at = time_now
+      user_script.completed_at = time_now if !user_script.completed_at && user_script.check_completed?
 
-      update = {}
-      update[:started_at] = time_now unless user_script.started_at
-      update[:last_progress_at] = time_now 
-
-      if !user_script.completed_at && user_script.check_completed?
-        update[:completed_at] = time_now
-      end
-
-      # update_all bypasses validations/transactions/etc
-      UserScript.where(id: user_script.id).update_all(update)
+      user_script.save!
     end
   end
 
   # returns whether a new level has been completed
   def track_level_progress(script_level, new_result)
+    new_level_completed = false
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      # this contortion is necessary while we are in the process of
-      # migrating between UserLevels without scripts to UserLevels
-      # with scripts. When this is done we can just do first_or_create
-
       user_level = UserLevel.where(user_id: self.id,
                                    level_id: script_level.level_id,
-                                   script_id: [script_level.script_id, nil]).first
+                                   script_id: script_level.script_id).first_or_create!
 
-      unless user_level
-        user_level = UserLevel.create(user_id: self.id,
-                                      level_id: script_level.level_id,
-                                      script_id: script_level.script_id)
-      end
+      new_level_completed = true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
 
-      update = {}
-      update[:attempts] = user_level.attempts + 1 unless user_level.best?
-      if user_level.best_result.nil? || new_result > user_level.best_result
-        update[:best_result] = new_result
-      end
-      UserLevel.where(id: user_level.id).update_all(update) unless update.empty?
+      # update the user_level with the new attempt
+      user_level.attempts += 1 unless user_level.best?
+      user_level.best_result = new_result if new_result > (user_level.best_result || -1)
 
-      return true if !user_level.passing? && Activity.passing?(new_result) # user_level is the old result
+      user_level.save!
     end
-    return false
+
+    if new_level_completed && script_level.script
+      track_script_progress(script_level.script)
+    end
+
+    new_level_completed
   end
 
   def assign_script(script)
@@ -614,9 +743,12 @@ SQL
     self.activities.order('id desc').limit(limit)
   end
 
+  # make some random-ish fake progress for a user. As you may have
+  # guessed, this is for developer testing purposes and should not be
+  # used by any user-facing features.
   def hack_progress(options = {})
     options[:script_id] ||= Script.twenty_hour_script.id
-    script = Script.find(options[:script_id])
+    script = Script.get_from_cache(options[:script_id])
 
     options[:levels] ||= script.script_levels.count / 2
 
@@ -625,11 +757,10 @@ SQL
       test_result = rand(100)
 
       Activity.create!(user: self, level: sl.level, test_result: test_result)
-      
+
       if test_result > 10 # < 10 will be not attempted
         retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-          user_level = UserLevel.where(user: self, level: sl.level).first_or_create
-          user_level.script_id = script.id
+          user_level = UserLevel.where(user: self, level: sl.level, script: sl.script).first_or_create
           user_level.attempts += 1 unless user_level.best?
           user_level.best_result = test_result
           user_level.save!
@@ -638,5 +769,13 @@ SQL
     end
     track_script_progress(script)
   end
-  
+
+  def User.csv_attributes
+    # same as in UserSerializer
+    [:id, :email, :ops_first_name, :ops_last_name, :district_name, :ops_school, :ops_gender]
+  end
+
+  def to_csv
+    User.csv_attributes.map{ |attr| self.send(attr) }
+  end
 end

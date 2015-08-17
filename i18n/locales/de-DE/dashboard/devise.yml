@@ -55,3 +55,22 @@ de:
       not_saved:
         one: '1 Fehler verhinderte das Speichern von %{resource}:'
         other: '%{count} Fehler verhinderten das Speichern von %{resource}:'
+    invitations:
+      send_instructions: 'Eine Einladungs-Email wurde an %{email} gesendet.'
+      invitation_token_invalid: Das Einladungs-Token ist ungültig!
+      updated: Dein Passwort wurde erfolgreich festgelegt. Du bist jetzt angemeldet.
+      no_invitations_remaining: Keine Einladungen übrig
+      invitation_removed: Deine Einladung wurde entfernt.
+      new:
+        header: Einladung senden
+        submit_button: Schicke eine Einladung
+      edit:
+        header: Wähle dein Kennwort
+        submit_button: Mein Kennwort festlegen
+    mailer:
+      invitation_instructions:
+        subject: Einladungs-Anweisungen
+        hello: 'Hallo %{email}'
+        someone_invited_you: 'Jemand hat sie eingeladen %{url}, Sie können es über den Link unten Akzeptieren.'
+        accept: Einladung Annehmen
+        ignore: 'Wenn Sie diese Einladung nicht annehmen möchten, ignorieren Sie bitte diese E-Mail. <br /> Ihr Konto wird nicht erstellt werden, bis Sie den obigen Link zugreifen und Ihr Kennwort einstellen.'

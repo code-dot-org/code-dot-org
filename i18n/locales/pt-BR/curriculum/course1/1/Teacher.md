@@ -1,86 +1,87 @@
 * * *
 
-title: Happy Maps view: page_curriculum theme: none
+title: Mapas divertidos view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Happy Maps', :lesson=>1, :unplugged=>true, :disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Mapas divertidos', :lesson=>1, :unplugged=>true, :disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-At the root of all computer science is something called an algorithm. The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result. To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms.
+Na raiz da ciência da computação está uma coisa chamada algoritmo. A palavra "algoritmo" pode soar como algo complicado, mas na verdade ela significa apenas uma lista de instruções que alguém pode seguir para chegar a um resultado. Para fornecer uma base sólida para o restante da educação em ciência da computação de seus alunos, vamos nos concentrar na construção de uma relação segura com os algoritmos.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 10 minutes
+### **Primeiros passos** - 10 minutos
 
-1) [Vocabulary](#Vocab)   
-2) [Step-by-Step](#GetStarted)
+1) [Vocabulário](#Vocab)   
+2) [Passo a passo](#GetStarted)
 
-### **Activity: Happy Maps** - 20 minutes
+### **Atividade: Mapas divertidos** - 20 minutos
 
-3) [Happy Maps: Single-Step Adventure](#Activity1)
+3) [Mapas divertidos: aventura em uma etapa](#Activity1)
 
 <!-- 
 4) [Double-Step Adventure](#Activity2)
 -->
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-4) [Flash Chat](#WrapUp) - What did we learn?  
-5) [Vocab Shmocab](#Shmocab)
+4) [Bate-papo](#WrapUp) - o que aprendemos?  
+5) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-6) [Move the Flurbs Assessment](#Assessment)
+6) [Avaliação de mova os Flurbs](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * List steps to move character around a map
-  * Arrange directions to reach predetermined goal
-  * Predict where character will land, given a list of steps
-
-[/together]
-
-[together]
-
-# Teaching Guide
-
-## Materials, Resources and Prep
-
-### For the Student
-
-  * Maps and arrows from [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf)
-  * Game Pieces: Flurbs, Arrows, and Things 
-  * Assessment Worksheet: [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
-  * Scissors
-  * Glue
-
-### For the Teacher
-
-  * Teacher Lesson Guide
-  * Print one [Happy Maps: Single-Step Adventure](/curriculum/course1/1/Activity1-HappyMaps.pdf) for each group
-  * Print one [Move the Flurbs Assessment](/curriculum/course1/1/Assessment1-HappyMaps.pdf) for each student
+  * Listar passos para mover o personagem por um mapa
+  * Organizar as instruções para atingir um objetivo determinado
+  * Prever onde o personagem vai parar, dada uma lista de passos
 
 [/together]
 
 [together]
 
-## Getting Started (10 min)
+# Guia de ensino
 
-### <a name="Vocab"></a> 1) Vocabulary
+## Materiais, recursos e preparação
 
-This lesson has one new and important word:  
+### Para o aluno
+
+  * Mapas e setas de [Mapas divertidos: aventura em uma etapa](/curriculum/course1/1/Activity1-HappyMaps.pdf)
+  * Partes do jogo: Flurbs, setas, e coisas 
+  * Folha de avaliação: [Avaliação de mova os Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
+  * Tesoura
+  * Cola
+
+### Para o professor
+
+  * [Vídeo aula](http://youtu.be/En6Bshuqljg?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
+  * Guia da aula para o professor
+  * Imprima um [Mapa Divertido: aventura em uma etapa](/curriculum/course1/1/Activity1-HappyMaps.pdf) para cada grupo
+  * Imprima uma [Avaliação de mova os Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf) para cada aluno
+
+[/together]
+
+[together]
+
+## Primeiros passos (10 min)
+
+### <a name="Vocab"></a> 1) Vocabulário
+
+Nesta aula há uma palavra nova e importante:  
 
 
 [centerIt]
@@ -89,47 +90,47 @@ This lesson has one new and important word:
 
 [/centerIt]
 
-**Algorithm** - Say it with me: Al-go-ri-thm   
-A list of steps that you can follow to finish a task.
+**Algoritmo** - Repita comigo: Al-go-rit-mo   
+Uma lista de passos que você pode seguir para realizar uma tarefa.
 
-### <a name="GetStarted"></a> 2) Step-by-Step
+### <a name="GetStarted"></a> 2) Passo a passo
 
-  * Ask your students for directions to the chalkboard. 
-      * If they start shouting simultaneously, explain that you can only hear one instruction at a time. Call on students individually if that helps. 
-  * When you reach the board, ask for instructions to draw a smiley face. 
-      * Again, request one step at a time.
-  * Explain that many tasks can be described using a specific list of instructions. That list is called an algorithm. 
-  * Challenge your students to work together in small groups to come up with algorithms for their single-step and double-step mazes.
+  * Peça para seus alunos darem instruções sobre como chegar até a lousa. 
+      * Se eles começarem a gritar, todos ao mesmo tempo, explique que você pode ouvir apenas uma instrução de cada vez. Chame os alunos individualmente, se for necessário. 
+  * Quando chegar à lousa, peça instruções para desenhar um rostinho feliz. 
+      * Novamente, peça uma instrução por vez.
+  * Explique que muitas tarefas podem ser descritas usando uma lista específica de instruções. Essa lista é chamada de algoritmo. 
+  * Desafie seus alunos a trabalharem juntos em pequenos grupos para criar algoritmos para seus labirintos em uma ou duas etapas.
 
 [/together]
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Students can work in pairs to create the adventures, then work in pairs to solve the adventures of others. If this feels too chaotic you can work together as a class and create the adventure on a document camera, then work together to solve it.
+Os alunos podem trabalhar em duplas para criar as aventuras, e depois trabalhar em duplas para resolver as aventuras dos outros. Se ficar difícil de organizar, você pode trabalhar com a turma toda junta e criar a aventura como um documentário, usando uma câmera, e então todos podem resolvê-la juntos.
 
 [/tip]
 
 [together]
 
-## Activities: (20 min)
+## Atividades: (20 min)
 
-### <a name="Activity1"></a> 3) [Happy Maps: Single-Step Adventure](Activity1-HappyMaps.pdf)
+### <a name="Activity1"></a> 3) [Mapas divertidos: aventura em uma etapa](Activity1-HappyMaps.pdf)
 
-  * This worksheet helps teach students how to think ahead in order to plan a short route from the Flurb’s start location to the final location, just one square away.
-  * Print out an activity packet for every group (ideally 2 to 4 students) and cut the Maps apart. Leave the arrow symbols for the students to cut apart.
-  * Explain the rules to the class, making sure to emphasise the new word "algorithm."
+  * Esta folha de atividade ajuda a ensinar os alunos a pensar à frente, para planejar uma pequena rota que vai da posição inicial do Flurb até a posição final, a apenas um quadrado de distância.
+  * Imprima uma atividade para cada grupo (o ideal são 2 a 4 alunos por grupo) e recorte os mapas. Deixe os alunos cortarem as setas.
+  * Explique as regras para a classe, lembrando de enfatizar a nova palavra "algoritmo".
 
-> Flurbs are happy, fuzzy little things.
+> Flurbs são coisinhas pequenas, felpudas e felizes.
 > 
-> Flurbs love to eat fruit. Fruit is hard to find in Flurb Town. Use the maps to help the Flurb find some fruit.
+> Flurbs adoram comer frutas. Frutas são difíceis de se encontrar na cidade dos Flurbs. Use os mapas para ajudar o Flurb a encontrar algumas frutas.
 > 
-> Work with your group to decide which direction the Flurb needs to step to get to the fruit.
+> Trabalhe com seu grupo para decidir para qual direção o Flurb deve ir para chegar à fruta.
 
-**Directions for Class:**
+**Instruções para a classe:**
 
-> 1) Cut out an arrow for each member of your team.
+> 1) Recorte uma seta para cada membro da sua equipe.
 
 [centerIt]
 
@@ -141,7 +142,7 @@ Students can work in pairs to create the adventures, then work in pairs to solve
   
 
 
-> 2) Start with Map 1 to help the Flurb look for fruit.
+> 2) Comece com o Mapa 1 para ajudar o Flurb a procurar pela fruta.
 
 [centerIt]
 
@@ -153,13 +154,13 @@ Students can work in pairs to create the adventures, then work in pairs to solve
   
 
 
-> 3) Have each member of your group put an arrow next to the map to vote for which way the Flurb should step.
+> 3) Peça para cada membro do seu grupo colocar uma seta ao lado do mapa, para escolher por qual caminho o Flurb deve ir.
 > 
-> 4) If not all arrows are pointing the same way, talk to each other and decide as a group which way the arrow should point.
+> 4) Se nem todas as setas estiverem apontando para o mesmo caminho, conversem para decidir, como um grupo, para qual caminho a seta deve apontar.
 > 
-> 5) When your whole group agrees on a direction, your team can share your answer with the teacher.
+> 5) Quando o grupo todo concordar com uma direção, sua equipe pode compartilhar a resposta com o professor.
 > 
-> 6) If your answer is correct, move on to the next map.
+> 6) Se sua resposta estiver correta, vá para o próximo mapa.
 
   
   
@@ -174,42 +175,42 @@ Students can work in pairs to create the adventures, then work in pairs to solve
 
 [together]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="WrapUp"></a> 4) Flash Chat: What did we learn?
+### <a name="WrapUp"></a> 4) Bate-papo: O que aprendemos?
 
-  * Did you feel like you were actually telling the Flurb what to do?
-  * What would it be like to control a robot that way?
-  * What would you create if it were that easy to tell a computer what to do?
+  * Você sentiu como se realmente estivesse dizendo ao Flurb o que fazer?
+  * Como seria controlar um robô dessa maneira?
+  * O que você criaria se fosse fácil assim dizer a um computador o que fazer?
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Flash Chat questions are intended to spark big-picture thinking about how the lesson relates to the greater world and the students' greater future. Use your knowledge of your classroom to decide if you want to discuss these as a class, in groups, or with an elbow partner.
+As perguntas do Bate-papo têm a finalidade de incentivar reflexões sobre como as aulas se relacionam com o mundo e com o futuro brilhante dos alunos. Use os conhecimentos que tem sobre sua sala de aula para decidir se vocês vão discutir isso em turma, em grupos, ou em duplas.
 
 [/tip]
 
-### <a name="Shmocab"></a> 5) Vocab Shmocab
+### <a name="Shmocab"></a> 5) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
 
-> "Breaking something into exactly two pieces"   
-> "A list of steps that you can follow to finish a task"   
-> "The plastic coating on the end of a shoelace"  
+> "Dividir alguma coisa em exatamente duas partes"   
+> "Uma lista de passos que você pode seguir para realizar uma tarefa"   
+> "A ponta de plástico nas extremidades de um cadarço"  
 > 
 > 
-> > ...and what is the word that we learned?
+> > ...e qual é a palavra que aprendemos?
 
 [/together]
 
 [together]
 
-## Assessment (10 min)
+## Avaliação (10 min)
 
-### <a name="Assessment"></a>6) [Move the Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
+### <a name="Assessment"></a>6) [Mova os Flurbs](/curriculum/course1/1/Assessment1-HappyMaps.pdf)
 
-  * Hand out the worksheet titled "Move the Flurbs" and allow students to complete the activity independently after the instructions have been well explained. 
+  * Distribua a folha de atividade "Mova os Flurbs" e deixe os alunos completarem a atividade individualmente depois que as instruções forem bem explicadas. 
 
 [/together]
 
@@ -218,64 +219,64 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Create Your Own
+### Crie sua própria atividade
 
-  * Allow the students to guide you toward solving a problem (that you provide) one step at a time. Point out that every time they make a step, the rest of the adventure gets easier. If the students are still excited by the exercise, give them a more complicated configuration to solve.
+  * Permita que os alunos o orientem na resolução de um problema (fornecido por você) um passo por vez. Lembre-os de que toda vez que eles dão um passo, o resto da aventura fica mais fácil. Se os alunos ainda estiverem animados com o exercício, dê a eles uma configuração mais complexa para resolver.
 
 ### Flurb Flash
 
-  * Cycle quickly through single-step puzzles on your projector. Have the students hold up an arrow card or simply point in the direction that they think the Flurb should move. 
+  * Apresente rapidamente desafios de uma única etapa no projetor. Peça aos alunos que usem um cartão de seta ou simplesmente apontem a direção para que eles acham que o Flurb deve se mover. 
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 6.a - Understand and use technology systems. 
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 6.a - Entender e usar sistemas tecnológicos. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
-  * CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
-  * CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises. 
-  * CT.L2-03 - Define an algorithm as a sequence of instructions that can be processed by a computer.
-  * CT.L2-06 - Describe and analyze a sequence of instructions being followed.
+  * CPP.L1:3-04 - Construir um conjunto de comandos para realizar uma tarefa simples. 
+  * CT.L1:6-01 - Entender e usar os passos básicos na resolução de um problema com um algoritmo. 
+  * CT.L1:6-02 - Desenvolver uma compreensão simples de algoritmo usando exercícios que não precisem de computador. 
+  * CT.L2-03 - Definir um algoritmo como uma sequência de instruções que podem ser processadas por um computador.
+  * CT.L2-06 - Descrever e analisar uma sequência de instruções sendo seguidas.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.G.A.1 - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
+  * K.G.A.1 - Descrever objetos no ambiente usando nomes de formas, e descrever as posições relativas desses objetos usando termos como acima, abaixo, ao lado, na frente, atrás e próximo a.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.2 - Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details and requesting clarification if something is not understood.
-  * SL.K.5 - Add drawings or other visual displays to descriptions as desired to provide additional detail.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * SL.1.5 - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups. 
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * SL.2.5 - Create audio recordings of stories or poems; add drawings or other visual displays to stories or recounts of experiences when appropriate to clarify ideas, thoughts, and feelings.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.2 - Confirmar a compreensão de um texto lido em voz alta ou de informações apresentadas de forma oral por outro tipo de mídia, perguntando e respondendo questões sobre detalhes importantes e pedindo explicações se algo não for entendido.
+  * SL.K.5 - Adicionar desenhos ou outros elementos visuais às descrições para fornecer detalhes adicionais.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * SL.1.5 - Adicionar desenhos ou outros elementos visuais às descrições para esclarecer ideias, pensamentos e sentimentos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos. 
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * SL.2.5 - Criar gravações de áudio de histórias ou poemas; adicionar desenhos ou outros elementos visuais às histórias, ou contar experiências para esclarecer ideias, pensamentos e sentimentos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

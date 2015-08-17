@@ -3,15 +3,16 @@ Feature: Puzzle share page
 
 Background:
   Given I am on "http://learn.code.org/flappy/10?noautoplay=true"
+  And I wait to see "#x-close"
   And I've initialized the workspace with my flappy puzzle.
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
-  When I press "x-close"
+  When I close the dialog
   Then I press "runButton"
   Then I press "rightButton"
-  And I wait for 1 seconds
+  And I wait to see "#x-close"
   Then I navigate to the share URL
-
+  
   Then ensure Flappy gameState is WAITING
   Then I press "runButton"
   And ensure Flappy gameState is WAITING

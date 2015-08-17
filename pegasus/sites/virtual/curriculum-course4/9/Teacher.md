@@ -11,7 +11,7 @@ theme: none
 [together]
 
 ## Lesson Overview 
-Students use the Bee environment to write programs using for loops.
+Students use the Bee environment to write programs that use loops with embedded counters/index variables.  These loops are called for loops, and they utilize predetermined start and stop values.
 
 [summary]
 

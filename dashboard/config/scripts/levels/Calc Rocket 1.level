@@ -8,16 +8,33 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "In the last puzzle you wrote a contract for the function \"rocket-height\" that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n",
+    "instructions": "In the last puzzle you wrote a contract for the function rocket-height that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "markdown_instructions": "In the last puzzle you wrote a contract for the function _rocket-height_ that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="functional_compute" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_times" inline="false"/>
+          </functional_input>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="functional_plus"/>

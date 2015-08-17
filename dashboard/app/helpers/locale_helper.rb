@@ -2,12 +2,11 @@ module LocaleHelper
 
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    best = candidate_locales.find { |locale|
-      Dashboard::Application::LOCALES.has_key? locale
-    }
-    # Expand language codes to include regions, if applicable.
-    data = Dashboard::Application::LOCALES[best]
-    (data.is_a?(String) ? data : best).to_sym
+    current = request.env['cdo.locale']
+    #if(current_user && current_user.locale != current)
+      # TODO: Set language cookie and reload the page.
+    #end
+    current.downcase.to_sym
   end
 
   def locale_dir
@@ -37,17 +36,6 @@ module LocaleHelper
     options
   end
 
-  # returns true if we support their first choice of locale
-  def support_primary_locale?
-    locales = Dashboard::Application::LOCALES.select do |k,v|
-      I18n.available_locales.include?(k.to_sym)
-    end
-    languages = locales.keys.map do |key|
-      key.split('-').first
-    end
-    languages.include? candidate_locales.first.split('-').first
-  end
-
   private
 
   # Parses and ranks locale code strings from the Accept-Language header.
@@ -58,8 +46,8 @@ module LocaleHelper
         locale, weight = entry.split(';')
         weight = (weight || 'q=1').split('=')[1].to_f
         [locale, weight]
-      }.sort_by { |locale, weight| -weight
-      }.map { |locale, weight| locale.strip }
+      }.sort_by { |_, weight| -weight
+      }.map { |locale, _| locale.strip }
     rescue
       Logger.warn "Error parsing Accept-Language header: #{header}"
       []
@@ -71,14 +59,6 @@ module LocaleHelper
     accepted_locales.map { |locale| locale.split('-')[0] }
   end
 
-  # Provides a prioritized list of possible locale codes as strings.
-  def candidate_locales
-    ([cookies[:language_], try(:current_user).try(:locale)] +
-     accepted_locales + accepted_languages +
-     [I18n.default_locale]
-    ).reject(&:nil?).map(&:to_s).map(&:downcase)
-  end
-
   # Looks up a localized string driven by a database value.
   # See config/locales/data.en.yml for details.
   def data_t(dotted_path, key)
@@ -88,7 +68,7 @@ module LocaleHelper
   # Looks up a localized string driven by a database value.
   # See config/locales/data.en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
-    I18n.t("data.#{dotted_path}.#{key.to_s}.#{suffix}", options)
+    I18n.t("data.#{dotted_path}.#{key}.#{suffix}", options)
   end
 
   # Tries to access translation, returning nil if not found

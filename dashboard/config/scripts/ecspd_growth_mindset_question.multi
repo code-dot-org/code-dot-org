@@ -1,0 +1,18 @@
+name 'ECSPD growth mindset question'
+title 'Impact of Growth Mindset'
+skip_sound true
+answer_line true
+hide_submit true
+
+description 'Based on the video you saw before, please answer the following question.'
+
+question 'In the video, Carol Dweck describes an online math game that rewarded student effort, strategy, and progress. What results did they see from students who played this game?'
+wrong 'more effort' 
+wrong 'more strategies' 
+wrong 'more engagement over longer periods of time'
+wrong 'more perseverance' 
+right 'all of the above'
+
+markdown <<MARKDOWN
+
+MARKDOWN

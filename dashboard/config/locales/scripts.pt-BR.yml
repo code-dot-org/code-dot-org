@@ -10,6 +10,7 @@
           Math Image: Imagem matemática
           title: Curso Teste
           description: Apenas um curso-teste interno.
+          description_short: Apenas um curso-teste interno.
         course1:
           'Jigsaw: Learn to drag and drop': 'Quebra-cabeça: aprenda a arrastar e soltar'
           'Maze: Sequence': 'Labirinto: Sequência'
@@ -34,13 +35,13 @@
           Getting Loopy: Repetindo
           The Big Event: O grande evento
           Going Places Safely: Navegando com segurança
-          description: O Curso 1 tem como propósito ensinar estudantes que estão começando
-            a ler a criar programas de computador, o que os ajudará a aprender a colaborar
-            com outras pessoas, desenvolver habilidades de resolução de problemas
-            e persistir na execução de tarefas difíceis. No final do curso, os estudantes
-            criam seu próprio jogo ou história personalizados que eles podem compartilhar
-            com outras pessoas. Este curso é recomendado para crianças da pré-escola
-            até 1º ano.
+          description: Comece com o Curso 1 para alunos que estão começando a ler.
+            Os alunos vão criar programas de computador, o que os ajudará a aprender
+            a colaborar com outras pessoas, desenvolver habilidades de resolução de
+            problemas e persistir na execução de tarefas difíceis. No final do curso,
+            os estudantes criam seu próprio jogo ou história personalizados que eles
+            podem compartilhar com outras pessoas. Este curso é recomendado para crianças
+            da pré-escola até o 1º ano.
           'Bee: Sequence': 'Abelha: Sequência'
           'Artist: Sequence': 'Artista: Sequência'
           'Artist: Shapes': 'Artista: Formas'
@@ -48,8 +49,8 @@
           'Bee: Loops': 'Abelha: Laços'
           'Studio: Create a Story': 'Laboratório: Crie uma história'
           'Artist: Loops': 'Artista: Laços'
-          description_audience: A partir de 4 anos (para crianças que ainda não leem)
-          description_short: O Curso 1 é destinado às crianças que estão aprendendo
+          description_audience: 4-6 anos de idade
+          description_short: Comece com o Curso 1 para alunos que estão começando
             a ler.
         course2:
           The Maze: O Labirinto
@@ -77,11 +78,10 @@
           Binary Bracelets: Pulseiras binárias
           The Big Event: O grande evento
           Your Digital Footprint: Seu rastro digital
-          description: O Curso 2 é voltado para estudantes que já sabem ler e não
-            têm experiência em programação. Aqui, os alunos criarão programas para
-            resolver problemas e desenvolver histórias ou jogos interativos que podem
-            compartilhar com outras pessoas. Este curso é recomendado para alunos
-            de 2º-5º ano.
+          description: Comece com o Curso 2 para alunos que sabem ler e não têm experiência
+            prévia em programação. Neste curso, os alunos vão criar programas para
+            resolver problemas e desenvolver jogos ou histórias interativas que eles
+            podem compartilhar. Este curso é recomendado para alunos do 2° ao 5° ano.
           'Maze: Sequence': 'Labirinto: Sequência'
           'Artist: Sequence': 'Artista: Sequência'
           'Maze: Loops': 'Labirinto: Laços'
@@ -93,8 +93,8 @@
           'Artist: Sequence2': 'Artista: Sequência 2'
           'Maze: Sequence2': 'Labirinto: Sequência 2'
           'Artist: Nested Loops': 'Artista: Laços Aninhados'
-          description_audience: A partir de 6 anos (as crianças já devem saber ler)
-          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
+          description_audience: 6-18 anos de idade
+          description_short: Comece com o Curso 2 para alunos que sabem ler.
         course3:
           The Maze: O Labirinto
           'Studio: Create a Story': 'Laboratório: Crie uma história'
@@ -149,65 +149,8 @@
           'Bee: Debugging2': 'Abelha: Depuração2'
           'Artist: Patterns': 'Artista: padrões'
           Songwriting: Composição
-          description_audience: A partir de 8 anos (após o Curso 2)
+          description_audience: 8-18 anos de idade
           description_short: O Curso 3 é uma continuação do Curso 2.
-        msm:
-          title: Matemática para o ensino médio
-          description: Trabalho privado em andamento para matemática do ensino médio.
-          Graph Paper Programming: Programação em Papel Quadriculado
-          Assessments: Avaliações
-          Unit 1: Unidade 1
-          Unit 2: Unidade 2
-          Ninja Cat and the Coordinate Plane: Gato ninja e o plano cartesiano
-          'Calc: Circles of Evaluation': 'Cálculo: círculos de avaliação'
-          'Artist: Strings and Images': 'Artista: strings e imagens'
-          Contracts: Contratos
-          'Artist: Writing Contracts': 'Artista: escrever contratos'
-          'Calc: Defining Variables': 'Cálculo: definir variáveis'
-          'Play Lab: Defining Variables': 'Laboratório: definir variáveis'
-          The Design Recipe: A receita de design
-          'Artist: Defining Functions': 'Artista: definir funções'
-          'Play Lab: Defining Functions': 'Laboratório: Receita de design'
-          'Artist: Functions': 'Artista: Funções'
-          'Play Lab: Animation': 'Laboratório: animação'
-          Booleans: Booleanos
-          'Play Lab: Booleans': 'Laboratório: booleanos'
-          'Calc: Boolean Operators': 'Cálculo: operadores booleanos'
-          'Play Lab: Boolean Operators': 'Laboratório: operadores booleanos'
-          Conditionals and Piecewise Functions: Condicionais e funções definidas por
-            partes
-          'Artist: Conditionals': 'Artista: condicionais'
-          Collision Detection and the Distance Formula: Detecção de colisões e a fórmula
-            da distância
-          'Play Lab: Collision Detection': 'Laboratório: detecção de colisões'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Offline: Gato ninja e
-            o plano cartesiano'
-          'Eval: Strings and Images': 'Eval: Strings e imagens'
-          'Unplugged: Contracts': 'Offline: contratos'
-          'Eval: Writing Contracts': 'Eval: Escrever contratos'
-          'Unplugged: The Design Recipe': 'Offline: a receita de design'
-          'Eval: Defining Functions': 'Eval: Funções rápidas'
-          'Eval: Functions': 'Eval: Receita de design'
-          'Unplugged: Booleans': 'Offline: booleanos'
-          'Unplugged: Conditionals and Piecewise Functions': 'Offline: condicionais
-            e funções definidas por partes'
-          'Eval: Conditionals': 'Eval: Condicionais'
-          'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
-            de colisão e fórmula da distância'
-          'Calc: Evaluation Blocks': 'Calc: Blocos de avaliação'
-          'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
-            planos de coordenadas'
-          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
-          Blocks to Math: Dos blocos para a matemática
-          'Play Lab: Defining Variables (Big Game)': 'Laboratório: Definição de variáveis
-            (O Grande Jogo)'
-          'Play Lab: Animation (Big Game)': 'Laboratório: Animação (O Grande Jogo)'
-          'Play Lab: Boolean (Big Game)': 'Laboratório: Booleano (O Grande Jogo)'
-          'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
-            (O Grande Jogo)'
-          'Eval: Fast Functions': 'Eval: Funções rápidas'
-          'Play Lab: Design Recipe': 'Laboratório: Receita de design'
-          'Eval: Design Recipe': 'Eval: Receita de design'
         playlab:
           title: Laboratório
           description: Crie uma história ou um jogo no Laboratório!
@@ -218,11 +161,6 @@
           description: Faça desenhos e figuras legais com o Artista!
           Artist: Artista
           description_short: Faça desenhos e figuras legais com o Artista!
-        scrat:
-          title: Scrat
-          description_short: Breve descrição do Scrat.
-          description: Descrição detalhada do Scrat
-          'Maze: Sequence': 'Labirinto: Sequência'
         hourofcode:
           Maze: Labirinto
           title: Hora do Código
@@ -260,7 +198,6 @@
           'Artist: For Loops': 'Artista: laços for'
           'Play Lab: For Loops': 'Laboratório: laços for'
           'Artist: Functions': 'Artista: Funções'
-          'Artist: Functions with Paraqmeters': 'Artista: funções com parâmetros'
           'Unplugged: Tangrams': 'Offline: tangrams'
           Artist: Artista
           Bee: Abelha
@@ -275,36 +212,13 @@
           Farmer Binary: 'Fazendeira: binário'
           Maze and Bee: Labirinto e abelha
           Artist Binary: 'Artista: binário'
-          description_audience: A partir de 10 anos (após o Curso 3)
+          description_audience: 10-18 anos de idade
         Course4pre:
+          title: Pré-requisitos para o Curso 4
           description_short: Uma breve revisão dos conceitos para os alunos que não
             fizeram os Cursos 2 e 3.
-          Course 4 Prerequisite: Pré-requisitos para o Curso 4
-          'Maze: Sequence': 'Labirinto: Sequência'
-          'Artist: Sequence': 'Artista: Sequência'
-          'Artist: Loops': 'Artista: Laços'
-          'Bee: Conditionals': 'Abelha: Condicionais'
-          'Artist: Nested Loops': 'Artista: Laços Aninhados'
-          'Farmer: While Loops': 'Fazendeira: Laços Enquanto'
-          'Bee: Nested Loops': 'Abelha: Laços Aninhados'
-          'Artist: Functions': 'Artista: Funções'
-          'Bee: Debugging': 'Abelha: Depuração'
-        course4pre:
-          description_short: Uma breve revisão dos conceitos para os alunos que não
-            fizeram os Cursos 2 e 3.
-          Course 4 Prerequisite: Pré-requisitos para o Curso 4
-          'Maze: Sequence': 'Labirinto: Sequência'
-          'Artist: Sequence': 'Artista: Sequência'
-          'Artist: Loops': 'Artista: Laços'
-          'Bee: Conditionals': 'Abelha: Condicionais'
-          'Artist: Nested Loops': 'Artista: Laços Aninhados'
-          'Farmer: While Loops': 'Fazendeira: Laços Enquanto'
-          'Bee: Nested Loops': 'Abelha: Laços Aninhados'
-          'Artist: Functions': 'Artista: Funções'
-          'Bee: Debugging': 'Abelha: Depuração'
-        Course4pre (Case Conflict):
-          description_short: Uma breve revisão dos conceitos para os alunos que não
-            fizeram os Cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram
+            os Cursos 2 e 3.
           Course 4 Prerequisite: Pré-requisitos para o Curso 4
           'Maze: Sequence': 'Labirinto: Sequência'
           'Artist: Sequence': 'Artista: Sequência'
@@ -324,6 +238,7 @@
           description: Uma seleção de níveis do Curso 4 para o teste de usabilidade.
           Variables: Variáveis
           For Loops: Laços for
+          Binary: Binário
         potus:
           title: especial
           description_short: especial
@@ -334,3 +249,995 @@
           description_short: especial
           description: especial
           Special: Especial
+          Binary: Binário
+        algebra:
+          title: Ciência da computação em álgebra
+          description: Aprenda programação funcional com álgebra
+          description_short: Aprenda programação funcional com álgebra
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
+            planos de coordenadas'
+          'Calc: Evaluation Blocks': Blocos de cálculo e expressões aritméticas
+          'Eval: Strings and Images': Strings e imagens
+          'Unplugged: Contracts': 'Offline: contratos, domínio e imagem'
+          'Eval: Writing Contracts': Escrevendo contratos
+          'Calc: Defining Variables': Definição de variáveis e substituição
+          'Play Lab: Defining Variables (Big Game)': O grande jogo - variáveis
+          'Eval: Defining Functions': Funções compostas
+          'Unplugged: The Design Recipe': 'Offline: a receita de design'
+          'Play Lab: Defining Functions': Altura do foguete
+          'Eval: Functions': Resolução de problemas com a receita de design
+          'Play Lab: Animation (Big Game)': O grande jogo - animação
+          'Unplugged: Booleans': 'Offline: booleanos e lógica'
+          'Eval: Boolean Operators': Operadores booleanos
+          'Play Lab: Booleans': O morcego Sam
+          'Play Lab: Boolean (Big Game)': O grande jogo - booleanos
+          'Unplugged: Conditionals and Piecewise Functions': 'Offline: condicionais
+            e funções definidas por partes'
+          'Eval: Conditionals': Condições
+          'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
+            de colisão e o teorema de Pitágoras'
+          'Play Lab: Collision Detection (Big Game)': O grande jogo - detecção de
+            colisão
+        infinity:
+          title: Laboratório Infinito Disney
+          description_short: Use o Laboratório para criar uma história ou um jogo
+            usando personagens da Disney Infinity.
+          description: Use o Laboratório para criar uma história ou um jogo usando
+            personagens da Disney Infinity.
+          Play Lab: Laboratório
+          Infinity: Infinito
+        algebrademo:
+          title: Demonstração de algébra
+          description_short: Vários desafios para demonstrar o ambiente e a linguagem
+            de programação usados no Code.org CS em álgebra
+          description: Vários desafios para demonstrar o ambiente e a linguagem de
+            programação usados no Code.org CS em álgebra
+          Algebra Demo: Demonstração de algébra
+          Evaluation Blocks: Blocos de cálculo
+          Making Pictures: Fazendo Fotos
+          Defining Variables: Definir variáveis
+          Defining Simple Functions: Definindo Funções Simples
+          The Design Recipe: A receita de design
+        K5PD:
+          title: Desenvolvimento profissional para o Ensino Fundamental
+          description: Desenvolvimento profissional para cursos do Ensino Fundamental
+          description_short: Desenvolvimento profissional para cursos do Ensino Fundamental
+          Introduction to PD: Introdução ao DP
+          Blockly Basics: Princípios do Blockly
+          Writing computer programs: Escrevendo programas de computador
+          Navigating the teacher dashboard: Navegação no painel do professor
+          Unplugged lessons: Aulas offline
+          Classroom Culture: Cultura de sala de aula
+          Ways to go beyond Courses 1, 2, and 3: Formas de ir além dos cursos 1, 2
+            e 3
+          K-5 Courses: Cursos do Ensino Fundamental
+          Writing computer programs in Blockly: Escrevendo programas de computador
+            em Blockly
+          Teacher Dashboard: Painel de controle do professor
+          Personal Reflection: Reflexão pessoal
+          Next Steps: Próximas etapas
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Programming Concepts: Conceitos de programação
+          Reflection: Reflexão
+          'Programming Concept: Loops': 'Conceitos de programação: Laços'
+          'Programming Concept: Conditionals': 'Conceitos de programação: Condicionais'
+          'Programming Concept: Functions': 'Conceitos de programação: Funções'
+          'Programming Concept: Events': 'Conceitos de programação: Eventos'
+        netsim:
+          title: Simulador de internet
+          description_short: Aprenda como a Internet funciona
+          description: Aprenda como a Internet funciona
+          Internet Simulator: Simulador de internet
+          Unit 1: Unidade 1
+          Unit 2: Unidade 2
+          Sending Bits: Envio de bits
+          Routing and DNS: Roteamento e DNS
+          'Unit 1: Sending Bits': 'Unidade 1: envio de bits'
+          'Unit 2: Routing and DNS': 'Unidade 2: roteamento e DNS'
+          Internet Simulator Templates: Modelos de simulador de internet
+          Overview and Setup Instructions: Overview and Setup Instructions
+          'Peer to Peer: Sending Bits on a Shared Wire': 'Peer to Peer: Sending Bits
+            on a Shared Wire'
+          'Peer to Peer: Sending Numbers': 'Peer to Peer: Sending Numbers'
+          'Peer to Peer: Sending Ascii': 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
+            on a Shared Wire
+          Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
+          Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
+        pixelation:
+          title: Pixelização
+          description: Crie imagens com bits e bytes.
+          description_short: Crie imagens com bits e bytes.
+          Pixelation: Pixelização
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: Introdução acelerada para o curso de CC
+          description_audience: 10-18 anos de idade
+          description: Este curso de 20 horas apresenta o núcleo da computação e conceitos
+            de programação. O curso é projetado para uso em salas de aula para o Ensino
+            Fundamental, mas é divertido de aprender em todas as idades.
+          description_short: Este curso de 20 horas aborda os conceitos fundamentais
+            de ciência da computação e programação nos cursos de 2 a 4.
+          Introduction to Computer Science: Introdução à Ciência da Computação
+          The Maze: O Labirinto
+          Computational Thinking: Pensamento Computacional
+          Graph Paper Programming: Programação em Papel Quadriculado
+          The Artist: O Artista
+          Algorithms: Algoritmos
+          The Artist 2: O Artista 2
+          Functions: Funções
+          The Farmer: A Fazendeira
+          Conditionals: Condições
+          The Artist 3: O Artista 3
+          Song Writing: Escrevendo uma Canção
+          The Farmer 2: A Fazendeira 2
+          Abstraction: Abstração
+          The Artist 4: O Artista 4
+          Relay Programming: Programação Relay
+          The Farmer 3: A Fazendeira 3
+          The Internet: A Internet
+          The Artist 5: O Artista 5
+          Wrap-up: Resumo
+        edit-code:
+          title: Editar o código
+          description: Editar o código
+          description_short: Editar o código
+          The Maze: O Labirinto
+          Applab: Laboratório de aplicativo
+          The Artist: O Artista
+          Play Lab: Laboratório
+          Play Lab 2015: Laboratório 2015
+        events:
+          title: Eventos
+          description: Eventos
+          description_short: Eventos
+          Bounce: Pingue-pongue
+          Studio: Estúdio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Código do Flappy bird
+          description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
+            nosso tutorial sobre o Código do Flappy bird!
+          description_short: Escreva seu próprio jogo no estilo Flappy Bird em menos
+            de 10 minutos!
+          Flappy Code: Código do Flappy bird
+        jigsaw:
+          title: Quebra-cabeça
+          description: Experimente nosso tutorial sobre quebra-cabeça
+          description_short: Experimente nosso tutorial sobre quebra-cabeça
+          Jigsaw: Quebra-cabeça
+        step:
+          title: Passo
+          description: Etapa do tutorial
+          description_short: Etapa do tutorial
+          Step: Passo
+        Hour of Code:
+          title: Hora do Código 2013
+          description: Conheça as noções básicas de ciência da computação com personagens
+            de Angry Birds e Plants vs. Zombies!
+          description_short: Conheça os conceitos básicos da ciência da computação
+            com a ajuda de vários personagens divertidos!
+          Hour of Code 2013: Hora do Código 2013
+        Code Studio Puzzle Challenge:
+          title: Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        CodeStudioPuzzleChallenge:
+          title: Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        Test - Code Studio Puzzle Challenge:
+          title: Teste - Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        How to do the Code Studio Puzzle Challenge:
+          title: Teste - Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        Tutorial - Code Studio Puzzle Challenge:
+          title: Tutorial - Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Desafio Code Studio
+          description_short: Desafie-se!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        course4pre:
+          title: Pré-requisitos para o Curso 4
+          description_short: Uma breve revisão dos conceitos para os alunos que não
+            fizeram os Cursos 2 e 3.
+          description: Uma breve revisão dos conceitos para os alunos que não fizeram
+            os Cursos 2 e 3.
+          Course 4 Prerequisite: Pré-requisitos para o Curso 4
+          'Maze: Sequence': 'Labirinto: Sequência'
+          'Artist: Sequence': 'Artista: Sequência'
+          'Artist: Loops': 'Artista: Laços'
+          'Bee: Conditionals': 'Abelha: Condicionais'
+          'Artist: Nested Loops': 'Artista: Laços Aninhados'
+          'Farmer: While Loops': 'Fazendeira: Laços Enquanto'
+          'Bee: Nested Loops': 'Abelha: Laços Aninhados'
+          'Artist: Functions': 'Artista: Funções'
+          'Bee: Debugging': 'Abelha: Depuração'
+        cspunit1:
+          title: CSP - Unidade 1 - Informação digital
+          description_short: Explore como a informação digital é representada e transferida
+          description: Esta unidade explora os desafios e questões técnicas que surgem
+            da necessidade de representar a informação digital em computadores e transferi-la
+            entre pessoas e dispositivos computacionais.
+          Lesson14: Lição14
+          Lesson 14: Lição 14
+          Lesson 14 v2: Lição 14 v2
+          Lesson 15: Lição 15
+          Lesson 8: Lição 8
+          Lesson 5: Lição 5
+          Lesson 3: Lição 3
+          Lesson 4: Lição 4
+          Lesson 6: Lição 6
+          Lesson 2: Lição 2
+          Lesson 7: Lição 7
+          Lesson 1: Lição 1
+          Innovation: Inovação
+          Sending Binary Messages: Enviando mensagens binárias
+          Sending More Complex Messages: Enviando mensagens mais complexas
+          Bit Sending Widget: Widget de envio de bits
+          Sending Bits in the Real World: Enviando bits no mundo real
+          Number Systems: Sistemas numéricos
+          Binary Numbers: Números binários
+          Sending Numbers: Envio de números
+          Encoding Numbers in the Real World: Codificação de números no mundo real
+          Encoding and Sending Text: Codificação e envio de texto
+          Sending Formatted Text: Envio de texto formatado
+          Data Storage: Armazenamento de dados
+          Text Compression: Compressão de texto
+          'Assessment: Encoding Complex Information': 'Avaliação: codificação de informações
+            complexas'
+          Encoding B&W Images: Codificações de imagem em preto e branco
+          Encoding Color Images: Codificação de imagens coloridas
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Ciência da computação em álgebra PD
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          'Unplugged: Video Games and Coordinate Planes': 'Offline: video games e
+            planos de coordenadas'
+          'Calc: Evaluation Blocks': 'Calc: Blocos de cálculo'
+          'Eval: Strings and Images': 'Eval: Strings e imagens'
+          'Unplugged: Contracts': 'Offline: contratos'
+          'Eval: Writing Contracts': 'Eval: Escrever contratos'
+          'Calc: Defining Variables': 'Cálculo: definir variáveis'
+          'Play Lab: Defining Variables (Big Game)': 'Laboratório: Definição de variáveis
+            (O Grande Jogo)'
+          'Eval: Defining Functions': 'Eval: definição de funções'
+          'Unplugged: The Design Recipe': 'Offline: a receita de design'
+          'Play Lab: Defining Functions': 'Laboratório: definição de funções'
+          'Eval: Functions': 'Eval: Funções'
+          'Play Lab: Animation (Big Game)': 'Laboratório: Animação (O Grande Jogo)'
+          'Unplugged: Booleans': 'Offline: booleanos'
+          'Eval: Boolean Operators': 'Eval: Operadores booleanos'
+          'Play Lab: Booleans': 'Laboratório: booleanos'
+          'Play Lab: Boolean (Big Game)': 'Laboratório: Booleano (O Grande Jogo)'
+          'Unplugged: Conditionals and Piecewise Functions': 'Offline: condicionais
+            e funções definidas por partes'
+          'Eval: Conditionals': 'Eval: Condicionais'
+          'Unplugged: Collision Detection and the Distance Formula': 'Offline: detecção
+            de colisão e fórmula da distância'
+          'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
+            (O Grande Jogo)'
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Contracts: Contratos
+          Your Game - Defining Variables: Seu jogo - definição de variáveis
+          Simple Function Definition: Definição de função simples
+          The Design Recipe: A receita de design
+          Your Game - Animation: Seu jogo - animação
+          Booleans: Booleanos
+          Sam the Bat: O morcego Sam
+          Your Game - Booleans: Seu jogo - booleanos
+          Conditionals and Piecewise Functions: Condicionais e funções definidas por
+            partes
+          Rocket-Height: Altura do foguete
+          Design Recipe Practice: Prática de receita de design
+          Introduction to PD: Introdução ao DP
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
+        algPDmiami:
+          title: Ciência da computação em álgebra PD
+          description: Ensine álgebra com programação funcional
+          description_short: Ensine álgebra com programação funcional
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Rocket-Height: Altura do foguete
+          Design Recipe Practice: Prática de receita de design
+          Your Game - Animation: Seu jogo - animação
+          Booleans: Booleanos
+          Sam the Bat: O morcego Sam
+          Your Game - Booleans: Seu jogo - booleanos
+          Luigi's Pizza: Pizzaria do Luigi
+          'Play Lab: Collision Detection (Big Game)': 'Laboratório: Detecção de colisão
+            (O Grande Jogo)'
+          Your Game - Player Movement: Seu jogo - movimento do jogador
+          Your Game - Collision Detection: Seu jogo - detecção de colisão
+        text-compression:
+          title: Compressão de texto
+          description: Comprima o texto identificando padrões repetidos.
+          description_short: Comprima o texto identificando padrões repetidos.
+          Text Compression: Compressão de texto
+        CSPPD:
+          new stage: nova fase
+          Introduction to PD: Introdução ao DP
+          title: DP - Princípios da ciência da computação
+          description: Introdução on-line a PCC
+          description_short: Introdução on-line a PCC
+          What is CSP?: O que é PCC?
+          Exploring CSP Instructional Materials: Explorando materiais de instrução
+            sobre PCC
+          Impact of Computer Science: Impacto da ciência da computação
+          Growth Mindset: Mentalidade de crescimento
+          Teaching Strategies: Estratégias de ensino
+          Preparing for in-person PD: Preparação presencial para o DP
+        CSPLessonSamples:
+          title: Exemplos de lição para CSP
+          description_short: exemplos de lição para csp
+          description: exemplos de lição para csp
+          Lesson 14: Lição 14
+          Lesson 15: Lição 15
+        ECSPD:
+          Introduction to PD: Introdução ao DP
+          What is ECS?: O que é ECS?
+          Growth Mindset: Mentalidade de crescimento
+          Teaching Strategies: Estratégias de ensino
+          Preparing for in-person PD: Preparação presencial para o DP
+          reference: referência
+          title: Explorando o DP em Ciência da Computação
+          description: Introdução on-line a ECS
+          description_short: Ensine programação funcional com álgebra
+          Impact of Computer Science: Impacto da ciência da computação
+        sciencePD:
+          Introduction to PD: Introdução ao DP
+          title: DP da ciência da computação na ciência
+          description: Em parceria com o Projeto GUTS
+          description_short: Ensine programação funcional com álgebra
+          Pre-Workshop Online Component: Componente on-line pré-workshop
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          What to Expect: O que esperar
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
+        rbo-reference:
+          reference: referência
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: Introdução a PDK5
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: CSP Unidade 3 - Programação
+          description_short: Programação
+          description: Esta unidade introduz os conceitos fundamentais de programação
+            de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
+            Esse curso usa JavaScript como linguagem de programação, e o Laboratório
+            de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
+            mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
+            e linguagens de programação.
+          Getting to know AppLab: Conhecendo o laboratório de aplicativo
+          Functions: Funções
+          Using Simple Commands: Usando comandos simples
+          Creating Procedures - Part 1: Criação de procedimentos - Parte 1
+          Layers of Abstraction and Programming Efficiency: Camadas de abstração e
+            eficiência de programação
+          APIs and Function Parameters: APIs e parâmetros de função
+          Looping and Random Numbers: Repetição e números aleatórios
+          Creating functions with Parameters: Criação de funções com parâmetros
+          Scene Design Part 1 - Plan: Design de cena, parte 1 - Planejar
+          Scene Design Part 2 - Code: Design de cena, parte 2 - Programar
+          Scene Design Part 3 - Reflect: Design de cena, parte 2 - Refletir
+          Unplugged Events Activity -  Mission Unsortable: Atividade para eventos
+            offline - Missão não classificada
+          Buttons on the Screen: Botões na tela
+          Unfortunate Events: Eventos infelizes
+          On Beyond Buttons: Além dos botões
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 - DEPRECIADO
+          Controlling Memory and Program Flow: Controle de memória e fluxo de programa
+          Variable Basics DEPRECIATED: Noções básicas de variáveis - DEPRECIADO
+          Clicker v.1 -  Variable Basics: Clicker v.1 - Noções básicas de variáveis
+          Conditional Basics: Noções básicas de condicionais
+          More Variables (2 days): Mais variáveis (2 dias)
+          Permanent Data Storage and Clicker Completion: Armazenamento permanente
+            de dados e conclusão do Clicker
+          Natural Language Processing and Chat Bots: Processamento de linguagem natural
+            e conversas automatizadas
+          Chained Conditionals: Condicionais encadeadas
+          Compound Conditionals: Condicionais compostas
+          Strings and Substrings: Strings e substrings
+          While Loop Basics: Noções básicas do laço enquanto
+          While Loops_ Counting Flips: Laços enquanto_ Contando arremessos
+          Arrays_ Intro: Arrays_ Introdução
+          Arrays_ Photo Album: Arrays_ Álbum de fotografias
+          Images are Arrays: Imagens são arrays
+          Arrays and Loops_ Altering Images: Arrays e laços_ alterando imagens
+          Arrays and Loops_ Hidden Images: Arrays e laços_ Imagens ocultas
+          The Need For Programming Languages: A necessidade de linguagens de programação
+          Creating Procedures - Part 2: Criação de procedimentos - Parte 2
+          Sarah testing project backed levels: Sarah testando níveis apoiados em projetos
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker - Noções básicas de variáveis
+          Events Unplugged: Eventos offline
+          Beyond Buttons Toward Apps: Além dos botões para aplicativos
+          Improving the Clicker Game: Melhorando o jogo Clicker
+          Chatbot Challenge: Chatbot Challenge
+          'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
+          'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
+          'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
+            Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: DP - Fase 3
+          description: Ensine álgebra com programação funcional com base em blocos
+          description_short: Ensine álgebra com programação funcional com base em
+            blocos
+          Introduction to the new Computer Science in Algebra: Introdução à nova ciência
+            da computação em álgebra
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Evaluation Blocks: Blocos de cálculo
+          The Big Game: O grande jogo
+          Strings and Images: Strings e imagens
+          The Design Recipe: A receita de design
+          Next Steps: Próximas etapas
+        sciPD complex adaptive 2:
+          title: DP da ciência da computação na ciência
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Introduction to PD: Introdução ao DP
+          Pre-Workshop Online Component: Componente on-line pré-workshop
+        sciPD complex adaptive forum:
+          title: DP da ciência da computação na ciência
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Introduction to PD: Introdução ao DP
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+        Glenallan Career Day Demo:
+          new stage: nova fase
+          title: Demonstração do dia da profissão na escola Glenallan
+          description_short: Vamos fazer alguns desafios!
+          description: Experimente esses divertidos desafios de programação. Dê o
+            melhor de si!
+          Puzzles: Desafios
+        ECSPD-NexTech:
+          Introduction to PD: Introdução ao DP
+          What is ECS?: O que é ECS?
+          Growth Mindset: Mentalidade de crescimento
+          Teaching Strategies: Estratégias de ensino
+          Preparing for in-person PD: Preparação presencial para o DP
+          logo_image: nextech_logo.png
+          title: Explorando o DP em Ciência da Computação
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Impact of Computer Science: Impacto da ciência da computação
+        ECSPD-iZone:
+          Introduction to PD: Introdução ao DP
+          What is ECS?: O que é ECS?
+          Growth Mindset: Mentalidade de crescimento
+          Teaching Strategies: Estratégias de ensino
+          Preparing for in-person PD: Preparação presencial para o DP
+          logo_image: izone_logo.png
+          title: Explorando o DP em Ciência da Computação
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Impact of Computer Science: Impacto da ciência da computação
+        algebraPD-NexTech:
+          title: Ciência da computação em álgebra PD
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Introduction to PD: Introdução ao DP
+          Evaluation Blocks: Blocos de cálculo
+          logo_image: nextech_logo.png
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
+        algebraPD-iZone:
+          title: Ciência da computação em álgebra PD
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          Introduction to PD: Introdução ao DP
+          Evaluation Blocks: Blocos de cálculo
+          logo_image: izone_logo.png
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Why Computer Science belongs in Algebra: Por que a ciência da computação
+            faz parte da álgebra
+          Preparing for in-person PD: Preparação presencial para o DP
+        sciencePD-NexTech:
+          Introduction to PD: Introdução ao DP
+          logo_image: nextech_logo.png
+          title: DP da ciência da computação na ciência
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          What to Expect: O que esperar
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
+        sciencePD-iZone:
+          Introduction to PD: Introdução ao DP
+          logo_image: izone_logo.png
+          title: DP da ciência da computação na ciência
+          description: Ensine programação funcional com álgebra
+          description_short: Ensine programação funcional com álgebra
+          What to Expect: O que esperar
+          Introduction to Complex Adaptive Systems: Introdução a sistemas adaptativos
+            complexos
+          Introduction to Computational Science: Introdução à ciência computacional
+          Agent Based Modeling of Complex Adaptive Systems: Agente com base na modelagem
+            de sistemas adaptativos complexos
+          Using Computer Models in Science: Usando modelos de computadores em ciência
+          Using Models in the Classroom: Usando modelos na sala de aula
+          Dispositions and Classroom Culture: Disposições e cultura de sala de aula
+          Computational Thinking And The Framework For K-12 Science Education: Pensamento
+            computacional e a estrutura para o ensino de ciências para o Ensino Fundamental
+          Introduction to StarLogo Nova: Introdução ao StarLogo Nova
+          The Tutorial: O tutorial
+          Post-Survey: Pesquisa posterior
+        ui_tests:
+          title: Testes de UI
+          description: Script para o teste. Cuidado, não altere a ordenação dos níveis.
+          description_short: Script para o teste. Cuidado, não altere a ordenação
+            dos níveis.
+          All the Tests: Todos os testes
+          Free Response: Resposta livre
+          Multi: Multi
+          Big Game: Grande jogo
+          new stage: nova fase
+        sciencePD2:
+          title: DP da ciência da computação na ciência
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          Phase 2 Summer Workshop: Workshop de verão - Fase 2
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: DP da ciência da computação na ciência
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: nova fase
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testando
+          title: Testando
+          description: Testando
+          description_short: Testando
+        cspunit2:
+          title: CSP Unit 2 - The Internet
+          description_short: A Internet
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: A Internet
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
+            Tree
+          Algorithms Detour - Shortest Path: Algorithms Detour - Shortest Path
+          Algorithms Detour - How Routers Learn: Algorithms Detour - How Routers Learn
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: Tell Me a Secret - Encrypting Text
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: Algorithms Detour - Hard Problems
+            TSP
+          One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real
+            World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+        algebraPD2a:
+          title: Ciência da computação em álgebra PD
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Defining Variables: Definir variáveis
+          Big Game - Variables: Big Game - Variables
+          'Play Lab: Defining Functions': 'Laboratório: definição de funções'
+          The Design Recipe: A receita de design
+          Big Game - Animation: Big Game - Animation
+          Booleans: Booleanos
+          Sam the Bat: O morcego Sam
+          Big Game - Booleans: Big Game - Booleans
+          Luigi's Pizza: Pizzaria do Luigi
+          Big Game - Player Movement: Big Game - Player Movement
+          Big GAme - Collision Detection: Big GAme - Collision Detection
+          Rocket-Height: Altura do foguete
+          Big Game - Collision Detection: Big Game - Collision Detection
+          Free Play: Atividade livre
+        allthethings:
+          Jigsaw: Quebra-cabeça
+          Maze: Labirinto
+          Artist: Artista
+          Bee: Abelha
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy bird
+          Bounce: Pingue-pongue
+          Multi: Multi
+          Match: Correspondência
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: Laboratório de aplicativo
+          Online PD: DP on-line
+          title: Todas as coisas!
+          description: Todos os tipos de nível para testar UI
+          description_short: Todos os tipos de nível para testar UI
+          Odometer: Hodômetro
+          Text Compression: Compressão de texto
+          Pixelation: Pixelização
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Ciência da computação em álgebra PD
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Writing Contracts: Escrevendo contratos
+          Defining Variables: Definir variáveis
+          Defining Functions: Definir funções
+          Rocket-Height: Altura do foguete
+          Booleans: Booleanos
+          'Eval: Conditionals': 'Eval: Condicionais'
+          Next Steps: Próximas etapas
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratório de Aplicativo
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Bem-vindo!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Bem-vindo!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Simulador de internet
+          App Lab: Laboratório de Aplicativo
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Próximas etapas
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          Welcome!: Bem-vindo!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Resumo
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Hora do Código 2015
+          description_short: Use o laboratório para criar uma história ou um jogo.
+          description: Use o laboratório para criar uma história ou um jogo.
+          Hour of Code: Hora do Código
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Writing Contracts: Escrevendo contratos
+          Defining Variables: Definir variáveis
+          Defining Functions: Definir funções
+          Rocket-Height: Altura do foguete
+          Booleans: Booleanos
+          'Eval: Conditionals': 'Eval: Condicionais'
+          Next Steps: Próximas etapas
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Bem-vindo!
+          The Design Recipe: A receita de design
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          Welcome!: Bem-vindo!
+          Wrap-Up: Resumo
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          Welcome!: Bem-vindo!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Resumo
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Próximas etapas
+        sciencePD2b-iZone:
+          Welcome!: Bem-vindo!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Resumo
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          Welcome!: Bem-vindo!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Resumo
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          Welcome!: Bem-vindo!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Resumo
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget

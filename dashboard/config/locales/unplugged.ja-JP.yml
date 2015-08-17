@@ -28,11 +28,7 @@
         video: Unplug3
       Unplug4:
         title: アルゴリズム
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: このレッスンではアルゴリズムを学びます。まずタングラムとグラフ用紙を利用して、可能な限り明確かつ明瞭な指示をすることが大事であることを学びます。その後、紙を折って正方形を作る方法が何通りあり、方法によって紙を折る回数が異なることを学びます。
         pdfs:
         - unplug4
         video: Unplug4
@@ -71,14 +67,9 @@
         video: Unplug7
       Unplug8:
         title: 抽象化
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the complicated vocabulary
-          words that are associated with the lessons that follow, but presenting them
-          in a fun and playful light now is far more productive than waiting for more
-          advanced opportunities.
+        desc: This activity combines your students' everyday routine and a Mad-Lib
+          style thinking game to help your class learn about the effectiveness of
+          abstraction.
         pdfs:
         - unplug8
         video: Unplug8
@@ -98,7 +89,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: まとめ
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -107,14 +98,12 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: ハッピーマップ
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: 動かせ！動かせ！
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 現実のアルゴリズム：種を植えましょう
@@ -154,19 +143,15 @@
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: 安全な道を通って行く
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
+        desc: インターネットは役に立ちますが、危険な場所でもあります。教師は、インターネットを安全に利用する方法を紹介します。
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: グラフ用紙のプログラミング
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
         video: C2_graph_paper
       PaperPlanes:
         title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Binary Bracelets
@@ -204,13 +189,13 @@
           dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: インターネット
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Student use crowdsourcing, a problem-solving technique common in computer
+        desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
         video: C3_crowdsourcing
@@ -253,7 +238,7 @@
           functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: バイナリ画像
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -261,20 +246,26 @@
           as images and colors) in binary, as well.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
+        title: ビデオゲームと座標平面
         desc: Video Games and Coordinate Planes lesson description
+        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
+        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
+        video: alg_8_design_recipe
       Booleans:
-        title: Booleans
+        title: ブール値と論理
         desc: Booleans lesson description
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection
+        title: 衝突検出とピタゴラスの定理
         desc: Collision Detection lesson description
+        video: alg_16_biggame_collision_detection

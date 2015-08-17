@@ -1,4 +1,7 @@
 "ca":
+  errors:
+    messages:
+      not_saved: 'Si us plau corregeixi els errors següents:'
   activerecord:
     errors:
       messages:
@@ -6,7 +9,7 @@
     attributes:
       user:
         name: Nom a mostrar
-        email: Correu electrònic
+        email: Email
         username: nom d'usuari
         password: contrasenya
         password_confirmation: Confirma la contrasenya
@@ -19,6 +22,7 @@
           future: no pot ser en el futur
   hello: Hola Món
   welcome_back: Benvingut de nou, %{name}
+  submit: Envia
   add_teacher_form:
     code:
       label: 'Afegeix un mestre:'
@@ -62,6 +66,8 @@
     need_confirmation: No has rebut les instruccions de confirmació?
     need_unlock: No has rebut les instruccions de desbloqueig?
   signup_form:
+    student_count: '%{count} estudiants ja s''han inscrit.'
+    teacher_count: '%{count} professors ja s''han inscrit.'
     overview_student: Registreu-vos per fer el seguiment del vostre progrés. El correu
       s'utilitza principalment per a l'inici de sessió i la recuperació de la contrasenya.
       Per a més informació, mireu la nostra <a href="http://code.org/privacy">Política
@@ -182,7 +188,7 @@
     teacher_email_required: 'Els premis pels mestres requereixen un e-mail confirmat:'
     confirm:
       title: Confirmeu
-      'no': false
+      'no': 'No'
       'yes': Sí
       msg: Esteu segur que voleu reclamar el Premi %{prize_name}?
       msg_student: 'Nota: Només podeu triar un tipus de premi.'
@@ -258,8 +264,10 @@
       free_play:
         playlab: Fes un App
         artist: Dibuixa alguna cosa
+        calculate: Calculate Something
     user:
       classroom: Pàgina d'inici de mestre
+      district_dashboard: District Dashboard
       label: Hola %{username}
       stats: El meu progrés
       settings: El meu compte
@@ -269,6 +277,7 @@
       signup: Inscriure's
       already_registered: Ja estàs registrat?
     popup:
+      progress_for_user: Progrés de %{name}
       progress: El teu progrés
       lines: 'Línies totals de codi: %{lines}'
       close: TANCA
@@ -344,16 +353,26 @@
       no t''has inscrit amb una adreça de correu electrònic'
     student_teacher_disassociated: '%{teacher_name} s''ha esborrat com a mestre de
       %{student_name}'
+    panel:
+      answer_viewer: Visualitzador de respostes
+      student: estudiant
+      viewing_solution: Mostra la solució
+      try_it_yourself: Prova-ho tu
+      section: Secció
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
+    email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
+      ha estat confirmada:'
+    email_confirm_wrong_email: (Adreça d'e-mail equivocada?)
     email_resend_confirm: Torna a enviar les instruccions de confirmació
     new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
     current_password_hint: (necessitem la teva contrasenya actual per a confirmar
       els canvis)
-    cancel:
-      title: Cancel·la el meu compte
-      hint: Insatisfet?
-      button: Cancel·la el meu compte
+    delete: Suprimir el vostre compte
+    delete_text: Fent clic al botó de sota suprimirà el compte.
+    delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
+      s''esborrarant els comptes dels seus alumnes.'
+    delete_confirm: Esteu segur que voleu suprimir el vostre compte?
   user_level:
     completed: Completat
     tried: Provat
@@ -363,6 +382,10 @@
     classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
+    description: Code Studio és on hi ha els cursos en xarxa de Code.org
+    lines_of_code: '%{lines_count} LÍNIES DE CODI ESCRITES PELS ALUMNES'
+    lines_of_code_linebreak: '%{lines_count} LÍNIES DE CODI<br/>ESCRITES PER %{students_count}
+      MILIONS D''ESTUDIANTS'
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: Ja estàs registrat? %{link}
@@ -389,6 +412,7 @@
     local_school: escola local
     online: en línia
     see_details: Veure detalls
+    view_course: View Course
     prize_info: 'Premis de participació (només per escoles públiques dels Estats Units):
       fins a 1.000 dòlars recompenses per aula.'
     tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
@@ -406,6 +430,9 @@
     heading_apps: <h2>Diversió per a</h2><h1>Tothom</h1>
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
+    no_primary_course: Intenta un curs a Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Imprimeix el certificat
   gender:
     male: Home
     female: Dona
@@ -501,9 +528,12 @@
       title: Codi Flappy
       body: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre
         tutorial Codi Flappy!
-    20hour:
-      title: Curs d'Introducció
-      body: Prova el nostre curs d'introducció a la Informàtica de 20 hores.
+    20-hour:
+      title: Curs Accelerat
+      body: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica
+        i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO,
+        però és divertit d'aprendre a qualsevol edat.
+      body_short: Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.
     hoc2014:
       try_new_tutorial: Provi la nova classe beta de l'Hora del Codi
       try_frozen: Amb els personatges Anna i Elsa de Frozem
@@ -513,6 +543,10 @@
         nostres usuaris
     frozen:
       title: Frozen
+    infinity:
+      title: Infinity Play Lab
+      body: Utilitza Play Lab per crear una història o un joc protagonitzada pels
+        personatges de Disney infinity.
   gallery:
     students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
     students_made_these_with_code: Els estudiants van fer això amb codi!
@@ -545,14 +579,28 @@
       de nou!
     correct_title: Correcte
     correct_body: Aquesta és la resposta correcta.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Solució incorrecta
     wrong_body: La solució que has introduït no és correcta.  Si us plau, intenta-ho
       de nou!
     correct_title: Correcte
     correct_body: Aquesta és la resposta correcta.
+  contract_match:
+    wrong_title: Resposta incorrecta
+    badname: El teu contracte té el nom malament.
+    badname_case: Els noms de les funcions distingeixen entre majúscules i minúscules.
+      Proveu de canviar al nom del teu contracte.
+    badrange: El teu contracte té el rang malament.
+    baddomainsize: El teu contracte no té el nombre correcte d'elements del domini.
+    baddomainname: Un o més dels teus elements del domini té el nom errat.
+    baddomaintype: Un o més dels teus elements de domini té un tipus erroni, o està
+      en ordre equivocat.
   text_match:
     placeholder: Introdueix la teva resposta aquí
+    open_response_title: Gràcies
+    open_response_body: Gràcies per la resposta!
   dialog:
     ok: OK
   time:
@@ -568,7 +616,7 @@
             d'informàtica i programació. El curs ha estat dissenyat per impartir a
             alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
         Hour of Code:
-          title: Hora del codi
+          title: Hora de codi 2013
           description: ''
         edit-code:
           title: Edita el codi
@@ -605,11 +653,48 @@
     sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
     en representació vostra.
   progress:
-    not_completed: no finalitzat
+    not_started: no començat
+    in_progress: En curs
     completed_too_many_blocks: completat, massa blocs
     completed_perfect: completat, perfecte
     furthest_level_attempted: nivell més alt intentat
+    assessment: avaluació
   studio:
     courses_working_on: Cursos en els que estàs treballant
     completed_courses: Cursos completats
     all_courses: Tots els cursos
+  project:
+    projects: Projectes
+    create: Crear un projecte
+    create_a_project: 'Crear un nou projecte:'
+    new: Crea nou
+    rename: Canviar el nom
+    save: Desa
+    delete: Elimina
+    exit: Tornar al curs
+    my_projects: Els meus projectes
+    share: Comparteix
+    share_title: Compartir el teu projecte
+    share_copy_link: 'Copia l''enllaç:'
+    close: Tancar
+    more: Més
+    name: Nom
+    updated: Actualitzat
+    project_type: Tipus de projecte
+    help_text: Clica <strong>Fer una App</strong> o <strong>Dibuixa quelcom</strong>
+      a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
+      continuar els projectes en qualsevol moment.
+    need_help: Necessita ajuda per començar?
+    really_delete: Vols suprimir?
+    delete_yes: Sí
+    delete_no: 'No'
+    saved: Desat
+    not_saved: No desat
+    cancel: Cancel·lar
+    delete_confirm_title: Esteu segur que voleu suprimir aquest projecte?
+    delete_confirm_text: Esborrar el teu projecte l'eliminarà permanentment de la
+      llista de Els meus projectes. Aquells amb qui hagis compartit l'enllaç ja no
+      podran veure el teu projecte.
+    view_all: Mostra els meus projectes
+    remix: Remescla
+    click_to_remix: Feu clic a "Remix" per iniciar la teva pròpia versió!

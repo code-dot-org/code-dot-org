@@ -38,6 +38,10 @@ el:
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>έχει δοκιμάσει μια </h3><h2>Ώρα του κώδικα</h2>'
   anybody_can_learn: Όλοι μπορούν να μάθουν.
+  share_on_facebook: Μοιράσου το στο Facebook
+  share_on_twitter: Μοιράσου το στο Twitter
+  beyond_an_hour: Μετά από μια ώρα του κώδικα
+  get_started: Έναρξη
   register_now: Εγγραφείτε τώρα
   front_join_us_heading: Μια ώρα του κώδικα για κάθε μαθητή.
   front_join_us_description: H επιστήμη υπολογιστών είναι θεμέλιο για κάθε μαθητή. Βοηθήστε μας να το εισαγάγουμε σε 100 εκατομμύρια.
@@ -144,7 +148,7 @@ el:
   hoc_faq_frozen_q: Πού είναι το μάθημα με την Άννα και την Έλσα;
   hoc_faq_frozen_a: "Είναι πλέον δημοσιευμένο στο  <a href='http://code.org/learn'> Code.org/learn</a>. Ελπίζουμε να το απολαύσετε!"
   hoc_faq_high_school_q: Ποια δραστηριότητα πρέπει να κάνω με μαθητές λυκείου;
-  hoc_faq_high_school_a: "Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a> για να ξεκινήσετε, όπως το μάθημα με τα Angry Birds ή το μάθημα με την Άννα και την Έλσα. Ένας  μαθητής λυκείου πρέπει να είναι σε θέση να τελειώσει ένα από αυτά τα μαθήματα σε 30 λεπτά και στη συνέχεια μπορεί να δοκιμάσει ένα πιο προχωρημένο εισαγωγικό μάθημα σε JavaScript, όπως αυτά που προσφέρονται από την KhanAcademy ή  την CodeHS."
+  hoc_faq_high_school_a: "Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a> για να ξεκινήσετε, όπως το μάθημα με τα Angry Birds ή το μάθημα με την Άννα και την Έλσα. Ένας  μαθητής λυκείου πρέπει να είναι σε θέση να τελειώσει ένα από αυτά τα μαθήματα σε 30 λεπτά και στη συνέχεια μπορεί να δοκιμάσει ένα πιο προχωρημένο εισαγωγικό μάθημα σε JavaScript, όπως αυτά που προσφέρονται από την Khan Academy ή  την CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Η Ώρα του Κώδικα είναι μια εισαγωγή στην επιστήμη των υπολογιστών διάρκειας μιας ώρας , σχεδιασμένη να απομυθοποιήσει τον κώδικα και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'>Ελέγξτε τα μαθήματα</a>, και κοιτάξτε για τα νέα που θα βγουν για την Ώρα του Κώδικα 2014."

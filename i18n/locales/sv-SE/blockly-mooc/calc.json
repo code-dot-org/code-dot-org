@@ -1,8 +1,0 @@
-{
-  "compute":"beräkna",
-  "equivalentExpression":"Försök ordna om dina argument för att få exakt samma uttryck.",
-  "extraTopBlocks":"Du har okopplade block. Menade du att fästa dessa till \"beräkna\" blocket?",
-  "goal":"Mål:",
-  "reinfFeedbackMsg":"Här är din berättelse! Fortsätta att arbeta på den eller gå vidare till nästa pussel!",
-  "yourExpression":"Ditt uttryck:"
-}

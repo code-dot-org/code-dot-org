@@ -1,69 +1,69 @@
 * * *
 
-title: "Artist: Sequence" view: page_curriculum theme: none
+title: "Sequência do artista" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>8, :title=> 'Artist: Sequence', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Curso 1', :lesson=>8, :title=> 'Artista: sequência', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## Lesson Overview
+## Visão geral da aula
 
-In this lesson students will take control of the Artist to complete simple drawings on the screen.
+Nessa aula, os alunos vão controlar o artista para fazer desenhos simples na tela.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started**
+### **Primeiros passos**
 
-[Introduction](#GetStarted)   
+[Introdução](#GetStarted)   
 
 
-### **Activity: Artist Sequence**
+### **Atividade: Sequência do artista**
 
-[Artist: Sequence](#Activity)
+[Sequência do artista](#Activity)
 
-### **Extended Learning**
+### **Aprendizagem estendida**
 
-[Extension Activities](#Extended)
+[Atividades de extensão](#Extended)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-### Students will:
+### Os alunos vão:
 
-  * Create a program to complete an image using sequential steps
-  * Select an argument for a given command
-  * Choose the appropriate blocks to draw images with non-continuous lines
-
-[/together]
-
-[together]
-
-## Getting Started
-
-### <a name="GetStarted"></a> Introduction
-
-Brainstorm with students ways to tell someone else how to draw a picture:
-
-  * How would you do that with a computer?
-  * In these puzzles you will be moving a character who leaves a line everywhere it goes. 
-      * You'll use the cardinal directions to do this, just like we've been doing to move the bird and bee.
+  * Criar um programa para completar uma imagem usando passos sequenciais
+  * Selecionar um argumento para um comando fornecido
+  * Escolher os blocos apropriados para desenhar imagens com retas não contínuas
 
 [/together]
 
 [together]
 
-## Activity
+## Primeiros passos
 
-### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course1/stage/8/puzzle/1)
+### <a name="GetStarted"></a> Introdução
 
-If students struggle to use the correct number of blocks to draw a line, point out that each line segment has a dot on both ends.
+Discuta com os alunos todas as possíveis formas de dizer a alguém como desenhar uma figura:
+
+  * Como você faria isso com um computador?
+  * Nesses desafios, você vai mover um personagem que deixa uma linha por onde passa. 
+      * Você vai usar os pontos cardeais para orientar o personagem nesta atividade, da mesma forma que fizemos para mover o pássaro e a abelha.
+
+[/together]
+
+[together]
+
+## Atividade
+
+### <a name="Activity"></a> [Artista: sequência](http://learn.code.org/s/course1/stage/8/puzzle/1)
+
+Se os alunos tiverem dificuldades para usar o número correto de blocos para desenhar uma reta, mostre que todo segmento de reta tem um ponto em cada extremidade.
 
 [/together]
 
@@ -72,83 +72,83 @@ If students struggle to use the correct number of blocks to draw a line, point o
 
 [together]
 
-## Extended Learning
+## Aprendizagem estendida
 
-<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+<a name="Extended"></a>Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### The Copy Machine
+### A máquina copiadora
 
-  * Give students two pieces of paper.
-  * On one sheet, draw a simple image (right angles and straight lines only).
-  * On the second sheet, draw instructions for recreating that image using a series of arrows.
-  * Trade instruction sheets and attempt to recreate the image using only the provided instructions.
+  * Dê aos alunos duas folhas de papel.
+  * Em uma delas, desenhe uma imagem simples (apenas linhas retas e ângulos retos).
+  * Na segunda folha, escreva instruções para recriar a imagem usando uma série de setas.
+  * Troque as folhas de instrução e tente recriar a imagem usando apenas as instruções fornecidas.
 
 [/together]
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### PARCC / Smarter Balanced Assessment Skills
+### Habilidades avaliadas pela PARCC / Smarter Balanced Assessment
 
-  * Click / tap
-  * Drag and drop
-  * Select object
-  * Use video player
+  * Clicar / tocar
+  * Arrastar e soltar
+  * Selecionar objeto
+  * Usar player de vídeo
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.a - Apply existing knowledge to generate new ideas, products, or processes.
-  * 1.c - Use models and simulation to explore complex systems and issues.
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 6.a - Understand and use technology systems.
-  * 6.c - Troubleshoot systems and applications.
-  * 6.d - Transfer current knowledge to learning of new technologies. 
+  * 1.a - Aplicar conhecimentos existentes para gerar novas ideias, produtos ou processos.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos.
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 6.a - Entender e usar sistemas tecnológicos.
+  * 6.c - Solucionar problemas de sistemas e aplicações.
+  * 6.d - Transferir o conhecimento atual para o aprendizado de novas tecnologias. 
 
 ### CSTA K-12 Computer Science Standards
 
-  * CT.L1:3-01. Use technology resources (e.g., puzzles, logical thinking programs) to solve age appropriate problems.
-  * CL.L1:3-02. Work cooperatively and collaboratively with peers teachers, and others using technology.
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CPP.L1:6-06. Implement problem solutions using a block-based visual programming language.
-  * CT.L2-01. Use the basic steps in algorithmic problem solving to design solutions.
-  * CT.L2-06. Describe and analyze a sequence of instructions being followed.
-  * CT.L2-08. Use visual representations of problem states, structures, and data.
-  * CT.L2-12. Use abstraction to decompose a problem into sub problems. 
+  * CT.L1:3-01. Usar recursos tecnológicos (por exemplo, desafios e programas de pensamento lógico) para resolver problemas apropriados para a faixa etária.
+  * CL.L1:3-02. Trabalhar de forma cooperativa e colaborativa com colegas e professores usando tecnologia.
+  * CPP.L1:6-05. Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CPP.L1:6-06. Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos.
+  * CT.L2-01. Usar os passos básicos de resolução de problemas com algoritmo para encontrar soluções.
+  * CT.L2-06. Descrever e analisar uma sequência de instruções sendo seguidas.
+  * CT.L2-08. Usar representações visuais dos estados, estruturas e dados do problema.
+  * CT.L2-12. Usar abstração para decompor um problema em problemas menores. 
 
 ### Next-Gen Science Standards
 
-  * K-2-PS3-2. Use tools and materials provided to design and build a device that solves a specific problem or a solution to a specific problem.
+  * K-2-PS3-2. Usar ferramentas e materiais fornecidos para desenvolver e construir um dispositivo que resolva um problema específico, ou uma solução para um problema específico.
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Model with mathematics
-  *   1. Use appropriate tools strategically.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning.
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Criar modelos matemáticos
+  *   1. Usar ferramentas apropriadas estrategicamente.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido.
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * K.G.A.1 - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
-  * K.G.A.2 - Correctly name shapes regardless of their orientations or overall size.
-  * K.G.B.6 - Compose simple shapes to form larger shapes. For example, "Can you join these two triangles with full sides touching to make a rectangle?"
-  * 1.G.A.1 - Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.
-  * 1.G.A.2 - Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.
-  * 2.G.A.1 - Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.
+  * K.G.A.1 - Descrever objetos no ambiente usando nomes de formas, e descrever as posições relativas desses objetos usando termos como acima, abaixo, ao lado, na frente, atrás e próximo a.
+  * K.G.A.2 - Nomear as formas corretamente, independentemente das orientações ou dimensões.
+  * K.G.B.6 - Compor formas simples para criar formas maiores. Por exemplo, "você pode juntar esses dois triângulos para criar um retângulo?"
+  * 1.G.A.1 - Diferenciar atributos de definição (por exemplo, triângulos são formas fechadas e têm três lados) e atributos que não são de definição (por exemplo, cor, direção, dimensão); criar e desenhar formas que tenham atributos de definição.
+  * 1.G.A.2 - Compor formas bidimensionais (retângulos, quadrados, trapézios, triângulos, semicírculos e quartos de círculo) ou formas tridimensionais (cubos, prismas retangulares retos, cones circulares retos e cilindros circulares retos) para criar uma forma composta, e compor novas formas a partir da forma composta.
+  * 2.G.A.1 - Reconhecer e desenhar formas a partir de atributos específicos, como um dado número de ângulos ou um dado número de faces iguais. Identificar triângulos, quadriláteros, pentágonos, hexágonos e cubos.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.K.1 - Participate in collaborative conversations with diverse partners about kindergarten topics and texts with peers and adults in small and larger groups.
-  * SL.K.5 - Add drawings or other visual displays to descriptions as desired to provide additional detail.
-  * L.K.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.5 - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
+  * SL.K.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos da educação infantil e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.K.5 - Adicionar desenhos ou outros elementos visuais às descrições para fornecer detalhes adicionais.
+  * L.K.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.5 - Adicionar desenhos ou outros elementos visuais às descrições para esclarecer ideias, pensamentos e sentimentos.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
 
 [/standards]
 

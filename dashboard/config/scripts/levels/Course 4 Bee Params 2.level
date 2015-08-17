@@ -21,7 +21,15 @@
     "instructions": "Modify the \"get 3 nectar\" function so it makes me turn right instead of left to the flowers.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"edit_get_nectar\",\r\n  \"element_id\": \"[block-id='4']>.blocklyIconGroup\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_get_nectar\",\"callout_text\":\"Use this button to edit the function and change the direction the Bee will turn to get the nectar.\",\"element_id\":\"[block-id='4']>.blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "markdown_instructions": "Modify the `get 3 nectar` function so it makes me turn right instead of left to the flowers.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
     "maze_data": null
   }
 }]]></config>

@@ -1,0 +1,35 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-18T01:11:43.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "write": null,
+      "declareAssign_x": null,
+      "assign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Do this:\r\nWe've given you the three lines of code shown in the previous page.  Add three lines of code just below the ones shown here to make your own variable, assign it a value and write it to the screen.  NOTE: change the variable name from the default x to something else.\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(foo);"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

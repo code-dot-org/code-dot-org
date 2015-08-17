@@ -10,6 +10,7 @@ zh:
           Math Image: 數學圖像
           title: 測試課程
           description: 只是一個內部測試的課程。
+          description_short: 只是一個內部測試的課程。
         course1:
           "Jigsaw: Learn to drag and drop": '拼圖: 學會拖放'
           "Maze: Sequence": '迷宮: 序列'
@@ -18,77 +19,77 @@ zh:
           Artists 2: 畫家 2
           Spelling Bee: 拼字比賽
           Spelling Bee not blockly: Spelling Bee not blockly
-          "Bee 1: Intro": 'Bee 1: Intro'
-          "Maze 2: Loops": 'Maze 2: Loops'
-          "Bee 2: Loops": 'Bee 2: Loops'
+          "Bee 1: Intro": 蜜蜂 1： 簡介
+          "Maze 2: Loops": 迷宮 2： 迴圈
+          "Bee 2: Loops": 蜜蜂 2： 迴圈
           Multi & Match: 'Multi & Match'
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
           title: 課程 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
-          Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          "Bee: Sequence": 'Bee: Sequence'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Shapes": 'Artist: Shapes'
-          "Maze: Loops": 'Maze: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Studio: Create a Story": 'Play Lab: Create a Story'
-          "Artist: Loops": 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
-          description_short: Course 1 is designed for early readers.
+          Artist 2: 小畫家 2
+          Happy Maps: 快樂地圖
+          Move it, Move it: 移動它，移動它
+          "Real-life Algorithms: Plant a Seed": '生活中的演算法: 種一棵種子'
+          Building a Foundation: 建立基礎
+          Getting Loopy: 愈來愈糟
+          The Big Event: 大事件
+          Going Places Safely: 安全的到達地點
+          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          "Bee: Sequence": 蜜蜂： 序列
+          "Artist: Sequence": '小畫家: 次序'
+          "Artist: Shapes": '小畫家: 形狀'
+          "Maze: Loops": 迷宮： 迴圈
+          "Bee: Loops": 蜜蜂： 迴圈
+          "Studio: Create a Story": '播放實驗室: 創造一個故事'
+          "Artist: Loops": '小畫家: 迴圈'
+          description_audience: 適合年齡4+(學齡前讀者)
+          description_short: Start with Course 1 for early readers.
         course2:
           The Maze: 迷宮
-          Suzi: Suzi
+          Suzi: 蘇西
           The Artist: 藝術家
           Artist Debugging: Artist Debugging
           Bounce: 彈跳
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": '播放實驗室: 創造一個故事'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
           title: Course 2
-          Bee Loops: Bee Loops
-          Artist Functions: Artist Functions
+          Bee Loops: 蜜蜂 迴圈
+          Artist Functions: 角色功能
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
           Graph Paper Programming: 圖畫紙程式設計
           "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
-          Getting Loopy: Getting Loopy
+          Getting Loopy: 愈來愈糟
           Relay programming: Relay programming
           Conditionals: 流程類別
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          The Big Event: 大事件
+          Your Digital Footprint: 你的數位足跡
+          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": '迷宮: 序列'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Maze: Loops": 'Maze: Loops'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Loops": 'Bee: Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 'Artist: Debugging'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Sequence2": 'Artist: Sequence2'
+          "Artist: Sequence": '小畫家: 次序'
+          "Maze: Loops": 迷宮： 迴圈
+          "Artist: Loops": '小畫家: 迴圈'
+          "Bee: Loops": 蜜蜂： 迴圈
+          "Bee: Debugging": 蜜蜂： 除錯
+          "Artist: Debugging": '小畫家: 除錯'
+          "Bee: Conditionals": '蜜蜂: 條件'
+          "Artist: Sequence2": '小畫家: 次序2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
-          description_audience: 'Ages  6+ (reading required)'
-          description_short: Course 2 is designed for students who can read.
+          description_audience: 六歲以上 (閱讀要求)
+          description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: 迷宮
-          "Studio: Create a Story": 'Play Lab: Create a Story'
+          "Studio: Create a Story": '播放實驗室: 創造一個故事'
           The Artist: 藝術家
           title: 課程 3
-          Artist Functions: Artist Functions
-          Artist For Loops: Artist For Loops
+          Artist Functions: 角色功能
+          Artist For Loops: 小畫家 For 迴圈
           Artist Nested Loops: Artist Nested Loops
           Bee Conditionals: Bee Conditionals
           Bee Nested Loops: Bee Nested Loops
@@ -102,23 +103,23 @@ zh:
           Computational Thinking: 電腦計算式思維
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
+          Dice Race: 骰子比賽
           Internet: 互聯網
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'Farmer - While Loops'
           description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
-          Maze: Maze
+          "Studio: Create a Game": '播放實驗室: 設計一個遊戲'
+          Maze: 迷宮
           Artist: 畫家
           "Artist: Functions": 畫家：函數
           "Bee: Functions": 蜜蜂：函數
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Bee: Conditionals": '蜜蜂: 條件'
           "Maze: Conditionals": 迷宮： 條件
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           "Farmer: While Loops": 農夫： ｢當｣迴圈　
           "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": 蜜蜂： 除錯
           Maze2: 迷宮２
           Artist2: 畫家２
           "Artist: Functions2": 'Artist: Functions2'
@@ -128,60 +129,11 @@ zh:
           "Artist: Nested Loops2": 'Artist: Nested Loops2'
           "Farmer: While Loops2": 'Farmer: While Loops2'
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
-          "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
-          description_short: Course 3 is a follow-up to Course 2.
-        msm:
-          title: Middle School Math
-          description: Private work in progress for Middle School Math.
-          Graph Paper Programming: 圖畫紙程式設計
-          Assessments: Assessments
-          Unit 1: Unit 1
-          Unit 2: Unit 2
-          Ninja Cat and the Coordinate Plane: Ninja Cat and the Coordinate Plane
-          "Calc: Circles of Evaluation": 'Calc: Circles of Evaluation'
-          "Artist: Strings and Images": 'Artist: Strings and Images'
-          Contracts: Contracts
-          "Artist: Writing Contracts": 'Artist: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables": 'Play Lab: Defining Variables'
-          The Design Recipe: The Design Recipe
-          "Artist: Defining Functions": 'Artist: Defining Functions'
-          "Play Lab: Defining Functions": 'Play Lab: Design Recipe'
-          "Artist: Functions": 畫家：函數
-          "Play Lab: Animation": 'Play Lab: Animation'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Boolean Operators'
-          "Play Lab: Boolean Operators": 'Play Lab: Boolean Operators'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
-          "Artist: Conditionals": 'Artist: Conditionals'
-          Collision Detection and the Distance Formula: Collision Detection and the Distance Formula
-          "Play Lab: Collision Detection": 'Play Lab: Collision Detection'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Cat and the Coordinate Plane'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
-          "Eval: Defining Functions": 'Eval: Fast Functions'
-          "Eval: Functions": 'Eval: Design Recipe'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          Blocks to Math: Blocks to Math
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          "Eval: Fast Functions": 'Eval: Fast Functions'
-          "Play Lab: Design Recipe": 'Play Lab: Design Recipe'
-          "Eval: Design Recipe": 'Eval: Design Recipe'
+          "Bee: Debugging2": '蜜蜂: 除錯2'
+          "Artist: Patterns": '小畫家: 圖樣'
+          Songwriting: 寫歌
+          description_audience: 八歲以上 (學習課程二以後)
+          description_short: 課程三是課程二的延續課程
         playlab:
           title: 播放實驗室
           description: 創建一個故事或做遊戲玩實驗室！
@@ -189,105 +141,963 @@ zh:
           description_short: 創建一個故事或做遊戲玩實驗室！
         artist:
           title: 畫家
-          description: Draw cool pictures and designs with the Artist!
+          description: 和小畫家一起畫圖和設計!
           Artist: 畫家
-          description_short: Draw cool pictures and designs with the Artist!
-        scrat:
-          title: Scrat
-          description_short: Scrat short description.
-          description: Scrat long description
-          "Maze: Sequence": '迷宮: 序列'
+          description_short: 和小畫家一起畫圖和設計!
         hourofcode:
-          Maze: Maze
+          Maze: 迷宮
           title: 一小時的程式設計課程
           description: 嘗試計算機科學的基礎知識與憤怒的小鳥人物，植物大戰殭屍，和Scrat從冰河時代！
           description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
         frozen:
-          title: Code with Anna and Elsa
+          title: 與 Anna 和 Elsa 一起寫程式吧
           description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
           Artist: 畫家
           description_short: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
+          "Artist: Variables": '小畫家: 變數'
           "Bee: For Loops": 蜜蜂： For 迴圈
           title: 課程 4
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": '演算法: 七巧板'
           Variables: 變數類別
-          "Play Lab: Variables": 'Play Lab: Variables'
+          "Play Lab: Variables": '播放實驗室: 變數'
           "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
           "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
+          "Artist: For Loops": '小畫家: For 迴圈'
+          "Play Lab: For Loops": '播放實驗室: For 迴圈'
           "Artist: Functions": 畫家：函數
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: 畫家
           Bee: 蜜蜂
           "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
+          "Unplugged: For Loop Fun": '真人分享: For 迴圈的樂趣'
           "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
           "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          "Unplugged: Binary": '真人分享: 二進位'
+          Bee Binary: 蜜蜂 二進位
+          Farmer Binary: 農夫 二進位
+          Maze and Bee: 蜜蜂與迷宮
+          Artist Binary: 小畫家 二進位
+          description_audience: 十歲以上(課程三之後)
         Course4pre:
+          title: 課程四 先決條件
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: 課程四 先決條件
           "Maze: Sequence": '迷宮: 序列'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
+          "Artist: Sequence": '小畫家: 次序'
+          "Artist: Loops": '小畫家: 迴圈'
+          "Bee: Conditionals": '蜜蜂: 條件'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           "Farmer: While Loops": 農夫： ｢當｣迴圈　
           "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
           "Artist: Functions": 畫家：函數
-          "Bee: Debugging": 'Bee: Debugging'
-        course4pre:
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": '迷宮: 序列'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 畫家： 嵌套的迴圈
-          "Farmer: While Loops": 農夫： ｢當｣迴圈　
-          "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
-          "Artist: Functions": 畫家：函數
-          "Bee: Debugging": 'Bee: Debugging'
-        Course4pre (Case Conflict):
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
-          "Maze: Sequence": '迷宮: 序列'
-          "Artist: Sequence": 'Artist: Sequence'
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 畫家： 嵌套的迴圈
-          "Farmer: While Loops": 農夫： ｢當｣迴圈　
-          "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
-          "Artist: Functions": 畫家：函數
-          "Bee: Debugging": 'Bee: Debugging'
+          "Bee: Debugging": 蜜蜂： 除錯
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
+          Intro: 介紹
+          Variables and For Loops: 變數與 For 迴圈
           Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          title: 可用性測試
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: 變數類別
-          For Loops: For Loops
+          For Loops: For 迴圈
+          Binary: Binary
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: 特別
+          description_short: 特別
+          description: 特別
+          Special: 特別
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: 特別
+          description_short: 特別
+          description: 特別
+          Special: 特別
+          Binary: Binary
+        algebra:
+          title: Computer Science in Algebra
+          description: Learn Functional Programming through Algebra
+          description_short: Learn Functional Programming through Algebra
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
+          "Eval: Strings and Images": Strings and Images
+          "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
+          "Eval: Writing Contracts": Writing Contracts
+          "Calc: Defining Variables": Defining Variables and Substitution
+          "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
+          "Eval: Defining Functions": Composite Functions
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": Rocket Height
+          "Eval: Functions": Solving Word Problems with the Design Recipe
+          "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
+          "Unplugged: Booleans": 'Unplugged: Booleans and Logic'
+          "Eval: Boolean Operators": 布林運算子
+          "Play Lab: Booleans": Sam the Bat
+          "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 流程類別
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
+          "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          Play Lab: 播放實驗室
+          Infinity: 無窮
+        algebrademo:
+          title: Algebra Demo
+          description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
+          Algebra Demo: Algebra Demo
+          Evaluation Blocks: Evaluation Blocks
+          Making Pictures: Making Pictures
+          Defining Variables: Defining Variables
+          Defining Simple Functions: Defining Simple Functions
+          The Design Recipe: The Design Recipe
+        K5PD:
+          title: K5 Professional Development
+          description: K5 課程的專業發展
+          description_short: K5 課程的專業發展
+          Introduction to PD: PD 簡介
+          Blockly Basics: Blockly 的基本知識
+          Writing computer programs: 編寫電腦程式
+          Navigating the teacher dashboard: Navigating the teacher dashboard
+          Unplugged lessons: Unplugged lessons
+          Classroom Culture: Classroom Culture
+          Ways to go beyond Courses 1, 2, and 3: 如何超越 課程1、 2 和 3
+          K-5 Courses: K-5 Courses
+          Writing computer programs in Blockly: Writing computer programs in Blockly
+          Teacher Dashboard: Teacher Dashboard
+          Personal Reflection: Personal Reflection
+          Next Steps: Next Steps
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Programming Concepts: Programming Concepts
+          Reflection: Reflection
+          "Programming Concept: Loops": 'Programming Concept: Loops'
+          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
+          "Programming Concept: Functions": 'Programming Concept: Functions'
+          "Programming Concept: Events": 'Programming Concept: Events'
+        netsim:
+          title: Internet Simulator
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
+          Internet Simulator: Internet Simulator
+          Unit 1: 單元 1
+          Unit 2: 單元 2
+          Sending Bits: Sending Bits
+          Routing and DNS: Routing and DNS
+          "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
+          "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
+          Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
+        pixelation:
+          title: Pixelation
+          description: 以 bits 與 bytes 創造圖像
+          description_short: 以 bits 與 bytes 創造圖像
+          Pixelation: Pixelation
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
+        20-hour:
+          title: 20小時 課程簡介
+          description_audience: 十歲以上(課程三之後)
+          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          Introduction to Computer Science: 電腦科學導論
+          The Maze: 迷宮
+          Computational Thinking: 電腦計算式思維
+          Graph Paper Programming: 圖畫紙程式設計
+          The Artist: 藝術家
+          Algorithms: 演算法
+          The Artist 2: '藝術家 2 '
+          Functions: 函數類別
+          The Farmer: 農夫
+          Conditionals: 流程類別
+          The Artist 3: '藝術家 3 '
+          Song Writing: 歌曲創作
+          The Farmer 2: '農夫 2 '
+          Abstraction: 抽象
+          The Artist 4: '藝術家 4 '
+          Relay Programming: 接力式程式設計
+          The Farmer 3: '農夫 3 '
+          The Internet: 網際網路
+          The Artist 5: '藝術家 5 '
+          Wrap-up: 總結
+        edit-code:
+          title: 編輯程式碼
+          description: 編輯程式碼
+          description_short: 編輯程式碼
+          The Maze: 迷宮
+          Applab: Applab
+          The Artist: 藝術家
+          Play Lab: 播放實驗室
+          Play Lab 2015: Play Lab 2015
+        events:
+          title: 事件類別
+          description: 事件類別
+          description_short: 事件類別
+          Bounce: 彈跳
+          Studio: Studio
+          Calc: Calc
+          Eval: Eval
+        flappy:
+          title: Flappy遊戲設計
+          description: '寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學'
+          description_short: Write your own Flappy game in less than 10 minutes!
+          Flappy Code: Flappy遊戲設計
+        jigsaw:
+          title: Jigsaw
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
+          Jigsaw: Jigsaw
+        step:
+          title: 步驟
+          description: Step tutorial
+          description_short: Step tutorial
+          Step: 步驟
+        Hour of Code:
+          title: 一小時Code 2013
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
+          Hour of Code 2013: 一小時Code 2013
+        Code Studio Puzzle Challenge:
+          title: Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Test - Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        How to do the Code Studio Puzzle Challenge:
+          title: Test Code Studio Puzzle Challenge
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Tutorial - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: 'Tutorial - Code Studio Puzzle Challenge'
+          description_short: 挑戰自己 ！
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        course4pre:
+          title: 課程四 先決條件
+          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          Course 4 Prerequisite: 課程四 先決條件
+          "Maze: Sequence": '迷宮: 序列'
+          "Artist: Sequence": '小畫家: 次序'
+          "Artist: Loops": '小畫家: 迴圈'
+          "Bee: Conditionals": '蜜蜂: 條件'
+          "Artist: Nested Loops": 畫家： 嵌套的迴圈
+          "Farmer: While Loops": 農夫： ｢當｣迴圈　
+          "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
+          "Artist: Functions": 畫家：函數
+          "Bee: Debugging": 蜜蜂： 除錯
+        cspunit1:
+          title: 'CSP Unit 1 - Digital Information'
+          description_short: Explore how digital information is represented and transferred
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices.
+          Lesson14: Lesson14
+          Lesson 14: Lesson 14
+          Lesson 14 v2: Lesson 14 v2
+          Lesson 15: Lesson 15
+          Lesson 8: 第 8 課
+          Lesson 5: Lesson 5
+          Lesson 3: Lesson 3
+          Lesson 4: Lesson 4
+          Lesson 6: Lesson 6
+          Lesson 2: Lesson 2
+          Lesson 7: Lesson 7
+          Lesson 1: Lesson 1
+          Innovation: Innovation
+          Sending Binary Messages: Sending Binary Messages
+          Sending More Complex Messages: Sending More Complex Messages
+          Bit Sending Widget: Bit Sending Widget
+          Sending Bits in the Real World: Sending Bits in the Real World
+          Number Systems: Number Systems
+          Binary Numbers: Binary Numbers
+          Sending Numbers: Sending Numbers
+          Encoding Numbers in the Real World: Encoding Numbers in the Real World
+          Encoding and Sending Text: Encoding and Sending Text
+          Sending Formatted Text: Sending Formatted Text
+          Data Storage: Data Storage
+          Text Compression: Text Compression
+          "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
+          Encoding B&W Images: 'Encoding B&W Images'
+          Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
+        algebraPD:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
+          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Contracts": 'Unplugged: Contracts'
+          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Eval: Defining Functions": 'Eval: Defining Functions'
+          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          "Eval: Functions": 'Eval: Functions'
+          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
+          "Unplugged: Booleans": 'Unplugged: Booleans'
+          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Booleans": 'Play Lab: Booleans'
+          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Contracts: Contracts
+          Your Game - Defining Variables: 'Your Game - Defining Variables'
+          Simple Function Definition: Simple Function Definition
+          The Design Recipe: The Design Recipe
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: 布林值
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 你的遊戲-布林值
+          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Introduction to PD: PD 簡介
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algPDmiami:
+          title: Computer Science in Algebra PD
+          description: 通過函數式程式設計教代數
+          description_short: 通過函數式程式設計教代數
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Rocket-Height: Rocket-Height
+          Design Recipe Practice: Design Recipe Practice
+          Your Game - Animation: 'Your Game - Animation'
+          Booleans: 布林值
+          Sam the Bat: Sam the Bat
+          Your Game - Booleans: 你的遊戲-布林值
+          Luigi's Pizza: 路易吉的披薩
+          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          Your Game - Player Movement: 'Your Game - Player Movement'
+          Your Game - Collision Detection: 你的遊戲-碰撞檢測
+        text-compression:
+          title: Text Compression
+          description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
+          Text Compression: Text Compression
+        CSPPD:
+          new stage: new stage
+          Introduction to PD: PD 簡介
+          title: Computer Science Principles PD
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
+          What is CSP?: What is CSP?
+          Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
+          Impact of Computer Science: Impact of Computer Science
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+        CSPLessonSamples:
+          title: CSP Lesson Samples
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
+          Lesson 14: Lesson 14
+          Lesson 15: Lesson 15
+        ECSPD:
+          Introduction to PD: PD 簡介
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          reference: reference
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        sciencePD:
+          Introduction to PD: PD 簡介
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          What to Expect: What to Expect
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        rbo-reference:
+          reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
+        Test Wednesday:
+          PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
+        cspunit3:
+          title: 'CSP Unit 3 - Programming'
+          description_short: Programming
+          description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          Getting to know AppLab: Getting to know AppLab
+          Functions: 函數類別
+          Using Simple Commands: Using Simple Commands
+          Creating Procedures - Part 1: 'Creating Procedures - Part 1'
+          Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
+          APIs and Function Parameters: APIs and Function Parameters
+          Looping and Random Numbers: Looping and Random Numbers
+          Creating functions with Parameters: Creating functions with Parameters
+          Scene Design Part 1 - Plan: 'Scene Design Part 1 - Plan'
+          Scene Design Part 2 - Code: 'Scene Design Part 2 - Code'
+          Scene Design Part 3 - Reflect: 'Scene Design Part 3 - Reflect'
+          Unplugged Events Activity -  Mission Unsortable: 'Unplugged Events Activity -  Mission Unsortable'
+          Buttons on the Screen: Buttons on the Screen
+          Unfortunate Events: Unfortunate Events
+          On Beyond Buttons: On Beyond Buttons
+          Cookie Clicker 1.0 DEPRECIATED: Cookie Clicker 1.0 DEPRECIATED
+          Controlling Memory and Program Flow: Controlling Memory and Program Flow
+          Variable Basics DEPRECIATED: Variable Basics DEPRECIATED
+          Clicker v.1 -  Variable Basics: 'Clicker v.1 -  Variable Basics'
+          Conditional Basics: Conditional Basics
+          More Variables (2 days): More Variables (2 days)
+          Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Natural Language Processing and Chat Bots: Natural Language Processing and Chat Bots
+          Chained Conditionals: Chained Conditionals
+          Compound Conditionals: Compound Conditionals
+          Strings and Substrings: Strings and Substrings
+          While Loop Basics: While Loop Basics
+          While Loops_ Counting Flips: While Loops_ Counting Flips
+          Arrays_ Intro: Arrays_ Intro
+          Arrays_ Photo Album: Arrays_ Photo Album
+          Images are Arrays: Images are Arrays
+          Arrays and Loops_ Altering Images: Arrays and Loops_ Altering Images
+          Arrays and Loops_ Hidden Images: Arrays and Loops_ Hidden Images
+          The Need For Programming Languages: The Need For Programming Languages
+          Creating Procedures - Part 2: 'Creating Procedures - Part 2'
+          Sarah testing project backed levels: Sarah testing project backed levels
+          Cookie Clicker: Cookie Clicker
+          Clicker Variable Basics: Clicker Variable Basics
+          Events Unplugged: Events Unplugged
+          Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
+          Improving the Clicker Game: Improving the Clicker Game
+          Chatbot Challenge: Chatbot Challenge
+          "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
+          "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
+          "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
+        algebraPD3:
+          title: Phase 3 PD
+          description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
+          Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          The Big Game: The Big Game
+          Strings and Images: Strings and Images
+          The Design Recipe: The Design Recipe
+          Next Steps: Next Steps
+        sciPD complex adaptive 2:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: PD 簡介
+          Pre-Workshop Online Component: Pre-Workshop Online Component
+        sciPD complex adaptive forum:
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: PD 簡介
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+        Glenallan Career Day Demo:
+          new stage: new stage
+          title: Glenallan Career Day Demo
+          description_short: "Let's make some puzzles!"
+          description: 試試這些有趣的編碼拼圖。盡力 ！
+          Puzzles: Puzzles
+        ECSPD-NexTech:
+          Introduction to PD: PD 簡介
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: nextech_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        ECSPD-iZone:
+          Introduction to PD: PD 簡介
+          What is ECS?: What is ECS?
+          Growth Mindset: Growth Mindset
+          Teaching Strategies: Teaching Strategies
+          Preparing for in-person PD: Preparing for in-person PD
+          logo_image: izone_logo.png
+          title: Exploring Computer Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Impact of Computer Science: Impact of Computer Science
+        algebraPD-NexTech:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: PD 簡介
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: nextech_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        algebraPD-iZone:
+          title: Computer Science in Algebra PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          Introduction to PD: PD 簡介
+          Evaluation Blocks: Evaluation Blocks
+          logo_image: izone_logo.png
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          Preparing for in-person PD: Preparing for in-person PD
+        sciencePD-NexTech:
+          Introduction to PD: PD 簡介
+          logo_image: nextech_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        sciencePD-iZone:
+          Introduction to PD: PD 簡介
+          logo_image: izone_logo.png
+          title: Computer Science in Science PD
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
+          What to Expect: What to Expect
+          Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
+          Introduction to Computational Science: Introduction to Computational Science
+          Agent Based Modeling of Complex Adaptive Systems: Agent Based Modeling of Complex Adaptive Systems
+          Using Computer Models in Science: Using Computer Models in Science
+          Using Models in the Classroom: Using Models in the Classroom
+          Dispositions and Classroom Culture: Dispositions and Classroom Culture
+          Computational Thinking And The Framework For K-12 Science Education: Computational Thinking And The Framework For K-12 Science Education
+          Introduction to StarLogo Nova: Introduction to StarLogo Nova
+          The Tutorial: The Tutorial
+          Post-Survey: Post-Survey
+        ui_tests:
+          title: UI Tests
+          description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
+          All the Tests: All the Tests
+          Free Response: Free Response
+          Multi: Multi
+          Big Game: Big Game
+          new stage: new stage
+        sciencePD2:
+          title: Computer Science in Science PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Phase 2 Summer Workshop: Phase 2 Summer Workshop
+          Welcome: Welcome
+          Resources: Resources
+          Discussion Forums: Discussion Forums
+          Discussion Forum: Discussion Forum
+          Evaluation: Evaluation
+          Implementation Planning: Implementation Planning
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+        sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
+          new stage: new stage
+          Welcome: Welcome
+          Curricular Modules: Curricular Modules
+          Common Forms: Common Forms
+          Guides and Resources: Guides and Resources
+          Discussion Forums: Discussion Forums
+        Testing:
+          Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
+        cspunit2:
+          title: 'CSP Unit 2 - The Internet'
+          description_short: 網際網路
+          description: |
+            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
+            structure and design of the internet and the implications of those design decisions including
+            the reliability of network communication, the security of data, and personal privacy. Topics
+            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
+            concerns.
+          Beyond Sending Bits: Beyond Sending Bits
+          The Need for Addressing: The Need for Addressing
+          Invent an Addressing Protocol: Invent an Addressing Protocol
+          Routers and Addresses: Routers and Addresses
+          Classroom Internet: Classroom Internet
+          Algorithms in Networking: Algorithms in Networking
+          The Need for Packets: The Need for Packets
+          Packets in the Real World: Packets in the Real World
+          The Need for DNS: The Need for DNS
+          DNS Simulation: DNS Simulation
+          How HTTP Works: How HTTP Works
+          IP and DNS in the Real World: IP and DNS in the Real World
+          The Internet: 網際網路
+          Routers and Addresses as Numbers: Routers and Addresses as Numbers
+          Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
+          Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
+          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          DNS in the Real World: DNS in the Real World
+          HTTP and Abstraction: HTTP and Abstraction
+          Challenges of the Internet: Challenges of the Internet
+          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          Cracking the Code: Cracking the Code
+          Encryption Algorithms: Encryption Algorithms
+          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
+          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
+          Public Key Crypto: Public Key Crypto
+          Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
+        algebraPD2a:
+          title: Computer Science in Algebra PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Defining Variables: Defining Variables
+          Big Game - Variables: 'Big Game - Variables'
+          "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
+          The Design Recipe: The Design Recipe
+          Big Game - Animation: 'Big Game - Animation'
+          Booleans: 布林值
+          Sam the Bat: Sam the Bat
+          Big Game - Booleans: 'Big Game - Booleans'
+          Luigi's Pizza: 路易吉的披薩
+          Big Game - Player Movement: 'Big Game - Player Movement'
+          Big GAme - Collision Detection: 'Big GAme - Collision Detection'
+          Rocket-Height: Rocket-Height
+          Big Game - Collision Detection: 'Big Game - Collision Detection'
+          Free Play: Free Play
+        allthethings:
+          Jigsaw: Jigsaw
+          Maze: 迷宮
+          Artist: 畫家
+          Bee: 蜜蜂
+          PlayLab: PlayLab
+          Farmer: Farmer
+          Flappy: Flappy
+          Bounce: 彈跳
+          Multi: Multi
+          Match: 配對
+          TextMatch: TextMatch
+          CSinA: CSinA
+          Netsim: Netsim
+          applab: applab
+          online pd?: online pd?
+          AppLab: App實驗室
+          Online PD: Online PD
+          title: 所有的東西!
+          description: All the level types for UI testing
+          description_short: All the level types for UI testing
+          Odometer: Odometer
+          Text Compression: Text Compression
+          Pixelation: Pixelation
+          Multi2: Multi2
+          Markdown Details: Markdown Details
+        algebraPD2b:
+          title: Computer Science in Algebra PD
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: 布林值
+          "Eval: Conditionals": 'Eval: Conditionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+        cspfacilitator:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+          Welcome!: Welcome!
+        CSPfac intro:
+          title: 'CS Principles Facilitator Workshop '
+          description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
+          Welcome!: Welcome!
+          Pixelation Widget: Pixelation Widget
+          Text Compression Widget: Text Compression Widget
+          Internet Simulator: Internet Simulator
+          App Lab: App Lab
+          Broadcast Lesson: Broadcast Lesson
+          Text Compression Lesson: Text Compression Lesson
+        K5-OnlinePD:
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: 總結
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: 一小時的程式設計課程
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: 布林值
+          "Eval: Conditionals": 'Eval: Conditionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Welcome!
+          The Design Recipe: The Design Recipe
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Welcome!
+          Wrap-Up: 總結
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: 總結
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: Welcome!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: 總結
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Welcome!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: 總結
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Welcome!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: 總結
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

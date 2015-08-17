@@ -159,6 +159,10 @@
   function showScratBlink(blink) {
     $(".scrat-standing").css('opacity', blink ? 0 : 1);
     $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
+
+    if (blink) {
+      ga('send', 'event', 'scrat', 'blink', {'page': "#{request.path}"});
+    }
   }
 
   function setupScratBlinking() {

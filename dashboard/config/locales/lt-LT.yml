@@ -1,11 +1,14 @@
 "lt":
+  errors:
+    messages:
+      not_saved: 'Ištaisykite šias klaidas:'
   activerecord:
     errors:
       messages:
         blank: reikalingas
     attributes:
       user:
-        name: Rodyti vardą
+        name: Tavo vardas
         email: El. pašto adresas
         username: Naudotojo vardas
         password: Slaptažodis
@@ -19,6 +22,7 @@
           future: negali būti ateitis
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
+  submit: Pateikti
   add_teacher_form:
     code:
       label: 'Pridėkite mokytoja:'
@@ -39,7 +43,7 @@
   beta: beta
   try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
   try_k8intro: Išmėginkite mūsų programavimo įvado kursą (15-25 valandos)
-  k8intro: Programavimo įvado kursas (15-25 valandos)
+  k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
   already_started: 'Jau esate pradėjęs? Tęskite čia >> '
   demos: 'Administratorius: Visos demonstracijos'
   continue: Tęsti
@@ -61,6 +65,8 @@
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
   signup_form:
+    student_count: Jau yra užsiregistravę %{count} mokinių(-iai).
+    teacher_count: Jau yra užsiregistravę %{count} mokytojų(-ai).
     overview_student: Užsiregistruok, kad galėtum sekti savo progresą. Tavo el. paštas
       bus naudojamas, kad galėtum prisijungti bei pasikeisti savo slaptažodį. Daugiau
       informacijos skaityk <a href="http://code.org/privacy">privatimo politikoje</a>.
@@ -128,7 +134,7 @@
 
       %{link}
 
-      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Cukerbergui ir žaidimams Angry Birds ir Plants vs. Zombies! :)
+      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
 
       %{name}
   follower:
@@ -237,8 +243,10 @@
       free_play:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
+        calculate: Calculate Something
     user:
       classroom: Mokytojo namų puslapis
+      district_dashboard: Prietaisų skydelis
       label: Sveiki, %{username}
       stats: Mano pažanga
       settings: Mano paskyra
@@ -248,6 +256,7 @@
       signup: Užsiregistruoti
       already_registered: Jau užsiregistravote?
     popup:
+      progress_for_user: '%{name} pažanga'
       progress: Jūsų pažanga
       lines: 'Iš viso kodo eilučių: %{lines}'
       close: UŽDARYTI
@@ -321,24 +330,37 @@
     cant_remove_teacher_no_email: '%{teacher_name} negalima pašalinti, nes tu neprisiregistravai
       su savo el. pašto adresu'
     student_teacher_disassociated: '%{teacher_name} buvo pašalintas %{student_name}'
+    panel:
+      answer_viewer: Atsakymų apžvalga
+      student: Mokinys
+      viewing_solution: Peržiūrėti sprendimą
+      try_it_yourself: Išmėginkite patys
+      section: Grupė
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
+    email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
+    email_confirm_wrong_email: (Klaidingas el. pašto adresas?)
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
     new_password_hint: (palikite tuščią, jei nenorite pakeisti)
     current_password_hint: (įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)
-    cancel:
-      title: Panaikinti mano paskyrą
-      hint: Nepatenkintas?
-      button: Panaikinti mano paskyrą
+    delete: Pašalinti savo paskyrą
+    delete_text: Nuspaudus mygtuką panaikinsite savo paskyrą.
+    delete_text_teacher_note: 'Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus
+      panaikintos.'
+    delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
   user_level:
     completed: Baigta
     tried: Išbandyta
   user_stats:
     recent_activity: Neseniai atlikta veikla
     show_more: Rodyti daugiau
-    classroom_activity: Vaizdo įrašas mokytojams
+    classroom_activity: Veikla be kompiuterių
   home:
     title: Programavimo kursai
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: Jau užsiregistravote? %{link}
@@ -363,6 +385,7 @@
     local_school: vietinėje mokykloje
     online: internetu
     see_details: Peržiūrėti informaciją
+    view_course: View Course
     prize_info: 'Prizai už dalyvavimą (tik JAV mokytojams): iki 1000 dolerių vienai
       klasei.'
     tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
@@ -374,11 +397,15 @@
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 valandų kursas </h2><h1>pradinių klasių mokiniams</h1>
+    heading_hoc2014: <h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>
+    heading_elementary: <h2>20 valandų kursas</h2><h1>Pradedantiesiems (visoms amžiaus
+      grupėms)</h1>
     heading_apps: <h2>Smagumynai</h2><h1>visiems</h1>
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     your_gallery: Galerija
+    no_primary_course: Išmėginkite Kodavimo Studijos kursus
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Print Certificate
   gender:
     male: Vyras
     female: Moteris
@@ -390,9 +417,9 @@
     help_from_html: Google, Microsoft, Facebook ir Twitter inžinieriai padėjo sukurti
       šias pamokėles.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Visos teisės saugomos.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Visos teisės saugomos.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Visos teisės saugomos.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: 'Rėmėjas: Amazon Web Services'
     feedback: Pateikti atsiliepimus
     translate: Padėkite mums išversti į savo kalbą
     support: Pagalba
@@ -443,7 +470,7 @@
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
     flappy_og_title: Išmėginkite žaidimą my Flappy Game
-    studio_og_title: Peržiūrėk mano istoriją
+    studio_og_title: Peržiūrėk mano Žaidimų laboratorijos programėlę
     check_out_what_i_made: Pažiūrėkite, ką aš sukūriau
     og_description: Aš pats parašiau kodą Code.org svetainėje
     phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris.
@@ -471,18 +498,26 @@
       title: Flappy kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
-    20hour:
-      title: Įvadiniai kursai
-      body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
+    20-hour:
+      title: Accelerated Course
+      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
+        Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet
+        kurioje amžiaus grupėje.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
-      try_new_tutorial: Išbandykite naująsias Programavimo valandos pamokėles beta
+      try_new_tutorial: Išbandykite naująsias „Programavimo valandos“ pamokėles beta
         versijoje
       try_frozen: Piešimas su Ana ir Elze iš "Ledo šalies"
     gallery:
       title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     frozen:
-      title: Frozen
+      title: Ledo šalis
+    infinity:
+      title: Žaidimų laboratorija Infinity
+      body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus
+        Infinity personažai.
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
@@ -496,7 +531,7 @@
     caption_by_name_age: sukūrė %{name}  (%{age} m.)
     caption_time_ago: 'prieš %{time_ago} '
     header: Galerija
-    header_playlab: Laboratorija
+    header_playlab: Žaidimų laboratorija
     header_artist: Menininkas
   landing:
     prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
@@ -512,13 +547,27 @@
     wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Neteisingas sprendimas
     wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
     correct_title: Teisingai
     correct_body: Tai yra teisingas atsakymas.
+  contract_match:
+    wrong_title: Neteisingas atsakymas
+    badname: Jūsų funkcijoje yra netinkamas vardas.
+    badname_case: Funkcijų pavadinimai reaguoja į didžiąsias ir mažąsias raides. Pamėginkite
+      pakeisti pavadinimą.
+    badrange: Jūsų funkcijoje yra netinkamas skaičius.
+    baddomainsize: Jūsų funkcijoje yra netinkamas elementų skaičius.
+    baddomainname: Vienas arba daugiau elementų turi netinkamą pavadinimą.
+    baddomaintype: Vienas arba daugiau elementų yra netinkamo tipo arba jų eiliškumas
+      yra netinkamas.
   text_match:
     placeholder: Įveskite savo atsakymą čia
+    open_response_title: Ačiū
+    open_response_body: Ačiū už atsakymą!
   dialog:
     ok: gerai
   time:
@@ -534,7 +583,7 @@
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje.
         Hour of Code:
-          title: Programavimo valanda
+          title: Programavimo valanda 2013
           description: ''
         edit-code:
           title: Redaguoti kodą
@@ -571,11 +620,48 @@
     support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad
     susisiektų su mumis už jus.
   progress:
-    not_completed: nebaigtas
+    not_started: nepradėta
+    in_progress: pradėta
     completed_too_many_blocks: baigtas, panaudota per daug blokų
     completed_perfect: puikiai išspręsta
     furthest_level_attempted: išmėgintas aukščiausias lygis
+    assessment: vertinimas
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kursai, kuriuose dalyvaujate
+    completed_courses: Užbaigti kursai
+    all_courses: Visi kursai
+  project:
+    projects: Projektai
+    create: Sukurti projektą
+    create_a_project: 'Sukurti naują projektą:'
+    new: Sukurti naują
+    rename: Pervadinti
+    save: Išsaugoti
+    delete: Ištrinti
+    exit: Grįžti prie kursų
+    my_projects: Mano projektai
+    share: Dalintis
+    share_title: Bendrinti savo projektą
+    share_copy_link: 'Kopijuoti nuorodą:'
+    close: Užverti
+    more: Daugiau
+    name: Vardas
+    updated: Atnaujinta
+    project_type: Projekto rūšis
+    help_text: Nuspauskite <strong>Sukurti programėlę</strong> arba <strong>Kažką
+      nupiešti</strong> žemiau, kad sukurtumėte Žaidimo laboratorijos projektą!<br/>Bet
+      kuriuo metu galėsite sugrįžti ir pratęsti savo projektą.
+    need_help: Nežinote nuo ko pradėti?
+    really_delete: Ištrinti?
+    delete_yes: Taip
+    delete_no: Ne
+    saved: Išsaugota
+    not_saved: Neišsaugota
+    cancel: Atšaukti
+    delete_confirm_title: Ar tikrai norite ištrinti šį projektą?
+    delete_confirm_text: Jei ištrinsite projektą, jis bus visam laikui pašalintas
+      iš projektų sąrašo. Kiekvienas žmogus, kuriam buvote nusiuntęs nuorodą į jį,
+      nebegalės jo peržiūrėti.
+    view_all: Peržiūrėti mano projektus
+    remix: Remiksas
+    click_to_remix: Spustelėkite „Remiksas“ ir iškraipysite savo versiją!

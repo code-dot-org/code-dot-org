@@ -1,0 +1,26 @@
+name 'U3L20 Student Lesson Introduction'
+title 'Conditional Basics'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 20 - Conditional Basics
+
+# Background
+
+Making decisions based upon accurate information is important in computer games – as well as in life! Computer decisions are based upon Boolean logic statements that very precisely compare values. These programming statements are called “conditionals” and direct the computer to react based upon the truth of the Boolean comparison.
+
+# Lesson
+
+* Translate English comparisons from English to Boolean expressions.
+* Determine the truthfulness of Boolean expressions. 
+* Add a decision to your Clicker game. 
+
+
+# Resources
+
+* Conditional Basics Worksheet 1: <a href="https://docs.google.com/document/d/1pzagY1MMYmHDYcWdw9Zi9ajY8rMPsIVxGNU-DJP-0l0" target="_blank"> How a Computer Represents Decision Making</a>
+* Conditional Basics Worksheet 2: <a href="https://docs.google.com/document/d/1eD5HiJf5TCh7EYzemFKU83K0Gb8Vsf2WNGJawhhYJ1U" target="_blank"> Boolean Expressions
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

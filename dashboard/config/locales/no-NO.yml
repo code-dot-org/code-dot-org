@@ -1,4 +1,7 @@
 'no':
+  errors:
+    messages:
+      not_saved: 'Vennligst korriger følgende feil:'
   activerecord:
     errors:
       messages:
@@ -19,6 +22,7 @@
           future: ikke mulig å være i framtiden
   hello: Hei, verden
   welcome_back: Velkommen tilbake, %{name}
+  submit: Send
   add_teacher_form:
     code:
       label: 'Legg til en lærer:'
@@ -62,6 +66,8 @@
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
   signup_form:
+    student_count: '%{count} elever har allerede registrert seg.'
+    teacher_count: '%{count} lærere har allerede registrert seg.'
     overview_student: Registrer en konto for å følge med på progresjonen din. Din
       epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette
       passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer
@@ -75,14 +81,14 @@
     teacher_pitch: Registrering for lærerer på code.org
     teacher_title: Påmelding for lærere
     student_pitch: Registrering for elever på code.org
-    student_title: Logg på, elever
+    student_title: Registrering for elever
     school_name: Skolens navn (valgfritt)
     school_address: Skolens adresse (valgfritt)
     address_placeholder: adresse, by, fylke, postkode
     gender: Kjønn (valgfritt)
     birthday: Bursdag (valgfritt)
     age: Alder
-    user_type: Er du student eller lærar?
+    user_type: Er du elev eller lærer?
     submit: Meld deg på
     teacher: Er du en lærer?
     valid_username: Tilgjengelig!
@@ -252,8 +258,10 @@
       free_play:
         playlab: Lag en app
         artist: Tegn noe
+        calculate: Calculate Something
     user:
       classroom: Lærerens startside
+      district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
       settings: Min konto
@@ -263,6 +271,7 @@
       signup: Meld deg på
       already_registered: Allerede registrert?
     popup:
+      progress_for_user: '%{name}''s fremgang'
       progress: Din fremdrift
       lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
@@ -336,16 +345,25 @@
     cant_remove_teacher_no_email: '%{teacher_name} kan ikke fjernes som din lærer
       fordi du ikke har registrert en e-postadresse'
     student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
+    panel:
+      answer_viewer: Svar visning
+      student: student
+      viewing_solution: Viser løsning
+      try_it_yourself: Prøv selv
+      section: Seksjon
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
+    email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
+    email_confirm_wrong_email: (Feil e-postadresse?)
     email_resend_confirm: Send bekreftelse på nytt
     new_password_hint: (la stå tomt hvis du ikke vil endre det)
     current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine
       endringer)
-    cancel:
-      title: Avslutt kontoen min
-      hint: Utilfreds?
-      button: Avslutt kontoen min
+    delete: Slett kontoen
+    delete_text: Klikk på knappen under for å slette kontoen din.
+    delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers
+      kontoer.'
+    delete_confirm: Er du sikker på at du vil slette denne kontoen?
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -355,6 +373,10 @@
     classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
+    description: Code Studio er hjemmet til nettbaserte kurs av Code.org
+    lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
+      MILLIONER STUDENTER'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Leksjonsplaner
     signin_message: Allerede registrert? %{link}
@@ -378,6 +400,7 @@
     local_school: den lokale skolen
     online: på nett
     see_details: Se detaljer
+    view_course: View Course
     prize_info: 'Premier for deltakelse (gjelder bare offentlig lærere i USA): opp
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve det først og registrere deg senere:'
@@ -394,6 +417,9 @@
     heading_apps: <h2>Moro for</h2><h1>Alle</h1>
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
+    no_primary_course: Prøv et kurs på Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Utskrivingssertifikat
   gender:
     male: Mann
     female: Kvinne
@@ -487,9 +513,13 @@
       title: Flappy kode
       body: Vil du lage ditt eget spill på mindre enn 10 minutter? Prøv opplæringen
         i Flaksekode!
-    20hour:
-      title: Introduksjonskurs
-      body: Prøv vårt 20-timers introduksjonskurs i data!
+    20-hour:
+      title: Framskyndet kurs
+      body: Denne 20-timers kurset introduserer kjernebegreper innen informatikk og
+        programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det
+        er morsomt å lære for alle aldersgrupper.
+      body_short: Lær grunnleggende datavitenskap i en framskyndet versjon av kursene
+        2-4.
     hoc2014:
       try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
       try_frozen: Kunstner med Anna og Elsa fra Frost
@@ -498,6 +528,10 @@
       body: Se et galleri av app- og artist-bilder laget av våre brukere
     frozen:
       title: Frost
+    infinity:
+      title: Infinity Spill-Lab
+      body: Bruk Spill-Lab for å lage en historie eller spill med Disney Infinity
+        figurer.
   gallery:
     students_drew_these_with_code: Elever tegnet disse ved å kode.
     students_made_these_with_code: Elever laget disse ved å kode.
@@ -529,13 +563,26 @@
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
+    toofew_title: Too few answers.
+    toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Feil løsning
     wrong_body: Løsningen du har angitt er ikke riktig.  Prøv på nytt!
     correct_title: Riktig
     correct_body: Det er riktig svar.
+  contract_match:
+    wrong_title: Feil svar
+    badname: Kontrakten har feil navn.
+    badname_case: Funksjonsnavn er tegn sensitiv. Prøv å endre tegnet på din kontraknavn.
+    badrange: Din kontrakt har feil område.
+    baddomainsize: Kontrakten har ikke riktig antall elementer i domenet.
+    baddomainname: En eller flere av domene elementene har feil navn.
+    baddomaintype: En eller flere av domene elementene er feil type, eller de er i
+      feil rekkefølge.
   text_match:
     placeholder: Angi svaret her
+    open_response_title: Takk
+    open_response_body: Takk for ditt svar!
   dialog:
     ok: OK
   time:
@@ -551,7 +598,7 @@
             og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
             det er morsomt å lære for alle aldersgrupper.
         Hour of Code:
-          title: Kodetimen
+          title: Kodetimen 2013
           description: ''
         edit-code:
           title: Rediger kode
@@ -586,11 +633,47 @@
     for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a>
     uten å logge på eller be en forelder eller lærer å kontakte oss for deg.
   progress:
-    not_completed: ikke fullført
+    not_started: ikke påbegynt
+    in_progress: pågår
     completed_too_many_blocks: fullført, for mange blokker
     completed_perfect: Perfekt fulført
     furthest_level_attempted: fremste nivå forsøkt
+    assessment: vurdering
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Kurs du arbeider med
+    completed_courses: Gjennomførte kurs
+    all_courses: Alle kurs
+  project:
+    projects: Prosjekter
+    create: Opprett prosjekt
+    create_a_project: 'Opprett et nytt prosjekt:'
+    new: Opprett ny
+    rename: Gi nytt navn
+    save: Lagre
+    delete: Slett
+    exit: Tilbake til kurset
+    my_projects: Mine prosjekter
+    share: Del
+    share_title: Del prosjektet
+    share_copy_link: 'Kopier lenken:'
+    close: Lukk
+    more: Mer
+    name: Navn
+    updated: Oppdatert
+    project_type: Prosjekttype
+    help_text: Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor
+      for å lage et nytt Spill-Lab eller kunstprosjekt!<br/>Du kan komme tilbake og
+      arbeide videre på prosjektene når som helst.
+    need_help: Trenger du hjelp for å komme i gang?
+    really_delete: Slette?
+    delete_yes: Ja
+    delete_no: Nei
+    saved: Lagret
+    not_saved: Ikke lagret
+    cancel: Avbryt
+    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
+    delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine
+      prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
+    view_all: Vis mine prosjekter
+    remix: Remix
+    click_to_remix: Klikk 'Remix"til spin-off din egen versjon!

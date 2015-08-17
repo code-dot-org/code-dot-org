@@ -6,17 +6,17 @@ title: "Artist: Functions" view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>5, :title=> 'Artist: Functions', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 As an introduction to functions (reuseable blocks of code), students will use functions to draw shapes on the screen and modify those functions to fit different purposes.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ As an introduction to functions (reuseable blocks of code), students will use fu
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -42,7 +42,7 @@ As an introduction to functions (reuseable blocks of code), students will use fu
   * Distinguish between functions and loops
   * Create a program that calls a function from within a loop
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -56,7 +56,7 @@ Reflect with students on the Functional Suncatchers unplugged activity
   * Why did we use functions?
   * Now we're going to use functions to make drawing cool images even easier!
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -66,7 +66,7 @@ Reflect with students on the Functional Suncatchers unplugged activity
 
 Some students may struggle with the difference between the function definition (the actual code of the function) and the function call (used when we tell functions to run). As a visual cue we've place the function definition inside a grey box - you can equate this to the separate sheet they used to write suncatcher functions.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -81,7 +81,7 @@ Some students may struggle with the difference between the function definition (
 
 Ask students to write functions on paper for simple shapes, then create a list of instructions using those functions to draw a picture.
 
-[/together]
+[/juntos]
 
 [standards]
 

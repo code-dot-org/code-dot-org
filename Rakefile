@@ -1,29 +1,36 @@
+# Run 'rake' or 'rake -P' to get a list of valid Rake commands.
+
 require_relative './deployment'
 require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
-def create_pegasus_db()
-  db = URI.parse CDO.pegasus_db_writer
+def create_database(uri)
+  db = URI.parse(uri)
+
   command = [
     'mysql',
     "--user=#{db.user}",
     "--host=#{db.host}",
   ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{CDO.pegasus_db_name}\""
+  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
   command << "--password=#{db.password}" unless db.password.nil?
+
   system command.join(' ')
 end
 
-def with_retries(count=5)
-  begin
-    yield if block_given?
-  rescue
-    raise if (count -= 1) == 0
-    sleep 2.25
+namespace :lint do
+  task :ruby do
+    RakeUtils.system 'rubocop'
   end
-end
 
+  task :haml do
+    RakeUtils.system 'haml-lint dashboard pegasus'
+  end
+
+  task all: [:ruby, :haml]
+end
+task lint: ['lint:all']
 
 ##################################################################################################
 ##
@@ -36,7 +43,7 @@ end
 namespace :build do
 
   task :configure do
-    if CDO.chef_managed && !CDO.daemon
+    if CDO.chef_managed
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
@@ -44,13 +51,15 @@ namespace :build do
     unless CDO.chef_managed
       Dir.chdir(aws_dir) do
         HipChat.log 'Installing <b>aws</b> bundle...'
-        RakeUtils.bundle_install 
+        RakeUtils.bundle_install
       end
     end
   end
 
   task :blockly_core do
     Dir.chdir(blockly_core_dir) do
+      RakeUtils.npm_install
+
       HipChat.log 'Building <b>blockly-core</b> debug...'
       RakeUtils.system './deploy.sh', 'debug'
 
@@ -59,17 +68,39 @@ namespace :build do
     end
   end
 
-  task :blockly do
-    Dir.chdir(blockly_dir) do
-      HipChat.log 'Installing <b>blockly</b> dependencies...'
+  task :core_and_apps_dev do
+    Dir.chdir(blockly_core_dir) do
+      RakeUtils.system './deploy.sh', 'debug'
+    end
+    Dir.chdir(apps_dir) do
+      RakeUtils.system 'MOOC_DEV=1 grunt build'
+    end
+  end
+
+  task :apps do
+    Dir.chdir(apps_dir) do
+      HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Building <b>blockly</b>...'
-      if CDO.localize_blockly
+      HipChat.log 'Updating <b>apps</b> i18n strings...'
+      RakeUtils.system './sync-apps.sh'
+
+      HipChat.log 'Building <b>apps</b>...'
+      if CDO.localize_apps
         RakeUtils.system 'MOOC_LOCALIZE=1', 'grunt'
       else
         RakeUtils.system 'grunt'
       end
+    end
+  end
+
+  task :shared do
+    Dir.chdir(shared_js_dir) do
+      HipChat.log 'Installing <b>shared js</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Building <b>shared js</b>...'
+      RakeUtils.system 'npm run gulp'
     end
   end
 
@@ -95,7 +126,7 @@ namespace :build do
         RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>dashboard</b>...'
-        RakeUtils.rake 'seed:incremental'
+        RakeUtils.rake 'seed:all'
       end
 
       unless rack_env?(:development)
@@ -122,15 +153,23 @@ namespace :build do
 
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
-        with_retries { RakeUtils.rake 'db:migrate' }
+        begin
+          RakeUtils.rake 'db:migrate'
+        rescue => e
+          HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+        end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
-        with_retries { RakeUtils.rake 'seed:migrate' }
+        begin
+          RakeUtils.rake 'seed:migrate'
+        rescue => e
+          HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+        end
       end
 
       if CDO.daemon && !rack_env?(:development)
         HipChat.log 'Analyzing <b>pegasus</b> hour-of-code activity...'
-        RakeUtils.system 'sites.v3/code.org/bin/analyze_hoc_activity'
+        RakeUtils.system deploy_dir('bin', 'analyze_hoc_activity')
       end
 
       HipChat.log 'Starting <b>pegasus</b>.'
@@ -150,7 +189,8 @@ namespace :build do
   tasks = []
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
-  tasks << :blockly if CDO.build_blockly
+  tasks << :apps if CDO.build_apps
+  tasks << :shared if CDO.build_shared_js
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -172,18 +212,41 @@ task :build => ['build:all']
 ##################################################################################################
 
 namespace :install do
-  
-  task :blockly do
+
+  # Create a symlink in the public directory that points at the appropriate blockly
+  # code (either the static blockly or the built version, depending on CDO.use_my_apps).
+  task :blockly_symlink do
     if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(blockly_dir) do
-        blockly_build = CDO.use_my_blockly ? blockly_dir('build/package') : 'blockly-package'
-        RakeUtils.ln_s blockly_build, dashboard_dir('public','blockly')
+      Dir.chdir(apps_dir) do
+        apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
+      end
+    end
+  end
+
+  task :apps do
+    if rack_env?(:development) && !CDO.chef_managed
+      if OS.linux?
+        RakeUtils.npm_update_g 'npm'
+        RakeUtils.npm_install_g 'grunt-cli'
+      elsif OS.mac?
+        RakeUtils.system 'brew install node'
+        RakeUtils.system 'npm', 'update', '-g', 'npm'
+        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      end
+    end
+  end
+
+  task :shared do
+    if rack_env?(:development) && !CDO.chef_managed
+      Dir.chdir(shared_js_dir) do
+        shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
+        RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
       end
 
       if OS.linux?
-        RakeUtils.sudo_ln_s '/usr/bin/nodejs', '/usr/bin/node'
-        RakeUtils.sudo 'npm', 'update', '-g', 'npm'
-        RakeUtils.sudo 'npm', 'install', '-g', 'grunt-cli'
+        RakeUtils.npm_update_g 'npm'
+        RakeUtils.npm_install_g 'grunt-cli'
       elsif OS.mac?
         RakeUtils.system 'brew install node'
         RakeUtils.system 'npm', 'update', '-g', 'npm'
@@ -196,8 +259,8 @@ namespace :install do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.rake 'db:create'
-        RakeUtils.rake 'db:migrate'
+        puts CDO.dashboard_db_writer
+        RakeUtils.rake 'db:setup_or_migrate'
         RakeUtils.rake 'seed:all'
       end
     end
@@ -207,7 +270,7 @@ namespace :install do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        create_pegasus_db
+        create_database CDO.pegasus_db_writer
         RakeUtils.rake 'db:migrate'
         RakeUtils.rake 'seed:migrate'
       end
@@ -216,10 +279,17 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
-  tasks << :blockly if CDO.build_blockly
+  tasks << :blockly_symlink
+  tasks << :apps if CDO.build_apps
+  tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 
 end
 task :install => ['install:all']
+
+task :default do
+  puts 'List of valid commands:'
+  system 'rake -P'
+end

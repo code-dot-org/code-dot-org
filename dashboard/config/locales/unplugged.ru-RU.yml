@@ -49,16 +49,16 @@
         video: Unplug4
       Unplug5:
         title: функции
-        desc: В этом уроке студенты сделают Санкатчер из строки, бусы и особый шарм.
-          Студенты будут следовать ряд повторяющихся шагов, а затем предложено определить
-          определенные наборы «навыки», которые повторяются несколько раз. Как только
-          определены те навыки, они будут вызываться из основной программы и весь
-          красивый процесс создания будут записаны на одном листе бумаги. Окончательная
-          программа будет ориентирована на весь класс, независимо от их типа строки,
-          бусы и Амулеты. Чтобы эффективно разрешить это, студенты должны будут «абстрактный»
-          подробности их специфических материалов и создания расплывчатые термины
-          для индивидуума поставок.  Это использование общих рамок представляет собой
-          прекрасный введение переменных.
+        desc: В этом уроке студенты сделают Санкатчер из строки, бус и особых шарм.
+          Студенты будут следовать ряду повторяющихся шагов, и затем будет предложено
+          определить некоторые наборы «навыков», которые повторяются несколько раз.
+          Как только будут определены эти навыки, они будут вызваны из основной программы
+          и весь прекрасный процесс создания будет записан на одном листе бумаги.
+          Окончательная программа будет ориентирована на весь класс, независимо от
+          их типа строки, бус и шармов. Чтобы эффективно разрешить это, студенты должны
+          будут «абстрактно описать» подробности своих специфических материалов и
+          создать неясные термины индивидуальной принадлежности. Данный процесс представляет
+          собой прекрасное введение в переменные.
         pdfs:
         - unplug5
         video: Unplug5
@@ -187,27 +187,26 @@
         video: C2_digital_footprint
       ComputationalThinking:
         title: Вычислительное мышление
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        desc: Ученики используют шаги вычислительного мышления (разделение, сопоставление
+          с образцами, абстракция, алгоритм), чтобы понять, как играть в игры без
+          инструкций.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Функциональные витражи
         desc: Студенты создадут алгоритм с переменными и функциями (фрагментами кода,
           которые можно использовать снова и снова) для витражей, используя нить и
           бусины.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Написание песен с параметрами
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        desc: Ученики используют понятие припева для изучения того, как передаются
+          параметры (которые позволяют изменять функцию без необходимости её полностью
+          переписывать).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Реальные алгоритмы : Гонки кубиков'
+        desc: Этот урок покажет, как мы используем алгоритмы в нашей повседневной
+          жизни. Ученики должны будут придумать и записать алгоритм для игры в кубики.
         video: C3_dice_race
       Internet:
         title: интернет
@@ -215,7 +214,7 @@
           данных в интернет, используя кусочки бумаги.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: Краудсорсинг
         desc: Студенты используют краудсорсинг, технологию решения проблем в области
           компьютерных наук, для более эффективного решения задачи, чем если бы студент
           работал в одиночку.
@@ -226,32 +225,32 @@
           различать, что такое безопасные и небезопасные способы поделиться онлайн.
       TangramAlgorithms:
         title: Танграм алгоритмы
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        desc: В этом уроке мы узнаем что-то важное об алгоритмах. Простой алгоритм
+          можно использовать во многих разных ситуациях. Чтобы при выполнении алгоритма
+          не было никаких неясностей, надо продумать все его мельчайшие детали.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Конвертные переменные
+        desc: Переменные обеспечивают свободу в программировании. На этом занятии
+          вы узнаете, что такое переменные и как их можно использовать различными
+          способами. Изучите этот материал перед (либо вместе с) уроком по абстракции,
+          чтобы обеспечить лучшее понимание материала.
         video: C4_unplugged_variables
       MadGlibs:
-        title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        title: Пропуски
+        desc: Абстракция является одним из важнейших понятий в информатике. Это упражнение
+          поможет ученикам проанализировать предложения и найти в них отличия, которые
+          можно отбросить. Таким образом, истории превратятся в универсальные шаблоны
+          для создания новых интересных произведений.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Игры с циклами
+        desc: Мы знаем, что циклы помогают выполнять действия несколько раз. В этом
+          упражнении вы научитесь использовать циклы с дополнительными встроенными
+          структурами.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Написание песен, используя параметры
         desc: 'Одним из самых великолепных структур в мире компьютерной науки является
           функция.  Функции (иногда называемые процедурами) - это мини-программы,
           которые можно использовать снова и снова внутри большой программы. Этот
@@ -259,28 +258,51 @@
           в функцию является такой полезной практикой.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Двоичные изображения
+        desc: Хотя многие думают, что двоичная система это только единицы и нули,
+          наши предыдущие упражнения показали, что разнообразную информацию можно
+          представить различными вариантами двоичного представления. В этом упражнении
+          мы пойдём дальше, показав, как компьютер может хранить сложные данные (изображения
+          и цвета) в двоичном формате.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        title: Видеоигры и координатные плоскости
+        desc: Узнайте, как видео игры в которые вы любите играть на самом деле работают
+          при помощи алгебры! Исследуйте как алгебраические выражения и плоскости
+          координат могут помочь нам понять, как работают видео игры и затем начать
+          планировать видео игру, которую создадите вы.
+        video: alg_11_coordinate_plane
       Contracts:
-        title: Контракты
-        desc: Contracts unplugged lesson description
+        title: Контракты, домен, и диапазон
+        desc: Контракты дают нам возможность понимать и обсуждать функции. В этом
+          уроке мы рассмотрим как Контракты могут помочь нам понять новый язык программирования
+          или функцию.
+        video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
+        title: Создание рецепта
+        desc: В последнем этапе студенты писали некоторые очень простые функции -
+          но более сложные функции требуют более вдумчивый подход. Набор правил Структуры
+          кода являются структурированным подходом к написанию функций, включает в
+          себя написание тестов, чтобы убедиться, что функция работает как ожидалось.
+        video: alg_8_design_recipe
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Логика и логические выражения
+        desc: Логические значения являются четвертым и последним типом данных, о которых
+          вы узнаете в этом курсе. В этом упражнении вы узнаете о том, что такое Логические
+          значения, и как они могут помочь нам писать функции, которые мыслят логически
+        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        title: Условные выражения и сложные функции
+        desc: Параметры, которые мы передаем функции вызывают результаты меняющиеся
+          в зависимости от очень жёсткого шаблона. Предположим, мы хотим, чтобы параметры
+          с некоторыми значениями создали результаты с использованием одного шаблона,
+          но другие значения использовали другой шаблон. Это там, где необходимы условные
+          значения...
+        video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Обнаружение Конфликтов и Теорема Пифагора
+        desc: Определение, когда объекты на сенсорном экране, является важным аспектом
+          большинства игр. В этом уроке мы рассмотрим как теорема Пифагора и Формула
+          Расстояния может использоваться для измерения расстояния между двумя точками
+          на плоскости, а затем решить, касаются ли эти две точки (или игровые персонажи).
+        video: alg_16_biggame_collision_detection

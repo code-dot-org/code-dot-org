@@ -1,231 +1,24 @@
--# Create level options object to pass to Blockly
--# use local[:symbol] to access locals passed into this render partial (defaults to false if not present)
-- local = Hash.new(false).merge!(local_assigns.delete_if{|_,v|v.nil?})
-- level, app_options = blockly_options(local_assigns)
-- embed = local[:embed] || @embed
-- level['showFinish'] = local[:embed]
+-# TODO(JL): conditionally load on client
+- if browser.chrome? && browser.version.to_s.to_i == 34
+  :javascript
+    window.dashboard.isChrome34 = true;
 
--if local[:embed]
-  #title
-    %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= level['instructions']
-#blocklyApp
+%div{style: 'display: none;'}= render partial: 'levels/reference_area'
+
+#codeApp
   .loading
   .slow_load
     = t(:slow_loading)
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
-
-- content_for :body_scripts do
-  -# Common scripts and styles
-  - blockly_path = "#{ActionController::Base.asset_host}/blockly/"
-  -# If no param, take default
-  - pretty = params.fetch(:pretty, Rails.configuration.pretty_blockly)
-  %link{href: "#{blockly_path}css/common.css", rel: 'stylesheet', type: 'text/css'}
-  %link{href: "#{blockly_path}css/#{app}.css", rel: 'stylesheet', type: 'text/css'}
-
-  - if @game.uses_droplet?
-    %script{src: "#{blockly_path}js/jsinterpreter/acorn_interpreter.js"}
-    %script{src: "#{blockly_path}js/requirejs/require.js"}
-    %script{src: "#{blockly_path}js/ace/ace.js"}
-    %script{src: "#{blockly_path}js/ace/ext-language_tools.js"}
-    %script{src: "#{blockly_path}js/droplet/droplet-full.min.js"}
-    %link{href: "#{blockly_path}css/droplet/droplet.min.css", rel: 'stylesheet', type: 'text/css'}
-  - else
-    %script{src: "#{blockly_path}js/#{js_locale}/vendor.js"}
-  %script{src: "#{blockly_path}js/#{js_locale}/#{app}#{pretty ? '' : '.min'}.js"}
-
-  - if @autoplay_video_info
-    :javascript
-      showVideoDialog(#{@autoplay_video_info.to_json})
-
-  - send_to_phone = request.location.try(:country_code) == 'US' ||              |
-      (!Rails.env.production? && request.location.try(:country_code) == 'RD') |
-
-  %div{style: "display:none"}= render partial: 'levels/reference_area'
-
+  - if @level.game == Game.netsim
+    %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
+  %script{src: minifiable_shared_path('/shared/js/shared.js')}
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
-    startTiming('Puzzle', script_path, '');
-    var level = #{level.to_json};
-    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
-    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
-    (function fixUpFunctions(node) {
-      if (typeof node !== 'object') return;
-      for (var i in node) {
-        if (/^fn_/.test(i)) {
-          try {
-            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-          } catch (e) { }
-        } else {
-          fixUpFunctions(node[i]);
-        }
-      }
-    })(level);
-    function reverseDirection(token) {
-      if (/left/i.test(token)) {
-        token = 'right';
-      } else if (/right/i.test(token)) {
-        token = 'left';
-      }
-      return token;
-    }
-    function reverseCallout(position) {
-      position = position.split(/\s+/);
-      var a = position[0];
-      var b = position[1];
-      return reverseDirection(a) + reverseDirection(b);
-    }
-    // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-    $(window).on('function_editor_closed', function() {
-      $('.cdo-qtips').qtip('hide');
-    });
-    // See assets/javascripts/sendReport for definition of lastServerResponse
-    var appOptions = {
-      levelId: '#{@level.level_num}',
-      #{ "level_source_id: #{@level_source_id}," if @level_source_id }
-      #{ "send_to_phone_url: '#{@phone_share_url}'," if @phone_share_url }
-      #{ "sendToPhone: true," if send_to_phone}
-      #{ "disableSocialShare: true," if (@current_user && @current_user.under_13?) || @embed}
-      #{ "embed: true," if embed}
-      #{ "scriptId: '#{@script.id}'," if @script }
-      #{ "levelGameName: '#{@level.game.name}'," if @level.game }
-      level: level,
-      #{ "skinId: '#{@level.skin}'," if @level.is_a?(Blockly) }
-      callouts: #{@callouts.to_json} || [],
-      createCallouts: function() {
-        $.fn.qtip.zindex = 500;
-        this.callouts.every(function(callout) {
-          var selector = callout.element_id; // jquery selector.
-          if ($(selector).length === 0 && !callout.on) {
-            return true;
-          }
-
-          var defaultConfig = {
-            content: {
-              text: callout.localized_text,
-              title: {
-                button: $('<div class="tooltip-x-close"/>').append($('<img src="#{asset_path 'x_button.png'}"/>'))
-              }
-            },
-            style: {
-              classes: "",
-              tip: {
-                width: 20,
-                height: 20
-              }
-            },
-            position: {
-              my: "bottom left",
-              at: "top right"
-            },
-            hide: {
-              event: 'click mousedown touchstart'
-            },
-            show: false // don't show on mouseover
-          };
-
-          var customConfig = $.parseJSON(callout.qtip_config);
-          var config = $.extend(true, {}, defaultConfig, customConfig);
-          config.style.classes = config.style.classes.concat(" cdo-qtips");
-
-          // Reverse callouts in RTL mode
-          if (Blockly.RTL) {
-            config.position.my = reverseCallout(config.position.my);
-            config.position.at = reverseCallout(config.position.at);
-            if (config.position.adjust) {
-              config.position.adjust.x *= -1;
-            }
-          }
-
-          if (callout.on) {
-            window.addEventListener(callout.on, function() {
-              if (!callout.seen && $(selector).length > 0) {
-                callout.seen = true;
-                $(selector).qtip(config).qtip('show');
-              }
-            });
-          } else {
-            $(selector).qtip(config).qtip('show');
-          }
-
-          return true;
-        });
-      },
-      onInitialize: function() {
-        this.createCallouts();
-        onInitializeListeners.forEach(function(listener) {
-          listener();
-        });
-        #{render(partial: 'levels/chrome34Fix', formats: :js) if browser.chrome? && browser.version.to_s.to_i == 34}
-      },
-      locale: '#{js_locale}',
-      containerId: 'blocklyApp',
-      baseUrl: '#{blockly_path}',
-      cacheBust: '#{blockly_cache_bust}',
-      onAttempt: function(report) {
-        report.fallbackResponse = #{@fallback_response.to_json};
-        report.callback = '#{@callback}';
-        if (#{@artist_builder.to_json}) {
-          $('#builder-error').text('');
-          ['program', 'name', 'instructions', 'type'].forEach(function(key) {
-            report['level[' + key + ']'] = report[key];
-          });
-          delete report.level;
-          report.onComplete = function(response) {
-            if(lastServerResponse.nextRedirect) {
-              window.location.href = lastServerResponse.nextRedirect;
-            } else {
-              $('#builder-error').text(lastServerResponse.report_error);
-            }
-          };
-        }
-        // Track puzzle attempt event
-        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
-        if (report.pass) {
-          trackEvent('Puzzle', 'Success', script_path, report.attempt);
-          stopTiming('Puzzle', script_path, '');
-        }
-        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-        sendReport(report);
-      },
-      onResetPressed: function() {
-        cancelReport();
-      },
-      onContinue: function() {
-        if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.nextRedirect) {
-          window.location.href = lastServerResponse.nextRedirect;
-        }
-      },
-      backToPreviousLevel: function() {
-        if (lastServerResponse.previousLevelRedirect) {
-          window.location.href = lastServerResponse.previousLevelRedirect;
-        }
-      },
-      Dialog: Dialog,
-      showInstructionsWrapper: function(showInstructions) {
-        var hasInstructions = level.instructions || level.aniGifURL;
-        if (!hasInstructions || this.share || level.skipInstructionsPopup) {
-          return;
-        }
-
-        if ('#{@autoplay_video_info}') {
-          $('.video-modal').on('hidden.bs.modal', function () {
-            showInstructions();
-          });
-        } else {
-          showInstructions();
-        }
-      },
-      hide_source: #{local[:hide_source]},
-      share: #{local[:share]},
-      no_padding: #{local[:no_padding]},
-      position: { blockYCoordinateInterval: 25 },
-      cdoSounds: CDOSounds
-    };
-    $.extend(appOptions, #{app_options.to_json});
-    #{'console.log(appOptions)' unless Rails.env.production?};
-    #{app}Main(appOptions);
+    var appOptions = #{app_options.to_json};
+    appOptions.locale = '#{js_locale}';
+    apps.setupBlockly(appOptions);
+    apps.load(apps.init);
     //]]>

@@ -1,0 +1,26 @@
+name 'sciPD computer models video'
+title 'Using Computer Models in Science'
+css 'unplugged'
+skip_dialog true
+
+
+markdown <<MARKDOWN
+### Using Computer Models in Science
+
+In this lesson, you will build your background knowledge on how computer models are used to conduct science experiments by watching a video, reviewing a list of specifications for an experimental design, and checking your understanding by answering a few quiz questions. 
+
+<iframe width="560" height="315" src="https://youtubeeducation.com/embed/aycgUIfl9DQ" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/6ymzjjtft4eccsh/Using%20computer%20models%20in%20scientific%20inquiry%20-%20SCI%20PD%205_1.mp4)**
+
+<br>
+
+
+<span style="color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;">This </span><a href="https://goo.gl/K1u2vK" style="-webkit-transition: all 0.1s linear 0s; color: #1d9dd9; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; font-stretch: normal; line-height: 1.4em; text-decoration: none; transition: all 0.1s linear 0s;">experimental design form</a><span style="color: #3c3c3c; font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif; font-size: 16px; line-height: 25.6000003814697px;"> can be used to clarify the specifications for an experimental design when using computer model as an experimental test bed.</span>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

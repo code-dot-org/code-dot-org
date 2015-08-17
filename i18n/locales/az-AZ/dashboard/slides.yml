@@ -176,18 +176,16 @@ az:
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: 'Bir "əgər-əks halda" ifadəsi iki şeyin arasında qərar qəbul etməkdir. Gəlin, görək biz dostumuz Cıramqla "əgər-əks halda" ifadəsini necə istifadə edə bilərik.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Bu blok "əgər" bloku kimi görünür, lakin onun altında "əks halda" yazılmış əlavə hissəsi var. Əgər "et" deyən yerə "get" bloku və "əks halda" yazılmış yerə "sola dön" bloku qoysam, bu o deməkdir ki, qabaqda yol varsa, dələ Cırmaq irəli hərəkət edəcək. Əgər qabaqda yol yoxdursa, Cırmaq sola dönəcək.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'O, qərar qəbul edir və bu qərara əsasən iki hərəkətdən birini edir. "Əgər" blokunda da olduğu kimi "əgər-əks halda" bloklarını da "təkrar et" bloklarının içinə yerləşdirə bilərsiniz.'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: İndi isə, gəlin, Cırmağa kömək edək ki, o palıd qozasını ələ keçirsin!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -272,7 +270,7 @@ az:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Salam, mənim adım Lindsidir. Mən model və aktrisayam, həm də özüm tətbiqi proqramlar yazıram. Gəlin, buzun sehri və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək.
       2:
         image: notes/frozen1_2.jpg
         text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
@@ -371,7 +369,7 @@ az:
           In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən və düzəltmək istədiyiniz oyundan asılıdır.
     playlab_events:
       1:
         image: notes/playlab_events_1.png

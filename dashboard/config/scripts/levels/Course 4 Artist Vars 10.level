@@ -20,8 +20,17 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"set_sides\",\r\n  \"element_id\": \"[block-id='12']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}]",
-    "disable_sharing": "false"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"set_sides\",\r\n  \"callout_text\": \"Use this block to set \\\"sides\\\" to the number needed to complete the puzzle.\",\r\n  \"element_id\": \"#callmeout\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "failure_message_override": "Make sure you use the sides variable!",
+    "markdown_instructions": "Here's an algorithm that draws a triangle out of smaller triangles. Can you modify it so that it uses the `sides` variable to draw each triangle? \r\n\r\n</br>\r\nLook through the code, and every time you see the number 3, replace it with your `sides` variable. Remember to use the `set sides` block."
   }
 }]]></config>
   <blocks>
@@ -142,7 +151,7 @@
         <block type="math_arithmetic" inline="true">
           <title name="OP">ADD</title>
         </block>
-        <block type="variables_set" inline="false">
+        <block type="variables_set" inline="false" id="callmeout">
           <title name="VAR">sides</title>
           <value name="VALUE">
             <block type="math_number">

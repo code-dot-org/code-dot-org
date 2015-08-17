@@ -1,0 +1,16 @@
+name 'sciPD framework 2'
+title 'Multiple Choice - Computational Thinking 2'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
+
+question 'Comparing outcomes with what is known about the real world falls under which pillar of computational thinking?'
+wrong 'abstraction'
+wrong 'automation'
+right 'analysis'
+wrong 'algorithms'
+
+markdown <<MARKDOWN
+
+MARKDOWN

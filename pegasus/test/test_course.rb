@@ -31,7 +31,7 @@ class CourseTest < Minitest::Unit::TestCase
     end
 
     it 'should get all lessons' do
-      assert_equal(17, @course.get_lessons.count)
+      assert_equal(18, @course.get_lessons.count)
       assert(@course.get_lessons.first.is_a? Lesson)
     end
 

@@ -48,7 +48,7 @@
         edit-code:
           desc: Redigera Kod (beta)
           MazeEC: Steg 1
-          Webapp: Steg 2
+          Applab: Steg 2
           ArtistEC: Steg 3
           StudioEC: Steg 4
         events:
@@ -103,6 +103,8 @@
         ArtistEC: Konstnären
         TextMatch: Textmatchning
         StudioEC: Play Lab
+        Applab: App Lab
+        NetSim: Internet Simulator
     trophy:
       name:
         Bronze: Brons
@@ -319,9 +321,9 @@
           (Tips: Klicka på stjärnan för att lägga till en ruta till en funktion)'
         turtle_3_7: Lägg till en 'input' kallad 'längd' för att 'rita ett hus' och
           bygg ett stort hus till elefanten( med sidor som är 150 pixlar långa)
-        turtle_3_8: Här är alla blocken från förra pusslet.  Ändra "rita ett hus"
-          så att jag hamnar i det nedre högra hörnet efter att jag ritat nytt hus.
-          Använd den här ändrade funktionen för att rita tre hus.
+        turtle_3_8: Ändra "rita ett hus" så jag hamnar i det nedre högra hörnet efter
+          att ha ritat ett nytt hus. Använd denna modifierade funktion för att rita
+          tre hus.
         turtle_3_9: Kan du återskapa funktionen "rita ett hus" utan hjälp? Prova.
           Rita sedan en rad av hus.
         turtle_3_10: Du har lärt dig mycket! Använd nu  det för att rita vad du vill.
@@ -418,8 +420,9 @@
         flappy_8: Du kan ange grafik när som helst, inte bara när spelet startar.
           Prova att ange en 'slumpmässig scen' när andra händelser inträffar, exempelvis
           när Flappy passerar ett hinder.
-        flappy_9: För att röra till det så prova att inte avsluta spelet när Flappy
-          slår i ett hinder eller i marken, utan sätt tillbaka poängsumman till 0.
+        flappy_9: För att blanda ihop saker,  i stället för att spelet slutar när
+          du slår i ett hinder så prova att sätta tillbaks poänginställningen  till
+          0.
         flappy_11: Skapa ditt eget Flappy spel. Du kan ändra all grafik och alla regler,
           även gravitationen. När du är klar, klicka på Slutför för att låta vänner
           prova ditt spel på sina telefoner.
@@ -559,7 +562,7 @@
           BELOW(nedanför)
         maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan
           för att stava ordet STORY(berättelse)
-        webapp_ec_simple: Skapa din webapp med hjälp av createHtmlBlock.
+        applab_ec_simple: Skapa din app med blocken i verktygslådan.
         turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom
           att välja det i nya "pennfärg" blocket.'
         turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer:
@@ -567,130 +570,6 @@
           blocket. Ha det så kul!'
         studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
-    levelbuilder:
-      frozen line:
-        instructions: Hej! Jag är Elsa av Arendal. Hjälp mig göra en rak linje.
-      frozen perpendicular:
-        instructions: Nu ska vi se om vi kan göra två linjer i 90 graders vinkel mot
-          varandra. Du kommer att behöva använda blocken "Sväng" och "Gå".
-      frozen square iterative:
-        instructions: Vi verkar vara halvvägs med att göra en kvadrat. Låt oss sätta
-          ihop 4 linjer så att det blir en kvadrat.
-      frozen square loop:
-        instructions: Hej, jag är Anna av Arendal! Låt oss göra en kvadrat med hjälp
-          av blocket "Upprepa", så att vi kan använda färre block. Hur många gånger
-          (???) ska "Upprepa" blocket repetera blocken inuti för att det ska bli en
-          kvadrat?
-      frozen square loop 3x:
-        instructions: Låt oss göra tre kvadrater, och svänga efter varje kvadrat.
-          Se till att svänga 120 grader före varje ny kvadrat.
-      frozen square snowflake:
-        instructions: Kan du skapa en snöflinga genom att använda "Upprepa" blocket
-          för att göra 10 kvadrater och "Sväng" blocket för att svänga 36 grader mellan
-          varje kvadrat?
-      frozen cross:
-        instructions: Använd blocket "Upprepa" för att skapa ett plustecken. Har du
-          märkt att Elsa kan gå både framåt och bakåt?
-      frozen cross rotate:
-        instructions: Prova nu att upprepa det 10 gånger. Hur många grader behöver
-          du svänga mellan varje linje?
-      frozen cross rotate dense:
-        instructions: 'Låt oss upprepa det 90 gånger! Hur många gånger går 90 på 360?
-          Tips: Det är en riktigt låg siffra.'
-      frozen diamond:
-        instructions: 'Vi skapar ett parallellogram. Det är som en kvadrat fast den
-          har andra vinklar: 60 och 120 graders vinklar istället för 90 graders vinklar.'
-      frozen diamond mini snowflake:
-        instructions: Visste du att varenda snöflinga har en helt unik form? Låt oss
-          skapa en ny snöflinga genom att använda "Upprepa" blocket och göra ett parallellogram
-          4 gånger, och svänga höger 90 grader mellan varje parallellogram.
-      frozen diamond snowflake:
-        instructions: Nu provar vi att skapa en ny snöflinga genom att använda upprepa
-          blocket för att göra 10 parallellogram och svänga höger med 36 grader mellan
-          varje.
-      frozen circle:
-        instructions: En cirkel är en speciell form. Kan du tänka ut vad frågetecknen
-          behöver ersättas med för siffra för att det ska bli en cirkel?
-      frozen circle function:
-        instructions: Använd det nya "skapa en cirkel" blocket för att göra 10 cirklar
-          som överlappar varandra. Glöm inte att hoppa framåt mellan cirklarna.
-      frozen circle function in circle:
-        instructions: Låt oss nu skapa 20 cirklar som överlappar varandra, och svänga
-          18 grader mellan varje cirkel.
-      frozen circle function with parameter:
-        instructions: Här är ett "skapa en cirkel" block som kan göra cirklar i olika
-          storlekar. Kan du använda det för att skapa en liten cirkel med storlek
-          5 och en större cirkel med storlek 10?
-      frozen snowflower:
-        instructions: Enkla former kan kombineras och bli avancerade snömönster. Kan
-          du gör ett mönster genom att upprepa 5 cirklar med storlek 5 och 5 cirklar
-          med storlek 10?
-      frozen snowflake branch:
-        instructions: Prova att använda blocket "skapa en snöflinge-gren" för att
-          skapa tre grenar, som blir början på en snöflinga.
-      frozen snowflake full:
-        instructions: Prova nu att upprepa det 8 gånger, så att det blir en vacker
-          snöflinga!
-      frozen freeplay:
-        instructions: Du har blivit en konstnärlig mästare! Skapa ett vinterlandskap
-          och dela med dina vänner.
-      scrat 16:
-        instructions: Ekollon! Ekollon! Ekollon! Använd ett "om" block för att få
-          mig dit med minsta antalet block.
-      scrat 17:
-        instructions: OK, låt oss göra att igen för att träna - detta inte är så olikt,
-          men se upp för väggen!
-      scrat 18:
-        instructions: '"om-annars" blocken kontrollerar ett villkor, och utför sedan
-          en sak eller en annan. För att få mig till ekollonet, försök att använda
-          detta nya block.'
-      scrat 19:
-        instructions: Mer träning med "Om/annars"-blocket, kan du få det rätt på första
-          försöket?
-      scrat 20:
-        instructions: Kan du lägga till bara 3 block för att hjälpa mig att lösa en
-          mer komplex labyrint? Om du gör det rätt, kan jag gå vilken kurvig väg som
-          helst oavsett längd. Skynda! Isen smälter!
-      Standalone_Artist_1:
-        instructions: Välkommen till Artist! Först och främst, låt oss försöka göra
-          en enkel kvadrat med 'sväng höger' block och 'gå framåt' blocket. Varje
-          sida ska vara 100 bildpunkter lång.
-      Standalone_Artist_2:
-        instructions: Rita denna diamant med 120 och 60 graders vinklar och 150 pixlar
-          långa sidor.
-      Standalone_Artist_3:
-        instructions: Kan du rita denna hexagon med 100 pixlar långa sidor och 60
-          graders vinklar?
-      Standalone_Artist_4:
-        instructions: Nu har du fått ett nytt block att leka med, slingan(loop). Den
-          upprepar en uppsättning kommandon. Vad händer om du upprepar dessa kommandon
-          6 gånger?
-      Standalone_Artist_5:
-        instructions: Hur många gånger behöver du denna diamant loopa för att rita
-          en blomma?
-      Standalone_Artist_5.5:
-        instructions: 'Lägg märke till hur vi förenklat diamant koden genom att köra
-          den i en loop. Du kan upprepa hela sekvensen 12 gånger för att  rita blomman.
-          Tips: Du måste svänga 30 grader efter din diamant-loop så du inte ritar
-          över samma diamant.'
-      Standalone_Artist_6:
-        instructions: 'Loopa den här hexagon-koden 6 gånger för att skapa dess utseende.
-          Hur många grader måste du svänga varje gång? Tips: dividera antalet grader
-          i en cirkel med antalet gånger du loopar.'
-      Standalone_Artist_7:
-        instructions: 'En funktion är ett annat programmerings- verktyg som hjälper
-          dig att undvika att upprepa dig själv. Denna funktion ritar en blomma, så
-          du kan använda den varje gång du vill rita en blomma. Använd detta och det
-          nya hoppa-blocket för att rita dessa blommor. Tips: Blommorna är 150 pixlar
-          från varandra'
-      Standalone_Artist_8:
-        instructions: Här är en funktion som kallas "Rita en form" som vi har programmerat
-          till att rita hexagoner. Kör koden för att se vad den gör och experimentera
-          med funktionen för att se vad som händer. Kan du göra så att denna funktion
-          ritar ett mönster av kvadrater, trianglar eller oktagoner?
-      Standalone_Artist_9:
-        instructions: Gå vidare nu och rita vilken bild du vill! Du har även en tom
-          funktion som du kan göra vad du vill med!
     video:
       name:
         maze_intro: Labyrint Introduktion
@@ -750,6 +629,7 @@
         C2_relay_programming: Relä programmering
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
+        C2_digital_footprint_v2: Ditt digitala fotavtryck
         C3_maze_level_4: 'Labyrint: slingor'
         C3_artist_intro: Konstnär Introduktion
         C3_artist_functions: Artist Funktioner
@@ -769,18 +649,19 @@
         C3_functional_suncatchers: Funktionella Solfångare
         C3_songwriting_with_parameters: Låtskrivande Med parametrar
         C4_intro: Introduktion
+        C4_loops_zombie: Loopar
         C4_bee_conditional: Bee Villkorssatser
-        C4_variables_artist: Variables - Artist
-        C4_variables_playlab: Variables - Play Lab
+        C4_variables_artist: Variabler - Konstnär
+        C4_variables_playlab: Variabler - Play Lab
         C4_for_loops: '''För'' loopar'
-        C4_math_artist: Programming the Artist with Math
+        C4_math_artist: Programmera Konstnären med matematik
         C4_function_edit: Redigera funktioner
         C4_function_create: Skapa funktioner
         C4_function_parameters: Funktioner med parametrar
         C4_conditionals: Villkor
-        C4_unplugged_algorithms: Algorithms with Tangrams
+        C4_unplugged_algorithms: Algoritmer med Tangram
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variabler i kuvert
         C4_unplugged_forloops: '''För'' loopar'
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
@@ -788,8 +669,39 @@
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
         playlab_intro: Introduktion till Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
+        playlab_events: Play Lab händelser
+        playlab_repeat_forever: Play Lab Upprepa för evigt
+        tutorial_puzzle_challenge: Handledning Pussel Utmaning
+        infinity_playlab_intro: Play Lab - introduktion
+        infinity_playlab_events: Play Lab - Händelser
+        infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
+        csp_concept_rgb: Lite om pixlar
+        csp_pixelation_color_1: Färg pixelerings widget - Del1
+        csp_pixelation_color_2: Färg pixelerings widget - Del2
+        csp_pixelation_color_3: Färg pixelerings widget - Del3
+        csp_pixelation_bw: Svart och vit pixelerings widget
+        csp_U1L14_tipstricks: Enhet 1 lektion 14 Lärare Tips & Tricks
+        csp_textcompression: Text compression widget
+        csp_internetsimulator_1: Internet Simulator - Part 1
+        csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
+        alg_1_intro: CS in Algebra - Introduction
+        alg_2_eval_block: CS in Algebra - Evaluation Blocks
+        alg_3_pemdas: CS in Algebra - Order of Operations
+        alg_4_data_types: CS in Algebra - Data Types
+        alg_5_contracts: CS in Algebra - Contracts
+        alg_6_variables: CS in Algebra - Variables
+        alg_7_function: CS in Algebra - Functions
+        alg_8_design_recipe: CS in Algebra - Design Recipe
+        alg_9_booleans: CS in Algebra - Booleans
+        alg_10_conditionals: CS in Algebra - Conditionals
+        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
+        alg_12_biggame_variables: CS in Algebra - Big Game Variables
+        alg_13_biggame_animation: CS in Algebra - Big Game Animation
+        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
+        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
+        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
+        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
     callout:
       text:
         drag_blocks: Dra ett "flytta" block och fäst det under det andra blocket
@@ -838,7 +750,7 @@
           till slingan.
         edit_get_nectar: Använd den här knappen om du vill redigera funktionen och
           ändra den riktning i vilken biet kommer att vända sig för att få nektar.
-        logic_category: Öppna den "Logik" menyn för att hitta "om/annars" blocket.
+        logic_category: Öppna "Logik"-menyn för att hitta "om/annars" blocket.
         length_parameter: Kan du uppdatera den här funktionen så att den använder
           parametern "längd"?
         frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
@@ -867,21 +779,27 @@
         change_here: Gör din ändring här
         write_draw_square_function: Dra block från verktygslådan hit för  att rita
           en fyrkant
-        write_draw_triangle_function: Drag blocks from the toolbox into here that
-          draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add,
-          and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
+        write_draw_triangle_function: Dra block från verktygslådan hit för att rita
+          en triangel
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din
+          funktion
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg
+          till och sedan dra den till din funktionsdefinition
+        fill_in_actor: Fyll i ??? med nummer som motsvarar varje skådespelare (1,
+          2 och 3)
+        repeat: Sätt block inuti loopen för att upprepa kommandon
+        if_bee_nectar: Använda "Om"-blocket för att besluta om biet bör få nektar
+        if_else_bee: Använd "om/annars" blocket så att biet får nektar från en blomma,
+          och gör honung om det inte är en blomma
+        repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för
+          göra en hel cirkel
+        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
         arrows_move_actor: Använd piltangenterna för att flytta figuren
         right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
         name_function: Skriv namnet på din funktion här
+        Infinity_move_right_runbutton: Lägg till flytta- blocket här
+        Infinity_move_directions_callout: Vilket block kommer att flytta Baymax  uppåt
+          när du trycker på uppåt-pilen?
+        Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
+        Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
+        Infinity_repeat_callout: Placera flytta - block  här inne

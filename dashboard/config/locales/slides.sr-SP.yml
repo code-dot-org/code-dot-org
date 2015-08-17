@@ -44,8 +44,8 @@
           ће се померити за један корак у лабиринту.
       11:
         image: белешке/хоц1_11.jpg
-        text: Како би извршили више од једне акције, можете повући више блокова на
-          ваш радни простори и спојити их. Птица ће извршити наредбе од врха ка дну.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: белешке/хоц1_12.jpg
         text: Ако покренете програм и желите га поправити и покушати поново, притисните
@@ -215,24 +215,23 @@
     if_else:
       1:
         image: белешке/хоц5_1.jpg
-        text: Здраво, моје име је Салони. Користим компјутерске науке како бих помогла
-          при решавању проблема у здравству и медицини. Хајде да учимо о "Ако-у супротном"
-          блоку. Сличан је "ако" блоку, али има и додатни део на крају који гласи
-          "у супротном".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: белешке/хоц5_2.jpg
-        text: Ако поставим "крени напред" блок на место где пише "уради" а "скрени
-          лево" блок где пише "у супротном" то значи да ће зомби бирати између ове
-          две опције. Ако постоји стаза напред, зомби ће се кретати право, а у супротном
-          (ако не постоји стаза напред), зомби ће скренути лево.
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: белешке/хоц5_3.jpg
-        text: Као и код "АКО" блока, можемо ставити "АКО - У СУПРОТНОМ" блок унутар
-          "понови" блокова тако да зомби наставља да се креће, а "АКО - У СУПРОТНОМ"
-          блок ће наставити да проверава да ли постоји скретање.
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: белешке/хоц5_4.jpg
-        text: А сада, пошаљи те зомбије тамо где им је место!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

@@ -1,6 +1,7 @@
 name 'K-1 Big Event Match 1'
 title 'Matching'
 description 'Match the button combination to the dance moves.'
+banner 'Match the button combination to the dance moves.'
 content1 '/script_assets/k_1_images/unplugged_images/big_event_1_desc.png'
 height '100'
 

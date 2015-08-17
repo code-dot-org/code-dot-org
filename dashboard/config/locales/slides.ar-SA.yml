@@ -50,8 +50,8 @@
       11:
         image: |
           notes/hoc1_11.jpg
-        text: للقيام بأكثر من اداء واحد ، يمكنك سحب الكثير من القطع إلى مساحة العمل
-          البيضاء وربطهم معاً. بحيث سوف يقوم الطير بنفيذ الأوامر من الأعلى إلى الأسفل.
+        text: To do more than one action, you can drag many blocks to your workspace
+          and attach them together. The bird will do the commands from top to bottom.
       12:
         image: |
           notes/hoc1_12.jpg
@@ -113,37 +113,37 @@
           يولد هذا الحدث، وهناك بعض التعليمات البرمجية التي تقرر ما يجب القيام به
           عند حدوث الحدث.
       3:
-        image: الملاحظات/flappy03.jpg
+        image: notes/flappy03.jpg
         text: 'على سبيل المثال، يمكن أن يكون لديك معالج الحدث الذي يقول "عندما يتم
           النقر على الماوس، تشغيل صوت" '
       4:
-        image: الملاحظات/flappy04.jpg
+        image: notes/flappy04.jpg
         text: هل سمعت من أي وقت مضى من فلابيبيرد اللعبة؟ باستخدام معالجات الأحداث،
           نحن ذاهبون للتعرف إلى البرنامج الخاص بنا إصدار مخصص من فلابيبيرد!
       5:
-        image: الملاحظات/flappy05.jpg
+        image: notes/flappy05.jpg
         text: التعليمات البرمجية التي سوف تكتب ينطوي على سحب وإسقاط القطع التي تمثل
           أوامر لجهاز الكمبيوتر. تحت غطاء محرك السيارة، يمثل كل من هذه الكتل البرمجية
           الحقيقية.
       6:
-        image: الملاحظات/flappy06.jpg
+        image: notes/flappy06.jpg
         text: 'إذا كنت نلقي نظرة على مساحة العمل، وهناك بعض الكتل الخضراء التي تمتلئ
           لك--هذه "معالجات الأحداث" '
       7:
-        image: الملاحظات/flappy07.jpg
+        image: notes/flappy07.jpg
         text: إذا كنت تريد الطيور إلى رفرف عند النقر بالماوس، يمكنك القيام بذلك عن
           طريق ربط كتلة "رفرف" إلى معالج الحدث المناسب، والآن في اللعبة الخاصة بك
           كلما قمت بالنقر فوق الماوس، الطيور سوف رفرف.
       8:
-        image: الملاحظات/flappy08.jpg
+        image: notes/flappy08.jpg
         text: في كل لغز هذا النشاط سوف نقدم أنواع جديدة من الأحداث ككتل خضراء على
           مساحة العمل، ويمكنك أن تقرر القطع المناسبة لإضافة ردا على تلك الأحداث.
       9:
-        image: الملاحظات/flappy09.jpg
+        image: notes/flappy09.jpg
         text: عند ظهور القائمة المنسدلة السهم بمثل هذا، وهذا يعني يمكنك تغيير الإعدادات--مثل
           ما الصوت للعب عندما يضرب flappy الأرض.
       10:
-        image: الملاحظات/flappy10.jpg
+        image: notes/flappy10.jpg
         text: عليك أن تكون قادراً على إنشاء اللعبة الخاصة بك ومشاركتها مع أصدقائك
           في اللغز النهائي. استمتع!
     loop_times:
@@ -241,26 +241,26 @@
       1:
         image: |
           notes/hoc5_1.jpg
-        text: مرحبا، إسمي سالوني. يمكنني استخدام "علوم الكمبيوتر" للمساعدة في حل المشاكل
-          الصحية والطبية. دعنا نتعلم عن قطعة "أذا والا". انها تشبه قطعة "اذا"، ولكن
-          قد أضيف جزءً إضافياً في النهاية و هى كلمة "والا".
+        text: Hi, my name is Saloni. I use computer science to help solve problems
+          in health and medicine. Let's learn about the "if else" block. It looks
+          like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: |
           notes/hoc5_2.jpg
-        text: إذا وضعت قطعة "تقدم للامام" في موقع الحدث حيث تقول القطعة "نفذ" و "اتجه
-          لليسار" حيث تقول "والا" وهذا يعني أن الزومبي سيختار بين خيارين أثنين. 'اذا'
-          كان هناك طريق سالكا، سوف يقوم الزومبي يالتقدم إلى الأمام، وإلا  (لن يكون
-          طرق سالكة)، وسوف يتجه الزومبي يساراً .
+        text: If I put a "move forward" block in the spot where it says "do" and a
+          "turn left" block where it says "else" that means that the zombie will choose
+          between 2 options. IF there is a path ahead, the zombie will move forward,
+          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: |
           notes/hoc5_3.jpg
-        text: تماما مثل قطعة "اذا"، يمكننا أن نضع قطع "اذا والا" داخل قطع "أكرر" بحيث
-          تستمر الزومبي بمتابعة التقدم وسوف تستمر قطعة "اذا والا" من التحقق إذا كان
-          هناك أي مكان أخر للإنعطاف .
+        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
+          blocks so that the zombie keeps moving and the "if else" block will keep
+          checking if there's somewhere to turn.
       4:
         image: |
           notes/hoc5_4.jpg
-        text: الآن، وصل هؤلاء الزومبي إلى حيث ينتمون!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg

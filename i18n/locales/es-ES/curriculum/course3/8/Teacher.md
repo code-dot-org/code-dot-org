@@ -4,19 +4,19 @@ title: "Maze: Conditionals" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>8, :title=> 'Bee: Conditionals', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 3', :lesson=>8, :title=> 'Maze: Conditionals', :unplugged=>false, :time=>30) %>
 
-[content]
+[contenido]
 
 [together]
 
-## Lesson Overview
+## Contenido de la Lección
 
 Using the Maze environment, students write programs using conditionals.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started**
 
@@ -31,9 +31,9 @@ Using the Maze environment, students write programs using conditionals.
 
 [Extension Activities](#Extended)
 
-[/summary]
+[/resumen]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -44,7 +44,7 @@ Using the Maze environment, students write programs using conditionals.
   * Nest conditionals to analyze multiple value conditions using if, else if, else logic
   * Write functions that execute nested conditionals
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -54,7 +54,7 @@ Using the Maze environment, students write programs using conditionals.
 
 Similar to the last previous conditionals stage, only this time we're helping the zombie reach the sunflower.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -64,7 +64,7 @@ Similar to the last previous conditionals stage, only this time we're helping th
 
 The conditionals in this stage pertain to whether or not there is a path available to the right, left, or ahead. If there is chomper in the way, the conditional will report that there is no path available in that direction.
 
-[/together]
+[/juntos]
 
 <!--(this is left in here as an example of how to include an image in Markdown)
 ![](binaryphoto.png) -->
@@ -100,7 +100,7 @@ The conditionals in this stage pertain to whether or not there is a path availab
       * Did any two programs return the same answer?
       * Did any return something different?
 
-[/together]
+[/juntos]
 
 [standards]
 

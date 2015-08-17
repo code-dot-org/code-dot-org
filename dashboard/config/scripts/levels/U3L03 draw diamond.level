@@ -1,0 +1,61 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-01T22:53:38.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use any and all of the functions you wrote previously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE: this is another tricky one.  The 4 sides of the diamond are made by drawing three steps with other movement made between calls.  HINT: you might want to make another function that handles drawing one side of the diamond. ",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "300",
+    "app_height": "300",
+    "slider_speed": "0.1",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-DrawDiamond.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

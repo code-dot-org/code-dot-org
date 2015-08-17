@@ -56,7 +56,7 @@
         நிறைவு செய்ய தயவுசெய்து உமது மின்னஞ்சலிலுள்ள உறுதிப்படுத்தும் இணைப்பை சொடுக்கவும்.
       updated: நீங்கள் உங்கள் கணக்கை வெற்றிகரமாக புதுப்பித்தீர்கள்.
     sessions:
-      signed_in: வெற்றிகரமாக உள்நுளைந்தீர்கள்.
+      signed_in: ''
       signed_out: வெற்றிகரமாக வெளியேறினீர்கள்.
     unlocks:
       send_instructions: உங்கள் கணக்கை எவ்வாறு திறப்பது என்பது பற்றிய நெறி முறைகளுடன்
@@ -76,3 +76,25 @@
       not_saved:
         one: '%{resource} சேமிக்கப்படுவதிலிருந்து 1 பிழை தடை விதித்துள்ளது:'
         other: '%{resource} சேமிக்கப்படுவதிலிருந்து %{count} பிழைகள் தடை விதித்துள்ளது:'
+    invitations:
+      send_instructions: An invitation email has been sent to %{email}.
+      invitation_token_invalid: The invitation token provided is not valid!
+      updated: Your password was set successfully. You are now signed in.
+      no_invitations_remaining: No invitations remaining
+      invitation_removed: Your invitation was removed.
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      edit:
+        header: Set your password
+        submit_button: Set my password
+    mailer:
+      invitation_instructions:
+        subject: Invitation instructions
+        hello: Hello %{email}
+        someone_invited_you: Someone has invited you to %{url}, you can accept it
+          through the link below.
+        accept: Accept invitation
+        ignore: If you don't want to accept the invitation, please ignore this email.<br
+          />Your account won't be created until you access the link above and set
+          your password.

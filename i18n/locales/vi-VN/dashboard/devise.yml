@@ -1,7 +1,7 @@
 vi:
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: Địa chỉ email của bạn đã được xác nhận thành công.
       send_instructions: Bạn sẽ nhận được một email hướng dẫn xác nhận tài khoản của bạn trong vài phút nữa.
       send_paranoid_instructions: Nếu địa chỉ email của bạn có trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một email hướng dẫn cách xác nhận tài khoản của bạn trong vài phút.
     failure:
@@ -16,16 +16,16 @@ vi:
       unconfirmed: Bạn phải xác nhận tài khoản của bạn trước khi tiếp tục.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: hướng dẫn xác nhận Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: hướng dẫn đặt lại mật khẩu code.org
       unlock_instructions:
         subject: Hướng dẫn mở khóa
     omniauth_callbacks:
-      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
+      failure: 'không thể xác nhận bạn từ %{kind} vì %{reason}.'
       success: 'Xác thực thành công từ tài khoản %{kind}.'
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      no_token: bạn không trể truy cập vào trang này nếu không đến từ một email khôi phục mật khẩu. nếu bạn không đến từ một email khôi phục mật khẩu, hãy chắc chắn rằng bạn sử dụng URL được cung cấp đầy đủ.
       send_instructions: Bạn sẽ nhận được một email hướng dẫn đặt lại mật khẩu của bạn trong vài phút.
       send_paranoid_instructions: Nếu địa chỉ email của bạn có trong cơ sở dữ liệu của chúng tôi, bạn sẽ nhận được một liên kết phục hồi mật khẩu qua email của bạn trong vài phút.
       updated: Mật khẩu được thay đổi thành công. Đã đăng nhập.
@@ -51,7 +51,28 @@ vi:
       confirmation_period_expired: 'cần được xác nhận nhận trong khoảng %{period}, xin vui lòng yêu cầu cái mới'
       expired: đã hết hạn, xin vui lòng yêu cầu cái mới
       not_found: không tìm thấy
-      not_locked: was not locked
+      not_locked: đã không bị khóa
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '1 lỗi cấm %{resource} này được lưu:'
+        other: '%{count} lỗi cấm %{resource} này được lưu:'
+    invitations:
+      send_instructions: |
+        một thư mời đã được gửi tới %{email}.
+        
+      invitation_token_invalid: Dấu hiệu lời mời được cung cấp không hợp lệ!
+      updated: mật khẩu đã đặt lại thành công. bạn đã đăng nhập.
+      no_invitations_remaining: không có lời mời còn lại
+      invitation_removed: lời mời của bạn đã được gỡ bỏ.
+      new:
+        header: gửi lời mời
+        submit_button: gửi một lời mời
+      edit:
+        header: đặt lại mật khẩu của bạn
+        submit_button: đặt lại mật khẩu của tôi
+    mailer:
+      invitation_instructions:
+        subject: hướng đẫn mời
+        hello: 'xin chào %{email}'
+        someone_invited_you: 'ai đó đã mời bạn tới %{url}, bạn có thể chấp nhận nó qua đường link dưới đây.'
+        accept: chấp nhận lời mời
+        ignore: 'nếu bạn không muốn chấp nhận lời mời, hãy bỏ qua thư này.<br/> tài khoản của bạn sẽ không được tạo cho đến khi bạn truy cập đường link trên và đặt lại mật khẩu.'

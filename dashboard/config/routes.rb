@@ -1,4 +1,13 @@
+module OPS
+  API = 'api' unless defined? API
+  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
+end
+
 Dashboard::Application.routes.draw do
+  def redirect_to_teacher_dashboard
+    redirect CDO.code_org_url('/teacher-dashboard')
+  end
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -13,10 +22,11 @@ Dashboard::Application.routes.draw do
       get 'embed/:key', to: 'videos#embed', as: 'embed'
     end
   end
-  resources :concepts
-  resources :activities
 
-  resources :sections do
+  get 'sections/new', to: redirect_to_teacher_dashboard
+  get 'sections/:id/edit', to: redirect_to_teacher_dashboard
+
+  resources :sections, only: [:show] do
     member do
       post 'log_in'
     end
@@ -58,99 +68,106 @@ Dashboard::Application.routes.draw do
     omniauth_callbacks: 'omniauth_callbacks',
     registrations: 'registrations',
     confirmations: 'confirmations',
-    sessions: 'sessions'
+    sessions: 'sessions',
+    passwords: 'passwords'
   }
-
-  post '/signup_check/username', to: 'home#check_username'
+  get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/admin/debug', to: 'home#debug'
-  get '/home/gallery_activites', to: 'home#gallery_activities'
+  get '/home/:action', controller: 'home'
+
+  resources :p, path: '/p/', only: [:index] do
+    collection do
+      ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
+      end
+      get '/', to: redirect('/projects')
+    end
+  end
+
+  resources :projects, path: '/projects/', only: [:index] do
+    collection do
+      ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        get "/#{key}", to: 'projects#edit', key: key.to_s, as: "#{key}_project"
+        get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+        get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
+        get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
+        get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+      end
+      get '/angular', to: 'projects#angular'
+    end
+  end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
-  
-  get '/lang/it', to: 'home#set_locale', as: 'lang/it', locale: 'it-IT'
+
+  # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', return_to: '/flappy/1'
   get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', return_to: '/s/playlab/stage/1/puzzle/1'
   get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', return_to: '/s/artist/stage/1/puzzle/1'
 
+  # /lang/xx shortcut for all routes
+  get '/lang/:locale', to: 'home#set_locale', return_to: '/'
+  get '*i18npath/lang/:locale', to: 'home#set_locale'
+
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     get 'embed_blocks/:block_type', to: 'levels#embed_blocks', as: 'embed_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'clone', to: 'levels#clone'
   end
 
-  resources :games
-
-  get 'builder', to: 'levels#builder'
-  post 'upload_maze_level', to: 'levels#upload_maze_level'
-  post 'create_custom', to: 'levels#create_custom'
-  get 'levels/new', to: 'levels#new'
+  post 'level_assets/upload', to: 'level_assets#upload'
 
   resources :scripts, path: '/s/' do
-    post 'sort', to: 'scripts#sort'
+    # /s/xxx/reset
+    get 'reset', to: 'script_levels#reset'
+    get 'next', to: 'script_levels#next'
+
 
     # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false do
-      get 'solution', to: 'script_levels#solution'
-    end
-
-    # /s/xxx/reset
-    get 'reset', to: 'script_levels#show', reset: true
+    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
 
     # /s/xxx/puzzle/yyy
     get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [:show], path: "/stage", format: false do
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
-      end
+      resources :script_levels, only: [:show], path: "/puzzle", format: false
     end
   end
 
-  get '/beta', to: 'home#beta', as: 'beta'
+  get '/beta', to: redirect('/')
 
   get 'reset_session', to: 'application#reset_session_endpoint'
 
-  # duplicate routes are for testing -- ActionController::TestCase calls to_s on all params
-  get '/hoc/reset', to: 'script_levels#show', script_id: Script::HOC_NAME, reset:true, as: 'hoc_reset'
+  get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
 
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID, as: 'k8intro_chapter', format: false
-  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_ID.to_s, format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID, as: 'editcode_chapter', format: false
-  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_ID.to_s, format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID, as: 'twenty_fourteen_chapter', format: false
-  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_LEVELS_ID.to_s, format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID, as: 'builder_chapter', format: false
-  get '/builder/:chapter', to: 'script_levels#show', script_id: Script::BUILDER_ID.to_s, format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID, as: 'flappy_chapter', format: false
-  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_ID.to_s, format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID, as: 'jigsaw_chapter', format: false
-  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_ID.to_s, format: false
+  get '/k8intro/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_HOUR_NAME, as: 'k8intro_chapter', format: false
+  get '/editcode/:chapter', to: 'script_levels#show', script_id: Script::EDIT_CODE_NAME, as: 'editcode_chapter', format: false
+  get '/2014/:chapter', to: 'script_levels#show', script_id: Script::TWENTY_FOURTEEN_NAME, as: 'twenty_fourteen_chapter', format: false
+  get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
+  get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
-
-  resources :followers, only: [:create, :index]
-  get '/followers/:teacher_user_id/accept', to: 'followers#accept', as: 'follower_accept'
-  post '/followers/create_student', to: 'followers#create_student', as: 'create_student'
-  get '/followers/manage', to: 'followers#manage', as: 'manage_followers'
-  get '/followers/sections', to: 'followers#sections', as: 'sections_followers'
-
-  # change student password
-  get '/followers/change_password/:user_id', to: 'followers#student_edit_password', as: 'student_edit_password'
-  post '/followers/save_password', to: 'followers#student_update_password', as: 'student_update_password'
-
-  post '/followers/add_to_section', to: 'followers#add_to_section', as: 'add_to_section'
+  resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
+
+  # old teacher dashboard should redirect to new teacher dashboard
+  get '/followers', to: redirect_to_teacher_dashboard
+  get '/followers/:action', to: redirect_to_teacher_dashboard
+
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join/:section_code', to: 'followers#student_register', as: 'student_register'
 
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
+  get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'
   get '/admin/usage', to: 'reports#all_usage', as: 'all_usage'
   get '/admin/stats', to: 'reports#admin_stats', as: 'admin_stats'
   get '/admin/progress', to: 'reports#admin_progress', as: 'admin_progress'
@@ -158,8 +175,12 @@ Dashboard::Application.routes.draw do
   get '/admin/gallery', to: 'reports#admin_gallery', as: 'admin_gallery'
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
+  get '/admin/lookup_section', to: 'reports#lookup_section', as: 'lookup_section'
+  post '/admin/lookup_section', to: 'reports#lookup_section'
+  get '/admin/:action', controller: 'reports', as: 'reports'
+
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
-  get '/stats/students', to: 'reports#students', as: 'student_usage'
+  get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
@@ -167,13 +188,55 @@ Dashboard::Application.routes.draw do
 
   get '/notes/:key', to: 'notes#index'
 
-  get '/api/section_progress/:id', to: 'api#section_progress', as: 'section_progress'
-  get '/api/student_progress/:section_id/:id', to: 'api#student_progress', as: 'student_progress'
-  get '/api/:action', controller: 'api'
-
   resources :zendesk_session, only: [:index]
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+
+  concern :ops_routes do
+    # /ops/district/:id
+    resources :districts do
+      member do
+        get 'teachers'
+      end
+    end
+    resources :cohorts do
+      member do
+        get 'teachers'
+        delete 'teachers/:teacher_id', action: 'destroy_teacher'
+      end
+    end
+    resources :workshops do
+      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
+        resources :workshop_attendance, path: '/attendance', shallow: true do
+        end
+      end
+      member do
+        get 'teachers'
+      end
+    end
+
+    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
+    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
+    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
+    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
+    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
+  end
+
+  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
+    concerns :ops_routes
+  end
+
+  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
+    concerns :ops_routes
+  end
+
+  get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
+  get '/dashboardapi/:action', controller: 'api'
+
+  get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
+  get '/api/:action', controller: 'api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

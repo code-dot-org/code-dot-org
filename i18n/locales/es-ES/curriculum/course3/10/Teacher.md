@@ -6,15 +6,15 @@ title: Dice Race view: page_curriculum theme: none
 
 <%= partial('curriculum_header', :title=> 'Dice Race', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
-[content]
+[contenido]
 
-## Lesson Overview
+## Contenido de la Lección
 
 In this lesson, students will relate the concept of algorithms back to everyday real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
 
-[summary]
+[resumen]
 
-## Teaching Summary
+## Síntesis de Enseñanza
 
 ### **Getting Started** - 15 minutes
 
@@ -26,7 +26,7 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 4) [Real-Life Algorithms](#Activity1): Dice Race
 
-### **Wrap-up** - 5 minutes
+### **Terminar** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 
@@ -35,11 +35,11 @@ In this lesson, students will relate the concept of algorithms back to everyday 
 
 6) [Daily Algorithms](#Assessment)
 
-[/summary]
+[/resumen]
 
 [together]
 
-## Lesson Objectives
+## Obejtivos de la Lección
 
 ### Students will:
 
@@ -47,28 +47,29 @@ In this lesson, students will relate the concept of algorithms back to everyday 
   * Decompose large activities into a series of smaller events
   * Arrange sequential events into their logical order
 
-[/together]
+[/juntos]
 
 [together]
 
-# Teaching Guide
+# Guía Didáctica
 
 ## Materials, Resources and Prep
 
-### For the Student
+### Para el Estudiante
 
   * Dice (1 per pair)
   * Pens/Pencils/Markers
   * [Real-Life Algorithms Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf): Dice Race
   * Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf)
 
-### For the Teacher
+### Para el Maestro
 
+  * [Lesson Video](http://youtu.be/BDDRw3wGnz4?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
   * Teacher Lesson Guide
   * Print one [Real-Life Algorithms Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf) per group 
   * Print one Assessment Worksheet: [Daily Algorithms](/curriculum/course3/10/Assessment10-DiceRace.pdf) per student
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -85,24 +86,24 @@ Here are some questions that you can ask in review:
   * Did you think of any questions after the lesson that you want to ask?
   * What was your favorite part of the last lesson?
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Finishing the review by asking about the students' favorite things helps to leave a positive impression of the previous exercise, increasing excitement for the activity that you are about to introduce.
 
-[/tip]
+[/sugerencia]
 
 ### <a name="Vocab"></a> 2) Vocabulary
 
 This lesson has one vocabulary word that is important to review:  
 
 
-[centerIt]
+[céntrala]
 
 ![](vocab.png)
 
-[/centerIt]
+[/céntrala]
 
 **Algorithm** - Say it with me: Al-go-ri-thm   
 A list of steps that you can follow to finish a task
@@ -124,7 +125,7 @@ A list of steps that you can follow to finish a task
         
   * Let's try doing this with a new and fun activity, like playing the Dice Race Game!
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -132,13 +133,13 @@ A list of steps that you can follow to finish a task
 
 ### <a name="Activity1"></a> 4) [Real-Life Algorithm Worksheet](/curriculum/course3/10/Activity10-DiceRace.pdf): Dice Race
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 You know your classroom best. As the teacher, decide if students should do this in pairs or small groups.
 
-[/tip]
+[/sugerencia]
 
   * You can use algorithms to help describe things that people do every day. In this activity, we will create an algorithm to describe how we play the Dice Race Game.
   * The hardest part about getting a problem ready for a computer can be figuring out how to describe real-life activities. We’re going to get some practice by playing and describing the Dice Race game. 
@@ -161,25 +162,25 @@ You know your classroom best. As the teacher, decide if students should do this 
 >   7. Check each player’s total score to see who has the most points
 >   8. Declare Winner
 
-[centerIt]
+[céntrala]
 
 ![](diceRace.png)
 
-[/centerIt]
+[/céntrala]
 
-[/together]
+[/juntos]
 
-[tip]
+[sugerencia]
 
-# Lesson Tip
+# Sugerencia para la Lección
 
 Help the students see the game from a computer's point of view. If they need to roll the dice, then the computer needs to provide dice. If the student needs to play three turns, then the computer needs to loop through the steps multiple times.
 
-[/tip]
+[/sugerencia]
 
 [together]
 
-## Wrap-up (5 min)
+## Concluye (5 min)
 
 ### <a name="WrapUp"></a> 5) Flash Chat: What did we learn?
 
@@ -194,7 +195,7 @@ Help the students see the game from a computer's point of view. If they need to 
           * What if it were forty steps?
   * What was your favorite part about that activity?
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -205,7 +206,7 @@ Help the students see the game from a computer's point of view. If they need to 
   * Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
   * This should feel familiar, thanks to the previous activities.
 
-[/together]
+[/juntos]
 
 [together]
 
@@ -220,7 +221,7 @@ Use these activities to enhance student learning. They can be used as outside of
   * Gather teams back together into one big group and have one team share their steps, without letting anyone know what the activity was that they had chosen.
   * Allow the rest of the class to try to guess what activity the algorithm is for.
 
-[/together]
+[/juntos]
 
 [standards]
 

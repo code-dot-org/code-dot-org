@@ -37,6 +37,10 @@ uk:
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Як провести Годину коду</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Сприяйте Годині коду</a>"
   n_have_learned_an_hoc: '<h1>#</h1><h3>спробували </h3><h2>Годину Коду</h2>'
+  share_on_facebook: Поділитися через Facebook
+  share_on_twitter: Поділитися через Twitter
+  beyond_an_hour: Поза Годиною коду
+  get_started: Початок
   anybody_can_learn: Кожен може навчитись.
   register_now: Зареєструйтеся зараз
   front_join_us_heading: Годину коду для кожного учня.
@@ -89,12 +93,12 @@ uk:
   signup_thank_you_message: Ми надішлемо лист-підтвердження з додатковою інформацією.
   map_header: Заходи Години коду по всьому світу
   map_header_company: '# від організаторів'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_placeholder: Пошук заходів Години коду
+  map_search_search: Пошук
+  map_search_reset: Скидання
+  meta_tag_og_title: Прийшла Година коду
   meta_tag_og_description: Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: Прийшла Година коду
   meta_tag_twitter_description: Година коду є глобальним рухом, який залучає десятки мільйони учнів із більш як 180 країн, які розмовляють 30 мовами. Для будь-якого віку від 4 до 104.
   twitter_default_text: 'Я беру участь в цьогорічній #HourOfCode, а ви? @codeorg'
   hardware_prizes_form_name_label: "Ваше ім'я"
@@ -144,7 +148,7 @@ uk:
   hoc_faq_frozen_q: Де підручник з Анною та Ельзою?
   hoc_faq_frozen_a: "Він опублікований на <a href='http://code.org/learn'>Code.org/learn</a>. Сподіваємося, вам сподобається!"
   hoc_faq_high_school_q: Які вправи слід виконувати з учнями середньої школи?
-  hoc_faq_high_school_a: "Незалежно від віку, ми рекомендуємо спробувати вступну вправу для початківців з <a href='http://code.org/learn'>Code.org/learn</a>: підручники проходження лабіринту зі Злими птахами чи малювання з Анною та Ельзою. Старші учні повинні завершити ці вправи за 30 хвилин, після чого вони можуть перейти до складніших завдань з використанням JavaScript, наприклад, KhanAcademy чи CodeHS."
+  hoc_faq_high_school_a: "Незалежно від віку, ми рекомендуємо спробувати вступну вправу для початківців з <a href='http://code.org/learn'>Code.org/learn</a>: підручники проходження лабіринту зі Злими птахами чи малювання з Анною та Ельзою. Старші учні повинні завершити ці вправи за 30 хвилин, після чого вони можуть перейти до складніших завдань з використанням JavaScript, наприклад, Khan Academy чи CodeHS."
   hoc_faq_more_questions_br_q: Outras dúvidas?
   hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
   hoc_faq_what_is_hoc_uk_a: "Година коду - це одногодинний вступ до інформатики, створений для того, щоб зняти завісу таємничості з програмування та показати, що кожен може навчитись основам. <a href='http://uk.code.org/learn'>Ознайомтесь з підручниками</a>, та очікуйте нових вправ до нової Години коду 2014."
@@ -191,7 +195,7 @@ uk:
   events_orgs_title: Всі заходи Години коду, організовані партнерськими організаціями
   event: захід
   events: заходи
-  footer_copyright_message: Copyright 2014 Code.org. Всі права захищені.
+  footer_copyright_message: Copyright 2015 Code.org. Всі права захищені.
   footer_trademark_message: Година коду ™ є торговою маркою компанії Code.org.
   footer_menu_partners: Партнери
   footer_menu_contact: Контакти

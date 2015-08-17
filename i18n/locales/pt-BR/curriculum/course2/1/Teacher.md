@@ -1,73 +1,74 @@
 * * *
 
-title: Graph Paper Programming view: page_curriculum theme: none
+title: Programação em papel quadriculado view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'Graph Paper Programming', :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Graph Paper Programming', :unplugged=>true,:disclaimer=>'O tempo da aula inclui apenas a atividade. As sugestões de introdução e de resumo podem ser usadas para aprofundamento, quando o tempo permitir.', :time=>20) %>
 
 [content]
 
-## Lesson Overview
+## Visão geral da aula
 
-By "programming" one another to draw pictures, students will begin to understand what programming is really about. The class will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
+Ao "programar" uns aos outros para desenhar imagens, os alunos começarão a entender o que realmente é a programação. A aula vai começar com os alunos instruindo uns aos outros a colorir quadrados no papel quadriculado, tentando reproduzir uma imagem existente. Se sobrar tempo, a aula poderá ser encerrada com as imagens criadas pelos próprios alunos.
 
 [summary]
 
-## Teaching Summary
+## Índice de ensino
 
-### **Getting Started** - 15 minutes
+### **Primeiros passos** - 15 minutos
 
-1) [Vocabulary](#Vocab)   
-2) [Introduce Graph Paper Programming](#GetStarted)   
-3) [Practice Together](#Practice)
+1) [Vocabulário](#Vocab)   
+2) [Apresentação da programação em papel quadriculado](#GetStarted)   
+3) [Prática em conjunto](#Practice)
 
-### **Activity: Graph Paper Programming** - 20 minutes
+### **Atividade: programação em papel quadriculado** - 20 minutos
 
-4) [Four-by-Fours](#Activity1)
+4) [Programação 4x4](#Activity1)
 
-### **Wrap-up** - 5 minutes
+### **Resumo** - 5 minutos
 
-5) [Flash Chat: What did we learn?](#FlashChat)  
-6) [Vocab Shmocab](#Shmocab)
+5) [Bate-papo: O que aprendemos?](#FlashChat)  
+6) [Jogo de palavras](#Shmocab)
 
-### **Assessment** - 10 minutes
+### **Avaliação** - 10 minutos
 
-7) [Graph Paper Programming Assessment](#Assessment)
+7) [Avaliação de programação em papel quadriculado](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## Objetivos da aula
 
-Students will:
+Os alunos vão:
 
-  * Understand the difficulty of translating real problems into programs 
-  * Learn that ideas may feel clear and yet still be misinterpreted by a computer 
-  * Practice communicating ideas through codes and symbols
+  * Compreender a dificuldade de traduzir problemas reais em programas 
+  * Aprender que as ideias podem até estar claras para eles, mas, mesmo assim, serem mal interpretadas por um computador 
+  * Praticar a transmissão de ideias por códigos e símbolos
 
-# Teaching Guide
+# Guia de ensino
 
-## Materials, Resources and Prep
+## Materiais, recursos e preparação
 
-### For the Student
+### Para o aluno
 
-  * [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf)
-  * [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf)
-  * Sheets of 4x4 paper grids for the students to use as practice (These are provided as part of the [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf), but if you have the students create their own, you can include Common Core Math standard 2.G.2.) 
-  * Blank paper or index cards for programs
-  * Markers, pens, or pencils
+  * [Folha de atividade de programação em 4x4](Activity1-GraphPaperProgramming.pdf)
+  * [Avaliação de programação em papel quadriculado](Assessment1-GraphPaperProgramming.pdf)
+  * Folhas quadriculadas 4x4 para os alunos praticarem (fornecidas junto com a [folha de atividade de Programação em 4x4](Activity1-GraphPaperProgramming.pdf), mas se você quiser que eles criem suas próprias folhas, inclua o padrão matemático do Common Core 2.G.2.) 
+  * Folha em branco ou fichas para programas
+  * Marcadores, canetas ou lápis
 
-### For the Teacher
+### Para o professor
 
+  * [Lesson Video](http://youtu.be/Yy1zbkfRtIg?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
   * Print out one [Four-by-Fours Activity Worksheet](Activity1-GraphPaperProgramming.pdf) for each group 
   * Print one [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf) for each student 
   * Supply each group with several drawing grids, paper, and pens/pencils
 
-## Getting Started (15 min)
+## Primeiros passos (15 min)
 
-### <a name="Vocab"></a>1) Vocabulary
+### <a name="Vocab"></a>1) Vocabulário
 
-This lesson has two new and important words:  
+Nesta aula há duas palavras novas e importantes:  
 
 
 [centerIt]
@@ -76,28 +77,28 @@ This lesson has two new and important words:
 
 [/centerIt]
 
-**Algorithm** - Say it with me: Al-go-ri-thm   
-A list of steps that you can follow to finish a task
+**Algoritmo** - Repita comigo: Al-go-rit-mo   
+Uma lista de passos que você pode seguir para concluir uma tarefa
 
-**Program** - Say it with me: Pro-gram   
-An algorithm that has been coded into something that can be run by a machine
+**Programa** - Repita comigo: Pro-gra-ma   
+Um algoritmo que foi codificado de forma que possa ser executado por uma máquina
 
   
 
 
-### <a name="GetStarted"></a>2) Introduce Graph Paper Programming
+### <a name="GetStarted"></a>2) Introdução à programação em papel quadriculado
 
-In this activity, we are going to guide each other toward making drawings, without letting the other people in our group see the original image.
+Nesta atividade, vamos orientar uns aos outros para fazer desenhos sem deixar que outras pessoas de nosso grupo vejam a imagem original.
 
-For this exercise, we will use sheets of 4x4 graph paper. Starting at the upper left-hand corner, we’ll guide our teammates’ Automatic Realization Machine (ARM) with simple instructions. Those instructions include:
+Neste exercício, usaremos o papel quadriculado 4x4. Começando no canto superior esquerdo, orientaremos a Máquina de Realização Automática (ARM) com instruções simples. As instruções são:
 
-  * Move One Square Right
-  * Move One Square Left
-  * Move One Square Up
-  * Move One Square Down
-  * Fill-In Square with color
+  * Mova um quadrado para a direita
+  * Mova um quadrado para a esquerda
+  * Mova um quadrado para cima
+  * Mova um quadrado para baixo
+  * Pinte um quadrado
 
-For example, here’s how we would write an algorithm to instruct a friend (who is pretending to be a drawing machine) to color their blank grid so that it looks like the image below:  
+Por exemplo, esta é a forma como escrevemos um algoritmo para instruir um amigo (que finge ser uma máquina de desenho) para colorir sua grade em branco para que ela fique como a imagem abaixo:  
 
 
 [centerIt]
@@ -106,7 +107,7 @@ For example, here’s how we would write an algorithm to instruct a friend (who 
 
 [/centerIt]
 
-That’s simple enough, but it would take a lot of writing to provide instructions for a square like this:  
+Isso é bem simples, mas seria preciso escrever uma instrução enorme para um quadrado igual a esse:  
 
 
 [centerIt]
@@ -115,7 +116,7 @@ That’s simple enough, but it would take a lot of writing to provide instructio
 
 [/centerIt]
 
-With one little substitution, we can do this much more easily! Instead of having to write out an entire phrase for each instruction, we can use arrows.   
+Com uma pequena substituição, podemos fazer isso de forma bem mais fácil! Ao invés de ter que escrever uma frase inteira para cada instrução, podemos usar as setas.   
 
 
 [centerIt]
@@ -124,15 +125,15 @@ With one little substitution, we can do this much more easily! Instead of having
 
 [/centerIt]
 
-In this instance, the arrow symbols are the “program” code and the words are the “algorithm” piece. This means that we could write the algorithm:
+Neste caso, os símbolos de seta são o código do "programa" e as palavras representam o "algoritmo". Isso significa que podemos escrever o algoritmo:
 
-> “Move one square right, Move one square right, Fill-in square with color”
+> "Mova um quadrado para a direita. Mova um quadrado para a direita. Preencha o quadrado com cor"
 
-and that would correspond to the program:
+e isso corresponde ao programa:
 
 > ![image](program.png)
 
-Using arrows, we can redo the code from the previous image much more easily!
+Usando as setas, fica muito mais fácil refazer o código da imagem anterior!
 
 [centerIt]
 
@@ -140,9 +141,9 @@ Using arrows, we can redo the code from the previous image much more easily!
 
 [/centerIt]
 
-### <a name="Practice"></a>3) Practice Together
+### <a name="Practice"></a>3) Prática em grupo
 
-Start your class off in the world of programming by drawing or projecting the provided key onto the board.  
+Comece sua aula sobre o mundo da programação desenhando ou projetando o modelo fornecido no quadro.  
 
 
 [centerIt]
@@ -151,7 +152,7 @@ Start your class off in the world of programming by drawing or projecting the pr
 
 [/centerIt]
 
-Select a simple drawing, such as this one to use as an example.
+Selecione um desenho simples, como este, para usar de exemplo.
 
 [centerIt]
 
@@ -159,44 +160,44 @@ Select a simple drawing, such as this one to use as an example.
 
 [/centerIt]
 
-This is a good way to introduce all of the symbols in the key. To begin, fill in the graph for the class -- square by square -- then ask them to help describe what you’ve just done. First, you can speak the algorithm out loud, then you can turn your verbal instructions into a program.
+Esta é uma boa maneira de apresentar todos os símbolos do exemplo. Para começar, preencha o papel quadriculado para a classe -- quadrado por quadrado -- e depois peça a eles para descreverem o que você acabou de fazer. Você pode começar falando o algoritmo em voz alta, e depois transformar suas instruções verbais em um programa.
 
-A sample algorithm:
+Um algoritmo simples:
 
-> “Move Right, Fill-In Square, Move Right, Move Down  
-> Fill-In Square, Move Left, Move Left, Fill-In Square  
-> Move Down, Move Right, Fill-In Square, Move Right”
+> “Mover para a direita, preencher quadrado, mover para a direita, mover para baixo  
+> Preencher quadrado, mover para a esquerda, mover para a esquerda, preencher quadrado  
+> Mover para baixo, mover para a direita, preencher quadrado, mover para a direita”
 
-Some of your class may notice that there is an unnecessary step, but hold them off until after the programming stage.  
+Alguns alunos poderão notar que há um passo desnecessário, mas faça-os esperar até a etapa de programação.  
   
-Walk the class through translating the algorithm into the program:
+Oriente a classe durante a tradução do algoritmo em um programa:
 
 > ![image](program1.png)
 
-The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.
+Nesse momento, a sala de aula estará fervilhando com sugestões. Se os alunos entenderam o significado do exercício, esta será uma boa hora para discutir maneiras alternativas de preencher a mesma grade. Se ainda houver dúvidas, faça isso em outro dia e mostre outro exemplo.
 
 > ![image](program2.png)
 
-If the class can shout out the algorithm and define the correct symbols to use for each step, they’re ready to move on. Depending on your class and their age, you can either try doing a more complicated grid together or skip straight to having them work in groups on their [Four-by-Fours Activity Worksheet](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf).
+Se a classe conseguir recitar o algoritmo e definir os símbolos corretos a serem usados em cada etapa, eles estão prontos para seguir em frente. Dependendo do andamento da aula e da idade dos alunos, você pode tentar fazer uma grade mais complexa junto com eles ou fazer com que eles trabalhem em grupos com a [Folha de atividade de programação em 4x4](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf).
 
 [tip]
 
-# Lesson Tip
+# Dica de aula
 
-Have the class imagine that your arm is an Automatic Realization Machine (ARM). The idea of "algorithms" and "programs" will be brought to life even further if students feel like they're actually in control of your movements.
+Faça a classe imaginar que seu braço é uma Máquina de Realização Automática (ARM). A ideia de "algoritmos" e "programas" aparecerá cada vez mais, se os alunos sentirem que estão no controle de seus movimentos.
 
 [/tip]
 
-## Activity: Graph Paper Programming (20 min)
+## Atividade: Programação em papel quadriculado (20 min)
 
-### <a name="Activity1"></a>4) [Four-by-Fours Activity Worksheet](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf)
+### <a name="Activity1"></a>4) [Folha de atividade de programação em 4x4](/curriculum/course2/1/Activity1-GraphPaperProgramming.pdf)
 
-  1. Divide students into pairs.
-  2. Have each pair choose an image from the worksheet. 
-  3. Discuss the algorithm to draw that image with partner. 
-  4. Convert algorithm into a program using symbols. 
-  5. Trade programs with another pair and draw one another's image. 
-  6. Choose another image and go again! 
+  1. Divida os alunos em duplas.
+  2. Peça para cada dupla escolher uma imagem da folha de atividade. 
+  3. Cada aluno deverá discutir com seu parceiro o algoritmo para desenhar a imagem escolhida. 
+  4. Cada dupla deverá converter o algoritmo em um programa usando símbolos. 
+  5. Faça as duplas trocarem os programas entre elas e desenharem as imagens umas das outras. 
+  6. A dupla deverá escolher outra imagem e fazer tudo de novo! 
 
   
 
@@ -207,104 +208,104 @@ Have the class imagine that your arm is an Automatic Realization Machine (ARM). 
 
 [/centerIt]
 
-## Wrap-up (5 min)
+## Resumo (5 min)
 
-### <a name="FlashChat"></a>5) Flash Chat: What did we learn?
+### <a name="FlashChat"></a>5) Bate-papo: o que aprendemos?
 
-  * What did we learn today?
-  * What if we used the same arrows, but replaced "Fill-In Square" with "Lay Brick"? What might we be able to do?
-  * What else could we program if we just changed what the arrows meant?
+  * O que aprendemos hoje?
+  * E se tivéssemos usado as mesmas setas, mas substituído o "Preencher quadrado" com "Colocar bloco"? O que poderíamos ter feito?
+  * O que mais poderíamos programar se tivéssemos mudado o significado das setas?
 
-### <a name="Shmocab"></a>6) Vocab Shmocab
+### <a name="Shmocab"></a>6) Jogo de palavras
 
-  * Which one of these definitions did we learn a word for today?
+  * Para qual dessas definições aprendemos uma palavra hoje?
     
-    > "A large tropical parrot with a very long tail and beautiful feathers"  
-    > "A list of steps that you can follow to finish a task"  
-    > "An incredibly stinky flower that blooms only once a year"  
+    > "Um grande papagaio tropical de cauda bem longa e bela plumagem"  
+    > "Uma lista de passos a ser seguida para concluir uma tarefa"  
+    > "Uma flor muito malcheirosa que brota uma vez por ano"  
     > 
     > 
-    > > ...and what is the word that we learned?
+    > > ...e qual é a palavra que aprendemos?
 
-  * Which one of these is the *most* like a "program"?
+  * Qual destas definições *mais* se aproxima de um "programa"?
     
-    > *A shoebox full of pretty rocks  
-    > *Twelve pink flowers in a vase  
-    > *Sheet music for your favorite song  
+    > *Uma caixa de sapato cheia de pedras bonitas  
+    > *Doze flores rosas em um vaso  
+    > *Partitura de sua música favorita  
     > 
     > 
-    > > Explain why you chose your answer.
+    > > Explique porque você escolheu essa resposta.
 
-## <a name="Assessment"></a> Assessment (10 min)
+## <a name="Assessment"></a> Avaliação (10 min)
 
-### 7) [Graph Paper Programming Assessment](Assessment1-GraphPaperProgramming.pdf)   
+### 7) [Avaliação de programação em papel quadriculado](Assessment1-GraphPaperProgramming.pdf)   
   
 
 
-## Extended Learning
+## Aprendizagem estendida
 
-Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
+Use essas atividades para melhorar a aprendizagem do aluno. Elas podem ser usadas como atividades extraclasse ou como outra forma de aprendizado.
 
-### Better and Better
+### Cada vez melhor
 
-  * Have your class try making up their own images. 
-  * Can they figure out how to program the images that they create?
+  * Peça aos alunos para criarem suas próprias imagens. 
+  * Eles conseguem descobrir como programar as imagens que eles criaram?
 
-### Class Challenge
+### Desafio para a classe
 
-  * As the teacher, draw an image on a 5x5 grid. 
-  * Can the class code that up along with you?
+  * Como professor, desenhe uma imagem em uma grade de 5x5. 
+  * A classe consegue codificar essa imagem junto com você?
 
 [standards]
 
-## Connections and Background Information
+## Conexões e informações básicas
 
-### ISTE Standards (formerly NETS)
+### Padrões ISTE (anteriormente chamados NETS)
 
-  * 1.b - Create original works as a means of personal or group expression.
-  * 1.c - Use models and simulation to explore complex systems and issues. 
-  * 2.d - Contribute to project teams to solve problems. 
-  * 4.b - Plan and manage activities to develop a solution or complete a project.
-  * 4.d - Use multiple processes and diverse perspectives to explore alternative solutions.
+  * 1.b - Criar trabalhos originais como meio de expressão pessoal ou em grupo.
+  * 1.c - Usar modelos e simulações para explorar questões e sistemas complexos. 
+  * 2.d - Contribuir com equipes de projeto para resolver problemas. 
+  * 4.b - Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto.
+  * 4.d - Usar múltiplos processos e diversas perspectivas para explorar soluções alternativas.
 
 ### CSTA K-12 Computer Science Standards
 
-  * CPP.L1:3-04 - Construct a set of statements to be acted out to accomplish a simple task. 
-  * CPP.L1:6-05. Construct a program as a set of step-by-step instructions to be acted out.
-  * CT.L1:3-03 - Understand how to arrange information into useful order without using a computer.
-  * CT.L1:6-01 - Understand and use the basic steps in algorithmic problem-solving. 
-  * CT.L1:6-02 - Develop a simple understanding of an algorithm using computer-free exercises. 
-  * CT.L2-07 - Represent data in a variety of ways: text, sounds, pictures, numbers.
+  * CPP.L1:3-04 - Construir um conjunto de comandos para realizar uma tarefa simples. 
+  * CPP.L1:6-05 - Construir um programa como um conjunto de instruções a serem seguidas passo a passo.
+  * CT.L1:3-0 - Entender como é possível organizar informações em uma ordem útil sem usar um computador.
+  * CT.L1:6-01 - Entender e usar os passos básicos na resolução de um problema com um algoritmo. 
+  * CT.L1:6-02 - Desenvolver uma compreensão simples de algoritmo usando exercícios que não precisem de computador. 
+  * CT.L2-07 - Representar dados de várias formas: textos, sons, imagens, números.
 
-### NGSS Science and Engineering Practices
+### Práticas de engenharia e ciência NGSS
 
-  * K-2-ETS1-2 - Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem. 
-  * 3-5-ETS1-2 - Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem. 
+  * K-2-ETS1-2 - Desenvolver um esboço, desenho, ou modelo físico simples para ilustrar como a forma de um objeto ajuda no seu funcionamento adequado para resolver um dado problema. 
+  * 3-5-ETS1-2 - Gerar e comparar várias soluções possíveis para um problema com base em quanto cada uma é capaz de satisfazer as critérios e restrições do problema. 
 
-### Common Core Mathematical Practices
+### Práticas matemáticas do Common Core
 
-  *   1. Make sense of problems and persevere in solving them.
-  *   1. Reason abstractly and quantitatively.
-  *   1. Construct viable arguments and critique the reasoning of others.
-  *   1. Attend to precision.
-  *   1. Look for and make use of structure.
-  *   1. Look for and express regularity in repeated reasoning. 
+  *   1. Dar sentido aos problemas e perseverar para resolvê-los.
+  *   1. Ter raciocínio abstrato e quantitativo.
+  *   1. Construir argumentos viáveis e fazer críticas ao raciocínio dos outros.
+  *   1. Ter precisão.
+  *   1. Procurar e fazer uso de estrutura.
+  *   1. Procurar e expressar regularidade no raciocínio repetido. 
 
-### Common Core Math Standards
+### Padrões matemáticos do Common Core
 
-  * 2.G.2 - Partition a rectangle into rows and columns of same-size squares and count to find the total number of them.
+  * 2.G.2 - Dividir um retângulo em linhas e colunas de quadrados com o mesmo tamanho e contar para encontrar o número total deles.
 
-### Common Core Language Arts Standards
+### Padrões de Língua e Literatura do Common Core
 
-  * SL.1.1 - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-  * SL.1.2 - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-  * L.1.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships.
-  * SL.2.1 - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
-  * SL.2.2 - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
-  * L.2.6 - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe.
-  * SL.3.1 - Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 3 topics and texts, building on others' ideas and expressing their own clearly.
-  * SL.3.3 - Ask and answer questions about information from a speaker, offering appropriate elaboration and detail.
-  * L.3.6 - Acquire and use accurately grade-appropriate conversational, general academic, and domain-specific words and phrases, including those that signal spatial and temporal relationships.
+  * SL.1.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do primeiro ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.1.2 - Fazer e responder a perguntas sobre detalhes-chave de um texto lido em voz alta ou sobre informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.1.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, usando inclusive conjunções recorrentes para assinalar relações simples.
+  * SL.2.1 - Participar de conversas colaborativas com vários parceiros sobre tópicos do segundo ano e trocar informações com colegas e adultos em pequenos e grandes grupos.
+  * SL.2.2 - Reproduzir ou descrever ideias ou detalhes-chave de um texto lido em voz alta ou de informações apresentadas oralmente ou por outro tipo de mídia.
+  * L.2.6 - Usar palavras e frases adquiridas em conversas e leituras e em resposta aos textos, inclusive adjetivos e advérbios para descrição.
+  * SL.3.1 - Participar efetivamente de discussões colaborativas variadas (individualmente, em grupos e conduzidas pelo professor), com diversos parceiros, sobre temas e textos do terceiro ano, levando em consideração as ideias dos outros e se expressando claramente.
+  * SL.3.3 - Perguntar e responder a questões sobre informações dadas por um orador, com elaboração e detalhes adequados.
+  * L.3.6 - Adquirir e usar corretamente palavras e frases que sejam apropriadas em conversas no meio acadêmico em geral e relevantes ao tema, incluindo aquelas que sinalizam relações espaciais e temporais.
 
 [/standards]
 

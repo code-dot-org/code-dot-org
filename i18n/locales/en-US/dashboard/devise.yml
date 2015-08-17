@@ -1,59 +1,76 @@
-# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
-
 en:
   devise:
     confirmations:
-      confirmed: "Your email address was successfully confirmed."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
+      confirmed: crwdns4344:0crwdne4344:0
+      send_instructions: crwdns2751:0crwdne2751:0
+      send_paranoid_instructions: crwdns2752:0crwdne2752:0
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account was not activated yet."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
-      not_found_in_database: "Invalid email or password."
-      timeout: "Your session expired, please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
+      already_authenticated: crwdns2753:0crwdne2753:0
+      inactive: crwdns2754:0crwdne2754:0
+      invalid: crwdns2755:0crwdne2755:0
+      invalid_token: crwdns2756:0crwdne2756:0
+      locked: crwdns2757:0crwdne2757:0
+      not_found_in_database: crwdns2758:0crwdne2758:0
+      timeout: crwdns2759:0crwdne2759:0
+      unauthenticated: crwdns2760:0crwdne2760:0
+      unconfirmed: crwdns2761:0crwdne2761:0
     mailer:
       confirmation_instructions:
-        subject: "Code.org confirmation instructions"
+        subject: crwdns4345:0crwdne4345:0
       reset_password_instructions:
-        subject: "Code.org reset password instructions"
+        subject: crwdns4346:0crwdne4346:0
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: crwdns2764:0crwdne2764:0
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
+      failure: 'crwdns2765:0%{kind}crwdnd2765:0%{reason}crwdne2765:0'
+      success: 'crwdns2766:0%{kind}crwdne2766:0'
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
+      no_token: crwdns2767:0crwdne2767:0
+      send_instructions: crwdns2768:0crwdne2768:0
+      send_paranoid_instructions: crwdns2769:0crwdne2769:0
+      updated: crwdns2770:0crwdne2770:0
+      updated_not_active: crwdns2771:0crwdne2771:0
     registrations:
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      updated: "You updated your account successfully."
+      destroyed: crwdns2772:0crwdne2772:0
+      signed_up: crwdns2773:0crwdne2773:0
+      signed_up_but_inactive: crwdns2774:0crwdne2774:0
+      signed_up_but_locked: crwdns2775:0crwdne2775:0
+      signed_up_but_unconfirmed: crwdns2776:0crwdne2776:0
+      update_needs_confirmation: crwdns2777:0crwdne2777:0
+      updated: crwdns2778:0crwdne2778:0
     sessions:
-      signed_in: ""
-      signed_out: "Signed out successfully."
+      signed_in: crwdns24831:0crwdne24831:0
+      signed_out: crwdns2780:0crwdne2780:0
     unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: crwdns2781:0crwdne2781:0
+      send_paranoid_instructions: crwdns2782:0crwdne2782:0
+      unlocked: crwdns2783:0crwdne2783:0
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: crwdns2784:0crwdne2784:0
+      confirmation_period_expired: 'crwdns2785:0%{period}crwdne2785:0'
+      expired: crwdns2786:0crwdne2786:0
+      not_found: crwdns2787:0crwdne2787:0
+      not_locked: crwdns2788:0crwdne2788:0
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: 'crwdns2789:0%{resource}crwdne2789:0'
+        other: 'crwdns2790:0%{count}crwdnd2790:0%{resource}crwdne2790:0'
+    invitations:
+      send_instructions: 'crwdns35954:0%{email}crwdne35954:0'
+      invitation_token_invalid: crwdns35955:0crwdne35955:0
+      updated: crwdns35956:0crwdne35956:0
+      no_invitations_remaining: crwdns35957:0crwdne35957:0
+      invitation_removed: crwdns35958:0crwdne35958:0
+      new:
+        header: crwdns35959:0crwdne35959:0
+        submit_button: crwdns35960:0crwdne35960:0
+      edit:
+        header: crwdns35961:0crwdne35961:0
+        submit_button: crwdns35962:0crwdne35962:0
+    mailer:
+      invitation_instructions:
+        subject: crwdns35963:0crwdne35963:0
+        hello: 'crwdns35964:0%{email}crwdne35964:0'
+        someone_invited_you: 'crwdns35965:0%{url}crwdne35965:0'
+        accept: crwdns35966:0crwdne35966:0
+        ignore: crwdns35967:0crwdne35967:0
