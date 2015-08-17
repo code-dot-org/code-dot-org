@@ -132,7 +132,7 @@ exports.setItemAction = function(id, itemIndex, type) {
 };
 
 exports.showDebugInfo = function(value) {
-  Studio.queueCmd(id, 'showDebugInfo', {
+  Studio.queueCmd(null, 'showDebugInfo', {
     'value': value
   });
 };

@@ -666,13 +666,13 @@ function sortDrawOrder() {
   }
 
   // Add sprites, both walking and non-walking.
-  for (var i = 0; i < Studio.sprite.length; i++) {
+  for (i = 0; i < Studio.sprite.length; i++) {
     var sprite = {};
     sprite.element = document.getElementById('sprite' + i);
     sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
     itemsArray.push(sprite);
 
-    var sprite = {};
+    sprite = {};
     sprite.element = document.getElementById('spriteWalk' + i);
     sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
     itemsArray.push(sprite);
@@ -2230,7 +2230,7 @@ var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 Studio.itemGetDirectionFrame = function(item) {
   return item.dir == Direction.NONE ? 0 : frameDirTableWalking[item.dir];
-}
+};
 
 
 /**
@@ -2354,7 +2354,7 @@ Studio.clearDebugRects = function() {
   $(".roamGridDest").remove();
   $(".itemCenter").remove();
   $(".roamGridPossibleDest").remove();
-}
+};
 
 
 Studio.drawWallTile = function (svg, row, col) {
@@ -3618,18 +3618,18 @@ Studio.getPlayspaceBoundaries = function(sprite)
       right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
       bottom: Studio.MAZE_HEIGHT - skin.wallCollisionRectHeight - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
       left:   0 - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX
-    }
+    };
   } else {
     boundaries = {
       top: 0,
       right: Studio.MAZE_WIDTH - sprite.width,
       bottom: Studio.MAZE_HEIGHT - sprite.height,
       left: 0
-    }
-  };
+    };
+  }
 
   return boundaries;
-}
+};
 
 
 Studio.moveSingle = function (opts) {
