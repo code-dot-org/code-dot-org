@@ -7,57 +7,12 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
 - [Operations Coordinator](#opscoord)
-- [Technical Product Manager](#techpm)
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
-
-
-## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
-
-**Job Summary:**
-
-At Code.org we create and support computer science curriculum that reaches millions of students, and we train tens of thousands of teachers per year. The core function of the Data Engineer role is to help us gain an increasingly deeper and better understanding of two very important high-level questions:  
-
-1.  What and how much are our students learning? (and how can we improve the outcome?)
-2. How effective is our teacher professional development? (and how can we improve the outcome?)
-
-We already have tons of indicators and stats and data, but these very big questions go beyond a few database queries or analytics stats.  We have a fantastic third party evaluator helping us research these questions, and this is a role to collaborate with them to address these questions from the perspective of the web-usage of millions of students in our online tutorials. 
-
-The responsibility in this job isn't just to answer analytic questions, but to help establish the questions to ask in the first place, and then to figure out how to answer them, to measure and adjust our education products, services, and processes to improve outcomes for students, teachers and schools. 
-
-At its core this is primarily an engineering role. Job responsibilities will include:
-
-- Owning and operating our existing in-house analytics tools and identifying new tools/services to use
-- Working collaboratively with others to craft measurement protocols and and assessments we use to track student learning and teacher preparedness across Code.org's online services
-- Working with education/curriculum/product team to “bake” assessment measures and metrics into curricular and professional development products currently under development 
-- Writing the code/scripts/queries and managing the tools and infrastructure to answer these questions and provide these measures
-- Collaborating with Evaluation Manager and our third party evaluator to help evaluate and improve our work, as well as with university/academic groups to provide deeper research to help drive key insights which improve the outcomes of our work and the computer science education community as a whole
-
-
-**Skills and Qualifications:**
-
-The ideal candidate has a breadth of experience and qualifications:
-
-- A degree in computer science, applied math, or statistics, with multiple years of experience in data and statistical analysis
-- A deep familiarity with traditional web-based analytics and data analysis tools - from Google Analytics to data mining to Hadoop to R. The ideal candidate should already know the best tools to use for different purposes based on past experience, and is familiar with recent cloud-based services that make this sort of analysis easier today than in past decades. (Knowing the difference between Cloudera, Splunk, and Redshift is ideally something you already have under your belt from your previous job)
-- Experience with using web-based analysis (A/B testing and growth-hacking) to measure/improve online usage
-
-
-Optional, but nice-to-have, at least one of the following types of experience:
-
-- Experience with using online student assessments to do analysis in a way that aligns with academic norms and standards
-- Experience with evaluation of education efforts and academic learning outcomes
-
-
-Ideally the position is in Seattle, but for an exceptional candidate working remotely from a home-office is a possibility.
-
-
-Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
@@ -145,39 +100,6 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-
-
-## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. 
-
-Responsibilities of the position include:
-
-- Defining the scope of these projects
-- Designing user experience and working with engineers, education experts, and other teams at Code.org to implement them
-
-This person must be able to work in a fast paced environment with continuous release to customers.
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in Computer Science
-- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
-- Experience in designing user experience for non-tech savvy customers
-- Strong technical background
-- Strong communication and collaboration skills
-
-Additional skills that would be valuable in this role:
-
-- Visual or interaction design
-- Teaching in K-12 classrooms
-- Curriculum design or partnering with educators on curriculum design
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 
