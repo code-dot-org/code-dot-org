@@ -26,7 +26,7 @@
       %div
         %select#hoc-event-type.form-control{name: "event_type_s", type: "select", required: true}
           %option{value: nil, selected: true}
-          -['in_school', 'out_of_school', 'corporate_event'].each do |event_type|
+          -['in_school', 'out_of_school'].each do |event_type|
             %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
 
     .form-group
