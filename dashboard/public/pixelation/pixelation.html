@@ -67,7 +67,12 @@
       <input type="radio" name="binHex" value="hex" onchange="binToHex(); drawGraph();">
     </label>
   </div>
-  <textarea id="pixel_data" oninput="drawGraph();" onkeydown="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
+  <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
+  <!--[if IE 9]>
+  <script>
+    document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false);
+  </script>
+  <![endif]-->
   <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
   <button class="btn" onclick="unformatBits();"  title="View bits without any formatting">Raw format</button>
   <button id="start_over" class="btn btn-danger" onclick="startOverClicked();">Start Over</button>

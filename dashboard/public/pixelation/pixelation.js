@@ -34,7 +34,7 @@ function drawGraph(ctx, exportImage) {
   var binCode = "";
   var hexMode = isHex();
 
-  // Save the cursor position before doing any manipulatino of the textarea.
+  // Save the cursor position before doing any manipulation of the textarea.
   var cursorPosition = pixel_data.selectionStart;
   var characterCount = pixel_data.value.length;
 
