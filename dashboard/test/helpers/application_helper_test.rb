@@ -7,45 +7,51 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "canonical_hostname in test" do
-    assert_equal 'test.learn.code.org', canonical_hostname('learn.code.org')
-    assert_equal 'test.code.org', canonical_hostname('code.org')
+    assert_equal 'test-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'test.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in prod" do
     set_env :production
-    assert_equal 'learn.code.org', canonical_hostname('learn.code.org')
-    assert_equal 'code.org', canonical_hostname('code.org')
+    assert_equal 'studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in staging" do
     set_env :staging
-    assert_equal 'staging.learn.code.org', canonical_hostname('learn.code.org')
-    assert_equal 'staging.code.org', canonical_hostname('code.org')
+    assert_equal 'staging-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in development" do
     set_env :development
-    assert_equal 'localhost.learn.code.org', canonical_hostname('learn.code.org')
-    assert_equal 'localhost.code.org', canonical_hostname('code.org')
+    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "code_org_root_path in test" do
-    assert_equal 'http://test.code.org', code_org_root_path
+    assert_equal '//test.code.org', code_org_root_path
   end
 
   test "code_org_root_path in prod" do
     set_env :production
-    assert_equal 'http://code.org', code_org_root_path
+    assert_equal '//code.org', code_org_root_path
   end
 
   test "code_org_root_path in staging" do
     set_env :staging
-    assert_equal 'http://staging.code.org', code_org_root_path
+    assert_equal '//staging.code.org', code_org_root_path
   end
 
   test "code_org_root_path in development" do
     set_env :development
-    assert_equal 'http://localhost.code.org', code_org_root_path
+    assert_equal "//localhost.code.org:#{CDO.pegasus_port}", code_org_root_path
+  end
+
+  test "code_org_url" do
+    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('teacher-dashboard')
+    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
+    assert_equal '//test.code.org/teacher-dashboard', CDO.code_org_url('/teacher-dashboard')
   end
 
   test "is_k1? when current script returns true for is_k1?" do
@@ -56,17 +62,6 @@ class ApplicationHelperTest < ActionView::TestCase
   test "!is_k1? by default" do
     @level = Maze.create(@maze_data)
     assert !is_k1?
-  end
-
-  test "playlab_freeplay_path for k1 levels" do
-    def current_user
-      OpenStruct.new(primary_script: OpenStruct.new('is_k1?'=>true))
-    end
-    assert_equal(script_stage_script_level_path('course1', 16, 6), playlab_freeplay_path)
-  end
-
-  test "artist_freeplay_path for non-k1 levels" do
-    assert_equal(script_stage_script_level_path('artist', 1, 10), artist_freeplay_path)
   end
 
   test "windows phone 8.1 supported" do
@@ -91,12 +86,13 @@ class ApplicationHelperTest < ActionView::TestCase
   test 'certificate images for hoc-type scripts are all hoc certificates' do
     # old hoc, new hoc, frozen, playlab, and flappy are all the same certificate
     user = create :user
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::HOC_NAME))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::FROZEN_NAME))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find(Script::FLAPPY_ID))
-    assert_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name(Script::PLAYLAB_NAME))
+    hoc_2013 = Script.get_from_cache(Script::HOC_2013_NAME)
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::HOC_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FROZEN_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FLAPPY_NAME))
+    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::PLAYLAB_NAME))
 
      # but course1 is a different certificate
-    assert_not_equal script_certificate_image_url(user, Script.find(Script::HOC_ID)), script_certificate_image_url(user, Script.find_by_name('course1'))
+    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::COURSE1_NAME))
   end
 end

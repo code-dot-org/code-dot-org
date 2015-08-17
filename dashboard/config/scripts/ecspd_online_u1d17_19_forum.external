@@ -1,0 +1,17 @@
+name 'ECSPD Online U1D17-19 Forum'
+css 'unplugged'
+markdown <<MARKDOWN
+## Forum for Unit 1 Day 17-19: What is Intelligence?
+
+Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+
+> Question: How do you plan to set up your classroom to best facilitate the Turing Test Activity? What other resources might you use in this lesson? Do you have any links for different chatterbot websites?
+
+### <strong><a href="https://forum.code.org/t/unit-1-day-17-19-what-is-intelligence/743/1" target="_blank">Unit 1 Day 17-19 Forum >></a></strong>
+
+</br>
+
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

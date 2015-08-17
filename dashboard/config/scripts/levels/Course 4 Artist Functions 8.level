@@ -21,7 +21,8 @@
     "ideal": "9",
     "use_contract_editor": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"edit_function\",\r\n  \"element_id\": \"[block-id='9']>.blocklyIconGroup:eq(-1)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}\r\n  }\r\n}]"
+    "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"[block-id='9']>.blocklyIconGroup:eq(-1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

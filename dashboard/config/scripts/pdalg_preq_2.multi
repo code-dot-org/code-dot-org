@@ -1,0 +1,10 @@
+name 'PDAlg PreQ 2'
+title 'Pre-Survey Question 2'
+
+question 'Have you ever taken an Online Course before (through a platform like Coursera, edX, Udacity, Khan Academy, etc)?'
+right 'Yes'
+right 'No'
+
+markdown <<MARKDOWN
+
+MARKDOWN

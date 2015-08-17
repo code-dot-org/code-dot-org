@@ -1,0 +1,38 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-18T01:44:18.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "declareAssign_x": null,
+      "assign_x": null,
+      "write": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "We've given you some code with an error.  It doesn’t recognize the variable.  Can you figure out why?  Fix the error and get the program to run.  Also note the error message since it might come up at some point later in your life.\r\n\r\n",
+    "start_blocks": "var foo;\r\nfoo = 7;\r\nwrite(Foo);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "app_height": "200"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

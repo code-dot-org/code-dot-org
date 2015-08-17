@@ -1,0 +1,29 @@
+pd 'true'
+title 'Computer Science in Science PD'
+description 'Phase 2 Online Blended Summer Study'
+description_short 'Phase 2 Online Blended Summer Study'
+
+stage 'Welcome'
+level 'sciPD p2 intro'
+level 'sciPD logistics 1'
+
+stage 'Curricular Modules'
+level 'sciPD2 resource module1'
+level 'sciPD2 resource module2'
+level 'sciPD2 resource module3'
+level 'sciPD2 resource module4'
+
+stage 'Common Forms'
+level 'sciPD2 resource common'
+
+stage 'Guides and Resources'
+level 'sciPD2 resource reference'
+
+stage 'Discussion Forum'
+level 'sciPD2 discussion'
+
+stage 'Evaluation'
+level 'sciPD2 eval'
+
+stage 'Implementation Planning'
+level 'sciPD2 implement'

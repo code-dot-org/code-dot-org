@@ -40,12 +40,34 @@ class ApplicationController < ActionController::Base
     params[resource] &&= send(method) if respond_to?(method, true)
   end
 
-  # when CanCan denies access, send a 403 Forbidden response instead of causing a server error
   rescue_from CanCan::AccessDenied do
-    head :forbidden
-    # TODO if users are actually seeing this (eg. because they cleared
-    # cookies and clicked on something), maybe we should render an
-    # actual page
+    if !current_user && request.format == :html
+      # we don't know who you are, you can try to sign in
+      authenticate_user!
+    else
+      # we know who you are, you shouldn't be here
+      head :forbidden
+    end
+  end
+
+  # missing templates are usually a result of the user agent
+  # requesting a file in the wrong format, send a 404 instead of a 500
+  rescue_from ActionView::MissingTemplate do |exception|
+    render_404
+  end
+
+  def render_404
+    respond_to do |format|
+      format.html { render file: 'public/404.html', layout: 'layouts/application', status: :not_found }
+      format.all { head :not_found }
+    end
+  end
+
+  def render_500
+    respond_to do |format|
+      format.html { render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error }
+      format.all { head :internal_server_error}
+    end
   end
 
   protected
@@ -107,7 +129,7 @@ class ApplicationController < ActionController::Base
     if current_user &&
         options[:level_source].try(:id) &&
         options[:solved?] &&
-        options[:activity] && 
+        options[:activity] &&
         options[:level_source_image]
       response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
     end
@@ -135,20 +157,10 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    if Rails.configuration.minimal_mode
-      nil
-    else
-      super
-    end
-  end
-
-  def nonminimal
-    if Rails.configuration.minimal_mode
-      render 'shared/overloaded', status: 502, formats: [:html]
-    end
+    super
   end
 
   def set_locale_cookie(locale)
-    cookies[:language_] = { value: locale, domain: :all }
+    cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
   end
 end

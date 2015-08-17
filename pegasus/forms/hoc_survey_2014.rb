@@ -1,5 +1,5 @@
 class HocSurvey2014
-  
+
   def self.normalize(data)
     result = {}
 
@@ -38,13 +38,13 @@ class HocSurvey2014
 
     result
   end
-  
+
   def self.process(data)
     {}.tap do |results|
       results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
     end
   end
-  
+
   def self.receipt()
     'hoc_survey_2014_receipt'
   end
@@ -157,7 +157,7 @@ class HocSurvey2014
       'Other teachers in my school',
       'My principal',
       'From the state superintendent (US) or ministry of education (outside US)',
-      'From KhanAcademy',
+      'From Khan Academy',
       'From DonorsChoose.org',
       'From Teach For America',
       'Other',
@@ -169,12 +169,12 @@ class HocSurvey2014
 
     type = type.downcase
     return 'None' if type == 'none'
-  
+
     begin
-      rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
-        claimant:email,
-        claimed_at:DateTime.now,
-        claimed_ip:ip_address,
+      rows_updated = DB[:hoc_survey_prizes].where(claimant: nil, type: type).limit(1).update(
+        claimant: email,
+        claimed_at: DateTime.now,
+        claimed_ip: ip_address,
       )
       raise StandardError, "Out of '#{type}' codes." if rows_updated == 0
     rescue Sequel::UniqueConstraintViolation
@@ -183,7 +183,7 @@ class HocSurvey2014
       raise
     end
 
-    DB[:hoc_survey_prizes].where(claimant:email).first[:value]
+    DB[:hoc_survey_prizes].where(claimant: email).first[:value]
   end
 
 end

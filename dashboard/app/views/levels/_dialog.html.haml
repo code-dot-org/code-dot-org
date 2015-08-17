@@ -1,0 +1,88 @@
+/ This partial contains general logic+view for displaying modal dialogs and handling submit button interactions.
+- app, data = %i(app data).map{ |x| local_assigns[x] }
+
+- unless app == 'external'
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      =t('submit')
+.clear
+%div{style: 'display: none;'}
+  #error-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title
+        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_title")
+      %p
+        =t("#{app == 'match' ? 'match' : 'multi'}.wrong_body")
+      .farSide
+        %button#ok-button.secondary
+          =t('dialog.ok')
+
+  #toofew-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title
+        =t("multi.toofew_title")
+      %p
+        =t("multi.toofew_body")
+      .farSide
+        %button#ok-button.secondary
+          =t('dialog.ok')
+
+  #pre-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title
+        != string_or_image(app, data['pre_title']) if data['pre_title']
+      %p
+        != string_or_image(app, data['pre_body']) if data['pre_body']
+      - if data['pre_ani']
+        .aniGif.example-image{style: 'overflow: hidden;'}
+          != string_or_image(app, data['pre_ani'])
+      .farSide
+        %button#ok-button.secondary
+          =t('dialog.ok')
+
+  #success-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title
+        - if data['options'].try(:[], 'success_title')
+          = data['options']['success_title']
+        - elsif app == 'text_match' && data['answers'].blank?
+          =t('text_match.open_response_title')
+        - else
+          =t("#{app == 'match' ? 'match' : 'multi'}.correct_title")
+      %p
+        - if data['options'].try(:[], 'success_body')
+          = data['options']['success_body']
+        - elsif app == 'text_match' && data['answers'].blank?
+          =t('text_match.open_response_body')
+        - else
+          =t("#{app == 'match' ? 'match' : 'multi'}.correct_body")
+      .farSide
+        %button#ok-button.secondary
+          =t('dialog.ok')
+
+  #startover-dialogcontent
+    .modal-content.no-modal-icon
+      %p.dialog-title
+        =t('dialog.startover_title')
+      %p
+        =t('dialog.startover_body')
+      #buttons
+        %button#cancel-button
+          =t('dialog.startover_cancel')
+        %button#ok-button.btn-danger{style: 'float: right;'}
+          =t('dialog.startover_ok')
+
+:ruby
+  dialogOptions = {
+    skipSound: !!(data['options'].try(:[], 'skip_sound')),
+    preTitle: data['pre_title'],
+    fallbackResponse: @fallback_response.to_json,
+    callback: @callback,
+    app: app,
+    level: @level.level_num,
+    shouldShowDialog: data['options'].try(:[], 'skip_dialog').blank?
+  }
+
+:javascript
+  appOptions.dialog = #{dialogOptions.to_json};
+  #{render partial: 'levels/dialogHelper', formats: [:js]}

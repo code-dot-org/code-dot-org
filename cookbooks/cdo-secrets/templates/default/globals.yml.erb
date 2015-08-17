@@ -1,0 +1,15 @@
+<%=
+  globals = {}
+  
+  excluded_settings = ['words']
+  
+  node['cdo-secrets'].to_hash.each_pair do |key, value|
+    globals[key] = value unless excluded_settings.include?(key)
+  end
+
+  globals['chef_managed'] ||= true
+  globals['name'] ||= node.name
+  globals['env'] ||= node.chef_environment
+
+  YAML::dump globals
+%>

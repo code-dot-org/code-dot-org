@@ -2,16 +2,15 @@ Feature: Complete a complicated maze level
 
 Background:
   Given I am on "http://learn.code.org/reset_session"
-  Given I am on "http://learn.code.org/s/1/level/16?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
-  And I wait for 2 seconds
-  Then element ".dialog-title" has text "Puzzle 15 of 20"
+  Then I wait to see a dialog titled "Puzzle 15 of 20"
   And element ".modal-content p:nth-child(2)" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
   And element "#prompt" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
 @no_mobile
 Scenario: Submit an invalid solution
-  When I press "x-close"
+  When I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And I press "runButton"
@@ -29,7 +28,7 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  When I press "x-close"
+  When I close the dialog
   Then I wait until element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I drag block "4" to block "6"
@@ -46,6 +45,6 @@ Scenario: Submit a valid solution
   # todo (brent) : could test show code
   And I press "continue-button"
   And I wait for 2 seconds
-  Then check that I am on "http://learn.code.org/s/1/level/17"
+  Then check that I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/16"
   Then check that level 16 on this stage is done
   Then check that level 15 on this stage is not done

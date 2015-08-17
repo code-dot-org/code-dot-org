@@ -1,0 +1,17 @@
+name 'ECSPD Online U1D1-2 Forum'
+title 'U1D1-2 Forum'
+css 'unplugged'
+markdown <<MARKDOWN
+## Forum for Unit 1 Day 1-2: What Is a Computer? 
+
+Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+
+> Question: How do you plan to facilitate discussion during this lesson (and later in the course)? Share at least one key technique that has worked well for you in the past.
+
+### <strong><a href="https://forum.code.org/t/unit-1-day-1-2-what-is-a-computer/750" target="_blank">Unit 1 Day 1-2 Forum >></a></strong>
+
+</br>
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

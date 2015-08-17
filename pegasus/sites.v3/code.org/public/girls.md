@@ -11,7 +11,7 @@ Computer science is foundational to many fields, but not enough girls are choosi
 Reach out to other teachers, clubs, teams, or groups of friends at your school. Some girls may need a nudge to consider computer science, and will feel more comfortable trying it with friends, so they won’t be the only girl in the class.
 
 ## 2. Inspire with examples
-Share how young women are thriving in computer science. Show them [inspirational videos](http://code.org/educate/inspire), especially [this one](http://www.youtube.com/watch?v=nKIu9yen5nc&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q). Or invite female computer scientists a few years older than your students to share how they got into the field (Ask the local university CS department for help).
+Share how young women are thriving in computer science. Show them [our inspirational videos](http://code.org/educate/inspire) or [these videos](http://www.youtube.com/playlist?list=PLRuS3NbVmMIpLOha835A_uMrjPnYVevZW) featuring young women. Or invite female computer scientists a few years older than your students to share how they got into the field (Ask the local university CS department for help).
 
 [![image](/images/codevideosmall.png)](http://www.youtube.com/watch?v=nKIu9yen5nc)   [![image](/images/hocvideosmall.png)](http://www.youtube.com/watch?v=FC5FbmsH4fw)
 
@@ -38,4 +38,4 @@ Computer science is about making a difference in the world, creating new things,
 - [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
 
 <a id="notes"></a>
-*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), [DotDiva](http://www.dotdiva.org/), and other organizations dedicated to growing participation of women in technology. 
+*Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), [DotDiva](http://www.dotdiva.org/), Google, and other organizations dedicated to growing participation of women in technology. 

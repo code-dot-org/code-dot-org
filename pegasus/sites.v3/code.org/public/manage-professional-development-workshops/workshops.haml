@@ -2,59 +2,112 @@
 layout: none
 theme: none
 ---
+%a{"ng-href" => "/manage-professional-development-workshops/k5surveys?user_id=#{dashboard_user[:id]}"}
+  %h1
+    View your survey results
 %div{"ng-controller" => "WorkshopsController"}
   %h1 Your workshops
 
-  %a.btn.btn-default{style: 'color: #fff;', "ng-href" => "#/new"} Add workshop
+  %a.btn.btn-default{"ng-href" => "#/new", style: "color: #333;"} Add workshop
   %br/
   %br/
 
   %div.jumbotron{'ng-show' => 'hasWorkshops && workshops.length <= 0'}
     No workshops have been added yet.
 
-  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'workshops.length > 0'}
-    %colgroup
-      %col{style: 'width: 200px;'}/
-      %col{style: 'width: 320px;'}/
-      %col{style: 'width: 100px;'}/
-      %col{style: 'width: 100px;'}/
-      %col{style: 'width: 125px;'}/
-      %col{style: 'width: 225px;'}/
-    %tr
-      %th.manage-th
-        Date and time
-      %th.manage-th
-        Location
-      %th.manage-th
-        Type
-      %th.manage-th
-        Signups
-      %th.manage-th
-        Current State
-      %th.manage-th
-    %tr{"ng-repeat" => "workshop in workshops | orderBy:'firstDate()'", style: "vertical-align:top"}
-      %td
-        %div{"ng-repeat" => "date in workshop.dates"}
-          {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
-      %td {{workshop.location_name_s}}
-      %td {{workshop.type_s}}
-      %td {{workshop.signups.length}} / {{workshop.capacity_s}}
-      %td
-        %span{'ng-show' => 'workshop.state() == "not_started"'}
-          Not Started
-          %a.btn.btn-default{"ng-click" => "start_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
-        %span{'ng-show' => 'workshop.state() == "started"'}
-          In Progress
-          %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
-        %span{'ng-show' => 'workshop.state() == "stopped"'}
-          Ended
-      %td{nowrap: true, style: 'white-space: nowrap;'}
-        %span{"ng-show" => "workshop.confirmDelete"}
-          %span Delete?
-          %a.btn.btn-danger.btn-xs{"ng-click"=>'del(workshop)'} Yes
-          %a.btn.btn-success.btn-xs{"ng-click"=>'workshop.confirmDelete = false'} No
-        %span{"ng-hide" => "workshop.confirmDelete"}
-          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/view"} View
-          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
-          %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/clone"} Clone
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(workshop)"} Delete
+  %div{'ng-show' => 'futureWorkshops().length > 0'}
+    %table{style: "width:950px; table-layout:fixed;"}
+      %colgroup
+        %col{style: 'width: 200px;'}/
+        %col{style: 'width: 320px;'}/
+        %col{style: 'width: 100px;'}/
+        %col{style: 'width: 100px;'}/
+        %col{style: 'width: 125px;'}/
+        %col{style: 'width: 225px;'}/
+      %tr
+        %th.manage-th
+          Date and time
+        %th.manage-th
+          Location
+        %th.manage-th
+          Type
+        %th.manage-th
+          Signups
+        %th.manage-th
+          Current State
+        %th.manage-th
+      %tr{"ng-repeat" => "workshop in futureWorkshops() | orderBy:'firstDate()'", style: "vertical-align:top"}
+        %td
+          %div{"ng-repeat" => "date in workshop.dates"}
+            {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
+        %td {{workshop.location_name_s}}
+        %td {{workshop.type_s}}
+        %td {{workshop.active_signups_count}} / {{workshop.capacity_s}}
+        %td
+          %span{'ng-show' => 'workshop.state() == "not_started"'}
+            Not Started
+            %a.btn.btn-default{"ng-click" => "start_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
+          %span{'ng-show' => 'workshop.state() == "started"'}
+            In Progress
+            %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
+          %span{'ng-show' => 'workshop.state() == "stopped"'}
+            Ended
+        %td{nowrap: true, style: 'white-space: nowrap;'}
+          %span{"ng-show" => "workshop.confirmDelete"}
+            %span Delete?
+            %a.btn.btn-danger.btn-xs{"ng-click"=>'del(workshop)'} Yes
+            %a.btn.btn-success.btn-xs{"ng-click"=>'workshop.confirmDelete = false'} No
+          %span{"ng-hide" => "workshop.confirmDelete"}
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/view"} View
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/clone"} Clone
+            %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(workshop)"} Delete
+
+  %div{'ng-show' => 'pastWorkshops().length > 0'}
+    %h2 Past workshops
+    %table{style: "width:950px; table-layout:fixed;"}
+      %colgroup
+        %col{style: 'width: 200px;'}/
+        %col{style: 'width: 320px;'}/
+        %col{style: 'width: 100px;'}/
+        %col{style: 'width: 100px;'}/
+        %col{style: 'width: 125px;'}/
+        %col{style: 'width: 225px;'}/
+      %tr
+        %th.manage-th
+          Date and time
+        %th.manage-th
+          Location
+        %th.manage-th
+          Type
+        %th.manage-th
+          Signups
+        %th.manage-th
+          Current State
+        %th.manage-th
+      %tr{"ng-repeat" => "workshop in pastWorkshops() | orderBy:'-firstDate()'", style: "vertical-align:top"}
+        %td
+          %div{"ng-repeat" => "date in workshop.dates"}
+            {{date.date_s}}, {{date.start_time_s}}-{{date.end_time_s}}
+        %td {{workshop.location_name_s}}
+        %td {{workshop.type_s}}
+        %td {{workshop.active_signups_count}} / {{workshop.capacity_s}}
+        %td
+          %span{'ng-show' => 'workshop.state() == "not_started"'}
+            Not Started
+            %a.btn.btn-default{"ng-click" => "start_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to start your workshop?'} Start Event
+          %span{'ng-show' => 'workshop.state() == "started"'}
+            In Progress
+            %a.btn.btn-default{"ng-click" => "stop_workshop(workshop)", 'ng-confirm-click' => 'Are you sure you want to end your workshop?'} End Event
+          %span{'ng-show' => 'workshop.state() == "stopped"'}
+            Ended
+        %td{nowrap: true, style: 'white-space: nowrap;'}
+          %span{"ng-show" => "workshop.confirmDelete"}
+            %span Delete?
+            %a.btn.btn-danger.btn-xs{"ng-click"=>'del(workshop)'} Yes
+            %a.btn.btn-success.btn-xs{"ng-click"=>'workshop.confirmDelete = false'} No
+          %span{"ng-hide" => "workshop.confirmDelete"}
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/view"} View
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
+            %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/clone"} Clone
+            %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(workshop)"} Delete

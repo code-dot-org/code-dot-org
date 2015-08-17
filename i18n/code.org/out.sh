@@ -2,7 +2,7 @@
 
 set -e
 
-locales=$(ls ../locales | grep -v 'en-US')
+locales=$(ls ../locales | grep -v 'en-US' | grep -v 'source')
 
 for locale in $locales; do
 
@@ -12,7 +12,7 @@ for locale in $locales; do
 
   orig_dir=../../dashboard/config/locales
   loc_dir=../locales/$locale/dashboard
-  en_dir=../locales/en-US/dashboard
+  en_dir=../locales/source/dashboard
 
   # Special case the un-prefixed Yaml file.
   ruby ./lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
@@ -28,9 +28,9 @@ for locale in $locales; do
 
   ### Blockly Mooc
 
-  orig_dir=../../blockly/i18n
+  orig_dir=../../apps/i18n
   loc_dir=../locales/$locale/blockly-mooc
-  en_dir=../locales/en-US/blockly-mooc
+  en_dir=../locales/source/blockly-mooc
 
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
@@ -42,7 +42,7 @@ for locale in $locales; do
   ### Blockly Core
   orig_dir=../../blockly-core/i18n/locales/$locale
   loc_dir=../locales/$locale/blockly-core
-  en_dir=../locales/en-US/blockly-core
+  en_dir=../locales/source/blockly-core
   mkdir -p $orig_dir
 
   # Copy JSON files.
@@ -55,7 +55,7 @@ for locale in $locales; do
   ### Pegasus
   orig_dir=../../pegasus/cache/i18n
   loc_dir=../locales/$locale/pegasus
-  en_dir=../locales/en-US/pegasus
+  en_dir=../locales/source/pegasus
 
   # Merge YML file.
   ruby ./lib/merge-translation.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
@@ -64,4 +64,4 @@ for locale in $locales; do
 
 done
 
-git commit --message=Translations --edit
+ruby ./lib/cleanup.rb

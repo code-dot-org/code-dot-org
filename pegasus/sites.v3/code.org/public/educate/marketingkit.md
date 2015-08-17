@@ -16,7 +16,7 @@ Here is how you can promote your school's new computer science program:
 
 [**YouTube**](http://www.youtube.com/watch?v=nKIu9yen5nc) | [**Download**](https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1)
 
-## 3) Customize, print and send home [one of these fliers](https://www.dropbox.com/s/f7idusa25t10v8v/newsletters.docx)
+## 3) Customize, print and send home [one of these fliers](https://www.dropbox.com/s/b3m7f6u1jt283fb/Code.org_SchoolsBrochure.pdf?dl=0)
 
 ## 4) Include a [blurb about new classes](/educate/blurbs) in an email to students or parents, or include in a newsletter.
  
@@ -26,7 +26,7 @@ Here is how you can promote your school's new computer science program:
 | -------- | ------- |
 | [high school](/educate/hs) | code.org/highschool  |
 | [middle school](/educate/ms) | code.org/middleschool |
-| [elementary school](/educate/es) | code.org/elementary |
+| [elementary school](/educate/k5) | code.org/k5 |
 
 
 <a id="classgraphics"></a> 

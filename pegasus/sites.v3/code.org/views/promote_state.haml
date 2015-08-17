@@ -4,24 +4,28 @@
 -no_credit_count = no_credit_count()
 -petition_url = data[:petition_url_t]
 
-%p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 36px; font-weight: bold; text-align:center'} #{statename}
-%p{style: "font-size:15px; margin-bottom: 0px"}
+%p#state-title
+  #{statename}
+%p.fact{style: "margin-bottom: 0px"}
   -unless data[:cs_jobs_i] == 0
-    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_jobs_i])
+    %strong.figure
+      =format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p{style: "color: #ddd; font-size:15px;"}
+  %p.fact{style: "color: #ddd"}
     (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
-%p{style: "font-size:15px;"}
+%p.fact
   -unless data[:cs_graduates] == 0
-    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:cs_graduates_i])
+    %strong.figure
+      =format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
-%p{style: "font-size:15px; margin-bottom: 18px; line-height: 15px"}
+%p.fact{style: "margin-bottom: 18px"}
   -unless data[:count_schools_teach_cs] == 0
-    %strong{style: "font-size:20px;"}= format_integer_with_commas(data[:count_schools_teach_cs_i])
+    %strong.figure
+      =format_integer_with_commas(data[:count_schools_teach_cs_i])
     schools teach computer science
 
-%div{style: "font-size:15px; margin-left:20px;"}
+%div.fact{style: "margin-left:20px;"}
   - if data[:cs_counts_t] == "No"
     %i.fa.fa-times-circle
     &nbsp;
@@ -53,9 +57,9 @@
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
   %span.download-fact-sheet<
-    %a{:href=>"/files/states/#{state}.pdf", :target=>'_blank'}<
+    %a{href: "/files/states/#{state}.pdf", target: '_blank'}<
       Download #{statename} fact-sheet
-      %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:-5px'}
+      %img{:src=>"/images/download.png", width: "35px", style: 'margin-top:-5px'}
 
 - if statename == "Washington DC"
   %p
@@ -66,13 +70,13 @@
 - else
   - if data[:cs_counts_t] == "Yes"
     %p
-      #{statename} is one of #{50 - no_credit_count} states where students
+      #{statename} is one of #{credit_count} states where students
       %strong
         can
       count computer science for credit towards high school graduation!
   - else
     %p
-      #{statename} is one of #{no_credit_count} states where students
+      #{statename} is one of #{credit_count} states where students
       %strong
         can't
       count computer science for credit towards high school graduation.
@@ -81,39 +85,40 @@
   %p
     =data[:text_t]
 
-%button{:onclick=>"return adjustScroll('tools-section')"}
+%button{onclick: "return adjustScroll('tools-section')"}
   Take Action
 
 -if data[:action_text_s] && data[:action_url_s]
-  %a{:href=>data[:action_url_s], :target=>'_blank'}
-    %button{:class=>'state-petition-btn'}
-      Sign Petition
+  %a{href: data[:action_url_s], target: '_blank'}
+    %button{class: 'state-petition-btn'}
+      = data[:action_text_s]
 - else
-  %a{:href=>data[:action_url_s], :target=>'_blank'}
-    %button{:class=>'state-petition-btn', :style=>'visibility: hidden'}
+  %a{href: data[:action_url_s], target: '_blank'}
+    %button{class: 'state-petition-btn', style: 'visibility: hidden'}
       Sign Petition
 
-#changeorg{:style=>'display: none;'}
+#changeorg{style: 'display: none;'}
   %b#title
   %br
   %span#count
   %br
   %br
-  %a{:href=>petition_url, :target=>'_blank'}
+  %a{href: petition_url, target: '_blank'}
     %button{:class=>'state-petition-btn'} Sign Petition
 %br
 %br
 
-%p{:style=>"font-size: 12px; line-height: 12px; text-align: center; opacity: 0.8;"}
-  %span{:style=> 'color: #BCC2C6'} Sources:
+%p#sources
+  %span
+    Sources:
   =succeed "," do
-    %a{:href=>"http://www.conference-board.org/", :style=>"color: #BCC2C6", target: '_blank'} The Conference Board
+    %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
   =succeed "," do
-    %a{:href=>"http://www.nsf.gov/", :style=>"color: #BCC2C6", target: '_blank'} National Science Foundation
+    %a{href: "http://www.nsf.gov/", style: "color: #BCC2C6", target: '_blank'} National Science Foundation
   =succeed "." do
-    %a{:href=>"http://code.org/learn/local", :style=>"color:#BCC2C6", target: '_blank'} Code.org database
+    %a{href: "http://code.org/learn/local", style: "color:#BCC2C6", target: '_blank'} Code.org database
   =succeed "." do
-    %a{:href=>"https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", :style=>"color: #BCC2C6", target: '_blank'} More info
+    %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
 
 
 :javascript
@@ -162,4 +167,27 @@
     $('html, body').animate({
       scrollTop: $("#" + destination).offset().top
     }, 1000);
+  }
+
+:css
+  #state-title {
+    color: rgb(185,191,21);
+    text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    font-size:36px;
+    line-height: 36px;
+    font-weight: bold;
+    text-align:center;
+  }
+  .fact {
+    font-size:15px;
+  }
+  .figure {
+    font-size:20px;
+  }
+  #sources {
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    opacity: 0.8;
+    color: #BCC2C6;
   }

@@ -1,0 +1,47 @@
+-dont_cache
+-not_authorized! unless dashboard_user
+-forbidden! unless dashboard_user[:admin]
+
+%form#csp_apps
+  %table
+    %tr
+      %td
+        App name
+      %td
+        action
+    -DB[:forms].where(kind:'CspApp', user_id:dashboard_user[:id]).each do |app|
+      -app_data = JSON.parse(app[:data])
+      %tr
+        %td
+          #{app_data['app_name_s']}
+        %td
+          %a{href:"/edit-csp-app/#{app[:secret]}", target:"_blank"}
+            view
+    %tr
+      %td
+        %input#app-name-input{name:'app_name_s'}
+      %td
+        %button
+          Add
+
+:javascript
+  function processResponse(data) {
+    window.location.reload()
+  }
+  function processError(data) {
+    window.alert(data.status + '\n' + data.responseJSON);
+  }
+  $('#csp_apps').submit(
+    function(e) {
+      var app_name = document.getElementById('app-name-input').value;
+      $.ajax({
+        url: "/v2/forms/CspApp",
+        type: "post",
+        data: JSON.stringify( { app_name_s: app_name } ),
+        processData: false,
+        contentType: "application/json; charset=utf-8"
+      }).done(processResponse).fail(processError);
+      return false;
+    }
+  );
+

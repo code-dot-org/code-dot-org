@@ -20,7 +20,7 @@ ERB_TASKS = [
   i18n_dir(filename).tap do |path|
     file path => [i18n_dir("#{filename}.erb")] + DEPENDENCIES do |t|
       puts "erb #{path}"
-      erb_file_to_file t.prerequisites[0], t.name, task:t
+      erb_file_to_file t.prerequisites[0], t.name, task: t
     end
   end
 end

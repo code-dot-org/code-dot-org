@@ -22,10 +22,18 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
-  APPLAB = WEBAPP = 'webapp'
+  APPLAB = WEBAPP = 'applab'
+  NETSIM = 'netsim'
+  MAZE = 'maze'
+  CALC = 'calc'
+  EVAL = 'eval'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.custom_artist
+    @@game_custom_artist ||= find_by_name("Custom")
   end
 
   def self.calc
@@ -34,6 +42,14 @@ class Game < ActiveRecord::Base
 
   def self.eval
     @@game_eval ||= find_by_name("Eval")
+  end
+
+  def self.applab
+    @@game_applab ||= find_by_name("Applab")
+  end
+
+  def self.netsim
+    @@game_netsim ||= find_by_name("NetSim")
   end
 
   def unplugged?
@@ -61,7 +77,23 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Webapp" || name == "StudioEC"
+    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
+  end
+
+  def uses_pusher?
+    app == NETSIM
+  end
+
+  def has_footer?
+    !(app == APPLAB)
+  end
+
+  def uses_small_footer?
+    app == NETSIM
+  end
+
+  def has_i18n?
+    !(app == NETSIM || app == APPLAB)
   end
 
   def self.setup
@@ -109,6 +141,10 @@ class Game < ActiveRecord::Base
         ArtistEC:turtle:artist_intro
         TextMatch
         StudioEC:studio
+        ContractMatch
+        Applab:applab
+        NetSim:netsim
+        External:external
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

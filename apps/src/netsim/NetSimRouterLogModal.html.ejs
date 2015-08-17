@@ -1,0 +1,84 @@
+<%
+var Packet = require('./Packet');
+var i18n = require('./locale');
+var NetSimGlobals = require('./NetSimGlobals');
+
+var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
+
+/** @type {boolean} */
+var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+/**
+ * @name isAllRouterLogMode
+ * @type {boolean}
+ */
+
+/**
+ * @name sortBy
+ * @type {string}
+ */
+
+/**
+ * @name sortDescending
+ * @type {boolean}
+ */
+
+function sortMarkupFor(sortKey) {
+  if (sortKey === sortBy) {
+    if (sortDescending) {
+      return '<i class="fa fa-sort-desc"></i>';
+    } else {
+      return '<i class="fa fa-sort-asc"></i>';
+    }
+  }
+  return '';
+}
+%>
+<div class="modal-dialog modal-lg">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      <% if (canToggleRouterLogMode) { %>
+        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
+      <% } %>
+
+      <% if (isAllRouterLogMode) { %>
+        <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
+      <% } else { %>
+        <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>
+      <% } %>
+    </div>
+    <div class="modal-body">
+      <table>
+        <thead>
+          <tr>
+            <th nowrap data-sort-key="timestamp"><%= i18n.time() %> <%- sortMarkupFor('timestamp') %></th>
+            <th nowrap data-sort-key="logged-by"><%= i18n.loggedByNode() %> <%- sortMarkupFor('logged-by') %></th>
+            <th nowrap data-sort-key="status"><%= i18n.status() %> <%- sortMarkupFor('status') %></th>
+            <% if (showFromAddress) { %>
+              <th nowrap data-sort-key="from-address"><%= i18n.from() %> <%- sortMarkupFor('from-address') %></th>
+            <% } %>
+            <% if (showToAddress) { %>
+              <th nowrap data-sort-key="to-address"><%= i18n.to() %> <%- sortMarkupFor('to-address') %></th>
+            <% } %>
+            <% if (showPacketInfo) { %>
+              <th nowrap data-sort-key="packet-info"><%= i18n.packet() %> <%- sortMarkupFor('packet-info') %></th>
+            <% } %>
+            <th nowrap data-sort-key="message"><%= i18n.message() %> <%- sortMarkupFor('message') %></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>

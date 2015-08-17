@@ -1,0 +1,36 @@
+name 'PDAlg bootstrap'
+title 'From Bootstrap to CS in Algebra'
+css 'unplugged'
+markdown <<MARKDOWN
+<style type="text/css">
+tbody tr:nth-child(even) {
+   background-color: #ddd;
+}
+td {
+    vertical-align: top;
+    padding: 5px;
+}
+</style>
+## Code.org Computer Science in Algebra
+#### Powered by Bootstrap
+### What is CS in Algebra?
+
+<img src="https://studio.code.org/script_assets/pd/game_demo.gif" style="float: right; max-width: 200px; margin: 0 0 10px 10px;"/>
+As a teacher who has implemented Bootstrap's Computer Science curriculum, we are ecstatic to introduce you to the new [Code.org CS in Algebra](http://code.org/curriculum/algebra)! Built on the tested techniques and pedagogy of [Bootstrap](http://bootstrapworld.org), CS in Algebra is a new take on using functional programming to teach Algebra. Through this online PD you'll be introduced to the new visual programming language we've developed, and you'll see how you can apply everything you've learned teaching Bootstrap into this new curriculum as well.
+
+### What's Different?
+
+In developing this course we've taken everything we've learned about computer scaffolded instruction and visual programming and merged it with the curriculum and pedagogy of Bootstrap. You'll find the main differences are:
+
+| Feature | Bootstrap | CS in Algebra |
+|------------------------|-------------------------------|---------------------------------------------------------------------------|
+| Programming Language | Text (Racket) | Visual (Evaluation Blocks) |
+| Learning Environment | [WeScheme](http://wescheme.org) | [Code Studio](http://studio.code.org) |
+| Instructional Supports | Lesson Plans<br>Student Workbook | [Lesson Plans](http://code.org/curriculum/algebra)<br>Student Workbook<br>[Scaffolded Activities](http://studio.code.org/s/algebra)<br>Student-facing Videos |
+| Student Accounts | Google login (email required) | Code.org Accounts (no email required)<br>[Teacher Dashboard](http://code.org/teacher-dashboard)|
+
+### What's the Same?
+Just about everything else that you've come to love about Bootstrap has been brought along to CS in Algebra. The scope and sequence, Design Recipe, projects, and overall video game are all present, with some new fun surprises as well.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -1,33 +1,62 @@
-- content_for(:head) do
-  = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
-  = javascript_include_tag 'editor/blockly_editor'
+:css
+  textarea {
+    width: 100%
+  }
+
+  button {
+    font-size: 100%;
+  }
+
+.field
+  = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 .field
   = f.label :instructions
   = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+= render partial: 'levels/editors/md_instructions', locals: {f: f}
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
 .field
-  = f.label :is_k1, "Is K1 level"
+  = f.label :is_k1, 'Is K1 level'
   = boolean_check_box f, :is_k1
 .field
-  = f.label :skip_instructions_popup, "Skip instructions popup"
+  = f.label :skip_instructions_popup, 'Skip instructions popup'
   = boolean_check_box f, :skip_instructions_popup
 .field
-  = f.label :use_modal_function_editor, "Use modal function editor"
+  = f.label :use_modal_function_editor, 'Use modal function editor'
   = boolean_check_box f, :use_modal_function_editor
 .field
-  = f.label :use_contract_editor, "Use MSM contract editor"
+  = f.label :use_contract_editor, 'Use MSM contract editor'
   = boolean_check_box f, :use_contract_editor
 .field
-  = f.label :open_function_definition, "Auto-open function definition"
-  = f.text_field :open_function_definition, placeholder: 'name of function to open'
+  = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
+  = f.number_field :default_num_example_blocks
 .field
-  = f.label :disable_param_editing, "Enable param editing in function blocks"
+  = f.label :disable_examples, 'Hide examples section in contract editor'
+  = boolean_check_box f, :disable_examples
+.field
+  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
+  = boolean_check_box f, :examples_required
+.field
+  = f.label :open_function_definition, 'Auto-open function definition'
+  = f.text_field :open_function_definition, placeholder: 'name of function to open'
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
+
+.field
+  = f.label :disable_param_editing, 'Enable param editing in function blocks'
   = f.check_box :disable_param_editing, {}, 'false', 'true'
 .field
-  = f.label :disable_variable_editing, "Disable editing of variable names and creation of new variables"
+  = f.label :disable_variable_editing, 'Disable editing of variable names and creation of new variables'
   = boolean_check_box f, :disable_variable_editing
 .field
   = f.label :scrollbars, 'Scrollbars'
@@ -38,23 +67,34 @@
     = f.radio_button :scrollbars, true
     False:
     = f.radio_button :scrollbars, false
-:css
-  textarea { width: 100% }
+- if @level.game.uses_droplet?
+  .field
+    = f.label :code_functions, 'Edit Droplet Palette'
+    = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
+    :javascript
+      codeMirror('code_functions', 'javascript');
+- else
+  .field
+    = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
+    = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+    :javascript
+      codeMirror('toolbox_blocks', 'xml');
 .field
-  = link_to "Edit Toolbox Blocks", level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  = f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+  - if @level.game.uses_droplet?
+    = f.label :start_blocks, 'Edit Starting JavaScript Program'
+  - else
+    = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
+  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
   :javascript
-    codeMirror('toolbox');
+    codeMirror('start_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
-  = link_to "Edit Start Blocks", level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  = f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.pretty_block('start')
-  :javascript
-    codeMirror('start');
-.field
-  = link_to "Edit Required Blocks", level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
+  - if @level.game.uses_droplet?
+    = f.label :required_blocks, 'Edit Required Blocks'
+  - else
+    = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   = f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
   :javascript
-    codeMirror('required');
+    codeMirror('required_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');
 .field
   = f.label :ideal, 'Ideal block number'
   = f.number_field :ideal
@@ -65,30 +105,51 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-.field
-  = f.label :callout_json
-  %div{:style => '-webkit-user-select: text'}
-    %pre
-      = preserve "Example: [\n  {\"localization_key\": \"run\", \"element_id\": \"#runButton\"},\n  {\"localization_key\": \"drag_blocks\", \"element_id\": \"[block-id='1']\", \"qtip_config\": {\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom right\", \"adjust\": {\"x\": 22, \"y\":60}},\n    \"style\": { \"classes\": \"no-tip\" }}\n  }\n]"
-  = f.text_area :callout_json, rows: 4
 - if @level.respond_to? :free_play
   .field
-    = f.label :free_play, "Free Play"
+    = f.label :free_play, 'Free Play'
     %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
     = boolean_check_box f, :free_play
 - if @level.respond_to? :disable_sharing
   .field
-    = f.label :disable_sharing, "Disable sharing"
+    = f.label :disable_sharing, 'Disable sharing'
     %p If set, this level cannot be shared or saved to galleries even if it's free play.
     = boolean_check_box f, :disable_sharing
 - if @level.respond_to? :free_play
   .field
-    = f.label :embed, "Embed"
+    = f.label :embed, 'Embed'
     %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
     = boolean_check_box f, :embed
-:javascript
-  CodeMirror.fromTextArea($('#level_callout_json').get(0), {
-    mode: 'javascript',
-    viewportMargin: Infinity,
-    matchBrackets: true
-  });
+- if @level.respond_to? :coordinate_grid_background
+  .field
+    = f.label :coordinate_grid_background, 'Coordinate grid background'
+    = boolean_check_box f, :coordinate_grid_background
+.field
+  = f.label :project_template_level_name, 'Project Template Level Name'
+  %p What this does:
+  %ul
+    %li uses start_blocks from the project template level instead of this level
+    %li uses toolbox_blocks from the project template level instead of this level
+    %li autocreate a project that is shared with all levels with the same project template level
+  %p (Leave blank if you do not want all of this)
+  = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+.field
+  = f.label :failure_message_override, 'Failure Message Override'
+  %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+  = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+-if @level.respond_to? :input_output_table
+  = f.label :input_output_table, 'Input/Output Table'
+  %p An array of tuples where each tuple is [input, output].
+  %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
+  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
+  :javascript
+      codeMirror('input_output_table', 'javascript')
+-if @level.respond_to? :solution_blocks
+  .field
+    - if @level.game.uses_droplet?
+      = f.label :solution_blocks, 'Edit Solution Blocks'
+    - else
+      = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
+    = f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
+    :javascript
+      codeMirror('solution_blocks', '#{@level.game.uses_droplet? ? 'javascript' : 'xml'}');

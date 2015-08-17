@@ -1,0 +1,19 @@
+name 'U3L08 Assessment3'
+title 'Functions with Parameters: Question 3'
+question 'There is an error in one line of the following code. What line is it in?'
+wrong 'square();'
+
+right 'function square() {'
+
+wrong 'penDown();'
+
+wrong 'for(var i = 0; i < 4; i++){'
+
+wrong 'moveForward(length);'
+wrong 'turnLeft(90); }'
+wrong 'penUp();'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

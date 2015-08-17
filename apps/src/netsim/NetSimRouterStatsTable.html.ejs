@@ -1,0 +1,44 @@
+<%
+  var utils = require('../utils');
+  var NetSimUtils = require('./NetSimUtils');
+
+  /**
+   * Write a stats row with the given title and value.
+   * @param {string} title - localized name of the statistic (the header column contents)
+   * @param {*} statValue - the value of the statistic
+   */
+  var writeStatRow = function (title, statValue) {
+    %>
+      <tr>
+        <th nowrap><%= title %></th>
+        <td><%= statValue %></td>
+      </tr>
+    <%
+  };
+
+  /**
+   * Write a stats row that displays a fraction and also its percentage form.
+   * @param {string} title - localized name of the statistic (the header column contents)
+   * @param {number} partValue - numerator of the stat
+   * @param {number} totalValue - denominator of the stat
+   * @param {function} [toStringFunction] method for converting numerator and denominator to display format
+   */
+  var fractionStatRow = function (title, partValue, totalValue, toStringFunction) {
+    toStringFunction = utils.valueOr(toStringFunction, function (x) { return x; });
+    var valueString = toStringFunction(partValue) + ' / ' + toStringFunction(totalValue);
+    if (totalValue > 0 && totalValue < Infinity) {
+      valueString += ' (' + Math.round(100 * partValue / totalValue) + '%)';
+    }
+    writeStatRow(title, valueString);
+  };
+%>
+<table>
+  <tbody>
+    <% writeStatRow('Uptime', uptime); %>
+    <% writeStatRow('Queued Packets', queuedPackets); %>
+    <% fractionStatRow('Memory Use', usedMemory, totalMemory, NetSimUtils.bitsToLocalizedRoundedBytesize); %>
+    <% fractionStatRow('Throughput', dataRate, bandwidthLimit, NetSimUtils.bitrateToLocalizedRoundedBitrate); %>
+    <% fractionStatRow('Routed Packets', successfulPackets, totalPackets); %>
+    <% fractionStatRow('Routed Data', successfulData, totalData, NetSimUtils.bitsToLocalizedRoundedBytesize); %>
+  </tbody>
+</table>

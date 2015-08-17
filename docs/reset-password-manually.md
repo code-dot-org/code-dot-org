@@ -3,7 +3,9 @@ Resetting passwords in the dashboard console (instead of via the reset password 
 You might want to do this for a couple reasons:
 
 - your dev environment is not set up to send mail and you want to reset your password
-- you're resolving a zendesk contact from someone who is not receiving the reset password mails (use caution in case someone's trying to gain access to someone else's account)
+- you're resolving a zendesk contact from someone who is not receiving the reset password mails
+  - it is important that use caution in case someone's trying to gain access to someone else's account
+  - in general, only send the reset password instructions to the exact email address they're requesting a reset password for (i.e. don't send foo@email.com a reset for bar@email.com)
 
 
 ````

@@ -15,7 +15,7 @@
     -else
       -title = (header['title'].nil?) ? 'Anybody can learn' : header['title']
       -tagline = (header['tagline'].nil?) ? 'Code.org' : header['tagline']
-      -copyright = '&copy; Code.org, 2014'
+      -copyright = '&copy; Code.org, 2015'
 
     -full_title = (tagline == '' || title == tagline) ? title : title + ' | ' + tagline
 
@@ -25,6 +25,7 @@
     %link{:rel=>'apple-touch-icon', :href=>'/images/apple-touch-icon-precomposed.png'}
 
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/style.css'}
+    %link{rel:'stylesheet', type:'text/css', href:'/shared/css/user-menu.css'}
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/font-awesome.min.css'}
 
     /[if lt IE 9]
@@ -68,7 +69,7 @@
           #mobile-header.mobile-headers.mobile-feature
             = partial('mobile_header_responsive')
         -else
-          = partial('page_header')  
+          = partial('page_header')
 
         -if header['responsive']
           -if request.path_info =~ /^\/learn/
@@ -127,7 +128,7 @@
         .desktop-feature
           = partial('page_footer')
         .mobile-headers.mobile-feature
-          = partial('mobile_footer_responsive', :text=>copyright)    
+          = partial('mobile_footer_responsive', :text=>copyright)
       -else
         = partial('page_footer')
 

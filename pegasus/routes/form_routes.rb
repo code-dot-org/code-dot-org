@@ -6,7 +6,7 @@ get '/forms/uploads/*' do |uri|
   end
   pass unless File.file?(cache_file)
 
-  cache_control :public, :must_revalidate, max_age:settings.static_max_age
+  cache_control :public, :must_revalidate, max_age: settings.static_max_age
   send_file(cache_file)
 end
 
@@ -16,7 +16,7 @@ post '/forms/:kind' do |kind|
     content_type :json
     cache_control :private, :must_revalidate, :max_age=>0
     form = insert_form(kind, params)
-    form.data.merge(secret: form.secret).to_json
+    JSON.load(form[:data]).merge(secret: form[:secret]).to_json
   rescue FormError=>e
     halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
   end
@@ -47,7 +47,7 @@ post "/forms/:kind/:secret" do |kind, secret|
     content_type :json
     cache_control :private, :must_revalidate, :max_age=>0
     forbidden! unless form = update_form(kind, secret, params)
-    form.data.to_json
+    form[:data]
   rescue FormError=>e
     halt 400, {'Content-Type'=>'text/json'}, e.errors.to_json
   end
@@ -61,7 +61,7 @@ post '/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_id,
 
   begin
     content_type :json
-    insert_form(kind, params, parent_id:parent_form[:id]).data.to_json
+    insert_form(kind, params, parent_id: parent_form[:id])[:data].to_json
   rescue FormError=>e
     form_error! e
   end

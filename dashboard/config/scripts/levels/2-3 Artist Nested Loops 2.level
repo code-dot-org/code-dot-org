@@ -14,7 +14,23 @@
     "skip_instructions_popup": "false",
     "ideal": "8",
     "slider_speed": ".6",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "markdown_instructions": "Now loop the triangle 6 times. After each triangle, you'll need to turn 60 degrees before drawing the next.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -42,9 +58,9 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
+                    <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">60</title>
+                      <title name="VALUE">60</title>
                     </block>
                   </next>
                 </block>
@@ -56,7 +72,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
@@ -90,13 +105,13 @@
       <xml>
         <block type="pick_one">
           <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
+            <block type="draw_turn_by_constant">
               <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">60</title>
+              <title name="VALUE">60</title>
               <next>
-                <block type="draw_turn_by_constant_dropdown">
+                <block type="draw_turn_by_constant">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="45,60,90,120,180">60</title>
+                  <title name="VALUE">60</title>
                 </block>
               </next>
             </block>
@@ -134,9 +149,9 @@
                         </block>
                       </statement>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE">60</title>
+                          <title name="VALUE" config="45,60,90,120,180">60</title>
                         </block>
                       </next>
                     </block>

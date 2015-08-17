@@ -1,0 +1,61 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-01T18:04:46.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "200",
+    "app_height": "200",
+    "instructions": "Draw a square ABOVE and to the RIGHT of the starting location. (Click to show full instructions)",
+    "callout_json": "[]",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "markdown_instructions": "<img src=\"https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png\" align=right> **Warm up 2:** Draw a 1 x 1 square to the front and right of the turtle as efficiently as possible.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nWhen you're done click the Finish button to move onto the next problem.\r\n\r\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,10 +1,10 @@
 Feature: Playing the Artist Game
 
 Background:
-  Given I am on "http://learn.code.org/s/1/level/24?noautoplay=true"
+  Given I am on "http://learn.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 1 of 10"
-  And I press "x-close"
+  Then I wait to see a dialog titled "Puzzle 1 of 10"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
@@ -20,9 +20,8 @@ Scenario: Winning the first level
   And I wait to see ".congrats"
   And element ".congrats" is visible
   And I press "continue-button"
-  And I wait to see "#x-close"
-  And element ".dialog-title" has text "Puzzle 2 of 10"
-  Then check that I am on "http://learn.code.org/s/1/level/25"
+  Then I wait to see a dialog titled "Puzzle 2 of 10"
+  And check that I am on "http://learn.code.org/s/20-hour/stage/5/puzzle/2"
 
 Scenario: Losing the first level
   And I drag block "2" to block "4"

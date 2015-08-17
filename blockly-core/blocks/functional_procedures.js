@@ -31,6 +31,9 @@ goog.require('Blockly.Blocks');
  * Definition block for a custom functional block
  */
 Blockly.Blocks.functional_definition = {
+  shouldHideIfInMainBlockSpace: function () {
+    return true;
+  },
   init: function() {
     this.setHelpUrl(Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL);
     this.setHSV(94, 0.84, 0.60);
@@ -38,7 +41,7 @@ Blockly.Blocks.functional_definition = {
       headerHeight: 0,
       rowBuffer: 3
     });
-    this.setFunctionalOutput(true, 'Number');
+    this.setFunctionalOutput(true, Blockly.BlockValueType.NUMBER);
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE)
@@ -58,13 +61,32 @@ Blockly.Blocks.functional_definition = {
     this.paramIds_ = [];
     this.parameterTypes_ = [];
   },
+  /**
+   * Updates the function definition's input type
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputsToType: function (newType) {
+    this.updateInputType_(this.getInput('STACK'), newType);
+    this.render();
+  },
+  /**
+   * Updates given input to match a given functional value type
+   * @param {Blockly.Input} input
+   * @param {Blockly.BlockValueType} newType
+   */
+  updateInputType_: function (input, newType) {
+    input.setHSV.apply(input, Blockly.FunctionalTypeColors[newType]);
+    input.setCheck(newType);
+  },
   mutationToDom: function() {
     var container = document.createElement('mutation');
     // Add argument mutations
     for (var x = 0; x < this.parameterNames_.length; x++) {
       var parameter = document.createElement('arg');
       parameter.setAttribute('name', this.parameterNames_[x]);
-      parameter.setAttribute('type', this.parameterTypes_[x]);
+      if (this.parameterTypes_[x]) {
+        parameter.setAttribute('type', this.parameterTypes_[x]);
+      }
       container.appendChild(parameter);
     }
     // Add description mutation
@@ -93,9 +115,9 @@ Blockly.Blocks.functional_definition = {
         this.parameterNames_.push(childNode.getAttribute('name'));
         this.parameterTypes_.push(childNode.getAttribute('type'));
       } else if (nodeName === 'description') {
-        this.description_ = childNode.innerHTML;
+        this.description_ = childNode.textContent;
       } else if (nodeName === 'outputtype') {
-        this.updateOutputType(childNode.innerHTML);
+        this.updateOutputType(childNode.textContent);
       } else if (nodeName === 'isfunctionalvariable') {
         this.isFunctionalVariable_ = true;
       }
@@ -154,6 +176,9 @@ Blockly.Blocks.functional_definition = {
       this.paramIds_,
       this.parameterTypes_
     );
+  },
+  getOutputType: function() {
+    return this.outputType_;
   },
   updateOutputType: function(outputType) {
     this.outputType_ = outputType;
@@ -218,6 +243,22 @@ Blockly.Blocks.functional_definition = {
       this.updateParams_();
     }
   },
+  changeParamType: function (name, newType) {
+    var changed = false;
+    for (var x = 0; x < this.parameterNames_.length; x++) {
+      if (Blockly.Names.equals(name, this.parameterNames_[x])) {
+        this.parameterTypes_[x] = newType;
+        changed = true;
+      }
+    }
+    if (changed) {
+      this.updateParams_();
+      this.updateCallerParams_();
+    }
+  },
+  shouldBeGrayedOut: function () {
+    return false;
+  },
   callType_: 'functional_call'
 };
 
@@ -270,7 +311,7 @@ Blockly.Blocks.functional_call = {
     this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
       this.updateAttributesFromDefinition_, false, this);
 
-    this.changeFunctionalOutput('none');
+    this.changeFunctionalOutput(Blockly.BlockValueType.NONE);
   },
   updateAttributesFromDefinition_: function() {
     var procedureDefinition = Blockly.Procedures.getDefinition(
@@ -295,11 +336,15 @@ Blockly.Blocks.functional_call = {
     this.blockSpace.events.unlisten(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
       this.updateAttributesFromDefinition_, false, this);
   },
-  openEditor: function() {
-    Blockly.functionEditor.openAndEditFunction(this.getTitleValue('NAME'));
+  openEditor: function (e) {
+    e.stopPropagation();
+    Blockly.functionEditor.openEditorForCallBlock_(this);
   },
   getCallName: function() {
     return this.getTitleValue('NAME');
+  },
+  getParamTypes: function () {
+    return this.currentParameterTypes_;
   },
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
@@ -349,7 +394,7 @@ Blockly.Blocks.functional_call = {
         .setAlign(Blockly.ALIGN_CENTRE)
         .setInline(x > 0);
       var currentParameterType = this.currentParameterTypes_[x];
-      input.setHSV.apply(input, Blockly.ContractEditor.typesToColors[currentParameterType]);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors[currentParameterType]);
       input.setCheck(currentParameterType);
       if (this.currentParameterIDs_) {
         // Reconnect any child blocks.
@@ -366,14 +411,17 @@ Blockly.Blocks.functional_call = {
         }
       }
     }
-    var parameterListString = this.currentParameterNames_.length > 0 ?
-      ' (' + this.currentParameterNames_.join(', ') + ')' : '';
-    this.setTitleValue(parameterListString, 'PARAM_TEXT');
+    this.refreshParameterTitleString_();
     // Restore rendering and show the changes.
     this.rendered = savedRendered;
     if (this.rendered) {
       this.render();
     }
+  },
+  refreshParameterTitleString_: function() {
+    var parameterListString = this.currentParameterNames_.length > 0 ?
+    ' (' + this.currentParameterNames_.join(', ') + ')' : '';
+    this.setTitleValue(parameterListString, 'PARAM_TEXT');
   },
   mutationToDom: function() {
     // Save the name and arguments (none of which are editable).
@@ -415,9 +463,85 @@ Blockly.Blocks.functional_call = {
     for (var x = 0; x < this.currentParameterNames_.length; x++) {
       if (Blockly.Names.equals(oldName, this.currentParameterNames_[x])) {
         this.currentParameterNames_[x] = newName;
-        this.getInput('ARG' + x).titleRow[0].setText(newName);
+        this.refreshParameterTitleString_();
       }
     }
+  }
+};
+
+/**
+ * Block to allow you to pass a functional block
+ */
+Blockly.Blocks.functional_pass = {
+  init: function() {
+    this.setHelpUrl(Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL);
+    // TODO(bjordan): localize / use user-defined description
+    this.setTooltip("Pass a user-defined function");
+
+    this.setHSV(94, 0.84, 0.60);
+
+    var options = {
+      fixedSize: { height: 35 }
+    };
+
+    var mainTitle = this.appendDummyInput()
+        .appendTitle(new Blockly.FieldLabel('Pass Function', options), 'NAME')
+        .appendTitle('', 'PARAM_TEXT');
+
+    if (Blockly.useContractEditor && this.blockSpace !== Blockly.modalBlockSpace) {
+      var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+      Blockly.bindEvent_(editLabel.fieldGroup_, 'mousedown', this, this.openEditor);
+      mainTitle.appendTitle(editLabel);
+      this.editLabel_ = editLabel;
+    }
+
+    this.setFunctional(true);
+    // functional_pass blocks are immovable, unless we're level editing
+    this.setMovable(!!Blockly.editBlocks);
+    this.setColorFromName_();
+    this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
+      this.setColorFromName_, false, this);
+
+    this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION);
+  },
+  openEditor: function(e) {
+    e.stopPropagation();
+    Blockly.functionEditor.openEditorForCallBlock_(this);
+  },
+  renameProcedure: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
+      this.setTitleValue(newName, 'NAME');
+      this.setColorFromName_();
+    }
+  },
+
+  setColorFromName_: function () {
+    var name = this.getTitleValue('NAME');
+    if (!name) {
+      return;
+    }
+    var functionBlock = Blockly.mainBlockSpace.findFunction(name);
+    if (!functionBlock) {
+      return;
+    }
+    var type = functionBlock.getOutputType();
+    this.setHSV.apply(this, Blockly.FunctionalTypeColors[type]);
+  },
+
+  mutationToDom: function() {
+    // Save the name
+    var container = document.createElement('mutation');
+    container.setAttribute('name', this.getTitleValue('NAME'));
+    return container;
+  },
+  domToMutation: function(xmlElement) {
+    // Restore the name
+    var name = xmlElement.getAttribute('name');
+    this.setTitleValue(name, 'NAME');
+    this.setTooltip(
+      (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
+        : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
+    this.setColorFromName_();
   }
 };
 

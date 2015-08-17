@@ -1,19 +1,20 @@
 #landingpage
-
   .row#lesson
     .span9#heading
       %h3.whitetext
-        = data_t_suffix('script.name', @script.name, "title")
+        = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
+        = data_t_suffix('script.name', @script.name, 'title')
         - if @script.beta?
           %span.betatext
             &nbsp;
             = t('beta')
 
       %p.smallwhitetext
-        = data_t_suffix('script.name', @script.name, "description")
+        = data_t_suffix('script.name', @script.name, 'description')
+
 
     .span3#trynow
-      = button_to t('home.trynow'), script_puzzle_path(@script, 'next'), :method => "get", :class=>"btn btn-primary biggerbutton"
+      = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
       %p.lightgreytext
         - if @script.feedback_url
           = link_to t('landing.feedback'), @script.feedback_url
@@ -21,10 +22,10 @@
         = link_to t('landing.support'), t('landing.support_url')
         %br/
 
-    - if @script.has_banner_image?
+    - if @script.banner_image
       .span12
         %p
-          = link_to image_tag("banner_#{@script.name}_cropped.jpg"), script_puzzle_path(@script, 'next')
+          = link_to image_tag(@script.banner_image), script_next_path(@script, 'next')
 
     - if @script.beta?
       .span10
@@ -33,19 +34,20 @@
 
   .row#stats
     .span12#rightside
-      = render partial: 'shared/user_stats', locals: { user: current_user, width: "100%"}
+      = render partial: 'shared/user_stats', locals: { user: current_user, width: '100%'}
 
-  %div{style: "clear:both"}
+  %div{style: 'clear: both;'}
   %br/
   %br/
 
   - if @script.k5_course?
-    %a{href: "//#{canonical_hostname('code.org')}/curriculum/docs/k-5/overview"}
+    %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
       = t('home.all_courses')
     %br/
     %br/
 
-    %a{href: "http://code.org/curriculum/" + @script.name }
+  - if @script.has_lesson_plan?
+    %a{href: CDO.code_org_url('/curriculum/' + @script.name)}
       = t('home.lesson_plans')
     %br/
     %br/

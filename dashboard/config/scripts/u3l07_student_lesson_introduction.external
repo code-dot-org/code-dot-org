@@ -1,0 +1,25 @@
+name 'U3L07 Student Lesson Introduction'
+title 'Looping and Random Numbers'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 07 - Looping and Random Numbers
+
+# Background
+
+
+The for-loop repeats statements like a while loop but adds an initialization and final expression step. There are two random number functions. One, with a single parameter returns a pseudorandom number ranging from zero to max. The other, with two parameters, returns a number ranging from the first number (min) to the second number (max).
+
+# Lesson
+
+* Use the AppLab API to learn about the for-loop and random number functions.
+* Create programs that combine these functions to draw complex images. 
+
+
+# Resources 
+* Activity: <a href="https://docs.google.com/document/d/1Ald25VS1Wx5le8NVME695Ibswuk8S-KpyAcltDuyPYk" target="_blank">
+Starry Night
+</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

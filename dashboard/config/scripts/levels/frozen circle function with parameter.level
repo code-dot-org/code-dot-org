@@ -21,8 +21,9 @@
     "use_contract_editor": "false",
     "ideal": "7",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"frozen_circle_function_with_parameter_circle\", \"element_id\": \"#create_circle_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
-    "disable_sharing": "false"
+    "callout_json": "[\r\n  {\"localization_key\":\"frozen_circle_function_with_parameter_circle\",\"callout_text\":\"Use the \\\"create a circle\\\" block and change the size.\",\"element_id\":\"#create_circle_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "disable_sharing": "false",
+    "permitted_errors": "0"
   }
 }]]></config>
   <blocks>

@@ -1,0 +1,43 @@
+.field
+  = f.label :slider_speed, 'Slider speed'
+  %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
+  = f.number_field :slider_speed, :step => 0.1
+.field
+  = f.label :app_width
+  %p Integer representing the width of the app in pixel coordinates. Default is 320.
+  = f.number_field :app_width
+.field
+  = f.label :app_height
+  %p Integer representing the height of the app in pixel coordinates. Default is 480.
+  = f.number_field :app_height
+.field
+  = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
+  = boolean_check_box f, :show_turtle_before_run
+.field
+  = f.label :text_mode_at_start, 'Text mode (showing code) at start'
+  = boolean_check_box f, :text_mode_at_start
+.field
+  = f.label :design_mode_at_start, 'Start in Design Mode'
+  = boolean_check_box f, :design_mode_at_start
+.field
+  = f.label :hide_design_mode, 'Hide Design Mode'
+  = boolean_check_box f, :hide_design_mode
+.field
+  = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
+  = boolean_check_box f, :autocomplete_palette_apis_only
+.field
+  = f.label :beginner_mode, 'Beginner mode for loops'
+  = boolean_check_box f, :beginner_mode
+.field
+  = f.label :start_html, 'Starting design mode html'
+  %p
+    This should be equivalent to the level html created by design mode. The recommended way to generate this
+    is to add your elements in design mode, hit run, then open up the browser console and type `Applab.levelHtml`.
+    IMPORTANT WARNING: If you have referenced images in the HTML and/or  CODE, then you need to get fully-qualified
+    code.org https URLS for these assets and update the HTML and the code to reflect these. You can quickly get full
+    image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.   
+    Copy the result and paste it here (it should start with something like
+    #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
+  = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: Applab.pretty_print(@level.start_html)
+  :javascript
+    codeMirror('start_html', 'html');

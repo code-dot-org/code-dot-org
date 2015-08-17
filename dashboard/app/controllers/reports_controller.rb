@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 
     #@recent_activity = Activity.where(['user_id = ?', user.id]).order('id desc').includes({level: :game}).limit(2)
     @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
+select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
 from user_levels ul
 inner join script_levels sl on sl.level_id = ul.level_id
 inner join levels l on l.id = ul.level_id
@@ -26,7 +26,16 @@ SQL
   end
 
   def header_stats
-    render file: "shared/_user_stats", layout: false, locals: { user: current_user }
+    if params[:section_id].present?
+      @section = Section.find(params[:section_id])
+      authorize! :read, @section
+    end
+
+    if params[:user_id].present?
+      user = User.find(params[:user_id])
+      authorize! :read, user
+    end
+    render file: 'shared/_user_stats', layout: false, locals: {user: user || current_user}
   end
 
   def prizes
@@ -49,7 +58,7 @@ SQL
 
   def admin_stats
     authorize! :read, :reports
-    
+
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @teacher_count = User.where(:user_type => 'teacher').count
@@ -59,10 +68,10 @@ SQL
       @users_with_confirmed_email = User.where('confirmed_at IS NOT NULL').count
       @girls = User.where(:gender => 'f').count
       @boys = User.where(:gender => 'm').count
- 
+
       @prizes_redeemed = Prize.where('user_id IS NOT NULL').group(:prize_provider).count
       @prizes_available = Prize.where('user_id IS NULL').group(:prize_provider).count
-      
+
       @student_prizes_earned = User.where(:prize_earned => true).count
       @student_prizes_redeemed = Prize.where('user_id IS NOT NULL').count
       @student_prizes_available = Prize.where('user_id IS NULL').count
@@ -70,7 +79,7 @@ SQL
       @teacher_prizes_earned = User.where(:teacher_prize_earned => true).count
       @teacher_prizes_redeemed = TeacherPrize.where('user_id IS NOT NULL').count
       @teacher_prizes_available = TeacherPrize.where('user_id IS NULL').count
-      
+
       @teacher_bonus_prizes_earned = User.where(:teacher_bonus_prize_earned => true).count
       @teacher_bonus_prizes_redeemed = TeacherBonusPrize.where('user_id IS NOT NULL').count
       @teacher_bonus_prizes_available = TeacherBonusPrize.where('user_id IS NULL').count
@@ -79,11 +88,11 @@ SQL
 
   def admin_progress
     authorize! :read, :reports
-    
+
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
- 
+
       @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
       @levels_attempted.default = 0
       @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
@@ -99,14 +108,6 @@ SQL
       render 'admin_concepts', formats: [:html]
     end
   end
-
-  ADMIN_GALLERY_PER_PAGE = 25
-  def admin_gallery
-    authorize! :read, :reports
-
-    @gallery_activities = GalleryActivity.order(id: :desc).page(params[:page]).per(ADMIN_GALLERY_PER_PAGE)
-  end
-
 
   def students
     redirect_to teacher_dashboard_url
@@ -138,16 +139,16 @@ SQL
         unsuccessful_code_map[activity.level_source_id][:count] += 1
       end
 
-      if !activity.best?
+      unless activity.best?
         all_but_best_code_map[activity.level_source_id][:count] += 1
       end
     end
 
     # Setting up the popular incorrect code
-    if !all_but_best_code_map.empty?
+    unless all_but_best_code_map.empty?
       sorted_all_but_best_code = all_but_best_code_map.values.sort_by {|v| -v[:count] }
       pop_level_source_ids = Array.new([sorted_all_but_best_code.length - 1, 9].min)
-      for idx in 0..[sorted_all_but_best_code.length - 1, 9].min
+      (0..[sorted_all_but_best_code.length - 1, 9].min).each do |idx|
         pop_level_source_id = sorted_all_but_best_code[idx][:level_source_id]
         pop_level_source_ids[idx] = pop_level_source_id
         if passing_code_map.has_key?(pop_level_source_id)
@@ -186,8 +187,100 @@ SQL
       sign_in user, :bypass => true
       redirect_to '/'
     else
-      flash[:error] = "I can't find that user"
+      flash[:alert] = 'User not found'
       render :assume_identity_form
+    end
+  end
+
+  def lookup_section
+    authorize! :manage, :all
+    @section = Section.find_by_code params[:section_code]
+    if params[:section_code] && @section.nil?
+      flash[:alert] = 'Section code not found'
+    end
+  end
+
+  def level_completions
+    authorize! :read, :reports
+    require 'date'
+# noinspection RubyResolve
+    require '../dashboard/scripts/archive/ga_client/ga_client'
+
+    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+
+    output_data = {}
+    %w(Attempt Success).each do |key|
+      dimension = 'ga:eventLabel'
+      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+      if params[:filter]
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+      end
+      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+      if ga_data.data.containsSampledData
+        throw new ArgumentError 'Google Analytics response contains sampled data, aborting.'
+      end
+
+      ga_data.data.rows.each do |r|
+        label = r[0]
+        output_data[label] ||= {}
+        output_data[label]["Total#{key}"] = r[1].to_f
+        output_data[label]["Unique#{key}"] = r[2].to_f
+        output_data[label]["Avg#{key}"] = r[3].to_f
+      end
+    end
+    output_data.each_key do |key|
+      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
+    end
+
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+
+    data_array = output_data.map do |key, value|
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+    end
+    require 'naturally'
+    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    headers = [
+      "Puzzle",
+      "Total\nAttempts",
+      "Total Successful\nAttempts",
+      "Avg. Success\nRate",
+      "Avg. #attempts\nper Completion",
+      "Unique\nAttempts",
+      "Unique Successful\nAttempts",
+      "Perceived Dropout",
+      "Avg. Unique\nSuccess Rate",
+      "Avg. Time\non Page"
+    ]
+    render locals: {headers: headers, data: data_array}
+  end
+
+  def monthly_metrics
+    authorize! :read, :reports
+    recent_users = User.where(current_sign_in_at: (Time.now - 30.days)..Time.now)
+    metrics = {
+      :'Teachers with Active Students' => recent_users.joins(:teachers).distinct.count('teachers_users.id'),
+      :'Active Students' => recent_users.count,
+      :'Active Female Students' => (f = recent_users.where(gender: 'f').count),
+      :'Active Male Students' =>  (m = recent_users.where(gender: 'm').count),
+      :'Female Ratio' => f.to_f / (f + m),
+    }
+    render locals: {headers: metrics.keys, metrics: metrics.to_a.map{|k,v|[v]}}
+  end
+
+  def pd_progress
+    authorize! :read, :reports
+    script = Script.find_by!(name: params[:script] || 'K5PD').cached
+    require 'cdo/properties'
+    locals_options = Properties.get("pd_progress_#{script.id}")
+    if locals_options
+      render locals: locals_options.symbolize_keys
+    else
+      render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
     end
   end
 
@@ -198,6 +291,6 @@ SQL
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
-    @script = Script.find(params[:script_id]) if params[:script_id]
+    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
   end
 end

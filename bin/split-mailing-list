@@ -2,8 +2,8 @@
 
 def main()
   params = {
-    csv:'domestic.csv',
-    groups:[
+    csv: 'domestic.csv',
+    groups: [
       'donate-100-million-megans.csv',
       'donate-historic-crowdfunding.csv',
       'donate-push-us-over.csv',
@@ -11,12 +11,12 @@ def main()
       'donate-your-donation-today.csv',
       'remaining.csv'
     ],
-    size:10000,
+    size: 10000,
   }
-  
+
   columns = nil
   lines = []
-  
+
   File.readlines(params[:csv]).each do |line|
     unless columns
       columns = line
@@ -24,11 +24,11 @@ def main()
     end
     lines << line unless line.strip.empty?
   end
-  
+
   lines.shuffle!
-  
+
   groups = []
-  for group in 0...params[:groups].count
+  params[:groups].count.times do
     groups << [].tap do |results|
       results << columns
       while(results.count <= params[:size])
@@ -37,16 +37,16 @@ def main()
       end
     end
   end
-  
+
   groups << [columns] + lines
-  
+
   i = 0
   params[:groups].each do |group_name|
     IO.write(group_name, groups[i].join)
     i += 1
   end
-  
-  puts groups.map{|group| group.count}.join("\n")
+
+  puts groups.map(&:count).join("\n")
 end
 
 main

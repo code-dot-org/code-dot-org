@@ -1,0 +1,4 @@
+name 'Design Recipe 1.contract'
+title 'Design Recipe 1 Contract'
+content1 'Write the contract for function called "wide-rect" which creates a rectangle of given height and color that is twice as wide as it is tall.'
+answer 'wide-rect|Image|Number|String'

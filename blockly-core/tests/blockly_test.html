@@ -3,13 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Unit tests for Blockly</title>
-    <script type="text/javascript" src="../blockly_uncompressed.js"></script>
     <script type="text/javascript" src="../closure-library-read-only/closure/goog/base.js"></script>
+    <script type="text/javascript" src="./test_dependency_map.js"></script>
+    <script type="text/javascript">
+      'use strict';
+      goog.require('Blockly.Test');
+    </script>
+    <script type="text/javascript" src="../msg/js/en_us.js"></script>
     <script type="text/javascript">goog.require('goog.testing.jsunit');</script>
   </head>
   <body>
     <script type="text/javascript" src="blockly_test.js"></script>
     <script type="text/javascript" src="generator_test.js"></script>
     <script type="text/javascript" src="names_test.js"></script>
+    <script type="text/javascript" src="modal_editors_test.js"></script>
+    <script type="text/javascript" src="block_space_test.js"></script>
+    <script type="text/javascript" src="blocks_test.js"></script>
   </body>
 </html>

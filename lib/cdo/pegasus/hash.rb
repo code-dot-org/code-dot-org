@@ -1,13 +1,5 @@
 class Hash
 
-  def self.from_keys_and_values(keys, values)
-    h={}
-    for i in 0..keys.count-1
-      h[keys[i]] = values[i]
-    end
-    h
-  end
-
   def slice_keys(*keys)
     h = {}
     each_pair do |key, value|

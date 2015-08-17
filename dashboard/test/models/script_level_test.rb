@@ -19,19 +19,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, @script_level.position
   end
 
-  test "should return position when assigned to stage" do
-    @script_level.update(stage: @stage)
-    @script_level.move_to_bottom
-    @script_level.update(game_chapter: 2)
-    assert_equal 1, @script_level.stage_or_game_position
-  end
-
-  test "should return chapter when no stage" do
-    @script_level.update(game_chapter: 1)
-    @script_level.update(position: 2)
-    assert_equal 1, @script_level.stage_or_game_position
-  end
-
   test "should destroy when related level is destroyed" do
     @script_level = create(:script_level)
     @script_level.level.destroy
@@ -49,19 +36,19 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'counts puzzle position and total in stage' do
     # default script
     sl = Script.twenty_hour_script.script_levels[1]
-    assert_equal 1, sl.stage_or_game_position
-    assert_equal 20, sl.stage_or_game_total
+    assert_equal 1, sl.position
+    assert_equal 20, sl.stage_total
 
-    # custom script
-    sl = @script_level
-    sl.update(stage: @stage)
-    sl.move_to_bottom
-    @script_level2.update(stage: @stage)
-    @script_level2.move_to_bottom
-    assert_equal 1, sl.stage_or_game_position
-    assert_equal 2, sl.stage_or_game_total
+    # new script
+    sl = create(:script_level)
+    sl2 = create(:script_level, stage: sl.stage, script: sl.script)
+
+    assert_equal 1, sl.position
+    assert_equal 2, sl.stage_total
+
+    assert_equal 2, sl2.position
+    assert_equal 2, sl2.stage_total
   end
-
 
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
     last_20h_maze_1_level = ScriptLevel.find_by(level: Level.find_by_level_num('2_19'), script_id: 1)
@@ -108,5 +95,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_after = create(:script_level, script: script, stage: stage, position: 2, chapter: 2)
 
     assert_equal script_level_after, script_level_unplugged.next_level
+  end
+
+  test 'end of stage' do
+    script = Script.find_by_name('course1')
+
+    assert script.stages[0].script_levels.last.end_of_stage?
+    assert script.stages[1].script_levels.last.end_of_stage?
+    assert script.stages[2].script_levels.last.end_of_stage?
+    assert script.stages[3].script_levels.last.end_of_stage?
+    assert !script.stages[3].script_levels.first.end_of_stage?
+    assert !script.stages[3].script_levels[1].end_of_stage?
   end
 end

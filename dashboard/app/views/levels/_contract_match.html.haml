@@ -1,0 +1,34 @@
+- data = @level.properties
+:javascript
+  window.levelData = #{data.to_json};
+
+= javascript_include_tag 'react'
+= javascript_include_tag 'levels/contract_match'
+= stylesheet_link_tag 'levels/contract_match'
+= render partial: 'levels/common_audio'
+
+.contract
+  - app = 'contract_match'
+
+  - options_to_colors = { None: "#000000", Number: "#00ccff", String: "#0099999", Image: "#9900cc", Boolean: "#336600" }
+
+  .mainblock
+    = render partial: 'levels/content', locals: {app: app, data: data}
+    #contractForm
+    #domainItems
+    .clear
+    = render partial: 'levels/dialog', locals: {app: app, data: data}
+  .clear
+
+
+  %div{style: 'display: none;'}
+    - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
+      %div{id: "#{error_type}-dialogcontent"}
+        .modal-content
+          %p.dialog-title
+            =t('contract_match.wrong_title')
+          %p
+            =t("contract_match.#{error_type}")
+          .farSide
+            %button#ok-button.secondary
+              =t('dialog.ok')

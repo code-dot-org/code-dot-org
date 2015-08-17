@@ -4,14 +4,14 @@ module FollowersHelper
       #TODO: Localize
       return <<TEXT
 #{user.name}
-#{script_level.level.game.name} ##{script_level.game_chapter}
+#{script_level.level.game.name} ##{script_level.position}
 Best result: #{user_level.best_result}
 Attempts: #{user_level.attempts}
 Last attempt: #{time_ago_in_words(user_level.updated_at)}
 First attempt: #{time_ago_in_words(user_level.created_at)}
 TEXT
     else
-      return "#{user.name} has not attempted #{script_level.level.game.name} ##{script_level.game_chapter}"
+      return "#{user.name} has not attempted #{script_level.level.game.name} ##{script_level.position}"
     end
   end
 

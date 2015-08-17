@@ -6,14 +6,24 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Try using the \"rectangle\" block to draw this blue rectangle - it is 100 pixels tall and 175 pixels wide.",
+    "instructions": "Try using the rectangle block to draw this solid red rectangle - it is 175 pixels wide and 100 pixels tall.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Try using the _rectangle_ block to draw this solid red rectangle - it is 175 pixels wide and 100 pixels tall.",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -53,7 +63,7 @@
               </functional_input>
               <functional_input name="COLOR">
                 <block type="functional_string">
-                  <title name="VAL">blue</title>
+                  <title name="VAL">red</title>
                 </block>
               </functional_input>
             </block>

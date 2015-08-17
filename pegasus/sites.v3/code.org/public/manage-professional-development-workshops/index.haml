@@ -3,10 +3,7 @@ title: Affiliate workshops
 theme: angular
 angular: professionalDevelopmentWorkshop
 ---
-- dont_cache
-
-- unless dashboard_user
-  - redirect("http://#{canonical_hostname('learn.code.org')}/users/sign_in?return_to=#{request.url}", 302) unless dashboard_user
+- authentication_required!
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - forbidden! unless have_permission?('create_professional_development_workshop') || dashboard_user[:admin]
 
@@ -82,6 +79,15 @@ angular: professionalDevelopmentWorkshop
         }
       };
 
+      Workshop.prototype.lastDate = function() {
+        if (this.dates) {
+          var last_date = this.dates[this.dates.length-1];
+          if (last_date.date_s) {
+            return new Date(last_date.date_s);
+          }
+        }
+      };
+
       Workshop.prototype.state = function() {
         if (this.$resolved === false || !this.secret) {
           // not yet loaded or is a brand new workshop
@@ -107,7 +113,7 @@ angular: professionalDevelopmentWorkshop
       return $resource('/v2/forms/ProfessionalDevelopmentWorkshop/:parent_secret/children/ProfessionalDevelopmentWorkshopSignup/:secret', {}, {
         get: {isArray: true},
         remove: {method:'DELETE', url:'/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret'},
-
+        cancel: {method: 'GET', url:'/v2/forms/ProfessionalDevelopmentWorkshopSignup/:secret/status/cancelled'}
       });
     }]);
 
@@ -167,12 +173,44 @@ angular: professionalDevelopmentWorkshop
 
     $scope.hasWorkshops = false;
     $scope.workshops = workshopsService.query();
+    $scope.today = new Date();
+
+    $scope.futureWorkshops = function() {
+      var future_workshops = [];
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() >= $scope.today) {
+          future_workshops.push($scope.workshops[i]);
+        }
+      }
+      return future_workshops;
+    }
+
+    $scope.pastWorkshops = function() {
+      var past_workshops = [];
+      var today = new Date();
+      for (var i = 0; i < $scope.workshops.length; i++) {
+        if ($scope.workshops[i].lastDate() < $scope.today) {
+          past_workshops.push($scope.workshops[i]);
+        }
+      }
+      return past_workshops;
+    }
 
     $scope.workshops.$promise.then(function(workshops){
       for (var i = 0; i < workshops.length; i++) {
-        var signups = workshopSignupsService.get({parent_secret: workshops[i].secret});
-        workshops[i].signups = signups;
+        var workshop_signups = workshopSignupsService.get({parent_secret: workshops[i].secret});
+        workshop_signups.workshop_object = workshops[i];
+        workshop_signups.$promise.then(function(workshop_signups){
+          var active_signups_count = 0;
+          for (var j = 0; j < workshop_signups.length; j++) {
+            if (workshop_signups[j].status_s != 'cancelled') {
+              active_signups_count ++;
+            }
+          }
+          workshop_signups.workshop_object.active_signups_count = active_signups_count;
+        });
       }
+
       $scope.hasWorkshops = true;
     });
 
@@ -223,7 +261,32 @@ angular: professionalDevelopmentWorkshop
 
       if ($routeParams.secret) {
         $scope.workshop = workshopsService.get({secret: $routeParams.secret});
-        $scope.workshop_signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
+        $scope.showCollectedSignupEmailsActive = false;
+        $scope.showCollectedSignupEmailsCancelled = false;
+
+        var active_signups = [];
+        var active_signups_emails = [];
+        var cancelled_signups = [];
+        var cancelled_signups_emails = [];
+
+        var workshop_signups = workshopSignupsService.get({parent_secret: $routeParams.secret});
+        workshop_signups.$promise.then(function(workshop_signups){
+          for (var i = 0; i < workshop_signups.length; i++) {
+            if (workshop_signups[i].status_s == 'cancelled') {
+              cancelled_signups.push(workshop_signups[i]);
+              cancelled_signups_emails.push(workshop_signups[i].email_s);
+            }
+            else {
+              active_signups.push(workshop_signups[i]);
+              active_signups_emails.push(workshop_signups[i].email_s);
+            }
+          }
+          $scope.active_signups = active_signups;
+          $scope.cancelled_signups = cancelled_signups;
+          $scope.active_signups_emails = active_signups_emails.join(',');
+          $scope.cancelled_signups_emails = cancelled_signups_emails.join(',');
+        });
+
         $scope.workshop.$promise.then(function(workshop){
           if (workshop.section_id_s) {
             $scope.section = sectionsService.get({id: workshop.section_id_s});
@@ -261,14 +324,15 @@ angular: professionalDevelopmentWorkshop
 
       }
 
-      $scope.confirm_signup_delete = function(signup) {
-        signup.confirmSignupDelete = true;
+      $scope.confirm_signup_cancel = function(signup) {
+        signup.confirmSignupCancel = true;
       }
 
-      $scope.delete_signup = function(signup) {
-        $scope.workshop_signups.splice($scope.workshop_signups.indexOf(signup), 1); // remove from array
-        workshopSignupsService.remove({secret: signup.secret}); // service call
-        signup.confirmSignupDelete = false;
+      $scope.cancel_signup = function(signup) {
+        var cancelled_signup = $scope.active_signups.splice($scope.active_signups.indexOf(signup), 1); // remove from active array
+        $scope.cancelled_signups.push(cancelled_signup[0]); // add to cancelled array
+        workshopSignupsService.cancel({secret: signup.secret}); // service call
+        signup.confirmSignupCancel = false;
       };
 
       $scope.save = function() {

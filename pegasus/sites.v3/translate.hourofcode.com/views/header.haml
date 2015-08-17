@@ -1,0 +1,26 @@
+#pageheader.row{style: "background-color: rgba(0,0,0,0.5)"}
+  .container{style:'overflow:visible'}
+    .row
+      #left{style: "padding-left: 15px; padding-top: 15px"}
+        #hoc-header-branding{style: "border-left: 0px; border-right: 0px"}
+          #logoholder{style: "position:relative"}
+            #imageheld{style: "position:absolute; top:-18px; left:0"}
+              %a{href:hoc_uri('/')}
+                - if @country == 'ar' || @country == 'es'
+                  %img{src: '/images/hora-del-codigo-logo.png', alt: 'Hour of Code'}
+                - else
+                  %img{src: '/images/hour-of-code-logo.png', alt: 'Hour of Code'}
+        
+      #language-dropdown.hidden-xs{style: "visibility: hidden;"}
+        = view :language_dropdown
+      #right.hidden-xs
+        %a.headerlink{href:hoc_uri('/resources'), style: "margin-left:0px"} crwdns19411:0crwdne19411:0
+        - if request.path == "/"
+          %a.headerlink{href:"#", onclick:"return adjustScroll('faqs')"} crwdns19412:0crwdne19412:0
+        - else
+          %a.headerlink{href:hoc_uri('/#faq')} crwdns19412:0crwdne19412:0
+        %a.headerlink{href:hoc_uri('/prizes')} crwdns19413:0crwdne19413:0
+        -if @country=='uk'
+          %a.headerlink{href:'http://uk.code.org'} crwdns19414:0crwdne19414:0
+
+  -#clear{style:'clear:both'}

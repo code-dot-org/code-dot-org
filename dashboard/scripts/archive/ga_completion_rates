@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+# Script to generate a puzzle completion rate spreadsheet from Google Analytics API.
+if ARGV.length < 1 || ARGV.length > 2
+  abort 'Usage: ga_completion_rates start_date [end_date]'
+end
+
+require 'date'
+# noinspection RubyResolve
+require File.join(__dir__, 'ga_client/ga_client')
+
+@start_date = DateTime.parse(ARGV.first).strftime('%Y-%m-%d')
+@end_date = (ARGV.length > 1 ? DateTime.parse(ARGV[1]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+
+output_data = {}
+%w(Attempt Success).each do |key|
+  dimension = 'ga:eventLabel'
+  metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+  filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+  ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+  if ga_data.data.containsSampledData
+    abort 'Google Analytics response contains sampled data, aborting.'
+  end
+
+  ga_data.data.rows.each do |r|
+    label = r[0]
+    output_data[label] ||= {}
+    output_data[label]["Total#{key}"] = r[1]
+    output_data[label]["Unique#{key}"] = r[2]
+    output_data[label]["Avg#{key}"] = r[3]
+  end
+end
+output_data.each_key do |key|
+  output_data[key]['Avg. Success Rate'] = output_data[key].delete('AvgAttempt')
+  output_data[key]['Avg. #attempts per completion'] = output_data[key].delete('AvgSuccess')
+  output_data[key]['Avg. Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+end
+
+require 'csv'
+csv_string = CSV.generate do |csv|
+  csv << ['Puzzle'].concat(output_data.first[1].keys)
+  output_data.each do |key, value|
+    csv << [key].concat(value.values)
+  end
+end
+puts csv_string

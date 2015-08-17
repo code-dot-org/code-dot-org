@@ -12,10 +12,6 @@ nav: about_nav
 - [I want to use...](#use)
 - [I'm using the 20 hour K-8 Intro course...](#20hr)
 
-## Hour of Code 2014
-### What are the dates for Hour of Code 2014?
-Hour of Code 2014, a movement to recruit millions to try one hour of computer science, will take place during Computer Science Education Week (Dec. 8-14, 2014). [More info](http://csedweek.org/resource_kit/frequently_asked_questions).
-
 <a id="parent"></a>
 ## I'm a parent...
 ### Where can I find schools or clubs in my area that teach computer science?

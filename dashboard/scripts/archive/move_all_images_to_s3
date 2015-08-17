@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+# Move existing level source images to s3
+
+require_relative '../../config/environment'
+
+LevelSourceImage.find_in_batches do |batch|
+  already = 0
+  moved = 0
+  errors = 0
+  start_time = Time.now
+  batch.each do |level_source_image|
+    if level_source_image.image == 'S3'
+      already += 1
+      next
+    end
+    begin
+      if level_source_image.save_to_s3(level_source_image.image)
+        moved += 1
+      else
+        errors += 1
+      end
+    rescue Exception
+      errors += 1
+    end
+  end
+
+  puts "moved #{moved} errors #{errors} already #{already}\t#{Time.now - start_time}s"  
+end

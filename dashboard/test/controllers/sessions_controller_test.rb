@@ -8,9 +8,9 @@ class SessionsControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
 
-  test 'login error derives locale from cookie' do
+  test 'login error derives locale from cdo.locale' do
     locale = 'es-ES'
-    @request.cookies[:language_] = locale
+    @request.env['cdo.locale'] = locale
     post :create
     assert_select '.alert', I18n.t('devise.failure.not_found_in_database', :locale => locale)
   end
@@ -53,7 +53,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as user with username' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-    
+
     assert user.email.blank?
     assert user.hashed_email.present?
 
@@ -65,7 +65,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as younger user with hashed email' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-    
+
     assert user.email.blank?
     assert user.hashed_email.present?
 
@@ -134,5 +134,32 @@ class SessionsControllerTest < ActionController::TestCase
     get :oauth_sign_out, provider: 'windowslive'
     assert_select 'a[href=http://login.live.com/logout.srf]'
     assert_select 'h4', 'You used Microsoft Account to sign in. Click here to sign out of Microsoft Account.'
+  end
+
+  test "deleted user cannot sign in" do
+    teacher = create(:teacher)
+    teacher.deleted_at = Time.now # 'delete' the user
+    teacher.save!
+
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
+
+    assert_signed_in_as nil
+  end
+
+  test "session cookie set if remember me not checked" do
+    teacher = create(:teacher)
+
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password}
+
+    assert_nil @response.cookies["remember_user_token"]
+  end
+
+
+  test "persistent cookie set if remember me is checked" do
+    teacher = create(:teacher)
+
+    post :create, user: {login: '', hashed_email: teacher.hashed_email, password: teacher.password, remember_me: '1'}
+
+    assert @response.cookies["remember_user_token"]
   end
 end

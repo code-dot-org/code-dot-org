@@ -1,0 +1,28 @@
+pd 'true'
+title "Creating More Equitable Computer Science Classrooms"
+description "Develop strategies for creating equity in your classroom with this free, self-paced online course."
+description_short "Develop equitable teaching strategies with this free, self-paced online course."
+
+stage 'Getting Started'
+level 'Equity Welcome'
+level 'Equity About'
+level 'Equity Participation'
+level 'Equity Stage1Go'
+
+stage 'Introduction to Equity'
+level 'Equity Define'
+level 'Equity CS'
+level 'Equity Strategies'
+level 'Equity Stage2Go'
+
+stage 'Creating Equitable Learning Environments'
+level 'Equity Self Assess'
+level 'Equity Goals'
+level 'Equity Resources'
+level 'Equity Reflection'
+level 'Equity Stage3Go'
+
+stage 'Next Steps'
+level 'Equity Review'
+level 'Equity Keep Learning'
+level 'Equity Celebrate'

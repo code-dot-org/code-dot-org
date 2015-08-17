@@ -1,0 +1,12 @@
+name 'U2L09 Assessment1'
+title 'The Need for DNS: Question 1'
+
+question 'A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?'
+wrong 'It is inefficient to have everyone on the Internet maintain their own list of IP addresses.'
+right 'There are too few IP addresses to meet the current demand.'
+wrong 'When someone new joins the Internet they must inform everyone else of the new IP address'
+wrong 'When an IP address changes, it is impossible to locate a computer until the owner announces the change.'
+
+markdown <<MARKDOWN
+
+MARKDOWN

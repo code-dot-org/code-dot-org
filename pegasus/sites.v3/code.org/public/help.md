@@ -16,12 +16,27 @@ We're working to give *every* student the opportunity to learn computer science 
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
  
-[<button>See Options</button>](/educate)
+[<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>See options for schools</button>](/educate)
 
 ## Advocate for computer science locally
 Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
 
 [<button>Add your support</button>](/promote)
+
+## Translate our Tutorials
+Volunteers have translated our tutorials in over 34 languages. Help us continue to expand our tutorials for students around the world!
+
+[<button>Translate tutorials</button>](/translate)
+
+## Buy a CODE hat or t-shirt
+Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
+
+<br/>
+![Code.org Cap](/images//fit-160/swag7.jpg)
+![Code.org T-shirt](/images//fit-160/swag10.jpg)
+![Code.org Stickers](/images//fit-160/swag8.jpg)
+
+[<button>Shop</button>](/shop)
 
 ---
 <a name="engineer"></a>

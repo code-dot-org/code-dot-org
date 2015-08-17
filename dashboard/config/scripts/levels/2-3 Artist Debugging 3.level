@@ -17,39 +17,57 @@
     "free_play": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "permitted_errors": "0"
+    "permitted_errors": "0",
+    "embed": "false",
+    "markdown_instructions": "My boat has a hole! Can you fix it by changing the angle of the line? Hint: the last angle is off by 15 degrees.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">70</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="45,60,90,120,180">50</title>
+            <block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">70</title>
               <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">50</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">130</title>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">200</title>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">130</title>
                           <next>
-                            <block type="draw_turn_by_constant_dropdown">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE" config="100,115,130,145,160">115</title>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">200</title>
                               <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">100</title>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="100,115,130,145,160">115</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">100</title>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>

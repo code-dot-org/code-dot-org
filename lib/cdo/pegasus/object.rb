@@ -4,7 +4,7 @@ class Object
   def nil_or_empty?()
     self.nil? || self.empty?
   end
-  
+
   # Return the value to use in a querystring/form.
   unless method_defined?(:to_param)  # May be provided by Rails
     def to_param

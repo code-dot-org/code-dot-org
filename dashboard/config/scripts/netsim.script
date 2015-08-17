@@ -1,0 +1,37 @@
+title 'Internet Simulator'
+description_short "This course contains a variety of configurations for the Internet Simulator that can be used in your classroom if you don't intend to follow the activities in Code.org's Computer Science curriculum (found at code.org/csp)."
+description "This course contains a variety of configurations for the Internet Simulator that can be used in your classroom if you don't intend to follow the activities in Code.org's Computer Science curriculum (found at code.org/csp). Please read through the overview and setup instructions in Stage 1 to get started!"
+hidden 'true'
+
+stage 'Overview and Setup Instructions'
+level 'Internet Simulator Setup'
+level 'Internet Simulator Setup 2'
+level 'Internet Simulator Setup 3'
+
+stage 'Peer to Peer - Sending Bits on a Shared Wire'
+level 'NetSim Standalone SendAB'
+
+stage 'Peer to Peer - Sending Numbers'
+level 'NetSim Standalone Sending Numbers'
+
+stage 'Peer to Peer - Sending Ascii'
+level 'NetSim Standalone Sending Numbers Ascii'
+
+stage 'Broadcasting messages'
+level 'NetSim Standalone Broadcast'
+
+stage 'Routers and addresses'
+level 'NetSim Standalone Classroom Routers'
+
+stage 'Packets and Reliability'
+level 'NetSim Standalone Packets TCP'
+
+stage 'Manual DNS'
+level 'NetSim Standalone Manual DNS'
+
+stage 'Automatic DNS node'
+level 'NetSim Standalone Automatic DNS'
+
+stage 'Internet Simulator Freeplay'
+level 'NetSim Standalone Freeplay'
+

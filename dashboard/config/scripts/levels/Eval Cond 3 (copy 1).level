@@ -1,7 +1,7 @@
 <Eval>
   <config><![CDATA[{
   "game_id": 36,
-  "created_at": "2014-12-01T23:45:08.447Z",
+  "created_at": "2014-12-01T23:45:08.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,7 +22,7 @@
       <xml>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_cond_2" inline="false" movable="false" editable="false"/>
+            <block type="functional_cond" inline="false" movable="false" editable="false"/>
           </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">
@@ -77,7 +77,7 @@
             </block>
           </functional_input>
         </block>
-        <block type="functional_cond_2" inline="false"/>
+        <block type="functional_cond" inline="false"/>
         <block type="functional_call">
           <mutation name="age"/>
         </block>
@@ -94,7 +94,7 @@
       <xml>
         <block type="functional_display" inline="false" deletable="false" movable="false">
           <functional_input name="ARG1">
-            <block type="functional_cond_2" inline="false" movable="false" editable="false"/>
+            <block type="functional_cond" inline="false" movable="false" editable="false"/>
           </functional_input>
         </block>
         <block type="functional_definition" inline="false" uservisible="false">

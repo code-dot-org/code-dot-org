@@ -40,7 +40,7 @@
           </mutation>
           <title name="NAME">factorial</title>
           <functional_input name="STACK">
-            <block type="functional_cond_1" inline="false" uservisible="false">
+            <block type="functional_cond" inline="false" uservisible="false">
               <functional_input name="COND0">
                 <block type="functional_less_than" inline="false" uservisible="false">
                   <functional_input name="ARG1">
@@ -146,11 +146,8 @@
           <block type="functional_logical_not"/>
           <block type="functional_boolean"/>
         </category>
-        <category name="Cond">
-          <block type="functional_cond_1"/>
-          <block type="functional_cond_2"/>
-          <block type="functional_cond_3"/>
-          <block type="functional_cond_4"/>
+        <category name="Conditionals">
+          <block type="functional_cond"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>

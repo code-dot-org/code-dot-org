@@ -1,0 +1,20 @@
+name 'CSPPD Welcome Video'
+title 'Welcome Video'
+description 'Welcome to Online PD for CSP'
+css 'unplugged'
+skip_dialog true 
+markdown <<MARKDOWN
+## Welcome to the Family! 
+
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/mRVPGIGj7Mk?rel=0" frameborder="0" allowfullscreen></iframe>
+<br>
+
+**[Can't see the video? Watch it here](https://www.dropbox.com/s/ys3gb1w7cjhlo05/CSP-p1-welcome.mp4?dl=0)**
+
+<br>
+
+#### When you're ready, click continue below to get started with your Online Introduction to Professional Development.
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

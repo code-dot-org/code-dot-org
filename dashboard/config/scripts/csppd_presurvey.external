@@ -1,0 +1,12 @@
+name 'CSPPD presurvey'
+css 'unplugged'
+markdown <<MARKDOWN
+## Program Pre-Survey
+
+Welcome to the Code.org Online Introduction to Computer Science Principles! Before we get started, please take a couple of minutes and complete this pre-survey, which will help us improve our program to meet the needs of the teachers like you. (If you are having trouble accessing the survey, click this [link](https://docs.google.com/a/code.org/forms/d/1-lx4VpklqFYsYcARDR4dCLBGiNcwzZS1nXI4lPaxpBI/viewform?c=0&w=1) to navigate directly to it.)
+
+<iframe src="https://docs.google.com/forms/d/1-lx4VpklqFYsYcARDR4dCLBGiNcwzZS1nXI4lPaxpBI/viewform?embedded=true" width="780" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<br>
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -30,8 +30,7 @@
     "ideal": "99",
     "timeout_failure_tick": "100",
     "first_sprite_index": "2",
-    "embed": "false",
-    "maze_data": null
+    "embed": "false"
   }
 }]]></config>
   <blocks>

@@ -21,6 +21,15 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
+    "video_key": "C4_bee_conditional",
+    "markdown_instructions": "This purple flower may have either 3, 2, or 1 nectar. \r\n\r\nHere an `if-else` block is combined with another `if-else` block to create an `if, else-if, else` block. \r\n\r\nComplete the solution to collect the unknown amount of nectar.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
     "maze_data": null
   }
 }]]></config>

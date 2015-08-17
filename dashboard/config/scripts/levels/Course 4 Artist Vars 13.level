@@ -20,9 +20,18 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "callout_json": "[{\r\n  \"localization_key\": \"which_equation\",\r\n  \"element_id\": \"[block-id='10']\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"bottom left\"},\r\n    \"style\": { \"classes\": \"no-tip\" }\r\n  }\r\n}]",
+    "callout_json": "[\r\n  {\"localization_key\":\"which_equation\",\"callout_text\":\"Which equation makes each side shorter for shapes with more sides?\",\"element_id\":\"[block-id='10']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
     "slider_speed": ".6",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "markdown_instructions": "The more sides a shape has, the shorter each side needs to be in order for the whole pattern to fit on the screen. Instead of manually setting the `length` variable, let's use the `sides` variable and a math block to set the `length.` \r\n\r\n<br/>\r\nChoose the correct equation from the toolbox to set the `length` variable, and also update the `sides` variable.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -181,18 +190,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">8</title>
-            </block>
-          </value>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

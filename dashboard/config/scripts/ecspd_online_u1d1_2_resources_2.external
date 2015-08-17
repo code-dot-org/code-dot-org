@@ -1,0 +1,37 @@
+name 'ECSPD Online U1D1-2 Resources 2'
+title 'Additional Resources'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Additional Resources: What Is a computer?
+
+<br/>
+
+<img src="https://images.code.org/9259939a399033589edae8dddc00f0a1-image-1435021890028.png" style="float:left; margin:0 20px 20px 0" width=400>
+
+#### A Little History: Women Computers
+
+During WWII, the term "Computer" was a job title. It was usually held by women who did computations, calculations, and difficult math to help with the war effort. Computers helped with ballistics research, the Manhattan project, and, later, with putting humans into space.
+
+Check out the article (below) that explores this job in more detail.
+
+[Rediscovering WWII's female 'computers'](http://www.cnn.com/2011/TECH/innovation/02/08/women.rosies.math/)
+
+
+#### Categorizing Computers
+
+Now that your students have brainstormed and discovered different computers in the room and in their lives, can they categorize them? Most computers that we use on a day to day basis are <strong>embeded systems</strong> (left). Many embeded systems have a <strong>digital visual interface</strong> such as the screen on a digital watch or on an odometer. Additionally, people interact with <strong>smart devices</strong> on a regular basis. A smart watch, tv, phone or even refridgerator will allow users to interact with them and communicate in unique ways.
+
+Read the articles linked below if any of the above <strong>bold</strong> terms are unfamiliar to you or to discover additional resources for these topics.
+
+[Smart Device](https://www.yahoo.com/tech/7-oddball-smart-devices-you-have-to-check-out-101440275794.html) --- [Embedded System](https://simple.wikipedia.org/wiki/Embedded_system) --- [Digital Visual Interface](https://en.wikipedia.org/wiki/Digital_Visual_Interface)
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+<br/>
+
+<i>(Image courtesy of https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/img/devices.png)</i>
+
+MARKDOWN

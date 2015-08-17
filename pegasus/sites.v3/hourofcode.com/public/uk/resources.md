@@ -58,10 +58,10 @@ nav: resources_nav
 <a id="posters">
 ## Hang these posters in your school
 <br />
-[![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
-[![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)
-[![image](/images/fit-280/susan-wojcicki.png)](/resources/susan-wojcicki-poster.pdf)
-[![image](/images/fit-280/ashton-kutcher.png)](/resources/ashton-kutcher-poster.pdf)
+[![image](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf)
+[![image](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
+[![image](/images/fit-280/susan-wojcicki.png)](/files/susan-wojcicki-poster.pdf)
+[![image](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
 <a id="sample-emails"></a>
 ## Send these emails to help promote the Hour of Code

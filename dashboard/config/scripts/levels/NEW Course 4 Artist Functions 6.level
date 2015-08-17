@@ -17,11 +17,20 @@
     "x": "25",
     "impressive": "false",
     "slider_speed": ".5",
-    "ideal": "15",
+    "ideal": "13",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "markdown_instructions": "Using the \"draw a square\" function block, can you draw this picture? Hint: each square is 20 pixels apart.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

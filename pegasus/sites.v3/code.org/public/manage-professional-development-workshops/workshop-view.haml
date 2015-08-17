@@ -15,7 +15,7 @@ theme: none
    
 #nav
   #goback
-    %a{href: '#/'} Workshop Dashboard
+    %a{"ng-href" => '#/'} Workshop Dashboard
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
     %b{style: "color: #ff8b02;"} {{workshop.name()}}
 
@@ -43,16 +43,16 @@ theme: none
           %ol
             %li
               Make sure they're logged into their account first and then have them type this URL (
-              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}> http:#{CDO.studio_url('/join/{{section.code}}')}
               ) into their browser. Once they hit enter, they'll have joined the workshop section.
           %p If they don't have a teacher account yet:
           %ol
             %li
               Create a teacher account at
-              %a{:href => "http://#{canonical_hostname('studio.code.org')}", :target => "_blank"} http://studio.code.org
+              %a{:href => CDO.studio_url, :target => "_blank"}= "http:" + CDO.studio_url
             %li
               Make sure they're logged into their account first and then have them type this URL (
-              %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}> http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+              %a{"ng-href" => CDO.studio_url('/join/{{section.code}}'), target: "_blank"}> http:#{CDO.studio_url('/join/{{section.code}}')}
               ) into their browser. Once they hit enter, they'll have joined the workshop section.
           %p
             You can
@@ -93,15 +93,15 @@ theme: none
       .panel.panel-default
         .panel-heading Signup URL
         .panel-body
-          %a{href: "http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}"}
-            http://#{CDO.canonical_hostname('code.org')}/professional-development-workshops/{{ workshop.id }}
+          %a{"ng-href" => '/professional-development-workshops/{{ workshop.id }}'}
+            http:#{CDO.code_org_url('/professional-development-workshops/{{ workshop.id }}')}
 %div
-  %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
+  %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit", style: "color: #333;"} Edit
   %a#btn-cancel.btn.btn-link{"ng-click" => "cancel_workshop()"} Cancel
 
 
-%div{'ng-show' => 'workshop_signups.length > 0'}
-  %h2 Signups
+%div{'ng-show' => 'active_signups.length > 0'}
+  %h2 Active signups
   %table{style: "width:970px; table-layout:fixed;"}
     %colgroup
       %col{style: 'width: 170px;'}/
@@ -119,15 +119,54 @@ theme: none
       %th.manage-th
         School
       %th.manage-th
-    %tr{"ng-repeat" => "signup in workshop_signups | orderBy:order", style: "vertical-align:top"}
+    %tr{"ng-repeat" => "signup in active_signups | orderBy:order", style: "vertical-align:top"}
       %td {{signup.name_s}}
       %td {{signup.email_s}}
       %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
       %td {{signup.school_name_s}}
       %td{nowrap: true, style: 'white-space: nowrap;'}
-        %span{"ng-show" => "signup.confirmSignupDelete"}
-          %span Delete?
-          %a.btn.btn-danger.btn-xs{"ng-click"=>'delete_signup(signup)'} Yes
-          %a.btn.btn-success.btn-xs{"ng-click"=>'signup.confirmSignupDelete = false'} No
-        %span{"ng-hide" => "signup.confirmSignupDelete"}
-          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_delete(signup)"} Delete
+        %span{"ng-show" => "signup.confirmSignupCancel"}
+          %span Cancel?
+          %a.btn.btn-danger.btn-xs{"ng-click"=>'cancel_signup(signup)'} Yes
+          %a.btn.btn-success.btn-xs{"ng-click"=>'signup.confirmSignupCancel = false'} No
+        %span{"ng-hide" => "signup.confirmSignupCancel"}
+          %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_cancel(signup)"} Cancel
+
+  .signups-download-link{style: 'margin-top: 1em;'}
+    %a{"ng-href" => '/manage-professional-development-workshops/workshop-signup-report.csv?workshop={{workshop.secret}}'} Download active signups
+
+  .collected-emails-trigger{style: 'margin-top: 1em;'}
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsActive = !showCollectedSignupEmailsActive'}View collected email addresses (active signups)
+  %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsActive', style: "width: 100%; height: 100px;"}
+    {{active_signups_emails}}
+
+%div{'ng-show' => 'cancelled_signups.length > 0'}
+  %h2 Cancelled signups
+  %table{style: "width:970px; table-layout:fixed;"}
+    %colgroup
+      %col{style: 'width: 170px;'}/
+      %col{style: 'width: 310px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 200px;'}/
+      %col{style: 'width: 90px;'}/
+    %tr
+      %th.manage-th
+        Name
+      %th.manage-th
+        Email
+      %th.manage-th
+        Title
+      %th.manage-th
+        School
+      %th.manage-th
+    %tr{"ng-repeat" => "signup in cancelled_signups | orderBy:order", style: "vertical-align:top"}
+      %td {{signup.name_s}}
+      %td {{signup.email_s}}
+      %td {{signup.teacher_role_ss.concat(signup.teacher_role_other_ss).join(', ')}}
+      %td {{signup.school_name_s}}
+      %td{nowrap: true, style: 'white-space: nowrap;'}
+
+  .collected-emails-trigger{style: 'margin-top: 1em;'}
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsCancelled = !showCollectedSignupEmailsCancelled'}View collected email addresses (cancelled signups)
+  %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsCancelled', style: "width: 100%; height: 100px;"}
+    {{cancelled_signups_emails}}

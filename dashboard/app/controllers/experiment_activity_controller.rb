@@ -1,2 +1,0 @@
-class ExperimentActivityController < ApplicationController
-end

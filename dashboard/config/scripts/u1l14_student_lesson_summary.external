@@ -1,0 +1,28 @@
+name 'U1L14 Student Lesson Summary'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+## Unit 1: Lesson 14 - Encoding B&W Images
+# Background
+
+Digital images perform the difficult task of translating human vision into a bit-level encoding. Accomplishing this task requires both technical know-how and an understanding of how human vision works. Digital images break a larger image into small squares on a monitor, called pixels, which can be individually illuminated. In a black and white image each pixel may either be turned on or off, and so can be represented by a single bit.
+# Vocabulary
+* Pixel: the fundamental unit of a digital image, typically a tiny square which contains a single color. Pixel is short for "picture element"
+* Metadata: data that provides more information or context about another piece of data
+
+# Lesson 
+
+* Develop encoding scheme for B&W images
+* Experiment with Pixelation Tool
+* Incorporate metadata into encoding of a digital image
+ 
+# Resources 
+
+* Activity Guide: <a href= https://docs.google.com/document/d/18WpGYeEQLw9jn0ymJJhnjFoLgcthRknenwpUYSGUPnE/edit?usp=sharing" target="_blank">Encoding B&W Images</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+

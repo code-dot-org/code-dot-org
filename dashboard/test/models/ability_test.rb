@@ -1,10 +1,6 @@
 require 'test_helper'
 
-class ActivityTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
-  end
-
+class AbilityTest < ActiveSupport::TestCase
   test "as guest" do
     ability = Ability.new(User.new)
 
@@ -15,6 +11,9 @@ class ActivityTest < ActiveSupport::TestCase
     assert !ability.can?(:destroy, Game)
     assert !ability.can?(:destroy, Level)
     assert !ability.can?(:destroy, Activity)
+
+    assert !ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
   end
 
   test "as member" do
@@ -30,6 +29,10 @@ class ActivityTest < ActiveSupport::TestCase
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
   end
 
   test "as admin" do
@@ -43,6 +46,9 @@ class ActivityTest < ActiveSupport::TestCase
     # Can only destroy custom levels
     assert ability.can?(:destroy, Level.where.not(user_id: nil).first)
     assert ability.can?(:destroy, Activity)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
   end
 
 end

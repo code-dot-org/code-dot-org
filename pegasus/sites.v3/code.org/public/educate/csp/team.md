@@ -6,8 +6,10 @@ nav: educate_nav
 ## Code.org CS Principles Team
 
 ### Code.org Staff
-* Baker Franke - K-12 Curriculum Manager, CSP Lead Author
-* Brook Osborne - HS Program Manager, CSP Professional Development
+* Baker Franke - Education Program Manager, CSP Lead Author
+* Brook Osborne - Education Program Manager, CSP Professional Development
+* Sarah Filman - Product Manager
+
 
 #### CSP Authors 2014-15
 * Matt Bauer - Illinois Institute of Technology

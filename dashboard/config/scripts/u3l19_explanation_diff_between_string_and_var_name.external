@@ -1,0 +1,43 @@
+name 'U3L19 - explanation diff between string and var name'
+title 'U3L19 - explanation diff between string and var name'
+description 'description here'
+markdown <<MARKDOWN
+
+# Difference between a string and variable name
+
+<pre>
+write(foo);
+write("foo");
+</pre>
+These lines show how JavaScript knows whether or not you want to literally print the characters "foo" to the screen, or whether you want to retrieve a value from memory. If JavaScript sees a word in your code that’s inside quotes it treats it as a string of text. If the word doesn’t have quotes and JavaScript doesn’t recognize it as a word of the programming language itself, it assumes that it’s a variable and attempts to look it up in memory. If it doesn’t find it in memory. It throws an error.
+
+<details>
+<summary><h1 style="line-height: 0px; margin-top: -10px; margin-left: 10px;"> Historical aside: What's up with foo?</h1>(click to expand). </summary>
+<p>
+Historically many computer science text books use the nonsense variable name 'foo'. The origin of this practice is unclear but if you want to spend a few hours trying to figure it out, just do a web search and you will find no shortage of explanations from all corners of the Internet.
+</p><p>
+We use <strong>foo</strong> in our examples here to indicate the arbitrariness of the variable name itself.  Since our examples are often abstract, trying to teach a principle of programming, and not connected a particular app, we also use a nonsense variable name to keep your focus on the underlying principle rather than a particular application.
+<p></p>
+Many first time learners often think that if they give a variable a particular name like "firstName" then the variable will somehow have magical powers to always contain the user's first name. A variable is <em>just a label</em> for a chunk of memory, and <strong>you are in charge</strong> of naming it, putting a value into it and reading a value out.
+</p><p>
+When you write programs <strong>you should not use the variable name "foo"</strong>. You should name your variables - like your functions - with descriptive words that indicate the value the variable is intended to hold.
+</p><p>
+So we use foo in some of our examples to:
+<li> connect you with a small piece of 'insider knowledge' of programming history
+<li> reinforce that variable names are arbitrary choices, made by you
+<li> keep your focus on the underlying principle rather than a particular application.
+
+</p><p>
+History lesson over...back to where we were...
+</p>
+</details>
+
+
+<p></p>
+<p></p>
+Let's get back to looking at that error and seeing what it looks like when it occurs.  See it and try to correct it on the next page.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue to try...</a>
+
+
+MARKDOWN

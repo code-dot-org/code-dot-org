@@ -1,21 +1,24 @@
 "uk-UA":
   hello: Привіт, світ!
   select_language: Будь ласка, виберіть мову
-  computer_science: Інформатика
+  en: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
-  csedweek_dates: 9-15 грудня 2013 року
+  csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
     усіх вчителів та організаторів<a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>спробували</h3><h2>Годину коду</h2>
+  n_have_learned_an_hoc: <h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
     # інших.'
+  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
+    Приєднайтесь до # інших.'
+  petition_join_others: 'Приєднатися до # інших'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -30,7 +33,7 @@
   hoc2014_teachers: Вчителі
   hoc2014_host: Проведіть
   hoc2014_everyone: Усі
-  hoc2014_support: Підтримайте
+  hoc2014_support: Підтримайте &#x25BE;
   hoc2014_whatishoc: Що таке Година коду?
   twentyhours_trynow: Спробувати
   california_heading: Попросіть свою школу викладати інформатику
@@ -58,6 +61,7 @@
   congratulations: Вітання!
   congratulations_on_completing_hoc: Вітаємо із завершенням першої Години коду
   get_a_certificate_of_achievement: Отримати сертифікат досягнень
+  enter_valid_age: Будь ласка, виберіть припустимий вік
   enter_valid_email: Будь ласка, введіть електронну адресу
   get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
     <a href='/learn/beyond'>вчитися далі після однієї години коду</a>
@@ -113,6 +117,8 @@
   learn_classes: Знайти місцеві класи
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
+  twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
+    http://youtu.be/nKIu9yen5nc. Відвідайте http://code.org/ щоб дізнатися більше.
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Більше Однієї Години
   what_gender: Якої ви статі?
@@ -128,7 +134,14 @@
     рядків коду.'
   start_hoc: Почати Годину коду
   contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
+  stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна
+    Ніколс Пірі, педагог'
+  stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате,
+    5 клас'
+  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням."
+    - Майкл Кларк, педагог'
   studiobar_title: Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>
+  studiobar_title_nolink: Познайомтесь зі Студією коду
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: Три нові курси для K&#8209;5
   studiobar_hoc_title: Година Коду
@@ -141,6 +154,99 @@
   studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
   studiobar_donate_title: Підтримати
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
+  studiobar_shop_title: Магазин
+  studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
+  homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну
+    Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру\n"
+  homepage_hero_text_susan: |
+    &ldquo;Якщо ви можете змінити технології,
+    ви можете змінити світ.&rdquo;
+    Сюзен, виконавчий директор YouTube
+  homepage_hero_text_fistbump: |
+    &ldquo;Не просто грайтесь на вашому телефоні,
+    програмуйте його.&rdquo;
+    Президент Барак Обама
+  homepage_hero_text_sheryl: |
+    &ldquo;Нашим дітям &mdash; включно з дівчатками &mdash;
+    потрібна можливість вивчати програмування.&rdquo;
+    Шерил, операційний директор Facebook
+  homepage_hero_text_satya: |
+    &ldquo;Інформатика допоможе розкрити
+    кращі можливості в світі.&rdquo;
+    Сатья, Генеральный директор Microsoft
+  homepage_hero_text_bosh: |
+    &ldquo;Якщо вмієте програмувати, ви можете
+    вибирати стежину в житті.&rdquo;
+    Кріс Бош
+  homepage_hero_text_student1: |
+    &ldquo;Ці знання змінили моє майбутнє.
+    Вже не кажучи про те, що це цікаво.&rdquo;
+    Луна, 7 клас
+  homepage_hero_text_student2: |
+    &ldquo;Я ніколи не бачив своїх учнів
+    настільки захопленими навчанням.&rdquo;
+    Майкл, вчитель
+  homepage_hero_text_student3: |
+    &ldquo;Інформатика - це така сфера, у якій ви не можете
+    знати, чи вам це подобається, поки не спробуєте.&rdquo;
+    Джексон, 6 клас
+  homepage_hero_text_student4: "&ldquo;З допомогою програмування можна зробити \nвсе,
+    що забажає ваша фантазія .&rdquo; \nМайя, 2 клас\n"
+  homepage_hero_text_student5: "&ldquo;Інформатика - не для когось-там.\nВона для
+    тебе, тут і зараз.&rdquo; \nДжеральдо, вчитель\n"
+  homepage_hero_text_teacher1: "&ldquo;Програмування пробуджує творчість, натхнення
+    та інноваційність &mdash; \nа всі вони важливі для будь-якої професії.&rdquo;\nФлореза,
+    вчитель\n"
+  homepage_hero_text_teacher2: |
+    &ldquo;Ця програма спонукала 100% моїх учнів
+    до активної участі та залучення.&rdquo;
+    Адам, вчитель
+  homepage_hero_text_stat_loc: '#loc рядків коду, написаних учнями'
+  homepage_hero_text_stat_students: '#student_count облікових записів учнів у Студії
+    коду'
+  homepage_hero_text_stat_served: 'Година коду: навчились #served'
+  homepage_slot_text_hoc: Година Коду
+  homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
+  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_studio: Всі наші підручники
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Код Пурха
+  homepage_action_text_codevideo: Переглянути відео
+  homepage_action_text_teachervideo: Переглянути відео
+  homepage_action_text_learn: Початок навчання
+  homepage_action_text_signpetition: Підписати петицію
+  homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення
+    різноманітності в інформатиці.
+  homepage_banner_text_link: Дізнайтеся більше
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Дізнайтеся більше
+  homepage_slot_text_title_hoc: Година Коду
+  homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
+  homepage_slot_text_link_hoc: Спробуйте годину коду
+  homepage_slot_text_link_host: Провести Годину Коду
+  homepage_slot_text_link_hocserved: '# спробували'
+  homepage_slot_text_title_students: Учні
+  homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
+  homepage_slot_text_link_codestudio: Спробуйте Студію Коду
+  homepage_slot_text_link_local: Знайти місцевий клас
+  homepage_slot_text_link_othercourses: Інші онлайн курси
+  homepage_slot_text_title_educators: Викладачі
+  homepage_slot_text_blurb_educators: Навчіть Ваших учнів
+  homepage_slot_text_link_k5: Курси для дітей
+  homepage_slot_text_link_fullcurriculum: Подивіться наш повний курс навчання
+  homepage_slot_text_link_pd: Професійний розвиток
+  homepage_slot_text_title_advocates: Однодумці
+  homepage_slot_text_blurb_advocates: Підтримайте нашу роботу
+  homepage_slot_text_link_stats: Подивитися статистику
+  homepage_slot_text_link_buy: Взяти участь
+  homepage_slot_text_link_donate: Зробити пожертвування
+  homepage_header_codestudio: Творчість учнів Студії Коду
+  homepage_header_donors: Code.org дякує своїм помічникам
+  homepage_donors_seall: Подивитися все
+  homepage_donors_donate: Підтримати
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
   contact_form_topic_teacher: Я вчитель/педагог
@@ -225,15 +331,59 @@
   dashboard_landing_available_title: Доступні курси
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
     для Вас і Ваших учнів.
+  dashboard_landing_more_tutorials: Хочите побачити більше уроків?
+  dashboard_landing_more_tutorials_desc: Є й інші навчальні посібники <a href="/learn/beyond">
+    від наших партнерів.</a> Навчіться програмувати з роботами, робити веб-сторінки,
+    створювати власні програмки або вивчати інші мови, як C++, Ruby або Python!
+  dashboard_hoc_courses: Година код для людей різного віку
+  dashboard_hoc_courses_desc: Спробуйте один із цих коротше 1 годину підручники з
+    вашими студентами!
+  dashboard_k5_courses: 20-годинні курси для К-5
+  dashboard_k5_courses_desc: Ці курси онлайн, суміш самонавідними і самопідготовки
+    підручники з "unplugged" діяльності, які вимагають без комп'ютера на всіх. Кожний
+    курс складається з близько 20 уроків, які можуть бути реалізовані як одну одиницю
+    або протягом семестру. Попередньо читачів навіть дитячий садок віку можуть взяти
+    участь. Щоб допомогти вам почати роботу, ми пропонуємо високу якість професійних
+    семінарах розвитку навколо США безкоштовно. <a href="/professional-development-workshops">
+    знайти найближчий до вас!</a>
+  dashboard_middle_courses: 20-годинні курси для середньої школи
+  dashboard_middle_courses_desc: Наші навчальні програми середня школа використовує
+    інформатики та програмування у контексті математики середньої школи і науки -
+    як інструмент, щоб навчити математичних і наукових понять. Зареєструватися для
+    професійних семінарах розвитку, подати заяву на <a href="/educate/districts">
+    районних широкий партнерство</a> з Code.org.
+  dashboard_high_courses: Річні курси середньої школи
+  dashboard_high_courses_desc: Наші програми середня школа допомагає шкільних округів
+    пропонують повний рік комп'ютерні науки класи з підготовки існуючих педагогічного
+    колективу пропонувати це нове поле. Зареєструватися для професійних семінарах
+    розвитку, подати заяву на <a href="/educate/districts"> районних широкий партнерство</a>
+    з Code.org.
+  dashboard_course_csina: Інформатика в алгебрі
+  dashboard_course_csina_desc: Code.org має партнерські відносини з початкового завантаження
+    розробити навчальні програми, яка навчає алгебраїчних і геометричні концепції
+    через програмування.
+  dashboard_course_csins: Інформатика в науці
+  dashboard_course_csins_desc: Code.org має партнерські відносини з проекту МУЖНІСТЬ,
+    щоб доставити введення в комп'ютерні науки поняття у контексті моделювання та
+    симуляції.
+  dashboard_course_ecs: Відкриваючи інформатику
+  dashboard_course_ecs_desc: 'Вивчення інформатики, річної курс, який складається
+    з 6 блоків: Human Computer Interaction, вирішення проблем, веб-дизайн, програмування,
+    обчислювальним та аналізу даних і робототехніка.'
+  dashboard_course_csp: AP® принципи інформатики
+  dashboard_course_csp_desc: Code.org розробив суворі, чарівна і доступним курс, який
+    досліджує основоположної ідеї обчислень.
   dashboard_landing_loading: Завантаження...
   dashboard_action_edit: Редагувати
   dashboard_action_save: зберегти
   dashboard_action_save_all: Зберегти все
   dashboard_action_cancel: Скасувати
   dashboard_action_delete: Видалити
-  dashboard_action_confirm: Видалити?
   dashboard_action_delete_yes: Так
   dashboard_action_delete_no: Ні
+  dashboard_action_confirm: Видалити?
+  dashboard_action_remove: Видалити
+  dashboard_action_remove_confirm: Видалити?
   dashboard_action_done: Готово
   dashboard_action_required: необхідні
   dashboard_navigation_home_page: Домашня сторінка вчителя
@@ -281,6 +431,7 @@
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
   dashboard_students_placeholder_name: Ім'я учня
   dashboard_students_name: Ім’я
+  dashboard_students_progress: Прогрес
   dashboard_students_age: Вік
   dashboard_students_gender: Стать
   dashboard_students_male: Чоловік
@@ -297,10 +448,12 @@
   dashboard_students_reset_password: Скинути пароль
   dashboard_students_share_section: 'Надайте адресу сторінки входу для своїх учнів:'
   dashboard_students_print_info: Роздрукуйте картки з вхідною інформацією своїх учнів.
+  dashboard_students_secret_picture_title: Таємне зображення
   dashboard_students_secret_picture: Таємне зображення
   dashboard_students_reset_picture: Можете скинути таємне зображення у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено
     нове таємне зображення, яке потрібно використати для наступного входу цього учня.
+  dashboard_students_secret_word_title: Таємне слово
   dashboard_students_secret_word: Таємне слово
   dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена
@@ -315,11 +468,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Клацніть
     тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити
     з учнями.
-  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_curriculum_k5_title: K-5 ресурси педагога
+  dashboard_curriculum_middle_title: Середня школа ресурси педагога
+  dashboard_curriculum_high_title: Вища школа  ресурси педагога
+  dashboard_lesson_plans: Плани уроків
   dashboard_view_all_lesson_plans: Переглянути всі конспекти уроків
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Курс 4 (beta): '
+  dashboard_curriculum: Навчальний план
+  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_overview: Огляд
   dashboard_sequence: Послідовність
   dashboard_framework: Програма
   dashboard_standards: Стандарти
@@ -330,12 +490,22 @@
   dashboard_puzzle_solving: 'Розв''язання задач:'
   dashboard_student_worksheet: інструкція для учня
   dashboard_teacher_worksheet: інструкція для вчителя
+  dashboard_curriculum_csina: 'Інформатика в алгебрі:'
+  dashboard_curriculum_csins: 'Інформатика в науці:'
+  dashboard_curriculum_csp: 'AP® принципи інформатики:'
+  dashboard_curriculum_ecs: 'Відкриваючи інформатику:'
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
   dashboard_login_word: Слово
   dashboard_login_picture: Зображення
   dashboard_login_none: Електронна пошта
   dashboard_new_password: новий пароль
+  dashboard_progress_not_started: не розпочато
+  dashboard_progress_in_progress: в процесі
+  dashboard_progress_not_completed: не завершено
+  dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
+  dashboard_progress_completed_perfect: виконано, ідеально
+  dashboard_progress_furthest_level_attempted: останній відкритий рівень
   stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише
     за тиждень:'
   stats_hoc_2013_image_alt: Статистика Години коду 2013 року
@@ -355,6 +525,7 @@
     логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для
     групи.
   dashboard_faq: Запитання й відповіді
+  dashboard_faq_k5: K-5 запитання й відповіді
   code_hoc_coming: Година коду вже тут - 8-14 грудня!
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Дізнатися більше
@@ -376,6 +547,7 @@
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
+  how_to_teach_hoc: Як викладати "Годину коду"
   more_resources_educators: Більше ресурсів для вчителів та освітян
   participants: учасники
   teachers_notes: Інформація для вчителя
@@ -492,8 +664,7 @@
   groklearning_platformtext: Сучасні веб-браузери
   quorum_platformtext: Сучасні веб-браузери. Підтримується читання екрану
   codespark_platformtext: iOS, Android (або веб-браузер)
-  kodable_platformtext: Kodable is a self-guided iPad game that introduces kids 5+
-    to programming basics. Having a teacher or parent nearby is optimal, but not necessary.
+  kodable_platformtext: iPad
   tynkerapp_platformtext: планшети iPad, Android
   robomindnl_platformtext: Сучасні веб-браузери, мобільні застосунки
   flappy_platformtext: Сучасні браузери, смартфони, планшети
@@ -1015,3 +1186,8 @@
   sphero_beyond_longdescription: Чи ви є педагогом чи батьком, уроки SPRK пропонують
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
     та природничі знання та навики.
+  compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
+  compatibility_https_message: Для підвищення безпеки, ми перейшли до HTTPS %{https_date}.
+    Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
+    натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
+  compatibility_https_hide_this_warning: Сховати попередження

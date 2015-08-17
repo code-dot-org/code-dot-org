@@ -73,8 +73,9 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should have one game group if one stage" do
-    @script_level2.update(stage: @stage)
-    @script_level2.move_to_bottom
+    @script = create(:script, name: 'Single Stage Script')
+    @stage = create(:stage, script: @script, name: 'Stage 1')
+    @script_level = create(:script_level, script: @script, stage: @stage)
 
     get :user_stats, script_id: @script_level.script.id, user_id: @not_admin.id
     css = css_select "div.game-group"
@@ -86,36 +87,39 @@ class ReportsControllerTest < ActionController::TestCase
     teacher = create(:teacher)
     sign_in(teacher)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.find_by_name('course2').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE2_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.find_by_name('course3').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE3_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
-    get :header_stats, script_id: Script.twenty_hour_script, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE4_NAME, user_id: teacher.id
+    assert_select '.stage-lesson-plan-link'
+
+    get :header_stats, script_id: Script::TWENTY_HOUR_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
   test 'should show lesson plan link only if teacher' do
     sign_out(@not_admin)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id
+    get :header_stats, script_id: Script::COURSE1_NAME
     assert_select '.stage-lesson-plan-link', 0
 
     teacher = create(:teacher)
     sign_in(teacher)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: teacher.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
     sign_out(teacher)
     student = create(:student)
     sign_in(student)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: student.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: student.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
@@ -124,7 +128,7 @@ class ReportsControllerTest < ActionController::TestCase
     student = create(:student)
     sign_in(student)
 
-    get :header_stats, script_id: Script.find_by_name('course1').id, user_id: student.id
+    get :header_stats, script_id: Script::COURSE1_NAME, user_id: student.id
     assert_select '.stage-lesson-plan-link', 0
   end
 
@@ -133,7 +137,7 @@ class ReportsControllerTest < ActionController::TestCase
     teacher = create(:teacher)
     sign_in(teacher)
 
-    course1 = Script.find_by_name('course1')
+    course1 = Script.get_from_cache(Script::COURSE1_NAME)
 
     get :header_stats, script_id: course1.id, user_id: teacher.id
 
@@ -188,7 +192,38 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should get header_stats" do
+    sign_out @admin
+
     get :header_stats
+    assert_response :success
+  end
+
+  test "should get header_stats with user_id" do
+    follower = create :follower
+
+    sign_in follower.user
+
+    get :header_stats, user_id: follower.student_user
+    assert_response :success
+  end
+
+  test "should not get header_stats with unauthorized user_id" do
+    sign_in @not_admin
+
+    get :header_stats, user_id: @admin.id
+    assert_response :forbidden
+  end
+
+
+  test "should not get header_stats with user_id when not signed in" do
+    sign_out @admin
+
+    get :header_stats, user_id: @admin.id
+    assert_redirected_to_sign_in
+  end
+
+  test "should get header_stats with empty user_id" do
+    get :header_stats, user_id: ''
     assert_response :success
   end
 
@@ -219,25 +254,6 @@ class ReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :all_usage
 
   generate_admin_only_tests_for :admin_stats
-
-  generate_admin_only_tests_for :admin_gallery
-
-  test "admin_gallery shows most recent 25 gallery items" do
-    sign_in @admin
-
-    100.times do
-      create(:gallery_activity)
-    end
-
-    get :admin_gallery
-
-    assert_equal 25, assigns(:gallery_activities).count
-  end
-
-  test "students should redirect to new teacher dashboard" do
-    get :students
-    assert_redirected_to '//test.code.org/teacher-dashboard'
-  end
 
   test "should get level_stats" do
     get :level_stats, {:level_id => create(:level).id}
@@ -296,7 +312,7 @@ class ReportsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert flash[:error]
+    assert_select '.container .alert-danger', 'User not found'
   end
 
   test "should not assume_identity if not admin" do
@@ -310,6 +326,29 @@ class ReportsControllerTest < ActionController::TestCase
     sign_out @admin
     post :assume_identity, {:user_id => @admin.id}
 
+    assert_redirected_to_sign_in
+  end
+
+  test "should lookup_section" do
+    post :lookup_section, {:section_code => @teacher_section.code}
+    assert_select '#section_owner', 'Owner: ' + @teacher.email
+  end
+
+  test "should lookup_section error if not found" do
+    post :lookup_section, {:section_code => 'ZZZZ'}
+    assert_response :success
+    assert_select '.container .alert-danger', 'Section code not found'
+  end
+
+  test "should not lookup_section if not admin" do
+    sign_in @not_admin
+    post :lookup_section, {:section_code => @teacher_section.code}
+    assert_response :forbidden
+  end
+
+  test "should not lookup_section if not signed in" do
+    sign_out @admin
+    post :lookup_section, {:section_code => @teacher_section.code}
     assert_redirected_to_sign_in
   end
 

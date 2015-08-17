@@ -1,0 +1,12 @@
+name 'Pixelation - Lesson 14 - Make your own B&W Image'
+title 'title'
+description 'description here'
+href 'pixelation/pixelation.html'
+
+version '2'
+instructions “Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want.  Happy pixeling!"
+data '0000 1010 0000 1010'
+
+markdown <<MARKDOWN
+
+MARKDOWN

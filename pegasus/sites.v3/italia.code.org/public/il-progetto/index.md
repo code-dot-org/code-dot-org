@@ -20,7 +20,7 @@ Il MIUR, in collaborazione con il CINI – Consorzio Interuniversitario Nazional
 
 Partendo da un’esperienza di successo avviata negli USA che ha visto nel 2013 la partecipazione di circa 40 milioni di studenti e insegnanti di tutto il mondo, l’Italia è uno dei primi Paesi al mondo a sperimentare l’introduzione strutturale nelle scuole dei concetti di base dell’informatica attraverso la programmazione (<em>coding</em>&nbsp;), usando strumenti di facile utilizzo e che non richiedono un’abilità avanzata nell’uso del computer.
 
-Per essere sempre aggiornato seguici su <a href="http://twitter.com/ProgrammaFuturo">Twitter</a> oppure su <a href="http://facebook.com/programmailfuturo">Facebook</a>.
+Per essere sempre al corrente sulle nostre attività seguici <a href="http://twitter.com/ProgrammaFuturo/with_replies">su Twitter</a> oppure <a href="http://facebook.com/programmailfuturo">su Facebook</a>. È disponibile una <a href="media/docs/Descrizione-progetto-Programma-il-Futuro.pdf">descrizione aggiornata del progetto</a>.
 
 ## Perché sperimentare il <em>coding</em> nelle scuole italiane
 

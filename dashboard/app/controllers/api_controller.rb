@@ -1,46 +1,83 @@
 class ApiController < ApplicationController
   layout false
+  include LevelsHelper
 
   def user_menu
+    render partial: 'shared/user_header'
   end
 
   def user_hero
+    head :not_found if not current_user
   end
 
   def section_progress
-    @section = Section.find(params[:id])
-    authorize! :read, @section
+    load_section
+    load_script
 
-    @script = @section.script || Script.twenty_hour_script
-    @section_map = {@section => @section.students}
+    # stage data
+    stages = @script.script_levels.group_by(&:stage).map do |stage, levels|
+      {length: levels.length,
+       title: ActionController::Base.helpers.strip_tags(stage.localized_title)}
+    end
 
-    @all_script_levels = @script.script_levels.includes({ level: :game })
+    # student level completion data
+    students = @section.students.map do |student|
+      level_map = student.user_levels_by_level(@script)
+      student_levels = @script.script_levels.map do |script_level|
+        user_level = level_map[script_level.level_id]
+        {class: activity_css_class(user_level.try(:best_result)), title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
+      end
+      {id: student.id, levels: student_levels}
+    end
 
-    @all_concepts = Concept.cached
 
-    @all_games = Game.where(['id in (select game_id from levels l inner join script_levels sl on sl.level_id = l.id where sl.script_id = ?)', @script.id])
+    data = {
+            students: students,
+            script: {
+                     id: @script.id,
+                     name: data_t_suffix('script.name', @script.name, 'title'),
+                     levels_count: @script.script_levels.length,
+                     stages: stages
+                    }
+           }
 
-    student_ids = @section.students.pluck(:id)
-    @recent_activities = Activity.recent(30).where("user_id in (?)", student_ids)
+    render json: data
   end
 
   def student_progress
-    @student = User.find(params[:id])
-    authorize! :read, @student
+    load_student
+    load_section
+    load_script
 
+    data = {
+      student: {
+        id: @student.id,
+        name: @student.name,
+      },
+      script: {
+        id: @script.id,
+        name: @script.localized_title
+      },
+      progressHtml: render_to_string(partial: 'shared/user_stats', locals: { user: @student})
+    }
+
+    render json: data
+  end
+
+  private
+
+  def load_student
+    @student = User.find(params[:student_id])
+    authorize! :read, @student
+  end
+
+  def load_section
     @section = Section.find(params[:section_id])
     authorize! :read, @section
+  end
 
-    @script = @section.script || Script.twenty_hour_script
-
-    @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.game_chapter, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
-from user_levels ul
-inner join script_levels sl on sl.level_id = ul.level_id
-inner join levels l on l.id = ul.level_id
-where sl.script_id = #{@script.id} and ul.user_id = #{@student.id}
-order by ul.updated_at desc limit 2
-SQL
-
+  def load_script
+    @script = Script.find(params[:script_id]) if params[:script_id].present?
+    @script ||= @section.script || Script.twenty_hour_script
   end
 end

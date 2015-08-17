@@ -1,0 +1,5 @@
+name 'Creating Contracts From Examples 4'
+title 'Shrink Contract'
+content1 'Try using the "shrink" function.'
+content2 'Examples 4.solution_blocks, 300'
+answer 'shrink|Image|Image'

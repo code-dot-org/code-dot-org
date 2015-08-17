@@ -5,7 +5,7 @@ module Solr
   class Server
 
     def initialize(params={})
-      @host, @port = params[:host].to_s.split(':').map{|i| i.strip}
+      @host, @port = params[:host].to_s.split(':').map(&:strip)
       @port ||= '8983'
       @http = Net::HTTP.new(@host, @port)
     end
@@ -27,7 +27,7 @@ module Solr
     end
 
     def query(params)
-      Query.new(@http, params.merge(omitHeader:true))
+      Query.new(@http, params.merge(omitHeader: true))
     end
 
     class Query
@@ -55,7 +55,7 @@ module Solr
 
       def fetch(start=0)
         post = Net::HTTP::Post.new('/solr/query')
-        post.set_form_data(@params.merge(start:start))
+        post.set_form_data(@params.merge(start: start))
         response = @http.request(post)
         raise response.body unless response.code == '200'
         response = JSON.parse(response.body)['response']

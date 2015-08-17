@@ -2,15 +2,7 @@
 
 %h2= @page_title
 
-- if devise_mapping.confirmable? && resource.confirmation_required? && !resource.confirmed?
-  #alert
-    = t('user.email_confirm_needed')
-    %br/
-    %br/
-    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |form_c|
-      %div
-        = form_c.hidden_field :email
-      %div= form_c.submit t('user.email_resend_confirm')
+= render partial: 'devise/confirmations/alert'
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
@@ -45,9 +37,6 @@
       %em= t('user.current_password_hint')
       %br/
       = f.password_field :current_password
-  .field
-    = f.label :locale
-    = f.select :locale, options_for_locale_select, selected: locale
   - if !resource.teacher?
     .field
       = f.label t('signup_form.gender')
@@ -67,11 +56,13 @@
     = f.label t('signup_form.user_type')
     = f.select :user_type, user_type_options
 
-  %div= f.submit t('crud.update')
--#%h3= t('user.cancel.title')
--#%p
--#  = t('user.cancel.hint')
--#  = button_to t('user.cancel.button'), registration_path(resource_name), :data => { :confirm => t('crud.confirm') }, :method => :delete
+  %div= f.submit t('crud.update'), class: 'btn btn-default'
+%h3= t('user.delete')
+%p
+  = t('user.delete_text')
+  - if current_user.teacher?
+    = t('user.delete_text_teacher_note')
+  = button_to t('user.delete'), registration_path(resource_name), data: { confirm: t('user.delete_confirm') }, method: :delete, class: 'btn btn-danger'
 = link_to t('crud.back'), :back
 
 :javascript

@@ -1,4 +1,5 @@
 class LevelSourceHintsController < ApplicationController
+  include LevelsHelper
   before_filter :authenticate_user!
   before_action :set_level_source_hint, only: [:update]
   load_and_authorize_resource
@@ -137,7 +138,7 @@ class LevelSourceHintsController < ApplicationController
   # This shows not just the hint whose popularity index is specified but also
   # all the other hints having the same level source id.
   def show_pop_hints
-    raise "unauthorized" if !current_user.admin?
+    raise "unauthorized" unless current_user.admin?
     unless setup_display_of_pop_hints(
         FrequentUnsuccessfulLevelSource,
         lambda {|idx, restriction| show_pop_hints_path idx, restriction})
@@ -166,7 +167,7 @@ class LevelSourceHintsController < ApplicationController
   end
 
   def show_pop_hints_per_level
-    raise "unauthorized" if !current_user.admin?
+    raise "unauthorized" unless current_user.admin?
     if setup_display_of_pop_hints(
         FrequentUnsuccessfulLevelSource.where(level_id: params[:level_id].to_i),
         lambda {|idx, restriction| show_pop_hints_per_level_path(params[:level_id].to_i, idx, restriction)})
@@ -210,12 +211,17 @@ class LevelSourceHintsController < ApplicationController
   protected
   def common(level_source_id)
     @level_source = LevelSource.find(level_source_id)
-    @start_blocks = @level_source.data
     @level = @level_source.level
     @game = @level.game
-    @full_width = true
-    @hide_source = false
-    @share = true
+
+    level_view_options(
+      start_blocks: @level_source.data,
+      hide_source: false,
+      share: true
+    )
+    view_options(
+      full_width: true
+    )
   end
 
   private

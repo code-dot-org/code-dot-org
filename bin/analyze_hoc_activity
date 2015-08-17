@@ -1,0 +1,188 @@
+#!/usr/bin/env ruby
+#
+# This script analyzes the activity the is launched from code.org/learn. We track outgoing clicks,
+# hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
+# page.
+#
+# There is a lot of data so, for performance, the script caches the totals for each day and only
+# performs analysis on the remaining days. Deleting the cached results is an effective way to do
+# a complete re-count. EXCEPT for HourOfActivity_Totals_2014-12-05.json which is a summary of all
+# results for the year leading up to 12/05/2014.
+#
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'cdo/hip_chat'
+require src_dir 'database'
+require 'cdo/properties'
+
+DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
+
+def add_count_to_hash(hash, key, count)
+  hash[key] = hash.has_key?(key) ? hash[key] + count : count
+end
+
+def analyze_day_fast(date)
+  day = date.strftime('%Y-%m-%d')
+  next_day = (date + 1).strftime('%Y-%m-%d')
+  froms = [
+    "FROM hoc_activity WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" +
+      " OR (pixel_started_at >= '#{day}' AND pixel_started_at < '#{next_day}')",
+  ]
+
+  finished_froms = [
+    "FROM hoc_activity WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
+      " OR (pixel_finished_at >= '#{day}' AND pixel_finished_at < '#{next_day}')",
+  ]
+
+  #HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
+  tutorials = {}
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT tutorial, COUNT(id) as count #{from_where} GROUP BY tutorial ORDER BY count DESC"
+    ).each do |row|
+      next if row[:tutorial].nil_or_empty?
+      add_count_to_hash tutorials, row[:tutorial], row[:count]
+    end
+  end
+
+  #HipChat.log "Analyzing by <b>country</b>..." if rack_env?(:production)
+  countries = {}
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT country, COUNT(id) as count #{from_where} GROUP BY country ORDER BY count DESC"
+    ).each do |row|
+      row[:country] = 'Other' if row[:country].nil_or_empty? || row[:country] == 'Reserved'
+      add_count_to_hash countries, row[:country], row[:count]
+    end
+  end
+
+  #HipChat.log 'Analyzing by <b>state</b>...' if rack_env?(:production)
+  states = {}
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT state, COUNT(id) as count #{from_where} GROUP BY state ORDER BY count DESC"
+    ).each do |row|
+      row[:state] = 'Other' if row[:state].nil_or_empty? || row[:state] == 'Reserved'
+      add_count_to_hash states, row[:state], row[:count]
+    end
+  end
+
+  #HipChat.log 'Analyzing by <b>city</b>...' if rack_env?(:production)
+  cities = {}
+  froms.each do |from_where|
+    DB_READONLY.fetch(
+      "SELECT city, COUNT(id) AS count #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+    ).each do |row|
+      row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
+      add_count_to_hash cities, row[:city], row[:count]
+    end
+  end
+
+  #HipChat.log 'Calculating total started...' if rack_env?(:production)
+  started = 0;
+  froms.each do |from_where|
+    started += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+  end
+
+  #HipChat.log 'Calculating total finished...' if rack_env?(:production)
+  finished = 0;
+  finished_froms.each do |from_where|
+    finished += DB_READONLY.fetch("SELECT COUNT(id) as count #{from_where}").first[:count]
+  end
+
+  {
+    'started'=>started,
+    'finished'=>finished,
+    'cities'=>cities,
+    'states'=>states,
+    'countries'=>countries,
+    'tutorials'=>tutorials,
+    'votes'=>{ 'boys'=>'0', 'girls'=>'0' },
+  }
+end
+
+def add_hashes(h1, h2)
+  unsorted = {}
+  (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
+  unsorted
+
+  sorted = {}
+  unsorted.keys.sort { |a,b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }
+  sorted
+end
+
+def main()
+  return unless only_one_running?(__FILE__)
+
+  to_date = JSON.load(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))
+
+  total_started = to_date['started']
+  total_finished = to_date['finished']
+  total_tutorials = to_date['tutorials']
+  total_cities = to_date['cities']
+  total_states = to_date['states']
+  total_countries = to_date['countries']
+
+  today = DateTime.now.to_date
+  day = Date.strptime('2014/12/06', '%Y/%m/%d')
+
+  while day <= today
+    cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
+    if (day != today) && File.file?(cache_path)
+      day_data = JSON.load(IO.read(cache_path))
+    else
+      day_data = analyze_day_fast(day)
+
+      File.open(cache_path, 'wt') do |cache_file|
+        cache_file << JSON.pretty_generate(day_data)
+      end
+    end
+
+    total_started += day_data['started']
+    total_finished += day_data['finished']
+    total_tutorials = add_hashes(total_tutorials, day_data['tutorials'])
+    total_cities = add_hashes(total_cities, day_data['cities'])
+    total_states = add_hashes(total_states, day_data['states']||{})
+    total_countries = add_hashes(total_countries, day_data['countries'])
+
+    day += 1
+  end
+
+  Properties.set :hoc_metrics, {
+    started: total_started,
+    finished: total_finished,
+    tutorials: total_tutorials,
+    cities: total_cities,
+    states: total_states,
+    countries: total_countries,
+  }
+
+  #HipChat.log 'Calculating lines of code...' if rack_env?(:production)
+  lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i : 0
+
+  time = DateTime.now
+  Properties.set :metrics, {
+    created_at:               time,
+    created_on:               time.to_date,
+    csedweek_organizers:      38236,
+    csedweek_teachers:        24025,
+    csedweek_entire_schools:  12754,
+    csedweek_students:        4875091,
+    csedweek_countries:       356,
+    petition_signatures:      DB[:forms].where(kind: 'Petition').count,
+    lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
+  }
+
+  total_females = DASHBOARD_DB[:users].where(gender: 'f').count;
+  total_males = DASHBOARD_DB[:users].where(gender: 'm').count;
+  total_with_gender = total_females + total_males
+  total_with_gender = 1 if total_with_gender == 0
+
+  Properties.set :about_stats, {
+    number_served: total_started,
+    number_students: DASHBOARD_DB[:users].where(user_type: 'student').count,
+    number_teachers: DASHBOARD_DB[:users].where(user_type: 'teacher').count,
+    percent_female: ((100 * total_females) / total_with_gender).to_i,
+  }
+end
+
+main()

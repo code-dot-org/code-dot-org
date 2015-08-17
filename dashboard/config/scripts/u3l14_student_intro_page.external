@@ -1,0 +1,25 @@
+name 'U3L14 - Student Intro Page'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Unit 3: Lesson 14 - Unfortunate Events
+# Background
+By this point, you have a basic understanding of event-driven programming. This lesson focuses on common errors beginner programmers may encounter when dealing with events. 
+
+Building up your "coding muscles" includes recognizing and correcting errors or bugs in your code and learning to spot and correct common errors.
+
+There are also different kinds of errors.  Some break your program.  Others are tougher to spot: the code works but doesn't do what you expect!
+
+# Lesson
+
+* Follow a series of challenges presented in the "Unfortunate Events" worksheet.
+* Solve and debug problems with buttons and event handlers
+* Answer questions in the worksheet
+
+# Resources
+
+* <a href="https://docs.google.com/document/d/1WU2eqfC0Z5xC19BMQXkV6yBBccUlN8g6NvWwU3z8TPM" target="_blank">Unfortunate Events Worksheet</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

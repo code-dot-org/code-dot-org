@@ -1,14 +1,14 @@
 ---
 title: Nominate Teacher of the Month
 nav: educate_nav
-rightbar: blank
 ---
 [#totm-intro]
 
 # Teacher of the Month winners
 
-- [Jaime Binning](http://codeorg.tumblr.com/post/83529925676/totm2), Roscoe, IL (April 2014)
-- [Maria Garrett-Jackson](http://codeorg.tumblr.com/post/80268490173/totm1), Houston, TX (March 2014)
+<%= view :totm3_winners %>
+</br>
+<a href="http://blog.code.org/tagged/TOTM"><button>See all</button></a>
 
 # Nominate a Teacher of the Month
 
@@ -36,4 +36,4 @@ Thanks for your nomination!
 
 <br />
 <br />
-[See Student of the Week winners](/sotw)
+[See Student of the Month winners](/sotm)

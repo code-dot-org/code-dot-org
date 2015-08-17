@@ -1,0 +1,6 @@
+#{@user.ops_first_name} #{@user.ops_last_name} (#{@user.email}) has added the following unexpected teachers to
+%a{href:"http:" + CDO.code_org_url("/ops-dashboard#/workshops/#{@workshop.id}/attendance")}
+  #{@workshop.name}
+%ul
+  - @added_teachers.each do |teacher|
+    = render partial: 'teacher', locals: {teacher: teacher}

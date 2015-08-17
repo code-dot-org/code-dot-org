@@ -1,0 +1,23 @@
+name 'sciPD logistics 1'
+title 'Details and Logistics'
+css 'unplugged'
+
+markdown <<MARKDOWN
+### Details and Logistics
+
+**Phase 2 description:**
+
+Phase 2, the Summer Face-to-Face Professional Development Workshop will span three full days. The primary focus during the summer workshop will be on experiencing the curriculum as a learner, then practicing and planning for the delivery of the curriculum as a learning coach.
+
+<br/><br/>
+**Day 1:** Walk through and prepare to teach Module 1 "Introduction to Computer Modeling and Simulation." Module 1 consists of a set of design and build activities that lead up to building a computer model.
+
+**Day 2:** Walk through and prepare to teach the Computational Science Cycle and Scientific Practices using Computer Models. Then customize/modify the model and run your own experiments. 
+
+**Day 3:** Walk through and prepare to teach Modules 2, 3, and 4 in subject area groupings (Earth Science, Life Science, and Physical Science).
+
+**Online portion:** implementation planning guide.
+<br/><br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

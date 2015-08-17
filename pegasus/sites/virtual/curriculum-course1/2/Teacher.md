@@ -194,12 +194,14 @@ These topics will be important in the online lessons that follow, so taking an e
 [/together]
 
 [together]
+
 [tip]
 
 # Lesson Tip
 Note that the rules are not the most important thing here.  Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game.  The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.
 
 [/tip]
+
 [/together]
 
 
@@ -302,9 +304,9 @@ Use these activities to enhance student learning. They can be used as outside of
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a><br/>
+<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

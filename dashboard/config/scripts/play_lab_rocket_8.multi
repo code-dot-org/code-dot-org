@@ -1,0 +1,14 @@
+name 'Play Lab Rocket 8'
+title 'Rocket Multiple Choice'
+
+markdown <<MARKDOWN
+### Which function describes a rocket that reaches:
+#### 47 meters at 5 seconds
+#### 97 meters at 10 seconds
+#### 147 meters at 15 seconds
+MARKDOWN
+
+wrong "rocket-height(seconds) = seconds * 7 + 10"
+wrong "rocket-height(seconds) = seconds * 10 + 7"
+wrong "rocket-height(seconds) = seconds * 7 + 3"
+right "rocket-height(seconds) = seconds * 10 - 3"

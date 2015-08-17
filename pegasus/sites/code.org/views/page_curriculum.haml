@@ -5,6 +5,16 @@
 
     %link{href: "/css/curriculum.css", rel: "stylesheet"}
 
+    %script{src:'/js/jquery.min.js'}
+    - if params['pdf_version']
+      -# Auto-open <details> tags when rendering PDF
+      %script{src:'/js/curriculum-pdf.js'}
+    - else
+      -# Polyfill <details> tags
+      %link{rel:'stylesheet', type:'text/css', href:'/shared/css/details-polyfill.css'}
+      %script{src:'/shared/js/details-polyfill/jquery.details.min.js'}
+      %script{src:'/shared/js/details-polyfill/details-polyfill.js'}
+
   %body
     .container_nonresponsive{:style=>'width:100%'}
       = body

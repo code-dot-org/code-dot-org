@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :nonminimal
 
   def update
     @user = User.find(current_user.id)
@@ -27,7 +26,11 @@ class RegistrationsController < Devise::RegistrationsController
 
         format.html do
           set_flash_message :notice, @user.pending_reconfirmation? ? :update_needs_confirmation : :updated
-          redirect_to after_update_path_for(@user)
+          begin
+            redirect_to :back
+          rescue ActionController::RedirectBackError
+            redirect_to after_update_path_for(@user)
+          end
         end
         format.json { head :no_content }
       else

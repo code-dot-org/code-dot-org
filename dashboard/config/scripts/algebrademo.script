@@ -1,0 +1,48 @@
+title 'Algebra Demo'
+description_short "A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra"
+description "A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra"
+
+stage 'Algebra Demo'
+description 'A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra'
+
+stage 'Evaluation Blocks'
+level 'Calc Circles of Eval .1'
+level 'Calc Circles of Eval .2'
+level 'Calc Circles of Eval .3'
+level 'Calc Circles of Eval .4'
+level 'Calc Circles of Eval 2'
+level 'Calc Circles of Eval 3'
+level 'Calc Circles of Eval 4'
+level 'Calc Circles of Eval 5'
+
+stage 'Making Pictures'
+level 'Eval Strings Images .1'
+level 'Eval Strings Images .2'
+level 'Eval Strings Images 1'
+level 'Eval Strings Images 2'
+level 'Eval Strings Images 3'
+level 'Eval Strings Images 4'
+
+stage 'Defining Variables'
+level 'Calc Vars 1'
+level 'Calc Vars 1.1'
+level 'Calc Vars 3'
+level 'Calc Vars 2'
+level 'Calc Vars 2.1'
+level 'Calc Vars 4'
+
+stage 'Defining Simple Functions'
+level 'Eval Define Funcs 1'
+level 'Eval Define Funcs 2'
+level 'Eval Define Funcs 3'
+level 'Eval Define Funcs 4'
+level 'Eval Define Funcs 5'
+
+stage 'The Design Recipe'
+level 'Play Lab Rocket 1'
+level 'Rocket Contract 1'
+level 'Play Lab Rocket 2'
+level 'Play Lab Rocket 3'
+level 'Eval Design Recipe .1'
+level 'Eval Design Recipe 3'
+level 'Eval Design Recipe 4'

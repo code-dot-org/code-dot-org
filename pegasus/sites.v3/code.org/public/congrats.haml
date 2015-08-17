@@ -64,7 +64,7 @@ max_age: 60
     #print_option.col-50{:style=>'display:none;'}
       %h2{:style=>'margin-top:15px; margin-bottom:10px'}
         =I18n.t :print_ice_art
-        %a{:href=>"http://#{canonical_hostname('studio.code.org')}/s/1/level/108", :style=>'font-size: 12px'}
+        %a{:href=> CDO.studio_url("/s/1/level/108"), :style=>'font-size: 12px'}
           ="(#{I18n.t :create_art_with_zombie})"
       = view :frozen_print_gallery
 

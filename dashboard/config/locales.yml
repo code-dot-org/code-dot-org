@@ -9,12 +9,6 @@
 #   fallback: Specifies a Rails-level I18n fallback.
 #   debug: Causes a language to not show up in the production environment.
 
-"af": "af-ZA"
-"af-ZA":
-  english: "Afrikaans"
-  native: "Afrikaans"
-  debug: true
-
 "ar": "ar-SA"
 "ar-SA":
   english: "Arabic"
@@ -41,26 +35,26 @@
   debug: true
   webfonts: false
 
+"bs": "bs-BA"
+"bs-BA":
+  english: "Bosnian"
+  native: "Босански"
+  webfonts: false
+
 "ca": "ca-ES"
 "ca-ES":
   english: "Catalan"
-  native: "català"
+  native: "Català"
 
 "cs": "cs-CZ"
 "cs-CZ":
   english: "Czech"
-  native: "čeština"
-
-"cy": "cy-GB"
-"cy-GB":
-  english: "Welsh"
-  native: "Cymraeg"
-  debug: true
+  native: "Čeština"
 
 "da": "da-DK"
 "da-DK":
   english: "Danish"
-  native: "dansk"
+  native: "Dansk"
 
 "de": "de-DE"
 "de-DE":
@@ -70,7 +64,7 @@
 "el": "el-GR"
 "el-GR":
   english: "Greek"
-  native: "ελληνικά"
+  native: "Ελληνικά"
   webfonts: false
 
 "en": "en-US"
@@ -78,6 +72,12 @@
   english: "English"
   native: "English"
   fallback: "en" # Need this because source files use "en", not "en-US"
+
+"en-GB":
+  english: "English (UK)"
+  native: "English (UK)"
+  debug: true
+
 "en-PLOC":
   english: "Pseudoloc"
   native: "Pseudoloc"
@@ -86,13 +86,31 @@
 "es": "es-ES"
 "es-ES":
   english: "Spanish"
-  native: "español"
+  native: "Español"
+
+"es-AR":
+  english: "Spanish, Argentina"
+  native: "Español (Argentina)"
+  debug: true
+
+"et": "et-EE"
+"et-EE":
+  english: "Estonian"
+  native: "Eesti"
+  debug: true
 
 "eu": "eu-ES"
 "eu-ES":
   english: "Basque"
   native: "Euskara"
   debug: true
+
+"fa": "fa-AF"
+"fa-AF":
+  english: Dari
+  native: "دريلو"
+  debug: true
+  webfonts: false
 
 "fa": "fa-IR"
 "fa-IR":
@@ -104,7 +122,7 @@
 "fi": "fi-FI"
 "fi-FI":
   english: "Finnish"
-  native: "suomi"
+  native: "Suomi"
 
 "fil": "fil-PH"
 "fil-PH":
@@ -115,7 +133,19 @@
 "fr": "fr-FR"
 "fr-FR":
   english: "French"
-  native: "français"
+  native: "Français"
+
+"ga": "ga-IE"
+"ga-IE":
+  english: "Irish (Gaelic)"
+  native: "Gaeilge"
+  debug: true
+
+"gl": "gl-ES"
+"gl-ES":
+  english: "Galician"
+  native: "Galiza"
+  debug: true
 
 "he": "he-IL"
 "he-IL":
@@ -127,7 +157,7 @@
 "hi": "hi-IN"
 "hi-IN":
   english: "Hindi"
-  native: "हिन्दी, हिंदी"
+  native: "हिन्दी"
   debug: true
   webfonts: false
 
@@ -140,7 +170,14 @@
 "hu": "hu-HU"
 "hu-HU":
   english: "Hungarian"
-  native: "magyar"
+  native: "Magyar"
+
+"hy": "hy-AM"
+"hy-AM":
+  english: "Armenian"
+  native: "Հայերեն"
+  debug: true
+  webfonts: "false"  
 
 "id": "id-ID"
 "id-ID":
@@ -152,6 +189,7 @@
   english: "Icelandic"
   native: "Íslenska"
 
+"it": "it-IT"
 "it-IT":
   english: "Italian"
   native: "Italiano"
@@ -162,11 +200,31 @@
   native: "日本語"
   webfonts: false
 
+"ka": "ka-GE"
+"ka-GE":
+  english: "Georgian"
+  native: "ქართული"
+  debug: true
+  webfonts: false  
+
 "ko": "ko-KR"
 "ko-KR":
   english: "Korean"
   native: "한국어"
+  webfonts: false  
+
+"km": "km-KH"
+"km-KH":
+  english: "Khmer"
+  native: "ភាសាខ្មែរ"
+  debug: true
   webfonts: false
+
+"ku": "ku-IQ"
+"ku-IQ":
+  english: "Kurdish"
+  native: "Kurdí"
+  debug: true
 
 "lt": "lt-LT"
 "lt-LT":
@@ -180,6 +238,20 @@
   native: "Latviešu"
   webfonts: false
 
+"mk": "mk-MK"
+"mk-MK":
+  english: "Macedonian (FYROM)"
+  native: "Mакедонски"
+  debug: true
+  webfonts: false
+
+"mr": "mr-IN"
+"mr-IN":
+  english: "Marathi"
+  native: "मराठी"
+  debug: true
+  webfonts: false
+
 "ms": "ms-MY"
 "ms-MY":
   english: "Malay"
@@ -187,6 +259,20 @@
   debug: true
   webfonts: false
 
+"mt": "mt-MT"
+"mt-MT":
+  english: "Maltese"
+  native: "Malti"
+  debug: true
+
+"ne": "ne-NP"
+"ne-NP":
+  english: "Nepali"
+  native: "नेपाली"
+  debug: true
+  webfonts: false
+
+"nl": "nl-NL"
 "nl-NL":
   english: "Dutch"
   native: "Nederlands"
@@ -204,8 +290,16 @@
 "pl": "pl-PL"
 "pl-PL":
   english: "Polish"
-  native: "język polski"
+  native: "Polski"
 
+"ps": "ps-AF"
+"ps-AF": 
+  english: "Pashto"
+  native: "پښتو"
+  debug: true
+  webfonts: false
+
+"pt": "pt-BR"
 "pt-BR":
   english: "Portuguese (Brazil)"
   native: "Português (Brasil)"
@@ -222,13 +316,13 @@
 "ru": "ru-RU"
 "ru-RU":
   english: "Russian"
-  native: "русский язык"
+  native: "Русский"
   webfonts: false
 
 "sk": "sk-SK"
 "sk-SK":
   english: "Slovak"
-  native: "slovenský jazyk"
+  native: "Slovenčina"
   debug: true
 
 "sl": "sl-SI"
@@ -240,13 +334,12 @@
 "sq": "sq-AL"
 "sq-AL":
   english: "Albanian"
-  native: "gjuha shqipe"
-  debug: true
+  native: "Shqip"
 
 "sr": "sr-SP"
 "sr-SP":
   english: "Serbian"
-  native: "српски језик"
+  native: "Српски"
   webfonts: false
 
 "sv": 'sv-SE'
@@ -276,7 +369,7 @@
 "uk": "uk-UA"
 "uk-UA":
   english: "Ukrainian"
-  native: "українська мова"
+  native: "Українська"
   webfonts: false
 
 "ur": "ur-PK"
@@ -291,14 +384,14 @@
 "vi-VN":
   english: "Vietnamese"
   native: "Tiếng Việt"
-  debug: true
+
+"zh": "zh-CN"
+"zh-CN":
+  english: "Chinese (Simplified)"
+  native: "简体字"
+  webfonts: false
 
 "zh-TW":
   english: "Chinese (Traditional)"
   native: "繁體字"
-  webfonts: false
-
-"zh-CN":
-  english: "Chinese (Simplified)"
-  native: "简体字"
   webfonts: false

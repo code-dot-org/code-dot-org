@@ -1,4 +1,13 @@
 #!/usr/bin/env ruby
+#
+# This script downloads milestone logs from our S3 bucket, counts the lines of code documented
+# in the logs, and stores the total lines (per instance, per log, per day) in
+# pegasus/cache/milestone-cache.json.
+#
+# Logs for days that are over are .gz compressed in S3. The log for the current day is not
+# compressed and updates are uploaded hourly. See upload-logs-to-s3 for details on the upload
+# side.
+#
 require_relative '../deployment'
 require 'cdo/aws/s3'
 
@@ -7,9 +16,9 @@ def count_lines_of_code(i)
   extname = File.extname(filename)
   path = pegasus_dir 'cache', filename
   IO.write path, i.value
-  
+
   count_command = "cut -f10 | awk '{s+=$1} END {print s}'"
-  
+
   case extname
   when '.gz'
     count = `gunzip -c #{path} | #{count_command}`.to_i
@@ -18,9 +27,9 @@ def count_lines_of_code(i)
   else
     raise ArgumentError, "Don't know how to process #{extname} files."
   end
-  
+
   FileUtils.rm path
-  
+
   count
 end
 
@@ -30,21 +39,21 @@ def main
   cache ||= {}
 
   AWS::S3::connect!
-  
+
   marker = nil
   total = 0
 
-  while true
-    objects = AWS::S3::Bucket.objects('cdo-logs', marker:marker)
+  loop do
+    objects = AWS::S3::Bucket.objects('cdo-logs', marker: marker, prefix: 'hosts')
     break if objects.size == 0
 
     objects.each do |i|
       match = i.key.match /^hosts\/(?<host>[^\/]+)\/dashboard\/milestone.log/
       next unless match
-      
+
       host = match[:host]
-      next if ['console', 'daemon', 'staging', 'test', 'levelbuilder-staging', 'development'].include? host
-      
+      next if ['console', 'daemon', 'production-daemon', 'staging', 'test', 'levelbuilder-staging', 'levelbuilder-development', 'development', 'react'].include? host
+
       cache[i.key] = count_lines_of_code(i) unless cache.has_key?(i.key) && File.extname(i.key) == '.gz'
 
       IO.write pegasus_dir('cache','milestone-cache.json'), JSON.pretty_generate(cache)

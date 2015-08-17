@@ -15,7 +15,7 @@ The 1-hour tutorial should work on any browser (including tablets, smartphones),
 The learn.code.org code is segmented into three parts:
 
 1. **Blockly Core** is the visual programming language platform used for the interactive tutorials.
-2.  **Blockly** includes *apps*—blockly puzzles built based on Blockly Core. It includes all of the apps used in the dashboard's 1-Hour and a 20-Hour curricula.
+2.  **Apps** includes *apps*—blockly puzzles built based on Blockly Core. It includes all of the apps used in the dashboard's 1-Hour and a 20-Hour curricula.
 3.  **Dashboard** (this repository), is the tutorial platform which organizes blockly levels into tutorials, and includes support for teachers to track student progress.
 
 ## Setting up for development

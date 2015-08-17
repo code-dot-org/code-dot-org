@@ -10,14 +10,7 @@ class LevelsControllerTest < ActionController::TestCase
     @program = '<hey/>'
 
     @not_admin = create(:user)
-    Rails.env = 'levelbuilder'
-    # Prevent custom levels from being written out to files when emulating 'levelbuilder' environment in this test class
-    ENV['FORCE_CUSTOM_LEVELS'] = '1'
-  end
-
-  teardown do
-    Rails.env = "test"
-    ENV.delete 'FORCE_CUSTOM_LEVELS'
+    set_env :levelbuilder
   end
 
   test "should get index" do
@@ -44,6 +37,14 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get new of all types" do
+    Level.descendants.each do |klass|
+      get :new, type: klass.name
+
+      assert_response :success
+    end
+  end
+
   test "should alphanumeric order custom levels on new" do
     Level.where(user_id: @user.id).map(&:destroy)
     level_1 = create(:level, user: @user, name: "BBBB")
@@ -52,7 +53,7 @@ class LevelsControllerTest < ActionController::TestCase
     level_4 = create(:level, user: @user, name: "Z10")
     level_5 = create(:level, user: @user, name: "Z2")
 
-    get :new, game_id: @level.game, type: "Maze"
+    get :new, game_id: @level.game
 
     assert_equal [level_2, level_1, level_3, level_5, level_4], assigns(:levels)
   end
@@ -174,13 +175,13 @@ class LevelsControllerTest < ActionController::TestCase
     begin
       post :create, :level => { :name => level_name, :type => 'Artist' }, :game_id => Game.find_by_name("Custom").id, :program => @program
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = LevelLoader.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, id: level
       assert_equal false, file_path && File.exist?(file_path)
     ensure
       ENV['FORCE_CUSTOM_LEVELS'] = old_env
-      file_path = Level.level_file_path(level_name)
+      file_path = LevelLoader.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -213,23 +214,6 @@ class LevelsControllerTest < ActionController::TestCase
 
     post :update_blocks, :level_id => level.id, :game_id => level.game.id, :type => 'toolbox_blocks', :program => @program
     assert_response :forbidden
-  end
-
-  test "should set coordinates and direction from query string" do
-    get :new, :type => "Artist", :x => 5, :y => 10, :start_direction => 90
-    level = assigns(:level)
-    assert_equal 5, level.x
-    assert_equal 10, level.y
-    assert_equal 90, level.start_direction
-  end
-
-  test "should handle coordinates if non integer" do
-    get :new, :type => "Artist", :x => "", :y => 5.5, :start_direction => "hi"
-    level = assigns(:level)
-    assert level
-    assert_nil level.x
-    assert_nil level.y
-    assert_nil level.start_direction
   end
 
   test "should not create level if not admin" do
@@ -267,7 +251,25 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
     get :edit_blocks, level_id: @level.id, type: 'toolbox_blocks'
-    assert_equal @program, assigns[:start_blocks]
+    assert_equal @program, assigns[:level_view_options][:start_blocks]
+  end
+
+  test "should load file contents when editing a dsl defined level" do
+    level = Level.find_by_name 'Test Demo Level'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
+  end
+
+  test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
+    level = Level.find_by_name 'Test External Markdown'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
 
   test "should update level" do
@@ -406,6 +408,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
@@ -429,6 +432,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, id: level, game_id: level.game
     assert_select '.pdf-button'
 
+    @controller = LevelsController.new
     student = create(:student)
     sign_out(teacher)
     sign_in(student)
@@ -440,13 +444,13 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_difference('Level.count') do
-      post :clone, level_id: old.id
+      post :clone, level_id: old.id, name: "Fun Level (copy 1)"
     end
 
     new_level = assigns(:level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
-    assert_redirected_to "/levels/#{new_level.id}/edit"
+    assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
   test 'cannot update level name with just a case change' do
@@ -489,4 +493,47 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'different name', level.name
   end
 
+  test 'trailing spaces in level name get stripped' do
+    level = create :level, name: 'original name '
+    assert_equal 'original name', level.name
+
+    post :update, id: level.id, level: {name: 'different name  '}
+
+    level = level.reload
+    # same name
+    assert_equal 'different name', level.name
+  end
+
+  test 'can show level when not signed in' do
+    set_env :test
+
+    level = create :artist
+    sign_out @user
+
+    get :edit, id: level
+    assert_response :redirect
+
+    get :show, id: level
+    assert_response :success
+  end
+
+  test 'can show embed level when not signed in' do
+    set_env :test
+
+    level = create :artist
+    sign_out @user
+
+    get :embed_level, level_id: level
+    assert_response :success
+  end
+
+  test 'can show embed blocks when not signed in' do
+    set_env :test
+
+    level = create :artist
+    sign_out @user
+
+    get :embed_blocks, level_id: level, block_type: :solution_blocks
+    assert_response :success
+  end
 end

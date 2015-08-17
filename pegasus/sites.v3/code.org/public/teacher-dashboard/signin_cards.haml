@@ -2,25 +2,8 @@
 layout: none
 theme: none
 ---
-:css
-  @media print {
-    .signin_card {page-break-inside: avoid;}
-    #pageheader, #pagefooter, .print-hide {display:none;}
-  }
-  .signin_card {
-    width: 400px;
-    border: 1px dashed #666;
-    padding: 10px;
-    margin: 10px;
-    float: left;
-  }
-  .signin_card dl dt {
-  }
-  .signin_card dl dd {
-  }
 
-%div{"ng-controller" => "SectionDetailController"}
-
+%div
   %br
   %button.btn.btn-white.print-hide{"ng-click" => "print()"}
     %span.glyphicon.glyphicon-print
@@ -31,17 +14,17 @@ theme: none
     %dl
       %dt= I18n.t('dashboard_students_url')
       %dd
-        http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}
+        http:#{CDO.studio_url('/sections/{{section.code}}')}
     %dl
       %dt= I18n.t('dashboard_students_name')
       %dd {{student.name}}
     %dl{"ng-if" => "section.login_type === 'picture'"}
-      %dt= I18n.t('dashboard_students_secret_picture')
+      %dt= I18n.t('dashboard_students_secret_picture_title')
       %dd  
         %img{"ng-src" => "/images/{{student.secret_picture_path}}",
              alt: "{{student.secret_picture_name}}",
              title: "{{student.secret_picture_name}}",
              height: 100}
     %dl{"ng-if" => "section.login_type === 'word'"}
-      %dt= I18n.t('dashboard_students_secret_word')
-      %dd {{student.secret_word_1}} {{student.secret_word_2}}
+      %dt= I18n.t('dashboard_students_secret_word_title')
+      %dd {{student.secret_words}}

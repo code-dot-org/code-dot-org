@@ -1,0 +1,14 @@
+name 'Pixelation - Video - Lesson 14 - B and W'
+title 'How to use the B&W Pixelation Widget'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+# Introduction to the Pixelation Widget
+Malorie introduces you to the pixelation widget, a few of its features, and how to use it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q3DNakoDo74" frameborder="0" allowfullscreen></iframe>
+
+<br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

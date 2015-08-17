@@ -51,7 +51,7 @@ namespace :blockly do
   end
 
   task :dev, [:src] => :environment do |t, args|
-    src = args[:src] || '../blockly'
+    src = args[:src] || '../apps'
     fullsrc = "#{File.absolute_path(src)}/build/package"
     unless File.directory?(fullsrc)
       raise "No such directory: #{fullsrc}\n(Specify a different location with 'blockly:dev[/path/to/blockly]')"

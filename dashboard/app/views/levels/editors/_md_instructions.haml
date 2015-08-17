@@ -1,0 +1,15 @@
+.field
+  = f.label :markdown_instructions
+  %p When specified, these instructions will render in the instructions popup.
+  %p The regular instruction field above will still display as the instructions below the game area.
+  %p Note: since markdown instructions do not currently get translated, please do not use outside of middle school, high school and PD.
+  %p You can drag-and-drop or paste images in to this box, and they will be uploaded to a suitable location.
+  = f.text_area :markdown_instructions, placeholder: 'Markdown Instructions', rows: 4
+  #markdown-instructions-preview
+
+:javascript
+  var mdEditor = codeMirror('markdown_instructions', 'markdown', function (editor, change) {
+    $('#markdown-instructions-preview')
+      .html(marked(editor.getValue()))
+      .children('details').details();
+  }, true);

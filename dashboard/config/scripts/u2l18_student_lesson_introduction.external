@@ -1,0 +1,33 @@
+name 'U2L18 Student Lesson Introduction'
+title 'One Way Functions - Ice Cream Vans'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+## Unit 2: Lesson 18 - One Way Functions - Ice Cream Vans
+
+# Background
+
+A “one-way function” is the computational version of a secret recipe: a function for which it is straightforward to compute an output, but given the output is nearly impossible to determine the exact inputs that were used to compute it. Using one way functions in password/private key creation and cryptography creates a “hard” problem for a computer which leads to strong encryptions.
+
+# Vocabulary
+
+one-way function: a process that is easy to follow for any given input, but yields an output that is hard to turn back to the original input. Brute force is typically required to solve is the key is unknown.
+
+# Lesson
+
+* Solve the Alice and Bob locked box problem.
+* Create your own vertex covering problem.
+* Learn about one-way functions.
+
+
+# Resources
+
+* Activity Guide: <a href="http://csunplugged.org/wp-content/uploads/2014/12/unpluggedTeachersSupplement2012-draft-v1-dominatingSets.pdf" target="_blank">Tourist Town Ice Cream Vans</a>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

@@ -1,0 +1,611 @@
+@import "color";
+@import "colpick.css";
+@import "style-constants";
+@import "skins/base.scss";
+@import "skins/modern.scss";
+
+$root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
+
+// ** START OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
+
+div#visualization {
+  height: 400px;
+  width: 400px;
+}
+
+div#visualization.with_padding {
+  border: 1px solid #ddd;
+}
+
+div#visualizationResizeBar {
+  top: $workspace-headers-height;
+}
+
+#designToggleRow > div {
+  height: $workspace-headers-height;
+}
+
+/* Shrink the visualization area on small displays. */
+
+@media screen and (min-width: 1151px), screen and (min-height: 601px) {
+  $width: 400px;
+  $colWidth: $width + 2;
+  div#visualization.responsive {
+    max-height: $width;
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive {
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  div#visualization.responsive > * {
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 551px) and (max-height: 600px) {
+  $width: 350px;
+  $colWidth: $width + 2;
+  div#visualization.responsive {
+    max-height: $width;
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive {
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  div#visualization.responsive > * {
+    -webkit-transform: scale(0.875);
+    -ms-transform: scale(0.875);
+    transform: scale(0.875);
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 501px) and (max-height: 550px) {
+  $width: 300px;
+  $colWidth: $width + 2;
+  div#visualization.responsive {
+    max-height: $width;
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive {
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  div#visualization.responsive > * {
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 451px) and (max-height: 500px) {
+  $width: 250px;
+  $colWidth: $width + 2;
+  div#visualization.responsive {
+    max-height: $width;
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive {
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  div#visualization.responsive > * {
+    -webkit-transform: scale(0.625);
+    -ms-transform: scale(0.625);
+    transform: scale(0.625);
+  }
+}
+
+@media screen and (max-width: 1000px), screen and (max-height: 450px) {
+  $width: 200px;
+  $colWidth: $width + 2;
+  div#visualization.responsive {
+    max-height: $width;
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive {
+    max-width: $width;
+  }
+  div#visualizationColumn.responsive.with_padding {
+    max-width: $colWidth;
+  }
+  div#codeWorkspace {
+    left: $width;
+  }
+  html[dir='rtl'] div#codeWorkspace {
+    right: $width;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $width;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  div#visualization.responsive > * {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+// ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
+
+#divApplab {
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#divApplab canvas {
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+$resize-bar-width: 13px;
+
+#visualizationResizeBar {
+  margin-left: 2px;
+  width: $resize-bar-width;
+}
+
+#debugResizeBar {
+  width: 100%;
+  height: $resize-bar-width;
+  line-height: $resize-bar-width;
+  color: $lighter_gray;
+  font-size: 24px;
+  text-align: center;
+  cursor: ns-resize;
+  white-space: nowrap;
+}
+
+#debug-buttons {
+  display: inline;
+  white-space: normal;
+}
+
+#runButton, #resetButton {
+  margin-right: 0;
+  outline-style: none;
+}
+
+img#turtleImage {
+  position: absolute;
+  height: 24px;
+  margin: 0px;
+}
+
+.debugger_button {
+  border: 1px solid $cyan;
+  background-color: $cyan;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 3px;
+  padding: 3px 6px;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+#continueButton {
+  border-color: $orange;
+  background-color: $orange;
+}
+
+.debugger_button:focus {
+  outline-style: none;
+}
+
+.debugger_button > img {
+  float: left;
+  opacity: 1;
+}
+
+#debug-area {
+  position: absolute;
+  bottom: 0;
+  height: 156px;
+  left: 0;
+  right: 0;
+  max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+}
+
+#debug-area-header {
+  position: absolute;
+  top: $resize-bar-width;
+  height: $workspace-headers-height;
+  left: 0;
+  right: 0;
+  background-color: $lighter_purple;
+  text-align: center;
+
+  & > span {
+    line-height: $workspace-headers-height;
+  }
+
+  & > span, .workspace-header {
+    color: $dark_charcoal;
+  }
+
+  .workspace-header-button {
+    background-color: $lightest_purple;
+    color: $charcoal;
+
+    &:hover {
+      background-color: $cyan;
+      color: $white;
+    }
+  }
+}
+
+$debug-commands-column-width: 270px;
+
+#debug-commands-header {
+  width: $debug-commands-column-width;
+  float: left;
+  border-right: 1px solid gray;
+
+  .fa {
+    margin: 0 0.25em;
+  }
+
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+  }
+
+  &.js-hover-hack {
+    cursor: pointer;
+
+    #show-hide-debug-icon {
+      color: white;
+    }
+  }
+}
+
+.debug-commands, .debug-console {
+  display: block;
+  background-color: $white;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: $resize-bar-width + $workspace-headers-height;
+  bottom: 0;
+}
+
+.debug-commands {
+  left: 0;
+  width: $debug-commands-column-width;
+  text-align: center;
+}
+
+.debug-console {
+  left: $debug-commands-column-width;
+  right: 0;
+}
+
+.debug-console * {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+$debug-console-left-padding: 3px;
+$debug-prompt-width: 15px;
+$debug-input-height: 16px;
+
+.debug-input-prompt {
+  position: absolute;
+  bottom: 0;
+  height: $debug-input-height;
+  display: block;
+  left: $debug-console-left-padding;
+  width: $debug-prompt-width;
+}
+
+.debug-input, .debug-output {
+  position: absolute;
+  border-width: 0px;
+  padding: 0px;
+  outline: none;
+}
+
+.debug-output {
+  top: 0;
+  bottom: $debug-input-height;
+  left: $debug-console-left-padding;
+  right: 0;
+  overflow: auto;
+  line-height: normal;
+  cursor: text;
+  white-space: pre-wrap;
+}
+
+.debug-input {
+  bottom: 0;
+  max-height: $debug-input-height;
+  height: $debug-input-height;
+  left: $debug-console-left-padding + $debug-prompt-width;
+  right: 0;
+  margin-top: -3px;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+
+#slider-cell {
+  float: left;
+  cursor: default;
+}
+
+/* Slider. */
+.sliderContainer {
+  float: left
+}
+.sliderTrack {
+  stroke: $lightest_purple;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}
+
+/* Sprited icons. */
+.icon21 {
+  height: 21px;
+  width: 21px;
+  background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px;
+}
+.code {
+  background-position: -21px 0px;
+}
+.link {
+  background-position: 0px 0px;
+}
+.run {
+  background-position: 0px -21px;
+  margin-right: 3px;
+}
+.stop {
+  background-position: -21px -21px;
+  margin-right: 3px;
+}
+.left-btn {
+  background-position: -21px -42px;
+  margin-right: 3px;
+}
+.right-btn {
+  background-position: -21px -63px;
+  margin-right: 3px;
+}
+.up-btn {
+  background-position: 0px -63px;
+  margin-right: 3px;
+}
+.down-btn {
+  background-position: 0px -42px;
+  margin-right: 3px;
+}
+.pause-btn {
+  background-position: 0px -84px;
+  margin-right: 3px;
+}
+.continue-btn {
+  background-position: -21px -84px;
+  margin-right: 3px;
+}
+.step-in-btn {
+  background-position: 0px -105px;
+  margin-right: 3px;
+}
+.step-out-btn {
+  background-position: -21px -105px;
+  margin-right: 3px;
+}
+.step-over-btn {
+  background-position: 0px 21px;
+  margin-right: 3px;
+}
+
+button.arrow {
+  border: 1px solid #FFA000;
+  background-color: #FFA000;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 0px;
+  display: none;
+}
+button.arrow>img {
+  opacity: 1;
+  vertical-align: text-bottom;
+}
+button.arrow:focus {
+  outline-style: none;
+}
+#soft-buttons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -5px;
+  &.soft-buttons-none {
+    display: none;
+  }
+}
+.soft-buttons-1 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 51px;
+}
+.soft-buttons-2 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 102px;
+}
+.soft-buttons-3 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 153px;
+}
+.soft-buttons-4 {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 204px;
+}
+
+#share-cell {
+  display: inline-block;
+  vertical-align: top;
+  &.share-cell-none {
+    display: none;
+  }
+}
+
+#manageAssetsModal {
+  width: 800px;
+  margin-left: -400px;
+}
+
+.assetRow {
+  border-bottom: 1px solid #999;
+}
+
+.assetRow:last-child {
+  border-bottom: none;
+}
+
+.assetRow:hover {
+  background: $lighter_purple;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+.justify-contents {
+  text-align: justify;
+  line-height: 0;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.rightalign-contents {
+  text-align: right;
+  line-height: 0;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+.chooseAssetDropdownOption {
+  color: $link_color;
+  text-decoration: underline;
+}
+
+.droplet-dropdown {
+  z-index: 500 !important;
+}
+
+// We don't want -webkit-user-select: none for our contenteditable div, otherwise
+// we're unable to add text to the div in Safari.
+*[contenteditable] {
+  -webkit-user-select: auto !important;
+}
+
+// TODO(dave): move these styles into DesignToolboxElement
+// once we are done experimenting with them.
+.design-element-image {
+  width: 72px; // 60% of 120px, which is the original image width.
+}

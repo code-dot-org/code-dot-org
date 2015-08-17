@@ -3,7 +3,8 @@ require 'test_helper'
 class RegistrationsControllerTest < ActionController::TestCase
 
   setup do
-    @request.env["devise.mapping"] = Devise.mappings[:user]
+    # stub properties so we don't try to hit pegasus db
+    Properties.stubs(:get).returns nil
   end
 
   test "new" do
@@ -24,7 +25,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '13',
                       user_type: 'student'}
-      
+
     post :create, user: student_params
 
     assert_redirected_to '/'
@@ -41,7 +42,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         gender: 'F',
                         age: '13',
                         user_type: 'student'}
-      
+
       assert_creates(User) do
         post :create, user: student_params
       end
@@ -66,7 +67,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         gender: 'F',
                         age: '9',
                         user_type: 'student'}
-      
+
       assert_creates(User) do
         post :create, user: student_params
       end
@@ -90,7 +91,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '',
                       user_type: 'student'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -106,7 +107,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       gender: 'F',
                       age: '',
                       user_type: 'teacher'}
-    
+
     assert_does_not_create(User) do
       post :create, user: teacher_params
     end
@@ -121,7 +122,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       email: nil,
                       user_type: 'student',
                       age: '10'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -130,13 +131,13 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create requires case insensitive unique email" do
-    existing = create(:student, email: 'not_a@unique.email')
+    create(:student, email: 'not_a@unique.email')
     student_params = {name: "A name",
                       password: "apassword",
                       email: 'Not_A@unique.email',
                       user_type: 'student',
                       age: '10'}
-    
+
     assert_does_not_create(User) do
       post :create, user: student_params
     end
@@ -151,8 +152,24 @@ class RegistrationsControllerTest < ActionController::TestCase
       sign_in student
 
       post :update, user: {age: 9}
-    
+
       assert_equal Date.today - 9.years, assigns(:user).birthday
+    end
+  end
+
+  test "update student with age with weird params" do
+    # we are getting input that looks like this:
+    # "user" => {"age" => {"Pr" => ""}}
+    # https://www.honeybadger.io/projects/3240/faults/9963470
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student = create :student, birthday: '1981/03/24'
+
+      sign_in student
+
+      post :update, user: {age: {"Pr" => nil}}
+
+      # did not change
+      assert_equal '1981-03-24', assigns(:user).birthday.to_s
     end
   end
 
@@ -222,4 +239,46 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select 'select[name*="age"]'
   end
 
+  test 'deleting sets deleted at on a user' do
+    user = create :user
+    sign_in user
+
+    delete :destroy
+
+    user = user.reload
+    assert user.deleted_at
+  end
+
+  test 'edit shows alert for unconfirmed email for teachers' do
+    user = create :teacher, email: 'my_email@test.xx'
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
+    assert_select '.alert input[value=my_email@test.xx]'
+    assert_select '.alert .btn[value="Resend confirmation instructions"]'
+  end
+
+
+  test 'edit does not show alert for unconfirmed email for students' do
+    user = create :student, email: 'my_email@test.xx'
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
+
+  test 'edit does not show alert for unconfirmed email for teachers if already confirmed' do
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: Time.now
+
+    sign_in user
+    get :edit
+
+    assert_response :success
+    assert_select '.alert', 0
+  end
 end

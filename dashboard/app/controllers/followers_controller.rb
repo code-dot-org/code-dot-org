@@ -17,7 +17,7 @@ class FollowersController < ApplicationController
   # join a section as a logged in student
   def create
     redirect_url = params[:redirect] || root_path
-    
+
     if params[:section_code].blank?
       redirect_to redirect_url, alert: I18n.t('follower.error.blank_code')
       return
@@ -36,7 +36,7 @@ class FollowersController < ApplicationController
     current_user.assign_script(@section.script) if @section.script
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: teacher.name)
-   end
+  end
 
   # remove a section/teacher as a logged in student
   def remove
@@ -44,7 +44,7 @@ class FollowersController < ApplicationController
     @teacher = User.find(params[:teacher_user_id])
 
     f = Follower.where(user_id: @teacher.id, student_user_id: @user.id).first
-    
+
     unless f.present?
       redirect_to root_path, alert: t('teacher.user_not_found')
       return
@@ -88,14 +88,20 @@ class FollowersController < ApplicationController
   # join a section as a new student
   def student_register
     @section = Section.find_by_code(params[:section_code])
+
+    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+
     student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+    if user_type == User::TYPE_TEACHER
+      student_params.merge(params[:user].permit([:school, :full_address]))
+    end
 
     @user = User.new(student_params)
 
     if current_user
       @user.errors.add(:username, "Please signout before proceeding")
     else
-      @user.user_type = User::TYPE_STUDENT
+      @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
           Follower.create!(user_id: @section.user_id, student_user: @user, section: @section)

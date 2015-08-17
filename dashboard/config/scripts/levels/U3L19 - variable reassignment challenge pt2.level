@@ -1,0 +1,39 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-05-20T14:27:48.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "write": null,
+      "addOperator": null,
+      "declareAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "We've given you the code from the previous page.  Right now, because the code only sets the values of variables, the app doesn't display anything. DO THIS: insert write or console.log statements into the code to figure out what the values of a, b, and c are after the code has executed.  You should have first made a prediction to see if your mental model of how the computer works is correct.  We'll ask for the answer on the next page.",
+    "start_blocks": "var a = 3;\r\nvar b = 7;\r\nvar c = 10;\r\na = a+b;\r\nb = a+b;\r\nc = a+b;",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

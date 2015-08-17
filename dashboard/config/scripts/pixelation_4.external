@@ -1,0 +1,8 @@
+name 'Pixelation 4'
+title 'Pixelation 4 - Baker test of External level -- NOT REAL'
+description 'Create images with bits and bytes.'
+href 'pixelation/pixelation.html'
+
+version '1' # Can be 1, 2, or 3
+# hex 'true' (uncomment to set hex mode)
+data '01010101010010010101011'

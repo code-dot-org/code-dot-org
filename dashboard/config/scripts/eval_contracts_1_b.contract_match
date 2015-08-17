@@ -1,0 +1,5 @@
+name 'Eval Contracts 1 B'
+title 'Star Contract'
+content1 'Write a contract for the star function'
+content2 'Eval Contracts 1 A.solution_blocks, 300'
+answer 'star|Image|String|Number|String'

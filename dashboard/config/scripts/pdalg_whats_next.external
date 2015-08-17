@@ -1,0 +1,19 @@
+name 'PDAlg whats next'
+title "What's Next?"
+css 'unplugged'
+markdown <<MARKDOWN
+## What's Next?
+
+Now that you've got a feel for the new CS in Algebra course, we hope you're excited to learn more. If you'd like to try out the course on your own, or with your students, check out the following resources:
+
+### <a href="http://studio.code.org/s/algebra" target="_blank">Computer Science in Algebra Course</a>
+### <a href="http://code.org/curriculum/algebra" target="_blank">Lesson Plans and Teaching Materials</a>
+### <a href="http://code.org/teacher-dashboard" target="_blank">Teacher Dashboard</a>
+
+## Post PD Survey
+To help us better understand your needs, and to improve our curriculum and PD, please take a moment to complete this survey. 
+
+<script type="text/javascript" src="https://secure.jotform.us/jsform/51305645460147"></script>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

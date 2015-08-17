@@ -14,10 +14,49 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "ideal": "6",
-    "slider_speed": "0.4"
+    "slider_speed": "0.4",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "disable_sharing": "false",
+    "impressive": "false",
+    "markdown_instructions": "Draw the other half so that the design is symmetrical. The triangles are equilateral and are 50 pixels long.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_move_by_constant">
@@ -59,43 +98,15 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">50</title>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn_by_constant_dropdown">
-              <title name="DIR">turnRight</title>
-              <title name="VALUE" config="30, 60, 90, 120, 180">60</title>
-              <next>
-                <block type="draw_turn_by_constant_dropdown">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE" config="30, 60, 90, 120, 180">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
       </xml>
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">50</title>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">120</title>
-                </block>
-              </next>
-            </block>
-          </statement>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">50</title>
-              <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
                 <block type="controls_repeat">
                   <title name="TIMES">3</title>
                   <statement name="DO">
@@ -103,9 +114,9 @@
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">50</title>
                       <next>
-                        <block type="draw_turn_by_constant">
+                        <block type="draw_turn_by_constant_dropdown">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE">120</title>
+                          <title name="VALUE" config="30, 60, 90, 120, 180">120</title>
                         </block>
                       </next>
                     </block>
@@ -114,27 +125,10 @@
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveForward</title>
                       <title name="VALUE">50</title>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">3</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">50</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE">120</title>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

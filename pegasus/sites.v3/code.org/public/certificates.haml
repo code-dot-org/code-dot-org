@@ -4,8 +4,13 @@ Title: Print Certificates
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
 -course = request.params['course'] || nil
--courseName = course == "20hours" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
--smallCertificateImageUrl = course == "20hours" ? "/images/fit-240/20hours_certificate.jpg" : "/images/fit-240/hour_of_code_certificate.jpg"
+-courseName = course == "20hours" || course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
+-if course == "20hours" || course == "20-hour"
+  -smallCertificateImageUrl = "/images/fit-240/20hours_certificate.jpg"
+-elsif course == "hoc" || course == "hourofcode" || course == nil
+  -smallCertificateImageUrl = "/images/fit-240/hour_of_code_certificate.jpg"
+-else
+  -smallCertificateImageUrl = "/images/fit-240/blank_certificate.jpg"
 
 %h1 Print a batch of certificates
 %div.clear
@@ -24,10 +29,10 @@ Title: Print Certificates
   %br
   %br
   %p It is recommended that you choose <strong>Landscape</strong> when you print the certificates.
-  %br
-  %input{:type=>"submit", :value=>"Submit"}
+  %button{:type=>"submit"}
+    Print Certificates
 
 #print_option.col-50
-  %h2{:style=>'margin-top:15px; margin-bottom:10px'}
+  %h2{:style=>'margin-top:20px; margin-bottom:10px'}
     Print ice art from Frozen tutorials
   = view :frozen_print_gallery

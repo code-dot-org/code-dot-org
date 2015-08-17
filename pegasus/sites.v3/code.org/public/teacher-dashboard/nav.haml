@@ -35,7 +35,7 @@ theme: none
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-    %managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'email'", style: "float:right"}
+    .managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'email'", style: "float:right"}
       %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
       %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
 

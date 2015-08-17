@@ -1,5 +1,4 @@
 class SessionsController < Devise::SessionsController
-  before_filter :nonminimal
 
   # see also
   # https://github.com/plataformatec/devise/blob/v3.2/app/controllers/devise/sessions_controller.rb
@@ -32,7 +31,7 @@ class SessionsController < Devise::SessionsController
     if user && user.oauth?
       return oauth_sign_out_path(user.provider)
     end
-    
-    code_org_root_path
+
+    'http:' + code_org_root_path
   end
 end

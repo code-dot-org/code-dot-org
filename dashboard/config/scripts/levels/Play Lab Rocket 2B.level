@@ -1,0 +1,128 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-03-09T21:02:50.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  var SECONDS_TO_RUN = 21;\r\n  var targetHeight = 315;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(10) === 150;\r\n}",
+    "failure_condition": "function () {\r\n  return (Studio.Globals.time > 21 && !Studio.Globals.succeeded)\r\n}",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "A rocket blasts off, traveling at 15 meters per second. Using the Design Recipe, write a function called rocket-height that takes in a number of  seconds that have passed since the rocket took off, and produces the height of the rocket at that time.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "true",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "true",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "free_play": "false",
+    "embed": "false",
+    "first_sprite_index": "23",
+    "protaganist_sprite_index": "0",
+    "default_num_example_blocks": "2",
+    "disable_sharing": "false",
+    "min_workspace_height": "1250",
+    "generate_function_pass_blocks": "true",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"pass_function\",\r\n  \"callout_text\": \"This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "timeout_after_when_run": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "true",
+    "definition_highlight": "false",
+    "definition_collapse": "true",
+    "custom_game_type": "Rocket Height",
+    "disable_examples": "false",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
+          <functional_input name="VALUE">
+            <block type="functional_pass" id="callout_here">
+              <mutation name="rocket-height"/>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="rocket-height">
+                <arg name="seconds" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_setBackground" uservisible="false">
+              <title name="VALUE">"space"</title>
+              <next>
+                <block type="variables_set" inline="false" uservisible="false">
+                  <title name="VAR">time</title>
+                  <value name="VALUE">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false" uservisible="false">
+                      <title name="VAR">height</title>
+                      <value name="VALUE">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="functional_example" inline="false" uservisible="false">
+          <functional_input name="ACTUAL">
+            <block type="functional_call" inline="false" uservisible="false">
+              <mutation name="rocket-height">
+                <arg name="seconds" type="Number"/>
+              </mutation>
+            </block>
+          </functional_input>
+          <functional_input name="EXPECTED">
+    </functional_input>
+        </block>
+        <block type="functional_definition" inline="false" uservisible="false">
+          <mutation>
+            <arg name="seconds" type="Number"/>
+            <description>Given a Number "seconds," return the height of a rocket traveling at 15 meters per second.</description>
+            <outputtype>Number</outputtype>
+          </mutation>
+          <title name="NAME">rocket-height</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Number">
+          <block type="functional_plus" inline="false"/>
+          <block type="functional_minus" inline="false"/>
+          <block type="functional_times" inline="false"/>
+          <block type="functional_dividedby" inline="false"/>
+          <block type="functional_math_number">
+            <title name="NUM">0</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+  </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

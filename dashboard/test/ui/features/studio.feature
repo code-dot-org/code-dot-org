@@ -5,7 +5,7 @@ Feature: Visiting a studio page
 Scenario: Using a studio dropdown
   Given I am on "http://learn.code.org/s/course1/stage/16/puzzle/2"
   And I rotate to landscape
-  And I press "x-close"
+  And I close the dialog
   Then there's an SVG image "studio/dog_thumb.png"
   Then there's not an SVG image "studio/cat_thumb.png"
   And I drag block "1" to block "2"

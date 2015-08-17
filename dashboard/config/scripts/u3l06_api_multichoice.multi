@@ -1,0 +1,16 @@
+name 'U3L06-API-multichoice'
+title 'APIs and Parameters Question 1'
+description 'Select the best answer'
+question 'What is NOT the purpose of an API in a programming language?'
+wrong 'List the commands and functions of a programming language'
+wrong 'Explain the functionality of a programming statements'
+wrong 'To avoid having to memorize all of the language commands'
+wrong 'Show examples of programming statements'
+right 'Auto-correct common programming errors'
+wrong 'Simplify complex programming tasks'
+
+markdown <<MARKDOWN
+
+
+
+MARKDOWN

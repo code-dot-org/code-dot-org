@@ -25,8 +25,9 @@
     "first_sprite_index": "1",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"fill_in_actor\", \"element_id\": \"#fill_in_actor_qtip\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
-    "maze_data": null
+    "callout_json": "[\r\n  {\"localization_key\":\"fill_in_actor\",\"callout_text\":\"Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)\",\"element_id\":\"#fill_in_actor_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

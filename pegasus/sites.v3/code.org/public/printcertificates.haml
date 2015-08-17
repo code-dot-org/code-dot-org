@@ -3,13 +3,37 @@ title: Certificates
 layout: page_print
 theme: none
 ---
--course = request.params['course'] || 'hoc'
+
+-if ! request.params['course'].nil? && ! request.params['course'].empty?
+  -course = request.params['course']
+-else
+  -course = 'hoc'
 
 %div.hide-print
-  -if course == "20hours"
-    %h1 K-8 Intro to Computer Science Course Certificates
-  -else
-    %h1 Hour of Code Certificates
+  -case course
+    -when '20hours', '20-hour'
+      %h1 K-8 Intro to Computer Science Course Certificates
+    -when 'hoc', 'hourofcode'
+      %h1 Hour of Code Certificates
+    -when 'artist'
+      %h1 Artist Certificates
+    -when 'course1'
+      %h1 Course 1 Certificates
+    -when 'course2'
+      %h1 Course 2 Certificates
+    -when 'course3'
+      %h1 Course 3 Certificates
+    -when 'course3'
+      %h1 Course 4 Certificates
+    -when 'frozen'
+      %h1 Frozen Certificates
+    -when 'playlab'
+      %h1 Play Lab Certificates
+    -when 'flappy'
+      %h1 Flappy Bird Certificates
+    -else
+      %h1 Code.org Certificates
+
   %p Ready to print?
   %p Look at your certificates first to make sure they're correct before you waste a lot of paper.
 

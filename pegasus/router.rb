@@ -5,13 +5,15 @@ require 'sinatra/base'
 require 'sinatra/verbs'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
-require 'cdo/rack/deflater'
+require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
+require 'cdo/properties'
 require 'active_support'
 require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
+require 'cdo/rack/upgrade_insecure_requests'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -21,10 +23,10 @@ end
 
 require src_dir 'database'
 require src_dir 'forms'
-require src_dir 'router'
+require src_dir 'curriculum_router'
 
 def http_vary_add_type(vary,type)
-  types = vary.to_s.split(',').map { |v| v.strip }
+  types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
   types.push(type).join(',')
 end
@@ -40,7 +42,7 @@ class Documents < Sinatra::Base
   def self.load_config_in(dir)
     path = File.join(dir, 'config.json')
     return {} unless File.file?(path)
-    JSON.parse(IO.read(path), symbolize_names:true)
+    JSON.parse(IO.read(path), symbolize_names: true)
   end
 
   def self.load_configs_in(dir)
@@ -58,10 +60,9 @@ class Documents < Sinatra::Base
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
+  use Rack::UpgradeInsecureRequests
 
   configure do
-    $log.info "Hello World, I'm in #{rack_env} mode."
-
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
@@ -76,24 +77,26 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink:true, tables:true, space_after_headers:true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
         config.api_key = CDO.pegasus_honeybadger_api_key
         config.ignore << 'Sinatra::NotFound'
+        config.ignore << 'Table::NotFound'
       end
     end
 
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats', '/language_test', 
-                 '/teacher-dashboard', 
+    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
+                 '/teacher-dashboard',
                  '/teacher-dashboard/landing',
                  '/teacher-dashboard/nav',
                  '/teacher-dashboard/section_manage',
                  '/teacher-dashboard/section_progress',
                  '/teacher-dashboard/sections',
                  '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student']
+                 '/teacher-dashboard/student',
+                 '/language_test']
     set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
@@ -107,11 +110,12 @@ class Documents < Sinatra::Base
       headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
     end
 
+    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
     locale = 'pt-BR' if request.site == 'br.code.org'
-    I18n.locale = request.locale
+    I18n.locale = locale
 
     @config = settings.configs[request.site]
     @header = {}
@@ -126,15 +130,15 @@ class Documents < Sinatra::Base
       end
     end
 
-    @locals = {header:{}}
+    @locals = {header: {}}
   end
 
   # Language selection
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
-    pass unless DB[:cdo_languages].first(code_s:lang)
-    cache_control :private, :must_revalidate, max_age:0
-    response.set_cookie('language_', {value:lang, domain:".#{request.site}", path:'/', expires:Time.now + (365*24*3600)})
+    pass unless DB[:cdo_languages].first(code_s: lang)
+    cache_control :private, :must_revalidate, max_age: 0
+    response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
   end
 
@@ -165,9 +169,9 @@ class Documents < Sinatra::Base
       manipulation = File.basename(dirname)
       dirname = File.dirname(dirname)
     end
-    
+
     # Assume we are returning the same resolution as we're reading.
-    retina_in = retina_out = basename[-3..-1] == '@2x'
+    retina_in = retina_out = basename[-3..-1] == '_2x'
 
     path = resolve_image File.join(dirname, basename)
     unless path
@@ -176,21 +180,21 @@ class Documents < Sinatra::Base
         basename = basename[0...-3]
         retina_in = false
       else
-        basename += '@2x'
+        basename += '_2x'
         retina_in = true
       end
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
-    
+
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age:settings.image_max_age
+      cache_control :public, :must_revalidate, max_age: settings.image_max_age
       send_file(path)
     else
       image = Magick::Image.read(path).first
-      
+
       mode = :resize
 
       if manipulation
@@ -207,7 +211,7 @@ class Documents < Sinatra::Base
       else
         width = image.columns
         height = image.rows
-        
+
         # Retina sources need to be downsampled for non-retina output
         if retina_in && !retina_out
           width /= 2
@@ -235,28 +239,14 @@ class Documents < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age:settings.image_max_age
+    cache_control :public, :must_revalidate, max_age: settings.image_max_age
     image.to_blob
-  end
-
-  # Map /dashboardapi/ to the local dashboard instance.
-  if rack_env?(:development)
-    get_head_or_post %r{^\/dashboardapi\/?} do
-      env = request.env.merge('PATH_INFO'=>request.path_info.sub(/^\/dashboardapi/, '/api'))
-
-      document = Pegasus::Proxy.new(server:canonical_hostname('learn.code.org') + ":#{CDO.dashboard_port}", host:'learn.code.org').call(env)
-      pass unless document
-
-      status(document.status)
-      headers(document.headers)
-      body([document.body])
-    end
   end
 
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age:settings.static_max_age
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
     send_file(path)
   end
 
@@ -265,7 +255,9 @@ class Documents < Sinatra::Base
     Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
   end
 
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| puts(path); eval(IO.read(path))}
+  # rubocop:disable Lint/Eval
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
 
   # Documents
   get_head_or_post '*' do |uri|
@@ -278,18 +270,24 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
+    if params.has_key?('embedded') && @locals[:header]['embedded_layout']
+      @locals[:header]['layout'] = @locals[:header]['embedded_layout']
+      @locals[:header]['theme'] ||= 'none'
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+    end
+
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, @locals.merge({body:body.join('')}))
+      body render_template(template, @locals.merge({body: body.join('')}))
     end
 
     theme = @locals[:header]['theme']||'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, @locals.merge({body:body.join('')}))
+      body render_template(template, @locals.merge({body: body.join('')}))
     end
   end
 
@@ -314,23 +312,23 @@ class Documents < Sinatra::Base
       end
       line_number_offset = content.lines.count - original_line_count
       @header['social'] = social_metadata
-      
+
       if @header['require_https'] && rack_env == :production
         headers['Vary'] = http_vary_add_type(headers['Vary'], 'X-Forwarded-Proto')
         redirect request.url.sub('http://', 'https://') unless request.env['HTTP_X_FORWARDED_PROTO'] == 'https'
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age:@header['max_age']
+        cache_control :public, :must_revalidate, max_age: @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age:settings.document_max_age
+        cache_control :public, :must_revalidate, max_age: settings.document_max_age
       end
 
       response.headers['X-Pegasus-Version'] = '3'
       begin
         render_(content, File.extname(path))
       rescue Haml::Error => e
-        if e.backtrace.first =~ /router\.rb:/
+        if e.backtrace.first =~ /router\.rb:/ && e.line
           actual_line_number = e.line - line_number_offset + 1
           e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
         end
@@ -422,29 +420,29 @@ class Documents < Sinatra::Base
       locals = @locals.merge(locals)
       case extname
       when '.erb', '.html'
-        erb body, locals:locals
+        erb body, locals: locals
       when '.haml'
-        haml body, locals:locals
+        haml body, locals: locals
       when '.fetch'
-        url = erb(body, locals:locals)
+        url = erb(body, locals: locals)
 
         cache_file = cache_dir('fetch', request.site, request.path_info)
         unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
           FileUtils.mkdir_p File.dirname(cache_file)
-          IO.write(cache_file, Net::HTTP.get(URI(url)))
+          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age:settings.static_max_age
+        cache_control :public, :must_revalidate, max_age: settings.static_max_age
         send_file(cache_file)
       when '.md', '.txt'
-        preprocessed = erb body, locals:locals
-        html = markdown preprocessed, locals:locals
+        preprocessed = erb body, locals: locals
+        html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'
-        redirect erb(body, locals:locals), 301
+        redirect erb(body, locals: locals), 301
       when '.found', '.302'
-        redirect erb(body, locals:locals), 302
+        redirect erb(body, locals: locals), 302
       else
         raise "'#{extname}' isn't supported."
       end
@@ -453,34 +451,20 @@ class Documents < Sinatra::Base
     def social_metadata()
       if request.site == 'csedweek.org'
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is here",
-          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://csedweek.org/images/code-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1705',
-          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'CSEd Week',
-          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-          # 'og:video:width'    => '720',
-          # 'og:video:height'   => '404',
         }
       else
         metadata = {
-          'og:title'          => @header['title'] || "The Hour of Code is here",
-          'og:description'    => @header['description'] || "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104.",
-          'og:image'          => @header['og:image'] || 'http://code.org/images/code-video-thumbnail.jpg',
-          'og:image:width'    => @header['og:image:width'] || '1705',
-          'og:image:height'   => @header['og:image:height'] || '949',
           'og:site_name'      => 'Code.org',
-          # 'og:video'          => 'https://youtube.googleapis.com/v/rH7AjDMz_dc',
-          # 'og:video:width'    => '720',
-          # 'og:video:height'   => '404',
+          'og:image'          => CDO.code_org_url('/images/logo_2x.png', 'https:')
         }
       end
 
       # Metatags common to all sites.
+      metadata['og:title'] = @header['title'] unless @header['title'].nil_or_empty?
+      metadata['og:description'] = @header['description'] unless @header['description'].nil_or_empty?
       metadata['fb:app_id'] = '500177453358606'
       metadata['og:type'] = 'article'
-      # metadata['og:video:type'] = 'application/x-shockwave-flash'
       metadata['article:publisher'] = 'https://www.facebook.com/Code.org'
       metadata['og:url'] = request.url
 
@@ -505,6 +489,6 @@ class Documents < Sinatra::Base
     load pegasus_dir('helpers.rb')
   end
 
-  use Router
+  use CurriculumRouter
 
 end

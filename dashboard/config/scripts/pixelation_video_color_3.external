@@ -1,0 +1,14 @@
+name 'Pixelation - Video - Color 3'
+title 'Pixelation - Video - Color 3'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# How to use hex to type bits more quickly
+Maddie demonstrates how to use the hexadecimal number system to encode colors.  Reminder: hex is not a compression scheme - it doesn't not change the underlying binary code.  Hex is a useful way to view bits because we can represent a 4-bit chunk with a single character.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_yQk6DKZs0" frameborder="0" allowfullscreen></iframe>
+</br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

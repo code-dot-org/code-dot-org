@@ -7,18 +7,18 @@ nav: educate_nav
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Each of our 20-lesson courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all. By the end of each course, students can create interactive games, stories, and art that they can share with anyone. Built on our online [Code Studio](http://studio.code.org) learning platform, these courses are available in dozens of languages, and already used by millions of students in tens of thousands of classrooms. 98% of participating teachers recommend the program.
 
-For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. 
+For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. We also offer [a free, self-paced online workshop](/educate/professional-development-online) for educators who can't attend an in-person training. 
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[Find a professional development workshop (for US teachers, grades K-5)](/professional-development-workshops)
+[<button>Learn more</button>](/k5)
 
 # Middle School #
 
-Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/mss), and Code.org has partnered with Bootstrap to offer [CS in Math](http://code.org/curriculum/msm). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
+Code.org has two interdisciplinary modules at the middle school level. Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to create [CS in Science](http://code.org/curriculum/science), and Code.org has partnered with Bootstrap to develop [CS in Algebra](http://code.org/curriculum/algebra). Each module exists as multiple sets of topical lessons that are able to be integrated into pre-existing Science and Math classes.
 
-[<button>CS in Science</button>](/curriculum/mss) &nbsp;&nbsp;[<button>CS in Math</button>](/curriculum/msm)
+[<button>CS in Science</button>](/curriculum/science) &nbsp;&nbsp;[<button>CS in Algebra</button>](/curriculum/algebra)
 
 <br/>
-In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course.
+In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course. [Free, self-paced online professional development](/educate/professional-development-online) is available to help teachers get started.
 
 # High School 
 
@@ -32,7 +32,9 @@ Find the curriculum and other resources at [exploringcs.org/curriculum](http://w
 
 ## Computer Science Principles
 
-The College Board has proposed a new AP® course called AP® Computer Science: Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment. Find more information about the CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
+The College Board has proposed a new AP® course called AP® Computer Science: Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment. Find more information about the CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/).
+
+Code.org is creating a complete curriculum consisting of daily lesson plans, videos, tutorials, tools, and assessments that covers the learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). The Code.org course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
 
 AP® is a registered trademark of the College Board.
 

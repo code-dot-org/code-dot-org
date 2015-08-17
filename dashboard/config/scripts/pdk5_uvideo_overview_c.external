@@ -1,0 +1,29 @@
+name 'PDK5 UVideo Overview C'
+title 'Kiki video overview'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+## Videos for teachers on each unplugged activity
+
+At this point, you may be saying to yourself, how do I learn about all the unplugged activities I'm supposed to be teaching? The lesson plans for each activity explain in depth what you need to know and have on hand to teach that lesson, but if you're looking for a quick overview, Kiki Prottsman, who is Executive Director for [Thinkersmith](http://thinkersmith.org/) who collaborated to create this curriculum, has produced videos that explain each one of the unplugged activities in Courses 1, 2, and 3. 
+
+[View Course 1 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G)
+
+[View Course 2 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
+
+[View Course 3 unplugged activity teacher videos here](https://www.youtube.com/playlist?list=PL2DhNKNdmOtpGJ79ZYYttiEmc-1Aq8hxm)
+
+These teacher-facing videos are different from the videos that are presented to students while they go through the Code Studio courses. Check out this teacher-facing video on how to do an unplugged activity from Course 1:
+
+<iframe width="640" height="390" src="https://www.youtube.com/embed/icVRxFr39AU" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/5mclbei2zcmur3r/Course%201%20-%20Real-Life%20Algorithms.mp4?dl=0)**
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

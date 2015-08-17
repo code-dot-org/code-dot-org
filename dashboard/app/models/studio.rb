@@ -10,9 +10,22 @@ class Studio < Grid
     projectile_collisions
     allow_sprites_outside_playspace
     sprites_hidden_to_start
+    background
     coordinate_grid_background
     free_play
     disable_sharing
+    timeout_after_when_run
+    custom_game_type
+    complete_on_success_condition_not_goals
+    input_output_table
+    code_functions
+    wall_map_collisions
+    block_moving_into_walls
+    grid_aligned_movement
+    remove_items_when_actor_collides
+    slow_js_execution_factor
+    marker_height
+    marker_width
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -23,7 +36,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio']
+    ['studio', 'infinity']
   end
 
   def self.default_success_condition
@@ -64,7 +77,9 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpriteParamValue"/>
   <block type="studio_setBackground" />
+  <block type="studio_setBackgroundParam" />
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
     <title name="TEXT">type text here</title>
@@ -131,6 +146,8 @@ class Studio < Grid
   <block type="studio_saySprite">
     <title name="TEXT">type here</title>
   </block>
+  <block type="studio_saySpriteChoices" inline="true">
+  </block>
   <block type="studio_saySpriteParams" inline="true">
     <value name="TEXT">
       <block type="text" />
@@ -152,6 +169,18 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpriteXY" inline="true">
+    <value name="XPOS">
+      <block type="math_number">
+        <title name="NUM">200</title>
+      </block>
+    </value>
+    <value name="YPOS">
+      <block type="math_number">
+        <title name="NUM">200</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_throw" />
   <block type="studio_makeProjectile" />
   <block type="studio_setSpriteSpeed" />
@@ -270,6 +299,8 @@ class Studio < Grid
 <category name="Functions" custom="PROCEDURE" />
 <category name="Functional variables" custom="FUNCTIONAL_VARIABLE" />
 <category name="Functional Start">
+  <block type="functional_start_setFuncs" />
+  <block type="functional_start_setVars" />
   <block type="functional_start_setValue" />
   <block type="functional_start_setBackground" />
   <block type="functional_start_setSpeeds" />
@@ -289,6 +320,9 @@ class Studio < Grid
   <block type="functional_math_number_dropdown">
     <title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>
   </block>
+  <block type="functional_sqrt"></block>
+  <block type="functional_squared"></block>
+  <block type="functional_pow"></block>
 </category>
 <category name="Functional Boolean">
   <block type="functional_greater_than" />
@@ -299,12 +333,17 @@ class Studio < Grid
   <block type="functional_logical_or" />
   <block type="functional_logical_not" />
   <block type="functional_boolean" />
+  <block type="functional_keydown" />
+</category>
+<category name ="Functional Image">
+  <block type="functional_sprite_dropdown" />
+  <block type="functional_background_dropdown" />
 </category>
 <category name ="Functional Cond">
-  <block type="functional_cond_1" />
-  <block type="functional_cond_2" />
-  <block type="functional_cond_3" />
-  <block type="functional_cond_4" />
+  <block type="functional_cond_number" />
+  <block type="functional_cond_string" />
+  <block type="functional_cond_image" />
+  <block type="functional_cond_boolean" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Check out the \"rotate\" function - can you use it to draw this 90 pixel green square rotated 45 degrees?",
+    "instructions": "Check out the \"rotate\" function - can you use it to rotate this 90 pixel green square by 45 degrees?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

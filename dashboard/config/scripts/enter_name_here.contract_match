@@ -1,0 +1,4 @@
+name 'Enter name here'
+title 'Enter title here'
+content1 'Enter prompt here'
+answer 'Contract Name|Number|Number|String'

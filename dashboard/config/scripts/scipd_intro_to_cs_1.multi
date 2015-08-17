@@ -1,0 +1,17 @@
+name 'sciPD intro to CS 1'
+title 'Intro to Computational Science'
+css 'unplugged'
+hide_submit true
+skip_sound true
+answer_line true
+
+question 'Computer modeling is used to study problems that are:'
+wrong 'too dangerous to study in the real world'
+wrong 'too time consuming to study in the real world' 
+wrong 'too expensive to study in the real world'
+right 'all of the above'
+
+markdown <<MARKDOWN
+
+
+MARKDOWN

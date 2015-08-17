@@ -1,17 +1,25 @@
 class GalleryActivitiesController < ApplicationController
   before_filter :authenticate_user!, except: :index
-  load_and_authorize_resource 
+  load_and_authorize_resource
   check_authorization
 
   before_action :set_gallery_activity, only: [:destroy]
 
   INDEX_PER_PAGE = 30
+  MAX_PAGE = 100
+
   def index
+    page = params[:page].to_i rescue 0
+    if page < 0 || page > MAX_PAGE
+      redirect_to gallery_activities_path
+      return
+    end
+
     def gallery_activities_for_app(app)
       per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
       GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
     end
-    
+
     if params[:app]
       @gallery_activities = gallery_activities_for_app params[:app]
     else
@@ -53,14 +61,15 @@ class GalleryActivitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gallery_activity
-      @gallery_activity = GalleryActivity.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def gallery_activity_params
-      params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
-      params.require(:gallery_activity).permit(:activity_id, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gallery_activity
+    @gallery_activity = GalleryActivity.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def gallery_activity_params
+    params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
+    params.require(:gallery_activity).permit(:activity_id, :user_id)
+  end
 end

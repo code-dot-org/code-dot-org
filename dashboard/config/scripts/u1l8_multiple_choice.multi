@@ -1,0 +1,8 @@
+name 'U1L8 Multiple Choice'
+title 'Sending Numbers: Multiple Choice Assessment'
+description ''
+question 'You have a coordinate grid that is 96 x 96. What is the minimum number of  bits that you will need to encode a coordinate in that space?'
+wrong '16'
+right '14'
+wrong '13'
+wrong '10'

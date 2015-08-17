@@ -1,24 +1,14 @@
-- if @artist_builder
-  = form_tag('#') do |f|
-    = label_tag 'x'
-    = text_field_tag 'x', params[:x]
-    = label_tag 'y'
-    = text_field_tag 'y', params[:y]
-    = label_tag t('reference_area.direction')
-    = text_field_tag 'start_direction', params[:start_direction]
-    = submit_tag t('reference_area.submit'), id: 'builder-coordinate-submit'
-- else
-  #reference_area.reference_area
-    - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && !@script.nil? && !@level.nil?
-      .solution_link
-        = link_to t('reference_area.teacher'), script_level_solution_path(@script, @level)
+#reference_area.reference_area
+  - if current_user && (current_user.teacher? || current_user.admin?) && @level.ideal_level_source_id && @script && @level && @script_level && !@script.hide_solutions?
+    .solution_link
+      = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
 
-    - related_videos = @level.related_videos
-    - unless related_videos.empty?
-      %p.help_title= t('reference_area.title')
-      %p.help_subtitle= t('reference_area.subtitle')
-      = render partial: "levels/video", collection: related_videos
-    %div{ style: "clear: both;"}
+  - related_videos = @level.related_videos
+  - unless related_videos.empty?
+    %p.help_title= t('reference_area.title')
+    %p.help_subtitle= t('reference_area.subtitle')
+    = render partial: 'levels/video', collection: related_videos
+  %div{style: 'clear: both;'}
 :javascript
   $('.video_link').each(function() {
     addClickTouchEvent($(this), $.proxy(function() {
@@ -33,3 +23,10 @@
       });
     }, this));
   });
+  // Allow levels to specify how and where the reference area is rendered.
+  // Reparent the reference area under the target if the target exists.
+  $('#reference_area_target').append($('#reference_area'));
+  // Show only text links if "data-minimal" is set.
+  if ($('#reference_area_target').data('minimal')) {
+    $('#reference_area .video_thumbnail').hide()
+  }

@@ -18,7 +18,7 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\": \"snowflake_dropdown\", \"element_id\": \"#create_snowflake_qtip > .blocklyEditableText\", \"qtip_config\": {\r\n    \"position\": {\"my\": \"top center\", \"at\": \"bottom center\"}}\r\n  }\r\n]",
+    "callout_json": "[\r\n  {\"localization_key\":\"snowflake_dropdown\",\"callout_text\":\"Use this drop-down to create different snowflakes!\",\"element_id\":\"#create_snowflake_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "embed": "false",
     "min_workspace_height": "1200",
     "disable_sharing": "true"

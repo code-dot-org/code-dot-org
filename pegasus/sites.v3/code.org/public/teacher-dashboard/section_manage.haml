@@ -1,45 +1,10 @@
+
 ---
 layout: none
 theme: none
 ---
 
 %div{style: "padding-left:20px"}
- 
-  :css
-    th.manage-th {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      height: 45px;
-    }
-    td > span {
-      position: relative;
-    }
-    #bulk_import {
-      max-width: 600px;
-      padding: 10px;
-      margin: 10px;
-    }
-
-    #bulk_import textarea {
-      width: 100%;
-      height: 300px;
-      margin-bottom: 10px;
-    }
-
-    span.required {
-      display: none;
-    }
-
-    input.ng-invalid-required + span.required, 
-    select.ng-invalid-required + span.required {
-      display: inline;
-      position: absolute;
-      top: 20px;
-      left: 0px;
-      font-size: 0.6em;
-      font-weight: bold;
-      color: #900;
-    }
 
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
@@ -105,7 +70,7 @@ theme: none
                  alt: "{{student.secret_picture_name}}",
                  title: "{{student.secret_picture_name}}",
                  height: 40}
-            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_word_1}} {{student.secret_word_2}}
+            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_words}}
             %button.btn.btn-white{"ng-click" => "resetSecrets(student)"}= I18n.t('dashboard_students_reset_secret')
         %span{"ng-if" => "section.login_type === 'email'"}
           %button.btn.btn-white{"ng-click" => "student.editing_password = true",
@@ -116,14 +81,14 @@ theme: none
             %button.btn.btn-primary{"ng-click" => "save(student)" }= I18n.t('dashboard_action_save')
       %td
         %span{"ng-show" => "student.confirmDelete"}
-          = I18n.t('dashboard_action_confirm')
+          = I18n.t('dashboard_action_remove_confirm')
           %button.btn.btn-danger{"ng-click"=>'del(student)'}= I18n.t('dashboard_action_delete_yes')
           %button.btn.btn-white{"ng-click"=>'student.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
-        %span{"ng-hide" => "student.confirmDelete"}          
+        %span{"ng-hide" => "student.confirmDelete"}
           %button.btn.btn-white{"ng-click" => "edit(student)", "ng-hide" => "student.editing"}= I18n.t('dashboard_action_edit')
           %button.btn.btn-primary{"ng-click" => "save(student)", "ng-show" => "student.editing", "ng-disabled" => "form.$invalid"}= I18n.t('dashboard_action_save')
           %button.btn.btn-white{"ng-click" => "cancel(student)", "ng-show" => "student.editing"}= I18n.t('dashboard_action_cancel')
-          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_delete')
+          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_remove')
     %tr
       %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
@@ -132,8 +97,8 @@ theme: none
   %div{"ng-if" => "section.login_type !== 'email'"}
     %h3{"ng-show" => 'section.students.length > 0'}
       = I18n.t('dashboard_students_share_section')
-      %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}", target: "_blank"}
-        http://#{canonical_hostname('studio.code.org')}/sections/{{section.code}}
+      %a{"ng-href" => CDO.studio_url("/sections/{{section.code}}"), target: "_blank"}
+        http:#{CDO.studio_url('/sections/{{section.code}}')}
     %h3{"ng-show" => 'section.students.length > 0'}
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
@@ -154,8 +119,7 @@ theme: none
   %div.jumbotron{'ng-show' => "section.id && section.login_type === 'email'", style: "line-height: 36px;"}
     %p
       = I18n.t('dashboard_students_join_link')
-      %a{"ng-href" => "http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}", target: "_blank"}
-        http://#{canonical_hostname('studio.code.org')}/join/{{section.code}}
+      %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
+        http:#{CDO.studio_url('/join/{{section.code}}')}
     %p
       = I18n.t('dashboard_students_no_email')
-

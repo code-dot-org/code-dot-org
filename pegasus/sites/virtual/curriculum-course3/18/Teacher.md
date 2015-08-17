@@ -166,7 +166,9 @@ Where do you think those packets are headed?
   
 Servers don't have names like you and I do.  They're actually addressed using numbers.  These numbers are called IP addresses, and they look a little strange. 
  
-- For example: One of Code.org's IP addresses is 54.243.71.82
+- For example: One of Code.org's IP addresses used to be 54.243.71.82 
+
+   - (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)
 
 There are many ways to reach the Internet from your house, school, or place of business.  
 
@@ -359,9 +361,9 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a><br/>
+<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

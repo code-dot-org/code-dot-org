@@ -1,0 +1,15 @@
+name 'PDK5 Sequence2'
+title 'More Sequencing'
+css 'unplugged'
+hide_submit true
+skip_sound true
+
+question 'The grey rectangle to the left of the workspace is called the'
+right 'toolbox'
+wrong 'shelf'
+wrong 'bin'
+wrong 'dropdown'
+
+markdown <<MARKDOWN
+The blocks you saw in the toolbox of the last puzzle were the kind of blocks that are used throughout Course 1. When students move on to Courses 2 and beyond, the blocks start to look different. Answer the vocabulary question on this page and then try out your sequencing skills on the next page to see what the blocks looks like in Courses 2 and beyond.
+MARKDOWN

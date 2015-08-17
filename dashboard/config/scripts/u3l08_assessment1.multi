@@ -1,0 +1,12 @@
+name 'U3L08 Assessment1'
+title 'Functions with Parameters: Question 1'
+
+question 'Which of the following are true?'
+wrong 'Parameters can only be used once within the body of a function.'
+right 'Functions with parameters can be used to prevent the creation of duplicated code.'
+wrong 'Parameters generalize the solution of a specific problem.'
+wrong 'Parameters need not be provided to a function in any particular order.'
+
+markdown <<MARKDOWN
+
+MARKDOWN

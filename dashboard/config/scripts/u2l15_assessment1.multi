@@ -1,0 +1,13 @@
+name 'U2L15 Assessment1'
+title 'Assessment: Question 1'
+type 'multi2'
+question 'Why is the Vigenere cipher hard to crack? (select 2)'
+right 'One cannot solve using frequency analysis directly.'
+right 'Long keys create exponential growth possibilities.'
+wrong 'The key is always secret to both the sender and receiver of the message.'
+wrong 'A Vigenere cipher relies upon an "alphabet shift" algorithm.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

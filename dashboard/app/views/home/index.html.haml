@@ -1,39 +1,36 @@
+= render partial: 'layouts/survey'
+= render partial: 'devise/confirmations/alert'
+
 #landingpage
+  .row
+    .span12
+      .welcome
+        .welcomeleft
+          = image_tag('codeorg-studio-logo-white.png', style: "height:120px")
+        .welcomeright
+          .lines_of_code_header
+            %a.lines_of_code_link{href: CDO.code_org_url('/loc')}
+              - loc = fetch_metrics['lines_of_code']
+              - loc = number_with_delimiter(loc, :delimiter => ',')
+              - students = fetch_user_metrics['number_students']
+              - students /= 1000000
+              != t('home.lines_of_code_linebreak', lines_count: loc, students_count: students)
+            .description
+              = t('home.description')
+
+  .clear
+
   - if current_user
-    .row#welcome
-      .span9
-        %h2= t('welcome_back', name: current_user.name)
+    #user_hero
+      = render template: 'api/user_hero'
+    - current_user.unadvertised_user_scripts.each_slice(2) do |course_pair|
+      .row
+        - course_pair.each do |user_script|
+          = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
-      .span3{style: 'text-align: right'}
-        - if current_user.teacher?
-          %br/
-          = button_to t('nav.user.classroom'), teacher_dashboard_url, class: "btn btn-info", style: 'background: #428bca; border-color: #357ebd;'
-
-    - if current_user.primary_script
-      .row#continue
-        .span12
-          .padtopbottom{style: 'line-height: 1.5em'}
-            = render partial: 'shared/student_continue', locals: { include_finished: true }
-
-    - unless @gallery_activities.empty?
-      = render partial: 'home/gallery'
-
-    - unless current_user.working_on_user_scripts.empty?
-      = render partial: 'home/nav', locals: {active: :working}
-      - current_user.working_on_user_scripts.each do |user_script|
-        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
-
-    - unless current_user.completed_user_scripts.empty?
-      = render partial: 'home/nav', locals: {active: :completed}
-      - current_user.completed_user_scripts.each do |user_script|
-        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
-          
   - else # no logged in user
-    - unless Rails.configuration.minimal_mode
-      = render partial: 'home/sign_in_buttons'
-
-
-  = render partial: 'home/nav', locals: {active: :all}
+    = render partial: 'home/sign_in_buttons'
+    
   = render partial: 'home/all_courses'
 
   - if current_user && !current_user.teacher?
@@ -50,44 +47,25 @@
             = t('teacher.title', count: current_user.teachers.length, name: '')
             = raw current_user.teachers.map{|t| t[:name] + ' ' + link_to(t('teacher.remove'), remove_follower_path(teacher_user_id: t[:id], student_user_id: current_user.id), confirm: t('teacher.confirm.remove'), method: :post)}.join(', ')
 
+  - if current_user
+    %br/
+    %br/
+    %br/
+    = render partial: 'home/projects'
+    - unless @gallery_activities.empty?
+      = render partial: 'home/gallery'
+
 %br/
 %br/
 %br/
 
-- if current_user && current_user.admin?
-  = render partial: 'home/admin'
+= render partial: 'home/admin'
 
 :javascript
-  $( "#section_code" ).placeholder();
+  $("#section_code").placeholder();
 
 :javascript
   $(document).ready(function() {
-    // set up course progress show/hide 
-    var toggleProgress = function() {
-      var stats = $(this).parents('.course_progress').children('#stats');
-      $(this).children('i').toggleClass('fa-minus-square').toggleClass('fa-plus-square'); // flip state of +/-
-
-      stats.toggle(); // hide/show stats area
-
-      // load the stats from the server if necessary
-      if (!stats.attr('data-loaded')) {
-        $.ajax({url:'#{header_stats_path}',
-                data: { script_id: stats.attr('data-script-id')},
-                success: function(result) {
-                  stats.children('.content').html(result);
-                  stats.attr('data-loaded', 'true');
-                }
-        });
-      }
-      return false;
-    }
-    
-    $('.course_progress .expando').click(toggleProgress);
-
-    // expand the first course progress
-    if ($('.course_progress .expando').first()) {
-      $('.course_progress .expando').first().click();
-    }
 
     // set up gallery pagination
     $('#gallery').on('click', '.pagination a', function() {

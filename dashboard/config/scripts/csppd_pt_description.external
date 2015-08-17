@@ -1,0 +1,24 @@
+name 'CSPPD PT description'
+title 'Performance Tasks'
+description 'description of the CSP PT'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## AP assessment for CSP
+
+
+Students' AP scores in CS Principles will come from two things: 1) performance on an objectively-scored, fixed-response exam, given at the end of the school year (like other AP courses); and 2) Performance tasks, which are through-course assessments, requiring students work on specific projects during the school year that will be submitted to the College Board and scored at the end of the year. These tasks are in two different areas: one is related to programming and is titled "Create" and the other is related to innovations in computing and is titled "Explore." The [details](http://media.collegeboard.com/digitalServices/pdf/ap/ap-computer-science-principles-performance-assessment.pdf) and [rubric](http://media.collegeboard.com/digitalServices/pdf/ap/ap-computer-science-principles-draft-rubrics-sep-2014.pdf) of the performance tasks are summarized below. 
+
+<br/>
+<strong>Performance Task: Create - Applications from Ideas</strong>
+
+Students are required to create two programs - one <em>individually</em> and one <em>collaboratively</em>, in a two-person team - that demonstrate their understanding of abstraction and algorithms. For each program, they will be required to submit a pdf document of their source code as well as a video or text annotation that displays the successful running of the program. <em>You will need to provide 12 hours of class time to complete these programs.</em>
+
+<br/>
+<strong>Performance Task: Explore - Impact of Computing Innovations</strong>
+
+Students are required to research the positive and negative effects of a single computing innovation. They must then write about the innovation, the population it impacted, and its social, cultural, or economic impact. Their submission must also include one visual artifact they created using a computer as well as 2-5 sources used to inform their written responses about the innovation. <em>You will need to provide 8 hours of class time to complete this task.</em>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

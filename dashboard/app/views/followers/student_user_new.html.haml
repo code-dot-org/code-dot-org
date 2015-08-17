@@ -2,30 +2,33 @@
   Please enter the code shared with you by your teacher. It's a 6-character code made up of letters and numbers
   %br/
   = form_tag(student_user_new_path, method: 'GET') do
-    = text_field_tag(:section_code, params[:section_code], placeholder: "6-character code (ABCDEF)")
+    = text_field_tag(:section_code, params[:section_code], placeholder: '6-character code (ABCDEF)')
     %br/
     = submit_tag 'Go', class: 'btn btn-primary'
 - elsif current_user
-  You are currently signed in. #{link_to "Return home", root_path} or #{link_to("log out", destroy_user_session_path)} to proceed.
+  You are currently signed in. #{link_to 'Return home', root_path} or #{link_to('log out', destroy_user_session_path)} to proceed.
 - else
   %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
   %p
     If you already have an account at Code.org, please
-    %a{href: "http://#{canonical_hostname('studio.code.org')}/users/sign_in?return_to=http://#{canonical_hostname('studio.code.org')}/join/#{params[:section_code]}"} sign into your account
+    %a{href: "/users/sign_in?return_to=/join/#{params[:section_code]}"} sign into your account
     before joining the section.
-  %p{style: "margin-bottom: 30px;"} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
+  %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
   - if @user.errors.any?
     #error_explanation
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
+  -# Hack to look for a specific pattern in the class name to decide if it's a workshop.
+  - user_type = @section.name.to_s =~ /^Workshop on [\d\/]+ at .+$/ ? User::TYPE_TEACHER : User::TYPE_STUDENT
+
   #signup
     .row
       .span8.signupblock
         = form_for(@user, url: { action: :student_register }) do |f|
 
-          = f.hidden_field :user_type
+          = f.hidden_field :user_type, value: user_type
           = f.hidden_field :locale, value: locale
           = f.hidden_field :hashed_email
 
@@ -52,14 +55,28 @@
               = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
             %span#password_message_confirmation
             %br/
-            .itemblock
-              .labelblock
-                = t('signup_form.age')
-              = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-            .itemblock
-              .labelblock
-                = t('signup_form.gender')
-              = f.select :gender, gender_options
+            - if user_type == User::TYPE_TEACHER
+              .itemblock
+                .labelblock
+                  = t('signup_form.school_name')
+                = f.text_field :school, class: 'input-xlarge fieldblock'
+              %br/
+              .itemblock
+                .labelblock
+                  = t('signup_form.school_address')
+                = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4
+              %br/
+
+              = f.hidden_field :age, value: '21'
+            - if user_type == User::TYPE_STUDENT
+              .itemblock
+                .labelblock
+                  = t('signup_form.age')
+                = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
+              .itemblock
+                .labelblock
+                  = t('signup_form.gender')
+                = f.select :gender, gender_options
             %br/
             = submit_tag 'Register', class: 'btn btn-primary'
 

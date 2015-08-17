@@ -1,5 +1,5 @@
 :css
-  .video-page p,li {
+  .video-page p, .video-page li {
     font-size: 16px;
     line-height: 20px;
   }
@@ -48,7 +48,7 @@
 
   %h4 YouTube block detection
 
-  %p.blockedStatus{style: "font-family: 'Gotham 7r', sans-serif; font-weight: normal;"} Detection succeeded. Assuming YouTube is not blocked.
+  %p.blockedStatus{style: 'font-family: "Gotham 7r", sans-serif; font-weight: normal;'} Detection succeeded. Assuming YouTube is not blocked.
 
   %h4 Test options
 
@@ -83,11 +83,11 @@
   var userAgent = '#{request.env['HTTP_USER_AGENT']}';
   formLink.fillFieldEncoded('browser', userAgent);
 
-  var videoInfo = #{video_info(Video.first).to_json};
+  var videoInfo = #{Video.first.summarize.to_json};
   videoInfo['enable_fallback'] = true;
-  videoInfo['src'] = videoInfo['src'].replace('#{youtube_base_url}', 'https://www.youtube.com');
+  videoInfo['src'] = videoInfo['src'].replace('#{Video.youtube_base_url}', 'https://www.youtube.com');
 
-  $('#video-container').append(createVideoWithFallback(videoInfo, 600, 400));
+  createVideoWithFallback($('#video-container'), videoInfo, 600, 400);
 
   var fakingYouTubeBlocked = "#{params.has_key?(:force_youtube_fallback) ? 'Faking YouTube blocked' : ''}";
   $('.blockedStatus').css('color', 'green');

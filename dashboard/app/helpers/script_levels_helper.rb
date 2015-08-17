@@ -42,14 +42,14 @@ module ScriptLevelsHelper
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = video_info(wrapup_video)
+    video_info_response = wrapup_video.summarize
     video_info_response[:redirect] = redirect
     video_info_response
   end
 
   def script_completion_redirect(script)
     if script.hoc?
-      hoc_finish_url(script)
+      script.hoc_finish_url
     else
       root_path
     end
@@ -64,18 +64,16 @@ module ScriptLevelsHelper
   end
 
   def tracking_pixel_url(script)
-    if script.id == Script::HOC_ID || script.name == Script::SPECIAL_NAME
-      "//#{CDO.canonical_hostname('code.org')}/api/hour/begin_codeorg.png"
+    if script.name == Script::HOC_2013_NAME
+      CDO.code_org_url '/api/hour/begin_codeorg.png'
     else
-      "//#{CDO.canonical_hostname('code.org')}/api/hour/begin_#{script.name}.png"
+      CDO.code_org_url "/api/hour/begin_#{script.name}.png"
     end
   end
 
-  def hoc_finish_url(script)
-    if script.id == Script::HOC_ID || script.name == Script::SPECIAL_NAME
-      "//#{CDO.canonical_hostname('code.org')}/api/hour/finish"
-    else
-      "//#{CDO.canonical_hostname('code.org')}/api/hour/finish/#{script.name}"
-    end
+  def section_options
+    current_user.sections.map do |section|
+      content_tag 'option', section.name, value: url_for(params.merge(section_id: section.id, user_id: nil))
+    end.join(" ").html_safe
   end
 end

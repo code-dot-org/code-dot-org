@@ -64,7 +64,7 @@
     .clear
 
   - if @section.login_type == Section::LOGIN_TYPE_PICTURE
-    %div#secret{style: "display:none"}
+    %div#secret{style: 'display: none;'}
       %h4.instructions= t('signinsection.picture')
       %ul.pictures
         - @secret_pictures.each do |secret_picture|
@@ -76,11 +76,11 @@
     = hidden_field_tag :secret_picture_id
     = hidden_field_tag :user_id
     - if @section.login_type == Section::LOGIN_TYPE_WORD
-      %div#secret{style: "display:none"}
+      %div#secret{style: 'display: none;'}
         %h4.instructions= t('signinsection.words')
         = text_field_tag :secret_words
         .clear
-    = button_tag t('signinsection.login'), :id=>'login_button', :style=>'display:none', :class=>'btn btn-primary'
+    = button_tag t('signinsection.login'), id: 'login_button', style: 'display:none', class: 'btn btn-primary'
 
 %br/
 %br/

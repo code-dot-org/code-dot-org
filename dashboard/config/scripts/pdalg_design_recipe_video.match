@@ -1,0 +1,24 @@
+name 'PDAlg Design Recipe Video'
+title 'Intro to Data Types'
+description 'Place the Design Recipe steps in the correct order.'
+skip_sound true
+hide_submit true
+
+question 'Step 1'
+answer 'Contract and Purpose Statement'
+
+question 'Step 2'
+answer 'Examples'
+
+question 'Step 3'
+answer 'Definition'
+
+markdown <<MARKDOWN
+### Evaluation Blocks
+
+<iframe width="350" height="200" src="https://www.youtube.com/embed/s5nBdrNgPwM" frameborder="0" allowfullscreen style="float:left; margin: 0 20px 20px 0"></iframe>
+
+In addition to the paper and pencil Design Recipe process that you've become familiar with, the new CS in Algebra programming environment includes a digital version of the Design Recipe. Watch this introductory video, and then work through the Design Recipe for `rocket-height`.
+
+<div style="clear:both"/>
+MARKDOWN

@@ -18,10 +18,6 @@ class Artist < Blockly
     super + %w(solution_blocks predraw_blocks)
   end
 
-  def self.builder
-    @@artist_builder ||= Level.find_by(name: 'builder')
-  end
-
   # List of possible skins, the first is used as a default.
   def self.skins
     ['artist', 'artist_zombie', 'elsa', 'anna']
@@ -30,14 +26,8 @@ class Artist < Blockly
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(
         user: params[:user],
-        game: Game.find(params[:game_id]),
+        game: Game.custom_artist,
         level_num: 'custom',
-        properties: {
-          x: params[:x],
-          y: params[:y],
-          start_direction: params[:start_direction],
-          solution_blocks: params[:program]
-        }
     ))
   end
 

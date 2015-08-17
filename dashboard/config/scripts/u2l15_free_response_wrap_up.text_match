@@ -1,0 +1,8 @@
+name 'U2L15 Free Response Wrap Up'
+title 'Encryption Algorithms: Wrap Up'
+
+markdown <<MARKDOWN
+Some encryptions can only be solved by “brute force.” What does that mean? 
+
+How is brute force related to the encryption key?
+MARKDOWN

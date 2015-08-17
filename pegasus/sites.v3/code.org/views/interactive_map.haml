@@ -1,46 +1,58 @@
 -no_credit_count = no_credit_count = no_credit_count()
 
-%script{:src=>"/js/raphael.js"}
-%script{:src=>"/js/extended_us_map.js"}
+%script{src: "/js/raphael.js"}
+%script{src: "/js/extended_us_map.js"}
 
-%div{:id=>'map', :style=>'width: 56%; min-height: 350px; float: left; margin-top: 25px'}
-%div{:id=>'infobox', :class=>'greybox', :style=>'width: 44%; min-hieght: 350px; text-align:left; float:left'}
-  %p{:style=>'color: rgb(185,191,21); text-shadow: 1px 1px rgba(0, 0, 0, .5); font-size:36px; line-height: 24px; font-weight: bold; text-align:center'}
-  %p{:id=>'info', :style=>"font-size:18px;"}
-    Computer science drives innovation in the US economy and society. Despite growing demand for jobs in the field, it remains marginalized throughout the US K-12 education system.
-  %p{:style=>"font-size:18px;"}
-    Currently,
+%div#map
+%div#infobox.greybox
+  %p.info
+    Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+  %p.info
+    Only
     %strong
-      =no_credit_count
-    states still don't allow students to count computer science courses toward high school graduation.
+      =credit_count
+    states allow students to count computer science courses toward high school graduation.
+  %p.info
+    There are currently
+    %strong
+      = format_integer_with_commas(jobs_nationwide)
+    open computing jobs nationwide.
+  %p.info
+    Last year, only
+    %strong
+      = format_integer_with_commas(grads_nationwide)
+    computer science students graduated into the workforce. 
 
 :javascript
   var webServiceLocation = "/promote/state/";
 
   $(document).ready(function() {
-    // Check if the URL specifies a specific state. If so, load the state
-    if (window.location.pathname.replace("/promote", "") !== "") {
-      var state = window.location.pathname.replace("/promote/", "");
-      $.ajax({
-        url: webServiceLocation + state.toLowerCase(),
-        type: "get",
-      }).done(function(data) {
-        $("#infobox").html(data);
-      }).fail(function () {
-        if (window.history.replaceState) {
-          history.replaceState({}, "", "../promote");
-        }
-      });
+    if (#{use_url}) {
+      // Check if the URL specifies a specific state. If so, load the state
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        var state = window.location.pathname.replace("/promote/", "");
+        $.ajax({
+          url: webServiceLocation + state.toLowerCase(),
+          type: "get",
+        }).done(function(data) {
+          $("#infobox").html(data);
+        }).fail(function () {
+          if (window.history.replaceState) {
+            history.replaceState({}, "", "../promote");
+          }
+        });
+      }
     }
 
     // Load the SVG into the #map div
     $('#map').usmap({
       click: function(event, data) {
-        // Add data and URL to browser history when the user clicks a state
-
-        if (window.history.replaceState) {
+        if (#{use_url}) {
+          // Add data and URL to browser history when the user clicks a state
           if (window.history.replaceState) {
-            history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+            if (window.history.replaceState) {
+              history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+            }
           }
         }
 
@@ -51,7 +63,9 @@
         }).done(function(data) {
           $("#infobox").html(data);
         }).fail(function () {
-          window.location = "/promote"
+          if (#{use_url}) {
+            window.location = "/promote"
+          }
         });
       },
 
@@ -65,22 +79,44 @@
     });
 
     // "Click" the current state if page is loaded with state in URL.
-    if (window.location.pathname.replace("/promote", "") !== "") {
-      $("#" + state.toUpperCase()).click();
+    if (#{use_url}) {
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        $("#" + state.toUpperCase()).click();
+      }
     }
   });
 
   // When the user uses the "back" button, load previous data into infobox and URL bar
   window.onpopstate = function(event) {
-    $.ajax({
-      url: webServiceLocation + event.state["state"].toLowerCase(),
-      type: "get",
-    }).done(function(data) {
-      $("#infobox").html(data);
-      $("#" + event.state["state"]).click();
-    }).fail(function () {
-      if (window.history.replaceState) {
-        history.replaceState({}, "", "../promote");
-      }
-    });
+    if (#{use_url}) {
+      $.ajax({
+        url: webServiceLocation + event.state["state"].toLowerCase(),
+        type: "get",
+      }).done(function(data) {
+        $("#infobox").html(data);
+        $("#" + event.state["state"]).click();
+      }).fail(function () {
+        if (window.history.replaceState) {
+          history.replaceState({}, "", "../promote");
+        }
+      });
+    }
   };
+
+:css
+  #map {
+  width: 56%;
+  min-height: 350px;
+  float: left;
+  margin-top: 25px
+  }
+
+  #infobox {
+    width: 44%;
+    text-align:left;
+    float:left
+  }
+
+  .info {
+    font-size:18px;
+  }

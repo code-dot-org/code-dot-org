@@ -1,0 +1,25 @@
+name 'ECSPD Online U1D5-7 Resources 2'
+title ''
+css 'unplugged'
+markdown <<MARKDOWN
+## Web 2.0: Extended Resources
+
+In Unit 1, Day 5-7, students investigate Web 2.0 and take note of the huge step in technology between Web 1.0 and 2.0.
+
+#### Suggested Resource
+
+Here is a short video that explains the difference between Web 1.0, 2.0, and 3.0. It is intended as an extension of the current lesson plan. You may want to consider showing it to your class to facilitate discussion or to inspire your students to think about the future possiblities of the internet.  
+
+The next level will show a sample assessment that could be used with this video. Watch the video and then take the sample assessment on the next level.
+
+<iframe width="850" height="500" src="https://www.youtube.com/embed/iStkxcK6_vY" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Click here](http://videos.code.org/ecs-pd2-online/what-is-web-2.mp4).*
+
+<br/>
+
+> Reflect: How could you use resources like this to help your students understand the differences between Web 1.0, 2.0, and 3.0?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

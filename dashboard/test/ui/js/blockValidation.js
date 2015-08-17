@@ -43,7 +43,7 @@ var blockAnalyzer = {
   },
   validate: function (validator) {
     blockAnalyzer.clearAllBlocks();
-    BlocklyApps.loadBlocks(validator.xml);
+    __TestInterface.loadBlocks(validator.xml);
     var info = blockAnalyzer.pathsOfBlocks();
     var failure = blockAnalyzer.compare(info, validator.paths);
     return failure;
