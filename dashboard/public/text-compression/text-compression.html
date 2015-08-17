@@ -2,15 +2,6 @@
 <!-- Text compression widget. Original code written by Baker Franke. -->
 <html>
 <head>
-  <!--[if IE 9]>
-  <style>
-    /* override calc() styles which don't always work in IE9 */
-    div.widgetLeft, div.widgetLeftHeader {
-      width: 63%;
-    }
-  </style>
-  <![endif]-->
-
   <style>
     .full_container {
       position: absolute;
@@ -31,44 +22,31 @@
     }
     #widgetMainWrapper {
       height: 100%;
-      position: relative;
-    }
-    #widgetMainWrapper:after {
-      clear: both;
-      content: ".";
-      display: block;
-      height: 0;
-      visibility: hidden;
-    }
-    .widgetLeft, .widgetLeftHeader {
-      margin-right: 20px;
-      width: calc(67% - 20px);
-      height: 100%;
-      float: left;
-      display: table;
+      width: 100%;
       table-layout: fixed;
     }
-    .widgetLeft #output {
-      display: table-row;
+    #widgetMainWrapper > tbody > tr, #widgetMainWrapper > tbody > tr > td {
       height: 100%;
     }
-    .widgetRightHeader {
-      float: right;
-      width: 33%;
+    .widgetLeft #output {
+      height: 100%;
+    }
+    .widgetMiddle {
+      width: 10px;
     }
     .widgetRight {
       width: 33%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
     }
     .widgetLeftHeader, .widgetRightHeader {
-      clear: right;
+      height: 40px;
+      padding: 0 10px;
       background: #7665a0;
       color: #fff;
-      box-sizing: border-box;
-      padding: 10px;
+    }
+    .widgetInner {
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
     }
     #menu > * {
       margin: 0 0 8px 0;
@@ -78,15 +56,19 @@
       float: right;
     }
     #compressedPoem {
-      box-sizing: border-box;
-      height: 100%;
       padding: 10px;
-      border: solid 1px #ddd;
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
       font-size: 14pt;
       line-height: 1.4em;
       word-wrap: break-word;
-      background-color: #fff;
       overflow-y: scroll;
+      vertical-align: top;
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
     }
     #data {
       padding: 10px;
@@ -106,12 +88,6 @@
     #data .error {
       color: #c00;
     }
-    #compressedPoem {
-      -moz-user-select: text;
-      -webkit-user-select: text;
-      -ms-user-select: text;
-      user-select: text;
-    }
     mark, .CodeMirror-gutters {
       background-color: #ff9;
     }
@@ -122,7 +98,6 @@
     .CodeMirror {
       font-size: 14pt;
       line-height: 1.4em;
-      border: 1px solid #ddd;
       min-height: 200px;
     }
     .dict-error {
@@ -134,6 +109,9 @@
     }
     #poemsList {
       width: 300px;
+    }
+    #dictionary {
+      height: 100%;
     }
   </style>
 </head>
@@ -147,23 +125,53 @@
       <button id="writeYourOwn" class="btn choosePoem">Write your own</button>
       <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>
     </div>
-    <div class="widgetLeftHeader">Compressed:</div>
-    <div class="widgetRightHeader">Dictionary:</div>
   </div>
   <div id="widgetMain">
-    <div id="widgetMainWrapper">
-      <div class="widgetLeft">
-        <div id="output">
-          <div id="compressedPoem"></div>
-        </div>
-        <div id="data"></div>
-      </div>
-      <div class="widgetRight">
-        <textarea id="dictionary"></textarea>
-      </div>
-    </div>
+    <table id="widgetMainWrapper">
+      <tr>
+        <td class="widgetLeft">
+          <table class="widgetInner">
+            <tr><td class="widgetLeftHeader">Compressed:</td></tr>
+            <tr id="output">
+              <td id="compressedPoem"></td>
+            </tr>
+            <tr>
+              <td id="data"></td>
+            </tr>
+          </table>
+        </td>
+        <td class="widgetMiddle"></td>
+        <td class="widgetRight">
+          <table class="widgetInner">
+            <tr><td class="widgetRightHeader">Dictionary:</td></tr>
+            <tr>
+              <td id="symbolEditorWrapper" style="position: relative;">
+                <div style="position: absolute; top: 0; right: 0; left: 0; bottom: 0;">
+                <textarea id="dictionary"></textarea>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </div>
-  <script type="text/javascript" src="/text-compression/text-compression.js">
+  <script type="text/javascript" src="/text-compression/text-compression.js"></script>
+  <!--[if IE 9]>
+  <script>
+    function fixIE9 () {
+      var $widgetMain = $('#widgetMain');
+      $('#widgetMainWrapper')
+          .css('position', 'absolute')
+          .css('top', $widgetMain.position().top)
+          .css('width', $widgetMain.width())
+          .css('height', $widgetMain.height());
+      $('.CodeMirror').height($('#symbolEditorWrapper').height());
+      editor.refresh();
+    }
+    $(document).ready(fixIE9);
+    $(window).resize(fixIE9);
   </script>
+  <![endif]-->
 </body>
 </html>
