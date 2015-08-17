@@ -2247,6 +2247,9 @@ Studio.clearDebugRects = function() {
 
 
 Studio.drawWallTile = function (svg, row, col) {
+  var srcRow = Math.floor(Math.random() * 4);
+  var srcCol = Math.floor(Math.random() * 4);
+
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
   clipPath.setAttribute('id', clipId);
@@ -2263,8 +2266,8 @@ Studio.drawWallTile = function (svg, row, col) {
   tile.setAttribute('id', tileId);
   tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
   tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('x', col * Studio.SQUARE_SIZE);
-  tile.setAttribute('y', row * Studio.SQUARE_SIZE);
+  tile.setAttribute('x', (col-srcCol) * Studio.SQUARE_SIZE);
+  tile.setAttribute('y', (row-srcRow) * Studio.SQUARE_SIZE);
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     skin.tiles);
   svg.appendChild(tile);
@@ -2435,13 +2438,13 @@ Studio.displaySprite = function(i, isWalking) {
   spriteIcon.setAttribute('y', sprite.displayY - yOffset + extraOffsetY);
 
   spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetX);
+  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
   unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);

@@ -258,7 +258,7 @@ function loadHoc2015(skin, assetUrl) {
   // to move the rendering of the sprite up and to the left, when negative, so
   // that the "feet" are planted at the bottom center of the grid square.
   skin.gridSpriteRenderOffsetX = -30;
-  skin.gridSpriteRenderOffsetY = -30;
+  skin.gridSpriteRenderOffsetY = -40;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
