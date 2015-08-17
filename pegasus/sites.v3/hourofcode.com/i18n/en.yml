@@ -215,7 +215,6 @@
 
   signup_event_type_in_school: 'In a school'
   signup_event_type_out_of_school: 'Outside of school'
-  signup_event_type_corporate_event: 'Corporate event'
 
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
