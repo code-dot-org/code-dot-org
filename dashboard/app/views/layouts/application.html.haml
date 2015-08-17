@@ -1,7 +1,8 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    - title = @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
@@ -10,6 +11,12 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
     = yield :head
+    - if content_for? :og
+      = yield :og
+    - else
+      = tag 'meta', property: 'og:title', content: title
+      = tag 'meta', property: 'og:image', content: image_url('codeorg-studio-logo.png')
+      = tag 'meta', property: 'og:description', content: t('home.description')
     = render partial: 'layouts/analytics'
   %body
     - if current_user && current_user.age.nil?
