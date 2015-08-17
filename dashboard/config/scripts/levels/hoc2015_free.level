@@ -73,7 +73,7 @@
     "markerHeight": 50,
     "markerWidth": 50,
 
-    "maze": "[[256, 0, 0, 4, 0, 0, 0, 256], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 4, 0, 4, 0, 0, 0], [0, 0, 0, 0,16,256,0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [256, 0, 0, 0, 4, 0, 0, 256]]",
+    "maze": "[[256, 0, 0, 4, 0, 0, 0, 256], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 4, 0, 4, 0, 0, 0], [0, 0, 4, 0,16,256,0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [256, 0, 0, 0, 4, 0, 0, 256]]",
 
     "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    Studio.vanishActor({spriteIndex: 1});\r\n    \r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
