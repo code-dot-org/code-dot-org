@@ -15,7 +15,7 @@
       = yield :og
     - else
       = tag 'meta', property: 'og:title', content: title
-      = tag 'meta', property: 'og:image', content: CDO.shared_image_url('share/girl_cropped.jpg')
+      = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
     = render partial: 'layouts/analytics'
   %body
