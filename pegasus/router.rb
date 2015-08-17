@@ -456,6 +456,7 @@ class Documents < Sinatra::Base
       else
         metadata = {
           'og:site_name'      => 'Code.org',
+          'og:image'          => 'https://code.org/images/logo.png'
         }
       end
 
