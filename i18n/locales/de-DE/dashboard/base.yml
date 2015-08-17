@@ -222,6 +222,7 @@ de:
       free_play:
         playlab: Eine App erstellen
         artist: Zeichne etwas
+        calculate: Calculate Something
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard
@@ -351,6 +352,7 @@ de:
     local_school: örtliche Schule
     online: online
     see_details: Zeige Details
+    view_course: View Course
     prize_info: 'Preise für Teilnahme(nur Lehrer von öffentlichen Schulen der USA): Belohnungen bis zu $1000 für die Klasse.'
     tryfirst: 'Oder Probiere es aus und melde Dich später an: '
     trynow: Probiere es jetzt aus
@@ -365,6 +367,7 @@ de:
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Zertifikat drucken
   gender:
     male: Männlich
@@ -398,10 +401,6 @@ de:
     autoplay_option: Autoplay Videos
     download: lade Video herunter
   compatability:
-    https:
-      header: Bitte schalte HTTPS für Code.org ein.
-      message: "Um die Sicherheit zu erhöhen, wechseln wir am %{https_date} auf HTTPS. Danach kannst Du nicht mehr per HTTP auf Code.org zugreifen. <a href='%{it_requirements_url}'> Klicke hier</a> um zu sehen, wie man HTTPS für Code.org aktiviert."
-      hide_this_warning: Diese Warnung ausblenden
     working:
       header: Wir arbeiten an der Unterstützung für Ihren Browser.
       message: "Code.org benutzt aktuellste Web-Technologie. Dies hat die Folge, dass diese Seite schneller lädt. Dein Browser unterstützt leider nicht alle Funtkionen, dies könnte zu Fehlern führen. Bitte hilf uns, indem du <a href='%{report_issue_url}'>Fehler meldest</a>. Du kannst auch deine <a href='%{supported_browsers_url}'>Webbrowser zu einer unterstützten Version updaten</a>."

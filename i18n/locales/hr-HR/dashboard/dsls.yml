@@ -424,27 +424,27 @@ hr:
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Brushing your teeth: Pranje zubi
         Multiple Choice: Višestruki izbor
         Shopping from a grocery list: Shopping from a grocery list
         Which one of these items is hardest to describe an algorithm for?: Koji od ovih predmeta je najteži za opisati algoritmu?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene je _____ grad.
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         Multiple Choice: Višestruki izbor
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle je velik grad.<br/>Eugene je grad srednje veličine.<br/>Hillview je mali grad.'
+        _____ is _____ a _____.: _____ je _____.
+        _____ is a _____ city.: _____ je _____ grad.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: Višestruki izbor
         Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
+        Brushing your hair: Češljanje kose
+        Cleaning your room: Čišćenje svoje sobe
         Eating your dessert: Eating your dessert
         Multiple Choice: Višestruki izbor
         Washing your face: Washing your face
@@ -453,7 +453,7 @@ hr:
         Multiple Choice: Višestruki izbor
         Which piece of information listed below is okay to share on the internet?: Koje od navedenih informacija je u redu podijeliti na Internetu?
         Your address: Your address
-        Your birthday: Your birthday
+        Your birthday: Tvoj rođendan
         Your favorite food: Your favorite food
         Your parent's credit card number: "Your parent's credit card number"
       4-5 Internet Multi 1:
@@ -752,6 +752,22 @@ hr:
         Driver and Helper: Vozač i pomagač
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Jedan od ovih dječaka je <b>vozač</b>. I jedan je <b>pomagač</b>.'
         This time, which boy is the <large>driver</large>?: 'Ovog puta, koji je dječak <large>vozač</large>?'
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
+        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: slučajno odabran
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

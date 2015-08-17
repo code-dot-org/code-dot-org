@@ -4,17 +4,17 @@
  *           and default values for that object.
  */
 
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./NetSimConstants');
 var Packet = require('./Packet');
-var BITS_PER_NIBBLE = netsimConstants.BITS_PER_NIBBLE;
-var MessageGranularity = netsimConstants.MessageGranularity;
-var DnsMode = netsimConstants.DnsMode;
-var EncodingType = netsimConstants.EncodingType;
-var NetSimTabType = netsimConstants.NetSimTabType;
+var BITS_PER_NIBBLE = NetSimConstants.BITS_PER_NIBBLE;
+var MessageGranularity = NetSimConstants.MessageGranularity;
+var DnsMode = NetSimConstants.DnsMode;
+var EncodingType = NetSimConstants.EncodingType;
+var NetSimTabType = NetSimConstants.NetSimTabType;
 
 /**
  * A level configuration that can be used by NetSim
- * @typedef {Object} netsimLevelConfiguration
+ * @typedef {Object} NetSimLevelConfiguration
  *
  * @property {string} instructions - Inherited from blockly level configuration.
  *
@@ -34,8 +34,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           should appear above the lobby list.
  *
  * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
- *           available.  Adds a button to the lobby and one to the bottom
- *           of the router tab.
+ *           available in the lobby.
  *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
@@ -66,7 +65,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           inter-router message should try to visit before going to its
  *           destination router.
  *
- * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
+ * @property {AddressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
  *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
  *           but the numbers specify the number of bits for each section.
@@ -179,7 +178,7 @@ var levels = module.exports = {};
  * A default level configuration so that we can define the others by delta.
  * This default configuration enables everything possible, so other configs
  * should start with this one and disable features.
- * @type {netsimLevelConfiguration}
+ * @type {NetSimLevelConfiguration}
  */
 levels.custom = {
 
@@ -211,7 +210,7 @@ levels.custom = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: [],
@@ -248,7 +247,7 @@ levels.custom = {
 /**
  * Special level configuration for use with 'grunt dev' standalone mode.
  * Never used when serving NetSim levels through dashboard.
- * @type {netsimLevelConfiguration}
+ * @type {NetSimLevelConfiguration}
  */
 levels.playground = {
 
@@ -280,7 +279,7 @@ levels.playground = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: ['instructions', 'my_device', 'router', 'dns'],

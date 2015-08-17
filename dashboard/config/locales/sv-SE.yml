@@ -253,6 +253,7 @@
       free_play:
         playlab: Skapa en App
         artist: Rita något
+        calculate: Calculate Something
     user:
       classroom: Lärare hemsida
       district_dashboard: Distrikt Dashboard
@@ -397,6 +398,7 @@
     local_school: närliggande skola
     online: Online
     see_details: Se detaljer
+    view_course: View Course
     prize_info: 'Priser för deltagande (endast USA): upp till $1.000 i klassrums-
       belöningar.'
     tryfirst: 'Eller, du kan prova  först och registrera dig senare:'
@@ -415,6 +417,7 @@
     heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Skriv ut intyg
   gender:
     male: Man
@@ -451,12 +454,6 @@
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
   compatability:
-    https:
-      header: Aktivera HTTPS för Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Dölj denna varning
     working:
       header: Vi arbetar för stöd till din webbläsare.
       message: Code.org använder modern webbteknik vilket gör webbplatsen snabbare

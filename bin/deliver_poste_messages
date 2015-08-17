@@ -11,13 +11,13 @@ MAX_THREAD_COUNT = 30
 MIN_MESSAGES_PER_THREAD = 50
 
 SMTP_OPTIONS = {
-  address:CDO.poste_smtp_server,
-  port:587,
-  domain:'code.org',
-  user_name:CDO.poste_smtp_user,
-  password:CDO.poste_smtp_password,
-  authentication:'plain',
-  enable_starttls_auto:true,
+  address: CDO.poste_smtp_server,
+  port: 587,
+  domain: 'code.org',
+  user_name: CDO.poste_smtp_user,
+  password: CDO.poste_smtp_password,
+  authentication: 'plain',
+  enable_starttls_auto: true,
 }
 #SMTP_OPTIONS = {
 #  address:'localhost',
@@ -55,7 +55,7 @@ module Poste
 
     def render(params={})
       if params.has_key?('form_id')
-        form = Form2.from_row(DB[:forms].where(id:params['form_id']).first)
+        form = Form2.from_row(DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
         params.merge! form.processed_data
         params['form'] = form
@@ -100,21 +100,22 @@ class Deliverer
 
   def initialize(params)
     @params = params.dup
-    @smtp = smtp_connect
+    @smtp = smtp_connect unless rack_env?(:development)
     @templates = {}
   end
 
   def send(delivery)
-    recipient = POSTE_DB[:contacts].where(id:delivery[:contact_id]).first
+    recipient = POSTE_DB[:contacts].where(id: delivery[:contact_id]).first
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
     encrypted_id = Poste.encrypt_id(delivery[:id])
     params = JSON.parse(delivery[:params])
+    unsubscribe_url = poste_url("/u/#{CGI::escape(encrypted_id)}")
 
     header, html, _ = load_template(message[:name]).render(params.merge({
-      recipient:OpenStruct.new(recipient),
-      encrypted_id:encrypted_id,
-      unsubscribe_link:poste_url("/u/#{encrypted_id}"),
-      tracking_pixel:poste_url("/o/#{encrypted_id}"),
+      recipient: OpenStruct.new(recipient),
+      encrypted_id: encrypted_id,
+      unsubscribe_link: unsubscribe_url,
+      tracking_pixel: poste_url("/o/#{encrypted_id}"),
     }))
 
     message = StringIO.new
@@ -122,7 +123,7 @@ class Deliverer
     to_address = parse_address(header['to'], recipient)
     message.puts 'To: ' + format_address(to_address)
 
-    from_address = parse_address(header['from'], {email:'help@code.org', name:'Code.org'})
+    from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
     message.puts 'From: ' + format_address(from_address)
 
     ['Reply-To', 'Sender'].each do |field|
@@ -132,6 +133,9 @@ class Deliverer
 
     subject = header['subject'].to_s.strip
     message.puts 'Subject: ' + subject unless subject.empty?
+
+    message.puts "X-Unsubscribe-Web: #{unsubscribe_url}"
+    message.puts "List-Unsubscribe: <#{unsubscribe_url}>"
 
     message.puts 'MIME-Version: 1.0'
 
@@ -165,7 +169,11 @@ class Deliverer
     message.puts ''
     message.puts "--#{marker}--"
 
-    @smtp.send_message message.string, from_address[:email], to_address[:email]
+    if !rack_env?(:development)
+      @smtp.send_message message.string, from_address[:email], to_address[:email]
+    else
+      puts(message.string)
+    end
   end
 
   private
@@ -203,9 +211,9 @@ class Deliverer
     string.split(', ').map do |user_string|
       if user_string.include? '<'
         user_string =~ /^([^<]*)<([^>]*)>$/
-        {name:$1.strip, email:$2}
+        {name: $1.strip, email: $2}
       else
-        {name:nil, email:user_string}
+        {name: nil, email: user_string}
       end
     end
   end
@@ -217,7 +225,7 @@ class Deliverer
     email = defaults[:email].to_s.strip
     return nil if email.empty?
 
-    {email:email}.tap do |address|
+    {email: email}.tap do |address|
       name = defaults[:name].to_s.strip
       address[:name] = name unless name.empty?
     end
@@ -246,7 +254,7 @@ def main()
   started_at = Time.now
 
   queue = Queue.new.tap do |results|
-    POSTE_DB[:poste_deliveries].where(sent_at:nil).limit(BATCH_SIZE).reverse_order(:id).each{|i| results << i}
+    POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each{|i| results << i}
   end
 
   queue_count = queue.length
@@ -270,12 +278,12 @@ def main()
         raise
       end
 
-      POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
+      POSTE_DB[:poste_deliveries].where(id: delivery[:id]).update(sent_at: DateTime.now)
     end
   end
   workers.each(&:join)
 
-  remaining_count = POSTE_DB[:poste_deliveries].where(sent_at:nil).count
+  remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
 
   elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
 

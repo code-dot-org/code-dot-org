@@ -260,6 +260,7 @@
       free_play:
         playlab: Lumikha ng App
         artist: Gumuhit ng isang bagay
+        calculate: Calculate Something
     user:
       classroom: Home Page ng Teacher
       district_dashboard: District Dashboard
@@ -405,6 +406,7 @@
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -418,11 +420,13 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Lalaki
@@ -460,12 +464,6 @@
     autoplay_option: I-Autoplay ang mga videos
     download: I-download ang video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Itago ang babalang ito
     working:
       header: Nagsusumikap kami sa suporta para sa iyong browser.
       message: Code.org ay gumagamit ng modernong teknolohiya sa web . Ginagawa nitong

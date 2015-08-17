@@ -220,6 +220,7 @@ el:
       free_play:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
+        calculate: Calculate Something
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
       district_dashboard: Περιοχή Ταμπλό
@@ -303,7 +304,7 @@ el:
     panel:
       answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
-      viewing_solution: Viewing Solution
+      viewing_solution: Προβολή λύσης
       try_it_yourself: Δοκίμασέ το μόνος σου
       section: Ενότητα
   user:
@@ -349,6 +350,7 @@ el:
     local_school: τοπικό σχολείο
     online: σε σύνδεση
     see_details: Δείτε λεπτομέρειες
+    view_course: View Course
     prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
     tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
     trynow: Δοκιμάστε τώρα
@@ -363,6 +365,7 @@ el:
     heading_legacy: '<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>'
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Αγόρι
@@ -396,10 +399,6 @@ el:
     autoplay_option: Αυτόματη αναπαραγωγή βίντεο
     download: Κατεβάστε το βίντεο
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
     working:
       header: Εργαζόμαστε για την υποστήριξη του προγράμματος περιήγησης που χρησιμοποιείτε.
       message: "Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει τον ιστότοπο πιο γρήγορο για  να χρησιμοποιήσετε. Ο Φυλλομετρητή  σας δεν υποστηρίζει όλα τα χαρακτηριστικά που απαιτούνται, και ενδέχεται να αντιμετωπίσετε ζητήματα κατά τη χρήση αυτού του μέρους της ιστοσελίδας. Παρακαλώ βοηθήστε μας εκθέτοντας <a href='%{report_issue_url}'> οποιαδήποτε ζητήματα που βρίσκετε</a>. Μπορείτε επίσης να <a href='%{supported_browsers_url}'> αναβαθμίσετε τον φυλλομετρητή σας σε μια υποστηριζόμενη έκδοση</a>."

@@ -291,7 +291,7 @@ ko:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: '사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: '사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: '사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: '사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의 오른쪽에 삼각형을 넣습니다'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -420,7 +420,7 @@ ko:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Maze Multiple Choice One: 미로 퍼즐 객관식1
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Which set of blocks is the correct answer?: 다음중 어떤 블록들이 정답일까요?
       4-5 Algorithms Multi 1:
         Baking cookies: 쿠키를 굽고
         Banana: 바나나
@@ -752,6 +752,22 @@ ko:
         Driver and Helper: 드라이버와 헬퍼
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: '이들 중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.'
         This time, which boy is the <large>driver</large>?: '이번에는 누가 <large>드라이버</large>일까요?'
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
+        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: random(랜덤)
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

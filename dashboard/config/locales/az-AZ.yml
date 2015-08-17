@@ -263,6 +263,7 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Müəllimin ev səhifəsi
       district_dashboard: District Dashboard
@@ -407,6 +408,7 @@
     local_school: yerli məktəb
     online: onlayn
     see_details: Təfərrüatına baxın
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -425,6 +427,7 @@
     heading_legacy: <h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>
     your_gallery: Qalereya
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Kişi
@@ -461,12 +464,6 @@
     autoplay_option: Videoların avtoifası
     download: Videonu endir
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Bu xəbərdarlığı gizlət
     working:
       header: Veb səyyahınızın dəstəklənməsi üzərində işləyirik.
       message: Code.org uses modern web technology. This makes the site faster to

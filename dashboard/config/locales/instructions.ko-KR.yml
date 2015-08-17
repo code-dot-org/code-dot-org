@@ -3,13 +3,12 @@
     instructions:
       2-3 Artist 1 new_instruction: 안녕, 친구들. 나는 화가란다. 너는 내가 무엇을 그리게 하려면 주어진 블록들로 코드를
         작성할 수 있어. 최대한 적은 블록으로 화면에 표시된 회색 선들을 그려 봐. 각 선들은 길이가 100이야.
-      2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon\nwith
-        8 sides, each 100 pixels long. How many degrees should you turn? (Hint:\nWhat
-        is 360 divided by 8?) \n"
-      2-3 Artist 12_instruction: 반복 블럭으로 원을 그려서 눈알을 완성해 봐. 한 번 돌 때마다 1도씩 움직이면, 1도씩
-        몇 번을 돌아야 360도가 될까?
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
-        100, but the half-finished wall is only 50. Complete the wall. \n"
+      2-3 Artist 11_instruction: '각각 100픽셀인 변 8개로 팔각형인 정지 표지판을 만들어보세요. 얼마나 각을 높여야
+        할까요? (도움말: 360을 8로 나누면 무엇일까요?) '
+      2-3 Artist 12_instruction: '"반복 회수"블럭을 설정해서 "원"을 만들어 눈알을 완성하세요. 한 번 움직일 때마다
+        1도씩 오른쪽으로 움직인다고 할 때 원을 완성시키려면 몇 번을 반복해야 할까요? 180? 360? 500?'
+      2-3 Artist 2 new_instruction: '이 집의 벽은 다 완성되지 않았습니다. 각 측면은 100이지만, 완성되지 않은 벽은
+        50입니다. 벽을 완성하세요. '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: 이 '점프' 블록은 그림을 그리지 않고 예술가를 이동시킬 수 있다. '점프'와 '그리기'
@@ -18,19 +17,18 @@
       2-3 Artist 3new_instruction: 빨간 모자의 높이는 100픽셀입니다. 이것보다 70픽셀 더 짧은 검은 모자를 그리세요.
         검은 모자의 너비는 50픽셀입니다.
       2-3 Artist 4_instruction: 이 고양이를 위한 집을 완성해주세요.
-      2-3 Artist 5_instruction: “repeat times” 블록을 단 세 번만 사용하여 동일한 집을 그리도록 코드를 바꾸세요.
+      2-3 Artist 5_instruction: 이 코드를 “반복 횟수” 블록으로 바꾸되 단 세번만 사용해 같은 모양의 집을 그려주세요.
       2-3 Artist 6_instruction: 이 집은 지붕이 없잖아! 정삼각형 지붕을 그려야 되겠어. 네가 해 줄 수 있니?
       2-3 Artist 7_instruction: "마지막 윈도우의 오른쪽 절반을 완성하세요.\n윈도우는 25픽셀 크기의 정사각형입니다. \n"
       2-3 Artist 8_instruction: 각 동물을 위해 직사각형의 방을 두 개의 동일한 정사각형 방으로 쪼개주세요. 직사각형은 너비
         200픽셀, 높이 100픽셀입니다.
       2-3 Artist 9_instruction: 이 연을 완성해 봐.
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
+      2-3 Artist Assessment 1_instruction: '평가: 가로 25 픽셀 및 세로 25 픽셀 크기 마지막 치아 그리기
+        완료.'
       2-3 Artist Debugging 1_instruction: 이 모자의 최고 길이를 100으로 만들 수 있나요?
       2-3 Artist Debugging 10_instruction: 내 게임패드의 방향 키의 길이가 너무 좁습니다. 10픽셀 더 늘리세요.
-      2-3 Artist Debugging 11_instruction: 멋진 눈송이를 완성해 주세요. 이것을 완성시키기 위해 “repeat”이
-        얼마나 많이 사용되나요?
+      2-3 Artist Debugging 11_instruction: 멋진 눈송이를 완성하게 도와 주세요. 완성시키기 위해 “반복”을 얼마나
+        많이 사용해야 하나요?
       2-3 Artist Debugging 12_instruction: 이 장면에 파도를 추가하고 싶습니다. 도와주시겠어요?
       2-3 Artist Debugging 2_instruction: '세 개의 수염을 그리기 위한 이 코드는 현재 에러가 있습니다. 이 코드를
         수정하세요. 힌트: 각 수염을 75픽셀로 늘리세요.'
@@ -40,11 +38,9 @@
       2-3 Artist Debugging 5_instruction: '다리와 발을 그려야할 이 코드는 현재 틀렸습니다. 힌트: 발이 너무 길어요.'
       2-3 Artist Debugging 6_instruction: 현재 다리가 하나 없는 의자에 앉아있습니다. 다리 그리는 블록을 수정해주세요.
       2-3 Artist Debugging 7_instruction: 현재 코드가 그린 C가 뒤집어져 있는 것 같습니다. 고쳐주세요.
-      2-3 Artist Debugging 8_instruction: 바람개비가 완성되지 않았습니다. 이를 완성하기 위해 repeat이 얼마나
-        필요하나요?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
+      2-3 Artist Debugging 8_instruction: 바람개비가 완성되지 않았습니다. 완성하려면 얼마나 반복해야 하나요?
+      2-3 Artist Debugging 9_instruction: '줄기 관련 코드가 올바르지 않습니다. 힌트: 각도를 60도 정도 꺾어
+        보세요.'
       2-3 Artist Debugging Assessment 1_instruction: '현재 이 도형이 너무 작습니다. 크게 그려주세요.
         힌트: 각 모서리가 75픽셀 더 길어야 합니다.'
       2-3 Artist Free Play_instruction: 자유 시간이야! 그리고 싶은 것을 그려 봐.
@@ -58,10 +54,8 @@
         바꾼다면 어떻게 될까요?
       2-3 Artist Functions 11_instruction: “사각형 그리기” 함수의 이름을 “육각형 그리기”로 바꿨지만, 여전히
         이 함수는 사각형을 그립니다. 각 모서리의 길이가 50픽셀인 육각형을 그리도록 이 함수를 바꿔주세요.
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
+      2-3 Artist Functions 12_instruction: '복잡한 그림을 여러차례 그리기에 아주 훌륭한 함수입니다. 화분의 나머지를
+        채우기 위해 "꽃 그리기" 함수를 사용하시겠습니까?(힌트: 식물은 100 픽셀 길이로 전부 구분됩니다)  '
       2-3 Artist Functions 13_instruction: |
         We've provided you with four functions.
         Use them any way you like inside of one or more loops to make pictures that
@@ -75,7 +69,7 @@
         Edit the function to draw a square with
         a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
         apart.
-      2-3 Artist Functions 4_instruction: “repeat” 블록을 사용해서 세 개의 정사각형을 그리세요.
+      2-3 Artist Functions 4_instruction: “반복” 블록을 사용해서 이 정사각형을 세 개 그리세요.
       2-3 Artist Functions 7_instruction: |
         Use the "draw a house" function to draw
         two houses using two different parameters. (Hint: the first house is 100 pixels).
@@ -89,12 +83,9 @@
       2-3 Artist Loops 11_instruction: |
         Now let's put *another* loop around our
         whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+      2-3 Artist Loops 2_instruction: 이제 반복 블럭을 사용해 셀을 조개로 만들어 봅니다.
+      2-3 Artist Loops 4_instruction: 루프(loop)를 사용해 그 모양을 자꾸 반복할 경우 무슨 일이 일어날지 확인해
+        볼까요?
       2-3 Artist Loops 5_instruction: |
         Now let's make a small change to the loop
         and see how different our picture becomes.
@@ -114,9 +105,8 @@
       2-3 Artist Loops New 10_instruction: |
         Now let's connect a bunch of V's together,
         drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist Loops New 11_instruction: 이번에는 그걸 24번 그려 볼까요. 30도 왼쪽으로 회전하기를 이 코드에
+        추가해서 반복 블럭에 해당 코드를 전부 넣어 주세요.
       2-3 Artist Loops New 12_instruction: |
         Draw a diamond with sides of 100 pixels.
       2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
@@ -124,9 +114,8 @@
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
       2-3 Artist Loops New 15_instruction: 재미있는 것을 그려봐.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
+      2-3 Artist Loops New 2_instruction: 자 정사각형 그리기에 사용한 코드 일부가 있습니다. 반복 블록을 사용해
+        이 코드를 4번 실행하면 어떤 일이 일어날까요?
       2-3 Artist Loops New 9_instruction: |
         Draw a simple V where both sides are 50
         pixels to complete the arrow.
@@ -301,17 +290,13 @@
       2-3 Bee Loops 12_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: '평가: 반복 블록을 사용해 꿀을 전부 모아 주세요.'
       2-3 Bee Loops 1A_instruction: '안녕, 나는 꿀벌이야. 이 꽃들로 부터 꽃꿀을 모을 수 있게 도와줄 수 있나요? '
       2-3 Bee Loops 2_instruction: '''루프''를 사용해서 꽃꿀을 모아서 꿀을 만드세요.'
       2-3 Bee Loops 2A_instruction: '''루프''를 사용해서 같은 작업을 보다 쉽게 할 수 있나요?'
       2-3 Bee Loops 3_instruction: 각각의 꽃으로 부터 꽃꿀을 모아서 각각의 벌집에서 꿀을 만드세요.
       2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
+      2-3 Bee Loops 3B_instruction: 이제 새로 만든 반복 블록을 사용해 꽃의 수액을 모두 모아 꿀을 만듭니다.
       2-3 Bee Loops 4_instruction: |
         Use a similar loop as the last puzzle, but work
         a turn into it.
@@ -339,19 +324,14 @@
         of \"move forward\" blocks together and press \"Run\". \n"
       2-3 Maze 10_instruction: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
       2-3 Maze 11_instruction: 나를 꽃에 데려가줘. 너무 배고파! 블록을 몇 번이나 반복해야 겠어?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze 12 (copy 1)_instruction: '앞의 정답을 블록 두개로 바꿔서 처리해볼까요?(힌트: "반복횟수" 블록을
+        사용해 루프를 만들어 보세요)'
+      2-3 Maze 12 (copy 2)_instruction: '앞의 정답을 블록 두개로 바꿔서 처리해볼까요?(힌트: "반복횟수" 블록을
+        사용해 루프를 만들어 보세요)'
       2-3 Maze 12 (old)_instruction: '"반복 횟수" 블록을 사용해서 나를 돼지에게 데려가줘!'
-      2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
+      2-3 Maze 12_instruction: '지금 만든 다섯개의 블록을 딱 두개의 블록으로 바꿔서 처리할 수 있을 까요?(힌트: "반복횟수"
+        블록을 사용해 루프를 만들어 보세요)'
+      2-3 Maze 13 (old)_instruction: 막힐 때까지 반복해서 나를 돼지에게 데려다 주세요!
       2-3 Maze 13_instruction: 두개의 블록만 사용해서 나를 돼지에게 데려가줘.
       2-3 Maze 14 (old)_instruction: '"반복..까지" 블록을 사용해서 나를 돼지에게 데려가줘!'
       2-3 Maze 14_instruction: |
@@ -479,11 +459,6 @@
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
         complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
       4-5 Artist For Loops 3_instruction: |
         How can we count from 1 to 50? Edit the
         "for" block.
@@ -793,7 +768,7 @@
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
+        The "If-else" block checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
       4-5 Maze Conditionals 9_instruction: |
@@ -982,9 +957,6 @@
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1327,11 +1299,17 @@
       Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the \"see the solution\" button."
+        to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor
+        the solution."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: |
         Can you loop this code to draw the greyed out
         square?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: |
         Try to figure out what happens if you run this
         code (or press "Run" to test it). Then, repeat it enough times to complete
@@ -1349,7 +1327,7 @@
         Hint: There are 3 triangles within the 360 degree rotation...how many times
         does 3 go into 360?
       Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles.  This is called a nested loop.  Hint: All 10 triangles complete\na
+        triangles. This is called a nested loop. Hint: All 10 triangles complete\na
         360 degree rotation.  \n"
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
@@ -1358,12 +1336,11 @@
         Loop this design 10 times and make sure to
         turn between each shape that's drawn. Here's a hint for how much you have
         to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: |
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to turn on the go from left
-        to right, top to bottom, filling in the squares when it sees a 1 and ignoring
-        it when it sees a 0. Run this code to see how the artist uses binary to draw
-        this pattern.
+      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring
+        of 1's and 0's and instructs the artist to follow them from left\nto right,
+        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
+        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
+        artist uses binary to draw this pattern."
       Course 4 Artist Binary 2_instruction: |
         Which of these binary strings could
         you loop 8 times to draw this image?
@@ -1407,6 +1384,11 @@
         and adds one side at a time until it draws a decagon (10 sides). Each side
         should be 100 pixels long. Hint: 360 divided by the number of sides a shape
         has is the number of degrees you'll need to turn.
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
+        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
+        shape has two more sides than the last.  Make sure that each side is\n10 times
+        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
+        code has been provided for you."
       Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
         like to draw each shape next to the last one. This time each side is\n20 pixels.
         Use a jump block to jump forward 40 pixels after each shape. \n"
@@ -1454,6 +1436,11 @@
       Course 4 Artist For Loops 9_instruction: |
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
+        for the solution."
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
         pixels in length, using a loop?
@@ -1512,8 +1499,8 @@
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the `see the solution` button."
+        to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor
+        the solution."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1571,8 +1558,8 @@
         modify it so it uses the "sides" variable instead. Replace the number 3
         with the "sides" variable. Hint: remember to use the "set sides to" block.
       Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
+        Can you help me draw an equilateral triangle?
+        It has to be exactly 100 pixels long on each side.
       Course 4 Artist Vars 10_instruction: |
         Here's an algorithm that draws a triangle
         out of smaller triangles. Can you modify it so that it uses the "sides"
@@ -1597,13 +1584,13 @@
         from the toolbox to set the "length" variable, and also update the "sides"
         variable.
       Course 4 Artist Vars 14_instruction: |
-        Free Play: Check it out, now your algorithm
-        is nested within one more loop. Experiment with changing the values of the
-        your two variables to draw cool patterns.
+        Free Play: Check it out! Now your algorithm
+        is nested within one more loop. Experiment with changing the values of your
+        two variables to draw cool patterns.
       Course 4 Artist Vars 2_instruction: |
-        Instead of "moving forward by 100,"
-        the "move" block is now referencing the variable "length." Can you set
-        "length" to 150 to draw this new triangle?
+        Instead of using "move forward by 100,"
+        the "move" block is now referencing a variable called "length." Can you
+        set "length" to 150 to draw this new triangle?
       Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
         missing. Can you fix it so that it uses the variable \"length\"\nto figure
         out how long each side should be? \n"
@@ -1614,11 +1601,10 @@
       Course 4 Artist Vars 5_instruction: |
         Use the variable "sides" to control
         how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: |
-        I changed the sides variable to 4 from
-        the code in the last puzzle, can you use the sides variable (along with a
-        math block) to make sure that I turn the right amount? To draw a regular polygon
-        I should turn 360 / sides each time.
+      Course 4 Artist Vars 6_instruction: "I added a variable called \"sides\" that\nis
+        set to 4. Can you use the \"sides\" variable (along with the math block)\nto
+        make sure that I turn the right amount to make a square? \r\n\r\nHint:\nTo
+        draw a regular polygon I should turn 360/sides each time."
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1629,8 +1615,8 @@
         time) \n"
       Course 4 Artist Vars 9_instruction: |
         Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Use the "set sides
-        to" block.
+        variable instead of a fixed number to draw a triangle. Don't forget to use
+        the "set sides to" block.
       Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! First,\ncheck
         if it is a flower or a honeycomb. Then only gather nectar from it if\nit is
         a flower. \n"
@@ -1646,6 +1632,17 @@
         nectar. Here an if-else block is combined with another if-else block to create
         an if, else-if, else block. Complete the solution to collect the unknown amount
         of nectar.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: |
         Use a loop to collect the nectar from
         each flower.
@@ -1653,6 +1650,9 @@
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: |
         Here's a new kind of loop, called the
         "for" loop. This particular for loop will count from 1 to 5 by 1, and run
@@ -1720,8 +1720,8 @@
       Course 4 Bee Params 6_instruction: |
         Wouldn't it be nice if we could collect
         all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectars" to control the amount of nectar to collect.
-        You'll probably want to rename the function too!
+        to your function called "nectar units" to control the amount of nectar to
+        collect. You'll probably want to rename the function too!
       Course 4 Bee Params 7 (copy 1)_instruction: |
         Try using your new function to
         collect all of this nectar.
@@ -1729,8 +1729,10 @@
         Try using your new function to collect
         all of this nectar.
       Course 4 Bee Params 8_instruction: |
-        Oooh, now there's honey to deal with too!
-        How could you update your function to either get nectar or make honey.
+        Challenge: Now there's honey to deal with
+        too! Rewrite your function to take in both the number of honey units and the
+        number of nectar units.  How would you use those numbers to decide what you
+        should do?
       Course 4 Binary 1_instruction: |
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
@@ -1778,16 +1780,17 @@
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
         to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: |
-        We've added one last function for
-        you to use. Program your game to call the "level_up" function if "player_points"
-        > 10. Play the game, and make it past level 4 to move to the next puzzle.
-      Course 4 Play Lab Params 2_instruction: |
-        Now we've got flags that are too
-        high for our current jump! Let's add a parameter to our jump function called
-        "height." The up arrow should jump 200 pixels, but the down arrow should
-        jump 100 pixels. Click "edit" on the jump function and update it so that
-        it uses the height parameter instead of just jumping 100 pixels.
+      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou
+        to use. \r\n\r\nProgram your game to call the \"level_up\" function if\n\"player_points\"
+        > 10.  \r\n\r\nPlay the game, and make it past level 4 to\nmove to the next
+        puzzle. "
+      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh
+        for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that
+        we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto
+        our jump function called \"height\".  The up arrow should cause the dog\nto
+        jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint:
+        You will need to click \"edit\" on the jump function and update\nit so that
+        it uses the \"height\" parameter."
       Course 4 Play Lab Params 3_instruction: "Let's add another parameter to the\njump
         function so that we can use it with other actors. Each actor is represented\nby
         a number, starting from one. Edit the \"jump\" function so that the definition\nincludes
@@ -1803,25 +1806,27 @@
         Add another parameter called "speed"
         to the "patrol" function. Use a "set speed" block with the new "speed"
         parameter.
-      Course 4 Play Lab Params 7_instruction: |
-        Use the arrow keys to control the
-        Dog and collect all of the flags.
+      Course 4 Play Lab Params 7_instruction: "Look at the code provided to see if\nyou
+        can figure out what each block does.  \r\n\r\nWhen you're done, use the\narrow
+        keys to control the Dog and collect all of the flags."
       Course 4 Play Lab Params 8_instruction: |
         Use a "when touching" block to send
-        the Dog back to the top-left if the Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's one of the games we were working\non
-        earlier. We've added a function called \"score_points\" that takes a parameter\n\"points.\"
-        Edit the function so that the \"points\" parameter is added to\nthe \"player_points\"
-        variable. Have the Dog score 10 points to move on to\nthe next puzzle. \n"
+        Dog back to the top-left ONLY if Dog touches any of the other actors.
+      Course 4 Play Lab Params 9_instruction: "You may recognize this game from an\nearlier
+        level. \r\n\r\nWe've added a function called \"score_points\" that\ntakes
+        the parameter \"points\". \r\n\r\nEdit the function so that the \"points\"\nparameter
+        is added to the \"player_points\" variable. \r\n\r\nWhen you're\ndone, click
+        \"Run\" to play.  When Dog scores 10 points, you will move on\nto the next
+        puzzle. "
       Course 4 Play Lab Vars 1_instruction: |
-        You don't have to write any code, just
-        hit "run" to play the game! In this game, you're the Dog who is trying
-        to collect more flags than the Cat. Use the down arrow to control the Dog.
-        Press "Finish" when you're done playing.
+        This time you don't have to write any
+        code, just hit "Run" to play the game! In this game, you're the Dog who
+        is trying to collect more flags than the Cat. Use the down arrow to control
+        the Dog. Press "Finish" when you're done playing.
       Course 4 Play Lab Vars 2_instruction: |
-        That race wasn't very fair! Change
-        the "dog_speed" variable to make sure you can collect more flags than the
-        Cat. The first to collect 10 flags wins!
+        The race in that last puzzle wasn't
+        very fair! Change the "dog_speed" variable to make sure you can collect
+        more flags than the Cat. The first to collect 10 flags wins!
       Course 4 Play Lab Vars 3_instruction: |
         Here's a new kind of game! Use the
         left and right arrows to move, and the up arrow to jump. See if you can collect
@@ -1829,8 +1834,7 @@
       Course 4 Play Lab Vars 4_instruction: |
         Now we're using a variable called "height"
         to control how high the dog can jump. Update the "height" variable so that
-        the dog can jump high enough to reach all the flags. Hint: the new flags are
-        200 pixels high.
+        the dog can jump high enough to reach all the flags.
       Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
         score. Use the \"set points to\" block to set the score to 10. \n"
       Course 4 Play Lab Vars 6 (copy 1)_instruction: |
@@ -1842,7 +1846,7 @@
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |
         In our game, how should we score points?
-        Add 1 to your "points" variable each time the Dog hits the Cat with a fireball.
+        Add 1 to your "points" variable each time the Dog hits the Cat with a heart.
         Use the "when actor 2 touches anything" event to trigger an update to your
         score. You can increment your variable by setting "points = points + 1."
         Get your score up to 10 (going one at a time!) to pass the level.
@@ -1865,9 +1869,9 @@
         works like you'd like it to.
       Course 4 Play Lab Vars 9_instruction: |
         Free Play time! Here are all of the
-        variables we've played with so far, as well as a few more in case you want
-        them. Make a game or story that uses these variables. Hint: scroll down to
-        see all the commands in the work space.
+        variables we've played with so far in this stage, as well as a few more in
+        case you want them. Make a game or story using any of these variables. Hint:
+        scroll down to see all the commands in the work space.
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
@@ -2053,7 +2057,7 @@
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2238,9 +2242,8 @@
       Infinity_move_right_instruction: |
         Hiro is "actor 1".  Use the Move block
         to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
+      Infinity_repeat_instruction: '"무한 반복" 블록을 사용해 안나(Anna)가 400픽셀을 위 아래로 왔다갔다 하게
+        하세요.'
       Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
       Infinity_shoot_instruction: |
         Baymax is "actor 2".  Make Baymax throw a rocket
@@ -2257,6 +2260,7 @@
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
@@ -2529,6 +2533,55 @@
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2587,8 +2640,8 @@
         function from the last puzzle to draw this pattern."
       NEW Course 4 Artist Functions 13_instruction: |
         Can you draw a star shape using
-        the "draw a line of squares" function? Hint: you may have to move forward
-        60 pixels and  turn 144 degrees
+        the "draw a line of squares" function? Hint: Each iteration, you'll have
+        to move forward a certain number of pixels and turn 144 degrees.
       NEW Course 4 Artist Functions 14_instruction: 자유 시간!
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
@@ -2619,6 +2672,11 @@
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've
+        now learned everything you need to know to make a pattern like this!\nIf this
+        picture inspires you, try to make something similar. Otherwise, create\nsomething
+        all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
+        Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
@@ -2633,6 +2691,9 @@
       NEW Course 4 Artist Params 12_instruction: |
         Can you complete this drawing?
         The sides of all the shapes are 100 pixels long.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
@@ -2673,13 +2734,17 @@
         definition of "draw a square" and add a parameter. It should take a length
         parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
         pixels in length, each 100 pixels apart.
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530
+        for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
         how the \"set length\" block and \"length\" block works together? Click\non
         \"Run\" to see it in action. \n"
       NEW Course 4 Artist Vars 12_instruction: |
-        Modify this algorithm so it uses
-        the "sides" variable instead of a fixed number to draw a pentagon. Replace
-        the number 5 with the "sides" variable, and use the "set sides to" block.
+        Now, modify the code from the last
+        level to create a pentagon with sides of 100.
       NEW Course 4 Artist Vars 2.5_instruction: "Take a look at the code, can you\nsee
         how the \"set length\" block and \"length\" block works together? Click\non
         \"Run\" to see it in action. \n"
@@ -2709,45 +2774,55 @@
         Add the code necessary to make sure
         the bee collects all the nectar. Look at how much code you need for this puzzle!
         (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: "Ah, the for loop makes this much\neasier!
-        All the code you need is there, take a look at how it is put together\nthen
+      NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
+        easier! All the code you need is here, take a look at how it is put together\nthen
         click \"Run\" to see how it works. \n"
       NEW Course 4 Bee For Loops 4 4_instruction: "Can you help the Bee collect the\nrest
         of the honey using this for loop? \n"
-      NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the for loop\nwith
+      NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the \"for loop\"\nwith
         the largest amount of nectar the bee has to collect. \n"
       NEW Course 4 Bee For Loops 5 5_instruction: |
         Are you getting the hang of using
-        the for loop? Let's help the bee get the rest of the nectar.
+        the "for loop"? Let's help the bee get the rest of the nectar.
       NEW Course 4 Bee For Loops 5_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
+        You can also use a "for loop"
+        to count down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment." Each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
+        is called the "increment". Each time the loop is run, the counter variable
+        changes by the value of the increment. Try collecting these flowers using
+        an increment of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of for
-        Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-        You’re given the starter code except for the numbers in the counter loops.
-        Let's collect some nectar!
-      NEW Course 4 Bee For Loops 8_instruction: "If your loop is counting up, the\nincrement
-        is added to your counter variable each loop. What should your increment\nbe
-        to collect 3, 6, 9 nectar?\r\n"
+        Are you getting the hang of "for
+        loops"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
+      NEW Course 4 Bee For Loops 8_instruction: "What will you do if we take away\nsome
+        blocks? Can you add them back to help the bee collect the nectar?\r\nRemember:\nIf
+        your loop is counting up, the increment is added to your counter variable\neach
+        time through. What should your increment be to collect 3, 6, 9 nectar?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: |
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
         your increment be to collect 9, then 6, and then 3 nectar?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: "It's Free Play time! Have fun\nwith
         all the blocks in your tool box. \n"
-      NEW Course 4 Play Lab Params 5 5_instruction: "Fill in actor parameter inputs\nwith
-        numbers (1, 2, and 3) to make these actors patrol. \n"
+      NEW Course 4 Play Lab Params 5 5_instruction: |
+        Let's try that again, but with
+        less help. What do you need to edit this time to make the actors patrol?
       NEW Course 4 Play Lab Vars 4 5_instruction: |
         “What do you think this code will
         do? Press “Run” to see what happens.”
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play\ntime,
         have fun with all the blocks in your tool box. \n"
+      NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
+        the \"for loop\" to get every actor to go around and say their actor number,\nthen
+        vanish from the screen? \n"
       New Play Lab Project_instruction: |
         Create your own story or game! Your code
         is saved as a project you can return to at any time.
@@ -2793,61 +2868,18 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -2880,9 +2912,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -2991,10 +3023,6 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3385,12 +3413,139 @@
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
+      U3L23 Chatbot Intro 2_instruction: |
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

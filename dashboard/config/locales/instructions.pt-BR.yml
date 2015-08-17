@@ -549,11 +549,6 @@
         Alguém começou o código, mas então percebeu que
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
         complete a espiral hexagonal. (Dica: a última linha tem 200 pixels).
-      4-5 Artist For Loops 2_instruction: |
-        Este é um bloco "para". Ao invés de digitar
-        1, 2, 3... 10, o bloco "para" pode repetir os blocos dentro dele e contar os
-        números para você. Coloque o número 10 na seção "até" do bloco
-        "para".
       4-5 Artist For Loops 3_instruction: |
         Como podemos contar de 1 até 50? Edite o
         bloco "para".
@@ -748,9 +743,9 @@
         1, 2 ou 3 néctares. Complete a função "verifique a flor roxa" e use-a
         para coletar todo o néctar das flores.
       4-5 Bee Conditionals 8_instruction: |
-        Escreva uma função dentro do bloco chamado
-        "verifique a flor e produza mel". Sua função deve verificar quanto néctar a
-        flor roxa tem e coletá-lo, avançar e então produzir mel.
+        Escreva dentro da função "verifique flor e
+        produza mel". Sua função deve verificar se a flor roxa tem 3, 2 ou
+        1 néctar e coletar todo o néctar. Então, siga em frente e produza mel.
       4-5 Bee Conditionals Assessment 1_instruction: |
         Avaliação: esse código está errado.
         Complete a função "colete néctar ou produza mel" e então chame-a para coletar
@@ -1070,9 +1065,6 @@
         verdadeiro se a distância entre dois pontos for menor que 100 pixels. Se
         completá-la corretamente, seus objetos vão colidir instantaneamente - por que você
         acha que isso acontece?
-      Big Game Complete (copy 1)_instruction: |
-        Uma demonstração do projeto Grande Jogo
-        da Álgebra em CC completo
       Big Game Complete_instruction: |
         Uma demonstração do projeto Grande Jogo da Álgebra em CC
         completo
@@ -1404,23 +1396,30 @@
       Course 4 2_instruction: |
         Agora a abelha só quer néctar. Lembre-se, nem
         todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
-      Course 4 Artist 1_instruction: "Ajude-me a terminar de desenhar minha caixa.
-        (Cada linha tem\n300 pixels de comprimento) \n"
-      Course 4 Artist 10_instruction: "Atividade livre! Divirta-se e desenhe\no que
-        quiser. \n"
+      Course 4 Artist 1_instruction: "Ajude-me a desenhar uma caixa. (Cada linha tem\n200
+        pixels de comprimento) \n"
+      Course 4 Artist 10_instruction: "É hora da atividade livre! Temos aqui o código
+        para\numa forma interessante. O que acontece quando você a repete? Divirta-se
+        e desenhe\no que quiser. \n"
       Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the \"see the solution\" button."
+        Agora um desafio!  Temos aqui um design que
+        usa apenas blocos que já foram mostrados. Você consegue descobrir como
+        recriá-lo sem usar qualquer informação extra? Dica: fique à vontade para usar tentativa
+        e erro. Não esperamos que você seja perfeito na primeira vez.
+      Course 4 Artist 12_instruction: "Atividade livre - Inspiração: agora você aprendeu\ntudo
+        o que precisa para criar um padrão como esse! Se essa imagem inspira\nvocê,
+        tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105671120/edit\npara
+        ver a solução."
+      Course 4 Artist 13_instruction: |
+        Ainda jogando?  Temos aqui uma tela em branco
+        na qual você pode projetar o que quiser!
       Course 4 Artist 2_instruction: |
         Você consegue repetir este código para desenhar
         o quadrado em cinza?
+      Course 4 Artist 20_instruction: |
+        Ainda jogando?  Temos aqui uma tela em branco na qual
+        você pode criar o que quiser!
       Course 4 Artist 3_instruction: |
         Tente descobrir o que acontece se você executar
         esse código (ou clique em "Executar" para ver). Em seguida, execute-o várias vezes para completar
@@ -1430,25 +1429,28 @@
         the repeat block with that number to create a circle of colors.
       Course 4 Artist 5_instruction: |
         Desenhe a outra metade desse design para que ele
-        fique simétrico. Os triângulos são equiláteros e têm 50 pixels de comprimento.
-      Course 4 Artist 6_instruction: "Complete o código para desenhar esses triângulos.
-        \nDica: 3 triângulos em uma rotação de 360 graus.\n"
+        fique simétrico. Os triângulos são equiláteros e têm 50 pixels de comprimento. Dica:
+        talvez você precise executar o código várias vezes para descobrir quais blocos
+        precisam ser adicionados.
+      Course 4 Artist 6_instruction: |
+        Complete o código para desenhar esses triângulos.
+        Dica: há 3 triângulos em uma rotação de 360 graus... quantas vezes o número
+        3 cabe em 360?
       Course 4 Artist 7_instruction: "Agora, aninhe esse laço dentro de outro laço
         para desenhar\n10 triângulos. Isso se chama laço aninhado. Dica: todos os
         10 triângulos completam\numa rotação de 360 graus.  \n"
       Course 4 Artist 8_instruction: |
         Desenhe esse sol repetindo todo este bloco de código
-        12 vezes.
+        várias vezes.
       Course 4 Artist 9_instruction: |
         Repita esse design 10 vezes e certifique-se de virar
         a cada figura desenhada. Uma dica sobre o quanto você
         precisa virar: quanto é 360 dividido por 10?
-      Course 4 Artist Binary 1_instruction: |
-        Temos aqui uma função que recebe uma string
-        binária de 1's e 0's e instrui o artista a mover-se da esquerda para
-        a direita, de cima para baixo, preenchendo os quadrados nos quais ele vê um 1 e ignorando
-        os que têm um 0. Execute esse código para ver como o artista usa números binários para desenhar
-        este padrão.
+      Course 4 Artist Binary 1_instruction: "Temos aqui uma função que recebe uma
+        string\nbinária de 1's e 0's e instrui o artista a mover-se da esquerda para\na
+        direita, de cima para baixo. O artista vai preencher os quadrados nos quais
+        vir um 1 e ignorar\nos que tiverem um 0.\r\n\r\nExecute este código para ver
+        como\no artista usa números binários para desenhar este padrão."
       Course 4 Artist Binary 2_instruction: |
         Qual dessas strings binárias você poderia
         repetir 8 vezes para desenhar esta imagem?
@@ -1492,6 +1494,11 @@
         e adiciona um lado por vez, até que seja desenhado um decágono (10 lados). Cada lado
         deve ter 100 pixels de comprimento. Dica: 360 dividido pelo número de lados de uma forma
         é o número de graus que você vai precisar virar.
+      Course 4 Artist For Loops 11a_instruction: "Vamos juntar tudo!  Usando\nseu
+        conhecimento em \"laços para\" e o \"contador\", crie este desenho no qual\ncada
+        forma tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10
+        vezes maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo
+        código foi fornecida para você."
       Course 4 Artist For Loops 12_instruction: "Isso foi muito legal, mas agora\neu
         gostaria de desenhar uma forma do lado da outra. Desta vez, cada lado tem\n20
         pixels. Use um bloco pule para avançar 40 pixels após cada forma. \n"
@@ -1538,6 +1545,11 @@
       Course 4 Artist For Loops 9_instruction: |
         Você consegue fazer uma espiral? Avance
         de 1 a 75 pixels, aumentando 1 pixel de cada vez.
+      Course 4 Artist For Loops inspire_instruction: "Atividade livre - Inspiração:
+        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
+        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
+        algo\nvocê mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi feito?
+        Acesse\nhttps://studio.code.org/c/106387604 para ver a solução."
       Course 4 Artist Functions 1_instruction: |
         Você consegue desenhar um quadrado com 100
         pixels de comprimento usando um laço?
@@ -1597,9 +1609,9 @@
         completar este bloco de função?
       Course 4 Artist Inspire_instruction: "Atividade livre - Inspiração: agora você
         aprendeu\ntudo o que precisa saber para criar um padrão como esse! Se essa
-        imagem\ninspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê
-        mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi feito? Dê uma\nolhada
-        aqui: https://levelbuilder-studio.code.org/c/8781/edit"
+        imagem\ninspira você, tente fazer algo semelhante. Caso contrário, crie algo
+        você mesmo.\r\n\n\r\nQuer saber como nosso padrão de inspiração foi feito?
+        Visite https://studio.code.org/c/105765376/edit\npara ver a solução."
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1658,8 +1670,8 @@
         Modifique-o para que ele use a variável "lados". Substitua o número 3
         pela variável "lados". Dica: lembre-se de usar o bloco "defina os lados para".
       Course 4 Artist Vars 1_instruction: |
-        Você pode me ajudar a desenhar um triângulo? Ele tem
-        100 pixels de comprimento em cada lado.
+        Você pode me ajudar a desenhar um triângulo equilátero?
+        Ele deve ter exatamente 100 pixels de comprimento em cada lado.
       Course 4 Artist Vars 10_instruction: |
         Aqui temos um algoritmo que desenha um triângulo
         a partir de triângulos menores. Você pode modificá-lo para que ele use a variável "lados"
@@ -1732,6 +1744,17 @@
         néctares. Aqui um bloco se-senão é combinado com outro bloco se-senão para criar
         um bloco se, senão-se, senão. Complete a solução para coletar a quantidade desconhecida
         de néctar.
+      Course 4 Bee 5_instruction: |
+        Essa flor roxa pode ter 1, 2 ou 3
+        néctares. Adicione um bloco se-senão para criar um bloco se, senão-se, senão. Complete
+        a solução para coletar a quantidade desconhecida de néctar.
+      Course 4 Bee 6_instruction: |
+        Essa flor roxa pode ter 1, 2 ou 3
+        néctares. Crie um bloco se, senão-se, senão para coletar a quantidade desconhecida de
+        néctar.
+      Course 4 Bee 7_instruction: |
+        Use tudo o que você aprendeu até agora para coletar
+        todo o néctar. A flor roxa pode ter 1, 2 ou 3 néctares.
       Course 4 Bee For Loops 1_instruction: |
         Use um laço para coletar o néctar de
         todas as flores.
@@ -1739,6 +1762,9 @@
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
         seu incremento para coletar 9, então 6, e então 3 néctares?
+      Course 4 Bee For Loops 11_instruction: |
+        O que está errado nesse laço? Veja se
+        você consegue arrumá-lo e fazer a abelha coletar todo o néctar.
       Course 4 Bee For Loops 2_instruction: |
         Temos aqui um novo tipo de laço, chamado de
         laço "para". Esse laço para em particular vai contar de 1 até 5, de 1 em 1, e executar
@@ -2348,6 +2374,7 @@
       Infinity_touch_score_instruction: |
         Faça Anna marcar um ponto quando ela tocar
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
@@ -2649,6 +2676,55 @@
         Variáveis também podem ser usadas para controlar
         a velocidade de jogadores em um jogo. Defina a velocidade do jogador e do inimigo e veja
         como os movimentos mudam. A velocidade pode ficar entre 2 e 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         Nessa versão do simulador, você vai
         se conectar a um roteador ao invés de se conectar diretamente a outro aluno. Insira um
@@ -2741,6 +2817,11 @@
       NEW Course 4 Artist Functions 9_instruction: |
         Qual bloco você precisa adicionar
         para que o triângulo fique em cima do quadrado?
+      NEW Course 4 Artist Functions inspire_instruction: "Atividade livre - Inspiração:\nAgora
+        você aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe
+        essa imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo
+        você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
+        Visite-nos para ver a solução."
       New Course 4 Artist Functions Level 4_instruction: |
         Use a função "desenhe um quadrado"
         para desenhar esse padrão.
@@ -2756,6 +2837,9 @@
       NEW Course 4 Artist Params 12_instruction: |
         Você consegue completar esse desenho?
         Os lados de todas as formas têm 100 pixels de comprimento.
+      NEW Course 4 Artist Params 12a_instruction: |
+        Esta imagem é semelhante à anterior.
+        Você consegue usar um "laço para" com sua função para criar deste design?
       NEW Course 4 Artist Params 13_instruction: |
         Vamos editar essa função "desenhe uma forma".
         Ela já tem um parâmetro "comprimento". Agora, vamos editar a função
@@ -2796,6 +2880,11 @@
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
         comprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75
         pixels de comprimento e separados por 100 pixels cada.
+      NEW Course 4 Artist Params inspire_instruction: "Atividade livre - Inspiração:
+        agora você\naprendeu tudo o que precisa saber para criar um padrão como esse!
+        Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie
+        algo\nvocê mesmo.\r\n \r\nQuer saber como nosso padrão de inspiração foi feito?
+        Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
       NEW Course 4 Artist Vars 1.5_instruction: "Dê uma olhada no código. Você consegue\nver
         como o bloco \"defina o comprimento\" e o bloco \"comprimento\" funcionam
         juntos? Clique\nem \"Executar\" para vê-los em ação. \n"
@@ -2863,6 +2952,10 @@
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
         seu incremento para coletar 9, então 6, e então 3 néctares?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Dê uma olhada em cada parte do
+        "laço para" que você acabou de criar. Você consegue descobrir quais números
+        você precisa dobrar para resolver esse desafio? Por que isso funciona?
       NEW Course 4 Play Lab Params 11_instruction: "É hora da atividade livre! Divirta-se\ncom
         todos os blocos da sua caixa de ferramentas. \n"
       NEW Course 4 Play Lab Params 5 5_instruction: "Preencha as entradas de parâmetro\ndos
@@ -2871,8 +2964,14 @@
       NEW Course 4 Play Lab Vars 4 5_instruction: |
         "O que você acha que esse código vai
         fazer? Pressione "Executar" para ver o que acontece".
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Usando o que você aprendeu até
+        agora, você consegue fazer o dinossauro dar um passo à frente toda vez que o pinguim contar?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "É hora da atividade
         livre,\ndivirta-se com todos os blocos da sua caixa de ferramentas. \n"
+      NEW Course 4 Play Labs For Loops 8a_instruction: "Desafio: como você\nusaria
+        o \"laço para\" para fazer cada ator andar e dizer seu número de ator,\ne
+        então sumir da tela? \n"
       New Play Lab Project_instruction: |
         Crie sua própria história ou jogo! Seu código
         está salvo como um projeto para o qual você pode retornar a qualquer hora.
@@ -2918,61 +3017,18 @@
         Temos aqui outro desafio para praticar o uso de laços. O que acontece
         se você usar o bloco repita para executar o código fornecido na área de trabalho
         4 vezes?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Algo aconteceu com
-        os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits
-        extras foram adicionados. Você somente precisará remover alguns bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Algo aconteceu com
-        os bits desta imagem! Ache o erro e corrija-o! Dica: alguns poucos bits extras
-        foram adicionados. Você somente precisará remover alguns bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Faça uma letra "A"
-        3x5.  O widget está configurado com as dimensões incorretas. Sua primeira tarefa
-        é definir o segundo byte com o código binário de 8 bits para 5: 0000 0101.  Então,
-        comece a inserir os dados do pixel.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Agora, crie
-        sua própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la
-        do tamanho que você quiser.  Feliz pixelização!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Agora, crie sua
-        própria imagem! Começamos com uma tela de 10x10, mas você pode deixá-la
-        do tamanho que você quiser.  Feliz pixelização!
-      Pixelation 2_instruction: |
-        Algo aconteceu com os bits nessa imagem!  Encontre
-        o erro e conserte-o!
-      Pixelation 4x4 Empty_instruction: |
-        Agora, a largura e a altura estão codificadas nos
-        dados do pixel. Você consegue descobrir como ajustar as dimensões?
       Play Lab Rocket 1_instruction: |
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        Adicionamos seu contrato e dois
-        exemplos da receita de design para a altura do foguete. Agora escreva a função
-        para a altura do foguete.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        Começamos a receita de design para
-        altura-foguete usando o contrato e os exemplos que você acabou de escrever. Complete a
-        definição da função para a altura do foguete e execute sua animação.
       Play Lab Rocket 2_instruction: |
         Começamos a receita de design para a altura do foguete
         usando o contrato e os exemplos que você escreveu. Complete a definição da função
         para a altura do foguete e execute sua animação.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        Começamos a receita de design
-        para altura-foguete usando o contrato e os exemplos que você acabou de escrever. Complete
-        a definição da função para a altura do foguete e execute sua animação.
       Play Lab Rocket 2B_instruction: |
         Um foguete decola, viajando a 15 metros
         por segundo. Usando a receita de design, escreva uma função chamada altura-foguete
         que recebe o número de segundos passados desde a decolagem do foguete
         e retorna a altura do foguete passado esse tempo.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Excelente! Agora, você consegue atualizar essa função para
         que nosso foguete se mova mais rapidamente? Lembre-se de atualizar a instrução de finalidade,
@@ -3122,10 +3178,6 @@
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
         Cada lado deve medir 100 pixels.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        Esse poema foi comprimido com
-        a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar
-        outro padrão comum para comprimir ainda mais o poema?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3517,6 +3569,133 @@
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
+      U3L23 Chatbot Intro 2_instruction: |
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Desenhe uma grade 3x3 acima e à direita da
         tartaruga. Tente fazer isso com o menor número de comandos possível. OBSERVAÇÃO:

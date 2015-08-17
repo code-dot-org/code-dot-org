@@ -48,22 +48,22 @@ en:
         Write a contract for the text function: Write a contract for the text function
         text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
+        Eval Contracts 4.solution_blocks, 350: Eval Contracts 4.solution_blocks, 350
         Scale Contract: Scale Contract
         Write a contract for the scale function: Write a contract for the scale function
         scale|Image|Number|Image: scale|Image|Number|Image
       Eval Contracts B:
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        Eval Contracts A.solution_blocks, 300: Eval Contracts A.solution_blocks, 300
         Star Contract: Star Contract
         Write a contract for the star function: Write a contract for the star function
         star|Image|Number|String|String: star|Image|Number|String|String
       Eval Contracts D:
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
+        Eval Contracts C.solution_blocks, 350: Eval Contracts C.solution_blocks, 350
         Rotate Contract: Rotate Contract
         Write a contract for the rotate function: Write a contract for the rotate function
         rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts F:
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
+        Eval Contracts E.solution_blocks, 300: Eval Contracts E.solution_blocks, 300
         Text Contract: Text Contract
         Write a contract for the text function: Write a contract for the text function
         text|Image|String|Number|String: text|Image|String|Number|String
@@ -276,6 +276,15 @@ en:
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: {}
+      Internet Simulator Setup:
+        Internet Simulator Setup: Internet Simulator Setup
+        description here: description here
+      Internet Simulator Setup 2:
+        description here: description here
+        title: title
+      Internet Simulator Setup 3:
+        Internet Simulator Setup 3: Internet Simulator Setup 3
+        description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
       K5PD tour:
@@ -550,6 +559,9 @@ en:
       Text Compression Peter Piper:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
+      U1L1 Innovation - Video:
+        Impact of Innovation - Video: Impact of Innovation - Video
+        description here: description here
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -634,7 +646,7 @@ en:
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
-        Public Key Crypto: Public Key Crypto
+        Public Key Encryption: Public Key Encryption
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
@@ -766,6 +778,8 @@ en:
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
       U3L24 Conditionals Lecture: {}
+      U3L24 Debugging Lecture: {}
+      U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
       U3L25 Student Lesson Introduction:
@@ -773,7 +787,7 @@ en:
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
       U3L27 Student Lesson Introduction:
-        Chatbot Challenge: Chatbot Challenge
+        Digital Assistant Challenge: Digital Assistant Challenge
       U3L28 Student Lesson Introduction:
         While Loop Basics: While Loop Basics
       U3L29 Student Lesson Introduction:
@@ -1496,11 +1510,11 @@ en:
         What is an unplugged activity?: What is an unplugged activity?
       U1L16 - Matching File Compression Types:
         BMP: BMP
+        Compressed Files - Lossless: Compressed Files - Lossless
         Compressed Image - Lossless: Compressed Image - Lossless
         Compressed Image - Lossless (256 color limit): Compressed Image - Lossless (256 color limit)
         Compressed Image - Lossy: Compressed Image - Lossy
         Compressed Sound - Lossy: Compressed Sound - Lossy
-        Compressed Text - Lossless: Compressed Text - Lossless
         GIF: GIF
         JPEG: JPEG
         MP3: MP3
@@ -1510,7 +1524,6 @@ en:
         Uncompressed Sound: Uncompressed Sound
         WAV: WAV
         ZIP: ZIP
-        description here: description here
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -2091,17 +2104,18 @@ en:
         title: title
         wrong answer: wrong answer
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Multiple Choice
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Multiple Choice
         Which blocks draw the square?: Which blocks draw the square?
@@ -2463,8 +2477,9 @@ en:
         5 bits: 5 bits
         6 bits: 6 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
-        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?
       U1L10 Assessment 2:
+        12 bits: 12 bits
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -2480,13 +2495,12 @@ en:
 
           How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
-        15 bits: 15 bits
-        21 bits: 21 bits
+        16 bits: 16 bits
+        24 bits: 24 bits
         3 bits: 3 bits
-        30 bits: 30 bits
+        32 bits: 32 bits
         8 bits: 8 bits
-        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
+        'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
@@ -2931,6 +2945,27 @@ en:
         Readable variable names makes it easier to understand the program logic: Readable variable names makes it easier to understand the program logic
         The literary quality of variable names is an important attribute of successful programs: The literary quality of variable names is an important attribute of successful programs
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
+      U3L24 Warm-up Quiz 1:
+        Warm-up quiz 1: Warm-up quiz 1
+        Which of the following will print "Hello World!" to the screen: Which of the following will print "Hello World!" to the screen
+        if (false) { write("Hello World!"); }: if (false) { write("Hello World!"); }
+        if (true) { write("Hello World!"); }: if (true) { write("Hello World!"); }
+      U3L24 Warm-up Quiz 2:
+        I: I
+        I & III: I & III
+        II: II
+        III: III
+        Warm-up Quiz 2: Warm-up Quiz 2
+        Which of the following will print "Hello World!" to the screen?: Which of the following will print "Hello World!" to the screen?
+      U3L24 Warm-up Quiz 3:
+        I: I
+        I & III: I & III
+        II: II
+        II & IV: II & IV
+        III: III
+        IV: IV
+        Warm-up quiz 3: Warm-up quiz 3
+        Which of the following will print "Hello World!" to the screen: Which of the following will print "Hello World!" to the screen
       U3L30 Assessment1:
         '6': '6'
         '7': '7'
@@ -3209,11 +3244,26 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
+        (((1 < X) & (X < 5)) || ((8 < X) & (X < 10))): (((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))
+        (((1 < X) && (X < 5)) || ((8 < X) && (X < 10))): (((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))
+        (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))): (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))
+        (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))): (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))
+        (((1 < X) and (X < 5)) or ((8 < X) and (X < 10))): (((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))
         (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
         (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < X) & (X < 5) || (8 < X) & (X < 10)): ((1 < X) & (X < 5) || (8 < X) & (X < 10))
+        ((1 < X) & (X < 5)) || ((8 < X) & (X < 10)): ((1 < X) & (X < 5)) || ((8 < X) & (X < 10))
+        ((1 < X) && (X < 5) || (8 < X) && (X < 10)): ((1 < X) && (X < 5) || (8 < X) && (X < 10))
+        ((1 < X) && (X < 5)) || ((8 < X) && (X < 10)): ((1 < X) && (X < 5)) || ((8 < X) && (X < 10))
+        ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10)): ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))
+        ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)): ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))
+        ((1 < X) And (X < 5) Or (8 < X) And (X < 10)): ((1 < X) And (X < 5) Or (8 < X) And (X < 10))
+        ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)): ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))
+        ((1 < X) and (X < 5) or (8 < X) and (X < 10)): ((1 < X) and (X < 5) or (8 < X) and (X < 10))
+        ((1 < X) and (X < 5)) or ((8 < X) and (X < 10)): ((1 < X) and (X < 5)) or ((8 < X) and (X < 10))
         ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
         ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
         ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
@@ -3224,6 +3274,15 @@ en:
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
         ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8 < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
+        (1 < X < 5) OR (8 < X < 10): (1 < X < 5) OR (8 < X < 10)
+        (1 < X < 5) Or (8 < X < 10): (1 < X < 5) Or (8 < X < 10)
+        (1 < X < 5) or (8 < X < 10): (1 < X < 5) or (8 < X < 10)
+        (1 < X < 5) || (8 < X < 10): (1 < X < 5) || (8 < X < 10)
+        (1 < X) & (X < 5) || (8 < X) & (X < 10): (1 < X) & (X < 5) || (8 < X) & (X < 10)
+        (1 < X) && (X < 5) || (8 < X) && (X < 10): (1 < X) && (X < 5) || (8 < X) && (X < 10)
+        (1 < X) AND (X < 5) OR (8 < X) AND (X < 10): (1 < X) AND (X < 5) OR (8 < X) AND (X < 10)
+        (1 < X) And (X < 5) Or (8 < X) And (X < 10): (1 < X) And (X < 5) Or (8 < X) And (X < 10)
+        (1 < X) and (X < 5) or (8 < X) and (X < 10): (1 < X) and (X < 5) or (8 < X) and (X < 10)
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
@@ -3449,6 +3508,10 @@ en:
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
+        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 Assess Text Compression amount:
+        Is this a good compression rate?: Is this a good compression rate?
       U1L13 Assessment 1:
         Why Compress?: Why Compress?
       U1L13 Assessment 2:
@@ -3517,7 +3580,7 @@ en:
         How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
-        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+        'Reflection: Real-World Numbers ': 'Reflection: Real-World Numbers '
       U2L01 Assessment 4: {}
       U2L02 Assessment 5:
         Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?
@@ -3746,10 +3809,18 @@ en:
         NLP Getting Started: NLP Getting Started
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
+      U3L23 Free Response Wrap Up 2:
+        Natural Language Processing: Natural Language Processing
       U3L24 Assessment 3:
-        Question 3: Question 3
+        Prove it works!: Prove it works!
       U3L25 Assessment:
         'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
+      U3L25 Free Response 1:
+        'String and Substring: Assessment 3': 'String and Substring: Assessment 3'
+      U3L25 Free Response 2:
+        'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
+      U3L25 Free Response 3:
+        'String and Substring: Assessment 4': 'String and Substring: Assessment 4'
       U3L25 Free Response Getting Started:
         'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
       U3L25 Free Response Wrap Up:
@@ -3757,15 +3828,15 @@ en:
       U3L26 Free Response Getting Started:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
-        'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
+        'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
       U3L27 Assessment1:
-        Chatbot Challenge Reflection 1: Chatbot Challenge Reflection 1
+        Digital Assistant Reflection 1: Digital Assistant Reflection 1
       U3L27 Assessment2:
-        Chatbot Challenge Reflection 2: Chatbot Challenge Reflection 2
+        Digital Assistant Reflection 2: Digital Assistant Reflection 2
       U3L27 Assessment3:
-        'Chatbot Challenge Reflection 3 ': 'Chatbot Challenge Reflection 3 '
+        'Digital Assistant Reflection 3 ': 'Digital Assistant Reflection 3 '
       U3L27 Free Response Getting Started:
-        Chatbot Challenge Getting Started: Chatbot Challenge Getting Started
+        'Digital Assistant: Getting Started': 'Digital Assistant: Getting Started'
       U3L28 Free Response Getting Started:
         'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
       U3L28 Free Response Wrap Up:

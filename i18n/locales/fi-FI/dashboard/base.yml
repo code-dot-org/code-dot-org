@@ -64,8 +64,8 @@ fi:
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} oppilasta on jo rekisteröitynyt.'
+    teacher_count: '%{count} opettajaa on jo rekisteröitynyt.'
     overview_student: 'Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.'
     overview_teacher: 'Rekisteröidy niin saat apua tietojenkäsittelyn opettamiseen.<p/>Voit lisätä oppilaita ja seurata heidän edistymistään.'
     no_signup_message: 'Voit <a target="_blank" href="http://learn.code.org">selata eri tasoja ja tehtäviä</a>, mutta sinun pitää rekistöröityä, jotta voit tallentaa edistymisesi.'
@@ -222,6 +222,7 @@ fi:
       free_play:
         playlab: Tee sovellus
         artist: Piirrä jotakin
+        calculate: Calculate Something
     user:
       classroom: Opettajan kotisivu
       district_dashboard: District Dashboard
@@ -234,7 +235,7 @@ fi:
       signup: Luo käyttäjätunnus
       already_registered: Jo rekisteröitynyt?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'Käyttäjän %{name} edistyminen'
       progress: Sinun edistymisesi
       lines: 'Koodirivien yhteismäärä: %{lines}'
       close: SULJE
@@ -311,7 +312,7 @@ fi:
     panel:
       answer_viewer: Answer Viewer
       student: Oppilas
-      viewing_solution: Viewing Solution
+      viewing_solution: Vastauksen katselu
       try_it_yourself: Kokeile itse
       section: Ryhmä
   user:
@@ -357,6 +358,7 @@ fi:
     local_school: koulu
     online: online
     see_details: Lisätietoja
+    view_course: Näytä kurssi
     prize_info: 'Palkinnot osallistumisesta (vain USA): Jopa 1000 dollaria luokkahuonepalkintoja.'
     tryfirst: 'Tai, voit kokeilla ensin ja rekisteröityä myöhemmin:'
     trynow: Kokeile nyt
@@ -370,7 +372,8 @@ fi:
     heading_apps: '<h2>Hauskaa</h2><h1>kaikille</h1>'
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Kokeile kurssia Code Studiossa
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Mies
@@ -404,10 +407,6 @@ fi:
     autoplay_option: Toista videot automaattisesti
     download: Lataa video
   compatability:
-    https:
-      header: Ota HTTPS käyttöön sivulla Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Piilota varoitus
     working:
       header: Emme juuri nyt tue käyttämääsi selainta.
       message: "Code.org käyttää modernia webteknologiaa. Tämä tekee sivustosta nopeamman käyttää. Selaimesi ei tue kaikkia vaadittavia ominaisuuksia, ja saatat kokea ongelmia käyttäessäsi sivuston tätä osaa. Auta meitä <a href='%{report_issue_url}'>raportoimalla löytämäsi ongelmat</a>. Voit myös <a href='%{supported_browsers_url}'>päivittää selaimesi tuettuun versioon</a>."

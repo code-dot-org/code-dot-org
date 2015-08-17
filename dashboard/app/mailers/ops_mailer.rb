@@ -1,3 +1,5 @@
+require_relative '../../../lib/cdo/activity_constants'
+
 class OpsMailer < ActionMailer::Base
   default from: 'noreply@code.org'
   default to: 'ops@code.org'
@@ -29,10 +31,24 @@ class OpsMailer < ActionMailer::Base
     mail content_type: 'text/html', subject: subject
   end
 
-  def workshop_in_2_weeks_reminder(workshop, recipient)
+  def workshop_reminder(workshop, recipient)
     @workshop = workshop
     @recipient = recipient
-    subject = "[Reminder] You have a Code.org workshop in 2 weeks."
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
+
+    subject = "Important: Your #{@workshop.phase_info[:short_name]} workshop is coming up."
+    if @workshop.phase_info[:prerequisite_phase]
+      @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
+      subject += " Complete #{@prerequisite_phase[:short_name]}"
+    end
+
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
+  end
+
+  def exit_survey_information(workshop, recipient)
+    @workshop = workshop
+    @recipient = recipient
+
+    subject = "Feedback requested for your Code.org PD workshop"
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
   end
 end

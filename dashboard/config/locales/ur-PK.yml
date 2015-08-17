@@ -1,14 +1,14 @@
 "ur":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
   activerecord:
     errors:
       messages:
         blank: مطلوب ہے
     attributes:
       user:
-        name: Display Name
+        name: ڈسپلے نام
         email: Email
         username: یوزر کا نام
         password: پاس ورڈ
@@ -17,78 +17,79 @@
         locale: زبان
         age: عمر
         gender: Jinss
-        edit_header: Edit Account Details
+        edit_header: اکاؤنٹ کی تفصیلات میں ترمیم کیجیے
         error:
-          future: can't be in the future
+          future: مستقبل میں نہیں ہو سکتا
   hello: hello dunia
-  welcome_back: Welcome back, %{name}
+  welcome_back: خوش آمدید، %{name}
   submit: جمع کرائیں
   add_teacher_form:
     code:
       label: 'Add a teacher:'
       placeholder: Section Code (ABCDEF)
-    submit: Add teacher
+    submit: استاد شامل کریں
   add_hint_form:
-    placeholder: Please enter your hint here
-    submit: Add hint
+    placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
+    submit: اشارہ شامل کریں
   appname: Code.org
-  stage: Stage
-  stage_number: Stage %{number}
-  puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
+  stage: اسٹیج
+  stage_number: اسٹیج %{number}
+  puzzle: پزل(Puzzle)
+  trophies: ٹرافیاں
+  courses: کورسز
   of: of
-  more: MORE
-  less: LESS
+  more: مزید دیکھیے
+  less: کم دیکھیے
   beta: beta
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
-  demos: 'Admin: All Demos'
+  try_hoc: 'آور اف کوڈ کھیلنے کے لئے یہاں کلک کریں>> '
+  try_k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس  (١٥ سے ٢٥ گھنٹے) کا تعارف
+    دیکھیے
+  k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
+  already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
+  demos: 'ایڈمن: تمام demos'
   continue: Continue
-  prize: prize
-  more_info: More info
+  prize: انعام
+  more_info: مزید معلومات
   auth:
-    sign_in_with: Sign in with %{provider}
-    signed_in: Signed in!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    sign_in_with: '%{provider} کے ساتھ sign in'
+    signed_in: '!!Signed in'
+    signed_out: آپ<a href="%{url}">Code.org</a>سے sign out ہو چکے ہیں.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: Already signed up?
-    notyet_signedup: Haven't joined yet?
-    google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Forgot your password?
-    need_confirmation: Didn't receive confirmation instructions?
-    need_unlock: Didn't receive unlock instructions?
+    already_signedup: sign up کر چکے ہیں؟
+    notyet_signedup: ابھی جوائن نہیں کیا؟
+    google_oauth2: گوگل اکاؤنٹ
+    twitter: ٹوئٹر
+    facebook: فیس بک
+    windowslive: Microsoft اکاؤنٹ
+    forgot_password: password یاد نہیں؟
+    need_confirmation: کنفرمیشن کی ہدایات موصول نہیں ہویں؟
+    need_unlock: ' Unlock کی ہدایات موصول نہیں ہویں؟  '
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: اب تک %{count} طالبعلم جوائن کر چکے ہیں.
+    teacher_count: اب تک %{count} اساتذہ جوائن کر چکے ہیں.
+    overview_student: اپنی کارکردگی جاننے کے لئے sign up کریں. login کرنے اور password
+      جاننے کے لئے اپنا ای میل استعمال کریں. مزید معلومات کے لئے دیکھئے <a href="http://code.org/privacy">Privacy
+      Policy</a>.
+    overview_teacher: اپنی جماعت کو کمپیوٹر سائنس پڑھانے کے لئے sign up کریں.<p/>
+      آپ اپنے طالبعلموں کو شامل کر کے انکی پراگریس بھی جان سکتے ہیں.
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
-    teacher_educator_guide: See educator guide
-    teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    teacher_educator_guide: اساتذہ کے لئے ہدایت نامہ دیکھئے
+    teacher_pitch: Code.org کے لئے استاد کا سائن اپ
+    teacher_title: استاد کا سائن اپ
+    student_pitch: Code.org پرطالبعلم کا سائن اپ
+    student_title: طالبعلم کا سائن اپ
+    school_name: اسکول کا نام (اختیاری)
+    school_address: اسکول کا ایڈریس (اختیاری)
+    address_placeholder: پتا، شہر، صوبہ، پوسٹ کوڈ
+    gender: جنس (اختیاری)
+    birthday: تاریخ پیدائش (اختیاری)
     age: عمر
-    user_type: Are you a student or teacher?
+    user_type: آپ استاد ہیں یا طالبعلم؟
     submit: Sign up
-    teacher: Are you a teacher?
+    teacher: کیا آپ استاد ہیں؟
     valid_username: Available!
     invalid_username: Username must be at least 5 characters
     taken_username: Username is already taken
@@ -122,7 +123,7 @@
     login: Sign in
   password:
     reset_form:
-      title: Forgot your password?
+      title: password یاد نہیں؟
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -257,6 +258,7 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -298,7 +300,7 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: Trophies
+      trophies: ٹرافیاں
     students:
       name: نام
       username: یوزر کا نام
@@ -401,6 +403,7 @@
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -413,11 +416,13 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Male
@@ -454,12 +459,6 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -598,7 +597,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.

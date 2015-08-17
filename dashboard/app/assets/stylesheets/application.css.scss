@@ -25,6 +25,7 @@
  *= require user-menu
  *= require user-progress
  *= require user-hero
+ *= require buttons
  *= require course-blocks
  *= require details-polyfill
  */
@@ -50,6 +51,14 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   padding: 0px;
   font-style: normal;
+}
+
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 h1 {
@@ -250,6 +259,121 @@ html, body {
     display: inline-block;
     opacity: 0.5;
   }
+}
+
+/* Styling that keeps the small footer consistent with other page elements */
+$codeApp-left-margin: 25px;
+$small-footer-horizontal-margin: 15px;
+$small-footer-standard-width: 400px;
+
+/* Shared styles so flyout looks like footer */
+.small-footer, #copyright-flyout, #more-menu {
+  background-color: #ddd; /* Matches blockly flyout */
+  color: $light_gray;
+  font-size: 14px;
+  a {
+    font-family: $gotham-bold;
+    font-weight: normal;
+    &:link {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:hover {
+      color:$dark_charcoal;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &:active {
+      color:$light_gray;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+.small-footer {
+  position: absolute;
+  bottom: 0;
+  width: $small-footer-standard-width;
+  overflow: hidden;
+  padding-left: $codeApp-left-margin;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
+
+  form {
+    float: left;
+    margin-right: $small-footer-horizontal-margin;
+  }
+
+  select {
+    width: 80px;
+    font-size:11px;
+    height: 18px;
+    margin-bottom: 0;
+  }
+
+  small {
+    display: block;
+    float: right;
+    margin-right: $small-footer-horizontal-margin;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+}
+
+#copyright-flyout {
+  display: none; /* Invisible until summoned. */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 625px;
+  max-width: 50%;
+  min-width: 300px;
+  padding: 1em;
+}
+
+#more-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Prevent default unordered-list style */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li > a {
+    display: block;
+    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    border-bottom: solid thin $lightest_gray;
+
+    &:hover {
+      background-color: $dark_charcoal;
+      color: $lightest_gray;
+      text-decoration: none;
+    }
+  }
+}
+
+/* All three major components of .small-footer are stacked: */
+#more-menu {
+  z-index: 1;
+}
+#copyright-flyout {
+  z-index: 2;
+}
+.small-footer {
+  z-index: 3;
 }
 
 #locale {
@@ -724,11 +848,19 @@ input.header_input {
 #codeApp.pin_bottom {
   position: absolute;
   top: 85px;
-  left: 25px;
+  left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     top: 10px;
+  }
+
+  &.embed_hidesource {
+    position: relative;
+    top: 0px;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
   }
 }
 
@@ -1390,6 +1522,35 @@ a.download-video {
   }
 }
 
+.external
+.text-match {
+  #markdown.teacher {
+    max-width: 800px;
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold; font-weight: normal;
+      color: white;
+      background: $cyan;
+      margin: 0;
+    }
+  }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1525,6 +1686,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: 55%;
     }
     .multi-question {
+      width: 90%;
       font-size: 17px;
     }
   }
@@ -1553,7 +1715,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     float: left;
-    width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
@@ -1561,6 +1722,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-label {
     display: inline-block;
+    text-align: left;
     float: left;
     label {
       font-size: 15px;
@@ -1578,6 +1740,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
+$modal-no-icon-gap: 22px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
@@ -1585,6 +1748,10 @@ $modal-image-margin-gap: 10px;
     margin-left: 0;
     margin-right: $modal-image-width + $modal-image-margin-gap;
   }
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1600,13 +1767,7 @@ $modal-image-margin-gap: 10px;
     display: block;
     margin: 0px auto 6px;
     position: relative;
-    left: -50px;
     z-index: -1;
-  }
-
-  .unindentContent {
-    position: relative;
-    left: -50px;
   }
 
   .feedback-image {
@@ -1705,15 +1866,15 @@ $modal-image-margin-gap: 10px;
 }
 
 .modal-content.markdown-instructions-container {
-  margin-left: 0;
+  margin-left: $modal-no-icon-gap;
+  margin-right: $modal-no-icon-gap;
   margin-top: 10px;
   margin-bottom: 15px;
   float: left;
-  $padding-side: 22px;
-  padding: 0 $padding-side 15px;
+  padding: 0 0 15px;
   background-color: white;
   $outside-margin-side: 15px;
-  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
 
 .instructions-markdown {
@@ -1731,6 +1892,10 @@ $modal-image-margin-gap: 10px;
   line-height: 27px;
   font-size: 24px;
   color: #7665a0;
+
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
 }
 
 #feedbackBlocks {

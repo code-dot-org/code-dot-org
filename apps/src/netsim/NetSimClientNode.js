@@ -17,7 +17,7 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var NodeType = require('./netsimConstants').NodeType;
+var NodeType = require('./NetSimConstants').NodeType;
 var NetSimEntity = require('./NetSimEntity');
 var NetSimNode = require('./NetSimNode');
 var NetSimWire = require('./NetSimWire');
@@ -55,7 +55,7 @@ NetSimClientNode.prototype.getStatus = function () {
   }
 
   // Get remote node for display name / hostname
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
     return nodeRow.id === outgoingWire.remoteNodeID;
   });
@@ -70,8 +70,8 @@ NetSimClientNode.prototype.getStatus = function () {
   if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
     mutualConnection = true;
   } else {
-    var cachedWireRows = this.shard_.wireTable.readAllCached();
-    mutualConnection = _.find(cachedWireRows, function (wireRow) {
+    var cachedWireRows = this.shard_.wireTable.readAll();
+    mutualConnection = cachedWireRows.some(function (wireRow) {
       return wireRow.localNodeID === outgoingWire.remoteNodeID &&
           wireRow.remoteNodeID === outgoingWire.localNodeID;
     });
@@ -81,6 +81,19 @@ NetSimClientNode.prototype.getStatus = function () {
     return i18n.connectedToNodeName({nodeName:remoteNodeName});
   }
   return i18n.connectingToNodeName({nodeName:remoteNodeName});
+};
+
+/** @inheritdoc */
+NetSimClientNode.prototype.isFull = function () {
+  var outgoingWire = this.getOutgoingWire();
+  if (!outgoingWire) {
+    return false;
+  }
+  var cachedWireRows = this.shard_.wireTable.readAll();
+  return cachedWireRows.some(function (wireRow) {
+    return wireRow.localNodeID === outgoingWire.remoteNodeID &&
+        wireRow.remoteNodeID === outgoingWire.localNodeID;
+  });
 };
 
 /**
@@ -101,7 +114,7 @@ NetSimClientNode.prototype.getAddress = function () {
  * @returns {NetSimWire|null} null if wire does not exist.
  */
 NetSimClientNode.prototype.getOutgoingWire = function () {
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
     return wireRow.localNodeID === this.entityID;
   }, this);

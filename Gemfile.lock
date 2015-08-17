@@ -53,10 +53,6 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    aws-s3 (0.6.3)
-      builder
-      mime-types
-      xml-simple
     aws-sdk (2.1.2)
       aws-sdk-resources (= 2.1.2)
     aws-sdk-core (2.1.2)
@@ -83,7 +79,7 @@ GEM
     chunky_png (1.3.3)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
-    codemirror-rails (4.2)
+    codemirror-rails (5.5)
       railties (>= 3.0, < 5)
     coderay (1.1.0)
     coffee-script-source (1.9.1)
@@ -169,6 +165,7 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpclient (2.6.0.1)
     i18n (0.6.9)
     i18nema (0.0.8)
       i18n (>= 0.5)
@@ -263,6 +260,11 @@ GEM
       ansi (~> 1.4.0)
       hashie (>= 1.1.0)
     powerpack (0.1.0)
+    progressbar (0.21.0)
+    pusher (0.14.5)
+      httpclient (~> 2.5)
+      multi_json (~> 1.0)
+      signature (~> 0.1.8)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.3)
@@ -270,7 +272,7 @@ GEM
       rack (>= 0.9.1)
     rack-protection (1.5.3)
       rack
-    rack-ssl-enforcer (0.2.8)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.3)
@@ -345,6 +347,7 @@ GEM
     sequel (4.10.0)
     shotgun (0.9)
       rack (>= 1.0)
+    signature (0.1.8)
     signet (0.6.0)
       addressable (~> 2.3)
       extlib (~> 0.9)
@@ -404,11 +407,15 @@ GEM
       rack
       raindrops (~> 0.7)
     user_agent_parser (2.1.5)
+    viddl-rb (1.0.1)
+      mime-types
+      multi_json
+      nokogiri
+      progressbar
     videojs_rails (4.5.2)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
-    xml-simple (1.1.4)
 
 PLATFORMS
   ruby
@@ -417,7 +424,6 @@ DEPENDENCIES
   active_model_serializers!
   active_record_query_trace
   acts_as_list
-  aws-s3
   aws-sdk (~> 2)
   better_errors
   binding_of_caller
@@ -445,6 +451,7 @@ DEPENDENCIES
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger (~> 1.11.2)
+  httparty
   i18nema
   jbuilder (~> 1.2)
   jquery-rails
@@ -468,6 +475,7 @@ DEPENDENCIES
   parallel
   paranoia (~> 2.0)
   phantomjs (~> 1.9.7.1)
+  pusher (~> 0.14.5)
   quiet_assets
   rack-contrib (~> 1.1)
   rack-ssl-enforcer
@@ -499,7 +507,8 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (~> 4.8.2)
   user_agent_parser
+  viddl-rb
   videojs_rails
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

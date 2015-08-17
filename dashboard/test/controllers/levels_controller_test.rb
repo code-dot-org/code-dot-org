@@ -37,6 +37,14 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get new of all types" do
+    Level.descendants.each do |klass|
+      get :new, type: klass.name
+
+      assert_response :success
+    end
+  end
+
   test "should alphanumeric order custom levels on new" do
     Level.where(user_id: @user.id).map(&:destroy)
     level_1 = create(:level, user: @user, name: "BBBB")
@@ -244,6 +252,24 @@ class LevelsControllerTest < ActionController::TestCase
     @level.update(toolbox_blocks: @program)
     get :edit_blocks, level_id: @level.id, type: 'toolbox_blocks'
     assert_equal @program, assigns[:level_view_options][:start_blocks]
+  end
+
+  test "should load file contents when editing a dsl defined level" do
+    level = Level.find_by_name 'Test Demo Level'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
+  end
+
+  test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
+    level = Level.find_by_name 'Test External Markdown'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
 
   test "should update level" do
@@ -509,37 +535,5 @@ class LevelsControllerTest < ActionController::TestCase
 
     get :embed_blocks, level_id: level, block_type: :solution_blocks
     assert_response :success
-  end
-
-  test 'artist project level has sharing meta tags' do
-    get :show, key: 'New Artist Project'
-
-    assert_response :success
-    assert_sharing_meta_tags(url: 'http://test.host/p/artist',
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 500,
-                            image_height: 261)
-  end
-
-  test 'applab project level has sharing meta tags' do
-    get :show, key: 'New App Lab Project'
-
-    assert_response :success
-    assert_sharing_meta_tags(url: 'http://test.host/p/applab',
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 400,
-                            image_height: 400,
-                            apple_mobile_web_app: true)
-  end
-
-  test 'playlab project level has sharing meta tags' do
-    get :show, key: 'New Play Lab Project'
-
-    assert_response :success
-    assert_sharing_meta_tags(url: 'http://test.host/p/playlab',
-                            image: 'http://test.host/assets/sharing_drawing.png',
-                            image_width: 400,
-                            image_height: 400,
-                            apple_mobile_web_app: true)
   end
 end

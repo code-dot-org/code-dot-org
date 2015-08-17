@@ -58,7 +58,7 @@ Scenario: Creating and modifying a new contract
   And I press "paramAddButton"
   And I see no difference for "two params"
 
-  And I press the last button with text "x"
+  And I press the last button with text "Remove"
   And I see no difference for "domain removed"
 
   And I open the topmost blockly category "Functions"
@@ -70,12 +70,21 @@ Scenario: Creating and modifying a new contract
   And I close my eyes
 
 Scenario: Changing Parameter names
+  Given "add-block-template" refers to block "36"
+  And "function-definition" refers to block "32"
+  And "add-block" refers to block "41"
+  And "i" refers to block "34"
+  And "j" refers to block "35"
+  And "do-something" refers to block "62"
+  And "evaluate" refers to block "10"
+
   When I open my eyes to test "changing contract parameters"
-  Given I am on "http://learn.code.org/s/algebra/stage/8/puzzle/3?noautoplay=true"
+  Given I am on "http://learn.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press "modalEditorClose"
+
   When I open the topmost blockly category "Functions"
   And I press the SVG text "Create a Function"
   And I press "paramAddButton"
@@ -83,9 +92,9 @@ Scenario: Changing Parameter names
   And I see no difference for "added two variables"
 
   Then I open the topmost blockly category "Number"
-  And I drag block "36" to block "32"
-  And I drag block "34" to block "41"
-  And I drag block "35" to block "41" plus offset 60, 40
+  And I drag block "add-block-template" to block "function-definition"
+  And I drag block "i" to block "add-block"
+  And I drag block "j" to block "add-block" plus offset 60, 40
   And I see no difference for "used variables in definition"
 
   Then I press keys ":backspace" for element "#domain-area input"
@@ -94,7 +103,7 @@ Scenario: Changing Parameter names
 
   Then I press "modalEditorClose"
   And I open the topmost blockly category "Functions"
-  And I drag block "62" to block "10" plus offset 0, 100
+  And I drag block "do-something" to block "evaluate" plus offset 0, 100
   And I see no difference for "two blocks have same name params"
 
   Then I open the topmost blockly category "Functions"

@@ -64,19 +64,19 @@ pt:
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
-    student_count: '%{count} alunos já se registraram.'
-    teacher_count: '%{count} professores já se registraram.'
+    student_count: '%{count} alunos já criaram uma conta.'
+    teacher_count: '%{count} professores já criaram uma conta.'
     overview_student: 'Cria uma conta para poderes ver o teu progresso. O teu e-mail será utilizado para iniciares sessão e para repores a palavra-passe (no caso de te esqueceres dela). Para mais informações, lê a nossa <a href="http://code.org/privacy">Política de privacidade</a>.'
     overview_teacher: 'Crie uma conta e ensine os seus alunos a programar na sala de aula.<p/> Poderá adicionar os seus alunos e acompanhar o progresso deles.'
     no_signup_message: 'Podes <a target="_blank" href="http://learn.code.org">explorar várias etapas e desafios</a>, mas terás de criar uma conta para guardares o teu progresso.'
     teacher_educator_guide: Consultar o guia do professor
-    teacher_pitch: Cadastro de professor na Code.org
-    teacher_title: Registo de professor
+    teacher_pitch: Crie uma conta de professor
+    teacher_title: Criar conta de professor
     student_pitch: Cria uma conta de aluno
     student_title: Criar conta de aluno
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
-    address_placeholder: morada, cidade, estado, código postal
+    address_placeholder: Morada, cidade e código postal
     gender: Género (opcional)
     birthday: Aniversário (opcional)
     age: Idade
@@ -89,9 +89,9 @@ pt:
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org. Se tenho menos de 13 anos de idade, ao enviar este formulário confirmo que tenho autorização de meus pais ou tutor legal para usar os serviços da Code.org.<br/> No caso dos alunos com menos de 13 anos, os endereços de e-mail não são armazenados em um formulário que nos permita entrar em contato com eles."
-    teacher_terms: "Concordo com os <a href='http://code.org/tos'>termos de serviço</a> da Code.org."
-    additional_information: Precisamos de mais informações para continuar com o processo de inscrição.
+    student_terms: "Concordo com os<a href='http://code.org/tos'>Termos de utilização</a> do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário, que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail são registados de forma a que não possamos entrar em contacto com eles."
+    teacher_terms: "Concordo com os<a href='http://code.org/tos'>Termos de utilização</a> do Code.org."
+    additional_information: Precisamos de mais informações para continuarmos o processo de criação da conta.
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail ou utilizador
@@ -99,7 +99,7 @@ pt:
     remember: Manter sessão iniciada
     submit: Iniciar sessão
   signin:
-    try_heading: Gostaria de programar sem se cadastrar?
+    try_heading: Queres programar sem criares uma conta?
     try_hoc: Primeiro, experimente a Hora do Código
     try_20hours: Experimente nossa introdução de 20 horas à Ciência da Computação
   signinsection:
@@ -188,7 +188,7 @@ pt:
     msg:
       choose: 'Escolhe um prémio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Você ganhou um prêmio! (Somente para alunos dos EUA)
+      earned: Ganhaste um prémio! (apenas para alunos dos EUA)
       not_earned_title: Termine o tutorial e ganhe recompensas (apenas para alunos dos EUA)
       not_earned: 'Aprende todos os conceitos de informática, colecione todos os %{num_trophies} troféus e ganha prémios reais. Podes escolher entre 10GB de armazenamento gratuito na Dropbox, 10$ US em crédito Skype, e baixar jogos grátis. Nota: oferta válida apenas para estudantes dos EUA e só enquanto houver stock.'
       teacher:
@@ -219,6 +219,7 @@ pt:
       free_play:
         playlab: Desenvolver uma aplicação
         artist: Desenhar alguma coisa
+        calculate: Calculate Something
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -254,9 +255,9 @@ pt:
       stages: 'Níveis a mostrar:'
       show_past: 'Exibir as atividades feitas pelo aluno (%{bullet_html}) em:'
       levels_key: Níveis
-      perfect: Concluído, perfeito
-      completed: Concluído, mas usou blocos demais
-      tried: Tentou, mas ainda não concluiu
+      perfect: 'Concluído: Perfeito'
+      completed: 'Concluído: Usou demasiados blocos'
+      tried: 'Tentou: Por concluir'
       not_tried: Ainda não tentou
       activity: 'Indica as atividades do alunos nas últimas %{hours} %{plural}'
       no_section: Nenhuma seção atribuída
@@ -280,7 +281,7 @@ pt:
       enter: 'digite:'
     sections:
       add: Adicionar turma
-      manage: Gerenciar seções
+      manage: Gerir turmas
       section: Turma
       students: Alunos
       section_code: Código
@@ -300,7 +301,7 @@ pt:
     cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu professor porque você não registrou um endereço de email'
     student_teacher_disassociated: '%{teacher_name} foi removido como professor de %{student_name}'
     panel:
-      answer_viewer: Visualizador de resposta
+      answer_viewer: Resposta
       student: Aluno
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
@@ -312,10 +313,10 @@ pt:
     email_resend_confirm: Reenviar instruções de confirmação
     new_password_hint: (deixa em branco se não pretenderes alterá-la)
     current_password_hint: (precisamos da tua palavra-passe para confirmarmos as tuas alterações)
-    delete: Excluir sua conta
-    delete_text: Clicando no botão abaixo, você vai excluir sua conta.
+    delete: Apagar conta
+    delete_text: Para apagares a tua conta, clica no seguinte botão.
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos.'
-    delete_confirm: Tem certeza de que deseja excluir sua conta?
+    delete_confirm: Tens a certeza de que pretendes apagar a tua conta?
   user_level:
     completed: Concluído
     tried: Tentado
@@ -325,18 +326,18 @@ pt:
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
-    description: No Code Studio você pode encontrar os cursos on-line criados pela Code.org
+    description: No Code Studio podes encontrar os cursos online do Code.org
     lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
     lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count} MILHÕES DE ALUNOS'
     all_courses: Visão geral dos cursos 1, 2 e 3
-    lesson_plans: Planos de aula
+    lesson_plans: Planos das aulas
     signin_message: 'Já criaste uma conta? %{link}'
     student_reg_link: Criar conta de aluno
-    teacher_reg_link: Cadastro de Professor
+    teacher_reg_link: Criar conta de professor
     signin_directions: 'Cria uma conta para poder acompanhar o progresso.<br/> E os Professores, podem acompanhar o progresso da turma toda.'
     teacher_dashboard: Consulte o painel de controlo do progresso
     teacher_student_count_one: 'Tem %{count} aluno.'
-    teacher_student_count: 'Tem alunos %{count}.'
+    teacher_student_count: 'Tem %{count} alunos.'
     teacher_averages: 'Em média os seus alunos ganharam %{trophy_average} de %{trophy_max} troféus "Mestria de Conceitos".'
     teacher_print_certificates: Imprima certificados para os alunos que terminarem esse curso
     teacher_read_blog: Leia sobre notícias e atualizações nos materiais disponíveis em nosso Blog do Professor
@@ -348,8 +349,9 @@ pt:
     local_school: escola local
     online: online
     see_details: Ver detalhes
+    view_course: Ver curso
     prize_info: 'Prêmios de participação (somente para professores de escolas públicas dos EUA.): até $1.000 em prêmios para sala de aula.'
-    tryfirst: 'Ou, você pode experimentar primeiro e se cadastrar depois:'
+    tryfirst: 'Ou podes experimentar primeiro e criar uma conta mais tarde:'
     trynow: Experimentar agora
     add_hint_help: Ajude-nos a acrescentar dicas inteligentes nos tutoriais da Code.org
     20hour_overview: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
@@ -362,6 +364,7 @@ pt:
     heading_legacy: '<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
+    choose_next_course: Experimenta um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   gender:
     male: Masculino
@@ -395,10 +398,6 @@ pt:
     autoplay_option: visualização automatica de vídeos
     download: Descarregar o vídeo
   compatability:
-    https:
-      header: Habilite o HTTPS para Code.org.
-      message: "Para aumentar a segurança, vamos mudar para o HTTPS em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique aqui</a> para aprender a habilitar o HTTPS para a Code.org."
-      hide_this_warning: Ocultar este aviso
     working:
       header: Estamos a trabalhar no suporte ao teu browser.
       message: "A Code.org usa tecnologia web moderna, o que torna o site mais rápido para usar. Seu navegador não suporta todos os recursos necessários, e podem ocorrer problemas ao usar esta parte do site. Para nos ajudar, informe os <a href='%{report_issue_url}'>problemas encontrados</a>. Você também pode <a href='%{supported_browsers_url}'>atualizar seu navegador para uma versão compatível</a>."
@@ -411,8 +410,8 @@ pt:
   try_reloading: Tente recarregar a página
   next_stage: Já está! Continua para a próxima etapa
   download_pdf: Abrir o plano da aula
-  lesson_plan: Plano de aula
-  view_lesson_plan: Exibir plano de aula
+  lesson_plan: Plano da aula
+  view_lesson_plan: Ver plano da aula
   pdf_download: Descarregar PDF
   download_coming_soon: 'Brevemente: Atividade para descarregar.'
   video_coming_soon: Vídeo em breve!
@@ -431,13 +430,13 @@ pt:
     created: Você criou um novo script.
     destroyed: Você destruiu um script.
     manage: Criar níveis
-    view: Visualizar
+    view: Ver
     back: Voltar para os scripts
     success: Você editou os blocos com sucesso.
     level:
-      create: Criar novo nível
-      current: Níveis Atuais
-      unused: Níveis não Utilizados
+      create: Criar um nível
+      current: Níveis atuais
+      unused: Níveis por utilizar
   upsell:
     hoc:
       title: Hora de Código
@@ -465,7 +464,7 @@ pt:
     students_made_these_with_code: Os alunos criaram isso com programação!
     picture_count: 'Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b> imagens desenvolvendo seus próprios programas de computador. Clique nas imagens para ver cada programa em execução.'
     activity_count: 'Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b> aplicativos e figuras escrevendo seus próprios programas de computador. Clique nas figuras e capturas de tela para ver cada programa em funcionamento.'
-    want_to_make_your_own: Quer criar seu próprio programa?
+    want_to_make_your_own: Queres criar o teu próprio programa?
     more: 'Mais &rarr;'
     caption_by_name_age: 'por %{name}, com %{age}'
     caption_time_ago: 'há %{time_ago}'
@@ -475,7 +474,7 @@ pt:
   landing:
     prerelease: "Este curso está em sua versão <span class='betatext'>beta</span>. Isso significa que esta não é a versão final do curso, e ele está sujeito a revisões conforme os feedbacks são recebidos e as melhorias são feitas."
     prerelease_hoc2014: "Este tutorial está na versão <span class='betatext'>beta</span>. Ele está sujeito a revisões, conforme são recebidos feedbacks e melhorias são feitas."
-    feedback: Dar feedback
+    feedback: Enviar comentários
     report_bug: Comunicar erro
     support: Obter ajuda
     support_url: //support.code.org
@@ -502,7 +501,7 @@ pt:
   text_match:
     placeholder: Insira sua resposta aqui
     open_response_title: Obrigado
-    open_response_body: Obrigado pela sua resposta!
+    open_response_body: Obrigado por responderes!
   dialog:
     ok: OK
   time:
@@ -540,13 +539,13 @@ pt:
           title: Construtor de nível de exemplo
           description: ""
   age_interstitial:
-    age: Sua idade
+    age: Idade
     header: Atualização de informações da conta
     message: 'Estamos atualizando nossa experiência para que você tenha proteções de privacidade ainda mais fortes. Para isso, precisamos que os usuários nos informem sua idade.<br/>Como sempre, a code.org nunca vai locar, vender ou compartilhar essa informação com terceiros.'
     sign_out: 'Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.'
-  zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
+  zendesk_too_young_message: 'Pedimos desculpa, mas os utilizadores mais jovens não podem criar uma conta no nosso site. Podes aceder a <a href="http://support.code.org">support.code.org</a> sem criares uma conta ou podes pedir aos teus pais ou a um professor para entrarem em contacto connosco.'
   progress:
-    not_started: não iniciado
+    not_started: por iniciar
     in_progress: em progresso
     completed_too_many_blocks: concluído, muitos blocos
     completed_perfect: concluído, perfeito
@@ -582,8 +581,8 @@ pt:
     saved: Guardado
     not_saved: Por guardar
     cancel: Cancelar
-    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
-    delete_confirm_text: 'Ao excluir seu projeto, vai removê-lo permanentemente da sua lista "Meus projetos". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto.'
+    delete_confirm_title: Tens a certeza de que pretendes apagar este projeto?
+    delete_confirm_text: Ao apagares este projeto estás a removê-lo permanentemente de “Os meus projetos”. Os utilizadores com quem partilhaste a ligação para este projeto deixarão de poder vê-lo.
     view_all: Ver os meus projetos
-    remix: Remix
-    click_to_remix: 'Clique em "Remix" para fazer sua própria versão!'
+    remix: Criar variação
+    click_to_remix: Clica em “Criar variação” para criares a tua própria versão!

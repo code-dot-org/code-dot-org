@@ -1,7 +1,7 @@
 hr-HR:
   hello: Pozdrav svima
   select_language: Odaberite svoj jezik
-  en: Computer Science
+  en: Računalna znanost
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: '8. - 14. prosinca 2014.'
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
@@ -45,7 +45,7 @@ hr-HR:
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   get_a_certificate_of_achievement: Preuzmi potvrdu o postignuću
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Molimo odaberite valjanu dob
   enter_valid_email: Unesite ispravnu e-mail adresu, molim
   get_a_certificate_message: "Poslat ćemo ti potvrdu i obavijest o tome kako možeš <a href='/learn/beyond'>Naučiti više nakon One Hour</a>"
   get_a_certificate_message_after: "Klikni na certifikat da ga preuzmeš ili ispišeš. Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>."
@@ -183,6 +183,8 @@ hr-HR:
   homepage_signpetition_dropdown: 'Slažem se &#x25BE;'
   homepage_banner_text_main: Code.org i College Board udružili su se da poboljšalju raznolikosti u računarstvu.
   homepage_banner_text_link: Doznaj više
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Doznaj više
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Svatko može naučiti. Započnite danas
   homepage_slot_text_link_hoc: Isprobaj Hour of Code
@@ -280,9 +282,9 @@ hr-HR:
   dashboard_landing_available_courses: Ovo su tečajevi trenutno dostupni tvojim studentima.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses: Probajte Hour of Code za sve uzraste
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: 20-satni tečajevi za K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: 20-Hour Middle School Courses
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
@@ -290,7 +292,7 @@ hr-HR:
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: Računalna znanost je znanost
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
   dashboard_course_ecs: Upoznavanje računalstva
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
@@ -306,7 +308,7 @@ hr-HR:
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Izbrisati?
   dashboard_action_remove: jaja sam david i smjesan sam
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove_confirm: Obrisati?
   dashboard_action_done: Gotovo
   dashboard_action_required: potrebno
   dashboard_navigation_home_page: Učiteljeva Početna stranica
@@ -345,7 +347,7 @@ hr-HR:
   dashboard_students_new_section: 'Napravili ste novo odjeljenje! Sad dodajte svoje učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.'
   dashboard_students_placeholder_name: Ime učenika
   dashboard_students_name: Ime
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Napredak
   dashboard_students_age: Godine starosti
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
@@ -362,10 +364,10 @@ hr-HR:
   dashboard_students_reset_password: Ponovno postavi lozinku
   dashboard_students_share_section: 'Podijelite stranicu za prijavu u ovo odjeljenje svojim učenicima:'
   dashboard_students_print_info: Ispiši kartice za studente s informacijama za prijavljivanje.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Tajna slika
   dashboard_students_secret_picture: Tajna Slika
   dashboard_students_reset_picture: 'Možete bilo kada ponovno postaviti učenikovu tajnu sliku odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Tako će se stvoriti nova tajna slika za tog učenika, koju će moći koristiti nakon prijave.'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Tajna riječ
   dashboard_students_secret_word: Tajna Riječ
   dashboard_students_reset_word: 'Možete bilo kada ponovno postaviti učenikove tajne riječi odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Učenik će moći koristiti novi par tajnih riječi nakon prijave. '
   dashboard_students_join_link: Kažite svojim učenicima da naprave svoje račune i priključe se vašem odjeljenju na
@@ -373,7 +375,7 @@ hr-HR:
   dashboard_students_print_page: Ispiši ovu stranicu
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Klikni ovdje</a> za naš dokument o privatnosti koji možete podijeliti ili ispisati svojim učenicima.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: K-5 Obrazovni Resursi
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
@@ -384,7 +386,7 @@ hr-HR:
   dashboard_course4: 'Course 4 (beta): '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Pregled kurikuluma razredne nastave
-  dashboard_overview: Overview
+  dashboard_overview: Pregled
   dashboard_sequence: Slijed
   dashboard_framework: Okvir
   dashboard_standards: Standardi

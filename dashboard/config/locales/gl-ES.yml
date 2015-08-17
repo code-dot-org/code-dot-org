@@ -266,6 +266,7 @@
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
+        calculate: Calculate Something
     user:
       classroom: Página de inicio del maestro
       district_dashboard: District Dashboard
@@ -412,6 +413,7 @@
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
+    view_course: View Course
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
@@ -426,12 +428,13 @@
       a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
     heading_hoc2014: <h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>
-    heading_elementary: <h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas las
-      edades)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Varón
@@ -468,12 +471,6 @@
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Hide this warning
     working:
       header: Estamos trabajando en dar soporte para tu navegador.
       message: Code.org utiliza moderna tecnología web. Esto permite que el sitio

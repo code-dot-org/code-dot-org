@@ -243,6 +243,7 @@
       free_play:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
+        calculate: Calculate Something
     user:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis
@@ -384,6 +385,7 @@
     local_school: vietinėje mokykloje
     online: internetu
     see_details: Peržiūrėti informaciją
+    view_course: View Course
     prize_info: 'Prizai už dalyvavimą (tik JAV mokytojams): iki 1000 dolerių vienai
       klasei.'
     tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
@@ -402,6 +404,7 @@
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     your_gallery: Galerija
     no_primary_course: Išmėginkite Kodavimo Studijos kursus
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Vyras
@@ -438,12 +441,6 @@
     autoplay_option: Automatiškas vaizdo įrašų paleidimas
     download: Atsisiųsti vaizdo įrašą
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Slėpti šį įspėjimą
     working:
       header: Mes dirbame, kad būtų palaikoma Jūsų naršyklė.
       message: Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę

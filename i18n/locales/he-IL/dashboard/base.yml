@@ -64,8 +64,8 @@ he:
     need_confirmation: 'לא קיבלת את  ההוראות האישור?'
     need_unlock: לא קיבלת את ההוראות הפתיחה?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} תלמידים כבר נרשמו.'
+    teacher_count: '%{count} מורים כבר נרשמו.'
     overview_student: 'הירשם כדי לעקוב אחרי ההתקדמות שלך. כתובת המייל שלך תשמש לכניסה למערכת ולשחזור סיסמא . למידע נוסף ראה  <a href="http://code.org/privacy">מדיניות הפרטיות</a>.'
     overview_teacher: 'תוכל ללמד מדעי המחשב בכיתה שלך באמצעות יצירת החשבון. <p/>תוכל להוסיף את תלמידי כיתתך ולעקוב אחרי התקדמותם.'
     no_signup_message: 'אתה יכול <a target="_blank" href="http://learn.code.org">לדפדף בחידות והשלבים השונים</a>, אבל אתה צריך להירשם על-מנת לשמור את התקדמותך.'
@@ -140,9 +140,9 @@ he:
       no_teacher: |
         לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
-      section_not_found: "Could not find a section with code '%{section_code}'."
+      section_not_found: "לא היתה אפשרות למצוא את מקטע קוד '%{section_code}'."
       blank_code: אנא הזן קוד סעיף
-      cant_join_own_section: "Sorry, you can't join your own section."
+      cant_join_own_section: מצטערים, לא תוכל להוסיף מקטע משלך.
     mail:
       invite_student:
         subject: 'הצטרף לכיתה עם %{teacher_name} ב-Code.org!'
@@ -161,8 +161,8 @@ he:
     donorschoose_register: הירשם כמורה ב donorschoose.org
     donorschoose_project: פרסם פרוייקט
     donorschoose_how_to: איך להשתמש בקוד שלך
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: השגת את הפרס בהצלחה, הקוד מצורף מטה.
+    error: לא הצלחת לזכות בפרס, נסה שנית.
     error_us_only: הפרס הזה תקף אך ורק לתושבי ארצות הברית.
     error_not_earned: עדיין לא השגת את הפרס הזה.
     error_already_redeemed: הפרס שלך כבר נפדה.
@@ -223,6 +223,7 @@ he:
       free_play:
         playlab: צור אפליקציה
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: דף הבית של המורה
       district_dashboard: District Dashboard
@@ -233,9 +234,9 @@ he:
       logout: התנתק
       signin: התחבר
       signup: הירשם
-      already_registered: Already registered?
+      already_registered: כבר נרשמת?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'ההתקדמות של %{name}'
       progress: ההתקדמות שלך
       lines: 'סה כ שורות קוד: %{lines}'
       close: קרוב
@@ -255,11 +256,11 @@ he:
     tools: כלים למורה
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      stages: 'שלב(ים) להצגה:'
+      show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      completed: הושלם, אך היה שימוש בבלוקים רבים מדי
       tried: ניסה אך לא השלים
       not_tried: טרם ניסה
       activity: 'Indicates student activity in the last %{hours} %{plural}'
@@ -273,7 +274,7 @@ he:
       dashboard: לגשת לתצגת המורה
       add: הוסף תלמיד
       remove: הסר סטודנט
-      confirm_remove: Are you sure you want to remove this student?
+      confirm_remove: האם הנך בטוח שהנך רוצה להסיר את התלמיד?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
       register: Ask your students to register themselves
@@ -352,6 +353,7 @@ he:
     local_school: 'בה"ס מקומי'
     online: באינטרנט
     see_details: ראה פרטים
+    view_course: View Course
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
     trynow: נסה עכשיו
@@ -361,11 +363,12 @@ he:
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
-    heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
+    heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: גלריה
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: גבר
@@ -399,10 +402,6 @@ he:
     autoplay_option: הפעלה אוטומטית של סרטונים
     download: הורד סרטון
   compatability:
-    https:
-      header: אנא אפשרו שימוש בHTTPS בCode.org.
-      message: "כדי להגביר את בטיחות הגלישה, אנו עוברים לשימוש בHTTPS בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org."
-      hide_this_warning: הסתר את האזהרה הזו
     working:
       header: אנחנו עובדים על תמיכה עבור הדפדפן שלך.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."

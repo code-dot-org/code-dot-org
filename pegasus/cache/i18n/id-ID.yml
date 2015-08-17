@@ -1,7 +1,7 @@
 "id-ID":
   hello: Halo dunia
   select_language: Silahkan pilih bahasa Anda
-  en: Computer Science
+  en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -63,7 +63,7 @@
   congratulations: Selamat!
   congratulations_on_completing_hoc: Selamat atas penyelesaian satu jam dari kode
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Silakan pilih usia yang berlaku
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: Kami akan kirimkan sertifikat dan informasi tentang cara
     untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>
@@ -220,6 +220,9 @@
   homepage_banner_text_main: Code.org dan College Board membentuk aliansi untuk meningkatkan
     keberagaman dalam ilmu komputer.
   homepage_banner_text_link: Pelajari lebih banyak
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"

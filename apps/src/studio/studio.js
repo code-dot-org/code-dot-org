@@ -5,6 +5,8 @@
  *
  */
 
+ /* global $*/
+
 'use strict';
 
 var studioApp = require('../StudioApp').singleton;
@@ -184,6 +186,11 @@ function loadLevel() {
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
       break;
+    case 'Ninja Cat':
+      Studio.customLogic = new BigGameLogic(Studio, {
+        staticPlayer: true
+      });
+
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
@@ -1364,6 +1371,14 @@ Studio.init = function(config) {
 
   loadLevel();
 
+  if (Studio.customLogic) {
+    // We don't want icons in instructions for our custom logic base games
+    skin.staticAvatar = null;
+    skin.smallStaticAvatar = null;
+    skin.failureAvatar = null;
+    skin.winAvatar = null;
+  }
+
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
@@ -1437,6 +1452,10 @@ Studio.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.registerTestHandler(Studio.getStudioExampleFailure);
+      }
     }
 
     drawMap();
@@ -1566,6 +1585,10 @@ Studio.reset = function(first) {
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
 
+  if (Studio.customLogic) {
+    Studio.customLogic.reset();
+  }
+
   // Soft buttons
   var softButtonCount = 0;
   for (i = 0; i < Studio.softButtons_.length; i++) {
@@ -1677,6 +1700,41 @@ Studio.reset = function(first) {
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
+};
+
+/**
+ * Runs test of a given example
+ * @param exampleBlock
+ * @returns {string} string to display after example execution
+ */
+Studio.getStudioExampleFailure = function (exampleBlock) {
+  try {
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    if (!actualBlock) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock) {
+      throw new Error('Invalid Result Block');
+    }
+
+    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
+    if (exampleCode) {
+      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+        StudioApp: studioApp,
+        Studio: api,
+        Globals: Studio.Globals
+      });
+      return resultBoolean ? null : "Does not match definition.";
+    } else {
+      return "No example code.";
+    }
+  } catch (error) {
+    return "Execution error: " + error.message;
+  }
 };
 
 /**
@@ -1891,7 +1949,63 @@ Studio.checkForPreExecutionFailure = function () {
     return true;
   }
 
+  if (studioApp.hasEmptyFunctionOrVariableName()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    Studio.message = commonMsg.unnamedFunction();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
+  var outcome = Studio.checkExamples_();
+  if (outcome.result !== undefined) {
+    $.extend(Studio, outcome);
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   return false;
+};
+
+/**
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.result
+ * @returns {number} outcome.testResults
+ * @returns {string} outcome.message
+ */
+Studio.checkExamples_ = function () {
+  var outcome = {};
+  if (!level.examplesRequired) {
+    return outcome;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return outcome;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return outcome;
+  }
+
+  var failingBlockName = studioApp.checkForFailingExamples(Studio.getStudioExampleFailure);
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+  }
+
+  return outcome;
 };
 
 var ErrorLevel = {
@@ -2030,15 +2144,12 @@ Studio.onPuzzleComplete = function() {
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
 
-  // If the current level is a free play, always return the free play
-  // result type
-  if (level.freePlay) {
-    if (!Studio.preExecutionFailure) {
-      Studio.testResults = TestResults.FREE_PLAY;
-    }
-    // If preExecutionFailure testResults should already be set
-  } else {
-    Studio.testResults = studioApp.getTestResults(levelComplete);
+  // If preExecutionFailure testResults should already be set
+  if (!Studio.preExecutionFailure) {
+    // If the current level is a free play, always return the free play
+    // result type
+    Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
+      studioApp.getTestResults(levelComplete);
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
@@ -2790,40 +2901,50 @@ Studio.vanishActor = function (opts) {
 
   var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
 
+  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+
   explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('width', Studio.sprite[opts.spriteIndex].width);
   explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
-  explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+
   explosion.setAttribute('visibility', 'visible');
 
   var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
   var numFrames = skin.explosionFrames;
-  if (numFrames && numFrames > 1) {
-    explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-    explosion.setAttribute('width', numFrames * 100);
-    _.range(0, numFrames).forEach(function (i) {
-      Studio.perExecutionTimeouts.push(setTimeout(function () {
-        explosion.setAttribute('x', baseX - i * 100);
-        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      }, i * 100));
+  explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
+  explosion.setAttribute('width', numFrames * frameWidth);
+
+  if (!skin.fadeExplosion) {
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
     });
+  }
+
+  _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('visibility', 'hidden');
+      explosion.setAttribute('x', baseX - i * frameWidth);
+      if (i === 0) {
+        // Sometimes the spriteClipRect still moves a bit before our explosion
+        // starts, so wait until first frame to set y.
+        explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+      }
+
+      if (skin.fadeExplosion) {
+        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
+      }
+    }, i * skin.timePerExplosionFrame));
+  });
+  Studio.perExecutionTimeouts.push(setTimeout(function () {
+    explosion.setAttribute('visibility', 'hidden');
+    if (skin.fadeAnimation) {
       // hide the sprite
       Studio.setSprite({
         spriteIndex: opts.spriteIndex,
         value: 'hidden'
       });
       sprite.removeAttribute('opacity');
-
-    }, 100 * (numFrames + 1)));
-  } else {
-    // hide the sprite
-    Studio.setSprite({
-      spriteIndex: opts.spriteIndex,
-      value: 'hidden'
-    });
-  }
+    }
+  }, skin.timePerExplosionFrame * (numFrames + 1)));
 
   // we append the url with the spriteIndex so that each sprites explosion gets
   // treated as being different, otherwise chrome will animate all existing

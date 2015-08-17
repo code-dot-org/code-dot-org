@@ -1,19 +1,19 @@
 vi-VN:
   hello: Xin chào thế giới
   select_language: Vui lòng chọn ngôn ngữ của bạn
-  en: Computer Science
+  en: Khoa học máy tính
   computer_science_edweek: Tuần giáo dục khoa học máy tính
   csedweek_dates: 'Từ ngày 8-14 tháng  12 năm 2014'
   csedweek_banner_hoc: |-
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Giờ Mã</a> đang đến. Gọi điện cho tất cả giáo viên và các tổ chức, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">lập kết hoạch 'Giờ Mã' của bạn</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo dục Tin Học.</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>'
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
   petition_message: Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người khác.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
+  petition_sign_message_support: 'Nếu bạn hỗ trợ chúng tôi, hãy ký tên.  Tham gia cùng # những người khác.'
+  petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
   zipcode: Mã bưu điện
@@ -21,7 +21,7 @@ vi-VN:
   twentyhours_heading: Hãy thử xem bản giới thiệu của khóa học khoa học máy tính
   twentyhours_text: Bạn đã học xong khóa học MỘT TIẾNG LẬP TRÌNH? Hãy học tiếp các khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
   hoc2014_heading: 'Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng 8 đến 14 tháng 12, 2014 <br/>'
-  hoc2014_students: Students
+  hoc2014_students: học viên
   hoc2014_try: Hãy thử nó
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
@@ -46,7 +46,7 @@ vi-VN:
   congratulations: Chúc mừng!
   congratulations_on_completing_hoc: Chúc mừng bạn đã hoàn thành khóa học Một giờ lập trình
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Vui lòng chọn tuổi hợp lệ
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: "Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>"
   get_a_certificate_message_after: "Click vào phần certificate để tải về hoặc in ra. Bây giờ, tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."
@@ -80,12 +80,12 @@ vi-VN:
   participant_other: Không có ở trên
   print_all: In tất cả
   print_ice_art: In tác phẩm Ice art của bạn
-  create_art_with_zombie: or make advanced art with zombie
+  create_art_with_zombie: hoặc thiết kế đồ họa chuyên nghiệp với zombie
   i_am_a: Tôi là một
   never_spam: Chúng tôi sẽ không bao giờ gửi tin nhắn rác cho bạn
   enter_country: Nhập đất nước Nếu bạn không sống ở Mỹ
-  used_infrequent_updates: Only used for infrequent updates
-  privacy_practices_children: See our privacy practices for children
+  used_infrequent_updates: Chỉ được dùng cho những cập nhật không thường xuyên
+  privacy_practices_children: Hãy xem nguyên tắc bảo mật cho trẻ em
   petition_thankyou: Cảm ơn bạn đã đăng ký kiến nghị
   continue_learning_header: Tiếp tục học tập hơn 1 giờ
   continue_learning_body: 'Có rất nhiều lựa chọn.  Bạn có thể học trực tuyến, hoặc tại một trường học địa phương, hoặc trại hè.'
@@ -94,7 +94,7 @@ vi-VN:
   learn_classes: Tìm một lớp học tại địa phương
   hoc_is_here: '#HourOfCode là ở đây - kiểm tra nó xem! @codeorg'
   just_did_hoc: 'Tôi chỉ cần làm #HourOfCode - kiểm tra nó xem! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Tại sao không thêm các trường dạy khoa học máy tính? Chúng tôi có cải thiện điều này. http://youtu.be/nKIu9yen5nc. Truy cập vào http://code.org/ để tìm hiểu thêm.
   learn_hoc: Học một Giờ lập trình
   beyond_hoc: Ngoài một giờ
   what_gender: Giới tính của bạn là gì?
@@ -109,118 +109,95 @@ vi-VN:
   students_and_lines: '%{students} sinh viên có hoàn thành Một Giờ Lập Trình và viết%{lines} những dòng lập trình.'
   start_hoc: Bắt đầu một giờ lập trình ngay bây giờ
   contact_form_topic_press: Báo chí / truyền thông (phỏng vấn hoặc tham gia nói)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-  studiobar_title: "Explore <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: Explore Code Studio
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: 'Our three new courses for K&#8209;5'
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
+  stats_nina: '"Mỗi một ngày mang lại kết quả tương tự &mdash; 100% ."-Nina Nichols Peery, giáo viên'
+  stats_student: '"Tôi biết đây là một <b>cơ hội có một không hai trong đời</b>"-Mariana Alzate, học sinh lớp 5'
+  stats_michael: 'Tôi  <b>chưa bao giờ</b> thấy học sinh của mình học tập hăng say như vậy. "-Michael Clark, giáo viên'
+  studiobar_title: "Khám phá <a href='http://studio.code.org'> Code Studio</a>"
+  studiobar_title_nolink: Khám phá Code Studio
+  studiobar_elementary_title: Các khóa học tiểu học
+  studiobar_elementary_body: 'Ba khóa học mới của chúng tôi dành cho K&#8209;5'
+  studiobar_hoc_title: Một giờ lập trình
+  studiobar_hoc_body: Học cách lập trình với Angry Birds
   studiobar_flappy_title: Lập trình Flappy
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
-  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_flappy_body: Lập trình và chia sẻ trò chơi Flappy của riêng bạn
+  studiobar_teacher_title: Dành cho giáo viên
+  studiobar_teacher_body: Giới thiệu Code Studio trong lớp học của bạn
   studiobar_frozen_title: Giờ của mã
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+  studiobar_frozen_body: Tạo một xứ sở mùa đông diệu kỳ với Anna và Elsa
+  studiobar_donate_title: Quyên góp hỗ trợ
+  studiobar_donate_body: Một đứa trẻ được học với mỗi đồng đô la bạn quyên góp
+  studiobar_shop_title: Mua sắm
+  studiobar_shop_body: Phá vỡ khuôn mẫu. Hãy đeo logo của chúng tôi với niềm tự hào.
+  homepage_hero_text_malala: '&ldquo;"Tôi thách thức các cô gái trong mỗi quốc gia tham gia khóa học một giờ lập trình&rdquo;" Malala, người đoạt giải Nobel hòa bình&ldquo'
+  homepage_hero_text_susan: '&ldquo;Nếu bạn có thể thay đổi công nghệ, bạn có thể thay đổi thế giới.&rdquo; Susan, CEO của YouTube'
+  homepage_hero_text_fistbump: '&ldquo;Đừng chỉ chơi trên điện thoại của bạn, hãy lập trình nó&rdquo; Tổng thống Barack Obama'
+  homepage_hero_text_sheryl: '&ldquo;Những đứa trẻ của chúng tôi &mdash; bao gồm cả những bé gáii &mdash; cần cơ hội để được học về khoa học máy tính.&rdquo; Sheryl, COO của Facebook'
+  homepage_hero_text_satya: '&ldquo;Khoa học máy tính có thể là chìa khóa đến những cơ hội tối nhất trên thế giới&rdquo; Satya, CEO của Microsoft'
+  homepage_hero_text_bosh: '&ldquo;Nếu bạn biết lập trình, bạn có thể chọn khóa học cho cuộc sống của bạn.&rdquo; Chris Bosh'
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Các kỹ năng này đã thay đổi tương lai của tôi. Đó là chưa đề cập đến việc điều này thực sự rất vui.&rdquo;
+    Luna, lớp 7
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Tôi chưa từng bao giờ thấy những đứa trẻ của mình
+    hào hứng về việc học đến như vậy.&rdquo;
+    Michael, giáo viên
+  homepage_hero_text_student3: '&ldquo;Khoa học máy tính là một lĩnh vực mà bạn không thể biết nếu bạn thực sự thích nó hay không trừ khi bạn thử nó&rdquo; Jackson, lớp 6'
+  homepage_hero_text_student4: '&ldquo;Bạn có thể làm bất cứ điều gì bạn muốn bằng cách lập trình.&rdquo; Maya, lớp 2'
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Khoa học máy tính không chỉ dành cho người khác. 
+    Nó là dành cho bạn, ở đây, bây giờ.&rdquo;
+    Geraldo, giáo viên
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Lập trình làm sự sáng tạo nguồn cảm hứng tỏa sáng &mdash;
+    và những điều đó là cần thiết cho bất kỳ ngành nghề nào.&rdquo;
+    Floresa, giáo viên
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
-  homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+    &ldquo;Chương trình này thu hút 100% số học sinh của tôi 
+    tham gia.&rdquo;
+    Adam, giáo viên
+  homepage_hero_text_stat_loc: '#loc các dòng mã học viên viết'
+  homepage_hero_text_stat_students: '#student_count tài khoản học viên trên Code Studio'
+  homepage_hero_text_stat_served: 'Giờ lập trình: đã phục vụ #served'
+  homepage_slot_text_hoc: Một giờ lập trình
+  homepage_slot_text_frozen: Băng giá với Anna và Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Tất cả bài hướng dẫn
   homepage_slot_text_course4: Khóa học 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Mua sắm
   homepage_slot_text_flappy: Lập trình Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'I agree &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_codevideo: Xem video
+  homepage_action_text_teachervideo: Xem video
+  homepage_action_text_learn: Bắt đầu học
+  homepage_action_text_signpetition: Ký vào bản kiến nghị
+  homepage_signpetition_dropdown: 'Tôi đồng ý &#x25BE;'
+  homepage_banner_text_main: Code.org và College Board tạo thành một liên minh để nâng cao sự đa dạng trong khoa học máy tính.
+  homepage_banner_text_link: Tìm hiểu thêm
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
-  homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
+  homepage_slot_text_link_hocserved: phục vụ
+  homepage_slot_text_title_students: học viên
+  homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
+  homepage_slot_text_link_codestudio: Thử Code Studio
+  homepage_slot_text_link_local: Tìm lớp ở địa phương
+  homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
+  homepage_slot_text_title_educators: Nhà giáo
+  homepage_slot_text_blurb_educators: Dạy các học viên của bạn
+  homepage_slot_text_link_k5: Các khoá cho cấp tiểu học
+  homepage_slot_text_link_fullcurriculum: Xem chương trình học đầy đủ
+  homepage_slot_text_link_pd: Phát triển nghề nghiệp
+  homepage_slot_text_title_advocates: Người ủng hộ
+  homepage_slot_text_blurb_advocates: Hỗ trợ công việc của chúng tôi
+  homepage_slot_text_link_stats: Xem thống kê
+  homepage_slot_text_link_buy: Tham gia
+  homepage_slot_text_link_donate: Quyên góp
+  homepage_header_codestudio: Sản phẩm của học viên Code Studio
+  homepage_header_donors: Code.org cảm ơn những người hỗ trợ
+  homepage_donors_seall: Xem tất cả
+  homepage_donors_donate: Quyên góp hỗ trợ
   contact_form_topic_student: Tôi là sinh viên
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
@@ -232,30 +209,30 @@ vi-VN:
   contact_form_label_email: Địa chỉ email của bạn
   contact_form_label_message: Tin nhắn
   contact_form_label_submit: Gửi thư
-  class_submission_in_school: In school
-  class_submission_in_school_daily_programming_course: Daily programming course
-  class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
-  class_submission_in_school_programming_integrated_in_other_classes: Programming integrated in other classes (math, science, etc)
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: Exploring Computer Science
-  class_submission_in_school_other: Other in school
+  class_submission_in_school: Ở trường
+  class_submission_in_school_daily_programming_course: Khoá lập trình hàng ngày
+  class_submission_in_school_ap_computer_science: khoa học máy tính AP
+  class_submission_in_school_full_university_cs_curriculum: Chương trình KHMT đầy đủ cấp đại học
+  class_submission_in_school_robotics_club: Câu lạc bộ robot
+  class_submission_in_school_programming_integrated_in_other_classes: Lập trình tích hợp trong các lớp học khác (toán, khoa học, vv)
+  class_submission_in_school_summer_school_cs_program: Chương trình hè KHMT
+  class_submission_in_school_exploring_computer_science: Khám phá Khoa học Máy tính
+  class_submission_in_school_other: một lớp khác trong trường
   class_submission_out_of_school: Out of school
-  class_submission_out_of_school_summer_camp: Summer camp
-  class_submission_out_of_school_afterschool_program: Afterschool program
-  class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
-  class_submission_out_of_school_multi-week_workshop: Multi-week workshop
+  class_submission_out_of_school_summer_camp: Trại hè
+  class_submission_out_of_school_afterschool_program: Chương trình phụ đạo
+  class_submission_out_of_school_all-day_workshop: Hội thảo cả ngày (đến 1 tuần)
+  class_submission_out_of_school_multi-week_workshop: Hội thảo nhiều tuần
   class_submission_out_of_school_other: Other out of school
-  class_submission_online: Online
-  class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: Online teacher resource
+  class_submission_online: Trực tuyến
+  class_submission_online_programming_class: Lớp học lập trình trực tuyến
+  class_submission_online_teacher_resource: Tài nguyên trực tuyến cho giáo viên
   class_submission_online_other: Other online
-  class_submission_level_preschool: Preschool
-  class_submission_level_elementary: Elementary
-  class_submission_level_middle_school: Middle school
-  class_submission_level_high_school: High school
-  class_submission_level_college: College
+  class_submission_level_preschool: Mẫu giáo
+  class_submission_level_elementary: Tiểu học
+  class_submission_level_middle_school: Trung học cơ sở
+  class_submission_level_high_school: Trung học phổ thông
+  class_submission_level_college: Đại học và cao đẳng
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
   volunteer_engineer_submission_commitment_uncertain: Không chắc chắn
@@ -288,13 +265,13 @@ vi-VN:
   dashboard_landing_smart_hints: Xin vui lòng giúp chúng tôi thêm gợi ý thông minh cho các lớp học của Code.org
   dashboard_landing_video_player: Kiểm tra video player mới tại trường của bạn
   dashboard_landing_progress_title: Tiến độ lớp chính
-  dashboard_landing_progress_biggest: This is the progress for your biggest section.
-  dashboard_landing_view_progress: 'View Progress for %{biggest_section}'
+  dashboard_landing_progress_biggest: Đây là tiến độ cho phần bạn học nhiều nhất.
+  dashboard_landing_view_progress: 'Xem tiến độ cho %{biggest_section}'
   dashboard_landing_available_title: Các khóa học có sẵn
   dashboard_landing_available_courses: Dưới đây là các khóa học hiện có sẵn cho bạn và học sinh của bạn.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_landing_more_tutorials: Muốn xem thêm các bài hướng dẫn khác?
+  dashboard_landing_more_tutorials_desc: 'Có các bài hướng dẫn khác <a href="/learn/beyond">bởi các đối tác của chúng tôi.</a> Học lập trình với robot, tạo trang web, tạo app của riêng bạn, hoặc khám phá  các ngôn ngữ khác như C++, Ruby, hoặc Python!'
+  dashboard_hoc_courses: Giờ lập trình cho mọi lứa tuổi
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
@@ -306,7 +283,7 @@ vi-VN:
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
   dashboard_course_csins: Computer Science in Science
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
-  dashboard_course_ecs: Exploring Computer Science
+  dashboard_course_ecs: Khám phá Khoa học Máy tính
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
@@ -340,14 +317,14 @@ vi-VN:
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
   dashboard_sections_jumbotron_instruction: Create new sections and add students to them. Sections help you organize students into smaller groups so you can track their progress and manage their accounts.
-  dashboard_sections_table_section: Section
-  dashboard_sections_table_secret: Login Type
+  dashboard_sections_table_section: Học phần
+  dashboard_sections_table_secret: Loại đăng nhập
   dashboard_sections_table_grade: Điểm số
   dashboard_sections_table_course: Khóa học
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
-  dashboard_sections_name: Section Name
-  dashboard_sections_choose_secret: 'If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section.'
+  dashboard_sections_table_students: học viên
+  dashboard_sections_table_code: Mã của học phần
+  dashboard_sections_name: Tên phần
+  dashboard_sections_choose_secret: 'Nếu bạn muốn cấp tài khoản cho học sinh của mình, chọn một kiểu <b>từ</b> hoặc <b>hình ảnh</b> bí mật cho phần đó.'
   dashboard_sections_secret_word: 'A <b>word</b> allows you to set a secret word for each student.'
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
@@ -357,26 +334,26 @@ vi-VN:
   dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: Tên Học sinh
   dashboard_students_name: Tên
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Sự tiến bộ
   dashboard_students_age: Tuổi
   dashboard_students_gender: Giới tính
   dashboard_students_male: Nam
   dashboard_students_female: Nữ
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Bí mật
   dashboard_students_password: mật khẩu
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
-  dashboard_students_completed_levels: Completed Levels
-  dashboard_students_total_lines: Lines of Code
+  dashboard_students_username: 'Tên người dùng: %{student_username}'
+  dashboard_students_email: 'Thư điện tử: %{student_email}'
+  dashboard_students_completed_levels: Các Cấp độ đã Hoàn thành
+  dashboard_students_total_lines: Số dòng Lệnh
   dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
+  dashboard_students_auto_generated: Được tạo ra tự động
   dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
+  dashboard_students_reset_password: Đặt lại mật khẩu
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Bức ảnh Bí mật
   dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
   dashboard_students_secret_word_title: Secret Word
@@ -384,47 +361,47 @@ vi-VN:
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
-  dashboard_students_print_page: Print this page
+  dashboard_students_print_page: In trang này
   dashboard_students_url: URL
-  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click here</a> for our privacy document that can be shared or printed for your students.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
-  dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
-  dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_overview: Overview
+  dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Click vào đây</a> để xem tài liệu quyền riêng tư của chúng tôi mà có thể chia sẻ hoặc in cho học sinh của bạn.'
+  dashboard_curriculum_k5_title: Tài nguyên cho giáo viên tiểu học
+  dashboard_curriculum_middle_title: Tài nguyên cho giáo viên trung học cơ sở
+  dashboard_curriculum_high_title: Tài nguyên cho giáo viên phổ thông trung học
+  dashboard_lesson_plans: Giáo Án
+  dashboard_view_all_lesson_plans: Tải xuống chương trình giảng dạy đầy đủ cho các khóa 1-3
+  dashboard_course1: 'Khóa 1:'
+  dashboard_course2: 'Khóa 2:'
+  dashboard_course3: 'Khóa 3:'
+  dashboard_course4: 'Khóa 4 (beta): '
+  dashboard_curriculum: Chương trình
+  dashboard_curriculum_overview: Chương trình tiểu học tổng quan
+  dashboard_overview: Tổng quan
   dashboard_sequence: chuỗi
-  dashboard_framework: Framework
-  dashboard_standards: Standards
-  dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
-  dashboard_classroom_strategies: Classroom strategies for teachers
+  dashboard_framework: Khung làm việc
+  dashboard_standards: Tiêu chuẩn
+  dashboard_implementation_guide: Hướng dẫn thực hiện
+  dashboard_glossary: Bảng thuật ngữ
+  dashboard_classroom_strategies: Chiến lược lớp học cho giáo viên
   dashboard_debugging: 'Gỡ lỗi:'
   dashboard_puzzle_solving: 'Giải quyết các câu đố:'
   dashboard_student_worksheet: bảng sinh viên
   dashboard_teacher_worksheet: bảng giáo viên
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csina: 'Khoa học máy tính trong đại số:'
+  dashboard_curriculum_csins: 'Khoa học máy tính trong khoa học:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_ecs: 'Khám phá Khoa học Máy tính:'
   dashboard_grade_k: K
   dashboard_grade_other: Khác
   dashboard_login_word: Từ
   dashboard_login_picture: Hình ảnh
   dashboard_login_none: Địa chỉ email
   dashboard_new_password: Mật khẩu mới
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_not_started: chưa bắt đầu
+  dashboard_progress_in_progress: trong tiến trình
+  dashboard_progress_not_completed: chưa hoàn thành
+  dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
+  dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
+  dashboard_progress_furthest_level_attempted: đã cố gắng ở mức độ cao nhất
   stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong một tuần:'
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013
   dashboard_teacher: Giáo viên
@@ -440,12 +417,12 @@ vi-VN:
   dashboard_sections_password_account_creation: Sinh viên đã tạo ra mật khẩu
   dashboard_sections_login_type_explanation: 'Bảng này sẽ giúp giải thích các loại đăng nhập, <b>hình ảnh, từ, hoặc email</b>, bạn sẽ muốn chọn cho một phần.'
   dashboard_faq: Câu hỏi thường gặp
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: Câu thường hỏi tiểu học
   code_hoc_coming: 'Giờ lập trình là ở đây - ngày 8-14 tháng 12!'
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   learn_more: Tìm hiểu thêm
   hoc2014_try_new_tutorials: Làm thử theo hướng dẫn của chúng tôi về Giờ lập trình
-  hoc2014_try_new_tutorial: Hãy thử lớp học Một giờ Lập trình phiên bản beta của chúng tôi
+  hoc2014_try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
   hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
@@ -461,7 +438,7 @@ vi-VN:
   carousel_heading_robots: Tìm hiểu để lập trình robot
   carousel_heading_ide: Nền tảng phổ biến trong số các giáo viên
   educator_notes: Ghi chú Giáo dục
-  how_to_teach_hoc: How to Teach an Hour of Code
+  how_to_teach_hoc: Các dạy một Giờ lập trình
   more_resources_educators: Nhiều nguồn lực dành cho giáo viên và giáo dục
   participants: Những người tham gia
   teachers_notes: Ghi chú của giáo viên
@@ -484,7 +461,7 @@ vi-VN:
   tynker_name: Xây dựng trò chơi của riêng bạn
   scratch_name: Hãy sáng tạo trong lập trình
   lightbot_name: Lightbot
-  thinkersmith_name: My Robotic Friends
+  thinkersmith_name: Bạn bè robot của tôi
   condcards_name: Conditionals with Cards
   lightbotintl_name: Lightbot
   codehs_name: Learn to Code With Karel the Dog
@@ -492,14 +469,14 @@ vi-VN:
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Build a Game with JavaScript
-  processing_name: Drawing with Code
-  robomind_name: Program a virtual robot
+  processing_name: Vẽ bằng mã
+  robomind_name: Lập trình một robot ảo
   groklearning_name: Eliza the Chatterbot Doctor
   quorum_name: Accessible programming (with screenreader support)
   codespark_name: The Foos (pre-readers welcome)
   kodable_name: Kodable (pre-readers welcome)
   tynkerapp_name: 'Tynker - on tablets'
-  robomindnl_name: Program a virtual robot
+  robomindnl_name: Lập trình một robot ảo
   flappy_name: Make a Flappy game
   bitsbox_name: 'Bitsbox - make a game'
   makegameswithus_name: Build an iPhone game in your browser!
@@ -526,23 +503,23 @@ vi-VN:
   thinkersmith_gradelevel: Mọi lứa tuổi
   condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Mọi lứa tuổi
-  codehs_gradelevel: High school
-  codecademy_gradelevel: High school
+  codehs_gradelevel: Trung học phổ thông
+  codecademy_gradelevel: Trung học phổ thông
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: High school
+  processing_gradelevel: Trung học phổ thông
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: Elementary
-  kodable_gradelevel: Elementary
+  codespark_gradelevel: Tiểu học
+  kodable_gradelevel: Tiểu học
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: Elementary
-  makegameswithus_gradelevel: High school
-  touchdevelop_gradelevel: High school
+  bitsbox_gradelevel: Tiểu học
+  makegameswithus_gradelevel: Trung học phổ thông
+  touchdevelop_gradelevel: Trung học phổ thông
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Mọi lứa tuổi
   thinkersmith2_gradelevel: Ages 8+
@@ -684,7 +661,7 @@ vi-VN:
   pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Learn Python programming
   hacketyhack_beyond_name: Learn Ruby
-  robomind_beyond_name: Program a virtual robot
+  robomind_beyond_name: Lập trình một robot ảo
   makegameswithus_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
@@ -714,18 +691,18 @@ vi-VN:
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Mọi lứa tuổi
-  codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: Elementary
-  scratchjr_beyond_gradelevel: Elementary
+  codecademy_beyond_gradelevel: Trung học phổ thông
+  kodable_beyond_gradelevel: Tiểu học
+  scratchjr_beyond_gradelevel: Tiểu học
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: High school
+  hacketyhack_beyond_gradelevel: Trung học phổ thông
   robomind_beyond_gradelevel: Ages 8-13
-  makegameswithus_beyond_gradelevel: High school
+  makegameswithus_beyond_gradelevel: Trung học phổ thông
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: High school
-  codehs_beyond_gradelevel: High school
+  touchdevelop_beyond_gradelevel: Trung học phổ thông
+  codehs_beyond_gradelevel: Trung học phổ thông
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -743,7 +720,7 @@ vi-VN:
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: High school
+  processing_beyond_gradelevel: Trung học phổ thông
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets

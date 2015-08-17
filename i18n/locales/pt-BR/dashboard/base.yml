@@ -219,6 +219,7 @@ pt-BR:
       free_play:
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
+        calculate: Calculate Something
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -348,6 +349,7 @@ pt-BR:
     local_school: escola local
     online: online
     see_details: Ver detalhes
+    view_course: Ver curso
     prize_info: 'Prêmios de participação (somente para professores de escolas públicas dos EUA.): até $1.000 em prêmios para sala de aula.'
     tryfirst: 'Ou, você pode experimentar primeiro e se cadastrar depois:'
     trynow: Experimente agora
@@ -357,11 +359,12 @@ pt-BR:
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré ao 5º ano
     use_as_teacher: Use este site como um professor
     heading_hoc2014: '<h2>A Hora do Código para</h2><h1>Todas as idades</h1>'
-    heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>'
+    heading_elementary: '<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência da Computação (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
     heading_legacy: '<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
+    choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   gender:
     male: Masculino
@@ -395,10 +398,6 @@ pt-BR:
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
   compatability:
-    https:
-      header: Habilite o HTTPS para Code.org.
-      message: "Para aumentar a segurança, vamos mudar para o HTTPS em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique aqui</a> para aprender a habilitar o HTTPS para a Code.org."
-      hide_this_warning: Ocultar este aviso
     working:
       header: Estamos trabalhando no suporte para seu navegador.
       message: "A Code.org usa tecnologia web moderna, o que torna o site mais rápido para usar. Seu navegador não suporta todos os recursos necessários, e podem ocorrer problemas ao usar esta parte do site. Para nos ajudar, informe os <a href='%{report_issue_url}'>problemas encontrados</a>. Você também pode <a href='%{supported_browsers_url}'>atualizar seu navegador para uma versão compatível</a>."

@@ -217,6 +217,7 @@ bg:
       free_play:
         playlab: Направи приложение
         artist: Начертай нещо
+        calculate: Calculate Something
     user:
       classroom: Начална страница на учителя
       district_dashboard: Областно табло
@@ -342,10 +343,11 @@ bg:
     student_progress: Вашият учебен прогрес
     student_stats: 'Вие сте спечелил %{trophy_count} от %{trophy_max}  трофеи.'
     student_left_off: 'Където сте спрели:'
-    student_finished: 'Вие приключите всички уроци, изберете друг клас %{online_link} или %{local_school_link}'
+    student_finished: 'Като приключите всички уроци, изберете друг клас %{online_link} или %{local_school_link}'
     local_school: местно училище
     online: онлайн
     see_details: Вижте детайли
+    view_course: Виж курса
     prize_info: 'Награди за участие (САЩ държавно училище само учители): до $1000 в класната стая награди.'
     tryfirst: 'Или можете да пробвате първо и по-късно да се регистрирате:'
     trynow: Опитайте сега
@@ -360,6 +362,7 @@ bg:
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>всички възрасти</h1>'
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
+    choose_next_course: Опитайте курс като си избирете един от тези по-долу
     print_certificate: Печат на сертификат
   gender:
     male: Мъж
@@ -393,10 +396,6 @@ bg:
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
   compatability:
-    https:
-      header: Моля, активирате HTTPS за Code.org.
-      message: "За да увеличим сигурността, ние превключите на HTTPS  %{https_date}. Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'> Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org."
-      hide_this_warning: Скрий предупреждението
     working:
       header: Ние работим по поддръжката на вашия браузър.
       message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз при зареждане. Вашият браузър не поддържа всички предвидени функции и е възможно да възникнат проблеми при използването на тази част на сайта. Помогнете ни <a href='%{report_issue_url}'> като ни уведомите за всички проблеми, които сте открили</a>. Можете също да <a href='%{supported_browsers_url}'> надстроите браузъра си до поддържаната версия</a>."

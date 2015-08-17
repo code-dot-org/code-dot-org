@@ -1,10 +1,10 @@
 {
-  "continue": "Continue",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your game.",
-  "share": "Share",
-  "shareGame": "Share your game:",
-  "yes": "Yes"
+  "continue": "გაგრძელება",
+  "nextLevel": "გილოცავ! შენ დაასრულე ეს თავსატეხი.",
+  "no": "არა",
+  "numBlocksNeeded": "ამ თავსატეხის ამოსახსნელად საჭიროა %1 ბლოკი.",
+  "reinfFeedbackMsg": "შეგიძლია დააწვე \"სცადე ხელახლა\" ღილაკს და განაგრძო შენი თამაში.",
+  "share": "გაზიარება",
+  "shareGame": "გააზიარე შენი თამაში:",
+  "yes": "დიახ"
 }

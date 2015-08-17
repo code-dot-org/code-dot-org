@@ -63,7 +63,7 @@
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Παρακαλώ επιλέξτε μια έγκυρη ηλικία
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
   get_a_certificate_message: Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
     με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>
@@ -208,6 +208,9 @@
   homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία
     συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών.
   homepage_banner_text_link: Μάθετε περισσότερα
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Μάθετε περισσότερα
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα

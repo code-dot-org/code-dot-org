@@ -59,9 +59,6 @@
     border-width: 8px;
     margin-left: 0px;  
   }
-- unless request.ssl? || (rack_env?(:development) && !CDO.https_development)
-  = view 'http_support'
-
 #pageheader-wrapper
   - pageheader_class = request.path_info == "/" ? "pageheader_translucent" : ""
   #pageheader{class: pageheader_class}

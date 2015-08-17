@@ -24,6 +24,9 @@ class Game < ActiveRecord::Base
   PLAYLAB = STUDIO = 'studio'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
+  MAZE = 'maze'
+  CALC = 'calc'
+  EVAL = 'eval'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -77,8 +80,20 @@ class Game < ActiveRecord::Base
     name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
   end
 
+  def uses_pusher?
+    app == NETSIM
+  end
+
   def has_footer?
-    !(app == APPLAB || app == NETSIM)
+    !(app == APPLAB)
+  end
+
+  def uses_small_footer?
+    app == NETSIM
+  end
+
+  def has_i18n?
+    !(app == NETSIM || app == APPLAB)
   end
 
   def self.setup

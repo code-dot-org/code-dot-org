@@ -3,12 +3,16 @@ module ViewOptionsHelper
     full_width
     no_header
     no_footer
+    small_footer
+    has_i18n
     no_padding
     white_background
     callouts
     autoplay_video
     channel
     readonly_workspace
+    is_external_project_level
+    is_channel_backed
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

@@ -276,135 +276,145 @@
         turtle_2_9: Erabili "kontatu honekin" begizta elur panpina batzuen familia
           marrazteko, haien altuerak 110, 100, 90, 80 eta 70 izanik. Elur panpinen
           arteko distantzia 60 pixelekoa izan behar da.
-        turtle_2_10: Here's some code to try experimenting with different spirals.  What
-          happens if you change the turn amount? Or set a random color in the loop?  Draw
-          anything you like.
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and
-          fill in all the holes on the ground. Try to use loops instead of using too
-          many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: We've defined our own block called "fill 5", which is now
-          in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: Use the new "fill 5" function block to make me fill in all
-          the holes. You'll have to drag out the "fill 5" block out from the Functions
-          category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use
-          it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile,
-          and use it to help me level out all the piles.
-        maze_karel_2_6: Use two new functions, "fill 8" and "remove 8", to help me
-          level out the pile and fill in the hole.
-        maze_karel_2_7: There's a cow in my field! Write a new function that helps
-          me avoid the cow and remove the pile. Put all your blocks inside the new
-          function.
-        maze_karel_2_8: Use this new function, "avoid the cow and remove 1", to help
-          me remove all the piles.
-        maze_karel_2_9: Ok, here's a function that removes 4 different piles of dirt
-          in a vertical column. Try putting this function inside a loop, so that you
-          remove all the piles of dirt using only a few new blocks.
-        maze_karel_2_10: Move me across the field, and use these two functions to
-          help me remove all the piles and fill all the holes.
-        turtle_3_1: This puzzle shows you how the "draw a square" and "draw a circle"
-          functions are defined.  Defining a function doesn't run its blocks.  You
-          have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: Using the "draw a square" function as an example, create a "draw
-          a triangle" function and use it.
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around
-          the cow.  Tip: test the program as you go along.'
-        turtle_3_4: See if you can figure out how to use "draw a square" and "draw
-          a triangle" (and some other blocks) to draw a house around the lion.
+        turtle_2_10: Hona hemen kodea espiral desberdinekin esperimentatzen saiatzeko.
+          Zer gertatzen da biraketaren balioa aldatzen baduzu? Edo ausazko kolorea
+          ezartzen baduzu begiztan? Marraz ezazu nahi duzuna.
+        maze_karel_2_1: 'Saia zaitez blokeak erabiltzen niri laguntzeko meta guztiak
+          desegiten eta lurreko zulo guztiak betetzen. Saia zaitez errepikapenak edo
+          begiztak erabiltzen bloke gehiegi erabili beharrean. Pista: errepikapen
+          bat beste baten barruan jar dezakezu.'
+        maze_karel_2_2: Bloke bat definitu dugu "bete 5" izenarekin, eta orain Funtzioak
+          kategorian dago. Erabil ezazu niri laguntzeko zulo hau betetzen.
+        maze_karel_2_3: Erabil ezazu "bete 5" funtzio-bloke berria zulo guztiak bete
+          ditzadan. "bete 5" blokea Funtzioak kategoriatik kanpo arrastatu beharko
+          duzu.
+        maze_karel_2_4: Defini ezazu funtzio berri bat 7 paletakada kentzeko. Ondoren,
+          erabil ezazu funtzio hori programa bat idazteko meta guztiak desegiten lagundu
+          diezadan.
+        maze_karel_2_5: Idatz ezazu funtzio berri bat meta batetik 6 paletakada kentzeko
+          eta erabil ezazu meta guztiak desegiten lagundu diezadan.
+        maze_karel_2_6: Erabil itzazu bi funtzio berri, "bete 8" eta "kendu 8", niri
+          laguntzeko meta desegiten eta zuloa betetzen.
+        maze_karel_2_7: Badago behi bat nire larrean! Idatz ezazu funtzio berri bat
+          niri laguntzeko behia saihesten eta meta desegiten. Jar itzazu zure bloke
+          guztiak funtzio berriaren barruan.
+        maze_karel_2_8: Erabil ezazu funtzio berria, "saihestu behia eta kendu 1",
+          niri laguntzeko meta guztiak desegiten.
+        maze_karel_2_9: Ondo da. Hona hemen funtzio bat zutabe bertikal batean lerrokatuta
+          dauden 4 lur-meta desberdin desegiteko. Saia zaitez funtzio hori sartzen
+          begizta baten barruan, lur-meta guztiak desegiteko bloke berri gutxi batzuk
+          erabiliz.
+        maze_karel_2_10: Mugi nazazu eremuan zehar, eta erabil itzazu bi funtzio hauek
+          niri laguntzeko meta guztiak desegiten eta zulo guztiak betetzen.
+        turtle_3_1: Puzle honek erakusten dizu nola dauden definituta "marraztu karratu
+          bat" eta "marraztu zirkulu bat" funtzioak. Funtzio bat definitzean, haren
+          blokeak ez dira exekutatzen. "marraztu karratu bat" blokea erabili beharko
+          duzu karratu bat marrazteko.
+        turtle_3_2: '"marraztu karratu bat" funtzioa adibide gisa erabiliz, idatz
+          ezazu "marraztu triangelu bat" funtzioa eta erabil ezazu.'
+        turtle_3_3: 'Marraztu hesi triangeluarrak katuen inguruan eta hesi karratu
+          bat behiaren inguruan. Iradokizuna: egiaztatu programa idatzi ahala.'
+        turtle_3_4: Ea gai zaren asmatzeko nola erabili "marraztu karratu bat" eta
+          "marraztu triangelu bat" (eta beste bloke batzuk) etxetxo bat marrazteko
+          lehoiaren inguruan.
         turtle_3_5: 'Orain "etxe marraztea" funtzio berri bat sortu eta erabili bi
           katu aterpetzeko. Iradokizuna: sortu funtzio berri bat "ezer egin" blokea
           erabiliz eta idatzi zure testua blokea izendatzeko.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length"
-          to "draw a triangle". Then, draw triangles in different sizes. (Hint: click
-          the star to add an input to a function)'
-        turtle_3_7: Add an input named "length" to "draw a house" and build a big
-          house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Here are all of the blocks from the previous puzzle.  Modify "draw
-          a house" so I end up at the bottom right corner after drawing a new house.
-          Use this modified function to draw three houses.
-        turtle_3_9: Can you re-create the "draw a house" function without help? Try
-          it, and then draw a row of houses.
-        turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
-          to draw a star, or a spiral, or a fancy snowflake.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
-        maze_karel_debug_seq_2: What's wrong with this program? How should you fix
-          it so I can remove that pile?
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice
-          and flat.
-        maze_karel_debug_while: How should you change this program to help me fill
-          the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely
-          flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and
-          remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to
-          help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make
-          my field flat?
-        maze_karel_debug_function_3: 'Edit this program so I''ll remove all the piles
-          on my field. '
-        turtle_5_1: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move();
-          so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: How should I get to the pig? Make sure I don't run into the box
-          of TNT!
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the
-          pig.
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
-          it hits the finish target.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
+        turtle_3_6: '"marraztu karratu bat" adibide gisa erabiliz, gehitu "luzera"
+          izeneko sarrera bat "marraztu triangelu bat" funtzioari. Ondoren, marraztu
+          neurri desberdinetako triangeluak. (Pista: klikatu izarrean funtzio bati
+          sarrera bat gehitzeko)'
+        turtle_3_7: Gehitu "luzera" izeneko sarrera bat "marraztu etxe bat" funtzioari
+          eta eraiki etxe handi bat elefantearentzat (aldeen luzera 150 pixelekoa
+          izan dadin)
+        turtle_3_8: Eraldatu "marraztu etxe bat" nik amaitzeko beheko eskuineko izkinan
+          etxe berri bat marraztu ondoren. Erabili funtzio eraldatu hori hiru etxe
+          marrazteko.
+        turtle_3_9: '"marraztu etxe bat" funtzioa berriro idatz dezakezu laguntzarik
+          gabe? Saia zaitez, eta orduan marraztu etxe ilara bat.'
+        turtle_3_10: Asko ikasi duzu! Orain erabil ezazu nahi duzuna marrazteko. Saia
+          zaitez marrazten izar bat, edo espiral bat, edo elur maluta polit bat.
+        maze_karel_debug_seq_1: Ongi etorri erroreak zuzentzera! Nire kodea ez dabil
+          ongi. Arazoa aurkitu eta konpondu dezakezu? Konpontzen baduzu, nire eremua
+          berdindu ahal izango dut, eta horrela ereiteko prest utziko dut.
+        maze_karel_debug_seq_2: Zer dago gaizki programa honetan? Nola konponduko
+          zenuke nik meta desegin ahal izateko?
+        maze_karel_debug_repeat: Zuzendu programa hau niretzat, nire eremua polita
+          eta laua gera dadin.
+        maze_karel_debug_while: Nola aldatu beharko zenuke programa hau niri zuloa
+          betetzen laguntzeko?
+        maze_karel_debug_if: Laguntza! Zuzendu programa nire eremua guztiz laua izan
+          dadin.
+        maze_karel_debug_if_else: Zuzendu programa hau nik zuloak bete eta meta guztiak
+          desegin ahal izateko.
+        maze_karel_debug_function_1: Zer aldatu beharko zenuke programa honetan niri
+          laguntzeko meta guztiak desegiten?
+        maze_karel_debug_function_2: Programa hau zuzendu dezakezu niretzat, nire
+          eremua berdindu ahal izan dezadan?
+        maze_karel_debug_function_3: 'Editatu programa hau nik nire eremuko meta guztiak
+          desegin ahal izateko. '
+        turtle_5_1: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        turtle_5_2: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        turtle_5_3: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        turtle_5_4: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        turtle_5_5: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        turtle_5_6: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
+          den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
+          desberdina den zerbaitekin aldatu)
+        maze_3_1: Txerri horrengana iritsi beharra daukat! Birritan move() idatziz
+          berreskura ditzaket nire arrautzak.
+        maze_3_2: Txerriraino iristeko bide osoa egingo duen programa bat idatz iezadazu
+        maze_3_3: Nola iritsiko naiz txerriarengana? Ziurtatu ez zarela TNT kaxatik
+          pasatuko.
+        maze_3_4: Ene! Idatz iezaidazu programa bat TNT sahiestu eta txerriarenganaino
+          iristeko
+        bounce_1: Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu
+          "Exekutatu programa". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako
+          helburura iristeko.
+        bounce_2: Itsatsi bloke bat "eskuineko gezia sakatzean" eta "ezkerreko gezia
+          sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara iristeko.
+        bounce_3: Orain, saiatu antzeko zerbait "gorako gezia sakatzean" blokearekin.
+          Mugitu erraketa goi parteko bukaerako helbururaino.
+        bounce_4: Orain, lau bloke gehitu behar dituzu. Mugitu erraketa bukaerako
+          lau helburuetaraino puzzle honi amaiera emateko.
+        bounce_5: Pilota bat botako dugu erraketarantz. Itsatsi bloke bat "pilotak
+          erraketa jotzen duenean" blokeari ziurtatzeko pilota bukaerako helburura
+          iristen dela.
+        bounce_6: Orain, bukaerako helburua goiko partean dago. Blokeak gehitu behar
+          dituzu "pilotak jotzen duenean" bi blokeetan puzzle hau ebazteko.
+        bounce_7: Itsatsi blokeak "... duenean/denean" bloke guztiei. Errebotatu pilota
+          bukaerako helburua jotzen duen arte.
+        bounce_10: Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman" eta
+          "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak erraketa
+          jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun
+          zure aurkariak bi tanto lortu aurretik.
+        bounce_11: Orain, blokeak gehitu ditzakezu "exekutatzean" blokean. "bota beste
+          pilota bat" bloke berria gehitu behar duzu toki batean baino gehiagotan.
+          Era berean, saia zaitez eszena aldatzen, edo erraketaren eta pilotaren abiadura,
+          eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi tanto eskuratu
+          aurretik.
+        bounce_12: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak
+          alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal
+          izan dezaten zure jokoa haien telefonoetan.
+        Custom_builder: Arrastatu blokeak tresna-kutxatik lan-ingurunera sortu nahi
+          duzun maila marrazteko. Sakatu "Egikaritu" prest zaudenean.
+        flappy_1: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Egikaritu".
+          Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
+        flappy_2: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean"
+          blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
+        flappy_3: '"egikaritzean" blokeak ahalbidetzen dizu kodea exekutatzea zure
+          jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua
+          finkatzen helburuaren arabera.'
         flappy_4: Flappy will fly through obstacles unless you write code to make
           him crash. Attach a block to the "when hit an obstacle" block. Your code
           needs to 'END GAME' when Flappy crashes into the first set of pipes.
@@ -423,24 +433,25 @@
         flappy_11: Create your own Flappy game. You can change all the visuals and
           all the rules, even the gravity. When you're done, click Finish to let friends
           try your game on their phones.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
+        flappy_k1_1: Jolastu Flappy
+        flappy_k1_2: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Egikaritu".
+          Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
+        flappy_k1_3: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean"
+          blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
+        flappy_k1_4: '"egikaritzean" blokeak ahalbidetzen dizu kodea exekutatzea zure
+          jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua
+          finkatzen helburuaren arabera.'
         flappy_k1_5: Flappy will fly through obstacles unless you write code to make
           him crash. Attach a block to the "when hit an obstacle" block. Your code
           needs to 'END GAME' when Flappy crashes into the first set of pipes.
         flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
           past obstacles. Add to the "when pass an obstacle" block, and then score
           a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
+        flappy_k1_7: Saiatu puntu anitzak lortzen traba bat gainditzean.
         flappy_k1_8: Next, try changing the scene by attaching another block to the
           "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_k1_9: Saiatu jokalaria aldatzen. Horretarako "jokalaria ipini" blokea
+          gehitu "egitean" blokeari
         jigsaw_1: Klikatu blokea
         jigsaw_2: Arrastatu blokea helburura
         jigsaw_3: Antolatu blokeak irudia osatzeko
@@ -453,7 +464,7 @@
         jigsaw_10: Antolatu blokeak irudia osatzeko
         jigsaw_11: Antolatu blokeak irudia osatzeko
         jigsaw_12: Antolatu blokeak irudia osatzeko
-        jigsaw_13: Fix the puzzle!
+        jigsaw_13: Konpon ezazu puzzlea!
         mazestep_1: Labirinto pausuaren deskribapena hemen
         mazestep_2: Labirinto pausuaren deskribapena hemen
         mazestep_3: Labirinto pausuaren deskribapena hemen
@@ -462,11 +473,11 @@
         studio_c2_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
+        studio_c2_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
+        studio_c2_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
+          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
+        studio_c2_5: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere
+          gainean klik egitean?
         studio_c2_6: Can you write a program to make this penguin move around using
           the up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
@@ -478,19 +489,19 @@
           the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of
           the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
+        studio_c2_11: Zure istorioa sortu. Bukatzean egin klik amaieran zure lagunek
+          euren telefonoetan froga dezaten.
         studio_c3_story_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
+        studio_c3_story_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
+          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
         studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
+        studio_c3_story_6: Zure istorioa sortu. Bukatzean egin klik amaieran zure
+          lagunek euren telefonoetan froga dezaten.
+        studio_c3_game_1: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan
+          bere gainean klik egitean?
         studio_c3_game_2: Can you write a program to make this penguin move around
           using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
@@ -504,10 +515,10 @@
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, amaieran sakatu
           zure jokoa zure lagunak beraien sakelakoetan froga egin dezatela.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
-          say "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
+        studio_playlab_1: Pinguinoak "kaixo" esan nahi du. Lagun dezakezu?
+        studio_playlab_2: Haitzuloko mutilak (1.aktorea) eta neskak (2.aktorea) "kaixo"
+          esan nahi diote elkarri. Lagun ditzakezu "esan" blokea bi aldiz erabiliz?
+        studio_playlab_3: Lagun dezakezu tenislaria bandera heltzen?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
           2) and play a sound when he gets there?
         studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
@@ -529,15 +540,15 @@
         studio_k1_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
         studio_k1_6: Create your own story! Move around the cat and dog, and make
           them say things.
-        maze_wordsearch_k_1: Move me to spell the word EAST
-        maze_wordsearch_k_2: Move me to spell the word SOUTH
-        maze_wordsearch_k_3: Move me to spell the word WEST
+        maze_wordsearch_k_1: Mugi nazazu EKIALDEA hitza letreiatzeko
+        maze_wordsearch_k_2: Mugi nazazu HEGOALDEA hitza letreiatzeko
+        maze_wordsearch_k_3: Mugi nazazu MENDEBALDEA hitza letreiatzeko
         maze_wordsearch_k_4: Move me to spell the word NORTH
         maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
         maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
@@ -567,25 +578,25 @@
         if_else_scrat: baldin/bestela blokea
         function: Funtzioak
         loop_while: Bitartean Blokea
-        loop_for: Counter Block
-        parameters: Functions with Parameters
-        hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
+        loop_for: Bloke kontatzailea.
+        parameters: Parametrodun funtzioak
+        hoc_wrapup: Kodetzeko Ordua errepasatzeko
+        Unplug1: Zer dira CS-ak?
         Unplug2: Pentsamendu konputazionala
         Unplug3: Paper grafiko programazioa
         Unplug4: Algoritmoak
         Unplug5: Funtzioak
         Unplug6: Baldintzak
-        Unplug7: Songwriting
+        Unplug7: Musika lana
         Unplug8: Abstrakzioa
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Ixtea
         C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: Mugi ezazu, mugi ezazu!
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_pair_programming: Bikoitien programazioa.
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
@@ -641,7 +652,7 @@
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
-        C4_function_parameters: Functions with Parameters
+        C4_function_parameters: Parametrodun funtzioak
         C4_conditionals: Baldintzak
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs

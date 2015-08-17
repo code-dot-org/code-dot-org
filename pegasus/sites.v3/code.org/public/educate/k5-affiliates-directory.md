@@ -34,9 +34,9 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Maine](#me)
 - [Maryland](#md)
 - [Massachusetts](#ma)
+- [Michigan](#mi)
 - [Minnesota](#mn)
 - [Missouri](#mo)
-- [Mississippi](#ms)
 
 
 [/col-25]
@@ -45,6 +45,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 [col-25]
 
 
+- [Mississippi](#ms)
 - [North Carolina](#nc)
 - [Nebraska](#ne)
 - [New Hampshire](#nh)
@@ -55,7 +56,6 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 - [Ohio](#oh)
 - [Oklahoma](#ok)
 - [Oregon](#or)
-- [Pennsylvania](#pa)
 
 
 [/col-25]
@@ -64,6 +64,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 [col-25]
 
 
+- [Pennsylvania](#pa)
 - [Rhode Island](#ri)
 - [South Carolina](#sc)
 - [Tennessee](#tn)
@@ -83,7 +84,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 ## Alabama
 [col-33]
 ### Jeff Gray
-Tuscloosa, AL
+Tuscaloosa, AL
 
 gray@pd.code.org
 
@@ -128,6 +129,15 @@ style="clear:both"&nbsp;
 <a id="az"></a>
 ## Arizona
 [col-33]
+### Janice Mak
+Phoenix, AZ
+
+mak@pd.code.org
+
+[/col-33]
+
+[col-33]
+
 ### Linda Angeloff
 Scottsdale, AZ
 
@@ -222,6 +232,14 @@ agbowo@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Cheryl Carter
+Fairfield, CA
+
+carter@pd.code.org
+
+[/col-33]
+
 <p style="clear:both">&nbsp;</p>
 
 ### **Sacramento Area**
@@ -242,18 +260,25 @@ gargiulo@pd.code.org
 
 [/col-33]
 
-[col-33]
+<p style="clear:both">&nbsp;</p>
 
-### Sandy Feder
-Fair Oaks, CA
+### **Central California**
+### Jason Horsman
+Fresno, CA
 
-feder@pd.code.org
-
-[/col-33]
+horsman@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
 ### **Los Angeles Area**
+[col-33]
+### Alisa McCord
+Orange County, CA
+
+mccord@pd.code.org
+
+[/col-33]
+
 [col-33]
 ### Dave Dawson
 Lancaster, CA
@@ -277,15 +302,6 @@ bacon@pd.code.org
 Los Angeles
 
 caguioa@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Deborah Francois
-Los Angeles, CA
-
-francois@pd.code.org
 
 [/col-33]
 
@@ -354,6 +370,22 @@ hopper@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Kathy Gligo
+El Cajon, CA
+
+gligo@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Liz Loether
+El Cajon, Ca
+
+loether@pd.code.org
+
+[/col-33]
+
 <p
 style="clear:both">&nbsp;</p>
 
@@ -391,6 +423,23 @@ style="clear:both">&nbsp;
 
 <a id="fl"></a>
 ## Florida
+[col-33]
+### Elizabeth Scheilz
+
+Jacksonville, FL
+
+scheilz@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Katheleen Schofield
+Jacksonville, FL
+
+schofield@pd.code.org
+
+[/col-33]
+
 [col-33]
 ### Evelyn Zayas
 Orlando, FL
@@ -483,6 +532,14 @@ myles@pd.code.org
 [/col-33]
 
 [col-33]
+### April DeGennaro
+Fayetteville, GA
+
+degennaro@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Diane Davis
 Dunwoody, GA
 
@@ -495,6 +552,14 @@ davis@pd.code.org
 Atlanta, GA
 
 foust@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Tanya Cheeves
+Cumming, GA
+
+cheeves@pd.code.org
 
 [/col-33]
 
@@ -532,6 +597,14 @@ pluska@pd.code.org
 Chicago, IL
 
 lavin@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Roxanne Bowens
+Chicago, IL
+
+bowens@pd.code.org
 
 [/col-33]
 
@@ -626,12 +699,24 @@ mccall@pd.code.org
 
 <a id="ky"></a>
 ## Kentucky
+[col-33]
 ### Mark Lorence
 Louisville, KY
 
 lorence@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+### Stacey Spears
+Greenup, KY
+
+spears@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 <a id="la"></a>
 ## Louisiana
 [col-33]
@@ -696,6 +781,22 @@ ogrady-cunniff@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Alicia Stahl
+LaPlata, MD
+
+stahl@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Katie Bridgett
+LaPlata, MD
+
+bridgett@pd.code.org
+
+[/col-33]
+
 <p
 style="clear:both">&nbsp;
 </p>
@@ -703,19 +804,26 @@ style="clear:both">&nbsp;
 <a id="ma"></a>
 ## Massachusetts
 [col-33]
-### Maria Litvin
-Andover, MA
+### Eileen Young
+Chelmsford, MA
 
-litvin@pd.code.org
+young@pd.code.org
 
 [/col-33]
 
 [col-33]
-
 ### Kelly Powers
 Natick, MA
 
 powers@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Maria Litvin
+Andover, MA
+
+litvin@pd.code.org
 
 [/col-33]
 
@@ -732,6 +840,44 @@ golas@pd.code.org
 style="clear:both">&nbsp;
 </p>
 
+<a id="mi"></a>
+## Michigan
+[col-33]
+### Allison Keskimaki
+Lansing, MI
+
+keskimaki@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Adrienne Wheat
+Southfield, MI
+
+awheat@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Monica Wheat
+Southfield, MI
+
+wheat@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Olivia Snead
+Southfield, MI
+
+snead@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
 <a id="mn"></a>
 ## Minnesota
 [col-33]
@@ -739,14 +885,6 @@ style="clear:both">&nbsp;
 Apple Valley, MN
 
 hitchcock@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Angie Kalthoff
-Richmond, MN
-
-kalthoff@pd.code.org
 
 [/col-33]
 
@@ -803,15 +941,6 @@ sjones@pd.code.org
 
 [col-33]
 
-### Owen Astrachan
-Durham, NC
-
-astrachan@pd.code.org
-
-[/col-33]
-
-[col-33]
-
 ### April Thomas
 Cary, NC
 
@@ -824,6 +953,14 @@ thomas@pd.code.org
 Greensboro, NC
 
 holmes@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Amy Stanley
+Smithfield, NC
+
+stanley@pd.code.org
 
 [/col-33]
 
@@ -863,15 +1000,6 @@ presbrey@pd.code.org
 Egg Harbor Township
 
 monroe@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Jerri Drakes
-Newark, NJ
-
-drakes@pd.code.org
 
 [/col-33]
 
@@ -954,22 +1082,6 @@ coia@pd.code.org
 
 [/col-33]
 
-[col-33]
-### Melissa Brennan
-Briarcliff Manor, NY
-
-brennan@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Pamela Trincado
-Forest Hills, NY
-
-trincado@pd.code.org
-
-[/col-33]
-
 <p
 style="clear:both">&nbsp;
 </p>
@@ -1004,12 +1116,24 @@ carr@pd.code.org
 <br />
 <a id="or"></a>
 ## Oregon
+[col-33]
 ### Chris Bartlo
 Portland, OR
 
 bartlo@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+### Katie White
+Beaverton, OR
+
+white@pd.code.org
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
 <a id="pa"></a>
 ## Pennsylvania
 [col-33]
@@ -1133,12 +1257,34 @@ style="clear:both">&nbsp;
 </p>
 
 ### **Dallas**
+[col-33]
+### Elizabeth Barrientos
+Dallas, TX
+
+barrientos@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Kimberly Lane
 Dallas, TX
 
 lane@pd.code.org
 
-<br />
+[/col-33]
+
+[col-33]
+### Kerissa Bearce
+Grapevine, TX
+
+bearce@pd.code.org
+
+[/col-33]
+
+<p
+style="clear:both">&nbsp;
+</p>
+
 ### **San Antonio**
 ### Susan Reeves
 San Antonio, TX
@@ -1148,6 +1294,22 @@ reeves@pd.code.org
 <br />
 ### **Houston**
 [col-33]
+### Erica Deakins
+Houston, TX
+
+deakins@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Karen North
+Houston, TX
+
+north@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Ruth Hanson
 Houston, TX
 
@@ -1156,11 +1318,18 @@ hanson@pd.code.org
 [/col-33]
 
 [col-33]
-
-### Karen North
+### Sabrina Provencher
 Houston, TX
 
-north@pd.code.org
+provencher@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Shaina Glass
+Houston, TX
+
+glass@pd.code.org
 
 [/col-33]
 
@@ -1171,10 +1340,10 @@ style="clear:both">&nbsp;
 <a id="ut"></a>
 ## Utah
 [col-33]
-### Michael Hight
-Salt Lake City, UT
+### Camille Cole
+Sandy, UT
 
-hight@pd.code.org
+cole@pd.code.org
 
 [/col-33]
 
@@ -1187,7 +1356,30 @@ lyman@pd.code.org
 [/col-33]
 
 [col-33]
+### Kim Broadbent
+Provo, UT
 
+broadbent@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Michael Hight
+Salt Lake City, UT
+
+hight@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Nicole Reitz-Larsen
+Salt Lake City, UT
+
+nicole@code.org
+
+[/col-33]
+
+[col-33]
 ### Rachel Ramsay
 St. George, UT
 
@@ -1210,6 +1402,22 @@ mcavoy@pd.code.org
 <a id="va"></a>
 ## Virginia
 [col-33]
+### Janice Maino
+Ashland, VA
+
+maino@Pd.code.org
+
+[/col-33]
+
+[col-33]
+### Kammy Sanghera
+Fairfax, VA
+
+sanghera@pd.code.org
+
+[/col-33]
+
+[col-33]
 ### Laura Angle
 Fairfax, VA
 
@@ -1218,26 +1426,10 @@ angle@pd.code.org
 [/col-33]
 
 [col-33]
-### Kammy Sanghere
-Fairfax, VA
-
-sanghera@pd.code.org
-
-[/col-33]
-
-[col-33]
 ### Rebecca Dovi
 Richmond, VA
 
 dovi@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Janice Maino
-Ashland, VA
-
-maino@Pd.code.org
 
 [/col-33]
 
@@ -1277,6 +1469,22 @@ bricker@pd.code.org
 Spokane, Washington
 
 scrader@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Cheri Bortleson
+Bellevue, WA
+
+bortleson@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Paul LaGrange
+Marysville, WA
+
+lagrange@pd.code.org
 
 [/col-33]
 

@@ -24,7 +24,7 @@
         text: 左側はプログラムを実行させる迷路です。それぞれのパズルの説明は迷路の下にあります。
       8:
         image: notes/hoc1_8.jpg
-        text: 真ん中のツールボックスにはアングリーバードのコマンドがあります。これらはあなたのコードを組み立てるのに使います。
+        text: 真ん中のツールボックスにはアングリーバードのコマンドがあります。これはコードを組み立てるのに使います。
       9:
         image: notes/hoc1_9.jpg
         text: 右には、ブロックをツールボックスからドラッグしてプログラムを組み立てるためのワークスペースがあります。ブロックを削除するには、隅にあるゴミ箱へドラッグします。
@@ -33,7 +33,7 @@
         text: ブロックはそれぞれ、1つの命令を表します。「前に進む」ブロックをワークスペースにドラッグして「プログラムの実行」をクリックすると、鳥は迷路の中を1マス進みます。
       11:
         image: notes/hoc1_11.jpg
-        text: 1 つ以上のアクションをするには、たくさんのブロックをワークスペースにドラッグして引っ張ってきて一つにくっつけます。アングリーバードは上から下へコマンドを実行します。
+        text: いくつかのアクションをするには、たくさんのブロックをワークスペースにドラッグして引っ張ってきて一つにくっつけます。アングリーバードは上から下へコマンドを実行します。
       12:
         image: notes/hoc1_12.jpg
         text: プログラムを実行後、修正してやり直したいときは、「リセット」ボタンをクリックします。
@@ -325,8 +325,7 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: ピクセルと角度はとなりの矢印をクリックすれば変えられますよ。
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -337,9 +336,7 @@
           of times.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: プログラミングでは、これをループと呼びます。ループはコードを繰り返す処理です。次のパズルでは、この”繰り返し”を使ってアンナが正方形を作るのが目標です。
       3:
         image: notes/frozen2_3.jpg
         text: Any blocks of code you put inside the "Repeat" block will be repeated
@@ -465,12 +462,11 @@
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: これは「ずっと繰り返す」ブロックです。このブロックの中にあるものは、プログラムが終わるまでずっと繰り返されます。
       2:
         image: notes/playlab_repeat_forever_2.png
         text: If we want an actor to do something repeatedly, without the player having
           to do anything, we'll put those blocks inside the "repeat forever" block.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: この次のパズルでの私たちの目標は魔法使いの王国の右へ左へとの継続的な国境パトロールを助けることです。繰り返しコマンドがどう動いているか勉強することで後ほどあなたが自分のゲームを作る時にたくさんの時間を節約できるでしょう。
+        text: この次のパズルでは、魔法使いの王国の国境パトロールを助けることが目標です。コマンドがどう繰り替えされているのか勉強することで、自分のゲームを作る時に役に立つでしょう。

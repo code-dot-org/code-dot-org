@@ -268,6 +268,7 @@
       free_play:
         playlab: Maak een App
         artist: Teken iets
+        calculate: Calculate Something
     user:
       classroom: Leerkracht Home Page
       district_dashboard: District Ovezicht
@@ -385,10 +386,10 @@
     classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio is de basis voor online cursussen gemaakt door code.org
     lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LIJNEN CODE <br/> GESCHREVEN DOOR leerlingen%{students_count}
+      MILJOEN LEERLINGEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: Al geregistreerd? %{link}
@@ -414,6 +415,7 @@
     local_school: lokale school
     online: online
     see_details: Bekijk details
+    view_course: View Course
     prize_info: 'Prijzen voor deelname (alleen voor leerkrachten van Amerikaanse openbare
       scholen): tot $1.000 aan prijzengeld voor je klas.'
     tryfirst: 'Of, je kunt het eerst proberen, en later registreren:'
@@ -432,7 +434,8 @@
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
-    print_certificate: Print Certificate
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: print certificaat
   gender:
     male: Man
     female: Vrouw
@@ -468,12 +471,6 @@
     autoplay_option: Video's automatisch afspelen
     download: Video downloaden
   compatability:
-    https:
-      header: Schakel HTTPS in voor Code.org.
-      message: Om de veiligheid te verhogen schakelen we op %{https_date} over naar
-        HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
-        hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
-      hide_this_warning: Verberg deze waarschuwing
     working:
       header: We zijn bezig om ondersteuning voor je browser toe te voegen.
       message: Code.org gebruikt moderne webtechnologie. Dat maakt de site sneller.
@@ -534,11 +531,11 @@
       body: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy
         Code opdracht!
     20-hour:
-      title: Accelerated Course
+      title: versnelde cursus
       body: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en
         programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor
         alle leeftijden leuk om te leren.
-      body_short: Learn basic computer science in an accelerated version of courses
+      body_short: Leer eenvoudige informatica in een versnelde versie van de cursussen
         2-4.
     hoc2014:
       try_new_tutorial: Probeer onze nieuwe Uur Code in beta

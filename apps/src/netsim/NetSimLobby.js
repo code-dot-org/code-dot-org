@@ -21,17 +21,17 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
- * @typedef {Object} shardChoice
+ * @typedef {Object} ShardChoice
  * @property {string} shardSeed - unique key for shard within level, used in
  *           share URLs
  * @property {string} shardID - unique key for shard in tables API, used as
@@ -112,7 +112,7 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
 
   /**
    * Shard options for the current user
-   * @type {shardChoice[]}
+   * @type {ShardChoice[]}
    * @private
    */
   this.shardChoices_ = [];
@@ -283,29 +283,27 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
  * @private
  */
 NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
-  this.shard_.nodeTable.readAll(function (err, rows) {
-    if (err) {
-      logger.warn("Node table read failed: " + err.message);
-      return;
-    }
+  $.when(this.shard_.nodeTable.refresh(), this.shard_.wireTable.refresh())
+      .fail(function (nodeErr, wireErr) {
+        if (nodeErr) {
+          logger.warn('Node table refresh failed: ' + nodeErr);
+        } else if (wireErr) {
+          logger.warn('Wire table refresh failed: ' + wireErr);
+        }
+      }.bind(this))
+      .done(function () {
+        // Because the lobby may not get table-change events from this refresh,
+        // manually pass the cached table contents in.
+        this.onNodeTableChange_();
+        this.onWireTableChange_();
 
-    this.onNodeTableChange_(rows);
-    this.shard_.wireTable.readAll(function (err, rows) {
-      if (err) {
-        logger.warn("Wire table read failed: " + err.message);
-        return;
-      }
-
-      this.onWireTableChange_(rows);
-
-      // On initial connect, if we are connecting to routers and no routers
-      // are present, add one automatically.
-      if (netsimGlobals.getLevelConfig().canConnectToRouters &&
-          !this.doesShardContainRouter()) {
-        this.addRouterToLobby();
-      }
-    }.bind(this));
-  }.bind(this));
+        // If we use routers and there's no router, create a router.
+        // TODO: Move this logic to the server, somehow.
+        if (NetSimGlobals.getLevelConfig().canConnectToRouters &&
+            !this.doesShardContainRouter()) {
+          this.addRouterToLobby();
+        }
+      }.bind(this));
 };
 
 /**
@@ -355,20 +353,20 @@ NetSimLobby.prototype.onCancelButtonClick_ = function () {
 /**
  * Called whenever a change is detected in the nodes table - which should
  * trigger a refresh of the lobby listing
- * @param {!Array} rows
  * @private
  */
-NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
-  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+NetSimLobby.prototype.onNodeTableChange_ = function () {
+  this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAll());
   this.render();
 };
 
 /**
  * Called whenever a change is detected in the wires table.
- * @param {!Array} rows
  * @private
  */
-NetSimLobby.prototype.onWireTableChange_ = function (rows) {
+NetSimLobby.prototype.onWireTableChange_ = function () {
+  var rows = this.shard_.wireTable.readAll();
   // Update the collection of nodes with connections pointing toward us.
   this.incomingConnectionNodes_ = rows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.myNode_.entityID;

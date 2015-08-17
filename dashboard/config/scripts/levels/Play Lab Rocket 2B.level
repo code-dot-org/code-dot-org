@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n  }\r\n  var originalOnTick = Studio.customLogic.constructor.prototype.onTick.bind(Studio.customLogic);\r\n  Studio.customLogic.constructor.prototype.onTick = function() {\r\n  \tif (this.studio_.tickCount === 1) {\r\n      this.seconds = 0;\r\n      this.height = 0;\r\n    }\r\n    originalOnTick();\r\n    Studio.Globals.time = this.seconds;\r\n    Studio.Globals.succeeded = ((this.seconds == 21 && this.height == 315) && (this.rocket_height(10) == 150));\r\n  }\r\n  return Studio.Globals.succeeded;\r\n}",
+    "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  var SECONDS_TO_RUN = 21;\r\n  var targetHeight = 315;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(10) === 150;\r\n}",
     "failure_condition": "function () {\r\n  return (Studio.Globals.time > 21 && !Studio.Globals.succeeded)\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "A rocket blasts off, traveling at 15 meters per second. Using the Design Recipe, write a function called rocket-height that takes in a number of  seconds that have passed since the rocket took off, and produces the height of the rocket at that time.",
@@ -38,7 +38,8 @@
     "definition_highlight": "false",
     "definition_collapse": "true",
     "custom_game_type": "Rocket Height",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

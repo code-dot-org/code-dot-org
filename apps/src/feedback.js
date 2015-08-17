@@ -143,7 +143,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = this.createModalDialogWithIcon({
+  var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -746,7 +746,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
       Dialog: Dialog,
       contentDiv: codeDiv,
       icon: this.studioApp_.icon,
@@ -768,22 +768,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
  * confirms they want to clear the puzzle.
  */
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
-      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+  this.showSimpleDialog(Dialog, {
+    headerText: msg.clearPuzzleConfirmHeader(),
+    bodyText: msg.clearPuzzleConfirm(),
+    confirmText: msg.clearPuzzle(),
+    cancelText: msg.dialogCancel(),
+    onConfirm: callback,
+    onCancel: null
+  });
+};
+
+/**
+ * Shows a simple dialog that has a header, body, continue button, and cancel
+ * button
+ * @param {object} options Configurable options.
+ * @param {string} headerText Text for header portion
+ * @param {string} bodyText Text for body portion
+ * @param {string} cancelText Text for cancel button
+ * @param {string} confirmText Text for confirm button
+ * @param {function} [onConfirm] Function to be called after clicking confirm
+ * @param {function} [onCancel] Function to be called after clicking cancel
+ */
+FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = '';
+  if (options.headerText) {
+    contentDiv.innerHTML += '<p class="dialog-title">' + options.headerText + '</p>';
+  }
+  if (options.bodyText) {
+    contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
+  }
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
-      clearPuzzle: true,
-      cancel: true
+      confirmText: options.confirmText,
+      cancelText: options.cancelText
     }
   });
-  codeDiv.appendChild(buttons);
+  contentDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: Dialog,
-    contentDiv: codeDiv,
+    contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
   });
@@ -791,14 +818,19 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
+      if (options.onCancel) {
+        options.onCancel();
+      }
       dialog.hide();
     });
   }
 
-  var clearPuzzleButton = buttons.querySelector('#continue-button');
-  if (clearPuzzleButton) {
-    dom.addClickTouchEvent(clearPuzzleButton, function() {
-      callback();
+  var confirmButton = buttons.querySelector('#confirm-button');
+  if (confirmButton) {
+    dom.addClickTouchEvent(confirmButton, function() {
+      if (options.onConfirm) {
+        options.onConfirm();
+      }
       dialog.hide();
     });
   }
@@ -821,7 +853,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
       Dialog: Dialog,
       contentDiv: contentDiv,
       icon: this.studioApp_.icon,
@@ -1080,24 +1112,29 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 };
 
 /**
- * Show a modal dialog with an icon.
- */
-FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
-  var imageDiv = document.createElement('img');
-  imageDiv.className = "modal-image";
-  imageDiv.src = options.icon;
-  return this.createModalDialog(options, imageDiv);
-};
-
-/**
  * Show a modal dialog without an icon.
+ * @param {Object} options
+ * @param {Dialog} options.Dialog
+ * @param {string} options.icon
+ * @param {HTMLElement} options.contentDiv
+ * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.scrollContent
+ * @param {function} options.onHidden
+ * @param {string} options.id
+ * @param {HTMLElement} options.header
  */
-FeedbackUtils.prototype.createModalDialog = function(options, icon) {
+FeedbackUtils.prototype.createModalDialog = function(options) {
   var modalBody = document.createElement('div');
-  if (icon) {
-    modalBody.appendChild(icon);
-    options.contentDiv.className += ' modal-content';
+  if (options.icon) {
+    var imageDiv;
+    imageDiv = document.createElement('img');
+    imageDiv.className = "modal-image";
+    imageDiv.src = options.icon;
+    modalBody.appendChild(imageDiv);
+  } else {
+    options.contentDiv.className += ' no-modal-icon';
   }
+  options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);

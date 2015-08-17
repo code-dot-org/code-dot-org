@@ -16,7 +16,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "open_function_definition": "green shape",
-    "min_workspace_height": "1500",
+    "min_workspace_height": "2000",
     "default_num_example_blocks": "4",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -26,7 +26,8 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "We can use the `string=?` function to make conditionals that respond to text input. Here's a function called `green shape` that takes a string for the type of shape. Complete the conditions so that the correct solid green shape is returned when the function is run with \"circle\", \"triangle\", \"square\", or \"rectangle\"."
+    "markdown_instructions": "We can use the `string=?` function to make conditionals that respond to text input. Here's a function called `green shape` that takes a string for the type of shape. Complete the conditions so that the correct solid green shape is returned when the function is run with \"circle\", \"triangle\", \"square\", or \"rectangle\".",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>
@@ -432,11 +433,12 @@
           <block type="functional_triangle" inline="false"/>
           <block type="functional_square" inline="false"/>
           <block type="functional_rectangle" inline="false"/>
+          <block type="functional_text" inline="false"/>
         </category>
         <category name="Boolean">
           <block type="functional_string_equals" inline="false"/>
         </category>
-        <category name="Cond">
+        <category name="Conditionals">
           <block type="functional_cond" inline="false"/>
         </category>
         <category name="Functions" custom="PROCEDURE">

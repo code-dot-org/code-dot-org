@@ -1,28 +1,22 @@
 ---
 project_identifier: hour-of-code
 api_key: <%= CDO.crowdin_hoc_api_key %>
-base_path: '../../i18n'
+base_path: '../locales'
 
 files:
-  -
-    source: '../pegasus/sites.v3/hourofcode.com/i18n/en.yml'
-    translation: '/locales/%locale%/hourofcode/%two_letters_code%.yml'
   - 
-    source: '../pegasus/sites.v3/hourofcode.com/public/*.md'
-    translation: '/locales/%locale%/hourofcode/%original_file_name%'
+    source: '/source/hourofcode/i18n/en.yml'
+    translation: '/%language%/hourofcode/%original_file_name%'
+    update_option: 'update_as_unapproved'
   - 
-    source: '../pegasus/sites.v3/hourofcode.com/public/resources/*.md'
-    translation: '/locales/%locale%/hourofcode/resources/%original_file_name%'
-    ignore:
-      - ../pegasus/sites.v3/hourofcode.com/public/resources/how-to-ireland.md
-      - ../pegasus/sites.v3/hourofcode.com/public/resources/how-to-organisations.md
-  -
-    source: '../pegasus/emails/hoc_signup_2014_receipt.md'
-    translation: '/locales/%locale%/hourofcode/emails/%original_file_name%'
-  -
-    source: '../locales/source/hourofcode/*.idml'
-    translation: '/locales/%locale%/hourofcode/assets/%original_file_name%'
-  -
-    source: '../locales/source/hourofcode/*.md'
-    translation: '/locales/%locale%/hourofcode/assets/%original_file_name%'
-
+    source: '/source/hourofcode/public/*.md'
+    translation: '/%language%/hourofcode/%original_file_name%'
+    update_option: 'update_as_unapproved'
+  - 
+    source: '/source/hourofcode/public/resources/*.md'
+    translation: '/%language%/hourofcode/resources/%original_file_name%'
+    update_option: 'update_as_unapproved'
+  - 
+    source: '/source/hourofcode/public/files/*.idml'
+    translation: '/%language%/hourofcode/files/%original_file_name%'
+    update_option: 'update_as_unapproved'

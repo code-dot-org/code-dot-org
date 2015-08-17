@@ -2,7 +2,7 @@ name 'U1L12 Student Lesson Introduction'
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
-## Unit 1: Lesson 12 - Data Storage: Bytes and File Sizes
+## Unit 1: Lesson 12 - Bytes and File Sizes
 # Background
 
 Early computers stored and ran 8-bit instructions and most relied on representing and exchanging messages encoded in ASCII text. The 8-bit chunk, or “byte” became a very common chunk-size or unit of data for representing information. It became the fundamental unit with which we measure the “size” of data on computers (kilobyte, megabyte, gigabyte, terabyte, etc). 
@@ -20,3 +20,6 @@ Early computers stored and ran 8-bit instructions and most relied on representin
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+
+

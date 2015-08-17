@@ -247,7 +247,7 @@ it:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Trascina i blocchi per associarli.
         Instructions: Istruzioni
-        Match the puzzles and blocks: "Associa ad ogni situazione l'insieme dei blocchi che mi fa arrivare al maialino."
+        Match the puzzles and blocks: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare al maialino.
         Matching: Esercizio di Verifica (Associazioni)
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -293,7 +293,7 @@ it:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Inizia con un quadrato<br/>Metti un parallelogramma sopra il quadrato<br/>Metti un triangolo a destra del parallelogramma'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Inizia con un quadrato<br/>Metti un triangolo sopra il quadrato<br/>Metti un triangolo sotto il quadrato'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Inizia con un quadrato<br/>Metti un triangolo sotto il quadrato<br/>Metti un parallelogramma a destra del triangolo'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Inizia con un quadrato <br/> Disegna un triangolo a destra del quadrato <br/> Disegna un parallelogramma sotto il quadrato <br/> Disegna un triangolo a destra del parallelogramma'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Inizia con un quadrato <br/> Disegna un triangolo a destra del quadrato<br/> Disegna un parallelogramma sotto il quadrato <br/> Disegna un triangolo a destra del parallelogramma'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -466,8 +466,8 @@ it:
         Which of these pictures best represents crowdsourcing?: "Quale di queste immagini rappresenta meglio l'intelligenza collettiva?"
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Lavarsi i capelli
-        Cleaning your room: Pulire camera
-        Eating your dessert: Mangiare il dessert
+        Cleaning your room: Pulire la propria camera
+        Eating your dessert: Mangiare il proprio dolce
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
           
@@ -481,7 +481,7 @@ it:
         Your address: Il tuo indirizzo
         Your birthday: Il tuo compleanno
         Your favorite food: Il tuo cibo preferito
-        Your parent's credit card number: Il numero di carta di credito di tuo padre
+        Your parent's credit card number: Il numero della carta di credito di tua madre
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -491,10 +491,10 @@ it:
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
           
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Quando ti colleghi a code.org, a quale indirizzo IP è più probabile che ti faccia arrivare il DNS?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati in questa tabella ti farà arrivare il DNS?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110, su quale sito web sei arrivato?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110, su quale sito web fra quelli elencati in questa tabella sei arrivato?
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
           
@@ -824,6 +824,22 @@ it:
         Driver and Helper: Conduttore e Aiutante
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Uno di questi ragazzi è il <b>conduttore</b>.  E uno è l' <b>aiutante</b>."
         This time, which boy is the <large>driver</large>?: 'Questa volta, quale ragazzo è il <large>conduttore</large>?'
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
+        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: a caso
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

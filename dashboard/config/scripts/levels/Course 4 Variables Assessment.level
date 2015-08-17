@@ -8,7 +8,7 @@
     "skin": "artist",
     "embed": "false",
     "instructions": "Can you create this image using a variable for sides? Each line should be 50 pixels long.",
-    "markdown_instructions": "Can you create this image using a variable for `sides`? Each line should be 50 pixels long.",
+    "markdown_instructions": "Can you create this image using a variable for `sides`? Each line should be 50 pixels long.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,7 +27,8 @@
     "y": "150",
     "free_play": "true",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

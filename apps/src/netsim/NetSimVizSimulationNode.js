@@ -14,20 +14,23 @@
 'use strict';
 
 require('../utils');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./NetSimConstants');
 var NetSimVizNode = require('./NetSimVizNode');
 
-var NodeType = netsimConstants.NodeType;
+var NodeType = NetSimConstants.NodeType;
 
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @param {NetSimNode} sourceNode
+ * @param {boolean} useBackgroundAnimation - changes the behavior of this node
+ *        when it's in the background layer
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizSimulationNode = module.exports = function (sourceNode) {
-  NetSimVizNode.call(this);
+var NetSimVizSimulationNode = module.exports = function (sourceNode,
+    useBackgroundAnimation) {
+  NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
    * ID of the simulation node that this viz element represents.
@@ -54,7 +57,7 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
   this.correspondingNodeID_ = sourceNode.entityID;
 
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
     this.setName(sourceNode.getHostname());
   } else {

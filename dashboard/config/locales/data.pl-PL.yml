@@ -35,7 +35,7 @@
           desc: Bounce (beta)
           Bounce: Etap 1
         Builder Levels:
-          desc: Zagadki utworzone przez użytkowników (beta)
+          desc: Łamigłówki utworzone przez użytkowników (beta)
           Custom: Etap 1
         Flappy Levels:
           desc: Flappy Bird
@@ -168,8 +168,8 @@
           labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą
           ścieżkę bez względu na jej długość.
         turtle_1_1: Witaj, jestem artystą. Pisząc kod możesz sprawić, że narysuję
-          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować po szarych liniach
-          na obrazku.
+          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować wzdłuż szarych
+          linii na obrazku.
         turtle_1_2: 'A teraz narysuj kwadrat. Wskazówka: użyj swojego ulubionego koloru,
           wybierając go z nowego bloku ustaw kolor.'
         turtle_1_3: Narysuj kwadrat używając jedynie 3 bloków.
@@ -195,8 +195,8 @@
           ustaw szerokość. Baw się dobrze!'
         turtle_4_1: 'Czy możesz narysować trójkąt (z bokami o długości 100 pikseli)
           używając tylko 3 bloków? Wskazówka: Użyj bloku powtórz.'
-        turtle_4_2: Dodaj blok "Skręć w prawo o 90 stopni" gdzieś w środku programu
-          na obszarze roboczym, żeby rysować trójkąty.
+        turtle_4_2: Dodaj blok "skręć w prawo o 90 stopni" gdzieś w środku programu
+          na obszarze roboczym, żeby narysować te trójkąty.
         turtle_4_3: OK,  tutaj jest kod, który napisałeś, aby narysować pojedynczy
           trójkąt. Czy możesz dodać bloki powtórz i obróć, aby otrzymać ładny kwiat?
         turtle_4_4: 'Tutaj jest kod z poprzedniej łamigłówki, ale wykonujący obrót
@@ -318,8 +318,9 @@
           rozmiarach. (Wskazówka: kliknij gwiazdkę, aby dodać wejście do funkcji)'
         turtle_3_7: Dodaj wejście o nazwie długość do funkcji narysuj dom i zbuduj
           duży dom dla słonia (z krawędziami o długości 150 pikseli)
-        turtle_3_8: Modyfikuj "narysuj dom" tak, aby rysowanie kończyło się w prawym
-          dolnym rogu. Użyj tej zmodyfikowanej funkcji do narysowania trzech domów.
+        turtle_3_8: Modyfikuj "draw a house" (narysuj dom) tak, aby rysowanie kończyło
+          się w prawym dolnym rogu. Użyj tej zmodyfikowanej funkcji do narysowania
+          trzech domów.
         turtle_3_9: Czy mógłbyś ponownie utworzyć funkcję narysuj dom bez niczyjej
           pomocy? Spróbuj, a następnie narysuj szereg domów.
         turtle_3_10: Dużo się już nauczyłeś! Teraz narysuj, co chcesz. Spróbuj narysować
@@ -369,7 +370,7 @@
           doprowadzi mnie do świnki.
         bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
           Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
-        bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "Kiedy strzałka
+        bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy strzałka
           w lewo". Przesuń paletkę, aby osiągnąć ostateczne cele.
         bounce_3: Teraz spróbuj czegoś podobnego z blokiem "kiedy strzałka w górę".
           Przenieś paletki do miejsca końcowego na górze.
@@ -408,7 +409,7 @@
           powinien kończyć grę, gdy Flappy rozbija się na pierwszym zestawie rur.
         flappy_5: Dodajmy tablicę wyników i liczmy punkty, gdy Flappy mija przeszkody.
           Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
-          przelatując Flappym przez pierwsz zestaw rur.
+          przelatując Flappym przez pierwszy zestaw rur.
         flappy_6: Zobacz, czy potrafisz zdobywać punkty, gdy Flappy fruwa na małą
           lub dużą wysokość.
         flappy_7: Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po
@@ -416,7 +417,7 @@
         flappy_8: Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy
           gra się zaczyna.  Spróbuj ustawić losową scenę, gdy dzieje się coś innego,
           na przykład, gdy Flappy mija przeszkodę.
-        flappy_9: Dla zmyłki, gdy uderzy w przeszkodę, zamiast kończyć grę, spróbuj
+        flappy_9: Dla zmyłki, po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
           ustawić wynik z powrotem na 0.
         flappy_11: Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty
           wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
@@ -474,14 +475,15 @@
         studio_c2_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
           Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę
           i w dół w nieskończoność?
-        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit",
-          gdy wpadnie na dinozaura, a następnie przenieś go za pomocą strzałek, aby
+        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia,
+          gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby
           się to stało?
         studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, gdy pingwin wpada
           na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
           punkt?
-        studio_c2_10: Czy potrafisz dodać bloki tak aby zmienić tło i prędkość pingwina,
-          a następnie poruszać nim za pomocą klawiszy strzałek, aż zdobędziesz punkt?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
+          a następnie poruszać nim za pomocą przycisków ze strzałkami, aż zdobędziesz
+          punkt?
         studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
@@ -517,21 +519,21 @@
         studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ,
           aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_playlab_1: Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?
-        studio_playlab_2: Chłopiec z jaskini (aktor 1) i dziewczyna z jaskini (aktor
+        studio_playlab_2: Chłopiec z jaskini (postać 1) i dziewczyna z jaskini (postać
           2) chcieliby powiedzieć "hello" do siebie. Czy mógłbyś im pomóc wykorzystując
           dwa razy blok "powiedz"?
         studio_playlab_3: Czy mógłbyś pomóc tenisistce dostać się do flagi?
-        studio_playlab_4: Czy możesz pomóc tenisiście (aktor 1) dotrzeć do tenisistki
-          (aktor 2) i odtworzyć dźwięk, gdy tam dotrze?
-        studio_playlab_5: Czy możesz pomóc Spacebotowi powiedzieć "pozdrowienia dla
+        studio_playlab_4: Czy możesz pomóc tenisiście (postać 1) dotrzeć do tenisistki
+          (postać 2) i odtworzyć dźwięk, gdy tam dotrze?
+        studio_playlab_5: Czy możesz pomóc, by Spacebot powiedział "pozdrowienia dla
           Ziemian" po kliknięciu na nim? Nie zapomnij kliknąć na nim, po kliknięciu
-          przycisku Uruchom
-        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać za pomocą
+          przycisku "Uruchom"
+        studio_playlab_6: Czy mógłbyś pomóc czarownicy (Witch) poruszać się za pomocą
           klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne
           kule ogniste?
-        studio_playlab_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
-          Czy mógłbyś dołączyć do niego bloki powodujące, że  kreatora porusza się
-          w górę i w dół bez przerwy?
+        studio_playlab_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej
+          porusza się w górę i w dół bez przerwy?
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
           dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą
           strzałek aż zdobędziesz punkt?
@@ -557,8 +559,8 @@
         maze_wordsearch_k_2: Przesuwaj mnie, żeby przeliterować słowo  SOUTH
         maze_wordsearch_k_3: Przesuwaj mnie, żeby przeliterować słowo WEST
         maze_wordsearch_k_4: Przesuwaj mnie, żeby przeliterować słowo NORTH
-        maze_wordsearch_k_6: Przesuwaj mną na wschód a potem na południe, żeby przeliterować
-          słowo JUMP
+        maze_wordsearch_k_6: Przesuwaj mną na wschód (East) a potem na południe (South),
+          żeby przeliterować słowo JUMP
         maze_wordsearch_k_9: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
           słowo CODE
         maze_wordsearch_k_13: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
@@ -567,9 +569,9 @@
           słowo ABOVE
         maze_wordsearch_k_16: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
           słowo BELOW
-        maze_wordsearch_k_20: To jest test! Przesuwaj mnie w jedną stronę a potem
-          w inną, żeby przeliterować słowo STORY
-        applab_ec_simple: Stwórz swoją aplikację używając bloków z przybornika.
+        maze_wordsearch_k_20: To jest test! Przenieś mnie w jedną stronę, a później
+          w inną, by przeliterować słowo STORY
+        applab_ec_simple: Utwórz własną aplikację używając bloków z przybornika.
         turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
           go w nowym bloku "kolor pisaka".'
         turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
@@ -609,16 +611,16 @@
         C1_bigevent_unplugged: Wielkie wydarzenie
         C1_getting_loopy: Dostać Loopy
         C1_pair_programming: Programowanie w parach
-        C1_maze_intro_sequencing: Labirynt Sekwencji - Intro
-        C1_maze_debugging: Labirynt debugowanie
-        C1_bee_level_intro: Poziom pszczoły - wprowadzenie
+        C1_maze_intro_sequencing: Labirynt Sekwencji - Wprowadzenie
+        C1_maze_debugging: 'Labirynt: debugowanie'
+        C1_bee_level_intro: Poziom pszczoły - Wprowadzenie
         C1_artist_intro: Artysta - wprowadzenie
-        C1_spelling_bee_intro: Pszczółka literuje wprowadzenie
+        C1_spelling_bee_intro: Pszczółka literuje - Wprowadzenie
         C1_zuck_repeat_loop: 'Labirynt: Pętle'
         C1_bee_loops: 'Pszczółka: Pętle'
         C1_maze_loops: 'Labirynt: Pętle'
         C1_playlab_storytelling: Play Lab - Utwórz opowieść
-        C1_planting_seed: Zasadzenie nasiona
+        C1_planting_seed: Sadzenie nasiona
         C1_building_foundation: Budowanie solidnych podstaw
         C1_going_places_safely: Bezpiecznie dotrzeć na miejsce
         C2_maze_intro: Labirynt - wprowadzenie
@@ -676,12 +678,12 @@
         frozen_loops: Wprowadzenie do Pętli
         frozen_functions: Wprowadzenie do Funkcji
         playlab_intro: Wprowadzenie do Play Lab
-        playlab_events: Zdarzenia Play Gry Lab
-        playlab_repeat_forever: Play Lab Powtarzaj Zawsze
-        tutorial_puzzle_challenge: Wyzwanie samouczka - puzzle
-        infinity_playlab_intro: Plac Zabaw - wprowadzenie
-        infinity_playlab_events: Plac Zabaw - Event-y
-        infinity_playlab_repeat_forever: Plac Zabaw - Powtarzaj Wiecznie (Pętla)
+        playlab_events: Zdarzenia Play Lab
+        playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
+        tutorial_puzzle_challenge: Wyzwanie łamigłówek samouczka
+        infinity_playlab_intro: Play Lab - Wprowadzenie
+        infinity_playlab_events: Play Lab - Zdarzenia
+        infinity_playlab_repeat_forever: Play Lab - Powtarzaj w nieskończoność
         csp_concept_rgb: Trochę o pikselach
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
         csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
@@ -719,102 +721,103 @@
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
         run: Kliknij na "Uruchom", aby uruchomić program
-        watch_again: Kliknij tutaj, aby obejrzeć film ponownie
+        watch_again: Kliknij tutaj, aby ponownie obejrzeć film
         gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś
           jakkolwiek rozwiązać tę łamigłówkę?
         show_code_explanation: Kliknij tutaj, aby zobaczyć kod programu, który tworzysz
         instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane
           tutaj
-        category_explanation: Masz te same bloki, ale teraz są one ułożone w kategorie
-        set_sprite_image: Dołącz blok "ustaw obrazek aktora" do bloku "kiedy historia
-          się rozpocznie", aby aktor mógł wziąć udział w historii
+        category_explanation: Masz te same bloki, ale teraz są one uporządkowane kategoriami
+        set_sprite_image: Dołącz blok "wstaw postać" do bloku "kiedy rozpoczyna się
+          historia", aby włączyć postać do tej historii
         studio_say_text: W te cudzysłowy wpisz to, co ma powiedzieć Twoja postać
         jigsaw_click: Kliknij ten blok!
-        move_elsa_forward: Złap blok "idź naprzód" i dołącz poniżej bloku "Start",
+        move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu",
           aby Elsa poszła naprzód
-        turn_elsa: Użyj bloku "Skręć", aby Elsa obróciła się. Liczba wybrana z listy
+        turn_elsa: Użyj bloku "skręć", aby Elsa obróciła się. Liczba wybrana z listy
           rozwijanej, określa o ile stopni Elsa ma się obrócić
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
         replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez
           prawidłową liczbę stopni obrotu
-        repeat_blocks: Użyj bloku "Powtarzaj" i otocz nim inne bloki w obszarze roboczym
+        repeat_blocks: Użyj bloku "powtórz" i otocz nim inne bloki w obszarze roboczym
         repeat_blocks_1: (1) Użyj tego bloku i umieść go dookoła szarych bloków w
           obszarze roboczym
-        repeat_blocks_2: (2) Przesuń blok "Powtórz" tutaj i umieść szare bloki wewnątrz
+        repeat_blocks_2: (2) Przesuń blok "powtórz" tutaj i umieść szare bloki wewnątrz
           niego
         snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
-        degrees_per_side: Podziel 360 przez liczbę stron, aby uzyskać miarę każdego
+        degrees_per_side: Podziel 360 przez liczbę boków, aby uzyskać miarę każdego
           kąta w stopniach.
-        set_sides: Użyj tego bloku, aby ustawić "strony" do numeru potrzebnego do
-          skompletowania puzzli.
-        set_length: Użyj tego bloku, aby ustawić "długość" poprawnej wartości.
-        which_equation: Które równanie skraca każdy bok kształtów z wiéksza iloscia
+        set_sides: Użyj tego bloku, aby przypisać "sides" (boki) liczbę, potrzebną
+          do ukończenia łamigłówki.
+        set_length: Użyj tego bloku, aby nadać "length" (długość) poprawną wartość.
+        which_equation: Które równanie skraca każdy bok w kształtach o większej liczbie
           boków?
-        get_nectar: Użyj nowego bloku "dostać nektar".
-        actions_category: Przybornik ma nowy wygląd! Bloki "Akcje" są teraz tutaj.
-        draw_square_hint: 'Wskazówka: Użyj pętli kwadratowej, którą wykonałeś w ostatnich
-          puzzlach.'
+        get_nectar: Użyj nowego bloku "zbierz nektar".
+        actions_category: Przybornik ma nowy wygląd! Pojawiły się bloki "Actions"
+          (Akcje).
+        draw_square_hint: 'Wskazówka: Użyj pętli, którą utworzyłeś w poprzedniej łamigłówce.'
         edit_function: Kliknij tutaj, aby edytować swoją funkcję.
-        create_function: Kliknij tutaj, aby otworzyć menu "Funkcje", następnie kliknij
-          przycisk "Utwórz funkcję".
-        house_hint: Nie przejmuj się, jeśli obraz nie wygląda jeszcze jak dom. Naprawimy
-          go podczas następnej zagadki.
+        create_function: Kliknij tutaj, aby otworzyć menu "Functions" (Funkcje), następnie
+          kliknij przycisk "Utwórz funkcję".
+        house_hint: Nie przejmuj się, jeśli obrazek nie wygląda jeszcze jak dom. Poprawimy
+          go w następnej łamigłówce.
         edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
         edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
-          w którym Pszczoła skręci aby zdobyc nektar.
-        logic_category: Otworzyć wysuwane "Logiki" znaleźć "if/else" bloku.
-        length_parameter: Czy potrafisz poprawić tę funkcję tak, aby używała parametru
-          "długość"?
-        frozen_diamond_repeat: Użyj bloku "powtarzaj" aby utworzyć ten kształt.
-        frozen_circle_function_in_circle_turn: Nie zapomnij włączyć po utworzeniu
-          każdego koła.
-        frozen_circle_function_with_parameter_circle: Używać "Tworzenie koło" bloku
-          i zmieniać jego rozmiar.
-        frozen_snowflake_branch: Użyj bloku "utworzyć oddział śnieżynka"
-        frozen_create_square: Dołączyć więcej bloków tutaj stworzyć kwadrat
+          w którym Pszczółka skręci, aby zebrać nektar.
+        logic_category: Otwórz "Logika", by znaleźć blok "jeśli/w przeciwnym razie".
+        length_parameter: Czy potrafisz zmodyfikować tę funkcję tak, aby używała parametru
+          "długość" (length)?
+        frozen_diamond_repeat: Użyj bloku "powtarzaj", aby utworzyć ten kształt.
+        frozen_circle_function_in_circle_turn: Nie zapomnij skręcić po utworzeniu
+          każdego okregu.
+        frozen_circle_function_with_parameter_circle: Użyj bloku "utwórz okrąg" i
+          zmień jego rozmiar.
+        frozen_snowflake_branch: Użyj bloku "utwórz płatek śnieżynki"
+        frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
         playlab_drag_say: Przeciągnij blok "powiedz" i wpisz "hello"
-        playlab_use_twice: Dwa razy użyć tego bloku i pamiętaj, aby zmienić numer
-          aktor
-        playlab_move_girl: Użyj bloku "Przesuń w prawo", aby przenieść dziewczyna
-          tenisu
+        playlab_use_twice: Użyj tego bloku dwa razy i pamiętaj, aby zmienić numer
+          postaci
+        playlab_move_girl: Użyj bloku "przesuń w prawo", aby przenieść tenisistkę
         playlab_play_sound: Dodać "Odtwórz dźwięk" blok tutaj
-        playlab_arrow_keys: Pamiętaj, aby korzystać z tych wrzucić czarownica po kliknięciu
-          Uruchom
-        playlab_add_move: Dodać "przenieść" bloki wewnątrz tego powtarzać bloku
-        playlab_add_score: Dodać wynik bloki tutaj
+        playlab_arrow_keys: Pamiętaj, aby z nich korzystać do przesuwania czarownicy
+          po kliknięciu "Uruchom"
+        playlab_add_move: Dodaj bloki "przenieś" wewnątrz tego bloku "powtórz"
+        playlab_add_score: Dodaj tutaj bloki wyniku
         playlab_add_blocks: Dodaj tutaj swoje bloki
-        set_variable: Przeciągnij blok numer tutaj ustawić zmienne
-        place_variable: Przeciągnij zmiennej wewnątrz tego bloku
-        bee_for_loop: Przeciągnij największą liczbę nektar chcesz bee zebrać tutaj
-        place_counter_variable: Przeciągnij do counter zmiennej wewnątrz tego bloku
-        function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki uruchamiane
-          za każdym razem używasz bloku "narysuj kwadrat"
+        set_variable: Przeciągnij tutaj blok z liczbą, aby ustalić zmienną
+        place_variable: Przeciągnij zmienną do wnętrza tego bloku
+        bee_for_loop: Przeciągnij największą liczbę nektaru, jaką chcesz, by pszczółka
+          zebrała tutaj
+        place_counter_variable: Przeciągnij zmienną "licznik" (counter) do wnętrza
+          tego bloku
+        function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki są
+          wykonywane za każdym razem, gdy używasz bloku "draw a square" (narysuj kwadrat)
         change_here: Popraw tutaj
         write_draw_square_function: Przeciągnij tutaj bloki z przybornika, które narysują
           kwadrat
         write_draw_triangle_function: Przeciągnij tutaj bloki z przybornika, aby narysować
           trójkąt
-        edit_add_parameter: Kliknij przycisk "Edytuj", aby dodać parametr w Twojej
+        edit_add_parameter: Kliknij przycisk "edytuj", aby dodać parametr w swojej
           funkcji
-        add_and_drag_parameter: Napisz tu nazwę swojego parametru, kliknij "dodaj"
-          (add), a następnie przeciągnij to do definicji swojej funkcji
-        fill_in_actor: Wypełnij ??? liczbami, które odpowiadają każdemu aktorowi (1,
+        add_and_drag_parameter: Wpisz tutaj nazwę swojego parametru, kliknij "dodaj"
+          (add), a następnie przeciągnij do definicji swojej funkcji
+        fill_in_actor: Wypełnij ??? liczbami, które odpowiadają każdej postaci (1,
           2 i 3)
         repeat: Umieść bloki wewnątrz pętli, aby powtórzyć polecenia
-        if_bee_nectar: Użyj bloku IF aby zdecydować, czy pszczoły powinny dostać nektar
-        if_else_bee: Użyj bloku "if/else" (jeżeli/w przeciwnym wypadku), aby pszczoła
-          mogła dostać nektar jeśli to jest kwiat lub zrobić miód - w przypadku gdy
-          nie jest to kwiat
-        repeat_full_circle: Wpisz ile razy zombie musi wykonać ruch, aby zrobić pełne
-          kółko
-        place_length_variable: Przeciągnij zmienną długość (length) tutaj, aby zastąpić
+        if_bee_nectar: Użyj bloku "jeśli", aby zdecydować, czy pszczółka powinna dostać
+          nektar
+        if_else_bee: Użyj bloku "jeśli-w przeciwnym razie", aby pszczółka mogła zebrać
+          nektar z kwiatu lub zrobić miód, gdy nie jest to kwiat
+        repeat_full_circle: Wpisz, ile razy zombie musi wykonać ruch, aby zrobić pełne
+          koło
+        place_length_variable: Przeciągnij tutaj zmienną "length" (długość), aby zastąpić
           znaki zapytania
-        arrows_move_actor: Używaj strzałek, aby poruszać się aktorem
+        arrows_move_actor: Używaj strzałek, aby przesunąć postać
         right_arrow_fireball: Użyj strzałki w prawo, aby strzelać ognistymi kulami
-        name_function: Napisz tu nazwę swojej funkcji
-        Infinity_move_right_runbutton: Dodaj blok tutaj
-        Infinity_move_directions_callout: Który blok będzie Baymax wrzucic po naciśnięciu
-          strzałki w górę?
-        Infinity_move_directions_callout_arrow: Użyj tych strzałek, aby sterować
-        Infinity_move_collide_callout: Odtwórz dźwięk, gdy tego zdarzenia.
-        Infinity_repeat_callout: Przenieść miejsce bloki wewnątrz tutaj
+        name_function: Wpisz tutaj nazwę swojej funkcji
+        Infinity_move_right_runbutton: Dodaj tutaj blok przesunięcia
+        Infinity_move_directions_callout: Który blok powoduje, że Baymax porusza się
+          do góry, po naciśnięciu strzałki w górę?
+        Infinity_move_directions_callout_arrow: Użyj tych strzałek do sterowania
+        Infinity_move_collide_callout: Odtwórz dźwięk, gdy wystąpi to zdarzenie.
+        Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia

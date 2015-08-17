@@ -34,7 +34,7 @@ it:
           Getting Loopy: Diventare Ripetitivi
           The Big Event: Il Grande Evento
           Going Places Safely: Visitare Luoghi in Modo Sicuro
-          description: Il Corso 1 è progettato per permettere a studenti di prima elementare che stanno iniziando a leggere di creare programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi, e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
+          description: Il Corso 1 è rivolto che stanno iniziando a leggere. Gli studenti creeranno dei programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
           "Bee: Sequence": 'Ape: Sequenze'
           "Artist: Sequence": 'Artista: Sequenze'
           "Artist: Shapes": 'Artista: Forme'
@@ -42,8 +42,8 @@ it:
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
           "Artist: Loops": 'Artista: Cicli'
-          description_audience: Età 4-6 anni (pre-scolare)
-          description_short: Il corso 1 è progettato per chi sta iniziando a leggere.
+          description_audience: Da 4 anni in su (pre-scolare)
+          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
@@ -69,7 +69,7 @@ it:
           Binary Bracelets: Braccialetti Binari
           The Big Event: Il Grande Evento
           Your Digital Footprint: La tua Impronta Digitale
-          description: Il Corso 2 è progettato per studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare.
+          description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla seconda alla quinta elementare.
           "Maze: Sequence": 'Labirinto: Sequenze'
           "Artist: Sequence": 'Artista: Sequenze'
           "Maze: Loops": 'Labirinto: Cicli'
@@ -81,8 +81,8 @@ it:
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
-          description_audience: Età 6-18 anni
-          description_short: Il corso 2 è progettato per studenti che sanno leggere.
+          description_audience: Da 6 anni in su (per chi sa leggere)
+          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
         course3:
           The Maze: Il Labirinto
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
@@ -132,7 +132,7 @@ it:
           "Bee: Debugging2": 'Ape: Correzione di Errori 2'
           "Artist: Patterns": 'Artista: Schemi'
           Songwriting: Composizione di canzoni
-          description_audience: Età 8-18 anni
+          description_audience: Da 8 anni in su (dopo il Corso 2)
           description_short: Il Corso 3 è la continuazione del Corso 2.
         playlab:
           title: Laboratorio
@@ -181,7 +181,7 @@ it:
           Farmer Binary: 'Contadina: Binario'
           Maze and Bee: "Il Labirinto e l'Ape: Sequenze, Cicli, Istruzioni Condizionali"
           Artist Binary: 'Artista: Binario'
-          description_audience: Età 10-18 anni
+          description_audience: Da 10 anni in su (dopo il Corso 3)
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
@@ -242,9 +242,9 @@ it:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Laboratorio giochi Disney Infinity
-          description_short: Utilizzare il laboratorio Play Lab per creare una storia o un gioco con protagonisti i personaggi di Disney Infinity.
-          description: Utilizzare il laboratorio Play Lab per creare una storia o un gioco con protagonisti i personaggi di Disney Infinity.
+          title: Disney Infinity
+          description_short: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
+          description: Crea una storia o inventa un gioco con i personaggi di Disney Infinity come protagonisti!
           Play Lab: Laboratorio
           Infinity: Infinito
         algebrademo:
@@ -294,15 +294,35 @@ it:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
           description_short: Crea immagini utilizzando bit e byte.
           Pixelation: Conversione di pixel
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Corso introduttivo di 20 ore
-          description_audience: Età 10-18 anni
-          description: "Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica e della programmazione. Il corso è progettato per l'uso nelle scuole elementari e medie inferiori, ma è divertente per imparare a qualunque età."
+          title: Corso rapido in 20 ore
+          description_audience: Da 10 anni in su (dopo il Corso 3)
+          description: "Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell'informatica e della programmazione. Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po' di informatica a qualunque età. Guarda i corsi 2-4 se vuoi sperimentare in modo più approfondito."
           description_short: Questo corso di 20 ore copre i concetti base di informatica e programmazione dei corsi 2-4.
           Introduction to Computer Science: "Cos'è l'informatica"
           The Maze: Il labirinto
@@ -342,10 +362,10 @@ it:
           Calc: Calc
           Eval: Eval
         flappy:
-          title: 'Codice di "Flappy"'
+          title: Flappy
           description: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
           description_short: Scrivi il tuo gioco Flappy in meno di 10 minuti!
-          Flappy Code: 'Codice di "Flappy"'
+          Flappy Code: Flappy
         jigsaw:
           title: Puzzle
           description: Prova il nostro tutorial di Jigsaw
@@ -439,10 +459,15 @@ it:
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           "Unplugged: Video Games and Coordinate Planes": 'Senza Rete: Videogiochi e Piani Cartesiani'
           "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
           "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
@@ -507,8 +532,8 @@ it:
           new stage: new stage
           Introduction to PD: Introduzione a PD
           title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          description_short: Online Introduction to CSP
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -529,14 +554,14 @@ it:
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introduzione a PD
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -608,6 +633,10 @@ it:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -623,14 +652,14 @@ it:
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduzione a PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduzione a PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -647,8 +676,8 @@ it:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Introduzione a PD
@@ -658,13 +687,13 @@ it:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduzione a PD
           Evaluation Blocks: Blocchi di Valutazione
           logo_image: nextech_logo.png
@@ -675,8 +704,8 @@ it:
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduzione a PD
           Evaluation Blocks: Blocchi di Valutazione
           logo_image: izone_logo.png
@@ -689,8 +718,8 @@ it:
           Introduction to PD: Introduzione a PD
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -706,8 +735,8 @@ it:
           Introduction to PD: Introduzione a PD
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -730,8 +759,8 @@ it:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -798,8 +827,8 @@ it:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Evaluation Blocks: Blocchi di Valutazione
           Strings and Images: Stringhe e Immagini
           Defining Variables: Definizione di Variabili
@@ -841,10 +870,11 @@ it:
           Text Compression: Text Compression
           Pixelation: Conversione di pixel
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -881,9 +911,9 @@ it:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Courses 1-4: The Basics'
-          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -897,8 +927,8 @@ it:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -909,6 +939,29 @@ it:
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Conclusione
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -924,8 +977,8 @@ it:
           Hour of Code: "L'Ora del Codice"
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -946,8 +999,8 @@ it:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           Wrap-Up: Conclusione
           Review StarLogo Nova: Review StarLogo Nova
@@ -963,8 +1016,8 @@ it:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -980,3 +1033,73 @@ it:
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: Benvenuti!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Conclusione
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          Welcome!: Benvenuti!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Conclusione
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          Welcome!: Benvenuti!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Conclusione
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

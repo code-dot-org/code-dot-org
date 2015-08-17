@@ -38,7 +38,7 @@ class SharedResources < Sinatra::Base
     end
 
     content_type :css
-    cache_control :public, :must_revalidate, max_age:settings.css_max_age
+    cache_control :public, :must_revalidate, max_age: settings.css_max_age
     send_file(path)
   end
 
@@ -51,14 +51,14 @@ class SharedResources < Sinatra::Base
 
     if File.file?(path)
       content_type extname[1..-1].to_sym
-      cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
+      cache_control :public, :must_revalidate, max_age: settings.javascript_max_age
       send_file(path)
     end
 
     erb_path = "#{path}.erb"
     if File.file?(erb_path)
       content_type extname[1..-1].to_sym
-      cache_control :public, :must_revalidate, max_age:settings.javascript_max_age
+      cache_control :public, :must_revalidate, max_age: settings.javascript_max_age
       return ERB.new(IO.read(erb_path)).result
     end
 
@@ -102,7 +102,7 @@ class SharedResources < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age:settings.image_max_age
+      cache_control :public, :must_revalidate, max_age: settings.image_max_age
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -151,7 +151,7 @@ class SharedResources < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age:settings.image_max_age
+    cache_control :public, :must_revalidate, max_age: settings.image_max_age
     image.to_blob
   end
 

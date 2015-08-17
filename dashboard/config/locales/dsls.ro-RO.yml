@@ -339,8 +339,8 @@
           dreapta triunghiului
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului<br/>Pune
-          un paralelogram sub pătrat<br/>Pune un triunghi la dreapta paralelogramului
+        : Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului <br/>Pune
+          un paralelogram sub pătrat<br/>Pune triunghi în dreapta paralelogramului
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -902,6 +902,28 @@
           dintre acești băieți este <b>șoferul</b>. Și unul este <b>ajutorul</b>.
         This time, which boy is the <large>driver</large>?: De data aceasta, care
           băiat este <large>şoferul</large>?
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a
+          circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: aleator
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flinstone
         George Jetson: George Jetson

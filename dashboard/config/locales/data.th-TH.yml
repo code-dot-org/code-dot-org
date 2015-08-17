@@ -558,11 +558,11 @@
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: อินเทอร์เน็ต
         Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: แผนที่แห่งความสุข
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: เหตุการณ์ใหญ่
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
@@ -570,21 +570,21 @@
         C1_bee_level_intro: Bee Level - Intro
         C1_artist_intro: แนะนำศิลปิน
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
-        C1_maze_loops: Maze Loops
+        C1_zuck_repeat_loop: เขาวงกต Loops
+        C1_bee_loops: ผึ้ง Loops
+        C1_maze_loops: เขาวงกต Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
+        C1_building_foundation: สร้างพื้นฐาน
         C1_going_places_safely: Going Places Safely
         C2_maze_intro: บทนำเขาวงกต
         C2_artist_intro: แนะนำศิลปิน
-        C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
-        C2_bee_debugging: Bee Debugging
-        C2_bee_conditionals: Bee Conditionals
+        C2_zuck_repeat_loop: เขาวงกต Loops
+        C2_artist_loops: ศิลปิน Loops
+        C2_artist_debugging: ศิลปิน Debugging
+        C2_bee_loops: ผึ้ง Loops
+        C2_bee_debugging: ผึ้ง Debugging
+        C2_bee_conditionals: ผึ้ง Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: การเขียนกระดาษกราฟ
         C2_conditionals_with_cards: 'เงื่อนไข '
@@ -593,30 +593,30 @@
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: Maze Loops
+        C3_maze_level_4: เขาวงกต Loops
         C3_artist_intro: แนะนำศิลปิน
-        C3_artist_functions: Artist Functions
-        C3_bee_functions: Bee Functions
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_artist_functions: ศิลปิน Functions
+        C3_bee_functions: ผึ้ง Functions
+        C3_bee_conditionals: ผึ้ง Conditionals
+        C3_maze_conditionals: เขาวงกต Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: Bee Debugging
+        C3_bee_debugging: ผึ้ง Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
         C3_computational_thinking: คิดคำนวณ
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: อินเทอร์เน็ต
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
         C4_loops_zombie: ลูป
-        C4_bee_conditional: Bee Conditionals
+        C4_bee_conditional: ผึ้ง Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: For Loops
+        C4_for_loops: การวนรอบ
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -625,7 +625,7 @@
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: การวนรอบ
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro

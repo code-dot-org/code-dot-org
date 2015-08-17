@@ -68,5 +68,13 @@ Revisions and updates to the 2014 docs are coming soon that will include:
 
 In-person professional development for the Code.org CSP course will be available in select partner districts starting in summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
 
+<br><br>
+
+#### How can I participate in the ECS teacher community?
+
+Code.org’s [Teacher Community](/educate/community) has a [special forum](http://forum.code.org/c/ecs) and set of [monthly meetings](/educate/ecs-201516meetings) for our ECS teachers. You can learn more and get involved today, regardless of whether you are currently enrolled in our In-person PD.
+
+[Learn more and join the community >>](/educate/community)
+
 <br />
 

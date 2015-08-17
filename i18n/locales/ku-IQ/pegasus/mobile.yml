@@ -180,7 +180,7 @@ ku-TR:
   homepage_hero_text_teacher2: |
     &ldquo; ئەو پرۆگرامە وای لە قوتابیانم کرد ١٠٠% بەشداربن.&rdquo; 
     ئادەم، مامۆستا
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: كاژێری كۆدنووسی
@@ -197,6 +197,8 @@ ku-TR:
   homepage_signpetition_dropdown: 'داواکەمان واژوو بکە &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Learn more
   homepage_slot_text_title_hoc: كاژێری كۆدنووسی
   homepage_slot_text_blurb_hoc: هەموو کەسێک دەتوانێت فێربێت. ئەمڕۆ دەستپێبکە
   homepage_slot_text_link_hoc: Try the Hour of Code

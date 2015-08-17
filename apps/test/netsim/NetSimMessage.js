@@ -3,9 +3,9 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -46,7 +46,18 @@ describe("NetSimMessage", function () {
     assertEqual(row.visitedNodeIDs, []);
   });
 
-  it ("converts messageRow.base64Payload to local binary payload", function () {
+  describe ("isValid static check", function () {
+    it ("is minimally valid with a payload", function () {
+      assert(!NetSimMessage.isValid({}));
+      assert(NetSimMessage.isValid({ payload: '' }));
+    });
+
+    it ("passes given a default-constructed NetSimMessage", function () {
+      assert(NetSimMessage.isValid(new NetSimMessage()));
+    });
+  });
+
+  it ("converts MessageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
       toNodeID: 2,
@@ -79,15 +90,25 @@ describe("NetSimMessage", function () {
     assertEqual(row.base64Payload.len, base64Payload.len);
   });
 
+  it ("gracefully converts a malformed base64Payload to empty string", function () {
+    var message = new NetSimMessage(testShard, {
+      base64Payload: {
+        string: "totally not a base64 string",
+        len: 7
+      },
+    });
+    assertEqual(message.payload, '');
+  });
+
   describe("static method send", function () {
     it ("adds an entry to the message table", function () {
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         assert(rows.length === 0, "Table is empty");
       });
 
-      NetSimMessage.send(testShard, {}, function () {});
+      NetSimMessage.send(testShard, { payload: '' }, function () {});
 
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         assert(rows.length === 1, "Table has one row");
       });
     });
@@ -115,7 +136,7 @@ describe("NetSimMessage", function () {
           },
           function () {});
 
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         var row = rows[0];
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
@@ -127,20 +148,24 @@ describe("NetSimMessage", function () {
     });
 
     it ("Returns no error to its callback when successful", function () {
-      NetSimMessage.send(testShard, {}, function (err) {
+      NetSimMessage.send(testShard, { payload: '' }, function (err) {
         assert(err === null, "Error is null on success");
       });
     });
 
-    it ("throws an exception when given a non-binary String as a payload", function () {
-      assertThrows(TypeError, NetSimMessage.send.bind(null, testShard, {
+    it ("Returns error to its callback when given a non-binary String as a payload", function () {
+      var returnedError;
+      NetSimMessage.send(testShard, {
         fromNodeID: 1,
         toNodeID: 2,
         simulatedBy: 2,
         payload: 'some non-binary payload',
         extraHopsRemaining: 3,
         visitedNodeIDs: [4]
-      }, function () {}));
+      }, function (err) {
+        returnedError = err;
+      });
+      assert(returnedError instanceof TypeError, "Did not return expected TypeError");
     });
   });
 
@@ -148,7 +173,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
-    // The source payload that generates this base64Payload is "1001001"
+    // The source payload that generates this Base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
@@ -189,7 +214,7 @@ describe("NetSimMessage", function () {
 
     // Verify that message is gone from the remote table.
     var rowCount = Infinity;
-    messageTable.readAll(function (err, rows) {
+    messageTable.refresh(function (err, rows) {
       rowCount = rows.length;
     });
     assertEqual(rowCount, 0);
@@ -227,7 +252,7 @@ describe("NetSimMessage", function () {
       assertTableSize(testShard, 'messageTable', 3);
 
       var messages;
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         messages = rows.map(function (row) {
           return new NetSimMessage(testShard, row);
         });

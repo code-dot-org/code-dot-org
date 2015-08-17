@@ -219,11 +219,12 @@ pl:
       free_play:
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
+        calculate: Calculate Something
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
       label: 'Witaj %{username}'
-      stats: Moje postępy
+      stats: Studio Kodowania (Code Studio)
       settings: Moje konto
       prizes: Nagrody
       logout: Wyloguj się
@@ -348,6 +349,7 @@ pl:
     local_school: miejscowa szkoła
     online: online
     see_details: Zobacz szczegóły
+    view_course: Zobacz Kurs
     prize_info: 'Nagrody za udział (tylko nauczyciele szkół publicznych w USA): do 1000 $ na klasę.'
     tryfirst: 'Lub, możesz najpierw spróbować, a zarejestrujesz się później:'
     trynow: Spróbuj teraz
@@ -357,11 +359,12 @@ pl:
     try_beta_courses: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5
     use_as_teacher: Korzystaj z tej strony jako nauczyciel
     heading_hoc2014: '<h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>'
-    heading_elementary: '<h2>20-godzinne kursy dla</h2><h1>Początkujących (w każdym wieku)</h1>'
+    heading_elementary: '<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym wieku)</h1>'
     heading_apps: '<h2>Zabawy dla</h2><h1>Wszystkich</h1>'
     heading_legacy: '<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>'
     your_gallery: Galeria
-    no_primary_course: Wypróbuj kurs w Studio Kodowania
+    no_primary_course: Wypróbuj kurs w Code Studio
+    choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
   gender:
     male: Mężczyzna
@@ -395,10 +398,6 @@ pl:
     autoplay_option: Odtwarzaj filmy automatycznie
     download: Pobierz wideo
   compatability:
-    https:
-      header: Proszę włączyć obsługę protokołu HTTPS dla Code.org.
-      message: "Aby zwiększyć bezpieczeństwo, przestawiamy się na https na %{https_date}. Nie będziesz w stanie uzyskać dostęp do Code.org po tej dacie. <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć HTTPS dla Code.org."
-      hide_this_warning: Ukryj to ostrzeżenie
     working:
       header: Pracujemy nad wsparciem dla Twojej przeglądarki.
       message: "Code.org wykorzystuje nowoczesną technologię sieciową. Dzięki temu można szybciej korzystać ze stron. Twoja przeglądarka nie obsługuje wszystkich wymaganych funkcji i mogą wystąpić problemy podczas korzystania z tej części witryny. Pomóż nam <a href='%{report_issue_url}'> zgłaszając problemy, na które się natknąłeś</a>. Możesz także<a href='%{supported_browsers_url}'> uaktualnić swoją przeglądarkę do obsługiwanej wersji</a>."

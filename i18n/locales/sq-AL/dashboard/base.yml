@@ -221,6 +221,7 @@ sq:
       free_play:
         playlab: Bëj një Aplikacion
         artist: Vizato Diçka
+        calculate: Calculate Something
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -304,7 +305,7 @@ sq:
     panel:
       answer_viewer: Shfaqja e Pergjigjeve
       student: student
-      viewing_solution: Viewing Solution
+      viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
       section: Pjesë
   user:
@@ -327,9 +328,9 @@ sq:
     classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio është shtëpi për kurset online të krijuara nga Code.org
     lines_of_code: '%{lines_count} RRESHTA KODIMI TË SHKRUARA NGA NXËNËSIT'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} RRESHTAT E KODIT <br/> TE SHKRUARA NGA %{students_count} MILION STUDENTE'
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
     lesson_plans: Planet e mësimeve
     signin_message: 'Je i rregjistruar? %{link}'
@@ -350,6 +351,7 @@ sq:
     local_school: shkolla lokale
     online: online
     see_details: Shiko detajet
+    view_course: Shiko kursin
     prize_info: 'Çmimet për pjesmarrje ( vetëm mësues të shkollave publike në U.S.): Mbi 1000$ në shpërblimet e klasës.'
     tryfirst: 'Ose, mund të përpiqesh si fillim dhe të rregjistrohesh më vonë:'
     trynow: Provo tani
@@ -364,7 +366,8 @@ sq:
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
     no_primary_course: Bëj një kurs ne Studion e Kodimit
-    print_certificate: Print Certificate
+    choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
+    print_certificate: Printo Çertifikatën
   gender:
     male: Mashkull
     female: Femër
@@ -397,10 +400,6 @@ sq:
     autoplay_option: Videot Autoplay
     download: Shkarko Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Fshih këtë paralajmërim
     working:
       header: Ne po punojmë në suportin e browserit tuaj.
       message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Browseri juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë faqeje. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju, gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni browserin tuaj në një version që e suporton</a>."
@@ -448,9 +447,9 @@ sq:
       title: Kodi Flappy
       body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë të Kodit Flappy!
     20-hour:
-      title: Accelerated Course
+      title: Kurs i Avancuar
       body: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Mëso bazat e shkencave kompjuterike në një version të avancuar për kurset 2-4.
     hoc2014:
       try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
       try_frozen: Artistët me Anna dhe Elsa, nga Frozen
@@ -461,7 +460,7 @@ sq:
       title: Frozen
     infinity:
       title: Laboratori i Pafundmë
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney.
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!
@@ -496,7 +495,7 @@ sq:
   contract_match:
     wrong_title: Përgjigje e pasaktë
     badname: Kontrata juaj ka emrin e gabuar.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badname_case: Emrat funksional janë çështje e ndjeshme. Përpiqu të ndërrosh rastin e emërimit të kontratës tënde.
     badrange: Kontrata juaj ka vargun e gabuar.
     baddomainsize: Kontrata juaj nuk ka sasinë e duhur te elementëve në domen.
     baddomainname: Njëra ose disa nga elmentet në domen ka emrin e pasaktë.
@@ -588,4 +587,4 @@ sq:
     delete_confirm_text: Duke fshirë projektin, ju do ta hiqni përfundisht nga lista e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden më ta shohin atë.
     view_all: Shfaq projektet e mia
     remix: Përziej
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: 'Kliko "Remix" për të nxjerrë versionin tënd!'

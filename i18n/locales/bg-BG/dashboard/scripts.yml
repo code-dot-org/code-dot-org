@@ -292,11 +292,31 @@ bg:
           "Unit 1: Sending Bits": 'Урок 1: Изпращане на битове'
           "Unit 2: Routing and DNS": 'Раздел 2: Маршрут и DNS'
           Internet Simulator Templates: 'Интернет симулатор: шаблони'
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
           description_short: Създаване на изображения с битове и байтове.
           Pixelation: Пикселизация
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: 20-часов въвеждащ курс
           description_audience: Възраст 10 + (след курс 3)
@@ -437,6 +457,11 @@ bg:
           Encoding Color Images: Кодиране на цветни изображения
           Lossy Compression and File Formats: Lossy Compression and File Formats
           "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
@@ -528,13 +553,13 @@ bg:
           reference: препратка
           title: Проучване на компютърни науки PD
           description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description_short: Научете функционалното програмиране чрез алгебра
           Impact of Computer Science: Въздействието на компютърните науки
         sciencePD:
           Introduction to PD: Въведение в PD
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
-          description_short: В партньорство с проект КУРАЖ
+          description_short: Научете функционалното програмиране чрез алгебра
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -606,6 +631,10 @@ bg:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -621,14 +650,14 @@ bg:
           Next Steps: Следващи стъпки
         sciPD complex adaptive 2:
           title: Компютърни науки в науката PD
-          description: В партньорство с проект КУРАЖ
-          description_short: В партньорство с проект КУРАЖ
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Introduction to PD: Въведение в PD
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
         sciPD complex adaptive forum:
           title: Компютърни науки в науката PD
-          description: В партньорство с проект КУРАЖ
-          description_short: В партньорство с проект КУРАЖ
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Introduction to PD: Въведение в PD
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
         Glenallan Career Day Demo:
@@ -645,8 +674,8 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: nextech_logo.png
           title: Проучване на компютърни науки PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Impact of Computer Science: Въздействието на компютърните науки
         ECSPD-iZone:
           Introduction to PD: Въведение в PD
@@ -656,13 +685,13 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
           logo_image: izone_logo.png
           title: Проучване на компютърни науки PD
-          description: Онлайн въведение в ECS
-          description_short: Онлайн въведение в ECS
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Impact of Computer Science: Въздействието на компютърните науки
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
-          description: Научи алгебра чрез функционално програмиране
-          description_short: Научи алгебра чрез функционално програмиране
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: nextech_logo.png
@@ -673,8 +702,8 @@ bg:
           Preparing for in-person PD: Подготовка за лично PD
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
-          description: Научи алгебра чрез функционално програмиране
-          description_short: Научи алгебра чрез функционално програмиране
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: izone_logo.png
@@ -687,8 +716,8 @@ bg:
           Introduction to PD: Въведение в PD
           logo_image: nextech_logo.png
           title: Компютърни науки в науката PD
-          description: В партньорство с проект КУРАЖ
-          description_short: В партньорство с проект КУРАЖ
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -704,8 +733,8 @@ bg:
           Introduction to PD: Въведение в PD
           logo_image: izone_logo.png
           title: Компютърни науки в науката PD
-          description: В партньорство с проект КУРАЖ
-          description_short: В партньорство с проект КУРАЖ
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -728,8 +757,8 @@ bg:
           new stage: нов етап
         sciencePD2:
           title: Компютърни науки в науката PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Phase 2 Summer Workshop: 'Фаза 2: Летен семинар'
           Welcome: Welcome
           Resources: Resources
@@ -839,6 +868,7 @@ bg:
           Text Compression: Компресия на текста
           Pixelation: Пикселизация
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
@@ -879,9 +909,9 @@ bg:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Courses 1-4: The Basics'
-          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -895,8 +925,8 @@ bg:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Welcome!: Добре дошли!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -907,6 +937,29 @@ bg:
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Заключение
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -944,8 +997,8 @@ bg:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Научете функционалното програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
           Welcome!: Добре дошли!
           Wrap-Up: Заключение
           Review StarLogo Nova: Review StarLogo Nova
@@ -961,8 +1014,8 @@ bg:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Научете функционалното програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
           Welcome!: Добре дошли!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -978,3 +1031,73 @@ bg:
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Следващи стъпки
+        sciencePD2b-iZone:
+          Welcome!: Добре дошли!
+          title: Computer Science in Science PD Phase 2b
+          description_short: Научете функционалното програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Заключение
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Научете функционалното програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
+          Welcome!: Добре дошли!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Заключение
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Научете функционалното програмиране чрез алгебра
+          description: Научете функционалното програмиране чрез алгебра
+          Welcome!: Добре дошли!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Заключение
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

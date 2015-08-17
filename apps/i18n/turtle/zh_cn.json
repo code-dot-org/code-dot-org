@@ -1,6 +1,6 @@
 {
-  "blocksUsed": "使用模块： %1",
-  "branches": "分支",
+  "blocksUsed": "已经使用了的模块：%1",
+  "branches": "树枝",
   "catColour": "颜色",
   "catControl": "循环",
   "catMath": "数学",

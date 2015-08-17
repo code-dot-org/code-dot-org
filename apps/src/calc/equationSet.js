@@ -15,7 +15,7 @@ var EquationSet = function (blocks) {
 
   if (blocks) {
     blocks.forEach(function (block) {
-      var equation = getEquationFromBlock(block);
+      var equation = EquationSet.getEquationFromBlock(block);
       if (equation) {
         this.addEquation_(equation);
       }
@@ -243,7 +243,7 @@ EquationSet.prototype.evaluate = function () {
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
  * @returns {Object} evaluation An object with either an err or result field
- * @returns {Error?} evalatuion.err
+ * @returns {Error?} evaluation.err
  * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
@@ -315,7 +315,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
 /**
  * Given a Blockly block, generates an Equation.
  */
-function getEquationFromBlock(block) {
+EquationSet.getEquationFromBlock = function (block) {
   var name;
   if (!block) {
     return null;
@@ -326,7 +326,7 @@ function getEquationFromBlock(block) {
       if (!firstChild) {
         return new Equation(null, [], null);
       }
-      return getEquationFromBlock(firstChild);
+      return EquationSet.getEquationFromBlock(firstChild);
 
     case 'functional_plus':
     case 'functional_minus':
@@ -346,8 +346,8 @@ function getEquationFromBlock(block) {
         if (!argBlock) {
           return 0;
         }
-        return getEquationFromBlock(argBlock).expression;
-      });
+        return EquationSet.getEquationFromBlock(argBlock).expression;
+      }, this);
 
       return new Equation(null, [], new ExpressionNode(operation, args, block.id));
 
@@ -370,7 +370,8 @@ function getEquationFromBlock(block) {
         var input, childBlock;
         for (var i = 0; !!(input = block.getInput('ARG' + i)); i++) {
           childBlock = input.connection.targetBlock();
-          values.push(childBlock ? getEquationFromBlock(childBlock).expression :
+          values.push(childBlock ?
+            EquationSet.getEquationFromBlock(childBlock).expression :
             new ExpressionNode(0));
         }
         return new Equation(null, [], new ExpressionNode(name, values));
@@ -380,7 +381,8 @@ function getEquationFromBlock(block) {
     case 'functional_definition':
       name = block.getTitleValue('NAME');
 
-      var expression = firstChild ? getEquationFromBlock(firstChild).expression :
+      var expression = firstChild ?
+        EquationSet.getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
       return new Equation(name, block.getVars(), expression);
@@ -394,11 +396,4 @@ function getEquationFromBlock(block) {
     default:
       throw "Unknown block type: " + block.type;
   }
-}
-
-/* start-test-block */
-// export private function(s) to expose to unit testing
-EquationSet.__testonly__ = {
-  getEquationFromBlock: getEquationFromBlock
 };
-/* end-test-block */

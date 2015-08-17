@@ -44,8 +44,8 @@ module Poste
       next unless File.file? path
 
       messages = POSTE_DB[:poste_messages]
-      unless messages.where(name:name).first
-        id = messages.insert(name:name)
+      unless messages.where(name: name).first
+        id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
         logger.info "Registered new message template '#{name}' as #{id}"
       end
@@ -68,25 +68,25 @@ module Poste
     now = DateTime.now
 
     contacts = POSTE_DB[:contacts]
-    contact = contacts.where(email:email).first
+    contact = contacts.where(email: email).first
     if contact
-      contacts.where(id:contact[:id]).update(
-        unsubscribed_at:now,
-        unsubscribed_on:now.to_date,
-        unsubscribed_ip:params[:ip_address],
+      contacts.where(id: contact[:id]).update(
+        unsubscribed_at: now,
+        unsubscribed_on: now.to_date,
+        unsubscribed_ip: params[:ip_address],
       )
     else
       contacts.insert(
-        email:email,
-        created_at:now,
-        created_on:now.to_date,
-        created_ip:params[:ip_address],
-        unsubscribed_at:now,
-        unsubscribed_on:now.to_date,
-        unsubscribed_ip:params[:ip_address],
-        updated_at:now,
-        updated_on:now.to_date,
-        updated_ip:params[:ip_address],
+        email: email,
+        created_at: now,
+        created_on: now.to_date,
+        created_ip: params[:ip_address],
+        unsubscribed_at: now,
+        unsubscribed_on: now.to_date,
+        unsubscribed_ip: params[:ip_address],
+        updated_at: now,
+        updated_on: now.to_date,
+        updated_ip: params[:ip_address],
       )
     end
   end
@@ -116,10 +116,10 @@ module Poste2
     url_id = @@url_cache[href]
     return url_id if url_id
 
-    if url = POSTE_DB[:poste_urls].where(hash:hash, url:href).first
+    if url = POSTE_DB[:poste_urls].where(hash: hash, url: href).first
       url_id = url[:id]
     else
-      url_id = POSTE_DB[:poste_urls].insert(hash:hash, url:href)
+      url_id = POSTE_DB[:poste_urls].insert(hash: hash, url: href)
     end
 
     @@url_cache[href] = url_id
@@ -135,14 +135,14 @@ module Poste2
 
     contacts = POSTE_DB[:contacts]
 
-    contact = contacts.where(email:address).first
+    contact = contacts.where(email: address).first
     if contact
       if contact[:name] != name && !name.nil_or_empty?
-        contacts.where(id:contact[:id]).update(
-          name:name,
-          updated_at:now,
-          updated_on:now,
-          updated_ip:ip_address,
+        contacts.where(id: contact[:id]).update(
+          name: name,
+          updated_at: now,
+          updated_on: now,
+          updated_ip: ip_address,
         )
       end
     else
@@ -154,10 +154,10 @@ module Poste2
         contact[:updated_at] = contact[:updated_on] = now
         contact[:updated_ip] = ip_address
       end)
-      contact = {id:id}
+      contact = {id: id}
     end
 
-    {id:contact[:id], email:address, name:name, ip_address:ip_address}
+    {id: contact[:id], email: address, name: name, ip_address: ip_address}
   end
 
   def self.ensure_recipient(address, params={})
@@ -170,7 +170,7 @@ module Poste2
 
     contacts = POSTE_DB[:contacts]
 
-    contact = contacts.where(email:address).first
+    contact = contacts.where(email: address).first
     unless contact
       id = contacts.insert({}.tap do |contact|
         contact[:email] = address
@@ -180,10 +180,10 @@ module Poste2
         contact[:updated_at] = contact[:updated_on] = now
         contact[:updated_ip] = ip_address
       end)
-      contact = {id:id}
+      contact = {id: id}
     end
 
-    {id:contact[:id], email:address, name:name, ip_address:ip_address}
+    {id: contact[:id], email: address, name: name, ip_address: ip_address}
   end
 
   def self.send_message(message_name, recipient, params)
@@ -191,25 +191,26 @@ module Poste2
 
     message_name = message_name.to_s.strip
     unless message_id = @@message_id_cache[message_name]
-      message = POSTE_DB[:poste_messages].where(name:message_name).first
-      message ||= POSTE_DB[:poste_messages].where(name:message_name).first if Poste.resolve_template(message_name)
+      message = POSTE_DB[:poste_messages].where(name: message_name).first
+      message ||= POSTE_DB[:poste_messages].where(name: message_name).first if Poste.resolve_template(message_name)
       raise ArgumentError, "No #{message_name} message found." unless message
       message_id = @@message_id_cache[message_name] = message[:id]
     end
 
     POSTE_DB[:poste_deliveries].insert({
-      created_at:DateTime.now,
-      created_ip:recipient[:ip_address],
-      contact_id:recipient[:id],
-      contact_email:recipient[:email],
-      message_id:message_id,
-      params:(params||{}).to_json,
+      created_at: DateTime.now,
+      created_ip: recipient[:ip_address],
+      contact_id: recipient[:id],
+      contact_email: recipient[:email],
+      message_id: message_id,
+      params: (params||{}).to_json,
     })
   end
 
 
   class DeliveryMethod
 
+    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
     def initialize(settings)
     end
 
@@ -217,13 +218,13 @@ module Poste2
       content_type = mail.header['Content-Type'].to_s
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
       sender = mail.from.first
-      raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org'
+      raise ArgumentError, "Unsupported sender: #{sender}" unless ALLOWED_SENDERS.include?(sender)
 
       subject = mail.subject.to_s
       body = mail.body.to_s
 
-      recipient = Poste2::ensure_recipient(mail.to.first, ip_address:'127.0.0.1')
-      Poste2::send_message('dashboard', recipient, body:body, subject:subject)
+      recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
+      Poste2::send_message('dashboard', recipient, body: body, subject: subject)
     end
 
   end

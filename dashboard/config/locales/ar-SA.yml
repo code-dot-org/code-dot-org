@@ -250,6 +250,7 @@
       free_play:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
+        calculate: Calculate Something
     user:
       classroom: الصفحة الرئيسية المعلم
       district_dashboard: جزء لوحة المعلومات
@@ -391,6 +392,7 @@
     local_school: مدرسة محلية
     online: متصل
     see_details: مشاهدة التفاصيل
+    view_course: View Course
     prize_info: 'جوائز للمشاركة (معلمي المدارس العامة الولايات المتحدة فقط): تصل إلى
       1000 $ في المكافآت الفصول الدراسية.'
     tryfirst: 'أو، يمكنك تجربة لأول مرة، والتسجيل في وقت لاحق:'
@@ -409,6 +411,7 @@
     heading_legacy: <h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>
     your_gallery: معرض
     no_primary_course: جرب الدورة تدريبية في "الاستوديو التعليمات البرمجية"
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: ذكر
@@ -445,12 +448,6 @@
     autoplay_option: تشغيل تلقائي لاشرطة الفيديو
     download: تحميل الفيديو
   compatability:
-    https:
-      header: رجاءً فعل HTTPS لـ code.org.
-      message: لزيادة الأمان. اصبحنا نستخدم HTTPS على %{https_date}. لن تستطيع الوصول
-        إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط هنا</a>
-        لتعلم كيفية تفعيل HTTPS لـ code.org.
-      hide_this_warning: إخفاء هذا التحذير
     working:
       header: نحن نعمل على دعم متصفح الأنترنت الخاص بك.
       message: Code.org تستخدم تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام.
@@ -531,7 +528,7 @@
     activity_count: في <b>%{days}</b> خلال الأيام الماضية، جعلت الطلاب تطبيقات <b>%{count}</b>
       والصور بكتابة برامج الكمبيوتر الخاصة بهم. انقر فوق الصور والمزيد من الصور لمشاهدة
       كل البرنامج في العمل.
-    want_to_make_your_own: هل ترغب في جعل الخاصة بك؟
+    want_to_make_your_own: هل ترغب في إنجاز مشروعك الخاص؟
     more: أكثر &rarr;
     caption_by_name_age: طريق %{name}، %{age} العمر
     caption_time_ago: '%{time_ago} قبل'

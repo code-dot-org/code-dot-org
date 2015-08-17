@@ -42,7 +42,7 @@ class Documents < Sinatra::Base
   def self.load_config_in(dir)
     path = File.join(dir, 'config.json')
     return {} unless File.file?(path)
-    JSON.parse(IO.read(path), symbolize_names:true)
+    JSON.parse(IO.read(path), symbolize_names: true)
   end
 
   def self.load_configs_in(dir)
@@ -77,7 +77,7 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink:true, tables:true, space_after_headers:true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
@@ -130,15 +130,15 @@ class Documents < Sinatra::Base
       end
     end
 
-    @locals = {header:{}}
+    @locals = {header: {}}
   end
 
   # Language selection
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
-    pass unless DB[:cdo_languages].first(code_s:lang)
-    cache_control :private, :must_revalidate, max_age:0
-    response.set_cookie('language_', {value:lang, domain:".#{request.site}", path:'/', expires:Time.now + (365*24*3600)})
+    pass unless DB[:cdo_languages].first(code_s: lang)
+    cache_control :private, :must_revalidate, max_age: 0
+    response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
   end
 
@@ -190,7 +190,7 @@ class Documents < Sinatra::Base
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
       content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age:settings.image_max_age
+      cache_control :public, :must_revalidate, max_age: settings.image_max_age
       send_file(path)
     else
       image = Magick::Image.read(path).first
@@ -239,14 +239,14 @@ class Documents < Sinatra::Base
     image.format = image_format
 
     content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age:settings.image_max_age
+    cache_control :public, :must_revalidate, max_age: settings.image_max_age
     image.to_blob
   end
 
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age:settings.static_max_age
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
     send_file(path)
   end
 
@@ -280,14 +280,14 @@ class Documents < Sinatra::Base
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, @locals.merge({body:body.join('')}))
+      body render_template(template, @locals.merge({body: body.join('')}))
     end
 
     theme = @locals[:header]['theme']||'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, @locals.merge({body:body.join('')}))
+      body render_template(template, @locals.merge({body: body.join('')}))
     end
   end
 
@@ -319,9 +319,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age:@header['max_age']
+        cache_control :public, :must_revalidate, max_age: @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age:settings.document_max_age
+        cache_control :public, :must_revalidate, max_age: settings.document_max_age
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -420,29 +420,29 @@ class Documents < Sinatra::Base
       locals = @locals.merge(locals)
       case extname
       when '.erb', '.html'
-        erb body, locals:locals
+        erb body, locals: locals
       when '.haml'
-        haml body, locals:locals
+        haml body, locals: locals
       when '.fetch'
-        url = erb(body, locals:locals)
+        url = erb(body, locals: locals)
 
         cache_file = cache_dir('fetch', request.site, request.path_info)
         unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
           FileUtils.mkdir_p File.dirname(cache_file)
-          IO.write(cache_file, Net::HTTP.get(URI(url)))
+          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age:settings.static_max_age
+        cache_control :public, :must_revalidate, max_age: settings.static_max_age
         send_file(cache_file)
       when '.md', '.txt'
-        preprocessed = erb body, locals:locals
-        html = markdown preprocessed, locals:locals
+        preprocessed = erb body, locals: locals
+        html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'
-        redirect erb(body, locals:locals), 301
+        redirect erb(body, locals: locals), 301
       when '.found', '.302'
-        redirect erb(body, locals:locals), 302
+        redirect erb(body, locals: locals), 302
       else
         raise "'#{extname}' isn't supported."
       end
@@ -456,6 +456,7 @@ class Documents < Sinatra::Base
       else
         metadata = {
           'og:site_name'      => 'Code.org',
+          'og:image'          => CDO.code_org_url('/images/logo_2x.png', 'https:')
         }
       end
 

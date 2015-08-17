@@ -1,7 +1,7 @@
 zh-TW:
   hello: 世界您好
   select_language: 請選擇您的語言
-  en: Computer Science
+  en: 電腦科學
   computer_science_edweek: 電腦科學教育周
   csedweek_dates: 2014 年 12 月 8-14 日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">編程一小時</a> 即將到來。招喚教師以及志願者們<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策劃您的編程一小時</a>'
@@ -45,7 +45,7 @@ zh-TW:
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
   get_a_certificate_of_achievement: 獲取成就證書
-  enter_valid_age: Please select a valid age
+  enter_valid_age: 請選擇一個有效的年齡
   enter_valid_email: 請輸入一個有效的電子郵件信箱
   get_a_certificate_message: "我們將會寄送給您有關<a href='/learn/beyond'>一小時後的學習</a>的證書和相關訊息。"
   get_a_certificate_message_after: "點擊證書以便下載或打印。現在繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a href='/learn/beyond'>學習超過一小時</a>”查閱其它學習選項。"
@@ -55,7 +55,7 @@ zh-TW:
   share_achievement: 分享你的成就
   beyond_hour_message: "繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a href='/learn/beyond'>學習超過一小時</a>”查閱其它學習選項。"
   leaderboards_for_hoc: 一小時的程式設計課程排行榜。
-  support_url: HTTP://support.code.org/
+  support_url: http://support.code.org
   country: 國家
   city: 城市
   gender: 性別
@@ -140,7 +140,7 @@ zh-TW:
   homepage_hero_text_student5: '&ldquo;計算機科學，不是為他人的。它是為了現在在這裡的你。&rdquo;傑拉爾多，老師。'
   homepage_hero_text_teacher1: '&ldquo;編程啟發創意、 靈感和創新 &mdash; 它們都是在任何職業不可缺少的&rdquo;Floresa，老師'
   homepage_hero_text_teacher2: '&ldquo;這個課程得到 同學100%的投入、 參與和參加。&rdquo;亞當，老師'
-  homepage_hero_text_stat_loc: '#loc 行由學生撰寫的程式碼'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count 在程式碼工作室使用的學生帳號'
   homepage_hero_text_stat_served: '一小時程式設計體驗:#served服務'
   homepage_slot_text_hoc: 一小時的編程
@@ -157,6 +157,8 @@ zh-TW:
   homepage_signpetition_dropdown: '我同意 &#x25BE;'
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式設計課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
@@ -252,7 +254,7 @@ zh-TW:
   dashboard_landing_view_progress: '查看%{biggest_section}的進度'
   dashboard_landing_available_title: 可用課程
   dashboard_landing_available_courses: 這是目前可供您及您的學生們的課程。
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials: 想看更多教程嗎?
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!

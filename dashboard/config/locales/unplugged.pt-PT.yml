@@ -127,14 +127,14 @@
           mover a personagem através de um labirinto usando um único comando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Algoritmos da vida real: plante uma semente'
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
           o ato de plantar uma semente como exemplo. Também se concentra no quadro
           geral de ciência da computação e como os algoritmos desempenham um papel
           fundamental.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Criando uma base
+        title: Criar uma base
         desc: Os alunos constroem uma estrutura usando apenas os materiais fornecidos.
           Essas estruturas devem completar uma tarefa (chegar a uma certa altura ou
           suportar um determinado peso), e os alunos discutem a ideia de ser persistente
@@ -179,7 +179,7 @@
           reprodução de um desenho.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Algoritmos da vida real: aviões de papel'
+        title: 'Algoritmos da Vida Real: Aviões de Papel'
         desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
           na hora de fazer aviões de papel. Esta lição também apresenta a ciência
           da computação de forma geral, e como os algoritmos têm um papel essencial.
@@ -233,7 +233,7 @@
         desc: Os alunos exploram a diferença entre informações privadas e pessoais,
           distinguindo o que é seguro e o que não é seguro para compartilhar online.
       TangramAlgorithms:
-        title: Algoritmos do tangram
+        title: Algoritmos Tangram
         desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
           mantiver simples, poderá fazer muitas coisas com ele; se quiser garantir
           que todos tenham o mesmo resultado no final, seu algoritmo precisará de
@@ -289,7 +289,7 @@
           linguagem de programação ou função.
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: A receita do design
         desc: No último estágio, os alunos escreveram algumas funções bastante simples
           - mas funções mais sofisticadas exigem uma abordagem mais profunda. A fórmula
           de design é uma abordagem estruturada para escrever funções que inclui casos
@@ -302,7 +302,7 @@
           podem nos ajudar a escrever funções que pensam de forma lógica
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Condições e funções definidas por partes
         desc: Os parâmetros que passamos para as funções fazem as saídas variarem
           com base em um padrão bastante rígido. Suponha que queremos parâmetros com
           alguns valores para criar saídas usando um padrão, mas outros valores para

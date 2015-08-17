@@ -51,7 +51,8 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    */
   this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return flyout.getMetrics_();},
-      function(ratio) {return flyout.setMetrics_(ratio);});
+      function(ratio) {return flyout.setMetrics_(ratio);}
+  );
   this.blockSpace_.isFlyout = true;
 
   /**
@@ -62,7 +63,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
 
   /**
    * Opaque data that can be passed to removeChangeListener.
-   * @type {Array.<!Array>}
+   * @type {BindData}
    * @private
    */
   this.changeWrapper_ = null;
@@ -89,7 +90,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
 
   /**
    * List of event listeners.
-   * @type {!Array.<!Array>}
+   * @type {BindData}
    * @private
    */
   this.listeners_ = [];
@@ -115,7 +116,7 @@ Blockly.Flyout.prototype.CORNER_RADIUS = 8;
 
 /**
  * Wrapper function called when a resize occurs.
- * @type {Array.<!Array>}
+ * @type {BindData}
  * @private
  */
 Blockly.Flyout.prototype.onResizeWrapper_ = null;
@@ -141,7 +142,8 @@ Blockly.Flyout.prototype.createDom = function(insideToolbox) {
   if (!insideToolbox) {
     this.trashcan = new Blockly.Trashcan(this);
     this.svgTrashcan_ = this.trashcan.createDom();
-    this.svgTrashcan_.setAttribute("style", "opacity: 0; pointer-events: none");
+    this.svgTrashcan_.setAttribute("style",
+      "display: none; pointer-events: none");
     this.svgTrashcan_.setAttribute('transform', 'translate(0, 20)');
     this.svgGroup_.appendChild(this.svgTrashcan_);
   }
@@ -162,10 +164,6 @@ Blockly.Flyout.prototype.dispose = function() {
   if (this.changeWrapper_) {
     Blockly.unbindEvent_(this.changeWrapper_);
     this.changeWrapper_ = null;
-  }
-  if (this.scrollbar_) {
-    this.scrollbar_.dispose();
-    this.scrollbar_ = null;
   }
   this.blockSpace_ = null;
   if (this.svgGroup_) {
@@ -217,7 +215,7 @@ Blockly.Flyout.prototype.getMetrics_ = function() {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     contentHeight: optionBox.height + optionBox.y,
-    viewTop: -this.blockSpace_.pageYOffset,
+    viewTop: this.blockSpace_.getScrollOffsetY(),
     contentTop: 0,
     absoluteTop: this.CORNER_RADIUS,
     absoluteLeft: 0
@@ -240,26 +238,32 @@ Blockly.Flyout.prototype.getHeight = function() {
 Blockly.Flyout.prototype.setMetrics_ = function(yRatio) {
   var metrics = this.getMetrics_();
   if (goog.isNumber(yRatio.y)) {
-    this.blockSpace_.pageYOffset = -metrics.contentHeight * yRatio.y
+    // TODO(bjordan+bbuchanan): needs to change?
+    this.blockSpace_.yOffsetFromView = -metrics.contentHeight * yRatio.y
         - metrics.contentTop;
   }
-  var y = this.blockSpace_.pageYOffset + metrics.absoluteTop;
+  var y = this.blockSpace_.yOffsetFromView + metrics.absoluteTop;
   this.blockSpace_.getCanvas().setAttribute('transform', 'translate(0,'
       + y + ')');
+  this.blockSpace_.getDragCanvas().setAttribute('transform',
+      'translate(0,' + y + ')');
 };
 
 /**
  * Initializes the flyout.
  * @param {!Blockly.BlockSpace} blockSpace The blockSpace in which to create new
  *     blocks.
- * @param {boolean} withScrollbar True if a scrollbar should be displayed.
+ * @param {boolean} withScrollbars True if a scrollbar should be displayed.
  */
-Blockly.Flyout.prototype.init = function(blockSpace, withScrollbar) {
+Blockly.Flyout.prototype.init = function(blockSpace, withScrollbars) {
   this.targetBlockSpace_ = blockSpace;
   // Add scrollbars.
   var flyout = this;
-  if (withScrollbar) {
-    this.scrollbar_ = new Blockly.Scrollbar(flyout.blockSpace_, false, false);
+  if (withScrollbars) {
+    var useHorizontalScrollbar = false;
+    var useVerticalScrollbar = true;
+    flyout.blockSpace_.scrollbarPair = new Blockly.ScrollbarPair(
+        flyout.blockSpace_, useHorizontalScrollbar, useVerticalScrollbar);
   }
 
   this.hide();
@@ -318,16 +322,12 @@ Blockly.Flyout.prototype.position_ = function() {
 
   // Record the height for Blockly.Flyout.getMetrics_.
   this.height_ = metrics.viewHeight;
-
-  // Update the scrollbar (if one exists).
-  if (this.scrollbar_) {
-    this.scrollbar_.resize();
-  }
+  this.blockSpace_.updateScrollableSize();
 
   // Center the trashcan
   if (this.svgTrashcan_) {
     var flyoutWidth = this.svgGroup_.getBoundingClientRect().width;
-    var trashcanWidth = this.svgTrashcan_.getBoundingClientRect().width;
+    var trashcanWidth = 70;
     var trashcanX = Math.round(flyoutWidth / 2 - trashcanWidth / 2);
     this.svgTrashcan_.setAttribute('transform', 'translate(' + trashcanX + ', 20)');
   }
@@ -343,13 +343,15 @@ Blockly.Flyout.prototype.isVisible = function() {
 
 /**
  * Hide and empty the flyout.
+ * @param {?Blockly.Block} opt_saveBlock - block to not immediately destroy
  */
-Blockly.Flyout.prototype.hide = function() {
+Blockly.Flyout.prototype.hide = function(opt_saveBlock) {
   if (!this.isVisible()) {
     return;
   }
   this.svgGroup_.style.display = 'none';
   // Delete all the event listeners.
+  this.blockSpace_.unbindBeginPanDragHandler();
   for (var x = 0, listen; listen = this.listeners_[x]; x++) {
     Blockly.unbindEvent_(listen);
   }
@@ -359,12 +361,11 @@ Blockly.Flyout.prototype.hide = function() {
     this.reflowWrapper_ = null;
   }
   // Delete all the blocks.
-  var blocks = this.blockSpace_.getTopBlocks(false);
-  for (var x = 0, block; block = blocks[x]; x++) {
-    if (block.blockSpace == this.blockSpace_) {
+  this.blockSpace_.getTopBlocks(false).forEach(function (block) {
+    if (block !== opt_saveBlock) {
       block.dispose(false, false);
     }
-  }
+  });
   // Delete all the background buttons.
   for (var x = 0, rect; rect = this.buttons_[x]; x++) {
     goog.dom.removeNode(rect);
@@ -404,6 +405,11 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     x: initialX,
     y: margin
   };
+
+  // We bind mouse pan-drag on the background group so blocks are ignored.
+  this.blockSpace_.bindBeginPanDragHandler(this.svgBackground_);
+  // We bind scrollwheel on the full group so wheeling over blocks works.
+  this.blockSpace_.bindScrollOnWheelHandler(this.svgGroup_);
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
@@ -690,7 +696,18 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
         block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if (flyout.autoClose) {
-      flyout.hide();
+      /**
+       * We need to avoid destroying the currently dragged block
+       * until the active touchmove event is completed (block dropped)
+       * @see https://neil.fraser.name/news/2014/08/09/
+       */
+      flyout.hide(originBlock);
+      block.blockEvents.listenOnce(
+        Blockly.Block.EVENTS.AFTER_DROPPED,
+        function () {
+          originBlock.dispose(false, false);
+        }
+      );
     } else {
       flyout.filterForCapacity_();
     }

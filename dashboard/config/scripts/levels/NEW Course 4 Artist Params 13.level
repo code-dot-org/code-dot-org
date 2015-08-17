@@ -29,7 +29,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's edit this `draw a shape` function. It already has a `length` parameter. Now, let's edit the function to add a `sides` parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. \r\n\r\n*Hint: These are the lengths for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and the square is 50 pixels.*"
+    "markdown_instructions": "Let's edit this `draw a shape` function. It already has a `length` parameter. Now, let's edit the function to add a `sides` parameter. Remember the angle to turn for a given shape is 360 divided by the number of sides it has. \r\n\r\n*Hint: These are the lengths for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and the square is 50 pixels.*\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -176,8 +177,7 @@
             </value>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-  </category>
+        <category name="Functions" custom="PROCEDURE"/>
         <category name="Loops">
           <block type="controls_repeat_ext" inline="true"/>
           <block type="controls_for_counter" inline="true">
@@ -198,6 +198,9 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -207,12 +210,12 @@
             <title name="OP">ADD</title>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">length</title>
+        <category name="Variable">
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">sides</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>

@@ -93,6 +93,8 @@ function drawGraph() {
         }
       }
     }
+
+    options.projectChanged && options.projectChanged();
   }
 
   var colorNums = bitsToColors(binCode, bitsPerPix);
@@ -381,4 +383,48 @@ function showPNG() {
   var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
+  options.saveProject && options.saveProject();
+}
+
+function onFinishedButtonClick() {
+  var finishedButton = $('#finished');
+  if (finishedButton.attr('disabled')) {
+    return;
+  }
+  finishedButton.attr('disabled', true);
+
+  if (options.saveProject) {
+    options.saveProject(onSaveProjectComplete);
+  } else {
+    processResults(onComplete);
+  }
+}
+
+function onSaveProjectComplete() {
+  processResults(onComplete);
+}
+
+/**
+ * Function to be called after processResults completes.
+ * @param {Boolean} willRedirect Whether the browser will redirect to another
+ *     location after this function completes.
+ */
+function onComplete(willRedirect) {
+  if (!willRedirect) {
+    finishedButton.attr('disabled', false);
+  }
+}
+
+/**
+ * Show a dialog prompting the user to confirm that they want to reset the
+ * level to its initial state, losing any of their own work on that level.
+ */
+function startOverClicked() {
+  showStartOverDialog(startOverConfirmed);
+}
+
+function startOverConfirmed() {
+  pixel_data.value = options.data;
+  drawGraph();
+  formatBitDisplay();
 }

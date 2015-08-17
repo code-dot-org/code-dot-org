@@ -61,6 +61,8 @@ function loadInfinity(skin, assetUrl) {
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+  skin.fadeExplosion = true;
+  skin.timePerExplosionFrame = 100;
 
   // Dimensions of a rectangle in collidable center from which projectiles begin.
   skin.projectileSpriteWidth  = 70;
@@ -385,8 +387,11 @@ function loadStudio(skin, assetUrl) {
   skin.projectileFrames = 8;
   skin.itemFrames = 8;
 
-  skin.explosion = skin.assetUrl('explosion.gif');
+  skin.explosion = skin.assetUrl('explosion.png');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 20;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
 
   skin.hardcourt = {
     background: skin.assetUrl('background.png'),

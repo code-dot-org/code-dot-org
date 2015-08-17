@@ -14,9 +14,10 @@
  * @param {string} markdownTextArea id (which will be prefixed by "level_")
  *                                  of textarea where editor will live
  * @param {jQuery} markdownPreviewArea
+ * @param {string} name of the property within the textarea
  */
-dashboard.initializeEmbeddedMarkdownEditor = function (embeddedElement, markdownTextArea, markdownPreviewArea) {
-  var regex = /markdown <<(\w*)\n([\s\S]*)\n\1$/m;
+dashboard.initializeEmbeddedMarkdownEditor = function (embeddedElement, markdownTextArea, markdownPreviewArea, markdownProperty) {
+  var regex = new RegExp("^" + markdownProperty + " <<(\\w*)\\n([\\s\\S]*?)\\n\\1$", "m");
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 
@@ -28,9 +29,9 @@ dashboard.initializeEmbeddedMarkdownEditor = function (embeddedElement, markdown
     var dslText = dslElement.val();
     var replacedText;
     if (regex.exec(dslText)) {
-      replacedText = dslText.replace(regex, 'markdown <<$1\n' + editorText + '\n$1');
+      replacedText = dslText.replace(regex, markdownProperty + ' <<$1\n' + editorText + '\n$1\n');
     } else {
-      replacedText = dslText + '\nmarkdown <<MARKDOWN\n' + editorText + '\nMARKDOWN';
+      replacedText = dslText + '\n' + markdownProperty + ' <<MARKDOWN\n' + editorText + '\nMARKDOWN\n';
     }
     dslElement.val(replacedText);
   }, true);

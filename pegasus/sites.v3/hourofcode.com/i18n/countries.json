@@ -48,10 +48,10 @@
     "full_name": "Argentina",
     "default_language": "es",
     "partner_page": "ar.code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "5 de oct",
+    "campaign_date_start_long": "5 de octubre",
+    "campaign_date_short": "5-11 de oct",
+    "campaign_date_full": "5-11 de octubre"
   },
   "au": {
     "full_name": "Australia",
@@ -84,10 +84,10 @@
     "full_name": "Brazil",
     "default_language": "pt",
     "partner_page": "br.code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "5 de out",
+    "campaign_date_start_long": "5 de outubro",
+    "campaign_date_short": "5-11 de out",
+    "campaign_date_full": "5-11 de outubro"
   },
   "ca": {
     "full_name": "Canada",
@@ -156,10 +156,10 @@
     "full_name": "Spain",
     "default_language": "es",
     "partner_page": "code.org",
-    "campaign_date_start_short": "Dec. 7",
-    "campaign_date_start_long": "December 7",
-    "campaign_date_short": "Dec. 7-13",
-    "campaign_date_full": "December 7-13"
+    "campaign_date_start_short": "7 de dic",
+    "campaign_date_start_long": "7 de diciembre",
+    "campaign_date_short": "7-13 de dic",
+    "campaign_date_full": "7-13 de diciembre"
   },
   "eu": {
     "full_name": "European Union",
@@ -282,10 +282,10 @@
     "full_name": "Latin America",
     "default_language": "es",
     "partner_page": "code.org",
-    "campaign_date_start_short": "Oct. 5",
-    "campaign_date_start_long": "October 5",
-    "campaign_date_short": "Oct. 5-11",
-    "campaign_date_full": "October 5-11"
+    "campaign_date_start_short": "5 de oct",
+    "campaign_date_start_long": "5 de octubre",
+    "campaign_date_short": "5-11 de oct",
+    "campaign_date_full": "5-11 de octubre"
   },
   "lv": {
     "full_name": "Latvia",

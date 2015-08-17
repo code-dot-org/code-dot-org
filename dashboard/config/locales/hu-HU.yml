@@ -66,8 +66,8 @@
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} diák már feliratkozott.'
+    teacher_count: '%{count} tanár már feliratkozott.'
     overview_student: Regisztrálj, hogy nyomon tudd követni a haladásodat. Az e-mail
       címedet csak azonosításként használjuk, vagy ha esetleg elfelejtetted a jelszavadat.
       További információkért olvasd el az <a href="http://code.org/privacy"> Adatvédelmi
@@ -253,6 +253,7 @@
       free_play:
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
+        calculate: Calculate Something
     user:
       classroom: Tanári kezdőlap
       district_dashboard: District Dashboard
@@ -265,7 +266,7 @@
       signup: Regisztrálás
       already_registered: Már regisztráltál?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} fejlődése'
       progress: Fejlődése
       lines: 'A kód teljes hossza: %{lines} sor'
       close: BEZÁRÁS
@@ -343,9 +344,9 @@
     student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
       a rendszerben'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Válasz megtekintő
       student: Diák
-      viewing_solution: Viewing Solution
+      viewing_solution: Megoldások megtekintése
       try_it_yourself: Próbáld ki magad
       section: Szakasz
   user:
@@ -369,10 +370,10 @@
     classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
-    description: Code Studio is home to online courses created by Code.org
+    description: A Code Studio az online tanfolyamok otthona, melyet a Code.org készített
     lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
+      TANULÓ'
     all_courses: 1., 2. és 3. tanfolyam áttekintése
     lesson_plans: Óravázlatok
     signin_message: Már regisztráltál? %{link}
@@ -399,6 +400,7 @@
     local_school: helyi iskola
     online: online
     see_details: Részletek
+    view_course: View Course
     prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár
       $1,000.'
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
@@ -415,8 +417,9 @@
     heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
-    no_primary_course: Try a course at Code Studio
-    print_certificate: Print Certificate
+    no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    choose_next_course: Try a Code Studio course by choosing one below
+    print_certificate: Igazolás kinyomtatása
   gender:
     male: Férfi
     female: Nő
@@ -452,12 +455,6 @@
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Figyelmen kívül hagyom
     working:
       header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen
         együtt tudjon működni.
@@ -518,12 +515,12 @@
       body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld
         ki a Flappy kód gyakorlatot!
     20-hour:
-      title: Accelerated Course
+      title: Gyorsított tanfolyam
       body: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap
         fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára
         jó időtöltés lehet.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Ismerd meg az alapvető számítógépes tudományokat, a 2-4. gyorsított
+        tanfolyamban.
     hoc2014:
       try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
       try_frozen: Művészkedj Annával és  Elzával a Jégvarázsból
@@ -582,7 +579,7 @@
       elnevezni a megkötést.
     badrange: A megkötésednek nem megfelelő a tartománya.
     baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    baddomainname: Egy vagy több tartományban helytelen név szerepel.
     baddomaintype: A tartomány elemek közül egy vagy több nem megfelelő típusú, vagy
       rossz sorrendben vannak.
   text_match:
@@ -686,4 +683,4 @@
       megtekinteni a projektet.
     view_all: Projektjeim megtekintése
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!

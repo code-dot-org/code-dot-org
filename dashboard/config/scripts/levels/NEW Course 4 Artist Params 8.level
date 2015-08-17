@@ -9,7 +9,7 @@
     "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "16",
+    "ideal": "18",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -28,7 +28,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -159,18 +161,13 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
             <title name="NUM">0</title>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
           </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>

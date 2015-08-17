@@ -26,6 +26,12 @@ template: none
 %select.form-control{'ng-model' => 'workshop.program_type'}
   %option{'ng-repeat' => 'program_type in program_types', 'value' => '{{program_type.id}}'}
     {{program_type.long_name}}
+%h3
+  Phase
+%select.form-control{'ng-model' => 'workshop.phase'}
+  %option{'ng-repeat' => 'phase in phases', 'value' => '{{phase.id}}'}
+    {{phase.long_name}}
+
 %br
 %button#btn-save.btn.btn-default{type: 'submit', 'ng-click' => 'save(workshop)'} Save
 %p#save-confirmation{style:'display:none'}

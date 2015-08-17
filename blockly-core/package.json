@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "blockly-core testrunner dependencies",
   "engines": {
-    "node": "~0.10.18"
+    "node": ">=0.10.25 <0.13",
+    "npm": "^2.9.1"
   },
   "scripts": {
   },
   "devDependencies": {
-    "phantomjs": "git://github.com/wjordan/phantomjs"
+    "phantomjs": "wjordan/phantomjs#v2.0.0"
   }
 }
