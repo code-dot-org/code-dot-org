@@ -64,6 +64,12 @@ end
 def credit_count
   50 - no_credit_count
 end
+def jobs_nationwide
+  DB[:cdo_state_promote].where(state_code_s:"Sum_states").first[:cs_jobs_i]
+end
+def grads_nationwide
+  DB[:cdo_state_promote].where(state_code_s:"Sum_states").first[:cs_graduates_i]
+end
 def us_state_from_code(code)
   DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
 end

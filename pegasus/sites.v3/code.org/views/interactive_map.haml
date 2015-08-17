@@ -12,6 +12,16 @@
     %strong
       =credit_count
     states allow students to count computer science courses toward high school graduation.
+  %p.info
+    There are
+    %strong
+      = format_integer_with_commas(jobs_nationwide)
+    open computing jobs nationwide.
+  %p.info
+    But there are only
+    %strong
+      = format_integer_with_commas(grads_nationwide)
+    computer science graduates nationwide.   
 
 :javascript
   var webServiceLocation = "/promote/state/";
