@@ -78,6 +78,7 @@
     bottom: 0;
     left: 0;
     width: 320px;
+    overflow-x: hidden;
     overflow-y: auto; }
     #netsim #netsim-leftcol > .column-width-limiter {
       width: 300px; }
