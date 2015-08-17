@@ -55,7 +55,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 * Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
-  1. Just download the project's [Vagrantfile](https://github.com/code-dot-org/code-dot-org/raw/staging/Vagrantfile) (you will be able to skip all Ubuntu and common setup instructions) to your desired code-dot-org project directory
+  1. Just download the project's [Vagrantfile](https://github.com/code-dot-org/code-dot-org/raw/staging/Vagrantfile) (you will be able to skip all Ubuntu and common setup instructions) to your desired code-dot-org project parent directory
   1. In the directory where you downloaded the Vagrantfile:
     1. [Open an elevated command prompt](http://windows.microsoft.com/en-us/windows/command-prompt-faq) (or elevated terminal application of your choice). This is important for Virtualbox to be able to create symlinks in your Windows filesystem.
     1. `vagrant up` (Note that on first run this could take up to an hour depending on connection bandwidth and machine speed; subsequent runs should be very much faster)
