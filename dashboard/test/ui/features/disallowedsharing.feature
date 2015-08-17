@@ -3,6 +3,7 @@ Feature: Shared content restrictions
 
 Background:
   Given I am on "http://learn.code.org/s/playlab/puzzle/10?noautoplay=true"
+  And I wait to see a dialog titled "Puzzle 10 of 10"
 
 @webpurify
 Scenario: Sharing a profane studio game
@@ -14,6 +15,7 @@ Scenario: Sharing a profane studio game
 
 Scenario: Sharing a phone number studio game
   Given I am on "http://learn.code.org/s/playlab/puzzle/10?noautoplay=true"
+  And I wait to see a dialog titled "Puzzle 10 of 10"
   And I've initialized the workspace with a studio say block saying "800.555.5555"
   And I close the dialog
   Then I press "runButton"
@@ -22,6 +24,7 @@ Scenario: Sharing a phone number studio game
 
 Scenario: Sharing an email studio game
   Given I am on "http://learn.code.org/s/playlab/puzzle/10?noautoplay=true"
+  And I wait to see a dialog titled "Puzzle 10 of 10"
   And I've initialized the workspace with a studio say block saying "brian@code.org"
   And I close the dialog
   Then I press "runButton"
