@@ -215,7 +215,7 @@ Collidable.prototype.roamGrid = function(type) {
       var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
                    candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
       var hasWall = !atEdge && Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL;
-      if (atEdge || hasWall || candidate.score == 0) {
+      if (atEdge || hasWall || candidate.score === 0) {
         candidates.splice(i, 1);
       }
     }
@@ -257,7 +257,7 @@ Collidable.prototype.roamGrid = function(type) {
       this.dir = Direction.NONE;
     }
   }
-}
+};
 
 /**
  * Assumes x/y are center coords (true for projectiles and items)
