@@ -41,7 +41,7 @@ class OpsMailer < ActionMailer::Base
       subject += " Complete #{@prerequisite_phase[:short_name]}"
     end
 
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
+    mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'
   end
 
   def exit_survey_information(workshop, recipient)
@@ -49,6 +49,6 @@ class OpsMailer < ActionMailer::Base
     @recipient = recipient
 
     subject = "Feedback requested for your Code.org PD workshop"
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
+    mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'
   end
 end
