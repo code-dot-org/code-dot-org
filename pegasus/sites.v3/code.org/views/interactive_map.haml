@@ -6,22 +6,22 @@
 %div#map
 %div#infobox.greybox
   %p.info
-    Computer science drives innovation in the US economy and society. Despite growing demand for jobs in the field, it remains marginalized throughout the US K-12 education system.
+    Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
   %p.info
-    Currently,
+    Only
     %strong
       =credit_count
     states allow students to count computer science courses toward high school graduation.
   %p.info
-    There are
+    There are currently
     %strong
       = format_integer_with_commas(jobs_nationwide)
     open computing jobs nationwide.
   %p.info
-    But there are only
+    Last year, only
     %strong
       = format_integer_with_commas(grads_nationwide)
-    computer science graduates nationwide.   
+    computer science students graduated into the workforce. 
 
 :javascript
   var webServiceLocation = "/promote/state/";
