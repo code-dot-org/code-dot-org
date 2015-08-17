@@ -205,7 +205,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Ang Hour of Code
@@ -223,6 +223,9 @@
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Matuto nang higit pa
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Matuto nang higit pa
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Subukan ang Hour of Code

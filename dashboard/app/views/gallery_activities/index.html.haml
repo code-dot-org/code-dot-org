@@ -1,5 +1,5 @@
 - @page_title = t('gallery.students_made_these_with_code')
-- content_for :head do
+- content_for :og do
   = tag 'meta', property: 'og:title', content: @page_title
   = tag 'meta', property: 'og:image', content: image_url('gallery_thumbnail.png')
   = tag 'meta', property: 'og:description', content: strip_tags(t('gallery.picture_count', days: @days, count: number_with_delimiter(GalleryActivity.pseudocount)))

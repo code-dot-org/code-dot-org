@@ -129,7 +129,6 @@ gem 'codemirror-rails' # edit code in textarea
 gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
-gem 'aws-s3'
 
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
@@ -151,3 +150,9 @@ gem 'lograge'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+
+# PubSub for NetSim
+gem 'pusher', '~> 0.14.5'
+
+gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'httparty', group: [:development, :staging, :levelbuilder]

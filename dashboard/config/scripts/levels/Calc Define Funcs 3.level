@@ -23,7 +23,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "input_output_table": "[[1,10],[12,120],[31,310],[50,500]]"
+    "input_output_table": "[[1,10],[12,120],[31,310],[50,500]]",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "true",
-    "instructions": "Free Play: Check it out, now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns.",
+    "instructions": "Free Play: Check it out! Now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns.",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -27,7 +27,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "scrollbars": "true"
+    "scrollbars": "true",
+    "markdown_instructions": "**Free Play**: Check it out! Now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

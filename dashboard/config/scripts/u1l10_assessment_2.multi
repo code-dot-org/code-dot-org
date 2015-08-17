@@ -9,6 +9,7 @@ wrong '4 bits'
 wrong '5 bits'
 wrong '6 bits'
 right '7 bits'
+wrong '12 bits'
 
 markdown <<MARKDOWN
 

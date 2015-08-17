@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "8",
+    "ideal": "4",
     "slider_speed": "0.4",
     "video_key": "C3_artist_intro",
     "disable_param_editing": "true",
@@ -29,7 +29,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Help me draw a box. (Each line is 200 pixels long) \r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

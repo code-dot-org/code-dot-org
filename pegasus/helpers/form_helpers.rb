@@ -103,11 +103,11 @@ def validate_form(kind, data)
 end
 
 def delete_form(kind, secret)
-  form = DB[:forms].where(kind:kind, secret:secret).first
+  form = DB[:forms].where(kind: kind, secret: secret).first
   return false unless form
 
-  DB[:forms].where(id:form[:id]).delete
-  Solr::Server.new(host:CDO.solr_server).delete_by_id(form[:id]) if CDO.solr_server
+  DB[:forms].where(id: form[:id]).delete
+  Solr::Server.new(host: CDO.solr_server).delete_by_id(form[:id]) if CDO.solr_server
 
   true
 end
@@ -141,7 +141,7 @@ def insert_form(kind, data, options={})
 end
 
 def update_form(kind, secret, data)
-  return nil unless form = DB[:forms].where(kind:kind, secret:secret).first
+  return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
 
   if dashboard_user && !dashboard_user[:admin]
     data[:email_s] ||= dashboard_user[:email]
@@ -162,7 +162,7 @@ def update_form(kind, secret, data)
   form[:reviewed_at] = nil
   form[:reviewed_by] = nil
   form[:reviewed_ip] = nil
-  DB[:forms].where(id:form[:id]).update(form)
+  DB[:forms].where(id: form[:id]).update(form)
 
   form
 end

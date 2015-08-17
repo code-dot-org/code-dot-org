@@ -265,11 +265,6 @@ Style/Semicolon:
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 
-# Offense count: 1027
-# Cop supports --auto-correct.
-Style/SpaceAfterColon:
-  Enabled: false
-
 # Offense count: 171
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:
@@ -323,11 +318,6 @@ Style/SpaceInsideBrackets:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
 Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-# Offense count: 23
-# Cop supports --auto-correct.
-Style/SpaceInsideParens:
   Enabled: false
 
 # Offense count: 6996

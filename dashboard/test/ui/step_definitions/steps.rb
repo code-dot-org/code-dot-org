@@ -179,6 +179,10 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
   @browser.execute_script("$('" + selector + "').change()")
 end
 
+When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
+  @browser.execute_script("editor.setValue('#{inputText}')")
+end
+
 Then /^I should see title "([^"]*)"$/ do |title|
   @browser.title.should eq title
 end
@@ -191,6 +195,13 @@ end
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
   element_has_text(selector, expectedText)
+end
+
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    Then I wait to see a ".dialog-title"
+    And element ".dialog-title" has text "#{expectedText}"
+  }
 end
 
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
@@ -316,7 +327,7 @@ end
 def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
-      iterations:1000
+      iterations: 1000
     )
 
   encryptor = ActiveSupport::MessageEncryptor.new(
@@ -332,20 +343,24 @@ def encrypted_cookie(user)
 end
 
 def log_in_as(user)
-  params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user)}
+  params = {
+    name: "_learn_session_#{Rails.env}",
+    value: encrypted_cookie(user)
+  }
+  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
 end
 
 Given(/^I am a teacher$/) do
   @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
-    teacher.name = "Test teacher"
+    teacher.name = "TestTeacher Teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
     teacher.age = 40
@@ -355,7 +370,7 @@ end
 
 Given(/^I am a student$/) do
   @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = "Test student"
+    user.name = "TestStudent Student"
     user.password = SecureRandom.base64
     user.user_type = 'student'
     user.age = 16
@@ -386,4 +401,43 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+
+  if redirect_source == 'pushState'
+    state = { "modified" => true }
+  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+    state = nil
+  end
+  @browser.execute_script("return window.history.state").should eq state
+end
+
+last_shared_url = nil
+Then /^I navigate to the share URL$/ do
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I navigate to the last shared URL$/ do
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I append "([^"]*)" to the URL$/ do |append|
+  url = @browser.current_url + append
+  @browser.navigate.to "#{url}"
+end
+
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq true
+end
+
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq false
 end

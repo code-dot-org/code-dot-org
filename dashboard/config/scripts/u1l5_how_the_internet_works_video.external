@@ -1,22 +1,18 @@
 name 'U1L5 How the Internet Works - Video'
-title 'How the Internet Works - Video'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Video: The Internet: Wires, Cables, and WiFi
-
-**<a href="https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit" target="_blank">Video guide and questions</a>**
-
-
-<iframe width="853" height="480" src="https://www.youtube.com/embed/CfczKEzp4kY?rel=0" frameborder="0" allowfullscreen></iframe>
-
-<br>
-
-**[Can't see the video? Click here.](http://videos.code.org/2015/csp/concept_wires_cables_wifi.mp4)**
-
-<br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'eAzrkLn74g0Xjqbeuj1/tCUVma8EJOEhpkZ1+gcywnIAPcN6RkJEQKfZu+9Q
++xOL/A6HYw0sGAz+jz54xDpCC2S7dyrh0FVrhSmzKH+wWgnHbrOca8jPim01
+IO2B8636jPgu0Du+q5/iVsPh3Tu+fKFPzwB3toRbcZAMIkwzKAoXMlvsdLUR
+QUdwC1d0ERtXvrCRD14rnIis8YXJMDeZFqMos5+hd7fxTeX2QApRGLAv0aHr
+6h6k5AmHu7hgDZ1F1znTOtQyOHajNYau7g/4SUvbyButt05GU+wKH/KxOTpT
+K19Lp2NryBx65J+q11VYywf7Xf2l6Drsg/TR3iDttWs95gr3l7vJP1FMc4ky
+HsaerEzNozC+1iNL/bRIwyL98BiEE84S+JmNdSi8fk5bYy/27qEM8giOrLVL
+Jpqq39Oi9Zw+E4kF/z4yZeLBIH1o4gvoffS5yIbPsbZI9gQKoTssTm8jhoPp
+cvFEh3jlKYfV3dRSBSfeA/EwkiHmilPA8HV7AIc+XSGezRH4Cb07rBcgT3dW
+OThipQ7za9lDjib0yb2dgnqd1Z4EA9RI5JRtzgxJwxnzcE4au6u90K3I4Bsz
+lZssRRCREXNAMZZqrZnxfnj1/YPmXsa7qxXvV/bPEYDmI7mSPHZMJ2OaWPKY
+OMkZ3pFjI+DmMZs7pN2VwCy6LXuMuCObmScr2O1axmEM8gnn6KnKAO9ner+z
+akeYB30kcZ5yQ0XLK/WnWRT0LUryNTMOLUrSjdGLAwZrtAzvdIb9b3gWkuDY
+mvfrYZabLWUzigeWC4FhH6nuqEQhFAsCVT3Z+0mgggvHifyWv9+7yuepc5so
+0TR0xKyxNZ7+PC1kZRvgX7n5C79JLMwzVT66KPt76IcG1dEecvhvtHCwvXp7
+UgeyMfZoVQHoJithx9RZO81YsFN7fpdc7MQGmc4Q/k1tMTlODkW8Cjiqcny2
+'

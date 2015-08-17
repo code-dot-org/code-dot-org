@@ -1,12 +1,12 @@
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
-  storage_id = user_storage_ids_table.insert(user_id:nil)
+  storage_id = user_storage_ids_table.insert(user_id: nil)
 
   response.set_cookie(storage_id_cookie_name, {
-    value:CGI.escape(storage_encrypt_id(storage_id)),
-    domain:".#{request.shared_cookie_domain}",
-    path:'/',
-    expires:Time.now + (365 * 24 * 3600)
+    value: CGI.escape(storage_encrypt_id(storage_id)),
+    domain: ".#{request.shared_cookie_domain}",
+    path: '/',
+    expires: Time.now + (365 * 24 * 3600)
   })
 
   storage_id
@@ -76,7 +76,7 @@ def storage_id_for_user()
   return nil unless request.user_id
 
   # Return the user's storage-id, if it exists.
-  if row = user_storage_ids_table.where(user_id:request.user_id).first
+  if row = user_storage_ids_table.where(user_id: request.user_id).first
     return row[:id]
   end
 
@@ -87,17 +87,17 @@ def storage_id_for_user()
 
     # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
     # there is a race condition (addressed below)
-    rows_updated = user_storage_ids_table.where(id:storage_id,user_id:nil).update(user_id:request.user_id)
+    rows_updated = user_storage_ids_table.where(id: storage_id,user_id: nil).update(user_id: request.user_id)
     return storage_id if rows_updated > 0
 
     # We couldn't claim the storage. The most likely cause is that another request (by this
     # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
     # id is either invalid or it belongs to another user (both addressed below)
-    return storage_id if user_storage_ids_table.where(id:storage_id,user_id:request.user_id).first
+    return storage_id if user_storage_ids_table.where(id: storage_id,user_id: request.user_id).first
   end
 
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id:request.user_id)
+  user_storage_ids_table.insert(user_id: request.user_id)
 end
 
 def storage_id_from_cookie()

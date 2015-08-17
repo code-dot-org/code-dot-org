@@ -29,6 +29,7 @@ goog.provide('Blockly.utils');
 goog.require('goog.array');
 goog.require('goog.memoize');
 goog.require('goog.events');
+goog.require('goog.math.Rect');
 
 /**
  * Add a CSS class to a element.
@@ -80,16 +81,22 @@ Blockly.removeClass_ = function(element, className) {
   }
 };
 
+/** @typedef {!Array.<!Array>} BindData */
+
 /**
  * Bind an event to a function call.
  * @param {!Element} element Element upon which to listen.
  * @param {string} name Event name to listen to (e.g. 'mousedown').
  * @param {Object} thisObject The value of 'this' in the function.
  * @param {!Function} func Function to call when event is triggered.
- * @return {!Array.<!Array>} Opaque data that can be passed to unbindEvent_.
+ * @param {boolean} [useCapture=false] If true, bind event against capture
+ *        phase instead of bubble phase.
+ * @return {BindData} Opaque data that can be passed to unbindEvent_.
  * @private
  */
-Blockly.bindEvent_ = function(element, name, thisObject, func) {
+Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
+  // Coerce useCapture to boolean
+  useCapture = !!useCapture;
   var bindData = [];
   var wrapFunc;
   if (!element.addEventListener) {
@@ -103,8 +110,8 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   if (equivTouchEvent) {
     // Also bind the mouse event, unless the browser supports pointer events.
     if (!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
-      element.addEventListener(name, wrapFunc, false);
-      bindData.push([element, name, wrapFunc]);
+      element.addEventListener(name, wrapFunc, useCapture);
+      bindData.push([element, name, wrapFunc, useCapture]);
     }
     wrapFunc = function (e) {
       if (e.target && e.target.style) {
@@ -126,11 +133,11 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments);
       }
     };
-    element.addEventListener(equivTouchEvent, wrapFunc, false);
-    bindData.push([element, equivTouchEvent, wrapFunc]);
+    element.addEventListener(equivTouchEvent, wrapFunc, useCapture);
+    bindData.push([element, equivTouchEvent, wrapFunc, useCapture]);
   } else {
-    element.addEventListener(name, wrapFunc, false);
-    bindData.push([element, name, wrapFunc]);
+    element.addEventListener(name, wrapFunc, useCapture);
+    bindData.push([element, name, wrapFunc, useCapture]);
   }
   return bindData;
 };
@@ -163,7 +170,7 @@ if ('ontouchstart' in document.documentElement) {
 
 /**
  * Unbind one or more events event from a function call.
- * @param {!Array.<!Array>} bindData Opaque data from bindEvent_.  This list is
+ * @param {BindData} BindData Opaque data from bindEvent_.  This list is
  *     emptied during the course of calling this function.
  * @return {!Function} The function call.
  * @private
@@ -174,7 +181,8 @@ Blockly.unbindEvent_ = function(bindData) {
     var element = bindDatum[0];
     var name = bindDatum[1];
     var func = bindDatum[2];
-    element.removeEventListener(name, func, false);
+    var useCapture = bindDatum[3];
+    element.removeEventListener(name, func, useCapture);
   }
   return func;
 };
@@ -389,24 +397,49 @@ Blockly.convertCoordinates = function(x, y, svg, toSvg) {
  */
 Blockly.mouseToSvg = function(e, opt_svgParent) {
   return Blockly.mouseCoordinatesToSvg(
-    e.clientX, 
-    e.clientY, 
+    e.clientX,
+    e.clientY,
     opt_svgParent || Blockly.topMostSVGParent(e.target));
 };
 
 /**
  * Return the converted coordinates of the given mouse coordinates.
  * The origin (0,0) is the top-left corner of the Blockly svg.
- * @param {number} x Mouse client X.
- * @param {number} y Mouse client Y.
- * @param {Element=} Target element.
- * @return {!Object} Object with .x and .y properties.
+ * @param {number} clientX Mouse client X.
+ * @param {number} clientY Mouse client Y.
+ * @param {Element=} target element.
+ * @return {Object} coordinate with .x and .y properties.
  */
 Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
   return Blockly.convertCoordinates(
       clientX + window.pageXOffset,
       clientY + window.pageYOffset,
       target, true);
+};
+
+/**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.svgCoordinatesToViewport = function(coordinates, blockSpace) {
+  var blockSpaceMetrics = blockSpace.getMetrics();
+  return new goog.math.Coordinate(
+    coordinates.x - blockSpaceMetrics.absoluteLeft,
+    coordinates.y - blockSpaceMetrics.absoluteTop);
+};
+
+/**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.viewportCoordinateToBlockSpace = function(coordinates, blockSpace) {
+  var viewportBox = blockSpace.getViewportBox();
+  return new goog.math.Coordinate(coordinates.x + viewportBox.left,
+    coordinates.y + viewportBox.top);
 };
 
 /**
@@ -572,4 +605,163 @@ Blockly.printerRangeToNumbers = function(rangeString) {
  */
 Blockly.getUID = function() {
   return goog.events.getUniqueId('blocklyUID');
+};
+
+/**
+ * Is this event targeting a text input widget?
+ * @param {!Event} e An event.
+ * @return {boolean} True if text or textarea input.
+ */
+Blockly.isTargetInput = function (e) {
+  return e.target.type == 'textarea' || e.target.type == 'text';
+};
+
+/**
+ * Cancel the native context menu, unless the focus is on an HTML input widget.
+ * @param {!Event} e contextmenu event.
+ * @private
+ */
+Blockly.blockContextMenu = function (e) {
+  if (!Blockly.isTargetInput(e)) {
+    e.preventDefault();
+  }
+};
+
+/**
+ * Get normalized wheel scrolling amount from a given wheel or scrollwheel event
+ * - in Safari, processes e.wheelDeltaY instead of e.deltaY, and normalizes
+ *   so + is down
+ * - in Firefox, multiplies event by 10 to account for browser's smaller deltas
+ * @param {!Event} e scrollwheel or wheel event.
+ * @return {number|null} wheelDeltaY normalized scroll dy, + is down, or null if
+ * no wheel delta present in event
+*/
+Blockly.getNormalizedWheelDeltaY = function (e) {
+  // Safari uses wheelDeltaY (- is down), others use deltaY (+ is down)
+  var wheelDeltaY = e.deltaY || -e.wheelDeltaY; // + is down
+
+  if (!wheelDeltaY) {
+    return null;
+  }
+
+  if (goog.userAgent.GECKO) {
+    // Firefox's deltas are a tenth that of Chrome/Safari.
+    wheelDeltaY *= 10;
+  }
+
+  return wheelDeltaY;
+};
+
+/**
+ * Given an outer box, returns a box with the amounts of an inner box's overflow
+ * on each side.
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Box} innerBox
+ * @return {goog.math.Box} overflow on each side, (+) is amount hanging off
+ */
+Blockly.getBoxOverflow = function (outerBox, innerBox) {
+  return new goog.math.Box(
+    Math.max(0, outerBox.top - innerBox.top),
+    Math.max(0, innerBox.right - outerBox.right),
+    Math.max(0, innerBox.bottom - outerBox.bottom),
+    Math.max(0, outerBox.left - innerBox.left));
+};
+
+/**
+ * Gets a point's distance outside each side (or negative if inside box)
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Coordinate} innerPoint
+ * @return {goog.math.Box} distances to each side, from point's perspective
+ */
+Blockly.getPointBoxOverflow = function (outerBox, innerPoint) {
+  return new goog.math.Box(
+    outerBox.top - innerPoint.y,
+    innerPoint.x - outerBox.right,
+    innerPoint.y - outerBox.bottom,
+    outerBox.left - innerPoint.x);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is wider than boxB
+ */
+Blockly.isBoxWiderThan = function (boxA, boxB) {
+  return Blockly.getBoxWidth(boxA) > Blockly.getBoxWidth(boxB);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is taller than boxB
+ */
+Blockly.isBoxTallerThan = function (boxA, boxB) {
+  return Blockly.getBoxHeight(boxA) > Blockly.getBoxHeight(boxB);
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} width of box
+ */
+Blockly.getBoxWidth = function (box) {
+  return box.right - box.left;
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} height of box
+ */
+Blockly.getBoxHeight = function (box) {
+  return box.bottom - box.top;
+};
+
+/**
+ * @param {number} number
+ * @param {number} min
+ * @param {number} max
+ * @param {boolean} inclusive
+ * @return {boolean} whether given number is within range
+ */
+Blockly.numberWithin = function (number, min, max, inclusive) {
+  return inclusive?
+    (number >= min && number <= max) :
+    (number > min && number < max);
+};
+
+/**
+ * @param {SVGRect} svgRect
+ * @returns {goog.math.Rect}
+ */
+Blockly.svgRectToRect = function (svgRect) {
+  return new goog.math.Rect(svgRect.x, svgRect.y, svgRect.width,
+    svgRect.height);
+};
+
+/**
+ * Direction properties for goog.math.Boxes
+ * @type {string[]}
+ */
+Blockly.BOX_DIRECTIONS = ['top', 'right', 'bottom', 'left'];
+
+/**
+ * Given a box, adds a given amount to any non-zero side.
+ * @param {goog.math.Box} box
+ * @param {number} amount
+ */
+Blockly.addToNonZeroSides = function (box, amount) {
+  Blockly.BOX_DIRECTIONS.forEach(function (direction) {
+    if (box[direction] !== 0) {
+      box[direction] += amount;
+    }
+  });
+};
+
+/**
+ * Sets element to ignore pointer events.
+ * Note: only use for SVG elements, only those support IE9 and 10
+ * {@link https://css-tricks.com/almanac/properties/p/pointer-events/}
+ * @param {Element} element - SVG element
+ */
+Blockly.svgIgnoreMouseEvents = function (element) {
+  element.style.pointerEvents = 'none';
 };

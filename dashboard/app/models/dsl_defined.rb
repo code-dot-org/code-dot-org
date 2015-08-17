@@ -11,7 +11,9 @@ class DSLDefined < Level
   def self.setup(data)
     level = find_or_create_by({ name: data[:name] })
     level.send(:write_attribute, 'properties', {})
+
     level.update!(name: data[:name], game_id: Game.find_by(name: self.to_s).id, properties: data[:properties])
+
     level
   end
 
@@ -26,7 +28,7 @@ class DSLDefined < Level
 
   # Use DSL class to parse string
   def self.parse(str, filename, name=nil)
-    dsl_class.parse(str,filename,name)
+    dsl_class.parse(str, filename, name)
   end
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
@@ -43,10 +45,10 @@ class DSLDefined < Level
 
       level = setup data
 
-      # Save updated level data to external file
-      File.write(Rails.root.join(level.filename), text)
-
+      # Save updated level data to external files
+      File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
       self.rewrite_i18n_file(i18n)
+
       level
     end
   end
@@ -62,9 +64,35 @@ class DSLDefined < Level
   end
 
   def filename
+    return nil if name.blank?
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
     grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
     `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
+  end
+
+  def file_path
+    return nil if filename.blank?
+    Rails.root.join filename
+  end
+
+  def encrypted_dsl_text(dsl_text)
+    ["name '#{name}'",
+     "encrypted '#{Encryption::encrypt_object(dsl_text)}'"].join("\n")
+  end
+
+  def self.decrypt_dsl_text_if_necessary(dsl_text)
+    if dsl_text =~ /^encrypted '(.*)'$/m
+      begin
+        return Encryption::decrypt_object($1)
+      rescue Exception
+        # just return the encrypted text
+      end
+    end
+    return dsl_text
+  end
+
+  def dsl_text
+    self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
   end
 
   def update(params)
@@ -75,10 +103,18 @@ class DSLDefined < Level
     end
   end
 
+  def encrypted
+    properties['encrypted'].present? && properties['encrypted'] != "false"
+  end
+
+  def encrypted=(value)
+    properties['encrypted'] = value
+  end
+
+
   private
   def delete_level_file
-    level_file = Rails.root.join(filename)
-    File.delete(level_file) if File.exist?(level_file)
+    File.delete(file_path) if File.exist?(file_path)
   end
 
 end

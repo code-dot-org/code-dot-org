@@ -11,13 +11,14 @@
     = t(:slow_loading)
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
-
+  - if @level.game == Game.netsim
+    %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
   %script{src: minifiable_shared_path('/shared/js/shared.js')}
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     var appOptions = #{app_options.to_json};
     appOptions.locale = '#{js_locale}';
-    apps.setup();
+    apps.setupBlockly(appOptions);
     apps.load(apps.init);
     //]]>

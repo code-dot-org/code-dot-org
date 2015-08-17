@@ -113,7 +113,7 @@
   continue_learning_header: Continue à apprendre après Une Heure
   continue_learning_body: Il y a de nombreuses possibilités. Vous pouvez apprendre
     en ligne, dans une école près de chez vous ou à l'occasion de stage durant l'été.
-  learn_next_level: Passer au prochain niveau
+  learn_next_level: Continuer au prochain niveau
   learn_online: Essaie d'autres cours en ligne
   learn_classes: Trouver des cours près de chez vous
   hoc_is_here: '#HourOfCode L''Heure de Code est là — jettes-y un œil ! @codeorg'
@@ -209,6 +209,9 @@
   homepage_banner_text_main: Code.org et le College Board sont devenus partenaires
     pour améliorer la diversité en informatique.
   homepage_banner_text_link: Pour en savoir plus
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayez l'Heure de Code

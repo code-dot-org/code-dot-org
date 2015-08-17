@@ -13,4 +13,11 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     assert_equal nil, cookies['_learn_session_test']
   end
 
+  test 'session cookie not set over insecure HTTP' do
+    https! false
+    get '/reset_session'
+
+    assert_equal nil, cookies['_learn_session_test']
+  end
+
 end

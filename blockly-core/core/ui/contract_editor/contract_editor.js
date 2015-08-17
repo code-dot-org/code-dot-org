@@ -9,9 +9,11 @@ goog.provide('Blockly.ContractEditor');
 
 goog.require('Blockly.FunctionEditor');
 goog.require('Blockly.FunctionalBlockUtils');
+goog.require('Blockly.ExampleView');
 goog.require('Blockly.BlockValueType');
 goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
+goog.require('Blockly.ContractDefinitionSection');
 goog.require('Blockly.SvgHeader');
 goog.require('Blockly.SvgTextButton');
 goog.require('Blockly.SvgHighlightBox');
@@ -33,8 +35,9 @@ goog.require('goog.array');
 /** @const */ var EXAMPLE_BLOCK_MARGIN_LEFT = Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
-/** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
-/** @const */ var HEADER_HEIGHT = 50; //px
+/** @const */ var HEADER_HEIGHT = 30; // px
+/** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
+/** @const */ var MARGIN_BLOCK_TO_CALL_SLOT = 13; // px
 
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
@@ -72,7 +75,7 @@ Blockly.ContractEditor = function(configuration) {
 
   /**
    * Example blocks in this modal dialog
-   * @type {!Array.<Blockly.Block>}
+   * @type {!Array.<Blockly.Blocks.functional_example>}
    * @private
    */
   this.exampleBlocks = [];
@@ -112,6 +115,28 @@ Blockly.ContractEditor = function(configuration) {
    * @private
    */
   this.autoOpenConfig_ = null;
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  this.testHandler_ = function (block) {
+    return "Block ID is " + block.id;
+  }
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  this.testResetHandler_ = function () { };
+
+  this.customFailureCloseHandler_ = function () { return false; };
+
+  /**
+   * @type {Blockly.ExampleView[]}
+   * @private
+   */
+  this.exampleViews_ = [];
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -120,6 +145,8 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
+
+Blockly.ContractEditor.GRID_LINE_COLOR = '#5b6770'; // dark gray
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
@@ -137,8 +164,9 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.contractSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn,
     {
       sectionNumber: 1,
+      headerHeight: HEADER_HEIGHT,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
-        // goog.ui.showElement toggles between "hidden" and "hidden" due to
+        // goog.ui.setElementShown toggles between "hidden" and "hidden" due to
         // inherited properties, so set display directly instead
         this.contractDiv_.style.display = isNowCollapsed ? 'none' : 'block';
         this.position_();
@@ -152,45 +180,65 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
-  /** @type {Blockly.SvgTextButton} */
-  this.addExampleButton = new Blockly.SvgTextButton(
-    canvasToDrawOn,
-    "Add Example", // TODO(bjordan): i18n
-    this.addNewExampleBlock_.bind(this)
-  );
+  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv innerModalDiv');
+  this.addExampleButton = goog.dom.createDom('button', 'exampleAreaButton btn');
+  this.addExampleButton.innerHTML = "Add Example";
+  Blockly.bindEvent_(this.addExampleButton, 'click', this, this.addNewExampleBlock_);
+  goog.dom.append(this.exampleAreaDiv, this.addExampleButton);
+  this.exampleAreaDiv.style.display = 'block';
+  this.exampleAreaDiv.style.position = 'absolute';
+  goog.dom.insertChildAt(this.frameClipDiv_, this.exampleAreaDiv, 0);
+
+  this.callText = goog.dom.createDom('div', 'callResultText');
+  this.callText.innerHTML = "Call";
+  Blockly.svgIgnoreMouseEvents(this.callText);
+  goog.dom.appendChild(this.exampleAreaDiv, this.callText);
+
+  this.resultText = goog.dom.createDom('div', 'callResultText');
+  this.resultText.innerHTML = "Result";
+  goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
+  Blockly.svgIgnoreMouseEvents(this.resultText);
+
+  this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
+
+  this.topHorizontalLine = Blockly.createSvgElement('rect', {
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
+  }, this.examplesTableGroup);
+  this.topHorizontalLine.setAttribute('height', 2.0);
+  Blockly.svgIgnoreMouseEvents(this.topHorizontalLine);
+
+  // TODO(bjordan): get horizontal line #X helper, lay out below examples
+
+
+  this.verticalExampleMidline = Blockly.createSvgElement('rect', {
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
+  }, this.examplesTableGroup);
+  this.verticalExampleMidline.setAttribute('width', 2.0);
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 2,
+      headerHeight: HEADER_HEIGHT,
       headerText: "Examples", // TODO(bjordan): i18n
-      placeContentCallback: goog.bind(function (currentY) {
-        var newY = currentY;
-        newY += EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE;
-
-        this.exampleBlocks.forEach(function (block) {
-          block.moveTo(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
-          newY += block.getHeightWidth().height;
-          newY += EXAMPLE_BLOCK_MARGIN_BELOW;
-        }, this);
-
-        newY = this.addExampleButton.renderAt(EXAMPLE_BLOCK_MARGIN_LEFT, newY);
-        newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
-        return newY;
-      }, this),
+      placeContentCallback: this.onPlaceExampleContent.bind(this),
       highlightBox: sharedHighlightBox,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
+        this.exampleAreaDiv.style.display = isNowCollapsed ? 'none' : 'block';
+        this.examplesTableGroup.style.display = isNowCollapsed ? 'none' : 'block';
         this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInExampleArea, this),
           this.hiddenExampleBlocks_);
-        this.addExampleButton.setVisible(!isNowCollapsed);
         this.position_();
       }, this)
     });
 
   this.hiddenDefinitionBlocks_ = [];
+
+  this.definitionSectionLogic_ = new Blockly.ContractDefinitionSection(canvasToDrawOn);
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 3,
+      headerHeight: HEADER_HEIGHT,
       headerText: "Definition", /** TODO(bjordan) i18n */
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.flyout_.setVisibility(!isNowCollapsed);
@@ -200,29 +248,19 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
-
+        this.definitionSectionLogic_.handleCollapse(isNowCollapsed);
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
       placeContentCallback: goog.bind(function (currentY) {
         if (this.flyout_) {
-          currentY += this.flyout_.getHeight();
-          this.flyout_.customYOffset = currentY;
-          this.flyout_.position_();
+          currentY = this.positionFlyout_(currentY);
         }
 
-        currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
-
-        if (this.functionDefinitionBlock) {
-          var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-          var functionDefinitionX = Blockly.RTL ?
-            fullWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
-            Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
-          this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
-          currentY += this.functionDefinitionBlock.getHeightWidth().height;
-        }
-
-        return currentY + FUNCTION_BLOCK_VERTICAL_MARGIN;
+        return this.definitionSectionLogic_.placeContent(currentY,
+            this.getVerticalMidlineOffset_(),
+            this.getFullWidth(),
+            this.functionDefinitionBlock);
       }, this)
     });
 
@@ -359,8 +397,42 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
+/**
+ * Allows app to pass in a function that should be run against an example block
+ * when user hits Test button
+ * @param {function} testHandler
+ */
+Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
+  this.testHandler_ = testHandler;
+};
+
+/**
+ * Allows app to pass in a function that should be run when user resets a test
+ * @param {function} testResetHandler
+ */
+Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetHandler) {
+  this.testResetHandler_ = testResetHandler;
+};
+
+/**
+ * Allows app to pass in a function that is called on contract editor close if
+ * any examples fail. This function should return true if the app wants to own
+ * closing the dialog
+ * @param {function} handler
+ */
+Blockly.ContractEditor.prototype.registerTestsFailedOnCloseHandler = function (handler) {
+  this.customFailureCloseHandler_ = handler;
+};
+
+/**
+ * Moves a given example block to the modal blockspace.
+ * @param {Blockly.Block} exampleBlock
+ */
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
   var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+  var functionCall = movedExampleBlock.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  functionCall.setCanDisconnectFromParent(false);
   this.exampleBlocks.push(movedExampleBlock);
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
     this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
@@ -442,6 +514,9 @@ Blockly.ContractEditor.prototype.createExampleBlock_ = function (functionDefinit
   return temporaryExampleBlock;
 };
 
+Blockly.ContractEditor.prototype.getFullWidth = function () {
+  return this.modalBlockSpace.getMetrics().viewWidth;
+};
 /**
  * @override
  */
@@ -450,12 +525,10 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
     return;
   }
 
-  var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-
-  this.contractSectionView_.placeAndGetNewY(
-    -this.getBlockSpaceEditorToContractSectionTop_(), fullWidth);
+  var fullWidth = this.getFullWidth();
 
   var currentY = 0;
+  currentY = this.contractSectionView_.placeAndGetNewY(currentY, fullWidth);
   currentY = this.examplesSectionView_.placeAndGetNewY(currentY, fullWidth);
   this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth);
 };
@@ -465,23 +538,25 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText contractEditor');
+      'blocklyToolboxDiv paramToolbox blocklyText contractEditor flyoutColorGray innerModalDiv');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
   this.contractDiv_.innerHTML =
           '<div>' + Blockly.Msg.FUNCTIONAL_NAME_LABEL + '</div>'
         + '<div><input id="functionNameText" type="text"></div>'
-        + '<div id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</div>'
-        + '<div class="contract-type-hint" id="domain-hint">(the domain is the type of input)</div>'
+        + '<div><span id="domain-label">' + Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL + '</span> <span class="contract-type-hint"  id="domain-hint">(the domain is the type of input)</span>' + '</div>'
         + '<div id="domain-area" style="margin: 0;">'
         + '</div>'
         + '<div class="clear" style="margin: 0;"></div>'
-        + '<button id="paramAddButton" class="btn">' + Blockly.Msg.ADD + '</button>'
+        + '<button id="paramAddButton" class="btn">' + 'Add Domain' + '</button>'
         + '<div class="clear" style="margin: 0;"></div>'
         + '<div id="range-area" style="margin: 0;">'
-          + '<div id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</div>'
-          + '<div class="contract-type-hint clear" id="range-hint" style="margin-left: 11px; ">(the range is the type of output)</div>'
+          + '<div>'
+            +'<span id="outputTypeTitle">' + Blockly.Msg.FUNCTIONAL_RANGE_LABEL + '</span>'
+            +' '
+            +'<span class="contract-type-hint" id="range-hint">(the range is the type of output)</span>'
+          + '</div>'
           + '<span id="outputTypeDropdown"></span>'
         + '</div>'
         + '<div id="description-area" style="margin: 0px;">'
@@ -493,7 +568,9 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
-  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+  this.frameClipDiv_ = this.createFrameClipDiv_();
+  this.frameClipDiv_.insertBefore(this.contractDiv_, this.frameClipDiv_.firstChild);
+  this.container_.insertBefore(this.frameClipDiv_, this.container_.firstChild);
   this.initializeAddButton_();
 };
 
@@ -518,17 +595,8 @@ Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function (
 };
 
 Blockly.ContractEditor.prototype.getContractDomTopY_ = function () {
-  return this.getWindowBorderChromeHeight() +
-    this.chromeBottomToContractDivDistance_();
-};
-
-Blockly.ContractEditor.prototype.getBlockSpaceEditorToContractSectionTop_ = function () {
-  return this.getContractDivHeight() + this.chromeBottomToContractDivDistance_();
-};
-
-Blockly.ContractEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {
-  return this.getWindowBorderChromeHeight() +
-    this.getBlockSpaceEditorToContractSectionTop_();
+  return this.chromeBottomToContractDivDistance_()
+    + this.modalBlockSpace.yOffsetFromView;
 };
 
 /**
@@ -542,12 +610,12 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
       Blockly.Msg.CONTRACT_EDITOR_HEADER;
   goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
     isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
-  goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('range-hint'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('domain-hint'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-label'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('paramAddButton'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('description-area'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('range-hint'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-hint'), !isEditingVariable);
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
@@ -625,9 +693,10 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   var type = paramInfo.type;
 
   var domainEditor = new Blockly.DomainEditor({
+    paramID: paramID,
     name: name,
     type: type,
-    onRemovePress: goog.bind(this.removeParameter, this, name),
+    onRemovePress: goog.bind(this.removeContractParameter_, this, paramID),
     onTypeChanged: goog.bind(this.changeParameterType_, this, paramID),
     onNameChanged: goog.bind(this.changeParameterName_, this, paramID),
     typeChoices: USER_TYPE_CHOICES
@@ -636,11 +705,17 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   this.domainEditors_.push(domainEditor);
 };
 
-Blockly.ContractEditor.prototype.removeParameter = function(name) {
-  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+/**
+ * Delete the given parameter, destroying its editor and any usages.
+ * @param {string} paramID - unique parameter ID
+ * @private
+ */
+Blockly.ContractEditor.prototype.removeContractParameter_ = function(paramID) {
+  this.orderedParamIDsToBlocks_.remove(paramID);
+  this.refreshParamsEverywhere();
 
   goog.array.removeIf(this.domainEditors_, function (editor) {
-    if (editor.name === name) {
+    if (editor.getParamID() === paramID) {
       editor.dispose();
       return true;
     }
@@ -698,12 +773,15 @@ Blockly.ContractEditor.prototype.outputTypeChanged_ = function (newType) {
 
 Blockly.ContractEditor.prototype.updateFrameColorForType_ = function (newType) {
   var newColorHSV = Blockly.FunctionalTypeColors[newType];
-  this.setFrameColor_(newColorHSV);
+  var newColorHex = goog.color.hsvToHex(newColorHSV[0], newColorHSV[1], newColorHSV[2] * 255)
+  this.setFrameColor_(newColorHex);
+  this.allSections_.forEach(function (sectionView, sectionName) {
+    sectionView.setHeaderColor(newColorHex);
+  }, this);
 };
 
-Blockly.ContractEditor.prototype.setFrameColor_ = function (hsvColor) {
-  this.frameBase_.style.fill =
-    goog.color.hsvToHex(hsvColor[0], hsvColor[1], hsvColor[2] * 255);
+Blockly.ContractEditor.prototype.setFrameColor_ = function (newColorHex) {
+  this.frameBase_.style.fill = newColorHex;
 };
 
 Blockly.ContractEditor.prototype.getOutputTypeDropdownElement_ = function () {
@@ -728,5 +806,172 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
+
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
+};
+
+/**
+ * Returns the x offset for the vertical midline (w.r.t. the left side of the drawing
+ * canvas).
+ * @return {number}
+ * @private
+ */
+Blockly.ContractEditor.prototype.getVerticalMidlineOffset_ = function () {
+  return EXAMPLE_BLOCK_MARGIN_LEFT +
+      this.getMaxExampleCallBlockWidth_() +
+      MARGIN_BLOCK_TO_CALL_SLOT;
+};
+
+/**
+ * Go through each of our example blocks and figure out which is widest
+ * @return {number}
+ */
+Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function () {
+  return this.exampleBlocks.reduce(function (previousMax, block) {
+    var functionCallBlock = block.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    if (!functionCallBlock) {
+      return previousMax;
+    }
+    var width = functionCallBlock.getHeightWidth().width;
+    return Math.max(previousMax, width);
+  }, DEFAULT_EXAMPLE_CALL_SECTION_WIDTH);
+};
+
+/**
+ * Call reset on each of our views
+ */
+Blockly.ContractEditor.prototype.resetExampleViews = function () {
+  this.exampleViews_.forEach(function (exampleView) {
+    exampleView.reset();
+  });
+};
+
+/**
+ * Call our app-specific test handler for this block
+ * @param {Blockly.Block} block
+ * @param {boolean} visualize True if app should visualize the test
+ * @return {string} Result failure, or null if no failure
+ */
+Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
+  return this.testHandler_(block, visualize);
+};
+
+/**
+ * Call our app-specific test reset handler for this block
+ * @param {Blockly.Block} block
+ */
+Blockly.ContractEditor.prototype.resetExample = function (block) {
+  this.testResetHandler_(block);
+};
+
+Blockly.ContractEditor.prototype.updateExampleResult = function (block, failure) {
+  this.exampleViews_.some(function (view) {
+    if (view.getBlock() === block) {
+      view.setResult(failure);
+      // Return true so that we stop looking for a matching view
+      return true;
+    }
+  });
+};
+
+/**
+ * Handle example content being placed.
+ * @param {number} currentY Current y location
+ * @returns {number} Updated y location
+ */
+Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
+  var maxWidth = this.getMaxExampleCallBlockWidth_();
+
+  var metrics = this.modalBlockSpace.getMetrics();
+
+  var exampleDivTop = currentY;
+  this.exampleAreaDiv.style.left = this.modalBlockSpace.xOffsetFromView + 'px';
+  this.exampleAreaDiv.style.top = this.modalBlockSpace.yOffsetFromView + currentY + 'px';
+  this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
+
+  var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
+
+  var newY = currentY;
+
+  var verticalMidlineOffset = this.getVerticalMidlineOffset_();
+
+  var verticalMidlineY = newY;
+  this.verticalExampleMidline.setAttribute('transform',
+    'translate(' + verticalMidlineOffset + ',' + newY + ')');
+
+  var exampleSectionVisible = this.exampleBlocks.length > 0;
+  if (exampleSectionVisible) {
+    newY += blockSplitMargin;
+
+    this.callText.style.top = newY - exampleDivTop + 'px';
+    this.callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+
+    this.resultText.style.top = newY - exampleDivTop + 'px';
+    this.resultText.style.left = verticalMidlineOffset +
+      EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+
+    newY += this.callText.offsetHeight;
+
+    newY += blockSplitMargin;
+
+    this.topHorizontalLine.setAttribute('transform',
+      'translate(' + 0 + ',' + newY + ')');
+    this.topHorizontalLine.setAttribute('width', this.getFullWidth());
+
+    this.exampleBlocks.forEach(goog.bind(function (block, index) {
+      var canReuse = this.exampleViews_.length > index;
+      if (!canReuse) {
+        var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv,
+            this.examplesTableGroup, this);
+        this.exampleViews_.push(newExampleView);
+      }
+      newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY,
+        maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW,
+        this.getFullWidth(), verticalMidlineOffset, exampleDivTop);
+    }, this));
+  }
+
+  for (var j = this.exampleBlocks.length; j < this.exampleViews_.length; j++) {
+    this.exampleViews_[j].dispose();
+  }
+  this.exampleViews_.length = this.exampleBlocks.length;
+
+  this.verticalExampleMidline.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.callText.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.resultText.style.display = exampleSectionVisible ? 'block' : 'none';
+
+  this.verticalExampleMidline.setAttribute('height', newY - verticalMidlineY);
+
+  newY += blockSplitMargin;
+
+  this.addExampleButton.style.top = newY - exampleDivTop + 'px';
+  this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+  newY += this.addExampleButton.offsetHeight;
+  newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+
+  this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
+
+  return newY;
+};
+
+Blockly.ContractEditor.prototype.onClose = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  var allPass = true;
+  this.exampleViews_.forEach(function (view) {
+    var failure = this.testExample(view.getBlock(), false);
+    view.setResult(failure);
+    view.refreshTestingUI(false);
+    allPass = allPass && !failure;
+  }.bind(this));
+  if (!allPass && this.customFailureCloseHandler_()) {
+    // app has taken responsibilty for closing dialog (likely by launching
+    // modal confirm dialog
+    return;
+  }
+
+  this.hideIfOpen();
 };

@@ -77,7 +77,7 @@
   beyond_hour_message: Continúa con nuestros <a href='http://studio.code.org'>otros
     cursos</a>, o vé más opciones en <a href='/learn/beyond'>Aprender más allá de
     Una Hora</a>.
-  leaderboards_for_hoc: Líderes de Una Hora de Código.
+  leaderboards_for_hoc: Clasificaciones para la hora del código.
   support_url: http://support.code.org/
   country: País
   city: Ciudad
@@ -96,7 +96,7 @@
   i_agree: De acuerdo
   participant_select: Seleccionar
   participant_student: estudiante
-  participant_parent: Padre/madre
+  participant_parent: Padres
   participant_educator: Educador
   participant_engineer: Ingeniero de software
   participant_other: Ninguna de las anteriores
@@ -212,6 +212,9 @@
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la computación.
   homepage_banner_text_link: Aprende más
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Aprende más
   homepage_slot_text_title_hoc: Hora del código
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código

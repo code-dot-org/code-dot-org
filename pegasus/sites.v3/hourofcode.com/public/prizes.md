@@ -2,11 +2,20 @@
 title: Prizes
 layout: wide
 ---
+
+<% if @country == 'la' %>
+
 # Prizes for every organizer
 
-## 2015 prizes coming soon! 
+Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
+
+<% else %>
+
+# 2015 prizes coming soon! 
 
 **Every** educator who organizes an Hour of Code event is eligible to receive a prize. Check back for updates in fall 2015.
+
+<% end %>
 
 # 2014 Hour of Code Prizes
 

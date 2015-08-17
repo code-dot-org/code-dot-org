@@ -5,7 +5,7 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 8 - Algorithms Detour - How Routers Learn
+## Unit 2: Lesson 8 - How Routers Learn
 
 # Background
 
@@ -29,3 +29,4 @@ You have learned quite a bit about sending information over the internet. As you
 
 
 MARKDOWN
+

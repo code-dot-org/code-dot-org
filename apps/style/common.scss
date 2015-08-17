@@ -89,6 +89,15 @@ html[dir='rtl'] #visualizationColumn {
   position: absolute;
   bottom: 0px;
   overflow-y: hidden;
+
+  #belowVisualization {
+    position: absolute;
+    overflow: auto;
+  }
+
+  &.embed_hidesource {
+    position: relative;
+  }
 }
 
 div.droplet-palette-group-header {
@@ -353,6 +362,9 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
+  .small-footer.responsive {
+    max-width: $width;
+  }
   #codeWorkspace {
     left: $width;
   }
@@ -387,6 +399,9 @@ html[dir='rtl'] #codeWorkspace {
     max-width: $width;
   }
   #visualizationColumn.responsive {
+    max-width: $width;
+  }
+  .small-footer.responsive {
     max-width: $width;
   }
   #codeWorkspace {
@@ -425,6 +440,9 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
+  .small-footer.responsive {
+    max-width: $width;
+  }
   #codeWorkspace {
     left: $width;
   }
@@ -460,6 +478,12 @@ html[dir='rtl'] #codeWorkspace {
   }
   #visualizationColumn.responsive {
     max-width: $width;
+  }
+  .small-footer.responsive {
+    max-width: $width;
+    small {
+      float: left;
+    }
   }
   #codeWorkspace {
     left: $width;
@@ -626,6 +650,7 @@ input[type="radio"] {
 }
 
 #gameButtons {
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
 
@@ -862,6 +887,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
+#versions-header {
+  display: none;
+}
+
 #design-headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -981,6 +1010,15 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
+#showVersionsModal {
+  width: 700px;
+  margin-left: -350px;
+}
+
+#showVersionsModal .versionRow p {
+  margin: 15px 0 0 0;
+}
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;
@@ -1016,34 +1054,6 @@ $workspace-header-button-margin: ($workspace-headers-height -
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
     .blocklyIconMark, .blocklyTooltipText, .goog-menuitem-content {
   @include font;
-}
-.goog-menu {
-  box-shadow: 4px 4px 6px #bbb;
-  border-width: 2px;
-}
-
-.goog-menuitem {
-  height: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.goog-menuitem-highlight,
-.goog-menuitem-hover {
-  border-width: 0;
-  background-color: #57e;
-}
-
-.goog-menuitem-highlight .goog-menuitem-content {
- color: #fff;
-}
-
-.goog-option-selected .goog-menuitem-checkbox:before {
-  content: "✓";
-}
-
-.goog-menuitem-checkbox {
-  background: ""
 }
 
 .blocklyRectangularDropdownMenu {
@@ -1155,7 +1165,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   margin-right: 10px;
 }
 
-#continue-button:not(.arrow-container) {
+#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;

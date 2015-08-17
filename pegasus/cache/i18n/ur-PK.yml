@@ -1,9 +1,9 @@
 "ur-PK":
   hello: hello dunia
-  select_language: Please select your language
-  en: Computer Science
+  select_language: براہ مہربانی اپنی زبان منتخب کریں
+  en: کمپیوٹر سائنس
   computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: ۸-۱۴ دسمبر، ۲۰۱۵
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -13,8 +13,7 @@
   n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>
   anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔
   learn_now: Abi sikhiye
-  petition_message: Every student in every school should have the opportunity to learn
-    computer science
+  petition_message: ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
@@ -31,8 +30,8 @@
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
+  hoc2014_everyone: ہر کوئی
+  hoc2014_support: اس ▾ کی حمایت;
   hoc2014_whatishoc: What is the Hour of Code?
   twentyhours_trynow: Try now
   california_heading: Ask your school to teach computer science
@@ -196,7 +195,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: The Hour of Code
@@ -214,6 +213,9 @@
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Learn more
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -230,7 +232,7 @@
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_blurb_advocates: Support diversity in computing
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Buy a T-shirt or hat
   homepage_slot_text_link_donate: Make a donation

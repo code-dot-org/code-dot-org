@@ -432,6 +432,11 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
+  def authorized_teacher?
+    # you are "really" a teacher if you are in any cohort for an ops workshop
+    admin? || cohorts.present?
+  end
+
   def student_of?(teacher)
     followeds.find_by_user_id(teacher.id).present?
   end
@@ -573,6 +578,20 @@ SQL
   def reset_secret_words
     generate_secret_words
     save!
+  end
+
+  def advertised_scripts
+    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script,
+      Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script,
+      Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+  end
+
+  def unadvertised_user_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  end
+
+  def all_advertised_scripts_completed?
+    advertised_scripts.all? { |script| completed?(script) }
   end
 
   def completed?(script)

@@ -1,19 +1,9 @@
--# Commenting out count heading for now
--#.row
-  .col-xs-12
-    -total_count = DB[:forms].where(kind:'HocSignup2015').count
-    -if @company
-      %h2= "<a href='#{hoc_uri('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ", " + "#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count(@company))).gsub('company', hoc_s("company_" + @company))}"
-      %a{:href=>hoc_uri("/events")}
-        %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
-          = hoc_s(:see_all_events)
-    -else
-      %div{:class=>"row"}
-        %a{href: hoc_uri("/events")}
-          %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
-        %a{:href=>hoc_uri("/events")}
-          %button{:class=>"signup-button", :style=>"margin-right: 116px; margin-bottom: 25px"}
-            = hoc_s(:see_all_events)
+-total_count = DB[:forms].where(kind:'HocSignup2015').count
+-if @company
+  %h2= "<a href='#{hoc_uri('/events')}'>#{hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))}</a>" + ", " + "#{hoc_s(:map_header_company).gsub('#', format_integer_with_commas(company_count(@company))).gsub('company', hoc_s("company_" + @company))}"
+-else
+  %a{:href=>hoc_uri("/events")}
+    %h2= hoc_s(:map_header).gsub('#', format_integer_with_commas(total_count))
 
 -# Commenting out search box for now
 -#.row
@@ -28,17 +18,9 @@
           %button#btn-submit.btn.btn-default{type: "submit"}= hoc_s(:map_search_search)
           %button#btn-reset.btn.btn-link{type: "reset"}= hoc_s(:map_search_reset)
 
-%br/
-
 .row
   .col-xs-10.col-sm-12
     #gmap{style: 'width: 100%'}
-
--# "See all events" button goes below map for now.
-%br/
-%a{:href=>hoc_uri("/events")}
-  %button{:class=>"signup-button"}
-    = hoc_s(:see_all_events)
 
 :javascript
   var gmap;

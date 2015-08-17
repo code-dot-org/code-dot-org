@@ -4,6 +4,7 @@ var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
 var codegen = require('../codegen');
 var api = require('./api');
+var utils = require('../utils');
 
 
 /**
@@ -11,12 +12,18 @@ var api = require('./api');
  * @constructor
  * @implements CustomGameLogic
  */
-var BigGameLogic = function (studio) {
+var BigGameLogic = function (studio, options) {
+  options = options || {};
+
   CustomGameLogic.apply(this, arguments);
 
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
   this.dangerSpriteIndex = 2;
+
+  this.finished = false;
+  // If set to true, player always faces forward
+  this.staticPlayer = utils.valueOr(options.staticPlayer, false);
 };
 BigGameLogic.inherits(CustomGameLogic);
 
@@ -24,6 +31,10 @@ BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     this.onFirstTick_();
     this.studio_.playerScore = 100;
+    return;
+  }
+
+  if (this.finished) {
     return;
   }
 
@@ -72,7 +83,7 @@ BigGameLogic.prototype.onTick = function () {
         spriteIndex: this.playerSpriteIndex,
         value:"visible"
       });
-    }).bind(this), 500);
+    }).bind(this), 20 * 40 + 50); // 40ms for each of 20 frames, plus some buffer
     this.studio_.playerScore -= 20;
 
     // send sprite back offscreen
@@ -93,11 +104,19 @@ BigGameLogic.prototype.onTick = function () {
     score.setAttribute('visibility', 'hidden');
     this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
     for (var i = 0; i < this.studio_.spriteCount; i++) {
-      this.studio_.vanishActor({spriteIndex:i});
+      this.studio_.setSprite({
+        spriteIndex: i,
+        value:"hidden"
+      });
     }
+    this.finished = true;
   } else {
     this.studio_.displayScore();
   }
+};
+
+BigGameLogic.prototype.reset = function () {
+  this.finished = false;
 };
 
 /**
@@ -140,7 +159,8 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
     // sprite has returned to screen, make it visible again
     this.studio_.setSprite({
       spriteIndex: this.studio_.sprite.indexOf(sprite),
-      value:"visible"});
+      value:"visible"
+    });
   }
 };
 
@@ -149,10 +169,13 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
  */
 BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  if (!playerSprite.visible) {
+    return;
+  }
 
   // sprite.y is the top. get the center
   var centerY = playerSprite.y + playerSprite.height / 2;
-  
+
   // invert Y
   var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;
 
@@ -160,6 +183,9 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
 
   // reinvertY
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
+  if (this.staticPlayer) {
+    playerSprite.dir = studioConstants.Direction.NONE;
+  }
 };
 
 /**
@@ -171,11 +197,12 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   } else {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
-  
+
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
   this.studio_.setSprite({
     spriteIndex: this.studio_.sprite.indexOf(sprite),
-    value:"hidden"});
+    value:"hidden"
+  });
 };
 
 /**

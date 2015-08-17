@@ -6,7 +6,7 @@ class Properties
   @@table = DB[:properties]
 
   def self.get(key)
-    i = @@table.where(key:key.to_s).first
+    i = @@table.where(key: key.to_s).first
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
@@ -14,11 +14,11 @@ class Properties
   def self.set(key, value)
     key = key.to_s
 
-    i = @@table.where(key:key).first
+    i = @@table.where(key: key).first
     if i.nil?
-      @@table.insert(key:key, value:value.to_json)
+      @@table.insert(key: key, value: value.to_json)
     else
-      @@table.where(key:key).update(value:value.to_json)
+      @@table.where(key: key).update(value: value.to_json)
     end
 
     value

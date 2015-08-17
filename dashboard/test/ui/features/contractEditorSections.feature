@@ -6,7 +6,8 @@ Background:
   And I am a student
   And I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I press "x-close"
+  Then I wait to see a dialog titled "Puzzle 4 of 4"
+  And I close the dialog
   Then element "#runButton" is visible
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
@@ -19,6 +20,7 @@ Scenario: Examples should be hidden when specified in contract editor
   And the "Definition" contract editor header is visible
 
   And I press "modalEditorClose"
+  And I press the last button with text "Ignore"
   And I configure the contract editor to disable examples
 
   And I open the blockly category with ID "7"
@@ -69,6 +71,7 @@ Scenario: Collapsing all sections, re-opening editor and expanding examples shou
 
 Scenario: Opening a variable then a function should show proper headers
   And I press "modalEditorClose"
+  And I press the last button with text "Ignore"
 
   And I open the blockly category with ID "6"
   And I press the SVG text "Create a Variable"

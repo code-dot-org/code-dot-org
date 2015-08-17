@@ -171,10 +171,10 @@ class HocSurvey2014
     return 'None' if type == 'none'
 
     begin
-      rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
-        claimant:email,
-        claimed_at:DateTime.now,
-        claimed_ip:ip_address,
+      rows_updated = DB[:hoc_survey_prizes].where(claimant: nil, type: type).limit(1).update(
+        claimant: email,
+        claimed_at: DateTime.now,
+        claimed_ip: ip_address,
       )
       raise StandardError, "Out of '#{type}' codes." if rows_updated == 0
     rescue Sequel::UniqueConstraintViolation
@@ -183,7 +183,7 @@ class HocSurvey2014
       raise
     end
 
-    DB[:hoc_survey_prizes].where(claimant:email).first[:value]
+    DB[:hoc_survey_prizes].where(claimant: email).first[:value]
   end
 
 end

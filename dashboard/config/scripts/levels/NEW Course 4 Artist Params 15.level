@@ -28,7 +28,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Freeplay: Here are the functions you've written, and some more for you to play with. Draw something awesome!\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
@@ -556,6 +558,9 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -575,15 +580,12 @@
             </value>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
+        <category name="Variable">
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">sides</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>

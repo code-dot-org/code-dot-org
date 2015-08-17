@@ -56,7 +56,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     not_if user_data['email'].nil?
     action :create_if_missing
     source 'forward.erb'
-    variables( email:user_data['email'].strip.downcase )
+    variables(email: user_data['email'].strip.downcase)
     owner user_name
     group user_name
   end
@@ -82,7 +82,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   }.each_pair do |file, text|
     template File.join(ssh_directory, file) do
       source 'text_file.erb'
-      variables( text:text )
+      variables(text: text)
       owner user_name
       group user_name
       mode '0600'
@@ -92,7 +92,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   template File.join(ssh_directory, 'config') do
     #action :create_if_missing
     source 'ssh_config.erb'
-    variables( hosts:search(:node, "*:*") )
+    variables(hosts: search(:node, "*:*"))
     owner user_name
     group user_name
     mode '0600'
@@ -118,7 +118,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   template File.join(aws_directory, 'config') do
     not_if aws_config.nil?
     source 'aws_config.erb'
-    variables( config:aws_config )
+    variables(config: aws_config)
     owner user_name
     group user_name
     mode '0600'
@@ -138,7 +138,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
 
   template File.join(chef_directory, 'knife.rb') do
     source 'chef_knife.rb.erb'
-    variables( chef_user_name:user_data['chef-user'] )
+    variables(chef_user_name: user_data['chef-user'])
     owner user_name
     group user_name
     mode '0600'

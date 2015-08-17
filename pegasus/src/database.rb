@@ -8,7 +8,7 @@ class Tutorials
   end
 
   def launch_url_for(code,domain)
-    return DB[:beyond_tutorials].where(code:code).first[:url] if @table == :beyond_tutorials
+    return DB[:beyond_tutorials].where(code: code).first[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
     api_domain = api_domain.gsub('al.code.org','code.org')
@@ -47,11 +47,11 @@ class Tutorials
 end
 
 def event_whitelisted?(name, type)
-  DB[:cdo_events_whitelist].where(organization_name_s:name.to_s.strip).and(event_type_s:type).count == 0
+  DB[:cdo_events_whitelist].where(organization_name_s: name.to_s.strip).and(event_type_s: type).count == 0
 end
 
 def country_from_code(code)
-  DB[:geography_countries].where(code_s:code.to_s.strip.upcase).first
+  DB[:geography_countries].where(code_s: code.to_s.strip.upcase).first
 end
 def country_name_from_code(code)
   country = country_from_code(code)
@@ -59,13 +59,19 @@ def country_name_from_code(code)
   country[:name_s]
 end
 def no_credit_count
-  DB[:cdo_state_promote].where(cs_counts_t:'No').exclude(state_code_s:'DC').count
+  DB[:cdo_state_promote].where(cs_counts_t: 'No').exclude(state_code_s: 'DC').count
 end
 def credit_count
   50 - no_credit_count
 end
+def jobs_nationwide
+  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
+end
+def grads_nationwide
+  DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_graduates_i]
+end
 def us_state_from_code(code)
-  DB[:geography_us_states].where(code_s:code.to_s.strip.upcase).first
+  DB[:geography_us_states].where(code_s: code.to_s.strip.upcase).first
 end
 def us_state_code?(code)
   !us_state_from_code(code).nil?
@@ -77,7 +83,7 @@ def us_state_name_from_code(code)
 end
 
 def zip_code_from_code(code)
-  DB[:geography_us_zip_codes].where(code_s:code.to_s.strip).first
+  DB[:geography_us_zip_codes].where(code_s: code.to_s.strip).first
 end
 def zip_code?(code)
   !zip_code_from_code(code).nil?
