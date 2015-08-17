@@ -1,6 +1,6 @@
 -# only works for pages that have a @level
 - if @level && @level.game.supports_sharing?
-  - content_for :head do
+  - content_for :og do
     -# facebook boilerplate
     = tag 'meta', property: 'fb:app_id', content: '500177453358606'
     = tag 'meta', property: 'og:site_name', content: 'Code.org'

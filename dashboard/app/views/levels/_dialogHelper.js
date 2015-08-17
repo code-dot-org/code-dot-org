@@ -27,7 +27,7 @@
     }
   }
 
-  function showDialog(type) {
+  function showDialog(type, callback) {
     dialogType = type;
 
     var dialog = new Dialog({ body: "", onHidden: dialogHidden });
@@ -35,12 +35,22 @@
     // Use our prefabricated dialog content.
     $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
 
-    // Clicking the okay button in the dialog box dismisses it.
+    // Clicking the okay button in the dialog box dismisses it, and calls the callback.
     $(".modal-body #ok-button").click(function () {
+      dialog.hide();
+      callback && callback();
+    });
+
+    // Clicking the cancel button in the dialog box dismisses it.
+    $(".modal-body #cancel-button").click(function () {
       dialog.hide();
     });
 
     dialog.show();
+  }
+
+  window.showStartOverDialog = function(callback) {
+    showDialog('startover', callback);
   }
 
   function adjustScroll() {
