@@ -19,7 +19,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # Create a workshop that starts 14 days from now. Include other segments for authenticity
     @workshop_1 = create(:workshop, phase: 2, cohorts: [create(:cohort, id: 1,
       teachers: [create(:teacher, email: 'abc@code.org'), create(:teacher, email: 'xyz@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_1@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_1@code.org')])
     @workshop_1.segments.clear
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now + 14.day, end: DateTime.now + 14.day + 60.minute)
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now + 15.day, end: DateTime.now + 15.day + 60.minute)
@@ -28,7 +28,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # that it doesn't get confused about the actual start of the workshop
     @workshop_2 = create(:workshop, phase: 8, cohorts: [create(:cohort, id: 2,
       teachers: [create(:teacher, email: '123@code.org'), create(:teacher, email: '987@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_2@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_2@code.org')])
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 13.day, end: DateTime.now + 13.day + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 14.day, end: DateTime.now + 14.day + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 15.day, end: DateTime.now + 15.day + 60.minute)
@@ -56,7 +56,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # Create a workshop that starts 3 days from now. Include other segments for authenticity
     @workshop_1 = create(:workshop, phase: 2, cohorts: [create(:cohort, id: 1,
       teachers: [create(:teacher, email: 'abc@code.org'), create(:teacher, email: 'xyz@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_1@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_1@code.org')])
     @workshop_1.segments.clear
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now + 3.day, end: DateTime.now + 3.day + 60.minute)
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now + 4.day, end: DateTime.now + 4.day + 60.minute)
@@ -65,7 +65,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # that it doesn't get confused about the actual start of the workshop
     @workshop_2 = create(:workshop, phase: 8, cohorts: [create(:cohort, id: 2,
       teachers: [create(:teacher, email: '123@code.org'), create(:teacher, email: '987@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_2@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_2@code.org')])
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 2.day, end: DateTime.now + 2.day + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 3.day, end: DateTime.now + 3.day + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 4.day, end: DateTime.now + 4.day + 60.minute)
@@ -93,7 +93,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # Create a workshop that ends today. Include other segments for authenticity
     @workshop_1 = create(:workshop, phase: 2, cohorts: [create(:cohort, id: 1,
       teachers: [create(:teacher, email: 'abc@code.org'), create(:teacher, email: 'xyz@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_1@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_1@code.org')])
     @workshop_1.segments.clear
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now - 2.day, end: DateTime.now - 2.day + 60.minute)
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now - 1.day, end: DateTime.now - 1.day + 60.minute)
@@ -102,7 +102,7 @@ class OpsMailerTest < ActionMailer::TestCase
     # that it doesn't get confused about the actual ending of the workshop
     @workshop_2 = create(:workshop, phase: 8, cohorts: [create(:cohort, id: 2,
       teachers: [create(:teacher, email: '123@code.org'), create(:teacher, email: '987@code.org')])],
-      facilitators: [create(:facilitator, email:'facilitator_2@code.org')])
+      facilitators: [create(:facilitator, email: 'facilitator_2@code.org')])
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now - 1.day, end: DateTime.now - 1.day + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now, end: DateTime.now + 60.minute)
     @workshop_2.segments << create(:segment, workshop_id: @workshop_2.id, start: DateTime.now + 1.day, end: DateTime.now + 1.day + 60.minute)
