@@ -167,11 +167,6 @@ Eval.init = function(config) {
   studioApp.init(config);
 };
 
-function clearTestCanvases() {
-  Eval.clearCanvasWithID("test-call");
-  Eval.clearCanvasWithID("test-result");
-}
-
 /**
  * @param {Blockly.Block}
  * @param {boolean} [evaluateInPlayspace] True if this test should also show
@@ -221,6 +216,11 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     resetExampleDisplay();
   }
   return failure;
+}
+
+function clearTestCanvases() {
+  Eval.clearCanvasWithID("test-call");
+  Eval.clearCanvasWithID("test-result");
 }
 
 function resetExampleDisplay() {
