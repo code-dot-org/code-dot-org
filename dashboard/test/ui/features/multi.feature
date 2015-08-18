@@ -29,6 +29,7 @@ Scenario: Submitting an incorrect option
   And I press ".modal #ok-button" using jQuery
   And I wait until element "#cross_0" is visible
 
+@no_mobile
 Scenario: Does not scroll horizontally
   Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
   When I rotate to landscape
