@@ -176,7 +176,7 @@ Eval.init = function(config) {
 
     if (Blockly.contractEditor) {
       Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
-      Blockly.contractEditor.registerTestResetHandler(resetEvalExample);
+      Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
     }
   };
 
@@ -196,14 +196,8 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     Eval.clearCanvasWithID('user');
   }
 
-  Eval.clearCanvasWithID("test-call");
-  Eval.clearCanvasWithID("test-result");
-
-  document.getElementById('answer').style.display = 'none';
-  document.getElementById('test-call').style.opacity = 0.5;
-  document.getElementById('test-result').style.opacity = 0.5;
-  document.getElementById('test-call').style.display = 'block';
-  document.getElementById('test-result').style.display = 'block';
+  clearTestCanvases();
+  displayCallAndExample();
 
   var failure;
   try {
@@ -232,16 +226,35 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     failure = "Execution error: " + error.message;
   }
 
-  if (!evaluateInPlayspace) {
-    resetEvalExample();
+  if (evaluateInPlayspace) {
+    showOnlyExample();
+  } else {
+    resetExampleDisplay();
   }
   return failure;
 }
 
-function resetEvalExample() {
+function clearTestCanvases() {
+  Eval.clearCanvasWithID("test-call");
+  Eval.clearCanvasWithID("test-result");
+}
+
+function resetExampleDisplay() {
   document.getElementById('answer').style.display = 'block';
   document.getElementById('test-call').style.display = 'none';
   document.getElementById('test-result').style.display = 'none';
+}
+
+function showOnlyExample() {
+  document.getElementById('answer').style.display = 'none';
+  document.getElementById('test-call').style.display = 'none';
+  document.getElementById('test-result').style.display = 'block';
+}
+
+function displayCallAndExample() {
+  document.getElementById('answer').style.display = 'none';
+  document.getElementById('test-call').style.display = 'block';
+  document.getElementById('test-result').style.display = 'block';
 }
 
 /**
@@ -265,7 +278,7 @@ Eval.clearCanvasWithID = function (canvasID) {
  * called first.
  */
 Eval.resetButtonClick = function () {
-  resetEvalExample();
+  resetExampleDisplay();
   Eval.clearCanvasWithID('user');
   Eval.feedbackImage = null;
   Eval.encodedFeedbackImage = null;
@@ -448,6 +461,8 @@ Eval.execute = function() {
     Eval.testResults = TestResults.EMPTY_FUNCTION_NAME;
     Eval.message = commonMsg.unnamedFunction();
   } else {
+    clearTestCanvases();
+    resetExampleDisplay();
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
       userObject.draw(document.getElementById("user"));
