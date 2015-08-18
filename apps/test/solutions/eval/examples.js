@@ -47,6 +47,41 @@ var solutionBlocks = '' +
   '  </functional_input>' +
   '</block>';
 
+var matchingExampleBlock = '' +
+  '<block type="functional_example" inline="false">' +
+  '  <functional_input name="ACTUAL">' +
+  '      <block type="functional_call" inline="false">' +
+  '          <mutation name="green-triangle">' +
+  '              <arg name="size" type="Number"></arg>' +
+  '          </mutation>' +
+  '          <functional_input name="ARG0">' +
+  '              <block type="functional_math_number">' +
+  '                  <title name="NUM">11</title>' +
+  '              </block>' +
+  '          </functional_input>' +
+  '      </block>' +
+  '  </functional_input>' +
+  '  <functional_input name="EXPECTED">' +
+  '      <block type="functional_triangle" inline="false">' +
+  '          <functional_input name="SIZE">' +
+  '              <block type="functional_math_number">' +
+  '                  <title name="NUM">11</title>' +
+  '              </block>' +
+  '          </functional_input>' +
+  '          <functional_input name="STYLE">' +
+  '              <block type="functional_style">' +
+  '                  <title name="VAL">solid</title>' +
+  '              </block>' +
+  '          </functional_input>' +
+  '          <functional_input name="COLOR">' +
+  '              <block type="functional_string">' +
+  '                  <title name="VAL">green</title>' +
+  '              </block>' +
+  '          </functional_input>' +
+  '      </block>' +
+  '  </functional_input>' +
+  '</block>';
+
 module.exports = {
   app: "eval",
   skinId: 'eval',
@@ -144,39 +179,7 @@ module.exports = {
       },
       xml: '<xml>' +
         solutionBlocks +
-        '<block type="functional_example" inline="false">' +
-        '  <functional_input name="ACTUAL">' +
-        '      <block type="functional_call" inline="false">' +
-        '          <mutation name="green-triangle">' +
-        '              <arg name="size" type="Number"></arg>' +
-        '          </mutation>' +
-        '          <functional_input name="ARG0">' +
-        '              <block type="functional_math_number">' +
-        '                  <title name="NUM">11</title>' +
-        '              </block>' +
-        '          </functional_input>' +
-        '      </block>' +
-        '  </functional_input>' +
-        '  <functional_input name="EXPECTED">' +
-        '      <block type="functional_triangle" inline="false">' +
-        '          <functional_input name="SIZE">' +
-        '              <block type="functional_math_number">' +
-        '                  <title name="NUM">11</title>' +
-        '              </block>' +
-        '          </functional_input>' +
-        '          <functional_input name="STYLE">' +
-        '              <block type="functional_style">' +
-        '                  <title name="VAL">solid</title>' +
-        '              </block>' +
-        '          </functional_input>' +
-        '          <functional_input name="COLOR">' +
-        '              <block type="functional_string">' +
-        '                  <title name="VAL">green</title>' +
-        '              </block>' +
-        '          </functional_input>' +
-        '      </block>' +
-        '  </functional_input>' +
-        '</block>' +
+        matchingExampleBlock +
         '</xml>'
     },
 
@@ -194,6 +197,51 @@ module.exports = {
       xml: '<xml>' +
         solutionBlocks +
         '</xml>'
+    },
+
+    {
+      description: "example running hides solution and displays result",
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
+      },
+      customValidator: function (assert) {
+        var answerElement = document.getElementById('answer');
+        var callElement = document.getElementById('test-call');
+        var resultElement = document.getElementById('test-result');
+        var triangleBlock = Blockly.mainBlockSpace
+            .findFunctionExamples("green-triangle")[0];
+        var contractEditor = Blockly.contractEditor;
+
+        // Test result hidden before run
+        assert.equal(answerElement.style.display, 'block');
+        assert.equal(callElement.style.display, 'none');
+        assert.equal(resultElement.style.display, 'none');
+
+        // Run test
+        var resultBeforeTest = Eval.result;
+        var testResult = contractEditor.testHandler_(triangleBlock, true);
+        assert(testResult === null);
+        Eval.result = resultBeforeTest;
+
+        // Test result shown after test run
+        assert.equal(answerElement.style.display, 'none');
+        assert.equal(callElement.style.display, 'none');
+        assert.equal(resultElement.style.display, 'block');
+
+        // Reset test
+        contractEditor.testResetHandler_();
+
+        // Test result hidden after reset
+        assert.equal(answerElement.style.display, 'block');
+        assert.equal(callElement.style.display, 'none');
+        assert.equal(resultElement.style.display, 'none');
+        return true;
+      },
+      xml: '<xml>' +
+      solutionBlocks +
+      matchingExampleBlock +
+      '</xml>'
     }
   ]
 };
