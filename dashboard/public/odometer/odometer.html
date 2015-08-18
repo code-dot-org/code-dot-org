@@ -229,11 +229,18 @@
                oninput="setAllOdos(parseFloat(this.value))"
                id="odoNumberInput">
         <br>
-        <table width="100%"><tr><td>Min</td><td width="100%"><input
+        <table id="valSliderTbl" width="100%"><tr><td>Min</td><td width="100%"><input
             title="The slider maxes out at 1023, but you can enter any number in the text box below."
             type="range" min="0" max="1023" step="0.1"
             onClick="setAllOdos(parseFloat(this.value))"
             onMouseMove="setOdoFromSlider()" id="odoValSlider" value="0"></td><td>Max</td></tr></table>
+        <!--[if IE 9]>
+        <style>
+          #valSliderTbl {
+            display: none;
+          }
+        </style>
+        <![endif]-->
       </td>
       <td></td>
     </tr>
