@@ -79,7 +79,8 @@
     text = text.replace(/[ \n]/g, "_");
     document.getElementById("compressedPoem").innerHTML = text;
     poemText = text;
-    calculateData();
+    // Note: compress will call calculateData to update view once it's finished
+    compress();
   }
 
   function calculateData(errorInDictionary) {
