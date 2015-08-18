@@ -21,20 +21,27 @@ var Item = function (options) {
   this.animationFrames = options.animationFrames || 1;
 
   this.currentFrame_ = 0;
-  var self = this;
   this.animator_ = window.setInterval(function () {
-    if (self.dir != Direction.NONE) {
-      if (self.loop || self.currentFrame_ + 1 < self.frames) {
-        self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
-      }
+    if (this.dir === Direction.NONE) {
+      return;
     }
-  }, 50);
+    if (this.loop || this.currentFrame_ + 1 < this.frames) {
+      this.currentFrame_ = (this.currentFrame_ + 1) % this.frames;
+    }
+  }.bind(this), 50);
 };
 
 // inherit from Collidable
 Item.prototype = new Collidable();
 
 module.exports = Item;
+
+/**
+ * Returns the frame of the spritesheet for the current walking direction.
+ */
+Item.prototype.getDirectionFrame = function() {
+  return constants.frameDirTableWalking[this.dir];
+};
 
 /**
  * Test only function so that we can start our id count over.
@@ -47,9 +54,11 @@ Item.__resetIds = function () {
  * Create an image element with a clip path
  */
 Item.prototype.createElement = function (parentElement) {
+  var nextId = (uniqueId++);
+
   // create our clipping path/rect
   this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + uniqueId;
+  var clipId = 'item_clippath_' + nextId;
   this.clipPath.setAttribute('id', clipId);
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', this.width);
@@ -57,7 +66,7 @@ Item.prototype.createElement = function (parentElement) {
   this.clipPath.appendChild(rect);
 
   parentElement.appendChild(this.clipPath);
-  var itemId = 'item_' + (uniqueId++);
+  var itemId = 'item_' + nextId;
   this.element = document.createElementNS(SVG_NS, 'image');
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
@@ -99,7 +108,7 @@ Item.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  var directionFrame = Studio.itemGetDirectionFrame(this);
+  var directionFrame = this.getDirectionFrame();
 
   this.element.setAttribute('x', topLeft.x - this.width * directionFrame);
   this.element.setAttribute('y', topLeft.y - this.height * this.currentFrame_);
