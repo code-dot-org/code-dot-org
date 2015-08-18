@@ -54,6 +54,8 @@ html[dir='rtl'] #visualizationColumn {
   #visualizationColumn.pin_bottom #belowVisualization {
     position: absolute;
     overflow: auto; }
+  #visualizationColumn.pin_bottom.embed_hidesource {
+    position: relative; }
 
 div.droplet-palette-group-header {
   font-family: "Gotham 4r", sans-serif, sans-serif;

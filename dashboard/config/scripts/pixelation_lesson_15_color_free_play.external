@@ -11,11 +11,20 @@ data ‘0000 0001
 markdown <<MARKDOWN
 # Personal Favicon
 **Requirements:**
-<img src = "http://staging.code.org/images/cspunit1/code-pixel.png" align=right width=50 hspace=20>
+<img src = "https://images.code.org/28fc33ea82996a10863688702af55e65-image-1439596268865.png" align=right hspace=20>
 
 * The icon must be 16x16 pixels. 
 * You must use the Pixelation Widget to encode the bits of color information.
 * The image must be encoded with at least 12 bits per pixel.
 
-
 MARKDOWN
+
+
+
+
+
+
+
+
+
+
