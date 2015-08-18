@@ -228,7 +228,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'send to phone disabled for non-US' do
     stub_country 'RU'
-    assert !app_options[:sendToPhone]
+    refute app_options[:sendToPhone]
   end
 
   test 'send_to_phone_url provided when send to phone enabled' do
