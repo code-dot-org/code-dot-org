@@ -6,13 +6,13 @@
 
 var MAX_SIZE = 400;
 
-var pixel_format, pixel_data, canvas, ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange;
+var pixel_format, pixel_data, canvas, main_ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange, image_w, image_h;
 
 function pixelationInit() {
   pixel_format = document.querySelector('#pixel_format');
   pixel_data = document.querySelector("#pixel_data");
   canvas = document.querySelector("#canvas");
-  ctx = canvas.getContext("2d");
+  main_ctx = canvas.getContext("2d");
 
   widthText = document.getElementById("width");
   widthRange = document.getElementById("widthRange");
@@ -26,12 +26,17 @@ function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
 }
 
-function drawGraph() {
+function drawGraph(ctx, exportImage) {
+  ctx = ctx || main_ctx;
   ctx.fillStyle = "#ccc";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
   var hexMode = isHex();
+
+  // Save the cursor position before doing any manipulation of the textarea.
+  var cursorPosition = pixel_data.selectionStart;
+  var characterCount = pixel_data.value.length;
 
   // If the hex radio button is currently selected.
   if (hexMode) {
@@ -50,16 +55,20 @@ function drawGraph() {
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
-  var w, h, bitsPerPix = 1;
+  // Restore cursor position.
+  cursorPosition += (pixel_data.value.length - characterCount);
+  pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+
+  var bitsPerPix = 1;
   if (options.version == '1') {
-    w = widthText.value;
-    h = heightText.value;
+    image_w = widthText.value;
+    image_h = heightText.value;
   } else {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
-    w = binToInt(readByte(binCode, 0));
-    h = binToInt(readByte(binCode, 1));
-    widthText.value = widthRange.value = w;
-    heightText.value = heightRange.value = h;
+    image_w = binToInt(readByte(binCode, 0));
+    image_h = binToInt(readByte(binCode, 1));
+    widthText.value = widthRange.value = image_w;
+    heightText.value = heightRange.value = image_h;
     binCode = binCode.substring(16, binCode.length);
 
     if (options.version != '2') {
@@ -102,7 +111,7 @@ function drawGraph() {
   var sqSize = 1, fillSize = 1, offset = 0;
   if (!document.querySelector('input#actual_size:checked')) {
     // Auto-size pixel borders and edge offsets.
-    sqSize = MAX_SIZE / Math.max(w, h);
+    sqSize = MAX_SIZE / Math.max(image_w, image_h);
     fillSize = sqSize * 0.95;
     offset = (sqSize - fillSize) / 2;
     if (sqSize - fillSize < 0.33) {
@@ -112,11 +121,14 @@ function drawGraph() {
   }
 
   // Draw image.
-  var left = Math.floor((MAX_SIZE - w * sqSize) / 2);
-  var top = Math.floor((MAX_SIZE - h * sqSize) / 2);
-  for (var y = 0; y < h; y++) {
-    for (var x = 0; x < w; x++) {
-      ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
+  var left = Math.floor((MAX_SIZE - image_w * sqSize) / 2);
+  var top = Math.floor((MAX_SIZE - image_h * sqSize) / 2);
+  if (exportImage) {
+    left = top = 0;
+  }
+  for (var y = 0; y < image_h; y++) {
+    for (var x = 0; x < image_w; x++) {
+      ctx.fillStyle = colorNums[(y * image_w) + x] || "#fdd";
       ctx.fillRect(left + x * sqSize + offset, top + y * sqSize + offset, fillSize, fillSize);
     }
   }
@@ -380,9 +392,20 @@ function updateBinaryDataToMatchSliders() {
  */
 function showPNG() {
 
-  var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
+  var tempCanvas = document.createElement('canvas');
+  if (document.querySelector('input#actual_size:checked')) {
+    tempCanvas.width = image_w;
+    tempCanvas.height = image_h;
+  } else {
+    tempCanvas.width = MAX_SIZE;
+    tempCanvas.height = MAX_SIZE;
+  }
+  drawGraph(tempCanvas.getContext("2d"), true);
+  var w = window.open('', 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
+  w.document.write('<img src="' + tempCanvas.toDataURL() + '">');
+  w.document.close();
   options.saveProject && options.saveProject();
 }
 

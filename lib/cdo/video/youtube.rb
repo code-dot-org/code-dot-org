@@ -57,12 +57,12 @@ class Youtube
       raise RuntimeError, 'Video processing command exited with an error' unless $?.success?
       file = Dir.glob("#{dir}/*").first
       raise RuntimeError, 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
-      video_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.mp4", File.open(file), access: :public_read, no_random: true, content_type: 'video/mp4')
+      video_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.mp4", File.open(file), acl: 'public-read', no_random: true, content_type: 'video/mp4')
       CDO.log.info "https:#{CDO.videos_url}/#{video_filename}"
 
       thumbnail_file = "https://i.ytimg.com/vi/#{id}/0.jpg"
       thumbnail = open(thumbnail_file) || raise(RuntimeError, 'Could not retrieve thumbnail for video')
-      thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.jpg", thumbnail, access: :public_read, no_random: true)
+      thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.jpg", thumbnail, acl: 'public-read', no_random: true)
       CDO.log.info "https:#{CDO.videos_url}/#{thumbnail_filename}"
     end
   end
