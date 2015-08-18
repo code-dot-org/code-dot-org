@@ -8,8 +8,13 @@ var consoleApi = module.exports;
 consoleApi.log = function() {
   var nativeArgs = [];
   for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter,
-                                                       arguments[i]);
+    if (arguments[i] === null || arguments[i] === undefined) {
+      nativeArgs[i] = arguments[i];
+    } else {
+      nativeArgs[i] =
+          codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter,
+              arguments[i]);
+    }
   }
   var output = '';
   var firstArg = nativeArgs[0];
