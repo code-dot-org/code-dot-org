@@ -28,6 +28,9 @@ var _ = utils.getLodash();
 //
 
 var Collidable = function (opts) {
+  this.gridX = undefined;
+  this.gridY = undefined;
+
   for (var prop in opts) {
     this[prop] = opts[prop];
   }
@@ -109,9 +112,20 @@ Collidable.prototype.bounce = function () {
 };
 
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/**
+ * This function should be called every frame, and moves the item around.
+ * It moves the item smoothly, but between fixed points on the grid.
+ * Each time the item reaches its destination fixed point, it reevaluates
+ * its next destination location based on the type of movement specified.
+ * It generally evalutes all possible destination locations, prioritizes
+ * the best possible moves, and chooses randomly between evenly-scored
+ * options.
+ *  
+ * @param type The type of roaming: "roamgrid", "fleeGrid" or "chaseGrid"
+ */
 Collidable.prototype.roamGrid = function(type) {
 
   // Do we have an active location in grid coords?  If not, determine it.
@@ -252,8 +266,7 @@ Collidable.prototype.roamGrid = function(type) {
       } else {
         this.dir = Direction.NONE;
       }
-    }
-    else {
+    } else {
       this.dir = Direction.NONE;
     }
   }
