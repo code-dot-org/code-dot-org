@@ -205,11 +205,11 @@ class NetSimApi < Sinatra::Base
 
     # Validation
     #   currently, only messages are validated
-    valid_values = if table_name == TABLE_NAMES[:message] then
-      values.select { |value| message_valid?(shard_id, value) }
-    else
-      values
-    end
+    valid_values = if table_name == TABLE_NAMES[:message]
+                     values.select { |value| message_valid?(shard_id, value) }
+                   else
+                     values
+                   end
 
     # If any values failed validation or if we were not given any values
     # to begin with, error out
