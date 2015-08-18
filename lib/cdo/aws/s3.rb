@@ -44,11 +44,13 @@ module AWS
     # @param [String] bucket S3 bucket name.
     # @param [String] filename Suffix of the key to fetch
     # @param [String] data The data set.
-    # @param [Hash] options
+    # @param [Hash] options Aws::S3::Client#put_object options as documented at
+    # http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method.
     # @return [String] The key of the new value, derived from filename.
     def self.upload_to_bucket(bucket, filename, data, options={})
-      filename = "#{SecureRandom.hex}-#{filename}" unless options[:no_random]
-      create_client.put_object(bucket: bucket, key: filename, body: data)
+      no_random = options.delete(:no_random)
+      filename = "#{SecureRandom.hex}-#{filename}" unless no_random
+      create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
       filename
     end
   end

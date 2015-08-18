@@ -103,7 +103,6 @@ class LevelSourcesController < ApplicationController
     @level_source.replace_old_when_run_blocks
     @level = @level_source.level
     @game = @level.game
-    @phone_share_url = send_to_phone_url
     view_options(
       callouts: [],
       full_width: true,

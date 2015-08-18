@@ -55,4 +55,9 @@ class ProjectsControllerTest < ActionController::TestCase
       apple_mobile_web_app: true
     )
   end
+
+  test 'send to phone' do
+    get :edit, key: :playlab
+    assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
+  end
 end
