@@ -441,7 +441,6 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
     // Update scrollable size now that the example is back in its spot & not
     // extending the scrollable area.
     this.modalBlockSpace.updateScrollableSize();
-
   }.bind(this));
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
     this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
