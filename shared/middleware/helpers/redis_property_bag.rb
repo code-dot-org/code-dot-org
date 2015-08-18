@@ -23,8 +23,11 @@ class RedisPropertyBag
   #
   # @param [Redis] redis_client A Redis client instance
   # @param [String] id A unique id for the property bag.
-  def initialize(redis_client, id)
+  # @param [Number] expire_in Expiration in seconds from the last write.
+  #        If omitted (or nil), property bag will not expire.
+  def initialize(redis_client, id, expire_in = nil)
     @redis = redis_client
+    @expire_in = expire_in
     # The redis key for storing the table.
     @key = "#{PROPERTY_BAG_KEY_PREFIX}#{id}"
   end
@@ -44,7 +47,10 @@ class RedisPropertyBag
   # @param [String] value
   # @return [String] the set value
   def set(name, value)
-    @redis.hset(@key, name, value)
+    @redis.multi do |multi|
+      multi.hset(@key, name, value)
+      multi.expire(@key, @expire_in) if @expire_in
+    end
     value
   end
 
@@ -54,7 +60,11 @@ class RedisPropertyBag
   # @return [Boolean] true if any of the values was present before deletion.
   def delete(names)
     return false if names.is_a?(Array) and names.empty?
-    delete_count = @redis.hdel(@key, names)
+    replies = @redis.multi do |multi|
+      multi.hdel(@key, names)
+      multi.expire(@key, @expire_in) if @expire_in
+    end
+    delete_count = replies.first
     delete_count > 0
   end
 
