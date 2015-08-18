@@ -26,6 +26,8 @@ class Workshop < ActiveRecord::Base
                           association_foreign_key: 'facilitator_id',
                           join_table: 'facilitators_workshops'
 
+  # TODO The following three queries use SQL's CURDATE function while the tests use Ruby's Date.today. This potentially
+  # means the tests and db can disagree on what day today is, and select the wrong workshops
   def self.workshops_ending_today
     Workshop.joins(:segments).group(:workshop_id).having('(DATE(MAX(start)) = CURDATE())')
   end
