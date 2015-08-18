@@ -7,7 +7,7 @@
 # side.
 
 require 'cdo/aws/s3'
-require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/class/attribute_accessors'
 require 'digest'
 require 'parallel'
 require 'fileutils'
