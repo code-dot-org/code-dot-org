@@ -1,8 +1,3 @@
-- content_for :og do
-  = tag 'meta', property: 'og:title', content: t('share.title')
-  = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
-  = tag 'meta', property: 'og:description', content: t('share.description')
-
 = render partial: 'layouts/survey'
 = render partial: 'devise/confirmations/alert'
 

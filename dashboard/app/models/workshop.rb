@@ -49,25 +49,4 @@ class Workshop < ActiveRecord::Base
   def program_type_info
     ActivityConstants::PHASES[self.program_type.to_i]
   end
-
-  def self.send_automated_emails
-    [Workshop.workshops_in_2_weeks, Workshop.workshops_in_3_days, Workshop.workshops_ending_today].each do |workshop_list|
-      workshop_list.each do |workshop|
-        teachers = Workshop.find(workshop[:id]).teachers
-        drop_ins = Workshop.find(workshop[:id]).unexpected_teachers
-        facilitators = Workshop.find(workshop[:id]).facilitators
-        [teachers, drop_ins, facilitators].each do |recipient_list|
-          recipient_list.each do |recipient|
-            if workshop.segments.first.start.to_date == Date.today
-              puts("Sending exit survey info to #{recipient.properties['ops_first_name']}")
-              OpsMailer.exit_survey_information(workshop, recipient).deliver
-            else
-              puts("Sending email reminder to #{recipient.properties['ops_first_name']}")
-              OpsMailer.workshop_reminder(workshop, recipient).deliver
-            end
-          end
-        end
-      end
-    end
-  end
 end

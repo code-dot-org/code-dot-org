@@ -455,7 +455,7 @@ class Documents < Sinatra::Base
         }
       else
         metadata = {
-          'og:site_name'      => 'Code.org'
+          'og:site_name'      => 'Code.org',
         }
       end
 

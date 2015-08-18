@@ -14,7 +14,7 @@
 <% if @country ==  'br' %>
 
 ## Use this handout to spread the word
-<a href="<%= resolve_file('/files/hoc-one-pager-br.pdf') %>"><img src="/images/fit-400/hoc-one-pager-pt_Page_1.png"></a>
+<a href="<%= resolve_file('/files/hoc-one-pager-pt.pdf') %>"><img src="/images/fit-400/hoc-one-pager-pt_Page_1.png"></a>
 
 <% end %>
 

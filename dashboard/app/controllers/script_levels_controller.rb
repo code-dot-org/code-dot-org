@@ -2,14 +2,6 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  before_filter :prevent_caching
-
-  def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
-  end
-
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
@@ -151,8 +143,7 @@ class ScriptLevelsController < ApplicationController
     view_options(
       full_width: true,
       no_footer: !@game.has_footer?,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      small_footer: @game.uses_small_footer? || enable_scrolling?
     )
 
     @@fallback_responses ||= {}
