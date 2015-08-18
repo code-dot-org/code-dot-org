@@ -24708,7 +24708,8 @@ Blockly.FieldTextInput.prototype.showEditor_ = function() {
 Blockly.FieldTextInput.prototype.onHtmlInputChange_ = function(e) {
   var htmlInput = Blockly.FieldTextInput.htmlInput_;
   if(e.keyCode == 13) {
-    Blockly.WidgetDiv.hide()
+    Blockly.WidgetDiv.hide();
+    e.preventDefault()
   }else {
     if(e.keyCode == 27) {
       this.setText(htmlInput.defaultValue);
