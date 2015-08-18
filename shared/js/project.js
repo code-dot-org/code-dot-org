@@ -251,12 +251,12 @@ var projects = module.exports = {
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-      sources.put(channelId, packSourceFile(), filename, function (err, response) {
-        currentSourceVersionId = response.versionId;
-        current.migratedToS3 = true;
-        channels.update(channelId, current, function (err, data) {
-          this.updateCurrentData_(err, data, false);
+      current.migratedToS3 = true;
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
+        var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+        sources.put(channelId, packSourceFile(), filename, function (err, response) {
+          currentSourceVersionId = response.versionId;
           executeCallback(callback, data);
         }.bind(this));
       }.bind(this));

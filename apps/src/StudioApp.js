@@ -1360,7 +1360,6 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
-
     if (config.pinWorkspaceToBottom) {
       var bodyElement = document.body;
       bodyElement.style.overflow = "hidden";
@@ -1383,7 +1382,6 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   if (config.embed && config.hideSource) {
-    container.className = container.className + " embed_hidesource";
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 

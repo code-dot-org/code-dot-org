@@ -16,20 +16,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "11",
-    "disable_param_editing": "true",
-    "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "contract_highlight": "false",
-    "contract_collapse": "false",
-    "examples_highlight": "false",
-    "examples_collapse": "false",
-    "examples_required": "false",
-    "definition_highlight": "false",
-    "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "ideal": "11"
   }
 }]]></config>
   <blocks>
@@ -95,9 +82,6 @@
         <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="move and get 4"/>
         </block>
       </xml>
     </toolbox_blocks>
