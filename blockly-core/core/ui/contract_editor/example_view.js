@@ -139,7 +139,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
 
   if (!block.isCurrentlyBeingDragged()) {
     var input = block.getInput(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-    if (input.type == Blockly.FUNCTIONAL_INPUT) {
+    if (input.type === Blockly.FUNCTIONAL_INPUT) {
       var originalExtraSpace = input.extraSpace;
       var width = EMPTY_EXAMPLE_INPUT_WIDTH;
       var functionCallBlock = block.getInputTargetBlock(
