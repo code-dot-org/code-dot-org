@@ -8,39 +8,38 @@ class LevelSourceImage < ActiveRecord::Base
 
   def save_to_s3(image)
     return false if CDO.disable_s3_image_uploads
-
     return false if image.blank?
 
-    # also create the framed image
-    if level_source.level.skin == 'anna' || level_source.level.skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
-    else
-      image_filename = "app/assets/images/blank_sharing_drawing.png"
-    end
-
-    begin
-      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                             :foreground_blob => image).to_blob
-    rescue Magick::ImageMagickError # something wrong with the image
-      return false
-    end
-
-    # upload both the original and framed images
+    # upload original image
     unless AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
       return false
     end
 
-    unless AWS::S3.upload_to_bucket('cdo-art', s3_framed_filename, framed_image, no_random: true)
-      return false
+    # create the framed image
+    if level_source.level.game.app == Game::ARTIST
+      if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
+        image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
+      else
+        image_filename = "app/assets/images/blank_sharing_drawing.png"
+      end
+
+      begin
+        framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
+                                               :foreground_blob => image).to_blob
+      rescue Magick::ImageMagickError # something wrong with the image
+        return false
+      end
+
+      unless AWS::S3.upload_to_bucket('cdo-art', s3_framed_filename, framed_image, no_random: true)
+        return false
+      end
     end
 
-    # remember that this image is in S3 (for images that are not in S3, image is the actual image blob)
-    self.image = 'S3'
     self.save
   end
 
   def s3?
-    image == 'S3'
+    true
   end
 
   def LevelSourceImage.hashify_filename(plain)
