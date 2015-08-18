@@ -121,6 +121,9 @@
         <block type="variables_get">
           <title name="VAR">sides</title>
         </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+        </block>
         <block type="math_number">
           <title name="NUM">0</title>
         </block>
