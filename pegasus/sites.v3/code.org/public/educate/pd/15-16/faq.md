@@ -6,7 +6,7 @@ nav: pd2_nav
 
 # Professional Development FAQs
 
-Thank you for participating in Code.org Computer Science Professional Development! If you have not done so already, please read your Code.org Teacher Welcome Kit for all program expectations, commitments, and information. Please take the time to look through this guide as it contains important information regarding your year-long professional development. Feel free to download, save, and/or print this Welcome Kit so you have all the answers at your fingertips. 
+Thank you for participating in Code.org Computer Science Professional Development! If you have not done so already, please read your Code.org Teacher Welcome Kit for all program expectations, commitments, and information. Feel free to download, save, and/or print this Welcome Kit so you have all the answers at your fingertips. 
 
 [Computer Science Principles Teacher Welcome Kit](code.org/welcome-csp)
 <br/>
@@ -27,6 +27,8 @@ Still have questions? See below for answers to commonly asked questions or email
 - [What if my bank account changes?](#acct)	
 - [Are parking fees reimbursable?](#park)
 - [What if I am no longer teaching the course in the Fall, can I still attend PD?](#fall)
+- [How do I navigate my Online PD? How do I check my progress?](#progress)
+- [I completed my online PD. Why does it still say I haven't finished?](#complete)
 
 
 **Who do I inform if there is a schedule conflict?**
@@ -104,3 +106,42 @@ No, Code.org does not cover parking expenses and encourages participants to use 
 Our general rule is you will not go through PD unless you are teaching the course, but please contact your district to discuss further.
 
 [**Back to the top**](#top)
+<br/>
+<br/>
+<br/>
+<a id="progress"></a>
+
+**How do I navigate my Online PD? How do I check my progress?**
+
+Your Online PD course appears in your Code Studio (see image 1). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
+
+[**Back to the top**](#top)
+<br/>
+<br/>
+<br/>
+<a id="complete"></a>
+
+**I completed my online PD. Why does it still say I haven't finished?**
+Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 2). 
+
+<br/>
+*Image 1: Navigation Tools for Code Studio Online PD*
+
+![Image 1](/images//fit-700/online-pd-faq.png)
+
+<br/>
+*Image 2: Navigation Tools for Code Studio Online PD*
+![Image 2](/images//fit-700/online-pd-faq2.png)
+
+[**Back to the top**](#top)
+<br/>
+<br/>
+<br/>
+
+**I completed my online PD. Why does it still say I haven't finished?**
+Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 2).
+
+[**Back to the top**](#top)
+<br/>
+<br/>
+<br/>

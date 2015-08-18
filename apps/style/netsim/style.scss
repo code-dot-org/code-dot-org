@@ -150,6 +150,7 @@ $wide-column-width: 121px;
     bottom: 0;
     left: 0;
     width: 320px;
+    overflow-x: hidden;
     overflow-y: auto;
 
     & > .column-width-limiter {
