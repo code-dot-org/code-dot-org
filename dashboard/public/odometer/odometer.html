@@ -175,8 +175,8 @@
         <button onClick="pauseOdo()">Pause</button>
         <button onClick="resetOdo()">Reset</button>
         <br>
-        <table width="100%"><tr><td>Slow</td><td width="100%"><input type=range min=0.005 max=0.15 step=0.005
-          oninput="setSpeed()" id="speedSlider" value=0.03></td><td>Fast</td></tr></table>
+        <table width="100%"><tr><td>Slow</td><td width="100%"><input type=range min="0.005" max="0.15" step="0.005"
+          oninput="setSpeed()" onchange="setSpeed()" id="speedSlider" value=0.03></td><td>Fast</td></tr></table>
       </td>
       <td></td>
     </tr>
@@ -232,8 +232,7 @@
         <table id="valSliderTbl" width="100%"><tr><td>Min</td><td width="100%"><input
             title="The slider maxes out at 1023, but you can enter any number in the text box below."
             type="range" min="0" max="1023" step="0.1"
-            onClick="setAllOdos(parseFloat(this.value))"
-            onMouseMove="setOdoFromSlider()" id="odoValSlider" value="0"></td><td>Max</td></tr></table>
+            oninput="setOdoFromSlider()" onchange="setOdoFromSlider()" id="odoValSlider" value="0"></td><td>Max</td></tr></table>
         <!--[if IE 9]>
         <style>
           #valSliderTbl {
