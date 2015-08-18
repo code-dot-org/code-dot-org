@@ -652,6 +652,10 @@ function performItemOrProjectileMoves (list) {
  * z-sorting.
  */
 function sortDrawOrder() {
+  if (!level.sortDrawOrder) {
+    return;
+  }
+
   var svg = document.getElementById('svgStudio');
 
   var itemsArray = [];
