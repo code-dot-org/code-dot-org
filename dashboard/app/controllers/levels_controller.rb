@@ -26,8 +26,7 @@ class LevelsController < ApplicationController
     view_options(
         full_width: true,
         no_footer: !@game.has_footer?,
-        small_footer: @game.uses_small_footer? || enable_scrolling?,
-        has_i18n: @game.has_i18n?
+        small_footer: @game.uses_small_footer? || enable_scrolling?
     )
   end
 

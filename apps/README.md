@@ -29,7 +29,7 @@ MOOC_DEV=1 grunt build
 1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
   ```
   cd ../dashboard
-  bundle exec rake 'blockly:dev[../apps]'
+  bundle exec rake 'blockly:dev[../blockly]'
   cd ../apps
   ```
 
@@ -39,7 +39,7 @@ MOOC_DEV=1 grunt build
 ```
 and look for something like:
 ```
-lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
+lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
 ```
 If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 

@@ -854,14 +854,6 @@ input.header_input {
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     top: 10px;
   }
-
-  &.embed_hidesource {
-    position: relative;
-    top: 0px;
-    left: auto;
-    right: auto;
-    margin-top: 10px;
-  }
 }
 
 .reference_area {

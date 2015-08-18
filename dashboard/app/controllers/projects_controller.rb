@@ -51,8 +51,7 @@ class ProjectsController < ApplicationController
         no_footer: !@game.has_footer?,
         callouts: [],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
-        small_footer: @game.uses_small_footer? || enable_scrolling?,
-        has_i18n: @game.has_i18n?
+        small_footer: @game.uses_small_footer? || enable_scrolling?
     )
     render 'levels/show'
   end

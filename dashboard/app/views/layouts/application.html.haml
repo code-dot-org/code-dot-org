@@ -1,8 +1,7 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    - title = @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
-    %title= title
+    %title= @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
     /[if IE 9]
@@ -11,12 +10,6 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
     = yield :head
-    - if content_for? :og
-      = yield :og
-    - else
-      = tag 'meta', property: 'og:title', content: title
-      = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
-      = tag 'meta', property: 'og:description', content: t('share.description')
     = render partial: 'layouts/analytics'
   %body
     - if current_user && current_user.age.nil?

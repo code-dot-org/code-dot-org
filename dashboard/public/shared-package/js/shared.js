@@ -241,7 +241,6 @@ var base = {
     $.ajax({
       url: this.api_base_url + "/" + id + "/" + filename,
       type: "put",
-      contentType: "application/json; charset=utf-8",
       data: value
     }).done(function(data, text) {
       callback(null, data);
@@ -755,12 +754,12 @@ var projects = module.exports = {
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-      sources.put(channelId, packSourceFile(), filename, function (err, response) {
-        currentSourceVersionId = response.versionId;
-        current.migratedToS3 = true;
-        channels.update(channelId, current, function (err, data) {
-          this.updateCurrentData_(err, data, false);
+      current.migratedToS3 = true;
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
+        var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+        sources.put(channelId, packSourceFile(), filename, function (err, response) {
+          currentSourceVersionId = response.versionId;
           executeCallback(callback, data);
         }.bind(this));
       }.bind(this));

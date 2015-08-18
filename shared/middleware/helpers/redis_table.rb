@@ -24,9 +24,7 @@ class RedisTable
   # @param [PubSubApi] pub_sub_api An optional PubSub API implementation
   # @param [String] shard_id
   # @param [String] table_name
-  # @param [Integer] expire_in - Shard expiration in seconds from the last write.
-  #        If omitted (or nil), shard will not expire.
-  def initialize(redis, pub_sub_api, shard_id, table_name, expire_in = nil)
+  def initialize(redis, pub_sub_api, shard_id, table_name)
     @pub_sub_api = pub_sub_api
 
     @shard_id = shard_id
@@ -37,7 +35,7 @@ class RedisTable
     @row_id_key = "#{table_name}#{ROW_ID_SUFFIX}"
 
     # A redis property bag for storing all tables in the shard.
-    @props = RedisPropertyBag.new(redis, shard_id, expire_in)
+    @props = RedisPropertyBag.new(redis, shard_id)
   end
 
   # Inserts a new row, notifying other clients using the pubsub service.
@@ -139,9 +137,7 @@ class RedisTable
   def delete(ids)
     ids = [ids] unless ids.is_a?(Array)
     deleted = @props.delete(ids.map {|id| row_key(id)})
-    if deleted
-      publish_change({:action => 'delete', :ids => ids})
-    end
+    publish_change({:action => 'delete', :ids => ids}) if deleted
     deleted
   end
 
