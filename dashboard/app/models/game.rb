@@ -92,10 +92,6 @@ class Game < ActiveRecord::Base
     app == NETSIM
   end
 
-  def has_i18n?
-    !(app == NETSIM || app == APPLAB)
-  end
-
   def self.setup
     transaction do
       # Format: name:app:intro_video

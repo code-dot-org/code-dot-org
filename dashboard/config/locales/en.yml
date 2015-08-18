@@ -389,9 +389,6 @@ en:
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
-  share:
-    title: "Learn on Code Studio"
-    description: "Anyone can learn computer science. Make games, apps and art with code."
   gender:
     male: 'Male'
     female: 'Female'

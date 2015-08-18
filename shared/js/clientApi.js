@@ -148,7 +148,6 @@ var base = {
     $.ajax({
       url: this.api_base_url + "/" + id + "/" + filename,
       type: "put",
-      contentType: "application/json; charset=utf-8",
       data: value
     }).done(function(data, text) {
       callback(null, data);
