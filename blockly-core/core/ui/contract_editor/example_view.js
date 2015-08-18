@@ -5,6 +5,7 @@ goog.provide('Blockly.ExampleView');
 /** @const */ var NO_RESULT_TEXT = "";
 /** @const */ var SUCCESS_TEXT = "Matches definition.";
 /** @const */ var RESULT_TEXT_TOP_MARGIN = 14;
+/** @const */ var EMPTY_EXAMPLE_INPUT_WIDTH = 40;
 
 /**
  * Handles laying out an example block with a test button
@@ -140,7 +141,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
     var input = block.getInput(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
     if (input.type == Blockly.FUNCTIONAL_INPUT) {
       var originalExtraSpace = input.extraSpace;
-      var width = 40; // TODO(bjordan): actually calculate empty input
+      var width = EMPTY_EXAMPLE_INPUT_WIDTH;
       var functionCallBlock = block.getInputTargetBlock(
         Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
       if (functionCallBlock) {
