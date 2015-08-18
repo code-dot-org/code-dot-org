@@ -28,3 +28,9 @@ Scenario: Submitting an incorrect option
   And element ".modal .dialog-title" contains text "Incorrect answer"
   And I press ".modal #ok-button" using jQuery
   And I wait until element "#cross_0" is visible
+
+Scenario: Does not scroll horizontally
+  Given I am on "http://learn.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
+  When I rotate to landscape
+  And element ".submitButton" is visible
+  Then there is no horizontal scrollbar
