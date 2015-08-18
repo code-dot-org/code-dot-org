@@ -98,7 +98,7 @@ class OpsMailerTest < ActionMailer::TestCase
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now - 2.day, end: DateTime.now - 2.day + 60.minute)
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now - 1.day, end: DateTime.now - 1.day + 60.minute)
     @workshop_1.segments << create(:segment, workshop_id: @workshop_1.id, start: DateTime.now, end: DateTime.now + 60.minute)
-    # Create a workshop that does not today. Include one segment that is today to test
+    # Create a workshop that does not end today. Include one segment that is today to test
     # that it doesn't get confused about the actual ending of the workshop
     @workshop_2 = create(:workshop, phase: 8, cohorts: [create(:cohort, id: 2,
       teachers: [create(:teacher, email: '123@code.org'), create(:teacher, email: '987@code.org')])],
