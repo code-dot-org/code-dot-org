@@ -434,6 +434,14 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   functionCall.setCanDisconnectFromParent(false);
   this.exampleBlocks.push(movedExampleBlock);
+  movedExampleBlock.blockEvents.listen(Blockly.Block.EVENTS.AFTER_DROPPED, function () {
+    // Layout our blocks, which pops this example back into its slot.
+    this.layOutBlockSpaceItems_();
+
+    // Update scrollable size now that the example is back in its spot & not
+    // extending the scrollable area.
+    this.modalBlockSpace.updateScrollableSize();
+  }.bind(this));
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
     this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
 };
