@@ -83,11 +83,21 @@ FactoryGirl.define do
     level
     data '<xml/>'
     md5 { Digest::MD5.hexdigest(data) }
+    trait :with_image do
+      level { create(:level, game: Game.find_by_app(Game::ARTIST))}
+      after :create do |level_source, _|
+        create :level_source_image, level_source: level_source
+      end
+    end
   end
 
   factory :level_source_image do
     level_source
-    image File.read(Rails.root.join('test/fixtures/artist_image_blank.png'), binmode: true)
+  end
+
+  factory :gallery_activity do
+    user
+    activity { create(:activity, level_source: create(:level_source, :with_image)) }
   end
 
   factory :script do

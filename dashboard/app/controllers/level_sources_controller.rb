@@ -47,49 +47,20 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
+
     if @game.app == Game::ARTIST
-      framed_image(@level.skin)
+      redirect_to @level_source.level_source_image.s3_framed_url
     else
       original_image
     end
   end
-
-  def framed_image(skin)
-    if @level_source.level_source_image.image == 'S3' ||
-        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
-      redirect_to @level_source.level_source_image.s3_framed_url
-      return
-    end
-
-    # image is in the DB
-    # TODO: save this in s3, delete from db, redirect there
-    if skin == 'anna' || skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
-    else
-      image_filename = "app/assets/images/blank_sharing_drawing.png"
-    end
-
-    drawing_on_background = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                                    :foreground_blob => @level_source.level_source_image.image)
-    send_data drawing_on_background.to_blob, :stream => 'false', :type => 'image/png', :disposition => 'inline'
-  end
-  protected :framed_image
 
   def original_image
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
 
-    if @level_source.level_source_image.image == 'S3' ||
-        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
-      # image is in s3
-      redirect_to @level_source.level_source_image.s3_url
-      return
-    end
-
-    # image is in the DB
-    # TODO: save this in s3, delete from db, redirect there
-    send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
+    redirect_to @level_source.level_source_image.s3_url
   end
 
   protected

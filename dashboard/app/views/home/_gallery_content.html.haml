@@ -3,8 +3,8 @@
 
 - @gallery_activities.each do |gallery_activity|
   - level_source = gallery_activity.try(:activity).try(:level_source)
-  - if level_source
+  - if level_source && level_source.level_source_image
     %div.gallery_activity
-      = link_to image_tag(original_image_url(level_source)), level_source
+      = link_to image_tag(level_source.level_source_image.s3_url), level_source
 %span.pagination
   = link_to_next_page @gallery_activities, '', class: 'fa fa-chevron-right', params: {action: 'gallery_activities'} do '&nbsp;'.html_safe end
