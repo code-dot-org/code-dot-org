@@ -61,18 +61,18 @@ class AwsS3IntegrationTest < Minitest::Unit::TestCase
     client = AWS::S3::connect_v2!
     all_users = 'http://acs.amazonaws.com/groups/global/AllUsers'
 
-    # Verify that the public-read buckets are publicly readable.
-    public_bucket_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'public_bucket_key', 'hello', acl: 'public-read')
-    public_bucket_grants = client.get_object_acl(bucket: TEST_BUCKET, key: public_bucket_key).grants
-    allows_public_reads = public_bucket_grants.detect do |grant|
+    # Verify that the public-read acl option creates a publicly readable object.
+    public_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'public_key', 'hello', acl: 'public-read')
+    public_grants = client.get_object_acl(bucket: TEST_BUCKET, key: public_key).grants
+    allows_public_reads = public_grants.detect do |grant|
       grant.grantee.uri == all_users && grant.permission == 'READ'
     end
     assert allows_public_reads, 'public-read acl should allow public reads'
 
-    # Verify that the default buckets are not publicly readable.
-    private_bucket_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'private_bucket_key', 'hello')
-    private_bucket_grants = client.get_object_acl(bucket: TEST_BUCKET, key: private_bucket_key).grants
-    allows_public_reads = private_bucket_grants.detect do |grant|
+    # Verify that the default option creates a private object.
+    private_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'private_key', 'hello')
+    private_grants = client.get_object_acl(bucket: TEST_BUCKET, key: private_key).grants
+    allows_public_reads = private_grants.detect do |grant|
       grant.grantee.uri == all_users && grant.permission == 'READ'
     end
     assert !allows_public_reads, 'default acl should not allow public reads'
