@@ -42,9 +42,7 @@ class OpsMailerTest < ActionMailer::TestCase
       recipients << mail.to[0]
     end
 
-    ['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org'].each do |email|
-      assert_equal true, recipients.include?(email)
-    end
+    assert_equal Set.new(['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org']), recipients
 
     ['123@code.org', '987@code.org', 'facilitator_2@code.org'].each do |email|
       assert_equal false, recipients.include?(email)
@@ -79,9 +77,7 @@ class OpsMailerTest < ActionMailer::TestCase
       recipients << mail.to[0]
     end
 
-    ['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org'].each do |email|
-      assert_equal true, recipients.include?(email)
-    end
+    assert_equal Set.new(['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org']), recipients
 
     ['123@code.org', '987@code.org', 'facilitator_2@code.org'].each do |email|
       assert_equal false, recipients.include?(email)
@@ -116,9 +112,7 @@ class OpsMailerTest < ActionMailer::TestCase
       recipients << mail.to[0]
     end
 
-    ['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org'].each do |email|
-      assert_equal true, recipients.include?(email)
-    end
+    assert_equal Set.new(['abc@code.org', 'xyz@code.org', 'facilitator_1@code.org']), recipients
 
     ['123@code.org', '987@code.org', 'facilitator_2@code.org'].each do |email|
       assert_equal false, recipients.include?(email)
