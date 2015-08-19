@@ -864,7 +864,7 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
 Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
   var defnInput = this.functionDefinitionBlock.getInput('STACK');
   if (!defnInput.connection.isConnected()) {
-    return "Define the function below and try again.";
+    return Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE;
   }
   return this.testHandler_(block, visualize);
 };
