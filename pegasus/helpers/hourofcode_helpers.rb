@@ -52,7 +52,10 @@ def hoc_canonicalized_i18n_path(uri)
     redirect canonical_urls.last
   end
 
-  path = uri if resolve_document(uri)
+  # We no longer want the country to be part of the path we use to search:
+  _, search_uri = uri.split('/', 2)
+
+  path = uri if resolve_document(search_uri)
 
   return "/#{path}"
 end
