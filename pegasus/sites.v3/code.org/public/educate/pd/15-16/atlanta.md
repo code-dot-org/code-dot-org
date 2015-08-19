@@ -16,7 +16,7 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction (~2 hours) ###
+### Phase 1: Online Introduction  ###
 
 Milestone complete! 
 
