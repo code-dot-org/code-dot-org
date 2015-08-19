@@ -12,7 +12,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "free_play": "false",
     "ideal": "4",
     "embed": "false",
