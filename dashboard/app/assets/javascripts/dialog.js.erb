@@ -213,6 +213,7 @@ Dialog.prototype.processHideOptions = function(options) {
   $(".dialog-title").animate({opacity: 0}, decorationFadeTime);
   $(".aniGif").animate({opacity: 0}, decorationFadeTime);
   $(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+  $(".markdown-instructions-container").animate({opacity: 0}, decorationFadeTime);
 
   // Slide the instruction box from its current position to its destination.
   $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function() {
