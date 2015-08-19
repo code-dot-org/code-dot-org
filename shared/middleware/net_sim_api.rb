@@ -205,19 +205,12 @@ class NetSimApi < Sinatra::Base
 
     # Validation
     #   currently, only messages are validated
-    valid_values = if table_name == TABLE_NAMES[:message]
-                     values.select { |value| message_valid?(shard_id, value) }
-                   else
-                     values
-                   end
-
-    # If any values failed validation or if we were not given any values
-    # to begin with, error out
-    json_bad_request unless valid_values.length == values.length && valid_values.length > 0
+    all_values_valid = values.all? { |value| value_valid?(shard_id, table_name, value) }
+    json_bad_request unless all_values_valid
 
     # If we get all the way down here without errors, insert everything
     table = get_table(shard_id, table_name)
-    result = valid_values.map { |value| table.insert(value, request.ip) }
+    result = values.map { |value| table.insert(value, request.ip) }
 
     # Finally, if we are not performing a multi-insert, denormalize our
     # return value to a single item
@@ -230,13 +223,26 @@ class NetSimApi < Sinatra::Base
   end
 
   # @param [String] shard_id - The shard we're checking validation on.
+  # @param [String] table_name - The table we're validating for
+  # @param [Hash] value - The value we're validating
+  # @return [Boolean] Currently only validates messages by passing
+  #         through to message_valid?. Return true for all other tables
+  def value_valid?(shard_id, table_name, value)
+    case table_name
+    when TABLE_NAMES[:message]
+      message_valid?(shard_id, value)
+    else
+      true
+    end
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
   # @param [Hash] message - The message we're validating
   # @return [Boolean] Currently is true if and only if the message's
   #         simulatedBy node exists in the shard. In the future, we
   #         would also like to enforce reasonable values for other
   #         fields.
   def message_valid?(shard_id, message)
-
     # TODO this is wildly inefficient, particularly when validating
     # multi-insert messages
     node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
