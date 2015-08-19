@@ -124,6 +124,19 @@ exports.addItemsToScene = function(id, className, number) {
   });
 };
 
+exports.setItemAction = function(id, itemIndex, type) {
+  Studio.queueCmd(id, 'setItemAction', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
+exports.showDebugInfo = function(value) {
+  Studio.queueCmd(null, 'showDebugInfo', {
+    'value': value
+  });
+};
+
 exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
