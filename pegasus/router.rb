@@ -130,6 +130,10 @@ class Documents < Sinatra::Base
       end
     end
 
+    if request.site == 'hourofcode.com'
+      @dirs << File.join(request.site, 'i18n')
+    end
+
     @locals = {header: {}}
   end
 
@@ -357,6 +361,13 @@ class Documents < Sinatra::Base
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
+
+      if request.site == 'hourofcode.com'
+        if uri == '/us/'
+          uri = uri[3..-1]
+        end
+      end
+
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         return path if File.file?(path)
@@ -365,6 +376,12 @@ class Documents < Sinatra::Base
     end
 
     def resolve_template(subdir, extnames, uri)
+      if request.site == 'hourofcode.com'
+        if uri == '/us/'
+          uri = uri[3..-1]
+        end
+      end
+
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
