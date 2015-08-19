@@ -18,6 +18,12 @@
  */
 'use strict';
 
+var SMALL_NUMBER_BLOCK  = '<xml>' +
+    '<block type="math_number">' +
+    '<title name="NUM">0</title>' +
+    '</block>' +
+    '</xml>';
+
 function test_initializeBlockSpace() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
   goog.dom.removeNode(container);
@@ -60,6 +66,28 @@ function test_scrollBarsActivateOnDropOutsideViewport() {
 
   assert('Scrollbars visible after block dragged below bottom',
     Blockly.mainBlockSpace.scrollbarPair.vScroll.isVisible());
+
+  goog.dom.removeNode(container);
+}
+
+function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blockSpace = Blockly.mainBlockSpace;
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(SMALL_NUMBER_BLOCK));
+  var numberBlock = blockSpace.getTopBlocks()[0];
+  var viewportHeight = blockSpace.getMetrics().viewHeight;
+  var originalScrollableHeight = blockSpace.getScrollableSize(blockSpace.getMetrics()).height;
+
+  assertEquals(viewportHeight, originalScrollableHeight);
+
+  // just at bottom
+  numberBlock.moveTo(0, viewportHeight);
+
+  Blockly.mainBlockSpace.scrollbarPair.resize();
+
+  assert("Scrollable area has increased",
+      blockSpace.getScrollableSize(blockSpace.getMetrics()).height > originalScrollableHeight);
 
   goog.dom.removeNode(container);
 }
