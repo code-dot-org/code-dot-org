@@ -30,6 +30,8 @@ Dashboard::Application.routes.draw do
     member do
       post 'log_in'
     end
+
+    resources :transfers, only: [:create], defaults: {format: 'json'}
   end
 
   get '/sh/:id', to: redirect('/c/%{id}')
