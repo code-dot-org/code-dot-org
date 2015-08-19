@@ -227,22 +227,25 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] value - The value we're validating
   # @return [Boolean] Currently only validates messages by passing
   #         through to message_valid?. Return true for all other tables
+  #         as long as the value is a Hash.
   def value_valid?(shard_id, table_name, value)
     case table_name
     when TABLE_NAMES[:message]
       message_valid?(shard_id, value)
     else
-      true
+      value.is_a?(Hash)
     end
   end
 
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [Hash] message - The message we're validating
-  # @return [Boolean] Currently is true if and only if the message's
-  #         simulatedBy node exists in the shard. In the future, we
-  #         would also like to enforce reasonable values for other
-  #         fields.
+  # @return [Boolean] Currently is true if and only if the message is a
+  #         Hash and the messages's simulatedBy node exists in the
+  #         shard. In the future, we would also like to enforce
+  #         reasonable values for other fields.
   def message_valid?(shard_id, message)
+    false unless message.is_a?(Hash)
+
     # TODO this is wildly inefficient, particularly when validating
     # multi-insert messages
     node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
