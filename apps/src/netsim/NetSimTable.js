@@ -482,8 +482,9 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
 
-  // Manually apply ID which should be present in row.
+  // Manually apply IDs which should be present in row.
   newRow.id = id;
+  newRow.uuid = oldRow.uuid;
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
