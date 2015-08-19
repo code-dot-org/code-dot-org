@@ -82,7 +82,22 @@ Blockly.FunctionEditor = function() {
 
 Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
 Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+
+/**
+ * Margin between the delete and close buttons in pixels.
+ * @type {number}
+ */
 Blockly.FunctionEditor.DELETE_BUTTON_MARGIN = 25;
+
+/**
+ * Amount of space the "close" button should hang off the right of the
+ * window chrome.
+ * @type {number}
+ */
+Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG = 14;
+
+/** @type {number} */
+Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET = 5;
 
 /**
  * The type of block to instantiate in the function editing area
@@ -639,7 +654,8 @@ Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function (viewWidth)
 Blockly.FunctionEditor.prototype.positionCloseButton_ = function (absoluteLeft,
     viewWidth) {
   this.closeButton_.setAttribute('transform', 'translate(' +
-      (Blockly.RTL ? 5 : absoluteLeft + viewWidth + 14 -
+      (Blockly.RTL ? Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET :
+        absoluteLeft + viewWidth + Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG -
       this.closeButton_.firstElementChild.getAttribute('width')) +
       ',19)');
 };
@@ -657,10 +673,14 @@ Blockly.FunctionEditor.prototype.positionDeleteButton_ = function (absoluteLeft,
   }
   var closeButtonWidth = this.closeButton_.firstElementChild.getAttribute('width');
   var deleteButtonWidth = this.deleteButton_.getButtonWidth();
-  var ltrXOffset = absoluteLeft + viewWidth + 14 - closeButtonWidth -
-      deleteButtonWidth - Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
-  var rtlXOffset = 5 + closeButtonWidth +
+  var rightEdge = absoluteLeft + viewWidth;
+  var closeButtonLeft = Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG -
+      closeButtonWidth;
+  var deleteButtonLeft = rightEdge + closeButtonLeft - deleteButtonWidth;
+  var ltrXOffset = deleteButtonLeft -
       Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
+  var rtlXOffset = Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET +
+      closeButtonWidth + Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
   var xPosition = (Blockly.RTL ? rtlXOffset : ltrXOffset);
   this.deleteButton_.renderAt(xPosition, 19);
 };
