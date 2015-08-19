@@ -39,6 +39,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {function} callbacks.addRouterCallback
  * @param {function} callbacks.cancelButtonCallback
  * @param {function} callbacks.joinButtonCallback
+ * @param {function} callbacks.resetShardCallback
  *
  * @constructor
  * @augments NetSimPanel
@@ -90,6 +91,13 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.joinButtonCallback_ = callbacks.joinButtonCallback;
 
+  /**
+   * Handler for "reset shard" button click.
+   * @type {function}
+   * @private
+   */
+  this.resetShardCallback_ = callbacks.resetShardCallback;
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
@@ -125,6 +133,8 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
+
+  this.getBody().find('#reset-shard').click(this.resetShardCallback_);
 
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
@@ -270,3 +280,11 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
   return (isClient && showClients) || (isRouter && showRouters);
 };
 
+/**
+ * @returns {boolean} TRUE if we expect the current user to have permission to
+ *          perform a shard reset.  Only governs display of shard reset button,
+ *          actual reset is authenticated on the server.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () {
+  return true;
+};
