@@ -148,7 +148,7 @@ module RakeUtils
     raise 'Need to specify bucket' unless params[:bucket]
 
     s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), open(local_file), acl: 'public-read')
-    new_fetchable_url = AWS::S3::S3Object.url_for(s3_filename, params[:bucket], authenticated: false)
+    new_fetchable_url = AWS::S3.public_url(params[:bucket], s3_filename)
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
