@@ -71,10 +71,10 @@ Blockly.FunctionEditor = function() {
   this.onResizeWrapper_ = null;
 
   /**
-   * Optional configurable dialog function
-   * @private {Function}
+   * Optional configurable popup dialog function to use for deletion confirming.
+   * @private {PopupDialogCallback}
    */
-  this.confirmDialogFunction_ = null;
+  this.displayConfirmDialog_ = null;
 
   /** @type {BlockSpace} */
   this.modalBlockSpace = null;
@@ -117,6 +117,17 @@ Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
  * @type {boolean}
  */
 Blockly.FunctionEditor.prototype.hasDeleteButton = false;
+
+/**
+ * Callback which displays a
+ * @callback PopupDialogCallback
+ * @param {string} bodyText
+ * @param {string} confirmText
+ * @param {string} cancelText
+ * @param {function} onRightButton
+ * @param {function} onLeftButton
+ * @param {string} leftButtonClass
+ */
 
 /**
  * @param {String} autoOpenFunction - name of function to auto-open
@@ -801,15 +812,15 @@ Blockly.FunctionEditor.prototype.onDeletePressed = function () {
   var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
   var deleteMessage = Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE.replace('%1',
       functionName);
-  if (!this.confirmDialogFunction_) {
-    // For playground testing, use a confirm dialog rather
+  if (!this.displayConfirmDialog_) {
+    // For playground testing, use a `confirm` dialog for testing
     var result = confirm(deleteMessage);
     if (result) {
       this.onDeleteConfirmed(functionName);
     }
     return;
   }
-  this.confirmDialogFunction_(deleteMessage, "Cancel", "Delete",
+  this.displayConfirmDialog_(deleteMessage, "Cancel", "Delete",
       function () {}, this.onDeleteConfirmed.bind(this, functionName), 'red-delete-button');
 };
 
@@ -825,11 +836,11 @@ Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
 };
 
 /**
- * @param {Function} showDialogFn - dialog function which allows for success
- * and failure text.
+ * @param {PopupDialogCallback} showDialogFn - dialog function which
+ * allows for success and failure text.
  */
 Blockly.FunctionEditor.prototype.registerDialog = function (showDialogFn) {
-  this.confirmDialogFunction_ = showDialogFn;
+  this.displayConfirmDialog_ = showDialogFn;
 };
 
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
