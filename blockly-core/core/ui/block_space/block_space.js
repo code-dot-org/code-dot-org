@@ -872,10 +872,9 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
         Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
         metrics.viewWidth,
     height: canScrollVertically ?
-        Math.max(metrics.contentTop + metrics.contentHeight
-            + Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM
-            , metrics.viewHeight) :
-        metrics.viewHeight
+        Math.max(metrics.contentTop + metrics.contentHeight +
+            Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM,
+            metrics.viewHeight) : metrics.viewHeight
   };
 };
 
