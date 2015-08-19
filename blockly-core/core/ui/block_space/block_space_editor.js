@@ -65,7 +65,7 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
  * @type {number}
  * @const
  */
-Blockly.BlockSpaceEditor.BOTTOM_BLOCK_MARGIN = 50;
+Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
 
 /**
  * If enabled, during block bumping the entire block will be bumped into view.
@@ -828,7 +828,7 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     viewTop: viewTop,
     viewLeft: viewLeft,
     contentHeight: blockBoundingRect.height
-      + Blockly.BlockSpaceEditor.BOTTOM_BLOCK_MARGIN,
+      + Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM,
     contentWidth: blockBoundingRect.width,
     contentTop: blockBoundingRect.top,
     contentLeft: blockBoundingRect.left,
