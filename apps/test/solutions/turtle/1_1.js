@@ -9,6 +9,8 @@ var rblocks = function () {
 
 var studioApp = require('@cdo/apps/StudioApp').singleton;
 
+var solution = '<block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant_restricted"><title name="DIR">turnRight</title><title name="VALUE">90</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block>';
+
 module.exports = {
   app: "turtle",
   levelFile: "levels",
@@ -24,7 +26,10 @@ module.exports = {
         return studioApp.enableShowCode === true && studioApp.enableShowBlockCount === true;
       },
       missingBlocks: [],
-      xml: '<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant_restricted"><title name="DIR">turnRight</title><title name="VALUE">90</title><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></next></block></xml>'
+      xml:
+        '<xml>' +
+        solution +
+        '</xml>'
     },
     {
       description: "User doesnt add any blocks.  Should fail.",
@@ -39,6 +44,19 @@ module.exports = {
       description: "Empty workspace.",
       missingBlocks: [rblocks().MOVE_FORWARD_INLINE],
       xml: ''
+    },
+    {
+      // Extra top block takes precendence over ???
+      description: "extra ??? block",
+      expected: {
+        result: false,
+        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
+      },
+      xml:
+        '<xml>' +
+        solution +
+        '<block type="math_number"><title name="NUM">???</title></block>' +
+        '</xml>'
     }
   ]
 };
