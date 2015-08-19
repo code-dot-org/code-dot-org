@@ -38,6 +38,40 @@ describe("NetSimLocalClientNode", function () {
     assert(undefined !== testRemoteNode, "Made a remote node");
   });
 
+  describe ("onNodeTableChange_", function () {
+    beforeEach(function () {
+      testLocalNode.initializeSimulation(null, null);
+    });
+
+    it ("detects when own row has gone away and calls lost connection callback", function () {
+      var lostConnection = false;
+      testLocalNode.setLostConnectionCallback(function () {
+        lostConnection = true;
+      });
+      assertEqual(false, lostConnection);
+
+      testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
+      testShard.nodeTable.refresh();
+      assertEqual(true, lostConnection);
+    });
+
+    it ("also detects if row uuid changes", function () {
+      var lostConnection = false;
+      testLocalNode.setLostConnectionCallback(function () {
+        lostConnection = true;
+      });
+      assertEqual(false, lostConnection);
+
+      // Reset fake remote table and repopulate first two rows.
+      testShard.nodeTable = NetSimTestUtils.overrideNetSimTableApi(testShard.nodeTable);
+      NetSimEntity.create(NetSimClientNode, testShard, function () { });
+      NetSimEntity.create(NetSimClientNode, testShard, function () { });
+
+      testShard.nodeTable.refresh();
+      assertEqual(true, lostConnection);
+    });
+  });
+
   describe("onWireTableChange_", function () {
     it ("detects when remote client disconnects, and removes local wire", function () {
 
