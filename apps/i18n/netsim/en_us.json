@@ -106,6 +106,7 @@
   "setName": "Set Name",
   "setWire": "Set Wire",
   "setWireToValue": "Set Wire to {value}",
+  "shardResetButton": "Reset the Simulation",
   "shardResetError": "You do not have permission to perform that action.",
   "shareThisNetwork": "Share this network",
   "showingFirstXLogEntries": "Showing first {x} log entries.  Sort/filter to see more.",
