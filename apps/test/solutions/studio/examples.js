@@ -27,112 +27,6 @@ var solutionBlocks = '' +
   '  </functional_input>' +
   '</block>';
 
-var validExample1 = '' +
-  '<block type="functional_example" inline="false">' +
-  '  <functional_input name="ACTUAL">' +
-  '    <block type="functional_call" inline="false">' +
-  '      <mutation name="f">' +
-  '        <arg name="x" type="Number"></arg>' +
-  '      </mutation>' +
-  '      <functional_input name="ARG0">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '  <functional_input name="EXPECTED">' +
-  '    <block type="functional_plus" inline="false">' +
-  '      <functional_input name="ARG1">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '      <functional_input name="ARG2">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '</block>';
-
-var validExample2 = '' +
-  '<block type="functional_example" inline="false">' +
-  '  <functional_input name="ACTUAL">' +
-  '    <block type="functional_call" inline="false">' +
-  '      <mutation name="f">' +
-  '        <arg name="x" type="Number"></arg>' +
-  '      </mutation>' +
-  '      <functional_input name="ARG0">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">2</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '  <functional_input name="EXPECTED">' +
-  '    <block type="functional_plus" inline="false">' +
-  '      <functional_input name="ARG1">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">2</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '      <functional_input name="ARG2">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '</block>';
-
-var invalidExample1 = '' +
-  '<block type="functional_example" inline="false">' +
-  '  <functional_input name="ACTUAL">' +
-  '    <block type="functional_call" inline="false">' +
-  '      <mutation name="f">' +
-  '        <arg name="x" type="Number"></arg>' +
-  '      </mutation>' +
-  '      <functional_input name="ARG0">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '  <functional_input name="EXPECTED">' +
-  '    <block type="functional_plus" inline="false">' +
-  '      <functional_input name="ARG1">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '      <functional_input name="ARG2">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">20</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '</block>';
-
-var invalidExampleMissingResult = '' +
-  '<block type="functional_example" inline="false">' +
-  '  <functional_input name="ACTUAL">' +
-  '    <block type="functional_call" inline="false">' +
-  '      <mutation name="f">' +
-  '        <arg name="x" type="Number"></arg>' +
-  '      </mutation>' +
-  '      <functional_input name="ARG0">' +
-  '        <block type="functional_math_number">' +
-  '          <title name="NUM">1</title>' +
-  '        </block>' +
-  '      </functional_input>' +
-  '    </block>' +
-  '  </functional_input>' +
-  '</block>';
-
 module.exports = {
   app: 'studio',
   skinId: 'studio',
@@ -169,14 +63,26 @@ module.exports = {
         testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
-        assert.equal(Studio.message, 'You need at least two examples in' +
-            ' function f. Make sure each example has a call and a result.');
+        assert.equal(Studio.message, 'You need at least one ' +
+          'example in function f. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +
         solutionBlocks +
-        invalidExampleMissingResult +
-        validExample2 +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
         '</xml>'
     },
     {
@@ -193,8 +99,34 @@ module.exports = {
       },
       xml: '<xml>' +
         solutionBlocks +
-        invalidExample1 +
-        validExample2 +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">20</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
         '</xml>'
     },
     {
@@ -209,8 +141,34 @@ module.exports = {
       },
       xml: '<xml>' +
         solutionBlocks +
-        validExample1 +
-        validExample2 +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
         '</xml>'
     },
     {
@@ -225,8 +183,34 @@ module.exports = {
       },
       xml: '<xml>' +
         solutionBlocks +
-        validExample1 +
-        validExample2 +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
         // We add a variable definition without examples. Things should still pass
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
@@ -250,9 +234,8 @@ module.exports = {
         testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
-        assert.equal(Studio.message, 'You need at least two' +
-        ' examples in function f. Make sure each example has a call and a' +
-            ' result.');
+        assert.equal(Studio.message, 'You need at least one' +
+        ' example in function f. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +
