@@ -51,6 +51,12 @@ Blockly.FunctionEditor = function() {
   this.container_ = null;
 
   this.closeButton_ = null;
+
+  /**
+   * @protected {SvgTextButton}
+   */
+  this.deleteButton_ = null;
+
   this.contractDiv_ = null;
 
   /**
@@ -64,12 +70,19 @@ Blockly.FunctionEditor = function() {
   this.modalBackground_ = null;
   this.onResizeWrapper_ = null;
 
+  /**
+   * Optional configurable dialog function
+   * @private {Function}
+   */
+  this.confirmDialogFunction_ = null;
+
   /** @type {BlockSpace} */
   this.modalBlockSpace = null;
 };
 
 Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
 Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+Blockly.FunctionEditor.DELETE_BUTTON_MARGIN = 25;
 
 /**
  * The type of block to instantiate in the function editing area
@@ -83,6 +96,12 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
  * @type {string}
  */
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
+/**
+ * Whether to display a button that deletes this function
+ * @type {boolean}
+ */
+Blockly.FunctionEditor.prototype.hasDeleteButton = false;
 
 /**
  * @param {String} autoOpenFunction - name of function to auto-open
@@ -485,6 +504,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
 
   this.addCloseButton_();
+  this.addDeleteButton_();
   this.addEditorFrame_();
   this.createContractDom_();
   this.createParameterEditor_();
@@ -556,6 +576,7 @@ Blockly.FunctionEditor.prototype.resizeUIComponents_ = function () {
   this.positionClippingRects_(metrics);
   this.positionSizeContractDom_(metrics.viewWidth);
   this.positionCloseButton_(metrics.absoluteLeft, metrics.viewWidth);
+  this.positionDeleteButton_(metrics.absoluteLeft, metrics.viewWidth);
 };
 
 /**
@@ -621,6 +642,27 @@ Blockly.FunctionEditor.prototype.positionCloseButton_ = function (absoluteLeft,
       (Blockly.RTL ? 5 : absoluteLeft + viewWidth + 14 -
       this.closeButton_.firstElementChild.getAttribute('width')) +
       ',19)');
+};
+
+/**
+ * Position close button based on new metrics
+ * @param {number} absoluteLeft
+ * @param {number} viewWidth
+ * @private
+ */
+Blockly.FunctionEditor.prototype.positionDeleteButton_ = function (absoluteLeft,
+    viewWidth) {
+  if (!this.hasDeleteButton) {
+    return;
+  }
+  var closeButtonWidth = this.closeButton_.firstElementChild.getAttribute('width');
+  var deleteButtonWidth = this.deleteButton_.getButtonWidth();
+  var ltrXOffset = absoluteLeft + viewWidth + 14 - closeButtonWidth -
+      deleteButtonWidth - Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
+  var rtlXOffset = 5 + closeButtonWidth +
+      Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
+  var xPosition = (Blockly.RTL ? rtlXOffset : ltrXOffset);
+  this.deleteButton_.renderAt(xPosition, 19);
 };
 
 /**
@@ -719,6 +761,55 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
   r.setAttribute('width', bounds.width + 2 * padding);
   r.setAttribute('height', bounds.height + padding);
   r.setAttribute('y', -bounds.height + padding - 1);
+};
+
+/**
+ * Add delete button to the top right of the modal dialog, to the
+ * left of the Close button.
+ * @private
+ */
+Blockly.FunctionEditor.prototype.addDeleteButton_ = function () {
+  if (!this.hasDeleteButton) {
+    return;
+  }
+  this.deleteButton_ = new Blockly.SvgTextButton(
+      this.modalBlockSpaceEditor.getSVGElement(), "Delete",
+      this.onDeletePressed.bind(this));
+};
+
+Blockly.FunctionEditor.prototype.onDeletePressed = function () {
+  var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
+  var deleteMessage = Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE.replace('%1',
+      functionName);
+  if (!this.confirmDialogFunction_) {
+    // For playground testing, use a confirm dialog rather
+    var result = confirm(deleteMessage);
+    if (result) {
+      this.onDeleteConfirmed(functionName);
+    }
+    return;
+  }
+  this.confirmDialogFunction_(deleteMessage, "Cancel", "Delete",
+      function () {}, this.onDeleteConfirmed.bind(this, functionName), 'red-delete-button');
+};
+
+Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
+  this.hideIfOpen();
+
+  var functionDefinition = Blockly.mainBlockSpace.findFunction(functionName);
+  var examples = Blockly.mainBlockSpace.findFunctionExamples(functionName);
+
+  examples.concat(functionDefinition).forEach(function (block) {
+    block.dispose(false, false, true);
+  });
+};
+
+/**
+ * @param {Function} showDialogFn - dialog function which allows for success
+ * and failure text.
+ */
+Blockly.FunctionEditor.prototype.registerDialog = function (showDialogFn) {
+  this.confirmDialogFunction_ = showDialogFn;
 };
 
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {

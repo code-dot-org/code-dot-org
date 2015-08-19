@@ -9,7 +9,7 @@
 <% } -%>
 
 <% if (data.cancelText) { -%>
-<button id="again-button">
+<button id="again-button" class="<%= data.leftButtonClass || '' %>">
     <%= data.cancelText %>
 </button>
 <% } -%>
