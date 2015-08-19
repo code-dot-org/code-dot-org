@@ -64,6 +64,9 @@ Blockly.SvgTextButton.prototype.setBackgroundColor = function (color) {
   this.buttonRect.setAttribute('fill', color);
 };
 
+/**
+ * @returns {number} width of the button
+ */
 Blockly.SvgTextButton.prototype.getButtonWidth = function () {
-  return this.buttonRect.getAttribute('width');
+  return parseInt(this.buttonRect.getAttribute('width'), 10);
 };
