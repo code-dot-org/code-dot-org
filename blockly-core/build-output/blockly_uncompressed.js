@@ -5423,8 +5423,8 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function(e) {
   if(Blockly.selected && (!Blockly.readOnly && clickIsOnTarget)) {
     Blockly.selected.unselect()
   }
-  var blockNonInteractive = Blockly.selected && (!Blockly.selected.isMovable() && !Blockly.selected.isEditable());
-  var shouldDrag = clickIsOnTarget || (blockNonInteractive || Blockly.readOnly);
+  var blockUnmovable = Blockly.selected && !Blockly.selected.isMovable();
+  var shouldDrag = clickIsOnTarget || (blockUnmovable || Blockly.readOnly);
   var isLeftClick = !Blockly.isRightButton(e);
   if(this.blockSpace_.scrollbarPair && (isLeftClick && shouldDrag)) {
     this.beginDragScroll_(e);
@@ -14774,6 +14774,7 @@ Blockly.Block.terminateDrag_ = function() {
       selected.moveToFrontOfMainCanvas_();
       selected.render();
       goog.Timer.callOnce(selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
+      selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
       selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace();
       selected.blockSpace.scrollIntoView(selected);
       Blockly.fireUiEvent(window, "resize")
@@ -14785,10 +14786,7 @@ Blockly.Block.terminateDrag_ = function() {
   }else {
     Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null)
   }
-  Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
-  if(selected) {
-    selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED)
-  }
+  Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING
 };
 Blockly.Block.prototype.select = function(spotlight) {
   if(!this.svg_) {
@@ -20978,7 +20976,6 @@ goog.provide("Blockly.ExampleView");
 var NO_RESULT_TEXT = "";
 var SUCCESS_TEXT = "Matches definition.";
 var RESULT_TEXT_TOP_MARGIN = 14;
-var EMPTY_EXAMPLE_INPUT_WIDTH = 40;
 Blockly.ExampleView = function(dom, svg, contractEditor) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
@@ -21041,22 +21038,20 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY,
   var newY = currentY;
   var commonMargin = marginBelow / 2;
   newY += commonMargin;
-  if(!block.isCurrentlyBeingDragged()) {
-    var input = block.getInput(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-    if(input.type === Blockly.FUNCTIONAL_INPUT) {
-      var originalExtraSpace = input.extraSpace;
-      var width = EMPTY_EXAMPLE_INPUT_WIDTH;
-      var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-      if(functionCallBlock) {
-        width = functionCallBlock.getHeightWidth().width
-      }
-      input.extraSpace = exampleMaxInputWidth - width;
-      if(input.extraSpace !== originalExtraSpace) {
-        block.getSvgRenderer().render(true)
-      }
+  var input = block.getInput(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  if(input.type == Blockly.FUNCTIONAL_INPUT) {
+    var originalExtraSpace = input.extraSpace;
+    var width = 40;
+    var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    if(functionCallBlock) {
+      width = functionCallBlock.getHeightWidth().width
     }
-    block.moveTo(marginLeft, newY)
+    input.extraSpace = exampleMaxInputWidth - width;
+    if(input.extraSpace !== originalExtraSpace) {
+      block.getSvgRenderer().render(true)
+    }
   }
+  block.moveTo(marginLeft, newY);
   newY += block.getHeightWidth().height;
   newY += commonMargin;
   var exampleButtonX = midLineX + commonMargin;
@@ -23067,10 +23062,6 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
   var functionCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   functionCall.setCanDisconnectFromParent(false);
   this.exampleBlocks.push(movedExampleBlock);
-  movedExampleBlock.blockEvents.listen(Blockly.Block.EVENTS.AFTER_DROPPED, function() {
-    this.layOutBlockSpaceItems_();
-    this.modalBlockSpace.updateScrollableSize()
-  }.bind(this));
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
 };
 Blockly.ContractEditor.prototype.refreshBlockInputTypes_ = function() {
@@ -23828,22 +23819,6 @@ Blockly.addToNonZeroSides = function(box, amount) {
 };
 Blockly.svgIgnoreMouseEvents = function(element) {
   element.style.pointerEvents = "none"
-};
-Blockly.fireTestClickSequence = function(target) {
-  Blockly.fireTestMouseEvent(target, "mousedown");
-  Blockly.fireTestMouseEvent(target, "mouseup");
-  Blockly.fireTestMouseEvent(target, "click")
-};
-Blockly.fireTestMouseEvent = function(target, eventName) {
-  if(!document.createEvent) {
-    throw"fireTestMouseEvent is only for testing in browsers with createEvent";
-  }
-  target.dispatchEvent(Blockly.makeTestMouseEvent(eventName))
-};
-Blockly.makeTestMouseEvent = function(eventName) {
-  var event = document.createEvent("MouseEvents");
-  event.initMouseEvent(eventName, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-  return event
 };
 goog.provide("Blockly.FieldImageDropdown");
 goog.require("Blockly.Field");

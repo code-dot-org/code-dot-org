@@ -30,31 +30,6 @@ exports.Direction = {
 
 var Dir = exports.Direction;
 
-
-var frameDirTable = {};
-frameDirTable[Dir.SOUTHEAST]  = 0;
-frameDirTable[Dir.EAST]       = 1;
-frameDirTable[Dir.NORTHEAST]  = 2;
-frameDirTable[Dir.NORTH]      = 3;
-frameDirTable[Dir.NORTHWEST]  = 4;
-frameDirTable[Dir.WEST]       = 5;
-frameDirTable[Dir.SOUTHWEST]  = 6;
-
-exports.frameDirTable = frameDirTable;
-
-var frameDirTableWalking = {};
-frameDirTableWalking[Dir.NONE]       = 0;
-frameDirTableWalking[Dir.SOUTH]      = 0;
-frameDirTableWalking[Dir.SOUTHEAST]  = 1;
-frameDirTableWalking[Dir.EAST]       = 2;
-frameDirTableWalking[Dir.NORTHEAST]  = 3;
-frameDirTableWalking[Dir.NORTH]      = 4;
-frameDirTableWalking[Dir.NORTHWEST]  = 5;
-frameDirTableWalking[Dir.WEST]       = 6;
-frameDirTableWalking[Dir.SOUTHWEST]  = 7;
-
-exports.frameDirTableWalking = frameDirTableWalking;
-
 /**
  * Given a direction, returns the unit vector for it.
  */
@@ -104,6 +79,7 @@ exports.Position = {
 //
 // Turn state machine, use as NextTurn[fromDir][toDir]
 //
+
 
 exports.NextTurn = {};
 

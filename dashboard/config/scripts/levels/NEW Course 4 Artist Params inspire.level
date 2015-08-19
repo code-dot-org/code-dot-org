@@ -21,7 +21,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "scrollbars": "false",
+    "scrollbars": "true",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
