@@ -39,6 +39,9 @@ Dashboard::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.assets.compile = false
+
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
