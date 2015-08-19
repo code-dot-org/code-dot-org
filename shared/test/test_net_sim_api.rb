@@ -103,7 +103,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert record_create_response.is_a?(Array)
     assert_equal 0, record_create_response.length
     assert_equal 4, read_records().length
-    assert_equal 200, @net_sim_api.last_response.status
+
+    # sending a value that is neither an array nor a hash should fail
+    record_create_response = create_record(1)
+    assert_equal 400, @net_sim_api.last_response.status
+    assert_equal 4, read_records().length
+
+    # sending an array containing a value that is neither an array nor a
+    # hash should fail
+    record_create_response = create_record([1])
+    assert_equal 400, @net_sim_api.last_response.status
+    assert_equal 4, read_records().length
   ensure
     created_ids.each { |id| delete_record(id) }
     assert read_records.first.nil?, 'Table was not empty'
