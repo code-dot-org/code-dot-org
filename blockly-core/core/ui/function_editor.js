@@ -820,8 +820,10 @@ Blockly.FunctionEditor.prototype.onDeletePressed = function () {
     }
     return;
   }
-  this.displayConfirmDialog_(deleteMessage, "Cancel", "Delete",
-      function () {}, this.onDeleteConfirmed.bind(this, functionName), 'red-delete-button');
+  this.displayConfirmDialog_(deleteMessage,
+      Blockly.Msg.KEEP, Blockly.Msg.DELETE, null,
+      this.onDeleteConfirmed.bind(this, functionName),
+      'red-delete-button');
 };
 
 Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
