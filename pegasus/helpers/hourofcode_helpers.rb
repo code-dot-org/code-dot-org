@@ -105,13 +105,10 @@ def resolve_url(url)
   end
 end
 
-def resolve_file(path)
-  # TODO: search for localized files or show EN
-  return path
-end
+def localized_file(path)
+  localized_path = File.join('/', @language, path)
+  return localized_path if resolve_static('public', localized_path)
 
-def resolve_image(path)
-  # TODO: search for localized files or show EN
   return path
 end
 
