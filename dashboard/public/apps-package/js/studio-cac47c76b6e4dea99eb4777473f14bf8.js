@@ -686,7 +686,7 @@ function sortDrawOrder() {
     item.element = Studio.items[i].element;
     item.y = Studio.items[i].y + Studio.items[i].height/2;
     itemsArray.push(item);
-    
+
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
     Studio.drawDebugRect("itemBottom", Studio.items[i].x, item.y, 4, 4);
   }
@@ -925,17 +925,17 @@ function handleActorCollisionsWithCollidableList (
     var collidable = list[i];
     var next = collidable.getNextPosition();
 
-    Studio.drawDebugRect("itemCollision", 
-      next.x, 
-      next.y, 
-      skin.itemCollisionRectWidth || collidable.width, 
+    Studio.drawDebugRect("itemCollision",
+      next.x,
+      next.y,
+      skin.itemCollisionRectWidth || collidable.width,
       skin.itemCollisionRectHeight || collidable.height);
-    Studio.drawDebugRect("spriteCollision", 
-      xCenter, 
-      yCenter, 
-      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width, 
+    Studio.drawDebugRect("spriteCollision",
+      xCenter,
+      yCenter,
+      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width,
       skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
-    
+
     if (collisionTest(
           xCenter,
           next.x,
@@ -2015,7 +2015,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  var exampleless = studioApp.getFunctionWithoutExample();
+  var exampleless = studioApp.getFunctionWithoutTwoExamples();
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -3033,7 +3033,7 @@ Studio.setSprite = function (opts) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
     sprite.size = 1; //sprite.width / skin.spriteWidth;
-    
+
     sprite.drawHeight = sprite.size * skin.spriteHeight;
     sprite.drawWidth = sprite.size * skin.spriteWidth;
   } else {

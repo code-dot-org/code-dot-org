@@ -294,7 +294,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "emptyBlocksErrorMsg":function(d){return "!!-The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.-!!"},
 "emptyBlockInFunction":function(d){return "!!-The function "+common_locale.v(d,"name")+" has an unfilled input.-!!"},
 "emptyBlockInVariable":function(d){return "!!-The variable "+common_locale.v(d,"name")+" has an unfilled input.-!!"},
-"emptyExampleBlockErrorMsg":function(d){return "!!-You need at least one example in function "+common_locale.v(d,"functionName")+". Make sure each example has a call and a result.-!!"},
+"emptyExampleBlockErrorMsg":function(d){return "!!-You need at least two examples in function "+common_locale.v(d,"functionName")+". Make sure each example has a call and a result.-!!"},
 "emptyFunctionBlocksErrorMsg":function(d){return "!!-The function block needs to have other blocks inside it to work.-!!"},
 "emptyFunctionalBlock":function(d){return "!!-You have a block with an unfilled input.-!!"},
 "emptyTopLevelBlock":function(d){return "!!-There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block.-!!"},
