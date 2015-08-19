@@ -2009,11 +2009,13 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var consoleApi = module.exports;
 
 consoleApi.log = function() {
-  var nativeArgs = [];
-  for (var i = 0; i < arguments.length; i++) {
-    nativeArgs[i] = codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter,
-                                                       arguments[i]);
-  }
+  var nativeArgs = Array.prototype.map.call(arguments, function (item) {
+    if (item === null || item === undefined) {
+      return item;
+    }
+    return codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter, item);
+  });
+
   var output = '';
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
@@ -2021,7 +2023,7 @@ consoleApi.log = function() {
   } else if (nativeArgs.length === 1) {
     output = firstArg;
   } else {
-    for (i = 0; i < nativeArgs.length; i++) {
+    for (var i = 0; i < nativeArgs.length; i++) {
       output += nativeArgs[i].toString();
       if (i < nativeArgs.length - 1) {
         output += '\n';
