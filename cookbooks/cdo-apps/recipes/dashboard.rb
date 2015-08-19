@@ -63,6 +63,7 @@ end
 
 execute "create-dashboard-db" do
   command "rake db:create"
+  command "rake db:schema:load"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL'=>nil,
