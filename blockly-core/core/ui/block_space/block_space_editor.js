@@ -61,13 +61,6 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
 };
 
 /**
- * Pixel padding to maintain below the lowest block in the blockspace.
- * @type {number}
- * @const
- */
-Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
-
-/**
  * If enabled, during block bumping the entire block will be bumped into view.
  *
  * If disabled, when dragged off the bottom or right of the blockspace, the
@@ -822,17 +815,12 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var viewHeight = svgSize.height;
   var viewTop = this.blockSpace.getScrollOffsetY();
 
-  var canScrollVertically = this.blockSpace.scrollbarPair &&
-      this.blockSpace.scrollbarPair.canScrollVertically();
-  var extraScrollableHeight = canScrollVertically ?
-      Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM : 0;
-
   return {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     viewTop: viewTop,
     viewLeft: viewLeft,
-    contentHeight: blockBoundingRect.height + extraScrollableHeight,
+    contentHeight: blockBoundingRect.height,
     contentWidth: blockBoundingRect.width,
     contentTop: blockBoundingRect.top,
     contentLeft: blockBoundingRect.left,

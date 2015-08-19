@@ -91,7 +91,7 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
   Blockly.mainBlockSpace.scrollbarPair.resize();
 
   var originalPlusMargin = originalScrollableHeight +
-      Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM -
+      Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM -
       distanceFromBottom;
   var newScrollableHeight =
       blockSpace.getScrollableSize(blockSpace.getMetrics()).height;

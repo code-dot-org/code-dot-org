@@ -140,6 +140,13 @@ Blockly.BlockSpace.SCAN_ANGLE = 3;
 Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
 
 /**
+ * Pixel padding to maintain below the lowest block in the blockspace.
+ * @type {number}
+ * @const
+ */
+Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
+
+/**
  * Current horizontal scrolling offset.
  * @type {number}
  */
@@ -865,7 +872,9 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
         Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
         metrics.viewWidth,
     height: canScrollVertically ?
-        Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) :
+        Math.max(metrics.contentTop + metrics.contentHeight
+            + Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM
+            , metrics.viewHeight) :
         metrics.viewHeight
   };
 };
