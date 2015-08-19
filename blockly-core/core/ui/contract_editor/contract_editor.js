@@ -784,12 +784,6 @@ Blockly.ContractEditor.prototype.updateFrameColorForType_ = function (newType) {
   var newColorHSV = Blockly.FunctionalTypeColors[newType];
   var newColorHex = goog.color.hsvToHex(newColorHSV[0], newColorHSV[1], newColorHSV[2] * 255)
   this.setFrameColor_(newColorHex);
-  if (this.deleteButton_) {
-    var deleteButtonRgb = goog.color.darken(
-        goog.color.hexToRgb(newColorHex), .2);
-    this.deleteButton_.setBackgroundColor(
-        goog.color.rgbArrayToHex(deleteButtonRgb));
-  }
   this.allSections_.forEach(function (sectionView, sectionName) {
     sectionView.setHeaderColor(newColorHex);
   }, this);

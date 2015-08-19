@@ -57,14 +57,6 @@ Blockly.SvgTextButton.prototype.setVisible = function (visible) {
 };
 
 /**
- * Sets the color of the background of this button
- * @param {string} color
- */
-Blockly.SvgTextButton.prototype.setBackgroundColor = function (color) {
-  this.buttonRect.setAttribute('fill', color);
-};
-
-/**
  * @returns {number} width of the button
  */
 Blockly.SvgTextButton.prototype.getButtonWidth = function () {
