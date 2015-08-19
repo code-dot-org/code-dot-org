@@ -1005,10 +1005,12 @@ function resizeFooterToLeftColumnWidth() {
   // the small print should float right.  Otherwise, it should float left.
   var languageSelector = smallFooter.querySelector('form');
   var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint.offsetTop === languageSelector.offsetTop) {
-    smallPrint.style.float = 'right';
-  } else {
-    smallPrint.style.float = 'left';
+  if (smallPrint && languageSelector) {
+    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+      smallPrint.style.float = 'right';
+    } else {
+      smallPrint.style.float = 'left';
+    }
   }
 }
 
