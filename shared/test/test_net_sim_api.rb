@@ -97,6 +97,13 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 4, read_records().length
     created_ids.push(record_create_response[0]['id'])
     created_ids.push(record_create_response[1]['id'])
+
+    # sending an empty array should be a no-op
+    record_create_response = create_record([])
+    assert record_create_response.is_a?(Array)
+    assert_equal 0, record_create_response.length
+    assert_equal 4, read_records().length
+    assert_equal 200, @net_sim_api.last_response.status
   ensure
     created_ids.each { |id| delete_record(id) }
     assert read_records.first.nil?, 'Table was not empty'
