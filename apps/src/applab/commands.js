@@ -24,7 +24,7 @@ var applabCommands = module.exports;
  * a quickly changing src could cancel the download before it can be cached by
  * the browser.
  */
-var ensureCached = {};
+var toBeCached = {};
 
 /**
  * @param value
@@ -875,10 +875,10 @@ applabCommands.setImageURL = function (opts) {
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
 
-    if (!ensureCached[element.src]) {
-      ensureCached[element.src] = true;
+    if (!toBeCached[element.src]) {
       var img = new Image();
       img.src = element.src;
+      toBeCached[element.src] = true;
     }
 
     return true;
