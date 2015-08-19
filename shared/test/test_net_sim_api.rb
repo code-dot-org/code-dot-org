@@ -105,13 +105,13 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 4, read_records().length
 
     # sending a value that is neither an array nor a hash should fail
-    record_create_response = create_record(1)
+    create_record(1)
     assert_equal 400, @net_sim_api.last_response.status
     assert_equal 4, read_records().length
 
     # sending an array containing a value that is neither an array nor a
     # hash should fail
-    record_create_response = create_record([1])
+    create_record([1])
     assert_equal 400, @net_sim_api.last_response.status
     assert_equal 4, read_records().length
   ensure
