@@ -35,10 +35,10 @@ class OpsMailer < ActionMailer::Base
     @workshop = workshop
     @recipient = recipient
 
-    subject = "Important: Your #{@workshop.phase_info[:short_name]} workshop is coming up."
+    subject = "Important: Your #{@workshop.phase_info[:short_name]} workshop is coming up"
     if @workshop.phase_info[:prerequisite_phase]
       @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
-      subject += " Complete #{@prerequisite_phase[:short_name]}"
+      subject += ". Complete #{@prerequisite_phase[:short_name]}"
     end
 
     mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'
