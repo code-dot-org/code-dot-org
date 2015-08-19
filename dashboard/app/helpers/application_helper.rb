@@ -190,7 +190,7 @@ module ApplicationHelper
   end
 
   def minifiable_shared_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
-    asset_path(path)
+    return path if Rails.configuration.pretty_sharedjs
+    path.sub(/\.js$/, '.min.js')
   end
 end
