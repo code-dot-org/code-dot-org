@@ -155,7 +155,6 @@ Blockly.ContractEditor.prototype.hasDeleteButton = true;
 Blockly.ContractEditor.prototype.create_ = function() {
   Blockly.ContractEditor.superClass_.create_.call(this);
 
-
   var canvasToDrawOn = this.modalBlockSpace.svgBlockCanvas_;
 
   var sharedHighlightBox = new Blockly.SvgHighlightBox(canvasToDrawOn, {
@@ -785,6 +784,12 @@ Blockly.ContractEditor.prototype.updateFrameColorForType_ = function (newType) {
   var newColorHSV = Blockly.FunctionalTypeColors[newType];
   var newColorHex = goog.color.hsvToHex(newColorHSV[0], newColorHSV[1], newColorHSV[2] * 255)
   this.setFrameColor_(newColorHex);
+  if (this.deleteButton_) {
+    var deleteButtonRgb = goog.color.darken(
+        goog.color.hexToRgb(newColorHex), .2);
+    this.deleteButton_.setBackgroundColor(
+        goog.color.rgbArrayToHex(deleteButtonRgb));
+  }
   this.allSections_.forEach(function (sectionView, sectionName) {
     sectionView.setHeaderColor(newColorHex);
   }, this);

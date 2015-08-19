@@ -53,7 +53,7 @@ Blockly.FunctionEditor = function() {
   this.closeButton_ = null;
 
   /**
-   * @protected {SvgTextButton}
+   * @protected {Blockly.SvgTextButton}
    */
   this.deleteButton_ = null;
 
