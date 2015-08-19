@@ -71,6 +71,37 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, 'Table was not empty'
   end
 
+  def test_create_multiple_records
+    created_ids = []
+    # Sending any number of records as an array should result in an
+    # array being returned
+    record_create_response = create_record([{name: 'alice', age: 7, male: false}])
+    assert record_create_response.is_a?(Array)
+    assert_equal 1, record_create_response.length
+    assert_equal 1, read_records().length
+    created_ids.push(record_create_response[0]['id'])
+
+    # Sending a record as a hash should result in a hash being returned
+    record_create_response = create_record({name: 'fred', age: 12, male: true})
+    assert record_create_response.is_a?(Hash)
+    assert_equal 2, read_records().length
+    created_ids.push(record_create_response['id'])
+
+    # Sending several records should result in them all being inserted
+    record_create_response = create_record([
+      {name: 'nancy', age: 9, male: false},
+      {name: 'drew', age: 11, male: true}
+    ])
+    assert record_create_response.is_a?(Array)
+    assert_equal 2, record_create_response.length
+    assert_equal 4, read_records().length
+    created_ids.push(record_create_response[0]['id'])
+    created_ids.push(record_create_response[1]['id'])
+  ensure
+    created_ids.each { |id| delete_record(id) }
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
   def test_read_multiple_tables
     create_record({name: 'rec1_1'}, 'table1')
     create_record({name: 'rec1_2'}, 'table1')
