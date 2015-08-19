@@ -179,6 +179,16 @@ class NetSimApi < Sinatra::Base
   # POST /v3/netsim/<shard-id>/<table-name>
   #
   # Insert a new row or rows.
+  # Accepts a JSON request body of either an Object if inserting a
+  # single row or an Array of Objects if inserting multiple rows
+  #
+  # Examples:
+  #
+  # POST "{ 'name': 'alice', 'male': false }"
+  # -> 201 "{ 'name': 'alice', 'male': false, 'id': 1 }"
+  #
+  # POST "[{ 'name': 'nancy', 'male': false }, { 'name': 'drew', 'male': true }]"
+  # -> 201 "[{ 'name': 'nancy', 'male': false, 'id': 2 }, { 'name': 'drew', 'male': true, 'id': 3 }]"
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
