@@ -7,5 +7,6 @@
         %a{:href=>'/learn/beyond'} Beyond One Hour
       %li{:class=>(request.path == '/learn/local') ? 'active tab' : 'tab'}<
         %a{:href=>'/learn/local'} Find Local Schools + Camps
-      %li{:class=>(request.path == 'http://studio.code.org') ? 'active tab' : 'tab'}<
-        %a{:href=>'http://studio.code.org'} Code Studio
+      - if request.site == 'code.org'
+        %li{:class=>'tab'}<
+          %a{:href=>CDO.studio_url} Code Studio

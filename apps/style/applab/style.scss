@@ -310,6 +310,13 @@ img#turtleImage {
       color: $white;
     }
   }
+
+  span {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
 $debug-commands-column-width: 270px;
@@ -383,6 +390,10 @@ $debug-input-height: 16px;
   border-width: 0px;
   padding: 0px;
   outline: none;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .debug-output {
@@ -403,9 +414,6 @@ $debug-input-height: 16px;
   left: $debug-console-left-padding + $debug-prompt-width;
   right: 0;
   margin-top: -3px;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
 }
 
 #slider-cell {

@@ -13,7 +13,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "images": "[{\"filename\":\"lion.svg\",\"position\":[95,150]},{\"filename\":\"cow.svg\",\"position\":[185,150]}]",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "free_play": "false",
     "ideal": "14",
     "slider_speed": "0.4",
