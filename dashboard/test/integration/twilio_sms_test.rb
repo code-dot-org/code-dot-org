@@ -3,6 +3,31 @@ require 'twilio-ruby'
 
 class TwilioSmsTest < ActionDispatch::IntegrationTest
 
+  # Required magic 'number' for test API.
+  # See: https://www.twilio.com/docs/api/rest/test-credentials
+  TEST_PHONE_FROM = '+15005550006'
+
+  # This can be any number, but this is the one Twilio uses in its own examples.
+  TEST_PHONE_TO = '+14108675309'
+
+  test 'Twilio SMS test API' do
+    if CDO.twilio_sid_test.blank? || CDO.twilio_auth_test.blank?
+      skip 'twilio_sid_test credential not provided'
+    end
+
+    account_sid = CDO.twilio_sid_test
+    auth_token = CDO.twilio_auth_test
+
+    @client = Twilio::REST::Client.new account_sid, auth_token
+    test_body = "Test: #{SecureRandom.urlsafe_base64}."
+    sms = @client.messages.create(
+      from: TEST_PHONE_FROM,
+      to: TEST_PHONE_TO,
+      body: test_body
+    )
+    assert_equal test_body, sms.body
+  end
+
   test 'Send and receive Twilio SMS on carrier network' do
     skip 'Run this test manually with TEST_SMS=1' unless ENV['TEST_SMS']
 

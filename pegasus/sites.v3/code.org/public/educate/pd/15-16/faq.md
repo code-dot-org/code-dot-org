@@ -22,7 +22,7 @@ Thank you for participating in Code.org Computer Science Professional Developmen
 Still have questions? See below for answers to commonly asked questions or email [pd@code.org](pd@code.org).
 <br/>
 
-- [What if I have a schedule conflict?](#sched)
+- [Who do I inform if I have a schedule conflict?](#sched)
 - [What is the payment process?](#pay)
 - [What if my bank account changes?](#acct)	
 - [Are parking fees reimbursable?](#park)
@@ -31,7 +31,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [I completed my online PD. Why does it still say I haven't finished?](#complete)
 
 
-**Who do I inform if there is a schedule conflict?**
+**Who do I inform if I have a schedule conflict?**
 
 Please e-mail pd@code.org and your district contact if you have a conflict with an in-person PD date.
 
@@ -122,26 +122,23 @@ Your Online PD course appears in your Code Studio (see image 1). To get to this 
 <a id="complete"></a>
 
 **I completed my online PD. Why does it still say I haven't finished?**
-Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 2). 
+Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 3). 
 
 <br/>
-*Image 1: Navigation Tools for Code Studio Online PD*
+*Image 1: Your course in Code Studio*
 
 ![Image 1](/images//fit-700/online-pd-faq.png)
 
 <br/>
-*Image 2: Navigation Tools for Code Studio Online PD*
+*Image 2: Your progress page in Code Studio*
 ![Image 2](/images//fit-700/online-pd-faq2.png)
 
-[**Back to the top**](#top)
 <br/>
-<br/>
-<br/>
-
-**I completed my online PD. Why does it still say I haven't finished?**
-Make sure you’ve clicked the orange continue button at the bottom of every level in your online PD (see image 2).
+*Image 3: Importance of the Continue button*
+![Image 3](/images//fit-700/online-pd-faq3.png)
 
 [**Back to the top**](#top)
 <br/>
 <br/>
 <br/>
+
