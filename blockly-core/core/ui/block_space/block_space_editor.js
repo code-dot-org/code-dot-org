@@ -822,13 +822,17 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var viewHeight = svgSize.height;
   var viewTop = this.blockSpace.getScrollOffsetY();
 
+  var canScrollVertically = this.blockSpace.scrollbarPair &&
+      this.blockSpace.scrollbarPair.canScrollVertically();
+  var extraScrollableHeight = canScrollVertically ?
+      Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM : 0;
+
   return {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     viewTop: viewTop,
     viewLeft: viewLeft,
-    contentHeight: blockBoundingRect.height
-      + Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM,
+    contentHeight: blockBoundingRect.height + extraScrollableHeight,
     contentWidth: blockBoundingRect.width,
     contentTop: blockBoundingRect.top,
     contentLeft: blockBoundingRect.left,
