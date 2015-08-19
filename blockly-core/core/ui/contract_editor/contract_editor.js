@@ -862,6 +862,10 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
  * @return {string} Result failure, or null if no failure
  */
 Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
+  var defnInput = this.functionDefinitionBlock.getInput('STACK');
+  if (!defnInput.connection.isConnected()) {
+    return "Define the function below and try again.";
+  }
   return this.testHandler_(block, visualize);
 };
 
