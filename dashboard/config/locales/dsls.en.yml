@@ -658,6 +658,7 @@ en:
         'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
         U2L04 Routers and Addresses: U2L04 Routers and Addresses
+        U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
       U2L5 Packets and Reliability - Video:
         'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
         description here: description here
@@ -2599,6 +2600,7 @@ en:
       U2L02 Assessment 4:
         Cell Number: Cell Number
         From: From
+        Grid Coordinates: Grid Coordinates
         'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
         Time: Time
         To: To
@@ -2670,6 +2672,14 @@ en:
           Both minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
+        ? |-
+          Both the minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a "greedy" approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
+        : |-
+          Both the minimum spanning tree algorithm you learned and the
+          shortest path algorithm you learned used a "greedy" approach,
+          choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
         The minimum spanning tree algorithm you learned does not necessarily need to try every edge.: The minimum spanning tree algorithm you learned does not necessarily need to try every edge.
         The shortest path algorithm you learned visits each vertex and edge once.: The shortest path algorithm you learned visits each vertex and edge once.
@@ -2678,6 +2688,7 @@ en:
         Question 3: Question 3
         The algorithm is correct.: The algorithm is correct.
         The algorithm is efficient.: The algorithm is efficient.
+        The algorithm is short.: The algorithm is short.
         The algorithm is understandable.: The algorithm is understandable.
         The algorithm short: The algorithm short
         Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
@@ -2772,6 +2783,7 @@ en:
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
+        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
         How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
       U2L3 Assessment 3:
