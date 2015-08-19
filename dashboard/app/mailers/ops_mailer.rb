@@ -39,7 +39,7 @@ class OpsMailer < ActionMailer::Base
        #{(@workshop.segments.first.start.to_date - Date.today).to_i} days"
     if @workshop.phase_info[:prerequisite_phase]
       @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
-      subject += " Complete #{@prerequisite_phase[:long_name]}"
+      subject += ". Complete #{@prerequisite_phase[:long_name]}"
     end
 
     mail content_type: 'text/html', subject: subject, to: @recipient.email, from: 'pd@code.org'
