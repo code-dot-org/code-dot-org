@@ -26,8 +26,9 @@
   - script = @script || Script.twenty_hour_script
   - if !@level.nil? && @level.ideal_level_source_id
     .solution_link
-      #{link_to "See the puzzle", script_level_path(script, ScriptLevel.where(:script_id => script, :level_id => @level).first), :target => "_blank"}
-      #{link_to t('reference_area.teacher'), script_level_solution_path(script, @level), :target => "_blank"}
+      - if script_level = ScriptLevel.where(script_id: script, level_id: @level.id).first
+        = link_to "See the puzzle", build_script_level_path(@script_level), target: '_blank'
+        = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true), target: '_blank'
   = render partial: "shared/add_hint", locals: {level_source_id: @level_source_id, redirect_url: @next_path}
   %table{:width => "30%"}
     %tr
