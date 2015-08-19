@@ -148,6 +148,10 @@ class ActiveSupport::TestCase
       assert_equal(before[i], e.call, error)
     end
   end
+
+  def json_response
+    ActiveSupport::JSON.decode @response.body
+  end
 end
 
 
