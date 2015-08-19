@@ -7,7 +7,7 @@ question 'Which of the following statements is FALSE about minimum spanning tree
 wrong 'The minimum spanning tree algorithm you learned does not necessarily need to try every edge.'
 wrong 'A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.'
 right 'The shortest path algorithm you learned visits each vertex and edge once.'
-wrong 'Both minimum spanning tree algorithm you learned and the
+wrong 'Both the minimum spanning tree algorithm you learned and the
 shortest path algorithm you learned used a “greedy” approach,
 choosing the smallest edge first or vertex with the smallest distance value first.'
 markdown <<MARKDOWN

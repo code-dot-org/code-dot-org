@@ -1785,7 +1785,7 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
  * @returns {string} The name of a function that doesn't have any examples, or
  *   undefined if all have at least one.
  */
-StudioApp.prototype.getFunctionWithoutExample = function () {
+StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
   var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
     return block.type === 'functional_definition' && !block.isVariable();
   }).map(function (definitionBlock) {
@@ -1805,13 +1805,17 @@ StudioApp.prototype.getFunctionWithoutExample = function () {
     return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
   });
 
-  var exampleless;
+  var definitionWithLessThanTwoExamples;
   definitionNames.forEach(function (def) {
-    if (exampleNames.indexOf(def) === -1) {
-      exampleless = def;
+    var definitionExamples = exampleNames.filter(function(example) {
+      return def === example;
+    });
+
+    if (definitionExamples.length < 2) {
+      definitionWithLessThanTwoExamples = def;
     }
   });
-  return exampleless;
+  return definitionWithLessThanTwoExamples;
 };
 
 /**
