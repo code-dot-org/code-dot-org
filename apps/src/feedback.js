@@ -803,7 +803,8 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       confirmText: options.confirmText,
-      cancelText: options.cancelText
+      cancelText: options.cancelText,
+      leftButtonClass: options.leftButtonClass
     }
   });
   contentDiv.appendChild(buttons);

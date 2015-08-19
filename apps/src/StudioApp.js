@@ -453,6 +453,18 @@ StudioApp.prototype.init = function(config) {
       // contract editor
       return true;
     }.bind(this));
+    Blockly.contractEditor.registerDialog(function (bodyText,
+        confirmText, cancelText, onRightButton, onLeftButton, leftButtonClass) {
+      this.feedback_.showSimpleDialog(this.Dialog, {
+        headerText: undefined,
+        bodyText: bodyText,
+        cancelText: cancelText,
+        confirmText: confirmText,
+        onConfirm: onRightButton,
+        onCancel: onLeftButton,
+        leftButtonClass: leftButtonClass
+      });
+    }.bind(this));
   }
 
   smallFooterUtils.bindHandlers();
