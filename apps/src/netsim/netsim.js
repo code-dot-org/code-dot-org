@@ -502,6 +502,7 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      NetSimAlert.error(i18n.createMyClientNodeError());
       onComplete(err, null);
       return;
     }
@@ -1107,6 +1108,7 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
     shard.resetEverything(function (err) {
       if (err) {
         logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
         return;
       }
       // Reload page without the shard-reset query parameter
