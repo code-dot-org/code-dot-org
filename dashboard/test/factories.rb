@@ -58,6 +58,12 @@ FactoryGirl.define do
       game {create(:game, app: "unplug")}
     end
 
+    trait :with_ideal_level_source do
+      after :create do |level, _|
+        level.ideal_level_source = create(:level_source, level: level)
+        level.save!
+      end
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do
