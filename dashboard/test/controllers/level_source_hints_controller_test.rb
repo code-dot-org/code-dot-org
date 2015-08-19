@@ -82,4 +82,16 @@ class LevelSourceHintsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "should get show_pop_hint_if_admin" do
+    sign_in(@admin)
+    get :show_pop_hints, idx: 0
+    assert_response :success
+  end
+
+  test "should not get show_pop_hint_if_admin" do
+    sign_in(@teacher)
+    get :show_pop_hints, idx: 0
+    assert_response :forbidden
+  end
+
 end
