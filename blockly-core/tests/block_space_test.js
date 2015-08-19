@@ -77,17 +77,27 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
   Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(SMALL_NUMBER_BLOCK));
   var numberBlock = blockSpace.getTopBlocks()[0];
   var viewportHeight = blockSpace.getMetrics().viewHeight;
-  var originalScrollableHeight = blockSpace.getScrollableSize(blockSpace.getMetrics()).height;
+  var originalScrollableHeight = blockSpace.getScrollableSize(
+      blockSpace.getMetrics()).height;
 
   assertEquals(viewportHeight, originalScrollableHeight);
 
-  // just at bottom
-  numberBlock.moveTo(0, viewportHeight);
+  // drop block just at bottom
+  var distanceFromBottom = 10;
+  numberBlock.moveTo(0, viewportHeight
+      - numberBlock.getHeightWidth().height
+      - distanceFromBottom);
 
   Blockly.mainBlockSpace.scrollbarPair.resize();
 
+  var originalPlusMargin = originalScrollableHeight +
+      Blockly.BlockSpaceEditor.SCROLLABLE_MARGIN_BELOW_BOTTOM -
+      distanceFromBottom;
+  var newScrollableHeight =
+      blockSpace.getScrollableSize(blockSpace.getMetrics()).height;
+
   assert("Scrollable area has increased",
-      blockSpace.getScrollableSize(blockSpace.getMetrics()).height > originalScrollableHeight);
+      newScrollableHeight > originalPlusMargin);
 
   goog.dom.removeNode(container);
 }

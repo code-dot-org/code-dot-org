@@ -137,7 +137,7 @@ Blockly.BlockSpace.SCAN_ANGLE = 3;
  * is dragged out of view.
  * @type {number}
  */
-Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
 
 /**
  * Current horizontal scrolling offset.
