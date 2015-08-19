@@ -74,7 +74,7 @@ execute "create-dashboard-db" do
 end
 
 execute "load-dashboard-schema" do
-  command "rake db:setup_or_migrate"
+  command "rake db:migrate"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL'=>nil,

@@ -6,7 +6,7 @@
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
-  .answers{class: question_content_blank ? 'question-content-blank' : ''}
+  .answers{style: question_content_blank ? 'width: 100%' : ''}
     - if data['options'].try(:[], 'answer_line')
       :css
         .btn {

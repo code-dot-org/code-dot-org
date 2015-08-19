@@ -1036,9 +1036,8 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
     if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
-    // None of our top level blocks should have a previous or output connection
-    // (they should only have a next)
-    if (topBlocks[i].previousConnection || topBlocks[i].outputConnection) {
+    // None of our top level blocks should have a previous connection.
+    if (topBlocks[i].previousConnection) {
       return true;
     }
   }
