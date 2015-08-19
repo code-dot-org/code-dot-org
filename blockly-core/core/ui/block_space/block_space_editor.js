@@ -61,6 +61,13 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
 };
 
 /**
+ * Pixel padding to maintain below the lowest block in the blockspace.
+ * @type {number}
+ * @const
+ */
+Blockly.BlockSpaceEditor.BOTTOM_BLOCK_MARGIN = 50;
+
+/**
  * If enabled, during block bumping the entire block will be bumped into view.
  *
  * If disabled, when dragged off the bottom or right of the blockspace, the
@@ -820,7 +827,8 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     viewWidth: viewWidth,
     viewTop: viewTop,
     viewLeft: viewLeft,
-    contentHeight: blockBoundingRect.height,
+    contentHeight: blockBoundingRect.height
+      + Blockly.BlockSpaceEditor.BOTTOM_BLOCK_MARGIN,
     contentWidth: blockBoundingRect.width,
     contentTop: blockBoundingRect.top,
     contentLeft: blockBoundingRect.left,
