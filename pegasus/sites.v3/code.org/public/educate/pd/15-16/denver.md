@@ -8,7 +8,7 @@ nav: pd2_nav
 
 ## Computer Science Principles
 
-Denver teachers enrolled in the Computer Science Principles program will attend PD in Spokane, WA. Please visit the [Spokane CSP](/educate/pd/15-16/spokane) page for all  workshop details
+Denver teachers enrolled in the Computer Science Principles program will attend PD in Spokane, WA. Please visit the [Spokane location page](/educate/pd/15-16/spokane) for all  workshop details
 
 
 ----------
