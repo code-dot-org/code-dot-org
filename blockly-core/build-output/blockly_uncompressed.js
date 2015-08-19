@@ -5423,8 +5423,8 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function(e) {
   if(Blockly.selected && (!Blockly.readOnly && clickIsOnTarget)) {
     Blockly.selected.unselect()
   }
-  var blockUnmovable = Blockly.selected && !Blockly.selected.isMovable();
-  var shouldDrag = clickIsOnTarget || (blockUnmovable || Blockly.readOnly);
+  var blockNonInteractive = Blockly.selected && (!Blockly.selected.isMovable() && !Blockly.selected.isEditable());
+  var shouldDrag = clickIsOnTarget || (blockNonInteractive || Blockly.readOnly);
   var isLeftClick = !Blockly.isRightButton(e);
   if(this.blockSpace_.scrollbarPair && (isLeftClick && shouldDrag)) {
     this.beginDragScroll_(e);
@@ -23828,6 +23828,22 @@ Blockly.addToNonZeroSides = function(box, amount) {
 };
 Blockly.svgIgnoreMouseEvents = function(element) {
   element.style.pointerEvents = "none"
+};
+Blockly.fireTestClickSequence = function(target) {
+  Blockly.fireTestMouseEvent(target, "mousedown");
+  Blockly.fireTestMouseEvent(target, "mouseup");
+  Blockly.fireTestMouseEvent(target, "click")
+};
+Blockly.fireTestMouseEvent = function(target, eventName) {
+  if(!document.createEvent) {
+    throw"fireTestMouseEvent is only for testing in browsers with createEvent";
+  }
+  target.dispatchEvent(Blockly.makeTestMouseEvent(eventName))
+};
+Blockly.makeTestMouseEvent = function(eventName) {
+  var event = document.createEvent("MouseEvents");
+  event.initMouseEvent(eventName, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+  return event
 };
 goog.provide("Blockly.FieldImageDropdown");
 goog.require("Blockly.Field");

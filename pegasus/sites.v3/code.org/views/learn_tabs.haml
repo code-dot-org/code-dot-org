@@ -8,5 +8,5 @@
       %li{:class=>(request.path == '/learn/local') ? 'active tab' : 'tab'}<
         %a{:href=>'/learn/local'} Find Local Schools + Camps
       - if request.site == 'code.org'
-        %li{:class=>(request.path == 'http://studio.code.org') ? 'active tab' : 'tab'}<
-          %a{:href=>'http://studio.code.org'} Code Studio
+        %li{:class=>'tab'}<
+          %a{:href=>CDO.studio_url} Code Studio
