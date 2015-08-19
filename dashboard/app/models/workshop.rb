@@ -57,10 +57,10 @@ class Workshop < ActiveRecord::Base
         [teachers, drop_ins, facilitators].each do |recipient_list|
           recipient_list.each do |recipient|
             if workshop.segments.first.start.to_date == Date.today
-              puts("Sending exit survey info to #{recipient.properties['ops_first_name']}")
+              logger.debug("Sending exit survey info to #{recipient.email}")
               OpsMailer.exit_survey_information(workshop, recipient).deliver
             else
-              puts("Sending email reminder to #{recipient.properties['ops_first_name']}")
+              logger.debug("Sending email reminder to #{recipient.email}")
               OpsMailer.workshop_reminder(workshop, recipient).deliver
             end
           end
