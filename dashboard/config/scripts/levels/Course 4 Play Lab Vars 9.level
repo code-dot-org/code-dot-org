@@ -28,7 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "min_workspace_height": "2000",
+    "min_workspace_height": "1000",
     "scrollbars": "false",
     "embed": "false",
     "disable_sharing": "false",
@@ -41,7 +41,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
