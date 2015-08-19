@@ -78,4 +78,8 @@ class AwsS3IntegrationTest < Minitest::Unit::TestCase
     assert !allows_public_reads, 'default acl should not allow public reads'
   end
 
+  def test_public_url
+    assert_equal "https://cdo-temp.s3.amazonaws.com/a/filename.pdf",  AWS::S3.public_url(TEST_BUCKET, 'a/filename.pdf')
+  end
+
 end
