@@ -48,11 +48,11 @@ class OpsMailerTest < ActionMailer::TestCase
 
   test "workshop_in_3_days_reminder" do
     # Create a workshop that starts 3 days from now. Include other segments for authenticity
-    @workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', Date.today + 14.day)
+    @workshop_1 = create_workshop(['abc@code.org', 'xyz@code.org'], 'facilitator_1@code.org', Date.today + 3.day)
 
     # Create a workshop that starts 2 days from now but which includes a later segment 3 days from now to verify
     # that users are not incorrectly notified.
-    @workshop_2 = create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', Date.today + 13.day)
+    @workshop_2 = create_workshop(['123@code.org', '987@code.org'], 'facilitator_2@code.org', Date.today + 2.day)
 
     # Create a workshop that ends completely before 3 days from now to verify that users are not incorrectly notified.
     @workshop_3 = create_workshop(['xxx@code.org', 'yyy@code.org'], 'facilitator_3@code.org', Date.today - 30.day)
