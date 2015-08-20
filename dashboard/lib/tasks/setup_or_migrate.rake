@@ -1,7 +1,9 @@
+require 'active_record/errors'
+
 namespace :db do
   def database_exists?
     ActiveRecord::Base.connection
-  rescue
+  rescue ActiveRecord::NoDatabaseError
     false
   else
     true
