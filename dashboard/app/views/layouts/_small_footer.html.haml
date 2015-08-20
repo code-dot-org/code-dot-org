@@ -1,7 +1,8 @@
 .small-footer
-  = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
-    = hidden_field_tag :return_to, request.url
-    = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
+  - if view_options[:has_i18n]
+    = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
+      = hidden_field_tag :return_to, request.url
+      = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
   %small
     -# TODO: Localize
     = link_to 'Copyright', '#', class: 'copyright-link'

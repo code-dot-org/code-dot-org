@@ -1,0 +1,71 @@
+%p
+  Dear #{@recipient.ops_first_name},
+%p
+  Your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d, %Y")} is coming up.
+  - if @workshop.phase == 8 && (@workshop.program_type == 4 || @workshop.program_type == 3)
+    Make sure you have completed Phase 3 online.
+%p
+  Please email
+  %a{href:'mailto:pd@code.org'}
+    pd@code.org
+  if you have any conflicts with these dates.
+- if @workshop.phase == 2
+  %h2
+    Complete #{@workshop.phase_info[:long_name]}
+  %p
+    You must complete #{@prerequisite_phase[:long_name]} prior to attending the #{@workshop.phase_info[:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
+  %ul
+    %li
+      Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+    %li
+      Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
+%p
+  %em
+    Here’s what a successful online PD looks like. All the progress circles are green.
+%img{src:"#{@workshop.program_type_info[:short_name].gsub(/\s+/, "") + @workshop.phase_info[:short_name].gsub(/\s+/, "")}.jpg"}
+
+%h2
+  Workshops Details
+%p
+  See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
+%h3
+  Dates and times
+%ul
+  - @workshop.segments.each do |segment|
+    %li
+      #{segment.start.strftime("%A, %B %d, %Y")}
+      %br
+      #{segment.start.strftime("%I:%M %P")} - #{segment.end.strftime("%I:%M %P")}
+%h3
+  Location
+%p
+  #{@workshop[:location]}
+%h3
+  Catering
+%p
+  Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+%h3
+  What to bring
+- if @workshop.phase == 2
+  -if @workshop.program_type == 3
+    %p
+      Laptop (optional), water bottle, and snacks
+  -else
+    %p
+      Laptop and charger, water bottle, and snacks
+- elsif @workshop.phase >= 4 && @workshop.phase <= 8
+  -if @workshop.program_type == 3
+    %p
+      Curriculum guide, green journal, laptop and charger, water bottle, and snacks
+  -else
+    %p
+      Curriculum guide, laptop and charger, water bottle, and snacks
+-if @workshop.instructions
+  %h3
+    Notes
+  %p
+    #{@workshop.instructions}
+%p
+  See you soon,
+%br
+  The Code.org PD team

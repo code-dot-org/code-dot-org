@@ -351,9 +351,6 @@ es-MX:
         Alguien comenzó el código, pero se dio cuenta que debe haber una manera más rápida! Utilice un bloque "for" para reemplazar los bloques y completar la espiral hexagonal.
         Sugerencia: 
         La longitud de la última línea es de 200 píxeles.
-      4-5 Artist For Loops 2_instruction: |
-        Este es un bloque "for". En lugar de escribir 1,2,3... 10, el bloque "for" puede repetir los bloques en su interior y contar los números para ti. 
-        Coloque el número 10 en la sección "to" del bloque "for".
       4-5 Artist For Loops 3_instruction: |
         ¿Cómo podemos contar de 1 a 50?
         Editar el bloque "for" .
@@ -2444,6 +2441,9 @@ es-MX:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -2459,6 +2459,11 @@ es-MX:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

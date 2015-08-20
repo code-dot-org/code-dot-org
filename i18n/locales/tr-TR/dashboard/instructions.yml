@@ -255,7 +255,6 @@ tr:
       4-5 Artist For Loops 13_instruction: 'Bu dizayn "for" döngüsü olmadan çok fazla blok alıyor! "For" bloğu ile satırları azaltın. İpucu: son satır uzunluğu 250 pixel.'
       4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmal tamamlamak için "For" bloğunu kullanın. (İpucu: son satı ruzunluğu 300 pixeldir.)'
       4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
-      4-5 Artist For Loops 2_instruction: 'Bu bir "için" blok var. 1,2,3 yazmak yerine... 10, "için" blok blok içindeki tekrarlayın ve sana olan sayıları sayma. 10 numara "için" blok "için" bölümüne yerleştirin.'
       4-5 Artist For Loops 3_instruction: |-
         1'den 50'ye kadar nasıl sayabiliriz? "For" bloğunu düzenleyin.
       4-5 Artist For Loops 4_instruction: |
@@ -3168,6 +3167,9 @@ tr:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3183,6 +3185,11 @@ tr:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

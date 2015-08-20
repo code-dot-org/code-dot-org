@@ -60,6 +60,11 @@
       -ms-user-select: text;
       -khtml-user-select: text;
       user-select: text; }
+    #netsim #router-log-modal .log-browser-limit-message {
+      padding: 0.5em;
+      text-align: center;
+      font-style: italic;
+      color: #5b6770; }
   #netsim #netsim-disconnected {
     display: block;
     position: relative;
@@ -73,6 +78,7 @@
     bottom: 0;
     left: 0;
     width: 320px;
+    overflow-x: hidden;
     overflow-y: auto; }
     #netsim #netsim-leftcol > .column-width-limiter {
       width: 300px; }

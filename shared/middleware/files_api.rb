@@ -52,7 +52,15 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    dont_cache
+    case endpoint
+    when 'assets'
+      cache_one_hour
+    when 'sources'
+      dont_cache
+    else
+      not_found
+    end
+
     type = File.extname(filename)
     not_found if type.empty?
     content_type type
@@ -123,4 +131,16 @@ class FilesApi < Sinatra::Base
     SourceBucket.new.list_versions(encrypted_channel_id, filename).to_json
   end
 
+  #
+  # PUT /v3/sources/<channel-id>/<filename>/restore?version=<version-id>
+  #
+  # Copies the given version of the file to make it the current revision.
+  # NOTE: Not yet implemented for assets.
+  #
+  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+  end
 end

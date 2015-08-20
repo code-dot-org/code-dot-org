@@ -1,3 +1,7 @@
+#external {
+  clear: both;
+}
+
 #visualization {
   overflow: hidden;
 }

@@ -19,6 +19,7 @@ class NetSimApi < Sinatra::Base
   helpers do
     %w{
       core.rb
+      auth_helpers.rb
       storage_id.rb
       table.rb
       null_pub_sub_api.rb
@@ -39,7 +40,8 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name)
+    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
+                   CDO.netsim_shard_expiry_seconds)
   end
 
   #
@@ -126,6 +128,50 @@ class NetSimApi < Sinatra::Base
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |shard_id, table_name|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+  end
+
+  #
+  # DELETE /v3/netsim/<shard-id>
+  #
+  # Deletes the entire shard.
+  #
+  delete %r{/v3/netsim/([^/]+)$} do |shard_id|
+    dont_cache
+    not_authorized unless allowed_to_delete_shard? shard_id
+    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    no_content
+  end
+
+  # @param [String] shard_id - The shard we're checking delete permission for.
+  # @return [Boolean] Always true if current user is an admin; also true if the
+  #         current user is the teacher who owns the shard indicated by the
+  #         shard_id parameter.
+  def allowed_to_delete_shard?(shard_id)
+    admin? or owns_shard? shard_id
+  end
+
+  # @param [String] shard_id - The shard we're checking ownership for.
+  # @return [Boolean] True if the current user is the teacher who owns the
+  #         shard indicated by the shard_id parameter.
+  def owns_shard?(shard_id)
+    # Not great, but passable: A shard ID matching /_(\d+)$/ is considered to
+    # be associated with the section having the captured integer ID.
+    # This means there are cases where custom section IDs (?s= URLs) might be
+    # owned by teachers that have nothing to do with them.
+    # This is acceptable for now - there should be no expectation of security
+    # on custom shard IDs, and it's not particularly harmful to reset a shard.
+    match_result = /_(\d+)$/.match(shard_id)
+    section_id = match_result.nil? ? nil : match_result[1].to_i
+    owns_section? section_id
+  end
+
+  #
+  # POST /v3/netsim/<shard-id>/delete
+  #
+  # This mapping exists for older browsers that don't support the DELETE verb.
+  #
+  post %r{/v3/netsim/([^/]+)/delete$} do |shard_id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 

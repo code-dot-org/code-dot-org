@@ -11,7 +11,7 @@
     "timeout_after_when_run": "false",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "At this point your game your danger should run across the screen from right to left, and your target should run across from left to right. They don't ever come back on screen once they've left, but we'll take care of that later. Take a minute to make sure your game is working like you want it to, and then click finish to move on.",
+    "instructions": "At this point in your game, your danger should run across the screen from right to left, and your target should run across from left to right. They don't ever come back on screen once they've left, but we'll take care of that later. Take a minute to make sure your game is working like you want it to, and then click Finish to move on.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -38,8 +38,9 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
-    "markdown_instructions": "At this point your game your danger should run across the screen from right to left, and your target should run across from left to right.\r\n\r\nThey don't ever come back on screen once they've left, but we'll take care of that later.\r\n\r\nTake a minute to make sure your game is working like you want it to, and then click finish to move on.",
+    "markdown_instructions": "At this point in your game your danger should run across the screen from right to left, and your target should run across from left to right.\r\n\r\nThey don't ever come back on screen once they've left, but we'll take care of that later.\r\n\r\nTake a minute to make sure your game is working like you want it to, and then click Finish to move on.",
     "disable_examples": "false",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>

@@ -236,7 +236,6 @@ it:
         Qualcuno ha iniziato il codice, ma poi si è accorto che ci deve essere un modo più veloce! Usa un blocco "per" per sostituire i blocchi e completare la spirale triangolare. (Aiuto: la lunghezza dell'ultima linea è di 300 pixel.
       4-5 Artist For Loops 15_instruction: |-
         Qualcuno ha lanciato il codice, ma poi ha realizzato che ci deve essere un modo più veloce! Usa il blocco "for" per sostituire i blocchi e completa la spirale esagonale. (Suggerimento: la lunghezza dell'ultima linea è 200 pixel.)
-      4-5 Artist For Loops 2_instruction: 'Questo è un blocco "for". Invece di digitare 1, 2, 3... 10, il blocco "for" può ripetere i blocchi al suo interno e contare i numeri per te. Posiziona il numero 10 nella sezione "to" del blocco "for".'
       4-5 Artist For Loops 3_instruction: 'Come possiamo contare da 1 a 50? Modifica il blocco "for".'
       4-5 Artist For Loops 4_instruction: 'Completa il blocco "for" così che conti da 1 a 10 a passi di 1.'
       4-5 Artist For Loops 6_instruction: 'Disegna dei quadrati con lato di 50, 60, 70, 80, e 90 pixel. Devi usare la funzione "disegna un quadrato" 5 volte.'
@@ -1880,17 +1879,20 @@ it:
       scrat 19_instruction: 'Ancora un esercizio con il blocco "se-altrimenti": riesci a risolverlo correttamente al primo tentativo?'
       scrat 20_instruction: Riesci ad aggiungere solo 3 blocchi per farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare lungo un percorso tortuoso di qualsiasi lunghezza. Fai in fretta! Il ghiaccio si sta sciogliendo!
       SpecialFrozenLevel_instruction: Sei ufficialmente diventato un mastro artista! Crea un meraviglioso paesaggio invernale.
-      Standalone_Artist_1_instruction: "Benvenuto all'Artista! Prima di tutto, cerchiamo di fare un semplice quadrato utilizzando il blocco gira a destra e il blocco muovi in avanti. Ogni lato deve essere lungo 100 pixel."
-      Standalone_Artist_2_instruction: Disegna questo diamante che ha gli angoli da 120 e 60 gradi e i lati lunghi 100 pixel.
-      Standalone_Artist_3_instruction: È possibile disegnare questo esagono con i lati di 100 pixel e angoli di 60 gradi?
-      Standalone_Artist_4_instruction: Abbiamo ora un nuovo blocco con cui lavorare, il ciclo (loop). Questo blocco ripeterà un insieme di comandi. Cosa succede se si ripetono questi comandi 6 volte?
-      Standalone_Artist_5.5_instruction: 'Osserva come abbiamo semplificato il codice utilizzando un ciclo. Puoi eseguire il ciclo 12 volte per disegnare un fiore. Suggerimento: devi ruotare di 30 gradi dopo ogni ciclo del rombo altrimenti disegni sempre la stessa figura.'
-      Standalone_Artist_5_instruction: Quante volte è necessario eseguire questo ciclo per disegnare il fiore?
-      Standalone_Artist_6_instruction: 'Ripeti 6 volte il codice di questo esagono per realizzare la figura. Di quanti gradi dovrai girare ogni volta? Suggerimento: dividi il numero di gradi di un cerchio per il numero di volte che stai girando.'
-      Standalone_Artist_7_instruction: 'Una funzione è un altro strumento di programmazione che ti aiuta ad evitare inutili ripetizioni. Questa funzione disegna un fiore, e potrai usarla ogni volta che vuoi disegnare un fiore. Usala insieme al nuovo blocco "salta" per disegnare questi fiori. Suggerimento: i fiori sono distanti tra loro 150 pixel'
-      Standalone_Artist_8_instruction: 'Ecco una funzione chiamata "Disegna una forma" che abbiamo programmato per disegnare degli esagoni. Esegui il codice per vedere che cosa fa e poi fai esperimenti con questa funzione per vedere cosa succede. Potete fare in modo che disegni una composizione di quadrati, triangoli o ottagoni?'
-      Standalone_Artist_9_instruction: 'Ora procedi  e realizza qualsiasi immagine che desideri! Hai anche una funzione vuota con cui puoi fare quello che vuoi!'
-      Standalone_Artist_v2_instruction: "Benvenuto all'Artista! Prima di tutto, cerchiamo di fare un semplice quadrato utilizzando il blocco gira a destra e il blocco muovi in avanti. Ogni lato deve essere lungo 100 pixel."
+      Standalone_Artist_1_instruction: |-
+        Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare un semplice quadrato utilizzando il blocco "gira a destra" e il blocco "vai avanti". Ogni lato è lungo 100 pixel.
+      Standalone_Artist_2_instruction: Disegna questo rombo che ha gli angoli da 120 e 60 gradi e i lati lunghi 100 pixel.
+      Standalone_Artist_3_instruction: Come fai a disegnare questo esagono che ha i lati lunghi 100 pixel e gli angoli da 60 gradi?
+      Standalone_Artist_4_instruction: |-
+        Adesso c'è il nuovo blocco "ripeti 6 volte". Questo blocco di ripetizione, detto anche "ciclo", ripete 6 volte quello che si trova al suo interno. Cosa succede se si ripete 6 volte il codice in grigio che trovi già pronto?
+      Standalone_Artist_5.5_instruction: 'Osserva come abbiamo semplificato il codice utilizzando il blocco "ripeti ... volte" (ciclo). Per disegnare un fiore devi adesso ripetere per 12 volte tutta la sequenza di blocchi in grigio. Attenzione: ruota di 30 gradi dopo ogni ciclo del rombo altrimenti disegni sempre la stessa figura.'
+      Standalone_Artist_5_instruction: Quante volte è necessario ripetere il codice che trovi già pronto per disegnare il fiore?
+      Standalone_Artist_6_instruction: "Ripeti 6 volte il codice che trovi già pronto (che disegna un esagono) per realizzare l'intera figura. Di quanti gradi devi girare ogni volta? Suggerimento: dividi il numero di gradi di un cerchio per il numero di ripetizioni."
+      Standalone_Artist_7_instruction: 'Una funzione è un altro strumento di programmazione che aiuta ad evitare inutili ripetizioni. Questa funzione disegna un fiore, e puoi usarla ogni volta che vuoi disegnare un fiore. Usala insieme al nuovo blocco "salta" per disegnare questi fiori. Suggerimento: i fiori sono distanti tra loro 150 pixel.'
+      Standalone_Artist_8_instruction: 'Qui trovi la funzione "disegna una forma" che è stata costruita in modo che disegni degli esagoni. Clicca su "Esegui" per vedere cosa fa il codice che trovi già pronto e poi fai degli esperimenti per vedere cosa succede. Puoi variare la funzione in modo che disegni una composizione di quadrati, triangoli o ottagoni? Cosa succede se vari anche altri valori?'
+      Standalone_Artist_9_instruction: Ora continua e realizza qualsiasi figura desideri! Hai anche una funzione vuota che puoi riempire a tuo piacere!
+      Standalone_Artist_v2_instruction: |-
+        Benvenuto all'Artista! Prima di tutto, cerchiamo di disegnare un semplice quadrato utilizzando il blocco "gira a destra" e il blocco "vai avanti". Ogni lato è lungo 100 pixel.
       Test Play Lab_instruction: This is a test play lab level.
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
@@ -2329,6 +2331,9 @@ it:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -2344,6 +2349,11 @@ it:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

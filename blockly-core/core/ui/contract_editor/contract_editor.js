@@ -130,6 +130,8 @@ Blockly.ContractEditor = function(configuration) {
    */
   this.testResetHandler_ = function () { };
 
+  this.customFailureCloseHandler_ = function () { return false; };
+
   /**
    * @type {Blockly.ExampleView[]}
    * @private
@@ -143,6 +145,8 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
+
+Blockly.ContractEditor.GRID_LINE_COLOR = '#5b6770'; // dark gray
 
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
@@ -176,35 +180,38 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
-  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv');
+  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv innerModalDiv');
   this.addExampleButton = goog.dom.createDom('button', 'exampleAreaButton btn');
   this.addExampleButton.innerHTML = "Add Example";
   Blockly.bindEvent_(this.addExampleButton, 'click', this, this.addNewExampleBlock_);
   goog.dom.append(this.exampleAreaDiv, this.addExampleButton);
   this.exampleAreaDiv.style.display = 'block';
   this.exampleAreaDiv.style.position = 'absolute';
-  goog.dom.insertChildAt(this.container_, this.exampleAreaDiv, 0);
+  goog.dom.insertChildAt(this.frameClipDiv_, this.exampleAreaDiv, 0);
 
-  this.callText = goog.dom.createDom('div', 'callText');
+  this.callText = goog.dom.createDom('div', 'callResultText');
   this.callText.innerHTML = "Call";
+  Blockly.svgIgnoreMouseEvents(this.callText);
   goog.dom.appendChild(this.exampleAreaDiv, this.callText);
 
-  this.resultText = goog.dom.createDom('div', 'callText');
+  this.resultText = goog.dom.createDom('div', 'callResultText');
   this.resultText.innerHTML = "Result";
   goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
+  Blockly.svgIgnoreMouseEvents(this.resultText);
 
   this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
 
   this.topHorizontalLine = Blockly.createSvgElement('rect', {
-    'fill': '#000'
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
   }, this.examplesTableGroup);
   this.topHorizontalLine.setAttribute('height', 2.0);
+  Blockly.svgIgnoreMouseEvents(this.topHorizontalLine);
 
   // TODO(bjordan): get horizontal line #X helper, lay out below examples
 
 
   this.verticalExampleMidline = Blockly.createSvgElement('rect', {
-    'fill': '#000'
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
   }, this.examplesTableGroup);
   this.verticalExampleMidline.setAttribute('width', 2.0);
 
@@ -390,12 +397,31 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
+/**
+ * Allows app to pass in a function that should be run against an example block
+ * when user hits Test button
+ * @param {function} testHandler
+ */
 Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
   this.testHandler_ = testHandler;
 };
 
+/**
+ * Allows app to pass in a function that should be run when user resets a test
+ * @param {function} testResetHandler
+ */
 Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetHandler) {
   this.testResetHandler_ = testResetHandler;
+};
+
+/**
+ * Allows app to pass in a function that is called on contract editor close if
+ * any examples fail. This function should return true if the app wants to own
+ * closing the dialog
+ * @param {function} handler
+ */
+Blockly.ContractEditor.prototype.registerTestsFailedOnCloseHandler = function (handler) {
+  this.customFailureCloseHandler_ = handler;
 };
 
 /**
@@ -408,6 +434,14 @@ Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(ex
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   functionCall.setCanDisconnectFromParent(false);
   this.exampleBlocks.push(movedExampleBlock);
+  movedExampleBlock.blockEvents.listen(Blockly.Block.EVENTS.AFTER_DROPPED, function () {
+    // Layout our blocks, which pops this example back into its slot.
+    this.layOutBlockSpaceItems_();
+
+    // Update scrollable size now that the example is back in its spot & not
+    // extending the scrollable area.
+    this.modalBlockSpace.updateScrollableSize();
+  }.bind(this));
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
     this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
 };
@@ -823,23 +857,26 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
 
 /**
  * Call our app-specific test handler for this block
- * @return {string} Result describing pass/failure
+ * @param {Blockly.Block} block
+ * @param {boolean} visualize True if app should visualize the test
+ * @return {string} Result failure, or null if no failure
  */
-Blockly.ContractEditor.prototype.testExample = function (block) {
-  return this.testHandler_(block);
+Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
+  return this.testHandler_(block, visualize);
 };
 
 /**
  * Call our app-specific test reset handler for this block
+ * @param {Blockly.Block} block
  */
 Blockly.ContractEditor.prototype.resetExample = function (block) {
   this.testResetHandler_(block);
 };
 
-Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) {
+Blockly.ContractEditor.prototype.updateExampleResult = function (block, failure) {
   this.exampleViews_.some(function (view) {
-    if (view.isViewForBlock(block)) {
-      view.setResult(result);
+    if (view.getBlock() === block) {
+      view.setResult(failure);
       // Return true so that we stop looking for a matching view
       return true;
     }
@@ -856,9 +893,9 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
 
   var metrics = this.modalBlockSpace.getMetrics();
 
-  this.exampleAreaDiv.style.left = metrics.absoluteLeft + 'px';
-  this.exampleAreaDiv.style.top = metrics.absoluteTop +
-      this.modalBlockSpace.yOffsetFromView + 'px';
+  var exampleDivTop = currentY;
+  this.exampleAreaDiv.style.left = this.modalBlockSpace.xOffsetFromView + 'px';
+  this.exampleAreaDiv.style.top = this.modalBlockSpace.yOffsetFromView + currentY + 'px';
   this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
 
   var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
@@ -875,10 +912,10 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   if (exampleSectionVisible) {
     newY += blockSplitMargin;
 
-    this.callText.style.top = newY + 'px';
+    this.callText.style.top = newY - exampleDivTop + 'px';
     this.callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
 
-    this.resultText.style.top = newY + 'px';
+    this.resultText.style.top = newY - exampleDivTop + 'px';
     this.resultText.style.left = verticalMidlineOffset +
       EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
 
@@ -899,7 +936,7 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
       }
       newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY,
         maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW,
-        this.getFullWidth(), verticalMidlineOffset);
+        this.getFullWidth(), verticalMidlineOffset, exampleDivTop);
     }, this));
   }
 
@@ -917,7 +954,7 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
 
   newY += blockSplitMargin;
 
-  this.addExampleButton.style.top = newY + 'px';
+  this.addExampleButton.style.top = newY - exampleDivTop + 'px';
   this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
   newY += this.addExampleButton.offsetHeight;
   newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
@@ -925,4 +962,24 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
 
   return newY;
+};
+
+Blockly.ContractEditor.prototype.onClose = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  var allPass = true;
+  this.exampleViews_.forEach(function (view) {
+    var failure = this.testExample(view.getBlock(), false);
+    view.setResult(failure);
+    view.refreshTestingUI(false);
+    allPass = allPass && !failure;
+  }.bind(this));
+  if (!allPass && this.customFailureCloseHandler_()) {
+    // app has taken responsibilty for closing dialog (likely by launching
+    // modal confirm dialog
+    return;
+  }
+
+  this.hideIfOpen();
 };

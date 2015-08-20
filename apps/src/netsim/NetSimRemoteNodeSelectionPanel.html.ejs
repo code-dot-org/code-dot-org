@@ -57,7 +57,7 @@ var nodeToRowMetadata = function (node) {
     displayName: node.getDisplayName(),
     hostname: node.getHostname(),
     status: node.getStatus(),
-    isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
+    isFull: node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };

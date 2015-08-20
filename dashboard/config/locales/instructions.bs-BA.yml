@@ -424,9 +424,6 @@
       4-5 Artist For Loops 15_instruction: 'Neko je započeo ovaj kod ali je shvatio/la
         da mora postojati brži način! Upotrijevi "od-do" blok da bi se dovršila šestougaona
         spirala. (Savjet: dužina zadnje linije je 200 piksela.'
-      4-5 Artist For Loops 2_instruction: Ovo je "od-do" blok. Umjesto tipkanja 1,2,3...10,
-        "od-do" blok može ponoviti komande unutar sebe i brojati za tebe. Postavi
-        broj 10 u "do" dio "od-do" bloka.
       4-5 Artist For Loops 3_instruction: Kako možemo brojati od 1 do 50? Izmjeni
         "od-do" blok.
       4-5 Artist For Loops 4_instruction: Dovrši "od-do" blok tako da broji od 1 do
@@ -3069,6 +3066,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3083,6 +3083,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

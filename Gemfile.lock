@@ -53,10 +53,6 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    aws-s3 (0.6.3)
-      builder
-      mime-types
-      xml-simple
     aws-sdk (2.1.2)
       aws-sdk-resources (= 2.1.2)
     aws-sdk-core (2.1.2)
@@ -420,7 +416,6 @@ GEM
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
-    xml-simple (1.1.4)
 
 PLATFORMS
   ruby
@@ -429,7 +424,6 @@ DEPENDENCIES
   active_model_serializers!
   active_record_query_trace
   acts_as_list
-  aws-s3
   aws-sdk (~> 2)
   better_errors
   binding_of_caller
@@ -517,4 +511,4 @@ DEPENDENCIES
   videojs_rails
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

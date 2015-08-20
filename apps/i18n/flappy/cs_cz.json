@@ -117,7 +117,7 @@
   "speedSlow": "nastavit pomalou rychlost",
   "speedNormal": "nastavit normální rychlost",
   "speedFast": "nastavit vysokou rychlost",
-  "speedVeryFast": "nastavit nelmi vysokou rychlost",
+  "speedVeryFast": "nastavit velmi vysokou rychlost",
   "whenClick": "když klikneš",
   "whenClickTooltip": "Provést akce uvedené níže, když dojde ke kliknutí.",
   "whenCollideGround": "když se dotkne země",

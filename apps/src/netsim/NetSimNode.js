@@ -112,6 +112,14 @@ NetSimNode.prototype.getStatus = function () {
 };
 
 /**
+ * Whether or not this node can accept any more connections
+ * @returns {boolean}
+ */
+NetSimNode.prototype.isFull = function () {
+  throw new Error('isFull method is not implemented');
+};
+
+/**
  * Establish a connection between this node and another node,
  * by creating a wire between them, and verifying that the remote node
  * can accept the connection.
