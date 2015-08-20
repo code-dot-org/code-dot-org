@@ -244,3 +244,41 @@ function test_contractEditor_change_output_types() {
   Blockly.contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
+
+function test_contractEditor_new_function_button_then_delete() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+  var contractEditor = Blockly.contractEditor;
+
+  contractEditor.openWithNewFunction();
+  contractEditor.addNewExampleBlock_();
+  contractEditor.addNewExampleBlock_();
+
+  var definitionBlock = contractEditor.functionDefinitionBlock;
+  var functionName = definitionBlock.getProcedureInfo().name;
+  var dialogTriggered = false;
+  contractEditor.registerDialog(function (a, b, c, d, confirmCallback) {
+    // Fake dialog class which confirms immediately
+    dialogTriggered = true;
+    confirmCallback();
+  });
+
+  assertTrue('Contract editor is open', contractEditor.isOpen());
+  assertEquals('Has four examples',
+      4, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+  assertNotNull('Function exists',
+      Blockly.mainBlockSpace.findFunction(functionName));
+  assertFalse(dialogTriggered);
+
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertTrue(dialogTriggered);
+  assertFalse('Contract editor no longer open', contractEditor.isOpen());
+  assertEquals('Has no examples',
+      0, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+  assertNull('Function no longer exists',
+      Blockly.mainBlockSpace.findFunction(functionName));
+
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
