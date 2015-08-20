@@ -867,13 +867,15 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
   var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
   var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
 
+  var extraVerticalSpace = this.isFlyout ? 0 :
+      Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+
   return {
     width: canScrollHorizontally ?
         Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
         metrics.viewWidth,
     height: canScrollVertically ?
-        Math.max(metrics.contentTop + metrics.contentHeight +
-            Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM,
+        Math.max(metrics.contentTop + metrics.contentHeight + extraVerticalSpace,
             metrics.viewHeight) : metrics.viewHeight
   };
 };
