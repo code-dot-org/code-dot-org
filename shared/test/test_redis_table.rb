@@ -19,13 +19,14 @@ class RedisTableTest < Minitest::Unit::TestCase
     # and could be intermingled in the event of a bug.
 
     table = RedisTable.new(@redis, @pubsub, 'shard1', 'table')
-    # Create another table in the sa2me shard.
+    # Create another table in the same shard.
     table2 = RedisTable.new(@redis, @pubsub, 'shard1', 'table2')
-    # Create a third table in a diff2erent shard.
+    # Create a third table in a different shard.
     table3 = RedisTable.new(@redis, @pubsub, 'shard2', 'table2')
 
     assert_equal [], table.to_a
     assert_raises(RedisTable::NotFound) { table.fetch(1) }
+    assert_raises(RedisTable::NotFound) { table.update(1, {}) }
 
     value = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value)
@@ -53,7 +54,6 @@ class RedisTableTest < Minitest::Unit::TestCase
     value2a = {'foo' => 53}
     updated_row2 = table.update(2, value2a)
     assert_equal updated_row2, table.fetch(2)
-    assert_equal row2['uuid'], updated_row2['uuid']
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'update', :id => 2}),
                  @pubsub.publish_history[3]
 
@@ -204,6 +204,35 @@ class RedisTableTest < Minitest::Unit::TestCase
     @redis.time_travel margin_time
     assert_equal [], table.to_a
   end
+
+  def test_uuids
+    table = RedisTable.new(@redis, @pubsub, 'shard1', 'table')
+
+    # An inserted row is assigned both an ID and a UUID
+    value = {'name' => 'alice', 'age' => 7, 'male' => false}
+    row1 = table.insert(value)
+    assert_equal 1, row1['id']
+    # UUID changes across tests so we do a pattern check
+    refute_nil /[\w\d]{8}-[\w\d]{4}-[\w\d]{4}-[\w\d]{4}-[\w\d]{12}/ =~ row1['uuid']
+
+    # Updating a row preserves its ID and UUID
+    row1_a = table.update(row1['id'], {'name' => 'alex', 'age' => 8, 'male' => true})
+    assert_equal row1['id'], row1_a['id']
+    assert_equal row1['uuid'], row1_a['uuid']
+
+    # Trying to update the UUID is ignored, the original one is preserved
+    row1_b = table.update(row1['id'], {'name' => 'april', 'age' => 9, 'male' => false, 'uuid' => 'fake-uuid'})
+    assert_equal row1['id'], row1_b['id']
+    assert_equal row1['uuid'], row1_b['uuid']
+
+    # A shard reset lets you generate a row with the same ID but a different UUID.
+    RedisTable.reset_shard('shard1', @redis, @pubsub)
+    value = {'name' => 'beth', 'age' => 10, 'male' => false}
+    row1_c = table.insert(value)
+    assert_equal row1['id'], row1_c['id']
+    refute_equal row1['uuid'], row1_c['uuid']
+  end
+
 
   private
 
