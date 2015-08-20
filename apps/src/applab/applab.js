@@ -37,7 +37,7 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
-var clientApi = require('./assetManagement/clientApi');
+var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
@@ -498,7 +498,7 @@ Applab.init = function(config) {
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
-    clientApi.ajax('GET', '', function (xhr) {
+    assetsApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
@@ -895,10 +895,6 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  if (level.showTurtleBeforeRun) {
-    applabTurtle.turtleSetVisibility(true);
-  }
-
   designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
@@ -908,6 +904,10 @@ Applab.reset = function(first) {
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
+  }
+
+  if (level.showTurtleBeforeRun) {
+    applabTurtle.turtleSetVisibility(true);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -1478,4 +1478,13 @@ Applab.getIdDropdown = function (tagFilter) {
       display: quote(id)
     };
   });
+};
+
+/**
+ * @returns {HTMLElement} The first "screen" that isn't hidden.
+ */
+Applab.activeScreen = function () {
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
 };

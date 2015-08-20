@@ -305,7 +305,6 @@ Blockly.Block.terminateDrag_ = function() {
       selected.render();
       goog.Timer.callOnce(
           selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
-      selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
       selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace();
       selected.blockSpace.scrollIntoView(selected);
 
@@ -325,6 +324,10 @@ Blockly.Block.terminateDrag_ = function() {
   }
 
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
+
+  if (selected) {
+    selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
+  }
 };
 
 /**

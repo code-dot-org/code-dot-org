@@ -268,7 +268,8 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, id: level.id
 
     assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n").first.split(" ").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
 
   test "should update level" do

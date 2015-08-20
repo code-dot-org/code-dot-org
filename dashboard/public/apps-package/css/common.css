@@ -54,6 +54,8 @@ html[dir='rtl'] #visualizationColumn {
   #visualizationColumn.pin_bottom #belowVisualization {
     position: absolute;
     overflow: auto; }
+  #visualizationColumn.pin_bottom.embed_hidesource {
+    position: relative; }
 
 div.droplet-palette-group-header {
   font-family: "Gotham 4r", sans-serif, sans-serif;
@@ -679,6 +681,9 @@ input[type="radio"] {
     vertical-align: text-bottom;
     padding-right: 8px; }
 
+#versions-header {
+  display: none; }
+
 #design-headers {
   height: 30px;
   background-color: #7665a0;
@@ -781,6 +786,13 @@ input[type="radio"] {
     transform: scale(-1, 1);
     padding-right: 0;
     padding-left: 8px; }
+
+#showVersionsModal {
+  width: 700px;
+  margin-left: -350px; }
+
+#showVersionsModal .versionRow p {
+  margin: 15px 0 0 0; }
 
 #rotateContainer {
   position: fixed;
@@ -898,7 +910,7 @@ input[type="radio"] {
   margin-left: 0px;
   margin-right: 10px; }
 
-#continue-button:not(.arrow-container) {
+#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
   background-color: #ffa400;
   border: 1px solid #ffa400;
   color: white;

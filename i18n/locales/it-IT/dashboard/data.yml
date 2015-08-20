@@ -244,9 +244,9 @@ it:
         maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale.
         bounce_1: |-
-          Attacca un blocco al blocco "quando la freccia a sinistra" e premi "Esegui". Sposta la racchetta usando la freccia a sinistra per raggiungere l'obiettivo finale.
-        bounce_2: 'Attacca un blocco ai blocchi "quando la freccia a destra" e "quando la freccia a sinistra". Sposta la racchetta per raggiungere entrambi gli obiettivi.'
-        bounce_3: 'Ora prova qualcosa di simile con il blocco "quando la freccia in alto". Sposta la racchetta verso il bersaglio finale in alto.'
+          Attacca un blocco al blocco "quando si preme la freccia a sinistra" e premi "Esegui". Sposta la racchetta usando la freccia a sinistra per raggiungere l'obiettivo finale.
+        bounce_2: 'Attacca un blocco ai blocchi "quando si preme la freccia a destra" e "quando si preme la freccia a sinistra". Sposta la racchetta per raggiungere entrambi gli obiettivi.'
+        bounce_3: 'Ora prova qualcosa di simile con il blocco "quando si preme la freccia in alto". Sposta la racchetta verso il bersaglio finale in alto.'
         bounce_4: Questa volta devi aggiungere quattro blocchi. Sposta la racchetta verso tutti e quattro i bersagli finali per completare questo esercizio.
         bounce_5: 'Faremo volare una palla verso il basso incontro alla racchetta. Attacca un blocco al blocco "quando la palla colpisce la racchetta" per far sì che la palla raggiunga il bersaglio finale.'
         bounce_6: 'Ora il bersaglio finale è in alto. Per risolvere questo esercizio è necessario attaccare dei blocchi ad entrambi i blocchi "quando la palla colpisce".'
@@ -566,7 +566,7 @@ it:
         right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
         name_function: Scrivi qui il nome della tua funzione
         Infinity_move_right_runbutton: 'Aggiungi qui il blocco "sposta il personaggio"'
-        Infinity_move_directions_callout: "Quale blocco farà spostare Baymax verso l'alto quando viene premuta la freccia in su?"
+        Infinity_move_directions_callout: "Quale blocco farà spostare Baymax verso l'alto quando viene premuta la freccia in alto?"
         Infinity_move_directions_callout_arrow: Usa queste frecce per muovere il personaggio
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo evento.
         Infinity_repeat_callout: |-

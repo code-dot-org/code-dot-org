@@ -253,7 +253,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Eval: Strings and Images': Ciągi znaków i obrazy
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
@@ -292,7 +292,7 @@
           Algebra Demo: Algebra Demo
           Evaluation Blocks: Evaluation Blocks
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definiowanie zmiennych
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -506,6 +506,12 @@
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -536,13 +542,13 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          Strings and Images: Ciągi znaków i obrazy
+          Contracts: Kontrakty
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Wartości logiczne
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
@@ -560,11 +566,11 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: Ciągi znaków i obrazy
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Wartości logiczne
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -693,6 +699,7 @@
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -704,7 +711,7 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Ciągi znaków i obrazy
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -899,13 +906,13 @@
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          Strings and Images: Ciągi znaków i obrazy
+          Defining Variables: Definiowanie zmiennych
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
           Big Game - Animation: Big Game - Animation
-          Booleans: Booleans
+          Booleans: Wartości logiczne
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -948,12 +955,12 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: Ciągi znaków i obrazy
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: Definiowanie zmiennych
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Wartości logiczne
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1067,12 +1074,12 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: Ciągi znaków i obrazy
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: Definiowanie zmiennych
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Wartości logiczne
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1203,3 +1210,10 @@
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget

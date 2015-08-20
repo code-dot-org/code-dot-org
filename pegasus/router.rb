@@ -130,6 +130,10 @@ class Documents < Sinatra::Base
       end
     end
 
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << File.join(request.site, 'i18n')
+    end
+
     @locals = {header: {}}
   end
 
@@ -357,6 +361,7 @@ class Documents < Sinatra::Base
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
+
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         return path if File.file?(path)
@@ -455,7 +460,7 @@ class Documents < Sinatra::Base
         }
       else
         metadata = {
-          'og:site_name'      => 'Code.org',
+          'og:site_name'      => 'Code.org'
         }
       end
 

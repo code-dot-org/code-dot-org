@@ -1,5 +1,6 @@
 name 'U2L11 Assessment 2'
 title 'HTTP and Abstraction on the Internet: Question 2'
+type 'multi2'
 question 'Choose Two: Choose the two true statements about HTTP.'
 right 'An HTTP request is sent from a client to request access to data stored on a server'
 wrong 'HTTP requests and responses have identical formats'

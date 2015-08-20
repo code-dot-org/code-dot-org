@@ -175,39 +175,27 @@
       2-3 Bee Conditionals 12_instruction: |
         Use a loop to check and collect the nectar
         from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
+      2-3 Bee Conditionals 13_instruction: 'جمع الرحيق والعسل. تلميح: ماذا يحدث إذا
+        استخدمت "إذا كان الرحيق" مشروطاً بزهرة حمراء؟ هل يمكن إكمال هذا مع حلقة؟'
+      2-3 Bee Conditionals 14_instruction: جمع الرحيق والعسل. كن حذراً بألا تجمع الرحيق
+        من زهرة أرجوانية إذ أنها لا تملك رحيق.
+      2-3 Bee Conditionals 15_instruction: جمع الرحيق من كل الزهور الأربعة.
+      2-3 Bee Conditionals 2_instruction: مرحبا، أنا نحلة! ساعدني في جمع كل الرحيق
+        من الزهور. استخدم حلقة.
+      2-3 Bee Conditionals 3_instruction: ساعدني في جمع كل الرحيق من الزهور من أجل
+        أن أصنع العسل. استخدم حلقة.
+      2-3 Bee Conditionals 4_instruction: ساعدني في جمع كل الرحيق من الزهور وتحويلهم
+        جميعاً إلى عسل.
+      2-3 Bee Conditionals 5_instruction: قد يكون رحيق الأزهار الأرجوانية إما 1 أو
+        0، ولكنك لا تعرف أي واحد! كن حذراً بألا تجمع الرحيق من زهرة أرجوانية إذا لم
+        يكن لديها رحيق. تحقق مما إذا كان الرحيق يساوي 1 باستخدام كتلة if (إذا) .
+      2-3 Bee Conditionals 6_instruction: تحقق من هذه الزهور مع كتلة "if" لتعرف إذا
+        كان هناك أي رحيق متاح.
+      2-3 Bee Conditionals 7_instruction: اجمع الرحيق من كل زهرة لديها رحيق.
+      2-3 Bee Conditionals 8_instruction: يحتوي هذا الحقل على الزهور الحمراء والأرجواني.
+        الزهور الحمراء لديها كمية رحيق معروفة، ولكن رحيق الزهور الأرجواني غير معروف.
+        اجمع كل الرحيق.
+      2-3 Bee Conditionals 9_instruction: اجمع كل الرحيق من كل زهرة.
       2-3 Bee Conditionals Assessment 1_instruction: |
         Assessment: Collect all the
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
@@ -258,7 +246,7 @@
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: اجمع كل الرحيق من كل زهرة.
       2-3 Bee Functions 4_instruction: |
         The "move and get nectar" function turns
         the bee, collects nectar, and then returns the bee to where it started. Use
@@ -490,11 +478,6 @@
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
         complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
       4-5 Artist For Loops 3_instruction: |
         How can we count from 1 to 50? Edit the
         "for" block.
@@ -3521,6 +3504,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3535,6 +3521,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

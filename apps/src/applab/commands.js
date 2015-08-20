@@ -19,6 +19,14 @@ var OPTIONAL = true;
 var applabCommands = module.exports;
 
 /**
+ * Lookup table of asset URLs. If an asset isn't listed here, initiate a
+ * separate request to ensure it is downloaded without interruption. Otherwise
+ * a quickly changing src could cancel the download before it can be cached by
+ * the browser.
+ */
+var toBeCached = {};
+
+/**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
  *     returns false for other values, including instances of Number or String.
@@ -137,12 +145,6 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
   }
 }
 
-function activeScreen() {
-  return $('.screen').filter(function () {
-    return this.style.display !== 'none';
-  }).first()[0];
-}
-
 // (brent) We may in the future also provide a second option that allows you to
 // reset the state of the screen to it's original (design mode) state.
 applabCommands.setScreen = function (opts) {
@@ -171,7 +173,7 @@ applabCommands.container = function (opts) {
   newDiv.innerHTML = opts.html;
   newDiv.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newDiv));
+  return Boolean(Applab.activeScreen().appendChild(newDiv));
 };
 
 applabCommands.write = function (opts) {
@@ -190,7 +192,7 @@ applabCommands.button = function (opts) {
   newButton.style.position = 'relative';
 
   return Boolean(newButton.appendChild(textNode) &&
-    activeScreen().appendChild(newButton));
+    Applab.activeScreen().appendChild(newButton));
 };
 
 applabCommands.image = function (opts) {
@@ -202,7 +204,7 @@ applabCommands.image = function (opts) {
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newImage));
+  return Boolean(Applab.activeScreen().appendChild(newImage));
 };
 
 applabCommands.imageUploadButton = function (opts) {
@@ -225,7 +227,7 @@ applabCommands.imageUploadButton = function (opts) {
 
   return Boolean(newLabel.appendChild(newInput) &&
                  newLabel.appendChild(textNode) &&
-                 activeScreen().appendChild(newLabel));
+                 Applab.activeScreen().appendChild(newLabel));
 };
 
 applabCommands.show = function (opts) {
@@ -495,7 +497,7 @@ applabCommands.createCanvas = function (opts) {
       Applab.activeCanvas = newElement;
     }
 
-    return Boolean(activeScreen().appendChild(newElement));
+    return Boolean(Applab.activeScreen().appendChild(newElement));
   }
   return false;
 };
@@ -683,7 +685,7 @@ applabCommands.textInput = function (opts) {
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newInput));
+  return Boolean(Applab.activeScreen().appendChild(newInput));
 };
 
 applabCommands.textLabel = function (opts) {
@@ -699,12 +701,12 @@ applabCommands.textLabel = function (opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   var forElement = document.getElementById(opts.forId);
-  if (forElement && activeScreen().contains(forElement)) {
+  if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
   }
 
   return Boolean(newLabel.appendChild(textNode) &&
-                 activeScreen().appendChild(newLabel));
+                 Applab.activeScreen().appendChild(newLabel));
 };
 
 applabCommands.checkbox = function (opts) {
@@ -718,7 +720,7 @@ applabCommands.checkbox = function (opts) {
   newCheckbox.id = opts.elementId;
   newCheckbox.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newCheckbox));
+  return Boolean(Applab.activeScreen().appendChild(newCheckbox));
 };
 
 applabCommands.radioButton = function (opts) {
@@ -733,7 +735,7 @@ applabCommands.radioButton = function (opts) {
   newRadio.id = opts.elementId;
   newRadio.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newRadio));
+  return Boolean(Applab.activeScreen().appendChild(newRadio));
 };
 
 applabCommands.dropdown = function (opts) {
@@ -753,7 +755,7 @@ applabCommands.dropdown = function (opts) {
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
 
-  return Boolean(activeScreen().appendChild(newSelect));
+  return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
 
 applabCommands.getAttribute = function (opts) {
@@ -866,6 +868,13 @@ applabCommands.setImageURL = function (opts) {
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+
+    if (!toBeCached[element.src]) {
+      var img = new Image();
+      img.src = element.src;
+      toBeCached[element.src] = true;
+    }
+
     return true;
   }
   return false;

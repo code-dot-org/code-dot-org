@@ -533,9 +533,9 @@
           interattivo con cui puoi veramente giocare.
       2:
         image: notes/playlab_2.png
-        text: C'è il blocco  "quando la freccia" e il blocco "sposta personaggio".
-          Puoi usare insieme questi due blocchi per far muovere i personaggi con i
-          tasti freccia.
+        text: C'è il blocco "quando si preme la freccia ..." ('when ... arrow') e
+          il blocco "sposta personaggio" ('move ...'). Puoi usare insieme questi due
+          blocchi per far muovere i personaggi con i tasti freccia.
       3:
         image: notes/playlab_3.png
         text: E ci sono alcuni blocchi che fanno delle cose quando i personaggi si
@@ -597,10 +597,10 @@
           clicca sul personaggio" viene eseguito. Cosa dice il tuo robot?
       4:
         image: notes/playlab_events_4.png
-        text: Ci sono anche i blocchi  "quando la freccia ..." ('when ... arrow').
-          Se gli colleghi i blocchi "sposta il personaggio ..." ('move ...'), puoi
-          iniziare a muovere gli attori in su, in giù, a sinistra o a destra. Passo
-          dopo passo, il tuo  gioco diventa sempre più interattivo.
+        text: Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ...
+          arrow'). Se gli colleghi i blocchi "sposta il personaggio ..." ('move ...'),
+          puoi iniziare a muovere gli attori in su, in giù, a sinistra o a destra.
+          Passo dopo passo, il tuo  gioco diventa sempre più interattivo.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png

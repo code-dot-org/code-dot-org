@@ -11,7 +11,7 @@
     "instructions": "Free Play: Write functions and algorithms of your own design!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "min_workspace_height": "1500",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -24,7 +24,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "examples_required": "false",
+    "is_project_level": true
   }
 }]]></config>
   <blocks>

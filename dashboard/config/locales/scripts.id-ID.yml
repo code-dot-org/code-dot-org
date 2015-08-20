@@ -366,8 +366,8 @@
             dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan
             di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan
             dipelajari untuk semua usia.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Kursus 20 jam ini mencakup komputer ilmu dan pemrograman
+            konsep inti dalam kursus 2-4.
           Introduction to Computer Science: Pengantar Ilmu Komputer
           The Maze: Labirin
           Computational Thinking: Berpikir secara komputasi
@@ -409,21 +409,23 @@
           title: Flappy Code
           description: Ingin membuat game anda sendiri dalam waktu kurang dari 10
             menit? Coba Tutorial Flappy code kami!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Tulis permainan Flappy Anda sendiri dalam waktu kurang
+            dari 10 menit!
           Flappy Code: Flappy Code
         jigsaw:
           title: Teka-teki
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Coba tutorial Jigsaw kami
+          description_short: Coba tutorial Jigsaw kami
           Jigsaw: Teka-teki
         step:
           title: Langkah
-          description: ''
-          description_short: Step tutorial
+          description: Langkah tutorial
+          description_short: Langkah tutorial
           Step: Langkah
         Hour of Code:
           title: Koding satu jam 2013
-          description: ''
+          description: Cobalah dasar-dasar ilmu komputer dengan karakter dari Angry
+            Bird dan Plants vs. Zombies!
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter
             yang menyenangkan!
           Hour of Code 2013: Koding satu jam 2013
@@ -516,6 +518,12 @@
           Encoding Color Images: Pengkodean Gambar Berwarna
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -703,6 +711,7 @@
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1215,3 +1224,10 @@
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget

@@ -42,6 +42,7 @@ level 'blockly:Bounce:1'
 
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
+level 'Multi Horizontal Scroll Test'
 
 stage 'Multi2'
 level 'Choose 2 Test'
@@ -64,6 +65,7 @@ level 'Eval Define Funcs 3'
 level 'Eval Booleans 2'
 level 'Sam the Butterfly 2'
 level "Luigi's Pizza 1"
+level 'Eval Define Funcs Test'
 
 stage 'Netsim'
 level 'U1L4 NetSim SendAB'

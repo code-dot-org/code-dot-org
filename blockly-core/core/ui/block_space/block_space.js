@@ -102,6 +102,9 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
     this.debugLogOnEvents();
   }
+
+  this.events.listen(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED,
+      this.updateScrollableSize.bind(this));
 };
 
 Blockly.BlockSpace.DEBUG_EVENTS = false;
@@ -134,7 +137,14 @@ Blockly.BlockSpace.SCAN_ANGLE = 3;
  * is dragged out of view.
  * @type {number}
  */
-Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
+
+/**
+ * Pixel padding to maintain below the lowest block in the blockspace.
+ * @type {number}
+ * @const
+ */
+Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
 
 /**
  * Current horizontal scrolling offset.
@@ -857,13 +867,16 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
   var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
   var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
 
+  var extraVerticalSpace = this.isFlyout ? 0 :
+      Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+
   return {
     width: canScrollHorizontally ?
         Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
         metrics.viewWidth,
     height: canScrollVertically ?
-        Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) :
-        metrics.viewHeight
+        Math.max(metrics.contentTop + metrics.contentHeight + extraVerticalSpace,
+            metrics.viewHeight) : metrics.viewHeight
   };
 };
 

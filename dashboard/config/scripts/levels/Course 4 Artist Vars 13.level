@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "false",
-    "instructions": "The more sides a shape has, the shorter each side needs to be in order for the whole pattern to fit on the screen. Instead of manually setting the \"length\" variable, let's use the \"sides\" variable and a math block to set the \"length.\" Choose the correct equation from the toolbox to set the \"length\" variable, and also update the \"sides\" variable.",
+    "instructions": "When a shape has lots of sides, each side needs to be shorter if you want the whole pattern to fit on the screen. Instead of manually setting the \"length\" variable, let's use a math block with the \"sides\" variable inside. Begin by setting the correct number of sides for an octagon, then choose the correct equation from the toolbox to adjust the size of your octagon appropriately.",
     "disable_variable_editing": "true",
     "ideal": "23",
     "use_modal_function_editor": "false",
@@ -21,7 +21,7 @@
     "impressive": "false",
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"which_equation\",\"callout_text\":\"Which equation makes each side shorter for shapes with more sides?\",\"element_id\":\"[block-id='10']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
-    "slider_speed": ".6",
+    "slider_speed": "1.0",
     "disable_sharing": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The more sides a shape has, the shorter each side needs to be in order for the whole pattern to fit on the screen. Instead of manually setting the `length` variable, let's use the `sides` variable and a math block to set the `length.` \r\n\r\n<br/>\r\nChoose the correct equation from the toolbox to set the `length` variable, and also update the `sides` variable.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "When a shape has lots of sides, each side needs to be shorter if you want the whole pattern to fit on the screen. Instead of manually setting the `length` variable, let's use a math block with the `sides` variable inside. \r\n\r\nBegin by setting the correct number of sides for an octagon, then choose the correct equation from the toolbox to adjust the size of your octagon appropriately.\r\n\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "examples_required": "false"
   }
 }]]></config>

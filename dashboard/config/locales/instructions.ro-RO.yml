@@ -450,10 +450,6 @@
         dat seama \ncă trebuie să existe o modalitate mai rapidă! Utilizează un bloc
         \"pentru\" cu scopul de a înlocui blocurile şi de a finaliza spirala hexagonală.
         (Sugestie: lungimea ultimei linii este de 200 de pixeli.)\n"
-      4-5 Artist For Loops 2_instruction: "Acesta este un bloc \"pentru\". În loc
-        să tastezi \n1,2,3... 10, blocul \"pentru\" poate repeta blocurile în interiorul
-        acestuia şi enumera \nnumerele pentru tine. Plasează numărul 10 în interiorul
-        secţiunii \"la\" a blocului \n\"pentru\".\n"
       4-5 Artist For Loops 3_instruction: "Cum putem număra de la 1 la 50? Editează
         \nblocul \"pentru\".\n"
       4-5 Artist For Loops 4_instruction: Completează blocul "pentru" astfel încât
@@ -2122,8 +2118,10 @@
         jump and draw blocks
       K-1 artist 1 level 9_instruction: Draw this using three lines
       K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
-      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
+      K-1 Artist Loops 2_instruction: Poţi desena aceaşi linie folosind o construţie
+        de tip buclă?
+      K-1 Artist Loops 3_instruction: Poţi să reiei în construţie de tip buclă aceste
+        blocuri de instrucţiuni pentru a desena 6 linii?
       K-1 Artist Loops 4_instruction: |
         Could a loop help us draw the top of this
         castle?
@@ -3350,6 +3348,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3364,6 +3365,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
