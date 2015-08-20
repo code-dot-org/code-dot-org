@@ -365,15 +365,18 @@ $small-footer-standard-width: 400px;
   }
 }
 
-/* All three major components of .small-footer are stacked: */
+/* All three major components of .small-footer are stacked:
+   Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values
+*/
 #more-menu {
-  z-index: 1;
+  z-index: 998;
 }
 #copyright-flyout {
-  z-index: 2;
+  z-index: 999;
 }
 .small-footer {
-  z-index: 3;
+  z-index: 1000;
 }
 
 #locale {
