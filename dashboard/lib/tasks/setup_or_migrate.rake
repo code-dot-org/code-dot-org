@@ -11,7 +11,8 @@ namespace :db do
     if database_exists?
       Rake::Task["db:migrate"].invoke
     else
-      Rake::Task["db:setup"].invoke
+      Rake::Task["db:create"].invoke
+      Rake::Task["db:schema:load"].invoke
     end
   end
 end
