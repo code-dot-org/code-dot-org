@@ -2715,7 +2715,7 @@ en:
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
         HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
-        HTTP messages can be either a requests or responses: HTTP messages can be either a requests or responses
+        HTTP messages can be either requests or responses: HTTP messages can be either requests or responses
         HTTP requests are encoded using higher frequency radio waves: HTTP requests are encoded using higher frequency radio waves
         HTTP requests are given higher priority for fast delivery when being routed on the Internet: HTTP requests are given higher priority for fast delivery when being routed on the Internet
         HTTP requests make use of abstractions provided by lower level protocols: HTTP requests make use of abstractions provided by lower level protocols
@@ -3618,6 +3618,7 @@ en:
         Enter your reflection here.: Enter your reflection here.
         'Packets: Reflection': 'Packets: Reflection'
       U2L07 Assessment4:
+        '43': '43'
         Question 4: Question 4
       U2L07 Assessment5:
         Question 5: Question 5
