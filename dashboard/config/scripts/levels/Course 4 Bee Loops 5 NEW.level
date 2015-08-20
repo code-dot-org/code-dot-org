@@ -33,28 +33,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="maze_turn" deletable="false" editable="false">
-          <title name="DIR">turnLeft</title>
-          <next>
-            <block type="maze_moveForward" deletable="false">
-              <next>
-                <block type="maze_nectar" deletable="false">
-                  <next>
-                    <block type="maze_moveForward" deletable="false">
-                      <next>
-                        <block type="maze_nectar" deletable="false"/>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveForward"/>
