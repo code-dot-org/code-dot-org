@@ -668,4 +668,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'under 13 gets redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    @student.age = 12
+    
+    sign_in @student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_redirected_to '/'
+  end
+
 end
