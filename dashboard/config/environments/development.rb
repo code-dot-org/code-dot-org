@@ -26,7 +26,6 @@ Dashboard::Application.configure do
   # development.log if you want to look at them
   #config.action_mailer.perform_deliveries = false
   #config.action_mailer.raise_delivery_errors = false
-  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # if you want to use mailcatcher, use these options instead:
   # config.action_mailer.perform_deliveries = true
