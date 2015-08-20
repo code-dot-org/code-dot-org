@@ -39,6 +39,11 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal row1, table.fetch(1)
     assert_equal [table2_row1], table2.to_a
 
+    # Insert returns correct values for row
+    assert_equal value['name'], row1['name']
+    assert_equal value['age'], row1['age']
+    assert_equal value['male'], row1['male']
+
     # Make sure the expected pubsub events were published.
     assert_equal [make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 1}),
                   make_pubsub_event('shard1', 'table2', {:action => 'insert', :id => 1})],
@@ -56,6 +61,9 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal updated_row2, table.fetch(2)
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'update', :id => 2}),
                  @pubsub.publish_history[3]
+
+    # Update returns correct values for row
+    assert_equal value2a['foo'], updated_row2['foo']
 
     value3 = {'bar' => 3}
     row3 = table.insert(value3)
