@@ -895,10 +895,6 @@ Applab.reset = function(first) {
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
 
-  if (level.showTurtleBeforeRun) {
-    applabTurtle.turtleSetVisibility(true);
-  }
-
   designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
@@ -908,6 +904,10 @@ Applab.reset = function(first) {
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
     designMode.resetElementTray(isDesigning);
+  }
+
+  if (level.showTurtleBeforeRun) {
+    applabTurtle.turtleSetVisibility(true);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -1479,3 +1479,12 @@ Applab.getIdDropdown = function (tagFilter) {
     };
   });
 };
+
+/**
+ * @returns {HTMLElement} The first "screen" that isn't hidden.
+ */
+Applab.activeScreen = function () {
+  return $('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first()[0];
+}
