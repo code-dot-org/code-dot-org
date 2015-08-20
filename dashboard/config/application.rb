@@ -86,6 +86,7 @@ module Dashboard
 
     config.assets.precompile += %w(
       shared.js
+      shared.min.js
       editor/blockly_editor.css
       editor/blockly_editor.js
       editor/embedded_markdown_editor.js
