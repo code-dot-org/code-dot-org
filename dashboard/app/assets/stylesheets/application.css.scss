@@ -370,10 +370,12 @@ $small-footer-standard-width: 400px;
   z-index: 1;
 }
 #copyright-flyout {
-  z-index: 2;
+/* Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values */
+  z-index: 999;
 }
 .small-footer {
-  z-index: 3;
+  z-index: 1000;
 }
 
 #locale {
