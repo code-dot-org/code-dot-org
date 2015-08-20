@@ -30,6 +30,8 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {jQuery} rootDiv
  *
  * @param {Object} options
+ * @param {DashboardUser} options.user
+ * @param {string} options.shardID
  * @param {NetSimNode[]} options.nodesOnShard
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
@@ -46,6 +48,19 @@ var NetSimGlobals = require('./NetSimGlobals');
  */
 var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     options, callbacks) {
+
+  /**
+   * @type {DashboardUser}
+   * @private
+   */
+  this.user_ = options.user;
+
+  /**
+   * @type {string}
+   * @private
+   */
+  this.shardID_ = options.shardID;
+
   /**
    * @type {NetSimNode[]}
    * @private
@@ -286,5 +301,15 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
  *          actual reset is authenticated on the server.
  */
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () {
-  return true;
+  if (!this.user_) {
+    return false;
+  }
+
+  // Find a section ID in the current shard ID
+  var matches = /_(\d+)$/.exec(this.shardID_);
+  if (!matches) {
+    return;
+  }
+  var sectionID = parseInt(matches[1], 10);
+  return this.user_.isAdmin || this.user_.ownsSection(sectionID);
 };
