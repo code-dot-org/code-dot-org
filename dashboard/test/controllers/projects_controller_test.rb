@@ -61,7 +61,27 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
 
-  test 'playlab project level gets redirected if under 13' do
-    
+  test 'applab project level gets redirected if under 13' do
+    sign_in create(:young_student)
+
+    get :edit, key: :applab
+
+    assert_redirected_to '/'
+  end
+
+  test 'applab project level doesnt get redirected if over 13' do
+    sign_in create(:student)
+
+    get :edit, key: :applab
+
+    assert_response :success
+  end
+
+  test 'shared applab project does not get redirected if under 13' do
+    sign_in create(:young_student)
+
+    get :show, key: :applab, share: true, channel_id: 'my_channel_id'
+
+    assert_response :success
   end
 end

@@ -8,6 +8,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   setup do
     @student = create :student
+    @young_student = create :young_student
     @teacher = create :teacher
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
@@ -671,13 +672,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'under 13 gets redirected when trying to access applab' do
     sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
 
-    @student.age = 12
-    
-    sign_in @student
+    sign_in @young_student
 
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl
 
     assert_redirected_to '/'
+  end
+
+  test 'over 13 does not get redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    sign_in @student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_response :success
   end
 
 end

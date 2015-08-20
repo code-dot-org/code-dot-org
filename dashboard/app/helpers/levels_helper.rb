@@ -385,7 +385,7 @@ module LevelsHelper
     current_user && current_user.admin? && @level.is_a?(Blockly)
   end
 
-  # TODO
+  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
   def redirect_under_13(level)
     return unless level.game == Game.applab
 
