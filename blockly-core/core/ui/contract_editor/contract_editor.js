@@ -862,11 +862,13 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
  * @return {string} Result failure, or null if no failure
  */
 Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
-  var defnInput = this.functionDefinitionBlock.getInput('STACK');
-  if (!defnInput.connection.isConnected()) {
-    return Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE;
-  }
-  return this.testHandler_(block, visualize);
+  var testHandlerResult = this.testHandler_(block, visualize);
+
+  var definitionInput = this.functionDefinitionBlock.getInput('STACK');
+  var definitionIsFilled = definitionInput.connection.isConnected();
+
+  return definitionIsFilled ? testHandlerResult :
+      Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE;
 };
 
 /**
