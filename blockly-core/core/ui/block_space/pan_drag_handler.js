@@ -182,17 +182,22 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
     this.onTargetMouseDown_();
   }
 
-  var isClickDirectlyOnDragTarget = e.target && e.target === this.target_;
+  var clickIsOnTarget = e.target && e.target === this.target_;
 
   // Clicking on the flyout background clears the global selection
-  if (Blockly.selected && !Blockly.readOnly && isClickDirectlyOnDragTarget) {
+  if (Blockly.selected && !Blockly.readOnly && clickIsOnTarget) {
     Blockly.selected.unselect();
   }
 
+  var blockNonInteractive = Blockly.selected && !Blockly.selected.isMovable() &&
+      !Blockly.selected.isEditable();
+
   // On left-click on scrollable area, begin scroll-drag
   // In readonly mode, we scroll-drag when clicking through a block, too.
-  if (this.blockSpace_.scrollbarPair && !Blockly.isRightButton(e) &&
-      (isClickDirectlyOnDragTarget || Blockly.readOnly)) {
+  var shouldDrag = clickIsOnTarget || blockNonInteractive || Blockly.readOnly;
+  var isLeftClick = !Blockly.isRightButton(e);
+
+  if (this.blockSpace_.scrollbarPair && isLeftClick && shouldDrag) {
     this.beginDragScroll_(e);
 
     // Don't click through to the workspace drag handler, or the browser

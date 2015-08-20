@@ -6,7 +6,7 @@
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_blank ? nil : 'question'}
 
-  .answers{style: question_content_blank ? 'width: 100%' : ''}
+  .answers{class: question_content_blank ? 'question-content-blank' : ''}
     - if data['options'].try(:[], 'answer_line')
       :css
         .btn {
@@ -24,8 +24,11 @@
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
 
-    - height = data['height'] || '20'
-    - height += 'px'
+    - if data['height'] == 'auto'
+      - height = 'auto'
+    - else
+      - height = data['height'] || '20'
+      - height += 'px'
 
     -# multi2 gets checkboxes; regular multi gets radio buttons.
     - if data['type'] == 'multi2'

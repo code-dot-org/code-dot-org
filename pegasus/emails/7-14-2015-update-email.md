@@ -1,7 +1,6 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "43% of coders are girls (and a lot more)"
-list-unsubscribe: '<mailto:unsubscribe-espc-tech-12345N@domain.com>, <http://domain.com/member/unsubscribe/?listname=espc-tech@domain.com?id=12345N>'
 ---
 
 <p>

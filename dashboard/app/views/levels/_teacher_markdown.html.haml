@@ -1,0 +1,7 @@
+/ Teacher only markdown
+- if data['teacher_markdown'].present? && current_user.try(:authorized_teacher?)
+  #markdown.teacher
+    %h3= t('teacher.for_teachers_only')
+    / Render markdown text through the ActionView template engine.
+    .content
+      = ActionView::Base.new.render(inline: data['teacher_markdown'], type: :md)

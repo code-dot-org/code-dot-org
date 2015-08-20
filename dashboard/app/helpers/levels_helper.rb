@@ -131,11 +131,31 @@ module LevelsHelper
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
-    return blockly_options if @level.is_a? Blockly
-    Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
+    if @level.is_a? Blockly
+      blockly_options
+    elsif @level.is_a? DSLDefined
+      dsl_defined_options
+    else
+      # currently, all levels are Blockly or DSLDefined except for Unplugged
+      view_options.camelize_keys
+    end
   end
 
-  # Code for generating the blockly options hash
+  # Options hash for DSLDefined
+  def dsl_defined_options
+    app_options = {}
+
+    level_options = app_options[:level] ||= Hash.new
+
+    level_options[:lastAttempt] = @last_attempt
+    level_options.merge! @level.properties.camelize_keys
+
+    app_options.merge! view_options.camelize_keys
+
+    app_options
+  end
+
+  # Options hash for Blockly
   def blockly_options
     l = @level
     throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
@@ -170,7 +190,6 @@ module LevelsHelper
 
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
-    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
 
     # Edit blocks-dependent options
     if level_view_options[:edit_blocks]
@@ -200,8 +219,8 @@ module LevelsHelper
     level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
-    level_options.merge!(Hash[level_overrides.map{|key, value|[key.to_s.camelize(:lower), value]}])
-    app_options.merge!(Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}])
+    level_options.merge! level_overrides.camelize_keys
+    app_options.merge! view_options.camelize_keys
 
     # Move these values up to the app_options hash
     %w(hideSource share noPadding embed).each do |key|
@@ -229,6 +248,7 @@ module LevelsHelper
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     app_options
   end
@@ -358,7 +378,7 @@ module LevelsHelper
   end
 
   def enable_scrolling?
-    current_user && current_user.admin? && @level.is_a?(Blockly)
+    @level.is_a?(Blockly)
   end
 
   def enable_examples?

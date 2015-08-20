@@ -16,14 +16,18 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
+#### In-person workshop####
+Milestone Complete! 
+
+#### Online Study ####
+ <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
  
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the Dates:**
+**Save the Dates**
 
 Quarter 1: Saturday, September 19, 2015
 
@@ -36,16 +40,22 @@ Quarter 4: Saturday, April 2, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-
+<br/><br/>
 **Location**
 
-TBD
-
+<b>Quarter 1: September 19th</b><br/>
+IDLP Building<br/>
+Room 118<br/>
+3950 Pecos-McLeod Interconnect<br/>
+Las Vegas, NV 89121
+<br/> 
+<br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+ECS green journal<br/>
+Curriculum guide
 <br/>
 Snacks
 <br/>

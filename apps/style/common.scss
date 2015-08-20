@@ -94,6 +94,10 @@ html[dir='rtl'] #visualizationColumn {
     position: absolute;
     overflow: auto;
   }
+
+  &.embed_hidesource {
+    position: relative;
+  }
 }
 
 div.droplet-palette-group-header {
@@ -883,6 +887,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
+#versions-header {
+  display: none;
+}
+
 #design-headers {
   height: $workspace-headers-height;
   background-color: $purple;
@@ -1000,6 +1008,15 @@ $workspace-header-button-margin: ($workspace-headers-height -
       padding-left: 8px;
     }
   }
+}
+
+#showVersionsModal {
+  width: 700px;
+  margin-left: -350px;
+}
+
+#showVersionsModal .versionRow p {
+  margin: 15px 0 0 0;
 }
 
 #rotateContainer {
@@ -1148,7 +1165,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   margin-right: 10px;
 }
 
-#continue-button:not(.arrow-container) {
+#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;

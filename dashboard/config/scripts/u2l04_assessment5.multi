@@ -1,6 +1,7 @@
 name 'U2L04 Assessment5'
 title 'Routers and Redundancy: Question 3'
 type 'multi2'
+height 'auto'
 
 question 'Which two of the following statements are true about routing on the Internet.'
 wrong 'Information travelling between two computers over the Internet will always take the same path.'

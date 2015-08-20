@@ -755,3 +755,53 @@ Blockly.addToNonZeroSides = function (box, amount) {
     }
   });
 };
+
+/**
+ * Sets element to ignore pointer events.
+ * Note: only use for SVG elements, only those support IE9 and 10
+ * {@link https://css-tricks.com/almanac/properties/p/pointer-events/}
+ * @param {Element} element - SVG element
+ */
+Blockly.svgIgnoreMouseEvents = function (element) {
+  element.style.pointerEvents = 'none';
+};
+
+/**
+ * Fires a mousedown, mouseup, click sequence of events on a given target.
+ *
+ * Note: Intended for testing only. Creates events using MouseEvents.
+ * @param target
+ */
+Blockly.fireTestClickSequence = function (target) {
+  Blockly.fireTestMouseEvent(target, 'mousedown');
+  Blockly.fireTestMouseEvent(target, 'mouseup');
+  Blockly.fireTestMouseEvent(target, 'click');
+};
+
+/**
+ * Creates a mouse event and dispatches it on the given target.
+ *
+ * Note: this is for testing only. This is not cross-browser friendly.
+ * Creates events using MouseEvents.
+ * @param {EventTarget} target
+ * @param {string} eventName e.g. click, mousedown, mouseup
+ */
+Blockly.fireTestMouseEvent = function (target, eventName) {
+  if (!document.createEvent) {
+    throw "fireTestMouseEvent is only for testing in browsers with createEvent";
+  }
+
+  target.dispatchEvent(Blockly.makeTestMouseEvent(eventName));
+};
+
+/**
+ * Makes a dummy mouse event with the given event name.
+ * @param {string} eventName e.g. click, mousedown, mouseup
+ */
+Blockly.makeTestMouseEvent = function (eventName) {
+  var event = document.createEvent("MouseEvents");
+  event.initMouseEvent(eventName, true, true, window,
+      0, 0, 0, 0, 0, false, false, false, false, 0, null);
+  return event;
+};
+

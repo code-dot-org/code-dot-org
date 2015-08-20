@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,4,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "pvz",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,0,0],[0,1,0,0,0,1,0,0],[0,4,0,1,1,1,0,0],[0,1,0,4,0,1,0,0],[0,3,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
     "instructions": "Can you solve this puzzle using the fewest number of blocks possible?",
     "start_direction": "1",
     "step_mode": "1",
@@ -24,6 +24,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "examples_required": "false",
+    "step_speed": "3",
     "maze_data": null
   }
 }]]></config>

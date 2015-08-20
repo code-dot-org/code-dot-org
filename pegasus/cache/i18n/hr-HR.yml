@@ -1,7 +1,7 @@
 "hr-HR":
   hello: Pozdrav svima
   select_language: Odaberite svoj jezik
-  en: Computer Science
+  en: Računalna znanost
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: 8. - 14. prosinca 2014.
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -61,7 +61,7 @@
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   get_a_certificate_of_achievement: Preuzmi potvrdu o postignuću
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Molimo odaberite valjanu dob
   enter_valid_email: Unesite ispravnu e-mail adresu, molim
   get_a_certificate_message: Poslat ćemo ti potvrdu i obavijest o tome kako možeš
     <a href='/learn/beyond'>Naučiti više nakon One Hour</a>
@@ -323,10 +323,10 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses: Probajte Hour of Code za sve uzraste
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: 20-satni tečajevi za K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -347,7 +347,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: Računalna znanost je znanost
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -368,7 +368,7 @@
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Izbrisati?
   dashboard_action_remove: jaja sam david i smjesan sam
-  dashboard_action_remove_confirm: Remove?
+  dashboard_action_remove_confirm: Obrisati?
   dashboard_action_done: Gotovo
   dashboard_action_required: potrebno
   dashboard_navigation_home_page: Učiteljeva Početna stranica
@@ -416,7 +416,7 @@
     učenike korištenjem gornjih gumba <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.
   dashboard_students_placeholder_name: Ime učenika
   dashboard_students_name: Ime
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Napredak
   dashboard_students_age: Godine starosti
   dashboard_students_gender: Spol
   dashboard_students_male: Muško
@@ -434,12 +434,12 @@
   dashboard_students_share_section: 'Podijelite stranicu za prijavu u ovo odjeljenje
     svojim učenicima:'
   dashboard_students_print_info: Ispiši kartice za studente s informacijama za prijavljivanje.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Tajna slika
   dashboard_students_secret_picture: Tajna Slika
   dashboard_students_reset_picture: Možete bilo kada ponovno postaviti učenikovu tajnu
     sliku odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Tako
     će se stvoriti nova tajna slika za tog učenika, koju će moći koristiti nakon prijave.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Tajna riječ
   dashboard_students_secret_word: Tajna Riječ
   dashboard_students_reset_word: 'Možete bilo kada ponovno postaviti učenikove tajne
     riječi odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Učenik
@@ -454,7 +454,7 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikni
     ovdje</a> za naš dokument o privatnosti koji možete podijeliti ili ispisati svojim
     učenicima.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: K-5 Obrazovni Resursi
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
@@ -465,7 +465,7 @@
   dashboard_course4: 'Course 4 (beta): '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Pregled kurikuluma razredne nastave
-  dashboard_overview: Overview
+  dashboard_overview: Pregled
   dashboard_sequence: Slijed
   dashboard_framework: Okvir
   dashboard_standards: Standardi

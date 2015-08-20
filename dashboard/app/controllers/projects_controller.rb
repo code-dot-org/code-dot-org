@@ -48,10 +48,10 @@ class ProjectsController < ApplicationController
     view_options(
         readonly_workspace: sharing || params[:readonly],
         full_width: true,
-        no_footer: !@game.has_footer?,
         callouts: [],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
-        small_footer: @game.uses_small_footer? || enable_scrolling?
+        small_footer: @game.uses_small_footer? || enable_scrolling?,
+        has_i18n: @game.has_i18n?
     )
     render 'levels/show'
   end
@@ -69,7 +69,8 @@ class ProjectsController < ApplicationController
     end
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
-    AssetBucket.new.copy_assets src_channel_id, new_channel_id
+    AssetBucket.new.copy_files src_channel_id, new_channel_id
+    SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
