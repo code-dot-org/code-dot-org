@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 require_relative '../../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
@@ -201,7 +202,7 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   ENV['TEST_TUNNEL'] = $options.tunnel ? "true" : "false"
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser.delete('mobile') ? "true" : "false"
+  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
