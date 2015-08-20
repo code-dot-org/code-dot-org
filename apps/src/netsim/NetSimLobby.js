@@ -106,6 +106,12 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
   this.eventKeys = {};
 
   /**
+   * @type {DashboardUser}
+   * @private
+   */
+  this.user_ = options.user;
+
+  /**
    * @type {string}
    * @private
    */
@@ -189,6 +195,8 @@ NetSimLobby.prototype.render = function () {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_,
         {
+          user: this.user_,
+          shardID: this.shard_.id,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
