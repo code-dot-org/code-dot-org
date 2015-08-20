@@ -384,4 +384,14 @@ module LevelsHelper
   def enable_examples?
     current_user && current_user.admin? && @level.is_a?(Blockly)
   end
+
+  # TODO
+  def redirect_under_13(level)
+    return unless level.game == Game.applab
+
+    if current_user && current_user.age && current_user.under_13?
+      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+      return true
+    end
+  end
 end

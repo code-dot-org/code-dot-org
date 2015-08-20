@@ -60,4 +60,8 @@ class ProjectsControllerTest < ActionController::TestCase
     get :edit, key: :playlab
     assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
   end
+
+  test 'playlab project level gets redirected if under 13' do
+    
+  end
 end
