@@ -1,7 +1,9 @@
+require 'active_record/errors'
+
 namespace :db do
   def database_exists?
     ActiveRecord::Base.connection
-  rescue
+  rescue ActiveRecord::NoDatabaseError
     false
   else
     true
@@ -11,7 +13,8 @@ namespace :db do
     if database_exists?
       Rake::Task["db:migrate"].invoke
     else
-      Rake::Task["db:setup"].invoke
+      Rake::Task["db:create"].invoke
+      Rake::Task["db:schema:load"].invoke
     end
   end
 end
