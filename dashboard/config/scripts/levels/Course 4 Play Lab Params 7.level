@@ -40,9 +40,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "timeout_after_when_run": "false",
-    "scrollbars": "true"
+    "scrollbars": "false"
   }
 }]]></config>
   <blocks>
