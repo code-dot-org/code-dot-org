@@ -1487,4 +1487,4 @@ Applab.activeScreen = function () {
   return $('.screen').filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
-}
+};
