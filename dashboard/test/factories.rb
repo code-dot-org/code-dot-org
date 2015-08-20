@@ -29,7 +29,7 @@ FactoryGirl.define do
 
     factory :young_student do
       user_type User::TYPE_STUDENT
-      birthday Date.new(2009, 03, 14)
+      birthday Date.today - 10.years
     end
   end
 

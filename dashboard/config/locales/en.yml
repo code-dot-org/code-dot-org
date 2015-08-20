@@ -23,7 +23,7 @@ en:
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
-      too_young: 'You must be at least 13 to access this content.'
+      too_young: 'This content has age restrictions in place and is not available for younger students'
   activerecord:
     errors:
       messages:

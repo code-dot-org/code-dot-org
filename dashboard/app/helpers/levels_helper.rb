@@ -386,10 +386,10 @@ module LevelsHelper
   end
 
   # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
-  def redirect_under_13(level)
+  def redirect_applab_under_13(level)
     return unless level.game == Game.applab
 
-    if current_user && current_user.age && current_user.under_13?
+    if current_user && current_user.under_13?
       redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
       return true
     end
