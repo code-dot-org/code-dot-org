@@ -188,47 +188,31 @@ function loadInfinity(skin, assetUrl) {
 function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
-  skin.defaultBackground = 'leafy';
+  skin.defaultBackground = 'background3';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
-    'projectile_hiro',
-    'projectile_anna',
-    'projectile_elsa',
-    'projectile_baymax',
-    'projectile_rapunzel',
-    'projectile_cherry',
-    'projectile_ice',
-    'projectile_duck'
   ];
 
   skin.specialProjectileFrames = {
-    'projectile_cherry': 13,
-    'projectile_ice': 12,
-    'projectile_duck': 12
   };
 
   // TODO: proper item class names
   skin.ItemClassNames = [
-    'item_walk_baymax',
-    'item_hiro',
-    'item_anna',
-    'item_elsa',
-    'item_baymax',
-    'item_rapunzel',
-    'item_cherry',
-    'item_ice',
-    'item_duck'
+    'item_walk_item1',
+    'item_walk_item2',
+    'item_walk_item3',
+    'item_walk_item4'
   ];
 
   skin.specialItemFrames = {
-    'item_walk_baymax': 8,
-    'item_cherry': 13,
-    'item_ice': 12,
-    'item_duck': 12
+    'item_walk_item1': 12,
+    'item_walk_item2': 12,
+    'item_walk_item3': 15,
+    'item_walk_item4': 8
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -262,123 +246,86 @@ function loadHoc2015(skin, assetUrl) {
   skin.gridSpriteRenderOffsetX = -30;
   skin.gridSpriteRenderOffsetY = -40;
 
-  skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
+  skin.avatarList = ['character1', 'character2'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
       sprite: skin.assetUrl('avatar_' + name + '.png'),
       walk: skin.assetUrl('walk_' + name + '.png'),
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
-        normal: 19,
+        normal: 1,
         animation: 0,
         turns: 8,
         emotions: 0,
-        walk: 12
+        walk: name == 'character1' ? 1 : 8
       },
       timePerFrame: 100
     };
   });
 
   skin.preventProjectileLoop = function (className) {
-    return className === 'projectile_hiro';
+    return className === '';
   };
 
   skin.preventItemLoop = function (className) {
-    return className === 'item_hiro';
+    return className === 'item_character1';
   };
-
-  skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
-  skin.projectile_anna = skin.assetUrl('projectile_anna.png');
-  skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
-  skin.projectile_baymax = skin.assetUrl('projectile_baymax.png');
-  skin.projectile_rapunzel = skin.assetUrl('projectile_rapunzel.png');
-  skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
-  skin.projectile_ice = skin.assetUrl('projectile_ice.png');
-  skin.projectile_duck = skin.assetUrl('projectile_duck.png');
 
   // TODO: Create actual item choices
-  skin.item_walk_baymax = skin.assetUrl('walk_baymax.png');
-  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
-  skin.item_anna = skin.assetUrl('projectile_anna.png');
-  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
-  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
-  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
-  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
-  skin.item_ice = skin.assetUrl('projectile_ice.png');
-  skin.item_duck = skin.assetUrl('projectile_duck.png');
+  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
+  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
+  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
+  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
 
-  skin.leafy = {
-    background: skin.assetUrl('background_leafy.jpg')
+
+  skin.background1 = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
   };
-  skin.grassy = {
-    background: skin.assetUrl('background_grassy.jpg')
+  skin.background2 = {
+    background: skin.assetUrl('background_background2.jpg'),
+    tiles: skin.assetUrl('tiles_background2.png')
   };
-  skin.flower = {
-    background: skin.assetUrl('background_flower.jpg')
-  };
-  skin.tile = {
-    background: skin.assetUrl('background_tile.jpg')
-  };
-  skin.icy = {
-    background: skin.assetUrl('background_icy.jpg')
-  };
-  skin.snowy = {
-    background: skin.assetUrl('background_snowy.jpg')
+  skin.background3 = {
+    background: skin.assetUrl('background_background3.jpg'),
+    tiles: skin.assetUrl('tiles_background3.png')
   };
 
-  skin.tiles = skin.assetUrl('tiles.png');
+  skin.border = 
+    [[1, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], 
+     [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
+  skin.maze = 
+    [[1, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 1, 0, 1, 0, 0, 0],
+     [0, 0, 1, 0,0,0,0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0, 0, 1]];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundGrassy(), '"grassy"'],
-    [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundTile(), '"tile"'],
-    [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundSnowy(), '"snowy"'],
+    [msg.setBackgroundBackground1(), '"background1"'],
+    [msg.setBackgroundBackground2(), '"background2"'],
+    [msg.setBackgroundBackground3(), '"background3"']
     ];
 
   skin.backgroundChoicesK1 = [
-    [skin.leafy.background, '"leafy"'],
-    [skin.grassy.background, '"grassy"'],
-    [skin.flower.background, '"flower"'],
-    [skin.tile.background, '"tile"'],
-    [skin.icy.background, '"icy"'],
-    [skin.snowy.background, '"snowy"'],
+    [skin.background1.background, '"background1"'],
+    [skin.background2.background, '"background2"'],
+    [skin.background3.background, '"background3"'],
     [skin.randomPurpleIcon, RANDOM_VALUE],
     ];
 
   skin.spriteChoices = [
     [msg.setSpriteHidden(), HIDDEN_VALUE],
     [msg.setSpriteRandom(), RANDOM_VALUE],
-    [msg.setSpriteAnna(), '"anna"'],
-    [msg.setSpriteElsa(), '"elsa"'],
-    [msg.setSpriteHiro(), '"hiro"'],
-    [msg.setSpriteBaymax(), '"baymax"'],
-    [msg.setSpriteRapunzel(), '"rapunzel"']];
+    [msg.setSpriteCharacter1(), '"character1"'],
+    [msg.setSpriteCharacter2(), '"character2"']];
 
-  skin.projectileChoices = [
-    [msg.projectileHiro(), '"projectile_hiro"'],
-    [msg.projectileAnna(), '"projectile_anna"'],
-    [msg.projectileElsa(), '"projectile_elsa"'],
-    [msg.projectileBaymax(), '"projectile_baymax"'],
-    [msg.projectileRapunzel(), '"projectile_rapunzel"'],
-    [msg.projectileCherry(), '"projectile_cherry"'],
-    [msg.projectileIce(), '"projectile_ice"'],
-    [msg.projectileDuck(), '"projectile_duck"'],
-    [msg.projectileRandom(), RANDOM_VALUE]];
+  skin.projectileChoices = [];
 
-  // TODO: Create actual item choices
   skin.itemChoices = [
-    [msg.itemHiro(), '"item_hiro"'],
-    [msg.itemAnna(), '"item_anna"'],
-    [msg.itemElsa(), '"item_elsa"'],
-    [msg.itemBaymax(), '"item_baymax"'],
-    [msg.itemRapunzel(), '"item_rapunzel"'],
-    [msg.itemCherry(), '"item_cherry"'],
-    [msg.itemIce(), '"item_ice"'],
-    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemItem1(), '"item_item1"'],
+    [msg.itemItem2(), '"item_item2"'],
+    [msg.itemItem3(), '"item_item3"'],
+    [msg.itemItem4(), '"item_item4"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 

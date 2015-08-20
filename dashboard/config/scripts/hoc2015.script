@@ -4,8 +4,29 @@ description "Use Play Lab to create a story or game."
 hidden 'true'
 login_required 'true'
 
-stage 'Hour of Code'
-level 'hoc2015_free'
-level 'hoc2015_square'
-level 'hoc2015_random'
-level 'hoc2015_maze'
+stage 'Hour of Code 2015'
+
+level 'hoc2015_move_right'
+level 'hoc2015_move_two_items'
+level 'hoc2015_move_item_ship'
+level 'hoc2015_move_item_ship_2'
+level 'hoc2015_move_item_ship_3'
+level 'hoc2015_move_cross'
+
+level 'hoc2015_event_two_items'
+level 'hoc2015_event_four_items'
+level 'hoc2015_event_choose_character'
+
+level 'hoc2015_event_add_items'
+level 'hoc2015_event_add_items_2'
+level 'hoc2015_event_move_items'
+level 'hoc2015_event_points'
+level 'hoc2015_event_random_items'
+
+level 'hoc2015_event_free'
+
+
+# level 'hoc2015_free'
+# level 'hoc2015_square'
+# level 'hoc2015_random'
+# level 'hoc2015_maze'
