@@ -47,6 +47,11 @@
                   <statement name="DO">
                     <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                       <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get">
+                          <title name="VAR">width</title>
+                        </block>
+                      </value>
                       <next>
                         <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
                           <title name="DIR">turnLeft</title>
@@ -54,6 +59,11 @@
                           <next>
                             <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                               <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true" deletable="false" movable="false" editable="false">
+                                  <title name="OP">MULTIPLY</title>
+                                </block>
+                              </value>
                               <next>
                                 <block type="draw_turn_by_constant" deletable="false" movable="false" editable="false">
                                   <title name="DIR">turnLeft</title>
