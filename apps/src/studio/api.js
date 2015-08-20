@@ -14,6 +14,10 @@ exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
 
+exports.setWalls = function (id, value) {
+  Studio.queueCmd(id, 'setWalls', {'value': value});
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,

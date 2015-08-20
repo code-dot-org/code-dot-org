@@ -7,62 +7,16 @@
   "properties": {
     "edit_code": true,
     "skin": "hoc2015",
-    "background": "background3",
+    "background": "background2",
     "code_functions": {
-      // Play Lab
-      "setSprite": null,
-      "setBackground": null,
-      "move": null,
-      "playSound": null,
-      "changeScore": null,
-      "setSpritePosition": null,
-      "setSpriteSpeed": null,
-      "setSpriteEmotion": null,
-      "throwProjectile": null,
-      "vanish": null,
-      "onEvent": null,
-
-      // Control
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-
-      // Math
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "lessThanOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_max": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-
-      // Variables
-      "declareAssign_x": null,
-      "assign_x": null,
-      "declareAssign_x_array_1_4": null,
-      "declareAssign_x_prompt": null,
-
-      // Functions
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
-      "moveSouth": null
+      "moveSouth": null,
+      "whenLeft": null,
+      "whenRight": null,
+      "whenUp": null,
+      "whenDown": null
     },
 
     "sort_draw_order": true,
@@ -70,17 +24,17 @@
     "block_moving_into_walls": true,
     "grid_aligned_movement": false,
     "item_grid_aligned_movement": true,
-    "remove_items_when_actor_collides": false,
+    "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
 
-    "maze": "[[256, 0, 0, 4, 0, 0, 0, 256], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 4, 0, 4, 0, 0, 0], [0, 0, 4, 0,16,256,0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [0, 0, 4, 0, 0, 0, 0, 0], [256, 0, 0, 0, 4, 0, 0, 256]]",
+    "maze": "[[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 16, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0]]",
 
     "success_condition": "function () {\r\n  var currentTime = new Date().getTime();\r\n\r\n  if (Studio.levelRestarted) {\r\n    window.successTime = null;\r\n  }\r\n  Studio.levelRestarted = false;\r\n  \r\n  // Let's wait before indicating the success.\r\n  if (window.successTime && successTime + 2000 < currentTime)\r\n  {\r\n    //console.log(\"success!\");\r\n    return true;\r\n  }\r\n  else if (! window.successTime && Studio.sprite[0].isCollidingWith(1))\r\n  {\r\n    Studio.vanishActor({spriteIndex: 1});\r\n    \r\n    //console.log(\"setting success\");\r\n    window.successTime = currentTime;\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
 
     "embed": "false",
-    "instructions": "Make something.",
+    "instructions": "Now the items are all over the screen. Can you make your character walk in any direction so he can collect all the items?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -94,7 +48,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "first_sprite_index": "2",
+    "first_sprite_index": "1",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Infinity_move_right_runbutton\",\r\n  \"callout_text\": \"Add move block here\",\r\n  \"element_id\": \"[block-id='1']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": 240,\r\n     \"y\": 10\r\n    },\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",

@@ -4,6 +4,10 @@ exports.setBackground = function (value) {
   Studio.queueCmd(null, 'setBackground', {'value': value});
 };
 
+exports.setWalls = function (value) {
+  Studio.queueCmd(null, 'setWalls', {'value': value});
+};
+
 exports.setSprite = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': spriteIndex,

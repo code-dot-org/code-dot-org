@@ -18,7 +18,6 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
-  this.animationFrames = options.animationFrames || 1;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
@@ -71,8 +70,8 @@ Item.prototype.createElement = function (parentElement) {
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
   this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.animationFrames);
-  this.element.setAttribute('width', this.width * this.frames);
+  this.element.setAttribute('height', this.height * this.frames);
+  this.element.setAttribute('width', this.width * 8);
   parentElement.appendChild(this.element);
 
   this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
