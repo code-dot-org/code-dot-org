@@ -804,7 +804,7 @@ Blockly.FunctionEditor.prototype.addDeleteButton_ = function () {
     return;
   }
   this.deleteButton_ = new Blockly.SvgTextButton(
-      this.modalBlockSpaceEditor.getSVGElement(), "Delete",
+      this.modalBlockSpaceEditor.getSVGElement(), Blockly.Msg.DELETE,
       this.onDeletePressed.bind(this));
 };
 
