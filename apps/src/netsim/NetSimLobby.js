@@ -200,6 +200,8 @@ NetSimLobby.prototype.render = function () {
         });
 
   }
+
+  this.netsim_.debouncedResizeFooter();
 };
 
 NetSimLobby.prototype.updateLayout = function () {

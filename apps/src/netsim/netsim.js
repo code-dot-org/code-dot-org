@@ -964,14 +964,20 @@ function resizeLeftColumnToSitAboveFooter() {
   pinnedLeftColumn.style.bottom = bottom + 'px';
 }
 
-function resizeFooterToLeftColumnWidth() {
+function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var instructions = document.querySelector('.instructions');
   var smallFooter = document.querySelector('.small-footer');
-  if (!(leftColumn && smallFooter) || !$(leftColumn).is(':visible')) {
+
+  if (!smallFooter) {
     return;
   }
 
-  smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+  if (leftColumn && $(leftColumn).is(':visible')) {
+    smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+  } else if (instructions && $(instructions).is(':visible')) {
+    smallFooter.style.maxWidth = instructions.offsetWidth + 'px';
+  }
 
   // If the small print and language selector are on the same line,
   // the small print should float right.  Otherwise, it should float left.
@@ -985,7 +991,7 @@ function resizeFooterToLeftColumnWidth() {
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
-  resizeFooterToLeftColumnWidth();
+  resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
   smallFooterUtils.repositionCopyrightFlyout();
   smallFooterUtils.repositionMoreMenu();
@@ -1004,6 +1010,13 @@ NetSim.onResizeOverride_ = function() {
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
 
+  netsimDebouncedResizeFooter();
+};
+
+/**
+ * Passthrough to local "static" netsimDebounceResizeFooter method
+ */
+NetSim.prototype.debouncedResizeFooter = function () {
   netsimDebouncedResizeFooter();
 };
 
