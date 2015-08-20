@@ -1277,6 +1277,10 @@ NetSim.prototype.updateLayout = function () {
 
   netsimDebouncedResizeFooter();
 
+  if (this.lobby_) {
+    this.lobby_.updateLayout();
+  }
+
   if (!rightColumn.is(':visible')) {
     return;
   }

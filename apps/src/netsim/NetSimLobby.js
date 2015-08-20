@@ -202,6 +202,12 @@ NetSimLobby.prototype.render = function () {
   }
 };
 
+NetSimLobby.prototype.updateLayout = function () {
+  if (this.nodeSelectionPanel_) {
+    this.nodeSelectionPanel_.updateLayout();
+  }
+};
+
 /**
  * @param {string} displayName
  */
