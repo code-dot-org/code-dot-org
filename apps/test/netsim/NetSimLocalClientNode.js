@@ -39,29 +39,25 @@ describe("NetSimLocalClientNode", function () {
   });
 
   describe ("onNodeTableChange_", function () {
+    var lostConnection;
     beforeEach(function () {
       testLocalNode.initializeSimulation(null, null);
-    });
 
-    it ("detects when own row has gone away and calls lost connection callback", function () {
-      var lostConnection = false;
+      // Set up testing for lost connection callback
+      lostConnection = false;
       testLocalNode.setLostConnectionCallback(function () {
         lostConnection = true;
       });
       assertEqual(false, lostConnection);
+    });
 
+    it ("detects when own row has gone away and calls lost connection callback", function () {
       testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
       testShard.nodeTable.refresh();
       assertEqual(true, lostConnection);
     });
 
-    it ("also detects if row uuid changes", function () {
-      var lostConnection = false;
-      testLocalNode.setLostConnectionCallback(function () {
-        lostConnection = true;
-      });
-      assertEqual(false, lostConnection);
-
+    it ("detects shard reset even when own ID has been reclaimed", function () {
       // Reset fake remote table and repopulate first two rows.
       testShard.nodeTable = NetSimTestUtils.overrideNetSimTableApi(testShard.nodeTable);
       NetSimEntity.create(NetSimClientNode, testShard, function () { });
