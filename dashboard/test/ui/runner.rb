@@ -210,6 +210,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
+  arguments += " -t ~@no_iphone" if browser['browser'] == 'iPhone'
   arguments += " -t ~@chrome" if browser['browser'] != 'chrome' && !$options.local
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key

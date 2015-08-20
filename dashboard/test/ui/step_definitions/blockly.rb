@@ -67,6 +67,12 @@ Then /^block "([^"]*)" is((?:n't| not)?) at location "([^"]*)"$/ do |block, nega
   end
 end
 
+Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
+  block_space_name = workspace_type + 'BlockSpace'
+  scrollable_height = get_scrollable_height(block_space_name)
+  @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height});")
+end
+
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
   block_id = get_block_id(block)
 

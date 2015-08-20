@@ -12,6 +12,7 @@ Background:
 Scenario: Opening the function editor and moving an inner block doesn't bump function
   When I press SVG selector ".blocklyIconGroup:contains(edit)"
   And I wait to see "#modalEditorClose"
+  And I scroll the modal blockspace to the bottom
   And "modal function block" refers to block "31"
   And "inner repeat block" refers to block "32"
   And block "modal function block" is at a location "function definition location"
