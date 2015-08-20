@@ -61,7 +61,7 @@ class ProjectsController < ApplicationController
     if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
-    return if redirect_under_13(@level)
+    return if redirect_applab_under_13(@level)
     show
   end
 
