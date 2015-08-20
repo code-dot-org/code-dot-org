@@ -465,8 +465,7 @@ en:
       Pixelation - Hadi Emoji:
         Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
         description here: description here
-      Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
+      Pixelation - Lesson 14 - Fix bit offset: {}
       Pixelation - Lesson 14 - Fix bit offset v.2:
         Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
       Pixelation - Lesson 14 - Fix the error:
@@ -548,8 +547,7 @@ en:
       Pixelation Flappy:
         description here: description here
         title: title
-      Test External Markdown:
-        Test External Markdown: Test External Markdown
+      Test External Markdown: {}
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
@@ -559,12 +557,8 @@ en:
       Text Compression Peter Piper:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         Text Compression Peter Piper: Text Compression Peter Piper
-      U1L1 Innovation - Video:
-        Impact of Innovation - Video: Impact of Innovation - Video
-        description here: description here
-      U1L1 Student Lesson Introduction:
-        Impact of Innovation: Impact of Innovation
-        description here: description here
+      U1L1 Innovation - Video: {}
+      U1L1 Student Lesson Introduction: {}
       U1L10 Student Lesson Introduction:
         description here: description here
         title: title
@@ -574,18 +568,14 @@ en:
       U1L12 Student Lesson Introduction:
         description here: description here
         title: title
-      U1L13 Student Lesson Summary:
-        description here: description here
-        title: title
+      U1L13 Student Lesson Summary: {}
       U1L13 Text Compression:
         Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
         U1L13 Text Compression: U1L13 Text Compression
       U1L14 Student Lesson Summary:
         description here: description here
         title: title
-      U1L15 Student Lesson Summary:
-        description here: description here
-        title: title
+      U1L15 Student Lesson Summary: {}
       U1L16 Student Lesson Introduction:
         Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
@@ -604,12 +594,8 @@ en:
       U1L4 Widget Demo - Video:
         Widget Demonstration - Video: Widget Demonstration - Video
         description here: description here
-      U1L5 How the Internet Works - Video:
-        How the Internet Works - Video: How the Internet Works - Video
-        description here: description here
-      U1L5 Student Lesson Introduction:
-        description here: description here
-        title: title
+      U1L5 How the Internet Works - Video: {}
+      U1L5 Student Lesson Introduction: {}
       U1L6 Student Lesson Introduction:
         description here: description here
         title: title
@@ -619,9 +605,7 @@ en:
       U1L8 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
-      U1L9 Student Lesson Introduction:
-        description here: description here
-        title: title
+      U1L9 Student Lesson Introduction: {}
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -782,12 +766,10 @@ en:
       U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
-      U3L25 Student Lesson Introduction:
-        Compound Conditionals: Compound Conditionals
+      U3L25 Student Lesson Introduction: {}
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
-      U3L27 Student Lesson Introduction:
-        Digital Assistant Challenge: Digital Assistant Challenge
+      U3L27 Student Lesson Introduction: {}
       U3L28 Student Lesson Introduction:
         While Loop Basics: While Loop Basics
       U3L29 Student Lesson Introduction:
@@ -802,9 +784,7 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
-      a bit about pixels:
-        kevin systrom pixel video: kevin systrom pixel video
-        pixel video: pixel video
+      a bit about pixels: {}
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
@@ -3312,13 +3292,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
-      Blocks to Math 1:
-        (4+5): (4+5)
-        4 + 5: 4 + 5
-        Blocks to Math 1.blocks.start_blocks, 200: Blocks to Math 1.blocks.start_blocks, 200
-        Convert Blocks to Math: Convert Blocks to Math
-        Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
-        Type the arithmetic expression here: Type the arithmetic expression here
+      Blocks to Math 1: {}
       Blocks to Math 2:
         (7 * 6): (7 * 6)
         7 * 6: 7 * 6
@@ -3522,10 +3496,7 @@ en:
       U1L12 Reflection Free Response:
         'Reflection: Data Storage': 'Reflection: Data Storage'
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
-      U1L13 - Assess Text Compression reverse process:
-        Act as the computer!: Act as the computer!
-        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
-        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 - Assess Text Compression reverse process: {}
       U1L13 Assess Text Compression amount:
         Is this a good compression rate?: Is this a good compression rate?
       U1L13 Assessment 1:
@@ -3845,14 +3816,10 @@ en:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
         'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
-      U3L27 Assessment1:
-        Digital Assistant Reflection 1: Digital Assistant Reflection 1
-      U3L27 Assessment2:
-        Digital Assistant Reflection 2: Digital Assistant Reflection 2
-      U3L27 Assessment3:
-        'Digital Assistant Reflection 3 ': 'Digital Assistant Reflection 3 '
-      U3L27 Free Response Getting Started:
-        'Digital Assistant: Getting Started': 'Digital Assistant: Getting Started'
+      U3L27 Assessment1: {}
+      U3L27 Assessment2: {}
+      U3L27 Assessment3: {}
+      U3L27 Free Response Getting Started: {}
       U3L28 Free Response Getting Started:
         'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
       U3L28 Free Response Wrap Up:

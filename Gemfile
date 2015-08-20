@@ -127,6 +127,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by a build script.
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
+gem 'i18nema', group: :fast_loc  # faster locale backend (active in dev environment or FAST_LOC=true)
 
 gem 'jwt' # single signon for zendesk
 
