@@ -15,7 +15,7 @@
     "x": "55",
     "y": "175",
     "free_play": "false",
-    "impressive": "false",
+    "impressive": "true",
     "slider_speed": ".8",
     "ideal": "19",
     "use_modal_function_editor": "true",
