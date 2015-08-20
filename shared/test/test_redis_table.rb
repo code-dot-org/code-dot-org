@@ -149,6 +149,64 @@ class RedisTableTest < Minitest::Unit::TestCase
     RedisTable.reset_shard('shard2', @redis, @pubsub)
   end
 
+  def test_expiration
+    # Test with a 1-second expire time
+    expire_time = 2
+    margin_time = 0.2
+    table = RedisTable.new(@redis, @pubsub, 'shard1', 'table', expire_time)
+    value1 = {'name' => 'alice', 'age' => 7, 'male' => false}
+    table.insert(value1)
+
+    # Check initial table set-up
+    assert_equal [row(value1, 1)], table.to_a
+
+    # Jump to just before expiration
+    @redis.time_travel expire_time - margin_time
+    assert_equal [row(value1, 1)], table.to_a
+
+    # Reset expiration by inserting a new row
+    value2 = {'name' => 'bob', 'age' => 12, 'male' => true}
+    table.insert(value2)
+    assert_equal [row(value1, 1), row(value2, 2)], table.to_a
+
+    # Jump to original expiration time - nothing should be deleted
+    @redis.time_travel margin_time
+    assert_equal [row(value1, 1), row(value2, 2)], table.to_a
+
+    # Jump to just before expiration again
+    @redis.time_travel expire_time - (2 * margin_time)
+    assert_equal [row(value1, 1), row(value2, 2)], table.to_a
+
+    # Reset expiration by updating a row
+    value3 = {'name' => 'bob', 'age' => 12, 'male' => true}
+    table.update(2, value3)
+    assert_equal [row(value1, 1), row(value3, 2)], table.to_a
+
+    # Jump to next expiration time - nothing should be deleted
+    @redis.time_travel margin_time
+    assert_equal [row(value1, 1), row(value3, 2)], table.to_a
+
+    # Jump to just before expiration a third time
+    @redis.time_travel expire_time - (2 * margin_time)
+    assert_equal [row(value1, 1), row(value2, 2)], table.to_a
+
+    # Reset expiration by deleting a row
+    table.delete([1])
+    assert_equal [row(value3, 2)], table.to_a
+
+    # Jump to expiration time - nothing should be deleted
+    @redis.time_travel margin_time
+    assert_equal [row(value3, 2)], table.to_a
+
+    # Jump to just before expiration a final time
+    @redis.time_travel expire_time - (2 * margin_time)
+    assert_equal [row(value3, 2)], table.to_a
+
+    # Jump to expiration time - this time, everything should be gone
+    @redis.time_travel margin_time
+    assert_equal [], table.to_a
+  end
+
   private
 
   def row(row, id)

@@ -48,10 +48,10 @@ class ProjectsController < ApplicationController
     view_options(
         readonly_workspace: sharing || params[:readonly],
         full_width: true,
-        no_footer: !@game.has_footer?,
         callouts: [],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
-        small_footer: @game.uses_small_footer? || enable_scrolling?
+        small_footer: @game.uses_small_footer? || enable_scrolling?,
+        has_i18n: @game.has_i18n?
     )
     render 'levels/show'
   end

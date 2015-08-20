@@ -17,6 +17,7 @@
 /* global -Blockly */
 /* global $ */
 /* global sendReport */
+/* global confirm */
 'use strict';
 
 var utils = require('../utils');
@@ -26,6 +27,7 @@ var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimUtils = require('./NetSimUtils');
 var DashboardUser = require('./DashboardUser');
@@ -301,6 +303,15 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 };
 
 /**
+ * @returns {boolean} TRUE if the "resetShard" flag is found in the URL
+ * TODO: This needs to be replaced with real UI and a route that
+ *       only allows section owners and admins to perform a reset.
+ */
+NetSim.prototype.shouldResetShard = function () {
+  return /\bresetShard\b/i.test(location.search);
+};
+
+/**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
  * user name is available on load.
@@ -348,7 +359,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
+  this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
+      this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -490,11 +502,15 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      NetSimAlert.error(i18n.createMyClientNodeError());
       onComplete(err, null);
       return;
     }
 
-    node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
+    node.setLostConnectionCallback(function () {
+      NetSimAlert.warn(i18n.alertConnectionReset());
+      this.disconnectFromShard();
+    }.bind(this));
     node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
     onComplete(err, node);
   }.bind(this));
@@ -962,10 +978,12 @@ function resizeFooterToLeftColumnWidth() {
   // the small print should float right.  Otherwise, it should float left.
   var languageSelector = smallFooter.querySelector('form');
   var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint.offsetTop === languageSelector.offsetTop) {
-    smallPrint.style.float = 'right';
-  } else {
-    smallPrint.style.float = 'left';
+  if (smallPrint && languageSelector) {
+    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+      smallPrint.style.float = 'right';
+    } else {
+      smallPrint.style.float = 'left';
+    }
   }
 }
 
@@ -1083,6 +1101,20 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();
+
+  // TODO (bbuchanan): Tear this out when replacing reset option with real UI.
+  if (shard && this.shouldResetShard() && confirm("Are you sure?" +
+          "  This will kick everyone out and reset all data for the class.")) {
+    shard.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
+        return;
+      }
+      // Reload page without the shard-reset query parameter
+      location.search = location.search.replace(/&?resetShard([^&]$|[^&]*)/i, "");
+    }.bind(this));
+  }
 };
 
 /**

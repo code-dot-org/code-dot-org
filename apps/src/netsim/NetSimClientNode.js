@@ -71,7 +71,7 @@ NetSimClientNode.prototype.getStatus = function () {
     mutualConnection = true;
   } else {
     var cachedWireRows = this.shard_.wireTable.readAll();
-    mutualConnection = _.find(cachedWireRows, function (wireRow) {
+    mutualConnection = cachedWireRows.some(function (wireRow) {
       return wireRow.localNodeID === outgoingWire.remoteNodeID &&
           wireRow.remoteNodeID === outgoingWire.localNodeID;
     });
@@ -81,6 +81,19 @@ NetSimClientNode.prototype.getStatus = function () {
     return i18n.connectedToNodeName({nodeName:remoteNodeName});
   }
   return i18n.connectingToNodeName({nodeName:remoteNodeName});
+};
+
+/** @inheritdoc */
+NetSimClientNode.prototype.isFull = function () {
+  var outgoingWire = this.getOutgoingWire();
+  if (!outgoingWire) {
+    return false;
+  }
+  var cachedWireRows = this.shard_.wireTable.readAll();
+  return cachedWireRows.some(function (wireRow) {
+    return wireRow.localNodeID === outgoingWire.remoteNodeID &&
+        wireRow.remoteNodeID === outgoingWire.localNodeID;
+  });
 };
 
 /**

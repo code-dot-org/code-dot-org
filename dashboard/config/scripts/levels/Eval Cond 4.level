@@ -26,7 +26,8 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "We can use the `string=?` function to make conditionals that respond to text input. Here's a function called `green shape` that takes a string for the type of shape. Complete the conditions so that the correct solid green shape is returned when the function is run with \"circle\", \"triangle\", \"square\", or \"rectangle\"."
+    "markdown_instructions": "We can use the `string=?` function to make conditionals that respond to text input. Here's a function called `green shape` that takes a string for the type of shape. Complete the conditions so that the correct solid green shape is returned when the function is run with \"circle\", \"triangle\", \"square\", or \"rectangle\".",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

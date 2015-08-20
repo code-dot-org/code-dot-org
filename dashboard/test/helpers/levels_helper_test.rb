@@ -215,4 +215,25 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'whatever', app_options['channel']
   end
 
+  def stub_country(code)
+    req = request
+    req.location = OpenStruct.new country_code: code
+    self.stubs(:request).returns(req)
+  end
+
+  test 'send to phone enabled for US' do
+    stub_country 'US'
+    assert app_options[:sendToPhone]
+  end
+
+  test 'send to phone disabled for non-US' do
+    stub_country 'RU'
+    refute app_options[:sendToPhone]
+  end
+
+  test 'send_to_phone_url provided when send to phone enabled' do
+    stub_country 'US'
+    assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
+  end
+
 end
