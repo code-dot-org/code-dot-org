@@ -17,10 +17,11 @@ class AwsS3IntegrationTest < Minitest::Test
     assert_equal test_value, AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
     assert_equal test_key, upload_key
 
-    # Make sure a string all of possible bytes and make sure it round trips correctly
+    # Make sure a string all of possible bytes and make sure it round trips correctly.
+    video_key = 'video_key'
     all_bytes = (0..255).to_a.pack('C*')
-    AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, all_bytes, :no_random => true)
-    value = AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
+    AWS::S3::upload_to_bucket(TEST_BUCKET, video_key, all_bytes, :no_random => true, :content_type => 'video/mp4')
+    value = AWS::S3::download_from_bucket(TEST_BUCKET, video_key)
     assert_equal all_bytes, value
     assert_equal Encoding::BINARY, value.encoding
     assert_equal 256, value.bytesize
@@ -49,7 +50,32 @@ class AwsS3IntegrationTest < Minitest::Test
 
     # Test connect_v2!
     client = AWS::S3::connect_v2!
-    assert_equal test_value3, client.get_object(bucket: TEST_BUCKET, key: randomized_key2).body.string
+
+    # Make sure the V2 API sees the correct body and content type.
+    object = client.get_object(bucket: TEST_BUCKET, key: video_key)
+    assert_equal all_bytes, object.body.read.force_encoding(Encoding::BINARY)
+    assert_equal 'video/mp4', object.content_type
+  end
+
+  def test_aws_s3_acl_options
+    client = AWS::S3::connect_v2!
+    all_users_uri = 'http://acs.amazonaws.com/groups/global/AllUsers'
+
+    # Verify that the public-read acl option creates a publicly readable object.
+    public_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'public_key', 'hello', acl: 'public-read')
+    public_grants = client.get_object_acl(bucket: TEST_BUCKET, key: public_key).grants
+    allows_public_reads = public_grants.detect do |grant|
+      grant.grantee.uri == all_users_uri && grant.permission == 'READ'
+    end
+    assert allows_public_reads, 'public-read acl should allow public reads'
+
+    # Verify that the default option creates a private object.
+    private_key = AWS::S3::upload_to_bucket(TEST_BUCKET, 'private_key', 'hello')
+    private_grants = client.get_object_acl(bucket: TEST_BUCKET, key: private_key).grants
+    allows_public_reads = private_grants.detect do |grant|
+      grant.grantee.uri == all_users_uri && grant.permission == 'READ'
+    end
+    assert !allows_public_reads, 'default acl should not allow public reads'
   end
 
 end

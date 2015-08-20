@@ -190,7 +190,6 @@ module LevelsHelper
 
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
-    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
 
     # Edit blocks-dependent options
     if level_view_options[:edit_blocks]
@@ -249,6 +248,7 @@ module LevelsHelper
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     app_options
   end
@@ -378,7 +378,7 @@ module LevelsHelper
   end
 
   def enable_scrolling?
-    current_user && current_user.admin? && @level.is_a?(Blockly)
+    @level.is_a?(Blockly)
   end
 
   def enable_examples?

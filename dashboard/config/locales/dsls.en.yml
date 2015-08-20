@@ -657,7 +657,7 @@ en:
         IP/DNS Video: IP/DNS Video
         'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
-        U2L04 Routers and Addresses: U2L04 Routers and Addresses
+        U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
       U2L5 Packets and Reliability - Video:
         'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
         description here: description here
@@ -2302,6 +2302,22 @@ en:
         What should g(2) return?: What should g(2) return?
         g(y) = y + 3: g(y) = y + 3
         y: y
+      Multi Horizontal Scroll Test:
+        12 bits: 12 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -2581,8 +2597,8 @@ en:
         heuristic: heuristic
         protocol: protocol
       U2L02 Assessment 4:
-        Cell Number: Cell Number
         From: From
+        Grid Coordinates: Grid Coordinates
         'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
         Time: Time
         To: To
@@ -2647,11 +2663,11 @@ en:
       U2L07 Assessment2:
         A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
         ? |-
-          Both minimum spanning tree algorithm you learned and the
+          Both the minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         : |-
-          Both minimum spanning tree algorithm you learned and the
+          Both the minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
@@ -2662,8 +2678,8 @@ en:
         Question 3: Question 3
         The algorithm is correct.: The algorithm is correct.
         The algorithm is efficient.: The algorithm is efficient.
+        The algorithm is short.: The algorithm is short.
         The algorithm is understandable.: The algorithm is understandable.
-        The algorithm short: The algorithm short
         Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
       U2L08 Assessment 1:
         '11': '11'
@@ -2756,7 +2772,7 @@ en:
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
-        How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
+        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
