@@ -8,13 +8,19 @@ MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.ne
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 
-# deal with some ordering issues -- sometimes environment is loaded before test_helper and sometimes after
+# deal with some ordering issues -- sometimes environment is loaded
+# before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
+# but running unit tests in the test env for developers only sets
+# RAILS ENV. We fix it above but we need to reload some stuff...
+
 CDO.rack_env = "test" if defined? CDO
 Rails.application.reload_routes! if defined? Rails
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+
+load File.expand_path('../../config/initializers/mailer_default_url_options.rb', __FILE__)
 
 require 'rails/test_help'
 
