@@ -48,8 +48,7 @@ class RedisTable
   # @return [Hash] The inserted value, including the new :id field.
   def insert(value, ignored_ip=nil)
     new_id = next_id
-    new_uuid = SecureRandom.uuid
-    value = value.merge({'uuid' => new_uuid})
+    value['uuid'] = SecureRandom.uuid
     @props.set(row_key(new_id), value.to_json)
     publish_change({:action => 'insert', :id => new_id})
     merge_id(value, new_id)
@@ -133,7 +132,7 @@ class RedisTable
   def update(id, hash, ignored_ip=nil)
     original_hash = @props.to_hash[row_key(id)]
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
-    hash = hash.merge({'uuid' => JSON.parse(original_hash)['uuid']})
+    hash['uuid'] = JSON.parse(original_hash)['uuid']
     @props.set(row_key(id), hash.to_json)
     publish_change({:action => 'update', :id => id})
     merge_id(hash, id)
