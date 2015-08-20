@@ -10,10 +10,10 @@ nav: resources_nav
 
 <a id="handouts"></a>
 ## Use this handout to spread the word
-<a href="<%= resolve_file('/files/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
+<a href="<%= localized_file('/files/hoc-one-pager.pdf') %>"><img src="<%= localized_file('/images/fit-250/one-pager.png') %>"></a>
 
 ## Give this handout to teachers and schools
-<a href="<%= resolve_file('/files/schools-handout.pdf') %>"><img src="/images/fit-250/schools-handout.png"></a>
+<a href="<%= localized_file('/files/schools-handout.pdf') %>"><img src="<%= localized_file('/images/fit-250/schools-handout.png') %>"></a>
 
 
 <a id="videos"></a>
