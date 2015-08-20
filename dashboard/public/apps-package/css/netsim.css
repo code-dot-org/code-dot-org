@@ -72,6 +72,8 @@
     height: 100%;
     margin: auto;
     overflow-y: auto; }
+    #netsim #netsim-disconnected #netsim-scrolling-lobby {
+      overflow-y: auto; }
   #netsim #netsim-leftcol {
     position: absolute;
     top: 0;
@@ -268,6 +270,8 @@
     margin-left: calc(30% + 1em); }
   #netsim .netsim-lobby-panel table {
     margin-bottom: 1em; }
+    #netsim .netsim-lobby-panel table.nomargin {
+      margin-bottom: 0; }
     #netsim .netsim-lobby-panel table img {
       height: 14px;
       vertical-align: text-top; }

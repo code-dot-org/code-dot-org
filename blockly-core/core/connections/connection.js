@@ -90,7 +90,7 @@ Blockly.Connection = function(source, type) {
 /**
  * Is this connection currently connected to another connection.
  */
-Blockly.Connection.prototype.isConnected_ = function () {
+Blockly.Connection.prototype.isConnected = function () {
   return this.targetConnection !== null;
 };
 
@@ -98,7 +98,7 @@ Blockly.Connection.prototype.isConnected_ = function () {
  * Sever all links to this connection (not including from the source object).
  */
 Blockly.Connection.prototype.dispose = function() {
-  if (this.isConnected_()) {
+  if (this.isConnected()) {
     throw 'Disconnect connection before disposing of it.';
   }
   if (this.inDB_) {
@@ -137,7 +137,7 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   if (Blockly.OPPOSITE_TYPE[this.type] != connectTo.type) {
     throw 'Attempt to connect incompatible types.';
   }
-  if (this.isConnected_()) {
+  if (this.isConnected()) {
     throw 'Source connection already connected.';
   }
 
@@ -488,7 +488,7 @@ Blockly.Connection.prototype.tighten_ = function() {
  *     another connection or null, and 'radius' which is the distance.
  */
 Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
-  if (this.isConnected_()) {
+  if (this.isConnected()) {
     // Don't offer to connect to a connection that's already connected.
     return {connection: null, radius: maxLimit};
   }
@@ -763,7 +763,7 @@ Blockly.Connection.prototype.hideAll = function() {
   if (this.inDB_) {
     this.dbList_[this.type].removeConnection_(this);
   }
-  if (this.isConnected_()) {
+  if (this.isConnected()) {
     var blocks = this.targetBlock().getDescendants();
     for (var b = 0; b < blocks.length; b++) {
       var block = blocks[b];
