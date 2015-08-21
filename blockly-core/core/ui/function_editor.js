@@ -795,15 +795,6 @@ Blockly.FunctionEditor.prototype.onDeletePressed = function () {
   var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
   var deleteMessage = Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE.replace('%1',
       functionName);
-  if (!Blockly.customSimpleDialog) {
-    // For playground testing, use a standard `confirm` dialog for testing
-    var result = confirm(deleteMessage);
-    if (result) {
-      this.onDeleteConfirmed(functionName);
-    }
-    return;
-  }
-
   Blockly.showSimpleDialog({
     bodyText: deleteMessage,
     cancelText: Blockly.Msg.DELETE,
