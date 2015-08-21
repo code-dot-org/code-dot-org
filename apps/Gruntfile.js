@@ -27,11 +27,15 @@ if (process.env.MOOC_APP) {
 }
 
 // Parse options from environment.
-var MINIFY = (process.env.MOOC_MINIFY === '1');
-var LOCALIZE = (process.env.MOOC_LOCALIZE === '1');
-var DEV = (process.env.MOOC_DEV === '1');
+var envOptions = {
+  minify: (process.env.MOOC_MINIFY === '1'),
+  localize: (process.env.MOOC_LOCALIZE === '1'),
+  dev: (process.env.MOOC_DEV === '1'),
+  digest: (process.env.MOOC_DIGEST === '1')
 
-var LOCALES = (LOCALIZE ? [
+};
+
+var LOCALES = (envOptions.localize ? [
   'ar_sa',
   'az_az',
   'bg_bg',
@@ -97,8 +101,8 @@ config.clean = {
   digest: ['build/package/js/**/*-????????????????????????????????.js']
 };
 
-var ace_suffix = DEV ? '' : '-min';
-var dotMinIfNotDev = DEV ? '' : '.min';
+var ace_suffix = envOptions.dev ? '' : '-min';
+var dotMinIfNotDev = envOptions.dev ? '' : '.min';
 
 config.copy = {
   src: {
@@ -229,7 +233,7 @@ config.lodash = {
 config.sass = {
   all: {
     options: {
-      outputStyle: (MINIFY ? 'compressed' : 'nested'),
+      outputStyle: (envOptions.minify ? 'compressed' : 'nested'),
       includePaths: ['../shared/css/']
     },
     files: {
@@ -298,7 +302,7 @@ config.exec = {
   mochaTest: 'node test/util/runTests.js --color'
 };
 
-var ext = DEV ? 'uncompressed' : 'compressed';
+var ext = envOptions.dev ? 'uncompressed' : 'compressed';
 config.concat = {
   vendor: {
     nonull: true,
@@ -446,11 +450,16 @@ module.exports = function(grunt) {
         return;
       }
 
-      var data = grunt.file.read(file);
-      var digest = crypto.createHash('md5').update(data).digest('hex');
       var oldName = path.relative('build/package', file);
-      var newName = oldName.replace(/\.js$/, '-' + digest + '.js');
-      fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
+      var newName;
+      if (envOptions.digest) {
+        var data = grunt.file.read(file);
+        var digest = crypto.createHash('md5').update(data).digest('hex');
+        newName = oldName.replace(/\.js$/, '-' + digest + '.js');
+        fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
+      } else {
+        newName = oldName;
+      }
       manifest[oldName] = newName;
     });
     grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
@@ -486,7 +495,7 @@ module.exports = function(grunt) {
     'prebuild',
     'exec:browserify',
     // Skip minification in development environment.
-    DEV ? 'noop' : ('concurrent:uglify'),
+    envOptions.dev ? 'noop' : ('concurrent:uglify'),
     'postbuild',
     'clean:digest',
     'digest'

@@ -652,7 +652,9 @@ StudioApp.prototype.inject = function(div, options) {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
-    trashcan: true
+    trashcan: true,
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
+        this.Dialog)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
