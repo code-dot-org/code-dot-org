@@ -86,7 +86,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user_hero for student with script" do
-    sign_in @student_3
+    user_script = create :user_script
+    sign_in user_script.user
+
     get :user_hero
 
     assert_select '#welcome.student'
