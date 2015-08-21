@@ -23,6 +23,7 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
@@ -331,6 +332,7 @@ NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err) {
     if (err) {
       logger.error("Unable to create router: " + err.message);
+      NetSimAlert.error(i18n.addRouterToLobbyError());
     }
   }.bind(this));
 };
