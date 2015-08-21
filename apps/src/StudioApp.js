@@ -370,6 +370,10 @@ StudioApp.prototype.init = function(config) {
 
   if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
+  } else {
+    // handleUsingBlockly_ already does an onResize. We still want that goodness
+    // if we're not blockly
+    this.onResize();
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
