@@ -272,13 +272,6 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         ));
       }
 
-      if (controller.canCurrentUserResetShard()) {
-        buttons.push(buttonMarkup(
-            i18n.shardResetButton(),
-            'reset-shard',
-            ['secondary']));
-      }
-
       if (buttons.length > 0) {
         writeEmptyRow(buttons.join(' '));
       } else if (lobbyRows.length === 0) {
