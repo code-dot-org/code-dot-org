@@ -17,7 +17,7 @@
     "honey_goal": "2",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "true",
-    "scrollbars": "false",
+    "scrollbars": "true",
     "ideal": "6"
   }
 }]]></config>

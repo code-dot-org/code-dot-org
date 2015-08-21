@@ -502,7 +502,6 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
-      NetSimAlert.error(i18n.createMyClientNodeError());
       onComplete(err, null);
       return;
     }
@@ -978,12 +977,10 @@ function resizeFooterToLeftColumnWidth() {
   // the small print should float right.  Otherwise, it should float left.
   var languageSelector = smallFooter.querySelector('form');
   var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint && languageSelector) {
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
+  if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    smallPrint.style.float = 'right';
+  } else {
+    smallPrint.style.float = 'left';
   }
 }
 
@@ -1108,7 +1105,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
     shard.resetEverything(function (err) {
       if (err) {
         logger.error(err);
-        NetSimAlert.error(i18n.shardResetError());
         return;
       }
       // Reload page without the shard-reset query parameter
