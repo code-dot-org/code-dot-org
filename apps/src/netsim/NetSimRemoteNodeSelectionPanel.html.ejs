@@ -121,11 +121,33 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
   return markup;
 }
 
+function writeBeginTable(classname) {
+  if (classname) {
+    %><table class="<%=classname%>"><%
+  } else {
+    %><table><%
+  }
+}
+
+function writeEndTable() {
+  %></table><%
+}
+
+function writeBeginTbody() {
+  %><tbody><%
+}
+
+function writeEndTbody() {
+  %></tbody><%
+}
+
 function writeHeader(headerText) {
   %>
-    <tr>
-      <th colspan="3"><%= headerText %></th>
-    </tr>
+    <thead>
+      <tr>
+        <th colspan="3"><%= headerText %></th>
+      </tr>
+    </thead>
   <%
 }
 
@@ -139,25 +161,27 @@ function writeEmptyRow(contents) {
 }
 
 function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
+    var button;
+    if (buttonType === 'join-button') {
+      button = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'accept-button') {
+      button = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'cancel-button') {
+      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'full-button') {
+      button = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
+    }
   %>
     <tr>
       <td nowrap><%= row.displayName %> <small>(<%= row.hostname %>)</small></td>
-      <td><%- nodeStatus %></td>
-      <td class="button-column">
-        <%
-          var markup = '';
-          if (buttonType === 'join-button') {
-            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'accept-button') {
-            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'cancel-button') {
-            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'full-button') {
-            markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
-          }
-        %>
-        <%- markup %>
-      </td>
+      <% if (button) { %>
+        <td><%- nodeStatus %></td>
+        <td class="button-column">
+          <%- button %>
+        </td>
+      <% } else { %>
+        <td colspan="2"><%- nodeStatus %></td>
+      <% } %>
     </tr>
   <%
 }
@@ -166,82 +190,99 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
 <div class="content-wrap">
   <div class="instructions"><%= controller.getLocalizedLobbyInstructions() %></div>
   <div class="controls">
-    <table>
 
-      <%
-        // Outgoing request table (hidden if empty)
-        if (outgoingRequestRows.length > 0) {
-          writeHeader(i18n.outgoingConnectionRequests());
-          outgoingRequestRows.forEach(function (row) {
-            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
-              otherName: row.displayName,
-              otherStatus: row.status
-            });
-            writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
+    <%
+      // Outgoing request table (hidden if empty)
+      if (outgoingRequestRows.length > 0) {
+        writeBeginTable();
+        writeHeader(i18n.outgoingConnectionRequests());
+        writeBeginTbody();
+        outgoingRequestRows.forEach(function (row) {
+          var outgoingStatus = i18n.lobbyStatusWaitingForOther({
+            spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
+            otherName: row.displayName,
+            otherStatus: row.status
           });
-          writeEmptyRow();
-        }
-
-        // Incoming requests table (hidden if empty)
-        if (requestRows.length > 0) {
-          writeHeader(i18n.incomingConnectionRequests());
-          requestRows.forEach(function (row) {
-            var buttonType;
-            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-              buttonType = 'accept-button';
-            }
-            var incomingStatus = i18n.lobbyStatusWaitingForYou();
-            writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
-          });
-          writeEmptyRow();
-        }
-
-        // Primary lobby list
-        writeHeader(i18n.lobby());
-        lobbyRows.forEach(function (row) {
-          var buttonType;
-          if (!controller.hasOutgoingRequest()) {
-            if (row.isFull) {
-              buttonType = 'full-button';
-            } else if (row.canConnectToNode) {
-              buttonType = 'join-button';
-            }
-          }
-          writeNodeRow(row, row.status, buttonType, row.classAttr);
+          writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
         });
+        writeEndTbody();
+        writeEndTable();
+      }
 
-        var buttons = [];
+      // Incoming requests table (hidden if empty)
+      if (requestRows.length > 0) {
+        writeBeginTable();
+        writeHeader(i18n.incomingConnectionRequests());
+        writeBeginTbody();
+        requestRows.forEach(function (row) {
+          var buttonType;
+          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+            buttonType = 'accept-button';
+          }
+          var incomingStatus = i18n.lobbyStatusWaitingForYou();
+          writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
+        });
+        writeEndTbody();
+        writeEndTable();
+      }
+    %>
 
-        if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
-          var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
-          buttons.push(buttonMarkup(
-              buttonText,
-              'netsim-lobby-add-router',
-              ['secondary']
-          ));
+    <%
+      // Primary lobby list
+      writeBeginTable("nomargin");
+      writeHeader(i18n.lobby());
+      writeEndTable();
+    %>
+    <div id="netsim-scrolling-lobby">
+    <%
+      writeBeginTable();
+      writeBeginTbody();
+      lobbyRows.forEach(function (row) {
+        var buttonType;
+        if (!controller.hasOutgoingRequest()) {
+          if (row.isFull) {
+            buttonType = 'full-button';
+          } else if (row.canConnectToNode) {
+            buttonType = 'join-button';
+          }
         }
+        writeNodeRow(row, row.status, buttonType, row.classAttr);
+      });
 
-        if (levelConfig.showLogBrowserButton) {
-          buttons.push(buttonMarkup(
-              i18n.logBrowserButton(),
-              'show-router-log-modal',
-              ['secondary'],
-              {
-                'data-toggle':'modal',
-                'data-target':'#router-log-modal'
-              }
-          ));
-        }
+      var buttons = [];
 
-        if (buttons.length > 0) {
-          writeEmptyRow(buttons.join(' '));
-        } else if (lobbyRows.length === 0) {
-          writeEmptyRow(i18n.lobbyIsEmpty());
-        }
-      %>
+      if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
+        var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
+        buttons.push(buttonMarkup(
+            buttonText,
+            'netsim-lobby-add-router',
+            ['secondary']
+        ));
+      }
 
-    </table>
+      if (levelConfig.showLogBrowserButton) {
+        buttons.push(buttonMarkup(
+            i18n.logBrowserButton(),
+            'show-router-log-modal',
+            ['secondary'],
+            {
+              'data-toggle':'modal',
+              'data-target':'#router-log-modal'
+            }
+        ));
+      }
+
+      if (buttons.length > 0) {
+        writeEmptyRow(buttons.join(' '));
+      } else if (lobbyRows.length === 0) {
+        writeEmptyRow(i18n.lobbyIsEmpty());
+      }
+
+      writeEndTbody();
+      writeEndTable();
+    %>
+    </div>
+
   </div>
   <div class="clear"></div>
 </div>

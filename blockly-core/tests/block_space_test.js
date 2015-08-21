@@ -18,6 +18,12 @@
  */
 'use strict';
 
+var SMALL_NUMBER_BLOCK  = '<xml>' +
+    '<block type="math_number">' +
+    '<title name="NUM">0</title>' +
+    '</block>' +
+    '</xml>';
+
 function test_initializeBlockSpace() {
   var container = Blockly.Test.initializeBlockSpaceEditor();
   goog.dom.removeNode(container);
@@ -60,6 +66,38 @@ function test_scrollBarsActivateOnDropOutsideViewport() {
 
   assert('Scrollbars visible after block dragged below bottom',
     Blockly.mainBlockSpace.scrollbarPair.vScroll.isVisible());
+
+  goog.dom.removeNode(container);
+}
+
+function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blockSpace = Blockly.mainBlockSpace;
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(SMALL_NUMBER_BLOCK));
+  var numberBlock = blockSpace.getTopBlocks()[0];
+  var viewportHeight = blockSpace.getMetrics().viewHeight;
+  var originalScrollableHeight = blockSpace.getScrollableSize(
+      blockSpace.getMetrics()).height;
+
+  assertEquals(viewportHeight, originalScrollableHeight);
+
+  // drop block just at bottom
+  var distanceFromBottom = 10;
+  numberBlock.moveTo(0, viewportHeight
+      - numberBlock.getHeightWidth().height
+      - distanceFromBottom);
+
+  Blockly.mainBlockSpace.scrollbarPair.resize();
+
+  var originalPlusMargin = originalScrollableHeight +
+      Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM -
+      distanceFromBottom;
+  var newScrollableHeight =
+      blockSpace.getScrollableSize(blockSpace.getMetrics()).height;
+
+  assert("Scrollable area has increased",
+      newScrollableHeight > originalPlusMargin);
 
   goog.dom.removeNode(container);
 }

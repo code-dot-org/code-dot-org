@@ -53,5 +53,9 @@ module AWS
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
       filename
     end
+
+    def self.public_url(bucket, filename)
+      Aws::S3::Object.new(bucket, filename, region: S3_REGION).public_url
+    end
   end
 end

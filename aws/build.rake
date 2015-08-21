@@ -209,7 +209,7 @@ end
 def upgrade_frontend(name, host)
   commands = [
     'cd production',
-    'git pull',
+    'git pull --ff-only',
     'rake build',
   ]
   command = commands.join(' && ')
