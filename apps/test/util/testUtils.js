@@ -25,7 +25,7 @@ exports.setupLocale = setupLocale;
 function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
-  require('../../build/package/js/en_us/*_locale-????????????????????????????????.js', { mode: 'expand'});
+  require('../../build/package/js/en_us/*_locale*.js', { mode: 'expand'});
   assert(window.blockly.applab_locale);
 }
 
