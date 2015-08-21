@@ -228,7 +228,7 @@ class Script < ActiveRecord::Base
   end
 
   def freeplay_links
-    if name == 'algebra'
+    if name.include?('algebra')
       ['calc', 'eval']
     else
       ['playlab', 'artist']

@@ -142,6 +142,10 @@ $wide-column-width: 121px;
     height: 100%;
     margin: auto;
     overflow-y: auto;
+
+    #netsim-scrolling-lobby {
+      overflow-y: auto;
+    }
   }
 
   #netsim-leftcol {
@@ -428,6 +432,10 @@ $wide-column-width: 121px;
 
     table {
       margin-bottom: 1em;
+
+      &.nomargin {
+        margin-bottom: 0;
+      }
 
       img {
         height: 14px;

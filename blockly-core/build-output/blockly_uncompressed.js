@@ -13451,11 +13451,11 @@ Blockly.Connection = function(source, type) {
   this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList;
   this.check_ = null
 };
-Blockly.Connection.prototype.isConnected_ = function() {
+Blockly.Connection.prototype.isConnected = function() {
   return this.targetConnection !== null
 };
 Blockly.Connection.prototype.dispose = function() {
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     throw"Disconnect connection before disposing of it.";
   }
   if(this.inDB_) {
@@ -13482,7 +13482,7 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   if(Blockly.OPPOSITE_TYPE[this.type] != connectTo.type) {
     throw"Attempt to connect incompatible types.";
   }
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     throw"Source connection already connected.";
   }
   if(connectTo.targetConnection) {
@@ -13707,7 +13707,7 @@ Blockly.Connection.prototype.tighten_ = function() {
   }
 };
 Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     return{connection:null, radius:maxLimit}
   }
   var oppositeType = Blockly.OPPOSITE_TYPE[this.type];
@@ -13868,7 +13868,7 @@ Blockly.Connection.prototype.hideAll = function() {
   if(this.inDB_) {
     this.dbList_[this.type].removeConnection_(this)
   }
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     var blocks = this.targetBlock().getDescendants();
     for(var b = 0;b < blocks.length;b++) {
       var block = blocks[b];
@@ -23322,7 +23322,10 @@ Blockly.ContractEditor.prototype.resetExampleViews = function() {
   })
 };
 Blockly.ContractEditor.prototype.testExample = function(block, visualize) {
-  return this.testHandler_(block, visualize)
+  var testHandlerResult = this.testHandler_(block, visualize);
+  var definitionInput = this.functionDefinitionBlock.getInput("STACK");
+  var definitionIsFilled = definitionInput.connection.isConnected();
+  return definitionIsFilled ? testHandlerResult : Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE
 };
 Blockly.ContractEditor.prototype.resetExample = function(block) {
   this.testResetHandler_(block)
