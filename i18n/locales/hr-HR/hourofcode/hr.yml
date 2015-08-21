@@ -1,0 +1,316 @@
+hr:
+  site_name: SAT KODIRANJA
+  language: Hrvatski
+  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  coming_soon: Uskoro
+  campaign_date_start_short: Dec. 7
+  campaign_date_start_long: December 7
+  campaign_date_short: Dec. 7-13
+  campaign_date_full: December 7-13
+  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_intro_default: 'Sat Kodiranja globalni je pokret koji doseže desetke milijuna učenika u preko 180 zemalja. Bilo tko, bilo gdje može organizirati Sat Kodiranja. Jednosatni vodiči dostupni su na preko 30 jezika. Nikakvo iskustvo nije potrebno. <strong>Od 4 do 104 godine.</strong>'
+  front_watch_video: Pogledajte novi video
+  front_watch_regular_video: Watch the video
+  header_menu_resources: Resursi
+  header_menu_faq: često postavljana pitanja
+  header_menu_prizes: Nagrade
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
+  prizes_all: Nagrade za svakog organizatora
+  prizes_every_organizer: 'Svaki  organizator sata kodiranja dobit će Dropbox ili Skype kredit kao zahvalu'
+  prizes_technology: Jedna javna škola u svakoj državi SAD-a (i Washington okrug) osvojit će 10 tisuća dolara tehnologije
+  prizes_tech_chats: '# razreda osvojit će video razgovore sa vrlo posebnim gostima'
+  prizes_robots: '100 učionica će osvojiti set  robota za programiranej'
+  prizes_brilliant: Jedna škola u svakoj pokrajini i teritoriju će primiti $2000 za Briljantan projekt
+  prizes_actua: 15 škola diljem Kanade dobivaju 2 hands-on STEM radionice od jednog od članova Actua grupe
+  prizes_details: Detalji
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: Terms and Conditions
+  prizes_nav_faq: često postavljana pitanja
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Kako voditi Sat Kodiranja</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> Promovirajte Sat Kodiranja</a>"
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  anybody_can_learn: Svatko može naučiti.
+  get_started: Start
+  beyond_an_hour: Beyond an Hour of Code
+  register_now: Registrirajte se sada
+  share_on_facebook: Share on Facebook
+  share_on_twitter: Share on Twitter
+  front_join_us_heading: Sat Kodiranja za svakog učenika.
+  front_join_us_description: Informatika je temelj za svakog učenika. Pomozite nam predstaviti je stotinama milijuna.
+  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_button: Pridružite nam se
+  front_what_is_hoc: Što je Sat Kodiranja?
+  front_join_us_header: 'Svatko može naučiti osnove, i zabaviti  se dok to radi!'
+  front_join_us_teacher: Jeste li učitelj?
+  front_join_us_inspire: Potaknuti studente s
+  front_join_us_inspire_link: Sat Kodiranja u učionici.
+  front_join_us_parent: Jeste li roditelj?
+  front_join_us_ask_link: Pitajte svoju mjesnu školu
+  front_join_us_ask: da bude domaćin Sata Kodiranja.
+  front_join_us_computer_science: Samo volite informatiku?
+  front_join_us_spread: Proširite vijest.
+  front_join_us_organize: Ili organizirajte Sat Kodiranja sami.
+  front_join_us_how_to_run: Evo kako izvesti Sat Kodiranja
+  front_join_us_help_promote: Pomozite u promicanju Sata Kodiranja
+  front_join_us_students: Učenici
+  front_join_us_teachers: Učitelji
+  front_join_us_everyone: Svi
+  front_join_us_try: Isprobajte
+  front_join_us_host: Budite domaćin
+  front_join_us_support: Pružite podršku
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: Ime
+  signup_email_label: E-pošta
+  signup_organization_name_label: Naziv škole ili organizacije
+  signup_event_type_label: Vrsta događaja
+  signup_event_entire_school_label: Cijela škola sudjeluje
+  signup_event_location_label: Lokacija (neobavezno)
+  signup_special_event_flag_label: Istaknite moj poseban događaj
+  signup_special_event_details_label: Detalji posebnog događaja
+  signup_send_posters_flag_label: 'Pošaljite <a href= "/resources#posters"> plakate</a> u moju školu ili ustanovu'
+  signup_send_posters_address_label: Adresa škole ili ustanove
+  signup_whole_school_flag_label: Ovaj događaj je za cijelu školu
+  signup_your_event: Prijavite vaš događaj
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_name_placeholder: Vaše ime
+  signup_email_placeholder: VašeIme@primjer.com
+  signup_organization_name_placeholder: Primjerice, srednja škola
+  signup_event_location_placeholder: "Poštanski broj i zemlja ILI puna adresa. \r (Upotrijebit ćemo ove podatke da bi mjesto označili na našoj karti)"
+  signup_special_event_details_placeholder: Opišite ono što čini ovaj događaj posebnim
+  signup_send_posters_address_placeholder: Ova adresa neće biti prikazana na našoj karti
+  signup_event_type_in_school: U školi
+  signup_event_type_out_of_school: Izvan škole
+  signup_submit_label: Registrirajte se
+  signup_submit_error_message: Došlo je do greške. Molimo provjerite jesu li sva obvezna polja popunjena ispravno.
+  signup_thank_you_header: Hvala vam za registriranje da budete domaćin Sata Koridanja.
+  signup_thank_you_message: Poslali smo vam e-poštu potvrde sa informacijama da vam pomognemo započeti.
+  map_header: '# Sat Kodiranja događanja diljem svijeta'
+  see_all_events: See all events
+  map_header_company: '# Organizirano od strane firme'
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
+  meta_tag_og_description: Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
+  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_description: Sat Kodiranja je globalni pokret koji doseže milijune učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
+  twitter_default_text: 'Ja sudjelujem u ovogodišnjem Satu Kodiranja #HourOfCode, a vi? @codeorg'
+  hardware_prizes_form_name_label: Ime
+  hardware_prizes_form_name_placeholder: Ime
+  hardware_prizes_form_email_label: E-pošta
+  hardware_prizes_form_email_placeholder: E-pošta
+  hardware_prizes_form_school_name_label: Ime škole
+  hardware_prizes_form_school_name_placeholder: Ime škole
+  hardware_prizes_form_school_address_label: Adresa škole
+  hardware_prizes_form_school_address_placeholder: Adresa škole
+  hardware_prizes_form_school_type_label: Vrsta škole
+  hardware_prizes_form_school_type_option_elementary: Osnovna škola
+  hardware_prizes_form_school_type_option_middle_school: Srednja škola
+  hardware_prizes_form_school_type_option_high_school: Visoka skola
+  hardware_prizes_form_qualifying_school_label: To je K-12 javna škola u SAD-u
+  hardware_prizes_form_number_students_label: Broj učenika koji sudjeluju
+  hardware_prizes_form_number_students_placeholder: Broj učenika
+  hardware_prizes_form_plan_file_label: Učitajte logistički plan za vaš Sat Kodiranja
+  hardware_prizes_form_plan_file_description: 'Pošaljite jednostavan raspored koji pojašnjava kako namjeravate organizirati svakog pojedinačnog učenika da bi odradio Sat Kodiranja u školi. Pogledajte primjer: #PDF # | #Word #'
+  hardware_prizes_form_submit_label: Pošaljite
+  hoc_faq_title: često postavljana pitanja
+  hoc_faq_what_is_hoc_q: Što je Sat Kodiranja?
+  hoc_faq_what_is_hoc_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://code.org/learn'>Check out the tutorials</a>."
+  hoc_faq_last_year: Try the tutorials
+  hoc_faq_when_is_hoc_q: Kada je Sat Kodiranja?
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: Zašto informatika?
+  hoc_faq_why_cs_a: "<i>Svaki</i> učenik trebao bi imati priliku naučiti informatiku. To pomaže njegovanju vještine rješavanja problema, logike i kreativnosti. Počevši rano, učenici će imati temelj za uspjeh u karijeri u 21-om stoljeću. Pogledajte dodatne statistike na <a href='http://code.org'> Code.org</a>."
+  hoc_faq_how_participate_q: Kako mogu sudjelovati u Satu kodiranja?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Tko stoji iza sata Kodiranja?
+  hoc_faq_behind_hoc_a: "Sat kodiranja organiziran je od strane <a href='http://code.org'> Code.org</a>, javne 501 c 3 neprofitne organizacije posvećene širenju informatike tako što omogućuju dostupnost u sve više škola, i povećano sudjelovanje žena i manje zastupljenih učenika pripadnika manjina. <a href='http://code.org/about/partners'> Besprimjerna koalicija partnera</a>ujedinjeno podržava Sat Kodiranja&mdash; uključujući Microsoft, Apple, Amazon, Boys and Girls Clubs of America i Uprave Sveučilišta."
+  hoc_faq_host_q: Ne znam ništa o kodiranju. Mogu li ipak biti domaćin događaja?
+  hoc_faq_host_a: "Naravno. Aktivnosti Sata Kodiranja imaju smjernice. Sve što morate učiniti je <a href='http://code.org/learn'>probati naš aktuelni vodič</a>, odabrati lekciju koju želite i sat svoga vremena &mdash; mi ćemo se pobrinuti za ostalo. Također imamo opcije za svaku dob i nivo iskustva, od vrtića na gore. Počnite planirati svoj događaj čitajući <a href='/resources/how-to'> kako voditi</a>."
+  hoc_faq_need_computers_q: Trebam li računalo za svakog sudionika?
+  hoc_faq_need_computers_a: "Ne. Mi imamo vodiče Sata Kodiranja koji rade na računalima, pametnim telefonima, tabletima, kao i neke za koje uopće ne trebate računalo! Možete pristupiti gdje god se nalazili, uz bilo što što imate. <p><i>Evo nekoliko mogućnosti:</i> <br><ul><li><b>Rad u parovima.</b> Istraživanja pokazuju da učenici najbolje uče <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programiranjem u parovima</a> dijeljenjem računala i zajedničkim radom. Potaknite svoje učenike da  dijele. <li><b>Koristite projektor.</b> Ako imate projektor i zaslon za računalo povezano na internet, cijela grupa mođe učiti Sat Kodiranja zajedno. Pogledajte video zapise zajedno i naizmjence rješavajte zagonetke i odgovarajte na pitanja. <li><b>Učite bez upotrebe elektronike.</b> Nudimo vodiče za koje uopće ne trebate računalo. </ul>"
+  hoc_faq_international_q: 'Ja sam u <country>. Kako međunarodno sudjelovati?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_tutorial_q: Kako napraviti vodič za Sat Kodiranja?
+  hoc_faq_tutorial_a: "Ako ste zainteresirani postati suradnikom u izradi vodiča, <a href='/tutorial-guidelines'> pogledajte naše smjernice i upute</a>. Htjeli bismo omogućiti razne opcije, ali primarni cilj je optimizirati iskustvo za učenike i učitelje kojima je informatika nepoznata."
+  hoc_faq_more_questions_q: Imate još pitanja?
+  hoc_faq_more_questions_a: "Pokušajte pronaći odgovore na <a href='http://support.code.org'>forumu podrške</a>."
+  hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://code.org/learn'>Code.org/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_account_q: Do students need to log on using an account?
+  hoc_faq_account_a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href='http://code.org/learn/beyond'>follow-on courses</a> require account creation to save student progress."
+  hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
+  hoc_faq_frozen_a: "It is now published on <a href='http://code.org/learn'>Code.org/learn</a>. We hope you enjoy it!"
+  hoc_faq_high_school_q: Which activity should I do with high school students?
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://code.org/learn'>Code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
+  stats_growth: Najbrže je dostignut broj od 15 milijuna korisnika.
+  stats_i18n: Students are learning in 40 languages
+  stats_tumblr: 'Tumblr: 3,5 godine'
+  stats_facebook: 'Facebook: 3 godine'
+  stats_twitter: 'Twitter: 2.5 godine'
+  stats_pinterest: 'Pinterest: 2 godine'
+  stats_instagram: 'Instagram: 14 mjeseci'
+  stats_hoc: 'Sat Kodiranja: 5 dana'
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_nina: '"Svaki pojedini dan donio je iste rezultate&mdash; 100% sudjelovanje." - Nina Nichols Peery, Učiteljica'
+  stats_student: '"Znala sam da je ovo prilika koja se pruža <b>jednom u životu</b>." - Mariana Alzate, učenica 5-og razreda'
+  stats_michael: 'Ja <b>nikada prije </b> nisam vidio svoje učenike toliko ushićene učenjem." - Michael Clark, Učitelj'
+  resources_how_to: Upute za ućitelje
+  resources_how_to_events: 'Vodič za događaj: kako-da'
+  resources_how_to_districts: Kako-da vodič za pokrajine
+  resources_how_to_officials: Kako-da vodič za javne dužnosnike
+  resources_handouts: Brošure za širenje vijesti
+  resources_videos: Video zapisi
+  resources_posters: Posteri
+  resources_social: Društveno
+  resources_banners: Plakati
+  resources_emails: Uzorci e-pošte
+  resources_stats: Korisne statistike i pohvale
+  resources_press_kit: Mterijal za novinare
+  resources_country_resources: Country Specific Resources
+  events_title: Svi događaji Sata Kodiranja
+  events_nav_all: Svi događaji
+  events_nav_whole_schools: Škole
+  events_nav_special: Posebni događaji
+  events_nav_orgs: Organizacije
+  events_all_old_title: All @year Hour of Code events
+  events_all_title: Svi događaji Sata Kodiranja
+  events_whole_school_title: Sat kodiranja u školama
+  events_special_title: Posebni Satovi Kodiranja
+  events_orgs_title: Sva događanja Sata Kodiranja organizirana uz pomoć partnera
+  event: događaj
+  events: događaji
+  footer_copyright_message: Copyright 2015 Code.org. Sva prava pridržana.
+  footer_trademark_message: Sata Kodiranja ™ je zaštitni znak tvrtke Code.org.
+  footer_menu_partners: Partneri
+  footer_menu_contact: Kontakt
+  footer_menu_support: Pomoć
+  footer_menu_terms: Uvjeti
+  footer_menu_privacy: Privatnost
