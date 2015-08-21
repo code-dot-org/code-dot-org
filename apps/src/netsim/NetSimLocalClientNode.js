@@ -381,7 +381,6 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
-          NetSimAlert.error(i18n.sendMessageError());
           onComplete(err);
           return;
         }

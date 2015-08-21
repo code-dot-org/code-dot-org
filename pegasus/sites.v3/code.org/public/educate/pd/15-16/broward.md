@@ -14,7 +14,7 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone Complete!
 
@@ -115,12 +115,12 @@ More info coming soon!
 
 ## CS in Science ##
 
-### Phase 1: Online Introduction  
+### Phase 1: Online Introduction (~2 hours) 
 
 Milestone complete! 
 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 **In-Person Workshop**
 

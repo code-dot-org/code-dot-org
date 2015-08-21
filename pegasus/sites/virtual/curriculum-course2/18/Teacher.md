@@ -51,7 +51,7 @@ this lesson helps students learn about the similarities of staying safe in the r
 
 ## Materials, Resources and Prep
 ### For the Student
-- One [Animal Tracks Chart](followthedigitaltrail.pdf) (page 7)
+- One [Animal Tracks Chart](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) (page 7)
 - Pens & Pencils
 - [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf)
 
@@ -59,9 +59,9 @@ this lesson helps students learn about the similarities of staying safe in the r
 - [Lesson Video](http://youtu.be/qjusxfefJdM?list=PL2DhNKNdmOtobJjiTYvpBDZ0xzhXRj11N)
 - This Teacher Lesson Guide
 - [Download](http://d1pmarobgdhgjx.cloudfront.net/education/pause-think-online-2.mp4) or [prepare](https://www.commonsensemedia.org/videos/pause-think-online) the "Pause and Think" video
-- Common Sense Media's [Follow the Digital Trail](ollowthedigitaltrail.pdf) game 
-- Print one set of [Animal Tracks](followthedigitaltrail.pdf) from this PDF
-- Print one [Animal Tracks](followthedigitaltrail.pdf) chart (page 7) for each student
+- Common Sense Media's [Follow the Digital Trail](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) game 
+- Print one set of [Animal Tracks](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) from this PDF
+- Print one [Animal Tracks](https://www.commonsensemedia.org/sites/default/files/uploads/classroom_curriculum/k-2-unit2-followthedigitaltrail.pdf) chart (page 7) for each student
 - Print one [Digital Footprint Assessment](/curriculum/course2/18/Assessment18-DigitalFootprint.pdf) for each student
 
 [/together]

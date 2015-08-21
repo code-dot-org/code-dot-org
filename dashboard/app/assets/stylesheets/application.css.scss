@@ -1672,10 +1672,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: 35%;
     }
   }
-  $multi-left-margin: 50px;
   .answers {
     float: left;
-    margin-left: $multi-left-margin;
+    margin-left:50px;
     @media #{$information-phone-narrow} {
     }
     @media #{$information-phone-wide} {
@@ -1685,9 +1684,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
     @media #{$information-desktop} {
       width: 55%;
-    }
-    &.question-content-blank {
-      width: calc(100% - #{$multi-left-margin});
     }
     .multi-question {
       width: 90%;
