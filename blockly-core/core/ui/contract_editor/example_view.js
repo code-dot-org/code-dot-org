@@ -68,7 +68,7 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function (buttonText,
  */
  Blockly.ExampleView.prototype.getBlock  = function() {
   return this.block_;
-}
+};
 
 /**
  * Performs the test for this example, setting the result text appropriately.
