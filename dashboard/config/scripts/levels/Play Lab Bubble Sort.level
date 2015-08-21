@@ -14,7 +14,7 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "free_play": "true",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
