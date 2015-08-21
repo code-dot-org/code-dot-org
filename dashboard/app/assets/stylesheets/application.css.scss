@@ -103,6 +103,15 @@ em strong {
   font-family: $gotham-extra-bold-italics;
 }
 
+a.video_link {
+  /* IE9 CSS hack */
+  max-width: 100%\9;
+}
+
+img.video_thumbnail {
+  width: 183px;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -365,15 +374,18 @@ $small-footer-standard-width: 400px;
   }
 }
 
-/* All three major components of .small-footer are stacked: */
+/* All three major components of .small-footer are stacked:
+   Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values
+*/
 #more-menu {
-  z-index: 1;
+  z-index: 998;
 }
 #copyright-flyout {
-  z-index: 2;
+  z-index: 999;
 }
 .small-footer {
-  z-index: 3;
+  z-index: 1000;
 }
 
 #locale {
@@ -1672,9 +1684,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: 35%;
     }
   }
+  $multi-left-margin: 50px;
   .answers {
     float: left;
-    margin-left:50px;
+    margin-left: $multi-left-margin;
     @media #{$information-phone-narrow} {
     }
     @media #{$information-phone-wide} {
@@ -1684,6 +1697,9 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
     @media #{$information-desktop} {
       width: 55%;
+    }
+    &.question-content-blank {
+      width: calc(100% - #{$multi-left-margin});
     }
     .multi-question {
       width: 90%;

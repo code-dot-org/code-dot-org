@@ -118,6 +118,8 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   }));
   this.getBody().html(newMarkup);
 
+  this.updateLayout();
+
   // Move the reference area to beneath the instructions
   this.getBody().find('.instructions').append(referenceArea);
 
@@ -127,6 +129,29 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+};
+
+
+/**
+ * Updates the layout of the markup, usually in response to a window
+ * resize. Currently just adjusts the height of the lobby table to keep
+ * everything onscreen.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function () {
+
+  var lobbyTable = this.getBody().find('#netsim-scrolling-lobby');
+  var container = this.getBody().closest('#netsim-disconnected');
+
+  if (lobbyTable.is(':visible')) {
+    lobbyTable.height("none");
+    var overflow = container.prop('scrollHeight') - container.prop('clientHeight');
+
+    if (overflow > 0) {
+      var newHeight = lobbyTable.height() - overflow;
+      var minHeight = lobbyTable.find('tr').first().outerHeight(true);
+      lobbyTable.height(Math.max(newHeight, minHeight));
+    }
+  }
 };
 
 /**
