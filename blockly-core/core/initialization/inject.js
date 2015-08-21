@@ -149,6 +149,7 @@ Blockly.parseOptions_ = function(options) {
     hasCategories: hasCategories,
     hasHorizontalScrollbars: options['hasHorizontalScrollbars'],
     hasVerticalScrollbars: options['hasVerticalScrollbars'],
+    customSimpleDialog: options['customSimpleDialog'],
     hasTrashcan: hasTrashcan,
     varsInGlobals: options['varsInGlobals'] || false,
     languageTree: tree,
