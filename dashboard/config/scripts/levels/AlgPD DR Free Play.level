@@ -11,7 +11,7 @@
     "instructions": "Create a function based on your own word problem.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "scrollbars": "false",
+    "scrollbars": "true",
     "min_workspace_height": "1500",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

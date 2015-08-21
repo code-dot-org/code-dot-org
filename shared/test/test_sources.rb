@@ -45,9 +45,6 @@ class SourcesTest < Minitest::Unit::TestCase
     assert_equal file_data, @files.last_response.body
     @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.first['versionId']}"
     assert_equal new_file_data, @files.last_response.body
-
-    # Check cache headers
-    assert_equal 'private, must-revalidate, max-age=0', @files.last_response['Cache-Control']
   end
 
   def test_replace_version
