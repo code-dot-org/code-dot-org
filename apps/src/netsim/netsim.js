@@ -1328,8 +1328,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
  * all data.
  */
 NetSim.prototype.resetShard = function () {
-  if (this.shard_ && confirm("Are you sure? This will kick everyone out and " +
-          "reset all data for the class.")) {
+  if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
     this.shard_.resetEverything(function (err) {
       if (err) {
         logger.error(err);

@@ -146,10 +146,13 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Move the reference area to beneath the instructions
   this.getBody().find('.instructions').append(referenceArea);
 
+  // Teachers and admins get a special "Reset Simulation" button
+  if (this.canCurrentUserResetShard()) {
+    this.addButton(i18n.shardResetButton(), this.resetShardCallback_);
+  }
+
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
-
-  this.getBody().find('#reset-shard').click(this.resetShardCallback_);
 
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
