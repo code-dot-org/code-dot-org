@@ -441,3 +441,7 @@ Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
   classes = item.attribute("class")
   classes.include?(className).should eq false
 end
+
+Then /^there is no horizontal scrollbar$/ do
+  @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
+end
