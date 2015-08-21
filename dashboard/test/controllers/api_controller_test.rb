@@ -89,6 +89,12 @@ class ApiControllerTest < ActionController::TestCase
     user_script = create :user_script
     sign_in user_script.user
 
+    p "working on user scripts"
+    p user.working_on_user_scripts
+
+    p "working on scripts"
+    p user.working_on_scripts
+
     get :user_hero
 
     assert_select '#welcome.student'
