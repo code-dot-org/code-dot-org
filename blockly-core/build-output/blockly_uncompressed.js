@@ -5423,8 +5423,8 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function(e) {
   if(Blockly.selected && (!Blockly.readOnly && clickIsOnTarget)) {
     Blockly.selected.unselect()
   }
-  var blockUnmovable = Blockly.selected && !Blockly.selected.isMovable();
-  var shouldDrag = clickIsOnTarget || (blockUnmovable || Blockly.readOnly);
+  var blockNonInteractive = Blockly.selected && (!Blockly.selected.isMovable() && !Blockly.selected.isEditable());
+  var shouldDrag = clickIsOnTarget || (blockNonInteractive || Blockly.readOnly);
   var isLeftClick = !Blockly.isRightButton(e);
   if(this.blockSpace_.scrollbarPair && (isLeftClick && shouldDrag)) {
     this.beginDragScroll_(e);
@@ -6201,7 +6201,8 @@ Blockly.BlockSpace.EVENTS = {};
 Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = "blocksImported";
 Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = "blockSpaceChange";
 Blockly.BlockSpace.SCAN_ANGLE = 3;
-Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
+Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
 Blockly.BlockSpace.prototype.xOffsetFromView = 0;
 Blockly.BlockSpace.prototype.yOffsetFromView = 0;
 Blockly.BlockSpace.prototype.trashcan = null;
@@ -6610,7 +6611,8 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
   var scrollbarPair = this.scrollbarPair;
   var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
   var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
-  return{width:canScrollHorizontally ? Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) : metrics.viewWidth, height:canScrollVertically ? Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) : metrics.viewHeight}
+  var extraVerticalSpace = this.isFlyout ? 0 : Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+  return{width:canScrollHorizontally ? Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) : metrics.viewWidth, height:canScrollVertically ? Math.max(metrics.contentTop + metrics.contentHeight + extraVerticalSpace, metrics.viewHeight) : metrics.viewHeight}
 };
 Blockly.BlockSpace.prototype.getScrollableBox = function() {
   var scrollableSize = this.getScrollableSize(this.getMetrics());
@@ -13449,11 +13451,11 @@ Blockly.Connection = function(source, type) {
   this.dbList_ = this.sourceBlock_.blockSpace.connectionDBList;
   this.check_ = null
 };
-Blockly.Connection.prototype.isConnected_ = function() {
+Blockly.Connection.prototype.isConnected = function() {
   return this.targetConnection !== null
 };
 Blockly.Connection.prototype.dispose = function() {
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     throw"Disconnect connection before disposing of it.";
   }
   if(this.inDB_) {
@@ -13480,7 +13482,7 @@ Blockly.Connection.prototype.connect = function(connectTo) {
   if(Blockly.OPPOSITE_TYPE[this.type] != connectTo.type) {
     throw"Attempt to connect incompatible types.";
   }
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     throw"Source connection already connected.";
   }
   if(connectTo.targetConnection) {
@@ -13705,7 +13707,7 @@ Blockly.Connection.prototype.tighten_ = function() {
   }
 };
 Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     return{connection:null, radius:maxLimit}
   }
   var oppositeType = Blockly.OPPOSITE_TYPE[this.type];
@@ -13866,7 +13868,7 @@ Blockly.Connection.prototype.hideAll = function() {
   if(this.inDB_) {
     this.dbList_[this.type].removeConnection_(this)
   }
-  if(this.isConnected_()) {
+  if(this.isConnected()) {
     var blocks = this.targetBlock().getDescendants();
     for(var b = 0;b < blocks.length;b++) {
       var block = blocks[b];
@@ -23320,7 +23322,10 @@ Blockly.ContractEditor.prototype.resetExampleViews = function() {
   })
 };
 Blockly.ContractEditor.prototype.testExample = function(block, visualize) {
-  return this.testHandler_(block, visualize)
+  var testHandlerResult = this.testHandler_(block, visualize);
+  var definitionInput = this.functionDefinitionBlock.getInput("STACK");
+  var definitionIsFilled = definitionInput.connection.isConnected();
+  return definitionIsFilled ? testHandlerResult : Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE
 };
 Blockly.ContractEditor.prototype.resetExample = function(block) {
   this.testResetHandler_(block)
@@ -23828,6 +23833,22 @@ Blockly.addToNonZeroSides = function(box, amount) {
 };
 Blockly.svgIgnoreMouseEvents = function(element) {
   element.style.pointerEvents = "none"
+};
+Blockly.fireTestClickSequence = function(target) {
+  Blockly.fireTestMouseEvent(target, "mousedown");
+  Blockly.fireTestMouseEvent(target, "mouseup");
+  Blockly.fireTestMouseEvent(target, "click")
+};
+Blockly.fireTestMouseEvent = function(target, eventName) {
+  if(!document.createEvent) {
+    throw"fireTestMouseEvent is only for testing in browsers with createEvent";
+  }
+  target.dispatchEvent(Blockly.makeTestMouseEvent(eventName))
+};
+Blockly.makeTestMouseEvent = function(eventName) {
+  var event = document.createEvent("MouseEvents");
+  event.initMouseEvent(eventName, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+  return event
 };
 goog.provide("Blockly.FieldImageDropdown");
 goog.require("Blockly.Field");

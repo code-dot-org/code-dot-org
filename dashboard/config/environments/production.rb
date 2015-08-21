@@ -14,7 +14,9 @@ Dashboard::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   if CDO.memcached_hosts.present?
-    config.cache_store = :mem_cache_store, CDO.memcached_hosts
+    config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
+      value_max_bytes: 1024 * 1024 * 64
+    }
   else
     config.cache_store = :memory_store, { size: 64.megabytes }
   end

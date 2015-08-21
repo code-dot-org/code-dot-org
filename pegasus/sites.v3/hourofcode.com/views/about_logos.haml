@@ -4,8 +4,8 @@
       - group.each do |logo|
         .logo_column{:style=>'width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px'}
           - logo_name = logo[:name_s].downcase.gsub(/\W/, '_').gsub(/_+/, '_')
-          - file_path = resolve_image("images/#{logo_name}").to_s[/([^\/]*)$/]
-          - avatar_url = "/images/#{file_path}"
+          - file_path = resolve_image("images/avatars/#{logo_name}").to_s[/([^\/]*)$/]
+          - avatar_url = "/images/avatars/#{file_path}"
           - unless logo[:url_s].nil_or_empty?
             %a{:href=>logo[:url_s], :style=>'display: table-cell; vertical-align: middle; text-align: center;'}
               %img{:src=>avatar_url, :style=>'max-width: 140px; max-height: 140px;'}

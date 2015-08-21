@@ -164,7 +164,7 @@ module.exports = {
     // It does not validate that they behave correctly, just that we don't end
     // up with an errors
     {
-      description: "Canvas",
+      description: "Turtle",
       editCode: true,
       xml:
         'moveForward(25);\n' +
