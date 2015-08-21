@@ -23,6 +23,29 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
+ * @typedef {Object} MessageData
+ * @property {!number} fromNodeID - sender node ID
+ * @property {!number} toNodeID - destination node ID
+ * @property {!number} simulatedBy - node ID of client simulating message
+ * @property {!string} payload - message content in a binary string
+ * @property {number} extraHopsRemaining
+ * @property {number[]} visitedNodeIDs
+ */
+
+/**
+ * @typedef {Object} MessageRow
+ * @property {number} fromNodeID - this message in-flight-from node
+ * @property {number} toNodeID - this message in-flight-to node
+ * @property {number} simulatedBy - Node ID of the client responsible for
+ *           all operations involving this message.
+ * @property {Base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
+ * @property {!number} extraHopsRemaining
+ * @property {!number[]} visitedNodeIDs
+ */
+
+/**
  * Local controller for a message that is 'on the wire'
  *
  * Doesn't actually have any association with the wire - one could,
@@ -38,6 +61,7 @@ var logger = NetSimLogger.getSingleton();
  *        data.  If not, this message will initialize to default values.
  * @constructor
  * @augments NetSimEntity
+ * @implements MessageData
  */
 var NetSimMessage = module.exports = function (shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
@@ -92,27 +116,6 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
 NetSimMessage.inherits(NetSimEntity);
 
 /**
- * @typedef {Object} MessageData
- * @property {!number} fromNodeID - sender node ID
- * @property {!number} toNodeID - destination node ID
- * @property {!number} simulatedBy - node ID of client simulating message
- * @property {*} payload - message content
- * @property {number} extraHopsRemaining
- * @property {number[]} visitedNodeIDs
- */
-
-/**
- * @typedef {Object} MessageRow
- * @property {number} fromNodeID - this message in-flight-from node
- * @property {number} toNodeID - this message in-flight-to node
- * @property {number} simulatedBy - Node ID of the client responsible for
- *           all operations involving this message.
- * @property {Base64Payload} base64Payload - base64-encoded binary
- *           message content, all of which can be exposed to the
- *           student.  May contain headers of its own.
- */
-
-/**
  * Static row construction method. Used by dynamic buildRow method and
  * by static async API creation methods to create a properly-formatted
  * row for database insertion
@@ -135,7 +138,7 @@ NetSimMessage.buildRowFromData = function (messageData) {
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {MessageData} messageData
+ * @param {!MessageData} messageData
  * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimMessage.send = function (shard, messageData, onComplete) {
