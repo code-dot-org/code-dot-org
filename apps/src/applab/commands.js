@@ -19,14 +19,6 @@ var OPTIONAL = true;
 var applabCommands = module.exports;
 
 /**
- * Lookup table of asset URLs. If an asset isn't listed here, initiate a
- * separate request to ensure it is downloaded without interruption. Otherwise
- * a quickly changing src could cancel the download before it can be cached by
- * the browser.
- */
-var toBeCached = {};
-
-/**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
  *     returns false for other values, including instances of Number or String.
@@ -868,13 +860,6 @@ applabCommands.setImageURL = function (opts) {
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
-
-    if (!toBeCached[element.src]) {
-      var img = new Image();
-      img.src = element.src;
-      toBeCached[element.src] = true;
-    }
-
     return true;
   }
   return false;

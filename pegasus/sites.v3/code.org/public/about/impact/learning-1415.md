@@ -1,9 +1,9 @@
 ---
-title: Results and Impact > CS Learning Impact Research, September 2014 - June 2015 
+title: Results and Impact > CS Learning Impact Research, 2014-15 
 nav: about_nav
 ---
 
-# [Results and Impact](/about/impact) > CS Learning Impact Research, September 2014 - June 2015
+# [Results and Impact](/about/impact) > CS Learning Impact Research, 2014-15
 
 ## Does learning Computer Science have impact on learning other subjects?
 
@@ -25,6 +25,5 @@ Additionally, third party studies into impact of CS on other subjects show promi
 - [A study](http://globaloria.com/wp-content/uploads/2015/05/Globaloria_Research_Overview.pdf) conducted by our partner, [Globaloria](http://www.globaloria.com), linked participation in CS courses to significant gains on standardized tests of math and reading in low-income middle school classrooms.
 - While students who completed the [Bootstrap](http://bootstrapworld.org) curriculum showed some gains in understanding of mathematical concepts such as functional application and composition, [their recent study](http://www.ccs.neu.edu/racket/pubs/sigcse-sfkf.pdf) revealed the challenges of showing direct correlation. 
 
-See our [blog post](http://blog.code.org/post/125429946375/cs-other-subjects) for more information.
 
 [<button>Back to full 2014-15 Report](/about/impact)<br /><br/>

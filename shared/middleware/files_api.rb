@@ -52,15 +52,7 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    case endpoint
-    when 'assets'
-      cache_one_hour
-    when 'sources'
-      dont_cache
-    else
-      not_found
-    end
-
+    dont_cache
     type = File.extname(filename)
     not_found if type.empty?
     content_type type

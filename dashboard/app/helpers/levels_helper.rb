@@ -378,7 +378,7 @@ module LevelsHelper
   end
 
   def enable_scrolling?
-    @level.is_a?(Blockly)
+    current_user && current_user.admin? && @level.is_a?(Blockly)
   end
 
   def enable_examples?
