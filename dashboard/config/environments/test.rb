@@ -23,8 +23,6 @@ Dashboard::Application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  # use https://test-studio.code.org urls in mails
-  Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true

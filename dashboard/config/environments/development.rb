@@ -22,8 +22,6 @@ Dashboard::Application.configure do
   end
 
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
-  # use https://localhost-studio.code.org urls in mails
-  Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 
   # if you don't want to send mail in development. Messages will be logged in
   # development.log if you want to look at them
