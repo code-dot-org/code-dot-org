@@ -51,20 +51,20 @@ Blockly.Playground.customSimpleDialog = function (dialogOptions) {
   buttons.set(goog.ui.Dialog.DefaultButtonKeys.OK,
       dialogOptions.confirmText,
       true);
-  goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, function(e) {
-      switch (e.key) {
-        case goog.ui.Dialog.DefaultButtonKeys.CANCEL:
-          if (dialogOptions.onCancel) {
-            dialogOptions.onCancel();
-          }
-          break;
-        case goog.ui.Dialog.DefaultButtonKeys.OK:
-          if (dialogOptions.onConfirm) {
-            dialogOptions.onConfirm();
-          }
-          break;
-      }
-    });
+  goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, function (e) {
+    switch (e.key) {
+      case goog.ui.Dialog.DefaultButtonKeys.CANCEL:
+        if (dialogOptions.onCancel) {
+          dialogOptions.onCancel();
+        }
+        break;
+      case goog.ui.Dialog.DefaultButtonKeys.OK:
+        if (dialogOptions.onConfirm) {
+          dialogOptions.onConfirm();
+        }
+        break;
+    }
+  });
   dialog.setButtonSet(buttons);
   dialog.setVisible(true);
 };
