@@ -2,10 +2,6 @@ def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
-def cache_one_hour
-  cache_control(:public, max_age: 3600)
-end
-
 def no_content()
   halt(204, "No content\n")
 end

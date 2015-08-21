@@ -21,7 +21,7 @@ class AssetsTest < Minitest::Unit::TestCase
     image_body = 'stub-image-contents'
 
     actual_image_info = JSON.parse(put(channel_id, image_filename, image_body, 'image/jpeg'))
-    expected_image_info = {'filename' => image_filename, 'category' => 'image', 'size' => image_body.length}
+    expected_image_info = {'filename' =>  image_filename, 'category' =>  'image', 'size' =>  image_body.length}
     assert_fileinfo_equal(expected_image_info, actual_image_info)
 
     sound_filename = 'woof.mp3'
@@ -34,9 +34,6 @@ class AssetsTest < Minitest::Unit::TestCase
     file_infos = JSON.parse(list(channel_id))
     assert_fileinfo_equal(actual_image_info, file_infos[0])
     assert_fileinfo_equal(actual_sound_info, file_infos[1])
-
-    get(channel_id, image_filename)
-    assert_equal 'public, max-age=3600', @assets.last_response['Cache-Control']
 
     delete(channel_id, image_filename)
     assert @assets.last_response.successful?
