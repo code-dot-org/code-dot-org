@@ -1,159 +1,90 @@
 #! /usr/bin/env ruby
 require 'fileutils'
 
-langtolocale = {
-  'Albanian' => 'sq-AL',
-  'Arabic' => 'ar-SA',
-  'Armenian' => 'hy-AM',
-  'Azerbaijani' => 'az-AZ',
-  'Basque' => 'eu-ES',
-  'Bengali' => 'bn-BD',
-  'Bosnian' => 'bs-BA',
-  'Bulgarian' => 'bg-BG',
-  'Catalan' => 'ca-ES',
-  'Chinese Simplified' => 'zh-CN',
-  'Chinese Traditional' => 'zh-TW',
-  'Croatian' => 'hr-HR',
-  'Czech' => 'cs-CZ',
-  'Danish' => 'da-DK',
-  'Dari' => 'fa-AF',
-  'Dutch' => 'nl-NL',
-  'English, United States' => 'en-US',
-  'English, United Kingdom' => 'en-GB',
-  'Estonian' => 'et-EE',
-  'Filipino' => 'fil-PH',
-  'Finnish' => 'fi-FI',
-  'French' => 'fr-FR',
-  'Galician' => 'gl-ES',
-  'Georgian' => 'ka-GE',
-  'German' => 'de-DE',
-  'Greek' => 'el-GR',
-  'Hebrew' => 'he-IL',
-  'Hindi' => 'hi-IN',
-  'Hungarian' => 'hu-HU',
-  'Icelandic' => 'is-IS',
-  'Indonesian' => 'id-ID',
-  'Irish' => 'ga-IE',
-  'Italian' => 'it-IT',
-  'Japanese' => 'ja-JP',
-  'Khmer' => 'km-KH',
-  'Korean' => 'ko-KR',
-  'Kurdish' => 'ku-IQ',
-  'Latvian' => 'lv-LV',
-  'Lithuanian' => 'lt-LT',
-  'Macedonian (FYROM)' => 'mk-MK',
-  'Malay' => 'ms-MY',
-  'Maltese' => 'mt-MT',
-  'Marathi' => 'mr-IN',
-  'Nepali' => 'ne-NP',
-  'Norwegian' => 'no-NO',
-  'Norwegian Nynorsk' => 'nn-NO',
-  'Pashto' => 'ps-AF',
-  'Persian' => 'fa-IR',
-  'Polish' => 'pl-PL',
-  'Portuguese' => 'pt-PT',
-  'Portuguese, Brazilian' => 'pt-BR',
-  'Romanian' => 'ro-RO',
-  'Russian' => 'ru-RU',
-  'Serbian (Cyrillic)' => 'sr-SP',
-  'Slovak' => 'sk-SK',
-  'Slovenian' => 'sl-SI',
-  'Spanish' => 'es-ES',
-  'Spanish, Mexico' => 'es-MX',
-  'Swedish' => 'sv-SE',
-  'Tamil' => 'ta-IN',
-  'Thai' => 'th-TH',
-  'Turkish' => 'tr-TR',
-  'Ukrainian' => 'uk-UA',
-  'Urdu (Pakistan)' => 'ur-PK',
-  'Vietnamese' => 'vi-VN'
+# language => [locale, code, customcode]
+languages = {
+  'Albanian' => ['sq-AL', 'sq'],
+  'Arabic' => ['ar-SA', 'ar'],
+  'Armenian' => ['hy-AM', 'hy'],
+  'Azerbaijani' => ['az-AZ', 'az'],
+  'Basque' => ['eu-ES', 'eu'],
+  'Bengali' => ['bn-BD', 'bn'],
+  'Bosnian' => ['bs-BA', 'bs'],
+  'Bulgarian' => ['bg-BG', 'bg'],
+  'Catalan' => ['ca-ES', 'ca'],
+  'Chinese Simplified' => ['zh-CN', 'cn', 'zh'],
+  'Chinese Traditional' => ['zh-TW', 'zh'],
+  'Croatian' => ['hr-HR', 'hr'],
+  'Czech' => ['cs-CZ', 'cs'],
+  'Danish' => ['da-DK', 'da'],
+  'Dari' => ['fa-AF', 'af', 'fa-AF'],
+  'Dutch' => ['nl-NL', 'nl'],
+  'English, United States' => ['en-US', 'en'],
+  'English, United Kingdom' => ['en-GB', 'gb', 'en-GB'],
+  'Estonian' => ['et-EE', 'et'],
+  'Filipino' => ['fil-PH', 'ph', 'fil'],
+  'Finnish' => ['fi-FI', 'fi'],
+  'French' => ['fr-FR', 'fr'],
+  'Galician' => ['gl-ES', 'gl'],
+  'Georgian' => ['ka-GE', 'ka'],
+  'German' => ['de-DE', 'de'],
+  'Greek' => ['el-GR', 'el'],
+  'Hebrew' => ['he-IL', 'he'],
+  'Hindi' => ['hi-IN', 'hi'],
+  'Hungarian' => ['hu-HU', 'hu'],
+  'Icelandic' => ['is-IS', 'is'],
+  'Indonesian' => ['id-ID', 'id'],
+  'Irish' => ['ga-IE', 'ga'],
+  'Italian' => ['it-IT', 'it'],
+  'Japanese' => ['ja-JP', 'ja'],
+  'Khmer' => ['km-KH', 'km'],
+  'Korean' => ['ko-KR', 'ko'],
+  'Kurdish' => ['ku-IQ', 'ku'],
+  'Latvian' => ['lv-LV', 'lv'],
+  'Lithuanian' => ['lt-LT', 'lt'],
+  'Macedonian (FYROM)' => ['mk-MK', 'mk'],
+  'Malay' => ['ms-MY', 'ms'],
+  'Maltese' => ['mt-MT', 'mt'],
+  'Marathi' => ['mr-IN', 'mr'],
+  'Nepali' => ['ne-NP', 'ne'],
+  'Norwegian' => ['no-NO', 'no'],
+  'Norwegian Nynorsk' => ['nn-NO', 'nn'],
+  'Pashto' => ['ps-AF', 'ps'],
+  'Persian' => ['fa-IR', 'fa'],
+  'Polish' => ['pl-PL', 'pl'],
+  'Portuguese' => ['pt-PT', 'po', 'pt'],
+  'Portuguese, Brazilian' => ['pt-BR', 'pt'],
+  'Romanian' => ['ro-RO', 'ro'],
+  'Russian' => ['ru-RU', 'ru'],
+  'Serbian (Cyrillic)' => ['sr-SP', 'sr'],
+  'Slovak' => ['sk-SK', 'sk'],
+  'Slovenian' => ['sl-SI', 'sl'],
+  'Spanish' => ['es-ES', 'es'],
+  'Spanish, Mexico' => ['es-MX', 'la', 'es-MX'],
+  'Swedish' => ['sv-SE', 'sv'],
+  'Tamil' => ['ta-IN', 'ta'],
+  'Thai' => ['th-TH', 'th'],
+  'Turkish' => ['tr-TR', 'tr'],
+  'Ukrainian' => ['uk-UA', 'uk'],
+  'Urdu (Pakistan)' => ['ur-PK', 'ur'],
+  'Vietnamese' => ['vi-VN', 'vi']
 }
 
-localetocode = {
-  'sq-AL' => 'sq',
-  'ar-SA' => 'ar',
-  'hy-AM' => 'hy',
-  'az-AZ' => 'az',
-  'eu-ES' => 'eu',
-  'bn-BD' => 'bn',
-  'bs-BA' => 'bs',
-  'bg-BG' => 'bg',
-  'ca-ES' => 'ca',
-  'zh-TW' => 'zh',
-  'hr-HR' => 'hr',
-  'cs-CZ' => 'cs',
-  'da-DK' => 'da',
-  'nl-NL' => 'nl',
-  'en-US' => 'en',
-  'et-EE' => 'et',
-  'fi-FI' => 'fi',
-  'fr-FR' => 'fr',
-  'gl-ES' => 'gl',
-  'ka-GE' => 'ka',
-  'de-DE' => 'de',
-  'el-GR' => 'el',
-  'he-IL' => 'he',
-  'hi-IN' => 'hi',
-  'hu-HU' => 'hu',
-  'is-IS' => 'is',
-  'id-ID' => 'id',
-  'ga-IE' => 'ga',
-  'it-IT' => 'it',
-  'ja-JP' => 'ja',
-  'km-KH' => 'km',
-  'ko-KR' => 'ko',
-  'ku-IQ' => 'ku',
-  'lv-LV' => 'lv',
-  'lt-LT' => 'lt',
-  'mk-MK' => 'mk',
-  'ms-MY' => 'ms',
-  'mt-MT' => 'mt',
-  'mr-IN' => 'mr',
-  'ne-NP' => 'ne',
-  'no-NO' => 'no',
-  'nn-NO' => 'nn',
-  'ps-AF' => 'ps',
-  'fa-IR' => 'fa',
-  'pl-PL' => 'pl',
-  'pt-BR' => 'pt',
-  'ro-RO' => 'ro',
-  'ru-RU' => 'ru',
-  'sr-SP' => 'sr',
-  'sk-SK' => 'sk',
-  'sl-SI' => 'sl',
-  'es-ES' => 'es',
-  'sv-SE' => 'sv',
-  'ta-IN' => 'ta',
-  'th-TH' => 'th',
-  'tr-TR' => 'tr',
-  'uk-UA' => 'uk',
-  'ur-PK' => 'ur',
-  'vi-VN' => 'vi'
-}
-
-customcodes = {
-  'es-MX' => 'la',
-  'en-GB' => 'gb',
-  'fa-AF' => 'af',
-  'fil-PH' => 'ph',
-  'pt-PT' => 'po',
-  'zh-CN' => 'cn'
-}
-
-langtolocale.each_pair do |language, locale|
-  if File.directory?("../locales/#{language}/")
-    FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
-    FileUtils.rm_r "../locales/#{language}"
+languages.each_pair do |name, codes|
+  # rename downloaded folders from language to locale
+  if File.directory?("../locales/#{name}/")
+    FileUtils.cp_r "../locales/#{name}/.", "../locales/#{codes[0]}"
+    FileUtils.rm_r "../locales/#{name}"
   end
-end
 
-localetocode.each_pair do |locale, code|
-	File.rename("../locales/#{locale}/hourofcode/en.yml", "../locales/#{locale}/#{code}.yml")
-end
+  # rename yml file from en.yml to code
+  File.rename("../locales/#{codes[0]}/hourofcode/en.yml", "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml")
 
-customecodes.each_pair do |locale, code|
-	File.rename("../locales/#{locale}/hourofcode/en.yml", "../locales/#{locale}/#{code}.yml")
-	# rename first line of file
+  # edit the code in the yml file for special coded languages
+  unless codes[2].nil?
+  	file = "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml"
+		File.write(file, File.read(file).gsub(/#{codes[2]}:/, "#{codes[1]}:"))
+  end
 end
 
 
