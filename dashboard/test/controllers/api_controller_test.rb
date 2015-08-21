@@ -90,7 +90,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_hero
 
     assert_select '#welcome.student'
-    assert_select '#currentprogress'
+    assert_select '#currentprogress', true, "Response was: #{@response.body}"
   end
 
   test "should get user_hero for student with no script" do
