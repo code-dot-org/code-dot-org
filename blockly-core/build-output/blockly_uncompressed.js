@@ -6201,8 +6201,7 @@ Blockly.BlockSpace.EVENTS = {};
 Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED = "blocksImported";
 Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = "blockSpaceChange";
 Blockly.BlockSpace.SCAN_ANGLE = 3;
-Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
-Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
 Blockly.BlockSpace.prototype.xOffsetFromView = 0;
 Blockly.BlockSpace.prototype.yOffsetFromView = 0;
 Blockly.BlockSpace.prototype.trashcan = null;
@@ -6611,8 +6610,7 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
   var scrollbarPair = this.scrollbarPair;
   var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
   var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
-  var extraVerticalSpace = this.isFlyout ? 0 : Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
-  return{width:canScrollHorizontally ? Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) : metrics.viewWidth, height:canScrollVertically ? Math.max(metrics.contentTop + metrics.contentHeight + extraVerticalSpace, metrics.viewHeight) : metrics.viewHeight}
+  return{width:canScrollHorizontally ? Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) : metrics.viewWidth, height:canScrollVertically ? Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) : metrics.viewHeight}
 };
 Blockly.BlockSpace.prototype.getScrollableBox = function() {
   var scrollableSize = this.getScrollableSize(this.getMetrics());
