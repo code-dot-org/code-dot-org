@@ -92,28 +92,72 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
 NetSimMessage.inherits(NetSimEntity);
 
 /**
+ * @typedef {Object} MessageData
+ * @property {!number} fromNodeID - sender node ID
+ * @property {!number} toNodeID - destination node ID
+ * @property {!number} simulatedBy - node ID of client simulating message
+ * @property {*} payload - message content
+ * @property {number} extraHopsRemaining
+ * @property {number[]} visitedNodeIDs
+ */
+
+/**
+ * @typedef {Object} MessageRow
+ * @property {number} fromNodeID - this message in-flight-from node
+ * @property {number} toNodeID - this message in-flight-to node
+ * @property {number} simulatedBy - Node ID of the client responsible for
+ *           all operations involving this message.
+ * @property {Base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
+ */
+
+/**
+ * Static row construction method. Used by dynamic buildRow method and
+ * by static async API creation methods to create a properly-formatted
+ * row for database insertion
+ * @param {MessageData} messageData
+ * @returns {MessageRow}
+ * @throws {TypeError} if payload is invalid
+ */
+NetSimMessage.buildRowFromData = function (messageData) {
+  return {
+    fromNodeID: messageData.fromNodeID,
+    toNodeID: messageData.toNodeID,
+    simulatedBy: messageData.simulatedBy,
+    base64Payload: binaryToBase64(messageData.payload),
+    extraHopsRemaining: utils.valueOr(messageData.extraHopsRemaining, 0),
+    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, [])
+  };
+};
+
+/**
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {Object} messageData
- * @param {!number} messageData.fromNodeID - sender node ID
- * @param {!number} messageData.toNodeID - destination node ID
- * @param {!number} messageData.simulatedBy - node ID of client simulating message
- * @param {*} messageData.payload - message content
- * @param {number} messageData.extraHopsRemaining
- * @param {number[]} messageData.visitedNodeIDs
+ * @param {MessageData} messageData
  * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimMessage.send = function (shard, messageData, onComplete) {
-  var entity = new NetSimMessage(shard);
-  entity.fromNodeID = messageData.fromNodeID;
-  entity.toNodeID = messageData.toNodeID;
-  entity.simulatedBy = messageData.simulatedBy;
-  entity.payload = messageData.payload;
-  entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
-  entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
   try {
-    entity.getTable().create(entity.buildRow(), onComplete);
+    var row = NetSimMessage.buildRowFromData(messageData);
+    shard.messageTable.create(row, onComplete);
+  } catch (err) {
+    onComplete(err, null);
+  }
+};
+
+/**
+ * Static async multi-create method. Creates new messages on the given shard,
+ * and then calls the callback with a success boolean.
+ * @param {!NetSimShard} shard
+ * @param {MessageData[]} messageDatas
+ * @param {!NodeStyleCallback} onComplete (success)
+ */
+NetSimMessage.sendMany = function (shard, messageDatas, onComplete) {
+  try {
+    var rows = messageDatas.map(NetSimMessage.buildRowFromData);
+    shard.messageTable.create(rows, onComplete);
   } catch (err) {
     onComplete(err, null);
   }
@@ -137,28 +181,10 @@ NetSimMessage.prototype.getTable = function () {
 };
 
 /**
- * @typedef {Object} MessageRow
- * @property {number} fromNodeID - this message in-flight-from node
- * @property {number} toNodeID - this message in-flight-to node
- * @property {number} simulatedBy - Node ID of the client responsible for
- *           all operations involving this message.
- * @property {Base64Payload} base64Payload - base64-encoded binary
- *           message content, all of which can be exposed to the
- *           student.  May contain headers of its own.
- */
-
-/**
  * Build own row for the message table
  * @returns {MessageRow}
  * @throws {TypeError} if payload is invalid
  */
 NetSimMessage.prototype.buildRow = function () {
-  return {
-    fromNodeID: this.fromNodeID,
-    toNodeID: this.toNodeID,
-    simulatedBy: this.simulatedBy,
-    base64Payload: binaryToBase64(this.payload),
-    extraHopsRemaining: this.extraHopsRemaining,
-    visitedNodeIDs: this.visitedNodeIDs
-  };
+  return NetSimMessage.buildRowFromData(this);
 };
