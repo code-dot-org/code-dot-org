@@ -5436,8 +5436,9 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
 
-  // Manually apply ID which should be present in row.
+  // Manually apply IDs which should be present in row.
   newRow.id = id;
+  newRow.uuid = oldRow.uuid;
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
@@ -10112,7 +10113,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
  */
 NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
   return nodeRows.some(function (row) {
-    return row.id === this.entityID;
+    return row.id === this.entityID && row.uuid === this.uuid;
   }, this);
 };
 
@@ -18369,6 +18370,12 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
+
+  /**
+   * Node's UUID assigned when it was initially inserted into the table.
+   * @type {string}
+   */
+  this.uuid = entityRow.uuid;
 };
 
 /**
