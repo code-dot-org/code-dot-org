@@ -20,8 +20,6 @@ require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 
-load File.expand_path('../../config/initializers/mailer_default_url_options.rb', __FILE__)
-
 require 'rails/test_help'
 
 require "mocha/test_unit"
