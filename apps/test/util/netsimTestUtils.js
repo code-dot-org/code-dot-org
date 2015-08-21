@@ -2,7 +2,8 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var _ = require('@cdo/apps/utils').getLodash();
+var utils = require('@cdo/apps/utils');
+var _ = utils.getLodash();
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -123,6 +124,7 @@ var fakeStorageTable = function () {
       log_ += 'create[' + JSON.stringify(value) + ']';
 
       value.id = rowIndex_;
+      value.uuid = utils.createUuid();
       rowIndex_++;
       tableData_.push(value);
 
@@ -140,6 +142,7 @@ var fakeStorageTable = function () {
       value.id = id;
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
+          value.uuid = tableData_[i].uuid;
           tableData_[i] = value;
           callback(null, null);
           return;

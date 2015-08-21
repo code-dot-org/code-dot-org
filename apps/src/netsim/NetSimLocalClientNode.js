@@ -381,6 +381,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
+          NetSimAlert.error(i18n.sendMessageError());
           onComplete(err);
           return;
         }
@@ -491,7 +492,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
  */
 NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
   return nodeRows.some(function (row) {
-    return row.id === this.entityID;
+    return row.id === this.entityID && row.uuid === this.uuid;
   }, this);
 };
 

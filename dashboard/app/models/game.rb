@@ -84,12 +84,8 @@ class Game < ActiveRecord::Base
     app == NETSIM
   end
 
-  def has_footer?
-    !(app == APPLAB)
-  end
-
   def uses_small_footer?
-    app == NETSIM
+    app == NETSIM || app == APPLAB
   end
 
   def has_i18n?
