@@ -518,7 +518,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     return;
   }
 
-  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  var exampleless = studioApp.getFunctionWithoutExample();
   if (exampleless) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
