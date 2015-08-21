@@ -56,6 +56,12 @@ var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
+
+// Whether we are showing debug information
+var showDebugInfo = false;
+
 /**
  * Create a namespace for the application.
  */
@@ -495,17 +501,19 @@ var performQueuedMoves = function (i) {
     sprite.x = nextX;
     sprite.y = nextY;
   } else {
+    var playspaceBoundaries = Studio.getPlayspaceBoundaries(sprite);
+
     // Clamp nextX to boundaries as newX:
-    var newX = Math.min(Studio.MAZE_WIDTH - sprite.width,
-                        Math.max(0, nextX));
+    var newX = Math.min(playspaceBoundaries.right,
+                        Math.max(playspaceBoundaries.left, nextX));
     if (nextX != newX) {
       cancelQueuedMovements(i, false);
     }
     sprite.x = newX;
 
     // Clamp nextY to boundaries as newY:
-    var newY = Math.min(Studio.MAZE_HEIGHT - sprite.height,
-                        Math.max(0, nextY));
+    var newY = Math.min(playspaceBoundaries.bottom,
+                        Math.max(playspaceBoundaries.top, nextY));
     if (nextY != newY) {
       cancelQueuedMovements(i, true);
     }
@@ -586,8 +594,10 @@ var setSvgText = function(opts) {
  * @param {string} name Name of the handler we want to call
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
+ * @param {Array} extraArgs Additional arguments passed into the virtual
+*   JS machine for consumption by the student's event-handling code.
  */
-function callHandler (name, allowQueueExtension) {
+function callHandler (name, allowQueueExtension, extraArgs) {
   Studio.eventHandlers.forEach(function (handler) {
     if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
@@ -605,7 +615,7 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.JSInterpreter.queueEvent(handler.func);
+        Studio.JSInterpreter.queueEvent(handler.func, extraArgs);
       }
     }
   });
@@ -637,6 +647,53 @@ function performItemOrProjectileMoves (list) {
 }
 
 /**
+ * Sort the draw order of sprites, items, and tiles so that items higher on
+ * the screen are drawn before the ones in front, for a simple form of
+ * z-sorting.
+ */
+function sortDrawOrder() {
+  if (!level.sortDrawOrder) {
+    return;
+  }
+
+  var svg = document.getElementById('svgStudio');
+
+  var itemsArray = [];
+
+  // Add items.
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = {};
+    item.element = Studio.items[i].element;
+    item.y = Studio.items[i].y + Studio.items[i].height/2;
+    itemsArray.push(item);
+
+    Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
+    Studio.drawDebugRect("itemBottom", Studio.items[i].x, item.y, 4, 4);
+  }
+
+  // Add sprites, both walking and non-walking.
+  for (i = 0; i < Studio.sprite.length; i++) {
+    var sprite = {};
+    sprite.element = document.getElementById('sprite' + i);
+    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    itemsArray.push(sprite);
+
+    sprite = {};
+    sprite.element = document.getElementById('spriteWalk' + i);
+    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    itemsArray.push(sprite);
+
+    Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
+  }
+
+  itemsArray = _.sortBy(itemsArray, 'y');
+
+  for (i = 0; i < itemsArray.length; ++i) {
+    svg.appendChild(itemsArray[i].element);
+  }
+}
+
+/**
  * This is a little weird, but is effectively a way for us to call api code
  * (i.e. the methods in studio/api.js) so that we can essentially simulate
  * generated code. It does this by creating an event handler for the given name,
@@ -652,6 +709,8 @@ Studio.callApiCode = function (name, func) {
 
 Studio.onTick = function() {
   Studio.tickCount++;
+
+  Studio.clearDebugRects();
 
   var animationOnlyFrame = false;
 
@@ -743,6 +802,8 @@ Studio.onTick = function() {
     Studio.executeQueue('when-down');
   }
 
+  updateItems();
+
   checkForCollisions();
 
   if (Studio.JSInterpreter && !animationOnlyFrame) {
@@ -772,28 +833,54 @@ Studio.onTick = function() {
 
     // Display sprite:
     Studio.displaySprite(i, isWalking);
+
+    Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
   }
 
   performItemOrProjectileMoves(Studio.projectiles);
   performItemOrProjectileMoves(Studio.items);
+
+  sortDrawOrder();
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
   }
 };
 
+/**
+ * Returns the distance between two sprites on the specified axis.
+ * @param {number} i1 The index of the first sprite.
+ * @param {number} i2 The index of the second sprite.
+ * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
+ */
 function spriteCollisionDistance  (i1, i2, yAxis) {
   var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
   var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
+/**
+ * Returns the distance between a sprite and a collidable on the specified axis.
+ * @param {number} i1 The index of the sprite.
+ * @param {number} i2 The index of the collidable.
+ * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
+ */
 function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
-  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-  var dim2 = yAxis ? collidable.height : collidable.width;
+  var spriteWidth = skin.spriteCollisionRectWidth || Studio.sprite[iS].width;
+  var spriteHeight = skin.spriteCollisionRectHeight || Studio.sprite[iS].height;
+  var collidableWidth = skin.itemCollisionRectWidth || collidable.width;
+  var collidableHeight = skin.itemCollisionRectHeight || collidable.height;
+  var dim1 = yAxis ? spriteHeight : spriteWidth;
+  var dim2 = yAxis ? collidableHeight : collidableWidth;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
+/**
+ * Returns the distance between a collidable and an edge on the specified axis.
+ * @param {number} i1 The index of the collidable.
+ * @param {string} i2 The name of the edge.
+ * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
+ */
 function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
   var dim1 = yAxis ? collidable.height : collidable.width;
   var dim2;
@@ -817,6 +904,18 @@ function handleActorCollisionsWithCollidableList (
   for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
+
+    Studio.drawDebugRect("itemCollision",
+      next.x,
+      next.y,
+      skin.itemCollisionRectWidth || collidable.width,
+      skin.itemCollisionRectHeight || collidable.height);
+    Studio.drawDebugRect("spriteCollision",
+      xCenter,
+      yCenter,
+      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width,
+      skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
+
     if (collisionTest(
           xCenter,
           next.x,
@@ -989,10 +1088,6 @@ function checkForCollisions() {
  */
 function createItemEdgeCollisionHandler (item) {
   return function (edgeClass) {
-    if (level.blockMovingIntoWalls) {
-      // TODO: Find a real direction!!
-      item.bounce();
-    }
     Studio.currentEventParams = { eventObject: item };
     // Allow cmdQueue extension (pass true) since this handler
     // may be called for multiple items before executing the queue
@@ -1002,6 +1097,15 @@ function createItemEdgeCollisionHandler (item) {
   };
 }
 
+/* Calls each item's update function (if/when provided by student).
+ */
+function updateItems () {
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = Studio.items[i];
+    executeItemUpdate(item, i);
+  }
+}
+
 function checkForItemCollisions () {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = Studio.items[i];
@@ -1009,10 +1113,6 @@ function checkForItemCollisions () {
 
     if (level.wallMapCollisions) {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
-        if (level.blockMovingIntoWalls) {
-          // TODO: Find a real direction!!
-          item.bounce();
-        }
         Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
         // may be called for multiple items before executing the queue
@@ -1058,6 +1158,18 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
  */
 
 Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
+  var collidableHeight = collidable.height;
+  var collidableWidth = collidable.width;
+
+  if (!level.gridAlignedMovement) {
+    xCenter += skin.wallCollisionRectOffsetX;
+    yCenter += skin.wallCollisionRectOffsetY;
+    collidableHeight = skin.wallCollisionRectHeight || collidableHeight;
+    collidableWidth = skin.wallCollisionRectWidth || collidableWidth;
+  }
+
+  Studio.drawDebugRect("avatarCollision", xCenter, yCenter, collidableWidth, collidableHeight);
+
   var colsOffset = Math.floor(xCenter) + 1;
   var rowsOffset = Math.floor(yCenter) + 1;
   var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
@@ -1071,10 +1183,10 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
       if (Studio.map[row][col] & SquareType.WALL) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidable.width / 2,
+                            Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
                             yCenter,
                             (row + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidable.height / 2)) {
+                            Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
           return true;
         }
       }
@@ -1883,7 +1995,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  var exampleless = studioApp.getFunctionWithoutExample();
+  var exampleless = studioApp.getFunctionWithoutTwoExamples();
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
@@ -2106,24 +2218,6 @@ Studio.onPuzzleComplete = function() {
   }
 };
 
-var frameDirTable = {};
-frameDirTable[Direction.SOUTHEAST]  = 0;
-frameDirTable[Direction.EAST]       = 1;
-frameDirTable[Direction.NORTHEAST]  = 2;
-frameDirTable[Direction.NORTH]      = 3;
-frameDirTable[Direction.NORTHWEST]  = 4;
-frameDirTable[Direction.WEST]       = 5;
-frameDirTable[Direction.SOUTHWEST]  = 6;
-
-var frameDirTableWalking = {};
-frameDirTableWalking[Direction.SOUTH]      = 0;
-frameDirTableWalking[Direction.SOUTHEAST]  = 1;
-frameDirTableWalking[Direction.EAST]       = 2;
-frameDirTableWalking[Direction.NORTHEAST]  = 3;
-frameDirTableWalking[Direction.NORTH]      = 4;
-frameDirTableWalking[Direction.NORTHWEST]  = 5;
-frameDirTableWalking[Direction.WEST]       = 6;
-frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
@@ -2131,6 +2225,7 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
 var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
+
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -2146,7 +2241,7 @@ function spriteFrameNumber (index, opts) {
   var elapsed = currentTime - Studio.startTime;
 
   if (opts && opts.walkDirection) {
-    return frameDirTableWalking[sprite.displayDir];
+    return constants.frameDirTableWalking[sprite.displayDir];
   }
   else if (opts && opts.walkFrame && sprite.timePerFrame) {
     return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
@@ -2155,12 +2250,12 @@ function spriteFrameNumber (index, opts) {
   if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
-      frameDirTable[sprite.displayDir];
+      constants.frameDirTable[sprite.displayDir];
   }
   if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
     // turn frames start after normal and animation frames
     return sprite.frameCounts.normal + sprite.frameCounts.animation +
-      frameDirTable[sprite.displayDir];
+      constants.frameDirTable[sprite.displayDir];
   }
   if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
     // we only support two-frame animation for base playlab, the 2nd frame is
@@ -2207,38 +2302,67 @@ function cellId(prefix, row, col) {
   return prefix + '_' + row + '_' + col;
 }
 
-Studio.drawWallTile = function (svg, row, col) {
+/**
+ * Draw a debug rectangle centered on the given location, using the given
+ * CSS class name.
+ */
 
-  // Placeholder implementation: just drawing boxes with X's in them for now:
+Studio.drawDebugRect = function(className, x, y, width, height) {
+  if (!showDebugInfo) {
+    return;
+  }
 
-  var backgroundId = cellId('wallBackground', row, col);
-  var textId = cellId('wallLetter', row, col);
-
+  var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
+  group.setAttribute('class', className + " debugRect");
   var background = document.createElementNS(SVG_NS, 'rect');
-  background.setAttribute('id', backgroundId);
-  background.setAttribute('width', Studio.SQUARE_SIZE);
-  background.setAttribute('height', Studio.SQUARE_SIZE);
-  background.setAttribute('x', col * Studio.SQUARE_SIZE);
-  background.setAttribute('y', row * Studio.SQUARE_SIZE);
+  background.setAttribute('width', width);
+  background.setAttribute('height', height);
+  background.setAttribute('x', x - width/2);
+  background.setAttribute('y', y - height/2);
   background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
   background.setAttribute('stroke', '#000000');
   background.setAttribute('stroke-width', 1);
   group.appendChild(background);
-
-  var text = document.createElementNS(SVG_NS, 'text');
-  text.setAttribute('id', textId);
-  text.setAttribute('class', 'wall-letter');
-  text.setAttribute('width', Studio.SQUARE_SIZE);
-  text.setAttribute('height', Studio.SQUARE_SIZE);
-  text.setAttribute('x', (col + 0.5) * Studio.SQUARE_SIZE);
-  text.setAttribute('y', (row + 1) * Studio.SQUARE_SIZE - 12);
-  text.setAttribute('font-size', 32);
-  text.setAttribute('text-anchor', 'middle');
-  text.setAttribute('font-family', 'Verdana');
-  text.textContent = 'X';
-  group.appendChild(text);
   svg.appendChild(group);
+};
+
+/**
+ * Clear the debug rectangles.
+ */
+
+Studio.clearDebugRects = function() {
+  $(".debugRect").remove();
+};
+
+
+Studio.drawWallTile = function (svg, row, col) {
+  var srcRow = Math.floor(Math.random() * 4);
+  var srcCol = Math.floor(Math.random() * 4);
+
+  var clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'tile_clippath_' + uniqueId;
+  clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', Studio.SQUARE_SIZE);
+  rect.setAttribute('height', Studio.SQUARE_SIZE);
+  rect.setAttribute('x', col * Studio.SQUARE_SIZE);
+  rect.setAttribute('y', row * Studio.SQUARE_SIZE);
+  clipPath.appendChild(rect);
+  svg.appendChild(clipPath);
+
+  var tile = document.createElementNS(SVG_NS, 'image');
+  var tileId = 'tile_' + (uniqueId++);
+  tile.setAttribute('id', tileId);
+  tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('x', (col-srcCol) * Studio.SQUARE_SIZE);
+  tile.setAttribute('y', (row-srcRow) * Studio.SQUARE_SIZE);
+  tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    skin.tiles);
+  svg.appendChild(tile);
+
+  tile.setAttribute('clip-path', 'url(#' + clipId + ')');
 };
 
 Studio.createLevelItems = function (svg) {
@@ -2326,19 +2450,18 @@ Studio.displaySprite = function(i, isWalking) {
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
 
-    xOffset = sprite.width * spriteFrameNumber(i, {walkDirection: true});
-    yOffset = sprite.height * spriteFrameNumber(i, {walkFrame: true});
+    xOffset = sprite.drawWidth * spriteFrameNumber(i, {walkDirection: true});
+    yOffset = sprite.drawHeight * spriteFrameNumber(i, {walkFrame: true});
 
     spriteIcon = spriteWalkIcon;
     spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
     unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
-
   } else {
     // Show regular sprite, and hide walk sprite.
     spriteRegularIcon.setAttribute('visibility', 'visible');
     spriteWalkIcon.setAttribute('visibility', 'hidden');
 
-    xOffset = sprite.width * spriteFrameNumber(i);
+    xOffset = sprite.drawWidth * spriteFrameNumber(i);
     yOffset = 0;
 
     spriteIcon = spriteRegularIcon;
@@ -2346,8 +2469,16 @@ Studio.displaySprite = function(i, isWalking) {
     unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
   }
 
-  var xCoordPrev = spriteClipRect.getAttribute('x');
-  var yCoordPrev = spriteClipRect.getAttribute('y');
+  var extraOffsetX = 0;
+  var extraOffsetY = 0;
+
+  if (level.gridAlignedMovement) {
+    extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
+    extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
+  }
+
+  var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
+  var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
 
   var dirPrev = sprite.dir;
   if (dirPrev === Direction.NONE) {
@@ -2387,22 +2518,23 @@ Studio.displaySprite = function(i, isWalking) {
     } else if (sprite.y < sprite.displayY) {
       sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
+
   } else {
     sprite.displayX = sprite.x;
     sprite.displayY = sprite.y;
   }
 
-  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
-  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset + extraOffsetY);
 
-  spriteClipRect.setAttribute('x', sprite.displayX);
-  spriteClipRect.setAttribute('y', sprite.displayY);
+  spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
+  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
-  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2621,6 +2753,14 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.addItemsToScene(cmd.opts);
       break;
+    case 'setItemAction':
+      studioApp.highlight(cmd.id);
+      Studio.setItemAction(cmd.opts);
+      break;
+    case 'showDebugInfo':
+      studioApp.highlight(cmd.id);
+      Studio.showDebugInfo(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
@@ -2650,7 +2790,7 @@ Studio.addItemsToScene = function (opts) {
     // max of max - Studio.HALF_SQUARE)
 
     var pos = {};
-    if (level.gridAlignedMovement) {
+    if (level.itemGridAlignedMovement) {
       pos.x = Studio.HALF_SQUARE +
                 Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
       pos.y = Studio.HALF_SQUARE +
@@ -2665,7 +2805,7 @@ Studio.addItemsToScene = function (opts) {
   };
 
   for (var i = 0; i < opts.number; i++) {
-    var direction = level.gridAlignedMovement ? Direction.NONE :
+    var direction = level.itemGridAlignedMovement ? Direction.NONE :
                       directions[Math.floor(Math.random() * directions.length)];
     var pos = generateRandomItemPosition();
     var itemOptions = {
@@ -2676,6 +2816,9 @@ Studio.addItemsToScene = function (opts) {
       loop: true,
       x: pos.x,
       y: pos.y,
+      animationFrames: 12,
+      width: 100,
+      height: 100
     };
 
     var item = new Item(itemOptions);
@@ -2699,6 +2842,22 @@ Studio.addItemsToScene = function (opts) {
     item.createElement(document.getElementById('svgStudio'));
     Studio.items.push(item);
   }
+};
+
+Studio.setItemAction = function (opts) {
+  var item = Studio.items[opts.itemIndex];
+
+  if (!item) {
+    return;
+  }
+
+  if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+      item.roamGrid(opts.type);
+  }
+};
+
+Studio.showDebugInfo = function (opts) {
+  showDebugInfo = opts.value;
 };
 
 Studio.vanishActor = function (opts) {
@@ -2853,10 +3012,13 @@ Studio.setSprite = function (opts) {
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
-    sprite.size = sprite.width / skin.spriteWidth;
+    sprite.size = 1; //sprite.width / skin.spriteWidth;
+
+    sprite.drawHeight = sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.size * skin.spriteWidth;
   } else {
-    sprite.height = sprite.size * skin.spriteHeight;
-    sprite.width = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.height = sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.width = sprite.size * skin.spriteWidth;
   }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
@@ -2866,25 +3028,25 @@ Studio.setSprite = function (opts) {
   }
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
-  spriteClipRect.setAttribute('width', sprite.width);
-  spriteClipRect.setAttribute('height', sprite.height);
+  spriteClipRect.setAttribute('width', sprite.drawWidth);
+  spriteClipRect.setAttribute('height', sprite.drawHeight);
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     skin[spriteValue].sprite);
-  spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.height);
+  spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
+  spriteIcon.setAttribute('height', sprite.drawHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
     var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
-    spriteWalkClipRect.setAttribute('width', sprite.width);
-    spriteWalkClipRect.setAttribute('height', sprite.height);
+    spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
+    spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin[spriteValue].walk);
     var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
-    spriteWalk.setAttribute('width', sprite.width * spriteFramecounts.turns); // 800
-    spriteWalk.setAttribute('height', sprite.height * spriteFramecounts.walk); // 1200
+    spriteWalk.setAttribute('width', sprite.drawWidth * spriteFramecounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.drawHeight * spriteFramecounts.walk); // 1200
   }
 
   // call display right away since the frame number may have changed:
@@ -3337,6 +3499,11 @@ function executeItemCollision(src, target) {
   }
 }
 
+function executeItemUpdate(item, itemIndex) {
+  var prefix = 'whenItemUpdated-' + item.className;
+  callHandler(prefix, undefined, [itemIndex]);
+}
+
 /**
  * Execute the code for an actor (src) colliding with target
  */
@@ -3422,6 +3589,30 @@ Studio.setSpriteXY = function (opts) {
   sprite.dir = Direction.NONE;
 };
 
+Studio.getPlayspaceBoundaries = function(sprite)
+{
+  var boundaries;
+
+  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight) {
+    boundaries = {
+      top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
+      right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
+      bottom: Studio.MAZE_HEIGHT - skin.wallCollisionRectHeight - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
+      left:   0 - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX
+    };
+  } else {
+    boundaries = {
+      top: 0,
+      right: Studio.MAZE_WIDTH - sprite.width,
+      bottom: Studio.MAZE_HEIGHT - sprite.height,
+      left: 0
+    };
+  }
+
+  return boundaries;
+};
+
+
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
@@ -3433,8 +3624,9 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.y -= distance;
-      if (sprite.y < 0 && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = 0;
+      var topBoundary = Studio.getPlayspaceBoundaries(sprite).top;
+      if (sprite.y < topBoundary && !level.allowSpritesOutsidePlayspace) {
+        sprite.y = topBoundary;
       }
       break;
     case Direction.EAST:
@@ -3443,7 +3635,7 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.x += distance;
-      var rightBoundary = Studio.MAZE_WIDTH - sprite.width;
+      var rightBoundary = Studio.getPlayspaceBoundaries(sprite).right;
       if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.x = rightBoundary;
       }
@@ -3454,7 +3646,7 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.y += distance;
-      var bottomBoundary = Studio.MAZE_HEIGHT - sprite.height;
+      var bottomBoundary = Studio.getPlayspaceBoundaries(sprite).bottom;
       if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.y = bottomBoundary;
       }
@@ -3465,8 +3657,9 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.x -= distance;
-      if (sprite.x < 0 && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = 0;
+      var leftBoundary = Studio.getPlayspaceBoundaries(sprite).left;
+      if (sprite.x < leftBoundary && !level.allowSpritesOutsidePlayspace) {
+        sprite.x = leftBoundary;
       }
       break;
   }

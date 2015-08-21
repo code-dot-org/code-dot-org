@@ -189,11 +189,12 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
     Blockly.selected.unselect();
   }
 
-  var blockUnmovable = Blockly.selected && !Blockly.selected.isMovable();
+  var blockNonInteractive = Blockly.selected && !Blockly.selected.isMovable() &&
+      !Blockly.selected.isEditable();
 
   // On left-click on scrollable area, begin scroll-drag
   // In readonly mode, we scroll-drag when clicking through a block, too.
-  var shouldDrag = clickIsOnTarget || blockUnmovable || Blockly.readOnly;
+  var shouldDrag = clickIsOnTarget || blockNonInteractive || Blockly.readOnly;
   var isLeftClick = !Blockly.isRightButton(e);
 
   if (this.blockSpace_.scrollbarPair && isLeftClick && shouldDrag) {

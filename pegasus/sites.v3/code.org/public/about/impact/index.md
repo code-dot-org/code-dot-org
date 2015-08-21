@@ -7,11 +7,11 @@ nav: about_nav
 
 Code.org is is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. From the beginning Code.org has partnered with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to research and understand our impact and progress towards meeting our mission.
 
-## Code.org Program Evaluation Report: 2014-15 School Year
+## Code.org Program Evaluation Report: September 2014 - June 2015
 
-This past school year 2014-15, Code.org prepared over 10,000 teachers across K-12, with over 6 million student accounts created to engage in our courses. Across all these students, **43% are female** and **37% are African-American or Hispanic**. By comparison, [the demographic breakdown of students taking the most recent AP Computer Science exam in high school](/files/APCS-2014.pdf) was **20% females**, **17% African American, Hispanic, or other historically underrepresented students**.
+This past school year 2014-15, Code.org prepared over 10,000 teachers across K-12, with over 6 million student accounts created to engage in our courses. Across all these students, **43% are female** and **37% are African-American or Hispanic**. By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students taking the most recent AP Computer Science exam in high school was **20% females** and **17% African American, Hispanic, or other historically underrepresented students**.
 
-This school year, our evaluation work with [Outlier Research and Evaluation](http://outlier.uchicago.edu/) focused on answering the following key questions:
+This school year, our evaluation work focused on answering the following key questions:
 
 ### What impact does Code.org professional development have on teachers?
 
@@ -47,7 +47,7 @@ Our 2015-16 evaluation plan, developed in concert with [Outlier](http://outlier.
 
 Internally, through participant surveys and data science projects, we will continue to study:
 
-- Workshop satisfaction (including online components)
+- Workshop satisfaction (including online PD components)
 - Student outcomes measured through Code Studio
 
 ### Evaluation Design
