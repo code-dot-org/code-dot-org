@@ -22,7 +22,6 @@ Dashboard::Application.configure do
   config.cache_store = :memory_store
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'test.mail.host' }
   config.action_mailer.delivery_method = :smtp
 
   # Raise exceptions instead of rendering exception templates.

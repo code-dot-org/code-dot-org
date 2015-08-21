@@ -1309,6 +1309,10 @@ NetSim.prototype.updateLayout = function () {
 
   netsimDebouncedResizeFooter();
 
+  if (this.lobby_) {
+    this.lobby_.updateLayout();
+  }
+
   if (!rightColumn.is(':visible')) {
     return;
   }
@@ -5432,8 +5436,9 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
   var oldRow = this.cache_[id];
   var newRow = row;
 
-  // Manually apply ID which should be present in row.
+  // Manually apply IDs which should be present in row.
   newRow.id = id;
+  newRow.uuid = oldRow.uuid;
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
@@ -10108,7 +10113,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
  */
 NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
   return nodeRows.some(function (row) {
-    return row.id === this.entityID;
+    return row.id === this.entityID && row.uuid === this.uuid;
   }, this);
 };
 
@@ -10529,6 +10534,12 @@ NetSimLobby.prototype.render = function () {
           joinButtonCallback: this.onJoinButtonClick_.bind(this)
         });
 
+  }
+};
+
+NetSimLobby.prototype.updateLayout = function () {
+  if (this.nodeSelectionPanel_) {
+    this.nodeSelectionPanel_.updateLayout();
   }
 };
 
@@ -11167,6 +11178,8 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   }));
   this.getBody().html(newMarkup);
 
+  this.updateLayout();
+
   // Move the reference area to beneath the instructions
   this.getBody().find('.instructions').append(referenceArea);
 
@@ -11176,6 +11189,29 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+};
+
+
+/**
+ * Updates the layout of the markup, usually in response to a window
+ * resize. Currently just adjusts the height of the lobby table to keep
+ * everything onscreen.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function () {
+
+  var lobbyTable = this.getBody().find('#netsim-scrolling-lobby');
+  var container = this.getBody().closest('#netsim-disconnected');
+
+  if (lobbyTable.is(':visible')) {
+    lobbyTable.height("none");
+    var overflow = container.prop('scrollHeight') - container.prop('clientHeight');
+
+    if (overflow > 0) {
+      var newHeight = lobbyTable.height() - overflow;
+      var minHeight = lobbyTable.find('tr').first().outerHeight(true);
+      lobbyTable.height(Math.max(newHeight, minHeight));
+    }
+  }
 };
 
 /**
@@ -11431,102 +11467,135 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
   return markup;
 }
 
+function writeBeginTable(classname) {
+  if (classname) {
+    ; buf.push('<table class="', escape((126, classname)), '">');126;
+  } else {
+    ; buf.push('<table>');128;
+  }
+}
+
+function writeEndTable() {
+  ; buf.push('</table>');133;
+}
+
+function writeBeginTbody() {
+  ; buf.push('<tbody>');137;
+}
+
+function writeEndTbody() {
+  ; buf.push('</tbody>');141;
+}
+
 function writeHeader(headerText) {
-  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((127,  headerText )), '</th>\n    </tr>\n  ');129;
+  ; buf.push('\n    <thead>\n      <tr>\n        <th colspan="3">', escape((148,  headerText )), '</th>\n      </tr>\n    </thead>\n  ');151;
 }
 
 function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
-  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (136,  contents ), '</td>\n    </tr>\n  ');138;
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (158,  contents ), '</td>\n    </tr>\n  ');160;
 }
 
 function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
-  ; buf.push('\n    <tr>\n      <td nowrap>', escape((144,  row.displayName )), ' <small>(', escape((144,  row.hostname )), ')</small></td>\n      <td>', (145,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');147;
-          var markup = '';
-          if (buttonType === 'join-button') {
-            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'accept-button') {
-            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'cancel-button') {
-            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
-          } else if (buttonType === 'full-button') {
-            markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
-          }
-        ; buf.push('\n        ', (159,  markup ), '\n      </td>\n    </tr>\n  ');162;
+    var button;
+    if (buttonType === 'join-button') {
+      button = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'accept-button') {
+      button = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'cancel-button') {
+      button = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
+    } else if (buttonType === 'full-button') {
+      button = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
+    }
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((176,  row.displayName )), ' <small>(', escape((176,  row.hostname )), ')</small></td>\n      ');177; if (button) { ; buf.push('\n        <td>', (178,  nodeStatus ), '</td>\n        <td class="button-column">\n          ', (180,  button ), '\n        </td>\n      ');182; } else { ; buf.push('\n        <td colspan="2">', (183,  nodeStatus ), '</td>\n      ');184; } ; buf.push('\n    </tr>\n  ');186;
 }
 
-; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((167,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');171;
-        // Outgoing request table (hidden if empty)
-        if (outgoingRequestRows.length > 0) {
-          writeHeader(i18n.outgoingConnectionRequests());
-          outgoingRequestRows.forEach(function (row) {
-            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
-              otherName: row.displayName,
-              otherStatus: row.status
-            });
-            writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((191,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n\n    ');194;
+      // Outgoing request table (hidden if empty)
+      if (outgoingRequestRows.length > 0) {
+        writeBeginTable();
+        writeHeader(i18n.outgoingConnectionRequests());
+        writeBeginTbody();
+        outgoingRequestRows.forEach(function (row) {
+          var outgoingStatus = i18n.lobbyStatusWaitingForOther({
+            spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
+            otherName: row.displayName,
+            otherStatus: row.status
           });
-          writeEmptyRow();
-        }
-
-        // Incoming requests table (hidden if empty)
-        if (requestRows.length > 0) {
-          writeHeader(i18n.incomingConnectionRequests());
-          requestRows.forEach(function (row) {
-            var buttonType;
-            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-              buttonType = 'accept-button';
-            }
-            var incomingStatus = i18n.lobbyStatusWaitingForYou();
-            writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
-          });
-          writeEmptyRow();
-        }
-
-        // Primary lobby list
-        writeHeader(i18n.lobby());
-        lobbyRows.forEach(function (row) {
-          var buttonType;
-          if (!controller.hasOutgoingRequest()) {
-            if (row.isFull) {
-              buttonType = 'full-button';
-            } else if (row.canConnectToNode) {
-              buttonType = 'join-button';
-            }
-          }
-          writeNodeRow(row, row.status, buttonType, row.classAttr);
+          writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
         });
+        writeEndTbody();
+        writeEndTable();
+      }
 
-        var buttons = [];
-
-        if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
-          var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
-          buttons.push(buttonMarkup(
-              buttonText,
-              'netsim-lobby-add-router',
-              ['secondary']
-          ));
+      // Incoming requests table (hidden if empty)
+      if (requestRows.length > 0) {
+        writeBeginTable();
+        writeHeader(i18n.incomingConnectionRequests());
+        writeBeginTbody();
+        requestRows.forEach(function (row) {
+          var buttonType;
+          if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+            buttonType = 'accept-button';
+          }
+          var incomingStatus = i18n.lobbyStatusWaitingForYou();
+          writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
+        });
+        writeEndTbody();
+        writeEndTable();
+      }
+    ; buf.push('\n\n    ');230;
+      // Primary lobby list
+      writeBeginTable("nomargin");
+      writeHeader(i18n.lobby());
+      writeEndTable();
+    ; buf.push('\n    <div id="netsim-scrolling-lobby">\n    ');237;
+      writeBeginTable();
+      writeBeginTbody();
+      lobbyRows.forEach(function (row) {
+        var buttonType;
+        if (!controller.hasOutgoingRequest()) {
+          if (row.isFull) {
+            buttonType = 'full-button';
+          } else if (row.canConnectToNode) {
+            buttonType = 'join-button';
+          }
         }
+        writeNodeRow(row, row.status, buttonType, row.classAttr);
+      });
 
-        if (levelConfig.showLogBrowserButton) {
-          buttons.push(buttonMarkup(
-              i18n.logBrowserButton(),
-              'show-router-log-modal',
-              ['secondary'],
-              {
-                'data-toggle':'modal',
-                'data-target':'#router-log-modal'
-              }
-          ));
-        }
+      var buttons = [];
 
-        if (buttons.length > 0) {
-          writeEmptyRow(buttons.join(' '));
-        } else if (lobbyRows.length === 0) {
-          writeEmptyRow(i18n.lobbyIsEmpty());
-        }
-      ; buf.push('\n\n    </table>\n  </div>\n  <div class="clear"></div>\n</div>\n'); })();
+      if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
+        var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
+        buttons.push(buttonMarkup(
+            buttonText,
+            'netsim-lobby-add-router',
+            ['secondary']
+        ));
+      }
+
+      if (levelConfig.showLogBrowserButton) {
+        buttons.push(buttonMarkup(
+            i18n.logBrowserButton(),
+            'show-router-log-modal',
+            ['secondary'],
+            {
+              'data-toggle':'modal',
+              'data-target':'#router-log-modal'
+            }
+        ));
+      }
+
+      if (buttons.length > 0) {
+        writeEmptyRow(buttons.join(' '));
+      } else if (lobbyRows.length === 0) {
+        writeEmptyRow(i18n.lobbyIsEmpty());
+      }
+
+      writeEndTbody();
+      writeEndTable();
+    ; buf.push('\n    </div>\n\n  </div>\n  <div class="clear"></div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -18301,6 +18370,12 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
+
+  /**
+   * Node's UUID assigned when it was initially inserted into the table.
+   * @type {string}
+   */
+  this.uuid = entityRow.uuid;
 };
 
 /**

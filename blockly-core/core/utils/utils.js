@@ -737,6 +737,34 @@ Blockly.svgRectToRect = function (svgRect) {
     svgRect.height);
 };
 
+
+/**
+ * Callback which displays a simple dialog.
+ * @callback SimpleDialogFunction
+ * @param {DialogOptions} dialogOptions
+ */
+
+/**
+ * Options for showing a simple dialog.
+ * @typedef {Object} DialogOptions
+ * @property {string} headerText
+ * @property {string} bodyText
+ * @property {string} cancelText
+ * @property {string} confirmText
+ * @property {function} onConfirm
+ * @property {function} onCancel
+ * @property {string} cancelButtonClass
+ */
+
+/**
+ * @param {DialogOptions} dialogOptions simple dialog options
+ */
+Blockly.showSimpleDialog = function (dialogOptions) {
+  if (Blockly.customSimpleDialog) {
+    Blockly.customSimpleDialog(dialogOptions);
+  }
+};
+
 /**
  * Direction properties for goog.math.Boxes
  * @type {string[]}

@@ -18,6 +18,35 @@
  */
 'use strict';
 
+var SINGLE_DEFINITION_FILLED = '' +
+'<xml>' +
+  '<block type="functional_definition" inline="false" editable="false">' +
+    '<mutation>' +
+      '<outputtype>Number</outputtype>' +
+    '</mutation>' +
+    '<title name="NAME">functional-function</title>' +
+    '<functional_input name="STACK">' +
+      '<block type="functional_parameters_get">' +
+        '<mutation>' +
+          '<outputtype>Number</outputtype>' +
+        '</mutation>' +
+        '<title name="VAR">param0</title>' +
+      '</block>' +
+    '</functional_input>' +
+  '</block>' +
+'</xml>';
+
+var SINGLE_DEFINITION_NOT_FILLED = '' +
+'<xml>' +
+  '<block type="functional_definition" inline="false" editable="false">' +
+    '<mutation>' +
+      '<outputtype>Number</outputtype>' +
+    '</mutation>' +
+    '<title name="NAME">functional-function</title>' +
+  '</block>' +
+'</xml>';
+
+
 function initializeFunctionEditor() {
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.hasTrashcan = true;
@@ -97,7 +126,7 @@ function test_initializeFunctionEditor() {
 }
 
 function test_contractEditor_add_examples() {
-  var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
+  var singleDefinitionString = SINGLE_DEFINITION_FILLED;
   var container = initializeWithContractEditor(singleDefinitionString);
   var contractEditor = Blockly.contractEditor;
   contractEditor.autoOpenWithLevelConfiguration({
@@ -111,6 +140,42 @@ function test_contractEditor_add_examples() {
   var callBlock = firstExample.getInputTargetBlock(
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
   assertFalse(callBlock.canDisconnectFromParent());
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_run_test_with_definition_runs() {
+  var container = initializeWithContractEditor(SINGLE_DEFINITION_FILLED);
+  var contractEditor = Blockly.contractEditor;
+  contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  contractEditor.addNewExampleBlock_();
+  assertEquals('Has one example', 1, contractEditor.exampleBlocks.length);
+
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('testButton'));
+
+  var resultText = goog.dom.getTextContent(
+      goog.dom.getElementByClass('example-result-text'));
+  assertRegExp('^Block ID is', resultText);
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_run_test_no_definition_error() {
+  var container = initializeWithContractEditor(SINGLE_DEFINITION_NOT_FILLED);
+  var contractEditor = Blockly.contractEditor;
+  contractEditor.autoOpenWithLevelConfiguration({
+    autoOpenFunction: 'functional-function'
+  });
+  contractEditor.addNewExampleBlock_();
+  assertEquals('Has one example', 1, contractEditor.exampleBlocks.length);
+
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('testButton'));
+
+  var resultText = goog.dom.getTextContent(
+      goog.dom.getElementByClass('example-result-text'));
+  assertEquals('Define the function below and try again.', resultText);
   contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
@@ -242,5 +307,79 @@ function test_contractEditor_change_output_types() {
     fnDefInputBlockAfter.previousConnection.check_[0]);
 
   Blockly.contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function test_contractEditor_new_function_button_then_delete() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+  var contractEditor = Blockly.contractEditor;
+
+  contractEditor.openWithNewFunction();
+  contractEditor.addNewExampleBlock_();
+  contractEditor.addNewExampleBlock_();
+
+  var definitionBlock = contractEditor.functionDefinitionBlock;
+  var functionName = definitionBlock.getProcedureInfo().name;
+
+  var acceptDialogTriggered = false;
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantAcceptDialog = function (dialogOptions) {
+    // Fake dialog class which accepts deletion immediately
+    // in dialog parlence, deletion -> cancel (left side button)
+    acceptDialogTriggered = true;
+    dialogOptions.onCancel();
+  };
+
+  var rejectDialogTriggered = false;
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantRejectDialog = function (dialogOptions) {
+    // Fake dialog class which rejects deletion immediately
+    // in dialog parlence, rejection -> confirm (right side button)
+    rejectDialogTriggered = true;
+    if (dialogOptions.onConfirm) {
+      dialogOptions.onConfirm();
+    }
+  };
+
+  var beforeDeletionAssertions = function () {
+    assertTrue('Contract editor is open', contractEditor.isOpen());
+    assertEquals('Has four examples',
+        4, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+    assertNotNull('Function exists',
+        Blockly.mainBlockSpace.findFunction(functionName));
+  };
+
+  var afterDeletionAssertions = function () {
+    assertFalse('Contract editor no longer open', contractEditor.isOpen());
+    assertEquals('Has no examples',
+        0, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+    assertNull('Function no longer exists',
+        Blockly.mainBlockSpace.findFunction(functionName));
+  };
+
+  beforeDeletionAssertions();
+  assertFalse(acceptDialogTriggered);
+  assertFalse(rejectDialogTriggered);
+
+  Blockly.customSimpleDialog = instantRejectDialog;
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertTrue(rejectDialogTriggered);
+  beforeDeletionAssertions();
+
+  Blockly.customSimpleDialog = instantAcceptDialog;
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertTrue(acceptDialogTriggered);
+  afterDeletionAssertions();
+
+  contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }

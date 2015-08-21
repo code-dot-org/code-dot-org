@@ -33,3 +33,38 @@ goog.require('Blockly.JavaScript.math');
 goog.require('Blockly.JavaScript.procedures');
 goog.require('Blockly.JavaScript.text');
 goog.require('Blockly.JavaScript.variables');
+goog.require('goog.ui.Dialog');
+goog.require('goog.ui.Dialog.ButtonSet');
+
+/**
+ * @param {DialogOptions} dialogOptions
+ */
+Blockly.Playground.customSimpleDialog = function (dialogOptions) {
+  var dialog = new goog.ui.Dialog();
+  dialog.setTitle(dialogOptions.headerText);
+  dialog.setContent(dialogOptions.bodyText);
+  var buttons = new goog.ui.Dialog.ButtonSet();
+  buttons.set(goog.ui.Dialog.DefaultButtonKeys.CANCEL,
+      dialogOptions.cancelText,
+      false,
+      true);
+  buttons.set(goog.ui.Dialog.DefaultButtonKeys.OK,
+      dialogOptions.confirmText,
+      true);
+  goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, function (e) {
+    switch (e.key) {
+      case goog.ui.Dialog.DefaultButtonKeys.CANCEL:
+        if (dialogOptions.onCancel) {
+          dialogOptions.onCancel();
+        }
+        break;
+      case goog.ui.Dialog.DefaultButtonKeys.OK:
+        if (dialogOptions.onConfirm) {
+          dialogOptions.onConfirm();
+        }
+        break;
+    }
+  });
+  dialog.setButtonSet(buttons);
+  dialog.setVisible(true);
+};
