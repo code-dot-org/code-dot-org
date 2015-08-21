@@ -6,42 +6,42 @@
 
 # 獎品-常見問題與解答
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## 是否全校都需要參加才能贏得價值 $10,000 美元的硬體呢？
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+是的，全校都參加才有資格獲得這個獎，但只需有一個人註冊並 [ 在這裡](<%= hoc_uri('/prizes') %>)提交硬體獎勵的申請表。.
 
-## Does your whole school have to enter to win a the tech chat?
+## 是否全校都需要參加才能贏得科技聊天嗎？
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+任何班級 (公立或私立學校)都有資格獲得此獎勵。不需要全校申請。
 
-## Can non-public schools win the video chat prize?
+## 非公立學校可以獲得視訊聊天的獎勵嗎？
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+是啊!私立學校和獨立學校有資格與公立學校比賽獲獎視頻聊天。
 
-## Can non-US schools win the video chat prize?
+## 非美國的學校能贏得視訊聊天獎勵嗎？
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+不，不幸的是，由於後勤的關係，我們不能提供視頻聊天獎頒發給在美國和加拿大以外的學校。
 
-## Why is the $10,000 hardware prize only available to public schools?
+## 為甚麼價值一萬美元的硬體獎勵只提供給公立學校？
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+我們很樂意説明教師在公立和私立學校一致好評，但在這個時候，可以歸結為後勤。 我們與 [DonorsChoose.org](http://donorschoose.org) 成為伙伴，管理班級的獎金獎品，其中僅適用于公共，美國 k-12 學校合作。 根據 DonorsChoose.org，該組織能更有效地為公立學校存取一致、 準確的資料。
 
-## I’m outside the United States. Can I qualify for prizes?
+## 我是美國以外的國家。可以領取獎品?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+由於祗有少數的全職人員，Code.org 是無法處理後勤管理國際大獎。在美國以外的人都因為這不能領取獎品。
 
-## When is the deadline to apply for the hardware prize?
+## 硬件獎申請的截止日期是什麼時候?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. 在每個美國州一所學校將收到一類組的電腦。 Code.org 將選擇並由 2014 年 12 月 1 日通知獲獎者通過電子郵件。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
 
-## When is the deadline to be eligible to win a tech chat?
+## 有資格贏取技術聊天的截止日期是什麼時候?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org 將選擇並由 2014 年 12 月 1 日通知獲獎者通過電子郵件。
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. 教室將會贏得一個與名人聊天的視頻。 Code.org will select and notify winners via email by December 1, 2015.
 
-## When will I be notified if my school or classroom wins a prize?
+## 如果我的學校或教室贏得獎品，會何時通知？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org 將選擇並由 2014 年 12 月 1 日通知獲獎者通過電子郵件。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

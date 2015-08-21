@@ -14,7 +14,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-**ΚΑΘΕ** διοργανωτής Ώρας Κώδικα θα λάβει 10 GB χώρου στο Dropbox ή $10 σε πίστωση Skype ως ευχαριστήριο. [Λεπτομέρειες](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Διάδωσέ το
 
@@ -22,34 +24,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Στείλε αυτό το email](<%= hoc_uri('/resources#email') %>) ή [αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) στο διευθυντή σου.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
-## 2. Ask your whole school to offer an Hour of Code
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#email') %>) ή δώσε [αυτό το φυλλάδιο](/resources/hoc-one-pager.pdf) αυτό το φυλλάδιο</a> στον διευθυντή σου.
-
-<% end %>
-
-## 3.Κάντε μια γενναιόδωρη δωρεά 
-
-[Κάντε μια δωρεά στην καμπάνια μας crowdfunding.](http://<%= codeorg_url() %>/donate) Χρειαζόμαστε τη βοήθειά σας για να φτάσουμε τα 100 εκατομμύρια παιδιά. Μόλις ξεκινήσαμε τη [μεγαλύτερη καμπάνια crowdfunding για την εκπαίδευση](http://<%= codeorg_url() %>/donate) που έγινε ποτέ. *Κάθε* δολάριο θα διπλασιαστεί από [δότες](http://<%= codeorg_url() %>/about/donors), διπλασιάζοντας το καλό που κάνετε.
-
-## Ζήτα από τον εργοδότη σου να εμπλακεί 
-
-[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#email') %>) στον διαχειριστή σου ή στον προϊστάμενο ή τον Διευθύνοντα Σύμβουλο. Ή [δώσε τους αυτό το φυλλάδιο](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## Προωθήστε την ώρα του κώδικα μέσα στην κοινωνία σας
+## 4. Προώθησε την Ώρα Κώδικα στην κοινότητά σου
 
 Επιστράτευσε έναν τοπικό σύλλογο — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ένωση εργαζομένων. Ή διοργάνωσε μια Ώρα του Κώδικα για το τη γειτονιάς σου.
 
-## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[ Στείλε αυτό το μήνυμα](<%= hoc_uri('/resources#politicians') %>) στον δήμαρχο, το Δημοτικό Συμβούλιο, ή το Σχολικό Συμβούλιο. Ή [δώσε τους αυτό το φυλλάδιο](http://hourofcode.com/resources/hoc-one-pager.pdf) και καλέσε τους να επισκεφτούν το σχολείο σου.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

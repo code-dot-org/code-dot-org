@@ -1,0 +1,316 @@
+pl:
+  site_name: GODZINA KODOWANIA
+  language: Polski
+  front_title: Dołącz do największej akcji edukacyjnej w historii, 7-13 grudnia 2015
+  coming_soon: Wkrótce dostępne
+  campaign_date_start_short: 7 grudnia
+  campaign_date_start_long: 7 grudnia
+  campaign_date_short: 7-13 grudnia
+  campaign_date_full: 7-13 grudnia
+  front_header_banner: Dołącz do największej akcji edukacyjnej w historii, 7-13 grudnia 2015
+  front_intro_default: 'Godzina Kodowania jest globalną akcją w której udział biorą dziesiątki milionów uczniów z ponad 180 krajów. Nieważne kim jesteś ani skąd pochodzisz, każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są dostępne w ponad 30 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>'
+  front_watch_video: Obejrzyj nowy film
+  front_watch_regular_video: Obejrzyj wideo
+  header_menu_resources: Materiały
+  header_menu_faq: FAQ
+  header_menu_prizes: Nagrody
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
+  prizes_all: Nagrody dla każdego organizatora
+  prizes_every_organizer: Każdy organizator otrzyma w ramach podziękowań bon do wykorzystania w serwisie Dropbox lub Skype
+  prizes_technology: W każdym stanie USA (oraz w Waszyngtonie) jedna szkoła publiczna wygra nagrody o wartości $10,000
+  prizes_tech_chats: '# klas wygra wideokonferencje z gośćmi specjalnymi'
+  prizes_robots: 100 klas wygra zestawy programowalnych robotów
+  prizes_brilliant: One school in each province and territory will receive $2000 for a Brilliant Project
+  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_details: Szczegóły
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: Terms and Conditions
+  prizes_nav_faq: FAQ
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Jak przeprowadzić Godzinę kodowania?</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promuj Godzinę kodowania</a>"
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  anybody_can_learn: Każdy może się nauczyć.
+  get_started: Start
+  beyond_an_hour: Beyond an Hour of Code
+  register_now: Zapisz się teraz
+  share_on_facebook: Share on Facebook
+  share_on_twitter: Share on Twitter
+  front_join_us_heading: Godzina Kodowania dla każdego ucznia.
+  front_join_us_description: Informatyka jest podstawą dla każdego ucznia. Pomóż nam przybliżyć ją 100 milionom uczniów.
+  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_button: Dołącz do nas
+  front_what_is_hoc: Czym jest Godzina Kodowania?
+  front_join_us_header: Każdy może nauczyć się podstaw dobrze się przy tym bawiąc!
+  front_join_us_teacher: Jesteś nauczycielem?
+  front_join_us_inspire: Inspire students with
+  front_join_us_inspire_link: Godzina kodowania w klasie.
+  front_join_us_parent: Jesteś rodzicem?
+  front_join_us_ask_link: Poproś swoją szkołę
+  front_join_us_ask: o współorganizowanie Godziny Kodowania.
+  front_join_us_computer_science: Jesteś miłośnikiem informatyki?
+  front_join_us_spread: Opowiadaj o nas.
+  front_join_us_organize: Lub sam/sama zorganizuj Godzinę kodowania.
+  front_join_us_how_to_run: Oto jak zostać współorganizatorem Godziny kodowania
+  front_join_us_help_promote: Pomóż promować akcję
+  front_join_us_students: Uczniowie
+  front_join_us_teachers: Nauczyciele
+  front_join_us_everyone: Wszyscy
+  front_join_us_try: Wypróbuj
+  front_join_us_host: Zostań gospodarzem
+  front_join_us_support: Udziel wsparcia
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: Twoje imię i nazwisko
+  signup_email_label: Twój adres e-mail
+  signup_organization_name_label: Nazwa szkoły lub organizacji
+  signup_event_type_label: Rodzaj wydarzenia
+  signup_event_entire_school_label: Cała moja szkoła uczestniczy
+  signup_event_location_label: Lokalizacja (opcjonalnie)
+  signup_special_event_flag_label: Wyeksponuj moje specjalne wydarzenie
+  signup_special_event_details_label: Szczegóły wydarzenia specjalnego
+  signup_send_posters_flag_label: 'Wyślij <a href= "/resources#posters"> plakaty</a> do mojej szkoły lub organizacji'
+  signup_send_posters_address_label: Adres szkoły lub organizacji
+  signup_whole_school_flag_label: To wydarzenie jest dla całej szkoły
+  signup_your_event: Zarejestruj swoje wydarzenie
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_name_placeholder: Twoje imię i nazwisko
+  signup_email_placeholder: Jan.Kowalski@example.com
+  signup_organization_name_placeholder: Na przykład Lincoln High School
+  signup_event_location_placeholder: "Kod pocztowy i kraj LUB pełny adres. \r \n(użyjemy tej informacji, by przypiąć was szpilką na naszej mapie)"
+  signup_special_event_details_placeholder: Opisz, co sprawia, że to wydarzenie jest wyjątkowe
+  signup_send_posters_address_placeholder: Ten adres nie zostanie udostępniony na naszej mapie
+  signup_event_type_in_school: W szkole
+  signup_event_type_out_of_school: Poza szkołą
+  signup_submit_label: Zarejestruj się
+  signup_submit_error_message: Wystąpił błąd. Upewnij się, że wszystkie wymagane pola zostały wypełnione prawidłowo.
+  signup_thank_you_header: Dziękujemy za rejestrację jako organizator Hour of Code.
+  signup_thank_you_message: Wysłaliśmy do Ciebie e-mail z potwierdzeniem oraz informacjami, które pomogą Ci zacząć.
+  map_header: '# wydarzeń Hour of Code na całym świecie'
+  see_all_events: See all events
+  map_header_company: '# by company organizers'
+  map_search_placeholder: Szukaj wydarzeń Godziny Kodowania
+  map_search_search: Szukaj
+  map_search_reset: Resetuj
+  meta_tag_og_title: The Hour of Code is here
+  meta_tag_og_description: The Hour of Code to globalny ruch docierający do dziesiątek milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do 104 lat.
+  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_description: The Hour of Code to globalny ruch docierający do dziesiątek milionów uczniów w ponad 180 krajach, posługujących się ponad 30 językami. Wiek od 4 do 104 lat.
+  twitter_default_text: 'Biorę udział w tegorocznym #HourOfCode, a Ty? @codeorg'
+  hardware_prizes_form_name_label: Twoje imię i nazwisko
+  hardware_prizes_form_name_placeholder: Twoje imię i nazwisko
+  hardware_prizes_form_email_label: Twój adres e-mail
+  hardware_prizes_form_email_placeholder: Twój adres e-mail
+  hardware_prizes_form_school_name_label: Nazwa szkoły
+  hardware_prizes_form_school_name_placeholder: Nazwa szkoły
+  hardware_prizes_form_school_address_label: Adres szkoły
+  hardware_prizes_form_school_address_placeholder: Adres szkoły
+  hardware_prizes_form_school_type_label: Rodzaj szkoły
+  hardware_prizes_form_school_type_option_elementary: Szkoła Podstawowa
+  hardware_prizes_form_school_type_option_middle_school: Gimnazjum
+  hardware_prizes_form_school_type_option_high_school: Liceum
+  hardware_prizes_form_qualifying_school_label: To jest amerykańska szkoła publiczna K-12
+  hardware_prizes_form_number_students_label: Liczba uczestniczących uczniów
+  hardware_prizes_form_number_students_placeholder: Liczba uczniów
+  hardware_prizes_form_plan_file_label: Wgraj swój plan logistyczny Godziny Kodowania
+  hardware_prizes_form_plan_file_description: 'Prześli prosty harmonogram, jak planujesz zorganizować Godzinę Kodowania dla każdego ucznia w twojje szkole. Zobacz przykladowy plan : #PDF# | #Word#'
+  hardware_prizes_form_submit_label: Wyślij
+  hoc_faq_title: Najczęściej zadawane pytania
+  hoc_faq_what_is_hoc_q: Czym jest Godzina Kodowania?
+  hoc_faq_what_is_hoc_a: "Godzina kodowania to jednogodzinne wprowadzenie do informatyki, mające na celu wyjaśnienie kodu i pokazanie, że każdy może nauczyć się podstaw. <a href='http://code.org/learn'>Sprawdź poradniki</a>."
+  hoc_faq_last_year: Wypróbuj poradniki
+  hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: Dlaczego informatyka?
+  hoc_faq_why_cs_a: "<i>Każdy</i> uczeń powinien mieć możliwość nauki informatyki. Pomaga ona rozwijać umiejętność rozwiązywania problemów, logicznego myślenia i kreatywności. Dzięki rozpoczęciu nauki wcześnie, uczniowie będą mieli możliwość odniesienia sukcesu na każdej ścieżce kariery XXI wieku. Zobacz więcej statystyk na <a href='http://code.org'> Code.org</a>."
+  hoc_faq_how_participate_q: Jak mogę wziąć udział w Godzinie Kodowania?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Kto jest odpowiedzialny za Godzinę Kodowania?
+  hoc_faq_behind_hoc_a: "Godzina Kodowania jest organizowana przez <a href='http://code.org'> Code.org</a>, organizację non-profit (501c3) poświęconą upowszechnianiu  informatyki przez udostępnienie jej w większej liczbie szków i zwiększenie udziału kobiet i niedostatecznie reprezentowanych osób kolorowych. Także <a href='http://code.org/about/partners'> Bezprecedensowa koalicja partnerów</a> zebrała się by pobrzeć Godzinę Kodowania &mdash;, w tym Microsoft, Apple, Amazon, Boys and Girls Clubs of America oraz College Board."
+  hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę utworzyć wydarzenie?
+  hoc_faq_host_a: "Oczywiście. Ćwiczenia Hour of Code możesz wykonywać samodzielnie. Jedyne co musisz zrobić to <a href='http://code.org/learn'>spróbuj naszych obecnych samouczków</a>, wybierz samouczek, który chcesz i wybierz godzinę &mdash; my zajmiemy się resztą. Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href='target-resources-how-to'>jak poprowadzić</a>."
+  hoc_faq_need_computers_q: Czy potrzebuję komputerów dla każdego uczestnika?
+  hoc_faq_need_computers_a: "Nie. Posiadamy samouczki do Hour of Code, które działają na komputerach, smartfonach, tabletach, a niektóre z nich w ogóle nie potrzebują urządzenia! Możesz dołączyć gdziekolwiek jesteś, z jakimkolwiek sprzętem. <p><i>Oto kilka opcji:</i><br><ul><li><b>Pracujcie w parach.</b> Badania pokazują, że uczniowie najlepiej uczą się poprzez <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programowanie parami</a>, dzielenie komputera i współpracowanie. Zachęć swoich uczniów, by połączyli się w pary.<li><b>Użyj projektora.</b> Jeśli masz projektor i ekran komputera podłączony do sieci, twoja cała klasa może uczestniczyć w Hour of Code wspólnie. Oglądajcie fragmenty filmików razem i na zmianę rozwiązujcie zagadki i odpowiadajcie na pytania.<li><b>Przeprowadźcie to bez podłączenia.</b>Oferujemy samouczki, które w ogóle nie wymagają komputera.</ul>"
+  hoc_faq_international_q: 'Jestem w <country>. Jak mogę wziąć udział międzynarodowo?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_tutorial_q: Jak mogę stworzyć samouczek do Hour of Code?
+  hoc_faq_tutorial_a: "Jeśli jesteś zainteresowany byciem partnerem przy nauce, <a href='target-tutorial-guidelines'> Zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy zrealizować szereg atrakcyjnych działań, ale głównym celem jest, aby  uczniowie i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia."
+  hoc_faq_more_questions_q: Masz więcej pytań?
+  hoc_faq_more_questions_a: "Spróbuj znaleźć odpowiedź na naszym <a href='http://support.code.org'>oficjalnym forum</a>."
+  hoc_faq_scratch_q: Podczas godziny kodowania używam Scratcha, ale co jeśli moi uczniowie używają iPadów zamiast laptopów?
+  hoc_faq_scratch_a: "Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących czytelników). Jeśli spojrzysz na poradniki na <a href='http://code.org/learn'>Code.org/learn</a>, możesz znaleźć inne poradniki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot lub CodeSpark."
+  hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
+  hoc_faq_account_a: "Nie. Rejestracja i logowanie nie są wymagane aby spróbować Godziny Kodowania. Większość kursów <a href='http://code.org/learn/beyond'>kursów</a> wymaga stworzenia konta jedynie aby zapisywać postęp uczniów."
+  hoc_faq_frozen_q: Gdzie jest samouczek z Anną i Elsą?
+  hoc_faq_frozen_a: "Jest opublikowany na <a href='http://code.org/learn'> Code.org/learn</a>. Mamy nadzieję, że ci się spodoba!"
+  hoc_faq_high_school_q: Jakie aktywności wykonywać ze starszymi uczniami?
+  hoc_faq_high_school_a: "Bez względu na wiek, polecamy wypróbowanie naszego samouczka dla początkujących na <a href='http://code.org/learn'>Code.org/learn</a>, np. samoucznka z Angry Birds lub z Anną i Elsą. Starsi uczniowie powinni być w stanie je ukończyć w 30 minut, a potem możesz spróbować bardziej zaawansowanych kursów JavaScript na Khan Academy lub CodeHS."
+  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
+  stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
+  stats_i18n: Students are learning in 40 languages
+  stats_tumblr: 'Tumblr: 3,5 roku'
+  stats_facebook: 'Facebook: 3 lata'
+  stats_twitter: 'Twitter: 2,5 roku'
+  stats_pinterest: 'Pinterest: 2 lata'
+  stats_instagram: 'Instagram: 14 miesięcy'
+  stats_hoc: 'Godzina kodowania: 5 dni'
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania."-Nina Nichols Peery, nauczyciel'
+  stats_student: '"Wiedziałam, że to <b>jedyna</b> taka szansa na całe życie."- Mariana Alzate, uczennica 5 klasy'
+  stats_michael: '"Nigdy, <b>przenigdy</b> nie widziałem moich uczniów tak podekscytowanych nauką." - Michael Clark, nauczyciel'
+  resources_how_to: Porady dla nauczycieli
+  resources_how_to_events: Porady dotyczące wydarzenia
+  resources_how_to_districts: Porady dla okręgów
+  resources_how_to_officials: Porady dla urzędników
+  resources_handouts: Materiały informacyjne
+  resources_videos: Filmy
+  resources_posters: Plakaty
+  resources_social: Media społecznościowe
+  resources_banners: Banery
+  resources_emails: Przykładowe e-maile
+  resources_stats: Przydatne statystyki i liczby
+  resources_press_kit: Materiały prasowe
+  resources_country_resources: Country Specific Resources
+  events_title: Wszystkie wydarzenia Hour of Code
+  events_nav_all: Wszystkie wydarzenia
+  events_nav_whole_schools: Całe szkoły
+  events_nav_special: Wydarzenia specjalne
+  events_nav_orgs: Organizacje
+  events_all_old_title: All @year Hour of Code events
+  events_all_title: Wszystkie wydarzenia Hour of Code
+  events_whole_school_title: Wydarzenia Godziny Kodowania dla całej szkoły
+  events_special_title: Wydarzenia specjalne Hour of Code
+  events_orgs_title: Wszystkie wydarzenia z serii Godzina Kodowania organizowane przez partnerów
+  event: wydarzenie
+  events: wydarzenia
+  footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
+  footer_trademark_message: Hour od Code™ jest znakiem towarowym Code.org.
+  footer_menu_partners: Partnerzy
+  footer_menu_contact: Kontakt
+  footer_menu_support: Pomoc techniczna
+  footer_menu_terms: Warunki
+  footer_menu_privacy: Polityka Prywatności

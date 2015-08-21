@@ -4,7 +4,7 @@ title: Partnerët
 
 * * *
 
-# Partnerët Kryesore dhe Mbeshtetësit e Korporatës
+# Partnerët Kryesor dhe Korporatat Mbështetëse
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -28,7 +28,7 @@ title: Partnerët
 
 * * *
 
-# Partnerët E Inrastrukturës dhe mjetet
+# Partnerët E Infrastrukturës dhe mjetet
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
