@@ -1547,7 +1547,7 @@ NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
         simulatedBy: nodeID,
         payload: message.payload
       };
-  }.bind(this));
+  }, this);
 
   NetSimMessage.sendMany(this.shard_, messages, onComplete);
 };
