@@ -6030,9 +6030,6 @@ StudioApp.prototype.init = function(config) {
 
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
-    var rotateContainer = document.getElementById('rotateContainer');
-    rotateContainer.style.width = window.innerWidth + 'px';
-    rotateContainer.style.height = window.innerHeight + 'px';
   };
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
@@ -6088,6 +6085,10 @@ StudioApp.prototype.init = function(config) {
 
   if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
+  } else {
+    // handleUsingBlockly_ already does an onResize. We still want that goodness
+    // if we're not blockly
+    this.onResize();
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -6367,7 +6368,9 @@ StudioApp.prototype.inject = function(div, options) {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
-    trashcan: true
+    trashcan: true,
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
+        this.Dialog)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
@@ -29988,7 +29991,8 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
       confirmText: options.confirmText,
-      cancelText: options.cancelText
+      cancelText: options.cancelText,
+      cancelButtonClass: options.cancelButtonClass
     }
   });
   contentDiv.appendChild(buttons);
@@ -30564,7 +30568,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancelText) {; buf.push('<button id="again-button">\n    ', escape((10,  data.cancelText )), '\n</button>\n');12; }; buf.push('\n');13; if (data.confirmText) {; buf.push('<button id="confirm-button" class="launch" style="float: right">\n    ', escape((14,  data.confirmText )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
+ buf.push('');1; var msg = require('../locale'); ; buf.push('\n\n');3; if (data.ok) {; buf.push('  <div class="farSide" style="padding: 1ex 3ex 0">\n    <button id="ok-button" class="secondary">\n      ', escape((5,  msg.dialogOK() )), '\n    </button>\n  </div>\n');8; }; buf.push('\n');9; if (data.cancelText) {; buf.push('<button id="again-button" class="', escape((9,  data.cancelButtonClass || '' )), '">\n    ', escape((10,  data.cancelText )), '\n</button>\n');12; }; buf.push('\n');13; if (data.confirmText) {; buf.push('<button id="confirm-button" class="launch" style="float: right">\n    ', escape((14,  data.confirmText )), '\n</button>\n');16; }; buf.push('\n');17; if (data.previousLevel) {; buf.push('  <button id="back-button" class="launch">\n    ', escape((18,  msg.backToPreviousLevel() )), '\n  </button>\n');20; }; buf.push('\n');21; if (data.tryAgain) {; buf.push('  ');21; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="again-button" class="launch arrow-container arrow-left">\n      <div class="arrow-head"><img src="', escape((22,  data.assetUrl('media/tryagain-arrow-head.png') )), '" alt="Arrowhead" width="67" height="130"/></div>\n      <div class="arrow-text">', escape((23,  data.tryAgain )), '</div>\n    </div>\n  ');25; } else {; buf.push('    ');25; if (data.hintRequestExperiment === "left") {; buf.push('      <button id="hint-request-button" class="launch">\n        ', escape((26,  msg.hintRequest() )), '\n      </button>\n      <button id="again-button" class="launch">\n        ', escape((29,  data.tryAgain )), '\n      </button>\n    ');31; } else if (data.hintRequestExperiment == "right") {; buf.push('      <button id="again-button" class="launch">\n        ', escape((32,  data.tryAgain )), '\n      </button>\n      <button id="hint-request-button" class="launch">\n        ', escape((35,  msg.hintRequest() )), '\n      </button>\n    ');37; } else {; buf.push('      <button id="again-button" class="launch">\n        ', escape((38,  data.tryAgain )), '\n      </button>\n    ');40; }; buf.push('  ');40; }; buf.push('');40; }; buf.push('\n');41; if (data.nextLevel) {; buf.push('  ');41; if (data.isK1 && !data.freePlay) {; buf.push('    <div id="continue-button" class="launch arrow-container arrow-right">\n      <div class="arrow-head"><img src="', escape((42,  data.assetUrl('media/next-arrow-head.png') )), '" alt="Arrowhead" width="66" height="130"/></div>\n      <div class="arrow-text">', escape((43,  data.continueText )), '</div>\n    </div>\n  ');45; } else {; buf.push('    <button id="continue-button" class="launch" style="float: right">\n      ', escape((46,  data.continueText )), '\n    </button>\n  ');48; }; buf.push('');48; }; buf.push(''); })();
 } 
 return buf.join('');
 };
