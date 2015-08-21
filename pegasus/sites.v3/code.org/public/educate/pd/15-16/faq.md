@@ -8,13 +8,13 @@ nav: pd2_nav
 
 Thank you for participating in Code.org Computer Science Professional Development! If you have not done so already, please read your Code.org Teacher Welcome Kit for all program expectations, commitments, and information. Feel free to download, save, and/or print this Welcome Kit so you have all the answers at your fingertips. 
 
-[Computer Science Principles Teacher Welcome Kit](http://code.org/welcome-csp)
+[Computer Science Principles Teacher Welcome Kit](code.org/welcome-csp)
 <br/>
-[Exploring Computer Science Teacher Welcome Kit](http://code.org/welcome-ecs)
+[Exploring Computer Science Teacher Welcome Kit](code.org/welcome-ecs)
 <br/>
-[Computer Science in Algebra Teacher Welcome Kit](http://code.org/welcome-algebra)
+[Computer Science in Algebra Teacher Welcome Kit](code.org/welcome-algebra)
 <br/>
-[Computer Science in Science Teacher Welcome Kit](http://code.org/welcome-science)
+[Computer Science in Science Teacher Welcome Kit](code.org/welcome-science)
 
 
 ----------

@@ -1,9 +1,9 @@
-Given(/^block "([^"]*)" is at a ((?:blockly)?) location "([^"]*)"$/) do |block, is_blockly, identifier|
+Given(/^block "([^"]*)" is at a location "([^"]*)"$/) do |block, identifier|
   @locations ||= {}
   block_id = get_block_id(block)
   @block = @browser.find_element(:css, "g[block-id='#{block_id}']")
-  x = is_blockly ? get_block_workspace_left(block_id) : get_block_absolute_left(block_id)
-  y = is_blockly ? get_block_workspace_top(block_id) : get_block_absolute_top(block_id)
+  x = @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().left")
+  y = @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().top")
   @locations[identifier] = BlocklyHelpers::Point.new(x, y)
 end
 
@@ -55,22 +55,16 @@ Then /^block "([^"]*)" is at offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point.y.should eq y.to_i
 end
 
-Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly)?) location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
+Then /^block "([^"]*)" is((?:n't| not)?) at location "([^"]*)"$/ do |block, negation, location_identifier|
   block_id = get_block_id(block)
-  actual_x = is_blockly ? get_block_workspace_left(block_id) : get_block_absolute_left(block_id)
-  actual_y = is_blockly ? get_block_workspace_top(block_id) : get_block_absolute_top(block_id)
+  actual_x = @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().left")
+  actual_y = @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().top")
   location = @locations[location_identifier]
   if negation == ''
     "#{actual_x},#{actual_y}".should eq "#{location.x},#{location.y}"
   else
     "#{actual_x},#{actual_y}".should_not eq "#{location.x},#{location.y}"
   end
-end
-
-Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
-  block_space_name = workspace_type + 'BlockSpace'
-  scrollable_height = get_scrollable_height(block_space_name)
-  @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|

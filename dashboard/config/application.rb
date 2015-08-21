@@ -85,7 +85,6 @@ module Dashboard
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
-      angularProjects.js
       shared.js
       shared.min.js
       editor/blockly_editor.css
