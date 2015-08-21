@@ -394,6 +394,11 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'create[{}]');
   });
 
+  it ("calls multiCreate on the API table", function () {
+    netsimTable.multiCreate([{}, {}], callback);
+    assertEqual(apiTable.log(), 'create[{}]create[{}]');
+  });
+
   it ("calls update on the API table", function () {
     netsimTable.update(1, {}, callback);
     assertEqual(apiTable.log(), 'update[1, {}]');

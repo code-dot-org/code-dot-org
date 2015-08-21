@@ -126,23 +126,44 @@ var tableApi = {
   },
 
   /**
+   * Post some data to the table. Private method used by createRow and
+   * createRows
+   * @param {string} data - JSON-stringified POST data
+   * @param {NodeStyleCallback} callback - the result of the request
+   * @private
+   */
+  post_: function(data, callback) {
+    $.ajax({
+      url: this.baseUrl,
+      type: "post",
+      contentType: "application/json; charset=utf-8",
+      data: data
+    }).done(function(body, text) {
+      callback(null, body);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
+    });
+  },
+
+  /**
    * Insert a row into the table.
    * @param {Object} value - desired row contents, must be JSON.stringify-able.
    * @param {NodeStyleCallback} callback - Expected result is the created
    *        row object (which will include an assigned 'id' key).
    */
   createRow: function(value, callback) {
-    $.ajax({
-      url: this.baseUrl,
-      type: "post",
-      contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(value)
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
-    });
+    this.post_(JSON.stringify(value), callback);
+  },
+
+  /**
+   * Insert several rows into the table.
+   * @param {Object[]} values - desired row contents, must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is an array of the created
+   *        row object (which will include assigned 'id' keys).
+   */
+  createRows: function(values, callback) {
+    this.post_(JSON.stringify(values), callback);
   },
 
   /**
