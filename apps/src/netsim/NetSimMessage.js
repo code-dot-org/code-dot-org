@@ -157,7 +157,7 @@ NetSimMessage.send = function (shard, messageData, onComplete) {
 NetSimMessage.sendMany = function (shard, messageDatas, onComplete) {
   try {
     var rows = messageDatas.map(NetSimMessage.buildRowFromData);
-    shard.messageTable.create(rows, onComplete);
+    shard.messageTable.multiCreate(rows, onComplete);
   } catch (err) {
     onComplete(err, null);
   }
