@@ -6,14 +6,14 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,4,0,0,0],[0,0,0,1,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "birds",
-    "instructions": "Try the \"repeat\" block to use fewer blocks when solving this puzzle...",
+    "skin": "pvz",
+    "instructions": "Try the \"repeat\" block to use fewer blocks...",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "video_key": "C2_zuck_repeat_loop",
+    "video_key": "C3_maze_level_4",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -26,9 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Try the `repeat` block to use fewer blocks when solving this puzzle...",
-    "examples_required": "false",
-    "maze_data": null
+    "maze_data": null,
+    "markdown_instructions": "Try the `repeat` block to use fewer blocks..."
   }
 }]]></config>
   <blocks>

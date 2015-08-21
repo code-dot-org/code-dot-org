@@ -38,27 +38,3 @@ function test_setBlockNotDisconnectable() {
 
   goog.dom.removeNode(containerDiv);
 }
-
-function test_clickIntoEditableUnmovableBlock() {
-  var containerDiv = Blockly.Test.initializeBlockSpaceEditor();
-
-  var blockSpace = Blockly.mainBlockSpace;
-  var unmovableButEditable = ''+
-      '<xml>' +
-      '  <block type="math_number" movable="false">' +
-      '    <title name="NUM">0</title>' +
-      '  </block>' +
-      '</xml>';
-
-  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
-      unmovableButEditable));
-
-  var inputText = goog.dom.getElementByClass('blocklyText');
-
-  Blockly.fireTestClickSequence(inputText);
-
-  assertNotNull("input should show up when editable field is clicked",
-      goog.dom.getElementByClass('blocklyHtmlInput'));
-
-  goog.dom.removeNode(containerDiv);
-}
