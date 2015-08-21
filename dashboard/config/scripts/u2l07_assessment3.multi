@@ -1,7 +1,7 @@
 name 'U2L07 Assessment3'
 title 'Question 3'
 question 'Which of the following is NOT something we are concerned with when we write an algorithm?'
-right 'The algorithm is short.'
+right 'The algorithm short'
 wrong 'The algorithm is correct.'
 wrong 'The algorithm is efficient.'
 wrong 'The algorithm is understandable.'

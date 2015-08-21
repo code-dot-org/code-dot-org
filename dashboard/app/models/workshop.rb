@@ -27,15 +27,19 @@ class Workshop < ActiveRecord::Base
                           join_table: 'facilitators_workshops'
 
   def self.workshops_ending_today
-    Workshop.joins(:segments).group(:workshop_id).having("(DATE(MAX(start)) = ?)", Date.today)
+    Workshop.joins(:segments).group(:workshop_id).having('(DATE(MAX(start)) = CURDATE())')
   end
 
   def self.workshops_in_2_weeks
-    Workshop.joins(:segments).group(:workshop_id).having("(DATE(MIN(start)) = DATE_ADD(?, INTERVAL 2 WEEK))", Date.today)
+    Workshop.joins(:segments).group(:workshop_id).having('
+      (DATE(MIN(start)) = DATE_ADD(CURDATE(), INTERVAL 2 WEEK))
+    ')
   end
 
   def self.workshops_in_3_days
-    Workshop.joins(:segments).group(:workshop_id).having("DATE(MIN(start)) = (DATE_ADD(?, INTERVAL 3 DAY))", Date.today)
+    Workshop.joins(:segments).group(:workshop_id).having('
+      DATE(MIN(start)) = (DATE_ADD(CURDATE(), INTERVAL 3 DAY))
+    ')
   end
 
   def phase_info
@@ -55,10 +59,10 @@ class Workshop < ActiveRecord::Base
         [teachers, drop_ins, facilitators].each do |recipient_list|
           recipient_list.each do |recipient|
             if workshop.segments.first.start.to_date == Date.today
-              logger.debug("Sending exit survey info to #{recipient.email}")
+              puts("Sending exit survey info to #{recipient.properties['ops_first_name']}")
               OpsMailer.exit_survey_information(workshop, recipient).deliver
             else
-              logger.debug("Sending email reminder to #{recipient.email}")
+              puts("Sending email reminder to #{recipient.properties['ops_first_name']}")
               OpsMailer.workshop_reminder(workshop, recipient).deliver
             end
           end

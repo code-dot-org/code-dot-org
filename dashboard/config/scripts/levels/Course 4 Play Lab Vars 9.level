@@ -29,7 +29,7 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "min_workspace_height": "2000",
-    "scrollbars": "false",
+    "scrollbars": "true",
     "embed": "false",
     "disable_sharing": "false",
     "markdown_instructions": "Free Play time! Here are all of the variables we've played with so far in this stage, as well as a few more in case you want them. \r\n\r\nMake a game or story using any of these variables. \r\n\r\n*Hint: scroll down to see all the commands in the work space.*",

@@ -15,18 +15,49 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction ###
+### Phase 1: Online Introduction (~2 hours) ###
 
-Milestone Complete!
+The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
+</br>
 
-### Phase 2: Blended Summer Study ###
-#### In-person Workshop####
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-Milestone Complete!
+**Save the dates:**
 
-#### Online Study####
+Monday, July 13, 2015 - Friday, July 17, 2015
+<br/>
+Mon - Thurs: 8:30am - 3:30pm
+<br/>
+Friday: 8:30am - 1:00pm
+<br/>
+Breakfast and lunch will be served. 
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+**Location**
+
+Boise State University 
+<br/>
+Micron Business and Economics Building 
+<br/>
+4th Floor, Room MBEB 4100
+<br/>
+2360 University Drive
+<br/>
+Boise, ID 83706
+
+All participants can park for free using the parking coupon below. The Micron Business and Economics Building is located on the corner of S. Capitol Blvd. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/Micron+Business+and+Economics+Bldg,+Boise+State+University,+2360+University+Dr,+Boise,+ID+83706/@43.6056576,-116.2101993,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8f459aab969:0xb3580921a6cbd8f6)
+
+**What do I bring to Phase 2?**
+
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop optional, not required
+
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -53,10 +84,9 @@ TBD
 
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop and Charger
+Laptop
 <br/>
-ECS green journal <br/>
-Curriculum guide
+ECS green journal and curriculum guide
 <br/>
 Snacks
 <br/>
@@ -73,23 +103,52 @@ More info coming soon!
 
 ## CS in Algebra
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
-Milestone Complete!
-### Phase 2: Blended Summer Study  ###
+The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
+</br>
+</br>
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
+**Save the dates:**
 
-Milestone Complete!
+Wednesday, July 15, 2015 - Friday, July 17, 2015
+<br/>
+8:00am - 4:00pm
+<br />
+Breakfast and lunch will be served. 
 
-#### Online Study####
+### Location
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Boise State University 
+<br/>
+Micron Business and Economics Building 
+<br/>
+4th Floor, Room MBEB 4001
+<br/>
+2360 University Drive
+<br/>
+Boise, ID 83706
+
+
+All participants can park for free using the parking coupon below. The Micron Business and Economics Building is located on the corner of S. Capitol Blvd. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/Micron+Business+and+Economics+Bldg,+Boise+State+University,+2360+University+Dr,+Boise,+ID+83706/@43.6056576,-116.2101993,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8f459aab969:0xb3580921a6cbd8f6)
+
+**What do I bring to Phase 2?**
+
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop
 
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -98,7 +157,9 @@ Semester 1: Saturday, October 17, 2015
 
 Semester 2: Saturday, March 19, 2016 
 
-8:00am - 4:00pm<br/>
+8:00am - 4:00pm
+</br>
+<br/>
 Breakfast and lunch will be served. 
 
 **Location**
@@ -107,9 +168,9 @@ TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop and Charger
+Laptop
 <br/>
-Curriculum guide
+ECS green journal and curriculum guide
 <br/>
 Snacks
 <br/>
@@ -122,24 +183,54 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
-Milestone Complete!
+The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
+</br>
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
+**Save the dates:**
 
-Milestone Complete!
+Wednesday, July 8, 2015 - Friday, July 10, 2015
+<br/>
+8:00am - 4:00pm
+<br />
+Breakfast and lunch will be served. 
 
-#### Online Study####
+**Location**
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Boise State University
+<br/>
+Student Union Building
+<br/>
+2nd floor, Bishop Barnwell Room
+<br/>
+1700 W. University Drive
+<br/>
+Boise, ID 83706
+
+
+All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Lincoln Parking Garage](/files/BSU_Parking_Directions_CSinS.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/1700+W+University+Dr,+Boise+State+University,+Boise,+ID+83706/@43.6017937,-116.2016841,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef85925cb8921:0xc72ca81d7eb0fc69)
+<br/>
+[Student Union Map](http://conferenceservices.boisestate.edu/wp-content/uploads/2011/07/SUBMap_June13.pdf)
+
+**What do I bring to Phase 2?**
+
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -148,7 +239,9 @@ Semester 1: Saturday, October 10, 2015
 
 Semester 2: Saturday, March 12, 2016 
 
-8:00am - 4:00pm<br/>
+8:00am - 4:00pm
+</br>
+<br/>
 Breakfast and lunch will be served. 
 
 **Location**
@@ -157,9 +250,9 @@ TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop and Charger
+Laptop
 <br/>
-Curriculum guide
+ECS green journal and curriculum guide
 <br/>
 Snacks
 <br/>
