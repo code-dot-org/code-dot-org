@@ -91,9 +91,6 @@
         <block type="math_number">
           <title name="NUM">2</title>
         </block>
-        <block type="math_number">
-          <title name="NUM">100</title>
-        </block>
         <block type="math_arithmetic" inline="true">
           <title name="OP">MULTIPLY</title>
         </block>
