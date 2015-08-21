@@ -804,7 +804,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     data: {
       confirmText: options.confirmText,
       cancelText: options.cancelText,
-      leftButtonClass: options.leftButtonClass
+      cancelButtonClass: options.cancelButtonClass
     }
   });
   contentDiv.appendChild(buttons);

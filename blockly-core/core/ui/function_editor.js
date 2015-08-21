@@ -70,12 +70,6 @@ Blockly.FunctionEditor = function() {
   this.modalBackground_ = null;
   this.onResizeWrapper_ = null;
 
-  /**
-   * Optional configurable popup dialog function to use for deletion confirming.
-   * @private {PopupDialogCallback}
-   */
-  this.displayConfirmDialog_ = null;
-
   /** @type {BlockSpace} */
   this.modalBlockSpace = null;
 };
@@ -117,17 +111,6 @@ Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
  * @type {boolean}
  */
 Blockly.FunctionEditor.prototype.hasDeleteButton = false;
-
-/**
- * Callback which displays a
- * @callback PopupDialogCallback
- * @param {string} bodyText
- * @param {string} confirmText
- * @param {string} cancelText
- * @param {function} onRightButton
- * @param {function} onLeftButton
- * @param {string} leftButtonClass
- */
 
 /**
  * @param {String} autoOpenFunction - name of function to auto-open
@@ -812,7 +795,7 @@ Blockly.FunctionEditor.prototype.onDeletePressed = function () {
   var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
   var deleteMessage = Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE.replace('%1',
       functionName);
-  if (!this.displayConfirmDialog_) {
+  if (!Blockly.customSimpleDialog) {
     // For playground testing, use a standard `confirm` dialog for testing
     var result = confirm(deleteMessage);
     if (result) {
@@ -820,10 +803,15 @@ Blockly.FunctionEditor.prototype.onDeletePressed = function () {
     }
     return;
   }
-  this.displayConfirmDialog_(deleteMessage,
-      Blockly.Msg.KEEP, Blockly.Msg.DELETE, null,
-      this.onDeleteConfirmed.bind(this, functionName),
-      'red-delete-button');
+
+  Blockly.showSimpleDialog({
+    bodyText: deleteMessage,
+    cancelText: Blockly.Msg.DELETE,
+    confirmText: Blockly.Msg.KEEP,
+    onConfirm: null,
+    onCancel: this.onDeleteConfirmed.bind(this, functionName),
+    cancelButtonClass: 'red-delete-button'
+  });
 };
 
 Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
@@ -835,14 +823,6 @@ Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
   examples.concat(functionDefinition).forEach(function (block) {
     block.dispose(false, false, true);
   });
-};
-
-/**
- * @param {PopupDialogCallback} showDialogFn - dialog function which
- * allows for success and failure text.
- */
-Blockly.FunctionEditor.prototype.registerDialog = function (showDialogFn) {
-  this.displayConfirmDialog_ = showDialogFn;
 };
 
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {

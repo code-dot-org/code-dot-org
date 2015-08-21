@@ -323,18 +323,28 @@ function test_contractEditor_new_function_button_then_delete() {
   var functionName = definitionBlock.getProcedureInfo().name;
 
   var acceptDialogTriggered = false;
-  var instantAcceptDialog = function (a, b, c, d, confirmCallback) {
-    // Fake dialog class which confirms immediately
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantAcceptDialog = function (dialogOptions) {
+    // Fake dialog class which accepts deletion immediately
+    // in dialog parlence, deletion -> cancel (left side button)
     acceptDialogTriggered = true;
-    confirmCallback();
+    dialogOptions.onCancel();
   };
 
-  var cancelDialogTriggered = false;
-  var instantCancelDialog = function (a, b, c, cancelCallback) {
-    // Fake dialog class which cancels immediately
-    cancelDialogTriggered = true;
-    if (cancelCallback) {
-      cancelCallback();
+  var rejectDialogTriggered = false;
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantRejectDialog = function (dialogOptions) {
+    // Fake dialog class which rejects deletion immediately
+    // in dialog parlence, rejection -> confirm (right side button)
+    rejectDialogTriggered = true;
+    if (dialogOptions.onConfirm) {
+      dialogOptions.onConfirm();
     }
   };
 
@@ -356,15 +366,15 @@ function test_contractEditor_new_function_button_then_delete() {
 
   beforeDeletionAssertions();
   assertFalse(acceptDialogTriggered);
-  assertFalse(cancelDialogTriggered);
+  assertFalse(rejectDialogTriggered);
 
-  contractEditor.registerDialog(instantCancelDialog);
+  Blockly.customSimpleDialog = instantRejectDialog;
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
-  assertTrue(cancelDialogTriggered);
+  assertTrue(rejectDialogTriggered);
   beforeDeletionAssertions();
 
-  contractEditor.registerDialog(instantAcceptDialog);
+  Blockly.customSimpleDialog = instantAcceptDialog;
   Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
 
   assertTrue(acceptDialogTriggered);

@@ -453,18 +453,6 @@ StudioApp.prototype.init = function(config) {
       // contract editor
       return true;
     }.bind(this));
-    Blockly.contractEditor.registerDialog(function (bodyText,
-        confirmText, cancelText, onRightButton, onLeftButton, leftButtonClass) {
-      this.feedback_.showSimpleDialog(this.Dialog, {
-        headerText: undefined,
-        bodyText: bodyText,
-        cancelText: cancelText,
-        confirmText: confirmText,
-        onConfirm: onRightButton,
-        onCancel: onLeftButton,
-        leftButtonClass: leftButtonClass
-      });
-    }.bind(this));
   }
 
   smallFooterUtils.bindHandlers();
@@ -664,7 +652,9 @@ StudioApp.prototype.inject = function(div, options) {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
-    trashcan: true
+    trashcan: true,
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
+        this.Dialog)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
