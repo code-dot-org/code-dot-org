@@ -25,6 +25,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
+    "step_speed": "3",
     "maze_data": null
   }
 }]]></config>

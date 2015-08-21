@@ -46,6 +46,26 @@ module BlocklyHelpers
     end
     alias_or_id
   end
+
+  def get_scrollable_height(block_space_name)
+    @browser.execute_script("return Blockly.#{block_space_name}.getScrollableSize(Blockly.modalBlockSpace.getMetrics()).height;")
+  end
+
+  def get_block_absolute_left(block_id)
+    @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().left")
+  end
+
+  def get_block_absolute_top(block_id)
+    @browser.execute_script("return $(\"[block-id='#{block_id}']\").position().top")
+  end
+
+  def get_block_workspace_left(block_id)
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().x;")
+  end
+
+  def get_block_workspace_top(block_id)
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().y;")
+  end
 end
 
 World(BlocklyHelpers)
