@@ -46,6 +46,10 @@ module BlocklyHelpers
     end
     alias_or_id
   end
+
+  def get_scrollable_height(block_space_name)
+    @browser.execute_script("return Blockly.#{block_space_name}.getScrollableSize(Blockly.modalBlockSpace.getMetrics()).height;")
+  end
 end
 
 World(BlocklyHelpers)

@@ -1,182 +1,64 @@
-/* full list of browsers at https://github.com/browserstack/automate-ruby-samples/blob/master/parallel-tests-cucumber/browsers.all.json */
+/* saucelabs browser configurator: https://docs.saucelabs.com/reference/platforms-configurator/#/ */
 
 [
-  /* our top browsers by analytics */
-
   {
-    "name": "Chrome33Win7",
-    "browser": "chrome",
-    "browser_version": "33",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
+    "name": "Chrome44Win7",
+    "browserName": "chrome",
+    "version": "44.0",
+    "platform": "Windows 7"
   },
   {
-    "name": "Chrome34XP",
-    "browser": "chrome",
-    "browser_version": "34",
-    "device": null,
-    "os": "Windows",
-    "os_version": "XP"
+    "name": "Chrome44XP",
+    "browserName": "chrome",
+    "version": "44.0",
+    "platform": "Windows XP"
   },
   {
     "name": "SafariMavericks",
-    "browser": "Safari",
-    "browser_version": "7",
-    "device": null,
-    "os": "OS X",
-    "os_version": "Mavericks"
+    "browserName": "Safari",
+    "platform": "OS X 10.9",
+    "version": "7.0"
   },
   {
     "name": "IE9Win7",
-    "browser": "Internet Explorer",
-    "browser_version": "9",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
+    "browserName": "Internet Explorer",
+    "version": "9.0",
+    "platform": "Windows 7"
   },
   {
     "name": "IE10Win7",
-    "browser": "Internet Explorer",
-    "browser_version": "10",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
+    "browserName": "Internet Explorer",
+    "version": "10.0",
+    "platform": "Windows 7"
   },
-  /* Selenium doesn't yet support IE11.
   {
-    "name": "IE11Win7",
-    "browser": "Internet Explorer",
-    "browser_version": "11",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
-  }, */
-  /* Firefox 26 fails.
+    "name": "Firefox38Yosemite",
+    "browserName": "firefox",
+    "version": "38.0",
+    "platform": "OS X 10.10"
+  },
   {
-    "name": "Firefox26Win7",
-    "browser": "Firefox",
-    "browser_version": "26.0",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
-  }, */
-
-  /* browserstack sample list */
+    "name": "Firefox39Win7",
+    "browserName": "firefox",
+    "version": "39.0",
+    "platform": "Windows 7"
+  },
   {
-    "name": "iPhone5S",
-    "browser": "iPhone",
-    "platform": "MAC",
-    "device": "iPhone 5S",
-    "deviceOrientation": "landscape",
+    "name": "iPhone",
+    "browserName": "iphone",
+    "version": "8.2",
+    "deviceName": "iPhone Simulator",
+    "platform": "OS X 10.10",
     "mobile": true,
-    "realMobile": false
+    "deviceOrientation": "landscape"
   },
   {
-    "name": "Firefox15SnowLeopard",
-    "browser": "firefox",
-    "browser_version": "15.0",
-    "device": null,
-    "os": "OS X",
-    "os_version": "Snow Leopard"
-  },
-  {
-    "name": "Firefox16Win7",
-    "browser": "firefox",
-    "browser_version": "16.0",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
-  },
-  /* Win8 is not on our whitelist
-  {
-    "name": "Firefox 17 on Win8",
-    "browser": "firefox",
-    "browser_version": "17.0",
-    "device": null,
-    "os": "Windows",
-    "os_version": "8"
-  },
-  */
-  /* We don't work on IE8.
-  {
-    "name": "IE8Win7",
-    "browser": "ie",
-    "browser_version": "8.0",
-    "device": null,
-    "os": "Windows",
-    "os_version": "7"
-  },
-  */
-  /* Win8 is not on our whitelist
-  {
-    "name": "IE10Win8",
-    "browser": "ie",
-    "browser_version": "10.0",
-    "device": null,
-    "os": "Windows",
-    "os_version": "8"
-  },
-  */
-
-  /* mobile browsers */
-  /*
-  {
-    "name": "GalaxyS3",
-    "browser": "android",
-    "browser_version": null,
-    "device": "Samsung Galaxy S III",
-    "os": "android",
-    "os_version": "4.1",
-    "rotatable": true,
-    "mobile": true
-  },
-  */
-
-  /* Let's just do one Android browser for now
-  {
-    "name": "Nexus7",
-    "browser": "android",
-    "browser_version": null,
-    "device": "Google Nexus 7",
-    "os": "android",
-    "os_version": "4.1",
-    "rotatable": true,
-    "mobile": true
-  },
-  {
-    "name": "Note2",
-    "browser": "android",
-    "browser_version": null,
-    "device": "Samsung Galaxy Note II",
-    "os": "android",
-    "os_version": "4.1",
-    "rotatable": true,
-    "mobile": true
-  },
-  */
-  {
-    "name": "iPad3",
-    "browser": "iPad",
-    "browser_version": null,
-    "device": "iPad 3rd (7.0)",
-    "os": "ios",
-    "os_version": "7.0",
-    "deviceOrientation": "landscape",
+    "name": "iPad",
+    "browserName": "iphone",
+    "version": "7.1", /* ipad simulator 8.2 browser crashes on some tests (where iphone 8.2, ipad 7.1, and real ipad 8.3 both work) */
+    "deviceName": "iPad Simulator",
+    "platform": "OS X 10.10",
     "mobile": true,
-    "realMobile": false
+    "deviceOrientation": "landscape"
   }
-  /* BrowserStack's iPad Mini is 6.0, which is not on our whitelsit
-  {
-    "name": "iPadMini",
-    "browser": "iPad",
-    "browser_version": null,
-    "device": "iPad Mini",
-    "os": "ios",
-    "os_version": "6.0",
-    "deviceOrientation": "landscape",
-    "mobile": true,
-    "realMobile": false
-  }
-  */
 ]
