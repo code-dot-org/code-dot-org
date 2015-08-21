@@ -19,9 +19,11 @@ class Studio < Grid
     complete_on_success_condition_not_goals
     input_output_table
     code_functions
+    sort_draw_order
     wall_map_collisions
     block_moving_into_walls
     grid_aligned_movement
+    item_grid_aligned_movement
     remove_items_when_actor_collides
     slow_js_execution_factor
     marker_height
