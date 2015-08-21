@@ -79,17 +79,13 @@ localetocode = {
   'bs-BA' => 'bs',
   'bg-BG' => 'bg',
   'ca-ES' => 'ca',
-  'zh-CN' => 'cn',
   'zh-TW' => 'zh',
   'hr-HR' => 'hr',
   'cs-CZ' => 'cs',
   'da-DK' => 'da',
-  'fa-AF' => 'af',
   'nl-NL' => 'nl',
   'en-US' => 'en',
-  'en-GB' => 'gb',
   'et-EE' => 'et',
-  'fil-PH' => 'ph',
   'fi-FI' => 'fi',
   'fr-FR' => 'fr',
   'gl-ES' => 'gl',
@@ -119,7 +115,6 @@ localetocode = {
   'ps-AF' => 'ps',
   'fa-IR' => 'fa',
   'pl-PL' => 'pl',
-  'pt-PT' => 'po',
   'pt-BR' => 'pt',
   'ro-RO' => 'ro',
   'ru-RU' => 'ru',
@@ -127,7 +122,6 @@ localetocode = {
   'sk-SK' => 'sk',
   'sl-SI' => 'sl',
   'es-ES' => 'es',
-  'es-MX' => 'la',
   'sv-SE' => 'sv',
   'ta-IN' => 'ta',
   'th-TH' => 'th',
@@ -137,12 +131,32 @@ localetocode = {
   'vi-VN' => 'vi'
 }
 
+customcodes = {
+  'es-MX' => 'la',
+  'en-GB' => 'gb',
+  'fa-AF' => 'af',
+  'fil-PH' => 'ph',
+  'pt-PT' => 'po',
+  'zh-CN' => 'cn'
+}
+
 langtolocale.each_pair do |language, locale|
   if File.directory?("../locales/#{language}/")
     FileUtils.cp_r "../locales/#{language}/.", "../locales/#{locale}"
     FileUtils.rm_r "../locales/#{language}"
   end
 end
+
+localetocode.each_pair do |locale, code|
+	File.rename("../locales/#{locale}/hourofcode/en.yml", "../locales/#{locale}/#{code}.yml")
+end
+
+customecodes.each_pair do |locale, code|
+	File.rename("../locales/#{locale}/hourofcode/en.yml", "../locales/#{locale}/#{code}.yml")
+	# rename first line of file
+end
+
+
 
 
 # # copy xx.yml files to hourofcode.com/i18n
