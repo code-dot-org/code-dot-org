@@ -1539,30 +1539,17 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
  */
 NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     nodeIDs, onComplete) {
-  if (nodeIDs.length === 0) {
-    // All done!
-    onComplete(null);
-    return;
-  }
 
-  // Send to the first recipient, then recurse on the remaining recipients
-  var nextRecipientNodeID = nodeIDs[0];
-  NetSimMessage.send(
-      this.shard_,
-      {
+  var messages = nodeIDs.map(function(nodeID) {
+    return {
         fromNodeID: this.entityID,
-        toNodeID: nextRecipientNodeID,
-        simulatedBy: nextRecipientNodeID,
+        toNodeID: nodeID,
+        simulatedBy: nodeID,
         payload: message.payload
-      },
-      function (err) {
-        if (err) {
-          onComplete(err);
-          return;
-        }
-        this.forwardMessageToNodeIDs_(message, nodeIDs.slice(1), onComplete);
-      }.bind(this)
-  );
+      };
+  }.bind(this));
+
+  NetSimMessage.sendMany(this.shard_, messages, onComplete);
 };
 
 /**
