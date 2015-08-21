@@ -45,7 +45,7 @@
                 <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
                     <block type="math_number">
-                      <title name="NUM">6</title>
+                      <title name="NUM">5</title>
                     </block>
                   </value>
                   <statement name="DO">
@@ -95,6 +95,9 @@
       <xml>
         <block type="variables_get">
           <title name="VAR">length</title>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
         </block>
       </xml>
     </toolbox_blocks>
