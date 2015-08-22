@@ -89,8 +89,8 @@ languages.each_pair do |name, codes|
 
   # edit the code in the yml file for special coded languages
   unless codes[2].nil?
-  	file = "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml"
-		File.write(file, File.read(file).gsub(/#{codes[2]}:/, "#{codes[1]}:"))
+    file = "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml"
+    File.write(file, File.read(file).gsub(/#{codes[2]}:/, "#{codes[1]}:"))
   end
 end
 
@@ -103,14 +103,14 @@ end
 #########################################################################################
 
 languages.each_pair do |name, codes|
-	i18n_dir = Dir["../locales/#{codes[0]}/hourofcode"]
-	hoc_dir = Dir["../../pegasus/sites.v3/hourofcode.com/i18n"]
+  i18n_dir = Dir["../locales/#{codes[0]}/hourofcode"]
+  hoc_dir = Dir["../../pegasus/sites.v3/hourofcode.com/i18n"]
 
-	FileUtils.cp(i18n_dir + "#{codes[1]}.yml", hoc_dir)
+  FileUtils.cp(i18n_dir + "#{codes[1]}.yml", hoc_dir)
 
-	i18n_dir.each do |file|
-		FileUtils.cp(i18n_dir + "/**/*.md", hoc_dir + "/public/#{codes[1]}")
-	end
+  i18n_dir.each do |file|
+    FileUtils.cp(i18n_dir + "/**/*.md", hoc_dir + "/public/#{codes[1]}")
+  end
 end
 
 
