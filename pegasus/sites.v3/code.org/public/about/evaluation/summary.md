@@ -23,7 +23,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 During the 2014-15 school year, Code.org prepared over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
-- a day-long, face-to-face workshop delivered to K-5 teachers by trained facilitators, via our [Affiliate Program](/educate/k5-affiliates) or by Code.org trainers via our [District Partnership Program](/educate/k5-district-partnerships)
+- a day-long, face-to-face workshop delivered to K-5 teachers by trained facilitators, via our [Affiliate Program](/educate/k5-affiliates) or by Code.org trainers via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
 
 ## Key Finding: 
@@ -37,6 +37,7 @@ Through our professional development efforts, we are helping a large, diverse au
 | I would recommend the PD to others   | 98% | 97% |
 | This was the best PD ever   | 66% | 81%|
 | I feel prepared to teach CS   | 94% | 88% |
+*Source: Affiliate-Trained Teacher data from Code.org Survey. Code.org-Trained Teacher data from Outlier survey.*
 
 <br><br>
 
@@ -46,7 +47,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
 ## <a name="partners" href="#partners">How successful have our district partnerships been in driving short- and long-term outcomes in each region?</a>
 
-In 2014-15, Code.org [partnered with over 70 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
+In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
 
 ## Key Finding: 
 Through our district partnerships, we are helping districts increase the priority of computer science locally in the face of some big challenges. <br /><br/>
@@ -71,22 +72,14 @@ Students across thousands of Code.org classrooms have demonstrated the ability t
 | Prior to September 1 2014 | 1,440,227 | 35,976 |
 | September 1 2014 through June 30 2015 | 4,466,810 | 111,684 |
 | All time (as of August 1 2015) | 6,033,943 | 147,660 |
+*Source: Code Studio database*
 <br><br>
 
-The diversity of the audience we are reaching is also interesting to note. Across all student accounts that self-reported demographic data, **43% self-identified as female** and **37% self-identified as African-American or Hispanic**. 
+The diversity of the audience we are reaching is also interesting to note. Across all student accounts that reported demographic data, **43% self-identified as female** and **37% were identified as African-American or Hispanic** by their teacher. 
 
 By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students taking the most recent AP Computer Science exam in high school was **20% females** and **17% African American, Hispanic, or other historically underrepresented students**.
 
-### Table: Participation in CS courses by demographic
-
-|  | Code Studio Student Account Holders| AP Computer Science Exam Candidates|
-|---|--------|-----|
-| % self-identifying as female | 43% | 37% |
-| % self-identifying as African American or Hispanic | 20% | 17% |
-<br/>
-<br/>
-
-Overall, Code Studio course participation and completion are high, and basic measures of learning are encouraging. Students who are learning with the support of their teacher in a classroom setting complete courses more than those learning on their own, supporting Code.org’s focus on a mix of teacher development and self-guided material. 
+Overall, Code Studio course participation is high, and basic measures of learning are encouraging. Students who are learning with the support of their teacher in a classroom setting complete courses more than those learning on their own, supporting Code.org’s focus on a mix of teacher development and self-guided material. 
 <br><br>
 
 [<button>Learn more</button>](/about/evaluation/outcomes)<br /><br/>
@@ -117,4 +110,4 @@ Internally, through participant surveys and data science projects, we will conti
 - Workshop satisfaction (including online PD components)
 - Student outcomes measured through Code Studio
 
-*For more information, contact our [Evaluation Team](mailto:teach@code.org).*
+*For more information, contact our [Evaluation Team](mailto:info@code.org).*

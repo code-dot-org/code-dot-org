@@ -498,11 +498,11 @@
   dashboard_login_picture: Figurë
   dashboard_login_none: Email
   dashboard_new_password: fjalëkalim i ri
-  dashboard_progress_not_started: Pa nisur
+  dashboard_progress_not_started: nuk është nisur
   dashboard_progress_in_progress: Në punë e sipër
   dashboard_progress_not_completed: e papërfunduar
-  dashboard_progress_completed_too_many_blocks: e përfunduar, shumë blloqe
-  dashboard_progress_completed_perfect: e përfunduar, perfekte
+  dashboard_progress_completed_too_many_blocks: i përfunduar, me shumë blloqe
+  dashboard_progress_completed_perfect: i përfunduar, në mënyrë perfekte
   dashboard_progress_furthest_level_attempted: përpjekja e nivelit më të largët
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar.
     Në vetëm një javë:'
@@ -1207,4 +1207,4 @@
   compatibility_https_message: Per te rritur sigurine, ne po kalojme ne HTTPS ne %{https_date}.
     Pas kesaj te dhene nuk do te arrish te kesh akese ne Code.org.  <a href='%{it_requirements_url}'>
     Kliko ketu </a>  per te mesuar si te mundesosh HTTPS per Code.org.
-  compatibility_https_hide_this_warning: Fshih këtë paralajmërim
+  compatibility_https_hide_this_warning: Mbaj të fshehtë këtë paralajmërim
