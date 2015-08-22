@@ -423,6 +423,10 @@
     no_primary_course: Опитайте курс в студиото по кодиране
     choose_next_course: Опитайте курс като си избирете един от тези по-долу
     print_certificate: Печат на сертификат
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Мъж
     female: Жена
@@ -431,12 +435,20 @@
     student: Ученик
     teacher: Учител
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за
       създаването на този урок.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Всички права запазени.
     powered_by_aws: Създадено с Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Авторско право
+    more: Повече
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
@@ -591,6 +603,11 @@
     open_response_body: Благодаря за вашия отговор!
   dialog:
     ok: OK
+    startover_title: Наистина ли искате да започнете отначало?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Стартиране отначало
+    startover_cancel: Отмени
   time:
     hour: 1 час
     day: ден

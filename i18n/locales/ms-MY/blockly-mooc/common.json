@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Ulangan\" atau \"Jika\" blok perlu mempunyai blok lain di dalamnya untuk berfungsi. Pastikan blok dalaman sesuai di dalam kandungan blok.",
   "emptyBlockInFunction":"The function {name} has an unfilled input.",
   "emptyBlockInVariable":"The variable {name} has an unfilled input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Blok fungsi perlu mengandungi blok-blok yang lain di dalamnya untuk berfungsi.",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

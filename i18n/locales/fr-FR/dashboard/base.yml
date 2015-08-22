@@ -369,6 +369,9 @@ fr:
     no_primary_course: Essayer un cours sur Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Imprimer le certificat
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Masculin
     female: Femme
@@ -377,9 +380,13 @@ fr:
     student: Elève
     teacher: Professeur
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: "Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer cette plateforme d'apprentissage."
     art_from_html: 'Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Tous droits réservés. <br/> Plantes vs Zombies ™ & © 2014 Electronic Arts Inc. Tous droits réservés.'
     powered_by_aws: Fourni par Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Plus
     feedback: Envoyer un commentaire
     translate: Aidez-nous à traduire dans votre langue
     support: Assistance
@@ -507,6 +514,10 @@ fr:
     open_response_body: Merci pour votre réponse !
   dialog:
     ok: OK
+    startover_title: Est-tu certain(e) de vouloir recommencer ?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Recommencer
+    startover_cancel: Annuler
   time:
     hour: 1 heure
     day: jour

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Да би блок \"Понављај\" или  \"Ако\" радио, у њега треба уградити друге блокове. Постарајте се да је унутрашњи блок правилно убачен у спољни блок.",
   "emptyBlockInFunction":"Функција {name} има непопуњен улазни податак.",
   "emptyBlockInVariable":"Променљива {name} има непопуњен улазни податак.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Тело функције треба да се састоји из блокова како би радило.",
   "emptyFunctionalBlock":"Имате блок са непопуњеним улазним податком.",
   "emptyTopLevelBlock":"Нема блокова за покретање. Морате да прикључите блок на {topLevelBlockName} блок.",

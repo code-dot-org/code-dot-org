@@ -31,10 +31,10 @@ ar:
           desc: تحرير التعليمات البرمجية (بيتا)
           MazeEC: المرحلة 1
         2014 Levels:
-          desc: ترتد (بيتا)
+          desc: لعبة الارتداد (بيتا)
           Bounce: المرحلة 1
         Builder Levels:
-          desc: المستخدم انشأ اللغز (بيتا)
+          desc: الألغاز التي أنشأها المستخدم (بيتا)
           Custom: المرحلة 1
         Flappy Levels:
           desc: الطائر المرفرف
@@ -52,11 +52,11 @@ ar:
           ArtistEC: المرحلة 3
           StudioEC: المرحلة 4
         events:
-          desc: ترتد (بيتا)
+          desc: لعبة الارتداد (بيتا)
           Bounce: المرحلة 1
           Studio: المرحلة 2
         builder:
-          desc: المستخدم انشأ اللغز (بيتا)
+          desc: الألغاز التي أنشأها المستخدم (بيتا)
           Custom: المرحلة 1
         flappy:
           desc: الطائر المرفرف
@@ -374,8 +374,8 @@ ar:
         C1_maze_loops: حلقات المتاهة
         C1_playlab_storytelling: 'مختبر اللعب - أنشئ قصة'
         C1_planting_seed: زراعة بذرة
-        C1_building_foundation: بناء قاعدة
-        C1_going_places_safely: الذهاب للأماكن بأمان
+        C1_building_foundation: بناء الأساس
+        C1_going_places_safely: التنقّل بأمان
         C2_maze_intro: مقدمة حول المتاهة
         C2_artist_intro: مقدمة حول الرسام
         C2_zuck_repeat_loop: حلقات المتاهة
@@ -411,7 +411,7 @@ ar:
         C3_functional_suncatchers: سونكاتشيرس الوظيفية
         C3_songwriting_with_parameters: تأليف الأغاني مع المعلمات
         C4_intro: مقدمة
-        C4_loops_zombie: الجمل التكرارية
+        C4_loops_zombie: الحلقات
         C4_bee_conditional: النحل الشرطية
         C4_variables_artist: المتغيرات-الفنان
         C4_variables_playlab: 'المتغيرات - مختبر اللعب'

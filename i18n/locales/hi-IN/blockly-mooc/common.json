@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"दोहराएँ\" या \"यदि\" ब्लॉक को काम करने के लिए अपने अंदर अन्य ब्लॉक्स की ज़रूरत है । ध्यान दें कि भीतर के ब्लॉक बाहरी ब्लॉक में ठीक बैठें।",
   "emptyBlockInFunction":"The function {name} has an unfilled input.",
   "emptyBlockInVariable":"The variable {name} has an unfilled input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"The function block needs to have other blocks inside it to work.",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

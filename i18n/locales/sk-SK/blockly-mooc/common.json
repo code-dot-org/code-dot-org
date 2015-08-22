@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Aby bloky \"Opakuj\" alebo \"Ak\" pracovali, musia byť naplnené ďalšími blokmi. Uistite sa, že vnútorný blok je správne umiestnený vo vnútri týchto blokov.",
   "emptyBlockInFunction":"Funkcia {name} má nevyplnené vstupy.",
   "emptyBlockInVariable":"Premenná {name} má nevyplnené vstupy.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Aby funkčný blok pracoval správne, musí obsahovať ďalšie bloky.",
   "emptyFunctionalBlock":"Máš blok s nevyplneným vstupom.",
   "emptyTopLevelBlock":"Nenašiel som bloky na spustenie. Pridajte nejaký blok k bloku {topLevelBlockName}.",
