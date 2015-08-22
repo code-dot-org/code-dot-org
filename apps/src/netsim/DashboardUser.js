@@ -16,6 +16,11 @@
 /* global $ */
 'use strict';
 
+/**
+ * @typedef {Object} Section
+ * @property {number} id - Section's numeric identifier in Dashboard.
+ */
+
 // TODO (bbuchanan): This whole file should go away when we have a shared
 //                   Javascript User object that can be available on page load.
 
@@ -60,7 +65,7 @@ var DashboardUser = module.exports = function () {
 
   /**
    * List of sections owned by this user.
-   * @type {Array}
+   * @type {Section[]}
    */
   this.ownedSections = [];
 };
