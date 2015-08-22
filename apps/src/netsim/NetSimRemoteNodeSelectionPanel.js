@@ -313,6 +313,8 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
   if (!matches) {
     return;
   }
+
+  // matches[1] is the first capture group (\d+), the numeric section ID.
   var sectionID = parseInt(matches[1], 10);
   return this.user_.isAdmin || this.user_.ownsSection(sectionID);
 };
