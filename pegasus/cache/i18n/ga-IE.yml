@@ -1,23 +1,25 @@
 "ga-IE":
   hello: Hello world
   select_language: Roghnaigh do theanga le do thoil
-  en: Computer Science
-  computer_science_edweek: Seachtain Oideachas Ríomhaireachta
+  en: Oideachas Ríomhaireachta
+  computer_science_edweek: Seachtain Oideachas Eolaíocht Ríomhaireachta
   csedweek_dates: Nollaig 8-14 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_hoc: 'Tá <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">An Uair Códála </a> ag teacht. Glaotar ar gach múinteoir agus
+    eagraí, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
+    font-weight:bold">pleanáil d''uair códála</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>
-  anybody_can_learn: Anybody can learn.
-  learn_now: Learn Now
-  petition_message: Every student in every school should have the opportunity to learn
-    computer science
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
+    none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach le haghaidh acmhainní
+    eile ó Sheachtain Oideachas Eolaíocht Ríomhaireachta</a>'
+  n_have_learned_an_hoc: '<h1>Triail </h1><h2>An Uair Códála</h2><h3>Freastalaithe
+    ar # </h3>'
+  anybody_can_learn: Is féidir le héinne foghlaim.
+  learn_now: Foghliaim anois
+  petition_message: Ba cheart go mbeadh an deis ag gach dalta i ngach scoil eolaíochta
+    ríomhaireachta a fhoghlaim
+  petition_sign_message: 'Má aontaíonn tú, sínigh d''ainm. Téir le # eile.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Téir le # eile'
   name: Name
   email: Email
   zipcode: ZIP code or country
@@ -28,13 +30,13 @@
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
+  hoc2014_try: Triail é
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
   hoc2014_everyone: Everyone
   hoc2014_support: Support it &#x25BE;
   hoc2014_whatishoc: What is the Hour of Code?
-  twentyhours_trynow: Try now
+  twentyhours_trynow: Triail é anois
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
@@ -54,7 +56,7 @@
   all_ages: All ages
   beginner: Beginner
   n_participants: '# participants'
-  go: Go
+  go: Ar aghaidh
   thank_you_: Thank you!
   congratulations: Congratulations!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
