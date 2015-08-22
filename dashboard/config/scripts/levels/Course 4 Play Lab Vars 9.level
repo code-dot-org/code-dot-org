@@ -28,7 +28,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "min_workspace_height": "1000",
+    "min_workspace_height": "800",
     "scrollbars": "false",
     "embed": "false",
     "disable_sharing": "false",

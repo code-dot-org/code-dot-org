@@ -16,12 +16,12 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "90",
-    "x": "125",
+    "x": "50",
     "y": "250",
     "free_play": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Drag a number block to the `set length` block to draw a set of 50 pixel triangles. \r\n\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Drag a number block to the `set length` block to draw a set of 50 pixel triangles. \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -41,21 +41,16 @@
             <block type="variables_set" inline="false" movable="false">
               <title name="VAR">length</title>
               <next>
-                <block type="controls_repeat_ext" inline="true" movable="false">
-                  <value name="TIMES">
-                    <block type="math_number" movable="false">
-                      <title name="NUM">3</title>
-                    </block>
-                  </value>
+                <block type="controls_repeat_ext" inline="true" deletable="false" movable="false" editable="false">
                   <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true" movable="false">
+                    <block type="controls_repeat_ext" inline="true" deletable="false" movable="false" editable="false">
                       <value name="TIMES">
                         <block type="math_number" movable="false">
                           <title name="NUM">3</title>
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="draw_move" inline="true" movable="false">
+                        <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                           <title name="DIR">moveForward</title>
                           <value name="VALUE">
                             <block type="variables_get" movable="false">
@@ -63,7 +58,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="draw_turn" inline="true" movable="false">
+                            <block type="draw_turn" inline="true" deletable="false" movable="false" editable="false">
                               <title name="DIR">turnLeft</title>
                               <value name="VALUE">
                                 <block type="math_number" movable="false">
@@ -75,7 +70,7 @@
                         </block>
                       </statement>
                       <next>
-                        <block type="draw_move" inline="true" movable="false">
+                        <block type="draw_move" inline="true" deletable="false" movable="false" editable="false">
                           <title name="DIR">moveForward</title>
                           <value name="VALUE">
                             <block type="variables_get" movable="false">
@@ -115,7 +110,7 @@
                 <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
                     <block type="math_number">
-                      <title name="NUM">3</title>
+                      <title name="NUM">6</title>
                     </block>
                   </value>
                   <statement name="DO">
