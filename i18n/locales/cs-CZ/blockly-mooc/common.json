@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků.",
   "emptyBlockInFunction":"Funkce {name} má nevyplněné vstupy.",
   "emptyBlockInVariable":"Proměnná {name} má nevyplněné vstupy.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Blok funkce v sobě musí obsahovat další bloky.",
   "emptyFunctionalBlock":"Máš blok s nevyplněným vstupem.",
   "emptyTopLevelBlock":"Nejsou zde žádné bloky pro spuštění. Musíš připojit blok k bloku {topLevelBlockName}.",

@@ -151,8 +151,9 @@
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  homepage_hero_text_malala: |
+    &ldquo;میں دنیا کی تمام لڑکیوں کو ایک Hour of Code مکمّل کرنے کا چیلنج دیتی ہوں&rdquo;
+    ملالا، نوبل پیس پرائز انعام یافتہ
   homepage_hero_text_susan: |
     &ldquo;If you can change technology,
     you can change the world.&rdquo;
@@ -225,20 +226,20 @@
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
+  homepage_slot_text_link_othercourses: دوسرے آن لائن کورس
   homepage_slot_text_title_educators: Educators
   homepage_slot_text_blurb_educators: Teach your students
   homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
+  homepage_slot_text_link_fullcurriculum: ہمارا مکمل نصاب دیکھیں
+  homepage_slot_text_link_pd: پیشہ ورانہ ترقی
   homepage_slot_text_title_advocates: Advocates
   homepage_slot_text_blurb_advocates: Support diversity in computing
-  homepage_slot_text_link_stats: See the stats
+  homepage_slot_text_link_stats: اعدادوشمار دیکھیں
   homepage_slot_text_link_buy: Buy a T-shirt or hat
   homepage_slot_text_link_donate: Make a donation
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: Donate
   contact_form_topic_student: I'm a student
   contact_form_topic_parent: I'm a parent

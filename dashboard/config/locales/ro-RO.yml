@@ -413,7 +413,7 @@
     local_school: şcoală locală
     online: online
     see_details: Vezi detalii
-    view_course: View Course
+    view_course: Vizualizare curs
     prize_info: 'Premii pentru participare (doar pentru profesorii americani din sistemul
       public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
@@ -432,8 +432,12 @@
     heading_legacy: <h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>
     your_gallery: Galerie
     no_primary_course: Încearcă un curs la Studio-ul Code
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Încearcă un curs la Studio-ul Code alegând unul de mai jos
     print_certificate: Tipărește certificatul
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -442,12 +446,20 @@
     student: elev
     teacher: Profesor
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat
       la crearea acestui tutorial.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Toate Drepturile Rezervate.
     powered_by_aws: Susținut de Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Mai mult
     feedback: Oferă feedback
     translate: Ajută-ne să  traducem în limba ta
     support: Suport
@@ -604,6 +616,11 @@
     open_response_body: Îți mulţumim pentru răspuns!
   dialog:
     ok: OK
+    startover_title: Ești sigur că dorești să reîncepi?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Reîncepe
+    startover_cancel: Anulează
   time:
     hour: 1 oră
     day: zi

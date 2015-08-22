@@ -322,7 +322,7 @@ ja-JP:
   dashboard_sections_jumbotron_instruction: セクションを新規で作成し、学生を追加します。セクションを使うと生徒を複数の少人数のグループで管理できるので、進捗状況の把握や、アカウントの管理が容易になります。
   dashboard_sections_table_section: セクション
   dashboard_sections_table_secret: ログインタイプ
-  dashboard_sections_table_grade: 成績
+  dashboard_sections_table_grade: 学年
   dashboard_sections_table_course: コース
   dashboard_sections_table_students: 生徒の皆さん
   dashboard_sections_table_code: セクション・コード
@@ -332,7 +332,7 @@ ja-JP:
   dashboard_sections_secret_picture: '<b>写真</b>を選んだ場合、全ての生徒用に秘密の画像を設定します。タイピングのできない学年の生徒に適しています。'
   dashboard_sections_secret_none: 'パスワードの設定も含め、生徒にアカウント管理を任せたい場合、秘密の種類を<b>なし</b>にしてください。'
   dashboard_sections_print_secrets: 個々の生徒に配布するためのアカウント情報を含むカードを印刷することができます。
-  dashboard_sections_switch_section: 'セクションに切り替え:'
+  dashboard_sections_switch_section: 'セクションの切り替え:'
   dashboard_students_add_student: 生徒を追加
   dashboard_students_add_students: 複数の生徒の追加
   dashboard_students_add_multiple: １行について１人の生徒の名前をタイプまたはペーストします。
@@ -399,12 +399,12 @@ ja-JP:
   dashboard_login_picture: 画像
   dashboard_login_none: Eメール
   dashboard_new_password: '新規パスワード:'
-  dashboard_progress_not_started: not started
+  dashboard_progress_not_started: 未実施
   dashboard_progress_in_progress: 途中
   dashboard_progress_not_completed: 完了していません。
-  dashboard_progress_completed_too_many_blocks: 完成、ブロック達が多すぎ
+  dashboard_progress_completed_too_many_blocks: 完成、ブロックが多すぎ
   dashboard_progress_completed_perfect: 完成、完璧
-  dashboard_progress_furthest_level_attempted: 最も遠いレベルの試行
+  dashboard_progress_furthest_level_attempted: 到達レベル
   stats_hoc_2013_heading: 昨年のHour of Codeによる、ほんの一週間での素晴らしい成果：
   stats_hoc_2013_image_alt: 2013年の Hour of Codeの成果
   dashboard_teacher: 先生
@@ -659,7 +659,7 @@ ja-JP:
   kodableunplugged_longdescription: fuzzFamily Frenzyは5才以上の子供を対象としたプログラミングロジック入門用の教材です。先生がゲームを説明し、生徒は簡単な課題を解決すべくプログラムを行います
   projguts_longdescription: 'コンピュタを使わずに学ぶ"アンプラグド"のアクティビティでは、モデリングとシミュレーションについて学びます。生徒はグループになって、じゃんけんゲームで遊びます。モデリングが違うと結果がどうかわってくるか見てみてください'
   hourofcode_longdescription: 新しいcode.or/hocのプレイスホルダ
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
+  frozen_longdescription: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
   playlab_longdescription: Play Lab!を使ってお話やゲームをつくります。動物、海賊、ゾンビ、忍者、いろいろなキャラクターを動かして、音をだして、点数を稼ぎましょう。火の玉だって投げられます！
   codeorg_beyond_name: コンピュータサイエンス入門　(13-14才程度)
   khan_beyond_name: コンピュータプログラミングを学ぶ

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"На \"Повтори \" или \" Ако \" блокот треба да има и други блокови во него за  да работат. Бидете сигурни дека внатрешниот блок се вклопува правилно во внатрешноста на  блок.",
   "emptyBlockInFunction":"The function {name} has an unfilled input.",
   "emptyBlockInVariable":"The variable {name} has an unfilled input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Функцијата блок треба да има и други блокови во  него за да работи.",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

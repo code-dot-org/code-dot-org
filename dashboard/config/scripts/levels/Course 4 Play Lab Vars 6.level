@@ -41,6 +41,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "min_workspace_height": "700",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
@@ -90,6 +92,16 @@
           <title name="VALUE">right</title>
           <next>
             <block type="studio_throw" deletable="false">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">"purple_hearts"</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" uservisible="false">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_throw" uservisible="false">
               <title name="SPRITE">0</title>
               <title name="VALUE">"purple_hearts"</title>
               <title name="DIR">2</title>

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Errepikatu\" edo \"baldintza\" blokeak barruan beste bloke batzuk behar ditu funtzionatzeko. Egiaztatu barruko blokeak egoki kokatuak daudela.",
   "emptyBlockInFunction":"{name} funtzioak sarrera bat hutsik dauka.",
   "emptyBlockInVariable":"{name} aldagaiak sarrera bat hutsik dauka.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Bloke funtzioak beste bloke bat bere baitan izan behar du lan egiteko.",
   "emptyFunctionalBlock":"Bete gabeko sarrera bat du zure blokeak.",
   "emptyTopLevelBlock":"Ez dago blokerik funtzionatu ahal izateko. Blokeren bat atxiki behar diozu {topLevelBlockName} blokeari.",

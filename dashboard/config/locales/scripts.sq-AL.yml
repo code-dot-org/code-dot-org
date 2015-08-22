@@ -15,7 +15,7 @@
         course1:
           'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa
             andej këtej'
-          'Maze: Sequence': 'Maze: Sekuencë'
+          'Maze: Sequence': 'Labirinti: Sekuencë'
           'Maze: Debugging': 'Maze: Rregullimi'
           'Artist 1: Intro': 'Artisti 1: Hyrje'
           Artists 2: Artistët 2
@@ -119,7 +119,7 @@
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Shtetësi Dixhitale
-          Farmer - While Loops: 'Fermeri: Ciklet While'
+          Farmer - While Loops: Fermeri - Ciklet While
           description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë
             Ciklin 2. Studentët do futen më thellë në temat e programimit, që janë
             prezantuar në kurset e mëparshme, nga zgjidhje fleksibël në probleme më
@@ -168,7 +168,7 @@
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
             zbavitëse!
         frozen:
-          title: Kodo me Ann-en dhe Elsa-n
+          title: Kodo me Anën dhe Elsën
           description: Le të përdorim kodin për të lidhur Ann-en dhe Elsa-n ndërsa
             ato eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë
             dëbore dhe modele ndërkohë që bën patinazh në akull dhe bën një magji
@@ -369,10 +369,10 @@
             e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
           description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave
             kompjuterike dhe konceptet e programimit ne kurset 2-4.
-          Introduction to Computer Science: Hyrje ne Informatike
+          Introduction to Computer Science: Hyrje në Informatikë
           The Maze: The Maze
-          Computational Thinking: Te menduarit si kompjuter
-          Graph Paper Programming: Programimi grafik me leter
+          Computational Thinking: Të menduarit kompjuterik
+          Graph Paper Programming: Programimi me grafikë
           The Artist: Artisti
           Algorithms: Algoritmet
           The Artist 2: Artisti 2
@@ -380,11 +380,11 @@
           The Farmer: Fermeri
           Conditionals: Kushtoret
           The Artist 3: Artisti 3
-          Song Writing: Kompozim kengesh
+          Song Writing: Kompozim këngësh
           The Farmer 2: Fermeri 2
           Abstraction: Abstraksion
           The Artist 4: Artisti 4
-          Relay Programming: Programimi i Besuar
+          Relay Programming: Programimi transmetues
           The Farmer 3: Fermeri 3
           The Internet: Interneti
           The Artist 5: Artisti 5
@@ -409,7 +409,7 @@
         flappy:
           title: Kodi Flappy
           description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo
-            tutorialin tonë të Kodit Flappy!
+            tutorialin tonë Flappy Code!
           description_short: Pergatisni lojen tuaj Flappy ne me pak se 10 minuta!
           Flappy Code: Kodi Flappy
         jigsaw:
@@ -418,10 +418,10 @@
           description_short: Perdorni tutorialin tone per lojen Jigsaw
           Jigsaw: Jigsaw
         step:
-          title: NJë Hap
+          title: Një hap
           description: Pasoje tutorialin
           description_short: Pasoje tutorialin
-          Step: NJë Hap
+          Step: Një hap
         Hour of Code:
           title: Ora e Kodit 2013
           description: Provoni elementet baze te shkencave kompjuterike me personazhe
@@ -466,7 +466,7 @@
           description: Një përmbledhje e shkurtër e koncepteve për studentët që nuk
             kanë bërë Kurset 2 dhe 3.
           Course 4 Prerequisite: Kushtet paraprake të Kursit 4
-          'Maze: Sequence': 'Maze: Sekuencë'
+          'Maze: Sequence': 'Labirinti: Sekuencë'
           'Artist: Sequence': 'Artist: Sekuencë'
           'Artist: Loops': 'Artist: Ciklet'
           'Bee: Conditionals': 'Bletë: Kushtet'
@@ -905,6 +905,13 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -976,7 +983,7 @@
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Imitues Interneti
-          App Lab: Laboratori i Aplikacionit
+          App Lab: Laboratori i Aplikacioneve
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Te mirepritur!
@@ -988,7 +995,7 @@
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Imitues Interneti
-          App Lab: Laboratori i Aplikacionit
+          App Lab: Laboratori i Aplikacioneve
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1223,3 +1230,31 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Hartat e Gëzuara
+          Move it, Move it: Lëvize, Lëvize
+          'Real-life Algorithms: Plant a Seed': 'Algoritmet e jetës-Reale: Mbill një
+            Farë'
+          Graph Paper Programming: Programimi me grafikë
+          Building a Foundation: Krijimi i një Baze
+          Getting Loopy: Duke u Çmëndur
+          The Big Event: Eventi i Madh
+          Binary Bracelets: Byzylykët Binarë
+          Songwriting: Të shkruarit e Këngëve
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13

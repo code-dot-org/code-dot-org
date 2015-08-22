@@ -25,7 +25,7 @@ ur:
   submit: جمع کرائیں
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'ٹیچر شامل کریں:'
       placeholder: Section Code (ABCDEF)
     submit: استاد شامل کریں
   add_hint_form:
@@ -84,23 +84,23 @@ ur:
     submit: Sign up
     teacher: کیا آپ استاد ہیں؟
     valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
+    invalid_username: username کم از کم ٥ حروف کا ہونا چاہیے
+    taken_username: یہ username کسی اور کے استعمال میں ہے
+    valid_password: تصدیق شدہ پاس ورڈ!
+    invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
+    mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
-    additional_information: We need some additional information to continue signing you up.
+    additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
   signin_form:
-    title: Have an account already? Sign in
-    login: Email or username
+    title: ' کیا آپ پہلے ہی اکاؤنٹ بنا چکے ہیں؟ sign in کیجیے'
+    login: Email یا username
     password: پاس ورڈ
-    remember: Remember me
+    remember: مجھے یاد رکھیے
     submit: Sign in
   signin:
-    try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_heading: کیا آپ بغیرsign up کے کوڈنگ کرنا چاہتے ہیں؟
+    try_hoc: سب سے پہلے ایک گھنٹہ Hour of Code کھیل کر دیکھیں
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: 'Welcome to %{section_name}'
@@ -139,25 +139,25 @@ ur:
       no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
       section_not_found: "Could not find a section with code '%{section_code}'."
       blank_code: Please enter a section code
-      cant_join_own_section: "Sorry, you can't join your own section."
+      cant_join_own_section: ہم معذرت خواہ ہیں، آپ اپنے سیکشن میں داخل نہیں ہو سکتے.
     mail:
       invite_student:
-        subject: 'Join a class with %{teacher_name} at Code.org!'
+        subject: 'Code.org پر %{teacher_name} کی کلاس میں شامل ہو جائیے!'
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
       teacher_disassociated:
         subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
   reports:
     error:
-      access_denied: "You don't have access to this person's stats"
+      access_denied: آپ اس شخص کے اعداد و شمار نہیں دیکھ سکتے
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
     code: 'Code:'
     redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
+    donorschoose_register: DonorsChoose.org پر ٹیچر کے طور پر رجسٹر کریں
+    donorschoose_project: پروجیکٹ پوسٹ کریں
+    donorschoose_how_to: آپکے کوڈ کے استعمال کا طریقہ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
@@ -367,6 +367,9 @@ ur:
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Male
     female: Female
@@ -375,14 +378,18 @@ ur:
     student: Talib-e-ilm
     teacher: Teacher
   footer:
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped create this tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: More
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
-    tos: Terms
+    tos: Terms of Service
     privacy: Privacy Policy
     secure: Secure Version
   reference_area:
@@ -505,6 +512,10 @@ ur:
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
+    startover_title: Are you sure you want to start over?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Start Over
+    startover_cancel: Cancel
   time:
     hour: 1 hour
     day: day

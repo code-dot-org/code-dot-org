@@ -376,6 +376,10 @@
     no_primary_course: 试试在 Code Studio 参加一个课程
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: 男性
     female: 女性
@@ -384,9 +388,17 @@
     student: 学生
     teacher: 老师
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: 从谷歌、 微软、 Facebook 和 Twitter 工程师帮助创建本教程。
     art_from_html: 愤怒的小鸟 ™ & © 2009年-2013 Rovio 娱乐有限公司版权所有。 <br/>植物与僵尸 ™ & © 2013年电子艺术公司保留所有的权利。
     powered_by_aws: 由亚马逊网络服务
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: 更多
     feedback: 提供反馈
     translate: 帮助我们翻译成你的语言
     support: 支持
@@ -520,6 +532,11 @@
     open_response_body: 感谢您的回复！
   dialog:
     ok: 确定
+    startover_title: 你确定要重新开始吗？
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: 重新开始
+    startover_cancel: 取消
   time:
     hour: 1 小时
     day: 日

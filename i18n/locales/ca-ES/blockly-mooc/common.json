@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté.",
   "emptyBlockInFunction":"La funció {name} té una entrada buida.",
   "emptyBlockInVariable":"La variable {name} té una entrada buida.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"La funció bloc ha de tenir altres blocs a dins perquè funcioni.",
   "emptyFunctionalBlock":"Tens un bloc amb una entrada buida.",
   "emptyTopLevelBlock":"No hi ha blocs per executar. Has de connectar un bloc al bloc de {topLevelBlockName}.",
