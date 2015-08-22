@@ -66,7 +66,7 @@ de:
   signup_form:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
-    overview_student: 'Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a> anschauen.'
+    overview_student: 'Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr Informationen kannst Du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a> anschauen.'
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
     teacher_educator_guide: Lehrer-Handbuch
@@ -144,9 +144,9 @@ de:
       invite_student:
         subject: 'Besuche eine Klasse von %{teacher_name} auf Code.org!'
       student_disassociated:
-        subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als dein(e) Schüler(in) zugeordnet.'
+        subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Dein(e) Schüler(in) zugeordnet.'
       teacher_disassociated:
-        subject: 'Code.org Benachrichtigung: %{teacher_name} ist nicht mehr als dein Lehrer verbunden.'
+        subject: 'Code.org Benachrichtigung: %{teacher_name} ist nicht mehr als Dein(e) Lehrer(in) verbunden.'
   reports:
     error:
       access_denied: Sie haben keinen Zugang zu den Statistiken dieser Person
@@ -155,7 +155,7 @@ de:
     provider: 'Anbieter:'
     code: 'Code:'
     redeem_header: 'Zum einlösen:'
-    donorschoose_register: Registriere dich als Lehrer auf DonorsChoose.org
+    donorschoose_register: Registriere Dich als Lehrer auf DonorsChoose.org
     donorschoose_project: Stelle ein Projekt bereit
     donorschoose_how_to: Wie werden deine Programmzeilen verwendet
     success: Dein Preis wurde erfolgreich eingelöst, siehe Code unten.
@@ -352,7 +352,7 @@ de:
     local_school: örtliche Schule
     online: online
     see_details: Zeige Details
-    view_course: View Course
+    view_course: Zeige Kurs
     prize_info: 'Preise für Teilnahme(nur Lehrer von öffentlichen Schulen der USA): Belohnungen bis zu $1000 für die Klasse.'
     tryfirst: 'Oder Probiere es aus und melde Dich später an: '
     trynow: Probiere es jetzt aus
@@ -367,8 +367,11 @@ de:
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Wähle einen der Code Studio Kurse unten aus um ihn auszuprobieren
     print_certificate: Zertifikat drucken
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Männlich
     female: Weiblich
@@ -377,9 +380,13 @@ de:
     student: Schüler
     teacher: Lehrer
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu beigetragen, dieses Tutorial zu erstellen.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Alle Rechte vorbehalten.'
     powered_by_aws: Betrieben von Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Mehr
     feedback: Feedback geben
     translate: Hilf uns in deine Sprache zu übersetzen
     support: Unterstützung
@@ -507,6 +514,10 @@ de:
     open_response_body: Danke für deine Antwort!
   dialog:
     ok: OK
+    startover_title: Bist du dir sicher das du neu anfangen möchtest?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Neu starten
+    startover_cancel: Abbrechen
   time:
     hour: 1 Stunde
     day: Tag

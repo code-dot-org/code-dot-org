@@ -359,6 +359,9 @@ et:
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Mees
     female: Naine
@@ -367,14 +370,18 @@ et:
     student: Õpilane
     teacher: Õpetaja
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid  luua selle õppekeskkonna.'
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Veel
     feedback: Tagasiside
     translate: Aita meil tõlkida oma keelde
     support: Tugi
     support_url: http://support.code.org
-    tos: Terms
+    tos: Terms of Service
     privacy: Privacy Policy
     secure: Secure Version
   reference_area:
@@ -497,6 +504,10 @@ et:
     open_response_body: Thanks for your response!
   dialog:
     ok: Olgu
+    startover_title: Oled sa kindel et tahad uuesti alustada?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Alusta uuesti
+    startover_cancel: Tühista
   time:
     hour: 1 tund
     day: päev

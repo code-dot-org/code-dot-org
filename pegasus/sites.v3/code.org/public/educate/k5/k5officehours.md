@@ -10,7 +10,7 @@ title: Live Events for Teachers
 
 Code.org hosts regular, free virtual events for our community. Here are a few highlights from [our current schedule](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
 
-### America's Untapped Opportunity
+### Q&A with Code.org Founder Hadi Partovi
 #### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 
 Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Founder of [Code.org](http://code.org) for a discussion of why every student should have the opportunity to shape the 21st-century.
 <br>
@@ -39,6 +39,7 @@ In this interactive webinar, you'll get a sneak peak of all the new tutorials fo
 
 Code.org hosts monthly meetings for each of our curriculum programs. If you’re currently enrolled in one of our programs, your attendance at the monthly meeting is **highly recommended**. Learn more and register for the meetings that interest you below:
 
+- [Computer Science Fundamentals (Formerly K-5) Monthly Meetings Schedule](/educate/csfun-201516meetings)
 - [Exploring Computer Science Monthly Meetings Schedule](/educate/ecs-201516meetings)
 - *More course meetings coming soon!*
 

@@ -126,12 +126,12 @@
         parameters: phương trình với tham số
     level:
       instructions:
-        maze_2_2: 'Bạn có thể giúp mình bắt những con lợn nghịch ngợm không ? Hãy
-          gắn những khối lệnh "move forward" với nhau và bấm "Run" để giúp mình đến
-          nơi nhé. '
-        maze_2_1: con lợn đang làm rối lông của tui. Giúp tôi tìm nó!
-        maze_2_2_5: lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh gói
-          thuốc nổ hoặc trò chơi kết thúc!
+        maze_2_2: 'Bạn có thể giúp mình bắt những con lợn nghịch ngợm không? Hãy xếp
+          những khối lệnh "move forward" với nhau và bấm "Run" để giúp mình đến nơi
+          nhé. '
+        maze_2_1: Chú lợn này đang làm rối lông của tui. Giúp tôi tìm nó!
+        maze_2_2_5: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh TNT
+          không thì bay mất xác!
         maze_2_3: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
           thuốc nổ)
         maze_2_4: Giữ bình tĩnh và giúp mình tìm những chú lợn xấu xa. Hoặc là mình
@@ -200,26 +200,27 @@
           "thiết lập chiều rộng". Chúc vui vẻ!'
         turtle_4_1: 'Bạn có thể vẽ một hình tam giác (với mỗi cạnh là 100 điểm ảnh)
           với chỉ 3 khối? Gợi ý: sử dụng một khối "lặp lại".'
-        turtle_4_2: Add a "turn right by 90 degrees" block somewhere in the middle
-          of the program already out on the workspace to draw these triangles.
-        turtle_4_3: Ok, here's the code you wrote to draw a single triangle. Can you
-          add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: 'Here''s the same code from the previous puzzle, but turning only
-          36 degrees after drawing each triangle. How many times does this need to
-          repeat? (Hint: after 360 degrees of turning the drawing will come full circle)'
-        turtle_4_5: 'Here''s the same code from the previous puzzle, but repeating
-          the turns 36 times. How many degrees should the turns be? (Hint: after 360
-          degrees of turning the drawing will come full circle)'
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: 'Here''s the code for drawing the square from last puzzle. Can
-          you repeat it to draw 10 adjacent squares like a ladder? Hint: you only
-          need 2 more blocks.'
-        turtle_4_8: Here's the solution to the previous puzzle. Can you add just 2
-          more blocks to complete the drawing?
-        turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
-          you turn to complete the drawing? (You probably need to guess a few times)
-        turtle_4_10: Here's the solution to the previous puzzle. How many times should
-          you repeat to complete the drawing?
+        turtle_4_2: Thêm một khối "quay phải 90 độ" vào chương trình được viết sẵn
+          trên màn hình để vẽ những hình tam giác này.
+        turtle_4_3: Ok, đây là lệnh mà bạn viết để vẽ một hình tam giác. Bạn có thể
+          thêm khối "lặp lại" và "quay" để tạo thành một bông hoa thật đẹp?
+        turtle_4_4: 'Đây là các lệnh của câu đố trước, nhưng chỉ quay 36 độ sau khi
+          vẽ một tam giác. Việc này cần phải lặp lại bao nhiêu lần? (Gợi ý: sau khi
+          quay 360 độ hình vẽ sẽ trở thành một đường tròn)'
+        turtle_4_5: 'Đây là các lệnh của câu đố trước, nhưng lặp lại việc quay 36
+          lần. Vậy mỗi lần cần quay bao nhiêu độ? (Gợi ý: sau khi quay 360 độ hình
+          vẽ sẽ trở thành một đường tròn)'
+        turtle_4_6: Chỉ sử dụng 3 khối lệnh, bạn có thể vẽ một hình vuông có cạnh
+          là 20 pixel không?
+        turtle_4_7: 'Đây là các lệnh để vẽ hình vuông từ câu đố trước. Bạn có thể
+          lặp lại các lệnh đó để vẽ 10 hình vuông liền kề giống như một cái thang
+          không? Gợi ý: bạn chỉ cần thêm 2 khối lệnh.'
+        turtle_4_8: Đây là lời giải của câu đố vừa rồi. Bạn có thể thêm 2 khối lệnh
+          nữa để hoàn thành hình vẽ không?
+        turtle_4_9: Đây là lời giải của câu đố vừa rồi. Bạn cần quay bao nhiêu độ
+          để hoàn thành hình vẽ? (Bạn có thể cần phải đoán một vài lần)
+        turtle_4_10: Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao
+          nhiêu lần để hoàn thành hình vẽ?
         turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
           make different patterns. Or, experiment changing the rest of the code to
           draw anything you want.

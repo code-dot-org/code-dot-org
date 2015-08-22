@@ -41,9 +41,9 @@ module UserHelpers
     sponsor = random_donor[:name_s]
 
     if user.teacher?
-      "#{sponsor} made the generous gift to sponsor your classroom's learning. Pay it forward, <a href=\"http://code.org/donate\">donate $25 to Code.org</a> to pay for another classroom's education."
+      "#{sponsor} made the generous gift to sponsor your classroom's learning. Pay it forward, <a href=\"https://code.org/donate\">donate $25 to Code.org</a> to pay for another classroom's education."
     else
-      "#{sponsor} made the generous gift to sponsor your learning. A generous <a href=\"http://code.org/donate\">gift of $1 to Code.org</a> will help another student learn."
+      "#{sponsor} made the generous gift to sponsor your learning. A generous <a href=\"https://code.org/donate\">gift of $1 to Code.org</a> will help another student learn."
     end
   end
 end

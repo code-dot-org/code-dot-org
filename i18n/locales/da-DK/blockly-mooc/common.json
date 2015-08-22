@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken.",
   "emptyBlockInFunction":"Funktionen {name} har manglende input.",
   "emptyBlockInVariable":"Variablen {name} har manglende input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Funktion blokken skal have andre blokke inde i den for at virke.",
   "emptyFunctionalBlock":"Du har en blok med et ikke-udfyldt input.",
   "emptyTopLevelBlock":"Der er ingen blokke til at køre. Du skal vedhæfte en blok til {topLevelBlockName} blokken.",

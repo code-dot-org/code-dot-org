@@ -428,6 +428,10 @@
     no_primary_course: Prøv et kursusforløb på Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Udskriv certifikat
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Mand
     female: Kvinde
@@ -436,12 +440,20 @@
     student: studerende
     teacher: Lærer
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Ingeniører fra Google, Microsoft, Facebook og Twitter har bidraget
       til at skabe denne øvelse.
     art_from_html: Angry Birds&trade; & &copy; & © 2009-2013 Rovio Entertainment Ltd.
       Alle rettigheder forbeholdes. <br/>Plants vs zombies&trade; & &copy; & © 2013
       Electronic Arts Inc. Alle rettigheder forbeholdes.
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Mere
     feedback: Giv feedback
     translate: Hjælp os med at oversætte til dit sprog
     support: Support
@@ -593,6 +605,11 @@
     open_response_body: Tak for dit svar!
   dialog:
     ok: Ok
+    startover_title: Sikker på, at du vil starte forfra?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Start forfra
+    startover_cancel: Annuller
   time:
     hour: 1 time
     day: dag

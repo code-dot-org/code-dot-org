@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Блокам \"повторять\" или \"если\" необходимо иметь внутри другие блоки для работы. Убедись  в том, что внутренний блок должным образом подходит к блоку, в котором он содержится.",
   "emptyBlockInFunction":"У функция {name} не заполнены входные параметры.",
   "emptyBlockInVariable":"Переменная {name} не определена.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Блок процедуры требует для работы другие блоки внутри себя.",
   "emptyFunctionalBlock":"У вас есть блок с незаполненными входными данными.",
   "emptyTopLevelBlock":"Нет блоков для запуска. Присоедини блок к {topLevelBlockName}.",

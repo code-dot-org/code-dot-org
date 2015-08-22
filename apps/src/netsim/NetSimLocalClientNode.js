@@ -492,7 +492,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
  */
 NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
   return nodeRows.some(function (row) {
-    return row.id === this.entityID;
+    return row.id === this.entityID && row.uuid === this.uuid;
   }, this);
 };
 

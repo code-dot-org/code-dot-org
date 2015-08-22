@@ -1,7 +1,7 @@
 ar:
   errors:
     messages:
-      not_saved: 'من فضلك، قم بتصحيح الأخطاء التالية:'
+      not_saved: 'الرجاء تصحيح الأخطاء التالية:'
   activerecord:
     errors:
       messages:
@@ -20,14 +20,14 @@ ar:
         edit_header: تعديل تفاصيل الحساب
         error:
           future: لا يمكن أن يكون في المستقبل
-  hello: مرحبا بالعالم
-  welcome_back: 'أهلا بكم من جديد, %{name}'
+  hello: مرحباً بالعالم
+  welcome_back: 'أهلاً بكم من جديد، %{name}'
   submit: تسجيل
   add_teacher_form:
     code:
-      label: 'أضف مدرسا:'
+      label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
-    submit: إضف معلم
+    submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
     submit: إضافة تلميح
@@ -36,43 +36,43 @@ ar:
   stage_number: 'المرحلة %{number}'
   puzzle: لغز
   trophies: الجوائز
-  courses: دروس
+  courses: الدروس
   of: من
   more: أكثر
   less: أقل
   beta: تجريبي
-  try_hoc: 'قم بتجربة ساعة من البرمجة, انقر هنا>> '
-  try_k8intro: 'جرب مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
-  k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى 25 ساعة)'
-  already_started: 'بدأت بالفعل؟ اكمل من هنا >> '
+  try_hoc: 'قم بتجربة ساعة من البرمجة، انقر هنا >>  '
+  try_k8intro: 'قم بتجربة المقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)'
+  k8intro: 'مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)'
+  already_started: 'بدأت بالفعل؟ أكمل من هنا >>  '
   demos: 'المشرف:  جميع العروض التوضيحية'
-  continue: أستمر
+  continue: الاستمرار
   prize: جائزة
   more_info: المزيد من المعلومات
   auth:
     sign_in_with: 'تسجيل الدخول باستخدام %{provider}'
     signed_in: تم تسجيل الدخول!
     signed_out: 'لقد قمت بتسجيل الخروج من <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'لقد إستخدمت %{provider} لتسجيل الدخول ، <a href="%{url}"> انقر هنا</a> لتسجيل الخروج من  %{provider}.'
-    already_signedup: قمت بالتسجيل مسبقاً؟
+    sign_out_of: 'لقد استخدمت %{provider} لتسجيل الدخول، <a href="%{url}">انقر هنا</a> لتسجيل الخروج من %{provider}.'
+    already_signedup: هل قمت بالتسجيل مسبقاً؟
     notyet_signedup: لم تنضم إلينا بعد؟
-    google_oauth2: حساب كوكل
+    google_oauth2: حساب Google
     twitter: تويتر
     facebook: فيس بوك
-    windowslive: حساب مايكروسوف
-    forgot_password: نسيت كلمة المرور؟
-    need_confirmation: لم استلم تعليمات تأكيد الحساب؟
-    need_unlock: لم أستلم تعليمات فتح الحساب؟
+    windowslive: حساب Microsoft
+    forgot_password: هل نسيت كلمة المرور؟
+    need_confirmation: لم تستلم تعليمات تأكيد الحساب؟
+    need_unlock: لم تتلقى تعليمات فتح الحساب؟
   signup_form:
-    student_count: '%{count} الطلاب المسجلين حالياً.'
-    teacher_count: '%{count}المعلمين المسجلين حالياً.'
-    overview_student: 'قم بالتسجيل للحصول على حساب لتتابع تقدمك. يستخدم البريد الالكتروني الخاص بك بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من المعلومات, شاهد <a href="http://code.org/privacy">سياسة الخصوصية</a>.'
+    student_count: 'عدد الطلاب المسجلين حالياً هو %{count}.'
+    teacher_count: 'عدد المعلّمين المسجلين حالياً هو %{count}.'
+    overview_student: 'قم بالتسجيل للحصول على حساب لتتابع تقدمك. يُستخدم بريدك الإلكتروني بشكل أساسي للسماح لك بتسجيل الدخول وإستعادة كلمة المرور. للمزيد من المعلومات، الرجاء مراجعة <a href="http://code.org/privacy">سياسة الخصوصية</a>.'
     overview_teacher: 'قم بتدريس علوم الكمبيوتر في صفك بالتسجيل للحصول على حساب.<p/> سوف يصبح بإمكانك إضافة طلابك و متابعة تقدمهم .'
     no_signup_message: 'يمكنك<a target="_blank" href="http://learn.code.org"> تصفح مختلف المراحل والالغاز</a>, ولكن سوف تحتاج إلى التسجيل لحفظ تقدمك.'
     teacher_educator_guide: راجع دليل المعلم
-    teacher_pitch: طلب التسجيل المعلمين ل Code.org
+    teacher_pitch: تسجيل المعلّمين في Code.org
     teacher_title: تسجيل حساب المعلم
-    student_pitch: تسجيل الطالب ل Code.org
+    student_pitch: تسجيل الطلاب في Code.org
     student_title: التسجيل كطالب
     school_name: اسم المدرسة (اختياري)
     school_address: عنوان المدرسة (اختياري)
@@ -80,7 +80,7 @@ ar:
     gender: الجنس (اختياري)
     birthday: تاريخ الميلاد (اختياري)
     age: العمر
-    user_type: هل أنت طالب أو مدرس؟
+    user_type: هل أنت طالب أو معلّم؟
     submit: تسجيل
     teacher: هل أنت معلم؟
     valid_username: متاح!
@@ -89,24 +89,24 @@ ar:
     valid_password: كلمة المرور متاحة!
     invalid_password: كلمة المرور يجب ان تكون على الاقل 6 احرف
     mismatch_password: كلمة المرور التي ادخلتها غير متطابقة
-    student_terms: "أنا أوافق على الإلتزام بـ Code.org  <a href='http://code.org/tos'>شروط خدمة</a>. إذا كنت تحت 13 سنة , أنا أؤكد بتقديمي هذا النموذج بأنه لدي الوالدين أو الوصي القانوني لإستخدام خدمات Code.org<br/>للمستخدمين تحت سن الـ13 لا يتم تخزين البريد الإلكتروني في شكل يسمح لنا بالإتصال بهم ."
-    teacher_terms: "أوافق على الالتزام <a href='http://code.org/tos'> بشروط الخدمة</a> Code.org."
-    additional_information: نحتاج مزيد من المعلومات لمواصلة تسجيلك في الموقع.
+    student_terms: "أنا أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a> Code.org. إذا كنت أنا دون 13 سنة من العمر، فأنا أؤكد من خلال تقديم هذا النموذج بأنه لدي الإذن من أولياء الأمر أو الوصي القانوني لاستخدام خدمات Code.org.<br/>لا يتم تخزين البريد الإلكتروني للمستخدمين دون سن 13 عام بطريقة تسمح لنا الاتصال بهم."
+    teacher_terms: "أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a> Code.org."
+    additional_information: نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع.
   signin_form:
-    title: لديك حساب بالفعل؟ تسجيل الدخول
+    title: هل لديك حساب؟ قم بتسجيل الدخول
     login: البريد الإلكتروني أو اسم المستخدم
     password: كلمة المرور
     remember: تذكرني
     submit: تسجيل الدخول
   signin:
-    try_heading: هل ترغب في محاولة ترميز دون توقيع؟
-    try_hoc: 'حاول ساعة واحدة "من التعليمات البرمجية" أولاً'
-    try_20hours: 'جرب لدينا 20 ساعة مقدمة "علوم الحاسب الآلي"'
+    try_heading: هل ترغب في محاولة البرمجة دون التسجيل في الموقع؟
+    try_hoc: جرّب برنامج ساعة واحدة من البرمجة أولاً
+    try_20hours: جرّب برنامج المقدمة إلى علوم الحاسب الآلي المكوّن من 20 ساعة
   signinsection:
-    welcome: 'مرحبا بكم في %{section_name}'
+    welcome: 'مرحباً بكم في %{section_name}'
     name: اختر الاسم الخاص بك
     picture: الآن إختر الصورة السرية الخاصة بك
-    words: الآن قم بإدخال الكلمة السرية الخاصة بك
+    words: الآن قم بإدخال الكلمات السرية الخاصة بك
     login: تسجيل الدخول
   password:
     reset_form:
@@ -138,16 +138,16 @@ ar:
       username_not_found: 'اسم المستخدم %{username} غير موجود'
       username_in_use: '%{username} مستخدم، الرجاء اختر واحدا آخر من فضلك'
       no_teacher: "تعذر العثور على أي شخص مسجل بـ  '%{teacher_email_or_code}'. من فضلك أطلب منهم التسجيل هنا و من ثم محاولة إضافتهم مرة أخرى"
-      section_not_found: "تعذر العثور على جزء مع التعليمات البرمجية '%{section_code}'."
+      section_not_found: "تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'."
       blank_code: الرجاء إدخال رمز الفرع
       cant_join_own_section: عذراً، لا يمكنك الانضمام إلى القسم الخاص بك.
     mail:
       invite_student:
         subject: 'أنضم إلى الصف مع %{teacher_name} في Code.org!'
       student_disassociated:
-        subject: 'إعلام Code.org: % {student_name} لم يعد المقترنة كالطالب الخاص بك.'
+        subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
       teacher_disassociated:
-        subject: 'إعلام Code.org: % {teacher_name} لم يعد المقترنة كالمعلم الخاص بك.'
+        subject: 'إعلام من Code.org: المعلّم %{teacher_name} لم يعد مقترن بك كمعلّمك.'
   reports:
     error:
       access_denied: لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم
@@ -155,8 +155,8 @@ ar:
     title: 'استبدال الجوائز :%{name}'
     provider: 'المزود:'
     code: 'الكود البرمجي :'
-    redeem_header: 'للإستعادة :'
-    donorschoose_register: سجل كمدرس في DonorsChoose.org
+    redeem_header: 'للاسترداد:'
+    donorschoose_register: قم بالتسجيل كمعلّم في DonorsChoose.org
     donorschoose_project: نشر مشروع
     donorschoose_how_to: كيفية استخدام التعليمات البرمجية الخاصة بك
     success: تم استرداد جائزتك بنجاح, راجع الكود البرمجي ادناه.
@@ -165,8 +165,8 @@ ar:
     error_not_earned: انت لم تكسب هذه الجائزة بعد.
     error_already_redeemed: جائزتك تم استردادها الان.
     no_prizes_available: نحن نعتذر لعدم توفر الجوائز حاليا.
-    teacher_info_required: 'جوائز المعلم تتطلب معلومات الاسم والعنوان الخاصة بالمدرسة:'
-    teacher_email_required: 'جوائز المعلم تحتاج إلى عنوان بريد إلكتروني مؤكدة:'
+    teacher_info_required: 'تتطلّب جوائز المعلّم توفير اسم المدرسة وعنوانها:'
+    teacher_email_required: 'تتطلّب جوائز المعلّم توفير عنوان بريد إلكتروني مؤكد:'
     confirm:
       title: الرجاء تأكيد
       "no": لا
@@ -193,7 +193,7 @@ ar:
       not_earned_title: الانتهاء من البرنامج التعليمي، وكسب مكافآت (طلاب الولايات المتحدة الأمريكية فقط)
       not_earned: 'تعلم جميع مفاهيم علوم الكمبيوتر , اجمع جميع الجوائز%{num_trophies}، واكسب جوائز العالم الحقيقي. يمكنك أن تختار بين 10 كيكا بايت للتخزين المجاني من دروب بوكس، 10 دولار رصيد سكايب ، وتحميل العاب مجانية. ملاحظة: العروض فقط صالحة للطلاب في الولايات المتحدة.'
       teacher:
-        earned: '10 أو أكثر من الطلاب جمع جميع الجوائز %{num_trophies} لقد فزت بجائزة معلم! (المعلمين في الولايات المتحدة فقط)'
+        earned: '15 طالب أو أكثر قاموا بجمع جميع الجوائز ةالتي عددها %{num_trophies}. لقد فزت بجائزة معلّم! (المعلّمين في الولايات المتحدة فقط)'
         not_earned_title: 'دَرِس الصف، واكسب ما يصل إلى 1000 دولار في موقع دونر شوز <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> (المدرسين-الولايات المتحدة الأمريكية فقط)'
         not_earned: 'لمكافأة معلمين علوم الكمبيوتر لاول مرة , بأمكانك كسب مكافأة مالية اكثر من 1000 دولار في <a href="http://DonorsChoose.org">DonorsChoose.org</a> الائتمانات من اجل توجيه الصف الدارسي من خلال اعطاء مقدمة للمستوى المبتدئ والمتوسط , لكي تتأهل يحتاج منك ان تقوم بأستضافة 15 طلاب واعطائهم كورس مقدمة في علوم الكمبيوتر , بعد اكمال الـ 15 طلاب جميع المحاظرات التعليمية سيحصلون على جميع الجوائز %{num_trophies} .اذا كان 7 او اكثر من طلابك الذين يحصلون على جميع الجوائز %{num_trophies} هم من الفتيات , مكافأتك ستصبح 1000 دولار <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> من الائتمانات <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> الائتمانات يمكن استخدامها فقط من قبل المعلمين في المدارس الحكومية الامريكية.'
         bonus:
@@ -304,7 +304,7 @@ ar:
     panel:
       answer_viewer: عارض الجواب
       student: طالب
-      viewing_solution: Viewing Solution
+      viewing_solution: عرض الحلول
       try_it_yourself: جربها بنفسك
       section: القسم
   user:
@@ -327,9 +327,9 @@ ar:
     classroom_activity: نشاط موصول
   home:
     title: ستوديو كود
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio هو موقع الدروس المتوفرة على الإنترنت من Code.org
     lines_of_code: '%{lines_count} الأسطر من التعليمات البرمجية التي كتبها الطلاب'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} هو عدد سطور التعليمات البرمجية<br/> كتبها %{students_count} مليون طالب'
     all_courses: مراجعة للدروس 1,2, و 3
     lesson_plans: خطط الدرس
     signin_message: 'مسجل مسبقاً؟ %{link}'
@@ -350,7 +350,7 @@ ar:
     local_school: مدرسة محلية
     online: متصل
     see_details: مشاهدة التفاصيل
-    view_course: View Course
+    view_course: عرض الدرس
     prize_info: 'جوائز للمشاركة (معلمي المدارس العامة الولايات المتحدة فقط): تصل إلى 1000 $ في المكافآت الفصول الدراسية.'
     tryfirst: 'أو، يمكنك تجربة لأول مرة، والتسجيل في وقت لاحق:'
     trynow: جرب الآن
@@ -366,7 +366,10 @@ ar:
     your_gallery: معرض
     no_primary_course: 'جرب الدورة تدريبية في "الاستوديو التعليمات البرمجية"'
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: طباعة الشهادة
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: ذكر
     female: أنثى
@@ -375,9 +378,13 @@ ar:
     student: طالب
     teacher: المدرس
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: مدعوم من قبل خدمات أمازون للوب
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: المزيد
     feedback: توفير التغذية الرجعية
     translate: ساعدنا على ترجمة لغتك
     support: الدعم
@@ -505,6 +512,10 @@ ar:
     open_response_body: شكرا لردكم!
   dialog:
     ok: موافق
+    startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: البدء من جديد
+    startover_cancel: إلغاء
   time:
     hour: ساعة واحدة
     day: يوم
@@ -566,7 +577,7 @@ ar:
     delete: حذف
     exit: العودة إلى الدورة التدريبية
     my_projects: مشاريعي
-    share: مشاركة الآخرين
+    share: المشاركة
     share_title: شارك مشاريعك
     share_copy_link: 'إنسخ الرابط:'
     close: أغلق

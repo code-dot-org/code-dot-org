@@ -3,7 +3,7 @@ sq:
     script:
       name:
         20-hour:
-          desc: Ηyrje ne Kursin e Informatikës
+          desc: K-8 Ηyrje në Kursin e Informatikës
           Unplug1: Faza 1
           Maze: Faza 2
           Unplug2: Faza 3
@@ -34,7 +34,7 @@ sq:
           desc: Hidhu (beta)
           Bounce: Faza 1
         Builder Levels:
-          desc: Puzzle-at e krijuar nga Vetë-Përdoruesit (beta)
+          desc: Lojrat formuese të krijuar nga vetë përdoruesi (beta)
           Custom: Faza 1
         Flappy Levels:
           desc: Flappy Bird
@@ -44,7 +44,7 @@ sq:
           Jigsaw: Faza 1
         Step Levels:
           desc: Maze (beta)
-          MazeStep: Hapi i Fazës
+          MazeStep: Niveli i Fazës
         edit-code:
           desc: Redakto Kodin (beta)
           MazeEC: Faza 1
@@ -72,11 +72,11 @@ sq:
           WordSearch: Faza 1
     game:
       name:
-        Unplug1: Hyrje ne Informatike
+        Unplug1: Hyrje në Informatikë
         Maze: The Maze
-        Multi: Lojërat me zgjedhje të shumta
-        Unplug2: Te menduarit si kompjuter
-        Unplug3: Programimi grafik me leter
+        Multi: Lojërat me alternativa
+        Unplug2: Të menduarit kompjuterik
+        Unplug3: Programimi me grafikë
         Artist: Artisti
         Unplug4: Algoritmet
         Artist2: Artisti 2
@@ -84,11 +84,11 @@ sq:
         Farmer: Fermeri
         Unplug6: Kushtoret
         Artist3: Artisti 3
-        Unplug7: Kompozim kengesh
+        Unplug7: Kompozim këngësh
         Farmer2: Fermeri 2
         Unplug8: Abstraksion
         Artist4: Artisti 4
-        Unplug9: Programimi i Besuar
+        Unplug9: Programimi transmetues
         Farmer3: Fermeri 3
         Unplug10: Interneti
         Artist5: Artisti 5
@@ -97,9 +97,9 @@ sq:
         Bounce: Hidhu
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
-        MazeStep: Lloji i Fazës Maze
+        MazeStep: Forma e Fazës Labirinth
         Wordsearch: Kërkimi i Fjalëve
-        Webapp: Laboratori i Aplikacionit
+        Webapp: Laboratori i Aplikacioneve
         ArtistEC: Artisti
         TextMatch: Përshtatja e Tekstit
         StudioEC: Play Lab
@@ -109,26 +109,26 @@ sq:
       name:
         Bronze: Bronx
         Silver: Argjend
-        Gold: Flori
+        Gold: Ari
     concept:
       description:
         sequence: Sekuencë
         if: blloku Nëse
         if_else: blloku Nëse-Përndryshe
-        loop_times: blloku i kohës së Përsëritur
+        loop_times: blloku i herëve të Përsëritura
         loop_until: blloku Përsërit derisa
         loop_while: blloku Ndërsa
-        loop_for: blloku Numërimit
+        loop_for: blloku i Numërimit
         function: Funksionet
-        parameters: Funksionet me parametra
+        parameters: Funksione me parametra
     level:
       instructions:
-        maze_2_2: 'A mund të më ndihmosh mua që të kap derrkucin e pa bindur? Grumbullo bashkë disa blloqe "ec përpara" dhe shtyp "Vrapo" të më ndihmosh mua të arrij atje. '
-        maze_2_1: Ky derrkuci po më bezdis. Më ndihmo ta gjej atë!
-        maze_2_2_5: Gjurmo rrugën dhe më drejto tek derrkuci budalla. Shmang TNT ose përndryshe do më ikin puplat!
-        maze_2_3: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
+        maze_2_2: 'Më ndihmon dot të kap derrkucin e pabindur? Grumbullo disa blloqe "lëviz përpara" dhe shtyp "Vrapo" që të më ndihmosh të arrij atje. '
+        maze_2_1: "Ky derrkuci po më bezdis. Më ndihmo t'a gjej!"
+        maze_2_2_5: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në ose përndryshe do të ikin puplat!
+        maze_2_3: Më udhëhiq për tek ligësia jeshile! (Kujdes nga TNT)
         maze_2_4: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe do të nevrikosem!
-        maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2 blloqe. Mund ta gjesh?
+        maze_2_5: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2 blloqe. E gjen dot cila është?
         maze_2_6: Përpiqu të më çosh tek ai i keqi i gjelbër duke përdorur vetëm tre blloqe.
         maze_2_7: 'Më ndihmo ta dëboj këtë derkkuc të keq duke përodrur numrin më të ulët të blloqeve. Përpiqu të përdorësh më shumë se një bllok "repeat times".'
         maze_2_8: 'Kur një bllok është gri, kjo do të thotë që ti nuk mund ta fshish atë. Zgjidh këtë puzzle duke përdorur bllokun "repeat", që përsëritet 3 herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz, lëviz, kthehu.'
@@ -158,17 +158,19 @@ sq:
         turtle_4_3: 'Në rregull, ja ku është kodi që shkruajte për të vizatuar një trekëndor. Mund të shtosh një bllok "repeat" dhe "turn" për të bërë një lule të bukur?'
         turtle_4_4: 'Këtu është i njëjti kod si me atë të puzzle-it të mëparshëm, por duke u kthyer vetëm me 36 gradë pas vizatimit të secilit trekëndor. Sa herë duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh kthimi të vizatimit do të vijë rrethi i plotë)'
         turtle_4_5: 'Këtu është i njëjti kod si ai i puzzle-it të mëparshëm, por duke përsëritur kthimet 36 herë. Sa gradë duhet të jetë kthimi? (Ndihmë: pas 360 gradësh kthimi, vizatimi do të jetë rreth i plotë)'
-        turtle_4_6: Duke përdorur 3 blloqe, a mund të vizatosh një katror me cepa 20 piksela?
-        turtle_4_7: 'Ja ku është kodi për të vizatuar katrorin e puzzle-it të fundit. A mund ta përsërisësh atë që të vizatosh 10 katorrë të ndryshëm si një shkallë? Ndihmë: ty të duhen 2 blloqe më shumë.'
-        turtle_4_8: Ja ku është zgjidhja e puzzle-it të mëparshëm. A mund të shtosh 2 blloqe më shumë për të përfunduar vizatimin?
-        turtle_4_9: Ja ku është zgjidhja e puzzle-it të mëparshëm. Sa gradë duhet të kthehesh për të përfunduar vizatimin? ( Ti ndoshta duhet ta gjesh me pak herë)
-        turtle_4_10: Ja ku është zgjidhja për puzzle-in e mëparshëm. Sa herë duhet ta përsërisësh që të përfundosh vizatimin?
-        turtle_4_11: 'Përpiqu të ndryshosh numrat në blloqet "turn" dhe "repeat" për të bërë modele të ndryshme. Ose eksperimento në ndryshimin e pjesës së kodit për të vizatuar çfarë të duash.'
-        maze_karel_1_1: 'Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën tënde që të zbukuroj fushën në fermën time, që të jetë gati për mbjellje. Më zhvendos mua në grumbullin e dheut dhe përdor bllokun "remove" për ta hequr atë.'
-        maze_karel_1_2: 'Më pas, më zhvendos tek gropa dhe mbushe atë me DY lopata plot me dhe duke përdorur bllokun "fill".'
-        maze_karel_1_3: Më zhvendos mua tek grumbulli me dhe dhe më thuaj mua sa lopata plot të heq duke përdorur sa më pak blloqe të jetë e mundur.
-        maze_karel_1_4: 'A mund të më ndohmosh mua të heq të katërt grumbujt me dhe? Ndihmë : përdor një bllok përsëritës nëse ke mundësi.'
-        maze_karel_1_5: 'Më ndihmo mua ti mbush të gjitha gropat me 5 lopata me dhe. Ndihmë: ti mund të vendosësh një bllok "repeat" brenda bllokut "while".'
+        turtle_4_6: Mund të vizatosh një katror me cepa 20 piksel, duke përdorur vetëm 3 blloqe?
+        turtle_4_7: "Këtu ke kodin për të vizatuar katrorin e lojës së fundit formuese. Je në gjendje t'a përsërisësh që të vizatosh 10 katrorë të ndryshëm në formën e një shkalle? Ndihmë: të duhen 2 blloqe më shumë."
+        turtle_4_8: Ja ku është zgjidhja e lojës formuese së mëparshme. Mund të shtosh 2 blloqe më shumë për të përfunduar vizatimin?
+        turtle_4_9: "Ja ku është zgjidhja e lojës formuese së mëparshme. Sa gradë duhet të kthehesh për të përfunduar vizatimin? ( Ndoshta do të të duhet t'a hamendësosh disa herë)"
+        turtle_4_10: "Ja ku është zgjidhja e lojës formuese së mëparshme. Sa herë duhet t'a përsërisësh që të përfundosh vizatimin?"
+        turtle_4_11: 'Përpiqu të ndryshosh numrat në blloqet "kthehu" dhe "përsërit" për të krijuar modele të ndryshme. Ose, eksperimento duke ndryshuar të gjithë pjesën e mbetur të kodit për të vizatuar çfarë të dëshirosh.'
+        maze_karel_1_1: |-
+          Përshëndetje, unë jam një fermer. Kam nevojë për ndihmën tënde që të zbukuroj fushën në fermën time në mënyrë që të jetë gati për mbjellje. Më zhvendos në grumbullin e baltës dhe përdor bllokun "fshi" për t'a hequr.
+        maze_karel_1_2: 'Më pas, më zhvendos tek gropa dhe mbushe atë me DY lopata plot me baltë duke përdorur bllokun "mbush".'
+        maze_karel_1_3: Më zhvendos tek grumbulli i baltës dhe më thuaj sa lopata të plota të heq duke përdorur sa më pak blloqe të jetë e mundur.
+        maze_karel_1_4: 'Mund të më ndihmosh të heq të katërt grumbujt e baltës? Ndihmë: nëse ke mundësi, përdor një bllok përsëritës.'
+        maze_karel_1_5: |-
+          Më ndihmo t'i mbush të gjitha gropat me 5 lopata me baltë. Ndihmë: mund të vendosësh një bllok "përsërit" brenda bllokut "ndërsa".
         maze_karel_1_6: 'Hiq të gjithë grumbujt me dhe duke përdorur sa më pak blloqe të jetë e mundur. Opsionet në menunë dropdown tek blloku "while" më tregojnë nëse jam duke qëndruar në grumbull ose në një gropë.'
         maze_karel_1_7: Wow, unë gjeta një gropë vërtet të thellë! Nuk e di se sa lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa toka të jetë e shtruar?
         maze_karel_1_8: Më ndihmo të mbush gropën në fund të fushës, dukë përdorur sa më pak blloqe të jetë e mundur.

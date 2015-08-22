@@ -15,8 +15,8 @@
           'Jigsaw: Learn to drag and drop': ジグソーパズル：ドラッグ＆ドロップを学びましょう
           'Maze: Sequence': '迷路: シーケンス'
           'Maze: Debugging': '迷路: デバッグ'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Artist 1: Intro': 'アーティスト 1: イントロ'
+          Artists 2: アーティスト 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
           'Bee 1: Intro': 'みつばち 1: イントロ'
@@ -26,7 +26,7 @@
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: blocklyを使わないFlappy
           title: コース1
-          Artist 2: Artist 2
+          Artist 2: アーティスト 2
           Happy Maps: ハッピーマップ
           Move it, Move it: 動かせ！動かせ！
           'Real-life Algorithms: Plant a Seed': 現実のアルゴリズム：種を植えましょう
@@ -34,7 +34,8 @@
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: 安全な道を通って行く
-          description: コース1は、他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学ぶ手助けとなるようなプログラムを、初心者でも作れるようにデザインされています。このコースの終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。年長・小学１年生(5-7歳)にオススメのコースです。
+          description: コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
+            1 年生 (5-7歳) におすすめのコースです。
           'Bee: Sequence': 'みつばち: シーケンス'
           'Artist: Sequence': 'アーティスト: シーケンス'
           'Artist: Shapes': 'Artist: Shapes'
@@ -151,14 +152,11 @@
         hourofcode:
           Maze: 迷路
           title: Hour of Code（コーディングを学ぶ時間）
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
         frozen:
           title: アナとエルサとコードを書く
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
+          description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
           Artist: アーティスト
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
         course4:
@@ -176,7 +174,7 @@
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 'Artist: For Loops'
+          'Artist: For Loops': 芸術家：ループ用
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': アーティスト：関数
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
@@ -217,8 +215,8 @@
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
           Variables: 変数
-          For Loops: For Loops
-          Binary: Binary
+          For Loops: ループ用
+          Binary: 2値
         potus:
           title: special
           description_short: special
@@ -229,7 +227,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: 2値
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -303,10 +301,10 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: インターネット シミュレータ
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
+          Internet Simulator: インターネット シミュレータ
           Unit 1: ユニット 1
           Unit 2: ユニット 2
           Sending Bits: Sending Bits
@@ -402,7 +400,7 @@
         Hour of Code:
           title: Hour of Code 2013
           description: ''
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -880,6 +878,13 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -950,8 +955,8 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: インターネット シミュレータ
+          App Lab: アプリ ラボ
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: ようこそ!
@@ -962,8 +967,8 @@
           Welcome!: ようこそ!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: インターネット シミュレータ
+          App Lab: アプリ ラボ
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1196,3 +1201,30 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: ハッピーマップ
+          Move it, Move it: 動かせ！動かせ！
+          'Real-life Algorithms: Plant a Seed': 現実のアルゴリズム：種を植えましょう
+          Graph Paper Programming: プログラミングのグラフ用紙
+          Building a Foundation: Building a Foundation
+          Getting Loopy: Getting Loopy
+          The Big Event: The Big Event
+          Binary Bracelets: Binary Bracelets
+          Songwriting: Songwriting
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13

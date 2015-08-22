@@ -51,6 +51,12 @@ Blockly.FunctionEditor = function() {
   this.container_ = null;
 
   this.closeButton_ = null;
+
+  /**
+   * @protected {Blockly.SvgTextButton}
+   */
+  this.deleteButton_ = null;
+
   this.contractDiv_ = null;
 
   /**
@@ -72,6 +78,22 @@ Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN = Blockly.BlockSpaceEditor.BUMP_
 Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
 
 /**
+ * Margin between the delete and close buttons in pixels.
+ * @type {number}
+ */
+Blockly.FunctionEditor.DELETE_BUTTON_MARGIN = 25;
+
+/**
+ * Amount of space the "close" button should hang off the right of the
+ * window chrome.
+ * @type {number}
+ */
+Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG = 14;
+
+/** @type {number} */
+Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET = 5;
+
+/**
  * The type of block to instantiate in the function editing area
  * @type {string}
  * @protected
@@ -83,6 +105,12 @@ Blockly.FunctionEditor.prototype.definitionBlockType = 'procedures_defnoreturn';
  * @type {string}
  */
 Blockly.FunctionEditor.prototype.parameterBlockType = 'parameters_get';
+
+/**
+ * Whether to display a button that deletes this function
+ * @type {boolean}
+ */
+Blockly.FunctionEditor.prototype.hasDeleteButton = false;
 
 /**
  * @param {String} autoOpenFunction - name of function to auto-open
@@ -485,6 +513,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
 
   this.addCloseButton_();
+  this.addDeleteButton_();
   this.addEditorFrame_();
   this.createContractDom_();
   this.createParameterEditor_();
@@ -556,6 +585,7 @@ Blockly.FunctionEditor.prototype.resizeUIComponents_ = function () {
   this.positionClippingRects_(metrics);
   this.positionSizeContractDom_(metrics.viewWidth);
   this.positionCloseButton_(metrics.absoluteLeft, metrics.viewWidth);
+  this.positionDeleteButton_(metrics.absoluteLeft, metrics.viewWidth);
 };
 
 /**
@@ -618,9 +648,35 @@ Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function (viewWidth)
 Blockly.FunctionEditor.prototype.positionCloseButton_ = function (absoluteLeft,
     viewWidth) {
   this.closeButton_.setAttribute('transform', 'translate(' +
-      (Blockly.RTL ? 5 : absoluteLeft + viewWidth + 14 -
+      (Blockly.RTL ? Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET :
+        absoluteLeft + viewWidth + Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG -
       this.closeButton_.firstElementChild.getAttribute('width')) +
       ',19)');
+};
+
+/**
+ * Position close button based on new metrics
+ * @param {number} absoluteLeft
+ * @param {number} viewWidth
+ * @private
+ */
+Blockly.FunctionEditor.prototype.positionDeleteButton_ = function (absoluteLeft,
+    viewWidth) {
+  if (!this.hasDeleteButton) {
+    return;
+  }
+  var closeButtonWidth = this.closeButton_.firstElementChild.getAttribute('width');
+  var deleteButtonWidth = this.deleteButton_.getButtonWidth();
+  var rightEdge = absoluteLeft + viewWidth;
+  var closeButtonLeft = Blockly.FunctionEditor.CLOSE_BUTTON_OVERHANG -
+      closeButtonWidth;
+  var deleteButtonLeft = rightEdge + closeButtonLeft - deleteButtonWidth;
+  var ltrXOffset = deleteButtonLeft -
+      Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
+  var rtlXOffset = Blockly.FunctionEditor.RTL_CLOSE_BUTTON_OFFSET +
+      closeButtonWidth + Blockly.FunctionEditor.DELETE_BUTTON_MARGIN;
+  var xPosition = (Blockly.RTL ? rtlXOffset : ltrXOffset);
+  this.deleteButton_.renderAt(xPosition, 19);
 };
 
 /**
@@ -719,6 +775,45 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
   r.setAttribute('width', bounds.width + 2 * padding);
   r.setAttribute('height', bounds.height + padding);
   r.setAttribute('y', -bounds.height + padding - 1);
+};
+
+/**
+ * Add delete button to the top right of the modal dialog, to the
+ * left of the Close button.
+ * @private
+ */
+Blockly.FunctionEditor.prototype.addDeleteButton_ = function () {
+  if (!this.hasDeleteButton) {
+    return;
+  }
+  this.deleteButton_ = new Blockly.SvgTextButton(
+      this.modalBlockSpaceEditor.getSVGElement(), Blockly.Msg.DELETE,
+      this.onDeletePressed.bind(this));
+};
+
+Blockly.FunctionEditor.prototype.onDeletePressed = function () {
+  var functionName = this.functionDefinitionBlock.getProcedureInfo().name;
+  var deleteMessage = Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE.replace('%1',
+      functionName);
+  Blockly.showSimpleDialog({
+    bodyText: deleteMessage,
+    cancelText: Blockly.Msg.DELETE,
+    confirmText: Blockly.Msg.KEEP,
+    onConfirm: null,
+    onCancel: this.onDeleteConfirmed.bind(this, functionName),
+    cancelButtonClass: 'red-delete-button'
+  });
+};
+
+Blockly.FunctionEditor.prototype.onDeleteConfirmed = function (functionName) {
+  this.hideIfOpen();
+
+  var functionDefinition = Blockly.mainBlockSpace.findFunction(functionName);
+  var examples = Blockly.mainBlockSpace.findFunctionExamples(functionName);
+
+  examples.concat(functionDefinition).forEach(function (block) {
+    block.dispose(false, false, true);
+  });
 };
 
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
