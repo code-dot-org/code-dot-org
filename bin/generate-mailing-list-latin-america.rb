@@ -51,25 +51,25 @@ puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
 TEACHERS = {}.tap do |results|
   (
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"mexico" || location_country_s:"Mexico")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"guatemala" || location_country_s:"Guatemala")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"el salvador" || location_country_s:"El Salvador")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"costa rica" || location_country_s:"Costa Rica")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"nicaragua" || location_country_s:"Nicaragua")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"belize" || location_country_s:"Belize")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"panama" || location_country_s:"Panama")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"cuba" || location_country_s:"Cuba")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"dominican republic" || location_country_s:"Dominican Republic")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"venezuela" || location_country_s:"Venezuela")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"colombia" || location_country_s:"Colombia")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"ecuador" || location_country_s:"Ecuador")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"peru" || location_country_s:"Peru")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"bolivia" || location_country_s:"Bolivia")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"paraguay" || location_country_s:"Paraguay")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"uruguay" || location_country_s:"Uruguay")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"chile" || location_country_s:"Chile")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"argentina" || location_country_s:"Argentina")') +
-  query_contacts(q: '(kind_s:"CSEdWeekEvent2013" || kind_s:"HocSignup2014") & (country_s:"puerto rico" || location_country_s:"Puerto Rico")')
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Mexico"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Guatemala"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"El Salvador"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Costa Rica"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Nicaragua"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Belize"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Panama"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Cuba"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Dominican Republic"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Venezuela"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Colombia"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Ecuador"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Peru"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Bolivia"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Paraguay"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Uruguay"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Chile"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Argentina"') +
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Puerto Rico"')
   ).each do |i|
     email = i[:email].downcase.strip
     results[email] = i unless UNSUBSCRIBERS[email]
