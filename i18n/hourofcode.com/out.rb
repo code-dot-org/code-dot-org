@@ -70,6 +70,10 @@ languages = {
   'Vietnamese' => ['vi-VN', 'vi']
 }
 
+locale_index = 0
+code_index = 1
+crowdincode_index = 2
+
 
 #########################################################################################
 ##                                                                                     ##
@@ -80,17 +84,19 @@ languages = {
 languages.each_pair do |name, codes|
   # rename downloaded folders from language to locale
   if File.directory?("../locales/#{name}/")
-    FileUtils.cp_r "../locales/#{name}/.", "../locales/#{codes[0]}"
+    FileUtils.cp_r "../locales/#{name}/.", "../locales/#{codes[locale_index]}"
     FileUtils.rm_r "../locales/#{name}"
   end
 
   # rename yml file from en.yml to code
-  File.rename("../locales/#{codes[0]}/hourofcode/en.yml", "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml")
+  old_path = "../locales/#{codes[locale_index]}/hourofcode/en.yml"
+  new_path = "../locales/#{codes[locale_index]}/hourofcode/#{codes[code_index]}.yml"
+  File.rename(old_path, new_path)
 
   # edit the code in the yml file for special coded languages
-  unless codes[2].nil?
-    file = "../locales/#{codes[0]}/hourofcode/#{codes[1]}.yml"
-    File.write(file, File.read(file).gsub(/#{codes[2]}:/, "#{codes[1]}:"))
+  unless codes[crowdincode_index].nil?
+    file = "../locales/#{codes[locale_index]}/hourofcode/#{codes[code_index]}.yml"
+    File.write(file, File.read(file).gsub(/#{codes[crowdincode_index]}:/, "#{codes[code_index]}:"))
   end
 end
 
@@ -103,13 +109,13 @@ end
 #########################################################################################
 
 languages.each_pair do |name, codes|
-  i18n_dir = Dir["../locales/#{codes[0]}/hourofcode"]
+  i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode"]
   hoc_dir = Dir["../../pegasus/sites.v3/hourofcode.com/i18n"]
 
-  FileUtils.cp(i18n_dir + "#{codes[1]}.yml", hoc_dir)
+  FileUtils.cp(i18n_dir + "#{codes[code_index]}.yml", hoc_dir)
 
   i18n_dir.each do |file|
-    FileUtils.cp(i18n_dir + "/**/*.md", hoc_dir + "/public/#{codes[1]}")
+    FileUtils.cp(i18n_dir + "/**/*.md", hoc_dir + "/public/#{codes[code_index]}")
   end
 end
 
