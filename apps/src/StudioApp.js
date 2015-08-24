@@ -12,7 +12,6 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 
@@ -455,8 +454,6 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
-
-  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -897,7 +894,7 @@ function resizePinnedBelowVisualizationArea() {
 
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer')
 
   var top = 0;
   if (visualization) {
@@ -928,8 +925,6 @@ function resizePinnedBelowVisualizationArea() {
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
@@ -1005,7 +1000,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer')
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -1394,7 +1389,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector(".small-footer");
+    var smallFooter = document.querySelector('#page-small-footer .small-footer')
     if (smallFooter) {
       smallFooter.className += " responsive";
     }

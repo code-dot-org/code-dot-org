@@ -1,24 +1,27 @@
-.small-footer
-  - if view_options[:has_i18n]
-    = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
-      = hidden_field_tag :return_to, request.url
-      = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
-  %small
-    = link_to I18n.t('footer.copyright'), '#', class: 'copyright-link'
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    %a{:href => "#", :class => "more-link"}
-      = I18n.t('footer.more')
-      %i{:class => "fa fa-caret-up"}
+= javascript_include_tag 'react'
+= javascript_include_tag 'footer/small_footer'
 
-#copyright-flyout
-  %p!= I18n.t('footer.thank_you')
-  %p= I18n.t('footer.help_from_html')
-  %p!= I18n.t('footer.art_from_html', current_year: Time.now.year)
-  %p= I18n.t('footer.powered_by_aws')
-  %p!= I18n.t('footer.trademark', current_year: Time.now.year)
+#page-small-footer
 
-%ul#more-menu
-  %li= link_to I18n.t('footer.support'), 'https://support.code.org'
-  %li= link_to I18n.t('footer.translate'), 'https://code.org/translate'
-  %li= link_to I18n.t('footer.tos'), 'https://code.org/tos'
-  %li= link_to I18n.t('footer.privacy'), 'https://code.org/privacy'
+:javascript
+  // TODO - do i need a document.ready?
+  $(window).ready(function () {
+    var i18nDropdown = "#{URI.encode(i18n_dropdown.to_str) if view_options[:has_i18n]}";
+
+    React.render(React.createElement(window.dashboard.SmallFooter, {
+      i18nDropdown: i18nDropdown,
+      strings: {
+        copyright: "#{I18n.t('footer.copyright')}",
+        more: "#{I18n.t('footer.more')}",
+        thank_you: "#{URI.escape(I18n.t('footer.thank_you'))}",
+        help_from_html: "#{I18n.t('footer.help_from_html')}",
+        art_from_html: "#{URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year))}",
+        powered_by_aws: "#{I18n.t('footer.powered_by_aws')}",
+        trademark: "#{URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))}",
+        support: "#{I18n.t('footer.support')}",
+        translate: "#{I18n.t('footer.translate')}",
+        tos: "#{I18n.t('footer.tos')}",
+        privacy: "#{I18n.t('footer.privacy')}",
+      }
+    }), document.getElementById('page-small-footer'));
+  });
