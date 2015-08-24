@@ -395,8 +395,8 @@ describe("NetSimTable", function () {
   });
 
   it ("calls multiCreate on the API table", function () {
-    netsimTable.multiCreate([{}, {}], callback);
-    assertEqual(apiTable.log(), 'create[{}]create[{}]');
+    netsimTable.multiCreate([{order:'first'}, {order:'second'}], callback);
+    assertEqual(apiTable.log(), 'create[{"order":"first"}]create[{"order":"second"}]');
   });
 
   it ("calls update on the API table", function () {
