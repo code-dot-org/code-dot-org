@@ -47,10 +47,11 @@ exports.overrideNetSimTableApi = function (netsimTable) {
       return table.read(id, callback);
     },
     createRow: function (value, callback) {
-      return table.create(value, callback);
-    },
-    createRows: function (value, callback) {
-      return table.multiCreate(value, callback);
+      if (Array.isArray(value)) {
+        return table.multiCreate(value, callback);
+      } else {
+        return table.create(value, callback);
+      }
     },
     updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
