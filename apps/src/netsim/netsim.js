@@ -976,7 +976,7 @@ function resizeFooterToFitToLeftOfContent() {
   if (leftColumn && $(leftColumn).is(':visible')) {
     smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
   } else if (instructions && $(instructions).is(':visible')) {
-    smallFooter.style.maxWidth = instructions.offsetWidth + 'px';
+    smallFooter.style.maxWidth = (instructions.offsetWidth + instructions.offsetLeft) + 'px';
   }
 
   // If the small print and language selector are on the same line,
