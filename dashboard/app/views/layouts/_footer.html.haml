@@ -1,8 +1,8 @@
 - full_width = local_assigns[:full_width]
 .navbar-static-top.footer
-  .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
+  .container{style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '')}
     .row
-      .span8{style: (full_width ? 'width: 560px;' : '')}
+      .span8{style: (full_width ? 'width: 630px;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
         = link_to t('footer.translate'), 'https://code.org/translate'
         .dim
