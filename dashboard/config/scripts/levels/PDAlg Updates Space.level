@@ -75,7 +75,7 @@
                           </functional_input>
                           <functional_input name="STYLE">
                             <block type="functional_string">
-                              <title name="VAL">solid</title>
+                              <title name="VAL">50%</title>
                             </block>
                           </functional_input>
                           <functional_input name="COLOR">
@@ -96,7 +96,7 @@
                               </functional_input>
                               <functional_input name="STYLE">
                                 <block type="functional_string">
-                                  <title name="VAL">solid</title>
+                                  <title name="VAL">50%</title>
                                 </block>
                               </functional_input>
                               <functional_input name="COLOR">
@@ -117,7 +117,7 @@
                                   </functional_input>
                                   <functional_input name="STYLE">
                                     <block type="functional_string">
-                                      <title name="VAL">solid</title>
+                                      <title name="VAL">50%</title>
                                     </block>
                                   </functional_input>
                                   <functional_input name="COLOR">
@@ -138,7 +138,7 @@
                                       </functional_input>
                                       <functional_input name="STYLE">
                                         <block type="functional_string">
-                                          <title name="VAL">solid</title>
+                                          <title name="VAL">50%</title>
                                         </block>
                                       </functional_input>
                                       <functional_input name="COLOR">
@@ -159,7 +159,7 @@
                                           </functional_input>
                                           <functional_input name="STYLE">
                                             <block type="functional_string">
-                                              <title name="VAL">solid</title>
+                                              <title name="VAL">50%</title>
                                             </block>
                                           </functional_input>
                                           <functional_input name="COLOR">
@@ -180,7 +180,7 @@
                                               </functional_input>
                                               <functional_input name="STYLE">
                                                 <block type="functional_string">
-                                                  <title name="VAL">solid</title>
+                                                  <title name="VAL">50%</title>
                                                 </block>
                                               </functional_input>
                                               <functional_input name="COLOR">
@@ -199,7 +199,7 @@
                                               </functional_input>
                                               <functional_input name="STYLE">
                                                 <block type="functional_string">
-                                                  <title name="VAL">solid</title>
+                                                  <title name="VAL">50%</title>
                                                 </block>
                                               </functional_input>
                                               <functional_input name="COLOR">
@@ -236,9 +236,6 @@
           <block type="functional_times"/>
           <block type="functional_dividedby"/>
           <block type="functional_math_number"/>
-          <block type="functional_math_number_dropdown">
-            <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
-          </block>
           <block type="functional_sqrt"/>
           <block type="functional_squared"/>
           <block type="functional_pow"/>
