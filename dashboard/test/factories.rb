@@ -26,6 +26,11 @@ FactoryGirl.define do
     factory :student do
       user_type User::TYPE_STUDENT
     end
+
+    factory :young_student do
+      user_type User::TYPE_STUDENT
+      birthday Date.today - 10.years
+    end
   end
 
   factory :section do
