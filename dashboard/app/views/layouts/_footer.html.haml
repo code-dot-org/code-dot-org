@@ -1,10 +1,10 @@
 - full_width = local_assigns[:full_width]
 .navbar-static-top.footer
-  .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
+  .container{style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '')}
     .row
-      .span8{style: (full_width ? 'width: 560px;' : '')}
+      .span8{style: (full_width ? 'width: 630px;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; &nbsp; | &nbsp; &nbsp;'
-        = link_to t('footer.translate'), 'http://eepurl.com/Im_In'
+        = link_to t('footer.translate'), 'https://code.org/translate'
         .dim
           != piped_spaces
         = link_to t('footer.secure'), 'https://studio.code.org/'
@@ -15,9 +15,9 @@
 
         %small.fineprint.dim
           %br/
-          = sanitize(t('footer.help_from_html'), tags: %w(a br), attributes: %w(href))
+          = sanitize(t('footer.help_from_html_short'), tags: %w(a br), attributes: %w(href))
           %br/
-          = sanitize(t('footer.art_from_html'), tags: %w(a br), attributes: %w(href))
+          = sanitize(t('footer.art_from_html', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
           %br/
           = sanitize(t('footer.powered_by_aws'), tags: %w(a br), attributes: %w(href))
 
@@ -27,7 +27,7 @@
           = hidden_field_tag :return_to, request.url
           = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
         %small.dim
-          = link_to t('footer.tos'), CDO.code_org_url('/tos')
+          = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
           - if full_width
             |
           - else
@@ -36,4 +36,4 @@
           %br/
           %br/
           %br/
-          &copy; Code.org, 2015
+          !="&copy; Code.org, #{Time.now.year}"

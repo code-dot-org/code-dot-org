@@ -226,7 +226,7 @@ a.header_status_bar:hover {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 110px;
+$footer_height: 130px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -246,6 +246,7 @@ html, body {
   padding-top: $footer_padding-top;
   padding-bottom: $footer_padding-bottom;
   font-size: 14px;
+  overflow: hidden;
   background-color: $dark_color;
   color: $header_text;
   a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
