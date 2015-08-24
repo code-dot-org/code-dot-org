@@ -246,6 +246,7 @@ html, body {
   padding-top: $footer_padding-top;
   padding-bottom: $footer_padding-bottom;
   font-size: 14px;
+  overflow: hidden;
   background-color: $dark_color;
   color: $header_text;
   a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
