@@ -23,7 +23,6 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -951,7 +950,7 @@ function resizeLeftColumnToSitAboveFooter() {
     return;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer')
 
   var bottom = 0;
   if (smallFooter) {
@@ -968,7 +967,7 @@ function resizeLeftColumnToSitAboveFooter() {
 function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
   var instructions = document.querySelector('.instructions');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer')
 
   if (!smallFooter) {
     return;
@@ -980,25 +979,11 @@ function resizeFooterToFitToLeftOfContent() {
     var instructionsWidth = instructions.offsetWidth + instructions.offsetLeft;
     smallFooter.style.maxWidth = instructionsWidth + 'px';
   }
-
-  // If the small print and language selector are on the same line,
-  // the small print should float right.  Otherwise, it should float left.
-  var languageSelector = smallFooter.querySelector('form');
-  var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint && languageSelector) {
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
-  }
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
   resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 /**
