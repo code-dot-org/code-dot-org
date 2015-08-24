@@ -351,7 +351,7 @@ NetSimTable.prototype.create = function (value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.multiCreate = function (values, callback) {
-  this.api_.createRows(values, function (err, datas) {
+  this.api_.createRow(values, function (err, datas) {
     if (err === null) {
       datas.forEach(function (data) {
         this.addRowToCache_(data);
