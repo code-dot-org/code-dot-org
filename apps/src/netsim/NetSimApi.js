@@ -126,13 +126,24 @@ var tableApi = {
   },
 
   /**
-   * Post some data to the table. Private method used by createRow and
-   * createRows
-   * @param {string} data - JSON-stringified POST data
-   * @param {NodeStyleCallback} callback - the result of the request
-   * @private
+   * Insert a row or rows into the table.
+   * @param {Object|Object[]} value - desired row contents, as either an
+   *        Object for a single row or an Array of Objects for multiple.
+   *        Must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is the created
+   *        row object or objects (which will include an assigned 'id'
+   *        key).
    */
-  post_: function(data, callback) {
+  createRow: function(value, callback) {
+    var data;
+
+    try {
+      data = JSON.stringify(value);
+    } catch (e) {
+      callback(e, undefined);
+      return;
+    }
+
     $.ajax({
       url: this.baseUrl,
       type: "post",
@@ -144,26 +155,6 @@ var tableApi = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, undefined);
     });
-  },
-
-  /**
-   * Insert a row into the table.
-   * @param {Object} value - desired row contents, must be JSON.stringify-able.
-   * @param {NodeStyleCallback} callback - Expected result is the created
-   *        row object (which will include an assigned 'id' key).
-   */
-  createRow: function(value, callback) {
-    this.post_(JSON.stringify(value), callback);
-  },
-
-  /**
-   * Insert several rows into the table.
-   * @param {Object[]} values - desired row contents, must be JSON.stringify-able.
-   * @param {NodeStyleCallback} callback - Expected result is an array of the created
-   *        row object (which will include assigned 'id' keys).
-   */
-  createRows: function(values, callback) {
-    this.post_(JSON.stringify(values), callback);
   },
 
   /**
