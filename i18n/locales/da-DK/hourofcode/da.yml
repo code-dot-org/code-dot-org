@@ -1,0 +1,316 @@
+da:
+  site_name: HOUR of CODE
+  language: Dansk
+  front_title: Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015
+  coming_soon: Kommer snart
+  campaign_date_start_short: Dec. 7
+  campaign_date_start_long: December 7
+  campaign_date_short: Dec. 7-13
+  campaign_date_full: December 7-13
+  front_header_banner: Bliv en del af den største læringsevent nogensinde, den 7.-13. december 2015
+  front_intro_default: 'Hour of Code er en global bevægelse som når ud til millioner af elever i 180+ lande. Alle, hvor som helst, kan organisere en Hour of Code begivenhed. En-times introduktioner findes på mere end 30 sprog. Ingen erfaring er nødvendig. <strong>Fra 4 til 104 år.</strong>'
+  front_watch_video: Se den nye video
+  front_watch_regular_video: Watch the video
+  header_menu_resources: Ressourcer
+  header_menu_faq: FAQ
+  header_menu_prizes: Præmier
+  company_4-H: 4-H Youth Development
+  company_asa: Afterschool Alliance
+  company_bgca: Boys and Girls Club of America
+  company_bsusa: Boy Scouts of America
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Girl Scouts of America
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
+  prizes_all: Præmier til alle arrangører
+  prizes_every_organizer: Alle Hour of Code-arrangører får ekstra lagerplads hos DropBox eller taletid hos Skype som tak
+  prizes_technology: En offentlig skole i alle amerikanske stater (og Washington DC) vinder for $10,000 it-udstyr
+  prizes_tech_chats: '# klasser kan vinde video-chats med en helt specielle gæster'
+  prizes_robots: 100 klasseværelser vil vinde et sæt af programmerbare robotter
+  prizes_brilliant: En skole i hver provins og territory i USA vil modtage $2000 for et fremragende projekt
+  prizes_actua: 15 skoler på tværs af Canada vil modtage 2 hands-on til naturfags workshops af et af Actua´s medlemmer
+  prizes_details: Detaljer
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: 10.000$ til teknologi til din skole
+  prizes_nav_video_chat: Videochat med en tech titan
+  prizes_nav_skype_dropbox: Skype kredit eller Dropbox plads til alle organisatorer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: Vilkår og betingelser
+  prizes_nav_faq: FAQ
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Hvordan du kan arrangere en Hour of Code</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> Frem Hour of Code</a>"
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  anybody_can_learn: Alle kan lære.
+  get_started: Start
+  beyond_an_hour: Bagefter Hour of Code
+  register_now: Registrér dig nu
+  share_on_facebook: Del på Facebook
+  share_on_twitter: Del på Twitter
+  front_join_us_heading: 'Hour of Code - programmering for alle elever.'
+  front_join_us_description: Programmering er et godt grundlag for alle elever. Hjælp os med at nå ud til 100 millioner.
+  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_button: Deltag
+  front_what_is_hoc: Hvad er Hour of Code?
+  front_join_us_header: Alle kan lære det grundlæggende, og have det sjovt samtidigt!
+  front_join_us_teacher: Er du underviser?
+  front_join_us_inspire: Inspirér eleverne med
+  front_join_us_inspire_link: Hour of Code i klassen.
+  front_join_us_parent: Er du forælder?
+  front_join_us_ask_link: Bed din lokale skole
+  front_join_us_ask: om at arrangere Hour of Code.
+  front_join_us_computer_science: Elsker du bare at programmere?
+  front_join_us_spread: Spred budskabet.
+  front_join_us_organize: Eller arranger selv en Hour of Code.
+  front_join_us_how_to_run: Sådan holder du selv Hour of Code
+  front_join_us_help_promote: Hjælp med at fremme Hour of Code
+  front_join_us_students: Elever
+  front_join_us_teachers: Lærere
+  front_join_us_everyone: Enhver
+  front_join_us_try: Prøv det
+  front_join_us_host: Arranger selv
+  front_join_us_support: Støt os
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: Dit navn
+  signup_email_label: Din email
+  signup_organization_name_label: Navn på skole eller organisation
+  signup_event_type_label: Type af arrangement
+  signup_event_entire_school_label: Hele min skole deltager
+  signup_event_location_label: Sted for arrangement (valgfrit)
+  signup_special_event_flag_label: Fremhæv dette arrangement
+  signup_special_event_details_label: Detaljer om dette særlige arrangement
+  signup_send_posters_flag_label: 'Send <a href= "/resources#posters">plakater</a> til min skole eller organisation'
+  signup_send_posters_address_label: Adresse på skole/organisation
+  signup_whole_school_flag_label: Dette arrangement er for en hel skole
+  signup_your_event: Tilmeld dit arrangement
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_name_placeholder: Dit navn
+  signup_email_placeholder: you@example.com
+  signup_organization_name_placeholder: For eksempel, Gammelby Skole
+  signup_event_location_placeholder: "Postnr og land ELLER fuldstændig adresse.\r\n(Vi bruger det til at vise arrangementet på vores kort)"
+  signup_special_event_details_placeholder: Beskriv hvad der gør dette til et særligt arrangement
+  signup_send_posters_address_placeholder: Denne adresse deles ikke på vores kort
+  signup_event_type_in_school: På en skole
+  signup_event_type_out_of_school: Udenfor skolen
+  signup_submit_label: Registrér dig
+  signup_submit_error_message: Der er sket en fejl. Tjek at du har udfyldt alle krævede felter korrekt.
+  signup_thank_you_header: Tak fordi du har meldt dig som arrangør af Hour of Code.
+  signup_thank_you_message: Vi har sendt en bekræftelsesmail med hjælp til hvordan du kommer i gang.
+  map_header: '# Hour of Code arrangementer verden over'
+  see_all_events: Se alle arrangementer
+  map_header_company: '# arrangeret i samarbejde med'
+  map_search_placeholder: Søg efter et Hour of Code arrangement
+  map_search_search: Søg
+  map_search_reset: Nulstil
+  meta_tag_og_title: Hour of Code er her
+  meta_tag_og_description: Hour of Code er en global bevægelse som når millioner af elever i 180+ lande og på mere end 30 sprog. Fra 4 til 104 år.
+  meta_tag_twitter_title: Hour of Code er her
+  meta_tag_twitter_description: Hour of Code er en global bevægelse som når millioner af elever i 180+ lande og på mere end 30 sprog. Fra 4 til 104 år.
+  twitter_default_text: 'Jeg deltager i dette års #HourOfCode, gør du? @codeorg'
+  hardware_prizes_form_name_label: Dit navn
+  hardware_prizes_form_name_placeholder: Dit navn
+  hardware_prizes_form_email_label: Din email
+  hardware_prizes_form_email_placeholder: Din email
+  hardware_prizes_form_school_name_label: Skolens navn
+  hardware_prizes_form_school_name_placeholder: Skolens navn
+  hardware_prizes_form_school_address_label: Skolens adresse
+  hardware_prizes_form_school_address_placeholder: Skolens adresse
+  hardware_prizes_form_school_type_label: Type af skole
+  hardware_prizes_form_school_type_option_elementary: Grundskole (indskoling/mellemtrin)
+  hardware_prizes_form_school_type_option_middle_school: Grundskole (mellemtrin/udskoling)
+  hardware_prizes_form_school_type_option_high_school: Ungdomsuddannelse
+  hardware_prizes_form_qualifying_school_label: Dette er en offentlig grundskole i USA (K-12)
+  hardware_prizes_form_number_students_label: Antal elever som deltager
+  hardware_prizes_form_number_students_placeholder: Antal elever
+  hardware_prizes_form_plan_file_label: Upload time/ugeplan for dit Hour of Code arrangement
+  hardware_prizes_form_plan_file_description: 'Indsend en enkel plan for hvordan du planlægger at organisere elev-deltagelsen i dit Hour of Code arrangement. Se et eksempel på en plan: #PDF# | #Word#'
+  hardware_prizes_form_submit_label: Indsend
+  hoc_faq_title: FAQ
+  hoc_faq_what_is_hoc_q: Hvad er Hour of Code?
+  hoc_faq_what_is_hoc_a: "Hour of Code er een times introduktion til at programmere, designed for at afmystificere kode og vise at alle kan lære det grundlæggende. <a href='http://code.org/learn'>Prøv selv øvelserne</a>."
+  hoc_faq_last_year: Prøv øvelserne
+  hoc_faq_when_is_hoc_q: Hvornår er Hour of Code?
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: Hvorfor programmering?
+  hoc_faq_why_cs_a: "<i>Alle</i> elever bør have mulighed for at lære at programmere. Det hjælper til med at træne problemløsning, logik og kreativitet. Ved at starte tidligt, får eleverne et fundament for succes i et hvilket som helst karriereforløb i det 21. århundrede. Se mere baggrund og statistik på <a href='http://code.org'>Code.org</a>."
+  hoc_faq_how_participate_q: Hvordan kan jeg deltage i Hour of Code?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Hvem står bag Hour of Code?
+  hoc_faq_behind_hoc_a: "Hour of Code er organiseret af <a href='http://code.org'>Code.org</a>, en offentlig frivillig organisation dedikeret til at øge deltagelse i datalogi og programmering ved at gøre det tilgængelig i flere skoler, øge andelen af piger og kvinder, og elever fra etniske minoriteter. En  <a href='http://code.org/about/partners'>stor koalition af partnere</a> er gået sammen for at støtte Hour of Code. Den inkluderer bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske «College Board»."
+  hoc_faq_host_q: Jeg ved ikke noget om at programmere. Kan jeg stadig være arrangør?
+  hoc_faq_host_a: "Selvfølgelig, Hour of Code aktivteter er selv-instruerende. Alt du behøver at gøre er <a href='http://code.org/learn'>at prøve vores nuværende øvelser</a>, vælg den øvelse du ønsker, og vælg et tidspunkt &mdash; vi tager os af resten. Vi har øvelser rettet mod enhver alder og erfaring, fra børnehave og op. Start planlægningen af dit arrangement ved at læse vores <a href='target-resources-how-to'>«Sådan gør du»-vejledning</a>."
+  hoc_faq_need_computers_q: Skal jeg have computere til alle deltagere?
+  hoc_faq_need_computers_a: "Nej. Vi har Hour of Code øvelser som virker på PCer, smartphones, tablet og endda nogen som slet ikke kræver nogen form for computer! Du kan være med uanset hvor du er, med hvad du end har til rådighed. <p><i>Her er nogen muligheter:</i><br><ul><li><b>Arbejd to og to.</b> Forskning viser at elever lærer bedst gennem  <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>par-programmering</a>, hvor de deler en computer og arbejder sammen. Så få eleverne til at arbejde sammen to og to. <li><b>Brug en projektor.</b> Hvis du har en projektor og en computer med net-adgang, så kan hele din gruppe arbejde sammen i Hour of Code. Se videoerne sammen og løs opgaverne eller svar på spørgsmål på skift. <li><b>Gå unplugged.</b> Vi tilbyder øvelser, som slet ikke kræver nogen form for computer.</ul>"
+  hoc_faq_international_q: 'Jeg er i <country>. Hvordan deltager jeg internationalt?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_tutorial_q: Hvordan kan jeg lave en øvelse eller vejledning til Hour of Code?
+  hoc_faq_tutorial_a: "Hvis du er interesseret i at blive øvelsespartner, <a href='target-tutorial-guidelines'>så tjek vores retningslinjer og instruktioner</a>. Vi ønsker at tilbyde mange muligheder, men hovedformålet er at elever og lærere som slet ikke kender til programmering skal få den bedst mulige oplevelse."
+  hoc_faq_more_questions_q: Flere spørgsmål?
+  hoc_faq_more_questions_a: "Prøv at finde svaret i vores <a href='http://support.code.org'>support-forum</a>."
+  hoc_faq_scratch_q: Jeg bruger Scratch til Hour of Code, men hvad nu hvis mine elever har iPads i stedet for bærbare computere?
+  hoc_faq_scratch_a: "Scratch kan ikke køre på tablets. Hvis du har yngre elever, kan de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org, Tynker, Lightbot eller CodeSpark."
+  hoc_faq_account_q: Behøver elever at logge på med en konto?
+  hoc_faq_account_a: "Nej. Der kræves ingen form for registrering eller login, for at elever kan deltage i Hour of Code. De fleste af de <a href='http://code.org/learn/beyond'>udvidede kurser</a> kræver at der oprettes konti, så man kan følge elevernes status og fremdrift."
+  hoc_faq_frozen_q: Hvor er øvelsen med Anna og Elsa?
+  hoc_faq_frozen_a: "Den er nu offentliggjort på <a href='http://code.org/learn'> Code.org/learn</a>. Vi håber du vil synes om den!"
+  hoc_faq_high_school_q: Hvilken aktivitet skal jeg bruge til gymnasieelever?
+  hoc_faq_high_school_a: "Uanset alder, anbefaler vi først at prøve en af begynder-øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, for eksempel øvelsen med Angry Birds eller Anna og Elsa fra Frozen. En gymnasieelev kan ofte gennemføre en af disse på 30 minutter og kan derefter prøve en mere avanceret øvelse i JavaScript, som for eksempel Khan Academy eller CodeHS."
+  hoc_faq_count_hoc_q: Hvordan tælles antallet af Hours of Code?
+  hoc_faq_count_hoc_a: "Optællingen giver ikke et nøjagtigt mål for deltagelse. Fordi vi ikke kræver at eleverne er logget ind eller registreret kan det ske at nogle elever bliver talt to gange mens elever der par-programmerer for eksempel kun bliver talt en gang. Læs flere detaljer om målingen<a href='http://code.org/loc'> her</a>."
+  stats_hoc_2013_image_alt: Statistik fra Hour of Code 2013
+  stats_growth: Den hurtigste til at nå 15 millioner brugere.
+  stats_i18n: Students are learning in 40 languages
+  stats_tumblr: 'Tumblr: 3,5 år'
+  stats_facebook: 'Facebook: 3 år'
+  stats_twitter: 'Twitter: 2,5 år'
+  stats_pinterest: 'Pinterest: 2 år'
+  stats_instagram: 'Instagram: 14 måneder'
+  stats_hoc: 'Hour of Code: 5 dage'
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_nina: '"Hver eneste dag gav det samme resultat&mdash; 100% engagement." - Nina Nichols Peery, lærer'
+  stats_student: '"Jeg vidste det var en <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5. klasse'
+  stats_michael: '"Jeg har <b>aldrig - nogensinde -</b> set mine elever så interesserede i at lære." - Michael Clark, lærer'
+  resources_how_to: Lærervejledning
+  resources_how_to_events: Arrangements how-to guide
+  resources_how_to_districts: Guide til lokalområder
+  resources_how_to_officials: Guide for offentligt ansatte
+  resources_handouts: Handouts til at sprede budskabet
+  resources_videos: Videoer
+  resources_posters: Plakater
+  resources_social: Sociale medier
+  resources_banners: Bannere
+  resources_emails: Eksempler på mails
+  resources_stats: Nyttig statistik og annoncering
+  resources_press_kit: Presse-kit
+  resources_country_resources: Country Specific Resources
+  events_title: Alle Hour of Code begivenheder
+  events_nav_all: Alle begivenheder
+  events_nav_whole_schools: Skoler
+  events_nav_special: Særlige begivenheder
+  events_nav_orgs: Organisationer
+  events_all_old_title: All @year Hour of Code events
+  events_all_title: Alle Hour of Code begivenheder
+  events_whole_school_title: 'Hour of Code begivenheder - skoler'
+  events_special_title: Særlige Hour of Code begivenheder
+  events_orgs_title: Alle Hour of Code begivenheder arrangeret af partnerskabs organisationer
+  event: begivenhed
+  events: begivenheder
+  footer_copyright_message: Copyright 2015 Code.org. Alle rettigheder forbeholdes.
+  footer_trademark_message: Hour of Code™ er et trademark fra Code.org.
+  footer_menu_partners: Partnere
+  footer_menu_contact: Kontakt os
+  footer_menu_support: Support
+  footer_menu_terms: Vilkår
+  footer_menu_privacy: Privatlivspolitik

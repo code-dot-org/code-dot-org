@@ -1,0 +1,316 @@
+nn:
+  site_name: Kodetimen
+  language: Nynorsk
+  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  coming_soon: Kjem snart
+  campaign_date_start_short: 7. Des
+  campaign_date_start_long: 7. Desember
+  campaign_date_short: Dec. 7-13
+  campaign_date_full: December 7-13
+  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_intro_default: 'Kodetimen er ei global rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst kan organisere ein kodetime kvar som helst. Timeslange leksjonar er tilgjengelege på over 30 språk. Det trengs inga erfaring. <strong>Alder: frå 4 til 104.</strong>'
+  front_watch_video: Sjå den nye videoen
+  front_watch_regular_video: Se videoen
+  header_menu_resources: Ressursar
+  header_menu_faq: Spørsmål og svar
+  header_menu_prizes: Premiar
+  company_4-H: 4-H ungdoms utvikling
+  company_asa: Sambandet for skulefritidsordningar
+  company_bgca: 'Gute- og jente-klubbar i USA'
+  company_bsusa: Gute-speidarar i USA
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: Jente-speidar i USA
+  company_khanacademy: Khan Academy
+  company_mesa: Mathematics Engineering Science Achievement
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: Teach for All
+  company_teachforamerica: Teach for America
+  company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
+  prizes_all: Premiar til kvar einaste arrangør
+  prizes_every_organizer: Kvar arrangør av Kodetimen vil få lagringsplass i Dropbox eller Skype-kreditt som takk for innsatsen
+  prizes_technology: 'Ein offentleg skule i kvar stat i USA (& Washington DC) vil vinne utstyr til ein verdi av 10 000 dollar'
+  prizes_tech_chats: '# klasserom vil vinne videosamtalar med veldig spesielle gjester'
+  prizes_robots: 100 klasserom vil vinne eit sett med programmerbare robotar
+  prizes_brilliant: Ein skule i kvar provins og territorie vil motta $2000 for et brilliant prosjekt (Kun i UK)
+  prizes_actua: "15 schools across Canada will receive 2 hands-on STEM workshops by one of Actua's members"
+  prizes_details: Detaljar
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: Terms and Conditions
+  prizes_nav_faq: Spørsmål og svar
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Korleis gjennomføre ein Kodetime</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Reklamer for Kodetimen</a>"
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  anybody_can_learn: Alle kan lære.
+  get_started: Start
+  beyond_an_hour: Beyond an Hour of Code
+  register_now: Registrer deg no
+  share_on_facebook: Share on Facebook
+  share_on_twitter: Share on Twitter
+  front_join_us_heading: Ein kodetime for kvar einaste elev.
+  front_join_us_description: Datavitenskap er eit grunnlag for kvar elev. Hjelp oss til å introdusere det for 100 millonar elevar.
+  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_button: Bli med
+  front_what_is_hoc: 'Kva er Kodetimen? '
+  front_join_us_header: Alle kan lære det grunnleggjande, og har det gøy medan dei gjer det!
+  front_join_us_teacher: Er du ein lærar?
+  front_join_us_inspire: Inspirer elevane med
+  front_join_us_inspire_link: Kodetimen i klasserommet.
+  front_join_us_parent: Er du ein forelder?
+  front_join_us_ask_link: Spør den lokale skulen din om
+  front_join_us_ask: å arrangere ein kodetime.
+  front_join_us_computer_science: Er du entusiatisk for datavitskap?
+  front_join_us_spread: Spre ordet.
+  front_join_us_organize: Eller arranger ein kodetime sjølv.
+  front_join_us_how_to_run: Les om korleis du kan arrangere ein kodetime
+  front_join_us_help_promote: Hjelp oss å med promotering av kodetimen
+  front_join_us_students: Elevar
+  front_join_us_teachers: Lærarar
+  front_join_us_everyone: Alle
+  front_join_us_try: Prøv
+  front_join_us_host: Arranger
+  front_join_us_support: Støtt
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: Namnet ditt
+  signup_email_label: E-post
+  signup_organization_name_label: Skule eller organisasjon
+  signup_event_type_label: Type arrangement
+  signup_event_entire_school_label: Hele skulen min skal vere med
+  signup_event_location_label: Stad for arrangementet (valfritt)
+  signup_special_event_flag_label: Dette arrangementet er verdt å framheva
+  signup_special_event_details_label: Detaljar om dette arrangementet
+  signup_send_posters_flag_label: 'Send <a href= "/resources#posters">plakatar</a> til skulen eller organisasjonen min'
+  signup_send_posters_address_label: Adressa til skulen eller organisasjonen
+  signup_whole_school_flag_label: Dette arrangementet er for heile skulen
+  signup_your_event: Registrer arrangement ditt
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_name_placeholder: Namnet ditt
+  signup_email_placeholder: deg@eksempel.no
+  signup_organization_name_placeholder: For eksempel Lillevik skule
+  signup_event_location_placeholder: "Postnr og land eller full adresse.\r\n(Vi brukar dette til å plassere ei nål på kartet.)"
+  signup_special_event_details_placeholder: Kva er spesielt med dette arrangementet
+  signup_send_posters_address_placeholder: Denne adressa vil ikkje bli vist på kartet
+  signup_event_type_in_school: På ein skule
+  signup_event_type_out_of_school: Utanfor skulen
+  signup_submit_label: Register deg
+  signup_submit_error_message: Det oppstod ein feil. Kontroller at alle nødvendige felt er rette.
+  signup_thank_you_header: Takk for at du registrerte deg som arrangør av ein kodetime.
+  signup_thank_you_message: Vi har sendt deg bekreftelse på e-post med informasjon for å hjelpe deg i gong.
+  map_header: Talet på Kodetime-arrangementer over heile verda
+  see_all_events: See all events
+  map_header_company: '# by company organizers'
+  map_search_placeholder: Search for Hour of Code events
+  map_search_search: Search
+  map_search_reset: Reset
+  meta_tag_og_title: The Hour of Code is here
+  meta_tag_og_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 30 språk. Alder: 4 til 104.'
+  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_description: 'Kodetimen er ei verdensomsfattande rørsle som når ut til titalls millionar elevar i meir enn 180 land og fins på over 30 språk. Alder: 4 til 104.'
+  twitter_default_text: 'Eg skal vera med på #kodetime #HourOfCode i år, skal du? @codeorg'
+  hardware_prizes_form_name_label: Namnet ditt
+  hardware_prizes_form_name_placeholder: Namnet ditt
+  hardware_prizes_form_email_label: E-post
+  hardware_prizes_form_email_placeholder: E-post
+  hardware_prizes_form_school_name_label: Namnet på skulen
+  hardware_prizes_form_school_name_placeholder: Namnet på skulen
+  hardware_prizes_form_school_address_label: Adressa til skulen
+  hardware_prizes_form_school_address_placeholder: Adressa til skulen
+  hardware_prizes_form_school_type_label: Kva slags skule
+  hardware_prizes_form_school_type_option_elementary: Barneskule
+  hardware_prizes_form_school_type_option_middle_school: Ungdomsskule
+  hardware_prizes_form_school_type_option_high_school: Vidaregåande skule
+  hardware_prizes_form_qualifying_school_label: Dette er ein offentleg grunnskule i USA (K-12)
+  hardware_prizes_form_number_students_label: Antall elevar som deltek
+  hardware_prizes_form_number_students_placeholder: Antall elevar
+  hardware_prizes_form_plan_file_label: Last opp time/vekeplan for arrangementet ditt
+  hardware_prizes_form_plan_file_description: 'Send eit enkelt oversyn over korleis du planlegg å organisere at kvar elev skal gjennomføre Kodetimen på skulen. Sjå eit eksempel på plan: #PDF # | #Word #'
+  hardware_prizes_form_submit_label: Send
+  hoc_faq_title: Vanlege spørsmål
+  hoc_faq_what_is_hoc_q: 'Kva er Kodetimen? '
+  hoc_faq_what_is_hoc_a: "Kodetimen er ein timeslang introduksjon til datavitskap, designe for å avmystifisere kode og vise at alle kan læra det grunnleggande.<a href='http://code.org/learn'>Sjekk ut oppgåvene</a>."
+  hoc_faq_last_year: Prøv oppgåvene
+  hoc_faq_when_is_hoc_q: Når er kodetimen?
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: Kvifor datavitskap?
+  hoc_faq_why_cs_a: '<i>Alle</i> studentar burde ha mogelegheita til å lære datavitskap. Det fostrar problemløysingseigenskaper, logikk og kreativitet. Ved å byrje tidleg får elevane eit grunnlag for suksess i kva som helst karrieresti for det 21. århundret. Sjå meir statistikk på <a href="http://code.org">Code.org</a>.'
+  hoc_faq_how_participate_q: Korleis deltek eg i ein Kodetime?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Kven står bak Kodetimen?
+  hoc_faq_behind_hoc_a: "Kodetimen er organisert av  <a href='http://code.org'>Code.org</a>, ein non-profittorganisasjon som søkjer å utvide deltaking i datavitskap ved å gjere den tilgjengeleg i fleire skular, og ved å auke deltakinga blant kvinner og minoritetselevar. Ei <a href='http://code.org/about/partners'>stor gruppe bedrifter</a> har gått saman for å støtte Kodetimen &mdash; inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College Board."
+  hoc_faq_host_q: Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?
+  hoc_faq_host_a: "Sjølvsagt! Kodetime-aktivitetar er brukarstyrte. Alt du treng er å <a href='http://code.org/learn'>sjå på våre noverande veiledningar</a>, plukke den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved å lese vår <a href='target-resources-how-to'>veiledning</a>."
+  hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
+  hoc_faq_need_computers_a: "Nei. Me har Kodetime-veiledningar som fungerar på PC, smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke. Du kan delta uansett kvar du er, med det du har. <p><i>Her er nokre val:</i><br><ul><li><b>Arbeid i par.</b> Forsking viser at elevar lærer best ved <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>parprogrammering</a>, ved å dele ei datamaskin og arbeide saman. Oppfordre elevane til å gå i par.</li><li><b>Bruk ei videokanon.</b> Om du har ein prosjektør og ein skjerm for ei datamaskin tilknytta internett, kan heile gruppa gjere ein Kodetime saman. Sjå videoar saman og ta runder der kvar og ein løyser gåter eller svarer på spørsmål</li><li><b>Heilt utan straum.</b> Me har også veiledningar som ikkje krev datamaskiner i det heile teke.</li></ul>"
+  hoc_faq_international_q: 'Eg er i <country>. Korleis kan eg delta internasjonalt?'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_tutorial_q: Korleis kan eg lage ei veiledning for Kodetimen?
+  hoc_faq_tutorial_a: "Om du er interessert i å bli ein veiledningspartner, <a href='target-tutorial-guidelines'>sjå våre retningslinjer og instruksjonar</a>. Me ynskjer å skape mange ulike mogelegheiter, men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye innan datavitskap."
+  hoc_faq_more_questions_q: Har du framleis fleire spørsmål?
+  hoc_faq_more_questions_a: "Sjå om du finn eit svar i vårt <a href='http://support.code.org'>brukarstøtteforum</a>."
+  hoc_faq_scratch_q: I skal bruke Scratch i Kodetimen, men kva om elevane har iPads i staden for laptops?
+  hoc_faq_scratch_a: "Scratch kjøyrer ikkje på nettbrett. Om elvane er små kan dei bruke appen ScratchJR for iPad(for dei som kan lese). Om du ser på oppgåvene på<a href='http://code.org/learn'>Code.org/learn</a>kan du finne andre oppgåver som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark."
+  hoc_faq_account_q: Må elevane logge på med ein konto?
+  hoc_faq_account_a: "Nei. Registrering eller innlogging er ikkje naudsynt for at elevar skal prøve Kodetimen. Dei fleste <a href='http://code.org/learn/beyond'>oppfølgingskursa</a>krev ein konto for å lagre elevanes framgong."
+  hoc_faq_frozen_q: Kvar er oppgåvene med Anna og Elsa?
+  hoc_faq_frozen_a: "Frost-oppgåvene er på<a href='http://code.org/learn'>Code.org/learn</a>. Me håpar du likar dei!"
+  hoc_faq_high_school_q: Kva for aktivitet bør eg gjere med elevar i vidaregåande skule?
+  hoc_faq_high_school_a: "Me anbefaler å starte med begynneroppgåvene på <a href='http://code.org/learn'>Code.org/learn</a>for alle aldersgrupper, for eksempel oppgåva med Angry Birds eller med Anna og Elsa frå Frost. Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS."
+  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  stats_hoc_2013_image_alt: Tal frå Kodetimen 2013
+  stats_growth: Det var den raskaste til å oppnå 15 millionar brukarar.
+  stats_i18n: Students are learning in 40 languages
+  stats_tumblr: 'Tumblr: 3,5 år'
+  stats_facebook: 'Facebook: 3 år'
+  stats_twitter: 'Twitter: 2,5 år'
+  stats_pinterest: 'Pinterest: 2 år'
+  stats_instagram: 'Instagram: 14 månader'
+  stats_hoc: 'Kodetimen: 5 dagar'
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_nina: '«Kvar dag gav det same resultatet &mdash; 100 % engasjement.» – Nina Nichols Peery, lærar'
+  stats_student: '«Eg visste dette var ein <b>sjanse eg berre ville få éin gong i livet</b>.» – Mariana Alzate, femteklassing'
+  stats_michael: '«Eg har <b>aldri, nokonsinne</b> sett elevane mine så interessert i å lære.» – Michael Clark, lærar'
+  resources_how_to: Veiledning for lærarar
+  resources_how_to_events: Arrangementsguide
+  resources_how_to_districts: Områdeguide
+  resources_how_to_officials: How-to guide for offentlige tjenestemenn
+  resources_handouts: Flygeblad for å spreie ordet
+  resources_videos: Videoar
+  resources_posters: Plakatar
+  resources_social: Sosialt
+  resources_banners: Bannere
+  resources_emails: Eksempel-epostar
+  resources_stats: Nyttige statistikkar og sitat
+  resources_press_kit: Presse-sett
+  resources_country_resources: Country Specific Resources
+  events_title: Alle Kodetime-hendingar
+  events_nav_all: Alle hendingar
+  events_nav_whole_schools: Heile skular
+  events_nav_special: Spesialhendingar
+  events_nav_orgs: Organisasjonar
+  events_all_old_title: All @year Hour of Code events
+  events_all_title: Alle Kodetime-hendingar
+  events_whole_school_title: Kodetime-hendingar for heile skular
+  events_special_title: Spesielle Kodetime-hendingar
+  events_orgs_title: Alle Kodetime-arrangementer organisert av partnere
+  event: hending
+  events: arrangement
+  footer_copyright_message: Opphavsrett 2015 Code.org. Alle rettigheter reservert.
+  footer_trademark_message: Varemerket Hour of Code™ høyrer til Code.org.
+  footer_menu_partners: Partnarar
+  footer_menu_contact: Kontakt oss
+  footer_menu_support: Kundestøtte
+  footer_menu_terms: Vilkår
+  footer_menu_privacy: Personvern

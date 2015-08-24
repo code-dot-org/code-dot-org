@@ -1,0 +1,326 @@
+ja:
+  site_name: Hour of Code
+  language: 日本語
+  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  coming_soon: 近日公開
+  campaign_date_start_short: Dec. 7
+  campaign_date_start_long: December 7
+  campaign_date_short: Dec. 7-13
+  campaign_date_full: December 7-13
+  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
+  front_intro_default: 'Hour of Codeは、180カ国以上の生徒数千万人が参加する世界的な運動です。誰でもどこでもHour of Codeのイベントを主催する事が出来ます。1時間のチュートリアルは 30 以上の言語で利用可能です。<strong>経験は必要ありません。4歳から104歳が対象です。</strong>。'
+  front_watch_video: 新しいビデオを見る
+  front_watch_regular_video: Watch the video
+  header_menu_resources: リソース
+  header_menu_faq: FAQ
+  header_menu_prizes: 賞品
+  company_4-H: 4-H 青少年クラブ
+  company_asa: Afterschool Alliance
+  company_bgca: ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ
+  company_bsusa: ボーイスカウトオブアメリカ
+  company_cgcs: Council of the Great City Schools
+  company_gsusa: ガールスカウトオブアメリカ
+  company_khanacademy: カーン アカデミー
+  company_mesa: 理数工学業績
+  company_napcs: National Alliance of Public Charter Schools
+  company_ngcp: National Girls Collaborative Project
+  company_teachforall: みんなに教える
+  company_teachforamerica: アメリカのために教える
+  company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
+  prizes_all: 各主催者に送られる賞
+  prizes_every_organizer: Hour of Codeの各主催者にはDropboxもしくは、 Skypeのクレジットが感謝の気持ちとして送られます。
+  prizes_technology: ワシントンD.C.を含めるアメリカの各州から公共学校を１つ選んで、テクノロジー分野に使える10,000ドル分が当たります。
+  prizes_tech_chats: ＃ クラスルームはとても特別なゲストとのビデオチャットができる権利を獲得できます
+  prizes_robots: プログラミング可能なロボットが100クラスに贈られます。
+  prizes_brilliant: 各県と各郡一校ずつに、素晴らしいプロジェクト用に 2000 ドルを受け取ることができます
+  prizes_actua: カナダ全土15 の学校には、2つのActuaメンバーの一人とSTEM ハンズオンワーク ショップ の権利が手に入ります。
+  prizes_details: 詳細
+  prizes_nav_dc: 謎のワシントン DC 旅行
+  prizes_nav_technology: あなたの学校のための 10,000 ドルの価値の技術
+  prizes_nav_video_chat: テクノロジーの達人とビデオチャット
+  prizes_nav_skype_dropbox: イベント企画者は、もれなくSkype クレジットまたは、 Dropbox の容量がもらえます。
+  prizes_nav_brilliant: $2,000 の華麗な研究プロジェクト
+  prizes_nav_actua: Actua ワーク ショップ
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: 利用規約
+  prizes_nav_faq: FAQ
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Hour of Codeの実行方法</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'> Hour of Codeを応援します</a>"
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  anybody_can_learn: 誰もが学べます。
+  get_started: スタート
+  beyond_an_hour: Hour of Code の１時間を終えて
+  register_now: 今すぐ登録！
+  share_on_facebook: Facebookでシェアする
+  share_on_twitter: Twitterでシェアする
+  front_join_us_heading: Hour of Codeをすべての学生へ。
+  front_join_us_description: コンピュータ ・ サイエンスはすべての学生のための基盤です。1 億人のひとにをそれを紹介するのを助けてください。
+  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_button: 私たちと参加しようよ。
+  front_what_is_hoc: Hour of Codeとは何でしょう？
+  front_join_us_header: 誰でも基本を学習することができ、楽しみながらできます ！
+  front_join_us_teacher: 先生ですか？
+  front_join_us_inspire: 生徒たちを盛り上げてください。
+  front_join_us_inspire_link: 1時間のコーディング授業
+  front_join_us_parent: あなたは親ですか？
+  front_join_us_ask_link: あなたの地元の学校に問いかけてください。
+  front_join_us_ask: Hour of Codeを主催する。
+  front_join_us_computer_science: コンピューター科学が好きですか？
+  front_join_us_spread: みんなに広げよう
+  front_join_us_organize: もしくは、Hour of Codeのイベントを主催する。
+  front_join_us_how_to_run: Hour of Codeをどう主催するか。
+  front_join_us_help_promote: Hour of Codeを宣伝するのを助けてください。
+  front_join_us_students: 生徒
+  front_join_us_teachers: 先生方
+  front_join_us_everyone: みんな
+  front_join_us_try: 試す
+  front_join_us_host: 主催する。
+  front_join_us_support: 支援する。
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: |
+    お名前
+    
+  signup_email_label: あなたのメール アドレス
+  signup_organization_name_label: 学校や組織の名前
+  signup_event_type_label: 'イベントのタイプ:'
+  signup_event_entire_school_label: うちの学校全体で参加しています。
+  signup_event_location_label: (省略可能) イベントの場所
+  signup_special_event_flag_label: 私の特別なイベントのハイライト
+  signup_special_event_details_label: 特別イベントの詳細
+  signup_send_posters_flag_label: '<a href= "/resources#posters">ポスター</a>私の学校もしくは組織に送って下さい。 '
+  signup_send_posters_address_label: 学校や組織の住所
+  signup_whole_school_flag_label: このイベントは、学校全体のためのものです。
+  signup_your_event: イベントにサインアップする。
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_name_placeholder: |
+    お名前
+    
+  signup_email_placeholder: you@example.com
+  signup_organization_name_placeholder: 例えば、リンカーン ・ ハイスクール
+  signup_event_location_placeholder: "郵便番号と国名または住所。 \r (地図上にあなたの位置情報をピンで表示するのに使います。)"
+  signup_special_event_details_placeholder: どうすればこのイベントが特別な物になるか説明します。
+  signup_send_posters_address_placeholder: この住所は私たちの地図上には共有されません。
+  signup_event_type_in_school: 学校で
+  signup_event_type_out_of_school: 学校の外で
+  signup_submit_label: サインアップ
+  signup_submit_error_message: エラーが発生しました。必須箇所が全て正しく記入されていることを確認ください。
+  signup_thank_you_header: Hour of Codeのイベントを主催していただきありがとうございます。
+  signup_thank_you_message: |
+    始める前に知っておくと役立つ情報が入った確認メールを送りました。
+    
+  map_header: '# 世界中のHour of Code'
+  see_all_events: すべてのイベントを見る
+  map_header_company: '# 会社主催'
+  map_search_placeholder: Hour of Codeのイベントを検索する
+  map_search_search: 検索
+  map_search_reset: リセット
+  meta_tag_og_title: Hour of Codeがやってきました
+  meta_tag_og_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
+  meta_tag_twitter_title: Hour of Codeがやってきました
+  meta_tag_twitter_description: Hour of Codeは、180 以上の国々で 30 以上の言語で 4 歳から 104 歳まで数千万人の学生に届く世界的な運動です。
+  twitter_default_text: '私は今年#HourOfCodeに参加しています、あなたは? @codeorg'
+  hardware_prizes_form_name_label: |
+    お名前
+    
+  hardware_prizes_form_name_placeholder: |
+    お名前
+    
+  hardware_prizes_form_email_label: あなたのメール アドレス
+  hardware_prizes_form_email_placeholder: あなたのメール アドレス
+  hardware_prizes_form_school_name_label: 学校名
+  hardware_prizes_form_school_name_placeholder: 学校名
+  hardware_prizes_form_school_address_label: 学校の住所
+  hardware_prizes_form_school_address_placeholder: 学校の住所
+  hardware_prizes_form_school_type_label: 学校の種類
+  hardware_prizes_form_school_type_option_elementary: 小学校
+  hardware_prizes_form_school_type_option_middle_school: 中学生
+  hardware_prizes_form_school_type_option_high_school: 高校
+  hardware_prizes_form_qualifying_school_label: これは K 12 アメリカの公立学校です。
+  hardware_prizes_form_number_students_label: 参加した生徒数
+  hardware_prizes_form_number_students_placeholder: 生徒数
+  hardware_prizes_form_plan_file_label: Hour of Codeの物流計画をアップロードします。
+  hardware_prizes_form_plan_file_description: 'あなたの学校において、Hour of Codeを行う為にどのように生徒達をまとめるか計画している簡単なスケジュールを提出してください。サンプルプランの参照： #PDF ＃ |#Word ＃'
+  hardware_prizes_form_submit_label: 提出
+  hoc_faq_title: よくあるご質問
+  hoc_faq_what_is_hoc_q: Hour of Codeとは何でしょう？
+  hoc_faq_what_is_hoc_a: "Hour of Codeはコンピューター科学を１時間だけ紹介し、分かりやすく説明し、誰もが基本を学べます。<a href='http://code.org/learn'>チュートリアルを見てみる</a>."
+  hoc_faq_last_year: チュートリアルを試してください。
+  hoc_faq_when_is_hoc_q: Hour of Codeはいつですか？
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_why_cs_q: なぜコンピューター科学なのですか？
+  hoc_faq_why_cs_a: "<i>どの</i> 学生にもコンピューター科学を学ぶ機会があるべきです。それは問題解決のスキルや、ロジック、そして創造性の育成に役立つからです。早く始める事により、受講生には、21 世紀のキャリアへの道で成功するための基礎が備われます。<a href='http://code.org'> Code.org</a> ここにてもっと詳しい統計を参照してください。"
+  hoc_faq_how_participate_q: どうやって Hour of Codeに参加すればいいのか?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Hour of Codeは誰が運営しているのですか?
+  hoc_faq_behind_hoc_a: "Hour of Codeは<a href='http://code.org'>Code.org</a>により運営されています。公共 501c3 非営利団体は、より多くの学校が参加する事、女性の参加を増やす事そして、マイノリティーの学生にコンピューター科学への参加を拡大させることに専念しています。 <a href='http://code.org/about/partners'>前例にないパートナー達</a>が一緒になってHour of Codeを支援してくれています。 &mdash; マイクロソフト, アップル、アマゾン Boys and Girls Clubs of America そして、大学の理事会などを含みます。"
+  hoc_faq_host_q: コーディングについて知らなくても、イベントを主催できますか？
+  hoc_faq_host_a: "もちろんです。Hour of Codeの活動は、自分からです。やることは <a href='http://code.org/learn'> 現在のチュートリアルを試してみる</a>ことだけです、あなたが試したいチュートリアルを選択して、時間を1 時間作る事だけです &mdash; 後は私たちに任せてください。すべての年齢と経験レベル、幼稚園から、それ以上のオプションを用意しています。あなた自身で<a href='/resources/how-to'> 指導書</a> を読んでイベントを計画してください。"
+  hoc_faq_need_computers_q: すべての参加者はコンピューターが必要ですか？
+  hoc_faq_need_computers_a: "いいえ、Hour of CodeのチュートリアルではPC、スマートフォン、タブレットで、そしていくつかの項目ではコンピューターが不要でも大丈夫な環境を用意しております。どこに居ても、何を持っていても参加できます。<p><i>ここではいくつかのオプションを紹介します：</i> <br><ul><li><b>ペアでの作業</b>。研究によると、コンピューターを共有して一緒に学生が勉強する <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> ペア ・ プログラミング</a>事が一番最良だという報告があります。受講生を 2 倍にもします。<li><b>投影画面を使用する</b>。ウェブに接続されたコンピューター用にプロジェクターとスクリーンがあればグループ全体で一緒にHour of Codeを行うことができます。ビデオの部分を一緒に見ることができるし、交代でパズルを解いたり質問に答えられたりします。<li><b>アンプラグドで行こう</b>。コンピューターが一切なくても出来るチュートリアルを用意しています。</ul>"
+  hoc_faq_international_q: '<country>にいます。海外から参加するにはどうしたらよいでしょうか？'
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
+  hoc_faq_tutorial_q: Hour of Codeのチュートリアルをどうやって作ることができますか？
+  hoc_faq_tutorial_a: "もしチュートリアルのパートナーになる事に興味がありましたら、<a href='/tutorial-guidelines'> 当社のガイドラインと手順を参照してください</a> 。魅力的で様々なオプションを主催したいと思っていますが、主な目的は、コンピューター科学が初めてな生徒達や先生方に出来る限り経験してもらうことです。"
+  hoc_faq_more_questions_q: それでもまだ疑問がありますか?
+  hoc_faq_more_questions_a: "<a href='http://support.code.org'>サポート フォーラム</a> で回答を探してみてください。"
+  hoc_faq_scratch_q: Hour of Codeでスクラッチをやっています、でももし私の生徒がノートパソコンでなくiPadを持っていたら？
+  hoc_faq_scratch_a: "タブレットではスクラッチは実行されません。もし生徒が幼いのなら、スクラッチJR iPadアプリ(はじめての読み)が使えます。もし<a href='http://code.org/learn'>Code.org/learn</a>にあるチュートリアルをみたなら、Code.org、Tynker、LightbotやCodeSparkからiPadでできるチュートリアルを探してみてください。"
+  hoc_faq_account_q: 生徒のアカウントを使用してログオンすることは必要ですか？
+  hoc_faq_account_a: "いいえ、Hour of Codeを試したい生徒はサインアップまたはログインの必要は全くありません。<a href='http://code.org/learn/beyond'>コースをフォロー</a> のほとんどは生徒の進捗状況を保存するためだけにアカウントの作成が必要です。"
+  hoc_faq_frozen_q: アンナとエルザとチュートリアルはどこですか
+  hoc_faq_frozen_a: "それは今 <a href='http://code.org/learn'> Code.org/learn</a> に公開されます。楽しんでくださいね ！"
+  hoc_faq_high_school_q: 高校生とはどのアクティビティーを行えますか？
+  hoc_faq_high_school_a: "年齢層は関係なしに、アングリバードまたはアンナとエルザなどの <a href='http://code.org/learn'> Code.org/learn</a> にある初心者用チュートリアルから始めることををお勧めします。高校生 だとこれらを１つこなすのに30 分程で終了することができるます、そしてカーンアカデミーやCodeHSなどのJavaScript で行うより高度なチュートリアルを試すことができます。"
+  hoc_faq_count_hoc_q: Hours of Code の時間をどうやってはかるか。
+  hoc_faq_count_hoc_a: "Hour of Code の記録システムでは使用者数は正確に測定されていません。というのも、Hour of Code の参加者の記録時に、固有の生徒の使用者名を正確には数えていないからです。これは、特に、生徒がログインしたり登録しなくても使えるよう配慮されているからです。結果的に、参加者を多めに数えたり、少なめに数えたりしています。 <a href='http://code.org/loc'>詳細はこちら</a>。"
+  stats_hoc_2013_image_alt: Hour of Codeの 2013 の統計情報
+  stats_growth: 1500 万ユーザーに到達する最速記録でした。
+  stats_i18n: Students are learning in 40 languages
+  stats_tumblr: Tumblr： 3.5 年
+  stats_facebook: 'Facebook: 3 年'
+  stats_twitter: 'Twitter: 2.5 年'
+  stats_pinterest: 'Pinterest: 2 年'
+  stats_instagram: 'Instagram: 14 ヶ月'
+  stats_hoc: 'Hour of Code: 5 日'
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
+  stats_nina: '"毎日、同じ結果が得られました&mdash; 100 ％ の取り組み。"-ニーナ ・ ニコルズ ピーリー、教師。'
+  stats_student: '"<b>一生に一度</b> のチャンスだと思っていました。"-マリアナ 　アルザテ、小学 5 年生。'
+  stats_michael: '私は <b>いままで</b> 生徒達がこんなに興奮して学習しているのをみたことがありません。"-Michael クラーク、教師'
+  resources_how_to: 教師用手引き
+  resources_how_to_events: イベント の手引
+  resources_how_to_districts: 地域のための手引き
+  resources_how_to_officials: 公務員のための手引き
+  resources_handouts: Hour of Code を広めるための配布資料
+  resources_videos: ビデオ
+  resources_posters: ポスター
+  resources_social: ソーシャル
+  resources_banners: バナー
+  resources_emails: サンプルメール
+  resources_stats: 役立つ統計情報や宣伝文句
+  resources_press_kit: プレスキット
+  resources_country_resources: Country Specific Resources
+  events_title: 全ての Hour of Code のイベント
+  events_nav_all: すべてのイベント
+  events_nav_whole_schools: 学校全体
+  events_nav_special: 特別イベント
+  events_nav_orgs: 組織
+  events_all_old_title: All @year Hour of Code events
+  events_all_title: 全ての Hour of Code のイベント
+  events_whole_school_title: 学校全体での Hour of Code イベント
+  events_special_title: 特別な Hour of Code イベント
+  events_orgs_title: パートナーを組んでいる組織によってHour of Codeのイベントが成り立っています。
+  event: イベント
+  events: イベント
+  footer_copyright_message: Copyright 2015 Code.org. All rights reserved.
+  footer_trademark_message: Hour of Code™ は Code.orgの商標です。
+  footer_menu_partners: パートナー
+  footer_menu_contact: お問い合わせ
+  footer_menu_support: サポート
+  footer_menu_terms: 利用規約
+  footer_menu_privacy: プライバシーポリシー
