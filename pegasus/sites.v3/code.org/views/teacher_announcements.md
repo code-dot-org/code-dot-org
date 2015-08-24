@@ -2,13 +2,19 @@
 
 # Teacher Announcements
 
-August 4, 2015 &mdash; Did you know? Code.org is offering a full calendar of free online events for the Fall 2015 semester. Join us to connect with other educators, hear from experts and discuss the future of CS education.
+August 24, 2015 &mdash; We are excited to announce that we have fixed a bug with auto-scrolling on Code Studio. We hope this improvement helps make the coding experience easier for you and your students.
 
-[Explore Upcoming Events >](http://teacherblog.code.org/events)
+[Learn More >](http://teacherblog.code.org/post/127486457539/ever-since-we-launched-code-studio-almost-2-years)
 <br/>
 [View all announcements >](http://teachcodeorg.tumblr.com/)
 
 [/text]
+
+[video]
+
+![scrolling](/images//fit-175/scrolling-thumb.png "scrolling")
+
+[/video]
 
 
 
