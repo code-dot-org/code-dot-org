@@ -1,8 +1,4 @@
-* * *
 
-Titel: algemene gebruiksvoorwaarden
-
-* * *
 
 # Algemene gebruikersvoorwaarden
 

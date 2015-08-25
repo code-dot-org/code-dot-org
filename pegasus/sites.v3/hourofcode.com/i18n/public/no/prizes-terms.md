@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes Terms layout: wide nav: resources_nav
-
-* * *
 
 # Premier - vilkår og betingelser
 

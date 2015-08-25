@@ -1,8 +1,4 @@
-* * *
 
-title: Comunicato Stampa dell'Ora del Codice per i Rappresentanti Eletti layout: wide nav: resources_nav
-
-* * *
 
 # Esempio di comunicato stampa
 

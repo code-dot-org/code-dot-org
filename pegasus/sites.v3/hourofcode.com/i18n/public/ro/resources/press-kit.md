@@ -1,8 +1,4 @@
-* * *
 
-titlu: Kit pentru presă aspect: wide nav: resources_nav
-
-* * *
 
 ## Cum să atragi mass-media la evenimentul Hour of Code organizat de tine
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Conditions d'utilisation
-
-* * *
 
 # Conditions d'utilisation
 

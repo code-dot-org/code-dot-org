@@ -1,8 +1,4 @@
-* * *
 
-title: Terms of Service
-
-* * *
 
 # Terms of Service(서비스 약관)
 

@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Məhtəbinizdən hamının iştirak etməsini təmin edin
 

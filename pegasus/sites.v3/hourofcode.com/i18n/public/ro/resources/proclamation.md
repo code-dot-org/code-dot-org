@@ -1,8 +1,4 @@
-* * *
 
-titlu: Model de acordare de sprijin pentru Săptămâna Informaticii și Ora de Cod dispunere: largă nav: resources_nav
-
-* * *
 
 ### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
 

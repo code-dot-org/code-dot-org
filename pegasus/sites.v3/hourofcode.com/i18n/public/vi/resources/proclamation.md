@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và Giờ Code. trình bày: rộng nav: nguồn_nav
-
-* * *
 
 ### Dưới đây là mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và các nhà lập pháp liên bang và địa phương có thể sử dụng những mục tiêu của nó.
 

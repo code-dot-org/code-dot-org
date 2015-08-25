@@ -1,8 +1,4 @@
-* * *
 
-標題: Hour of Code How-To for 學區 排版: 寬 nav: resources_nav
-
-* * *
 
 # 將Hour of Code介紹給你的學校
 

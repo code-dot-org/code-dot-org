@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Comment attirer les médias à votre événement une Heure de Code
 

@@ -1,8 +1,4 @@
-* * *
 
-title: How-to Guide layout: wide nav: resources_nav
-
-* * *
 
 # Bagaimana mengajar satu jam Hour of Code
 

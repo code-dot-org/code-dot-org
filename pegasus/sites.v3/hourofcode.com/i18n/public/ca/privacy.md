@@ -1,8 +1,4 @@
-* * *
 
-Títol: política de privacitat
-
-* * *
 
 # Política de privacitat
 

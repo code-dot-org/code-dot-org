@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes Terms layout: wide nav: resources_nav
-
-* * *
 
 # 賞品 - 利用規約
 

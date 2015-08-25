@@ -1,8 +1,4 @@
-* * *
 
-titlu: Termenii Serviciului
-
-* * *
 
 # Termenii serviciului
 

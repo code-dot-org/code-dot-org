@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## メディアを Hour of Code イベントに呼び寄せるには
 

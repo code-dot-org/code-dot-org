@@ -1,8 +1,4 @@
-* * *
 
-title: Керівництво для державних чиновників layout: wide nav: resources_nav
-
-* * *
 
 ## Bring the Hour of Code to your entire community.
 

@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Saa koko koulusi osallistumaan
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
-
-* * *
 
 # 宣伝と役に立つ統計データ
 

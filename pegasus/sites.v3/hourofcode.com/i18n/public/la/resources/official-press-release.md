@@ -1,8 +1,4 @@
-* * *
 
-Título: hora de codigo comunicado de prensa de para la disposición de los funcionarios electos: nav ancho: resources_nav
-
-* * *
 
 # Simple comunicado de prensa para los funcionarios electos
 

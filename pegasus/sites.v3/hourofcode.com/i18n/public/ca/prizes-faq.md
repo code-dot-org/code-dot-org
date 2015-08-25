@@ -1,8 +1,4 @@
-* * *
 
-maquetació: àmplia
-
-* * *
 
 # Premis - preguntes freqüents
 

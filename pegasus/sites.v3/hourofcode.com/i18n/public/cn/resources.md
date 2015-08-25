@@ -1,8 +1,7 @@
-* * *
-
-标题：资源 布局：宽 导航：导航资源
-
-* * *
+---
+layout: wide
+nav: resources_nav
+---
 
 <div class="row">
   <h1 class="col-sm-12">

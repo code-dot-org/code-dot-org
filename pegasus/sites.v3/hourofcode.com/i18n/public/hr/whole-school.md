@@ -1,8 +1,4 @@
-* * *
 
-prikaz: širok
-
-* * *
 
 # Neka cijela Vaša škola učestvuje
 

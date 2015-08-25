@@ -1,8 +1,4 @@
-* * *
 
-izkārtojums: plats
-
-* * *
 
 # Balvas - biežāk uzdotie jautājumi
 

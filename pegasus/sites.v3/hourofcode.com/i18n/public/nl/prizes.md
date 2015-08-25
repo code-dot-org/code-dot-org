@@ -1,8 +1,4 @@
-* * *
 
-title: Prijzen layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

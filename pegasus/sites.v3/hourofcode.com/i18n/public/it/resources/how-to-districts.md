@@ -1,8 +1,4 @@
-* * *
 
-title: Cosa fare per l'Ora del Codice negli Istituti Scolastici layout: wide nav: resources_nav
-
-* * *
 
 # Introduci l'Ora del Codice nel tuo istituto scolastico.
 

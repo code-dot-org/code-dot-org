@@ -1,8 +1,4 @@
-* * *
 
-shtrirja: e gjerë
-
-* * *
 
 # Çmimet - PESH
 

@@ -1,8 +1,4 @@
-* * *
 
-titre: Prix affichage: large
-
-* * *
 
 <% if @country == 'la' %>
 

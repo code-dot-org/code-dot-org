@@ -1,8 +1,4 @@
-* * *
 
-titulli: Udhëzuesi paraqitja: e gjerë nav: burime_nav
-
-* * *
 
 # Si të shpjegosh një Orë të Kodimit
 

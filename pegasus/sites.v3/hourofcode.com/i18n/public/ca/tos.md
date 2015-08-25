@@ -1,8 +1,4 @@
-* * *
 
-Títol: Condicions d'ús
-
-* * *
 
 # Condicions d'ús
 

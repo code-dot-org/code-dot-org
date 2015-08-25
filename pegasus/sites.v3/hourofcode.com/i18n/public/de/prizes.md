@@ -1,8 +1,4 @@
-* * *
 
-title: Preise layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

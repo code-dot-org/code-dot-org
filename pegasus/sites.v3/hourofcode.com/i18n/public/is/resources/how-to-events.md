@@ -1,8 +1,4 @@
-* * *
 
-title: Klukkustund kóðunar, leiðarvísir layout: wide nav: resources_nav
-
-* * *
 
 # Að skipuleggja Klukkustund kóðunar
 

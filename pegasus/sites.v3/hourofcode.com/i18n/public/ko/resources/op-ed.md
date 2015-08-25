@@ -1,8 +1,4 @@
-* * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
-
-* * *
 
 ### 아래는 컴퓨터과학교육주간(Computer Science Education Week)과 그 목표들을 지지하는 특집 사설의 예시로서, 주의원, 지역의원, 비즈니스 리더 등에 의해 활용될 수 있습니다.
 

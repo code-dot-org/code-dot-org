@@ -1,8 +1,4 @@
-* * *
 
-title: 賞品 layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

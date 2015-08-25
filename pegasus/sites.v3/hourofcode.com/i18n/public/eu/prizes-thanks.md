@@ -1,8 +1,4 @@
-* * *
 
-title: Thank you layout: wide
-
-* * *
 
 # Thank you
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Privacy Policy
-
-* * *
 
 # Polityka Prywatności
 

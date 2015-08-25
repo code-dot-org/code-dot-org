@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Cách Tổ chức Sự Kiện Giờ Lập trình bố cục: rộng nav: nguồn_nav
-
-* * *
 
 # Hướng dẫn tổ chức sự kiện Giờ Lập trình
 

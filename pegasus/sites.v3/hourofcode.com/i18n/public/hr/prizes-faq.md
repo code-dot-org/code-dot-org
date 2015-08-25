@@ -1,8 +1,4 @@
-* * *
 
-prikaz: širok
-
-* * *
 
 # Nagrade - pitanja i odgovori
 

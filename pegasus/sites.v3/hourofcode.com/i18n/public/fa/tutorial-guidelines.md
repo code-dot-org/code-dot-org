@@ -1,8 +1,4 @@
-* * *
 
-طرح: گسترده
-
-* * *
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 

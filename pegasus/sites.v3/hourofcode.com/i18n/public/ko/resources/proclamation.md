@@ -1,8 +1,4 @@
-* * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
-
-* * *
 
 ### 아래는 컴퓨터과학교육주간 행사를 지원하는 예시 결의안으로, 주요 목표들은 주의원이나 지역국회의원들에 의해 활용될 수 있습니다.
 

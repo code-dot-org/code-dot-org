@@ -1,8 +1,4 @@
-* * *
 
-Titel: Uur Codevan Code How-To voor districten lay-out: breed nav: resources_nav
-
-* * *
 
 # Breng Uur Code naar je volledig schooldistrict.
 

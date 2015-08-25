@@ -1,8 +1,4 @@
-* * *
 
-Titel: Servicevilkår
-
-* * *
 
 # Vilkår og Betingelser
 

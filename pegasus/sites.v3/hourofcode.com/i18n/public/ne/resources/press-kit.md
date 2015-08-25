@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## तपाइँको Hour of Code को घटनामा मिडियालाई कसरी आकर्षित गर्ने
 

@@ -1,8 +1,4 @@
-* * *
 
-titulli: Politika e Privatësisë
-
-* * *
 
 # Politika e Privatësisë
 

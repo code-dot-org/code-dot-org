@@ -1,8 +1,4 @@
-* * *
 
-title: Termini di Servizio
-
-* * *
 
 # Termini di Servizio
 

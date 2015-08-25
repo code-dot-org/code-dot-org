@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code Press Release for Elected Officials layout: wide nav: resources_nav
-
-* * *
 
 # 지역 행정직정치인(선출직)을 위한 샘플 보도 자료
 

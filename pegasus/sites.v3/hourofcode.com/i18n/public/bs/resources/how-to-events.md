@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Čas kodiranja objašnjenje layout: wide nav: resources_nav
-
-* * *
 
 # Čas kodiranja vodič događaja
 

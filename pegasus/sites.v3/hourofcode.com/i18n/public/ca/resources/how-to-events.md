@@ -1,8 +1,4 @@
-* * *
 
-Títol: event l'Hora del Codi Guia: àmplia nav: resources_nav
-
-* * *
 
 # Guia per un esdeveniment de l'Hora del Codi
 

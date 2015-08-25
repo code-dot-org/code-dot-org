@@ -1,8 +1,4 @@
-* * *
 
-Título: Términos del servicio
-
-* * *
 
 # Términos y Condiciones del servicio
 

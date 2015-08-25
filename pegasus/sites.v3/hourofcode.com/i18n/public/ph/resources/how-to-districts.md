@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code How-To para sa mga Districts layout: wide nav: resources_nav
-
-* * *
 
 # Dalhin ang Hour of Code sa inyong buong distrito ng paaralan.
 

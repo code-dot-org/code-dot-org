@@ -1,8 +1,4 @@
-* * *
 
-title: Xidmətin şərtləri
-
-* * *
 
 # Xidmət şərtləri
 

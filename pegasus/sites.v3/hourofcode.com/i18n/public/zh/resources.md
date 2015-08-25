@@ -1,8 +1,7 @@
-* * *
-
-標題: 資源 版面: 寬 導覽:資源導覽
-
-* * *
+---
+layout: wide
+nav: resources_nav
+---
 
 <div class="row">
   <h1 class="col-sm-12">

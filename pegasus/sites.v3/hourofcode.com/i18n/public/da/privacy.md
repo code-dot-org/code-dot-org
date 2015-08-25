@@ -1,8 +1,4 @@
-* * *
 
-title: Privatlivspolitik
-
-* * *
 
 # Privatlivspolitik
 

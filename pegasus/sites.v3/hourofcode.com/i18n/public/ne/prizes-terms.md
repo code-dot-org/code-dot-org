@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes Terms layout: wide nav: resources_nav
-
-* * *
 
 # पुरस्कार - नियम र शर्तहरू
 

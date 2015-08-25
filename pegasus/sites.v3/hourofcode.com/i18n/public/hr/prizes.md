@@ -1,8 +1,4 @@
-* * *
 
-naslov: Nagrade prikaz: širok
-
-* * *
 
 <% if @country == 'la' %>
 

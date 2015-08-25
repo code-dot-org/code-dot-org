@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Korleis få merksemd om Kodetimen i media?
 

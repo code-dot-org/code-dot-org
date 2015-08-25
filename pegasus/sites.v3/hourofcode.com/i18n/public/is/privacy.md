@@ -1,8 +1,4 @@
-* * *
 
-title: Meðferð persónuupplýsinga
-
-* * *
 
 # Meðferð persónuupplýsinga
 

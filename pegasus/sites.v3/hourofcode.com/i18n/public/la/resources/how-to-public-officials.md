@@ -1,8 +1,4 @@
-* * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
-
-* * *
 
 ## Lleva la Hora de Código a toda tu comunidad.
 

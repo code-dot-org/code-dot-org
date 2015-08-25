@@ -1,8 +1,4 @@
-* * *
 
-title: Οδηγός layout: wide nav: resources_nav
-
-* * *
 
 # Πώς να διδάξεις την Ώρα του Κώδικα
 

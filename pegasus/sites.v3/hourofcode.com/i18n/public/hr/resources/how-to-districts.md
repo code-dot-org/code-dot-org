@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Sat Kodiranja upute za četvrti izgled: široki nav: resources_nav
-
-* * *
 
 # Organizirajte Sat kodiranja za cijeli školski okrug.
 

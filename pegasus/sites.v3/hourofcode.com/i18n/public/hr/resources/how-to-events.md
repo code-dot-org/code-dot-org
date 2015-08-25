@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Sat Kodiranja objašnjenje layout: wide nav: resources_nav
-
-* * *
 
 # Vodič događaja Sata kodiranja
 

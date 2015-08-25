@@ -1,8 +1,4 @@
-* * *
 
-title: Premios Términos layout: wide nav: resources_nav
-
-* * *
 
 # Premios - términos y condiciones
 

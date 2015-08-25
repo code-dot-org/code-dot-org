@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 

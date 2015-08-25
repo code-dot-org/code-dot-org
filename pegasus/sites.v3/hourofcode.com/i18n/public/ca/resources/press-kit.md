@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
 

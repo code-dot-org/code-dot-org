@@ -1,8 +1,4 @@
-* * *
 
-Titel: Uur Code perscommuniqué voor verkozenen layout: wide nav: resources_nav
-
-* * *
 
 # Voorbeeld perscommuniqué voor verkozenen
 

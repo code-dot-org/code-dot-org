@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Linee guida al Tutorial per "L'Ora del Codice" e per "La Settimana dell'Insegnamento dell'Informatica"
 

@@ -1,8 +1,4 @@
-* * *
 
-tittel: Personvern
-
-* * *
 
 # Personvern
 

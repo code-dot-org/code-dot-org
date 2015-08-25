@@ -1,8 +1,4 @@
-* * *
 
-Tiêu đề: Lời giới thiệu và thống kê. Lề: rộng nav: nguồn_nav
-
-* * *
 
 # Lời giới thiệu và các thống kê hữu ích
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
-
-* * *
 
 ### 以下はコンピューターサイエンス週間の支援のための論説例です。州議員、国会議員、ビジネスリーダーの方々に利用してもらうことを意図しています。
 

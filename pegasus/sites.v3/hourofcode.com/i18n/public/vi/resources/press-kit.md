@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Làm thế nào để thu hút các phương tiện truyền thông tới sự kiện GIỜ LẬP TRÌNH 
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code Event How-To layout: wide nav: resources_nav
-
-* * *
 
 # Kod Saatı tədbiri üçün təlimat
 

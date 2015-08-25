@@ -1,8 +1,4 @@
-* * *
 
-titlu: Ghid Cum să... aspect: wide nav: resources_nav
-
-* * *
 
 # Cum sa inveti o Ora de Programare
 

@@ -1,8 +1,4 @@
-* * *
 
-títol: premis maquetació: àmplia
-
-* * *
 
 <% if @country == 'la' %>
 

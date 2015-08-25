@@ -1,8 +1,4 @@
-* * *
 
-title: Va multumesc layout: wide
-
-* * *
 
 # Vă mulţumesc
 

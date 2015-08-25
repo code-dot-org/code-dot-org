@@ -1,8 +1,4 @@
-* * *
 
-título: Prémios formato: amplo
-
-* * *
 
 <% if @country == 'la' %>
 

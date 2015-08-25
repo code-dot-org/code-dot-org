@@ -1,8 +1,4 @@
-* * *
 
-title: Зразок резолюції підтримки тижня інформатики та Години коду layout: wide nav: resources_nav
-
-* * *
 
 ### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
 

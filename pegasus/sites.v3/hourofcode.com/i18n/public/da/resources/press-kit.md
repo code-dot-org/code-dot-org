@@ -1,8 +1,4 @@
-* * *
 
-Titel: pressemateriale layout: bred nav: resources_nav
-
-* * *
 
 ## Hvordan kan du få medieopmærksomhed om dit Hour of Code arrangement
 

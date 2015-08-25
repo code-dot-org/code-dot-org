@@ -1,8 +1,4 @@
-* * *
 
-Naslov: kako-da vodič izgled: široki nav: resources_nav
-
-* * *
 
 # Kako poučavati Sat Kodiranja
 

@@ -1,8 +1,4 @@
-* * *
 
-Název: Ceny rozložení: široký
-
-* * *
 
 <% if @country == 'la' %>
 

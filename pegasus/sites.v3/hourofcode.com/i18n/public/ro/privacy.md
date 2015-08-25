@@ -1,8 +1,4 @@
-* * *
 
-Titlu: Politica de confidenţialitate
-
-* * *
 
 # Politică de Confidenţialitate
 

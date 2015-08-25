@@ -1,8 +1,4 @@
-* * *
 
-Titel: How-to guide til offentligt ansatte layout: bred nav: resources_nav
-
-* * *
 
 ## Fortæl om Hour of Code til hele dit netværk.
 

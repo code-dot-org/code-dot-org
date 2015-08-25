@@ -1,8 +1,4 @@
-* * *
 
-title: Призи layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

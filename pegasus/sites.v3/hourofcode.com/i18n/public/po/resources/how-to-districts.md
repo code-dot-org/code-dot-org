@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
-
-* * *
 
 # Trazer a Hora do Código para as escola de todo o distrito.
 

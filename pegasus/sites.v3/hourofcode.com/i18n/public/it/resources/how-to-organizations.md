@@ -1,8 +1,4 @@
-* * *
 
-titolo: Come organizzare l'evento layout: wide nav: resources_nav
-
-* * *
 
 <div class="row">
   <h1 class="col-sm-6">

@@ -1,8 +1,4 @@
-* * *
 
-title: Pogoji uporabe
-
-* * *
 
 # Pogoji uporabe
 

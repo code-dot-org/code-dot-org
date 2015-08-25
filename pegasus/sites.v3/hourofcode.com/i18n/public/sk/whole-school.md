@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Zapojte do toho celú školu
 

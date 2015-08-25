@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes Terms layout: wide nav: resources_nav
-
-* * *
 
 # Mga Premyo - mga tuntunin at kundisyon
 

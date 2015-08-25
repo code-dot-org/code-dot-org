@@ -1,8 +1,4 @@
-* * *
 
-Título: Como organizar um evento Hora do Código Dimensão: grande Nav: recursos de navegação
-
-* * *
 
 # Guia do evento Hora do Código
 

@@ -1,8 +1,4 @@
-* * *
 
-Naslov: uvjeti korištenja
-
-* * *
 
 # Uvjeti pružanja usluge
 

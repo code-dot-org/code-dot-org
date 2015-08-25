@@ -1,8 +1,4 @@
-* * *
 
-Titel: Tack layout: bred
-
-* * *
 
 # Tack
 

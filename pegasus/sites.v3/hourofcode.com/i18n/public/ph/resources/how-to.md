@@ -1,8 +1,4 @@
-* * *
 
-title: How-to Guide layout: wide nav: resources_nav
-
-* * *
 
 # How to teach one Hour of Code
 

@@ -1,8 +1,4 @@
-* * *
 
-Titel: Privacy Policy
-
-* * *
 
 # Privacybeleid
 

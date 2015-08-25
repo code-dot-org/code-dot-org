@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Giải thưởng bố cục: rộng
-
-* * *
 
 <% if @country == 'la' %>
 

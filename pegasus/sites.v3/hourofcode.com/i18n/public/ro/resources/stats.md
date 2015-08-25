@@ -1,8 +1,4 @@
-* * *
 
-titlu: Rezumate și Statistici aspect: wide nav: resources_nav
-
-* * *
 
 # Rezumate si statistici utile
 

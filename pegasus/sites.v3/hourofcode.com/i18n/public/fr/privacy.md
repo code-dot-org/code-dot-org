@@ -1,8 +1,4 @@
-* * *
 
-titre : Politique de Confidentialité
-
-* * *
 
 # Politique de Confidentialité
 

@@ -1,8 +1,4 @@
-* * *
 
-Název: Podmínky služby
-
-* * *
 
 # Podmínky služby
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Hur man lockar till sig media till ett Hour of Code evenemang
 

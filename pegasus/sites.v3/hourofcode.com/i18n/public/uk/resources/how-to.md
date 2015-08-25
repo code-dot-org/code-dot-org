@@ -1,8 +1,4 @@
-* * *
 
-title: Інструкція проведення layout: wide nav: resources_nav
-
-* * *
 
 # Як провести Годину коду
 

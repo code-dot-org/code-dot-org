@@ -1,8 +1,4 @@
-* * *
 
-title: Konfidencialitātes politika
-
-* * *
 
 # Privātuma politika
 

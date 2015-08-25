@@ -1,8 +1,4 @@
-* * *
 
-title: How-to Guide layout: wide nav: resources_nav
-
-* * *
 
 # Kod Saatını necə tədris etməli
 

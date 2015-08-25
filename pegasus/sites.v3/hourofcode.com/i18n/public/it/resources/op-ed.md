@@ -1,8 +1,4 @@
-* * *
 
-title: Articoli di Esempio di Appoggio alla Settimana dell'Educazione Informatica e all'Ora del Codice layout: wide nav: resources_nav
-
-* * *
 
 ### Qui di seguito trovate un esempio di articolo di appoggio alla Settimana dell'Educazione Informatica e una descrizione dei suoi obiettivi che potrebbero essere usati dallo stato, da legislatori locali, imprenditori, ecc.
 

@@ -1,8 +1,4 @@
-* * *
 
-title: 公共団体の方への手引き layout: wide nav: resources_nav
-
-* * *
 
 ## Bring the Hour of Code to your entire community.
 

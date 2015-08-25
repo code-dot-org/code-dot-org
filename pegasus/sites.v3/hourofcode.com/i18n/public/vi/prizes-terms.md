@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes Terms layout: wide nav: resources_nav
-
-* * *
 
 # Giải thưởng - Các điều khoản và điều kiện khi nhận giải
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Pers layout: wide nav: resources_nav
-
-* * *
 
 ## Hoe je de aandacht van de media trekt voor je Uur Code-evenement
 

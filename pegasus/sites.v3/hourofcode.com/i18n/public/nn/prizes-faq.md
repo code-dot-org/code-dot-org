@@ -1,8 +1,4 @@
-* * *
 
-oppsett: bredt
-
-* * *
 
 # Prizes - FAQs
 

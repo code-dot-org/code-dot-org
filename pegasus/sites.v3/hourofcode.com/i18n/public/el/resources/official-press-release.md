@@ -1,8 +1,4 @@
-* * *
 
-Τίτλος: Ώρα του Κώδικα Δελτίο Τύπου για Εκλεγμένους Αξιωματούχους layout: wide nav: resources_nav
-
-* * *
 
 # Sample press release for elected officials
 

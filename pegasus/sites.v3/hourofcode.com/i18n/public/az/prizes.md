@@ -1,8 +1,4 @@
-* * *
 
-title: Hədiyyələr layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

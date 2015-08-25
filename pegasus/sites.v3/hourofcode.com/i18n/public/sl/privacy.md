@@ -1,8 +1,4 @@
-* * *
 
-title: Politika zasebnosti
-
-* * *
 
 # Politika zasebnosti
 

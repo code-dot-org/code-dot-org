@@ -1,8 +1,4 @@
-* * *
 
-布局：宽
-
-* * *
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 

@@ -1,8 +1,4 @@
-* * *
 
-Título: diseño de reseñas y estadísticas: nav ancho: resources_nav
-
-* * *
 
 # Reseñas y estadisticas útiles
 

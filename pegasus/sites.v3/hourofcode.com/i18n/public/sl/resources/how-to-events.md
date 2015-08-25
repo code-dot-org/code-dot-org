@@ -1,8 +1,4 @@
-* * *
 
-title: Ura za kodo kako izvesti dogodek layout: wide nav: resources_nav
-
-* * *
 
 # Vodič za dogodke Ura za kodo
 

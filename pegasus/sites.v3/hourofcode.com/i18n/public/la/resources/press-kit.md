@@ -1,8 +1,4 @@
-* * *
 
-Título: equipo de diseno: nav ancho: resources_nav
-
-* * *
 
 ## Cómo atraer los medios a tú evento "Hora de Código"
 

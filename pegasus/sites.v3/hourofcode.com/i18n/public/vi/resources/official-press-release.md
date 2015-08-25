@@ -1,8 +1,4 @@
-* * *
 
-Tiêu đề: Hour of Code áp dụng giấy biên nhận cho viên chức dân cử Bố trí: rộng rãi Nav: resources_nav
-
-* * *
 
 # Mẫu văn bản áp dụng giấy biên nhận cho viên chức dân cử
 

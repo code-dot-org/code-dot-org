@@ -1,8 +1,4 @@
-* * *
 
-title: Kennsluhandbók layout: wide nav: resources_nav
-
-* * *
 
 # Hvernig á að kenna Klukkustund kóðunar
 

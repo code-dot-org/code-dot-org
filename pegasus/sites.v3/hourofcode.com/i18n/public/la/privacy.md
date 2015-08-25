@@ -1,8 +1,4 @@
-* * *
 
-titulo: Política de Privacidad
-
-* * *
 
 # Política de Privacidad
 

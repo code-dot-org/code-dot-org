@@ -1,8 +1,4 @@
-* * *
 
-titlu: Model de acordare de sprijin pentru Saptamana Informaticii in Educatie si Ora de Programare dispunere: larga nav: resources_nav
-
-* * *
 
 ### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Informaticii in Educatie si scopurile sale, care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
 

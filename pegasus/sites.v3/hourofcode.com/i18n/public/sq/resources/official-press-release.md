@@ -1,8 +1,4 @@
-* * *
 
-titulli: Ora e Kodimit njoftimi për shtyp për zyrtarët e zgjedhur plani: i gjerë nav: burime_nav
-
-* * *
 
 # Shembulli i njoftimit për shtyp për zyrtarët e zgjedhur
 
