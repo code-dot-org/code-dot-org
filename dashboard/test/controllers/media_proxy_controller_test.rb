@@ -43,7 +43,7 @@ class MediaProxyControllerTest < ActionController::TestCase
     get :get, foo: 'bar'
     assert_response 400
   end
-  
+
   test "should fail if too many redirects" do
     FakeWeb.register_uri(:get, IMAGE_URI, [
                            {body: 'Redirect', status: 302, location: IMAGE_URI},
