@@ -5315,6 +5315,21 @@ NetSimTable.prototype.create = function (value, callback) {
 };
 
 /**
+ * @param {Object[]} values
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.multiCreate = function (values, callback) {
+  this.api_.createRow(values, function (err, datas) {
+    if (err === null) {
+      datas.forEach(function (data) {
+        this.addRowToCache_(data);
+      }, this);
+    }
+    callback(err, datas);
+  }.bind(this));
+};
+
+/**
  * @param {!number} id
  * @param {Object} value
  * @param {!NodeStyleCallback} callback
@@ -13219,30 +13234,17 @@ NetSimRouterNode.prototype.forwardMessageToAll_ = function (message, onComplete)
  */
 NetSimRouterNode.prototype.forwardMessageToNodeIDs_ = function (message,
     nodeIDs, onComplete) {
-  if (nodeIDs.length === 0) {
-    // All done!
-    onComplete(null);
-    return;
-  }
 
-  // Send to the first recipient, then recurse on the remaining recipients
-  var nextRecipientNodeID = nodeIDs[0];
-  NetSimMessage.send(
-      this.shard_,
-      {
+  var messages = nodeIDs.map(function(nodeID) {
+    return {
         fromNodeID: this.entityID,
-        toNodeID: nextRecipientNodeID,
-        simulatedBy: nextRecipientNodeID,
+        toNodeID: nodeID,
+        simulatedBy: nodeID,
         payload: message.payload
-      },
-      function (err) {
-        if (err) {
-          onComplete(err);
-          return;
-        }
-        this.forwardMessageToNodeIDs_(message, nodeIDs.slice(1), onComplete);
-      }.bind(this)
-  );
+      };
+  }, this);
+
+  NetSimMessage.sendMany(this.shard_, messages, onComplete);
 };
 
 /**
@@ -13501,6 +13503,29 @@ var NetSimLogger = require('./NetSimLogger');
 var logger = NetSimLogger.getSingleton();
 
 /**
+ * @typedef {Object} MessageData
+ * @property {!number} fromNodeID - sender node ID
+ * @property {!number} toNodeID - destination node ID
+ * @property {!number} simulatedBy - node ID of client simulating message
+ * @property {!string} payload - message content in a binary string
+ * @property {number} extraHopsRemaining
+ * @property {number[]} visitedNodeIDs
+ */
+
+/**
+ * @typedef {Object} MessageRow
+ * @property {!number} fromNodeID - this message in-flight-from node
+ * @property {!number} toNodeID - this message in-flight-to node
+ * @property {!number} simulatedBy - Node ID of the client responsible for
+ *           all operations involving this message.
+ * @property {!Base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
+ * @property {!number} extraHopsRemaining
+ * @property {!number[]} visitedNodeIDs
+ */
+
+/**
  * Local controller for a message that is 'on the wire'
  *
  * Doesn't actually have any association with the wire - one could,
@@ -13516,6 +13541,7 @@ var logger = NetSimLogger.getSingleton();
  *        data.  If not, this message will initialize to default values.
  * @constructor
  * @augments NetSimEntity
+ * @implements MessageData
  */
 var NetSimMessage = module.exports = function (shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
@@ -13570,28 +13596,51 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
 NetSimMessage.inherits(NetSimEntity);
 
 /**
+ * Static row construction method. Used by dynamic buildRow method and
+ * by static async API creation methods to create a properly-formatted
+ * row for database insertion
+ * @param {MessageData} messageData
+ * @returns {MessageRow}
+ * @throws {TypeError} if payload is invalid
+ */
+NetSimMessage.buildRowFromData = function (messageData) {
+  return {
+    fromNodeID: messageData.fromNodeID,
+    toNodeID: messageData.toNodeID,
+    simulatedBy: messageData.simulatedBy,
+    base64Payload: binaryToBase64(messageData.payload),
+    extraHopsRemaining: utils.valueOr(messageData.extraHopsRemaining, 0),
+    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, [])
+  };
+};
+
+/**
  * Static async creation method.  Creates a new message on the given shard,
  * and then calls the callback with a success boolean.
  * @param {!NetSimShard} shard
- * @param {Object} messageData
- * @param {!number} messageData.fromNodeID - sender node ID
- * @param {!number} messageData.toNodeID - destination node ID
- * @param {!number} messageData.simulatedBy - node ID of client simulating message
- * @param {*} messageData.payload - message content
- * @param {number} messageData.extraHopsRemaining
- * @param {number[]} messageData.visitedNodeIDs
+ * @param {!MessageData} messageData
  * @param {!NodeStyleCallback} onComplete (success)
  */
 NetSimMessage.send = function (shard, messageData, onComplete) {
-  var entity = new NetSimMessage(shard);
-  entity.fromNodeID = messageData.fromNodeID;
-  entity.toNodeID = messageData.toNodeID;
-  entity.simulatedBy = messageData.simulatedBy;
-  entity.payload = messageData.payload;
-  entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
-  entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
   try {
-    entity.getTable().create(entity.buildRow(), onComplete);
+    var row = NetSimMessage.buildRowFromData(messageData);
+    shard.messageTable.create(row, onComplete);
+  } catch (err) {
+    onComplete(err, null);
+  }
+};
+
+/**
+ * Static async multi-create method. Creates new messages on the given shard,
+ * and then calls the callback with a success boolean.
+ * @param {!NetSimShard} shard
+ * @param {MessageData[]} messageDatas
+ * @param {!NodeStyleCallback} onComplete (success)
+ */
+NetSimMessage.sendMany = function (shard, messageDatas, onComplete) {
+  try {
+    var rows = messageDatas.map(NetSimMessage.buildRowFromData);
+    shard.messageTable.multiCreate(rows, onComplete);
   } catch (err) {
     onComplete(err, null);
   }
@@ -13615,30 +13664,12 @@ NetSimMessage.prototype.getTable = function () {
 };
 
 /**
- * @typedef {Object} MessageRow
- * @property {number} fromNodeID - this message in-flight-from node
- * @property {number} toNodeID - this message in-flight-to node
- * @property {number} simulatedBy - Node ID of the client responsible for
- *           all operations involving this message.
- * @property {Base64Payload} base64Payload - base64-encoded binary
- *           message content, all of which can be exposed to the
- *           student.  May contain headers of its own.
- */
-
-/**
  * Build own row for the message table
  * @returns {MessageRow}
  * @throws {TypeError} if payload is invalid
  */
 NetSimMessage.prototype.buildRow = function () {
-  return {
-    fromNodeID: this.fromNodeID,
-    toNodeID: this.toNodeID,
-    simulatedBy: this.simulatedBy,
-    base64Payload: binaryToBase64(this.payload),
-    extraHopsRemaining: this.extraHopsRemaining,
-    visitedNodeIDs: this.visitedNodeIDs
-  };
+  return NetSimMessage.buildRowFromData(this);
 };
 
 
@@ -41194,19 +41225,31 @@ var tableApi = {
   },
 
   /**
-   * Insert a row into the table.
-   * @param {Object} value - desired row contents, must be JSON.stringify-able.
+   * Insert a row or rows into the table.
+   * @param {Object|Object[]} value - desired row contents, as either an
+   *        Object for a single row or an Array of Objects for multiple.
+   *        Must be JSON.stringify-able.
    * @param {NodeStyleCallback} callback - Expected result is the created
-   *        row object (which will include an assigned 'id' key).
+   *        row object or objects (which will include an assigned 'id'
+   *        key).
    */
   createRow: function(value, callback) {
+    var data;
+
+    try {
+      data = JSON.stringify(value);
+    } catch (e) {
+      callback(e, undefined);
+      return;
+    }
+
     $.ajax({
       url: this.baseUrl,
       type: "post",
       contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(value)
-    }).done(function(data, text) {
-      callback(null, data);
+      data: data
+    }).done(function(body, text) {
+      callback(null, body);
     }).fail(function(request, status, error) {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, undefined);
