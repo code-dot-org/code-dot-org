@@ -8,14 +8,14 @@ nav: about_nav
 ## How successful have our district partnerships been in driving short- and long-term outcomes in each region?
 <img src="/images/partners-2014-15.png" width="100%"/>
 
-In 2014-15, Code.org [partnered with over 70 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
+In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
 
 ### District-wide Impact and Barriers to Sustainability
 In partnership with [Outlier](http://outlier.uchicago.edu), 11 district leaders in six of our partner regions (Broward County, Charles County, Denver, New York City, Seattle, and Spokane) were interviewed. A range of district roles was represented in the sample, including curriculum supervisors, principal supervisors, CTE coordinators and directors, and assistant principals. All leaders had responsibilities outside of Code.org and reported that they spent from about 3% - 20% of their total workload on Code.org related activities.
 
 - Code.org has greatly increased the priority of computer science in the partner districts. 
 - Long-term sustainability of gains made through district partnerships is a top concern, for the following reasons:
-	- District leaders face many challenges in making Computer Science a priority and implementing Code.org, including: getting State-level buy-in, securing the necessary infrastructure and funds, integrating CS into the schedule and graduation requirements, and finding and supporting qualified teachers.
+	- District leaders face many challenges in making Computer Science a priority and implementing Code.org programs, including: getting State-level buy-in, securing the necessary infrastructure and funds, integrating CS into the schedule and graduation requirements, and finding and supporting qualified teachers.
 	- District leaders see a need to engage the broader local community in this effort, including guidance counselors, higher education institutions and industry.
 	- Current district leaders do not have actionable plans to sustain their computer science efforts, even though they intend to do so.
 

@@ -39,6 +39,12 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
+
+  /**
+   * Node's UUID assigned when it was initially inserted into the table.
+   * @type {string}
+   */
+  this.uuid = entityRow.uuid;
 };
 
 /**

@@ -1,0 +1,16 @@
+name 'U2L08 Assessment 0'
+
+markdown <<MARKDOWN
+## Router Table: Reflection
+
+In this activity you filled in a routing table by visiting other routers you were directly connected to find out what paths they . Why do routers need to use this method of talking to their direct neighbors in order to fill in their routing tables?
+MARKDOWN
+
+
+
+
+
+
+
+
+
