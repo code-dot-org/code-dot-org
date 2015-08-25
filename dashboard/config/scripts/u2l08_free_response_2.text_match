@@ -3,5 +3,7 @@ title 'Router Table: Reflection'
 
 
 markdown <<MARKDOWN
-How does the routing table system contribute to abstraction on the Internet? 
+Why do routers store information about neighbors and costs, rather than the whole path from themselves to another router?
 MARKDOWN
+
+
