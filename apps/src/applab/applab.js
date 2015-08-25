@@ -8,6 +8,7 @@
 /* global dashboard */
 
 'use strict';
+var React = require('react');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -297,6 +298,35 @@ var drawDiv = function () {
     // On clear gives us a fresh start, including our default screen.
     designMode.loadDefaultScreen();
     designMode.serializeToLevelHtml();
+  }
+
+  if (studioApp.share) {
+    var footerDiv = document.createElement('div');
+    footerDiv.setAttribute('id', 'footerDiv');
+    divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
+
+    React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
+      i18nDropdown: '',
+      strings: {
+        copyright: "copyright",
+        more: "more",
+        thank_you: "thank_you",
+        help_from_html: "help_from_html",
+        art_from_html: "art_from_html",
+        powered_by_aws: "powered_by_aws",
+        trademark: "trademark",
+        support: "support",
+        translate: "translate",
+        tos: "tos",
+        privacy: "privacy",
+      },
+      baseStyle: {
+        width: $("#divApplab").width(),
+        // We want a height of 34 after padding top/bottom have been applied
+        height:  34 - 2 * 3,
+        fontSize: 20
+      }
+    }), footerDiv);
   }
 };
 
