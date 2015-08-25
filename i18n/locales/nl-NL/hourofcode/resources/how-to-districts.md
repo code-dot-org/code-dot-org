@@ -18,4 +18,4 @@ Titel: Uur Codevan Code How-To voor districten lay-out: breed nav: resources_nav
     
       * **Organiseer een Uur Code evenement op districtsniveau.**Kijk op onze[event how-to gids](<%= hoc_uri('/resources/how-to-events') %>) voor een voorbeeld hoe deze show te gebruiken, media outreach kit of andere ondersteuningen.
     
-      * **Meer [ prijzen](<%= hoc_uri('/prizes') %>) voor elke organisator.** Elke deelnemende leraar zal dank u geschenken ontvangen. 100 klassen winnen tech chats met speciale gastsprekers. Onder de deelnemers Bill Gates, Sheryl Sandberg, Ashton Kutcher en meer). In iedere staat, zal één deelnemende school voor $10,000 aan technologie winnen voor hun school!</ol>
+      * **Meer [ prijzen](<%= hoc_uri('/prizes') %>) voor elke organisator.** Elke deelnemende leraar zal dank u geschenken ontvangen. In iedere staat, zal één deelnemende school voor $10,000 aan technologie winnen voor hun school!</ol>

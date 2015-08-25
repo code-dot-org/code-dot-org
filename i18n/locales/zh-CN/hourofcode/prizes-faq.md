@@ -20,7 +20,7 @@
 
 ## 非美国的学校可以获得视频聊天奖励吗？
 
-不，很遗憾，由于物流我们无法对美国和加拿大以外的学校提供视频聊天奖。 所有国际组织者**都有**资格获得Dropbox 空间或Skype 信用。
+不，很遗憾，由于物流我们无法对美国和加拿大以外的学校提供视频聊天奖。
 
 ## 为什么只有公立学校可以获得10000美元硬件奖励？
 
@@ -32,16 +32,16 @@
 
 ## 申请硬件奖励的截止日期是什么时间？
 
-要获得资格，整个学校必须注册编程一小时，并在2014年11月14日前完成[硬件申请表](<%= hoc_uri('/prizes') %>)。 在美国各州都将有一所学校收到我们为其班级配备的电脑。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. 在美国各州都将有一所学校收到我们为其班级配备的电脑。 Code.org will select and notify winners via email by December 1, 2015.
 
 ## 赢得科技聊天资格的截止日期是什么时间？
 
-要获得资格，你的教室必须在2014年11月14日前注册编程一小时。 教室将赢得与名人的视频聊天。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. 教室将赢得与名人的视频聊天。 Code.org will select and notify winners via email by December 1, 2015.
 
 ## 如果我的学校或教室得奖什么时候会得到通知？
 
-要获得资格，整个学校必须注册编程一小时，并在2014年11月14日前完成[硬件申请表](<%= hoc_uri('/prizes') %>)。 Code.org 将在 2014 年 12 月 1 日前选出获奖者并通过电子邮件告知。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## 如果我们全校没有在计算机科学教育周（十二月8-14日）期间参与编程一小时，我还有获奖资格吗？
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-可以，只是一定要提交一份物流计划，概述你的整个学校在十一月14日前是如何在一段合理的时间长度内注册并组织编程一小时。
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

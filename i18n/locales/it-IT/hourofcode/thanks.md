@@ -14,7 +14,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice!
 
-**OGNI** organizzatore dell'Ora del Codice riceverà 10 GB di spazio Dropbox o $10 di credito Skype come ringraziamento. [ Dettagli](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Diffondi la notizia
 
@@ -22,34 +24,20 @@ Dì ai tuoi amici de L'Ora del Codice con #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## Proponi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Proponi al tuo datore di lavoro di essere coinvolti
 
-## Chiedi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Invia questa email](<%= hoc_uri('/resources#email') %>) o [questo volantino](/resources/hoc-one-pager.pdf) al tuo principale.
-
-<% end %>
-
-## 3. Fai una donazione generosa
-
-[Dona alla nostra campagna di crowdfunding.](http://<%= codeorg_url() %>/donate) Per insegnare a 100 milioni di bambini abbiamo bisogno del vostro sostegno. Abbiamo appena lanciato la [più grande campagna di crowdfunding per l'educazione](http://<%= codeorg_url() %>/donare) nella storia. *Ogni* dollaro sarà abbinato al[donatore](http://<%= codeorg_url() %>/about/donors), raddoppiando il vostro impatto.
-
-## 4. Chiedi al tuo datore di lavoro di essere coinvolti
-
-[Inviare questa email](<%= hoc_uri('/resources#email') %>) al tuo manager, o al tuo CEO. Oppure [dai loro questo volantino](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Promuovi L'Ora del Codice nella tua comunità
+## 4. Promuovi il progetto L'Ora del Codice nella tua comunità
 
 Recluta un gruppo locale — un gruppo di boy scout, la tua chiesa, l'università o un sindacato. Oppure organizza una "festa di quartiere" per l'Ora del Codice.
 
-## 5. Chiedi ad un funzionario locale di sostenere l'Ora del Codice
+## 5. Proponi ad un funzionario locale di sostenere L'Ora del Codice
 
-[Invia questa email](<%= hoc_uri('/resources#politicians') %>) al tuo sindaco, al consiglio comunale o al consiglio scolastico. O [dai loro questo volantino](http://hourofcode.com/resources/hoc-one-pager.pdf) e invitali a visitare la tua scuola.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

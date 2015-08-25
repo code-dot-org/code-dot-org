@@ -104,9 +104,9 @@ Our code is segmented into four parts:
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-## Building Apps and Blockly-core (optional)
+## Building Javascript (apps, blockly-core, and shared) (optional)
 
-The studio.code.org default dashboard install includes a static build of blockly, but if you want to make modifications to blockly or blockly-core you'll want to enable building them in the build:
+The studio.code.org default dashboard install includes a static build of blockly and of the shared js, but if you want to make modifications to these you'll want to enable building them in the build:
 
 ### Enabling Apps Builds
 
@@ -115,22 +115,25 @@ You'll need to do this once:
 1. OS X:
   1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. `cd code-dot-org`
-1. Edit `locals.yml`
+1. To build apps/blocky-core, edit `locals.yml` to add: 
   1. Add `build_apps: true`
-  1. Add `build_blockly_core: true`
+  1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`
+1. To build shared js, edit `locals.yml` to add:
+  1. Add `build_shared_js: true`
+  1. Add `use_my_shared_js: true`
 1. `rake install`
 
-This configures your system to build apps (and blockly-core) whenever you run `rake build` and to use the version of blockly that you build yourself.
+This configures your system to build apps/blockly-core/shared whenever you run `rake build` and to use the versions that you build yourself.
 
-### Building Apps and Blockly-Core
+### Building
 
 1. `cd code-dot-org`
 1. `rake build`
 
 This will build everything you have set to build in `locals.yml`.
 
-You can use `rake build:apps` and `rake build:blockly_core` to build a specific project.
+You can use `rake build:apps`, `rake build:blockly_core` and `rake build:shared` to build a specific project.
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 

@@ -6,7 +6,7 @@ title: Guia para o evento Hora do Código layout: wide nav: resources_nav
 
 # Guia de evento da Hora do Código
 
-Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Computação (de 8 a 14 de dezembro) para celebrar a ciência da computação e inspirar mais estudantes a participar. Qualquer um, em qualquer lugar, pode organizar um evento Hora do Código.
+Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da Computação (de 7 a 13 de dezembro) para celebrar a ciência da computação e inspirar mais alunos a participar. Qualquer um, em qualquer lugar, pode organizar um evento da Hora do Código.
 
 ## 1) Prepare-se para seu evento
 
@@ -23,7 +23,6 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
   * Outras ideias para o evento: 
       * Convide um líder do setor da sua região para discutir seu trabalho envolvendo a ciência da computação
       * Convide um político local e peça para que os estudantes o ensinem a programar
-      * Assista a uma das sessões de Perguntas e Respostas com um embaixador da Hora do Código. Tudo será gravado e mostrado na página no YouTube da Code.org. Este ano contaremos com a participação de Bill Gates, Sheryl Sandberg, Ashton Kutcher e muito mais!
       * Peça para um grupo de estudantes demonstrar uma atividade offline
       * Peça para um grupo de estudantes ensinar o diretor ou um grupo de professores da escola a programar
       * Se a sua escola já oferece aulas de ciência da computação, organize uma demonstração de projetos
@@ -31,13 +30,13 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
 ## 3) Compartilhe como foi o evento
 
   * Compartilhe fotos do seu evento no Facebook e Twitter. 
-  * Use a hashtag **#HoraDoCodigo**
+  * Use a hashtag **#HoradoCodigo**
 
 ## Exemplo de Plano de Evento
 
 **Evento:** abertura da Semana da Educação em Ciência da Computação para toda a escola
 
-**Data:** 8 de dezembro (início da Semana da Educação em Ciência da Computação)
+**Data:** 7 de dezembro (início da Semana da Educação em Ciência da Computação)
 
 **Hora:** Durante o horário escolar. Preferência para o meio da manhã. Aproximadamente 1 hora de duração.
 
@@ -47,72 +46,11 @@ Sedie um evento Hora do Código durante a Semana da Educação em Ciência da Co
 
 ## Programação do evento
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Hora
-    </th>
-    
-    <th style="width:800px">
-      Ação
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10h00 - 10h05
-    </td>
-    
-    <td>
-      O evento inicia com um de nossos <a href="http://hourofcode.com/us/resources#videos">vídeos inspiradores</a>
-    </td>
-  </tr>
-  
-  <td>
-    10h05-10h15
-  </td>
-  
-  <td>
-    O diretor começa apresentando uma visão geral sobre a importância da ciência da computação. Use estes <a href="/resources/stats">infográficos e estatísticas</a>.
-  </td></tr> 
-  
-  <td>
-    10h15-10h17
-  </td>
-  
-  <td>
-    O evento inicia com um de nossos <a href="http://hourofcode.com/us/resources#videos">vídeos inspiradores</a>
-  </td></tr> 
-  
-  <td>
-    10h17-10h30
-  </td>
-  
-  <td>
-    Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.
-  </td></tr> 
-  
-  <td>
-    10h30-10h40
-  </td>
-  
-  <td>
-    Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos.
-  </td></tr> 
-  
-  <td>
-    10h40-11h00
-  </td>
-  
-  <td>
-    Os alunos farão a demonstração de uma atividade offline para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.
-  </td></tr> 
-  
-  <td>
-    11h00-11h05
-  </td>
-  
-  <td>
-    O professor que ajudou a trazer o evento para a escola fará os comentários finais.
-  </td>
-</table>
+| Hora          | Ação                                                                                                                                                           |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10h00 - 10h05 | O evento inicia com um de nossos [vídeos inspiradores](http://hourofcode.com/us/resources#videos)                                                              |
+| 10h05 - 10h15 | O diretor começa apresentando uma visão geral sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](/resources/stats)          |
+| 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
+| 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos. |
+| 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade offline para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                 |
+| 11h00 - 11h05 | O professor que ajudou a trazer o evento para a escola fará os comentários finais.                                                                             |

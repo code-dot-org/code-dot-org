@@ -4,9 +4,9 @@ Titlu: evenimentul "Ora de Cod" cum să... layout: largă nav: resources_nav
 
 * * *
 
-# Ghidul cum să... eveniment "Ora de Cod"
+# Ghidul de organizare a unui eveniment Hour of Code
 
-Găzduieşte un eveniment Ora de Cod în timpul săptămanii Saptamana Informaticii in Educatie (8-14 decembrie) pentru a sărbători Informatica şi pentru a inspira mai mulţi studenţi să se implice. Oricine si oriunde poate organiza un eveniment Ora de Cod.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Pregăteşte-te pentru eveniment
 
@@ -23,7 +23,6 @@ Găzduieşte un eveniment Ora de Cod în timpul săptămanii Saptamana Informati
   * Alte idei de eveniment: 
       * Invita un lider din industria locală, pentru a discuta despre felul in care informatica il ajuta in munca sa
       * Invita un politician local şi lasa elevii sa-l înveţe cum să implementeze un cod
-      * Priveste o sesiune de tipul "Intrebari si Raspunsuri" cu un ambasador al Orei de Cod. Vor fi inregistrati si postati pe pagina de YouTube a Code.org. Printre participantii din anul acesta sunt inclusi Bill Gates, Sheryl Sandberg, Ashton Kutcher si multi altii!
       * Desemneaza un grup de elevi care sa sustina o activitate in care sa nu fie utilizate computere
       * Desemneaza un grup de elevi care sa invete directorul scolii sau un grup de profesori cum sa implementeze coduri
       * Daca in scoala ta se preda deja informatica, desemneaza elevi care sa sustina proiecte
@@ -31,13 +30,13 @@ Găzduieşte un eveniment Ora de Cod în timpul săptămanii Saptamana Informati
 ## 3) Impartaseste cum a decurs
 
   * Distribuie fotografii ale evenimentului tau pe Facebook si Twitter. 
-  * Foloseste eticheta **#OradeCod**
+  * Foloseste eticheta **#OradeProgramare**
 
 ## Exemplu de plan pentru eveniment
 
 **Eveniment:** Saptamana Informaticii in Educatie, program desfasurat la nivelul intregii scoli
 
-**Data:** 8 decembrie (startul Saptamanii Informaticii in Educatie )
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Desfasurare:** In timpul zilelor de scoala. Evenimentele organizate dimineata sunt preferate. Desfasurarea dureaza aproximativ o ora.
 
@@ -47,72 +46,11 @@ Găzduieşte un eveniment Ora de Cod în timpul săptămanii Saptamana Informati
 
 ## Desfasurarea evenimentului
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Orar
-    </th>
-    
-    <th style="width:800px">
-      Activitati
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05
-    </td>
-    
-    <td>
-      Deschiderea, prin vizionarea unui <a href="http://hourofcode.com/us/resources#videos">videoclip motivational</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Directorul scolii ofera un discurs privind importanta informaticii. Se vor folosi aceste <a href="/resources/stats">statistici si grafice</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Deschiderea, prin vizionarea unui <a href="http://hourofcode.com/us/resources#videos">videoclip motivational</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Elevii vor desfasura o activitate demonstrativa in cadrul Orei de Cod pentru scoala. Intorsatura amuzanta - ei trebuie sa predea directorului, politicienilor sau altor elevi.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Profesorul indrumator care a ajutat la ridicarea evenimentului la nivelul intregii scoli ofera observatii concluzive.
-  </td>
-</table>
+| Orar             | Activitati                                                                                                                                    |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                        |
+| 10:05 - 10:15 am | Directorul scolii ofera un discurs privind importanta informaticii. Se vor folosi aceste [statistici si grafice](/resources/stats)            |
+| 10:15 - 10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                          |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                      |
+| 10:40 - 11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul. |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                             |

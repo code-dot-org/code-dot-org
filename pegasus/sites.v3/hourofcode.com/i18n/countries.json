@@ -280,7 +280,7 @@
   },
   "la": {
     "full_name": "Latin America",
-    "default_language": "es",
+    "default_language": "la",
     "partner_page": "code.org",
     "campaign_date_start_short": "5 de oct",
     "campaign_date_start_long": "5 de octubre",
@@ -442,7 +442,7 @@
   },
   "uk": {
     "full_name": "United Kingdom",
-    "default_language": "en",
+    "default_language": "gb",
     "partner_page": "uk.code.org",
     "campaign_date_start_short": "Dec. 7",
     "campaign_date_start_long": "December 7",
