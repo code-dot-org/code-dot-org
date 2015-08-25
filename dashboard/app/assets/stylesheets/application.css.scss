@@ -276,7 +276,7 @@ $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer, #copyright-flyout, #more-menu {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
@@ -304,13 +304,11 @@ $small-footer-standard-width: 400px;
   }
 }
 
-.small-footer {
+.small-footer-base {
   position: absolute;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
-  padding-top: 3px;
-  padding-bottom: 3px;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -383,7 +381,7 @@ $small-footer-standard-width: 400px;
 #copyright-flyout {
   z-index: 999;
 }
-.small-footer {
+.small-footer-base {
   z-index: 1000;
 }
 

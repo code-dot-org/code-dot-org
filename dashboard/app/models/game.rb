@@ -87,6 +87,11 @@ class Game < ActiveRecord::Base
   def uses_small_footer?
     app == NETSIM || app == APPLAB
   end
+  
+  # True if the app takes responsability for showing footer info
+  def owns_footer_for_share?
+    app === APPLAB
+  end
 
   def has_i18n?
     !(app == NETSIM || app == APPLAB)

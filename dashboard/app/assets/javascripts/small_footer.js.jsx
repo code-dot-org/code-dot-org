@@ -30,20 +30,23 @@ window.dashboard.getSmallFooterComponent = function (React) {
       // We let dashboard generate our i18n dropdown and pass it along as an
       // encode string of html
       i18nDropdown: React.PropTypes.string,
-      strings: React.PropTypes.shape({
-        copyright: React.PropTypes.string.isRequired,
-        more: React.PropTypes.string.isRequired,
+      copyrightInBase: React.PropTypes.bool.isRequired,
+      copyrightStrings: React.PropTypes.shape({
         thank_you: React.PropTypes.string.isRequired,
         help_from_html: React.PropTypes.string.isRequired,
         art_from_html: React.PropTypes.string.isRequired,
         powered_by_aws: React.PropTypes.string.isRequired,
-        trademark: React.PropTypes.string.isRequired,
-        support: React.PropTypes.string.isRequired,
-        translate: React.PropTypes.string.isRequired,
-        tos: React.PropTypes.string.isRequired,
-        privacy: React.PropTypes.string.isRequired,
-      }).isRequired,
-      baseStyle: React.PropTypes.object
+        trademark: React.PropTypes.string.isRequired
+      }),
+      baseCopyrightString: React.PropTypes.string,
+      baseMoreMenuString: React.PropTypes.string.isRequired,
+      baseStyle: React.PropTypes.object,
+      menuItems: React.PropTypes.arrayOf(
+        React.PropTypes.shape({
+          text: React.PropTypes.string.isRequired,
+          link: React.PropTypes.string.isRequired
+        })
+      ).isRequired
     },
 
     getInitialState: function () {
@@ -74,13 +77,9 @@ window.dashboard.getSmallFooterComponent = function (React) {
       }.bind(this));
     },
 
-    toggleVisibility: function (stateName) {
-      if (this.state.hidRecently) {
-        return;
-      }
-
+    setVisibility: function (stateName, visible) {
       var newState = {};
-      newState[stateName] = !this.state[stateName];
+      newState[stateName] = visible;
 
       if (newState[stateName]) {
         this.hideOnClickAnywhere();
@@ -88,86 +87,129 @@ window.dashboard.getSmallFooterComponent = function (React) {
       this.setState(newState);
     },
 
-    toggleCopyright: function () {
-      this.toggleVisibility('copyrightVisible');
+    toggleCopyright: function (event) {
+      if (this.state.hidRecently) {
+        return;
+      }
 
+      this.setVisibility('copyrightVisible', !this.state.copyrightVisible);
+
+      // Adjust bottom padding the first time we show it
       if (!this.state.copyrightStyle) {
-        var smallFooter = React.findDOMNode(this.refs.smallFooter);
+        var base = React.findDOMNode(this.refs.base);
         this.setState({
           copyrightStyle: {
-            paddingBottom: smallFooter.offsetHeight
+            paddingBottom: base.offsetHeight
           }
         });
       }
     },
 
     toggleMore: function () {
-      this.toggleVisibility('moreVisible');
+      if (this.state.hidRecently) {
+        return;
+      }
+
+      this.setVisibility('moreVisible', !this.state.moreVisible);
 
       // The first time we toggle the more menu, adjust width and align it
       // above small-footer
       if (!this.state.moreMenuStyle) {
-        var smallFooter = React.findDOMNode(this.refs.smallFooter);
+        var base = React.findDOMNode(this.refs.base);
         this.setState({
           moreMenuStyle: {
-            bottom: smallFooter.offsetHeight,
-            width: smallFooter.offsetWidth,
+            bottom: base.offsetHeight,
+            width: base.offsetWidth,
           }
         });
       }
     },
 
     render: function () {
-      var copyrightStyle = $.extend({}, this.state.copyrightStyle, {
-        display: this.state.copyrightVisible ? 'block' : 'none'
-      });
-      var moreStyle = $.extend({}, this.state.moreMenuStyle, {
-        display: this.state.moreVisible ? 'block': 'none'
-      });
+      var styles = {
+        smallFooter: {
+          fontSize: this.props.fontSize
+        },
+        base: $.extend({}, this.props.baseStyle, {
+          paddingBottom: 3,
+          paddingTop: 3,
+          // subtract top/bottom padding from row height
+          height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
+        }),
+        copyright: $.extend({}, this.state.copyrightStyle, {
+          display: this.state.copyrightVisible ? 'block' : 'none',
+          maxHeight: 240,
+          overflowY: 'scroll'
+        }),
+        moreMenu: $.extend({}, this.state.moreMenuStyle, {
+          display: this.state.moreVisible ? 'block': 'none'
+        }),
+        listItem: {
+          height: this.props.rowHeight,
+          // account for padding (3px on top and bottom) and bottom border (1px)
+          // on bottom border on child anchor element
+          lineHeight: this.props.rowHeight ?
+            (this.props.rowHeight - 6 - 1) + 'px' : undefined
+        }
+      };
 
       var caretIcon = this.state.moreVisible ? 'fa fa-caret-down' : 'fa fa-caret-up';
 
       return (
-        <div>
-          <div className="small-footer" ref="smallFooter" style={this.props.baseStyle}>
+        <div style={styles.smallFooter}>
+          <div className="small-footer-base" ref="base" style={styles.base}>
             <div dangerouslySetInnerHTML={{
                 __html: decodeURIComponent(this.props.i18nDropdown)
             }}/>
             <small>
-              <a className="copyright-link" href="javascript:void(0)"
-                onClick={this.toggleCopyright}>
-                {this.props.strings.copyright}
-              </a>
-              &nbsp;&nbsp;|&nbsp;&nbsp;
+              {this.renderCopyright()}
               <a className="more-link" href="javascript:void(0)"
                 onClick={this.toggleMore}>
-                {this.props.strings.more + ' '}
+                {this.props.baseMoreMenuString + ' '}
                 <i className={caretIcon}/>
               </a>
             </small>
           </div>
-          <div id="copyright-flyout" style={copyrightStyle}>
-            <EncodedParagraph text={this.props.strings.thank_you}/>
-            <p>{this.props.strings.help_from_html}</p>
-            <EncodedParagraph text={this.props.strings.art_from_html}/>
-            <p>{this.props.strings.powered_by_aws}</p>
-            <EncodedParagraph text={this.props.strings.trademark}/>
+          <div id="copyright-flyout" style={styles.copyright}>
+            <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
+            <p>{this.props.copyrightStrings.help_from_html}</p>
+            <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
+            <p>{this.props.copyrightStrings.powered_by_aws}</p>
+            <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
           </div>
-          <ul id="more-menu" style={moreStyle}>
-            <li>
-              <a href="https://support.code.org">{this.props.strings.support}</a>
-            </li>
-            <li>
-              <a href="https://code.org/translate">{this.props.strings.translate}</a>
-            </li>
-            <li>
-              <a href="https://code.org/tos">{this.props.strings.tos}</a>
-            </li>
-            <li>
-              <a href="https://code.org/privacy">{this.props.strings.privacy}</a>
-            </li>
-          </ul>
+          {this.renderMoreMenu(styles)}
         </div>
+      );
+    },
+
+    renderCopyright() {
+      if (this.props.copyrightInBase) {
+        return (
+          <span>
+            <a className="copyright-link" href="javascript:void(0)"
+              onClick={this.toggleCopyright}>
+              {this.props.baseCopyrightString}
+            </a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+          </span>
+        );
+      }
+    },
+
+    renderMoreMenu(styles) {
+      var menuItemElements = this.props.menuItems.map(function (item, index) {
+        var onClick;
+        if (item.copyright) {
+          onClick = this.setVisibility.bind(null, 'copyrightVisible', true);
+        }
+        return <li key={index} style={styles.listItem}>
+          <a href={item.link} onClick={onClick}>{item.text}</a>
+        </li>
+      }.bind(this));
+      return (
+        <ul id="more-menu" style={styles.moreMenu}>
+          {menuItemElements}
+        </ul>
       );
     }
   });

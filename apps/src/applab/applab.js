@@ -301,37 +301,50 @@ var drawDiv = function () {
   }
 
   if (studioApp.share) {
-    var footerDiv = document.createElement('div');
-    footerDiv.setAttribute('id', 'footerDiv');
-    divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-
-    // TODO - i18n
-    React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
-      i18nDropdown: '',
-      copyrightInBase: false,
-      strings: {
-        copyright: "Copyright Info",
-        more: "Built on Code Studio",
-        thank_you: "thank_you",
-        help_from_html: "help_from_html",
-        art_from_html: "art_from_html",
-        powered_by_aws: "powered_by_aws",
-        trademark: "trademark",
-        support: "support",
-        translate: "translate",
-        tos: "tos",
-        privacy: "privacy",
-      },
-      rowHeight: 34,
-      style: {
-        fontSize: 18
-      },
-      baseStyle: {
-        width: $("#divApplab").width()
-      }
-    }), footerDiv);
+    renderFooterInSharedGame();
   }
 };
+
+function renderFooterInSharedGame() {
+  var footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
+
+  // TODO - i18n
+  React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: window.dashboard.copyrightStrings,
+    baseCopyrightString: "Copyright Info",
+    baseMoreMenuString: "Built on Code Studio",
+    rowHeight: 34,
+    style: {
+      fontSize: 18
+    },
+    baseStyle: {
+      width: $("#divApplab").width()
+    },
+    menuItems: [
+      {
+        text: 'How it Works',
+        link: location.href + '/view'
+      },
+      {
+        text: 'Report Abuse',
+        link: 'javascript:void(0)'
+      },
+      {
+        text: 'Copyright',
+        link: 'javascript:void(0)',
+        copyright: true
+      },
+      {
+        text: 'Privacy Policy',
+        link: 'https://code.org/privacy'
+      }
+    ]
+  }), footerDiv);
+}
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
   return 300 * Math.pow(1 - sliderSpeed, 2);
