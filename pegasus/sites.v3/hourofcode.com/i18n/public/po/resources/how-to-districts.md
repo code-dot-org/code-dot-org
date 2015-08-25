@@ -1,8 +1,12 @@
+* * *
 
+title: Hour of Code How-To for Districts layout: wide nav: resources_nav
 
-# Bring the Hour of Code to your entire school district.
+* * *
 
-## Get every school participating, every student learning!
+# Trazer a Hora do Código para as escola de todo o distrito.
+
+## Ter todas as escolas a participar, todos os alunos a aprender!
 
   1. **Recruit local schools.** Share [this email](<%= hoc_uri('/resources#sample-emails') %>) and [teacher how to guide](<%= hoc_uri('/resources/how-to') %>), or include a [short blurb](<%= hoc_uri('/resources/stats') %>) in newsletters/district communications.
 
@@ -14,4 +18,4 @@
 
   5. **Host a district Hour of Code event.** See our [event how to guide](<%= hoc_uri('/resources/how-to-events') %>) for a sample run of show, media outreach kit and other supports.
 
-  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. 100 classrooms will win tech chats with special guest speakers. Participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school!
+  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school!

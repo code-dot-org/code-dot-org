@@ -1,6 +1,8 @@
+* * *
 
+title: Press Kit layout: wide nav: resources_nav
 
-[<button style="float: right; margin-top: 50px">Melde Deine Veranstaltung an</button>](/#join)
+* * *
 
 ## Wie Du Medien auf Deine Hour of Code Veranstaltung aufmerksam machst
 
@@ -11,7 +13,7 @@
   * Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
   * Ask a school staff member or volunteer to take photos to share online or send to press.
   * Schreibe über die Hour of Code auf Deiner Website oder Schulzeitung. Veröffentliche die Details der Veranstaltung , lade Fotos hoch und berichte von den Aktivitäten der Schüler.
-  * Nutze Facebook und Twitter, um Neuigkeiten zu Deinen Plänen zu teilen und Veranstaltungen anzukündigen. Lade Fotos zwischen dem 8. und 14. Dezember hoch. Und, nutze den Hashtag **#HourOfCode**, so dass Code.org Deine Veranstaltungen sehen und promoten kann.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Schritt-für-Schritt-Anleitung:
 
@@ -47,13 +49,11 @@ In China, every students takes computer science to graduate high school. In the 
 
 **More details and a quote you can use in materials**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
-**About Code.org**
+**Über Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Melde Deine Veranstaltung an</button></a>

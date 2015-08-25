@@ -1,27 +1,30 @@
+* * *
 
+title: How-to guide for public officials layout: wide nav: resources_nav
 
-## Bring the Hour of Code to your entire community.
+* * *
 
-### Get every school participating, every student learning!
+## Impartaseste Hour of Code intregii tale comunitati
 
-  1. **Recruit local schools and districts.** Use [this email](<%= hoc_uri('/resources#sample-emails') %>) or [this blurb](<%= hoc_uri('/resources/stats') %>) as a starting point, and take a look at this [how-to](<%= hoc_uri('/resources/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>); that **100 classrooms** will win tech chats with **special guest speakers** (participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more); and, in **each state**, one participating school will win **$10,000 in technology**!
+### Implică fiecare școală, fiecare elev care învață!
 
-  2. **Host an Hour of Code event.** See our [event how-to guide](<%= hoc_uri('/resources/how-to-event') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  1. **Recruteaza scoli locale si distrticte.** Foloseste [acest e-mail](<%= hoc_uri('/resources#sample-emails') %>) sau [acest document](<%= hoc_uri('/resources/stats') %>) ca un punct de plecare si arunca o privire pe acest [ghid ](<%= hoc_uri('/resources/how-to') %>) pentru scoli si districte. Let them know **every** participating educator will receive a [thank you gift](<%= hoc_uri('/resources/how-to') %>) and in **each state**, one participating school will win **$10,000 in technology**!
 
-  3. **Attend an event during Computer Science Education Week (Dec 8-14).** [Find classrooms and schools](<%= hoc_uri('/events') %>) participating in your district, city or state.
+  2. **Organizeaza un eveniment Hour of Code.** Urmareste [ghidul nostru de eveniment](<%= hoc_uri('/resources/how-to-event') %>) pentru o trece in revista rapida, kit-ul media si alte resurse privind organizarea. Gazduind un eveniment este un mod extraordinar de a promova Hour of Code si de a creste rata participantilor.
 
-  4. **Issue a proclamation or resolution.** See this [sample resolution](<%= hoc_uri('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+  3. **Attend an event during Computer Science Education Week (Dec 7-13).** [Find classrooms and schools](<%= hoc_uri('/events') %>) participating in your district, city or state.
 
-  5. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= hoc_uri('/resources/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
+  4. **Emite o proclamatie sau rezolutie.** Vezi aceasta [proba ](<%= hoc_uri('resources/proclamation') %>) de sustinere a Saptamanii Educatiei in Stiintele calculatorului si a obiectivelor sale ce pot fi folosite de catre legislatorii de stat sau locali.
 
-  6. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+  5. Publicati un mini anunt. Luati in considerare si publicarea intr-un ziar local. Veiz aceasta [proba](<%= hoc_uri('/resources/op-ed') %>) de sustinere a Saptamanii dedicate Stiintei Calculatorului si a obiectivelor sale de sprijin.
+
+  6. **Duceti vorba mai departe** [Impartasiti video-ul Hour of Code pe Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) si [vorbiti despre suportul oferit si pe Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Impartasiti poze sau filmulete cu adulti sau copii ce participa la Hour of Code. Folositi hashtag-ul **#HourOfCode** pentru ca Code.org (@code.org) sa il vada si sa promoveze suportul oferit. Sau, folositi aceste tweet-uri simple:
     
-      * Last year 15 million students tried one #HourOfCode. Half were girls. This year, let’s get to 100 million. #HourOfCode <http://hourofcode.com>
-      * Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode <http://hourofcode.com>
-      * Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode <http://hourofcode.com>.   
+      * Fiecare student, fata sau baiat, ar trebyui sa aiba sansa de a invata stiintele computerului si programare. Alaturati-va noua si incercati o #HourOfCode <http://hourofcode.com>
+      * Astazi, suntem mandrii sa ne alaturam miscarii Hour of Code. Te implici? #HourOfCode <http://hourofcode.com>.   
           
         
 
-  7. **Issue a press release.** [Use this sample](<%= hoc_uri('/resources/official-press-release') %>) as a guide.
+  7. **Emite un comunicat de presa.** [Foloseste acest esantion](<%= hoc_uri('/resources/official-press-release') %>) ca model.
 
-  8. **Connect locally.** Visit <http://code.org/promote> to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+  8. **Conecteaza-te la nivel local.** Viziteaza <http://code.org/promote> pentru a afla mai multe despre stiinta computer-ului in statul tau. Semneaza petita si vei primi actualizari din partea Code.org privind eforturile lor de advocacy locale, statale si federale.

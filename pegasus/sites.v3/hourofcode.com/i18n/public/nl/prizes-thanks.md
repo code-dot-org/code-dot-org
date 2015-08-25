@@ -1,4 +1,8 @@
+* * *
 
+title: Bedankt layout: wide
+
+* * *
 
 # Bedankt
 

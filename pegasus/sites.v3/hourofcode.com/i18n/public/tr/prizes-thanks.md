@@ -1,4 +1,8 @@
+* * *
 
+başlık: Teşekkür ederiz düzen: geniş
+
+* * *
 
 # Teşekkür ederiz
 

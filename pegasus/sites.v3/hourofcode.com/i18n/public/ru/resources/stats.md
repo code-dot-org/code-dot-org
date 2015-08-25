@@ -1,17 +1,17 @@
+* * *
 
+название: Реклама и статистика макет: широкий навигация: resources_nav
 
-[<button style="float: right; margin-top: 50px">Зарегистрируйте ваше мероприятие</button>](/#join)
+* * *
 
-# Blurbs and Useful Stats
+# Реклама и полезная статистика
 
-## Use this short blurb in newsletters
+## Используйте эту короткую рекламу в информационных бюллетенях
 
-### Bring computer science to your school. Start with an Hour of Code
+### Привнесите компьютерную науку в Вашу школу. Начните Час Программирования
 
-Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Но есть и хорошие новости: мы можем это изменить. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. В течение одной недели, 15 миллионов учащихся попробовали себя в информатике! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Но есть и хорошие новости: мы можем это изменить. Если вы слышали про [Час Программирования](<%= hoc_uri('/') %>) в прошлом году, вы должны знать, что он вошел в историю. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [Час Программирования](<%= hoc_uri('/') %>) - это одночасовое занятие по введению в компьютерную науку, созданное специально, чтобы развеять все страхи перед прогаммированием и показать, что каждый может изучить его основы. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-## Infographic version:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Зарегистрируйте ваше мероприятие</button></a>
+<%= view :stats_carousel %>

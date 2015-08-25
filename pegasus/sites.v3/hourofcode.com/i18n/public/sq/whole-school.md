@@ -1,4 +1,8 @@
+* * *
 
+shtrirja: e gjerë
+
+* * *
 
 # Bëj që e gjithë shkolla jote të marrë pjesë
 

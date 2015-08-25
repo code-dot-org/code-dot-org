@@ -1,4 +1,8 @@
+* * *
 
+title: Thank you layout: wide
+
+* * *
 
 # 감사합니다.
 

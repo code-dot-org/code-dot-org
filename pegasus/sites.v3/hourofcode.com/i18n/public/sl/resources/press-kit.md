@@ -1,6 +1,8 @@
+* * *
 
+title: Press Kit layout: wide nav: resources_nav
 
-[<button style="float: right; margin-top: 50px">Prijavi svoj dogodek</button>](/#join)
+* * *
 
 ## Kako privabiti medije na vaš dogodek Ura za kodo?
 
@@ -11,7 +13,7 @@
   * Dva tedna pred dogodkom stopite v stik z mediji, najbolje preko elektronske pošte. Če ni odziva, poskusite še enkrat z elektronsko pošto, lahko pa jih pokličete tudi po telefonu.
   * Prosite člana šolskega osebja ali prostovoljca, da posname fotografije za objavo na spletu ali v tisku.
   * Objavite reportažo o Uri za kodo na svoji spletni strani in v šolskem časopisu. Objavite podatke o dogodku in fotografije dejavnosti učencev.
-  * Na Facebooku in Twitterju obveščajte o svojih načrtih, o dogodkih in objavljajte fotografije med 8. in 14. decembrom. Uporabite hashtag **#HourOfCode**, tako lahko Code.org vidi in promovira vaše dogodke.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Vodič po korakih:
 
@@ -47,13 +49,11 @@ Na Kitajskem vsak študent na maturi vzame predmet računalništvo. V ZDA pa 90 
 
 **Več podrobnosti in citatov lahko uporabite na promocijskih materialih**
 
-Ura za kodo je zasnovana tako, da je snov razložena na preprost način in vsak se lahko nauči osnov," je dejal Hadi Partovi, ustanovitelj in direktor Code.org. „Lansko leto se je 15 milijonov učencev pridružilo Uri za kodo v enem tednu. Želimo doseči 100 milijonov učencev iz vsega sveta do konca leta 2014!.“
+Ura za kodo je zasnovana tako, da je snov razložena na preprost način in vsak se lahko nauči osnov," je dejal Hadi Partovi, ustanovitelj in direktor Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **O Code.org**
 
-Uro za kodo organizira Code.org, javna, 501c3, neprofitna organizacija, ki je posvečena širjenju znanja računalništva in povečanju udeležb žensk in manjšin. Njena vizija je, da bi vsak učenec v šoli imeli priložnost, da se nauči programiranja. Po začetku leta 2013 je Code.org organizirala akcije Uro za kodo, ki je približala računalništvo milijonom učencem. Je solastnik več kot 30 javnih šol po vsej državi, ustanovila je Code Studio, odprtokodno, spletno učno platformo za vse starosti. Če želite več informacij, obiščite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Njena vizija je, da bi vsak učenec v šoli imeli priložnost, da se nauči programiranja. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Če želite več informacij, obiščite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Poiščite več virov in vzorčno elektronsko pošto [ tukaj](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Prijavi svoj dogodek</button></a>

@@ -1,10 +1,14 @@
+* * *
 
+عنوان : چگونه "ساعتِ کد " چگونه برای مناطق محروم طرح " گسترده nav: resources_nav
 
-# Bring the Hour of Code to your entire school district.
+* * *
 
-## Get every school participating, every student learning!
+# "ساعتِ کد" را به مدرسه‎ی خود بیاورید.
 
-  1. **Recruit local schools.** Share [this email](<%= hoc_uri('/resources#sample-emails') %>) and [teacher how to guide](<%= hoc_uri('/resources/how-to') %>), or include a [short blurb](<%= hoc_uri('/resources/stats') %>) in newsletters/district communications.
+## هر مدرسه شرکت می‎کند ، هر دانش آموز یاد می‎گیرد!
+
+  1. **مدارس منطقه را شرکت دهید.**به اشتراک بگذارید["راهنمای معلم"](<%= hoc_uri('/resources#sample-emails') %>این ایمیل را</a>و<a href=)یا شامل<a href="<%= hoc_uri('/resources/stats') %>" شرح کوتاه"</a>این خبرنامه محلی قرار دهید.
 
   2. **Provide a sample logistics plan for schools.** Share this sample logistics plan with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= hoc_uri('/prizes') %>).
 
@@ -14,4 +18,4 @@
 
   5. **Host a district Hour of Code event.** See our [event how to guide](<%= hoc_uri('/resources/how-to-events') %>) for a sample run of show, media outreach kit and other supports.
 
-  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. 100 classrooms will win tech chats with special guest speakers. Participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school!
+  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school!

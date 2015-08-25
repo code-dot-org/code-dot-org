@@ -1,17 +1,17 @@
+* * *
 
+title: Реклама та факти layout: wide nav: resources_nav
 
-[<button style="float: right; margin-top: 50px">Зареєструйте свій захід</button>](/#join)
+* * *
 
 # Цікава статистика
 
-## Use this short blurb in newsletters
+## Використайте ці дані для своїх матеріалів
 
 ### Залучіть інформатику до своєї школи. Розпочніть Годиною коду
 
-Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо ви чули про [ Годину коду](<%= hoc_uri('/') %>) минулого року, можливо, ви знаєте, що вона увійшла в історію. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою! [Година коду](<%= hoc_uri('/') %>) - це одно-годинний вступ до інформатики, призначений для того, щоб показати легкість та доступність програмування для кожного. [Зареєструйте](<%= hoc_uri('/') %>) захід Години коду 8-14 грудня протягом тижня інформатики і допоможіть залучити 100 мільйонів учнів до кінця цього року. Add your school to the map, go to <http://hourofcode.com>
+Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. Якщо ви чули про [ Годину коду](<%= hoc_uri('/') %>) минулого року, можливо, ви знаєте, що вона увійшла в історію. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [Година коду](<%= hoc_uri('/') %>) - це одно-годинний вступ до інформатики, призначений для того, щоб показати легкість та доступність програмування для кожного. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-## Infographic version:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Зареєструйте свій захід</button></a>
+<%= view :stats_carousel %>

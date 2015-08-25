@@ -1,114 +1,56 @@
+* * *
 
+title: "Programmēšanas stundas" vadlīnijas layout: wide nav: resources_nav
 
-# Hour of Code event guide
+* * *
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+# "Programmēšanas stundas" vadlīnijas
 
-## 1) Prepare for your event
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+## 1) Sagatavojaties savam pasākumam
 
-## 2) During your event
+  * Nosakiet vietu, datumu un laiku
+  * Nosūtiet [uzaicinājumu](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) vietējiem deputātiem, amatpersonām vai ietekmīgiem uzņēmējiem, lai aicinātu tos teiktu uzrunu.
+  * Ielūdziet medijus, piemēram, vietēju ziņu raidījumu, avīzi vai tehnoloģiju žurnālistus. Apskati mūsu [sagatavotos materiālus](<%= hoc_uri('/resources/press-kit') %>).
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+## 2) Pasākuma laikā
+
+  * Sāc "Programmēšanas stundu" ar vienu no mūsu [iedvesmojošajiem video](<%= hoc_uri('/resources#videos') %>).
+  * Sniedz nelielu ievadu par datorzinātņu nozīmi, izmantojot vienu no šiem [infografikiem](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Citas idejas pasākumam: 
+      * Uzaicini vietējo uzņēmēju, lai tas pastāstītu par savu darbu, kas saistās ar datorzinātnēm
+      * Uzaicini vietējo politiķi un lūdzu skolēniem mācīt viņam vai viņai, kā programmēt
+      * Liec skolēnu grupai demonstrēt programmēšanas aktivitātes bez datora
+      * Liec grupai skolēniem mācīt skolas direktoram vai grupai skolotāju programmēt
+      * Ja tavā skolā jau māca datorzinātnes, palūdz skolēniem demonstrēt savus darbus
 
-## 3) Share how it went
+## 3) Kopīgo rezultātus
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Kopīgo foto no pasākuma, publicē tās Facebook un Twitter. 
+  * Izmanto mirkļbirku **#HourofCode**
 
-## Example Event Plan
+## Piemēram "Programmēšanas stundas" plānam
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Notikums:** Skolas mēroga Datorzinātņu izglītības nedēļas uzsākšanas pasākums
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Laiks:** Skolas dienas laikā. Ieteicams rīta pusē. Vidējais laiks - 1 stunda.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Vieta:** Plaša telpa (piemēram, teātris, kafejnīca)   
   
 
 
-## Run of Show
+## Pasākuma norise
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Time
-    </th>
-    
-    <th style="width:800px">
-      Action
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-11:15 am
-  </td>
-  
-  <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
-  </td></tr> 
-  
-  <td>
-    11:15-11:17 am
-  </td>
-  
-  <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-  </td></tr> 
-  
-  <td>
-    11:17-11:30 am
-  </td>
-  
-  <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
-  </td></tr> 
-  
-  <td>
-    11:30-11:40 am
-  </td>
-  
-  <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
-  </td></tr> 
-  
-  <td>
-    11:40-12:00 pm
-  </td>
-  
-  <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
-  </td></tr> 
-  
-  <td>
-    12:00-12:05 pm
-  </td>
-  
-  <td>
-    Teacher who help bring the school-wide event gives closing remarks.
-  </td>
-</table>
+| Laiks            | Darbība                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
+| 10:05 - 10:15 am | Direktors sniedz nelielu ieskatu par datorzinātņu nozīmi. Izmanto šos [infografikus](/resources/stats)                   |
+| 10:15 - 10:30 am | Īpaši viesi stāsta par sevi un kā tehnoloģijas un datorzinātne spēlē nozīmīgu lomu viņu ikdienas dzīvē.                  |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
+| 10:40 - 11:00 am | Skolēni vada programmēšanas aktivitātes bez datora un stāsta kā datorzinātnes var iemācīt bez datoru palīdzības.         |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |

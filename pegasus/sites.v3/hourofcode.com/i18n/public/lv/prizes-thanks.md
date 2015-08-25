@@ -1,4 +1,8 @@
+* * *
 
+nosaukums: Paldies izkārtojums: plats
+
+* * *
 
 # Paldies
 

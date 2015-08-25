@@ -1,4 +1,8 @@
+* * *
 
+layout: wide
+
+* * *
 
 # Ajak semua yang ada di sekolah Anda untuk ikut serta
 

@@ -1,5 +1,9 @@
+* * *
 
+izkārtojums: plats
 
-# Pierakstiet savu skolu, lai piedalītos
+* * *
 
-Informācija par visu skolu piedališanos "Programmēšanas stunda" būs izvietota šeit.
+# Piesaki dalībai visu skolu
+
+Informācija par visu skolu dalību "Programmēšanas stundā" būs izvietota šeit.

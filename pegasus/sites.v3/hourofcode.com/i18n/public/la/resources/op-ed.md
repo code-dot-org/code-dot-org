@@ -1,4 +1,8 @@
+* * *
 
+title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+
+* * *
 
 ### A continuación encuentras una muestra de artículo de opinión apoyando la semana de la educación en ciencias de la computación y sus objetivos que puede ser usada por legisladores locales y estatales, líderes empresariales, etc.
 
@@ -37,4 +41,4 @@ Necesitamos reclutar más profesores de ciencias de la computación y promover s
 
 De acuerdo a la oficina de estadísticas laborales, para el año 2020 habrán 9.2 millones de puestos de trabajo en los campos STEM. La mitad de esos empleos — 4,6 millones — estarán en computación o tecnologías de la información. Y las ciencias de la computación son cada vez más un conocimiento fundamental para el siglo XXI. ¿Quién llenará estos trabajos si a nuestros hijos no se les da la oportunidad de adquirir las habilidades necesarias?
 
-Esta semana, del 8 al 15 de diciembre, es la semana de la educación en ciencias de la computación. En escuelas en todo **[ESTADO]**, nuestros estudiantes participarán en una Hora de Programación a nivel nacional, desmitificando el tema de las ciencias de la computación y esperamos que despertando su apetito para seguir y aprender más. Yo me uniré a ellos, y los invito a unirse también. Todos deberíamos aprender a programar. Visita <http://hourofcode.com> para empezar y aprender más. Y apoya nuestros esfuerzos para llevar las ciencias de la computación a más escuelas en **[STATE]**.
+This week, December 7–13, is Computer Science Education Week. En escuelas en todo **[ESTADO]**, nuestros estudiantes participarán en una Hora de Programación a nivel nacional, desmitificando el tema de las ciencias de la computación y esperamos que despertando su apetito para seguir y aprender más. Yo me uniré a ellos, y los invito a unirse también. Todos deberíamos aprender a programar. Visita <http://hourofcode.com> para empezar y aprender más. Y apoya nuestros esfuerzos para llevar las ciencias de la computación a más escuelas en **[STATE]**.

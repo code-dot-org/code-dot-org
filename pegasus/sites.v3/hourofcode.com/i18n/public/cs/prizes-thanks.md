@@ -1,4 +1,8 @@
+* * *
 
+Název: Poděkování rozložení: široký
+
+* * *
 
 # Děkuji
 

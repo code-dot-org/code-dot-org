@@ -1,4 +1,8 @@
+* * *
 
+title: Hour of Code pressemeddelelse til folkevalgte layout: wide nav: resources_nav
+
+* * *
 
 # Sample press release for elected officials
 
@@ -26,9 +30,7 @@ Contact: [**CONTACT INFORMATION**]
 [**EKSEMPELTEKST SOM KONTEKST:**]   
 Vi finder computere overalt, men færre skoler underviser i programmering end for 10 år siden. Piger og farvede elever er stærkt underrepræsenterede. Den gode nyhed er, at vi er ved at ændre dette. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Programmering var på hjemmesiderne hos Google, MSN, Yahoo! og Disney. Præsident Obama, Shakira og Ashton Kutcher satte #HourOfCode igang med videoer. Over 100 partnere fandt sammen om at støtte denne bevægelse.
-
-This year the Hour of Code movement is aiming for 100 million students.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! og Disney. Præsident Obama, Shakira og Ashton Kutcher satte #HourOfCode igang med videoer. Over 100 partnere fandt sammen om at støtte denne bevægelse.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
 “We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”

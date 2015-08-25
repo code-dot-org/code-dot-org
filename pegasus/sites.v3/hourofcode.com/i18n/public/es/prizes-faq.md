@@ -1,4 +1,8 @@
+* * *
 
+layout: wide
+
+* * *
 
 # Premios - preguntas frecuentes
 
@@ -16,7 +20,7 @@ Cualquier clase (en escuelas públicas o privadas) es elegible para ganar este p
 
 ## ¿Pueden las escuelas por fuera de los Estados Unidos ganar el premio de chat por vídeo?
 
-No, desafortunadamente debido a dificultades logísticas no podemos ofrecer el premio de chat por vídeo a escuelas por fuera de Estados Unidos y Canadá. Todos los organizadores internacionales **son** elegibles para recibir espacio en Dropbox o crédito en Skype.
+No, desafortunadamente debido a dificultades logísticas no podemos ofrecer el premio de chat por vídeo a escuelas por fuera de Estados Unidos y Canadá.
 
 ## ¿Por qué el premio de $10.000 en hardware sólo está disponible para las escuelas públicas?
 
@@ -40,4 +44,4 @@ Para calificar, toda tu escuela debe registrarse para la Hora de Programación y
 
 ## Si toda mi escuela no puede participar en la Hora de Programación durante la semana de la educación en ciencias de la computación (8-14 de diciembre), ¿Puedo aún calificar para los premios?
 
-Sí, sólo asegúrate de enviar un plan logístico describiendo la participación de toda la escuela durante un período de tiempo razonable y regístrate para la Hora de Programación a más tardar el 14 de noviembre.
+Sí, sólo asegúrate de enviar un plan logístico que muestre cómo toda tu escuela está participando en un periodo de tiempo razonable y regístrate para la Hora de Programación el 16 de noviembre.

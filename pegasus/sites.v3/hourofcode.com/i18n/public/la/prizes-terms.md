@@ -1,10 +1,14 @@
+* * *
 
+title: Premios Términos layout: wide nav: resources_nav
+
+* * *
 
 # Premios - términos y condiciones
 
 ## Espacio de Dropbox o crédito de Skype:
 
-Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. Los 10 GB de espacio gratuito se agregarán a una cuenta existente de Dropbox. Limitado a un regalo por organizador.
+Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limitado a un regalo por organizador. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 Cada organizador debe registrarse en la Hora de Programación, para poder recibir el espacio de Dropbox o el crédito de Skype. Si toda tu escuela participa en la Hora de Programación, cada educador debe registrarse individualmente como organizador para calificar.
 
@@ -18,7 +22,7 @@ Este premio está limitado a las aulas K-12 en los Estados Unidos y Canadá úni
 
 ## Paquete de laptops (ó $10,000 para otras tecnologías):
 
-El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para competir toda la escuela deberá registarse para la Hora de Código antes del 14 de noviembre de 2014. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para competir toda la escuela deberá registarse para la Hora de Código antes del 16 de noviembre de 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
 Debemos aclarar, esto no es una lotería o un concurso de azar.
 

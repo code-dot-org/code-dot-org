@@ -1,4 +1,8 @@
+* * *
 
+Tytuł: Dziękuję układ: szeroki
+
+* * *
 
 # Dziękujemy
 

@@ -1,11 +1,15 @@
+* * *
 
+titel: Voorbeeld Resolutie die de Informatica Onderwijs Week en Uur Code ondersteunt indeling: breed nav:resources_nav
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+* * *
+
+### Hieronder vindt u een voorbeeld resolutie die de informatica onderwijs week ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Huis, SENAAT, STATE, COUNTY of stad resolutie of PROCLAMATIE ###]- Aangezien de Informatica Onderwijs Week de cruciale rol belicht die informatica speelt in onze veranderende maatschappij en hoe informatica innovatie mogelijk maakt en economische kansen creëert;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[HUIS OF SENAAT RESOLUTIE ###]
 
 [DATE]
 
@@ -33,11 +37,11 @@ Whereas the field of computer science has significant equity barriers to address
 
 Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 

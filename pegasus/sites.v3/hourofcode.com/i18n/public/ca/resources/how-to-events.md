@@ -1,114 +1,54 @@
+* * *
 
+Títol: event l'Hora del Codi Guia: àmplia nav: resources_nav
 
-# Hour of Code event guide
+* * *
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+# Guia per un esdeveniment de l'Hora del Codi
 
-## 1) Prepare for your event
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+## 1) Preparat per al teu esdeveniment
 
-## 2) During your event
+  * Determina un lloc, data i hora
+  * Envia [ una carta](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) per convidar el teu alcalde, parlamentari, diputat o persona influent del mon dels negocis a parlar.
+  * Convida la premsa/mitjans de comunicació. Per exemple emissores de radio locals, diaris, bloggers educació/tecnologia. Mira el nostre [ kit de premsa](<%= hoc_uri('/resources/press-kit') %>) per obtenir ajuda.
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
-      
-    
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+## 2) Durant l'esdeveniment
 
-## 3) Share how it went
+  * Engega el teu esdeveniment amb un dels nostres [vídeos inspiradors](<%= hoc_uri('/resources#videos') %>).
+  * Dona una introducció sobre la importància de la informàtica, utilitzant aquestes <a
+  * Altres idees per a l'esdeveniment: 
+      * Convidar a un líder de la indústria local per discutir el seu treball d'informàtica
+      * Convida un polític local i fes que els alumnes l'ensenyin a programar
+      * Fes que un grup d'alumnes demostrin una activitat sense ordinador
+      * Fes que un grup d'estudiants ensenyin al director o a un grup de mestres com programar
+      * Si la tes escola ja ensenya Informàtica, fes que els estudiants presentin els seus projectes
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+## 3) comparteix com ha anat
 
-## Example Event Plan
+  * Comparteix fotos del teu esdeveniment a Facebook i Twitter. 
+  * Utilitza el hashtag # **#HourofCode**
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+## Exemple d'un pla pel teu esdeveniment
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Esdeveniment:** Assamblea per començar una setmana d'educació en informàtica per a tota l'escola
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Temps:** Durant la jornada escolar. Preferentment esdeveniment de mig matí. Aproximadament 1 hora.
+
+**Ubicació:** Sala d'actes de l'escola (per exemple, teatre, gimnàs, cafeteria)   
   
 
 
-## Run of Show
+## Programa
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Time
-    </th>
-    
-    <th style="width:800px">
-      Action
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-11:15 am
-  </td>
-  
-  <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
-  </td></tr> 
-  
-  <td>
-    11:15-11:17 am
-  </td>
-  
-  <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-  </td></tr> 
-  
-  <td>
-    11:17-11:30 am
-  </td>
-  
-  <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
-  </td></tr> 
-  
-  <td>
-    11:30-11:40 am
-  </td>
-  
-  <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
-  </td></tr> 
-  
-  <td>
-    11:40-12:00 pm
-  </td>
-  
-  <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
-  </td></tr> 
-  
-  <td>
-    12:00-12:05 pm
-  </td>
-  
-  <td>
-    Teacher who help bring the school-wide event gives closing remarks.
-  </td>
-</table>
+| Hora             | Acció                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                        |
+| 10:05 - 10:15 am | El president dóna una introducció sobre la importància de la informàtica. Utilitza aquestes [estadístiques i infografia](/resources/stats)    |
+| 10:15 - 10:30 am | Xerrades de convidats per parlar dels seus antecedents i com la tecnologia i la informàtica té un paper important en la seva vida quotidiana. |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                      |
+| 10:40 - 11:00 am | Els estudiants mostres una activitat desendollada i com es pot ensenyarinformàtica sense utilitzar ordinadors.                                |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                             |

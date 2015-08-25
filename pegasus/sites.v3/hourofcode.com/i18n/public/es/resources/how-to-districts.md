@@ -1,4 +1,8 @@
+* * *
 
+Título: Hora de Código de procedimientos para la disposición de los distritos: nav ancho: resources_nav
+
+* * *
 
 # Llevar la Hora de Código a su distrito escolar.
 
@@ -14,4 +18,4 @@
 
   5. **Anfitriona un distrito en evento de Hora del Código.** Ver nuestra [ evento cómo guiar a](<%= hoc_uri('/resources/how-to-events') %>) Por ejemplo muestra del show, los medios de difusión y otros soportes.
 
-  6. **Más [ premios](<%= hoc_uri('/prizes') %>) para CADA organizador.** Cada educador participante recibirán regalos de gratitud. 100 aulas ganarán tech charlas con invitados especiales. Los participantes incluyen Bill Gates, Sheryl Sandberg, Ashton Kutcher y mucho más). Y en cada estado, una escuela participante ganará $10.000 en tecnología para su escuela!
+  6. **Más [ premios](<%= hoc_uri('/prizes') %>) para CADA organizador.** Cada educador participante recibirán regalos de gratitud. Y en cada estado, una escuela participante ganará $10.000 en tecnología para su escuela!
