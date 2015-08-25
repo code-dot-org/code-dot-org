@@ -16,6 +16,11 @@ class MediaProxyControllerTest < ActionController::TestCase
       get :get, u: IMAGE_URI
       assert_response :success
       assert_equal content_type, response.content_type
+      cache_control = response['Cache-Control']
+      assert cache_control =~ /public/i, 'Response should be publically cacheable'
+      assert cache_control =~ /max-age=315576000/i, 'Response should expired in 10 years'
+      assert_equal response['Content-Transfer-Encoding'], 'binary'
+      assert_equal response['Content-Disposition'], 'inline'
       assert_equal IMAGE_DATA, response.body
     end
   end
