@@ -58,11 +58,11 @@ class MediaProxyController < ApplicationController
       render_error_response media.code, "Failed request #{media.code}"
 
     elsif !ALLOWED_CONTENT_TYPES.include?(media.content_type)
-      # Reject disallowed contents types
+      # Reject disallowed content types.
       render_error_response 400, "Illegal content type #{media.content_type}"
 
     else
-      # Return a successful response
+      # Proxy successful responses.
       expires_in EXPIRY_TIME, public: true
       send_data media.body, type: media.content_type, disposition: 'inline'
     end
