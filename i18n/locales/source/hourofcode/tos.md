@@ -1,6 +1,8 @@
 ---
 title: Terms of Service
 ---
+### The binding legal language is in English, and can be found <a href='https://code.org/tos'>here</a>. Below is a translation.
+
 
 # Terms of Service
 Last Revised:  December 5, 2014
