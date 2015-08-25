@@ -8,21 +8,21 @@ class EmailValidatorTest < Minitest::Unit::TestCase
 
   def test_valid_addresses
     valid_addresses = [
-      'email@example.com', 
-      'firstname.lastname@example.com', 
-      'email@subdomain.example.co.uk', 
-      'firstname+lastname@example.com', 
-      'email@123.123.123.123', 
-      'email@[123.123.123.123]', 
-      '123456789@example.com', 
-      'email@example-one.com', 
-      '_______@example.com', 
-      'email@example.name', 
-      'email@example.museum', 
-      'email@example.co.jp', 
+      'email@example.com',
+      'firstname.lastname@example.com',
+      'email@subdomain.example.co.uk',
+      'firstname+lastname@example.com',
+      'email@123.123.123.123',
+      'email@[123.123.123.123]',
+      '123456789@example.com',
+      'email@example-one.com',
+      '_______@example.com',
+      'email@example.name',
+      'email@example.museum',
+      'email@example.co.jp',
       'firstname-lastname@example.com']
 
-    for address in valid_addresses 
+    valid_addresses.each do |address|
       assert EmailValidator::email_address?(address), "#{address} should be a valid email address"
     end
   end
@@ -44,7 +44,7 @@ class EmailValidatorTest < Minitest::Unit::TestCase
       'email@example',
       'email@example..com']
 
-    for address in invalid_addresses 
+    invalid_addresses.each do |address|
       assert !EmailValidator::email_address?(address), "#{address} should be an invalid email address"
     end
   end
