@@ -1,8 +1,4 @@
-* * *
 
-title: Takk layout: wide
-
-* * *
 
 # Tusen takk
 

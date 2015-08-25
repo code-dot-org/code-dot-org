@@ -1,8 +1,4 @@
-* * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
-
-* * *
 
 ## 여러분의 커뮤니티에서 Hour of Code를 소개해 주세요.
 

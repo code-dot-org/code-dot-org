@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code イベントの手引き layout: wide nav: resources_nav
-
-* * *
 
 # Hour of Code イベントの案内
 

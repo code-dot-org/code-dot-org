@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Premios - preguntas frecuentes
 

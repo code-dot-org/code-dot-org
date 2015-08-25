@@ -1,8 +1,4 @@
-* * *
 
-titulli: Kushtet e Përdorimit
-
-* * *
 
 # Kushtet e Shërbimit
 

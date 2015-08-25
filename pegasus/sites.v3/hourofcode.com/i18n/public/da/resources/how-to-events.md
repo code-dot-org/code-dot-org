@@ -1,8 +1,4 @@
-* * *
 
-Titel: Hour of Code - Hvordan gør jeg? layout: bred nav: resources_nav
-
-* * *
 
 # Hour of Code event guide
 

@@ -1,8 +1,4 @@
-* * *
 
-Titlu: evenimentul "Ora de Cod" cum să... layout: largă nav: resources_nav
-
-* * *
 
 # Ghidul de organizare a unui eveniment Hour of Code
 

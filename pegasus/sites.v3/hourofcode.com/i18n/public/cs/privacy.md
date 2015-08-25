@@ -1,8 +1,4 @@
-* * *
 
-nadpis: Ochrana osobních údajů
-
-* * *
 
 # Zásady ochrany osobních údajů
 

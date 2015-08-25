@@ -1,8 +1,4 @@
-* * *
 
-düzen: geniş
-
-* * *
 
 # Ödüller - SSS
 

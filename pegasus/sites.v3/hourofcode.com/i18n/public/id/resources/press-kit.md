@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
 

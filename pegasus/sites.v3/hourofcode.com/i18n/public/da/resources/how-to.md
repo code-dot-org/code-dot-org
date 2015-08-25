@@ -1,8 +1,4 @@
-* * *
 
-Titel: How-to Guide layout: bred nav: resources_nav
-
-* * *
 
 # Sådan kan du bruge Hour of Code i undervisningen
 

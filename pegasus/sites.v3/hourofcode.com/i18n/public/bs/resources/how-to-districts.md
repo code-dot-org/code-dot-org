@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Čas kodiranja upute za četvrti izgled: široki nav: resources_nav
-
-* * *
 
 # Dovedite Čas kodiranja u vaše mjesto.
 

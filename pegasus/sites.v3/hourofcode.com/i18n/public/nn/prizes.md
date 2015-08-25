@@ -1,8 +1,4 @@
-* * *
 
-title: Premiar layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

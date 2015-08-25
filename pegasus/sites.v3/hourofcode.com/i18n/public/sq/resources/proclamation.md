@@ -1,8 +1,4 @@
-* * *
 
-titulli: Shembulli Op-ed Mbështetja e Javës Edukative të Shkencave Kompjuterike dhe Orës së Kodimit shpërndarja: e gjerë nav: burime_nav
-
-* * *
 
 ### Më poshtë është një rezolutë mostër mbështetëse për Javën Edukative të Shkencave Kompjuterike dhe qëllimet e tij që të mund të përdoret nga ligjvënës shtetëror dhe lokal.
 

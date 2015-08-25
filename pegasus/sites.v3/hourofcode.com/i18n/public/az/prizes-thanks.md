@@ -1,8 +1,4 @@
-* * *
 
-title: Çox sağ olun layout: wide
-
-* * *
 
 # Çox sağ olun
 

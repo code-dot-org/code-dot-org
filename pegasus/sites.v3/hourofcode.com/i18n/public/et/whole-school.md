@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Kutsu oma terve kool osalema
 

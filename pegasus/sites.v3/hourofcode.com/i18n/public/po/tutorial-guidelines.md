@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Guião para a Hora de Código e Semana da Educação de Ciência computacional
 

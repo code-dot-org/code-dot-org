@@ -1,8 +1,4 @@
-* * *
 
-titulli: Shembulli Op-ed Mbështetja e Javës Edukative të Shkencave Kompjuterike dhe Orës së Kodimit shpërndarja: e gjerë nav: burime_nav
-
-* * *
 
 ### Më poshtë është një shembull op-ed mbështetës për Javën Edukative të Shkencave Kompjuterike dhe qëllimeve të saj që mund të përdoren nga shteti, ligjvënësit lokal, liderat e biznesit etj.
 

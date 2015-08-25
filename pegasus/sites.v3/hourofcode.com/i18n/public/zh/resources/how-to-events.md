@@ -1,8 +1,4 @@
-* * *
 
-標題: Hour of Code 活動如何進行
-
-* * *
 
 # Hour of Code 活動指南
 

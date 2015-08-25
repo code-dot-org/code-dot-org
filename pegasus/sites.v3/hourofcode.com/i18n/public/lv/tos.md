@@ -1,8 +1,4 @@
-* * *
 
-virsraksts: Lietošanas nosacījumi
-
-* * *
 
 # Lietošanas nosacījumi
 

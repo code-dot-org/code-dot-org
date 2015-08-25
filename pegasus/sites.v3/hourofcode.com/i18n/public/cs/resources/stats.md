@@ -1,8 +1,4 @@
-* * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
-
-* * *
 
 # Fakta a užitečné statistiky
 

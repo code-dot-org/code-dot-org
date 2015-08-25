@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Medianı Kod Saatı tədbirinə necə cəlb etmək olar?
 

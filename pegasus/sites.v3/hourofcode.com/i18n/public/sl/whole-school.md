@@ -1,8 +1,4 @@
-* * *
 
-postavitev: široko
-
-* * *
 
 # Pritegnite celotno vašo šolo za sodelovanje
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Premi layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

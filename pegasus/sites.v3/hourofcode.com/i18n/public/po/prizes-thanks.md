@@ -1,8 +1,4 @@
-* * *
 
-título: Obrigado formato: amplo
-
-* * *
 
 # Obrigado
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Gracias layout: wide
-
-* * *
 
 # Gracias
 

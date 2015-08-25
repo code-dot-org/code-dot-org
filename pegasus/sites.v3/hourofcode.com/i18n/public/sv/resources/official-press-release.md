@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code Press Release for Elected Officials layout: wide nav: resources_nav
-
-* * *
 
 # Sample press release for elected officials
 

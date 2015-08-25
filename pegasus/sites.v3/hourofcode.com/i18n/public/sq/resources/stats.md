@@ -1,8 +1,4 @@
-* * *
 
-titulli: Njoftime dhe Statistika paraqitja: e gjerë nav: burimet_nav
-
-* * *
 
 # Njoftime dhe Statistika të domosdoshme
 

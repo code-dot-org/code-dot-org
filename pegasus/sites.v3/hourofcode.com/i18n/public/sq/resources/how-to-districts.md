@@ -1,8 +1,4 @@
-* * *
 
-titulli: Ora e Kodimit Si-Tek për rrethet layout: e gjerë nav: resources_nav
-
-* * *
 
 # Sillni Orën e Kodimit në shkollat tuaj e rrethit.
 

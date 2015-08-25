@@ -1,8 +1,4 @@
-* * *
 
-naslov: Vodič postavitev: široko navigacija: viri_nav
-
-* * *
 
 # Kako učiti Uro za kodo
 

@@ -1,8 +1,4 @@
-* * *
 
-title: "Programmēšanas stundas" vadlīnijas rajoniem layout: wide nav: resources_nav
-
-* * *
 
 # Aicini skolu iesaistīties "Programmēšanas stundas" kustībā.
 

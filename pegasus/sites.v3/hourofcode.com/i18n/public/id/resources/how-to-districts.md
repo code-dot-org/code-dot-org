@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
-
-* * *
 
 # Bawakan Hour of Code sekolah di seluruh distrik anda.
 

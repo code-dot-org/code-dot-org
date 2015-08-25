@@ -1,8 +1,4 @@
-* * *
 
-title: How-to gids layout: wide nav: resources_nav
-
-* * *
 
 # Hoe begeleid je een Uur Code
 

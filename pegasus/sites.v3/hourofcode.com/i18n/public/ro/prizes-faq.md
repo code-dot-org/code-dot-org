@@ -1,8 +1,4 @@
-* * *
 
-aspect: wide
-
-* * *
 
 # Premii - întrebări frecvente
 

@@ -1,8 +1,4 @@
-* * *
 
-titel: Voorbeeld van een opiniestuk dat de Informatica Onderwijs Week en Uur Code ondersteunt indeling: breed nav:resources_nav
-
-* * *
 
 ### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
 

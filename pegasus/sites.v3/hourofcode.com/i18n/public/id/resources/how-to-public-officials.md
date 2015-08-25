@@ -1,8 +1,4 @@
-* * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
-
-* * *
 
 ## Membawa Hour of Code ke seluruh komunitas Anda.
 

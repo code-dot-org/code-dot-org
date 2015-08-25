@@ -1,8 +1,4 @@
-* * *
 
-제목: 지역별 코드 시간(Hour of Code) 다루기 레이아웃: 넓은 nav: resources_nav
-
-* * *
 
 # 코드시간(Hour of Code) 전체 학교 지역에서 운영하기
 

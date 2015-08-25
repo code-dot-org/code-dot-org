@@ -1,8 +1,4 @@
-* * *
 
-başlık: Kodlama Saati Bölgeler için Nasıl Yapılır düzen: geniş nav: resources_nav
-
-* * *
 
 # Kodlama Saatini tüm okul bölgenize getirin.
 

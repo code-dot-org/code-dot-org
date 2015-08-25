@@ -1,8 +1,4 @@
-* * *
 
-titre: Merci affichage: large
-
-* * *
 
 # Merci
 

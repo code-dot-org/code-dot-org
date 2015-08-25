@@ -1,8 +1,4 @@
-* * *
 
-titulli: Ora e Kodimit Event Si-Tek layout: gjerë nav: resources_nav
-
-* * *
 
 # Guida e eventit Ora e Kodimit
 

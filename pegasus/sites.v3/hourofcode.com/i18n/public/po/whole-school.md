@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Reúne a tua escola e participa
 

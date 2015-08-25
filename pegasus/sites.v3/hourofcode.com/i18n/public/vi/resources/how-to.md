@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: làm thế nào để hướng dẫn bố trí: rộng nav: nguồn_nav
-
-* * *
 
 # Cách dạy một người về Hour of Code
 

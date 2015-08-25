@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Haz que toda tu escuela participe
 

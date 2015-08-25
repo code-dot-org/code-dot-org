@@ -1,8 +1,4 @@
-* * *
 
-Hour of Code をあなたの学区全体へ
-
-* * *
 
 # Bring the Hour of Code to your entire school district.
 

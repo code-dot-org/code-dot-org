@@ -1,8 +1,4 @@
-* * *
 
-title: Danke layout: wide
-
-* * *
 
 # Vielen Dank
 

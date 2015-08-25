@@ -1,8 +1,4 @@
-* * *
 
-title: Məxfilik siyasəti
-
-* * *
 
 # Məxfilik siyasəti
 

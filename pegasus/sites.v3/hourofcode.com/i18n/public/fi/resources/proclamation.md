@@ -1,8 +1,4 @@
-* * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
-
-* * *
 
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 

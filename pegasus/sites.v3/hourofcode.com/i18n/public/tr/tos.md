@@ -1,8 +1,4 @@
-* * *
 
-title: Terms of Service
-
-* * *
 
 # Hizmet Koşulları
 

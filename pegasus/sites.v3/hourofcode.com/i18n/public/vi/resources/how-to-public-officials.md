@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Cách hướng dẫn cho cán bộ công chức bố cục: rộng nav: nguồn_nav
-
-* * *
 
 ## Đem Giờ Lập trình đến toàn dân.
 

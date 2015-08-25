@@ -1,8 +1,4 @@
-* * *
 
-Titel: Efterskrift og statistik layout: bred nav: resources_nav
-
-* * *
 
 # Efterskrift og statistik
 

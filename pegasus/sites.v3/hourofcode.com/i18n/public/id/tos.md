@@ -1,8 +1,4 @@
-* * *
 
-Judul: Persyaratan Layanan
-
-* * *
 
 # Persyaratan Layanan
 

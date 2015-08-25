@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Press Kit izgled: široki nav: resources_nav
-
-* * *
 
 ## Privucite medije kako bi prisustvovali vašem Satu Kodiranja
 

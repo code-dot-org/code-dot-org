@@ -1,8 +1,4 @@
-* * *
 
-title: Promozione e Statistiche layout: wide nav: resources_nav
-
-* * *
 
 # Promozione e Statistiche Utili
 

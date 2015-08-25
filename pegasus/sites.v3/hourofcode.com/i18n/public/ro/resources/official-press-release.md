@@ -1,8 +1,4 @@
-* * *
 
-title: Comunicat de presa Hour of Code pentru oficialii alesi layout: wide nav: resources_nav
-
-* * *
 
 # Model de comunicat de presa pentru functionarii alesi
 

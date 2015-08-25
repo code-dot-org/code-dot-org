@@ -1,8 +1,4 @@
-* * *
 
-title: Реклама та факти layout: wide nav: resources_nav
-
-* * *
 
 # Цікава статистика
 

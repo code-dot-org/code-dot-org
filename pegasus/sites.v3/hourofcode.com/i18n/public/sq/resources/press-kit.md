@@ -1,8 +1,4 @@
-* * *
 
-titulli: Press Kit vendi: gjerë nav: burime_nav
-
-* * *
 
 ## Si të tërheqësh mediat në eventin e Orës së Kodimit
 

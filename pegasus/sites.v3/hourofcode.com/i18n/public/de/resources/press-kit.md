@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Wie Du Medien auf Deine Hour of Code Veranstaltung aufmerksam machst
 

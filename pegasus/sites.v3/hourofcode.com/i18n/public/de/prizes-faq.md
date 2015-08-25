@@ -1,8 +1,4 @@
-* * *
 
-Anordnung: Breit
-
-* * *
 
 # Preise - FAQs
 

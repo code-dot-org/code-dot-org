@@ -1,8 +1,4 @@
-* * *
 
-title: Code Uur Evenement How-To layout: wide nav: resources_nav
-
-* * *
 
 # Uur Code evenement gids
 

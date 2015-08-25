@@ -1,8 +1,4 @@
-* * *
 
-Naslov: pravilnik o zaštiti privatnosti
-
-* * *
 
 # Privatnost
 

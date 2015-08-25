@@ -1,8 +1,4 @@
-* * *
 
-title: How to host an Hour of Code - Organizations layout: wide nav: resources_nav
-
-* * *
 
 <div class="row">
   <h1 class="col-sm-6">

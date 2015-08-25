@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Få hela din skola att delta
 

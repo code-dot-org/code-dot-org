@@ -1,8 +1,4 @@
-* * *
 
-title: Guía "Cómo hacer" layout: wide nav: resources_nav
-
-* * *
 
 # Cómo enseñar una Hora de Código
 

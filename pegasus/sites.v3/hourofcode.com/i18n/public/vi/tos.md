@@ -1,8 +1,4 @@
-* * *
 
-Tiêu đề: Điều khoản Dịch vụ
-
-* * *
 
 # Điều khoản Dịch vụ
 

@@ -1,8 +1,4 @@
-* * *
 
-izkārtojums: plats
-
-* * *
 
 # Piesaki dalībai visu skolu
 

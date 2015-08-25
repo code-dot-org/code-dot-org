@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code How-To for Districts layout: wide nav: resources_nav
-
-* * *
 
 # Apportez l'Heure de Code à l'école de votre quartier.
 

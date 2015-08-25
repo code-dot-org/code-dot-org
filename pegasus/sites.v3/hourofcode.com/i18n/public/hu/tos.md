@@ -1,8 +1,4 @@
-* * *
 
-Cím: Szolgáltatási feltételek
-
-* * *
 
 # Szolgáltatási feltételek
 

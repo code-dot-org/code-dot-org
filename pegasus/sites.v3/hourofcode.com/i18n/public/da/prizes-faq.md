@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Præmier - ofte stillede spørgsmål
 

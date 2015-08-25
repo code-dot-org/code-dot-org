@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## Kako privabiti medije na vaš dogodek Ura za kodo?
 

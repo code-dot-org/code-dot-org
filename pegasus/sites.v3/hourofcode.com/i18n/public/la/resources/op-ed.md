@@ -1,8 +1,4 @@
-* * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
-
-* * *
 
 ### A continuación encuentras una muestra de artículo de opinión apoyando la semana de la educación en ciencias de la computación y sus objetivos que puede ser usada por legisladores locales y estatales, líderes empresariales, etc.
 

@@ -1,8 +1,4 @@
-* * *
 
-Título: ejemplo resolución de apoyo de las ciencias de la computación educacional la semana de hora del código: nav ancho: resources_nav
-
-* * *
 
 ### abajo hay una muestra de resolución de apoyo a la semana de Ciencias de la computación y sus objetivos que puedan ser utilizados por el estado y los legisladores locales.
 

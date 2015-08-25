@@ -1,8 +1,4 @@
-* * *
 
-Título: Hora de Código de procedimientos para la disposición de los distritos: nav ancho: resources_nav
-
-* * *
 
 # Llevar la Hora de Código a su distrito escolar.
 

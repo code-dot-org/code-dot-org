@@ -1,8 +1,4 @@
-* * *
 
-titulli: Udhëzuesi për zyrtarët publik plani: i gjerë nav: burime_nav
-
-* * *
 
 ## Sill Orën e Kodimit në gjithë komunitetin tënd.
 

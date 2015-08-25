@@ -1,8 +1,4 @@
-* * *
 
-title: "Programmēšanas stundas" vadlīnijas layout: wide nav: resources_nav
-
-* * *
 
 # "Programmēšanas stundas" vadlīnijas
 

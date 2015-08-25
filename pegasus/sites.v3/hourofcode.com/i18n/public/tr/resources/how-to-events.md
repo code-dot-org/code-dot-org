@@ -1,8 +1,4 @@
-* * *
 
-Kodlama saati etkinlik rehperi
-
-* * *
 
 # Kodlama saati etkinlik rehberi
 

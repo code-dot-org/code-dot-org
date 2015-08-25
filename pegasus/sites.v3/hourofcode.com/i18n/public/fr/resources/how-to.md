@@ -1,8 +1,4 @@
-* * *
 
-title: Comment enseigner une Heure de Code layout: wide nav: resources_nav
-
-* * *
 
 # Comment enseigner une Heure de Code
 

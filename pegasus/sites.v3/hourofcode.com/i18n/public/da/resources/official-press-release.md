@@ -1,8 +1,4 @@
-* * *
 
-title: Hour of Code pressemeddelelse til folkevalgte layout: wide nav: resources_nav
-
-* * *
 
 # Sample press release for elected officials
 

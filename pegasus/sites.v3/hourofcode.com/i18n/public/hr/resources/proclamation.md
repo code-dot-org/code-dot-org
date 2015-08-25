@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Uzorak Op-ed podrške tjednu računarstva i Satu Kodiranja izgled: široki nav: resources_nav
-
-* * *
 
 ### Ispod je primjer podrške tjednu računarskog obrazovanja i njegovim ciljevima za državne i lokalne zakonodavce.
 

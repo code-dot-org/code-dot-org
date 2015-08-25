@@ -1,8 +1,4 @@
-* * *
 
-Nosaukums: Balvas Izkārtojums: Plašs
-
-* * *
 
 <% if @country == 'la' %>
 

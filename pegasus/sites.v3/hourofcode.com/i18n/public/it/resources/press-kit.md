@@ -1,8 +1,4 @@
-* * *
 
-title: Kit per la Stampa layout: wide nav: resources_nav
-
-* * *
 
 ## Come attirare l'attenzione dei media sul tuo evento dell'Ora del Codice
 

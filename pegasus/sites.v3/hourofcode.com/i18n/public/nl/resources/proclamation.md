@@ -1,8 +1,4 @@
-* * *
 
-titel: Voorbeeld Resolutie die de Informatica Onderwijs Week en Uur Code ondersteunt indeling: breed nav:resources_nav
-
-* * *
 
 ### Hieronder vindt u een voorbeeld resolutie die de informatica onderwijs week ondersteunt en de doelstellingen die door de staat en lokale wetgevers kunnen worden gebruikt.
 

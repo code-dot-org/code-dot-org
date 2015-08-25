@@ -1,8 +1,4 @@
-* * *
 
-Naslov: Uzorak Op-ed podrške tjedna računalne znanost i Sata Kodiranja izgled: široki nav: resources_nav
-
-* * *
 
 ### U nastavku je uzorak op-ed podrške tjednu računarstva i njegovih ciljeva koje mogu koristiti država, lokalni zakonodavci poslovni ljudi itd.
 

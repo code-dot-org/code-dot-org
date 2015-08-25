@@ -1,8 +1,4 @@
-* * *
 
-title: Come preparare un Evento dell'Ora del Codice layout: wide nav: resources_nav
-
-* * *
 
 # Guida alla creazione di eventi per l'Ora del Codice
 

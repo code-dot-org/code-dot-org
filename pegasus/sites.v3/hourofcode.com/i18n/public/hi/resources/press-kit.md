@@ -1,8 +1,4 @@
-* * *
 
-title: Press Kit layout: wide nav: resources_nav
-
-* * *
 
 ## एक घंटा कोड का में पत्रकारोंको आकर्षित करनेके कुछ तरीके
 

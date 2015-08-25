@@ -1,8 +1,4 @@
-* * *
 
-Tiêu đề : Mang "Giờ mã hóa" đến các địa phương
-
-* * *
 
 # Mang "Giờ mã hóa" đến ngôi trường của bạn.
 

@@ -1,8 +1,4 @@
-* * *
 
-title: Tak layout: wide
-
-* * *
 
 # Tak
 

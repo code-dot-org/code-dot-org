@@ -1,8 +1,4 @@
-* * *
 
-bố cục: rộng
-
-* * *
 
 # Phần thưởng - Các câu hỏi thường gặp
 

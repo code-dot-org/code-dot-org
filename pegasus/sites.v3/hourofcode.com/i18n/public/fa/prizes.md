@@ -1,8 +1,4 @@
-* * *
 
-title: Prizes layout: wide
-
-* * *
 
 <% if @country == 'la' %>
 

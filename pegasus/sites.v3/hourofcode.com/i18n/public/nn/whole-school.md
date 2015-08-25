@@ -1,8 +1,4 @@
-* * *
 
-oppsett: bredt
-
-* * *
 
 # Få heile skulen å vere med
 

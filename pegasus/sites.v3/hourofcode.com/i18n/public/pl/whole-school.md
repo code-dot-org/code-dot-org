@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Zaproś całą swoją szkołę do wzięcia udziału
 

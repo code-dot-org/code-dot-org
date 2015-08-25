@@ -1,8 +1,4 @@
-* * *
 
-Titlu: Hour of Code "cum să..." pentru cartiere aspect: wide nav: resources_nav
-
-* * *
 
 # Adu Ora de cod în întreaga ta școală de cartier.
 

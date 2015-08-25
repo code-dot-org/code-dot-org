@@ -1,8 +1,4 @@
-* * *
 
-title: How-to guide for public officials layout: wide nav: resources_nav
-
-* * *
 
 ## Porteu l' Hora del Codi al vostre entorn.
 

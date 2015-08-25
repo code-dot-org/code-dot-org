@@ -1,8 +1,4 @@
-* * *
 
-tiêu đề: Mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và Giờ mã hóa trình bày: rộng nav: nguồn_nav
-
-* * *
 
 ### Dưới đây là mẫu bài báo của một tác giả hỗ trợ tuần lễ giáo dục về khoa học máy tính và mục tiêu của nó có thể được sử dụng cho các bang, các nhà lập pháp địa phương , lãnh đạo doanh nghiệp vv.
 

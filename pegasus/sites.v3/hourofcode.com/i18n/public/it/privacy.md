@@ -1,8 +1,4 @@
-* * *
 
-Titolo: informativa sulla privacy
-
-* * *
 
 # Informativa sulla privacy
 

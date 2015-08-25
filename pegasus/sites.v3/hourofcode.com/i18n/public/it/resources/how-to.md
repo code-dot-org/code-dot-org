@@ -1,8 +1,4 @@
-* * *
 
-title: Guida all'uso layout: wide nav: resources_nav
-
-* * *
 
 # Come insegnare un'Ora di Codice
 

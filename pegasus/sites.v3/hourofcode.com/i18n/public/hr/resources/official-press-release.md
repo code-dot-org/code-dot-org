@@ -1,8 +1,4 @@
-* * *
 
-title: Novinski članak za Sat Kodiranja za izabrane dužnosnike layout: wide nav: resources_nav
-
-* * *
 
 # Uzorak za tisak za izabrane dužnosnike
 

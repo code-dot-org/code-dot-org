@@ -1,8 +1,4 @@
-* * *
 
-postavitev: široko
-
-* * *
 
 # Prizes - FAQs
 

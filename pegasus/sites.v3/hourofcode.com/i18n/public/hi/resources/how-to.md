@@ -1,8 +1,4 @@
-* * *
 
-title: How-to Guide layout: wide nav: resources_nav
-
-* * *
 
 # एक घंटा कोड का कैसे पढ़ानेकी तकनीक
 

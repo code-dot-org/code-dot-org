@@ -1,8 +1,4 @@
-* * *
 
-title: Guida per contattare i pubblici ufficiali layout: wide nav: resources_nav
-
-* * *
 
 ## Introdurre l'Ora del Codice all'intera comunità.
 

@@ -1,8 +1,4 @@
-* * *
 
-Titel: How-to gids voor openbare ambtenaren lay-out: breed nav: resources_nav
-
-* * *
 
 ## Breng het Uur Code naar je ganse gemeenschap.
 

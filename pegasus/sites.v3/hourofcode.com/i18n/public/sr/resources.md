@@ -1,8 +1,7 @@
-* * *
-
-наслов: Ресурси приказ: широк нав: resources_nav
-
-* * *
+---
+layout: wide
+nav: resources_nav
+---
 
 <div class="row">
   <h1 class="col-sm-12">

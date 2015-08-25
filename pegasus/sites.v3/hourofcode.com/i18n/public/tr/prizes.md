@@ -1,8 +1,4 @@
-* * *
 
-başlık: Ödüller düzen: geniş
-
-* * *
 
 <% if @country == 'la' %>
 

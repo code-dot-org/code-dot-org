@@ -1,8 +1,4 @@
-* * *
 
-Titel: Datenschutzerklärung
-
-* * *
 
 # Datenschutzerklärung
 

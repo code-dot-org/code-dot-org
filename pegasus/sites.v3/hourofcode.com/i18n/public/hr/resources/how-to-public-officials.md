@@ -1,8 +1,4 @@
-* * *
 
-title: Vodič za državne funkcionere layout: wide nav: resources_nav
-
-* * *
 
 ## Dovedite Sata Kodiranja u cijelu zajednicu.
 

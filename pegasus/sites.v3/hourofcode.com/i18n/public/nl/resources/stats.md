@@ -1,8 +1,4 @@
-* * *
 
-title: Flapteksten en nuttige Stats layout: wide nav: resources_nav
-
-* * *
 
 # Flapteksten en nuttige Stats
 

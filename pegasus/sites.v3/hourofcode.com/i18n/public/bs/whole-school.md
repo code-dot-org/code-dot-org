@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Neka vaša škola učestvuje
 

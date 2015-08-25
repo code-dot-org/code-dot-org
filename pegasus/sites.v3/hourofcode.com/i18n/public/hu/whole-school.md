@@ -1,8 +1,4 @@
-* * *
 
-layout: wide
-
-* * *
 
 # Szervezd meg az teljes iskola részvételét
 

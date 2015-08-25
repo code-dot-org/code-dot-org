@@ -1,8 +1,4 @@
-* * *
 
-Titel: Hour of Code - Hvordan gør du? layout: bred nav: resources_nav
-
-* * *
 
 # Bringe Hour of Code til hele dit skoledistrikt.
 
