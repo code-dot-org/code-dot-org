@@ -30,9 +30,7 @@ contact: [**CONTACT informatie**]
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers zijn overal, maar er onderwijzen nu minder scholen informatica dat tien jaar terug. Getinte leerlingen zijn ernstig ondervertegenwoordigd. Het goede nieuws is dat we dit veranderen. Het Uur Code is de toegangspoort om alle studenten te voorzien tot hoge kwaliteit-informatica.
 
-Tijdens de Computer Science Education Week van vorig jaar hebben 15 miljoen studenten het Uur Code geprobeerd. Informatica was te vinden op de homepages van Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startte het Uur Code met video's. Meer dan 100 partners ondersteunen deze beweging.
-
-Dit jaar proberen we de 100 miljoen leerlingen te bereiken.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! en Disney. President Obama, Shakira en Ashton Kutcher startte het Uur Code met video's. Meer dan 100 partners ondersteunen deze beweging.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
 “We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. "Elke student heeft recht om informatica te leren om de beste banen van de 21ste eeuw te kunnen uitvoeren."

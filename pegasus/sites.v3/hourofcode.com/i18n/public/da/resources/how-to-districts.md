@@ -14,4 +14,4 @@
 
   5. **Vær vært for et lokalt Hour of Code arrangement.** Se vores [ guider](<%= hoc_uri('/resources/how-to-events') %>) for hvordan du kan arrangere det, mediemateriale og andet støttemateriale.
 
-  6. **Flere [ præmier](<%= hoc_uri('/prizes') %>) til alle organisatorer.** Hver deltagende underviser vil modtage takkegaver. 100 klasse vil vinde video-chats med særlige gæstetalere. Deltagerne omfatter Bill Gates, Sheryl Sandberg, Ashton Kutcher og mange flere). Og i hver stat i USA, vil én deltagende skole vinde for $10.000 it-udstyr til deres skole!
+  6. **Flere [ præmier](<%= hoc_uri('/prizes') %>) til alle organisatorer.** Hver deltagende underviser vil modtage takkegaver. Og i hver stat i USA, vil én deltagende skole vinde for $10.000 it-udstyr til deres skole!

@@ -30,9 +30,7 @@ Contatti: [**CONTATTI**]
 [**SEMPLICE CONTENUTO**]  
 I computer sono dappertutto, ma oggi le scuole che insegnano l'informatica sono rispetto a 10 anni fa. Le ragazze e gli studenti extracomunitari non decisamente poco rappresentati. La buona notizia è che stiamo cambiando tutto ciò per migliorare la situazione. L'Ora del Codice è un passo verso la possibilità di fornire un'educazione informatica di alta qualità a tutti gli studenti.
 
-Durante la Settimana dell'Educazione Informatica lo scorso anno 15 milioni di studenti hanno provato l'Ora del Codice. L'informatica era sulla homepage di Google, di MSN, di Yahoo! e anche del sito della Disney. Il Presidente Obama, Shakira e Ashton Kutcher hanno tutti dato il via all'Ora del Codice con un video. Oltre 100 partner si sono riuniti per sostenere questo movimento.
-
-Quest'anno il movimento Ora del Codice mira a raggiungere 100 milioni di studenti.
+Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice. Grazie all'Ora del Codice, l'informatica era sulle homepage di Google, MSN, Yahoo! e anche del sito della Disney. Il Presidente Obama, Shakira e Ashton Kutcher hanno tutti dato il via all'Ora del Codice con un video. Oltre 100 partner si sono riuniti per sostenere questo movimento.
 
 [**INSERIRE STRALCI DI ORATORI, ESEMPIO:**]  
 “Dobbiamo incoraggiare e sfruttare l'interesse che i nostri studenti mostrano nell'informatica,” ha detto [**INSERIRE NOME**]. "Ogni studente merita la possibilità di imparare l'informatica per accedere alle migliori carriere del XXI secolo."

@@ -1,17 +1,17 @@
 * * *
 
-crwdns23997:0crwdne23997:0
+crwdns44619:0crwdne44619:0
 
 * * *
 
-# crwdns22183:0crwdne22183:0
+# crwdns44620:0crwdne44620:0
 
-## crwdns23998:0crwdne23998:0
+## crwdns44621:0crwdne44621:0
 
-### crwdns22187:0crwdne22187:0
+### crwdns44622:0crwdne44622:0
 
-crwdns26401:0crwdne26401:0 crwdns26402:0crwdne26402:0 crwdns26403:0crwdne26403:0 crwdns26404:0crwdne26404:0 crwdns26405:0crwdne26405:0 crwdns26406:0crwdne26406:0 crwdns26407:0crwdne26407:0
+crwdns44623:0crwdne44623:0 crwdns44624:0crwdne44624:0 crwdns44625:0crwdne44625:0 crwdns44626:0crwdne44626:0 crwdns44627:0crwdne44627:0 crwdns44628:0crwdne44628:0 crwdns44629:0crwdne44629:0 crwdns44630:0crwdne44630:0
 
-## crwdns24000:0crwdne24000:0
+## crwdns44631:0crwdne44631:0
 
-![crwdns26408:0crwdne26408:0](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>

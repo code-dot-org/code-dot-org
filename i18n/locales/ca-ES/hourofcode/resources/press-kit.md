@@ -6,18 +6,18 @@ title: Press Kit layout: wide nav: resources_nav
 
 ## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
 
-*For all press and media inquiries, contact <press@code.org>*
+*Per a totes les consultes de premsa i mitjans de comunicació, contacteu <press@code.org>*
 
 ### Consells clau
 
   * Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
   * Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
   * Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
-  * A Facebook i Twitter, comparteix actualitzacions sobre els teus plans, anuncia els teus esdeveniments i publica imatges durant el dies 8-14 de desembre. Utilitza el hashtag **#HourOfCode**, aixi Code.org podrà veure i promocionar els teus esdeveniments.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guia pas a pas:
 
-**1. Plan your event**
+**1. Planifica el teu esdeveniment**
 
   * Planifica una reunió per donar inici a l'Hora de Codi.
   * Envia [una carta](<%= hoc_uri('/resources/#sample-emails') %>) als pares. Demana'ls que corrin la veu.
@@ -25,35 +25,35 @@ title: Press Kit layout: wide nav: resources_nav
   * Organitza activitats en grup (com una demostració d'una activitat de programació "fora de línia"), o llueix activitats creades i dirigides pels estudiants.
   * Mostra Code.org’s [Hora de Codi vídeo](<%= hoc_uri('/') %>) o un d'[aquestos](<%= hoc_uri('/resources#videos') %>) per animar.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. identifica periodistes locals que cobreixen l'educació o esdeveniments locals.**
 
-Think a local newspaper, TV station, radio station or blog.
+Pensa en un diari local, TV, emissora de ràdio o web bloc.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Mirar en línia per trobar informació de contacte de periodistes. Si no la pots trobar, truca a la publicació per preguntar, o envia un correu a l'adreça general tips@PUBLICATIONNAME.com i demana redirigir el teu missatge al periodista correcte.
 
-**3. Contact local media**
+**3. Contacta amb els mitjans de comunicació locals**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+La millor manera d'arribar és per correu electrònic. Ha de ser curt i comunicatiu: per què s'haurien d'interessar altres persones per aquest esdeveniment? Inclou informació de contacte (incloent-hi un número de telèfon) per qui serà el lloc a l'esdeveniment. **Veure un [exemple per els mitjans de comunicació](<%= hoc_uri('/resources#sample-emails') %>):**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Preparat per respondre preguntes sobre el teu esdeveniment de l'escola. Aquests són alguns exemples:**
 
-*Why is your school doing an Hour of Code?*
+*Per què la vostra escola està fent una Hora de Codi?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Mentre tots nosaltres sabem que és important per als estudiants aprendre a navegar al món actual saturat de tecnologia, molts mestres no són experimentats en informàtica i no saben per on començar. Aquest esdeveniment és una oportunitat per a tots nosaltres per veure de què tracta l' informàtica.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Esperem despertar l'interès dels alumnes per a seguir aprenent. La investigació també mostra que els nens aprenen conceptes de programació abans de saber llegir i escriure. De fet, els seus cervells són més receptius als llenguatges informàtics a una edat jove, el mateix que amb les llengües estrangeres.
 
-*Why is this important?*
+*Per què és important?*
 
-In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundària. Als EUA, el 90 per cent de les escoles ni tan sols ho ensenyen. És el moment per aconseguir arribar al segle XXI. Sabem, que a pesar de que els nostres estudiants quan creixin, faran medicina, negocis, política, o arts, saber com construir tecnologia els permetrà tenir la confiança i el saber fer per tenir èxit.
 
-**More details and a quote you can use in materials**
+**Més detalls i una cita que pot utilitzar com idea**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"L'Hora de Codi està dissenyada per desmitificar el codi i mostrar que la informàtica no és una ciència espacial, qualsevol pot aprendre els conceptes bàsics," va dir Hadi Partovi, fundador i director executiu de Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Sobre Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. La seva idea és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Per obtenir més informació, visiteu: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Troba més recursos i correus d'exemple [aquí](<%= hoc_uri('/resources') %>).

@@ -1,7 +1,5 @@
 
 
-[<button style="float: right; margin-top: 50px">Tədbirinizi qeydiyyatdan keçirin</button>](/#join)
-
 ## Medianı Kod Saatı tədbirinə necə cəlb etmək olar?
 
 *Mətbuat və mediaya dair müraciətləri <press@code.org> ünvanına göndərin*
@@ -11,7 +9,7 @@
   * Tədbirdən iki həftə əvvəl medianı e-poçt vasitəsilə məlumatlandırın. Cavab almadıqda, e-poçt və ya telefon vasitıəsilə yenidən müraciət edin.
   * Məktəb heyətindən və ya könüllərdən onlayn paylaşmaq üçün və ya mətbuata göndərmək üçün şəkillər çəkməyi xahiş edin.
   * Kod Saatı barədə öz veb-səhifənizdə və ya məktəbin divar qəzetində məlumat yerləşdirin. Tədbirin detallarını açıqlayın və şagirdlərin fəaliyyətini göstərən şəkilləryerləşdirin.
-  * 8-14 Dekabr ərzində Facebook və Twitterdə planlarınızı paylaşın, tədbirlərin elanını və şəkillərinizi yerləşdirin. **#HourOfCode** həştəqindən istifadə edin ki "Code.org" sizin tədbirinizi görüb yayımlaya bilsin.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Mərhələlər üzrə bələdçi:
 
@@ -39,7 +37,7 @@ Müxbirlə əlaqə üçün onlayn axtarış edin. Əgər tapa bilməsəniz, reda
 
 Bu gün, texnologiya ilə dolu dünyada şagirdlərin necə baş çıxartmağı öyrənməsinin vacib olduğunu hamımızın bildiyi halda, bir çox müəllimlər informatikanın tədrisi üçün çox da təcrübəli deyillər və nədən başlayacaqlarını bilmirlər. Bu tədbir hər birimizə informatikanın nə olduğunun öyrənmək üçün şans verir.
 
-Biz ümid edirik ki, bu tələbələr öyrənməyə başlamaq üçün bir qığılcım verəcək. Tədqiqatlar göstərir ki, uşaqlar proqramlaşdırma anlayışlarını yazma və oxumadan daha əvvəl qavrayırlar. Faktiki olaraq, uşaqların beyni xarici dillər kimi, proqramlaşdırma dillərini də asanlıqla mənimsəyir.
+Biz ümid edirik ki, bu tələbələr öyrənməyə başlamaq üçün bir qığılcım verəcək. Tədqiqatlar göstərir ki, uşaqlar proqramlaşdırma anlayışlarını yazma və oxumadan daha əvvəl qavrayırlar. Əslində, onların beyni xarici dillər kimi, proqramlaşdırma dillərini də gənc yaşlarında daha asan mənimsəyir.
 
 *Niyə bu vacibdir?*
 
@@ -47,13 +45,11 @@ Biz ümid edirik ki, bu tələbələr öyrənməyə başlamaq üçün bir qığ�
 
 **Ətraflı məlumat və materiallarda istifadə edə biləcəyiniz mənbə**
 
-"Kod Saatı proqramlaşdırma barədə mifləri dağıtmağa, informatikanın "kosmik peyklər haqqında elm" olmadığını, hamının proqramlaşdırmanın əsaslarını öyrənə biləcəyini göstərməyə xidmət edir," said Hadi Partovi, "Code.org" təsisçisi və rəhbəri. "Ötən il 1 həftə ərzində 15 milyon şagird Kod Saatında iştirak etdi. İndi bizim məqsədimiz 21-ci əsrin informatika təhsilinin bütün sərhədləri keçdiyini və heç bir sərhəd tanımadığını 100 milyona isbat etməkdir."
+"Kod Saatı proqramlaşdırma barədə mifləri dağıtmağa, informatikanın "kosmik peyklər haqqında elm" olmadığını, hamının proqramlaşdırmanın əsaslarını öyrənə biləcəyini göstərməyə xidmət edir," said Hadi Partovi, "Code.org" təsisçisi və rəhbəri. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **"Code.org" haqqında**
 
-"Code.org" informatika təhsilinin əhatə dairəsinin genişləndirilməsi, bu sahədə az təmsil olunan qadınlar və rəngli tələbələrin iştirak sayının artırılmasına xidmət edən ictimai qeyri-kommersiya təşkilatıdır. Məqsəd hər məktəbdə hər bir şagirdə kompüter proqramlaşdırmasını öyrənmək üçün imkan yaratmaqdır. 2013-də fəaliyyətə başladıqdan sonra, "Code.org" Kod Saatı təşkil etdi - milyonlarla şagirdi informatika elmi ilə tanış etdi - ölkə üzrə 30-dan artıq məktəblə əməkdaşlıq şəraitində bütün yaş dövrünə uyğun "open-source" onlayn tədris platforması olan "Code Studio"-u istifadəyə verdi. Ətrafı məlumat üçün: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Məqsəd hər məktəbdə hər bir şagirdə kompüter proqramlaşdırmasını öyrənmək üçün imkan yaratmaqdır. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Ətrafı məlumat üçün: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Daha çox material və məktub nümunələri [burada](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Tədbirinizi qeydiyyatdan keçirin</button></a>

@@ -4,25 +4,37 @@ affichage: large
 
 * * *
 
-# Lignes directrices pour les tutoriels pour l'Heure de Code et la semaine de l'éducation en informatique
+# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-**La date de fin pour proposer un tutorial pour Hour of Code 2014 est dépassée. Vous pouvez toujours soumettre une demande et nous essaierons de la prendre en compte si le temps le permet.**
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
 
-Code.org hébergera une grande variété d'activité de Hour of Code sur les sites Code.org, Hour of Code et CSEdWeek. La liste actuelle est à [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier est d'offrir la meilleure approche pour les étudiants et les professeurs qui débutent en informatique. Veuillez utiliser ce guide pour la création de votre atelier, destiné aux usagers qui n'ont pas d'expérience en programmation ou informatique.
 
-Nous aimerions offrir un large panel d'ateliers attractifs, mais le but premier est d'offrir la meilleure approche pour les étudiants et les professeurs qui débutent en informatique. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+  
+
+
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
 ## Index :
 
-  * [Comment les tutoriels seront évalués avant d'être inclus](#inclusion)
-  * [Direction à suivre pour la création d'un atelier Heure de Code](#guidelines)
-  * [Comment soumettre (Dû le 01/10/2014)](#submit)
-  * [Suggestions pour construire votre activité](#design)
-  * [Trademark Guidelines](#tm)
-  * [Tracking Pixel](#pixel)
-  * [Promouvoir vos tutoriaux, CSEdWeek, et Hour of Code](#promote)
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
+    
+  * [How to submit (Due 10/31/2015)](#submit)  
+    
+  * [Suggestions for designing your activity](#design)  
+    
+  * [Trademark Guidelines](#tm)  
+    
+  * [Tracking Pixel](#pixel)  
+    
+  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
+    
   * [Note pour les étudiants handicapés](#disabilities)
 
 <a id="inclusion"></a>
@@ -35,37 +47,36 @@ Un comité de professeurs d'informatique classera les demandes sur des critères
 
   * sont de grande qualité
   * sont en auto-apprentissage, ne requérant aucune connaissance préalable
-  * sont conçus pour les débutants
+  * designed for beginners - among students AND teachers
   * sont conçus pour une durée approximative d'une heure
+  * require no sign up
+  * require no payment
+  * require no installation
   * fonctionnement sur plusieurs OS/devices, incluant les mobiles et les tablettes
   * fonctionnent sur plusieurs langages
-  * encouragent l'apprentissage quelque soit le groupe démographique (spécialement les groupes sous-représentés)
+  * promote learning by all demographic groups (esp. under-represented groups)
   * ne sont pas seulement centrés sur le HTML/CSS (notre but est l'apprentissage de la programmation et pas seulement du langage HTML)
 
 **Les tutoriaux seront moins bien classés s'ils :**
 
   * sont de piètre quaité
   * nécessitent un niveau avancé de connaissance (excluant les débutants)
+  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * fonctionnent sur un nombre de limité d'OS ou de devices - pour les plateformes basés sur le Web, la cible à atteindre en terme de support est la suivante : IE9+, les derniers Chrome, Firefox et Safari
   * fonctionnent seulement en anglais
-  * ciblent une catégorie spécifique (par exemple s'ils sont destinés en priorité aux garçons)
+  * reinforce stereotypes that hinder participation by under-represented student groups
   * encouragent la promotion d'un site d'apprentissage qui facturent les cours
 
 **Les tutoriaux NE seront PAS listés s'ils :**
 
-  * requièrent un haut niveau d'implication avec une somme de préparations (c'est-à-dire s'ils ne sont pas auto-guidés et à destination des étudiants)
   * ne sont pas prévus pour (approximativement) une heure de travail
   * nécessitent une inscription 
   * nécessitent un paiement
-  * nécessitent une installation
+  * require installation (other than mobile apps)
   * ne s'attachent qu'au design web et au langage HTML+CSS
   * sont présentés après la date de fin des candidatures ou avec une information incomplète (voir ci-dessous)
 
-Au final, le but de la campagne Hour of Code est d'élargir la participation à l'informatique grâce aux étudiants et aux professeurs, et de démontrer que l'informatique est accessible à tous, et "est plus facile que ce que vous croyez". De toute façon, ce but est d'autant mieux atteint en donnant aux étudiants et aux professeurs un nombre limité d'exemples simples mais qui concentrent une grande qualité pour l'utilisateur débutant.
-
-Notez aussi que le CSEdWeek 2013 a été un grand succès attesté par les réponses des professeurs et des étudiants - 20 millions de participants du 9 au 23 décembre, et 97% affirment avoir apprécié et être prêts à recommencer!!
-
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+Au final, le but de la campagne Hour of Code est d'élargir la participation à l'informatique grâce aux étudiants et aux professeurs, et de démontrer que l'informatique est accessible à tous, et "est plus facile que ce que vous croyez". De toute façon, ce but est d'autant mieux atteint en donnant aux étudiants et aux professeurs un nombre limité d'exemples simples mais qui concentrent une grande qualité pour l'utilisateur débutant. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
 [**Back to the top**](#top)
 
@@ -76,21 +87,22 @@ As a result, the existing listings are certainly “good enough,” and the driv
   * **Subject:** Introductory computer science or programming (not HTML).
   * **Goal:** Give beginners an accessible first taste of programming.
   * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
+      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
+      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
       * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
-  * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **Technical requirements**: 
+      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
+      * Okay, but not preferred: app-install, desktop app, or game-console experiences
+  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**Back to the top**](#top)
 
 <a id="submit"></a>
 
-## Comment soumettre (Dû le 01/10/2014)
+## How to submit (Due 10/31/2015)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
 **What you’ll need:**
 
@@ -105,12 +117,12 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * **Max character count for mobile-view:** 74
       * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
   * A list of tested/compatible platforms: 
-      * **Web based:** 
+      * Web based: Which platforms have you tested 
           * OS - Mac, Win, and versions
           * Navigateurs - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS mobile Safari (mobile-optimized)
           * Android Chrome (mobile-optimized)
-      * **Non web-based:** specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
       * Unplugged
   * A list of supported languages and appropriate format: 
       * Tutorials should specify which languages they support using 2-character language codes, e.g. en - English; ja - Japanese
@@ -122,7 +134,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
       * Middle School: grades 6-8
       * High School: grades 9-12
       * Tous les âges
-  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code Activities, please include the prior knowledge needed in the description of your activity.
+  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Technical requirements: 
       * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
       * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
@@ -130,7 +142,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
           * Receive a certificate that they completed the Hour of Code
           * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
           * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
+  * *(Optional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For online activities (especially smartphone/tablet apps): 
           * Number of users
           * How many completed the task
@@ -146,30 +158,28 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 
 ## Suggestions pour construire votre activité
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
 **Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
   * Our tutorial works best on the following platforms and browsers
-  * Does it work on smartphones? tablets?
+  * Does it work on smartphones? Tablets?
   * Do you recommend pair programming? 
-  * Considerations for use in a classroom? eg if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
 **Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Create your activity in Spanish or in other languages besides English.** ]
 
 **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
 **Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
-
-The three rules of pair programming in a school setting:
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
   * The driver controls the mouse and keyboard.
   * The Navigator makes suggestions, points out errors, and asks questions. 
@@ -187,15 +197,15 @@ Benefits of Pair Programming:
 
 ## Trademark Guidelines
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
 One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
-    ***“The 'Hour of Code' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”***
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
   4. No use of "Hour of Code" in app names
 
@@ -211,13 +221,12 @@ This will allow us to count users who you directly recruit to visit your website
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-**Example tracking pixels for AppInventor:**
+Example tracking pixels for AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
-
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**Back to the top**](#top)
 
@@ -225,10 +234,9 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Promouvoir vos tutoriaux, CSEdWeek, et Hour of Code
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to ***your*** Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
 
-  * Feature Hour of Code and CSEdWeek on your website.  
-    Ex: <http://www.tynker.com/hour-of-code>
+  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag **#HourOfCode** (with capital letters H, O, C)
   * Host a local event or ask your employees to host an event at local schools or community groups.
   * See our resource kit for further information (coming soon).
