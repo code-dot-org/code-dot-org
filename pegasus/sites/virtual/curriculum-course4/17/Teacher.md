@@ -55,8 +55,8 @@ Students will:
 
 ### For the Student
 
-- One [Binary Images Worksheet](Activity9-BinaryImages.pdf) per pair
-- One [Binary Image Assessment Worksheet](Assessment9-BinaryImages.pdf) per student
+- One [Binary Images Worksheet](Activity17-BinaryImages.pdf) per pair
+- One [Binary Image Assessment Worksheet](Assessment17-BinaryImages.pdf) per student
 - Blank Paper, pens, pencils
 - Other trinkets that can display opposites, such as: Playing Cards, checkers, coin, etc.  (Optional)
 
@@ -64,8 +64,8 @@ Students will:
 ### For the Teacher
 
 - Teacher guide
-- Print one [Binary Images Worksheet](Activity9-BinaryImages.pdf) per pair
-- Print one [Binary Image Assessment Worksheet](Assessment9-BinaryImages.pdf) per student 
+- Print one [Binary Images Worksheet](Activity17-BinaryImages.pdf) per pair
+- Print one [Binary Image Assessment Worksheet](Assessment17-BinaryImages.pdf) per student 
 - Gather groupings of items that can show opposites for students to use when coming up with their own binary encodings (Optional)
 
 
@@ -150,7 +150,7 @@ Decide whether you want your pairs to share their encodings with the other group
 > "Now, let's encode some images, just like a computer would!"
 
 
-## Activity: [Binary Images](Activity9-BinaryImages.pdf) (20 min)
+## Activity: [Binary Images](Activity17-BinaryImages.pdf) (20 min)
 
 ### <a name="Activity1"></a>4) Binary Images
 
@@ -189,7 +189,7 @@ You can choose to do these as a class, or have the students discuss with an elbo
 
 
 ## Assessment (10 min)
-### <a name="Assessment"></a>7) [Binary Image Assessment Worksheet](Assessment9-BinaryImages.pdf) <br/><br/>
+### <a name="Assessment"></a>7) [Binary Image Assessment Worksheet](Assessment17-BinaryImages.pdf) <br/><br/>
 
 
 ## Extended Learning 

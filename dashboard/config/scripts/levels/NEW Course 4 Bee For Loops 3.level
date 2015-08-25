@@ -21,7 +21,6 @@
     "instructions": "Ah, the \"for loop\" makes this much easier! All the code you need is here, take a look at how it is put together then click \"Run\" to see how it works. ",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"run\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "video_key": "C4_for_loops",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -31,6 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "Ah, the `for loop` makes this much easier! All the code you need is here, take a look at how it is put together then click `Run` to see how it works. ",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
@@ -39,7 +39,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true" deletable="true" movable="true" editable="true">
+            <block type="controls_for" inline="true" movable="false">
               <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number" deletable="true" movable="true" editable="true">

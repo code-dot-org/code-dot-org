@@ -178,32 +178,94 @@ class NetSimApi < Sinatra::Base
   #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
-  # Insert a new row.
+  # Insert a new row or rows.
+  # Accepts a JSON request body of either an Object if inserting a
+  # single row or an Array of Objects if inserting multiple rows
+  #
+  # Examples:
+  #
+  # POST "{ 'name': 'alice', 'male': false }"
+  # -> 201 "{ 'name': 'alice', 'male': false, 'id': 1 }"
+  #
+  # POST "[{ 'name': 'nancy', 'male': false }, { 'name': 'drew', 'male': true }]"
+  # -> 201 "[{ 'name': 'nancy', 'male': false, 'id': 2 }, { 'name': 'drew', 'male': true, 'id': 3 }]"
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
+    # Parse JSON
     begin
-      value = get_table(shard_id, table_name).
-          insert(JSON.parse(request.body.read), request.ip)
-      if table_name == TABLE_NAMES[:message]
-        node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
-          node['id'] == value['simulatedBy']
-        end
-        unless node_exists
-          get_table(shard_id, table_name).delete(value['id'])
-          json_bad_request
-        end
-      end
+      body = JSON.parse(request.body.read)
     rescue JSON::ParserError
       json_bad_request
     end
 
+    # Determine whether or not we are performing a multi-insert and
+    # normalize our request body into an array of values
+    if body.is_a?(Array)
+      multi_insert = true
+      values = body
+    elsif body.is_a?(Hash)
+      multi_insert = false
+      values = [body]
+    else
+      json_bad_request
+    end
+
+    # Validation
+    #   currently, only messages are validated
+    all_values_valid = values.all? { |value| value_valid?(shard_id, table_name, value) }
+    json_bad_request unless all_values_valid
+
+    # If we get all the way down here without errors, insert everything
+    table = get_table(shard_id, table_name)
+    result = values.map { |value| table.insert(value, request.ip) }
+
+    # Finally, if we are not performing a multi-insert, denormalize our
+    # return value to a single item
+    result = result[0] unless multi_insert
+
     dont_cache
     content_type :json
     status 201
-    value.to_json
+    result.to_json
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [String] table_name - The table we're validating for
+  # @param [Hash] value - The value we're validating
+  # @return [Boolean] Currently only validates messages by passing
+  #         through to message_valid?. Return true for all other tables
+  #         as long as the value is a Hash.
+  def value_valid?(shard_id, table_name, value)
+    case table_name
+    when TABLE_NAMES[:message]
+      message_valid?(shard_id, value)
+    else
+      value.is_a?(Hash)
+    end
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] message - The message we're validating
+  # @return [Boolean] Currently is true if and only if the message is a
+  #         Hash and the messages's simulatedBy node exists in the
+  #         shard. In the future, we would also like to enforce
+  #         reasonable values for other fields.
+  def message_valid?(shard_id, message)
+    false unless message.is_a?(Hash)
+
+    # TODO this is wildly inefficient, particularly when validating
+    # multi-insert messages
+    node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
+      node['id'] == message['simulatedBy']
+    end
+
+    # TODO validate the base64
+    message_valid = true
+
+    node_exists && message_valid
   end
 
   #
