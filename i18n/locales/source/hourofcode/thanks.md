@@ -30,7 +30,7 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
 
 We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
