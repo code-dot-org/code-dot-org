@@ -874,6 +874,7 @@ en:
           description: All the level types for UI testing
           description_short: All the level types for UI testing
           Odometer: Odometer
+          Frequency: Frequency
           Text Compression: Text Compression
           Pixelation: Pixelation
           Multi2: Multi2
@@ -1129,3 +1130,8 @@ en:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description:  Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
