@@ -32,7 +32,7 @@ class MediaProxyController < ApplicationController
   private
   def render_proxied_url(location, redirect_limit = 5)
     if redirect_limit == 0
-      render text: 'Redirect loop', status: 500
+      render_error_response 500, 'Redirect loop'
       return
     end
 
@@ -46,25 +46,37 @@ class MediaProxyController < ApplicationController
     http.open_timeout = 3
     http.read_timeout = 3
 
-    # Get the resource, following up to five redirects.
+    # Get the media.
     media = http.request_get(path)
-    if media.kind_of? Net::HTTPRedirection
-      render_proxied_url(media['location'], redirect_limit - 1)
-      return
-    end
 
-    if !media.kind_of? Net::HTTPSuccess
-      render text: "Failed request #{media.code}", status: media.code
+    if media.kind_of? Net::HTTPRedirection
+      # Follow up to five redirects.
+      render_proxied_url(media['location'], redirect_limit - 1)
+
+    elsif !media.kind_of? Net::HTTPSuccess
+      # Pass through failure codes.
+      render_error_response media.code, "Failed request #{media.code}"
+
     elsif !ALLOWED_CONTENT_TYPES.include?(media.content_type)
-      render text: "Illegal content type #{media.content_type}", status: 400
+      # Reject disallowed contents types
+      render_error_response 400, "Illegal content type #{media.content_type}"
+
     else
+      # Return a successful response
       expires_in EXPIRY_TIME, public: true
       send_data media.body, type: media.content_type, disposition: 'inline'
     end
   rescue URI::InvalidURIError
-    render text: 'Invalid URI', status: 400
+    render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
-    render text: "Network error #{e.message}", status: 500
+    render_error_response 400, "Network error #{e.message}"
+  end
+
+  # Renders an error response with the given HTTP status, setting headers to
+  # ensure that the response will not be cached by clients or proxies.
+  def render_error_response(status, text)
+    prevent_caching
+    render text: text, status: status
   end
 
 end
