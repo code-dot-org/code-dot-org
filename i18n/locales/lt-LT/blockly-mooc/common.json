@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"„Kartojimo“ arba „Jei“ blokelių viduje reikia įdėti kitus blokelius, kad jie veiktų. Įsitikink, kad jie yra gerai sukibę vienas su kitu.",
   "emptyBlockInFunction":"Funkcija {name} turi neužpildytą įvestį.",
   "emptyBlockInVariable":"Kintamasis {name} turi neužpildytą įvestį.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Komandos apraše turi būti išvardintos komandos (įdėtas bent vienas blokas).",
   "emptyFunctionalBlock":"Kažkuris blokelis yra tuščias.",
   "emptyTopLevelBlock":"Nėra blokų paleidimui. Jūs privalote pridėti bloką į {topLevelBlockName} bloką.",

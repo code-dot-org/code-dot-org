@@ -366,6 +366,9 @@ lv:
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Vīrietis
     female: Sieviete
@@ -374,9 +377,13 @@ lv:
     student: Students
     teacher: Skolotāja
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt šo pamācību.
     art_from_html: 'Angry Birds&trade;&copy;2009. - 2014. Rovio Entertainment Ltd. Visas tiesības rezervētas.<br/> Plants vs.  Zombies&trade; & &copy; 2014 Electronic Arts Inc. Visas tiesības rezervētas.'
     powered_by_aws: Nodrošina Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Vairāk
     feedback: nodrošināt atsauksmes
     translate: Palīdzi mums tulkot savā valodā
     support: Atbalsts
@@ -504,6 +511,10 @@ lv:
     open_response_body: Thanks for your response!
   dialog:
     ok: Labi
+    startover_title: Vai esat pārliecināts, ka vēlaties sākt no jauna?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Sākt no sākuma
+    startover_cancel: Atcelt
   time:
     hour: 1 stunda
     day: diena

@@ -366,6 +366,9 @@ ka:
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
     choose_next_course: სცადე Code Studio კურსი ქვემოთ ერთის არჩევით
     print_certificate: სერტიფიკატის ამობეჭდვა
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: მამრობითი
     female: მდედრობითი
@@ -374,9 +377,13 @@ ka:
     student: მოსწავლე
     teacher: მასწავლებელი
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio Entertainment Ltd. ყველა უფლება დაცულია. <br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. ყველა უფლება დაცულია.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: მეტი
     feedback: უკუკავშირი
     translate: დაგვეხმარეთ, ვთარგმნოთ თქვენს ენაზე
     support: ტექ. მხარდაჭერა
@@ -504,6 +511,10 @@ ka:
     open_response_body: მადლობა თქვენი პასუხისთვის!
   dialog:
     ok: OK
+    startover_title: დარწმუნებული ხარ, რომ გსურს ხელახლა დაწყება?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: ხელახლა დაწყება
+    startover_cancel: გაუქმება
   time:
     hour: 1 საათი
     day: დღე

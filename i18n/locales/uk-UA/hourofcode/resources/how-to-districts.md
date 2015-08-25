@@ -18,4 +18,4 @@ title: Година коду для освітніх районів layout: wide
 
   5. **Host a district Hour of Code event.** See our [event how to guide](<%= hoc_uri('/resources/how-to-events') %>) for a sample run of show, media outreach kit and other supports.
 
-  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. 100 classrooms will win tech chats with special guest speakers. Participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more). And in each state, one participating school will win $10,000 in technology for their school!
+  6. **More [prizes](<%= hoc_uri('/prizes') %>) for EVERY organizer.** Every participating educator will receive thank you gifts. А по одній школі з кожного штату отримають $10,000 на покупку комп'ютерної техніки!

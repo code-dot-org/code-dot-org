@@ -6,7 +6,7 @@ Naslov: Čas kodiranja objašnjenje layout: wide nav: resources_nav
 
 # Čas kodiranja vodič događaja
 
-Ugostite Čat kodiranja tokom redovne sedmične nastave iz Informatike (Dec 8-14) kako bi slavili računalnu znanost i potaknuli studente da ga probaju. Bilo ko, bilo gdje može organizirati događaj Čas programiranja.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Pripremite se za vaš događaj
 
@@ -23,7 +23,6 @@ Ugostite Čat kodiranja tokom redovne sedmične nastave iz Informatike (Dec 8-14
   * Druge ideje za događaj: 
       * Pozovite lokalne industrijske lidere kako bi razgovarali o njegovom ili njezinom radu vezanom za računarsku znanosti
       * Pozovite lokalne političare te neka im učenici pokažu kako kodirati
-      * Pogledajte jedan od Q&A; Lekcije sa ambasadorom Časa kodiranja. Svi će biti zabilježeno i na Code.org-ovoj YouTube stranici. Ovogodišnji sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i drugi!
       * Neka grupa studenata pokaže šta treba napraviti prije nego se povežete na mrežu
       * Neka jedna grupa učenika poduči direktora ili skupinu učitelja kako kodirati
       * Ako Vaša škola već uči informatiku, zadajte učenicima demo projekate
@@ -37,7 +36,7 @@ Ugostite Čat kodiranja tokom redovne sedmične nastave iz Informatike (Dec 8-14
 
 **Događaj:** U svim školama neka započnu skupine sedmica obrazovanja iz Informatičke nauke
 
-**Datum:** 8. decembar (Počenite tjedan obrazovanja iz informatike)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Vrijeme:** Tokom školskog dana. Najbolje sredinom jutra. Trajanje 1 sat.
 
@@ -47,72 +46,11 @@ Ugostite Čat kodiranja tokom redovne sedmične nastave iz Informatike (Dec 8-14
 
 ## Program
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Vrijeme
-    </th>
-    
-    <th style="width:800px">
-      Radnja
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Direktor daje uvod o važnost informatike. Pomoću ove <a href="/resources/stats">statistike i infografike</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Specijalni gost razgovarao o svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Studenti rade demonstraciju Časa kodiranja za školu. Zabavno bi bilo da oni uče direktora, političare ili druge studente.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se informatika može izvoditi bez korištenja računala.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Učitelj - organizator događaja daje završnu riječ.
-  </td>
-</table>
+| Vrijeme          | Radnja                                                                                                                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                    |
+| 10:05 - 10:15 am | Direktor daje uvod o važnost informatike. Pomoću ove [statistike i infografike](/resources/stats)                         |
+| 10:15 - 10:30 am | Specijalni gost razgovarao o svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.    |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.  |
+| 10:40 - 11:00 am | Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se informatika može izvoditi bez korištenja računala. |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                         |

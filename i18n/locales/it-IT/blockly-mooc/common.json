@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi siano inseriti correttamente all'interno del blocco contenente.",
   "emptyBlockInFunction":"La funzione {name} ha un input non riempito.",
   "emptyBlockInVariable":"La variabile {name} è un input non riempito.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Un blocco funzione deve avere all'interno altri blocchi per poter funzionare.",
   "emptyFunctionalBlock":"C'è un valore mancante in un blocco.",
   "emptyTopLevelBlock":"Non ci sono blocchi per l'esecuzione. È necessario collegare un blocco al blocco  {topLevelBlockName}.",

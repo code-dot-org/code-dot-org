@@ -12,12 +12,12 @@ sq:
         email: Email
         username: Emri i përdoruesit
         password: Fjalëkalimi
-        password_confirmation: Konfirmim i fjalëkalimit
+        password_confirmation: Konfirmimi i fjalëkalimit
         current_password: Fjalëkalimi aktual
         locale: Gjuha
         age: Mosha
         gender: Gjinia
-        edit_header: Ndrysho detaje të llogarisë
+        edit_header: Ndrysho detajet e llogarisë
         error:
           future: nuk mund të jetë në të ardhmen
   hello: Përshëndetje Botë
@@ -26,14 +26,14 @@ sq:
   add_teacher_form:
     code:
       label: 'Shto një mësues:'
-      placeholder: Pjesa e Kodit (ABCDEF)
+      placeholder: Kodi i Seksionit (ABCDEF)
     submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
     submit: Shto udhëzim
   appname: Code.org
   stage: Fazë
-  stage_number: 'Fazë %{number}'
+  stage_number: 'Faza %{number}'
   puzzle: Enigmë
   trophies: Trofetë
   courses: Kurset
@@ -41,40 +41,40 @@ sq:
   more: MË SHUMË
   less: ME PAK
   beta: beta
-  try_hoc: 'Provo "Një orë kodim" kliko këtu >> '
+  try_hoc: 'Provo "Orën e Kodimit" kliko këtu >> '
   try_k8intro: Provo Hyrjen tonë K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
   k8intro: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
-  already_started: 'Keni filluar nje here? Vazhdoni ketu >>'
-  demos: 'Admin: Te gjitha demonstrimet'
+  already_started: 'Keni filluar tashmë? Vazhdoni këtu >> '
+  demos: 'Admin: Te gjitha Demot'
   continue: Vazhdo
   prize: çmim
   more_info: Më shumë informacion
   auth:
     sign_in_with: 'Logohu me %{provider}'
-    signed_in: U futët!
+    signed_in: U loguat!
     signed_out: 'Ti ke dalë nga <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Ti përdore %{provider} për tu futur. <a href="%{url}">Kliko këtu</a> për të dalë %{provider}.'
+    sign_out_of: 'Ti përdore %{provider} për tu loguar. <a href="%{url}">Kliko këtu</a> për të dalë %{provider}.'
     already_signedup: Jeni regjistruar?
-    notyet_signedup: Nuk jeni te regjistruar?
+    notyet_signedup: Nuk jeni të regjistruar akoma?
     google_oauth2: Llogaria e Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Llogaria e Microsoft
     forgot_password: Keni harruar fjalëkalimin?
-    need_confirmation: Nuk i keni marre instruksionet e konfirmimit?
+    need_confirmation: Nuk i keni marr instruksionet e konfirmimit?
     need_unlock: Nuk keni marre instruksionet e zhbllokimit?
   signup_form:
     student_count: '%{count} nxënës janë regjistruar tashmë.'
     teacher_count: '%{count}  mesues janë regjistruar tashmë.'
-    overview_student: 'Regjistrohu në një llogari për të parë ecurinë tënde. Emaili yt, fillimisht, përdoret për të të lejuar ty të futesh dhe të rigjesh fjalëkalimin. Për më shumë informacione, shiko në <a href="http://code.org/privacy">Politikat e Privatësisë</a>.'
+    overview_student: 'Regjistrohu në një llogari për të parë ecurinë tënde. Emaili yt, fillimisht, përdoret për të të lejuar ty të logohesh dhe të rigjesh fjalëkalimin. Për më shumë informacione, shiko në <a href="http://code.org/privacy">Politikat e Privatësisë</a>.'
     overview_teacher: 'Jep mësim në shkencat kompjuterike tek klasa jote duke u rregjistruar në një llogari.<p/> Ti do kesh mundësi të shtosh studentët e tu dhe të ndjekësh progresin e tyre.'
-    no_signup_message: 'Ti mund <a target="_blank" href="http://learn.code.org"> te shfletosh faza te ndryshme dhe enigma ne Code.org</a>, por te duhet te regjistrohesh qe te ruash progresin tend.'
+    no_signup_message: 'Ti mund <a target="_blank" href="http://learn.code.org"> të shfletosh faza të ndryshme si dhe formues të ndryshëm në Code.org</a>, por të duhet të regjistrohesh që të ruash progresin tënd.'
     teacher_educator_guide: Shiko guidën e edukimit
-    teacher_pitch: Mësuesit rregjistrohen për Code.org
+    teacher_pitch: Rregjistrimi i mësuesve në Code.org
     teacher_title: Regjistrimi për mësuesit
-    student_pitch: Nxënësi rregjistrohet për Code.org
+    student_pitch: Rregjistrimi i nënësve në Code.org
     student_title: Regjistrimi i nxënësit
-    school_name: Emri i shkollës (fakultativ)
+    school_name: Emri i shkollës (jo i domosdoshëm)
     school_address: Adresa e shkollës (jo e domosdoshme)
     address_placeholder: adresa, qyteti, shteti, kodi postar
     gender: Gjinia (jo e domosdoshme)
@@ -82,36 +82,36 @@ sq:
     age: Mosha
     user_type: A jeni nxënës apo mësues?
     submit: Rregjistrohu
-    teacher: Je mësues?
+    teacher: A jeni një mësues?
     valid_username: I disponueshëm!
     invalid_username: Emri i përdoruesit duhet të ketë të paktën 5 karaktere
     taken_username: Ky emër është i zënë
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    student_terms: "Unë pajtohem me <a href='http://code.org/tos'>kushtet e përdorimit</a> të Code.org. Nëse  jam më pak se 13 vjeç, duke plotesuar këtë formular unë dëshmoj që kam lejen e prindërve ose mbikqyrësit ligjor për të përdorur shërbimet e Code.org.<br/> Për përdorues nën moshën 13 vjeçare, adresat e emaileve nuk do të ruhen në formularin që na lejon t'i kontaktojmë."
+    student_terms: "Unë pajtohem me <a href='http://code.org/tos'>kushtet e përdorimit</a> të Code.org. Nëse jam më pak se 13 vjeç, duke plotesuar këtë formular unë dëshmoj që kam lejen e prindërve ose mbikqyrësit ligjor për të përdorur shërbimet e Code.org.<br/> Për përdorues nën moshën 13 vjeçare, adresat e emaileve nuk do të ruhen në formularin që na lejon t'i kontaktojmë."
     teacher_terms: "Unë pajtohem me <a href='http://code.org/tos'> kushtet e përdorimit</a> të Code.org."
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar me rregjistrimin tuaj.
   signin_form:
-    title: Ke një llogari ekzistente? Futu
-    login: Email ose emri i përdoruesit
+    title: Ke një llogari ekzistuese? Logohu
+    login: Email-i ose emri i përdoruesit
     password: Fjalëkalimi
     remember: Më mbaj mend
     submit: Futu
   signin:
     try_heading: Dëshiron të provosh të kodosh pa u rregjistruar?
     try_hoc: Provo një Orë Kodimi si fillim
-    try_20hours: Provo 20 orët tona Hyrje në Shkencat Kompjuterike
+    try_20hours: Provo 20 orët tona hyrëse në Shkencat Kompjuterike
   signinsection:
     welcome: 'Mirë se erdhët në %{section_name}'
     name: Zgjidh emrin tënd
-    picture: Tani gjej figurën tënde të fshehur
-    words: Tani fut fjalët e tua të fshehura
+    picture: Tani gjej figurën tënde të fshehtë
+    words: Tani fut fjalët e tua të fshehta
     login: Futu
   password:
     reset_form:
       title: Keni harruar fjalëkalimin?
-      email: Adresa Emailit
+      email: Adresa Email-it
       submit: Më dërgo instruksionet për rivendosjen e fjalëkalimit
     change_form:
       title: Ndrysho fjalëkalimin
@@ -134,22 +134,22 @@ sq:
     registered: 'Ju u regjistruat për %{section_name}.'
     error:
       signed_in: Ju lutemi dilni nga llogaria përpara se të vazhdoni
-      username_not_found: 'Emri i përdoruesit %{username} nuk u gjend'
+      username_not_found: 'Emri i përdoruesit %{username} nuk u gjet'
       username_in_use: '%{username} është i zënë, ju lutemi zgjidhni një tjetër'
-      no_teacher: "Nuk mundëm te gjenim ndonjë të futur me '%{teacher_email_or_code}'. Kërkojuni atyre të regjistrohen këtu dhe provo ti shtosh ata përsëri"
-      section_not_found: "Nuk mund të gjejmë asnjë pjesë me kodin '%{section_code}'."
-      blank_code: Të lutem fut një pjesë kodi
-      cant_join_own_section: Më vjen keq, ti nuk mund të bashkosh dot pjesën tënde.
+      no_teacher: "Nuk mundëm te gjenim ndonjë të loguar me '%{teacher_email_or_code}'. Kërkojuni atyre të regjistrohen këtu dhe provo ti shtosh ata përsëri"
+      section_not_found: "Nuk mund të gjejmë asnjë seksion me kodin '%{section_code}'."
+      blank_code: Të lutem fut një kod seksioni
+      cant_join_own_section: "Më vjen keq, ti nuk mund t'i bashkohesh seksionit tënd."
     mail:
       invite_student:
         subject: 'Bashkohu në një klasë me %{teacher_name} tek Code.org!'
       student_disassociated:
-        subject: 'Lajmërimi i Code.org: %{student_name} nuk është më si studenti jot.'
+        subject: 'Lajmërim nga Code.org: %{student_name} nuk është më studenti yt.'
       teacher_disassociated:
-        subject: 'Lajmërimi i Code.org: %{teacher_name} nuk është më si mësuesi jot.'
+        subject: 'Lajmërim nga Code.org: %{teacher_name} nuk është më si mësuesi yt.'
   reports:
     error:
-      access_denied: Ti nuk ke të drejtë tek statuset e këtij personi
+      access_denied: Ju nuk keni akses te statistikat e këtij personi
   redeem_prizes:
     title: 'Çmimet e shlyera: %{name}'
     provider: 'Ofruesi:'
@@ -159,26 +159,26 @@ sq:
     donorschoose_project: Posto një projekt
     donorschoose_how_to: Si të përdorësh kodin tënd
     success: Çmimi jot u shlye në mënyrë të suksesshme, shiko kodin poshtë.
-    error: Çmimi jot nuk mund të shlyhet, të lutem provo më vonë.
-    error_us_only: Çmimi i ofruar është i vlefshëm vetëm për përdoruesit e U.S.
-    error_not_earned: Ti nuk e ke fituar ende këtë çmim.
-    error_already_redeemed: Çmimi jot është shlyer tani.
+    error: Çmimi juaj nuk mund të shlyhet, ju lutem provojeni më vonë.
+    error_us_only: Çmimi i ofruar është i vlefshëm vetëm për përdoruesit në SHBA.
+    error_not_earned: Ju nuk e keni fituar ende këtë çmim.
+    error_already_redeemed: Çmimi juaj është shlyer tashmë.
     no_prizes_available: Na vjen keq, por ne nuk kemi për momentin çmime për të ofruar.
     teacher_info_required: 'Çmimet e mësuesëve kërkojnë informacion për emrin e shkollës dhe adresës:'
-    teacher_email_required: 'Çmimet e mësuesëve kërkojnë një adresë emaili për të konfirmuar:'
+    teacher_email_required: 'Çmimet e mësuesëve kërkojnë një adresë email-i të konfirmuar:'
     confirm:
-      title: Të lutem Konfirmo
+      title: Ju lutem Konfirmoni
       "no": Jo
       "yes": Po
-      msg: 'A je i sigurt që kërkon të ankohesh për %{prize_name} çmimin?'
+      msg: 'A jeni të sigurt që doni të marrni çmimin %{prize_name}?'
       msg_student: 'SHËNIM: Ti mund të zgjedhësh vetëm një lloj çmimi.'
-      msg_publicschool: Të lutem konfirmo që je një mësues i shkollës publike në U.S.
-      msg_visit_website: Vizito faqen e webit
+      msg_publicschool: Ju lutem konfirmoni që jeni një mësues i shkollës publike në SHBA.
+      msg_visit_website: Vizitoni faqen e internetit
     providers:
       apple_itunes: Kartë Dhuratash të iTunes prej 10$
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB of Dropbox Space
+      dropbox: 10GB hapësirë në Dropbox
       valve: Porta 2 (shkarkim i lojës në PC ose Mac)
       ea_bejeweled: Bejeweled 3 (shkarkimi lojes në PC)
       ea_fifa: FIFA Soccer 13 (shkarkimi lojes në PC)
@@ -188,24 +188,24 @@ sq:
     msg:
       choose: 'Zgjidh një çmim:'
       choose_teacher: 'Kliko në logon më poshtë, për të kërkuar çmimin tënd:'
-      earned: Ti ke fituar një çmim! (vetëm studentët e U.S.)
-      not_earned_title: Përfundo tutorialin, fito shpërblime (vetëm studentët në U.S)
+      earned: Ju keni fituar një çmim! (vetëm për studentët në SHBA)
+      not_earned_title: Përfundoni tutorialin, fitoni shpërblime (vetëm për studentët në SHBA)
       not_earned: |
-        Mëso të gjitha konceptet e shkencave kompjuterike, mblidh të gjithë %{num_trophies} trofetë, dhe fito çmime të vërteta. Ti mund të zgjedhësh ndërmjet 10 GB nga free Fropbox Space, 10$ kredite në Skype dhe shkarkim lojërash falas.
-        SHËNIM: të vlefshme vetëm tek studentët e U.S dhe sa të zgjasin furnizimet.
+        Mëso të gjitha konceptet e shkencave kompjuterike, mblidh të gjithë %{num_trophies} trofetë, dhe fito çmime të vërteta. Ti mund të zgjedhësh ndërmjet 10 GB hapësirë në Dropbox, 10$ kredite në Skype ose të shkarkoni një lojë falas.
+        SHËNIM: të vlefshme vetëm për studentët në SHBA dhe për sa kohë që zgjasin furnizimet.
       teacher:
-        earned: '15 ose më shumë studentë mblodhën të gjithë %{num_trophies} trofetë. Ti ke fituar një çmim mësuesi! (vetëm për mësuesit e U.S.)'
-        not_earned_title: 'Mëso klasën, fito mbi 1000$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>  (vetëm për mësuesit U.S.)'
-        not_earned: 'Për të shpërblyer mësuesit që janë për herë të parë në shkencat kompjuterike, ti mund të fitosh mbi 1000$ në  <a href="http://DonorsChoose.org">DonorsChoose.org</a> kredite për udhëheqjen e një klase përmes K-8 brenda në kurs. Për tu kualifikuar, ti ke nevojë të bësh në mënyrë të suksesshme një klasë me të paktën 15 studentë përmes gjithë kursit të brendshëm K-8, me të 15-të studentët (ose më shumë) duke përfunduar të gjithë tutorialet dhe duke fituar të gjithë %{num_trophies} trofetë. Nëse 7 ose më shumë studentë që fitojnë të gjithë trofetë janë vajza, shpërblimi juaj është 1000$ në <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite. Në të kundërt, çmimi juaj është 750$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditet mund të përdoren vetëm nga mësuesit e shkollave publike në U.S.'
+        earned: '15 ose më shumë studentë mblodhën të gjithë %{num_trophies} trofetë. Ti ke fituar një çmim mësuesi! (vetëm për mësuesit në SHBA)'
+        not_earned_title: 'Mësoni një klasë, fitoni mbi 1000$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>  (vetëm për mësuesit në SHBA)'
+        not_earned: 'Për të shpërblyer mësuesit që janë për herë të parë në shkencat kompjuterike, ti mund të fitosh mbi 1000$ në  <a href="http://DonorsChoose.org">DonorsChoose.org</a> kredite për udhëheqjen e një klase përmes K-8 brenda në kurs. Për tu kualifikuar, ti ke nevojë të bësh në mënyrë të suksesshme një klasë me të paktën 15 studentë përmes gjithë kursit të brendshëm K-8, me të 15-të studentët (ose më shumë) duke përfunduar të gjithë tutorialet dhe duke fituar të gjithë %{num_trophies} trofetë. Nëse 7 ose më shumë studentë që fitojnë të gjithë trofetë janë vajza, shpërblimi juaj është 1000$ në <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite. Në të kundërt, çmimi juaj është 750$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditet mund të përdoren vetëm nga mësuesit e shkollave publike në SHBA.'
         bonus:
-          not_earned_title: 'Ti ende mund të fitosh një shtesë prej 250$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite. (vetëm për mësuesit në U.S.)'
-          earned: '7 ose më shumë studentë, që mblodhën të gjithë %{num_trophies} trofetë janë vajza. Ti ke fituar një çmim bonus! ( vetëm mësuesit në U.S.)'
-          not_earned: 'Nëse të paktën 7 nga studentët që grumbulluan të gjithë %{num_trophies} trofetë janë vajza, çmimi jot do shtohet me 250$ në <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditet mund të përdoren nga mësuesit në shkollat publike në U.S.'
+          not_earned_title: 'Ti ende mund të fitosh një shtesë prej 250$ në  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. (vetëm për mësuesit në SHBA)'
+          earned: '7 ose më shumë studentë, që mblodhën të gjithë %{num_trophies} trofetë janë vajza. Ju keni fituar një çmim bonus! ( vetëm mësuesit në SHBA)'
+          not_earned: 'Nëse të paktën 7 nga studentët që grumbulluan të gjithë %{num_trophies} trofetë janë vajza, çmimi jot do shtohet me 250$ në <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredite. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditet mund të përdoren nga mësuesit në shkollat publike në SHBA.'
   crud:
-    new_model: 'I ri %{model}'
+    new_model: '%{model} i ri'
     show: Shfaq
-    edit: Redakto
-    edit_model: 'Redakto %{model}'
+    edit: Modifiko
+    edit_model: 'Modifiko %{model}'
     update: Përditëso
     destroy: Shkatërro
     back: Kthehu
@@ -213,11 +213,11 @@ sq:
     created: '%{model} u krijua me sukses.'
     updated: '%{model} u përditësua me sukses.'
     destroyed: '%{model} u fshi me sukses.'
-    access_denied: 'Ti nuk ke të drejta tek ky %{model}.'
+    access_denied: 'Ju nuk keni akses në këtë %{model}.'
   nav:
     header:
-      finished_hoc: Unë e mbarova Orën time të Kodimit
-      sign_in_to_save: Futu për të ruajtur ecurinë tënde
+      finished_hoc: Unë e mbarova Orën e Kodimit
+      sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       free_play:
         playlab: Bëj një Aplikacion
         artist: Vizato Diçka
@@ -226,31 +226,31 @@ sq:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
       label: 'Përshëndetje %{username}'
-      stats: Ecuria ime
+      stats: Code Studio
       settings: Llogaria ime
       prizes: Çmimet
       logout: Dil
       signin: Futu
       signup: Rregjistrohu
-      already_registered: Je i rregistruar?
+      already_registered: Jeni i rregistruar?
     popup:
-      progress_for_user: 'Përparimi i %{name}'
-      progress: Ecuria jote
+      progress_for_user: 'Progresi i %{name}'
+      progress: Progresi yt
       lines: 'Totali i rreshtave të kodit: %{lines}'
       close: MBYLL
       mastery: Konceptet
       puzzle_map: Fazat
       prizes: 'Mblidh të gjithë %{total_trophies} trofetë dhe fito çmimet!'
       prize_earned: 'Të gjithë %{total_trophies} trofetë u mblodhën. Çmimi u fitua!'
-      prize_us_only: (vetëm studentët në U.S.)
+      prize_us_only: (vetëm studentët në SHBA)
       prizes_link: Më shumë informacion
   teacher:
     title:
-      one: 'Mësuesi jot:'
+      one: 'Mësuesi yt:'
       other: 'Mësuesit e tu:'
     remove: (hiq mësuesin)
     confirm:
-      remove: A je i sigurtë që dëshiron të heqësh këtë mësues?
+      remove: A jeni i sigurtë që dëshironi ta hiqni këtë mësues?
     tools: Mjetet e Mësuesit
     followers:
       section: 'Seksioni:'
@@ -268,56 +268,56 @@ sq:
       name: Emri
       username: Emri i përdoruesit
       password: Fjalëkalimi
-      manage: Menaxho studentët
+      manage: Menaxhoni studentët
       dashboard: Shko tek Paneli i Mësuesit
       add: Shto studentë
       remove: hiq student
-      confirm_remove: A je i sigurtë që do ta heqësh këtë student?
+      confirm_remove: A jeni i sigurtë që do ta heqësh këtë student?
       help_reassign: Për të ndarë klasën tënde në pjesë të shumta, përzgjidh studentët të caktojnë një pjesë të re.
-      help_register: "Në vend t'ju bëjmë të kaloni më shumë kohë në futjen e të dhënave të studentëve, ju mund të ngrini klasën tuaj shumë shpejt duke ju kërkuar atyre të rregjistrohen. Studentët tuaj do të zgjedhin emër përdoruesi dhe fjalëkalim, por atyre NUK DO TU kërkohet një adresë emaili. Nëse një student harron fjalëkalimin, ju do duhet ta rivendosni një për ata."
+      help_register: "Në vend t'ju bëjmë të kaloni më shumë kohë në futjen e të dhënave të studentëve, ju mund të ngrini klasën tuaj shumë shpejt duke ju kërkuar atyre të rregjistrohen. Studentët tuaj do të zgjedhin emërin e përdoruesit dhe fjalëkalimin, por atyre NUK DO TU kërkohet një adresë email-i. Nëse një student harron fjalëkalimin, ju do ju duhet t'i rivendosni një për atë."
       register: Pyet studentët për të rregjistruar veten e tyre
       vist: Pyet studentët e tu të vizitojnë
-      section_code: 'dhe fusni pjesën e tyre të kodit:'
+      section_code: 'dhe fusni kodin e seksionit të tyre:'
       first_please: 'Së pari, ju lutem %{add_section}'
       for: Për
       enter: 'hyr:'
     sections:
       add: Shto pjesë
-      manage: Menaxho pjesët
-      section: Pjesë
+      manage: Menaxho seksionet
+      section: Seksion
       students: Studentët
-      section_code: Pjesë Kodi
+      section_code: Kodi i Seksionit
       add_section_code: Shto Studentët Pjesë-Kodi
       secret: Lloj sekret
-      grade: Notë
+      grade: Klasa
       course: Kurs
       rename: riemëro
-      edit: redakto
+      edit: modifiko
       delete: fshi
-      confirm_delete: A jeni i sigurtë që dëshironi të fshini këtë pjesë?
+      confirm_delete: A jeni i sigurtë që dëshironi të fshini këtë seksion?
       email: Dërgoni në email
     rollup: Paneli i ecurisë
-    activity: Aktiviteti i klasës së fundit
+    activity: Aktivitetet e fundit të klasës
     user_not_found: Mësuesi ose studenti nuk mund te gjendet
     cant_remove_student_no_email: '%{student_name} nuk mund të hiqet si studenti juaj, sepse %{student_name} nuk ka rregjistruar një adresë emaili'
-    cant_remove_teacher_no_email: '%{teacher_name} nuk mund të hiqet si mësuesi juaj, sepse nuk ka rregjistruar një adresë emaili'
-    student_teacher_disassociated: '%{teacher_name} është hequr si mësues për%{student_name}'
+    cant_remove_teacher_no_email: '%{teacher_name} nuk mund të hiqet si mësuesi juaj, sepse nuk keni rregjistruar një adresë emaili'
+    student_teacher_disassociated: '%{teacher_name} është hequr si mësues për %{student_name}'
     panel:
       answer_viewer: Shfaqja e Pergjigjeve
       student: student
       viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
-      section: Pjesë
+      section: Seksion
   user:
-    email_confirm_needed: 'Adresa e emailit nuk është konfirmuar:'
-    email_confirm_needed_required: 'Posta E Juaj Elektronike %{email}  Nuk Eshte Konfirmuar:'
-    email_confirm_wrong_email: (Emaili i Gabuar?)
+    email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
+    email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
+    email_confirm_wrong_email: (Email i gabuar?)
     email_resend_confirm: Ridërgo udhëzimet e konfirmimit
     new_password_hint: (lëre bosh nëse nuk do ta ndryshosh atë)
-    current_password_hint: (me kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë ndryshimet e tua)
-    delete: Fshi llogarinë tënde
-    delete_text: Duke klikuar butonin poshtë, do të fshihet llogaria jote.
-    delete_text_teacher_note: 'Të lutem ver re: duke fshirë llogarinë tënde nuk do të fshihen llogaritë e studentëve të tjerë.'
+    current_password_hint: (ne kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë ndryshimet e bëra)
+    delete: Fshini llogarinë tuaj
+    delete_text: Duke klikuar butonin më poshtë, do të fshihni llogarinë tuaj.
+    delete_text_teacher_note: 'Ju lutem vini re: duke fshirë llogarinë tuaj nuk do të fshihen llogaritë e studentëve të tjerë.'
     delete_confirm: A je i sigurtë që do të fshish llogarinë tënde?
   user_level:
     completed: E përfunduar
@@ -328,36 +328,36 @@ sq:
     classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
-    description: Code Studio është shtëpi për kurset online të krijuara nga Code.org
+    description: Code Studio është një shtëpi për kurset online të krijuara nga Code.org
     lines_of_code: '%{lines_count} RRESHTA KODIMI TË SHKRUARA NGA NXËNËSIT'
-    lines_of_code_linebreak: '%{lines_count} RRESHTAT E KODIT <br/> TE SHKRUARA NGA %{students_count} MILION STUDENTE'
+    lines_of_code_linebreak: '%{lines_count} RRESHTAT E KODIT <br/> TE SHKRUARA NGA %{students_count} MILION STUDENTË'
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
-    lesson_plans: Planet e mësimeve
-    signin_message: 'Je i rregjistruar? %{link}'
+    lesson_plans: Planet e mësimore
+    signin_message: 'Jeni i rregjistruar? %{link}'
     student_reg_link: Rregjistrimi i Studentëve
     teacher_reg_link: Rregjistrimi i Mësuesëve
     signin_directions: 'Përdor një llogari për të parë progresin.<br/>Mësuesit, udhëzoni të gjithë klasën.'
-    teacher_dashboard: Shiko panelin e ecurisë
-    teacher_student_count_one: 'Ti ke %{count} student.'
-    teacher_student_count: 'Ti ke %{count} studentë.'
-    teacher_averages: 'Mesatarisht, studentët tuaj kanë fituar %{trophy_average} nga %{trophy_max} "Concept Mastery" trofetë.'
-    teacher_print_certificates: Printo çertifikatat për studentët që mbarojnë këtë kurs
-    teacher_read_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Blogun Educator
+    teacher_dashboard: Shiko panelin e progresit
+    teacher_student_count_one: 'Ju keni %{count} student.'
+    teacher_student_count: 'Ju keni %{count} studentë.'
+    teacher_averages: 'Mesatarisht, studentët tuaj kanë fituar %{trophy_average} nga %{trophy_max} trofetë "Concept Mastery".'
+    teacher_print_certificates: Printo certifikatat për studentët që mbarojnë këtë kurs
+    teacher_read_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Educator Blog
     classroom: Klasa jote
-    student_progress: Ecuria e të mësuarit tënd
-    student_stats: 'Ti ke fituar trofe %{trophy_count} nga trofe %{trophy_max} "Concept Mastery" trofetë.'
+    student_progress: Progresi yt në të mësuar
+    student_stats: 'Ti ke fituar %{trophy_count} trofe nga %{trophy_max} trofetë "Concept Mastery".'
     student_left_off: 'Ku e ke lënë herën e fundit:'
-    student_finished: 'Ti ke përfunduar të gjithë tutorialet, zgjidh një klasë tjetër %{online_link} ose tek një %{local_school_link}'
-    local_school: shkolla lokale
+    student_finished: 'Ti ke përfunduar të gjithë tutorialet, zgjidh një klasë tjetër %{online_link} ose një %{local_school_link}.'
+    local_school: shkollë lokale
     online: online
     see_details: Shiko detajet
     view_course: Shiko kursin
-    prize_info: 'Çmimet për pjesmarrje ( vetëm mësues të shkollave publike në U.S.): Mbi 1000$ në shpërblimet e klasës.'
-    tryfirst: 'Ose, mund të përpiqesh si fillim dhe të rregjistrohesh më vonë:'
+    prize_info: 'Çmimet për pjesmarrje (vetëm mësues të shkollave publike në SHBA): Mbi 1000$ shpërblime për klasën.'
+    tryfirst: 'Ose, mund ta provosh ne fillim, dhe rregjistrohesh më vonë:'
     trynow: Provo tani
-    add_hint_help: Ju lutem na ndihmoni të shtojmë ndihma më të goditura tek tutorialet e Code.org
+    add_hint_help: Ju lutem na ndihmoni të shtojmë udhëzime më të goditura për tutorialet e Code.org
     20hour_overview: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
-    test_videos_help: Testoni video playerin e ri në shkollën tuaj
+    test_videos_help: Testoni video player-in e ri në shkollën tuaj
     try_beta_courses: E re! Provo kurset tona beta për studentët e K-5
     use_as_teacher: Përdore këtë faqe si një mësues
     heading_hoc2014: '<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>'
@@ -365,21 +365,28 @@ sq:
     heading_apps: '<h2>Zbavitje për</h2><h1>Të Gjithë</h1>'
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
-    no_primary_course: Bëj një kurs ne Studion e Kodimit
+    no_primary_course: Provo një kurs të Code Studio
     choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
-    print_certificate: Printo Çertifikatën
+    print_certificate: Printo Certifikatën
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Mashkull
     female: Femër
-    none: Preferoj mos të përgjigjem
+    none: Preferoj të mos përgjigjem
   user_type:
     student: student
     teacher: Mësues
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014  Rovio Entertainment Ltd. All Rights Reserved.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Të gjitha të drejtat e rezervuara.'
     powered_by_aws: Mundësuar nga Amazon Web Services
-    feedback: Siguro feedback
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Më shumë
+    feedback: Jepni feedback-un tuaj
     translate: Na ndihmoni të përkthejmë në gjuhën tuaj
     support: Mbështetje
     support_url: http://support.code.org
@@ -387,8 +394,8 @@ sq:
     privacy: Rregullat e Privatësisë
     secure: Versioni i Sigurtë
   reference_area:
-    title: Ke nevojë për ndihmë?
-    subtitle: Shiko këto video dhe ndihmat
+    title: Keni nevojë për ndihmë?
+    subtitle: Shiko këto video dhe udhëzimet
     teacher: Shiko zgjidhjen
     auth_error: Ti nuk je i autorizuar të shohësh zgjidhjen.
     submit: Përditëso Vendndodhjen e Artistit
@@ -397,55 +404,55 @@ sq:
     tab: Video.
     notes: Asnjë video? Shfaq shënimet.
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
-    autoplay_option: Videot Autoplay
-    download: Shkarko Video
+    autoplay_option: Luaj videot automatikisht
+    download: Shkarko Videon
   compatability:
     working:
-      header: Ne po punojmë në suportin e browserit tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Browseri juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë faqeje. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju, gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni browserin tuaj në një version që e suporton</a>."
-      hide_this_warning: Fshih këtë paralajmërim
+      header: Ne po punojmë në suportimin e shfletuesit tuaj.
+      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë të faqes. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni shfletuesin tuaj me një version që e suporton</a>."
+      hide_this_warning: Mbaj të fshehtë këtë paralajmërim
     upgrade:
-      header: Ju lutem përmirësoni browserin tuaj.
-      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën  faqen të shpejtë në përdorim. Për fat të keq, browseri juaj nuk i suporton të gjitha karakteristikat e kërkuara, për të parë këtë pjesë faqeje.<br/><br/>Instalo një browser në listën tonë të browserave për të vazhduar. Ju mund të<a href='#'>përpiqeni për ta parë faqen</a>, por mund të mos funksionojë si duhet."
-      button: Më ço tek lista e browserave që suportohen
-  slow_loading: Kjo po zgjat më shumë se duhet...
-  try_reloading: Përpiqu të rifreskosh faqen
+      header: Ju lutem përmirësoni shfletuesin tuaj.
+      message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të shpejtë në përdorim. Për fat të keq, shfletuesi juaj nuk i suporton të gjitha karakteristikat e kërkuara, për të parë këtë pjesë të faqes.<br/><br/>Instaloni një shfletues nga lista jonë e shfletuesve për të vazhduar. Ju mund ta<a href='#'>shikoni faqen</a>, por mund të mos funksionojë si duhet."
+      button: Më ço tek lista e shfletuesve që suportohen
+  slow_loading: Kjo po zgjat më shumë seç duhet...
+  try_reloading: Provo të rifreskosh faqen
   next_stage: Përfundoi! Vazhdo tek hapi tjetër
   download_pdf: Hap Planin Mësimor
   lesson_plan: Plani Mësimor
-  view_lesson_plan: Shih Planin Mësimor
+  view_lesson_plan: Shiko Planin Mësimor
   pdf_download: Shkarko PDF
   download_coming_soon: Veprimi i shkarkuar vjen së shpejti.
   video_coming_soon: Video vjen së shpejti!
   share_code:
     title: "Kliko 'Run' të shohësh programin tim në veprim"
-    bounce_og_title: Shiko Lojën time Bounce
+    bounce_og_title: Shiko Lojën time me Përplasje
     flappy_og_title: Shiko Lojën time Flappy
     studio_og_title: Shiko Aplikacionin tim Play Lab
     check_out_what_i_made: Shiko se çfarë bëra
     og_description: E shkruajta kodin vetë me Code.org
     phone_number_not_allowed: Duket sikur është një numër telefoni në të. Përpiqu të ndryshosh tekstin.
     address_not_allowed: Duket sikur ka një adresë në të. Përpiqu të ndryshosh tekstin.
-    email_not_allowed: Duket sikru ka një email në të. Përpiqu të ndryshosh tekstin.
+    email_not_allowed: Duket sikur ka një email në të. Përpiqu të ndryshosh tekstin.
     profanity_not_allowed: Duket sikur ka blasfemi në të. Përpiqu të ndryshosh tekstin.
   builder:
-    created: Ti krijove një shkresë të re.
-    destroyed: Ti shkatërrove një shkresë.
+    created: Ti krijove një script të ri.
+    destroyed: Ti shkatërrove një script.
     manage: Ndërto Nivelet
-    view: Shih
-    back: Kthehu te shkresat
-    success: Ti redaktove blloqet në mënyrë të suksesshme.
+    view: Shiko
+    back: Kthehu te script-tet
+    success: Ti modifikove blloqet me sukses.
     level:
-      create: Krijo nivel të ri
+      create: Krijo një nivel të ri
       current: Nivelet Aktuale
       unused: Nivelet e Papërdorur
   upsell:
     hoc:
       title: Ora e Kodimit
-      body: Provo bazat e shkencave kompjuterike. Miliona ja kanë dalë.
+      body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
     flappy:
-      title: Kodi Flappy
-      body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë të Kodit Flappy!
+      title: Flappy Code
+      body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë Flappy Code!
     20-hour:
       title: Kurs i Avancuar
       body: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
@@ -464,8 +471,8 @@ sq:
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!
-    picture_count: 'Në ditët e kaluara <b>%{days}</b>, studentët kanë vizatuar <b>%{count}</b> piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të parë çdo program që funksionon.'
-    activity_count: 'Në ditët e kaluara, <b>%{days}</b> studentët kanë bërë <b>%{count}</b> apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në pikturat dhe screenshotet për të parë çdo program që funksionon.'
+    picture_count: 'Në këto <b>%{days}</b> ditë, studentët kanë vizatuar <b>%{count}</b> piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të parë çdo program që funksionon.'
+    activity_count: 'Në këto <b>%{days}</b> ditë, studentët kanë bërë <b>%{count}</b> apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në pikturat dhe screenshotet për të parë çdo program që funksionon.'
     want_to_make_your_own: Dëshiron të bësh tëndin?
     more: 'Më shumë &rarr;'
     caption_by_name_age: 'nga %{name}, mosha %{age}'
@@ -476,36 +483,40 @@ sq:
   landing:
     prerelease: "Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku të merret dhe të bëhen përmirësime."
     prerelease_hoc2014: "Ky tutorial është në <span class='betatext'>beta</span>. Referohet të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet."
-    feedback: Jep Feedback
-    report_bug: Raporto Virusin
+    feedback: Jepni feedback-un tuaj
+    report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: //support.code.org
   multi:
     wrong_title: Përgjigje e pasaktë
-    wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi përpiquni përsëri!
+    wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
     correct_title: E saktë
     correct_body: Kjo është përgjigja e saktë.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Zgjidhje e pasaktë
-    wrong_body: Zgjidhja që keni futur është e pasktë. Te lutem provo përsëri!
+    wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
     correct_title: E saktë
     correct_body: Kjo është përgjigja e saktë.
   contract_match:
     wrong_title: Përgjigje e pasaktë
-    badname: Kontrata juaj ka emrin e gabuar.
+    badname: Kontrata juaj ka emrin gabim.
     badname_case: Emrat funksional janë çështje e ndjeshme. Përpiqu të ndërrosh rastin e emërimit të kontratës tënde.
     badrange: Kontrata juaj ka vargun e gabuar.
     baddomainsize: Kontrata juaj nuk ka sasinë e duhur te elementëve në domen.
     baddomainname: Njëra ose disa nga elmentet në domen ka emrin e pasaktë.
     baddomaintype: Njëra ose disa nga elementet ne domen janë të llojit të gabuar, ose nuk janë renditur mirë.
   text_match:
-    placeholder: Shtyp përgjigjen tënde këtu
+    placeholder: Shkruani përgjigjen tuaj këtu
     open_response_title: Faleminderit
     open_response_body: Faleminderit për përgjigjen!
   dialog:
     ok: Në rregull
+    startover_title: A jeni i sigurt që doni të filloni nga fillimi?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Fillo nga fillimi
+    startover_cancel: Anulo
   time:
     hour: 1 orë
     day: ditë
@@ -535,22 +546,22 @@ sq:
           title: Jigsaw
           description: ""
         step:
-          title: NJë Hap
+          title: Një hap
           description: ""
         sample_level_builder:
-          title: Ndërtuesi i Nivelit Shembull
+          title: Shembull i Ndertuesit të niveleve
           description: ""
   age_interstitial:
     age: Mosha juaj
     header: Përditësimi i Informacionit të Llogarisë
     message: "Ne jemi në proçesin e përditësimit të eksperiencës sonë, për t'ju siguruar juve mbrojtje edhe më të fortë të sigurisë. Për të bërë këtë, ne kemi nevojë për përdorues ekzistues, që të fusin moshën e tyre këtu.<br/>Si gjithmonë, code.org nuk do e shesi apo ta shpërndajë këtë informacion me palë të treta."
     sign_out: 'Nëse nuk do të japësh moshën tënde, ti mund të <a href="%{url}">dalësh</a>.'
-  zendesk_too_young_message: 'Më vjen keq, përdorues më të rinj nuk mund të futen tek faqja jonë e suportit. Ti mund të kërkosh<a href="http://support.code.org">support.code.org</a>pa hyrë ose pyet prindërit e tu ose mësuesit e tu që të na kontaktojnë ne për ty.'
+  zendesk_too_young_message: 'Na vjen keq, përdoruesit e vegjël nuk mund të futen tek faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a> pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.'
   progress:
-    not_started: Pa nisur
+    not_started: nuk është nisur
     in_progress: Në punë e sipër
-    completed_too_many_blocks: e përfunduar, shumë blloqe
-    completed_perfect: e përfunduar, perfekte
+    completed_too_many_blocks: i përfunduar, me shumë blloqe
+    completed_perfect: i përfunduar, në mënyrë perfekte
     furthest_level_attempted: përpjekja e nivelit më të largët
     assessment: Vlerësim
   studio:
@@ -560,31 +571,31 @@ sq:
   project:
     projects: Projekte
     create: Krijo një Projekt
-    create_a_project: 'Bëj një projekt të ri:'
-    new: Fillo të ri
-    rename: Riemërto
+    create_a_project: 'Krijo një projekt të ri:'
+    new: Krijo një të ri
+    rename: Riemëro
     save: Ruaj
     delete: Fshi
     exit: Kthehu te Kursi
-    my_projects: Projektet e mija
-    share: Shpërndaj
+    my_projects: Projektet e mia
+    share: Shpërndaje
     share_title: Shpërndaje projektin
     share_copy_link: 'Kopjo lidhjen:'
     close: Mbyll
     more: Më shumë
     name: Emri
-    updated: Ndrysho
+    updated: U ndryshua
     project_type: Lloji i Projektit
     help_text: 'Shtyp <strong>Bëj një Aplikacion</strong> ose <strong>Vizato Diçka</strong> më poshtë për të hapur një Laborator të ri ose një Projekt Artistik!<br/> Mund të kthehesh kur të duash, dhe të zhvillosh projektin tend.'
-    need_help: Të duhet ndihmë për të nisur?
+    need_help: Të duhet ndihmë për të filluar?
     really_delete: Fshi?
     delete_yes: Po
     delete_no: Jo
-    saved: I Ruajtur
-    not_saved: I paruajtur
+    saved: E ruajtur
+    not_saved: E pa ruajtur
     cancel: Anulo
-    delete_confirm_title: Keni vendosur të fshini ketë projekt?
+    delete_confirm_title: A jeni i sugurt që dëshironi ta fshini këtë projekt?
     delete_confirm_text: Duke fshirë projektin, ju do ta hiqni përfundisht nga lista e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden më ta shohin atë.
     view_all: Shfaq projektet e mia
-    remix: Përziej
+    remix: Remix
     click_to_remix: 'Kliko "Remix" për të nxjerrë versionin tënd!'

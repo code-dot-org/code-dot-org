@@ -81,19 +81,19 @@ vi:
         text: 'Ví dụ cụ thể sau: bạn có một sự kiện trên tay/ EVENT-HANDLER có viết "khi chuột máy tính của được bấm, hãy chơi một giai điệu"'
       4:
         image: notes/flappy04.jpg
-        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
+        text: Bạn có biết trò chơi FlappyBird? Chúng ta sẽ học cách tạo ra phiên bản FlappyBird của riêng mình bằng việc Xử lý sự kiện!
       5:
         image: notes/flappy05.jpg
-        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
+        text: Những phần code bạn sẽ viết liên quan đến việc kéo và thả các khối lệnh. Các khối lệnh này diễn tả các câu lệnh cho máy tính. Thực chất bên dưới các khối này là những dòng code thật.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
+        text: 'Ở khu làm việc đã đặt sẵn một số khối màu xanh lá cây, chúng chính là các lệnh "Xử lý sự kiện" '
       7:
         image: notes/flappy07.jpg
-        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
+        text: 'Nếu bạn muốn chú chim vỗ cánh khi bạn nhấp chuột, gắn các khối "FLAP" vào cách lệnh xử lý sự kiện thích hợp, sau đó trở đi cứ khi nào bạn nhấp chuột, chú chim sẽ vỗ cánh.'
       8:
         image: notes/flappy08.jpg
-        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
+        text: Trong mỗi câu đố của hoạt động này, chúng tôi sẽ giới thiệu các loại sự kiện mới tương ứng với các khối xanh lá cây trong khu làm việc, và bạn sẽ quyết định gắn khối lệnh thích hợp để đáp lại các sự kiện trên.
       9:
         image: notes/flappy09.jpg
         text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'

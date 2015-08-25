@@ -34,7 +34,7 @@ is:
           Getting Loopy: Lykkjulæti
           The Big Event: Stórviðburður
           Going Places Safely: Ferðast í öryggi
-          description: 'Námskeið 1 er hannað til að gera byrjendum í lestri kleift að búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið. Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára (K-1).'
+          description: 'Byrjaðu með Námskeið 1 fyrir byrjendur í lestri. Nemendur búa til tölvuforrit sem munu hjálpa þeim að læra að vinna með öðrum, þróa hæfni til að leysa verkefni og gefast ekki upp þó verkefni séu erfið. Við lok námskeiðsins búa nemendur til sinn eiginn sérhannaða leik eða sögu sem þeir geta svo deilt. Er stílað inn á aldurshópinn 5 - 6 ára (K-1).'
           "Bee: Sequence": 'Býfluga: Röð'
           "Artist: Sequence": 'Listamaður: Röð'
           "Artist: Shapes": 'Listamaður: Form'
@@ -43,7 +43,7 @@ is:
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
           "Artist: Loops": 'Listamaður: Lykkjur'
           description_audience: Fyrir 4-6 ára
-          description_short: Námskeið 1 er ætlað byrjendum í lestri.
+          description_short: Byrja með Námskeið 1 fyrir byrjendur í lestri.
         course2:
           The Maze: Völundarhúsið
           Suzi: Súsí
@@ -69,7 +69,7 @@ is:
           Binary Bracelets: Stafræn armbönd
           The Big Event: Stórviðburður
           Your Digital Footprint: Stafræna fótsporið þitt
-          description: 'Námskeið 2 er hannað fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.'
+          description: 'Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.'
           "Maze: Sequence": 'Völundarhús: Röð'
           "Artist: Sequence": 'Listamaður: Röð'
           "Maze: Loops": 'Völundarhús: Lykkjur'
@@ -82,7 +82,7 @@ is:
           "Maze: Sequence2": 'Völundarhús: Röð2'
           "Artist: Nested Loops": 'Listamaður: Innri lykkjur'
           description_audience: Fyrir 6-18 ára
-          description_short: Námskeið 2 er ætlað nemendum sem geta lesið.
+          description_short: Byrja með Námskeið 2 fyrir læsa nemendur.
         course3:
           The Maze: Völundarhúsið
           "Studio: Create a Story": 'Leikjasmiðja: Búa til sögu'
@@ -464,8 +464,8 @@ is:
           Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: 'Tölvunarfræði í algebru - fagmenntun'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           "Unplugged: Video Games and Coordinate Planes": 'Verkefni án tölvu: Tölvuleikir og hnitakerfi'
           "Calc: Evaluation Blocks": 'Reikningur: Matskubbar'
           "Eval: Strings and Images": 'Greining: Strengir og myndir'
@@ -530,8 +530,8 @@ is:
           new stage: nýr áfangi
           Introduction to PD: Kynning á PD
           title: 'Grundvöllur Tölvunarfræði (GT)- fagmenntun'
-          description: Netkynning á Grundvelli Tölvunarfræði (GT)
-          description_short: Netkynning á Grundvelli Tölvunarfræði (GT)
+          description: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
+          description_short: '1. áfangi: Netkynning á Grundvelli Tölvunarfræði (GT)'
           What is CSP?: Hvað er átt við með Grundvelli Tölvunarfræði (GT)?
           Exploring CSP Instructional Materials: Könnun á kennsluefni fyrir Grundvöll Tölvunarfræði (GT)
           Impact of Computer Science: Impact of Computer Science
@@ -552,14 +552,14 @@ is:
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
           title: Exploring Computer Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Kynning á PD
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -650,14 +650,14 @@ is:
           Next Steps: Næstu skref
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Introduction to PD: Kynning á PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Introduction to PD: Kynning á PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -674,8 +674,8 @@ is:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Kynning á PD
@@ -685,13 +685,13 @@ is:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: 'Tölvunarfræði í algebru - fagmenntun'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Introduction to PD: Kynning á PD
           Evaluation Blocks: Matskubbar
           logo_image: nextech_logo.png
@@ -702,8 +702,8 @@ is:
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
           title: 'Tölvunarfræði í algebru - fagmenntun'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           Introduction to PD: Kynning á PD
           Evaluation Blocks: Matskubbar
           logo_image: izone_logo.png
@@ -716,8 +716,8 @@ is:
           Introduction to PD: Kynning á PD
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -733,8 +733,8 @@ is:
           Introduction to PD: Kynning á PD
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '1. áfangi: Netkynning'
+          description_short: '1. áfangi: Netkynning'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -757,8 +757,8 @@ is:
           new stage: nýr áfangi
         sciencePD2:
           title: Computer Science in Science PD
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -809,24 +809,31 @@ is:
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: 'Algorithms Detour - Minimum Spanning Tree'
           Algorithms Detour - Shortest Path: 'Algorithms Detour - Shortest Path'
-          Algorithms Detour - How Routers Learn: 'Algorithms Detour - How Routers Learn'
+          Algorithms Detour - How Routers Learn: How Routers Learn
           DNS in the Real World: DNS in the Real World
-          HTTP and Abstraction: HTTP and Abstraction
-          Challenges of the Internet: Challenges of the Internet
-          Tell Me a Secret - Encrypting Text: 'Tell Me a Secret - Encrypting Text'
+          HTTP and Abstraction: HTTP and Abstraction on the Internet
+          Challenges of the Internet: Global Impacts of the Internet
+          Tell Me a Secret - Encrypting Text: The Need for Encryption
           Cracking the Code: Cracking the Code
-          Encryption Algorithms: Encryption Algorithms
+          Encryption Algorithms: Keys and Passwords
           Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
           Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
           One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
-          Public Key Crypto: Public Key Crypto
+          Public Key Crypto: Public Key Encryption
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: 'Tölvunarfræði í algebru - fagmenntun'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           Evaluation Blocks: Matskubbar
           Strings and Images: Strengir og myndir
           Defining Variables: Skilgreining breytna
@@ -871,8 +878,8 @@ is:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: 'Tölvunarfræði í algebru - fagmenntun'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           Course Overview: Course Overview
           Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
           Teacher Dashboard: Stjórnborð kennara
@@ -925,8 +932,8 @@ is:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           Welcome!: Velkomin!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -975,8 +982,8 @@ is:
           Hour of Code: Klukkustund kóðunar
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Kenna fallmiðaða forritun í gegnum algebru
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: '2. áfangi á neti: Blandað sumarnám'
+          description_short: '2. áfangi á neti: Blandað sumarnám'
           Course Overview: Course Overview
           Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
           Teacher Dashboard: Stjórnborð kennara
@@ -997,8 +1004,8 @@ is:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
-          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
           Welcome!: Velkomin!
           Wrap-Up: Samantekt
           Review StarLogo Nova: Review StarLogo Nova
@@ -1014,8 +1021,8 @@ is:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
-          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
           Welcome!: Velkomin!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1034,8 +1041,8 @@ is:
         sciencePD2b-iZone:
           Welcome!: Velkomin!
           title: Computer Science in Science PD Phase 2b
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
-          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1044,8 +1051,8 @@ is:
           Wrap-Up: Samantekt
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
-          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
           Welcome!: Velkomin!
           0: |
             Unit 1, Days 1-2
@@ -1063,8 +1070,8 @@ is:
           Wrap-up: Samantekt
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Kenna fallmiðaða forritun í gegnum algebru
-          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: '2. áfangi á neti: Blandað sumarnám'
+          description: '2. áfangi á neti: Blandað sumarnám'
           Welcome!: Velkomin!
           0: |
             Unit 1, Days 1-2
@@ -1101,3 +1108,22 @@ is:
           description_short: Odometer widget
           description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Krúttleg kort
+          Move it, Move it: Hreyfa sig, hreyfa sig
+          "Real-life Algorithms: Plant a Seed": 'Algrím úr raunheimi: Sá fræi'
+          Graph Paper Programming: Forritun rúðublaða
+          Building a Foundation: Að byggja grunn
+          Getting Loopy: Lykkjulæti
+          The Big Event: Stórviðburður
+          Binary Bracelets: Stafræn armbönd
+          Songwriting: Lagasmíð
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
+          description_audience: Ages 7-13

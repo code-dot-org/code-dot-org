@@ -908,6 +908,13 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -1237,3 +1244,31 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Mappe Felici
+          Move it, Move it: Muovilo, Muovilo
+          'Real-life Algorithms: Plant a Seed': 'Algoritmi della Vita Reale: Piantare
+            un Seme'
+          Graph Paper Programming: Programmazione su carta a quadretti
+          Building a Foundation: Costruire le Fondamenta
+          Getting Loopy: Diventare Ripetitivi
+          The Big Event: Il Grande Evento
+          Binary Bracelets: Braccialetti Binari
+          Songwriting: Composizione di canzoni
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13

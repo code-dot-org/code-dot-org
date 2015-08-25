@@ -1,17 +1,11 @@
 
 
-<div class="row">
-  <h1 class="col-sm-6">
-    How to teach one Hour of Code
-  </h1>
-  
-  
-</div>
+# एक घंटा कोड का कैसे पढ़ानेकी तकनीक
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-हमारे सहकारियोंे हर आयु के छात्रोंके लिए एक घंटेकी मजेसेभरपूर अभ्यासिका बनायीं है|दिसंबर ८ से पहले नयी अभ्यासिका भेजी जाएगी |
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **एक घंटा कोड का अभ्यासिकाओंकी विशेषताए:**
 
@@ -20,11 +14,7 @@
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
-
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
-
-## 4) Plan your hardware needs - computers are optional
+## 3) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -32,12 +22,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Preview the congrats page** to see what students will see when they finish. 
   * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 5) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
   * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-## 6) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -58,7 +48,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**
@@ -78,4 +68,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 **What comes after the Hour of Code?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> 
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>

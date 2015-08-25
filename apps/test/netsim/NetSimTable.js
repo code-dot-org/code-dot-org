@@ -394,6 +394,11 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'create[{}]');
   });
 
+  it ("calls multiCreate on the API table", function () {
+    netsimTable.multiCreate([{order:'first'}, {order:'second'}], callback);
+    assertEqual(apiTable.log(), 'create[{"order":"first"}]create[{"order":"second"}]');
+  });
+
   it ("calls update on the API table", function () {
     netsimTable.update(1, {}, callback);
     assertEqual(apiTable.log(), 'update[1, {}]');
@@ -724,9 +729,10 @@ describe("NetSimTable", function () {
     });
 
     it ("Requests from beyond most recent row received in refresh", function () {
-      netsimTable.create({}, callback);
-      netsimTable.create({}, callback);
-      netsimTable.create({}, callback);
+      var row1, row2, row3, row4;
+      netsimTable.create({}, function (err, result) { row1 = result; });
+      netsimTable.create({}, function (err, result) { row2 = result; });
+      netsimTable.create({}, function (err, result) { row3 = result; });
       assertEqual('create[{}]create[{}]create[{}]', apiTable.log());
 
       apiTable.clearLog();
@@ -734,14 +740,14 @@ describe("NetSimTable", function () {
       // Intentionally "1" here - we update our internal "latestRowID"
       // until after an incremental or full read.
       assertEqual('readAllFromID[1]', apiTable.log());
-      assertEqual([{id:1}, {id:2}, {id:3}], netsimTable.readAll());
+      assertEqual([row1, row2, row3], netsimTable.readAll());
 
       apiTable.clearLog();
-      netsimTable.create({}, callback);
+      netsimTable.create({}, function (err, result) { row4 = result; });
       netsimTable.refreshTable_(callback);
       // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
       assertEqual('create[{}]readAllFromID[4]', apiTable.log());
-      assertEqual([{id:1}, {id:2}, {id:3}, {id:4}], netsimTable.readAll());
+      assertEqual([row1, row2, row3, row4], netsimTable.readAll());
     });
 
   });

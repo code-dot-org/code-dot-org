@@ -204,6 +204,9 @@ Dialog.prototype.processHideOptions = function(options) {
   // Fade some of the decorative elements quickly.
   var decorationFadeTime = 150;
 
+  // Fade some elements really fast.
+  var fastFadeTime = 50;
+
   // Let's also fade the background out.
   $(".modal-backdrop").animate({opacity: 0}, totalFadeTime);
 
@@ -213,6 +216,7 @@ Dialog.prototype.processHideOptions = function(options) {
   $(".dialog-title").animate({opacity: 0}, decorationFadeTime);
   $(".aniGif").animate({opacity: 0}, decorationFadeTime);
   $(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+  $(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
 
   // Slide the instruction box from its current position to its destination.
   $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function() {

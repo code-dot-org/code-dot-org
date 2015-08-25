@@ -818,6 +818,13 @@ en:
           Security and Hacking in the Real World: crwdns41623:0crwdne41623:0
           Packets and Making a Reliable Internet: crwdns41852:0crwdne41852:0
           Routers and Redundancy: crwdns42116:0crwdne42116:0
+          The Internet is for Everyone: crwdns45316:0crwdne45316:0
+          How Routers Learn: crwdns45317:0crwdne45317:0
+          HTTP and Abstraction on the Internet: crwdns45318:0crwdne45318:0
+          Global Impacts of the Internet: crwdns45319:0crwdne45319:0
+          The Need for Encryption: crwdns45320:0crwdne45320:0
+          Keys and Passwords: crwdns45321:0crwdne45321:0
+          Public Key Encryption: crwdns45322:0crwdne45322:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -1084,3 +1091,22 @@ en:
           description_short: crwdns43522:0crwdne43522:0
           description: crwdns43523:0crwdne43523:0
           Odometer Widget: crwdns43524:0crwdne43524:0
+        asUnplugged:
+          title: crwdns45323:0crwdne45323:0
+          description_short: crwdns45324:0crwdne45324:0
+          description: crwdns45325:0crwdne45325:0
+          description_audience: crwdns45326:0crwdne45326:0
+          Happy Maps: crwdns45327:0crwdne45327:0
+          Move it, Move it: crwdns45328:0crwdne45328:0
+          "Real-life Algorithms: Plant a Seed": crwdns45329:0crwdne45329:0
+          Graph Paper Programming: crwdns45330:0crwdne45330:0
+          Building a Foundation: crwdns45331:0crwdne45331:0
+          Getting Loopy: crwdns45332:0crwdne45332:0
+          The Big Event: crwdns45333:0crwdne45333:0
+          Binary Bracelets: crwdns45334:0crwdne45334:0
+          Songwriting: crwdns45335:0crwdne45335:0
+        afterschool1:
+          title: crwdns45336:0crwdne45336:0
+          description_short: crwdns45337:0crwdne45337:0
+          description: crwdns45338:0crwdne45338:0
+          description_audience: crwdns45339:0crwdne45339:0

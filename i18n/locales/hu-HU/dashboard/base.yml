@@ -362,6 +362,9 @@ hu:
     no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Igazolás kinyomtatása
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Férfi
     female: Nő
@@ -370,9 +373,13 @@ hu:
     student: Diák
     teacher: Tanár
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: A Google, a Microsoft, a Facebook és a Twitter mérnökei segítettek létrehozni ezt a gyakorlatot.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Minden jog fenntartva.'
     powered_by_aws: Az Amazon Web Services működteti
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Mégtöbb
     feedback: Visszajelzés küldése
     translate: Segítsen lefordítani az oldalt az anyanyelvére
     support: Segítség
@@ -500,6 +507,10 @@ hu:
     open_response_body: Köszönjük a választ!
   dialog:
     ok: OK
+    startover_title: Biztosan újra szeretnéd kezdeni?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Újrakezdés
+    startover_cancel: Mégsem
   time:
     hour: 1 óra
     day: nap

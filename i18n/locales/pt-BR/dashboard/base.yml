@@ -345,7 +345,7 @@ pt-BR:
     student_progress: Seu progresso de aprendizagem
     student_stats: 'Você ganhou %{trophy_count} dos %{trophy_max} troféus de "Domínio de Conceitos" disponíveis.'
     student_left_off: 'Onde você parou:'
-    student_finished: 'Você completou todos os tutoriais, escolha outra aula em %{online_link} ou %{local_school_link}'
+    student_finished: 'Você completou todos os tutoriais da Code.org. Escolha outra aula em %{online_link} ou %{local_school_link}.'
     local_school: escola local
     online: online
     see_details: Ver detalhes
@@ -366,6 +366,9 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Masculino
     female: Feminino
@@ -374,14 +377,18 @@ pt-BR:
     student: Estudante
     teacher: Professor
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Todos os direitos reservados.'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Direitos Autorais
+    more: Mais
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte
     support_url: http://support.code.org
-    tos: Termos
+    tos: Termos de Serviço
     privacy: Política de Privacidade
     secure: Versão Segura
   reference_area:
@@ -504,6 +511,10 @@ pt-BR:
     open_response_body: Obrigado pela sua resposta!
   dialog:
     ok: OK
+    startover_title: Tem certeza de que deseja começar do início?
+    startover_body: Esta ação retornará o desafio a seu estado inicial e excluirá todos os blocos que você adicionou ou alterou.
+    startover_ok: Começar do início
+    startover_cancel: Cancelar
   time:
     hour: 1 hora
     day: dia

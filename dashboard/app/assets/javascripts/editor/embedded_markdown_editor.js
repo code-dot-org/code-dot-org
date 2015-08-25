@@ -17,7 +17,7 @@
  * @param {string} name of the property within the textarea
  */
 dashboard.initializeEmbeddedMarkdownEditor = function (embeddedElement, markdownTextArea, markdownPreviewArea, markdownProperty) {
-  var regex = new RegExp("^" + markdownProperty + " <<(\\w*)\\n([\\s\\S]*?)\\n\\1$", "m");
+  var regex = new RegExp("^" + markdownProperty + " <<(\\w*)\\n([\\s\\S]*?)\\n\\1\\s*$", "m");
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 

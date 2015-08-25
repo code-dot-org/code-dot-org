@@ -417,6 +417,7 @@ it:
       4-5 While Loops 8_instruction: 'Ci sono una buca davvero profonda e un grande mucchio di terra. Quante palate di terra sono necessarie per livellare il terreno? Suggerimento: Usa il blocco "mentre" per entrambi.'
       4-5 While Loops Assessment 1_instruction: 'Questo è un esercizio di verifica -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere i mucchi di terra per rendere livellato il terreno.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: test
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -476,11 +477,11 @@ it:
         over towards the left. Complete update-danger to make the danger fly across
         the screen.
       Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+        At this point in your game, your danger
+        should run across the screen from right to left, and your target should run
+        across from left to right. They don't ever come back on screen once they've
+        left, but we'll take care of that later. Take a minute to make sure your
+        game is working like you want it to, and then click Finish to move on.
       Big Game Booleans 1_instruction: |
         When you last worked on your game we got
         our target and danger sprites to fly across the screen, but they never come
@@ -542,10 +543,11 @@ it:
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!Last
-        time you worked on your game, you used booleans to make your Target and Danger
-        return to the screen once they've left. Click Run to see how your game looks
-        right now, and then we'll get to making your Player move up and down.
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         Edit the update-player function so the player
         moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
@@ -705,10 +707,9 @@ it:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
@@ -867,6 +868,7 @@ it:
       Course 4 Artist 6_instruction: 'Completa il codice per disegnare i triangoli. Suggerimento: 3 triangoli in una rotazione di 360 gradi.'
       Course 4 Artist 7_instruction: 'Ora nidifica questo ciclo in un altro per disegnare 10 triangoli. Questa operazione è chiamata ciclo nidificato. Suggerimento: i 10 triangoli formano una rotazione di 360 gradi.  '
       Course 4 Artist 8_instruction: "Disegna il Sole inserendo l'intero blocco di codice in un ciclo e ripetendolo 12 volte."
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: "Ripeti 10 volte la figura disegnata dal codice che trovi già pronto e assicurati di ruotare un po' tra una figura e l'altra. Di quanti gradi devi ruotare ad ogni ripetizione? (Suggerimento: quanto fa 360 diviso 10?)"
       Course 4 Artist Binary 1_instruction: "Ecco una funzione che riceve una stringa binaria, cioè fatta di 1 e 0, e istruisce l'artista su come muoversi da sinistra a destra e dall'alto al basso riempendo i quadratini quando incontra un 1 e ignorandoli quando invece incontra uno 0. Esegui il codice per vedere come l'artista usa gli elementi binari 1 e 0 per disegnare la figura."
       Course 4 Artist Binary 2_instruction: Quale di queste stringhe binarie puoi ripetere 8 volte per disegnare questa immagine?
@@ -1003,6 +1005,9 @@ it:
       Course 4 Bee For Loops 7_instruction: 'Usa la variabile "contatore" del ciclo per controllare lo spostamento in senso orizzontale.'
       Course 4 Bee For Loops 8_instruction: È possibile utilizzare la variabile del ciclo per controllare il movimento e la raccolta di nettare?
       Course 4 Bee For Loops 9_instruction: "L'ultimo numero del ciclo indica l'incremento, e ogni volta che il ciclo viene eseguite la variabile contatore aumenta dell'incremento indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento."
+      Course 4 Bee Loops 5 NEW_instruction: |
+        Put these blocks into a loop to collect
+        nectar from each flower.
       Course 4 Bee Params 1_instruction: 'Utilizza la funzione "ottieni 3 di nettare" che consnete di ruotare e muoversi per raccogliere il nettare e che alla fine riporta alla posizione originale. Scrivi una sequenza per raccogliere tutto il nettare utilizzando la funzione "ottieni 3 di nettare."'
       Course 4 Bee Params 2_instruction: 'Modifica la funzione di "ottini 3 di nettare" in modo da girare a destra invece che a sinistra per i fiori.'
       Course 4 Bee Params 3 (copy 1)_instruction: |-
@@ -1017,6 +1022,7 @@ it:
       Course 4 Bee Params 7 (copy 1)_instruction: Prova a utilizzare la nuova funzione per raccogliere tutto questo nettare.
       Course 4 Bee Params 7_instruction: Provate a utilizzare la nuova funzione per raccogliere tutto il nettare.
       Course 4 Bee Params 8_instruction: "Oooh, ora c'è miele di cui occuparsi! Come si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele."
+      Course 4 Bee Params Ex_instruction: Provate a utilizzare la nuova funzione per raccogliere tutto il nettare.
       Course 4 Binary 1_instruction: |
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
@@ -1241,6 +1247,11 @@ it:
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
         radii of 25, 50, and 75.
+      Eval Define Funcs Test_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1273,21 +1284,20 @@ it:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
-        Using the Design Recipe, write a function
-        large-polygon that should output a solid polygon of given sides and color
-        that takes up most of the window, regardless of the number of sides. To make
-        sure that the polygon doesn't get too large as you increase the number of
-        sides, side length should be inversely proportional to side number, with a
-        length of (800/sides).
+        Write a function large-polygon that should
+        output a solid polygon of given sides and color that takes up most of the
+        window, regardless of the number of sides. To make sure that the polygon doesn't
+        get too large as you increase the number of sides, side length should be inversely
+        proportional to side number, with a length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1359,8 +1369,12 @@ it:
       frozen square loop_instruction: 'Ciao, sono Anna di Arendelle! Facciamo un quadrato con il blocco "ripeti", che usa un minor numero di blocchi. Quante volte (???) il blocco "ripeti" deve fare un ciclo dei blocchi al suo interno per ottenere un quadrato?'
       frozen square snowflake_instruction: |-
         Riesci a creare un fiocco di neve usando il blocco "ripeti" per fare un quadrato 10 volte, e il blocco "gira" per girare di 36 gradi tra un quadrato e l'altro?
+      hoc2015_free_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
       hoc2015_intro_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
+      hoc2015_maze_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
+      hoc2015_random_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
       hoc2015_sandbox_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
+      hoc2015_square_instruction: 'Hiro è "attore 1".  Utilizzate il blocco di spostamento per muovere Hiro a destra in modo da toccare Baymax.'
       Infinity_catch_instruction: 'Riesci a fare in modo che Elsa (il "personaggio 2") raggiunga Anna usando i tasti freccia?'
       Infinity_finale_instruction: Crea qualunque cosa ti piaccia e condividila!
       Infinity_move_collide_instruction: 'Hiro è il "personaggio 1". Spostalo verso Baymax e riproduci un suono quando si toccano.'
@@ -2252,8 +2266,26 @@ it:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

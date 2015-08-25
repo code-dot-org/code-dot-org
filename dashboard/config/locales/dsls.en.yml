@@ -349,6 +349,7 @@ en:
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Big Game: {}
       PDAlg Cirlces of Eval:
         Circles of Evaluation: Circles of Evaluation
       PDAlg Culture: {}
@@ -383,6 +384,7 @@ en:
       PDAlg Teacher Introduction:
         Introduce yourself: Introduce yourself
       PDAlg Teacher Plan: {}
+      PDAlg Updates Tweaks: {}
       PDAlg big game:
         Introduction to the Big Game: Introduction to the Big Game
       PDAlg bootstrap:
@@ -2687,8 +2689,6 @@ en:
         '6': '6'
         '8': '8'
         '9': '9'
-        ? Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
-        : Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
         Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
@@ -3622,6 +3622,7 @@ en:
         Question 4: Question 4
       U2L07 Assessment5:
         Question 5: Question 5
+      U2L08 Assessment 0: {}
       U2L08 Free Response 1:
         'Router Table: Reflection': 'Router Table: Reflection'
       U2L08 Free Response 2:
@@ -3688,10 +3689,11 @@ en:
         'Public Key Crypto: Getting Started': 'Public Key Crypto: Getting Started'
       U2L19 Free Response Wrap Up:
         'Public Key Crypto: Wrap Up': 'Public Key Crypto: Wrap Up'
+      U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
-      U2L20 Free Response Wrap Up:
-        'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L20 Free Response Wrap Up: {}
+      U2L20 Free Response Wrap Up 2: {}
       U2L3 Assessment 4:
         'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
         Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Atkārtojuma\" vai \"ja\" blokam nepieciešams saturēt citus blokus lai strādātu. Pārliecinieties, ka iekšējie bloki pareizi iederas ārējā blokā.",
   "emptyBlockInFunction":"Funkcijai {name} ir neaizpildīta ievade.",
   "emptyBlockInVariable":"Mainīgajam {name} ir neaizpildīta ievade.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Lai tas strādātu, funkciju blokam ir nepieciešami citi bloki tajā.",
   "emptyFunctionalBlock":"Jums ir bloks ar neaizpildītu ievadi.",
   "emptyTopLevelBlock":"Nav bloki, kurus aktivizēt. Tev ir jāpievieno bloku pie {topLevelBlockName} bloka.",

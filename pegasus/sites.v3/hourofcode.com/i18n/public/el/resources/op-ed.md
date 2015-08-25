@@ -1,27 +1,27 @@
 
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Παρακάτω είναι ένα δείγμα υποστηρικτικής εκπαίδευσης για την Εβδομάδα της Επιστήμης των Υπολογιστών και τους στόχους της, το οποίο θα μπορούσε να χρησιμοποιηθεί από το κράτος, τοπικούς νομοθέτες, ηγέτες του επιχειρηματικού κόσμου κλπ.
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+Πηγαίνετε στο http://code.org/promote για να βρείτε συγκεκριμένες πληροφορίες για κάθε πολιτεία της Αμερικής σχετικά με την επιστήμη των υπολογιστών.
 
-**Title: Computing…Where the Jobs Are**
+**Τίτλος: Πληροφορική... Εκεί όπου βρίσκονται οι θέσεις εργασίας**
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Οι υπολογιστές βρίσκονται παντού. Είναι στις τσέπες μας. Βρίσκονται στους τοίχους μας. Βρίσκονται στα αυτοκίνητά μας. Είναι ένα κρίσιμο κομμάτι της υποδομής μας, από τα δίκτυα ηλεκτρικής ενέργειας στους φωτεινούς σηματοδότες και στα ενδότερα των χρηματιστηριακών αγορών μας. Και όλοι αυτοί οι υπολογιστές έχουν ένα πράγμα κοινό. Εξαρτώνται από το λογισμικό για να τους πει τι να κάνουν.
 
-But who exactly is going to write this software?
+Αλλά ποιος ακριβώς θα γράψει αυτό το λογισμικό;
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Λαμβάνοντας υπόψη πόσο γρήγορα ο κόσμος μας μετασχηματίζεται από την τεχνολογία, ίσως περιμένετε ο αριθμός των μαθητών που σπουδάζουν επιστήμη των υπολογιστών στην βασική εκπαίδευση σήμερα να είναι στο μέγιστο όλων των εποχών. Θα κάνατε λάθος στους υπολογισμούς σας. Στην πραγματικότητα, λιγότεροι μαθητές σπουδάζουν επιστήμη των υπολογιστών, και λιγότερα σχολεία τη διδάσκουν, από ότι πριν από μια δεκαετία.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+Σε μια εποχή όπου η ζήτηση για ειδικευμένους προγραμματιστές ποτέ δεν ήταν μεγαλύτερη, βγάζουμε λιγότερους από παλιά επιστήμονες υπολογιστών. Ακόμη και σε αυτήν την περίοδο της υψηλής ανεργίας, χιλιάδες θέσεις εργασίας, πολλές από αυτές εδώ στον/στην **[Προσθέστε ΠΟΛΙΤΕΙΑ/ΚΡΑΤΟΣ /πόλη]**, θα παραμείνουν κενές λόγω έλλειψης ατόμων με τις κατάλληλες γνώσεις και ικανότητες.
 
-Why is this? And how can we address it?
+Γιατί συμβαίνει αυτό; Και πώς μπορούμε να το αντιμετωπίσουμε;
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Το πρόβλημα ξεκινάει από τα Γυμνάσια και τα Λύκειά μας. Εννέα στα δέκα σχολεία μας δεν προσφέρουν μαθήματα προγραμματισμού ηλεκτρονικών υπολογιστών. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
@@ -37,4 +37,4 @@ We need to recruit more computer science teachers and encourage professional dev
 
 According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Η εβδομάδα 7-13 του Δεκεμβρίου, είναι αφιερωμένη στη διδασκαλία της επιστήμης υπολογιστών. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"בלוקי ה\"חזור שוב\" או ה\"אם\" צריכים בלוקים אחרים בתוכם כדי לעבוד. וודא כי הבלוק הפנימי מתאים בבלוק החיצוני.",
   "emptyBlockInFunction":"בפונקציה {name} יש קלט לא מלא.",
   "emptyBlockInVariable":"למשתנה {name} יש קלט לא מלא.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"פונקציית הבלוק דורשת בלוקים אחרים בתוכה כדי לעבוד.",
   "emptyFunctionalBlock":"נותר לך בלוק ללא קלט.",
   "emptyTopLevelBlock":"אין מה להריץ, יש לחבר בלוק לבלוק ההתחלה ({topLevelBlockName}).",

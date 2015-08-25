@@ -1,29 +1,135 @@
 el:
   site_name: Ώρα του Κώδικα
-  language: ελληνικά
-  front_title: 'Λάβετε μέρος στην μεγαλύτερη  στην ιστορία εκδήλωση για την μάθηση, 8-14 Δεκεμβρίου, 2014'
+  language: Αγγλικά
+  front_title: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
   coming_soon: Προσεχώς
-  front_header_banner: 'Λάβετε μέρος στην μεγαλύτερη  στην ιστορία εκδήλωση για την μάθηση, 8-14 Δεκεμβρίου, 2014'
+  campaign_date_start_short: 7 Δεκεμβρίου
+  campaign_date_start_long: 7 Δεκεμβρίου
+  campaign_date_short: '7 - 13 Δεκεμβρίου'
+  campaign_date_full: '7 - 13 Δεκεμβρίου'
+  front_header_banner: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
   front_intro_default: 'H ώρα του κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε  δεκάδες εκατομμύρια μαθητές σε 180+ χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα. Ωριαία μαθήματα είναι διαθέσιμα σε πάνω από 30 γλώσσες. Δεν χρειάζεται καμία εμπειρία. <strong>Για ηλικίες από 4 έως 104.</strong>'
-  front_intro_default_uk: 'Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε 180 + χώρες. Ο καθένας μπορεί να οργανώσει μια εκδήλωση Ώρα του κώδικα. Πάνω από 3 εκατομμύρια μαθητές συμμετείχαν στην πρώτη Ώρα του Κώδικα στο Ηνωμένο Βασίλειο. Ας διπλασιάσουμε αυτό το νούμερο τον Δεκέμβριο! <strong>Δεν χρειάζεται προηγούμενη εμπειρία. Για ηλικίες από 4 έως 104.</strong>'
   front_watch_video: Δες το νέο βίντεο
+  front_watch_regular_video: Δείτε το βίντεο
   header_menu_resources: Πόροι
   header_menu_faq: Συχνές Ερωτήσεις
   header_menu_prizes: Βραβεία
-  header_menu_uk_code_org: uk.code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
+  company_bgca: Λέσχη Αγοριών και Κοριτσιών της Αμερικής
+  company_bsusa: Πρόσκοποι της Αμερικής
   company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
+  company_gsusa: Κορίτσια Πρόσκοποι της Αμερικής
+  company_khanacademy: Ακαδημία Khan
   company_mesa: Mathematics Engineering Science Achievement
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
-  company_teachforall: Teach for All
+  company_teachforall: Διδασκαλία για όλους
   company_teachforamerica: Teach for America
   company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Δημόσια Σχολεία του Σικάγο
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Δημόσια Σχολεία του Ντένβερ
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
   prizes_all: Βραβεία για κάθε διοργανωτή
   prizes_every_organizer: Κάθε διοργανωτής μιας Ώρας Κώδικα θα λάβει μονάδες για το Dropbox ή το Skype ως ένα ευχαριστώ
   prizes_technology: 'Ένα δημόσιο σχολείο, σε κάθε πολιτεία των ΗΠΑ (& Washington DC) θα κερδίσει προϊόντα τεχνολογίας αξίας $10.000'
@@ -32,19 +138,32 @@ el:
   prizes_brilliant: Ένα σχολείο σε κάθε επαρχία και επικράτεια θα λάβει $2000 για ένα Σπουδαίο Πρότζεκτ
   prizes_actua: 15 σχολεία σε όλο τον Καναδά θα λάβουν δυο εργαστήρια STEM από ένα από τα μέλη της Actua
   prizes_details: Λεπτομέρειες
-  whats_next_header: Τι θα ακολουθήσει;
-  whats_next_description: "Θα σας στείλουμε υλικά και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέα σεμινάρια μέσα στο 2014 θα είναι σύντομα διαθέσιμα για οποιαδήποτε μηχανή αναζήτησης, smartphone- ή ακόμα και χωρίς υπολογιστή! <a href='http://code.org/learn'> Δοκιμάστε τα τρέχοντα σεμινάρια</a>"
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: τους Όρους και τις Προϋποθέσεις
+  prizes_nav_faq: Συχνές Ερωτήσεις
+  whats_next_header: "What's next?"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Πώς να διοργανώσετε μια Ώρα του κώδικα</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
-  n_have_learned_an_hoc: '<h1>#</h1><h3>έχει δοκιμάσει μια </h3><h2>Ώρα του κώδικα</h2>'
+  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Όλοι μπορούν να μάθουν.
+  get_started: Start
+  beyond_an_hour: Beyond an Hour of Code
   register_now: Εγγραφείτε τώρα
+  share_on_facebook: Share on Facebook
+  share_on_twitter: Share on Twitter
   front_join_us_heading: Μια ώρα του κώδικα για κάθε μαθητή.
-  front_join_us_description: H επιστήμη υπολογιστών είναι θεμέλιο για κάθε μαθητή. Βοηθήστε μας να το εισαγάγουμε σε 100 εκατομμύρια.
+  front_join_us_description: H επιστήμη υπολογιστών αποτελεί θεμέλιο για για κάθε μαθητή. Βοηθήστε μας να το παρουσιάσουμε σε 100 εκατομμύρια.
+  front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Ελάτε μαζί μας
   front_what_is_hoc: 'Τι είναι η  Ώρα του Κώδικα;'
   front_join_us_header: Ο καθένας μπορεί να μάθε τα βασικά και να διασκεδάσει κάνοντας το!
-  front_join_us_header_uk: Οποιαδήποτε στιγμή κατά τη διάρκεια εβδομάδας , 8-14 Δεκεμβρίου , φιλοξένησε μια εκδήλωση για την Ώρα του Κώδικα για να δείξεις ότι οποιοσδήποτε μπορεί να μάθει τα βασικά, διασκεδάζοντας!
   front_join_us_teacher: Είσαι Εκπαιδευτικός;
   front_join_us_inspire: Εμπνεύστε τους μαθητές με
   front_join_us_inspire_link: μια Ώρα του κώδικα στην τάξη.
@@ -62,8 +181,8 @@ el:
   front_join_us_try: Δοκιμάστε το
   front_join_us_host: Φιλοξένησέ το
   front_join_us_support: Υποστήριξέ το
-  signup_header: 'Οργανώσετε μια εκδήλωση Ώρας του Κώδικα από 8 - 14  Δεκ 8, και καταχωρήστε την εδώ.'
-  signup_name_label: Το όνομά σου
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_name_label: Το όνομά σας
   signup_email_label: Το email σας
   signup_organization_name_label: Όνομα σχολείου ή του οργανισμού
   signup_event_type_label: Τύπος εκδήλωσης
@@ -74,7 +193,8 @@ el:
   signup_send_posters_flag_label: 'Στείλτε <a href= "/resources#posters"> αφίσες</a> στο σχολείο μου ή στον οργανισμό μου'
   signup_send_posters_address_label: Διεύθυνση του σχολείου ή του οργανισμού
   signup_whole_school_flag_label: Αυτή η εκδήλωση είναι για ένα ολόκληρο σχολείο
-  signup_your_event: Κάντε Εγγραφή της εκδήλωσης σας
+  signup_your_event: Προσθέστε την εκδήλωσή σας
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_name_placeholder: Το όνομα σας
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Για παράδειγμα, Γυμνάσιο του Λίνκολν
@@ -82,12 +202,13 @@ el:
   signup_special_event_details_placeholder: Περιγράψτε τι είναι αυτό που την κάνει μια ειδική εκδήλωση
   signup_send_posters_address_placeholder: Αυτή η διεύθυνση δεν θα κοινοποιηθεί στον χάρτη μας
   signup_event_type_in_school: Σε ένα σχολείο
-  signup_event_type_out_of_school: Έξω από το σχολείο
+  signup_event_type_out_of_school: Εκτός σχολείου
   signup_submit_label: Εγγραφείτε
   signup_submit_error_message: Παρουσιάστηκε ένα σφάλμα. Ελέγξτε για να βεβαιωθείτε ότι όλα τα απαιτούμενα πεδία έχουν έχουν συμπληρωθεί σωστά.
   signup_thank_you_header: Σας ευχαριστούμε που εγγραφήκατε για να φιλοξενήσετε μια εκδήλωση για την Ώρα του Κώδικα.
   signup_thank_you_message: Σας στέλνουμε ένα email επιβεβαίωσης με πληροφορίες που θα σας βοηθήσουν να ξεκινήσετε.
   map_header: '#Εκδηλώσεις για την Ώρα του Κώδικα  σε όλο τον κόσμο'
+  see_all_events: See all events
   map_header_company: '# από τισ διοργανώτριες εταιρίες'
   map_search_placeholder: Search for Hour of Code events
   map_search_search: Search
@@ -97,12 +218,12 @@ el:
   meta_tag_twitter_title: The Hour of Code is here
   meta_tag_twitter_description: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που φτάνει σε δεκάδες εκατομμύρια μαθητές σε 200 χώρες και σε πάνω από 30 γλώσσες. Για ηλικίες 4 έως 104.
   twitter_default_text: 'Συμμετέχω στη φετινή #HourOfCode, εσύ; @codeorg'
-  hardware_prizes_form_name_label: Το όνομά σου
-  hardware_prizes_form_name_placeholder: Το όνομά σου
+  hardware_prizes_form_name_label: Το όνομά σας
+  hardware_prizes_form_name_placeholder: Το όνομά σας
   hardware_prizes_form_email_label: Το email σας
   hardware_prizes_form_email_placeholder: Το email σας
-  hardware_prizes_form_school_name_label: Όνομα του σχολείου
-  hardware_prizes_form_school_name_placeholder: Όνομα του σχολείου
+  hardware_prizes_form_school_name_label: Όνομα σχολείου
+  hardware_prizes_form_school_name_placeholder: Όνομα σχολείου
   hardware_prizes_form_school_address_label: Διεύθυνση σχολείου
   hardware_prizes_form_school_address_placeholder: Διεύθυνση σχολείου
   hardware_prizes_form_school_type_label: Τύπος σχολείου
@@ -110,7 +231,7 @@ el:
   hardware_prizes_form_school_type_option_middle_school: Γυμνάσιο
   hardware_prizes_form_school_type_option_high_school: Γυμνάσιο
   hardware_prizes_form_qualifying_school_label: 'Αυτό είναι ένα Κ-12  δημόσιο σχολείο των ΗΠΑ'
-  hardware_prizes_form_number_students_label: Αριθμός των μαθητών που συμμετέχουν
+  hardware_prizes_form_number_students_label: Αριθμός μαθητών που συμμετέχουν
   hardware_prizes_form_number_students_placeholder: Αριθμός των μαθητών
   hardware_prizes_form_plan_file_label: 'Ανεβάσετε το σχέδιο διαχείρισης της  Ώρας του Κώδικα'
   hardware_prizes_form_plan_file_description: 'Υποβάλετε ένα απλό πρόγραμμα για το πώς σκοπεύετε να οργανώσετε  κάθε μαθητή να κάνει την Ώρα του Κώδικα στο σχολείο σας. Δείτε ένα δείγμα σχέδιου: #PDF # | #Word #'
@@ -120,19 +241,19 @@ el:
   hoc_faq_what_is_hoc_a: "Στην ώρα του κώδικα είναι μια ωριαία εισαγωγή στην επιστήμη των υπολογιστών, σχεδιασμένο να απομυθοποιήσει κώδικα και να δείξει ότι μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'> Ρίξτε μια ματιά στα έτοιμα μαθήματα</a>."
   hoc_faq_last_year: Δοκιμάστε τα μαθήματα
   hoc_faq_when_is_hoc_q: Πότε είναι η Ώρα του Κώδικα;
-  hoc_faq_when_is_hoc_a: "Οποιοσδήποτε μπορεί να φιλοξενήσει μια ώρα του κώδικα ανά πάσα στιγμή, αλλά ο στόχος βασικής εκστρατείας  είναι δέκα εκατομμύρια μαθητές να δοκιμάσουν μια Ώρα του Κώδικα κατά τη διάρκεια της εβδομάδας 8-14 Δεκεμβρίου, 2014, για τον εορτασμό της <a href='http://csedweek.org'> Εκπαιδευτικής Εβδομάδας της Επιστήμης των Υπολογιστών</a>. Πρόκειται για μία συγκεκριμένη <i>ώρα</i>; Όχι. Μπορείς να κάνεις την Ώρα του Κώδικα οποτεδήποτε κατά τη διάρκεια αυτής της εβδομάδας. (Και αν δεν μπορείς να το κάνεις κατά τη διάρκεια αυτής της εβδομάδας, κάνε την εβδομάδα πριν ή μετά)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Γιατί επιστήμη των υπολογιστών;
   hoc_faq_why_cs_a: "<i>Κάθε</i> μαθητής θα πρέπει να έχει την ευκαιρία να μάθει την επιστήμη των υπολογιστών. Βοηθά να καλλιεργήσει δεξιότητες επίλυσης, προβλημάτων, λογική και δημιουργικότητα. Ξεκινώντας νωρίς, οι μαθητές θα έχουν ένα θέμελιο για επιτυχία σε οποιαδήποτε σταδιοδρομία του 21ου αιώνα. Δείτε περισσότερα στατιστικά στο <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: 'Πώς μπορώ να συμμετάσχω στην  Ώρα του Κώδικα;'
-  hoc_faq_how_participate_a: "Κανε εγγραφή  για να διοργανώσεις μια εκδήλωση για τη Ώρα του κώδικα  <a href='http://hourofcode.org'>εδώ</α>και<a href='target-resources-how-to'>άρχισε να σχεδιάσεις</α>.Μπορείς να διοργανώσεις μια εκδήλωση για την Ώρα του κώδικα στο σχολείο σου η στην κοινωνία σου &mdash; ή σε ένα εξωτερικό κλαμπ, μη κερδοσκοπικού χαρακτήρα ή ακόμα στην δουλειά.Δοκιμάστε το στις 8 Δεκεμβρίου."
-  hoc_faq_behind_hoc_q: Ποιος είναι πίσω από την Ώρα του Κώδικα;?
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_behind_hoc_q: Ποιος βρίσκεται πίσω από την Ώρα του Κώδικα?
   hoc_faq_behind_hoc_a: "The Hour of Code is organized by <a href='http://code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board."
   hoc_faq_host_q: Δεν ξέρω τίποτα από προγραμματισμό. Μπορώ να διοργανώσω κι εγώ μια εκδήλωση;?
   hoc_faq_host_a: "Βεβαίως, οι δραστηριότητες της Ώρας του Κώδικα είναι αυτο-κατευθυνόμενες. Το μόνο που έχεις να κάνεις είναι  <a href='http://code.org/learn'> να δοκιμάσεις τα τρέχοντα σεμινάριά μας </a>, να διαλέξεις το σεμινάριο που θέλεις και να βρεις μια ώρα  &mdash; εμείς φροντίζουμε για τα υπόλοιπα. Επίσης υπάρχουν επιλογές για κάθε ηλικία και επίπεδο εμπειρίας, ξεκινώντας από το νηπιαγωγείο. Άρχισε να σχεδιάζεις την εκδήλωσή σου διαβάζοντας τον  <a href='target-resources-how-to'> Πώς το κάνω οδηγό μας </a>."
-  hoc_faq_need_computers_q: Χρειάζονται υπολογιστές για κάθε συμμετέχοντα;
+  hoc_faq_need_computers_q: Χρειάζομαι υπολογιστές για κάθε συμμετέχοντα;
   hoc_faq_need_computers_a: "Όχι. Έχουμε μαθήματα για την Ώρα του Κώδικα που λειτουργούν σε υπολογιστές, smartphones, tablets, και μερικά που δεν απαιτούν καθόλου υπολογιστή ! Μπορείτε να συμμετάσχετε όπου κι αν βρίσκεστε, με ό, τι έχετε. <p><i>Εδώ είναι μερικές επιλογές:</i> <br><ul><li><b>Δουλέψτε σε ομάδες των δύο.</b> Η έρευνα δείχνει ότι οι μαθητές μαθαίνουν καλύτερα όταν <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>προγραμματίζουν σε ομάδες των δύο</a>, ενώ μοιράζονται κάποιον υπολογιστή και συνεργάζονται. Προτρέψτε τους μαθητές σας να δουλέψουν ανά δύο. <li><b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b> We offer tutorials that require no computer at all. </ul>"
   hoc_faq_international_q: 'Μένω στην  <country>.  Πως μπορώ να συμμετέχω διεθνώς;'
-  hoc_faq_international_a: "Ο καθένας μπορεί να διοργανώσει μια εκδήλωση Ώρας του Κώδικα, οπουδήποτε στον κόσμο. Πέρυσι, οι φοιτητές παγκοσμίως ενώθηκαν για την Ώρα του Κώδικα. Μάθετε περισσότερα <a href='target-resources'> εδώ</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
   hoc_faq_tutorial_q: Πώς μπορώ να δημιουργήσω ένα μάθημα για την Ώρα του Κώδικα;
   hoc_faq_tutorial_a: "Εάν ενδιαφέρεστε να γίνετε συνεργάτης σε μια δραστηριότητα, <a href='targetHOC'>δείτε τις οδηγίες </a>. Θα θέλαμε να φιλοξενίσουμε διάφορες ελκυστικές επιλογές, αλλά ο πρωταρχικός στόχος είναι η βελτιστοποίηση της εμπειρίας μαθητών και καθηγητών που είναι καινούργιοι στην επιστήμη των υπολογιστών."
   hoc_faq_more_questions_q: Έχετε ακόμα ερωτήσεις;
@@ -145,26 +266,19 @@ el:
   hoc_faq_frozen_a: "Είναι πλέον δημοσιευμένο στο  <a href='http://code.org/learn'> Code.org/learn</a>. Ελπίζουμε να το απολαύσετε!"
   hoc_faq_high_school_q: Ποια δραστηριότητα πρέπει να κάνω με μαθητές λυκείου;
   hoc_faq_high_school_a: "Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a> για να ξεκινήσετε, όπως το μάθημα με τα Angry Birds ή το μάθημα με την Άννα και την Έλσα. Ένας  μαθητής λυκείου πρέπει να είναι σε θέση να τελειώσει ένα από αυτά τα μαθήματα σε 30 λεπτά και στη συνέχεια μπορεί να δοκιμάσει ένα πιο προχωρημένο εισαγωγικό μάθημα σε JavaScript, όπως αυτά που προσφέρονται από την Khan Academy ή  την CodeHS."
-  hoc_faq_more_questions_br_q: Outras dúvidas?
-  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
-  hoc_faq_what_is_hoc_uk_a: "Η Ώρα του Κώδικα είναι μια εισαγωγή στην επιστήμη των υπολογιστών διάρκειας μιας ώρας , σχεδιασμένη να απομυθοποιήσει τον κώδικα και να δείξει ότι οποιοσδήποτε μπορεί να μάθει τα βασικά. <a href='http://code.org/learn'>Ελέγξτε τα μαθήματα</a>, και κοιτάξτε για τα νέα που θα βγουν για την Ώρα του Κώδικα 2014."
-  hoc_faq_when_is_hoc_uk_a: "Η Ώρα του Κώδικα θα λάβει χώρα στις 8-14 Δεκεμβρίου, 2014. Πρόκειται για μία συγκεκριμένη <i>ώρα</i>; Όχι. Μπορείς να κάνετε την Ώρα του Κώδικα οποτεδήποτε κατά τη διάρκεια αυτής της εβδομάδας. Η ώρα του κώδικα στο Ηνωμένο Βασίλειο θα συμβεί την ίδια στιγμή, όπως στις ΗΠΑ, όπου αυτό είναι σχεδιασμένο να εορτασθεί η ετήσια <a href='http://csedweek.org'> Εκπαιδευτική Εβδομάδα της Επιστήμης των Υπολογιστών.</a>"
-  hoc_faq_why_cs_uk_a: '<i>Κάθε</i> μαθητής θα πρέπει να έχει την ευκαιρία να έρθει σε επαφή με την επιστήμη των υπολογιστών. Αυτό βοηθά  στο να καλλιεργήσει δεξιότητες επίλυσης προβλημάτων, λογικής και δημιουργικότητας. Με το να αρχίσουν νωρίς οι μαθητές θα έχουν μια βάση για την επιτυχία σε οποιαδήποτε πορεία της σταδιοδρομίας τους, τον 21ου αιώνα.'
-  hoc_faq_how_participate_uk_a: "Κάνε εγγραφή για να φιλοξενήσεις μια εκδήλωση για την Ώρα του Κώδικα <a href='http://hourofcode.org'>εδώ</a> και ξεκίνησε να την σχεδιάζεις. Μπορείς να οργανώσεις μια εκδήλωση για την Ώρα του Κώδικα στο σχολείο σου ή την κοινότητά σου &mdash; όπως σε ένα εξωσχολικό σύλλογο, έναν σύλλογο μη κερδοσκοπικού χαρακτήρα, ή στη δουλειά. Ή, απλά δοκίμασέ το ο ίδιος όταν έρθει η 8η Δεκεμβρίου."
-  hoc_faq_behind_hoc_uk_a: "Η ώρα του κώδικα διοργανώνεται από <a href='http://uk.code.org'> Code.org</a>, μια δημόσια 501 c 3 μη κερδοσκοπικού χαρακτήρα αφιερωμένο στην επέκταση της συμμετοχής στην επιστήμη των υπολογιστών, καθιστώντας την διαθέσιμη στα περισσότερα σχολεία, και αύξάνοντας τη συμμετοχή γυναικών και μαθητών ανεξαρτήτως χρώματος. Ένας <a href='http://uk.code.org/about/partners'> άνευ προηγουμένου συνασπισμός των εταίρων</a> έχει δημιουργηθεί για να υποστηρίξει την Ώρα του Κώδικα, συμπεριλαμβανομένων των&mdash;  Microsoft, Google, Cambridge University Press, Tech City και του Υπουργείου Παιδείας."
-  hoc_faq_host_uk_a: "Φυσικά. Οι δραστηριότητες της Ώρας του Κώδικα είναι αυτο-καθοδηγούμενες. Το μόνο που έχεις να κάνεις είναι να επιλέξεις το μάθημα που θέλεις και να διαλέξεις μία ώρα &mdash; θα αναλάβουμε εμείς τα υπόλοιπα. Έχουμε ακόμη επιλογές για κάθε ηλικία και επίπεδο εμπειρίας, από το νηπιαγωγίο και πάνω. <a href='http://code.org/learn'>Δοκίμασε τα υπάρχουντα μαθήματα</a>."
-  stats_hoc_2013_heading: 'Απίστευτα στατιστικά από την περσινή ώρα του κώδικα. Σε μία εβδομάδα μόνο:'
+  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
   stats_hoc_2013_image_alt: Στατιστικά στοιχεία από την ώρα του κώδικα του 2013
   stats_growth: Φτάσαμε στους 15 εκατομμύρια χρήστες πιο γρήγορα από όλους.
+  stats_i18n: Students are learning in 40 languages
   stats_tumblr: 'Tumblr: 3,5 χρόνια'
   stats_facebook: 'Facebook: 3 χρόνια'
   stats_twitter: 'Twitter: 2,5 χρόνια'
   stats_pinterest: 'Pinterest: 2 χρόνια'
   stats_instagram: 'Instagram: 14 μήνες'
   stats_hoc: 'H Ώρα του Κώδικα: 5 ημέρες'
-  stats_global: 15 εκατομμυρια μαθητές από όλο τον κόσμο έμαθαν με μια Ώρα Κώδικα.
-  stats_girls_more: Στην Ώρα του Κώδικα τα κορίτσια που συμμετείχαν ήταν περισσότερα από τα κορίτσια που ασχολήθηκαν με την Πληροφορική τα τελευταία 70 χρόνια.
-  stats_girls_million: Πάνω από 10 εκατομμύρια κορίτσια το 2013
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
   stats_nina: '"Κάθε μέρα είχαμε τα ίδια αποτελεέσματα &mdash; 100%  συμμετοχή" - Nina Nichols Peery, Εκπαιδευτικός'
   stats_student: 'Ήξερα ότι αυτή ήταν μια <b>ευκαιρία ζωής</b> - Mariana Alzate, Ε Δημοτικού'
   stats_michael: '«Δεν είχα ξαναδεί μαθητές μου <b>τόσο ενθουσιώδεις</b> με τη μάθηση» - Michael Clark, Δάσκαλος'
@@ -180,18 +294,20 @@ el:
   resources_emails: Δείγμα μηνυμάτων ηλεκτρονικού ταχυδρομείου
   resources_stats: Χρήσιμα στατιστικά και τις περιλήψεις
   resources_press_kit: Υλικό για τα ΜΜΕ
-  events_title: Όλες οι Εκδηλώσεις της Ώρας του Κώδικα
+  resources_country_resources: Country Specific Resources
+  events_title: Όλες οι εκδηλώσεις της Ώρας του Κώδικα
   events_nav_all: Όλες οι εκδηλώσεις
   events_nav_whole_schools: Ολόκληρα σχολεία
   events_nav_special: Ειδικές εκδηλώσεις
   events_nav_orgs: Οργανισμοί
+  events_all_old_title: All @year Hour of Code events
   events_all_title: Όλες οι εκδηλώσεις της Ώρας του Κώδικα
   events_whole_school_title: Εκδηλώσεις ολόκληρου σχολείου για την Ώρα του Κώδικα
   events_special_title: Ειδικές εκδηλώσεις για την Ώρα του Κώδικα
   events_orgs_title: Όλες οι εκδηλώσεις Ώρας του Κώδικα που έχουν διοργανώσει οι Συνεργαζόμενοι Οργανισμοί
   event: εκδήλωση
   events: εκδηλώσεις
-  footer_copyright_message: Πνευματικά δικαιώματα Code.org 2014. Όλα τα δικαιώματα είναι κατοχυρωμένα.
+  footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα είναι κατοχυρωμένα.
   footer_trademark_message: Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
   footer_menu_partners: Συνεργάτες
   footer_menu_contact: Επικοινωνείστε μαζί μας
