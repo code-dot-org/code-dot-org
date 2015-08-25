@@ -1,4 +1,8 @@
+* * *
 
+títol: Gràcies maquetació: àmplia
+
+* * *
 
 # Gràcies
 

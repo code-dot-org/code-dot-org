@@ -1,4 +1,8 @@
+* * *
 
+bố cục: rộng
+
+* * *
 
 # Kêu gọi cả trường bạn tham gia
 

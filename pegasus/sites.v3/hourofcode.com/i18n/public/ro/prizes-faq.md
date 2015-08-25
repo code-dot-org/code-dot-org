@@ -1,43 +1,47 @@
+* * *
 
+aspect: wide
 
-# Prizes - FAQs
+* * *
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+# Premii - întrebări frecvente
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+## Intreaga dumneavoastra şcoală trebuie sa participe pentru a câştiga 10.000 dolari în hardware?
 
-## Does your whole school have to enter to win a the tech chat?
+Da. Intreaga scoala trebuie sa participe pentru a fi eligibili pentru premiu, dar numai o persoană are nevoie să se înregistreze şi să prezinte formularul de aplicare la Premiul Hardware [ aici](<%= hoc_uri('/prizes') %>).
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+## Intreaga scoala trebuie sa participe pentru a castiga o discutie in scop tehnologic?
 
-## Can non-public schools win the video chat prize?
+Orice clasă (publica sau privata) este eligibila pentru a câştiga acest premiu. Întreaga şcoală nu trebuie să se implice.
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+## Pot şcolile publice sa castige premiul de video-chat?
 
-## Can non-US schools win the video chat prize?
+Da! Şcoli private şi independente sunt eligibile, la fel si şcolile publice pentru a câştiga premii de video-chat.
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+## Scolile din afara USA pot castiga premiul conferintei video?
 
-## Why is the $10,000 hardware prize only available to public schools?
+Nu, din păcate, din cauza logisticii suntem în imposibilitatea de a oferi Premiul de video-chat şcolilor din afara SUA şi Canada.
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+## De ce premiul de 10.000 dolari in tehnologie este disponibil numai pentru şcolile publice?
 
-## I’m outside the United States. Can I qualify for prizes?
+Ne-ar plăcea sa putem ajuta profesoriidin scolile publice şi şcolile private deopotrivă, dar în acest moment, este vorba doar de logistica. Avem un parteneriat cu [DonorsChoose.org](http://donorschoose.org) să administreze premii cu finanţarea în clasă, care funcţionează numai cu şcoli publice. Potrivit DonorsChoose.org, organizarea este mai în măsură să acceseze date consecvente şi exacte, care sunt disponibile pentru scolile publice.
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+## Eu sunt în afara Statelor Unite. Ma pot califica pentru premii?
 
-## When is the deadline to apply for the hardware prize?
+Având un personal cu normă întreagă mic, Code.org nu este în măsură să se ocupe de logistica de administrare premiilor internationale. Din acest motiv oamenii din afara SUA sunt în imposibilitatea de a beneficia de premii.
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
+## Când este termenul limită pentru Premiul hardware?
 
-## When is the deadline to be eligible to win a tech chat?
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. O şcoală în fiecare stat al SUA va primi un set de calculatoare pentru clasă. Code.org will select and notify winners via email by December 1, 2015.
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
+## Când este termenul limită de eligibilitate pentru a câştiga o conversatie cu cineva din mediul tehnologic?
 
-## When will I be notified if my school or classroom wins a prize?
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Sălile de clasă vor câştiga o conversatie video cu o celebritate. Code.org will select and notify winners via email by December 1, 2015.
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org va selecta şi notifica câştigătorii prin email până la 1 decembrie 2014.
+## Când voi fi anuntat dacă şcoala sau clasa mea a câştigat vreun premiu?
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

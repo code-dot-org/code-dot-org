@@ -53,7 +53,7 @@ languages = {
   'Persian' => ['fa-IR', 'fa'],
   'Polish' => ['pl-PL', 'pl'],
   'Portuguese' => ['pt-PT', 'po', 'pt'],
-  'Portuguese, Brazilian' => ['pt-BR', 'pt'],
+  'Portuguese, Brazilian' => ['pt-BR', 'pt', 'pt-BR'],
   'Romanian' => ['ro-RO', 'ro'],
   'Russian' => ['ru-RU', 'ru'],
   'Serbian (Cyrillic)' => ['sr-SP', 'sr'],
@@ -109,17 +109,32 @@ end
 #########################################################################################
 
 languages.each_pair do |name, codes|
-  i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode"]
-  hoc_dir = Dir["../../pegasus/sites.v3/hourofcode.com/i18n"]
+  unless codes[locale_index] == "en-US"
+    i18n_path = "../locales/#{codes[locale_index]}/hourofcode"
+    hoc_path = "../../pegasus/sites.v3/hourofcode.com/i18n"
+    FileUtils.cp(i18n_path + "/#{codes[code_index]}.yml", hoc_path)
 
-  FileUtils.cp(i18n_dir + "#{codes[code_index]}.yml", hoc_dir)
+    language_folder = hoc_path + "/public/#{codes[code_index]}"
+    unless File.directory?(language_folder)
+      FileUtils.mkdir_p(language_folder)
+      FileUtils.mkdir_p(language_folder + "/files")
+      FileUtils.mkdir_p(language_folder + "/images")
+      FileUtils.mkdir_p(language_folder + "/resources")
+    end
 
-  i18n_dir.each do |file|
-    FileUtils.cp(i18n_dir + "/**/*.md", hoc_dir + "/public/#{codes[code_index]}")
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/#{File.basename(file)}")
+      puts File.basename(file)
+    end
+
+    i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/resources/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/resources/#{File.basename(file)}")
+      puts File.basename(file)
+    end
   end
 end
-
-
 
 #########################################################################################
 ##                                                                                     ##

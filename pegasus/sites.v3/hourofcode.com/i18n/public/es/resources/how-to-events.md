@@ -1,8 +1,12 @@
+* * *
 
+title: Hour of Code Event How-To layout: wide nav: resources_nav
+
+* * *
 
 # Guía del evento "Hora de Código"
 
-Organiza un evento de la "Hora de Código" durante la Semana de la Educación en Ciencias de la Computación (Dic. 8 al 14) e inspira a más estudiantes a probrarlo. Cualquiera, en cualquier lugar puede organizar un evento de la "Hora de Código".
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Prepárate para tu evento.
 
@@ -19,7 +23,6 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
   * Otras ideas para el evento: 
       * Invita a un líder de la industria local para discutir su trabajo en ciencias de la computación.
       * Invita a un político local y haz que los estudiantes le o la enseñen a cómo codificar.
-      * Mira una de las Q&A sesiones con uno de los embajadores de la Hora de Código. Todas serán grabadas y colocadas en la página de Code.org en YouTube. ¡Los participantes de este año incluyen a Bill Gates, Sheryl Sandberg, Ashton Kutcher y otros más!
       * Haz que un grupo de estudiantes demuestren una actividad desconectada.
       * Haz que un grupo de estudiantes enseñen al director o a un grupo de profesores a como códificar
       * Si tu escuela ya enseña ciencias de la computación haz que los estudiantes presenten demostraciones.
@@ -33,7 +36,7 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
 
 **Evento:** Reunión de inicio de la semana de la educación en ciencias de la computación para toda la escuela.
 
-**Fecha:** 8 de Diciembre (inicio de la semana de la educación en ciencias de la computación)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Hora:** Durante el día escolar. Son preferibles los eventos a media mañana. Aproximadamente 1 hora.
 
@@ -43,72 +46,11 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
 
 ## Programa del evento
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Hora
-    </th>
-    
-    <th style="width:800px">
-      Acción
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Inicia con uno de nuestros <a href="http://hourofcode.com/us/resources#videos">vídeos motivacionales</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    El director da una introducción resumiendo la importancia de las ciencias de la computación. Usa estas <a href="/resources/stats">estadísticas e infografías</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Inicia con uno de nuestros <a href="http://hourofcode.com/us/resources#videos">vídeos motivacionales</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Los estudiantes demuestran una actividad desconectada y la manera como las ciencias de la computación pueden enseñarse sin usar computadores.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    El profesor que organizó el evento para la escuela da la charla de cierre.
-  </td>
-</table>
+| Hora             | Acción                                                                                                                                                    |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                                    |
+| 10:05 - 10:15 am | El director da una introducción resumiendo la importancia de las ciencias de la computación. Usa estas [estadísticas e infografías](/resources/stats)     |
+| 10:15 - 10:30 am | Un invitado especial habla acerca de su historia y cómo la tecnología y las ciencias de computación juegan un papel importante en sus quehaceres diarios. |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                  |
+| 10:40 - 11:00 am | Los estudiantes demuestran una actividad desconectada y la manera como las ciencias de la computación pueden enseñarse sin usar computadores.             |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                         |

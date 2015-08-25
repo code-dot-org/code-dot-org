@@ -1,6 +1,8 @@
+* * *
 
+title: Press Kit layout: wide nav: resources_nav
 
-
+* * *
 
 ## Com atraure els mitjans de comunicació al teu esdeveniment d'Hora de Codi
 
@@ -11,7 +13,7 @@
   * Contacta amb els mitjans de comunicació dues setmanes abans del teu esdeveniment mitjançant e-mail. Fes seguiment per correu electrònic i telèfon si no rebeu una resposta inicial.
   * Demana a un membre del personal de l'escola o un voluntari per fer fotos per compartir en línia o enviar a la premsa.
   * Escriu sobre l'Hora de Codi a la pàgina principal de la teva web i en el diari de l'escola. Publica els detalls del teu esdeveniment i fotos de les activitats dels estudiants.
-  * A Facebook i Twitter, comparteix actualitzacions sobre els teus plans, anuncia els teus esdeveniments i publica imatges durant el dies 8-14 de desembre. Utilitza el hashtag **#HourOfCode**, aixi Code.org podrà veure i promocionar els teus esdeveniments.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guia pas a pas:
 
@@ -47,12 +49,11 @@ A la Xina, cada estudiant aprèn informàtica per graduar-se l'escola secundàri
 
 **Més detalls i una cita que pot utilitzar com idea**
 
-"L'Hora de Codi està dissenyada per desmitificar el codi i mostrar que la informàtica no és una ciència espacial, qualsevol pot aprendre els conceptes bàsics," va dir Hadi Partovi, fundador i director executiu de Code.org. "En una setmana l'any passat, 15 milions d'estudiants van provar una Hora de Codi. Ara volem arribar a 100 milions arreu del món per demostrar que la demanda d'educació informàtica rellevant al segle XXI creua totes les fronteres i no té límits."
+"L'Hora de Codi està dissenyada per desmitificar el codi i mostrar que la informàtica no és una ciència espacial, qualsevol pot aprendre els conceptes bàsics," va dir Hadi Partovi, fundador i director executiu de Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Sobre Code.org**
 
-Code.org® és un estament públic 501c3 sense ànim de lucre dedicat a ampliar la participació en informàtica i augmentar la participació de les dones i de les minories d'estudiants de color. La seva idea és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. Després del llançament al 2013, Code.org organitzà la campanya d'Hora de Codi — que ha introduït milions d'estudiants a la informàtica — associat amb més de 30 districtes de l'escola pública a nivell nacional, va llançar el Code Studio, una plataforma de codi obert en línia d'aprenentatge per a totes les edats. Per obtenir més informació, visiteu: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. La seva idea és que cada alumne de cada escola ha de tenir l'oportunitat d'aprendre programació informàtica. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Per obtenir més informació, visiteu: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Troba més recursos i correus d'exemple [aquí](<%= hoc_uri('/resources') %>).
-

@@ -1,6 +1,8 @@
+* * *
 
+название: Для прессы макет: широкий навигация: resources_nav
 
-[<button style="float: right; margin-top: 50px">Зарегистрируйте ваше мероприятие</button>](/#join)
+* * *
 
 ## Как привлечь СМИ на событие "Час программирования"
 
@@ -11,7 +13,7 @@
   * Обращайтесь в СМИ за две недели до вашего мероприятия по электронной почте. Далее по электронной почте и телефону, если вы не получили первоначальный ответ.
   * Попросите сотрудников школы или добровольцев сделать фото, чтобы выложить их в Интернете или отправить прессе.
   * Напишите о "Часе программирования" на главной странице вашего сайта и в школьной газете. Опубликуйте детали мероприятия и фотографии деятельности учеников.
-  * Публикуйте в Facebook и Twitter новости о вашем мероприятии, расписание событий и размещайте фотографии с 8 по 14 декабря. Используйте хэштэг **#HourOfCode** чтобы Code.org смог увидеть и продвинуть ваше событие.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Пошаговое руководство:
 
@@ -37,9 +39,9 @@
 
 *Почему ваша школа проводит "Час программирования"?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Не смотря на то, что сегодня все знают, насколько важно учиться жить в нынешнем мире высоких технологий, многие учителя не имеют достаточных навыков в обращении с компьютерной наукой и не знают, где начать ее изучать. Это событие - шанс для всех нас узнать все о компьютерной науке.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Мы надеемся, что это мероприятие разожжет интерес к обучению у молодежи. Исследования показывают, что дети могут научиться основам программирования еще до того, как научатся писать и читать. В самом деле, в юном возрасте они имеют больше способностей к запоминанию компьютерных языков, равно как и к изучению иностранных языков.
 
 *Почему это важно?*
 
@@ -47,13 +49,11 @@ We hope it’ll spark interest in students to keep learning. Research also shows
 
 **Дополнительная информация и цитаты, которые можно использовать в материалах**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"Час Программирования создан специально, чтобы развеять мифы о сложности кодирования и показать, что компьютерная наука - совсем не ракетостроение, и этому может научиться каждый," - Хади Парвоти, основатель и исполнительный директор Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **О Code.org**
 
-Code.org® является некоммерческой организацией, посвятившей себя вовлечению детей и подростков в информатику, а также расширению участия женщин и меньшинств. Организация считает, что каждый учащийся должен иметь возможность изучать программирование. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Организация считает, что каждый учащийся должен иметь возможность изучать программирование. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Чтобы узнать больше, пройдите по ссылке: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Зарегистрируйте ваше мероприятие</button></a>
+Чтобы найти больше ресурсов и образцов писем[ пройдите по ссылке](<%= hoc_uri('/resources') %>).

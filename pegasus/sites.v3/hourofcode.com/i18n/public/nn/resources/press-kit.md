@@ -1,6 +1,8 @@
+* * *
 
+title: Press Kit layout: wide nav: resources_nav
 
-[<button style="float: right; margin-top: 50px">Registrer arrangement ditt</button>](/#join)
+* * *
 
 ## Korleis få merksemd om Kodetimen i media?
 
@@ -11,7 +13,7 @@
   * Ta kontakt med media på epost to veker før arrangementet. Følg opp med epost og telefon om du ikkje får respons.
   * Spør ein ansatt på skulen eller ein frivillig om å ta bilde som kan delast på nett og sendast til media.
   * Skriv om Kodetimen på skulens heimeside og i skuleavisa. Legg ut detaljar om arrangementet og bilder av elevane i aksjon.
-  * Legg ut oppdateringar om planane dine og annonser planlagte arrangement og legg ut bilder 8. - 14 desember. Bruk hashtag **#Kodetimen** så Code.org kan sjå og promotere arrangementa dine.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Steg-for-steg vegleiing:
 
@@ -47,13 +49,11 @@ I Kina te alle elevar datavitskap som fag før dei går ut av videregåande skul
 
 **Fleire detaljar og eit sitat du kan bruke i materiellet**
 
-"Kodetimen er laga for å avmystifisere og vise at datavitskap ikkje er rakettvitskap. Alle kan lære grunnleggjande programmering," sier Hadi Partovi, grunnleggjar og adm. dir i Code.org. "På én uke i fjor fekk 15 millionar elevar prøve ein Kodetime. I år har vi 100 millioner på verdensbasis som mål for å bevise at etterspørselen etter relevant IT-kompetanse for det 21. århundre krysser alle landegrenser og er grenselaus."
+"Kodetimen er laga for å avmystifisere og vise at datavitskap ikkje er rakettvitskap. Alle kan lære grunnleggjande programmering," sier Hadi Partovi, grunnleggjar og adm. dir i Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Om Code.org**
 
-Code.org® er ei allmennyttig stiftin med formål om å utvide deltakinga i datavitskap og auke andelen av kvinner og andre underrepresenterte grupper. Visjonen er at kvar elev i alle skuler skal ha høve til å lære programmering. Etter lanseringa i 2013 organisert Code.org kampanjen Kodetimen, der millionar av elevar fekk innsyn i datavitskap. Vi gjekk i partnarskap med meir enn 30 offentlege skuledistrikter over hele USA og lanserte Kode Studio, som er ein åpen kildekode læringsplattform på web for alle aldrar. For meir informasjon, besøk: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Visjonen er at kvar elev i alle skuler skal ha høve til å lære programmering. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For meir informasjon, besøk: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Du finn fleire ressursar og eksempel på meldingar [her](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Registrer arrangement ditt</button></a>

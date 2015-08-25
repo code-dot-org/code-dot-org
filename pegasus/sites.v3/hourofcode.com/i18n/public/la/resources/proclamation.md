@@ -1,4 +1,8 @@
+* * *
 
+Título: ejemplo resolución de apoyo de las ciencias de la computación educacional la semana de hora del código: nav ancho: resources_nav
+
+* * *
 
 ### abajo hay una muestra de resolución de apoyo a la semana de Ciencias de la computación y sus objetivos que puedan ser utilizados por el estado y los legisladores locales.
 
@@ -33,11 +37,11 @@ Mientras que el campo de la informática tiene acciones importantes barreras que
 
 Mientras que Grace Murray Hopper, una de las primeras mujeres en el campo de la informática, ingeniería de nuevos lenguajes de programación y pionera en las normas de los sistemas informáticos que sentaron las bases para muchos adelantos en informática; y
 
-Considerando que la semana del 8 de diciembre, en honor al cumpleaños de Grace Hopper, se designa como 'semana de Ciencias de la computación Educacional': ahora, por lo tanto, ya sea
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resuelta, que la [casa o Senado, Estado, Condado, Ciudad o junta escolar]...
 
-(1) apoya la designación de la semana de ciencias de la computación educacional (8-14 de diciembre de 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 (2) anima a las escuelas, educadores, padres y legisladores a participar en la semana de la ciencias de computación educacional permitir a sus estudiantes a participar en la hora del código;
 

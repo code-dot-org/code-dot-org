@@ -1,4 +1,8 @@
+* * *
 
+tiêu đề: Cảm ơn bố cục: rộng
+
+* * *
 
 # Chân thành cám ơn
 

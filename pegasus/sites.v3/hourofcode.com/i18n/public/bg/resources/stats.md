@@ -1,4 +1,8 @@
+* * *
 
+Заглавие: Бюлетини и статистика оформление: широка nav: resources_nav
+
+* * *
 
 # Отзиви и полезна статистика
 
@@ -6,8 +10,8 @@
 
 ### Въведете компютърните науки във вашето училище. Започнете с един Час на кодирането
 
-Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. Само за една седмица 15 милиона ученици опитаха компютърните науки с нас! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. Ако сте чували за <a href = "< % = hoc_uri('/') % >">за часът на кодирането</a> миналата година, може би знаете, че ние влезнахме в историята. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [ Часът на кодирането](<%= hoc_uri('/') %>) е един час Въведение в компютърните науки, предназначен да демистифицира програмирането и да се покаже, че всички могат да научат основите. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-## Инфографика:
+## Infographics
 
-![изображение](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>

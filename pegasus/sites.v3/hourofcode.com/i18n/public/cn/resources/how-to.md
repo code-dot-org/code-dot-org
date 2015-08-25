@@ -1,10 +1,15 @@
-# 如何教授编程一小时
+* * *
 
-## 1）观看操作视频 
-<iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+标题：如何引导 布局：宽 导航：导航资源
+
+* * *
+
+# 如何教编程一小时
+
+## 1）观看操作视频 <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2）尝试教程：
 
-我们将通过各种合作伙伴，面向各个年龄学生举办各种有趣的，长达一小时的辅导。十二月8-14日前编程一小时全新教程即将拉开序幕。
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **编程一小时全部教程：**
 
@@ -13,8 +18,7 @@
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-
-## 3）计划您的硬件需求 - 电脑可选
+## 3) Plan your hardware needs - computers are optional
 
 体验编程一小时最好配备可以上网的电脑，但是并不需要每个孩子都有电脑，甚至也可以不用电脑来体验编程一小时。
 
@@ -22,12 +26,12 @@
   * **预览恭喜页面**查看学生在完成之后会看到什么。 
   * 如果你选择的教程最好配合声音，**请为你的班级配备耳机**，或者让学生们把自己的耳机带来。
 
-## 4)针对现有技术做好提前规划
+## 4) Plan ahead based on your technology available
 
   * **没有足够的设备？**采用[配对编程](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们也将明白计算机科学是一种社交和协作。
   * **宽带较低？**可计划在全班面前进行视频演示，这样就不是每个学生都在各自下载视屏，或或尝试不插电/离线教程。
 
-## 5) 鼓励学生-向他们展示视频
+## 5) Inspire students - show them a video
 
 向学生展示一个鼓舞人心的视频代码小时揭开序幕。示例：
 
@@ -37,7 +41,7 @@
 
 **激发你的学生-给他们做一个简短的介绍**
 
-大多数的孩子不知道什么是计算机科学，以下是一些建议：
+大多数学生不知道什么是计算机科学，这里有一些建议：
 
   * 可用一些简单的方法来解释，比如男孩儿们和女孩儿们都感兴趣的应用实例（拯救生命，帮助别人，人的联系，等等）
   * 尝试：“想象一下你们每天日常生活中用到计算机的场景：一部手机，一个软件，一台电脑，一盏红绿灯……所有这些都需要计算机科学家来将他们组建。”
@@ -48,7 +52,7 @@
 
 **让学生直接参与活动**
 
-  * 在白板上写下教程链接 根据参加人数，查找关于[hourofcode.com/co](http://<%= codeorg_url() %>你所选教程对应的/学习”>信息的链接列表。 <a href=)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * 告诉学生访问此URL，并启动教程。
 
 **当你的学生遇到困难**

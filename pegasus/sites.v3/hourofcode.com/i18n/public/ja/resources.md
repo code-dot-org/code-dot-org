@@ -1,289 +1,162 @@
----
-layout: wide
-nav: resources_nav
----
+* * *
+
+title: リソース layout: wide nav: resources_nav
+
+* * *
 
 <div class="row">
-  <h1 class="col-sm-6">
-    リソース
+  <h1 class="col-sm-12">
+    Resources (2015 resources coming soon)
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">イベントへの申し込み</button></a>
-  </div>
 </div>
 
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/resources/how-to') %>)
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+<a id="handouts"></a>
 
-<% else %>
+## この資料を使って周りに広めてください
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
-<% end %>
+## 先生や学校にこの資料を渡してください
 
-<a id="handouts"></p> 
+[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
-<h2>
-  Use this handout to spread the word
-</h2>
+<a id="videos"></a>
 
-<p>
-  <a href="/files/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="画像" /></a>
-</p>
+## このビデオを学生に見せて感化させてください。
 
-<h2>
-  Give this handout to teachers and schools
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ほとんどの学校が教えないこと（5 分）</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="画像" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code がここにあります - 誰でも学べます</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="videos"></p> 
-  
-  <h2>
-    Show these videos to inspire students
-  </h2>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>ほとんどの学校が教えないこと（5 分）</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Hour of Code がここにあります - 誰でも学べます</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>オバマ大統領もコンピューター科学を</strong></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>誰でも学べる（1 分）</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-<p>
-<a id="posters"></p> 
+<div style='clear:both'>
+</div>
 
-<h2>
-  Hang these posters in your school
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>オバマ大統領もコンピューター科学を</strong></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="画像" /></a> <a href="/files/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="画像" /></a> <a href="/files/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="画像" /></a> <a href="/files/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="画像" /></a> <a href="/files/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="画像" /></a> <a href="/files/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="画像" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>誰でも学べる（1 分）</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="banners"></a>
-</p>
+<div style="float:left; padding:10px">
+</div>
 
-<h2>
-  Feature these banners on your website
-</h2>
+<div style='clear:both'>
+</div>
 
-<p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="posters"></a>
 
-<p>
-  <a id="social"></a>
-</p>
+## あなたの学校にこのポスターを貼ってください。
 
-<h2>
-  Post these on social media
-</h2>
+[![画像](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![画像](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![画像](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![画像](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![画像](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![画像](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![画像](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![画像](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
-<p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="banners"></a>
 
-<p>
-  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="画像" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+## このバナーをあなたのウェブサイトで取り上げてください
 
-<p>
-  <a id="sample-emails"></a>
-</p>
+[![画像](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<h2>
-  Send these emails to help promote the Hour of Code
-</h2>
+<a id="social"></a>
 
-<p>
-  <a id="email"></a>
-</p>
+## ソーシャル メディアに投稿してください
 
-<h2>
-  Ask your school, employer or friends to sign up:
-</h2>
+[![画像](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。 良いお知らせは、私たちはこれを変えようとしているということです。 If you heard about the Hour of Code last year, you might know it made history. たった一週間で、1500万人の学生がコンピューター科学を試したのです！
-</p>
+[![画像](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+<a id="sample-emails"></a>
 
-<p>
-  This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
-</p>
+## Hour of Code を宣伝するためにこれらのメールを送信してください
 
-<p>
-  Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
-</p>
+<a id="email"></a>
 
-<p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
-</p>
+## 学校や社長、友達にサインアップするよう頼んでください:
 
-<p>
-  <a id="media-pitch"></a>
-</p>
+コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。 良いお知らせは、私たちはこれを変えようとしているということです。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-<h2>
-  Invite media to attend your event:
-</h2>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! やディズニーのホームページに掲載されました。 Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
-</p>
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-<p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
-</p>
+みんなに知らせましょう。イベントを開催しましょう。地元の学校にサインアップをお願いしましょう。それか自分で Hour of Code を試しましょう -- 基礎を学ぶことでだれもが恩恵を受けられます。
 
-<p>
-  In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+Get started at http://hourofcode.com/<%= @country %>
 
-<p>
-  Now the Hour of Code movement is aiming for 100 million students.
-</p>
+<a id="media-pitch"></a>
 
-<p>
-  That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
-</p>
+## メディアをあなたのイベントへの参加に招待してください:
 
-<p>
-  I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
-</p>
+**Subject line:** Local school joins mission to introduce students to computer science
 
-<p>
-  The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
-</p>
+コンピューターはありふれていますが、コンピューター科学を教える学校は10年前より少なくなっています。女の子と少数派の人々は深刻な過小評価をされました。良いお知らせは、私たちがこれを変えようとしているということです。
 
-<p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
-</p>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! やディズニーのホームページに掲載されました。 Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>When:</strong> [DATE and TIME of your event]
-</p>
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
-<p>
-  <strong>Where:</strong> [ADDRESS and DIRECTIONS]
-</p>
+[日付]に、はじまりの集会にご出席いただいて子どもたちが活動を始めるのをご覧いただくよう招待いたします。
 
-<p>
-  I look forward to being in touch.
-</p>
+Hour of Code は非営利の Code.org と他の 100 以上の組織による計画であり、今日の学生の世代が進んで21世紀の成功のための重要な技術を学ぼうとしているという声明であります。 ぜひご参加ください。
 
-<p>
-  <a id="parents"></a>
-</p>
+**お問い合わせ:** [名前]、[肩書]、携帯: (212) 555-5555
 
-<h2>
-  Tell parents about your school's event:
-</h2>
+**とき:** [イベントの日時]
 
-<p>
-  Dear Parents,
-</p>
+**ところ:** [住所と道順]
 
-<p>
-  We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
-</p>
+ご連絡をお待ちしております。
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="parents"></a>
 
-<p>
-  Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
-</p>
+## 保護者に学校のイベントについてお知らせしてください:
 
-<p>
-  This is a chance to change the future of education in [TOWN/CITY NAME].
-</p>
+保護者各位
 
-<p>
-  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
-</p>
+私たちは技術に囲まれた世界に住んでいます。 そしてご子弟が将来に向けて選ぶ分野にかかわらず、成功する能力がますます技術の仕組みを理解できるか次第になるであろうということを私たちは知っています。 しかし私たちの中でコンピューター科学を学んでいるのはごく一部に過ぎず、それを勉強している学生は10年前よりも少なくなっています。
 
-<p>
-  Sincerely,
-</p>
+だからこそ私たちはコンピューター科学教育週間（12月 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-<p>
-  Your principal
-</p>
+Hour of Code は[学校名]がこのような21世紀の基礎的な技術を進んで教育しようとしていることの声明です。 ご子弟へのプログラミング活動のご提供を続けるために、Hour of Code のイベントを巨大にしていきたいと存じております。 I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-<p>
-  <a id="politicians"></a>
-</p>
+[市町村名]の教育の未来を変えるチャンスです。
 
-<h2>
-  Invite a local politician to your school's event:
-</h2>
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-<p>
-  Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-</p>
+敬具
 
-<p>
-  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-</p>
+校長
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="politicians"></a>
 
-<p>
-  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
-</p>
+## あなたの学校のイベントに地元の政治家を招待してください:
 
-<p>
-  Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-</p>
+[市長/知事/代表者/議員の名前]様
 
-<p>
-  Sincerely, [NAME], [TITLE]
-</p>
+今日の経済でコンピューターを利用する仕事の数が、その分野に進む学生の数の約3倍であることをご存知ですか。 そしてコンピュータ科学が今日の*あらゆる*産業の基盤であることをご存知ですか。 Yet most of schools don’t teach it. [学校名] ではそれを変えようとしています。
 
-<p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">イベントへの申し込み</button></a>
-</p>
+だからこそ私たちはコンピューター科学教育週間（12月 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+Hour of Code のイベントにご参加いただき、はじまりの集会で講演いただけるようご招待いたします。 集会は[日時]に[場所]で開催いたします。[県や市の名前]が進んで学生たちに重要な 21 世紀の技術を教えようとしていることを強く言明します。 我々の学生たちが、未来の技術をただ使うだけでなくそれを生み出す最前線にいるということを確認したいと存じます。
+
+[電話番号またはメール アドレス] までご連絡ください。お返事をお待ちしております。
+
+敬具 [名前]、[肩書]

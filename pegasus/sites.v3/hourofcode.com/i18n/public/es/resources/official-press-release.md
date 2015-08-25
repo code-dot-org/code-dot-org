@@ -1,4 +1,8 @@
+* * *
 
+Título: hora de codigo comunicado de prensa de para la disposición de los funcionarios electos: nav ancho: resources_nav
+
+* * *
 
 # Simple comunicado de prensa para los funcionarios electos
 
@@ -26,9 +30,7 @@ contacto: [**INFORMACIÓN DE CONTACTO**]
 [**TEXTO COMÚN MUESTRA DE CONTEXTO:**]   
 Los equipos están por todas partes, pero menos escuelas enseñan ciencias de la computación que hace 10 años. Las niñas y los estudiantes de color están severamente subrepresentados. La buena noticia es que esto vamos a cambiar para mejor. La hora del código es una presentación o puerta de entrada para todos los estudiantes que tendrán acceso a la educación de la ciencia de computación de alta calidad.
 
-Durante la semana de Ciencias de la computación de educación del año pasado, 15 millones de estudiantes hicieron la hora del código. Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
-
-Este año el movimiento hora del código es el objetivo para los estudiantes de 100 millones.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
 
 [**INSERTAR CITA DE PORTAVOZ,EJEMPLO SIGUIENTE:**]   
 "Tenemos que fomentar y adoptar a nuestros alumnas y alumnos de la informática," dijo [**Inserte el nombre**]. "Cada estudiante merece la oportunidad de aprender informática para acceder a las mejores carreras del siglo XXI".
