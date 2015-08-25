@@ -1,6 +1,8 @@
 ---
 title: Privacy Policy
 ---
+### The binding legal language is in EN, and can be found <a href='https://code.org/privacy'>here</a>. Below is a translation.
+
 
 # Privacy Policy
 Date of Last Revision: August 3, 2015 
@@ -32,15 +34,7 @@ From time to time our Privacy Notice will change. Code.org will notify Users of 
 
 
 ## Collection and Use of Your Information
-The sections below describe the ways Code.org collects and uses the name, email address, school name and address, or other personally identifiable information from Users (“**Personal Information**”), as well as some of the non-personal information and technical information (described below) we collect.
-
-**The Hour of Code**:  Code.org does not collect any Personal Information from students participating in the Hour of Code. The Hour of Code tutorials do not require login to use.
-
-
-**Code Studio**: The following table describes the data that Code.org collects from registered Users of the Code Studio tutorial platform.  You can also try all Code Studio tutorials without creating an account, but your learning progress won't be saved.
-
-Data stored by Code.org if you create a Code Studio student account | Required? | How this data is used
---- | --- | ---
+The sections below describe the ways Code.org collects and uses the name, email address, school name and address, or other personally identifiable information from Users (“**Personal Information**”), as well as some of the non-
 Display Name (eg “Cool Coder” or “JohnS”) | Mandatory | To provide students a welcome upon login, to identify the student in the teacher’s view of student progress, and when showcasing the student’s code-creations.
 Progress in the course </br><br>1- Date/Time each stage is tried<br>2- Number of tries to solve a puzzle, and whether it was solved successfully or optimally<br>3- The code that the student submitted. (This includes art and games they create) | Mandatory (automatic) | This information is displayed to students and their teachers to see their progress in a course, to see the code they’ve created, and to identify topics they need help with. It also lets students pick up where they left off if they log out and login later. See [example progress report](http://code.org/files/student-progress.pdf), and see section below on [“technical information”](#techinfo) for additional details.</br><br>Student code creations (art, animations, apps) may be shared with friends or to a public gallery at the discretion of the student, along with the students’ display name.</br><br>This data also helps Code.org improve the course effectiveness. For example, if a puzzle is too hard, Code.org may take action (like [providing better hints](http://code.org/hints)) to improve the learning process.</br>
 Login time, IP address, and other technical data | Mandatory (automatic) | This data helps Code.org troubleshoot any problems users experience. It also helps Code.org understand usage patterns, to guide the build out of servers to support all users, and to enable updating the site while minimizing service disruption. See section below on [“technical information”](#techinfo) for additional details
@@ -49,13 +43,7 @@ Gender | Optional | This information is only used in aggregate, to measure the t
 Age (*Not* birthdate) | Mandatory | To understand the developmental stage of students to offer an age-appropriate experience for each student. We use this field to ensure we don’t store email information for students with age < 13. We collect ages (eg 16), as opposed to birthdates (eg Feb 13, 1998)
 Any phone number | Optional | Users aged 13 or older can choose to share their app, art, or other code creations to a phone. To do this, they are asked to provide a phone number (their own or someone else’s). Code.org uses a 3rd party service ([Twilio](https://www.twilio.com/)) to send a pre-written text message to this number.  Code.org does not store any record of the number, however the phone number and message will be stored by Twilio and may also be stored by the phone service provider.
 Custom photos, sounds, and/or videos | Optional | Users aged 13 or older can choose to upload custom photos, sounds, and videos to the Code Studio platform to use within applications that they create.  These files are not used by Code.org for any purpose other than within the applications created by such users.
-Messages sent within the “Internet Simulator” | Optional | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Contents of messages sent by students using the tool can be accessed by the recipient, and are not accessed or used by Code.org for any purpose other than in this educational tool.
-Written comments in response to curricular/educational prompts within the Code Studio platform | Optional | Within some of our courses, students in a classroom are prompted to answer a question. Their answers are shared with any teacher with whom the student is affiliated on Code Studio, and are not used by Code.org for any other purpose.
-
-<br>
- 
-Additional data stored by Code.org if you create a Code Studio teacher account  | Required? | How this data is used
---- | --- | ---
+Messages sent within the “Internet Simulator” | Optional | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-
 School name | Optional | <br>At your option and under your control, we would list your school in the Code.org map and database of schools that teach computer science courses.</br><br>Code.org may also use this information to reach out to your school or district to discuss broader education partnerships or participation in special events.</br>
 School address | Optional | At your option and under your control, we would list your school (and relevant contact information, if you provide it) in the Code.org map and database of schools that teach computer science courses.
 Student section data | Required | <br>You may create accounts for your students (and provide each student’s display name and optionally their age and gender), and organize these students into sections or groups. You may assign each section a display name, and a course assignment. The section grouping data is used to simplify your view of students across multiple sections.</br><br>Teachers are encouraged to share a document with students and parents informing them about the Code Studio course, including the privacy implications.</br>
