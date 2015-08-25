@@ -5,7 +5,8 @@
  * submit button interactions.
  */
 
-(function () {
+window.dashboard = window.dashboard || {};
+window.dashboard.dialog = (function () {
   var dialogType = null;
   var adjustedScroll = false;
 
@@ -142,11 +143,9 @@
         }
       }
     });
-  }
+  };
 
-  // Export the functions which are provided by this file.
-  window.dashboard = window.dashboard || {};
-  window.dashboard.dialog = {
+  return {
     showStartOverDialog: showStartOverDialog,
     processResults: processResults
   };
