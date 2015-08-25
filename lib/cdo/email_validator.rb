@@ -9,7 +9,7 @@ module EmailValidator
 
     return false unless email.address == address  # Must be well-formed
     return false unless email.domain  # Must have a domain
-    
+
     # Reject single part domains like "localhost".
     domain_parts = email.domain.split('.')
     return false if domain_parts.length < 2
