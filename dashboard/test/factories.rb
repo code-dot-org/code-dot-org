@@ -28,6 +28,11 @@ FactoryGirl.define do
     factory :student do
       user_type User::TYPE_STUDENT
     end
+
+    factory :young_student do
+      user_type User::TYPE_STUDENT
+      birthday Date.today - 10.years
+    end
   end
 
   factory :section do
@@ -60,6 +65,12 @@ FactoryGirl.define do
       game {create(:game, app: "unplug")}
     end
 
+    trait :with_ideal_level_source do
+      after :create do |level, _|
+        level.ideal_level_source = create(:level_source, level: level)
+        level.save!
+      end
+    end
   end
 
   factory :unplugged, :parent => Level, :class => Unplugged do

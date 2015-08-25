@@ -327,8 +327,8 @@ nl:
   home:
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org
-    lines_of_code: '%{lines_count} LIJNEN CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} LIJNEN CODE <br/> GESCHREVEN DOOR leerlingen%{students_count} MILJOEN LEERLINGEN'
+    lines_of_code: '%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN'
+    lines_of_code_linebreak: '%{lines_count} REGELS CODE <br/> GESCHREVEN DOOR leerlingen%{students_count} MILJOEN LEERLINGEN'
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: 'Al geregistreerd? %{link}'
@@ -349,7 +349,7 @@ nl:
     local_school: lokale school
     online: online
     see_details: Bekijk details
-    view_course: View Course
+    view_course: Toon cursus
     prize_info: 'Prijzen voor deelname (alleen voor leerkrachten van Amerikaanse openbare scholen): tot $1.000 aan prijzengeld voor je klas.'
     tryfirst: 'Of, je kunt het eerst proberen, en later registreren:'
     trynow: Probeer nu
@@ -364,8 +364,11 @@ nl:
     heading_legacy: '<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>'
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
     print_certificate: print certificaat
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Man
     female: Vrouw
@@ -374,9 +377,13 @@ nl:
     student: Leerling
     teacher: Leraar
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen bij het samenstellen van deze opdracht.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. All Rights Reserved.'
     powered_by_aws: Aangedreven door Amazon webservices
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Meer
     feedback: Geef feedback
     translate: Help ons om te vertalen naar uw taal
     support: Ondersteuning
@@ -505,6 +512,10 @@ nl:
     open_response_body: Bedankt voor uw reactie!
   dialog:
     ok: OK
+    startover_title: Weet je zeker dat je opnieuw wilt beginnen?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Begin opnieuw
+    startover_cancel: Annuleren
   time:
     hour: 1 uur
     day: dag

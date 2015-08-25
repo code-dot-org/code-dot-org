@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"De \"herhaal\" of \"als\" blokken hebben andere blokken in zich nodig om te werken. Zorg ervoor dat het binnenste blok correct past in het buitenste blok.",
   "emptyBlockInFunction":"De functie {name} is niet ingevoerd.",
   "emptyBlockInVariable":"De variabele {name} is niet helemaal ingevoerd.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Het functie-blok moet andere blokken bevatten om te werken.",
   "emptyFunctionalBlock":"Je hebt een blok zonder waarde.",
   "emptyTopLevelBlock":"Er zijn geen blokken om uit te voeren. Je moet een blok aan de {topLevelBlockName}blok plakken.",

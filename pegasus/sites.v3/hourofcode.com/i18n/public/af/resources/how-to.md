@@ -1,17 +1,11 @@
 
 
-<div class="row">
-  <h1 class="col-sm-6">
-    چگونگی تدریس برنامه ساعت کد نویسی
-  </h1>
-  
-  
-</div>
+# چگونگی تدریس برنامه ساعت کد نویسی
 
 ## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Try the tutorials:
 
-ما ميزبان مجموعه‌اي از آموزش هاي يك‌ساعته سرگرم كننده براي دانش آموزان با هر سني هستيم كه توسط همکارانمان درست شد‌ه‌اند. آموزش هاي جديد قبل از شروع "برنامه ساعت كد نويسي" ٢٣-١٧آذرماه (١٤-٨ دسامبر) بر روي سايت قرار خواهند گرفت.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **تمام آموزش های "ساعت کد نویسی":**
 
@@ -20,34 +14,30 @@
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Plan your hardware needs - computers are optional
 
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
-
-## 4) Plan your hardware needs - computers are optional
-
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+بهترين حالت تجربه "ساعت كد نويسي" با كامپيوترهاي متصل به اينترنت مي باشد. با اين حال براي هر دانش آموز نياز به يك كامپيوتر نداريد، حتي مي توانيد "ساعت كد نويسي" را بدون داشتن كامپيوتر انجام دهيد.
 
   * **آموزش ها را روي كامپيوتر يا ديگر وسايل دانش آموزان آزمايش كنيد. **مطمئن شويد كه بخوبي كار مي كنند( همراه با صدا و تصوير).
   * **از پيش نگاهي به صفحه تبريك بياندازيد** تا ببينيد دانش آموزان به هنگام اتمام هر فعاليت چه چيزي را خواهند ديد. 
   * **براي كلاس تان هدفون تهيه كنيد**، يا از دانش آموزان بخواهيد هدفونشان را همراه شان بياورند، البته درصورتي كه آموزش انتخابي تان با صدا بهتر كار مي كند.
 
-## 5) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
   * **وسايل كافي در اختيار نداريد؟** به طور [گروهي](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) برنامه‌نويسي كنيد. هنگامي كه دانش آموزان همكاري مي‌كنند، به هم كمك كرده و تكيه‌شان بر معلم كمتر مي‌شود. همچنين متوجه مي شوند كه دانش كامپيوتر يك فعاليت اجتماعي و مبتني بر همكاري است.
   * **پهناي باند كمي داريد؟** ويدئوها را براي كل كلاس نمايش دهيد، در اين صورت هر دانش آموز بطور جداگانه ويدئوها را دانلود نخواهد كرد. و يا از آموزش‌هاي آفلاين استفاده كنيد.
 
-## 6) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+برای شروع برنامه ساعت کد نویسی به دانش آموزانتان فیلم های الهام بخش نشان دهید . برای مثال :
 
   * سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره ان بی ای کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [آقای اوباما رییس جمهور آمریکا به تمام دانش آموزان می گوید که کامپیوتر بیاموزند](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**با مقدمه كوتاهي دانش آموزان تان را سر شوق بياوريد**
 
-Most kids don’t know what computer science is. Here are some ideas:
+اغلب بچه ها نمي‌دانند دانش كامپيوتر چيست. چند ايده:
 
   * با روشي ساده شامل مثال هايي از كاربردهايي كه براي دختران و پسران مهم است آن را توضيح دهيد . ( بعنوان مثال نجات زندگي، كمك به مردم، ارتباطات بين افراد و غيره).
   * امتحان كنيد:" به چيزهايي كه در زندگي روزمره تان از دانش كامپيوتر استفاده مي كنند فكر كنيد: موبايل، ماكروويو، كامپيوتر، چراغ راهنمايي... براي ساختن تمامي اين ها نياز به کمک يك كارشناس كامپيوتر است."
@@ -56,26 +46,26 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 ## 6) Start your Hour of Code
 
-**Direct students to the activity**
+**دانش آموزان را به سمت اين فعاليت هدايت كنيد**
 
-  * لينك آموزش را روي تخته بنويسيد. لینک مورد نظر را که در بخش اطلاعات مربوط به [hourofcode.com/co](http://<%= codeorg_url() %>آموزش مورد نظر شما</a> است و در زیر تعداد شرکت کنندگان قرار دارد پیدا کنید . <a href=)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * به دانش آموزان بگوييد URL را ببينند و آموزش را شروع كنند.
 
-**When your students come across difficulties**
+**هنگامي كه دانش آموزان با مشكلي مواجه مي شوند**
 
   * به دانش آموزان بگویید ،" از سه نفر بپرس بعد از من."از سه تا از همکلاسی هایتان بپرسید ، اگر آنها پاسخ را نمی دانستند، بعد از معلم بپرسید.
   * دانش آموزان را تشویق کنید و به آنها انرژی مثبت بدهید: " خیلی الی انجام می دهی ، پس ادامه بده ."
   * مسئله اي نيست اگر بگوييد: "نمي دانم. بگذار مساله را با هم حل كنيم." اگر نتوانستید مسئله را حل کنید، از آن به عنوان يك درس آموزنده خوب براي كلاس استفاده كنيد: " تكنولوژي همیشه آنطور كه ما مي خواهيم عمل نمي كند. ما با هم ، یک گروه یادگیرنده هستیم . " و:" یاد گرفتن نحوه ی برنامه نویسی مانند یادگرفتن یک زبان جدید است ؛شما نمی توانید همین الان روان باشید. "
 
-**What to do if a student finishes early?**
+**چه كار كنيم اگر دانش آموزي زودتر تمام كرد؟**
 
   * دانش آموزان می توانند تمام آموزش ها را ببینند و فعالیت دیگری از برنامه ساعت کد نویسی را امتحان کنند <a
   * یا ، از دانش آموزانی که زودتر تمام کردند بخواهید تا به همکلاسی هایی که با یک فعالیت مشکل دارند کمک کند .
 
-**How do I print certificates for my students?**
+**چگونه گواهينامه ها را براي دانش آموزانم پرينت بگيرم؟**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+هر دانش آموز اين شانس را دارد كه در پايان [آموزش ساعت كد نويسي](http://studio.code.org) گواهينامه اش را از طريق ايميل دريافت كند. شما مي توانيد با كليك كردن بر گواهي نامه آنرا پرينت بگيريد. در هر حال ، اگر شما می خواهید گواهینامه های جدیدی برای دانش آموزانتان تهیه کنید ، به صفحه بروید و هر تعداد گواهینامه که می خواهید در یک بار پرینت کنید !</p> 
 
-**What comes after the Hour of Code?**
+**مرحله بعد از ساعت كدنويسي چيست؟**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> 
+"ساعت کدنويسي" تنها اولين قدم در سفر بسوي يادگيري چگونگي عملكرد تكنولوژي و ساخت كاربردهاي نرم افزاري است. برنامه ساعت کد نویسی تنها اولین قدم در سفر ما برای یادگیری چگونگی کارکرد تکنولوژی و شیوه ی ساخت یک برنامه کامپیوتری است . براي ادامه اين سفر، [بچه هايتان را تشويق به يادگيري آنلاين كنيد](http://uk.code.org/learn/beyond). برای ادامه این سفر ، منابع بیشتری برای مربیان بیابید .[](http://<%= codeorg_url() %></a> یا بچه ها را برای یادگیری آنلاین تشویق کنید .<a href=) <% end %>

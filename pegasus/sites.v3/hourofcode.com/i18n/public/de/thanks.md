@@ -4,9 +4,11 @@
 
 
 
-# Danke das du dich als Veranstalter für eine Hour of Code angemeldet hast!
+# Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
 
-**JEDER** Veranstalter einer Hour of Code erhält 10 GB Dropbox Speicherplatz oder $10 Skype-Guthaben als Dankeschön. [Details](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Weitersagen
 
@@ -14,34 +16,20 @@ Erzähl deinen Freunden von #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Frage deine Schule eine Hour of Code anzubieten
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/files/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Frage deinen Arbeitgeber sich zu engagieren
 
-## 2. Frage deine Schule eine Hour of Code anzubieten
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/files/hoc-one-pager.pdf) this handout</a> to your principal.
-
-<% end %>
-
-## 3. Mache eine großzügige Spende
-
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
-
-## 4. Bitte Deinen Arbeitgeber sich zu engagieren
-
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf).
-
-## 4. Stelle die Hour of Code in Deiner Community vor
+## 4. Stelle die Hour of Code deinen Freunden vor
 
 Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Frage eine öffentliche Stelle ob sie die Hour of Code unterstützen möchte
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

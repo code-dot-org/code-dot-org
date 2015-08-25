@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Le bloc « Répéter » ou « si » doit contenir d'autres blocs pour fonctionner. Assurez-vous que le bloc interne s'insère correctement à l'intérieur du bloc conteneur.",
   "emptyBlockInFunction":"La fonction {name} a une entrée non remplie.",
   "emptyBlockInVariable":"La variable {name} à une entrée non remplie.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Le bloc « Fonction » doit contenir d'autres blocs pour fonctionner.",
   "emptyFunctionalBlock":"Un de vos blocs ne contient pas d'entrée.",
   "emptyTopLevelBlock":"Il n'y a pas de blocs à exécuter. Vous devez joindre un bloc au bloc {topLevelBlockName}.",

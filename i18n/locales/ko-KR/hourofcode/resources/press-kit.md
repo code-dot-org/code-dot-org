@@ -13,7 +13,7 @@ title: Press Kit layout: wide nav: resources_nav
   * 이벤트를 개최하기 2주 전에 이메일로 미디어들을 보내드립니다. 처음에 연락이 닿지 않으면 이메일과 휴대폰으로 알림이 발송됩니다.
   * 학교 직원들이나 자원봉사자들에게 행사 사진을 찍어 온라인으로 공유하거나 언론에 보낼 수 있도록 도움을 요청하세요.
   * 여러분의 웹사이트와 홈페이지에 Hour of Code에 대한 글을 올리고, 학교 신문에도 게제하세요. 여러분이 진행한 이벤트의 상세한 내용, 학생들의 사진과 활동을 올리세요.
-  * 페이스북(Facebook)과 트위터(Twitter)에 여러분의 계획들을 업데이트하고 12월8일~14일까지 이벤트와 사진들을 올리세요. **#HourOfCode** 해쉬 태그를 사용해 Code.org가 여러분의 활동을 살펴보고 지원할 수 있도록 해주세요.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### 단계적 가이드:
 
@@ -49,11 +49,11 @@ title: Press Kit layout: wide nav: resources_nav
 
 **활용할 수 있는 더 많은 정보 및 전달사항**
 
-"Hour of Code는 코드를 쉽게 이해하고, 컴퓨터과학(정보과학)이 로켓-기술과 같지 어렵지 않다는 것을 널리 알리기 위해 설계되었으며, 누구라도 기초/개념/원리를 배울 수 있습니다." Hadi Partovi, Code.org 대표 "작년 1주일 기간동안, 1천5백만 학생들이 Hour of Code를 경험하였습니다." 이제 우리는 모든 국경과 영역을 넘어 21세기를 준비하기 위한 컴퓨터과학(정보과학) 교육이 필요하다는 것을 전세계 1억명의 사람들과 함께 이야기해 나아가고자 합니다.
+"Hour of Code는 코드를 쉽게 이해하고, 컴퓨터과학(정보과학)이 로켓-기술과 같지 어렵지 않다는 것을 널리 알리기 위해 설계되었으며, 누구라도 기초/개념/원리를 배울 수 있습니다." Hadi Partovi, Code.org 대표 "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **About Code.org**
 
-Code.org® 는 미국의 501c3 조항에 의한 비영리 조직으로, 인종, 성별과 관계없이 컴퓨터과학(정보과학) 교육을 확산하고 함께 나아가기 위해 조직되었습니다. Code.org 의 목표와 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울 수 있는 기회를 가질 수 있어야 한다는 것입니다. 2013년 처음 시작한 이후로, Code.org는 Hour of Code 캠페인을 조직했습니다. - 수백만 명의 학생들에게 컴퓨터과학(정보과학)을 소개해왔습니다. - 전국가적으로 30개 이상의 공립 교육청과 협력하였으며, 모든 나이의 학습자를 위한 오픈소스 온라인 플랫폼인 Code Studio를 만들어 운영하고 있습니다. 더 많은 정보들은 다음 사이트를 방문해 주시기 바랍니다: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Code.org 의 목표와 비전은 모든 학교의 모든 학생들이 컴퓨터 프로그래밍을 배울 수 있는 기회를 가질 수 있어야 한다는 것입니다. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. 더 많은 정보들은 다음 사이트를 방문해 주시기 바랍니다: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 더 많은 자료와 샘플 이메일을 [여기서](<%= hoc_uri('/resources') %>)찾아보세요..

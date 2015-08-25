@@ -26,6 +26,7 @@ Through our professional development efforts, we are helping a large, diverse au
 | I would recommend the PD to others   | 98% | 97% |
 | This was the best PD ever   | 66% | 81% |
 | I feel prepared to teach CS   | 94% | 88% |
+*Source: Affiliate-Trained Teacher data from Code.org Survey data. Code.org-Trained Teacher data from Outlier.*
 
 <br/>
 <br/>
@@ -54,6 +55,7 @@ The main difference between the two groups being that our affiliate-trained teac
 | Tech Facilitator/Computer Teacher  | 38% |
 | Media/Library Teacher  | 8% | 
 | Other  | 16% |
+*Source: Code.org Survey Data*
 
 
 ### Teacher Satisfaction with Professional Development

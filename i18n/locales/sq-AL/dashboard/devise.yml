@@ -1,19 +1,19 @@
 sq:
   devise:
     confirmations:
-      confirmed: E-maili juaj u konfirmua me sukses.
-      send_instructions: "Do ju dërgohet një e-mail brenda disa minutave me udhëzime se si t'a konfirmoni llogarinë tuaj."
-      send_paranoid_instructions: Nëse adresa juaj e e-mailit ekziston në databazën tonë, do të merrni një e-mail me udhëzime se si të konfirmoni llogarinë tuaj në pak minuta.
+      confirmed: Email-i juaj u konfirmua me sukses.
+      send_instructions: "Do ju dërgohet një email brenda disa minutave me udhëzime se si t'a konfirmoni llogarinë tuaj."
+      send_paranoid_instructions: Nëse adresa juaj e email-it ekziston në databazën tonë, ju do të merrni një email me udhëzime se si të konfirmoni llogarinë tuaj në pak minuta.
     failure:
-      already_authenticated: Ju jeni të regjistruar tashmë.
+      already_authenticated: Ju jeni të loguar tashmë.
       inactive: Llogaria juaj nuk është aktivizuar akoma.
-      invalid: E-mail ose fjalëkalim jo i vlefshëm.
+      invalid: Email-i ose fjalëkalimi është i pavlefshëm.
       invalid_token: Shenjë e pasaktë identifikimi.
       locked: Llogaria juaj është bllokuar.
       not_found_in_database: Email ose fjalëkalim jo i vlefshëm.
-      timeout: Seanca juaj mbaroi, ju lutemi hyni përsëri për të vazhduar.
-      unauthenticated: Ju duhet të hyni apo të rregjistroheni përpara se të vazhdoni.
-      unconfirmed: Ju duhet të vërtetoni llogarinë tuaj përpara se të vazhdoni.
+      timeout: Sesioni juaj mbaroi, ju lutemi logohuni përsëri për të vazhduar.
+      unauthenticated: Ju duhet të logoheni apo të rregjistroheni përpara se të vazhdoni.
+      unconfirmed: Ju duhet të konfirmoni llogarinë tuaj përpara se të vazhdoni.
     mailer:
       confirmation_instructions:
         subject: Udhëzimet e konfirmimit të Code.org
@@ -28,38 +28,38 @@ sq:
     passwords:
       no_token: Ju nuk mund të keni akses në këtë faqe pa pasur emailin efjalëkalimit të rivendosur. Nëse vjen me atë email, ju lutem sigurohuni që përdorët URL e plotë.
       send_instructions: Ju do të merrni një email me udhëzime se si të rivendosni fjalëkalimin tuaj në pak minuta.
-      send_paranoid_instructions: Nëse emaili juj ekziston në databazën tonë, ju do të merrni një link rikthimi fjalëkalimi tek adresa juaj e emailit në pak minuta.
-      updated: Fjalëkalimi juaj u ndryshua me sukses! Ju tashmë jeni futur.
+      send_paranoid_instructions: Nëse email-i juaj ekziston në databazën tonë, ju do të merrni një link për rikthimin e fjalëkalimit tek adresa juaj e email-it në pak minuta.
+      updated: Fjalëkalimi juaj u ndryshua me sukses! Ju tashmë jeni loguar.
       updated_not_active: Fjalëkalimi juaj u ndryshua me sukses.
     registrations:
-      destroyed: "Mirë u pafshim! Llogaria juaj u anullua me sukses. Shpresojmë t'ju shohim së shpejti."
-      signed_up: Mirë se erdhët! Ju jeni rregjistruar në mënyrë të suksesshme.
-      signed_up_but_inactive: "Ju u rregjistruat në mënyrë të suksesshme. Megjithatë, ne nuk mund t'ju fusim, sepse llogaria juaj nuk është aktivizuar ende."
-      signed_up_but_locked: "Ju jeni rregjistruar në mënyrë të suksesshme. Megjithatë, ne nuk mund t'ju fusim, sepse llogaria juaj është bllokuar."
-      signed_up_but_unconfirmed: Një mesazh me linkun e konfrimimit është dërguar tek adresa juaj e emailit. Ju lutem hapni linkun për të aktivizuar llogarinë tuaj.
-      update_needs_confirmation: Ju përditësuat llogarinë tuaj në mënyrë të suksesshme, por ne kemi nevojë të verifikojmë adresën tuaj të re të emailit. Ju lutem kontrolloni emailin tuaj dhe klikoni tek linku i konfirmimit për të përfunduar konfirmimin e adresës tuaj të re të emailit.
-      updated: Ju e përditësuat llogarinë tuaj në mënyrë të suksesshme.
+      destroyed: "Mirupafshim! Llogaria juaj u fshi me sukses. Shpresojmë t'ju shohim së shpejti."
+      signed_up: Mirë se vini! Ju jeni rregjistruar me sukses.
+      signed_up_but_inactive: "Ju jeni rregjistruar me sukses. Megjithatë, ne nuk mund t'ju fusim, sepse llogaria juaj nuk është aktivizuar ende."
+      signed_up_but_locked: "Ju jeni rregjistruar me sukses. Megjithatë, ne nuk mund t'ju fusim, sepse llogaria juaj është bllokuar."
+      signed_up_but_unconfirmed: Një mesazh me link-un e konfrimimit është dërguar tek adresa juaj e email-it. Ju lutem hapni link-un për të aktivizuar llogarinë tuaj.
+      update_needs_confirmation: Ju përditësuat llogarinë tuaj në mënyrë të suksesshme, por ne kemi nevojë të verifikojmë adresën tuaj të re të email-it. Ju lutem kontrolloni email-in tuaj dhe klikoni tek link-u i konfirmimit për të përfunduar konfirmimin e adresës tuaj të re të emailit.
+      updated: Ju përditësuat llogarinë tuaj me sukses.
     sessions:
       signed_in: ""
-      signed_out: Dole në mënyrë të suksesshme.
+      signed_out: Ju dolët me sukses.
     unlocks:
       send_instructions: Ju do të merrni një email me udhëzime se si të zhbllokoni llogarinë tuaj në pak minuta.
-      send_paranoid_instructions: Nëse llogaria juaj ekziston, ju do të merrni një email me udhëzime se si do të zhbllokoni atë në pak minuta.
-      unlocked: Llogaria juaj u zhbllokua në mënyrë të suksesshme. Ju lutem futuni për të vazhduar.
+      send_paranoid_instructions: Nëse llogaria juaj ekziston, ju do të merrni një email me udhëzime se si do ta zhbllokoni atë në pak minuta.
+      unlocked: Llogaria juaj u zhbllokua me sukses. Ju lutem logohuni për të vazhduar.
   errors:
     messages:
-      already_confirmed: ishte e konfirmuar, ju lutem provoni të futeni
+      already_confirmed: ishte e konfirmuar, ju lutem provoni të logoheni
       confirmation_period_expired: 'duhet të konfirmohet brënda %{period}, ju lutem kërkoni një të ri'
       expired: ka skaduar, ju lutem kërkoni një të ri
       not_found: nuk u gjet
       not_locked: nuk ishte e bllokuar
       not_saved:
         one: '1 gabim e ndaloi këtë %{resource} për tu ruajtur:'
-        other: '%{count} gabimet e ndaluara %{resource} për tu ruajtur:'
+        other: '%{count} gabime ndaluan %{resource} për tu ruajtur:'
     invitations:
-      send_instructions: 'Një ftesë përmes e-mailit është dërguar në %{email}.'
+      send_instructions: 'Një ftesë përmes email-it është dërguar në %{email}.'
       invitation_token_invalid: Shenja e ftesës nuk është e vlefshme!
-      updated: Fjalëkalimi juaj u vendos me sukses. Tani jeni loguar.
+      updated: Fjalëkalimi juaj u ndryshua me sukses! Ju tashmë jeni loguar.
       no_invitations_remaining: Nuk ka mbetur asnjë ftesë tjetër
       invitation_removed: Ftesa juaj u fshi.
       new:
@@ -70,8 +70,8 @@ sq:
         submit_button: Vendos fjalëkalimin tim
     mailer:
       invitation_instructions:
-        subject: Të dhëna rreth ftesës
+        subject: Udhëzime rreth ftesës
         hello: 'Përshëndetje %{email}'
         someone_invited_you: "Dikush ju ka ftuar në %{url}, mund t'a pranoni ftesën përmes link-ut të mëposhtëm."
         accept: Pranoni ftesën
-        ignore: 'Nëse nuk dëshironi të pranoni ftesën ju lutem injoroni këtë e-mail.<br /> Llogaria juaj nuk mund të krijohet derisa të keni akses në linkun e mësipërm dhe të vendosni fjalëkalimin tuaj.'
+        ignore: 'Nëse nuk dëshironi të pranoni ftesën, ju lutem injoroni këtë email.<br /> Llogaria juaj nuk mund të krijohet derisa të keni akses në link-un e mësipërm dhe të vendosni fjalëkalimin tuaj.'

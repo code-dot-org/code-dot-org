@@ -3,7 +3,7 @@ title: Terms of Service
 ---
 
 # Terms of Service
-Last Revised:  September 23, 2014
+Last Revised:  December 5, 2014
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at [http://code.org](http://code.org), [http://csedweek.org](http://csedweek.org), [http://computinginthecore.org](http://computinginthecore.org), [http://hourofcode.com](http://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at [http://studio.code.org](http://studio.code.org) (“**Code Studio**”).
 
@@ -18,10 +18,10 @@ These Terms are subject to change. You are agreeing to be bound by such changes 
 Some Services may be subject to additional posted guidelines, rules or terms of service (“**Additional Terms**”) and your use of such Services will be conditioned on your agreement to the Additional Terms. If there is any conflict between these Terms and the Additional Terms, the Additional Terms will control for that Service, unless the Additional Terms expressly state that these Terms will control.
 
 ### Children Under Age 13
-We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org. 
+We take steps to minimize the collection of personal data from Users under the age of 13 as explained in the Code.org [privacy policy](http://code.org/privacy). If you are under the age of 13, we encourage you to get the approval of a parent or legal guardian before creating an account on Code.org.
 Code.org allows certain representatives of school districts and schools, such as teachers, administrators, counselors, and other educators (a “**Educator**”) to connect with students through the Services in order to provide tutorial, educational and similar services. If you are an Educator, you may register accounts on the Services for one or more of your students.
 
-If you are a Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has received express consent from such Child’s parent or guardian (“**Parent**”) for you to register the Child for the Services and for you to disclose certain of the Child’s personal information to Code.org in connection with the registration. In addition, you agree to be bound by these Terms on behalf of such Child, including being liable for the Child’s use of the Services when the liability for such use is not otherwise assumed by a Parent.
+If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
 
 
@@ -48,7 +48,7 @@ Code.org may, but is not obligated to, monitor or review any Services where user
 
 Users may include links to third party websites in User Content as long as the content of such websites does not violate these Terms. Clicking on such links is at your sole risk. Code.org is not responsible for the availability or the content of linked websites, including the advertising, products or other materials thereon.
 
-By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and re-distribute, adapt, prepare derivative works of, use, make, have made, sell, offer for sale, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
+By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and re-distribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
 
 In addition, by submitting or distributing User Content through the Services, you hereby grant to each user of the Services a non-exclusive license to access and use your User Content.
 
@@ -68,7 +68,7 @@ Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistr
 
 The celebrities and video “cast“ members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 
-The artwork used in our tutorials is copyrighted and use of these tutorials does not grant you any rights to use the artwork in any other manner. Plants vs. Zombies are (c) 2012 [Electronic Arts Inc](http://www.ea.com/). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2013 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds is a trademark of [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat and Ice Age are trademarks and © Twentieth Century Fox Licensing and Merchandising. 
+The artwork used in our tutorials is copyrighted and use of these tutorials does not grant you any rights to use the artwork in any other manner. Plants vs. Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds is a trademark of [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat and Ice Age are trademarks and © Twentieth Century Fox Licensing and Merchandising.
 
 The software powering Code.org tutorials is governed by an open source license which is posted as part of the [source code repository](https://github.com/code-dot-org/).
 
@@ -102,7 +102,7 @@ Code.org does not represent or warrant that the Services will be error-free, fre
 
 ### Code.org Store and Support Forums
 
-The Code.org store and Code.org support forums are operated by third parties. Please read the User Agreement and Privacy Policy for these sites separately before purchasing an item from the Code.org store or before posting a question or answer to the support forum. By accessing the Code.org store and support forums, you agree to be bound by the respective user agreement and privacy policy of these third parties. 
+The Code.org store and Code.org support forums are operated by third parties. Please read the User Agreement and Privacy Policy for these sites separately before purchasing an item from the Code.org store or before posting a question or answer to the support forum. By accessing the Code.org store and support forums, you agree to be bound by the respective user agreement and privacy policy of these third parties.
 
 ### Volunteer mentors
 

@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Prizes Terms layout: wide nav: resources_nav
 
 * * *
 
@@ -8,21 +8,21 @@ title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 ## Dropbox lagringsplass eller Skype-kreditt:
 
-10 GB lagringsplass i Dropbox eller $10 Skype-kredit er begrenset til K-12 lærere, intruktører i fritidsskoler eller andre utdanningsinstitusjoner. De 10 GB med ledig lagringsplass må legges til en eksisterende Dropbox-konto. Premiene begrenses en per arrangør.
+10 GB lagringsplass i Dropbox eller $10 Skype-kredit er begrenset til K-12 lærere, intruktører i fritidsskoler eller andre utdanningsinstitusjoner. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Premiene begrenses en per arrangør. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 For å motta lagringsplass i Dropbox eller Skype-kreditt, må mottaker være registrert som arrangør av Kodetimen. Hvis hele skolen er med på Kodetimen, må hver instruktør registrere seg som arrangør for å kvalifisere.
 
-Code.org vil kontakte arrangørene etter Kodetimen 8. til 14. desember og gi instruksjoner for hvordan de kan gjøre krav på lagringsplassen i Dropbox eller Skype-kreditten.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Video-samtale med en foredragholder:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Klasse-sett av bærbare datamaskiner (eller $10,000 til annet teknisk utstyr):
 
-Premien kan kun tildeles videregående skoler i USA. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Premien kan kun tildeles videregående skoler i USA. To qualify, your entire school must register for the Hour of Code by November 16, 2015. En skole i hver stat i USA vil motta et klasse-sett med datamaskiner. Code.org will select and notify winners via email by December 1, 2015.
 
 For å avklare, dette er ikke et lotteri eller en konkurranse basert på tilfeldigheter.
 

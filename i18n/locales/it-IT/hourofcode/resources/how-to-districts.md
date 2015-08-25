@@ -18,4 +18,4 @@ title: Cosa fare per l'Ora del Codice negli Istituti Scolastici layout: wide nav
 
   5. **Ospita un evento dell'Ora del Codice.** Guarda la nostra [guida alla realizzazione di un evento](<%= hoc_uri('/resources/how-to-events') %>) per una semplice dimostrazione e altre utili informazioni.
 
-  6. **Più [premi](<%= hoc_uri('/prizes') %>) per OGNI organizzatore.** Ogni educatore partecipante riceverà un premio di ringraziamento. 100 classi americane vinceranno la possibilità di chiacchierare di tecnologia con ospiti speciali. Tra i partecipanti figurano Bill Gates, Sheryl Sandberg, Ashton Kutcher e altri ancora). E in ogni stato, una scuola partecipante vincerà 10000$ in tecnologie per il proprio istituto!
+  6. **Più [premi](<%= hoc_uri('/prizes') %>) per OGNI organizzatore.** Ogni educatore partecipante riceverà un premio di ringraziamento. E in ogni stato, una scuola partecipante vincerà 10000$ in tecnologie per il proprio istituto!

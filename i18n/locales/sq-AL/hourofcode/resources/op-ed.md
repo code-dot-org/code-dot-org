@@ -1,44 +1,44 @@
 * * *
 
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titulli: Shembulli Op-ed Mbështetja e Javës Edukative të Shkencave Kompjuterike dhe Orës së Kodimit shpërndarja: e gjerë nav: burime_nav
 
 * * *
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Më poshtë është një shembull op-ed mbështetës për Javën Edukative të Shkencave Kompjuterike dhe qëllimeve të saj që mund të përdoren nga shteti, ligjvënësit lokal, liderat e biznesit etj.
 
   
 
 
-Go to http://code.org/promote to find state specific information about computer science.
+Shko tek http://code.org/promote për të gjetur informacionet specifike të shtetit për shkencat kompjuterike.
 
-**Title: Computing…Where the Jobs Are**
+**Titulli: Informatika... Ku janë punët**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**Nga [NAME] dhe [KONSIDERONI BASHKËAUTORIN ME MËSUESIT, KONTRROLLUESIN OSE LIDERAT E BIZNESIT]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Kompjuterat janë kudo. Ata janë në xhepat tanë. Ata janë në muret tanë. Ata janë në makinat tona. Ata janë një pjesë kritike e infrastrukturës sonë, nga rrjetet e energjisë në dritat e trafikut në punët e brendshme të tregjeve tona financiare. Dhe të gjithë këto kompjutera kanë një gjë të përbashkët. Ata varen nga software që i tregojnë atyre se çfarë të bëjnë.
 
-But who exactly is going to write this software?
+Por kush ekzaktësisht do ta shkruajë këtë software?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Konsidero se sa shpejt bota jonë është transformuar nga teknologjia, ju mund të prisni që numri i studentëve që studiojnë shkenca kompjuterike sot në edukimin K-12 të jenë gjatë gjithë kohës në majë. Ju do të jeni gabim. Në fakt, më pak student po studiojnë shkenca kompjuterike, dhe më pak shkolla po e shpjegojnë atë sot, sesa një dekadë më parë.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+Në një kohë kur kërkesa për programues të aftë nuk ka qenë kurrë më e lartë, ne jemi kthyer më pak nga shkencëtarët kompjuterik. Edhe në këtë kohë të papunësisë së lartë, mijëra vendeve të punës, shumë prej tyre këtu në**[VENDOS SHTETIN/QYTETIN]**, janë duke shkuar të paplotësuar nga mungesa e individëve me aftësitë e duhura.
 
-Why is this? And how can we address it?
+Pse është kjo? Dhe si mund ta trajtojmë?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Problemi fillon në shkollën 9-vjeçare dhe gjimnaz. Nëntë nga dhjetë shkolla tonat nuk ofrojnë klasën e programimit kompjuterik. Në**[RRETHI SHKOLLËS]**vitin e kaluar, vetëm**[NUMBER]** studentë kaluan nivelin Advanced Placement (AP) Provim Shkenca Kompjuterike, vetëm**[%]** nga gjithë studentët që morën një AP në shtetin tonë. Ne thjesht nuk kemi bërë mjaft për të përgatitur apo inkurajuar studentët tanë të ndjekin këto karriera thelbësore.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Pothuajse të gjitha inovacionet kryesore informatike u shpikën këtu në këtë vend, por ne jemi në rrezik të humbjes së kësaj udhëheqjeje nëse nuk bëjmë diçka tani.
 
-We need to make some changes.
+Ne duhet të bëjmë disa ndryshime.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[OPSIONALE PËR SHTETET KU APLIKOHET]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Një ndryshim pozitiv do të ishte për të lejuar kurse rigoroze në shkenca kompjuterike për të kënaqur kërkesat e një gjimnaz matematike ose diplomimit në shkenca. Në**[VENDOS SHTETIN]**, kurset e shkencave kompjuterike janë të zgjedhura. Duke pasur parasysh kërkesat akademike, studentët nuk mund të përballojë për të marrë lëndë me zgjedhje shkenca kompjuterike. Dhe bërja e këtij ndryshimi mund të ketë ndikim të madh. Në shtetet ku kurset e shkencave kompjuterike llogarisin drejt kërkesat e diplomimit, kurset janë pesëdhjetë për qind më të mëdha me ritme shumë më të larta të pjesëmarrjes nga ana e minoriteteve sesa shteteve që e trajtojnë shkencën kompjuterike si një zgjedhje.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Ne duhet gjithashtu të punojnë me nxënës në moshë të re për të nxitur interesin e tyre në shkenca kompjuterike dhe kodim. Fëmijët tanë nuk duhet vetëm të dijnë se si t'i përdorin aplikacionet dhe video lojrat - ata duhet të dijnë si ti krijojnë ato. Fëmijët mund të mësojnë bazën e kodimit më shpejt sesa klasa e 2-të.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Ne kemi nevojë për të rekrutuar më shumë mësues të shkencave kompjuterike dhe inkurajojmë zhvillimin profesional brenda fushës së tyre. Sot ka shumë burime online që mund të ndihmojnë mësuesit për ti mbajtur të përditësuar me teknologjinë më të fundit për nxënësit e tyre.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+Sipas Laboratorit Bureau të Statistikave, nga 2020, do të jenë 9.2 milion punë në fushat STEM. Gjysma e këtyre punëve—4.6 milion—do të jenë në informatikë ose teknologji informacioni. Dhe shkenca kompjuterike është gjithnjë njohuri themelore për shekullin e 21-të. Kush do t'i plotësojë këto punë nëse fëmijëve tanë nuk i është dhënë mundësia për të fituar aftësitë e nevojshme?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, December 7–13, is Computer Science Education Week. Në në të gjitha shkollat **[STATE]**, studentët tanë do të marrin pjesë në një Orë Kodimi kombëtar , çmitizojmë subjektin e shkencave kompjuterike dhe shpresojmë të nxisim dëshirën e tyre për të shkuar përpara dhe të mësojnë më shumë. Unë do bashkohem me ata, dhe të ftoj dhe ty të bashkohesh. Çdokush duhet të mësojë si të kodojë. Vizito<http://hourofcode.com> për të mësuar më shumë dhe për të filluar. Dhe mbështet përpjekjen tonë për të sjell shkencën kompjuterike në **[STATE]**.

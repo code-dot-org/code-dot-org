@@ -4,25 +4,37 @@ oppsett: bredt
 
 * * *
 
-# Retningslinjer for leksjonar til Kodetimen
+# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-**Fristen for å sende inn leksjonar til Kodetimen 2014 har gått ut. Du kan framleis sende inn forslag, og om tida strekk til, vil vi prøve å vurdere dei.**
-
-Code.org vil presentere ei rekkje Kodetime-aktivitetar på nettstaden Code.org Gjeldande liste er på [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
 
 Vi ynskjer å kunne tilby fleire ulike engasjerande leksjonar, men hovedmålet er eu best mulig oppleving for elevar og lærerar som ikkje kan så mykje om datavitskap. Bruk dette dokumentet som rettleiing når du lagar ein aktivitet for brukarar som ikkje har bakgrunn frå koding, programmering eller datavitskap.
+
+  
+
+
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
 ## Innhald:
 
-  * [Korleis leksjonane vil bli vurderte](#inclusion)
-  * [Generelle retningsliner for å opprette ein aktivitet for Kodetimen](#guidelines)
-  * [Slik sender du eit forslag (frist 1. oktober 2014)](#submit)
-  * [Forslag til utforming av aktiviteten din](#design)
-  * [Retningsliner for varemerkje](#tm)
-  * [Sporingspiksel](#pixel)
-  * [Promotering av leksjonane dine i Kodetimen](#promote)
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
+    
+  * [How to submit (Due 10/31/2015)](#submit)  
+    
+  * [Suggestions for designing your activity](#design)  
+    
+  * [Trademark Guidelines](#tm)  
+    
+  * [Tracking Pixel](#pixel)  
+    
+  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
+    
   * [Litt informasjon om elevar med funksjonshemmingar](#disabilities)
 
 <a id="inclusion"></a>
@@ -35,37 +47,36 @@ Leksjonane vil bli vurderte av ein komité av IT-lærarar. Dei vil rangere aktiv
 
   * av høg kvalitet
   * sjøvforklarande og ikkje treng instruksjonar
-  * utforma for nybyrjarar
+  * designed for beginners - among students AND teachers
   * utformet for å ta ein time
+  * require no sign up
+  * require no payment
+  * require no installation
   * laga for ulike plattformer inkludert mobil og nettbrett
   * laga for fleire språk
-  * attraktive for alle demografiske grupper (spesielt underrepresenterte grupper)
+  * promote learning by all demographic groups (esp. under-represented groups)
   * fokuserte på meir enn HTML + CSS (målet vårt er informasjonsvitskap, ikkje berre HTML-koding)
 
 **Leksjonar vil bli rangerte lavere dersom dei:**
 
   * har dårleg kvalitet
   * er for avanserte (ikkje for noviser)
+  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * berre vil fungere på bestemte nettlesarar eller plattformer - nettbaserte leksjonar bør fungere på IE9+ og siste Chrome, Firefox og Safari
   * berre vil fungere med engelsk språk
-  * er retta mot berre eit kjønn (t.d tema som er tilpassa gutar)
+  * reinforce stereotypes that hinder participation by under-represented student groups
   * er laga som innsalg av ei kommersiell læringsplattform
 
 **Leksjonar vil IKKJE bli inkluder dersom dei:**
 
-  * krever mykje instruksjon får lærar eller mykje førebuing (dvs. ikke fungere som selvstudium for elevane)
   * ikkje er laga for å være (omtrent) ein times aktivitet
   * krev registrering 
   * krev betaling
-  * krev installasjon
+  * require installation (other than mobile apps)
   * berre handlar om webdesign med HTML og CSS
   * blir sende inn for seint eller med ufullstendig informasjon (sjå nedanfor)
 
-Målet med Kodetime-kampanjen er å få fleire lærarar og elevar til å jobbe med IT, og å vise at IT er tilgjengeleg for alle og "lettare enn du trur." På mange måtar er dette målet lettare å nå ved å gi elevar og lærarar færre og enklare val, med fokus på alternativ med høg kvalitet for nybyrjarar.
-
-Legg også merke til at kodeveka i 2013 (CSEdWeek) var ein fantastisk suksess målt utifrå responsen som vart gitt av studentar og lærarar. - 20 millionar deltok frå 9. - 23, desember og 97% sa at dei likte det og vil gjenta arrangementet!!
-
-Leksjonane som finst allereie (på engelsk) er absolutt "gode nok", og det er ikkje lite utvalg som er årsaka til at vi ønsker fleire leksjonar. Det er derimot å heve kvaliteten (eller aktualitet) for elevar, og å få fleire val for ikkje-engelskspråklege brukarar, sidan 2014-kampanjen har ein global karakter.
+Målet med Kodetime-kampanjen er å få fleire lærarar og elevar til å jobbe med IT, og å vise at IT er tilgjengeleg for alle og "lettare enn du trur." På mange måtar er dette målet lettare å nå ved å gi elevar og lærarar færre og enklare val, med fokus på alternativ med høg kvalitet for nybyrjarar. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
 [**Tilbake til toppen**](#top)
 
@@ -76,21 +87,22 @@ Leksjonane som finst allereie (på engelsk) er absolutt "gode nok", og det er ik
   * **Emne:** Introduksjon til informatikk eller programmering (ikke HTML).
   * **Mål:** Gi nybegynnere en første smak av programmering.
   * **Tone:** 
-      * Informatikk er ikke bare for genier. Alder, kjønn eller etnisitet - alle kan lære!
-      * Informatikk er knyttet til en rekke felt og interesser. Alle bør lære!
+      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
+      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
       * Oppmuntre elevene til å skape noe som kan deles med venner/online.
-  * **Aktivitetstyper:** 
-      * **Best:** Web-basert, smarttelefon-vennlig eller frakoblet aktivitet for opplæring i informatikk-begreper uten å bruke datamaskin (se <http://csunplugged.com/>). 
-      * **OK, men ikke foretrukket:** app-installasjon, desktop-applikasjon eller spillkonsoll-aktiviteter.
-  * **Format:** Brukerstyrte gjennomganger eller leksjoner, eventuelt tilrettelagt av læreren. Det bør være instruksjoner for elever underveis, i motsetning til en åpen, timeslang utfordring. Instrukser og gjennomgang bør ideelt sett være integrert direkte i programmeringsmiljøet slik at man unngår å måtte bytte faner eller vinduer mellom gjennomgangen og programmeringsmiljøet.
+  * **Technical requirements**: 
+      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
+      * Okay, but not preferred: app-install, desktop app, or game-console experiences
+  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Instrukser og gjennomgang bør ideelt sett være integrert direkte i programmeringsmiljøet slik at man unngår å måtte bytte faner eller vinduer mellom gjennomgangen og programmeringsmiljøet.
+  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**Tilbake til toppen**](#top)
 
 <a id="submit"></a>
 
-## Slik sender du eit forslag (frist 1. oktober 2014)
+## How to submit (Due 10/31/2015)
 
-Besøk [Kodetimes innleveringside for aktiviteter](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) og følg stegene for å levere din veiledning.
+Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
 **Det du kommer til å trenge:**
 
@@ -105,12 +117,12 @@ Besøk [Kodetimes innleveringside for aktiviteter](https://docs.google.com/a/cod
       * **Maks. antall tegn for mobil-visning:** 74
       * Ta med i beskrivelsen om det hovedsakelig er selvstudium eller tilrettelagt av lærer. I tillegg er noen skoler interessert i å vite om Kodetime-aktiviteter retter seg etter spesifikke standarder. Hvis aktiviteten retter seg etter spesifikke standarder bør det vurderes å inkludere denne informasjonen.
   * En liste over testede/kompatible plattformer: 
-      * **Nettbasert:** 
+      * Web based: Which platforms have you tested 
           * OS - Mac, Windows og versjoner
           * Nettlesere - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS mobil Safari (optimalisert for mobil)
           * Android Chrome (optimalisert for mobil)
-      * **Ikke nettbaserte:** angi spesifikk plattform for koden (Mac, Windows, iOS, Android, Xbox, andre)
+      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
       * Frakoblet
   * En liste over de støttede språkene og riktig format: 
       * Opplæring bør angi hvilke språk de støtter ved hjelp av totegnskoder, f.eks en - engelsk; no - Norsk
@@ -122,7 +134,7 @@ Besøk [Kodetimes innleveringside for aktiviteter](https://docs.google.com/a/cod
       * Grunnskole: barnetrinnet 5. til 7. årstrinn
       * Videregående skole: 16 til 19 år
       * Alle aldre
-  * Ta også med hvilke forkunnskaper i data som er forutsatt på det aktuelle klassetrinnet: nybegynner, middels eller avansert. Kodetimens nettsted kommer til å gi aktivitetene for nybegynnere den mest fremtredende plassen. Hvis du vil lage middels eller avanserte avktivter i Kodetimen, må du beskrive nødvendige forkunnskaper for aktiviteten.
+  * Ta også med hvilke forkunnskaper i data som er forutsatt på det aktuelle klassetrinnet: nybegynner, middels eller avansert. Kodetimens nettsted kommer til å gi aktivitetene for nybegynnere den mest fremtredende plassen. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For å kunne spore deltagelsen nøyaktig, skal alle tredjeparts-aktiviter ha med et 1-piksel bilde på første og siste siden av instruksjonene. Plasser et start 1-pixel-bilde på startsiden og et slutt 1-pixel-bilde på siste side. Ikke plasser noen piksler på mellomliggende sider). Se seksjonen om pixler for sporing nedenfor for mer informasjon. 
       * Når din aktivitet avsluttes, skal brukere linkes til <http://code.org/api/hour/finish> hvor de vil få mulighet til å: 
@@ -130,7 +142,7 @@ Besøk [Kodetimes innleveringside for aktiviteter](https://docs.google.com/a/cod
           * Motta et sertifikat som bevis for fullført Kodetime
           * Se resultatlister over hvilek land/byer som har de høyeste tallene for deltakelse i aktiviteter i Kodetimen
           * For brukere som bruker en time på din aktivitet og ikke fullfører den, lag også en knapp på aktiviteten som sier "Jeg ferdig med min Kodetime" som lenker tilbake til <http://code.org/api/hour/finish>. 
-  * ***(Valgfritt)*** Vi vil følge opp med en link til et spørreskjema med følgende spørsmål om aktiviteten i uken av 8. til 14. desember: 
+  * *(Valgfritt)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For aktiviteter på nettet (spesielt apper for smarttelefoner og nettbrett): 
           * Antall brukere
           * Hvor mange som fullførte aktiviteten
@@ -146,30 +158,28 @@ Besøk [Kodetimes innleveringside for aktiviteter](https://docs.google.com/a/cod
 
 ## Forslag til utforming av aktiviteten din
 
-**Inkluder CSEdWeek logen i din veiledning.** Du kan inkludere CSEdWeek logoen ([liten](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) eller [stor](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) i din veiledning, men det er ikke påkrevd. Du kan også kontakte oss for å be om spesifikke tillatelser til å bruke «I partnerskap med Code.org» logoen. ***Denne logoen kan kun bli brukt dersom tillatelse er gitt skriftlig fra Code.org.*** Vi kommer kanskje til å ende opp med å lage en Kodetimen logo, men på det nåværende tidspunktet har vi ingen. Under ingen omstendigheter kan Code.org logoen og navn bli brukt. Begge er et varemerke, og kan ikke bli blandet sammen med 3dje parts merkenavn.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Under ingen omstendigheter kan Code.org logoen og navn bli brukt. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Vær sikker på at gjennomsnittseleven kan fullføre godt innenfor en time.** Vurder å legge til en aktivitet med åpen-slutt på slutten av timen for studenter som beveger seg raskere gjennom leksjonen. Husk at de fleste barn vil være helt nye til datavitenskap og programmering.
 
 **Inkluder notater til læreren.** De fleste aktiviteter burde være student-rettet, men hvis en aktivitet er tilrettelagt eller holdt av en lærer, vær så snill å inkluder klare og enkle instruksjoner for læreren i form av lærer-notater på en separat lenke innlevert med din aktivitet. Ikke bare studentene er nybegynnere, noen av lærerene er også det. Inkluder info som:
 
   * Vår veiledning funker best på følgende plattformer og nettlesere
-  * Virker det på smarttelefoner? nettbrett?
+  * Does it work on smartphones? Tablets?
   * anbefaler du par-programmering? 
-  * Betraktninger for bruk i klasserom? e.g. hvis det er videoer, anbefal lærere å vise videoen foran hele klassen å se sammen
+  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
 **Inkluder tilbakemeldinger på slutten av aktiviteten.**(E.g:«Du fullførte 10 levler og lære om løkker! Godt jobba!»)
 
-**Innlem sosiale medier.** Oppmuntre studentene til å poste på sosiale medier (hvor det er passende) når de har fullført, for eksempel «Jeg har fullført en Kodetime med _______. Har du? #Kodetimen» eller «Jeg har fullført #Kodetimen som en del av #CSEdWeek. Har du? @Scratch.» Bruk hashtagen **#Kodetimen**(med stor forbokstav)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #Kodetimen» eller «Jeg har fullført #Kodetimen som en del av #CSEdWeek. Har du? @Scratch.» Bruk hashtagen **#Kodetimen**(med stor forbokstav)
 
-**Lag din aktivitet i andre språk enn Engelsk.** Vi fokuserer denne kampanjen internasjonalt i år og vi ønsker å ha et utvalg av aktiviteter for ikke-engelsktalende deltagere.
+**Create your activity in Spanish or in other languages besides English.** ]
 
 **Forklar eller koble din aktivitet til en sosialt signifikant kontekst.** Programmering blir en superkraft når studenter ser hvordan det kan forandre verden til det bedre!
 
 **Ikke krev registrering eller betaling før studentene kan prøve din veiledning.** Veiledninger som krever registrering eller betaling vil ikke bli vist
 
-**Kontroller at din veiledning kan bli brukt i et [Par Programmerings paradigme](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
-
-De tre reglene for par programmering i en skolesetting:
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
   * Sjåføren kontrollerer musa og tastaturet.
   * Navigatøren gir forslag, peker ut feil, og stiller spørsmål. 
@@ -187,15 +197,15 @@ Fordelene med Par Programmering:
 
 ## Retningsliner for varemerkje
 
-med ca 40 millioner studenter som har prøvd Kodetimen, og over 97% av de deltagende lærerene spør oss om å gjenta arrangementet hvert år, tar vi steg for å sette opp Kodetimen som en bevegelse som kan gjenta årlig med høyere kvalitet og uten forvirring.
+After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
 En del av dette er å beskytte varemerket «Kodetimen» for å forhindre forvirring. Mange av våre veiledningsparntere har brukt «Kodetimen» på sine sider. Vi ønsker ikke å forhindre denne bruken, men vi ønsker å være sikker på at det passer innenfor et par rammer:
 
-  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Godt eksempel: «Delta i Kodetimen på ACMECorp.com». Dårlig eksempel: «Prøv Kodetimen fra ACME Corp»
+  1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Dårlig eksempel: «Prøv Kodetimen fra ACME Corp»
   2. Bruk et «TM» hevet i de mest fremtredene plassene du nevner «Kodetimen», både på din nettside og i app beskrivelsene
   3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier det følgende:
     
-    ***«'Kodetimen' er et nasjonalt initiativ av Utdanningsuken for Datavitenskap[csedweek.org] og Code.org [code.org] for å introdusere millioner av studenter til en time av datavitenskap og dataprogrammering.»***
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
   4. Ingen bruk av «Kodetimen» i app navn
 
@@ -211,13 +221,12 @@ Dette vil gjøre det mulig for oss å telle antall brukere som du har rekruttert
 
 Hvis din veldening er godkjent og er inkludert på den siste veiledningsiden, Code.org vil gi deg en unik sporingspixel slik at du kan inkludere det i din veiledning. Se eksemplet under.
 
-***OBS: Dette er ikke viktig for installerbare apper (iOS/Android apper, eller desktop-install apper)***
+OBS: Dette er ikke viktig for installerbare apper (iOS/Android apper, eller desktop-install apper)
 
-**Eksempel sporingspixler for AppInventor:**
+Eksempel sporingspixler for AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
-
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**Tilbake til toppen**](#top)
 
@@ -225,10 +234,9 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Promotering av leksjonane dine i Kodetimen
 
-Vi ber aller å reklamere for sine egne 1-times veiledninger til dine brukere. Vennligs be dem gå til din Kodetimen side. Det er mer sannsynlig at dine brukere reagerer på en mail fra deg om din veiledning. Bruk den internasjonale Kodetimen kampanjen for Utdanningsuken for Datavitenskap som en unnskyldning til å oppfordre brukere til å invitere andre til å være med, hjelp oss å nå 100 millioner deltagere totalt.
+Vi ber aller å reklamere for sine egne 1-times veiledninger til dine brukere. Please direct them to ***your*** Hour of Code page. Det er mer sannsynlig at dine brukere reagerer på en mail fra deg om din veiledning. Bruk den internasjonale Kodetimen kampanjen for Utdanningsuken for Datavitenskap som en unnskyldning til å oppfordre brukere til å invitere andre til å være med, hjelp oss å nå 100 millioner deltagere totalt.
 
-  * Vis frem Kodetimen og CSEdWeek på din nettside.  
-    Ex: <http://www.tynker.com/hour-of-code>
+  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Frem Kodetimen ved hjelp av sosiale medier, tradisjonelle medier, epostlister, etc, ved å bruke hashtaggen **#Kodetimen**(med stor forbokstav)
   * Hold et lokalt arrangement eller spør dine ansatte om å holde et arrangement på lokale skoler eller samfunnsgrupper.
   * Se våre resurser for mer informasjon (kommer snart).

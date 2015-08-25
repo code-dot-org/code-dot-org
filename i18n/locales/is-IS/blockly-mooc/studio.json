@@ -151,7 +151,7 @@
   "projectileCherry":"kirsuber",
   "projectileIce":"ís",
   "projectileDuck":"önd",
-  "reinfFeedbackMsg":"Þú getur ýtt á hnappinn \"Spila áfram\" til að fara aftur í að spila söguna þína.",
+  "reinfFeedbackMsg":"Þú getur ýtt á hnappinn \"{backButton}\" til að fara aftur í að spila söguna þína.",
   "repeatForever":"endurtaka endalaust",
   "repeatDo":"gera",
   "repeatForeverTooltip":"Endurtaka aðgerðirnar í þessari stæðu á meðan sagan keyrir.",

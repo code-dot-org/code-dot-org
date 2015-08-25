@@ -401,7 +401,7 @@
     local_school: مدرسه محلی
     online: آنلاین
     see_details: مشاهده جزئیات
-    view_course: View Course
+    view_course: مشاهده ی دوره
     prize_info: 'هدیه مشارکت (فقط معلمان مدارس عمومی ایالات متحده): تا سقف 1000$ از
       جوایز کلاسی.'
     tryfirst: 'یا شما می توانیدآن را اول امتحان کنید و بعد ثبت نام کنید:'
@@ -422,8 +422,12 @@
     heading_legacy: <h2> دوره عمومی ما </h2><h1>همه سنین</h1>
     your_gallery: گالری
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید
     print_certificate: چاپ گواهینامه
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: مرد
     female: زن
@@ -432,12 +436,20 @@
     student: دانش آموز
     teacher: دبیر
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش
       کمک کردند
     art_from_html: نام و علامت تجاری پرندگان خشمگین متعلق به 2009-2014 Rovio Entertainment
       می باشد و  کلیه حقوق محفوظ است. <br/> نام و علامت تجاری گیاهان در مقابل زامبی
       متعلق به 2014 شرکت الکترونیک آرتز می باشد و کلیه حقوق  محفوظ است.
     powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: بیشتر
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی
@@ -589,6 +601,11 @@
     open_response_body: برای پاسختان سپاسگزارم!
   dialog:
     ok: باشه
+    startover_title: آیا مطمئنی که می خواهی دوباره شروع کنی؟
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: دوباره شروع کنید
+    startover_cancel: لغو کن
   time:
     hour: ۱ ساعت
     day: روز

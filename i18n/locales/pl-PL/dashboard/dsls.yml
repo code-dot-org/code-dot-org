@@ -45,7 +45,7 @@ pl:
         Drag the blocks to match.: Przesuń bloki, żeby pasowały.
         Instructions: Instrukcje
         Match the puzzles to the blocks: Do łamigłówek dopasuj bloki
-        Maze Match: Dopasowanie labiryntu
+        Maze Match: 'Labirynt: Dopasowanie'
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -64,10 +64,8 @@ pl:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: |
-          Artystyczne łaczenie pętli : Jeden
-          
-        Match the loop to the shape: Połącz pętlę z kształtem
+        Artist Loops Matching One: 'Artysta, pętle: Dopasowanie 1'
+        Match the loop to the shape: Dopasuj pętlę do kształtu
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -77,8 +75,8 @@ pl:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: 'Artysta - dopasowywanie'
-        Match the shape with the blocks that complete it.: Do kształtu dopasuj bloki, które go uzupełnią.
+        Artist Matching: 'Artysta: Dopasowywanie'
+        Match the shape with the blocks that complete it.: Dopasuj do kształtów bloki, które je tworzą.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -90,8 +88,8 @@ pl:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Dopasowanie odbić
-        Match the events with the actions: Połącz wydarzenia z działaniami
+        Bounce Matching: 'Odbicia: Dopasowanie'
+        Match the events with the actions: Połącz zdarzenia z działaniami
         Matching: Dopasowanie
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -100,8 +98,8 @@ pl:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: "Dopasowanie Jeden Flappy'ego"
-        Match the events with the actions: Połącz wydarzenia z działaniami
+        Flappy Matching One: 'Flappy: Dopasowanie 1'
+        Match the events with the actions: Połącz zdarzenia z działaniami
         Matching: Dopasowanie
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
@@ -111,7 +109,7 @@ pl:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Dopasuj łamigłówki do bloków
-        Maze Match One: Dopasowanie Jeden Labiryntu
+        Maze Match One: 'Labirynt: Dopasowanie 1'
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
@@ -121,7 +119,7 @@ pl:
         <h4>Compare player scores to see who wins</h4>: '<h4>Porównaj wyniki graczy, aby zobaczyć, kto wygrywa</h4>'
         <h4>Player 1 rolls die</h4>: '<h4>Gracz 1 rzuca kostką</h4>'
         <h4>Set Player 1 score to 0</h4>: '<h4>Ustaw wynik Gracz 1 na 0</h4>'
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Dopasuj kroki w grze Dice Race do kolejności, w jakiej mają wystąpić w algorytmie.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Ustaw w kolejności kroki w grze w kości (Dice Race), w jakiej powinny wystąpić w algorytmie.
         Matching: Dopasowanie
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -129,10 +127,10 @@ pl:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
         "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>'
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Każdy z tych pojazdów został rozłożony na mniejsze części. Połącz każdy pojazd z listą rozłożonych elemntów.
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Koła/z boku: 2 <br/> Windows/z boku: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Koła/z boku: 3 <br/> Windows/z boku: 2</h3>'
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Każdy z tych pojazdów został rozłożony na mniejsze części. Dopasuj każdy pojazd do listy rozłożonych elementów.
         Matching: Dopasowanie
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -144,7 +142,7 @@ pl:
         <h4>STACK</h4>: '<h4>STACK</h4>'
         <h4>STAMP</h4>: '<h4>STAMP</h4>'
         <h4>STAR</h4>: '<h4>STAR</h4>'
-        Match each program to the word it makes, using the provided group of skills.: Połącz każdy program ze słowem, które tworzy, stosując dostarczoną grupę umiejętności.
+        Match each program to the word it makes, using the provided group of skills.: Połącz każdy program do słowa, które tworzy, stosując dostarczoną grupę umiejętności.
         Matching: Dopasowanie
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
@@ -157,7 +155,7 @@ pl:
         Drag the blocks to match.: Przesuń bloki, żeby pasowały.
         Instructions: Instrukcje
         Match the puzzles to the blocks: Dopasuj łamigłówki do bloków
-        Maze Match: Dopasowanie labiryntu
+        Maze Match: 'Labirynt: Dopasowanie'
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -176,7 +174,7 @@ pl:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Dopasuj (połącz) kształty bazując na typie.
+        Match the shapes based on type.: Dopasuj kształty podobnego typu.
         Matching: Dopasowanie
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -187,7 +185,7 @@ pl:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        Match the shapes based on type.: Dopasuj (połącz) kształty bazując na typie.
+        Match the shapes based on type.: Dopasuj kształty podobnego typu.
         Matching: Dopasowanie
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
@@ -196,7 +194,7 @@ pl:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: Połącz kod ze schodami, które rysuje.
+        Match the code to the stairs it draws.: Dopasuj kod do schodów, które rysuje.
         Matching: Dopasowanie
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
@@ -207,7 +205,7 @@ pl:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Połącz (dopasuj) bloki
+        Match the blocks: Dopasuj bloki
         Matching: Dopasowanie
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -226,7 +224,7 @@ pl:
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
-        Match the blocks: Połącz (dopasuj) bloki
+        Match the blocks: Dopasuj bloki
         Matching: Dopasowanie
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
@@ -235,7 +233,7 @@ pl:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Wybierz strzałkę, która pomoże Flurbowi dotrzeć do skarbu
+        Match the Map to the arrow that gets the Flurb to the treasure: Dopasuj mapę do strzałki, która doprowadzi Flurba do skarbu
         Matching: Dopasowanie
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -258,7 +256,7 @@ pl:
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Wybierz właściwy algorytm, który doprowadzi Flurba do kwiatków.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Dopasuj mapę do algorytmu, który doprowadzi Flurba do kwiatków.
         Matching: Dopasowanie
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -289,9 +287,9 @@ pl:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: Wybierz algorytm pasujący do obrazka.
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść trójkąt na prawo od równoległoboku'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Rozpocznij od kwadratu <br/> umieść trójkąt powyżej kwadratu <br/> umieścić trójkąt poniżej kwadratu'
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/> Umieścić trójkąt poniżej kwadratu'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok na prawo od trójkąta'
         Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Rozpocznij z kwadratu<br/>Umieść trójkąt na prawo od kwadratu<br/>Umieść równoległobok poniżej kwadratu<br/> Umieść trójkąt na prawo od równoległoboku'
       2-3 Algorithms Multi 2:
@@ -299,16 +297,16 @@ pl:
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Zacznij od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść kolejny trójkąt pod kwadratem'
-        Which image does <em>not</em> follow this algorithm?: 'Który z obrazków pasuje <em>lub nie</em> do podanego algorytmu?'
+        Which image does <em>not</em> follow this algorithm?: 'Który z obrazków <em>nie</em> pasuje do podanego algorytmu?'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Test wyboru
-        Which program makes this image?: Za pomocą którego programu został stworzony ten obrazek?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which program makes this image?: Za pomocą którego programu został utworzony ten obrazek?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
@@ -316,42 +314,42 @@ pl:
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
         According to the rules of the game, which set of cards is scored correctly?: Który zestaw kart został ułożony zgodnie z zasadami gry?
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: Jak możesz uprościć ciąg działań z pomocą pętli?
-        Multiple Choice: Test wyboru
+        How would you simplify this sequence with loops?: Jak możesz uprościć ten ciąg działań za pomocą pętli?
+        Multiple Choice: Test wielokrotnego wyboru
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
-        Multiple Choice: Test wyboru
-        Which program makes this image?: Za pomocą którego programu został stworzony ten obrazek?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which program makes this image?: Za pomocą którego programu został utworzony ten obrazek?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Maze Multiple Choice: Labirynt Test wyboru
+        Maze Multiple Choice: 'Labirynt: Test wielokrotnego wyboru'
         Which blocks work?: Które bloki zadziałają?
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
-        Multiple Choice: Test wyboru
-        Which program does not create this image?: Za pomocą którego programu nie można stworzyć tego obrazka?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which program does not create this image?: Za pomocą którego programu nie można utworzyć tego obrazka?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which image-program combo does not contain mistakes?: Które połączenie obrazka i sekwencji strzałek nie zawiera błędu?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
@@ -359,14 +357,14 @@ pl:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Artist Debugging Multiple Choice One: Artysta Debugowanie Test wielokrotnego wyboru 1
+        Artist Debugging Multiple Choice One: 'Artysta, debugowanie: Test wielokrotnego wyboru 1'
         Why won't this circle go all the way around?: Dlaczego w ten sposób nie powstanie cały okrąg?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice One: Artysta Funkcje Test wielokrotnego wyboru 1
+        Artist Functions Multiple Choice One: 'Artysta, funkcje: Test wielokrotnego wyboru 1'
         Pick the correct blocks to draw this image using the given functions: Wybierz odpowiednie bloki, aby narysować ten obrazek przy użyciu dostępnych funkcji
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
@@ -374,7 +372,7 @@ pl:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
+        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
         Which shape is made by this loop?: Który kształt jest tworzony przez tę pętlę?
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
@@ -382,14 +380,14 @@ pl:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
-        Which shape is made by this program?: Który kształt można stworzyć za pomocą tego programu?
+        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
+        Which shape is made by this program?: Który kształt można utworzyć za pomocą tego programu?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
-        Bee Conditionals Multiple Choice One: Pszczółka Wyrażenia warunkowe Test wyboru 1
+        Bee Conditionals Multiple Choice One: 'Pszczółka, warunki: Test wielokrotnego wyboru 1'
         Which comparison below is true?: Które z poniższych porównań jest prawdziwe?
       2-3 bee conditionals multi 2:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
@@ -397,7 +395,7 @@ pl:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Bee Conditionals Multiple Choice Two: Pszczółka Wyrażenia warunkowe Test wyboru 2
+        Bee Conditionals Multiple Choice Two: 'Pszczółka, warunki: Test wielokrotnego wyboru 2'
         Choose the best blocks.: Wybierz najlepsze bloki.
       2-3 bee conditionals multi 3:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
@@ -413,7 +411,7 @@ pl:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
-        Bee Loops Multiple Choice One: Pszczółka Pętle Test wyboru 1
+        Bee Loops Multiple Choice One: 'Pszczółka, pętle: Test wielokrotnego wyboru 1'
         Which blocks collect all of the nectar?: Którymi blokami zbierzesz cały nektar?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
@@ -421,39 +419,39 @@ pl:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Maze Multiple Choice One: Labirynt Test wyboru 1
-        Which set of blocks is the correct answer?: Który zestaw bloków jest prawidłowa odpowiedzia?
+        Maze Multiple Choice One: 'Labirynt: Test wielokrotnego wyboru 1'
+        Which set of blocks is the correct answer?: Który zestaw bloków jest prawidłową odpowiedzią?
       4-5 Algorithms Multi 1:
         Baking cookies: Pieczenie ciasteczek
         Banana: Banan
         Brushing your teeth: Szczotkowanie zębów
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Shopping from a grocery list: Zakupy spożywcze z listą
         Which one of these items is hardest to describe an algorithm for?: Dla którego z tych elementów najtrudniej jest napisać algorytm?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: 'Eugene jest  _____ miastem.'
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Oto trzy zdania. Który z poniższych szablonów pasuje do wszystkich trzech zdań?'
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Seattle _____ a _____ _____.: Seattle _____ _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle jest dużym miastem.<br/>Eugene jest średniej wielkości miastem<br/>Hillview jest małym miastem.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle jest dużym miastem.<br/>Eugene jest średnim miastem<br/>Hillview jest małym miastem.'
         _____ is _____ a _____.: _____ jest _____ _____.
         _____ is a _____ city.: '_____ jest  _____ miastem.'
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
-        Multiple Choice: Test wyboru
-        Which of these pictures best represents crowdsourcing?: Który z tych obrazków przedstawia w najlepszy sposób crowdsourcing?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which of these pictures best represents crowdsourcing?: Który z tych obrazków najlepiej przedstawia crowdsourcing?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Szczotkowanie włosów
-        Cleaning your room: Sprztanie pokoju
+        Cleaning your room: Sprzątanie pokoju
         Eating your dessert: Jedzenie deseru
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Washing your face: Mycie twarzy
-        Which one of these activities would be best for practicing crowdsourcing?: Która tych czynności jest najlepszym przykładem crowdsourcing?
+        Which one of these activities would be best for practicing crowdsourcing?: Która z tych czynności jest najlepszym przykładem crowdsourcing?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Test wyboru
-        Which piece of information listed below is okay to share on the internet?: Które z poniższych informacji możesz udostępnić w internecie?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which piece of information listed below is okay to share on the internet?: Którą z poniższych informacji możesz udostępnić w internecie?
         Your address: Twój adres
         Your birthday: Data Twoich urodzin
         Your favorite food: Twoja ulubiona potrawa
@@ -464,12 +462,12 @@ pl:
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: Test wyboru
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Gdy logujesz się na stronę code.org, najprawdopodobniej na który adres IP przeniesie cię DNS?
+        Multiple Choice: Test wielokrotnego wyboru
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Logując się na stronę code.org, na który adres IP najprawdopodobniej przeniesie Cię DNS?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jeśli DNS zabrał cię na stronę o adresie IP 100.42.50.110, to jak nazywa się strona na której się znalazłeś?
-        Multiple Choice: Test wyboru
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jeśli DNS zabrał Cię na stronę o adresie IP 100.42.50.110, to jak nazywa ta strona?
+        Multiple Choice: Test wielokrotnego wyboru
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -480,14 +478,14 @@ pl:
         Lou, Lou, skip to my Lou,: Lou Lou, przeskocz do mojej Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Co jest największym fragmentem tej piosenki, który możesz zdefiniować jako chór tak, że chór powtarza go za każdym razem, gdy jest wywoływany?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Który z programów poniżej <em>nie</em> tworzy tej samej sekwencji, co Program 1?'
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
@@ -495,36 +493,36 @@ pl:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice: Artysta Funkcje Wielokrotny Wybór
-        Which function creates a rectangle that can change its size?: Aby prostokąt mógł zmienić swój rozmiar, której funkcji użyjesz?
+        Artist Functions Multiple Choice: 'Artysta, funkcje: Test wielokrotnego wyboru'
+        Which function creates a rectangle that can change its size?: Która funkcja tworzy prostokąt, który może zmienić swój rozmiar?
       4-5 artist loops multi 1:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
-        Artist Loops Multiple Choice: Artysta Pętle Test wielokrotnego wyboru
-        Which blocks will create the design?: Za pomocą których klocków stworzysz projekt?
+        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
+        Which blocks will create the design?: Które bloki utworzą ten wzorek?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
-        Artist Functions Multiple Choice: Artysta Funkcje Wielokrotny Wybór
+        Artist Functions Multiple Choice: 'Artysta, funkcje: Test wielokrotnego wyboru'
         "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Wybierz pętlę "dla", która reprezentuje następujący wzór: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
-        Artist Multiple Choice: Artysta Wielokrotny Wybór
-        Which blocks draw a rectangle with a perimeter of 100?: Które bloki narysuj prostokąt o obwodzie 100?
+        Artist Multiple Choice: 'Artysta: Test wielokrotnego wyboru'
+        Which blocks draw a rectangle with a perimeter of 100?: Które bloki narysują prostokąt o obwodzie 100?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
-        Artist Multiple Choice: Artysta Wielokrotny Wybór
+        Artist Multiple Choice: 'Artysta: Test wielokrotnego wyboru'
         Which drawing is symmetric?: Który z rysunków jest symetryczny?
       4-5 bee conditionals multi 1:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
@@ -534,7 +532,7 @@ pl:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
         1: ': Fioletowy kwiat może zawierać 3, 2 lub 1 nektary, ale nie wiesz ile. Które bloki prawidłowo sprawdzają i zbierają cały nektar z fioletowego kwiatka?'
-        Bee Conditionals Multiple Choice: Pszczółka Wyrażenia warunkowe Test wyboru
+        Bee Conditionals Multiple Choice: 'Pszczółka, warunki: Test wielokrotnego wyboru'
         Choose the best blocks.: Wybierz najlepsze bloki.
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -543,7 +541,7 @@ pl:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Bee Debug Multiple Choice: 'Test wyboru - debagowanie pszczółki'
+        Bee Debug Multiple Choice: 'Pszczółka, debagowanie: Test wielokrotnego wyboru'
         Which version of the function will work?: Która wersja funkcji jest poprawna?
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
@@ -551,23 +549,23 @@ pl:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Bee Loops Multiple Choice: 'Test wyboru - pętle pszczółki'
-        Which blocks will solve the puzzle?: Za pomocą których klocków rozwiążesz łamigłówkę?
+        Bee Loops Multiple Choice: 'Pszczółka, pętle: Test wielokrotnego wyboru'
+        Which blocks will solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
-        Famer Loops Multiple Choice: 'Test wyboru - pętle farmera'
-        Which blocks solve the puzzle?: Którymi blokami rozwiążesz zadanie?
+        Famer Loops Multiple Choice: 'Farmer, pętle: Test wielokrotnego wyboru'
+        Which blocks solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
       4-5 maze conditionals multi 1:
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Maze Conditionals Multiple Choice: 'Test wyboru - warunki w labiryncie'
+        Maze Conditionals Multiple Choice: 'Labirynt, warunki: Test wielokrotnego wyboru'
         Which blocks solve the puzzle?: Którymi blokami rozwiążesz zadanie?
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -598,22 +596,22 @@ pl:
         /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
         /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
-        Multiple Choice: Test wyboru
-        Which blocks solve this puzzle?: Którymi blokami rozwiążesz zadanie?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which blocks solve this puzzle?: Które bloki rozwiązują tę łamigłówkę?
       K-1 Artist 1 Multi 2:
         /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
         /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
         /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
-        Multiple Choice: Test wyboru
-        Which blocks draw the square?: Które bloki utworzą kwadrat?
+        Multiple Choice: Test wielokrotnego wyboru
+        Which blocks draw the square?: Które bloki narysują ten kwadrat?
       K-1 Artist 2 Multi 1:
         /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
         /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
         /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which shape do these squares combine to make?: Jaki kształt utworzą te kwadraty?
       K-1 Artist Loops Multi 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
@@ -621,7 +619,7 @@ pl:
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which blocks create this picture?: Które bloki utworzą ten obrazek?
       K-1 Bee 1 Multi 1:
         /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
@@ -629,8 +627,8 @@ pl:
         /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
-        How many nectars is this?: Ile razem nektaru to daje?
-        Multiple Choice: Test wyboru
+        How many nectars is this?: Ile razem jest nektarów?
+        Multiple Choice: Test wielokrotnego wyboru
       K-1 Bee 1 Multi 2:
         /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
         /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
@@ -638,13 +636,13 @@ pl:
         /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
         /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
         How many nectars is this?: Ile razem nektaru to daje?
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
       K-1 Digital Footprint Multi 1:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Które ze zwierząt ma cyfrowy ślad, który powoduje, że jest ono <strong>najbardziej zagrożone</strong>?'
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
@@ -652,43 +650,43 @@ pl:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
         How would you simplify this sequence with loops?: Jak możesz uprościć ciąg działań z pomocą pętli?
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
         /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which arrow gets the Flurb to the treasure?: Która strzałka doprowadzi Flurba do skarbu?
       K-1 Keep it Private Multi 1:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
-        Multiple Choice: Test wyboru
-        Which information should you <strong>not</strong> share online?: 'Jakimi informacjami <strong>nie</strong> powinieneś dzielić się w sieci?'
+        Multiple Choice: Test wielokrotnego wyboru
+        Which information should you <strong>not</strong> share online?: 'Jakimi informacjami <strong>nie</strong> powinniście dzielić się w sieci?'
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
         /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
         /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which choice should be the final block?: Który blok powinien być na końcu?
       K-1 Maze Loops Multi 1:
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png, 300
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which repeat block is the same?: 'Które blok "powtórz" (repeat) jest taki sam?'
       K-1 Maze Loops Multi 2:
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
-        Multiple Choice: Test wyboru
-        Pick the correct repeat block.: Wybierz właściwy blok powtarzania.
+        Multiple Choice: Test wielokrotnego wyboru
+        Pick the correct repeat block.: 'Wybierz właściwy blok "powtórz" (repeat).'
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -703,39 +701,39 @@ pl:
         /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
         /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
         /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which algorithm gets the Flurb to the flowers?: Który algorytm doprowadzi Flurba do kwiatów?
       K-1 Plant a Seed Multi 1:
         /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
         /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which step should go at the beginning of this algorithm?: Który krok powinien być na początku tego algorytmu?
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which step should fill in the blank for this algorithm?: Który krok powinien uzupełnić lukę w algorytmie?
       K-1 Word Search Multi 1:
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which blocks spell "MOVE"?: 'Które bloki utworzą słowo "MOVE"?'
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         Which blocks spell "JUMP"?: 'Które bloki utworzą słowo "JUMP"?'
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
-        Multiple Choice: Test wyboru
+        Multiple Choice: Test wielokrotnego wyboru
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE

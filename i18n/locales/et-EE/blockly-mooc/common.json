@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Korda\" või \"Kui\" ploki sees peavad olema teised plokid et see töötaks. Veendu et sisemine plokk sobib plokiga mille sees ta on.",
   "emptyBlockInFunction":"Funktsioonil{name} on täitmata sisend.",
   "emptyBlockInVariable":"Muutujal {name} on täitmata sisend.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Funktsiooni plokk peab sisaldama teisi plokke et ta töötaks.",
   "emptyFunctionalBlock":"Teil on täitmata sisendiga plokk.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

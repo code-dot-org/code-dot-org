@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Los bloques \"repetir\" o \"si\" deben tener otros bloques dentro de ellos para funcionar. Asegúrate que el bloque interno quede correctamente dentro del bloque que lo contiene.",
   "emptyBlockInFunction":"La función {name} tiene una entrada sin rellenar.",
   "emptyBlockInVariable":"La variable {name} tiene una entrada sin rellenar.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"El bloque de función necesita tener otros bloques en su interior para funcionar.",
   "emptyFunctionalBlock":"Tienes un bloque con una entrada vacía.",
   "emptyTopLevelBlock":"No hay bloques que ejecutar. Debes añadir un bloque al bloque {topLevelBlockName}.",

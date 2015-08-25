@@ -4,26 +4,26 @@
 
 ## Giải thưởng 1: Không gian lưu trữ miễn phí trên Dropbox hoặc tín dụng để gọi điện thoại trên Skype:
 
-Thêm 10GB dung lượng lưu trữ miễn phí trên Dropbox hoặc 10USD sử dụng cho điện thoại bằng Skype (giới hạn theo K-12). 10GB dung lượng miễn phí phải được kích hoạt trên một tài khoản Dropbox đã khởi tạo trước đó. Giới hạn chỉ cho một cá nhân/ một tổ chức và duy nhất một tài khoản.
+Thêm 10GB dung lượng lưu trữ miễn phí trên Dropbox hoặc 10USD sử dụng cho điện thoại bằng Skype (giới hạn theo K-12). The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Giới hạn chỉ cho một cá nhân/ một tổ chức và duy nhất một tài khoản. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 Mỗi cá nhân/ tổ chức muốn nhận được một trong những phần thưởng trên phải chắc chắn rằng đã đăng ký tài khoản trên Hour of Code của chúng tôi. Nếu toàn bộ học sinh/ sinh viên của một trường đều tham gia vào Hour of Code, thì hãy đảm bảo rằng mỗi cá nhân đều có một tài khoản riêng để đảm bảo sự công bằng và điều kiện khi tham gia nhận thưởng.
 
-Code.org sẽ liên lạc với cá nhân/ tổ chức sau sự kiện Hour of Code (Ngày 14 tháng 8 năm 2014) để thông báo và hướng dẫn cụ thể các bạn khi nhận được phần thưởng.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Giải thưởng 2: Chat video với người hướng dẫn:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Giải thưởng này chỉ giới hạn cho lớp K-12 ở Mỹ và Canada . To qualify, sign up your classroom by November 2, 2015. Code.org sẽ chọn ra lớp học thắng cuộc , cung cấp thời gian để nói chuyện qua mạng và làm việc với giáo viên phù hợp để thiết lập nên chi tiết kỹ thuật. Trường của bạn không cần đăng kí kiểm tra chất lượng cho giải này Trường công và tư có cơ hội chiến thắng ngang nhau.
 
 ## Giải thưởng 3: Một lớp học được trang bị laptop phục vụ học tập và giảng dạy (hoặc 10.000USD cho một công nghệ khác được triển khai):
 
-Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Giải thưởng chỉ giới hạn cho hệ thống trường học 12 khối ở Mỹ. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Một lớp học ở bất kì tiểu bang nào của Mỹ sẽ được trang bị máy tính. Code.org will select and notify winners via email by December 1, 2015.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Để rõ ràng, đây không là một mã dự thưởng hoặc cuộc thi phải trả phí.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Không có sự đánh cược tiền bạc hay nguy cơ nào khi đăng kí - mọi trường hay lớp học có thể tham gia và không phải trả phí cho Code.org hoặc tổ chức nào khác
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Nhà vô địch được chọn trong số trường (hoặc lớp học) là thành viên của 'giờ mã hóa' và hoàn thành bài kiểm tra tập thể của học sinh, giáo viên.
 
 <% end %>

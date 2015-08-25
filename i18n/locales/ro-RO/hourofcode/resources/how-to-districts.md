@@ -18,4 +18,4 @@ Titlu: Hour of Code "cum să..." pentru cartiere aspect: wide nav: resources_nav
 
   5. **Fii gazdă (organizează) un eveniment "O oră de cod".** A se vedea [ ghidul cum să... eveniment](<%= hoc_uri('/resources/how-to-events') %>) pentru un exemplu de eveniment, material de contact cu mass-media şi alte suporturi.
 
-  6. **Mai multe [ premii](<%= hoc_uri('/prizes') %>) pentru fiecare organizator.** Fiecare instructor participant va primi cadouri in semn de apreciere. 100 de săli de clasă vor câştiga chat-uri tehnice cu un invitat special. Printre participanţi se numără Bill Gates, Sheryl Sandberg, Ashton Kutcher şi mulţi alţii. Şi în fiecare stat, o şcoală participantă va câştiga 10.000 dolari in echipamente pentru şcoala lor!
+  6. **Mai multe [ premii](<%= hoc_uri('/prizes') %>) pentru fiecare organizator.** Fiecare instructor participant va primi cadouri in semn de apreciere. Şi în fiecare stat, o şcoală participantă va câştiga 10.000 dolari in echipamente pentru şcoala lor!
