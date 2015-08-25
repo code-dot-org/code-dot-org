@@ -155,10 +155,9 @@
   prizes_nav_faq: "FAQ"
 
   whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer!"
-  whats_next_try: "<a href='http://code.org/learn'><button>Try it</button></a>"
-  whats_next_how: "<a href='http://hourofcode.com/resources/how-to'><button>How to</button></a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'><button>Promote</button></a>"
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
+  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
+  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
 
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: 'Anybody can learn.'
