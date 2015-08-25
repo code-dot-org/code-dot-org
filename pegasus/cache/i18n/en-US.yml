@@ -1,4 +1,4 @@
-"en-US":
+en-US:
   hello: "Hello world"
   select_language: "Please select your language"
   en: "Computer Science"
@@ -182,6 +182,7 @@
   homepage_action_text_learn: "Start learning"
   homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
+  homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_main: "Code.org and the College Board form an alliance to improve diversity in computer science."
   homepage_banner_text_link: "Learn more"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
