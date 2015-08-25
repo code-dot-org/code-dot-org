@@ -10,14 +10,21 @@ class LevelSourcesController < ApplicationController
   before_action :set_level_source
 
   def show
-    level_view_options hide_source: true
-    @is_legacy_share = true
     if params[:embed]
+      # embed only the play area (eg. ninjacat)
+      level_view_options hide_source: true
+      @is_legacy_share = true
       level_view_options(
         embed: true,
         share: false,
         skip_instructions_popup: true
       )
+    elsif params[:hint_embed]
+      # embed the play area and code area for viewing solutions when contributing hints
+    else
+      # sharing
+      level_view_options hide_source: true
+      @is_legacy_share = true
     end
   end
 

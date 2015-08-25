@@ -48,7 +48,11 @@ exports.overrideNetSimTableApi = function (netsimTable) {
       return table.read(id, callback);
     },
     createRow: function (value, callback) {
-      return table.create(value, callback);
+      if (Array.isArray(value)) {
+        return table.multiCreate(value, callback);
+      } else {
+        return table.create(value, callback);
+      }
     },
     updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
@@ -129,6 +133,22 @@ var fakeStorageTable = function () {
       tableData_.push(value);
 
       callback(null, value);
+    },
+
+    /**
+     * @param {!Object[]} values
+     * @param {!NodeStyleCallback} callback
+     */
+    multiCreate: function (values, callback) {
+      values.forEach(function (value) {
+        log_ += 'create[' + JSON.stringify(value) + ']';
+
+        value.id = rowIndex_;
+        rowIndex_++;
+        tableData_.push(value);
+      });
+
+      callback(null, values);
     },
 
     /**

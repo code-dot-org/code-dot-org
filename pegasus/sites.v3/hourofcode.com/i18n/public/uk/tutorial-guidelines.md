@@ -1,24 +1,36 @@
 
 
-# Рекомендації для Години коду та тижня інформатики
+# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-**Минув термін подання підручників для Години коду 2014 року. Ви можете надіслати свій підручник, і ми будемо намагатися його розглянути, якщо дозволить час.**
-
-Code.org розмістить різноманітні навчальні ресурси на сайтах Code.org, Години коду та Тижня інформатики. Актуальний перелік [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
 
 Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці. Скористайтесь цим документом в якості шаблону для своїх заходів, спрямованих на користувачів, котрі не мають досвіду вивчення програмування та інформатики.
+
+  
+
+
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
 ## Зміст:
 
-  * [Як буде оцінено підручники](#inclusion)
-  * [Загальні рекомендації створення заходів Години коду](#guidelines)
-  * [Як надіслати (до 1/10/2014)](#submit)
-  * [Пропозиції для розробки заходів](#design)
-  * [Рекомендації щодо торгової марки](#tm)
-  * [Точка стеження](#pixel)
-  * [Сприяння підручникам, тижню інформатики та Годині коду](#promote)
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
+    
+  * [How to submit (Due 10/31/2015)](#submit)  
+    
+  * [Suggestions for designing your activity](#design)  
+    
+  * [Trademark Guidelines](#tm)  
+    
+  * [Tracking Pixel](#pixel)  
+    
+  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
+    
   * [Примітка для учнів з особливими потребами](#disabilities)
 
 <a id="inclusion"></a>
@@ -31,37 +43,36 @@ Code.org розмістить різноманітні навчальні рес
 
   * вони мають високу якість
   * призначені для самостійної роботи, не потребують вказівок вчителя
-  * призначені для початківців
+  * designed for beginners - among students AND teachers
   * розраховані на ~1 годину занять
+  * не вимагають реєстрації
+  * не вимагають оплати
+  * не вимагають встановлення
   * працюють на різних ОС/платформах, включаючи мобільні пристрої
-  * працюють різними мовами
-  * сприяють навчанню всіма демографічними групами (особливо недопредставленими)
+  * перекладені різними мовами
+  * promote learning by all demographic groups (esp. under-represented groups)
   * спрямовані не лише на веб-дизайн HTML+CSS (наша мета - інформатика, а не HTML-код)
 
 **Підручники отримають нижчі оцінки, якщо:**
 
   * вони низької якості
   * призначені для вищого рівня (не для початківців)
+  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * обмежені у підтримуваних ОС/платформах - для веб-базованих платформ потрібна підтримка усіх браузерів: IE9+, останніх версій Chrome, Firefox та Safari
   * представлені лише англійською
-  * мають гендерну тенденційність (наприклад, спрямовані здебільшого на хлопчиків)
+  * reinforce stereotypes that hinder participation by under-represented student groups
   * пропонуються на платформі, яка бере плату за навчання
 
 **Підручники НЕ відображатимуться, якщо:**
 
-  * вимагають постійного залучення вчителя з обширною попередньою підготовкою (тобто не для самостійного навчання)
   * не створені як (приблизно) одно-годинне заняття
   * вимагають реєстрації 
   * вимагають оплати
-  * вимагають установки
+  * require installation (other than mobile apps)
   * спрямовані лише на веб-дизайн HTML+CSS
   * подані після останнього терміну, або містять неповну інформацію (див.нижче)
 
-Загалом, метою кампанії Година коду є залучення учнів та вчителів до інформатики та програмування, а також популяризація доступності предмету для всіх, у легшому, ніж уявляється вигляді. Зокрема, ця мета досягається тим, що учням та вчителям пропонується якомога простіший та якісніший вибір навчальних ресурсів, зрозумілих для новачків.
-
-Зауважимо, що тиждень інформатики 2013 року мав величезний успіх, за відгуками вчителів та учнів - з 9 по 23 грудня було залучено 20 мільйонів учасників, і 97% з них відзначили, що їм сподобалось і вони хотіли б повторити захід!!
-
-Існуючий набір завдань, вочевидь, є достатньо хорошим, і додавання нових підручників до Години коду має на меті не стільки розширити вибір, скільки підвищити якість (та освіжити) матеріалів для учнів, а також залучити не-англомовних вчителів, враховуючи глобальний вимір кампанії 2014 року.
+Загалом, метою кампанії Година коду є залучення учнів та вчителів до інформатики та програмування, а також популяризація доступності предмету для всіх, у легшому, ніж уявляється вигляді. Зокрема, ця мета досягається тим, що учням та вчителям пропонується якомога простіший та якісніший вибір навчальних ресурсів, зрозумілих для новачків. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
 [**На початок**](#top)
 
@@ -72,21 +83,22 @@ Code.org розмістить різноманітні навчальні рес
   * **Тема:** Вступ до інформатики або програмування (не HTML).
   * **Мета:** Дати можливість початківцям спробувати доступне програмування.
   * **Тон:** 
-      * Інформатика не лише для геніїв. Не має значення ваш вік, стать чи раса. Кожен може навчитись!
-      * Інформатика пов'язана із широким колом сфер діяльності. Навчитись повинні всі!
+      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
+      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
       * Заохочуйте учнів створювати проекти, якими можна поділитись з друзями/онлайн.
-  * **Види діяльності:** 
-      * **Найкращі:** Веб-базовані, дружні до мобільних пристроїв або безмашинні види діяльності, які навчають поняттям інформатики без використання комп'ютера (див. <http://csunplugged.com/>). 
-      * **Добрі, але не найкращі:** встановлення програми, застосунку або гри на консолі.
-  * **Формат:** Підручники для самонавчання або уроки, які супроводжуються вчителем за бажанням. Вони мають містити інструкції для учнів, на відміну від годинних завдань з відкритим завершенням. В ідеалі, завдання та підручники мають бути інтегровані безпосередньо у платформу програмування, щоб уникнути незручного перемикання вікон чи закладок.
+  * **Technical requirements**: 
+      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
+      * Okay, but not preferred: app-install, desktop app, or game-console experiences
+  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. В ідеалі, завдання та підручники мають бути інтегровані безпосередньо у платформу програмування, щоб уникнути незручного перемикання вікон чи закладок.
+  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**На початок**](#top)
 
 <a id="submit"></a>
 
-## Як надіслати (до 1/10/2014)
+## How to submit (Due 10/31/2015)
 
-Відвідайте [сторінку здачі завдань для Години коду](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) та виконайте дії для надсилання свого підручника.
+Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
 **Що вам знадобиться:**
 
@@ -101,12 +113,12 @@ Code.org розмістить різноманітні навчальні рес
       * **Максимальна кількість символів для мобільної версії:** 384
       * Будь ласка, додайте опис того, чи діяльність є самостійною, чи потребує керівництва вчителя. Додатково, деякі школи хотіли б знати, чи вправи з Години коду відповідають новим державним стандартам освіти (Common Core чи Next Generation Science Standards). Якщо завдання відповідають певним державним стандартам, додайте інформацію про це.
   * Перелік перевірених/сумісних платформ: 
-      * **Веб-базовані:** 
+      * Web based: Which platforms have you tested 
           * ОС - Mac, Win і версії
           * Браузери - IE8, IE9, IE10, Firefox, Chrome, Safari
           * iOS мобільний Safari (оптимізований для мобільних пристроїв)
           * Android Chrome (оптимізований для мобільних пристроїв)
-      * **Не веб-базовані:** вкажіть платформу коду (Mac, Win, iOS, Android, xBox, інші)
+      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
       * Безмашинні вправи
   * Перелік підтримуваних мов і відповідний формат: 
       * Для посібника потрібно вказати, які мови підтримуються, використовуючи 2-символьне позначення мови, наприклад en - Англійська; ja - Японська
@@ -118,7 +130,7 @@ Code.org розмістить різноманітні навчальні рес
       * Середня школа: класи 6-8
       * Старша школа: класи 9-12
       * Різний вік
-  * Будь ласка, вкажіть рекомендований попередній рівень знань з інформатики: Початківець, Аматор чи Експерт. Сайт Години коду першочергово висвітлюватиме завдання для Початківців. Якщо Ви бажаєте підготувати завдання Години коду складнішого рівня, вкажіть це в розділі попередніх знань опису своїх діяльності.
+  * Будь ласка, вкажіть рекомендований попередній рівень знань з інформатики: Початківець, Аматор чи Експерт. Сайт Години коду першочергово висвітлюватиме завдання для Початківців. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Технічні вимоги: 
       * Для того, щоб точніше відстежувати участь, ми хочемо, щоб кожен партнер-розробник підручника, розмістив 1-піксельне зображення для відстеження у свою першу та останню вправу. Розмістіть однопіксельне зображення на початку першої та в кінці останньої сторінки. Не розміщуйте пікселів на проміжних сторінках). Перегляньте розділ Піксель відстеження нижче для із детальнішою інформацією. 
       * Після завершення Вашої діяльності, користувачів потрібно направити <http://code.org/api/hour/finish> де вони зможуть: 
@@ -126,7 +138,7 @@ Code.org розмістить різноманітні навчальні рес
           * Отримати сертифікат про завершення Годину коду
           * Переглянути таблицю лідерів країн/міст, з яких найбільше учасників виконали Годину коду
           * Для користувачів, які працювали над вправою протягом години, але не завершили її, будь ласка, передбачте внизу кнопку "Я завершив Годину коду" з посиланням на <http://code.org/api/hour/finish> . 
-  * ***(Необов'язково)*** Ми будемо стежити за онлайновими опитуваннями/формами, отримуючи звіт з показниками за тиждень з 12:01 8 грудня по 11:59 14 грудня) 
+  * *(Необов'язково)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Для онлайнових завдань (особливо для смартфонів та планшетів): 
           * Кількість користувачів
           * Кількість тих, хто завершили завдання
@@ -142,30 +154,28 @@ Code.org розмістить різноманітні навчальні рес
 
 ## Пропозиції для розробки заходів
 
-**Розмістіть логотип CSEdWeek у своєму підручнику.** Ви можете розмістити ([малий](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) чи [великий](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) логотип CSEdWeek у своєму підручнику, але це не обов'язково. Ви також можете зв'язатися з нами для отримання дозволу на використання логотипу "У партнерстві з Code.org". ***Цей логотип можна використовувати лише за письмового дозволу Code.org.*** Можливо, ми створимо окремий логотип для Години коду, але наразі його немає. Ні за яких обставин не можна використовувати логотип і назву Code.org. Обидва є товарними знаками і не можуть поєднуватись із найменуваннями третіх сторін.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Ні за яких обставин не можна використовувати логотип і назву Code.org. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 **Переконайтесь, що середньостатистичний учень може завершити завдання за 1 годину.** Розгляньте варіант додавання відкритого завдання у кінці для тих учнів, котрі пройдуть урок швидше. Пам'ятайте, що більшість дітей будуть абсолютними новачками в інформатиці та програмуванні.
 
 **Додайте рекомендації для вчителів.** Більшість завдань мають бути спрямованими на самостійну роботу учнів, але якщо завдання потребує допомоги чи супроводу вчителя, додайте чіткі та прості вказівки у формі рекомендацій за окремим посиланням. Новачками будуть не лише учні, але й деякі вчителі. Включіть наступну інформацію:
 
   * Наш підручник найкраще працює на наступних платформах і браузерах
-  * Він працює на смартфонах? планшетах?
+  * Does it work on smartphones? Tablets?
   * Ви рекомендуєте парне програмування? 
-  * Застереження щодо використання на уроці? Наприклад, якщо є відео, то вчителю варто показувати його через проектор для спільного перегляду всім класом
+  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
 **Включіть зворотний зв'язок в кінці діяльності.** (Наприклад: "Ви завершили 10 рівнів і дізналися про цикли! Чудова робота!")
 
-**Включіть соціальні медіа.** Заохочуйте учнів робити замітки у соціальних медіа (якщо це доречно), коли вони завершили, наприклад "Я пройшов Годину коду разом з ________ А ви? #HourOfCode" або "Я пройшов #HourofCode в рамках #CSEdWeek. А ви? @Scratch.” Використовуйте хеш-тег **#HourOfCode** (з великими літерами H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode" або "Я пройшов #HourofCode в рамках #CSEdWeek. А ви? @Scratch.” Використовуйте хеш-тег **#HourOfCode** (з великими літерами H, O, C)
 
-**Розробіть свої завдання не лише англійською.** Ми зосереджені на міжнародній кампанії цього року і хочемо пропонувати завдання для користувачів, які не знають англійської.
+**Create your activity in Spanish or in other languages besides English.** ]
 
 **Поясніть або прив'яжіть своє завдання до соціально значущого контексту.** Програмування стає суперсилою, коли учні бачать, як вони можуть змінити світ на краще!
 
 **Не вимагайте реєстрації чи платежу, перед тим як учні спробують ваш підручник.** Підручники, які вимагають реєстрації або оплати, не будуть включені у список
 
-**Перевірте, чи можна ваш підручник використовувати для [парного програмування](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
-
-Три правила парного програмування у шкільних умовах:
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
   * Виконавець працює з мишкою та клавіатурою.
   * Керівник вносить пропозиції, вказує на помилки та задає питання. 
@@ -183,15 +193,15 @@ Code.org розмістить різноманітні навчальні рес
 
 ## Рекомендації щодо торгової марки
 
-Близько 40 мільйонів учнів спробували Годину коду минулого року, і 97% вчителів висловили прохання повторити цей захід. Ми працюємо для того, щоб цей рух став чітко спланованою щорічною подією.
+After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
 Одним з аспектів цього є захист торгової марки "Hour of Code" з метою запобігання плутанини. Багато наших партнерів-розробників завдань використали "Hour of Code" на своїх сайтах. Ми не хочемо забороняти таке використання, але воно має перебувати в межах вимог:
 
-  1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Вдалий приклад: "Візьміть участь у Годині коду на ACMECorp.com". Приклад невдалого використання: "Спробуйте Годину коду від ACME Corp"
+  1. Будь-яке посилання на Годину коду має використовуватись таким чином, щоб не створювати враження про те, що це Ваша власна торгова марка, натомість посилаючись на масовий рух Години коду. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Приклад невдалого використання: "Спробуйте Годину коду від ACME Corp"
   2. Використовуйте позначку "TM" у найбільш вагомих місцях згадування Години коду на своєму сайті та в описі програми
   3. Додайте на сторінку (або в колонтитул) текстовий блок з посиланнями на сайти CSEdWeek та Code.org, з наступним змістом:
     
-    ***"Година коду" є національною ініціативою тижня інформатики [csedweek.org] та проекту Code.org [code.org] з метою запропонувати для мільйонів учнів вступ до інформатики та програмування у формі одногодинного заняття."***
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
   4. Не використовуйте "Годину коду" в назвах програм
 
@@ -207,13 +217,12 @@ Code.org розмістить різноманітні навчальні рес
 
 Якщо Ваш підручник буде затверджено і розміщено у переліку посібників, Code.org надасть унікальний піксель відстеження для додавання на сторінки цього ресурсу. Див. приклад нижче.
 
-***Примітка: для встановлюваних додатків це робити не обов'язково (для iOS/Android додатків або комп'ютерних програм)***
+Примітка: для встановлюваних додатків це робити не обов'язково (для iOS/Android додатків або комп'ютерних програм)
 
-**Приклад пікселя відстеження для AppInventor:**
+Приклад пікселя відстеження для AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
-
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
 [**На початок**](#top)
 
@@ -221,10 +230,9 @@ IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
 
 ## Сприяння підручникам, тижню інформатики та Годині коду
 
-Ми просимо усіх поширювати власні одно-годинні підручники для своїх користувачів. Будь ласка, скеровуйте учасників на свою сторінку Години коду. Знайомі користувачі ймовірніше відреагують на особисте запрошення спробувати Ваш підручник. Використовуйте міжнародну кампанію тижня інформатики Година коду для того, щоб запросити інших приєднатися. Допоможіть нам зібрати 100 мільйонів учасників.
+Ми просимо усіх поширювати власні одно-годинні підручники для своїх користувачів. Please direct them to ***your*** Hour of Code page. Знайомі користувачі ймовірніше відреагують на особисте запрошення спробувати Ваш підручник. Використовуйте міжнародну кампанію тижня інформатики Година коду для того, щоб запросити інших приєднатися. Допоможіть нам зібрати 100 мільйонів учасників.
 
-  * Рекламуйте Годину коду та тиждень інформатики на своєму сайті.  
-    Приклад: <http://www.tynker.com/hour-of-code>
+  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
   * Поширюйте інформацію про Годину коду через соціальні мережі, традиційні медіа, списки розсилки тощо, використовуючи хеш-тег **#HourOfCode** (з великими літерами H, O, C)
   * Організуйте місцевий захід або попросіть співробітників провести захід у найближчій школі чи спільноті.
   * Ознайомтесь з нашим ресурсним комплектом з подальшою інформацією (скоро).

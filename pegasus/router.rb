@@ -190,6 +190,7 @@ class Documents < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
+    last_modified(File.mtime(path))
 
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
@@ -256,7 +257,14 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    css
   end
 
   # rubocop:disable Lint/Eval
