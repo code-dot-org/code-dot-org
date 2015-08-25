@@ -81,6 +81,7 @@ crowdincode_index = 2
 ##                                                                                     ##
 #########################################################################################
 
+puts "Updating crowdin codes to our codes..."
 languages.each_pair do |name, codes|
   # rename downloaded folders from language to locale
   if File.directory?("../locales/#{name}/")
@@ -92,11 +93,13 @@ languages.each_pair do |name, codes|
   old_path = "../locales/#{codes[locale_index]}/hourofcode/en.yml"
   new_path = "../locales/#{codes[locale_index]}/hourofcode/#{codes[code_index]}.yml"
   File.rename(old_path, new_path)
+  puts "Renaming #{codes[locale_index]}.yml to #{codes[code_index]}.yml"
 
   # edit the code in the yml file for special coded languages
   unless codes[crowdincode_index].nil?
     file = "../locales/#{codes[locale_index]}/hourofcode/#{codes[code_index]}.yml"
     File.write(file, File.read(file).gsub(/#{codes[crowdincode_index]}:/, "#{codes[code_index]}:"))
+    puts "Fixed special locale #{codes[crowdincode_index]} to #{codes[code_index]}"
   end
 end
 
@@ -108,8 +111,11 @@ end
 ##                                                                                     ##
 #########################################################################################
 
+puts "Copying files from cdo/i18n to hoc.com/i18n..."
 languages.each_pair do |name, codes|
   unless codes[locale_index] == "en-US"
+    puts "Copied locale #{codes[code_index]}"
+
     i18n_path = "../locales/#{codes[locale_index]}/hourofcode"
     hoc_path = "../../pegasus/sites.v3/hourofcode.com/i18n"
     FileUtils.cp(i18n_path + "/#{codes[code_index]}.yml", hoc_path)
@@ -144,6 +150,7 @@ end
 ##                                                                                     ##
 #########################################################################################
 
+puts "Fixing crowdin markdown errors..."
 # remove all metadata
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
   File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/m, ""))
