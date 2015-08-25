@@ -1,11 +1,21 @@
-/* global React */
+/* $ */
 
-// TODO - looks like this ends up on every page - not only if we javascript_include_tag it
+// TODO - this code might better live in shared eventually. doing that would
+// require adding JSX transpiling to shared, and the ability to output multiple
+// bundles
 
-// TODO - i dont like having to wait on ready, but it seems like we need it
-// since React won't be immediately available
-$(window).ready(function () {
-  window.dashboard = window.dashboard || {};
+window.dashboard = window.dashboard || {};
+
+var SmallFooter;
+
+/**
+ * Gets our React component SmallFooter. We use a getter so that we don't depend
+ * on React being in the global namespace at load time.
+ */
+window.dashboard.getSmallFooterComponent = function (React) {
+  if (SmallFooter) {
+    return SmallFooter;
+  }
 
   var EncodedParagraph = React.createClass({
     render: function () {
@@ -15,7 +25,7 @@ $(window).ready(function () {
     }
   });
 
-  window.dashboard.SmallFooter = React.createClass({
+  return SmallFooter = React.createClass({
     propTypes: {
       // We let dashboard generate our i18n dropdown and pass it along as an
       // encode string of html
@@ -32,7 +42,8 @@ $(window).ready(function () {
         translate: React.PropTypes.string.isRequired,
         tos: React.PropTypes.string.isRequired,
         privacy: React.PropTypes.string.isRequired,
-      }).isRequired
+      }).isRequired,
+      baseStyle: React.PropTypes.object
     },
 
     getInitialState: function () {
@@ -40,7 +51,6 @@ $(window).ready(function () {
         copyrightVisible: false,
         moreVisible: false,
         hidRecently: false,
-        // TODO - combine with visibility?
         copyrightStyle: null,
         moreMenuStyle: null
       };
@@ -108,17 +118,18 @@ $(window).ready(function () {
     },
 
     render: function () {
-      var copyrightStyle = this.state.copyrightStyle || {};
-      copyrightStyle.display = this.state.copyrightVisible ? 'block' : 'none';
-
-      var moreStyle = this.state.moreMenuStyle || {};
-      moreStyle.display = this.state.moreVisible ? 'block': 'none';
+      var copyrightStyle = $.extend({}, this.state.copyrightStyle, {
+        display: this.state.copyrightVisible ? 'block' : 'none'
+      });
+      var moreStyle = $.extend({}, this.state.moreMenuStyle, {
+        display: this.state.moreVisible ? 'block': 'none'
+      });
 
       var caretIcon = this.state.moreVisible ? 'fa fa-caret-down' : 'fa fa-caret-up';
 
       return (
         <div>
-          <div className="small-footer" ref="smallFooter">
+          <div className="small-footer" ref="smallFooter" style={this.props.baseStyle}>
             <div dangerouslySetInnerHTML={{
                 __html: decodeURIComponent(this.props.i18nDropdown)
             }}/>
@@ -160,4 +171,4 @@ $(window).ready(function () {
       );
     }
   });
-});
+}

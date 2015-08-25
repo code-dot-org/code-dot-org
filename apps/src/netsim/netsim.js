@@ -979,6 +979,8 @@ function resizeFooterToFitToLeftOfContent() {
     var instructionsWidth = instructions.offsetWidth + instructions.offsetLeft;
     smallFooter.style.maxWidth = instructionsWidth + 'px';
   }
+  // TODO - would this be better?
+  // smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {

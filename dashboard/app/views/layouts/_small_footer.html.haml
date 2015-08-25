@@ -1,5 +1,4 @@
 = javascript_include_tag 'react'
-= javascript_include_tag 'footer/small_footer'
 
 #page-small-footer
 
@@ -8,7 +7,7 @@
   $(window).ready(function () {
     var i18nDropdown = "#{URI.encode(i18n_dropdown.to_str) if view_options[:has_i18n]}";
 
-    React.render(React.createElement(window.dashboard.SmallFooter, {
+    React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
       i18nDropdown: i18nDropdown,
       strings: {
         copyright: "#{I18n.t('footer.copyright')}",
