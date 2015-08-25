@@ -950,7 +950,7 @@ function resizeLeftColumnToSitAboveFooter() {
     return;
   }
 
-  var smallFooter = document.querySelector('#page-small-footer .small-footer')
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base')
 
   var bottom = 0;
   if (smallFooter) {
@@ -967,7 +967,7 @@ function resizeLeftColumnToSitAboveFooter() {
 function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
   var instructions = document.querySelector('.instructions');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer')
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base')
 
   if (!smallFooter) {
     return;
