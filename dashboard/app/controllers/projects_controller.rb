@@ -51,7 +51,8 @@ class ProjectsController < ApplicationController
         callouts: [],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
         # for sharing pages, the app will display the footer inside the playspace instead
-        small_footer: !sharing && (@game.uses_small_footer? || enable_scrolling?),
+        no_footer: sharing && @game.owns_footer_for_share?,
+        small_footer: (@game.uses_small_footer? || enable_scrolling?),
         has_i18n: @game.has_i18n?
     )
     render 'levels/show'

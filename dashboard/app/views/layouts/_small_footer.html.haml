@@ -9,18 +9,27 @@
 
     React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
       i18nDropdown: i18nDropdown,
-      strings: {
-        copyright: "#{I18n.t('footer.copyright')}",
-        more: "#{I18n.t('footer.more')}",
-        thank_you: "#{URI.escape(I18n.t('footer.thank_you'))}",
-        help_from_html: "#{I18n.t('footer.help_from_html')}",
-        art_from_html: "#{URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year))}",
-        powered_by_aws: "#{I18n.t('footer.powered_by_aws')}",
-        trademark: "#{URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))}",
-        support: "#{I18n.t('footer.support')}",
-        translate: "#{I18n.t('footer.translate')}",
-        tos: "#{I18n.t('footer.tos')}",
-        privacy: "#{I18n.t('footer.privacy')}",
-      }
+      copyrightInBase: true,
+      copyrightStrings: window.dashboard.copyrightStrings,
+      baseCopyrightString: "#{I18n.t('footer.copyright')}",
+      baseMoreMenuString: "#{I18n.t('footer.more')}",
+      menuItems: [
+        {
+          text: "#{I18n.t('footer.support')}",
+          link: "https://support.code.org"
+        },
+        {
+          text: "#{I18n.t('footer.translate')}",
+          link: "https://code.org/translate"
+        },
+        {
+          text: "#{I18n.t('footer.tos')}",
+          link: "https://code.org/tos"
+        },
+        {
+          text: "#{I18n.t('footer.privacy')}",
+          link: "https://code.org/privacy"
+        }
+      ]
     }), document.getElementById('page-small-footer'));
   });
