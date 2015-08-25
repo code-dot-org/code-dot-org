@@ -77,4 +77,15 @@ TEACHERS = {}.tap do |results|
 end
 puts "#{TEACHERS.count} teachers loaded."
 
+BRAZIL = {}.tap do |results|
+  (
+  query_contacts(q: 'kind_s:"HocSignup2014" && location_country_s:"Brazil"')
+  ).each do |i|
+    email = i[:email].downcase.strip
+    results[email] = i unless UNSUBSCRIBERS[email]
+  end
+end
+puts "#{TEACHERS.count} teachers loaded."
+
 export_contacts_to_csv TEACHERS, "latin-america-excluding-brazil-teachers.csv"
+export_contacts_to_csv BRAZIL, "brazil-teachers.csv"
