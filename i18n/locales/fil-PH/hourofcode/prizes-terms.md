@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Prizes Terms layout: wide nav: resources_nav
 
 * * *
 
@@ -8,26 +8,26 @@ title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 ## Dropbox space o Skype credit:
 
-Ang 10GB ng Dropbox space o $10 ng Skype credit ay limitado para sa mga Guro. Ang 10GB mula sa Dropbox ay kailangang idagdag sa nauna ng Dropbox account. Limitado ang premyo sa isa kada isang organizer.
+Ang 10GB ng Dropbox space o $10 ng Skype credit ay limitado para sa mga Guro. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limitado ang premyo sa isa kada isang organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 Ang bawat organizer ay kailangang magparehistro sa Hour of Code upang makuha ang Dropbox space o ang Skype credit. Kung ang iyong buong paaralan ay sasali sa Hour of Code, bawat isang guro ay kailangang magparehistro bilang organizer para makasali.
 
-Magbibigay ang Code.org ng paalala sa mga organizer pagkatapos ng Hour of Code (Disyembre 8-14) kung paano makukuha ang Dropbox space o ang Skype credit.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Maki-Video chat kasama ang guest speaker:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Ang premyo ay limitado sa K-12 na mga silid-aralan sa US at Canada lamang. To qualify, sign up your classroom by November 2, 2015. Ang Code.org ay pipili ng panalong silid-aralan, magbibigay ng oras para sa web chat, at makipagtulungan sa mga naaangkop na guro upang i-set up ang mga detalye ng teknolohiya. Ang iyong buong paaralan ay hindi kailangan mag-apply upang maging kuwalipikado para sa premyo. Ang parehong pampubliko at pribadong paaralan ay eligbile upang manalo.
 
 ## Laptop para sa buong klase (o $10,000 para sa gamit sa technology):
 
-Ang premyo ay limitado lamang sa mga pampublikong K-12 paaralan sa Estados Unidos. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Ang premyo ay limitado lamang sa mga pampublikong K-12 paaralan sa Estados Unidos. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Isang paaralan kada isang lugar sa Estados Unidos ang makakatanggap ng computer sa para sa klase. Code.org will select and notify winners via email by December 1, 2015.
 
-Para mapatunayan na ang pa premyong ito ay walang halong daya.
+Upang linawin, ito ay hindi isang sweepstakes o paligsahan na kinakailangan ng swerte.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Walang pinansiyal o panganib na kasangkot sa pag-apply - anumang paaralan o silid-aralan ay maaaring lumahok, nang walang anumang bayad sa Code.org o iba pang mga organisasyon
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Ang mga nanalo ay pagpipilian lamang sa mga paaralan kung saan ang buong silid-aralan (o sa paaralan) ay lumahok sa Hour of Code, at nagbigay ng test sa kakayahan ng mga mag-aaral at mga guro.
 
 <% end %>

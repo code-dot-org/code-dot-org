@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Prizes Terms layout: wide nav: resources_nav
 
 * * *
 
@@ -8,21 +8,21 @@ title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 ## مساحة تخزينية على Dropbox أو رصيد Skype:
 
-إن 10 غيغا بايت من المساحة التخزينية على Dropbox ، أو عشرة دولارات من رصيد Skype تقتصر على المراحل التعليميه الابتدائي ، الثانوي ، كادر المدرسين لنشاطات ما بعد المدرسة و الهيئات التعليمية. إن مساحة 10 جيغا بايت الخاليه لا بد أن تضاف إلى حساب Dropbox موجود مسبقاً. جائزة واحدة لكل منظمة.
+إن 10 غيغا بايت من المساحة التخزينية على Dropbox ، أو عشرة دولارات من رصيد Skype تقتصر على المراحل التعليميه الابتدائي ، الثانوي ، كادر المدرسين لنشاطات ما بعد المدرسة و الهيئات التعليمية. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. جائزة واحدة لكل منظمة. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 على كل منظم للحدث أن يسجل في "ساعة من الكود البرمجي" حتى يحصل على جائزة المساحة التخزينية على Dropbox أو رصيد Skype. إذا شاركت مدرستك بشكل كامل في حدث "ساعة من الكود البرمجي", فلا بد لكل معلم في المدرسة من التسجيل بشكل منفصل كمنظم للحدث حتى يكون مؤهلاً للفوز بالجائزة.
 
-سوف تتصل منظمة "Code.org" بالمنظمون بعد حدث "ساعة من الكود البرمجي" (8-14 كانون الأول/ديسمبر) لتوفير تعليمات الحصول على مساحة التخزين على Dropbox أو رصيد Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## محادثة مرئية مع ضيف متحدث:
 
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 14, 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## مجموعة من الكمبيوترات المحمولة (أو قيمة عشرة آلاف دولار لأي تقنية أخرى):
 
-هذه الجائزة مقتصرة على المدارس العامه غير الحكومية للمراحل الابتدائية والثانوية ما قبل الجامعة في الولايات المتحدة الأميركية. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+هذه الجائزة مقتصرة على المدارس العامه غير الحكومية للمراحل الابتدائية والثانوية ما قبل الجامعة في الولايات المتحدة الأميركية. To qualify, your entire school must register for the Hour of Code by November 16, 2015. مدرسة واحدة في كل ولاية أميركية سوف تتلقى مجموعة من الحاسب الألي. Code.org will select and notify winners via email by December 1, 2015.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

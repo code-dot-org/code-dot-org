@@ -1,6 +1,6 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: Prizes Terms layout: wide nav: resources_nav
 
 * * *
 
@@ -8,26 +8,26 @@ title: How-to Guide for Organisations layout: wide nav: resources_nav
 
 ## Dropbox alanı veya Skype kredisi:
 
-10 GB'lık Dropbox alanı ve 10$'lık Skype kredisi okul öğretmenlerini, okul sonrası eğitimcilerini ve eğitim organizasyonlarını kapsar. 10 GB'lık Dropbox alanı var olan bir Dropbox hesabına ilave edilir. Organizatör başına 1 ödeme ile sınırlıdır.
+10 GB'lık Dropbox alanı ve 10$'lık Skype kredisi K-12 okul öğretmenlerini, okul sonrası eğitimcilerini ve eğitim organizasyonlarını kapsar. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Organizatör başına 1 ödeme ile sınırlıdır. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
 Her organizatör Dropbox alanı ve Skype kredisi almak için Kodlama Saatine üye olmalıdır. Okulunuzdaki herkes Kodlama Saatine katılacaksa, her bir eğitimci yetkilendirme için bireysel olarak üye olmalıdır.
 
-Code.org, Kodlama Saatinden (8-14 Aralık) sonra organizatörlerle iletişim kuracak ve Dropbox alanı veya Skype kredisini ödül sahibine teslim etmek için gerekli yönlendirmeleri sağlayacaktır.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Bir konuk konuşmacıyla video sohbeti:
 
-Ödül Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. Hak kazanmak için 14 Kasım 2014 tarihine kadar sınıfınızı kaydedin. Code.org kazanan okulları rastgele seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını ayarlayacaktır. Ödüle hak kazanmak için bütün okulun katılması zorunlu değildir. Bütün devlet okulları ve özel okullar katılma hakkına sahiptir.
+Para ödülü Amerika ve Kanada'daki K-12 derslikleri ile sınırlıdır. To qualify, sign up your classroom by November 2, 2015. Code.org kazanan sınıfları seçecek, web görüşmesi için bir zaman aralığı belirleyecek ve uygun öğretmenle işbirliği içinde teknoloji detaylarını ayarlayacaktır. Ödüle hak kazanmak için bütün okulun katılması zorunlu değildir. Bütün devlet okulları ve özel okullar katılma hakkına sahiptir.
 
 ## Tüm sınıfa dizüstü bilgisayar (veya 10.000$ değerinde başka bir teknoloji):
 
-Ödül sadece Amerikan devlet okulları ile sınırlıdır. Hak kazanmak için tüm okul 14 Kasım 2014 tarihine kadar Kodlama Saati için kayıt olmalıdır. Amerikada her eyalette bir okul sınıf-seti bilgisayarların sahibi olacaktır. Code.org, kazananları seçecek ve1 Aralık 2014 tarihinde e-posta yolu ile bilgilendirecektir.
+Ödül sadece Amerikan K-12 devlet okulları ile sınırlıdır. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Amerika'da her eyalette bir okul bir sınıflık bilgisayar sahibi olacaktır. Code.org will select and notify winners via email by December 1, 2015.
 
-Netleştirmek için; bu bir piyango veya saf şans içeren bir yarışma değildir.
+Netleştirmek gerekirse ; bu bir çekiliş veya şans içeren bir yarışma değildir.
 
-1)Herhangi bir finansal risk söz konusu değildir - Code.org'a ya da başka bir organizasyona ödeme yapmadan, bütün okullar veya sınıflar katılabilir
+1) Başvurunun herhangi bir finansal risk içermesi söz konusu değildir - Code.org'a ya da başka bir organizasyona her hangi bir ödeme yapmadan, bütün okullar veya sınıflar katılabilir
 
-2) Kazananlar yalnızca bütün sınıf ( veya okul) olarak, öğrenciler ve öğretmenlerin toplu beceri testleri içeren Kodlama Saati'ne katılanlar arasından seçilecektir.
+2) Kazananlar yalnızca öğrenci ve öğretmenlerin ortak becerilerini kapsayan bütün bir sınıf ( veya okul) olarak Kodlama Saati'ne katılanlar arasından seçilecektir.
 
 <% end %>
