@@ -305,11 +305,13 @@ var drawDiv = function () {
     footerDiv.setAttribute('id', 'footerDiv');
     divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
 
+    // TODO - i18n
     React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
       i18nDropdown: '',
+      copyrightInBase: false,
       strings: {
-        copyright: "copyright",
-        more: "more",
+        copyright: "Copyright Info",
+        more: "Built on Code Studio",
         thank_you: "thank_you",
         help_from_html: "help_from_html",
         art_from_html: "art_from_html",
@@ -320,11 +322,12 @@ var drawDiv = function () {
         tos: "tos",
         privacy: "privacy",
       },
+      rowHeight: 34,
+      style: {
+        fontSize: 18
+      },
       baseStyle: {
-        width: $("#divApplab").width(),
-        // We want a height of 34 after padding top/bottom have been applied
-        height:  34 - 2 * 3,
-        fontSize: 20
+        width: $("#divApplab").width()
       }
     }), footerDiv);
   }

@@ -894,7 +894,7 @@ function resizePinnedBelowVisualizationArea() {
 
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('#page-small-footer .small-footer')
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base')
 
   var top = 0;
   if (visualization) {
@@ -1000,7 +1000,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
 
-  var smallFooter = document.querySelector('#page-small-footer .small-footer')
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base')
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -1389,7 +1389,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector('#page-small-footer .small-footer')
+    var smallFooter = document.querySelector('#page-small-footer .small-footer-base')
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
