@@ -1,7 +1,5 @@
 
 
-[<button style="float: right; margin-top: 50px">Meld uw evenement aan</button>](/#join)
-
 ## Hoe je de aandacht van de media trekt voor je Uur Code-evenement
 
 *Voor vragen van pers en media, neem contact op met <press@code.org>*
@@ -11,7 +9,7 @@
   * Neem twee weken voor je evenement contact op met de media. Krijg je niet direct antwoord, bel of mail dan nog even na.
   * Vraag of een collega of vrijwilliger fotos wil nemen om online te delen en naar de pers te sturen.
   * Schrijf over het Uur Code op de website van de school en in het schoolblad. Schrijf over het evenement zelf en voeg afbeeldingen toe van deelnemers.
-  * Deel je plannen en aankondigen op Facebook en Twitter. Gebruik de hashtag **#HourOfCode** zodat Code.org je evenement kan zien en promoten.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Stappenplan:
 
@@ -47,13 +45,11 @@ In China krijgen alle leerlingen informatica om te slagen voor hun middelbare sc
 
 **Meer details en een citaat dat je kunt gebruiken in materialen**
 
-"Het Uur Code is ontworpen om code te ontrafelen en te laten zien dat informatica geen rocket-science is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Vorig jaar probeerden 15 miljoen leerlingen een Uur Code. Nu richten we ons op 100 miljoen leerlingen over de hele wereld om te laten zien dat de vraag naar relevant 21ste-eeuws informaticaonderwijs alle landsgrenzen overschijdt en geen beperkingen kent."
+"Het Uur Code is ontworpen om code te ontrafelen en te laten zien dat informatica geen rocket-science is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Over Code.org**
 
-Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan informatica en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde ethnische groepen. Zijn visie is dat elke student in elke school moet de kans krijgen om te leren programmeren van computers. Na de start in 2013 organiseerde Code.org de 'Uur Code'-campagne — welke miljoenen leerlingen in aanraking heeft gebracht met informatica — ging partnerschappen aan met meer dan 30 schooldistricten in Amerika, en lanceerde Code Studio, een open-source online leerplatform voor alle leeftijden. Voor meer informatie, bezoek: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Zijn visie is dat elke student in elke school moet de kans krijgen om te leren programmeren van computers. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Voor meer informatie, bezoek: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Voor meer matriaal en voorbeeld e-mails klik[ hier](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Meld uw evenement aan</button></a>

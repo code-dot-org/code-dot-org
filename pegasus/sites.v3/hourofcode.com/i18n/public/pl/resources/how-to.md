@@ -1,19 +1,11 @@
 
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Jak przeprowadzić jedną Godzinę Kodowania
-  </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Zarejestruj swoje wydarzenie</button></a>
-  </div>
-</div>
+# Jak przeprowadzić jedną Godzinę Kodowania
 
-## 1) Watch this how-to video <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Try the tutorials:
+## 1) Obejrzyj ten film instruktażowy <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 2) Spróbuj samouczków:
 
-Umieścimy szeroki wybór zabawnych, godzinnych samouczków dla uczniów w każdym wieku, utworzonych przez naszych partnerów. Nowe samouczki pojawią się, by rozpocząć Godzinę Kodowania, przed 8-14 grudnia 2014 roku.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **Wszystkie samouczki Godziny Kodowania:**
 
@@ -22,34 +14,30 @@ Umieścimy szeroki wybór zabawnych, godzinnych samouczków dla uczniów w każd
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Plan your hardware needs - computers are optional
 
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
-
-## 4) Plan your hardware needs - computers are optional
-
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+Najlepiej poprowadzić Godzinę Kodowania przy użyciu komputerów z dostępem do internetu. Nie potrzebujesz jednak komputera dla każdego dziecka i możesz poprowadzić Godzinę Kodowania nawet bez komputerów.
 
   * **Przetestuj samouczki na szkolnych komputerach lub urządzeniach.** Upewnij się, że działają prawidłowo (z dźwiękiem i obrazem).
   * **Zrób podgląd strony końcowej z gratulacjami** aby sprawdzić, co uczniowie zobaczą kiedy skończą zadania. 
   * **Zapewnij słuchawki dla swojej klasy** lub poproś uczniów, aby sami je przynieśli, jeśli samouczek, który wybrałeś(aś) działa najlepiej z dźwiękiem.
 
-## 5) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
   * **Nie wystarcza urządzeń dla wszystkich uczniów?** Mogą oni [programować w parach](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Gdy uczniowie dobierają się w pary, pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
   * **Masz wolne łącze?** Pokazuj filmy całej klasie na projektorze, aby każdy uczeń nie musiał pobierać swojego filmu. Możesz też wypróbować samouczki offline.
 
-## 6) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Pokaż uczniom inspiracyjny filmik żeby wystartować Godzinę Kodowania. Przykłady:
 
   * Orginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy koszykówki Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Film inaugurujący Godzinę Kodowania w 2013 roku ](https://www.youtube.com/watch?v=FC5FbmsH4fw), lub <% if @country == 'uk' %> [film Godzina Kodowania 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [film Godzina Kodowania 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Prezydent Obama zachęcający wszystkich studentów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Niech Twoi uczniowie będą podekscytowani - zrób im krótkie wprowadzenie**
 
-Most kids don’t know what computer science is. Here are some ideas:
+Większość uczniów nie wie, co to jest informatyka. Oto kilka pomysłów:
 
   * Wyjaśnij to w prosty sposób, używając przykładów zastosowań, które będą bliskie zarówno chłopcom jak i dziewczynkom (ratowanie życia, pomaganie ludziom, komunikacja międzyludzka etc.).
   * Powiedz np. "Pomyślcie o rzeczach w waszym życiu codziennym, które wykorzystują rozwiązania informatyczne: telefon komórkowy, mikrofalówka, komputer, sygnalizacja świetlna... Aby powstały, potrzebny był informatyk"
@@ -58,26 +46,26 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 ## 6) Start your Hour of Code
 
-**Direct students to the activity**
+**Skieruj uczniów na działania**
 
-  * Napisz link do samouczka na tablicy. Znajdź link wymieniony w informacji [dla wybranego samouczka](http://<%= codeorg_url() %>/learn) pod liczbą uczestników. [hourofcode.com/co](http://hourofcode.com/co)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * Powiedz uczniom, by weszli na podaną stronę i rozpoczęli samouczek.
 
-**When your students come across difficulties**
+**Kiedy Twoi uczniowie napotkają trudności**
 
   * Powiedz uczniom, "Zapytaj trzech a potem mnie" Zapytaj 3 kolegów i, jeśli oni nie znają odpowiedzi, zapytaj nauczyciela.
   * Zachęcaj uczniów i dawaj im pozytywną informację: "Świetnie ci idzie, próbuj dalej."
   * Nie ma nic złego w odpowiedzi 'Nie wiem'. Spróbujmy razem dojść do rozwiązania. Jeśli nie możesz znaleźć rozwiązania, to jest dobra lekcja nauki dla klasy: "Technologia nie zawsze działa tak jak byśmy chcieli". Razem jesteśmy społecznością uczniów." Oraz: "Nauka programowania jest jak uczenie się nowego języka; biegłość nabywa się z czasem."
 
-**What to do if a student finishes early?**
+**Co zrobić kiedy jeden z uczniów skończy zadanie przed czasem?**
 
   * Uczniowie mogą zobaczyć wszystkie samouczki i spróbować innej formy aktywności Godziny Kodowania na [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
   * Albo poproś uczniów którzy skończyli wcześniej, żeby pomogli kolegom, którym idzie nieco wolniej.
 
-**How do I print certificates for my students?**
+**Jak mam wydrukować certyfikaty dla moich uczniów?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Każdy uczeń może otrzymać certyfikat emailem gdy skończy [samouczki na Code.org](http://studio.code.org). Możesz kliknąć w certyfikat, żeby go wydrukować. Jednak jeśli chcesz przygotować nowe certyfikaty dla swoich uczniów, odwiedź naszą stronę [Certyfikaty](http://<%= codeorg_url() %>/certificates) żeby wydrukować tyle certyfikatów ile chcesz za jednym zamachem!
 
-**What comes after the Hour of Code?**
+**Co będzie się działo po Godzinie Kodowania?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %> 
+Godzina Kodowanie to dopiero pierwszy krok w podróży do wiedzy o tym jak działa technologia i jak tworzyć aplikacje komputerowe. <% if @country == 'uk' %> Godzina Kodowanie to dopiero pierwszy krok w podróży do wiedzy o tym jak działa technologia i jak tworzyć aplikacje komputerowe. Żeby kontynuować tę podróż, [zachęć dzieci, żeby dowiedziały się więcej w sieci](http://uk.code.org/learn/beyond). <% else %> Aby kontynuować tę podróż, sięgnij po dodatkowe zasoby dla nauczycieli [tutaj](http://<%= codeorg_url() %>/educate). Albo zachęć dzieci, żeby dowiedziały się więcej [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
