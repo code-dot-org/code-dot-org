@@ -1,48 +1,48 @@
 
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Casa, Senatul, stat, JUDEŢ sau oraş rezoluţie sau PROCLAMARE ###] – întrucât Saptamana Mondiala a Educatiei si Stiintei Calculatorului scoate în evidenţă rolul crucial pe care stiinta calculatoarelor il joacă în transformarea societăţii noastre şi modul în care aceasta permite inovarea şi creează oportunităţi economice;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[CASA SAU SENATUL REZOLUŢIE ###]
 
-[DATE]
+[DATA]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Întrucât tehnologia este o parte integrantă a culturii şi se transformă in functie de modul în care oamenii interacţionează cu fiecare şi de lumea din jurul lor;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Întrucât stiinta computerului si programarea transforma industria, creeaza noi domenii de comert, conduce inovaţia în toate domeniile ştiinţei, şi susţine productivitatea în sectorul economic stabilit;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Chiar daca acest câmpul de stiinta calculatorului stă la baza sectorului tehnologiei informaţiilor economiei noastre, care este o contribuţie considerabilă la datele economice ale Statelor Unite;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Întrucât câmpul de informatică este o stiinta fundamentala pentru era digitală;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Întrucât sectorul tehnologiei informaţiilor este poziţionat unic pentru a ajuta redresării economice prin cercetare şi dezvoltare de noi inovaţii;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Întrucât perspectivele pentru slujbe in IT sunt sclipitoare; una din 2 din friecare job-uri STEM sunt in IT;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Întrucât furnizarea sansei elevilor de a participa la activităţi de inalta clasa privind stiinta calculatorului si programare ii expune la oportunităţile bogate pe care domeniul le oferă şi la abilităţile de gândire critică, care le va servi toată viaţa;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Întrucât toţi studenţii merită o pregătire temeinică în stiinta calculatorului si programare, inclusiv accesul la cadrele didactice calificate, tehnologie, şi curriculum adecvat vârstei necesare pentru a invata informatica la nivelul primar şi secundar de educaţie;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Intrucat stiinta caclculatorului si programarea are provocarea de a se adresa, inclusiv claselor ce trebuie sa aiba cerinte de absolvire si sa ofere dezvoltarea profesorilor;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Întrucât participarea la un eveniment Hour of Code din timpul Saptamanii Educatiei poate servi la demitizarea domeniului şi poate sa încurajeze mai mulţi studenţi să aibă acces la studii suplimentare de stiinta computerului;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Întrucât câmpul de informatică are bariere semnificative de capital, inclusiv atragerea participarii mai multor fete şi a minorităţilor slab reprezentate la toate nivelurile;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Întrucât Grace Murray Hopper, una dintre primele femei în domeniul IT, a realizat noi limbaje de programare şi standardele pentru sisteme de calcul, care a pus bazele pentru multe progrese în informatică; şi
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) încurajează şcoli, cadre didactice, părinţi şi factorii de decizie politică să participe la Saptamana Educatiei Mondiale permiţându-le elevilor să participe la Ore de Programare;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) încurajează scoli, profesori, cercetători, universităţi, liderii de afaceri şi factorii de decizie politică să identifice mecanismele pentru ca profesorii să primeasca oportunitati de dezvoltare profesională pentru a oferi experienţe de învăţare durabile în stiinta computerului la toate nivelurile şi să încurajeze elevii să fie expusi la conceptele acestei stiinte;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) încurajează factorii de decizie politică să elimine barierele care împiedică clasele de informatica sa fie considerate egale cu cele de matematica sau ştiinţă in ceea ce priveste cerinţele de absolvire;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) încurajează oportunităţi, inclusiv prin programele existente, pentru femei şi minorităţile slab reprezentate înstiinta calculatorului si programare.
