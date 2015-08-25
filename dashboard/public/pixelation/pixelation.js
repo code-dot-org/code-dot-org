@@ -1,3 +1,5 @@
+/* global $ appOptions dashboard options */
+
 /**
  * Pixelation widget for visualizing image encoding.
  *
@@ -410,8 +412,9 @@ function showPNG() {
   options.saveProject && options.saveProject();
 }
 
+var finishedButton;
 function onFinishedButtonClick() {
-  var finishedButton = $('#finished');
+  finishedButton = $('#finished');
   if (finishedButton.attr('disabled')) {
     return;
   }
@@ -420,12 +423,12 @@ function onFinishedButtonClick() {
   if (options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    processResults(onComplete);
+    dashboard.dialog.processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  processResults(onComplete);
+  dashboard.dialog.processResults(onComplete);
 }
 
 /**
@@ -444,7 +447,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  showStartOverDialog(startOverConfirmed);
+  dashboard.dialog.showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {
