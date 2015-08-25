@@ -145,7 +145,8 @@
   }
 
   // Export the functions which are provided by this file.
-  dashboard.dialog = {
+  window.dashboard = window.dashboard || {};
+  window.dashboard.dialog = {
     showStartOverDialog: showStartOverDialog,
     processResults: processResults
   };
