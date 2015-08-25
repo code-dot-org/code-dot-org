@@ -5,6 +5,7 @@ module EmailValidator
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
+    return false if address.blank?  # Must not be blank
     email = Mail::Address.new(address)
 
     return false unless email.address == address  # Must be well-formed
@@ -15,7 +16,7 @@ module EmailValidator
     return false if domain_parts.length < 2
 
     # Reject invalid domains like "example..com"
-    return false if domain_parts.detect {|p| p == ""}
+    return false if domain_parts.include?('')
 
     # Everything valid!
     true

@@ -29,6 +29,10 @@ class EmailValidatorTest < Minitest::Unit::TestCase
 
   def test_invalid_addresses
     invalid_addresses = [
+      nil,
+      '',
+      ' ',
+      ' @ ',      
       'plainaddress',
       '#@%^%#$@#$@#.com',
       'joe@localhost',
