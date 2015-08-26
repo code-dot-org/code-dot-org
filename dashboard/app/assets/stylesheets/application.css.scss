@@ -302,6 +302,15 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    background-color: $dark-charcoal;
+    a {
+      &:hover {
+        color: $lightest_gray
+      }
+    }
+  }
 }
 
 .small-footer-base {
@@ -367,6 +376,15 @@ $small-footer-standard-width: 400px;
       background-color: $dark_charcoal;
       color: $lightest_gray;
       text-decoration: none;
+    }
+  }
+
+  .dark & {
+    & > li > a {
+      &:hover {
+        background-color: $lightest_gray;
+        color: $dark_charcoal;
+      }
     }
   }
 }

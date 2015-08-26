@@ -46,7 +46,8 @@ window.dashboard.getSmallFooterComponent = function (React) {
           text: React.PropTypes.string.isRequired,
           link: React.PropTypes.string.isRequired
         })
-      ).isRequired
+      ).isRequired,
+      className: React.PropTypes.string
     },
 
     getInitialState: function () {
@@ -156,7 +157,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
       var caretIcon = this.state.moreVisible ? 'fa fa-caret-down' : 'fa fa-caret-up';
 
       return (
-        <div style={styles.smallFooter}>
+        <div className={this.props.className} style={styles.smallFooter}>
           <div className="small-footer-base" ref="base" style={styles.base}>
             <div dangerouslySetInnerHTML={{
                 __html: decodeURIComponent(this.props.i18nDropdown)

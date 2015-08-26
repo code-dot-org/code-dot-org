@@ -322,8 +322,9 @@ function renderFooterInSharedGame() {
       fontSize: 18
     },
     baseStyle: {
-      width: $("#divApplab").width()
+      width: $("#divApplab").width(),
     },
+    className: 'dark',
     menuItems: [
       {
         text: 'How it Works',
