@@ -14,7 +14,7 @@ nav: pd2_nav
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (5 days in-person & ~8 hours online)###
 
 #### In-person workshop####
 Milestone Complete! 
