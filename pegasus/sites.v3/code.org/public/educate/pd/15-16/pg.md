@@ -43,11 +43,11 @@ Quarter 4: Saturday, May 14, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
+
 **Location**
 
 TBD
-<br/><br/>
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
