@@ -19,7 +19,7 @@ nav: pd2_nav
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (5 days in-person & ~8 hours online) ###
 
 
 #### In-person Workshop####
@@ -84,7 +84,7 @@ More info coming soon!
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)###
 
 
 #### In-person Workshop####
@@ -136,7 +136,7 @@ Water
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)###
 
 
 #### In-person Workshop####
@@ -164,13 +164,13 @@ Breakfast and lunch will be served.
 
 Columbus State Community College<br/>
 Conference Center<br/>
-Room 415<br/>
+Room 402<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Curriculum guide
 <br/>

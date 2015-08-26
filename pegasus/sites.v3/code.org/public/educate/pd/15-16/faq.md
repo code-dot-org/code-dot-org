@@ -69,7 +69,9 @@ If, for example, a teacher finishes Phase 1 on Wednesday, May 20, the payment wi
 *Note: Code.org is not responsible for delays in payment from districts to teachers. If your district pays you directly, please contact your district finance department with any payment delay questions.*
 
 ### Code.org Teacher Payment options: ###
-
+Teachers that are paid directly by their Districts can be found on [this list](https://docs.google.com/spreadsheets/d/1O1rvNDZ_TfAOfvxQG2wqi9BqG3JsrxG1BV9TruBpt3s/edit?usp=sharing). 
+<br/>
+<br/>
 Teachers being paid directly by Code.org can select from the following payment options.
 <br/>
 <br/>

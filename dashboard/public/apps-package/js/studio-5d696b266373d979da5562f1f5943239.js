@@ -1395,6 +1395,7 @@ Studio.init = function(config) {
   Studio.items = [];
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts = [];
+  Studio.tickIntervalId = null;
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1598,8 +1599,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
   });
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts.forEach(function (timeout) {
-    clearInterval(timeout);
+    clearTimeout(timeout);
   });
+  clearInterval(Studio.tickIntervalId);
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -2161,7 +2163,7 @@ Studio.execute = function() {
   }
 
   Studio.perExecutionTimeouts = [];
-  Studio.perExecutionTimeouts.push(window.setInterval(Studio.onTick, Studio.scale.stepSpeed));
+  Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
 Studio.feedbackImage = '';
