@@ -111,7 +111,15 @@ function loadLevel() {
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
   // Applab.footerlessAppHeight represents the height of only the "other"
-  Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
+  // TODO - only adjust if needed to get below 480
+  if (Applab.appHeight > 480) {
+    throw new Error('Strange things may happen with appHeight > 480');
+  }
+  if (Applab.appHeight === 480) {
+    Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
+  } else {
+    Applab.footerlessAppHeight = Applab.appHeight;
+  }
 
   // Override scalars.
   for (var key in level.scale) {
