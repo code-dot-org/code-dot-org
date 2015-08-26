@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  wrapup_video_id :integer
+#  trophies        :boolean          default(FALSE), not null
+#  hidden          :boolean          default(FALSE), not null
+#  user_id         :integer
+#  login_required  :boolean          default(FALSE), not null
+#  properties      :text
+#
+# Indexes
+#
+#  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include Seeded

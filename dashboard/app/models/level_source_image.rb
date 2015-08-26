@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: level_source_images
+#
+#  id              :integer          not null, primary key
+#  level_source_id :integer
+#  image           :binary(16777215)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+# Indexes
+#
+#  index_level_source_images_on_level_source_id  (level_source_id)
+#
+
 require 'cdo/aws/s3'
 require 'image_lib'
 require 'digest/md5'

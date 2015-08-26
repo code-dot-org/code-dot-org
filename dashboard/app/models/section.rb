@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: sections
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  name       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  code       :string(255)
+#  script_id  :integer
+#  grade      :string(255)
+#  admin_code :string(255)
+#  login_type :string(255)      default("email"), not null
+#
+# Indexes
+#
+#  index_sections_on_code     (code) UNIQUE
+#  index_sections_on_user_id  (user_id)
+#
+
 class Section < ActiveRecord::Base
   belongs_to :user
 

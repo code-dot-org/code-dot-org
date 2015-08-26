@@ -20,6 +20,7 @@ gem 'parallel'
 gem 'google-api-client'
 
 group :development do
+  gem 'annotate', '~> 2.6.6'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
