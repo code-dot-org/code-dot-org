@@ -38,6 +38,7 @@ group :development, :test do
 
   # for unit testing
   gem 'factory_girl_rails'
+  gem 'fakeweb'
   gem 'simplecov', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
