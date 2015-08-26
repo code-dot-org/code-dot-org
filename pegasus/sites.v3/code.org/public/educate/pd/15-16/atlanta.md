@@ -16,11 +16,11 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction  (~2 hours) ###
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 #### In-person Workshop####
 
@@ -48,10 +48,14 @@ Quarter 4: Saturday, April 23, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
-**Location**
 
-TBD
+**September 12th Location**
+
+Gwinnett Technical College<br/>
+Building 100<br/>
+Room 705 <br/>
+5150 Sugarloaf Parkway<br/>
+Lawrenceville, GA 30043<br/>
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -79,7 +83,7 @@ More info coming soon!
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)###
 
 #### In-person Workshop####
 
@@ -98,6 +102,9 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 Semester 1: Saturday, October 10, 2015 
 
 Semester 2: Saturday, March 5, 2016 
+
+8:00am - 4:00pm<br/>
+Breakfast and lunch will be served.
 
 **Location**
 
@@ -125,7 +132,7 @@ Water
 
 Milestone complete! 
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
 #### In-person Workshop####
 
@@ -149,10 +156,14 @@ Semester 2: Saturday, March 5, 2016
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
-<br/><br/>
-**Location**
 
-TBD
+**September 12th Location**
+
+Gwinnett Technical College<br/>
+Building 100<br/>
+Room 701<br/>
+5150 Sugarloaf Parkway<br/>
+Lawrenceville, GA 30043<br/>
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

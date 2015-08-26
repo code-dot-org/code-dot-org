@@ -1,6 +1,5 @@
 var assert = require('chai').assert;
 var _ = require('lodash');
-var timeoutList = require('@cdo/apps/timeoutList');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -20,7 +19,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
   if (!level.scale) {
     level.scale = {};
   }
-  level.scale.stepSpeed = 0;
+  level.scale.stepSpeed = 1;
   level.sliderSpeed = 1;
 
   // studio tests depend on timing
@@ -53,10 +52,7 @@ module.exports = function(testCollection, testData, dataItem, done) {
     //  we will have problems with the animating_ / waitingForReport_ states
     //  in the maze state machine)
     if (report.onComplete) {
-      // waitLong();
       setTimeout(report.onComplete, 0);
-      // timeoutList.waitAll();
-      // timeoutList.clearTimeouts();
     }
   };
 
@@ -116,13 +112,6 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  // TODO (brent): Intentionally not messing with timing yet, though that will
-  // come in a future commit.
-  // Stub timers to speed up tests depending on setTimeout/setInterval
-  // if(app == 'studio' || app == 'maze' || app == 'eval') {
-  //   require('@cdo/apps/timeoutList').stubTimer(true);
-  // }
-
   var main = window[app + 'Main'];
   main({
     skinId: skinId,
@@ -155,14 +144,6 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     onAttempt: onAttempt
   });
 }
-
-// function waitLong() {
-//   try {
-//     timeoutList.advance();
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }
 
 function setAppSpecificGlobals (app) {
   // app specific hacks

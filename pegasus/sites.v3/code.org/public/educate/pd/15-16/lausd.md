@@ -26,11 +26,11 @@ LAUSD teachers enrolled in the Computer Science Principles program have been ass
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction 
+### Phase 1: Online Introduction (~2 hours)
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 #### In-person Workshop####
 
@@ -85,13 +85,13 @@ More info coming soon!
 
 ## CS in Algebra
 
-### Phase 1: Online Introduction 
+### Phase 1: Online Introduction (~2 hours) 
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-I#### In-person Workshop####
+#### In-person Workshop####
 
 Milestone Complete!
 
@@ -105,11 +105,11 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 (This workshop will take place in Orange County)
+Semester 1: Saturday, October 10, 2015 <br/>(This workshop will take place in Orange County)
 
-Semester 2: Saturday, April 16, 2016 (This workshop will take place in Los Angeles)
+Semester 2: Saturday, April 16, 2016 <br/>(This workshop will take place in Los Angeles)
 
-You are expected to attend both of these workshops.
+<b>You are expected to attend both of these workshops.</b>
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
@@ -136,11 +136,11 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction ##
+### Phase 1: Online Introduction (~2 hours)##
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study 
+### Phase 2: Blended Summer Study   (3 days in-person & ~8 hours online) 
 
 #### In-person Workshop####
 
@@ -160,7 +160,7 @@ Semester 1: Saturday, October 17, 2015 (This workshop will take place in Orange 
 
 Semester 2: Saturday, February 20, 2016 (This workshop will take place in Los Angeles)
 
-You are expected to attend both of these workshops.
+<b>You are expected to attend both of these workshops.</b>
 
 
 8:00am - 4:00pm<br/>

@@ -1,3 +1,5 @@
+/* global $ appOptions dashboard options */
+
 /**
  * Pixelation widget for visualizing image encoding.
  *
@@ -6,7 +8,7 @@
 
 var MAX_SIZE = 400;
 
-var pixel_format, pixel_data, canvas, main_ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange, image_w, image_h;
+var pixel_format, pixel_data, canvas, main_ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange, image_w, image_h, sqSize;
 
 function pixelationInit() {
   pixel_format = document.querySelector('#pixel_format');
@@ -108,7 +110,7 @@ function drawGraph(ctx, exportImage) {
 
   var colorNums = bitsToColors(binCode, bitsPerPix);
 
-  var sqSize = 1, fillSize = 1, offset = 0;
+  sqSize = 1, fillSize = 1, offset = 0;
   if (!document.querySelector('input#actual_size:checked')) {
     // Auto-size pixel borders and edge offsets.
     sqSize = MAX_SIZE / Math.max(image_w, image_h);
@@ -397,20 +399,22 @@ function showPNG() {
     tempCanvas.width = image_w;
     tempCanvas.height = image_h;
   } else {
-    tempCanvas.width = MAX_SIZE;
-    tempCanvas.height = MAX_SIZE;
+    tempCanvas.width = image_w * sqSize;
+    tempCanvas.height = image_h * sqSize;
   }
   drawGraph(tempCanvas.getContext("2d"), true);
   var w = window.open('', 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
+  w.document.write('<style>* { margin: 0; })</style>');
   w.document.write('<img src="' + tempCanvas.toDataURL() + '">');
   w.document.close();
   options.saveProject && options.saveProject();
 }
 
+var finishedButton;
 function onFinishedButtonClick() {
-  var finishedButton = $('#finished');
+  finishedButton = $('#finished');
   if (finishedButton.attr('disabled')) {
     return;
   }
@@ -419,12 +423,12 @@ function onFinishedButtonClick() {
   if (options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    processResults(onComplete);
+    dashboard.dialog.processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  processResults(onComplete);
+  dashboard.dialog.processResults(onComplete);
 }
 
 /**
@@ -443,7 +447,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  showStartOverDialog(startOverConfirmed);
+  dashboard.dialog.showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {

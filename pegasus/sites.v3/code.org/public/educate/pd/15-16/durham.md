@@ -11,11 +11,11 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone Complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 
 #### In-person Workshop####
 
@@ -46,9 +46,11 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**September 12th Location**
 
-TBD
+American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
+318 Blackwell Street<br/>
+Durham, NC 27701
 
 **What to bring to Phase 3 quarterly sessions:**
 
