@@ -86,7 +86,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user_hero for student with script" do
-    user_script = create :user_script
+    user_script = create(:user_script, script: Script.get_from_cache(Script::FLAPPY_NAME))
     sign_in user = user_script.user
 
     p "working on user scripts"
