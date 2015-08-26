@@ -3,33 +3,30 @@
 #page-small-footer
 
 :javascript
-  // TODO - do i need a document.ready?
-  $(window).ready(function () {
-    var i18nDropdown = "#{URI.encode(i18n_dropdown.to_str) if view_options[:has_i18n]}";
 
-    React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
-      i18nDropdown: i18nDropdown,
-      copyrightInBase: true,
-      copyrightStrings: window.dashboard.copyrightStrings,
-      baseCopyrightString: "#{I18n.t('footer.copyright')}",
-      baseMoreMenuString: "#{I18n.t('footer.more')}",
-      menuItems: [
-        {
-          text: "#{I18n.t('footer.support')}",
-          link: "https://support.code.org"
-        },
-        {
-          text: "#{I18n.t('footer.translate')}",
-          link: "https://code.org/translate"
-        },
-        {
-          text: "#{I18n.t('footer.tos')}",
-          link: "https://code.org/tos"
-        },
-        {
-          text: "#{I18n.t('footer.privacy')}",
-          link: "https://code.org/privacy"
-        }
-      ]
-    }), document.getElementById('page-small-footer'));
-  });
+  var i18nDropdown = "#{URI.encode(i18n_dropdown.to_str) if view_options[:has_i18n]}";
+  React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
+    i18nDropdown: i18nDropdown,
+    copyrightInBase: true,
+    copyrightStrings: window.dashboard.copyrightStrings,
+    baseCopyrightString: "#{I18n.t('footer.copyright')}",
+    baseMoreMenuString: "#{I18n.t('footer.more')}",
+    menuItems: [
+      {
+        text: "#{I18n.t('footer.support')}",
+        link: "https://support.code.org"
+      },
+      {
+        text: "#{I18n.t('footer.translate')}",
+        link: "https://code.org/translate"
+      },
+      {
+        text: "#{I18n.t('footer.tos')}",
+        link: "https://code.org/tos"
+      },
+      {
+        text: "#{I18n.t('footer.privacy')}",
+        link: "https://code.org/privacy"
+      }
+    ]
+  }), document.getElementById('page-small-footer'));
