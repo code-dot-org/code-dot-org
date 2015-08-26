@@ -1,6 +1,6 @@
 /* $ */
 
-// TODO - this code might better live in shared eventually. doing that would
+// This code might better live in shared eventually. doing that would
 // require adding JSX transpiling to shared, and the ability to output multiple
 // bundles
 
@@ -164,7 +164,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
             }}/>
             <small>
               {this.renderCopyright()}
-              <a className="more-link" href="javascript:void(0)"
+              <a className="more-link" href="#"
                 onClick={this.toggleMore}>
                 {this.props.baseMoreMenuString + ' '}
                 <i className={caretIcon}/>
@@ -187,7 +187,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
       if (this.props.copyrightInBase) {
         return (
           <span>
-            <a className="copyright-link" href="javascript:void(0)"
+            <a className="copyright-link" href="#"
               onClick={this.toggleCopyright}>
               {this.props.baseCopyrightString}
             </a>

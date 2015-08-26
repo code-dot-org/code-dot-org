@@ -106,12 +106,10 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
-  // TODO - better name?
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
   // Applab.appHeight represents the height of the entire app (footer + other)
   // Applab.footerlessAppHeight represents the height of only the "other"
-  // TODO - only adjust if needed to get below 480
   if (Applab.appHeight > 480) {
     throw new Error('Strange things may happen with appHeight > 480');
   }
@@ -322,6 +320,7 @@ var drawDiv = function () {
 };
 
 function renderFooterInSharedGame() {
+  var divApplab = document.getElementById('divApplab');
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
@@ -351,11 +350,11 @@ function renderFooterInSharedGame() {
       },
       {
         text: applabMsg.reportAbuse(),
-        link: 'javascript:void(0)'
+        link: '#'
       },
       {
         text: applabMsg.copyright(),
-        link: 'javascript:void(0)',
+        link: '#',
         copyright: true
       },
       {
