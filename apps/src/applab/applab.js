@@ -92,6 +92,8 @@ var twitterOptions = {
 var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
+var FOOTER_HEIGHT = 34;
+
 // The typical width of the visualization area (indepdendent of appWidth)
 var vizAppWidth = 400;
 // The default values for appWidth and appHeight (if not specified in the level)
@@ -104,6 +106,12 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
+  // TODO - better name?
+  // In share mode we need to reserve some number of pixels for our in-app
+  // footer. We do that by making the play space slightly smaller elsewhere.
+  // Applab.appHeight represents the height of the entire app (footer + other)
+  // Applab.footerlessAppHeight represents the height of only the "other"
+  Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -183,7 +191,7 @@ function adjustAppSizeStyles(container) {
       scaleFactors[ind] *= vizScale;
     }
   }
-  var vizAppHeight = Applab.appHeight * vizScale;
+  var vizAppHeight = Applab.footerlessAppHeight * vizScale;
 
   // Compute new height rules:
   // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
@@ -232,7 +240,7 @@ function adjustAppSizeStyles(container) {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
-                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.footerlessAppHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
@@ -256,7 +264,7 @@ function adjustAppSizeStyles(container) {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px; line-height: " +
-              Applab.appHeight * scale + "px;";
+              Applab.footerlessAppHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -293,7 +301,7 @@ function adjustAppSizeStyles(container) {
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
-  divApplab.style.height = Applab.appHeight + "px";
+  divApplab.style.height = Applab.footerlessAppHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
     designMode.loadDefaultScreen();
