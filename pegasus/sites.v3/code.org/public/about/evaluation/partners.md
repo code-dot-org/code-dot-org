@@ -26,7 +26,7 @@ In an effort to create school-wide buy-in and support for our district partnersh
 
 - Respondents believe that computer science is necessary for high school students, but feel less strongly that it should be required. 
 - Respondents reported that the professional development “somewhat” influenced their values and beliefs about computer science and computer science education for students. The counselors reported a statistically significantly higher influence than the administrators.
-- Nearly a third of all respondents felt that the school did not have the resources necessary to teach computer science, specifically the [Exploring Computer Science](http://exploringcs.org) curriculum on which they received training.
+- Nearly a third of all respondents felt that the school did not have the resources (materials, CS content, and instructional strategy support) necessary to teach computer science, specifically the [Exploring Computer Science](http://exploringcs.org) curriculum on which they received training.
 
 Further study of the relationship between administrator and counselor attitudes and sustainable implementation of CS curricula is warranted.
 
