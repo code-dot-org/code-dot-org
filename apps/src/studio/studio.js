@@ -1778,7 +1778,10 @@ Studio.runButtonClick = function() {
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
-    shareCell.className = 'share-cell-enabled';
+    if (shareCell.className !== 'share-cell-enabled') {
+      shareCell.className = 'share-cell-enabled';
+      studioApp.onResize();
+    }
   }
 
   if (level.showZeroScore) {
