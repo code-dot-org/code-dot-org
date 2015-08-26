@@ -1,3 +1,23 @@
+# == Schema Information
+#
+# Table name: level_source_hints
+#
+#  id              :integer          not null, primary key
+#  level_source_id :integer
+#  hint            :text
+#  times_proposed  :integer
+#  priority        :float
+#  created_at      :datetime
+#  updated_at      :datetime
+#  user_id         :integer
+#  status          :string(255)
+#  source          :string(255)
+#
+# Indexes
+#
+#  index_level_source_hints_on_level_source_id  (level_source_id)
+#
+
 # A "hint" text displayed for a specific LevelSource to guide the player to a solution
 class LevelSourceHint < ActiveRecord::Base
   belongs_to :level_source

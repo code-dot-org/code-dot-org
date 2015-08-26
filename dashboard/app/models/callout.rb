@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: callouts
+#
+#  id               :integer          not null, primary key
+#  element_id       :string(1024)     not null
+#  localization_key :string(1024)     not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  script_level_id  :integer
+#  qtip_config      :text
+#  on               :string(255)
+#  callout_text     :string(255)
+#
+
 class Callout < ActiveRecord::Base
   include Seeded
   belongs_to :script_level, inverse_of: :callouts

@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: activity_hints
+#
+#  id                   :integer          not null, primary key
+#  activity_id          :integer          not null
+#  level_source_hint_id :integer
+#  created_at           :datetime
+#  updated_at           :datetime
+#  hint_visibility      :integer
+#  ip_hash              :integer
+#
+# Indexes
+#
+#  index_activity_hints_on_activity_id           (activity_id)
+#  index_activity_hints_on_level_source_hint_id  (level_source_hint_id)
+#
+
 # Links an Activity to a LevelSourceHint
 class ActivityHint < ActiveRecord::Base
   belongs_to :activity
