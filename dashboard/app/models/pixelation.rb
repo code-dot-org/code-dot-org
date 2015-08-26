@@ -4,4 +4,8 @@ class Pixelation < Widget
     data
     hex
   )
+
+  before_validation do
+    self.href = 'pixelation/pixelation.html'
+  end
 end
