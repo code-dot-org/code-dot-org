@@ -8,9 +8,9 @@ stage 'Hour of Code 2015'
 
 level 'hoc2015_move_right'
 level 'hoc2015_move_two_items'
-level 'hoc2015_move_item_ship'
-level 'hoc2015_move_item_ship_2'
-level 'hoc2015_move_item_ship_3'
+level 'hoc2015_move_item_destination'
+level 'hoc2015_move_item_destination_2'
+level 'hoc2015_move_item_destination_3'
 level 'hoc2015_move_cross'
 
 level 'hoc2015_event_two_items'

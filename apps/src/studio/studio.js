@@ -1434,8 +1434,7 @@ Studio.init = function(config) {
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
       inputOutputTable: level.inputOutputTable,
-      readonlyWorkspace: config.readonlyWorkspace,
-      //pinWorkSpaceToBottom: true
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
