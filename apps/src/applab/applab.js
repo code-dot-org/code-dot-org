@@ -318,13 +318,11 @@ function renderFooterInSharedGame() {
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
 
-  // TODO - i18n
   React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: window.dashboard.copyrightStrings,
-    baseCopyrightString: "Copyright Info",
-    baseMoreMenuString: "Built on Code Studio",
+    baseMoreMenuString: applabMsg.builtOnCodeStudio(),
     rowHeight: 34,
     style: {
       fontSize: 18
@@ -335,20 +333,25 @@ function renderFooterInSharedGame() {
     className: 'dark',
     menuItems: [
       {
-        text: 'How it Works',
+        text: applabMsg.makeMyOwnApp(),
+        // TODO - since this is a route, should we have dashboard own this?
+        link: '/projects/applab'
+      },
+      {
+        text: commonMsg.openWorkspace(),
         link: location.href + '/view'
       },
       {
-        text: 'Report Abuse',
+        text: applabMsg.reportAbuse(),
         link: 'javascript:void(0)'
       },
       {
-        text: 'Copyright',
+        text: applabMsg.copyright(),
         link: 'javascript:void(0)',
         copyright: true
       },
       {
-        text: 'Privacy Policy',
+        text: applabMsg.privacyPolicy(),
         link: 'https://code.org/privacy'
       }
     ]
