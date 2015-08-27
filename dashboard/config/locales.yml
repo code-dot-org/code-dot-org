@@ -204,7 +204,6 @@
 "ka-GE":
   english: "Georgian"
   native: "ქართული"
-  debug: true
   webfonts: false  
 
 "ko": "ko-KR"
