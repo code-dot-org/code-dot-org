@@ -113,7 +113,8 @@ function loadLevel() {
   if (Applab.appHeight > 480) {
     throw new Error('Strange things may happen with appHeight > 480');
   }
-  if (Applab.appHeight === 480) {
+  if (Applab.appHeight + FOOTER_HEIGHT >= 480) {
+    // If footer will extend past 480, make room for it.
     Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
   } else {
     Applab.footerlessAppHeight = Applab.appHeight;
@@ -349,7 +350,7 @@ function renderFooterInSharedGame() {
       link: 'https://code.org/privacy'
     }
   ];
-  if (!dom.isMobile()) {
+  if (dom.isMobile()) {
     menuItems.splice(0, 1); // no make my own app on mobile
   }
 

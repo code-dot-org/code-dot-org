@@ -89,8 +89,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
 
         this.setState({
           menuState: MenuState.MINIMIZING,
-          moreOffset: 0,
-          hidRecently: true,
+          moreOffset: 0
         });
 
         // Create a window during which we can't show again, so that clicking
@@ -107,7 +106,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
       }
 
       if (this.state.menuState === MenuState.COPYRIGHT) {
-        this.setState({ menuState: MenuState.MINIZED });
+        this.setState({ menuState: MenuState.MINIMIZED });
         return;
       }
 
@@ -126,7 +125,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
       }
 
       if (this.state.menuState === MenuState.EXPANDED) {
-        this.setState({ menuState: MenuState.MINIZED });
+        this.setState({ menuState: MenuState.MINIMIZED });
         return;
       }
 
