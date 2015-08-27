@@ -64,6 +64,13 @@
             </block>
           </functional_input>
         </block>
+        <block type="functional_display" inline="false" deletable="false" movable="false">
+          <functional_input name="ARG1">
+            <block type="functional_math_number">
+              <title name="NUM">0</title>
+            </block>
+          </functional_input>
+        </block>
         <block type="functional_definition" inline="false" editable="false">
           <mutation>
             <arg name="m" type="String"/>
@@ -95,32 +102,6 @@
             <isfunctionalvariable>true</isfunctionalvariable>
           </mutation>
           <title name="NAME">Ack-delete_this_too</title>
-        </block>
-        <block type="functional_display" inline="false" deletable="false" movable="false">
-          <functional_input name="ARG1">
-            <block type="functional_call" inline="false">
-              <mutation name="delete_this_function">
-                <arg name="i" type="Number"/>
-                <arg name="j" type="Number"/>
-                <arg name="k" type="Number"/>
-              </mutation>
-              <functional_input name="ARG0">
-                <block type="functional_math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG1">
-                <block type="functional_math_number">
-                  <title name="NUM">2</title>
-                </block>
-              </functional_input>
-              <functional_input name="ARG2">
-                <block type="functional_math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </functional_input>
-            </block>
-          </functional_input>
         </block>
       </xml>
     </start_blocks>

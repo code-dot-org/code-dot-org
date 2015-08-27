@@ -36,25 +36,23 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_turn" inline="true">
-              <title name="DIR">turnRight</title>
-              <value name="VALUE">
-                <block type="math_arithmetic" inline="true">
-                  <title name="OP">DIVIDE</title>
-                  <value name="A">
-                    <block type="math_number">
-                      <title name="NUM">360</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="variables_get">
-                      <title name="VAR">counter</title>
-                    </block>
-                  </value>
+            <block type="controls_for_counter" inline="true" movable="false">
+              <mutation counter="counter"/>
+              <value name="FROM">
+                <block type="math_number">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number">
+                  <title name="NUM">???</title>
+                </block>
+              </value>
+              <value name="BY">
+                <block type="math_number">
+                  <title name="NUM">???</title>
                 </block>
               </value>
             </block>
@@ -64,80 +62,60 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Actions">
-          <block type="draw_move" inline="true">
-            <title name="DIR">moveForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">100</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnRight</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">90</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnLeft</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">90</title>
-              </block>
-            </value>
-          </block>
-        </category>
-        <category name="Loops">
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
-            <value name="FROM">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-            <value name="TO">
-              <block type="math_number">
-                <title name="NUM">100</title>
-              </block>
-            </value>
-            <value name="BY">
-              <block type="math_number">
-                <title name="NUM">10</title>
-              </block>
-            </value>
-          </block>
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">3</title>
-              </block>
-            </value>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-        </category>
-        <category name="Math">
-          <block type="math_number">
-            <title name="NUM">0</title>
-          </block>
-          <block type="math_arithmetic" inline="true">
-            <title name="OP">DIVIDE</title>
-            <value name="A">
-              <block type="math_number">
-                <title name="NUM">0</title>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number">
-                <title name="NUM">0</title>
-              </block>
-            </value>
-          </block>
-        </category>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">counter</title>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+            <block type="math_number">
+              <title name="NUM">0</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">0</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
