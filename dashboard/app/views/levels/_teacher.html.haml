@@ -34,18 +34,14 @@
             - else
               = link_to build_script_level_path(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})) do
                 %button.btn.btn-info= t('reference_area.teacher')
-          - if @level.try(:example_urls) # 'solutions' for applab-type levels
-            - if false # TODO figure out how to indicate that we are viewing solution
-              %h4= t('teacher.panel.viewing_solution')
-            - else
-              - unless @level.examples.blank?
-                - @level.examples.each_with_index do |example, index|
-                  = link_to applab_project_view_projects_url(host: 'studio.code.org', port: 80) do
-                    %button.btn.btn-info
-                      - if @level.examples.many?
-                        = t('teacher.panel.example_with_number', solution_number: index + 1)
-                      - else
-                        = t('teacher.panel.example')
+          - if @level.try(:examples).present? # 'solutions' for applab-type levels
+              - @level.examples.each_with_index do |example, index|
+                = link_to applab_project_view_projects_url(key: example, host: 'studio.code.org', port: 80) do
+                  %button.btn.btn-info
+                    - if @level.examples.many?
+                      = t('teacher.panel.example_with_number', solution_number: index + 1)
+                    - else
+                      = t('teacher.panel.example')
           = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
             %button.btn.btn-info= t('teacher.panel.try_it_yourself')
         - if @section
