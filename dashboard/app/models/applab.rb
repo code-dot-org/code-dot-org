@@ -186,6 +186,6 @@ class Applab < Blockly
   def fix_examples
     # remove nil and empty strings from examples
     return if examples.nil?
-    self.examples = examples.select{|example| example.present?}
+    self.examples = examples.select(&:present?)
   end
 end
