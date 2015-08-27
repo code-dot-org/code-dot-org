@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Complete the Design Recipe for this function eggs making sure to create your examples.",
+    "instructions": "Complete the Design Recipe for the \"eggs\" function, making sure to create and test your examples.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "false",
-    "markdown_instructions": "In addition to testing examples, we can also _require_ that students use examples in their functions. Complete the Design Recipe for this function `eggs` making sure to create your examples (though you can ignore them if you want to see the error message)"
+    "markdown_instructions": "In addition to testing examples, we can also _require_ that students use examples in their functions. Complete the Design Recipe for the `eggs` function, making sure to create and test your examples. (You can ignore creating examples if you want to see the error message.)"
   }
 }]]></config>
   <blocks>
