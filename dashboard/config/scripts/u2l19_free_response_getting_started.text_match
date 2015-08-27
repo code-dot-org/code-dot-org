@@ -4,3 +4,7 @@ title 'Public Key Crypto: Getting Started'
 markdown <<MARKDOWN
 What information, sent or stored on the Internet, do you think should be the highest priority in protecting?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary. If time is available, ask students to justify their answers.
+MARKDOWN

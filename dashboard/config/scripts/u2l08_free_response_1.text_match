@@ -5,3 +5,9 @@ title 'Router Table: Reflection'
 markdown <<MARKDOWN
 How is creating a router table similar to finding the shortest path in a graph?  How is it different?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but will likely include the following concepts:
+
+- 
+MARKDOWN

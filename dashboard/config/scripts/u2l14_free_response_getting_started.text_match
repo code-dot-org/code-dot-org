@@ -4,3 +4,11 @@ title 'Cracking the Code: Getting Started'
 markdown <<MARKDOWN
 What do you think the difference is between “cracking” a code and “decrypting” a message?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but may include these concepts:
+
+- Decrypting is just using an algorithm to undo the encryption. It’s what the recipient of an encrypted message needs to do to recover the original message.
+- Cracking is trying to figure out a decryption algorithm for an encrypted message, using clues found within the secret message itself. If you know the algorithm that was used, then cracking the encryption means figuring out the key that was used with that algorithm. It is more like detective work.
+
+MARKDOWN
