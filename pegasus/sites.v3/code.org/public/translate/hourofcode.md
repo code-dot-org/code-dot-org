@@ -4,9 +4,13 @@ nav: translate_nav
 ---
 
 # Translating the Hour of Code
-The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations.
+The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. There are currently three projects open for translations:
 
-There are currently three projects, the [Code.org Project](https://crowdin.com/project/codeorg), [Hour of Code Project](https://crowdin.com/project/hour-of-code), and [Curriculum Project](https://crowdin.com/project/lesson-plans). Please complete translations for these projects in that order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
+* [Code.org Project](https://crowdin.com/project/codeorg) - For the Code.org site and all Code Studio tutorials. Learn more [here](https://code.org/translate/tutorials).
+* [Hour of Code Project](https://crowdin.com/project/hour-of-code) - For the HourofCode.com site. Learn more below.
+* [Curriculum Project](https://crowdin.com/project/lesson-plans) - For teacher lesson plans that accompany our courses. Learn more [here](https://code.org/translate/curriculum).
+
+Please complete translations for these projects in the above order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
 
 ## What do I translate first?
 1. hourofcode.com homepage
@@ -18,7 +22,7 @@ There are currently three projects, the [Code.org Project](https://crowdin.com/p
 
 
 ## Where can I find context for translations?
-All of the markdown files are the same as the URL path. For example, you can find the context for resources.md at hourofcode.com/resources. Also, you can find anything in the resources tab like so: hourofcode.com/resources/stats. The country resources page will only be visible for all non-US sites, i.e. hourofcode.com/uk/resources/country-resources.
+All of the markdown files are the same as the URL path. For example, you can find the context for resources.md at [hourofcode.com/resources](https://hourofcode.com/resources). Also, you can find anything in the resources tab, like the stats page, at: [hourofcode.com/resources/stats](https://hourofcode.com/resources/stats). The country resources page will only be visible for all non-US sites, i.e. [hourofcode.com/uk/resources/country-resources](https://hourofcode.com/uk/resources/country-resources).
 
 The files folder contains the text for the [one pager](https://hourofcode.com/files/hoc-one-pager.pdf), [brochure](https://hourofcode.com/files/schools-handout.pdf), and [posters](hourofcode.com/resources#posters).
 
