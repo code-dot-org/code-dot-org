@@ -381,7 +381,7 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  serverSideRemix: function(asAnswerKey) {
+  serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
         current.name = 'Big Game Template';
