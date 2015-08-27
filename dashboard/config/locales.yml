@@ -205,6 +205,7 @@
   english: "Georgian"
   native: "ქართული"
   webfonts: false  
+  debug: true
 
 "ko": "ko-KR"
 "ko-KR":
