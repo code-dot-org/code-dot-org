@@ -390,11 +390,7 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      if (asAnswerKey) {
-        location.href = projects.getPathName('remix_as_answer_key');
-      } else {
-        location.href = projects.getPathName('remix');
-      }
+      location.href = projects.getPathName('remix');
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
