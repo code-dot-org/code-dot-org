@@ -325,6 +325,34 @@ function renderFooterInSharedGame() {
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
 
+  var menuItems = [
+    {
+      text: applabMsg.makeMyOwnApp(),
+      link: '/projects/applab'
+    },
+    {
+      text: commonMsg.openWorkspace(),
+      link: location.href + '/view'
+    },
+    // Disabled until we do the work to support abuse reporting
+    // {
+    //   text: applabMsg.reportAbuse(),
+    //   link: '#'
+    // },
+    {
+      text: applabMsg.copyright(),
+      link: '#',
+      copyright: true
+    },
+    {
+      text: applabMsg.privacyPolicy(),
+      link: 'https://code.org/privacy'
+    }
+  ];
+  if (!dom.isMobile()) {
+    menuItems.splice(0, 1); // no make my own app on mobile
+  }
+
   React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
     i18nDropdown: '',
     copyrightInBase: false,
@@ -338,30 +366,7 @@ function renderFooterInSharedGame() {
       width: $("#divApplab").width(),
     },
     className: 'dark',
-    menuItems: [
-      {
-        text: applabMsg.makeMyOwnApp(),
-        // TODO - since this is a route, should we have dashboard own this?
-        link: '/projects/applab'
-      },
-      {
-        text: commonMsg.openWorkspace(),
-        link: location.href + '/view'
-      },
-      {
-        text: applabMsg.reportAbuse(),
-        link: '#'
-      },
-      {
-        text: applabMsg.copyright(),
-        link: '#',
-        copyright: true
-      },
-      {
-        text: applabMsg.privacyPolicy(),
-        link: 'https://code.org/privacy'
-      }
-    ]
+    menuItems: menuItems
   }), footerDiv);
 }
 

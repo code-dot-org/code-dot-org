@@ -974,13 +974,10 @@ function resizeFooterToFitToLeftOfContent() {
   }
 
   if (leftColumn && $(leftColumn).is(':visible')) {
-    smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+    smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
   } else if (instructions && $(instructions).is(':visible')) {
-    var instructionsWidth = instructions.offsetWidth + instructions.offsetLeft;
-    smallFooter.style.maxWidth = instructionsWidth + 'px';
+    smallFooter.style.maxWidth = instructions.getBoundingClientRect().right + 'px';
   }
-  // TODO - would this be better?
-  // smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
