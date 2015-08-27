@@ -6,3 +6,9 @@ right 'A message sent across the Internet can always be contained in a single pa
 wrong 'Packets are routed on different paths from sender to receiver.'
 wrong 'The receiver computer must confirm to the sending computer that each packet was received.'
 
+
+teacher_markdown <<MARKDOWN
+answer:
+
+- B. A message sent across the Internet can always be contained in a single packet.
+MARKDOWN

@@ -21,7 +21,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 ## <a name="pd" href="#pd">What do teachers say about Code.org professional development?</a>
 
-During the 2014-15 school year, Code.org prepared over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
+From September 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
 - a day-long, face-to-face workshop delivered to K-5 teachers by trained facilitators, via our [Affiliate Program](/educate/k5-affiliates) or by Code.org trainers via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
