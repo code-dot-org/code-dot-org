@@ -1422,6 +1422,9 @@ Applab.hideDesignModeToggle = function () {
   return !!level.hideDesignMode;
 };
 
+Applab.hideViewDataButton = function () {
+  return !!level.hideViewDataButton;
+};
 
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
