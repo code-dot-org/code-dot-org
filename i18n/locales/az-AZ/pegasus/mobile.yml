@@ -48,12 +48,12 @@ az-AZ:
   enter_valid_age: Please select a valid age
   enter_valid_email: Zəhmət olmasa, düzgün e-poçt ünvanı daxil edin
   get_a_certificate_message: "Biz sizə sertifikat və <a href='/learn/beyond'>Kod Saatından sonra da öyrən</a>məyin yolları barədə məlumat göndərəcəyik"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   thanks_for_submitting: Göndərdiyiniz üçün təşəkkürlər!
   if_you_enjoyed: Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi xahiş edin! Bütün dünyanın öyrənməyini istəyirik.
   personalize_certificate: Sertifikatınızı fərdiləşdirin
   share_achievement: Nailiyyətinizi bölüşün
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: Kod Saaatı üçün liderlər cədvəli.
   support_url: http://support.code.org/
   country: Ölkə
@@ -194,6 +194,7 @@ az-AZ:
   homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
   homepage_signpetition_dropdown: 'Petisiyamıza qol çəkin &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -464,6 +465,7 @@ az-AZ:
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: participants
   teachers_notes: "Teacher's Notes"
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

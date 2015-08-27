@@ -39,7 +39,7 @@
   "CONTROLS_FOREACH_TOOLTIP":"A lista elemein egyesével végighaladva a '%1' változót a jelenlegi elemre állítja, és végrehajtja a parancsokat.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"értékét %1 -től %2 -ig %3 lépésközzel",
-  "CONTROLS_FOR_INPUT_WITH":"Számolja a",
+  "CONTROLS_FOR_INPUT_WITH":"számold",
   "CONTROLS_FOR_TOOLTIP":"A kezdőértéktől kezdve változtassa a \"%1\" változó értékét a megadott lépésközzel haladva egészen a végértékig és minden lépésben hajtsa végre az utasításokat.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"Újabb feltétel hozzáadása.",
   "CONTROLS_IF_ELSE_TOOLTIP":"Adj hozzá egy végső catch-all feltételt az if blokkhoz.",

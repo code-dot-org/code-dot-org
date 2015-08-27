@@ -281,10 +281,10 @@ ar:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: محاكاة الإنترنت
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
+          Internet Simulator: محاكاة الإنترنت
           Unit 1: الوحدة الأولى
           Unit 2: الوحدة الثانية
           Sending Bits: Sending Bits
@@ -816,10 +816,10 @@ ar:
           Tell Me a Secret - Encrypting Text: The Need for Encryption
           Cracking the Code: Cracking the Code
           Encryption Algorithms: Keys and Passwords
-          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
-          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
-          Public Key Crypto: Public Key Encryption
+          Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
+          Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
@@ -899,8 +899,8 @@ ar:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: محاكاة الإنترنت
+          App Lab: مختبر التطبيق
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Welcome!
@@ -911,8 +911,8 @@ ar:
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: محاكاة الإنترنت
+          App Lab: مختبر التطبيق
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1127,3 +1127,11 @@ ar:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
+          Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
+          Updates - The Design Recipe: 'Updates - The Design Recipe'
+          Lesson Prep: Lesson Prep

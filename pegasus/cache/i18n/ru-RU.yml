@@ -202,6 +202,7 @@
   homepage_action_text_learn: Начать обучение
   homepage_action_text_signpetition: Подписать петицию
   homepage_signpetition_dropdown: Подписать нашу петицию &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org и Совет колледжа сформировать альянс, чтобы
     улучшить разнообразие в информатике.
   homepage_banner_text_link: узнать больше
@@ -535,6 +536,8 @@
   educator_notes: Заметки педагога
   how_to_teach_hoc: Как научить Часу Кода
   more_resources_educators: Больше ресурсов для учителей и преподавателей
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: участники
   teachers_notes: Заметки учителя
   teachers_notes_hoc: 'Учителям: ознакомьтесь с важными заметками для педагогов здесь'

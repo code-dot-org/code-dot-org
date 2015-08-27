@@ -24,7 +24,7 @@
   "COLOUR_RGB_RED": "raudona spalva",
   "COLOUR_RGB_TITLE": "spalvinti su",
   "COLOUR_RGB_TOOLTIP": "Sukurk spalvą su tam tikru raudonos, žalios ir mėlynos spalvų kiekiu. Visos vertės turi būti nuo 0 iki 100.",
-  "CONFIRM_DELETE_FUNCTION_MESSAGE": "Warning! Are you sure you want to delete %1?",
+  "CONFIRM_DELETE_FUNCTION_MESSAGE": "Dėmesio! Ar tikrai norite ištrinti %1?",
   "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "nutraukti ciklą",

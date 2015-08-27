@@ -76,7 +76,7 @@
   share_achievement: Distribuie realizarea personală
   beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
     ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
-    mai mult de O Oră</a>.
+    dincolo de O Oră</a>.
   leaderboards_for_hoc: Clasamentele pentru Ora de Cod.
   support_url: http://support.code.org/
   country: Ţară
@@ -209,6 +209,7 @@
   homepage_action_text_learn: Începe învăţarea
   homepage_action_text_signpetition: Semnează petiția
   homepage_signpetition_dropdown: Sunt de acord &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org şi College Board formează o alianţă pentru a
     îmbunătăţi diversitatea în informatică.
   homepage_banner_text_link: Află mai mult
@@ -555,6 +556,8 @@
   educator_notes: Notițe pentru educatori
   how_to_teach_hoc: Cum să predai o Oră de Cod
   more_resources_educators: Mai multe resurse pentru profesori și educatori
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: participanți
   teachers_notes: Notițele profesorului
   teachers_notes_hoc: 'Profesori: Citiţi notițele importante pentru educator aici'

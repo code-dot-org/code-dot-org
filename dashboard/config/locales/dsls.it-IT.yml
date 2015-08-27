@@ -157,10 +157,10 @@
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: <h4>RAMPA</h4>
-        <h4>STACK</h4>: <h4>COLONNA</h4>
-        <h4>STAMP</h4>: <h4>TIMBRO</h4>
-        <h4>STAR</h4>: <h4>STELLA</h4>
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: Utilizzando
           i gruppi di istruzioni (o "skill") che vengono forniti, associa ogni programma
           alla parola che esso restituisce.
@@ -591,8 +591,9 @@
           Esercizio di Verifica (Risposte Multiple)
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        : Qual è il pezzo più lungo di questa canzone che puoi definire come ritornello,
+          in modo tale che il ritornello sia ripetuto esattamente ogni volta che viene
+          richiamato?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

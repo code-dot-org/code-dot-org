@@ -2,6 +2,7 @@ ro:
   errors:
     messages:
       not_saved: 'Te rog să corectezi următoarele greșeli:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -379,7 +380,9 @@ ro:
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Susținut de Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -388,6 +391,7 @@ ro:
     translate: 'Ajută-ne să  traducem în limba ta'
     support: Suport
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: Termeni
     privacy: Politică de confidențialitate
     secure: Versiunea Securizată

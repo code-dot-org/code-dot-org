@@ -799,8 +799,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1104,9 +1104,8 @@
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Here is a design that
         uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any starting blocks?  Feel free to use trial and error.
-        You are not expected to get it perfect the first time.  Want to see more hints?  Click
-        here!
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.  Want to see more hints?  Click here!
       Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor
         the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
       Course 4 Artist 13_instruction: |
@@ -1209,6 +1208,9 @@
         petlji? U ovom spiralnom trokutu, svaka stranica je za 20 piksela duža od
         prethodne.
       Course 4 Artist For Loops 8_instruction: Najmanja linija ovog kvadrata je 10,
+        najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li
+        popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
+      Course 4 Artist For Loops 8a_instruction: Najmanja linija ovog kvadrata je 10,
         najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li
         popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
       Course 4 Artist For Loops 9_instruction: Možeš li napraviti spiralu? Pokreći
@@ -1419,8 +1421,13 @@
         mijenja za vrijednost povećanja. Pokušaj sakupiti ove cvjetove koristeći povećanje
         2.
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: Upotrijebi funkciju "sakupi 3 nektra" koja
         okreće, kontroliše pokret za sakupljanje nektra, i onda vraća pčelu na početno
         mjesto. Napiši niz radnji pomoću kojih će se sakupiti sav nektar korištenjem
@@ -2282,7 +2289,7 @@
         now learned everything you need to know to make a pattern like this!\nIf this
         picture inspires you, try to make something similar. Otherwise, create\nsomething
         all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
-        Visit for the solution."
+        Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: Upotrijebi "nacrtaj kvadrat"
         funkciju da bi nacrtao/la ovaj uzorak.
       NEW Course 4 Artist Params 1_instruction: Hajde da definišemo funkciju koja
@@ -2355,6 +2362,11 @@
         iz svakog cvijeta.
       NEW Course 4 Bee For Loops 10_instruction: Upotrijebi "brojač" varijablu iz
         svoje "od-do" petlje da bi kontrolisao/la koliko se treba pomjeriti horizontalno.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Možeš li koristiti varijablu petlje
         za kontrolisanje kretanja i sakupljanja nektra?
       NEW Course 4 Bee For Loops 2_instruction: Dodaj neophodan kod da bi dvije pčele
@@ -2420,6 +2432,42 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game. Make sure you come back here and click Continue\nafter
+        you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
