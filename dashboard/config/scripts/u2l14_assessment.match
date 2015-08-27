@@ -20,3 +20,16 @@ answer 'encryption based upon the alphabetical order of letters'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- character frequency: the distribution of letters in a language
+- heuristic: technique used to find an approximate solution
+- encrypt: use an algorithm to encode a message
+- decrypt: use an algorithm to decode a message
+- cipher: another term for encrypted message
+- random substitution cipher: encryption in which arbitrary symbols replace letters
+- Caesar cipher: encryption based upon the alphabetical order of letters
+
+
+MARKDOWN
