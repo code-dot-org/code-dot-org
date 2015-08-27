@@ -17,6 +17,13 @@ window.dashboard.getSmallFooterComponent = function (React) {
     return SmallFooter;
   }
 
+  var MenuState = {
+    MINIMIZING: 'MINIMIZING',
+    MINIMIZED: 'MINIMIZED',
+    EXPANDED: 'EXPANDED',
+    COPYRIGHT: 'COPYRIGHT'
+  };
+
   var EncodedParagraph = React.createClass({
     render: function () {
       return <p dangerouslySetInnerHTML={{
@@ -52,20 +59,36 @@ window.dashboard.getSmallFooterComponent = function (React) {
 
     getInitialState: function () {
       return {
-        copyrightVisible: false,
-        moreVisible: false,
-        hidRecently: false,
+        menuState: MenuState.MINIMIZED,
         copyrightStyle: null,
         moreMenuStyle: null
       };
     },
 
-    hideOnClickAnywhere: function () {
+    componentDidMount: function () {
+      var originalSetState = this.setState;
+      var base = React.findDOMNode(this.refs.base);
+      this.setState({
+        copyrightStyle: {
+          paddingBottom: base.offsetHeight
+        },
+        moreMenuStyle: {
+          bottom: base.offsetHeight,
+          width: base.offsetWidth,
+        }
+      });
+    },
+
+    minimizeOnClickAnywhere: function (event) {
       // The first time we click anywhere, hide any open children
-      $(document.body).one('click', function () {
+      $(document.body).one('click', function (event) {
+        // menu copyright has its own click handler
+        if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
+          return;
+        }
+
         this.setState({
-          copyrightVisible: false,
-          moreVisible: false,
+          menuState: MenuState.MINIMIZING,
           moreOffset: 0,
           hidRecently: true,
         });
@@ -73,57 +96,42 @@ window.dashboard.getSmallFooterComponent = function (React) {
         // Create a window during which we can't show again, so that clicking
         // on copyright doesnt immediately hide/reshow
         setTimeout(function () {
-          this.setState({ hidRecently: false})
+          this.setState({ menuState: MenuState.MINIMIZED })
         }.bind(this), 200);
       }.bind(this));
     },
 
-    setVisibility: function (stateName, visible) {
-      var newState = {};
-      newState[stateName] = visible;
-
-      if (newState[stateName]) {
-        this.hideOnClickAnywhere();
-      }
-      this.setState(newState);
-    },
-
-    toggleCopyright: function (event) {
-      if (this.state.hidRecently) {
+    clickBaseCopyright: function () {
+      if (this.state.menuState === MenuState.MINIMIZING) {
         return;
       }
 
-      this.setVisibility('copyrightVisible', !this.state.copyrightVisible);
-
-      // Adjust bottom padding the first time we show it
-      if (!this.state.copyrightStyle) {
-        var base = React.findDOMNode(this.refs.base);
-        this.setState({
-          copyrightStyle: {
-            paddingBottom: base.offsetHeight
-          }
-        });
-      }
-    },
-
-    toggleMore: function () {
-      if (this.state.hidRecently) {
+      if (this.state.menuState === MenuState.COPYRIGHT) {
+        this.setState({ menuState: MenuState.MINIZED });
         return;
       }
 
-      this.setVisibility('moreVisible', !this.state.moreVisible);
+      this.setState({ menuState: MenuState.COPYRIGHT });
+      this.minimizeOnClickAnywhere();
+    },
 
-      // The first time we toggle the more menu, adjust width and align it
-      // above small-footer
-      if (!this.state.moreMenuStyle) {
-        var base = React.findDOMNode(this.refs.base);
-        this.setState({
-          moreMenuStyle: {
-            bottom: base.offsetHeight,
-            width: base.offsetWidth,
-          }
-        });
+    clickMenuCopyright: function (event) {
+      this.setState({ menuState: MenuState.COPYRIGHT });
+      this.minimizeOnClickAnywhere();
+    },
+
+    clickBaseMenu: function () {
+      if (this.state.menuState === MenuState.MINIMIZING) {
+        return;
       }
+
+      if (this.state.menuState === MenuState.EXPANDED) {
+        this.setState({ menuState: MenuState.MINIZED });
+        return;
+      }
+
+      this.setState({ menuState: MenuState.EXPANDED });
+      this.minimizeOnClickAnywhere();
     },
 
     render: function () {
@@ -138,12 +146,12 @@ window.dashboard.getSmallFooterComponent = function (React) {
           height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined
         }),
         copyright: $.extend({}, this.state.copyrightStyle, {
-          display: this.state.copyrightVisible ? 'block' : 'none',
+          display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
           maxHeight: 240,
           overflowY: 'scroll'
         }),
         moreMenu: $.extend({}, this.state.moreMenuStyle, {
-          display: this.state.moreVisible ? 'block': 'none'
+          display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none'
         }),
         listItem: {
           height: this.props.rowHeight,
@@ -154,7 +162,8 @@ window.dashboard.getSmallFooterComponent = function (React) {
         }
       };
 
-      var caretIcon = this.state.moreVisible ? 'fa fa-caret-down' : 'fa fa-caret-up';
+      var caretIcon = this.state.menuState === MenuState.EXPANDED ?
+        'fa fa-caret-down' : 'fa fa-caret-up';
 
       return (
         <div className={this.props.className} style={styles.smallFooter}>
@@ -165,7 +174,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
             <small>
               {this.renderCopyright()}
               <a className="more-link" href="#"
-                onClick={this.toggleMore}>
+                onClick={this.clickBaseMenu}>
                 {this.props.baseMoreMenuString + ' '}
                 <i className={caretIcon}/>
               </a>
@@ -183,12 +192,12 @@ window.dashboard.getSmallFooterComponent = function (React) {
       );
     },
 
-    renderCopyright() {
+    renderCopyright: function () {
       if (this.props.copyrightInBase) {
         return (
           <span>
             <a className="copyright-link" href="#"
-              onClick={this.toggleCopyright}>
+              onClick={this.clickBaseCopyright}>
               {this.props.baseCopyrightString}
             </a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -197,15 +206,17 @@ window.dashboard.getSmallFooterComponent = function (React) {
       }
     },
 
-    renderMoreMenu(styles) {
+    renderMoreMenu: function (styles) {
       var menuItemElements = this.props.menuItems.map(function (item, index) {
-        var onClick;
-        if (item.copyright) {
-          onClick = this.setVisibility.bind(null, 'copyrightVisible', true);
-        }
-        return <li key={index} style={styles.listItem}>
-          <a href={item.link} onClick={onClick}>{item.text}</a>
-        </li>
+        return (
+          <li key={index} style={styles.listItem}>
+          <a href={item.link}
+            ref={item.copyright ? "menuCopyright" : undefined}
+            onClick={item.copyright ? this.clickMenuCopyright : undefined}>
+            {item.text}
+          </a>
+          </li>
+        );
       }.bind(this));
       return (
         <ul id="more-menu" style={styles.moreMenu}>
