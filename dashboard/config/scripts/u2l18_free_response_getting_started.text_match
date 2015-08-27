@@ -1,6 +1,13 @@
 name 'U2L18 Free Response Getting Started'
-title 'One Way Functions: Getting Started'
+title 'One Way Functions'
 
 markdown <<MARKDOWN
-There are many websites that offer “secret recipes” to favorite brand-name foods. Why is that such a big deal?
+Given that the Travelling Salesman Problem and the Wireless Hotspot Problem are computationally hard to solve, why might the Wireless Hotspot Problem be a more ideal candidate for using an encryption method? Make reference to properties of the two problems in your answer.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The Wireless Hotspot Problem is difficult to solve, but the creator of the problem can know the solution without performing a brute force search. This is not the case with the Travelling Salesman Problem, where the creator has no better idea of the solution than anyone else. In cryptography we want methods which are easy to use but hard to crack, just like the Wireless Hotspot Problem and other one way functions. 
+
+Also worth noting: the encryption schemes we've seen so far (Ceasar and Vigenere) do not result in ciphertexts that are actually *computationally hard* to solve.  Using techniques like frequency analysis and a few other heuristics they are easily crackable.  If we can actually produce ciphertexts for which there are no heuristics and only a brute force approach will solve it, then we can have much much stronger encryption.
+
 MARKDOWN

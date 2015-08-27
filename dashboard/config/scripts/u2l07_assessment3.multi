@@ -5,3 +5,9 @@ right 'The algorithm is short.'
 wrong 'The algorithm is correct.'
 wrong 'The algorithm is efficient.'
 wrong 'The algorithm is understandable.'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- A. The algorithm is short.
+MARKDOWN
