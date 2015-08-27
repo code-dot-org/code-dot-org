@@ -21,7 +21,7 @@
   email: Email
   zipcode: زپ کوڈ یا ملک
   submit: جمع کرائیں
-  twentyhours_heading: Try our Intro to Computer Science Course
+  twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
@@ -154,30 +154,23 @@
   homepage_hero_text_malala: |
     &ldquo;میں دنیا کی تمام لڑکیوں کو ایک Hour of Code مکمّل کرنے کا چیلنج دیتی ہوں&rdquo;
     ملالا، نوبل پیس پرائز انعام یافتہ
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  homepage_hero_text_susan: '&ldquo;اگر آپ ٹیکنالوجی کو بدل سکتے ہیں تو اپ دنیا کو
+    بدل سکتے ہیں.&rdquo; سوسن - سی ای و یو ٹیوب'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;اپنے فون پر صرف کھیلو نہیں بلکہ اسے پروگرام کرو.&rdquo;
+    پریذیڈنٹ بارک اوباما
+  homepage_hero_text_sheryl: '&ldquo;لڑکیوں سمیت; &mdash;ہمارے تمام بچوں&mdash; کو
+    ضرورت ہے کمپیوٹر سائنس &rdquo;سیکھنے کا موقع فراہم کرنے کی. شیریل - سی-او-او فیس
+    بک'
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;کمپیوٹر سائنس دنیا کے بہترین مواقع پیدا کرنے کی صلاحیت رکھتا ہے&rdquo;
+    ستیا، سی-ای-او مائیکروسافٹ
   homepage_hero_text_bosh: |
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+  homepage_hero_text_student1: '&ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات
+    قابلے ذکر ہے کے بہت ہی مزیدار ہے.&rdquo; لونا, ساتوی جماعت'
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
@@ -202,15 +195,16 @@
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: ''
-  homepage_action_text_learn: Start learning today
+  homepage_action_text_codevideo: ویڈیو دیکھے
+  homepage_action_text_teachervideo: ویڈیو دیکھے
+  homepage_action_text_learn: سیکھنا شروع کریں
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: Sign our petition &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Learn more
@@ -533,6 +527,8 @@
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: participants
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

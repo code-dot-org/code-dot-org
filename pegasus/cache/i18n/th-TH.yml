@@ -215,6 +215,7 @@
   homepage_action_text_learn: เริ่มต้นการเรียนรู้กันเลย
   homepage_action_text_signpetition: ลงนามในคำร้อง
   homepage_signpetition_dropdown: ลงนามในคำร้อง &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in วิทยาการคอมพิวเตอร์.
   homepage_banner_text_link: สิ่งที่น่าเรียนรู้ยังมีอีก
@@ -524,6 +525,8 @@
   educator_notes: บันทึกของผู้สอน
   how_to_teach_hoc: วิธีการสอน Hour of Code
   more_resources_educators: แหล่งข้อมูลเพิ่มเติมสำหรับครูและนักศึกษา
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: ผู้เข้าร่วม
   teachers_notes: บันทึกของครู
   teachers_notes_hoc: 'ครู: อ่านบันทึกที่สำคัญที่นี่'
