@@ -12,6 +12,7 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    encrypted_examples
   )
 
   # List of possible skins, the first is used as a default.
