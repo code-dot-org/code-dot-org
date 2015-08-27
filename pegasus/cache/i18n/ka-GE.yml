@@ -199,6 +199,7 @@
   homepage_action_text_learn: დაიწყე სწავლა
   homepage_action_text_signpetition: მოაწერე ხელი პეტიციას
   homepage_signpetition_dropdown: ვეთანხმები პეტიციას &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org და კოლეჯის საბჭო გაერთიანდნენ ინფორმატიკის მრავალფეროვნების
     მხარდასაჭერად.
   homepage_banner_text_link: გაიგე მეტი
@@ -535,6 +536,8 @@
   educator_notes: მასწავლებლის ჩანაწერები
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: მონაწილეები
   teachers_notes: მასწავლებლის ჩანაწერები
   teachers_notes_hoc: 'მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ'

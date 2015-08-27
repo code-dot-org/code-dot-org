@@ -182,7 +182,7 @@ TEACHERS = {}.tap do |results|
     query_contacts_with_location(q: 'kind_s:"user" && role_s:"teacher"')
   ).each do |i|
     email = i[:email].downcase.strip
-    results[email] = i unless UNSUBSCRIBERS[email] || ADMINS[email]
+    results[email] = i unless UNSUBSCRIBERS[email]
   end
 end
 puts "#{TEACHERS.count} teachers loaded."
