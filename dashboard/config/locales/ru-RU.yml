@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Пожалуйста, исправьте следующие ошибки:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -396,7 +398,7 @@
     local_school: местная школа
     online: онлайн
     see_details: Подробнее
-    view_course: View Course
+    view_course: Просмотр курса
     prize_info: 'Призы за участие (только для учителей государственных школ США):
       до $1000 на  класс.'
     tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
@@ -415,12 +417,12 @@
     heading_legacy: <h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
     no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
     print_certificate: Распечатать сертификат
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Учиться в Студии кода
+    description: Любой человек может обучиться информатике. Создавайте игры, приложения
+      и искусство с помощью кода.
   gender:
     male: Мужской
     female: Женский
@@ -435,18 +437,24 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
       этот учебник.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Все права защищены.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Создано с помощью Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    copyright: Авторское право
     more: Ещё
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
     support_url: http://support.сode.org
+    tos_short: Terms
     tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия
@@ -598,8 +606,8 @@
   dialog:
     ok: Продолжить
     startover_title: Вы уверены, что хотите начать заново?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Так вы удалите все блоки, которые вы добавили или изменили, и
+      начнёте головоломку сначала.
     startover_ok: Начать заново
     startover_cancel: Отмена
   time:

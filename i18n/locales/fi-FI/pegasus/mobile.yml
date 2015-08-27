@@ -48,12 +48,12 @@ fi-FI:
   enter_valid_age: Valitse oikea ikä
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: "Me lähetämme sinulle todistuksen ja lisätietoa miten voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>"
-  get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi sen. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai katso vaihtoehtoja <a href='/learn/beyond'>Ensimmäisen tunnin jälkeen</a>."
+  get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai tarkastele vaihtoehtoja <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
   thanks_for_submitting: Kiitos tietojen antamisesta!
   if_you_enjoyed: Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme koko maailman oppivan.
   personalize_certificate: Nimikoi todistuksesi
   share_achievement: Jaa saavutuksesi
-  beyond_hour_message: "Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>, tai katso mitä voit oppia <a href='/learn/beyond'>Ensimmäisen tunnin jälkeen</a>."
+  beyond_hour_message: "Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>, tai katso <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
   leaderboards_for_hoc: Koodaustunnin pistetaulukot.
   support_url: http://support.code.org/
   country: Maa
@@ -181,6 +181,7 @@ fi-FI:
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: 'Allekirjoita vetoomuksemme &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org ja College Board liittoutuvat yhteen parantaakseen tietojenkäsittelytieteen moninaisuutta.
   homepage_banner_text_link: Lue lisää
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -451,6 +452,7 @@ fi-FI:
   educator_notes: Opettajan muistiinpanot
   how_to_teach_hoc: Miten opettaa koodia tunnissa
   more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: osallistujat
   teachers_notes: Opettajan muistiinpanot
   teachers_notes_hoc: 'Opettajat: Lue tärkeitä huomioita kouluttajille tästä'

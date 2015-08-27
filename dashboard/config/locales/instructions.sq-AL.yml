@@ -986,8 +986,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1468,6 +1468,10 @@
         eshte 10, me e madhja 200, dhe secila vije eshte 10 piksel me e gjate se e
         fundit. Mund t'i plotesosh blloqet qe mungojne per te plotesuar kete pikture
         te shkelqyer?
+      Course 4 Artist For Loops 8a_instruction: Vija me e vogel e ketij rrethi spiral
+        eshte 10, me e madhja 200, dhe secila vije eshte 10 piksel me e gjate se e
+        fundit. Mund t'i plotesosh blloqet qe mungojne per te plotesuar kete pikture
+        te shkelqyer?
       Course 4 Artist For Loops 9_instruction: Arrin dot te besh nje spirale? Leviz
         perpara nga 1 ne 75 piksel, duke e rritur me 1 piksel secilen here.
       Course 4 Artist For Loops inspire_instruction: "Frymëzim i Lojës së Lirë: Tashmë
@@ -1681,8 +1685,13 @@
         "rritje", dhe sa here qe litari levizen variabla e ndryshueshme peson ndryshime
         me rritje. Provo te mbledhesh keto lule duke perdorur nje rritje prej 2.
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: Perdor komanden "merr 3 nektare" e cila kthehet,
         levizen per te mbledhur nektarin dhe me pas kthehet ne destinacionin fillestar.
         Bej nje radhe per te mbledhur te gjithe nektarin duke perdorur "merr 3 nektar".
@@ -2692,6 +2701,11 @@
         nektarin nga cdo lule.
       NEW Course 4 Bee For Loops 10_instruction: Perdor nje litar variabel te kundert
         per te pare sa larg mund te levizesh horizontalisht.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: A mund të përdorësh variablën e ciklit
         për të kontrolluar lëvizjet dhe mbledhjen e nektarit?
       NEW Course 4 Bee For Loops 2_instruction: Shto kodin e nevojshëm për t'u siguruar
@@ -2756,6 +2770,42 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game. Make sure you come back here and click Continue\nafter
+        you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple

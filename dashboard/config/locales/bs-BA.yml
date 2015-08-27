@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Ispravi ove greške:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -435,9 +437,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli
       napraviti ovaj tutorijal.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Sva prava pridržana.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Potpomognuto sa Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -447,6 +454,7 @@
     translate: Pomozi nam prevesti na vaš jezik
     support: Podrška
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Uvjeti
     privacy: Pravila Privatnosti
     secure: Sigurna Verzija

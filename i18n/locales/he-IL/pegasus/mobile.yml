@@ -47,7 +47,7 @@ he-IL:
   get_a_certificate_of_achievement: קבל תעודה על ההישג
   enter_valid_age: בבקשה, בחר את גילך
   enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
-  get_a_certificate_message: "נשלח לך תעודת סיום ומידע על איך <a href='/learn/beyond'>ללמוד מעבר לשעה</a>"
+  get_a_certificate_message: "אנחנו נשלח לך תעודה ומידע על איך <a href='/learn/beyond'>ללמוד מעבר לשעה אחת</a>"
   get_a_certificate_message_after: "לחץ על האישור כדי להוריד או להדפיס אותו. עכשיו, המשך עם <a href='http://studio.code.org'> קורסים אחרים</a> שלנו, או ראה אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>."
   thanks_for_submitting: תודה על השליחה!
   if_you_enjoyed: אם נהנית מהלמידה, בקש מחבריך לנסות גם! אנחנו רוצים שכל העולם ילמד.
@@ -161,6 +161,7 @@ he-IL:
   homepage_action_text_learn: התחל ללמוד
   homepage_action_text_signpetition: חתום על העצומה
   homepage_signpetition_dropdown: חתום על העצומה שלנו;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org והנהלת המכללה יוצרים ברית לשפר את המגוון במדעי המחשב.
   homepage_banner_text_link: למד עוד
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -431,6 +432,7 @@ he-IL:
   educator_notes: הערות מורה
   how_to_teach_hoc: 'כיצד ללמד "שעה של קוד"'
   more_resources_educators: משאבים נוספים עבור מורים ומחנכים
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: משתתפים
   teachers_notes: ההערות למורה
   teachers_notes_hoc: 'מורים: לקרוא הערות מחנך חשובות כאן'

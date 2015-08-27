@@ -2,6 +2,7 @@ fi:
   errors:
     messages:
       not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -388,7 +389,9 @@ fi:
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Insinöörit Googlelta, Microsoftilta, Facebookilta ja Twitterilta auttoivat luomaan tämän opetusohjelman.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Kaikki oikeudet pidätetään.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Kaikki oikeudet pidätetään.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -397,6 +400,7 @@ fi:
     translate: Auta meitä kääntämään palvelu omalle kielellesi
     support: Tuki
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Ehdot
     privacy: Yksityisyyskäytäntö
     secure: Turvallinen versio

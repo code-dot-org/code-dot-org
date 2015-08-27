@@ -39,7 +39,7 @@
   "CONTROLS_FOREACH_TOOLTIP":"הגדר את המשתנה '%1' לכל פריט ברשימה, ולאחר מכן בצע כמה חישובים.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"מ- %1 ל- %2  בחלקים של %3",
-  "CONTROLS_FOR_INPUT_WITH":"ספור עם",
+  "CONTROLS_FOR_INPUT_WITH":"תספור עם",
   "CONTROLS_FOR_TOOLTIP":"סדר את המשתנה %1 כך שיאמץ את הערכים מהמספר המתחיל למספר הסופי, תוך כדי ספירה לפי המרווח שצוין, והפעל את הבלוקים שצוינו.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"הוסף תנאי לבלוק If.",
   "CONTROLS_IF_ELSE_TOOLTIP":"הוסף תנאי אחרון וכולל לבלוק ה- If.",

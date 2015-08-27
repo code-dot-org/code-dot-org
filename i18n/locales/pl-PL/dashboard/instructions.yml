@@ -429,8 +429,8 @@ pl:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -794,7 +794,7 @@ pl:
       Course 4 Artist 6_instruction: 'Uzupełnij kod, by narysować te trójkąty. Wskazówka: 3 trójkąty w rotacji 360 stopni.'
       Course 4 Artist 7_instruction: 'Umieść tę pętlę wewnątrz innej pętli, aby narysować 10 trójkątów. To się nazywa zagnieżdżoną pętlą. Wskazówka: Te 10 trójkątów wypełnia obrót o 360 stopni.  '
       Course 4 Artist 8_instruction: Narysuj to słońce powtarzając ten blok kodu 12 razy.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Czy pamiętasz ten kształt?  Teraz chcemy zachęcić Cię do utworzenia tego samego kształtu, ale nie dajemy Ci żadnych bloków, abyś mógł zacząć! \r Wskazówka: Mamy 3 trójkąty w rotacji w zakresie 360 stopni... ile razy ma 3 mieści się 360?"
       Course 4 Artist 9_instruction: 'Powtórz ten wzór 10 razy i bądź pewien, że skręcasz między każdymi dwoma kształtami. Oto wskazówka, ile ma wynosić skręt: ile wynosi 360 podzielone przez 10?'
       Course 4 Artist Binary 1_instruction: "Oto funkcja, która na podstawie binarnego łańcucha złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu. Artysta wypełnia kwadraty, gdy widzi 1, a ignoruje kwadraty, gdy widzi 0. \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch, by narysować ten wzorek."
       Course 4 Artist Binary 2_instruction: Które z tych binarnych łańcuchów możesz powtórzyć 8 razy, aby narysować ten obraz?
@@ -822,6 +822,7 @@ pl:
       Course 4 Artist For Loops 6_instruction: 'Dobra zabawa! Spróbuj użyć pętli "dla", by narysować powiększający się wzór własnego pomysłu.'
       Course 4 Artist For Loops 7_instruction: 'Co się stanie, jeśli usuniesz blok "powtórz 3" z tego algorytmu, pozostawiając bloki "idź" i "skręć" w pętli "dla"? W tym spiralnym trójkącie każdy bok jest o 20 pikseli dłuższy niż poprzedni.'
       Course 4 Artist For Loops 8_instruction: 'Najkrótsza linia w tej kwadratowej spirali ma długość 10 pikseli, najdłuższa - 200 pikseli, i każda linia jest o 10 pikseli dłuższa niż poprzednia. Czy mógłbyś uzupełnić brakujące bloki, by ukończyć ten niesamowity rysunek?'
+      Course 4 Artist For Loops 8a_instruction: 'Najkrótsza linia w tej kwadratowej spirali ma długość 10 pikseli, najdłuższa - 200 pikseli, i każda linia jest o 10 pikseli dłuższa niż poprzednia. Czy mógłbyś uzupełnić brakujące bloki, by ukończyć ten niesamowity rysunek?'
       Course 4 Artist For Loops 9_instruction: Czy potrafisz wykonać spiralę? Idź do przodu od 1 do 75 pikseli, zwiększając krok o 1 piksel za każdym razem.
       Course 4 Artist For Loops inspire_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego pomysłu.\r\n\r\nJeśli chcesz wiedzieć, jak powstał nasz wzór, odwiedź stronę https://studio.code.org/c/106387604."
       Course 4 Artist Functions 1_instruction: Czy potrafisz za pomocą pętli narysować kwadrat, który ma bok o długości 100 pikseli?
@@ -898,9 +899,11 @@ pl:
       Course 4 Bee For Loops 7_instruction: 'Użyj zmiennej "counter" (licznik) w pętli "licz z", by kontrolować, jak daleko iść w kierunku poziomym.'
       Course 4 Bee For Loops 8_instruction: Czy potrafisz użyć zmiennej w pętli, aby kontrolować ruch i zbieranie nektaru?
       Course 4 Bee For Loops 9_instruction: 'Ostatnia liczba w Twojej pętli "licz z" ma nazwę "przyrost", i za każdym obrotem pętli licznik pętli zmienia się o ten "przyrost". Spróbuj zebrać te kwiaty używając przyrostu o wartości 2.'
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+      Course 4 Bee Loops 5 NEW_instruction: Umieść te bloki w pętli, by zebrać nektar z każdego kwiatka.
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'Użyj funkcji "get 3 nectar" (zbierz 3 nektary), w której pszczółka skręca, porusza się i zbiera nektar, a następnie wraca do początkowej lokalizacji. Zbierz cały nektar używając sekwencji funkcji "get 3 nectar".'
       Course 4 Bee Params 2_instruction: 'Zmodyfikuj funkcję "get 3 nectar" (zbierz 3 nektary) tak, by pszczółka skręcała do kwiatów w prawo zamiast w lewo.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Teraz kwiaty są po obu stronach! Może potrafisz tak użyć parametru, aby ta sama funkcja działała dla kwiatów po obu stronach. Dodano do funkcji parametr o nazwie "direction" (kierunek). Jeśli ten parametr jest równy 0, to należy skręcić w lewo, jeśli jest równy 1, to należy skręcić w prawo.'
@@ -1582,6 +1585,11 @@ pl:
       NEW Course 4 Artist Vars 6_instruction: 'Czy mógłbyś mi pomóc narysować ten fajny wzór przenosząc blok ze zmienną "length" (długość) w odpowiednie miejsca?'
       NEW Course 4 Bee For Loops 1_instruction: Użyj pętli, by zebrać cały nektar z każdego kwiatka.
       NEW Course 4 Bee For Loops 10_instruction: 'Użyj zmiennej "counter" (licznik) w pętli "licz z", by kontrolować, jak daleko iść w kierunku poziomym.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Czy mógłbyś użyć zmiennej w pętli, aby kontrolować ruchu i zbieranie nektaru?
       NEW Course 4 Bee For Loops 2_instruction: Dodaj kod, aby być pewnym, że pszczółka zbierze cały nektar. Zorientuj się, ile potrzebujesz dodatkowego kodu dla tej łamigłówki! (W następnej łamigłówce poznasz łatwiejszy sposób.)
       NEW Course 4 Bee For Loops 3_instruction: 'Ach, pętla "dla/licz" sprawia, że jest to znacznie łatwiejsze! Cały kod, jaki potrzebujesz, jest tutaj, zobacz, jak został utworzony a następnie kliknij przycisk "Uruchom", aby zobaczyć, jak to działa. '
@@ -1614,6 +1622,38 @@ pl:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
