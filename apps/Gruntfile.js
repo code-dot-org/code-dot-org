@@ -296,10 +296,12 @@ var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 
+var fastMochaTest = process.argv.indexOf('--fast') !== -1;
+
 config.exec = {
   browserify: browserifyExec,
   watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
-  mochaTest: 'node test/util/runTests.js --color'
+  mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 
 var ext = envOptions.dev ? 'uncompressed' : 'compressed';

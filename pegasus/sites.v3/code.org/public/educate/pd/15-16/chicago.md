@@ -14,11 +14,11 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-### Phase 1: Online Introduction ###
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone Complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
 
 **In-Person Workshop**
@@ -56,7 +56,7 @@ TBD
 <br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Green journal<br/>
 Curriculum guide
@@ -76,10 +76,10 @@ More info coming soon!
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction ###
+### Phase 1: Online Introduction (~2 hours)###
 
 Milestone Complete!
-### Phase 2: Blended Summer Study  ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
 **In-Person Workshop**
 
@@ -114,7 +114,7 @@ TBD
 <br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 ECS green journal<br/>
 Curriculum guide
@@ -134,12 +134,10 @@ More info coming soon!
 
 ## CS in Algebra
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
-### Phase 2: Blended Summer Study###
+Milestone Complete!
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 **In-Person Workshop**
 
 Milestone Complete!
@@ -149,15 +147,15 @@ Milestone Complete!
 <b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
 **Save the dates:**
 
 Semester 1: Saturday, October 24, 2015 
 
 Semester 2: Saturday, April 30, 2016 
 
-8:00am - 4:00pm
-</br>
-<br/>
+8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
 **Location**
@@ -166,7 +164,7 @@ TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Curriculum guide
 <br/>
@@ -180,10 +178,10 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours)  ###
 
 Milestone Complete!
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 **In-Person Workshop**
 
 Milestone Complete!
@@ -212,7 +210,7 @@ TBD
 <br/><br/>
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Curriculum guide
 <br/>
