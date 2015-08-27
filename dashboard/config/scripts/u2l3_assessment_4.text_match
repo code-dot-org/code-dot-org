@@ -1,3 +1,9 @@
 name 'U2L3 Assessment 4'
 title 'Inventing an Addressing Protocol: Question 3'
 content1 'Why does it not make sense for users to be identified by their real names on the Internet?'
+teacher_markdown <<MARKDOWN
+Answers may vary but should include:
+
+- Real names are not unique -- more than one person could share the same name. 
+- Names are long. Numeric representation makes IP addresses unique… and short.
+MARKDOWN

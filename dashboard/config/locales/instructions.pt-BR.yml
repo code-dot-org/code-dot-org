@@ -1400,8 +1400,11 @@
       Course 4 Artist 1_instruction: "Ajude-me a desenhar uma caixa. (Cada linha tem\n200
         pixels de comprimento) \n"
       Course 4 Artist 10_instruction: |
-        Atividade livre! Divirta-se e desenhe
-        o que quiser.
+        Temos aqui o código para uma forma interessante. O que
+        acontece quando você o repete? Observe que os ângulos dessa forma somam
+        420, o que significa que quando seu artista terminar de desenhar, ele vai olhar
+        para uma direção diferente de quando ele começou. Essa nova direção é exatamente
+        60 graus à direita de onde você começou.
       Course 4 Artist 11_instruction: |
         Agora um desafio!  Temos aqui um design que
         usa apenas blocos que já foram mostrados. Você consegue descobrir como
@@ -1443,9 +1446,9 @@
       Course 4 Artist 8_instruction: |
         Desenhe esse sol repetindo todo este bloco de código
         várias vezes.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Lembra-se dessa forma? Agora vamos deixar\nvocê
+        construí-la sem dar nenhum bloco inicial!\r\nDica: há\n3 triângulos dentro
+        da rotação de 360 graus... quantas vezes 3 cabe em\n360?"
       Course 4 Artist 9_instruction: |
         Repita esse design 10 vezes e certifique-se de virar
         a cada figura desenhada. Uma dica sobre o quanto você
@@ -1543,6 +1546,10 @@
         desse algoritmo, mantendo os blocos "mova" e "vire" no laço
         para? Neste triângulo espiralado, cada lado é 20 pixels mais comprido que o anterior.
       Course 4 Artist For Loops 8_instruction: |
+        A menor reta nessa espiral quadrada
+        tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
+        anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
+      Course 4 Artist For Loops 8a_instruction: |
         A menor reta nessa espiral quadrada
         tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
         anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
@@ -1703,9 +1710,9 @@
         está aninhado dentro de mais um laço. Experimente alterar os valores das
         suas duas variáveis para desenhar padrões legais.
       Course 4 Artist Vars 2_instruction: |
-        Ao invés de "avance por 100,"
-        o bloco "mova" agora referencia a variável "comprimento". Você pode definir
-        "comprimento" como 150 para desenhar esse triângulo novo?
+        Ao invés de usar "avance por 150,"
+        o bloco "mova" está referenciando agora uma variável chamada "comprimento." Você consegue
+        definir "comprimento" como150 para desenhar esse novo triângulo?
       Course 4 Artist Vars 3_instruction: "Temos aqui um laço que desenha um quadrado,
         mas\nalgo está faltando. Você pode consertá-lo para que ele use a variável
         \"comprimento\"\npara descobrir qual deve ser o tamanho de cada lado? \n"
@@ -1720,9 +1727,10 @@
         como 4. Você pode usar a variável \"lados\" (junto com um bloco matemático)\npara
         garantir que eu vire a quantidade correta para fazer um quadrado?\r\n\r\nDica:\nPara
         desenhar um polígono regular, devo virar 360/número de lados cada vez."
-      Course 4 Artist Vars 7_instruction: |
-        Você pode modificar a variável "lados"
-        para me ajudar a desenhar esse hexágono?
+      Course 4 Artist Vars 7_instruction: "Você consegue modificar a variável \"lados\"\npara
+        me ajudar a desenhar esse hexágono?\r\n\r\nPercebe como você poderia alterar
+        apenas um valor\npara desenhar um triângulo, um quadrado, um pentágono ou
+        um octógono?"
       Course 4 Artist Vars 8_instruction: "Atividade livre: faça experiências com
         o número\nde lados que essa forma tem. Você consegue alterar o algoritmo de
         forma que o tamanho\ntotal da forma seja sempre o mesmo, não importando quantos
@@ -1736,8 +1744,9 @@
         \nverifique se é uma for ou uma colmeia. Em seguida, colete néctar\napenas
         se for uma flor. \n"
       Course 4 Bee 2_instruction: |
-        Verifique cada objeto para ver se é uma flor. Se for,
-        colete o néctar... caso contrário, você pode ignorá-lo!
+        Use o bloco "se/senão" para verificar cada objeto
+        e ver se ele é uma for ou uma colmeia. Se for uma flor, colete néctar... caso contrário,
+        produza mel!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
         Use o bloco se-senão para coletar néctar se ele for uma flor, senão produza mel
@@ -1798,8 +1807,12 @@
         é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
         de 2.
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Coloque esses blocos em um laço para coletar o
+        néctar de cada flor.
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
         Use a função "obtenha 3 néctares" que
         vira, move-se para coletar o néctar e então retorna à posição original.
@@ -2934,15 +2947,21 @@
         Vamos tentar novamente. Você consegue definir
         a variável "comprimento" para fazer este design bacana com hexágonos? Dica: é um
         múltiplo de 10.
-      NEW Course 4 Artist Vars 6_instruction: |
-        Você pode me ajudar a desenhar esse padrão
-        colocando o bloco da variável "comprimento" nos lugares corretos?
+      NEW Course 4 Artist Vars 6_instruction: "Desenhe esse padrão colocando a\nvariável
+        comprimento nos lugares corretos e definindo o valor correto para\ncomprimento.
+        (Dica: é um múltiplo de 10).  \r\n\r\nPercebe como você define o valor de\ncomprimento
+        apenas uma vez e o código usa o valor correto em todos os lugares?\r\n\r\n\r\n"
       NEW Course 4 Bee For Loops 1_instruction: |
         Use um laço para coletar o néctar
         de cada flor.
       NEW Course 4 Bee For Loops 10_instruction: |
         Use a variável "contador" do seu laço "para"
         para controlar a distância do movimento horizontal.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Você pode usar a variável do laço para
         controlar o movimento e a coleta de néctar?
@@ -3016,6 +3035,42 @@
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game. Make sure you come back here and click Continue\nafter
+        you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa

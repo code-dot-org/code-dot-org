@@ -5,11 +5,11 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 18 - One Way Functions - Ice Cream Vans
+## Unit 2: Lesson 17 - One Way Functions
 
 # Background
 
-A “one-way function” is the computational version of a secret recipe: a function for which it is straightforward to compute an output, but given the output is nearly impossible to determine the exact inputs that were used to compute it. Using one way functions in password/private key creation and cryptography creates a “hard” problem for a computer which leads to strong encryptions.
+A “one-way function” is the computational version of a secret recipe: a function for which it is straightforward to compute an output, but given the output is nearly impossible to determine the exact inputs that were used to compute it. If we can use one-way functions for encryption it means we can create cryptographic ciphers that are computationally hard to crack - which means that the only known way to crack the code is try every possible key which would take an unreasonable amount of time to do.
 
 # Vocabulary
 
@@ -17,14 +17,15 @@ one-way function: a process that is easy to follow for any given input, but yiel
 
 # Lesson
 
-* Solve the Alice and Bob locked box problem.
-* Create your own vertex covering problem.
-* Learn about one-way functions.
+* Solve the WiFi Hotspot Problem
+* Create your WiFi Hotspot problem.
+* Review properties of one-way functions
 
 
 # Resources
 
-* Activity Guide: <a href="http://csunplugged.org/wp-content/uploads/2014/12/unpluggedTeachersSupplement2012-draft-v1-dominatingSets.pdf" target="_blank">Tourist Town Ice Cream Vans</a>
+* <a href="https://docs.google.com/document/d/1npOrwCrM80LCXMgRYGM6V-gNm-pbpIp9KBUca2P5AMs/edit?usp=sharing" target="_blank">Worksheet - Wireless Hotspot Problem</a>
+* <a href="https://docs.google.com/document/d/1luezxRb3SeHnehy32SB_keXboZktutVG4RB3JNvW2r4/edit?usp=sharing" target="_blank">Worksheet - Make your own Wireless Hotspot Problem</a>
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

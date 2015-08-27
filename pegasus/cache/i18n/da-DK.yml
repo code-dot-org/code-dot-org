@@ -63,7 +63,7 @@
   enter_valid_age: Please select a valid age
   enter_valid_email: Angiv en gyldig emailadresse
   get_a_certificate_message: Vi sender dig et certifikat og oplysninger om, hvordan
-    man <a href='/learn/beyond'> lærer ud over En Time</a>
+    man <a href='/learn/beyond'>lærer mere end en time</a>
   get_a_certificate_message_after: Klik på beviset for download eller print det. Fortsæt
     nu med vores <a href='http://studio.code.org'>andre kurser</a>, eller se flere
     muligheder for at <a href='/learn/beyond'>lære udover Kodetimen</a>.
@@ -73,8 +73,7 @@
   personalize_certificate: Personliggør dit certifikat
   share_achievement: Del hvad du har lært
   beyond_hour_message: Fortsæt med vores  <a href='http://studio.code.org'>andre kurser</a>,
-    eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Hour of
-    Code</a>.
+    eller se flere muligheder for at <a href='/learn/beyond'>lære ud over Kodetimen</a>.
   leaderboards_for_hoc: Ranglister for Kodetimen.
   support_url: http://support.Code.org
   country: Land
@@ -209,6 +208,7 @@
   homepage_action_text_learn: Begynd at lære
   homepage_action_text_signpetition: Skriv under
   homepage_signpetition_dropdown: Jeg er enig &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org og College Board har dannet en alliance, for
     at øge mangfoldigheden i computerundervisning.
   homepage_banner_text_link: Lær mere
@@ -534,6 +534,8 @@
   educator_notes: Lærervejledning
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: deltagerne
   teachers_notes: Lærerens noter
   teachers_notes_hoc: 'Lærere: Læs vigtigte noter til undervisningen her'

@@ -47,13 +47,13 @@ hi-IN:
   get_a_certificate_of_achievement: उपलब्धि का एक प्रमाण पत्र प्राप्त करे
   enter_valid_age: Please select a valid age
   enter_valid_email: कृपया एक मान्य ईमेल एड्रेस डाले
-  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   thanks_for_submitting: सबमिट करने के लिए धन्यवाद!
   if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
   share_achievement: आपकी उपलब्धि साझा करें
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: Leaderboards ऑवर ऑफ़ कोड के लिए।
   support_url: http://support.code.org/
   country: देश
@@ -95,7 +95,7 @@ hi-IN:
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond One Hour
+  beyond_hoc: Beyond an Hour
   what_gender: आपका लिंग क्या है?
   girl: लड़की
   boy: लड़का
@@ -194,6 +194,7 @@ hi-IN:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -464,6 +465,7 @@ hi-IN:
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: participants
   teachers_notes: "Teacher's Notes"
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

@@ -17,7 +17,7 @@ ur-PK:
   email: Email
   zipcode: زپ کوڈ یا ملک
   submit: جمع کرائیں
-  twentyhours_heading: Try our Intro to Computer Science Course
+  twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course.
   hoc2014_heading: 'Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December 8 - 14, 2014<br/>'
   hoc2014_students: Students
@@ -47,13 +47,13 @@ ur-PK:
   get_a_certificate_of_achievement: Get a certificate of achievement
   enter_valid_age: Please select a valid age
   enter_valid_email: Spna sahi Email address ka indraj kijiye
-  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   thanks_for_submitting: Jama kerwane ka shukarya!
   if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
   personalize_certificate: Personalize your certificate
   share_achievement: Share your achievement
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
   country: Mulk
@@ -86,7 +86,7 @@ ur-PK:
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
+  continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
   learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
@@ -95,7 +95,7 @@ ur-PK:
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
   learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond One Hour
+  beyond_hoc: Beyond an Hour
   what_gender: ap ka jinss kia hai?
   girl: larki
   boy: larka
@@ -130,30 +130,19 @@ ur-PK:
   homepage_hero_text_malala: |
     &ldquo;میں دنیا کی تمام لڑکیوں کو ایک Hour of Code مکمّل کرنے کا چیلنج دیتی ہوں&rdquo;
     ملالا، نوبل پیس پرائز انعام یافتہ
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  homepage_hero_text_susan: '&ldquo;اگر آپ ٹیکنالوجی کو بدل سکتے ہیں تو اپ دنیا کو بدل سکتے ہیں.&rdquo; سوسن - سی ای و یو ٹیوب'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;اپنے فون پر صرف کھیلو نہیں بلکہ اسے پروگرام کرو.&rdquo;
+    پریذیڈنٹ بارک اوباما
+  homepage_hero_text_sheryl: '&ldquo;لڑکیوں سمیت; &mdash;ہمارے تمام بچوں&mdash; کو ضرورت ہے کمپیوٹر سائنس &rdquo;سیکھنے کا موقع فراہم کرنے کی. شیریل - سی-او-او فیس بک'
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;کمپیوٹر سائنس دنیا کے بہترین مواقع پیدا کرنے کی صلاحیت رکھتا ہے&rdquo;
+    ستیا، سی-ای-او مائیکروسافٹ
   homepage_hero_text_bosh: |
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+  homepage_hero_text_student1: '&ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابلے ذکر ہے کے بہت ہی مزیدار ہے.&rdquo; لونا, ساتوی جماعت'
   homepage_hero_text_student2: |
     &ldquo;I have never, ever seen my kids
     so excited about learning.&rdquo;
@@ -184,15 +173,16 @@ ur-PK:
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning
+  homepage_action_text_codevideo: ویڈیو دیکھے
+  homepage_action_text_teachervideo: ویڈیو دیکھے
+  homepage_action_text_learn: سیکھنا شروع کریں
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -463,6 +453,7 @@ ur-PK:
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: participants
   teachers_notes: "Teacher's Notes"
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

@@ -444,8 +444,8 @@ ka:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -839,6 +839,7 @@ ka:
       Course 4 Artist For Loops 6_instruction: თავისუფალი თამაში! ეცადე გამოიყენო for ციკლი და დახატო ზრდადი ფიგურის ნიმუში, შენი დიზაინით.
       Course 4 Artist For Loops 7_instruction: 'რა მოხდება თუ "გაიმეორე 3-ჯერ"-ს მოვაშორებთ ამ ალგორითმიდან მაგრამ "გადაადგილება" და "შემობრუნება" ბლოკებს დავტოვებთ ციკლში? ამ სპირალურ სამკუთხედში ყოველი გვერდი 20 პიქსელით უფრო გრძელია წინაზე.'
       Course 4 Artist For Loops 8_instruction: 'ამ კვადრატული სპირალის უმცირესი გვერდის სიგრძეა 10, უდიდესის - 200 და ყოველი ხაზი 10 პიქსელით გრძელია წინაზე. შეგიძლია შეავსო გამოტოვებული ბლოკები რათა დაასრულო ეს მშვენიერი სურათი?'
+      Course 4 Artist For Loops 8a_instruction: 'ამ კვადრატული სპირალის უმცირესი გვერდის სიგრძეა 10, უდიდესის - 200 და ყოველი ხაზი 10 პიქსელით გრძელია წინაზე. შეგიძლია შეავსო გამოტოვებული ბლოკები რათა დაასრულო ეს მშვენიერი სურათი?'
       Course 4 Artist For Loops 9_instruction: შეგიძლია სპირალის გაკეთბა? დაიწყე 1-დან 75 პიქსელამდე, ყოველ ჯერზე 1 პიქსელის მომატებით.
       Course 4 Artist For Loops inspire_instruction: "თავისუფალი შთაგონება: უკვე ყველაფერი ისწავლე რაც გჭირდება იმისთვის, რომ იცოდე როგორ შექმნა ასეთი ნიმუში! თუ ეს სურათი შთაგაგონებს, სცადე რამე მსგავსი შექმნა. სხვამხრივ, სცადე შექმნა რამე შენ თვითონ.\r\n\r\nგსურს ნახო როგორ შეიქმნა ეს შთამაგონებელი ნიმუშები? ესტუმრე https://studio.code.org/c/106387604-ს პასუხისთვის."
       Course 4 Artist Functions 1_instruction: შეგიძლია ციკლის გამოყენებით დახატო კვადრატი რომლის სიგრძე 100 პიქსელია?
@@ -919,8 +920,13 @@ ka:
       Course 4 Bee For Loops 8_instruction: შეგიძლია გამოიყენო ციკლის ცვლადი რომ აკონტროლო მოძრაობა და ნექტრის შეგროვება?
       Course 4 Bee For Loops 9_instruction: 'უკანასკნელ რიცხვს შენს ციკლში ეწოდება "ნაზრდი", ციკლის ყოველ შესრულებაზე მთვლელი ცვლადი ნაზრდით იზრდება. სცადე ამ ყვავილების შეგროვება 2 ნაზრდის გამოყენებით.'
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'გამოიყენე ფუნქცია "აიღე 3 ნექტარი" რომელიც აბრუნებს, გადააადგილებს ნექტრის შესაგროვებლად და შემდეგ აბრუნებს საწყის მდებარეობაზე. დაწერე მწკრივი რათა შეაგროვო ყველა ნექტარი "აიღე 3 ნექტარი"-ს გამოყენებით'
       Course 4 Bee Params 2_instruction: 'ჩაასწორე "აიღე 3 ნექტარი" ისე, რომ ყვავილისკენ მარცხნივ მობრუნების მაგივრად მარჯვნივ მომაბრუნოს.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'ახლა ორივე მხარეს ყვავილებია! შეგიძლია გამოიყენო პარამეტრი რომ იგივე ფუნქციამ ორივე მხარეს მყოფ ყვავილებზე იმუშაოს. ფუნქციას დავამატე პარამეტრი სახელად "მიმართულება". თუ "მიმართულება" პარამეტრი უდრის 0-ს, შევბრუნდები მარცხნივ, თუ უდრის 1-ს - მარჯვნივ.'
@@ -1585,6 +1591,11 @@ ka:
       NEW Course 4 Artist Vars 6_instruction: შეგიძლია დამეხმარო ამ ნიმუშის დახატვაში სიგრძის ცვლადის ბლოკის სწორ ადგილებში ჩასმით?
       NEW Course 4 Bee For Loops 1_instruction: გამოიყენე ციკლი რომ შეაგროვო ნექტარი თითოეული ყვავილიდან.
       NEW Course 4 Bee For Loops 10_instruction: 'გამოიყენე შენი for ცილკის "მთვლელი" ცვლადი რომ აკონტროლო ჰორიზონტალური გადაადგილება.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: შეგიძლია გამოიყენო ციკლის ცვლადი რომ აკონტროლო მოძრაობა და ნექტრის შეგროვება?
       NEW Course 4 Bee For Loops 2_instruction: დაამატე საჭირო კოდი რათა ფუტკარმა მთელი ნექტარი შეაგროვოს. ნახე რამდენი კოდია საჭრო ამ თავსატეხისთვის! (უფრო მარტივ გზას მომდევნო თავსატეხში ვისწავლით.)
       NEW Course 4 Bee For Loops 3_instruction: 'For ციკლი ამას გაცილებით ამარტივებს! მთელი საჭრო კოდი აქაა, ნახე როგორაა აგებული და დააჭირე "გაშვება"-ს რომ ნახო როგორ მუშაობს. '
@@ -1617,6 +1628,38 @@ ka:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple

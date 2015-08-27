@@ -39,7 +39,7 @@
   "CONTROLS_FOREACH_TOOLTIP":"Для кожного елемента списку задай змінну '%1', а потім запиши деякі команди.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"від %1 до %2 через %3",
-  "CONTROLS_FOR_INPUT_WITH":"порахувати з",
+  "CONTROLS_FOR_INPUT_WITH":"рахувати з",
   "CONTROLS_FOR_TOOLTIP":"Нехай змінна %1 приймає значення від початкового до кінцевого значення, враховуючи заданий інтервал, і виконує вказані блоки.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"Додати умову до блоку „якщо“.",
   "CONTROLS_IF_ELSE_TOOLTIP":"Додати остаточну, всеосяжну умову до блоку якщо.",

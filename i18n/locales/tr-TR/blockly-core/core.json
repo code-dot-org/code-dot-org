@@ -39,7 +39,7 @@
   "CONTROLS_FOREACH_TOOLTIP":"Listedeki her öğeyi  '%1' değişkenine ver ve komutu yerine getir.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY":"%1 den %2 ye, her adımda %3 değişim",
-  "CONTROLS_FOR_INPUT_WITH":"Şununla say:",
+  "CONTROLS_FOR_INPUT_WITH":"ile sayılır",
   "CONTROLS_FOR_TOOLTIP":"%1 değişkenini başlangıç numarasından bitiş numarasına kadar belirtilen farkla değerler verirken belirtilen blokları gerçekleştirir.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"Eğer bloğuna bir koşul ekleyin.",
   "CONTROLS_IF_ELSE_TOOLTIP":"Eğer bloğuna kalan durumları \"yakalayan\" bir son ekle.",

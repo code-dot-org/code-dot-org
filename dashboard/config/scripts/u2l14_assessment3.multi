@@ -4,3 +4,6 @@ title 'Assessment: Question 4'
 question 'True or false? The Vigenere Cipher is like using multiple Caesar ciphers.'
 right 'true'
 wrong 'false'
+teacher_markdown <<MARKDOWN
+Answer: True
+MARKDOWN

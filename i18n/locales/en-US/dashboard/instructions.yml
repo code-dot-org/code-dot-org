@@ -501,6 +501,7 @@ en:
       Course 4 Artist For Loops 6_instruction: crwdns34321:0crwdne34321:0
       Course 4 Artist For Loops 7_instruction: crwdns34322:0crwdne34322:0
       Course 4 Artist For Loops 8_instruction: crwdns34323:0crwdne34323:0
+      Course 4 Artist For Loops 8a_instruction: crwdns45348:0crwdne45348:0
       Course 4 Artist For Loops 9_instruction: crwdns34324:0crwdne34324:0
       Course 4 Artist For Loops inspire_instruction: crwdns43350:0crwdne43350:0
       Course 4 Artist Functions 1_instruction: crwdns34325:0crwdne34325:0
@@ -567,6 +568,7 @@ en:
       Course 4 Bee For Loops 8_instruction: crwdns34381:0crwdne34381:0
       Course 4 Bee For Loops 9_instruction: crwdns34382:0crwdne34382:0
       Course 4 Bee Loops 5 NEW_instruction: crwdns45303:0crwdne45303:0
+      Course 4 Bee Loops 5a NEW_instruction: crwdns45349:0crwdne45349:0
       Course 4 Bee Params 1_instruction: crwdns34383:0crwdne34383:0
       Course 4 Bee Params 2_instruction: crwdns34384:0crwdne34384:0
       Course 4 Bee Params 3 (copy 1)_instruction: crwdns34385:0crwdne34385:0
@@ -931,6 +933,7 @@ en:
       NEW Course 4 Artist Vars 6_instruction: crwdns34629:0crwdne34629:0
       NEW Course 4 Bee For Loops 1_instruction: crwdns34630:0crwdne34630:0
       NEW Course 4 Bee For Loops 10_instruction: crwdns34631:0crwdne34631:0
+      NEW Course 4 Bee For Loops 10a_instruction: crwdns45350:0crwdne45350:0
       NEW Course 4 Bee For Loops 11_instruction: crwdns34632:0crwdne34632:0
       NEW Course 4 Bee For Loops 2_instruction: crwdns34633:0crwdne34633:0
       NEW Course 4 Bee For Loops 3_instruction: crwdns34634:0crwdne34634:0
@@ -953,6 +956,14 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       Ninjacat Demo No Animate_instruction: crwdns39002:0crwdne39002:0
+      PDAlg Big Game History_instruction: crwdns45351:0crwdne45351:0
+      PDAlg Big Game Remix_instruction: crwdns45352:0crwdne45352:0
+      PDAlg Design Recipe Delete_instruction: crwdns45353:0crwdne45353:0
+      PDAlg Design Recipe Examples_instruction: crwdns45354:0crwdne45354:0
+      PDAlg Design Recipe Required_instruction: crwdns45355:0crwdne45355:0
+      PDAlg Updates Cond_instruction: crwdns45356:0crwdne45356:0
+      PDAlg Updates Errors_instruction: crwdns45357:0crwdne45357:0
+      PDAlg Updates Space_instruction: crwdns45358:0crwdne45358:0
       PDK5 Conditionals 1_instruction: crwdns36454:0crwdne36454:0
       PDK5 Conditionals 2_instruction: crwdns37648:0crwdne37648:0
       PDK5 Events 1_instruction: crwdns36455:0crwdne36455:0

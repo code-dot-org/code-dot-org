@@ -181,6 +181,7 @@ fa-AF:
   homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع علوم کامپیوتر را بهبود ببخشند.
   homepage_banner_text_link: بیشتر بیاموزید
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -451,6 +452,7 @@ fa-AF:
   educator_notes: یادداشت های آموزگار
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
   teachers_notes_hoc: 'معلم ها: نکته های مهم آموزگار را اینجا بخوانید'
