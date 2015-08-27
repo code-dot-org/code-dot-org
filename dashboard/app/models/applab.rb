@@ -1,5 +1,6 @@
 class Applab < Blockly
   before_save :update_palette
+  before_save :fix_examples
 
   serialized_attrs %w(
     app_width
@@ -182,4 +183,9 @@ class Applab < Blockly
     JSON
   end
 
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select{|example| example.present?}
+  end
 end

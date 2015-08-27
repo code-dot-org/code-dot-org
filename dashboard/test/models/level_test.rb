@@ -319,6 +319,14 @@ EOS
     # this property is encrypted, not plaintext
     assert_nil level.properties['examples']
     assert level.properties['encrypted_examples']
-  end
 
+    # take out nils and empty strings
+    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+  end
 end
