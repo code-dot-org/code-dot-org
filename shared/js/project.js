@@ -92,6 +92,16 @@ var projects = module.exports = {
     return current.updatedAt;
   },
 
+  /**
+   * @returns {boolean} true if we're frozen
+   */
+  isFrozen: function () {
+    if (!current) {
+      return;
+    }
+    return current.frozen;
+  },
+
   //////////////////////////////////////////////////////////////////////
   // Properties and callbacks. These are all candidates for being extracted
   // as configuration parameters which are passed in by the caller.
@@ -122,6 +132,12 @@ var projects = module.exports = {
   showProjectHeader: function() {
     if (this.shouldUpdateHeaders()) {
       dashboard.header.showProjectHeader();
+    }
+  },
+
+  showAdmin: function() {
+    if (typeof dashboard.admin.showProjectAdmin === 'function') {
+      dashboard.admin.showProjectAdmin();
     }
   },
 
@@ -205,6 +221,11 @@ var projects = module.exports = {
     }
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
+    }
+
+    if (current && current.isOwner) {
+      // this code has no way to check if you are actually an admin. dashboard.admin has to take care of this
+      this.showAdmin();
     }
   },
   projectChanged: function() {
@@ -324,6 +345,17 @@ var projects = module.exports = {
     this.save(callback);
   },
   /**
+   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   */
+  freeze: function(callback) {
+    current.frozen = true;
+    current.hidden = true;
+    this.save(function(data) {
+      executeCallback(callback, data);
+      redirectEditView();
+    });
+  },
+  /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
@@ -349,7 +381,7 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  serverSideRemix: function() {
+  serverSideRemix: function(asAnswerKey) {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
         current.name = 'Big Game Template';
@@ -358,7 +390,11 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      location.href = projects.getPathName('remix');
+      if (asAnswerKey) {
+        location.href = projects.getPathName('remix_as_answer_key');
+      } else {
+        location.href = projects.getPathName('remix');
+      }
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
@@ -464,6 +500,13 @@ function executeCallback(callback, data) {
 }
 
 /**
+ * is the current project (if any) editable by the logged in user (if any)?
+ */
+function isEditable() {
+  return (current && current.isOwner && !current.frozen);
+}
+
+/**
  * If the current user is the owner, we want to redirect from the readonly
  * /view route to /edit. If they are not the owner, we want to redirect from
  * /edit to /view
@@ -474,11 +517,11 @@ function redirectEditView() {
     return;
   }
   var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
+  if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
     newUrl = location.href.replace(/\/view$/, '/edit');
     appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+  } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
     newUrl = location.href.replace(/\/edit$/, '/view');
     appOptions.readonlyWorkspace = true;
