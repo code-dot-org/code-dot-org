@@ -2,9 +2,23 @@ name 'U2L02 Free Response Reflection'
 title 'The Need for Addressing: Reflection'
 
 markdown <<MARKDOWN
+Describe the addressing system your group devised.
+
 How did your group decide upon a system for sending messages in the Battleship simulator? 
 
 Were there disagreements or problems? How were they resolved?
 
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A variety of systems are possible. Look for responses that indicate that: 
+
+- The addressing information was written in some sort of shorthand.
+- The method was short and simple.
+- The method used used initials or symbols.
+- The placement of the addressing information (beginning, end, inside the message).
+- Students tried different methods of addressing and assessed the success of each.
+- Also look for indications of collaboration skills in working together to solve the problem.
 
 MARKDOWN

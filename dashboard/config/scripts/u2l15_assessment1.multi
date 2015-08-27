@@ -11,3 +11,9 @@ wrong 'A Vigenere cipher relies upon an "alphabet shift" algorithm.'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- One cannot solve using frequency analysis directly.
+- Long keys create exponential growth possibilities.
+MARKDOWN

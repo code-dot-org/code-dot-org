@@ -1,0 +1,9 @@
+name 'U2L16 Free Response assessment 3'
+title 'Lesson 16 - Assessment 3'
+content1 'Why do we care about computationally hard problems, in regards to encryption?'
+
+teacher_markdown <<MARKDOWN
+Answer: 
+
+- Public key encryption needs a computationally hard problem to use as a one-way function to create a public key from a private key.
+MARKDOWN
