@@ -3,5 +3,11 @@ title 'Packets: Reflection'
 content1 ''
 placeholder 'Enter your reflection here.'
 markdown <<MARKDOWN
-In your own words, what were the primary challenges you needed to overcome in today’s challenge? How do these challenges mirror actual challenges encountered on the Internet?
+In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but will likely include these concepts:
+
+- 
 MARKDOWN
