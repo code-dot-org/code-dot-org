@@ -318,6 +318,7 @@ $small-footer-standard-width: 400px;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
+  padding-left: $codeApp-left-margin;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
