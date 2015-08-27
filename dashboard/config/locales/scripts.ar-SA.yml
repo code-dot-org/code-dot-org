@@ -316,10 +316,10 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: محاكاة الإنترنت
           description_short: ''
           description: ''
-          Internet Simulator: Internet Simulator
+          Internet Simulator: محاكاة الإنترنت
           Unit 1: الوحدة الأولى
           Unit 2: الوحدة الثانية
           Sending Bits: Sending Bits
@@ -976,8 +976,8 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: محاكاة الإنترنت
+          App Lab: مختبر التطبيق
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Welcome!
@@ -988,8 +988,8 @@
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: محاكاة الإنترنت
+          App Lab: مختبر التطبيق
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1250,3 +1250,11 @@
             all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
             for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep

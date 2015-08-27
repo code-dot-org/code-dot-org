@@ -186,6 +186,7 @@ is-IS:
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: 'Skrifaðu undir áskorun okkar &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -458,6 +459,7 @@ is-IS:
   educator_notes: Minnispunktar leiðbeinenda
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'

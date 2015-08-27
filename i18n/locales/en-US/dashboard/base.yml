@@ -2,6 +2,7 @@ en:
   errors:
     messages:
       not_saved: crwdns27834:0crwdne27834:0
+      too_young: crwdns45344:0crwdne45344:0
   activerecord:
     errors:
       messages:
@@ -372,7 +373,9 @@ en:
   footer:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
+    help_from_html_old: crwdns45345:0crwdne45345:0
     art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
+    art_from_html_old: 'crwdns45346:0%{current_year}crwdnd45346:0%{current_year}crwdne45346:0'
     powered_by_aws: crwdns24789:0crwdne24789:0
     trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
     copyright: crwdns45295:0crwdne45295:0
@@ -381,6 +384,7 @@ en:
     translate: crwdns2623:0crwdne2623:0
     support: crwdns5295:0crwdne5295:0
     support_url: crwdns19025:0crwdne19025:0
+    tos_short: crwdns45347:0crwdne45347:0
     tos: crwdns5338:0crwdne5338:0
     privacy: crwdns3901:0crwdne3901:0
     secure: crwdns5339:0crwdne5339:0

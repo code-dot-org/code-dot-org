@@ -802,8 +802,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1274,6 +1274,9 @@
       Course 4 Artist For Loops 8_instruction: Den korteste linja i denne kvadrat-spiralen
         er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige.
         Kan du fylle inn de manglende blokkene i dette stilige bildet?
+      Course 4 Artist For Loops 8a_instruction: Den korteste linja i denne kvadrat-spiralen
+        er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige.
+        Kan du fylle inn de manglende blokkene i dette stilige bildet?
       Course 4 Artist For Loops 9_instruction: Kan du lage en spiral? Flytt framover
         fra 1 til 75 piksler, øk med 1 piksel hver gang.
       Course 4 Artist For Loops inspire_instruction: "Fritt spill-inspirasjon: Du
@@ -1472,8 +1475,13 @@
         "vekst" og hver gang løkka kjører endres teller-variabelen med veksten. Prøv
         å samle disse blomstene ved å bruke en vekst på 2.
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: Bruk funksjonen "hent 3 nektar" som snur,
         beveger seg for å samle nektar og så returnerer til opprinnelig posisjon.
         Skriv en sekvens for å samle all nektar ved å bruke "hent 3 nektar"
@@ -1607,15 +1615,15 @@
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |
         In our game, how should we score points?
-        Add 1 to your "points" variable each time the Dog hits the Cat with a heart.
-        Use the "when actor 2 touches anything" event to trigger an update to your
-        score. You can increment your variable by setting "points = points + 1."
-        Get your score up to 10 (going one at a time!) to pass the level.
+        Add 1 to your "points" variable each time Dog hits Cat with a heart. Use
+        the "when actor 2 touches anything" event to trigger an update to your score.
+        You can increment your variable by setting "points = points + 1." Get your
+        score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
-        lose a point. Start with 10 points so it's not too hard. Let your score drop
-        down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
+        from Cat (actor 2), you should lose a point. Start with 10 points so it's
+        not too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -1628,11 +1636,13 @@
         ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
         less than 0, make the player (the Dog) vanish. Click "Finish" when the game
         works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: |
-        Free Play time! Here are all of the
-        variables we've played with so far in this stage, as well as a few more in
-        case you want them. Make a game or story using any of these variables. Hint:
-        scroll down to see all the commands in the work space.
+      Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables
+        we've played with so far in this stage, as well as a few more in\ncase you
+        want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox
+        that they need to be organized!  Here, we've put each piece into\nan appropriate
+        category.  Take some time to explore everything that is available.\nWhen you're
+        done browsing, make a game or story using repeats, variables,\nand events.
+        \ \r\n\r\nHint: scroll down to see all the commands in the workspace."
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
@@ -2423,7 +2433,7 @@
         now learned everything you need to know to make a pattern like this!\nIf this
         picture inspires you, try to make something similar. Otherwise, create\nsomething
         all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
-        Visit for the solution."
+        Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
@@ -2509,6 +2519,11 @@
         from each flower.
       NEW Course 4 Bee For Loops 10_instruction: Bruk for-løkkas teller-variabel til
         å kontrollere hvor langt du beveger deg vannrett.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -2534,13 +2549,14 @@
         is called the "increment". Each time the loop is run, the counter variable
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of "for
-        loops"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-      NEW Course 4 Bee For Loops 8_instruction: "What will you do if we take away\nsome
-        blocks? Can you add them back to help the bee collect the nectar?\r\nRemember:\nIf
-        your loop is counting up, the increment is added to your counter variable\neach
-        time through. What should your increment be to collect 3, 6, 9 nectar?\r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable
+        with a math block! How can you use the \"counter\" variable to navigate\nthis
+        garden with the fewest number of blocks possible? What do you need to\ndo
+        to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember:
+        If your loop is counting up, the increment is added\nto your \"counter\" variable
+        each time through."
+      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement
+        be to collect 3, 6, 9, 12, 15 nectar?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Hvis løkka di teller ned, så trekkes
         veksten fra teller-variabelen hver gang løkka går. Hva skal du øke med for
         å samle 9, så 6 og så 3 nektar?
@@ -2581,6 +2597,42 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game. Make sure you come back here and click Continue\nafter
+        you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple

@@ -2,6 +2,7 @@ sq:
   errors:
     messages:
       not_saved: 'Të lutem korrigjo gabimet që vijojnë:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -273,10 +274,10 @@ sq:
       add: Shto studentë
       remove: hiq student
       confirm_remove: A jeni i sigurtë që do ta heqësh këtë student?
-      help_reassign: Për të ndarë klasën tënde në pjesë të shumta, përzgjidh studentët të caktojnë një pjesë të re.
+      help_reassign: Për të ndarë klasën tënde në shumë pjesë, përzgjidh studentët të caktojnë një pjesë të re.
       help_register: "Në vend t'ju bëjmë të kaloni më shumë kohë në futjen e të dhënave të studentëve, ju mund të ngrini klasën tuaj shumë shpejt duke ju kërkuar atyre të rregjistrohen. Studentët tuaj do të zgjedhin emërin e përdoruesit dhe fjalëkalimin, por atyre NUK DO TU kërkohet një adresë email-i. Nëse një student harron fjalëkalimin, ju do ju duhet t'i rivendosni një për atë."
       register: Pyet studentët për të rregjistruar veten e tyre
-      vist: Pyet studentët e tu të vizitojnë
+      vist: Kërkoji studentët të vizitojnë
       section_code: 'dhe fusni kodin e seksionit të tyre:'
       first_please: 'Së pari, ju lutem %{add_section}'
       for: Për
@@ -336,7 +337,7 @@ sq:
     signin_message: 'Jeni i rregjistruar? %{link}'
     student_reg_link: Rregjistrimi i Studentëve
     teacher_reg_link: Rregjistrimi i Mësuesëve
-    signin_directions: 'Përdor një llogari për të parë progresin.<br/>Mësuesit, udhëzoni të gjithë klasën.'
+    signin_directions: 'Përdor një llogari për të parë progresin.<br/>Mësues, udhëzoni të gjithë klasën.'
     teacher_dashboard: Shiko panelin e progresit
     teacher_student_count_one: 'Ju keni %{count} student.'
     teacher_student_count: 'Ju keni %{count} studentë.'
@@ -369,8 +370,8 @@ sq:
     choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
     print_certificate: Printo Certifikatën
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Mëso në Code Studio
+    description: Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione dhe art me kode.
   gender:
     male: Mashkull
     female: Femër
@@ -379,18 +380,21 @@ sq:
     student: student
     teacher: Mësues
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Të gjitha të drejtat e rezervuara.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Mundësuar nga Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
+    copyright: E drejta e autorit
     more: Më shumë
     feedback: Jepni feedback-un tuaj
     translate: Na ndihmoni të përkthejmë në gjuhën tuaj
     support: Mbështetje
     support_url: http://support.code.org
-    tos: Kushtet
+    tos_short: Terms
+    tos: Kushtet e shërbimit
     privacy: Rregullat e Privatësisë
     secure: Versioni i Sigurtë
   reference_area:
@@ -422,7 +426,7 @@ sq:
   lesson_plan: Plani Mësimor
   view_lesson_plan: Shiko Planin Mësimor
   pdf_download: Shkarko PDF
-  download_coming_soon: Veprimi i shkarkuar vjen së shpejti.
+  download_coming_soon: Së shpejti veprime me shkarkim.
   video_coming_soon: Video vjen së shpejti!
   share_code:
     title: "Kliko 'Run' të shohësh programin tim në veprim"
@@ -434,7 +438,7 @@ sq:
     phone_number_not_allowed: Duket sikur është një numër telefoni në të. Përpiqu të ndryshosh tekstin.
     address_not_allowed: Duket sikur ka një adresë në të. Përpiqu të ndryshosh tekstin.
     email_not_allowed: Duket sikur ka një email në të. Përpiqu të ndryshosh tekstin.
-    profanity_not_allowed: Duket sikur ka blasfemi në të. Përpiqu të ndryshosh tekstin.
+    profanity_not_allowed: Duket sikur në të ka blasfemi. Përpiqu të ndryshosh tekstin.
   builder:
     created: Ti krijove një script të ri.
     destroyed: Ti shkatërrove një script.
@@ -514,7 +518,7 @@ sq:
   dialog:
     ok: Në rregull
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Kjo do ta rikthejë formuesen në gjëndjen fillestare dhe do të fshijë të gjitha blloqet që ke shtuar ose ndryshuar.
     startover_ok: Fillo nga fillimi
     startover_cancel: Anulo
   time:
@@ -588,7 +592,7 @@ sq:
     project_type: Lloji i Projektit
     help_text: 'Shtyp <strong>Bëj një Aplikacion</strong> ose <strong>Vizato Diçka</strong> më poshtë për të hapur një Laborator të ri ose një Projekt Artistik!<br/> Mund të kthehesh kur të duash, dhe të zhvillosh projektin tend.'
     need_help: Të duhet ndihmë për të filluar?
-    really_delete: Fshi?
+    really_delete: Fshirje?
     delete_yes: Po
     delete_no: Jo
     saved: E ruajtur

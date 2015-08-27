@@ -181,6 +181,7 @@ pl-PL:
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: 'Zgadzam się &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -451,6 +452,7 @@ pl-PL:
   educator_notes: Notatki nauczyciela
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'

@@ -7,10 +7,9 @@
           shpjegojë çfarë bën një Shkencëtar Kompjuterik. Do ti japë gjithashtu, studentëve
           një mundësi për të pranuar rolin e një shkencëtari kompjuterik. Në fund
           të këtij aktiviteti, çdo student do të ketë një përkujtuesë se çfarë mësoi
-          ai/ajo. Ti mund të tundohesh t'ju shmangësh femijëve mësimin e fjalëve të
-          fjalorit që shoqërohen më mësimin që ndiqet, por ti paraqesësh ata në një
-          zbavitje dhe lojë është shumë më produktive sesa të presësh për  mundësi
-          më të avancuara.
+          ai/ajo. Ti mund t'ju shmangësh femijëve mësimin e fjalëve të fjalorit që
+          shoqërohen më mësimin që vazhdojnë, por ti paraqesësh ata në një zbavitje
+          dhe lojë është shumë më produktive sesa të presësh për mundësi më të avancuara.
         pdfs:
         - unplug1
         video: Unplug1
@@ -96,13 +95,13 @@
         desc: Ky mësim do të marre ide nga një veprimatri e mëparshme (4. Programimi
           në Letër Grafike) dhe përdor ato njohuri për të theksuar rëndësinë e programeve
           të përfunduar që veprojnë në sekuencë dhe kontrollojnë programet në mënyrë
-          të vazhdueshme për "viruse".
+          të vazhdueshme për probleme.
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
         title: Interneti
-        desc: Në këtë mësim, studentët do të lundrojnë përmes Internit, ndërsa do
+        desc: Në këtë mësim, studentët do të lundrojnë përmes internetit, ndërsa do
           mësojnë rreth adresave të webit, IPs dhe DNS.
         pdfs:
         - unplug10
@@ -119,7 +118,7 @@
       UnplugHappyMaps:
         title: Hartat e Gëzuara
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
-          midis një tuneli duke përdorur një komandë të vetme.
+          një personazh midis një labirinti duke përdorur një komandë të vetme.
         video: C1_hartat_e gëzuara_unplugged
       MoveIt:
         title: Lëvize, Lëvize
@@ -165,7 +164,7 @@
         desc: Studentët janë prezantuar me konceptet e programimit të "eventeve",
           të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme.
           Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë
-          duke u varur se cili buton është shtypur.
+          në varësi të butonit që është shtypur.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
@@ -223,7 +222,7 @@
       Internet:
         title: Internet
         desc: Studentët dërgojnë mesazhe duke paraqitur metoda të ndryshme transmetiti
-          Internti, duke përdorur copa letre.
+          Interneti, duke përdorur copa letre.
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
@@ -258,10 +257,10 @@
           të bëhen shembuj për histori të tjera të reja argëtuese.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Për Ciklet Argëtim
+        title: Qef me Ciklet For
         desc: Ne e dimë që ciklet na lejojnë të bëjmë veprime herë pas here, por tani
-          ne do të mësojmë se si të mësojmë përdorimin e cikleve me një strukturë
-          shtesë të ndërtuar brënda.
+          ne do të mësojmë se si të përdorim ciklet me një strukturë shtesë të ndërtuar
+          brënda.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Të shkruarit këngë me Parametra
@@ -274,37 +273,37 @@
       BinaryImages:
         title: Imazhet Binare
         desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë,
-          kurset e jona të mëparshme i mësuan studentëve që informacioni mund të paraqitet
+          kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet
           në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg
           kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse
           (si psh imazhe dhe ngjyra) në binarë, gjithashtu.
         video: binarë C4_unplugged_
       VideoGamesCoordinatePlanes:
         title: Video Games dhe Plane Koordinative
-        desc: Meso sesi lojrat qe te pelqejne jane faktikisht te drejtuara nga algjebra!
-          Eksploro se si shprehjet algjebrike dhe plani i koordinuar mund te n'a ndihmojne
-          te kuptojme sesi funksionojne lojrat kompjuterike, dhe me pas fillo te planifikosh
-          rreth lojes qe ti do te krijosh.
+        desc: Mëso sesi lojrat që të pelqejnë janë faktikisht të drejtuara nga algjebra!
+          Eksploro se si shprehjet algjebrike dhe plani koordinativ mund të n'a ndihmojnë
+          të kuptojmë sesi funksionojnë lojrat kompjuterike, dhe më pas fillo te planifikosh
+          rreth lojes që ti do të krijosh.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Kontrata, Hapesire dhe Larmishmeri
-        desc: Kontratat n'a japin nje mundesi te kuptojme dhe diskutojme funksionet.
-          Gjate mesimit do te shikojme sesi Kontratat mund te n'a mesojne te kuptojme
-          nje gjuhe apo funksion te ri ne programim.
+        title: Kontrata, Domaini dhe Vargu
+        desc: Kontratat japin një mundesi të kuptojmë dhe diskutojmë funksionet. Gjatë
+          mësimit do të shikojmë sesi Kontratat mund te n'a mesojne te kuptojme nje
+          gjuhë apo funksion te ri ne programim.
         video: alg_5_contracts
       DesignRecipe:
         title: Receta e Dizenjimit
-        desc: Ne fazen finale, studentet shkruajten disa funksione shume te thjeshta-
-          por funksione me te sofistikuara kerkojne nje qasje me te miremenduar. Receta
-          e Dizenjimit eshte nje qasje e strukturuar per te pergatitur funksione ku
-          perfshihet edhe shkruajtja e teksteve per te siguruar mbarevajtjen e funksionit
-          ne perputhje me pritshmerite.
+        desc: Ne fazën finale, studentet shkruajtën disa funksione shume te thjeshta
+          - por funksione me të sofistikuara kërkojnë një qasje me të mirëmenduar.
+          Receta e Dizenjimit eshte një qasje e strukturuar për të përgatitur funksione
+          ku perfshihet edhe shkruajtja e teksteve për te siguruar mbarëvajtjen e
+          funksionit në perputhje me pritshmerite.
         video: alg_8_design_recipe
       Booleans:
         title: Boolean dhe Logjika
-        desc: Booleans jane i katerti dhe i fundit lloj informacioni qe ju do mesoni
-          ne kete kurs. Gjate ketij kursi ju do te mesoni se cfare jane Booleans dhe
-          sesi mund te n'a ndihmojne te shkruajme funksione qe mendojne me logjike
+        desc: Booleans janë i katerti dhe i fundit lloj informacioni që ju do mësoni
+          në këtë kurs. Gjate ketij kursi ju do të mësoni se çfarë janë Booleans dhe
+          sesi mund të ndihmojnë të shkruajmë funksione logjike
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kushtet dhe Funksionet Piecewise

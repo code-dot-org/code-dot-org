@@ -184,6 +184,7 @@ id-ID:
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_signpetition_dropdown: 'Tandatangani petisi kami &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org dan College Board membentuk aliansi untuk meningkatkan keberagaman dalam ilmu komputer.
   homepage_banner_text_link: Pelajari lebih banyak
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -454,6 +455,7 @@ id-ID:
   educator_notes: Catatan pendidik
   how_to_teach_hoc: Cara Mengajarkan Hour of Code
   more_resources_educators: Lebih banyak sumber daya bagi guru dan pendidik
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: peserta
   teachers_notes: Catatan Guru
   teachers_notes_hoc: 'Guru: Baca catatan penting pendidik di sini'
