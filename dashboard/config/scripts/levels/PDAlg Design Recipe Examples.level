@@ -33,7 +33,7 @@
         <block type="functional_definition" inline="false" editable="false">
           <mutation>
             <arg name="radius" type="Number"/>
-            <description>Produce a solid purple star of given radious.</description>
+            <description>Produce a solid purple star of given radius.</description>
             <outputtype>Image</outputtype>
           </mutation>
           <title name="NAME">purple_star</title>
