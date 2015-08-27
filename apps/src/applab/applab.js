@@ -364,6 +364,7 @@ function renderFooterInSharedGame() {
     },
     baseStyle: {
       width: $("#divApplab").width(),
+      paddingLeft: 0
     },
     className: 'dark',
     menuItems: menuItems
@@ -684,7 +685,7 @@ Applab.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
 
-  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
   config.nativeVizWidth = Applab.appWidth;
 
   config.appMsg = applabMsg;
