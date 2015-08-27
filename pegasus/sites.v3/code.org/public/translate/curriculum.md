@@ -4,6 +4,15 @@ nav: translate_nav
 ---
 
 # Translate Curriculum
+The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. There are currently three projects open for translations:
+
+* [Code.org Project](https://crowdin.com/project/codeorg) - For the Code.org site and all Code Studio tutorials. Learn more [here](https://code.org/translate/tutorials).
+* [Hour of Code Project](https://crowdin.com/project/hour-of-code) - For the HourofCode.com site. Learn more at [here](https://code.org/translate/hourofcode).
+* [Curriculum Project](https://crowdin.com/project/lesson-plans) - For teacher lesson plans that accompany our courses. Learn more below.
+
+Please complete translations for these projects in the above order of priority.
+
+## What do I translate first?
 
 The only curriculum we are currently translating are the lesson plans for Courses 1-3. Course 4 lesson plans are available, but not ready for translation. The course is still in beta and the lesson plans may change.
 
