@@ -11,3 +11,8 @@ wrong 'The fewest number and smallest total distance of connections necessary to
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- C: The fewest number and smallest total distance of connections necessary to connect all points in a graph
+MARKDOWN
