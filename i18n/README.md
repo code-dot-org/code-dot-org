@@ -74,8 +74,8 @@ git push
   * `blockly-core/i18n/locales/en-US/core.json`
   * `blockly-core/msg/js/en_us.js`
   * `apps/lib/blockly/en_us.js`
-
-[Example changelist adding a new string.](https://github.com/code-dot-org/code-dot-org/commit/d7fa8719bef9ec2e46ab2f6c91f722288218d517)
+  * [Example changelist adding a new string.](https://github.com/code-dot-org/code-dot-org/commit/d7fa8719bef9ec2e46ab2f6c91f722288218d517)
+4. You can verify your changes by running `cd apps && ./build_with_core.sh`
 
 ### Apps
 1. Make changes in `apps/i18n/<app>/en_us.json`

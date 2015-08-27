@@ -10,3 +10,8 @@ wrong 'Messages are routed over different paths.'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- C: The first 4 bits of the address specify the router number that your friend is on
+MARKDOWN
