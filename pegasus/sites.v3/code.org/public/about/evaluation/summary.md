@@ -6,7 +6,9 @@ nav: about_nav
 # Code.org's Impact on Computer Science Education: September 2014 - June 2015 Program Report
 <img src="/images/summary-2014-15.png" width="100%"/>
 
-Code.org is is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to research and understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for September 2014 through June 2015, which focused on answering the following key questions:
+Code.org is is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. 
+
+Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for September 2014 through June 2015, which focused on answering the following key questions:
 
 - [What do teachers say about Code.org professional development?](#pd)
 - [How successful have our district partnerships been in driving short- and long-term outcomes in each region?](#partners)
@@ -15,7 +17,7 @@ Code.org is is a non-profit dedicated to expanding participation in computer sci
 - [What next steps can Code.org take to improve our programs?](#nextsteps)
 
 ## Evaluation Design
-We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. We are currently hiring for an [internal evaluation manager](/about/jobs#Eval) to work in collaboration with Outlier, in order to expand our ability to study student learning outcomes. All data cited in this summary are available [upon request](mailto:teach@code.org).
+We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. All data cited in this summary are available [upon request](mailto:info@code.org).
 
 ---
 
@@ -23,7 +25,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 From September 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
-- a day-long, face-to-face workshop delivered to K-5 teachers by trained facilitators, via our [Affiliate Program](/educate/k5-affiliates) or by Code.org trainers via our [District Partnership Program](/educate/k5-district-partnership)
+- a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
 
 ## Key Finding: 
@@ -37,7 +39,7 @@ Through our professional development efforts, we are helping a large, diverse au
 | I would recommend the PD to others   | 98% | 97% |
 | This was the best PD ever   | 66% | 81%|
 | I feel prepared to teach CS   | 94% | 88% |
-*Source: Affiliate-Trained Teacher data from Code.org Survey. Code.org-Trained Teacher data from Outlier survey.*
+*Source: Affiliate-trained teacher data from Code.org Survey. Code.org-trained teacher data from Outlier survey.*
 
 <br><br>
 
@@ -63,7 +65,7 @@ Additionally, Code.org studied the attitudes of administrators and counselors in
 ## Key Finding: 
 Students across thousands of Code.org classrooms have demonstrated the ability to use computer science and computer programming concepts, starting as early as elementary school. <br /><br/>
 
-[Code Studio](http://studio.code.org), our online learning platform is designed to host our interactive CS courses. All online courses  are complemented by lesson plans teachers can deliver in the classroom. We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
+[Code Studio](http://studio.code.org), our online learning platform, is designed to host our interactive CS courses. All online courses  are complemented by lesson plans teachers can deliver in the classroom. We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
 
 ### Table: Code Studio User Growth, Sept 1 2014 - June 30 2015
 
@@ -109,5 +111,3 @@ Internally, through participant surveys and data science projects, we will conti
 
 - Workshop satisfaction (including online PD components)
 - Student outcomes measured through Code Studio
-
-*For more information, contact our [Evaluation Team](mailto:info@code.org).*
