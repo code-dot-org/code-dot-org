@@ -738,7 +738,7 @@
           <block type="functional_cond_image" inline="false"/>
           <block type="functional_cond_boolean" inline="false"/>
         </category>
-        <category name="Variables" custom="VARIABLE"/>
+        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
         <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
