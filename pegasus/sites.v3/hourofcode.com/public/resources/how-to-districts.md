@@ -1,8 +1,10 @@
 ---
-title: Hour of Code How-To for Districts
+title: <%= hoc_s(:title_how_to_districts) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
 
 # Bring the Hour of Code to your entire school district.
 
@@ -19,3 +21,5 @@ nav: resources_nav
 5. **Host a district Hour of Code event.** See our <a href="<%= hoc_uri('/resources/how-to-events') %>">event how to guide</a> for a sample run of show, media outreach kit and other supports. 
 
 6. **More <a href="<%= hoc_uri('/prizes') %>">prizes</a> for EVERY organizer.** Every participating educator will receive thank you gifts. And in each state, one participating school will win $10,000 in technology for their school! 
+
+<%= view :signup_button %>
