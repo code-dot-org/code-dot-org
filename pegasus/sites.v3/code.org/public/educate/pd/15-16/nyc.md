@@ -31,21 +31,28 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 17, 2015
+Quarter 1: Saturday, October 17, 2015<br/>
+This workshop will be in New York.
 
-Quarter 2: Saturday, December 5, 2015
+Quarter 2: Saturday, December 5, 2015<br/>
+This workshop will be in Montgomery County, Maryland.
 
-Quarter 3: Saturday, February 27, 2016
+Quarter 3: Saturday, February 27, 2016<br/>
+This workshop will be in New York.
 
-Quarter 4: Saturday, March 26, 2016
+Quarter 4: Saturday, March 26, 2016<br/>
+This workshop will be in Montgomery County, Maryland.
 
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+
+**October 17th Location**
 
 TBD
+
+All teachers will travel to the PD location to attend in-person.
 
 **What to bring to Phase 3 quarterly sessions:**
 
