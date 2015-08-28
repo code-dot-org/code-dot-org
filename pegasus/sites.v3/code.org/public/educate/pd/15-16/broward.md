@@ -47,14 +47,22 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-** Broward Location**
-
-NOVA Southeastern University<br/>
+**Broward Location**
+<br/>NOVA Southeastern University<br/>
 3301 College Ave<br/>
 Room TBD<br/>
 Fort Lauderdale, FL 33314
 
+Teachers will meet at the PD location and connect to the Charles County PD virtually.
+
 **Charles County Location**
+<br/>
+North Point High School
+<br/>
+Room TBD<br/>
+2500 Davis Rd<br/> Waldorf, MD 20603
+
+Teachers will meet at the PD location and connect to the Broward PD virtually.
 
 
 **What to bring to Phase 3 quarterly sessions:**
