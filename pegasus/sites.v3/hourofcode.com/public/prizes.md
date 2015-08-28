@@ -3,6 +3,8 @@ title: Prizes
 layout: wide
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Prizes for every organizer
@@ -93,3 +95,5 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 <h2 id="more_questions">More questions about prizes?</h2>
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

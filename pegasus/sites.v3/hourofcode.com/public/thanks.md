@@ -28,6 +28,8 @@ social:
   twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
+<%= view :signup_button %>
+
 # Thanks for signing up to host an Hour of Code!
 
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
@@ -52,3 +54,5 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 <a href="<%= hoc_uri('/resources#politicians') %>">Send this email</a> to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
+
+<%= view :signup_button %>
