@@ -47,13 +47,14 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**Location**
+** Broward Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
 Room TBD<br/>
 Fort Lauderdale, FL 33314
 
+**Charles County Location**
 
 
 **What to bring to Phase 3 quarterly sessions:**
