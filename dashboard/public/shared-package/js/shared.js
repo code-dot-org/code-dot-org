@@ -640,9 +640,7 @@ var projects = module.exports = {
   },
 
   showAdmin: function() {
-    if (typeof dashboard.admin.showProjectAdmin === 'function') {
-      dashboard.admin.showProjectAdmin();
-    }
+    dashboard.admin.showProjectAdmin();
   },
 
   showMinimalProjectHeader: function() {
