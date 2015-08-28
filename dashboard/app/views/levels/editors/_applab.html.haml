@@ -35,9 +35,21 @@
     is to add your elements in design mode, hit run, then open up the browser console and type `Applab.levelHtml`.
     IMPORTANT WARNING: If you have referenced images in the HTML and/or  CODE, then you need to get fully-qualified
     code.org https URLS for these assets and update the HTML and the code to reflect these. You can quickly get full
-    image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.   
+    image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.
     Copy the result and paste it here (it should start with something like
     #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
   = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: Applab.pretty_print(@level.start_html)
   :javascript
     codeMirror('start_html', 'html');
+.field.examples
+  = f.label :examples, 'Example solutions'
+  %p
+    Go to
+    = link_to applab_project_projects_url(host: 'studio.code.org', port: 80), applab_project_projects_url(host: 'studio.code.org', port: 80)
+    to build your example, then copy the channel token (the sequence of letters and numbers after /applab)
+  - unless f.object.examples.blank?
+    - f.object.examples.each do |example|
+      - next if example.blank?
+      = text_field_tag "level[examples][]", example
+  - 5.times do
+    = text_field_tag "level[examples][]"

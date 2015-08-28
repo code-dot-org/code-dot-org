@@ -1,8 +1,10 @@
 ---
-title: How-to guide for public officials
+title: <%= hoc_s(:title_how_to_officials) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
 
 ## Bring the Hour of Code to your entire community.
 
@@ -26,3 +28,5 @@ nav: resources_nav
 7. **Issue a press release.** <a href="<%= hoc_uri('/resources/official-press-release') %>">Use this sample</a> as a guide.
 
 8. **Connect locally.** Visit [http://code.org/promote](http://code.org/promote) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+
+<%= view :signup_button %>

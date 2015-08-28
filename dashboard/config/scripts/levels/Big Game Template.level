@@ -733,9 +733,12 @@
           </block>
         </category>
         <category name="Conditionals">
-          <block type="functional_cond" inline="false"/>
+          <block type="functional_cond_number" inline="false"/>
+          <block type="functional_cond_string" inline="false"/>
+          <block type="functional_cond_image" inline="false"/>
+          <block type="functional_cond_boolean" inline="false"/>
         </category>
-        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
+        <category name="Variables" custom="VARIABLE"/>
         <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
