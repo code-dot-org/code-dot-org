@@ -52,6 +52,10 @@ class Game < ActiveRecord::Base
     @@game_netsim ||= find_by_name("NetSim")
   end
 
+  def self.pixelation
+    @@game_pixelation ||= find_by_name("Pixelation")
+  end
+
   def unplugged?
     app == UNPLUG
   end

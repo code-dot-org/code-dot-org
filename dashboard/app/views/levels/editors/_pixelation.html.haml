@@ -1,0 +1,12 @@
+.field
+  = f.label :version, 'Pixelation version'
+  %p Integer representing which sprite to use for the first character. Default is 0.
+  = f.select :version, options_for_select([['1-bit, no dimension sliders', 1], ['1-bit with dimension sliders', 2], ['Bit-depth and dimension sliders', 3]], @level.version)
+.field
+  = f.label :hex, 'Hex encoding'
+  %p When checked, interpret the pixel data as hex digits.  Otherwise binary.
+  = boolean_check_box f, :hex
+.field
+  = f.label :data, 'Pixel data'
+  %p Default pixel data for the level.
+  = f.text_area :data, rows: 20, style: 'width: 100%;'
