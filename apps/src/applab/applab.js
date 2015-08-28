@@ -74,6 +74,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 
 var level;
 var skin;
+var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -356,10 +357,10 @@ function renderFooterInSharedGame() {
     menuItems.splice(0, 1); // no make my own app on mobile
   }
 
-  React.render(React.createElement(window.dashboard.getSmallFooterComponent(React), {
+  window.dashboard.footer.render(React, {
     i18nDropdown: '',
     copyrightInBase: false,
-    copyrightStrings: window.dashboard.copyrightStrings,
+    copyrightStrings: copyrightStrings,
     baseMoreMenuString: applabMsg.builtOnCodeStudio(),
     rowHeight: FOOTER_HEIGHT,
     style: {
@@ -371,7 +372,7 @@ function renderFooterInSharedGame() {
     },
     className: 'dark',
     menuItems: menuItems
-  }), footerDiv);
+  }, footerDiv);
 }
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
@@ -544,6 +545,7 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -582,6 +584,7 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     applabUserId: config.applabUserId,
     isAdmin: (config.isAdmin === true)
