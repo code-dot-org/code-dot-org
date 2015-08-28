@@ -1,5 +1,5 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 
 social:

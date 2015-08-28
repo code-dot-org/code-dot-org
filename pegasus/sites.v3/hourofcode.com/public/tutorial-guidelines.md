@@ -1,4 +1,5 @@
 ---
+title: <%= hoc_s(:title_tutorial_guidelines) %>
 layout: wide
 ---
 

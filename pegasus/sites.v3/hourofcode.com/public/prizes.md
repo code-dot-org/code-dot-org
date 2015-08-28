@@ -1,5 +1,5 @@
 ---
-title: Prizes
+title: <%= hoc_s(:title_prizes) %>
 layout: wide
 ---
 
