@@ -258,7 +258,12 @@ StudioApp.prototype.init = function(config) {
   if (showCode && this.enableShowCode) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
-        var result = this.editor.toggleBlocks();
+        var result;
+        try {
+          result = this.editor.toggleBlocks();
+        } catch (err) {
+          result = {error: err};
+        }
         if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
@@ -1535,8 +1540,15 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.resizeToolboxHeader();
 
   if (options.startBlocks) {
-    // Don't pass CRLF pairs to droplet until they fix CR handling:
-    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+
+    try {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    } catch (err) {
+      // catch errors without blowing up entirely. we may still not be in a
+      // great state
+      console.error(err.message);
+    }
     // Reset droplet Undo stack:
     this.editor.clearUndoStack();
     // Reset ace Undo stack:
