@@ -318,6 +318,18 @@
   resources_press_kit: Press Kit
   resources_country_resources: Country Specific Resources
 
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To 
+  title_how_to_organizations: How to host an Hour of Code - Organizations
+  title_how_to_officials: How-to guide for public officials
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials 
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Press Kit
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+
   events_title: All Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
