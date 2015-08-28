@@ -19,6 +19,8 @@
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
+
+    = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
   .actions
     = f.submit
 #validation-error.validation-error{style: 'background-color: yellow'}
