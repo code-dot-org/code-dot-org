@@ -37,3 +37,8 @@ for file in $(find $orig_dir -name 'en_us.json'); do
 ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
 
 done
+
+git add --all i18n
+git add --all ../i18n/locales/source
+git commit --message="Updated apps strings"
+git push
