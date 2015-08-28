@@ -63,7 +63,7 @@ def no_credit_count
   DB[:cdo_state_promote].where(cs_counts_t: 'No').exclude(state_code_s: 'DC').count
 end
 def credit_count
-  50 - no_credit_count
+  DB[:cdo_state_promote].where(cs_counts_t: 'Yes').exclude(state_code_s: 'DC').count
 end
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
