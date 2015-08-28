@@ -161,9 +161,6 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
-      Code Logo v3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        title: title
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -290,9 +287,6 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
-      Mixing Colors:
-        description here: description here
-        title: title
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -462,41 +456,11 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
-      Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
-        description here: description here
-      Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
-      Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
-      Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
       Pixelation - Lesson 14 - Instructions one bit error:
         'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
-        description here: description here
-      Pixelation - Lesson 14 - Make the Letter A:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B and W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B&W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free Play
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color Shades 4x4
-        description here: description here
-      Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete 3-bit color
         description here: description here
       Pixelation - Lesson 15 - Favicon Instructions:
         Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon Instructions
@@ -524,30 +488,6 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      Pixelation 1:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 1: Pixelation 1
-      Pixelation 2:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 2: Pixelation 2
-      Pixelation 3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 3: Pixelation 3
-      Pixelation 3 Bit Colors:
-        description here: description here
-        title: title
-      Pixelation 4:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker test of External level -- NOT REAL
-      Pixelation 4x4 Empty:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
-      Pixelation Bee:
-        description here: description here
-        title: title
-      Pixelation Flappy:
-        description here: description here
-        title: title
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
