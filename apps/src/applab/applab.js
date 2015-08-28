@@ -43,6 +43,8 @@ var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
 
+var applabConstants = require('./constants');
+
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
@@ -92,7 +94,7 @@ var twitterOptions = {
 var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
-var FOOTER_HEIGHT = 34;
+var FOOTER_HEIGHT = applabConstants.FOOTER_HEIGHT;
 
 // The typical width of the visualization area (indepdendent of appWidth)
 var vizAppWidth = 400;
@@ -359,7 +361,7 @@ function renderFooterInSharedGame() {
     copyrightInBase: false,
     copyrightStrings: window.dashboard.copyrightStrings,
     baseMoreMenuString: applabMsg.builtOnCodeStudio(),
-    rowHeight: 34,
+    rowHeight: FOOTER_HEIGHT,
     style: {
       fontSize: 18
     },
