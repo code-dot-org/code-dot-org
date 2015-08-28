@@ -56,6 +56,10 @@ class Game < ActiveRecord::Base
     @@game_pixelation ||= find_by_name("Pixelation")
   end
 
+  def self.text_compression
+    @@game_text_compression ||= find_by_name("TextCompression")
+  end
+
   def unplugged?
     app == UNPLUG
   end
