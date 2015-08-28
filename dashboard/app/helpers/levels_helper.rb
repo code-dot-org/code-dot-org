@@ -250,7 +250,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
-    if @game.owns_footer_for_share?
+    if @game and @game.owns_footer_for_share?
       app_options[:copyrightStrings] = {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),
