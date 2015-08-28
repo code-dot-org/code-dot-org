@@ -1,3 +1,6 @@
+
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -18,3 +21,5 @@
 # Additional resources coming soon!
 
 <% end %>
+
+<%= view :signup_button %>

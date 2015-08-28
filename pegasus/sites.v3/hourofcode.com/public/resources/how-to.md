@@ -3,6 +3,9 @@ title: How-to Guide
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
+
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Watch this how-to video
@@ -75,3 +78,4 @@ Each student gets a chance to get a certificate via email when they finish the [
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators <a href="http://<%= codeorg_url() %>/educate">here</a>. Or encourage your children to learn <a href="http://<%= codeorg_url() %>/learn/beyond">online</a>. <% end %>
 
+<%= view :signup_button %>
