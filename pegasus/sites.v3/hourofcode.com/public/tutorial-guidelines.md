@@ -2,6 +2,8 @@
 layout: wide
 ---
 
+<%= view :signup_button %>
+
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
 Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek  website(s). The current list is at [https://code.org/learn](https://code.org/learn).
@@ -232,4 +234,4 @@ If you create a tutorial that is designed for the vision-impaired, we’d love t
 
 [**Back to the top**](#top)
 
-
+<%= view :signup_button %>
