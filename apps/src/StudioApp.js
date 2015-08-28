@@ -34,6 +34,22 @@ var ENGLISH_LOCALE = 'en_us';
  */
 var MAX_PHONE_WIDTH = 500;
 
+/**
+ * HACK Alert. We're currently using two different copies of React - one in
+ * dashboard, and another in apps. This can get us into trouble in that the
+ * first element each of them serialize will have a reactid of .0. We get around
+ * this for now by pre-creating/serializing100 elements (i.e. reserving those
+ * ids for dashboard to use)
+ * A better long term approach would be to either get dashboard and apps to
+ * share a copy of React, or to have dashboard prerender its components (calling
+ * renderToString using a server-copy of react results in random reactids)
+ */
+(function reserveDashboardReactIds() {
+  var element = React.createElement("div");
+  for (var i = 0; i < 100; i++) {
+    React.renderToString(element);
+  }
+})();
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);

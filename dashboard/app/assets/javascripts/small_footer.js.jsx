@@ -100,6 +100,16 @@ window.dashboard.getSmallFooterComponent = function (React) {
       }.bind(this));
     },
 
+    clickBase: function () {
+      if (this.props.copyrightInBase) {
+        // When we have multiple items in our base row, ignore clicks to the
+        // row that aren't on those particular items
+        return;
+      }
+
+      this.clickBaseMenu();
+    },
+
     clickBaseCopyright: function () {
       if (this.state.menuState === MenuState.MINIMIZING) {
         return;
@@ -166,7 +176,7 @@ window.dashboard.getSmallFooterComponent = function (React) {
 
       return (
         <div className={this.props.className} style={styles.smallFooter}>
-          <div className="small-footer-base" ref="base" style={styles.base}>
+          <div className="small-footer-base" ref="base" style={styles.base} onClick={this.clickBase}>
             <div dangerouslySetInnerHTML={{
                 __html: decodeURIComponent(this.props.i18nDropdown)
             }}/>
