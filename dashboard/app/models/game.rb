@@ -60,6 +60,10 @@ class Game < ActiveRecord::Base
     @@game_text_compression ||= find_by_name("TextCompression")
   end
 
+  def self.odometer
+    @@game_odometer ||= find_by_name("Odometer")
+  end
+
   def unplugged?
     app == UNPLUG
   end
