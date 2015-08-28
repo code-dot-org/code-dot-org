@@ -46,7 +46,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Prince George's Community College<br/>
+Center for the Advancement of Technology (CAT)<br/>
+Room 110<br/>
+301 Largo Rd</br>
+Largo, MD 20774
 
 **What to bring to Phase 3 quarterly sessions:**
 
