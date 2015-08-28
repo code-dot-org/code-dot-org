@@ -40,9 +40,17 @@ Quarter 4: Saturday, March 5, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**Spokane Location**
 
 TBD
+
+Teachers from Seattle, Denver and Utah will travel to Spokane for PD and virtually connect with the LA PD.
+
+**LA Location**
+
+TBD
+
+Teachers from San Francisco will travel to LA for PD and virtually connect with the Spokane PD.
 
 **What to bring to Phase 3 quarterly sessions:**
 
