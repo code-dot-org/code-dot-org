@@ -1,5 +1,5 @@
 ---
-title: Partners
+title: <%= hoc_s(:title_partners) %>
 ---
 
 <%= view :signup_button %>

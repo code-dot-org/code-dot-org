@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: <%= hoc_s(:title_resources) %>
 layout: wide
 nav: resources_nav
 ---
