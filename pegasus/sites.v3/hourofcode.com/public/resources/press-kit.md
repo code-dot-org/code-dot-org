@@ -3,6 +3,9 @@ title: Press Kit
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
+
 ## How to attract media to your Hour of Code event
 
 *For all press and media inquiries, contact [press@code.org](mailto:press@code.org)*
@@ -56,3 +59,5 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 <br />
 Find more resources and sample emails <a href="<%= hoc_uri('/resources') %>">here</a>.
+
+<%= view :signup_button %>
