@@ -22,7 +22,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "The race in that last puzzle wasn't very fair! Change the \"dog_speed\" variable to make sure you can collect more flags than the Cat. The first to collect 10 flags wins!",
+    "instructions": "The race in that last puzzle wasn't very fair! Change the \"dog_speed\" variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
@@ -32,7 +32,7 @@
     "protaganist_sprite_index": "2",
     "disable_sharing": "false",
     "video_key": "C4_variables_playlab",
-    "markdown_instructions": "The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than the Cat. The first to collect 10 flags wins!",
+    "markdown_instructions": "The race in that last puzzle wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than Cat. The first to collect 10 flags wins!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -40,9 +40,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

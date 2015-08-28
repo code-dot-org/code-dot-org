@@ -23,27 +23,26 @@ describe("NetSimMessage", function () {
     assert(message.getTable() === testShard.messageTable);
   });
 
-  it ("has expected row structure and default values", function () {
+  it ("implements MessageData", function () {
     var message = new NetSimMessage(testShard);
-    var row = message.buildRow();
 
-    assertOwnProperty(row, 'fromNodeID');
-    assertEqual(row.fromNodeID, undefined);
+    assertOwnProperty(message, 'fromNodeID');
+    assertEqual(message.fromNodeID, undefined);
 
-    assertOwnProperty(row, 'toNodeID');
-    assertEqual(row.toNodeID, undefined);
+    assertOwnProperty(message, 'toNodeID');
+    assertEqual(message.toNodeID, undefined);
 
-    assertOwnProperty(row, 'simulatedBy');
-    assertEqual(row.simulatedBy, undefined);
+    assertOwnProperty(message, 'simulatedBy');
+    assertEqual(message.simulatedBy, undefined);
 
-    assertOwnProperty(row, 'base64Payload');
-    assertEqual(row.payload, undefined);
+    assertOwnProperty(message, 'payload');
+    assertEqual(message.payload, "");
 
-    assertOwnProperty(row, 'extraHopsRemaining');
-    assertEqual(row.extraHopsRemaining, 0);
+    assertOwnProperty(message, 'extraHopsRemaining');
+    assertEqual(message.extraHopsRemaining, 0);
 
-    assertOwnProperty(row, 'visitedNodeIDs');
-    assertEqual(row.visitedNodeIDs, []);
+    assertOwnProperty(message, 'visitedNodeIDs');
+    assertEqual(message.visitedNodeIDs, []);
   });
 
   describe ("isValid static check", function () {
@@ -70,24 +69,6 @@ describe("NetSimMessage", function () {
       visitedNodeIDs: [4]
     });
     assertEqual(message.payload, "1001001");
-  });
-
-  it ("converts local binary payload to base64 before creating row", function () {
-    var base64Payload = {
-      string: "kg==",
-      len: 7
-    };
-    var message = new NetSimMessage(testShard, {
-      fromNodeID: 1,
-      toNodeID: 2,
-      simulatedBy: 2,
-      base64Payload: base64Payload,
-      extraHopsRemaining: 3,
-      visitedNodeIDs: [4]
-    });
-    var row = message.buildRow();
-    assertEqual(row.base64Payload.string, base64Payload.string);
-    assertEqual(row.base64Payload.len, base64Payload.len);
   });
 
   it ("gracefully converts a malformed base64Payload to empty string", function () {
@@ -264,5 +245,55 @@ describe("NetSimMessage", function () {
       assertTableSize(testShard, 'messageTable', 0);
     });
   });
+
+  describe("MessageRow", function () {
+
+    it ("has expected row structure and default values", function () {
+      var message = new NetSimMessage(testShard);
+      var row = message.buildRow();
+
+      assertOwnProperty(row, 'fromNodeID');
+      assertEqual(row.fromNodeID, undefined);
+
+      assertOwnProperty(row, 'toNodeID');
+      assertEqual(row.toNodeID, undefined);
+
+      assertOwnProperty(row, 'simulatedBy');
+      assertEqual(row.simulatedBy, undefined);
+
+      assertOwnProperty(row, 'base64Payload');
+      assertEqual(row.base64Payload, {
+        string: "",
+        len: 0
+      });
+
+      assertOwnProperty(row, 'extraHopsRemaining');
+      assertEqual(row.extraHopsRemaining, 0);
+
+      assertOwnProperty(row, 'visitedNodeIDs');
+      assertEqual(row.visitedNodeIDs, []);
+    });
+
+    it ("converts local binary payload to base64 before creating row", function () {
+      var base64Payload = {
+        string: "kg==",
+        len: 7
+      };
+      var message = new NetSimMessage(testShard, {
+        fromNodeID: 1,
+        toNodeID: 2,
+        simulatedBy: 2,
+        base64Payload: base64Payload,
+        extraHopsRemaining: 3,
+        visitedNodeIDs: [4]
+      });
+      var row = message.buildRow();
+      assertEqual(row.base64Payload.string, base64Payload.string);
+      assertEqual(row.base64Payload.len, base64Payload.len);
+    });
+
+
+  });
+
 
 });

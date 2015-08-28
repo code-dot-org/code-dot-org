@@ -11,3 +11,9 @@ wrong 'Your mail could not be delivered if a road your mailman was planning to t
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- B: The mail carrier would sometimes take different paths to deliver each letter to your home.
+- C: Letters would be written on the outside of envelopes for all to read instead of being put inside envelopes.
+MARKDOWN

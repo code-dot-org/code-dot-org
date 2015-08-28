@@ -309,3 +309,77 @@ function test_contractEditor_change_output_types() {
   Blockly.contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
+
+function test_contractEditor_new_function_button_then_delete() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+  var contractEditor = Blockly.contractEditor;
+
+  contractEditor.openWithNewFunction();
+  contractEditor.addNewExampleBlock_();
+  contractEditor.addNewExampleBlock_();
+
+  var definitionBlock = contractEditor.functionDefinitionBlock;
+  var functionName = definitionBlock.getProcedureInfo().name;
+
+  var acceptDialogTriggered = false;
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantAcceptDialog = function (dialogOptions) {
+    // Fake dialog class which accepts deletion immediately
+    // in dialog parlence, deletion -> cancel (left side button)
+    acceptDialogTriggered = true;
+    dialogOptions.onCancel();
+  };
+
+  var rejectDialogTriggered = false;
+  /**
+   * @type {SimpleDialogFunction}
+   * @param {DialogOptions} dialogOptions
+   */
+  var instantRejectDialog = function (dialogOptions) {
+    // Fake dialog class which rejects deletion immediately
+    // in dialog parlence, rejection -> confirm (right side button)
+    rejectDialogTriggered = true;
+    if (dialogOptions.onConfirm) {
+      dialogOptions.onConfirm();
+    }
+  };
+
+  var beforeDeletionAssertions = function () {
+    assertTrue('Contract editor is open', contractEditor.isOpen());
+    assertEquals('Has four examples',
+        4, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+    assertNotNull('Function exists',
+        Blockly.mainBlockSpace.findFunction(functionName));
+  };
+
+  var afterDeletionAssertions = function () {
+    assertFalse('Contract editor no longer open', contractEditor.isOpen());
+    assertEquals('Has no examples',
+        0, Blockly.mainBlockSpace.findFunctionExamples(functionName).length);
+    assertNull('Function no longer exists',
+        Blockly.mainBlockSpace.findFunction(functionName));
+  };
+
+  beforeDeletionAssertions();
+  assertFalse(acceptDialogTriggered);
+  assertFalse(rejectDialogTriggered);
+
+  Blockly.customSimpleDialog = instantRejectDialog;
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertTrue(rejectDialogTriggered);
+  beforeDeletionAssertions();
+
+  Blockly.customSimpleDialog = instantAcceptDialog;
+  Blockly.fireTestClickSequence(goog.dom.getElementByClass('svgTextButton'));
+
+  assertTrue(acceptDialogTriggered);
+  afterDeletionAssertions();
+
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}

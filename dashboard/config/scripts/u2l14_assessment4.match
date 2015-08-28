@@ -11,3 +11,10 @@ answer 'Caesar Shift Cipher(of 18)'
 
 question 'GBRXBN MBGGEFB GTTTT'
 answer 'Random Substitution Cipher'
+teacher_markdown <<MARKDOWN
+Answers:
+
+- TEMVVU WIITAQIQTHRLY: Vigenere Cipher
+- AMKZMB UMAAIOM APPPP: Caesar Shift Cipher(of 18)
+- GBRXBN MBGGEFB GTTTT: Random Substitution Cipher
+MARKDOWN

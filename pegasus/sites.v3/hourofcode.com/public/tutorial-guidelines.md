@@ -21,7 +21,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 ## Index:
 - [How tutorials will be evaluated for inclusion](#inclusion)<br/>
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)<br/>
-- [How to submit (Due 10/31/2015)](#submit)<br/>
+- [How to submit (Due 10/15/2015)](#submit)<br/>
 - [Suggestions for designing your activity](#design)<br/>
 -  [Trademark Guidelines](#tm)<br/>
 - [Tracking Pixel](#pixel)<br/>
@@ -89,7 +89,7 @@ Ultimately, the goal of the Hour of Code campaign is to broaden participation in
 [**Back to the top**](#top)
 
 <a id="submit"></a>
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
 **What you’ll need:** 
@@ -231,3 +231,5 @@ Ex: [http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code)
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers.  We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
+
+

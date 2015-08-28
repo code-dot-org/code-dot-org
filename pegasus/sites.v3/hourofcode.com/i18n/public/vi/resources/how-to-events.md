@@ -1,114 +1,52 @@
 
 
-# Hour of Code event guide
+# Hướng dẫn tổ chức sự kiện Giờ Lập trình
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-## 1) Prepare for your event
+## 1) Chuẩn bị cho sự kiện của bạn
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+  * Xác định địa điểm, ngày tháng và thời gian
+  * Gửi [ thư mời](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) tới ngài thị trưởng, nghị sĩ, thống đốc, hoặc người có ảnh hưởng trong kinh doanh tại địa phương để nói chuyện.
+  * Mời các đơn vị truyền thông/báo chí, tức là mời: trạm tin tức địa phương, tờ báo địa phương, blogger về giáo dục/công nghệ cao. Xem [ bộ báo chí ](<%= hoc_uri('/resources/press-kit') %>) của chúng tôi để được giúp đỡ.
 
-## 2) During your event
+## 2) Trong chuỗi sự kiện của bạn
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Bắt đầu sự kiện của bạn với một trong những [video tạo cảm hứng](<%= hoc_uri('/resources#videos') %>) của chúng tôi.
+  * Đưa ra một bài giới thiệu tổng quan về tầm quan trọng của khoa học máy tính, sử dụng những [ số liệu thống kê và đồ thị](<%= hoc_uri('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Những ý tưởng khác: 
+      * Mời một nhà lãnh đạo, trong ngành công nghiệp tại địa phương để thảo luận về công việc của họ, đang liên quan đến khoa học máy tính
+      * Mời một chính trị gia địa phương và để cho học viên dạy ông/bà ấy làm thế nào để mã hóa
+      * Có một nhóm học viên chứng minh một hoạt động chưa cắm phít
+      * Có một nhóm sinh viên dạy cách lập trình cho ngài Hiệu trưởng hoặc một nhóm giáo viên
+      * Nếu trường học của bạn đã dạy về khoa học máy tính rồi, hãy để các sinh viên giới thiệu kế hoạch
 
-## 3) Share how it went
+## 3) Chia sẻ cách bạn đã làm
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Chia sẻ những hình ảnh về sự kiện của bạn trên Facebook và Twitter. 
+  * Sử dụng hashtag **#HourofCode**
 
-## Example Event Plan
+## Ví dụ Kế hoạch tổ chức sự kiện
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Sự kiện:** Tuần lễ Giáo dục Khoa học Máy tính toàn trường, mở đầu hội nghị
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Thời gian:** Trong giờ học. Sự kiện được ưu thích vào giữa buổi sáng. Khoảng 1 giờ.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Vị trí:** Hội trường (ví dụ như nhà hát, phòng tập thể dục, căn tin)   
   
 
 
-## Run of Show
+## Chạy Chương trình
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Time
-    </th>
-    
-    <th style="width:800px">
-      Action
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-11:15 am
-  </td>
-  
-  <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
-  </td></tr> 
-  
-  <td>
-    11:15-11:17 am
-  </td>
-  
-  <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-  </td></tr> 
-  
-  <td>
-    11:17-11:30 am
-  </td>
-  
-  <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
-  </td></tr> 
-  
-  <td>
-    11:30-11:40 am
-  </td>
-  
-  <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
-  </td></tr> 
-  
-  <td>
-    11:40-12:00 pm
-  </td>
-  
-  <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
-  </td></tr> 
-  
-  <td>
-    12:00-12:05 pm
-  </td>
-  
-  <td>
-    Teacher who help bring the school-wide event gives closing remarks.
-  </td>
-</table>
+| Thời gian        | Hoạt động                                                                                                                                                |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                                   |
+| 10:05 - 10:15 am | Hiệu trưởng đưa ra một bài giới thiệu tổng quan về tầm quan trọng của khoa học máy tính. Sử dụng những [số liệu thống kê và đồ thị](/resources/stats)    |
+| 10:15 - 10:30 am | Khách mời đặc biệt nói về nền tảng của họ và làm thế nào mà khoa học công nghệ và máy tính đóng một vai trò quan trọng trong cuộc sống hàng ngày của họ. |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                 |
+| 10:40 - 11:00 am | Sinh viên giới thiệu một hoạt động chưa được cắm phít và giới thiệu cách mà khoa học máy tính có thể được giảng dạy mà không sử dụng máy tính.           |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                        |

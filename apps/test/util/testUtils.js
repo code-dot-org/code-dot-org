@@ -25,18 +25,13 @@ exports.setupLocale = setupLocale;
 function setupLocales() {
   // make sure Blockly is loaded
   require('./frame')();
-  require('../../build/package/js/en_us/*_locale-????????????????????????????????.js', { mode: 'expand'});
+  require('../../build/package/js/en_us/*_locale*.js', { mode: 'expand'});
   assert(window.blockly.applab_locale);
 }
 
 exports.setupLocales = setupLocales;
 
 exports.setupBlocklyFrame = function () {
-  // TODO (brent): Intentionally not messing with timing yet, though that will
-  // come in a future commit.
-  // var timeoutList = require('@cdo/apps/timeoutList');
-  // timeoutList.clearTimeouts();
-  // timeoutList.stubTimer(false);
   require('./frame')();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
   assert(Object.keys(global.Blockly).length > 0);
