@@ -2,39 +2,39 @@
 
 #page-small-footer
 
-:javascript
-
-  var reactProps = {
-    i18nDropdown: "#{URI.encode(i18n_dropdown.to_str) if view_options[:has_i18n]}",
+:ruby
+  reactProps = {
+    i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
     copyrightInBase: true,
-    baseCopyrightString: "#{I18n.t('footer.copyright')}",
-    baseMoreMenuString: "#{I18n.t('footer.more')}",
+    baseCopyrightString: I18n.t('footer.copyright'),
+    baseMoreMenuString: I18n.t('footer.more'),
     menuItems: [
       {
-        text: "#{I18n.t('footer.support')}",
+        text: I18n.t('footer.support'),
         link: "https://support.code.org"
       },
       {
-        text: "#{I18n.t('footer.translate')}",
+        text: I18n.t('footer.translate'),
         link: "https://code.org/translate"
       },
       {
-        text: "#{I18n.t('footer.tos')}",
+        text: I18n.t('footer.tos'),
         link: "https://code.org/tos"
       },
       {
-        text: "#{I18n.t('footer.privacy')}",
+        text: I18n.t('footer.privacy'),
         link: "https://code.org/privacy"
       }
     ],
     copyrightStrings: {
-      thank_you: "#{URI.escape(I18n.t('footer.thank_you'))}",
-      help_from_html: "#{I18n.t('footer.help_from_html')}",
-      art_from_html: "#{URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year))}",
-      powered_by_aws: "#{I18n.t('footer.powered_by_aws')}",
-      trademark: "#{URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))}"
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      help_from_html: I18n.t('footer.help_from_html'),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      powered_by_aws: I18n.t('footer.powered_by_aws'),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
-  };
+  }
 
-  window.dashboard.footer.render(React, reactProps,
+:javascript
+  window.dashboard.footer.render(React, #{reactProps.to_json},
     document.getElementById('page-small-footer'));
