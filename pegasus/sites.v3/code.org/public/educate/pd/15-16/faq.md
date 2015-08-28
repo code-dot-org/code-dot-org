@@ -24,6 +24,7 @@ Still have questions? See below for answers to commonly asked questions or email
 
 - [Who do I inform if I have a schedule conflict?](#sched)
 - [What is the payment process?](#pay)
+- [What are the major program deadlines?](#deadline)
 - [What if my bank account changes?](#acct)	
 - [Are parking fees reimbursable?](#park)
 - [What if I am no longer teaching the course in the Fall, can I still attend PD?](#fall)
@@ -75,9 +76,20 @@ Teachers that are paid directly by their Districts can be found on [this list](h
 Teachers being paid directly by Code.org can select from the following payment options.
 <br/>
 <br/>
-**Direct deposit:** This is the fastest and easiest way to get paid. When registering through the educator information form displayed at the end of phase 1 pd, teachers input the requested bank account information and their stipend will be placed directly into their bank account on the aforementioned day.
+**Direct deposit:** This is the fastest and easiest way to get paid. When registering through the [educator information form](https://code.org/educate/educatorinfo)* displayed at the end of phase 1 pd, teachers input the requested bank account information and their stipend will be placed directly into their bank account on the aforementioned day.
+
+**You may receive a message saying that "you can only submit one entry for this form", if you feel like the information that you orignally entered was not correct then you can email [PD@code.org](PD@code.org) and we will be happy to assist you.* 
 
 **Pre-paid debit card:** Choosing this option will add 4-6 weeks to the payment process and the card will be sent via mail after processing.
+
+[**Back to the top**](#top)
+<br/>
+<br/>
+<br/>
+<a id="deadline"></a>
+**What are the program deadlines?**
+
+Phase 1: Online Introduction & Phase 2: Blended Summer Study are due on **9/7**. Use this tutorial to make sure you have [completed both Phase 1 and Phase 2](#complete) before Monday, September, 7th 2015.   
 
 [**Back to the top**](#top)
 <br/>
