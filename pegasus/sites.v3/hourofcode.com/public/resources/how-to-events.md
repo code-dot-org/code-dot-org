@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To 
+title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: resources_nav
 ---

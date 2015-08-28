@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials 
+title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: resources_nav
 ---

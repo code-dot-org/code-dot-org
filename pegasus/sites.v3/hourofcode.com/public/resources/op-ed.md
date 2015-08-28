@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: <%= hoc_s(:title_op_ed) %>
 layout: wide
 nav: resources_nav
 ---

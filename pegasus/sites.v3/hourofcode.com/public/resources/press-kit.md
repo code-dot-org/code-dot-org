@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: resources_nav
 ---

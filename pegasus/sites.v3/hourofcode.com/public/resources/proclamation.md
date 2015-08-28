@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: resources_nav
 ---

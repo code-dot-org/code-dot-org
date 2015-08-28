@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Organizations
+title: <%= hoc_s(:title_how_to_organizations) %>
 layout: wide
 nav: resources_nav
 ---

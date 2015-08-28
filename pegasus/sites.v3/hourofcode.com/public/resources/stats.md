@@ -1,5 +1,5 @@
 ---
-title: Blurbs and Stats
+title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: resources_nav
 ---

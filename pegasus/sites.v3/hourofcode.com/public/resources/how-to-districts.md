@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: <%= hoc_s(:title_how_to_districts) %>
 layout: wide
 nav: resources_nav
 ---

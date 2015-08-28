@@ -1,5 +1,5 @@
 ---
-title: How-to Guide
+title: <%= hoc_s(:title_how_to) %>
 layout: wide
 nav: resources_nav
 ---
