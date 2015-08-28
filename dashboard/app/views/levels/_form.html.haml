@@ -21,6 +21,7 @@
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
 
     = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
+    = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
   .actions
     = f.submit
 #validation-error.validation-error{style: 'background-color: yellow'}
