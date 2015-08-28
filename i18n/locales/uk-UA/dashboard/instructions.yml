@@ -364,6 +364,7 @@ uk:
       4-5 While Loops 8_instruction: ' Ого, я знайшла дуже глибоку яму і величезну купу бруду.  Скільки потрібно відер землі, щоб вирівняти поверхню? Підказка: в обох випадках використай цикл поки.'
       4-5 While Loops Assessment 1_instruction: Тут багато ям та куп. Допоможи заповнити або видалити їх, щоб вирівняти землю.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: тест
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -423,11 +424,11 @@ uk:
         over towards the left. Complete update-danger to make the danger fly across
         the screen.
       Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+        At this point in your game, your danger
+        should run across the screen from right to left, and your target should run
+        across from left to right. They don't ever come back on screen once they've
+        left, but we'll take care of that later. Take a minute to make sure your
+        game is working like you want it to, and then click Finish to move on.
       Big Game Booleans 1_instruction: "Коли ви останній раз працював на вашій грі ми отримали наші цілі і небезпека спрайт літати по всьому екрану, але вони ніколи не повертається. Посилання запустити, щоб побачити, як ваша гра в даний час працює і потім натисніть закінчити, і ми будемо працювати з виготовлення цих спрайт, з'являються знову на екрані після того, як вони вийшли."
       Big Game Booleans 2_instruction: |
         Go to the Functions section of the toolbox
@@ -444,8 +445,8 @@ uk:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -473,10 +474,11 @@ uk:
       Big Game Complete_instruction: Демо завершеного проекту великої гри Інформатика в алгебрі
       Big Game Final_instruction: Ви зробили це! Зараз ваша гра має бути повністю функціональною, тож можете пограти і внести остаточні виправлення. Коли будете задоволені результатом, клацніть Завершити і матимете можливість поділитись посиланням на свою гру. Успіхів!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!Last
-        time you worked on your game, you used booleans to make your Target and Danger
-        return to the screen once they've left. Click Run to see how your game looks
-        right now, and then we'll get to making your Player move up and down.
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         Edit the update-player function so the player
         moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
@@ -634,10 +636,9 @@ uk:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
@@ -785,7 +786,7 @@ uk:
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Можеш допомогти мені дістатися свині, використавши 5 блоків?
       Course 4 2_instruction: "Бджола хоче зібрати нектар прямо зараз. Пам'ятай, що не всі об'єкти є квітами, тож спершу перевіряй, щоб збирати нектар тільки з квітів."
-      Course 4 Artist 1_instruction: 'Допоможи намалювати коробку (Довжина кожної лінії - 300 пікселів) '
+      Course 4 Artist 1_instruction: 'Допоможи намалювати коробку (Довжина кожної лінії - 200 пікселів) '
       Course 4 Artist 10_instruction: 'Час вільної гри! Ось код цікавої фігури. Що буде, якщо його повторити? Розважайся і малюй що завгодно. '
       Course 4 Artist 11_instruction: 'А тепер складніше завдання! Ось дизайн, який використовує лише ті блоки, котрі ми вже розглянули. Можеш здогадатись, як відтворити його без додаткової інформації? Підказка: пробуй і не бійся помилятись. Ніхто не очікує, що з першого разу все вийде ідеально.'
       Course 4 Artist 12_instruction: "Натхнення для вільної гри: ти вивчив все, що потрібно знати, щоб намалювати такий узор! Якщо це зображення тебе надихає, спробуй створити схоже. Або створи щось своє.\r\n\n\r\nХочеш дізнатись, як створено цей узор? Клацни на синій закладці справа, а тоді на кнопці \"подивитись рішення\"."
@@ -799,6 +800,7 @@ uk:
       Course 4 Artist 6_instruction: 'Завершуй код, щоб намалювати ці трикутники. Підказка: 3 трикутники за 360 градусів обертання... скільки разів 360 ділиться на 3?'
       Course 4 Artist 7_instruction: 'Тепер розмісти цей цикл всередині іншого циклу, щоб намалювати 10 трикутників. Це називається вкладеним циклом. Підказка: всі 10 трикутників виконують поворот на 360 градусів.  '
       Course 4 Artist 8_instruction: Намалюй це сонце, повторюючи цілий блок коду кілька разів.
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: 'Виконай цей дизайн 10 разів і не забувай повертати після малювання кожної з фігур. Ось підказка для градусів повороту: скільки буде 360 поділити на 10?'
       Course 4 Artist Binary 1_instruction: Ось функція, котра приймає двійковий рядок 1 і 0 і вказує художнику повертати зліва направо і зверху вниз, заповнюючи квадрати, коли бачить 1 та ігноруючи, коли бачить 0. Запусти код, щоб побачити, як художник зобразить узор.
       Course 4 Artist Binary 2_instruction: Які з цих двійкових рядків можна розмістити у циклі на 8 повторень, щоб утворилось це зображення?
@@ -826,8 +828,9 @@ uk:
       Course 4 Artist For Loops 6_instruction: 'Вільна гра! Спробуй використати цикл "для", щоб намалювати зростаючий узор власного дизайну.'
       Course 4 Artist For Loops 7_instruction: 'Що буде, якщо видалити "повторити тричі" з цього алгоритму, залишивши блоки "рухатись" та "повертати"? У цьому спіральному трикутнику кожна сторона на 20 пікселів довша за попередню.'
       Course 4 Artist For Loops 8_instruction: 'Найменша лінія цієї квадратної спіралі - 10, найбільша - 100, а кожна лінія на 10 пікселів довша за попередню. Можеш заповнити блоки, щоб завершити цей дивовижний малюнок?'
+      Course 4 Artist For Loops 8a_instruction: 'Найменша лінія цієї квадратної спіралі - 10, найбільша - 100, а кожна лінія на 10 пікселів довша за попередню. Можеш заповнити блоки, щоб завершити цей дивовижний малюнок?'
       Course 4 Artist For Loops 9_instruction: Зможеш створити спіраль? Потрібно рухатися вперед, від 1 до 75 пікселів, щоразу збільшуючи відстань на 1 піксель.
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
+      Course 4 Artist For Loops inspire_instruction: "Натхнення для вільної гри: ти вивчив все, що потрібно знати, щоб намалювати такий узор! Якщо це зображення тебе надихає, спробуй створити схоже. Або створи щось своє.\r\n\r\nХочеш дізнатись, як створено цей узор? Відвідай https://studio.code.org/c/106387604 щоб побачити рішення."
       Course 4 Artist Functions 1_instruction: Можеш створити квадрат розміром 100 пікселів, використовуючи цикл?
       Course 4 Artist Functions 10_instruction: Який блок потрібно додати, щоб трикутник розмістився нагорі квадрату?
       Course 4 Artist Functions 11_instruction: 'Поглянь на цей код, який малює куб - можеш перемістити його у функцію з назвою "малювати куб"'
@@ -904,6 +907,14 @@ uk:
       Course 4 Bee For Loops 7_instruction: 'Використай змінну "лічильник" циклу "для", щоб керувати, на скільки рухатись по горизонталі.'
       Course 4 Bee For Loops 8_instruction: Можеш використати змінну лічильника циклу, щоб керувати рухом та збором нектару?
       Course 4 Bee For Loops 9_instruction: 'Останнє число у циклі називається "приріст" і щоразу при виконанні циклу лічильник змінюється на цей приріст. Спробуй збирати квіти, використавши приріст 2.'
+      Course 4 Bee Loops 5 NEW_instruction: |
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'Використай функцію "збери 3 нектари", яка виконує поворот, рухається для збору нектару, а тоді повертається до початкового розташування. Запиши послідовність для збору всього нектару, використовуючи цю функцію.'
       Course 4 Bee Params 2_instruction: 'Зміни функцію "зібрати 3 нектари", так щоб вона дозволяла повертати до квітів праворуч, а не ліворуч.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'А тепер у нас квіти з обох боків! Може скористаємось параметром, щоб одна і та ж функція працювала для квітів праворуч та ліворуч? До функції додали параметр, що називається "напрям". Якщо параметр "напрям" рівний 0, потрібно повернути ліворуч; якщо він рівний 1, потрібно повернути праворуч.'
@@ -917,6 +928,7 @@ uk:
       Course 4 Bee Params 7 (copy 1)_instruction: Спробуй використати нову функцію, щоб зібрати весь нектар.
       Course 4 Bee Params 7_instruction: Спробуй використати нову функцію, щоб зібрати весь нектар.
       Course 4 Bee Params 8_instruction: О, тепер ще й візьмемось за мед! Як можна оновити функцію, щоб збирати нектар або робити мед?
+      Course 4 Bee Params Ex_instruction: Спробуй використати нову функцію, щоб зібрати весь нектар.
       Course 4 Binary 1_instruction: Ось функція, котра приймає двійкову послідовність 1 та 0 і вказує фермерові повертати зліва направо, зверху вниз, виконуючи поворот на клітинках з нулями. Запусти поданий код і поглянь, як фермер використовує двійкову систему для малювання картинки.
       Course 4 Binary 2_instruction: 'Які двійкові рядки можна повторити 8 разів для побудови цього малюнка? Підказка: число 1 заповнює ямку.'
       Course 4 Binary 3_instruction: Можеш намалювати цей узор, повторюючи один і той же двійковий рядок?
@@ -1101,6 +1113,11 @@ uk:
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
         radii of 25, 50, and 75.
+      Eval Define Funcs Test_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1133,21 +1150,20 @@ uk:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
-        Using the Design Recipe, write a function
-        large-polygon that should output a solid polygon of given sides and color
-        that takes up most of the window, regardless of the number of sides. To make
-        sure that the polygon doesn't get too large as you increase the number of
-        sides, side length should be inversely proportional to side number, with a
-        length of (800/sides).
+        Write a function large-polygon that should
+        output a solid polygon of given sides and color that takes up most of the
+        window, regardless of the number of sides. To make sure that the polygon doesn't
+        get too large as you increase the number of sides, side length should be inversely
+        proportional to side number, with a length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1217,8 +1233,12 @@ uk:
       frozen square loop 3x_instruction: Створимо 3 квадрати, повертаючи після кожного із них. Не забудь повернути на 120 градусів перед тим, як малювати наступний квадрат.
       frozen square loop_instruction: 'Привіт, я Анна з Еренделу! Спробуємо намалювати квадрат за допомогою блоку "Повторити", що дозволить використати менше блоків. Скільки разів ( замість ???) слід виконати дії всередині блоку "Повторити", щоб утворився квадрат?'
       frozen square snowflake_instruction: 'Зможеш створити сніжинку за допомогою блоку "Повторити", в якому 10 разів малюватиметься квадрат, а блок "Повернути" виконає поворот на 36 градусів між фігурами?'
+      hoc2015_free_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
       hoc2015_intro_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
+      hoc2015_maze_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
+      hoc2015_random_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
       hoc2015_sandbox_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
+      hoc2015_square_instruction: 'Хіро "персонаж 1".  Використай блок Рухатись для переміщення Хіро вправо, щоб торкнутися Беймаксу.'
       Infinity_catch_instruction: Можеш допомогти Ельзі (персонаж 2) наздогнати Анну, використовуючи клавіші зі стрілками?
       Infinity_finale_instruction: Створи все, що завгодно, і поділись своїм творінням!
       Infinity_move_collide_instruction: 'Хіро - це персонаж 1. Перемісти його прямо до Беймаксу та програй звук, коли вони торкнуться один одного.'
@@ -1535,15 +1555,13 @@ uk:
         Тепер зрозуміло, як використовувати блоки функцій? Змінимо цей квадрат, щоб він мав розмір 200 пікселів. Підказка: клацни на "редагувати", щоб змінити розмір у редакторі функції "малювати квадрат". Пам'ятай, що потрібно клацнути "зберегти і закрити", щоб вийти з редактора функцій. 
       NEW Course 4 Artist Functions 8_instruction: Ми надали більшу частину коду створення функції. Проте, здається, чогось не вистачає. Зможеш відредагувати функцію малювання трикутника?
       NEW Course 4 Artist Functions 9_instruction: Який блок потрібно додати, щоб отримати трикутник наверху квадрата?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: "Натхнення для вільної гри: ти вивчив все, що потрібно знати, щоб намалювати такий узор! Якщо це зображення тебе надихає, спробуй створити схоже. Або створи щось своє.\r\n \r\nХочеш дізнатись, як створено цей узор? Відвідай щоб побачити рішення."
       New Course 4 Artist Functions Level 4_instruction: 'Використай функцію "намалювати квадрат", щоб намалювати цей узор.'
       NEW Course 4 Artist Params 1_instruction: 'Визначимо функцію для малювання квадрата зі стороною 50 пікселів. Натисни кнопку "Редагувати", щоб розпочати роботу.'
       NEW Course 4 Artist Params 10_instruction: 'Створи блок функції "намалювати шестикутник" з параметром довжини. Підказка: цей шестикутник має розмір 100 пікселів. '
       NEW Course 4 Artist Params 11_instruction: 'Зможеш здогадатись, як намалювати цю фігуру? Відредагуй функцію, щоб використати параметр "сторони".'
       NEW Course 4 Artist Params 12_instruction: Зможеш завершити цей малюнок? Всі сторони фігури мають довжину 100 пікселів.
-      NEW Course 4 Artist Params 12a_instruction: |
-        This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
+      NEW Course 4 Artist Params 12a_instruction: 'Це зображення подібне до останнього. Можеш використати цикл "для" у своїй функції, щоб виконати цей проект?'
       NEW Course 4 Artist Params 13_instruction: |-
         Відредагуємо функцію "намалювати фігуру". Вона вже має параметр "довжина". А тепер додамо параметр "сторони". Пам'ятай, що кут повороту для фігури рівний 360 розділене на кількість сторін цієї фігури. Підказка: задані довжини для кожної фігури: для трикутника це 100 пікселів, шестикутника - 25 пікселів, а квадрата - 50 пікселів.
       NEW Course 4 Artist Params 14_instruction: 'Можеш відтворити ці фігури? Перетягни параметр "довжина" у визначення функції. '
@@ -1556,7 +1574,7 @@ uk:
       NEW Course 4 Artist Params 7_instruction: 'Зможеш завершити цей малюнок? Підказка: кожен трикутник на 25 пікселів більший, ніж попередній. Перший трикутник має розмір 25 пікселів.'
       NEW Course 4 Artist Params 8_instruction: Код функції цього трикутника неправильний. Зможеш відредагувати функцію і виправити помилку, а тоді намалювати трикутники розмірами 25, 50 і 75?
       NEW Course 4 Artist Params 9_instruction: 'Натисни "Редагувати" і заповни визначення функції "намалювати квадрат", додавши параметр. Він повинен приймати значення довжини, так само, як у трикутнику. На цей раз намалюй 3 квадрата: розміром 25, 50 і 75 пікселів, кожен у 100 пікселях один від одного.'
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
+      NEW Course 4 Artist Params inspire_instruction: "Натхнення для вільної гри: ти вивчив все, що потрібно знати, щоб намалювати такий узор! Якщо це зображення тебе надихає, спробуй створити схоже. Або створи щось своє.\r\n \r\nХочеш дізнатись, як створено цей узор? Відвідай https://studio.code.org/c/106387530 щоб побачити рішення."
       NEW Course 4 Artist Vars 1.5_instruction: 'Подивись на цей код - бачиш, як блоки "встановити довжину" та "довжина" працюють разом? Натисни на "Виконати", щоб побачити, як це працює. '
       NEW Course 4 Artist Vars 12_instruction: |-
         Зміни цей алгоритм, так щоб він використовував змінну "сторони" замість фіксованого число при малювання п'ятикутника. Заміни число 5 на змінну "сторони" і використай блок "встановити сторони".
@@ -1567,6 +1585,11 @@ uk:
       NEW Course 4 Artist Vars 6_instruction: 'Зможеш допомогти мені намалювати цю класну картину, ставлячи блок змінної "довжина" на правильні місця?'
       NEW Course 4 Bee For Loops 1_instruction: Використовуй цикли, щоб зібрати нектар з кожної квітки.
       NEW Course 4 Bee For Loops 10_instruction: 'Використай змінну "лічильник" циклу "для", щоб керувати, на скільки рухатись по горизонталі.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Можеш скористатись змінною циклу, щоб керувати рухом та збором нектару?
       NEW Course 4 Bee For Loops 2_instruction: "Додай код, необхідний для того, щоб бджола зібрала весь нектар. Подивись, скільки коду потрібно, щоб розв'язати цю задачу! (Ми дізнаємось простіший спосіб розв'язку в наступному завданні.)"
       NEW Course 4 Bee For Loops 3_instruction: 'О, цикл все значно спрощує! Весь потрібний код тут, подивись, як він складений і клацни "Виконати", щоб подивитись, як він працює. '
@@ -1578,21 +1601,14 @@ uk:
       NEW Course 4 Bee For Loops 7_instruction: Подобаються цикли? Це схоже на останнє завдання, але потрібно зібрати 2,4,6,8,10 нектарів. Маєш початковий код, але без чисел у циклі з лічильником. Збираймо нектар!
       NEW Course 4 Bee For Loops 8_instruction: "Якщо цикл рахує зі зростанням, приріст додається до лічильника на кожному виконанні циклу. Яким має бути приріст, щоб зібрати 3, 6, 9 нектарів?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Якщо цикл рахує у зворотньому порядку, приріст віднімається від лічильника щоразу при виконанні циклу. Яким має бути приріст, щоб збирати 9, а потім 3 нектари?
-      NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
+      NEW Course 4 Bee For Loops 95_instruction: |-
+        Розглянь елементи щойно створеного циклу "для". Можеш здогадатися, які числа потрібно подвоїти, щоб розв'язати цю задачу? Чому це працює саме так?
       NEW Course 4 Play Lab Params 11_instruction: 'Час вільної гри! Розважайся - усі блоки в твоєму розпорядженні. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Заповни вхідні параметри персонажа числами (1, 2, and 3) і нехай вони патрулюють. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Як думаєш, що робить цей код? Натисни "Запустити", щоб побачити, що відбувається."'
-      NEW Course 4 Play Labs For Loops 7a_instruction: |
-        Using what you learned so
-        far, can you have Dinosaur take a step forward every time Penguin counts?
+      NEW Course 4 Play Labs For Loops 7a_instruction: Застосовуючи все, що ми вивчили до цього часу, зможеш змусити Динозавра рухатись вперед щоразу, як рахує Пінгвін?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Час для вільної гри, розважайся - доступні всі блоки. '
-      NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
+      NEW Course 4 Play Labs For Loops 8a_instruction: 'Завдання: як можна використати цикл "для", щоб кожен персонаж рухався і промовляв свій номер, а тоді зникав з екрану? '
       New Play Lab Project_instruction: Створи власну розповідь або гру! Код зберігається як проект і можна буде повернутися в будь-який час.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
@@ -1605,6 +1621,38 @@ uk:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2101,8 +2149,26 @@ uk:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

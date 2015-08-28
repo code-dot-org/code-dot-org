@@ -157,6 +157,7 @@ cs-CZ:
   homepage_action_text_learn: Start výuky
   homepage_action_text_signpetition: Podepiš petici
   homepage_signpetition_dropdown: 'Souhlasím &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org a College Board tvoří alianci pro zvýšení rozmanitosti v informatice.
   homepage_banner_text_link: Zjisti více
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -427,6 +428,7 @@ cs-CZ:
   educator_notes: Poznámky pro pedagogy
   how_to_teach_hoc: Jak učit Hodinu kódu
   more_resources_educators: Další zdroje pro učitele
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: účastníci
   teachers_notes: Poznámky pro učitele
   teachers_notes_hoc: 'Učitelé: Zde si přečtěte důležité informace pro vyučující'

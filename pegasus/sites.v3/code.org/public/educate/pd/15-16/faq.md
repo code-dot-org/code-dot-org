@@ -8,13 +8,13 @@ nav: pd2_nav
 
 Thank you for participating in Code.org Computer Science Professional Development! If you have not done so already, please read your Code.org Teacher Welcome Kit for all program expectations, commitments, and information. Feel free to download, save, and/or print this Welcome Kit so you have all the answers at your fingertips. 
 
-[Computer Science Principles Teacher Welcome Kit](code.org/welcome-csp)
+[Computer Science Principles Teacher Welcome Kit](http://code.org/welcome-csp)
 <br/>
-[Exploring Computer Science Teacher Welcome Kit](code.org/welcome-ecs)
+[Exploring Computer Science Teacher Welcome Kit](http://code.org/welcome-ecs)
 <br/>
-[Computer Science in Algebra Teacher Welcome Kit](code.org/welcome-algebra)
+[Computer Science in Algebra Teacher Welcome Kit](http://code.org/welcome-algebra)
 <br/>
-[Computer Science in Science Teacher Welcome Kit](code.org/welcome-science)
+[Computer Science in Science Teacher Welcome Kit](http://code.org/welcome-science)
 
 
 ----------
@@ -69,7 +69,9 @@ If, for example, a teacher finishes Phase 1 on Wednesday, May 20, the payment wi
 *Note: Code.org is not responsible for delays in payment from districts to teachers. If your district pays you directly, please contact your district finance department with any payment delay questions.*
 
 ### Code.org Teacher Payment options: ###
-
+Teachers that are paid directly by their Districts can be found on [this list](https://docs.google.com/spreadsheets/d/1O1rvNDZ_TfAOfvxQG2wqi9BqG3JsrxG1BV9TruBpt3s/edit?usp=sharing). 
+<br/>
+<br/>
 Teachers being paid directly by Code.org can select from the following payment options.
 <br/>
 <br/>

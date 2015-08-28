@@ -2,10 +2,11 @@ vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
-        blank: được yêu cầu
+        blank: là bắt buộc
     attributes:
       user:
         name: Tên hiển thị
@@ -43,7 +44,7 @@ vi:
   beta: Phiên bản beta
   try_hoc: 'Thử Hour of Code, bấm vào đây >> '
   try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 hours)
-  k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15 đến 25 giờ)
+  k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
   already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
   demos: 'Admin: Tất cả các bản demo'
   continue: Tiếp tục
@@ -319,7 +320,7 @@ vi:
   user_stats:
     recent_activity: Hoạt động gần đây
     show_more: Hiển thị thêm
-    classroom_activity: Unplugged Activity
+    classroom_activity: Hoạt động không dùng máy
   home:
     title: TIến trình của bạn
     description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
@@ -345,7 +346,7 @@ vi:
     local_school: trường học ở địa phương
     online: trực tuyến
     see_details: Xem chi tiết
-    view_course: View Course
+    view_course: Xem khóa học
     prize_info: 'Giải thưởng cho sự tham gia (chỉ dành cho giáo viên trường công lập tại Hoa Kỳ): lên đến $1,000 trong lớp học phần thưởng.'
     tryfirst: 'Hoặc, bạn có thể thử nó trước, và đăng ký sau:'
     trynow: Thử ngay bây giờ
@@ -360,8 +361,11 @@ vi:
     heading_legacy: '<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>'
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
     print_certificate: In giấy chứng nhận
+  share:
+    title: Học về Xưởng Code
+    description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ thuật với mã lệnh.
   gender:
     male: Nam
     female: Nữ
@@ -370,13 +374,20 @@ vi:
     student: học sinh
     teacher: Giáo viên
   footer:
+    thank_you: 'Chúng tôi cảm ơn<a href="https://code.org/about/donors"> các nhà tài trợ</a>, <a href="https://code.org/about/partners">các đối tác</a>, <a href="https://code.org/about/team">các thành viên trong nhóm mở rộng của chúng tôi</a>, các <a href="https://code.org/about/advisors">chuyên gia video và giáo dục</a> của chúng tôi vì sự hỗ trợ của các bạn trong việc tạo nên Xưởng Mã.'
     help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo ra hướng dẫn này.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Bản quyền đã được bảo hộ.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Bản quyền đã được bảo hộ.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Được tài trợ bởi Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và Giờ Lập Trình &reg; là nhãn hiệu của Code.org.'
+    copyright: Bản quyền
+    more: Nhiều hơn
     feedback: Cung cấp thông tin phản hồi
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
     support: Hỗ trợ
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
     secure: Phiên bản an toàn
@@ -500,6 +511,10 @@ vi:
     open_response_body: Cảm ơn câu trả lời của bạn!
   dialog:
     ok: Đồng ý
+    startover_title: Bạn có chắc bạn muốn bắt đầu lại?
+    startover_body: Cái này sẽ cài lại bảng đố về trạng thái bắt đầu và xóa hết dữ liệu bạn đã thêm hoặc thay đổi.
+    startover_ok: Bắt đầu lại
+    startover_cancel: Huỷ
   time:
     hour: 1 giờ
     day: ngày
@@ -532,7 +547,7 @@ vi:
           title: Bước/ từng bước thực hiện
           description: ""
         sample_level_builder:
-          title: Sample Level Builder
+          title: Máy tạo Trình độ Mẫu
           description: ""
   age_interstitial:
     age: Tuổi của bạn

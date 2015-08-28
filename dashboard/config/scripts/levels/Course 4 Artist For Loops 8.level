@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The smallest line of this square spiral is 10, the largest is 200, and each line is 10 pixels longer than the last. Can you fill in the missing blocks to complete this awesome picture?",
+    "instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "The smallest line of this square spiral is 10, the largest is 200, and each line is 10 pixels longer than the last. \r\n\r\n<br/>\r\nCan you fill in the missing blocks to complete this awesome picture?\r\n\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?\r\n\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -38,43 +38,23 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for_counter" inline="true">
+            <block type="controls_for_counter" inline="true" movable="false">
               <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">15</title>
                 </block>
               </value>
               <value name="TO">
                 <block type="math_number">
-                  <title name="NUM">200</title>
+                  <title name="NUM">300</title>
                 </block>
               </value>
               <value name="BY">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">15</title>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">???</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnRight</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">???</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
             </block>
           </next>
         </block>
@@ -82,67 +62,47 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Actions">
-          <block type="draw_move" inline="true">
-            <title name="DIR">moveForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">100</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnRight</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">90</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_turn" inline="true">
-            <title name="DIR">turnLeft</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">90</title>
-              </block>
-            </value>
-          </block>
-        </category>
-        <category name="Loops">
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
-            <value name="FROM">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
-            <value name="TO">
-              <block type="math_number">
-                <title name="NUM">100</title>
-              </block>
-            </value>
-            <value name="BY">
-              <block type="math_number">
-                <title name="NUM">10</title>
-              </block>
-            </value>
-          </block>
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">3</title>
-              </block>
-            </value>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-        </category>
-        <category name="Math">
-          <block type="math_number">
-            <title name="NUM">0</title>
-          </block>
-        </category>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">90</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">counter</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -167,17 +127,17 @@
           <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
-              <title name="NUM">10</title>
+              <title name="NUM">15</title>
             </block>
           </value>
           <value name="TO">
             <block type="math_number">
-              <title name="NUM">200</title>
+              <title name="NUM">300</title>
             </block>
           </value>
           <value name="BY">
             <block type="math_number">
-              <title name="NUM">10</title>
+              <title name="NUM">15</title>
             </block>
           </value>
         </block>
@@ -185,23 +145,23 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false">
+        <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_for_counter" inline="true">
               <mutation counter="counter"/>
               <value name="FROM">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">15</title>
                 </block>
               </value>
               <value name="TO">
                 <block type="math_number">
-                  <title name="NUM">200</title>
+                  <title name="NUM">300</title>
                 </block>
               </value>
               <value name="BY">
                 <block type="math_number">
-                  <title name="NUM">10</title>
+                  <title name="NUM">15</title>
                 </block>
               </value>
               <statement name="DO">
@@ -214,7 +174,7 @@
                   </value>
                   <next>
                     <block type="draw_turn" inline="true">
-                      <title name="DIR">turnRight</title>
+                      <title name="DIR">turnLeft</title>
                       <value name="VALUE">
                         <block type="math_number">
                           <title name="NUM">90</title>

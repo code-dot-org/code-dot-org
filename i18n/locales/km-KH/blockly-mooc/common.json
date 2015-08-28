@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"ប្លុក \"ធ្វើ​ឡើង​វិញ\" ឬ \"ប្រសិន​បើ\" ត្រូវ​ការ​ប្លុក​ដទៃ​ទៀត​នៅ​ក្នុង​វា ដើម្បី​ឲ្យ​អាច​ដើរ​បាន។ អ្នក​ត្រូវ​ប្រាកដ​ថា​ប្លុក​ខាង​ក្នុង​នោះ​ដាក់​ទៅ​សម​ទៅ​នឹង​ប្លុក​ផ្ទុក​ទាំង​នោះ​ដែរ។",
   "emptyBlockInFunction":"The function {name} has an unfilled input.",
   "emptyBlockInVariable":"The variable {name} has an unfilled input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"ប្លុក \"អនុគមន៍\" ត្រូវ​ការ​ប្លុក​ដទៃ​ទៀត​នៅ​ក្នុង​វា ទើប​វា​អាច​ធ្វើ​ការ​បាន។",
   "emptyFunctionalBlock":"You have a block with an unfilled input.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

@@ -335,6 +335,7 @@ en:
       4-5 While Loops 8_instruction: crwdns38652:0crwdne38652:0
       4-5 While Loops Assessment 1_instruction: crwdns38653:0crwdne38653:0
       AlgPD DR Free Play_instruction: crwdns43212:0crwdne43212:0
+      App Lab test_instruction: crwdns45301:0crwdne45301:0
       AppLab_test02_instruction: crwdns43312:0crwdne43312:0
       Artist - Nested Loops 1_instruction: crwdns34181:0crwdne34181:0
       Artist - Nested Loops 10_instruction: crwdns34182:0crwdne34182:0
@@ -472,6 +473,7 @@ en:
       Course 4 Artist 6_instruction: crwdns34292:0crwdne34292:0
       Course 4 Artist 7_instruction: crwdns34293:0crwdne34293:0
       Course 4 Artist 8_instruction: crwdns34294:0crwdne34294:0
+      Course 4 Artist 8a_instruction: crwdns45302:0crwdne45302:0
       Course 4 Artist 9_instruction: crwdns34295:0crwdne34295:0
       Course 4 Artist Binary 1_instruction: crwdns34297:0crwdne34297:0
       Course 4 Artist Binary 2_instruction: crwdns34299:0crwdne34299:0
@@ -499,6 +501,7 @@ en:
       Course 4 Artist For Loops 6_instruction: crwdns34321:0crwdne34321:0
       Course 4 Artist For Loops 7_instruction: crwdns34322:0crwdne34322:0
       Course 4 Artist For Loops 8_instruction: crwdns34323:0crwdne34323:0
+      Course 4 Artist For Loops 8a_instruction: crwdns45348:0crwdne45348:0
       Course 4 Artist For Loops 9_instruction: crwdns34324:0crwdne34324:0
       Course 4 Artist For Loops inspire_instruction: crwdns43350:0crwdne43350:0
       Course 4 Artist Functions 1_instruction: crwdns34325:0crwdne34325:0
@@ -564,6 +567,8 @@ en:
       Course 4 Bee For Loops 7_instruction: crwdns34380:0crwdne34380:0
       Course 4 Bee For Loops 8_instruction: crwdns34381:0crwdne34381:0
       Course 4 Bee For Loops 9_instruction: crwdns34382:0crwdne34382:0
+      Course 4 Bee Loops 5 NEW_instruction: crwdns45303:0crwdne45303:0
+      Course 4 Bee Loops 5a NEW_instruction: crwdns45349:0crwdne45349:0
       Course 4 Bee Params 1_instruction: crwdns34383:0crwdne34383:0
       Course 4 Bee Params 2_instruction: crwdns34384:0crwdne34384:0
       Course 4 Bee Params 3 (copy 1)_instruction: crwdns34385:0crwdne34385:0
@@ -577,6 +582,7 @@ en:
       Course 4 Bee Params 7 (copy 1)_instruction: crwdns34393:0crwdne34393:0
       Course 4 Bee Params 7_instruction: crwdns34394:0crwdne34394:0
       Course 4 Bee Params 8_instruction: crwdns34395:0crwdne34395:0
+      Course 4 Bee Params Ex_instruction: crwdns45304:0crwdne45304:0
       Course 4 Binary 1_instruction: crwdns34396:0crwdne34396:0
       Course 4 Binary 2_instruction: crwdns34397:0crwdne34397:0
       Course 4 Binary 3_instruction: crwdns34398:0crwdne34398:0
@@ -662,6 +668,7 @@ en:
       Eval Define Funcs 3_instruction: crwdns34475:0crwdne34475:0
       Eval Define Funcs 4_instruction: crwdns34477:0crwdne34477:0
       Eval Define Funcs 5_instruction: crwdns34478:0crwdne34478:0
+      Eval Define Funcs Test_instruction: crwdns45305:0crwdne45305:0
       Eval Defining Vars Free Play 1_instruction: crwdns35746:0crwdne35746:0
       Eval Design Recipe .1_instruction: crwdns37647:0crwdne37647:0
       Eval Design Recipe 1 (copy 1)_instruction: crwdns34481:0crwdne34481:0
@@ -705,8 +712,12 @@ en:
       frozen square loop 3x_instruction: crwdns34526:0crwdne34526:0
       frozen square loop_instruction: crwdns34527:0crwdne34527:0
       frozen square snowflake_instruction: crwdns34528:0crwdne34528:0
+      hoc2015_free_instruction: crwdns45306:0crwdne45306:0
       hoc2015_intro_instruction: crwdns41844:0crwdne41844:0
+      hoc2015_maze_instruction: crwdns45307:0crwdne45307:0
+      hoc2015_random_instruction: crwdns45308:0crwdne45308:0
       hoc2015_sandbox_instruction: crwdns41845:0crwdne41845:0
+      hoc2015_square_instruction: crwdns45309:0crwdne45309:0
       Infinity_catch_instruction: crwdns35156:0crwdne35156:0
       Infinity_finale_instruction: crwdns34535:0crwdne34535:0
       Infinity_move_collide_instruction: crwdns35157:0crwdne35157:0
@@ -922,6 +933,7 @@ en:
       NEW Course 4 Artist Vars 6_instruction: crwdns34629:0crwdne34629:0
       NEW Course 4 Bee For Loops 1_instruction: crwdns34630:0crwdne34630:0
       NEW Course 4 Bee For Loops 10_instruction: crwdns34631:0crwdne34631:0
+      NEW Course 4 Bee For Loops 10a_instruction: crwdns45350:0crwdne45350:0
       NEW Course 4 Bee For Loops 11_instruction: crwdns34632:0crwdne34632:0
       NEW Course 4 Bee For Loops 2_instruction: crwdns34633:0crwdne34633:0
       NEW Course 4 Bee For Loops 3_instruction: crwdns34634:0crwdne34634:0
@@ -944,6 +956,14 @@ en:
       Ninjacat Demo B (copy 1)_instruction: crwdns34647:0crwdne34647:0
       Ninjacat Demo B_instruction: crwdns35750:0crwdne35750:0
       Ninjacat Demo No Animate_instruction: crwdns39002:0crwdne39002:0
+      PDAlg Big Game History_instruction: crwdns45351:0crwdne45351:0
+      PDAlg Big Game Remix_instruction: crwdns45352:0crwdne45352:0
+      PDAlg Design Recipe Delete_instruction: crwdns45353:0crwdne45353:0
+      PDAlg Design Recipe Examples_instruction: crwdns45354:0crwdne45354:0
+      PDAlg Design Recipe Required_instruction: crwdns45355:0crwdne45355:0
+      PDAlg Updates Cond_instruction: crwdns45356:0crwdne45356:0
+      PDAlg Updates Errors_instruction: crwdns45357:0crwdne45357:0
+      PDAlg Updates Space_instruction: crwdns45358:0crwdne45358:0
       PDK5 Conditionals 1_instruction: crwdns36454:0crwdne36454:0
       PDK5 Conditionals 2_instruction: crwdns37648:0crwdne37648:0
       PDK5 Events 1_instruction: crwdns36455:0crwdne36455:0
@@ -1069,6 +1089,12 @@ en:
       U3L23 Chatbot Intro 3_instruction: crwdns43366:0crwdne43366:0
       U3L23 Chatbot Intro 4_instruction: crwdns43367:0crwdne43367:0
       U3L23 Chatbot Intro_instruction: crwdns43368:0crwdne43368:0
+      U3L23 Digital Assistant 1_instruction: crwdns45310:0crwdne45310:0
+      U3L23 Digital Assistant 2_instruction: crwdns45311:0crwdne45311:0
+      U3L23 Digital Assistant 3_instruction: crwdns45312:0crwdne45312:0
+      U3L23 Digital Assistant 4_instruction: crwdns45313:0crwdne45313:0
+      U3L23 Digital Assistant 5_instruction: crwdns45314:0crwdne45314:0
+      U3L23 Digital Assistant 6_instruction: crwdns45315:0crwdne45315:0
       U3L24 Basic String Parsing 1_instruction: crwdns43467:0crwdne43467:0
       U3L24 Chatbot Basic Conditionals_instruction: crwdns43468:0crwdne43468:0
       U3L24 Chatbot Conditionals 2_instruction: crwdns43469:0crwdne43469:0

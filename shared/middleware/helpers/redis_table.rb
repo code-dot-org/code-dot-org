@@ -9,6 +9,7 @@
 # a Redis shard goes down.
 
 require_relative 'redis_property_bag'
+require 'securerandom' unless defined?(SecureRandom)
 
 class RedisTable
 
@@ -47,9 +48,10 @@ class RedisTable
   # @return [Hash] The inserted value, including the new :id field.
   def insert(value, ignored_ip=nil)
     new_id = next_id
+    value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
     publish_change({:action => 'insert', :id => new_id})
-    merge_id(value, new_id)
+    value
   end
 
   # Returns all rows with id >= min_id as an array ordered by ascending row id.
@@ -60,7 +62,7 @@ class RedisTable
   def to_a_from_min_id(min_id)
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
-        collect { |k, v| make_row(id_from_row_key(k), v) }.
+        collect { |k, v| make_row(v) }.
         sort_by { |row| row['id'] }
   end
 
@@ -106,7 +108,7 @@ class RedisTable
         next if id < table_map[table_name]
 
         # Add the rows.
-        value['rows'] << make_row(id, v)
+        value['rows'] << make_row(v)
       end
     end
   end
@@ -119,7 +121,7 @@ class RedisTable
   def fetch(id)
     hash = @props.to_hash[row_key(id)]
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless hash
-    make_row(id, hash)
+    make_row(hash)
   end
 
   # Updates an existing row, notifying other clients using the pubsub service.
@@ -128,9 +130,12 @@ class RedisTable
   # @param [Hash] hash The updated hash.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   def update(id, hash, ignored_ip=nil)
+    original_hash = @props.to_hash[row_key(id)]
+    raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
+    hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])
     @props.set(row_key(id), hash.to_json)
     publish_change({:action => 'update', :id => id})
-    merge_id(hash, id)
+    hash
   end
 
   # Deletes multiple rows, notifying other clients using the pubsub service
@@ -188,29 +193,26 @@ class RedisTable
     @props.increment_counter(@row_id_key)
   end
 
-  # Returns the value hash merged with an id field.
+  # Returns the given hash with the ID and UUID fields merged in.
   #
-  # @param [Hash] value
+  # @param [Hash] hash
   # @param [String, Integer] id
+  # @param [String] uuid
   # @return [Hash]
-  def self.merge_id(value, id)
-    value.merge({'id' => id.to_i})
-  end
-  def merge_id(value, id)
-    self.class.merge_id(value, id)
+  def merge_ids(hash, id, uuid)
+    hash.merge({'id' => id.to_i, 'uuid' => uuid})
   end
 
-  # Makes a row object by parsing the JSON value and adding the id property.
+  # Makes a row object by parsing the JSON value.
   #
-  # @param [String] id The id for the row.
   # @param [String] value The JSON-encoded value.
   # @return [Hash] The row, or null if no such row exists.
   # @private
-  def self.make_row(id, value)
-    value.nil? ? nil : merge_id(JSON.parse(value), id)
+  def self.make_row(value)
+    value.nil? ? nil : JSON.parse(value)
   end
-  def make_row(id, value)
-    self.class.make_row(id, value)
+  def make_row(value)
+    self.class.make_row(value)
   end
 
   # Notifies other clients about changes to this table using pubsub api, if

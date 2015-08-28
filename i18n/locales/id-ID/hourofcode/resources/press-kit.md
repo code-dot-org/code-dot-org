@@ -6,18 +6,18 @@ title: Press Kit layout: wide nav: resources_nav
 
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
 
-*For all press and media inquiries, contact <press@code.org>*
+*Untuk pertanyaan pers dan media, silahkan hubungi <press@code.org>*
 
 ### Tips
 
   * Hubungi media dua minggu sebelum kegiatan melalui email. Tindaklanjuti dengan email dan telepon jika belum menerima respon awal.
   * Minta staff sekolah atau sukarelawan untuk mengambil foto untuk dibagikan atau dikirim kepada pers.
   * Tuliskan mengenai Hour of Code pada homepage website anda dan pada koran sekolah anda. Posting rincian kegiatan anda, dan gambar dari aktivitas pelajar.
-  * Pada Facebook dan Twitter, bagikan pembaharuan dari rencana anda, beritahukan kegiatan dan posting gambar anda saat 8-4 Desember. Gunakan hashtag **#HourOfCode** supaya Code.org dapat emlihat dan mempromosikan kegiatan anda.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Panduan langkah demi langkah:
 
-**1. Plan your event**
+**1. Rencanakan acara anda**
 
   * Rencanakan pertemuan awal Hour of Code anda.
   * Kirimkan [surat](<%= hoc_uri('/resources/#sample-emails') %>) kepada orang tua. Minta mereka untuk sebarkan berita.
@@ -25,35 +25,35 @@ title: Press Kit layout: wide nav: resources_nav
   * Selengarakan aktivitas kelompok(seperti melakukan aktivitas tanpa perangkat keras). atau pamerkan apa yang dibuat pelajar dan aktivitasnya.
   * Tampilkan Code.org [Video Hour of Code](<%= hoc_uri('/') %>) atau salah satu  untuk menginspirasi mereka.</li> </ul> 
     
-    **2. Identify specific local reporters that cover education or local events.**
+    **2. Indentifikasi secara spesifik wartawan lokal yang akan meliput pendidikan atau kegiatan lokal.**
     
-    Think a local newspaper, TV station, radio station or blog.
+    Pikirkan sebuah koran lokal, stasiun TV, radio atau blog.
     
-    Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+    Lihat secara online untuk menemukan info kontak reporter. Jika anda tidak menemukannya, hubungi publikasi-nya untuk menanyakan, atau kirimkan email umum pada tips@PUBLICATIONNAME.com dan tanyakan untuk mengirimkan pesan anda langsung kepada reporter yang tepat.
     
-    **3. Contact local media**
+    **3. Hubungi media lokal**
     
-    The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+    Cara terbaik untuk menghubunginya yaitu melalui email. Itu haruslah pendek dan berkomunikasi: mengapa orang lain harus peduli akan kegiatan ini? Sertakan kontak informasi anda (termasuk nomor ponsel anda) kepada siapa yang akan hadir saat kegiatan. **Lihat [Contoh permohonan kepada media](<%= hoc_uri('/resources#sample-emails') %>):**
     
-    **4. Prepare to field questions about your school event. Here are some examples:**
+    **4. Persiapkan bagian pertanyaan mengenai kegiatan sekolah anda. Berikut contohnya:**
     
-    *Why is your school doing an Hour of Code?*
+    *Mengapa sekolah anda melakukan Hour of Code?*
     
-    While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+    Saat ini kita semua tahu bahwa yang terpenting bagi pelajar saat ini adalah bagaimana cara untuk menghadapi dunia saat ini yang penuh teknologi, dimana banyak guru tidaklah berpengalaman dalam ilmu komputer dan tidak tahu bagaimana memulainya. Kegiatan ini adalah kesempatan bagi kita untuk mengetahui mengenai apa itu ilmu komputer.
     
-    We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+    Kami harap ini akan memicu minat pelajar agar dapat terus belajar. Penelitian juga menunjukan anak yang memiliki konsep pemrograman sebelum mereka tahu bagaimana cara membaca dan menulis. Sebagai fakta, otak manusia lebih mudah menerima bahasa komputer pada usia muda, sama seperti bahasa asing.
     
-    *Why is this important?*
+    *Mengapa ini begitu penting?*
     
-    In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+    Di China, setiap pelajar harus mengambil ilmu komputer untu lulus SMA. Di amerika, 90 persen dari sekolah bahkan tidak mengajarkannya. Jadi ini waktu bagi kita untuk menyusulnya pada abad 21 ini. Kami tahu terlepas dari apa yang para pelajar lakukan untuk tumbuh dewasa, apakah mereka memilih bidang pengobatan, bisnis, politik, atau seni, mengetahui bagaimana cara membangun teknologi akan memberikan mereka kepercayaan diri dan cara untuk berhasil.
     
-    **More details and a quote you can use in materials**
+    **Rincian dan kutipan lain yang Anda dapat gunakan sebagai bahan-bahan**
     
-    "The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+    "Hour of Code dirancang untuk melawan mitos kode dan menunjukan bahwa ilmu komputer bukanlah ilmu-roket, sehingga setiap orang dapat mempelajarinya," kata Hadi Partovi, pendiri dan CEO dari Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
     
-    **About Code.org**
+    **Mengenai Code.org**
     
-    Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+    Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Visinya yaitu setiap pelajar pada setiap sekolah harus memiliki kesempatan untuk mempelajari ilmu komputer. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Untuk informasi lebih lanjut kunjungi: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
     
       
-    Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+    Temukan lebih banyak sumber daya dan contoh email [disini](<%= hoc_uri('/resources') %>).

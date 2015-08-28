@@ -12,9 +12,11 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Cảm ơn bạn đã đăng ký để làm chủ Hour of Code!
+# Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Truyền tải thông điệp
 
@@ -22,34 +24,20 @@ Nói với bạn bè của bạn về #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Xin phép ông chủ của bạn để tham gia
 
-## 2. Đề nghị trường của bạn tổ chức Hour of Code
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+## 4. Quảng bá chương trình "Hour of Code" trong cộng đồng của bạn
 
-<% end %>
+Lập thành các nhóm tại địa phương - nhóm các bạn sinh viên đại học, nhóm những người lớn tuổi, nhóm những người trong độ tuổi lao động. Hoặc tổ chức một sự kiện Hour of Code "block party" cho những người hàng xóm của bạn.
 
-## 3. Make a generous donation
+## xin phép chính quyền đìa phương để xác nhận hỗ trợ cho sự kiện "Hour of Code"
 
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
-
-## 4. Ask your employer to get involved
-
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Promote Hour of Code within your community
-
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-## 6. Ask a local elected official to support the Hour of Code
-
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

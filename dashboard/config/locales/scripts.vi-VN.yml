@@ -303,7 +303,7 @@
           Making Pictures: Making Pictures
           Defining Variables: Các biến xác định
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Công thức thiết kế
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -559,12 +559,13 @@
           Contracts: hợp đồng
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Công thức thiết kế
           Your Game - Animation: Your Game - Animation
           Booleans: Các toán tử
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Hàm điều kiện và Hàm biến đổi quy
+            luật theo khoảng
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -725,7 +726,7 @@
           Evaluation Blocks: Các khối đánh giá
           The Big Game: The Big Game
           Strings and Images: Văn bản và hình ảnh
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Công thức thiết kế
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -914,6 +915,13 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -923,7 +931,7 @@
           Defining Variables: Các biến xác định
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Công thức thiết kế
           Big Game - Animation: Big Game - Animation
           Booleans: Các toán tử
           Sam the Bat: Sam the Bat
@@ -1103,7 +1111,7 @@
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: hoan nghênh!
-          The Design Recipe: The Design Recipe
+          The Design Recipe: Công thức thiết kế
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
@@ -1233,3 +1241,39 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Bản đồ thú vị
+          Move it, Move it: Di chuyển liên tục
+          'Real-life Algorithms: Plant a Seed': 'Thuật toán đời sống: Trồng một hạt
+            giống'
+          Graph Paper Programming: lập trình đồ thị trên giấy
+          Building a Foundation: Xây dựng nền tảng
+          Getting Loopy: Tạo vòng lặp
+          The Big Event: Sự kiện lớn
+          Binary Bracelets: Vòng đeo tay nhị phân
+          Songwriting: Songwriting
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep

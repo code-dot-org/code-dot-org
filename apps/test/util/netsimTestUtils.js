@@ -2,7 +2,8 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var _ = require('@cdo/apps/utils').getLodash();
+var utils = require('@cdo/apps/utils');
+var _ = utils.getLodash();
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -47,7 +48,11 @@ exports.overrideNetSimTableApi = function (netsimTable) {
       return table.read(id, callback);
     },
     createRow: function (value, callback) {
-      return table.create(value, callback);
+      if (Array.isArray(value)) {
+        return table.multiCreate(value, callback);
+      } else {
+        return table.create(value, callback);
+      }
     },
     updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
@@ -123,10 +128,27 @@ var fakeStorageTable = function () {
       log_ += 'create[' + JSON.stringify(value) + ']';
 
       value.id = rowIndex_;
+      value.uuid = utils.createUuid();
       rowIndex_++;
       tableData_.push(value);
 
       callback(null, value);
+    },
+
+    /**
+     * @param {!Object[]} values
+     * @param {!NodeStyleCallback} callback
+     */
+    multiCreate: function (values, callback) {
+      values.forEach(function (value) {
+        log_ += 'create[' + JSON.stringify(value) + ']';
+
+        value.id = rowIndex_;
+        rowIndex_++;
+        tableData_.push(value);
+      });
+
+      callback(null, values);
     },
 
     /**
@@ -140,6 +162,7 @@ var fakeStorageTable = function () {
       value.id = id;
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
+          value.uuid = tableData_[i].uuid;
           tableData_[i] = value;
           callback(null, null);
           return;

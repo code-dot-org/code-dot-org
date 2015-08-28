@@ -109,7 +109,7 @@
   used_infrequent_updates: Será utilizado apenas para atualizações não regulares
   privacy_practices_children: Lê a política de segurança para saberes mais
   petition_thankyou: Obrigado por assinares a petição
-  continue_learning_header: Vê o que podes fazer além da Hora de Código
+  continue_learning_header: Continue aprendendo além da Hora do Código
   continue_learning_body: Existem muitas opções. Podes aprender online, numa escola
     local ou num acampamento de verão.
   learn_next_level: Experimentar outro curso do Code Studio
@@ -221,6 +221,7 @@
   homepage_action_text_learn: Começa a aprender
   homepage_action_text_signpetition: Assina a petição
   homepage_signpetition_dropdown: Assina a nossa petição &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para
     aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saber mais
@@ -566,6 +567,8 @@
   educator_notes: Observações do professor
   how_to_teach_hoc: Como dar uma aula da "Hora de Código"
   more_resources_educators: Mais recursos para professores
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: participantes
   teachers_notes: Observações do Professor
   teachers_notes_hoc: 'Professores: Leiam algumas observações importantes aqui'

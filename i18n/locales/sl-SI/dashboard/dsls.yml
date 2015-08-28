@@ -43,7 +43,7 @@ sl:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Povleči bloke k ustrezni rešitvi.
-        Instructions: Instructions
+        Instructions: Navodila
         Match the puzzles to the blocks: Poveži ustrezen bloke z rešitvami
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
@@ -153,17 +153,17 @@ sl:
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Povleči bloke k ustrezni rešitvi.
-        Instructions: Instructions
+        Instructions: Navodila
         Match the puzzles to the blocks: Poveži ustrezen bloke z rešitvami
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        <br/><br/>above: '<br/><br/>nad'
+        <br/><br/>below: '<br/><br/>pod'
+        <br/><br/>next to: '<br/><br/>poleg'
+        Is the square next to, above, or below the ball?: Je kvadrat poleg, nad ali pod žogo?
         Matching: Matching
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -246,7 +246,7 @@ sl:
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Povleči bloke k ustrezni rešitvi.
-        Instructions: Instructions
+        Instructions: Navodila
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
       K-1 Move It Match 1:
@@ -269,7 +269,7 @@ sl:
         /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
         /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: Instructions
+        Instructions: Navodila
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:

@@ -6,7 +6,7 @@ Naslov: Sat Kodiranja objašnjenje layout: wide nav: resources_nav
 
 # Vodič događaja Sata kodiranja
 
-Ugostite Sat kodiranja na tokom tjedna Edukacije o računalnoj znanosti (Dec 8-14) kako bi slavili računalnu znanost i potaknuli studente da ga probaju. Bilo tko, bilo gdje može organizirati događaj Sata Programiranja.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Pripremite se za vaš događaj
 
@@ -23,7 +23,6 @@ Ugostite Sat kodiranja na tokom tjedna Edukacije o računalnoj znanosti (Dec 8-1
   * Druge ideje za događaj: 
       * Pozovite lokalne industrijske lidere kako bi razgovarali o njegovom ili njezinom radu vezanom za računalne znanosti
       * Pozvati lokalne političare te neka im učenici pokažu kako kodirati
-      * Pogledajte jedan od Q& Lekcije sa ambasadorom Sata Kodiranja. Svi će biti zabilježeno i na Code.org-ovoj YouTube stranici. Ovogodišnji sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i više njih!
       * Neka grupa studenata pokaže šta treba napraviti prije nego se povežete na mrežu
       * Neka jedna grupa studenata nauči ravnatelja ili skupinu učitelja kako kodirati
       * Ako Vaša škola već uči informatiku, zadajte učenicima demo projekate
@@ -37,7 +36,7 @@ Ugostite Sat kodiranja na tokom tjedna Edukacije o računalnoj znanosti (Dec 8-1
 
 **Događaj:** U svim školama neka započnu skupine tjedna obrazovanja Računale znanosti
 
-**Datum:** 8. Prosinac (Počenite tjedan obrazovanja računalne znanosti)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Vrijeme:** Tijekom boravka u školi. Sredinom jutra bi bilo najbolje. Neka traje oko 1 sat.
 
@@ -47,72 +46,11 @@ Ugostite Sat kodiranja na tokom tjedna Edukacije o računalnoj znanosti (Dec 8-1
 
 ## Početak događaja
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Vrijeme
-    </th>
-    
-    <th style="width:800px">
-      Radnja
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Ravnatelj daje uvod o važnost informatike. Pomoću ove <a href="/resources/stats">statistike i infografike</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Započnite sa <a href="http://hourofcode.com/us/resources#videos">jednom inspirativnim videom</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Poseban gost razgovarao svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Studenti rade demo Sata Kodiranja za školu. Zabavno bi bilo da oni uče ravnatelja, političare ili druge studente.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se računalna nauka može izvoditi bez korištenja računala.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Učitelj organizator događaja u više škola daje završnu riječ.
-  </td>
-</table>
+| Vrijeme          | Radnja                                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                        |
+| 10:05 - 10:15 am | Ravnatelj daje uvod o važnost informatike. Pomoću ove [statistike i infografike](/resources/stats)                            |
+| 10:15 - 10:30 am | Poseban gost razgovarao svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.             |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.      |
+| 10:40 - 11:00 am | Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se računalna nauka može izvoditi bez korištenja računala. |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                             |

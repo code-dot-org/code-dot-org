@@ -19,7 +19,7 @@
   "incrementPlayerScore":"aggiungi un punto",
   "incrementPlayerScoreTooltip":"Aggiunge uno al punteggio attuale del giocatore.",
   "isWall":"questo è un muro",
-  "isWallTooltip":"Restituisci vero se qui c'è un muro",
+  "isWallTooltip":"Restituisce vero se qui c'è un muro",
   "launchBall":"lancia una nuova palla",
   "launchBallTooltip":"Lancia una palla in gioco.",
   "makeYourOwn":"Costruisci la tua versione del Ping-Pong",

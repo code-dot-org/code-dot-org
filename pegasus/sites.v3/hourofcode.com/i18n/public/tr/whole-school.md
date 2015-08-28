@@ -2,4 +2,4 @@
 
 # Bütün okulunuzu dahil edin
 
-Bütün okulları Kod Saati etkinliğine katmak için gerekli bilgiler burada olacaktır.
+Bütün okulları Kodlama Saati'ne dahil etmek için gerekli bilgiler burada olacaktır.

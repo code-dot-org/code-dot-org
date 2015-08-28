@@ -167,6 +167,7 @@
   homepage_action_text_learn: 開始學習
   homepage_action_text_signpetition: 意願書上簽名
   homepage_signpetition_dropdown: 我同意 &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
@@ -463,6 +464,8 @@
   educator_notes: 教育者注意事項
   how_to_teach_hoc: 如何教an Hour of Code (一個小時的代碼)
   more_resources_educators: 給教師和教育工作者的更多資源
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: 參與者
   teachers_notes: 老師的重要提示
   teachers_notes_hoc: 教師： 閱讀重要教育家筆記在這裡

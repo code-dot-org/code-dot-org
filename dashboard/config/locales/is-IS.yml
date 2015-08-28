@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -403,12 +405,12 @@
     student_stats: Þú hefur unnið til %{trophy_count} af %{trophy_max} mögulegum "Concept
       Mastery" bikurum.
     student_left_off: 'Þú varst hér síðast:'
-    student_finished: 'Þú hefur lokið öllu kennsluefninu. Veldu annað nám á netinu:
-      %{online_link} eða í skóla: %{local_school_link}'
+    student_finished: 'Þú hefur lokið öllu Code.org kennsluefninu. Veldu annað nám
+      á netinu: %{online_link} eða í skóla: %{local_school_link}.'
     local_school: nálægur skóli
     online: á netinu
     see_details: Sjá nánar
-    view_course: View Course
+    view_course: Skoða námskeið
     prize_info: 'Verðlaun fyrir þátttöku (aðeins kennarar í opinberum skólum í USA):
       Allt að $1.000 bekkjarverðlaun.'
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
@@ -422,13 +424,17 @@
     try_beta_courses: Nýtt! Prófaðu beta námskeiðin okkar fyrir K-5 nemendur
     use_as_teacher: Nota þennan vef sem kennari
     heading_hoc2014: <h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>
-    heading_elementary: <h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>
+    heading_elementary: <h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði
+      (fyrir alla aldurshópa)</h1>
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
     heading_legacy: <h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
+  share:
+    title: Lærðu í Kóðastúdíóinu
+    description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -437,16 +443,31 @@
     student: nemandi
     teacher: Kennari
   footer:
-    help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu
-      við gerð þessa kennsluefnis.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Öll réttindi áskilin.
+    thank_you: Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>,
+      <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra
+      í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a>
+      fyrir stuðninginn við gerð Kóðastúdíósins.
+    help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft,
+      Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
+    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll
+      réttindi áskilin.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Knúið af Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour
+      of Code&reg; eru vörumerki Code.org.'
+    copyright: Höfundarréttur
+    more: Meira
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Skilmálar
     privacy: Persónuvernd
     secure: Örugg útgáfa
@@ -593,6 +614,11 @@
     open_response_body: Þökkum viðbrögð þín!
   dialog:
     ok: Í lagi
+    startover_title: Ertu viss um að þú viljir byrja aftur?
+    startover_body: Þetta setur þrautina aftur í upphafsstöðu og eyðir öllum upplýsingum
+      sem þú hefur bætt við eða breytt.
+    startover_ok: Byrja aftur
+    startover_cancel: Hætta við
   time:
     hour: 1 klst.
     day: dagur

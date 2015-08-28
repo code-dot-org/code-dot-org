@@ -358,6 +358,7 @@ bg:
       4-5 While Loops 8_instruction: 'Това е наистина дълбока яма и наистина голяма купчина пръст.  Колко лопати ще трябват  за да се заравни земята?  Съвет: Използвайте цикъл и за двете.'
       4-5 While Loops Assessment 1_instruction: 'Има много ями и купчини.  Помогнете ми да ги запълня и премахна излишната почва, за да заравня земята.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: тест
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -548,10 +549,9 @@ bg:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
@@ -710,6 +710,7 @@ bg:
       Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане.'
       Course 4 Artist 7_instruction: 'Сега, внесете този цикъл в друг, за да начертаете 10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници образуват окръжност от 360 градуса.  '
       Course 4 Artist 8_instruction: Начертайте това слънце като повторите целият блок от код 12 пъти.
+      Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим да я изградите без да даваме блокове, за да започнете! \r Съвет: има 3 триъгълника в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
       Course 4 Artist 9_instruction: 'Повторете този дизайн 10 пъти и се уверете, че ще се завъртате между всяка фигура, от която е съставен. Ето един съвет на колко градуса трябва да се завъртате: Колко е 360 делено на 10?'
       Course 4 Artist Binary 1_instruction: 'Това е функция, която взема двоичен низ от 1 и 0 и възлага на художника да се движи отляво надясно и отгоре надолу, като попълва квадратчета, когато вижда 1 и ги прескача, когато  вижда 0. Изпълнете този код, за да видите как художникът използва бинарния код, за да изготви този модел.'
       Course 4 Artist Binary 2_instruction: Кои от тези двоични низове трябва да повторите 8 пъти, за да изготвите това изображение?
@@ -743,6 +744,7 @@ bg:
       Course 4 Artist For Loops 6_instruction: Свободно чертане! Използвайки цикъл, опитайте да начертаете уголемяваща се фигура по собствен дизайн.
       Course 4 Artist For Loops 7_instruction: 'Какво ще стане, ако премахнете "Повтори 3" от алгоритъма, а оставите блоковете "премести" и " завий" ? В тази спирала от триъгълници всяка от страните е 20 пиксела по-дълга от предишната.'
       Course 4 Artist For Loops 8_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да попълните липсващите блокове, за да завършите тази страхотна картина?
+      Course 4 Artist For Loops 8a_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да попълните липсващите блокове, за да завършите тази страхотна картина?
       Course 4 Artist For Loops 9_instruction: Можете ли да направите спирала? Преместете се напред от 1 до 75 пиксела, като увеличавате с 1 пиксел всеки път.
       Course 4 Artist For Loops inspire_instruction: "Свободна игра за вдъхновение: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. Или създайте нещо сами. \r \r Искате да знаете как е направен моделът ни за вдъхновение? Посетете https://studio.code.org/c/106387604 за решението."
       Course 4 Artist Functions 1_instruction: Можете ли да начертаете квадрат със страни 100 пиксела дълги, използвайки цикъл?
@@ -832,6 +834,11 @@ bg:
       Course 4 Bee For Loops 7_instruction: 'Използвайте променливата "брояч" от "за цикъл", за да контролирате колко далече да отидете хоризонтално.'
       Course 4 Bee For Loops 8_instruction: Можете ли да използвате променливи в цикъла, за да контролирате преместването и събирането на нектара?
       Course 4 Bee For Loops 9_instruction: 'Последното число от  "за цикъл" се нарича "стъпка" и всеки път, когато цикъла се повтаря, водещата променлива нараства със "стъпката". Опитайте се да съберете нектара от цветята, като използвате стъпка от 2.'
+      Course 4 Bee Loops 5 NEW_instruction: Пъхнете тези блокове в цикъл, за да съберете нектар от всяко цвете.
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'Използвайте функцията " вземи нектар 3", която кара пчелата да завива, да се придвижва и взима нектара и да се върне в изходна позиция. Напишете последователността за събирането на нектар като използвате "вземи нектар 3"'
       Course 4 Bee Params 2_instruction: 'Променете функцията "вземи нектар 3" така, че да ме премести надясно, вместо наляво.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Сега, цветята са от двете страни! Може би, трябва да използвате параметър, за да използвате една функция и за двете страни. Добавих параметъра " посока" към функцията. Ако параметъра  в "посока" е равен на 0, трябва да завия наляво, ако е равен на 1, трябва да завия надясно.'
@@ -846,6 +853,7 @@ bg:
       Course 4 Bee Params 7 (copy 1)_instruction: Опитайте да използвате новата функция и да съберете целия нектар.
       Course 4 Bee Params 7_instruction: Опитайте се да използвате новата функция, за да съберете целия нектар.
       Course 4 Bee Params 8_instruction: Ох, сега трябва да се справим и с меда! Как можете да актуализирате вашата функция, за да вземете нектар или направите мед.
+      Course 4 Bee Params Ex_instruction: Опитайте се да използвате новата функция, за да съберете целия нектар.
       Course 4 Binary 1_instruction: Това е функция, която използва двоична бройна система, съставена от числата 1 и 0, и инструктира фермера да се движи отляво надясно и отдолу нагоре, обръщайки квадратите със 0. Активирайте предоставения код, за да видите как фермера използва двоичната система, за да начертае картина.
       Course 4 Binary 2_instruction: 'Кой двоичен код може да повторите 8 пъти, за да начертаете тази картина? Помощ: числото "1"  запълва дупка.'
       Course 4 Binary 3_instruction: Можете ли да начертаете този модел като повторите един двоичен низ?
@@ -1037,6 +1045,11 @@ bg:
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
         radii of 25, 50, and 75.
+      Eval Define Funcs Test_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1069,21 +1082,20 @@ bg:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
-        Using the Design Recipe, write a function
-        large-polygon that should output a solid polygon of given sides and color
-        that takes up most of the window, regardless of the number of sides. To make
-        sure that the polygon doesn't get too large as you increase the number of
-        sides, side length should be inversely proportional to side number, with a
-        length of (800/sides).
+        Write a function large-polygon that should
+        output a solid polygon of given sides and color that takes up most of the
+        window, regardless of the number of sides. To make sure that the polygon doesn't
+        get too large as you increase the number of sides, side length should be inversely
+        proportional to side number, with a length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1153,8 +1165,12 @@ bg:
       frozen square loop 3x_instruction: Нека създадем три квадрата, като след всеки се завъртаме под ъгъл от 120 градуса.
       frozen square loop_instruction: 'Здравейте, аз съм Анна от Арендел! Нека направим квадрат с блок за повторение, който ни позволява да ползваме по-малко блокове. Колко пъти (?) трябва да повторим действието в  блока за повторение за да начертаем квадрат?'
       frozen square snowflake_instruction: 'Можете ли да създадете снежинка с помощта на  блок за повторение? Повторете квадрата 10 пъти и се завъртайте на 36 градуса между всеки квадрат.'
+      hoc2015_free_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_intro_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
+      hoc2015_maze_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
+      hoc2015_random_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_sandbox_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
+      hoc2015_square_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       Infinity_catch_instruction: 'Можете ли да накарате Елза ("актьор 2"), използвайки клавишите със стрелки, да достигне Анна?'
       Infinity_finale_instruction: 'Създайте нещо, което ви харесва и  го споделете!'
       Infinity_move_collide_instruction: 'Хиро е "актьор 1".  Преместете го към Баумах и когато те се докоснат трябва да се възпроизведе звук.'
@@ -1502,6 +1518,11 @@ bg:
       NEW Course 4 Artist Vars 6_instruction: 'Можете ли да ми помогнете да изготвя този готин модел като поставите блока на променливата "дължина"  на правилните места?'
       NEW Course 4 Bee For Loops 1_instruction: Използвайте цикъл, за да събера нектар от всяко цвете.
       NEW Course 4 Bee For Loops 10_instruction: 'Използвайте вашата променлива за  "брояч" на повторенията да контролира колко далеч да се движи хоризонтално.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Можете ли да използвате променливата на цикъла за контрол на движението и събирането на нектар?
       NEW Course 4 Bee For Loops 2_instruction: Добавете код, необходим за да се уверите, че пчелата събира нектар. Погледнете колко код Ви трябва за този пъзел! (Ние ще Ви научим на по-лесен начин в следващия пъзел.)
       NEW Course 4 Bee For Loops 3_instruction: 'Ах, с цикъл това се прави много по-лесно! Всичкият код, който ни трябва е там, погледнете как той е обединен и след това щракнете върху "Старт", за да видите как работи. '
@@ -1532,6 +1553,38 @@ bg:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2014,8 +2067,26 @@ bg:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

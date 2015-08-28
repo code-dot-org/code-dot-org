@@ -109,7 +109,7 @@
   used_infrequent_updates: Sólo se utiliza para actualizaciones poco frecuentes
   privacy_practices_children: Vé nuestras políticas de privacidad para niños
   petition_thankyou: Gracias por firmar la petición
-  continue_learning_header: Sigue aprendiendo más allá de una hora
+  continue_learning_header: Sigue aprendiendo más allá de Una Hora
   continue_learning_body: Hay muchas opciones. Puedes aprender en línea, en una escuela
     local o en un campamento de verano.
   learn_next_level: Continuar al siguiente nivel
@@ -121,7 +121,7 @@
     Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para
     obtener más información.
   learn_hoc: Aprende una hora del código
-  beyond_hoc: Más allá de una hora
+  beyond_hoc: Más allá de Una Hora
   what_gender: ¿Cual es tu sexo?
   girl: Femenino
   boy: Masculino
@@ -209,6 +209,7 @@
   homepage_action_text_learn: Empieza a aprender
   homepage_action_text_signpetition: Firma la petición
   homepage_signpetition_dropdown: Firma nuestra petición &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la computación.
   homepage_banner_text_link: Aprende más
@@ -557,6 +558,8 @@
   educator_notes: Notas del educador
   how_to_teach_hoc: Cómo enseñar  una "Hora de código"
   more_resources_educators: Más recursos para profesores y educadores
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: participantes
   teachers_notes: Notas del profesor
   teachers_notes_hoc: 'Profesores: Leer las notas importantes del educador aquí'

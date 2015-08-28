@@ -11,8 +11,8 @@ sq:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Përshtasni butonin e kombinimit me lëvizjet e kërcimit.
-        Matching: Koordinimi
+        Match the button combination to the dance moves.: Lidh kombinimin e figurave me lëvizjet e kërcimit.
+        Matching: Lidhje
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: |
           /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -207,7 +207,7 @@ sq:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Koordino blloqet
+        Match the blocks: Lidh blloqet
         Matching: Koordinimi
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -301,14 +301,14 @@ sq:
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Zgjedhje e Shumëfishtë
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Fillo me një trekëndor<br/>Vendos një katror poshtë trekëndorit<br/>Vendos një trekëndor tjetër poshtë katrorit'
-        Which image does <em>not</em> follow this algorithm?: 'Cili imazh nuk <em></em> ndjek këtë algoritëm?'
+        Which image does <em>not</em> follow this algorithm?: 'Cila figurë <em>nuk</em> e ndjek këtë algoritëm?'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which program makes this image?: Cili program e bën këtë imazh?
+        Which program makes this image?: Cili program krijon këtë figurë?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
@@ -331,7 +331,7 @@ sq:
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which program makes this image?: Cili program e bën këtë imazh?
+        Which program makes this image?: Cili program e bën këtë figurë?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.pn
@@ -346,13 +346,13 @@ sq:
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which program does not create this image?: Cili program nuk e krijon këtë imazh?
+        Which program does not create this image?: Cili program nuk e krijon këtë figurë?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which image-program combo does not contain mistakes?: Cili program-imazhi kombo nuk përmban gabime?
+        Which image-program combo does not contain mistakes?: Cili kombinim figurë-program nuk ka gabime?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
@@ -426,12 +426,12 @@ sq:
       4-5 Algorithms Multi 1:
         Baking cookies: Biskota të pjekura
         Banana: Banane
-        Brushing your teeth: Duke larë dhëmbët
+        Brushing your teeth: Larja e dhëmbëve
         Multiple Choice: Zgjedhje e Shumëfishtë
         Shopping from a grocery list: Pazar nga një listë ushqimesh
-        Which one of these items is hardest to describe an algorithm for?: Cili nga këto produkte është më i vështiri për të përshkruar një algoritëm?
+        Which one of these items is hardest to describe an algorithm for?: Cili nga këto produkte është më i vështiri për shprehur në një algoritëm?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene është një ______ qytet.
+        Eugene is a _____ city.: Eugene është një qytet ______.
         0: '? Këtu jepen 3 fjali. Cila nga templatet më poshtë përmbledh saktë në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
         1: ': Këtu jepen tre fjali. Cila nga templatet më poshtë përmbledh saktë, në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
         Multiple Choice: Zgjedhje e Shumëfishtë
@@ -445,15 +445,15 @@ sq:
         Multiple Choice: Zgjedhje e Shumëfishtë
         Which of these pictures best represents crowdsourcing?: Cila nga këto figura paraqet më mirë crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Kreh flokët
+        Brushing your hair: Krehja e flokëve
         Cleaning your room: Pastrimi i dhomës
-        Eating your dessert: Duke ngrënë ëmbëlsirë
+        Eating your dessert: Ngrënja e embëlsirës
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Washing your face: Duke larë fytyrën
+        Washing your face: Larja e fytyrës
         Which one of these activities would be best for practicing crowdsourcing?: Cila nga këto aktivitete do të ishte më mirë për të praktikuar crowdsourcing?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which piece of information listed below is okay to share on the internet?: Cila pjesë informacioni e listuar më poshtë është në rregull për tu shpërndarë në internet?
+        Which piece of information listed below is okay to share on the internet?: Cili nga informacionet e listuara më poshtë nuk ka problem për ta shpërndarë në internet?
         Your address: Adresa juaj
         Your birthday: Ditëlindja juaj
         Your favorite food: Ushqimi juaj i preferuar
@@ -481,14 +481,14 @@ sq:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Zgjedhje e Shumëfishtë
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Cila është pjesa më e madhe e kësaj kënge të cilën mund ta përkufizosh si rrefrenin në mënyrë që rrefreni të përsëritet me saktësi aq herë sa thërritet?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Cila është pjesa më e madhe e kësaj kënge të cilën mund ta përkufizosh si refrenin në mënyrë që refreni të përsëritet aq herë sa thërritet?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Cilët nga programet e mëposhtme <em> nuk </em> kanë egzaktësisht të njëjtën sekuencë si Programi 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Cili nga programet e mëposhtme <em>nuk</em> bën sekuencën e saktë si Programi 1?'
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -504,7 +504,7 @@ sq:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
         Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
-        Which blocks will create the design?: Ciat blloqe do të krijojnë dizenjimin?
+        Which blocks will create the design?: Cilat blloqe do të krijonin këtë dizajn?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
@@ -517,7 +517,7 @@ sq:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
-        Artist Multiple Choice: Zgjehdje e Shumëfishtë Artisti
+        Artist Multiple Choice: Zgjedhjet e Shumëfishta të Artistit
         Which blocks draw a rectangle with a perimeter of 100?: Cili bllok vizaton një drejtkëndësh me perimetër 100?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
@@ -711,14 +711,14 @@ sq:
         /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
         /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which step should go at the beginning of this algorithm?: Cila hapë duhet të bëhet në fillim të këtij algoritmi?
+        Which step should go at the beginning of this algorithm?: Çfarë hapi duhet të bëhet në fillim të këtij algoritmi?
       K-1 Plant a Seed Multi 2:
         /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
         /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
         /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
         /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which step should fill in the blank for this algorithm?: Cilin hap duhet të mbush tek hapësira bosh për këtë algoritëm?
+        Which step should fill in the blank for this algorithm?: Cilin hap duhet të mbushi vendin bosh për këtë algoritëm?
       K-1 Word Search Multi 1:
         /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
         /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
@@ -753,7 +753,7 @@ sq:
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Shoferi dhe Ndihmësi
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Një nga këta djemtë është <b>shoferi</b>. Dhe tjetri është <b>ndihmësi</b>.'
-        This time, which boy is the <large>driver</large>?: 'Këtë herë, cili djalë është <large>shoferi</large>?'
+        This time, which boy is the <large>driver</large>?: 'Cili djalë është <large>shoferi</large>?'
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

@@ -848,8 +848,8 @@ pt-BR:
         Ok, vamos praticar mais uma vez
         - essa parte não é muito diferente, mas fique de olho nas carnívoras!
       4-5 Maze Conditionals 8_instruction: |
-        Os blocos "se-senão" verificam uma condição
-        e, em seguida, fazem uma coisa OU outra. Para me levar ao girassol, tente
+        O bloco "se-senão" verifica uma condição
+        e, em seguida, faz uma coisa OU outra. Para me levar ao girassol, tente
         usar esse novo bloco.
       4-5 Maze Conditionals 9_instruction: |
         Vamos praticar o uso do bloco "se-senão" mais uma
@@ -920,6 +920,7 @@ pt-BR:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: teste
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -1378,9 +1379,11 @@ pt-BR:
         Ajude-me a desenhar uma caixa. (Cada linha tem
         200 pixels de comprimento) 
       Course 4 Artist 10_instruction: |
-        É hora da atividade livre! Temos aqui o código para
-        uma forma interessante. O que acontece quando você a repete? Divirta-se e desenhe
-        o que quiser. 
+        Temos aqui o código para uma forma interessante. O que
+        acontece quando você o repete? Observe que os ângulos dessa forma somam
+        420, o que significa que quando seu artista terminar de desenhar, ele vai olhar
+        para uma direção diferente de quando ele começou. Essa nova direção é exatamente
+        60 graus à direita de onde você começou.
       Course 4 Artist 11_instruction: |
         Agora um desafio!  Temos aqui um design que
         usa apenas blocos que já foram mostrados. Você consegue descobrir como
@@ -1419,6 +1422,7 @@ pt-BR:
       Course 4 Artist 8_instruction: |
         Desenhe esse sol repetindo todo este bloco de código
         várias vezes.
+      Course 4 Artist 8a_instruction: "Lembra-se dessa forma? Agora vamos deixar\nvocê construí-la sem dar nenhum bloco inicial!\r\nDica: há\n3 triângulos dentro da rotação de 360 graus... quantas vezes 3 cabe em\n360?"
       Course 4 Artist 9_instruction: |
         Repita esse design 10 vezes e certifique-se de virar
         a cada figura desenhada. Uma dica sobre o quanto você
@@ -1510,6 +1514,10 @@ pt-BR:
         desse algoritmo, mantendo os blocos "mova" e "vire" no laço
         para? Neste triângulo espiralado, cada lado é 20 pixels mais comprido que o anterior.
       Course 4 Artist For Loops 8_instruction: |
+        A menor reta nessa espiral quadrada
+        tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
+        anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
+      Course 4 Artist For Loops 8a_instruction: |
         A menor reta nessa espiral quadrada
         tem 10 pixels, a maior tem 200, e cada reta é 10 pixels maior que a
         anterior. Você consegue preencher os blocos que faltam para completar essa imagem incrível?
@@ -1656,13 +1664,13 @@ pt-BR:
         da caixa de ferramentas para definir a variável "comprimento" e também atualize a variável
         "lados".
       Course 4 Artist Vars 14_instruction: |
-        Atividade livre: veja, agora seu algoritmo
+        Atividade livre: Veja só! Agora seu algoritmo
         está aninhado dentro de mais um laço. Experimente alterar os valores das
         suas duas variáveis para desenhar padrões legais.
       Course 4 Artist Vars 2_instruction: |
-        Ao invés de "avance por 100,"
-        o bloco "mova" agora referencia a variável "comprimento". Você pode definir
-        "comprimento" como 150 para desenhar esse triângulo novo?
+        Ao invés de usar "avance por 150,"
+        o bloco "mova" está referenciando agora uma variável chamada "comprimento." Você consegue
+        definir "comprimento" como150 para desenhar esse novo triângulo?
       Course 4 Artist Vars 3_instruction: |
         Temos aqui um laço que desenha um quadrado, mas
         algo está faltando. Você pode consertá-lo para que ele use a variável "comprimento"
@@ -1674,14 +1682,8 @@ pt-BR:
       Course 4 Artist Vars 5_instruction: |
         Use a variável "lados" para controlar
         quantas vezes esse laço é executado.
-      Course 4 Artist Vars 6_instruction: |
-        Alterei a variável "lados" para 4 a partir
-        do código do último desafio, você pode usar a variável "lados" (junto com um
-        bloco matemático) para garantir que eu vire a quantidade correta? Para desenhar um polígono regular,
-        devo virar 360 / número de lados cada vez.
-      Course 4 Artist Vars 7_instruction: |
-        Você pode modificar a variável "lados"
-        para me ajudar a desenhar esse hexágono?
+      Course 4 Artist Vars 6_instruction: "Adicionei uma variável chamada \"lados\"\ndefinida como 4. Você pode usar a variável \"lados\" (junto com um bloco matemático)\npara garantir que eu vire a quantidade correta para fazer um quadrado?\r\n\r\nDica:\nPara desenhar um polígono regular, devo virar 360/número de lados cada vez."
+      Course 4 Artist Vars 7_instruction: "Você consegue modificar a variável \"lados\"\npara me ajudar a desenhar esse hexágono?\r\n\r\nPercebe como você poderia alterar apenas um valor\npara desenhar um triângulo, um quadrado, um pentágono ou um octógono?"
       Course 4 Artist Vars 8_instruction: |
         Atividade livre: faça experiências com o número
         de lados que essa forma tem. Você consegue alterar o algoritmo de forma que o tamanho
@@ -1690,15 +1692,16 @@ pt-BR:
         desta vez) 
       Course 4 Artist Vars 9_instruction: |
         Modifique esse algoritmo para que ele use a variável
-        "lados" ao invés de um número fixo para desenhar um triângulo. Use o bloco
-        "defina os lados para".
+        "lados" ao invés de um número fixo para desenhar um triângulo. Não deixe de usar
+        o bloco "defina os lados para".
       Course 4 Bee 1_instruction: |
         A abelha não sabe o que há atrás da nuvem! Primeiro, 
         verifique se é uma for ou uma colmeia. Em seguida, colete néctar
         apenas se for uma flor. 
       Course 4 Bee 2_instruction: |
-        Verifique cada objeto para ver se é uma flor. Se for,
-        colete o néctar... caso contrário, você pode ignorá-lo!
+        Use o bloco "se/senão" para verificar cada objeto
+        e ver se ele é uma for ou uma colmeia. Se for uma flor, colete néctar... caso contrário,
+        produza mel!
       Course 4 Bee 3_instruction: |
         O objeto desconhecido pode ser uma flor ou uma colmeia.
         Use o bloco se-senão para coletar néctar se ele for uma flor, senão produza mel
@@ -1759,6 +1762,13 @@ pt-BR:
         chamado de "incremento" e, a cada execução do laço, a variável contador
         é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
         de 2.
+      Course 4 Bee Loops 5 NEW_instruction: |
+        Coloque esses blocos em um laço para coletar o
+        néctar de cada flor.
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
         Use a função "obtenha 3 néctares" que
         vira, move-se para coletar o néctar e então retorna à posição original.
@@ -1797,8 +1807,8 @@ pt-BR:
       Course 4 Bee Params 6_instruction: |
         Não seria legal se pudéssemos coletar
         todo o néctar com uma única função? Tente adicionar um novo parâmetro
-        à função chamado "néctares" para controlar a quantidade de néctar a coletar.
-        Você provavelmente vai querer renomear a função também!
+        à função chamado "unidades de néctar" para controlar a quantidade de néctar
+        a coletar. Você provavelmente vai querer renomear a função também!
       Course 4 Bee Params 7 (copy 1)_instruction: |
         Tente usar sua nova função para
         coletar todo o néctar.
@@ -1806,8 +1816,13 @@ pt-BR:
         Tente usar sua nova função para coletar
         todo o néctar.
       Course 4 Bee Params 8_instruction: |
-        Ah, agora também precisamos lidar com o mel!
-        Como você poderia atualizar sua função para coletar néctar ou produzir mel?
+        Desafio: Agora você também precisa lidar com
+        mel! Reescreva sua função para receber tanto o número de unidades de mel quanto o
+        número de unidades de néctar. Como você usaria esses números para decidir o que
+        fazer?
+      Course 4 Bee Params Ex_instruction: |
+        Tente usar sua nova função para coletar
+        todo o néctar.
       Course 4 Binary 1_instruction: |
         Temos aqui uma função que recebe uma string binária
         de 1's e 0's e instrui a fazendeira a se mover da esquerda para a direita,
@@ -1855,17 +1870,8 @@ pt-BR:
         Aqui temos uma função chamada "pule"
         que faz seu personagem principal pular 100 pixels. Use a função pule
         para coletar todas as bandeiras.
-      Course 4 Play Lab Params 10_instruction: |
-        Adicionamos uma última função para
-        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
-        > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
-        
-      Course 4 Play Lab Params 2_instruction: |
-        Agora temos bandeiras que estão altas demais
-        para nosso pulo atual! Vamos adicionar um parâmetro à função pule chamado
-        "altura". A seta para cima deve pular 200 pixels, mas a seta para baixo deve
-        pular 100 pixels. Clique em "editar" na função pule e atualize-a para que
-        ela use o parâmetro altura ao invés de simplesmente pular 100 pixels.
+      Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nque você use.\r\n\r\nPrograme seu jogo para chamar a função \"suba de nível\" se\n\"pontos_jogador\" > 10. \r\n\r\nJogue o jogo e passe do nível 4\npara seguir para o próximo desafio. "
+      Course 4 Play Lab Params 2_instruction: "Agora temos bandeiras que estão altas\ndemais para nosso pulo atual! Vamos usar as setas \"para cima\" e \"para baixo\"\npara termos diversas alturas de pulos. \r\n\r\nPrecisamos adicionar um parâmetro\nà função pule chamado \"altura\". A seta para cima deve fazer o cão\npular 200 pixels, e a seta para baixo deve fazê-lo pular somente 100 pixels.\n\r\n\r\nDica: clique em \"editar\" na função pule e atualize-a para que\nela use o parâmetro \"altura\"."
       Course 4 Play Lab Params 3_instruction: |
         Vamos adicionar outro parâmetro à
         função pule para que possamos usá-la com outros personagens. Cada personagem é representado
@@ -1882,25 +1888,18 @@ pt-BR:
         Adicione outro parâmetro chamado "velocidade"
         à função "patrulhe". Use um bloco "defina a velocidade" com o novo parâmetro
         "velocidade".
-      Course 4 Play Lab Params 7_instruction: |
-        Use as setas do teclado para controlar o
-        cão e coletar todas as bandeiras.
+      Course 4 Play Lab Params 7_instruction: "Analise o código fornecido para ver se\nvocê consegue descobrir o que cada bloco faz.  \r\n\r\nQuando terminar, use as\nsetas do teclado para controlar o cão e coletar todas as bandeiras."
       Course 4 Play Lab Params 8_instruction: |
         Use um bloco "quando tocar" para enviar
-        o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
-      Course 4 Play Lab Params 9_instruction: |
-        Temos aqui um dos jogos nos quais estávamos trabalhando
-        mais cedo. Adicionamos uma função chamada "marque_pontos" que recebe um parâmetro
-        "pontos". Edite a função para que o parâmetro "pontos" seja adicionado à
-        variável "pontos_do_jogador". Faça o cão marcar 10 pontos para seguir para
-        o próximo desafio. 
+        o cão de volta para a parte superior esquerda SOMENTE se ele tocar em qualquer outro personagem.
+      Course 4 Play Lab Params 9_instruction: "Você deve se lembrar desse jogo de um\nnível anterior. \r\n\r\nAdicionamos uma função chamada \"marcar_pontos\" que\nrecebe o parâmetro \"pontos\". \r\n\r\nEdite a função para que o parâmetro \"pontos\"\nseja adicionado à variável \"pontos_do_jogador\". \r\n\r\nQuando terminar,\nclique em \"Executar\" para jogar. Quando o cão marcar 10 pontos, você vai avançar\npara o próximo desafio. "
       Course 4 Play Lab Vars 1_instruction: |
-        Você não precisa escrever código algum, apenas
+        Desta vez você não precisa escrever código algum, apenas
         clique em "Executar" para jogar! Nesse jogo, você é o cão que está tentando
         coletar mais bandeiras do que o gato. Use a seta para baixo para controlar o cão.
         Pressione "Terminar" quando você terminar de jogar.
       Course 4 Play Lab Vars 2_instruction: |
-        Essa corrida não foi muito justa! Altere
+        A corrida do último desafio não foi muito justa! Altere
         a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       Course 4 Play Lab Vars 3_instruction: |
@@ -1910,8 +1909,7 @@ pt-BR:
       Course 4 Play Lab Vars 4_instruction: |
         Agora estamos usando uma variável chamada "altura"
         para controlar a altura que o cão pode pular. Atualize a variável "altura" para que
-        o cão possa pular alto o suficiente para alcançar todas as bandeiras. Dica: as novas bandeiras estão
-        a uma altura de 200 pixels.
+        o cão possa pular alto o suficiente para alcançar todas as bandeiras.
       Course 4 Play Lab Vars 5_instruction: |
         Vamos criar um jogo! Primeiro precisamos de
         uma pontuação. Use o bloco "defina os pontos como" para definir a pontuação com valor 10. 
@@ -1947,9 +1945,9 @@ pt-BR:
         funcionar do jeito que você gostaria.
       Course 4 Play Lab Vars 9_instruction: |
         Hora da atividade livre! Aqui estão todas as
-        variáveis que usamos até agora e também algumas a mais, caso você as
-        queira. Crie um jogo ou uma história que usa essas variáveis. Dica: role para baixo para
-        ver todos os comandos da área de trabalho.
+        variáveis que usamos até agora neste estágio, e também algumas a mais, caso você as
+        queira. Crie um jogo ou uma história usando qualquer uma dessas variáveis. Dica:
+        role para baixo para ver todos os comandos da área de trabalho.
       Course 4 Play Lab Vars_instruction: |
         Certo, uma última coisa para esse jogo
         - vamos configurá-lo para que o jogador possa ganhar (ou perder). Use um laço infinito para
@@ -2124,6 +2122,12 @@ pt-BR:
         Vamos usar a função "estrela-aqua" para
         criar uma fileira com estrelas de tamanhos diferentes. Da esquerda para a direita, as estrelas
         devem ter raios de 25, 50 e 75.
+      Eval Define Funcs Test_instruction: |
+        Temos aqui o começo de outra nova função
+        chamada "círculo-roxo" com um domínio de um número (o raio) e um intervalo
+        de imagem. Contudo, o corpo da função está errado, e ela sempre desenha um círculo
+        de 50 pixels de raio ao invés de usar o parâmetro raio. Substitua o número atual
+        pelo bloco "raio" do domínio. 
       Eval Defining Vars Free Play 1_instruction: |
         Atividade livre: fornecemos uma função
         que preenche sua tela com minha-imagem. Altere minha-imagem para ver que padrão
@@ -2289,10 +2293,22 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      hoc2015_free_instruction: |
+        Hiro é o "personagem 1".  Use o bloco Mova para mover
+        Hiro até tocar Baymax.
       hoc2015_intro_instruction: |
         Hiro é o "personagem 1".  Use o bloco Mova para mover
         Hiro até tocar Baymax.
+      hoc2015_maze_instruction: |
+        Hiro é o "personagem 1".  Use o bloco Mova para mover
+        Hiro até tocar Baymax.
+      hoc2015_random_instruction: |
+        Hiro é o "personagem 1".  Use o bloco Mova para mover
+        Hiro até tocar Baymax.
       hoc2015_sandbox_instruction: |
+        Hiro é o "personagem 1".  Use o bloco Mova para mover
+        Hiro até tocar Baymax.
+      hoc2015_square_instruction: |
         Hiro é o "personagem 1".  Use o bloco Mova para mover
         Hiro até tocar Baymax.
       Infinity_catch_instruction: |
@@ -2698,8 +2714,8 @@ pt-BR:
         do último desafio para desenhar esse padrão."
       NEW Course 4 Artist Functions 13_instruction: |
         Você consegue desenhar uma forma de estrela usando
-        a função "desenhe uma linha de quadrados"? Dica: você pode precisar avançar
-        60 pixels e virar 144 graus
+        a função "desenhe uma linha de quadrados"? Dica: a cada iteração, você precisa avançar
+        um determinado número de pixels e virar 144 graus.
       NEW Course 4 Artist Functions 14_instruction: 'Atividade livre! '
       NEW Course 4 Artist Functions 2_instruction: |
         Você consegue desenhar 3 quadrados com 20 pixels de distância
@@ -2796,9 +2812,8 @@ pt-BR:
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
         em "Executar" para vê-los em ação. 
       NEW Course 4 Artist Vars 12_instruction: |
-        Modifique esse algoritmo para que ele use
-        a variável "lados" ao invés de um número fixo para desenhar um pentágono. Substitua
-        o número 5 pela variável "lados" e use o bloco "defina lados para".
+        Agora, modifique o código do último
+        nível para criar um pentágono de lados 100.
       NEW Course 4 Artist Vars 2.5_instruction: |
         Dê uma olhada no código. Você consegue
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
@@ -2814,15 +2829,18 @@ pt-BR:
         Vamos tentar novamente. Você consegue definir
         a variável "comprimento" para fazer este design bacana com hexágonos? Dica: é um
         múltiplo de 10.
-      NEW Course 4 Artist Vars 6_instruction: |
-        Você pode me ajudar a desenhar esse padrão
-        colocando o bloco da variável "comprimento" nos lugares corretos?
+      NEW Course 4 Artist Vars 6_instruction: "Desenhe esse padrão colocando a\nvariável comprimento nos lugares corretos e definindo o valor correto para\ncomprimento. (Dica: é um múltiplo de 10).  \r\n\r\nPercebe como você define o valor de\ncomprimento apenas uma vez e o código usa o valor correto em todos os lugares?\r\n\r\n\r\n"
       NEW Course 4 Bee For Loops 1_instruction: |
         Use um laço para coletar o néctar
         de cada flor.
       NEW Course 4 Bee For Loops 10_instruction: |
         Use a variável "contador" do seu laço "para"
         para controlar a distância do movimento horizontal.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Você pode usar a variável do laço para
         controlar o movimento e a coleta de néctar?
@@ -2831,32 +2849,31 @@ pt-BR:
         a abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!
         (Vamos aprender uma maneira mais simples no próximo desafio).
       NEW Course 4 Bee For Loops 3_instruction: |
-        Ah, o laço para torna isso muito mais
+        Ah, o "laço para" torna isso muito mais
         fácil! Todo o código que você precisa está lá, dê uma olhada em como ele é feito
         e então clique em "Executar" para ver como ele funciona. 
       NEW Course 4 Bee For Loops 4 4_instruction: |
         Você pode ajudar a abelha a coletar o
         resto do mel usando esse laço para? 
       NEW Course 4 Bee For Loops 4_instruction: |
-        Substitua o ??? no laço "para"
+        Substitua o ??? no "laço para"
         pela maior quantidade de néctar que a abelha tem que coletar. 
       NEW Course 4 Bee For Loops 5 5_instruction: |
         Você está pegando o jeito de como usar
-        o laço para? Vamos ajudar a abelha a obter o resto do néctar.
+        o "laço para"? Vamos ajudar a abelha a obter o resto do néctar.
       NEW Course 4 Bee For Loops 5_instruction: |
         Você também pode usar um laço "para" para fazer contagem
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         O último número em seu laço para é
-        chamado de "incremento" e a cada execução do laço a variável contador
-        é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
-        de 2.
+        chamado de "incremento". A cada execução do laço, a variável contador
+        é alterada de acordo com o incremento. Tente coletar essas flores usando
+        um incremento de 2.
       NEW Course 4 Bee For Loops 7_instruction: |
-        Você está pegando o jeito dos laços para?
-        Isso é parecido com o último desafio, mas você precisa coletar 2, 4, 6, 8 e 10 néctares.
-        O código inicial foi fornecido, exceto pelos números nos laços contadores.
-        Vamos coletar um pouco de néctar!
-      NEW Course 4 Bee For Loops 8_instruction: "Se seu laço está contando, o\nincremento é somado à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6 e 9 néctares?\r\n"
+        Você está pegando o jeito dos "laços
+        para"? Isso é parecido com o último desafio, mas você precisa coletar 2, 4, 6, 8 e 10 néctares.
+        
+      NEW Course 4 Bee For Loops 8_instruction: "O que você vai fazer se tirarmos\nalguns blocos? Você consegue colocá-los de volta para ajudar a abelha a coletar néctar?\r\nLembre-se:\nSe seu laço está fazendo uma contagem, o incremento é adicionado ao contador\na cada repetição. Qual deve ser seu incremento para coletar 3, 6 e 9 néctares?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: |
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
@@ -2869,8 +2886,8 @@ pt-BR:
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas. 
       NEW Course 4 Play Lab Params 5 5_instruction: |
-        Preencha as entradas de parâmetro
-        dos personagens com números (1, 2 e 3) para fazer com que esses personagens patrulhem. 
+        Vamos tentar novamente, mas agora com
+        menos ajuda. O que você precisa editar desta vez para fazer com que os personagens patrulhem?
       NEW Course 4 Play Lab Vars 4 5_instruction: |
         "O que você acha que esse código vai
         fazer? Pressione "Executar" para ver o que acontece".
@@ -2898,6 +2915,38 @@ pt-BR:
         e então vamos descobrir como ele funciona. Você pode usar as setas do teclado para mover o
         ninja para cima e para baixo - tente capturar o unicórnio e desviar do dragão! Quando você
         achar que já descobriu como o jogo funciona, clique em "Concluir"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa
@@ -3448,8 +3497,26 @@ pt-BR:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

@@ -20,7 +20,7 @@ Ja! Particuliere en onafhankelijke scholen komen in aanmerking samen met openbar
 
 ## Kunnen niet-Amerikaanse scholen de video chat prijs winnen?
 
-Nee, helaas, vanwege logistieke beperkingen zijn wij niet in staat om video-chat prijzen aan te bieden aan scholen buiten de VS en Canada. Alle internationale organisatoren **komen** in aanmerking voor Dropbox ruimte of Skypetegoed.
+Nee, helaas, vanwege logistieke beperkingen zijn wij niet in staat om video-chat prijzen aan te bieden aan scholen buiten de VS en Canada.
 
 ## Waarom is de prijs van $10.000 hardware alleen beschikbaar voor openbare scholen?
 
@@ -32,16 +32,16 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Wat is de deadline om in aanmerking te komen om een tech chat te winnen?
 
-Om in aanmerking te komen moet je je klas voor 14 november 2014 geregistreerd hebben voor Uur Code. Klassen kunnen een videochat met een beroemdheid winnen. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Klassen kunnen een videochat met een beroemdheid winnen. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Wanneer zal ik ervan op de hoogte worden gesteld als mijn school of klas een prijs wint?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org selecteert winnaars en bericht ze via email voor 1 december 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

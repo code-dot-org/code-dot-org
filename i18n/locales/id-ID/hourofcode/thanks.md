@@ -14,7 +14,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-**SETIAP** penyelenggara Hour of Code akan menerima 10 GB ruang Dropbox atau $10 kredit dari Skype sebagai terima kasih. </p> 
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Sebarkan berita
 
@@ -22,34 +24,20 @@ Beritahu temanmu mengenai #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
 
-[Kirimkan email ini](<%= hoc_uri('/resources#email') %>) atau [selebaran ini](/resources/hoc-one-pager.pdf) kepada kepala sekolah anda.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Tanyakanlah kepada bos anda untuk terlibat
 
-## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Kirimkan email ini](<%= hoc_uri('/resources#email') %>) atau berikan [selebaran ini](/resources/hoc-one-pager.pdf) selebaran ini</a> kepada kepala sekolah anda.
-
-<% end %>
-
-## 3. Menyumbangkan dengan murah hati
-
-[Berikanlah sumbangan gerakan crowdfunding kami](http://<%= codeorg_url() %>/donate). Untuk mengaja 100 juta anak, kami ingin bantuan anda. Kami baru saja meluncurkan <a href="http://<%= codeorg_url() %>/ " kampanye pengumpulan dana pendidikan terbesar</a> dalam sejarah. *Setiap* dollar akan disesuaikan dengan [donor-donor](http://<%= codeorg_url() %>/about/donors), itu akan mengadakan dampak.
-
-## Tanyakan pada bos anda untuk ikut terlibat
-
-[Kirimkan ema ini](<%= hoc_uri('/resources#email') %>) kepada manager, atau CEO. Atau [berikan selebaran ini](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Promosikan Hour of Code dalam komunitas Anda
+## 4. Promosikan Hour of Code dalam komunitas Anda
 
 Rekrut kelompok lokal — anak Pramuka, gereja, Universitas, veteran kelompok atau Serikat pekerja. Atau selenggarakan Hour of Code "pesta blok" untuk lingkungan tempat Anda tinggal.
 
 ## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Kirimkan email ini](<%= hoc_uri('/resources#politicians') %>) kepada walikota, dewan kota, or dewan sekolah. Atau [berikan mereka handout ini](http://hourofcode.com/resources/hoc-one-pager.pdf) dan undang mereka untuk mengunjungi sekolah Anda.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

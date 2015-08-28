@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 次の間違い（エラー）を正しく直してください。
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -40,7 +42,7 @@
   of: の
   more: 詳細
   less: 隠す
-  beta: 開発版
+  beta: ベータ版
   try_hoc: ここをクリックしてHour of Codeを試す >>
   try_k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
   k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
@@ -235,7 +237,7 @@
         calculate: Calculate Something
     user:
       classroom: 先生用ホームページ
-      district_dashboard: District Dashboard
+      district_dashboard: 地区のダッシュ ボード
       label: こんにちは  %{username}
       stats: コード・スタジオ
       settings: 私のアカウント
@@ -265,9 +267,9 @@
     tools: 先生向けのツール
     followers:
       section: セクション：
-      stages: 'Stage(s) to display:'
+      stages: ステージを表示
       show_past: 過去の生徒の活動 (%{bullet_html}) を表示：
-      levels_key: Levels key
+      levels_key: レベルキー
       perfect: 完了
       completed: 完了しましたが、ブロックを使いすぎです
       tried: 未完了
@@ -285,17 +287,13 @@
       remove: 生徒のデータを削除
       confirm_remove: この生徒のデータを削除してもよろしいですか？
       help_reassign: クラスを複数のセクションに分割し、生徒を新しいセクションに割り当てます。
-      help_register: Instead of making you spend a lot of time individually importing
-        student data, you can set up your class quickly by asking them to signup.
-        Your students will need to choose usernames and passwords, but they WILL NOT
-        be required to provide an email address. If a student forgets their password,
-        you will be able to reset it for them.
+      help_register: 各生徒のデータを入力する時間をかけるよりも、授業で生徒にアカウントを設定するように指示することをおすすめします。生徒たちはユーザ名とパスワードを設定する必要がありますが、メールアドレスは必須ではありません。生徒がパスワードを忘れた場合リセットすることも可能です。
       register: 生徒が自分で登録するよう促してください
-      vist: Ask your students to visit
+      vist: 生徒に訪問してもらう
       section_code: そして、彼らのセクションコードを入力してください。
       first_please: まず、%{add_section} してください。
-      for: For
-      enter: 'enter:'
+      for: 対象
+      enter: 入力
     sections:
       add: セクションを追加
       manage: セクションの管理
@@ -319,15 +317,15 @@
     cant_remove_teacher_no_email: Eメール アドレスが登録されていないため、教師として%{teacher_name}を削除できません
     student_teacher_disassociated: '%{teacher_name} が  %{student_name}の教師として削除されています'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: 回答者の画面で表示
       student: 生徒
-      viewing_solution: Viewing Solution
+      viewing_solution: 回答を表示
       try_it_yourself: 試しにやってみてください。
       section: セクション
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: あなたのメール アドレス %{email} はまだ確認されていません。
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: メールアドレスをご確認ください
     email_resend_confirm: 確認手順の再送信
     new_password_hint: （変更したくない場合は空白のままにしてください）
     current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)
@@ -352,8 +350,9 @@
     signin_message: 既に登録されていますか？% {リンク}
     student_reg_link: 学生のサインアップ
     teacher_reg_link: 教師のサインアップ（登録）
-    signin_directions: Use an account to track progress.<br/> Teachers, track your
-      entire class.
+    signin_directions: |
+      アカウントを使って進捗を確認します<br/>
+      先生はクラス全体の進捗を確認できます。
     teacher_dashboard: 進捗状況をダッシュ ボードで参照する
     teacher_student_count_one: あなたには %{count} 人の生徒がいます
     teacher_student_count: あなたには %{count} 人の生徒がいます
@@ -369,24 +368,27 @@
     local_school: 近隣の学校
     online: オンライン
     see_details: 詳細はこちら
-    view_course: View Course
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
+    view_course: コースを確認
+    prize_info: '参加者への賞品 (米国公立校のみ): 上限で $1,000 '
     tryfirst: または、まずは最初に試して、後でサインアップできます
     trynow: 今すぐ試す
     add_hint_help: Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-    test_videos_help: Test our new video player at your school
+    test_videos_help: 新しいビデオプレイヤーをテストする。
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: このサイトを教師として使用
     heading_hoc2014: <h2>Hour of Code</h2> <h1>全年齢対象</h1>
     heading_elementary: <h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>
     heading_apps: <h2>お楽しみ</h2><h1>みんなの</h1>
-    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
+    heading_legacy: <h1>全年齢対象のコース</h1>
     your_gallery: ギャラリー
     no_primary_course: コード スタジオ でコースを見る
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Code Studio コースを以下のリストから一つ試す
     print_certificate: 証書を印刷
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: 男性
     female: 女性
@@ -395,18 +397,32 @@
     student: 生徒
     teacher: 先生
   footer:
-    help_from_html: このチュートリアルを作るのに、Google・Microsoft・Facebook・Twitterのエンジニアがサポートした
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
+    help_from_html: このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: それ以上
     feedback: フィードバックする
     translate: あなたの言語の翻訳にご協力ください
     support: サポート
     support_url: http://support.code.org
+    tos_short: Terms
     tos: 利用規約
     privacy: プライバシー ポリシー
-    secure: Secure Version
+    secure: 保護されたバージョン
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -429,11 +445,8 @@
       hide_this_warning: この警告を非表示
     upgrade:
       header: お使いのブラウザーをアップグレードしてください。
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Unfortunately your browser doesn't support all the features required
-        to run this part of the site.<br/><br/>Install a browser on our supported
-        browsers list to continue. You can <a href='#'>try viewing the page</a>, but
-        expect functionality to be broken.
+      message: Code.org は最新のウェブ技術を使うことで、サイトをより高速化しています。残念ながらあなたのブラウザはこのサイトを実行するのに必要な機能をすべてサポートしていません。<br/><br/>以下のサポートされているブラウザをインストールしてください。<a
+        href="#">ページを閲覧する</a>ことも可能ですが、いくつかの機能が失われていることが予想されます。
       button: サポートされているブラウザの一覧を見る
   slow_loading: 通常よりも長くかかっている...
   try_reloading: ページを再読み込みする
@@ -458,10 +471,10 @@
   builder:
     created: 新しいスクリプトを作成しました
     destroyed: スクリプトを破棄しました
-    manage: Build Levels
+    manage: ビルドレベル
     view: 表示
     back: スクリプトに戻る
-    success: You successfully edited the blocks.
+    success: ブロックの編集に成功しました。
     level:
       create: 新しいレベルを作成
       current: 現在のレベル
@@ -474,7 +487,7 @@
       title: Flappy Code
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
     20-hour:
-      title: Accelerated Course
+      title: 上級コース
       body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
       body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
     hoc2014:
@@ -482,7 +495,7 @@
       try_frozen: 「アナと雪の女王」から、アナとエルザとアーティスト
     gallery:
       title: ギャラリー
-      body: View a gallery of app and artist images created by our users
+      body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
     frozen:
       title: アナと雪の女王
     infinity:
@@ -503,11 +516,8 @@
     header_playlab: プレイラボ
     header_artist: アーティスト
   landing:
-    prerelease: This course is in <span class='betatext'>beta</span>.  This means
-      it is not the final version of the course, and is subject to revision as feedback
-      is received and improvements are made.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
+    prerelease: このコースはまだ<span class='betatext'>ベータ版</span>です。今後改善と変更が行われる可能性があります。
+    prerelease_hoc2014: このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。
     feedback: 不具合を報告
     report_bug: バグを報告
     support: 説明を見る
@@ -526,20 +536,23 @@
     correct_body: 正解です。
   contract_match:
     wrong_title: 不正解
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname: あなたの契約は、間違った名前が使われています。
+    badname_case: 関数名は大文字小文字を区別します。登録名の大文字小文字をご確認ください。
+    badrange: あなたの契約に間違った設定があります。
+    baddomainsize: あなたの契約のドメインの項目数が間違っています。
+    baddomainname: ひとつかそれ以上のドメイン項目で間違った名前が設定されています。
+    baddomaintype: ひとつかそれ以上のドメイン項目で間違った設定が行われているか、順番が間違っています。
   text_match:
     placeholder: ここに答えを入力
     open_response_title: ありがとう
-    open_response_body: Thanks for your response!
+    open_response_body: ご回答ありがとうございます。
   dialog:
     ok: OK
+    startover_title: 本当に最初からやり直してもよいですか？
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: 最初からやり直す
+    startover_cancel: キャンセル
   time:
     hour: 1 時間
     day: 日
@@ -560,7 +573,7 @@
           title: イベント
           description: ''
         builder:
-          title: Builder
+          title: ビルダー
           description: ''
         flappy:
           title: Flappy Code
@@ -572,25 +585,22 @@
           title: ステップ
           description: ''
         sample_level_builder:
-          title: Sample Level Builder
+          title: レベルビルダーの例
           description: ''
   age_interstitial:
     age: 年齢
-    header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
+    header: アカウント情報の更新
+    message: ユーザーにより良い体験をしてもらうために、プライバシー保護を強化しながら現在も更新中です。そのため、こちらからみなさんの年齢データの入力にご協力ください。cord.org
+      は決して第三者に情報を販売、共有、貸与はいたしません。
+    sign_out: 年齢を公表しくない場合は、<a href="%{url}"> サインアウト</a> してください。
   zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのログインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をログインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。
   progress:
-    not_started: not started
+    not_started: 未実施
     in_progress: 途中
-    completed_too_many_blocks: 完成、ブロック達が多すぎ
+    completed_too_many_blocks: 完成、ブロックが多すぎ
     completed_perfect: 完成、完璧
-    furthest_level_attempted: 最も遠いレベルの試行
-    assessment: assessment
+    furthest_level_attempted: 到達レベル
+    assessment: 評価
   studio:
     courses_working_on: 試行中のコース
     completed_courses: 完了したコース
@@ -626,4 +636,4 @@
     delete_confirm_text: プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。
     view_all: マイプロジェクトを見る
     remix: リミックス
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: '"Remix" をクリックしてあなただけのバージョンを作成しましょう'

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 請修正下列錯誤：
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -375,6 +377,10 @@
     no_primary_course: 試試在 Code Studio 參加一個課程
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: 男性
     female: 女性
@@ -383,14 +389,28 @@
     student: '學生 '
     teacher: 教師
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: 憤怒鳥&trade; & &copy; 2009年-2014 Rovio 娛樂有限公司版權所有。<br/>植物與僵屍&trade;
       & &copy; 2014 EA美商藝電公司版權所有。
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: 由亞馬遜網路服務系統提供服務
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: 更多
     feedback: 提供回饋
     translate: 幫我們翻譯成您國家的語言
     support: 支援
     support_url: http://support.code.org
+    tos_short: Terms
     tos: 服務條款
     privacy: 隱私權政策
     secure: 安全版本
@@ -534,6 +554,11 @@
     open_response_body: 感謝您的回應！
   dialog:
     ok: 確定
+    startover_title: 你確定要重新開始嗎？
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: 重新開始
+    startover_cancel: 取消
   time:
     hour: 一小時
     day: 天

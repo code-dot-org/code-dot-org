@@ -1,17 +1,13 @@
 
 
-[<button style="float: right; margin-top: 50px">Зарегистрируйте ваше мероприятие</button>](/#join)
+# Реклама и полезная статистика
 
-# Blurbs and Useful Stats
+## Используйте эту короткую рекламу в информационных бюллетенях
 
-## Use this short blurb in newsletters
+### Привнесите компьютерную науку в Вашу школу. Начните Час Программирования
 
-### Bring computer science to your school. Start with an Hour of Code
+Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Но есть и хорошие новости: мы можем это изменить. Если вы слышали про [Час Программирования](<%= hoc_uri('/') %>) в прошлом году, вы должны знать, что он вошел в историю. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [Час Программирования](<%= hoc_uri('/') %>) - это одночасовое занятие по введению в компьютерную науку, созданное специально, чтобы развеять все страхи перед прогаммированием и показать, что каждый может изучить его основы. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-Компьютеры везде, но сейчас меньше школ учат информатике, чем 10 лет назад. Но есть и хорошие новости: мы можем это изменить. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. В течение одной недели, 15 миллионов учащихся попробовали себя в информатике! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+## Infographics
 
-## Infographic version:
-
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
-
-<a style="display: block" href="/#join"><button style="float: right;">Зарегистрируйте ваше мероприятие</button></a>
+<%= view :stats_carousel %>

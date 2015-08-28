@@ -831,8 +831,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -900,10 +900,17 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           Evaluation Blocks: Оцінкові блоки
           Strings and Images: Рядки та зображення
           Defining Variables: Визначення змінних
@@ -948,8 +955,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1006,8 +1013,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           Welcome!: Ласкаво просимо!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1069,8 +1076,8 @@
           Hour of Code: Година Коду
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1092,8 +1099,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
           Welcome!: Ласкаво просимо!
           Wrap-Up: Підведення підсумків
           Review StarLogo Nova: Review StarLogo Nova
@@ -1109,8 +1116,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
           Welcome!: Ласкаво просимо!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1131,8 +1138,8 @@
         sciencePD2b-iZone:
           Welcome!: Ласкаво просимо!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1141,8 +1148,8 @@
           Wrap-Up: Підведення підсумків
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
           Welcome!: Ласкаво просимо!
           0: |
             Unit 1, Days 1-2
@@ -1165,8 +1172,8 @@
           Wrap-up: Підведення підсумків
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Етап 2 онлайн: Змішане літнє навчання'
+          description: 'Етап 2 онлайн: Змішане літнє навчання'
           Welcome!: Ласкаво просимо!
           0: |
             Unit 1, Days 1-2
@@ -1218,3 +1225,38 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Щасливі карти
+          Move it, Move it: Рухайся, рухайся
+          'Real-life Algorithms: Plant a Seed': 'Життєві алгоритми: посадити насіння'
+          Graph Paper Programming: Програмування по клітинках
+          Building a Foundation: Закладання основ
+          Getting Loopy: Економія на повторах
+          The Big Event: Велика подія
+          Binary Bracelets: Двійкові браслети
+          Songwriting: Написання пісень
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep

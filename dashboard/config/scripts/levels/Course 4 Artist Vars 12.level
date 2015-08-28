@@ -23,7 +23,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"[block-id='14']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "21",
     "disable_sharing": "false",
-    "markdown_instructions": "Let's set the `sides` variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! \r\n\r\n<br/>\r\nNotice that there is another variable called `length`. We can now use that wherever we have a `move forward` block. Set the `length` variable to 75 for this shape.\r\n\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Let's set the `sides` variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! \r\n\r\n<br/>\r\nNotice that there is another variable called `length`. We can now use that wherever we have a `move forward` block. Set the `length` variable to 75 for this shape.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,7 +39,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" deletable="false" movable="false">
               <title name="VAR">sides</title>
               <value name="VALUE">
                 <block type="math_number">
@@ -47,81 +47,61 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat_ext" inline="true">
-                  <value name="TIMES">
-                    <block type="variables_get">
-                      <title name="VAR">sides</title>
+                <block type="variables_set" inline="false" deletable="false" movable="false">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">75</title>
                     </block>
                   </value>
-                  <statement name="DO">
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="variables_get">
-                          <title name="VAR">sides</title>
-                        </block>
-                      </value>
+                  <next>
+                    <block type="controls_repeat_ext" inline="true" deletable="false" movable="false">
                       <statement name="DO">
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="variables_get">
-                              <title name="VAR">length</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">360</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="variables_get">
-                                      <title name="VAR">sides</title>
+                        <block type="controls_repeat_ext" inline="true" deletable="false" movable="false">
+                          <statement name="DO">
+                            <block type="draw_move" inline="true" deletable="false" movable="false">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="draw_turn" inline="true" deletable="false" movable="false">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_arithmetic" inline="true" deletable="false" movable="false">
+                                      <title name="OP">DIVIDE</title>
+                                      <value name="A">
+                                        <block type="math_number" deletable="false" movable="false">
+                                          <title name="NUM">360</title>
+                                        </block>
+                                      </value>
                                     </block>
                                   </value>
                                 </block>
-                              </value>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="draw_move" inline="true" deletable="false" movable="false">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="draw_turn" inline="true" deletable="false" movable="false">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_arithmetic" inline="true" deletable="false" movable="false">
+                                      <title name="OP">DIVIDE</title>
+                                      <value name="A">
+                                        <block type="math_number" deletable="false" movable="false">
+                                          <title name="NUM">360</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
                       </statement>
-                      <next>
-                        <block type="draw_move" inline="true">
-                          <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="variables_get">
-                              <title name="VAR">length</title>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnRight</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">360</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="variables_get">
-                                      <title name="VAR">sides</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
                     </block>
-                  </statement>
+                  </next>
                 </block>
               </next>
             </block>
@@ -131,55 +111,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">100</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">90</title>
-            </block>
-          </value>
-        </block>
-        <block type="controls_repeat_ext" inline="true"/>
-        <block type="math_number">
-          <title name="NUM">0</title>
-        </block>
-        <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
-        </block>
-        <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
         <block type="variables_get">
           <title name="VAR">sides</title>
-        </block>
-        <block type="variables_set" inline="false">
-          <title name="VAR">length</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
         </block>
         <block type="variables_get">
           <title name="VAR">length</title>

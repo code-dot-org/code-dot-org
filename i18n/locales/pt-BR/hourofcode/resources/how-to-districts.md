@@ -8,7 +8,7 @@ título: Guia da Hora do Código para Distritos layout: largo nav: recursos_nav
 
 ## Faça com que todas as escolas participem e todos os alunos possam aprender!
 
-  1. **Recrute escolas locais.** Compartilhe.[ este e-mail ](<%= hoc_uri('/resources#sample-emails') %>) e o [Guia para professores](<%= hoc_uri('/resources/how-to') %>), ou inclua uma [pequena propaganda](<%= hoc_uri('/resources/stats') %>) em boletins informativos/materiais de comunicação do distrito.
+  1. **Recrute escolas locais.** Compartilhe.[ este e-mail ](<%= hoc_uri('/resources#sample-emails') %>) e o [Guia para professores](<%= hoc_uri('/resources/how-to') %>), ou inclua uma [pequena propaganda](<%= hoc_uri('/resources/stats') %>) em boletins informativos/materiais de comunicação da região.
 
   2. **Forneça um modelo de plano de logística para as escolas.** Compartilhe esse modelo de plano de logística com as escolas para lhes dar ideias de como organizar a participação de toda a escola. É possível fazer essa atividade nas aulas de matemática, no horário dos plantões de dúvida, ou alterando as turmas no laboratório de computação ao longo da semana. Eles podem apresentar seu próprio plano e concorrer a US$10.000 em hardware em [ http://hourofcode.com/prizes](<%= hoc_uri('/prizes') %>).
 
@@ -18,4 +18,4 @@ título: Guia da Hora do Código para Distritos layout: largo nav: recursos_nav
 
   5. **Sedie um evento da Hora do Código.** Consulte nosso [guia do evento](<%= hoc_uri('/resources/how-to-events') %>) para ver um exemplo de programação, kit de divulgação na mídia e outros recursos que possam auxiliá-lo.
 
-  6. ** Mais [prêmios](<%= hoc_uri('/prizes') %>) para CADA organizador. ** Todo educador participante receberá um presente de agradecimento. Das salas de aula participantes, 100 ganharão chats com vídeo com um convidado especial. Dentre os participantes estão: Bill Gates, Sheryl Sandberg, Ashton Kutcher entre outros. Além disso, uma escola participante de cada Estado ganhará US$10.000 em tecnologia!
+  6. ** Mais [prêmios](<%= hoc_uri('/prizes') %>) para CADA organizador. ** Todo educador participante receberá um presente de agradecimento. Além disso, uma escola participante de cada Estado ganhará US$10.000 em tecnologia!

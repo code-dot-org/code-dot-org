@@ -4,76 +4,72 @@ title: How-to Guide layout: wide nav: resources_nav
 
 * * *
 
-# How to teach one Hour of Code
+# Kod Saatını necə tədris etməli
 
 ## 1) Bu təlimat videosuna baxın <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 1) Dərslikləri sınaqdan keçirin:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
-**All Hour of Code tutorials:**
+**Bütün Kod Saatı dərslikləri:**
 
   * Hazırlıq üçün müəllimlərin az vaxtını alır
   * Müstəqil tədris üçün yararlıdır - hər kəsə öz tempi və bacarığına uyğun iş seçməyə imkan verir
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) Register your Hour on the map
+## 3) Plan your hardware needs - computers are optional
 
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
-
-## 2) Avadanlığa olan ehtiyacınızı planlaşdırın - kompüterlərin olması zəruri deyil
-
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
+Kod Saatının ən yaxşı məşğələləri internetə qoşulmuş kompüterlərdə alınır. Amma hər uşaq üçün bir kompüterin olmasına ehtiyac da yoxdur, bunu siz hətta kompütersiz də təşkil edə bilərsiniz.
 
   * **Şagirdlərin kompüter və avadanlığında çalışmaları test edin.** Əmin olun ki, hər şey qaydasındadır (video və səslə bağlı).
   * **Təbrik səhifələrinə baxın,** çalışma yekunlaşdıqda şagirdlərin nə ilə rastlaşacaqlarıyla tanış olun. 
   * **Əgər seçdiyiniz çalışmalar səslidirsə**, şagirdləri qulaqcıqlarla təmin edin, yaxud evdən özlərininkini gətirməyi tapşırın.
 
-## 5) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
   * **Kifayət qədər qurğunuz yoxdur?** Onda [cüt-cüt proqramlaşdırma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)dan istifadə edin. Şagirdlər yoldaşlı işləyəndə bir-briniə kömək edirlər və müəllimdən daha az asılı olurlar. Onlar həm də görərlər ki, informatika ictimai və kollektiv bir sahədir.
   * **Şəbəkənizin ötürmə sürəti azdır?** Videoları sinfin qarşısında göstərməyi planlaşdırın ki, hər şagird özü üçün videoları endirməsin, ya da avadanlıqsız, oflayn dərslikləri sınayın.
 
-## 6) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Kod Saatına start vermək üçün şagirdlərinizə ruhlandırıcı bir video göstərin. Məsələn:
 
   * "Code.org"un Bill Qeyts, Mark Tsukerberq və NBA basketbol ulduzu Kris Boşun iştirakı ilə çəkilmiş ilk açılış videosu (Uzunluğu [1 dəqiqə](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dəqiqə](https://www.youtube.com/watch?v=nKIu9yen5nc) və [9 dəqiqə](https://www.youtube.com/watch?v=dU1xS07N-FA) olan versiyalar var)
   * Kod Saatı 2013 [açılış videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw) və ya <% if @country == 'uk' %> [Kod Saatı 2014 videosu](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Kod Saatı 2014 videosu](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Prezident Obamanın bütün şagirdləri infromatikanı öyrənməyə çağırması](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Şagirdlərinizlə həyəcanı bölüşün - mövzuya qısa giriş verin**
 
-Most kids don’t know what computer science is. Here are some ideas:
+Balacaların çoxu informatikanın nə olduğunu bilmir. Bəzi fikirlər burada verilib:
 
   * Sadə üsulla bunu izah edin, həm oğlanlara, həm də qızlara maraqlı olan tətbiq sahələrini misal çəkin (xilasetmə işləri, insanlara yardım etmək, onların arasında ünsiyyət yaratmaq və s.).
   * Sınaqdan keçirin: "Gündəlik həyatınızda informatikadan istifadə edən əşyalar barədə düşünün: mobil telefon, mikrodalğalı soba, kompüter, svetofor... bunların hamısını düzəltmək üçün informatika mütəxəssisləri lazım olub".
   * Yaxud: "İnformatika bizim gücümüzü artırmaq üçün insani ideyalar və rəqəmli alətləri qovuşduran bir sənətidir. İnformatika sahəsinin alimləri olduqca müxtəlif sahələrdə işləyirlər: telefonlar üçün tətbiqi prooqramlar yazır, xəstəlikləri sağaldır, animasiyalı filmlər düzəldir, sosial media üzərində işləyir, başqa planetləri tədqiq edən robotlar düzəldir, daha nələr edirlər".
   * Qızları informatika ilə maraqlandırmaq üçün məsləhətlərə [burada](http://<%= codeorg_url() %>/girls) baxın. 
 
-## 7) Start your Hour of Code
+## 6) Start your Hour of Code
 
-**Direct students to the activity**
+**Şagirdləri fəaliyyətə yönəldin**
 
-  * Dərsliyin keçidini lövhədə yazın. [Seçdiyiniz dərsliyə aid məlumatda](http://<%= codeorg_url() %>/learn) iştirakçıların sayından aşağıdakı siyahıda göstərilən keçidi tapın. [hourofcode.com/az](http://hourofcode.com/co)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * Şagirdlərə deyin ki, həmin ünvana keçərək dərsliyi işə salsınlar.
 
-**When your students come across difficulties**
+**Şagirdləriniz çətinliklərlə rastlaşanda**
 
   * Şagirdlərinizə deyin ki, "3-ündən soruşun, sonra məndən". Üç sinif yoldaşınızdan soruşun və əgər onlar cavabı bilmirsə, müəllimdən soruşun.
   * Şagirdləri təşviq edin və müsbət rəylərlə həvəsləndirin: "Səndə əla alınır, cəhd etməyə davam et."
   * Belə də cavab vermək olar: "Bilmirəm. Gəlin, bundan birlikdə baş çıxardaq." Problemi həll edə bilmirsinizsə, bunu sinif üçün yaxşı təcrübə dərsi kimi istifadə edin: "Texnologiya həmişə biz istədiyimiz kimi işləmir. Birlikdə biz bir tələbə kollektiviyik". Əlavə: "Proqramlaşdırmanı öyrənmək yeni bir dili öyrənmək kimidir, həmən dəqiqə axıcı danışmaq olmur".
 
-**What to do if a student finishes early?**
+**Şagird vaxtından əvvəl bitirirsə, nə etməli?**
 
   * Şagirdlər [<%= codeorg_url() %>burada](http://<%= codeorg_url() %>/learn) bütün dərsliklərə baxıb, başqa bir Kod Saatı fəaliyyətini sınaqdan keçirə bilərlər.
   * Yaxud da fəaliyyəti vaxtından əvvəl bitirmiş şagirdlərdən çətinliyi olan sinif yoldaşlarına kömək etməyi xahiş edin.
 
-**How do I print certificates for my students?**
+**Şagirdlərim üçün sertifikatları necə çap edim?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Hər şagirdin ["Code.org" dərsliklərini](http://studio.code.org) başa vurduqdan sonra e-poçtla bir sertifikat almaq imkanı var. Çap etmək üçün sertifikatı klikləmək olar. Amma əgər şagirdləriniz üçün yeni sertifikatlar çap etmək istəyirsinizsə, bizim [Sertifikatlar](http://<%= codeorg_url() %>/certificates) səhifəmizdə bir oturuma istədiyiniz qədər sertifikat çap edə bilərsiniz.
 
-**What comes after the Hour of Code?**
+**Kod Saatından sonra nə gəlir?**
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. <% if @country == 'uk' %> The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](http://uk.code.org/learn/beyond). <% else %> To continue this journey, find additional resources for educators [here](http://<%= codeorg_url() %>/educate). Or encourage your children to learn [online](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+Kod Saatı texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını öyrənmək yolunda ancaq birinci addımdır. <% if @country == 'uk' %> Bu yolu davam etdirmək üçün [uşaqlarınızı onlayn öyrənməyə həvəsləndirin](http://uk.code.org/learn/beyond). <% else %> Bu yolu davam etdirmək üçün [buradan](http://<%= codeorg_url() %>/educate) təlimçilər üçün əlavə resurslar əldə edin. Yaxud da uşaqlarınızı [onlayn](http://<%= codeorg_url() %>/learn/beyond) öyrənməyə həvəsləndirin. <% end %>
