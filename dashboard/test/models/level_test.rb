@@ -305,4 +305,28 @@ EOS
     level = Level.find_by_key 'PlantASeed'
     assert_equal 'PlantASeed', level.name
   end
+
+  test 'applab examples' do
+    level = Applab.create(name: 'applab_with_example')
+    level.examples = ['xxxxxx', 'yyyyyy']
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['examples']
+    assert level.properties['encrypted_examples']
+
+    # take out nils and empty strings
+    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+  end
 end
