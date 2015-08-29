@@ -41,6 +41,9 @@ max_age: 60
   -unless under_13?
     = view :petition_expand
 
+  %div{:style=>'clear: both; height:30px'}
+  = view :donor_slider, theme: "black_white"
+
 = view 'popup_window.js'
 
 :javascript
