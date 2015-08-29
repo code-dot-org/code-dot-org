@@ -38,7 +38,7 @@ max_age: 60
 
   %div{:style=>'clear: both; height:30px'}
 
-  = view :petition
+  = view :petition_expand
 
 = view 'popup_window.js'
 
@@ -97,10 +97,4 @@ max_age: 60
       certificate_disable();
       voting_disable();
     }
-  });
-
-  var petition;
-  $(document).ready(function()
-  {
-    petition = new Petition();
   });

@@ -1,6 +1,6 @@
 
 
-#petitionblock.greybox{style: "/* background-color:rgb(231, 232, 234); */  background-color:white; padding: 10px 20px 10px 20px; color: rgb(91,103,112)"}
+#petitionblock.greybox{style: "/* background-color:rgb(231, 232, 234); */  background-color:white; padding: 10px 0px; color: rgb(91,103,112)"}
 
   #petition_message{:style=>"font-size: 22px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
 
@@ -34,17 +34,17 @@
                 %option{value:age}= age
           %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; text-align: left; margin-left: 15px; margin-top:-5px'}
             %a{href: '/privacy', style: "color: rgb(91,103,112)"}= I18n.t :privacy_practices_children
-        .col-18
+        .col-18{style: "width: 16%;"}
           %span
             =I18n.t :i_am_a
-            %select.dropdown{:name=>"role_s", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; -webkit-appearance:none; padding-left:5px'}
+            %select.dropdown{:name=>"role_s", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; -webkit-appearance:none;'}
               %option{:value=>"other"}=I18n.t :participant_select
               %option{:value=>"student"}=I18n.t :participant_student
               %option{:value=>"parent"}=I18n.t :participant_parent
               %option{:value=>"educator"}=I18n.t :participant_educator
               %option{:value=>"engineer"}=I18n.t :participant_engineer
               %option{:value=>"other"}=I18n.t :participant_other
-        .col-18.i-agree-button
+        .col-18.i-agree-button{style: 'margin-left: 10px;'}
           %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
 
   #thanks.container_responsive{:style=>"display:none"}
