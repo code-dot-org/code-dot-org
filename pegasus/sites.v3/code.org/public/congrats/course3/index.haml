@@ -38,7 +38,8 @@ max_age: 60
 
   %div{:style=>'clear: both; height:30px'}
 
-  = view :petition_expand
+  -unless under_13?
+    = view :petition_expand
 
 = view 'popup_window.js'
 

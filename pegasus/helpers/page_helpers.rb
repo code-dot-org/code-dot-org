@@ -29,3 +29,21 @@ def partner_site?()
   partner_sites = %w(al ar br eu italia ro sg uk za).map{|x|x + '.code.org'}
   return partner_sites.include?(request.site)
 end
+
+def current_user?
+  dashboard_user.present?
+end
+
+def age
+  if current_user?
+    age = ((Date.today - dashboard_user[:birthday]) / 365).to_i
+    age = "21+" if age >= 21
+  else
+    age = "21+"
+  end
+  age
+end
+
+def under_13?
+  age.nil? || age.to_i < 13
+end
