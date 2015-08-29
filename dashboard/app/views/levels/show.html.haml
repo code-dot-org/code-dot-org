@@ -28,9 +28,9 @@
     }
   - if @level.is_a?(Widget)
     = render partial: 'levels/widget'
-    = render partial: 'levels/reference_area'
   - else
     = render partial: "levels/#{@level.class.to_s.underscore}"
+  = render partial: 'levels/reference_area'
 - else
   = render partial: 'levels/blockly'
 
