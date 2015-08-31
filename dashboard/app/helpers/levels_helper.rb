@@ -392,7 +392,7 @@ module LevelsHelper
   end
 
   def enable_examples?
-    current_user && current_user.admin? && @level.is_a?(Blockly)
+    @level.is_a?(Blockly)
   end
 
   # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
