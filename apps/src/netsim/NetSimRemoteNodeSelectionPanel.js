@@ -144,7 +144,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.updateLayout();
 
   // Move the reference area to beneath the instructions
-  this.getBody().find('.instructions').append(referenceArea);
+  this.getBody().find('.reference-area-placeholder').append(referenceArea);
 
   // Teachers and admins get a special "Reset Simulation" button
   if (this.canCurrentUserResetShard()) {
@@ -157,6 +157,11 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
+  this.getBody().find('.submitButton').click(function (jQueryEvent) {
+    if (!$(jQueryEvent.target).is(':disabled')) {
+      NetSimGlobals.completeLevelAndContinue();
+    }
+  });
 };
 
 
