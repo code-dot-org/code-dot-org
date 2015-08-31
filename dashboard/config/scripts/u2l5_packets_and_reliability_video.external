@@ -5,16 +5,13 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## _Rough Draft_ Video: The Internet: Packets, Routers, and Reliability
+## Video: The Internet: Packets, Routers, and Reliability
 
-**<a href="" target="_blank">Video guide and questions</a>**
-
-
-<iframe width="853" height="480" src="https://www.youtube.com/embed/Qnyiy2TiT1w?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/JJ1S9Y31vgQ?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <br>
 
-**[Can't see the video? Click here.](http://videos.code.org/2015/csp/concept_packets_reliability.mp4)**
+**[Can't see the video? Click here.](http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4)**
 
 <br>
 
