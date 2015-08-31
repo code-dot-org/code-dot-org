@@ -1,0 +1,20 @@
+name 'sciPD3pre1 thanks'
+title 'Thank You'
+description 'Thanks for your time'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Thank You!
+
+<img src="https://images.code.org/e2cb7907fd5cd39d2469c446cd059497-image-1440792473998.jpg" width="600px" style="mix-blend-mode: multiply;">
+
+Thank you for preparing for your Phase 3 In-Person TLOs.  The rest of your group is counting on your best effort. This experience will help prepare someone else for their next In-Person experience as well, so please take the time to review and practice your teaching plan until you are comfortable.
+
+Click the "Continue" button below to head back out to the teacher dashboard.
+
+<br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

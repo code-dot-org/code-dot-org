@@ -767,10 +767,16 @@ var projects = module.exports = {
       callback = arguments[0];
       source = this.sourceHandler.getLevelSource();
     }
+
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    var newLevelHtml = this.sourceHandler.getLevelHtml();
+    if (current.levelHtml && !newLevelHtml) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
     current.levelSource = source;
-    current.levelHtml = this.sourceHandler.getLevelHtml();
+    current.levelHtml = newLevelHtml;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {

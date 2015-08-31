@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Can you help the Bee collect the rest of the honey using this for loop? ",
+    "instructions": "Now we need to move forward \"counter\" times, then get nectar \"counter\" times.  Can you use two \"repeat\" loops to solve this challenge?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -29,7 +29,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "ideal": "11",
-    "maze_data": null
+    "maze_data": null,
+    "markdown_instructions": "Now we need to `move forward` `counter` times, then `get nectar` `counter` times.  Can you use two `repeat` loops to solve this challenge?"
   }
 }]]></config>
   <blocks>

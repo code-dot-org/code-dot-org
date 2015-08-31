@@ -30,7 +30,9 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Teachers from Los Angeles will attend PD in LA and connect the to Spokane CSP workshop virtually. Please visit the [Los Angeles page](/educate/pd/15-16/lausd) for the dates and details of your workshop.
+
+Teachers from Charles County, Maryland will attend PD in Charles County and connect to the Broward CSP workshop virtually. Your workshop details can be found on the [Charles County page](/educate/pd/15-16/charles).
 
 
 **Save the Dates:**
@@ -47,22 +49,12 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**Broward Location**
-<br/>NOVA Southeastern University<br/>
+**September 26th Location**
+
+NOVA Southeastern University<br/>
 3301 College Ave<br/>
 Room TBD<br/>
 Fort Lauderdale, FL 33314
-
-Teachers will meet at the PD location and connect to the Charles County PD virtually.
-
-**Charles County Location**
-<br/>
-North Point High School
-<br/>
-Room TBD<br/>
-2500 Davis Rd<br/> Waldorf, MD 20603
-
-Teachers will meet at the PD location and connect to the Broward PD virtually.
 
 
 **What to bring to Phase 3 quarterly sessions:**

@@ -6,7 +6,9 @@ include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security
 concerns.'
 description_short 'The Internet'
 login_required 'true'
+hidden 'false'
 
+# 1
 stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
 assessment 'U2L01 Assessment 1'
@@ -14,6 +16,7 @@ assessment 'U2L01 Assessment 2'
 assessment 'U2L01 Assessment 3'
 assessment 'U2L01 Assessment 4'
 
+# 2
 stage 'The Need for Addressing'
 level 'U2L2 Student Lesson Introduction'
 level 'U2L2 NetSim Hub Mode'
@@ -22,6 +25,7 @@ assessment 'U2L02 Assessment 3'
 assessment 'U2L02 Assessment 4'
 assessment 'U2L02 Assessment 5'
 
+# 3
 stage 'Invent an Addressing Protocol'
 level 'U2L3 Student Lesson Introduction'
 level 'U2L3: IP DNS Video'
@@ -31,6 +35,7 @@ assessment 'U2L3 Assessment 2'
 assessment 'U2L3 Assessment 3'
 assessment 'U2L3 Assessment 4'
 
+# 4
 stage 'Routers and Redundancy'
 level 'U2L4 Student Lesson Introduction'
 level 'U2L04 - NetSim Routers with Addresses'
@@ -40,6 +45,7 @@ assessment 'U2L04 Assessment5'
 assessment 'U2L04 Assessment2'
 assessment 'U2L04 Assessment3'
 
+# 5
 stage 'Packets and Making a Reliable Internet'
 level 'U2L5 Student Lesson Introduction'
 level 'U2L05 - NetSim - Packets and Building TCP'
@@ -48,12 +54,14 @@ assessment 'U2L05 Assessment 1'
 assessment 'U2L05 Assessment 2'
 assessment 'U2L05 Reflection 1'
 
+# 6
 stage 'Algorithms Detour - Minimum Spanning Tree'
 level 'U2L6 Student Lesson Introduction'
 assessment 'U2L06 - Matching: Label the Diagram'
 assessment 'U2L06- MC: what is an MST?'
 assessment 'U2L06 - MC: Which is an MST?'
 
+# 7
 stage 'Algorithms Detour - Shortest Path'
 level 'U2L7 Student Lesson Introduction'
 assessment 'U1L07 Assessment 1'
@@ -62,6 +70,7 @@ assessment 'U2L07 Assessment3'
 assessment 'U2L07 Assessment4'
 assessment 'U2L07 Assessment5'
 
+# 8
 stage 'Algorithms Detour - How Routers Learn'
 level 'U2L8 Student Lesson Introduction'
 assessment 'U2L08 Assessment 0'
@@ -70,6 +79,7 @@ assessment 'U2L08 Free Response 1'
 assessment 'U2L08 Free Response 2'
 assessment 'U2L08 Free Response 3'
 
+# 9
 stage 'The Need for DNS'
 level 'U2L9 Student Lesson Introduction'
 level 'U2L10 NetSim Automatic DNS'  
@@ -77,6 +87,7 @@ assessment 'U2L09 Assessment1'
 assessment 'U2L09 Assessment2'
 assessment 'U2L09 Free Response Wrap Up'  
 
+# 10
 stage 'DNS in the Real World'
 level 'U2L10 Student Lesson Introduction'
 assessment 'U2L10 Free Response Getting Started'
@@ -85,15 +96,18 @@ assessment 'U2L10 Assessment2'
 assessment 'U2L10 Assessment3'
 assessment 'U2L10 Free Response Wrap Up'
 
+# 11
 stage 'HTTP and Abstraction'
 level 'U2L11 Student Lesson Introduction'
 assessment 'U2L11 Assessment 1'
 assessment 'U2L11 Assessment 2'
 assessment 'U2L11 Free Response'
 
+# 12
 stage 'Challenges of the Internet'
 level 'U2L12 Student Lesson Introduction'
 
+# 13
 stage 'Tell Me a Secret - Encrypting Text'
 level 'U2L13 Student Lesson Introduction'
 assessment 'U2L13 Free Response Getting Started'
@@ -102,6 +116,7 @@ assessment 'U2L13 Assessment3'
 assessment 'U2L13 Assessment4'
 assessment 'U2L13 Free Response Wrap Up'
 
+# 14
 stage 'Cracking the Code'
 level 'U2L14 Student Lesson Introduction'
 assessment 'U2L14 Free Response Getting Started'
@@ -111,6 +126,7 @@ assessment 'U2L14 Assessment2'
 assessment 'U2L14 Assessment3'
 assessment 'U2L14 Assessment4'
 
+# 15
 stage 'Encryption Algorithms'
 level 'U2L15 Student Lesson Introduction'
 assessment 'U2L15 Free Response Getting Started'
@@ -120,9 +136,10 @@ assessment 'U2L15 Assessment3'
 assessment 'U2L15 Assessment4'
 assessment 'U2L15 Free Response Wrap Up'
 
-stage 'Alice and Bob and Asymmetric Keys'
-level 'U2L16 Student Lesson Introduction'
+#NOTE TO EVERYBODY -- Lessons 16-19 stage names do not match the lesson
+#Go by the stage number instead of the name.  Verify it's right by looking at /s/cspunit2
 
+# 16
 stage 'Algorithms Detour - Hard Problems TSP'
 level 'U2L17 Student Lesson Introduction'
 assessment 'U2L17 Free Response Getting Started'
@@ -130,20 +147,30 @@ assessment 'U2L17 Assessment 1'
 assessment 'U2L17 Assessment 2' 
 assessment 'U2L17 Free Response Wrap Up'
 
+# 17
 stage 'One Way Functions - Ice Cream Vans'
 level 'U2L18 Student Lesson Introduction'
+assessment 'U2L17 - Vocabulary matching'
 assessment 'U2L18 Free Response Getting Started'
 assessment 'U2L18 Assessment'
 assessment 'U2L18 Free Response Wrap Up'
 
+# 18
+stage 'Alice and Bob and Asymmetric Keys'
+level 'U2L16 Student Lesson Introduction'
+
+# 19
 stage 'Public Key Crypto'
 level 'U2L19 Student Lesson Introduction'
+level 'U2 Encryption and Public Keys - Video'
 assessment 'U2L19 Free Response Getting Started'
 assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
+# 20
 stage 'Security and Hacking in the Real World'
 level 'U2L20 Student Lesson Introduction'
+level 'U2 The Internet: Cybersecurity and Crime - Video'
 assessment 'U2L20 Free Response Getting Started'
 assessment 'U2L20 - Free Response - exploited technology'
 assessment 'U2L20 Free Response Wrap Up 2'
