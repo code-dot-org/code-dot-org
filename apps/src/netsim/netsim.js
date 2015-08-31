@@ -302,15 +302,6 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 };
 
 /**
- * @returns {boolean} TRUE if the "resetShard" flag is found in the URL
- * TODO: This needs to be replaced with real UI and a route that
- *       only allows section owners and admins to perform a reset.
- */
-NetSim.prototype.shouldResetShard = function () {
-  return /\bresetShard\b/i.test(location.search);
-};
-
-/**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
  * user name is available on load.
@@ -1099,20 +1090,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();
-
-  // TODO (bbuchanan): Tear this out when replacing reset option with real UI.
-  if (shard && this.shouldResetShard() && confirm("Are you sure?" +
-          "  This will kick everyone out and reset all data for the class.")) {
-    shard.resetEverything(function (err) {
-      if (err) {
-        logger.error(err);
-        NetSimAlert.error(i18n.shardResetError());
-        return;
-      }
-      // Reload page without the shard-reset query parameter
-      location.search = location.search.replace(/&?resetShard([^&]$|[^&]*)/i, "");
-    }.bind(this));
-  }
 };
 
 /**
@@ -1342,4 +1319,20 @@ NetSim.prototype.completeLevelAndContinue = function () {
       }
     }.bind(this)
   });
+};
+
+/**
+ * Attempt to reset the simulation shard, kicking all users out and resetting
+ * all data.
+ */
+NetSim.prototype.resetShard = function () {
+  if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
+    this.shard_.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
+        return;
+      }
+    }.bind(this));
+  }
 };
