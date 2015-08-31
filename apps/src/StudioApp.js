@@ -1987,3 +1987,31 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
   var element = React.createElement(Alert, reactProps);
   React.render(element, container[0]);
 }
+
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (dashboard.project.exceedsReportingThreshold()) {
+    // TODO - i18n (this might eventually come down from dashboard?)
+    // TODO - enable links
+    var contents = (
+      <div>
+        <p>
+          This project has been reported for violating Code.org's
+          <a href='#'> Terms of Service</a> and cannot be shared with others.
+        </p>
+        <p>
+          If you believe this to be an error, please
+          <a href='#'> contact us.</a>
+        </p>
+      </div>
+    );
+
+    this.displayAlert(parentSelector, {
+      body: contents,
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};

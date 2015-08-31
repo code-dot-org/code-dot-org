@@ -14,8 +14,7 @@ module.exports = React.createClass({
   render: function () {
     var style = $.extend({}, {
       position: 'absolute',
-      zIndex: 9999,
-      margin: 0
+      zIndex: 9999
     }, this.props.style);
 
     return (
