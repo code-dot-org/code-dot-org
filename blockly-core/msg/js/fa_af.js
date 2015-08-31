@@ -23,6 +23,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
+Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "Warning! Are you sure you want to delete %1?";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه خارج شو";
@@ -63,6 +64,8 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مق�
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کن";
+Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "Define the function below and try again.";
+Blockly.Msg.DELETE = "پاک کردن";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
 Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "با این کار همه رخدادهای پارامتر  '%1' حذف خواهد شد. مطمئنی؟";
@@ -95,6 +98,7 @@ Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغیر";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
 Blockly.Msg.HELP = "راهنما";
 Blockly.Msg.INLINE_INPUTS = "ورودی‌های درون خطی";
+Blockly.Msg.KEEP = "Keep";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://fa.wikipedia.org/wiki/لیست_پیوندی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "ایجاد فهرست خالی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "فهرستی با طول 0 را بر می‌گرداند، که حاوی هیچ داده ای نیست";

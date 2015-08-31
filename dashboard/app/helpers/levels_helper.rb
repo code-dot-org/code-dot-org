@@ -250,6 +250,16 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
+    if @game and @game.owns_footer_for_share?
+      app_options[:copyrightStrings] = {
+        :thank_you => URI.escape(I18n.t('footer.thank_you')),
+        :help_from_html => I18n.t('footer.help_from_html'),
+        :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :powered_by_aws => I18n.t('footer.powered_by_aws'),
+        :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      }
+    end
+
     app_options
   end
 
@@ -383,5 +393,15 @@ module LevelsHelper
 
   def enable_examples?
     current_user && current_user.admin? && @level.is_a?(Blockly)
+  end
+
+  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
+  def redirect_applab_under_13(level)
+    return unless level.game == Game.applab
+
+    if current_user && current_user.under_13?
+      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+      return true
+    end
   end
 end

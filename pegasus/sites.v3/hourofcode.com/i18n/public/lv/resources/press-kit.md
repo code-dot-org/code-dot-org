@@ -1,7 +1,5 @@
 
 
-[<button style="float: right; margin-top: 50px">Piesakies savam pasākumam</button>](/#join)
-
 ## Kā piesaistīt medijus Programmēšanas stundas pasākumam
 
 *Presei un medijiem lūdzam sazināties <press@code.org>*
@@ -11,7 +9,7 @@
   * Sazinies ar mēdijiem divas nedēļas pirms pasākuma izmantojot e-pastu. Seko līdzi e-pastam un tālrunim, ja uzreiz nesaņēmi atbildi.
   * Pajautājiet skolas personālam vai kādam brīvprātīgajam, lai uzņem bildes un dalās ar tām tiešsaistē vai nosūta presei.
   * Informāciju par "Programmēšanas stundu" ievieto mājaslapā un skolas avīzē. Ievieto pasākuma detaļas, bildes par skolnieku aktivitātēm.
-  * Dalies ar saviem jaunākajiem plāniem Facebook un Twitter, publicē jūsu pasākumus un ievieto bildes no 8. līdz 14. decembrim. Lieto mirkļbirku (hashtag) **#Programmēšanas_stunda** lai Code.org varētu pamanīt tavas aktivitātes un izcelt tās. 
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Soli pa solim:
 
@@ -47,13 +45,11 @@ Mēs ceram, ka tas rosinās skolēnos interesi turpināt mācīties. Pētījumi 
 
 **Vairāk detaļas un citātus tu vari izmantot materiālos**
 
-""Programmēšanas stunda" ir veidota tā, lai izprastu kodu un parādītu, ka datorzinātnes nav raķešu zinātne un ka ikviens var saprast tās pamatus," ir teicis Hadi Partovi, Code.org izveidotājs un izpilddirektors. "Tikai nedēļas laikā pagājušajā gadā 15 miljoni skolēnu izmēģināja "Programmēšanas stundu. Šobrīd mūsu mērķis ir sasniegt 100 miljonus skolēnu visā pasaulē, lai pierādītu, ka pieprasījums pēc atbilstošas 21.gadsimta izglītības datorzinātnē nepazīst nekādas robežas."
+""Programmēšanas stunda" ir veidota tā, lai izprastu kodu un parādītu, ka datorzinātnes nav raķešu zinātne un ka ikviens var saprast tās pamatus," ir teicis Hadi Partovi, Code.org izveidotājs un izpilddirektors. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Par Code.org**
 
-Code.org® ir publiska, bezpeļņas organizācija, kas veltīta, lai paplašinātu iesaisti datorzinātnē un palielinātu sieviešu un maz pārstāvēto citu tautību iesaisti tajā. Tā vīzija ir ikvienam skolēnam katrā skolā sniegt iespēju mācīties programmēšanu. Pēc izveidošanas 2013.gadā, code.org organizēja kampaņu "Programmēšanas stunda", kas ir devusi iespēju miljoniem skolēnu iepazīties ar datorzinātni un sadarbojās ar vairāk kā 30 skolām visā valstī un izveidoja atvērtā koda, tiešsaistes mācību platformu Code Studio visiem vecumiem. Lai iegūtu vairāk informāciju, apmeklē: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Tā vīzija ir ikvienam skolēnam katrā skolā sniegt iespēju mācīties programmēšanu. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Lai iegūtu vairāk informāciju, apmeklē: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Vairāk resursus un e-pastu paraugus var atrast [šeit](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Piesakies savam pasākumam</button></a>

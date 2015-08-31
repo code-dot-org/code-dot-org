@@ -211,6 +211,7 @@
   homepage_action_text_learn: Spustiť
   homepage_action_text_signpetition: Podpísať petíciu
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org a College Board vytvorili alianciu s cieľom
     zlepšiť rozmanitosť v programovaní.
   homepage_banner_text_link: Dozvedieť sa viac
@@ -542,6 +543,8 @@
   educator_notes: Poznámky pedagógov
   how_to_teach_hoc: Ako učiť "Hodinu programovania"
   more_resources_educators: Ďalšie zdroje pre učiteľov
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: účastníci
   teachers_notes: Poznámky učiteľov
   teachers_notes_hoc: 'Učitelia: Prečítajte si dôležité pedagogické poznámky'

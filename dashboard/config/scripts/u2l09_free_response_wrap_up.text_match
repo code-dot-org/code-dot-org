@@ -4,3 +4,9 @@ title 'The Need for DNS: Wrap Up'
 markdown <<MARKDOWN
 Why don’t we need to know the IP addresses for our favorite sites?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- When we type in a web page address and click [enter], the browser contacts the DNS server to look up the IP address. It does this every time we browse to a page.
+MARKDOWN

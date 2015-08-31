@@ -4,12 +4,6 @@ class ScriptLevelsController < ApplicationController
 
   before_filter :prevent_caching
 
-  def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
-  end
-
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
@@ -34,6 +28,7 @@ class ScriptLevelsController < ApplicationController
 
     load_script_level
 
+
     if request.path != (canonical_path = build_script_level_path(@script_level))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently
@@ -42,6 +37,8 @@ class ScriptLevelsController < ApplicationController
 
     load_user
     load_section
+
+    return if redirect_applab_under_13(@script_level.level)
 
     present_level
 

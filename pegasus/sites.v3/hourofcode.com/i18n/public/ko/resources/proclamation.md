@@ -33,11 +33,11 @@
 
 컴퓨터과학 분야의 최초의 여성인 그레이스 머레이 호퍼(Grace Murray Hopper)는 새로운 프로그래밍 언어를 만들어 내는데 공헌하였으며, 컴퓨터과학 분야의 수 많은 성과들을 만들어내는 기초가 된 컴퓨터 시스템의 기초 표준들을 만들어내는 선구자 역할을 하였습니다; 그리고
 
-이번 12월8일은 그레이스 호퍼의 생일을 기리며, 컴퓨터과학교육주간이 설계되었습니다; 이제, 그렇기 때문에, 이렇게 되어야 합니다.
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 해결방안, [하원의원, 상원의원, 주정부, 지역, 시, 학교 위원회]는 --
 
-(1) 컴퓨터과학교육주간(2014년 12월8일-14일)의 지정을 지지합니다.
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 (2) 학교, 교육자, 학부모와 정책입안자들이 컴퓨터과학교육주간에 학생들이 Hour of Code 행사에 참여하도록 하는 것을 장려합니다;
 

@@ -1,21 +1,21 @@
 
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Нижче наводиться зразок резолюції підтримки тижня інформатики та її цілей, який можуть використати органи державної та місцевої влади.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[Резолюція або оголошення від палати, парламенту, штата, округу або міста ###] – Тиждень освіти з інформатики підкреслює важливу роль, яку інформатика грає в перетворенні бачення нашого суспільства, і те як інформатика дає можливість впроваджувати інновації та створювати простір для економічних можливостей;
 
-[HOUSE OR SENATE RESOLUTION ###]
+Рішення парламенту
 
-[DATE]
+Дата
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Оскільки обчислювальна техніка вже є невід'ємною частиною культури та змінює уявлення про те, як люди взаємодіють одне з одним та з навколишнім світом;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Завдяки інформатиці промисловість якісно змінюється, створюються нові галузі торгівлі, впроваджуються інновації у всіх галузях науки та посилюється продуктивність у встановлених секторах економіки;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Тоді як галузь інформатики лежить в основі сектора інформаційних технологій нашої економіки та вносить значний вклад в економічне виробництво в США;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Тоді як галузь інформатики є основоположною наукою для цифрової епохи;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
@@ -33,11 +33,11 @@ Whereas the field of computer science has significant equity barriers to address
 
 Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 

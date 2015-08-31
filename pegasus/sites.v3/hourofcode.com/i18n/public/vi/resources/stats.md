@@ -1,16 +1,13 @@
 
 
+# Lời giới thiệu và các thống kê hữu ích
 
+## Sử dụng đoạn giới thiệu ngắn trong bản tin
 
-# Blurbs and Useful Stats
+### Mang khoa học máy tính cho trường học của bạn. Bắt đầu với một giờ lập trình.
 
-## Use this short blurb in newsletters
+Máy tính ở khắp mọi nơi, nhưng 10 năm trở lại trước chỉ một số ít các trường học dạy về khoa học máy tính. Tin tốt là chúng tôi đang trên đường thay đổi điều đó. Nếu năm ngoái bạn đã từng nghe về [giờ lập trình](<%= hoc_uri('/') %>), bạn có thể biết nó đã làm nên lịch sử. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [Giờ lập trình](<%= hoc_uri('/') %>) là một giờ giới thiệu về khoa học máy tính, được thiết kế để đơn giản mã hóa với mục đích để tất cả mọi người có thể học được những mã hóa cơ bản. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-### Bring computer science to your school. Start with an Hour of Code
+## Infographics
 
-Máy tính có ở khắp mọi nơi, nhưng chỉ một số ít các trường học dạy về khoa học máy tính 10 năm trở về trước. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
-
-## Infographic version:
-
-![hình ảnh](http://code.org/images/fit-8000/Code.org_infographic.png)
-
+<%= view :stats_carousel %>
