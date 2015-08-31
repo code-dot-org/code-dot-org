@@ -194,6 +194,7 @@ et-EE:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -285,7 +286,7 @@ et-EE:
   dashboard_landing_useful_links: Muud kasulikud lingid (ainult inglise keeles)
   dashboard_landing_office_hours: Küsi isiklikult! Külastage meie igakuist videoülekannet.
   dashboard_landing_print_certificates: Saate printida tunnistusi õpilastele, kes selle kursuse lõpetasid
-  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
+  dashboard_landing_educator_blog: Loe uudiseid ja värskendusi meie materjale meie hariduslikust blogist
   dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
   dashboard_landing_video_player: Test our new video player at your school
   dashboard_landing_progress_title: Põhiline klassi edenemine.
@@ -421,9 +422,9 @@ et-EE:
   dashboard_login_none: E-post
   dashboard_new_password: Uus salasõna
   dashboard_progress_not_started: pole alustatud
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: pooleli
   dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_too_many_blocks: lõpetatud, liiga palju plokke
   dashboard_progress_completed_perfect: tehtud, suurepärane
   dashboard_progress_furthest_level_attempted: furthest level attempted
   stats_hoc_2013_heading: 'Eelmise aasta Koodi Tunni uskumatud näitajad. Ainult ühe nädala jooksul:'
@@ -464,6 +465,7 @@ et-EE:
   educator_notes: Õpetaja märkmed
   how_to_teach_hoc: Kuidas õpetada Tundi Koodi
   more_resources_educators: Rohkem vahendeid õpetajatele
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: osalejad
   teachers_notes: Õpetaja märkmed
   teachers_notes_hoc: 'Õpetajad: Lugege olulisi koolitaja märkmeid siit'

@@ -102,7 +102,7 @@
   "moveTooltip":"Mover uma personagem.",
   "nextLevel":"Parabéns! Completaste este puzzle.",
   "no":"Não",
-  "numBlocksNeeded":"Este puzzle pode ser resolvido com blocos de %1.",
+  "numBlocksNeeded":"Este desafio pode ser resolvido com %1 blocos.",
   "onEventTooltip":"Executar o código em resposta ao evento especificado.",
   "ouchExclamation":"Au!",
   "playSoundCrunch":"toca som de triturar",

@@ -219,6 +219,7 @@
   homepage_action_text_learn: Inizia ad apprendere
   homepage_action_text_signpetition: Firma la petizione
   homepage_signpetition_dropdown: Firma la nostra petizione &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org e College Board lavorano insieme per migliorare
     la diversità nella computer science.
   homepage_banner_text_link: Ulteriori informazioni
@@ -566,6 +567,8 @@
   educator_notes: Note per gli insegnanti
   how_to_teach_hoc: Come insegnare un ora di codice
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
   teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'

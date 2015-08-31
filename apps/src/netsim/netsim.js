@@ -23,7 +23,6 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -951,7 +950,7 @@ function resizeLeftColumnToSitAboveFooter() {
     return;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var bottom = 0;
   if (smallFooter) {
@@ -965,33 +964,25 @@ function resizeLeftColumnToSitAboveFooter() {
   pinnedLeftColumn.style.bottom = bottom + 'px';
 }
 
-function resizeFooterToLeftColumnWidth() {
+function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
-  var smallFooter = document.querySelector('.small-footer');
-  if (!(leftColumn && smallFooter) || !$(leftColumn).is(':visible')) {
+  var instructions = document.querySelector('.instructions');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+
+  if (!smallFooter) {
     return;
   }
 
-  smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
-
-  // If the small print and language selector are on the same line,
-  // the small print should float right.  Otherwise, it should float left.
-  var languageSelector = smallFooter.querySelector('form');
-  var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint && languageSelector) {
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
+  if (leftColumn && $(leftColumn).is(':visible')) {
+    smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
+  } else if (instructions && $(instructions).is(':visible')) {
+    smallFooter.style.maxWidth = instructions.getBoundingClientRect().right + 'px';
   }
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
-  resizeFooterToLeftColumnWidth();
+  resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 /**
@@ -1007,6 +998,13 @@ NetSim.onResizeOverride_ = function() {
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
 
+  netsimDebouncedResizeFooter();
+};
+
+/**
+ * Passthrough to local "static" netsimDebounceResizeFooter method
+ */
+NetSim.prototype.debouncedResizeFooter = function () {
   netsimDebouncedResizeFooter();
 };
 

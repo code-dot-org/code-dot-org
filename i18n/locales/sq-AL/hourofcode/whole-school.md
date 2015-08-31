@@ -1,6 +1,6 @@
 * * *
 
-layout: i/e gjerë
+shtrirja: e gjerë
 
 * * *
 

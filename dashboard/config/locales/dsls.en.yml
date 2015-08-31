@@ -161,9 +161,6 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
-      Code Logo v3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        title: title
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -290,9 +287,7 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
-      Mixing Colors:
-        description here: description here
-        title: title
+      Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -344,11 +339,10 @@ en:
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
-      Odometer:
-        Odometer: Odometer
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Big Game: {}
       PDAlg Cirlces of Eval:
         Circles of Evaluation: Circles of Evaluation
       PDAlg Culture: {}
@@ -359,6 +353,7 @@ en:
       PDAlg Dashboard 1: {}
       PDAlg Dashboard 2: {}
       PDAlg Dashboard 3: {}
+      PDAlg Design Recipe Updates: {}
       PDAlg Details:
         CS in Algebra PD Details: CS in Algebra PD Details
       PDAlg End of P1:
@@ -373,6 +368,9 @@ en:
         Welcome to the next phase!: Welcome to the next phase!
       PDAlg Post Survey:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Prep Sandbox: {}
+      PDAlg Prep a Lesson: {}
+      PDAlg Projects: {}
       PDAlg Puzzle Tips: {}
       PDAlg Puzzles Pre: {}
       PDAlg Scope:
@@ -383,8 +381,7 @@ en:
       PDAlg Teacher Introduction:
         Introduce yourself: Introduce yourself
       PDAlg Teacher Plan: {}
-      PDAlg big game:
-        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg Updates Tweaks: {}
       PDAlg bootstrap:
         From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
       PDAlg circles to blocks:
@@ -462,41 +459,11 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
-      Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
-        description here: description here
-      Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
-      Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
-      Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
       Pixelation - Lesson 14 - Instructions one bit error:
         'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
-        description here: description here
-      Pixelation - Lesson 14 - Make the Letter A:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B and W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B&W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free Play
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color Shades 4x4
-        description here: description here
-      Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete 3-bit color
         description here: description here
       Pixelation - Lesson 15 - Favicon Instructions:
         Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon Instructions
@@ -524,41 +491,11 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      Pixelation 1:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 1: Pixelation 1
-      Pixelation 2:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 2: Pixelation 2
-      Pixelation 3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 3: Pixelation 3
-      Pixelation 3 Bit Colors:
-        description here: description here
-        title: title
-      Pixelation 4:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker test of External level -- NOT REAL
-      Pixelation 4x4 Empty:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
-      Pixelation Bee:
-        description here: description here
-        title: title
-      Pixelation Flappy:
-        description here: description here
-        title: title
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      Text Compression 1:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression 1: Text Compression 1
-      Text Compression Peter Piper:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Innovation - Video:
         Impact of Innovation - Video: Impact of Innovation - Video
         description here: description here
@@ -577,9 +514,6 @@ en:
       U1L13 Student Lesson Summary:
         description here: description here
         title: title
-      U1L13 Text Compression:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        U1L13 Text Compression: U1L13 Text Compression
       U1L14 Student Lesson Summary:
         description here: description here
         title: title
@@ -1576,6 +1510,16 @@ en:
         Random Substitution Cipher: Random Substitution Cipher
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
         Vigenere Cipher: Vigenere Cipher
+      U2L17 - Vocabulary matching:
+        ' <br>Brute Force': ' <br>Brute Force'
+        <br>Computationally Hard: <br>Computationally Hard
+        <br>Heuristic: <br>Heuristic
+        <br>One Way Function: <br>One Way Function
+        A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
+        An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
+        Matching: Matching
+        Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
+        Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -2687,23 +2631,21 @@ en:
         '6': '6'
         '8': '8'
         '9': '9'
-        ? Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
-        : Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
         Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
-        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
         'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
-        There are too few IP addresses to meet the current demand.: There are too few IP addresses to meet the current demand.
-        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: When an IP address changes, it is impossible to locate a computer until the owner announces the change.
-        When someone new joins the Internet they must inform everyone else of the new IP address: When someone new joins the Internet they must inform everyone else of the new IP address
       U2L10 Assessment1:
+        A. Redundancy: A. Redundancy
         Assessment Question 1: Assessment Question 1
-        Government control: Government control
-        Hierarchy: Hierarchy
-        Multiple servers: Multiple servers
-        Redundancy: Redundancy
+        B. Hierarchy: B. Hierarchy
+        C. Multiple servers: C. Multiple servers
+        D. Government control: D. Government control
         What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
       U2L10 Assessment2:
         Assessment Question 2: Assessment Question 2
@@ -2714,18 +2656,18 @@ en:
         What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
-        HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
-        HTTP messages can be either requests or responses: HTTP messages can be either requests or responses
-        HTTP requests are encoded using higher frequency radio waves: HTTP requests are encoded using higher frequency radio waves
-        HTTP requests are given higher priority for fast delivery when being routed on the Internet: HTTP requests are given higher priority for fast delivery when being routed on the Internet
-        HTTP requests make use of abstractions provided by lower level protocols: HTTP requests make use of abstractions provided by lower level protocols
+        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
+        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
+        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
+        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
       U2L11 Assessment 2:
-        An HTTP request is sent from a client to request access to data stored on a server: An HTTP request is sent from a client to request access to data stored on a server
-        An HTTP response code is only used when a server could not fulfill a request: An HTTP response code is only used when a server could not fulfill a request
-        'Choose Two: Choose the two true statements about HTTP.': 'Choose Two: Choose the two true statements about HTTP.'
+        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
+        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
+        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
         Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
         'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
-        HTTP requests and responses have identical formats: HTTP requests and responses have identical formats
+        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
       U2L13 Assessment3:
         A secret word only know by Caesar.: A secret word only know by Caesar.
         'Assessment: Question 2': 'Assessment: Question 2'
@@ -2767,6 +2709,13 @@ en:
         A word from the dictionary: A word from the dictionary
         'Assessment: Question 4': 'Assessment: Question 4'
         'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
+      U2L17 - One Way functions Def MC:
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        One-Way Functions: One-Way Functions
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
       U2L3 Assessment 2:
         12 users: 12 users
         32 users: 32 users
@@ -3449,6 +3398,7 @@ en:
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
+      PDAlg Prep on Paper: {}
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -3622,6 +3572,7 @@ en:
         Question 4: Question 4
       U2L07 Assessment5:
         Question 5: Question 5
+      U2L08 Assessment 0: {}
       U2L08 Free Response 1:
         'Router Table: Reflection': 'Router Table: Reflection'
       U2L08 Free Response 2:
@@ -3662,6 +3613,15 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L16 Free Response assessment 2:
+        Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
+        What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
+      U2L16 Free Response assessment 3:
+        Lesson 16 - Assessment 3: Lesson 16 - Assessment 3
+        Why do we care about computationally hard problems, in regards to encryption?: Why do we care about computationally hard problems, in regards to encryption?
+      U2L16 Free response assessment 1:
+        Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
+        What does "computationally hard" mean?: What does "computationally hard" mean?
       U2L17 Assessment 1:
         Assessment Question 1: Assessment Question 1
         Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
@@ -3679,7 +3639,7 @@ en:
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
       U2L18 Free Response Getting Started:
-        'One Way Functions: Getting Started': 'One Way Functions: Getting Started'
+        One Way Functions: One Way Functions
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
       U2L19 Assessment:
@@ -3688,10 +3648,11 @@ en:
         'Public Key Crypto: Getting Started': 'Public Key Crypto: Getting Started'
       U2L19 Free Response Wrap Up:
         'Public Key Crypto: Wrap Up': 'Public Key Crypto: Wrap Up'
+      U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
-      U2L20 Free Response Wrap Up:
-        'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L20 Free Response Wrap Up: {}
+      U2L20 Free Response Wrap Up 2: {}
       U2L3 Assessment 4:
         'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
         Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?

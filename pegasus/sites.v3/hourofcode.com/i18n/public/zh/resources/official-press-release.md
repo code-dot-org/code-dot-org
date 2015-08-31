@@ -1,40 +1,38 @@
 
 
-# Sample press release for elected officials
+# 當選官員的新聞稿草稿
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+即時消息  
+**日期**  
+目錄:[**聯繫資料**  
   
 
 
 **
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  總督/參議員/組合會員/代表/市長/議員 [插入名稱] [與本地學生參加代碼小時]</strong> <br /> 組織社會通過參加電腦科學教育周來提高對電腦科學教育的重要性的認識。
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**日期** - [**插入名稱**]加入了校長和教職員成員 [**插入學校名稱**、 商界領袖和當地的家庭，今天為了[**事件名稱**] 參加代碼小時作為電腦科學教育周活動的一部分。 [插入名稱] 和數千萬的世界各地的社區成員之中人來參加歷史上人數最多學習的事件。
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**插入事件細節，使用描述性的、 可量化的語言。 例如:**]   
+"丹尼爾斯在小學運行學校級的代碼小時事件，讓它的學生接觸學腦科學。 從所有等級、至少超過 700 名學生做了一個小時的代碼。 十幾個家長和社區的志願者花了一天去照顧並在一起展示孩子們部件陳列宣傳為甚麼電腦科學在這些學生的生活中具有重大的影響。
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**目錄中的樣本股票文本:**]   
+電腦無處不在，但比 10 年前，較少的學校教電腦科學。 女孩和不同膚色的學生嚴重比例不衡。 好消息是我們把這改變得更好。 代碼小時是供所有的學生提供存取高品質的電腦科學教育進入的大門。
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! 與迪士尼。 美國總統歐巴馬,哥倫比亞流行歌手夏奇拉和美國演員艾希頓·庫奇， 都一起用影片為Hour of Code 活動揭開序幕。 100 多個夥伴共同支援此運動。
 
-This year the Hour of Code movement is aiming for 100 million students.
+[**插入來自發言人的引用，例子如下:**]   
+說:"我們需要鼓勵和擁抱我們學生對電腦科學的興趣"。[**插入名稱**] "每個學生應得學習電腦科學去訪問 21 世紀的最佳職業發展的機會"。
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**插入你的事件和/或您的組織的更多資訊**]
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**插入從參加了此次盛會的另一個組織或一個人引述**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
-
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+有關的詳細資訊[**事件，方案，等**] ，請訪問 [**插入網站**] 或聯繫 [**插入連絡人資訊**]

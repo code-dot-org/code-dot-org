@@ -14,11 +14,42 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers enrolled in the Computer Science Principles program have been assigned to attend PD in one of the following locations. Click on your location for workshop information.
+LAUSD teachers and San Francisco teachers enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
 
-- [Broward, Florida](/educate/pd/15-16/broward) 
-- [Spokane, Washington](/educate/pd/15-16/spokane)
-- [Chicago, Illinois](/educate/pd/15-16/chicago)
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+**Save the Dates**
+
+Quarter 1: Saturday, October 3, 2015 
+
+Quarter 2: Saturday, November 21, 2015 
+
+Quarter 3: Saturday, January 30, 2016 
+
+Quarter 4: Saturday, March 5, 2016
+
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
+
+**October 3rd Location**
+
+9 Dots<br/>
+931 N Highland Avenue<br/>
+Los Angeles, CA, 90038<br/>
+
+Free parking available in lot around the back of the building surrounded by a wooden fence. 
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop and charger
+<br/>
+Green journal <br/>
+Curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 
@@ -26,11 +57,11 @@ LAUSD teachers enrolled in the Computer Science Principles program have been ass
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction 
+### Phase 1: Online Introduction (~2 hours)
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 #### In-person Workshop####
 
@@ -85,13 +116,13 @@ More info coming soon!
 
 ## CS in Algebra
 
-### Phase 1: Online Introduction 
+### Phase 1: Online Introduction (~2 hours) 
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-I#### In-person Workshop####
+#### In-person Workshop####
 
 Milestone Complete!
 
@@ -105,11 +136,11 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 (This workshop will take place in Orange County)
+Semester 1: Saturday, October 10, 2015 <br/>(This workshop will take place in Orange County)
 
-Semester 2: Saturday, April 16, 2016 (This workshop will take place in Los Angeles)
+Semester 2: Saturday, April 16, 2016 <br/>(This workshop will take place in Los Angeles)
 
-You are expected to attend both of these workshops.
+<b>You are expected to attend both of these workshops.</b>
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
@@ -136,11 +167,11 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction ##
+### Phase 1: Online Introduction (~2 hours)##
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study 
+### Phase 2: Blended Summer Study   (3 days in-person & ~8 hours online) 
 
 #### In-person Workshop####
 
@@ -160,7 +191,7 @@ Semester 1: Saturday, October 17, 2015 (This workshop will take place in Orange 
 
 Semester 2: Saturday, February 20, 2016 (This workshop will take place in Los Angeles)
 
-You are expected to attend both of these workshops.
+<b>You are expected to attend both of these workshops.</b>
 
 
 8:00am - 4:00pm<br/>

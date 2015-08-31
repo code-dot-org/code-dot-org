@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Ahhoz hogy az \"Ismételd\" vagy a \"Ha\" blokkok működjenek, más blokkoknak is kell bennük lenni. Győződj meg arról, hogy a belső blokk megfelelően illeszkedik a külső befogadó blokkhoz.",
   "emptyBlockInFunction":"A funkció {name} üres bemenettel rendelkezik.",
   "emptyBlockInVariable":"A változó {name} üres bemenettel rendelkezik.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"A függvény blokkon belül lenni kell más blokkoknak is ahhoz, hogy működjön.",
   "emptyFunctionalBlock":"Van egy blokkod kitöltetlen bemenettel.",
   "emptyTopLevelBlock":"Nincs blokk a futtatáshoz. Hozzá kell adnod egy {topLevelBlockName} blokkot.",

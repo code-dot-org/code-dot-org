@@ -170,6 +170,7 @@ vi-VN:
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: 'Tôi đồng ý &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org và College Board tạo thành một liên minh để nâng cao sự đa dạng trong khoa học máy tính.
   homepage_banner_text_link: Tìm hiểu thêm
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -275,7 +276,7 @@ vi-VN:
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: Các khóa học 20-Giờ cho học sinh Trung học
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
@@ -284,7 +285,7 @@ vi-VN:
   dashboard_course_csins: Computer Science in Science
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
   dashboard_course_ecs: Khám phá Khoa học Máy tính
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_ecs_desc: 'Khám phá Khoa học máy tính là một khóa học kéo dài môt năm, bao gồm 6 phần: Tương tác giữa con người và máy tính, Giải quyết vấn đề, Thiết kế Web, Lập trình, Tính toán và phân tích dữ liệu, và Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: Đang tải...
@@ -312,7 +313,7 @@ vi-VN:
   dashboard_navigation_add_students: Thêm sinh viên
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_stats: Xem thống kê
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_sections_new_section: New section
@@ -330,9 +331,9 @@ vi-VN:
   dashboard_sections_secret_none: 'If you would like your students to manage their own accounts, including choosing their own passwords, choose a secret type of <b>none</b>.'
   dashboard_sections_print_secrets: You may then print a sheet of cards containing account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
+  dashboard_students_add_student: Thêm học sinh
+  dashboard_students_add_students: Thêm nhiều học sinh
+  dashboard_students_add_multiple: 'Gõ hoặc dán tên của các học sinh, mỗi tên một dòng:'
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
   dashboard_students_placeholder_name: Tên Học sinh
   dashboard_students_name: Tên
@@ -347,18 +348,18 @@ vi-VN:
   dashboard_students_email: 'Thư điện tử: %{student_email}'
   dashboard_students_completed_levels: Các Cấp độ đã Hoàn thành
   dashboard_students_total_lines: Số dòng Lệnh
-  dashboard_students_show_secret: Show secret
+  dashboard_students_show_secret: Hiển thị từ bí mật
   dashboard_students_auto_generated: Được tạo ra tự động
-  dashboard_students_reset_secret: Reset secret
+  dashboard_students_reset_secret: Đặt lại từ bí mật
   dashboard_students_reset_password: Đặt lại mật khẩu
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
   dashboard_students_secret_picture_title: Bức ảnh Bí mật
   dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
-  dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_reset_picture: 'Bạn có thể đặt lại hình ảnh bí mật của học sinh bất cứ lức nào bằng cách chọn<b>Hiện bí mât</b> sau đó <b> Đặt lại bí mât </b>. Một hình ảnh bí mật sẽ được tạo ra cho học sinh sau khi học sinh đó đăng nhập.'
+  dashboard_students_secret_word_title: Từ bí mật
   dashboard_students_secret_word: 'This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
-  dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
+  dashboard_students_reset_word: 'Bạn có thể thiết lập lại từ bí mật của học sinh bất kỳ lúc nào bằng cách chọn <b>Hiển thị bí mật</b> và sau đó <b>đặt lại bí mật</b>. Một cặp từ bí mật từ mới sẽ được tạo ra khi học sinh đó đăng nhập. '
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
   dashboard_students_print_page: In trang này
@@ -440,6 +441,7 @@ vi-VN:
   educator_notes: Ghi chú Giáo dục
   how_to_teach_hoc: Các dạy một Giờ lập trình
   more_resources_educators: Nhiều nguồn lực dành cho giáo viên và giáo dục
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: Những người tham gia
   teachers_notes: Ghi chú của giáo viên
   teachers_notes_hoc: 'Giáo viên: Đọc lưu ý quan trọng ở đây'
@@ -464,11 +466,11 @@ vi-VN:
   thinkersmith_name: Bạn bè robot của tôi
   condcards_name: Conditionals with Cards
   lightbotintl_name: Lightbot
-  codehs_name: Learn to Code With Karel the Dog
+  codehs_name: Học cách lập trình cùng cún Karel
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: Build a Game with JavaScript
+  codeavengers_name: Xậy dựng một trò chời bằng ngôn ngữ JavaScript
   processing_name: Vẽ bằng mã
   robomind_name: Lập trình một robot ảo
   groklearning_name: Eliza the Chatterbot Doctor
@@ -665,7 +667,7 @@ vi-VN:
   makegameswithus_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hour of Code
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: Learn to Code With Karel the Dog
+  codehs_beyond_name: Học cách lập trình cùng cún Karel
   udemy_beyond_name: Online Programming Courses
   lynda_beyond_name: Online Programming Courses
   edx_beyond_name: Harvard CS50 class

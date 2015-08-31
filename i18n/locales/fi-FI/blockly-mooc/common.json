@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Toista\" ja \"Jos\"-lohkot tarvitsevat toisen lohkon sisäänsä toimiakseen. Varmista, että sisempi lohko asettuu oikein ulompaan lohkoon.",
   "emptyBlockInFunction":"Funktion {name} syötettä ei ole annettu.",
   "emptyBlockInVariable":"Muuttujan {name} syötettä ei ole annettu.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Lisää Funktio-lohkon sisään muita lohkoja saadaksesi koodi toimimaan oikein.",
   "emptyFunctionalBlock":"Sinulla on lohko, josta puuttuu syöte.",
   "emptyTopLevelBlock":"Ei ole suoritettavia lohkoja. Sinun täytyy liittää lohko {topLevelBlockName} lohkoon.",

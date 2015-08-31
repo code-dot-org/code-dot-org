@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -142,41 +144,39 @@
       signed_in: กรุณาออกจากระบบก่อนดำเนินการ
       username_not_found: ไม่พบ %{username} ในชื่อผู้ใช้งาน
       username_in_use: '%{username} ถูกใช้ไปแล้วกรุณาเลือกชื่ออื่น'
-      no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
-        Please ask them to sign up here and then try adding them again
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      no_teacher: ไม่พบผู้ใดลงนาม ด้วย '%{teacher_email_or_code}' ลองถามพวกเขาเพื่อลงทะเบียนที่นี่
+        และลองเพิ่มอีกครั้งหนื่ง
+      section_not_found: ไม่พบส่วนที่มีโค้ด '%{section_code}'
+      blank_code: กรุณาใส่รหัสเซคชั่น
+      cant_join_own_section: ขออภัย คุณไม่สามารถร่วมเซคชั่นของคุณเอง
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: เข้าร่วมชั้นเรียนกับ %{teacher_name} ใน Code.org
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as
-          your student.'
+        subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as
-          your teacher.'
+        subject: 'การแจ้งเตือน Code.org: ครู %{teacher_name} ไม่เป็นอาจารย์ของคุณ'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: คุณไม่สามารถเข้าถึงสถิติของบุคคลนี้
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    title: 'แลกของรางวัล: %{name}'
+    provider: 'ผู้ให้บริการ:'
+    code: 'โปรแกรม:'
+    redeem_header: 'เพื่อแลก:'
+    donorschoose_register: ลงทะเบียนในชื่อของอาจารย์ใน DonorsChoose.org
     donorschoose_project: ส่งโครงงาน
     donorschoose_how_to: วิธีการใช้โค้ดของคุณ
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    success: แลกของรางวัลเสร็จเรียบร้อย รับรหัสด้านล่าง
+    error: ไม่สามารถแลกของรางวัลได้ โปรดลองอีกครั้ง
+    error_us_only: รางวัลนี้สำหรับผู้ใช้ในสหรัฐฯ เท่านั้น
+    error_not_earned: คุณได้ไม่ยังได้รับรางวัลนี้
+    error_already_redeemed: แลกของรางวัลไปแล้ว
+    no_prizes_available: ขออภัย แต่ขณะนี้เราไม่มีรางวัลเหลือเลย
+    teacher_info_required: 'รางวัลสำหรับครูผู้สอนจำเป็นต้องมีข้อมูลชื่อและที่อยู่โรงเรียน:'
+    teacher_email_required: 'รางวัลสำหรับครูผู้สอนต้องมีอีเมล์ยืนยัน:'
     confirm:
-      title: Please Confirm
+      title: โปรดยืนยัน
       'no': ไม่ใช่
       'yes': ใช่
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -417,6 +417,10 @@
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Male
     female: Female
@@ -425,16 +429,30 @@
     student: นักเรียน
     teacher: ครู
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: เพิ่มเติม
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
@@ -582,6 +600,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: ตกลง
+    startover_title: คุณจะเริ่มต้นใหม่จริงๆหรือ ?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: เริ่มใหม่
+    startover_cancel: ยกเลิก
   time:
     hour: 1 hour
     day: day

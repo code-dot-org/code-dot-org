@@ -50,7 +50,9 @@ class ProjectsController < ApplicationController
         full_width: true,
         callouts: [],
         no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
-        small_footer: @game.uses_small_footer? || enable_scrolling?,
+        # for sharing pages, the app will display the footer inside the playspace instead
+        no_footer: sharing && @game.owns_footer_for_share?,
+        small_footer: (@game.uses_small_footer? || enable_scrolling?),
         has_i18n: @game.has_i18n?
     )
     render 'levels/show'
@@ -60,6 +62,7 @@ class ProjectsController < ApplicationController
     if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
+    return if redirect_applab_under_13(@level)
     show
   end
 

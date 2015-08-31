@@ -4,3 +4,9 @@ answer '43'
 markdown <<MARKDOWN
 If a graph has 10 nodes and 33 edges, how many nodes and edges will be visited/processed as a result of running Dijkstra’s algorithm.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 43 (10+33 -- Dijkstra’s must visit every node and edge once).
+MARKDOWN

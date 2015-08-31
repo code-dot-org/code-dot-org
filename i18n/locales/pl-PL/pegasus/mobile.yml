@@ -181,6 +181,7 @@ pl-PL:
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: 'Zgadzam się &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -451,6 +452,7 @@ pl-PL:
   educator_notes: Notatki nauczyciela
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -814,7 +816,7 @@ pl-PL:
   lightbot_beyond_longdescription: Poznaj logiczne podstawowy programowania, zaczynając od rzeczywiście podstaw programowania dla osób w wieku 4+, na iOS lub Androida (lub w przeglądarce internetowej). Poznasz sekwencje poleceń, określanie wzorców, użycie procedur i wykorzystanie pętli!
   codecademy_beyond_longdescription: 'Codecademy jest interaktywnym, prowadzonym przez uczniów wprowadzeniem do podstaw informatyki (CS) z wykorzystaniem JavaScript, języka używanego przez dziesiątki milionów uczniów i studentów z całego świata. Przygotowaliśmy prostą Godzinę Kodowania, której towarzyszą quizy, slajdy a na koniec - uczniowski projekt.'
   kodable_beyond_longdescription: Kodable jest grą z własnym przewodnikiem na iPada, która przybliża dzieciom 5+ podstawy programowania. Dobrze, jeśli nauczyciel lub rodzic są w pobliżu, ale nie jest to konieczne.
-  scratchjr_beyond_longdescription: ScratchJr jest wprowadzającym językiem programowania, który umożliwia młodym dzieciom tworzyć własne interaktywne opowiadania i gry. Dzieci składają razem bloki graficznego programowania, aby postacie poruszały się, skakały, tańczyły i śpiewały
+  scratchjr_beyond_longdescription: ScratchJr jest językiem programowania dla początkujących, który umożliwia młodym dzieciom tworzyć własne interaktywne opowiadania i gry. Dzieci składają razem bloki graficznego programowania, aby postacie poruszały się, skakały, tańczyły i śpiewały
   hopscotch_beyond_longdescription: Prowadzony przez uczniów tutorial na iPada, z wykorzystaniem języka programowania Hopscotch. Uczniowie tworzą gry i aplikacje na swoich i dla swoich iPadów. Uczniowie mogą pracować indywidualnie albo z przyjaciółmi (do 3 na iPad).
   pocketcode_beyond_longdescription: "Utwórz własną grę na swój smartphone posługując się Pocket Code! Pomóż spadochroniarzowi Steve'owi doręczyć jego paczki. Możesz udostępnić swoją grę przyjacielom i innym użytkownikom, aby spróbowali!"
   groklearning_beyond_longdescription: Kurs wprowadzający z wykorzystaniem języka programowania Python dla osób, które nie mają żadnego doświadczenia w programowaniu. Nasze unikatowe połączenie treści wprowadzających i wyzwań przyniesie Ci zrozumienie języka Python i programowania. Wykorzystywaliśmy ten kurs z uczniami w różnym wieku i z różnym przygotowaniem i jesteśmy pewni, że będzie odpowiadał i Tobie.

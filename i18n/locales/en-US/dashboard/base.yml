@@ -2,6 +2,7 @@ en:
   errors:
     messages:
       not_saved: crwdns27834:0crwdne27834:0
+      too_young: crwdns45344:0crwdne45344:0
   activerecord:
     errors:
       messages:
@@ -359,6 +360,9 @@ en:
     no_primary_course: crwdns36301:0crwdne36301:0
     choose_next_course: crwdns43451:0crwdne43451:0
     print_certificate: crwdns41905:0crwdne41905:0
+  share:
+    title: crwdns45291:0crwdne45291:0
+    description: crwdns45292:0crwdne45292:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -367,13 +371,20 @@ en:
     student: crwdns21449:0crwdne21449:0
     teacher: crwdns21450:0crwdne21450:0
   footer:
+    thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
-    art_from_html: crwdns24788:0crwdne24788:0
+    help_from_html_old: crwdns45345:0crwdne45345:0
+    art_from_html: 'crwdns24788:0%{current_year}crwdnd24788:0%{current_year}crwdnd24788:0%{current_year}crwdne24788:0'
+    art_from_html_old: 'crwdns45346:0%{current_year}crwdnd45346:0%{current_year}crwdne45346:0'
     powered_by_aws: crwdns24789:0crwdne24789:0
+    trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
+    copyright: crwdns45295:0crwdne45295:0
+    more: crwdns45296:0crwdne45296:0
     feedback: crwdns2622:0crwdne2622:0
     translate: crwdns2623:0crwdne2623:0
     support: crwdns5295:0crwdne5295:0
     support_url: crwdns19025:0crwdne19025:0
+    tos_short: crwdns45347:0crwdne45347:0
     tos: crwdns5338:0crwdne5338:0
     privacy: crwdns3901:0crwdne3901:0
     secure: crwdns5339:0crwdne5339:0
@@ -497,6 +508,10 @@ en:
     open_response_body: crwdns37548:0crwdne37548:0
   dialog:
     ok: crwdns5100:0crwdne5100:0
+    startover_title: crwdns45297:0crwdne45297:0
+    startover_body: crwdns45298:0crwdne45298:0
+    startover_ok: crwdns45299:0crwdne45299:0
+    startover_cancel: crwdns45300:0crwdne45300:0
   time:
     hour: crwdns6550:0crwdne6550:0
     day: crwdns6551:0crwdne6551:0

@@ -2,6 +2,7 @@ sl:
   errors:
     messages:
       not_saved: 'Prosim popravite sledeče napake:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -27,7 +28,7 @@ sl:
     code:
       label: 'Dodaj učitelja/ico:'
       placeholder: Koda razdelka (ABCDEF)
-    submit: Dodaj učitelja
+    submit: Dodaj učitelja/ico
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj
     submit: Dodaj namig
@@ -37,7 +38,7 @@ sl:
   puzzle: Uganka
   trophies: Trofeje
   courses: Predavanja
-  of: ' '
+  of: od
   more: VEČ
   less: MANJ
   beta: beta
@@ -232,7 +233,7 @@ sl:
       signup: Prijava
       already_registered: Že registrirani?
     popup:
-      progress_for_user: "%{name}'s progress"
+      progress_for_user: 'Napredek od %{name}'
       progress: Tvoj napredek
       lines: 'Skupno število vrstic kode: %{lines}'
       close: ZAPRI
@@ -301,22 +302,22 @@ sl:
     cant_remove_teacher_no_email: 'Ne moreš odstraniti %{teacher_name} kot svojo učiteljico/učitelja, ker se sam nisi registriral/a s svojim e-poštnim naslovom'
     student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Ogled rešitve
       student: Učenec
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Gledanje rešitve
+      try_it_yourself: Poskusi sam
       section: Razdelek
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
+    email_confirm_wrong_email: (Napačen email naslov?)
     email_resend_confirm: Ponovno pošlji potrditvena navodila
     new_password_hint: (pusti prazno, če tega nočeš spremeniti)
     current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Izbriši svoj račun
+    delete_text: S klikom na gumb boste izbrisali svoj račun.
+    delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo računov vaših študentov.'
+    delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
   user_level:
     completed: Zaključeno
     tried: Poskus
@@ -327,8 +328,8 @@ sl:
   home:
     title: Studio za kodiranje
     description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code: 'ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE'
+    lines_of_code_linebreak: '%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count} VRSTIC KODE'
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: 'Že registrirani? %{link}'
@@ -349,7 +350,7 @@ sl:
     local_school: lokalna šola
     online: na spletu
     see_details: Glej podrobnosti
-    view_course: View Course
+    view_course: Ogled predmeta
     prize_info: 'Nagrade za sodelovanje (le za učitelje v ameriških javnih šolah): do 1.000 $ v obliki nagrad razredu.'
     tryfirst: 'Ali pa takoj poskusite in se registrirate kasneje:'
     trynow: Poskusite zdaj
@@ -363,9 +364,12 @@ sl:
     heading_apps: '<h2>Zabavno učenje za</h2><h1>vsakogar</h1>'
     heading_legacy: '<h2>Naš tečaj za</h2><h1>vse starosti</h1>'
     your_gallery: Galerija
-    no_primary_course: Try a Code Studio course
+    no_primary_course: Poskusite Code Studio smer
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: Natisni certifikat
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Moški
     female: Ženska
@@ -374,13 +378,20 @@ sl:
     student: Učenec
     teacher: Učitelj/ica
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter so nam pomagali ustvariti ta priročnik.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009-2013 Rovio Entertainment Ltd. Vse pravice pridržane.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Vse pravice pridržane.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Podprto s strani Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour of Code&reg; sta blagovni znamki Code.org.'
+    copyright: Avtorska pravice
+    more: Več
     feedback: Povratne informacije
     translate: Pomagajte nam prevesti v vaš jezik
     support: Podpora
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: Pogoji
     privacy: Izjava o zasebnosti
     secure: Varna različica
@@ -445,9 +456,9 @@ sl:
       title: Program za Plahutača (Flappyja)
       body: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
     20-hour:
-      title: Accelerated Course
+      title: Pospešena smer
       body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Naučite se osnov računalništva v pospešeni različici predavanj 2-4.
     hoc2014:
       try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
       try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)
@@ -492,9 +503,9 @@ sl:
     correct_body: To je pravilen odgovor.
   contract_match:
     wrong_title: Nepravilen odgovor
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
+    badname: Vaša pogodba ima napačno ime.
+    badname_case: Imena funkcij so občutljiva na velike začetnice. Poskusite spremeniti začetnico imena vaše pogodbe.
+    badrange: Vaša pogodba ima napačno ime.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
@@ -504,6 +515,10 @@ sl:
     open_response_body: Hvala za vaš odgovor!
   dialog:
     ok: Vredu
+    startover_title: Si prepričan, da želiš začeti znova?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Začni znova
+    startover_cancel: Prekliči
   time:
     hour: 1 ura
     day: dan
@@ -574,7 +589,7 @@ sl:
     updated: Posodobljeno
     project_type: Vrsta projekta
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Potrebujete pomoč za začetek?
     really_delete: Izbriši?
     delete_yes: Da
     delete_no: Ne
@@ -584,5 +599,5 @@ sl:
     delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
     view_all: Poglej si Moji projekti
-    remix: Remix
+    remix: Remiks
     click_to_remix: "Click 'Remix' to spin-off your own version!"

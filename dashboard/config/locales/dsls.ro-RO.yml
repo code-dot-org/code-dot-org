@@ -585,8 +585,9 @@
         Multiple Choice: Alegere multiplă
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        : Care este cel mai mare fragment din acest cântec pe care îl poți defini
+          ca refren, astfel încât corul să îl repete exact de fiecare dată când acesta
+          este apelat?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

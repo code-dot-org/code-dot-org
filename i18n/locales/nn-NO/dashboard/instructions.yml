@@ -374,6 +374,7 @@ nn:
       4-5 While Loops 8_instruction: 'Det er et virkelig dypt hull og en virkelig stor haug med jord. Hvor mange spadetak må tas for å gjøre bakken helt flat? Tips: bruk en mens løkke for begge to.'
       4-5 While Loops Assessment 1_instruction: Det er mange hull og hauger. Hjelp meg og fylle og fjerne de slik at bakken blir helt jevn.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: test
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -433,11 +434,11 @@ nn:
         over towards the left. Complete update-danger to make the danger fly across
         the screen.
       Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+        At this point in your game, your danger
+        should run across the screen from right to left, and your target should run
+        across from left to right. They don't ever come back on screen once they've
+        left, but we'll take care of that later. Take a minute to make sure your
+        game is working like you want it to, and then click Finish to move on.
       Big Game Booleans 1_instruction: |
         When you last worked on your game we got
         our target and danger sprites to fly across the screen, but they never come
@@ -459,8 +460,8 @@ nn:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -499,10 +500,11 @@ nn:
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!Last
-        time you worked on your game, you used booleans to make your Target and Danger
-        return to the screen once they've left. Click Run to see how your game looks
-        right now, and then we'll get to making your Player move up and down.
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         Edit the update-player function so the player
         moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
@@ -662,10 +664,9 @@ nn:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
@@ -809,7 +810,7 @@ nn:
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Kan du få meg bort til grisen ved å bruke kun 5 blokker?
       Course 4 2_instruction: Bien vil bare ha nektar akkurat nå. Husk, ikke alle er blomster, så sjekk etter at du bare samler nektar fra blomster.
-      Course 4 Artist 1_instruction: Hjelp meg å tegne ferdig boksen. (Hver linje er 300 pixler lang)
+      Course 4 Artist 1_instruction: Hjelp meg å tegne ferdig boksen. (Hver linje er 200 pixler lang)
       Course 4 Artist 10_instruction: 'Frilek: Ha det gøy og tegn det det du har lyst til. '
       Course 4 Artist 11_instruction: 'Nå til en utfordring! Her er et design som kun bruker blokker som du allerede har blitt vist. Kan du finne ut hvordan du kan gjenskape det uten noen ekstra informasjon? Hint: Ikke vær redd for å prøve og feile. Det er ikke forventet at du får det til perfekt første gangen.'
       Course 4 Artist 12_instruction: "Fritt spill-inspirasjon: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer deg, prøv å lage noe lignende. Hvis ikke, lag noe helt på egenhånd.\r\n\n\r\nVil du vite hvordan vårt inspirasjons-mønster ble laget? Besøk https://studio.code.org/c/105671120/edit for å se løsningen."
@@ -822,6 +823,7 @@ nn:
       Course 4 Artist 6_instruction: 'Fullfør koden for å tegne disse triangelen. Tips: 3 triangler rotert til sammen 360 grader.'
       Course 4 Artist 7_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en nestet løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
       Course 4 Artist 8_instruction: Tegn solen ved å repetere denne kodeblokken 12 ganger.
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: 'Repeter dette designet 10 ganger og pass på at du roterer mellom hver figur som blir tegnet. Her har du et hint angående hvor mye du må snu deg: Hva er 360 delt på 10?'
       Course 4 Artist Binary 1_instruction: "Her er en funksjon som tar en binær-streng av 1-ere og 0-ere og instruerer kunstneren til å følge dem fra venstre til høyre, opp og ned. Artisten vil fylle inn rutene hvis den ser en 1 og ignorere ruta hvis den ser en 0. \r\n\r\nKjør denne koden for å se hvordan artisten bruker binær-strengen til å tegne dette mønsteret."
       Course 4 Artist Binary 2_instruction: Hvilke av disse binære strengene kan du gjenta 8 ganger for å tegne dette bildet?
@@ -849,6 +851,7 @@ nn:
       Course 4 Artist For Loops 6_instruction: Fritt spill! Prøv å bruke en for-løkke til å tegne et voksende-figur mønster som du designer selv.
       Course 4 Artist For Loops 7_instruction: 'Hva skjer hvis du fjerner "Repeter 3" fra denne algoritmen, beholder blokkene "flytt" og "snu"i løkka? I denne spiral-trekanten er hver side 20 piksler lenger enn den forrige.'
       Course 4 Artist For Loops 8_instruction: Den korteste linja i denne kvadrat-spiralen er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige. Kan du fylle inn de manglende blokkene i dette stilige bildet?
+      Course 4 Artist For Loops 8a_instruction: Den korteste linja i denne kvadrat-spiralen er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige. Kan du fylle inn de manglende blokkene i dette stilige bildet?
       Course 4 Artist For Loops 9_instruction: Kan du lage en spiral? Flytt framover fra 1 til 75 piksler, øk med 1 piksel hver gang.
       Course 4 Artist For Loops inspire_instruction: "Fritt spill-inspirasjon: Du har nå lært alt du trenger å vite for å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke kan du lage noe helt annet.\r\n\r\nVil du vite hvordan vårt inspirasjons-mønster ble laget? Besøk https://studio.code.org/c/106387604 for å se løsningen."
       Course 4 Artist Functions 1_instruction: Kan du tegne et kvadrat som er 100 piksler i lengde ved å bruke en løkke?
@@ -928,6 +931,14 @@ nn:
       Course 4 Bee For Loops 7_instruction: Bruk for-løkkas teller-variabel til å kontrollere hvor langt du beveger deg vannrett.
       Course 4 Bee For Loops 8_instruction: Kan du bruke løkke-variabelen til å kontrollere bevegelse og innsamling av nektar?
       Course 4 Bee For Loops 9_instruction: 'Det siste tallet i for-løkka di er kalt "vekst" og hver gang løkka kjører endres teller-variabelen med veksten. Prøv å samle disse blomstene ved å bruke en vekst på 2.'
+      Course 4 Bee Loops 5 NEW_instruction: |
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'Bruk funksjonen "hent 3 nektar" som snur, beveger seg for å samle nektar og så returnerer til opprinnelig posisjon. Skriv en sekvens for å samle all nektar ved å bruke "hent 3 nektar"'
       Course 4 Bee Params 2_instruction: 'Endre funksjonen "hent 3 nektar" slik at den får meg til å snu til høyre i stedet for til venstre for blomstene.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Nå er det blomster på begge sider! Kanskje du kan bruke et parameter slik at den samme funksjonen fungerer for blomster på begge sider. Jeg har lagt til et parameter som heter "retning" i funksjonen. Hvis "retning"-parameteret er lik 0 så skal jeg gå til venstre, hvis det er 1 så skal jeg gå til høyre.'
@@ -941,6 +952,7 @@ nn:
       Course 4 Bee Params 7 (copy 1)_instruction: Prøv å bruke din nye funksjon til å samle inn all denne nektaren.
       Course 4 Bee Params 7_instruction: Prøv å bruke den nye funksjonen din til å samle inn all denne nektaren.
       Course 4 Bee Params 8_instruction: 'Utfordring: Nå må du håndtere honning også! Skriv om funksjonen din til å ta inn både antall honning-enheter og antall nektar som skal samles inn. Hvordan vil du bruke disse tallene til å avgjøre hva du skal gjøre?'
+      Course 4 Bee Params Ex_instruction: Prøv å bruke den nye funksjonen din til å samle inn all denne nektaren.
       Course 4 Binary 1_instruction: Her er en funksjon som tar inn en binærstreng av 1-ere og 0-ere og instruerer bonden til å gå fra venstre til høyre, øverst til nederst mens han skrur på rutene hvor nummeret er 0. Kjør koden for å se hvordan bøndene bruker binærstrenger til å tegne et bilde.
       Course 4 Binary 2_instruction: 'Hvilken binærstreng kan du gjenta 8 ganger for å tegne dette bildet? Hint: nummeret 1 fyller et hull.'
       Course 4 Binary 3_instruction: Kan du tegne dette mønsteret ved å kjøre en løkke over en enkelt binærstreng?
@@ -981,15 +993,15 @@ nn:
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |
         In our game, how should we score points?
-        Add 1 to your "points" variable each time the Dog hits the Cat with a heart.
-        Use the "when actor 2 touches anything" event to trigger an update to your
-        score. You can increment your variable by setting "points = points + 1."
-        Get your score up to 10 (going one at a time!) to pass the level.
+        Add 1 to your "points" variable each time Dog hits Cat with a heart. Use
+        the "when actor 2 touches anything" event to trigger an update to your score.
+        You can increment your variable by setting "points = points + 1." Get your
+        score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
-        isn't too easy - any time the Dog (actor 1) gets hit by a fireball, you should
-        lose a point. Start with 10 points so it's not too hard. Let your score drop
-        down from 10 to 0 to pass the level.
+        isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
+        from Cat (actor 2), you should lose a point. Start with 10 points so it's
+        not too hard. Let your score drop down from 10 to 0 to pass the level.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -1002,11 +1014,7 @@ nn:
         ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
         less than 0, make the player (the Dog) vanish. Click "Finish" when the game
         works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: |
-        Free Play time! Here are all of the
-        variables we've played with so far in this stage, as well as a few more in
-        case you want them. Make a game or story using any of these variables. Hint:
-        scroll down to see all the commands in the work space.
+      Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables we've played with so far in this stage, as well as a few more in\ncase you want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox that they need to be organized!  Here, we've put each piece into\nan appropriate category.  Take some time to explore everything that is available.\nWhen you're done browsing, make a game or story using repeats, variables,\nand events.  \r\n\r\nHint: scroll down to see all the commands in the workspace."
       Course 4 Play Lab Vars_instruction: |
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
@@ -1177,6 +1185,11 @@ nn:
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
         radii of 25, 50, and 75.
+      Eval Define Funcs Test_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1209,21 +1222,20 @@ nn:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
-        Using the Design Recipe, write a function
-        large-polygon that should output a solid polygon of given sides and color
-        that takes up most of the window, regardless of the number of sides. To make
-        sure that the polygon doesn't get too large as you increase the number of
-        sides, side length should be inversely proportional to side number, with a
-        length of (800/sides).
+        Write a function large-polygon that should
+        output a solid polygon of given sides and color that takes up most of the
+        window, regardless of the number of sides. To make sure that the polygon doesn't
+        get too large as you increase the number of sides, side length should be inversely
+        proportional to side number, with a length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1297,10 +1309,22 @@ nn:
       frozen square loop 3x_instruction: La oss lage tre kvadrater med spissen mot hverandre. Husk å snu 120 grader før hvert nytt kvadrat.
       frozen square loop_instruction: 'Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange ganger trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?'
       frozen square snowflake_instruction: 'Får du til å lage et snøfnugg ved å bruke "repeter"-blokken til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert kvadrat?'
+      hoc2015_free_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       hoc2015_intro_instruction: |
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
+      hoc2015_maze_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_random_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_square_instruction: |
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Kan du få Elsa ("skuespiller 2") til å ta igjen med Anna ved å bruke piltastene?'
@@ -1718,7 +1742,7 @@ nn:
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
@@ -1797,6 +1821,11 @@ nn:
         Use a loop to collect the nectar
         from each flower.
       NEW Course 4 Bee For Loops 10_instruction: Bruk for-løkkas teller-variabel til å kontrollere hvor langt du beveger deg vannrett.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -1825,11 +1854,8 @@ nn:
         is called the "increment". Each time the loop is run, the counter variable
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of "for
-        loops"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-        
-      NEW Course 4 Bee For Loops 8_instruction: "What will you do if we take away\nsome blocks? Can you add them back to help the bee collect the nectar?\r\nRemember:\nIf your loop is counting up, the increment is added to your counter variable\neach time through. What should your increment be to collect 3, 6, 9 nectar?\r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Hvis løkka di teller ned, så trekkes veksten fra teller-variabelen hver gang løkka går. Hva skal du øke med for å samle 9, så 6 og så 3 nektar?
       NEW Course 4 Bee For Loops 95_instruction: |
         Take a look at each piece of the
@@ -1868,6 +1894,38 @@ nn:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2399,8 +2457,26 @@ nn:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

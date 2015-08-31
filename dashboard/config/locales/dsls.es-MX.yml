@@ -11,9 +11,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Haz que coincidan las combinaciones
+        Match the button combination to the dance moves.: Identifica la combinación
           de botones con los movimientos de baile.
-        Matching: Emparejar
+        Matching: Identifica
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -21,13 +21,13 @@
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
           250
-        <strong>N</strong>: <strong>N</strong>
-        <strong>O</strong>: <strong>O</strong>
-        <strong>P</strong>: <strong>P</strong>
-        <strong>Q</strong>: <strong>Q</strong>
-        Matching: Emparejar
-        Use the key to match each code to its letter: Usa la clave para unir cada
-          código con su letra
+        <strong>N</strong>: <negrillas>N</negrillas>
+        <strong>O</strong>: <negrillas>0</negrillas>
+        <strong>P</strong>: <negrillas>P</negrillas>
+        <strong>Q</strong>: <negrillas>Q</negrillas>
+        Matching: Identifica
+        Use the key to match each code to its letter: Pulse la tecla para identificar
+          cada codigo con su letra
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -35,8 +35,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Coincida con la cuadrícula para el programa.
-        Matching: Emparejar
+        Match the grid to the program.: Ensamble el formato con el programa.
+        Matching: Identifica
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -45,10 +45,10 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Arrastra los bloques para unirlos.
+        Drag the blocks to match.: Deposite los bloques en su lugar.
         Instructions: Instrucciones
-        Match the puzzles to the blocks: Une los rompecabezas a los bloques
-        Maze Match: Partida de Laberinto
+        Match the puzzles to the blocks: Compagine el crucigrama con los bloques
+        Maze Match: Identificacion de conexiones
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -56,8 +56,8 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Haz coincidir los programas
-        Matching: Emparejar
+        Match the grid to the program: Ensamble el formato con el programa
+        Matching: Identifica
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -67,8 +67,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Bucles de Artista, Haciendo coincidir uno
-        Match the loop to the shape: Hacer coincidir el bucle con la figura
+        Artist Loops Matching One: Haga coincidir un enlace artistico
+        Match the loop to the shape: Haga coincidir el enlace con la figura
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -94,7 +94,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Hacer coincidir rebote
         Match the events with the actions: Relaciona los eventos con las acciones
-        Matching: Emparejar
+        Matching: Identifica
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
@@ -104,7 +104,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: Hacer coincidir Flappy uno
         Match the events with the actions: Relaciona los eventos con las acciones
-        Matching: Emparejar
+        Matching: Identifica
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
@@ -112,7 +112,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Une los rompecabezas a los bloques
+        Match the puzzles to the blocks: Compagine el crucigrama con los bloques
         Maze Match One: Partido Uno del Laberinto
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
@@ -129,7 +129,7 @@
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Une
           los pasos en el juego Carrera de Dados al orden que deben aparecer en el
           algoritmo.
-        Matching: Emparejar
+        Matching: Identifica
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -146,7 +146,7 @@
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada
           uno de estos vehículos ha sido descompuesto en pedazos más pequeños. Relacionar
           cada vehículo descompuesto con su lista.
-        Matching: Emparejar
+        Matching: Identifica
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
@@ -160,7 +160,7 @@
         Match each program to the word it makes, using the provided group of skills.: Haz
           coincidir cada programa a la palabra que produce, utilizando el grupo de
           habilidades que se ha proveído.
-        Matching: Emparejar
+        Matching: Identifica
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -169,10 +169,10 @@
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Arrastra los bloques para unirlos.
+        Drag the blocks to match.: Deposite los bloques en su lugar.
         Instructions: Instrucciones
-        Match the puzzles to the blocks: Une los rompecabezas a los bloques
-        Maze Match: Partida de Laberinto
+        Match the puzzles to the blocks: Compagine el crucigrama con los bloques
+        Maze Match: Identificacion de conexiones
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -182,7 +182,7 @@
         <br/><br/>next to: <br/><br/>al lado
         Is the square next to, above, or below the ball?: ¿El cuadrado está al lado,
           encima o debajo de la pelota?
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -193,7 +193,7 @@
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
         Match the shapes based on type.: Relaciona las figuras de acuerdo a su tipo.
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -204,7 +204,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         Match the shapes based on type.: Relaciona las figuras de acuerdo a su tipo.
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -214,7 +214,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Haga coincidir el codigo con las escaleras
           que dibuja.
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -225,7 +225,7 @@
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
         Match the blocks: Relaciona los bloques
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -234,9 +234,9 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Haz que coincidan las combinaciones
+        Match the button combination to the dance moves.: Identifica la combinación
           de botones con los movimientos de baile.
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -245,7 +245,7 @@
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
         Match the blocks: Relaciona los bloques
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -255,7 +255,7 @@
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Match the Map to the arrow that gets the Flurb to the treasure: Haz coincidir
           el mapa con la flecha que lleva el Flurb al tesoro
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -266,10 +266,10 @@
         /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
-        Drag the blocks to match.: Arrastra los bloques para unirlos.
+        Drag the blocks to match.: Deposite los bloques en su lugar.
         Instructions: Instrucciones
         Match the puzzles and blocks: Haz coincidir los rompecabezas y los bloques
-        Matching: Emparejar
+        Matching: Identifica
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -279,7 +279,7 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Haz coincidir
           el mapa con el algoritmo que lleva al Flurb a las flores.
-        Matching: Emparejar
+        Matching: Identifica
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -296,7 +296,7 @@
         Match up all the flowers by colour!: ¡Relaciona todas las flores por color!
         Matching Images Two: Relaciona las dos imagenes
       test matching text:
-        Matching: Emparejar
+        Matching: Identifica
         Some really easy stuff to match.  Drag it around until you get it.: Algunas
           cosas muy fáciles de relacionar. Arrástralas hasta conseguirlo.
         Sydney: Sídney
@@ -902,7 +902,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: aleatorio
+        random: al azar
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Pedro Picapiedra

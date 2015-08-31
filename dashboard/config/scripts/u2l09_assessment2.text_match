@@ -5,3 +5,9 @@ title 'Assessment: Question 2'
 markdown <<MARKDOWN
 Why do computers need to periodically check the DNS for websites you have already visited?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- The IP address associated with a given URL is not static; it can change.
+MARKDOWN
