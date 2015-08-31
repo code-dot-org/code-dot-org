@@ -10,6 +10,9 @@
     };
   }
 - href = asset_path(@level.properties['href'])
+
+= render partial: 'levels/content', locals: {app: 'external', data: {'markdown' => @level.properties['markdown_instructions']}}
+
 #external
   / Load the external file through ActionView templates.
   = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
