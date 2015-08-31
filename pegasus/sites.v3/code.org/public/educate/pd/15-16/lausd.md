@@ -14,7 +14,7 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers and San Francisco teachers enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
+Teachers from Los Angeles and San Francisco enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
