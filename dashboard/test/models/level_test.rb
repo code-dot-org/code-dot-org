@@ -307,6 +307,8 @@ EOS
   end
 
   test 'applab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
 
@@ -328,5 +330,9 @@ EOS
     level = level.reload
 
     assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_equal nil, level.examples
   end
 end
