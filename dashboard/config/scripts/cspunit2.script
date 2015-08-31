@@ -6,6 +6,7 @@ include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security
 concerns.'
 description_short 'The Internet'
 login_required 'true'
+hidden 'false'
 
 stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
