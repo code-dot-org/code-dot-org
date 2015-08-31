@@ -1,5 +1,12 @@
 # !/bin/bash
 
+# See cdo/i18n/README.md for instructions.
+# Run this script to manually synchronize apps translations with Crowdin.
+# Pulls in all of the applab EN files from apps/i18n into i18n/locales/source
+# Makes a copy of the EN files for all locales (app lab is not translated)
+# Exports the copies for all locales back to apps/i18n
+# Commits updated locale files in apps/i18n and i18n/locales/source
+
 set -e
 
 # Bring in new strings to i18n/locales
@@ -37,3 +44,8 @@ for file in $(find $orig_dir -name 'en_us.json'); do
 ruby ../i18n/code.org/lib/copy-untranslated-apps.rb
 
 done
+
+git add --all i18n
+git add --all ../i18n/locales/source
+git commit --message="Updated apps strings"
+git push
