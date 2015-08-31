@@ -224,7 +224,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
