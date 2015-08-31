@@ -2,6 +2,9 @@
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
+
+var ABUSE_THRESHOLD = 10;
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -100,6 +103,14 @@ var projects = module.exports = {
       return;
     }
     return current.frozen;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
+  exceedsReportingThreshold: function () {
+    return current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD;
   },
 
   //////////////////////////////////////////////////////////////////////
