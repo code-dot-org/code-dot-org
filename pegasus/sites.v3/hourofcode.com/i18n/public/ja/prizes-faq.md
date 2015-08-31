@@ -1,43 +1,43 @@
 
 
-# Prizes - FAQs
+# 賞品 - よくあるご質問
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## 1万ドル相当のハードウェアの懸賞に申し込むには学校全体での参加が必要ですか？
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+はい。この賞の応募資格をえるためには学校全体での参加が必要になります。ただし、登録するのは一人で構いません。<a
 
-## Does your whole school have to enter to win a the tech chat?
+## ビデオチャット賞に申し込むには、学校全体での参加が必要ですか？
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+どのクラス(公立、私立ともに)にもこの賞の対象となります。学校全体での申し込みは必要ありません。
 
-## Can non-public schools win the video chat prize?
+## 公立学校でなくてもビデオ会議賞の応募資格がありますか？
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+はい！私立学校でも公立学校と同様にビデオチャット賞の対象となります。
 
-## Can non-US schools win the video chat prize?
+## 米国以外の学校はビデオチャット賞をもらうことができますか？
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+いいえ、残念ながら、米国とカナダ以外の学校は、ビデオチャット賞の大賞となりません。
 
-## Why is the $10,000 hardware prize only available to public schools?
+## なぜ1万ドルのハードウェア賞は公立学校だけが対象なのですか？
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+私たちは公立と私立の先生を同じように手助けしたいと思っていますが、これは結局はロジスティックスの問題に帰着します。 私たちは、[DonorsChoose.org](http://donorschoose.org)と提携して、クラスルーム賞の資金を管理していますが、この団体は米国のK-12公立高校のみを対象としているためです。 DonorsChoose.orgによると、公立学校用のデータへのアクセスのほうがより正確かつ一貫的に可能とのことです。
 
-## I’m outside the United States. Can I qualify for prizes?
+## 私は米国外に住んでますが、賞への応募資格はありますか？
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+フルタイムの従業員が少ないので、Code.orgは海外への賞の発送処理ができません。これにより、米国外の方々には賞に応募することはできません。
 
-## When is the deadline to apply for the hardware prize?
+## ハードウェア賞への応募締切はいつですか？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org は2014 年 12 月 1 日までに選考し、受賞者にメールで通知致します。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org will select and notify winners via email by December 1, 2015.
 
-## When is the deadline to be eligible to win a tech chat?
+## ビデオチャット賞の応募締切はいつですか？
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org は2014 年 12 月 1 日までに選考し、受賞者にメールで通知致します。
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. 当選したクラスは著名人とのビデオチャットの機会が贈られます。 Code.org will select and notify winners via email by December 1, 2015.
 
-## When will I be notified if my school or classroom wins a prize?
+## 受賞の結果はいつ通知されますか？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org は2014 年 12 月 1 日までに選考し、受賞者にメールで通知致します。
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

@@ -206,6 +206,7 @@
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
@@ -549,6 +550,8 @@
   educator_notes: Notatki nauczyciela
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -1079,7 +1082,7 @@
   kodable_beyond_longdescription: Kodable jest grą z własnym przewodnikiem na iPada,
     która przybliża dzieciom 5+ podstawy programowania. Dobrze, jeśli nauczyciel lub
     rodzic są w pobliżu, ale nie jest to konieczne.
-  scratchjr_beyond_longdescription: ScratchJr jest wprowadzającym językiem programowania,
+  scratchjr_beyond_longdescription: ScratchJr jest językiem programowania dla początkujących,
     który umożliwia młodym dzieciom tworzyć własne interaktywne opowiadania i gry.
     Dzieci składają razem bloki graficznego programowania, aby postacie poruszały
     się, skakały, tańczyły i śpiewały

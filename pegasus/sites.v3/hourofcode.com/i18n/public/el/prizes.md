@@ -1,135 +1,99 @@
 
 
-<div class="row">
-  <h1 class="col-sm-9">
-    Βραβεία για κάθε διοργανωτή
-  </h1>
-  
-  <div class="col-sm-3 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Sign up for a chance to win</button></a>
-  </div>
-</div>
+<% if @country == 'la' %>
 
-<% if @country == 'us' %>
+# Βραβεία για κάθε διοργανωτή
 
-## One classroom will win a trip to Washington, D.C. for a historic, top-secret Hour of Code! {#dc}
+Κάθε εκπαιδευτικός που φιλοξενεί μια ώρα κώδικα για μαθητές λαμβάνει 10 GB χώρου στο Dropbox ως ευχαριστήριο δώρο!
 
-Code.org will select one lucky classroom to attend a very special Hour of Code event in the nation’s capital — so special that all the details are under wraps! Winning students (with chaperones) will enjoy an all-expenses-covered trip to Washington, D.C. Students will participate in a full day of top-secret activities on Monday, December 8.
+<% else %>
+
+# Τα βραβεία του 2015 έρχονται!
+
+**Κάθε** εκπαιδευτικός που διοργανώνει μια εκδήλωση για την Ώρα του Κώδικα πληρεί τις προϋποθέσεις για να λάβει ένα βραβείο. Ελέγχετε τακτικά για ενημερώσεις το φθινόπωρο του 2015.
 
 <% end %>
 
-<% if @country == 'us' %>
+# Τα βραβεία της Ώρας του Κώδικα για το 2014
 
-<h2 id="hardware_prize" style="font-size: 18px">
-  51 schools win a class-set of laptops (or $10,000 for other technology)
-</h2>
+<% if @country == 'us' || @country == 'ca' || @country == 'uk' %>
 
-One lucky school in ***every*** U.S. state (+ Washington D.C.) will win $10,000 worth of technology. Organize the Hour of Code for every student in your school to qualify. **The submission period has ended. Winners will be announced soon.**
+## Κάθε διοργανωτής κέρδισε ένα ευχαριστήριο δώρο {#gift_code}
+
+Κάθε εκπαιδευτικός που διοργάνωσε μια Ώρα του Κώδικα για μαθητές έλαβε 10 GB χώρου στο Dropbox ή 10$ σε μονάδες ομιλίας Skype ως ευχαριστήριο δώρο!
+
+## 51 σχολεία κέρδισαν ένα σετ φορητών υπολογιστών για τάξη (ή 10.000$ σε τεχνολογικό εξοπλισμό)
+
+Ένα τυχερό σχολείο σε ***κάθε*** πολιτεία των Η.Π.Α. (+ Ουάσινγκτον) κέρδισε 10.000$ σε τεχνολογικό εξοπλισμό. [**Δείτε τους περσινούς νικητές**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
 <% end %>
-
-<% if @country == 'us' %>
-
-### What are your odds of winning?
-
-[See a list of all schools](/events) signed up for the Hour of Code in your state. One public K-12 school in every U.S. state will win a class-set of laptops. <% end %>
 
 <% if @country == 'uk' %>
 
-## Lucky classrooms win a video chat with a guest speaker! {#video_chat}
+## 20 τυχερά τμήματα κέρδισαν μια βιντεο-κλήση με ένα διακεκριμένο ομιλητή! {#video_chat}
 
-20 lucky classrooms will be invited to join a video chat to celebrate the Hour of Code during December 8-14. Your students will be able to ask questions and chat with technology-industry leaders. **The submission period has ended. Winners will be announced soon.**
+20 τυχερά τμήματα κλήθηκαν να συμμετάσχουν σε μια βιντεο-κλήση για να γιορτάσουν την Ώρα του Κώδικα. Οι μαθητές συνομίλησαν με ηγέτες της τεχνολογίας όπως ο [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), ιδρυτής του Skype και του Kazaa και η [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), συνιδρυτής και Διευθύνων Σύμβουλος της Moonfruit.
 
 <% end %>
 
-<% if @country == 'us' || @country == 'ca' %>
+<% if @country == 'us' %>
 
-## 100 classrooms win a video chat with a guest speaker! {#video_chat}
+## 100 τμήματα κέρδισαν μια βιντεο-κλήση με έναν διακεκριμένο ομιλητή! {#video_chat}
 
-100 lucky classrooms will be invited to participate in live video Q&As with tech titans and tech-loving celebrities. Students will be able to ask questions and chat with these exciting role models to kick off your Hour of Code.
+100 τυχερά τμήματα συμμετείχαν σε ζωντανή βιντεο-κλήση με ερωτήσεις και απαντήσεις από Τιτάνες της τεχνολογίας και δημοσιότητες που αγαπούν την τεχνολογία. Οι μαθητές έθεσαν ερωτήσεις και συζήτησαν με αυτά τα συναρπαστικά πρότυπα ανθρώπων ως εισαγωγή για την Ώρα του Κώδικα.
 
-Any classroom (public or private) within the U.S. or Canada is eligible to win this prize. Your whole school does not need to apply. **The submission period has ended. Winners will be announced soon.**
-
-### This year's celebrity video chat participants:
+### Παρακολουθήστε τις περσινές βιντεο-κλήσεις με διασημότητες:
 
 <%= view :video_chat_speakers %>
 
 <% end %>
 
-## Every organizer wins a thank you gift-code  
-
-Every educator who hosts an Hour of Code for students will receive 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
-
 <% if @country == 'ca' %>
 
-## $2000 Brilliant Project {#brilliant_project}
+## Το πρόγραμμα της Brilliant αξίας $2000 {#brilliant_project}
 
-[Brilliant Labs](http://brilliantlabs.com/hourofcode) will provide the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). To qualify, teachers must register at hourofcode.com/ca#signup by December 6, 2014. For more details, terms, and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
+Η εταιρεία [Brilliant Labs](http://brilliantlabs.com/hourofcode) πρόσφερε τους απαραίτητους πόρους, μέχρι του ποσού των 2000 δολαρίων, για την υλοποίηση ενός μαθησιακού προγράμματος που είναι μαθητοκεντρικό και το οποίο βασίζεται στην τεχνολογία και στην πρακτική άσκηση των μαθητών μέσα στην τάξη, σε κάθε επαρχία και κάθε περιοχή (σημείωση: εκτός του Quebec). Για περισσότερες λεπτομέρειες, όρους και προϋποθέσεις, παρακαλούμε επισκεφθείτε το [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-## Lucky Schools win an Actua Workshop {#actua_workshop}
+## Τυχερά σχολεία κέρδισαν εργαστηριακά μαθήματα από την εταιρεία Actua {#actua_workshop}
 
-15 lucky schools across Canada will be gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
+15 τυχερά σχολεία σε όλο τον Καναδά είχαν μια ευκαιρία-δώρο για 2 σεμινάρια πρακτικής άσκησης, σε θεματολογία γύρω από την Επιστήμη, την Τεχνολογία, την Μηχανική των Υπολογιστών και τα Μαθηματικά, ειδομένα ως μια ενιαία εκπαιδευτική κατηγορία (STEM), από ένα μέλος εκ των[ 33 μελών του δικτύου](http://www.actua.ca/about-members/) Actua. Τα μέλη της Actua παραδίδουν εργαστηριακά μαθήματα στους τομείς της Επιστήμης, της Τεχνολογίας, της Μηχανικής των Υπολογιστών και των Μαθηματικών (STEM) και τα οποία συνδέονται με περιβαλλοντικά προγράμματα για μαθητές Δημοτικού. Αυτές οι εμπειρίες που αποκτούνται μέσα στην τάξη, παραδίδονται από προπτυχιακούς φοιτητές που έχουν πάθος, έχουν υψηλή εκπαίδευση και αποτελούν πρότυπα φοιτητών στους τομείς του STEM. Οι εκπαιδευτικοί μπορούν να αναμένουν συναρπαστικές επιδείξεις, διαδραστικά πειράματα και πολύ χαρά για τους μαθητές τους, στα πλαίσια αυτών των δραστηριοτήτων στον τομέα των STEM! Παρακαλούμε σημειώσετε ότι η διαθεσιμότητα αυτών των εργαστηρίων που διενεργούνται στην τάξη μπορεί να ποικίλουν σε απομακρυσμένες και αγροτικές περιοχές.
 
-[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
+Η [Actua](http://actua.ca/) είναι ο ηγέτης του Καναδά στην Επιστήμη, την Τεχνολογία, την Μηχανική των Υπολογιστών και τα Μαθηματικά (STEM). Κάθε χρόνο η Actua προσεγγίζει πάνω από 225.000 νέους σε πάνω από 500 περιοχές, μέσω του προγράμματός της για την εξάλειψη των εμποδίων της πρόσβασης της νεολαίας στον προγραμματισμό.
 
-## Kids Code Jeunesse will help support you in the classroom! {#kids_code}
+**Συγχαρητήρια στους νικητές του 2014!**
 
-Are you a teacher who wants to introduce computer programming to your students and would like support in the classroom? Any teacher that would like a trained Computer Programming volunteer to assist in the classroom can contact [Kids Code Jeunesse](http://www.kidscodejeunesse.org) and we’ll work on getting you supported! [Kids Code Jeunesse](http://www.kidscodejeunesse.org) is a Canadian not for profit aimed at providing every child with the opportunity to learn to code. And every teacher the opportunity to learn how to teach computer programming in the classroom.
+| Σχολείο                         | Πόλη        | Μέλος του δικτύου της Actua     |
+| ------------------------------- | ----------- | ------------------------------- |
+| Spencer Middle School           | Victoria    | Science Venture                 |
+| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
+| Britannia Elementary            | Vancouver   | GEERing Up                      |
+| Captain John Palliser           | Calgary     | Minds in Motion                 |
+| St. Josaphat School             | Regina      | EYES                            |
+| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
+| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
+| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
+| Byron Northview Public School   | London      | Discovery Western               |
+| Stanley Public School           | Toronto     | Science Explorations            |
+| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
+| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
+| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
+| Garden Creek School             | Fredericton | Worlds UNBound                  |
+| Armbrae Academy                 | Halifax     | SuperNOVA                       |
+
+## H MKO Kids Code Jeunesse βοήθησε στην υποστήριξη τμημάτων σε ολόκληρο τον Καναδά! {#kids_code}
+
+Ο Οργανισμός [ Kids Code Jeunesse](http://www.kidscodejeunesse.org) παρείχε εκπαιδευμένους εθελοντές σε προγράμματα προγραμματισμού υπολογιστών για να στηρίξουν εκπαιδευτικούς στην διδακτική της πληροφορικής. Η Kids Code Jeunesse είναι ένας Καναδικός Μη Κερδοσκοπικός Οργανισμός με στόχο να παρέχει σε κάθε παιδί την ευκαιρία να μάθει να προγραμματίζει, και σε κάθε εκπαιδευτικό την ευκαιρία να μάθει πως να διδάξει τον προγραμματισμό υπολογιστών στην τάξη.
 
 <% end %>
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## 100 classrooms will win a set of programmable robots {#programmable_robots}
+## 100 τμήματα κέρδισαν ένα σετ από προγραμματιζόμενα ρομπότ {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero is giving away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada is eligible to win this prize.
+Ο [Sphero](http://www.gosphero.com/) είναι μια ρομποτική μπάλα που ελέγχεται από μια εφαρμογή, η οποία αλλάζει το τρόπο που οι μαθητές μαθαίνουν. Υποβοηθούμενα από τα [SPRK μαθήματα](http://www.gosphero.com/education/), αυτά τα στρογγυλά ρομπότ δίνουν στα παιδιά ένα διασκεδαστικό αρχικό μάθημα στον προγραμματισμό, ακονίζοντας παράλληλα τις δεξιότητές τους στα μαθηματικά και τις επιστήμες. Η Sphero μοίρασε 100 σετ τάξης – κάθε ένα περιείχε 5 ρομπότ. Κάθε τάξη (δημόσια ή ιδιωτική) στις ΗΠΑ ή τον Καναδά ήταν πιθανή για να κερδίσει αυτό το βραβείο.
 
 <% end %>
 
-<h2 id="more_questions">More questions about prizes?</h2>
+## Έχετε περισσότερες ερωτήσεις για τα βραβεία; {#more_questions}
 
-Check out [Terms and Conditions](<%= hoc_uri('/prizes-terms') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
-
-<% if @country == 'us' %>
-
-# Frequently Asked Questions {#faq}
-
-## Does your whole school have to enter to win the $10,000 in hardware?
-
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
-
-## Does your whole school have to enter to win a the tech chat?
-
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
-
-## Can non-public schools win the video chat prize?
-
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
-
-## Can non-US schools win the video chat prize?
-
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
-
-## Why is the $10,000 hardware prize only available to public schools?
-
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
-
-## I’m outside the United States. Can I qualify for prizes?
-
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
-
-## When is the deadline to apply for the hardware prize?
-
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
-
-## When is the deadline to be eligible to win a tech chat?
-
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org will select and notify winners via email by December 1, 2014.
-
-## When will I be notified if my school or classroom wins a prize?
-
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org will select and notify winners via email by December 1, 2014.
-
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
-
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th. <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Sign up for a chance to win</button></a> <% end %>
+Κοιτάξτε τους Όρους και τις Προϋποθέσεις μας</a> ή επισκεφθείτε το φόρουμ μας για να δείτε τις [Συχνές Ερωτήσεις](http://support.code.org) και θέστε τις δικές σας.

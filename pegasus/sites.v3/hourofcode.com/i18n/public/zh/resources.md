@@ -4,286 +4,158 @@ nav: resources_nav
 ---
 
 <div class="row">
-  <h1 class="col-sm-6">
-    資源
+  <h1 class="col-sm-12">
+    Resources (2015 resources coming soon)
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">註冊您的活動</button></a>
-  </div>
 </div>
 
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/resources/how-to') %>)
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+<a id="handouts"></a>
 
-<% else %>
+## 用這份講義來傳播訊息
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
-<% end %>
+## 這份講義給教師和學校
 
-<a id="handouts"></p> 
+[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
-<h2>
-  Use this handout to spread the word
-</h2>
+<a id="videos"></a>
 
-<p>
-  <a href="/files/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
-</p>
+## 播放這些影片來啟發學生
 
-<h2>
-  Give this handout to teachers and schools
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>多數學校沒教的(5分鐘 )</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>這就是Hour of Code - 任何人皆可學習</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="videos"></p> 
-  
-  <h2>
-    Show these videos to inspire students
-  </h2>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>多數學校沒教的(5分鐘 )</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>這就是Hour of Code - 任何人皆可學習</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>美國歐巴馬總統談資訊科學</strong></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>任何人都可以學習(1 分鐘)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-<p>
-<a id="posters"></p> 
+<div style='clear:both'>
+</div>
 
-<h2>
-  Hang these posters in your school
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>美國歐巴馬總統談資訊科學</strong></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/files/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/files/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/files/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/files/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/files/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>任何人都可以學習(1 分鐘)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="banners"></a>
-</p>
+<div style="float:left; padding:10px">
+</div>
 
-<h2>
-  Feature these banners on your website
-</h2>
+<div style='clear:both'>
+</div>
 
-<p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="posters"></a>
 
-<p>
-  <a id="social"></a>
-</p>
+## 在您的學校張貼這些海報
 
-<h2>
-  Post these on social media
-</h2>
+[![圖片](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![圖片](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![圖片](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![圖片](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![圖片](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![圖片](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![圖片](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![圖片](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
-<p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="banners"></a>
 
-<p>
-  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+## 在您的網站加上這些標語
 
-<p>
-  <a id="sample-emails"></a>
-</p>
+[![圖片](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<h2>
-  Send these emails to help promote the Hour of Code
-</h2>
+<a id="social"></a>
 
-<p>
-  <a id="email"></a>
-</p>
+## 在社群網絡媒體張貼訊息
 
-<h2>
-  Ask your school, employer or friends to sign up:
-</h2>
+[![圖片](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  電腦無處不在但教電腦科學的學校比 10 年前還少。 好消息是我們正在改變此狀況。 If you heard about the Hour of Code last year, you might know it made history. 在一周內 1500 萬學生嘗試體驗了電腦科學 ！
-</p>
+[![圖片](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+<a id="sample-emails"></a>
 
-<p>
-  This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
-</p>
+## 發送這些電子郵件協助推廣Hour of Code活動
 
-<p>
-  Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
-</p>
+<a id="email"></a>
 
-<p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
-</p>
+## 邀請您的學校、校長或朋友進行註冊：
 
-<p>
-  <a id="media-pitch"></a>
-</p>
+電腦無處不在但教電腦科學的學校比 10 年前還少。 好消息是我們正在改變此狀況。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-<h2>
-  Invite media to attend your event:
-</h2>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
-</p>
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-<p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
-</p>
+讓這個活動傳播出去，舉辦一場活動。邀請當地的學校報名，或者你自己嘗試程式設計一小時--每個人都能從這項基礎學習中獲益。
 
-<p>
-  In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+Get started at http://hourofcode.com/<%= @country %>
 
-<p>
-  Now the Hour of Code movement is aiming for 100 million students.
-</p>
+<a id="media-pitch"></a>
 
-<p>
-  That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
-</p>
+## 邀請大眾媒體參加您的活動：
 
-<p>
-  I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
-</p>
+**Subject line:** Local school joins mission to introduce students to computer science
 
-<p>
-  The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
-</p>
+電腦無處不在，但教授電腦科學的學校近10 年日漸委縮 。女孩和少數民族學習人數嚴重的偏低。好消息是，我們正在改變此狀態。
 
-<p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
-</p>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>When:</strong> [DATE and TIME of your event]
-</p>
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
-<p>
-  <strong>Where:</strong> [ADDRESS and DIRECTIONS]
-</p>
+我邀請您參加我們的開幕大會，來看孩子們在 [DATE]這一天開始寫程式的活動。
 
-<p>
-  I look forward to being in touch.
-</p>
+Hour of Code由非營利組織 Code.org 和 超過100 多個夥伴單位舉辦，活動宗旨在讓當代的學生成功地學習 21 世紀關鍵技能。 請加入我們的行列。
 
-<p>
-  <a id="parents"></a>
-</p>
+**聯絡人：** [您的名字],[職稱], [電話]
 
-<h2>
-  Tell parents about your school's event:
-</h2>
+**時間：** [您的活動日期和時間]
 
-<p>
-  Dear Parents,
-</p>
+**地點：** [地址和方向]
 
-<p>
-  We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
-</p>
+保持聯繫、隨時候教。
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="parents"></a>
 
-<p>
-  Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
-</p>
+## 告訴家長關於您學校的活動：
 
-<p>
-  This is a chance to change the future of education in [TOWN/CITY NAME].
-</p>
+親愛的家長，
 
-<p>
-  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
-</p>
+我們生活在一個被科技包圍的世界。 而且我們知道我們的學生無論選擇甚麼領域作為成年人時的行業，他們取得成功的能力逐漸決於理解科技運作的原理。 但是，我們只有一小部分在學習資訊科學，比十年前研究的學生還少。
 
-<p>
-  Sincerely,
-</p>
+這就是為什麼我們整個的學校加入史上最大的學習活動： 小時的過程中代碼的電腦科學教育周 (12 月 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-<p>
-  Your principal
-</p>
+此Hour of Code活動宣示 [SCHOOL NAME] 已經準備教授廿十一世紀的基礎技能。 繼續把程式設計的活動帶給您的學生，我們想讓Hour of Code活動更盛大。 I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-<p>
-  <a id="politicians"></a>
-</p>
+這是一個改變 [城市名稱] 教育未來的機會。
 
-<h2>
-  Invite a local politician to your school's event:
-</h2>
+請參閱 http://hourofcode.com/<%= @country %> 的詳細資訊，並幫助傳播這個消息。
 
-<p>
-  Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-</p>
+此致
 
-<p>
-  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-</p>
+您們的校長
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="politicians"></a>
 
-<p>
-  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
-</p>
+## 邀請當地行政長官參加您的學校活動：
 
-<p>
-  Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-</p>
+親愛的 [市長/縣長/代表/議員姓氏]：
 
-<p>
-  Sincerely, [NAME], [TITLE]
-</p>
+您可知道在今天的經濟，資訊相關工作數量超過學生畢業後進入職場人數，是3件工作比上1位畢業生嗎？ 而且，電腦科學是今日 *每個* 行業的基礎。 Yet most of schools don’t teach it. 在 [學校名稱]，我們正在嘗試去改變此狀。
 
-<p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">註冊您的活動</button></a>
-</p>
+這就是為什麼我們整個的學校加入史上最大的學習活動： 小時的過程中代碼的電腦科學教育周 (12 月 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+我正在寫信邀請你加入我們的程式設計一小時活動並在開幕典禮上講話。 活動預訂於[日期、 時間、 地點]舉辦，並將作出強力的宣示: [縣或城市名稱] 準備好教導我們的學生21 世紀的 關鍵技能。 我們要確保我們的學生都在創造技術的未來 — 而不只是消費它。
+
+請聯繫我: [電話號碼或電子郵件地址]。靜候佳音。
+
+此致， \[姓名\] \[職稱\]

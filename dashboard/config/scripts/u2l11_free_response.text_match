@@ -4,3 +4,9 @@ content1 ''
 markdown <<MARKDOWN
 The definition of HTTP makes use of the ASCII character set without reference to how these characters are encoded. Explain why this is an example of abstraction.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but will likely include the following concepts:
+
+- 
+MARKDOWN

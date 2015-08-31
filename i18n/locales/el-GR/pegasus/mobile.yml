@@ -158,6 +158,7 @@ el-GR:
     Υπογράψτε την συλλογή υπογραφών
     
   homepage_signpetition_dropdown: 'Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών.
   homepage_banner_text_link: Μάθετε περισσότερα
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -428,6 +429,7 @@ el-GR:
   educator_notes: Σημειώσεις επιμορφωτή
   how_to_teach_hoc: Πώς να διδάξετε μια ώρα του κώδικα
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού
   teachers_notes_hoc: 'Δάσκαλοι: Δείτε εδώ σημαντικές σημειώσεις για εκπαιδευτικούς'

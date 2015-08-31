@@ -2,6 +2,7 @@ ko:
   errors:
     messages:
       not_saved: '다음 오류를 수정하시기 바랍니다:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -349,7 +350,7 @@ ko:
     local_school: 학교
     online: 온라인
     see_details: 자세히 살펴보기
-    view_course: View Course
+    view_course: 과정 보기
     prize_info: '상품을 획득해 보세요(미국 공립학교 교사만 해당): 학급당 %1,000까지 제공됩니다.'
     tryfirst: '먼저 해보고, 나중에 가입하기:'
     trynow: 지금 해보기
@@ -364,8 +365,11 @@ ko:
     heading_legacy: '<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>'
     your_gallery: 갤러리
     no_primary_course: Code Studio에서 과정을 시도해보세요
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: 아래 중 하나를 선택하여 Code Studio 과정 학습하기
     print_certificate: 인증서 인쇄
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: 남
     female: 여
@@ -374,13 +378,20 @@ ko:
     student: student
     teacher: 선생님
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: 더 많은
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
     support: 고객지원
     support_url: http://support.code.org
+    tos_short: Terms
     tos: 이용 약관
     privacy: 개인정보보호 정책
     secure: 보안 버전
@@ -504,6 +515,10 @@ ko:
     open_response_body: 귀하의 회신에 감사드립니다!
   dialog:
     ok: 확인
+    startover_title: 정말 다시 시작하겠습니까?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: 다시 시작하기
+    startover_cancel: 취소
   time:
     hour: 1 시간
     day: 일

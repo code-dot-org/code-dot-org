@@ -76,7 +76,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Artist Matching
+        Artist Matching: アーティストの一致
         Match the shape with the blocks that complete it.: 一致する組み合わせをえらびましょう。
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
@@ -89,7 +89,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Bounce Matching
+        Bounce Matching: バウンスの一致
         Match the events with the actions: 動きと出来事を一緒に合わせてください。
         Matching: 合致
       2-3 flappy match 1:
@@ -117,10 +117,10 @@
         <h4>3)</h4>: <h4>3)</h4>
         <h4>4)</h4>: <h4>4)</h4>
         <h4>Add Player 1 roll to total score</h4>: <h4>プレイヤー１の出た目を合計点数に加えます</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>プレイヤーの点数を比較して勝者がわかります</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>プレイヤーの点数を比較して誰が勝ったか見てみましょう</h4>
         <h4>Player 1 rolls die</h4>: <h4>プレイヤー１がサイコロを振ります</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>プレイヤー１の点数をゼロにします</h4>
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: ダイスレースゲームの手順を一致させましょう。
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: サイコロレースゲームの手順を一致させましょう。
         Matching: 合致
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -290,30 +290,22 @@
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image
-          provided.
+        Choose an algorithm for the image provided.: 与えられた画像のためのアルゴリズムを選びましょう
         Multiple Choice: 複数の選択肢
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
-          with a square<br/>Put a parallelogram above the square<br/>Put a triangle
-          right of the parallelogram
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 正方形から始めます<br/>正方形の上に平行四辺形を置きます<br/>三角形を平行四辺形の右に置きます
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 正方形から始めましょう。<br/>
           正方形の上に三角形を置きます。 <br/> 正方形の下に三角形を置きます。
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start
-          with a square<br/>Put a triangle below the square<br/>Put a parallelogram
-          right of the triangle
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 正方形から始めます<br/>三角形を正方形の下に置きます<br/>平行四辺形を三角形の右に置きます
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : 正方形から始めます<br/>三角形を正方形の右に置きます<br/>平行四辺形を正方形の下に置きます<br/>三角形を平行四辺形の右に置きます
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: 複数の選択肢
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
-          with a triangle<br/>Put a square below the triangle<br/>Put another triangle
-          below the square
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 三角形から始めます<br/>正方形を三角形の下に置きます<br/>もう一つの三角形を正方形の下に置きます
         Which image does <em>not</em> follow this algorithm?: どの絵がこのアルゴリズムに従って<em>いない</em>でしょうか？
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -383,7 +375,7 @@
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500
         Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: 与えられた関数を使ってこの画像を描くことができるように、ブロックをえらびましょう。
+        Pick the correct blocks to draw this image using the given functions: 与えられた関数を使ってこの画像を描くことができるように、正しいブロックをえらびましょう。
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
@@ -435,7 +427,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
         Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
-        Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
+        Which blocks collect all of the nectar?: すべての花のミツを集めるブロックはどれでしょう？
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
@@ -444,22 +436,19 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: Maze Multiple Choice One
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Which set of blocks is the correct answer?: 正しいブロックの組み合わせはどれでしょう？
       4-5 Algorithms Multi 1:
         Baking cookies: クッキーを焼く
         Banana: バナナ
         Brushing your teeth: 歯を磨く
         Multiple Choice: 複数の選択肢
-        Shopping from a grocery list: Shopping from a grocery list
-        Which one of these items is hardest to describe an algorithm for?: Which one
-          of these items is hardest to describe an algorithm for?
+        Shopping from a grocery list: 食料品リストから買い物をする
+        Which one of these items is hardest to describe an algorithm for?: どのアイテムがアルゴリズムを記述するのが最も難しいですか?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene は _____ 都市です。
         0: '? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
-        1: ': Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
+        1: 3つの文章があります。3つ全てが同じパターンにあてはまるようなテンプレートはどれでしょう？
         Multiple Choice: 複数の選択肢
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
@@ -470,8 +459,7 @@
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: 複数の選択肢
-        Which of these pictures best represents crowdsourcing?: Which of these pictures
-          best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: どの写真がクラウドソーシングを表していますか?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: 髪をとかす
         Cleaning your room: 部屋の掃除
@@ -500,9 +488,7 @@
           take you to?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
-          the DNS has sent you to the page at the IP address 100.42.50.110, which
-          website are you on?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: もしDNSがIPアドレス100.42.50.110のページを送信したすると、どのウェブサイトが該当しますか?
         Multiple Choice: 複数の選択肢
         code.org: code.org
         csisfun.com: csisfun.com

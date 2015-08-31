@@ -240,13 +240,13 @@
           najmniejszej liczby bloków.
         maze_karel_1_9: 'Spowoduj, abym usunął wszystkie te sterty śmieci. Zrób to
           za pomocą możliwie najmniejszej liczby bloków. Wskazówka: możesz użyć bloku
-          dopóki w bloku powtórz.'
+          "dopóki".'
         maze_karel_1_10: Pracuję do późna, zrobiło się więc ciemno i nie mogę określić,
           jak duże są sterty śmieci. Teraz nie mam niestety wszystkich opcji w bloku
-          dopóki. Przesuwaj mnie po polu i, jeśli jest sterta śmieci, to usuń ją.
+          "dopóki". Przesuwaj mnie po polu i, jeśli jest sterta śmieci, to usuń ją.
         maze_karel_1_11: 'Nadal jest ciemno. Przenieś mnie po polu. Jeśli jest sterta
           śmieci, to usuń ją, a jeśli jest otwór, to wypełnij go. Wskazówka: wykorzystaj
-          rozwijane menu w bloku jeśli.'
+          rozwijane menu w bloku "jeśli".'
         turtle_2_1: 'Cześć. Mnie zombie artysty. Mnie kochają rysunek! Pomóż mi narysować
           kwadrat w specjalnym kolorze. Ważna Uwaga: możesz użyć tych samych bloków,
           ale teraz zostały zgrupowane w kategorie.'
@@ -262,10 +262,12 @@
           użyć funkcji narysuj kwadrat pięć razy.
         turtle_2_6: 'Ten program używa licznika, by narysować te same kwadraty, co
           poprzednio. Chcesz, by kwadraty były tej samej wielkości, co poprzednio,
-          użyj więc bloku licznik. Wskazówka: Znajdziesz go w kategorii Zmienne.'
+          użyj więc bloku "counter" (licznik). Wskazówka: Znajdziesz go w kategorii
+          "Variables" (Zmienne).'
         turtle_2_7: Oto program do rysowania spirali, ale bloki są wyłączone, więc
-          nie będą działać. Utwórz nowy program używając bloku licz z (z kategorii
-          Pętle) i bloku licznik (z kategorii Zmienne), aby narysować taką samą spiralę.
+          nie będą działać. Utwórz nowy program używając bloku "licz" z (z kategorii
+          "Loops" (Pętle)) i bloku "counter" (licznik) (z kategorii "Variables" (Zmienne)),
+          aby narysować taką samą spiralę.
         turtle_2_7_5: Jest nowa funkcja narysuj bałwana (w kategorii Funkcje). Narysuj
           dwa bałwany o wysokość 250 i 100.
         turtle_2_8: To jest trochę podstępne. Użyj funkcji narysuj bałwana i nowego
@@ -288,13 +290,13 @@
           śmieci.
         maze_karel_2_5: Utwórz nową funkcję, która usuwa 6 szufelek śmieci ze sterty
           i użyj jej, by mi pomóc wyczyścić wszystkie sterty śmieci.
-        maze_karel_2_6: Użyj dwóch nowych funkcji, wypełnij 8 i usuń 8, aby wyczyścić
-          wszystkie stery śmieci i zasypać wszystkie dziury.
+        maze_karel_2_6: Użyj dwóch nowych funkcji, "fill 8" (wypełnij 8) i "remove
+          8" (usuń 8), aby wyczyścić wszystkie stery śmieci i zasypać wszystkie dziury.
         maze_karel_2_7: Na moim polu jest krowa! Napisz nową funkcję, która pomaga
           uniknąć krowy i usuwa stertę śmieci. Umieścić wszystkie swoje bloki wewnątrz
           nowej funkcji.
-        maze_karel_2_8: Użyj tej nowej funkcji o nazwie unikaj krowy i usuń 1, aby
-          usunąć wszystkie sterty.
+        maze_karel_2_8: Użyj tej nowej funkcji o nazwie "avid the cow and remove 1"
+          (unikaj krowy i usuń 1), aby usunąć wszystkie sterty.
         maze_karel_2_9: OK, tutaj jest funkcja, która usuwa 4 różne sterty śmieci
           znajdujące się w pionowej kolumnie. Spróbuj umieścić tę funkcję wewnątrz
           pętli, aby usunąć wszystkie sterty śmieci przy użyciu tylko kilku nowych
@@ -371,9 +373,9 @@
         bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
           Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
         bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy strzałka
-          w lewo". Przesuń paletkę, aby osiągnąć ostateczne cele.
+          w lewo". Przesuwaj paletkę, aby osiągnąć ostateczne cele.
         bounce_3: Teraz spróbuj czegoś podobnego z blokiem "kiedy strzałka w górę".
-          Przenieś paletki do miejsca końcowego na górze.
+          Przenieś paletkę do miejsca końcowego na górze.
         bounce_4: Tym razem musisz dodać cztery bloki. Przenieś paletki do wszystkich
           czterech miejsc końcowych, by zakończyć układankę.
         bounce_5: Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki. Dołącz
@@ -381,19 +383,19 @@
           ostateczny cel.
         bounce_6: Teraz ostateczny cel jest na górze. Musisz dołączyć bloki do obu
           bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
-        bounce_7: Dołącz bloki do każdego z bloków "gdy". Odbijaj piłeczkę, aż osiągnie
+        bounce_7: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę, aż osiągnie
           ostateczny cel.
         bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
           przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka mija rakietkę",
           aby utworzyć grę. Zobacz, ile punktów zdobędziesz, zanim Twój przeciwnik
           zdobędzie dwa punkty.
-        bounce_11: Możesz teraz dołączyć bloki do bloku "gdy w grze". Musisz dołączyć
-          nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również, spróbuj
-          zmienić scenerię lub szybkość rakietki oraz piłki i zobacz, ile punktów
-          zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.
-        bounce_12: Utwórz własną grę Odbijanie. Możesz zmienić wszystkie efekty wizualne
-          i zasady. Kiedy skończysz, kliknij przycisk Zakończ, aby Twoi znajomi mogli
-          zagrać na swoich telefonach.
+        bounce_11: Możesz teraz dołączyć bloki do bloku "po uruchomieniu". Musisz
+          dołączyć nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również,
+          spróbuj zmienić scenerię lub szybkość rakietki oraz piłki i zobacz, ile
+          punktów zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.
+        bounce_12: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie efekty
+          wizualne i zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi
+          znajomi mogli zagrać na swoich telefonach.
         Custom_builder: Przeciągnij bloki z przybornika do obszaru roboczego, aby
           narysować poziom, który chcesz utworzyć. Naciśnij przycisk "Uruchom", gdy
           jesteś gotowy.
@@ -421,7 +423,7 @@
           ustawić wynik z powrotem na 0.
         flappy_11: Utwórz swoją własną grę Flappy'ego. Możesz zmienić wszystkie efekty
           wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
-          przycisk Zakończ, aby swoim znajomym udostępnić grę na telefony.
+          przycisk "Zakończ", aby swoim znajomym udostępnić grę na telefony.
         flappy_k1_1: Zagraj z Flappym
         flappy_k1_2: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij przycisk
           "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca
@@ -454,7 +456,7 @@
         jigsaw_10: Ułóż bloki, by utworzyć obrazek
         jigsaw_11: Ułóż bloki, by utworzyć obrazek
         jigsaw_12: Ułóż bloki, by utworzyć obrazek
-        jigsaw_13: Rozwiązać zagadkę!
+        jigsaw_13: Rozwiąż zagadkę!
         mazestep_1: Opis kroku w labiryncie jest tutaj
         mazestep_2: Opis kroku w labiryncie jest tutaj
         mazestep_3: Opis kroku w labiryncie jest tutaj
@@ -472,9 +474,9 @@
         studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin porusza
           się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we
           wszystkie cele?
-        studio_c2_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
-          Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę
-          i w dół w nieskończoność?
+        studio_c2_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie kodu
+          bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza
+          się w górę i w dół w nieskończoność?
         studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia,
           gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby
           się to stało?
@@ -484,7 +486,7 @@
         studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
           a następnie poruszać nim za pomocą przycisków ze strzałkami, aż zdobędziesz
           punkt?
-        studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk Zakończ,
+        studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk "Zakończ",
           aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
         studio_c3_story_2: Czy mógłbyś spowodować, by pies coś powiedział, a następnie
@@ -497,16 +499,16 @@
         studio_c3_story_5: Czy mógłbyś dodać blok powodujący, że ośmiornica poczuje
           się szczęśliwie?
         studio_c3_story_6: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk
-          Zakończ, aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich
+          "Zakończ", aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich
           telefonach.
         studio_c3_game_1: Czy mógłbyś napisać program, który powoduje, że ośmiornica
           mówi "hello", po kliknięciu na niej?
         studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin
           porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć
           we wszystkie cele?
-        studio_c3_game_3: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
-          Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę
-          i w dół w nieskończoność?
+        studio_c3_game_3: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie
+          kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur
+          porusza się w górę i w dół w nieskończoność?
         studio_c3_game_4: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk
           "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek,
           aby się to stało?
@@ -535,7 +537,7 @@
           kodu bez przerwy. Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej
           porusza się w górę i w dół bez przerwy?
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
-          dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą
+          dźwięku, gdy jednorożec wpada na kreatora, następnie przenoś go za pomocą
           strzałek aż zdobędziesz punkt?
         studio_playlab_9: Ustaw tło dla tej inwazji obcych i pomóż Spacebot dotrzeć
           do obcych szybciej zmieniając jego prędkość. Następnie przenoś go za pomocą
@@ -584,7 +586,7 @@
         maze_intro: Labirynt - wprowadzenie
         artist_intro: Artysta - wprowadzenie
         farmer_intro: Rolnik - wprowadzenie
-        flappy_intro: Wprowadzenie do Flappy
+        flappy_intro: 'Flappy: Wprowadzenie'
         loop_times: Blok powtórz razy
         loop_until: Blok powtarzaj aż
         if: Blok jeśli
@@ -672,7 +674,7 @@
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Zmienne w Kopertach
         C4_unplugged_forloops: Pętle dla (for)
-        C4_unplugged_parameters: Pisanie Piosenek z parametrami
+        C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
@@ -763,16 +765,16 @@
           go w następnej łamigłówce.
         edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
         edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
-          w którym Pszczółka skręci, aby zebrać nektar.
+          w którym pszczółka skręci, aby zebrać nektar.
         logic_category: Otwórz "Logika", by znaleźć blok "jeśli/w przeciwnym razie".
         length_parameter: Czy potrafisz zmodyfikować tę funkcję tak, aby używała parametru
-          "długość" (length)?
-        frozen_diamond_repeat: Użyj bloku "powtarzaj", aby utworzyć ten kształt.
+          "length" (długość)?
+        frozen_diamond_repeat: Użyj bloku "powtórz", aby utworzyć ten kształt.
         frozen_circle_function_in_circle_turn: Nie zapomnij skręcić po utworzeniu
-          każdego okregu.
+          każdego okręgu.
         frozen_circle_function_with_parameter_circle: Użyj bloku "utwórz okrąg" i
-          zmień jego rozmiar.
-        frozen_snowflake_branch: Użyj bloku "utwórz płatek śnieżynki"
+          zmień rozmiar okręgu.
+        frozen_snowflake_branch: Użyj bloku "utwórz ramię śnieżynki"
         frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
         playlab_drag_say: Przeciągnij blok "powiedz" i wpisz "hello"
         playlab_use_twice: Użyj tego bloku dwa razy i pamiętaj, aby zmienić numer
@@ -781,14 +783,14 @@
         playlab_play_sound: Dodać "Odtwórz dźwięk" blok tutaj
         playlab_arrow_keys: Pamiętaj, aby z nich korzystać do przesuwania czarownicy
           po kliknięciu "Uruchom"
-        playlab_add_move: Dodaj bloki "przenieś" wewnątrz tego bloku "powtórz"
+        playlab_add_move: Dodaj bloki "idź" wewnątrz tego bloku "powtórz"
         playlab_add_score: Dodaj tutaj bloki wyniku
         playlab_add_blocks: Dodaj tutaj swoje bloki
         set_variable: Przeciągnij tutaj blok z liczbą, aby ustalić zmienną
         place_variable: Przeciągnij zmienną do wnętrza tego bloku
         bee_for_loop: Przeciągnij największą liczbę nektaru, jaką chcesz, by pszczółka
           zebrała tutaj
-        place_counter_variable: Przeciągnij zmienną "licznik" (counter) do wnętrza
+        place_counter_variable: Przeciągnij zmienną "counter" (licznik) do wnętrza
           tego bloku
         function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki są
           wykonywane za każdym razem, gdy używasz bloku "draw a square" (narysuj kwadrat)

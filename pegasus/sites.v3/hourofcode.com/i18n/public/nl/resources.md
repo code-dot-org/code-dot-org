@@ -4,286 +4,158 @@ nav: resources_nav
 ---
 
 <div class="row">
-  <h1 class="col-sm-6">
-    Middelen
+  <h1 class="col-sm-12">
+    Resources (2015 resources coming soon)
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Meld uw evenement aan</button></a>
-  </div>
 </div>
 
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/resources/how-to') %>)
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+<a id="handouts"></a>
 
-<% else %>
+## Gebruik deze hand-out om iedereen te informeren
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
-<% end %>
+## Geef deze hand-out aan leerkrachten en scholen
 
-<a id="handouts"></p> 
+[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
-<h2>
-  Use this handout to spread the word
-</h2>
+<a id="videos"></a>
 
-<p>
-  <a href="/files/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="afbeelding" /></a>
-</p>
+## Toon deze video's om leerlingen te inspireren
 
-<h2>
-  Give this handout to teachers and schools
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Wat de meeste scholen je niet leren (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="afbeelding" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Het Uur Code is aangebroken - iedereen kan het leren</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="videos"></p> 
-  
-  <h2>
-    Show these videos to inspire students
-  </h2>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Wat de meeste scholen je niet leren (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Het Uur Code is aangebroken - iedereen kan het leren</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama over informatica</strong></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Iedereen kan het leren (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-<p>
-<a id="posters"></p> 
+<div style='clear:both'>
+</div>
 
-<h2>
-  Hang these posters in your school
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama over informatica</strong></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="afbeelding" /></a> <a href="/files/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="afbeelding" /></a> <a href="/files/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="afbeelding" /></a> <a href="/files/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="afbeelding" /></a> <a href="/files/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="afbeelding" /></a> <a href="/files/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="afbeelding" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Iedereen kan het leren (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="banners"></a>
-</p>
+<div style="float:left; padding:10px">
+</div>
 
-<h2>
-  Feature these banners on your website
-</h2>
+<div style='clear:both'>
+</div>
 
-<p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="posters"></a>
 
-<p>
-  <a id="social"></a>
-</p>
+## Hang deze posters in je school
 
-<h2>
-  Post these on social media
-</h2>
+[![afbeelding](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![afbeelding](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![afbeelding](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![afbeelding](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![afbeelding](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![afbeelding](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![afbeelding](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![afbeelding](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
-<p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="banners"></a>
 
-<p>
-  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="afbeelding" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+## Laat deze banners op uw website zien
 
-<p>
-  <a id="sample-emails"></a>
-</p>
+[![afbeelding](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<h2>
-  Send these emails to help promote the Hour of Code
-</h2>
+<a id="social"></a>
 
-<p>
-  <a id="email"></a>
-</p>
+## Post dit op sociale media
 
-<h2>
-  Ask your school, employer or friends to sign up:
-</h2>
+[![afbeelding](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the Hour of Code last year, you might know it made history. In een week hebben 15 miljoen leerlingen informatica geprobeerd!
-</p>
+[![afbeelding](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+<a id="sample-emails"></a>
 
-<p>
-  This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
-</p>
+## Stuur deze e-mails om het Uur Code te promoten
 
-<p>
-  Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
-</p>
+<a id="email"></a>
 
-<p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
-</p>
+## Vraag uw school, werkgever of vrienden zich aan te melden:
 
-<p>
-  <a id="media-pitch"></a>
-</p>
+Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-<h2>
-  Invite media to attend your event:
-</h2>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
-</p>
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-<p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
-</p>
+Deel het doel. Organiseer een evenement. Vraag een lokale school om in te schrijven, of probeer er zelf aan mee te doen -- iedereen kan er op vooruitgaan om de basis te leren.
 
-<p>
-  In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+Get started at http://hourofcode.com/<%= @country %>
 
-<p>
-  Now the Hour of Code movement is aiming for 100 million students.
-</p>
+<a id="media-pitch"></a>
 
-<p>
-  That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
-</p>
+## Vraag de media uw evenement bij te wonen:
 
-<p>
-  I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
-</p>
+**Subject line:** Local school joins mission to introduce students to computer science
 
-<p>
-  The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
-</p>
+Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Meisjes en minderheden zijn ernstig ondervertegenwoordigd. Het goede nieuws is, we zijn op weg om dit te veranderen.
 
-<p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
-</p>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! en Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>When:</strong> [DATE and TIME of your event]
-</p>
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
-<p>
-  <strong>Where:</strong> [ADDRESS and DIRECTIONS]
-</p>
+Ik nodig je uit om de aftrap bij te wonen en om uw kinderen de activiteit te zien starten op [DATE].
 
-<p>
-  I look forward to being in touch.
-</p>
+Het Uur Code, georganiseerd door de non-profitorganisatie Code.org en meer dan 100 anderen, is een demonstratie dat de huidige generatie van studenten bereid zijn om de kritische vaardigheden voor succes in de 21e eeuw te leren. Doe alsjeblieft mee.
 
-<p>
-  <a id="parents"></a>
-</p>
+**Contact:** [YOUR NAME], [TITLE], telefoonnummer
 
-<h2>
-  Tell parents about your school's event:
-</h2>
+**Wanneer:** [Datum en tijd van uw evenement]
 
-<p>
-  Dear Parents,
-</p>
+**Waar:** [Adres en routebeschrijving]
 
-<p>
-  We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
-</p>
+Ik kijk uit naar onze kennismaking.
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="parents"></a>
 
-<p>
-  Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
-</p>
+## Vertel ouders over het evenement op je school:
 
-<p>
-  This is a chance to change the future of education in [TOWN/CITY NAME].
-</p>
+Beste ouders,
 
-<p>
-  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
-</p>
+We leven in een wereld omringd door technologie. En we weten dat, welk vakgebied onze studenten ook kiezen om zich te ontwikkelen, hun vermogen om te slagen zal steeds meer afhangen van hun begrip van hoe technologie werkt. Maar slechts een klein deel van ons leren over de informatica en er zijn nu minder studenten die het studeren dan tien jaar terug.
 
-<p>
-  Sincerely,
-</p>
+Dat is waarom onze hele school meedoet aan het grootste leerevenement in de geschiedenis: het Uur Code, tijdens de Computer Science Education Week (8-14 december). 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-<p>
-  Your principal
-</p>
+Ons 'Uur Code' is een statement dat [SCHOOL NAAM] er klaar voor is onze leerlingen belangrijke hedendaagse vaardigheden te leren. Om door te gaan met het brengen van programmeer activiteiten aan je leerlingen willen we het Uur Code event enorm maken. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-<p>
-  <a id="politicians"></a>
-</p>
+Dit is een kans om de toekomst te veranderen in [PLAATSNAAM].
 
-<h2>
-  Invite a local politician to your school's event:
-</h2>
+Kijk op http://hourofcode.com/<%= @country %> voor details en help met het verspreiden van het doel.
 
-<p>
-  Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-</p>
+Met vriendelijke groet,
 
-<p>
-  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-</p>
+De rector
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="politicians"></a>
 
-<p>
-  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
-</p>
+## Nodig een politicus uit voor het evenement op jouw school:
 
-<p>
-  Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-</p>
+Geachte heer/mevrouw [ACHTERNAAM]:
 
-<p>
-  Sincerely, [NAME], [TITLE]
-</p>
+Wist u dat in de dagelijkse economie de computerbanen van de afgestudeerden winnen met 3 tegen 1? Bovendien is informatica tegenwoordig van fundamenteel belang voor *iedere* sector. Yet most of schools don’t teach it. Op [SCHOOLNAAM] proberen we daar verandering in te brengen.
 
-<p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Meld uw evenement aan</button></a>
-</p>
+Dat is waarom onze hele school meedoet aan het grootste leerevenement in de geschiedenis: het Uur Code, tijdens de Computer Science Education Week (8-14 december). 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+Ik schrijf u om u uit te nodigen om mee te doen in het Uur Code-evenement en een speech te houden op de aftrap. Het vindt plaats op [DATUM, TIJD, PLAATS], en zal laten zien dat [NAAM STAD] er klaar voor is onze leerlingen belangrijke hedendaagse vaardigheden te leren. We willen er zeker van zijn dat onze studenten op de voorgrond staan van de toekomstige technologie en het niet alleen over zich heen laten komen.
+
+Ik ben te bereiken op [TELEFOONNUMMER EN MAILADRES]. Ik kijk uit naar uw antwoord.
+
+Met vriendelijke groet, [NAME], [TITLE]

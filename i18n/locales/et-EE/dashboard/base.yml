@@ -2,6 +2,7 @@ et:
   errors:
     messages:
       not_saved: 'Palun parandage järgmised vead:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -135,7 +136,7 @@ et:
       cant_join_own_section: Kahjuks te ei saa ühineda oma osaga.
     mail:
       invite_student:
-        subject: 'Join a class with %{teacher_name} at Code.org!'
+        subject: 'Liitu klassiga koos %{teacher_name} Code.org!'
       student_disassociated:
         subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane.'
       teacher_disassociated:
@@ -183,15 +184,15 @@ et:
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Olete saanuauhinna! (Ainult USA õpilased)
       not_earned_title: 'Lõpeta juhend, teeni auhindu (ainult  USA õpilastele)'
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      not_earned: "Õpi kõiki arvuti teaduse kontseptsioone, kogu kõik %{num_trophies} trofeed ja teeni reaalmaailma auhindu. Võite valida 10GB vaba ruumi Dropboxis, $10 Skype'i krediiti, ja tasuta mängude allalaadimise vahel. Märkus: pakkumine kehtib ainult USA üliõpilastele ja ainult nii kaua, kuni asju jagub."
       teacher:
         earned: '15 või enam õpilast kogusid %{num_trophies} trofeed. Sa oled võitnud õpetaja auhinna! (ainult USA õpetajatele)'
-        not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
+        not_earned_title: 'Õpeta klassi, teeni kuni $1,000 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> krediiti (ainult Usa õpetajatele)'
         not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
         bonus:
-          not_earned_title: 'You can still earn an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'
-          earned: '7 or more of the students who collected all %{num_trophies} trophies are girls. You have won a bonus prize! (U.S. teachers only)'
-          not_earned: 'If at least 7 of your students who earn all %{num_trophies} trophies are girls, your reward is an additional $250 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+          not_earned_title: 'Sa saad teenida täiendavat $250 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> krediiti (ainult Usa õpetajatele)'
+          earned: '7 või enam õpilast, kes kõik %{num_trophies} trofeed kogusid on tüdrukud. Olete võitnud boonus auhinna! (Ainult Usa õpetajatele)'
+          not_earned: 'Kui vähemalt 7 sinu õpilastest, kes teenivad kõik %{num_trophies} trofeed on tüdrukud, teie auhind on täiendavalt $250 <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> krediiti. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> krediiti saavad kasutada ainult Usa avalike koolide õpetajad.'
   crud:
     new_model: 'Uus %{model}'
     show: Kuva
@@ -253,7 +254,7 @@ et:
       tried: Proovitud, aga ei lõpetanud
       not_tried: Pole veel proovinud
       activity: 'Näitab õpilase aktiivsust viimasel %{hours}%{plural}'
-      no_section: No assigned section
+      no_section: Pole määratud sektsiooni
       trophies: Trofeed
     students:
       name: Nimi
@@ -270,7 +271,7 @@ et:
       vist: Paluge õpilastel külastada
       section_code: 'ja sisestage nende jaotise kood:'
       first_please: 'Esiteks, palun %{add_section}'
-      for: For
+      for: Jaoks
       enter: 'Sisestage:'
     sections:
       add: Jaotise lisamine
@@ -279,7 +280,7 @@ et:
       students: Õpilased
       section_code: Jaotise kood
       add_section_code: Add Students Section-Code
-      secret: Secret type
+      secret: Salajane tüüp
       grade: Klass
       course: Kursus
       rename: nimeta ümber
@@ -288,11 +289,11 @@ et:
       confirm_delete: Olete kindel et soovite selle sektsiooni kustutada?
       email: Saada e-postiga
     rollup: Edusammude Ülevaade
-    activity: Recent class activity
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
+    activity: Hiljutine klassi tegevus
+    user_not_found: Õpetajat või õpilast ei leitud
+    cant_remove_student_no_email: '%{student_name} ei saa eemaldada teie õpilasena, sest %{student_name} ei ole registreeritud e-posti aadressi'
     cant_remove_teacher_no_email: '%{teacher_name} ei saa eemaldada oma õpetajat, kuna sul pole registreeritud e posti aadress'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    student_teacher_disassociated: '%{teacher_name} on eemaldatud %{student_name} õpetajana'
     panel:
       answer_viewer: Vastuse Vaataja
       student: Õpilane
@@ -308,7 +309,7 @@ et:
     current_password_hint: (sisesta oma parool muudatuste kinnitamiseks)
     delete: Kustuta oma konto
     delete_text: Allolevale nupule klikkimine kustutab sinu konto.
-    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_text_teacher_note: 'Pange tähele: konto kustutamine ei kustuta sinu õpilaste kontosid.'
     delete_confirm: Kas soovite kindlasti kustutada oma konto?
   user_level:
     completed: Tehtud
@@ -319,8 +320,8 @@ et:
     classroom_activity: Unplugged Activity
   home:
     title: Kood stuudio
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    description: Code Stuudio on koduks online kursustele, mis on loodud Code.org poolt.
+    lines_of_code: '%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Kursuste 1, 2 ja 3 ülevaade
     lesson_plans: Tunnikavad
@@ -328,23 +329,23 @@ et:
     student_reg_link: Õpilaste registreerimine
     teacher_reg_link: Õpetajate registreerimine
     signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
-    teacher_dashboard: See progress dashboard
+    teacher_dashboard: Vaata edusammudee armatuurlauda
     teacher_student_count_one: 'Sul on %{count} õpilane.'
     teacher_student_count: 'sul on %{count} õpilast.'
     teacher_averages: 'Teie Õpilased on keskmiselt teeninud %{trophy_average}/%{trophy_max} "Kontseptsiooni Meisterlikkuse" trofeed.'
     teacher_print_certificates: Saate printida tunnistusi õpilastele, kes selle kursuse lõpetasid
-    teacher_read_blog: Read about news and updates to our materials at our Educator Blog
+    teacher_read_blog: Loe uudiseid ja värskendusi meie materjale meie hariduslikust blogist
     classroom: Teie klass
     student_progress: Sinu õppeprogress
     student_stats: 'Sa oled saanud %{trophy_count}/%{trophy_max} "Kontseptsiooni Meisterlikkuse" trofeed.'
     student_left_off: 'Kus sa pooleli jäid:'
-    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
+    student_finished: 'Sa oled lõpetanud kõik Code.org õpetused. Vali teine klass %{online_link} või ka %{local_school_link}.'
     local_school: kohalik kool
     online: onlain
     see_details: Vaata detaile
-    view_course: View Course
+    view_course: Vaata kursust
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    tryfirst: 'Või võite proovida ja hiljem registreerida:'
     trynow: Proovi nüüd
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
@@ -353,12 +354,15 @@ et:
     use_as_teacher: Kasuta seda lehte kui õpetaja
     heading_hoc2014: '<h2>Koodi Tund </h2><h1>Kõikidele vanustele</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
-    heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
+    heading_apps: '<h2>Lõbu</h2> <h1>Kõigile</h1>'
+    heading_legacy: '<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>'
     your_gallery: Galerii
-    no_primary_course: Try a Code Studio course
+    no_primary_course: Proovige Code Studio kursust
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: Prindi tunnistus
+  share:
+    title: Õpi Code stuudios
+    description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
   gender:
     male: Mees
     female: Naine
@@ -367,16 +371,23 @@ et:
     student: Õpilane
     teacher: Õpetaja
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid  luua selle õppekeskkonna.'
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. All Rights Reserved.'
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Autoriõigus
+    more: Veel
     feedback: Tagasiside
     translate: Aita meil tõlkida oma keelde
     support: Tugi
     support_url: http://support.code.org
-    tos: Terms
-    privacy: Privacy Policy
-    secure: Secure Version
+    tos_short: Terms
+    tos: Teenuse tingimused
+    privacy: Privaatsuspoliitika
+    secure: Turvaline versioon
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid
@@ -396,7 +407,7 @@ et:
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
       hide_this_warning: Peida see hoiatussõnum
     upgrade:
-      header: Please upgrade your browser.
+      header: Palun uuendage oma brauser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
       button: Take me to the list of supported browsers
   slow_loading: See võtab tavapärasest rohkem aega...
@@ -404,14 +415,14 @@ et:
   next_stage: Valmis! Mine edasi järgmisele tasemele
   download_pdf: Ava tunnikava
   lesson_plan: Tunnikava
-  view_lesson_plan: View Lesson Plan
+  view_lesson_plan: Vaata tunnikava
   pdf_download: Lae alla PDF-fail
-  download_coming_soon: Downloadable activity coming soon.
+  download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
+    flappy_og_title: Tutvu minu Flappy mänguga
     studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Vaadake mida ma tegin
     og_description: I wrote the code myself with Code.org
@@ -438,7 +449,7 @@ et:
       title: Flappy kood
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
     20-hour:
-      title: Accelerated Course
+      title: Kiirendatud kursus
       body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
       body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
@@ -457,7 +468,7 @@ et:
     students_made_these_with_code: Students made these with code!
     picture_count: 'In the past <b>%{days}</b> days, students have drawn <b>%{count}</b> pictures by writing their own computer programs. Click on the pictures to see each program in action.'
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
-    want_to_make_your_own: Want to make your own?
+    want_to_make_your_own: Tahad teha enda oma?
     more: 'Rohkem &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} tagasi'
@@ -469,7 +480,7 @@ et:
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     feedback: Anna tagasisidet
     report_bug: Raporteeri veast
-    support: Get Help
+    support: Abi saamine
     support_url: //support.code.org
   multi:
     wrong_title: Vale vastus
@@ -493,10 +504,14 @@ et:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Sisesta siia oma vastus
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Tänud
+    open_response_body: Täname vastuse eest!
   dialog:
     ok: Olgu
+    startover_title: Oled sa kindel et tahad uuesti alustada?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Alusta uuesti
+    startover_cancel: Tühista
   time:
     hour: 1 tund
     day: päev
@@ -533,49 +548,49 @@ et:
           description: ""
   age_interstitial:
     age: Sinu vanus
-    header: Account Information Update
+    header: Konto teabe värskendamine
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_started: pole alustatud
-    in_progress: in progress
-    completed_too_many_blocks: completed, too many blocks
+    in_progress: pooleli
+    completed_too_many_blocks: lõpetatud, liiga palju plokke
     completed_perfect: tehtud, suurepärane
     furthest_level_attempted: furthest level attempted
     assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    completed_courses: Lõpetatud kursused
+    all_courses: Kõik kursused
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projektid
+    create: Loo projekt
+    create_a_project: 'Uue projekti loomine:'
+    new: Loo uus
+    rename: Nimeta ümber
     save: Salvesta
     delete: Kustuta
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Tagasi kursuse juurde
+    my_projects: Minu projektid
     share: Jaga
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Jaga oma projekti
+    share_copy_link: 'Kopeeri link:'
+    close: Sulge
     more: Veel
     name: Nimi
-    updated: Updated
-    project_type: Project Type
+    updated: Uuendatud
+    project_type: Projekti tüüp
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    need_help: Vajad abi kuidas alustada?
     really_delete: Kas kustutada?
     delete_yes: Jah
     delete_no: Ei
-    saved: Saved
-    not_saved: Not saved
+    saved: Salvestatud
+    not_saved: Ei ole salvestatud
     cancel: Tühista
-    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_title: Kas soovite kindlasti kustutada selle projekti?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: Vaata minu projekte
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

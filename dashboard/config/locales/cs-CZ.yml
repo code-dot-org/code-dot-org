@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Oprav prosím následující chyby:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -418,6 +420,10 @@
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Muž
     female: Žena
@@ -426,16 +432,30 @@
     student: student
     teacher: Učitel
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit
       tento kurz.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Rozzlobený ptáci ™ & © 2009-2014 Rovio Entertainment Ltd. Všechna
       práva vyhrazena. <br/> Rostliny vs. Zombies ™ & © 2014 Electronic Arts Inc.
       Všechna práva vyhrazena.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Poháněn Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Více
     feedback: Poskytnout zpětnou vazbu
     translate: Pomož nám v překladu do tvého jazyka
     support: Podpora
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Podmínky
     privacy: Zásady ochrany osobních údajů
     secure: Zabezpečená verze
@@ -583,6 +603,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
+    startover_title: Jste si jisti, že chcete začít znovu?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Začít znovu
+    startover_cancel: Storno
   time:
     hour: 1 hodina
     day: den

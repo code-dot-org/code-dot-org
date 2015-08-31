@@ -4,7 +4,7 @@ title: kit para divulgação na mídia layout: wide nav: resources_nav
 
 * * *
 
-## Como atrair a mídia para seu evento da Hora do código
+## Como atrair a mídia para sua Hora do Código
 
 *Para ver todas as perguntas da imprensa e da mídia, entre em contato pelo e-mail <press@code.org>*
 
@@ -13,7 +13,7 @@ title: kit para divulgação na mídia layout: wide nav: resources_nav
   * Entre em contato com a mídia por e-mail, duas semanas antes do seu evento. Faça o acompanhamento por e-mail e telefone, caso você não receba uma resposta inicial.
   * Peça a um membro da equipe escolar ou voluntário que tire fotos para serem compartilhadas on-line ou enviadas para a imprensa.
   * Escreva sobre a Hora do Código na página inicial do seu site e no jornal da sua escola. Publique os detalhes do seu evento e as fotos das atividades dos alunos.
-  * No Facebook e no Twitter, compartilhe atualizações sobre seus planos, anuncie seus eventos e publique fotos durante o período de 8 a 14 de dezembro. Use a hashtag **#HoraDoCodigo**, para que a Code.org possa ver e promover seus eventos.
+  * No Facebook e no Twitter, compartilhe atualizações sobre seus planos, anuncie seus eventos e publique fotos durante o período de 7 a 13 de dezembro. Use a hashtag **#HoraDoCodigo** para que a Code.org possa ver e promover seus eventos.
 
 ### Guia passo a passo:
 
@@ -49,11 +49,11 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Mais detalhes e uma citação que podem ser usados nos materiais**
 
-"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo, todos podem aprender seus fundamentos básicos", Hadi Partovi, fundador e CEO da Code.org. "Em uma semana, 15 milhões de alunos participaram da Hora do Código no ano passado. Agora, nosso objetivo é alcançar 100 milhões de alunos no mundo todo, para provar que a demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
+"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo, todos podem aprender seus fundamentos básicos", Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos por todo mundo experimentaram uma Hora do Código. A demanda pelo ensino da ciência da computação, uma área de extrema relevância no século XXI, cruza todas as fronteiras e não conhece limites."
 
 **Sobre a Code.org**
 
-A Code.org® é uma organização pública sem fins lucrativos dedicada a promover a ciência da computação e a aumentar a participação de representantes das minorias sociais, como as mulheres e os alunos negros. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Depois de seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código — que apresentou a ciência da computação a milhões de alunos — em parceria com mais de 30 distritos escolares de todo o território nacional, e lançou o Code Studio, uma plataforma de ensino on-line de código aberto para todas as idades. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org é apoiada por doações filantrópicas de corporações, fundações e indivíduos generosos, incluindo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outras. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Encontre mais recursos e exemplos de e-mail [aqui](<%= hoc_uri('/resources') %>).

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Коригирайте следните грешки:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -423,6 +425,10 @@
     no_primary_course: Опитайте курс в студиото по кодиране
     choose_next_course: Опитайте курс като си избирете един от тези по-долу
     print_certificate: Печат на сертификат
+  share:
+    title: Научете за Code Studio
+    description: Всеки може да учи компютърни науки. Програмирай игри, приложения
+      и изкуство с код.
   gender:
     male: Мъж
     female: Жена
@@ -431,16 +437,30 @@
     student: Ученик
     teacher: Учител
   footer:
+    thank_you: Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>,
+      <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team">
+      разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors">
+      образователни съветници</a> за подкрепата им в създаването на Code Studio.
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за
       създаването на този урок.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Всички права запазени.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Създадено с Amazon Web Services
+    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE
+      logo и Hour of Code&reg; са търговски марки на Code.org.'
+    copyright: Авторско право
+    more: Повече
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Термини
     privacy: Защита на личните данни
     secure: Защитената версия
@@ -591,6 +611,11 @@
     open_response_body: Благодаря за вашия отговор!
   dialog:
     ok: OK
+    startover_title: Наистина ли искате да започнете отначало?
+    startover_body: Това ще рестартира пъзела в начално състояние и ще изтрие всички
+      блокове, които сте добавили или променили.
+    startover_ok: Стартиране отначало
+    startover_cancel: Отмени
   time:
     hour: 1 час
     day: ден

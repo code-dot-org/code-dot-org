@@ -201,6 +201,7 @@
   homepage_action_text_learn: শেখা শুরু করুন।
   homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
   homepage_signpetition_dropdown: ▾ একমত;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org
     ও কলেজ বোর্ড গঠন করে।
   homepage_banner_text_link: আরও জানুন
@@ -529,6 +530,8 @@
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: অংশগ্রহণকারী
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

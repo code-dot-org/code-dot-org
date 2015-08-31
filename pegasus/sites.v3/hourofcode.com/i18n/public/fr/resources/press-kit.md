@@ -1,7 +1,5 @@
 
 
-
-
 ## Comment attirer les médias à votre événement une Heure de Code
 
 *Pour toutes les demandes de la part de la presse et des médias, veuillez communiquer avec <press@code.org>*
@@ -11,11 +9,11 @@
   * Contactez les médias deux semaines avant votre événement par e-mail. Recontactez les par e-mail et par téléphone si vous ne recevez pas de réponse.
   * Demandez à un membre du personnel de l'école ou à un volontaire de prendre des photos à partager en ligne ou envoyer à la presse.
   * Écrivez à propos de une Heure de Code sur la page d'accueil de votre site Web et dans le journal de votre école. Postez les détails de l'événement et les photos des activités des élèves.
-  * Sur Facebook et Twitter, partagez les mises à jour sur vos plans, annoncez vos événements et publier des photos de 8 au 14 décembre. Utilisez le hashtag **#HourOfCode** afin Code.org puissent consulter et promouvoir vos événements.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Guide étape par étape :
 
-**1. Planifiez votre événement**
+**1. Planifier votre événement**
 
   * Planifier une réunion pour le coup d'envoi de une Heure de Code.
   * Envoyer [une lettre](<%= hoc_uri('/resources/#sample-emails') %>) aux parents en leur demandant de passer le mot.
@@ -47,12 +45,11 @@ En Chine, tous les étudiants apprennent les sciences informatiques afin d'obten
 
 **Plus d'informations et une citation que vous pouvez utiliser dans votre matériel promotionnel**
 
-« Une Heure de Code vise à démystifier la programmation et montre que l'informatique n'est pas sorcier, n'importe qui peut apprendre les bases, » dit Hadi Partovi, fondateur et CEO de Code.org. "En une semaine l'an dernier, 15 millions d'étudiants ont essayé une heure de Code. Maintenant, nous visons 100 millions de participants à travers le monde afin de prouver que la demande de l'enseignement de l'informatique est pertinente au XXIe siècle et cela sans frontières ni limites."
+« Une Heure de Code vise à démystifier la programmation et montre que l'informatique n'est pas sorcier, n'importe qui peut apprendre les bases, » dit Hadi Partovi, fondateur et CEO de Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **A propos de Code.org**
 
-Code.org® est un organisme public à but non lucratif dédié à accroître la participation à l'informatique et à accroître la participation des groupes sociaux sous-représentés. Sa vision est que chaque élève de chaque école devrait avoir la possibilité d'apprendre la programmation informatique. Après son lancement en 2013, Code.org a organisé la campagne Une Heure de Code — qui a offert un aperçu à des millions d'élèves de l'informatique, en partenariat avec plus de 30 districts scolaires publics dans tout le pays et a lancé le Code Studio, une plate-forme d'apprentissage en ligne, libre pour tous les âges. Pour plus d'informations, veuillez visiter: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Sa vision est que chaque élève de chaque école devrait avoir la possibilité d'apprendre la programmation informatique. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Pour plus d'informations, veuillez visiter: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Trouver davantage de ressources et d'exemples de courriels[ ici](<%= hoc_uri('/resources') %>).
-

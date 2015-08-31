@@ -23,6 +23,10 @@ Dashboard::Application.routes.draw do
     end
   end
 
+
+  # Media proxying
+  get 'media', to: 'media_proxy#get', format: false
+
   get 'sections/new', to: redirect_to_teacher_dashboard
   get 'sections/:id/edit', to: redirect_to_teacher_dashboard
 

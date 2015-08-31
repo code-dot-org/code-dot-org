@@ -6,7 +6,7 @@
 
 # 编程一小时活动指南
 
-在计算机科学教育周（十二月8-14日）期间组织一场编程一小时活动，以此庆祝计算机科学并鼓励更多的学生尝试计算机科学。任何人在任何地点都可以组织一场编程一小时活动。
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) 你的活动准备
 
@@ -23,7 +23,6 @@
   * 其他活动构思： 
       * 邀请当地的行业领导者，讨论他或她的涉及到计算机科学的工作
       * 邀请当地的政治家并让学生都教他或她如何编程
-      * 观看Q&amp；与编程一小时大使对话。 这些过程将会被记录并上传到Code.org的YouTube页面。 今年的参与者包括比尔·盖茨，桑德伯格，阿什顿·库彻等等！
       * 组织学生展示不插电活动
       * 组织学生教校长或老师如何编程
       * 如果你的学校已经教过计算机科学，让学生来进行演示
@@ -37,7 +36,7 @@
 
 **活动:**开启学校范围内的计算机科学教育周集会
 
-**日期:**十二月8日（启动计算机科学教育周）
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **时间:**上学日的某天，活动首选上午，约1小时。
 
@@ -47,72 +46,11 @@
 
 ## 流程演示
 
-<table>
-  <tr>
-    <th style="width:200px">
-      时间
-    </th>
-    
-    <th style="width:800px">
-      活动
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      上午10：00-10：05
-    </td>
-    
-    <td>
-      以其中一个<a href="http://hourofcode.com/us/resources#videos">励志视频</a>开场
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    校长展望计算机科学的重要性，使用这些<a href="/resources/stats">数据和信息图表</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    以其中一个<a href="http://hourofcode.com/us/resources#videos">励志视频</a>开场
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    学生们为整个学校掩饰编程一小时，趣味转换—让学生们教校长，政要和其他学生。
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    由把编程一小时活动等带给全校的老师发表闭幕词。
-  </td>
-</table>
+| 时间               | 活动                                                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
+| 10:05 - 10:15 am | 校长展望计算机科学的重要性，使用这些[数据和信息图表](/resources/stats)                                                                            |
+| 10:15 - 10:30 am | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                  |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
+| 10:40 - 11:00 am | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |

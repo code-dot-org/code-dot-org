@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"\"Gjenta\" eller \"Hvis\" blokkere må ha andre blokker inni for å fungere. Forviss deg om at blokkene passar inn.",
   "emptyBlockInFunction":"Funksjonen {name} har et tomt inndatafelt.",
   "emptyBlockInVariable":"Variabelen {name} har et tomt inndatafelt.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Funksjon-blokka må ha andre blokker inni for å fungere.",
   "emptyFunctionalBlock":"Du har ei blokk med uutfylt inndata.",
   "emptyTopLevelBlock":"Det er ingen blokker å kjøre. Du må feste en blokk til {topLevelBlockName}-blokken.",

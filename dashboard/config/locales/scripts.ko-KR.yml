@@ -233,7 +233,7 @@
           description_short: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
           'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
-          'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
+          'Eval: Strings and Images': 문자열과 이미지
           'Unplugged: Contracts': '언플러그드 : 제한 조건'
           'Eval: Writing Contracts': '평가: 제한 조건 쓰기'
           'Calc: Defining Variables': '계산: 변수 정의하기'
@@ -508,7 +508,7 @@
             거리 계산식'
           'Play Lab: Collision Detection (Big Game)': '플레이 랩: 충돌 감지 (빅 게임)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           Contracts: 제한하기
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -532,7 +532,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -676,7 +676,7 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           The Design Recipe: 디자인 레시피
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -866,12 +866,19 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           Defining Variables: Defining Variables
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -885,7 +892,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: 무료 플레이
         allthethings:
           Jigsaw: 퍼즐 맞추기
           Maze: Maze
@@ -920,10 +927,10 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: 함수 정의하기
           Rocket-Height: Rocket-Height
           Booleans: 불(참 또는 거짓)값들
           'Eval: Conditionals': '평가: 조건/선택'
@@ -1039,10 +1046,10 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 문자열과 이미지
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: 함수 정의하기
           Rocket-Height: Rocket-Height
           Booleans: 불(참 또는 거짓)값들
           'Eval: Conditionals': '평가: 조건/선택'
@@ -1182,3 +1189,38 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: 즐거운 맵
+          Move it, Move it: 움직여, 움직여
+          'Real-life Algorithms: Plant a Seed': '실시간 알고리즘: 씨앗 심기'
+          Graph Paper Programming: 모눈종이 프로그래밍
+          Building a Foundation: 건물 기초 만들기
+          Getting Loopy: 반복적으로 하기
+          The Big Event: 빅 이벤트
+          Binary Bracelets: 2진 팔찌
+          Songwriting: 노래 만들기
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep

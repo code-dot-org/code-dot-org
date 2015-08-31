@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Bitte korrigiere die folgenden Fehler:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -69,7 +71,7 @@
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
     overview_student: Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail
       Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr
-      Informationen kannst du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
+      Informationen kannst Du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
       anschauen.
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen
       und ihren Lernfortschritt zu verfolgen.'
@@ -161,11 +163,11 @@
       invite_student:
         subject: Besuche eine Klasse von %{teacher_name} auf Code.org!
       student_disassociated:
-        subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als dein(e)
+        subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Dein(e)
           Schüler(in) zugeordnet.'
       teacher_disassociated:
-        subject: 'Code.org Benachrichtigung: %{teacher_name} ist nicht mehr als dein
-          Lehrer verbunden.'
+        subject: 'Code.org Benachrichtigung: %{teacher_name} ist nicht mehr als Dein(e)
+          Lehrer(in) verbunden.'
   reports:
     error:
       access_denied: Sie haben keinen Zugang zu den Statistiken dieser Person
@@ -174,7 +176,7 @@
     provider: 'Anbieter:'
     code: 'Code:'
     redeem_header: 'Zum einlösen:'
-    donorschoose_register: Registriere dich als Lehrer auf DonorsChoose.org
+    donorschoose_register: Registriere Dich als Lehrer auf DonorsChoose.org
     donorschoose_project: Stelle ein Projekt bereit
     donorschoose_how_to: Wie werden deine Programmzeilen verwendet
     success: Dein Preis wurde erfolgreich eingelöst, siehe Code unten.
@@ -412,7 +414,7 @@
     local_school: örtliche Schule
     online: online
     see_details: Zeige Details
-    view_course: View Course
+    view_course: Zeige Kurs
     prize_info: 'Preise für Teilnahme(nur Lehrer von öffentlichen Schulen der USA):
       Belohnungen bis zu $1000 für die Klasse.'
     tryfirst: 'Oder Probiere es aus und melde Dich später an: '
@@ -431,8 +433,12 @@
     heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Wähle einen der Code Studio Kurse unten aus um ihn auszuprobieren
     print_certificate: Zertifikat drucken
+  share:
+    title: Lernen Sie von Code Studio
+    description: Jeder kann Informatik lernen. Erstelle Spiele, Apps und Kunst durch
+      Code.
   gender:
     male: Männlich
     female: Weiblich
@@ -441,16 +447,30 @@
     student: Schüler
     teacher: Lehrer
   footer:
+    thank_you: Wir bedanken uns bei unseren <a href="https://code.org/about/donors">Spendern</a>,
+      <a href="https://code.org/about/partners">Partnern</a>, our <a href="https://code.org/about/team">unserem
+      erweiterten Team</a>, unseren Stimmen in den Einspielern sowie unseren <a href="https://code.org/about/advisors">Lern-Beratern</a>
+      für ihre Unterstützung bei der Erstellung von Code-Studio.
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu
       beigetragen, dieses Tutorial zu erstellen.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Alle Rechte vorbehalten.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Alle Rechte vorbehalten.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Betrieben von Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
+      Hour of Code&reg; sind eingetragene Marken der Code.org.'
+    copyright: Copyright
+    more: Mehr
     feedback: Feedback geben
     translate: Hilf uns in deine Sprache zu übersetzen
     support: Unterstützung
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
@@ -605,6 +625,11 @@
     open_response_body: Danke für deine Antwort!
   dialog:
     ok: OK
+    startover_title: Bist du dir sicher das du neu anfangen möchtest?
+    startover_body: Diese Aktion wird die Aufgabe in den Ausgangszustand versetzen
+      und alle Bausteine, die du hinzugefügt oder verändert hast, löschen.
+    startover_ok: Neu starten
+    startover_cancel: Abbrechen
   time:
     hour: 1 Stunde
     day: Tag

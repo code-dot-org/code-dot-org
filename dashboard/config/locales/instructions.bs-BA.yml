@@ -718,6 +718,7 @@
       4-5 While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa. Pomozi
         mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: uslov
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -773,11 +774,11 @@
         stranu. Dovrši "ažuriraj-opasnost" funkciju da bi omogućio/la opasnosti da
         leti preko ekrana.
       Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+        At this point in your game, your danger
+        should run across the screen from right to left, and your target should run
+        across from left to right. They don't ever come back on screen once they've
+        left, but we'll take care of that later. Take a minute to make sure your
+        game is working like you want it to, and then click Finish to move on.
       Big Game Booleans 1_instruction: Kada si zadnji put radio/la na tvojoj igrici
         imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate.
         Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda
@@ -798,8 +799,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -835,10 +836,11 @@
         Kada si sretan/na sa svojim finalnim uradkom, klikni na Završi i onda možeš
         podijeliti link na tvoju igricu. Dobro odrađeno!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!Last
-        time you worked on your game, you used booleans to make your Target and Danger
-        return to the screen once they've left. Click Run to see how your game looks
-        right now, and then we'll get to making your Player move up and down.
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         Edit the update-player function so the player
         moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
@@ -959,10 +961,9 @@
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
         need to track the cost of making each cookie, the money paid, and the\ntotal
         profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe
@@ -1103,13 +1104,10 @@
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Here is a design that
         uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor
-        the solution."
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.  Want to see more hints?  Click here!
+      Course 4 Artist 12_instruction: "Want a second peek at the inspiration design\nor
+        the hints?  Click here!\r\n\r\nOtherwise, make a design all your own!"
       Course 4 Artist 13_instruction: |
         Still playing?  Here is a blank canvas where
         you can design anything you want!
@@ -1132,6 +1130,9 @@
         10 trokutova zatvaraju ugao od 360 stepeni.  '
       Course 4 Artist 8_instruction: Nacrtaj ovo sunce tako što ćeš ponoviti ovaj
         čitav blok u petlji 12 puta.
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
+        you build it without giving you any blocks to start!\r\nHint: There are\n3
+        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: 'Ponavljaj ovaj crtež u petlji 10 puta i pobrini
         se da okreneš između svakog oblika koji je nacrtan. Evo savjet o za koliko
         okrenuti: Koliko je 360 podijeljeno sa 10?'
@@ -1209,6 +1210,9 @@
       Course 4 Artist For Loops 8_instruction: Najmanja linija ovog kvadrata je 10,
         najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li
         popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
+      Course 4 Artist For Loops 8a_instruction: Najmanja linija ovog kvadrata je 10,
+        najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li
+        popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
       Course 4 Artist For Loops 9_instruction: Možeš li napraviti spiralu? Pokreći
         se naprijed od 1 do 75 piksela, povećavajući za jedan piksel svaki put.
       Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
@@ -1262,11 +1266,8 @@
       Course 4 Artist Functions 9_instruction: Dali smo ti većinu koda za kreiranje
         funkcije. Međutim, izgleda dan ešto nedostaje. Možeš li kompletirati ovaj
         funkcijski blok?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor
-        the solution."
+      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign
+        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
       Course 4 Artist Params 1_instruction: Hajde da uredimo funkciju koja crta kvadrat
         sa stranicama od 50 piksela
       Course 4 Artist Params 10_instruction: 'Možeš zvati funkcije unutar drugih funkcija!
@@ -1419,6 +1420,14 @@
         zove "povećanje", i svaki put kada se petlja izvršava, brojač varijabla se
         mijenja za vrijednost povećanja. Pokušaj sakupiti ove cvjetove koristeći povećanje
         2.
+      Course 4 Bee Loops 5 NEW_instruction: |
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: Upotrijebi funkciju "sakupi 3 nektra" koja
         okreće, kontroliše pokret za sakupljanje nektra, i onda vraća pčelu na početno
         mjesto. Napiši niz radnji pomoću kojih će se sakupiti sav nektar korištenjem
@@ -1456,6 +1465,8 @@
         sakupljanje svog nektra.
       Course 4 Bee Params 8_instruction: Oooh, sada imamo i med kojim se moramo zabaviti!
         Kako bi promijenio/la svoju funkciju da ili sakuplja nektar ili pravi med.
+      Course 4 Bee Params Ex_instruction: Pokušaj koristiti svoju novu funkciju za
+        sakupljanje svog nektra.
       Course 4 Binary 1_instruction: Evo funkcija koja uzima binarni niz od jedinica
         i nula i nalaže farmeru da se okrene pri pokretu s lijeva na desno, s vrha
         na dno, i da se okreće na kvadratima koji sadrže broj 0. Pokreni dati kod
@@ -1721,6 +1732,10 @@
       Eval Define Funcs 5_instruction: Hajde da upotrijebimo "morska-zvijezda" funkciju
         koja pravi red zvijezda različitih veličina. S lijeva na desno, zvijezde bi
         trebale imati prečnike od 25, 50 i 75.
+      Eval Define Funcs Test_instruction: 'Evo početka nove funkcije pod nazivom "ljubičasti-krug"
+        sa domenom od jednog Broja (prečnik) i Slikom kao kodomenom. Tijelo funkcije
+        ne radi dobro, jer uvijek crta krug prečnika od 50 piksela umjesto što koristi
+        parametar za prečnik. Zamijeni trenutni Broj sa "prečnik" blokom iz domene. '
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1749,9 +1764,9 @@
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: 'Koristeći Recept za Crtež, napiši funkciju
         "prugasta-zvijezda" koja uzima dvije boje i pravi zastavu koja je 250 piksela
         široka, 150 piksela visoka, sa tri horizontalne pruge datih boja slijedećeg
@@ -1855,9 +1870,17 @@
       frozen square snowflake_instruction: Možeš li napraviti pahulju snijega koristeći
         "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni"
         blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?
+      hoc2015_free_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
       hoc2015_intro_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
         Hiro-a udesno sve dok ne dotakne Baymax-a.
+      hoc2015_maze_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
+      hoc2015_random_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
       hoc2015_sandbox_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
+      hoc2015_square_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
         Hiro-a udesno sve dok ne dotakne Baymax-a.
       Infinity_catch_instruction: 'Možeš li koristeći tipke sa strelicama načiniti
         da Elsa ("lik 2") prestigne Annu? '
@@ -2266,7 +2289,7 @@
         now learned everything you need to know to make a pattern like this!\nIf this
         picture inspires you, try to make something similar. Otherwise, create\nsomething
         all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
-        Visit for the solution."
+        Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: Upotrijebi "nacrtaj kvadrat"
         funkciju da bi nacrtao/la ovaj uzorak.
       NEW Course 4 Artist Params 1_instruction: Hajde da definišemo funkciju koja
@@ -2339,6 +2362,11 @@
         iz svakog cvijeta.
       NEW Course 4 Bee For Loops 10_instruction: Upotrijebi "brojač" varijablu iz
         svoje "od-do" petlje da bi kontrolisao/la koliko se treba pomjeriti horizontalno.
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Možeš li koristiti varijablu petlje
         za kontrolisanje kretanja i sakupljanja nektra?
       NEW Course 4 Bee For Loops 2_instruction: Dodaj neophodan kod da bi dvije pčele
@@ -2404,6 +2432,42 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game. Make sure you come back here and click Continue\nafter
+        you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2985,8 +3049,26 @@
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

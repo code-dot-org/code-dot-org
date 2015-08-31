@@ -176,7 +176,7 @@ ja:
         text: If else 文は二つのどちらをするかを決めるためのものです。私たちの親友のリスのスクラットといっしょに、どうやって if else 文を使うか見てみましょう。
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: 'このブロックは"if"ブロックとまったく同じに見えますが、"else"という部分が一番下にあります。「前に進め」のブロック」を「せよ」のところにおいて、「左へ曲がれ」を「でなければ」のところにおくと、リスのスクラットは前に道があれば前に進み、道がなければ左に曲がります。'
+        text: 'このブロックは"if"ブロックとまったく同じに見えますが、"else"という部分が一番下にあります。「前に進め」のブロックを「せよ」のところにおいて、「左へ曲がれ」を「でなければ」のところにおくと、リスのスクラットは前に道があれば前に進み、道がなければ左に曲がります。'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: 'そこで、何かを決めてそれにしたがって二つのアクションのどちらかを実行します。"if"ブロックのように、"if else"ブロックも"繰り返し" ブロックの中に入れることができます。'
@@ -192,19 +192,17 @@ ja:
         text: 関数をどのように定義するか勉強しましょう。関数の定義には、角に星印がついています。関数の名前は一番上に書かれています。
       3:
         image: notes/stage13_3.jpg
-        text: 定義の中に入るブロックは何をするかを私たちに告げます。そうですこの関数定義は『５を塗りつぶす」と呼ばれ、そして「繰り返し」ブロックと「塗りつぶし」ブロックで成り立っています。
+        text: ブロックの定義は、何をするかを私たちに教えてくれます。この関数の定義は「5つ塗りつぶす」と呼ばれ、これらは「繰り返し」ブロックと「塗りつぶし」ブロックで成り立っています。
       4:
         image: notes/stage13_4.jpg
-        text: 'ワークスペースの上に定義が位置づいていますが、私たちの農民は、関数カテゴリーから"fill 5"関数をドラッグしてこないとその関数は実行しません。'
+        text: ワークスペースに定義がついていますが、このファーマーは、関数カテゴリーから「fill 5」関数をドラッグしないとその関数は実行しません。
       5:
         image: notes/stage13_5.jpg
-        text: |-
-          Let's put the "fun" back in "FUNction!"
+        text: 'FUNction（関数）の「FUN」を今こそ！ '
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: |-
-          Hi, I'm Makinde! Let's learn about the "while block."
+        text: 'こんにちは、マキンデといいます！"while" ブロックについて勉強してみましょう。 '
       2:
         image: notes/stage9_6.jpg
         text: |
@@ -216,7 +214,7 @@ ja:
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: こんにちは、私はトリーナとピクサーで働いています。シュレックを含むたくさんの映画作りに携わってきました。
+        text: こんにちは、私の名前はトリーナで、ピクサーで働いています。シュレックを含むたくさんの映画作りに携わってきました。
       2:
         image: notes/stage11_2.jpg
         text: これは私たちの新しい「カウンター」ループです。アクションが何度も繰り返し実行され、アクションを毎回少しずつ変更を行うことができます。
@@ -287,10 +285,10 @@ ja:
            elseステートメント」について学びました。
       3:
         image: notes/hoc6_3.jpg
-        text: 初めての「１時間コース」が気に入ったら、code.orgに行ってコンピューター科学の勉強を続けましょう！20時間コースを終わるころには、あなたはプログラミングの基本を完全にマスターしているはずです。そしてもっと難しい携帯アプリやロポット操作、ゲームなどをどうやって書けば良いか勉強できるようになります。
+        text: 最初の１時間コースが気に入ったなら、code.org にアクセスしてコンピューターサイエンスの勉強を続けましょう！20時間コースを終わる頃には、あなたはプログラミングの基本をマスターしているでしょう。そしてもっと難しい携帯アプリやロボット操作、ゲームなどの作り方を勉強できるようになります。
       4:
         image: notes/hoc6_4.jpg
-        text: テクノロジーは私たちがする事のすべてを変えています、そしてあなたが若かろうと、年をとっていようと、全く関係ありません。プログラミングは楽しいです。創造的で、誰でも学べます！
+        text: テクノロジーは私たちがやる事すべてを変えています。年齢なんて全く関係ありません。プログラミングとは楽しいものであり、クリエイティブであり、誰でも学べます！
     20_wrapup:
       1:
         image: notes/bird.png
@@ -298,28 +296,28 @@ ja:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: こんにちは、私の名前はリンです。私は自分のアプリのモデルを作って、書いて、動かします。プログラムを使って、アンナとエルザを氷の美しさと魔法の世界の探検につれて行きましょう。
+        text: こんにちは、私の名前はリンジーです。私は自分のアプリを作り、使って見せ、自分自身も利用しています。プログラムを使いながら、アナとエルサと一緒に氷の世界の美しさと魔法を体験してみましょう。
       2:
         image: notes/frozen1_2.jpg
-        text: アイス スケートをして雪とパターンを作って、それをお友達に見せることができます。
+        text: アイススケートをしながら雪の結晶やパターンを作り、出来上がった雪の王国をお友達に見せることができるようになります。
       3:
         image: notes/frozen1_3.jpg
-        text: 次の１時間はどのようにプログラムするかの基本を学びます。今までのプログラミングは、英語の文章で書くことが多かったのですが、ここでは、ブロックを引っぱってきておく（ドラッグ アンド ドロップ）ことでプログラムを書くことができるBlockly を使います。これは大学生でも基礎を勉強するやり方です。こんなに簡単なのにプログラムを作っているのです。
+        text: 次の時間では、プログラミングの基本を学びます。プログラミングは文章で書くことが多いのですが、ここでは、ブロックを引っぱる（ドラッグ・アンド・ドロップ）ことでプログラムを書くことができる Blockly を使います。これは大学生でも基礎を勉強するやり方です。こんなに簡単に見えても、立派なプログラミングをやっていることになります。
       4:
         image: notes/frozen1_4.jpg
-        text: プログラムというのはコンピューターが何をしたらいいかを教えるための指示の集まりです。さあ、プログラムを作ってエルザが 簡単な線を作るのを助けてあげましょう。この方法は後でもっと難しいパターンを作るのに使われます。
+        text: プログラムというのはコンピューターが何をしたらいいかを教えるための指示の集まりです。さあ、プログラムを作ってエルサが 簡単な線を作るのを助けてあげましょう。この方法は後でもっと難しいパターンを作るのに使われます。
       5:
         image: notes/frozen1_5.jpg
-        text: 画面は3 つの部分にわかれています。左には氷の表面があってあなたのプログラムを実行します。右下には各レベルの指示が書かれています。
+        text: 画面は3 つの部分にわかれています。左には氷の表面があってあなたのプログラムが実行される部分です。右下には各レベルの指示が書かれています。
       6:
         image: notes/frozen1_6.jpg
-        text: この真ん中の部分はツールボックスで、そこにあるそれぞれのブロックはエルザとアンナ行うことができるアクションです。
+        text: この真ん中の部分はツールボックスで、ここにあるそれぞれのブロックはエルサとアンナが行うことができるアクションです。
       7:
         image: notes/frozen1_7.jpg
         text: 右側の空間はワークスペースと呼ばれていて、プログラムを作るところです。氷の表面を動き回るために、「前に進め」ブロックを使います。
       8:
         image: notes/frozen1_8.jpg
-        text: ここでは、「前に進め」ブロックは、「100 ピクセル前に進め」と言っています。「実行」を押すと、どうなりますか？エルザは少し前に進みます。ちょうど100 ピクセルです！ピクセルというのは、コンピューターの画面のとても小さな四角のことです。
+        text: ここでは、「前に進め」ブロックは、「100 ピクセル前に進め」と言っています。「実行」を押すと、どうなりますか？エルサは前に進みます、ちょうど100 ピクセルです！ピクセルというのは、コンピューター画面のとても小さな四角のことです。
       9:
         image: notes/frozen1_9.jpg
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
@@ -332,30 +330,29 @@ ja:
         text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
       2:
         image: notes/frozen2_2.jpg
-        text: プログラミングでは、これをループと呼びます。ループはコードを繰り返す処理です。次のパズルでは、この”繰り返し”を使ってアンナが正方形を作るのが目標です。
+        text: プログラミングでは、これをループと呼びます。ループとはコードを繰り返す処理です。次のパズルでは、この「繰り返し」を使ってアナが正方形を作れるようにします。
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 「リピート」ブロックに配置されたコードは、指定された回数だけ繰り返し実行されます。
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 「前に進む」ブロックと「右に回転」ブロックを4回繰り返すことで、正方形を描くことができます。もっと簡単な方法は、「前に進む」と「右に90度回転」の組み合わせを作り、それを4回繰り返すよう命令することです。これは、「前に進む」と「右に回転」のブロックを「くり返す」ブロックの中で使うことで実現できます。
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 「くり返し」の回数はいくつにでも設定でき、それと同じだけ「くり返し」の中のブロックも実行されるのを覚えていてください。
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: こんにちは、私はクリス・ボッシュです。私はバスケットボールのプロ選手です、そして大学ではコードを書いています。
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: コンピューター科学の最も重要な考え方の 1 つは、どのようにして新しいコマンドを定義するかです。ほとんどのコンピューター言語は、たった 100 くらいの単語やコマンドしかありません。これを組み合わせてあなた自身のコマンドを定義することが、本当にアートや魔法なのです。
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: この一連のコマンドを使用してアクションを実行する方法をコンピューターに一度伝えると、後でそれを簡単に繰り返せるように、アクションにあなたの好きな名前をつけることができます。独自のコマンドを定義して名前を付けることを 関数 と呼びます。
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: こんにちは、私はジェスです。ブロックを使ってプログラミングするときに、何度も使いたいアクションの組み合わせがあったら、関数を使うことができます。たとえば、正方形を作成するためのコードを書いたとします。
       5:
         image: notes/frozen3_5.jpg
         text: 「正方形を作成」という関数として定義することができます。
@@ -421,4 +418,4 @@ ja:
           If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: この次のパズルでは、魔法使いの王国の国境パトロールを助けることが目標です。コマンドがどう繰り替えされているのか勉強することで、自分のゲームを作る時に役に立つでしょう。
+        text: この次のパズルでは、魔法使いが王国中を常に右へ左へパトロールできるように助けることが目標です。繰り返しのコマンドを学ぶことで、後で自分のゲームを作る時に役に立つでしょう。

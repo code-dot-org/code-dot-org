@@ -13,3 +13,8 @@ choosing the smallest edge first or vertex with the smallest distance value firs
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- B. The shortest path algorithm you learned visits each vertex and edge once.
+MARKDOWN

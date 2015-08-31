@@ -362,8 +362,8 @@
           description: Ce cours de 20 heures introduit les notions de base de l'informatique
             et les concepts de la programmation. Il est conçu pour la grande section
             jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Ce cours de 20 heures couvre les concepts fondamentaux
+            de l'informatique et de la programmation dans les leçons 2-4.
           Introduction to Computer Science: Introduction à l'Informatique
           The Maze: Le labyrinthe
           Computational Thinking: L'algorithmique
@@ -405,21 +405,23 @@
           title: Flappy l'oiseau
           description: Vous voulez développer votre propre jeu vidéo en moins de 10
             minutes ? C'est par ici!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Crée ton propre jeu de Flappy en moins de 10 minutes
+            !
           Flappy Code: Flappy l'oiseau
         jigsaw:
           title: Pièces de Puzzle
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Essayer le didacticiel de Jigsaw
+          description_short: Essayer le didacticiel de Jigsaw
           Jigsaw: Pièces de Puzzle
         step:
           title: Étape
-          description: ''
-          description_short: Step tutorial
+          description: Tutoriel par étapes
+          description_short: Tutoriel par étapes
           Step: Étape
         Hour of Code:
           title: Heure de code 2013
-          description: ''
+          description: Découvre les bases de l'informatique grâce à des personnages
+            de Angry Birds et de Plants vs Zombies !
           description_short: Apprenez à programmer avec des personnages rigolos!
           Hour of Code 2013: Heure de code 2013
         Code Studio Puzzle Challenge:
@@ -907,6 +909,13 @@
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
+          The Internet is for Everyone: The Internet is for Everyone
+          How Routers Learn: How Routers Learn
+          HTTP and Abstraction on the Internet: HTTP and Abstraction on the Internet
+          Global Impacts of the Internet: Global Impacts of the Internet
+          The Need for Encryption: The Need for Encryption
+          Keys and Passwords: Keys and Passwords
+          Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -1224,3 +1233,38 @@
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
           Odometer Widget: Odometer Widget
+        asUnplugged:
+          title: Afterschool Unplugged
+          description_short: Short unplugged course designed for informal learning
+          description: Afterschool Unplugged is designed to teach computational thinking
+            and computer science ideas through offline games and crafts. Created with
+            informal classrooms in mind, these lessons are fantastic on their own,
+            or in combination with Afterschool 1 . This course focuses on learning
+            through entertainment. Recommended for grades K-8.
+          description_audience: Ages 6-13
+          Happy Maps: Cartes joyeuses
+          Move it, Move it: Déplacez le, déplacez le
+          'Real-life Algorithms: Plant a Seed': 'Les algorithmes : Planter une graine'
+          Graph Paper Programming: Programmation sur papier quadrillé
+          Building a Foundation: Créer une Fondation
+          Getting Loopy: Tourner en rond
+          The Big Event: Le Grand Evénement
+          Binary Bracelets: Les bracelets binaires
+          Songwriting: Écriture de chansons
+        afterschool1:
+          title: Afterschool 1
+          description_short: Short course designed for informal learning
+          description: Afterschool 1 is designed to for informal classrooms where
+            students vary in age and assessment is not required. This course focuses
+            on learning through entertainment, with varying options for implementation,
+            all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
+            for grades 3-8.
+          description_audience: Ages 7-13
+        algebraPD3a:
+          title: Informatique en DP d'algèbre
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep

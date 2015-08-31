@@ -48,10 +48,10 @@
   view_english_site: ინგლისურ საიტზე გადასვლა
   non_english_tutorials: 'სასწავლო მასალა თარგმნილია შემდეგ ენებზე:'
   write_your_first_program: დაწერე შენი პირველი კომპიუტერული პროგრამა
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
-    programming. This is a game-like tutorial starring video lectures by Bill Gates,
-    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
-    statements, and basic algorithms.
+  learn_cs_concepts: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის
+    მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds
+    და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები, თუ-მაშინ
+    დებულებები და ბაზისური ალგორითმები.
   all_ages: ნებისმიერი ასაკი
   beginner: დამწყები
   n_participants: '# მონაწილე'
@@ -73,8 +73,9 @@
     სამყარომ ისწავლოს პროგრამირება.
   personalize_certificate: სერტიფიკატის პერსონიფიკაცია
   share_achievement: მიღწევის გაზიარება
-  beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
-    courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
+  beyond_hour_message: გააგრძელე ჩვენი <a href='http://studio.code.org'>სხვა კურსები</a>
+    ან გაიგე, კიდევ როგორ შეგიძლია <a href='/learn/beyond'>ისწავლო ერთი საათის გასვლის
+    შემდეგ</a>.
   leaderboards_for_hoc: კოდის ერთი საათის ლიდერთა დაფა.
   support_url: http://support.code.org/
   country: ქვეყანა
@@ -161,10 +162,9 @@
     შეგიძლია&rdquo; სუსანი, YOUTUBE-ს დირექტორი'
   homepage_hero_text_fistbump: '&ldquo; არ გამოიყენო ტელეფონი მხოლოდ თამაშისთვის,
     გამოიყენე იგი პროგრამირებისთვის&rdquo; პრეზიდენტი ბარაკ ობამა'
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+  homepage_hero_text_sheryl: '&ldquo;ჩვენი ბავშვები, &mdash;ჩვენი გოგონების ჩათვლით&mdash;
+    იმსახურებენ პროგრამირების სწავლის შესაძლებლობას&rdquo; შერილი, Facebook-ის მთავარი
+    აღმასრულებელი დირექტორი'
   homepage_hero_text_satya: '&ldquo; ინფორმატიკა მსოფლიოს საუკეთესო შესაძლებლობებს
     გიხსნის&rdquo; სატია, Microsoft-ის დირექტორი'
   homepage_hero_text_bosh: '&ldquo; თუ პროგრამირება შეგიძლია, ესე იგი, შენი ცხოვრების
@@ -179,8 +179,9 @@
     რაც შენს გონებას მოესურვება&rdquo; მაია, მეორეკლასელი'
   homepage_hero_text_student5: '&ldquo;პროგრამირება არ სხვისი საქმე. ის შენია, ახლა
     და აქ.&rdquo; ჯერალდო, მასწავლებელი'
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
-    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
+  homepage_hero_text_teacher1: '&ldquo; პროგრამირება ავითარებს შემოქმედობითობას, შთაგონებასა
+    და ინოვაციურობას&mdash; ეს ყველაფერი კი ნებისმიერ კარიერაშია მნიშვნელოვანი.&rdquo;
+    ფლორეზა, მასწავლებელი'
   homepage_hero_text_teacher2: '&ldquo;ამ პროგრამამ მიიპყრო ჩემი მოსწავლეების 100%-ის
     ყურადღება და ინტერესი; ახლა ყველა ჩართულია.&rdquo; ადამი, მასწავლებელი'
   homepage_hero_text_stat_loc: 2.5 მილიონი გოგო სწავლობს კოდის სტუდიაში
@@ -198,6 +199,7 @@
   homepage_action_text_learn: დაიწყე სწავლა
   homepage_action_text_signpetition: მოაწერე ხელი პეტიციას
   homepage_signpetition_dropdown: ვეთანხმები პეტიციას &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org და კოლეჯის საბჭო გაერთიანდნენ ინფორმატიკის მრავალფეროვნების
     მხარდასაჭერად.
   homepage_banner_text_link: გაიგე მეტი
@@ -314,41 +316,40 @@
   dashboard_landing_available_courses: ეს კურსები უკვე მისაწვდომია თქვნთვის და თქვენი
     მოსწავლეებისთვის.
   dashboard_landing_more_tutorials: გინდა კიდევ უფრო მეტი ტუტორიალი?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
+  dashboard_landing_more_tutorials_desc: მისაწვდომია კიდევ რამდენიმე სხვა კურსი <a
+    href="/learn/beyond">ჩვენი პარტნიორებისგან.</a> ისწავლე რობოტების დაპროგრამება,
+    ვებ-გვერდების შექმნა, დაწერე საკუთარი აპლიკაცია ან გაეცანი სხვა ენებს, მაგალითად
+    C++, Ruby ან Python!
   dashboard_hoc_courses: კოდის ერთი საათი ნებისმიერი ასაკისთვის
   dashboard_hoc_courses_desc: სცადეთ ეს მოკლე ერთსაათიანი გაკვეთილები თქვენს მოსწავლეებთან
     ერთად!
   dashboard_k5_courses: ოცსაათიანი კურსი K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
+  dashboard_k5_courses_desc: ამ კურსებში გაერთიანებულია ონლაინ-ტუტორიალები და ისეთი
+    აქტივობები, რომელთაც საერთოდ არ სჭირდებათ კომპიუტერი. ყოველი კურსი დაახლოებით
+    20 გაკვეთილისგან შედგება და მათი გავლა შეიძლება ერთიანად ან მთელი სემესტრის განმავლობაში.
+    მონაწილეობის მიღება სკალმდელი ასაკის ბავშვებსაც შეუძლიათ. იმისთვის, რომ დაგეხმაროთ
+    დაწყებაში, აშშ-ში უმაღლესი ხარისხის კურსებს უფასოდ გთავაზობთ.<a href="/professional-development-workshops">ნახე,
+    რომელი ტარდება შენთან ახლოს!</a>
   dashboard_middle_courses: ოცსაათიანი საშუალო სკოლის კურსები
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_middle_courses_desc: ჩვენი საშუალო სკოლის კურიკულუმი იყენებს ინფორმატიკასა
+    და პროგრამირებას როგორც მათემატიკისა და ზუსტი მეცნიერებების სწავლების საშუალებას.
+    პროფესიული განვითარების უორქშოპებზე რეგისტრაციისთვის, შეიტანეთ განცხადება <a href="/educate/districts">თქვენს
+    ოლქში</a> Code.org-ზე.
   dashboard_high_courses: ერთწლიანი დამამთავრებელი კლასების კურსები
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_high_courses_desc: ჩვენი დამამთავრებელი კლასების პროგრამა ეხმარება სკოლებს
+    გადაამზადონ მასწავლებლები და ასწავლონ ეს ახალი საგანი მთელი წლის მანძილზე. პროფესიული
+    განვითარების უორქშოპებზე რეგისტრაციისთვის, შეიტანეთ განცხადება <a href="/educate/districts">თქვენს
+    ოლქში</a> Code.org-ზე.
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: Code.org-ისა და Bootstrap-ის თანამშრომლობის შედეგად
+    შემუშავდა კურიკულუმი, რომლითაც ალგებრა და გეომეტრია პროგრამირების დახმარებით ისწავლება.
   dashboard_course_csins: ინფორმატიკა მეცნიერებაში
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins_desc: Code.org-ისა და Project GUTS-ის თანამშრომლობის შედეგად
+    შემუშავდა შესავალი კურსი ინფორმატიკაში მოდელირებისა და სიმულაციის კონტექსტით.
   dashboard_course_ecs: ინფორმატიკის შესწავლა
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
+  dashboard_course_ecs_desc: 'ინფორმატიკის შესწავლა არის ერთწლიანი კურსი, რომელიც
+    6 ნაწილისგან შედგება: ადამიანისა და კომპიუტერის ურთიერთობა, ამოცანების გადაჭრა,
+    ვებ დიზაინი, პროგრამირება, გამოთვლები და მონაცემთა ანალიზი, რობოტიკა.'
   dashboard_course_csp: AP® ინფორმატიკის პრინციპები
   dashboard_course_csp_desc: Code.org-მა შექმნა პროგრამირების საფუძვლების თანმიმდევრული,
     საინტერესო და მისაწვდომი კურსი.
@@ -381,9 +382,9 @@
   dashboard_navigation_section: 'განყოფილება: %{section_name}'
   dashboard_navigation_student: 'მოსწავლე: %{student_name}'
   dashboard_sections_new_section: ახალი განყოფილება
-  dashboard_sections_jumbotron_instruction: Create new sections and add students to
-    them. Sections help you organize students into smaller groups so you can track
-    their progress and manage their accounts.
+  dashboard_sections_jumbotron_instruction: შექმენით ახალი განყოფილება და დაამატეთ
+    მასში სტუდენტები. განყოფილებები გეხმარებათ დაანაწევროს მოსწავლეები უფრო პატარა
+    ჯგუფებად - ასე მათ პროგრესს უკეთ დააკვირდებით.
   dashboard_sections_table_section: სექცია
   dashboard_sections_table_secret: შესვლის ტიპი
   dashboard_sections_table_grade: შეფასება
@@ -398,9 +399,9 @@
   dashboard_sections_secret_picture: <b>სურათი</b> გაძლევთ საშუალებას დააყენოთ საიდუმლო
     სურათი ყოველი მოსწავლისთვის; ეს მეთოდი იდელაურია მათთვის, ვისაც ჯერ ბეჭდვა არ
     შეუძლია.
-  dashboard_sections_secret_none: If you would like your students to manage their
-    own accounts, including choosing their own passwords, choose a secret type of
-    <b>none</b>.
+  dashboard_sections_secret_none: თუ გინდათ, რომ თქვენმა მოსწავლეებმა დამოუკიდებლად
+    მართონ თავიანთი ანგარიშები, მათ შორის, თავად აირჩიონ პაროლი, აირჩიეთ უსაფრთხოების
+    დონე <b>ნულოვანი</b>.
   dashboard_sections_print_secrets: შემდეგ შეგიძლიათ ამობეჭდოთ ბარათები ანგარიშების
     ინფორმაციით და დაურიგოთ ისინი თქვენს მოსწავლეებს.
   dashboard_sections_switch_section: 'განყოფილების გადართვა:'
@@ -432,24 +433,29 @@
   dashboard_students_print_info: ამობეჭდეთ ბარათები ტქვენი მოსწავლეების შესასვლელი
     ინფორმაციით.
   dashboard_students_secret_picture_title: საიდუმლო ნახატი
-  dashboard_students_secret_picture: Secret Picture
-  dashboard_students_reset_picture: You may reset a student's secret picture at any
-    time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
-    picture will be generated for that student to use when they sign in.
+  dashboard_students_secret_picture: ეს განყოფილება უსაფრთხოებისთვის იყენებს <b>საიდუმლო
+    სურათს</b>. ეს იმას ნიშნავს, რომ ყოველი მოსწავლე შესასვლელად პაროლის მაგივრად
+    იყენებს თავის საიდუმლო სურათს. შესვლა ზემოთ მოცემული ბმულიდან უნდა ხორციელდებოდეს.
+  dashboard_students_reset_picture: მოსწავლის საიდუმლო სურათის შეცვლა ყოველთვის შეგიძლიათ.
+    ჯერ აირჩიეთ <b>საიდუმლოს ჩვენება</b> შემდეგ კი <b>საიდუმლოს შეცვლა</b> და მოსწავლისთვის
+    შეიქმნება ახალი საიდუმლო სურათი.
   dashboard_students_secret_word_title: საიდუმლო სიტყვა
-  dashboard_students_secret_word: Secret Word
-  dashboard_students_reset_word: 'You may reset a student''s secret words at any time
-    by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
-    words will be generated for that student to use when they sign in. '
+  dashboard_students_secret_word: ეს განყოფილება უსაფრთხოებისთვის იყენებს <b>სიტყვას</b>,
+    ანუ შესასვლელად მოსწავლეები იყენებენ საიდუმლო სიტყვას. მოსწავლეები ზემოთ მითითებული
+    ბმულიდან უნდა შედიოდნენ.
+  dashboard_students_reset_word: 'მოსწავლის საიდუმლო სიტყვების შეცვლა ყოველთვის შეგიძლიათ.
+    ჯერ აირჩიეთ <b>საიდუმლოს ჩვენება</b> შემდეგ კი <b>საიდუმლოს შეცვლა</b> და მოსწავლისთვის
+    შეიქმნება ახალი საიდუმლო სიტყვები. '
   dashboard_students_join_link: უთხარით თქვენს მოსწავლეებს, რომ შექმნან თავიანთი ანგარიშები
     და შეუერთდნენ თქვენს განყოფილებას
-  dashboard_students_no_email: If your students do not have email addresses, or you
-    would like to create accounts for them, change this section's secret type to <b>word</b>
-    or <b>picture</b>.
+  dashboard_students_no_email: თუ თქვენს მოსწავლეებს არა აქვთ ელ. ფოსტა ან თქვენ გინდათ
+    შეუქმნათ მათ ანგარიშები, შეცვლათ ამ განყოფილების უსაფრთხოების ტიპი <b>სიტყვაზე</b>
+    ან <b>სურათზე</b>.
   dashboard_students_print_page: ამ გვერდის ამობეჭდვა
   dashboard_students_url: ბმული
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
-    here</a> for our privacy document that can be shared or printed for your students.
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">დააჭირეთ
+    აქ</a> და ნახეთ უსაფრთხოების საბუთი, რომელიც შეგიძლიათ გაუზიაროთ ან ამოუბეჭდოთ
+    თქვენს მოსწავლეებს.
   dashboard_curriculum_k5_title: მასალები K-5 ასაკის მასწავლებლებისთვის
   dashboard_curriculum_middle_title: რესურსები საშუალო სკოლის მასწავლებლებისთვის
   dashboard_curriculum_high_title: რესურსები დამამთავრებელი კლასების მასწავლებლებისთვის
@@ -530,15 +536,17 @@
   educator_notes: მასწავლებლის ჩანაწერები
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: მონაწილეები
   teachers_notes: მასწავლებლის ჩანაწერები
   teachers_notes_hoc: 'მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ'
   previous: წინა
   next: შემდეგი
   older_systems: გაკვეთილები, რომლეც ძველ სისტემებზეც მუშაობს
-  older_systems_subheading: These should work on older Web browsers. To access all
-    tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
-    Web browser.</a>
+  older_systems_subheading: ესენი იმუშავებს ძველ ვებ ბრაუზერებზეც. ყველა ტუტორიალის
+    სანახავად დააყენეთ <a href="http://browsehappy.com/" target="_blank">თანამედროვე
+    ვებ ბრაუზერი.</a>
   mobile_devices: ტუტორიალები მობილური მოწყობილობებისთვის
   frozen_name: წერეთ კოდი ანასა და ელზასთან ერთად
   codeorg_name: დაწერე შენი პირველი კომპიუტერული პროგრამა
@@ -716,14 +724,14 @@
   frozen_shortdescription: გამოიყენე კოდი და შეუერთდი ანასა და ელზას ყინულის მაგიის
     აღმოჩენაში.
   playlab_shortdescription: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
-  codeorg_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
-  codeintl_longdescription: Learn the basic concepts of Computer Science with drag
-    and drop programming. This is a game-like, self-directed tutorial starring video
-    lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
-    repeat-loops, conditionals, and basic algorithms. Available in 34 languages.
+  codeorg_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
+    ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი,
+    Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები,
+    თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
+  codeintl_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
+    ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი,
+    Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები,
+    თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
@@ -741,119 +749,113 @@
     გააკეთე ეს დამოუკიდებლად - ან კლასთან ერთად!
   khanpl_longdescription: ისწავლა JavaScript პროგრამირების საფუძვლები - ხატე კოდით.
     გააკეთე ეს დამოუკიდებლად - ან კლასთან ერთად!
-  tynker_longdescription: Build your own games and share with friends! Solve fun coding
-    puzzles and learn programming concepts in each level. Personalize games with animated
-    characters, multiple levels and rich props. Make your games realistic using physics.
-    See the code as visual blocks or JavaScript. Take your games mobile on iPads and
-    Android tablets. Over a dozen fun activities to choose from!
-  scratch_longdescription: With Scratch, you can create your own interactive games,
-    stories, animations &mdash; and share them with your friends. Get started by animating
-    your name, creating a holiday card, or making a pong game.
-  lightbot_longdescription: Guide Lightbot to light up all the blue tiles! Lightbot
-    is a puzzle game that uses programming game mechanics to let players gain a practical
-    understanding of basic coding. Learn to sequence instructions, write procedures,
-    and utilize loops to solve levels. Ideal for all ages.
-  thinkersmith_longdescription: Using a pre-defined "Robot Vocabulary" students will
-    figure out how to guide each other to accomplish specific tasks without discussing
-    them first. This lesson teaches children the connection between symbols and actions,
-    as well as the invaluable skill of debugging. "My Robotic Friends" works best
-    as a group activity and includes a teacher workbook for classroom use.
-  condcards_longdescription: Learn about algorithms and conditional statements in
-    this "unplugged" activity using a deck of cards. Students do this activity in
-    teams, and need one deck of cards per team.
-  lightbotintl_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codehs_longdescription: Giving commands to a computer, which is what programming
-    is all about, is just like giving commands to a dog. Learn how to code with Karel
-    the Dog&mdash;a fun, accessible, and visual introduction to programming that teaches
-    fundamental concepts like commands and functions to absolute beginners. Tutorial
-    is student-directed but teachers can sign up to access teacher tools and track
-    student success!
-  codecademy_longdescription: Codecademy is an interactive, student-guided introduction
-    to the basics of CS through JavaScript that's used by tens of millions of students
-    around the world. We've prepared a no-hassle Hour of Code experience with accompanying
-    quizzes, slides, and a completed project for students at the end.
+  tynker_longdescription: შექმენი საკუთარი თამაშები და გაუზიარე ისინი მეგობრებს! ამოხსენი
+    მხიარული თავსატეხები და ისწავლე პროგრამირება. გააცოცხლე თამაშები მოძრავი პერსონაჟებით,
+    ბევრი დონითა და მრავალფეროვანი დეკორეაციებით. გამოიყენე ფიზიკა და გახადე შენი
+    თამაშები რეალისტური. გამოიყენე Blockly ან JavaScript. შექმენი ტამაშების მობილური
+    ვერსიები. გააკეთე რაც გინდა!
+  scratch_longdescription: სკრაჩთან ერთად შენ შექმნი საკუთარ ინტერაქტიულ თამაშებს,
+    ამბებს, ანიმაციებს &mdash; და გაუზიარებ მათ მეგობრებს. დაიწყე სახელის ანიმირებით,
+    მისალოცი ბარათის შექმნით ან მაგიდის ტენისის თამაშით.
+  lightbot_longdescription: აანთებინე Lightbot-ს ყველა ლურჯი ფილა! Lightbot არის თავსატეხი,
+    რომელიც იყენებს თამაშის მეთოდებს და მოთამაშეს პროგრამირებას პრაქტიკული კუთხით
+    უხსნის. ისწავლე ინსტრუქციებისა და პროცედურების შექმნა და ციკლების გამოყენება.
+    იდეალურია ნებისმიერი ასაკისთვის.
+  thinkersmith_longdescription: წინასწარ განსაზღვრული "რობოტის ლექსიკონით" მოსწავლეები
+    გაიგებენ, როგორ შეასრულებინონ ერთმანეთს დავალებები მათი განხილვის გარეშე. ეს გაკვეთილი
+    აჩვენებს ბავშვებს კავშირს სიმბოლოებსა და მოქმედებებს შორის და ცდომილებების გასწორებას
+    ასწავლის. "ჩემი რობოტი მეგობრები" კარგია ჯგუფში სათამაშოდ. ამ კურს მასწავლებლის
+    სახელმძღვანელოც მოჰყვება.
+  condcards_longdescription: გაეცანი ალგორითმებსა და პირობით დებულებებს ამ ოფლაინ-აქტივობით,
+    კარტების გამოყენებით. დავალება სრულდება გუნდურად და თითო გუნდს კარტის თითო შეკვრა
+    სჭირდება.
+  lightbotintl_longdescription: გაიგე მეტი პროგრამირების ლოგიკის შესახებ, დაიწყე 4+
+    ასაკის პროგრამირებით, iOS-ზე, Android-ზე ან ვებ-ბრაუზერით. ისწავლე ბრძანებების
+    თანმიმდევრულად დალაგება, პატერნების შემჩნევა, პროცედურებისა და ციკლების გამოყენება!
+  codehs_longdescription: მიგიცია თუ არა ოდესმე ბრძანება ძაღლისთვის? კომპიუტერისთვის
+    ბრძანების მიცემაც იგივეა - პროგრამირება კი სწორედ კომპიუტერისთვის ბრძანებების
+    გაცემაა. ისწავლე პროგრამირება ძაღლ კარელთან ერთად&mdash; მხიარული, მისაწვდომი
+    ვიზუალური შესავალი კურსის ფარგლებში, რომელიც შეგასწავლის, როგორ მუშაობენ ბრძანებები
+    და ფუნქციები. კურსი გათვლილია მოსწავლეებზე, მაგრამ რეგისტრაცია და მოსწავლეების
+    პროგრესზე დაკვირვება მასწავლებლებსაც შეუძლიათ!
+  codecademy_longdescription: 'Codeacademy არის ინტერაქტიული შესავალი ინფორმატიკაში,
+    დაფუძნებული JavaScript-ს. მას მსოფლიოში მილიონობით მოსწავლე იყენებს. ჩვენ მოვამაზადეთ
+    კოდის ერთი საათი: თავსატეხებით, სლაიდებით და საბოლოო შესასრულებებლი პროექტით.'
   codecombat_longdescription: დაამარცხე ოგრები ამ დაუვიწყარ თამაშში და ისწავლე Python
     ან JavaScript!
-  codemonkey_longdescription: 'CodeMonkey is an online game that teaches coding in
-    a real programming language! Students program a monkey to catch bananas while
-    it gets slightly more complicated on each level. They get star scores on each
-    solution and can share it in a single click. '
-  codeavengers_longdescription: Build a 2 player 2D top-down game with JavaScript
-    in 10 short tasks. Then continue learning some basics of programming (variables
-    and if statements) as you create a Quiz to share with friends. Along the way  earn
-    points and badges as you compete to reach the top of the class leaderboard.
-  processing_longdescription: An introduction to programming in the context of the
-    visual arts using the Processing programming language. Short video lessons introduce
-    coding exercises that lead to designing an interactive drawing program
-  robomind_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  groklearning_longdescription: Use the programming language Python to build a chatbot
-    called "Eliza" to act as a robot psychotherapist. You'll teach Eliza how to talk
-    and the right thing to say. Can she fool your friends into thinking she's a human
-    not a computer?
-  quorum_longdescription: This tutorial is accessible for the visually-impaired, and
-    works with screenreaders. Join Mary on a tour as she joins a biology lab as a
-    programmer and learns the Quorum programming language. This tutorial is student-guided
-    with online example activities.
-  codespark_longdescription: The Foos is a fun and kid-friendly way to learn about
-    computer programming.  Program cute characters to solve puzzles and bring a virtual
-    world to life.  The game is "word free" so all can play!
-  kodable_longdescription: Kodable is a self-guided iPad game that introduces kids
-    5+ to programming basics. Having a teacher or parent nearby is optimal, but not
-    necessary.
-  tynkerapp_longdescription: Learn to program by solving fun coding puzzles. Easily
-    build games and stories using with themed graphics, 10+ game-kits and customizable
-    characters. No Internet connectivity required. You can also access your creations
-    on the web.
-  robomindnl_longdescription: 'Students learn the basics of programming by controlling
-    their own virtual robot. The online course is fully self-contained with short
-    presentations, movies, quizzes and automatic guidance/hints to help with the programming
-    exercises. '
-  flappy_longdescription: Use drag-and-drop programming to make your own Flappy Bird
-    game, and customize it to look different (Flappy Shark, Flappy Santa, whatever).
-    Add the game to your phone in one click.
-  bitsbox_longdescription: Customize your very own virtual tablet, then code a series
-    of apps to play and share. Simple walkthroughs make it possible for even young
-    kids to program real JavaScript, and the more advanced you are the further you'll
-    go.
-  makegameswithus_longdescription: Learn to code by making an iPhone game using a
-    brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
+  codemonkey_longdescription: 'CodeMonkey არის ონლაინ-თამაში, რომელიც პროგრამირებას
+    რეალური ენებით გასწავლის! დავალება (მაიმუნის დაპროგრამება ბანანების დასაჭერად)
+    რთულდება ყოველ ახალ დონეზე. ყოველი სწორი პასუხისთვის შენ აგოვებ ვარსკვლავებს და
+    ყოველთვის შეგიძლია გაუზიარო შენი შედეგი სხვებს. '
+  codeavengers_longdescription: დაწერე ორგანზომილებიანი თამაში ორი მონაწილით JavaScript-ით
+    ათი მოკლე დავალების შესრულებით. შემდეგ გაეცანი პროგრამირების სხვა ცნებებს (ცვლადები
+    და "თუ" დებულებები), შექმენი ქვიზი და გაუზიარე იგი მეგობრებს. ყოველი შესრულებული
+    დავალებისთვის დააგორვე ქულები და ბეჯები და მოიპოვე ადგილი ლიდერთა დაფაზე.
+  processing_longdescription: შესავალი პროგრამირებაში ვიზუალური ხელოვნების კონტექსტში
+    პროცესული პროგრამირების ენის გამოყენებით. მოკლე ვიდეო გაკვეთილებს შემდეგ გადახვალთ
+    პროგრამირების დავალებებზე, რის შედეგადაც დაწერთ ხატვის ინტერაქტიულ პროგრამას
+  robomind_longdescription: 'მოსწავლეები სწავლობენ პგორამირებას თავიანთი ვირტუალური
+    რობოტის მართვით. ოლაინ-კურსში შედის მოკლე პრეზენტაციები, ფილები, თავსატეხები და
+    დავალებების შესასრულებლად სასრგებლო მინიშნებები. '
+  groklearning_longdescription: გამოიყენე პროგრამირების ენა Python და შექმენი ჩატბოტი
+    ელიზა - რობოტი-პსიქოთერაპევტი. ასწავლე ელზას რა და როდის უნდა თქვას. როგორ ფიქრობ,
+    შეძლებ დააჯერო შენს მეგობრებს, რომ ელიზა ადამიანია და არა კომპიუტერი?
+  quorum_longdescription: ეს ტუტორიალი ადაპტირებულია მხედველობის დარღვევების მქონეთათვის
+    და უზრუნველყოფს ეკრანიდან კითხვის პროგრამების გამართულ მუშაობას. გაყევი მარის
+    და ნახე, როგორ სწავლობს იგი პროგრამირების ენას Quorum-ს ბიოლოგიის ლაბორატორიაში.
+    კურსი შეიცავს ონლაინ-აქტივობებს და სრულდება დამოუკიდებლად.
+  codespark_longdescription: The Foos არის მხიარული, ბავშვებისთვის ადაპტირებული რესურსი.
+    ამოცანების ამოსახსნელად და ვირტუალური სამყაროს გასაცოცხლებლად სხვადასხვა საყვარელი
+    პერსონაჟი უნდა დააპროგრამო. თამაში არ შეიცავს სიტყვებს, ამიტომ მონაწილეობა შეუძლია
+    ყველას!
+  kodable_longdescription: Kodable არის iPad თამაში, რომელიც ხუთი წლიდან ზემოთ ბავშვებს
+    აცნობს პროგრამირების საფუძვლებს. მასწავლებლის ან მშობლის დახმარება შეიძლება სასარგებლო
+    აღმოჩნდეს, მაგრამ აუცილებელი არ არის.
+  tynkerapp_longdescription: 'ისწავლე პროგრამირება სახალისო თავსატეხების ამოხსნით.
+    დაწერე თამაშები და შექმენი ისტორიები: გამოიყენე გრაფიკა, 10-ზე მეტი სხვადასხვა
+    ხელსაწყო და პერსონიფიცირებადი პერსონაჟები. ინტერნეტ-კავშირი აუცილებელი არ არის,
+    თუმცა ონლაინ-მუშაობაც შესაძლებელია.'
+  robomindnl_longdescription: 'მოსწავლეები სწავლობენ პგორამირებას თავიანთი ვირტუალური
+    რობოტის მართვით. ოლაინ-კურსში შედის მოკლე პრეზენტაციები, ფილები, თავსატეხები და
+    დავალებების შესასრულებლად სასრგებლო მინიშნებები. '
+  flappy_longdescription: გამოიეყენე ვიზუალური პროგრამირება და შექმენი საკუთარი Flappy
+    Bird თამაში - შეგიძლია გააკეთო Flappy Shark, Flappy Santa - რაც გინდა. შემდეგ
+    დაამატე თამაში შენს ტელეფონზე ერთი ღილაკის დაჭერით.
+  bitsbox_longdescription: შექმენი საკუთარი ვირტუალური პლანშეტი, შემდეგ კი დაწერე
+    სხვადასხვა აპლიკაციები სათამაშოდ და გასაზიარებლად. მარტივი ინსტრუქციებით ბავშვებიც
+    კი შეძლებენ ნამდვილი JavaScript-ით პროგრამირებას. შემდეგ კი, რაც მეტს ივარჯიშებ,
+    მით მეტს შექმნი.
+  makegameswithus_longdescription: ისწავლე პროგრამირება iPhone თამაშის შექმნით ახალ,
+    დამწყებთათვის შექმნილ პროგრამირების ენაზე Swift! შექმენი პოკემონებით შთაგონებული
+    თამაში და ასწავლე მონსტრებს ახალი მოძრაობები. შენ ისწავლი ცვლადების, მეთოდებისა
+    და ობიექტების გამოყენებას - და შენი მონსტრები გაიმარჯვებენ!
   touchdevelop_longdescription: 'სენსორული რედაქტორი დაგეხმარება პიქსელური ნახატის
     შექმნაში, დათვის თავსატეხის ამოხსნაში ან შენი საკუთარი მხტუნავი ჩიტის თამაშის
     შექმნაში. '
-  appinventor_longdescription: Entertaining, quick video tutorials walk you through
-    building three simple apps for your Android phone or tablet. Designed for novices
-    and experts alike, this hour of code will get you ready to start building your
-    own apps before you know it. Imagine sharing your own app creations with your
-    friends! These activities are suitable for individuals and for teachers leading
-    classes.
-  blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
-    the Blockly tutorials that were the precursor of the Code.org tutorials - a single
-    3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: Students learn about representing and storing letters
-    in binary, as functions of on and off. At the end, the class gets to encode their
-    own initials to take home with them.
-  kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
-    Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
-    explain the game, then students program a partner to complete a simple obstacle
-    course. '
-  projguts_longdescription: This "unplugged" activity helps students learn how modeling
-    and simulation works by having a group of students play different versions of
-    the Rock / Paper / Scissors game, and see the results as different modeling experiments.
+  appinventor_longdescription: მოკლე და დინამიკური ვიდეო-ტუტორიალები გასწავლის შენი
+    Android ტელეფონისა ან პლანშეტისთვის სამი მარტივი აპლიკაციის შექმნას. გამოადგება
+    როგორც დამწყებებს, ასევე ექსპერტებს, როგორც ინდივიდუალურ მოსწავლეებს, ასევე ჯგუფებს.
+  blockly_longdescription: თუ ინტერნეტ-კავშირი ძალიან ნელია, გადმოიწერეთ Blockly-ს
+    ტუტორიალები ერთ სამმეგაბაიტიან ZIP ფაილად ნებისმიერ კომპიუტერსა ან მეხსიერების
+    გარე მოწყობილობაზე
+  thinkersmith2_longdescription: მოსწავლეები ისწავლიან ასოების გამოსახვასა და შენახვას
+    ბინარულ სისტემაში, On და Off ფუნქციების სახით. ბოლო დავალებაში უნდა დაშიფრონ საკუთარი
+    ინიციალები.
+  kodableunplugged_longdescription: 'fuzzFamily Frenzy-ს გამოყენება შეიძლება ჩვეულებრივ
+    ქაღალდზე. ეს სავარჯიშოები განკუთვნილია 5 წლის ზემოთ ბავშვებისთვის პროგრამირების
+    ლოგიკის ასახსნელად. მასწავლებელმა უნდა ახსნას თამაში, შემდეგ მოსწავლეები შექმნიან
+    თავიანთი მეწყვილეებისთვის ბრძანებების სერიას წინაღობების გადასალახად. '
+  projguts_longdescription: ეს ოფლაინ-აქტივობა ეხმარება მოსწავლეებს მოდელირების და
+    სიმულაციის არსის გაგებაში. მოსწავლეთა ჯგუფი ქვა/ქაღალდი/მაკრატლის სხვადასხვა ვარიაციებს
+    თამაშობენ, შედეგები კი სხვადასხვა მოდელირების კონტექსტში განიხილება.
   hourofcode_longdescription: შემავსებელი ახალი code.org/hoc
   frozen_longdescription: გამოვიყენოთ კოდი რათა შევუერთდეთ ანასა და ელზას, რომლებიც
     მაგიასა და ყინულის მშვენიერებას იკვლევენ. თქვენ შექმნით ფიფქებსა და ფიგურებს,
     ისრიალებთ ციგურებზე და შექმნით ზამთრის საოცნებო სამყაროს, რომლის მეგობრებთან გაზიარება
     შეგეძლებათ!
-  playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
-    pirates, zombies, ninjas, and many more characters move, make sounds, score points,
-    and even throw fireballs!
+  playlab_longdescription: 'შექმენი ისტორია ან თამაში თამაშების ლაბორატორიაში! გააცოცხლე
+    ცხოველები, მეკობრეები, ზომბები, ნინძები და ბევრი სხვა პერსონაჟი: აამოძრავე, აალაპარაკე
+    და აამოქმედე ისინი. მათ ქულების დაგროვბაც კი შეუძლიათ!'
   codeorg_beyond_name: 'შესავალი ინფორმატიკაში (ასაკი: K-8)'
   khan_beyond_name: ისწავლე პროგრამირება
   tynker_beyond_name: პროგრამირების სწავლა სახლიდან
@@ -1011,38 +1013,33 @@
   alice_beyond_shortdescription: ასწავლეთ პროგრამირება 3D გარემოში
   sphero_beyond_shortdescription: SPRK გაკვეთილები - ესაა რობოტიკის სახალისო ინტენსიური
     კურსი, რომელიც აძლიერებს ბავშვების მათემატიკისა და ზუსტი მეცნირებების უნარებს.
-  codeorg_beyond_longdescription: Learn the basic concepts of Computer Science with
-    drag and drop programming. 3 full courses, each consists of 15-20 lessons that
-    blend "unplugged" classroom activities interspersed with game-like, self-directed
-    tutorials starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds
-    and Plants vs. Zombies. Learn repeat-loops, conditionals, basic algorithms, functions,
-    and variables.
+  codeorg_beyond_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
+    3 მთლიანი კურსი, ყოველი 15-20 გაკვეთილით, რომელიც აერთიანებს თამაშის მსგავს კურსში
+    ვიდეო ლექციებს ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies
+    თამაშების შემქმნელებისგან და ოფლაინ აქტივობებს. ისწავლე გამეორების ციკლები, თუ-მაშინ
+    დებულებები და ბაზისური ალგორითმები.
   khan_beyond_longdescription: ისწავლა JavaScript პროგრამირების საფუძვლები - ხატე
     კოდით. გააკეთე ეს დამოუკიდებლად - ან კლასთან ერთად!
-  tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
-    It makes it visual. Kids build games and mobile apps by arranging blocks of code.
-    It removes the need to know programming syntax. Kids transform ideas into animated
-    stories and math art right away. It promotes progressive learning. As kids learn
-    fundamentals, Tynker introduces more advanced concepts including syntax driven
-    programming.
-  scratch_beyond_longdescription: With Scratch, you can create your own interactive
-    games, stories, animations &mdash; and share them with your friends. Get started
-    by animating your name, creating a holiday card, or making a pong game.
-  lightbot_beyond_longdescription: Learn core programming logic, starting from super-basic
-    programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence
-    commands, identify patterns, use procedures, and utilize loops!
-  codecademy_beyond_longdescription: Codecademy is an interactive, student-guided
-    introduction to the basics of CS through JavaScript that's used by tens of millions
-    of students around the world. We've prepared a no-hassle Hour of Code experience
-    with accompanying quizzes, slides, and a completed project for students at the
-    end.
-  kodable_beyond_longdescription: Kodable is a self-guided iPad game that introduces
-    kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but
-    not necessary.
-  scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
-    that enables young children to create their own interactive stories and games.
-    Children snap together graphical programming blocks to make characters move, jump,
-    dance, and sing
+  tynker_beyond_longdescription: პროგრამირების სწავლა Tynker-ით მარტივი და სახალისოა.
+    ბავშვები ქმნიან თამაშებს და მობილურ აპლიკაციებს კოდის ბლოკების დაწყობით ისე, რომ
+    პროგრამირების სინტაქსის ცოდნა არ არის საჭირო. იდეები წამში გადაიქცევა ანიმირებულ
+    ისტორიებად და მათემატიკურ ხელოვნებად. როცა ბავშვი აითვისებს საფუძვლებს, Tynker
+    შესათავაზეს მას უფრო რთულ მასალას, მაგალითად, იმავე სინტაქსს.
+  scratch_beyond_longdescription: სკრაჩთან ერთად შენ შექმნი საკუთარ ინტერაქტიულ თამაშებს,
+    ამბებს, ანიმაციებს &mdash; და გაუზიარებ მათ მეგობრებს. დაიწყე სახელის ანიმირებით,
+    მისალოცი ბარათის შექმნით ან მაგიდის ტენისის თამაშით.
+  lightbot_beyond_longdescription: გაიგე მეტი პროგრამირების ლოგიკის შესახებ, დაიწყე
+    4+ ასაკის პროგრამირებით, iOS-ზე, Android-ზე ან ვებ-ბრაუზერით. ისწავლე ბრძანებების
+    თანმიმდევრულად დალაგება, პატერნების შემჩნევა, პროცედურებისა და ციკლების გამოყენება!
+  codecademy_beyond_longdescription: 'Codeacademy არის ინტერაქტიული შესავალი ინფორმატიკაში,
+    დაფუძნებული JavaScript-ს. მას მსოფლიოში მილიონობით მოსწავლე იყენებს. ჩვენ მოვამაზადეთ
+    კოდის ერთი საათი: თავსატეხებით, სლაიდებით და საბოლოო შესასრულებებლი პროექტით.'
+  kodable_beyond_longdescription: Kodable არის iPad თამაში, რომელიც ხუთი წლიდან ზემოთ
+    ბავშვებს აცნობს პროგრამირების საფუძვლებს. მასწავლებლის ან მშობლის დახმარება შეიძლება
+    სასარგებლო აღმოჩნდეს, მაგრამ აუცილებელი არ არის.
+  scratchjr_beyond_longdescription: ScratchJr არის პროგრამირების ენა დამწყებთათვის,
+    რომელიც მისცემს თქვენს ბავშვებს შესაძლებლობას შექმნან თავიანთი ინტერაქტიული ისტორიები
+    და თამაშები. პერსონაჟების სამართავად ბავშვები აერთებენ ვიზუალურ ბლოკებს
   hopscotch_beyond_longdescription: Hopscotch პროგამირების ენის ტუტორიალები iPad-ისთვის.
     მოსწავლეები ისწავლიან iPad აპლიკაციებისა და თამაშების შექმნას. მათ შეუძლიათ იმუშავონ
     ინდივიდუალურად ან ჯგუფურად (ერთ iPad-ზე მაქსიმუმ 3 მოსწავლე).
@@ -1067,12 +1064,9 @@
     ყველაფერი ბრაუზერში. მერე კი გავუზიაროთ შედეგი მეგობრებს Facebook-ზე! არაუშავს,
     თუ არ გაქვს iPhone-ზე პროგრამირების გამოცდილება. მთავარია, გაიგო რა არის ცვლადები,
     მეთოდები და ობიექტები.'
-  appinventor_beyond_longdescription: Entertaining, quick video tutorials walk you
-    through building three simple apps for your Android phone or tablet. Designed
-    for novices and experts alike, this hour of code will get you ready to start building
-    your own apps before you know it. Imagine sharing your own app creations with
-    your friends! These activities are suitable for individuals and for teachers leading
-    classes.
+  appinventor_beyond_longdescription: მოკლე და დინამიკური ვიდეო-ტუტორიალები გასწავლის
+    შენი Android ტელეფონისა ან პლანშეტისთვის სამი მარტივი აპლიკაციის შექმნას. გამოადგება
+    როგორც დამწყებებს, ასევე ექსპერტებს, როგორც ინდივიდუალურ მოსწავლეებს, ასევე ჯგუფებს.
   touchdevelop_beyond_longdescription: 'TouchDevelop გაძლევს საშუალებას შექმნა აპლიკაცები
     შემდეგი მოწყობილობებისთვის: iPad, iPhone, Android, PC, Mac, Windows Phone. ჩვენი
     სენსორული რედაქტორით კოდის წერა პლანშეტის ან მობილურის გამოყენებითაც კია სახალისო!'
@@ -1114,61 +1108,61 @@
     ყველას შეუძლია გამოიყენოს Kodu და შექმნას თამაში: პატარებსაც და დიდებსაც, იმათაც,
     ვისაც აქვთ პროგრამირების გამოცდილება და იმათაც, ვისაც არა. Kodu XBox-ისთვის ასევე
     მისაწვდომია აშშ-ში, XBox მაღაზიაში, ინდი თამაშების არხზე, მხოლოდ 5 დოლარად.'
-  cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot
-    how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
-    haunting music and stunning retina graphics. You can even record your solutions
-    and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: 'Have fun and make games, or hack your homework
-    using Ruby! Just tell your parents or teachers you''re learning Ruby programming...
-    ;). Free and works on any computer. [Note: Desktop install required]'
+  cargobot_beyond_longdescription: Cargo-Bot არის თამაში-თავსატეხი, სადაც რობოტს ყუთების
+    გადაადგილებას ასწავლი. მარტივად ჟღერს, არა? მოცუელია 36 თავსატეხი, კარგი მუსიკა
+    და თვალწარმტაცი გრაფიკა. შეგიძლია ჩაწერო შენი ამონახსნები ვიდეოზე და გაუზიარო
+    მეგობრებს YouTube-ზე.
+  kidsruby_beyond_longdescription: შექმენი თამაშები ან შეასრულე საშიანაო დავალება
+    Ruby-ს გამოყენებით! უბრალოდ უთხარი მშობლებსა ან მასწავლებლებს, რომ Ruby-ზე პროგრამირებას
+    სწავლობთ... ;) პროგრამა უფასოა და მუშაობს ნებისმიერ კომპიუტერზე, მაგრამ სჭირდება
+    დაყენება.
   w3schools_beyond_longdescription: ისწავლე ვებსაიტების შექმნა. გაეცანი სერვერის მუშაობის
     პრინციპებს ერთ დღეში. გაიგე, როგორ დაუმატო შენს საიტს მონაცემთა ბაზები
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
-  mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
-    share your own web pages. Write and edit HTML and CSS right in your browser, then
-    instantly preview your work. Host and share your finished projects with a single
-    click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: Play as a Wizard using code (spells) to control
-    your heroes, navigate mazes, defeat ogres, trick enemies, and rescue allies! Learn
-    JavaScript in this HTML 5 web game for complete beginners.
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a color, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
+  codeavengers_beyond_longdescription: 'დაწერე თამაშები, აპლიკაციები და ვებ-გვერდები.
+    შექმნილია ექსპერტების მიერ დამწყებთათვის: ინსტრუქციები მარტივია, მინიშნებები კი
+    მისაწვდომი ყოველთვის, როცა საჭიროა. ჩვენი HTML, CSS და JavaScript კურსები შეიცავენ
+    პროგრამირების დავალებებს, გამეორებისთვის კი - თამაშებს. სწავლა ნებისმიერ ასაკში
+    იქნება სახალისო და ეფექტური.'
+  mozilla_beyond_longdescription: Thimble-ს გამოყენებით საკუთარი ვებ-გვერდების შექმნა
+    და გაზიარება სასაცილომდე მარტივია. დაწერე და დაარედაქტირე HTML და CSS პირდაპირ
+    შენს ბრაუზერში, შემდეგ კი გატესტე ნაშრომი. თანაბრად სასარგებლოა როგორც დამწყებთათვის,
+    ასევე გამოცდილი მომხმარებლებისთვის.
+  codecombat_beyond_longdescription: ითამაშე ჯადოქარი და გამოიყენე კოდი (ჯადოები)
+    შენი გმირების სამართავად, ლაბირინთებში სამოძრაოდ, ოგრების დასამარცხებლად, მტრების
+    მოსატყუებლად და მოკავშირეების გადასარჩენად! ისწავლე JavaScript ამ HTML 5 ვებ-თამაშში.
+  codea_beyond_longdescription: 'Codea iPad-ებისთვის გაძლევს საშუალებას შექმნა თამაშები
+    და სიმულაციები და განახორციელო ნებისმიერი ვიზუალური იდეა. მოიფიქრე, როგორ შეიძლება
+    გამოიყენო ისეთი iPad-ის ისეთი თვისებები, როგორიცაა სენსორული ეკრანი და აკსელომეტრი?
+    ჩვენ ვფიქრობთ, რომ Codea არის ყველაზე ლამაზი და მარტივი კოდის რედაქტორი, რომელსაც
+    ოდესმე გამოიყენებ. ყველაფრის შეცვლა შეგიძლია ერთი შეხებით: რიცხვის, ფერის, სურათის.
+    დააჭირე და ვიზუალური რედაქტორები აგარჩევინებენ ზუსტად იმას, რაც გინდა.'
   lego_beyond_longdescription: შექმენი პატარა რობოტები LEGO-ს დეტალების გამოყენებით
     ისე, რომ მათი დაპროგრამება და პარამეტრების გასწორება შეიძლებოდეს.
-  finch_beyond_longdescription: The Finch is a new robot for computer science education.
-    Its design is the result of a four year study at Carnegie Mellon's CREATE lab.
-    The Finch is designed to support an engaging introduction to the art of programming.
-    It has support for over a dozen programming languages and environments, including
-    several environments appropriate for students as young as eight years old. The
-    Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: Arduino is a popular platform designed to allow
-    artists and designers to work with real sensors, LEDs, buzzers, and more. The
-    Sparkfun Virtual Sandbox will teach you real Arduino code right in your browser.
-  processing_beyond_longdescription: Processing is a programming language, development
-    environment, and online community. Since 2001, Processing has promoted software
-    literacy within the visual arts and visual literacy within technology. Initially
-    created to serve as a software sketchbook and to teach computer programming fundamentals
-    within a visual context, Processing evolved into a development tool for professionals.
-    Today, there are tens of thousands of students, artists, designers, researchers,
-    and hobbyists who use Processing for learning, prototyping, and production.
-  alice_beyond_longdescription: Using an innovative programming environment to support
-    the creation of 3D animations, the Alice Project provides tools and materials
-    for teaching and learning computational thinking, problem solving, and computer
-    programming across a spectrum of ages and grade levels.
-  sphero_beyond_longdescription: Whether you're an educator or a parent, SPRK lessons
-    give kids a fun crash course in programming robots while sharpening their skills
-    in math and science.
+  finch_beyond_longdescription: The Finch არის ახალი რობოტი, რომელიც გასწავლის ინფორმატიკას.
+    მისი შექმნა არის კარნეგი მელონის CREATE ლაბორატორიის ოთხწლიანი კვლევის შედეგი.
+    The Finch დახემხარება გაერკვე პროგრამირების საფუძვლებში; იგი უზრუნველყოფს პროგრამირების
+    ათზე მეტ ენასა და გარემოს, მათ შორის რამდნიმეს რვა წლის ასაკის ბავშვებისთვის.
+    The Finch შეიქმნა, რათა მიეცა მოსწავლეებისთვის ინტერაქტიული პროგრამების დაწერის
+    საშუალება.
+  arduino_beyond_longdescription: Arduino არის პოპულარული პლატფორმა, რომელიც აძლევს
+    მხატვრებსა და დიზაინერებს საშუალებას იმუშავონ ნამდვილ სენსორებზე, LED-ზე და სხვა
+    ტექნოლოგიებზე. Sparkfun Virtual Sandbox გასწავლის ნადმვილ Arduino პროგრამირებას
+    პირდაპირ შენს ბრაუზერში.
+  processing_beyond_longdescription: Processing არის პროგრამირების ენა და ონლაინ-გაერთიანება.
+    2001 წლიდან მოყოლებული Processing ზრუნავს პროგრამულ განათლებაზე ხელოვნებაში და
+    ხელოვნების განვითარებაზე ტექნოლოგიებში. თავდაპირველად იგი შეიქმნა როგორც პროგრამული
+    უზრუნველყოფა პროგრამირების საფუძვლების სასწავლად ხელოვნების კონტექსტში. ახლა კი
+    იგი უკვე პროფესიონალების ინსტრუმენტად იქცა. ათობით ათასი მოსწავლე, ხელოვანი, დიზაინერი,
+    მკვლევარი იყენებს Processing-ს სწავლისთვის, პროტოტიპების შექმნისა და წარმოებისთვის.
+  alice_beyond_longdescription: 'Alice Project იყენებს ინოვაციურ პროგრამულ გარემოს
+    და 3D ანიმაციების შექმნით უზრუნველყოფს ინსტრუმენტებსა და მასალებს გამოთვლითი აზროვნების,
+    ამოცანების გადაწყვეტის, პროგრამირების სასწავლად და სასწავლებლად: ნებისმიერი ასაკისა
+    და კლასისთვის.'
+  sphero_beyond_longdescription: 'არა აქვს მნიშვნელობა, მშობელი ხართ თუ მასწავლებელი:
+    SPRK გაკვეთილებით თქვენი ბავშვები სწრაფად და ხალისიანად ისწავლიან რობოტების პროგრამირებას
+    და განავითარებენ მათემატიკის თავიანთ უნარებს.'
   compatibility_https_header: ჩართე HTTPS Code.org-ისთვის.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
+  compatibility_https_message: უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ
+    HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ
+    აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის.
   compatibility_https_hide_this_warning: ამ გაფრთხილების გათიშვა

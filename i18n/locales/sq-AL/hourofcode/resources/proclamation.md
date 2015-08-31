@@ -1,52 +1,52 @@
 * * *
 
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code layout: wide nav: resources_nav
+titulli: Shembulli Op-ed Mbështetja e Javës Edukative të Shkencave Kompjuterike dhe Orës së Kodimit shpërndarja: e gjerë nav: burime_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Më poshtë është një rezolutë mostër mbështetëse për Javën Edukative të Shkencave Kompjuterike dhe qëllimet e tij që të mund të përdoret nga ligjvënës shtetëror dhe lokal.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[SHTËPI, SENAT, SHTET,FSHAT OSE QYTET VENDIM OSE THIRRJE###] - Ndërsa Java Edukative e Shkencave Kompjuterike thekson rolin vendimtar që shkenca kompjuterike luan në transformimin e shoqërisë tonë dhe se si shkenca kompjuterike mundëson risi dhe krijon mundësi ekonomike;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[SHTËPIA OSE REZOLUTA E SENATIT###]
 
 [DATE]
 
-Whereas computing technology is an integral part of culture and is transforming how people interact with each other and the world around them;
+Kurse teknologjia kompjuterike është një pjesë integrale e kulturës dhe është duke transformuar mënyrën se si njerëzit ndërveprojnë me njëri-tjetrin dhe botën rreth tyre;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Ndërsa shkenca kompjuterike është duke transformuar industrinë, duke krijuar fusha të reja të tregtisë, risi në të gjitha fushat e shkencës, dhe forcimin e produktivitetit në sektorët e përcaktuara ekonomik;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Ndërsa fusha e shkencave kompjuterike mbështet sektorin e teknologjisë së informacionit të ekonomisë sonë, e cila është një kontribues i rëndësishëm për prodhimin ekonomik të Shteteve të Bashkuara;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Ndërsa fusha e shkencës kompjuterike është një shkencë themelore për moshën dixhitale;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Ndërsa sektori i teknologjisë së informacionit është pozicionuar në mënyrë unike për të ndihmuar me rimëkëmbjen ekonomike nëpërmjet kërkimit dhe zhvillimit të risive të reja;
 
-Whereas the outlook for computer science jobs is bright with one in every two STEM jobs in the country in computing occupations;
+Ndërsa perspektiva për punët në shkenca kompjuterike është e ndritshme me një në çdo dy punë STEM në vendin tuaj në iniciativat kompjuterike;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Ndërsa studentëve iu jepet shansi të marrin pjesë në aktivitetet me nivel të lartë të shkencave kompjuterike i ekspozon ata për mundësitë e pasura të ofertave në terren dhe ofron aftësitë e të menduarit kritik që do t'i shërbejnë gjatë gjithë jetës së tyre;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Ndërsa të gjithë studentët e meritojnë një përgatitje të plotë në arsimin e shkencave kompjuterike, duke përfshirë aksesin në mësues të kualifikuar, teknologji, dhe moshë-të përshtatshme të kurrikulumit të nevojshme për të mësuar shkencat kompjuterike në nivelet fillestare dhe të mesme të arsimit;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Ndërsa arsimi në shkenca kompjuterike ka sfida për të adresuar, duke përfshirë klasat e shkencave kompjuterike i numërimit drejt kërkesave të diplomimit të shkollës së mesme, dhe sigurimin e zhvillimit profesional për mësuesit e shkencave kompjuterike;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Ndërsa marrja pjesë në një Orë të Kodimit gjatë Javës Edukative të Shkencave Kompjuterike mund të shërbejë për të çmitizuar fushën e shkencave kompjuterike dhe për të inkurajuar më shumë studentë për të marrë studime të mëtejshme të shkencave kompjuterike;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Ndërsa fusha e shkencave kompjuterike ka pengesa të konsiderueshme të kapitalit duke përfshirë tërheqjen e më shumë femrave pjesmarrëse dhe minoriteteve të papërfaqësuara në të gjitha nivelet dhe degët;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Ndërsa Grace Murray Hopper, një nga femrat e para në fushën e shkencës kompjuterike, projektoi gjuhë të reja programimi dhe standardet udhëheqëse për sistemet kompjuterike të cilat hodhën themelet për shumë avancime në shkenca kompjuterike; dhe
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Vendosur, Që [SHTËPIA E SENATIT, SHTETI, VENDI, QYTETI OSE BORDI SHKOLLËS] --
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) inkurajo shkollat, edukatorët, prindërit dhe politikëbërësit për të marrë pjesë në Javën Edukative të Shkencave Kompjuterike duke bërë të mundur që studentët e tyre të marrin pjesë në Orën e Kodimit;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) nxit shkollat, mësuesit, studiuesit, universitetet, liderët e biznesit dhe politikë bërësit për të identifikuar mekanizmat për mësuesit për të marrë zhvillim profesional për të siguruar përvoja të qëndrueshme të mësuarit në shkenca kompjuterike në të gjitha nivelet arsimore dhe për të inkurajuar nxënësit që të jenë të ekspozuar ndaj koncepteve shkencore kompjuterike;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) inkurajo politikëbërësit për të hequr pengesat që parandalojnë klasat e shkencave kompjuterike nga të qenit të numërueshëm si kredite matematike ose shkence drejt kërkesave të diplomimit;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) inkurajo mundësitë, duke përfshirë programet ekzistuese, për femra dhe të pakicave të pa përfaqësuara në shkenca kompjuterike.

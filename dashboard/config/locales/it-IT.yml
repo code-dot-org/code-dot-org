@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Per favore correggi i seguenti errori:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -422,7 +424,7 @@
     local_school: scuola locale
     online: in linea
     see_details: Vedi i dettagli
-    view_course: View Course
+    view_course: Visualizza il corso
     prize_info: 'Premi per la partecipazione (solo per insegnanti di scuola pubblica
       degli Stati Uniti): Fino a $1.000 in premi per la classe.'
     tryfirst: 'Oppure, puoi prima provarlo e successivamente iscriverti:'
@@ -444,8 +446,12 @@
     heading_legacy: <h2>Corso rapido</h2> per <h1>i più grandi</h1>
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Studio Code
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
     print_certificate: Stampa il certificato
+  share:
+    title: Impara su Code Studio
+    description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
+      artistici con la programmazione.
   gender:
     male: Maschile
     female: Femminile
@@ -454,17 +460,33 @@
     student: Studente
     teacher: Insegnante
   footer:
-    help_from_html: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno contribuito
-      a creare questo corso.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Tutti i Diritti Riservati.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Tutti i Diritti Riservati.
+    thank_you: Ringraziamo i nostri <a href="https://code.org/about/donors"> donatori</a>,
+      <a href="https://code.org/about/partners"> partner</a>, il nostro <a href="https://code.org/about/team">
+      team</a>, il nostro cast video e i nostri <a href="https://code.org/about/advisors">
+      consulenti di formazione</a> per il loro supporto nella creazione di Code Studio.
+    help_from_html: Vogliamo soprattutto essere riconoscenti agli ingegneri di Google,
+      Microsoft, Facebook, Twitter e molti altri che hanno aiutato a creare questi
+      materiali.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
+    art_from_html: |
+      Ice Age™ & © %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
+      AngryBirds™ & © 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br/>
+      Plants vs Zombies™ & © %{current_year} Electronic Arts Inc. Tutti i diritti riservati
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Eseguito su Amazon Web Services
+    trademark: © Code.org, %{current_year}. Code.org®, il logo CODE e Hour of Code®
+      sono marchi di Code.org.
+    copyright: Diritto d'autore
+    more: Di più
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
     support: Supporto
     support_url: http://programmailfuturo.it/aiuto
-    tos: Termini di servizio
+    tos_short: Terms
+    tos: Termini d'uso del servizio
     privacy: Informativa sulla privacy
     secure: Versione sicura
   reference_area:
@@ -618,6 +640,11 @@
     open_response_body: Grazie per la risposta!
   dialog:
     ok: Ok
+    startover_title: Sei sicuro di voler ricominciare da capo?
+    startover_body: Questo ripristinerà il puzzle allo stato iniziale e resetterà
+      tutti i dati che hai aggiunto o modificato.
+    startover_ok: Ricomincia
+    startover_cancel: Annulla
   time:
     hour: 1 ora
     day: giorno

@@ -85,7 +85,7 @@ Unit completion is driven primarily by our professional development schedule. Un
 As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
 
 * Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
-* Unit 2 - Target Aug. 1
+* Unit 2 - Target Aug. 31
 * Unit 3 - Target Early Fall (Sept/Oct)
 * Unit 4 - Target Mid Fall (Oct/Nov)
 

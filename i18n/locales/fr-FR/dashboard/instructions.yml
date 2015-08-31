@@ -398,6 +398,7 @@ fr:
       4-5 While Loops 8_instruction: ' Voilà un trou vraiment profond et un gros tas de terre. Combien de pelletées de terre doivent être déplacées pour égaliser le sol? Astuce: utilise la boucle "tant que" pour les deux.'
       4-5 While Loops Assessment 1_instruction: Voilà beaucoup de trous et de tas. Aide-moi à déplacer la terre pour rendre le sol plat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      App Lab test_instruction: test
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
         view full instructions.
@@ -457,11 +458,11 @@ fr:
         over towards the left. Complete update-danger to make the danger fly across
         the screen.
       Big Game Animation 4_instruction: |
-        At this point your game your danger should
-        run across the screen from right to left, and your target should run across
-        from left to right. They don't ever come back on screen once they've left,
-        but we'll take care of that later. Take a minute to make sure your game is
-        working like you want it to, and then click finish to move on.
+        At this point in your game, your danger
+        should run across the screen from right to left, and your target should run
+        across from left to right. They don't ever come back on screen once they've
+        left, but we'll take care of that later. Take a minute to make sure your
+        game is working like you want it to, and then click Finish to move on.
       Big Game Booleans 1_instruction: |
         When you last worked on your game we got
         our target and danger sprites to fly across the screen, but they never come
@@ -483,8 +484,8 @@ fr:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -523,10 +524,11 @@ fr:
         tweaks to it. When you're happy with the final product, click Finish and
         you'll have an opportunity to share a link to your game. Good work!
       Big Game Player 1_instruction: |
-        We're getting really close to a finished game!Last
-        time you worked on your game, you used booleans to make your Target and Danger
-        return to the screen once they've left. Click Run to see how your game looks
-        right now, and then we'll get to making your Player move up and down.
+        We're getting really close to a finished game!
+        Last time you worked on your game, you used booleans to make your Target and
+        Danger return to the screen once they've left. Click Run to see how your
+        game looks right now, and then we'll get to making your Player move up and
+        down.
       Big Game Player 2_instruction: |
         Edit the update-player function so the player
         moves up when the up arrow (keycode 38) is pressed, and moves down (keycode
@@ -686,10 +688,9 @@ fr:
         your function using f(3).
       Calc Design Recipe 1_instruction: |
         Let's use the Design Recipe to create a
-        function called cube - this function should have a domain of Number, range
-        of Number, and return the given number to the power of 3. Make sure to write
-        two example cases! When you're done, use your new function to calculate 7
-        cubed.
+        function called cube - this function should take in a number return that number
+        to the power of 3. Make sure to write two example cases! When you're done,
+        use your new function to calculate 7 cubed.
       Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou need to track the cost of making each cookie, the money paid, and the\ntotal profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\nWrite\nthe function cost, which takes in the number of cookies you intend to sell,\nand returns the cost of making those cookies."
       Calc Design Recipe 3_instruction: |
         Write the function sales which takes in
@@ -831,21 +832,17 @@ fr:
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: "Peux-tu m'amener au cochon en utilisant 5 blocs?"
       Course 4 2_instruction: "L'abeille veut du nectar dès maintenant. N'oublie pas, tous les objets ne sont pas des fleurs, donc vérifie pour ne recueillir le nectar que sur les fleurs."
-      Course 4 Artist 1_instruction: 'Aide-moi à finir de dessiner ma boîte. (Chaque ligne fait 300 pixels de long) '
+      Course 4 Artist 1_instruction: 'Aide-moi à finir de dessiner ma boîte. (Chaque ligne fait 200 pixels de long) '
       Course 4 Artist 10_instruction: "C'est l'heure de jouer! Amuse-toi à dessiner ce que tu souhaites. "
       Course 4 Artist 11_instruction: |
         Now for a challenge!  Here is a design that
         uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor the solution."
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.  Want to see more hints?  Click here!
+      Course 4 Artist 12_instruction: "Tu veux revoir les suggestions de design ou les conseils ? Clique ici !\r\n\r\nSinon, fais ton propre design !"
+      Course 4 Artist 13_instruction: 'Encore envie de jouer ?  Voici une page vierge où tu peux créer tout ce que tu veux !'
       Course 4 Artist 2_instruction: Vous pouvez boucler ce code-ci pour dessiner le carré en gris?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: 'Encore envie de jouer ?  Voici une page vierge où tu peux créer tout ce que tu veux !'
       Course 4 Artist 3_instruction: 'Bon, essayez de comprendre ce qui arrivera si vous faites fonctionner ce code (ou appuyez sur "run" pour essayer). Ensuite, répétez-le suffisamment de fois pour terminer le dessin.'
       Course 4 Artist 4_instruction: 'Il y a combien de degrés dans un cercle? Remplissez le bloc "repeat" (répéter) avec ce numéro pour créer un cercle de couleurs. '
       Course 4 Artist 5_instruction: "Dessinez l'autre moitié de cette conception pour qu'il soit symétrique. Les triangles sont équilatéraux sont de 50 pixels."
@@ -854,6 +851,7 @@ fr:
         Indice: 3 triangles dans une rotation de 360 degrés.
       Course 4 Artist 7_instruction: "Ensuite emboîtez cette boucle dans une autre boucle pour dessiner 10 triangles. Cela s'appelle une boucle emboîtée. Indice: les 10 triangles font en totale une rotation de 360 degrés."
       Course 4 Artist 8_instruction: Dessinez ce soleil en faisant une boucle de tout ce bloc de code 12 fois.
+      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
       Course 4 Artist 9_instruction: 'Faites une boucle de 10 fois avec ce modèle et veillez à tourner entre chaque forme tracée. Voici un indice pour combien vous devez tourner : ce qui est de 360 divisé par 10 ?'
       Course 4 Artist Binary 1_instruction: "Voici une fonction qui prend en paramètre une chaîne binaire avec des '1' et des '0' et demande à l'artiste d'avancer de gauche à droite, et de haut en bas, en remplissant la case quand il voit un '1' et en sautant la case quand il voit un '0'. Exécute ce code pour voir comment l'artiste utilise le binaire pour dessiner ce modèle."
       Course 4 Artist Binary 2_instruction: Laquelle de ces chaînes binaires pourriez-vous utilisez 8 fois en boucle pour dessiner cette image ?
@@ -884,6 +882,7 @@ fr:
       Course 4 Artist For Loops 6_instruction: "Jeu libre! Essaie d'utiliser une boucle pour dessiner une suite de formes grandissantes de ton choix."
       Course 4 Artist For Loops 7_instruction: 'Que se passe-il si tu enlèves le "Répète 3 fois" de cette algorithme, en gardant les blocs "bouge" et "tourne" dans la boucle ? Dans ce triangle en spirale, chaque côté a 20 pixels de plus que le précédent.'
       Course 4 Artist For Loops 8_instruction: La plus petite ligne des spirales carrées est de 10, la plus grande de 200 et chaque ligne est 10 pixels plus grande que la précédente. Peux-tu compléter les blocs manquants pour terminer cette magnifique image ?
+      Course 4 Artist For Loops 8a_instruction: La plus petite ligne des spirales carrées est de 10, la plus grande de 200 et chaque ligne est 10 pixels plus grande que la précédente. Peux-tu compléter les blocs manquants pour terminer cette magnifique image ?
       Course 4 Artist For Loops 9_instruction: "Sais-tu dessiner une spirale ? Avance d'1 pixel à la fois, de 1 à 75."
       Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
       Course 4 Artist Functions 1_instruction: Peux-tu dessiner un carré qui a 100 pixels de côté en utilisant une boucle ?
@@ -903,7 +902,7 @@ fr:
       Course 4 Artist Functions 7_instruction: Peux-tu dessiner une ligne de carrés en utilisant une fonction Carré ? Chaque carré a 40 pixels de longueur.
       Course 4 Artist Functions 8_instruction: "Avez-vous compris l'utilisation des blocs de fonction ? Modifions ce carré afin qu'il ait une taille de 200 pixels. Astuce : cliquez sur « modifier » pour modifier la taille dans l'éditeur de la fonction « dessiner un carré ». N'oubliez pas de cliquer sur « enregistrer et fermer » pour sortir de l'éditeur de fonction. "
       Course 4 Artist Functions 9_instruction: Nous vous avons donné presque tout le code pour créer une fonction. Cependant, il semble manquer quelque chose. Pouvez-vous terminer ce bloc fonction ?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor the solution."
+      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine un carré de côté 50 pixels
       Course 4 Artist Params 10_instruction: "Vous pouvez appeler des fonctions à partir d'autres fonctions ! En utilisant votre fonction Forme comme base, créez trois formes de maison, chacune 20 pixels plus grande que la précédente en commençant à 50 pixels de longueur. Utiliser une boucle avec compteur peut aider. "
       Course 4 Artist Params 11_instruction: |
@@ -964,22 +963,12 @@ fr:
       Course 4 Bee 2_instruction: "Vérifiez chaque objet pour voir si c'est une fleur. Si c'est le cas, butinez... sinon, vous pouvez l'ignorer !"
       Course 4 Bee 3_instruction: "L'objet inconnu est soit une fleur soit un rayon de miel. Utilise le bloc si/sinon pour collecter le nectar si c'est une fleur, sinon pour faire du miel (parce qu'alors ce serait un rayon de miel)."
       Course 4 Bee 4_instruction: La fleur violette peut avoir soit 3, 2, ou 1 nectar. Ici un bloc si-sinon est combiné avec un autre bloc si-sinon pour créer un bloc si, sinon-si, sinon. Complète la solution pour collecter la quantité inconnue de nectar.
-      Course 4 Bee 5_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Add an if-else block to create an if, else-if, else block. Complete
-        the solution to collect the unknown amount of nectar.
-      Course 4 Bee 6_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Create an if, else-if, else block to collect the unknown amount of
-        nectar.
-      Course 4 Bee 7_instruction: |
-        Use everything you have learned so far to collect
-        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
+      Course 4 Bee 5_instruction: Cette fleur pourpre peut avoir 3, 2 ou 1 nectar. Ajoute un bloc if-else pour créer un bloc if, else-if, else. Complète la solution pour récolter la quantité inconnue de nectar.
+      Course 4 Bee 6_instruction: Cette fleur pourpre peut avoir 3, 2 ou 1 nectar. Créer un blog if, else-If, else permettant de recueillir la quantité inconnue de nectar.
+      Course 4 Bee 7_instruction: "Utilise tout ce que tu as appris jusqu'ici pour recueillir tout le nectar. La fleur pourpre peut avoir 3, 2 ou 1 nectar."
       Course 4 Bee For Loops 1_instruction: Utilise une boucle pour collecter le nectar de chaque fleur.
       Course 4 Bee For Loops 10_instruction: "Si ta boucle est dégressive, l'incrémentation est soustraite de la variable counter à chaque boucle. Que devrait être ton incrémentation pour collecter 9, ensuite 6 et enfin 3 nectars?"
-      Course 4 Bee For Loops 11_instruction: |
-        What's wrong with this loop? See if
-        you can fix it and make the bee collect all the nectar.
+      Course 4 Bee For Loops 11_instruction: "Qu'est-ce qui ne va pas dans cette boucle ? Essaye de la réparer afin que toutes les abeilles récupèrent le nectar."
       Course 4 Bee For Loops 2_instruction: |-
         Voici un nouveau genre de boucle, appelé la boucle "for". Cette boucle particulière comptera de 1 à 5, de 1 en 1, et exécutera le contenu de la boucle à chaque compte. Aide l'abeille à récolter le nectar.
       Course 4 Bee For Loops 3_instruction: Tu peux résoudre ce puzzle en utilisant une boucle pour compter de 1 à 3, de 1 en 1. Maintenant, récoltons du nectar!
@@ -991,6 +980,11 @@ fr:
       Course 4 Bee For Loops 8_instruction: Peux-tu utiliser la variable de la boucle pour contrôler le mouvement et la collecte de nectar?
       Course 4 Bee For Loops 9_instruction: |-
         Le dernier nombre de ta boucle for est appelé l'"incrémentation", et chaque fois que la boucle est lancée la variable counter varie de l'incrémentation. Essaie de récolter ces fleurs en utilisant une incrémentatino de 2.
+      Course 4 Bee Loops 5 NEW_instruction: Met ces blocs dans une boucle afin de recueillir le nectar de chaque fleur.
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: |
         Utilise la fonction "collecte 3 le nectar" qui fait tourner, se déplacer pour collecter le nectar et revenir à son point de départ.
         Ecrit une séquence pour collecter tout le nectar en utilisant "collecte 3 le nectar".
@@ -1012,6 +1006,7 @@ fr:
       Course 4 Bee Params 7 (copy 1)_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar. "
       Course 4 Bee Params 7_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar."
       Course 4 Bee Params 8_instruction: "Oh non, il faut aussi s'occuper du miel ! Comment peux-tu mettre à jour la fonction pour soit collecter du nectar soit faire du miel."
+      Course 4 Bee Params Ex_instruction: "Essaie d'utiliser ta nouvelle fonction pour collecter tout ce nectar."
       Course 4 Binary 1_instruction: Voilà une fonction qui utilise une suite binaire de 1 et de 0 et donne comme instructions au fermier de se déplacer de gauche à droite, du haut vers le bas et de retourner les carrés ou il y a un zéro. Exécute le code fourni pour voir comment le fermier utilise le binaire pour dessiner une image.
       Course 4 Binary 2_instruction: 'Quelle suite binaire pourrais-tu répéter 8 fois pour dessiner cette image ? Astuce : le chiffre "1" remplit un trou.'
       Course 4 Binary 3_instruction: " Peux-tu dessiner ce motif avec une boucle d'une seule suite binaire ?"
@@ -1077,9 +1072,7 @@ fr:
         Tu te souviens qu'un nombre premier est un nombre entier qui n'est divisible que par lui-même. Utilise la fonction "est_nombrepremier" pour enoncer seulement les nombres premiers de 1 à 100.
       Course 4 Play Labs For Loops 7_instruction: "Pourrais-tu utiliser une boucle « Répéter » pour m'aider à dire la séquence 1, 4, 7, 10, 13, 16, 19, 22, 25 ?"
       Course 4 Play Labs For Loops 8_instruction: Quelle boucle « Répéter » me ferais dire 19, 27, 35, 43, 51 ?
-      Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+      Course 4 Variables Assessment_instruction: Peux-tu créer cette image en utilisant une variable pour les côtés ? Chaque ligne doit faire 50 pixels de long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1214,6 +1207,11 @@ fr:
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
         radii of 25, 50, and 75.
+      Eval Define Funcs Test_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -1246,21 +1244,20 @@ fr:
         color that is twice as wide as it is high.
       Eval Design Recipe 4_instruction: |
         Use the Design Recipe to create a function
-        starburst that has two domains. 1) a number of points and 2) a radius. starburst
-        returns a yellow radial star with given points, and an inner radius that is
-        half the outer radius.
+        starburst. When given a number of points and an outer radius, starburst returns
+        a yellow radial star with given points, and an inner radius that is half the
+        outer radius.
       Eval Design Recipe 5_instruction: |
         Using the Design Recipe, write a function
         striped-flag that takes two colors and produces a flag that is 250 pixels
         wide, 150 pixels tall, with three even horizontal stripes of given colors,
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
-        Using the Design Recipe, write a function
-        large-polygon that should output a solid polygon of given sides and color
-        that takes up most of the window, regardless of the number of sides. To make
-        sure that the polygon doesn't get too large as you increase the number of
-        sides, side length should be inversely proportional to side number, with a
-        length of (800/sides).
+        Write a function large-polygon that should
+        output a solid polygon of given sides and color that takes up most of the
+        window, regardless of the number of sides. To make sure that the polygon doesn't
+        get too large as you increase the number of sides, side length should be inversely
+        proportional to side number, with a length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1330,8 +1327,12 @@ fr:
       frozen square loop 3x_instruction: Essayons de créer trois carrés, en tournant après chaque carré. Tu dois tourner de 120 degrés avant chaque nouveau carré.
       frozen square loop_instruction: "Salut, je suis Anna dArendelle ! Nous allons faire un carré avec le bloc « Répéter », ce qui nécessitera moins de blocs. Combien de fois (???) est-ce que le bloc « Répéter » devrait répéter les blocs qu'il contient pour faire un carré ?"
       frozen square snowflake_instruction: Peux-tu créer un flocon de neige en utilisant le bloc « Répéter » pour faire un carré 10 fois et le bloc « Tourner » pour tourner de 36 degrés entre chaque carré ?
+      hoc2015_free_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
       hoc2015_intro_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
+      hoc2015_maze_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
+      hoc2015_random_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
       hoc2015_sandbox_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
+      hoc2015_square_instruction: 'Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour déplacer Hiro vers la droite afin de toucher Baymax.'
       Infinity_catch_instruction: 'Pouvez-vous aider Elsa ("acteur 2") à rattraper Anna en utilisant les touches fléchées ?'
       Infinity_finale_instruction: Créer ce que vous voulez et partagez-le !
       Infinity_move_collide_instruction: 'Hiro est « acteur 1".  Déplacer-le vers Baymax et émettez un signal sonore quand ils se touchent.'
@@ -1651,7 +1652,7 @@ fr:
         Tu sais maintenant bien utiliser les blocs fonctions ? Modifions la taille du carré pour qu'elle soit de 200 pixels. Astuce : clique sur "éditer" pour changer la taille dans l'éditeur de la fonction "dessine un carré". N'oublie pas de cliquer sur "Enregistrer et fermer" pour sortir de l'éditeur de fonction. 
       NEW Course 4 Artist Functions 8_instruction: Nous t’avons donné la plupart du code pour créer une fonction. Cependant, on dirait qu’il manque quelque chose. Peux-tu modifier la fonction pour dessiner le triangle ?
       NEW Course 4 Artist Functions 9_instruction: Quel bloc dois-tu ajouter pour que le triangle soit placé au-dessus du carré?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: 'Sers-toi de la fonction "draw a square" pour dessiner ce motif.'
       NEW Course 4 Artist Params 1_instruction: Nous allons définir cette fonction pour dessiner un carré de 50 pixels côté. Cliquez sur « modifier » pour commencer.
       NEW Course 4 Artist Params 10_instruction: 'Crée un bloc fonction "dessine un hexagone" avec le paramètre "longueur". Astuce : cet hexagone a des côtés de 100 pixels. '
@@ -1685,6 +1686,11 @@ fr:
         Peux-tu m'aider à dessiner ce super motif en laissant tomber le bloc variable "longueur" aux bons endroits ?
       NEW Course 4 Bee For Loops 1_instruction: Utilise une boucle pour collecter le nectar de chaque fleur.
       NEW Course 4 Bee For Loops 10_instruction: 'Utilise la variable "counter" de la boucle for pour contrôler la distance à laquelle tu bouges horizontalement.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: Peux-tu utiliser la variable de boucle pour contrôler le mouvement et la collecte de nectar ?
       NEW Course 4 Bee For Loops 2_instruction: "Ecris le code qui permettra à l'abeille de  recueillir tout le nectar. Regarde le nombre de blocs dont tu auras besoin pour ce puzzle ! (nous verrons une solution plus simple dans le prochain puzzle.)"
       NEW Course 4 Bee For Loops 3_instruction: 'Ah, grâce à la boucle, tout est plus facile ! Tout le code dont vous avez besoin est là, regardons comment il a été construit et ensuite cliquons sur "Executer" pour voir le résultat. '
@@ -1696,21 +1702,14 @@ fr:
       NEW Course 4 Bee For Loops 7_instruction: "Es-tu maintenant complètement à l'aise avec la boucle ? Ici, c'est un peu comme le précédent puzzle mais tu dois collecter 2, 4, 6, 8, 10 nectars. Tu as le code de départ sans le chiffre du compteur de la boucle. Allons collecter du nectar !"
       NEW Course 4 Bee For Loops 8_instruction: "Si votre boucle compte vers le haut, l'incrément est ajouté à votre variable de compteur à chaque itération. Quel devrait être votre incrément pour obtenir 3, 6, 9 nectars?\r "
       NEW Course 4 Bee For Loops 9_instruction: "Si ta boucle est dégressive, l'incrémentation est soustraite de la variable counter à chaque boucle. Que devrait être ton incrémentation pour collecter 9, ensuite 6 et enfin 3 nectars?"
-      NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
+      NEW Course 4 Bee For Loops 95_instruction: 'Jete un oeil à chaque partie de la boucle "for" que tu viens de créer.  Peux-tu comprendre quels numéros tu dois doubler pour résoudre cette énigme ? Pourquoi ça marche ?'
       NEW Course 4 Play Lab Params 11_instruction: "C'est l'heure de la récréation ! Amusez-vous avec tous les blocs de votre boîte à outils. "
       NEW Course 4 Play Lab Params 5 5_instruction: "Renseignez les paramètres d'entrée acteurs avec des chiffres (1, 2 et 3) pour les faire tous patrouiller. "
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Que pensez-vous que fait ce code ? Appuyez sur "Run" pour voir ce qui se passe."'
-      NEW Course 4 Play Labs For Loops 7a_instruction: |
-        Using what you learned so
-        far, can you have Dinosaur take a step forward every time Penguin counts?
+      NEW Course 4 Play Labs For Loops 7a_instruction: "En utilisant ce que tu as appris jusqu'ici, peux-tu faire en sorte que le dinosaure fasse un pas en avant chaque fois que le pingouin compte ?"
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "C'est l'heure de la récréation ! Amusez-vous avec tous les blocs de votre boîte à outils. "
-      NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
+      NEW Course 4 Play Labs For Loops 8a_instruction: |-
+        Défi : Comment utiliser la boucle "for" pour que chaque acteur vienne donner son numéro d'acteur, puis disparaisse de l'écran ? 
       New Play Lab Project_instruction: Créez votre propre histoire ou jeu ! Votre code est enregistré dans un projet afin que vous puissiez y revenir à tout moment.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
@@ -1723,6 +1722,38 @@ fr:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for this
+        function eggs making sure to create your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2219,8 +2250,26 @@ fr:
         and work better!
       U3L23 Chatbot Intro_instruction: |
         Choose a specialization topic for your digital
-        assistant. Update the assistant description, name, starter prompt, and default
-        response to match this specialization.
+        assistant. Create a basic digital assistant that takes the user's input and
+        displays back a default response.
+      U3L23 Digital Assistant 1_instruction: |
+        Set the text_area element to display
+        the user's input from the text_input element.
+      U3L23 Digital Assistant 2_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 3_instruction: |
+        Add the response "I don't know."
+        after each of the user's inputs.
+      U3L23 Digital Assistant 4_instruction: |
+        Display the user's input and the digital
+        assistant's response on different lines.
+      U3L23 Digital Assistant 5_instruction: |
+        Start the user's command with the
+        phrase "User:" and the digital assistant's response with the phrase "Bot:"
+      U3L23 Digital Assistant 6_instruction: |
+        When the user hits Run, display the
+        text "I'm a generic digital assistant. Ask me anything!"
       U3L24 Basic String Parsing 1_instruction: |
         Use the function "userInput.indexOf(<food>)"
         to check if the strings "pizza" or "soup" are anywhere in the user's

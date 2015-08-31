@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ χωράει σωστά μέσα στο μπλόκ που το περιέχει.",
   "emptyBlockInFunction":"The function {name} has an unfilled input.",
   "emptyBlockInVariable":"The variable {name} has an unfilled input.",
-  "emptyExampleBlockErrorMsg":"You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "emptyExampleBlockErrorMsg":"You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg":"Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει.",
   "emptyFunctionalBlock":"Έχετε ένα μπλόκ με κενό περιεχόμενο.",
   "emptyTopLevelBlock":"There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",

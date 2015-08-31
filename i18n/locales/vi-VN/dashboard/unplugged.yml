@@ -179,7 +179,7 @@ vi:
         desc: Giao ước cung cấp cho chúng tôi một cách để hiểu và thảo luận về chức năng. Trong bài học này, chúng tôi sẽ xem xét làm thế nào để giáo ước có ý nghĩa trong ngôn ngữ lập trình mới và chức năng (quy trình)
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: Công thức thiết kế
         desc: 'Trong giai đoạn cuối, sinh viên đã viết một số chức năng rất đơn giản - nhưng chức năng phức tạp hơn yêu cầu một cách tiếp cận thêm chu đáo. Các công thức thiết kế là một cách tiếp cận có cấu trúc để viết các chức năng bao gồm viết trường hợp kiểm tra để đảm bảo rằng các chức năng hoạt động như mong đợi cuối cùng.'
         video: alg_8_design_recipe
       Booleans:
@@ -187,7 +187,7 @@ vi:
         desc: Phép toán luận là các loại dữ liệu thứ tư và cuối cùng bạn sẽ học về trong khóa học này. Trong hoạt động này, bạn sẽ tìm hiểu về phép toán luận là gì, và làm thế nào chúng có thể giúp chúng ta viết các chức năng tư duy logic
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Hàm điều kiện và Hàm biến đổi quy luật theo khoảng
         desc: Các thông số chúng ta vượt qua để chức năng gây ra kết quả đầu ra thay đổi dựa trên một mô hình rất cứng nhắc. Giả sử chúng ta muốn các tham số với một số giá trị để tạo ra kết quả đầu ra bằng cách sử dụng một mô hình nhưng các giá trị khác lại sử dụng một mô hình khác. Đó là các điều kiện cần thiết...
         video: alg_10_conditionals
       CollisionDetection:

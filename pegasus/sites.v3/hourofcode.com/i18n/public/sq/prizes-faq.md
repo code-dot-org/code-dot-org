@@ -1,43 +1,43 @@
 
 
-# Prizes - FAQs
+# Çmimet - PESH
 
-## Does your whole school have to enter to win the $10,000 in hardware?
+## A duhet e gjithë shkolla juaj të futet për të fituar $10,000 në hardware?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= hoc_uri('/prizes') %>).
+Po. Gjithë shkolla juaj duhet të marri pjesë që të jetë e pranueshme për çmimin, por vetëm një person ka nevojë që të regjistrohet dhe të paraqesë formularin e aplikimit Çmimi Hardware [këtu](<%= hoc_uri('/prizes') %>).
 
-## Does your whole school have to enter to win a the tech chat?
+## A duhet e gjithë shkolla juaj të futet për të fituar një teknologji chat?
 
-Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
+Çdo klasë (shkollë publike ose private) ka të drejtë për të fituar këtë çmim. E gjithë shkolla juaj nuk duhet të aplikojë.
 
-## Can non-public schools win the video chat prize?
+## A mundet që shkollat jo-publike të fitojnë çmimin e video chat-it?
 
-Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
+Po! Shkollat private dhe të pavarura kanë të drejtë së bashku me shkollat publike për të fituar çmimet e video chat-it.
 
-## Can non-US schools win the video chat prize?
+## Mund që shkollat jashtë SHBA-së të fitojnë çmimin e video chat-it?
 
-No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada. All international organizers **are** eligible to receive Dropbox space or Skype credit.
+Jo, për fat të keq, për shkak të logjistikës ne nuk jemi në gjendje për të ofruar çmimin e video chat-it për shkollat jashtë SHBA-së dhe Kanadasë.
 
-## Why is the $10,000 hardware prize only available to public schools?
+## Pse çmimi $10,000 për hardware është në dispozicion vetëm për shkollat publike?
 
-We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
+Ne duam të ndihmojmë mësuesit në shkollat publike dhe private njësoj, por në këtë kohë, hidhet poshtë për logjistikën. Ne kemi partneritet me [DonorsChoose.org ](http://donorschoose.org) për të administruar çmimet e financimit të klasës, e cila punon vetëm me publikun, shkollat e SHBA K-12 . Sipas DonorsChoose.org, organizata është më mirë në gjendje që të hyjë në të dhënat konsistente dhe të sakta që janë në dispozicion për shkollat publike.
 
-## I’m outside the United States. Can I qualify for prizes?
+## Unë jam jashtë Shteteve të Bashkuara. A mund të kualifikohem për çmimet?
 
-Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
+Për shkak të një stafi të vogël me kohë të plotë, Code.org nuk është në gjendje për të trajtuar logjistikën e administrimit për çmimet ndërkombëtare. Për shkak të këtij personat jashtë SHBA-së nuk janë në gjendje për t'u kualifikuar për çmimet.
 
-## When is the deadline to apply for the hardware prize?
+## Kur është afati i fundit për të aplikuar për çmimin e hardware-it?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Një shkollë nga cdo shtet në SHBA do të marrë/fitojë një set kompjuterash. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, më 1 dhjetor 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Një shkollë nga cdo shtet në SHBA do të marrë një bashkësi klasash të kompjuterëve. Code.org will select and notify winners via email by December 1, 2015.
 
-## When is the deadline to be eligible to win a tech chat?
+## Kur është afati i fundit për të aplikuar për çmimin e chat-it teknologjik?
 
-To qualify, you must register your classroom for the Hour of Code by November 14, 2014. Classrooms will win a video chat with a celebrity. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, më 1 dhjetor 2014.
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Klasat do të fitojnë një video chat me një njeri të famshëm. Code.org will select and notify winners via email by December 1, 2015.
 
-## When will I be notified if my school or classroom wins a prize?
+## Kur do të njoftohem nëse shkolla apo klasa ime ka fituar ndonjë çmim?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 14, 2014. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, më 1 dhjetor 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 8-14), can I still qualify for prizes?
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 14th.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

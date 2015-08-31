@@ -114,7 +114,7 @@
   continue_learning_header: Halda áfram að læra eftir Klukkustund kóðunar
   continue_learning_body: Það eru margir valkostir. Þú getur lært á vefnum, í skólanum
     eða á námskeiðum.
-  learn_next_level: Halda áfram í næsta áfanga
+  learn_next_level: Prófa annað námskeið í Kóðastúdíóinu
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
   hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
@@ -197,7 +197,7 @@
   homepage_hero_text_teacher2: |
     &ldquo;Í þessu verkefni voru 100% nemendanna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
-  homepage_hero_text_stat_loc: '#loc línur af kóða skrifaðar af nemendum'
+  homepage_hero_text_stat_loc: 2,5 miljón stúlkur er skráðar til náms í Kóðastúdíóinu
   homepage_hero_text_stat_students: '#student_count nemendur skráðir í Kóðastúdíóið'
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_slot_text_hoc: Klukkustund kóðunar
@@ -212,6 +212,7 @@
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: Skrifaðu undir áskorun okkar &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka
     fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
@@ -234,7 +235,7 @@
   homepage_slot_text_link_fullcurriculum: Sjá allt námsefni okkar
   homepage_slot_text_link_pd: Fagmenntun
   homepage_slot_text_title_advocates: Talsmenn
-  homepage_slot_text_blurb_advocates: Styðjið starf okkar
+  homepage_slot_text_blurb_advocates: Styðjið fjölbreytni í tölvun
   homepage_slot_text_link_stats: Sjá tölfræðina
   homepage_slot_text_link_buy: Taktu þátt
   homepage_slot_text_link_donate: Styrkja með peningagjöf
@@ -548,6 +549,8 @@
   educator_notes: Minnispunktar leiðbeinenda
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'
