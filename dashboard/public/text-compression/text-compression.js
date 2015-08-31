@@ -153,9 +153,7 @@
     $('#widgetInstructions').text(options.instructions);
   }
   if (options.poems) {
-    try {
-      poemsList = JSON.parse(options.poems);
-    } catch (e) { }
+    poemsList = options.poems;
   }
   if (poemsList.length === 1) {
     $('.choosePoem').hide();

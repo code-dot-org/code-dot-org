@@ -23,7 +23,6 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -300,15 +299,6 @@ NetSim.prototype.getOverrideShardID = function () {
  */
 NetSim.prototype.shouldShowAnyTabs = function () {
   return this.level.showTabs.length > 0;
-};
-
-/**
- * @returns {boolean} TRUE if the "resetShard" flag is found in the URL
- * TODO: This needs to be replaced with real UI and a route that
- *       only allows section owners and admins to perform a reset.
- */
-NetSim.prototype.shouldResetShard = function () {
-  return /\bresetShard\b/i.test(location.search);
 };
 
 /**
@@ -951,7 +941,7 @@ function resizeLeftColumnToSitAboveFooter() {
     return;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var bottom = 0;
   if (smallFooter) {
@@ -968,37 +958,22 @@ function resizeLeftColumnToSitAboveFooter() {
 function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
   var instructions = document.querySelector('.instructions');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   if (!smallFooter) {
     return;
   }
 
   if (leftColumn && $(leftColumn).is(':visible')) {
-    smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+    smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
   } else if (instructions && $(instructions).is(':visible')) {
-    var instructionsWidth = instructions.offsetWidth + instructions.offsetLeft;
-    smallFooter.style.maxWidth = instructionsWidth + 'px';
-  }
-
-  // If the small print and language selector are on the same line,
-  // the small print should float right.  Otherwise, it should float left.
-  var languageSelector = smallFooter.querySelector('form');
-  var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint && languageSelector) {
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
+    smallFooter.style.maxWidth = instructions.getBoundingClientRect().right + 'px';
   }
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
   resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 /**
@@ -1115,20 +1090,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();
-
-  // TODO (bbuchanan): Tear this out when replacing reset option with real UI.
-  if (shard && this.shouldResetShard() && confirm("Are you sure?" +
-          "  This will kick everyone out and reset all data for the class.")) {
-    shard.resetEverything(function (err) {
-      if (err) {
-        logger.error(err);
-        NetSimAlert.error(i18n.shardResetError());
-        return;
-      }
-      // Reload page without the shard-reset query parameter
-      location.search = location.search.replace(/&?resetShard([^&]$|[^&]*)/i, "");
-    }.bind(this));
-  }
 };
 
 /**
@@ -1358,4 +1319,20 @@ NetSim.prototype.completeLevelAndContinue = function () {
       }
     }.bind(this)
   });
+};
+
+/**
+ * Attempt to reset the simulation shard, kicking all users out and resetting
+ * all data.
+ */
+NetSim.prototype.resetShard = function () {
+  if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
+    this.shard_.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
+        return;
+      }
+    }.bind(this));
+  }
 };

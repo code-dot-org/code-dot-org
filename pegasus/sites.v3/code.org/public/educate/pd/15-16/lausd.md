@@ -14,11 +14,42 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers enrolled in the Computer Science Principles program have been assigned to attend PD in one of the following locations. Click on your location for workshop information.
+LAUSD teachers and San Francisco teachers enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
 
-- [Broward, Florida](/educate/pd/15-16/broward) 
-- [Spokane, Washington](/educate/pd/15-16/spokane)
-- [Chicago, Illinois](/educate/pd/15-16/chicago)
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+**Save the Dates**
+
+Quarter 1: Saturday, October 3, 2015 
+
+Quarter 2: Saturday, November 21, 2015 
+
+Quarter 3: Saturday, January 30, 2016 
+
+Quarter 4: Saturday, March 5, 2016
+
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
+
+**October 3rd Location**
+
+9 Dots<br/>
+931 N Highland Avenue<br/>
+Los Angeles, CA, 90038<br/>
+
+Free parking available in lot around the back of the building surrounded by a wooden fence. 
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop and charger
+<br/>
+Green journal <br/>
+Curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

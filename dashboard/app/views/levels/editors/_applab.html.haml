@@ -45,7 +45,7 @@
   = f.label :examples, 'Example solutions'
   %p
     Go to
-    = link_to applab_project_projects_url(host: 'studio.code.org', port: 80), applab_project_projects_url(host: 'studio.code.org', port: 80)
+    = link_to applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https), applab_project_projects_url(host: 'studio.code.org', port: 443, protocol: :https)
     to build your example, then copy the channel token (the sequence of letters and numbers after /applab)
   - unless f.object.examples.blank?
     - f.object.examples.each do |example|
