@@ -1,9 +1,9 @@
 ---
-title: CS Learning Impact Research, September 2014 - June 2015 
+title: CS Learning Impact Research, June 2014 - June 2015 
 nav: about_nav
 ---
 
-# September 2014 - June 2015 Program Report
+# June 2014 - June 2015 Program Report
 
 
 ## Does learning Computer Science have impact on learning other subjects?
