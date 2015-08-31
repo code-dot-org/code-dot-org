@@ -14,6 +14,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/Alert.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1963,4 +1964,26 @@ function rectFromElementBoundingBox(element) {
   rect.setAttribute('width', bbox.width);
   rect.setAttribute('height', bbox.height);
   return rect;
+}
+
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assume to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
 }
