@@ -625,8 +625,8 @@
         2, 3 dosi di nettare. Completa la funzione "controlla fiore viola" ed usala
         per raccogliere tutto il nettare dai fiori.
       4-5 Bee Conditionals 8_instruction: Scrivi una funzione "controlla fiore - fai
-        miele". La tua funzione deve controllare se il fiore color viola ha 3, 2 o
-        1 di nettare e raccoglierlo tutto. Vai, quindi, avanti e fai il miele.
+        miele". La tua funzione deve controllare quanto nettare c'è nel fiore viola
+        e raccoglierlo TUTTO, poi andare avanti e fare UNA SOLA dose di miele.
       4-5 Bee Conditionals Assessment 1_instruction: Questo è un esercizio di verifica
         -- La funzione "raccogli il nettare o fai il miele" è sbagliata e incompleta.
         Correggila e completala per raccogliere tutto il nettare e fare il miele.
@@ -1389,6 +1389,9 @@
         bel disegno?
       Course 4 Artist For Loops 9_instruction: Riesci a disegnare una spirale? Sposa
         in avanti da 1 a 75 pixels incrementando di 1 pixel ogni volta.
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
+        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
+        Click here."
       Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: ora hai
         imparato tutto quello che devi sapere per realizzare un disegno come questo!
         Se questa immagine ti ispira, prova a realizzare qualcosa di simile. In caso
@@ -1557,12 +1560,13 @@
       Course 4 Bee 2_instruction: Controllare ogni oggetto per vedere se sia un fiore.
         Se lo è, raccolgono il nettare... in caso contrario è possibile ignorarlo!
       Course 4 Bee 3_instruction: L'oggetto nascosto può essere un fiore oppure un
-        favo. Questa volta usa il blocco "if-else" per raccogliere il nettare se si
-        tratta di un fiore, altrimenti fai il miele (dato che, in questo caso, si
+        favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se" si tratta
+        di un fiore, "altrimenti" per fare il miele (dato che, in questo caso, si
         tratta sicuramente di un favo).
       Course 4 Bee 4_instruction: |
-        Questo fiore viola può avere 3, 2 o 1 dose di nettare.
-        In questo esercizio un blocco "if/else" viene combinato con un altro blocco "if/else" per creare una dichiarazione "if/else-if/else". Completa la soluzione per raccogliere la quantità sconosciuta di nettare.
+        Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha!
+
+        In questo esercizio un blocco "se-altrimenti" viene combinato con un altro blocco "se-altrimenti" per creare un blocco con tre ramificazioni: "se", "altrimenti-se" , "altrimenti". Prova a completare il programma in modo tale da raccogliere tutto il nettare.
       Course 4 Bee 5_instruction: "Questo fiore viola può avere 3, 2 o 1 nettare.
         \nAggiungi un blocco if-else per creare un'istruzione if, else-if, else. \nCompleta
         la soluzione per raccogliere la quantità sconosciuta di nettare.\n"
@@ -1604,10 +1608,10 @@
         indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento.
       Course 4 Bee Loops 5 NEW_instruction: Metti tutti i blocchi all'interno di un
         ciclo per raccogliere il nettare da ogni fiore.
-      Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+      Course 4 Bee Loops 5a NEW_instruction: Utilizza ora un ciclo (loop) per aiutare
+        l'ape a raccogliere tutto il nettare che trova sulla strada per il favo con
+        il minor numero di blocchi possibile.  Arrivati, non dimenticate di fare il
+        miele!
       Course 4 Bee Params 1_instruction: Utilizza la funzione "ottieni 3 di nettare"
         che consnete di ruotare e muoversi per raccogliere il nettare e che alla fine
         riporta alla posizione originale. Scrivi una sequenza per raccogliere tutto
@@ -1724,9 +1728,9 @@
         "punti" sia aggiunto alla variabile "player_points". Il cane deve raggiungere
         i 10 punti per passare al prossimo puzzle. '
       Course 4 Play Lab Vars 1_instruction: Non devi scrivere alcun codice. Devi solo
-        premere "Esegui" per giocare!  In questo gioco, sei il cane che sta cercando
-        di raccogliere più bandiere del gatto. Utilizza la freccia giù per controllare
-        il cane. Premere "Fine" quando hai finito di giocare.
+        premere "Esegui" per giocare! In questo gioco, sei il cane che sta cercando
+        di raccogliere più bandiere del gatto. Utilizza la freccia verso il basso
+        per controllare il cane. Premere "Fine" quando hai finito di giocare.
       Course 4 Play Lab Vars 2_instruction: Non è stata un bella gara! Modificate
         la variabile "dog_speed" per assicurarsi che vi sia possibile raccogliere
         più bandiere del gatto. Il primo che raccoglie 10 bandiera vince!
@@ -1748,29 +1752,29 @@
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |
-        In our game, how should we score points?
-        Add 1 to your "points" variable each time Dog hits Cat with a heart. Use
-        the "when actor 2 touches anything" event to trigger an update to your score.
-        You can increment your variable by setting "points = points + 1." Get your
-        score up to 10 (going one at a time!) to pass the level.
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour
+        game, how should we score points? Add 1 to your \"points\" variable each\ntime
+        Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent
+        to trigger an update to your score. You can increment your variable\nby setting
+        \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to
+        pass the level."
       Course 4 Play Lab Vars 7_instruction: Bello. Ora facciamo in modo che questo
         gioco non sia troppo facile - in qualsiasi momento il cane (attore 1) venga
         colpito da una palla di fuoco, si dovrebbe perdere un punto. Inizia con 10
         punti così non è troppo difficile. Lasciate che il vostro punteggio scenda
         da 10 a 0 per superare il livello.
-      Course 4 Play Lab Vars 8 (copy 1)_instruction: |
-        Alright, one last thing for
-        this game - let's set it up so the player can win (or lose). Use a forever
-        loop to check the value of score - if score is ever greater that 20, make
-        the enemy vanish. If the score is every less than 0, make the player vanish.
-        Click "Finish" when the game works like you'd like it to.
-      Course 4 Play Lab Vars 8_instruction: |
-        Let's set up this game so the Dog can
-        win (or lose). Use a forever loop to check the value of score - if score is
-        ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
-        less than 0, make the player (the Dog) vanish. Click "Finish" when the game
-        works like you'd like it to.
+      Course 4 Play Lab Vars 8 (copy 1)_instruction: Bene. Un'ultima cosa per questo
+        gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere).
+        Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio.
+        Quando il punteggio diventa maggiore di 20, fai scomparire il nemico. Quando
+        il punteggio diventa 0, fai scomparire il giocatore. Clicca su "Termina" quando
+        il gioco funziona come volevi tu.
+      Course 4 Play Lab Vars 8_instruction: Predisponiamo ora il gioco in modo che
+        il cane possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per
+        controllare il valore del punteggio. Quando il punteggio diventa maggiore
+        di 20, fai scomparire il nemico (il gatto). Quando il punteggio diventa 0,
+        fai scomparire il giocatore (il cane). Clicca su "Termina" quando il gioco
+        funziona come volevi tu.
       Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables
         we've played with so far in this stage, as well as a few more in\ncase you
         want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox
@@ -1778,11 +1782,11 @@
         category.  Take some time to explore everything that is available.\nWhen you're
         done browsing, make a game or story using repeats, variables,\nand events.
         \ \r\n\r\nHint: scroll down to see all the commands in the workspace."
-      Course 4 Play Lab Vars_instruction: |
-        Alright, one last thing for this game
-        - let's set it up so the player can win (or lose). Use a forever loop to
-        check the value of score - if score is ever greater that 20, make the emeny
-        vanish. If the score is every less than 0, make the player vanish.
+      Course 4 Play Lab Vars_instruction: Bene. Un'ultima cosa per questo gioco. Predisponiamolo
+        in modo che il giocatore possa vincere (o perdere). Usiamo un blocco "ripeti
+        per sempre" per controllare il valore del punteggio. Quando il punteggio diventa
+        maggiore di 20, fai scomparire il nemico. Quando il punteggio diventa 0, fai
+        scomparire il giocatore.
       Course 4 Play Labs For Loops 1_instruction: Facciamo parlare il cane in modo
         che indichi ogni numero da 1 a 100. Usate un ciclo (loop) e il blocco del
         contatore per fafe in modo che indichi la variabile contatore ogni volta che
@@ -2638,11 +2642,10 @@
         il nettare da ogni fiore.
       NEW Course 4 Bee For Loops 10_instruction: Usa la variabile "contatore" del
         ciclo per controllare lo spostamento in senso orizzontale.
-      NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+      NEW Course 4 Bee For Loops 10a_instruction: Pronto per una sfida?  Dovete usare
+        tutto quello che avete imparato sui cicli (loop) e cercare di risolvere questo
+        problema. Potrebbe essere necessario eseguire la tua soluzione più volte prima
+        di capire tutti i passaggi necessari.
       NEW Course 4 Bee For Loops 11_instruction: È possibile utilizzare la variabile
         del ciclo per controllare il movimento e la raccolta di nettare?
       NEW Course 4 Bee For Loops 2_instruction: Aggiungi il codice necessario per
@@ -2721,8 +2724,7 @@
       PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
         clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
         you make after you click Remix will be saved on your new remix and\nnot on
-        your main Big Game. Make sure you come back here and click Continue\nafter
-        you've made a remix."
+        your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2731,8 +2733,8 @@
         doesn't match both examples. Test each example to see which is failing, and
         then fix the definition to match.
       PDAlg Design Recipe Required_instruction: |
-        Complete the Design Recipe for this
-        function eggs making sure to create your examples.
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
       PDAlg Updates Cond_instruction: |
         When you went to PD in the summer, the Conditional
         block that you were introduced to was black and allowed any data type to be
@@ -2775,6 +2777,70 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

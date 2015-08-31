@@ -361,6 +361,8 @@
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'

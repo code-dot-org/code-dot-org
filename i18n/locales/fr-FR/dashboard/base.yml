@@ -310,6 +310,8 @@ fr:
       viewing_solution: Regarde la Solution
       try_it_yourself: Essayez-le vous-même
       section: Section
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: "L'adresse email n'a pas été confirmée :"
     email_confirm_needed_required: "Votre addresse email %{email} n'a pas été confirmée :"

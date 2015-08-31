@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ
+        tuổi
   activerecord:
     errors:
       messages:
@@ -362,6 +362,8 @@
       viewing_solution: Xem đáp án
       try_it_yourself: Hãy thử làm bài tập này
       section: Học phần
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
@@ -455,8 +457,8 @@
       tạo nên Xưởng Mã.
     help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo
       ra hướng dẫn này.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp
+      tạo ra các tài liệu này.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Bản quyền đã được bảo hộ.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Bản quyền đã được bảo hộ.
@@ -472,7 +474,7 @@
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
     support: Hỗ trợ
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Các điều khoản của Code.org
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
     secure: Phiên bản an toàn

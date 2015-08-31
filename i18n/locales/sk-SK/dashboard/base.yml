@@ -307,6 +307,8 @@ sk:
       viewing_solution: Prehliadnuť riešenie
       try_it_yourself: Skúste to sami
       section: Sekcia
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'

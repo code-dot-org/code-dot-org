@@ -358,6 +358,8 @@
       viewing_solution: Vis løsningsforslag
       try_it_yourself: Prøv selv
       section: Afsnit
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'

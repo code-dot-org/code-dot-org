@@ -361,6 +361,8 @@
       viewing_solution: Mostra la solució
       try_it_yourself: Prova-ho tu
       section: Secció
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no

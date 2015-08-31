@@ -310,6 +310,8 @@ zh:
       viewing_solution: Viewing Solution
       try_it_yourself: 自己試試
       section: 班級
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 電子郵件地址尚未被確認：
     email_confirm_needed_required: '您的電子位址 %{email} 尚未被確認：'

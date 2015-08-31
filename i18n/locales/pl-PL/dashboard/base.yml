@@ -2,7 +2,7 @@ pl:
   errors:
     messages:
       not_saved: 'Proszę poprawić następujące błędy:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Te materiały nie są dostępne dla młodszych uczniów
   activerecord:
     errors:
       messages:
@@ -307,6 +307,8 @@ pl:
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
       section: Sekcja
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -380,9 +382,9 @@ pl:
   footer:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: Szczególnie chcielibyśmy podziękować inżynierom z firm Google, Microsoft, Facebook i Twitter, jak i wielu innym, którzy pomogli nam utworzyć te materiały.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli utworzyć te materiały.
     art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone'
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: Prawa autorskie
@@ -391,7 +393,7 @@ pl:
     translate: Pomóż nam tłumaczyć na Twój język
     support: Wsparcie
     support_url: http://support.Code.org/
-    tos_short: Terms
+    tos_short: Warunki
     tos: Regulamin
     privacy: Polityka prywatności
     secure: Bezpieczna wersja

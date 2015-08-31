@@ -778,8 +778,9 @@
         snúa leikverurnar ekki aftur á skjáinn - hvers vegna heldur þú að það sé?'
       Big Game Booleans 5_instruction: Á þessu stigi ætti hættan (danger) að fara
         yfir skjáinn frá hægri til vinstri, markið (target) frá vinstri til hægri
-        og bæði ættu að fara aftur til mótstæðrar hliðar. Gakktu úr skugga um að leikurinn
-        virki eins og ætlast er til og smelltu á "Ljúka" til að halda áfram.
+        og bæði ættu að fara aftur til mótstæðrar hliðar, og endurtaka það. Gakktu
+        úr skugga um að leikurinn virki eins og ætlast er til og smelltu á "Ljúka"
+        til að halda áfram.
       Big Game Collision 1 (copy 1)_instruction: Síðast þegar við unnum með leikinn
         fóru leikverurnar mark (target) og hætta (danger) yfir skjáinn, en þær komu
         aldrei til baka. Smelltu á "Keyra" til að sjá hvernig leikurinn virkar nú.
@@ -1044,14 +1045,15 @@
         aðeins að safna safa á blómum.
       Course 4 Artist 1_instruction: 'Hjálpaðu mér að teikna kassa. (Hver lína er
         200 díla löng) '
-      Course 4 Artist 10_instruction: Hér er kóði fyrir áhugavert form. Hvað gerist
-        ef þú endurtekur hann? Taktu eftir að hornin í forminu eru samanlagt 420,
-        sem þýðir að þegar listamaðurinn er búinn að teikna þá snýr hann í aðra átt
-        en í byrjun. Þessi nýja átt er nákvæmlega 60 gráðum til hægri frá upphafinu.
+      Course 4 Artist 10_instruction: "Smelltu hér til að sjá vísbendingarnar aftur!\r\n\r\nHér
+        er kóði fyrir áhugavert form. Hvað gerist þegar þú endurtekur hann? Taktu
+        eftir að hornin í forminu eru samanlagt 420, sem þýðir að þegar listamaðurinn
+        er búinn að teikna þá snýr hann í aðra átt en í byrjun. Þessi nýja átt er
+        nákvæmlega 60 gráðum til hægri frá upphafinu."
       Course 4 Artist 11_instruction: Hér er áskorun! Þetta er hönnun sem notar aðeins
-        kubba sem þú hefur séð áður. Getur þú endurskapað þetta án þess að fá neina
-        kubba í byrjun? Ekki hika við að prófa þig áfram. Það er engin krafa um að
-        þú leysir þetta í fyrstu atrennu. Viltu fá vísbendingar? Smelltu hér!
+        kubba sem þú hefur séð áður. Getur þú endurskapað þetta? Ekki hika við að
+        prófa þig áfram. Það er engin krafa um að þú leysir þetta í fyrstu atrennu.
+        Viltu fá fleiri vísbendingar? Smelltu hér!
       Course 4 Artist 12_instruction: "Viltu kíkja aftur á fyrirmyndina eða vísbendingarnar?
         Smelltu hér!\r\n\r\nAnnars skaltu bara búa til þína eigin mynd!"
       Course 4 Artist 13_instruction: Enn að spila? Hér er auður flötur þar sem þú
@@ -1108,7 +1110,7 @@
       Course 4 Artist For  Functions 11_instruction: 'Hér er aðeins erfiðara: Getur
         þú teiknað stjörnu með fallinu "teikna röð ferninga"? Gangi þér vel!'
       Course 4 Artist For Loops 1_instruction: 'Teiknaðu þennan þríhyrning sem er
-        50 dílar á stærð. Vísbending: Notaðu endurtekningarkubb.'
+        50 díla breiður. Vísbending: Notaðu endurtekningarkubb.'
       Course 4 Artist For Loops 10_instruction: Frjáls æfing! Skemmtu þér við að teikna
         með kubbunum sem þú hefur lært að nota
       Course 4 Artist For Loops 11_instruction: 'Manstu hvernig við notuðum breytu
@@ -1136,15 +1138,13 @@
         teikningar með "frá" lykkjum. Við höfum bætt við nokkrum almennum breytum
         sem þú getur notað.
       Course 4 Artist For Loops 2_instruction: 'Ég hef sett kóða fyrir þríhyrning
-        inn í "frá" lykkju sem telur frá 50 til 100 um 10. Skoðaðu hvernig kóðinn
-        er samsettur og smelltu svo á "Keyra" til að sjá hvernig hann virkar. '
-      Course 4 Artist For Loops 3_instruction: Minnsti þríhyrningurinn hefur 20 díla
-        hliðar, sá stærsti 200, og hver þríhyrningur er 20 dílum stærri en næsti á
-        undan. Uppfærðu "frá" lykkjuna til að teikna þessa þríhyrninga.
-      Course 4 Artist For Loops 4_instruction: Notaðu "frá" lykkju til að teikna þessa
-        ferninga. Lengd hliðanna er frá 50 upp í 300 díla og hver ferningur er 25
-        dílum stærri en sá á undan. Þú hefur fengið næstum allan kóðann sem þú þarft
-        - það vantar bara einn kubb. Hvaða kubbur er það?
+        inn í "frá" lykkju sem telur frá 50 til 100 um 10. Athugaðu: Gættu þess að
+        lesa kóðann yfir áður en þú smellir á "Keyra".'
+      Course 4 Artist For Loops 3_instruction: |
+        Það sem þú gerðir í síðustu þraut hjálpar þér að klára þessa. Minnsti þríhyrningurinn hefur 20 díla hliðar, sá stærsti 200, og hver þríhyrningur er 20 dílum stærri en næsti á undan.
+      Course 4 Artist For Loops 4_instruction: 'Hvernig mundir þú aðlaga það sem þú
+        hefur lært að því að teikna þessa ferninga? Lengd þess fyrsta er 15 dílar,
+        þess stærsta 300 dílar og hver ferningur er 15 dílum stærri en sá á undan. '
       Course 4 Artist For Loops 5_instruction: 'Vel gert í síðustu þraut! Notum nú
         þessa breytu "teljari" aftur til að teikna þessa fínu mynd. '
       Course 4 Artist For Loops 6_instruction: Frjáls æfing! Reyndu að nota "frá"
@@ -1152,14 +1152,15 @@
       Course 4 Artist For Loops 7_instruction: Hvað gerist ef "endurtaka 3" er fjarlægt
         úr þessu algrími, en "færa" og "snúa" kubbunum haldið eftir í "frá" lykkjunni?
         Í þessum þríhyrningaspíral er hver hlið 20 dílum lengri en sú á undan.
-      Course 4 Artist For Loops 8_instruction: Stysta línan í þessum ferningaspíral
-        er 10 og sú lengsta 200 og hver lína er 10 dílum lengri en næsta á undan.
-        Getur þú bætt við kubbunum sem vantar til að ljúka þessari meiriháttar mynd?
-      Course 4 Artist For Loops 8a_instruction: Stysta línan í þessum ferningaspíral
-        er 10 og sú lengsta 200 og hver lína er 10 dílum lengri en næsta á undan.
-        Getur þú bætt við kubbunum sem vantar til að ljúka þessari meiriháttar mynd?
+      Course 4 Artist For Loops 8_instruction: Ein lítil breyting á kóðanum úr síðustu
+        þraut getur búið til þessa mynd. Geturðu fundið hver sú breyting er?
+      Course 4 Artist For Loops 8a_instruction: Ein lítil breyting á kóðanum úr síðustu
+        þraut getur búið til þessa mynd. Geturðu fundið hver sú breyting er?
       Course 4 Artist For Loops 9_instruction: Kannt þú að búa til spíral? Færðu áfram
         frá 1 upp í 75 díla og lengdu um 1 díl í hvert sinn.
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
+        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
+        Click here."
       Course 4 Artist For Loops inspire_instruction: "Frjáls æfing með innblæstri:
         Þú hefur nú lært allt sem þarf til að búa til svona mynstur! Ef þessi mynd
         veitir þér innblástur, reyndu þá að búa til eitthvað líkt henni. Ef ekki,
@@ -1265,12 +1266,12 @@
         Taktu eftir að það er ný breyta "lengd". Við getum nú notað hana í hvert sinn
         sem við höfum "færa áfram". Settu 75 í breytuna "lengd" til að teikna þetta
         form.
-      Course 4 Artist Vars 13_instruction: Því fleiri hliðar sem form hefur, því styttri
-        verður hver hlið að vera ef myndin á að geta komist fyrir á skjánum. Í stað
-        þess að vera með fasta stærð í breytunni "lengd", skulum við nota breytuna
-        "hliðar" í reikningskubbi til að reikna lengdina. Byrjaðu á að setja rétta
-        tölu fyrir hliðar átthyrnings og veldu svo réttu jöfnuna úr verkfærakassanum
-        til að gefa átthyrningnum viðeigandi stærð.
+      Course 4 Artist Vars 13_instruction: "Því fleiri hliðar sem form hefur, því
+        styttri verður hver hlið að vera ef myndin á að geta komist fyrir á skjánum.\r\nVið
+        skulum endurskapa algrímið fyrir þetta flotta mynstur, en í stað þess að vera
+        með fasta stærð í breytunni \"lengd\", skulum við nota breytuna \"hliðar\"
+        í reikningskubbi til að tryggja að hvert form komist fyrir.\r\nÞarftu vísbendingar?
+        Smelltu hér."
       Course 4 Artist Vars 14_instruction: "Frjáls æfing! Kíktu á þetta: Nú er algrímið
         þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur
         til að teikna óvænt mynstur.\r\n\r\nEnn meiri áhrif fást með því að nota liti!
@@ -1287,18 +1288,19 @@
         Getur þú notað reikningskubba til að ljúka við kóðann?
       Course 4 Artist Vars 5_instruction: Notaðu breytuna "hliðar" til að stjórna
         því hve oft þessi lykkja er endurtekin.
-      Course 4 Artist Vars 6_instruction: "Nú er ég búin að bæta við breytunni \"hliðar\"
-        og setja 4 í hana. Getur þú notað breytuna \"hliðar\" (ásamt reikningskubbi)
-        til að tryggja að ég snúi um réttan gráðufjölda til að búa til ferning?\r\n\r\nVísbending:
-        Til að teikna reglulegan marghyrning ætti ég að snúa um 360/hliðar í hvert
-        sinn."
-      Course 4 Artist Vars 7_instruction: "Getur þú stillt breytuna \"hliðar\" til
-        að teikna þennan sexhyrning?\r\n\r\nSérðu hvernig þú gætir breytt aðeins einu
-        gildi til að teikna þríhyrning, ferning, fimmhyrning eða átthyrning?"
+      Course 4 Artist Vars 6_instruction: "Hér er kóði sem getur teiknað hvaða reglulegan
+        marghyrning sem er. Það er ný breyta sem nefnist \"hliðar\" og í henni er
+        gildið 4. Getur þú notað breytuna \"hliðar\" (ásamt reikningskubbi) til að
+        tryggja að ég snúi um réttan gráðufjölda alveg sama hve margar hliðar eru
+        í marghyrningnum?\r\n\r\nSmelltu hér til að fara aftur í vísbendinguna!"
+      Course 4 Artist Vars 7_instruction: "Notaðu það sem þú lærðir í síðustu þraut
+        til að búa til þennan sexhyrning með breytunni \"lengd\".\r\n\r\nSérðu hvernig
+        þú gætir breytt aðeins einu gildi til að teikna þríhyrning, ferning, fimmhyrning
+        eða átthyrning?"
       Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda
         hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins
         haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Þú gætir þurft
-        að nota reikningskubba (360 deilt með "hliðar" á tveimur stöðum í þetta sinn) '
+        að nota reikningskubba (360 deilt með "hliðar") á tveimur stöðum í þetta sinn.'
       Course 4 Artist Vars 9_instruction: Breyttu þessu algrími svo það noti breytuna
         "hliðar" í stað fastrar tölu til að teikna þríhyrning. Ekki gleyma að nota
         "stilla hliðar" kubbinn.
@@ -1351,12 +1353,11 @@
       Course 4 Bee For Loops 9_instruction: 'Síðasta talan í "frá" lykkju nefnist
         "aukinn" (enska: increment). Í hverri umferð lykkjunnar breytist teljarinn
         um aukann. Prófaðu að safna úr þessum blómum með aukanum 2.'
-      Course 4 Bee Loops 5 NEW_instruction: Settu þessa kubba í lykkju til að safna
-        blómasafa úr hverju blómi.
-      Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+      Course 4 Bee Loops 5 NEW_instruction: Hér eru þrjú blóm. Getur þú fundið kubbamynstrið
+        sem þarf að endurtaka 3 sinnum til að safna blómasafanum með sem fæstum kubbum?
+      Course 4 Bee Loops 5a NEW_instruction: Notaðu nú lykkjur til að hjálpa býflugunni
+        að safna öllum blómasafanum á leið sinni til býflugnabúsins með sem allra
+        fæstum kubbum. Ekki gleyma að búa til hunang þegar þú kemst þangað!
       Course 4 Bee Params 1_instruction: Notaðu fallið "sækja 3 blómasafa", sem snýr,
         færir til að safna safa og fer svo aftur á upphaflega staðinn. Notaðu fallið
         í kóða til að safna öllum safanum.
@@ -1468,7 +1469,7 @@
         niður til að stjórna hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.
       Course 4 Play Lab Vars 2_instruction: Keppnin í síðustu þraut var ekki sanngjörn!
         Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri
-        flöggum en kötturinn. Sá, sem fyrst safnar 10, vinnur leikinn!
+        flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
       Course 4 Play Lab Vars 3_instruction: Hér ný tegund af leik! Notaðu vinstri
         og hægri örvarnar til að hreyfa og upp örina til að stökkva. Reyndu að safna
         öllum flöggunum.
@@ -1476,7 +1477,7 @@
         hve hátt hundurinn getur stokkið. Uppfærðu breytuna "hæð" svo að hundurinn
         geti stokkið nógu hátt til að ná öllum flöggunum.
       Course 4 Play Lab Vars 5_instruction: 'Búum til leik! Fyrst þurfum við stigaskor.
-        Notaðu kubbinn "stilla stig" til að setja skorið á 10. '
+        Endurgerðu kóðann sem þú sást í síðasta borði til að setja skorið á 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: Nú erum við með breytu fyrir
         skorið, en hvernig getum við nýtt hana? Hvernig væri að bæta við skorbreytuna
         í hvert skipti sem þú hittir óvininn með eldhnetti? Notaðu atvikið "þegar
@@ -1489,9 +1490,10 @@
         uppfærslu á skorinu. Þú getur uppfært breytuna með "stig = stig + 1". Komdu
         skorinu upp í 10 (um 1 í einu!) til að klára borðið.
       Course 4 Play Lab Vars 7_instruction: Fínt en nú skulum við tryggja að leikurinn
-        sé ekki of auðveldur - í hvert sinn sem eldhnöttur hittir hundinn (leikmann
-        1) ættir þú að tapa stigi. Byrjaðu með 10 stig svo að þetta sé ekki of erfitt.
-        Láttu skorið lækka úr 10 í 0 til að klára borðið.
+        sé ekki of auðveldur. Í hvert sinn sem hundurinn (leikmaður 1) verður fyrir
+        gulu hjarta frá kettinum (leikmanni 2) ættir þú að tapa stigi. Byrjaðu með
+        10 stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að
+        klára borðið.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: Enn ein breyting á leiknum -
         látum spilarinn geta unnið (eða tapað). Notaðu endalausa lykkju til að athuga
         skorið - ef skorið fer upp fyrir 20, á óvinurinn að hverfa. Ef skorið fer
@@ -1502,10 +1504,12 @@
         fer upp fyrir 20, á óvinurinn (kötturinn) að hverfa. Ef skorið fer undir 0,
         á leikmaðurinn (hundurinn) að hverfa. Smelltu á "Ljúka" þegar leikurinn virkar
         eins og þú vilt.
-      Course 4 Play Lab Vars 9_instruction: 'Frjáls æfing: Hér eru allar breyturnar
+      Course 4 Play Lab Vars 9_instruction: "Frjáls æfing: Hér eru allar breyturnar
         sem við höfum notað hingað til og nokkrar í viðbót ef þú skyldir vilja nota
-        þær. Búðu til leik eða sögu með einhverjum af þessum breytum. Vísbending:
-        Flettu niður til að sjá allar skipanirnar á vinnusvæðinu.'
+        þær.\r\n\r\nTaktu eftir að nú eru svo margir kubbar í verkfærakassanum að
+        við höfum þurft að raða þeim í viðeigandi flokka. Taktu þér tíma til að skoða
+        hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum og atvikum.\r\n\r\nVísbending:
+        Flettu niður til að sjá allar skipanirnar á vinnusvæðinu."
       Course 4 Play Lab Vars_instruction: Enn ein breyting á leiknum - látum spilarinn
         geta unnið (eða tapað). Notaðu endalausa lykkju til að athuga skorið - ef
         skorið fer upp fyrir 20 á óvinurinn að hverfa. Ef skorið fer niður fyrir 0,
@@ -2163,7 +2167,7 @@
         Þú hefur nú lært allt sem þarf til að búa til svona mynstur! Ef þessi mynd
         veitir þér innblástur, reyndu þá að búa til eitthvað líkt henni. Ef ekki,
         búðu þá til þína eigin mynd.\r\n\r\nViltu vita hvernig þetta mynstur var búið
-        til? Kíktu til að sjá lausnina."
+        til? Kíktu á https://studio.code.org/c/106387801 til að sjá lausnina."
       New Course 4 Artist Functions Level 4_instruction: Notaðu fallið "teikna ferning"
         til að teikna þetta mynstur.
       NEW Course 4 Artist Params 1_instruction: Við skulum skilgreina þetta fall svo
@@ -2214,8 +2218,8 @@
         til? Farðu á \nhttps://studio.code.org/c/106387530 til að sjá lausnina."
       NEW Course 4 Artist Vars 1.5_instruction: 'Skoðaðu kóðann. Sérðu hvernig kubbarnir
         "stilla lengd" og "lengd" vinna saman? Smelltu á "Keyra" til að sjá virknina. '
-      NEW Course 4 Artist Vars 12_instruction: Breyttu nú kóðanum frá síðasta borði
-        til að búa til fimmhyrning með hliðarnar 100.
+      NEW Course 4 Artist Vars 12_instruction: Endurskapaðu nú kóðann frá síðasta
+        borði og búðu til fimmhyrning með hliðarnar 150.
       NEW Course 4 Artist Vars 2.5_instruction: 'Skoðaðu kóðann. Sérðu hvernig kubbarnir
         "stilla lengd" og "lengd" vinna saman? Smelltu á "Keyra" til að sjá virknina. '
       NEW Course 4 Artist Vars 2_instruction: 'Dragðu talnakubb í "stilla lengd" kubbinn
@@ -2234,11 +2238,9 @@
         úr hverju blómi.
       NEW Course 4 Bee For Loops 10_instruction: Notaðu breytuna "teljari" í lykkjunni
         til að stjórna hve langt á að hreyfast lárétt.
-      NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+      NEW Course 4 Bee For Loops 10a_instruction: 'Ertu til í áskorun? Notaðu það
+        sem þú hefur lært um lykkjur og reyndu að leysa þessa þraut. Mundu: Þú gætir
+        þurft að keyra lausnina margsinnis áður en þú finnur út öll þrepin.'
       NEW Course 4 Bee For Loops 11_instruction: Getur þú notað breytu lykkjunnar
         til að stjórna hreyfingu og söfnun blómasafa?
       NEW Course 4 Bee For Loops 2_instruction: Bættu við kóðanum sem þarf til að
@@ -2259,12 +2261,14 @@
       NEW Course 4 Bee For Loops 6_instruction: 'Síðasta talan í "frá" lykkjunni er
         kölluð "aukinn" (enska: increment). Í hverri umferð lykkjunnar breytist innihald
         teljarans um aukann. Prófaðu að safna úr þessum blómum með aukann 2.'
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Ertu farinn að skilja hvernig á að nota "frá" lykkjur? Þessi þraut er lík þeirri síðustu, en hér þarft þú að sækja 2,4,6,8,10 af blómasafa.
-      NEW Course 4 Bee For Loops 8_instruction: "Hvað gerir þú ef við fjarlægjum einhverja
-        kubba? Geturðu sett þá aftur svo býflugan geti safnað blómasafanum?\r\nMundu:
-        Ef lykkjan þín telur upp á við, er aukanum bætt við teljarabreytuna í hverri
-        umferð. Hver ætti aukinn að vera til að safna 3, 6, 9 af safa?\r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Nú skulum við nota reikningskubb
+        með teljarabreytunni! Hvernig getur þú notað teljarann til að fara í gegnum
+        garðinn með sem allra fæstum kubbum? Hvað þarftu að gera til að safna 3, 6,
+        9, 12, 15 af blómasafa í þetta sinn? Svarið felst í teljarabreytunni!\r\n\r\nMundu:
+        Ef lykkjan telur upp á við, er aukanum bætt við teljarabreytuna í hverri umferð
+        lykkjunnar."
+      NEW Course 4 Bee For Loops 8_instruction: "Þú hefur náð þessu! Hver ætti aukinn
+        að vera til að safna 3, 6, 9, 12, 15 af safa?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Ef lykkja telur niður, er aukinn dreginn
         frá teljarabreytunni í hverri umferð. Hver ætti aukinn að vera til að safna
         9, síðan 6 og svo 3 af blómasafa?
@@ -2305,8 +2309,7 @@
       PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
         clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
         you make after you click Remix will be saved on your new remix and\nnot on
-        your main Big Game. Make sure you come back here and click Continue\nafter
-        you've made a remix."
+        your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2315,8 +2318,8 @@
         doesn't match both examples. Test each example to see which is failing, and
         then fix the definition to match.
       PDAlg Design Recipe Required_instruction: |
-        Complete the Design Recipe for this
-        function eggs making sure to create your examples.
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
       PDAlg Updates Cond_instruction: |
         When you went to PD in the summer, the Conditional
         block that you were introduced to was black and allowed any data type to be
@@ -2355,6 +2358,70 @@
       PDK5 Loops 3_instruction: Hér er önnur þraut til að æfa lykkjur. Hvað gerist
         þegar þú notar "endurtaka" kubbinn til að keyra kóðann, sem er gefinn á vinnusvæðinu,
         4 sinnum?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

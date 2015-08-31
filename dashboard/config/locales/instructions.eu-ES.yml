@@ -1466,8 +1466,9 @@
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
       Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
+        Remember Stage 6 when we used a
+        variable to control the number of sides in a shape? We are going to do the
+        same thing with the "counter" variable now. This pattern starts with a triangle
         and adds one side at a time until it draws a decagon (10 sides). Each side
         should be 100 pixels long. Hint: 360 divided by the number of sides a shape
         has is the number of degrees you'll need to turn.
@@ -1487,12 +1488,14 @@
         counter) pixels.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
+        less than you normally would for a shape, it creates a neat effect. Try using
+        the code from the last level, but turning 89 degrees to create this twisted
+        square spiral.
+      Course 4 Artist For Loops 15_instruction: "Free Play: Try making some drawings\nof
+        your own using For Loops. We've added a few generic variables for you\nto
+        use as well.\r\n\r\nNotice that there are now so many blocks in your toolbox\nthat
+        we have to organize them into categories again.  Click around to discover\nall
+        of the blocks that you can use in this level."
       Course 4 Artist For Loops 2_instruction: |
         I've put the code for drawing a
         triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
@@ -1513,10 +1516,9 @@
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: |
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
+      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom
+        the last image can create this drawing. Can you figure out what that\nchange
+        is?\r\n\r\nHint:  You need to remove something!"
       Course 4 Artist For Loops 8a_instruction: |
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
@@ -1524,11 +1526,13 @@
       Course 4 Artist For Loops 9_instruction: |
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
+        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
+        Click here."
+      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow
         learned everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
-        for the solution."
+        your own.\r\n\r\nNeed a hint? Click here."
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
         pixels in length, using a loop?
@@ -1945,12 +1949,12 @@
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |
-        In our game, how should we score points?
-        Add 1 to your "points" variable each time Dog hits Cat with a heart. Use
-        the "when actor 2 touches anything" event to trigger an update to your score.
-        You can increment your variable by setting "points = points + 1." Get your
-        score up to 10 (going one at a time!) to pass the level.
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour
+        game, how should we score points? Add 1 to your \"points\" variable each\ntime
+        Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent
+        to trigger an update to your score. You can increment your variable\nby setting
+        \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to
+        pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
@@ -1990,7 +1994,7 @@
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, by 10 at a time.
+        from 10 up to 1000, 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2007,9 +2011,11 @@
       Course 4 Play Labs For Loops 7_instruction: |
         Could you use a for loop to help
         me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 8_instruction: |
-        What for loop would make me speak
-        19, 27, 35, 43, 51?
+      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.
+        \ \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill
+        move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill
+        move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir
+        flag first?"
       Course 4 Variables Assessment_instruction: |
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
@@ -2903,8 +2909,10 @@
       NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
         easier! All the code you need is here, take a look at how it is put together\nthen
         click \"Run\" to see how it works. \n"
-      NEW Course 4 Bee For Loops 4 4_instruction: "Can you help the Bee collect the\nrest
-        of the honey using this for loop? \n"
+      NEW Course 4 Bee For Loops 4 4_instruction: |
+        Now we need to move forward "counter"
+        times, then get nectar "counter" times.  Can you use two "repeat" loops
+        to solve this challenge?
       NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the \"for loop\"\nwith
         the largest amount of nectar the bee has to collect. \n"
       NEW Course 4 Bee For Loops 5 5_instruction: |
@@ -2976,8 +2984,7 @@
       PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
         clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
         you make after you click Remix will be saved on your new remix and\nnot on
-        your main Big Game. Make sure you come back here and click Continue\nafter
-        you've made a remix."
+        your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2986,8 +2993,8 @@
         doesn't match both examples. Test each example to see which is failing, and
         then fix the definition to match.
       PDAlg Design Recipe Required_instruction: |
-        Complete the Design Recipe for this
-        function eggs making sure to create your examples.
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
       PDAlg Updates Cond_instruction: |
         When you went to PD in the summer, the Conditional
         block that you were introduced to was black and allowed any data type to be
@@ -3031,6 +3038,70 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
