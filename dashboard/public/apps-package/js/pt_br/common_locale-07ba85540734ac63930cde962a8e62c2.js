@@ -294,7 +294,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "emptyBlocksErrorMsg":function(d){return "Os blocos \"Repita\" ou \"Se\" precisam de outros blocos para funcionar. Verifique se o bloco de dentro se ajusta corretamente ao bloco principal."},
 "emptyBlockInFunction":function(d){return "A função "+common_locale.v(d,"name")+" tem uma entrada não preenchida."},
 "emptyBlockInVariable":function(d){return "A variável "+common_locale.v(d,"name")+" tem uma entrada não preenchida."},
-"emptyExampleBlockErrorMsg":function(d){return "Você precisa de pelo menos um exemplo na função  "+common_locale.v(d,"functionName")+". Certifique-se de que cada exemplo tem uma chamada e um resultado."},
+"emptyExampleBlockErrorMsg":function(d){return "Você precisa de pelo menos dois exemplos na função "+common_locale.v(d,"functionName")+". Verifique se cada exemplo tem uma chamada e um resultado."},
 "emptyFunctionBlocksErrorMsg":function(d){return "O bloco de função precisa ter outros blocos dentro dele para funcionar."},
 "emptyFunctionalBlock":function(d){return "Você tem um bloco com uma entrada sem preencher."},
 "emptyTopLevelBlock":function(d){return "Não há blocos para executar. Você deve anexar um bloco ao bloco "+common_locale.v(d,"topLevelBlockName")+"."},
