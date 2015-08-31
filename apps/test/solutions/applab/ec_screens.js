@@ -198,7 +198,7 @@ module.exports = {
       xml:
         'button("my_button", "my_button_text");' +
         'image("my_image", "http://code.org/images/logo.png");' +
-        'createCanvas("my_canvas", 320, 480);' +
+        'createCanvas("my_canvas", 320, 450);' +
         'container("my_container", "<div>FOO</div>");' +
         'write("<div id=\'my_write\'>FOO</div>");' +
         'imageUploadButton("my_image_upload", "text");' +
@@ -384,11 +384,11 @@ module.exports = {
         var screenElement = document.getElementById('screen1');
         assert.equal(screenElement.style.backgroundImage, 'url(' + assetUrl + ')');
 
-        assert.equal(screenElement.style.backgroundSize, '320px 480px', 'image stretched');
+        assert.equal(screenElement.style.backgroundSize, '320px 450px', 'image stretched');
 
         // make sure dimensions didn't change
         assert.equal(screenElement.style.width, '320px');
-        assert.equal(screenElement.style.height, '480px');
+        assert.equal(screenElement.style.height, '450px');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
