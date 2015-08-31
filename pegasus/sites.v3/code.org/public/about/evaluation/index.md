@@ -12,7 +12,7 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 
 ## Available reports
 
-- [Code.org's Impact on Computer Science Education: September 2014 - June 2015 Program Evaluation Report](/about/evaluation/summary)
+- [Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Evaluation Report](/about/evaluation/summary)
 
 ## Join the team
 

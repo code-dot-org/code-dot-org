@@ -3,12 +3,12 @@ title: Professional Development Program Results, 2014-15
 nav: about_nav
 ---
 
-# September 2014- June 2015 Program Report
+# June 2014- June 2015 Program Report
 
 ## What do teachers say about Code.org professional development?
 <img src="/images/pd-2014-15.png" width="100%"/>
 
-From September 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
+From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -18,11 +18,11 @@ Through our professional development efforts, we are helping a large, diverse au
 
  To study the effectiveness of our professional development, we worked with [Outlier](http://outlier.uchicago.edu) to conduct surveys and interviews studying attitudes, PD satisfaction, and classroom implementation. The results of those studies follow, broken down by grade-level band.
 
-### Table: Overall Participation and Satisfaction in Code.org Professional Development, Sept 1 2014 - June 15 2015
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015
 
 |  | Affiliate-Trained Teachers | Code.org-Trained Teachers |
 |---|--------|-----|
-| Number of teachers trained   | 9,290 | ~1,600 |
+| Number of teachers trained   | 9,290 | ~500 |
 | I would recommend the PD to others   | 98% | 97% |
 | This was the best PD ever   | 66% | 81% |
 | I feel prepared to teach CS   | 94% | 88% |
@@ -37,7 +37,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
 ### Approach
 
-From September 2014 through June 2015, Code.org trained over 10,000 K-5 teachers. Two different programs helped us reach such a broad audience: 
+From June 2014 through June 2015, Code.org trained over 10,000 K-5 teachers. Two different programs helped us reach such a broad audience: 
 
 - our [K-5 Affiliate Program](https://code.org/educate/k5-affiliates) and 
 - our [K-5 District Partnership programs](https://code.org/educate/k5-district-partnership) in Charles County, MD and Chicago, IL. 
@@ -49,7 +49,7 @@ The main difference between the two groups being that our affiliate-trained teac
 - The population of teachers we are training through our K-5 work in districts is heterogeneous and diverse in terms of prior experience. Participants vary widely in terms of both their knowledge related to computer science, and their skill level for teaching computer science (based on self-reported levels). 
 - Similar to our district partnership PDs, the audience for K5 affiliate PD is diverse in terms of prior CS experience; however 98% of participants are in-school teachers (not informal teachers or home school teachers).
 
-### Table: K-5 Affiliate-trained teachers: Self-reported roles, Sept 1 2014 - June 15 2015
+### Table: K-5 Affiliate-trained teachers: Self-reported roles, June 1 2014 - June 15 2015
 | Role | Percent | 
 |---|--------|
 | Classroom Teacher   | 38% |
@@ -75,6 +75,7 @@ The main difference between the two groups being that our affiliate-trained teac
 
 *“I can usually judge a project by the amount of kids who start saying, ‘Do we have to do this today? Aren't we going to move on to something else?’ I have not heard that in all of the lessons that I’ve had that 4th and 5th grade is doing. I haven't had a single person say that."*
 
+[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/ks-courses-implementation/)
 
 ---
 

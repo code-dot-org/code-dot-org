@@ -1,14 +1,14 @@
 ---
-title: September 2014 - June 2015 Program Evaluation Report
+title: June 2014 - June 2015 Program Evaluation Report
 nav: about_nav
 ---
 
-# Code.org's Impact on Computer Science Education: September 2014 - June 2015 Program Report
+# Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Report
 <img src="/images/summary-2014-15.png" width="100%"/>
 
 Code.org is is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. 
 
-Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for September 2014 through June 2015, which focused on answering the following key questions:
+Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for June 2014 through June 2015, which focused on answering the following key questions:
 
 - [What do teachers say about Code.org professional development?](#pd)
 - [How successful have our district partnerships been in driving short- and long-term outcomes in each region?](#partners)
@@ -23,7 +23,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 ## <a name="pd" href="#pd">What do teachers say about Code.org professional development?</a>
 
-From September 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
+From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
 - a day-long, face-to-face workshop delivered to K-5 teachers via our [Affiliate Program](/educate/k5-affiliates) or via our [District Partnership Program](/educate/k5-district-partnership)
 - a multi-phase, year-long blended PD experience delivered to Middle and High School teachers via our [District Partnership Program](/educate/districts)
@@ -31,11 +31,11 @@ From September 2014 through June 2015, over 11,000 teachers across K-12 attended
 ## Key Finding: 
 Through our professional development efforts, we are helping a large, diverse audience of K-12 educators feel more prepared to teach Computer Science using [Code.org](/educate) resources. <br /><br/>
 
-### Table: Overall Participation and Satisfaction in Code.org Professional Development, Sept 1 2014 - June 15 2015
+### Table: Overall Participation and Satisfaction in Code.org Professional Development, June 1 2014 - June 15 2015
 
 |  | Affiliate-Trained Teachers | Code.org-Trained Teachers |
 |---|--------|-----|
-| Number of teachers trained   | 9,290 | ~1,600 |
+| Number of teachers trained   | 9,290 | 500 |
 | I would recommend the PD to others   | 98% | 97% |
 | This was the best PD ever   | 66% | 81%|
 | I feel prepared to teach CS   | 94% | 88% |
@@ -67,7 +67,7 @@ Students across thousands of Code.org classrooms have demonstrated the ability t
 
 [Code Studio](http://studio.code.org), our online learning platform, is designed to host our interactive CS courses. All online courses  are complemented by lesson plans teachers can deliver in the classroom. We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
 
-### Table: Code Studio User Growth, Sept 1 2014 - June 30 2015
+### Table: Code Studio User Growth, June 1 2014 - June 30 2015
 
 |  | Student Accounts Created| Teacher Accounts Created|
 |---|--------|-----|
