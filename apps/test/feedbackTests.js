@@ -1,6 +1,5 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var expect = testUtils.expect;
 testUtils.setupLocales();
 
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -215,14 +214,14 @@ describe("throwOnInvalidExampleBlocks", function () {
         '    </functional_input>' +
         '  </block>' +
         '</xml>');
-    expect(function () {
+    assert.doesNotThrow(function () {
       var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
         return block.type === "functional_example";
       })[0];
       var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
       var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
       studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
-    }).to.not.throw(Error);
+    }, Error);
   });
 });
 
