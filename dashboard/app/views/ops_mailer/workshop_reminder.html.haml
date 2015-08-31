@@ -1,14 +1,15 @@
 %p
   Dear #{@recipient.ops_first_name},
 %p
-  Your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d, %Y")} is coming up.
-  - if @workshop.phase == 8 && (@workshop.program_type == 4 || @workshop.program_type == 3)
-    Make sure you have completed Phase 3 online.
+  We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference in your classroom.
 %p
-  Please email
+  As part of your commitment to this program, you are expected to participate in this academic year development workshop. If you have any conflicts with these dates, please email
   %a{href:'mailto:pd@code.org'}
     pd@code.org
-  if you have any conflicts with these dates.
+  If you have questions, check out our
+  %a{href:'https:' + CDO.code_org_url("/educate/pd/15-16/faq")}
+    FAQ
+  or send us an email.
 - if @workshop.phase == 2
   %h2
     Complete #{@workshop.phase_info[:long_name]}
@@ -19,10 +20,14 @@
       Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
     %li
       Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
-%p
-  %em
-    Here’s what a successful online PD looks like. All the progress circles are green.
-%img{src:"#{@workshop.program_type_info[:short_name].gsub(/\s+/, "") + @workshop.phase_info[:short_name].gsub(/\s+/, "")}.jpg"}
+- if @workshop.program_type_info[:id] == 1 || @workshop.program_type_info[:id] == 2
+  %p
+    %em
+      Here’s what a successful online PD looks like. All the progress circles are green.
+    %figure
+      = image_tag('finished_pd_script.jpg')
+      %figcaption
+        The number of stages/levels may differ from the above image.
 
 %h2
   Workshops Details
