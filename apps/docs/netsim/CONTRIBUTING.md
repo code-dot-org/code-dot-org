@@ -1,7 +1,7 @@
 # Contributing to Internet Simulator
 
-There is plenty of work to do on the Internet Simulator.  If you are internal to
-Code.org you can pick up a task from the [Internet Simulator Pivotal project](https://www.pivotaltracker.com/n/projects/1407902).  If not, please see
+There is plenty of work to do on the Internet Simulator. If you are internal to
+Code.org you can pick up a task from the [Internet Simulator Pivotal project](https://www.pivotaltracker.com/n/projects/1407902). If not, please see
 the [Contributing](../../README.md#contributing)
 section of our main README to get started.
 
@@ -22,11 +22,11 @@ Installing Redis is easy when you use a package manager!
 * OSX + Homebrew: `brew install redis`
 * Ubuntu: `apt-get install redis-server`
 
-Either method will download, install, and autostart your Redis server.  If it
+Either method will download, install, and autostart your Redis server. If it
 doesn't autostart, you can also run it with the `redis-server` command.
 
 By default, Internet Simulator will look for Redis at its default configuration
-(`redis://localhost:6379`) so you should be good to go.  If you want to
+(`redis://localhost:6379`) so you should be good to go. If you want to
 point to a Redis instance somewhere else, you can override the default by
 setting the `geocoder_redis_url` parameter in your locals.yml file.
 
@@ -37,11 +37,11 @@ simulation is out-of-date, but it will automatically work via polling if
 Pusher is not present.
 
 If you want to use Pusher for local development, [sign up for a free account at
-Pusher.com](https://pusher.com/signup).  You will get a free sandbox plan and
+Pusher.com](https://pusher.com/signup). You will get a free sandbox plan and
 a default app called "Main" that you can use for your development environment.
 
 Look at the right side of your app's dashboard page to find your `app_id`,
-`key` and `secret`.  Then add the keys to your locals.yml file and set
+`key` and `secret`. Then add the keys to your locals.yml file and set
 `use_pusher` to TRUE.
 
 ```yaml
