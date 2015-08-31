@@ -1,4 +1,5 @@
 require 'cdo/db'
+require_relative 'email_validator'
 require 'mail'
 require 'openssl'
 require 'base64'
@@ -98,16 +99,9 @@ module Poste2
   @@url_cache = {}
   @@message_id_cache = {}
 
+  # Returns true if address is a valid email address.
   def self.email_address?(address)
-    email = Mail::Address.new(address)
-    return false unless email.address == address
-    return false unless email.domain # Must have a domain
-    # A valid domain must have dot_atom_text elements size > 1; user@localhost is excluded
-    # treetop must respond to domain; we exclude valid email values like <user@localhost.com>
-    return false unless (email.__send__(:tree).domain.dot_atom_text.elements.size > 1)
-    true
-  rescue
-    false
+    EmailValidator::email_address?(address)
   end
 
   def self.find_or_create_url(href)

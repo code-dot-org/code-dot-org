@@ -1,9 +1,9 @@
 ---
-title: Student Learning Outcomes, September 2014 - June 2015
+title: Student Learning Outcomes, June 2014 - June 2015
 nav: about_nav
 ---
 
-# September 2014 - June 2015 Program Report
+# June 2014 - June 2015 Program Report
 
 ## What learning outcomes have Code.org students achieved?
 <img src="/images/outcomes-2014-15.png" width="100%"/>
@@ -12,27 +12,19 @@ nav: about_nav
 
 We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
 
-### Table: Code Studio User Growth, Sept 1 2014 - June 30 2015
+### Table: Code Studio User Growth, June 1 2014 - June 30 2015
 
-|  | Student Accounts Created| Teacher Accounts Created|
+|  | Student Accounts Created| Teacher Accounts Created |
 |---|--------|-----|
 | Prior to September 1 2014 | 1,440,227 | 35,976 |
 | September 1 2014 through June 30 2015 | 4,466,810 | 111,684 |
 | All time (as of August 1 2015) | 6,033,943 | 147,660 |
+*Source: Code Studio database*
 <br><br>
 
-The diversity of the audience we are reaching is also interesting to note. Across all student accounts that self-reported demographic data, **43% self-identified as female** and **37% self-identified as African-American or Hispanic**. 
+The diversity of the audience we are reaching is also interesting to note. Across all student accounts that self-reported demographic data, **43% self-identified as female** and **37% were identified as African-American or Hispanic** by their teacher. 
 
 By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students taking the most recent AP Computer Science exam in high school was **20% females** and **17% African American, Hispanic, or other historically underrepresented students**.
-
-### Table: Participation in CS courses by demographic
-
-|  | Code Studio Student Account Holders| AP Computer Science Exam Candidates|
-|---|--------|-----|
-| % self-identifying as female | 43% | 37% |
-| % self-identifying as African American or Hispanic | 20% | 17% |
-<br/>
-<br/>
 
 ---
 
@@ -40,15 +32,14 @@ By comparison, the [demographic breakdown](/files/APCS-2014.pdf) of students tak
 
 Code.org offers a series of 20-hour long courses we refer to as ["Computer Science Fundamentals."](/educate/k5) These interactive tutorials are hosted on [Code Studio](http://studio.code.org) and complemented by [lesson plans](https://code.org/teacher-dashboard#/plan) teachers can deliver in the classroom. The courses focus on helping students develop skills with basic CS concepts including [sequencing, debugging, loops, conditionals, nested loops, event-handlers and functions](/curriculum/docs/k-5/glossary).
 
-From September 2014 through June 2015, **524,000 students** have solved puzzles that show they’ve demonstrated use of the basics of sequencing, and **394,000** have done the same with debugging. Other concepts have each been demonstrated by **between 50,000-100,000 students**. 
-
 ### Table: Number of Students Demonstrating Skill in CS Concepts*
 
 | Since 9/14 | Sequencing | Debugging | Loops | Conditionals | Nested Loops | Event handlers | Functions |
 |---|---|---|---|---|---|---|---|
-| [Course 1](http://studio.code.org/s/course1) | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
-| [Course 2](http://studio.code.org/s/course2) | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
-| [Course 3](http://studio.code.org/s/course3) | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
+| [Course 1](http://studio.code.org/s/course1)   | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
+| [Course 2](http://studio.code.org/s/course2)   | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
+| [Course 3](http://studio.code.org/s/course3)   | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
+*Source: Code Studio database*
 
 **"Skill demonstration" is defined as having solved 80% of the puzzles in at least one stage that teaches that concept. Note: If the same student did [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1) and [2](http://studio.code.org/s/course2), they are double counted for a concept. On the other hand, this does not account for learning the concept more deeply by repeating it in different contexts, or at more depth.*
 <br/>
@@ -60,20 +51,7 @@ In looking at our completion data for any of our three 20-hour [CS Fundamentals]
 
 ## Teachers Matter
 
-One potential explanation for our high completion rate among young learners is the impact of teachers. Students working on Code Studio courses 2-4 with a teacher’s guidance **are more likely to complete** the course than students working on their own, outside of a classroom setting. his shows how students who complete a course with adult guidance have an advantage, in terms of their overall persistence in learning CS. Teachers also benefit because Code.org focuses on teacher support and professional development.
-
- The table below shows the "teacher advantage" for completing a given percentage of each course, where teacher advantage is the percent more likely you are to complete that much of the class if you have a teacher. Ex: 26 means you are 26% percent more likely to do 20% of course1 if you have a teacher.
-
-### Table: Student Course Completion With Teacher vs. Without
-| Course Name | 20% | 30% | 40% | 50% | 60% | 70% | 80% | 90% | 100%|
-|---|---|---|---|---|---|---|---|---|---|
-| [20-hour](https://studio.code.org/s/20-hour) | 2 | 2 | 6 | 3 | 0 | 0 | -7 | -17 | -44 |
-| [Course 1](http://studio.code.org/s/course1) | 26 | 28 | 22 | 22 | 17 | 11 | 0 | -15 |-25 |
-| [Course 2](http://studio.code.org/s/course2) | 100 | 86 | 82 | 78 | 63 | 67 | 60 |67  | 100 |
-| [Course 3](http://studio.code.org/s/course3) | 60 | 50 | 57 | 50 | 60 | 40 | 50 | 33 | 100 |
-| [Course 4](http://studio.code.org/s/course4) | 80 | 91 | 89 | 75 | 117 | 83 | 100 | 100 | 100|
-<br/>
-<br/>
+Students working on Code Studio courses 2-4 with a teacher’s guidance **are more likely to complete** the course than students working on their own, outside of a classroom setting. This shows how students who complete a course with adult guidance have an advantage, in terms of their overall persistence in learning CS. Teachers also benefit because Code.org focuses on teacher support and professional development.
 
 Students who are learning with the support of their teacher in a classroom setting complete courses more than those learning on their own, supporting Code.org’s focus on a mix of teacher development and self-guided material. 
 
@@ -97,6 +75,7 @@ A [programming challenge](https://studio.code.org/s/CodeStudioPuzzleChallenge/) 
 |Variables | 89%|
 |For-loops with a variable (not explicitly taught in ECS) | 65%|
 |Nested repeat loops (not explicitly taught in ECS) | 72%|
+*Source: Code Studio database*
 
 <br /><br/>
 Further work is required to validate and revise the questions.

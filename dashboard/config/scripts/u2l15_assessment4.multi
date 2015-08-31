@@ -8,3 +8,9 @@ wrong 'A 16 character password that is all letters of the alphabet'
 wrong 'A 32 character password that is all letters of the alphabet'
 right 'A 150 character password that is all the same character.'
 
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- A 150 character password that is all the same character.
+MARKDOWN

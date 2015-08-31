@@ -43,11 +43,15 @@ Quarter 4: Saturday, May 14, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
+
 **Location**
 
-TBD
-<br/><br/>
+Prince George's Community College<br/>
+Center for the Advancement of Technology (CAT)<br/>
+Room 110<br/>
+301 Largo Rd</br>
+Largo, MD 20774
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

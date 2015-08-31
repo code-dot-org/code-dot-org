@@ -1,7 +1,5 @@
 
 
-[<button style="float: right; margin-top: 50px">Prijavite vaš događaj</button>](/#join)
-
 ## Privucite medije kako bi prisustvovali vašem Satu Kodiranja
 
 *za sve upite medija i tiska kontaktirajte nas na <press@code.org>*
@@ -11,7 +9,7 @@
   * Obratite se medijima dva tjedna prije vašega događaja putem e-pošte. Ukoliko ne dobijete odgovor, propratite daljnjom e-poštom ili pak telefonskim razgovorom.
   * Zamolite nekoga od školskog osoblja ili volontera da uslika događaj i podijeli slike na mreži ili ih pošalje novinama.
   * Pišite o Satu Kodiranja na svojoj web stranici i u školskim novinama. Objavite detalje svog događaja i slike aktivnosti učenika.
-  * Tijekom tjedna od 8-og do 14-og prosinca, podijelite ažurirane detalje svog događaja na Facebook-u i Twitter-u i objavite slike. Upotrijebite hashtag **#HourOfCode** kako bi svi sa Code.org mogli vidjeti i promovirati vaš događaj.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Vodič korak po korak:
 
@@ -47,13 +45,11 @@ U Kini, svi učenici uče informatiku kako bi završili srednju školu. U SAD-u 
 
 **Više detalja i citat koji možete koristiti u materijalima**
 
-"Sat Kodiranja osmišljen je kako bi demistificirao programiranje i pokazao kako informatika nije komplicirana, svatko može naučiti osnove," kaže Hadi Partovi, osnivač i glavni izvršni direktor Code.org-a. "Samo u toku jednog tjedna pročle godine, 15 milijuna učenika isprobalo je Sat Kodiranja. Sada nam je cilj dosegnuti 100 milijuna učenika širom svijeta kako bismo dokazali da potražnja za relevantnim informatičkim znanjem prelazi sve barijere i ne poznaje granice."
+"Sat Kodiranja osmišljen je kako bi demistificirao programiranje i pokazao kako informatika nije komplicirana, svatko može naučiti osnove," kaže Hadi Partovi, osnivač i glavni izvršni direktor Code.org-a. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Više o Code.org**
 
-Code.org® je 501c3 javna neprofitna organizacija posvećena povećanju broja sudionika u informatici i povećanju sudjelovanja žena i manjina. Vizija nam je pružiti mogučnost svakom učeniku u svakoj školi da nauči informatiku. Nakon svog početka 2013-te godine, Code.org organizirao je kampanju Sat Kodiranja — koja je milijunima predstavila informatiku — u suradnji sa više od 30 školskih okruga u SAD-u, te pokrenuo Studio Kodiranja, open-source, online platformu učenja za sve uzraste. Za više informacija, molimo posjetite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Vizija nam je pružiti mogučnost svakom učeniku u svakoj školi da nauči informatiku. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Za više informacija, molimo posjetite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Više resursa i primjeraka e-pošte možete naći [ovdje](<%= hoc_uri('/resources') %>).
-
-<a style="display: block" href="/#join"><button style="float: right;">Prijavite vaš događaj</button></a>

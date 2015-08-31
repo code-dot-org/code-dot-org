@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "maze": "[[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,5,0,0,0,0],[0,0,0,6,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions": "Can you help the Bee collect the rest of the honey using this for loop? ",
     "is_k1": "false",
@@ -17,9 +17,19 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "2",
-    "step_mode": "0",
-    "nectar_goal": "21",
-    "flower_type": "redWithNectar"
+    "step_mode": "1",
+    "nectar_goal": "6",
+    "flower_type": "redWithNectar",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "ideal": "11",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -27,7 +37,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true">
+            <block type="controls_for" inline="true" movable="false">
               <title name="VAR">counter</title>
               <value name="FROM">
                 <block type="math_number">
@@ -45,24 +55,21 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="variables_get">
-                          <title name="VAR">counter</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
                     </block>
-                  </next>
+                  </value>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
                 </block>
               </statement>
             </block>
           </next>
         </block>
+        <block type="controls_repeat_ext" inline="true"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -70,7 +77,18 @@
         <block type="math_number">
           <title name="NUM">6</title>
         </block>
+        <block type="variables_get">
+          <title name="VAR">counter</title>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_nectar"/>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
   </blocks>
 </Karel>

@@ -1,8 +1,10 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
 
 ### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 <br/>
@@ -50,3 +52,4 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
+<%= view :signup_button %>

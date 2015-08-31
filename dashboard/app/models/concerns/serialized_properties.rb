@@ -1,3 +1,4 @@
+# Defines methods to access properties in a property bag via a serialized_attrs declaration
 module SerializedProperties
   extend ActiveSupport::Concern
   included do
@@ -39,11 +40,39 @@ module SerializedProperties
       (serialized_properties[self.to_s] ||= []).concat args
     end
 
+    def define_methods_for_property(property_name)
+      define_method(property_name) { read_attribute('properties')[property_name] }
+      define_method("#{property_name}=") { |value| read_attribute('properties')[property_name] = value }
+      define_method("#{property_name}?") { read_attribute('properties')[property_name] }
+    end
+
+    ENCRYPTED_PROPERTY_REGEX = /^encrypted_/
+
+    def define_methods_for_encrypted_property(property_name)
+      cleartext_property_name = property_name.gsub(ENCRYPTED_PROPERTY_REGEX, '')
+
+      define_method(cleartext_property_name) do |*args|
+        Encryption::decrypt_object(read_attribute('properties')[property_name])
+      end
+
+      define_method("#{cleartext_property_name}=") do |value|
+        read_attribute('properties')[property_name] = Encryption::encrypt_object(value)
+      end
+
+      define_method("#{cleartext_property_name}?") do
+        # same as the getter without ?
+        self.send(cleartext_property_name)
+      end
+    end
+
     def init_internals
       sti_hierarchy.map { |x| serialized_properties[x.to_s] || [] }.flatten.each do |property|
-        define_method(property) { read_attribute('properties')[property.to_s] }
-        define_method("#{property}?") { read_attribute('properties')[property.to_s] }
-        define_method("#{property}=") { |value| read_attribute('properties')[property.to_s] = value }
+        property = property.to_s
+        if property =~ ENCRYPTED_PROPERTY_REGEX
+          define_methods_for_encrypted_property property
+        else
+          define_methods_for_property property
+        end
       end
     end
   end

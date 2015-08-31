@@ -1,8 +1,11 @@
 ---
-title: Resources
+title: <%= hoc_s(:title_resources) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
+
 <div class="row">
     <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
@@ -10,10 +13,10 @@ nav: resources_nav
 
 <a id="handouts"></a>
 ## Use this handout to spread the word
-<a href="<%= localized_file('/files/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
+<a href="<%= localized_file('/files/hoc-one-pager.pdf') %>"><img src="<%= localized_file('/images/fit-250/one-pager.png') %>"></a>
 
 ## Give this handout to teachers and schools
-<a href="<%= localized_file('/files/schools-handout.pdf') %>"><img src="/images/fit-250/schools-handout.png"></a>
+<a href="<%= localized_file('/files/schools-handout.pdf') %>"><img src="<%= localized_file('/images/fit-250/schools-handout.png') %>"></a>
 
 
 <a id="videos"></a>
@@ -151,4 +154,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
-
+<%= view :signup_button %>

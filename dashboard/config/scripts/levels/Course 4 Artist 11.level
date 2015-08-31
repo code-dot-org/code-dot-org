@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now for a challenge!  Here is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it without any starting blocks?  Feel free to use trial and error. You are not expected to get it perfect the first time.  Want to see more hints?  Click here!",
+    "instructions": "Now for a challenge!  Here is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You are not expected to get it perfect the first time.  Want to see more hints?  Click here!",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "true",
     "disable_sharing": "false",
     "slider_speed": ".6",
-    "markdown_instructions": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\r\n\r\nNow for a challenge!  \r\n\r\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it without any starting blocks?  Feel free to use trial and error. You are not expected to get it perfect the first time.\r\n\r\nHint:  Each repeated shape is the combination of half of a hexagon, followed by 2/3 of a triangle. \r\n<br/><br/>\r\n<h4>\r\n<details>\r\n<summary><b>Extra Hint</b></summary>\r\n<br/>\r\nThe unit shape is almost the same as in the last puzzle, except the half-hexagon is a little smaller.\r\n<br/><br/>\r\n</details>\r\n</h4>\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>More on Angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px;  \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\n<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\r\n\r\nNow for a challenge!  \r\n\r\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You are not expected to get it perfect the first time.\r\n\r\nHint:  The repeated shape is almost identical to the one from the last puzzle, except that the length in the first loop is a little smaller. \r\n<br/><br/>\r\n<h4 class=\"hint\"><details>\r\n<summary>Extra Hint</summary>\r\n<br/>\r\n\t<p class=\"hintInner\">\r\n      1) The half-hexagon has a <b>length of 30</b> and turns right by <b>60 degrees</b>.  \r\n      <br/>\r\n      2) The 2/3 triangle has a <b>length of 80</b> and turns right by <b>120 degrees</b>.\r\n    </p>\r\n<br/>\r\n</details>\r\n</h4>\r\n<br/>\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -34,11 +34,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="draw_move" inline="true">

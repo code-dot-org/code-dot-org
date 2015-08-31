@@ -13,8 +13,8 @@
     "start_direction": "2",
     "nectar_goal": "1",
     "flower_type": "redWithNectar",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,0,0,0,0],[0,0,0,\"FC\",1,1,0,0],[0,0,0,0,0,\"FC\",0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[2,1,1,0,0,0,0,0],[0,0,\"FC\",1,1,0,0,0],[0,0,0,0,\"FC\",1,1,0],[0,0,0,0,0,0,\"FC\",0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,-1,0,0,0],[0,0,0,0,0,0,-1,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "10",
     "disable_param_editing": "true",
@@ -29,10 +29,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "honey_goal": "1",
+    "honey_goal": "2",
     "markdown_instructions": "Use the `if/else` block to check each object to see if it's a flower or a honeycomb. If it's a flower, collect nectar...otherwise, make honey!",
-    "maze_data": null,
-    "video_key": "C4_conditionals"
+    "video_key": "C4_conditionals",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

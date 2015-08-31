@@ -4,44 +4,32 @@
 
 
 
-# Thanks for signing up to host an Hour of Code!
+# Hvala na prijavi za domaćina Sata Kodiranja!
 
-**EVERY** Hour of Code organizer will receive 10 GB of Dropbox space or $10 of Skype credit as a thank you. [Details](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
 
-## 1. Spread the word
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
-Tell your friends about the #HourOfCode.
+## Proširite riječ
+
+Recite svojim prijateljima o #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
+## 2. Zatražite da cijela škola sudjeluje u Satu Kodiranja
 
-## 2. Ask your whole school to offer an Hour of Code
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/files/hoc-one-pager.pdf) to your principal.
+## 3. Zamolite svog poslodavca da sudjeluje
 
-<% else %>
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-## 2. Ask your whole school to offer an Hour of Code
+## 4. Promovirajte Sat Kodiranja u svojoj zajednici
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/files/hoc-one-pager.pdf) this handout</a> to your principal.
+Pridobijte lokalne grupe - izviđače, crkvu, sveučilište, branitelje ili radnički sindikat. Možete biti domaćin Sata Kodiranja i u svom susjedstvu.
 
-<% end %>
+## 5. Zamolite mjesnog dužnosnika da podrži Sat Kodiranja
 
-## 3. Make a generous donation
-
-[Donate to our crowdfunding campaign.](http://<%= codeorg_url() %>/donate) To teach 100 million children, we need your support. We just launched the [largest education crowdfunding campaign](http://<%= codeorg_url() %>/donate) in history. *Every* dollar will be matched [donors](http://<%= codeorg_url() %>/about/donors), doubling your impact.
-
-## 4. Ask your employer to get involved
-
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf).
-
-## 5. Promote Hour of Code within your community
-
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
-
-## 6. Ask a local elected official to support the Hour of Code
-
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
