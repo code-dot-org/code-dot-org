@@ -491,6 +491,10 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      TLO intro:
+        Introduction to the TLO: Introduction to the TLO
+      TLO practical:
+        TLO in Practice: TLO in Practice
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
@@ -919,6 +923,19 @@ en:
         Phase 3 Module 3: Phase 3 Module 3
       sciPD3 resource module4:
         Phase 3 Module 4: Phase 3 Module 4
+      sciPD3pre1 challenge: {}
+      sciPD3pre1 intro:
+        Intro to Phase 3 Online: Intro to Phase 3 Online
+        Prepare for P3 In-Person: Prepare for P3 In-Person
+      sciPD3pre1 prep:
+        Prepare to teach your peers a module: Prepare to teach your peers a module
+        Preparing Your TLO: Preparing Your TLO
+      sciPD3pre1 remember:
+        Looking Back to P2: Looking Back to P2
+        Refreshing yourself on the module that you will be teaching: Refreshing yourself on the module that you will be teaching
+      sciPD3pre1 thanks:
+        Thank You: Thank You
+        Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       test demo level:
