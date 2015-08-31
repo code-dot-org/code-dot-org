@@ -52,6 +52,18 @@ class Game < ActiveRecord::Base
     @@game_netsim ||= find_by_name("NetSim")
   end
 
+  def self.pixelation
+    @@game_pixelation ||= find_by_name("Pixelation")
+  end
+
+  def self.text_compression
+    @@game_text_compression ||= find_by_name("TextCompression")
+  end
+
+  def self.odometer
+    @@game_odometer ||= find_by_name("Odometer")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -146,6 +158,9 @@ class Game < ActiveRecord::Base
         Applab:applab
         NetSim:netsim
         External:external
+        Pixelation:pixelation
+        TextCompression:text_compression
+        Odometer:odometer
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
