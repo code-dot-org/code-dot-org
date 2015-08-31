@@ -30,12 +30,12 @@ def partner_site?()
   return partner_sites.include?(request.site)
 end
 
-def current_user?
+def logged_in?
   dashboard_user.present?
 end
 
 def age
-  if current_user?
+  if logged_in?
     age = ((Date.today - dashboard_user[:birthday]) / 365).to_i
     age = "21+" if age >= 21
   else
