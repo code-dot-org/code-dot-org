@@ -1,9 +1,9 @@
 ---
-title: Student Learning Outcomes, September 2014 - June 2015
+title: Student Learning Outcomes, June 2014 - June 2015
 nav: about_nav
 ---
 
-# September 2014 - June 2015 Program Report
+# June 2014 - June 2015 Program Report
 
 ## What learning outcomes have Code.org students achieved?
 <img src="/images/outcomes-2014-15.png" width="100%"/>
@@ -12,9 +12,9 @@ nav: about_nav
 
 We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
 
-### Table: Code Studio User Growth, Sept 1 2014 - June 30 2015
+### Table: Code Studio User Growth, June 1 2014 - June 30 2015
 
-|  | Student Accounts Created| Teacher Accounts Created|
+|  | Student Accounts Created| Teacher Accounts Created |
 |---|--------|-----|
 | Prior to September 1 2014 | 1,440,227 | 35,976 |
 | September 1 2014 through June 30 2015 | 4,466,810 | 111,684 |
