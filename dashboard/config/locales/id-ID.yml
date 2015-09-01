@@ -363,6 +363,8 @@
       viewing_solution: Melihat Solusi
       try_it_yourself: Lakukan itu sendiri
       section: Sesi
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'

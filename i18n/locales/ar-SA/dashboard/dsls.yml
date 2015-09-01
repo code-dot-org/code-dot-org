@@ -11,7 +11,7 @@ ar:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: وصل الزر المناسب مع حركة الرقص
         Matching: مطابقة
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -32,7 +32,7 @@ ar:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: طابق الشبكة مع البرنامج.
         Matching: مطابقة
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -215,7 +215,7 @@ ar:
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: وصل الزر المناسب مع حركة الرقص
         Matching: مطابقة
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -433,17 +433,17 @@ ar:
         0: '? وفيما يلي ثلاث جمل. أن خلاصات أي من القوالب الموجودة أدناه بشكل صحيح حيث أن تطابق كل ثلاثة نفس النمط القالب؟'
         1: ': فيما يلي ثلاث جمل. أن خلاصات أي من القوالب الموجودة أدناه بشكل صحيح حيث أن تطابق كل ثلاثة نفس النمط القالب؟'
         Multiple Choice: إختيارات متعددة
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle _____ a _____ _____.: سياتل _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'سياتل مدينة كبيرة. <br/> Eugene ومدينة متوسطة الحجم <br/> Hillview ومدينة صغيرة.'
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        _____ is _____ a _____.: _____ هو _____ _____.
+        _____ is a _____ city.: _____ مدينة _____.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: إختيارات متعددة
         Which of these pictures best represents crowdsourcing?: أي من هذه الصور أفضل يمثل crowdsourcing؟
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
+        Brushing your hair: مشّط شعرك
         Cleaning your room: تنظيف غرفتك
         Eating your dessert: أكل حلواك
         Multiple Choice: إختيارات متعددة
@@ -479,14 +479,14 @@ ar:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'لو، ولو، تخطي إلى بلدي لو، <br/> لو، ولو، تخطي إلى بلدي لو، <br/> لو، ولو، تخطي إلى بلدي لو، <br/> تخطي إلى بلدي لو، بلدي حبيبتي.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: إختيارات متعددة
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: ما هو أكبر مقطع من هذه الأغنية التي يمكنك تعريف الفرقة حيث أن الفرقة تكرر عدة مرات؟
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: إختيارات متعددة
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'أي من البرامج التالية <em>لا</em> تقوم بنفس التسلسل الدقيق كالبرنامج !؟'
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png

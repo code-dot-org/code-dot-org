@@ -1811,6 +1811,9 @@ Applab.hideDesignModeToggle = function () {
   return !!level.hideDesignMode;
 };
 
+Applab.hideViewDataButton = function () {
+  return !!level.hideViewDataButton;
+};
 
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
@@ -3073,6 +3076,7 @@ designMode.changeScreen = function (screenId) {
     React.render(
       React.createElement(DesignToggleRow, {
         hideToggle: Applab.hideDesignModeToggle(),
+        hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
@@ -6572,6 +6576,7 @@ var Mode = {
 module.exports = React.createClass({displayName: "exports",
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
+    hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
@@ -6659,8 +6664,12 @@ module.exports = React.createClass({displayName: "exports",
       visibility: 'hidden'
     };
 
-    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
-
+    var showDataButtonStyle = $.extend(
+      {},
+      buttonStyle,
+      inactive,
+      this.props.hideViewDataButton ? hidden : null
+    );
     var iconStyle = {
       margin: '0 0.3em'
     };

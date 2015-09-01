@@ -46,7 +46,7 @@ sq:
         text: Pëshëndetje! Unë jam JR! Çdo ekip garash makine ka nevojë shkencëtarë kompjuterash për të fituar. Ata analizojnë të dhëna nga makina për ta bërë atë të ecë më shpejt.
       2:
         image: notes/stage5_2.jpg
-        text: Në këto puzzle-a. ti do të jesh një artist që vizaton një vijë mbrapa atyre kudo që shkojnë ata.
+        text: Në këto puzzle-a ti do jesh një artist që vizaton një vijë mbrapa tyre kudo që ata shkojnë.
       3:
         image: notes/stage5_3.jpg
         text: 'Ky bllok thotë "move forward by 100 pixels". Pikselat janë pika vërtet të vogla në ekranin tënd.'
@@ -90,7 +90,8 @@ sq:
         text: 'Nëse hedh një vështrim tek vendi jot i punës, ka disa blloqe të gjelbër që janë mbushur për ty - këto janë "event handlers" '
       7:
         image: notes/flappy07.jpg
-        text: 'Nëse do që zogu të PËRPLASET kur ti KLIKON mouse-in, ti mund ta bësh atë duke bashkuar bllokun "FLAP" tek event handler-i i përshtatshëm dhe tani në lojën tënde kurdo që ti klikon mouse-in, zogu do përplaset.'
+        text: |-
+          Nëse do që zogu të PËRPLASET kur ti KLIKON mouse-in, mund t'a bësh këtë duke bashkuar bllokun "FLAP" tek mbajtësi i duhur i eventit dhe tani në lojën tënde kurdo që ti klikon mousin, zogu do përplaset.
       8:
         image: notes/flappy08.jpg
         text: Në çdo puzzle të këtij aktiviteti ne do të prezantojmë tipe të reja eventesh si blloqe të gjelbra në vendin tënd të punës, dhe ti mund të vendosësh blloqet e përshtatshëm për ti shtuar në përgjigje të këtyre eventeve.

@@ -213,7 +213,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveNorthTooltip":function(d){return "Sposta l'artista verso nord."},
 "moveSouthTooltip":function(d){return "Sposta l'artista verso sud."},
 "moveWestTooltip":function(d){return "Sposta l'artista verso ovest."},
-"moveTooltip":function(d){return "Sposta l'artista in avanti o all'indietro della quantita di pixel specificata."},
+"moveTooltip":function(d){return "Sposta l'artista in avanti o all'indietro della quantità di pixel specificata."},
 "notBlackColour":function(d){return "Devi impostare un colore diverso dal nero per questo esercizio."},
 "numBlocksNeeded":function(d){return "Questo esercizio può essere risolto con %1 blocchi.  Tu ne hai usati %2."},
 "penDown":function(d){return "Abbassa la matita"},

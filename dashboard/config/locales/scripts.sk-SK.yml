@@ -15,11 +15,11 @@
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           'Maze: Sequence': 'Maze: Sequence'
           'Maze: Debugging': 'Maze: Debugging'
-          'Artist 1: Intro': 'Artist 1: Intro'
-          Artists 2: Artists 2
+          'Artist 1: Intro': 'Umelec 1: Úvod'
+          Artists 2: Umelci 2
           Spelling Bee: Spelling Bee
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Bee 1: Intro'
+          'Bee 1: Intro': 'Včela 1: Úvod'
           'Maze 2: Loops': 'Maze 2: Loops'
           'Bee 2: Loops': 'Bee 2: Loops'
           Multi & Match: Multi & Match
@@ -1249,3 +1249,10 @@
           Updates - The Big Game and Projects: Updates - The Big Game and Projects
           Updates - The Design Recipe: Updates - The Design Recipe
           Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules
