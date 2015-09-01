@@ -26,7 +26,7 @@
   </ul>
   <% if (showInstructions) { %>
     <div id="tab_instructions">
-      <button id="finished" class="btn btn-primary submitButton"><%= i18n.continueButton() %></button>
+      <button id="finished" class="btn btn-primary submitButton"><%= i18n.continueButton({ caret: '>' }) %></button>
     </div>
   <% } %>
   <% if (showMyDevice) { %>

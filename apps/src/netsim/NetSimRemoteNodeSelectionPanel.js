@@ -151,17 +151,25 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
     this.addButton(i18n.shardResetButton(), this.resetShardCallback_);
   }
 
+  // Button that takes you to the next level.
+  this.addButton(
+      i18n.continueButton({ caret: '<i class="fa fa-caret-right"></i>'}),
+      function (jQueryEvent) {
+        if (!$(jQueryEvent.target).is(':disabled')) {
+          NetSimGlobals.completeLevelAndContinue();
+        }
+      },
+      {
+        secondary: false,
+        classes: [ 'submitButton' ]
+      });
+
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
 
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
-  this.getBody().find('.submitButton').click(function (jQueryEvent) {
-    if (!$(jQueryEvent.target).is(':disabled')) {
-      NetSimGlobals.completeLevelAndContinue();
-    }
-  });
 };
 
 
