@@ -46,7 +46,7 @@ FactoryGirl.define do
   end
 
   factory :level, :class => Blockly do
-    sequence(:name) { |n| "Level #{n}" }
+    sequence(:name) { |n| "Level_#{n}" }
     sequence(:level_num) {|n| "1_2_#{n}" }
 
     # User id must be non-nil for custom level
