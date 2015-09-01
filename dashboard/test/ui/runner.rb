@@ -215,8 +215,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
-  arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
-  arguments += " -t ~@chrome" if browser['browser'] != 'chrome' && !$options.local
+  arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
+  arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
