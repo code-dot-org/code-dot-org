@@ -1,0 +1,69 @@
+.color_theme {
+	background-color: rgb(200, 193, 217); /* lighter_purple */
+	color: white;
+}
+
+.color_theme a {
+	color: white;
+	font-family: 'Gotham 4r', sans-serif;
+	font-size: 13px;
+}
+
+.bw_theme {
+	background-color: white;
+	color: #5b6770; /* charcoal */
+}
+
+.bw_theme a {
+	color: #5b6770;
+	font-family: "Gotham 4r", sans-serif;
+	font-size: 13px;
+}
+
+#donorslider {
+	margin-top:20px;
+	padding-top:10px;
+	margin-bottom:0px;
+}
+
+#donorheader {
+	position:relative;
+	height:40px;
+}
+
+h1 {
+	width:100%;
+	font-size: 20px;
+	margin: 0px;
+	padding:0px;
+	text-align:center;
+	position: absolute;
+	top:0px;
+	font-family: 'Gotham 4r', sans-serif;
+}
+
+#donorlinks.desktop-feature {
+	text-align:right;
+	position:absolute;
+	width:100%;
+}
+
+#donorlinks.desktop-feature a {
+	font-family: "Gotham 7r", sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: normal;
+}
+
+.donor-slider {
+	text-align:center;
+	font-size:13px;
+	font-family: 'Gotham 4r', sans-serif;
+}
+
+.container_responsive {
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-bottom:15px;
+	padding-top:5px;
+}

@@ -1,29 +1,26 @@
+%link{:href=>"/css/donor_slider.css", :rel=>"stylesheet"}
+
 - supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s).all
 - supporters.shuffle!
 
-- if request.path_info.include?('/congrats')
-  - background_color = "#ffffff"
-  - font_color = "#5b6770" #charcoal
-- else
-  - background_color = "#cfc9de" #lighter_purple
-  - font_color = "#ffffff"
+- request.path_info.include?('/congrats') ? congrats_page = true : congrats_page = false
 
-#donorslider{style: "background-color: #{background_color}; margin-top:20px; padding-top:10px; margin-bottom:0px"}
-  .container_responsive{style: "margin-top:0px; margin-bottom:0px; padding-bottom:15px; padding-top:5px"}
-    #donorheader{style: "position:relative; height:40px"}
-      %h1{style: "width:100%; font-size: 20px; margin: 0px; padding:0px; text-align:center; color: #{font_color}; position: absolute; top:0px; font-family: 'Gotham 4r', sans-serif"}
+#donorslider{:class => congrats_page ? "bw_theme" : "color_theme"}
+  .container_responsive
+    #donorheader
+      %h1{:class => congrats_page ? "bw_theme" : "color_theme"}
         = I18n.t(:homepage_header_donors)
 
-      #donorlinks.desktop-feature{style: "text-align:right; position:absolute; width:100%"}
-        %a{href: "/about/donors", style: "color: #{font_color}"} 
+      #donorlinks.desktop-feature
+        %a{href: "/about/donors", :class => congrats_page ? "bw_theme" : "color_theme"} 
           = I18n.t(:homepage_donors_seall)
         &nbsp; &nbsp; &nbsp;
-        %a{href: "/donate", style: "color: #{font_color}"} 
+        %a{href: "/donate", :class => congrats_page ? "bw_theme" : "color_theme"} 
           = I18n.t(:homepage_donors_donate)
 
-    .donor-slider{style: "color: #{font_color}; text-align:center; font-size:13px"}
+    .donor-slider{:class => congrats_page ? "bw_theme" : "color_theme"}
       - supporters.each_with_index do |supporter, index|
-        %a{:href=>supporter[:url_s], :target=> "_blank", :style=>"color: #{font_color}; font-family: 'Gotham 4r', sans-serif;"}
+        %a{:href=>supporter[:url_s], :target=> "_blank", :class => congrats_page ? "bw_theme" : "color_theme"}
           - if index == supporters.length-1
             = "#{supporter[:name_s]}"
           - else
