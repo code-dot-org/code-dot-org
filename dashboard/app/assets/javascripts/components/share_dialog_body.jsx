@@ -1,6 +1,6 @@
 window.dashboard = window.dashboard || {};
 
-window.dashboard.ShareDialogBody = (function () {
+window.dashboard.ShareDialogBody = (function (React) {
   return React.createClass({
     propTypes: {
       icon: React.PropTypes.string,
@@ -44,20 +44,19 @@ window.dashboard.ShareDialogBody = (function () {
 
       // TODO - share with alert from apps?
       var abuseContents;
+      var i18n = {
+        abuse: {
+          tos: "This project has been reported for violating Code.org's" +
+            "<a href='#'> Terms of Service</a> and cannot be shared with others.",
+          contact_us: "If you believe this to be an error, please<a href='#'> contact us.</a>"
+        }
+      };
       if (this.props.isAbusive) {
-        // use bootstrap's alert-error for consistency with our alert
-        abuseContents = (
-          <div className='alert-error' style={abuseStyle}>
-            <p style={abuseTextStyle}>
-              This project has been reported for violating Code.org's
-              <a href='#'> Terms of Service</a> and cannot be shared with others.
-            </p>
-            <p style={abuseTextStyle}>
-              If you believe this to be an error, please
-              <a href='#'> contact us.</a>
-            </p>
-          </div>
-        );
+        abuseContents = <window.dashboard.AbuseError
+          i18n={i18n}
+          className='alert-error'
+          style={abuseStyle}
+          textStyle={abuseTextStyle}/>;
       }
 
       return (
