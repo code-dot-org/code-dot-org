@@ -10,23 +10,24 @@
   %a{href:'https:' + CDO.code_org_url("/educate/pd/15-16/faq")}
     FAQ
   or send us an email.
-- if @workshop.phase == 2
+- # If phase 2 or 4, or 3A for CSinS or CSinA
+- if @workshop.phase == 2 || @workshop.phase == 8 || (@workshop.phase == 4 && (@workshop.program_type == 1 || @workshop.program_typoe == 2))
   %h2
     Complete #{@workshop.phase_info[:long_name]}
   %p
     You must complete #{@prerequisite_phase[:long_name]} prior to attending the #{@workshop.phase_info[:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
   %ul
     %li
-      Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+      %p
+        Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+      %p
+        %em
+          Here’s what a successful online PD looks like. All the progress circles are green.
+      %img{src:"#{CDO.studio_url(image_url('finished_pd_script.jpg'), 'https:')}", style:'width: 600px'}
+      %p
+        The number of stages/levels may differ from the above image.
     %li
       Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
-- if @workshop.program_type_info[:id] == 1 || @workshop.program_type_info[:id] == 2
-  %p
-    %em
-      Here’s what a successful online PD looks like. All the progress circles are green.
-  %img{src:"#{CDO.studio_url(image_url('finished_pd_script.jpg'), 'https:')}", style:'width: 600px'}
-  %p
-    The number of stages/levels may differ from the above image.
 
 %h2
   Workshops Details
