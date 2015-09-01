@@ -7,7 +7,7 @@
   %p
     We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference in your classroom.
 %p
-  As part of your commitment to this program, you are expected to participate in this academic year development workshop. If you have any conflicts with these dates, please email
+  As part of your commitment to this program, you are expected to participate in this workshop. If you have any conflicts with these dates, please email
   %a{href:'mailto:pd@code.org'}
     pd@code.org
   If you have questions, check out our
@@ -16,10 +16,7 @@
   or send us an email.
 - # If phase 2 or 4, or 3A for CSinS or CSinA, and not program_type 6 (counselor/admin)
 - if (@workshop.phase == 2 || @workshop.phase == 8 || (@workshop.phase == 4 && (@workshop.program_type == 1 || @workshop.program_type == 2))) && (@workshop.program_type != 6)
-  %h2
-    Complete #{@workshop.phase_info[:long_name]}
-  %p
-    You must complete #{@prerequisite_phase[:long_name]} prior to attending the #{@workshop.phase_info[:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
+  = render partial: 'prerequisite_information', locals: {workshop: @workshop}
   %ul
     %li
       %p
