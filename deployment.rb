@@ -143,6 +143,14 @@ class CDOImpl < OpenStruct
     "#{rack_env}#{sep}#{domain}"
   end
 
+  def dashboard_hostname
+    canonical_hostname('studio.code.org')
+  end
+
+  def pegasus_hostname
+    canonical_hostname('code.org')
+  end
+
   def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
     if rack_env?(:development) && !CDO.https_development

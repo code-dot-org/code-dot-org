@@ -1,0 +1,13 @@
+general:
+  build_dir: cookbooks
+machine:
+  ruby:
+    version: 2.2.3
+  services:
+    - docker
+dependencies:
+  post:
+    - docker info
+test:
+  override:
+    - ./test.sh

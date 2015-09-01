@@ -1,0 +1,29 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 11.18.12
+
+platforms:
+  - name: ubuntu-14.04
+    run_list:
+      - recipe[apt]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[varnish_test]
+    attributes:
+      cdo-apps:
+        dashboard:
+          port: 8080
+        pegasus:
+          port: 8081
+        i18n:
+          languages:
+            en: English
+            fr: French

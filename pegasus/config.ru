@@ -1,6 +1,6 @@
 require File.expand_path('../router', __FILE__)
 
-if rack_env?(:development) && CDO.https_development
+unless rack_env?(:development) && !CDO.https_development
   require 'rack/ssl-enforcer'
   use Rack::SslEnforcer, hsts: { expires: 31536000, subdomains: false }
 end

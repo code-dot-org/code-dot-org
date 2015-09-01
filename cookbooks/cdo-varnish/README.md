@@ -1,68 +1,39 @@
-cdo-varnish Cookbook
-====================
-TODO: Enter the cookbook description here.
+# cdo-varnish Cookbook
+Installs and configures Varnish HTTP cache.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+## Requirements
+Ubuntu 14.04
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+#### apt packages installed (from PPA)
+- `varnish`
+- `libvmod-cookie`
+- `libvmod-header`
 
-e.g.
-#### packages
-- `toaster` - cdo-varnish needs toaster to brown your bagel.
+## `HttpCache#config`
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
+Provides application-specific cache configuration used by Varnish and other HTTP cache layers.
+`pegasus` and `dashboard` keys each return a Hash in the following format:
+- `behaviors`: Array of behaviors, evaluated in top-to-bottom order:
+  - `path`: [Path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
+    to match this behavior against.
+    `*`-wildcards are allowed, either extension-wildcard `*.jpg` or path-wildcard `api/*`.
+    - `path` can be a String or an Array. If it is an Array, a separate behavior will be generated for each element.
+  - `headers`: A whitelist array of HTTP header keys to pass to the origin and include in the cache key.
+    To whitelist all headers for the path, pass `['*']`.
+    To strip all headers for the path, pass `[]`.
+  - `cookies`: A whitelist array of HTTP cookie keys to pass to the origin and include in the cache key.
+    To whitelist all cookies for the path, pass `'all'`.
+    To strip all cookies for the path, pass `'none'`.
+  - `proxy`: If specified, proxy all requests matching this path to the specified origin. (Currently either `'dashboard'` or `'pegasus'`)
+    Note: CloudFront does not support path-rewriting, so e.g., a GET request to `server1.code.org/here/abc` configured with
+    the behavior `{path: 'here/*' proxy: 'dashboard' }` will proxy its request to `server1-studio.code.org/here/abc`.
+- `default`: Default behavior if no other path patterns are matched. Uses the same syntax as `behaviors` except `path` is not required.
 
-e.g.
-#### cdo-varnish::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['cdo-varnish']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+## Running Tests
+The integration tests run using [Test Kitchen](http://kitchen.ci/).
+See `test/cookbooks/varnish_test/README.md` for more details.
 
-Usage
------
-#### cdo-varnish::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `cdo-varnish` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[cdo-varnish]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
+To test the cookbook, first make sure Docker is installed and running locally, then run:
+- `chef exec kitchen create` to create the machine image
+- `chef exec kitchen converge` to install Chef and converge the cookbook in the platform environment
+- `chef exec kitchen verify` to run the integration test suite

@@ -5,7 +5,7 @@ require ::File.expand_path('../config/environment',  __FILE__)
 require 'unicorn/oob_gc'
 use Unicorn::OobGC
 use Rack::ContentLength
-if rack_env?(:development) && CDO.https_development
+unless rack_env?(:development) && !CDO.https_development
   require 'rack/ssl-enforcer'
   use Rack::SslEnforcer,
       hsts: { expires: 31536000, subdomains: false }
