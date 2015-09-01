@@ -55,6 +55,7 @@ Room: Esplanade 108B<br/>
 200 Kalmus Dr<br/> 
 Costa Mesa, CA 92626
 
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -99,10 +100,10 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 in Orange County.
+Semester 1: Saturday, October 10, 2015 
 
 
-Semester 2: Saturday, April 16, 2016 in Los Angeles.
+Semester 2: Saturday, April 16, 2016
 
 8:00am - 4:00pm
 <br/>
@@ -110,7 +111,9 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Columbia Memorial Space Center<br/> 
+12400 Columbia Way<br/> 
+Downey, CA 90242
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -121,13 +124,7 @@ Curriculum guide
 Snacks
 <br/>
 Water
-
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
-
-
-[**Back to the top**](#top)
+<br/><br/>[**Back to the top**](#top)
 
 <a id="science"></a>
 
@@ -165,9 +162,12 @@ Semester 2: Saturday, February 20, 2016 in Los Angeles.
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**October 17th Location**
 
-TBD
+Ball Junior High School<br/>
+Room TBD<br/>
+1500 W Ball Rd<br/>
+Anaheim, CA 92802
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -179,9 +179,7 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
 
 
 
