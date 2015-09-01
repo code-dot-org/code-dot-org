@@ -1,0 +1,137 @@
+#petitionblock.greybox {
+	background-color: white;
+	padding: 10px 0px;
+	color: #5b6770;
+}
+
+#petition_message {
+	font-size: 22px;
+	line-height: 28px;
+	font-family: "Gotham 5r", sans-serif;
+}
+
+#form.container_responsive {
+	display: none;
+}
+
+#petition_sign_message.desktop-feature {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.desktop-feature {
+	font-size: 12px;
+	line-height: 18px;
+	color: #5b6770;
+	text-align: left;
+	margin-left: 10px;
+	margin-top: -5px;
+}
+
+#email_error {
+	color: rgb(255, 128, 0);
+	font-family: 'Gotham 7r', sans-serif;
+	display: none;
+}
+
+#age_error {
+	color: rgb(255, 128, 0);
+	font-family: 'Gotham 7r', sans-serif;
+	display: none;
+}
+
+#no_error {
+	color: rgb(255, 128, 0);
+	font-family: 'Gotham 7r', sans-serif;
+}
+
+
+#name.grey_input {
+	width: 160px;
+	height: 34px;
+	margin-bottom: 10px;
+}
+
+#email.grey_input {
+	width: 160px;
+	height: 34px;
+	margin-bottom: 10px;
+}
+
+#zip_code_or_country.grey_input {
+	width: 160px;
+	height: 34px;
+	margin-bottom: 10px;
+}
+
+#age.dropdown {
+	width: 100px;
+	height: 34px;
+	background-color: rgb(226,228,227);
+	color: rgb(89,89,89);
+	margin-bottom: 10px;
+	padding-left: 5px;
+	-webkit-appearance:none;
+}
+
+.dropdown {
+	width: 100px;
+	height: 34px;
+	background-color: rgb(226,228,227);
+	color: rgb(89,89,89);
+	margin-bottom: 10px;
+	-webkit-appearance:none;
+}
+
+.i-agree-button {
+	margin-left: 10px;
+}
+
+#gobutton.button_enabled {
+	min-width: 100px;
+	margin-bottom: 10px;
+	font-family: 'Gotham 5r', sans-serif;
+}
+
+#thanks.container_responsive {
+	display: none;
+	font-size: 18px;
+}
+
+
+.container_responsive {
+	margin-top: 10px;
+}
+
+#threedivs {
+	text-align: center;
+}
+
+#signpetitionclick {
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	font-weight: bold;
+	vertical-align: 5px;
+}
+
+.diversitypledge {
+	color: #ffa400;
+	font-size: 16px;
+	margin-right: 20px;
+}
+
+.joinothers {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.clear {
+	clear: both;
+}
