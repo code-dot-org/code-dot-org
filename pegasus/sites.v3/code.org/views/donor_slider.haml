@@ -1,12 +1,12 @@
 - supporters = DB[:cdo_donors].where(level_s:'platinum').or(level_s:'gold').order(:url_s).all
 - supporters.shuffle!
 
-- if theme == "color"
-  - background_color = "#cfc9de" #lighter_purple
-  - font_color = "#ffffff"
-- else
+- if request.path_info.include?('/congrats')
   - background_color = "#ffffff"
   - font_color = "#5b6770" #charcoal
+- else
+  - background_color = "#cfc9de" #lighter_purple
+  - font_color = "#ffffff"
 
 #donorslider{style: "background-color: #{background_color}; margin-top:20px; padding-top:10px; margin-bottom:0px"}
   .container_responsive{style: "margin-top:0px; margin-bottom:0px; padding-bottom:15px; padding-top:5px"}
