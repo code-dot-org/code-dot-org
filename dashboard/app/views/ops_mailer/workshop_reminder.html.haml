@@ -24,9 +24,9 @@
   %p
     %em
       Here’s what a successful online PD looks like. All the progress circles are green.
-    %div
-      = image_url('finished_pd_script.jpg')
-    %p
+  %figure
+    %img{src:"#{CDO.studio_url(image_url('finished_pd_script.jpg'), 'https:')}", style:'width: 600px'}
+    %figcaption
       The number of stages/levels may differ from the above image.
 
 %h2
@@ -35,12 +35,11 @@
   See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
 %h3
   Dates and times
-%ul
-  - @workshop.segments.each do |segment|
-    %li
-      #{segment.start.strftime("%A, %B %d, %Y")}
-      %br
-      #{segment.start.strftime("%I:%M %P")} - #{segment.end.strftime("%I:%M %P")}
+- @workshop.segments.each do |segment|
+  %p
+    #{segment.start.strftime("%A, %B %d, %Y")}
+    %br
+    #{segment.start.strftime("%I:%M %P")} - #{segment.end.strftime("%I:%M %P")}
 %h3
   Location
 %p
