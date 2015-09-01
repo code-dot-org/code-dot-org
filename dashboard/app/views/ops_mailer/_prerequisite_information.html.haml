@@ -1,0 +1,17 @@
+- if @workshop.program_type.to_i == 1 || @workshop.program_type.to_1 == 2
+  - if @workshop.phase == 4
+    %h2
+      Complete Phase 3: Online Part 1
+    %p
+      You must complete Phase 3 Online Pat 1 prior to attending your Phase 3A in-person workshop. Here are some tips to successfully complete your online PD:
+- else
+  - if @workshop.phase == 2
+    %h2
+      Complete Phase 1: Online Introduction
+    %p
+      You must complete your Phase 1 online activity prior to attending your Phase 2 in-person workshop. Here are some tips to successfully complete your online PD:
+  - elsif @workshop.phase == 8
+    %h2
+      Complete Phase 3 Online
+    %p
+      You must complete Phase 3 Online (parts 1-4) prior to attending your Phase 4 in-person workshop. Here are some tips to successfully complete your online PD:
