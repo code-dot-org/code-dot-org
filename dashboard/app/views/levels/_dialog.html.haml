@@ -72,6 +72,17 @@
         %button#ok-button.btn-danger{style: 'float: right;'}
           =t('dialog.startover_ok')
 
+  #instructions-dialogcontent
+    .modal-content.no-modal-icon.markdown-instructions-container
+      %p.dialog-title
+        ="#{t('puzzle')} #{@script_level.position} #{t('of')} #{@script_level.stage_total}"
+      .instructions-markdown
+        %p
+          =@level.properties['instructions']
+      #buttons
+        %button#ok-button{style: 'float: right;'}
+          =t('ok')
+
 :ruby
   dialogOptions = {
     skipSound: !!(data['options'].try(:[], 'skip_sound')),
