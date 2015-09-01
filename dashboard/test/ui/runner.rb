@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 require_relative '../../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
@@ -9,6 +10,8 @@ require 'optparse'
 require 'ostruct'
 require 'colorize'
 require 'open3'
+
+ENV['BUILD'] = `git rev-parse --short HEAD`
 
 $options = OpenStruct.new
 $options.config = nil
@@ -46,7 +49,7 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-v", "--browser_version Browser Version", String, "Specify a browser version") do |bv|
     $options.browser_version = bv
   end
-  opts.on("-f", "--feature Feature", String, "Single feature to run") do |f|
+  opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
     $options.feature = f
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost:9393") do |d|
@@ -96,6 +99,7 @@ $lock = Mutex.new
 $suite_start_time = Time.now
 $suite_success_count = 0
 $suite_fail_count = 0
+$failures = []
 
 if $options.local
   $browsers = [{:browser => "local"}]
@@ -162,9 +166,13 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
+features = $options.feature || Dir.glob('features/*.feature')
+browser_features = $browsers.product features
+
+Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+  feature_name = feature.gsub('features/', '').gsub('.feature', '')
   browser_name = browser['name'] || 'UnknownBrowser'
-  test_run_string = browser_name + ($options.run_eyes_tests ? '_eyes' : '')
+  test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
@@ -186,11 +194,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   HipChat.log "Testing <b>dashboard</b> UI with <b>#{test_run_string}</b>..."
   print "Starting UI tests for #{test_run_string}\n"
 
-  ENV['SELENIUM_BROWSER'] = browser['browser']
-  ENV['SELENIUM_VERSION'] = browser['browser_version']
-  ENV['BS_AUTOMATE_OS'] = browser['os']
-  ENV['BS_AUTOMATE_OS_VERSION'] = browser['os_version']
-  ENV['BS_ORIENTATION'] = browser['deviceOrientation']
+  ENV['BROWSER_CONFIG'] = browser_name
+
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
@@ -198,19 +203,20 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
+  ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
   end
 
   arguments = ''
-  arguments += "#{$options.feature}" if $options.feature
+#  arguments += "#{$options.feature}" if $options.feature
+  arguments += feature
   arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
-  arguments += " -t ~@no_ie" if browser['browser'] == 'Internet Explorer'
-  arguments += " -t ~@chrome" if browser['browser'] != 'chrome' && !$options.local
+  arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
+  arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
@@ -292,8 +298,15 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
 
-  succeeded
-end.each { |result| result ? $suite_success_count += 1 : $suite_fail_count += 1 }
+  [succeeded, message]
+end.each do |succeeded, message|
+  if succeeded
+    $suite_success_count += 1
+  else
+    $suite_fail_count += 1
+    $failures << message
+  end
+end
 
 $logfile.close
 $errfile.close
@@ -302,9 +315,13 @@ $errbrowserfile.close
 $suite_duration = Time.now - $suite_start_time
 $average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-puts "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
   "Test count: #{($suite_success_count + $suite_fail_count)}.  " +
   "Total duration: #{$suite_duration.round(2)} seconds.  " +
   "Average test duration: #{$average_test_duration.round(2)} seconds."
+
+if $suite_fail_count > 0
+  puts "Failed tests: \n #{$failures.join("\n")}"
+end
 
 exit $suite_fail_count

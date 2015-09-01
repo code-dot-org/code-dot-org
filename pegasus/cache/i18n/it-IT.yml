@@ -67,17 +67,19 @@
   enter_valid_age: Si prega di indicare una età valida
   enter_valid_email: Per favore inserisci un indirizzo valido di posta elettronica
   get_a_certificate_message: Ti manderemo un certificato e le informazioni su come
-    <a href='/learn/beyond'>continuare ad imparare dopo la prima Ora del Codice</a>
+    <a href='/learn/beyond'>continuare ad imparare dopo altro oltre l'Ora del Codice</a>
   get_a_certificate_message_after: Clicca sul certificato per scaricarlo o stamparlo.
-    Poi, continua con <a href='http://studio.code.org'>altri corsi</a>, o vedi altre
-    possibilità per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
+    Continua, quindi, con gli <a href='http://studio.code.org'>altri corsi</a> o vedi
+    altre possibilità per <a href='/learn/beyond'> imparare altro oltre l'Ora del
+    Codice</a>.
   thanks_for_submitting: Grazie per l'invio!
   if_you_enjoyed: Se ti è piaciuto imparare, chiedi anche ai tuoi amici di provare!  Vogliamo
     che tutto il mondo impari.
   personalize_certificate: Personalizza il tuo certificato
   share_achievement: Condividi il tuo successo
   beyond_hour_message: Vai avanti con <a href='http://studio.code.org'>altri corsi</a>,
-    o vedi altre opzioni per <a href='/learn/beyond'>Imparare dopo l'Ora del Codice</a>.
+    o vedi altre opzioni per <a href='/learn/beyond'>imparare altro oltre l'Ora del
+    Codice</a>.
   leaderboards_for_hoc: Classifiche per l'Ora del Codice.
   support_url: http://programmailfuturo.it/aiuto
   country: Nazione
@@ -110,7 +112,7 @@
   used_infrequent_updates: Utilizzato solo per aggiornamenti poco frequenti
   privacy_practices_children: Vedi la nostra informativa sulla privacy per i bambini
   petition_thankyou: Grazie per aver firmato la petizione
-  continue_learning_header: Continua ad imparare dopo l'Ora del Codice
+  continue_learning_header: Prosegui l'apprendimento oltre l'Ora del Codice
   continue_learning_body: Ci sono molte opzioni.  Puoi imparare online, o presso una
     scuola locale, o presso un campo estivo.
   learn_next_level: Prosegui al livello successivo
@@ -454,7 +456,7 @@
   dashboard_students_show_secret: Mostra la password
   dashboard_students_auto_generated: Auto-generata
   dashboard_students_reset_secret: Reimposta la password
-  dashboard_students_reset_password: Ripristinare la password
+  dashboard_students_reset_password: Reimposta la password
   dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe
     con i tuoi studenti:'
   dashboard_students_print_info: Stampa le schede con le informazioni di login dei
