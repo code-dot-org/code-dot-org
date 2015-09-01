@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -1989,24 +1989,18 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
 }
 
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsReportingThreshold()) {
-    // TODO - i18n (this might eventually come down from dashboard?)
-    // TODO - enable links
-    var contents = (
-      <div>
-        <p>
-          This project has been reported for violating Code.org's
-          <a href='#'> Terms of Service</a> and cannot be shared with others.
-        </p>
-        <p>
-          If you believe this to be an error, please
-          <a href='#'> contact us.</a>
-        </p>
-      </div>
-    );
+  // TODO - use dashboard.i18n
+  var i18n = {
+    abuse: {
+      tos: "This project has been reported for violating Code.org's" +
+        "<a href='#'> Terms of Service</a> and cannot be shared with others.",
+      contact_us: "If you believe this to be an error, please<a href='#'> contact us.</a>"
+    }
+  };
 
+  if (dashboard.project.exceedsReportingThreshold()) {
     this.displayAlert(parentSelector, {
-      body: contents,
+      body: <dashboard.AbuseError i18n={i18n}/>,
       style: {
         top: 45,
         left: 350,
