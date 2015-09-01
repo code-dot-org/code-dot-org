@@ -634,6 +634,7 @@ designMode.changeScreen = function (screenId) {
     React.render(
       React.createElement(DesignToggleRow, {
         hideToggle: Applab.hideDesignModeToggle(),
+        hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,

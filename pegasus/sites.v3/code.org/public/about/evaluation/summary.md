@@ -17,11 +17,11 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 - [What next steps can Code.org take to improve our programs?](#nextsteps)
 
 ## Evaluation Design
-We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. All data cited in this summary are available [upon request](mailto:info@code.org).
+We have gathered data from a number of sources -- internal data collected via Code Studio as well as external data collected by third parties -- in order to evaluate our impact and make decisions about future program direction. A [full summary](http://outlier.uchicago.edu/evaluation_codeorg/) of Outlier's findings is available [on their website](http://outlier.uchicago.edu/evaluation_codeorg/). All other data cited in this summary are available [upon request](mailto:info@code.org). 
 
 ---
 
-## <a name="pd" href="#pd">What do teachers say about Code.org professional development?</a>
+## <a name="pd" href="#pd">What do teachers take awy from Code.org professional development?</a>
 
 From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 

@@ -1,5 +1,5 @@
 ---
-title: Region PD
+title: Charles County PD
 nav: pd2_nav
 ---
 <a id="top"></a>
@@ -45,7 +45,6 @@ Room TBD<br/>
 Laptop and Charger
 <br/>
 Green journal
-<br/>Curriculum guide
 <br/>
 Snacks
 <br/>

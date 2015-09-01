@@ -184,9 +184,6 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
 
 [**Back to the top**](#top)
 
