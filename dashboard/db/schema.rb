@@ -531,7 +531,7 @@ ActiveRecord::Schema.define(version: 20150804213021) do
     t.string   "instructions", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "phase",        limit: 65535
+    t.integer  "phase",        limit: 4
   end
 
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
