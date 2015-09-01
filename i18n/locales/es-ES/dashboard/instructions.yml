@@ -1014,7 +1014,7 @@ es:
         Sugerencia: 3 triángulos en una rotación de 360 grados.
       Course 4 Artist 7_instruction: 'Ahora anida este circuito dentro de otro circuito para dibujar 3 triángulos. Esto es llamado un circuito anidado. Sugerencia: Todos los 10 triángulos completan una rotación de 360 grados.'
       Course 4 Artist 8_instruction: Dibuje este sol enlazando este bloque de código íntegramente 12 veces.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet you build it without giving you any blocks to start!\r\nHint: There are\n3 triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "¿Recuerdas esta forma?  Ahora vamos a dejarte construir la sin darte ningún bloques para empezar! \r sugerencia: hay 3 triángulos dentro de la rotación de 360 grados... ¿Cuántas veces 3 va en 360?"
       Course 4 Artist 9_instruction: 'Continúe con este diseño 10 veces y asegúrese que cada forma que dibuja apunte hacia adentro.  Aquí hay una sugerencia cuánto más debe apuntar: ¿Cuánto es 360 dividido entre 10?'
       Course 4 Artist Binary 1_instruction: 'Aquí hay una función que toma una cadena binaria de 0 y 1 e instruye al artista a que gire de izquierda a derecha, de arriba hacia abajo, llenando  los cuadrados cuando ve 1 e ignorándolos cuando ve 0. Corre este código para ver como el artista usa el binario para dibujar el patrón.'
       Course 4 Artist Binary 2_instruction: ¿Cuántas de estas secuencias binarias podría enlazar 8 veces para dibujar esta imagen?
@@ -1030,7 +1030,7 @@ es:
       Course 4 Artist For Loops 1_instruction: 'Dibuje este triángulo que tiene un tamaño de 50 pixeles.  Sugerencia: Use un bloque de repetición.'
       Course 4 Artist For Loops 10_instruction: 'Juego Gratis: Diviértase dibujando lo que le guste con los bloques que ha aprendido a usar'
       Course 4 Artist For Loops 11_instruction: '¿Recuerdas cuando usamos una variable para controlar el número de lados de una forma? Este patrón empieza con un triángulo y agrega un cada lado a la vez hasta que dibuja un decágono (10 lados). cada lado debe ser de 100 píxeles de largo. Sugerencia: 360 dividido por el número de lados de una forma, es el número de grados que necesitarás para girar.'
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: "Vamos a poner todo junto!  Usando tu conocimiento de \"ciclos for\" y del \"contador\", crear este dibujo donde cada forma tiene dos partes más que el anterior.  Asegúrate de que cada lado sea 10 veces mas largo que el número de lados del polígono. \r \r muy poco del código se ha proporcionado para ti."
       Course 4 Artist For Loops 12_instruction: 'Eso se ve muy bien, pero ahora me gustaría que dibuje cada forma junto a la otra.  Esta vez, cada lado es de 20 pixeles.  Use un bloque de salto para saltar 20 pixeles adelante después de cada forma. '
       Course 4 Artist For Loops 13_instruction: ¡Hmmm, esas formas están creciendo a cada instante! ¿No solucionamos este problema con las variables? ¿Cómo podemos usar la variable de contar para hacer lados mas pequenos, ya que hay mas de ellos? En lugar de mover hacia adelante estableciendo una cantidad, tratemos de avanzar (100/counter) píxeles.
       Course 4 Artist For Loops 14_instruction: 'Si girara un poco más o menos de lo que normalmente haría para una forma, crearía un efecto más nítido.  Intente girar 89 grados para crear esta espiral cuadrada torcida.'
@@ -1044,7 +1044,8 @@ es:
       Course 4 Artist For Loops 8_instruction: La línea mas pequeña de este espiral cuadrado es 10, el mas largo es 200, y cada línea es 10 píxeles mas larga que la anterior. ¿Puedes llenar los bloques faltantes para completar este sorprendente dibujo?
       Course 4 Artist For Loops 8a_instruction: La línea mas pequeña de este espiral cuadrado es 10, el mas largo es 200, y cada línea es 10 píxeles mas larga que la anterior. ¿Puedes llenar los bloques faltantes para completar este sorprendente dibujo?
       Course 4 Artist For Loops 9_instruction: '¿Puedes hacer un espiral? avanza de 1 a 75 píxeles, incrementando de  1 a 1 píxeles.'
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
+      Course 4 Artist For Loops inspire_instruction: "Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       Course 4 Artist Functions 1_instruction: ¿Puedes dibujar en cuadrado que tiene 100 píxeles de longitud, utilizando un circuito?
       Course 4 Artist Functions 10_instruction: ¿Cúal bloque necesitas agregar para conseguir que el triángulo se ubique en la cima del cuadrado?
       Course 4 Artist Functions 11_instruction: 'Mira este código que dibuja un cubo - ¿Puedes moverlo en una función llamada "Draw a cube"?'
@@ -1108,22 +1109,12 @@ es:
       Course 4 Bee 2_instruction: 'Revisa cada objeto para ver si es una flor. Si lo es, colecta el néctar...  De lo contrario, ¡puedes ignorarlo!'
       Course 4 Bee 3_instruction: 'El objeto desconocido es una flor o un panal de miel. Usa el bloque if/else para recoger el néctar, "if" si es una flor, "else" hacer miel (porque entonces sería un panal de abejas).'
       Course 4 Bee 4_instruction: Esta flor púrpura puede tener 3, 2 o 1 néctar. Aquí un bloque if-else se combina con otro bloque if-else para crear un bloque if,else-if, else. Completa la solución para recoger la cantidad desconocida de néctar.
-      Course 4 Bee 5_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Add an if-else block to create an if, else-if, else block. Complete
-        the solution to collect the unknown amount of nectar.
-      Course 4 Bee 6_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Create an if, else-if, else block to collect the unknown amount of
-        nectar.
-      Course 4 Bee 7_instruction: |
-        Use everything you have learned so far to collect
-        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
+      Course 4 Bee 5_instruction: Esta flor púrpura puede tener 3, 2 o 1 néctares. Agrega un bloque if-else para crear un bloque if, else if, else. Completa la solución para recolectar la cantidad desconocida de néctar.
+      Course 4 Bee 6_instruction: Esta flor púrpura puede tener 3, 2 o 1 néctares. Crea un bloque if, else if, else para recoger la cantidad desconocida de néctar.
+      Course 4 Bee 7_instruction: Aprovecha todo lo que has aprendido hasta ahora para recolectar todo el néctar. La flor púrpura puede tener 3, 2 o 1 néctares.
       Course 4 Bee For Loops 1_instruction: Utilizar un bucle para recolectar el néctar de cada flor.
       Course 4 Bee For Loops 10_instruction: Si tu ciclo es regresivo, se resta el incremento de la variable contador en cada bucle. Lo que debería ser un incremento a recoger néctar 9, luego 6 y 3 ?
-      Course 4 Bee For Loops 11_instruction: |
-        What's wrong with this loop? See if
-        you can fix it and make the bee collect all the nectar.
+      Course 4 Bee For Loops 11_instruction: ¿Que hay de malo en este ciclo? A ver si puedes arreglarlo y hacer que las abejas recolecten el néctar.
       Course 4 Bee For Loops 2_instruction: 'Aquí es un nuevo tipo de lazo, llamado el bucle "for" . Este particular bucle for contará de 1 a 5 por 1 y ejecutar el contenido del bucle cada vez cuenta. Ayudar a la abeja el néctar.'
       Course 4 Bee For Loops 3_instruction: Puede resolver este problema utilizando un bucle para contar del 1 al 3 por 1. Ahora vamos a obtener un néctar!
       Course 4 Bee For Loops 4_instruction: Recoge todo el néctar de las flores. Me pregunto si hay una manera más fácil de hacer esto...
@@ -1132,14 +1123,8 @@ es:
       Course 4 Bee For Loops 7_instruction: 'Usa tu variable "contador" de bucle para el controlar que tan lejos debe moverse horizontalmente.'
       Course 4 Bee For Loops 8_instruction: ¿Puedes usar la variable del bucle para controlar el movimiento y la recolección de néctar?
       Course 4 Bee For Loops 9_instruction: 'El último número en tu bucle for se llama "incremento", y cada vez que se ejecuta el bucle la variable contador cambia por el incremento, Trata de recoger la flores usando un incremento de 2.'
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+      Course 4 Bee Loops 5 NEW_instruction: Aquí hay tres flores. ¿Puedes encontrar el patrón de instrucciones que se repita 3 veces para recoger el néctar con el menor número de bloques?
+      Course 4 Bee Loops 5a NEW_instruction: 'Ahora, utiliza ciclos para ayudar a la abeja a recoger todo el néctar en su camino hacia el panal con tan pocos bloques como sea posible.  Al llegar allí, no olvides hacer la miel!'
       Course 4 Bee Params 1_instruction: 'Use la función "obtener néctar 3" que gira, mueve para recoger el néctar y luego regresa a su ubicación original.  Escriba una secuencia par recoger todo el néctar usando "obtener nectar 3".'
       Course 4 Bee Params 2_instruction: 'Modifique la función "obtener néctar 3" dede tal manera que me haga girar a la derecha hacia las flores en vez de izquierda.'
       Course 4 Bee Params 3 (copy 1)_instruction: '¡Ahora hay flores en ambos lados! Tal vez puede usar un parámetro de tal manera que la misma funcione para la flores en cada lado.  He añadido un parámetro a la función denominado "dirección".  Si el parámetro "dirección" es igual a 0 debería voltear a la izquierda, si es 1 debería voltear a la derecha.'
@@ -1816,15 +1801,13 @@ es:
       NEW Course 4 Artist Functions 7_instruction: '¿Le estás agarrando el tiro a cómo usar los bloques de función? Modifiquemos este cuadrado para que mida 200 píxeles. Sugerencia: haz click en "editar" para cambiar el tamaño del editor de la función "dibujar un cuadrado". Recuerda hacer click en "guardar y cerrar" para salir del editor de la función. '
       NEW Course 4 Artist Functions 8_instruction: Te hemos dado la mayoría del código para crear una función. Sin embargo parece que falta algo. ¿Puedes editar la definición de la función para dibujar el triángulo?
       NEW Course 4 Artist Functions 9_instruction: ¿Qué bloque necesitas añadir para conseguir que el triángulo se ponga encima del cuadrado?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit https://studio.code.org/c/106387801 for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: "Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       New Course 4 Artist Functions Level 4_instruction: 'Usa la función "dibujar un cuadrado" para dibujar este patrón.'
       NEW Course 4 Artist Params 1_instruction: 'Vamos a definir esta función para dibujar un cuadrado con lados de 50 píxeles. Haz click en "editar" para empezar.'
       NEW Course 4 Artist Params 10_instruction: 'Crea un bloque de función "dibujar un hexágono" con un parámetro de longitud. Pista: este hexágono tiene 100 píxeles de tamaño. '
       NEW Course 4 Artist Params 11_instruction: '¿Puedes averiguar cómo dibujar esta forma? Edita la función para usar el parámetro "lados".'
       NEW Course 4 Artist Params 12_instruction: ¿Puedes completar este dibujo? Los lados de todas las formas son 100 píxeles de largos.
-      NEW Course 4 Artist Params 12a_instruction: |
-        This image is similar to the last.
-        Can you use a "for loop" with your function to make this design?
+      NEW Course 4 Artist Params 12a_instruction: 'Esta imagen es similar a la última. ¿Se puede utilizar un "ciclo for" con tu función para hacer este diseño?'
       NEW Course 4 Artist Params 13_instruction: |
         Vamos a editar esta función "dibujar una forma".
         Ya tiene un parámetro de "longitud". Ahora, vamos a editar la función para añadir también un parámetro "lados". Recuerda que el ángulo para girar una forma determinada es 360 dividido por la cantidad de lados que tiene. Sugerencia: las longitudes para cada forma son: el triángulo es 100 píxeles, el hexágono es 25 píxeles y el cuadrado es de 50 píxeles.
@@ -1838,7 +1821,7 @@ es:
       NEW Course 4 Artist Params 7_instruction: '¿Puedes completar este dibujo? Sugerencia: cada triángulo es 25 píxeles mas grande que el último.  El primer triángulo es de 25 píxeles de tamaño.'
       NEW Course 4 Artist Params 8_instruction: '¿Puedes dibujar cada uno de estos triángulos con esa nueva función? El primero es de 25 píxeles de largo, el segundo es de 50 y el tercero es de 75. Sugerencia: comienza haciendo clic en "Editar" en tu bloque de función.'
       NEW Course 4 Artist Params 9_instruction: 'Haz clic en "Editar" para completar la definición de la función "dibujar un cuadrado" y agrega un parámetro. Debe tomar un parámetro de longitud, al igual que el triángulo. Esta vez, dibuja 3 cuadrados: de 25, 50 y 75 píxeles de largo, separados por 100 píxeles.'
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
+      NEW Course 4 Artist Params inspire_instruction: "Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       NEW Course 4 Artist Vars 1.5_instruction: '¿Echa un vistazo al código, puedes ver cómo los bloques "establecer longitud" y "longitud" trabajan juntos? Haz clic en "Ejecutar" para verlo en acción. '
       NEW Course 4 Artist Vars 12_instruction: 'Modifica este algoritmo para que utilice la variable "lados" en lugar de un número fijo para dibujar un pentágono. Reemplaza el número 5 con la variable "lados" y usa el bloque "establecer lados".'
       NEW Course 4 Artist Vars 2.5_instruction: '¿Echa un vistazo al código, puedes ver cómo los bloques "establecer longitud" y "longitud" trabajan juntos? Haz clic en "Ejecutar" para verlo en acción. '
@@ -1848,11 +1831,7 @@ es:
       NEW Course 4 Artist Vars 6_instruction: '¿Me puedes ayudar a dibujar este patrón cool dejando caer el bloque de variable "longitud" en los lugares correctos?'
       NEW Course 4 Bee For Loops 1_instruction: Utiliza un bucle para recolectar el néctar de cada flor.
       NEW Course 4 Bee For Loops 10_instruction: 'Usa tu variable "contador" de bucle para el controlar que tan lejos debe moverse horizontalmente.'
-      NEW Course 4 Bee For Loops 10a_instruction: |
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run your solution multiple times before you figure out all of the
-        steps.
+      NEW Course 4 Bee For Loops 10a_instruction: '¿Listo para un desafío?  Toma lo que has aprendido sobre ciclos y trata de solucionar este problema. Recuerda: puedes tener que ejecutar la solución varias veces antes de averiguar todos los pasos.'
       NEW Course 4 Bee For Loops 11_instruction: ¿Puedes utilizar la variable de bucle para controlar el movimiento y la recolección del néctar?
       NEW Course 4 Bee For Loops 2_instruction: Agrega el código necesario para asegurarte que la abeja recolecta todo el néctar. Mira cuánto código necesitas para este puzzle! (Aprenderemos una manera más simple en el siguiente puzzle).
       NEW Course 4 Bee For Loops 3_instruction: '¡Ah, el de bucle for hace esto mucho más fácil! Todo el código que necesitas está allí, echa un vistazo a cómo se colocan juntos luego haz clic en "Ejecutar" para ver cómo funciona. '
@@ -1864,23 +1843,15 @@ es:
       NEW Course 4 Bee For Loops 7_instruction: ¿Le estás pillando el truco a los bucles? Esto es parecido al último puzzle, pero tienes que conseguir 2, 4, 6, 8,10 de néctar. Ya tienes el código de arranque, excepto los números en los bucles del contador. ¡Vamos a recoger algo de néctar!
       NEW Course 4 Bee For Loops 8_instruction: "Si tu bucle está contando, el incremento se agrega a la variable contador en cada ciclo. ¿Cuál debe ser el incremento para recoger 3, 6, 9 de néctar? \r\n"
       NEW Course 4 Bee For Loops 9_instruction: Si tu ciclo es regresivo, se resta el incremento de la variable contador en cada bucle. Lo que debería ser un incremento a recoger néctar 9, luego 6 y 3 ?
-      NEW Course 4 Bee For Loops 95_instruction: |
-        Take a look at each piece of the
-        "for loop" that you have just created.  Can you figure out which numbers
-        you need to double to solve this puzzle? Why does it work?
+      NEW Course 4 Bee For Loops 95_instruction: 'Echa un vistazo a cada pieza de la ciclo "for" que acabas de crear.  ¿Puedes averiguar qué números necesitas multiplicar por dos para resolver este rompecabeza? ¿Por qué funciona?'
       NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de jugar! Diviértete con todos los bloques en tu caja de herramientas. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Introducir entradas de parámetro de actor con los números (1, 2 y 3) para hacer de estos actores patrulla. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Que piensas que este código realizara? Presiona "Ejecutar" para ver que ocurre."'
-      NEW Course 4 Play Labs For Loops 7a_instruction: |
-        Using what you learned so
-        far, can you have Dinosaur take a step forward every time Penguin counts?
+      NEW Course 4 Play Labs For Loops 7a_instruction: Usando lo que has aprendido hasta ahora, ¿puedes hacer al dinosaurio dar un paso adelante cada vez que el pingüino cuenta?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
         Es hora de Jugar libremente, 
         diviértete con todos los bloques de tu caja de herramientas.
-      NEW Course 4 Play Labs For Loops 8a_instruction: |
-        Challenge: How would you
-        use the "for loop" to get every actor to go around and say their actor number,
-        then vanish from the screen? 
+      NEW Course 4 Play Labs For Loops 8a_instruction: 'Desafío: ¿Cómo utilizas el ciclo for para lograr que todos los actores den la vuelta, digan su número de actor y desaparezcan de la pantalla? '
       New Play Lab Project_instruction: |
         Crea tu propia historia o juego! Tu código
         es guardado como un proyecto al cual tu puedes acceder en cualquier momento.
@@ -1901,7 +1872,7 @@ es:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -1910,8 +1881,8 @@ es:
         doesn't match both examples. Test each example to see which is failing, and
         then fix the definition to match.
       PDAlg Design Recipe Required_instruction: |
-        Complete the Design Recipe for this
-        function eggs making sure to create your examples.
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
       PDAlg Updates Cond_instruction: |
         When you went to PD in the summer, the Conditional
         block that you were introduced to was black and allowed any data type to be
@@ -1954,6 +1925,70 @@ es:
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

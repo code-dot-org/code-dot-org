@@ -2,7 +2,7 @@ sq:
   errors:
     messages:
       not_saved: 'Të lutem korrigjo gabimet që vijojnë:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Ky kontekst ka limite moshore dhe nuk është i disponueshëm për studentë më të rinj
   activerecord:
     errors:
       messages:
@@ -309,6 +309,8 @@ sq:
       viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
       section: Seksion
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
@@ -382,9 +384,9 @@ sq:
   footer:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
+    help_from_html_old: Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë ndihmuar në krijimin e këtyre materialeve.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Të gjitha të drejtat e rezervuara.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html_old: 'Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year} Artet Elektronike Inc. Të drejtat e rezervuara'
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
     copyright: E drejta e autorit
@@ -393,7 +395,7 @@ sq:
     translate: Na ndihmoni të përkthejmë në gjuhën tuaj
     support: Mbështetje
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Termat
     tos: Kushtet e shërbimit
     privacy: Rregullat e Privatësisë
     secure: Versioni i Sigurtë

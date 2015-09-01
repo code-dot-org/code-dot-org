@@ -27,7 +27,7 @@ sq:
           Flappy non blockly: Flappy non blockly
           title: Kursi 1
           Artist 2: Artisti 2
-          Happy Maps: Hartat e Gëzuara
+          Happy Maps: Harta të Gëzuara
           Move it, Move it: Lëvize, Lëvize
           "Real-life Algorithms: Plant a Seed": 'Algoritmet e jetës reale: Mbill një Farë'
           Building a Foundation: Krijimi i një Baze
@@ -66,7 +66,7 @@ sq:
           Getting Loopy: Duke u Çmëndur
           Relay programming: Programimi i Besuar
           Conditionals: Kushtoret
-          Binary Bracelets: Byzylykët Binarë
+          Binary Bracelets: Byzylykë Binarë
           The Big Event: Eventi i Madh
           Your Digital Footprint: Gjurmët e Tua Dixhitale
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
@@ -1117,14 +1117,14 @@ sq:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Hartat e Gëzuara
+          Happy Maps: Harta të Gëzuara
           Move it, Move it: Lëvize, Lëvize
           "Real-life Algorithms: Plant a Seed": 'Algoritmet e jetës reale: Mbill një Farë'
           Graph Paper Programming: Programimi me grafikë
           Building a Foundation: Krijimi i një Baze
           Getting Loopy: Duke u Çmëndur
           The Big Event: Eventi i Madh
-          Binary Bracelets: Byzylykët Binarë
+          Binary Bracelets: Byzylykë Binarë
           Songwriting: Të shkruarit e Këngëve
         afterschool1:
           title: Afterschool 1
@@ -1139,3 +1139,10 @@ sq:
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
           Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

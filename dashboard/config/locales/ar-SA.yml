@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'الرجاء تصحيح الأخطاء التالية:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: هذا المحتوى يخضع لقيود سن و غير متاح للطلاب الاصغر سناً
   activerecord:
     errors:
       messages:
@@ -347,6 +346,8 @@
       viewing_solution: عرض الحلول
       try_it_yourself: جربها بنفسك
       section: القسم
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
@@ -434,15 +435,15 @@
       مستشاري التعليم</a> لدعمهم في إنشاء "استوديو التعليمات البرمجية".
     help_from_html: نود بالأخص تكريم المهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر
       الذين ساعدوا في إنشاء هذه البرامج التعليمية.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء
+      هذه البرنامج التعليمية.
     art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. كافة
       الحقوق محفوظة.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: طيور غاضبون &#8482; &amp; © 2009--%{current_year} Rovio ريفو
+      للترفيه جميع الحقوق محفوظة-< br/> النباتات مضد الزومبيز &#8482; &amp; © %{current_year}
+      الكترونيك آرتس جميع الحقوق محفوظة
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
       of Code&reg; هما علامات تجارية لـ Code.org.'
@@ -452,7 +453,7 @@
     translate: ساعدنا على ترجمة لغتك
     support: الدعم
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: الشروط
     tos: شروط الخدمة
     privacy: سياسة الخصوصية
     secure: نسخة آمنة

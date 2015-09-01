@@ -1,5 +1,5 @@
 ---
-title: Region PD
+title: Charles County PD
 nav: pd2_nav
 ---
 <a id="top"></a>
@@ -14,7 +14,41 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-Charles County teachers enrolled in the Computer Science Principles program will attend PD in Broward County, FL. Please visit the [Broward CSP](/educate/pd/15-16/broward) page for all  workshop details. 
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+Teachers from Charles County, Maryland will attend PD in Charles County and connect the to Broward CSP workshop virtually. 
+
+**Save the Dates:**
+
+Quarter 1: Saturday, September 26, 2015
+
+Quarter 2: Saturday, December 5, 2015
+
+Quarter 3: Saturday, February 6, 2016
+
+Quarter 4: Saturday, March 12, 2016
+
+8:30am - 3:30pm<br/>
+Breakfast and lunch will be served.
+
+
+**September 26th Location**
+
+
+North Point High School
+<br/>
+Room TBD<br/>
+2500 Davis Rd<br/> Waldorf, MD 20603
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop and Charger
+<br/>
+Green journal
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

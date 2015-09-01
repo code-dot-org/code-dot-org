@@ -350,6 +350,8 @@
       viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
       section: Bölüm
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
