@@ -14,7 +14,7 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers and San Francisco teachers enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
+Teachers from Los Angeles and San Francisco enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -45,8 +45,6 @@ Free parking available in lot around the back of the building surrounded by a wo
 Laptop and charger
 <br/>
 Green journal <br/>
-Curriculum guide
-<br/>
 Snacks
 <br/>
 Water
@@ -136,18 +134,20 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 <br/>(This workshop will take place in Orange County)
+Semester 1: Saturday, October 10, 2015 
 
-Semester 2: Saturday, April 16, 2016 <br/>(This workshop will take place in Los Angeles)
+Semester 2: Saturday, April 16, 2016 
 
-<b>You are expected to attend both of these workshops.</b>
+
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
 **Location**
 
-TBD
+Columbia Memorial Space Center<br/> 
+12400 Columbia Way <br/>
+Downey, CA 90242
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -183,23 +183,24 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Due to lower than expected attendance, we are combining the Los Angeles and Orange County Phase 3 Saturday PDs. Please update your calendars with the following dates.
 
 **Save the dates:**
 
-Semester 1: Saturday, October 17, 2015 (This workshop will take place in Orange County)
+Semester 1: Saturday, October 17, 2015 
 
-Semester 2: Saturday, February 20, 2016 (This workshop will take place in Los Angeles)
+Semester 2: Saturday, February 20, 2016 
 
-<b>You are expected to attend both of these workshops.</b>
 
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**October 17th Location**
 
-TBD
+Ball Junior High School<br/>
+1500 W Ball Rd<br/>
+Anaheim, CA 92802
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

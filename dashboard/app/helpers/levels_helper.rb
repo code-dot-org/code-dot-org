@@ -272,6 +272,8 @@ module LevelsHelper
     embed
     share
     hide_source
+    hide_design_mode
+    hide_view_data_button
   )
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
@@ -392,7 +394,7 @@ module LevelsHelper
   end
 
   def enable_examples?
-    current_user && current_user.admin? && @level.is_a?(Blockly)
+    @level.is_a?(Blockly)
   end
 
   # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert

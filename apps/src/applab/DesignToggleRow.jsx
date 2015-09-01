@@ -14,6 +14,7 @@ var Mode = {
 module.exports = React.createClass({
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
+    hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
@@ -101,8 +102,12 @@ module.exports = React.createClass({
       visibility: 'hidden'
     };
 
-    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
-
+    var showDataButtonStyle = $.extend(
+      {},
+      buttonStyle,
+      inactive,
+      this.props.hideViewDataButton ? hidden : null
+    );
     var iconStyle = {
       margin: '0 0.3em'
     };

@@ -5,7 +5,7 @@ nav: about_nav
 
 # June 2014- June 2015 Program Report
 
-## What do teachers say about Code.org professional development?
+## What do teachers take away from Code.org professional development?
 <img src="/images/pd-2014-15.png" width="100%"/>
 
 From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models: 
@@ -33,11 +33,11 @@ Through our professional development efforts, we are helping a large, diverse au
 
 ---
 
-## K-5 Professional Development Programs
+## Elementary School Professional Development Programs
 
 ### Approach
 
-From June 2014 through June 2015, Code.org trained over 10,000 K-5 teachers. Two different programs helped us reach such a broad audience: 
+From June 2014 through June 2015, Code.org trained over 10,000 elementary school teachers to teach our [CS Fundamentals courses](/educate/k5) for grades K-5. Two different programs helped us reach such a broad audience: 
 
 - our [K-5 Affiliate Program](https://code.org/educate/k5-affiliates) and 
 - our [K-5 District Partnership programs](https://code.org/educate/k5-district-partnership) in Charles County, MD and Chicago, IL. 
@@ -75,7 +75,7 @@ The main difference between the two groups being that our affiliate-trained teac
 
 *“I can usually judge a project by the amount of kids who start saying, ‘Do we have to do this today? Aren't we going to move on to something else?’ I have not heard that in all of the lessons that I’ve had that 4th and 5th grade is doing. I haven't had a single person say that."*
 
-[Full findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/ks-courses-implementation/)
+[Full K-5 findings are available on Outlier's website.](http://outlier.uchicago.edu/evaluation_codeorg/ks-courses-implementation/)
 
 ---
 
@@ -121,6 +121,7 @@ Code.org offered professional development for high school teachers based on the 
 - Although a majority of participants agreed to some extent that they understood the goals of online Phase 1, it was a modest majority, leaving a large proportion of participants who did not. Similarly, almost 40% of participants did not know what to expect for the next phase of the professional development.
 - Participants felt prepared to use inquiry and equity in their computer science classrooms this year, but would like more support with content. Teachers were not confident that they know all they need to know about CS topics in order to teach them well.
 
+
 ### Implementation in the Classroom
 
 - The majority of teachers (72%) taught ECS to 9th and 10th graders. 
@@ -141,5 +142,6 @@ Code.org offered professional development for high school teachers based on the 
 - Teachers new to CS felt limited by their own lack of CS content knowledge.
 - 1 in 5 teachers struggled with assessing student learning, and many teachers did not know what should be assessed and that evaluating students often felt subjective. "I would like more concrete means of assessment that don't depend on my perception of their participation." Teachers reported a desire for more assessment resources in the curriculum.
 
+Full ECS [interview]((http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-interviews/)and [questionnaire](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-questionnaire/) findings are available [on Outlier's website](http://outlier.uchicago.edu/evaluation_codeorg/).
 
 [<button>Back to 2014-15 Summary](/about/evaluation/summary)<br /><br/>
