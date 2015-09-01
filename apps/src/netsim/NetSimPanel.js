@@ -17,6 +17,7 @@
 
 var utils = require('../utils');
 var markup = require('./NetSimPanel.html.ejs');
+var ArgumentUtils = require('./ArgumentUtils');
 
 /**
  * Generator and controller for a NetSim Panel, a single section on the
@@ -168,14 +169,29 @@ NetSimPanel.prototype.isMinimized = function () {
  * Add a button to the right end of the panel header.
  * @param {string} buttonText
  * @param {function} pressCallback
+ * @param {Object} [options]
+ * @param {boolean} [options.secondary] - default TRUE, secondary button style
+ * @param {string[]} [options.classes] - default [], additional classes on the
+ *        button element.
  */
-NetSimPanel.prototype.addButton = function(buttonText, pressCallback) {
-  $('<span>')
+NetSimPanel.prototype.addButton = function(buttonText, pressCallback, options) {
+  options = ArgumentUtils.extendOptionsObject(options || {});
+
+  var button = $('<span>')
       .addClass('netsim-button')
-      .addClass('secondary')
       .html(buttonText)
-      .click(pressCallback)
-      .appendTo(this.rootDiv_.find('.panel-controls'));
+      .click(pressCallback);
+
+  if (options.get('secondary', ArgumentUtils.isBoolean, true)) {
+    button.addClass('secondary')
+  }
+
+  options.get('classes', ArgumentUtils.isArrayOfStrings(), [])
+      .forEach(function (className) {
+        button.addClass(className);
+      });
+
+  button.appendTo(this.rootDiv_.find('.panel-controls'));
 };
 
 /**

@@ -515,7 +515,7 @@ $wide-column-width: 121px;
 
     h1 {
       margin: 0;
-      padding: 0.3em 0.5em;
+      padding: 0.3em;
       font-family: $gotham-regular;
       font-size: 110%;
       font-weight: bold;
@@ -533,6 +533,10 @@ $wide-column-width: 121px;
         .netsim-button {
           margin-left: 3px;
         }
+      }
+
+      .pad-left {
+        padding-left: 0.2em;
       }
     }
 

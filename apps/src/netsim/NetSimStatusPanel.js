@@ -16,7 +16,9 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var i18n = require('./locale');
 var markup = require('./NetSimStatusPanel.html.ejs');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimPanel = require('./NetSimPanel.js');
 
 /**
@@ -76,6 +78,21 @@ NetSimStatusPanel.prototype.render = function (data) {
 
   // Add a button to the panel header
   if (data.isConnected) {
-    this.addButton('Disconnect', this.disconnectCallback_);
+    this.addButton(
+        i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
+        this.disconnectCallback_);
   }
+
+  // Button that takes you to the next level.
+  this.addButton(
+      i18n.continueButton({ caret: '<i class="fa fa-caret-right"></i>' }),
+      function (jQueryEvent) {
+        if (!$(jQueryEvent.target).is(':disabled')) {
+          NetSimGlobals.completeLevelAndContinue();
+        }
+      },
+      {
+        secondary: false,
+        classes: [ 'submitButton' ]
+      });
 };
