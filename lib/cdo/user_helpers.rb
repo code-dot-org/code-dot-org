@@ -10,7 +10,7 @@ module UserHelpers
     prefix = name.downcase.gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..16].squish.gsub(' ', '_')
 
     if (prefix.empty? || prefix == '')
-      prefix = 'coder' + rand(1000000).to_s
+      prefix = 'coder' + (rand(900000) + 100000).to_s
     end
 
     prefix = "coder_#{prefix}" if prefix.length < 5
