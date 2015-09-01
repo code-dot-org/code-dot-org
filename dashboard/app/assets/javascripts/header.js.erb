@@ -175,7 +175,8 @@ function shareProject() {
       shareCopyLink: "<%= I18n.t('project.share_copy_link') %>",
       shareUrl: shareUrl,
       encodedShareUrl: encodedShareUrl,
-      closeText: "<%= I18n.t('project.close') %>"
+      closeText: "<%= I18n.t('project.close') %>",
+      isAbusive: dashboard.project.exceedsReportingThreshold()
     }));
 
     var dialog = new Dialog({body: body});

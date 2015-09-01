@@ -8,7 +8,8 @@ window.dashboard.ShareDialogBody = (function () {
       shareCopyLink: React.PropTypes.string.isRequired,
       shareUrl: React.PropTypes.string.isRequired,
       encodedShareUrl: React.PropTypes.string.isRequired,
-      closeText: React.PropTypes.string.isRequired
+      closeText: React.PropTypes.string.isRequired,
+      isAbusive: React.PropTypes.bool.isRequired
     },
 
     render: function () {
@@ -29,11 +30,42 @@ window.dashboard.ShareDialogBody = (function () {
         paddingRight: 1
       };
 
+      var abuseStyle = {
+        border: '1px solid',
+        borderRadius: 10,
+        padding: 10,
+        marginBottom: 20
+      };
+
+      var abuseTextStyle = {
+        color: '#b94a48',
+        fontSize: 14
+      };
+
+      // TODO - share with alert from apps?
+      var abuseContents;
+      if (this.props.isAbusive) {
+        // use bootstrap's alert-error for consistency with our alert
+        abuseContents = (
+          <div className='alert-error' style={abuseStyle}>
+            <p style={abuseTextStyle}>
+              This project has been reported for violating Code.org's
+              <a href='#'> Terms of Service</a> and cannot be shared with others.
+            </p>
+            <p style={abuseTextStyle}>
+              If you believe this to be an error, please
+              <a href='#'> contact us.</a>
+            </p>
+          </div>
+        );
+      }
+
       return (
         <div>
           {image}
           <div id="project-share" className={modalClass}>
             <p className="dialog-title">{this.props.title}</p>
+            {abuseContents}
             <p>{this.props.shareCopyLink}</p>
             {/*TODO: de-dup with apps code once JS common-core work is done.*/}
             <div>
