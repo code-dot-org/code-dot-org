@@ -18,8 +18,8 @@
 require('../utils'); // For Function.prototype.inherits()
 var i18n = require('./locale');
 var markup = require('./NetSimStatusPanel.html.ejs');
-var NetSimGlobals = require('./NetSimGlobals');
 var NetSimPanel = require('./NetSimPanel.js');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for connection status panel
@@ -84,15 +84,5 @@ NetSimStatusPanel.prototype.render = function (data) {
   }
 
   // Button that takes you to the next level.
-  this.addButton(
-      i18n.continueButton({ caret: '<i class="fa fa-caret-right"></i>' }),
-      function (jQueryEvent) {
-        if (!$(jQueryEvent.target).is(':disabled')) {
-          NetSimGlobals.completeLevelAndContinue();
-        }
-      },
-      {
-        secondary: false,
-        classes: [ 'submitButton' ]
-      });
+  NetSimUtils.makeContinueButton(this);
 };
