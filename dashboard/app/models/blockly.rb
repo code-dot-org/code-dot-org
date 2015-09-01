@@ -9,6 +9,7 @@ class Blockly < Level
     ani_gif_url
     is_k1
     skip_instructions_popup
+    never_autoplay_video
     scrollbars
     ideal
     min_workspace_height
