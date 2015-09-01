@@ -16,6 +16,12 @@ Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Fou
 <br>
 [<button>Register Now</button>](http://www.eventbrite.com/e/americas-untapped-opportunity-tickets-17987288464)
 
+### Increasing Access to CS Education: What Works, What Doesn't
+#### Wednesday, October 14, 2015 from 7:00 PM to 8:00 PM (CDT) 
+Many educational initiatives focus on partnering with local- and state-level educational organizations to scale success. But engaging effectively with districts -- in the short and long-term -- can be tricky at best and downright frustrating at worst. In this interactive discussion, you’ll hear from Code.org and our evaluation partner, [Outlier](http://outlier.uchicago.edu), about the results of our programs over the course of 2014-15 school year. You’ll explore best practices -- derived from real-world successes and challenges -- and discuss how you might apply them in your work. You’ll walk away with a list of strategies you can use to improve your partnerships, no matter what your role.
+<br>
+[<button>Register Now</button>](http://www.eventbrite.com/e/increasing-access-to-cs-education-what-works-what-doesnt-tickets-18405507368)
+
 ### An Educator's Guide to the Hour of Code
 #### Wednesday, November 18, 2015 from 7:00 PM to 8:00 PM (CST) 
 In this interactive webinar, you'll hear from Melissa Jones, Community Manager at Code.org and Laura Kline, Product Manager for Hour of Code and learn the five simple steps you can take to plan and deliver an engaging, interactive coding event at your school.
