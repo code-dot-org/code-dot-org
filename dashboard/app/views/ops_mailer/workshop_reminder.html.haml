@@ -16,10 +16,7 @@
   or send us an email.
 - # If phase 2 or 4, or 3A for CSinS or CSinA, and not program_type 6 (counselor/admin)
 - if (@workshop.phase == 2 || @workshop.phase == 8 || (@workshop.phase == 4 && (@workshop.program_type == 1 || @workshop.program_type == 2))) && (@workshop.program_type != 6)
-  %h2
-    Complete #{@workshop.phase_info[:long_name]}
-  %p
-    You must complete #{@prerequisite_phase[:long_name]} prior to attending the #{@workshop.phase_info[:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
+  = render partial: 'prerequisite_information', locals: {workshop: @workshop}
   %ul
     %li
       %p
