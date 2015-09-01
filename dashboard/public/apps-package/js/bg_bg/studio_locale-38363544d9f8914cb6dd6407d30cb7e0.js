@@ -306,7 +306,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "projectileCherry":function(d){return "череша"},
 "projectileIce":function(d){return "лед"},
 "projectileDuck":function(d){return "патица"},
-"reinfFeedbackMsg":function(d){return "Можете да натиснете бутона \"Продължете да играете\" за да се върнете да играете историята си."},
+"reinfFeedbackMsg":function(d){return "Можете да натиснете бутона \""+studio_locale.v(d,"backButton")+"\", за да се върнете да играете историята си."},
 "repeatForever":function(d){return "повтаряй завинаги"},
 "repeatDo":function(d){return "правя"},
 "repeatForeverTooltip":function(d){return "Изпълнява действията в този блок, докато тече историята."},

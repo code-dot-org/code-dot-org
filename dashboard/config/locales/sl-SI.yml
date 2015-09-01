@@ -347,6 +347,8 @@
       viewing_solution: Gledanje rešitve
       try_it_yourself: Poskusi sam
       section: Razdelek
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'

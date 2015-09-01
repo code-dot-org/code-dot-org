@@ -39,8 +39,7 @@
             да си сътрудничат с други ученици, ще подпомогне развитието на умения
             за решаване на проблеми и взимане на решения при решаване на трудни ситуации.
             До края на този курс, учениците ще могат да създават собствени персонализирани
-            игри или истории, които могат да споделят с приятели. Препоръчва за клас
-            K-1/I клас/.
+            игри или истории, които могат да споделят. Препоръчва се за K-1/I клас/.
           'Bee: Sequence': 'Пчела: последователност'
           'Artist: Sequence': 'Художник: последователност'
           'Artist: Shapes': 'Художник: фигури'
@@ -1270,3 +1269,10 @@
           Updates - The Big Game and Projects: Updates - The Big Game and Projects
           Updates - The Design Recipe: Updates - The Design Recipe
           Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

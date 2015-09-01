@@ -338,6 +338,8 @@
       viewing_solution: Peržiūrėti sprendimą
       try_it_yourself: Išmėginkite patys
       section: Grupė
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
