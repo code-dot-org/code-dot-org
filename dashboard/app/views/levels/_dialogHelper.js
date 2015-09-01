@@ -55,6 +55,7 @@ window.dashboard.dialog = (function () {
 
   var showInstructionsDialog = function (callback) {
     showDialog('instructions', callback);
+    $('details').details();
   };
 
   function adjustScroll() {

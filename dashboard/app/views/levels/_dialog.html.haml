@@ -78,7 +78,9 @@
         ="#{t('puzzle')} #{@script_level.position} #{t('of')} #{@script_level.stage_total}"
       .instructions-markdown
         %p
-          =@level.properties['instructions']
+          -# CSP is en_us only, always show markdown instructions
+          - markdown = @level.properties['markdown_instructions']
+          =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
       #buttons
         %button#ok-button{style: 'float: right;'}
           =t('ok')
