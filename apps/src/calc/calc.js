@@ -233,13 +233,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    if (!actualBlock) {
-      throw new Error('Invalid Call Block');
-    }
-
-    if (!expectedBlock) {
-      throw new Error('Invalid Result Block');
-    }
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
     var actual = entireSet.evaluateWithExpression(actualEquation.expression);

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -364,6 +366,8 @@
       viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
       section: Groep
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -454,9 +458,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Werknemers van Google, Microsoft, Facebook en Twitter hebben geholpen
       bij het samenstellen van deze opdracht.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -466,6 +475,7 @@
     translate: Help ons om te vertalen naar uw taal
     support: Ondersteuning
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Voorwaarden
     privacy: Privacy Policy
     secure: Beveiligde versie

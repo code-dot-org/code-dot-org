@@ -73,24 +73,24 @@
         one: 'یک خطا از ذخیره سازی این %{resource} جلوگیری کرد:'
         other: '%{count} خطا از دخیره سازی این %{resource} جلوگیری کرد:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: یک ایمیل دعوتنامه به ایمیل%{email} فرستاده شده است.
+      invitation_token_invalid: نمونه ی دعوتنامه ی ایجاد شده معتبر نیست!
+      updated: رمز عبورتان با موفقیت تنظیم شد. شما در حال حاضر به سیستم وارد شدید.
+      no_invitations_remaining: هیچ دعوتنامه ای باقی نمانده
+      invitation_removed: دعوتنامه شما حذف شد.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: دعوتنامه بفرست
+        submit_button: یک دعوتنامه بفرست
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: رمز عبورتان را تنظیم کنید
+        submit_button: رمز عبورم را تنظیم کن
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: دستورالعمل دعوتنامه
+        hello: سلام ایمیل%{email}
+        someone_invited_you: کسی شما را به %{url} دعوت کرده است. شما می توانید از
+          طریق لینک زیر دعوت را قبول کنید.
+        accept: دعوت را قبول کن
+        ignore: اگر نمی خواهید دعوت را قبول کنید، لطفا این ایمیل را نادیده بگیرید.
+          <br /> حساب کاربری شما تا زمانی که شما به لینک بالا نروید و رمز عبورتان
+          را تعیین نکنید ایجاد نخواهد شد.

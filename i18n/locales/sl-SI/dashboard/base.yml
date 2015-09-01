@@ -2,6 +2,7 @@ sl:
   errors:
     messages:
       not_saved: 'Prosim popravite sledeče napake:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -27,7 +28,7 @@ sl:
     code:
       label: 'Dodaj učitelja/ico:'
       placeholder: Koda razdelka (ABCDEF)
-    submit: Dodaj učitelja
+    submit: Dodaj učitelja/ico
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj
     submit: Dodaj namig
@@ -37,7 +38,7 @@ sl:
   puzzle: Uganka
   trophies: Trofeje
   courses: Predavanja
-  of: ' '
+  of: od
   more: VEČ
   less: MANJ
   beta: beta
@@ -306,6 +307,8 @@ sl:
       viewing_solution: Gledanje rešitve
       try_it_yourself: Poskusi sam
       section: Razdelek
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
@@ -379,15 +382,18 @@ sl:
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inženirji iz podjetij Google, Microsoft, Facebook in Twitter so nam pomagali ustvariti ta priročnik.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009-2013 Rovio Entertainment Ltd. Vse pravice pridržane.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Vse pravice pridržane.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Podprto s strani Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour of Code&reg; sta blagovni znamki Code.org.'
+    copyright: Avtorska pravice
     more: Več
     feedback: Povratne informacije
     translate: Pomagajte nam prevesti v vaš jezik
     support: Podpora
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: Pogoji
     privacy: Izjava o zasebnosti
     secure: Varna različica
@@ -454,7 +460,7 @@ sl:
     20-hour:
       title: Pospešena smer
       body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Naučite se osnov računalništva v pospešeni različici predavanj 2-4.
     hoc2014:
       try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
       try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)

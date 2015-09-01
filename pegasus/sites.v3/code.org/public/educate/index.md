@@ -8,6 +8,18 @@ title: Educator Overview
 
 [tight-heading]
 
+# The Hour of Code
+
+[/tight-heading]
+
+The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
+
+[<button>Learn more about Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
+
+[tight-heading]
+
+<br/>
+
 # All resources for educators
 
 [/tight-heading]
@@ -85,6 +97,8 @@ Click below for links to other resources for educators interested in teaching co
 
 ## Our CS Curriculum
 
+##### *"Computer science is the study of computers and algorithmic processes, including their principles, their hardware and software designs, their applications, and their impact on society."* - [CSTA, 2011](http://csta.acm.org/Curriculum/sub/K12Standards.html)
+ 
 ### Elementary school (Grades K-5)
 
 [Courses for elementary school](/educate/k5/)
@@ -110,7 +124,7 @@ Explore and develop complex scientific models through agent-based programming
 <br/>
 A high school course designed to broaden participation in computer science
 
-[Computer Science Principles (future AP)](/educate/csp)
+[AP Computer Science Principles](/educate/csp)
 <br/>
 A course teaching a wide range of computer science topics, including programming in JavaScript
 
@@ -133,12 +147,6 @@ An open library of our educational videos for use in any classroom.
 
 <div style="clear:both"/>
 
-<br/>
-
-# The Hour of Code
-The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
-
-[<button>Learn more about Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
 
 <br/>
 

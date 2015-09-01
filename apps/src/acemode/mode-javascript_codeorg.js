@@ -67,6 +67,7 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
         var newOptions = {
           unused: true,
           undef: true,
+          maxerr: 1000,
           predef: {
           },
           exported: {

@@ -1,6 +1,9 @@
 ---
+title: <%= hoc_s(:title_tutorial_guidelines) %>
 layout: wide
 ---
+
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -231,3 +234,5 @@ Ex: [http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code)
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers.  We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
+
+<%= view :signup_button %>

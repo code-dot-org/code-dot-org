@@ -15,11 +15,11 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction ###
+### Phase 1: Online Introduction (~ 2 hours)###
 
 Milestone Complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 #### In-person Workshop####
 
 Milestone Complete!
@@ -73,10 +73,10 @@ More info coming soon!
 
 ## CS in Algebra
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction  (~2 hours)###
 
 Milestone Complete!
-### Phase 2: Blended Summer Study  ###
+### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
 #### In-person Workshop####
 
@@ -122,11 +122,11 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction  ###
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone Complete!
 
-### Phase 2: Blended Summer Study ###
+### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online) ###
 
 #### In-person Workshop####
 

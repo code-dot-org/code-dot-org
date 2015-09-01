@@ -176,6 +176,7 @@ no-NO:
   homepage_action_text_learn: Begynne å lære
   homepage_action_text_signpetition: Signér oppropet
   homepage_signpetition_dropdown: Signér vår underskriftskampanje ▾
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org og College Board danner en allianse for å øke mangfoldet i informatikk.
   homepage_banner_text_link: Lær mer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -446,6 +447,7 @@ no-NO:
   educator_notes: Lærernotater
   how_to_teach_hoc: Hvordan lære en Time med Kode
   more_resources_educators: Flere lærerressurser
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: deltakere
   teachers_notes: Lærernotater
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'

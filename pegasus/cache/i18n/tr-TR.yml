@@ -207,6 +207,7 @@
   homepage_action_text_learn: Öğrenmeye başla
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org ve Üniversite Yönetim Kurulu Bilgisayar Bilimleri
     çeşitlilik geliştirmek için bir ittifak kurdular.
   homepage_banner_text_link: Daha fazlasını öğren
@@ -541,6 +542,8 @@
   educator_notes: Eğitimci notları
   how_to_teach_hoc: Bir Kod Saati Nasıl Öğretilir
   more_resources_educators: Öğretmenler ve eğitimciler için daha fazla kaynak
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: katılımcılar
   teachers_notes: Öğretmen notları
   teachers_notes_hoc: 'Öğretmenler için: Önemli eğitimci notlarını buradan okuyabilirsiniz'

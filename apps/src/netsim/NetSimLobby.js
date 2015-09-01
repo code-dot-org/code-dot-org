@@ -106,6 +106,12 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
   this.eventKeys = {};
 
   /**
+   * @type {DashboardUser}
+   * @private
+   */
+  this.user_ = options.user;
+
+  /**
    * @type {string}
    * @private
    */
@@ -189,6 +195,8 @@ NetSimLobby.prototype.render = function () {
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
         this.rootDiv_,
         {
+          user: this.user_,
+          shardID: this.shard_.id,
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
@@ -197,7 +205,8 @@ NetSimLobby.prototype.render = function () {
         {
           addRouterCallback: this.addRouterToLobby.bind(this),
           cancelButtonCallback: this.onCancelButtonClick_.bind(this),
-          joinButtonCallback: this.onJoinButtonClick_.bind(this)
+          joinButtonCallback: this.onJoinButtonClick_.bind(this),
+          resetShardCallback: this.onResetShardButtonClick_.bind(this)
         });
 
   }
@@ -358,6 +367,14 @@ NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
  */
 NetSimLobby.prototype.onCancelButtonClick_ = function () {
   this.netsim_.disconnectFromRemote();
+};
+
+/**
+ * Handle for clicking the reset shard button.
+ * @private
+ */
+NetSimLobby.prototype.onResetShardButtonClick_ = function () {
+  this.netsim_.resetShard();
 };
 
 /**

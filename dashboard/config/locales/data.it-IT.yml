@@ -391,33 +391,33 @@
           contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
           dinamite (TNT) ed arrivare al maiale.
-        bounce_1: Attacca un blocco al blocco "quando si preme la freccia a sinistra"
-          e premi "Esegui". Sposta la racchetta usando la freccia a sinistra per raggiungere
-          l'obiettivo finale.
-        bounce_2: Attacca un blocco ai blocchi "quando si preme la freccia a destra"
-          e "quando si preme la freccia a sinistra". Sposta la racchetta per raggiungere
-          entrambi gli obiettivi.
-        bounce_3: Ora prova qualcosa di simile con il blocco "quando si preme la freccia
-          in alto". Sposta la racchetta verso il bersaglio finale in alto.
+        bounce_1: Attacca un blocco al blocco verde "quando si preme la freccia verso
+          sinistra" e premi "Esegui". Poi sposta la racchetta usando la freccia verso
+          sinistra per raggiungere la bandierina.
+        bounce_2: Attacca un blocco ai blocchi verdi "quando si preme la freccia verso
+          destra" e "quando si preme la freccia verso sinistra". Poi sposta la racchetta
+          per raggiungere entrambe le bandierine.
+        bounce_3: Ora fai qualcosa di simile con il blocco "quando si preme la freccia
+          verso l'alto". Poi sposta la racchetta verso la bandierina in alto.
         bounce_4: Questa volta devi aggiungere quattro blocchi. Sposta la racchetta
-          verso tutti e quattro i bersagli finali per completare questo esercizio.
+          verso tutti e quattro le bandierine per completare questo esercizio.
         bounce_5: Faremo volare una palla verso il basso incontro alla racchetta.
-          Attacca un blocco al blocco "quando la palla colpisce la racchetta" per
-          far sì che la palla raggiunga il bersaglio finale.
-        bounce_6: Ora il bersaglio finale è in alto. Per risolvere questo esercizio
-          è necessario attaccare dei blocchi ad entrambi i blocchi "quando la palla
-          colpisce".
-        bounce_7: Attacca dei blocchi a ciascuno dei blocchi "quando". Fai rimbalzare
-          la palla fino a quando colpisce il bersaglio finale.
-        bounce_10: Ora c'è un obiettivo in gioco. Attacca il blocco "punteggio" e
-          il blocco "segna punto per l'avversario" al blocco "quando palla in gol"
-          e al blocco "quando palla manca racchetta" per fare una partita. Vedi quanti
-          punti puoi segnare prima che il tuo avversario faccia punto per due volte.
-        bounce_11: Adesso puoi attaccare dei blocchi al blocco "quando inizia il gioco".
-          Devi attaccare il nuovo blocco "lancia una nuova palla" in più di un punto.
-          Inoltre, prova a cambiare la scena o la velocità della racchetta e della
-          palla e vedi quanti punti riesci a fare prima che il tuo avversario faccia
-          2 punti.
+          Attacca un blocco al blocco verde "quando la palla colpisce la racchetta"
+          per far sì che la palla raggiunga la bandierina.
+        bounce_6: Ora la bandierina è in alto. Per risolvere questo esercizio è necessario
+          attaccare dei blocchi ad entrambi i blocchi verdi "quando la palla colpisce".
+        bounce_7: Attacca dei blocchi a ciascuno dei blocchi verdi "quando ...". Poi
+          fai rimbalzare la palla fino a quando colpisce la bandierina.
+        bounce_10: Ora in alto c'è una porta da calcio. Per costruire il gioco attacca
+          il blocco "aggiungi un punto" al blocco verde "quando la palla va in rete"
+          e quello "aggiungi un punto all'avversario" al blocco verde "quando la palla
+          manca la racchetta". Vedi quanti punti riesci a raggiungere prima che il
+          tuo avversario ne faccia due.
+        bounce_11: Adesso puoi predisporre il gioco come vuoi attaccando dei blocchi
+          "imposta ..." al blocco "quando si clicca su 'Esegui' ". Devi poi attaccare
+          a quest'ultimo il blocco "lancia una nuova palla", che devi attaccare anche
+          ad altri blocchi verdi "quando ...". Quanti punti riesci a raggiungere prima
+          che il tuo avversario ne faccia due?
         bounce_12: Crea la tua versione del Ping-Pong. È possibile modificare tutte
           le immagini e tutte le regole. Quando hai finito, clicca su Condividi per
           far provare agli amici il gioco sui loro smartphone.
@@ -853,7 +853,7 @@
         name_function: Scrivi qui il nome della tua funzione
         Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
         Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
-          l'alto quando viene premuta la freccia in alto?
+          l'alto quando viene premuta la freccia verso l'alto?
         Infinity_move_directions_callout_arrow: Usa queste frecce per muovere il personaggio
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.

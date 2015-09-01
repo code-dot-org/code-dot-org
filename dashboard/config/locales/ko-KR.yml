@@ -2,6 +2,7 @@
   errors:
     messages:
       not_saved: '다음 오류를 수정하시기 바랍니다:'
+      too_young: 이 내용은 연령 제한이 있어서 사용할 수 없습니다.
   activerecord:
     errors:
       messages:
@@ -325,6 +326,8 @@
       viewing_solution: 솔루션 보기
       try_it_yourself: 스스로 시도해 보세요
       section: 섹션
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: '이메일 주소가 확인되지 않았습니다:'
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
@@ -390,9 +393,8 @@
     choose_next_course: 아래 중 하나를 선택하여 Code Studio 과정 학습하기
     print_certificate: 인증서 인쇄
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Code Studio 배우기
+    description: 누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다.
   gender:
     male: 남
     female: 여
@@ -401,23 +403,28 @@
     student: student
     teacher: 선생님
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: 우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors">
+      기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team">
+      확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의
+      지원에 감사 드립니다.
     help_from_html: 구글, 마이크로소프트, 페이스북, 트위터의 컴퓨터과학자들이 이 튜토리얼을 만들었습니다.
+    help_from_html_old: 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    copyright: 저작권
     more: 더 많은
     feedback: 피드백 남기기
     translate: 다른 언어로 번역
     support: 고객지원
     support_url: http://support.code.org
+    tos_short: 이용 약관
     tos: 이용 약관
     privacy: 개인정보보호 정책
     secure: 보안 버전
@@ -551,8 +558,7 @@
   dialog:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: 퍼즐을 시작 상태로 되돌리고, 당신이 추가하거나 변경한 데이터를 모두 초기화 합니다.
     startover_ok: 다시 시작하기
     startover_cancel: 취소
   time:
