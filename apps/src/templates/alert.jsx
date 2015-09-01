@@ -5,7 +5,10 @@ var React = require('React');
  */
 module.exports = React.createClass({
   propTypes: {
-    body: React.PropTypes.string.isRequired,
+    body: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element
+    ]).isRequired,
     className: React.PropTypes.string,
     style: React.PropTypes.object,
     onClose: React.PropTypes.func.isRequired
@@ -14,7 +17,7 @@ module.exports = React.createClass({
   render: function () {
     var style = $.extend({}, {
       position: 'absolute',
-      zIndex: 9999
+      zIndex: 1000
     }, this.props.style);
 
     return (
