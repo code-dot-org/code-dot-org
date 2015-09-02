@@ -5,12 +5,8 @@ login_required 'true'
 
 stage 'The Need For Programming Languages'
 level 'U3L01 Student Lesson Introduction'
-level 'U3L01 Free Response Getting Started'
 level 'U3L01 Assessment1'
-level 'U3L01 Assessment2'
 level 'U3L01 Assessment3'
-level 'U3L01 Free Response Wrap Up'
-
 
 stage 'Using Simple Commands'
 level 'U3L02 Student Lesson Introduction'

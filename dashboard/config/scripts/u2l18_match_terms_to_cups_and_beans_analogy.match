@@ -1,0 +1,12 @@
+name 'U2L18 Match terms to cups and beans analogy'
+title 'Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity'
+height '65'
+question 'The number of beans Alice chooses to put in the cup initially.'
+answer 'Private key'
+question 'A sealed cup of beans that Alice puts on the table'
+answer 'Public key'
+question 'Bob adding beans to the cup'
+answer 'Encrypting a message'
+question 'Alice dumping the beans out of the cup and counting off her original number'
+answer 'Decrypting a message'
+
