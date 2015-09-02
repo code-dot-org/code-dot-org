@@ -1,8 +1,6 @@
 name 'U2L19 Assessment'
-title 'Assessment: Question'
+title 'Assessment: Modulo and one-way functions'
 
 markdown <<MARKDOWN
-Scenario: You overhear family members talking about the security of their online banking sites. They are very worried about how secure their money is when they do some online transactions. 
-
-Relieve their worries by telling them what you know about how public/private key encryption works. 
+Explain how modulo acts as a one-way function?
 MARKDOWN

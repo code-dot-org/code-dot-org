@@ -158,12 +158,16 @@ assessment 'U2L18 Free Response Wrap Up'
 # 18
 stage 'Alice and Bob and Asymmetric Keys'
 level 'U2L16 Student Lesson Introduction'
+level 'U2 Encryption and Public Keys - Video'
+assessment 'U2L18 FR why is asymmetric encryption useful'
+assessment 'U2L18 Match terms to cups and beans analogy'
 
 # 19
 stage 'Public Key Crypto'
 level 'U2L19 Student Lesson Introduction'
-level 'U2 Encryption and Public Keys - Video'
 assessment 'U2L19 Free Response Getting Started'
+assessment 'U2L19 multichoice 13 MOD 17'
+assessment 'U2L19 mutlichoice 20 mod 15'
 assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 
