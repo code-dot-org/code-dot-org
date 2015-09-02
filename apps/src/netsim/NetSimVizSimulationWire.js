@@ -38,6 +38,12 @@ var NetSimVizSimulationWire = module.exports = function (sourceWire,
   this.correspondingWireID_ = sourceWire.entityID;
 
   /**
+   * UUID of the simulation wire that this viz element maps to.
+   * @type {number}
+   */
+  this.correspondingWireUuid_ = sourceWire.uuid;
+
+  /**
    * Bound getElementByEntityID method from vizualization controller;
    * we hold on to this so that calls to configureFrom can find nodes later.
    * @type {Function}
@@ -55,6 +61,9 @@ NetSimVizSimulationWire.inherits(NetSimVizWire);
  * @param {NetSimWire} sourceWire
  */
 NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
+  this.correspondingWireID_ = sourceWire.entityID;
+  this.correspondingWireUuid_ = sourceWire.uuid;
+
   this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
   this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
 
@@ -80,6 +89,15 @@ NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
 };
 
 /**
+ * @param {NetSimEntity} entity
+ * @returns {boolean} TRUE of this VizElement represents the given Entity.
+ */
+NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
+  return this.correspondingWireID_ === entity.entityID &&
+      this.correspondingWireUuid_ === entity.uuid;
+};
+
+/**
  * Killing a visualization node removes its ID so that it won't conflict with
  * another node of matching ID being added, and begins its exit animation.
  * @override
@@ -87,4 +105,5 @@ NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
 NetSimVizSimulationWire.prototype.kill = function () {
   NetSimVizSimulationWire.superPrototype.kill.call(this);
   this.correspondingWireID_ = undefined;
+  this.correspondingWireUuid_ = undefined;
 };
