@@ -547,6 +547,8 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
     }
 
     this.myNode = null;
+    this.shard_.disconnect();
+    this.shard_ = null;
     this.shardChange.notifyObservers(null, null);
     onComplete(err, result);
   }.bind(this));
