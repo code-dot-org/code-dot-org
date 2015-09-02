@@ -1543,6 +1543,34 @@ en:
         Matching: Matching
         Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
         Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - why is it useful: Asymmetric Encryption - why is it useful
+        'Asymmetric Encryption: why is it useful': 'Asymmetric Encryption: why is it useful'
+        Why is asymmetric encryption useful?: Why is asymmetric encryption useful?
+      U2L18 FR why is asymmetric encryption useful?:
+        'Asymmetric Encryption: why is it useful': 'Asymmetric Encryption: why is it useful'
+        'Why is ': 'Why is '
+        Why is asymmetric encryption useful?: Why is asymmetric encryption useful?
+      U2L18 Match terms to cups and beans analogy:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity: Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially.: The number of beans Alice chooses to put in the cup initially.
+      U2L19 Match terms to cups and beans analogy:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity: Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially.: The number of beans Alice chooses to put in the cup initially.
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -2739,6 +2767,31 @@ en:
         Hard to create and hard to solve: Hard to create and hard to solve
         One-Way Functions: One-Way Functions
         Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        1 4/13: 1 4/13
+        '13': '13'
+        '17': '17'
+        '4': '4'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 13 MOD 17?: What is 13 MOD 17?
+        description here: description here
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
       U2L3 Assessment 2:
         12 users: 12 users
         32 users: 32 users
@@ -3661,15 +3714,21 @@ en:
         : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - why is it useful: Asymmetric Encryption - why is it useful
+        Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
       U2L18 Free Response Getting Started:
         One Way Functions: One Way Functions
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
       U2L19 Assessment:
+        'Assessment: Modulo and one-way functions': 'Assessment: Modulo and one-way functions'
         'Assessment: Question': 'Assessment: Question'
       U2L19 Free Response Getting Started:
         'Public Key Crypto: Getting Started': 'Public Key Crypto: Getting Started'
+        'Public Key Crypto: The Modulo Operation': 'Public Key Crypto: The Modulo Operation'
       U2L19 Free Response Wrap Up:
+        'Public Key Crypto: Why is it safe?': 'Public Key Crypto: Why is it safe?'
         'Public Key Crypto: Wrap Up': 'Public Key Crypto: Wrap Up'
       U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
@@ -3688,8 +3747,10 @@ en:
       U2L9 Free Response Getting Started:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3L01 Assessment1:
+        Free Response: Free Response
         Why Programming? Question 1: Why Programming? Question 1
       U3L01 Assessment3:
+        Free Response: Free Response
         Why Programming? Question 3: Why Programming? Question 3
       U3L01 Free Response Getting Started:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
@@ -3697,8 +3758,10 @@ en:
         Why Programming? Wrap Up: Why Programming? Wrap Up
       U3L02 Assessment:
         Assessment Question: Assessment Question
+        What does efficiency mean in programming?: What does efficiency mean in programming?
       U3L02 Free Response Getting Started:
         'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+        'Programming with Simple Commands: Why limit to 4?': 'Programming with Simple Commands: Why limit to 4?'
       U3L02 Free Response Wrap Up:
         'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
       U3L03 Free Response Getting Started:
