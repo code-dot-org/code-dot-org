@@ -513,8 +513,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
   this.elements_.forEach(function (vizElement) {
     var isCorrectType = (vizElement instanceof vizElementType);
     var foundMatch = entityCollection.some(function (entity) {
-      return vizElement.getCorrespondingEntityID &&
-          entity.entityID === vizElement.getCorrespondingEntityID();
+      return vizElement.representsEntity && vizElement.representsEntity(entity);
     });
 
     if (isCorrectType && !foundMatch) {

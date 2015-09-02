@@ -39,6 +39,12 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
   this.correspondingNodeID_ = sourceNode.entityID;
 
   /**
+   * UUID of the simulation node that this viz element represents.
+   * @type {string}
+   */
+  this.correspondingNodeUuid_ = sourceNode.uuid;
+
+  /**
    * If we end up representing a router, we may need to hold the auto-dns address
    * to pass to a fake auto-dns node.
    * @type {string}
@@ -56,6 +62,7 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
  */
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
   this.correspondingNodeID_ = sourceNode.entityID;
+  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
@@ -83,6 +90,15 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
 };
 
 /**
+ * @param {NetSimEntity} entity
+ * @returns {boolean} TRUE of this VizElement represents the given Entity.
+ */
+NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
+  return this.correspondingNodeID_ === entity.entityID &&
+      this.correspondingNodeUuid_ === entity.uuid;
+};
+
+/**
  * Killing a visualization node removes its ID so that it won't conflict with
  * another node of matching ID being added, and begins its exit animation.
  * @override
@@ -90,4 +106,5 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
 NetSimVizSimulationNode.prototype.kill = function () {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
   this.correspondingNodeID_ = undefined;
+  this.correspondingNodeUuid_ = undefined;
 };
