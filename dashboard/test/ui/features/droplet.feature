@@ -1,4 +1,5 @@
 @dashboard_db_access
+@no_ie9
 Feature: Droplet levels work as expected
   Background:
     Given I am on "http://learn.code.org/"
