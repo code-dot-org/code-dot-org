@@ -1297,6 +1297,10 @@ NetSim.prototype.updateLayout = function () {
  * button.  Should mark the level as complete and navigate to the next level.
  */
 NetSim.prototype.completeLevelAndContinue = function () {
+  if (this.isConnectedToRemote() && !confirm(i18n.onBeforeUnloadWarning())) {
+    return;
+  }
+
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
