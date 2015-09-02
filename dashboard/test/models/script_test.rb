@@ -235,8 +235,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_equal nil, Script.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1_cropped.jpg', Script.find_by_name('course1').banner_image
-    assert_equal 'banner_course2_cropped.jpg', Script.find_by_name('course2').banner_image
+    assert_equal 'banner_course1_cropped.png', Script.find_by_name('course1').banner_image
+    assert_equal 'banner_course2_cropped.png', Script.find_by_name('course2').banner_image
   end
 
   test 'logo image' do
