@@ -182,6 +182,7 @@
   homepage_action_text_learn: 학습 시작
   homepage_action_text_signpetition: 청원서에 서명하세요
   homepage_signpetition_dropdown: 청원서에 서명하세요
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org와 College Board는 컴퓨터 과학 분야에서 다양성을 개선하기 위해 동맹을
     형성 한다.
   homepage_banner_text_link: 더 알아보기
@@ -311,19 +312,17 @@
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: Code.org는 부트스트랩과 제휴하여 컴퓨터 프로그래밍을 통하여 대수와 기하학적 개념을 가르치는
+    커리큘럼을 개발한다.
   dashboard_course_csins: 과학의 컴퓨터 과학
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csins_desc: Code.org는 Project GUTS와 제휴하여 모델링 컨텍스트와 시뮬레이션을 위한 컴퓨터
+    과학 개념 소개를 제공한다.
   dashboard_course_ecs: 컴퓨터과학(정보과학) 살펴보기
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: '컴퓨터 과학 탐구 과정은 6 유닛으로 구성된 1년 과정 입니다: 인간과 컴퓨터간 상호 작용,
+    문제 해결, 웹 디자인, 프로그래밍, 컴퓨팅 및 데이터 분석, 로봇 공학.'
+  dashboard_course_csp: AP ® 컴퓨터 과학 원리
+  dashboard_course_csp_desc: Code.org는 컴퓨팅의 기초 아이디어를 탐구 하기 위한 엄격하고, 매력적이면서 접근하기 쉬운
+    과정을 설계 했다.
   dashboard_landing_loading: Loading...
   dashboard_action_edit: 편집
   dashboard_action_save: 저장
@@ -393,11 +392,11 @@
   dashboard_students_reset_password: 비밀번호 재설정
   dashboard_students_share_section: '이 섹션의 로그인 페이지를 학생들에게 공유하기:'
   dashboard_students_print_info: 학생 로그인 정보와 함께 카드 출력하기.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: 비밀 그림
   dashboard_students_secret_picture: 비밀그림
   dashboard_students_reset_picture: 학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>
     할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: 비밀 단어
   dashboard_students_secret_word: 비밀단어
   dashboard_students_reset_word: 학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할
     수 있습니다. 새로운 비밀단어는 학생이 로그인하면 생성될 것입니다.
@@ -485,6 +484,8 @@
   educator_notes: 교육자 참고사항들
   how_to_teach_hoc: '''Hour of Code'' 가르치는 방법'
   more_resources_educators: 선생님들과 교육자를 위한 더 많은 자료들
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: 참여자
   teachers_notes: 선생님 참고사항들
   teachers_notes_hoc: '선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요.'

@@ -625,8 +625,8 @@
         2, 3 dosi di nettare. Completa la funzione "controlla fiore viola" ed usala
         per raccogliere tutto il nettare dai fiori.
       4-5 Bee Conditionals 8_instruction: Scrivi una funzione "controlla fiore - fai
-        miele". La tua funzione deve controllare se il fiore color viola ha 3, 2 o
-        1 di nettare e raccoglierlo tutto. Vai, quindi, avanti e fai il miele.
+        miele". La tua funzione deve controllare quanto nettare c'è nel fiore viola
+        e raccoglierlo TUTTO, poi andare avanti e fare UNA SOLA dose di miele.
       4-5 Bee Conditionals Assessment 1_instruction: Questo è un esercizio di verifica
         -- La funzione "raccogli il nettare o fai il miele" è sbagliata e incompleta.
         Correggila e completala per raccogliere tutto il nettare e fare il miele.
@@ -900,8 +900,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1298,9 +1298,9 @@
         i 10 triangoli formano una rotazione di 360 gradi.  '
       Course 4 Artist 8_instruction: Disegna il Sole inserendo l'intero blocco di
         codice in un ciclo e ripetendolo 12 volte.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Ricordi questa forma? Ora te la faremo costruire
+        senza darti alcun blocco per iniziare! \r Suggerimento: ci sono 3 triangoli
+        all'interno la rotazione di 360 gradi... quante volte ci sta il 3 in 360?"
       Course 4 Artist 9_instruction: 'Ripeti 10 volte la figura disegnata dal codice
         che trovi già pronto e assicurati di ruotare un po'' tra una figura e l''altra.
         Di quanti gradi devi ruotare ad ogni ripetizione? (Suggerimento: quanto fa
@@ -1383,8 +1383,15 @@
         è 10 pixels, la linea più grande è 200 pixels ed ogni linea è 10 pixels più
         lung adella precedente. Riesci ad inserire dei blocchi per completare questo
         bel disegno?
+      Course 4 Artist For Loops 8a_instruction: La linea più piccola di questo quadrato
+        è 10 pixels, la linea più grande è 200 pixels ed ogni linea è 10 pixels più
+        lung adella precedente. Riesci ad inserire dei blocchi per completare questo
+        bel disegno?
       Course 4 Artist For Loops 9_instruction: Riesci a disegnare una spirale? Sposa
         in avanti da 1 a 75 pixels incrementando di 1 pixel ogni volta.
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
+        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
+        Click here."
       Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: ora hai
         imparato tutto quello che devi sapere per realizzare un disegno come questo!
         Se questa immagine ti ispira, prova a realizzare qualcosa di simile. In caso
@@ -1599,9 +1606,12 @@
       Course 4 Bee For Loops 9_instruction: L'ultimo numero del ciclo indica l'incremento,
         e ogni volta che il ciclo viene eseguite la variabile contatore aumenta dell'incremento
         indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento.
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+      Course 4 Bee Loops 5 NEW_instruction: Metti tutti i blocchi all'interno di un
+        ciclo per raccogliere il nettare da ogni fiore.
+      Course 4 Bee Loops 5a NEW_instruction: Utilizza ora un ciclo (loop) per aiutare
+        l'ape a raccogliere tutto il nettare che trova sulla strada per il favo con
+        il minor numero di blocchi possibile.  Arrivati, non dimenticate di fare il
+        miele!
       Course 4 Bee Params 1_instruction: Utilizza la funzione "ottieni 3 di nettare"
         che consnete di ruotare e muoversi per raccogliere il nettare e che alla fine
         riporta alla posizione originale. Scrivi una sequenza per raccogliere tutto
@@ -1642,11 +1652,11 @@
         si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele.
       Course 4 Bee Params Ex_instruction: Provate a utilizzare la nuova funzione per
         raccogliere tutto il nettare.
-      Course 4 Binary 1_instruction: |
-        Here's a function that takes a binary string
-        of 1's and 0's and instructs the farmer to turn on the go from left to right,
-        top to bottom, turning on the squares where the number has a zero. Run the
-        code provided to see how the farmers uses binary to draw an image.
+      Course 4 Binary 1_instruction: Ecco una funzione che accetta una stringa binaria
+        di 1 e di 0 e istruisce l'agricoltore per attivare il movimento da sinistra
+        a destra, dall'alto verso il basso, accendendo i quadrati in cui il numero
+        ha uno zero. Esegui il codice fornito per vedere come l'agricoltore usa i
+        numeri binari per disegnare un'immagine.
       Course 4 Binary 2_instruction: 'Quale stringa binaria potresi ripetere 8 volte
         per disegnare questa immagine? Suggerimento: il numero "1" consente di riempire
         un buco.'
@@ -1687,13 +1697,13 @@
         che puoi usare. Programma il tuo gioco per chiamare la funzione "su di un
         livello" se "punti_giocatore">10. Gioca e supera il livello 4 per passare
         al gioco successivo.
-      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh
-        for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that
-        we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto
-        our jump function called \"height\".  The up arrow should cause the dog\nto
-        jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint:
-        You will need to click \"edit\" on the jump function and update\nit so that
-        it uses the \"height\" parameter."
+      Course 4 Play Lab Params 2_instruction: "Ora abbiamo bandiere/flag che sono
+        troppo alte per il salto attuale! Usiamo entrambe le frecce \"su\" e \"giù\"
+        in modo da avere salti di diverse altezze.  \r \r \nAbbiamo bisogno di aggiungere
+        un parametro \"altezza\" alla funzione salto.  La freccia in su dovrebbe permettere
+        al cane di fare un salto di 200 pixel e la freccia in giù un salto di soli
+        100 pixel. \r \r \nSuggerimento: sarà necessario cliccare \"modifica\" sulla
+        funzione salto e aggiornarla in modo che utilizzi il parametro \"altezza\"."
       Course 4 Play Lab Params 3_instruction: 'Aggiungiamo un altro parametro alla
         funzione di salto in modo da poterla usare con altri attori. Ogni attore è
         rappresentato da un numero, a partire da uno. Modifica la funzione di "salto"
@@ -1701,14 +1711,12 @@
       Course 4 Play Lab Params 4_instruction: |
         Ecco una funzione chiamata "pattuglia".
         Modificala per muovere il gatto in su di 400 pixel e poi in giù di 400 pixel.
-      Course 4 Play Lab Params 5_instruction: |
-        Fill in the "actor" parameter input
-        so that we can call the "patrol" function for each of the actors. Remember,
-        the actors correspond to numbers 1, 2, and 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Use a "set speed" block with the new "speed"
-        parameter.
+      Course 4 Play Lab Params 5_instruction: "Compila il parametro di input \"attore\"
+        in modo che si possa chiamare la funzione \"ricognizione\" per ciascuno degli
+        attori. \nRicorda, gli attori corrispondono ai numeri 1, 2 e 3.\n"
+      Course 4 Play Lab Params 6_instruction: Aggiungi un altro parametro chiamato
+        "velocità" per la funzione "pattuglia". Utilizza un blocco "imposta la velocità"
+        con il nuovo parametro "velocità".
       Course 4 Play Lab Params 7_instruction: Utilizzare i tasti freccia per controllare
         il movimento del cane e raccogliere tutte le bandiere.
       Course 4 Play Lab Params 8_instruction: Utilizzate un blocco "quando si tocca"
@@ -1720,9 +1728,9 @@
         "punti" sia aggiunto alla variabile "player_points". Il cane deve raggiungere
         i 10 punti per passare al prossimo puzzle. '
       Course 4 Play Lab Vars 1_instruction: Non devi scrivere alcun codice. Devi solo
-        premere "Esegui" per giocare!  In questo gioco, sei il cane che sta cercando
-        di raccogliere più bandiere del gatto. Utilizza la freccia giù per controllare
-        il cane. Premere "Fine" quando hai finito di giocare.
+        premere "Esegui" per giocare! In questo gioco, sei il cane che sta cercando
+        di raccogliere più bandiere del gatto. Utilizza la freccia verso il basso
+        per controllare il cane. Premere "Fine" quando hai finito di giocare.
       Course 4 Play Lab Vars 2_instruction: Non è stata un bella gara! Modificate
         la variabile "dog_speed" per assicurarsi che vi sia possibile raccogliere
         più bandiere del gatto. Il primo che raccoglie 10 bandiera vince!
@@ -1744,39 +1752,41 @@
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |
-        In our game, how should we score points?
-        Add 1 to your "points" variable each time the Dog hits the Cat with a heart.
-        Use the "when actor 2 touches anything" event to trigger an update to your
-        score. You can increment your variable by setting "points = points + 1."
-        Get your score up to 10 (going one at a time!) to pass the level.
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour
+        game, how should we score points? Add 1 to your \"points\" variable each\ntime
+        Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent
+        to trigger an update to your score. You can increment your variable\nby setting
+        \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to
+        pass the level."
       Course 4 Play Lab Vars 7_instruction: Bello. Ora facciamo in modo che questo
         gioco non sia troppo facile - in qualsiasi momento il cane (attore 1) venga
         colpito da una palla di fuoco, si dovrebbe perdere un punto. Inizia con 10
         punti così non è troppo difficile. Lasciate che il vostro punteggio scenda
         da 10 a 0 per superare il livello.
-      Course 4 Play Lab Vars 8 (copy 1)_instruction: |
-        Alright, one last thing for
-        this game - let's set it up so the player can win (or lose). Use a forever
-        loop to check the value of score - if score is ever greater that 20, make
-        the enemy vanish. If the score is every less than 0, make the player vanish.
-        Click "Finish" when the game works like you'd like it to.
-      Course 4 Play Lab Vars 8_instruction: |
-        Let's set up this game so the Dog can
-        win (or lose). Use a forever loop to check the value of score - if score is
-        ever greater that 20, make the enemy (the Cat) vanish. If the score is ever
-        less than 0, make the player (the Dog) vanish. Click "Finish" when the game
-        works like you'd like it to.
-      Course 4 Play Lab Vars 9_instruction: |
-        Free Play time! Here are all of the
-        variables we've played with so far in this stage, as well as a few more in
-        case you want them. Make a game or story using any of these variables. Hint:
-        scroll down to see all the commands in the work space.
-      Course 4 Play Lab Vars_instruction: |
-        Alright, one last thing for this game
-        - let's set it up so the player can win (or lose). Use a forever loop to
-        check the value of score - if score is ever greater that 20, make the emeny
-        vanish. If the score is every less than 0, make the player vanish.
+      Course 4 Play Lab Vars 8 (copy 1)_instruction: Bene. Un'ultima cosa per questo
+        gioco. Predisponiamolo in modo che il giocatore possa vincere (o perdere).
+        Usiamo un blocco "ripeti per sempre" per controllare il valore del punteggio.
+        Quando il punteggio diventa maggiore di 20, fai scomparire il nemico. Quando
+        il punteggio diventa 0, fai scomparire il giocatore. Clicca su "Termina" quando
+        il gioco funziona come volevi tu.
+      Course 4 Play Lab Vars 8_instruction: Predisponiamo ora il gioco in modo che
+        il cane possa vincere (o perdere). Usiamo un blocco "ripeti per sempre" per
+        controllare il valore del punteggio. Quando il punteggio diventa maggiore
+        di 20, fai scomparire il nemico (il gatto). Quando il punteggio diventa 0,
+        fai scomparire il giocatore (il cane). Clicca su "Termina" quando il gioco
+        funziona come volevi tu.
+      Course 4 Play Lab Vars 9_instruction: "Free Play time! Here are all of the\nvariables
+        we've played with so far in this stage, as well as a few more in\ncase you
+        want them. \r\n\r\nNotice that there are now so many blocks in our\ntoolbox
+        that they need to be organized!  Here, we've put each piece into\nan appropriate
+        category.  Take some time to explore everything that is available.\nWhen you're
+        done browsing, make a game or story using repeats, variables,\nand events.
+        \ \r\n\r\nHint: scroll down to see all the commands in the workspace."
+      Course 4 Play Lab Vars_instruction: Bene. Un'ultima cosa per questo gioco. Predisponiamolo
+        in modo che il giocatore possa vincere (o perdere). Usiamo un blocco "ripeti
+        per sempre" per controllare il valore del punteggio. Quando il punteggio diventa
+        maggiore di 20, fai scomparire il nemico. Quando il punteggio diventa 0, fai
+        scomparire il giocatore.
       Course 4 Play Labs For Loops 1_instruction: Facciamo parlare il cane in modo
         che indichi ogni numero da 1 a 100. Usate un ciclo (loop) e il blocco del
         contatore per fafe in modo che indichi la variabile contatore ogni volta che
@@ -2525,8 +2535,10 @@
       NEW Course 4 Artist Functions 2_instruction: 'Sapresti disegnare 3 quadrati
         ciascuno distanziato di 20 pixels? Suggerimento: ogni quadrato è largo 100
         pixels'
-      NEW Course 4 Artist Functions 3_instruction: 'Ecco un nuovo tipo di blocco.
-        Si chiama "blocco funzionle". Fai clic su "Esegui" per vedere cosa può fare. '
+      NEW Course 4 Artist Functions 3_instruction: Ecco un nuovo tipo di blocco. Si
+        chiama "funzione". Fai clic su "Esegui" per vedere cosa fa. Poi, se sei curioso,
+        clicca su "modifica" per vedere come lo realizza. Altrimenti prosegui, lo
+        vedrai più avanti.
       NEW Course 4 Artist Functions 4_instruction: 'Utilizza la funzione "disegna
         un quadrato" per disegnare questo modello. Suggerimento: si dovrà utilizzare
         un blocco "gira a destra 120 gradi" dopo ogni quadrato.'
@@ -2552,7 +2564,7 @@
         now learned everything you need to know to make a pattern like this!\nIf this
         picture inspires you, try to make something similar. Otherwise, create\nsomething
         all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
-        Visit for the solution."
+        Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: Utilizzate la funzione "disegna
         un quadrato" per disegnare questo modello.
       NEW Course 4 Artist Params 1_instruction: Definiamo ora  una funzione per disegnare
@@ -2630,6 +2642,10 @@
         il nettare da ogni fiore.
       NEW Course 4 Bee For Loops 10_instruction: Usa la variabile "contatore" del
         ciclo per controllare lo spostamento in senso orizzontale.
+      NEW Course 4 Bee For Loops 10a_instruction: Pronto per una sfida?  Dovete usare
+        tutto quello che avete imparato sui cicli (loop) e cercare di risolvere questo
+        problema. Potrebbe essere necessario eseguire la tua soluzione più volte prima
+        di capire tutti i passaggi necessari.
       NEW Course 4 Bee For Loops 11_instruction: È possibile utilizzare la variabile
         del ciclo per controllare il movimento e la raccolta di nettare?
       NEW Course 4 Bee For Loops 2_instruction: Aggiungi il codice necessario per
@@ -2652,9 +2668,12 @@
       NEW Course 4 Bee For Loops 6_instruction: L'ultimo numero del ciclo indica l'incremento
         e ogni volta che il ciclo viene eseguite la variabile contatore aumenta dell'incremento
         indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of "for
-        loops"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
+      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable
+        with a math block! How can you use the \"counter\" variable to navigate\nthis
+        garden with the fewest number of blocks possible? What do you need to\ndo
+        to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember:
+        If your loop is counting up, the increment is added\nto your \"counter\" variable
+        each time through."
       NEW Course 4 Bee For Loops 8_instruction: "Se il ciclo esegue il conteggio,
         l'incremento viene aggiunto alla variabile contatore a ogni ciclo. Quale dovrebbe
         essere l'incremento per raccogliere 3, 6, 9 di nettare? \r\n"
@@ -2696,6 +2715,41 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2723,6 +2777,70 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

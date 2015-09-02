@@ -24,26 +24,14 @@ private key: the complementary key to a public key that is used to decrypt a mes
 
 * Encrypt a message using a partner’s public lock.
 * Decrypt a partner’s message using their own private key.
-* View a video on real-world encryption
-.
+* View a video on real-world encryption.
 
 
 # Resources
 
 * Activity Guide: <a href="http://csunplugged.org/wp-content/uploads/2014/12/unplugged-18-public_key_encryption_0.pdf" target="_blank">Kid Krypto</a>
-* Video: <need link to this> The Internet: Encryption and Public Keys
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 
 MARKDOWN
-
-
-
-
-
-
-
-
-
-

@@ -56,14 +56,14 @@ One of the most magnificent structures in the computer science world is the func
 
 ## Materials, Resources and Prep
 ### For the Student
-- [Songwriting Worksheets](Activity7-Songwriting.pdf)
+- [Songwriting Worksheets](Activity13-Songwriting.pdf)
 - Pens & Pencils
-- One [Songwriting Assessment](Assessment7-Songwriting.pdf) for each student. 
+- One [Songwriting Assessment](Assessment13-Songwriting.pdf) for each student. 
 
 ### For the Teacher
 - This Teacher Lesson Guide
-- Print several [Songwriting Worksheets](Activity7-Songwriting.pdf) for each group
-- Print one [Songwriting Assessment](Assessment7-Songwriting.pdf) for each student. 
+- Print several [Songwriting Worksheets](Activity13-Songwriting.pdf) for each group
+- Print one [Songwriting Assessment](Assessment13-Songwriting.pdf) for each student. 
 - Access to the internet, or pre-downloaded songs and lyrics for activity
 
 [/together]
@@ -152,7 +152,7 @@ To add more interest, you can look up the lyrics for some popular songs on the I
 [together]
 
 ## Activities: (20 min)
-### <a name="Activity1"></a> 4) [Songwriting](Activity7-Songwriting.pdf)
+### <a name="Activity1"></a> 4) [Songwriting](Activity13-Songwriting.pdf)
 
 - A fantastic way to compare functions to something we see in our everyday lives is to look at songs.  Songs often have certain groups of lyrics that repeat over and over. We call that a chorus. 
 
@@ -228,7 +228,7 @@ Flash Chat questions are intended to spark big-picture thinking about how the le
 [together]
 
 ## Assessment (5 min)
-### <a name="Assessment"></a>7) [Songwriting Assessment](Assessment7-Songwriting.pdf)
+### <a name="Assessment"></a>7) [Songwriting Assessment](Assessment13-Songwriting.pdf)
 - Hand out the assessment worksheet and allow students to complete the activity independently after the instructions have been well explained. 
 - This should feel familiar, thanks to the previous activities.
 

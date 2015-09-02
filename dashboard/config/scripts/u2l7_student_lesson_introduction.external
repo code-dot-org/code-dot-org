@@ -31,3 +31,9 @@ Do you know the quickest route from your home to the most common place you go? H
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/10j9l23FqEBR6-Y_52TacbpLNr5uvi1aedF9H9T7fJuE" target="_blank">KEY: Intro to the Shortest Path Problem</a>
+* <a href="https://docs.google.com/document/d/1_uJD_YEJYIoRZ-8vaRFq2IC9YjPGPgKzrx1-OyqdpQ4" target="_blank">KEY: Dijsktra’s Shortest Path Algorithm</a>
+
+MARKDOWN

@@ -13,7 +13,7 @@
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
   %p.fact{style: "color: #ddd"}
-    (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
+    (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
     %strong.figure
@@ -76,7 +76,7 @@
       count computer science for credit towards high school graduation!
   - else
     %p
-      #{statename} is one of #{credit_count} states where students
+      #{statename} is one of #{no_credit_count} states where students
       %strong
         can't
       count computer science for credit towards high school graduation.

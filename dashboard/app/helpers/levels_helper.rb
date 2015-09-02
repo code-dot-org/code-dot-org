@@ -250,6 +250,16 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
+    if @game and @game.owns_footer_for_share?
+      app_options[:copyrightStrings] = {
+        :thank_you => URI.escape(I18n.t('footer.thank_you')),
+        :help_from_html => I18n.t('footer.help_from_html'),
+        :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :powered_by_aws => I18n.t('footer.powered_by_aws'),
+        :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      }
+    end
+
     app_options
   end
 
@@ -262,6 +272,8 @@ module LevelsHelper
     embed
     share
     hide_source
+    hide_design_mode
+    hide_view_data_button
   )
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
@@ -382,7 +394,7 @@ module LevelsHelper
   end
 
   def enable_examples?
-    current_user && current_user.admin? && @level.is_a?(Blockly)
+    @level.is_a?(Blockly)
   end
 
   # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert

@@ -6,3 +6,19 @@ markdown <<MARKDOWN
 
 Explain one challenge raised by Vint Cerf in “The Internet is for Everyone - but it won’t be if….” and give one example of it that you know about.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Possible answers:
+
+- it's not affordability
+- has government restrictions
+- is unable to keep up with demand
+- isn't available everywhere for everyone
+- it's too complex
+- it has too many rules and laws
+- users cannot protect their privacy
+- parents and teachers can't create protected spaces for children
+- users are not responsible and mindful of the rights of others
+
+Examples of will vary.
+MARKDOWN

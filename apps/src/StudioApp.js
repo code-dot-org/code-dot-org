@@ -12,7 +12,6 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
 
@@ -35,6 +34,22 @@ var ENGLISH_LOCALE = 'en_us';
  */
 var MAX_PHONE_WIDTH = 500;
 
+/**
+ * HACK Alert. We're currently using two different copies of React - one in
+ * dashboard, and another in apps. This can get us into trouble in that the
+ * first element each of them serialize will have a reactid of .0. We get around
+ * this for now by pre-creating/serializing100 elements (i.e. reserving those
+ * ids for dashboard to use)
+ * A better long term approach would be to either get dashboard and apps to
+ * share a copy of React, or to have dashboard prerender its components (calling
+ * renderToString using a server-copy of react results in random reactids)
+ */
+(function reserveDashboardReactIds() {
+  var element = React.createElement("div");
+  for (var i = 0; i < 100; i++) {
+    React.renderToString(element);
+  }
+})();
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -243,7 +258,12 @@ StudioApp.prototype.init = function(config) {
   if (showCode && this.enableShowCode) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
-        var result = this.editor.toggleBlocks();
+        var result;
+        try {
+          result = this.editor.toggleBlocks();
+        } catch (err) {
+          result = {error: err};
+        }
         if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
@@ -455,8 +475,6 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
-
-  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -897,7 +915,7 @@ function resizePinnedBelowVisualizationArea() {
 
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (visualization) {
@@ -928,8 +946,6 @@ function resizePinnedBelowVisualizationArea() {
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
@@ -1005,7 +1021,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -1013,7 +1029,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     // the small print should float right.  Otherwise, it should float left.
     var languageSelector = smallFooter.querySelector('form');
     var smallPrint = smallFooter.querySelector('small');
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    if (languageSelector && smallPrint.offsetTop === languageSelector.offsetTop) {
       smallPrint.style.float = 'right';
     } else {
       smallPrint.style.float = 'left';
@@ -1394,7 +1410,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector(".small-footer");
+    var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
@@ -1524,8 +1540,15 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.resizeToolboxHeader();
 
   if (options.startBlocks) {
-    // Don't pass CRLF pairs to droplet until they fix CR handling:
-    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+
+    try {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    } catch (err) {
+      // catch errors without blowing up entirely. we may still not be in a
+      // great state
+      console.error(err.message);
+    }
     // Reset droplet Undo stack:
     this.editor.clearUndoStack();
     // Reset ace Undo stack:

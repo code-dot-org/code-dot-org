@@ -48,12 +48,12 @@ eu-ES:
   enter_valid_age: Please select a valid age
   enter_valid_email: Mesedez sartu baliozko e-posta helbide bat
   get_a_certificate_message: "Ziurtagiri bat eta <a href='/learn/beyond'>Ikasi ordubetea baino gehiago</a>ri informazioa bidaliko dizugu"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   thanks_for_submitting: Eskerrik asko bidaltzeagatik!
   if_you_enjoyed: Ondo pasa baduzu ikasten, gonbidatu zure lagunak saiatzen! Mundu guztiak ikastea nahi dugu.
   personalize_certificate: Ziurtagiria zure neurrira egin
   share_achievement: Zure lorpenak elkarbanatu
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: Kode Orduko buruak.
   support_url: http://support.code.org/
   country: Herria
@@ -191,6 +191,7 @@ eu-ES:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -461,6 +462,7 @@ eu-ES:
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: participants
   teachers_notes: "Teacher's Notes"
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

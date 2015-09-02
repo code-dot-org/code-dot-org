@@ -47,7 +47,7 @@ pt-BR:
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   enter_valid_age: Selecione uma idade válida
   enter_valid_email: Informe um endereço de email válido
-  get_a_certificate_message: "Vamos enviar-lhe um certificado e informações sobre como <a href='/learn/beyond'>aprender além de Uma Hora</a>"
+  get_a_certificate_message: "Enviaremos a você um certificado e informações sobre como <a href='/learn/beyond'>Aprender além da Hora do Código</a>"
   get_a_certificate_message_after: "Clique no certificado para baixá-lo ou imprimi-lo. Agora, faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   thanks_for_submitting: Obrigado por enviar!
   if_you_enjoyed: 'Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos que o mundo todo aprenda.'
@@ -193,6 +193,7 @@ pt-BR:
   homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
+  homepage_diversity_pledge: Abrace a causa em favor da diversidade
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -463,6 +464,7 @@ pt-BR:
   educator_notes: Observações do Educador
   how_to_teach_hoc: Como ensinar a Hora do Código
   more_resources_educators: Mais recursos para professores e educadores
+  beyond_submission: Quer enviar um tutorial para Além da Hora do Código? Veja os critérios e o formulário de envio.
   participants: participantes
   teachers_notes: Observações do Professor
   teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores aqui'
