@@ -9,7 +9,10 @@ class TextCompression < Widget
   end
 
   before_save do
-    self.poems = poems.select(&:present?) unless poems.nil?
+    unless poems.nil?
+      self.poems = poems.select(&:present?)
+      self.poems = nil if poems.count == 0
+    end
   end
 
   def self.create_from_level_builder(params, level_params)

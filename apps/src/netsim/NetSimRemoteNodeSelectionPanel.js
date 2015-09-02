@@ -22,6 +22,7 @@ var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for lobby node listing, selection, and connection
@@ -144,12 +145,15 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.updateLayout();
 
   // Move the reference area to beneath the instructions
-  this.getBody().find('.instructions').append(referenceArea);
+  this.getBody().find('.reference-area-placeholder').append(referenceArea);
 
   // Teachers and admins get a special "Reset Simulation" button
   if (this.canCurrentUserResetShard()) {
     this.addButton(i18n.shardResetButton(), this.resetShardCallback_);
   }
+
+  // Button that takes you to the next level.
+  NetSimUtils.makeContinueButton(this);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
@@ -306,15 +310,17 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () {
   if (!this.user_) {
     return false;
+  } else if (this.user_.isAdmin) {
+    return true;
   }
 
   // Find a section ID in the current shard ID
   var matches = /_(\d+)$/.exec(this.shardID_);
   if (!matches) {
-    return;
+    return false;
   }
 
   // matches[1] is the first capture group (\d+), the numeric section ID.
   var sectionID = parseInt(matches[1], 10);
-  return this.user_.isAdmin || this.user_.ownsSection(sectionID);
+  return this.user_.ownsSection(sectionID);
 };

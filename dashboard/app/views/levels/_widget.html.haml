@@ -1,19 +1,21 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 = stylesheet_link_tag 'levels/widget', media: 'all'
 = javascript_include_tag 'levels/widget'
+= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
+
 :javascript
-  var options = #{@level.properties.to_json}
+  var script_path = location.pathname;
+  apps.setupApp(appOptions);
+  appOptions.showInstructionsWrapper(dashboard.dialog.showInstructionsDialog);
   function getResult() {
     return {
       response: 'ok',
       result: true
     };
   }
-- href = asset_path(@level.properties['href'])
-
-= render partial: 'levels/content', locals: {app: 'external', data: {'markdown' => @level.properties['markdown_instructions']}}
+  var options = appOptions.level;
 
 #external
   / Load the external file through ActionView templates.
+  - href = asset_path(@level.properties['href'])
   = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
-= render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
