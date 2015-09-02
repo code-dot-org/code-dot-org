@@ -74,6 +74,8 @@ module LevelsHelper
   end
 
   def select_and_track_autoplay_video
+    return if @level.try(:autoplay_blocked_by_level?)
+
     seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
@@ -135,10 +137,21 @@ module LevelsHelper
       blockly_options
     elsif @level.is_a? DSLDefined
       dsl_defined_options
+    elsif @level.is_a? Widget
+      widget_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       view_options.camelize_keys
     end
+  end
+
+  # Options hash for Widget
+  def widget_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
   end
 
   # Options hash for DSLDefined

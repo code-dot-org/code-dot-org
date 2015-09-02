@@ -55,6 +55,22 @@ FactoryGirl.define do
       video_key {create(:video).key}
     end
 
+    trait :never_autoplay_video_true do
+      with_autoplay_video
+      after(:create) do |level|
+        level.never_autoplay_video = 'true'
+        level.save!
+      end
+    end
+
+    trait :never_autoplay_video_false do
+      with_autoplay_video
+      after(:create) do |level|
+        level.never_autoplay_video = 'false'
+        level.save!
+      end
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
@@ -116,6 +132,14 @@ FactoryGirl.define do
     end
 
     level
+
+    trait :never_autoplay_video_true do
+      level {create(:level, :never_autoplay_video_true)}
+    end
+
+    trait :never_autoplay_video_false do
+      level {create(:level, :never_autoplay_video_false)}
+    end
 
     chapter do |script_level|
       (script_level.script.script_levels.maximum(:chapter) || 0) + 1

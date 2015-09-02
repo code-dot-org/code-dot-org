@@ -1,10 +1,10 @@
 name 'U2L19 Free Response Getting Started'
-title 'Public Key Crypto: Getting Started'
+title 'Public Key Crypto: The Modulo Operation'
 
 markdown <<MARKDOWN
-What information, sent or stored on the Internet, do you think should be the highest priority in protecting?
+Explain in your own words what the modulo operation does.  You may use the analogy of a clock in your answer if you like.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Answers will vary. If time is available, ask students to justify their answers.
+
 MARKDOWN
