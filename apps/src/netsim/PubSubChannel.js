@@ -80,9 +80,13 @@ PubSubChannel.PusherChannel = function (pusherApiChannel) {
  * Subscribe to an event so the given callback is called when the event occurs.
  * @param {string} eventName
  * @param {function()} callback
+ * @throws {Error} on double-subscribe.
  */
 PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback) {
   this.pusherChannel_.bind(eventName, callback);
+  if (this.callbacks_[eventName] !== undefined) {
+    throw new Error("Already subscribed to event " + eventName);
+  }
   this.callbacks_[eventName] = callback;
 };
 
