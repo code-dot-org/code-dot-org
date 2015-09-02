@@ -1133,7 +1133,7 @@ en:
         frequency:
           title: Frequency Analysis Widget
           description_short: Frequency Analysis Widget
-          description:  Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
           Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
@@ -1150,3 +1150,8 @@ en:
           Welcome Back!: Welcome Back!
           The TLO: The TLO
           Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
