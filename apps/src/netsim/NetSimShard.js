@@ -23,7 +23,7 @@ var PubSubService = require('./PubSubService');
  * PubSub event key for events invalidating all tables.
  * @const {string}
  */
-var ALL_TABLES = 'all_tables';
+var WHOLE_SHARD_EVENT = 'all_tables';
 
 /**
  * A shard is an isolated, complete simulation state shared by a subset of
@@ -45,7 +45,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
 
   /** @type {PubSubChannel} */
   this.pubSubChannel = this.pubSub.subscribe(this.id);
-  this.pubSubChannel.subscribe(ALL_TABLES,
+  this.pubSubChannel.subscribe(WHOLE_SHARD_EVENT,
       NetSimShard.prototype.onPubSubEvent_.bind(this));
 
   /**
@@ -136,7 +136,7 @@ NetSimShard.prototype.disconnect = function () {
   this.wireTable.unsubscribe();
   this.messageTable.unsubscribe();
   this.logTable.unsubscribe();
-  this.pubSubChannel.unsubscribe(ALL_TABLES);
+  this.pubSubChannel.unsubscribe(WHOLE_SHARD_EVENT);
   this.pubSubChannel = null;
   this.pubSub.unsubscribe(this.id);
 };

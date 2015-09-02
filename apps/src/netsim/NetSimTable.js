@@ -197,8 +197,7 @@ NetSimTable.prototype.getTableName = function () {
 
 /**
  * Subscribes this table's onPubSubEvent method to events for this table
- * on our local channel. Also saves the callback locally, so we can
- * later reference it on unsubscribe
+ * on our local channel.
  */
 NetSimTable.prototype.subscribe = function () {
   this.channel_.subscribe(this.tableName_,
@@ -207,7 +206,7 @@ NetSimTable.prototype.subscribe = function () {
 
 /**
  * Unubscribes the saved callback from events for this table on our
- * local channel. Also clears the saved callback.
+ * local channel.
  */
 NetSimTable.prototype.unsubscribe = function () {
   this.channel_.unsubscribe(this.tableName_);
