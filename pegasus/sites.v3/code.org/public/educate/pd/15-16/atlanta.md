@@ -57,6 +57,8 @@ Room 705 <br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043<br/>
 
+Parking is free and located in front of the building. See  a [Campus Map here.](https://drive.google.com/a/code.org/file/d/0BxCV_RYUSA1zSlREVTB3TjM3OVU/view?usp=sharing)
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

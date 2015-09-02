@@ -6,20 +6,19 @@
   "user_id": 16,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete >= 100;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n   return Studio.sayComplete >= 35;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 35;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,16,0,0],[0,0,0,0,0,0,0,0]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
-    "free_play": "true",
+    "free_play": "false",
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "true",
-    "instructions": "The Wizard has the power to break Dog out of the \"for loop\". Take some time to play with this code and click on The Wizard to break Dog out of the \"for loop\".",
-    "ideal": "11",
+    "instructions": "Dog will still keep time by counting with our \"for loop\" by \"increment\", but this time, we will add The Wizard into the mix.  Can you change the code so that \"increment\" goes up by two each time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
@@ -35,14 +34,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Did you notice that in the last puzzle, the `for loop` kept going, even after you changed the increment?  That's because once a `for loop` starts, it is meant to finish running before it goes on to the rest of the program. \r\n\r\nIn this puzzle, we will learn how to change that, using the `Break Out of Loop` block.  \r\n\r\nThe Wizard has the power to break Dog out of the `for loop`. Take some time to play with this code and click on The Wizard to stop the loop.",
+    "markdown_instructions": "Now that we've seen how to control our `for loop` using variables inside of our program, let's make a game!\r\n\r\nDog will still keep time by counting with our `for loop` by `increment`, but this time we will add The Wizard into the mix.  Can you change the code so that `increment` goes up by two each time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!",
     "soft_buttons": [
-      "downButton",
-      "upButton"
+      "rightButton"
     ],
-    "min_workspace_height": "600",
+    "min_workspace_height": "800",
     "protaganist_sprite_index": "0",
-    "predraw_blocks": "<xml></xml>"
+    "predraw_blocks": "<xml></xml>",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -55,6 +54,29 @@
               <value name="VALUE">
                 <block type="math_number">
                   <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">increment</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">ADD</title>
+                  <value name="A">
+                    <block type="variables_get">
+                      <title name="VAR">increment</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
                 </block>
               </value>
             </block>
@@ -87,14 +109,9 @@
                       <title name="NUM">1</title>
                     </block>
                   </value>
-                  <value name="TEXT">
-                    <block type="variables_get">
-                      <title name="VAR">counter</title>
-                    </block>
-                  </value>
                   <value name="TIME">
                     <block type="math_number">
-                      <title name="NUM">1</title>
+                      <title name="NUM">0.5</title>
                     </block>
                   </value>
                 </block>
@@ -102,23 +119,41 @@
             </block>
           </next>
         </block>
-        <block type="when_run">
+        <block type="studio_whenSpriteClicked" uservisible="false">
+          <title name="SPRITE">1</title>
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">i</title>
               <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">1</title>
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">0</title>
                 </block>
               </value>
+              <next>
+                <block type="studio_vanish" uservisible="false">
+                  <title name="SPRITE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="when_run" uservisible="false">
+          <next>
+            <block type="studio_setSprite">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">"dog"</title>
               <next>
                 <block type="studio_setSprite">
                   <title name="SPRITE">1</title>
                   <title name="VALUE">"wizard"</title>
                   <next>
-                    <block type="studio_setSprite">
-                      <title name="SPRITE">0</title>
-                      <title name="VALUE">"dog"</title>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">i</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
@@ -126,123 +161,77 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
-          <next>
-            <block type="variables_set" inline="false">
-              <title name="VAR">increment</title>
-              <value name="VALUE">
-                <block type="math_arithmetic" inline="true">
-                  <title name="OP">ADD</title>
-                  <value name="A">
-                    <block type="variables_get">
-                      <title name="VAR">increment</title>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">1</title>
-          <next>
-            <block type="variables_set" inline="false">
-              <title name="VAR">i</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="studio_vanish">
-                  <title name="SPRITE">1</title>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="studio_repeatForever">
+        <block type="studio_repeatForever" uservisible="false">
           <statement name="DO">
-            <block type="controls_if" inline="false">
+            <block type="controls_if" inline="false" uservisible="false">
               <value name="IF0">
-                <block type="logic_compare" inline="true">
+                <block type="logic_compare" inline="true" uservisible="false">
                   <title name="OP">GTE</title>
                   <value name="A">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">increment</title>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">10</title>
                     </block>
                   </value>
                 </block>
               </value>
               <statement name="DO0">
-                <block type="variables_set" inline="false">
+                <block type="variables_set" inline="false" uservisible="false">
                   <title name="VAR">increment</title>
                   <value name="VALUE">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">1</title>
                     </block>
                   </value>
                 </block>
               </statement>
               <next>
-                <block type="studio_setScoreText" inline="true">
+                <block type="studio_setScoreText" inline="true" uservisible="false">
                   <value name="TEXT">
-                    <block type="variables_get">
+                    <block type="variables_get" uservisible="false">
                       <title name="VAR">increment</title>
                     </block>
                   </value>
                   <next>
-                    <block type="controls_if" inline="false">
+                    <block type="controls_if" inline="false" uservisible="false">
                       <value name="IF0">
-                        <block type="logic_compare" inline="true">
+                        <block type="logic_compare" inline="true" uservisible="false">
                           <title name="OP">EQ</title>
                           <value name="A">
-                            <block type="variables_get">
+                            <block type="variables_get" uservisible="false">
                               <title name="VAR">i</title>
                             </block>
                           </value>
                           <value name="B">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">0</title>
                             </block>
                           </value>
                         </block>
                       </value>
                       <statement name="DO0">
-                        <block type="studio_setBackground">
-                          <title name="VALUE">random</title>
+                        <block type="variables_set" inline="false" uservisible="false">
+                          <title name="VAR">i</title>
+                          <value name="VALUE">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">1</title>
+                            </block>
+                          </value>
                           <next>
-                            <block type="variables_set" inline="false">
-                              <title name="VAR">i</title>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <title name="NUM">1</title>
-                                </block>
-                              </value>
+                            <block type="studio_wait" uservisible="false">
+                              <title name="VALUE">500</title>
                               <next>
-                                <block type="studio_wait">
-                                  <title name="VALUE">500</title>
+                                <block type="studio_setSpritePosition" uservisible="false">
+                                  <title name="SPRITE">1</title>
+                                  <title name="VALUE">random</title>
                                   <next>
-                                    <block type="studio_setSpritePosition">
+                                    <block type="studio_setSprite" uservisible="false">
                                       <title name="SPRITE">1</title>
-                                      <title name="VALUE">7</title>
-                                      <next>
-                                        <block type="studio_setSprite">
-                                          <title name="SPRITE">1</title>
-                                          <title name="VALUE">"wizard"</title>
-                                        </block>
-                                      </next>
+                                      <title name="VALUE">"wizard"</title>
                                     </block>
                                   </next>
                                 </block>
@@ -289,7 +278,31 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
-      <xml/>
+      <xml>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">increment</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" inline="true">
+                  <title name="OP">ADD</title>
+                  <value name="A">
+                    <block type="variables_get">
+                      <title name="VAR">increment</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
     </required_blocks>
   </blocks>
 </Studio>
