@@ -14,7 +14,7 @@ window.apps = {
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
   // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
-  setup: function (appOptions) {
+  setupApp: function (appOptions) {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
