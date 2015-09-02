@@ -37,6 +37,8 @@ Scenario: Expected failure to hotkey-delete function definition block
   And I press delete
   Then block "function definition" has not been deleted
 
+# Skip due to bug: https://www.pivotaltracker.com/story/show/102630766
+@skip
 @no_mobile
 Scenario: Deleting an example block via delete key
   When I click block "second example"
