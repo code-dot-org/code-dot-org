@@ -16,29 +16,10 @@ var TextAreaProperties = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired
   },
-  componentWillMount: function () {
-    $(this.props.element).on("resizing", (function () {
-      this.setState({
-        'style-width': parseInt(this.props.element.style.width, 10),
-      });
-    }).bind(this));
-  },
-  componentWillUnmount: function () {
-    $(this.props.element).off("resizing");
-  },
-  getInitialState: function () {
-    return {
-      'style-width': parseInt(this.props.element.style.width),
-    };
-  },
-  handleChangeInternal: function (property, value) {
-    state = {};
-    state[property] = value;
-    this.setState(state);
-    this.props.handleChange(property, value);
-  },
+
   render: function () {
     var element = this.props.element;
+
     return (
       <div id='propertyRowContainer'>
         <PropertyRow
@@ -54,9 +35,9 @@ var TextAreaProperties = React.createClass({
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
-          initialValue={this.state['style-width']}
+          initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
-          handleChange={this.handleChangeInternal.bind(this, 'style-width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
@@ -155,7 +136,9 @@ module.exports = {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
+
     this.onDeserialize(element);
+
     return element;
   },
 
