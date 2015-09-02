@@ -5,14 +5,15 @@
   fill: steelblue;
 }
 
-rect.english {
+.english {
   fill: blue;
 }
+
 .letter:hover rect.english {
   fill: darkblue;
 }
 
-rect.user {
+.user {
   fill: orange;
 }
 .letter:hover rect.user {
@@ -22,6 +23,17 @@ rect.user {
 #sortRadio {
   position: absolute;
   right: 10px;
+}
+
+.dragletter {
+  cursor: move;
+}
+.dragletter rect {
+  fill: #FFB40F;
+  fill-opacity: 0.5;
+}
+.dragletter line {
+  stroke: orange;
 }
 
 rect {
