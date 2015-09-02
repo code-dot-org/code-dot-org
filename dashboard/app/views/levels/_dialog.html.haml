@@ -72,6 +72,19 @@
         %button#ok-button.btn-danger{style: 'float: right;'}
           =t('dialog.startover_ok')
 
+  #instructions-dialogcontent
+    .modal-content.no-modal-icon.markdown-instructions-container
+      %p.dialog-title
+        ="#{t('puzzle')} #{@script_level.try(:position) || 1} #{t('of')} #{@script_level.try(:stage_total) || 1}"
+      .instructions-markdown
+        %p
+          -# CSP is en_us only, always show markdown instructions
+          - markdown = @level.properties['markdown_instructions']
+          =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
+      #buttons
+        %button#ok-button{style: 'float: right;'}
+          =t('ok')
+
 :ruby
   dialogOptions = {
     skipSound: !!(data['options'].try(:[], 'skip_sound')),

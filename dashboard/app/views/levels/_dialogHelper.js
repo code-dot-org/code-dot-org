@@ -31,28 +31,32 @@ window.dashboard.dialog = (function () {
   function showDialog(type, callback) {
     dialogType = type;
 
-    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
-
     // Use our prefabricated dialog content.
-    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
+    var content = document.querySelector("#" + type + "-dialogcontent");
+    var dialog = new Dialog({ body: content, onHidden: dialogHidden });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
-    $(".modal-body #ok-button").click(function () {
+    $(content).find("#ok-button").click(function () {
       dialog.hide();
       callback && callback();
     });
 
     // Clicking the cancel button in the dialog box dismisses it.
-    $(".modal-body #cancel-button").click(function () {
+    $(content).find("#cancel-button").click(function () {
       dialog.hide();
     });
 
     dialog.show();
   }
 
-  var showStartOverDialog = function(callback) {
+  var showStartOverDialog = function (callback) {
     showDialog('startover', callback);
-  }
+  };
+
+  var showInstructionsDialog = function (callback) {
+    showDialog('instructions', callback);
+    $('details').details();
+  };
 
   function adjustScroll() {
     if (adjustedScroll) {
@@ -147,6 +151,7 @@ window.dashboard.dialog = (function () {
 
   return {
     showStartOverDialog: showStartOverDialog,
+    showInstructionsDialog: showInstructionsDialog,
     processResults: processResults
   };
 })();
