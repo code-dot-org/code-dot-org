@@ -37,6 +37,65 @@ function pixelationInit() {
     bitsPerPixelRange.setAttribute("disabled", "true");
     startOver.setAttribute("disabled", "true");
   }
+
+  customizeStyles();
+  initProjects();
+}
+
+function customizeStyles() {
+  if (!window.options) {
+    // Default is version 3 (all features enabled).
+    window.options = {version: '3'};
+  }
+  if (options.version == '1') {
+    $('.hide_on_v1').hide();
+  } else if (options.version == '2') {
+    $('.hide_on_v2').hide();
+    $('#height, #width').prop('readonly', true);
+  }
+  if (options.hex) {
+    $('input[name="binHex"][value="hex"]').prop('checked', true);
+  }
+  if (options.instructions) {
+    $('#below_viz_instructions').text(options.instructions).show();
+  }
+}
+
+function initProjects() {
+  // Initialize projects for save/load functionality if channel id is present.
+  if (appOptions.channel) {
+    window.apps.setupProjectsExternal();
+    var sourceHandler = {
+      setInitialLevelHtml: function (levelHtml) {},
+      getLevelHtml: function () {
+        return '';
+      },
+      setInitialLevelSource: function (levelSource) {
+        options.projectData = levelSource;
+      },
+      getLevelSource: function () {
+        return pixel_data.value.replace(/[ \n]/g, "");
+      }
+    };
+    dashboard.project.load().then(function() {
+      // Only enable saving if the initial load succeeds. This means new work
+      // will not be saved, but old work will not be erased and may become
+      // available by refreshing the page.
+      options.saveProject = dashboard.project.save.bind(dashboard.project);
+      options.projectChanged = dashboard.project.projectChanged;
+      window.dashboard.project.init(sourceHandler);
+    }).always(function() {
+      pixelationDisplay();
+    });
+  } else {
+    pixelationDisplay();
+  }
+}
+
+function pixelationDisplay() {
+  pixel_data.value = options.projectData || options.data;
+  drawGraph();
+  formatBitDisplay();
 }
 
 function isHex() {
@@ -476,3 +535,5 @@ function startOverConfirmed() {
   drawGraph();
   formatBitDisplay();
 }
+
+pixelationInit();

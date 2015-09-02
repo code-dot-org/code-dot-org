@@ -7,7 +7,6 @@
   }
 </style>
 <![endif]-->
-<script type="text/javascript" src="/pixelation/pixelation.js"></script>
 <div id="visualizationColumn" class="responsive">
   <div id="visualization" class="responsive">
     <canvas id="canvas" width="400" height="400"></canvas>
@@ -80,59 +79,4 @@
   <button id="start_over" class="btn btn-danger" onclick="startOverClicked();">Start Over</button>
   <button id="finished" class="btn btn-primary right" onclick="onFinishedButtonClick();">Finished! Continue to next stage</button>
 </div>
-<script>
-  if (!window.options) {
-    // Default is version 3 (all features enabled).
-    window.options = {version: '3'};
-  }
-  if (options.version == '1') {
-    $('.hide_on_v1').hide();
-  } else if (options.version == '2') {
-    $('.hide_on_v2').hide();
-    $('#height, #width').prop('readonly', true);
-  }
-  if (options.hex) {
-    $('input[name="binHex"][value="hex"]').prop('checked', true);
-  }
-  if (options.instructions) {
-    $('#below_viz_instructions').text(options.instructions).show();
-  }
-  pixelationInit();
-
-  function pixelationDisplay() {
-    pixel_data.value = options.projectData || options.data;
-    drawGraph();
-    formatBitDisplay();
-  }
-
-  // Initialize projects for save/load functionality if channel id is present.
-  if (appOptions.channel) {
-    window.apps.setupProjectsExternal();
-    var sourceHandler = {
-      setInitialLevelHtml: function (levelHtml) {},
-      getLevelHtml: function () {
-        return '';
-      },
-      setInitialLevelSource: function (levelSource) {
-        options.projectData = levelSource;
-      },
-      getLevelSource: function () {
-        return pixel_data.value.replace(/[ \n]/g, "");
-      }
-    };
-
-    dashboard.project.load().then(function() {
-      // Only enable saving if the initial load succeeds. This means new work
-      // will not be saved, but old work will not be erased and may become
-      // available by refreshing the page.
-      options.saveProject = dashboard.project.save.bind(dashboard.project);
-      options.projectChanged = dashboard.project.projectChanged;
-      window.dashboard.project.init(sourceHandler);
-    }).always(function() {
-      pixelationDisplay();
-    });
-  } else {
-    pixelationDisplay();
-  }
-
-</script>
+<script type="text/javascript" src="/pixelation/pixelation.js"></script>
