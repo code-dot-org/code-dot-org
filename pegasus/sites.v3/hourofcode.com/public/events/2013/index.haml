@@ -31,9 +31,9 @@ layout: wide
       -by_state.each_pair do |state_code, events|
         -unless state_code.nil_or_empty?
           %li{class: "hoc-event-state"}
-            %a{href: "/events/all/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_names[state_code]} (#{events.count} #{hoc_s(:events)})" : "#{state_names[state_code]} (#{events.count} #{hoc_s(:event)})"
+            %a{href: "/events/2013/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_names[state_code]} (#{events.count} #{hoc_s(:events)})" : "#{state_names[state_code]} (#{events.count} #{hoc_s(:event)})"
 %ul
   -by_country.each_pair do |country, events|
     -if country != 'united states'
       %li{class: "hoc-event-country"}
-        %a{href: "/events/all/#{country.downcase}"}= events.count > 1 ? "#{country_names[country]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country]} (#{events.count} #{hoc_s(:event)})"
+        %a{href: "/events/2013/#{country.downcase}"}= events.count > 1 ? "#{country_names[country]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country]} (#{events.count} #{hoc_s(:event)})"

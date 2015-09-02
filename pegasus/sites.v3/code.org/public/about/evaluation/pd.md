@@ -3,7 +3,7 @@ title: Professional Development Program Results, 2014-15
 nav: about_nav
 ---
 
-# June 2014- June 2015 Program Report
+# June 2014 - June 2015 Program Report
 
 ## What do teachers take away from Code.org professional development?
 <img src="/images/pd-2014-15.png" width="100%"/>
@@ -142,6 +142,6 @@ Code.org offered professional development for high school teachers based on the 
 - Teachers new to CS felt limited by their own lack of CS content knowledge.
 - 1 in 5 teachers struggled with assessing student learning, and many teachers did not know what should be assessed and that evaluating students often felt subjective. "I would like more concrete means of assessment that don't depend on my perception of their participation." Teachers reported a desire for more assessment resources in the curriculum.
 
-Full ECS [interview]((http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-interviews/)and [questionnaire](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-questionnaire/) findings are available [on Outlier's website](http://outlier.uchicago.edu/evaluation_codeorg/).
+Full ECS [interview](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-interviews/) and [questionnaire](http://outlier.uchicago.edu/evaluation_codeorg/ecs-implementation-questionnaire/) findings are available [on Outlier's website](http://outlier.uchicago.edu/evaluation_codeorg/).
 
 [<button>Back to 2014-15 Summary](/about/evaluation/summary)<br /><br/>

@@ -547,6 +547,8 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
     }
 
     this.myNode = null;
+    this.shard_.disconnect();
+    this.shard_ = null;
     this.shardChange.notifyObservers(null, null);
     onComplete(err, result);
   }.bind(this));
@@ -964,11 +966,16 @@ function resizeFooterToFitToLeftOfContent() {
     return;
   }
 
+  var padding = parseInt(window.getComputedStyle(smallFooter)["padding-left"]);
+
+  var boundingWidth;
   if (leftColumn && $(leftColumn).is(':visible')) {
-    smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
+    boundingWidth = leftColumn.getBoundingClientRect().right;
   } else if (instructions && $(instructions).is(':visible')) {
-    smallFooter.style.maxWidth = instructions.getBoundingClientRect().right + 'px';
+    boundingWidth = instructions.getBoundingClientRect().right;
   }
+
+  smallFooter.style.maxWidth = (boundingWidth) ? (boundingWidth - padding) + 'px' : null;
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
@@ -1292,6 +1299,10 @@ NetSim.prototype.updateLayout = function () {
  * button.  Should mark the level as complete and navigate to the next level.
  */
 NetSim.prototype.completeLevelAndContinue = function () {
+  if (this.isConnectedToRemote() && !confirm(i18n.onBeforeUnloadWarning())) {
+    return;
+  }
+
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
