@@ -9,7 +9,7 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](http://forum.code.org/c/csp)| [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
+[CSP Forum](http://forum.code.org/c/csp) | [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
 
 
 
@@ -36,11 +36,11 @@ nav: educate_nav
 </tr>
 </table>
 
+<br/>
+
+<strong>You can view all of the lessons in Unit 1 through <a href = "http://bit.ly/csp-unit1" target="_blank">this Google Drive folder</a></strong>
+
 <br/><br/>
-
-
-
-
 
 | Lesson Description| Lesson Plan | 
 | ------------------|:-----------:|

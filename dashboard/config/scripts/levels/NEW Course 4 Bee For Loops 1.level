@@ -15,12 +15,21 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": "1",
     "flower_type": "redWithNectar",
     "nectar_goal": "5",
     "ideal": "4",
     "use_modal_function_editor": "false",
-    "use_contract_editor": "false"
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

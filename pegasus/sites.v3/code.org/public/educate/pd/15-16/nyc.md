@@ -15,69 +15,52 @@ nav: pd2_nav
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CSP course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**Save the dates**
+#### In-person Workshop####
 
-Monday, August 3, 2015 - Friday, August 7, 2015
-<br/>
-8:30am - 3:30pm
-<br />
-Breakfast and lunch will be served. 
+Milestone Complete!
 
-**Location**
+#### Online Study####
 
-Microsoft
-<br />
-5th Floor
-<br />
-Room: Music Box 5411
-<br />
-Eleven Times Square
-<br />
-NY, NY 10036
-<br />
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
-
-</br>
-</br>
+<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Teachers from Broward, Florida will attend PD in Broward. Please visit the [Broward CSP page](/educate/pd/15-16/broward)  for your workshop dates and details.
+
+All teachers from Boston, New York, and Montogomery County, MD will travel to the PD location to attend the workshop in-person. 
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 17, 2015
+Quarter 1: Saturday, October 17, 2015<br/>
+This workshop will be in New York.
 
-Quarter 2: Saturday, December 5, 2015
+Quarter 2: Saturday, December 5, 2015<br/>
+This workshop will be in Montgomery County, Maryland.
 
-Quarter 3: Saturday, February 27, 2016
+Quarter 3: Saturday, February 27, 2016<br/>
+This workshop will be in New York.
 
-Quarter 4: Saturday, March 26, 2016
+Quarter 4: TBA<br/>
+This workshop will be in Montgomery County, Maryland.
 
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+
+**October 17th Location**
 
 TBD
 
+
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Green journal<br/>
+Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -94,75 +77,53 @@ More info coming soon!
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
+Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
+#### In-person Workshop####
 
-**Save the dates:**
+Milestone Complete!
 
-Both group 1 & 2 will be attending the following dates:
+#### Online Study####
 
-_Monday_, August 17, 2015 - _Friday_, August 21, 2015
-<br/>
-Mon - Thurs: 8:30am - 3:00pm
-<br />
-_Friday_: 8:30am - 1:30pm
-<br />
-Breakfast and lunch will be served. 
-<br />
-<br />
+<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
-### Phase 2: Blended Learning Institute (2 days in-person) ###
-<br />
-_Monday_, Augst 24, 2015 - _Tuesday_, August 25, 2015
-<br />
-9:00am - 4:00pm
-<br />
-Breakfast and lunch will be served.
- 
-**Location**
-
-Note: Both Phase 2: Blended Summer Study and Blended Learning Institute will be held at Music Box 5411 & Winter Garden 5412.
- 
-Microsoft
-<br />
-5th Floor
-<br />
-Rooms: Music Box 5411 & Winter Garden 5412
-<br />
-Eleven Times Square
-<br />
-NY, NY 10036
-<br />
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
-
-</br>
-</br>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-**Save the dates:**
+**Save the dates:**<br/>
 
-Saturday, October 3, 2015
+<i>Both Group 1 & 2 will attend the following dates</i><br/>
+Quarter 1: Saturday, October 3, 2015
+ 
+Quarter 2: Saturday, November 14, 2015
 
-Saturday, November 14, 2015
+Quarter 3: Saturday, February 6, 2016
 
-Saturday, February 6, 2016
+Quarter 4: Saturday, April 16, 2016
 
-Saturday, April 16, 2016
+**Location for October 3rd**<br/>
+<i><b>Group 1</i></b><br/>
+Microsoft<br/>
+Music Box 5411<br/>
+Eleven Times Square<br/>
+NY, NY 10036
 
-**Location for October 10th**
+<i><b>Group 2</i></b><br/>
+Microsoft<br/>
+Winter Garden 5412<br/>
+Eleven Times Square<br/>
+NY, NY 10036
 
-TBD, more information coming soon!
-</br>
-</br>
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop and Charger
+<br/>
+ECS Green journal<br/>
+Curriculum guide
+<br/>
+Snacks
+<br/>
+Water
+
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
@@ -175,77 +136,28 @@ More info coming soon!
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone Complete!
+
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**Save the dates:**
+#### In-person Workshop####
 
-Both Group 1 & 2 will be attending the following dates:
+Milestone Complete!
 
-Monday, August 10, 2015 - Wednesday, August 12, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served.
+#### Online Study####
 
-**Location for Blended Summer Study:**
-
-Note: On Wednesday, August 12, you will be assigned to three breakout rooms basted on subject level. Those rooms will be: Music Box 5411 / Broadway 5202 / Belasco 6203
-
-Microsoft
-<br />
-5th Floor
-<br />
-Rooms: Music Box 5411 & Winter Garden 5412
-<br />
-Eleven Times Square
-<br />
-NY, NY 10036
-<br />
+<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 2: Blended Learning Institute (2 days in-person) ###
 
-**Save the dates:**
 
-Both group 1 & 2 will be hosted on the following dates: 
-<br />
-<br />
-Tursday, August 13, 2015 - Friday, August 14, 2015
-<br />
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served.
-<br />
 
-**Location for Blended Learning Institute:**
+Milestone Complete!
 
-Group 1 & 2 will be hosted in the following rooms:
-<br />
-<br />
-Microsft
-<br />
-5th Floor
-<br />
-Rooms: Music Box 5411 / Winter Garden 5412
-<br />
-Eleven Times Square
-<br />
-NY, NY 10036
-<br />
-**What do I bring to Phase 2?**
 
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-</br>
-</br>
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -262,19 +174,16 @@ Breakfast and lunch will be served.
 
 TBD
 
-**What to bring to Phase 3 quarterly sessions:**
+**What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
 
 [**Back to the top**](#top)
 

@@ -220,6 +220,7 @@
   homepage_action_text_learn: Simulan ang pag-aaral
   homepage_action_text_signpetition: Mag-sign sa petisyon
   homepage_signpetition_dropdown: 'Mag-sign sa aming petisyon & # x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Matuto nang higit pa
@@ -559,6 +560,8 @@
   educator_notes: Educator Notes
   how_to_teach_hoc: Paano magturo ng Hour Code
   more_resources_educators: Marami pang mga resource para sa mga guro at mga educator
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: mga kalahok
   teachers_notes: Mga Note ng Guro
   teachers_notes_hoc: 'Guro: Basahin ang mahalagang tala ng tagapagturo dito'

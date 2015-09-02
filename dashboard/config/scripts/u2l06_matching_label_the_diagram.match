@@ -15,3 +15,14 @@ answer 'Weight'
 markdown <<MARKDOWN
 ![](https://images.code.org/ccd9ed90a3c57478ad0dc27eded4c426-image-1433804631401.png)
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- A: Graph
+- B: Edge
+- C: Node
+- D: Cycle
+- E: Weight
+
+MARKDOWN

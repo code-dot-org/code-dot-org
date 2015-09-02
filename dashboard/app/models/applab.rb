@@ -1,5 +1,6 @@
 class Applab < Blockly
   before_save :update_palette
+  before_save :fix_examples
 
   serialized_attrs %w(
     app_width
@@ -12,6 +13,7 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    encrypted_examples
   )
 
   # List of possible skins, the first is used as a default.
@@ -181,4 +183,9 @@ class Applab < Blockly
     JSON
   end
 
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
+  end
 end

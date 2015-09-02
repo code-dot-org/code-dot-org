@@ -14,3 +14,7 @@ markdown <<MARKDOWN
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer: C
+MARKDOWN

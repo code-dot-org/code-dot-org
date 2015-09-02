@@ -5,7 +5,8 @@
  * submit button interactions.
  */
 
-(function () {
+window.dashboard = window.dashboard || {};
+window.dashboard.dialog = (function () {
   var dialogType = null;
   var adjustedScroll = false;
 
@@ -49,7 +50,7 @@
     dialog.show();
   }
 
-  window.showStartOverDialog = function(callback) {
+  var showStartOverDialog = function(callback) {
     showDialog('startover', callback);
   }
 
@@ -101,7 +102,7 @@
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
   // external (including pixelation), multi, match, and any others
   // which render 'levels/dialog'.
-  window.processResults = function (onComplete) {
+  var processResults = function (onComplete) {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
@@ -142,6 +143,11 @@
         }
       }
     });
-  }
+  };
+
+  return {
+    showStartOverDialog: showStartOverDialog,
+    processResults: processResults
+  };
 })();
 

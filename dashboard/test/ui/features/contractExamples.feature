@@ -42,5 +42,6 @@ Scenario: Deleting an example block via delete key
   When I click block "second example"
   And the contract editor has 2 examples
   And I press delete
+  And I wait 2 seconds
   Then block "second example" has been deleted
   And the contract editor has 1 example
