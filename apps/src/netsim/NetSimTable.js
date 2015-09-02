@@ -97,13 +97,6 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.subscribe();
 
   /**
-   * The callback we most recently subscribed with, so that we can
-   * cleanly unsubscribe.
-   * @private {function{}}
-   */
-  this.channelCallback_ = undefined;
-
-  /**
    * API object for making remote calls
    * @type {NetSimApi}
    * @private
@@ -208,8 +201,8 @@ NetSimTable.prototype.getTableName = function () {
  * later reference it on unsubscribe
  */
 NetSimTable.prototype.subscribe = function () {
-  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent_.bind(this);
-  this.channel_.subscribe(this.tableName_, this.channelCallback_);
+  this.channel_.subscribe(this.tableName_,
+      NetSimTable.prototype.onPubSubEvent_.bind(this));
 };
 
 /**
@@ -217,8 +210,7 @@ NetSimTable.prototype.subscribe = function () {
  * local channel. Also clears the saved callback.
  */
 NetSimTable.prototype.unsubscribe = function () {
-  this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
-  this.channelCallback = undefined;
+  this.channel_.unsubscribe(this.tableName_);
 };
 
 /**

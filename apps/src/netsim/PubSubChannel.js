@@ -32,6 +32,7 @@ var PubSubChannel = exports;
 
 // Disable "unused variable" errors for null implementation declarations
 /* jshint unused:false */
+
 /**
  * @constructor
  * @implements PubSubChannel
@@ -49,9 +50,8 @@ PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) {
 /**
  * Unsubscribe a given callback from a given event
  * @param {string} eventName
- * @param {function{}} callback
  */
-PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName, callback) { };
+PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName) { };
 
 // Re-enable "unused variable" error
 /* jshint unused:true */
@@ -61,27 +61,36 @@ PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName, callback)
  * @implements PubSubChannel
  */
 PubSubChannel.PusherChannel = function (pusherApiChannel) {
- /**
-  * The actual Pusher API's channel.
-  * @private {Channel}
-  */
- this.pusherChannel_ = pusherApiChannel;
+  /**
+   * The actual Pusher API's channel.
+   * @private {Channel}
+   */
+  this.pusherChannel_ = pusherApiChannel;
+
+  /**
+   * Cache provided callbacks for easy unsubscribe.
+   * Maps event name to callback.
+   * @type {Object}
+   * @private
+   */
+  this.callbacks_ = {};
 };
 
 /**
  * Subscribe to an event so the given callback is called when the event occurs.
  * @param {string} eventName
- * @param {function{}} callback
+ * @param {function()} callback
  */
 PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback) {
   this.pusherChannel_.bind(eventName, callback);
+  this.callbacks_[eventName] = callback;
 };
 
 /**
  * Unsubscribe a given callback from a given event
  * @param {string} eventName
- * @param {function{}} callback
  */
-PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName, callback) {
-  this.pusherChannel_.unbind(eventName, callback);
+PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName) {
+  this.pusherChannel_.unbind(eventName, this.callbacks_[eventName]);
+  delete this.callbacks_[eventName];
 };
