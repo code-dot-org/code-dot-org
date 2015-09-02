@@ -26,16 +26,16 @@ var NetSimVizWire = require('./NetSimVizWire');
  * @augments NetSimVizWire
  */
 var NetSimVizSimulationWire = module.exports = function (sourceWire,
-    getElementByEntityID) {
-  var localNode = getElementByEntityID(NetSimVizNode, sourceWire.localNodeID);
-  var remoteNode = getElementByEntityID(NetSimVizNode, sourceWire.remoteNodeID);
+    getElementByEntityId) {
+  var localNode = getElementByEntityId(NetSimVizNode, sourceWire.localNodeID);
+  var remoteNode = getElementByEntityId(NetSimVizNode, sourceWire.remoteNodeID);
   NetSimVizWire.call(this, localNode, remoteNode);
 
   /**
    * ID of the simulation wire that this viz element maps to.
    * @type {number}
    */
-  this.correspondingWireID_ = sourceWire.entityID;
+  this.correspondingWireId_ = sourceWire.entityID;
 
   /**
    * UUID of the simulation wire that this viz element maps to.
@@ -44,12 +44,12 @@ var NetSimVizSimulationWire = module.exports = function (sourceWire,
   this.correspondingWireUuid_ = sourceWire.uuid;
 
   /**
-   * Bound getElementByEntityID method from vizualization controller;
+   * Bound getElementByEntityId method from vizualization controller;
    * we hold on to this so that calls to configureFrom can find nodes later.
    * @type {Function}
    * @private
    */
-  this.getElementByEntityID_ = getElementByEntityID;
+  this.getElementByEntityId_ = getElementByEntityId;
 
   this.configureFrom(sourceWire);
   this.render();
@@ -61,11 +61,11 @@ NetSimVizSimulationWire.inherits(NetSimVizWire);
  * @param {NetSimWire} sourceWire
  */
 NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
-  this.correspondingWireID_ = sourceWire.entityID;
+  this.correspondingWireId_ = sourceWire.entityID;
   this.correspondingWireUuid_ = sourceWire.uuid;
 
-  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
+  this.localVizNode = this.getElementByEntityId_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getElementByEntityId_(NetSimVizNode, sourceWire.remoteNodeID);
 
   if (this.localVizNode) {
     this.localVizNode.setAddress(sourceWire.localAddress);
@@ -84,8 +84,8 @@ NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingWireID_;
+NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function () {
+  return this.correspondingWireId_;
 };
 
 /**
@@ -93,7 +93,7 @@ NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
  * @returns {boolean} TRUE of this VizElement represents the given Entity.
  */
 NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
-  return this.correspondingWireID_ === entity.entityID &&
+  return this.correspondingWireId_ === entity.entityID &&
       this.correspondingWireUuid_ === entity.uuid;
 };
 
@@ -104,6 +104,6 @@ NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
  */
 NetSimVizSimulationWire.prototype.kill = function () {
   NetSimVizSimulationWire.superPrototype.kill.call(this);
-  this.correspondingWireID_ = undefined;
+  this.correspondingWireId_ = undefined;
   this.correspondingWireUuid_ = undefined;
 };

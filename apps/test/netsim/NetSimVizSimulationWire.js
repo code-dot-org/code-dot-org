@@ -55,9 +55,9 @@ describe("NetSimVizSimulationWire", function () {
   };
 
   var getVizNodeByEntityID = function (_, id) {
-    if (vizLocalNode && vizLocalNode.getCorrespondingEntityID() === id) {
+    if (vizLocalNode && vizLocalNode.getCorrespondingEntityId() === id) {
       return vizLocalNode;
-    } else if (vizRemoteNode && vizRemoteNode.getCorrespondingEntityID() === id) {
+    } else if (vizRemoteNode && vizRemoteNode.getCorrespondingEntityId() === id) {
       return vizRemoteNode;
     }
     return undefined;
@@ -90,7 +90,7 @@ describe("NetSimVizSimulationWire", function () {
       assertEqual(0, vizWire.textPosX_);
       assertEqual(0, vizWire.textPosY_);
       assertEqual([], vizWire.encodings_);
-      assertEqual(simWire.entityID, vizWire.getCorrespondingEntityID());
+      assertEqual(simWire.entityID, vizWire.getCorrespondingEntityId());
       assert(vizLocalNode === vizWire.localVizNode);
       assert(vizRemoteNode === vizWire.remoteVizNode);
     });

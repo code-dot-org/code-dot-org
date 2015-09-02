@@ -273,8 +273,8 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
 NetSimVisualization.prototype.getElementByEntityID = function (elementType, entityID) {
   return _.find(this.elements_, function (element) {
     return element instanceof elementType &&
-        element.getCorrespondingEntityID &&
-        element.getCorrespondingEntityID() === entityID;
+        element.getCorrespondingEntityId &&
+        element.getCorrespondingEntityId() === entityID;
   });
 };
 
@@ -880,7 +880,7 @@ NetSimVisualization.prototype.destroyAutoDnsNode = function () {
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationNode) {
-      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
+      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityId() === dnsNodeID);
     }
   });
 };
