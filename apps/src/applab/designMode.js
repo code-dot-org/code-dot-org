@@ -113,6 +113,9 @@ designMode.resetElementTray = function (allowEditing) {
  */
 designMode.onPropertyChange = function(element, name, value) {
   var handled = true;
+  var to_px = function (inp) {
+    return inp ? inp + 'px' : '';
+  };
   switch (name) {
     case 'id':
       element.id = value;
@@ -123,22 +126,25 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'left':
-      element.style.left = value + 'px';
-      element.parentNode.style.left = value + 'px';
+      var newLeft = to_px(value);
+      element.style.left = newLeft;
+      element.parentNode.style.left = newLeft;
       break;
     case 'top':
-      element.style.top = value + 'px';
-      element.parentNode.style.top = value + 'px';
+      var newTop = to_px(value);
+      element.style.top = newTop;
+      element.parentNode.style.top = newTop;
       break;
     case 'width':
-      element.setAttribute('width', value + 'px');
+      element.setAttribute('width', to_px(value));
       break;
     case 'height':
-      element.setAttribute('height', value + 'px');
+      element.setAttribute('height', to_px(value));
       break;
     case 'style-width':
-      element.style.width = value + 'px';
-      element.parentNode.style.width = value + 'px';
+      var newWidth = to_px(value);
+      element.style.width = newWidth;
+      element.parentNode.style.width = newWidth;
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -146,8 +152,9 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'style-height':
-      element.style.height = value + 'px';
-      element.parentNode.style.height = value + 'px';
+      var newHeight = to_px(value);
+      element.style.height = newHeight;
+      element.parentNode.style.height = newHeight;
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -164,7 +171,7 @@ designMode.onPropertyChange = function(element, name, value) {
       element.style.backgroundColor = value;
       break;
     case 'fontSize':
-      element.style.fontSize = value + 'px';
+      element.style.fontSize = to_px(value);
       break;
 
     case 'image':
