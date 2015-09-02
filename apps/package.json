@@ -31,6 +31,7 @@
     "Base64": "0.3.0",
     "browserify": "10.2.4",
     "browserify-shim": "3.8.10",
+    "browserify-incremental": "3.0.1",
     "chai": "1.10.0",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
