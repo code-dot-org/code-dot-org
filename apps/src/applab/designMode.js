@@ -108,14 +108,19 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
+ * Given an input value produce a valid css value that is
+ * either in pixels or empty.
+ */
+var appendPx = function (inp) {
+  return inp ? inp + 'px' : '';
+};
+
+/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
 designMode.onPropertyChange = function(element, name, value) {
   var handled = true;
-  var to_px = function (inp) {
-    return inp ? inp + 'px' : '';
-  };
   switch (name) {
     case 'id':
       element.id = value;
@@ -126,23 +131,23 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'left':
-      var newLeft = to_px(value);
+      var newLeft = appendPx(value);
       element.style.left = newLeft;
       element.parentNode.style.left = newLeft;
       break;
     case 'top':
-      var newTop = to_px(value);
+      var newTop = appendPx(value);
       element.style.top = newTop;
       element.parentNode.style.top = newTop;
       break;
     case 'width':
-      element.setAttribute('width', to_px(value));
+      element.setAttribute('width', appendPx(value));
       break;
     case 'height':
-      element.setAttribute('height', to_px(value));
+      element.setAttribute('height', appendPx(value));
       break;
     case 'style-width':
-      var newWidth = to_px(value);
+      var newWidth = appendPx(value);
       element.style.width = newWidth;
       element.parentNode.style.width = newWidth;
 
@@ -152,7 +157,7 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'style-height':
-      var newHeight = to_px(value);
+      var newHeight = appendPx(value);
       element.style.height = newHeight;
       element.parentNode.style.height = newHeight;
 
@@ -171,7 +176,7 @@ designMode.onPropertyChange = function(element, name, value) {
       element.style.backgroundColor = value;
       break;
     case 'fontSize':
-      element.style.fontSize = to_px(value);
+      element.style.fontSize = appendPx(value);
       break;
 
     case 'image':
