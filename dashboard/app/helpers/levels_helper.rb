@@ -74,6 +74,8 @@ module LevelsHelper
   end
 
   def select_and_track_autoplay_video
+    return if @level.try(:autoplay_blocked_by_level?)
+
     seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
