@@ -61,7 +61,7 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
-  this.correspondingNodeID_ = sourceNode.entityID;
+  this.correspondingNodeId_ = sourceNode.entityID;
   this.correspondingNodeUuid_ = sourceNode.uuid;
 
   var levelConfig = NetSimGlobals.getLevelConfig();
@@ -85,8 +85,8 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingNodeID_;
+NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
+  return this.correspondingNodeId_;
 };
 
 /**
@@ -94,7 +94,7 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
  * @returns {boolean} TRUE of this VizElement represents the given Entity.
  */
 NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
-  return this.correspondingNodeID_ === entity.entityID &&
+  return this.correspondingNodeId_ === entity.entityID &&
       this.correspondingNodeUuid_ === entity.uuid;
 };
 
@@ -105,6 +105,6 @@ NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
  */
 NetSimVizSimulationNode.prototype.kill = function () {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
-  this.correspondingNodeID_ = undefined;
+  this.correspondingNodeId_ = undefined;
   this.correspondingNodeUuid_ = undefined;
 };

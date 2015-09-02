@@ -74,7 +74,7 @@ describe("NetSimVisualization", function () {
    */
   var makeRemoteWire = function (localVizNode, remoteVizNode, elements) {
     var newWire;
-    NetSimWire.create(testShard, localVizNode.getCorrespondingEntityID(), remoteVizNode.getCorrespondingEntityID(), function (e, w) {
+    NetSimWire.create(testShard, localVizNode.getCorrespondingEntityId(), remoteVizNode.getCorrespondingEntityId(), function (e, w) {
       newWire = w;
     });
     assert(newWire !== undefined, "Failed to create a remote wire.");
@@ -84,8 +84,8 @@ describe("NetSimVisualization", function () {
   var getVizNodeByEntityID_ = function (_type, id) {
     return this.filter(function(element){
       return element instanceof NetSimVizNode &&
-          element.getCorrespondingEntityID &&
-          element.getCorrespondingEntityID() === id;
+          element.getCorrespondingEntityId &&
+          element.getCorrespondingEntityId() === id;
     })[0];
   };
 
@@ -256,7 +256,7 @@ describe("NetSimVisualization", function () {
 
         // Check that newly created node has correct DNS mode.
         var gammaNode = netSimVis.getElementByEntityID(NetSimVizSimulationNode,
-            newNode.getCorrespondingEntityID());
+            newNode.getCorrespondingEntityId());
         assert.equal(DnsMode.AUTOMATIC, gammaNode.dnsMode_);
       });
 
