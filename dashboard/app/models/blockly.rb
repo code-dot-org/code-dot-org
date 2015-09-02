@@ -237,4 +237,11 @@ class Blockly < Level
       ::CACHE_BUST
     end
   end
+
+  # If true, don't autoplay videos before this level (but do keep them in the
+  # related videos collection).
+  def autoplay_blocked_by_level?
+    # Wrapped since we store our serialized booleans as strings.
+    self.never_autoplay_video == 'true'
+  end
 end
