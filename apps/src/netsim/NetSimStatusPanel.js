@@ -16,8 +16,10 @@
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var i18n = require('./locale');
 var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel.js');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for connection status panel
@@ -76,6 +78,11 @@ NetSimStatusPanel.prototype.render = function (data) {
 
   // Add a button to the panel header
   if (data.isConnected) {
-    this.addButton('Disconnect', this.disconnectCallback_);
+    this.addButton(
+        i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
+        this.disconnectCallback_);
   }
+
+  // Button that takes you to the next level.
+  NetSimUtils.makeContinueButton(this);
 };

@@ -22,6 +22,7 @@ var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for lobby node listing, selection, and connection
@@ -144,12 +145,15 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   this.updateLayout();
 
   // Move the reference area to beneath the instructions
-  this.getBody().find('.instructions').append(referenceArea);
+  this.getBody().find('.reference-area-placeholder').append(referenceArea);
 
   // Teachers and admins get a special "Reset Simulation" button
   if (this.canCurrentUserResetShard()) {
     this.addButton(i18n.shardResetButton(), this.resetShardCallback_);
   }
+
+  // Button that takes you to the next level.
+  NetSimUtils.makeContinueButton(this);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
   this.addRouterButton_.click(this.addRouterCallback_);
