@@ -5,18 +5,19 @@
     - if can? :edit, @level
       |
       = link_to 'edit', edit_level_path(@level)
-      (
-      - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
-        = link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+      - if @level.is_a? Blockly
+        (
+        - if @level.is_a? Artist or @level.is_a? Calc or @level.is_a? Eval
+          = link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
+          |
+        = link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
         |
-      = link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
-      |
-      = link_to 'start', level_edit_blocks_path(@level, :start_blocks)
-      |
-      = link_to 'required', level_edit_blocks_path(@level, :required_blocks)
-      |
-      = link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
-      )
+        = link_to 'start', level_edit_blocks_path(@level, :start_blocks)
+        |
+        = link_to 'required', level_edit_blocks_path(@level, :required_blocks)
+        |
+        = link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+        )
     - else
       |
       (Cannot edit)
