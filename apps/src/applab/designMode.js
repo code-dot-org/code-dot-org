@@ -463,6 +463,7 @@ function makeDraggable (jqueryElements) {
           widthProperty = 'width';
           heightProperty = 'height';
         }
+        elm.trigger("resizing");
         designMode.onPropertyChange(element, widthProperty, element.style.width);
         designMode.onPropertyChange(element, heightProperty, element.style.height);
       },
@@ -503,7 +504,6 @@ function makeDraggable (jqueryElements) {
           top: newTop,
           left: newLeft
         });
-
         designMode.renderDesignWorkspace(elm[0]);
       }
     }).css({
