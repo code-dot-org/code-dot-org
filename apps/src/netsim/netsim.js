@@ -247,7 +247,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUserName_(this.currentUser_);
+    this.initWithUser_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -308,7 +308,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration

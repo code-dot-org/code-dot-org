@@ -10,6 +10,7 @@ var assert = testUtils.assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 
+var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -29,6 +30,10 @@ describe("NetSimVisualization", function () {
   
   var testShard, alphaNode, betaNode, deltaNode, gammaNode, router,
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
+
+  beforeEach(function () {
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
+  });
 
   /**
    * Creates a div placeholder for the NetSimVisualization to render
@@ -89,10 +94,69 @@ describe("NetSimVisualization", function () {
     })[0];
   };
 
+  function createNode(shard, name) {
+    var newNode;
+    NetSimLocalClientNode.create(shard, name, function (e, n) {
+      newNode = n;
+    });
+    assert(newNode !== undefined, "Failed to create a client.");
+    return newNode;
+  }
+
+  it("does not mismap elements across shard reset", function () {
+    // Fake NetSim
+    var netsim = new NetSim();
+    netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
+
+    // Connect to shard
+    testShard = fakeShard();
+    var myNode = createNode(testShard, 'myNode');
+    netSimVis.setShard(testShard);
+    netSimVis.setLocalNode(myNode);
+
+    // Make a couple more nodes, and make sure the visualization picks them up.
+    var node2 = createNode(testShard, 'node2');
+    var node3 = createNode(testShard, 'node3');
+
+    // Check out the list of viz elements
+    assert.equal(3, netSimVis.elements_.length);
+
+    // Introduce a new shard, with new data
+    var testShard2 = fakeShard();
+    var newNode = createNode(testShard2, 'newNode');
+    netSimVis.setShard(testShard2);
+    netSimVis.setLocalNode(newNode);
+    var newNode2 = createNode(testShard2, 'newNode2');
+
+    // Verify: Nodes on new shard have same IDs, different uuids.
+    assert.equal(myNode.entityID, newNode.entityID);
+    assert.notEqual(myNode.uuid, newNode.uuid);
+    assert.equal(node2.entityID, newNode2.entityID);
+    assert.notEqual(node2.uuid, newNode2.uuid);
+
+    // We now have 4 elements; not 5, because the local node is a straight-up
+    // replacement operation, but we haven't cleaned up the other two nodes
+    // from the old shard yet.
+    assert.equal(4, netSimVis.elements_.length);
+    assert.equal(2, netSimVis.elements_.filter(function (element) {
+      return element.isDying();
+    }).length);
+
+    // Render long enough for the tweens to finish and the elements to die
+    netSimVis.render({time: 1});
+    netSimVis.render({time: 1000000});
+    // Tick to clean up the dead nodes
+    netSimVis.tick({time: 1});
+
+    // Only the two live nodes remain
+    assert.equal(2, netSimVis.elements_.length);
+    assert(netSimVis.elements_[0].representsEntity(newNode));
+    assert(netSimVis.elements_[1].representsEntity(newNode2));
+  });
+
   describe("broadcast mode", function () {
 
     beforeEach(function () {
-      NetSimTestUtils.initializeGlobalsToDefaultValues();
       NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
@@ -165,7 +229,6 @@ describe("NetSimVisualization", function () {
   describe("router network with peripheral connection", function () {
 
     beforeEach(function () {
-      NetSimTestUtils.initializeGlobalsToDefaultValues();
       testShard = fakeShard();
 
       alphaNode = makeRemoteClient('alpha');
