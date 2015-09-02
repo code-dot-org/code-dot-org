@@ -20,6 +20,12 @@ var NetSimTable = require('./NetSimTable');
 var PubSubService = require('./PubSubService');
 
 /**
+ * PubSub event key for events invalidating all tables.
+ * @const {string}
+ */
+var ALL_TABLES = 'all_tables';
+
+/**
  * A shard is an isolated, complete simulation state shared by a subset of
  * users.  It's made of a set of storage tables set apart by a particular
  * shard ID in their names.  We use shards to allow students to interact only
@@ -36,8 +42,11 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
 
   /** @type {PubSubService} */
   this.pubSub = PubSubService.create(pubSubConfig);
-  var channel = this.pubSub.subscribe(shardID);
-  channel.subscribe('all_tables', NetSimShard.prototype.onPubSubEvent_.bind(this));
+
+  /** @type {PubSubChannel} */
+  this.pubSubChannel = this.pubSub.subscribe(this.id);
+  this.pubSubChannel.subscribe(ALL_TABLES,
+      NetSimShard.prototype.onPubSubEvent_.bind(this));
 
   /**
    * Collection of client (user) nodes and router nodes on the shard.
@@ -59,7 +68,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * @see {NetSimLocalClientNode}
    * @see {NetSimNodeFactory}
    */
-  this.nodeTable = new NetSimTable(channel, shardID, 'n');
+  this.nodeTable = new NetSimTable(this.pubSubChannel, shardID, 'n');
 
   /**
    * Collection of wires on the shard.  Wires document the connections between
@@ -77,7 +86,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * @type {NetSimTable}
    * @see {NetSimWire}
    */
-  this.wireTable = new NetSimTable(channel, shardID, 'w');
+  this.wireTable = new NetSimTable(this.pubSubChannel, shardID, 'w');
 
   /**
    * Collection of messages (enqueued or in-flight) on the shard.  Messages
@@ -94,7 +103,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * @type {NetSimTable}
    * @see {NetSimMessage}
    */
-  this.messageTable = new NetSimTable(channel, shardID, 'm');
+  this.messageTable = new NetSimTable(this.pubSubChannel, shardID, 'm');
 
   /**
    * Collection of log entries for nodes on the shard.  Logs reference node IDs,
@@ -111,11 +120,25 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * @type {NetSimTable}
    * @see {NetSimLogEntry}
    */
-  this.logTable = new NetSimTable(channel, shardID, 'l', {
+  this.logTable = new NetSimTable(this.pubSubChannel, shardID, 'l', {
     // This is only safe to do because we never update or delete rows in this table.
     useIncrementalRefresh: true
   });
   this.logTable.unsubscribe();
+};
+
+/**
+ * Necessary tear-down for shard.  In particular, disconnecting
+ * from pubsub service.
+ */
+NetSimShard.prototype.disconnect = function () {
+  this.nodeTable.unsubscribe();
+  this.wireTable.unsubscribe();
+  this.messageTable.unsubscribe();
+  this.logTable.unsubscribe();
+  this.pubSubChannel.unsubscribe(ALL_TABLES);
+  this.pubSubChannel = null;
+  this.pubSub.unsubscribe(this.id);
 };
 
 /**
