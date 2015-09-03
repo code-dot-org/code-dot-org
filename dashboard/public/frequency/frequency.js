@@ -254,7 +254,7 @@ BarGraph.prototype.handleSortChange = function(changeEvent) {
     return substMap[d.letter];
   });
 
-  this.postSort();
+  this.reorder();
 };
 
 
@@ -280,52 +280,54 @@ BarGraph.prototype.init = function () {
     .ticks(5, "%");
 
   this.svg = this.container.append("svg")
-    .attr("width", this.getWidth() + this.margin.left + this.margin.right)
-    .attr("height", this.getHeight() + this.margin.top + this.margin.bottom)
+    .attr({
+      "width": this.getWidth() + this.margin.left + this.margin.right,
+      "height": this.getHeight() + this.margin.top + this.margin.bottom
+    })
     .append("g")
     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
   this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
 
   this.svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + this.getHeight() + ")")
+    .attr({
+      "class": "x axis",
+      "transform": "translate(0," + this.getHeight() + ")"
+    })
     .call(this.xAxis)
     .selectAll("text")
-    .attr("class", "english")
-    .attr("y", 28); // this isn't doing anything?
+    .attr({
+      "class": "english",
+      "y": 28 // this isn't doing anything?
+    });
 
   var userLetters = this.svg.append("g")
-    .attr("class", "x1 axis")
-    .attr("transform", "translate(" + this.userLetterScale.rangeBand()/2 + "," + (10 + this.getHeight()) + ")")
+    .attr({
+      "class": "x1 axis",
+      "transform": "translate(" + this.userLetterScale.rangeBand()/2 + "," + (10 + this.getHeight()) + ")"
+    })
     .selectAll('g')
     .data(this.getZippedData())
     .enter().append('g')
     .attr("class", "dragletter");
 
   userLetters.append("rect")
-    .attr("height", 18)
-    .attr("width", this.userLetterScale.rangeBand())
-    .attr("x", -(this.userLetterScale.rangeBand()/2))
-    .attr("y", 8);
+    .attr({
+      "height": 18,
+      "width": this.userLetterScale.rangeBand(),
+      "x": -(this.userLetterScale.rangeBand()/2),
+      "y": 8
+    });
 
-  userLetters.append("line")
-    .attr("x1", -3)
-    .attr("x2", -3)
-    .attr("y1", 20)
-    .attr("y2", 25);
-
-  userLetters.append("line")
-    .attr("x1", 0)
-    .attr("x2", 0)
-    .attr("y1", 20)
-    .attr("y2", 25);
-
-  userLetters.append("line")
-    .attr("x1", 3)
-    .attr("x2", 3)
-    .attr("y1", 20)
-    .attr("y2", 25);
+  [-3, 0, 3].forEach(function(offset) {
+    userLetters.append("line")
+      .attr({
+        "x1": offset,
+        "x2": offset,
+        "y1": 20,
+        "y2": 25
+      });
+  });
 
   userLetters.append("text")
     .attr("dy", ".71em")
@@ -369,8 +371,7 @@ BarGraph.prototype.init = function () {
 
   drag.on('dragend', function(){
     this.user_data = tempdata;
-    this.postSort();
-    this.render();
+    this.reorder();
   }.bind(this));
 
   drag.on('drag', function(d, i) {

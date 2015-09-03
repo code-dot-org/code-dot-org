@@ -1,14 +1,8 @@
 /* D3 Stuff */
 
-
-.bar {
-  fill: steelblue;
-}
-
 .english {
   fill: blue;
 }
-
 .letter:hover rect.english {
   fill: darkblue;
 }
@@ -25,14 +19,19 @@
   right: 10px;
 }
 
-.dragletter {
+.axis .dragletter {
   cursor: move;
 }
-.dragletter rect {
+
+.axis .dragletter rect {
   fill: #FFB40F;
   fill-opacity: 0.5;
 }
-.dragletter line {
+.axis .dragletter rect:hover {
+  fill: darkorange;
+  fill-opacity: 1;
+}
+.axis .dragletter line {
   stroke: orange;
 }
 
@@ -42,12 +41,8 @@ rect {
   transition-timing-function: ease-out;
 }
 
-.btn-group > .btn + .btn {
-  margin-left: -5px;
-}
-
-.bar:hover {
-  fill: brown;
+.btn-group .btn {
+  margin: 0;
 }
 
 .axis {
@@ -70,44 +65,13 @@ rect {
 }
 
 
-table {
-    margin-left: 10px;
-    width: 266px;
-    float: left;
-    background-color: #00AADD;
-    padding: 5px;
-}
-
-canvas {
-  width: 100%;
-  height: 100%;
-}
-
-td {
-    font-family: sans-serif;
-    font-size: 10px;
-    text-align: center;
-}
-
-#barTD {
-    background-color: #00CCFF;
-    border: solid 1px #00AADD;
-    border-left: solid 0px;
-    padding-bottom: 5px;
-}
-
-.headings {
-    width: 266px;
-    float: left;
-}
-
 .text-container {
     font-family: monospace;
     font-size: 12px;
     width: 100%;
 }
 
-#output {
+.text-container#output {
     border: solid 1px;
     height: 300px;
     overflow: auto;
@@ -115,49 +79,7 @@ td {
     word-wrap: normal;
 }
 
-#input {
-    /*width: 266px;*/
+.text-container#input {
     min-height: 300px;
 }
-
-#tableDiv {
-    height: 300px;
-    vertical-align: bottom;
-    float: left;
-    font-family: sans-serif;
-    font-size: 10px;
-}
-
-.pctRow {
-    font-size: 6px;
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 3px;
-    padding-left: 1px;
-}
-
-.barGraph {
-    color: #FFFFFF;
-    background-color: #006699;
-    padding: 1px;
-    padding-bottom: 10px;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #000000;
-    margin-top: 2px;
-    width: 6px;
-    vertical-align: text-top;
-    margin: auto;
-    text-align: center;
-    font-size: 7px;
-}
-
-input[type="text"] {
-    width: 12px;
-    font-size: 9px;
-    border: solid 1px #00AADD;
-}
-
-#container {
-    height: 310px;
-}
-           
 
