@@ -644,16 +644,8 @@ NetSimRouterNode.prototype.getNodeType = function () {
 /** @inheritdoc */
 NetSimRouterNode.prototype.getStatus = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
-
-  // TODO: Change this to use getConnections since it uses the cache now.
-
-  // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAll();
-  var incomingWireRows = cachedWireRows.filter(function (wireRow) {
-    return wireRow.remoteNodeID === this.entityID;
-  }, this);
-
-  if (incomingWireRows.length === 0) {
+  var connectionCount = this.countConnections();
+  if (connectionCount === 0) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusNoConnections({
         maximumClients: MAX_CLIENT_CONNECTIONS
@@ -665,18 +657,8 @@ NetSimRouterNode.prototype.getStatus = function () {
     });
   }
 
-  var cachedNodeRows = this.shard_.nodeTable.readAll();
-  var connectedNodeNames = incomingWireRows.map(function (wireRow) {
-    var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
-      return nodeRow.id === wireRow.localNodeID;
-    });
-    if (nodeRow) {
-      return nodeRow.name;
-    }
-    return i18n.unknownNode();
-  }).join(', ');
-
-  if (incomingWireRows.length >= MAX_CLIENT_CONNECTIONS) {
+  var connectedNodeNames = this.getConnectedNodeNames_().join(', ');
+  if (connectionCount >= MAX_CLIENT_CONNECTIONS) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusFull({
         connectedClients: connectedNodeNames
@@ -691,14 +673,32 @@ NetSimRouterNode.prototype.getStatus = function () {
   if (levelConfig.broadcastMode) {
     return i18n.roomStatus({
       connectedClients: connectedNodeNames,
-      remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
+      remainingSpace: (MAX_CLIENT_CONNECTIONS - connectionCount)
     });
   }
 
   return i18n.routerStatus({
     connectedClients: connectedNodeNames,
-    remainingSpace: (MAX_CLIENT_CONNECTIONS - incomingWireRows.length)
+    remainingSpace: (MAX_CLIENT_CONNECTIONS - connectionCount)
   });
+};
+
+/**
+ * @returns {string[]} the names of all the nodes connected to this router.
+ * @private
+ */
+NetSimRouterNode.prototype.getConnectedNodeNames_ = function () {
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
+  return this.getConnections()
+      .map(function (wire) {
+        var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
+          return nodeRow.id === wire.localNodeID;
+        });
+        if (nodeRow) {
+          return nodeRow.name;
+        }
+        return i18n.unknownNode();
+      });
 };
 
 /** @inheritdoc */
