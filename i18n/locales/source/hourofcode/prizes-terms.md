@@ -1,8 +1,10 @@
 ---
-title: Prizes Terms
+title: <%= hoc_s(:title_prizes_terms) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
 
 # Prizes - terms and conditions
 
@@ -29,3 +31,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>
