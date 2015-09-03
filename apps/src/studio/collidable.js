@@ -119,7 +119,7 @@ function getRandomInt(min, max) {
 
 Collidable.prototype.setActivity = function(type) {
   this.activity = type;
-}
+};
 
 
 /**

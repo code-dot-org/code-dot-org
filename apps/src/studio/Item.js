@@ -55,6 +55,8 @@ Item.__resetIds = function () {
 Item.prototype.createElement = function (parentElement) {
   var nextId = (uniqueId++);
 
+  var numFacingAngles = 8;
+
   // create our clipping path/rect
   this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'item_clippath_' + nextId;
@@ -71,7 +73,7 @@ Item.prototype.createElement = function (parentElement) {
     this.image);
   this.element.setAttribute('id', itemId);
   this.element.setAttribute('height', this.height * this.frames);
-  this.element.setAttribute('width', this.width * 8);
+  this.element.setAttribute('width', this.width * numFacingAngles);
   parentElement.appendChild(this.element);
 
   this.element.setAttribute('clip-path', 'url(#' + clipId + ')');
