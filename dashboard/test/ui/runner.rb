@@ -149,7 +149,7 @@ end
 
 def format_duration(total_seconds)
   total_seconds = total_seconds.to_i
-  minutes = (seconds / 60).to_i
+  minutes = (total_seconds / 60).to_i
   seconds = total_seconds - (minutes * 60)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
