@@ -135,6 +135,13 @@ exports.setItemAction = function(id, itemIndex, type) {
   });
 };
 
+exports.setItemActivity = function(id, itemIndex, type) {
+  Studio.queueCmd(id, 'setItemActivity', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
 exports.showDebugInfo = function(value) {
   Studio.queueCmd(null, 'showDebugInfo', {
     'value': value

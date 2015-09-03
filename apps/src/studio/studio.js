@@ -99,7 +99,6 @@ var level;
 var skin;
 
 var background = null;
-var walls = null;
 
 /**
  * Milliseconds between each animation frame.
@@ -170,6 +169,7 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
+  Studio.walls = null;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -1192,7 +1192,8 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
-      if (Studio.map[row][col] & SquareType.WALL || (walls !== null && skin[walls][row][col])) {
+      if ((Studio.map[row][col] & SquareType.WALL) || 
+          (Studio.walls !== null && skin[Studio.walls][row][col])) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -2419,7 +2420,7 @@ Studio.drawMapTiles = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL || (walls !== null && skin[walls][row][col])) {
+      if (mapVal & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col])) {
         Studio.drawWallTile(svg, row, col);
       }
     }
@@ -2780,6 +2781,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setItemAction(cmd.opts);
       break;
+    case 'setItemActivity':
+      studioApp.highlight(cmd.id);
+      Studio.setItemActivity(cmd.opts);
+      break;
     case 'showDebugInfo':
       studioApp.highlight(cmd.id);
       Studio.showDebugInfo(cmd.opts);
@@ -2874,7 +2879,19 @@ Studio.setItemAction = function (opts) {
   }
 
   if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
-      item.roamGrid(opts.type);
+    item.roamGrid(opts.type);
+  }
+};
+
+Studio.setItemActivity = function (opts) {
+  var item = Studio.items[opts.itemIndex];
+
+  if (!item) {
+    return;
+  }
+
+  if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+    item.setActivity(opts.type);
   }
 };
 
@@ -3013,11 +3030,11 @@ Studio.setWalls = function (opts) {
     return;
   }
 
-  if (opts.value === walls) {
+  if (opts.value === Studio.walls) {
     return;
   }
 
-  walls = opts.value;
+  Studio.walls = opts.value;
 
   // Draw the tiles (again) that we know which background we're using.
   $(".tile_clip").remove();
@@ -3556,8 +3573,12 @@ function executeItemCollision(src, target) {
 }
 
 function executeItemUpdate(item, itemIndex) {
+  // Option 1: student provided
   var prefix = 'whenItemUpdated-' + item.className;
   callHandler(prefix, undefined, [itemIndex]);
+
+  // Option 2: we just do it ourselves
+  item.roamGrid("roamGrid");
 }
 
 /**
@@ -3668,6 +3689,10 @@ Studio.getPlayspaceBoundaries = function(sprite)
   return boundaries;
 };
 
+Studio.getSkin = function()
+{
+  return skin;
+}
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
