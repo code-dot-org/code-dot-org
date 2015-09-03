@@ -1,4 +1,10 @@
 name 'U2L17 Assessment 2'
 title 'Assessment Question 2'
-content1 'How are computationally hard problems related to encryption?'
+content1 'What strategies do people use to solve large computationally-hard problems?'
 
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- They use approximation algorithms which usually involve heuristics.
+MARKDOWN
