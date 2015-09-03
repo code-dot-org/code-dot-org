@@ -3687,8 +3687,7 @@ Studio.getPlayspaceBoundaries = function(sprite)
   return boundaries;
 };
 
-Studio.getSkin = function()
-{
+Studio.getSkin = function() {
   return skin;
 };
 
