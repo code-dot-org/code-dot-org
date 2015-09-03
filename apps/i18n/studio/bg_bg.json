@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "докосва горния ръб",
   "whenUp": "когато стрелка нагоре",
   "whenUpTooltip": "Изпълнява действията по-долу когато е натисната стрелка нагоре.",
-  "yes": "Да"
+  "yes": "Да",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }
