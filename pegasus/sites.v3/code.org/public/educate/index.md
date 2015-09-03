@@ -97,6 +97,8 @@ Click below for links to other resources for educators interested in teaching co
 
 ## Our CS Curriculum
 
+##### *"Computer science is the study of computers and algorithmic processes, including their principles, their hardware and software designs, their applications, and their impact on society."* - [CSTA, 2011](http://csta.acm.org/Curriculum/sub/K12Standards.html)
+ 
 ### Elementary school (Grades K-5)
 
 [Courses for elementary school](/educate/k5/)
@@ -122,7 +124,7 @@ Explore and develop complex scientific models through agent-based programming
 <br/>
 A high school course designed to broaden participation in computer science
 
-[Computer Science Principles (future AP)](/educate/csp)
+[Computer Science Principles](/educate/csp) (upcoming AP course)
 <br/>
 A course teaching a wide range of computer science topics, including programming in JavaScript
 

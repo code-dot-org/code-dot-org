@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Can you help the Bee collect the rest of the honey using this for loop? ",
+    "instructions": "Now we need to move forward \"counter\" times, then get nectar \"counter\" times.  Can you use two \"repeat\" loops to solve this challenge?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -17,7 +17,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": "1",
     "nectar_goal": "6",
     "flower_type": "redWithNectar",
     "contract_highlight": "false",
@@ -28,7 +28,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null
+    "ideal": "11",
+    "markdown_instructions": "Now we need to `move forward` `counter` times, then `get nectar` `counter` times.  Can you use two `repeat` loops to solve this challenge?"
   }
 }]]></config>
   <blocks>
@@ -54,24 +55,21 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="controls_repeat_ext" inline="true">
-                      <value name="TIMES">
-                        <block type="variables_get">
-                          <title name="VAR">counter</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">counter</title>
                     </block>
-                  </next>
+                  </value>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
                 </block>
               </statement>
             </block>
           </next>
         </block>
+        <block type="controls_repeat_ext" inline="true"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -83,19 +81,16 @@
           <title name="VAR">counter</title>
         </block>
         <block type="controls_repeat_ext" inline="true"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_nectar"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="controls_repeat_ext" inline="true">
-          <statement name="DO">
-            <block type="maze_moveForward"/>
-          </statement>
-        </block>
-        <block type="controls_repeat_ext" inline="true">
-          <statement name="DO">
-            <block type="maze_nectar"/>
-          </statement>
+        <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
         </block>
       </xml>
     </required_blocks>

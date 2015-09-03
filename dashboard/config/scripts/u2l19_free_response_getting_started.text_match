@@ -1,6 +1,12 @@
 name 'U2L19 Free Response Getting Started'
-title 'Public Key Crypto: Getting Started'
+title 'Public Key Crypto: The Modulo Operation'
 
 markdown <<MARKDOWN
-What information, sent or stored on the Internet, do you think should be the highest priority in protecting?
+Explain in your own words what the modulo operation does.  You may use the analogy of a clock in your answer if you like.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- The modulo operation returns the remainder in integer division. It is sometimes called clock arithmetic. If you have a clock with the numbers 1-12 on its face and you want to move the hour hand around the clock to count up to some number of hours the hour hand will always be pointing to some number 1-12, no matter how many hours have passed. 
 MARKDOWN

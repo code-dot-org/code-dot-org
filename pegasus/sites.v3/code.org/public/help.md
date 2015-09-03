@@ -6,7 +6,7 @@ title: How to help
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.
 
-[<button>Join us</button>](http://code.org/learn)
+[<button>Join us</button>](https://hourofcode.com)
 
 ## Make a generous donation
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.

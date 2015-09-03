@@ -49,13 +49,15 @@ Quarter 4: Saturday, April 23, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**Location**
 
 Gwinnett Technical College<br/>
 Building 100<br/>
 Room 705 <br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043<br/>
+
+Parking is free and located in front of the building. See  a [Campus Map here.](https://drive.google.com/a/code.org/file/d/0BxCV_RYUSA1zSlREVTB3TjM3OVU/view?usp=sharing)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -108,7 +110,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Gwinnett Technical College<br/>
+Building 100<br/>
+Room 106 <br/>
+5150 Sugarloaf Parkway<br/>
+Lawrenceville, GA 30043
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -157,7 +163,7 @@ Semester 2: Saturday, March 5, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 12th Location**
+**Location**
 
 Gwinnett Technical College<br/>
 Building 100<br/>

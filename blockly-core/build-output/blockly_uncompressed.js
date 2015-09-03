@@ -23898,6 +23898,20 @@ Blockly.makeTestMouseEvent = function(eventName) {
   event.initMouseEvent(eventName, true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
   return event
 };
+Blockly.findEmptyContainerBlock = function(blocks) {
+  for(var i = 0;i < blocks.length;i++) {
+    var block = blocks[i];
+    if(Blockly.findEmptyInput(block, Blockly.NEXT_STATEMENT)) {
+      return block
+    }
+  }
+  return null
+};
+Blockly.findEmptyInput = function(block, inputType) {
+  return goog.array.find(block.inputList, function(input) {
+    return input.type === inputType && !input.connection.targetConnection
+  })
+};
 goog.provide("Blockly.FieldImageDropdown");
 goog.require("Blockly.Field");
 goog.require("Blockly.FieldRectangularDropdown");

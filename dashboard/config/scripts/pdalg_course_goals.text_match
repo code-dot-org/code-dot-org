@@ -5,6 +5,8 @@ success_title "Awesome!"
 success_body " "
 
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
 ***Now that you've learned more about the CS in Algebra program of PD and curriculum, let's consider your goals***
 <br><br>
 What are your goals for your CS in Algebra class? How do you you see it integrating into your class, and what do you hope that you and your students get out of the experience?

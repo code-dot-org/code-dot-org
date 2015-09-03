@@ -27,25 +27,33 @@ Milestone Complete!
 <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Teachers from Broward, Florida will attend PD in Broward. Please visit the [Broward CSP page](/educate/pd/15-16/broward)  for your workshop dates and details.
+
+All teachers from Boston, New York, and Montogomery County, MD will travel to the PD location to attend the workshop in-person. 
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 17, 2015
+Quarter 1: Saturday, October 17, 2015<br/>
+This workshop will be in New York.
 
-Quarter 2: Saturday, December 5, 2015
+Quarter 2: Saturday, December 5, 2015<br/>
+This workshop will be in Montgomery County, Maryland.
 
-Quarter 3: Saturday, February 27, 2016
+Quarter 3: Saturday, February 27, 2016<br/>
+This workshop will be in New York.
 
-Quarter 4: Saturday, March 26, 2016
+Quarter 4: TBA<br/>
+This workshop will be in Montgomery County, Maryland.
 
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+
+**October 17th Location**
 
 TBD
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -176,9 +184,6 @@ Snacks
 <br/>
 Water
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
 
 [**Back to the top**](#top)
 

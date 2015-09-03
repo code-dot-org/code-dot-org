@@ -162,6 +162,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
   end
 
+  def test_get_400_on_inserting_duplicate_wire
+    # The first one works
+    create_wire(1, 2)
+    assert_equal 201, @net_sim_api.last_response.status, "Wire creation request failed"
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Initial wire was not created"
+
+    create_wire(1, 2)
+    assert_equal 400, @net_sim_api.last_response.status, "Duplicate wire request did not fail"
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Duplicate wire was created"
+  end
+
   def test_get_400_on_bad_json_update
     # Create a record correctly
     record_create_response = create_record({name: 'charles', age: 7, male: false})

@@ -180,6 +180,7 @@
   homepage_action_text_learn: 学習を始める
   homepage_action_text_signpetition: 請願書に署名します。
   homepage_signpetition_dropdown: 請願書に署名します &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.orgとCollege Boardはコンピュータ・サイエンス分野での人材の多様性を向上するために協力して活動していきます。
   homepage_banner_text_link: 詳しく
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
@@ -457,6 +458,8 @@
   educator_notes: 教育者ノート
   how_to_teach_hoc: 「コードの時間」の教え方
   more_resources_educators: 先生方と教育者向け資料
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: 参加者
   teachers_notes: 教師のノート
   teachers_notes_hoc: 先生方：先生用の重要事項をお読みください

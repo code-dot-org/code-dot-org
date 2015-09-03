@@ -1,18 +1,5 @@
-:css
-  textarea {
-    width: 100%
-  }
-
-  button {
-    font-size: 100%;
-  }
-
 .field
   = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
-.field
-  = f.label :instructions
-  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
-= render partial: 'levels/editors/md_instructions', locals: {f: f}
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
@@ -23,6 +10,9 @@
 .field
   = f.label :skip_instructions_popup, 'Skip instructions popup'
   = boolean_check_box f, :skip_instructions_popup
+.field
+  = f.label :never_autoplay_video, 'Never autoplay video'
+  = boolean_check_box f, :never_autoplay_video
 .field
   = f.label :use_modal_function_editor, 'Use modal function editor'
   = boolean_check_box f, :use_modal_function_editor

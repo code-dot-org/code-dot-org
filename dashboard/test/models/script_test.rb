@@ -203,7 +203,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'scripts are hidden or not' do
-    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1}.
+    visible_scripts = %w{20-hour flappy playlab infinity artist course1 course2 course3 course4 frozen hourofcode algebra cspunit1 cspunit2}.
       map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
@@ -235,8 +235,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_equal nil, Script.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1_cropped.jpg', Script.find_by_name('course1').banner_image
-    assert_equal 'banner_course2_cropped.jpg', Script.find_by_name('course2').banner_image
+    assert_equal 'banner_course1_cropped.png', Script.find_by_name('course1').banner_image
+    assert_equal 'banner_course2_cropped.png', Script.find_by_name('course2').banner_image
   end
 
   test 'logo image' do

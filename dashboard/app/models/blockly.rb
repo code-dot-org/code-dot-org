@@ -3,14 +3,13 @@ class Blockly < Level
   serialized_attrs %w(
     level_url
     skin
-    instructions
-    markdown_instructions
     start_blocks
     toolbox_blocks
     required_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
+    never_autoplay_video
     scrollbars
     ideal
     min_workspace_height
@@ -237,5 +236,12 @@ class Blockly < Level
     else
       ::CACHE_BUST
     end
+  end
+
+  # If true, don't autoplay videos before this level (but do keep them in the
+  # related videos collection).
+  def autoplay_blocked_by_level?
+    # Wrapped since we store our serialized booleans as strings.
+    self.never_autoplay_video == 'true'
   end
 end

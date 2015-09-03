@@ -242,6 +242,8 @@ class NetSimApi < Sinatra::Base
     case table_name
     when TABLE_NAMES[:message]
       message_valid?(shard_id, value)
+    when TABLE_NAMES[:wire]
+      wire_valid?(shard_id, value)
     else
       value.is_a?(Hash)
     end
@@ -266,6 +268,22 @@ class NetSimApi < Sinatra::Base
     message_valid = true
 
     node_exists && message_valid
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] wire - The wire we're validating.
+  # @return [Boolean] True if and only if the wire is a Hash and does not
+  #         duplicate an existing wire's localNodeID/remoteNodeID pair.
+  def wire_valid?(shard_id, wire)
+    false unless wire.is_a?(Hash)
+
+    # Check for a collision of local/remote node IDs.
+    wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
+      stored_wire['localNodeID'] == wire['localNodeID'] and
+          stored_wire['remoteNodeID'] == wire['remoteNodeID']
+    end
+
+    not wire_already_exists
   end
 
   #
