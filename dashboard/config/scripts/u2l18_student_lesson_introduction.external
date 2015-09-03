@@ -32,3 +32,10 @@ one-way function: a process that is easy to follow for any given input, but yiel
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1UthdL-2xJtyc2aIPf-IP5GwD1GRoOVeq9LjsoxpL8kU" target="_blank">KEY: Worksheet - Wireless Hotspot Problem</a>
+
+* <a href="https://docs.google.com/document/d/1DH5gNbjnRREQA6fOnNYvlh5V6B_9jhEkxLYDXx1hk_Y" target="_blank">KEY: Worksheet - Make Your Own Wireless Hotspot Problem</a>
+
+MARKDOWN

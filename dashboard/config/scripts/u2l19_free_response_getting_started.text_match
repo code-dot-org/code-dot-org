@@ -6,5 +6,7 @@ Explain in your own words what the modulo operation does.  You may use the analo
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+Answer:
 
+- The modulo operation returns the remainder in integer division. It is sometimes called clock arithmetic. If you have a clock with the numbers 1-12 on its face and you want to move the hour hand around the clock to count up to some number of hours the hour hand will always be pointing to some number 1-12, no matter how many hours have passed. 
 MARKDOWN

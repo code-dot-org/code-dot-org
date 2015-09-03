@@ -36,11 +36,24 @@ Private key: the complementary key to a public key that is used to decrypt a mes
 
 # Resources
 
+* Activity Guide: <a href="https://docs.google.com/document/d/1YHlfPoCagPufJWVbwGczxU5IyWrK16qvBveYLzU58DI" target="_blank">Worksheet - Bob's Public Key/Encryption Algorithm</a> 
+
+- Stuff below is old?? junk?? 
+
 * Activity Guide: <a href="https://docs.google.com/document/d/1rcXn-3B0JWY3ifeZkhVB3OFHNYClsY80LCIVIOOpExs" target="_blank">Public Key Crytography</a>
 * Widget: <a href="https://studio.code.org/projects/applab/eM58hKG7dxjrupZH1Pm91Q" target="_top">Public Key Crypto Widget</a>
 * Optional: <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw" target="_top">Handout: How Does Public Key Crypto Really Work?</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1LkJp4qO8r5rY8qiI5mpwQ72C0VSahbgHETVKyJdRmDg" target="_blank">KEY: Worksheet -  Bob’s Public Key/Encryption Algorithm</a>
+
+
+
 
 
 MARKDOWN

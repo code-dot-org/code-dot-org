@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Write the turnAround() function and use it to make the turtle move as depicted.",
+    "instructions": "Declare a function called turnAround() and call it to make the turtle move as depicted. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -54,7 +54,11 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "encrypted_examples": "Zh3nyAa1UKqAsQPzzZ3N1mjD79CuHcnWv6mQpkQzmTqiwCZlNlNwCD54Kume\n32n2\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "markdown_instructions": "###Challenge\r\n**Declare** a function called `turnAround()` which turns the turtle around and moves the turtle forward, as shown below. Once you've declared the function **call** it to make sure it works as you expect.\r\n\r\n![](https://levelbuilder-studio.code.org/script_assets/k_1_images/instruction_gifs/csp/U3L03-turnAndDown.gif)"
   }
 }]]></config>
   <blocks/>
