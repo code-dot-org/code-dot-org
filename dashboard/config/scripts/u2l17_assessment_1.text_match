@@ -2,3 +2,10 @@ name 'U2L17 Assessment 1'
 title 'Assessment Question 1'
 content1 'Describe what it means for a problem to be “computationally hard.”'
 
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but should include these concepts:
+
+- The algorithm to solve a computationally-hard problem must involve exponential growth; making a problem one unit larger (than another) multiplies the number of answers to check by n.
+- Solving the problem requires unreasonable computing power or an unreasonable amount of time.
+MARKDOWN
