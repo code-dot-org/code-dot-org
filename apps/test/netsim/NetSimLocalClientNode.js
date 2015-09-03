@@ -76,7 +76,7 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testRemoteNode.connectToNode(testLocalNode, function () {});
 
-      localWireRow = testLocalNode.myWire.buildRow();
+      localWireRow = testLocalNode.getOutgoingWire().buildRow();
       localWireRow.id = 1;
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
       remoteWireRow.id = 2;
@@ -94,7 +94,7 @@ describe("NetSimLocalClientNode", function () {
       // connection should be broken
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.myWire, null);
+      assertEqual(testLocalNode.getOutgoingWire(), null);
       assertEqual(testLocalNode.myRemoteClient, null);
 
     });
@@ -110,14 +110,14 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testRemoteNode.connectToNode(testThirdNode, function () {});
 
-      localWireRow = testLocalNode.myWire.buildRow();
+      localWireRow = testLocalNode.getOutgoingWire().buildRow();
       localWireRow.id = 1;
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
       remoteWireRow.id = 2;
 
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
       testLocalNode.onWireTableChange_();
-      var newLocalWireRow = testLocalNode.myWire.buildRow();
+      var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
       newLocalWireRow.id = 1;
       assertEqual(newLocalWireRow, localWireRow);
       assertEqual(testLocalNode.myRemoteClient, null);
@@ -128,7 +128,7 @@ describe("NetSimLocalClientNode", function () {
       thirdWireRow.id = 3;
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.myWire, null);
+      assertEqual(testLocalNode.getOutgoingWire(), null);
 
     });
   });
