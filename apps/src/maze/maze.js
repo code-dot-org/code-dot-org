@@ -1171,7 +1171,7 @@ Maze.scheduleAnimations = function (singleStep) {
 
     var command = actions[index] && actions[index].command;
     var timeModifier = (skin.actionSpeedScale && skin.actionSpeedScale[command]) || 1;
-    var timeForThisAction = timePerAction * timeModifier;
+    var timeForThisAction = Math.round(timePerAction * timeModifier);
 
     timeoutList.setTimeout(function() {
       scheduleSingleAnimation(index + 1);
