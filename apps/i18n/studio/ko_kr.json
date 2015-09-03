@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "화면 천장에 닿으면",
   "whenUp": "위쪽 방향키를 누르면",
   "whenUpTooltip": "위쪽 방향키를 누르면 아래의 동작을 실행합니다.",
-  "yes": "예"
+  "yes": "예",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }

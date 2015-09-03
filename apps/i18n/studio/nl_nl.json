@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "raakt bovenrand",
   "whenUp": "als pijltje naar boven",
   "whenUpTooltip": "Voer de acties hieronder uit als pijltje naar boven wordt ingedrukt.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }
