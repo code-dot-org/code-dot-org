@@ -48,13 +48,19 @@ describe("NetSimWire", function () {
     it ("adds an entry to the wire table", function () {
       assertTableSize(testShard, 'wireTable', 0);
 
-      NetSimWire.create(testShard, 0, 0, function () {});
+      NetSimWire.create(testShard, {
+        localNodeID: 0,
+        remoteNodeID: 0
+      }, function () {});
 
       assertTableSize(testShard, 'wireTable', 1);
     });
 
     it ("immediately initializes entry with endpoints", function () {
-      NetSimWire.create(testShard, 1, 2, function () {});
+      NetSimWire.create(testShard, {
+        localNodeID: 1,
+        remoteNodeID: 2
+      }, function () {});
 
       wireTable.refresh(function (err, rows) {
         assertEqual(rows[0].localNodeID, 1);
@@ -63,7 +69,10 @@ describe("NetSimWire", function () {
     });
 
     it ("Returns a NetSimWire to its callback", function () {
-      NetSimWire.create(testShard, 0, 0, function (err, result) {
+      NetSimWire.create(testShard, {
+        localNodeID: 0,
+        remoteNodeID: 0
+      }, function (err, result) {
         assert(result instanceof NetSimWire, "Result is a NetSimWire");
       });
     });

@@ -379,18 +379,30 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("returns wires that have a remote end attached to the router", function () {
-      NetSimWire.create(testShard, 0, routerA.entityID, function () {});
+      NetSimWire.create(testShard, {
+            localNodeID: 0,
+            remoteNodeID: routerA.entityID
+          }, function () {});
       assertEqual(1, routerA.getConnections().length);
     });
 
     it ("returns NetSimWire objects", function () {
-      NetSimWire.create(testShard, 0, routerA.entityID, function () {});
+      NetSimWire.create(testShard, {
+            localNodeID: 0,
+            remoteNodeID: routerA.entityID
+          }, function () {});
       assert(routerA.getConnections()[0] instanceof NetSimWire, "Got a NetSimWire back");
     });
 
     it ("skips wires that aren't connected to the router", function () {
-      NetSimWire.create(testShard, 0, routerA.entityID, function () {});
-      NetSimWire.create(testShard, 0, routerA.entityID + 1, function () {});
+      NetSimWire.create(testShard, {
+            localNodeID: 0,
+            remoteNodeID: routerA.entityID
+          }, function () {});
+      NetSimWire.create(testShard, {
+            localNodeID: 0,
+            remoteNodeID: routerA.entityID
+          } + 1, function () {});
 
       // Only get the one wire back.
       assertEqual(1, routerA.getConnections().length);
@@ -409,7 +421,11 @@ describe("NetSimRouterNode", function () {
       for (var wireID = routerA.entityID + 1;
            wireID < routerA.entityID + CONNECTION_LIMIT + 1;
            wireID++) {
-        NetSimWire.create(testShard, wireID, routerA.entityID, function () {});
+        NetSimWire.create(testShard, {
+          localNodeID: wireID,
+          remoteNodeID: routerA.entityID
+        }, function () {
+        });
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT);
 
@@ -425,7 +441,11 @@ describe("NetSimRouterNode", function () {
       for (var wireID = routerA.entityID + 1;
            wireID < routerA.entityID + CONNECTION_LIMIT + 2;
            wireID++) {
-        NetSimWire.create(testShard, wireID, routerA.entityID, function () {});
+        NetSimWire.create(testShard, {
+          localNodeID: wireID,
+          remoteNodeID: routerA.entityID
+        }, function () {
+        });
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT + 1);
 
@@ -443,8 +463,10 @@ describe("NetSimRouterNode", function () {
 
     function makeWire(nodeIDOffset) {
       var newWire;
-      NetSimWire.create(testShard, routerA.entityID + nodeIDOffset,
-          routerA.entityID, function (e, w) {
+      NetSimWire.create(testShard, {
+        localNodeID: routerA.entityID + nodeIDOffset,
+        remoteNodeID: routerA.entityID
+      }, function (e, w) {
         newWire = w;
       });
       return newWire;

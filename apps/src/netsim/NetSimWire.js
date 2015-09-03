@@ -21,10 +21,10 @@ var NetSimEntity = require('./NetSimEntity');
  * @typedef {Object} WireRow
  * @property {!number} localNodeID
  * @property {!number} remoteNodeID
- * @property {!string} localAddress
- * @property {!string} remoteAddress
- * @property {!string} localHostname
- * @property {!string} remoteHostname
+ * @property {string} localAddress
+ * @property {string} remoteAddress
+ * @property {string} localHostname
+ * @property {string} remoteHostname
  */
 
 /**
@@ -74,15 +74,12 @@ NetSimWire.inherits(NetSimEntity);
 /**
  * Static async creation method.  See NetSimEntity.create().
  * @param {!NetSimShard} shard
- * @param {!number} localNodeID
- * @param {!number} remoteNodeID
+ * @param {!WireRow} initialRow
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (shard, localNodeID, remoteNodeID, onComplete) {
-  var entity = new NetSimWire(shard);
-  entity.localNodeID = localNodeID;
-  entity.remoteNodeID = remoteNodeID;
+NetSimWire.create = function (shard, initialRow, onComplete) {
+  var entity = new NetSimWire(shard, initialRow);
   entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
