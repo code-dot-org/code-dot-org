@@ -1018,8 +1018,9 @@ NetSim.prototype.render = function () {
   if (this.myNode) {
     clientStatus = 'In Lobby';
     myHostname = this.myNode.getHostname();
-    if (this.myNode.myWire) {
-      myAddress = this.myNode.myWire.localAddress;
+    var myWire = this.myNode.getOutgoingWire();
+    if (myWire) {
+      myAddress = myWire.localAddress;
     }
   }
 
