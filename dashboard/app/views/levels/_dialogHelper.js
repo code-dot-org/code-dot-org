@@ -26,13 +26,20 @@ window.dashboard.dialog = (function () {
     if (dialogType === "error") {
       adjustScroll();
     }
+
+    if (dialogType === "instructions") {
+      // Momentarily flash the instruction block white then back to regular.
+      $('#bubble').css({backgroundColor: "rgba(255,255,255,1)"})
+          .delay(500)
+          .animate({backgroundColor: "rgba(0,0,0,0)"}, 1000);
+    }
   }
 
   function showDialog(type, callback) {
     dialogType = type;
 
     // Use our prefabricated dialog content.
-    var content = document.querySelector("#" + type + "-dialogcontent");
+    var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
     var dialog = new Dialog({ body: content, onHidden: dialogHidden });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
@@ -46,15 +53,19 @@ window.dashboard.dialog = (function () {
       dialog.hide();
     });
 
-    dialog.show();
+    if (dialogType === "instructions") {
+      dialog.show({hideOptions: {endTarget: "#bubble"}});
+    } else {
+      dialog.show();
+    }
   }
 
   var showStartOverDialog = function (callback) {
     showDialog('startover', callback);
   };
 
-  var showInstructionsDialog = function (callback) {
-    showDialog('instructions', callback);
+  var showInstructionsDialog = function () {
+    showDialog('instructions', null);
     $('details').details();
   };
 
