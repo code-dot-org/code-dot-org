@@ -51,7 +51,8 @@
     "connected_routers": "false",
     "examples_required": "false",
     "markdown_instructions": "**Instructions**:\r\n\r\nInvent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!",
-    "instructions": "Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!"
+    "instructions": "Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!",
+    "never_autoplay_video": "true"
   }
 }]]></config>
   <blocks/>

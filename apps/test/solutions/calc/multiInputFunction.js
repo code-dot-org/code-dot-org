@@ -65,6 +65,7 @@ module.exports = {
   app: "calc",
   skinId: 'calc',
   levelDefinition: level,
+  timeout: 20000,
   tests: [
     {
       // f(x,y) = x + y
