@@ -856,13 +856,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
 
     assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
-    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
 
     create_user_with_username 'coder'
     create_user_with_username 'coder1'
     create_user_with_username 'coder99'
     create_user_with_username 'coder556'
-    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
+    assert_equal "coder5561", UserHelpers.generate_username(User, 'coder556')
 
     # short names
     assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
@@ -872,11 +871,15 @@ class UserTest < ActiveSupport::TestCase
 
     # parens
     assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
+
+    # non-ascii names
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, '樊瑞')
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, 'فاطمة بنت أسد')
   end
 
   test 'generates usernames' do
-    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', '樊瑞', 'فاطمة بنت أسد', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'coder', 'coder1', 'this_is_a_really']
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
+    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
 
     i = 0
     users = names.map do |name|

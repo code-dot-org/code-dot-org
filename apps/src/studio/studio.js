@@ -1745,13 +1745,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    if (!actualBlock) {
-      throw new Error('Invalid Call Block');
-    }
-
-    if (!expectedBlock) {
-      throw new Error('Invalid Result Block');
-    }
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
@@ -1793,7 +1787,10 @@ Studio.runButtonClick = function() {
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
-    shareCell.className = 'share-cell-enabled';
+    if (shareCell.className !== 'share-cell-enabled') {
+      shareCell.className = 'share-cell-enabled';
+      studioApp.onResize();
+    }
   }
 
   if (level.showZeroScore) {

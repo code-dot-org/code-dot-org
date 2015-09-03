@@ -1,28 +1,34 @@
 %p
   Dear #{@recipient.ops_first_name},
+- if @workshop.program_type == 6
+  %p
+    We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
+- else
+  %p
+    We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference in your classroom.
 %p
-  Your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d, %Y")} is coming up.
-  - if @workshop.phase == 8 && (@workshop.program_type == 4 || @workshop.program_type == 3)
-    Make sure you have completed Phase 3 online.
-%p
-  Please email
+  As part of your commitment to this program, you are expected to participate in this workshop. If you have any conflicts with these dates, please email
   %a{href:'mailto:pd@code.org'}
     pd@code.org
-  if you have any conflicts with these dates.
-- if @workshop.phase == 2
-  %h2
-    Complete #{@workshop.phase_info[:long_name]}
-  %p
-    You must complete #{@prerequisite_phase[:long_name]} prior to attending the #{@workshop.phase_info[:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
+  If you have questions, check out our
+  %a{href:'https:' + CDO.code_org_url("/educate/pd/15-16/faq")}
+    FAQ
+  or send us an email.
+- # If phase 2 or 4, or 3A for CSinS or CSinA, and not program_type 6 (counselor/admin)
+- if (@workshop.phase == 2 || @workshop.phase == 8 || (@workshop.phase == 4 && (@workshop.program_type == 1 || @workshop.program_type == 2))) && (@workshop.program_type != 6)
+  = render partial: 'prerequisite_information', locals: {workshop: @workshop}
   %ul
     %li
-      Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+      %p
+        Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+      %p
+        %em
+          Here’s what a successful online PD looks like. All the progress circles are green.
+      %img{src:"#{CDO.studio_url(image_url('finished_pd_script.jpg'), 'https:')}", style:'width: 600px'}
+      %p
+        The number of stages/levels may differ from the above image.
     %li
       Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
-%p
-  %em
-    Here’s what a successful online PD looks like. All the progress circles are green.
-%img{src:"#{@workshop.program_type_info[:short_name].gsub(/\s+/, "") + @workshop.phase_info[:short_name].gsub(/\s+/, "")}.jpg"}
 
 %h2
   Workshops Details
@@ -30,12 +36,11 @@
   See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
 %h3
   Dates and times
-%ul
-  - @workshop.segments.each do |segment|
-    %li
-      #{segment.start.strftime("%A, %B %d, %Y")}
-      %br
-      #{segment.start.strftime("%I:%M %P")} - #{segment.end.strftime("%I:%M %P")}
+- @workshop.segments.each do |segment|
+  %p
+    #{segment.start.strftime("%A, %B %d, %Y")}
+    %br
+    #{segment.start.strftime("%I:%M %P")} - #{segment.end.strftime("%I:%M %P")}
 %h3
   Location
 %p

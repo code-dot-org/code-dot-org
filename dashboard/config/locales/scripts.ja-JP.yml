@@ -63,7 +63,7 @@
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
           Graph Paper Programming: グラフ用紙のプログラミング
-          'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+          'Real-life Algorithms: Paper Planes': '現実世界のアルゴリズム: 紙飛行機を作る場合'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
           Conditionals: 条件
@@ -83,7 +83,7 @@
           'Maze: Sequence2': '迷路: シーケンス2'
           'Artist: Nested Loops': アーティスト：入れ子のループ
           description_audience: 6-18 才
-          description_short: Start with Course 2 for students who can read.
+          description_short: コース2は読み書きができる生徒のためのコースです。
         course3:
           The Maze: 迷路
           'Studio: Create a Story': プレイラボ：お話を作りましょう
@@ -1228,3 +1228,18 @@
             all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
             for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

@@ -2,3 +2,8 @@ name 'U2L14 Assessment2'
 title 'Assessment: Question 3'
 content1 'Using the Vigenere cipher, does the length of the key matter? 
 For example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning.'
+teacher_markdown <<MARKDOWN
+Answers will vary, but may include these concepts:
+
+- 
+MARKDOWN

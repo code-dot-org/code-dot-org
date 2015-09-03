@@ -1,6 +1,9 @@
 ---
-title: Partners
+title: <%= hoc_s(:title_partners) %>
 ---
+
+<%= view :signup_button %>
+
 # Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
@@ -35,4 +38,6 @@ title: Partners
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>
 

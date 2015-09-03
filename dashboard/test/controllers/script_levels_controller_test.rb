@@ -131,6 +131,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
+  test 'should have autoplay video when never_autoplay_video is false on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1',  id: '1'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_not_nil assigns(:view_options)[:autoplay_video]
+  end
+
+  test 'should not have autoplay video when never_autoplay_video is true on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_true)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_nil assigns(:view_options)[:autoplay_video]
+  end
+
   test 'should track video play even if noautoplay param is set' do
     # This behavior is relied on by UI tests that navigate to the next level after completion,
     # because the ?noautoplay=true parameter does not propagate to the next level.

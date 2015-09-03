@@ -8,6 +8,7 @@
 /* global dashboard */
 
 'use strict';
+var React = require('react');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -42,6 +43,8 @@ var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
 
+var applabConstants = require('./constants');
+
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
@@ -71,6 +74,7 @@ var ErrorLevel = errorHandler.ErrorLevel;
 
 var level;
 var skin;
+var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
@@ -91,6 +95,8 @@ var twitterOptions = {
 var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
+var FOOTER_HEIGHT = applabConstants.FOOTER_HEIGHT;
+
 // The typical width of the visualization area (indepdendent of appWidth)
 var vizAppWidth = 400;
 // The default values for appWidth and appHeight (if not specified in the level)
@@ -103,6 +109,19 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = level.appWidth || defaultAppWidth;
   Applab.appHeight = level.appHeight || defaultAppHeight;
+  // In share mode we need to reserve some number of pixels for our in-app
+  // footer. We do that by making the play space slightly smaller elsewhere.
+  // Applab.appHeight represents the height of the entire app (footer + other)
+  // Applab.footerlessAppHeight represents the height of only the "other"
+  if (Applab.appHeight > 480) {
+    throw new Error('Strange things may happen with appHeight > 480');
+  }
+  if (Applab.appHeight + FOOTER_HEIGHT >= 480) {
+    // If footer will extend past 480, make room for it.
+    Applab.footerlessAppHeight = Applab.appHeight - FOOTER_HEIGHT;
+  } else {
+    Applab.footerlessAppHeight = Applab.appHeight;
+  }
 
   // Override scalars.
   for (var key in level.scale) {
@@ -182,7 +201,7 @@ function adjustAppSizeStyles(container) {
       scaleFactors[ind] *= vizScale;
     }
   }
-  var vizAppHeight = Applab.appHeight * vizScale;
+  var vizAppHeight = Applab.footerlessAppHeight * vizScale;
 
   // Compute new height rules:
   // (1) defaults are scaleFactors * defaultAppHeight + 200 (belowViz estimate)
@@ -231,7 +250,7 @@ function adjustAppSizeStyles(container) {
               // For this scale factor...
               // set the max-height and max-width for the visualization
               childRules[k].style.cssText = "max-height: " +
-                  Applab.appHeight * scale + "px; max-width: " +
+                  Applab.footerlessAppHeight * scale + "px; max-width: " +
                   Applab.appWidth * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "div#visualizationColumn.responsive" ||
@@ -255,7 +274,7 @@ function adjustAppSizeStyles(container) {
               // set the left for the visualizationResizeBar
               childRules[k].style.cssText = "left: " +
                   Applab.appWidth * scale + "px; line-height: " +
-              Applab.appHeight * scale + "px;";
+              Applab.footerlessAppHeight * scale + "px;";
               changedChildRules++;
             } else if (childRules[k].selectorText === "html[dir='rtl'] div#codeWorkspace") {
               // set the right for the codeWorkspace (RTL mode)
@@ -292,13 +311,69 @@ function adjustAppSizeStyles(container) {
 var drawDiv = function () {
   var divApplab = document.getElementById('divApplab');
   divApplab.style.width = Applab.appWidth + "px";
-  divApplab.style.height = Applab.appHeight + "px";
+  divApplab.style.height = Applab.footerlessAppHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
     designMode.loadDefaultScreen();
     designMode.serializeToLevelHtml();
   }
+
+  if (studioApp.share) {
+    renderFooterInSharedGame();
+  }
 };
+
+function renderFooterInSharedGame() {
+  var divApplab = document.getElementById('divApplab');
+  var footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
+
+  var menuItems = [
+    {
+      text: applabMsg.makeMyOwnApp(),
+      link: '/projects/applab'
+    },
+    {
+      text: commonMsg.openWorkspace(),
+      link: location.href + '/view'
+    },
+    // Disabled until we do the work to support abuse reporting
+    // {
+    //   text: applabMsg.reportAbuse(),
+    //   link: '#'
+    // },
+    {
+      text: applabMsg.copyright(),
+      link: '#',
+      copyright: true
+    },
+    {
+      text: applabMsg.privacyPolicy(),
+      link: 'https://code.org/privacy'
+    }
+  ];
+  if (dom.isMobile()) {
+    menuItems.splice(0, 1); // no make my own app on mobile
+  }
+
+  window.dashboard.footer.render(React, {
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: copyrightStrings,
+    baseMoreMenuString: applabMsg.builtOnCodeStudio(),
+    rowHeight: FOOTER_HEIGHT,
+    style: {
+      fontSize: 18
+    },
+    baseStyle: {
+      width: $("#divApplab").width(),
+      paddingLeft: 0
+    },
+    className: 'dark',
+    menuItems: menuItems
+  }, footerDiv);
+}
 
 Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
   return 300 * Math.pow(1 - sliderSpeed, 2);
@@ -470,6 +545,7 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -508,6 +584,7 @@ Applab.init = function(config) {
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   level = config.level;
+  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     applabUserId: config.applabUserId,
     isAdmin: (config.isAdmin === true)
@@ -614,7 +691,7 @@ Applab.init = function(config) {
   config.dropletConfig = dropletConfig;
   config.pinWorkspaceToBottom = true;
 
-  config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
+  config.vizAspectRatio = Applab.appWidth / Applab.footerlessAppHeight;
   config.nativeVizWidth = Applab.appWidth;
 
   config.appMsg = applabMsg;
@@ -1422,6 +1499,9 @@ Applab.hideDesignModeToggle = function () {
   return !!level.hideDesignMode;
 };
 
+Applab.hideViewDataButton = function () {
+  return !!level.hideViewDataButton;
+};
 
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');

@@ -1,0 +1,27 @@
+name 'U2L17 - Vocabulary matching'
+title 'Assessment 2 - Matching'
+height '65'
+question 'Rules or an algorithm for finding an approximate solution'
+answer '<br>Heuristic'
+
+question 'Trying every possible solution to a problem to find the answer<br><br><br>'
+answer ' <br>Brute force'
+
+question 'An algorithm that is easy to run but results in output that is hard or impossible to reverse'
+answer '<br>One Way Function'
+
+question 'A problem that requires an unreasonable amount of time to solve, even for many computers'
+answer '<br>Computationally hard'
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- Rules or an algorithm for finding an approximate solution: Heuristic
+
+- Trying every possible solution to a problem to find the answer: Brute force
+
+- An algorithm that is easy to run but results in output that is hard or impossible to reverse: One-Way function
+
+- A problem that requires an unreasonable amount of time to solve, even for many computers: Computationally hard
+
+MARKDOWN

@@ -30,7 +30,9 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Teachers from LAUSD will attend PD in Los Angeles and connect the to Spokane CSP workshop virtually. Please visit the [Los Angeles CSP page](/educate/pd/15-16/lausd) for the dates and details of your workshop.
+
+Teachers from Charles County, Maryland will attend PD in Charles County and connect to the Broward CSP workshop virtually. Your workshop details can be found on the [Charles County CSP page](/educate/pd/15-16/charles).
 
 
 **Save the Dates:**
@@ -47,7 +49,7 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**Location**
+**September 26th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -55,13 +57,11 @@ Room TBD<br/>
 Fort Lauderdale, FL 33314
 
 
-
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
 <br/>
 Green journal
-<br/>Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -120,10 +120,7 @@ Laptop and Charger
 Snacks
 <br/>
 Water
-<br/><br/>
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)###
 
-More info coming soon!
 
 [**Back to the top**](#top)
 
@@ -182,13 +179,6 @@ Water
 
 
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
-
-
-[**Back to the top**](#top)
-
 <a id="ecs"></a>
 
 ## Exploring Computer Science ##
@@ -245,10 +235,6 @@ Snacks
 <br/>
 Water
 
-
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
-
-More info coming soon!
 
 [**Back to the top**](#top)
 

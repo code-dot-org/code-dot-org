@@ -67,7 +67,7 @@
   enter_valid_age: Моля, изберете валидна възраст
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: Ние ще ви изпратим сертификат и информация за това как
-    да <a href='/learn/beyond'> учите и след първия час програмиране</a>
+    да <a href='/learn/beyond'> учите и след първия час кодиране</a>
   get_a_certificate_message_after: Щракнете върху сертификата, за да го изтеглите
     или да го отпечатате. Сега продължете с нашият <a href='http://studio.code.org'>
     20-часов курс</a>, или вижте повече възможности да <a href='/learn/beyond'> учите
@@ -112,10 +112,10 @@
   used_infrequent_updates: Използва се само за редки  актуализации
   privacy_practices_children: Вижте нашите правила за поверителност за деца
   petition_thankyou: Благодаря В, че подписахте петицията
-  continue_learning_header: Продължи обучението след един час
+  continue_learning_header: Продължи обучението след Часа
   continue_learning_body: Има много възможности.  Можете да учите онлайн в местното
     училище или на летен лагер.
-  learn_next_level: Продължи към следващото ниво
+  learn_next_level: Опитайте друг курс от Студиото по кодиране
   learn_online: Опитайте други курсове онлайн
   learn_classes: Намерете местни класове
   hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
@@ -124,7 +124,7 @@
     поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/, за да научите
     повече.
   learn_hoc: Научете се да програмирате с "Часът на кодирането"
-  beyond_hoc: След  Час Кодиране
+  beyond_hoc: След Часа по Кодиране
   what_gender: Какъв пол сте?
   girl: Момиче
   boy: Момче
@@ -190,7 +190,8 @@
     Флорес, учител'
   homepage_hero_text_teacher2: '&ldquo;Тази програма ангажира и увлича  учениците
     ми на 100%&rdquo; Адам, учител'
-  homepage_hero_text_stat_loc: '#loc линии код, написани от учениците'
+  homepage_hero_text_stat_loc: 2,5 милиона момичета са се записани да учат в Студиото
+    по кодиране
   homepage_hero_text_stat_students: '#student_count Ученически акаунти на Студиото
     по кодиране'
   homepage_hero_text_stat_served: 'Часът на кодирането: #served сервира'
@@ -206,6 +207,7 @@
   homepage_action_text_learn: Започнете обучение
   homepage_action_text_signpetition: Подпишете петицията
   homepage_signpetition_dropdown: Съгласен&#x25BE;
+  homepage_diversity_pledge: Вземете разнообразни подаръци
   homepage_banner_text_main: Code.org и College Board се обединяват, за да премахнат
     различията в обучението по компютърни науки.
   homepage_banner_text_link: Научете повече
@@ -228,7 +230,7 @@
   homepage_slot_text_link_fullcurriculum: Вижте нашата пълна програма
   homepage_slot_text_link_pd: Професионално развитие
   homepage_slot_text_title_advocates: Поддръжници
-  homepage_slot_text_blurb_advocates: Подкрепете нашата работа
+  homepage_slot_text_blurb_advocates: Подкрепете разнообразие в компютърните науки
   homepage_slot_text_link_stats: Виждате статистиката
   homepage_slot_text_link_buy: Включете се
   homepage_slot_text_link_donate: Направете дарение
@@ -548,6 +550,8 @@
   educator_notes: Бележки за учители
   how_to_teach_hoc: Как да преподавате един Час Кодиране
   more_resources_educators: Повече ресурси за учители и възпитатели
+  beyond_submission: Искате ли да продължите с уроците и след Часа на кода? Вижте
+    критериите за попълване на форма.
   participants: участници
   teachers_notes: Указания за учители
   teachers_notes_hoc: 'Учители: Прочетете важни бележки тук'

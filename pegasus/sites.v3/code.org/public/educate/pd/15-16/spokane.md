@@ -23,7 +23,9 @@ Milestone Complete!
 <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Teachers from Seattle, Denver and Utah will travel to Spokane for PD and virtually connect with the LA PD.
+
+Teachers from San Francisco will travel to LA for PD and can find more details about their workshop on the [LAUSD page](/educate/pd/15-16/lausd).
 
 
 **Save the dates:**
@@ -40,9 +42,14 @@ Quarter 4: Saturday, March 5, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**October 3rd Location**
 
-TBD
+Gonzaga University<br/>
+PACCAR 007<br/>
+502 E. Boone Avenue<br/>
+Spokane WA 99258
+
+
 
 **What to bring to Phase 3 quarterly sessions:**
 

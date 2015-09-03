@@ -276,7 +276,7 @@ $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer, #copyright-flyout, #more-menu {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
@@ -302,16 +302,23 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    background-color: $dark-charcoal;
+    a {
+      &:hover {
+        color: $lightest_gray
+      }
+    }
+  }
 }
 
-.small-footer {
+.small-footer-base {
   position: absolute;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
   padding-left: $codeApp-left-margin;
-  padding-top: 3px;
-  padding-bottom: 3px;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -372,6 +379,15 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    & > li > a {
+      &:hover {
+        background-color: $lightest_gray;
+        color: $dark_charcoal;
+      }
+    }
+  }
 }
 
 /* All three major components of .small-footer are stacked:
@@ -384,7 +400,7 @@ $small-footer-standard-width: 400px;
 #copyright-flyout {
   z-index: 999;
 }
-.small-footer {
+.small-footer-base {
   z-index: 1000;
 }
 
@@ -438,6 +454,9 @@ $default-modal-width: 640px;
 
   &#block-documentation-lightbox {
     width: 80% !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -1785,9 +1804,9 @@ $modal-no-icon-gap: 22px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid

@@ -161,9 +161,6 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
-      Code Logo v3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        title: title
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -290,9 +287,7 @@ en:
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
-      Mixing Colors:
-        description here: description here
-        title: title
+      Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -344,8 +339,6 @@ en:
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
-      Odometer:
-        Odometer: Odometer
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
@@ -360,6 +353,7 @@ en:
       PDAlg Dashboard 1: {}
       PDAlg Dashboard 2: {}
       PDAlg Dashboard 3: {}
+      PDAlg Design Recipe Updates: {}
       PDAlg Details:
         CS in Algebra PD Details: CS in Algebra PD Details
       PDAlg End of P1:
@@ -374,6 +368,9 @@ en:
         Welcome to the next phase!: Welcome to the next phase!
       PDAlg Post Survey:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Prep Sandbox: {}
+      PDAlg Prep a Lesson: {}
+      PDAlg Projects: {}
       PDAlg Puzzle Tips: {}
       PDAlg Puzzles Pre: {}
       PDAlg Scope:
@@ -462,41 +459,11 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
-      Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
-        description here: description here
-      Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
-      Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
-      Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
       Pixelation - Lesson 14 - Instructions one bit error:
         'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
-        description here: description here
-      Pixelation - Lesson 14 - Make the Letter A:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B and W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B&W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free Play
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color Shades 4x4
-        description here: description here
-      Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete 3-bit color
         description here: description here
       Pixelation - Lesson 15 - Favicon Instructions:
         Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon Instructions
@@ -524,41 +491,15 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      Pixelation 1:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 1: Pixelation 1
-      Pixelation 2:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 2: Pixelation 2
-      Pixelation 3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 3: Pixelation 3
-      Pixelation 3 Bit Colors:
-        description here: description here
-        title: title
-      Pixelation 4:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker test of External level -- NOT REAL
-      Pixelation 4x4 Empty:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
-      Pixelation Bee:
-        description here: description here
-        title: title
-      Pixelation Flappy:
-        description here: description here
-        title: title
+      TLO intro:
+        Introduction to the TLO: Introduction to the TLO
+      TLO practical:
+        TLO in Practice: TLO in Practice
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      Text Compression 1:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression 1: Text Compression 1
-      Text Compression Peter Piper:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression Peter Piper: Text Compression Peter Piper
       U1L1 Innovation - Video:
         Impact of Innovation - Video: Impact of Innovation - Video
         description here: description here
@@ -577,9 +518,6 @@ en:
       U1L13 Student Lesson Summary:
         description here: description here
         title: title
-      U1L13 Text Compression:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        U1L13 Text Compression: U1L13 Text Compression
       U1L14 Student Lesson Summary:
         description here: description here
         title: title
@@ -622,6 +560,12 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2 Encryption and Public Keys - Video:
+        'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
+        description here: description here
+      'U2 The Internet: Cybersecurity and Crime - Video':
+        'The Internet: Cybersecurity and Crime - Video': 'The Internet: Cybersecurity and Crime - Video'
+        description here: description here
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -985,6 +929,19 @@ en:
         Phase 3 Module 3: Phase 3 Module 3
       sciPD3 resource module4:
         Phase 3 Module 4: Phase 3 Module 4
+      sciPD3pre1 challenge: {}
+      sciPD3pre1 intro:
+        Intro to Phase 3 Online: Intro to Phase 3 Online
+        Prepare for P3 In-Person: Prepare for P3 In-Person
+      sciPD3pre1 prep:
+        Prepare to teach your peers a module: Prepare to teach your peers a module
+        Preparing Your TLO: Preparing Your TLO
+      sciPD3pre1 remember:
+        Looking Back to P2: Looking Back to P2
+        Refreshing yourself on the module that you will be teaching: Refreshing yourself on the module that you will be teaching
+      sciPD3pre1 thanks:
+        Thank You: Thank You
+        Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       test demo level:
@@ -1576,6 +1533,37 @@ en:
         Random Substitution Cipher: Random Substitution Cipher
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
         Vigenere Cipher: Vigenere Cipher
+      U2L17 - Vocabulary matching:
+        ' <br>Brute Force': ' <br>Brute Force'
+        ' <br>Brute force': ' <br>Brute force'
+        <br>Computationally Hard: <br>Computationally Hard
+        <br>Computationally hard: <br>Computationally hard
+        <br>Heuristic: <br>Heuristic
+        <br>One Way Function: <br>One Way Function
+        A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
+        An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
+        Assessment 2 - Matching: Assessment 2 - Matching
+        Matching: Matching
+        Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
+        Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - Assessment 1: Asymmetric Encryption - Assessment 1
+        Asymmetric Encryption - why is it useful: Asymmetric Encryption - why is it useful
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+        Why is asymmetric encryption useful?: Why is asymmetric encryption useful?
+      U2L18 Match terms to cups and beans analogy:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity: Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
+        The number of beans Alice chooses to put in the cup initially.: The number of beans Alice chooses to put in the cup initially.
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -2691,17 +2679,17 @@ en:
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
-        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
         'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
-        There are too few IP addresses to meet the current demand.: There are too few IP addresses to meet the current demand.
-        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: When an IP address changes, it is impossible to locate a computer until the owner announces the change.
-        When someone new joins the Internet they must inform everyone else of the new IP address: When someone new joins the Internet they must inform everyone else of the new IP address
       U2L10 Assessment1:
+        A. Redundancy: A. Redundancy
         Assessment Question 1: Assessment Question 1
-        Government control: Government control
-        Hierarchy: Hierarchy
-        Multiple servers: Multiple servers
-        Redundancy: Redundancy
+        B. Hierarchy: B. Hierarchy
+        C. Multiple servers: C. Multiple servers
+        D. Government control: D. Government control
         What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
       U2L10 Assessment2:
         Assessment Question 2: Assessment Question 2
@@ -2712,18 +2700,18 @@ en:
         What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
-        HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
-        HTTP messages can be either requests or responses: HTTP messages can be either requests or responses
-        HTTP requests are encoded using higher frequency radio waves: HTTP requests are encoded using higher frequency radio waves
-        HTTP requests are given higher priority for fast delivery when being routed on the Internet: HTTP requests are given higher priority for fast delivery when being routed on the Internet
-        HTTP requests make use of abstractions provided by lower level protocols: HTTP requests make use of abstractions provided by lower level protocols
+        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
+        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
+        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
+        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
       U2L11 Assessment 2:
-        An HTTP request is sent from a client to request access to data stored on a server: An HTTP request is sent from a client to request access to data stored on a server
-        An HTTP response code is only used when a server could not fulfill a request: An HTTP response code is only used when a server could not fulfill a request
-        'Choose Two: Choose the two true statements about HTTP.': 'Choose Two: Choose the two true statements about HTTP.'
+        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
+        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
+        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
         Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
         'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
-        HTTP requests and responses have identical formats: HTTP requests and responses have identical formats
+        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
       U2L13 Assessment3:
         A secret word only know by Caesar.: A secret word only know by Caesar.
         'Assessment: Question 2': 'Assessment: Question 2'
@@ -2765,6 +2753,45 @@ en:
         A word from the dictionary: A word from the dictionary
         'Assessment: Question 4': 'Assessment: Question 4'
         'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
+      U2L17 - One Way functions Def MC:
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        One-Way Functions: One-Way Functions
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L17 Free Responses Assessment 1:
+        Assessment 1: Assessment 1
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        Select the best answer.: Select the best answer.
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        1 4/13: 1 4/13
+        '13': '13'
+        '17': '17'
+        '4': '4'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 13 MOD 17?: What is 13 MOD 17?
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
       U2L3 Assessment 2:
         12 users: 12 users
         32 users: 32 users
@@ -2791,12 +2818,17 @@ en:
         Why Programming? Question 2: Why Programming? Question 2
       U3L03 Assessment:
         'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
+        Descriptive procedure names make the program code easier to read.: Descriptive procedure names make the program code easier to read.
         It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
         Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
         The "spoken-language style" makes errors more logically recognizable.: The "spoken-language style" makes errors more logically recognizable.
         There are fewer lines in the program to debug.: There are fewer lines in the program to debug.
+        They can be used to replace repetitive portions of a program.: They can be used to replace repetitive portions of a program.
         They create shorter algorithms that sound like spoken language.: They create shorter algorithms that sound like spoken language.
+        They help break programs up into logical chunks.: They help break programs up into logical chunks.
+        They make the program easier for the computer to understand.: They make the program easier for the computer to understand.
         They reduce the level of program abstraction.: They reduce the level of program abstraction.
+        Which of the following is NOT a true statement about procedures?: Which of the following is NOT a true statement about procedures?
         Which of the following is NOT an advantage of using well-designed procedures and functions?: Which of the following is NOT an advantage of using well-designed procedures and functions?
       U3L04 Assessment2:
         'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
@@ -3447,6 +3479,7 @@ en:
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
+      PDAlg Prep on Paper: {}
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -3661,32 +3694,64 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L16 Free Response Assessment 3:
+        Assessment 3: Assessment 3
+        Enter answer here: Enter answer here
+        Why are computationally hard problems important in encryption strategies?: Why are computationally hard problems important in encryption strategies?
+        Why are computationally-hard problems important in encryption strategies?: Why are computationally-hard problems important in encryption strategies?
+      U2L16 Free Response assessment 2:
+        Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
+        What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
+      U2L16 Free Response assessment 3:
+        Lesson 16 - Assessment 3: Lesson 16 - Assessment 3
+        Why do we care about computationally hard problems, in regards to encryption?: Why do we care about computationally hard problems, in regards to encryption?
+      U2L16 Free response assessment 1:
+        Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
+        What does "computationally hard" mean?: What does "computationally hard" mean?
       U2L17 Assessment 1:
         Assessment Question 1: Assessment Question 1
         Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
       U2L17 Assessment 2:
         Assessment Question 2: Assessment Question 2
         How are computationally hard problems related to encryption?: How are computationally hard problems related to encryption?
+        What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
       U2L17 Free Response Getting Started:
         'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
         ? List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
         : List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
+        What does the phrase "computationally hard problem" mean?: What does the phrase "computationally hard problem" mean?
+        What kinds of problems do you think are "computationally hard"?: What kinds of problems do you think are "computationally hard"?
+        What kinds of problems do you think are "computationally hard?: What kinds of problems do you think are "computationally hard?
       U2L17 Free Response Wrap Up:
         'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
         ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
         : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
       U2L18 Assessment:
         'Assessment: Question': 'Assessment: Question'
+        Reflection: Reflection
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
+      U2L18 Free Response Assessment 1:
+        Asymmetric Encryption Assessment 1: Asymmetric Encryption Assessment 1
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+      U2L18 Free Response Assessment 3:
+        Asymmetric Encryption Assessment 3: Asymmetric Encryption Assessment 3
+        List other examples of one-way functions. Can you think of a one-way function in real life?: List other examples of one-way functions. Can you think of a one-way function in real life?
+        List other examples of one-way functions? Can you think of a one-way function in real life?: List other examples of one-way functions? Can you think of a one-way function in real life?
       U2L18 Free Response Getting Started:
-        'One Way Functions: Getting Started': 'One Way Functions: Getting Started'
+        Assessment 3: Assessment 3
+        One Way Functions: One Way Functions
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
       U2L19 Assessment:
-        'Assessment: Question': 'Assessment: Question'
+        'Assessment: Modulo and one-way functions': 'Assessment: Modulo and one-way functions'
       U2L19 Free Response Getting Started:
-        'Public Key Crypto: Getting Started': 'Public Key Crypto: Getting Started'
+        'Public Key Crypto: The Modulo Operation': 'Public Key Crypto: The Modulo Operation'
       U2L19 Free Response Wrap Up:
-        'Public Key Crypto: Wrap Up': 'Public Key Crypto: Wrap Up'
+        'Public Key Crypto: Why is it safe?': 'Public Key Crypto: Why is it safe?'
       U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
@@ -3704,17 +3769,17 @@ en:
       U2L9 Free Response Getting Started:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3L01 Assessment1:
-        Why Programming? Question 1: Why Programming? Question 1
+        Free Response: Free Response
       U3L01 Assessment3:
-        Why Programming? Question 3: Why Programming? Question 3
+        Free Response: Free Response
       U3L01 Free Response Getting Started:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L01 Free Response Wrap Up:
         Why Programming? Wrap Up: Why Programming? Wrap Up
       U3L02 Assessment:
-        Assessment Question: Assessment Question
+        What does efficiency mean in programming?: What does efficiency mean in programming?
       U3L02 Free Response Getting Started:
-        'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+        'Programming with Simple Commands: Why limit to 4?': 'Programming with Simple Commands: Why limit to 4?'
       U3L02 Free Response Wrap Up:
         'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
       U3L03 Free Response Getting Started:
