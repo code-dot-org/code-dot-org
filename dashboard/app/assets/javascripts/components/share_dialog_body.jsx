@@ -9,7 +9,9 @@ window.dashboard.ShareDialogBody = (function (React) {
       shareUrl: React.PropTypes.string.isRequired,
       encodedShareUrl: React.PropTypes.string.isRequired,
       closeText: React.PropTypes.string.isRequired,
-      isAbusive: React.PropTypes.bool.isRequired
+      isAbusive: React.PropTypes.bool.isRequired,
+      abuseTos: React.PropTypes.string.isRequired,
+      abuseContact: React.PropTypes.string.isRequired
     },
 
     render: function () {
@@ -42,18 +44,12 @@ window.dashboard.ShareDialogBody = (function (React) {
         fontSize: 14
       };
 
-      // TODO - share with alert from apps?
-      var abuseContents;
-      var i18n = {
-        abuse: {
-          tos: "This project has been reported for violating Code.org's" +
-            "<a href='#'> Terms of Service</a> and cannot be shared with others.",
-          contact_us: "If you believe this to be an error, please<a href='#'> contact us.</a>"
-        }
-      };
       if (this.props.isAbusive) {
         abuseContents = <window.dashboard.AbuseError
-          i18n={i18n}
+          i18n={{
+            tos: this.props.abuseTos,
+            contact_us: this.props.abuseContact
+          }}
           className='alert-error'
           style={abuseStyle}
           textStyle={abuseTextStyle}/>;
@@ -71,8 +67,9 @@ window.dashboard.ShareDialogBody = (function (React) {
               <input
                 type="text"
                 id="sharing-input"
+                readOnly="true"
                 value={this.props.shareUrl}
-                style={{cursor: 'copy', width: 465, readonly: true}}/>
+                style={{cursor: 'copy', width: 465}}/>
             </div>
             <button
                 id="continue-button"
@@ -91,7 +88,7 @@ window.dashboard.ShareDialogBody = (function (React) {
               </a>
             </div>
             <div id="send-to-phone" className="sharing" style={{display: 'none'}}>
-              <label for="phone">Enter a US phone number:</label>
+              <label htmlFor="phone">Enter a US phone number:</label>
               <input type="text" id="phone" name="phone"></input>
               <button id="phone-submit">Send</button>
               <div id="phone-charges">

@@ -166,17 +166,21 @@ function shareProject() {
     var shareUrl = origin + dashboard.project.getPathName();
     var encodedShareUrl = encodeURIComponent(shareUrl);
 
+    var i18n = window.dashboard.i18n;
+
     // Use a React component so that we can use JSX and to make our dependencies on
     // dashboard explicit. Render to markup since we are currently still mutating
     // the generated DOM elsewhere
     var body = React.renderToStaticMarkup(React.createElement(dashboard.ShareDialogBody, {
       icon: appOptions.skin.staticAvatar,
-      title: "<%= I18n.t('project.share_title') %>",
-      shareCopyLink: "<%= I18n.t('project.share_copy_link') %>",
+      title: i18n.t('project.share_title'),
+      shareCopyLink: i18n.t('project.share_copy_link'),
       shareUrl: shareUrl,
       encodedShareUrl: encodedShareUrl,
-      closeText: "<%= I18n.t('project.close') %>",
-      isAbusive: dashboard.project.exceedsReportingThreshold()
+      closeText: i18n.t('project.close'),
+      isAbusive: dashboard.project.exceedsReportingThreshold(),
+      abuseTos: i18n.t('project.abuse.tos'),
+      abuseContact: i18n.t('project.abuse.contact_us'),
     }));
 
     var dialog = new Dialog({body: body});

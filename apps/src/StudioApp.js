@@ -1989,18 +1989,12 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
 }
 
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  // TODO - use dashboard.i18n
-  var i18n = {
-    abuse: {
-      tos: "This project has been reported for violating Code.org's" +
-        "<a href='#'> Terms of Service</a> and cannot be shared with others.",
-      contact_us: "If you believe this to be an error, please<a href='#'> contact us.</a>"
-    }
-  };
-
   if (dashboard.project.exceedsReportingThreshold()) {
     this.displayAlert(parentSelector, {
-      body: <dashboard.AbuseError i18n={i18n}/>,
+      body: <dashboard.AbuseError i18n={{
+        tos: window.dashboard.i18n.t('project.abuse.tos'),
+        contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+      }}/>,
       style: {
         top: 45,
         left: 350,
