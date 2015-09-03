@@ -40,6 +40,12 @@ module LevelsHelper
     headers['Location'].split('/').last
   end
 
+  def readonly_view_options
+    level_view_options skip_instructions_popup: true
+    view_options readonly_workspace: true
+    view_options callouts: []
+  end
+
   def set_channel
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
@@ -55,7 +61,7 @@ module LevelsHelper
       # we have to load the channel here.
 
       channel_token = ChannelToken.find_by(level: host_level, user: @user)
-      view_options readonly_workspace: true, callouts: []
+      readonly_view_options
     else
       # If `create` fails because it was beat by a competing request, a second
       # `find_by` should succeed.
