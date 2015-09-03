@@ -606,6 +606,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal @section, assigns(:section)
     assert_equal @student, assigns(:user)
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
   test 'shows expanded teacher panel when section is chosen but student is not' do
@@ -672,6 +676,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel' # showing teacher panel
     assert_select '.teacher-panel.hidden', 0 # not hidden
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
 
