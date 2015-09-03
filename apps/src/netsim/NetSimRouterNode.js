@@ -849,30 +849,18 @@ NetSimRouterNode.prototype.setMemory = function (newMemory) {
 };
 
 /**
- * Query the wires table and pass the callback a list of wire table rows,
- * where all of the rows are wires attached to this router.
- * @param {NodeStyleCallback} onComplete which accepts an Array of NetSimWire.
+ * @returns {NetSimWire[]} all of the wires that are attached to this router.
  */
-NetSimRouterNode.prototype.getConnections = function (onComplete) {
-  onComplete = onComplete || function () {};
-
+NetSimRouterNode.prototype.getConnections = function () {
   var shard = this.shard_;
-  var wireTable = shard.wireTable;
   var routerID = this.entityID;
-  wireTable.refresh()
-    .fail(function (err) {
-        onComplete(err, []);
+  return shard.wireTable.readAll()
+      .filter(function (wireRow) {
+        return wireRow.remoteNodeID === routerID;
       })
-    .done(function () {
-        var myWires = wireTable.readAll()
-            .map(function (row) {
-              return new NetSimWire(shard, row);
-            })
-            .filter(function (wire) {
-              return wire.remoteNodeID === routerID;
-            });
-        onComplete(null, myWires);
-      }.bind(this));
+      .map(function (wireRow) {
+        return new NetSimWire(shard, wireRow);
+      });
 };
 
 /**
@@ -882,10 +870,7 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
  */
 NetSimRouterNode.prototype.countConnections = function (onComplete) {
   onComplete = onComplete || function () {};
-
-  this.getConnections(function (err, wires) {
-    onComplete(err, wires.length);
-  });
+  onComplete(null, this.getConnections().length);
 };
 
 /**
@@ -956,54 +941,47 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
 
   // General strategy: Create a list of existing remote addresses, pick a
   // new one, and assign it to the provided wire.
-  var self = this;
-  this.getConnections(function (err, wires) {
-    if (err) {
-      onComplete(err);
-      return;
+
+  var addressList = this.getConnections().filter(function (wire) {
+    return wire.localAddress !== undefined;
+  }).map(function (wire) {
+    return wire.localAddress;
+  });
+
+  // Generate a list of unused addresses in the addressable space (to a limit)
+  var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
+  var addressPartSizes = addressFormat.split(/\D+/).filter(function (part) {
+    return part.length > 0;
+  }).map(function (part) {
+    return parseInt(part, 10);
+  }).reverse();
+  var maxLocalAddresses = Math.min(Math.pow(2, addressPartSizes[0]),
+      ADDRESS_OPTION_LIMIT);
+
+  var possibleAddresses = [];
+  var nextAddress;
+  for (var i = 0; i < maxLocalAddresses; i++) {
+    nextAddress = this.makeLocalNetworkAddress_(i);
+    // Verify that the address in question is not taken already.
+    if (!(nextAddress === this.getAddress() ||
+        nextAddress === this.getAutoDnsAddress() ||
+        contains(addressList, nextAddress))) {
+      possibleAddresses.push(nextAddress);
     }
+  }
 
-    var addressList = wires.filter(function (wire) {
-      return wire.localAddress !== undefined;
-    }).map(function (wire) {
-      return wire.localAddress;
-    });
+  // Pick one randomly from the list of possible addresses
+  var randomIndex = NetSimGlobals.randomIntInRange(0, possibleAddresses.length);
+  wire.localAddress = possibleAddresses[randomIndex];
+  wire.localHostname = hostname;
+  wire.remoteAddress = this.getAddress();
+  wire.remoteHostname = this.getHostname();
+  wire.update(onComplete);
+  // TODO: Fix possibility of two routers getting addresses by verifying
+  //       after updating the wire.
 
-    // Generate a list of unused addresses in the addressable space (to a limit)
-    var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
-    var addressPartSizes = addressFormat.split(/\D+/).filter(function (part) {
-      return part.length > 0;
-    }).map(function (part) {
-      return parseInt(part, 10);
-    }).reverse();
-    var maxLocalAddresses = Math.min(Math.pow(2, addressPartSizes[0]),
-        ADDRESS_OPTION_LIMIT);
-
-    var possibleAddresses = [];
-    var nextAddress;
-    for (var i = 0; i < maxLocalAddresses; i++) {
-      nextAddress = this.makeLocalNetworkAddress_(i);
-      // Verify that the address in question is not taken already.
-      if (!(nextAddress === this.getAddress() ||
-          nextAddress === this.getAutoDnsAddress() ||
-          contains(addressList, nextAddress))) {
-        possibleAddresses.push(nextAddress);
-      }
-    }
-
-    // Pick one randomly from the list of possible addresses
-    var randomIndex = NetSimGlobals.randomIntInRange(0, possibleAddresses.length);
-    wire.localAddress = possibleAddresses[randomIndex];
-    wire.localHostname = hostname;
-    wire.remoteAddress = self.getAddress();
-    wire.remoteHostname = self.getHostname();
-    wire.update(onComplete);
-    // TODO: Fix possibility of two routers getting addresses by verifying
-    //       after updating the wire.
-
-    logger.info(this.getDisplayName() + ": Assigned address " +
-        wire.localAddress + " to host " + wire.localHostname);
-  }.bind(this));
+  logger.info(this.getDisplayName() + ": Assigned address " +
+      wire.localAddress + " to host " + wire.localHostname);
 };
 
 /**

@@ -18,13 +18,23 @@ require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 
 /**
+ * @typedef {Object} WireRow
+ * @property {!number} localNodeID
+ * @property {!number} remoteNodeID
+ * @property {!string} localAddress
+ * @property {!string} remoteAddress
+ * @property {!string} localHostname
+ * @property {!string} remoteHostname
+ */
+
+/**
  * Local controller for a simulated connection between nodes,
  * which is stored in the wire table on the shard.  The controller can
  * be initialized with the JSON row from the table, effectively wrapping that
  * data in helpful methods.
  *
  * @param {!NetSimShard} shard - The shard where this wire lives.
- * @param {Object} [wireRow] - A row out of the _wire table on the shard.
+ * @param {WireRow} [wireRow] - A row out of the _wire table on the shard.
  *        If provided, will initialize this wire with the given data.  If not,
  *        this wire will initialize to default values.
  * @constructor
@@ -90,7 +100,10 @@ NetSimWire.prototype.getTable = function () {
   return this.shard_.wireTable;
 };
 
-/** Build own row for the wire table  */
+/**
+ * Build own row for the wire table
+ * @returns {WireRow}
+ */
 NetSimWire.prototype.buildRow = function () {
   return {
     localNodeID: this.localNodeID,
