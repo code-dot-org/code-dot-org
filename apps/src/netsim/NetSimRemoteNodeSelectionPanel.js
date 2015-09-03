@@ -25,6 +25,14 @@ var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
 
 /**
+ * Apply a very small debounce to lobby buttons to avoid doing extra work
+ * as a result of double-clicks and/or scripts that want to click buttons a
+ * few thousand times.
+ * @const {number}
+ */
+var BUTTON_DEBOUNCE_DURATION_MS = 100;
+
+/**
  * Generator and controller for lobby node listing, selection, and connection
  * controls.
  *
@@ -91,28 +99,32 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    * @type {function}
    * @private
    */
-  this.addRouterCallback_ = callbacks.addRouterCallback;
+  this.addRouterCallback_ = _.debounce(callbacks.addRouterCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
-  this.cancelButtonCallback_ = callbacks.cancelButtonCallback;
+  this.cancelButtonCallback_ = _.debounce(callbacks.cancelButtonCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for "join" button next to each connectable node.
    * @type {function}
    * @private
    */
-  this.joinButtonCallback_ = callbacks.joinButtonCallback;
+  this.joinButtonCallback_ = _.debounce(callbacks.joinButtonCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for "reset shard" button click.
    * @type {function}
    * @private
    */
-  this.resetShardCallback_ = callbacks.resetShardCallback;
+  this.resetShardCallback_ = _.debounce(callbacks.resetShardCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -237,6 +249,7 @@ NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   if (target.is('[disabled]')) {
     return;
   }
+  target.attr('disabled', 'disabled');
 
   var nodeID = target.data('nodeId');
   var clickedNode = _.find(this.nodesOnShard_, function (node) {
