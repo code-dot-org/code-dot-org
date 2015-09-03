@@ -373,45 +373,27 @@ describe("NetSimRouterNode", function () {
 
   describe("getConnections", function () {
     it ("returns an empty array when no wires are present", function () {
-      var wires;
-      routerA.getConnections(function (err, foundWires) {
-        wires = foundWires;
-      });
-      assert(wires !== undefined, "Set wires");
-      assertOwnProperty(wires, 'length');
+      var wires = routerA.getConnections();
+      assert(Array.isArray(wires));
       assertEqual(wires.length, 0);
     });
 
     it ("returns wires that have a remote end attached to the router", function () {
       NetSimWire.create(testShard, 0, routerA.entityID, function () {});
-
-      var wires;
-      routerA.getConnections(function (err, foundWires) {
-        wires = foundWires;
-      });
-      assertEqual(wires.length, 1);
+      assertEqual(1, routerA.getConnections().length);
     });
 
     it ("returns NetSimWire objects", function () {
       NetSimWire.create(testShard, 0, routerA.entityID, function () {});
-
-      var wires;
-      routerA.getConnections(function (err, foundWires) {
-        wires = foundWires;
-      });
-      assert(wires[0] instanceof NetSimWire, "Got a NetSimWire back");
+      assert(routerA.getConnections()[0] instanceof NetSimWire, "Got a NetSimWire back");
     });
 
     it ("skips wires that aren't connected to the router", function () {
       NetSimWire.create(testShard, 0, routerA.entityID, function () {});
       NetSimWire.create(testShard, 0, routerA.entityID + 1, function () {});
 
-      var wires;
-      routerA.getConnections(function (err, foundWires) {
-        wires = foundWires;
-      });
       // Only get the one wire back.
-      assertEqual(wires.length, 1);
+      assertEqual(1, routerA.getConnections().length);
     });
   });
 
