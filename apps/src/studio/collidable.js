@@ -31,6 +31,8 @@ var Collidable = function (opts) {
   this.gridX = undefined;
   this.gridY = undefined;
 
+  this.activity = undefined;
+
   for (var prop in opts) {
     this[prop] = opts[prop];
   }
@@ -115,6 +117,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+Collidable.prototype.setActivity = function(type) {
+  this.activity = type;
+}
+
+
 /**
  * This function should be called every frame, and moves the item around.
  * It moves the item smoothly, but between fixed points on the grid.
@@ -128,6 +135,11 @@ function getRandomInt(min, max) {
  */
 Collidable.prototype.roamGrid = function(type) {
 
+  // Do we have a set activity for this item?  If so, use it.
+  if (this.activity !== undefined) {
+    type = this.activity;
+  }
+  
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
     this.gridX = Math.floor(this.x / Studio.SQUARE_SIZE);
@@ -186,9 +198,12 @@ Collidable.prototype.roamGrid = function(type) {
           candidate.score ++;
         } else if (type == "chaseGrid") {
           if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
-            candidate.score ++;
+            candidate.score += 2;
           } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-            candidate.score ++;
+            candidate.score += 2;
+          }
+          else {
+            candidate.score += 1;
           }
 
           if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
@@ -228,7 +243,10 @@ Collidable.prototype.roamGrid = function(type) {
       var candidate = candidates[i];
       var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
                    candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-      var hasWall = !atEdge && Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL;
+      var hasWall = !atEdge && 
+                    ((Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL) ||
+                     (Studio.walls !== null && 
+                      Studio.getSkin()[Studio.walls][candidate.gridY][candidate.gridX]));
       if (atEdge || hasWall || candidate.score === 0) {
         candidates.splice(i, 1);
       }

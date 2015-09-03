@@ -23,7 +23,9 @@
       "whenLeft": null,
       "whenRight": null,
       "whenUp": null,
-      "whenDown": null
+      "whenDown": null,
+      "whenTouchItem": null,
+      "setItemActivity": null
     },
 
     "sort_draw_order": true,
