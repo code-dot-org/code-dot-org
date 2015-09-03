@@ -48,7 +48,7 @@ var CONFIGS = {
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
     actionSpeedScale: {
-      'nectar': 2,
+      nectar: 0.5,
     },
     pegmanYOffset: 0,
     tileSheetWidth: 5,
