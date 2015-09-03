@@ -211,12 +211,12 @@ Dialog.prototype.processHideOptions = function(options) {
   $(".modal-backdrop").animate({opacity: 0}, totalFadeTime);
 
   // And a bunch of other elements
-  $(".farSide").animate({opacity: 0}, decorationFadeTime);
-  $("#x-close").animate({opacity: 0}, decorationFadeTime);
-  $(".dialog-title").animate({opacity: 0}, decorationFadeTime);
-  $(".aniGif").animate({opacity: 0}, decorationFadeTime);
-  $(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
-  $(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
+  this.div.find(".farSide").animate({opacity: 0}, decorationFadeTime);
+  this.div.find("#x-close").animate({opacity: 0}, decorationFadeTime);
+  this.div.find(".dialog-title").animate({opacity: 0}, decorationFadeTime);
+  this.div.find(".aniGif").animate({opacity: 0}, decorationFadeTime);
+  this.div.find(".modal-content p").animate({"font-size": "13px"}, totalFadeTime)
+  this.div.find(".markdown-instructions-container").animate({opacity: 0}, fastFadeTime);
 
   // Slide the instruction box from its current position to its destination.
   $(this.div).css(startCss).animate(endCss, totalFadeTime, "swing", function() {

@@ -1,0 +1,10 @@
+name 'U2L18 Free Response Assessment 1'
+title 'Asymmetric Encryption Assessment 1'
+content1 'In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful'
+
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but should include the following concepts:
+
+-
+MARKDOWN

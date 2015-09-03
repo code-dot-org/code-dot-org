@@ -18,7 +18,12 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       panel = new NetSimRemoteNodeSelectionPanel(rootDiv, {
         nodesOnShard: [],
         incomingConnectionNodes: []
-      }, {});
+      }, {
+        addRouterCallback: function () {},
+        cancelButtonCallback: function () {},
+        joinButtonCallback: function () {},
+        resetShardCallback: function () {}
+      });
     });
 
     it ("false if no user detected", function () {
