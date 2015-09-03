@@ -8,7 +8,8 @@
     "instructions": "Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want.  Happy pixeling!",
     "version": "2",
     "data": "0000 1010 0000 1010",
-    "href": "pixelation/pixelation.html"
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true
   }
 }]]></config>
 </Pixelation>

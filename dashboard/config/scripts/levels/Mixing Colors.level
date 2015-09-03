@@ -7,7 +7,8 @@
   "properties": {
     "version": "3",
     "data": "000000100000001000000110110000001010111000100010",
-    "href": "pixelation/pixelation.html"
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true
   }
 }]]></config>
 </Pixelation>
