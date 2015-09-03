@@ -1,5 +1,5 @@
 name 'U2L18 Free Response Getting Started'
-title 'One Way Functions'
+title 'Assessment 3'
 
 markdown <<MARKDOWN
 Given that the Travelling Salesman Problem and the Wireless Hotspot Problem are computationally hard to solve, why might the Wireless Hotspot Problem be a more ideal candidate for using an encryption method? Make reference to properties of the two problems in your answer.

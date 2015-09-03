@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Draw 3 \"steps\" moving up and to the right.  Notice the pattern in the movement. You should define a function called drawStep() which draws one of the steps, and then call it 3 times to achieve the effect.",
+    "instructions": "Draw 3 \"steps\" moving up and to the right.  Declare a function called drawStep() which draws one of the steps, and then call it 3 times to achieve the effect. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -45,16 +45,20 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
+    "app_width": "320",
+    "app_height": "480",
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "encrypted_examples": "Z5Dz+CRFReW37iHbovWgAhZZr6Gg9ihU9Kh9/lLrteUkP7LNASIzruazkHuZ\n1MEt\n",
+    "markdown_instructions": "###Challenge\r\nDraw 3 \"steps\" moving up and to the right, as shown below. \r\n\r\n**Declare** a function called `drawStep()` which draws a single step. Then **call** this function 3 times to complete the drawing. You may wish to recreate your `right()` function from the previous activity.\r\n\r\n![](https://images.code.org/2b018bf94b0744ae02f93188c3491596-image-1441298682123.gif)",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>
