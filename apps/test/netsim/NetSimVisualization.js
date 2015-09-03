@@ -74,7 +74,10 @@ describe("NetSimVisualization", function () {
    */
   var makeRemoteWire = function (localVizNode, remoteVizNode, elements) {
     var newWire;
-    NetSimWire.create(testShard, localVizNode.getCorrespondingEntityID(), remoteVizNode.getCorrespondingEntityID(), function (e, w) {
+    NetSimWire.create(testShard, {
+      localNodeID: localVizNode.getCorrespondingEntityID(),
+      remoteNodeID: remoteVizNode.getCorrespondingEntityID()
+    }, function (e, w) {
       newWire = w;
     });
     assert(newWire !== undefined, "Failed to create a remote wire.");
