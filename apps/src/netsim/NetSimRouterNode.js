@@ -909,16 +909,21 @@ var contains = function (haystack, needle) {
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
-  if (this.countConnections() > MAX_CLIENT_CONNECTIONS) {
-    onComplete(new Error("Too many connections"), false);
-    return;
-  }
+  var rejectionReason = null;
 
-  // Trigger an update, which will correct our connection count
-  // TODO: This may no longer be necessary
-  this.update(function (err) {
-    onComplete(err, err === null);
-  });
+  // Force a refresh to verify that we have not exceeded the connection limit.
+  this.shard_.wireTable.refresh()
+      .done(function () {
+        if (this.countConnections() > MAX_CLIENT_CONNECTIONS) {
+          rejectionReason = new Error("Too many connections");
+        }
+      }.bind(this))
+      .fail(function (err) {
+        rejectionReason = err;
+      })
+      .always(function () {
+        onComplete(rejectionReason, null === rejectionReason);
+      });
 };
 
 /**
