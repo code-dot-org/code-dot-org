@@ -147,9 +147,10 @@ def run_tests(arguments)
   end
 end
 
-def format_duration(duration)
-  minutes = (duration / 60).to_i
-  seconds = duration - (minutes * 60)
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
   "%.1d:%.2d minutes" % [minutes, seconds]
 end
 
@@ -293,6 +294,8 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
       message += " <a href='#{link}'>☁ html output</a>"
     end
+
+    message += "<i>command line: #{arguments + first_time_arguments}</i>"
     HipChat.log message, color: 'red'
     HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end
@@ -316,13 +319,13 @@ $errbrowserfile.close
 $suite_duration = Time.now - $suite_start_time
 $average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
-  "Test count: #{($suite_success_count + $suite_fail_count)}.  " +
-  "Total duration: #{$suite_duration.round(2)} seconds.  " +
-  "Average test duration: #{$average_test_duration.round(2)} seconds."
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
+  "Test count: #{($suite_success_count + $suite_fail_count)}. " +
+  "Total duration: #{format_duration($suite_duration)}. " +
+  "Average test duration: #{format_duration($average_test_duration)}."
 
 if $suite_fail_count > 0
-  puts "Failed tests: \n #{$failures.join("\n")}"
+  HipChat.log "Failed tests: \n #{$failures.join("\n")}"
 end
 
 exit $suite_fail_count
