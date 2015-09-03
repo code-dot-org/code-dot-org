@@ -3690,7 +3690,7 @@ Studio.getPlayspaceBoundaries = function(sprite)
 Studio.getSkin = function()
 {
   return skin;
-}
+};
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
