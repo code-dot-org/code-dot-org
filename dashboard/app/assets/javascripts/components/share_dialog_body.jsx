@@ -44,6 +44,7 @@ window.dashboard.ShareDialogBody = (function (React) {
         fontSize: 14
       };
 
+      var abuseContents;
       if (this.props.isAbusive) {
         abuseContents = <window.dashboard.AbuseError
           i18n={{

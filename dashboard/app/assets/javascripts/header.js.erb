@@ -89,7 +89,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text('<%= I18n.t(:less) %>');
+    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
     lazyLoadPopup($(target).closest('.header_trophy_link').length > 0);
     isHeaderPopupVisible = true;
@@ -97,7 +97,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   function hideHeaderPopup() {
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text('<%= I18n.t(:more) %>');
+    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).off('click', hideHeaderPopup);
     isHeaderPopupVisible = false;
   }
@@ -273,19 +273,19 @@ dashboard.header = {};
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
-      .append($('<div class="project_updated_at header_text">').text("<%= I18n.t('project.click_to_remix') %>"));
+      .append($('<div class="project_updated_at header_text">').text(dashboard.i18n.t('project.click_to_remix')));
 
   $('.project_info')
       .append(projectName)
-      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
+      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
   $('.project_remix').click(remixProject);
 };
 
 // Project header for levels backed by a channel, with "Share" and "Remix".
 dashboard.header.showProjectLevelHeader = function () {
   $('.project_info')
-      .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
-      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
+      .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
+      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
   $('.project_share').click(shareProject);
   $('.project_remix').click(remixProject);
 };
@@ -294,38 +294,38 @@ dashboard.header.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()));
     dashboard.header.updateTimestamp();
-    $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'));
+    $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')));
   }
 
   function projectNameEdit() {
     $('.project_updated_at').hide();
     $('.project_name').replaceWith($('<input type="text" class="project_name header_input" maxlength="100">').val(dashboard.project.getCurrentName()));
-    $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text('<%= I18n.t('project.save') %>'));
+    $('.project_edit').replaceWith($('<div class="project_save header_button header_button_light">').text(dashboard.i18n.t('project.save')));
   }
 
-  var moreButton = '<%= I18n.t('project.more') %> '
+  var moreButton = dashboard.i18n.t('project.more')
       + '<span class="project_more_glyph">&#x25BC;</span>'
       + '<div class="project_more_popup" style="position: absolute;">'
-      + '<a href="#" class="project_delete"><%= I18n.t('project.delete') %></a><br>'
-      + '<a href="#" class="project_new"><%= I18n.t('project.new') %></a></div>';
+      + '<a href="#" class="project_delete">' + dashboard.i18n.t('project.delete') + '</a><br>'
+      + '<a href="#" class="project_new">' + dashboard.i18n.t('project.new') + '</a></div>';
 
   var nameAndUpdated = $('<div class="project_name_wrapper header_text">') // content will be added by projectNameShow
       .append($('<div class="project_name header_text">'))
       .append($('<div class="project_updated_at header_text">'));
 
   $('.project_info').append(nameAndUpdated)
-      .append($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'))
-      .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
-      .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'))
+      .append($('<div class="project_edit header_button header_button_light">').text(dashboard.i18n.t('project.rename')))
+      .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
+      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_more header_button header_button_light" style="position: relative;">').html(moreButton));
 
   // TODO: Remove this (and the related style) when Applab is no longer in beta.
   if ('applab' === appOptions.app) {
-    $('.project_info').append($('<div class="beta-notice">').text('<%= I18n.t('beta') %>'));
+    $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 
   projectNameShow();
-  $('.freeplay_links').empty().before($('<div class="project_list header_button header_button_light">').text('<%= I18n.t('project.my_projects') %>'));
+  $('.freeplay_links').empty().before($('<div class="project_list header_button header_button_light">').text(dashboard.i18n.t('project.my_projects')));
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
@@ -370,9 +370,10 @@ dashboard.header.showProjectHeader = function () {
     e.preventDefault(); // Don't change the hash.
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
         + '<div id="confirm-delete" class="modal-content">'
-        + '<p class="dialog-title"><%= I18n.t('project.delete_confirm_title') %></p>'
-        + "<p><%= I18n.t('project.delete_confirm_text') %></p>"
-        + '<button id="again-button"><%= I18n.t('project.cancel') %></button><button id="continue-button" style="float: right"><%= I18n.t('project.delete') %></button></div>'
+        + '<p class="dialog-title">' + dasboard.i18n.t('project.delete_confirm_title') + '</p>'
+        + '<p>' + dasboard.i18n.t('project.delete_confirm_text') + '</p>'
+        + '<button id="again-button">' + dasboard.i18n.t('project.cancel') + '</button>'
+        + '<button id="continue-button" style="float: right">' + dashboard.i18n.t('project.delete') + '</button></div>'
     });
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
