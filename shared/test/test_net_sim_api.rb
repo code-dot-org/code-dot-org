@@ -13,8 +13,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
+    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, 'studio.code.org'))
     @shard_id = '_testShard2'
     @table_name = TABLE_NAMES[:node]
 
@@ -25,7 +25,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
     # Every test should start with an empty table.
-    assert read_records.first.nil?, "Table did not begin empty"
+    assert read_records.first.nil?, 'Table did not begin empty'
   end
 
   def test_create_read_update_delete
@@ -43,7 +43,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {name: 'alice', id: record_id, age: 8})['age']
+    update_record_response = update_record(record_id, {name: 'alice', id: record_id, age: 8})
+    assert_equal 8, JSON.parse(update_record_response.body)['age']
     record = read_records.first
     assert_equal 8, record['age']
 
@@ -78,13 +79,13 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record_create_response = create_record([{name: 'alice', age: 7, male: false}])
     assert record_create_response.is_a?(Array)
     assert_equal 1, record_create_response.length
-    assert_equal 1, read_records().length
+    assert_equal 1, read_records.length
     created_ids.push(record_create_response[0]['id'])
 
     # Sending a record as a hash should result in a hash being returned
     record_create_response = create_record({name: 'fred', age: 12, male: true})
     assert record_create_response.is_a?(Hash)
-    assert_equal 2, read_records().length
+    assert_equal 2, read_records.length
     created_ids.push(record_create_response['id'])
 
     # Sending several records should result in them all being inserted
@@ -94,7 +95,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     ])
     assert record_create_response.is_a?(Array)
     assert_equal 2, record_create_response.length
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
     created_ids.push(record_create_response[0]['id'])
     created_ids.push(record_create_response[1]['id'])
 
@@ -102,18 +103,18 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record_create_response = create_record([])
     assert record_create_response.is_a?(Array)
     assert_equal 0, record_create_response.length
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
 
     # sending a value that is neither an array nor a hash should fail
     create_record(1)
     assert_equal 400, @net_sim_api.last_response.status
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
 
     # sending an array containing a value that is neither an array nor a
     # hash should fail
     create_record([1])
     assert_equal 400, @net_sim_api.last_response.status
-    assert_equal 4, read_records().length
+    assert_equal 4, read_records.length
   ensure
     created_ids.each { |id| delete_record(id) }
     assert read_records.first.nil?, 'Table was not empty'
@@ -153,24 +154,24 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 400, record_create_response.status
 
     # Verify that no record was created
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_get_400_on_inserting_orphaned_message
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
-    assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
-    assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
+    assert_equal 400, @net_sim_api.last_response.status, 'Orphaned message not created'
+    assert_equal 0, read_records(TABLE_NAMES[:message]).count, 'Created no messages'
   end
 
   def test_get_400_on_inserting_duplicate_wire
     # The first one works
     create_wire(1, 2)
-    assert_equal 201, @net_sim_api.last_response.status, "Wire creation request failed"
-    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Initial wire was not created"
+    assert_equal 201, @net_sim_api.last_response.status, 'Wire creation request failed'
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Initial wire was not created'
 
     create_wire(1, 2)
-    assert_equal 400, @net_sim_api.last_response.status, "Duplicate wire request did not fail"
-    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Duplicate wire was created"
+    assert_equal 400, @net_sim_api.last_response.status, 'Duplicate wire request did not fail'
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Duplicate wire was created'
   end
 
   def test_get_400_on_bad_json_update
@@ -189,7 +190,47 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 7, record['age']
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_get_404_on_updating_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_update_response = update_record(1, {id: 1, age: 8})
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 404, record_update_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
+  ensure
+    delete_record(1)
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  # Because calling delete on a missing object results in the desired
+  # state anyway, we return a success code in this case - but no invalidation
+  # should be produced.
+  def test_get_204_on_deleting_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_delete_response = delete_record(1)
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 204, record_delete_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_no_publish_on_read
@@ -215,7 +256,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.first[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_update
@@ -233,7 +274,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_delete
@@ -251,7 +292,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
     assert_equal [record_id], test_spy.publish_history.last[:data][:ids]
   ensure
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_node_delete_cascades_to_node_wires_delete_one_delete_verb
@@ -313,8 +354,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_wire(wire_ab['id'])
     delete_wire(wire_ca['id'])
     delete_wire(wire_bc['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
   end
 
   def test_node_delete_cascades_to_messages_delete_one_delete_verb
@@ -370,8 +411,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_node(node_b['id'])
     delete_message(message_a_to_b['id'])
     delete_message(message_b_to_a['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
   end
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
@@ -422,8 +463,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert record_exists(TABLE_NAMES[:node], node_c['id'])
 
     # Assert all wires and messages are gone
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
 
     # Even though we just deleted ten rows, there should only be three
     # published invalidations, because three tables were affected
@@ -471,9 +512,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_message(message2_a_to_b['id'])
     delete_message(message_b_to_a['id'])
     delete_message(message2_b_to_a['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
   end
 
   def test_parse_table_map_from_query_string
@@ -521,7 +562,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_node(node_a['id'])
     delete_node(node_b['id'])
     delete_node(node_c['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
   end
 
   def test_parse_ids_from_query_string
@@ -587,7 +628,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def update_record(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
+    @net_sim_api.last_response
   end
 
   def update_record_malformed(id, record)
