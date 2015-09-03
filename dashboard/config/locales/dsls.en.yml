@@ -1534,24 +1534,19 @@ en:
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
         Vigenere Cipher: Vigenere Cipher
       U2L17 - Vocabulary matching:
-        ' <br>Brute Force': ' <br>Brute Force'
         ' <br>Brute force': ' <br>Brute force'
-        <br>Computationally Hard: <br>Computationally Hard
         <br>Computationally hard: <br>Computationally hard
         <br>Heuristic: <br>Heuristic
         <br>One Way Function: <br>One Way Function
         A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
         An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
         Assessment 2 - Matching: Assessment 2 - Matching
-        Matching: Matching
         Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
         Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
       U2L18 FR why is asymmetric encryption useful:
         Asymmetric Encryption - Assessment 1: Asymmetric Encryption - Assessment 1
-        Asymmetric Encryption - why is it useful: Asymmetric Encryption - why is it useful
         ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
         : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
-        Why is asymmetric encryption useful?: Why is asymmetric encryption useful?
       U2L18 Match terms to cups and beans analogy:
         A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
         Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
@@ -1559,11 +1554,9 @@ en:
         Bob adding beans to the cup: Bob adding beans to the cup
         Decrypting a message: Decrypting a message
         Encrypting a message: Encrypting a message
-        Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity: Match the terms to their counterpart from the Public Key Encryption Cups and Beans Activity
         Private key: Private key
         Public key: Public key
         The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
-        The number of beans Alice chooses to put in the cup initially.: The number of beans Alice chooses to put in the cup initially.
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -2819,17 +2812,10 @@ en:
       U3L03 Assessment:
         'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
         Descriptive procedure names make the program code easier to read.: Descriptive procedure names make the program code easier to read.
-        It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
-        Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
-        The "spoken-language style" makes errors more logically recognizable.: The "spoken-language style" makes errors more logically recognizable.
-        There are fewer lines in the program to debug.: There are fewer lines in the program to debug.
         They can be used to replace repetitive portions of a program.: They can be used to replace repetitive portions of a program.
-        They create shorter algorithms that sound like spoken language.: They create shorter algorithms that sound like spoken language.
         They help break programs up into logical chunks.: They help break programs up into logical chunks.
         They make the program easier for the computer to understand.: They make the program easier for the computer to understand.
-        They reduce the level of program abstraction.: They reduce the level of program abstraction.
         Which of the following is NOT a true statement about procedures?: Which of the following is NOT a true statement about procedures?
-        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which of the following is NOT an advantage of using well-designed procedures and functions?
       U3L04 Assessment2:
         'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
         The name of program it was originally designed for: The name of program it was originally designed for
@@ -3697,14 +3683,10 @@ en:
       U2L16 Free Response Assessment 3:
         Assessment 3: Assessment 3
         Enter answer here: Enter answer here
-        Why are computationally hard problems important in encryption strategies?: Why are computationally hard problems important in encryption strategies?
         Why are computationally-hard problems important in encryption strategies?: Why are computationally-hard problems important in encryption strategies?
       U2L16 Free Response assessment 2:
         Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
         What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
-      U2L16 Free Response assessment 3:
-        Lesson 16 - Assessment 3: Lesson 16 - Assessment 3
-        Why do we care about computationally hard problems, in regards to encryption?: Why do we care about computationally hard problems, in regards to encryption?
       U2L16 Free response assessment 1:
         Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
         What does "computationally hard" mean?: What does "computationally hard" mean?
@@ -3713,37 +3695,27 @@ en:
         Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
       U2L17 Assessment 2:
         Assessment Question 2: Assessment Question 2
-        How are computationally hard problems related to encryption?: How are computationally hard problems related to encryption?
         What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
       U2L17 Free Response Getting Started:
         'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
-        ? List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
-        : List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
-        What does the phrase "computationally hard problem" mean?: What does the phrase "computationally hard problem" mean?
         What kinds of problems do you think are "computationally hard"?: What kinds of problems do you think are "computationally hard"?
-        What kinds of problems do you think are "computationally hard?: What kinds of problems do you think are "computationally hard?
       U2L17 Free Response Wrap Up:
         'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
         ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
         : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
       U2L18 Assessment:
-        'Assessment: Question': 'Assessment: Question'
         Reflection: Reflection
       U2L18 FR why is asymmetric encryption useful:
         Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
       U2L18 Free Response Assessment 1:
         Asymmetric Encryption Assessment 1: Asymmetric Encryption Assessment 1
-        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
-        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
         ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
         : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
       U2L18 Free Response Assessment 3:
         Asymmetric Encryption Assessment 3: Asymmetric Encryption Assessment 3
         List other examples of one-way functions. Can you think of a one-way function in real life?: List other examples of one-way functions. Can you think of a one-way function in real life?
-        List other examples of one-way functions? Can you think of a one-way function in real life?: List other examples of one-way functions? Can you think of a one-way function in real life?
       U2L18 Free Response Getting Started:
         Assessment 3: Assessment 3
-        One Way Functions: One Way Functions
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
       U2L19 Assessment:
