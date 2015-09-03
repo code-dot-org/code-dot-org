@@ -111,7 +111,7 @@ var projects = module.exports = {
    */
   // TODO - better name?
   exceedsReportingThreshold: function () {
-    return current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD;
+    return !!(current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
   },
 
   //////////////////////////////////////////////////////////////////////
