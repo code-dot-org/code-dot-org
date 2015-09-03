@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "se dotakne zgornjega roba",
   "whenUp": "ko je pritisnjena puščica gor",
   "whenUpTooltip": "Ko je pritisnjena gor puščica izvedi sledeče ukaze.",
-  "yes": "Da"
+  "yes": "Da",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }
