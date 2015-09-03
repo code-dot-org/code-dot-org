@@ -1,6 +1,12 @@
 name 'U2L18 Assessment'
-title 'Assessment: Question'
+title 'Reflection'
 
 markdown <<MARKDOWN
-How is the Ice Cream Van problem different from another “hard” problem you saw, the Traveling Salesman problem?
+How is the Wireless Hotspot problem different from another “hard” problem you saw, the Traveling Salesman problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but should include these concepts:
+
+- 
 MARKDOWN
