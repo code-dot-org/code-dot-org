@@ -94,14 +94,10 @@ class ScriptLevelsController < ApplicationController
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       authorize! :manage, :teacher
       level_source = @ideal_level_source
-      level_view_options(share: true)
-      view_options(readonly_workspace: true,
-                   callouts: [],
-                   full_width: true)
+      readonly_view_options
     elsif @user && current_user && @user != current_user
       level_source = @user.last_attempt(@level).try(:level_source)
-      view_options(readonly_workspace: true,
-                   callouts: [])
+      readonly_view_options
     elsif current_user
       # Set start blocks to the user's previous attempt at this puzzle.
       level_source = current_user.last_attempt(@level).try(:level_source)
