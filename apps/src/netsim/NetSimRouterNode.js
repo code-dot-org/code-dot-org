@@ -645,6 +645,8 @@ NetSimRouterNode.prototype.getNodeType = function () {
 NetSimRouterNode.prototype.getStatus = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
 
+  // TODO: Change this to use getConnections since it uses the cache now.
+
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
@@ -864,13 +866,10 @@ NetSimRouterNode.prototype.getConnections = function () {
 };
 
 /**
- * Query the wires table and pass the callback the total number of wires
- * connected to this router.
- * @param {NodeStyleCallback} onComplete which accepts a number.
+ * @returns {number} total number of wires connected to this router.
  */
-NetSimRouterNode.prototype.countConnections = function (onComplete) {
-  onComplete = onComplete || function () {};
-  onComplete(null, this.getConnections().length);
+NetSimRouterNode.prototype.countConnections = function () {
+  return this.getConnections().length;
 };
 
 /**
@@ -910,22 +909,15 @@ var contains = function (haystack, needle) {
  *        if connection is allowed, FALSE if connection is rejected.
  */
 NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
-  var self = this;
-  this.countConnections(function (err, count) {
-    if (err) {
-      onComplete(err, false);
-      return;
-    }
+  if (this.countConnections() > MAX_CLIENT_CONNECTIONS) {
+    onComplete(new Error("Too many connections"), false);
+    return;
+  }
 
-    if (count > MAX_CLIENT_CONNECTIONS) {
-      onComplete(new Error("Too many connections"), false);
-      return;
-    }
-
-    // Trigger an update, which will correct our connection count
-    self.update(function (err) {
-      onComplete(err, err === null);
-    });
+  // Trigger an update, which will correct our connection count
+  // TODO: This may no longer be necessary
+  this.update(function (err) {
+    onComplete(err, err === null);
   });
 };
 
