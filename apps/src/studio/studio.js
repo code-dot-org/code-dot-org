@@ -3573,11 +3573,12 @@ function executeItemCollision(src, target) {
 }
 
 function executeItemUpdate(item, itemIndex) {
-  // Option 1: student provided
+  // Part 1: execute student-provided code.
   var prefix = 'whenItemUpdated-' + item.className;
   callHandler(prefix, undefined, [itemIndex]);
 
-  // Option 2: we just do it ourselves
+  // Part 2: execute item movement every frame here, with a default that
+  // can be overriden by the student calling setItemActivity.
   item.roamGrid("roamGrid");
 }
 
