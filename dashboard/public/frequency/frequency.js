@@ -326,18 +326,24 @@ BarGraph.prototype.createDragBehavior = function () {
 
     this.svg.classed("dragging", true);
 
-    /* move the source */
-    var source = this.svg.select("#userletter-" + d.user.letter);
-    var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
-    source.attr("transform", "translate(" + (parseInt(coords[0]) + d3.event.dx) + "," + (parseInt(coords[1]) + d3.event.dy) + ")");
-
     /* find the target */
     var xPos = d3.event.x;
     var leftEdges = this.userLetterScale.range();
     var width = this.userLetterScale.rangeBand();
     var j;
 
+    // There's gotta be a better way to do this. We're looking for the
+    // first value in leftEdges such that that value plus the the width
+    // of each element matches the cursor position
     for (j = 0; xPos > (leftEdges[j] + width); j++) {}
+    j = Math.min(j, leftEdges.length - 1);
+
+    /* move the source */
+    var source = this.svg.select("#userletter-" + d.user.letter);
+    var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
+    var x = parseInt(coords[0]) + d3.event.dx;
+    var y = parseInt(coords[1]) + d3.event.dy;
+    source.attr("transform", "translate(" + x + "," + y + ")");
 
     /* swap em! This is a deep clone. Do we need a deep clone? */
     tempdata = this.user_data.map(function (d) {
