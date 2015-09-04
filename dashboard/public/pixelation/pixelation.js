@@ -49,6 +49,12 @@ function customizeStyles() {
   }
   if (options.version === '1') {
     $('.hide_on_v1').hide();
+
+    // The layout is fundamentally different in version 1 than it is in other versions.
+    // Rearrange the DOM so that the visualization column sits at the top left.
+    var visualizationColumn = document.getElementById('visualizationColumn');
+    var visualizationEditorHeader = document.getElementById('visualizationEditorHeader');
+    visualizationColumn.parentNode.insertBefore(visualizationColumn, visualizationEditorHeader);
   } else if (options.version === '2') {
     $('.hide_on_v2').hide();
     $('#height, #width').prop('readonly', true);
