@@ -1027,11 +1027,11 @@ function redirectEditView() {
   var newUrl;
   if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/projects\/([^/]+)\/([^/]+)\/view/, '/projects/$1/$2/edit');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
   } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/projects\/([^/]+)\/([^/]+)\/edit/, '/projects/$1/$2/view');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
   }
 
