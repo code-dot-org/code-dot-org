@@ -397,15 +397,18 @@ describe("NetSimRouterNode", function () {
     it ("skips wires that aren't connected to the router", function () {
       NetSimWire.create(testShard, {
             localNodeID: 0,
-            remoteNodeID: routerA.entityID
+            remoteNodeID: routerA.entityID,
+            localHostname: 'theRightOne'
           }, function () {});
       NetSimWire.create(testShard, {
             localNodeID: 0,
-            remoteNodeID: routerA.entityID + 1
+            remoteNodeID: routerA.entityID + 1,
+            localHostname: 'theWrongOne'
           }, function () {});
 
       // Only get the one wire back.
       assertEqual(1, routerA.getConnections().length);
+      assertEqual('theRightOne', routerA.getConnections()[0].localHostname);
     });
   });
 
