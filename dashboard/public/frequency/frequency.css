@@ -56,6 +56,21 @@ rect {
   margin: 0;
 }
 
+.controls label {
+  height: 36px;
+}
+
+.mode-controls button {
+  margin-top: -4px;
+}
+
+input[type=radio][name=mode] + .mode-controls {
+  display: none;
+}
+input[type=radio][name=mode]:checked + .mode-controls {
+  display: inline-block;
+}
+
 .axis {
   font: 10px sans-serif;
 }

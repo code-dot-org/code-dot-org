@@ -105,48 +105,10 @@ var processSubstitutions = function () {
   $("#output").html(STR);
 };
 
-var shiftSubstitution = function (shiftAmt) {
-
-  shiftAmt = shiftAmt % 26; //just in case;
-  $("#shiftSliderDisplay").html(shiftAmt);
-  if (shiftAmt < 0) shiftAmt = 26 + shiftAmt;
-
-  if (bg) {
-    bg.shift(shiftAmt);
-  }
-  //var substMap = {};
-  //LETTERS.forEach(function (letter, i) {
-    //substMap[letter] = LETTERS[(i + shiftAmt) % 26];
-  //});
-
-  //processSubstitutions();
-  //return substMap;
-
-};
-
-var fillRandom = function () {
-  if (bg) {
-    bg.randomize();
-  }
-  //LETTERS.forEach(function (letter) {
-  //  var rand = Math.floor(Math.random() * LETTERS.length);
-  //  SUBST_MAP[letter] = LETTERS[rand];
-  //});
-
-  //processSubstitutions();
-};
-
-var clearSubstitutions = function () {
-  debounce(function () {
-    shiftSubstitution(0);
-    processSubstitutions();
-  }, 200);
-};
-
 var BarGraph = function () {
   this.margin = {
-    top: 30,
-    right: 20,
+    top: 10,
+    right: 10,
     bottom: 40,
     left: 40
   };
@@ -297,10 +259,14 @@ BarGraph.prototype.handleSortChange = function (changeEvent) {
   this.reorder();
 };
 
+BarGraph.prototype.resize = function () {
+  this.container.select('svg').attr({
+    "width": this.getWidth() + this.margin.left + this.margin.right,
+    "height": this.getHeight() + this.margin.top + this.margin.bottom
+  });
+};
 
-BarGraph.prototype.init = function () {
-  this.container = d3.select("#d3chart");
-
+BarGraph.prototype.createScales = function () {
   // We use two scales because we have two domain orderings
   var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
   this.userLetterScale = letterScale.copy().domain(LETTERS);
@@ -319,15 +285,18 @@ BarGraph.prototype.init = function () {
     .orient("left")
     .ticks(5, "%");
 
+  this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
+};
+
+BarGraph.prototype.init = function () {
+  this.container = d3.select("#d3chart");
+
   this.svg = this.container.append("svg")
-    .attr({
-      "width": this.getWidth() + this.margin.left + this.margin.right,
-      "height": this.getHeight() + this.margin.top + this.margin.bottom
-    })
     .append("g")
     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
-  this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
+  this.resize();
+  this.createScales();
 
   this.svg.append("g")
     .attr({
@@ -582,12 +551,34 @@ BarGraph.prototype.render = function () {
 };
 
 $(document).ready(function () {
-  //var substMap = shiftSubstitution(0);
   bg = new BarGraph();
   bg.init();
   bg.render();
 
+  /*
+   *$(window).on('resize', debounce(function () {
+   *  bg.resize();
+   *  bg.createScales();
+   *  bg.render();
+   *}, 200));
+   */
+
   $("#input").on("input", processPlainText);
+
+  $("#shift-left").on("click", function () {
+    var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
+    shiftAmt = shiftAmt % 26;
+    if (shiftAmt < 0) shiftAmt += 26;
+    $("#shiftAmt").val(shiftAmt);
+    bg.shift(shiftAmt);
+  });
+  $("#shift-right").on("click", function () {
+    var shiftAmt = parseInt($("#shiftAmt").val()) - 1;
+    shiftAmt = shiftAmt % 26;
+    if (shiftAmt < 0) shiftAmt += 26;
+    $("#shiftAmt").val(shiftAmt);
+    bg.shift(shiftAmt);
+  });
 
   $(".load-message#easy").click(function () {
     $('#input').val(message1).trigger('input');
@@ -597,8 +588,13 @@ $(document).ready(function () {
     $('#input').val(message2).trigger('input');
   });
 
-  $("#fillRand").click(fillRandom);
-  $("#clear").click(clearSubstitutions);
+  $("#fillRand").click(function () {
+      bg.randomize();
+  });
+  $(".reset-simulation").click(function () {
+    $("#shiftAmt").val(0);
+    bg.shift(0);
+  });
 
   processPlainText();
   $("input").keyup(processSubstitutions);

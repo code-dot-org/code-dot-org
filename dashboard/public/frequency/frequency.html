@@ -7,9 +7,11 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span4">
+      <div class="row control-group">
+        <button class="btn btn-primary load-message" id="easy">load message (easy)</button>
+        <button class="btn btn-primary load-message" id="hard">load message (hard)</button>
+      </div>
       <div class="row">
-        <button class="load-message" id="easy">load message (easy)</button>
-        <button class="load-message" id="hard">load message (hard)</button>
         <textarea class="text-container" id="input">hello there I'm some text</textarea>
       </div>
       <div class="row">
@@ -17,19 +19,35 @@
       </div>
     </div>
     <div class="span8">
-      <div id="d3chart">
-      <div id="sortRadio">
-        <span>Sort:</span>
-        <div class="btn-group" data-toggle="buttons-radio">
-          <button type="button" class="btn btn-primary active" value="alphabetic">A to Z</button>
-          <button type="button" class="btn btn-primary" value="frequency">By %</button>
+      <div id="d3chart" class="control-group">
+        <div id="sortRadio">
+          <span>Sort:</span>
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button type="button" class="btn btn-primary active" value="alphabetic">A to Z</button>
+            <button type="button" class="btn btn-primary" value="frequency">By %</button>
+          </div>
         </div>
       </div>
-      </div>
-      <div class="controls">
-        Substitutions: <button id="fillRand">random</button>
-        Shift alphabet by: <input type=range min=-26 max=26 value=0 id="shiftAmt" style="width: 104px" oninput="shiftSubstitution(this.value)"><span id='shiftSliderDisplay'>0</span>
-        <button id="clear">clear substitutions</button>
+      <div class="controls controls-row">
+        <label class="radio">
+          Sort
+          <input type="radio" id="tab-shift" name="mode" checked="checked"  />
+          <div class="mode-controls">
+            <button id="fillRand" class="btn btn-primary">randomize substitutions</button>
+            <button class="btn btn-primary inline reset-simulation">clear substitutions</button>
+          </div>
+        </label>
+
+        <label class="radio">
+          Shift
+          <input type="radio" id="tab-sort" name="mode"  />
+          <div class="mode-controls form-inline">
+            <a id="shift-left">&lt;</a>
+            <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
+            <a id="shift-right">&gt;</a>
+            <button class="btn btn-primary inline reset-simulation">reset</button>
+          </div>
+        </label>
       </div>
     </div>
   </div>
