@@ -301,7 +301,7 @@ var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
+  watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
   mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 

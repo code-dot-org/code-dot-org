@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Create a turnRight() function and draw a rectangle twice as tall as it is wide by having the turtle navigate clockwise to draw the rectangle. ",
+    "instructions": "Declare a function called right() that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -45,16 +45,21 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
+    "app_width": "320",
+    "app_height": "461",
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
+    "markdown_instructions": "###Challenge\r\n**Declare** a function called `right()` that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
+    "start_blocks": "function right(){\r\n  \r\n}",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

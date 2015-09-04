@@ -7,7 +7,7 @@
   "properties": {
     "edit_code": true,
     "skin": "hoc2015",
-    "background": "icy",
+    "background": "background1",
     "code_functions": {
       // Play Lab
       "setSprite": null,

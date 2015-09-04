@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "href": "odometer/odometer.html"
+    "href": "odometer/odometer.html",
+    "skip_dialog": true
   }
 }]]></config>
 </Odometer>

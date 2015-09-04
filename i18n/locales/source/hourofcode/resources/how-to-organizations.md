@@ -1,8 +1,11 @@
 ---
-title: How to host an Hour of Code - Organizations
+title: <%= hoc_s(:title_how_to_organizations) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
+
 <div class="row">
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>
     </div>
@@ -41,3 +44,5 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
+
+<%= view :signup_button %>

@@ -11,7 +11,8 @@
     "hex": true,
     "data": "04\n04\n18\nFF0000 00AAAA",
     "href": "pixelation/pixelation.html",
-    "video_key": "csp_pixelation_color_3"
+    "video_key": "csp_pixelation_color_3",
+    "skip_dialog": true
   }
 }]]></config>
 </Pixelation>

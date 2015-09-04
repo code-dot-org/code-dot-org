@@ -1010,29 +1010,9 @@ NetSim.prototype.debouncedResizeFooter = function () {
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
-      shareLink;
-
-  isConnected = false;
-  clientStatus = i18n.disconnected();
-  if (this.myNode) {
-    clientStatus = 'In Lobby';
-    myHostname = this.myNode.getHostname();
-    var myWire = this.myNode.getOutgoingWire();
-    if (myWire) {
-      myAddress = myWire.localAddress;
-    }
-  }
-
   if (this.isConnectedToRemote()) {
-    isConnected = true;
-    clientStatus = i18n.connected();
-    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
-  }
+    var myAddress = this.myNode.getAddress();
 
-  shareLink = this.lobby_.getShareLink();
-
-  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1043,12 +1023,10 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        isConnected: isConnected,
-        statusString: clientStatus,
-        myHostname: myHostname,
+        myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
-        remoteNodeName: remoteNodeName,
-        shareLink: shareLink
+        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
+        shareLink: this.lobby_.getShareLink()
       });
     }
   } else {
