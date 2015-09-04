@@ -52,7 +52,8 @@
     "connected_routers": "false",
     "instructions": "With your partner, develop a protocol or set of rules for communicating a drawing using only bits. See the worksheet handed out by your teacher for more detailed instructions!",
     "video_key": "csp_internetsimulator_2",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "true"
   }
 }]]></config>
   <blocks/>

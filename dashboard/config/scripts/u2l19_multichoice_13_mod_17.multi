@@ -6,3 +6,8 @@ wrong '1 4/13'
 wrong '4'
 right '13'
 wrong '17'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 13
+MARKDOWN

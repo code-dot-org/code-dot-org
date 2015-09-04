@@ -18,7 +18,6 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
-  this.animationFrames = options.animationFrames || 1;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
@@ -56,6 +55,8 @@ Item.__resetIds = function () {
 Item.prototype.createElement = function (parentElement) {
   var nextId = (uniqueId++);
 
+  var numFacingAngles = 8;
+
   // create our clipping path/rect
   this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'item_clippath_' + nextId;
@@ -71,8 +72,8 @@ Item.prototype.createElement = function (parentElement) {
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
   this.element.setAttribute('id', itemId);
-  this.element.setAttribute('height', this.height * this.animationFrames);
-  this.element.setAttribute('width', this.width * this.frames);
+  this.element.setAttribute('height', this.height * this.frames);
+  this.element.setAttribute('width', this.width * numFacingAngles);
   parentElement.appendChild(this.element);
 
   this.element.setAttribute('clip-path', 'url(#' + clipId + ')');

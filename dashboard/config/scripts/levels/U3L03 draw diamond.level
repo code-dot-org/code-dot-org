@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use any and all of the functions you wrote previously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE: this is another tricky one.  The 4 sides of the diamond are made by drawing three steps with other movement made between calls.  HINT: you might want to make another function that handles drawing one side of the diamond. ",
+    "instructions": "Draw a diamond using the functions you've declared in this lesson. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -45,16 +45,20 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
+    "app_width": "320",
+    "app_height": "480",
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-DrawDiamond.gif",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "encrypted_examples": "lHZKKrZ+iRe3lMh0wmqkGmgvnGHAlTgKbTpDddv763+EsFt4I2WRr2kWq1xj\nYLkn\n",
+    "markdown_instructions": "###Challenge\r\nUse any and all of the functions you **declared** previously to make a diamond shape, as show below. You may need to go copy and paste them into this level.\r\n\r\n**Note:** this is another tricky one.  The 4 sides of the diamond are made by drawing three steps with other movement made between calls.  \r\n\r\n*Hint: you might want to make another function that handles drawing one side of the diamond.*\r\n\r\n![](https://images.code.org/29baacfd66e813dcae8ef9003f1fe5a6-image-1441299647228.gif)",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

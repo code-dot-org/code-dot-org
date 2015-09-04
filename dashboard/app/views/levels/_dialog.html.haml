@@ -93,7 +93,7 @@
     callback: @callback,
     app: app,
     level: @level.level_num,
-    shouldShowDialog: data['options'].try(:[], 'skip_dialog').blank?
+    shouldShowDialog: data['skip_dialog'].blank? && data['options'].try(:[], 'skip_dialog').blank?
   }
 
 :javascript

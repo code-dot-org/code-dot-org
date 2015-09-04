@@ -85,6 +85,7 @@ level 'U2L9 Student Lesson Introduction'
 level 'U2L10 NetSim Automatic DNS'  
 assessment 'U2L09 Assessment1'
 assessment 'U2L09 Assessment2'
+
 assessment 'U2L09 Free Response Wrap Up'  
 
 # 10
@@ -142,14 +143,16 @@ assessment 'U2L15 Free Response Wrap Up'
 # 16
 stage 'Algorithms Detour - Hard Problems TSP'
 level 'U2L17 Student Lesson Introduction'
-assessment 'U2L17 Free Response Getting Started'
 assessment 'U2L17 Assessment 1'    
 assessment 'U2L17 Assessment 2' 
+level 'U2L16 Free Response Assessment 3'
 assessment 'U2L17 Free Response Wrap Up'
 
 # 17
 stage 'One Way Functions - Ice Cream Vans'
 level 'U2L18 Student Lesson Introduction'
+assessment 'U2L17 Free Response Getting Started'
+level 'U2L17 Free Responses Assessment 1'
 assessment 'U2L17 - Vocabulary matching'
 assessment 'U2L18 Free Response Getting Started'
 assessment 'U2L18 Assessment'
@@ -159,8 +162,9 @@ assessment 'U2L18 Free Response Wrap Up'
 stage 'Alice and Bob and Asymmetric Keys'
 level 'U2L16 Student Lesson Introduction'
 level 'U2 Encryption and Public Keys - Video'
-assessment 'U2L18 FR why is asymmetric encryption useful'
+level 'U2L18 Free Response Assessment 1'
 assessment 'U2L18 Match terms to cups and beans analogy'
+level 'U2L18 Free Response Assessment 3'
 
 # 19
 stage 'Public Key Crypto'

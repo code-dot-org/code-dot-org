@@ -1,10 +1,13 @@
 name 'U2L18 FR why is asymmetric encryption useful'
-title 'Asymmetric Encryption - why is it useful'
-question 'Why is asymmetric encryption useful?'
+title 'Asymmetric Encryption - Assessment 1'
+question 'In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful'
 
 markdown <<MARKDOWN
-In symmetric encryption the same key is used to encrypt and decrypt a message.
-In **a**symmetric encryption different keys are used to encrypt and decrypt.
 
-Give at least one (more are welcome) reason why **a**symmetric encryption is useful?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- In symmetric encryption the same key is used to encrypt and decrypt a message.
+- In **asymmetric** encryption different keys are used to encrypt and decrypt.
 MARKDOWN
