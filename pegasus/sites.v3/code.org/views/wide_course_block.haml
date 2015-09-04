@@ -1,0 +1,10 @@
+- url = "https://studio.code.org/s/#{id}/reset"
+- title = I18n.t("data.script.name.#{id}.title")
+- body = I18n.t("data.script.name.#{id}.description_short")
+.courseblock-span6.courseblock-wide-small{style: "min-height: 100px;"}
+  %a{:href=>url}
+    .courseblock-span2.imgspan
+      %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")}
+    .courseblock-span4.heading
+      %h3= title
+      .smalltext= body

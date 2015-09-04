@@ -1,4 +1,5 @@
 %script{type: "text/javascript", src: "/js/congrats.js"}
+%link{type: "text/css", rel: "stylesheet", href: "/shared/css/course-blocks.css"}
 
 -cert_id = params[:i]
 
@@ -24,7 +25,14 @@
     = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
 
   %div{:style=>'clear: both; height:30px'}
+  %h2{:style=>'margin-bottom: 10px;'}= I18n.t(:congrats_next_tutorials_title)
+  %p{:style=>'padding-bottom: 10px;'}= I18n.t(:congrats_next_tutorials_desc, current_path: request.path_info)
+  = view :wide_course_block, id: Script::PLAYLAB_NAME
+  = view :wide_course_block, id: Script::ARTIST_NAME
 
+  %div{:style=>'clear: both; height:30px'} 
+  %br
+  %br
   -unless under_13?
     = view :petition_expand
 
