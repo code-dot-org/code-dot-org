@@ -90,7 +90,7 @@ window.dashboard.dialog = (function () {
 
   // TODO(dave): Dashboard shouldn't be reaching into the internal implementation of
   // individual levels. Instead levels should call appOptions.onAttempt.
-  $('.submitButton').click(function () {
+  $(document).on('click', '.submitButton', function () {
     var submitButton = $('.submitButton');
     if (submitButton.attr('disabled')) {
       return;
