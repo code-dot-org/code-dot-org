@@ -14,37 +14,4 @@ social:
 max_age: 60
 ---
 
-%script{type: "text/javascript", src: "/js/congrats.js"}
-
--cert_id = params[:i]
-
--if cert_id
-  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
--else
-  -share_url = "http://#{request.host_with_port}/certificates/blank"
-
--facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
--twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
-
-#congrats.mobile-pad{:style=>'margin: 0 auto;'}
-
-  %h1 Congratulations on completing Course 1
-
-  #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
-    %a{:href=>"/printcertificate", :target=>'_blank'}
-      %img{:src=>"/images/fit-540/hour_of_code_certificate.jpg", :width=>"100%"}
-
-  #certificate.col-50
-    = view :congrats_certificate
-    = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
-
-  %div{:style=>'clear: both; height:30px'}
-
-  -unless under_13?
-    = view :petition_expand
-
-  %div{:style=>'clear: both; height:30px'}
-  = view :donor_slider
-
-= view 'popup_window.js'
+= view :congrats, course_name: "Course 1"
