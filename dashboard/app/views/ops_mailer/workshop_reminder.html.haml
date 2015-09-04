@@ -1,11 +1,7 @@
 %p
   Dear #{@recipient.ops_first_name},
-- if @workshop.program_type == 6
-  %p
-    We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
-- else
-  %p
-    We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference in your classroom.
+%p
+  We’re looking forward to seeing you at your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.first.start.strftime("%A, %B %d")}! Together with your peers and facilitators, you’ll gain the support and resources you need to make a difference at your school.
 %p
   As part of your commitment to this program, you are expected to participate in this workshop. If you have any conflicts with these dates, please email
   %a{href:'mailto:pd@code.org'}
