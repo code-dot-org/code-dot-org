@@ -106,13 +106,21 @@ var projects = module.exports = {
   },
 
   /**
+   * @returns {boolean}
+   */
+  isOwner: function () {
+    return current && current.isOwner;
+  },
+
+  /**
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
   // TODO - better name?
   exceedsReportingThreshold: function () {
-    return !!(current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
   },
+
 
   //////////////////////////////////////////////////////////////////////
   // Properties and callbacks. These are all candidates for being extracted

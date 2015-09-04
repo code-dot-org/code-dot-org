@@ -1,5 +1,7 @@
 /* global dashboard, appOptions, $ */
 
+var renderAbusive = require('./renderAbusive');
+
 // Attempts to lookup the name in the digest hash, or returns the name if not found.
 function tryDigest(name) {
   return (window.digestManifest || {})[name] || name;
@@ -56,7 +58,13 @@ module.exports = function (callback) {
   }
 
   if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load);
+    promise = promise.then(dashboard.project.load)
+    .then(function () {
+      if (dashboard.project.exceedsReportingThreshold()) {
+        renderAbusive();
+        return $.Deferred().reject();
+      }
+    });
   }
 
   promise.then(loadSource('common' + appOptions.pretty))

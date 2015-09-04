@@ -1,3 +1,5 @@
+//= require ./abuse_error
+
 window.dashboard = window.dashboard || {};
 
 window.dashboard.ShareDialogBody = (function (React) {
