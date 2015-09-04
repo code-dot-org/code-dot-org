@@ -311,11 +311,11 @@ describe("NetSimLocalClientNode", function () {
         wireRow = testLocalNode.makeWireRowForConnectingTo(routerNode);
       });
 
-      it ("Sets own entity ID to localNodeID", function () {
+      it ("Sets localNodeID to own entity ID", function () {
         assert.equal(testLocalNode.entityID, wireRow.localNodeID);
       });
 
-      it ("Sets router entity ID to remoteNodeID", function () {
+      it ("Sets remoteNodeID to router entity ID", function () {
         assert.equal(routerNode.entityID, wireRow.remoteNodeID);
       });
 
@@ -324,15 +324,15 @@ describe("NetSimLocalClientNode", function () {
         assert.equal('9', wireRow.localAddress);
       });
 
-      it ("Sets router's address to remote address", function () {
+      it ("Sets remoteAddress to router's address", function () {
         assert.equal(routerNode.getAddress(), wireRow.remoteAddress);
       });
 
-      it ("Sets own hostname to local hostname", function () {
+      it ("Sets localHostname to own hostname", function () {
         assert.equal(testLocalNode.getHostname(), wireRow.localHostname);
       });
 
-      it ("Sets router hostname to remote hostname", function () {
+      it ("Sets remoteHostname to router's hostname", function () {
         assert.equal(routerNode.getHostname(), wireRow.remoteHostname);
       });
     });
@@ -342,11 +342,11 @@ describe("NetSimLocalClientNode", function () {
         wireRow = testLocalNode.makeWireRowForConnectingTo(testRemoteNode);
       });
 
-      it ("Sets own entity ID to localNodeID", function () {
+      it ("Sets localNodeID to own entity ID", function () {
         assert.equal(testLocalNode.entityID, wireRow.localNodeID);
       });
 
-      it ("Sets remote entity ID to remoteNodeID", function () {
+      it ("Sets remoteNodeID to remote entity ID", function () {
         assert.equal(testRemoteNode.entityID, wireRow.remoteNodeID);
       });
 
