@@ -401,8 +401,8 @@ describe("NetSimRouterNode", function () {
           }, function () {});
       NetSimWire.create(testShard, {
             localNodeID: 0,
-            remoteNodeID: routerA.entityID
-          } + 1, function () {});
+            remoteNodeID: routerA.entityID + 1
+          }, function () {});
 
       // Only get the one wire back.
       assertEqual(1, routerA.getConnections().length);

@@ -16,6 +16,7 @@
 
 require('../utils');
 var NetSimEntity = require('./NetSimEntity');
+var ArgumentUtils = require('./ArgumentUtils');
 
 /**
  * @typedef {Object} WireRow
@@ -79,6 +80,11 @@ NetSimWire.inherits(NetSimEntity);
  *        created entity, or null if entity creation failed.
  */
 NetSimWire.create = function (shard, initialRow, onComplete) {
+  ArgumentUtils.validateRequired(initialRow, "initialRow");
+  ArgumentUtils.validateRequired(initialRow.localNodeID, "localNodeID",
+      ArgumentUtils.isPositiveNoninfiniteNumber);
+  ArgumentUtils.validateRequired(initialRow.remoteNodeID, "remoteNodeID",
+      ArgumentUtils.isPositiveNoninfiniteNumber);
   var entity = new NetSimWire(shard, initialRow);
   entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
@@ -113,7 +119,7 @@ NetSimWire.prototype.buildRow = function () {
 };
 
 /**
- * @param {MessageRow} MessageRow
+ * @param {MessageRow} messageRow
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in the wire's direction.
  */
