@@ -13,7 +13,7 @@
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
-  %h1= "Congratulations on completing #{course_name}"
+  %h1= I18n.t(:congratulations_on_completing_course, course: course_name)
 
   #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
     %a{:href=>"/printcertificate", :target=>'_blank'}
