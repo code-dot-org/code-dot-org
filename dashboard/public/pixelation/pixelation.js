@@ -47,9 +47,9 @@ function customizeStyles() {
     // Default is version 3 (all features enabled).
     window.options = {version: '3'};
   }
-  if (options.version == '1') {
+  if (options.version === '1') {
     $('.hide_on_v1').hide();
-  } else if (options.version == '2') {
+  } else if (options.version === '2') {
     $('.hide_on_v2').hide();
     $('#height, #width').prop('readonly', true);
   }
