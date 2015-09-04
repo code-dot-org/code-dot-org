@@ -1,7 +1,13 @@
+gem 'mocha'
+require 'test/unit'
+require 'mocha/api'
+require 'mocha/test_unit'
 require 'test_helper'
 include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
+  include Mocha::API
+
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
     @custom_turtle_data = {:solution_level_source_id=>4, :user_id=>1}
@@ -307,6 +313,8 @@ EOS
   end
 
   test 'applab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
 
@@ -328,5 +336,9 @@ EOS
     level = level.reload
 
     assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_equal nil, level.examples
   end
 end

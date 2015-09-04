@@ -59,8 +59,6 @@ TBD
 Laptop and Charger
 <br/>
 Green journal<br/>
-Curriculum guide
-<br/>
 Snacks
 <br/>
 Water

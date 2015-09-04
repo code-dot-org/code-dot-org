@@ -18,7 +18,7 @@
     "start_direction": "90",
     "x": "75",
     "y": "75",
-    "impressive": "true",
+    "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".6",
     "contract_highlight": "false",

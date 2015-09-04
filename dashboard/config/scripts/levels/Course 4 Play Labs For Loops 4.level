@@ -83,7 +83,7 @@
           <title name="VAR">counter</title>
         </block>
         <block type="math_arithmetic" inline="true">
-          <title name="OP">POWER</title>
+          <title name="OP">ADD</title>
           <value name="A">
             <block type="math_number">
               <title name="NUM">0</title>

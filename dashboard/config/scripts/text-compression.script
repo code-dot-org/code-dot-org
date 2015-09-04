@@ -3,7 +3,5 @@ description "Compress text by identifying repeated patterns."
 description_short "Compress text by identifying repeated patterns."
 
 stage 'Text Compression'
-video_key_for_next_level 'csp_textcompression'
 level 'Text Compression Peter Piper'
-video_key_for_next_level 'csp_textcompression'
 level 'Text Compression 1'

@@ -204,9 +204,7 @@ class Script < ActiveRecord::Base
   end
 
   def banner_image
-    if k5_course?
-      "banner_#{name}_cropped.jpg"
-    elsif self.name == 'cspunit1'
+    if has_banner?
       "banner_#{name}_cropped.png"
     end
   end
@@ -224,7 +222,11 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3).include?(self.name)
+  end
+
+  def has_banner?
+    k5_course? || %w(cspunit1 cspunit2).include?(self.name)
   end
 
   def freeplay_links

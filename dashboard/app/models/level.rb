@@ -22,6 +22,8 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
+    instructions
+    markdown_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

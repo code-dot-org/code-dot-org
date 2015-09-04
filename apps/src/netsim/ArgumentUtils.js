@@ -123,4 +123,25 @@ exports.isString = function (arg) {
   return typeof arg === 'string';
 };
 
+/**
+ * Validator function that verifies the argument is an array.
+ * Sure this seems redundant, but included here for discoverability.
+ * @param {?} arg
+ * @returns {boolean} TRUE if the provided argument is an array.
+ */
+exports.isArray = function (arg) {
+  return Array.isArray(arg);
+};
+
+/**
+ * Validator function that verifies that argument is an array of strings.
+ * @param {?} arg
+ * @returns {boolean} TRUE if provided argument is an array and every element
+ *          in the array is a string.
+ * @static
+ */
+exports.isArrayOfStrings = function (arg) {
+  return Array.isArray(arg) && arg.every(exports.isString);
+};
+
 

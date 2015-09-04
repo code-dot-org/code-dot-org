@@ -66,8 +66,8 @@
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
-  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować
-    naukę po tej godzinie (One Hour)</a>
+  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>kontynuować
+    naukę poza Godziną Kodowania</a>
   get_a_certificate_message_after: Kliknij na świadectwie, aby je pobrać lub wydrukować.
     Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>,
     lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną
@@ -112,7 +112,7 @@
   used_infrequent_updates: Stosowane tylko dla rzadkich aktualizacji
   privacy_practices_children: Zobacz nasze zasady ochrony prywatności dla dzieci
   petition_thankyou: Dziękujemy za podpisanie petycji
-  continue_learning_header: Kontynuuj naukę poza One Hour
+  continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
   learn_next_level: Wypróbuj inny kurs w Code Studio
@@ -123,7 +123,7 @@
   twitter_teach_cs: Dlaczego więcej szkół nie uczy informatyki? Możemy to zmienić.
     http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
-  beyond_hoc: Poza One Hour
+  beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
   girl: Dziewczyna
   boy: Chłopiec
@@ -206,7 +206,7 @@
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
+  homepage_diversity_pledge: Weź zastaw różnorodności
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
@@ -550,8 +550,8 @@
   educator_notes: Notatki nauczyciela
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
+  beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
+    Zobacz kryteria i formularz zgłoszenia.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
