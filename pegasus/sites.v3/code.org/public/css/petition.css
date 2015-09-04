@@ -48,7 +48,6 @@
 	font-family: 'Gotham 7r', sans-serif;
 }
 
-
 #name.grey_input {
 	width: 160px;
 	height: 34px;
@@ -86,12 +85,8 @@
 	-webkit-appearance:none;
 }
 
-.i-agree-button {
-	margin-left: 10px;
-}
-
 #gobutton.button_enabled {
-	min-width: 100px;
+	min-width: 90px;
 	margin-bottom: 10px;
 	font-family: 'Gotham 5r', sans-serif;
 }
