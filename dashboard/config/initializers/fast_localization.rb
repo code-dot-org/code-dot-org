@@ -5,4 +5,8 @@ if Rails.env.development? && (!CDO.load_locales)
   Dashboard::Application.config.i18n.railties_load_path = locale_paths
 end
 
-I18n.t 'hello'
+# Preload translations (before application fork, after i18n_railtie initializer)
+Dashboard::Application.config.after_initialize do |_|
+  I18n.backend.init_translations if I18n.backend.respond_to? :init_translations
+  I18n.t 'hello'
+end
