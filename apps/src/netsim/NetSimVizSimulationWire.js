@@ -32,13 +32,13 @@ var NetSimVizSimulationWire = module.exports = function (sourceWire,
   NetSimVizWire.call(this, localNode, remoteNode);
 
   /**
-   * ID of the simulation wire that this viz element maps to.
+   * ID of the NetSimWire that this NetSimVizSimulationWire maps to.
    * @type {number}
    */
   this.correspondingWireId_ = sourceWire.entityID;
 
   /**
-   * UUID of the simulation wire that this viz element maps to.
+   * UUID of the NetSimWire that this NetSimVizSimulationWire maps to.
    * @type {number}
    */
   this.correspondingWireUuid_ = sourceWire.uuid;
@@ -81,7 +81,7 @@ NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
 };
 
 /**
- * ID of the simulation entity that maps to this one.
+ * ID of the NetSimEntity that maps to this visualization element.
  * @returns {number}
  */
 NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function () {
@@ -90,7 +90,7 @@ NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function () {
 
 /**
  * @param {NetSimEntity} entity
- * @returns {boolean} TRUE of this VizElement represents the given Entity.
+ * @returns {boolean} TRUE if this VizElement represents the given NetSimEntity.
  */
 NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
   return this.correspondingWireId_ === entity.entityID &&
@@ -99,7 +99,7 @@ NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
 
 /**
  * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
+ * another viznode of matching ID being added, and begins its exit animation.
  * @override
  */
 NetSimVizSimulationWire.prototype.kill = function () {
