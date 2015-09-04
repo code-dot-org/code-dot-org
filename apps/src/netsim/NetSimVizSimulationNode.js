@@ -33,13 +33,13 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
-   * ID of the simulation node that this viz element represents.
+   * ID of the NetSimNode that this NetSimVizSimulationNode represents.
    * @type {number}
    */
   this.correspondingNodeID_ = sourceNode.entityID;
 
   /**
-   * UUID of the simulation node that this viz element represents.
+   * UUID of the NetSimNode that this NetSimVizSimulationNode represents.
    * @type {string}
    */
   this.correspondingNodeUuid_ = sourceNode.uuid;

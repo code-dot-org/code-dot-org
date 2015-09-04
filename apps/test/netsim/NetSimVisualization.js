@@ -110,47 +110,55 @@ describe("NetSimVisualization", function () {
 
     // Connect to shard
     testShard = fakeShard();
-    var myNode = createNode(testShard, 'myNode');
+    var oldNode1 = createNode(testShard, 'myNode');
     netSimVis.setShard(testShard);
-    netSimVis.setLocalNode(myNode);
+    netSimVis.setLocalNode(oldNode1);
 
-    // Make a couple more nodes, and make sure the visualization picks them up.
-    var node2 = createNode(testShard, 'node2');
-    var node3 = createNode(testShard, 'node3');
+    // Make a couple more nodes.  Now that we've called `setShard` the
+    // visualization should automatically detect these nodes and create
+    // corresponding VizElements in its elements_ collection.
+    var oldNode2 = createNode(testShard, 'node2');
+    var oldNode3 = createNode(testShard, 'node3');
 
-    // Check out the list of viz elements
+    // Make sure the visualization now includes all three nodes.
     assert.equal(3, netSimVis.elements_.length);
 
     // Introduce a new shard, with new data
     var testShard2 = fakeShard();
-    var newNode = createNode(testShard2, 'newNode');
+    var newNode1 = createNode(testShard2, 'newNode');
     netSimVis.setShard(testShard2);
-    netSimVis.setLocalNode(newNode);
+    netSimVis.setLocalNode(newNode1);
     var newNode2 = createNode(testShard2, 'newNode2');
 
     // Verify: Nodes on new shard have same IDs, different uuids.
-    assert.equal(myNode.entityID, newNode.entityID);
-    assert.notEqual(myNode.uuid, newNode.uuid);
-    assert.equal(node2.entityID, newNode2.entityID);
-    assert.notEqual(node2.uuid, newNode2.uuid);
+    assert.equal(oldNode1.entityID, newNode1.entityID);
+    assert.notEqual(oldNode1.uuid, newNode1.uuid);
+    assert.equal(oldNode2.entityID, newNode2.entityID);
+    assert.notEqual(oldNode2.uuid, newNode2.uuid);
 
-    // We now have 4 elements; not 5, because the local node is a straight-up
-    // replacement operation, but we haven't cleaned up the other two nodes
-    // from the old shard yet.
+    // We now have 4 elements:
+    // 1. oldNode2 (dying but not gone)
+    // 2. oldNode3 (dying but not gone)
+    // 3. newNode1
+    // 4. newNode2
+    // Note that oldNode1 _is_ actually gone, because it was designated as the
+    // "local" client node before, and the `setLocalNode` operation replaces
+    // the existing "local" node in the visualization.
     assert.equal(4, netSimVis.elements_.length);
     assert.equal(2, netSimVis.elements_.filter(function (element) {
       return element.isDying();
     }).length);
 
-    // Render long enough for the tweens to finish and the elements to die
+    // Render long enough for the "dying" animations on oldNode2 and oldNode3
+    // to finish.
     netSimVis.render({time: 1});
     netSimVis.render({time: 1000000});
-    // Tick to clean up the dead nodes
+    // Tick to clean up the now-dead nodes.
     netSimVis.tick({time: 1});
 
     // Only the two live nodes remain
     assert.equal(2, netSimVis.elements_.length);
-    assert(netSimVis.elements_[0].representsEntity(newNode));
+    assert(netSimVis.elements_[0].representsEntity(newNode1));
     assert(netSimVis.elements_[1].representsEntity(newNode2));
   });
 
