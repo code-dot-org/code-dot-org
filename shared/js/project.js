@@ -523,11 +523,11 @@ function redirectEditView() {
   var newUrl;
   if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
+    newUrl = location.href.replace(/\/view/, '/edit');
     appOptions.readonlyWorkspace = false;
   } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
+    newUrl = location.href.replace(/\/edit/, '/view');
     appOptions.readonlyWorkspace = true;
   }
 
