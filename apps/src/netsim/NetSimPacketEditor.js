@@ -383,7 +383,7 @@ NetSimPacketEditor.prototype.tick = function (clock) {
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
     this.sendAnimationIndex_ += maxBitsToSendThisTick;
-    this.setPacketBinary(this.originalBinary_.substr(this.sendAnimationIndex_));
+    this.updateForAnimation_();
     if (this.sendAnimationIndex_ >= this.originalBinary_.length) {
       this.finishSending();
     }
@@ -664,6 +664,151 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   this.removePacketButton_ = rootDiv.find('.remove-packet-button');
   this.removePacketButton_.click(this.onRemovePacketButtonClick_.bind(this));
   this.bitCounter_ = rootDiv.find('.bit-counter');
+};
+
+NetSimPacketEditor.prototype.updateForAnimation_ = function () {
+  var chunkSize = this.currentChunkSize_;
+  var liveFields = [];
+
+  var level = NetSimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
+
+  var fieldStart = 0;
+
+  this.packetSpec_.forEach(function (fieldSpec) {
+    /** @type {Packet.HeaderType} */
+    var fieldName = fieldSpec;
+    /** @type {number} */
+    var fieldWidth = encoder.getFieldBitWidth(fieldName);
+
+    if (this.sendAnimationIndex_ < fieldStart + fieldWidth) {
+      // Either we haven't reached this field yet or we're currently animating
+      // through it; don't do anything to the more complex fields, and animate
+      // the binary appropriately.
+      var fieldBinary = this.originalBinary_.substr(fieldStart, fieldWidth);
+      var truncatedBits = Math.max(0, this.sendAnimationIndex_ - fieldStart);
+
+      if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+        liveFields.push({
+          inputElement: this.a_and_bUI[fieldName],
+          newValue: binaryToAB(fieldBinary).substr(truncatedBits)
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+        liveFields.push({
+          inputElement: this.binaryUI[fieldName],
+          newValue: fieldBinary.substr(truncatedBits)
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+        var truncatedHexDigits = Math.floor(truncatedBits / 4);
+        liveFields.push({
+          inputElement: this.hexadecimalUI[fieldName],
+          newValue: binaryToHex(fieldBinary).substr(truncatedHexDigits)
+        });
+      }
+    } else {
+      // We're past this field - it should be blank
+      if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+        liveFields.push({
+          inputElement: this.a_and_bUI[fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+        liveFields.push({
+          inputElement: this.binaryUI[fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+        liveFields.push({
+          inputElement: this.hexadecimalUI[fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+        liveFields.push({
+          inputElement: this.decimalUI[fieldName],
+          newValue: ''
+        });
+      }
+
+      if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+        liveFields.push({
+          inputElement: this.asciiUI[fieldName],
+          newValue: ''
+        });
+      }
+    }
+
+    // Advance to the next field
+    fieldStart += fieldWidth;
+  }, this);
+
+  var bodyBinary = this.originalBinary_.substr(fieldStart);
+  var truncatedBits = Math.max(0, this.sendAnimationIndex_ - fieldStart);
+  var truncatedChunks = Math.floor(truncatedBits / chunkSize);
+  var partialBinaryAtChunkSize = bodyBinary.substr(truncatedChunks * chunkSize);
+
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+    liveFields.push({
+      inputElement: this.a_and_bUI.message,
+      newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits), chunkSize),
+      watermark: netsimMsg.a_and_b()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+    liveFields.push({
+      inputElement: this.binaryUI.message,
+      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize),
+      watermark: netsimMsg.binary()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+    var truncatedHexDigits = Math.floor(truncatedBits / 4);
+    liveFields.push({
+      inputElement: this.hexadecimalUI.message,
+      newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits), chunkSize),
+      watermark: netsimMsg.hexadecimal()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+    liveFields.push({
+      inputElement: this.decimalUI.message,
+      newValue: alignDecimal(binaryToDecimal(partialBinaryAtChunkSize, chunkSize)),
+      watermark: netsimMsg.decimal()
+    });
+  }
+
+  if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+    liveFields.push({
+      inputElement: this.asciiUI.message,
+      newValue: binaryToAscii(partialBinaryAtChunkSize, chunkSize),
+      watermark: netsimMsg.ascii()
+    });
+  }
+
+  liveFields.forEach(function (field) {
+    if (field.watermark && field.newValue === '') {
+      field.inputElement.val(field.watermark);
+      field.inputElement.addClass('watermark');
+    } else {
+      field.inputElement.val(field.newValue);
+      field.inputElement.removeClass('watermark');
+    }
+  });
+
+  this.updateBitCounter();
 };
 
 /**
