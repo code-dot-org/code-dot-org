@@ -3,6 +3,7 @@
 .english {
   fill: blue;
 }
+
 .letter:hover rect.english {
   fill: darkblue;
 }
@@ -23,11 +24,17 @@
   cursor: move;
 }
 
+.outline {
+  fill: none;
+  stroke: blue;
+  stroke-dasharray: 5;
+}
+
 .axis .dragletter rect {
   fill: #FFB40F;
   fill-opacity: 0.5;
 }
-.axis .dragletter rect:hover {
+.axis .dragletter:hover rect {
   fill: darkorange;
   fill-opacity: 1;
 }
@@ -39,6 +46,10 @@ rect {
   transition-property: height, y;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
+}
+
+.dragging rect {
+  transition-property: none;
 }
 
 .btn-group .btn {

@@ -1,6 +1,5 @@
 var message1 = "Srryvat zl jnl guebhtu gur qnexarff Thvqrq ol n orngvat urneg V pna g gryy jurer gur wbhearl jvyy raq Ohg V xabj jurer gb fgneg Gurl gryy zr V z gbb lbhat gb haqrefgnaq Gurl fnl V z pnhtug hc va n qernz Jryy yvsr jvyy cnff zr ol vs V qba g bcra hc zl rlrf Jryy gung f svar ol zr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V gevrq pneelvat gur jrvtug bs gur jbeyq Ohg V bayl unir gjb unaqf Ubcr V trg gur punapr gb geniry gur jbeyq Ohg V qba g unir nal cynaf Jvfu gung V pbhyq fgnl sberire guvf lbhat Abg nsenvq gb pybfr zl rlrf Yvsr f n tnzr znqr sbe rirelbar Naq ybir vf gur cevmr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg";
 var message2 = "Ej aeotj pbba zdlxu ftlj E a lqkvj jk plu Pvrpterb ptb p tbdb ukv zlr jlhb lflu E a l tkj led qlcckkr E zkvcn ok jk pmlzb Fejt jtb led cehb E nkr j zldb qlqu qu jtb flu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tbdb zkab qln rbfp jlchero jtep lrn jtlj Ublt oewb ab lcc ukv okj nkr j tkcn qlzh Ublt fbcc E ptkvcn mdkqlqcu fldr ukv E cc qb svpj yerb Ublt rk kyybrpb jk ukv nkr j flpjb ukvd jeab Tbdb p ftu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk";
-var SUBST_MAP = {};
 var bg;
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -10,7 +9,7 @@ var ENGLISH = {
   B: 0.01492,
   C: 0.02782,
   D: 0.04253,
-  E: 0.01.702,
+  E: 0.12702,
   F: 0.02228,
   G: 0.02015,
   H: 0.06094,
@@ -32,6 +31,23 @@ var ENGLISH = {
   X: 0.0015,
   Y: 0.01974,
   Z: 0.00074
+};
+
+// Debounce function, courtesy of
+// http://davidwalsh.name/function-debounce
+var debounce = function(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 };
 
 var buildFrequencyMap = function () {
@@ -62,32 +78,32 @@ var buildFrequencyMap = function () {
   });
 
   return freqMap;
-}
+};
 
 var processPlainText = function () {
   var freqMap = buildFrequencyMap();
   bg.updateUserData(freqMap);
   processSubstitutions();
-}
+};
 
 var processSubstitutions = function () {
   var STR = $("#input").val().replace(/[^A-Za-z]/g, " ");
 
-  LETTERS.forEach(function (letter) {
-    if (SUBST_MAP[letter]) {
-      STR = STR.replace(new RegExp(letter + "(?!" + letter + "*</>)", "g"), "<>" + SUBST_MAP[letter] + "</>");
-      STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + SUBST_MAP[letter].toLowerCase() + "</>");
-    }
-  });
-
   if (bg) {
-    //bg.updateSubstMap(SUBST_MAP);
+    var substMap = bg.getSubstMap();
+
+    LETTERS.forEach(function (letter) {
+      if (substMap[letter]) {
+        STR = STR.replace(new RegExp(letter + "(?!" + letter + "*</>)", "g"), "<>" + substMap[letter] + "</>");
+        STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + substMap[letter].toLowerCase() + "</>");
+      }
+    });
   }
 
   STR = STR.replace(/<>/g, "<mark>");
   STR = STR.replace(/<\/>/g, "</mark>");
   $("#output").html(STR);
-}
+};
 
 var shiftSubstitution = function (shiftAmt) {
 
@@ -95,36 +111,43 @@ var shiftSubstitution = function (shiftAmt) {
   $("#shiftSliderDisplay").html(shiftAmt);
   if (shiftAmt < 0) shiftAmt = 26 + shiftAmt;
 
-  var substMap = {};
-  LETTERS.forEach(function (letter, i) {
-    substMap[letter] = LETTERS[(i + shiftAmt) % 26];
-  });
+  if (bg) {
+    bg.shift(shiftAmt);
+  }
+  //var substMap = {};
+  //LETTERS.forEach(function (letter, i) {
+    //substMap[letter] = LETTERS[(i + shiftAmt) % 26];
+  //});
 
-  processSubstitutions();
-  SUBST_MAP = substMap;
-  return substMap;
+  //processSubstitutions();
+  //return substMap;
 
-}
+};
 
 var fillRandom = function () {
-  LETTERS.forEach(function (letter) {
-    var rand = Math.floor(Math.random() * LETTERS.length);
-    SUBST_MAP[letter] = LETTERS[rand];
-  });
+  if (bg) {
+    bg.randomize();
+  }
+  //LETTERS.forEach(function (letter) {
+  //  var rand = Math.floor(Math.random() * LETTERS.length);
+  //  SUBST_MAP[letter] = LETTERS[rand];
+  //});
 
-  processSubstitutions();
-}
+  //processSubstitutions();
+};
 
 var clearSubstitutions = function () {
-  shiftSubstitution(0);
-  processSubstitutions();
-}
+  debounce(function () {
+    shiftSubstitution(0);
+    processSubstitutions();
+  }, 200);
+};
 
-var BarGraph = function (substMap) {
+var BarGraph = function () {
   this.margin = {
     top: 30,
     right: 20,
-    bottom: 60,
+    bottom: 40,
     left: 40
   };
 
@@ -137,11 +160,18 @@ var BarGraph = function (substMap) {
 
   this.english_data = LETTERS.map(function (letter) {
     return {
-      letter: substMap[letter],
+      letter: letter,
       frequency: ENGLISH[letter]
     };
   });
 
+};
+
+BarGraph.prototype.getSubstMap = function () {
+  return this.user_data.reduce(function (map, d, i) {
+    map[d.letter] = this.english_data[i].letter;
+    return map;
+  }.bind(this), {});
 };
 
 BarGraph.prototype.updateSubstMap = function (substMap) {
@@ -216,6 +246,7 @@ BarGraph.prototype.reorder = function () {
 
     /* rerender just because */
     this.render();
+    processSubstitutions();
 
   }.bind(this));
 
@@ -322,10 +353,10 @@ BarGraph.prototype.init = function () {
 
   userLetters.append("rect")
     .attr({
-      "height": 18,
+      "height": 20,
       "width": this.userLetterScale.rangeBand(),
       "x": -(this.userLetterScale.rangeBand() / 2),
-      "y": 8
+      "y": 10
     });
 
   [-3, 0, 3].forEach(function (offset) {
@@ -333,14 +364,14 @@ BarGraph.prototype.init = function () {
       .attr({
         "x1": offset,
         "x2": offset,
-        "y1": 20,
-        "y2": 25
+        "y1": 22,
+        "y2": 28
       });
   });
 
   userLetters.append("text")
     .attr("dy", ".71em")
-    .attr("y", 10)
+    .attr("y", 12)
     .attr("class", "user")
     .style("text-anchor", "middle")
     .text(function (d, i) {
@@ -384,12 +415,34 @@ BarGraph.prototype.init = function () {
 
   var tempdata;
 
+  var outline = this.svg.append("rect")
+    .attr("class", "outline")
+    .attr("visibility", "hidden")
+    .attr("height", this.getHeight())
+    .attr("width", this.userLetterScale.rangeBand());
+
   drag.on('dragend', function () {
-    this.user_data = tempdata;
-    this.reorder();
+    outline.attr("visibility", "hidden");
+    this.svg.classed("dragging", false);
+    if (tempdata) {
+      this.user_data = tempdata;
+
+      this.userLetterScale.domain(this.user_data.map(function (d) {
+        return d.letter;
+      }));
+      this.svg.selectAll(".dragletter")
+        .attr("transform", function (d) {
+          return "translate(" + this.userLetterScale(d.user.letter) + ",0)";
+        }.bind(this));
+
+      this.reorder();
+      tempdata = undefined;
+    }
   }.bind(this));
 
   drag.on('drag', function (d, i) {
+
+    this.svg.classed("dragging", true);
 
     /* move the source */
     var source = this.svg.select("#userletter-" + d.user.letter);
@@ -404,24 +457,32 @@ BarGraph.prototype.init = function () {
 
     for (j = 0; xPos > (leftEdges[j] + width); j++) {}
 
-    /* swap em! */
+    /* swap em! This is a deep clone. Do we need a deep clone? */
     tempdata = this.user_data.map(function (d) {
       return jQuery.extend(true, {}, d);
     });
-
-    console.log("swapping " + tempdata[i].letter + "(" + i + ") with " + tempdata[j].letter + "(" + j + ")");
 
     var swap = tempdata[i];
     tempdata[i] = tempdata[j];
     tempdata[j] = swap;
 
+    outline.attr({
+      "visibility": "visible",
+      "transform": "translate(" + this.userLetterScale(this.user_data[j].letter) + ",0)"
+    });
+
+    /* re-size the letters */
+    /* note: this seems pretty inefficient. We're binding all the data
+     * for all the letters and resizing everything, and we're doing it
+     * for nearly every pixel moved.
+     */
     this.svg.selectAll('.letter').data(this.getZippedData(tempdata));
 
     this.svg.selectAll('.letter').selectAll("rect")
       .data(function (d) {
         return [d.english, d.user];
       })
-      .attr("height", function (d) {
+      .attr("height", function (d, i) {
         return this.getHeight() - this.yScale(d.frequency);
       }.bind(this));
 
@@ -429,6 +490,47 @@ BarGraph.prototype.init = function () {
 
   this.svg.select('.x1.axis').selectAll('.dragletter').call(drag);
 
+};
+
+BarGraph.prototype.shift = function (amt) {
+
+  // Boy, there is no way this is remotely close to the most efficient
+  // way to do this.
+  var frequencies = this.user_data.reduce(function (freqs, d) {
+    freqs[d.letter] = d.frequency;
+    return freqs;
+  }, {});
+
+  this.user_data = this.english_data.map(function (english, i, english_data) {
+    var letter = english_data[ (i+amt) % 26 ].letter;
+    return {
+      letter: letter,
+      frequency: frequencies[letter]
+    };
+  });
+
+  this.svg.selectAll('.letter').data(this.getZippedData());
+  this.svg.selectAll('.letter').selectAll("rect")
+    .data(function (d) {
+      return [d.english, d.user];
+    })
+    .attr("height", function (d, i) {
+      return this.getHeight() - this.yScale(d.frequency);
+    }.bind(this));
+  this.reorder();
+};
+
+BarGraph.prototype.randomize = function () {
+  this.user_data = d3.shuffle(this.user_data);
+  this.svg.selectAll('.letter').data(this.getZippedData());
+  this.svg.selectAll('.letter').selectAll("rect")
+    .data(function (d) {
+      return [d.english, d.user];
+    })
+    .attr("height", function (d, i) {
+      return this.getHeight() - this.yScale(d.frequency);
+    }.bind(this));
+  this.reorder();
 };
 
 BarGraph.prototype.render = function () {
@@ -480,8 +582,8 @@ BarGraph.prototype.render = function () {
 };
 
 $(document).ready(function () {
-  var substMap = shiftSubstitution(0);
-  bg = new BarGraph(substMap);
+  //var substMap = shiftSubstitution(0);
+  bg = new BarGraph();
   bg.init();
   bg.render();
 
