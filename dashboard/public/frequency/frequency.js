@@ -88,9 +88,9 @@ var processPlainText = function () {
 };
 
 var processSubstitutions = function () {
-  var STR = $("#input").val().replace(/[^A-Za-z]/g, " ");
-
   if (bg) {
+    var STR = $("#input").val().replace(/[^A-Za-z]/g, " ");
+
     var substMap = bg.getSubstMap();
 
     LETTERS.forEach(function (letter) {
@@ -99,11 +99,11 @@ var processSubstitutions = function () {
         STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + substMap[letter].toLowerCase() + "</>");
       }
     });
-  }
 
-  STR = STR.replace(/<>/g, "<span>");
-  STR = STR.replace(/<\/>/g, "</span>");
-  $("#output").html("<div>" + STR + "</div>");
+    STR = STR.replace(/<>/g, "<span>");
+    STR = STR.replace(/<\/>/g, "</span>");
+    $("#output").html("<div>" + STR + "</div>");
+  }
 };
 
 var BarGraph = function () {
@@ -130,6 +130,24 @@ var BarGraph = function () {
 
 };
 
+BarGraph.prototype.getHeight = function () {
+  return this.container.property("offsetHeight") - this.margin.top - this.margin.bottom;
+};
+
+BarGraph.prototype.getWidth = function () {
+  return this.container.property("offsetWidth") - this.margin.left - this.margin.right;
+};
+
+BarGraph.prototype.getZippedData = function (override) {
+  var user_data = override || this.user_data;
+  return user_data.map(function (_, i) {
+    return {
+      user: user_data[i],
+      english: this.english_data[i]
+    };
+  }, this);
+};
+
 BarGraph.prototype.getSubstMap = function () {
   return this.user_data.reduce(function (map, d, i) {
     map[d.letter] = this.english_data[i].letter;
@@ -154,14 +172,9 @@ BarGraph.prototype.updateUserData = function (frequencies) {
   this.render();
 };
 
-BarGraph.prototype.getHeight = function () {
-  return this.container.property("offsetHeight") - this.margin.top - this.margin.bottom;
-};
-BarGraph.prototype.getWidth = function () {
-  return this.container.property("offsetWidth") - this.margin.left - this.margin.right;
-};
-
 BarGraph.prototype.reorder = function () {
+
+  this.svg.selectAll('.letter').data(this.getZippedData());
 
   /* reorder the domains */
   this.userLetterScale.domain(this.user_data.map(function (d) {
@@ -213,16 +226,6 @@ BarGraph.prototype.reorder = function () {
 
   }.bind(this));
 
-};
-
-BarGraph.prototype.getZippedData = function (override) {
-  var user_data = override || this.user_data;
-  return user_data.map(function (_, i) {
-    return {
-      user: user_data[i],
-      english: this.english_data[i]
-    };
-  }, this);
 };
 
 BarGraph.prototype.handleSortChange = function (changeEvent) {
@@ -287,6 +290,87 @@ BarGraph.prototype.createScales = function () {
     .ticks(5, "%");
 
   this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
+};
+
+BarGraph.prototype.createDragBehavior = function () {
+  var drag = d3.behavior.drag();
+
+  var tempdata;
+
+  var outline = this.svg.append("rect")
+    .attr("class", "outline")
+    .attr("visibility", "hidden")
+    .attr("height", this.getHeight())
+    .attr("width", this.userLetterScale.rangeBand());
+
+  drag.on('dragend', function () {
+    outline.attr("visibility", "hidden");
+    this.svg.classed("dragging", false);
+    if (tempdata) {
+      this.user_data = tempdata;
+
+      this.userLetterScale.domain(this.user_data.map(function (d) {
+        return d.letter;
+      }));
+      this.svg.selectAll(".dragletter")
+        .attr("transform", function (d) {
+          return "translate(" + this.userLetterScale(d.user.letter) + ",0)";
+        }.bind(this));
+
+      this.reorder();
+      tempdata = undefined;
+    }
+  }.bind(this));
+
+  drag.on('drag', function (d, i) {
+
+    this.svg.classed("dragging", true);
+
+    /* move the source */
+    var source = this.svg.select("#userletter-" + d.user.letter);
+    var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
+    source.attr("transform", "translate(" + (parseInt(coords[0]) + d3.event.dx) + "," + (parseInt(coords[1]) + d3.event.dy) + ")");
+
+    /* find the target */
+    var xPos = d3.event.x;
+    var leftEdges = this.userLetterScale.range();
+    var width = this.userLetterScale.rangeBand();
+    var j;
+
+    for (j = 0; xPos > (leftEdges[j] + width); j++) {}
+
+    /* swap em! This is a deep clone. Do we need a deep clone? */
+    tempdata = this.user_data.map(function (d) {
+      return jQuery.extend(true, {}, d);
+    });
+
+    var swap = tempdata[i];
+    tempdata[i] = tempdata[j];
+    tempdata[j] = swap;
+
+    outline.attr({
+      "visibility": "visible",
+      "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter) + 0.5) + ",0)"
+    });
+
+    /* re-size the letters */
+    /* note: this seems pretty inefficient. We're binding all the data
+     * for all the letters and resizing everything, and we're doing it
+     * for nearly every pixel moved.
+     */
+    this.svg.selectAll('.letter').data(this.getZippedData(tempdata));
+
+    this.svg.selectAll('.letter').selectAll("rect")
+      .data(function (d) {
+        return [d.english, d.user];
+      })
+      .attr("height", function (d, i) {
+        return this.getHeight() - this.yScale(d.frequency);
+      }.bind(this));
+
+  }.bind(this));
+
+  return drag;
 };
 
 BarGraph.prototype.init = function () {
@@ -384,89 +468,13 @@ BarGraph.prototype.init = function () {
       return this.freqScale(i);
     }.bind(this));
 
-  var drag = this.drag = d3.behavior.drag();
 
-  var tempdata;
-
-  var outline = this.svg.append("rect")
-    .attr("class", "outline")
-    .attr("visibility", "hidden")
-    .attr("height", this.getHeight())
-    .attr("width", this.userLetterScale.rangeBand());
-
-  drag.on('dragend', function () {
-    outline.attr("visibility", "hidden");
-    this.svg.classed("dragging", false);
-    if (tempdata) {
-      this.user_data = tempdata;
-
-      this.userLetterScale.domain(this.user_data.map(function (d) {
-        return d.letter;
-      }));
-      this.svg.selectAll(".dragletter")
-        .attr("transform", function (d) {
-          return "translate(" + this.userLetterScale(d.user.letter) + ",0)";
-        }.bind(this));
-
-      this.reorder();
-      tempdata = undefined;
-    }
-  }.bind(this));
-
-  drag.on('drag', function (d, i) {
-
-    this.svg.classed("dragging", true);
-
-    /* move the source */
-    var source = this.svg.select("#userletter-" + d.user.letter);
-    var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
-    source.attr("transform", "translate(" + (parseInt(coords[0]) + d3.event.dx) + "," + (parseInt(coords[1]) + d3.event.dy) + ")");
-
-    /* find the target */
-    var xPos = d3.event.x;
-    var leftEdges = this.userLetterScale.range();
-    var width = this.userLetterScale.rangeBand();
-    var j;
-
-    for (j = 0; xPos > (leftEdges[j] + width); j++) {}
-
-    /* swap em! This is a deep clone. Do we need a deep clone? */
-    tempdata = this.user_data.map(function (d) {
-      return jQuery.extend(true, {}, d);
-    });
-
-    var swap = tempdata[i];
-    tempdata[i] = tempdata[j];
-    tempdata[j] = swap;
-
-    outline.attr({
-      "visibility": "visible",
-      "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter) + 0.5) + ",0)"
-    });
-
-    /* re-size the letters */
-    /* note: this seems pretty inefficient. We're binding all the data
-     * for all the letters and resizing everything, and we're doing it
-     * for nearly every pixel moved.
-     */
-    this.svg.selectAll('.letter').data(this.getZippedData(tempdata));
-
-    this.svg.selectAll('.letter').selectAll("rect")
-      .data(function (d) {
-        return [d.english, d.user];
-      })
-      .attr("height", function (d, i) {
-        return this.getHeight() - this.yScale(d.frequency);
-      }.bind(this));
-
-  }.bind(this));
-
-  this.svg.select('.x1.axis').selectAll('.dragletter').call(drag);
+  this.drag = this.createDragBehavior();
+  this.svg.select('.x1.axis').selectAll('.dragletter').call(this.drag);
 
 };
 
 BarGraph.prototype.shift = function (amt) {
-
   // Boy, there is no way this is remotely close to the most efficient
   // way to do this.
   var frequencies = this.user_data.reduce(function (freqs, d) {
@@ -483,20 +491,11 @@ BarGraph.prototype.shift = function (amt) {
     };
   });
 
-  this.svg.selectAll('.letter').data(this.getZippedData());
   this.reorder();
 };
 
 BarGraph.prototype.randomize = function () {
   this.user_data = d3.shuffle(this.user_data);
-  this.svg.selectAll('.letter').data(this.getZippedData());
-  this.svg.selectAll('.letter').selectAll("rect")
-    .data(function (d) {
-      return [d.english, d.user];
-    })
-    .attr("height", function (d, i) {
-      return this.getHeight() - this.yScale(d.frequency);
-    }.bind(this));
   this.reorder();
 };
 
