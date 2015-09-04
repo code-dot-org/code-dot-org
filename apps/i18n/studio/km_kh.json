@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "when up arrow",
   "whenUpTooltip": "Execute the actions below when the up arrow key is pressed.",
-  "yes": "យល់ព្រម"
+  "yes": "យល់ព្រម",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }

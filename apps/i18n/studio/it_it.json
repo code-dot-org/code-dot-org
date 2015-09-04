@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "tocca il bordo superiore",
   "whenUp": "quando si preme sulla freccia verso l'alto",
   "whenUpTooltip": "Esegue le azioni attaccate a questo blocco quando viene premuto il tasto o il pulsante \"freccia verso l'alto\".",
-  "yes": "Sì"
+  "yes": "Sì",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }

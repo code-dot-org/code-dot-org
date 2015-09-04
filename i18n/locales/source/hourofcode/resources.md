@@ -1,8 +1,11 @@
 ---
-title: Resources
+title: <%= hoc_s(:title_resources) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
+
 <div class="row">
     <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
@@ -151,4 +154,4 @@ Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your res
 Sincerely,
 [NAME], [TITLE]
 
-
+<%= view :signup_button %>
