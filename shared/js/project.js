@@ -516,6 +516,10 @@ function redirectEditView() {
   if (!parseInfo.action) {
     return;
   }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
   var newUrl;
   if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
