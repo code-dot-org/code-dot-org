@@ -52,7 +52,7 @@ class BaseDSL
 
   def self.boolean(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_boolean(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Boolean.new.type_cast_from_database(val)
     end
   end
 
@@ -64,7 +64,7 @@ class BaseDSL
 
   def self.integer(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_integer(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Integer.new.type_cast_from_database(val)
     end
   end
 end

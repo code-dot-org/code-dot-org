@@ -48,7 +48,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}"
+        logger.info "Registered new message template '#{name}' as #{id}" if logger
       end
 
       return path
