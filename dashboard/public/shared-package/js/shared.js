@@ -1020,14 +1020,18 @@ function redirectEditView() {
   if (!parseInfo.action) {
     return;
   }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
   var newUrl;
   if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
+    newUrl = location.href.replace(/\/projects\/([^/]+)\/([^/]+)\/view/, '/projects/$1/$2/edit');
     appOptions.readonlyWorkspace = false;
   } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
+    newUrl = location.href.replace(/\/projects\/([^/]+)\/([^/]+)\/edit/, '/projects/$1/$2/view');
     appOptions.readonlyWorkspace = true;
   }
 
