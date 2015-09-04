@@ -1,8 +1,10 @@
 ---
-title: Hour of Code Press Release for Elected Officials 
+title: <%= hoc_s(:title_press_release) %>
 layout: wide
 nav: resources_nav
 ---
+
+<%= view :signup_button %>
 
 # Sample press release for elected officials
 
@@ -38,3 +40,4 @@ For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] o
 <br />
 <br />
  
+<%= view :signup_button %>
