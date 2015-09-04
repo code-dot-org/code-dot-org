@@ -697,16 +697,15 @@ NetSimRouterNode.prototype.getStatus = function () {
  */
 NetSimRouterNode.prototype.getConnectedNodeNames_ = function () {
   var cachedNodeRows = this.shard_.nodeTable.readAll();
-  return this.getConnections()
-      .map(function (wire) {
-        var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
-          return nodeRow.id === wire.localNodeID;
-        });
-        if (nodeRow) {
-          return nodeRow.name;
-        }
-        return i18n.unknownNode();
-      });
+  return this.getConnections().map(function (wire) {
+    var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
+      return nodeRow.id === wire.localNodeID;
+    });
+    if (nodeRow) {
+      return nodeRow.name;
+    }
+    return i18n.unknownNode();
+  });
 };
 
 /** @inheritdoc */
@@ -864,13 +863,11 @@ NetSimRouterNode.prototype.setMemory = function (newMemory) {
 NetSimRouterNode.prototype.getConnections = function () {
   var shard = this.shard_;
   var routerID = this.entityID;
-  return shard.wireTable.readAll()
-      .filter(function (wireRow) {
-        return wireRow.remoteNodeID === routerID;
-      })
-      .map(function (wireRow) {
-        return new NetSimWire(shard, wireRow);
-      });
+  return shard.wireTable.readAll().filter(function (wireRow) {
+    return wireRow.remoteNodeID === routerID;
+  }).map(function (wireRow) {
+    return new NetSimWire(shard, wireRow);
+  });
 };
 
 /**
