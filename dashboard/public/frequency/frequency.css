@@ -98,22 +98,24 @@ input[type=radio][name=mode]:checked + .mode-controls {
   height: 400px;
 }
 
-
 .text-container {
-    font-family: monospace;
-    font-size: 12px;
-    width: 100%;
+  font-family: monospace;
+  font-size: 12px;
+  width: 100%;
 }
 
 .text-container#output {
-    border: solid 1px;
-    height: 300px;
-    overflow: auto;
-    white-space: normal;
-    word-wrap: normal;
+  border: solid 1px;
+  height: 300px;
+  overflow: auto;
+  white-space: normal;
+  word-wrap: normal;
+}
+.text-container#output span {
+  color: rgb(85, 85, 85);
 }
 
 .text-container#input {
-    min-height: 300px;
+  min-height: 300px;
 }
 

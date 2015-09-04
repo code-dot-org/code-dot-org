@@ -101,9 +101,9 @@ var processSubstitutions = function () {
     });
   }
 
-  STR = STR.replace(/<>/g, "<mark>");
-  STR = STR.replace(/<\/>/g, "</mark>");
-  $("#output").html(STR);
+  STR = STR.replace(/<>/g, "<span>");
+  STR = STR.replace(/<\/>/g, "</span>");
+  $("#output").html("<div>" + STR + "</div>");
 };
 
 var BarGraph = function () {
