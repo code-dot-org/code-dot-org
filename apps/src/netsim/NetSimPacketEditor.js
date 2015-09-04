@@ -274,13 +274,12 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.originalBinary_ = '';
 
   /**
-   * We capture the packet binary before we start the sending animation,
-   * and drain this variable as we go; mostly because getPacketBinary()
-   * will always include packet headers.
-   * @type {string}
+   * Index into original binary indicating how many bits have been 'sent'
+   * in the animation.
+   * @type {number}
    * @private
    */
-  this.remainingBinary_ = '';
+  this.sendAnimationIndex_ = 0;
 
   /**
    * Simulation-time timestamp (ms) of the last bit-send animation.
@@ -333,11 +332,11 @@ NetSimPacketEditor.prototype.render = function () {
 NetSimPacketEditor.prototype.beginSending = function (myNode) {
   this.isPlayingSendAnimation_ = true;
   this.originalBinary_ = this.getPacketBinary().substr(0, this.maxPacketSize_);
-  this.remainingBinary_ = this.originalBinary_;
+  this.sendAnimationIndex_ = 0;
   this.myNode_ = myNode;
 
   // Finish now if the packet is empty.
-  if (this.remainingBinary_.length === 0) {
+  if (0 === this.originalBinary_.length) {
     this.finishSending();
   }
 };
@@ -383,9 +382,9 @@ NetSimPacketEditor.prototype.tick = function (clock) {
   var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
-    this.remainingBinary_ = this.remainingBinary_.substr(maxBitsToSendThisTick);
-    this.setPacketBinary(this.remainingBinary_);
-    if (this.remainingBinary_.length === 0) {
+    this.sendAnimationIndex_ += maxBitsToSendThisTick;
+    this.setPacketBinary(this.originalBinary_.substr(this.sendAnimationIndex_));
+    if (this.sendAnimationIndex_ >= this.originalBinary_.length) {
       this.finishSending();
     }
   }
