@@ -351,6 +351,8 @@
       viewing_solution: دیدن راه حل
       try_it_yourself: خودت امتحان کن
       section: بخش
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'

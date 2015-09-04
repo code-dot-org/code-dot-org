@@ -307,6 +307,8 @@ nn:
       viewing_solution: Viser løsning
       try_it_yourself: Prøv selv
       section: Seksjon
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'

@@ -871,8 +871,9 @@ ru:
         Free Play Time! Have fun drawing
         whatever you like with the blocks you have learned how to use
       Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
+        Remember Stage 6 when we used a
+        variable to control the number of sides in a shape? We are going to do the
+        same thing with the "counter" variable now. This pattern starts with a triangle
         and adds one side at a time until it draws a decagon (10 sides). Each side
         should be 100 pixels long. Hint: 360 divided by the number of sides a shape
         has is the number of degrees you'll need to turn.
@@ -889,12 +890,10 @@ ru:
         counter) pixels.
       Course 4 Artist For Loops 14_instruction: |
         If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
+        less than you normally would for a shape, it creates a neat effect. Try using
+        the code from the last level, but turning 89 degrees to create this twisted
+        square spiral.
+      Course 4 Artist For Loops 15_instruction: "Free Play: Try making some drawings\nof your own using For Loops. We've added a few generic variables for you\nto use as well.\r\n\r\nNotice that there are now so many blocks in your toolbox\nthat we have to organize them into categories again.  Click around to discover\nall of the blocks that you can use in this level."
       Course 4 Artist For Loops 2_instruction: |
         I've put the code for drawing a
         triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
@@ -916,10 +915,7 @@ ru:
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: |
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
+      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom the last image can create this drawing. Can you figure out what that\nchange is?\r\n\r\nHint:  You need to remove something!"
       Course 4 Artist For Loops 8a_instruction: |
         Just one little change to the code
         from the last image can create this image. Can you figure out what that change
@@ -927,7 +923,8 @@ ru:
       Course 4 Artist For Loops 9_instruction: |
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
+      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nNeed a hint? Click here."
       Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is 100
         pixels in length, using a loop?
@@ -951,21 +948,13 @@ ru:
         Let's Step it up a little, can
         you draw a star shape using the "draw a line of squares" function? Good
         luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
+      Course 4 Artist Functions 2_instruction: 'Можете нарисовать 3 квадрата на расстоянии 20 пикселов друг от друга? Подсказка: размер каждого квадрата - 100 пикселей'
+      Course 4 Artist Functions 3_instruction: "Сможете нарисовать этот рисунок, используя процедуру \"рисовать квадрат\"? Подсказка: расстояние между квадратами 120 пикселей.\r\n"
+      Course 4 Artist Functions 4_instruction: 'Готовы создать собственный блок процедуры? Нажмите блок «Процедуры» на панели инструментов, укажите название "нарисовать треугольник", и создайте треугольник, как и раньше с помощью блоков Действия и Циклы. Затем нажмите Сохранить и Закрыть в правом верхнем углу. Подсказка: создавайте треугольники длиной 100 пикселей. Успехов!'
       Course 4 Artist Functions 5 OLD_instruction: |
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
+      Course 4 Artist Functions 5_instruction: "Сможете нарисовать этот рисунок, используя процедуру \"рисовать квадрат\"? Подсказка: расстояние между квадратами 120 пикселей.\r\n"
       Course 4 Artist Functions 6_instruction: |
         Which block do you need to add to
         get the triangle to sit on top of the square?
@@ -1226,45 +1215,23 @@ ru:
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
         top to bottom, turning on the squares where the number has a zero. Run the
         code provided to see how the farmers uses binary to draw an image.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 8_instruction: |
-        You can complete the most of this image by
-        looping a 5 bit binary number - then you'll need one more 4 bit number to
-        get the bottom right-hand corner.
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+      Course 4 Binary 2_instruction: 'Какие двоичные строки можно повторить 8 раз для построения этого рисунка? Подсказка: число 1 заполняет ямку.'
+      Course 4 Binary 3_instruction: Можете нарисовать этот узор, повторяя одну и ту же двоичную строку?
+      Course 4 Binary 5 (copy 1)_instruction: Какая двоичная строка, повторенная 10 раз, нарисует это изображение?
+      Course 4 Binary 5_instruction: Какая двоичная строка, повторенная 10 раз, нарисует это изображение?
+      Course 4 Binary 6 (copy 1)_instruction: Какая двоичная строка, повторенная 10 раз, нарисует это изображение?
+      Course 4 Binary 6_instruction: Какая двоичная строка, повторенная 10 раз, нарисует это изображение?
+      Course 4 Binary 7_instruction: Какая двоичная строка, повторенная 10 раз, нарисует это изображение?
+      Course 4 Binary 8_instruction: Можно заполнить большую часть этого изображения, разместив в цикле 5-битное двоичное число. В таком случае нужно будет ещё одно 4-битное число, чтобы получить правый нижний угол.
+      Course 4 Maze 1_instruction: Помоги сердитой птице добраться до поросёнка!
+      Course 4 Maze 2_instruction: Избегай взрывчатку!
+      Course 4 Maze 3_instruction: 'Запрограммируй сердитых птиц, чтобы добраться до поросёнка. '
       Course 4 Maze 4_instruction: 'Попробуйте использовать блок "repeat", чтобы использовать меньше блоков...'
       Course 4 Maze 5_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
       Course 4 Maze 6_instruction: Можете решить эту задачу, используя наименьшее возможное число блоков?
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou to use. \r\n\r\nProgram your game to call the \"level_up\" function if\n\"player_points\" > 10.  \r\n\r\nPlay the game, and make it past level 4 to\nmove to the next puzzle. "
+      Course 4 Play Lab For Loops 2_instruction: На этот раз попробуй перечислить нечётные числа от 1 до 100.
+      Course 4 Play Lab Params 1_instruction: 'Эта функция называется "прыжок". Она заставляет главного персонажа подпрыгнуть на 100 пикселей. Используйте эту функцию, чтобы собрать все флаги.'
+      Course 4 Play Lab Params 10_instruction: "Мы добавили последнюю функцию в этом уроке. \r \r Запрограммируйте игру так, чтобы вызывалась функция \"следующий_уровень\" если \"очки_игрока\" > 10 \r \r Играйте в игру и пройдите четвёртый уровень, чтобы перейти к следующей головоломке. "
       Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto our jump function called \"height\".  The up arrow should cause the dog\nto jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint: You will need to click \"edit\" on the jump function and update\nit so that it uses the \"height\" parameter."
       Course 4 Play Lab Params 3_instruction: |
         Let's add another parameter to the
@@ -1315,12 +1282,7 @@ ru:
         actor 2 touches anything" event to trigger an update to your score when your
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
-      Course 4 Play Lab Vars 6_instruction: |
-        In our game, how should we score points?
-        Add 1 to your "points" variable each time Dog hits Cat with a heart. Use
-        the "when actor 2 touches anything" event to trigger an update to your score.
-        You can increment your variable by setting "points = points + 1." Get your
-        score up to 10 (going one at a time!) to pass the level.
+      Course 4 Play Lab Vars 6_instruction: "Use the right arrow to shoot hearts.\r\n\r\nIn\nour game, how should we score points? Add 1 to your \"points\" variable each\ntime Dog hits Cat with a heart. Use the \"when actor 2 touches anything\"\nevent to trigger an update to your score. You can increment your variable\nby setting \"points = points + 1.\" Get your score up to 10 (going one at\na time!) to pass the level."
       Course 4 Play Lab Vars 7_instruction: |
         Nice, now let's make sure this game
         isn't too easy to play. Any time Dog (actor 1) gets hit by yellow hearts
@@ -1348,13 +1310,11 @@ ru:
         Let's make the dog speak every
         number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Labs For Loops 2_instruction: На этот раз попробуй перечислить нечётные числа от 1 до 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, by 10 at a time.
+        from 10 up to 1000, 10 at a time.
       Course 4 Play Labs For Loops 4_instruction: |
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -1371,9 +1331,7 @@ ru:
       Course 4 Play Labs For Loops 7_instruction: |
         Could you use a for loop to help
         me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 8_instruction: |
-        What for loop would make me speak
-        19, 27, 35, 43, 51?
+      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
       Course 4 Variables Assessment_instruction: |
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
@@ -1654,7 +1612,7 @@ ru:
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Нарисуйте короткую линию вверх и длинную вправо!
       K-1 artist 1 level 10_instruction: Нарисуйте пунктирную линию с помощью блоков рисования и прыжка
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: Нарисуйте это, используя три линии
       K-1 Artist Loops 1_instruction: Нарисуйте эту линию двигаясь на восток 4 раза.
       K-1 Artist Loops 2_instruction: Можете нарисовать ту же самую линию, используя цикл?
       K-1 Artist Loops 3_instruction: Можете поместить эти блоки в цикл, чтобы нарисовать 6 линий?
@@ -1686,7 +1644,7 @@ ru:
       K-1 Artist2 6_instruction: Нарисуйте два квадраты, чтобы сделать прямоугольник!
       K-1 Artist2 Assessment1_instruction: 'Оценка: Нарисуйте квадрат возле другого квадрата.'
       K-1 Artist2 Free Draw_instruction: Нарисуйте что-нибудь!
-      K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
+      K-1 Artist2_7_instruction: Нарисуйте прямоугольник, чтобы добавить комоду верхний ящик!
       K-1 Bee 1_instruction: Переместите меня на цветок, возьмите нектар, а затем переместите меня на соты и сделайте мёд
       K-1 Bee 10_instruction: Возьмите четыре нектара и сделайте два меда!
       K-1 Bee 11.5_instruction: Возьмите четыре нектара и сделайте четыре меда!
@@ -1710,19 +1668,15 @@ ru:
       K-1 Bee Loops 11_instruction: 'Оценка: Используйте циклы, чтобы получить нектар и мед!'
       K-1 Bee Loops 12_instruction: 'Оценка: Используйте циклы, чтобы получить нектар, мед и чтобы двигаться!'
       K-1 Bee Loops 2_instruction: Используйте цикл чтобы двигаться, затем возьмите нектар и сделайте мед!
-      K-1 Bee Loops 3_instruction: Use loops to get the nectar and make honey!
-      K-1 Bee Loops 4_instruction: |
-        Use loops to get the nectar, make honey, and
-        to move!
-      K-1 Bee Loops 5_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 3_instruction: Используйте циклы, чтобы получить нектар и сделать мёд!
+      K-1 Bee Loops 4_instruction: Используйте циклы, чтобы двигаться, получить нектар, и сделать мёд!
+      K-1 Bee Loops 5_instruction: Используйте циклы, чтобы получить нектар и мёд!
       K-1 Bee Loops 6_instruction: Используйте циклы, чтобы получить нектар, мед и чтобы двигаться!
-      K-1 Bee Loops 7_instruction: Use loops to get the nectar and make honey!
-      K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 7_instruction: Используйте циклы, чтобы получить нектар и сделать мёд!
+      K-1 Bee Loops 8_instruction: Используйте циклы, чтобы получить нектар и мёд!
       K-1 Bee Loops 9_instruction: Используйте циклы, чтобы получить нектар, мед и чтобы двигаться!
-      K-1 Bee Loops Assessment 1_instruction: |
-        Get nectar to make honey and use loops
-        to move!
-      K-1 Bee Loops Assessment 2_instruction: Get nectar to make honey using loops!
+      K-1 Bee Loops Assessment 1_instruction: Соберите нектар, чтобы сделать мёд. Используйте циклы, чтобы двигаться!
+      K-1 Bee Loops Assessment 2_instruction: Используйте циклы, чтобы собрать нектар и сделать мёд!
       K-1 Bee Puzzle 12_instruction: Получите три нектара и затем сделайте два мёда
       K-1 Building a Foundation Assessment_instruction: |
         Build a three level pyramid,
@@ -1992,9 +1946,7 @@ ru:
         the "draw a line of squares" function? Hint: Each iteration, you'll have
         to move forward a certain number of pixels and turn 144 degrees.
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
+      NEW Course 4 Artist Functions 2_instruction: 'Можете нарисовать 3 квадрата на расстоянии 20 пикселов друг от друга? Подсказка: размер каждого квадрата - 100 пикселей'
       NEW Course 4 Artist Functions 3_instruction: |
         Here is a new type of Block.
         It is called a "Function block." Click "Run" to see what it can do. 
@@ -2116,8 +2068,9 @@ ru:
         much easier! All the code you need is here, take a look at how it is put together
         then click "Run" to see how it works. 
       NEW Course 4 Bee For Loops 4 4_instruction: |
-        Can you help the Bee collect the
-        rest of the honey using this for loop? 
+        Now we need to move forward "counter"
+        times, then get nectar "counter" times.  Can you use two "repeat" loops
+        to solve this challenge?
       NEW Course 4 Bee For Loops 4_instruction: |
         Replace the ??? in the "for loop"
         with the largest amount of nectar the bee has to collect. 
@@ -2181,7 +2134,7 @@ ru:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game. Make sure you come back here and click Continue\nafter you've made a remix."
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
       PDAlg Design Recipe Delete_instruction: |
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -2190,8 +2143,8 @@ ru:
         doesn't match both examples. Test each example to see which is failing, and
         then fix the definition to match.
       PDAlg Design Recipe Required_instruction: |
-        Complete the Design Recipe for this
-        function eggs making sure to create your examples.
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
       PDAlg Updates Cond_instruction: |
         When you went to PD in the summer, the Conditional
         block that you were introduced to was black and allowed any data type to be
@@ -2234,6 +2187,70 @@ ru:
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

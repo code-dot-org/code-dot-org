@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Os blocos \"Repita\" ou \"Se\" precisam de outros blocos para funcionar. Verifique se o bloco de dentro se ajusta corretamente ao bloco principal.",
   "emptyBlockInFunction":"A função {name} tem uma entrada não preenchida.",
   "emptyBlockInVariable":"A variável {name} tem uma entrada não preenchida.",
-  "emptyExampleBlockErrorMsg":"Você precisa de pelo menos um exemplo na função  {functionName}. Certifique-se de que cada exemplo tem uma chamada e um resultado.",
+  "emptyExampleBlockErrorMsg":"Você precisa de pelo menos dois exemplos na função {functionName}. Verifique se cada exemplo tem uma chamada e um resultado.",
   "emptyFunctionBlocksErrorMsg":"O bloco de função precisa ter outros blocos dentro dele para funcionar.",
   "emptyFunctionalBlock":"Você tem um bloco com uma entrada sem preencher.",
   "emptyTopLevelBlock":"Não há blocos para executar. Você deve anexar um bloco ao bloco {topLevelBlockName}.",

@@ -52,7 +52,11 @@ module SerializedProperties
       cleartext_property_name = property_name.gsub(ENCRYPTED_PROPERTY_REGEX, '')
 
       define_method(cleartext_property_name) do |*args|
-        Encryption::decrypt_object(read_attribute('properties')[property_name])
+        begin
+          Encryption::decrypt_object(read_attribute('properties')[property_name])
+        rescue OpenSSL::Cipher::CipherError
+          return nil
+        end
       end
 
       define_method("#{cleartext_property_name}=") do |value|

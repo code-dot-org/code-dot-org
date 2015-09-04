@@ -101,7 +101,7 @@ Semester 2: Saturday, January 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**September 19th Location**
 
 The LAB Miami<br/>
 400 NW 26th St.<br/>

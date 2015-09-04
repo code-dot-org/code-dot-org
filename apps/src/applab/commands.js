@@ -477,7 +477,7 @@ applabCommands.createCanvas = function (opts) {
     newElement.id = opts.elementId;
     // default width/height if params are missing
     var width = opts.width || Applab.appWidth;
-    var height = opts.height || Applab.appHeight;
+    var height = opts.height || Applab.footerlessAppHeight;
     newElement.width = width;
     newElement.height = height;
     newElement.setAttribute('width', width + 'px');

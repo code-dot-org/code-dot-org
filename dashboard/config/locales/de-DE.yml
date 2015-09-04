@@ -363,6 +363,8 @@
       viewing_solution: Lösung anzeigen
       try_it_yourself: Versuche es selbst
       section: Abschnitt
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'

@@ -307,6 +307,8 @@ ro:
       viewing_solution: Indicator soluție
       try_it_yourself: Încearcă-l și tu
       section: Secţiune
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'

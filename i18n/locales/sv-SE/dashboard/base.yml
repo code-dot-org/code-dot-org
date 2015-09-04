@@ -314,6 +314,8 @@ sv:
       viewing_solution: Visa lösning
       try_it_yourself: Prova det själv
       section: Grupp
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'

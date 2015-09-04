@@ -22,6 +22,21 @@ function pixelationInit() {
   heightRange = document.getElementById("heightRange");
   bitsPerPixelText = document.getElementById("bitsPerPixel");
   bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
+  startOver = document.getElementById("start_over");
+
+  if (appOptions.readonlyWorkspace) {
+    // Disable the parts of the UI that would modify the pixelation data.
+
+    pixel_data.setAttribute("readonly", "true");
+
+    widthText.setAttribute("disabled", "true");
+    widthRange.setAttribute("disabled", "true");
+    heightText.setAttribute("disabled", "true");
+    heightRange.setAttribute("disabled", "true");
+    bitsPerPixelText.setAttribute("disabled", "true");
+    bitsPerPixelRange.setAttribute("disabled", "true");
+    startOver.setAttribute("disabled", "true");
+  }
 }
 
 function isHex() {
@@ -105,7 +120,10 @@ function drawGraph(ctx, exportImage) {
       }
     }
 
-    options.projectChanged && options.projectChanged();
+    // Don't trigger autosave when workspace is readonly.
+    if (!appOptions.readonlyWorkspace && options.projectChanged) {
+      options.projectChanged();
+    }
   }
 
   var colorNums = bitsToColors(binCode, bitsPerPix);
@@ -409,7 +427,10 @@ function showPNG() {
   w.document.write('<style>* { margin: 0; })</style>');
   w.document.write('<img src="' + tempCanvas.toDataURL() + '">');
   w.document.close();
-  options.saveProject && options.saveProject();
+
+  if (!appOptions.readonlyWorkspace && options.saveProject) {
+    options.saveProject();
+  }
 }
 
 var finishedButton;
@@ -420,7 +441,7 @@ function onFinishedButtonClick() {
   }
   finishedButton.attr('disabled', true);
 
-  if (options.saveProject) {
+  if (!appOptions.readonlyWorkspace && options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
     dashboard.dialog.processResults(onComplete);

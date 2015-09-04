@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Este conteúdo tem restrições de idade e não está disponível para
+        os alunos mais jovens
   activerecord:
     errors:
       messages:
@@ -363,6 +363,8 @@
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -455,8 +457,8 @@
       por sua ajuda na criação do Code Studio.
     help_from_html: Queremos agradecer principalmente os engenheiros da Google, Microsoft,
       Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
+      a criar esses materiais.
     art_from_html: A Era do Gelo&#8482; &amp; &copy; %{current_year} 20th Century
       Fox. Todos os direitos reservados.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;

@@ -314,7 +314,7 @@
     padding: 0; }
     #netsim div.netsim-panel h1 {
       margin: 0;
-      padding: 0.3em 0.5em;
+      padding: 0.3em;
       font-family: "Gotham 4r", sans-serif;
       font-size: 110%;
       font-weight: bold;
@@ -328,6 +328,8 @@
         padding-top: 2px; }
         #netsim div.netsim-panel h1 .panel-controls .netsim-button {
           margin-left: 3px; }
+      #netsim div.netsim-panel h1 .pad-left {
+        padding-left: 0.2em; }
     #netsim div.netsim-panel div.panel-body {
       background-color: white;
       border-left: solid darkgray 1px;

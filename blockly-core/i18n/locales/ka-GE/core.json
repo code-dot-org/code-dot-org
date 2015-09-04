@@ -35,7 +35,7 @@
   "CONTROLS_FOREACH_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#for_each",
   "CONTROLS_FOREACH_INPUT_INLIST": "სიაში",
   "CONTROLS_FOREACH_INPUT_INLIST_TAIL": "",
-  "CONTROLS_FOREACH_INPUT_ITEM": "თითოეული ოდენობისათვის",
+  "CONTROLS_FOREACH_INPUT_ITEM": "თითოეული ერთეულისთვის",
   "CONTROLS_FOREACH_TOOLTIP": "სიაში თითოეული ოდენობისათვის, ცვლად '%1'-ს მიენიჭოს ოდენობა , შემდეგ შესრულდეს მომდევნო  მითითებები.",
   "CONTROLS_FOR_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#count_with",
   "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1-დან %2-ამდე ბიჯით %3",

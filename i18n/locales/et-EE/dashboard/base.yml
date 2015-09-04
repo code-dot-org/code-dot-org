@@ -300,6 +300,8 @@ et:
       viewing_solution: Lahenduse vaatamine
       try_it_yourself: Proovi seda ise
       section: Jaotis
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
     email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'

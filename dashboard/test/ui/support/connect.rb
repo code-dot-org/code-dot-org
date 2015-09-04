@@ -1,20 +1,6 @@
 require 'selenium/webdriver'
 
-require_relative '../../../config/deployment.rb'
-
-def browserstack_username
-  ENV['BROWSERSTACK_USERNAME'] || CDO.browserstack_username
-end
-
-def browserstack_authkey
-  ENV['BROWSERSTACK_AUTHKEY'] || CDO.browserstack_authkey
-end
-
-class Object
-  def nil_or_empty?()
-    self.nil? || self.empty?
-  end
-end
+$browser_configs = JSON.load(open("browsers.json"))
 
 if ENV['TEST_LOCAL'] == 'true'
   # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
@@ -25,48 +11,75 @@ if ENV['TEST_LOCAL'] == 'true'
     browser.manage.window.resize_to(max_width, max_height)
   end
 else
-  # BrowserStack
-  if browserstack_username.nil_or_empty? || browserstack_authkey.nil_or_empty?
-    raise "Missing BrowserStack credentials in environment."
+  if CDO.saucelabs_username.blank?
+    raise "Please define CDO.saucelabs_username"
   end
 
-  url = "http://#{browserstack_username}:#{browserstack_authkey}@hub.browserstack.com/wd/hub"
+  if CDO.saucelabs_authkey.blank?
+    raise "Please define CDO.saucelabs_authkey"
+  end
+
+  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@ondemand.saucelabs.com:80/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  capabilities['os'] = ENV['BS_AUTOMATE_OS'] || 'windows'
-  capabilities['os_version'] = ENV['BS_AUTOMATE_OS_VERSION'] || '7'
-  capabilities['browser'] = ENV['SELENIUM_BROWSER'] || 'chrome'
-  capabilities['browser_version'] = ENV['SELENIUM_VERSION'] || '31'
+  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
 
-  capabilities['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
-  capabilities['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
+  browser_config.each do |key, value|
+    capabilities[key] = value
+  end
 
-  capabilities['rotatable'] = ENV['BS_ROTATABLE'] if ENV['BS_ROTATABLE']
-  capabilities['deviceOrientation'] = ENV['BS_ORIENTATION'] if ENV['BS_ORIENTATION']
-
-  capabilities['browserstack.tunnel'] = 'true' if ENV['TEST_TUNNEL'] == 'true'
-
-  capabilities["browserstack.debug"] = "true" unless ENV['TEST_REALMOBILE'] == 'true'
-  capabilities["realMobile"] = ENV['TEST_REALMOBILE'] == 'true' ? 'true' : 'false'
-  capabilities["resolution"] = '1280x1024'
   capabilities[:javascript_enabled] = 'true'
+  capabilities[:name] = ENV['TEST_RUN_NAME']
+  capabilities[:build] = ENV['BUILD']
 
+  p "Capabilities: #{capabilities.inspect}"
 
-  browser = Selenium::WebDriver.for(:remote, :url => url, :desired_capabilities => capabilities)
+  Time.now.tap do |start_time|
+    browser = Selenium::WebDriver.for(:remote,
+                                      url: url,
+                                      desired_capabilities: capabilities,
+                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    p "Got browser in #{Time.now - start_time}s"
+  end
+
+  p "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
-  if ENV['MOBILE'] != "true"
+  unless ENV['MOBILE']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
 end
 
 # let's allow much longer timeouts when searching for an element
-browser.manage.timeouts.implicit_wait = 25 # seconds
+browser.manage.timeouts.implicit_wait = 2.minutes
+browser.send(:bridge).setScriptTimeout(1.minute * 1000)
 
 Before do
   @browser = browser
   @browser.manage.delete_all_cookies
+
+  @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+end
+
+def log_result(result)
+  # Do something after each scenario.
+  # The +scenario+ argument is optional, but
+  # if you use it, you can inspect status with
+  # the #failed?, #passed? and #exception methods.
+
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
+  HTTParty.put(url,
+               body: {"passed" => result}.to_json,
+               headers: {'Content-Type' => 'application/json'})
+end
+
+all_passed = true
+
+After do |scenario|
+  all_passed = all_passed && scenario.passed?
+  log_result all_passed
 end
 
 at_exit do

@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Por favor corrije los siguientes errores:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Este contenido tiene restricciones de edad y no está disponible para
+        los estudiantes más jóvenes
   activerecord:
     errors:
       messages:
@@ -364,6 +364,8 @@
       viewing_solution: Visualizando la Solución
       try_it_yourself: Inténtalo tu mismo
       section: Sección
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
@@ -416,7 +418,7 @@
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
-    view_course: View Course
+    view_course: Ver curso
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
@@ -437,12 +439,12 @@
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
     no_primary_course: Inénta un curso en Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Aprender en Código Studio
+    description: Cualquier persona puede aprender informática. Hacer juegos, aplicaciones
+      y arte con el código.
   gender:
     male: Varón
     female: Mujer
@@ -451,30 +453,30 @@
     student: estudiante
     teacher: Profesor
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>,
+      <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo
+      extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores
+      academicos</a> por su apoyo creando Codigo Studio.
     help_from_html: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
       a crear este tutorial.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Ingenieros de Google, Microsoft, Facebook y Twitter han ayudado
+      a crear este material.
     art_from_html: Angry Brids&trade;&&copy; 2009-2013 Rovio Entertainment Ltd. Todos
       los derechos reservados. <br/>Plantas vs. Zombies&trade;&&copy; 2013 Electronic
       Arts Inc. Todos los derechos reservados.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+      Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE
+      y hora de Codigo &reg; son marcas registradas de Code.org.'
     copyright: Derechos de autor
     more: Más
     feedback: Enviar comentarios
     translate: Ayúdanos a traducir a tu idioma
     support: Soporte
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Términos
     tos: Términos
     privacy: Política de Privacidad
     secure: Versión Segura
@@ -627,8 +629,8 @@
   dialog:
     ok: Aceptar
     startover_title: ¿Seguro que quieres empezar de nuevo?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Esto reiniciará el rompecabeza a su estado inicial y reiniciara
+      todos los datos que hayas agregado o cambiado.
     startover_ok: Volver a empezar
     startover_cancel: Cancelar
   time:

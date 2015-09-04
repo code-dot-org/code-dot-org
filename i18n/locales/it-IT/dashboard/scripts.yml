@@ -34,7 +34,7 @@ it:
           Getting Loopy: Diventare Ripetitivi
           The Big Event: Il Grande Evento
           Going Places Safely: Visitare Luoghi in Modo Sicuro
-          description: Il Corso 1 è rivolto che stanno iniziando a leggere. Gli studenti creeranno dei programmi che li aiutano a collaborare con altri, a sviluppare capacità di risolvere problemi e a perseverare su problemi difficili. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
+          description: Il Corso 1 è rivolto a studenti che stanno iniziando a leggere. Gli studenti creano programmi che sviluppano la capacità di risolvere problemi e di perseverare su problemi difficili, e permettono loro di collaborare con altri. Alla fine del corso gli studenti creano i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato per la prima elementare.
           "Bee: Sequence": 'Ape: Sequenze'
           "Artist: Sequence": 'Artista: Sequenze'
           "Artist: Shapes": 'Artista: Forme'
@@ -1137,3 +1137,10 @@ it:
           Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
           Updates - The Design Recipe: 'Updates - The Design Recipe'
           Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

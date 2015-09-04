@@ -282,7 +282,7 @@ window.apps = {
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
   // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
-  setupBlockly: function () {
+  setupApp: function (appOptions) {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
@@ -640,9 +640,7 @@ var projects = module.exports = {
   },
 
   showAdmin: function() {
-    if (typeof dashboard.admin.showProjectAdmin === 'function') {
-      dashboard.admin.showProjectAdmin();
-    }
+    dashboard.admin.showProjectAdmin();
   },
 
   showMinimalProjectHeader: function() {
@@ -769,10 +767,16 @@ var projects = module.exports = {
       callback = arguments[0];
       source = this.sourceHandler.getLevelSource();
     }
+
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
+    var newLevelHtml = this.sourceHandler.getLevelHtml();
+    if (current.levelHtml && !newLevelHtml) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
     current.levelSource = source;
-    current.levelHtml = this.sourceHandler.getLevelHtml();
+    current.levelHtml = newLevelHtml;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {

@@ -139,39 +139,20 @@ ur-PK:
     &ldquo;کمپیوٹر سائنس دنیا کے بہترین مواقع پیدا کرنے کی صلاحیت رکھتا ہے&rdquo;
     ستیا، سی-ای-او مائیکروسافٹ
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+    &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں. &rdquo;
+    کرس بوش
   homepage_hero_text_student1: '&ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابلے ذکر ہے کے بہت ہی مزیدار ہے.&rdquo; لونا, ساتوی جماعت'
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
-  homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
-  homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_student2: '&ldquo;میں نے اپنے بچوں کو پڑھائی کے بارے میں کبھی بھی اتناخوش نہیں دیکھا،&rdquo; استاد مایکل۔'
+  homepage_hero_text_student3: '&ldquo;کومپوترساینس ایک ایسا شعبہہ ہے جس میں تمہیں پتہ نہیں چلےگا کہ تمہیں وہ پسند ائیگا یہ نہیں جب تک کہ تم اس کو جانے کی کوشیش نہیں کرو گے۔ &rdquo;جئیکسن، چھٹی کلاس۔'
+  homepage_hero_text_student4: '&ldquo;تم پروگرامنگ کے ساتھ وہ سب کچھ کر سکتے ہو تمہارے دماغ میںں آے مایا، دوسری جماعت. &rdquo'
+  homepage_hero_text_student5: '&ldquo;کمپیوٹر سائنس کسی اور کے لئے نہیں، یہ تمھارے لئے ہیں ابھی اسی وقت، &ldquo;استاد گرالڈو'
+  homepage_hero_text_teacher1: کوڈنگ لوگوں میں پریرتا تخلیقی صلاحیت اور جدت پیدا کرتی ہے جس کی ضرورت ہر شعبے می ہے ،استاد فلوریسا
+  homepage_hero_text_teacher2: اس پروگرام نے میرے سو فیصد طلبہ کو مصروف اور ملوث رکھا، استاد آدم
+  homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس واقت داجل ہیں۔
+  homepage_hero_text_stat_students: '#student_count طلبہ اس وقت کوڈ سٹوڈیو پر ہے'
+  homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: اینا اور ایلسا کے ساتھ فروزین۔
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_course4: Course 4
@@ -180,35 +161,35 @@ ur-PK:
   homepage_action_text_codevideo: ویڈیو دیکھے
   homepage_action_text_teachervideo: ویڈیو دیکھے
   homepage_action_text_learn: سیکھنا شروع کریں
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'I agree &#x25BE;'
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_signpetition: درخواست پر دستخت کریں
+  homepage_signpetition_dropdown: 'میں اتفاق کرتا ہوں &#x25BE;'
+  homepage_diversity_pledge: کوڈ کو پھیلانے کا عہد کریں
+  homepage_banner_text_main: Code.org اور کالج بورڈ کی کمپیوٹر سائنس کے پھیلاؤ کے لئے شراکت
+  homepage_banner_text_link: مزید سیکھے
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Learn more
+  homepage_banner_privacy_link: مزید سیکھے
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔
   homepage_slot_text_link_hoc: Try the Hour of Code
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
+  homepage_slot_text_blurb_students: ہمارے سارے اسباق کو دیکھیے۔
+  homepage_slot_text_link_codestudio: کوڈ سٹوڈیو کو ایک موقع دیں
+  homepage_slot_text_link_local: مقامی کلاس ڈھونڈیں
   homepage_slot_text_link_othercourses: دوسرے آن لائن کورس
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
+  homepage_slot_text_title_educators: ماہرین تعلیم
+  homepage_slot_text_blurb_educators: اپنے طالبعلموں کو پڑھیے
+  homepage_slot_text_link_k5: پانچویں جماعت کے لئے کورسز
   homepage_slot_text_link_fullcurriculum: ہمارا مکمل نصاب دیکھیں
   homepage_slot_text_link_pd: پیشہ ورانہ ترقی
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support diversity in computing
+  homepage_slot_text_title_advocates: وکلاء
+  homepage_slot_text_blurb_advocates: کمپیوٹر سائنس کے پھیلاؤ میں مدد کریں
   homepage_slot_text_link_stats: اعدادوشمار دیکھیں
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
+  homepage_slot_text_link_buy: شامل ہو جاؤ
+  homepage_slot_text_link_donate: عطیہ کریں
+  homepage_header_codestudio: کوڈ اسٹوڈیو طالبعلموں کی تخلیقات
+  homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
   homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: Donate
   contact_form_topic_student: "I'm a student"

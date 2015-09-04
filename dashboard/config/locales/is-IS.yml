@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum
   activerecord:
     errors:
       messages:
@@ -359,6 +358,8 @@
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -449,15 +450,15 @@
       fyrir stuðninginn við gerð Kóðastúdíósins.
     help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft,
       Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði
+      við gerð þessa kennsluefnis.
     art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll
       réttindi áskilin.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+      Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin
     powered_by_aws: Knúið af Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour
       of Code&reg; eru vörumerki Code.org.'
@@ -467,7 +468,7 @@
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Skilmálar
     tos: Skilmálar
     privacy: Persónuvernd
     secure: Örugg útgáfa

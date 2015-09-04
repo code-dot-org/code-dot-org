@@ -304,6 +304,8 @@ hr:
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Odjeljenje
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'

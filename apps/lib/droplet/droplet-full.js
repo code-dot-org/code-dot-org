@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-08-07
+ * Date: 2015-08-31
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -36200,6 +36200,7 @@ Lexer.prototype.notifyListeners = function(e) {
 	var stop = this._input.index;
 	var text = this._input.getText(start, stop);
 	var msg = "token recognition error at: '" + this.getErrorDisplay(text) + "'";
+  msg += e.stack;
 	var listener = this.getErrorListenerDispatch();
 	listener.syntaxError(this, null, this._tokenStartLine,
 			this._tokenStartColumn, msg, e);
@@ -46452,7 +46453,7 @@ exports.dfa = require('./dfa/index');
 exports.tree = require('./tree/index');
 exports.error = require('./error/index');
 exports.Token = require('./Token').Token;
-exports.CommonToken = require('./Token').Token;
+exports.CommonToken = require('./Token').CommonToken;
 exports.InputStream = require('./InputStream').InputStream;
 exports.FileStream = require('./FileStream').FileStream;
 exports.CommonTokenStream = require('./CommonTokenStream').CommonTokenStream;
@@ -46880,6 +46881,7 @@ exports.SlowBuffer = SlowBuffer
 exports.INSPECT_MAX_BYTES = 50
 Buffer.poolSize = 8192 // not used by this implementation
 
+var kMaxLength = 0x3fffffff
 var rootParent = {}
 
 /**
@@ -46890,45 +46892,32 @@ var rootParent = {}
  * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
  * Opera 11.6+, iOS 4.2+.
  *
- * Due to various browser bugs, sometimes the Object implementation will be used even
- * when the browser supports typed arrays.
- *
  * Note:
  *
- *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
- *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
+ * - Implementation must support adding new properties to `Uint8Array` instances.
+ *   Firefox 4-29 lacked support, fixed in Firefox 30+.
+ *   See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
  *
- *   - Safari 5-7 lacks support for changing the `Object.prototype.constructor` property
- *     on objects.
+ *  - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
  *
- *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
+ *  - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
+ *    incorrect length in some situations.
  *
- *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
- *     incorrect length in some situations.
-
- * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
- * get the Object implementation, which is slower but behaves correctly.
+ * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they will
+ * get the Object implementation, which is slower but will work correctly.
  */
 Buffer.TYPED_ARRAY_SUPPORT = (function () {
-  function Bar () {}
   try {
-    var arr = new Uint8Array(1)
+    var buf = new ArrayBuffer(0)
+    var arr = new Uint8Array(buf)
     arr.foo = function () { return 42 }
-    arr.constructor = Bar
     return arr.foo() === 42 && // typed array instances can be augmented
-        arr.constructor === Bar && // constructor can be set
         typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
+        new Uint8Array(1).subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
   } catch (e) {
     return false
   }
 })()
-
-function kMaxLength () {
-  return Buffer.TYPED_ARRAY_SUPPORT
-    ? 0x7fffffff
-    : 0x3fffffff
-}
 
 /**
  * Class: Buffer
@@ -46996,13 +46985,8 @@ function fromObject (that, object) {
     throw new TypeError('must start with number, buffer, array or string')
   }
 
-  if (typeof ArrayBuffer !== 'undefined') {
-    if (object.buffer instanceof ArrayBuffer) {
-      return fromTypedArray(that, object)
-    }
-    if (object instanceof ArrayBuffer) {
-      return fromArrayBuffer(that, object)
-    }
+  if (typeof ArrayBuffer !== 'undefined' && object.buffer instanceof ArrayBuffer) {
+    return fromTypedArray(that, object)
   }
 
   if (object.length) return fromArrayLike(that, object)
@@ -47035,18 +47019,6 @@ function fromTypedArray (that, array) {
   // of the old Buffer constructor.
   for (var i = 0; i < length; i += 1) {
     that[i] = array[i] & 255
-  }
-  return that
-}
-
-function fromArrayBuffer (that, array) {
-  if (Buffer.TYPED_ARRAY_SUPPORT) {
-    // Return an augmented `Uint8Array` instance, for best performance
-    array.byteLength
-    that = Buffer._augment(new Uint8Array(array))
-  } else {
-    // Fallback: Return an object instance of the Buffer class
-    that = fromTypedArray(that, new Uint8Array(array))
   }
   return that
 }
@@ -47097,9 +47069,9 @@ function allocate (that, length) {
 function checked (length) {
   // Note: cannot use `length < kMaxLength` here because that fails when
   // length is NaN (which is otherwise coerced to zero.)
-  if (length >= kMaxLength()) {
+  if (length >= kMaxLength) {
     throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
+                         'size: 0x' + kMaxLength.toString(16) + ' bytes')
   }
   return length | 0
 }
@@ -47168,6 +47140,8 @@ Buffer.concat = function concat (list, length) {
 
   if (list.length === 0) {
     return new Buffer(0)
+  } else if (list.length === 1) {
+    return list[0]
   }
 
   var i
@@ -47189,38 +47163,29 @@ Buffer.concat = function concat (list, length) {
 }
 
 function byteLength (string, encoding) {
-  if (typeof string !== 'string') string = '' + string
+  if (typeof string !== 'string') string = String(string)
 
-  var len = string.length
-  if (len === 0) return 0
+  if (string.length === 0) return 0
 
-  // Use a for loop to avoid recursion
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'ascii':
-      case 'binary':
-      // Deprecated
-      case 'raw':
-      case 'raws':
-        return len
-      case 'utf8':
-      case 'utf-8':
-        return utf8ToBytes(string).length
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return len * 2
-      case 'hex':
-        return len >>> 1
-      case 'base64':
-        return base64ToBytes(string).length
-      default:
-        if (loweredCase) return utf8ToBytes(string).length // assume utf8
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
+  switch (encoding || 'utf8') {
+    case 'ascii':
+    case 'binary':
+    case 'raw':
+      return string.length
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      return string.length * 2
+    case 'hex':
+      return string.length >>> 1
+    case 'utf8':
+    case 'utf-8':
+      return utf8ToBytes(string).length
+    case 'base64':
+      return base64ToBytes(string).length
+    default:
+      return string.length
   }
 }
 Buffer.byteLength = byteLength
@@ -47229,7 +47194,8 @@ Buffer.byteLength = byteLength
 Buffer.prototype.length = undefined
 Buffer.prototype.parent = undefined
 
-function slowToString (encoding, start, end) {
+// toString(encoding, start=0, end=buffer.length)
+Buffer.prototype.toString = function toString (encoding, start, end) {
   var loweredCase = false
 
   start = start | 0
@@ -47270,13 +47236,6 @@ function slowToString (encoding, start, end) {
         loweredCase = true
     }
   }
-}
-
-Buffer.prototype.toString = function toString () {
-  var length = this.length | 0
-  if (length === 0) return ''
-  if (arguments.length === 0) return utf8Slice(this, 0, length)
-  return slowToString.apply(this, arguments)
 }
 
 Buffer.prototype.equals = function equals (b) {
@@ -47342,13 +47301,13 @@ Buffer.prototype.indexOf = function indexOf (val, byteOffset) {
   throw new TypeError('val must be string, number or Buffer')
 }
 
-// `get` is deprecated
+// `get` will be removed in Node 0.13+
 Buffer.prototype.get = function get (offset) {
   console.log('.get() is deprecated. Access using array indexes instead.')
   return this.readUInt8(offset)
 }
 
-// `set` is deprecated
+// `set` will be removed in Node 0.13+
 Buffer.prototype.set = function set (v, offset) {
   console.log('.set() is deprecated. Access using array indexes instead.')
   return this.writeUInt8(v, offset)
@@ -48037,16 +47996,9 @@ Buffer.prototype.copy = function copy (target, targetStart, start, end) {
   }
 
   var len = end - start
-  var i
 
-  if (this === target && start < targetStart && targetStart < end) {
-    // descending copy from end
-    for (i = len - 1; i >= 0; i--) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
-    // ascending copy from start
-    for (i = 0; i < len; i++) {
+  if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
+    for (var i = 0; i < len; i++) {
       target[i + targetStart] = this[i + start]
     }
   } else {
@@ -48122,7 +48074,7 @@ Buffer._augment = function _augment (arr) {
   // save reference to original Uint8Array set method before overwriting
   arr._set = arr.set
 
-  // deprecated
+  // deprecated, will be removed in node 0.13+
   arr.get = BP.get
   arr.set = BP.set
 
@@ -48178,7 +48130,7 @@ Buffer._augment = function _augment (arr) {
   return arr
 }
 
-var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
+var INVALID_BASE64_RE = /[^+\/0-9A-z\-]/g
 
 function base64clean (str) {
   // Node strips out invalid characters like \n and \t from the string, base64-js does not
@@ -48456,14 +48408,14 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 },{}],58:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
-  var e, m
-  var eLen = nBytes * 8 - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var nBits = -7
-  var i = isLE ? (nBytes - 1) : 0
-  var d = isLE ? -1 : 1
-  var s = buffer[offset + i]
+  var e, m,
+      eLen = nBytes * 8 - mLen - 1,
+      eMax = (1 << eLen) - 1,
+      eBias = eMax >> 1,
+      nBits = -7,
+      i = isLE ? (nBytes - 1) : 0,
+      d = isLE ? -1 : 1,
+      s = buffer[offset + i]
 
   i += d
 
@@ -48489,14 +48441,14 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 }
 
 exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
-  var e, m, c
-  var eLen = nBytes * 8 - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
-  var i = isLE ? 0 : (nBytes - 1)
-  var d = isLE ? 1 : -1
-  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+  var e, m, c,
+      eLen = nBytes * 8 - mLen - 1,
+      eMax = (1 << eLen) - 1,
+      eBias = eMax >> 1,
+      rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0),
+      i = isLE ? 0 : (nBytes - 1),
+      d = isLE ? 1 : -1,
+      s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
 
   value = Math.abs(value)
 
@@ -62780,12 +62732,15 @@ Editor.prototype.populateSocket = function(socket, string) {
 };
 
 Editor.prototype.populateBlock = function(block, string) {
-  var location, newBlock;
+  var location, newBlock, ref1;
   newBlock = this.mode.parse(string, {
     wrapAtRoot: false
   }).start.next.container;
   if (newBlock) {
     location = block.start.prev;
+    while ((location != null ? location.type : void 0) === 'newline' && !(((ref1 = location.prev) != null ? ref1.type : void 0) === 'indentStart' && location.prev.container.end === block.end.next)) {
+      location = location.prev;
+    }
     this.spliceOut(block);
     this.spliceIn(newBlock, location);
     return true;
@@ -67618,7 +67573,7 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   HTMLParser.prototype.getButtons = function(node) {
     var buttons, ref;
     buttons = {};
-    if ((ref = node.nodeName) === 'thead' || ref === 'tbody' || ref === 'tr' || ref === 'table' || ref === 'div') {
+    if ((ref = node.nodeName) === 'thead' || ref === 'tbody' || ref === 'tr' || ref === 'table') {
       buttons.addButton = true;
       if (node.childNodes.length !== 0) {
         buttons.subtractButton = true;
@@ -67864,11 +67819,18 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.makeIndentBounds = function(node) {
-    var bounds, lastLine;
+    var bounds, lastLine, trailingText;
     bounds = {
       start: this.positions[node.__indentLocation.start],
       end: this.positions[node.__indentLocation.end]
     };
+    trailingText = this.lines[bounds.start.line].slice(bounds.start.column);
+    if (trailingText.length > 0 && trailingText.trim().length === 0) {
+      bounds.start = {
+        line: bounds.start.line,
+        column: this.lines[bounds.start.line].length
+      };
+    }
     if (node.__location.endTag != null) {
       lastLine = this.positions[node.__location.endTag.start].line - 1;
       if (lastLine > bounds.end.line || (lastLine === bounds.end.line && this.lines[lastLine].length > bounds.end.column)) {
@@ -67966,13 +67928,11 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
         this.fixBounds(root);
       }
     }
-    window.root = root;
-    window.parse5 = htmlParser;
     return this.mark(0, root, 0, null);
   };
 
   HTMLParser.prototype.mark = function(indentDepth, node, depth, bounds, nomark) {
-    var attrib, child, indentBounds, k, l, lastChild, len, len1, len2, len3, m, n, prefix, ref, ref1, ref2, ref3, results, results1, results2;
+    var attrib, child, indentBounds, k, l, lastChild, len, len1, len2, len3, m, n, prefix, ref, ref1, ref2, ref3, ref4, results, results1, results2;
     if (nomark == null) {
       nomark = false;
     }
@@ -68034,15 +67994,15 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
             });
             lastChild = null;
           } else {
-            if (!(TAGS[node.nodeName].content === 'optional' || (node.nodeName === 'script' && this.hasAttribute(node, 'src')) || node.__indentLocation.end === node.__location.end)) {
+            if (!(((ref3 = TAGS[node.nodeName]) != null ? ref3.content : void 0) === 'optional' || (node.nodeName === 'script' && this.hasAttribute(node, 'src')) || node.__indentLocation.end === node.__location.end)) {
               this.htmlSocket(node, depth + 1, null, indentBounds, null, true);
             }
           }
         }
-        ref3 = node.childNodes;
+        ref4 = node.childNodes;
         results2 = [];
-        for (n = 0, len3 = ref3.length; n < len3; n++) {
-          child = ref3[n];
+        for (n = 0, len3 = ref4.length; n < len3; n++) {
+          child = ref4[n];
           if (lastChild && lastChild.__location.end > child.__location.start) {
             nomark = true;
           } else {
@@ -68793,7 +68753,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
   };
 
   JavaScriptParser.prototype.getBounds = function(node) {
-    var bounds, line, ref, semicolon, semicolonLength;
+    var bounds, line, ref, ref1, semicolon, semicolonLength;
     if (node.type === 'BlockStatement') {
       bounds = {
         start: {
@@ -68805,12 +68765,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           column: node.loc.end.column - 1
         }
       };
+      bounds.start.column += ((ref = this.lines[bounds.start.line].slice(bounds.start.column).match(/^\s*/)) != null ? ref : [''])[0].length;
       if (this.lines[bounds.end.line].slice(0, bounds.end.column).trim().length === 0) {
         bounds.end.line -= 1;
         bounds.end.column = this.lines[bounds.end.line].length;
       }
       return bounds;
-    } else if (ref = node.type, indexOf.call(STATEMENT_NODE_TYPES, ref) >= 0) {
+    } else if (ref1 = node.type, indexOf.call(STATEMENT_NODE_TYPES, ref1) >= 0) {
       line = this.lines[node.loc.end.line];
       semicolon = this.lines[node.loc.end.line].slice(node.loc.end.column - 1).indexOf(';');
       if (semicolon >= 0) {
@@ -70323,6 +70284,19 @@ exports.Token = Token = (function() {
     this.version = 0;
   }
 
+  Token.prototype.getLinesToParent = function() {
+    var head, lines;
+    head = this;
+    lines = 0;
+    while (head !== this.parent.start) {
+      if (head.type === 'newline') {
+        lines++;
+      }
+      head = head.prev;
+    }
+    return lines;
+  };
+
   Token.prototype.setParent = function(parent1) {
     this.parent = parent1;
   };
@@ -71268,7 +71242,13 @@ exports.Parser = Parser = (function() {
           lastIndex = mark.location.column;
         }
         if (!(lastIndex >= line.length)) {
-          head = helper.connect(head, new model.TextToken(line.slice(lastIndex, line.length)));
+          if (stack.length === 0 || stack[stack.length - 1].type === 'indent') {
+            block = this.constructHandwrittenBlock(line.slice(lastIndex, line.length));
+            helper.connect(head, block.start);
+            head = block.end;
+          } else {
+            head = helper.connect(head, new model.TextToken(line.slice(lastIndex, line.length)));
+          }
         }
         head = helper.connect(head, new model.NewlineToken());
       }

@@ -300,6 +300,8 @@ en:
       viewing_solution: crwdns39079:0crwdne39079:0
       try_it_yourself: crwdns38280:0crwdne38280:0
       section: crwdns39080:0crwdne39080:0
+      example: crwdns45368:0crwdne45368:0
+      example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
   user:
     email_confirm_needed: crwdns4342:0crwdne4342:0
     email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'

@@ -19,9 +19,9 @@
       unconfirmed: Devi confermare il tuo account per poter continuare.
     mailer:
       confirmation_instructions:
-        subject: Istruzioni di conferma di Code.org
+        subject: Istruzioni per confermare il tuo account con Code.org
       reset_password_instructions:
-        subject: Istruzioni per il ripristino della password di Code.org
+        subject: Istruzioni per impostare una nuova password per Code.org
       unlock_instructions:
         subject: Istruzioni di sblocco
     omniauth_callbacks:
@@ -33,7 +33,7 @@
         di posta elettronica per il ripristino della password, assicurati di avere
         usato esattamente la URL fornita.
       send_instructions: Riceverai entro pochi minuti un messaggio di posta elettronica
-        con le istruzioni su come ripristinare la password.
+        con le istruzioni su come impostare una nuova password.
       send_paranoid_instructions: Se il tuo indirizzo di posta elettronica è presente
         nel nostro database, riceverai entro pochi minuti un messaggio con un link
         per recuperare la password.
@@ -93,8 +93,8 @@
       invitation_instructions:
         subject: Istruzioni di invito
         hello: Ciao %{email}
-        someone_invited_you: Qualcuno ti ha invitato su %{url}, è possibile accettare
-          l'invito attraverso il link sottostante.
+        someone_invited_you: 'Qualcuno ti ha invitato su %{url}: puoi accettare l''invito
+          attraverso il link sotto indicato.'
         accept: Accetta l'invito
         ignore: Se non volete accettare l'invito, siete pregati di ignorare questa
           email.< br />Il tuo account non verrà creato fino a quando non accederete

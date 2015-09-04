@@ -3,7 +3,11 @@ get '/v2/user' do
   dont_cache
   forbidden! unless dashboard_user
   content_type :json
-  JSON.pretty_generate(dashboard_user.slice_keys(:id, :name))
+  result = dashboard_user.slice_keys(:id, :name, :admin)
+  result[:owned_sections] = DASHBOARD_DB[:sections].
+      select(:id).
+      where(user_id: dashboard_user_id)
+  JSON.pretty_generate(result)
 end
 
 get '/v2/students' do

@@ -307,6 +307,8 @@ uk:
       viewing_solution: Перегляд рішення
       try_it_yourself: Спробуйте самі
       section: Група
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'

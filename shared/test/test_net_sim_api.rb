@@ -7,7 +7,7 @@ require_relative 'spy_pub_sub_api'
 
 ENV['RACK_ENV'] = 'test'
 
-class NetSimApiTest < Minitest::Unit::TestCase
+class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
 
@@ -160,6 +160,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
     assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
     assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
+  end
+
+  def test_get_400_on_inserting_duplicate_wire
+    # The first one works
+    create_wire(1, 2)
+    assert_equal 201, @net_sim_api.last_response.status, "Wire creation request failed"
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Initial wire was not created"
+
+    create_wire(1, 2)
+    assert_equal 400, @net_sim_api.last_response.status, "Duplicate wire request did not fail"
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Duplicate wire was created"
   end
 
   def test_get_400_on_bad_json_update

@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 次の間違い（エラー）を正しく直してください。
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: このコンテンツは、年齢制限に寄り若い学生には使用できません。
   activerecord:
     errors:
       messages:
@@ -158,7 +157,7 @@
     title: 交換賞品： %{name}
     provider: 'プロバイダ:'
     code: 'コード:'
-    redeem_header: 'To redeem:'
+    redeem_header: 交換するには。
     donorschoose_register: DonorsChoose.orgに教師として登録
     donorschoose_project: プロジェクトを投稿
     donorschoose_how_to: あなたのコードを使用する方法
@@ -207,9 +206,8 @@
           <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットで 750
           ドルです。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: 支援チャリティー <a target="_blank"href="http://DonorsChoose.org">
+            DonorsChoose.org</a> でクレジット $250 を得ることができます。(米国教師のみ)
           earned: '%{num_trophies} のトロフィーをすべての収集した学生は７人以上女学生でした。教師賞品を獲得しました ！（米国の教師のみ）'
           not_earned: '% {Num_trophies} のすべてのトロフィーを獲得したあなたの学生の少なくとも 7 が場合女の子は、あなたの報酬は追加
             $250 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット。<a
@@ -322,6 +320,8 @@
       viewing_solution: 回答を表示
       try_it_yourself: 試しにやってみてください。
       section: セクション
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: Eメール アドレスが確認されていません
     email_confirm_needed_required: あなたのメール アドレス %{email} はまだ確認されていません。
@@ -386,9 +386,8 @@
     choose_next_course: Code Studio コースを以下のリストから一つ試す
     print_certificate: 証書を印刷
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: コード スタジオで学ぶ
+    description: 誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。
   gender:
     male: 男性
     female: 女性
@@ -397,13 +396,11 @@
     student: 生徒
     teacher: 先生
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: 私たちの <a href="https://code.org/about/donors"> ドナー</a>、<a href="https://code.org/about/partners">
+      パートナー</a>、 <a href="https://code.org/about/team"> チーム</a>、ビデオ キャスト、<a href="https://code.org/about/advisors">
+      アドバイザー</a> にコード スタジオのサポートを感謝しています。
     help_from_html: このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのに手伝いました。
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
@@ -411,15 +408,15 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour
+      of Code&reg; は Code.org の商標です'
     copyright: Copyright
     more: それ以上
     feedback: フィードバックする
     translate: あなたの言語の翻訳にご協力ください
     support: サポート
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: 利用規約
     tos: 利用規約
     privacy: プライバシー ポリシー
     secure: 保護されたバージョン
@@ -549,8 +546,7 @@
   dialog:
     ok: OK
     startover_title: 本当に最初からやり直してもよいですか？
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。
     startover_ok: 最初からやり直す
     startover_cancel: キャンセル
   time:

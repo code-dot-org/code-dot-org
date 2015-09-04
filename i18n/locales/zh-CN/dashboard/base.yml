@@ -304,6 +304,8 @@ zh:
       viewing_solution: 查看解决方案
       try_it_yourself: 自己试一试
       section: 节点
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 没有确认的电子邮件地址：
     email_confirm_needed_required: '你的电子邮件地址尚未确认 %{email}：'

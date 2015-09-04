@@ -2,8 +2,7 @@
   errors:
     messages:
       not_saved: 'Пожалуйста, исправьте следующие ошибки:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Этот урок имеет возрастные ограничения и не доступен для юных студентов
   activerecord:
     errors:
       messages:
@@ -346,6 +345,8 @@
       viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
       section: Раздел
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был
@@ -431,14 +432,15 @@
     student: Ученик
     teacher: Учитель
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Мы благодарим наших <a href="https://code.org/about/donors">доноров</a>,
+      <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team">
+      большую команду</a>, наши участников видеозаписей и наших <a href="https://code.org/about/advisors">
+      консультантов по вопросам образования</a> за их поддержку в создании Студии
+      Кода.
     help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
       этот учебник.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
+    help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли
+      с созданием этих материалов.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Все права защищены.
@@ -454,7 +456,7 @@
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
     support_url: http://support.сode.org
-    tos_short: Terms
+    tos_short: Условия использования
     tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия

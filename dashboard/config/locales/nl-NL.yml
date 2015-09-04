@@ -366,6 +366,8 @@
       viewing_solution: Oplossing bekijken
       try_it_yourself: Probeer het zelf
       section: Groep
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
