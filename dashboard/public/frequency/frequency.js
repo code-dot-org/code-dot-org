@@ -474,8 +474,9 @@ BarGraph.prototype.shift = function (amt) {
     return freqs;
   }, {});
 
-  this.user_data = this.english_data.map(function (english, i, english_data) {
-    var letter = english_data[(i + amt) % 26].letter;
+  this.user_data = this.english_data.map(function (english) {
+    var i = (LETTERS.indexOf(english.letter) + amt) % 26;
+    var letter = LETTERS[i];
     return {
       letter: letter,
       frequency: frequencies[letter]
@@ -483,13 +484,6 @@ BarGraph.prototype.shift = function (amt) {
   });
 
   this.svg.selectAll('.letter').data(this.getZippedData());
-  this.svg.selectAll('.letter').selectAll("rect")
-    .data(function (d) {
-      return [d.english, d.user];
-    })
-    .attr("height", function (d, i) {
-      return this.getHeight() - this.yScale(d.frequency);
-    }.bind(this));
   this.reorder();
 };
 
