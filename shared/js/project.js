@@ -116,8 +116,7 @@ var projects = module.exports = {
    * @returns {boolean} true if project has been reported enough times to
    *   exceed our threshold
    */
-  // TODO - better name?
-  exceedsReportingThreshold: function () {
+  exceedsAbuseThreshold: function () {
     return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
   },
 

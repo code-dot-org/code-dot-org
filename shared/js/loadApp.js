@@ -60,7 +60,7 @@ module.exports = function (callback) {
   if (window.dashboard && dashboard.project) {
     promise = promise.then(dashboard.project.load)
     .then(function () {
-      if (dashboard.project.exceedsReportingThreshold()) {
+      if (dashboard.project.exceedsAbuseThreshold()) {
         renderAbusive();
         return $.Deferred().reject();
       }

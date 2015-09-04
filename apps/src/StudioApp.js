@@ -1989,7 +1989,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
 }
 
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
-  if (dashboard.project.exceedsReportingThreshold()) {
+  if (dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
       body: <dashboard.AbuseError i18n={{
         tos: window.dashboard.i18n.t('project.abuse.tos'),
