@@ -298,6 +298,14 @@ var NetSimRouterNode = module.exports = function (shard, row) {
    * @private
    */
   this.autoDnsQueue_ = [];
+
+  /**
+   * Most clients that can be connected to this router.
+   * Moved to instance variable so that tests can override it in certain cases.
+   * @type {number}
+   * @private
+   */
+  this.maxClientConnections_ = MAX_CLIENT_CONNECTIONS;
 };
 NetSimRouterNode.inherits(NetSimNode);
 
@@ -648,17 +656,17 @@ NetSimRouterNode.prototype.getStatus = function () {
   if (connectionCount === 0) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusNoConnections({
-        maximumClients: MAX_CLIENT_CONNECTIONS
+        maximumClients: this.maxClientConnections_
       });
     }
 
     return i18n.routerStatusNoConnections({
-      maximumClients: MAX_CLIENT_CONNECTIONS
+      maximumClients: this.maxClientConnections_
     });
   }
 
   var connectedNodeNames = this.getConnectedNodeNames_().join(', ');
-  if (connectionCount >= MAX_CLIENT_CONNECTIONS) {
+  if (connectionCount >= this.maxClientConnections_) {
     if (levelConfig.broadcastMode) {
       return i18n.roomStatusFull({
         connectedClients: connectedNodeNames
@@ -673,13 +681,13 @@ NetSimRouterNode.prototype.getStatus = function () {
   if (levelConfig.broadcastMode) {
     return i18n.roomStatus({
       connectedClients: connectedNodeNames,
-      remainingSpace: (MAX_CLIENT_CONNECTIONS - connectionCount)
+      remainingSpace: (this.maxClientConnections_ - connectionCount)
     });
   }
 
   return i18n.routerStatus({
     connectedClients: connectedNodeNames,
-    remainingSpace: (MAX_CLIENT_CONNECTIONS - connectionCount)
+    remainingSpace: (this.maxClientConnections_ - connectionCount)
   });
 };
 
@@ -709,7 +717,7 @@ NetSimRouterNode.prototype.isFull = function () {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
 
-  return incomingWireRows.length >= MAX_CLIENT_CONNECTIONS;
+  return incomingWireRows.length >= this.maxClientConnections_;
 };
 
 /**
@@ -914,7 +922,7 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   // Force a refresh to verify that we have not exceeded the connection limit.
   this.shard_.wireTable.refresh()
       .done(function () {
-        if (this.countConnections() > MAX_CLIENT_CONNECTIONS) {
+        if (this.countConnections() > this.maxClientConnections_) {
           rejectionReason = new Error("Too many connections");
         }
       }.bind(this))
@@ -927,18 +935,10 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
 };
 
 /**
- * Assign a new address for hostname on wire, calling onComplete
- * when done.
- * @param {!NetSimWire} wire that lacks addresses or hostnames
- * @param {string} hostname of requesting node
- * @param {NodeStyleCallback} [onComplete]
+ * Generate a list of available addresses, then pick one at random and return it.
+ * @returns {string} a new available address.
  */
-NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete) {
-  onComplete = onComplete || function () {};
-
-  // General strategy: Create a list of existing remote addresses, pick a
-  // new one, and assign it to the provided wire.
-
+NetSimRouterNode.prototype.getRandomAvailableClientAddress = function () {
   var addressList = this.getConnections().filter(function (wire) {
     return wire.localAddress !== undefined;
   }).map(function (wire) {
@@ -967,18 +967,8 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     }
   }
 
-  // Pick one randomly from the list of possible addresses
   var randomIndex = NetSimGlobals.randomIntInRange(0, possibleAddresses.length);
-  wire.localAddress = possibleAddresses[randomIndex];
-  wire.localHostname = hostname;
-  wire.remoteAddress = this.getAddress();
-  wire.remoteHostname = this.getHostname();
-  wire.update(onComplete);
-  // TODO: Fix possibility of two routers getting addresses by verifying
-  //       after updating the wire.
-
-  logger.info(this.getDisplayName() + ": Assigned address " +
-      wire.localAddress + " to host " + wire.localHostname);
+  return possibleAddresses[randomIndex];
 };
 
 /**

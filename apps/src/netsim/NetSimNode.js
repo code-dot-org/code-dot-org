@@ -133,10 +133,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 
   var self = this;
   NetSimWire.create(this.shard_,
-      {
-        localNodeID: this.entityID,
-        remoteNodeID: otherNode.entityID
-      },
+      this.makeWireRowForConnectingTo(otherNode),
       function (err, wire) {
         if (err) {
           onComplete(err, null);
@@ -146,7 +143,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
         otherNode.acceptConnection(self, function (err, isAccepted) {
           if (err || !isAccepted) {
             wire.destroy(function () {
-              onComplete(new Error('Connection rejected.'), null);
+              onComplete(new Error('Connection rejected: ' + err.message), null);
             });
             return;
           }
@@ -154,6 +151,18 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
           onComplete(null, wire);
         });
       });
+};
+
+/**
+ * Create an appropriate initial wire row for connecting to the given node.
+ * @param {!NetSimNode} otherNode
+ * @returns {WireRow}
+ */
+NetSimNode.prototype.makeWireRowForConnectingTo = function (otherNode) {
+  return {
+    localNodeID: this.entityID,
+    remoteNodeID: otherNode.entityID
+  };
 };
 
 /**

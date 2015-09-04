@@ -11,15 +11,30 @@ var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
+
+  /**
+   * Synchronous router creation on shard for test
+   * @returns {NetSimRouterNode}
+   */
+  var makeRemoteRouter = function () {
+    var newRouter;
+    NetSimRouterNode.create(testShard, function (e, r) {
+      newRouter = r;
+    });
+    assert(newRouter !== undefined, "Failed to create a remote router.");
+    return newRouter;
+  };
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
@@ -281,6 +296,66 @@ describe("NetSimLocalClientNode", function () {
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
       assertEqual('constantine1', testLocalNode.getHostname());
+    });
+  });
+
+  describe("makeWireRowForConnectingTo", function () {
+    var wireRow;
+
+    describe("a router", function () {
+      var routerNode;
+
+      beforeEach(function () {
+        NetSimGlobals.setRandomSeed('fizzbusters');
+        routerNode = makeRemoteRouter();
+        wireRow = testLocalNode.makeWireRowForConnectingTo(routerNode);
+      });
+
+      it ("Sets own entity ID to localNodeID", function () {
+        assert.equal(testLocalNode.entityID, wireRow.localNodeID);
+      });
+
+      it ("Sets router entity ID to remoteNodeID", function () {
+        assert.equal(routerNode.entityID, wireRow.remoteNodeID);
+      });
+
+      it ("Gets a random local address from the router", function () {
+        // Pinned by 'setRandomSeed', above.
+        assert.equal('9', wireRow.localAddress);
+      });
+
+      it ("Sets router's address to remote address", function () {
+        assert.equal(routerNode.getAddress(), wireRow.remoteAddress);
+      });
+
+      it ("Sets own hostname to local hostname", function () {
+        assert.equal(testLocalNode.getHostname(), wireRow.localHostname);
+      });
+
+      it ("Sets router hostname to remote hostname", function () {
+        assert.equal(routerNode.getHostname(), wireRow.remoteHostname);
+      });
+    });
+
+    describe("a client", function () {
+      beforeEach(function () {
+        wireRow = testLocalNode.makeWireRowForConnectingTo(testRemoteNode);
+      });
+
+      it ("Sets own entity ID to localNodeID", function () {
+        assert.equal(testLocalNode.entityID, wireRow.localNodeID);
+      });
+
+      it ("Sets remote entity ID to remoteNodeID", function () {
+        assert.equal(testRemoteNode.entityID, wireRow.remoteNodeID);
+      });
+
+      it ("Leaves remaining fields undefined", function () {
+        assert.equal(undefined, wireRow.localAddress);
+        assert.equal(undefined, wireRow.remoteAddress);
+        assert.equal(undefined, wireRow.localHostname);
+        assert.equal(undefined, wireRow.remoteHostname);
+      });
     });
   });
 

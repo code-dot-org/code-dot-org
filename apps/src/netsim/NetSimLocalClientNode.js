@@ -225,6 +225,11 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
  */
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
+    if (err) {
+      onComplete(err);
+      return;
+    }
+
     // Check whether WE just established a mutual connection with a remote client.
     this.shard_.wireTable.refresh().always(function () {
       this.onWireTableChange_(this.shard_.wireTable.readAll());
@@ -240,9 +245,7 @@ NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) 
 NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) {
   onComplete = onComplete || function () {};
 
-
   logger.info(this.getDisplayName() + ": Connecting to " + router.getDisplayName());
-
   this.connectToNode(router, function (err, wire) {
     if (err) {
       onComplete(err);
@@ -250,18 +253,32 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
     }
 
     this.myRouterID_ = router.entityID;
-    var myRouter = this.getMyRouter();
 
-    myRouter.requestAddress(wire, this.getHostname(), function (err) {
-      if (err) {
-        this.disconnectRemote(onComplete);
-        return;
-      }
-
-      this.remoteChange.notifyObservers(this.getOutgoingWire(), myRouter);
-      onComplete(null);
-    }.bind(this));
+    this.remoteChange.notifyObservers(this.getOutgoingWire(), this.getMyRouter());
+    onComplete(null, wire);
   }.bind(this));
+};
+
+/**
+ * Create an appropriate initial wire row for connecting to the given node.
+ * Overrides NetSimNode version to add improved connect-to-router functionality.
+ * @param {!NetSimNode} otherNode
+ * @returns {WireRow}
+ * @override
+ */
+NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function (otherNode) {
+  if (otherNode instanceof NetSimRouterNode) {
+    return {
+      localNodeID: this.entityID,
+      remoteNodeID: otherNode.entityID,
+      localAddress: otherNode.getRandomAvailableClientAddress(),
+      remoteAddress: otherNode.getAddress(),
+      localHostname: this.getHostname(),
+      remoteHostname: otherNode.getHostname()
+    };
+  }
+  return NetSimLocalClientNode.superPrototype
+      .makeWireRowForConnectingTo.call(this, otherNode);
 };
 
 /**
@@ -505,7 +522,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
     // no longer connected.
     NetSimAlert.info(i18n.alertPartnerDisconnected());
     this.disconnectRemote();
-  } else if (!mutualConnectionRow && ! this.myRemoteClient) {
+  } else if (!mutualConnectionRow && !this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
     // someone else; check if they did and if so, stop trying to connect
     myConnectionTargetWireRow = _.find(wireRows, function(row) {
@@ -513,7 +530,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
           row.remoteNodeID !== myWire.localNodeID;
     }.bind(this));
     isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
-        wireRows.some(function(row) {
+        wireRows.some(function (row) {
           return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
               row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;

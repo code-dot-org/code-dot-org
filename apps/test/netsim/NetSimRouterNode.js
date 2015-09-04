@@ -480,86 +480,59 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'wireTable', 3);
     });
 
-    describe("requesting three addresses in simple four-bit format", function () {
+    describe("getting addresses", function () {
       beforeEach(function () {
         NetSimGlobals.setRandomSeed('address assignment test');
-        setAddressFormat('4');
-        routerA.requestAddress(wire1, 'client1', function () {});
-        routerA.requestAddress(wire2, 'client2', function () {});
-        routerA.requestAddress(wire3, 'client3', function () {});
       });
 
-      it ("assigns passed local hostname to respective wire", function () {
-        assertEqual('client1', wire1.localHostname);
-        assertEqual('client2', wire2.localHostname);
-        assertEqual('client3', wire3.localHostname);
+      describe("in simple four-bit format", function () {
+        beforeEach(function () {
+          setAddressFormat('4');
+        });
+
+        it ("creates single-number addresses when using single-number address format", function () {
+          assertEqual('11', routerA.getRandomAvailableClientAddress());
+          assertEqual('1', routerA.getRandomAvailableClientAddress());
+          assertEqual('3', routerA.getRandomAvailableClientAddress());
+        });
+
+        it ("sets own address as zero", function () {
+          assertEqual('0', routerA.getAddress());
+        });
       });
 
-      it ("assigns single-number addresses when using single-number address format", function () {
-        assertEqual('11', wire1.localAddress);
-        assertEqual('1', wire2.localAddress);
-        assertEqual('3', wire3.localAddress);
+      describe("in two-part format", function () {
+        beforeEach(function () {
+          setAddressFormat('4.4');
+        });
+
+        it ("creates two-part addresses where the first part is the router number", function () {
+          assertEqual(routerA.entityID + '.11', routerA.getRandomAvailableClientAddress());
+          assertEqual(routerA.entityID + '.1', routerA.getRandomAvailableClientAddress());
+          assertEqual(routerA.entityID + '.3', routerA.getRandomAvailableClientAddress());
+        });
+
+        it ("sets own address as router#.0", function () {
+          assertEqual(routerA.entityID + '.0', routerA.getAddress());
+        });
       });
 
-      it ("assigns own hostname as remote hostname on all wires", function () {
-        assertEqual(routerA.getHostname(), wire1.remoteHostname);
-        assertEqual(routerA.getHostname(), wire2.remoteHostname);
-        assertEqual(routerA.getHostname(), wire3.remoteHostname);
-      });
+      describe("in four-part format", function () {
+        beforeEach(function () {
+          setAddressFormat('8.8.8.8');
+        });
 
-      it ("assigns own address (zero) as remote address on all wires", function () {
-        assertEqual('0', routerA.getAddress());
-        assertEqual(routerA.getAddress(), wire1.remoteAddress);
-        assertEqual(routerA.getAddress(), wire2.remoteAddress);
-        assertEqual(routerA.getAddress(), wire3.remoteAddress);
-      });
-    });
+        it ("uses zeros for all except last two parts", function () {
+          // You get higher random addresses here, because of the larger
+          // addressable space.
+          assertEqual('0.0.' + routerA.entityID + '.200', routerA.getRandomAvailableClientAddress());
+          assertEqual('0.0.' + routerA.entityID + '.7', routerA.getRandomAvailableClientAddress());
+          assertEqual('0.0.' + routerA.entityID + '.43', routerA.getRandomAvailableClientAddress());
+        });
 
-    describe("requesting three addresses in two-part format", function () {
-      beforeEach(function () {
-        NetSimGlobals.setRandomSeed('another assignment test');
-        setAddressFormat('4.4');
-        routerA.requestAddress(wire1, 'client1', function () {});
-        routerA.requestAddress(wire2, 'client2', function () {});
-        routerA.requestAddress(wire3, 'client3', function () {});
-      });
-
-      it ("assigns two-part addresses where first part is router number", function () {
-        assertEqual(routerA.entityID + '.2', wire1.localAddress);
-        assertEqual(routerA.entityID + '.6', wire2.localAddress);
-        assertEqual(routerA.entityID + '.7', wire3.localAddress);
-      });
-
-      it ("assigns own two-part address (router#.0) as remote address on all wires", function () {
-        assertEqual(routerA.entityID + '.0', routerA.getAddress());
-        assertEqual(routerA.getAddress(), wire1.remoteAddress);
-        assertEqual(routerA.getAddress(), wire2.remoteAddress);
-        assertEqual(routerA.getAddress(), wire3.remoteAddress);
-      });
-    });
-
-    describe("requesting three addresses in four-part format", function () {
-      beforeEach(function () {
-        NetSimGlobals.setRandomSeed('a third assignment test');
-        setAddressFormat('8.8.8.8');
-        routerA.requestAddress(wire1, 'client1', function () {});
-        routerA.requestAddress(wire2, 'client2', function () {});
-        routerA.requestAddress(wire3, 'client3', function () {});
-      });
-
-      it ("uses zeros for all except last two parts", function () {
-        // You get higher random addresses here, because of the larger
-        // addressable space.
-        assertEqual('0.0.' + routerA.entityID + '.20', wire1.localAddress);
-        assertEqual('0.0.' + routerA.entityID + '.210', wire2.localAddress);
-        assertEqual('0.0.' + routerA.entityID + '.133', wire3.localAddress);
-      });
-
-      it ("assigns own four-part address (0.0.router#.0) as remote address", function () {
-        assertEqual('0.0.' + routerA.entityID + '.0', routerA.getAddress());
-        assertEqual(routerA.getAddress(), wire1.remoteAddress);
-        assertEqual(routerA.getAddress(), wire2.remoteAddress);
-        assertEqual(routerA.getAddress(), wire3.remoteAddress);
+        it ("sets own address as 0.0.router#.0", function () {
+          assertEqual('0.0.' + routerA.entityID + '.0', routerA.getAddress());
+        });
       });
     });
 
@@ -628,23 +601,14 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("random address assignment order", function () {
-      var wire4, wire5, wire6, wire7, wire8, wire9, wire10, wire11, wire12,
-          wire13, wire14, wire15;
+      var client;
 
       beforeEach(function () {
-        // We need a lot more wires for these tests
-        wire4 = makeWire(4);
-        wire5 = makeWire(5);
-        wire6 = makeWire(6);
-        wire7 = makeWire(7);
-        wire8 = makeWire(8);
-        wire9 = makeWire(9);
-        wire10 = makeWire(10);
-        wire11 = makeWire(11);
-        wire12 = makeWire(12);
-        wire13 = makeWire(13);
-        wire14 = makeWire(14);
-        wire15 = makeWire(15);
+        routerA.maxClientConnections_ = Infinity;
+        client = [];
+        for (var i = 0; i < 16; i++) {
+          client[i] = makeRemoteClient('client' + i);
+        }
       });
 
       it ("assigns every address in addressable space", function () {
@@ -653,102 +617,53 @@ describe("NetSimRouterNode", function () {
         // Addressable space is 0-15
         // 0 is reserved for the router
         // 15 is reserved for the auto-DNS
-        routerA.requestAddress(wire1, 'client1', function () {});
-        assertEqual('1', wire1.localAddress);
-        
-        routerA.requestAddress(wire2, 'client2', function () {});
-        assertEqual('2', wire2.localAddress);
-        
-        routerA.requestAddress(wire3, 'client3', function () {});
-        assertEqual('3', wire3.localAddress);
-
-        routerA.requestAddress(wire4, 'client4', function () {});
-        assertEqual('5', wire4.localAddress);
-
-        routerA.requestAddress(wire5, 'client5', function () {});
-        assertEqual('12', wire5.localAddress);
-
-        routerA.requestAddress(wire6, 'client6', function () {});
-        assertEqual('11', wire6.localAddress);
-
-        routerA.requestAddress(wire7, 'client7', function () {});
-        assertEqual('14', wire7.localAddress);
-
-        routerA.requestAddress(wire8, 'client8', function () {});
-        assertEqual('13', wire8.localAddress);
-
-        routerA.requestAddress(wire9, 'client9', function () {});
-        assertEqual('7', wire9.localAddress);
-
-        routerA.requestAddress(wire10, 'client10', function () {});
-        assertEqual('6', wire10.localAddress);
-
-        routerA.requestAddress(wire11, 'client11', function () {});
-        assertEqual('4', wire11.localAddress);
-
-        routerA.requestAddress(wire12, 'client12', function () {});
-        assertEqual('8', wire12.localAddress);
-
-        routerA.requestAddress(wire13, 'client13', function () {});
-        assertEqual('10', wire13.localAddress);
-
-        routerA.requestAddress(wire14, 'client14', function () {});
-        assertEqual('9', wire14.localAddress);
+        for (var i = 0; i < 16; i++) {
+          client[i].connectToRouter(routerA);
+        }
+        assert.equal('1', client[0].getAddress());
+        assert.equal('2', client[1].getAddress());
+        assert.equal('3', client[2].getAddress());
+        assert.equal('5', client[3].getAddress());
+        assert.equal('12', client[4].getAddress());
+        assert.equal('11', client[5].getAddress());
+        assert.equal('14', client[6].getAddress());
+        assert.equal('13', client[7].getAddress());
+        assert.equal('7', client[8].getAddress());
+        assert.equal('6', client[9].getAddress());
+        assert.equal('4', client[10].getAddress());
+        assert.equal('8', client[11].getAddress());
+        assert.equal('10', client[12].getAddress());
+        assert.equal('9', client[13].getAddress());
 
         // At this point we've exhausted the address space,
         // so the address is left "undefined"
         // Might want a different behavior in the future for this,
         // but low router capacity limits mean this won't happen in
         // production, for now.
-        routerA.requestAddress(wire15, 'client15', function () {});
-        assertEqual(undefined, wire15.localAddress);
+        assert.equal(undefined, client[14].getAddress());
       });
 
       it ("can assign addresses in a different order", function () {
         NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('4');
 
-        routerA.requestAddress(wire1, 'client1', function () {});
-        assertEqual('4', wire1.localAddress);
-
-        routerA.requestAddress(wire2, 'client2', function () {});
-        assertEqual('10', wire2.localAddress);
-
-        routerA.requestAddress(wire3, 'client3', function () {});
-        assertEqual('2', wire3.localAddress);
-
-        routerA.requestAddress(wire4, 'client4', function () {});
-        assertEqual('1', wire4.localAddress);
-
-        routerA.requestAddress(wire5, 'client5', function () {});
-        assertEqual('3', wire5.localAddress);
-
-        routerA.requestAddress(wire6, 'client6', function () {});
-        assertEqual('9', wire6.localAddress);
-
-        routerA.requestAddress(wire7, 'client7', function () {});
-        assertEqual('11', wire7.localAddress);
-
-        routerA.requestAddress(wire8, 'client8', function () {});
-        assertEqual('6', wire8.localAddress);
-
-        routerA.requestAddress(wire9, 'client9', function () {});
-        assertEqual('13', wire9.localAddress);
-
-        routerA.requestAddress(wire10, 'client10', function () {});
-        assertEqual('14', wire10.localAddress);
-
-        routerA.requestAddress(wire11, 'client11', function () {});
-        assertEqual('12', wire11.localAddress);
-
-        routerA.requestAddress(wire12, 'client12', function () {});
-        assertEqual('5', wire12.localAddress);
-
-        routerA.requestAddress(wire13, 'client13', function () {});
-        assertEqual('8', wire13.localAddress);
-
-        routerA.requestAddress(wire14, 'client14', function () {});
-        assertEqual('7', wire14.localAddress);
+        for (var i = 0; i < 16; i++) {
+          client[i].connectToRouter(routerA);
+        }
+        assert.equal('4', client[0].getAddress());
+        assert.equal('10', client[1].getAddress());
+        assert.equal('2', client[2].getAddress());
+        assert.equal('1', client[3].getAddress());
+        assert.equal('3', client[4].getAddress());
+        assert.equal('9', client[5].getAddress());
+        assert.equal('11', client[6].getAddress());
+        assert.equal('6', client[7].getAddress());
+        assert.equal('13', client[8].getAddress());
+        assert.equal('14', client[9].getAddress());
+        assert.equal('12', client[10].getAddress());
+        assert.equal('5', client[11].getAddress());
+        assert.equal('8', client[12].getAddress());
+        assert.equal('7', client[13].getAddress());
       });
 
       it ("shrinks addressable space according to address format", function () {
@@ -756,19 +671,14 @@ describe("NetSimRouterNode", function () {
         setAddressFormat('2');
 
         // Two-bit addresses, so four options, and "00" is used by the router.
-
-        routerA.requestAddress(wire1, 'client1', function () { });
-        assertEqual('1', wire1.localAddress);
-
-        routerA.requestAddress(wire2, 'client2', function () { });
-        assertEqual('3', wire2.localAddress);
-
-        routerA.requestAddress(wire3, 'client3', function () { });
-        assertEqual('2', wire3.localAddress);
-
+        for (var i = 0; i < 4; i++) {
+          client[i].connectToRouter(routerA);
+        }
+        assert.equal('1', client[0].getAddress());
+        assert.equal('3', client[1].getAddress());
+        assert.equal('2', client[2].getAddress());
         // No more room!
-        routerA.requestAddress(wire4, 'client4', function () {});
-        assertEqual(undefined, wire4.localAddress);
+        assert.equal(undefined, client[3].getAddress());
       });
 
       it ("grows addressable space according to address format", function () {
@@ -777,15 +687,12 @@ describe("NetSimRouterNode", function () {
 
         // 8-bit addresses, so they go up to 255
         // We won't try to show every case.
-
-        routerA.requestAddress(wire1, 'client1', function () { });
-        assertEqual('69', wire1.localAddress);
-
-        routerA.requestAddress(wire2, 'client2', function () { });
-        assertEqual('173', wire2.localAddress);
-
-        routerA.requestAddress(wire3, 'client3', function () { });
-        assertEqual('29', wire3.localAddress);
+        for (var i = 0; i < 4; i++) {
+          client[i].connectToRouter(routerA);
+        }
+        assert.equal('69', client[0].getAddress());
+        assert.equal('173', client[1].getAddress());
+        assert.equal('29', client[2].getAddress());
       });
     });
 
