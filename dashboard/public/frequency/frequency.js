@@ -109,7 +109,7 @@ var BarGraph = function () {
   this.margin = {
     top: 10,
     right: 10,
-    bottom: 40,
+    bottom: 44,
     left: 40
   };
 
@@ -313,7 +313,7 @@ BarGraph.prototype.init = function () {
   var userLetters = this.svg.append("g")
     .attr({
       "class": "x1 axis",
-      "transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (10 + this.getHeight()) + ")"
+      "transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (9 + this.getHeight()) + ")"
     })
     .selectAll('g')
     .data(this.getZippedData())
@@ -322,10 +322,13 @@ BarGraph.prototype.init = function () {
 
   userLetters.append("rect")
     .attr({
-      "height": 20,
+      //"class": "btn btn-primary",
+      "height": 24,
       "width": this.userLetterScale.rangeBand(),
       "x": -(this.userLetterScale.rangeBand() / 2),
-      "y": 10
+      "y": 10,
+      "ry": 4,
+      "rx": 4
     });
 
   [-3, 0, 3].forEach(function (offset) {
@@ -333,14 +336,14 @@ BarGraph.prototype.init = function () {
       .attr({
         "x1": offset,
         "x2": offset,
-        "y1": 22,
-        "y2": 28
+        "y1": 26,
+        "y2": 32
       });
   });
 
   userLetters.append("text")
     .attr("dy", ".71em")
-    .attr("y", 12)
+    .attr("y", 14)
     .attr("class", "user")
     .style("text-anchor", "middle")
     .text(function (d, i) {
@@ -437,7 +440,7 @@ BarGraph.prototype.init = function () {
 
     outline.attr({
       "visibility": "visible",
-      "transform": "translate(" + this.userLetterScale(this.user_data[j].letter) + ",0)"
+      "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter)+0.5) + ",0)"
     });
 
     /* re-size the letters */

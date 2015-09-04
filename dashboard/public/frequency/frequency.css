@@ -1,18 +1,18 @@
 /* D3 Stuff */
 
 .english {
-  fill: blue;
+  fill: #2f96b4;
 }
 
 .letter:hover rect.english {
-  fill: darkblue;
+  fill: #1f6377;
 }
 
 .user {
-  fill: orange;
+  fill: #ffa400;
 }
 .letter:hover rect.user {
-  fill: darkorange;
+  fill: #b37300;
 }
 
 #sortRadio {
@@ -26,20 +26,28 @@
 
 .outline {
   fill: none;
-  stroke: blue;
+  stroke: #2f96b4;
   stroke-dasharray: 5;
 }
 
 .axis .dragletter rect {
-  fill: #FFB40F;
-  fill-opacity: 0.5;
+  fill: #ffa400;
+  stroke: #b37300;
 }
 .axis .dragletter:hover rect {
-  fill: darkorange;
-  fill-opacity: 1;
+  fill: #b37300;
+}
+.axis .dragletter text {
+  fill: white;
+}
+.axis .dragletter:hover text {
+  fill: white;
 }
 .axis .dragletter line {
-  stroke: orange;
+  stroke: #b37300;
+}
+.axis .dragletter:hover line {
+  stroke: #ffa400;
 }
 
 rect {
