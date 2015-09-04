@@ -922,9 +922,27 @@ NetSimRouterNode.prototype.acceptConnection = function (otherNode, onComplete) {
   // Force a refresh to verify that we have not exceeded the connection limit.
   this.shard_.wireTable.refresh()
       .done(function () {
-        if (this.countConnections() > this.maxClientConnections_) {
-          rejectionReason = new Error("Too many connections");
+        var connections = this.getConnections();
+
+        // Check for connection limit exceeded
+        if (connections.length > this.maxClientConnections_) {
+          rejectionReason = new Error("Too many connections.");
+          return;
         }
+
+        // Check for address collisions
+        var addressesSoFar = {};
+        addressesSoFar[this.getAddress()] = true;
+        addressesSoFar[this.getAutoDnsAddress()] = true;
+        var addressCollision = connections.some(function (wire) {
+          var collides = addressesSoFar.hasOwnProperty(wire.localAddress);
+          addressesSoFar[wire.localAddress] = true;
+          return collides;
+        });
+        if (addressCollision) {
+          rejectionReason = new Error("Address collision detected.");
+        }
+
       }.bind(this))
       .fail(function (err) {
         rejectionReason = err;

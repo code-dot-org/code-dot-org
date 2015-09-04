@@ -423,9 +423,9 @@ describe("NetSimRouterNode", function () {
            wireID++) {
         NetSimWire.create(testShard, {
           localNodeID: wireID,
-          remoteNodeID: routerA.entityID
-        }, function () {
-        });
+          remoteNodeID: routerA.entityID,
+          localAddress: wireID.toString(10)
+        }, function () {});
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT);
 
@@ -444,17 +444,44 @@ describe("NetSimRouterNode", function () {
         NetSimWire.create(testShard, {
           localNodeID: wireID,
           remoteNodeID: routerA.entityID
-        }, function () {
-        });
+        }, function () {});
       }
       assertTableSize(testShard, 'wireTable', CONNECTION_LIMIT + 1);
 
-      var accepted;
+      var error, accepted;
       routerA.acceptConnection(null, function (err, isAccepted) {
+        error = err;
         accepted = isAccepted;
       });
 
       assertEqual(false, accepted);
+      assert(error instanceof Error);
+      assert.equal('Too many connections.', error.message);
+    });
+
+    it ("rejects connection if an address collision exists", function () {
+      var address = '14.4';
+
+      NetSimWire.create(testShard, {
+        localNodeID: 10,
+        remoteNodeID: routerA.entityID,
+        localAddress: address
+      }, function () {});
+
+      NetSimWire.create(testShard, {
+        localNodeID: 11,
+        remoteNodeID: routerA.entityID,
+        localAddress: address
+      }, function () {});
+
+      var error, accepted;
+      routerA.acceptConnection(null, function (err, isAccepted) {
+        error = err;
+        accepted = isAccepted;
+      });
+      assert.equal(false, accepted);
+      assert(error instanceof Error);
+      assert.equal('Address collision detected.', error.message);
     });
   });
 
@@ -601,13 +628,14 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("random address assignment order", function () {
-      var client;
+      var router, clients;
 
       beforeEach(function () {
-        routerA.maxClientConnections_ = Infinity;
-        client = [];
+        router = makeRemoteRouter();
+        router.maxClientConnections_ = Infinity;
+        clients = [];
         for (var i = 0; i < 16; i++) {
-          client[i] = makeRemoteClient('client' + i);
+          clients[i] = makeRemoteClient('client' + i);
         }
       });
 
@@ -618,29 +646,29 @@ describe("NetSimRouterNode", function () {
         // 0 is reserved for the router
         // 15 is reserved for the auto-DNS
         for (var i = 0; i < 16; i++) {
-          client[i].connectToRouter(routerA);
+          clients[i].connectToRouter(router);
         }
-        assert.equal('1', client[0].getAddress());
-        assert.equal('2', client[1].getAddress());
-        assert.equal('3', client[2].getAddress());
-        assert.equal('5', client[3].getAddress());
-        assert.equal('12', client[4].getAddress());
-        assert.equal('11', client[5].getAddress());
-        assert.equal('14', client[6].getAddress());
-        assert.equal('13', client[7].getAddress());
-        assert.equal('7', client[8].getAddress());
-        assert.equal('6', client[9].getAddress());
-        assert.equal('4', client[10].getAddress());
-        assert.equal('8', client[11].getAddress());
-        assert.equal('10', client[12].getAddress());
-        assert.equal('9', client[13].getAddress());
+        assert.equal('1', clients[0].getAddress());
+        assert.equal('2', clients[1].getAddress());
+        assert.equal('3', clients[2].getAddress());
+        assert.equal('5', clients[3].getAddress());
+        assert.equal('12', clients[4].getAddress());
+        assert.equal('11', clients[5].getAddress());
+        assert.equal('14', clients[6].getAddress());
+        assert.equal('13', clients[7].getAddress());
+        assert.equal('7', clients[8].getAddress());
+        assert.equal('6', clients[9].getAddress());
+        assert.equal('4', clients[10].getAddress());
+        assert.equal('8', clients[11].getAddress());
+        assert.equal('10', clients[12].getAddress());
+        assert.equal('9', clients[13].getAddress());
 
         // At this point we've exhausted the address space,
         // so the address is left "undefined"
         // Might want a different behavior in the future for this,
         // but low router capacity limits mean this won't happen in
         // production, for now.
-        assert.equal(undefined, client[14].getAddress());
+        assert.equal(undefined, clients[14].getAddress());
       });
 
       it ("can assign addresses in a different order", function () {
@@ -648,22 +676,22 @@ describe("NetSimRouterNode", function () {
         setAddressFormat('4');
 
         for (var i = 0; i < 16; i++) {
-          client[i].connectToRouter(routerA);
+          clients[i].connectToRouter(router);
         }
-        assert.equal('4', client[0].getAddress());
-        assert.equal('10', client[1].getAddress());
-        assert.equal('2', client[2].getAddress());
-        assert.equal('1', client[3].getAddress());
-        assert.equal('3', client[4].getAddress());
-        assert.equal('9', client[5].getAddress());
-        assert.equal('11', client[6].getAddress());
-        assert.equal('6', client[7].getAddress());
-        assert.equal('13', client[8].getAddress());
-        assert.equal('14', client[9].getAddress());
-        assert.equal('12', client[10].getAddress());
-        assert.equal('5', client[11].getAddress());
-        assert.equal('8', client[12].getAddress());
-        assert.equal('7', client[13].getAddress());
+        assert.equal('4', clients[0].getAddress());
+        assert.equal('10', clients[1].getAddress());
+        assert.equal('2', clients[2].getAddress());
+        assert.equal('1', clients[3].getAddress());
+        assert.equal('3', clients[4].getAddress());
+        assert.equal('9', clients[5].getAddress());
+        assert.equal('11', clients[6].getAddress());
+        assert.equal('6', clients[7].getAddress());
+        assert.equal('13', clients[8].getAddress());
+        assert.equal('14', clients[9].getAddress());
+        assert.equal('12', clients[10].getAddress());
+        assert.equal('5', clients[11].getAddress());
+        assert.equal('8', clients[12].getAddress());
+        assert.equal('7', clients[13].getAddress());
       });
 
       it ("shrinks addressable space according to address format", function () {
@@ -672,13 +700,13 @@ describe("NetSimRouterNode", function () {
 
         // Two-bit addresses, so four options, and "00" is used by the router.
         for (var i = 0; i < 4; i++) {
-          client[i].connectToRouter(routerA);
+          clients[i].connectToRouter(router);
         }
-        assert.equal('1', client[0].getAddress());
-        assert.equal('3', client[1].getAddress());
-        assert.equal('2', client[2].getAddress());
+        assert.equal('1', clients[0].getAddress());
+        assert.equal('3', clients[1].getAddress());
+        assert.equal('2', clients[2].getAddress());
         // No more room!
-        assert.equal(undefined, client[3].getAddress());
+        assert.equal(undefined, clients[3].getAddress());
       });
 
       it ("grows addressable space according to address format", function () {
@@ -688,11 +716,11 @@ describe("NetSimRouterNode", function () {
         // 8-bit addresses, so they go up to 255
         // We won't try to show every case.
         for (var i = 0; i < 4; i++) {
-          client[i].connectToRouter(routerA);
+          clients[i].connectToRouter(router);
         }
-        assert.equal('69', client[0].getAddress());
-        assert.equal('173', client[1].getAddress());
-        assert.equal('29', client[2].getAddress());
+        assert.equal('69', clients[0].getAddress());
+        assert.equal('173', clients[1].getAddress());
+        assert.equal('29', clients[2].getAddress());
       });
     });
 
