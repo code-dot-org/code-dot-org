@@ -128,7 +128,6 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by a build script.
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
-gem 'i18nema', group: :fast_loc  # faster locale backend (active in dev environment or FAST_LOC=true)
 
 gem 'jwt' # single signon for zendesk
 
@@ -149,7 +148,7 @@ gem 'react-rails', '~> 1.0'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
 
-gem 'rubocop', require: false, group: [:development, :staging]
+gem 'rubocop', '~> 0.29.1', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
