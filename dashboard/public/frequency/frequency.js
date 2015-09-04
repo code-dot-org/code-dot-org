@@ -35,11 +35,12 @@ var ENGLISH = {
 
 // Debounce function, courtesy of
 // http://davidwalsh.name/function-debounce
-var debounce = function(func, wait, immediate) {
+var debounce = function (func, wait, immediate) {
   var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
+  return function () {
+    var context = this,
+      args = arguments;
+    var later = function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
@@ -440,7 +441,7 @@ BarGraph.prototype.init = function () {
 
     outline.attr({
       "visibility": "visible",
-      "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter)+0.5) + ",0)"
+      "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter) + 0.5) + ",0)"
     });
 
     /* re-size the letters */
@@ -474,7 +475,7 @@ BarGraph.prototype.shift = function (amt) {
   }, {});
 
   this.user_data = this.english_data.map(function (english, i, english_data) {
-    var letter = english_data[ (i+amt) % 26 ].letter;
+    var letter = english_data[(i + amt) % 26].letter;
     return {
       letter: letter,
       frequency: frequencies[letter]
@@ -592,7 +593,7 @@ $(document).ready(function () {
   });
 
   $("#fillRand").click(function () {
-      bg.randomize();
+    bg.randomize();
   });
   $(".reset-simulation").click(function () {
     $("#shiftAmt").val(0);
