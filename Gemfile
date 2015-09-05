@@ -49,7 +49,7 @@ group :development, :test do
 
   # for ui testing
   gem 'cucumber'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.41.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -58,7 +58,7 @@ group :development, :test do
   gem "test-unit", "~> 3.0"
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '~> 2.5.0'
 end
 
 group :doc do
