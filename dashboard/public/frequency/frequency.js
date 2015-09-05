@@ -35,6 +35,7 @@ var ENGLISH = {
 
 // Debounce function, courtesy of
 // http://davidwalsh.name/function-debounce
+// Currently, used exclusively for window resize.
 var debounce = function (func, wait, immediate) {
   var timeout;
   return function () {
@@ -107,6 +108,8 @@ var processSubstitutions = function () {
 };
 
 var BarGraph = function () {
+
+  /* DOM stuff */
   this.margin = {
     top: 10,
     right: 10,
@@ -114,6 +117,9 @@ var BarGraph = function () {
     left: 40
   };
 
+  this.container = d3.select("#d3chart");
+
+  /* Data */
   this.user_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
@@ -127,6 +133,27 @@ var BarGraph = function () {
       frequency: ENGLISH[letter]
     };
   });
+
+  /* D3 */
+  // We use two scales because we have two domain orderings
+  var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
+  this.userLetterScale = letterScale.copy().domain(LETTERS);
+  this.englishLetterScale = letterScale.copy().domain(LETTERS);
+
+  this.freqScale = d3.scale.ordinal().domain([0, 1]);
+
+  this.yScale = d3.scale.linear().range([this.getHeight(), 0]);
+
+  this.xAxis = d3.svg.axis()
+    .scale(this.englishLetterScale)
+    .orient("bottom");
+
+  this.yAxis = d3.svg.axis()
+    .scale(this.yScale)
+    .orient("left")
+    .ticks(5, "%");
+
+  this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
 
 };
 
@@ -270,27 +297,8 @@ BarGraph.prototype.resize = function () {
   });
 };
 
-BarGraph.prototype.createScales = function () {
-  // We use two scales because we have two domain orderings
-  var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
-  this.userLetterScale = letterScale.copy().domain(LETTERS);
-  this.englishLetterScale = letterScale.copy().domain(LETTERS);
-
-  this.freqScale = d3.scale.ordinal().domain([0, 1]);
-
-  this.yScale = d3.scale.linear().range([this.getHeight(), 0]);
-
-  this.xAxis = d3.svg.axis()
-    .scale(this.englishLetterScale)
-    .orient("bottom");
-
-  this.yAxis = d3.svg.axis()
-    .scale(this.yScale)
-    .orient("left")
-    .ticks(5, "%");
-
-  this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
-};
+//BarGraph.prototype.createScales = function () {
+//};
 
 BarGraph.prototype.createDragBehavior = function () {
   var drag = d3.behavior.drag();
@@ -341,8 +349,12 @@ BarGraph.prototype.createDragBehavior = function () {
     /* move the source */
     var source = this.svg.select("#userletter-" + d.user.letter);
     var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
+    var originx = this.userLetterScale(d.user.letter);
     var x = parseInt(coords[0]) + d3.event.dx;
     var y = parseInt(coords[1]) + d3.event.dy;
+    console.log(d3.event.dx, d3.event.dy);
+    //var x = d3.event.x;
+    //var y = d3.event.y;
     source.attr("transform", "translate(" + x + "," + y + ")");
 
     /* swap em! This is a deep clone. Do we need a deep clone? */
@@ -380,19 +392,16 @@ BarGraph.prototype.createDragBehavior = function () {
 };
 
 BarGraph.prototype.init = function () {
-  this.container = d3.select("#d3chart");
-
   this.svg = this.container.append("svg")
     .append("g")
     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
   this.resize();
-  this.createScales();
 
   this.svg.append("g")
     .attr({
       "class": "x axis",
-      "transform": "translate(0," + this.getHeight() + ")"
+      "transform": "translate(0," + (this.getHeight() + 24) + ")"
     })
     .call(this.xAxis)
     .selectAll("text")
@@ -404,7 +413,7 @@ BarGraph.prototype.init = function () {
   var userLetters = this.svg.append("g")
     .attr({
       "class": "x1 axis",
-      "transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (9 + this.getHeight()) + ")"
+      "transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (this.getHeight() - 6) + ")"
     })
     .selectAll('g')
     .data(this.getZippedData())
@@ -441,7 +450,13 @@ BarGraph.prototype.init = function () {
       return d.user.letter;
     });
 
-  $(".btn-group button").on("change input click", this.handleSortChange.bind(this));
+  $("#sort-toggle button").on("change input click", this.handleSortChange.bind(this));
+  $("#controls-toggle button").on("change input click", function (changeEvent) {
+    var controlType = changeEvent.target.value;
+    $(".controls-mode").hide();
+    $(".controls-mode#mode-" + controlType).show();
+  });
+  $("#controls-toggle button#sort").click();
 
   this.svg.append("g")
     .attr("class", "y axis")
@@ -453,6 +468,9 @@ BarGraph.prototype.init = function () {
     .style("text-anchor", "end")
     .text("Frequency");
 
+  //this.svg.append("g")
+    //.attr("class", "bars")
+    //.selectAll(".letter")
   this.svg.selectAll(".letter")
     .data(this.getZippedData())
     .enter().append("g")

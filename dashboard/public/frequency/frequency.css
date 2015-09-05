@@ -2,6 +2,12 @@
 
 .english {
   fill: #2f96b4;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+button {
+  text-transform: capitalize;
 }
 
 .letter:hover rect.english {
@@ -34,6 +40,7 @@
 }
 .axis .dragletter text {
   fill: white;
+  font-size: 12px;
 }
 .axis .dragletter:hover text {
   fill: white;
@@ -84,7 +91,7 @@ input[type=radio][name=mode]:checked + .mode-controls {
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
+.x.axis path, .x.axis line {
   display: none;
 }
 
@@ -100,7 +107,8 @@ input[type=radio][name=mode]:checked + .mode-controls {
   font-family: monospace;
   font-size: 12px;
   width: 100%;
-  height: 270px;
+  height: 290px;
+  background-color: #fff2d9
 }
 
 .text-container#output {
@@ -108,6 +116,7 @@ input[type=radio][name=mode]:checked + .mode-controls {
   overflow: auto;
   white-space: normal;
   word-wrap: normal;
+  background-color: #d9eff7;
 }
 .text-container#output span {
   color: rgb(85, 85, 85);

@@ -4,16 +4,16 @@
 
 <script type="text/javascript" src="/frequency/frequency.js"></script>
 
-<div class="container-fluid">
+<div class="container-fluid" style="max-width: 1280px">
 
   <div class="row-fluid" id="top-buttons">
     <div class="pull-left">
-      <button class="btn btn-primary load-message" id="easy">load message (easy)</button>
-      <button class="btn btn-primary load-message" id="hard">load message (hard)</button>
+      <button class="btn load-message" id="easy">load message (easy)</button>
+      <button class="btn load-message" id="hard">load message (hard)</button>
     </div>
     <div class="pull-right form-inline">
       <label>Sort:</label>
-      <div class="btn-group" data-toggle="buttons-radio">
+      <div class="btn-group" id="sort-toggle" data-toggle="buttons-radio">
         <button type="button" class="btn btn-info active" value="alphabetic">A to Z</button>
         <button type="button" class="btn btn-info" value="frequency">By %</button>
       </div>
@@ -33,7 +33,29 @@
     <div class="span8">
       <div id="d3chart" class="control-group">
       </div>
-      <div class="controls controls-row">
+
+      <div class="controls">
+        <div class="btn-group" id="controls-toggle" data-toggle="buttons-radio" style="margin-bottom: 10px">
+          <button type="button" class="btn btn-primary active" value="sort">Sort</button>
+          <button type="button" class="btn btn-primary" value="shift">Shift</button>
+        </div>
+
+        <div class="controls-mode" id="mode-sort">
+          <p>Manually reorder everything</p>
+            <button id="fillRand" class="btn btn-primary">randomize substitutions</button>
+            <button class="btn btn-primary inline reset-simulation">clear substitutions</button>
+        </div>
+
+        <div class="controls-mode form-inline" id="mode-shift" style="display: none;">
+          <p>Shift the alphabet left or right</p>
+            <a class="btn btn-small" id="shift-left"><i class="fa fa-caret-left"></i></a>
+            <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
+            <a class="btn btn-small" id="shift-right"><i class="fa fa-caret-right"></i></a>
+            <button class="btn btn-primary inline reset-simulation">reset</button>
+        </div>
+      </div>
+
+      <div class="controls" style="display:none;">
         <label class="radio">
           Sort
           <input type="radio" id="tab-shift" name="mode" checked="checked"  />
