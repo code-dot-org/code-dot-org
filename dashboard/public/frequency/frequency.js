@@ -352,9 +352,6 @@ BarGraph.prototype.createDragBehavior = function () {
     var originx = this.userLetterScale(d.user.letter);
     var x = parseInt(coords[0]) + d3.event.dx;
     var y = parseInt(coords[1]) + d3.event.dy;
-    console.log(d3.event.dx, d3.event.dy);
-    //var x = d3.event.x;
-    //var y = d3.event.y;
     source.attr("transform", "translate(" + x + "," + y + ")");
 
     /* swap em! This is a deep clone. Do we need a deep clone? */
