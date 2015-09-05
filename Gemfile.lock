@@ -127,11 +127,10 @@ GEM
     eventmachine (1.0.7)
     execjs (2.5.2)
     extlib (0.9.16)
-    eyes_selenium (2.23.0)
-      faraday
-      oily_png (>= 1.2)
-      oj
-      selenium-webdriver (>= 2.45.0)
+    eyes_selenium (2.5.0)
+      httparty
+      oily_png (>= 1.1.0)
+      selenium-webdriver (>= 2.37)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -258,7 +257,6 @@ GEM
       rack (~> 1.2)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
-    oj (2.12.11)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -384,11 +382,11 @@ GEM
       rdoc (~> 4.0, < 5.0)
     seamless_database_pool (1.0.14)
       activerecord (>= 3.0.20)
-    selenium-webdriver (2.47.1)
-      childprocess (~> 0.5)
+    selenium-webdriver (2.41.0)
+      childprocess (>= 0.5.0)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
-      websocket (~> 1.0)
+      websocket (~> 1.0.4)
     sequel (4.10.0)
     sexp_processor (4.6.0)
     shotgun (0.9)
@@ -465,7 +463,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    websocket (1.2.2)
+    websocket (1.0.7)
 
 PLATFORMS
   ruby
@@ -489,7 +487,7 @@ DEPENDENCIES
   devise
   devise_invitable (~> 1.5.2)
   execjs
-  eyes_selenium
+  eyes_selenium (~> 2.5.0)
   factory_girl_rails
   fakeweb
   font-awesome-rails
@@ -544,7 +542,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   seamless_database_pool
-  selenium-webdriver
+  selenium-webdriver (~> 2.41.0)
   sequel (~> 4.10.0)
   shotgun
   simplecov
