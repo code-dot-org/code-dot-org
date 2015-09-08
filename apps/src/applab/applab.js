@@ -611,8 +611,8 @@ Applab.init = function(config) {
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: false,
-    submitButton: true
+    finishButton: (!level.isProjectLevel && !level.submittable),
+    submitButton: level.submittable
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
