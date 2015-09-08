@@ -1966,8 +1966,14 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
 StudioApp.prototype.displayAlert = function (parentSelector, props) {
-  // Each parent is assume to have at most a single alert. This assumption
+  // Each parent is assumed to have at most a single alert. This assumption
   // could be changed, but we would then want to clean up our DOM element on
   // close
   var parent = $(parentSelector);
@@ -1988,6 +1994,11 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
   React.render(element, container[0]);
 }
 
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {

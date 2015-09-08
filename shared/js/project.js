@@ -106,7 +106,9 @@ var projects = module.exports = {
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore: function () {
-    // TODO - is there a way we can protect this a little better?
+    // TODO (brent) - right now this is pretty low security. anyone could
+    // enter the javascript console and call this. eventually, we want some sort
+    // of protected API call we can make
     if (this.getAbuseScore() === 0) {
       return;
     }

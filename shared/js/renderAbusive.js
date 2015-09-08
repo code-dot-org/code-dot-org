@@ -1,5 +1,8 @@
 /* global dashboard, React */
 
+/**
+ * Renders our AbuseExclamation component, and potentially updates admin box
+ */
 module.exports = function () {
   React.render(React.createElement(window.dashboard.AbuseExclamation, {
     i18n: {
