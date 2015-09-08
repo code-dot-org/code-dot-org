@@ -971,6 +971,11 @@ Artist.prototype.step = function(command, values, options) {
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
       break;
+    case 'GA':  // Global Alpha
+      var alpha = values[0];
+      alpha = Math.max(0, alpha);
+      alpha = Math.min(100, alpha);
+      this.ctxScratch.globalAlpha = alpha / 100;
     case 'DF':  // Draw Font
       this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
       break;
