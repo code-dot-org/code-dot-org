@@ -247,7 +247,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUser_(this.currentUser_);
+    this.initWithUserName_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -308,7 +308,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUser_ = function (user) {
+NetSim.prototype.initWithUserName_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -1010,9 +1010,28 @@ NetSim.prototype.debouncedResizeFooter = function () {
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  if (this.isConnectedToRemote()) {
-    var myAddress = this.myNode.getAddress();
+  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
+      shareLink;
 
+  isConnected = false;
+  clientStatus = i18n.disconnected();
+  if (this.myNode) {
+    clientStatus = 'In Lobby';
+    myHostname = this.myNode.getHostname();
+    if (this.myNode.myWire) {
+      myAddress = this.myNode.myWire.localAddress;
+    }
+  }
+
+  if (this.isConnectedToRemote()) {
+    isConnected = true;
+    clientStatus = i18n.connected();
+    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
+  }
+
+  shareLink = this.lobby_.getShareLink();
+
+  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1023,10 +1042,12 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        myHostname: this.myNode.getHostname(),
+        isConnected: isConnected,
+        statusString: clientStatus,
+        myHostname: myHostname,
         myAddress: myAddress,
-        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
-        shareLink: this.lobby_.getShareLink()
+        remoteNodeName: remoteNodeName,
+        shareLink: shareLink
       });
     }
   } else {

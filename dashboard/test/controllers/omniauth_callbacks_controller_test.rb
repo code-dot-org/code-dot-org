@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class OmniauthCallbacksControllerTest < ActionController::TestCase
-  include Mocha::API
-
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end

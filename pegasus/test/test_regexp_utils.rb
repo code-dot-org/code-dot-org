@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require_relative '../../lib/cdo/regexp'
 
-class RegexpUtilsTest < Minitest::Test
+class RegexpUtilsTest < Minitest::Unit::TestCase
   def test_find_potential_email
     assert_nil(RegexpUtils.find_potential_email('holla@me'))
     assert_equal('test@example.com', RegexpUtils.find_potential_email('test@example.com'))

@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/tables_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class TablesTest < Minitest::Test
+class TablesTest < MiniTest::Unit::TestCase
 
   def test_create_read_update_delete
     init_apis

@@ -1,7 +1,8 @@
 require 'test_helper'
 module Ops
-  class WorkshopAttendanceControllerTest < ::ActionController::TestCase
+  class AttendancesControllerTest < ::ActionController::TestCase
     include Devise::TestHelpers
+    tests WorkshopAttendanceController
     API = ::OPS::API
 
     setup do

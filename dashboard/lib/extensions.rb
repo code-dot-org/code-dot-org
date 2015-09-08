@@ -9,15 +9,3 @@ module CoreExtensions
 end
 
 Hash.send(:include, CoreExtensions::Hash::Camelizing)
-
-module CoreExtensions
-  module I18n
-    module En
-      def en?
-        locale && locale.to_s[0..1] == 'en'
-      end
-    end
-  end
-end
-
-I18n.send(:extend, CoreExtensions::I18n::En)
