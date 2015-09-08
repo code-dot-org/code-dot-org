@@ -39,10 +39,12 @@ class CalloutTest < ActiveSupport::TestCase
   end
 
   test "callout lines with an invalid script / level pair should fail silently" do
-    content = capture(:stdout) do
-      @invalid_callout_import = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts_invalid.tsv')
-      assert_nil(@invalid_callout_import[0])
+    quietly do
+      content = capture(:stdout) do
+        @invalid_callout_import = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts_invalid.tsv')
+        assert_nil(@invalid_callout_import[0])
+      end
+      assert(content.include?("Error finding script level "))
     end
-    assert(content.include?("Error finding script level "))
   end
 end

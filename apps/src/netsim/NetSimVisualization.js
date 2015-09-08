@@ -273,8 +273,8 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
 NetSimVisualization.prototype.getElementByEntityID = function (elementType, entityID) {
   return _.find(this.elements_, function (element) {
     return element instanceof elementType &&
-        element.getCorrespondingEntityId &&
-        element.getCorrespondingEntityId() === entityID;
+        element.getCorrespondingEntityID &&
+        element.getCorrespondingEntityID() === entityID;
   });
 };
 
@@ -513,7 +513,8 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
   this.elements_.forEach(function (vizElement) {
     var isCorrectType = (vizElement instanceof vizElementType);
     var foundMatch = entityCollection.some(function (entity) {
-      return vizElement.representsEntity && vizElement.representsEntity(entity);
+      return vizElement.getCorrespondingEntityID &&
+          entity.entityID === vizElement.getCorrespondingEntityID();
     });
 
     if (isCorrectType && !foundMatch) {
@@ -880,7 +881,7 @@ NetSimVisualization.prototype.destroyAutoDnsNode = function () {
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationNode) {
-      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityId() === dnsNodeID);
+      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
     }
   });
 };

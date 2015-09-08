@@ -21,11 +21,11 @@ end
 
 namespace :lint do
   task :ruby do
-    RakeUtils.bundle_exec 'rubocop'
+    RakeUtils.system 'rubocop'
   end
 
   task :haml do
-    RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
+    RakeUtils.system 'haml-lint dashboard pegasus'
   end
 
   task all: [:ruby, :haml]

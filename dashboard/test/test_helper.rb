@@ -25,7 +25,7 @@ Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.
 
 require 'rails/test_help'
 
-require 'mocha/mini_test'
+require "mocha/test_unit"
 
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false#
@@ -34,9 +34,9 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
+
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
-    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
 
     set_env :test
 
@@ -44,6 +44,8 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
+
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -168,11 +170,10 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    @html_document ||= if @response.content_type === Mime::XML
-                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
-                       else
-                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
-                       end
+    strict = true
+    xml = (@response.content_type =~ /xml$/)
+
+    @html_document ||= HTML::Document.new(@response.body, strict, xml)
   end
 
   def assert_redirected_to_sign_in
@@ -275,16 +276,5 @@ end
 class ActionDispatch::IntegrationTest
   setup do
     https!
-  end
-end
-
-# Evaluates the given block temporarily setting the global locale to the specified locale.
-def with_locale(locale)
-  old_locale = I18n.locale
-  begin
-    I18n.locale = locale
-    yield
-  ensure
-    I18n.locale = old_locale
   end
 end

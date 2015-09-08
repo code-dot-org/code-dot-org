@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
-require 'mocha/api'
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   include LevelsHelper
-  include Mocha::API
-
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
-
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
 
     @user = create(:user, total_lines: 15)
@@ -152,17 +148,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
-  # Expect the controller to invoke "milestone_logger.info()" with a
-  # string that matches given regular expression.
-  def expect_controller_logs_milestone_regexp(regexp)
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ regexp
-    end
-  end
-
   test "logged in milestone does not allow negative lines of code" do
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /-20/
+    end
 
-    expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
     @controller.expects(:trophy_check).with(@user)
@@ -189,7 +179,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
 
   test "logged in milestone does not allow unreasonably high lines of code" do
-    expect_controller_logs_milestone_regexp(/9999999/)
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /9999999/
+    end
 
     @controller.expects :slog
 
@@ -218,7 +210,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "anonymous milestone does not allow unreasonably high lines of code" do
     sign_out(@user)
 
-    expect_controller_logs_milestone_regexp(/9999999/)
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ /9999999/
+    end
 
     @controller.expects :slog
 
