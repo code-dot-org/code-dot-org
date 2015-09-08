@@ -275,7 +275,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUserName_(this.currentUser_);
+    this.initWithUser_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -336,7 +336,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -1038,28 +1038,9 @@ NetSim.prototype.debouncedResizeFooter = function () {
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
-      shareLink;
-
-  isConnected = false;
-  clientStatus = i18n.disconnected();
-  if (this.myNode) {
-    clientStatus = 'In Lobby';
-    myHostname = this.myNode.getHostname();
-    if (this.myNode.myWire) {
-      myAddress = this.myNode.myWire.localAddress;
-    }
-  }
-
   if (this.isConnectedToRemote()) {
-    isConnected = true;
-    clientStatus = i18n.connected();
-    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
-  }
+    var myAddress = this.myNode.getAddress();
 
-  shareLink = this.lobby_.getShareLink();
-
-  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1070,12 +1051,10 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        isConnected: isConnected,
-        statusString: clientStatus,
-        myHostname: myHostname,
+        myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
-        remoteNodeName: remoteNodeName,
-        shareLink: shareLink
+        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
+        shareLink: this.lobby_.getShareLink()
       });
     }
   } else {
@@ -2012,8 +1991,8 @@ NetSimVisualization.prototype.onRemoteChange_ = function () {
 NetSimVisualization.prototype.getElementByEntityID = function (elementType, entityID) {
   return _.find(this.elements_, function (element) {
     return element instanceof elementType &&
-        element.getCorrespondingEntityID &&
-        element.getCorrespondingEntityID() === entityID;
+        element.getCorrespondingEntityId &&
+        element.getCorrespondingEntityId() === entityID;
   });
 };
 
@@ -2252,8 +2231,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
   this.elements_.forEach(function (vizElement) {
     var isCorrectType = (vizElement instanceof vizElementType);
     var foundMatch = entityCollection.some(function (entity) {
-      return vizElement.getCorrespondingEntityID &&
-          entity.entityID === vizElement.getCorrespondingEntityID();
+      return vizElement.representsEntity && vizElement.representsEntity(entity);
     });
 
     if (isCorrectType && !foundMatch) {
@@ -2620,7 +2598,7 @@ NetSimVisualization.prototype.destroyAutoDnsNode = function () {
 NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationNode) {
-      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityID() === dnsNodeID);
+      vizElement.setIsDnsNode(vizElement.getCorrespondingEntityId() === dnsNodeID);
     }
   });
 };
@@ -2758,24 +2736,30 @@ var NetSimVizWire = require('./NetSimVizWire');
  * @augments NetSimVizWire
  */
 var NetSimVizSimulationWire = module.exports = function (sourceWire,
-    getElementByEntityID) {
-  var localNode = getElementByEntityID(NetSimVizNode, sourceWire.localNodeID);
-  var remoteNode = getElementByEntityID(NetSimVizNode, sourceWire.remoteNodeID);
+    getElementByEntityId) {
+  var localNode = getElementByEntityId(NetSimVizNode, sourceWire.localNodeID);
+  var remoteNode = getElementByEntityId(NetSimVizNode, sourceWire.remoteNodeID);
   NetSimVizWire.call(this, localNode, remoteNode);
 
   /**
-   * ID of the simulation wire that this viz element maps to.
+   * ID of the NetSimWire that this NetSimVizSimulationWire maps to.
    * @type {number}
    */
-  this.correspondingWireID_ = sourceWire.entityID;
+  this.correspondingWireId_ = sourceWire.entityID;
 
   /**
-   * Bound getElementByEntityID method from vizualization controller;
+   * UUID of the NetSimWire that this NetSimVizSimulationWire maps to.
+   * @type {number}
+   */
+  this.correspondingWireUuid_ = sourceWire.uuid;
+
+  /**
+   * Bound getElementByEntityId method from vizualization controller;
    * we hold on to this so that calls to configureFrom can find nodes later.
    * @type {Function}
    * @private
    */
-  this.getElementByEntityID_ = getElementByEntityID;
+  this.getElementByEntityId_ = getElementByEntityId;
 
   this.configureFrom(sourceWire);
   this.render();
@@ -2787,8 +2771,11 @@ NetSimVizSimulationWire.inherits(NetSimVizWire);
  * @param {NetSimWire} sourceWire
  */
 NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getElementByEntityID_(NetSimVizNode, sourceWire.remoteNodeID);
+  this.correspondingWireId_ = sourceWire.entityID;
+  this.correspondingWireUuid_ = sourceWire.uuid;
+
+  this.localVizNode = this.getElementByEntityId_(NetSimVizNode, sourceWire.localNodeID);
+  this.remoteVizNode = this.getElementByEntityId_(NetSimVizNode, sourceWire.remoteNodeID);
 
   if (this.localVizNode) {
     this.localVizNode.setAddress(sourceWire.localAddress);
@@ -2804,21 +2791,31 @@ NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
 };
 
 /**
- * ID of the simulation entity that maps to this one.
+ * ID of the NetSimEntity that maps to this visualization element.
  * @returns {number}
  */
-NetSimVizSimulationWire.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingWireID_;
+NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function () {
+  return this.correspondingWireId_;
+};
+
+/**
+ * @param {NetSimEntity} entity
+ * @returns {boolean} TRUE if this VizElement represents the given NetSimEntity.
+ */
+NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
+  return this.correspondingWireId_ === entity.entityID &&
+      this.correspondingWireUuid_ === entity.uuid;
 };
 
 /**
  * Killing a visualization node removes its ID so that it won't conflict with
- * another node of matching ID being added, and begins its exit animation.
+ * another viznode of matching ID being added, and begins its exit animation.
  * @override
  */
 NetSimVizSimulationWire.prototype.kill = function () {
   NetSimVizSimulationWire.superPrototype.kill.call(this);
-  this.correspondingWireID_ = undefined;
+  this.correspondingWireId_ = undefined;
+  this.correspondingWireUuid_ = undefined;
 };
 
 
@@ -3194,10 +3191,16 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
-   * ID of the simulation node that this viz element represents.
+   * ID of the NetSimNode that this NetSimVizSimulationNode represents.
    * @type {number}
    */
   this.correspondingNodeID_ = sourceNode.entityID;
+
+  /**
+   * UUID of the NetSimNode that this NetSimVizSimulationNode represents.
+   * @type {string}
+   */
+  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   /**
    * If we end up representing a router, we may need to hold the auto-dns address
@@ -3216,7 +3219,8 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
-  this.correspondingNodeID_ = sourceNode.entityID;
+  this.correspondingNodeId_ = sourceNode.entityID;
+  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
@@ -3239,8 +3243,17 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
-  return this.correspondingNodeID_;
+NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
+  return this.correspondingNodeId_;
+};
+
+/**
+ * @param {NetSimEntity} entity
+ * @returns {boolean} TRUE of this VizElement represents the given Entity.
+ */
+NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
+  return this.correspondingNodeId_ === entity.entityID &&
+      this.correspondingNodeUuid_ === entity.uuid;
 };
 
 /**
@@ -3250,7 +3263,8 @@ NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
  */
 NetSimVizSimulationNode.prototype.kill = function () {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
-  this.correspondingNodeID_ = undefined;
+  this.correspondingNodeId_ = undefined;
+  this.correspondingNodeUuid_ = undefined;
 };
 
 
@@ -4521,9 +4535,6 @@ NetSimStatusPanel.inherits(NetSimPanel);
 
 /**
  * @param {Object} [data]
- * @param {boolean} [data.isConnected] - Whether the local client is connected
- *        to a remote node
- * @param {string} [data.statusString] - Used as the panel title.
  * @param {string} [data.remoteNodeName] - Display name of remote node.
  * @param {string} [data.myHostname] - Hostname of local node
  * @param {number} [data.myAddress] - Local node address assigned by router
@@ -4533,14 +4544,13 @@ NetSimStatusPanel.prototype.render = function (data) {
   data = data || {};
 
   // Capture title before we render the wrapper panel.
-  this.setPanelTitle(data.statusString);
+  this.setPanelTitle(data.remoteNodeName);
 
   // Render boilerplate panel stuff
   NetSimStatusPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
   var newMarkup = $(markup({
-    remoteNodeName: data.remoteNodeName,
     myHostname: data.myHostname,
     myAddress: data.myAddress,
     shareLink: data.shareLink
@@ -4548,11 +4558,9 @@ NetSimStatusPanel.prototype.render = function (data) {
   this.getBody().html(newMarkup);
 
   // Add a button to the panel header
-  if (data.isConnected) {
-    this.addButton(
-        i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
-        this.disconnectCallback_);
-  }
+  this.addButton(
+      i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
+      this.disconnectCallback_);
 
   // Button that takes you to the next level.
   NetSimUtils.makeContinueButton(this);
@@ -4573,7 +4581,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 var i18n = require('./locale');
-; buf.push('\n<div class="content-wrap">\n  ');5; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((6,  remoteNodeName )), '</p>\n  ');7; } ; buf.push('\n\n  ');9; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((10,  myHostname )), '</p>\n  ');11; } ; buf.push('\n\n  ');13; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((14,  myAddress )), '</p>\n  ');15; } ; buf.push('\n\n  ');17; if (shareLink) { ; buf.push('\n  <p><a href="', escape((18,  shareLink )), '">', escape((18,  i18n.shareThisNetwork() )), '</a></p>\n  ');19; } ; buf.push('\n</div>\n'); })();
+; buf.push('\n<div class="content-wrap">\n  ');5; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((6,  myHostname )), '</p>\n  ');7; } ; buf.push('\n\n  ');9; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((10,  myAddress )), '</p>\n  ');11; } ; buf.push('\n\n  ');13; if (shareLink) { ; buf.push('\n  <p><a href="', escape((14,  shareLink )), '">', escape((14,  i18n.shareThisNetwork() )), '</a></p>\n  ');15; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };

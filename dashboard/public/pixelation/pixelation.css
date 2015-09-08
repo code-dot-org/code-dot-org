@@ -106,3 +106,22 @@ input[type=range] {
 .label_group label {
   display: inline-block;
 }
+
+#file_format {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+#file_format p {
+  margin-bottom: 0;
+}
+
+#file_format #file_format_title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+#visualization {
+  margin-top: 6px;
+}

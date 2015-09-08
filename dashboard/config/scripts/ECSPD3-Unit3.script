@@ -1,0 +1,59 @@
+title 'Exploring Computer Science PD: Academic Year Development'
+description 'Academic Year Development'
+description_short 'Academic Year Development'
+login_required 'true'
+pd 'true'
+
+stage 'Welcome!'
+level 'ECS Phase 3 Welcome'
+level 'PDECS Tour'
+level 'ECSPD PD details'
+level 'ECS Phase 3 Overview'
+level 'ECSPD course goals'
+
+stage 'Teaching Strategies'
+level 'ECSPD Teaching Strategies Intro'
+level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
+level 'Forum-ECSPD-Unit 3-Teaching Practice'
+level  'ECSPD Find Learning Strategy'
+level 'ECSPD strategies'
+
+stage 'Unit 3 Overview'
+
+stage 'Introduction to the Unit 3 Challenge'
+level 'ECSPD Challenge Intro'
+
+stage 'Day 1-2 Online Experiences'
+level 'ECSPD U3 D 1-2 Intro'
+
+stage 'Day 3-4 HTML- Paragraph and Header Tags' 
+level 'ECSPD U3 D 3-4 Intro'
+
+stage 'Day 5 HTML - Strong and EM Tags'
+level 'ECSPD U3 D 5 Intro'
+
+stage 'Day 6-7 HTML -Images'
+level 'ECSPD U3 D 6-7 Intro'
+
+stage 'Day 8-10 Introduction to CSS'
+level 'ECSPD U3 D 8-10 Intro'
+
+stage 'Day 11-13 Separating HTML and CSS'
+level 'ECSPD U3 D 11-13 Intro'
+
+stage 'Day 14 HTML: Links'
+level 'ECSPD U3 D 14 Intro'
+
+stage 'Day 15-16 HTML and CSS: Tables, Lists, Menus'
+level 'ECSPD U3 D 15-16 Intro'
+
+stage 'Day 17-19 HTML and CSS: Create own webpage'
+level 'ECSPD U3 D 17-19 Intro'
+
+stage 'Day 20-21 HTML and CSS: Adding Enhancements to Site'
+level 'ECSPD U3 D 20-21 Intro'
+
+stage 'Day 22-25 Final Project'
+level 'ECSPD U3 D 22-25 Intro'
+
+stage 'Unit 3 Challenge Planning & Creation'
