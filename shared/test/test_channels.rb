@@ -5,7 +5,7 @@ require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class ChannelsTest < Minitest::Test
+class ChannelsTest < Minitest::Unit::TestCase
   include Rack::Test::Methods
 
   def build_rack_mock_session

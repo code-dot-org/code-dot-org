@@ -10,7 +10,7 @@ class MilestoneParser
   end
 end
 
-class TestMilestoneParser < Minitest::Test
+class TestMilestoneParser < Minitest::Unit::TestCase
   def self.instance
     @@instance
   end

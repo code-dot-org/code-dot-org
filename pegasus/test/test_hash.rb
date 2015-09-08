@@ -1,7 +1,7 @@
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 
-class HashTest < Minitest::Test
+class HashTest < Minitest::Unit::TestCase
   def test_slice_keys
     assert ({a: 1, b: 2, c: 3}).slice_keys(:a).keys == [:a]
     assert ({a: 1, b: 2, c: 3}).slice_keys(:a, :d).keys == [:a]

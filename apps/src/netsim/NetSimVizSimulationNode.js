@@ -33,16 +33,10 @@ var NetSimVizSimulationNode = module.exports = function (sourceNode,
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
-   * ID of the NetSimNode that this NetSimVizSimulationNode represents.
+   * ID of the simulation node that this viz element represents.
    * @type {number}
    */
   this.correspondingNodeID_ = sourceNode.entityID;
-
-  /**
-   * UUID of the NetSimNode that this NetSimVizSimulationNode represents.
-   * @type {string}
-   */
-  this.correspondingNodeUuid_ = sourceNode.uuid;
 
   /**
    * If we end up representing a router, we may need to hold the auto-dns address
@@ -61,8 +55,7 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
  * @param {NetSimNode} sourceNode
  */
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
-  this.correspondingNodeId_ = sourceNode.entityID;
-  this.correspondingNodeUuid_ = sourceNode.uuid;
+  this.correspondingNodeID_ = sourceNode.entityID;
 
   var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
@@ -85,17 +78,8 @@ NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
  * ID of the simulation entity that maps to this one.
  * @returns {number}
  */
-NetSimVizSimulationNode.prototype.getCorrespondingEntityId = function () {
-  return this.correspondingNodeId_;
-};
-
-/**
- * @param {NetSimEntity} entity
- * @returns {boolean} TRUE of this VizElement represents the given Entity.
- */
-NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
-  return this.correspondingNodeId_ === entity.entityID &&
-      this.correspondingNodeUuid_ === entity.uuid;
+NetSimVizSimulationNode.prototype.getCorrespondingEntityID = function () {
+  return this.correspondingNodeID_;
 };
 
 /**
@@ -105,6 +89,5 @@ NetSimVizSimulationNode.prototype.representsEntity = function (entity) {
  */
 NetSimVizSimulationNode.prototype.kill = function () {
   NetSimVizSimulationNode.superPrototype.kill.call(this);
-  this.correspondingNodeId_ = undefined;
-  this.correspondingNodeUuid_ = undefined;
+  this.correspondingNodeID_ = undefined;
 };

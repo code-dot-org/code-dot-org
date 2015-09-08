@@ -32,9 +32,6 @@ development:
 staging: &staging
   <<: *mysql_defaults
 
-adhoc:
-  <<: *mysql_defaults
-
 # levelbuilder environment extends the staging environment
 levelbuilder:
   <<: *staging

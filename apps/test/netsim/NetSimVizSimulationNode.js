@@ -81,7 +81,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it ("captures the client's node ID", function () {
-      assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityId());
+      assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityID());
     });
 
     it ("shows the client's display name (by default)", function () {
@@ -118,7 +118,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it ("captures the router's node ID", function () {
-      assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityId());
+      assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityID());
     });
 
     it ("shows the router's display name (by default)", function () {

@@ -1,6 +1,0 @@
-name 'ECSPD Teaching Strategies Intro'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# Teaching Strategies
-## A section explaining to teachers why this stage is here and what it will cover
-MARKDOWN
