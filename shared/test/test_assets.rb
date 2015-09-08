@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class AssetsTest < Minitest::Test
+class AssetsTest < Minitest::Unit::TestCase
 
   def setup
     init_apis

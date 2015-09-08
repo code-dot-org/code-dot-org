@@ -28,8 +28,7 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "never_autoplay_video": "false"
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -146,7 +145,7 @@
             <title name="NUM">0</title>
           </block>
         </category>
-        <category name="Variables ">
+        <category name="Variables" custom="VARIABLE">
           <block type="variables_set" inline="false">
             <title name="VAR">size</title>
           </block>
@@ -154,13 +153,10 @@
             <title name="VAR">size</title>
           </block>
           <block type="variables_set" inline="false">
-            <title name="VAR">length</title>
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">length</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">counter</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>

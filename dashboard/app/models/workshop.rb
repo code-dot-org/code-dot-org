@@ -56,10 +56,10 @@ class Workshop < ActiveRecord::Base
           recipient_list.each do |recipient|
             if workshop.segments.first.start.to_date == Date.today
               logger.debug("Sending exit survey info to #{recipient.email}")
-              OpsMailer.exit_survey_information(workshop, recipient).deliver_now
+              OpsMailer.exit_survey_information(workshop, recipient).deliver
             else
               logger.debug("Sending email reminder to #{recipient.email}")
-              OpsMailer.workshop_reminder(workshop, recipient).deliver_now
+              OpsMailer.workshop_reminder(workshop, recipient).deliver
             end
           end
         end

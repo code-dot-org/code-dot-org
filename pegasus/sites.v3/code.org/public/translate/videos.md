@@ -45,7 +45,6 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Trina Roy teaches counter loops](http://amara.org/en/videos/yDs0YaE9cv2D/info/trina-roy-teaches-counter-loops/)
 
 ## Social
-* [The Hour of Code 2015](http://amara.org/en/videos/3AzjwLw6zyAV/info/the-hour-of-code-2015/)
 * [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
 * [The Hour of Code is Here](http://amara.org/en/videos/OuklhBeGw70l/info/learn-what-most-schools-dont-teach/)
 * [The Hour of Code Worldwide](http://amara.org/en/videos/PEMFKS2tBCRq/info/the-hour-of-code-worldwide/)
