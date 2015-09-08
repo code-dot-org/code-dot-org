@@ -10,7 +10,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test "authorizing with known facebook account signs in" do
     user = create(:user, provider: 'facebook', uid: '1111')
 
-    @request.env['omniauth.auth'] = {provider: 'facebook', uid: '1111'}
+    @request.env['omniauth.auth'] = stub('auth', provider: 'facebook', uid: '1111')
     @request.env['omniauth.params'] = {}
 
     get :facebook
@@ -20,7 +20,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown facebook account needs additional information" do
     auth = stub('auth',
-                slice: {provider: 'facebook', uid: '1111'},
                 uid: '1111',
                 provider: 'facebook',
                 info: stub('info',
@@ -46,7 +45,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever teacher account" do
     auth = stub('auth',
-                slice: {provider: 'clever', uid: '1111'},
                 uid: '1111',
                 provider: 'clever',
                 info: stub('info', nickname: '',
@@ -73,7 +71,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "authorizing with unknown clever student account" do
     auth = stub('auth',
-                slice: {provider: 'clever', uid: '111133'},
                 uid: '111133',
                 provider: 'clever',
                 info: stub('info', nickname: '',
