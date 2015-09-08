@@ -161,6 +161,10 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
+      ECS Phase 3 Overview: {}
+      ECS Phase 3 Welcome: {}
+      ECSPD Challenge Intro: {}
+      ECSPD Find Learning Strategy: {}
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -219,7 +223,51 @@ en:
         ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
         ECS PD Overview: ECS PD Overview
+      ECSPD Phase 3 - Unit 2 - Teaching Practice: {}
+      ECSPD Phase 3 - Unit 3 - Teaching Practice: {}
+      ECSPD Phase 3 - Unit 4 - Teaching Practice: {}
+      ECSPD Problem Solving Strategies: {}
+      ECSPD Real Life Problem Solving: {}
+      ECSPD Teaching Strategies Intro: {}
       ECSPD U1Conclusion: {}
+      ECSPD U2 D 1-2: {}
+      ECSPD U2 D 10-12 Intro: {}
+      ECSPD U2 D 13-14 Intro: {}
+      ECSPD U2 D 15-16 Intro: {}
+      ECSPD U2 D 17 Intro: {}
+      ECSPD U2 D 18-21 Intro: {}
+      ECSPD U2 D 3: {}
+      ECSPD U2 D 4-6: {}
+      ECSPD U2 D 7-9 Intro: {}
+      ECSPD U3 D 1-2 Intro: {}
+      ECSPD U3 D 11-13 Intro: {}
+      ECSPD U3 D 14 Intro: {}
+      ECSPD U3 D 15-16 Intro: {}
+      ECSPD U3 D 17-19 Intro: {}
+      ECSPD U3 D 20-21 Intro: {}
+      ECSPD U3 D 22-25 Intro: {}
+      ECSPD U3 D 3-4 Intro: {}
+      ECSPD U3 D 5 Intro: {}
+      ECSPD U3 D 6-7 Intro: {}
+      ECSPD U3 D 8-10 Intro: {}
+      ECSPD U4 D 1 Intro: {}
+      ECSPD U4 D 10-13 Intro: {}
+      ECSPD U4 D 14 Intro: {}
+      ECSPD U4 D 15 Intro: {}
+      ECSPD U4 D 16-17 Intro: {}
+      ECSPD U4 D 18 Intro: {}
+      ECSPD U4 D 19 Intro: {}
+      ECSPD U4 D 2-3 Intro: {}
+      ECSPD U4 D 20-23 Intro: {}
+      ECSPD U4 D 24 Intro: {}
+      ECSPD U4 D 25-30 Intro: {}
+      ECSPD U4 D 4 Intro: {}
+      ECSPD U4 D 5-6 Intro: {}
+      ECSPD U4 D 7-8 Intro: {}
+      ECSPD U4 D 9 Intro: {}
+      ECSPD Unit 2 Intro: {}
+      ECSPD Unit 2 Lesson Overview: {}
+      ECSPD What Is Problem Solving: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -272,6 +320,9 @@ en:
       Equity Welcome: {}
       External level test (will):
         first computer program: first computer program
+      Forum-ECSPD-Unit 2-Teaching Practice: {}
+      Forum-ECSPD-Unit 3-Teaching Practice: {}
+      Forum-ECSPD-Unit 4-Teaching Practice: {}
       Hour of Code test content: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
