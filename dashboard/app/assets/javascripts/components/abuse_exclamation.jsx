@@ -2,8 +2,11 @@
 
 window.dashboard = window.dashboard || {};
 
+/**
+ * A big blue box with an exclamation mark on the left and our abuse text on
+ * the right.
+ */
 window.dashboard.AbuseExclamation = (function (React) {
-
   var AbuseError = window.dashboard.AbuseError;
 
   return React.createClass({

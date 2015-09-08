@@ -2,6 +2,9 @@
 
 window.dashboard = window.dashboard || {};
 
+/**
+ * The body of our share project dialog.
+ */
 window.dashboard.ShareDialogBody = (function (React) {
   return React.createClass({
     propTypes: {

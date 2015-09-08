@@ -1,7 +1,11 @@
 window.dashboard = window.dashboard || {};
 
+/**
+ * A component containing some text/links for projects that have had abuse
+ * reported. This is used in our blocking AbuseBox, in the share dialog, and
+ * in our smaller alert in apps.
+ */
 window.dashboard.AbuseError = (function (React) {
-
   return React.createClass({
     propTypes: {
       i18n: React.PropTypes.shape({
