@@ -11,9 +11,9 @@ The College Board has proposed a new course called AP® Computer Science Princip
 Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
 
 ## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis from now until Summer 2015 when the entire curriculum will be publicly available. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/mjMLCpXz3eo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/S1vFrz4NETg" frameborder="0" allowfullscreen></iframe>
 
 ### <a name="features"></a>Features
 
@@ -32,9 +32,11 @@ Check back often.  The video library is growing every week!
 
 <iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/CfczKEzp4kY" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/i8TTdaEkBiw" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/xOJTUuw62v4" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/6RBM1aM1IKw" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/JJ1S9Y31vgQ" frameborder="0" allowfullscreen></iframe>
 
 
 
