@@ -10,8 +10,9 @@
       %p
         Here’s what a successful online PD looks like. All the progress circles are green.
       %img{src:"#{image_url}", style:'width: 600px'}
-      %em
-        The number of stages/levels may differ from the above image.
+      %p
+        %em
+          The number of stages/levels may differ from the above image.
     %li
       Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
 - else
@@ -28,8 +29,9 @@
           %p
             Here’s what a successful online PD looks like. All the progress circles are green.
           %img{src:"#{image_url}", style:'width: 600px'}
-          %em
-            The number of stages/levels may differ from the above image.
+          %p
+            %em
+              The number of stages/levels may differ from the above image.
         %li
           Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
   - if workshop.program_type.to_i == 1 || workshop.program_type.to_i == 2
@@ -45,8 +47,9 @@
           %p
             Here’s what a successful online PD looks like. All the progress circles are green.
           %img{src:"#{image_url}", style:'width: 600px'}
-          %em
-            The number of stages/levels may differ from the above image.
+          %p
+            %em
+              The number of stages/levels may differ from the above image.
         %li
           Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
     - if workshop.phase == 5
@@ -61,7 +64,8 @@
           %p
             Here’s what a successful online PD looks like. All the progress circles are green.
           %img{src:"#{image_url}", style:'width: 600px'}
-          %em
-            The number of stages/levels may differ from the above image.
+          %p
+            %em
+              The number of stages/levels may differ from the above image.
         %li
           Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
