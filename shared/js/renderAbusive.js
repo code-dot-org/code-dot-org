@@ -10,4 +10,7 @@ module.exports = function () {
     },
     isOwner: dashboard.project.isOwner()
   }), document.getElementById('codeApp'));
+
+  // update admin box (if it exists) with abuse info
+  dashboard.admin.showProjectAdmin();
 };

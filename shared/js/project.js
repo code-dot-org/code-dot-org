@@ -96,6 +96,31 @@ var projects = module.exports = {
   },
 
   /**
+   * @returns {number}
+   */
+  getAbuseScore: function () {
+    return current ? current.abuseScore : 0;
+  },
+
+  /**
+   * Sets abuse score to zero, saves the project, and reloads the page
+   */
+  adminResetAbuseScore: function () {
+    // TODO - is there a way we can protect this a little better?
+    if (this.getAbuseScore() === 0) {
+      return;
+    }
+    current.abuseScore = 0;
+    var sourceAndHtml = {
+      source: current.levelSource,
+      html: current.levelHtml
+    };
+    this.save(sourceAndHtml, function () {
+      location.reload();
+    });
+  },
+
+  /**
    * @returns {boolean} true if we're frozen
    */
   isFrozen: function () {
@@ -120,6 +145,24 @@ var projects = module.exports = {
     return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
   },
 
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecauseAbusive: function () {
+    if (!this.exceedsAbuseThreshold()) {
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
+  },
 
   //////////////////////////////////////////////////////////////////////
   // Properties and callbacks. These are all candidates for being extracted
@@ -154,6 +197,10 @@ var projects = module.exports = {
     }
   },
 
+  /**
+   * Updates the contents of the admin box for admins. We have no knolwedge
+   * here whether we're an admin, and depend on dashboard getting this right.
+   */
   showAdmin: function() {
     dashboard.admin.showProjectAdmin();
   },
@@ -240,10 +287,7 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
 
-    if (current && current.isOwner) {
-      // this code has no way to check if you are actually an admin. dashboard.admin has to take care of this
-      this.showAdmin();
-    }
+    this.showAdmin();
   },
   projectChanged: function() {
     hasProjectChanged = true;
@@ -271,27 +315,29 @@ var projects = module.exports = {
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
-   * @param {string?} source Optional source to be provided, saving us another
+   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
    *   call to sourceHandler.getLevelSource
    * @param {function} callback Function to be called after saving
    */
-  save: function(source, callback) {
+  save: function(sourceAndHtml, callback) {
     if (arguments.length < 2) {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      source = this.sourceHandler.getLevelSource();
+      sourceAndHtml ={
+        source: this.sourceHandler.getLevelSource(),
+        html: this.sourceHandler.getLevelHtml()
+      };
     }
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    var newLevelHtml = this.sourceHandler.getLevelHtml();
-    if (current.levelHtml && !newLevelHtml) {
+    if (current.levelHtml && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    current.levelSource = source;
-    current.levelHtml = newLevelHtml;
+    current.levelSource = sourceAndHtml.source;
+    current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -356,7 +402,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.save(source, function () {
+    this.save({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },

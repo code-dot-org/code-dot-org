@@ -60,7 +60,8 @@ module.exports = function (callback) {
   if (window.dashboard && dashboard.project) {
     promise = promise.then(dashboard.project.load)
     .then(function () {
-      if (dashboard.project.exceedsAbuseThreshold()) {
+      // TODO - dont want to do this for /edit page if owner
+      if (dashboard.project.hideBecauseAbusive()) {
         renderAbusive();
         return $.Deferred().reject();
       }
