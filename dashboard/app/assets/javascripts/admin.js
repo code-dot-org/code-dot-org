@@ -5,6 +5,10 @@
 dashboard.admin = {};
 
 dashboard.admin.showProjectAdmin = function() {
+  if ($('.project_admin') === 0) {
+    return;
+  }
+
   if (dashboard.project.isProjectLevel()) {
     if (dashboard.project.isFrozen()) {
       $('.project_admin').html($('<span>&#x2744; Frozen! To use as an example, copy this id: <input type="text" disabled value="' +
@@ -18,5 +22,14 @@ dashboard.admin.showProjectAdmin = function() {
         });
       });
     }
+  }
+
+  var abuseScore = dashboard.project.getAbuseScore();
+  if (abuseScore) {
+    $('.admin-abuse').show();
+    $('.admin-abuse-score').text(abuseScore);
+    $('.admin-abuse-reset').click(function () {
+      dashboard.project.adminResetAbuseScore();
+    });
   }
 };
