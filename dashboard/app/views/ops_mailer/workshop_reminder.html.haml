@@ -47,7 +47,7 @@
   -else
     %p
       Curriculum guide, laptop and charger, water bottle, and snacks
--if @workshop.instructions
+-if @workshop.instructions.to_s != ''
   %h3
     Notes
   %p
