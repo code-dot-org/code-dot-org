@@ -188,18 +188,11 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # Returns true if this is a pixelation level.
-  def pixelation?
-    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
-    # eliminating this fragile test of 'href'.
-    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
-  end
-
   # Returns whether this level is backed by a channel, whose id may
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    self.project_template_level || self.game == Game.applab || self.pixelation?
+    self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
   end
 
   def key

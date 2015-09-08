@@ -80,5 +80,6 @@
   "turnTooltip": "Artista ezkerrera biratzen du zehaztutako angeluan.",
   "turtleVisibilityTooltip": "Artista ikuskor edo ikustezin bihurtzen du.",
   "widthTooltip": "Arkatzaren lodiera aldatzen du.",
-  "wrongColour": "Zure irudia kolore okerrekoa da. Puzle hontarako %1 behar du izan."
+  "wrongColour": "Zure irudia kolore okerrekoa da. Puzle hontarako %1 behar du izan.",
+  "setAlpha": "set alpha"
 }

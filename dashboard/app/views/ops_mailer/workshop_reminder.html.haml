@@ -34,14 +34,14 @@
 %h3
   What to bring
 - if @workshop.phase == 2
-  -if @workshop.program_type == 3
+  -if @workshop.program_type.to_i == 3
     %p
       Laptop (optional), water bottle, and snacks
   -else
     %p
       Laptop and charger, water bottle, and snacks
 - elsif @workshop.phase >= 4 && @workshop.phase <= 8
-  -if @workshop.program_type == 3
+  -if @workshop.program_type.to_i == 3
     %p
       Curriculum guide, green journal, laptop and charger, water bottle, and snacks
   -else

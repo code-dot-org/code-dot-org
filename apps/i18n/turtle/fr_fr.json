@@ -80,5 +80,6 @@
   "turnTooltip": "Tourne l'artiste à gauche ou à droite du nombre de degrés indiqué.",
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie l'épaisseur du tracé.",
-  "wrongColour": "Votre image n'est pas de la bonne couleur. Pour cette énigme, elle doit être %1."
+  "wrongColour": "Votre image n'est pas de la bonne couleur. Pour cette énigme, elle doit être %1.",
+  "setAlpha": "set alpha"
 }
