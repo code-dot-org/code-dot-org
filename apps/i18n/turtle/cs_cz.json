@@ -80,5 +80,6 @@
   "turnTooltip": "Otočí malíře vlevo či vpravo o zadaný počet stupňů.",
   "turtleVisibilityTooltip": "Zviditelní či skryje malíře.",
   "widthTooltip": "Změní tloušťku tužky.",
-  "wrongColour": "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1."
+  "wrongColour": "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1.",
+  "setAlpha": "set alpha"
 }
