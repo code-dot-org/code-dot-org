@@ -355,4 +355,3 @@ def table_to_csv(table_array, column_order: nil)
   end
   return csv_string
 end
-
