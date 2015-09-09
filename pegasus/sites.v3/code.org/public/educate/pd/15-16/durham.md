@@ -52,6 +52,8 @@ American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
 318 Blackwell Street<br/>
 Durham, NC 27701
 
+Click [here](/images/au-parking.png) for parking instructions
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

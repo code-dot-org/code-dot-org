@@ -40,6 +40,12 @@ module LevelsHelper
     headers['Location'].split('/').last
   end
 
+  def readonly_view_options
+    level_view_options skip_instructions_popup: true
+    view_options readonly_workspace: true
+    view_options callouts: []
+  end
+
   def set_channel
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
@@ -55,7 +61,7 @@ module LevelsHelper
       # we have to load the channel here.
 
       channel_token = ChannelToken.find_by(level: host_level, user: @user)
-      view_options readonly_workspace: true, callouts: []
+      readonly_view_options
     else
       # If `create` fails because it was beat by a competing request, a second
       # `find_by` should succeed.
@@ -74,6 +80,8 @@ module LevelsHelper
   end
 
   def select_and_track_autoplay_video
+    return if @level.try(:autoplay_blocked_by_level?)
+
     seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
@@ -105,7 +113,7 @@ module LevelsHelper
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if I18n.locale == 'en-us' || callout_text.nil?
+      if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
       else
         callout_hash['localized_text'] = callout_text
@@ -127,7 +135,7 @@ module LevelsHelper
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
-    view_options(is_external_project_level: true) if @level.pixelation?
+    view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
@@ -135,10 +143,21 @@ module LevelsHelper
       blockly_options
     elsif @level.is_a? DSLDefined
       dsl_defined_options
+    elsif @level.is_a? Widget
+      widget_options
     else
       # currently, all levels are Blockly or DSLDefined except for Unplugged
       view_options.camelize_keys
     end
+  end
+
+  # Options hash for Widget
+  def widget_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
   end
 
   # Options hash for DSLDefined
@@ -167,7 +186,7 @@ module LevelsHelper
     # Fetch localized strings
     if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+      unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else

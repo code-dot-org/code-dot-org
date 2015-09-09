@@ -188,7 +188,10 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
 
 %>
 <div class="content-wrap">
-  <div class="instructions"><%= controller.getLocalizedLobbyInstructions() %></div>
+  <div class="instructions">
+    <%= controller.getLocalizedLobbyInstructions() %>
+    <div class="reference-area-placeholder"></div>
+  </div>
   <div class="controls">
 
     <%

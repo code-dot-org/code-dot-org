@@ -10,7 +10,7 @@ Code.org is is a non-profit dedicated to expanding participation in computer sci
 
 Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for June 2014 through June 2015, which focused on answering the following key questions:
 
-- [What do teachers say about Code.org professional development?](#pd)
+- [What do teachers take away from Code.org professional development?](#pd)
 - [How successful have our district partnerships been in driving short- and long-term outcomes in each region?](#partners)
 - [What learning outcomes have Code.org students achieved?](#outcomes)
 - [How does learning Computer Science impact learning other subjects?](#learning)
@@ -21,7 +21,7 @@ We have gathered data from a number of sources -- internal data collected via Co
 
 ---
 
-## <a name="pd" href="#pd">What do teachers take awy from Code.org professional development?</a>
+## <a name="pd" href="#pd">What do teachers take away from Code.org professional development?</a>
 
 From June 2014 through June 2015, over 11,000 teachers across K-12 attended Code.org workshops. We offered [professional development](/educate/professional-development) through two models:
 
@@ -49,7 +49,7 @@ Through our professional development efforts, we are helping a large, diverse au
 
 ## <a name="partners" href="#partners">How successful have our district partnerships been in driving short- and long-term outcomes in each region?</a>
 
-In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 1,600 new CS teachers.
+In 2014-15, Code.org [partnered with 35 districts](/educate/districts) across the United States to bring curriculum, professional development and support to over 500 new CS teachers.
 
 ## Key Finding: 
 Through our district partnerships, we are helping districts increase the priority of computer science locally in the face of some big challenges. <br /><br/>

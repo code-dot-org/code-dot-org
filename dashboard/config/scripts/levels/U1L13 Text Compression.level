@@ -6,7 +6,8 @@
   "user_id": 0,
   "properties": {
     "href": "text-compression/text-compression.html",
-    "video_key": "csp_textcompression"
+    "video_key": "csp_textcompression",
+    "skip_dialog": true
   }
 }]]></config>
 </TextCompression>

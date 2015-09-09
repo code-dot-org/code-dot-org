@@ -124,7 +124,7 @@ Explore and develop complex scientific models through agent-based programming
 <br/>
 A high school course designed to broaden participation in computer science
 
-[AP Computer Science Principles](/educate/csp)
+[Computer Science Principles](/educate/csp) (upcoming AP course)
 <br/>
 A course teaching a wide range of computer science topics, including programming in JavaScript
 

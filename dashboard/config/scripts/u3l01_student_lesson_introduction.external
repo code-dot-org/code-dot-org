@@ -2,26 +2,24 @@ name 'U3L01 Student Lesson Introduction'
 title 'Why Programming and Programming Languages?'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 01 - Why Programming and Programming Languages?
+## Unit 3: Lesson 01 - The Need for Programming Languages
 
 # Background
 
-When you were first learning to talk, you started with sounds. Then you learned to combine sounds into words and words into sentences. Once you learned how to talk, you could take any thought, no matter how complex, and communicate it to someone else. Programming is similar to talking – a programming language is built from a small subset of commands. By combining these commands, a programmer can create complex programs with global impact. In this lesson, you will begin the journey of converting human language to a language the computer will understand.
+Algorithms are the way we express solutions to problems in the field of computer science. Once we've identified a problem we seek to create an algorithm that can be used to solve that problem and ideally a whole class of similar problems. The ability to express algorithms in a way that someone else (or a computer) can understand and use them allows us to solve a problem only once and then let that other person or machine worry about actually implementing our solution.
 
 # Lesson
 
 * Create instructions using only words to construct a specific arrangement of toy blocks.
-* Brainstorm ways we can use specific language to improve algorithms. 
-* Identify the most basic commands of building a block sculpture. 
+* Test the clarity of your instructions by exchanging with another member of the class.
+* Brainstorm strategies for effectively communicating the steps of an algorithm.
 
 
 # Resources
-* Activity: <a href="https://docs.google.com/document/d/1co3nP1pRZEFBnAYz5fvbUyfUMogfxjMhMZuJAwTpq_w" target="_blank">
-Sculpture Algorithm</a> 
-
-
-* Rubric: <a href="https://docs.google.com/document/d/1UlhUQv3h_MBiD2AoQNPb5j_GGjTpaAkIzzBRImtMsv8" target="_blank">
-Sculpture Rubric</a>
+* Activity: <a href="https://docs.google.com/document/d/1O8A2HyfxYuWiZUAtKczEdrcqjEXW0hM9dI6PIJPIpv4/edit?usp=sharing" target="_blank">
+LEGO Algorithm</a> 
+* Video: <a href="https://www.youtube.com/watch?v=xfBWk4nw440" target="_blank">
+You Should Learn to Program</a> 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

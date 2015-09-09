@@ -1,10 +1,6 @@
 name 'U2L19 Free Response Wrap Up'
-title 'Public Key Crypto: Wrap Up'
+title 'Public Key Crypto: Why is it safe?'
 
 markdown <<MARKDOWN
-What problems did you encounter encrypting and decrypting with the public-private key strategy? 
-
-Were you surprised that the public-private key method worked? 
-
-What issues can you imagine could arise in using this method?
+Describe to a person who knows nothing about encryption why public key encryption is secure and is hard to crack.
 MARKDOWN

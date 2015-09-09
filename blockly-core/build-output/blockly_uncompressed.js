@@ -14379,7 +14379,8 @@ Blockly.FieldLabel = function(text, customOptions) {
   this.forceWidth_ = this.forceSize_ && customOptions.fixedSize.width !== undefined;
   this.fontSize_ = customOptions.fontSize;
   this.size_ = this.forceSize_ ? customOptions.fixedSize : loadingSize;
-  this.setText(text)
+  this.setText(text);
+  this.fieldGroup_ = this.textElement_
 };
 goog.inherits(Blockly.FieldLabel, Blockly.Field);
 Blockly.FieldLabel.prototype.EDITABLE = false;
