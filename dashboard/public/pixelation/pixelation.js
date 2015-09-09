@@ -100,7 +100,7 @@ function initProjects() {
 
 function pixelationDisplay() {
   pixel_data.value = options.projectData || options.data;
-  drawGraph();
+  drawGraph(null, false, true);
   formatBitDisplay();
 }
 
@@ -108,7 +108,7 @@ function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
 }
 
-function drawGraph(ctx, exportImage) {
+function drawGraph(ctx, exportImage, updateControls) {
   ctx = ctx || main_ctx;
   ctx.fillStyle = "#ccc";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
@@ -137,9 +137,12 @@ function drawGraph(ctx, exportImage) {
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
-  // Restore cursor position.
-  cursorPosition += (pixel_data.value.length - characterCount);
-  pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+  // Restore cursor position. This may steal the focus from other controls,
+  // so only do it if we know they should be updated.
+  if (updateControls) {
+    cursorPosition += (pixel_data.value.length - characterCount);
+    pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+  }
 
   var bitsPerPix = 1;
   if (options.version == '1') {
@@ -149,14 +152,18 @@ function drawGraph(ctx, exportImage) {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
     image_w = binToInt(readByte(binCode, 0));
     image_h = binToInt(readByte(binCode, 1));
-    widthText.value = widthRange.value = image_w;
-    heightText.value = heightRange.value = image_h;
+    if (updateControls) {
+      widthText.value = widthRange.value = image_w;
+      heightText.value = heightRange.value = image_h;
+    }
     binCode = binCode.substring(16, binCode.length);
 
     if (options.version != '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
-      bitsPerPixelText.value = bitsPerPix;
-      bitsPerPixelRange.value = bitsPerPix;
+      if (updateControls) {
+        bitsPerPixelText.value = bitsPerPix;
+        bitsPerPixelRange.value = bitsPerPix;
+      }
       binCode = binCode.substring(8, binCode.length);
 
       // Update pixel format indicator.
@@ -388,6 +395,9 @@ function binToInt(bits) {
  */
 function bitsToColors(bitString, bitsPerPixel) {
   var colorList = [];
+  if (!bitsPerPixel) {
+    return colorList;
+  }
 
   for (var i = 0; i < bitString.length; i += bitsPerPixel) {
     colorList.push(getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
@@ -422,20 +432,34 @@ function changeVal(elementID) {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
+  setMinTextValues();
   drawGraph();
 }
 
 function setSliders() {
-
-  heightRange.value = heightText.value;
-  widthRange.value = widthText.value;
-  bitsPerPixelRange.value = bitsPerPixelText.value;
+  // Be sure to give the range slider a numerical value even if the text
+  // input field is somehow non-numerical.
+  heightRange.value = heightText.value >= 1 ? heightText.value : 1;
+  widthRange.value = widthText.value >= 1 ? widthText.value : 1;
+  bitsPerPixelRange.value = bitsPerPixelText.value >= 1 ? bitsPerPixelText.value : 1;
 
   if (options.version != '1') {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
   drawGraph();
+}
+
+function setMinTextValues() {
+  if (heightText.value < 1) {
+    heightText.value = 1;
+  }
+  if (widthText.value < 1) {
+    widthText.value = 1;
+  }
+  if (bitsPerPixelText.value < 1) {
+    bitsPerPixelText.value = 1;
+  }
 }
 
 function updateBinaryDataToMatchSliders() {
@@ -538,7 +562,7 @@ function startOverClicked() {
 
 function startOverConfirmed() {
   pixel_data.value = options.data;
-  drawGraph();
+  drawGraph(null, false, true);
   formatBitDisplay();
 }
 
