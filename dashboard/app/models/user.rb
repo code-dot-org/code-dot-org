@@ -327,7 +327,7 @@ class User < ActiveRecord::Base
       "#{raw_name['first']} #{raw_name['last']}".squish
     end
 
-    where(auth.slice(:provider, :uid)).first_or_create do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name

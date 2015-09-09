@@ -1,3 +1,11 @@
+---
+title: <%= hoc_s(:title_country_resources) %>
+layout: wide
+nav: resources_nav
+---
+
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -18,3 +26,5 @@
 # Additional resources coming soon!
 
 <% end %>
+
+<%= view :signup_button %>

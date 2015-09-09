@@ -4,3 +4,9 @@ title 'Assessment Question 3'
 markdown <<MARKDOWN
 Why do multiple websites at your school and the computers in your classroom all have IP addresses that start with the same two sets of numbers?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Hierarchy in the Internet, same locations share IP address fields.
+MARKDOWN

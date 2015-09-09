@@ -12,6 +12,7 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var sinon = require('sinon');
 require('jquery-ui');
 
 var testUtils = require('./util/testUtils');
@@ -32,6 +33,7 @@ function loadSource(src) {
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
+  var clock, tickInterval;
 
   before(function(done) {
     this.timeout(15000);
@@ -54,6 +56,13 @@ describe('Level tests', function() {
   });
 
   beforeEach(function () {
+    tickInterval = window.setInterval(function () {
+      if (clock) {
+        clock.tick(100); // fake 1000 ms for every real 1ms
+      }
+    }, 1);
+    clock = sinon.useFakeTimers();
+
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();
 
@@ -87,6 +96,8 @@ describe('Level tests', function() {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    clock.restore();
+    clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (studioApp.editor && studioApp.editor.aceEditor &&
         studioApp.editor.aceEditor.session &&

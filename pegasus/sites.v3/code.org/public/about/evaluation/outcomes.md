@@ -1,9 +1,9 @@
 ---
-title: Student Learning Outcomes, September 2014 - June 2015
+title: Student Learning Outcomes, June 2014 - June 2015
 nav: about_nav
 ---
 
-# September 2014 - June 2015 Program Report
+# June 2014 - June 2015 Program Report
 
 ## What learning outcomes have Code.org students achieved?
 <img src="/images/outcomes-2014-15.png" width="100%"/>
@@ -12,9 +12,9 @@ nav: about_nav
 
 We saw phenomenal growth in the 2014-15 school year for both student and teacher account creation.
 
-### Table: Code Studio User Growth, Sept 1 2014 - June 30 2015
+### Table: Code Studio User Growth, June 1 2014 - June 30 2015
 
-|  | Student Accounts Created| Teacher Accounts Created|
+|  | Student Accounts Created| Teacher Accounts Created |
 |---|--------|-----|
 | Prior to September 1 2014 | 1,440,227 | 35,976 |
 | September 1 2014 through June 30 2015 | 4,466,810 | 111,684 |
@@ -36,9 +36,9 @@ Code.org offers a series of 20-hour long courses we refer to as ["Computer Scien
 
 | Since 9/14 | Sequencing | Debugging | Loops | Conditionals | Nested Loops | Event handlers | Functions |
 |---|---|---|---|---|---|---|---|
-| [Course 1](http://studio.code.org/s/course1) | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
-| [Course 2](http://studio.code.org/s/course2) | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
-| [Course 3](http://studio.code.org/s/course3) | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
+| [Course 1](http://studio.code.org/s/course1)   | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
+| [Course 2](http://studio.code.org/s/course2)   | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
+| [Course 3](http://studio.code.org/s/course3)   | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
 *Source: Code Studio database*
 
 **"Skill demonstration" is defined as having solved 80% of the puzzles in at least one stage that teaches that concept. Note: If the same student did [CS Fundamentals](/educate/k5) Courses [1](http://studio.code.org/s/course1) and [2](http://studio.code.org/s/course2), they are double counted for a concept. On the other hand, this does not account for learning the concept more deeply by repeating it in different contexts, or at more depth.*

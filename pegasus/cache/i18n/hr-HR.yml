@@ -206,6 +206,7 @@
   homepage_action_text_learn: Krenite s učenjem
   homepage_action_text_signpetition: Potpišite peticiju
   homepage_signpetition_dropdown: Slažem se &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i College Board udružili su se da poboljšalju
     raznolikosti u računarstvu.
   homepage_banner_text_link: Doznaj više
@@ -534,6 +535,8 @@
   educator_notes: Edukatorove bilješke
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: Dodatni resursi za učitelje i edukatore
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: sudionici
   teachers_notes: Učiteljeve bilješke
   teachers_notes_hoc: 'Učitelji: ovdje pročitajte bitne edukatorove bilješke'

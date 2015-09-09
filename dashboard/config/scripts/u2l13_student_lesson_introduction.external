@@ -47,26 +47,6 @@ Encryption is a process - an algorithm - for transforming a message so that the 
 
 MARKDOWN
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1gVfrgQKyFIn0guqN1OgwslhPB6GEPukEy63kPzjHgy4" target="_blank">KEY: Reading Guide for Encryption</a>
+MARKDOWN

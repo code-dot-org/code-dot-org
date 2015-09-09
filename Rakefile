@@ -21,11 +21,11 @@ end
 
 namespace :lint do
   task :ruby do
-    RakeUtils.system 'rubocop'
+    RakeUtils.bundle_exec 'rubocop'
   end
 
   task :haml do
-    RakeUtils.system 'haml-lint dashboard pegasus'
+    RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
   end
 
   task all: [:ruby, :haml]
@@ -137,7 +137,7 @@ namespace :build do
       RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
       if rack_env?(:production)
-        RakeUtils.system 'rake', "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
+        RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
       end
     end
   end

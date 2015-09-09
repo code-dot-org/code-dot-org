@@ -5,3 +5,8 @@ wrong '26'
 wrong '26 x 25'
 right '26 × 25 × 24 ×···× 3 × 2 x 1'
 wrong '26^26'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 26 × 25 × 24 ×···× 3 × 2 x 1
+MARKDOWN

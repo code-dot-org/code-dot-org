@@ -111,7 +111,7 @@
   continue_learning_header: Mokykitės toliau, užbaigę „Programavimo valandą“
   continue_learning_body: Yra daug galimybių. Galite mokytis internetu, savo mokykloje
     arba vasaros stovykloje.
-  learn_next_level: Pereiti į kitą etapą
+  learn_next_level: Pabandykite kitą Code Studio kursą
   learn_online: Išmėginkite kitus internetinius kursus
   learn_classes: Suraskite kursus savo gyvenvietėje
   hoc_is_here: '#HourOfCode jau čia – išmėginkite! @codeorg'
@@ -201,6 +201,7 @@
   homepage_action_text_learn: Pradėti mokytis
   homepage_action_text_signpetition: Pasirašyti peticiją
   homepage_signpetition_dropdown: Aš sutinku &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org ir College Board susijungė tam, kad pagerintų
     informatikos kokybę ir įvairovę.
   homepage_banner_text_link: Sužinok daugiau
@@ -298,7 +299,7 @@
   dashboard_landing_news_title: Metodinė medžiaga pradinukams (angliškai)
   dashboard_landing_new_beta: Nauja! Išbandykite kursus mažiausiems.
   dashboard_landing_new_k5courses: Naujiena! Išbandykite kursus pradinukams.
-  dashboard_landing_useful_links: Kitos naudingos nuorodos (angliškai).
+  dashboard_landing_useful_links: Kitos naudingos nuorodos (angliškai)
   dashboard_landing_office_hours: Užduok klausimą gyvai! Apsilankyk mūsų vaizdiniuose
     pokalbiuose, kurie vyksta kartą per mėnesį.
   dashboard_landing_print_certificates: Išspausdinkite sertifikatus mokiniams, kurie
@@ -527,6 +528,8 @@
   educator_notes: Pedagogų pastabos
   how_to_teach_hoc: Kaip mokyti „Programavimo valandą“
   more_resources_educators: Daugiau išteklių mokytojams ir švietimo atstovams
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: dalyviai
   teachers_notes: Mokytojo pastabos
   teachers_notes_hoc: 'Mokytojams: perskaitykite svarbias pastabas, skirtas pedagogui'

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Are you getting the hang of how to use function blocks? Let's modify this square so that it is 200 pixels in size. Hint: click on \"edit\" to change the size of the \"draw a square\" function editor. Remember to click on \"save and close\" to get out of the function editor. ",
+    "instructions": "Are you getting the hang of how to use function blocks? Let's modify this square so that it is 200 pixels in size. Hint: click on \"edit\" to enter the \"draw a square\" function editor. Remember to click on \"Close\" to get out of the function editor. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -23,7 +23,7 @@
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"edit_function\",\r\n  \"callout_text\": \"Click here to edit your function.\",\r\n  \"element_id\": \"#edit_function_qtip > .blocklyIconGroup:eq(-1)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
-    "markdown_instructions": "Are you getting the hang of how to use function blocks? Let's modify this square so that it is 200 pixels in size. \r\n\r\n*Hint: click on \"edit\" to change the size of the `draw a square` function editor.*\r\n\r\nRemember to click on \"save and close\" to get out of the function editor. \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Are you getting the hang of how to use function blocks? Let's modify `draw a square` so that it draws squares that are 200 pixels in size. \r\n\r\n*Hint: click on `edit` to enter the `draw a square` function editor.*\r\n\r\nRemember to click on `Close` to get out of the function editor. \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,7 +39,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" id="edit_function_qtip">
+            <block type="procedures_callnoreturn" id="edit_function_qtip" deletable="false" movable="false">
               <mutation name="draw a square"/>
             </block>
           </next>

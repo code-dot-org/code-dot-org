@@ -216,6 +216,7 @@
   homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
   homepage_signpetition_dropdown: Teken onze petitie &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org en de College Board vormen een alliantie ter
     verbetering van de diversiteit in de informatica.
   homepage_banner_text_link: Leer meer
@@ -544,6 +545,8 @@
   educator_notes: Opvoeder notities
   how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: Deelnemers
   teachers_notes: Leraar-nota's
   teachers_notes_hoc: 'Leerkrachten: Lees belangrijke nota''s voor leerkrachten hier'

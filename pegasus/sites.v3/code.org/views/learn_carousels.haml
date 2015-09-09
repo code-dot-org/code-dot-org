@@ -2,7 +2,7 @@
 
 -if variation == 'learn'
   #rightbox.desktop-feature{:style=>'float:right'}
-    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:educator_notes)
+    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:how_to_teach_hoc)
     %br/
     %br/
 
@@ -38,11 +38,14 @@
 -if variation == 'learn'
   %h1 
     %a{:href=>"http://hourofcode.com/resources/how-to"}
-      = I18n.t(:educator_notes)
+      = I18n.t(:how_to_teach_hoc)
 
 -if variation == 'beyond'
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
+  %br
+  %a{:href=>"https://docs.google.com/document/d/1rWq7Bvr72bDjnT7tGXNPcJxizpNLbuEBmal-5vgTXag/pub"}
+    = I18n.t(:beyond_submission)
 
 :javascript
 

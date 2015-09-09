@@ -1,6 +1,6 @@
 title 'Computer Science in Algebra PD'
-description "CS in Algebra blended online school year study"
-description_short "CS in Algebra blended online school year study"
+description "Online study to prepare for your next in-person PD"
+description_short "Online study to prepare for your next in-person PD"
 login_required 'true'
 pd 'true'
 
@@ -14,3 +14,16 @@ stage 'Updates - The Big Game and Projects'
 level 'PDAlg Big Game'
 level 'PDAlg Big Game Remix'
 level 'PDAlg Big Game History'
+level 'PDAlg Projects'
+
+stage 'Updates - The Design Recipe'
+level 'PDAlg Design Recipe Updates'
+level 'PDAlg Design Recipe Examples'
+level 'PDAlg Design Recipe Required'
+level 'PDAlg Design Recipe Delete'
+
+stage 'Lesson Prep'
+level 'PDAlg Prep a Lesson'
+level 'PDAlg Prep on Paper'
+level 'PDAlg Prep Sandbox'
+level 'Lesson Prep Final'

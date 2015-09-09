@@ -40,10 +40,9 @@ Quarter 4: Saturday, April 2, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-<br/><br/>
-**Location**
 
-<b>Quarter 1: September 19th</b><br/>
+
+<b>September 19th Location</b><br/>
 IDLP Building<br/>
 Room 118<br/>
 3950 Pecos-McLeod Interconnect<br/>

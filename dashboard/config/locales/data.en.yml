@@ -429,6 +429,8 @@ en:
         'C4_variables_artist' : 'Variables - Artist'
         'C4_variables_playlab' : 'Variables - Play Lab'
         'C4_for_loops' : 'For Loops'
+        'C4_for_loops_bee' : 'For Loops'
+        'C4_for_loops_no_bee' : 'For Loops'
         'C4_math_artist' : 'Programming the Artist with Math'
         'C4_function_edit' : 'Editing Functions'
         'C4_function_create' : 'Creating Functions'

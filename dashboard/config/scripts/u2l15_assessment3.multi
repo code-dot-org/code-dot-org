@@ -9,3 +9,8 @@ wrong 'They are not - humans are better as breaking Vigenere encryptions than co
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Computers are faster than humans.
+MARKDOWN
