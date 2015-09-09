@@ -1992,7 +1992,7 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
 
   var element = React.createElement(Alert, reactProps);
   React.render(element, container[0]);
-}
+};
 
 /**
  * If the current project is considered abusive, display a small alert box
@@ -2002,10 +2002,12 @@ StudioApp.prototype.displayAlert = function (parentSelector, props) {
 StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
   if (dashboard.project.exceedsAbuseThreshold()) {
     this.displayAlert(parentSelector, {
-      body: <dashboard.AbuseError i18n={{
-        tos: window.dashboard.i18n.t('project.abuse.tos'),
-        contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
-      }}/>,
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+        }
+      }),
       style: {
         top: 45,
         left: 350,
