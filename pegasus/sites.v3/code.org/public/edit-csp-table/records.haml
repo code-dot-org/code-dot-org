@@ -38,6 +38,10 @@ content-type: text/ng-template
     %span
       %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"}
         Import
+      %br
+      %a{href: "{{'/v3/export-shared-tables/' + channelId + '/' + tableName}}"}
+        Export as CSV
+
       %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
         %input{"name" => "import_file", "type" => "file"}
         %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
