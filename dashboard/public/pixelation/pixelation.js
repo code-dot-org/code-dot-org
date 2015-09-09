@@ -434,9 +434,9 @@ function changeVal(elementID) {
 }
 
 function setSliders() {
-  heightRange.value = Math.max(heightText.value, 1);
-  widthRange.value = Math.max(widthText.value, 1);
-  bitsPerPixelRange.value = Math.max(bitsPerPixelText.value, 1);
+  heightRange.value = heightText.value >= 1 ? heightText.value : 1;
+  widthRange.value = widthText.value >= 1 ? widthText.value : 1;
+  bitsPerPixelRange.value = bitsPerPixelText.value >= 1 ? bitsPerPixelText.value : 1;
 
   if (options.version != '1') {
     updateBinaryDataToMatchSliders();
