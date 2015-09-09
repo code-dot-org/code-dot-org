@@ -11,7 +11,7 @@
 #  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
-#  properties      :text
+#  properties      :text(65535)
 #
 # Indexes
 #
