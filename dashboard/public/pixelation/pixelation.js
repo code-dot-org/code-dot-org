@@ -437,6 +437,8 @@ function changeVal(elementID) {
 }
 
 function setSliders() {
+  // Be sure to give the range slider a numerical value even if the text
+  // input field is somehow non-numerical.
   heightRange.value = heightText.value >= 1 ? heightText.value : 1;
   widthRange.value = widthText.value >= 1 ? widthText.value : 1;
   bitsPerPixelRange.value = bitsPerPixelText.value >= 1 ? bitsPerPixelText.value : 1;
