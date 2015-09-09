@@ -690,9 +690,34 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   this.bitCounter_ = rootDiv.find('.bit-counter');
 };
 
+/**
+ * Special update method called during send animation that changes the editor
+ * display to show each field left-truncated at an appropriate amount for the
+ * simulated send progress.
+ *
+ * This works differently for different fields:
+ *  - Binary and A/B fields send a single bit at a time.
+ *  - Hex sends a single hex digit at a time, but at the correct slower rate.
+ *  - Decimal and ASCII send one chunk at a time, which depends on the current
+ *    chunk size, and is adjusted to the correct slower rate as well.  For
+ *    ASCII this maps to one character at a time.  For decimal, it's one
+ *    whitespace-delimited number.
+ *
+ * This avoids the jumbled effect of reinterpreting nonbinary fields using
+ * misaligned binary, and communicates in a visual way that it takes longer to
+ * send a single character than it does to send a single bit.
+ *
+ * This method is also designed to send the packet header fields in sequence
+ * before sending the packet body.  Body binary is never seen in the header
+ * fields, each field is treated as an independent space.
+ * @private
+ */
 NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
+
+  // There may be potential for performance optimization here, but it's not
+  // particularly high on our perf list right now.
 
   var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(level.addressFormat,
@@ -831,8 +856,6 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       field.inputElement.removeClass('watermark');
     }
   });
-
-  this.updateBitCounter();
 };
 
 /**
