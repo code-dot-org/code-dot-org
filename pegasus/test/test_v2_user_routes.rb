@@ -17,6 +17,7 @@ class V2UserRoutesTest < Minitest::Test
   describe 'User Routes' do
     before do
        use_fake_database
+       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
     end
 
