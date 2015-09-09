@@ -20,7 +20,7 @@
 /* global require */
 /* global exports */
 
-require('../utils'); // For String.prototype.repeat polyfill
+var utils = require('../utils'); // For String.prototype.repeat polyfill
 var NetSimUtils = require('./NetSimUtils');
 
 // window.{btoa, atob} polyfills
@@ -80,17 +80,28 @@ exports.minifyBinary = function (binaryString) {
  * a set size separated by a space.
  * @param {string} binaryString - may be unformatted already
  * @param {number} chunkSize - how many bits per format chunk
+ * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} pretty formatted binary string
  */
-exports.formatBinary = function (binaryString, chunkSize) {
+exports.formatBinary = function (binaryString, chunkSize, offset) {
+  offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
 
   var binary = exports.minifyBinary(binaryString);
 
+  var forwardOffset = offset % chunkSize;
+  if (forwardOffset < 0) {
+    forwardOffset += chunkSize;
+  }
+
   var chunks = [];
-  for (var i = 0; i < binary.length; i += chunkSize) {
+  if (forwardOffset > 0) {
+    chunks.push(binary.substr(0, forwardOffset));
+  }
+
+  for (var i = forwardOffset; i < binary.length; i += chunkSize) {
     chunks.push(binary.substr(i, chunkSize));
   }
 
