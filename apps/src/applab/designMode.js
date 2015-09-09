@@ -108,6 +108,14 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
+ * Given an input value produce a valid css value that is
+ * either in pixels or empty.
+ */
+var appendPx = function (inp) {
+  return inp ? inp + 'px' : '';
+};
+
+/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
@@ -123,22 +131,25 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'left':
-      element.style.left = value + 'px';
-      element.parentNode.style.left = value + 'px';
+      var newLeft = appendPx(value);
+      element.style.left = newLeft;
+      element.parentNode.style.left = newLeft;
       break;
     case 'top':
-      element.style.top = value + 'px';
-      element.parentNode.style.top = value + 'px';
+      var newTop = appendPx(value);
+      element.style.top = newTop;
+      element.parentNode.style.top = newTop;
       break;
     case 'width':
-      element.setAttribute('width', value + 'px');
+      element.setAttribute('width', appendPx(value));
       break;
     case 'height':
-      element.setAttribute('height', value + 'px');
+      element.setAttribute('height', appendPx(value));
       break;
     case 'style-width':
-      element.style.width = value + 'px';
-      element.parentNode.style.width = value + 'px';
+      var newWidth = appendPx(value);
+      element.style.width = newWidth;
+      element.parentNode.style.width = newWidth;
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -146,8 +157,9 @@ designMode.onPropertyChange = function(element, name, value) {
       }
       break;
     case 'style-height':
-      element.style.height = value + 'px';
-      element.parentNode.style.height = value + 'px';
+      var newHeight = appendPx(value);
+      element.style.height = newHeight;
+      element.parentNode.style.height = newHeight;
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -164,7 +176,7 @@ designMode.onPropertyChange = function(element, name, value) {
       element.style.backgroundColor = value;
       break;
     case 'fontSize':
-      element.style.fontSize = value + 'px';
+      element.style.fontSize = appendPx(value);
       break;
 
     case 'image':

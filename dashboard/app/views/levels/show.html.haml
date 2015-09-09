@@ -23,9 +23,6 @@
   :javascript
     var appOptions = #{app_options.to_json};
     dashboard.createCallouts(appOptions.callouts);
-    if (appOptions.autoplayVideo) {
-      showVideoDialog(appOptions.autoplayVideo);
-    }
   - if @level.is_a?(Widget)
     = render partial: 'levels/widget'
   - else

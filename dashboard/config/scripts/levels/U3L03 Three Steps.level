@@ -30,7 +30,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Draw 3 \"steps\" moving up and to the right.  Notice the pattern in the movement. You should define a function called drawStep() which draws one of the steps, and then call it 3 times to achieve the effect.",
+    "instructions": "Define a function called drawSide() which draws three steps and moves the turtle to prepare for the next side (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -45,16 +45,19 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "app_width": "300",
-    "app_height": "300",
+    "app_width": "320",
+    "app_height": "480",
     "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "encrypted_examples": "Z5Dz+CRFReW37iHbovWgAhZZr6Gg9ihU9Kh9/lLrteUkP7LNASIzruazkHuZ\n1MEt\n",
+    "markdown_instructions": "###Challenge\r\n<img src=\"https://images.code.org/5f20ab5fd8b95754e8cfc948a4b41522-image-1441772307480.png\" align=right width=200>\r\nWe are going to continue to build up towards a diamond by **defining** a function that draws one side of the diamond.\r\nIf you look at the whole image we are trying to draw you'll noice that each of 4 sides is comprised of 3 drawSteps() plus a moveForward() and turnRight();\r\n\r\nRight now we'll write the code for one of those sides. So...\r\n\r\n**Define** a new function called `drawSide()` which makes three calls in a row to `drawSteps()` nd then moves the turtle forward and the right (as shown in the diagram(s) below).\r\n<table>\r\n<tr>\r\n<td>![](https://images.code.org/480f6787e4d2daf34d67642e25b29de6-image-1441772552026.png) </td>\r\n<td>![](https://images.code.org/02f52d406854d6f86535adf2f593ccc9-image-1441772709549.gif) </td>\r\n</tr>\r\n</table>\r\n\r\n\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

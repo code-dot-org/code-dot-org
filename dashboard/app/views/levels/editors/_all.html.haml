@@ -11,6 +11,7 @@
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
   = f.collection_select :concept_ids, Concept.cached, :id, :name, { :selected => @level.concept_ids }, { :multiple => true, :name => 'level[concept_ids][]', :size => Concept.cached.length }
+
 :javascript
   function make_selection_handler(flag) {
     return function (e) {
@@ -20,6 +21,15 @@
   }
   $('.select_all').click(make_selection_handler(true));
   $('.select_none').click(make_selection_handler(false));
+
+:css
+  textarea {
+    width: 100%
+  }
+
+  button {
+    font-size: 100%;
+  }
 
 .field
   = f.label :video_key, 'Level Video'

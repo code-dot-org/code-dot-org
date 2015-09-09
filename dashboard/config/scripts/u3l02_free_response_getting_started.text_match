@@ -1,9 +1,13 @@
 name 'U3L02 Free Response Getting Started'
-title 'Programming with Simple Commands: Getting Started'
+title 'Programming with Simple Commands: Why limit to 4?'
 
 markdown <<MARKDOWN
-Today, you will give the computer simple commands to draw basic geometric shapes on the screen. 
-Think about giving someone instructions to draw shapes in the sand by marching on the beach. 
+Today we solved a series of problems with a limited set of commands (only 4).  Give at least one reason why it's useful to learn how to solve, and program solutions to problems with a limited set of commands.  
+MARKDOWN
 
-What commands you would need to include in a set of basic statements that would instruct the person to create simple geometric shapes in the sand?
+teacher_markdown <<MARKDOWN
+* Learning to program isn’t just a matter of memorizing commands.  The art of programming is always about understanding how to use the features of a programming language to solve a problem.  
+
+* Whether you know 4 commands of a language or hundreds, you will always be constrained by the programming language. The reasons you need to learn how to program is because there isn’t a command to do every little thing - you have to understand the set of things that a programming language can do, and then use your creativity and problem solving skills to get the computer to do what you want.
+
 MARKDOWN

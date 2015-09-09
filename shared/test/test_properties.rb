@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/properties_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class PropertiesTest < Minitest::Unit::TestCase
+class PropertiesTest < Minitest::Test
 
   def test_get_set_delete
     # The Properties API does not need to share a cookie jar with the Channels API.

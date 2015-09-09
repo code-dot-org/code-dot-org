@@ -57,6 +57,8 @@ Room 705 <br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043<br/>
 
+Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
@@ -114,6 +116,8 @@ Room 106 <br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043
 
+Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger
@@ -168,6 +172,8 @@ Building 100<br/>
 Room 701<br/>
 5150 Sugarloaf Parkway<br/>
 Lawrenceville, GA 30043<br/>
+
+Free parking is located in front of the main building. See  a [Campus Map here.](/images/gwinnett-tech-campus-map.pdf)
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

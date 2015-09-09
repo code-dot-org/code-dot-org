@@ -16,13 +16,21 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "true",
-    "impressive": "true",
+    "impressive": "false",
     "disable_sharing": "false",
     "start_direction": "180",
     "x": "250",
     "y": "200",
     "scrollbars": "false",
-    "min_workspace_height": "1200"
+    "min_workspace_height": "1200",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

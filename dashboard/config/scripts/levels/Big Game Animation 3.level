@@ -28,7 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 3\",\r\n  \"callout_text\": \"Edit this function to animate the danger\",\r\n  \"element_id\": \"#game_update_danger > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 3_callout1\",\r\n  \"callout_text\": \"Edit this function to animate the danger\",\r\n  \"element_id\": \"#game_update_danger > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Big Game Animation 3_callout2\",\r\n  \"callout_text\": \"Delete this block and complete the definition\",\r\n  \"element_id\": \"[block-id=\\\"76\\\"]\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "step_speed": "50",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -40,6 +40,7 @@
     "min_workspace_height": "1500",
     "disable_examples": "false",
     "markdown_instructions": "The _update-danger_ function should work just like _update-target_, except that the danger should move from the right side over towards the left.\r\n\r\nComplete _update-danger_ to make the danger fly across the screen.",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
