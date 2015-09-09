@@ -40,6 +40,17 @@ describe('Level tests', function() {
 
     window.jQuery = $;
     window.$ = $;
+    window.dashboard = $.extend(window.dashboard, {
+      i18n: {
+        t: function (selector) { return selector; }
+      },
+      // TODO - could pull from shared?
+      project: {
+        getCurrentId: function () { return 'fake_id'; },
+        exceedsAbuseThreshold: function () { return false; },
+        isEditing: function () { return true; }
+      }
+    });
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
