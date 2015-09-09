@@ -6,7 +6,7 @@ require 'mocha/mini_test'
 # mock the database connection
 # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
 require 'sequel'
-DASHBOARD_DB = Sequel.connect "mock://mysql"
+DASHBOARD_DB = Sequel.connect "mock://mysql" unless defined? DASHBOARD_DB
 DASHBOARD_DB.server_version = 50616
 # mock scripts (the first query to the db gets the scripts)
 DASHBOARD_DB.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}]

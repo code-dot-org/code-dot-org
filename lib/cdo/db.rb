@@ -18,6 +18,6 @@ def sequel_connect(writer, reader)
   db
 end
 
-PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
-POSTE_DB = PEGASUS_DB
-DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
+PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader unless defined? PEGASUS_DB
+POSTE_DB = PEGASUS_DB unless defined? POSTE_DB
+DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader unless defined? DASHBOARD_DB

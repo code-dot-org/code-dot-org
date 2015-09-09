@@ -113,7 +113,7 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  VALID_GENDERS = %w(m f)
+  VALID_GENDERS = %w(m f) unless defined? VALID_GENDERS
   def self.valid_gender?(gender)
     VALID_GENDERS.include?(gender)
   end
@@ -144,8 +144,8 @@ class DashboardStudent
     DASHBOARD_DB[:secret_words].first(id: random_id)[:word]
   end
 
-  PEPPER = CDO.dashboard_devise_pepper
-  STRETCHES = 10
+  PEPPER = CDO.dashboard_devise_pepper unless defined? PEPPER
+  STRETCHES = 10 unless defined? STRETCHES
 
   def self.encrypt_password(password)
     BCrypt::Password.create("#{password}#{PEPPER}", cost: STRETCHES).to_s
@@ -158,13 +158,13 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = %w(word picture email)
+  VALID_LOGIN_TYPES = %w(word picture email) unless defined? VALID_LOGIN_TYPES
 
   def self.valid_login_type?(login_type)
     VALID_LOGIN_TYPES.include? login_type
   end
 
-  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other']
+  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other'] unless defined? VALID_GRADES
 
   def self.valid_grade?(grade)
     VALID_GRADES.include? grade
@@ -180,7 +180,7 @@ class DashboardSection
            map { |c| [c[:id], c[:name]]}
         ]
   end
-  VALID_COURSES = load_valid_courses
+  VALID_COURSES = load_valid_courses unless defined? VALID_COURSES
   # only do this query once because in prod we only change courses
   # when deploying (technically this isn't true since we are in
   # pegasus and courses are owned by dashboard...)
