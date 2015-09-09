@@ -1,4 +1,12 @@
 /**
+ * ALERT!!!
+ * If you make changes to this, please also update the file at:
+* https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/scripts/archive/zendesk_theme_js.js
+ */
+
+ // TODO (brent) - also backup css?
+
+/**
  * Backup of theme javascript included in the support.code.org ZenDesk template
  * customizations.
  *
@@ -73,7 +81,100 @@ var populateFields = function () {
     $description.val(description);
   }
 };
+
+/**
+ * Add some text + links to the bottom of the form (just above the submit button)
+ */
+var addPrivacyPolicyTosToFooter = function () {
+  var footerLinkStyle = {
+    textDecoration: 'underline',
+    marginRight: '0px',
+    color: '#7665A0'
+  };
+  var privacyPolicyLink = $('<a href="https://code.org/privacy">')
+    .css(footerLinkStyle)
+    .text('Privacy Policy');
+  var tosLink = $('<a href="https://code.org/tos">')
+    .css(footerLinkStyle)
+    .text('Terms of Service');
+  $("<div>").css({
+      textAlign: 'left',
+      paddingBottom: '10px'
+    })
+    .append(
+      'By submitting this information, you acknowledge it will be handled in ' +
+      'accordance with the terms of the ')
+    .append(privacyPolicyLink)
+    .append(' and the ')
+    .append(tosLink)
+    .insertBefore($("#new_request footer").children(0));
+};
+
+/**
+ * Handle the case where we want a slighly different form for reporting abuse
+ */
+var populateReportAbuseForm = function () {
+  var reportAbuse = $.QueryString["reportAbuse"];
+  if (reportAbuse !== "true") {
+    return;
+  }
+
+  var ABUSE_URL = ".request_custom_fields_27733637";
+  var ABUSE_TYPE = ".request_custom_fields_27739408";
+
+  $(ABUSE_URL + ' input')
+    .val(document.referrer)
+    .prop('readonly', true)
+    .prop('disabled', true)
+    .css('background-color', '#ddd'); // chrome doesn't automatically make disabled gray
+
+  // show red required asterisk
+  $(ABUSE_TYPE).addClass('required').removeClass('optional');
+
+  $(ABUSE_TYPE).show();
+  $(ABUSE_URL).show();
+
+  // Change the message text
+  $(".request_description p")
+    .text("Please provide as much detail as possible regarding the content you are reporting.")
+    .insertBefore(".request_description textarea");
+
+  $("#new_request").on('submit', function () {
+    // We can't depend on server side validation, as it clears our query params
+    // Instead, validate required fields here
+    if ($("#request_anonymous_requester_email").val() === "") {
+      alert("Please provide an email address");
+      return false;
+    }
+
+    if ($("#request_custom_fields_24024923").val() === "") {
+      alert('Please specify an age');
+      return false;
+    }
+
+    if ($("#request_custom_fields_27739408").val() === "") {
+      alert('Please answer how this content violates the Terms of Service');
+      return false;
+    }
+
+    if ($("#request_description").val() === "") {
+      alert('Please fill in the Message field');
+      return false;
+    }
+
+    // extract channel id
+    // post to increment score
+  });
+};
+// TODO dont include in what ends up on zendesk
+populateReportAbuseForm();
+addPrivacyPolicyTosToFooter();
+
+
+
 // populate the fields when the page is ready
 $(document).ready(function () {
   populateFields();
+  populateReportAbuseForm();
+  addPrivacyPolicyTosToFooter();
 });
