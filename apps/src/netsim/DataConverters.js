@@ -58,10 +58,11 @@ exports.minifyAB = function (abString) {
  * of a set size separated by a space.
  * @param {string} abString
  * @param {number} chunkSize
+ * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} formatted version
  */
-exports.formatAB = function (abString, chunkSize) {
-  return exports.formatBinary(exports.abToBinary(abString), chunkSize)
+exports.formatAB = function (abString, chunkSize, offset) {
+  return exports.formatBinary(exports.abToBinary(abString), chunkSize, offset)
       .replace(/0/g, 'A')
       .replace(/1/g, 'B');
 };

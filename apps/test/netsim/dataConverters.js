@@ -90,6 +90,21 @@ describe("DataConverters", function () {
       assertThrows(RangeError, formatAB.bind(null, '', 0));
       assertThrows(RangeError, formatAB.bind(null, '', -1));
     });
+
+    it ("respects optional 'offset' argument", function () {
+      var rawABs = "AAAABBBBAAAABBBB";
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, -5));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, -4));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, -3));
+      assertEqual('AA AABB BBAA AABB BB', formatAB(rawABs, 4, -2));
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, -1));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, 0));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, 1));
+      assertEqual('AA AABB BBAA AABB BB', formatAB(rawABs, 4, 2));
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, 3));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, 4));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, 5));
+    });
   });
 
   describe("abToInt", function () {
