@@ -1,12 +1,13 @@
 ---
 layout: none
 theme: none
+content-type: text/plain
 ---
 
 :scss
   .records {
     table {
-      width: 850px; 
+      width: 850px;
       table-layout: auto;
     }
     th {
@@ -33,15 +34,15 @@ theme: none
   %h2
     Viewing table: {{tableName}}
 
-  %div 
+  %div
     %span
-      %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"} 
+      %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"}
         Import
       %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
         %input{"name" => "import_file", "type" => "file"}
         %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
-  %br        
-  %div 
+  %br
+  %div
     %span
       %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
       %input{"ng-model" => "newColumnName"}
