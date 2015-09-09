@@ -94,10 +94,6 @@ def hoc_detect_language()
   nil
 end
 
-def hoc_uri(uri)
-  File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
-end
-
 def chapter_partner?
   return %w(al ar br eu italia ro sg uk za).include?(@country)
 end
