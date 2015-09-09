@@ -50,6 +50,24 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_delete
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    records = read_records
+    assert_equal records.length, 2
+
+    delete_table
+
+    records = read_records
+
+    assert_equal records.length, 0
+    delete_channel
+  end
+
   def test_export
     init_apis
     create_channel
@@ -118,4 +136,9 @@ class TablesTest < Minitest::Test
   def export()
     @tables.get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
+
+  def delete_table()
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
 end
