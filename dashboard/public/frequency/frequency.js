@@ -34,7 +34,7 @@ var ENGLISH = {
 
 // Debounce function, courtesy of
 // http://davidwalsh.name/function-debounce
-// Currently, used exclusively for window resize.
+// Currently unused.
 var debounce = function (func, wait, immediate) {
   var timeout;
   return function () {
@@ -51,27 +51,64 @@ var debounce = function (func, wait, immediate) {
   };
 };
 
+/**
+ * @typedef {Object} UserData
+ * @property {string} letter - the single uppercase alphabetical
+ *                    character this data point represents
+ * @property {number} frequency - a value between 0 and 1 representing
+ *                    the relative frequency of this character in the
+ *                    user input.
+ * @property {boolean} locked - whether or not this value has been
+ *                     bound (semi-) permanently to a corresponding
+ *                     english letter
+ */
+
+/**
+ * @typedef {Object} EnglishData
+ * @property {string} letter - the single uppercase alphabetical
+ *                    character this data point represents
+ * @property {number} frequency - a value between 0 and 1 representing
+ *                    the relative frequency of this character in
+ *                    standard english
+ */
+
+/**
+ * Master class for rendering the bar graph, including all interactive
+ * components
+ *
+ * @param {!Object} options
+ * @param {!JQuery} options.chart_container - the DOM element into which
+ *                  we will render the bar chart
+ * @param {!JQuery} options.text_input - the DOM element from which we
+ *                  will read user input
+ * @param {!JQuery} options.text_output - the DOM element into which we
+ *                  will write generated output
+ * @constructor
+ */
 var BarGraph = function (options) {
 
   /* DOM stuff */
+
+  /** @type {Object} */
   this.margin = {
     top: 10,
-    right: 10,
-    bottom: 64,
+    right: 0,
+    bottom: 68,
     left: 40
   };
 
+  /** @type {D3.selection} */
   this.container = d3.select(options.chart_container.get(0));
 
+  /** @type {JQuery} */
   this.text_input = options.text_input;
 
+  /** @type {JQuery} */
   this.text_output = options.text_output;
 
-  /* Events */
   this.text_input.on("input", this.processPlainText.bind(this));
-  //this.text_input.on("keyup", this.processSubstitutions.bind(this));
 
-  /* Data */
+  /** @type {Array.UserData} */
   this.user_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
@@ -80,6 +117,7 @@ var BarGraph = function (options) {
     };
   });
 
+  /** @type {Array.EnglishData} */
   this.english_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
@@ -87,38 +125,76 @@ var BarGraph = function (options) {
     };
   });
 
-  /* D3 */
-  // We use two scales because we have two domain orderings
   var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
+
+  /** @type {D3.scale} */
   this.userLetterScale = letterScale.copy().domain(LETTERS);
+
+  /** @type {D3.scale} */
   this.englishLetterScale = letterScale.copy().domain(LETTERS);
 
+  /** @type {D3.scale} */
   this.freqeuncyScale = d3.scale.ordinal()
     .domain([0, 1])
     .rangeRoundBands([0, this.userLetterScale.rangeBand()]);
 
+  /** @type {D3.scale} */
   this.yScale = d3.scale.linear().range([this.getHeight(), 0]);
 
+  /** @type {D3.axis} */
   this.xAxis = d3.svg.axis()
     .scale(this.englishLetterScale)
     .orient("bottom");
 
+  /** @type {D3.axis} */
   this.yAxis = d3.svg.axis()
     .scale(this.yScale)
     .orient("left")
     .ticks(5, "%");
 
+  /** @type {D3.selection} */
+  this.svg = this.container.append("svg").attr({
+      "width": this.getWidth() + this.margin.left + this.margin.right,
+      "height": this.getHeight() + this.margin.top + this.margin.bottom
+    }).append("g")
+    .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
+  /** @type {D3.behavior} */
+  this.drag = this.createDragBehavior();
+
+  this.buildSVG();
 };
 
+/**
+ * Getter that calculates the height of the graph, taking into acount
+ * margins for UI elements.
+ * @returns {number} The height of the graph
+ */
 BarGraph.prototype.getHeight = function () {
   return this.container.property("offsetHeight") - this.margin.top - this.margin.bottom;
 };
 
+/**
+ * Getter that calculates the width of the graph, taking into acount
+ * margins for UI elements.
+ * @returns {number} The width of the graph
+ */
 BarGraph.prototype.getWidth = function () {
   return this.container.property("offsetWidth") - this.margin.left - this.margin.right;
 };
 
+/**
+ * @typedef {Object} ZippedData
+ * @property {user} UserData
+ * @property {english} Englishdata
+ */
+
+/**
+ * Getter that combines the two authoritative data sources
+ * (this.user_data and this.english_data) into a single list. Used to
+ * render the bars.
+ * @returns {Array.ZippedData}
+ */
 BarGraph.prototype.getZippedData = function (override) {
   var user_data = override || this.user_data;
   return user_data.map(function (_, i) {
@@ -129,6 +205,18 @@ BarGraph.prototype.getZippedData = function (override) {
   }, this);
 };
 
+/**
+ * Getter that examines both User and English data in the current order
+ * to return a mapping from User Data to English Data, with awareness of
+ * which points are locked and which are not.
+ * @returns {Object}  {
+ *                      user_letter: {
+ *                        letter: english_letter,
+ *                        locked: boolean
+ *                      },
+ *                      ...
+ *                    }
+ */
 BarGraph.prototype.getSubstitutionMap = function () {
   return this.user_data.reduce(function (map, d, i) {
     map[d.letter] = {
@@ -139,21 +227,19 @@ BarGraph.prototype.getSubstitutionMap = function () {
   }.bind(this), {});
 };
 
-BarGraph.prototype.updateSubstitutionMap = function (substMap) {
-  this.english_data = this.user_data.map(function (d) {
-    return {
-      letter: substMap[d.letter],
-      frequency: ENGLISH[substMap[d.letter]]
-    };
-  });
-  this.render();
-};
-
+/**
+ * Helper method to process changes to user input. First updates the
+ * user frequency graph, then updates the output.
+ */
 BarGraph.prototype.processPlainText = function () {
   this.updateUserDataFromInput();
   this.processSubstitutions();
 };
 
+/**
+ * Method to populate the output based on the input and the user-defined
+ * substitutions
+ */
 BarGraph.prototype.processSubstitutions = function () {
   var input = this.text_input.val();
 
@@ -187,6 +273,11 @@ BarGraph.prototype.processSubstitutions = function () {
   this.text_output.html("<div>" + output + "</div>");
 };
 
+/**
+ * Builds a mapping from letters in the input to relative frequencies
+ * from 0 to 1
+ * @returns {Object} { user_letter: count, ... }
+ */
 BarGraph.prototype.buildInputFrequencyMap = function () {
   var inputString = this.text_input.val().replace(/[^A-Za-z]/g, "").toUpperCase();
   var totalCharCount = inputString.length;
@@ -217,6 +308,9 @@ BarGraph.prototype.buildInputFrequencyMap = function () {
   return freqMap;
 };
 
+/**
+ * Updates this.user_data to reflect frequency changes
+ */
 BarGraph.prototype.updateUserDataFromInput = function () {
   var frequency_map = this.buildInputFrequencyMap();
   this.user_data.forEach(function (d) {
@@ -225,6 +319,10 @@ BarGraph.prototype.updateUserDataFromInput = function () {
   this.render();
 };
 
+/**
+ * Visually animate reordering the columns of the bar chart.
+ * Called by handleSortChange, shift, randomize, and drag.
+ */
 BarGraph.prototype.reorder = function () {
 
   this.svg.selectAll('.letter').data(this.getZippedData());
@@ -281,6 +379,13 @@ BarGraph.prototype.reorder = function () {
 
 };
 
+/**
+ * Event handler for a button.click event intended to toggle the sorting
+ * of the English data between A-Z ordering and Frequency ordering.
+ * Sorts both this.english_data and this.user_data while preserving the
+ * mapping between them.
+ * @param {event} changeEvent
+ */
 BarGraph.prototype.handleSortChange = function (changeEvent) {
   var sortFun;
   var sortType = changeEvent.target.value;
@@ -316,13 +421,14 @@ BarGraph.prototype.handleSortChange = function (changeEvent) {
   this.reorder();
 };
 
-BarGraph.prototype.resize = function () {
-  this.container.select('svg').attr({
-    "width": this.getWidth() + this.margin.left + this.margin.right,
-    "height": this.getHeight() + this.margin.top + this.margin.bottom
-  });
-};
-
+/**
+ * Generates a drag behavior intended to be used on the user letters so
+ * the user can swap two of them at a time to create a substitution
+ * mapping. Takes locked letters into account, animates the proposed
+ * swap while dragging is happening, and finalizes the swap once
+ * dragging stops.
+ * @returns {D3.behavior}
+ */
 BarGraph.prototype.createDragBehavior = function () {
   var drag = d3.behavior.drag();
 
@@ -358,8 +464,8 @@ BarGraph.prototype.createDragBehavior = function () {
     this.svg.classed("dragging", true);
 
     /* find the source */
-    // we can't trust the index passed in here, because it doesn't count
-    // the locked letters.
+    // we can't trust the index passed to this function, because it
+    // doesn't count the locked letters.
     var i = this.userLetterScale.domain().indexOf(d.user.letter);
 
     /* move the source */
@@ -422,17 +528,22 @@ BarGraph.prototype.createDragBehavior = function () {
   return drag;
 };
 
+/**
+ * Clears any existing drag behavior, and reapplies this.drag to the
+ * unlocked draggable letters
+ */
 BarGraph.prototype.refreshDragBehavior = function () {
   this.svg.select('.x1.axis').selectAll('.dragletter').on(".drag", null);
   this.svg.select('.x1.axis').selectAll('.dragletter:not(.locked)').call(this.drag);
 };
 
-BarGraph.prototype.init = function () {
-  this.svg = this.container.append("svg")
-    .append("g")
-    .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-
-  this.resize();
+/**
+ * Manually constructs the majority of the SVG graph, including
+ * interactive elements. This block of code is almost entirely creating
+ * DOM elements and hooking up a couple of event listeners, and could
+ * hopefully be replaced by some cleaner markup processor.
+ */
+BarGraph.prototype.buildSVG = function () {
 
   this.svg.append("g")
     .attr({
@@ -539,13 +650,19 @@ BarGraph.prototype.init = function () {
     this.processSubstitutions();
   }.bind(this));
 
-  this.drag = this.createDragBehavior();
   this.refreshDragBehavior();
 
 };
 
+/**
+ * Reorders this.user_data to represent a shifted alphabetic ordering.
+ * If the user has locked any letters, confirms with the user then
+ * clears the locks.
+ * @param {number} amt - amount to shift by
+ * @returns {boolean} whether the shift was successful. Should only be
+ *                    true if the user canceled out of the confirmation
+ */
 BarGraph.prototype.shift = function (amt) {
-
   var some_locked = this.user_data.some(function (d) {
     return d.locked;
   });
@@ -573,11 +690,12 @@ BarGraph.prototype.shift = function (amt) {
   return true;
 };
 
+/**
+ * Randomizes this.user_data. Uses a modified Fisher-Yates shuffle
+ * (inspired by http://bost.ocks.org/mike/shuffle/) to perform an inline
+ * shuffle of this.user_data while respecting locked letters.
+ */
 BarGraph.prototype.randomize = function () {
-
-  /* Modified Fisher-Yates shuffle
-   * inspired by http://bost.ocks.org/mike/shuffle/
-   */
 
   var unlocked_indexes = this.user_data.reduce(function (unlocked_indexes, d, i) {
     if (!d.locked) {
@@ -610,6 +728,13 @@ BarGraph.prototype.randomize = function () {
   this.reorder();
 };
 
+/**
+ * Renders (or rerenders) the graph. Called in response to most data
+ * changes.
+ * @returns boolean - whether or not the render was successful. SHould
+ *                    only fail if called before initialization was
+ *                    complete.
+ */
 BarGraph.prototype.render = function () {
   if (!this.svg || !this.user_data || !this.english_data) {
     return false;
@@ -670,7 +795,6 @@ $(document).ready(function () {
     text_output: $("#output"),
     chart_container: $("#d3chart")
   });
-  bg.init();
   bg.render();
 
   /*
