@@ -288,6 +288,41 @@ describe("DataConverters", function () {
       assertThrows(RangeError, formatHex.bind(null, '', 0));
       assertThrows(RangeError, formatHex.bind(null, '', -1));
     });
+
+    it ("respects optional 'offset' argument at aligned chunk sizes", function () {
+      var rawBinary = "ABCDEF";
+      // At 8 bits
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, -3));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, -2));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, -1));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, 0));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, 1));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, 2));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, 3));
+
+      // At 12 bits
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, -4));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, -3));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, -2));
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, -1));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, 0));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, 1));
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, 2));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, 3));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, 4));
+    });
+
+    it ("ignores 'offset' at nonaligned chunk sizes", function () {
+      var rawBinary = "ABCDEF";
+      // At 5 bits
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -3));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -2));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -1));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 0));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 1));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 2));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 3));
+    });
   });
 
   describe("alignDecimal", function () {

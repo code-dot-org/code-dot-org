@@ -809,7 +809,8 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
     liveFields.push({
       inputElement: this.a_and_bUI.message,
-      newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits), chunkSize, -truncatedBits),
+      newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits),
+          chunkSize, -truncatedBits),
       watermark: netsimMsg.a_and_b()
     });
   }
@@ -817,7 +818,8 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
       inputElement: this.binaryUI.message,
-      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize, -truncatedBits),
+      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize,
+          -truncatedBits),
       watermark: netsimMsg.binary()
     });
   }
@@ -826,7 +828,8 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
     var truncatedHexDigits = Math.floor(truncatedBits / 4);
     liveFields.push({
       inputElement: this.hexadecimalUI.message,
-      newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits), chunkSize),
+      newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits),
+          chunkSize, -truncatedHexDigits),
       watermark: netsimMsg.hexadecimal()
     });
   }

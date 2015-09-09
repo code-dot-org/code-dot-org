@@ -92,17 +92,17 @@ exports.formatBinary = function (binaryString, chunkSize, offset) {
 
   var binary = exports.minifyBinary(binaryString);
 
-  var forwardOffset = offset % chunkSize;
-  if (forwardOffset < 0) {
-    forwardOffset += chunkSize;
+  var firstChunkLength = offset % chunkSize;
+  if (firstChunkLength < 0) {
+    firstChunkLength += chunkSize;
   }
 
   var chunks = [];
-  if (forwardOffset > 0) {
-    chunks.push(binary.substr(0, forwardOffset));
+  if (firstChunkLength > 0) {
+    chunks.push(binary.substr(0, firstChunkLength));
   }
 
-  for (var i = forwardOffset; i < binary.length; i += chunkSize) {
+  for (var i = firstChunkLength; i < binary.length; i += chunkSize) {
     chunks.push(binary.substr(i, chunkSize));
   }
 
@@ -132,9 +132,11 @@ exports.minifyDecimal = function (decimalString) {
  * a set size separated by a space.
  * @param {string} hexString
  * @param {number} chunkSize - in bits!
+ * @param {number} [offset] hex-digit-offset for formatting effect; default 0.
  * @returns {string} formatted hex
  */
-exports.formatHex = function (hexString, chunkSize) {
+exports.formatHex = function (hexString, chunkSize, offset) {
+  offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
@@ -147,8 +149,17 @@ exports.formatHex = function (hexString, chunkSize) {
   var hexChunkSize = chunkSize / 4;
   var hex = exports.minifyHex(hexString);
 
+  var firstChunkLength = offset % hexChunkSize;
+  if (firstChunkLength < 0) {
+    firstChunkLength += hexChunkSize;
+  }
+
   var chunks = [];
-  for (var i = 0; i < hex.length; i += hexChunkSize) {
+  if (firstChunkLength > 0) {
+    chunks.push(hex.substr(0, firstChunkLength));
+  }
+
+  for (var i = firstChunkLength; i < hex.length; i += hexChunkSize) {
     chunks.push(hex.substr(i, hexChunkSize));
   }
 
