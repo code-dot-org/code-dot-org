@@ -8,9 +8,6 @@ require 'mocha/mini_test'
 require 'sequel'
 DASHBOARD_DB = Sequel.connect "mock://mysql" unless defined? DASHBOARD_DB
 DASHBOARD_DB.server_version = 50616
-# mock scripts (the first query to the db gets the scripts)
-DASHBOARD_DB.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}]
-
 
 # stuff we're testing
 require_relative '../helpers/section_api_helpers'
@@ -41,6 +38,11 @@ class SectionApiHelperTest < Minitest::Test
     end
 
     describe 'valid courses' do
+      before do
+        # mock scripts (the first query to the db gets the scripts)
+        DASHBOARD_DB.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}]
+      end
+
       it 'accepts valid course_ids' do
         assert DashboardSection.valid_course_id?('1')
         assert DashboardSection.valid_course_id?('3')
