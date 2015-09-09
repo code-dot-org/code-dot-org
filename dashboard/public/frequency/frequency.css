@@ -134,10 +134,6 @@
  * Global Stuff
  */
 
-button {
-  text-transform: capitalize;
-}
-
 .btn-group .btn {
   margin-right: 0;
 }
