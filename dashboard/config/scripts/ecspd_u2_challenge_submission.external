@@ -1,0 +1,12 @@
+name 'ECSPD U2 Challenge Submission'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Submit it
+
+Submit It
+You may not be ready to post it now but know the link is here
+Post it on the forum thread
+Upload any resources you have created
+Add them to the folder as well!
+
+MARKDOWN

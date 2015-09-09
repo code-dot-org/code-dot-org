@@ -165,6 +165,7 @@ en:
       ECS Phase 3 Welcome: {}
       ECSPD Challenge Intro: {}
       ECSPD Find Learning Strategy: {}
+      ECSPD Growth Mindset Student Video: {}
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -226,10 +227,16 @@ en:
       ECSPD Phase 3 - Unit 2 - Teaching Practice: {}
       ECSPD Phase 3 - Unit 3 - Teaching Practice: {}
       ECSPD Phase 3 - Unit 4 - Teaching Practice: {}
+      ECSPD Pick Challenge: {}
       ECSPD Problem Solving Strategies: {}
       ECSPD Real Life Problem Solving: {}
       ECSPD Teaching Strategies Intro: {}
       ECSPD U1Conclusion: {}
+      ECSPD U2 Challenge Plan:
+        description here: description here
+        title: title
+      ECSPD U2 Challenge Submission: {}
+      ECSPD U2 Challenges: {}
       ECSPD U2 D 1-2: {}
       ECSPD U2 D 10-12 Intro: {}
       ECSPD U2 D 13-14 Intro: {}
@@ -268,6 +275,7 @@ en:
       ECSPD Unit 2 Intro: {}
       ECSPD Unit 2 Lesson Overview: {}
       ECSPD What Is Problem Solving: {}
+      ECSPD What is the Challenge: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -2860,13 +2868,21 @@ en:
         Spread 1 slice with jelly: Spread 1 slice with jelly
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
+      U3L03 - multiselect - properties of functions:
+        Choose Two - Things about functions: Choose Two - Things about functions
+        Chose the two (2) statements that are true about functions: Chose the two (2) statements that are true about functions
+        Functions in programming are a named grouping of programming instructions.: Functions in programming are a named grouping of programming instructions.
+        Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
+        Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
+        Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
       U3L03 Assessment:
-        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
-        Descriptive procedure names make the program code easier to read.: Descriptive procedure names make the program code easier to read.
-        They can be used to replace repetitive portions of a program.: They can be used to replace repetitive portions of a program.
-        They help break programs up into logical chunks.: They help break programs up into logical chunks.
-        They make the program easier for the computer to understand.: They make the program easier for the computer to understand.
-        Which of the following is NOT a true statement about procedures?: Which of the following is NOT a true statement about procedures?
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer: Functions cannot make calls to other functions written by the same programmer
+        Functions help break a problem into logical chunks: Functions help break a problem into logical chunks
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Multiple Choice - Things about functions: Multiple Choice - Things about functions
+        Once defined, a function can be called many times from different parts of a program: Once defined, a function can be called many times from different parts of a program
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
         'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
         The name of program it was originally designed for: The name of program it was originally designed for
@@ -3493,6 +3509,7 @@ en:
       ECSPD Online U1Reflection: {}
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
+      ECSPD Personal Problem Solving Strategies: {}
       ECSPD course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       ECSPD impact in program:
@@ -3810,7 +3827,7 @@ en:
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L03 Free Response Wrap Up:
-        Creating Procedures Part 1 Wrap Up: Creating Procedures Part 1 Wrap Up
+        'Reflection: Why functions?': 'Reflection: Why functions?'
       U3L04 Assessment1:
         'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
       U3L04 Free Response Getting Started:
