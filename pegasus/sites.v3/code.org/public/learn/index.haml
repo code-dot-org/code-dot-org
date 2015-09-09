@@ -23,8 +23,10 @@ social:
         = I18n.t(:sign_up)
   %h3#hoc-teacher-guide
     = I18n.t(:learn_how_to_teach_hoc)
-    &mdash;
-    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:learn_more)
+    &nbsp;
+    %a{:href=>"http://hourofcode.com/resources/how-to"}
+      %button
+        = I18n.t(:hoc_educator_resources)
 %br/
 
 = view :learn_carousels, variation:'learn'
