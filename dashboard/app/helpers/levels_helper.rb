@@ -113,7 +113,7 @@ module LevelsHelper
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if I18n.locale == 'en-us' || callout_text.nil?
+      if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
       else
         callout_hash['localized_text'] = callout_text
@@ -135,7 +135,7 @@ module LevelsHelper
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
-    view_options(is_external_project_level: true) if @level.pixelation?
+    view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
@@ -186,7 +186,7 @@ module LevelsHelper
     # Fetch localized strings
     if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+      unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else
