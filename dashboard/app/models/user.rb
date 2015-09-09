@@ -45,7 +45,7 @@
 #  hashed_email               :string(255)
 #  deleted_at                 :datetime
 #  secret_words               :string(255)
-#  properties                 :text
+#  properties                 :text(65535)
 #  invitation_token           :string(255)
 #  invitation_created_at      :datetime
 #  invitation_sent_at         :datetime
