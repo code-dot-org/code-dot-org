@@ -1,6 +1,8 @@
 #
 # Table
 #
+require 'csv'
+require 'set'
 class Table
 
   class NotFound < Sinatra::NotFound
@@ -76,6 +78,10 @@ class Table
     items.map do |row|
       JSON.load(row[:value]).merge('id' => row[:row_id])
     end
+  end
+
+  def to_csv()
+    return table_to_csv(to_a, column_order: ['id'])
   end
 
   def self.table_names(channel_id)
@@ -280,6 +286,10 @@ class DynamoTable
     end
   end
 
+  def to_csv()
+    return table_to_csv(to_a, column_order: ['id'])
+  end
+
   def value_from_row(row)
     JSON.load(row['value']).merge(id: row['row_id'].to_i)
   end
@@ -316,3 +326,34 @@ class DynamoTable
   end
 
 end
+
+# Converts an array of hashes into a csv string
+def table_to_csv(table_array, column_order: nil)
+  # Since not every row will have all the columns we need to take
+  # two passes through the table. The first is to
+  # collect all the column names and the second to write the data.
+
+  unique_columns = Set.new
+
+  table_array.each do |table_row|
+    unique_columns.merge(table_row.keys)
+  end
+
+  unique_columns = unique_columns.to_a
+  if column_order
+    column_order.reverse_each do |c|
+      unique_columns.delete(c)
+      unique_columns.insert(0, c)
+    end
+  end
+
+  csv_string = CSV.generate do |csv|
+    csv << unique_columns
+    table_array.each do |table_row|
+      csv << unique_columns.collect { |x| table_row[x] }
+    end
+  end
+  return csv_string
+end
+
+
