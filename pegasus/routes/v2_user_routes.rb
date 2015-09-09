@@ -6,7 +6,8 @@ get '/v2/user' do
   result = dashboard_user.slice_keys(:id, :name, :admin)
   result[:owned_sections] = DASHBOARD_DB[:sections].
       select(:id).
-      where(user_id: dashboard_user_id)
+      where(user_id: dashboard_user_id).
+      all
   JSON.pretty_generate(result)
 end
 
