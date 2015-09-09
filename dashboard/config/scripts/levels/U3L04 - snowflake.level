@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-01T22:17:08.000Z",
+  "created_at": "2015-09-09T18:02:14.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -29,10 +29,14 @@
       "callMyFunction": null
     },
     "edit_code": true,
+    "encrypted_examples": "PUo+2/dKmiUZYqBWNLocpY5RzPOLuRv3spooQHKOxbKqIO8iJl+Kvu8a0Jg3\nY4Cs\n",
     "embed": "false",
-    "instructions": "Define a function called right() that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. (Click to see full instructions)",
+    "instructions": "Create the design by breaking it down into layers of functions. (Click to see full instructions)",
+    "markdown_instructions": "###Challenge\r\n\r\nYou should have already worked with a partner to break down the design below into its multiple layers of functions. Now you'll have an opportunity to program your solution. Here's a few things to keep in mind:\r\n\r\n- Identify useful patterns that can be reused and give them **their own function**.\r\n- Remember: The functions you design **can call one another**. This is how you create layers of abstraction.\r\n- Functions should be given names that are **descriptive and meaningful**\r\n- Your program should only make **one function call**. The rest of your program should only include **function definitions**.\r\n\r\n\r\n![](https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -41,26 +45,19 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
+    "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false",
-    "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "###Challenge\r\nAs you know, in order to turn right we have to call turnLeft() three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
-    "start_blocks": "function right(){\r\n  \r\n}",
-    "never_autoplay_video": "false",
-    "examples_required": "false",
-    "project_template_level_name": "U3L03 - rectangle Template"
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>
