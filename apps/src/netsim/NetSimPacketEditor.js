@@ -65,13 +65,13 @@ var asciiToBinary = DataConverters.asciiToBinary;
  * @param {number} [initialConfig.bitRate]
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
+ * @param {function} initialConfig.doneSendingCallback
  * @param {function} initialConfig.contentChangeCallback
  * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
-
 
   /**
    * @type {RowType[]}
@@ -216,6 +216,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.removePacketCallback_ = initialConfig.removePacketCallback;
 
   /**
+   * Method to call when this packet is done playing its sending animation.
+   * Function should take this PacketEditor as an argument.
+   * @type {function}
+   * @private
+   */
+  this.doneSendingCallback_ = initialConfig.doneSendingCallback;
+
+  /**
    * Method to notify our parent container that the packet's binary
    * content has changed.
    * @type {function}
@@ -300,6 +308,22 @@ NetSimPacketEditor.prototype.getRoot = function () {
 };
 
 /**
+ * Clear the packet payload and put the editor back in a state where it's
+ * ready for composing a new packet.
+ * Intentionally preserves toAddress and fromAddress.
+ */
+NetSimPacketEditor.prototype.resetPacket = function () {
+  this.message = '';
+  this.packetIndex = 1;
+  this.packetCount = 1;
+  this.originalBinary_ = '';
+  this.sendAnimationIndex_ = 0;
+  this.lastBitSentTime_ = undefined;
+  this.updateFields_();
+  this.updateRemoveButtonVisibility_();
+};
+
+/**
  * Returns the first visible message box, so that we can focus() on it
  * @returns {jQuery}
  */
@@ -350,7 +374,7 @@ NetSimPacketEditor.prototype.finishSending = function () {
   this.isSendingPacketToRemote_ = true;
   this.myNode_.sendMessage(this.originalBinary_, function () {
     this.isSendingPacketToRemote_ = false;
-    this.removePacketCallback_(this);
+    this.doneSendingCallback_(this);
   }.bind(this));
 };
 
