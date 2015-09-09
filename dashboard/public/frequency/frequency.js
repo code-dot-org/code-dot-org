@@ -75,7 +75,8 @@ var BarGraph = function (options) {
   this.user_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
-      frequency: 0
+      frequency: 0,
+      locked: false
     };
   });
 
@@ -130,7 +131,10 @@ BarGraph.prototype.getZippedData = function (override) {
 
 BarGraph.prototype.getSubstitutionMap = function () {
   return this.user_data.reduce(function (map, d, i) {
-    map[d.letter] = this.english_data[i].letter;
+    map[d.letter] = {
+      letter: this.english_data[i].letter,
+      locked: this.user_data[i].locked,
+    };
     return map;
   }.bind(this), {});
 };
@@ -151,20 +155,36 @@ BarGraph.prototype.processPlainText = function () {
 };
 
 BarGraph.prototype.processSubstitutions = function () {
-  var STR = this.text_input.val().replace(/[^A-Za-z]/g, " ");
+  var input = this.text_input.val();
+
+  /* this version preserves punctuation and special characters from the
+   * input in the output. If we want to strip them:
+   * var input = this.text_input.val().replace(/[^A-Za-z]/g, " ");
+   */
 
   var substMap = this.getSubstitutionMap();
 
-  LETTERS.forEach(function (letter) {
-    if (substMap[letter]) {
-      STR = STR.replace(new RegExp(letter + "(?!" + letter + "*</>)", "g"), "<>" + substMap[letter] + "</>");
-      STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + substMap[letter].toLowerCase() + "</>");
-    }
-  });
+  var output = input.split('').map(function (letter) {
 
-  STR = STR.replace(/<>/g, "<span>");
-  STR = STR.replace(/<\/>/g, "</span>");
-  this.text_output.html("<div>" + STR + "</div>");
+    var substitution;
+    if (substMap[letter]) {
+      substitution = substMap[letter].letter;
+    } else if (substMap[ letter.toUpperCase() ]) {
+      substitution = substMap[letter.toUpperCase()].letter.toLowerCase();
+    } else {
+      substitution = letter;
+    }
+
+    if (substMap[letter.toUpperCase()] && substMap[letter.toUpperCase()].locked === false) {
+      return "<span class=\"unlocked\">" + substitution + "</span>";
+    }
+
+    return "<span>" + substitution + "</span>";
+
+
+  }, this).join('');
+
+  this.text_output.html("<div>" + output + "</div>");
 };
 
 BarGraph.prototype.buildInputFrequencyMap = function () {
@@ -364,8 +384,7 @@ BarGraph.prototype.createDragBehavior = function () {
     j = Math.min(j, leftEdges.length - 1);
 
     // if the target destination is locked, do nothing.
-    var dest = this.svg.select("#userletter-" + this.user_data[j].letter);
-    if (dest.classed("locked")) {
+    if (this.user_data[j].locked === true) {
       return;
     }
 
@@ -474,13 +493,13 @@ BarGraph.prototype.init = function () {
       "x": -(this.userLetterScale.rangeBand() / 2),
       "y": 10
     });
+
   userLetters.append("text")
     .attr({
       "class": "fa lockicon",
       "dy": ".71em",
       "y": 60
-    })
-    .text('\uf09c');
+    });
 
   this.svg.append("g")
     .attr("class", "y axis")
@@ -513,18 +532,12 @@ BarGraph.prototype.init = function () {
       return this.freqeuncyScale(i);
     }.bind(this));
 
-  var self = this;
-  this.svg.selectAll(".lockicon").on("click", function () {
-    var lock = d3.select(this);
-    var letter = d3.select(this.parentNode);
-
-    // change content
-    var content = letter.classed("locked") ? "\uf09c" : "\uf023";
-    lock.text(content);
-    // toggle class
-    letter.classed("locked", !letter.classed("locked"));
-    self.refreshDragBehavior();
-  });
+  this.svg.selectAll(".lockicon").on("click", function (d) {
+    d.user.locked = !d.user.locked;
+    this.render();
+    this.refreshDragBehavior();
+    this.processSubstitutions();
+  }.bind(this));
 
   this.drag = this.createDragBehavior();
   this.refreshDragBehavior();
@@ -532,27 +545,68 @@ BarGraph.prototype.init = function () {
 };
 
 BarGraph.prototype.shift = function (amt) {
-  // Boy, there is no way this is remotely close to the most efficient
-  // way to do this.
-  var frequencies = this.user_data.reduce(function (freqs, d) {
-    freqs[d.letter] = d.frequency;
-    return freqs;
-  }, {});
 
-  this.user_data = this.english_data.map(function (english) {
-    var i = (LETTERS.indexOf(english.letter) + amt) % 26;
-    var letter = LETTERS[i];
-    return {
-      letter: letter,
-      frequency: frequencies[letter]
-    };
+  var some_locked = this.user_data.some(function (d) {
+    return d.locked;
+  });
+
+  if (some_locked) {
+    if (confirm("This will clear all your locked substitutions. Are you sure you want to proceed?")) {
+      this.user_data.forEach(function (d) {
+        d.locked = false;
+      });
+
+      this.render();
+    } else {
+      return false;
+    }
+  }
+
+  this.user_data.sort(function (a, b) {
+    var x = (LETTERS.indexOf(a.letter) + amt) % 26;
+    var y = (LETTERS.indexOf(b.letter) + amt) % 26;
+    return (x-y);
   });
 
   this.reorder();
+
+  return true;
 };
 
 BarGraph.prototype.randomize = function () {
-  this.user_data = d3.shuffle(this.user_data);
+
+  /* Modified Fisher-Yates shuffle
+   * inspired by http://bost.ocks.org/mike/shuffle/
+   */
+
+  var unlocked_indexes = this.user_data.reduce(function (unlocked_indexes, d, i) {
+    if (!d.locked) {
+      unlocked_indexes.push(i);
+    }
+    return unlocked_indexes;
+  }, []);
+
+  var m = unlocked_indexes.length;
+
+  var i, x, y, t;
+
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element. Both in unlocked_indexes and the
+    // actual user array
+    x = unlocked_indexes[m];
+    y = unlocked_indexes[i];
+    unlocked_indexes[m] = y;
+    unlocked_indexes[i] = x;
+
+    t = this.user_data[y];
+    this.user_data[y] = this.user_data[x];
+    this.user_data[x] = t;
+  }
+
   this.reorder();
 };
 
@@ -576,8 +630,12 @@ BarGraph.prototype.render = function () {
     .call(this.xAxis);
 
   this.svg.select(".x1.axis")
-    .data(data)
-    .selectAll(".dragletter")
+    .data(data);
+
+  this.svg.selectAll(".dragletter")
+    .classed("locked", function (d, i) {
+      return d.user.locked;
+    })
     .attr("id", function (d, i) {
       return "userletter-" + d.user.letter;
     })
@@ -588,15 +646,10 @@ BarGraph.prototype.render = function () {
       return this.userLetterScale(a.user.letter) - this.userLetterScale(b.user.letter);
     }.bind(this));
 
-  this.svg.select(".lock.axis")
-    .data(data)
-    .selectAll(".letterlock")
-    .attr("transform", function (d, i) {
-      return "translate(" + this.userLetterScale(d.user.letter) + ",0)";
-    }.bind(this))
-    .sort(function (a, b) {
-      return this.userLetterScale(a.user.letter) - this.userLetterScale(b.user.letter);
-    }.bind(this));
+  this.svg.selectAll(".lockicon")
+    .text(function (d, i) {
+      return (d.user.locked) ? "\uf023" : "\uf09c";
+    });
 
   this.svg.selectAll('.letter').data(data);
 
@@ -629,19 +682,21 @@ $(document).ready(function () {
    */
 
   $("#shift-left").on("click", function () {
-    var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
-    shiftAmt = shiftAmt % 26;
-    if (shiftAmt < 0) shiftAmt += 26;
-    $("#shiftAmt").val(shiftAmt);
-    bg.shift(shiftAmt);
-  });
-
-  $("#shift-right").on("click", function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) - 1;
     shiftAmt = shiftAmt % 26;
     if (shiftAmt < 0) shiftAmt += 26;
-    $("#shiftAmt").val(shiftAmt);
-    bg.shift(shiftAmt);
+    if (bg.shift(shiftAmt)) {
+      $("#shiftAmt").val(shiftAmt);
+    };
+  });
+
+  $("#shift-right").on("click", function () {
+    var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
+    shiftAmt = shiftAmt % 26;
+    if (shiftAmt < 0) shiftAmt += 26;
+    if (bg.shift(shiftAmt)) {
+      $("#shiftAmt").val(shiftAmt);
+    };
   });
 
   $(".reset-simulation").click(function () {

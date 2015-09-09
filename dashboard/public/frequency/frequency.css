@@ -164,4 +164,7 @@ button {
 .text-container#output span {
   color: rgb(85, 85, 85);
 }
+.text-container#output span.unlocked {
+  background-color: #fff2d9
+}
 
