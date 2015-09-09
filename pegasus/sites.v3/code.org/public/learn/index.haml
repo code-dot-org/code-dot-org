@@ -14,4 +14,17 @@ social:
 
 %link{href: "/css/learn_tabs.css", rel: "stylesheet"}
 
+%div.learn-hoc-banner
+  %h3#hoc-sign-up
+    = I18n.t(:code_sign_up)
+    &nbsp;
+    %a{:href=>'http://www.hourofcode.com'}
+      %button
+        = I18n.t(:learn_more)
+  %h3#hoc-teacher-guide
+    = I18n.t(:learn_how_to_teach_hoc)
+    &mdash;
+    %a{:href=>"http://hourofcode.com/resources/how-to"}= I18n.t(:guide_for_teachers_hoc)
+%br/
+
 = view :learn_carousels, variation:'learn'
