@@ -1,0 +1,6 @@
+name 'ECSPD Real Life Problem Solving'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Where is problem solving in real life?
+MARKDOWN

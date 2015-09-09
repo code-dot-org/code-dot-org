@@ -4,7 +4,7 @@ require 'rack/test'
 require 'yaml'
 require File.expand_path '../../../lib/cdo/hash', __FILE__
 
-class CdoHashTest < Minitest::Unit::TestCase
+class CdoHashTest < Minitest::Test
   def test_deep_sort
     one = {y: {x: 'x', b: 'i', r: 't'}, c: 'o'}
     two = {c: 'o', y: {x: 'x', r: 't', b: 'i'}}
