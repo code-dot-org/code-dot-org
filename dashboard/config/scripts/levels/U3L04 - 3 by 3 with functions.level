@@ -1,9 +1,9 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-05-01T22:17:08.000Z",
+  "created_at": "2015-09-09T18:38:54.000Z",
   "level_num": "custom",
-  "user_id": 13,
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -29,10 +29,15 @@
       "callMyFunction": null
     },
     "edit_code": true,
+    "encrypted_examples": "8MrvS0E5eMdRaN0C0oU4U115dG5R7E3MEPqfHUBpkGz6shljXs6gE1aOYbCV\n6tgA\n",
     "embed": "false",
-    "instructions": "Define a function called right() that turns the turtle to the right. Then use this function to draw a rectangle, as shown below. (Click to see full instructions)",
+    "instructions": "Make the 3 by 3 square as efficiently as you can. (Click to see full instructions)",
+    "markdown_instructions": "###Challenge\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3 by 3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-3by3grid.png",
     "is_k1": "false",
     "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -41,26 +46,19 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
+    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "slider_speed": "0.1",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-RightTurnRectangle.gif",
+    "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false",
-    "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "###Challenge\r\nAs you know, in order to turn right we have to call turnLeft() three times.  **Define** a function called `right()` that turns the turtle to the right. Then **use** this function in some code to draw a rectangle, as shown below. \r\n\r\n![](https://images.code.org/2b8d21f4a31100136762274fdf517e1c-image-1441297846326.gif)",
-    "start_blocks": "function right(){\r\n  \r\n}",
-    "never_autoplay_video": "false",
-    "examples_required": "false",
-    "project_template_level_name": "U3L03 - rectangle Template"
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

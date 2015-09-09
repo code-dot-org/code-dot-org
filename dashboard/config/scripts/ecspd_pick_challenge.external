@@ -1,0 +1,5 @@
+name 'ECSPD Pick Challenge'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Now you have seen all the lessons Pick your challenge - the list is on the next page - after that look at the calendar and plan due dates for yourself - find a buddy to work with - submit it on the forum
+MARKDOWN

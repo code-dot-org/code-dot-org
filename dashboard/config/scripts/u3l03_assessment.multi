@@ -1,11 +1,13 @@
 name 'U3L03 Assessment'
-title 'Creating Procedures Part 1: Assessment'
+title 'Multiple Choice - Things about functions'
 
-question 'Which of the following is NOT a true statement about procedures?'
-wrong 'They help break programs up into logical chunks.'
-wrong 'They can be used to replace repetitive portions of a program.'
-right 'They make the program easier for the computer to understand.' 
-wrong 'Descriptive procedure names make the program code easier to read.'
+question 'Which of the following is NOT a true statement about functions?'
+
+wrong 'Functions are reusable programming abstractions.'
+wrong 'Functions help reduce the complexity of writing and maintaining programs.'
+wrong 'Functions help break a problem into logical chunks'
+wrong 'Once defined, a function can be called many times from different parts of a program'
+right 'Functions cannot make calls to other functions written by the same programmer'
 
 markdown <<MARKDOWN
 
