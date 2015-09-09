@@ -169,7 +169,7 @@ BarGraph.prototype.processSubstitutions = function () {
     var substitution;
     if (substMap[letter]) {
       substitution = substMap[letter].letter;
-    } else if (substMap[ letter.toUpperCase() ]) {
+    } else if (substMap[letter.toUpperCase()]) {
       substitution = substMap[letter.toUpperCase()].letter.toLowerCase();
     } else {
       substitution = letter;
@@ -565,7 +565,7 @@ BarGraph.prototype.shift = function (amt) {
   this.user_data.sort(function (a, b) {
     var x = (LETTERS.indexOf(a.letter) + amt) % 26;
     var y = (LETTERS.indexOf(b.letter) + amt) % 26;
-    return (x-y);
+    return (x - y);
   });
 
   this.reorder();
@@ -620,7 +620,7 @@ BarGraph.prototype.render = function () {
   this.yScale.domain([0, d3.max(data, function (d) {
     var maxValue = Math.max(d.english.frequency, d.user.frequency);
     // Round to the nearest 10%
-    return Math.ceil(maxValue*10)/10;
+    return Math.ceil(maxValue * 10) / 10;
   })]);
 
   this.svg.select(".y.axis")
@@ -687,7 +687,7 @@ $(document).ready(function () {
     if (shiftAmt < 0) shiftAmt += 26;
     if (bg.shift(shiftAmt)) {
       $("#shiftAmt").val(shiftAmt);
-    };
+    }
   });
 
   $("#shift-right").on("click", function () {
@@ -696,7 +696,7 @@ $(document).ready(function () {
     if (shiftAmt < 0) shiftAmt += 26;
     if (bg.shift(shiftAmt)) {
       $("#shiftAmt").val(shiftAmt);
-    };
+    }
   });
 
   $(".reset-simulation").click(function () {
@@ -721,7 +721,7 @@ $(document).ready(function () {
     $(".controls-mode").hide();
     $(".controls-mode#mode-" + controlType).show();
   });
-  $("#controls-toggle button#sort").click();
+  $("#controls-toggle button#shift").trigger('click');
 
   bg.processPlainText();
 });

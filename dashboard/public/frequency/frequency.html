@@ -36,17 +36,17 @@
 
       <div class="controls">
         <div class="btn-group" id="controls-toggle" data-toggle="buttons-radio" style="margin-bottom: 10px">
-          <button type="button" class="btn btn-primary active" value="sort">Sort</button>
-          <button type="button" class="btn btn-primary" value="shift">Shift</button>
+          <button type="button" class="btn btn-primary active" value="shift">Shift</button>
+          <button type="button" class="btn btn-primary" value="random">Random</button>
         </div>
 
-        <div class="controls-mode" id="mode-sort">
+        <div class="controls-mode" id="mode-random" style="display:none">
           <p>Manually reorder everything</p>
             <button id="fillRand" class="btn btn-primary">randomize substitutions</button>
             <button class="btn btn-primary inline reset-simulation">clear substitutions</button>
         </div>
 
-        <div class="controls-mode form-inline" id="mode-shift" style="display: none;">
+        <div class="controls-mode form-inline" id="mode-shift">
           <p>Shift the alphabet left or right</p>
             <a class="btn btn-small" id="shift-left"><i class="fa fa-caret-left"></i></a>
             <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
@@ -55,29 +55,7 @@
         </div>
       </div>
 
-      <div class="controls" style="display:none;">
-        <label class="radio">
-          Sort
-          <input type="radio" id="tab-shift" name="mode" checked="checked"  />
-          <div class="mode-controls">
-            <button id="fillRand" class="btn btn-primary">randomize substitutions</button>
-            <button class="btn btn-primary inline reset-simulation">clear substitutions</button>
-          </div>
-        </label>
-
-        <label class="radio">
-          Shift
-          <input type="radio" id="tab-sort" name="mode"  />
-          <div class="mode-controls form-inline">
-            <a id="shift-left">&lt;</a>
-            <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
-            <a id="shift-right">&gt;</a>
-            <button class="btn btn-primary inline reset-simulation">reset</button>
-          </div>
-        </label>
-      </div>
     </div>
   </div>
-</div>
 </div>
 
