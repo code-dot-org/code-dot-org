@@ -6,10 +6,9 @@ content-type: text/ng-template
 
 :scss
   .records {
-    table {
-      width: 850px;
-      table-layout: auto;
-    }
+    min-width: 100%;
+    table-layout: auto;
+
     th {
       padding: 10px;
       text-align: left;
@@ -29,27 +28,41 @@ content-type: text/ng-template
   .level-buttons {
     margin: 20px 5px;
   }
+  #table-actions {
+    margin-bottom: 20px;
+  }
+  #import-actions {
+    float: left;
 
+    #select-file {
+      display: inline-block;
+    }
+  }
+  #add-actions {
+    float: right;
+  }
 %div
   %h2
     Viewing table: {{tableName}}
-
-  %div
-    %span
-      %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"}
-        Import
-      %br
-      %a{href: "{{'/v3/export-shared-tables/' + channelId + '/' + tableName}}"}
-        Export as CSV
-
-      %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
-        %input{"name" => "import_file", "type" => "file"}
-        %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
   %br
-  %div
-    %span
-      %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
-      %input{"ng-model" => "newColumnName"}
+  %div#table-actions
+    %div#import-actions
+      %span
+        %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"}
+          Import
+        %span
+
+          %form{"ng-show" => "importing", "method" => "POST", "enctype" => "multipart/form-data", "accept" => ".csv", "action" => "{{'/v3/import-shared-tables/' + channelId + '/' + tableName}}"}
+            %input.btn.btn-danger{"type" => "submit", "value" => "Overwrite & Import"}
+            %input#select-file{"name" => "import_file", "type" => "file"}
+
+
+
+    %div#add-actions
+      %span
+        %input{"ng-model" => "newColumnName", "placeholder" => "Column name"}
+        %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
+        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
   %br
   %table.records
     %colgroup
@@ -74,7 +87,6 @@ content-type: text/ng-template
         %span{"ng-show" => "newRecord.editing"}
           %input{"ng-model" => "newRecord[column]", type: "text"}/
       %td
-        %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
         %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
     %tr{"ng-repeat" => "record in records | orderBy:order:reverse"}
@@ -91,6 +103,8 @@ content-type: text/ng-template
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteRecord(record)"} Delete
 
+  %a{href: "{{'/v3/export-shared-tables/' + channelId + '/' + tableName}}"}
+    Export as CSV
   %h3 Debug view of table:
   %pre{"ng-model" => "records"}
     {{ records | json }}
