@@ -1,6 +1,5 @@
 var message1 = "Srryvat zl jnl guebhtu gur qnexarff Thvqrq ol n orngvat urneg V pna g gryy jurer gur wbhearl jvyy raq Ohg V xabj jurer gb fgneg Gurl gryy zr V z gbb lbhat gb haqrefgnaq Gurl fnl V z pnhtug hc va n qernz Jryy yvsr jvyy cnff zr ol vs V qba g bcra hc zl rlrf Jryy gung f svar ol zr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V gevrq pneelvat gur jrvtug bs gur jbeyq Ohg V bayl unir gjb unaqf Ubcr V trg gur punapr gb geniry gur jbeyq Ohg V qba g unir nal cynaf Jvfu gung V pbhyq fgnl sberire guvf lbhat Abg nsenvq gb pybfr zl rlrf Yvsr f n tnzr znqr sbe rirelbar Naq ybir vf gur cevmr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg";
 var message2 = "Ej aeotj pbba zdlxu ftlj E a lqkvj jk plu Pvrpterb ptb p tbdb ukv zlr jlhb lflu E a l tkj led qlcckkr E zkvcn ok jk pmlzb Fejt jtb led cehb E nkr j zldb qlqu qu jtb flu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tbdb zkab qln rbfp jlchero jtep lrn jtlj Ublt oewb ab lcc ukv okj nkr j tkcn qlzh Ublt fbcc E ptkvcn mdkqlqcu fldr ukv E cc qb svpj yerb Ublt rk kyybrpb jk ukv nkr j flpjb ukvd jeab Tbdb p ftu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk";
-var bg;
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var LETTERS = ALPHABET.split('');
@@ -52,8 +51,124 @@ var debounce = function (func, wait, immediate) {
   };
 };
 
-var buildFrequencyMap = function () {
-  var inputString = $("#input").val().replace(/[^A-Za-z]/g, "").toUpperCase();
+var BarGraph = function (options) {
+
+  /* DOM stuff */
+  this.margin = {
+    top: 10,
+    right: 10,
+    bottom: 64,
+    left: 40
+  };
+
+  this.container = d3.select(options.chart_container.get(0));
+
+  this.text_input = options.text_input;
+
+  this.text_output = options.text_output;
+
+  /* Events */
+  this.text_input.on("input", this.processPlainText.bind(this));
+  //this.text_input.on("keyup", this.processSubstitutions.bind(this));
+
+  /* Data */
+  this.user_data = LETTERS.map(function (letter) {
+    return {
+      letter: letter,
+      frequency: 0
+    };
+  });
+
+  this.english_data = LETTERS.map(function (letter) {
+    return {
+      letter: letter,
+      frequency: ENGLISH[letter]
+    };
+  });
+
+  /* D3 */
+  // We use two scales because we have two domain orderings
+  var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
+  this.userLetterScale = letterScale.copy().domain(LETTERS);
+  this.englishLetterScale = letterScale.copy().domain(LETTERS);
+
+  this.freqeuncyScale = d3.scale.ordinal()
+    .domain([0, 1])
+    .rangeRoundBands([0, this.userLetterScale.rangeBand()]);
+
+  this.yScale = d3.scale.linear().range([this.getHeight(), 0]);
+
+  this.xAxis = d3.svg.axis()
+    .scale(this.englishLetterScale)
+    .orient("bottom");
+
+  this.yAxis = d3.svg.axis()
+    .scale(this.yScale)
+    .orient("left")
+    .ticks(5, "%");
+
+
+};
+
+BarGraph.prototype.getHeight = function () {
+  return this.container.property("offsetHeight") - this.margin.top - this.margin.bottom;
+};
+
+BarGraph.prototype.getWidth = function () {
+  return this.container.property("offsetWidth") - this.margin.left - this.margin.right;
+};
+
+BarGraph.prototype.getZippedData = function (override) {
+  var user_data = override || this.user_data;
+  return user_data.map(function (_, i) {
+    return {
+      user: user_data[i],
+      english: this.english_data[i]
+    };
+  }, this);
+};
+
+BarGraph.prototype.getSubstitutionMap = function () {
+  return this.user_data.reduce(function (map, d, i) {
+    map[d.letter] = this.english_data[i].letter;
+    return map;
+  }.bind(this), {});
+};
+
+BarGraph.prototype.updateSubstitutionMap = function (substMap) {
+  this.english_data = this.user_data.map(function (d) {
+    return {
+      letter: substMap[d.letter],
+      frequency: ENGLISH[substMap[d.letter]]
+    };
+  });
+  this.render();
+};
+
+BarGraph.prototype.processPlainText = function () {
+  this.updateUserDataFromInput();
+  this.processSubstitutions();
+};
+
+BarGraph.prototype.processSubstitutions = function () {
+  var STR = this.text_input.val().replace(/[^A-Za-z]/g, " ");
+
+  var substMap = this.getSubstitutionMap();
+
+  LETTERS.forEach(function (letter) {
+    if (substMap[letter]) {
+      STR = STR.replace(new RegExp(letter + "(?!" + letter + "*</>)", "g"), "<>" + substMap[letter] + "</>");
+      STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + substMap[letter].toLowerCase() + "</>");
+    }
+  });
+
+  STR = STR.replace(/<>/g, "<span>");
+  STR = STR.replace(/<\/>/g, "</span>");
+  this.text_output.html("<div>" + STR + "</div>");
+};
+
+BarGraph.prototype.buildInputFrequencyMap = function () {
+  var inputString = this.text_input.val().replace(/[^A-Za-z]/g, "").toUpperCase();
   var totalCharCount = inputString.length;
 
   // Create a zeroed-out frequency map.
@@ -82,119 +197,10 @@ var buildFrequencyMap = function () {
   return freqMap;
 };
 
-var processPlainText = function () {
-  var freqMap = buildFrequencyMap();
-  bg.updateUserData(freqMap);
-  processSubstitutions();
-};
-
-var processSubstitutions = function () {
-  if (bg) {
-    var STR = $("#input").val().replace(/[^A-Za-z]/g, " ");
-
-    var substMap = bg.getSubstMap();
-
-    LETTERS.forEach(function (letter) {
-      if (substMap[letter]) {
-        STR = STR.replace(new RegExp(letter + "(?!" + letter + "*</>)", "g"), "<>" + substMap[letter] + "</>");
-        STR = STR.replace(new RegExp(letter.toLowerCase() + "(?!</>)", "g"), "<>" + substMap[letter].toLowerCase() + "</>");
-      }
-    });
-
-    STR = STR.replace(/<>/g, "<span>");
-    STR = STR.replace(/<\/>/g, "</span>");
-    $("#output").html("<div>" + STR + "</div>");
-  }
-};
-
-var BarGraph = function () {
-
-  /* DOM stuff */
-  this.margin = {
-    top: 10,
-    right: 10,
-    bottom: 44,
-    left: 40
-  };
-
-  this.container = d3.select("#d3chart");
-
-  /* Data */
-  this.user_data = LETTERS.map(function (letter) {
-    return {
-      letter: letter,
-      frequency: 0
-    };
-  });
-
-  this.english_data = LETTERS.map(function (letter) {
-    return {
-      letter: letter,
-      frequency: ENGLISH[letter]
-    };
-  });
-
-  /* D3 */
-  // We use two scales because we have two domain orderings
-  var letterScale = d3.scale.ordinal().rangeRoundBands([0, this.getWidth()], 0.2);
-  this.userLetterScale = letterScale.copy().domain(LETTERS);
-  this.englishLetterScale = letterScale.copy().domain(LETTERS);
-
-  this.freqScale = d3.scale.ordinal().domain([0, 1]);
-
-  this.yScale = d3.scale.linear().range([this.getHeight(), 0]);
-
-  this.xAxis = d3.svg.axis()
-    .scale(this.englishLetterScale)
-    .orient("bottom");
-
-  this.yAxis = d3.svg.axis()
-    .scale(this.yScale)
-    .orient("left")
-    .ticks(5, "%");
-
-  this.freqScale.rangeRoundBands([0, this.userLetterScale.rangeBand()]);
-
-};
-
-BarGraph.prototype.getHeight = function () {
-  return this.container.property("offsetHeight") - this.margin.top - this.margin.bottom;
-};
-
-BarGraph.prototype.getWidth = function () {
-  return this.container.property("offsetWidth") - this.margin.left - this.margin.right;
-};
-
-BarGraph.prototype.getZippedData = function (override) {
-  var user_data = override || this.user_data;
-  return user_data.map(function (_, i) {
-    return {
-      user: user_data[i],
-      english: this.english_data[i]
-    };
-  }, this);
-};
-
-BarGraph.prototype.getSubstMap = function () {
-  return this.user_data.reduce(function (map, d, i) {
-    map[d.letter] = this.english_data[i].letter;
-    return map;
-  }.bind(this), {});
-};
-
-BarGraph.prototype.updateSubstMap = function (substMap) {
-  this.english_data = this.user_data.map(function (d) {
-    return {
-      letter: substMap[d.letter],
-      frequency: ENGLISH[substMap[d.letter]]
-    };
-  });
-  this.render();
-};
-
-BarGraph.prototype.updateUserData = function (frequencies) {
+BarGraph.prototype.updateUserDataFromInput = function () {
+  var frequency_map = this.buildInputFrequencyMap();
   this.user_data.forEach(function (d) {
-    d.frequency = frequencies[d.letter];
+    d.frequency = frequency_map[d.letter];
   });
   this.render();
 };
@@ -245,11 +251,11 @@ BarGraph.prototype.reorder = function () {
      */
 
     /* the call to drag uses the ordering. so reattach that here */
-    this.svg.select('.x1.axis').selectAll('.dragletter').call(this.drag);
+    this.refreshDragBehavior();
 
     /* rerender just because */
     this.render();
-    processSubstitutions();
+    this.processSubstitutions();
 
   }.bind(this));
 
@@ -297,13 +303,8 @@ BarGraph.prototype.resize = function () {
   });
 };
 
-//BarGraph.prototype.createScales = function () {
-//};
-
 BarGraph.prototype.createDragBehavior = function () {
   var drag = d3.behavior.drag();
-
-  var tempdata;
 
   var outline = this.svg.append("rect")
     .attr("class", "outline")
@@ -311,11 +312,13 @@ BarGraph.prototype.createDragBehavior = function () {
     .attr("height", this.getHeight())
     .attr("width", this.userLetterScale.rangeBand());
 
+  var user_data_swapped;
+
   drag.on('dragend', function () {
     outline.attr("visibility", "hidden");
     this.svg.classed("dragging", false);
-    if (tempdata) {
-      this.user_data = tempdata;
+    if (user_data_swapped) {
+      this.user_data = user_data_swapped;
 
       this.userLetterScale.domain(this.user_data.map(function (d) {
         return d.letter;
@@ -326,25 +329,18 @@ BarGraph.prototype.createDragBehavior = function () {
         }.bind(this));
 
       this.reorder();
-      tempdata = undefined;
+      user_data_swapped = undefined;
     }
   }.bind(this));
 
-  drag.on('drag', function (d, i) {
+  drag.on('drag', function (d) {
 
     this.svg.classed("dragging", true);
 
-    /* find the target */
-    var xPos = d3.event.x;
-    var leftEdges = this.userLetterScale.range();
-    var width = this.userLetterScale.rangeBand();
-    var j;
-
-    // There's gotta be a better way to do this. We're looking for the
-    // first value in leftEdges such that that value plus the the width
-    // of each element matches the cursor position
-    for (j = 0; xPos > (leftEdges[j] + width); j++) {}
-    j = Math.min(j, leftEdges.length - 1);
+    /* find the source */
+    // we can't trust the index passed in here, because it doesn't count
+    // the locked letters.
+    var i = this.userLetterScale.domain().indexOf(d.user.letter);
 
     /* move the source */
     var source = this.svg.select("#userletter-" + d.user.letter);
@@ -354,26 +350,45 @@ BarGraph.prototype.createDragBehavior = function () {
     var y = parseInt(coords[1]) + d3.event.dy;
     source.attr("transform", "translate(" + x + "," + y + ")");
 
-    /* swap em! This is a deep clone. Do we need a deep clone? */
-    tempdata = this.user_data.map(function (d) {
-      return jQuery.extend(true, {}, d);
-    });
+    /* find the target */
+    var xPos = d3.event.x;
+    var leftEdges = this.userLetterScale.range();
+    var width = this.userLetterScale.rangeBand();
+    var j;
 
-    var swap = tempdata[i];
-    tempdata[i] = tempdata[j];
-    tempdata[j] = swap;
+    // There's gotta be a better way to do this. We're looking for the
+    // first value in leftEdges such that that value plus the the width
+    // of each element matches the cursor position, then saving the
+    // index of that element
+    for (j = 0; xPos > (leftEdges[j] + width); j++) {}
+    j = Math.min(j, leftEdges.length - 1);
 
+    // if the target destination is locked, do nothing.
+    var dest = this.svg.select("#userletter-" + this.user_data[j].letter);
+    if (dest.classed("locked")) {
+      return;
+    }
+
+    /* move the outline */
     outline.attr({
       "visibility": "visible",
       "transform": "translate(" + (this.userLetterScale(this.user_data[j].letter) + 0.5) + ",0)"
     });
 
+    /* swap em! */
+    user_data_swapped = this.user_data.map(function (d, index, user_data) {
+      if (index == i) return user_data[j];
+      else if (index == j) return user_data[i];
+      else return d;
+    });
+
     /* re-size the letters */
     /* note: this seems pretty inefficient. We're binding all the data
      * for all the letters and resizing everything, and we're doing it
-     * for nearly every pixel moved.
+     * for nearly every pixel moved. I'm sure with just a little more
+     * work, we can resize only the bars we care about.
      */
-    this.svg.selectAll('.letter').data(this.getZippedData(tempdata));
+    this.svg.selectAll('.letter').data(this.getZippedData(user_data_swapped));
 
     this.svg.selectAll('.letter').selectAll("rect")
       .data(function (d) {
@@ -386,6 +401,11 @@ BarGraph.prototype.createDragBehavior = function () {
   }.bind(this));
 
   return drag;
+};
+
+BarGraph.prototype.refreshDragBehavior = function () {
+  this.svg.select('.x1.axis').selectAll('.dragletter').on(".drag", null);
+  this.svg.select('.x1.axis').selectAll('.dragletter:not(.locked)').call(this.drag);
 };
 
 BarGraph.prototype.init = function () {
@@ -419,7 +439,7 @@ BarGraph.prototype.init = function () {
 
   userLetters.append("rect")
     .attr({
-      //"class": "btn btn-primary",
+      "class": "dragtarget",
       "height": 24,
       "width": this.userLetterScale.rangeBand(),
       "x": -(this.userLetterScale.rangeBand() / 2),
@@ -442,18 +462,25 @@ BarGraph.prototype.init = function () {
     .attr("dy", ".71em")
     .attr("y", 14)
     .attr("class", "user")
-    .style("text-anchor", "middle")
     .text(function (d, i) {
       return d.user.letter;
     });
 
-  $("#sort-toggle button").on("change input click", this.handleSortChange.bind(this));
-  $("#controls-toggle button").on("change input click", function (changeEvent) {
-    var controlType = changeEvent.target.value;
-    $(".controls-mode").hide();
-    $(".controls-mode#mode-" + controlType).show();
-  });
-  $("#controls-toggle button#sort").click();
+  userLetters.append("rect")
+    .attr({
+      "class": "hoverblock",
+      "height": 64,
+      "width": this.userLetterScale.rangeBand(),
+      "x": -(this.userLetterScale.rangeBand() / 2),
+      "y": 10
+    });
+  userLetters.append("text")
+    .attr({
+      "class": "fa lockicon",
+      "dy": ".71em",
+      "y": 60
+    })
+    .text('\uf09c');
 
   this.svg.append("g")
     .attr("class", "y axis")
@@ -465,9 +492,6 @@ BarGraph.prototype.init = function () {
     .style("text-anchor", "end")
     .text("Frequency");
 
-  //this.svg.append("g")
-    //.attr("class", "bars")
-    //.selectAll(".letter")
   this.svg.selectAll(".letter")
     .data(this.getZippedData())
     .enter().append("g")
@@ -484,14 +508,26 @@ BarGraph.prototype.init = function () {
     .attr("class", function (d, i) {
       return (i === 0) ? "english" : "user";
     })
-    .attr("width", this.freqScale.rangeBand())
+    .attr("width", this.freqeuncyScale.rangeBand())
     .attr("x", function (d, i) {
-      return this.freqScale(i);
+      return this.freqeuncyScale(i);
     }.bind(this));
 
+  var self = this;
+  this.svg.selectAll(".lockicon").on("click", function () {
+    var lock = d3.select(this);
+    var letter = d3.select(this.parentNode);
+
+    // change content
+    var content = letter.classed("locked") ? "\uf09c" : "\uf023";
+    lock.text(content);
+    // toggle class
+    letter.classed("locked", !letter.classed("locked"));
+    self.refreshDragBehavior();
+  });
 
   this.drag = this.createDragBehavior();
-  this.svg.select('.x1.axis').selectAll('.dragletter').call(this.drag);
+  this.refreshDragBehavior();
 
 };
 
@@ -529,11 +565,8 @@ BarGraph.prototype.render = function () {
 
   this.yScale.domain([0, d3.max(data, function (d) {
     var maxValue = Math.max(d.english.frequency, d.user.frequency);
-
-    // Round to the nearest 10% ?
-    //return Math.ceil(maxValue*10)/10;
-    //
-    return maxValue;
+    // Round to the nearest 10%
+    return Math.ceil(maxValue*10)/10;
   })]);
 
   this.svg.select(".y.axis")
@@ -555,6 +588,16 @@ BarGraph.prototype.render = function () {
       return this.userLetterScale(a.user.letter) - this.userLetterScale(b.user.letter);
     }.bind(this));
 
+  this.svg.select(".lock.axis")
+    .data(data)
+    .selectAll(".letterlock")
+    .attr("transform", function (d, i) {
+      return "translate(" + this.userLetterScale(d.user.letter) + ",0)";
+    }.bind(this))
+    .sort(function (a, b) {
+      return this.userLetterScale(a.user.letter) - this.userLetterScale(b.user.letter);
+    }.bind(this));
+
   this.svg.selectAll('.letter').data(data);
 
   this.svg.selectAll('.letter').selectAll("rect")
@@ -569,7 +612,11 @@ BarGraph.prototype.render = function () {
 };
 
 $(document).ready(function () {
-  bg = new BarGraph();
+  var bg = new BarGraph({
+    text_input: $("#input"),
+    text_output: $("#output"),
+    chart_container: $("#d3chart")
+  });
   bg.init();
   bg.render();
 
@@ -581,8 +628,6 @@ $(document).ready(function () {
    *}, 200));
    */
 
-  $("#input").on("input", processPlainText);
-
   $("#shift-left").on("click", function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
     shiftAmt = shiftAmt % 26;
@@ -590,12 +635,18 @@ $(document).ready(function () {
     $("#shiftAmt").val(shiftAmt);
     bg.shift(shiftAmt);
   });
+
   $("#shift-right").on("click", function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) - 1;
     shiftAmt = shiftAmt % 26;
     if (shiftAmt < 0) shiftAmt += 26;
     $("#shiftAmt").val(shiftAmt);
     bg.shift(shiftAmt);
+  });
+
+  $(".reset-simulation").click(function () {
+    $("#shiftAmt").val(0);
+    bg.shift(0);
   });
 
   $(".load-message#easy").click(function () {
@@ -606,15 +657,16 @@ $(document).ready(function () {
     $('#input').val(message2).trigger('input');
   });
 
-  $("#fillRand").click(function () {
-    bg.randomize();
-  });
-  $(".reset-simulation").click(function () {
-    $("#shiftAmt").val(0);
-    bg.shift(0);
-  });
+  $("#fillRand").click(bg.randomize.bind(bg));
 
-  processPlainText();
-  $("input").keyup(processSubstitutions);
-  $(".btn-group button").button();
+  $("#sort-toggle button").on("change input click", bg.handleSortChange.bind(bg));
+
+  $("#controls-toggle button").on("change input click", function (changeEvent) {
+    var controlType = changeEvent.target.value;
+    $(".controls-mode").hide();
+    $(".controls-mode#mode-" + controlType).show();
+  });
+  $("#controls-toggle button#sort").click();
+
+  bg.processPlainText();
 });

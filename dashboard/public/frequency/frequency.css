@@ -1,86 +1,40 @@
-/* D3 Stuff */
+/* 
+ * D3 Stuff
+ */
 
-.english {
+#d3chart {
+  width: 100%;
+  height: 480px;
+}
+
+/* Bars */
+
+.letter .english {
   fill: #2f96b4;
-  font-weight: bolder;
-  font-size: 14px;
 }
-
-button {
-  text-transform: capitalize;
-}
-
-.letter:hover rect.english {
+.letter:hover .english {
   fill: #1f6377;
 }
-
-.user {
+.letter .user {
   fill: #ffa400;
 }
-.letter:hover rect.user {
+.letter:hover .user {
   fill: #b37300;
 }
 
-.axis .dragletter {
-  cursor: move;
-}
-
-.outline {
-  fill: none;
-  stroke: #2f96b4;
-  stroke-dasharray: 5;
-}
-
-.axis .dragletter rect {
-  fill: #ffa400;
-  stroke: #b37300;
-}
-.axis .dragletter:hover rect {
-  fill: #b37300;
-}
-.axis .dragletter text {
-  fill: white;
-  font-size: 12px;
-}
-.axis .dragletter:hover text {
-  fill: white;
-}
-.axis .dragletter line {
-  stroke: #b37300;
-}
-.axis .dragletter:hover line {
-  stroke: #ffa400;
-}
-
-rect {
+.letter rect {
   transition-property: height, y;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
 }
 
-.dragging rect {
+.dragging .letter rect {
   transition-property: none;
 }
 
-.btn-group .btn {
-  margin-right: 0;
-}
+/* Letter Labels */
 
-.controls label {
-  height: 36px;
-}
-
-.mode-controls button {
-  margin-top: -4px;
-}
-
-input[type=radio][name=mode] + .mode-controls {
-  display: none;
-}
-input[type=radio][name=mode]:checked + .mode-controls {
-  display: inline-block;
-}
-
+/* set some reasonable defaults */
 .axis {
   font: 10px sans-serif;
 }
@@ -91,16 +45,105 @@ input[type=radio][name=mode]:checked + .mode-controls {
   shape-rendering: crispEdges;
 }
 
+.axis .english {
+  fill: #2f96b4;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+/* hide a few elements that D3 creates that I don't want to see */
 .x.axis path, .x.axis line {
   display: none;
 }
 
+.axis .dragletter:not(.locked) {
+  cursor: move;
+}
+
+.axis .dragletter .dragtarget {
+  fill: #ffa400;
+  stroke: #b37300;
+}
+.axis .dragletter:hover .dragtarget {
+  fill: #b37300;
+}
+.axis .dragletter .user {
+  fill: white;
+  font-size: 12px;
+}
+.axis .dragletter line {
+  stroke: #b37300;
+}
+.axis .dragletter:hover line {
+  stroke: #ffa400;
+}
+
+.outline {
+  fill: none;
+  stroke: #2f96b4;
+  stroke-dasharray: 5;
+}
+
+/* Locks */
+
+.axis .dragletter text {
+  text-anchor: middle;
+}
+
+.axis .dragletter .hoverblock {
+  fill: none;
+  pointer-events: all;
+}
+.axis .dragletter text.lockicon {
+  font-size: 16px;
+  font-family: FontAwesome;
+  display: none;
+  cursor: pointer;
+  fill: #999999;
+}
+
+/* show when hovering */
+.axis .dragletter:hover text.lockicon {
+  display: inline-block;
+}
+
+/* hide when dragging */
+.dragging .axis .dragletter text.lockicon {
+  display: none;
+}
+
+/* ALWAYS show when locked */
+.axis .dragletter.locked .lockicon {
+  display: inline-block !important;
+}
+
+/* When locked: */
+
+/* hide dragtarget */
+.axis .dragletter.locked .dragtarget, .axis .dragletter.locked line {
+  display: none;
+}
+/* change usertext to match english text */
+.axis .dragletter.locked .user {
+  fill: #ffa400;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+/* 
+ * Global Stuff
+ */
+
+button {
+  text-transform: capitalize;
+}
+
+.btn-group .btn {
+  margin-right: 0;
+}
+
 #top-buttons {
   margin-bottom: 10px;
-}
-#d3chart {
-  width: 100%;
-  height: 480px;
 }
 
 .text-container {
