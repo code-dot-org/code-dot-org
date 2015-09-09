@@ -8,7 +8,7 @@
 #  created_at       :datetime
 #  updated_at       :datetime
 #  script_level_id  :integer
-#  qtip_config      :text
+#  qtip_config      :text(65535)
 #  on               :string(255)
 #  callout_text     :string(255)
 #

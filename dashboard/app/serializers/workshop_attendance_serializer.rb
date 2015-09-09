@@ -8,7 +8,7 @@
 #  status     :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  notes      :text
+#  notes      :text(65535)
 #
 # Indexes
 #

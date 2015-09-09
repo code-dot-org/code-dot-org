@@ -4,9 +4,9 @@
 #
 #  id              :integer          not null, primary key
 #  level_source_id :integer
-#  hint            :text
+#  hint            :text(65535)
 #  times_proposed  :integer
-#  priority        :float
+#  priority        :float(24)
 #  created_at      :datetime
 #  updated_at      :datetime
 #  user_id         :integer

@@ -11,7 +11,7 @@
 #  ideal_level_source_id    :integer
 #  solution_level_source_id :integer
 #  user_id                  :integer
-#  properties               :text
+#  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
 #
