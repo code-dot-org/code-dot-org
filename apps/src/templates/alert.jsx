@@ -1,3 +1,5 @@
+/* global $ */
+
 var React = require('React');
 
 /**
