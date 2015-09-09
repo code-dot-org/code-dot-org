@@ -331,6 +331,10 @@ function renderFooterInSharedGame() {
 
   var menuItems = [
     {
+      text: applabMsg.reportAbuse(),
+      link: 'https://support.code.org/hc/en-us/requests/new?&reportAbuse=true'
+    },
+    {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab'
     },
@@ -338,11 +342,6 @@ function renderFooterInSharedGame() {
       text: commonMsg.openWorkspace(),
       link: location.href + '/view'
     },
-    // Disabled until we do the work to support abuse reporting
-    // {
-    //   text: applabMsg.reportAbuse(),
-    //   link: '#'
-    // },
     {
       text: applabMsg.copyright(),
       link: '#',
