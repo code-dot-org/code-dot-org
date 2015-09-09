@@ -50,7 +50,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](https://code.org/girls).
+- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
 
 **Want more teaching ideas?** 
 Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators. 
@@ -71,18 +71,23 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at <a href="http://<%= codeorg_url() %>/learn"><%= codeorg_url() %>/learn</a>
+- Students can see all tutorials and try another Hour of Code activity at <a href="<%= resolve_url('https://code.org/learn') %>"><%= resolve_url('code.org/learn') %></a>
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 
 ## 7) Celebrate
-- [Print certificates](https://code.org/certificates) for your students. 
+- <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 ## Other Hour of Code resources for educators:
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
 - Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/hoc) to get advice, insight and support from other educators.
+- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
+<% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+<% end %>
+
+## What comes after the Hour of Code?
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
 
 <%= view :signup_button %>
