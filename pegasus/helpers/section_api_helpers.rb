@@ -113,9 +113,9 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  VALID_GENDERS = %w(m f) unless defined? VALID_GENDERS
+  @@valid_genders = %w(m f)
   def self.valid_gender?(gender)
-    VALID_GENDERS.include?(gender)
+    @@valid_genders.include?(gender)
   end
 
   def self.age_to_birthday(age)
@@ -144,11 +144,10 @@ class DashboardStudent
     DASHBOARD_DB[:secret_words].first(id: random_id)[:word]
   end
 
-  PEPPER = CDO.dashboard_devise_pepper unless defined? PEPPER
-  STRETCHES = 10 unless defined? STRETCHES
-
+  @@pepper = CDO.dashboard_devise_pepper
+  @@stretches = 10
   def self.encrypt_password(password)
-    BCrypt::Password.create("#{password}#{PEPPER}", cost: STRETCHES).to_s
+    BCrypt::Password.create("#{password}#{@@pepper}", cost: @@stretches).to_s
   end
 end
 
@@ -158,21 +157,28 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = %w(word picture email) unless defined? VALID_LOGIN_TYPES
-
+  @@valid_login_types = %w(word picture email)
   def self.valid_login_type?(login_type)
-    VALID_LOGIN_TYPES.include? login_type
+    @@valid_login_types.include? login_type
   end
 
-  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other'] unless defined? VALID_GRADES
-
+  @@valid_grades = ['K'] + (1..12).collect(&:to_s) + ['Other']
   def self.valid_grade?(grade)
-    VALID_GRADES.include? grade
+    @@valid_grades.include? grade
   end
 
-  def self.load_valid_courses
-    return {} unless (DASHBOARD_DB[:scripts].count rescue nil) # don't crash when loading environment before database has been created
-    Hash[
+  @@valid_course_cache = nil
+  def self.valid_courses
+    # only do this query once because in prod we only change courses
+    # when deploying (technically this isn't true since we are in
+    # pegasus and courses are owned by dashboard...)
+    return @@valid_course_cache unless @@valid_course_cache.nil?
+
+    # don't crash when loading environment before database has been created
+    return {} unless (DASHBOARD_DB[:scripts].count rescue nil)
+
+    # cache result if we have to actually run the query
+    @@valid_course_cache = Hash[
          DASHBOARD_DB[:scripts].
            where("hidden = 0").
            select(:id, :name).
@@ -180,13 +186,9 @@ class DashboardSection
            map { |c| [c[:id], c[:name]]}
         ]
   end
-  VALID_COURSES = load_valid_courses unless defined? VALID_COURSES
-  # only do this query once because in prod we only change courses
-  # when deploying (technically this isn't true since we are in
-  # pegasus and courses are owned by dashboard...)
 
   def self.valid_course_id?(course_id)
-    VALID_COURSES[course_id.to_i]
+    valid_courses[course_id.to_i]
   end
 
   def self.random_letter
