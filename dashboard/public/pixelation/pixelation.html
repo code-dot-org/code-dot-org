@@ -22,7 +22,7 @@
       <td>
         <label for="width">Image width:</label>
       </td><td>
-      <input type="number" min="1" max="255" value="10" id="width" oninput="setSliders();">
+      <input type="number" min="1" max="255" value="10" id="width" oninput="setSliders();" onchange="setMinTextValues();">
     </td><td class="hide_on_v2">
       <input type="range" min="1" max="255" value="10" id="widthRange" oninput="changeVal('width');" onchange="changeVal('width');" class="rangeInput">
     </td>
@@ -30,7 +30,7 @@
     <td>
       <label for="height">Image height:</label>
     </td><td>
-    <input type="number" min="1" max="255" value="10" id="height" oninput="setSliders();">
+    <input type="number" min="1" max="255" value="10" id="height" oninput="setSliders();" onchange="setMinTextValues();">
   </td><td class="hide_on_v2">
     <input type="range" min="1" max="255" value="10" id="heightRange" oninput="changeVal('height');" onchange="changeVal('width');" class="rangeInput">
   </td>
@@ -38,7 +38,7 @@
     <td>
       <label for="bitsPerPixel">Bits per pixel:</label>
     </td><td>
-    <input type="number" min="1" max="24" id="bitsPerPixel" value="1" oninput="setSliders();">
+    <input type="number" min="1" max="24" id="bitsPerPixel" value="1" oninput="setSliders();" onchange="setMinTextValues();">
   </td><td>
     <input type=range id="bitsPerPixelSlider" min="1" max="24" oninput="changeVal('bitsPerPixel')" onchange="changeVal('width');" class="rangeInput">
   </td>
@@ -74,10 +74,10 @@
   <div id="reference_area_target"></div>
 </div>
 <div id="visualizationEditor" class="responsive">
-  <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
+  <textarea id="pixel_data" oninput="drawGraph(null, false, true /* updateControls */);" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
   <!--[if IE 9]>
   <script>
-    document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false);
+    document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false, true /* updateControls */);
   </script>
   <![endif]-->
   <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
