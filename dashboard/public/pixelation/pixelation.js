@@ -395,6 +395,9 @@ function binToInt(bits) {
  */
 function bitsToColors(bitString, bitsPerPixel) {
   var colorList = [];
+  if (!bitsPerPixel) {
+    return colorList;
+  }
 
   for (var i = 0; i < bitString.length; i += bitsPerPixel) {
     colorList.push(getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
