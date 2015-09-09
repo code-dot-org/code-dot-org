@@ -100,7 +100,7 @@ function initProjects() {
 
 function pixelationDisplay() {
   pixel_data.value = options.projectData || options.data;
-  drawGraph(null, false, true /* updateControls */);
+  drawGraph(null, false, true);
   formatBitDisplay();
 }
 
@@ -560,7 +560,7 @@ function startOverClicked() {
 
 function startOverConfirmed() {
   pixel_data.value = options.data;
-  drawGraph(null, false, true /* updateControls */);
+  drawGraph(null, false, true);
   formatBitDisplay();
 }
 

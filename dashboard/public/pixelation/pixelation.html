@@ -74,10 +74,10 @@
   <div id="reference_area_target"></div>
 </div>
 <div id="visualizationEditor" class="responsive">
-  <textarea id="pixel_data" oninput="drawGraph(null, false, true /* updateControls */);" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
+  <textarea id="pixel_data" oninput="drawGraph(null, false, true);" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
   <!--[if IE 9]>
   <script>
-    document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false, true /* updateControls */);
+    document.getElementById('pixel_data').onkeyup = drawGraph.bind(null, null, false, true);
   </script>
   <![endif]-->
   <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
