@@ -334,6 +334,7 @@ BarGraph.prototype.reorder = function () {
   this.englishLetterScale.domain(this.english_data.map(function (d) {
     return d.letter;
   }));
+  this.processSubstitutions();
 
   /* animate rearranging the elements */
   var transition = this.svg.transition().duration(750);
@@ -373,7 +374,6 @@ BarGraph.prototype.reorder = function () {
 
     /* rerender just because */
     this.render();
-    this.processSubstitutions();
 
   }.bind(this));
 
@@ -679,10 +679,16 @@ BarGraph.prototype.shift = function (amt) {
     }
   }
 
-  this.user_data.sort(function (a, b) {
-    var x = (LETTERS.indexOf(a.letter) + amt) % 26;
-    var y = (LETTERS.indexOf(b.letter) + amt) % 26;
-    return (x - y);
+  // first, sort user data alphabetically
+  var sorted = this.user_data.sort(function (a, b) {
+    return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
+  });
+
+  // then, realign it with english data. Note that english data might be
+  // either alphabetically- or frequency-sorted
+  this.user_data = this.english_data.map(function (english) {
+    var i = (LETTERS.indexOf(english.letter) + 26 - amt) % 26;
+    return sorted[i];
   });
 
   this.reorder();
