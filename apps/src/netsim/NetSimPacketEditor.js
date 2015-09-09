@@ -817,7 +817,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
       inputElement: this.binaryUI.message,
-      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize),
+      newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize, -truncatedBits),
       watermark: netsimMsg.binary()
     });
   }

@@ -220,6 +220,21 @@ describe("DataConverters", function () {
       assertThrows(RangeError, formatBinary.bind(null, '', 0));
       assertThrows(RangeError, formatBinary.bind(null, '', -1));
     });
+
+    it ("respects optional 'offset' argument", function () {
+      var rawBinary = "1111000011110000";
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, -5));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, -4));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, -3));
+      assertEqual('11 1100 0011 1100 00', formatBinary(rawBinary, 4, -2));
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, -1));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, 0));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, 1));
+      assertEqual('11 1100 0011 1100 00', formatBinary(rawBinary, 4, 2));
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, 3));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, 4));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, 5));
+    });
   });
 
   describe("formatHex", function() {
