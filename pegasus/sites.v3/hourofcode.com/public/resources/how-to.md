@@ -87,4 +87,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 <% end %>
 
+## What comes after the Hour of Code?
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
+
 <%= view :signup_button %>
