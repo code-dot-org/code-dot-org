@@ -616,11 +616,33 @@ BarGraph.prototype.buildSVG = function () {
     .attr("class", "y axis")
     .call(this.yAxis)
     .append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
+    .attr({
+      "transform": "rotate(-90)",
+      "y": 6,
+      "dy": ".71em",
+      "class": "graphlabel",
+    })
     .text("Frequency");
+
+  this.svg.select(".x.axis")
+    .append("text")
+    .attr({
+      "y": 10,
+      "x": 6,
+      "dy": ".71em",
+      "class": "graphlabel",
+    })
+    .text("Maps to:");
+
+  this.svg.select(".x1.axis")
+    .append("text")
+    .attr({
+      "y": 16,
+      "x": -5,
+      "dy": ".71em",
+      "class": "graphlabel",
+    })
+    .text("Input:");
 
   this.svg.selectAll(".letter")
     .data(this.getZippedData())

@@ -7,6 +7,10 @@
   height: 480px;
 }
 
+.axis .graphlabel {
+  text-anchor: end;
+}
+
 /* Bars */
 
 .letter .english {
