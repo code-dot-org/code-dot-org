@@ -218,7 +218,7 @@ SQL
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-      if ga_data.data.containsSampledData
+      if ga_data.data.contains_sampled_data
         throw new ArgumentError 'Google Analytics response contains sampled data, aborting.'
       end
 
