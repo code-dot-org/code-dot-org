@@ -86,11 +86,17 @@ social:
               %h4
                 =hoc_s(:front_join_us_heading)
               =hoc_s(:front_join_us_description_short)
-            #joinustext{style: "font-size: 18px; font-weight: 500; padding-top:20px;"}
-              %div{style: "width: 100%; text-align: center"}
-                %a#joinbutton{onclick: "adjustScroll('hocsignupform')", target: "_blank", style: "text-decoration:none"}
-                  %button{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:front_join_us_button)
+            %div{style: "text-align: center;"}
+              %div#signuptext{style: "display: inline-block; font-size: 18px; font-weight: 500; padding:20px 4px 0px 4px;"}
+                %div{style: "width: 100%; text-align: center"}
+                  %a#joinbutton{onclick: "adjustScroll('hocsignupform')", target: "_blank", style: "text-decoration:none"}
+                    %button{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                      =hoc_s(:front_join_us_sign_up)
+              %div#tryittext{style: "display: inline-block; font-size: 18px; font-weight: 500; padding:20px 4px 0px 4px"}
+                %div{style: "width: 100%; text-align: center"}
+                  %a#joinbutton{href: resolve_url('https://code.org/learn'), style: "text-decoration:none"}
+                    %button{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
+                      =hoc_s(:front_join_us_try)
 
 
             #remainder{style: "text-align:center; margin-top: 15px;"}
