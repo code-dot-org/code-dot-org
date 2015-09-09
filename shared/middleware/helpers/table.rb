@@ -287,7 +287,7 @@ class DynamoTable
   end
 
   def to_csv()
-    return table_to_csv(to_a, column_order: ['id'])
+    return table_to_csv(to_a, column_order: [:id])
   end
 
   def value_from_row(row)
