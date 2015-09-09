@@ -2,6 +2,7 @@ pt-BR:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
+      too_young: Este conteúdo tem restrições de idade e não está disponível para os alunos mais jovens
   activerecord:
     errors:
       messages:
@@ -306,6 +307,8 @@ pt-BR:
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -367,8 +370,8 @@ pt-BR:
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Aprenda no Code Studio
+    description: Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação.
   gender:
     male: Masculino
     female: Feminino
@@ -377,17 +380,20 @@ pt-BR:
     student: Estudante
     teacher: Professor
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar este tutorial.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Todos os direitos reservados.'
+    thank_you: 'Agradecemos nossos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, nossa <a href="https://code.org/about/team">equipe</a>, nosso pessoal de vídeo e nossos <a href="https://code.org/about/advisors">professores</a> por sua ajuda na criação do Code Studio.'
+    help_from_html: Queremos agradecer principalmente os engenheiros da Google, Microsoft, Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
+    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar esses materiais.
+    art_from_html: 'A Era do Gelo&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
+    art_from_html_old: 'AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: Direitos Autorais
     more: Mais
     feedback: Fornecer feedback
     translate: Ajude-nos a traduzir para o seu idioma
     support: Suporte
     support_url: http://support.code.org
+    tos_short: Termos
     tos: Termos de Serviço
     privacy: Política de Privacidade
     secure: Versão Segura

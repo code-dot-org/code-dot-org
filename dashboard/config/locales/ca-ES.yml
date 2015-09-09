@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Si us plau corregeixi els errors següents:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -359,6 +361,8 @@
       viewing_solution: Mostra la solució
       try_it_yourself: Prova-ho tu
       section: Secció
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
@@ -412,7 +416,7 @@
     local_school: escola local
     online: en línia
     see_details: Veure detalls
-    view_course: View Course
+    view_course: Veure el curs
     prize_info: 'Premis de participació (només per escoles públiques dels Estats Units):
       fins a 1.000 dòlars recompenses per aula.'
     tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
@@ -431,12 +435,11 @@
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
     print_certificate: Imprimeix el certificat
   share:
     title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
   gender:
     male: Home
     female: Dona
@@ -451,9 +454,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
       a crear aquesta classe.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Tots els drets reservats.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Tots els drets reservats.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Desenvolupat per Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -463,6 +471,7 @@
     translate: Ajuda'ns a traduir al teu idioma
     support: Suport
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Condicions d'ús
     privacy: Política de Privacitat
     secure: Versió segura
@@ -616,8 +625,8 @@
   dialog:
     ok: OK
     startover_title: Estàs segur que vols tornar a començar?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Això tornarà el puzzle al seu estat inicial i eliminarà totes
+      les dades que hagis afegit o modificat.
     startover_ok: Torna a començar
     startover_cancel: Cancel·lar
   time:

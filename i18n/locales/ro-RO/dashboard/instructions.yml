@@ -638,8 +638,8 @@ ro:
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1035,7 +1035,9 @@ ro:
       Course 4 Artist For Loops 6_instruction: 'Joc liber! Încearcă să foloseşti instrucţiunea "for loop" pentru a desena un formă care îşi măreşte dimensiunea cum vrei tu.'
       Course 4 Artist For Loops 7_instruction: 'Ce se întâmplă dacă elimini instrucţiunea "Repeat 3" din acest algoritm, păstrând construcţiile "move" şi "turn" în "for loop"? În această spirală generată de un triunghi, fiecare latură este cu 20 pixeli mai lungă decât ultima.'
       Course 4 Artist For Loops 8_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
+      Course 4 Artist For Loops 8a_instruction: Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
       Course 4 Artist For Loops 9_instruction: Poți face o spirală? Înaintează de la 1 pixel la 75 pixeli crescând cu 1 pixel de fiecare dată.
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
       Course 4 Artist For Loops inspire_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să şti pentru a crea un model ca acesta! Dacă imaginea asta te inspiră, încearcă să faci ceva similar. Dacă nu, crează ceva din ideile tale.\r\n\n\r \nVreau să ştiu cum a fost făcut modelul nostru? Vizitează https://studio.code.org/c/105671120/edit pentru soluţie."
       Course 4 Artist Functions 1_instruction: Poți desena un pătrat care are lungimea laturii de 100 pixeli, folosind o construcție buclă?
       Course 4 Artist Functions 10_instruction: De ce bloc de instrucțiuni ai nevoie pentru a adăuga un triunghi deasupra pătratului?
@@ -1123,8 +1125,13 @@ ro:
       Course 4 Bee For Loops 8_instruction: Poţi folosi variabila de buclă pentru a controla mişcarea şi colectarea de nectar?
       Course 4 Bee For Loops 9_instruction: 'Ultimul număr din bucla ta "pentru" este numit "increment" şi, de fiecare dată când bucla se execută, variabila "numărător" se modifică prin increment. Încearcă să colectezi aceste flori folosind un increment de 2.'
       Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+        Here are three flowers. Can you find
+        the pattern of instructions that you need to repeat 3 times to collect the
+        nectar with the fewest number of blocks?
+      Course 4 Bee Loops 5a NEW_instruction: |
+        Now, use loops to help the bee collect
+        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
+        you get there, don't forget to make honey!
       Course 4 Bee Params 1_instruction: 'Utilizează funcţia "obține 3 nectaruri", care se întoarce, se mută pentru a colecta nectarul şi apoi revine la locaţia originală. Scrie o secvenţă pentru a colecta tot nectarul folosind "obţine 3 nectaruri."'
       Course 4 Bee Params 2_instruction: 'Modifică funcţia "obţine 3 nectaruri", astfel încât mă facă să mă întorc la dreapta, în loc de stânga, către flori.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Acum sunt flori pe ambele părți! Poate că poți folosi un parametru astfel încât aceeași funcție se aplică florilor de pe ambele părți. Am adăugat la funcție un parametru numit "direcție". Dacă parametrul "direcție" este egal cu 0 ar trebui să mă întorc la stânga, dacă e 1ar trebui să mă întorc la dreapta.'
@@ -1793,7 +1800,7 @@ ro:
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit https://studio.code.org/c/106387801 for the solution."
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
@@ -1853,8 +1860,8 @@ ro:
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
       NEW Course 4 Artist Vars 12_instruction: |
-        Now, modify the code from the last
-        level to create a pentagon with sides of 100.
+        Now, recreate the algorithm from
+        the last level and create a pentagon with sides of 150.
       NEW Course 4 Artist Vars 2.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
@@ -1875,6 +1882,11 @@ ro:
         Use a loop to collect the nectar
         from each flower.
       NEW Course 4 Bee For Loops 10_instruction: 'Folosește variabila ta din bucla "pentru" ca să controlezi cât de departe să muți pe orizontal.'
+      NEW Course 4 Bee For Loops 10a_instruction: |
+        Ready for a challenge?  Take what
+        you've learned about loops and try to solve this problem. Remember: You may
+        have to run your solution multiple times before you figure out all of the
+        steps.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -1887,8 +1899,9 @@ ro:
         much easier! All the code you need is here, take a look at how it is put together
         then click "Run" to see how it works. 
       NEW Course 4 Bee For Loops 4 4_instruction: |
-        Can you help the Bee collect the
-        rest of the honey using this for loop? 
+        Now we need to move forward "counter"
+        times, then get nectar "counter" times.  Can you use two "repeat" loops
+        to solve this challenge?
       NEW Course 4 Bee For Loops 4_instruction: |
         Replace the ??? in the "for loop"
         with the largest amount of nectar the bee has to collect. 
@@ -1903,11 +1916,8 @@ ro:
         is called the "increment". Each time the loop is run, the counter variable
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Are you getting the hang of "for
-        loops"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
-        
-      NEW Course 4 Bee For Loops 8_instruction: "What will you do if we take away\nsome blocks? Can you add them back to help the bee collect the nectar?\r\nRemember:\nIf your loop is counting up, the increment is added to your counter variable\neach time through. What should your increment be to collect 3, 6, 9 nectar?\r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable with a math block! How can you use the \"counter\" variable to navigate\nthis garden with the fewest number of blocks possible? What do you need to\ndo to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember: If your loop is counting up, the increment is added\nto your \"counter\" variable each time through."
+      NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Dacă bucla ta este de numărare în ordine descrescătoare, incrementul este scăzut din variabila ta numărător la fiecare buclă. Ce ar trebui să fie incrementul tău pentru a colecta 9 nectaruri, apoi 6, şi apoi 3 nectaruri?
       NEW Course 4 Bee For Loops 95_instruction: |
         Take a look at each piece of the
@@ -1946,6 +1956,38 @@ ro:
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges you make after you click Remix will be saved on your new remix and\nnot on your main Big Game."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -1973,6 +2015,70 @@ ro:
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.

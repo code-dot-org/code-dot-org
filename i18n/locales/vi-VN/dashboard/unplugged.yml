@@ -163,7 +163,7 @@ vi:
         desc: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại sự việc, nhưng bây giờ chúng ta sẽ tìm hiểu cách sử dụng vòng lặp với cấu trúc phụ được xây dựng ngay bên trong.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Sáng tác nhạc với tham số
         desc: 'Một trong các cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính là chức năng.  Chức năng (đôi khi được gọi là quy trình) là các chương trình nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
         video: C4_unplugged_parameters
       BinaryImages:

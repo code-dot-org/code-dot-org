@@ -2,6 +2,7 @@ is:
   errors:
     messages:
       not_saved: 'Vinsamlegast leiðréttu eftirfarandi villur:'
+      too_young: Þetta efni er með aldurstakmarkanir og er ekki tiltækt yngri nemendum
   activerecord:
     errors:
       messages:
@@ -306,6 +307,8 @@ is:
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -367,8 +370,8 @@ is:
     choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: Lærðu í Kóðastúdíóinu
+    description: Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða.
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -377,17 +380,20 @@ is:
     student: nemandi
     teacher: Kennari
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðuðu við gerð þessa kennsluefnis.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Öll réttindi áskilin.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Öll réttindi áskilin.'
+    thank_you: 'Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>, <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a> fyrir stuðninginn við gerð Kóðastúdíósins.'
+    help_from_html: Við viljum sérstaklega nefna tæknifólkið hjá Google, Microsoft, Facebook, Twitter og marga aðra sem aðstoðuðu við gerð þessa kennsluefnis.
+    help_from_html_old: Tæknifólk hjá Google, Microsoft, Facebook og Twitter aðstoðaði við gerð þessa kennsluefnis.
+    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin'
     powered_by_aws: Knúið af Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
+    copyright: Höfundarréttur
     more: Meira
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
     support: Aðstoð
     support_url: http://support.code.org
+    tos_short: Skilmálar
     tos: Skilmálar
     privacy: Persónuvernd
     secure: Örugg útgáfa
@@ -512,7 +518,7 @@ is:
   dialog:
     ok: Í lagi
     startover_title: Ertu viss um að þú viljir byrja aftur?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Þetta setur þrautina aftur í upphafsstöðu og eyðir öllum upplýsingum sem þú hefur bætt við eða breytt.
     startover_ok: Byrja aftur
     startover_cancel: Hætta við
   time:

@@ -4,3 +4,9 @@ title 'Assessment: Question 2'
 markdown <<MARKDOWN
 What problems exist with encryption schemes such as the Vigenere cipher even when strong encryption keys are used?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but may include the following concepts:
+
+- 
+MARKDOWN

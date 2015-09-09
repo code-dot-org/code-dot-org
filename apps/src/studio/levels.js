@@ -1520,7 +1520,7 @@ levels.hoc2015_1 = {
     [4, 4, 4, 4, 4, 4, 4, 4],
     [4, 4, 4, 4, 4, 4, 4, 4]
   ],
-  'avatarList': [ 'baymax' ],
+  'avatarList': [ 'character1' ],
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -1540,16 +1540,17 @@ levels.hoc2015_1 = {
 levels.hoc2015_2 = {
   'editCode': true,
   'map': [
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 0, 0,256,4, 4],
-    [4, 4, 4, 0, 4, 0, 4, 4],
-    [4, 4, 4, 1,16,256,4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4],
-    [4, 4, 4, 4, 4, 4, 4, 4]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 4, 4, 4, 4, 4, 0],
+    [0, 0, 4, 0, 0,256,4, 0],
+    [0, 0, 4, 0, 4, 0, 4, 0],
+    [0, 0, 4, 1,16,256,4, 0],
+    [0, 0, 4, 4, 4, 4, 4, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
   ],
-  'avatarList': [ 'baymax' ],
+  'avatarList': [ 'character1' ],
+  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,

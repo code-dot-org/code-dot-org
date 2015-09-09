@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Коригирайте следните грешки:'
+      too_young: Това съдържание има възрастови ограничения и не е достъпно за по-малките
+        ученици
   activerecord:
     errors:
       messages:
@@ -351,6 +353,8 @@
       viewing_solution: Показване на решението
       try_it_yourself: Опитайте сами
       section: Раздел
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -416,17 +420,18 @@
     try_beta_courses: Ново! Опитайте нашите бета курсове за K-5 ученици
     use_as_teacher: Използвайте този сайт като учител
     heading_hoc2014: <h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>
-    heading_elementary: <h2>20 часа курсове за</h2><h1>Начинаещи (всички възрасти)</h1>
+    heading_elementary: <h2>20 часа курсове за</h2><h1>Въведение на компютърните науки
+      (всички възрасти)</h1>
     heading_apps: <h2>Забавление за</h2><h1>Всеки</h1>
     heading_legacy: <h2>Нашият общ курс за</h2><h1>всички възрасти</h1>
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
-    choose_next_course: Опитайте курс като си избирете един от тези по-долу
+    choose_next_course: Опитайте курс като си изберете един от тези по-долу
     print_certificate: Печат на сертификат
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Обучавайте се в Code Studio
+    description: Всеки може да учи компютърни науки. Програмирай игри, приложения
+      и изкуство с код.
   gender:
     male: Мъж
     female: Жена
@@ -435,24 +440,31 @@
     student: Ученик
     teacher: Учител
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>,
+      <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team">
+      разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors">
+      образователни съветници</a> за подкрепата им в създаването на Code Studio.
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за
       създаването на този урок.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Всички права запазени.
+    help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха
+      за създаването на тези материали.
+    art_from_html: Ice Age&#8482; &amp; &copy;%{current_year} 20th Century Fox. Всички
+      права запазени. <br /> Angry Birds&#8482; &amp;&copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Всички права запазени. < br / > Plants vs. Zombies&#8482;
+      &amp;&copy; %{current_year} Electronic Arts Inc. Всички права запазени
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Всички права са запазени.<br />Plants vs. Zombies&#8482;
+      &amp; &copy; %{current_year} Electronic Arts Inc. Всички права са запазени
     powered_by_aws: Създадено с Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE
+      logo и Hour of Code&reg; са търговски марки на Code.org.'
     copyright: Авторско право
     more: Повече
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
     support_url: http://support.code.org
+    tos_short: Условия
     tos: Термини
     privacy: Защита на личните данни
     secure: Защитената версия
@@ -604,8 +616,8 @@
   dialog:
     ok: OK
     startover_title: Наистина ли искате да започнете отначало?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Това ще рестартира пъзела в начално състояние и ще изтрие всички
+      блокове, които сте добавили или променили.
     startover_ok: Стартиране отначало
     startover_cancel: Отмени
   time:

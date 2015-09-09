@@ -2,6 +2,7 @@ fa-AF:
   errors:
     messages:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -304,6 +305,8 @@ fa-AF:
       viewing_solution: دیدن راه حل
       try_it_yourself: خودت امتحان کن
       section: بخش
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'آدرس ایمیل تأیید نشده است:'
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
@@ -365,8 +368,8 @@ fa-AF:
     choose_next_course: یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید
     print_certificate: چاپ گواهینامه
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with code.
+    title: در استودیو ی کد یاد بگیرید
+    description: هرکسی می تواند علوم کامپیوتر را بیاموزد. با کد نویسی بازی، نرم افزار و هنر ایجاد کنید.
   gender:
     male: مرد
     female: زن
@@ -375,17 +378,20 @@ fa-AF:
     student: دانش آموز
     teacher: دبیر
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: 'ما از <a href="https://code.org/about/donors"> اهدا کنندگانمان</a>،<a href="https://code.org/about/partners"> همکارانمان</a>، <a href="https://code.org/about/team"> تیم گسترده مان</a>، گروه فیلم برداری مان، و <a href="https://code.org/about/advisors"> مشاوران آموزشیمان</a> برای همکاریشان در ایجاد استودیو ی کد سپاسگزاریم.'
     help_from_html: مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش کمک کردند
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'نام و علامت تجاری پرندگان خشمگین متعلق به 2009-2014 Rovio Entertainment می باشد و  کلیه حقوق محفوظ است. <br/> نام و علامت تجاری گیاهان در مقابل زامبی متعلق به 2014 شرکت الکترونیک آرتز می باشد و کلیه حقوق  محفوظ است.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: Copyright
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, لوگوی کد نویسی و ساعت کد نویسی &reg; علائم تجاری Code.org هستند.'
+    copyright: حق کپی برداری و نشر
     more: بیشتر
     feedback: ارائه پیشنهادات و انتقادات
     translate: کمک به ما در ترجمه به زبان شما
     support: پشتیبانی
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: شرایط
     privacy: قوانین حفظ حریم خصوصی
     secure: نسخهٔ امن
@@ -510,7 +516,7 @@ fa-AF:
   dialog:
     ok: باشه
     startover_title: آیا مطمئنی که می خواهی دوباره شروع کنی؟
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: این کار معما را به حالت اولیه اش تنظیم خواهد کرد و تمام داده هایی که شما اضافه کرده یا تغییر داده اید را بازنشانی می کند.
     startover_ok: دوباره شروع کنید
     startover_cancel: لغو کن
   time:

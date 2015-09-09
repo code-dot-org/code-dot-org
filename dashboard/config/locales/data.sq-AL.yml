@@ -138,22 +138,22 @@
         maze_2_7: Më ndihmo ta dëboj këtë derkkuc të keq duke përodrur numrin më të
           ulët të blloqeve. Përpiqu të përdorësh më shumë se një bllok "repeat times".
         maze_2_8: 'Kur një bllok është gri, kjo do të thotë që ti nuk mund ta fshish
-          atë. Zgjidh këtë puzzle duke përdorur bllokun "repeat", që përsëritet 3
+          atë. Zgjidh këtë formues duke përdorur bllokun "repeat", që përsëritet 3
           herë. Përpiqu të vendosësh këto 3 blloqe brenda bllokut gri "repeat": lëviz,
           lëviz, kthehu.'
         maze_2_9: Në rregull, provo bllokun e ri "repeat until" - do të përsëritet
           derisa unë të arrij derrkucin e mërzitshëm.
         maze_2_10: Në rregull, edhe një herë të fundit për tu praktikuar - a mund
           ta zgidhësh këtë duke përdorur vetëm 4 blloqe?
-        maze_2_11: I dashur person. Unë zombie. Unë i uritur. Duhet...të shkoj...te
-          lulja e diellit...A mund të më çosh atje vetëm me 5 blloqe?
+        maze_2_11: I dashur person. Unë zombi, Unë i uritur. Duhet... të shkoj...
+          te lulja e diellit... A mund të më çosh atje vetëm me 5 blloqe?
         maze_2_12: Në rregull, kjo është e njëjtë, por me pak ndryshime. A mund ta
           bësh vetë me 5 blloqe?
         maze_2_13: 'Përdor bllokun e ri "if" për të më lënë të vendos se ku të kthehem.
           Ndihmë: ty të duhet një bllok më shumë, por mëso se si e vendosim ne, që
           ti të mund ta bësh më vonë vetë.'
-        maze_2_14: Në rregull, kjo është njësoj si puzzle i fundit, por ti duhet të
-          kujtohesh se si  përdore bllokun "if" dhe "repeat" bashkë.
+        maze_2_14: Në rregull, kjo është njësoj si formuesi i fundit, por ti duhet
+          të kujtohesh se si përdore bllokun "if" dhe "repeat" bashkë.
         maze_2_15: Une dua lulen e diellit! Përdor një bllok "if", për të më çuar
           mua atje me numrin më të pakët të blloqeve.
         maze_2_16: Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është
@@ -167,19 +167,19 @@
           një maze të vështirësuar? Nëse e bën si duhet, unë mund të ec në çdo rrugë
           të dredhuar pa marrë parasysh gjatësinë.
         turtle_1_1: Përshëndetje! Unë jam një artist. Ti mund të shkruash kod për
-          të më bërë mua të vizatoj çdo gjë. Përdor pak blloqe për të më bërë mua
-          të vizatoj vijat gri në figurë.
+          të më bërë mua të vizatoj çdo gjë. Përdor pak blloqe për të më bërë të vizatoj
+          vijat gri në figurë.
         turtle_1_2: 'Tani, vizato një katror. Shënim: përdor ngjyrën e preferuar duke
           e zgjedhur atë në bllokun e ri "set color".'
-        turtle_1_3: Bëj një katror duke përdorurvetë 3 blloqe.
+        turtle_1_3: Bëj një katror duke përdorur vetëm 3 blloqe.
         turtle_1_4: 'Vizato një trekëndor ku anët e tij janë me ngjyra të ndryshme,
           duke përdorur opsionin "random color" që zgjedh një ngjyrë të ndryshme në
           çdo kohë. Ndihmë: ti duhet të zbulosh sa larg të kthehesh duke klikuar tek
           numri në bllokun e kthimit.'
         turtle_1_5: Tani, sa për tu praktikuar, vizato një trekëndor dhe më pas një
           katror për të vizatuar një zarf.
-        turtle_1_6: 'A mund ta dish se si u vizatua ky trekëndor dhe katror?Ndihmë:
-          Bëj së pari trekëndorin, më pas shiko se sa duhet të kthehesh përpara se
+        turtle_1_6: 'A mund ta zbulosh se si u vizatua ky trekëndësh dhe katror? Ndihmë:
+          Bëj së pari trekëndëshin, më pas shiko se sa duhet të kthehesh përpara se
           të vizatosh katrorin.'
         turtle_1_7: Në rregull, le ta bëjmë pak më të vështirë - Shih nëse mund të
           vizatosh këto xhamat e gjelbër. Katrorët janë 100 piksela në secilën anë
@@ -200,12 +200,12 @@
           trekëndor. Mund të shtosh një bllok "repeat" dhe "turn" për të bërë një
           lule të bukur?
         turtle_4_4: 'Këtu është i njëjti kod si me atë të puzzle-it të mëparshëm,
-          por duke u kthyer vetëm me 36 gradë pas vizatimit të secilit trekëndor.
-          Sa herë duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh kthimi të vizatimit
-          do të vijë rrethi i plotë)'
+          por me kthim vetëm me 36 gradë pas vizatimit të secilit trekëndësh. Sa herë
+          duhet të përsëritet kjo? (Ndihmë: pas 360 gradësh rrotullim do të krijohet
+          rrethi i plotë)'
         turtle_4_5: 'Këtu është i njëjti kod si ai i puzzle-it të mëparshëm, por duke
           përsëritur kthimet 36 herë. Sa gradë duhet të jetë kthimi? (Ndihmë: pas
-          360 gradësh kthimi, vizatimi do të jetë rreth i plotë)'
+          360 gradësh kthim, vizatimi do të jetë rreth i plotë)'
         turtle_4_6: Mund të vizatosh një katror me cepa 20 piksel, duke përdorur vetëm
           3 blloqe?
         turtle_4_7: 'Këtu ke kodin për të vizatuar katrorin e lojës së fundit formuese.
@@ -231,11 +231,11 @@
         maze_karel_1_4: 'Mund të më ndihmosh të heq të katërt grumbujt e baltës? Ndihmë:
           nëse ke mundësi, përdor një bllok përsëritës.'
         maze_karel_1_5: 'Më ndihmo t''i mbush të gjitha gropat me 5 lopata me baltë.
-          Ndihmë: mund të vendosësh një bllok "përsërit" brenda bllokut "ndërsa".'
+          Ndihmë: mund të vendosësh një bllok "repeat" brenda bllokut "while".'
         maze_karel_1_6: Hiq të gjithë grumbujt me dhe duke përdorur sa më pak blloqe
           të jetë e mundur. Opsionet në menunë dropdown tek blloku "while" më tregojnë
           nëse jam duke qëndruar në grumbull ose në një gropë.
-        maze_karel_1_7: Wow, unë gjeta një gropë vërtet të thellë! Nuk e di se sa
+        maze_karel_1_7: Uau, unë gjeta një gropë vërtet të thellë! Nuk e di se sa
           lopata me dhe nevojiten. A mund të shkruash një program që e mbush atë derisa
           toka të jetë e shtruar?
         maze_karel_1_8: Më ndihmo të mbush gropën në fund të fushës, dukë përdorur
@@ -244,9 +244,9 @@
           sa më pak blloqe që të jetë e mundur. Ndihmë: përpiqu të përdorësh bllokun
           "while".'
         maze_karel_1_10: Unë jam duke punuar deri vonë, kështu që u errësua jashtë
-          dhe s'mund ta dalloj sa të mëdhenj janë grumbujt  me dhe. Tani, unë nuk
-          kam më të gjitha mundësitë që kisha tek blloku while. Më lëviz përgjatë
-          fushës dhe nëse ka ndonjë grumbull, hiqe atë.
+          dhe s'mund ta dalloj sa të mëdhaja janë grumbujt me dhe. Tani, unë nuk kam
+          më të gjitha mundësitë që kisha tek blloku while. Më lëviz përgjatë fushës
+          dhe nëse ka ndonjë grumbull, hiqe atë.
         maze_karel_1_11: 'Është ende errësirë jashtë. Më lëviz përgjatë rrugës, Nëse
           ka ndonjë grumbull, hiqe atë dhe nëse ka ndonjë gropë, mbushe atë. Ndihmë:
           përdor menunë e opsioneve në bllokun "if".'
@@ -263,8 +263,10 @@
         turtle_2_4: 'Tani ne do të zbukurohemi. Ndrysho kodin për të vizatuar 36 katrorë,
           100 piksela të gjerë dhe çdo katror të jetë 10 gradë larg njëri tjetrit.
           Ndihmë: ti mund të përdorësh kursorin për të më lëvizur mua më shpejt.'
-        turtle_2_5: Vizato katrorë me konture 50, 60, 70, 80 dhe 90 piksela. Ty do
-          të duhet të përdorësh funksionin "draw a square" pesë herë.
+        turtle_2_5: |
+          Vizato katrorë me brinjë 50, 60, 70,
+          80, dhe 90 piksela. Ty do të duhet të përdorësh funksionin "draw a square" pesë
+          herë.
         turtle_2_6: 'Në rregull, ky program do të përdorë një shënjues, për të vizatuar
           të njëjtët katrorë si herën e fundit. Ti dëshiron që katrorët të jenë në
           të njëjtën madhësi si shënjuesi, kështu që përdor bllokun "counter". Ndihmë:
@@ -586,26 +588,26 @@
         turtle_ec_1_2: 'Tani, vizato një katror. SHËNIM: përdor ngjyrën tënde të preferuar
           duke e zgjedhur atë në bllokun "penColor".'
         turtle_ec_1_10: 'Ti ja dole! Tani vizato çfarë të duah. Disa ide zbavitëse:
-          një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo një bllok
-          të ri "penWidth". Bëfsh qejf!'
+          një figurë ngjitëse, flok dëbore ose spirale. Gjithashtu, provo bllokun
+          e ri "penWidth". Bëfsh qejf!'
         studio_ec_sandbox: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
           lejosh shokët e tu ta provojnë atë në telefonat e tyre.
     video:
       name:
         maze_intro: Hyrja e Maze
-        artist_intro: Hyrja Artistit
+        artist_intro: Hyrja e Artistit
         farmer_intro: Hyrja e Fermerit
         flappy_intro: Hyrja e Flappy-t
         loop_times: Blloku Përsëritja e Herëve
         loop_until: Blloku Përsërit Derisa
-        if: Blloku Nëse
-        if_else: Blloku Nëse/përndryshe
+        if: Blloku If
+        if_else: Blloku If/Else
         if_else_scrat: Blloku Nëse/përndryshe
         function: Funksionet
-        loop_while: Blloku Ndërsa
-        loop_for: Blloku Numërimit
+        loop_while: Blloku While
+        loop_for: Blloku Counter
         parameters: Funksionet me parametra
-        hoc_wrapup: Përmbledhja Orës së Kodimit
+        hoc_wrapup: Përmbledhja e Orës së Kodimit
         Unplug1: Çfarë është CS?
         Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter

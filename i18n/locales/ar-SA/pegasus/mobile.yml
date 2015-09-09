@@ -159,6 +159,7 @@ ar-SA:
   homepage_action_text_learn: ابدأ التعلم
   homepage_action_text_signpetition: وقّع على العريضة
   homepage_signpetition_dropdown: 'أوافق &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org ومجلس الكلية يشكل تحالفا لتحسين التنوع في علوم الكمبيوتر.
   homepage_banner_text_link: اعرف المزيد
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -388,9 +389,9 @@ ar-SA:
   dashboard_progress_not_started: لم تبدأ
   dashboard_progress_in_progress: في طور التقدم
   dashboard_progress_not_completed: غير مكتمل
-  dashboard_progress_completed_too_many_blocks: أكملت، كتل كثيرة جداً
+  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
   dashboard_progress_completed_perfect: مكتمل, ممتاز
-  dashboard_progress_furthest_level_attempted: حاول المستوى الأبعد
+  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية. في أسبوع واحد فقط:'
   stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
   dashboard_teacher: المدرس
@@ -413,9 +414,9 @@ ar-SA:
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: أعرف المزيد
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
-  hoc2014_try_new_tutorial: 'جرب درس ساعة الكود الجديد ب"بيتا"'
+  hoc2014_try_new_tutorial: 'جرب درس ساعة من البرمجة الجديد في "بيتا - التجريبي"'
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
-  hoc2014_try_frozen: الفنان مع آنا و إنسا, من Frozen
+  hoc2014_try_frozen: الفنان مع آنا و إلسا, من Frozen
   carousel_heading_international: دروس تعليمية بلغتك
   carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
   carousel_heading_beginners: دروس للمبتدئين
@@ -431,6 +432,7 @@ ar-SA:
   educator_notes: ملاحظات المربي
   how_to_teach_hoc: كيف تقوم بتدريس ساعة من البرمجة
   more_resources_educators: المزيد من الموارد للمعلمين والمربين
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: المشتركون
   teachers_notes: ملاحظات المعلم
   teachers_notes_hoc: 'المعلمين: قراءة ملاحظات المدرس هنا'

@@ -193,6 +193,7 @@ sr-SP:
   homepage_action_text_learn: Почни
   homepage_action_text_signpetition: Потпишите петицију
   homepage_signpetition_dropdown: 'Потпишите нашу петицију &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Сазнајте више
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -463,6 +464,7 @@ sr-SP:
   educator_notes: Белешке за едукаторе
   how_to_teach_hoc: Како предавати Сат програмирања
   more_resources_educators: Више ресурса за учитеље и едукаторе
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: учесници
   teachers_notes: Белешке учитеља
   teachers_notes_hoc: 'Учитељи: прочитајте важне белешке за едукаторе овде'

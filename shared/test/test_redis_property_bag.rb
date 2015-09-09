@@ -9,7 +9,7 @@ require_relative '../../deployment'
 require_relative '../middleware/helpers/redis_property_bag'
 require_relative 'fake_redis_client'
 
-class RedisPropertyBagTest < Minitest::Unit::TestCase
+class RedisPropertyBagTest < Minitest::Test
 
   def setup
     # Create a redis client.

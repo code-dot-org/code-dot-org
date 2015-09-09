@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10. Take a look at how I built the code then click on \"Run\" when you are ready to see it in action. ",
+    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look at the code before you hit \"Run\".",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -16,13 +16,13 @@
     "disable_variable_editing": "true",
     "free_play": "false",
     "ideal": "11",
-    "slider_speed": ".6",
+    "slider_speed": ".4",
     "embed": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10. \r\n\r\n<br/>\r\nTake a look at how I built the code then click on `Run` when you are ready to see it in action. \r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10. \r\n\r\n<br/>\r\n<strong>NOTE:</strong> Make sure you look at the code *before* you hit \"Run\".\r\n<br/><br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h45>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -30,7 +30,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "video_key": "C4_for_loops"
   }
 }]]></config>
   <blocks>

@@ -139,7 +139,7 @@
   "emptyBlocksErrorMsg":"Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn.",
   "emptyBlockInFunction":"Fallið {name} er með óútfyllt inntak.",
   "emptyBlockInVariable":"Breytan {name} er með óútfyllt inntak.",
-  "emptyExampleBlockErrorMsg":"Þú verður að hafa a.m.k. eitt dæmi í fallinu {functionName}. Gættu þess að hvert dæmi sýni kall og útkomu þess.",
+  "emptyExampleBlockErrorMsg":"Þú verður að hafa a.m.k. tvö dæmi í fallinu {functionName}. Gættu þess að hvert dæmi sýni kall og útkomu þess.",
   "emptyFunctionBlocksErrorMsg":"Fallkubburinn þarf að innhalda aðra kubba til að virka.",
   "emptyFunctionalBlock":"Það er kubbur með óútfyllt inntak.",
   "emptyTopLevelBlock":"Það eru engir kubbar til að keyra. Þú verður að tengja kubb við kubbinn {topLevelBlockName}.",

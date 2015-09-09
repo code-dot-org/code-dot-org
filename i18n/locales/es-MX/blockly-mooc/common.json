@@ -179,7 +179,7 @@
   "nextPuzzle":"Siguiente crucigrama",
   "nextStage":"¡ Felicidades! Terminaste {stageName}.",
   "nextStageTrophies":"¡Felicidades! Terminaste la etapa {stageName} y ganaste {numTrophies, plural, one {a trophy} other {# trophies}}.",
-  "numBlocksNeeded":"¡Felicidades! resolviste el crucigrama {puzzleNumber}. (Sin embargo, podrías haber usado sólo {num de blocks, plural, uno {1 block} otro \"{# blocks}}.)",
+  "numBlocksNeeded":"¡Felicidades! resolviste el crucigrama {puzzleNumber}. (Sin embargo, podrías haber usado sólo {numBlocks, plural, one {1 bloque} other {# bloques}}.)",
   "numLinesOfCodeWritten":"¡Acabas de escribir {numLines, plural, one {una línea} other {# líneas}} de código!",
   "openWorkspace":"Cómo funciona",
   "orientationLock":"Abre la llave de orientación para la configuración del dispositivo.",

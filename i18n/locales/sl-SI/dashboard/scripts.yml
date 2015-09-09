@@ -816,10 +816,10 @@ sl:
           Tell Me a Secret - Encrypting Text: The Need for Encryption
           Cracking the Code: Cracking the Code
           Encryption Algorithms: Keys and Passwords
-          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
-          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
-          Public Key Crypto: Public Key Encryption
+          Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
+          Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
@@ -1007,7 +1007,7 @@ sl:
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Zaključek
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1029,7 +1029,7 @@ sl:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Zaključek
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free, self-paced online course.
@@ -1048,7 +1048,7 @@ sl:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: Zaključek
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1127,3 +1127,18 @@ sl:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
+          Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
+          Updates - The Design Recipe: 'Updates - The Design Recipe'
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

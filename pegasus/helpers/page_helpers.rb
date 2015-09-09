@@ -26,6 +26,6 @@ def locale_chapter_partner?()
 end
 
 def partner_site?()
-  partner_sites = ['al.code.org', 'ar.code.org', 'br.code.org', 'eu.code.org', 'italia.code.org', 'ro.code.org', 'uk.code.org', 'za.code.org']
+  partner_sites = %w(al ar br eu italia ro sg uk za).map{|x|x + '.code.org'}
   return partner_sites.include?(request.site)
 end

@@ -151,7 +151,7 @@
   "projectileCherry": "череша",
   "projectileIce": "лед",
   "projectileDuck": "патица",
-  "reinfFeedbackMsg": "Можете да натиснете бутона \"Продължете да играете\" за да се върнете да играете историята си.",
+  "reinfFeedbackMsg": "Можете да натиснете бутона \"{backButton}\", за да се върнете да играете историята си.",
   "repeatForever": "повтаряй завинаги",
   "repeatDo": "правя",
   "repeatForeverTooltip": "Изпълнява действията в този блок, докато тече историята.",
@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "докосва горния ръб",
   "whenUp": "когато стрелка нагоре",
   "whenUpTooltip": "Изпълнява действията по-долу когато е натисната стрелка нагоре.",
-  "yes": "Да"
+  "yes": "Да",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }

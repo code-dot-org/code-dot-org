@@ -8,30 +8,8 @@ wrong 'Political leaders and heads of state.'
 wrong 'There are no members. IETF is an “organization” in name only.'
 
 teacher_markdown <<MARKDOWN
-Correct answer: A loosely organized collection of citizens and engineers who communicate mostly by email.
+Answer:
+
+- A loosely organized collection of citizens and engineers who communicate mostly by email.
+
 MARKDOWN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

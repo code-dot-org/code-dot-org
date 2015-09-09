@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -369,6 +371,8 @@
       viewing_solution: Προβολή λύσης
       try_it_yourself: Δοκίμασέ το μόνος σου
       section: Ενότητα
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
@@ -462,9 +466,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν
       να δημιουργήσουμε αυτό το σεμινάριο.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds ™ & © 2009-2013 Rovio Entertainment Ltd. Με την επιφύλαξη
       παντός δικαιώματος.<br/> Plants vs. Zombies ™ & © 2013 Electronic Arts&trade;
       S.A. Με την επιφύλαξη παντός δικαιώματος.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Με την υποστήριξη των Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -474,6 +483,7 @@
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
     support: Υποστήριξη
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: Όροι
     privacy: Πολιτική Aπορρήτου
     secure: Ασφαλής έκδοση

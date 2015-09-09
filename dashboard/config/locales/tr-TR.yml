@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -348,6 +350,8 @@
       viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
       section: Bölüm
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -437,9 +441,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin
       yardımıyla oluşturuldu.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Tüm hakları saklıdır.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -449,6 +458,7 @@
     translate: Kendi dilinize çevirmemiz için bize yardım edin
     support: Destek
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Şartlar
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm

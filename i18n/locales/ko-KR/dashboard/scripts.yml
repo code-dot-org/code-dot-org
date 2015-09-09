@@ -252,9 +252,9 @@ ko:
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: 변수 정의
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: 디자인 레시피
         K5PD:
@@ -321,7 +321,7 @@ ko:
           title: 20 시간 소개 과정
           description_audience: 10세 이상 (과정3을 마친 후)
           description: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: 이 20 시간 수업에서는 코스 2-4의 코어 컴퓨터 과학과 프로그래밍 개념을 다룹니다.
           Introduction to Computer Science: 컴퓨터과학(Computer Science, 정보과학) 소개
           The Maze: 미로 퍼즐
           Computational Thinking: 컴퓨터과학적(정보과학적)사고
@@ -362,21 +362,21 @@ ko:
         flappy:
           title: 플래피 코드
           description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: 10분 이내에 당신만의 플래피 게임을 만드세요.
           Flappy Code: 플래피 코드
         jigsaw:
           title: 퍼즐 맞추기
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: 우리 퍼즐 튜토리얼을 해보세요.
+          description_short: 우리 퍼즐 튜토리얼을 해보세요.
           Jigsaw: 퍼즐 맞추기
         step:
           title: 단계
-          description: Step tutorial
-          description_short: Step tutorial
+          description: 튜토리얼 단계
+          description_short: 튜토리얼 단계
           Step: 단계
         Hour of Code:
           title: 시간의 암호 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: "'앵그리 버드'와 '플랜츠 대 좀비'의 캐릭터를 이용해서 컴퓨터 과학의 기초를 해보세요!"
           description_short: 여러가지 재밌는 캐릭터와 함께 컴퓨터과학의 기초/개념/원리들을 배워보세요!
           Hour of Code 2013: 시간의 암호 2013
         Code Studio Puzzle Challenge:
@@ -486,7 +486,7 @@ ko:
           "Eval: Conditionals": '평가: 조건/선택'
           "Unplugged: Collision Detection and the Distance Formula": '언플러그드: 충돌 감지와 거리 계산식'
           "Play Lab: Collision Detection (Big Game)": '플레이 랩: 충돌 감지 (빅 게임)'
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           Strings and Images: 문자열과 이미지
           Contracts: 제한하기
           Your Game - Defining Variables: 'Your Game - Defining Variables'
@@ -509,7 +509,7 @@ ko:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           Strings and Images: 문자열과 이미지
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
@@ -643,7 +643,7 @@ ko:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           The Big Game: The Big Game
           Strings and Images: 문자열과 이미지
           The Design Recipe: 디자인 레시피
@@ -693,7 +693,7 @@ ko:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -705,7 +705,7 @@ ko:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -757,8 +757,8 @@ ko:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '단계 2 온라인: 혼합된 여름 공부'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -816,10 +816,10 @@ ko:
           Tell Me a Secret - Encrypting Text: The Need for Encryption
           Cracking the Code: Cracking the Code
           Encryption Algorithms: Keys and Passwords
-          Alice and Bob and Asymmetric Keys: Alice and Bob and Asymmetric Keys
-          Algorithms Detour - Hard Problems TSP: 'Algorithms Detour - Hard Problems TSP'
-          One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
-          Public Key Crypto: Public Key Encryption
+          Alice and Bob and Asymmetric Keys: 'Asymmetric Keys - Cups and Beans'
+          Algorithms Detour - Hard Problems TSP: 'Hard Problems - The Traveling Salesperson Problem'
+          One Way Functions - Ice Cream Vans: 'One Way Functions - The WiFi Hotspot Problem'
+          Public Key Crypto: Public Key Cryptography
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
           Routers and Redundancy: Routers and Redundancy
@@ -832,11 +832,11 @@ ko:
           Public Key Encryption: Public Key Encryption
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
+          description: '단계 2 온라인: 혼합된 여름 공부'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          Evaluation Blocks: 평가 블록
           Strings and Images: 문자열과 이미지
-          Defining Variables: Defining Variables
+          Defining Variables: 변수 정의
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: 디자인 레시피
@@ -878,15 +878,15 @@ ko:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '단계 2 온라인: 혼합된 여름 공부'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           Strings and Images: 문자열과 이미지
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: 변수 정의
           Defining Functions: 함수 정의하기
           Rocket-Height: Rocket-Height
           Booleans: 불(참 또는 거짓)값들
@@ -932,8 +932,8 @@ ko:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '단계 2 온라인: 혼합된 여름 공부'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
           Welcome!: 환영합니다.
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -982,15 +982,15 @@ ko:
           Hour of Code: Hour of Code
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '단계 2 온라인: 혼합된 여름 공부'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 평가 블록
           Strings and Images: 문자열과 이미지
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: 변수 정의
           Defining Functions: 함수 정의하기
           Rocket-Height: Rocket-Height
           Booleans: 불(참 또는 거짓)값들
@@ -1004,8 +1004,8 @@ ko:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          description: '단계 2 온라인: 혼합된 여름 공부'
           Welcome!: 환영합니다.
           Wrap-Up: 마무리
           Review StarLogo Nova: Review StarLogo Nova
@@ -1021,8 +1021,8 @@ ko:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          description: '단계 2 온라인: 혼합된 여름 공부'
           Welcome!: 환영합니다.
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1041,8 +1041,8 @@ ko:
         sciencePD2b-iZone:
           Welcome!: 환영합니다.
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          description: '단계 2 온라인: 혼합된 여름 공부'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1051,8 +1051,8 @@ ko:
           Wrap-Up: 마무리
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          description: '단계 2 온라인: 혼합된 여름 공부'
           Welcome!: 환영합니다.
           0: |
             Unit 1, Days 1-2
@@ -1070,8 +1070,8 @@ ko:
           Wrap-up: 마무리
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '단계 2 온라인: 혼합된 여름 공부'
+          description: '단계 2 온라인: 혼합된 여름 공부'
           Welcome!: 환영합니다.
           0: |
             Unit 1, Days 1-2
@@ -1127,3 +1127,18 @@ ko:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: 'Updates - Tweaks and Polish'
+          Updates - The Big Game and Projects: 'Updates - The Big Game and Projects'
+          Updates - The Design Recipe: 'Updates - The Design Recipe'
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

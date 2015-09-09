@@ -180,6 +180,7 @@ de-DE:
   homepage_action_text_learn: Fang an zu lernen
   homepage_action_text_signpetition: Unterzeichne die Petition
   homepage_signpetition_dropdown: 'Unterzeichne unsere Petition &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org und das Schulgremium haben eine Allianz geschlossen, um die Vielfalt in der Informatik zu verbessern.
   homepage_banner_text_link: Erfahre mehr
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -450,6 +451,7 @@ de-DE:
   educator_notes: Erläuterungen für Erzieher
   how_to_teach_hoc: 'Anleitung zum Unterrichten einer "Hour of Code"'
   more_resources_educators: Weitere Quellen für Lehrer und Erzieher
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: Teilnehmer
   teachers_notes: Anmerkungen des Lehrers
   teachers_notes_hoc: 'Lehrer: Lesen Sie hier wichtige Lehrhinweise'

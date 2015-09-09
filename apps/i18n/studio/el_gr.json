@@ -389,5 +389,14 @@
   "whenSpriteCollidedWithTopEdge": "ακουμπά την επάνω άκρη",
   "whenUp": "όταν πατηθεί το επάνω βέλος",
   "whenUpTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος.",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "itemItem1": "Item1",
+  "itemItem2": "Item2",
+  "itemItem3": "Item3",
+  "itemItem4": "Item4",
+  "setBackgroundBackground1": "set background1 background",
+  "setBackgroundBackground2": "set background2 background",
+  "setBackgroundBackground3": "set background3 background",
+  "setSpriteCharacter1": "to item1",
+  "setSpriteCharacter2": "to item2"
 }

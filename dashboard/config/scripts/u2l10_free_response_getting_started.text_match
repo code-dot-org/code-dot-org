@@ -4,3 +4,13 @@ title 'DNS in the Real World: Getting Started'
 markdown <<MARKDOWN
 Explain the similarities between DNS and the Postal Service.  Describe their analogous hierarchical structure.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but will likely include the following concepts:
+
+- Scaling of DNS requires system of servers organized in a hierarchy, just like there is a system of post offices and hierarchy (main city post office and local neighborhood post offices).
+- Hierarchy of DNS/IP is analogous to country/state/city/zip/street/direction/number.
+- New URL/IP address pairs are sometimes added, just like new homes and addresses are added and the post office needs to know.
+- IP addresses for web pages sometimes do change, just like people sometimes move. When you move, you send in a change of address card; when a web page’s IP address changes, it needs to update its DNS, which then shares the IP change with other DNS servers.
+
+MARKDOWN

@@ -190,13 +190,13 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualDrawer = getDrawableFromBlock(actualBlock);
     var expectedDrawer = getDrawableFromBlock(expectedBlock);
 
-    if (!actualBlock || !actualDrawer ||
-        actualDrawer instanceof CustomEvalError) {
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+
+    if (!actualDrawer || actualDrawer instanceof CustomEvalError) {
       throw new Error('Invalid Call Block');
     }
 
-    if (!expectedBlock || !expectedDrawer ||
-        expectedDrawer instanceof CustomEvalError) {
+    if (!expectedDrawer || expectedDrawer instanceof CustomEvalError) {
       throw new Error('Invalid Result Block');
     }
 

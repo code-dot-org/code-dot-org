@@ -1,6 +1,9 @@
 ---
+title: <%= hoc_s(:title_tutorial_guidelines) %>
 layout: wide
 ---
+
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -19,14 +22,41 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 
 <a id="top"></a>
 ## Index:
-- [How tutorials will be evaluated for inclusion](#inclusion)<br/>
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)<br/>
+- [How tutorials will be evaluated for inclusion](#inclusion)<br/>
 - [How to submit (Due 10/15/2015)](#submit)<br/>
 - [Suggestions for designing your activity](#design)<br/>
 -  [Trademark Guidelines](#tm)<br/>
 - [Tracking Pixel](#pixel)<br/>
 - [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)<br/>
 - [A note for students with disabilities](#disabilities)
+
+<a id="guidelines"></a>
+	
+## New for 2015: two formats of activites: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code more than once, we believe many of these teachers will invest the time to prepare a more creative, less one-dimensional activity for their students. To help these teachers, we'd like to curate one-hour lesson-plans for teachers who want to play a more active role in guiding their Hour of Code.	
+
+**Teacher-Led (Lesson-plan) Format _(NEW)_**: Unlike past years, we're adding a new format for tutorials that  follow a traditional lesson plan form rather than a guided-puzzle game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We'd love to see you submit **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to learn enough C.S. to guide an Hour of Code activity that is unique to their field. 
+
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. These activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+
+Note: On student-facing pages we'll list teacher-led activities below the self-guided ones, but we'll specifically call them out on pages or emails meant for educators. 
+
+## General guidelines for creating an Hour of Code activity
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+- Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+- Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+- Encourage students to create something that can be shared with friends/online.
+	
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see [http://csunplugged.com/](http://csunplugged.com/)).  Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+
+[**Back to the top**](#top)
+
+
 
 <a id="inclusion"></a>
 ## How tutorials will be evaluated for inclusion
@@ -36,7 +66,6 @@ A committee of computer science educators will rank submissions based on qualita
 **Tutorials will be listed higher if they are:**
 
 - high quality
-- self-directed, don’t require any instruction
 - designed for beginners - among students AND teachers
 - designed as a ~ 1 hour activity
 - require no sign up
@@ -51,7 +80,6 @@ A committee of computer science educators will rank submissions based on qualita
 
 - lower quality
 - more advanced level of teaching (not for beginners)
-- require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
 - have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
 - work only in English
 - reinforce stereotypes that hinder participation by under-represented student groups
@@ -66,27 +94,14 @@ A committee of computer science educators will rank submissions based on qualita
 - focus only on HTML + CSS web design
 - are submitted after the submission deadline, or with incomplete information (see below)
 
+**If your tutorial is student-led**
+Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
+
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.”  In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign. 
 
 
 [**Back to the top**](#top)  
-
-<a id="guidelines"></a>
-## General guidelines for creating an Hour of Code activity
-
-- **Subject:** Introductory computer science or programming (not HTML).
-- **Goal:** Give beginners an accessible first taste of programming.
-- **Tone:** 
-	- Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-	- Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-	- Encourage students to create something that can be shared with friends/online.
-- **Technical requirements**:
-	- Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see [http://csunplugged.com/](http://csunplugged.com/)).
-	- Okay, but not preferred: app-install, desktop app, or game-console experiences
-- **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
-- **Teacher-Led Format _(NEW)_**: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
-
-[**Back to the top**](#top)
 
 <a id="submit"></a>
 ## How to submit (Due 10/15/2015)
@@ -231,3 +246,5 @@ Ex: [http://www.tynker.com/hour-of-code](http://www.tynker.com/hour-of-code)
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers.  We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
+
+<%= view :signup_button %>

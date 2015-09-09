@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Mohon Perbaiki kesalahan berikut:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -361,6 +363,8 @@
       viewing_solution: Melihat Solusi
       try_it_yourself: Lakukan itu sendiri
       section: Sesi
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
@@ -454,9 +458,14 @@
       advisors</a> for their support in creating Code Studio.
     help_from_html: Tim teknis dari  Google, Microsoft, Facebook, dan Twitter yang
       membantu membuat tutorial ini.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Hak Cipta Dilindungi.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org.'
@@ -466,6 +475,7 @@
     translate: Bantu menterjemahkan ke bahasa anda
     support: Dukungan
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Syarat
     privacy: Kebijakan privasi
     secure: Versi yang aman

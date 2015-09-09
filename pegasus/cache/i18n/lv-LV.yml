@@ -224,6 +224,7 @@
   homepage_action_text_learn: Sāc mācīties
   homepage_action_text_signpetition: Paraksti petīciju
   homepage_signpetition_dropdown: Es piekrītu &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org un koledžu padome veido apvienību, lai uzlabotu
     dažādību datorzinībās.
   homepage_banner_text_link: Uzzini vairāk
@@ -558,6 +559,8 @@
   educator_notes: Pasniedzēju pieraksti
   how_to_teach_hoc: Ko mācīt Programmēšanas stundā
   more_resources_educators: Vairāk resursi priekš skolotājiem un pasniedzējiem
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: Paslēpt kontekstu - Pieprasīt kontekstu
   teachers_notes: Skolotāju pieraksti
   teachers_notes_hoc: 'Skolotāji: Izlasiet sev svarīgas piezīmes šeit'

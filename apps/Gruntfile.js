@@ -291,15 +291,18 @@ APPS.forEach(function (app) {
 });
 
 // Use command-line tools to run browserify (faster/more stable this way)
-var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
+  '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
   '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 
+var fastMochaTest = process.argv.indexOf('--fast') !== -1;
+
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
-  mochaTest: 'node test/util/runTests.js --color'
+  watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 
 var ext = envOptions.dev ? 'uncompressed' : 'compressed';

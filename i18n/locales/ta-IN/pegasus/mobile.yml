@@ -47,13 +47,13 @@ ta-IN:
   get_a_certificate_of_achievement: சாதனைக்கு ஓர் சான்றிதழை பெறுக
   enter_valid_age: Please select a valid age
   enter_valid_email: தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்
-  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond One Hour</a>"
-  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   thanks_for_submitting: சமர்ப்பித்ததற்க்கு நன்றிகள்!
   if_you_enjoyed: 'If you enjoyed learning, ask friends to try it too!  We want the whole world to learn.'
   personalize_certificate: Personalize your certificate
   share_achievement: உங்கள் சாதனையை பகிரவும்
-  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
   country: நாடு
@@ -86,7 +86,7 @@ ta-IN:
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Thank you for signing the petition
-  continue_learning_header: Continue learning beyond One Hour
+  continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
   learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
@@ -194,6 +194,7 @@ ta-IN:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -464,6 +465,7 @@ ta-IN:
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: participants
   teachers_notes: "Teacher's Notes"
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

@@ -28,7 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 2\",\r\n  \"callout_text\": \"Edit this function to animate the target\",\r\n  \"element_id\": \"#game_update_target > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Animation 2_callout1\",\r\n  \"callout_text\": \"Edit this function to animate the target\",\r\n  \"element_id\": \"#game_update_target > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Big Game Animation 2_callout2\",\r\n  \"callout_text\": \"Delete this block and complete the definition\",\r\n  \"element_id\": \"[block-id=\\\"76\\\"]\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "step_speed": "50",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -40,7 +40,7 @@
     "min_workspace_height": "1500",
     "disable_examples": "false",
     "markdown_instructions": "The _update-target_ function takes the target's current x value, and returns an updated value.\r\n\r\nComplete _update-target_ so that it adds to the x value each time it is called. The more you add to x, the faster the target will go.",
-    "maze_data": null
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

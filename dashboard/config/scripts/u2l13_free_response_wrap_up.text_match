@@ -4,3 +4,12 @@ title 'Tell Me a Secret: Wrap Up'
 markdown <<MARKDOWN
 List 3 characteristics of the ideal encryption scheme.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but may include these concepts:
+
+- Easy/fast to encode data
+- Hard to decode
+- Decoding returns the exact data that was encoded originally
+- Encoded message is easy to transmit or communicate
+MARKDOWN

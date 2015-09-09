@@ -178,6 +178,7 @@ ca-ES:
   homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
   homepage_signpetition_dropdown: "Estic d'acord &#x25BE;"
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar la diversitat en informàtica.
   homepage_banner_text_link: Aprèn més
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -452,6 +453,7 @@ ca-ES:
   educator_notes: "Notes d'educador"
   how_to_teach_hoc: Com ensenyar una Hora de Codi
   more_resources_educators: Més recursos per a mestres i educadors
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: Participants
   teachers_notes: Notes del professor
   teachers_notes_hoc: 'Professors: Llegiu les notes importants per als educadors aquí'

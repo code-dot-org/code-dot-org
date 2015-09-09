@@ -179,6 +179,7 @@ bs-BA:
   homepage_action_text_learn: Započni sa učenjem
   homepage_action_text_signpetition: Potpiši peticiju
   homepage_signpetition_dropdown: 'Slažem se &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org i College Board čine savez čiji cilj je poboljšanje raznovrsnosti u računarstvu.
   homepage_banner_text_link: Nauči više
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -449,6 +450,7 @@ bs-BA:
   educator_notes: Bilješke Edukatora
   how_to_teach_hoc: Kako Predavati Sat Kodiranja
   more_resources_educators: Dodatni resursi za nastavnike i edukatore
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: učesnici
   teachers_notes: Bilješke Nastavnika
   teachers_notes_hoc: 'Nastavnici: pročitajte ovdje bilješke edukatora'

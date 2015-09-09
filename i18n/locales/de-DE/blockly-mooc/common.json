@@ -152,7 +152,7 @@
   "errorUnusedFunction":"Du hast eine Funktion erstellt, aber sie nie im Arbeitsbereich verwendet! Klicke auf \"Funktionen\" in den Werkzeugen, und stelle sicher, dass du es in deinem Programm verwendst.",
   "errorUnusedParam":"Du hast einen Parameterblock hinzugefügt, aber nicht in der Definition verwendet. Stelle sicher, deine Parameter zu verwenden, indem du auf \"Bearbeiten\" klickst und den Parameterblock im grünen Block plazierst.",
   "exampleErrorMessage":"Die Funktion {functionName} hat eine oder mehrere Stellen, die noch korrigiert werden müssen. Prüfe, ob sie zu Deiner Beschreibung passen und ob sie die Frage beantworten.",
-  "examplesFailedOnClose":"One or more of your examples do not match your definition. Check your examples before closing",
+  "examplesFailedOnClose":"Mindestens eines deiner Beispiele stimmt nicht mit deiner Definition überein. Überprüfe deine Beispiele vor der Schliessung",
   "extraTopBlocks":"Du hast unverbundene Blöcke.",
   "extraTopBlocksWhenRun":"Du hast unverbundene Blöcke. Wolltest Du sie mit dem \"wenn ausgeführt\" Block verbinden?",
   "finalStage":"Glückwunsch! Du hast das letzte Level erfolgreich abgeschlossen.",
@@ -219,6 +219,6 @@
   "wantToLearn":"Möchtest du programmieren lernen?",
   "watchVideo":"Video anschauen",
   "when":"wenn",
-  "whenRun":"wenn ausführen",
+  "whenRun":"während der Ausführung",
   "workspaceHeaderShort":"Arbeitsbereich: "
 }

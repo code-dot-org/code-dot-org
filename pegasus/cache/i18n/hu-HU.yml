@@ -64,8 +64,8 @@
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
   enter_valid_age: Kérlek válassz egy érvényes életkort
   enter_valid_email: Adj meg egy érvényes e-mail címet
-  get_a_certificate_message: Küldünk önnek egy tanúsítványt, és további információkat
-    Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>
+  get_a_certificate_message: Küldeni fogunk neked egy tanúsítványt, illetve információt
+    arról, hogyan <a href='/learn/beyond'>tanulhatsz tovább az első óra után</a>
   get_a_certificate_message_after: Mentéshez vagy nyomtatáshoz kattints az oklevélre.
     Haladj tovább a <a href='http://studio.code.org'>többi kurzussal</a>, vagy nézd
     meg, hogy mit lehet <a href='/learn/beyond'>Tanulni a Következő Órában</a>.
@@ -212,6 +212,7 @@
   homepage_action_text_learn: Kezdj tanulni
   homepage_action_text_signpetition: Írd alá a petíciót
   homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika
     sokszínűségének javítása érdekében.
   homepage_banner_text_link: Tudj meg többet
@@ -545,6 +546,8 @@
   educator_notes: Oktatói jegyzetek
   how_to_teach_hoc: Hogyan tarthatsz Kódolás óráját
   more_resources_educators: További segédletek tanárok és oktatók részére
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: résztvevők
   teachers_notes: Tanári jegyzetek
   teachers_notes_hoc: 'Tanároknak: Kérjük olvassák el az itt lévő fontos oktatási

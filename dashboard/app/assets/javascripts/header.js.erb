@@ -165,8 +165,17 @@ function shareProject() {
     var origin = location.protocol + '//' + location.host;
     var shareUrl = origin + dashboard.project.getPathName();
     var encodedShareUrl = encodeURIComponent(shareUrl);
-    var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
-      + '<div id="project-share" class="modal-content">'
+
+    var image = '';
+    var modalClass = 'modal-content';
+    if (appOptions.skin.staticAvatar) {
+      image = '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">';
+    } else {
+      modalClass += ' no-modal-icon';
+    }
+
+    var dialog = new Dialog({body: image
+      + '<div id="project-share" class="' + modalClass + '">'
       + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
       + '<p><%= I18n.t('project.share_copy_link') %></p>'
         // TODO: de-dup with apps code once JS common-core work is done.

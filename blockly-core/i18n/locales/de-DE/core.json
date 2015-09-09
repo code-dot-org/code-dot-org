@@ -39,7 +39,7 @@
   "CONTROLS_FOREACH_TOOLTIP": "Setze für jedes Listenelement die Variable \"%1\" auf das aktuelle Listenelement und führe dann einige Anweisungen aus.",
   "CONTROLS_FOR_HELPURL": "http://de.wikipedia.org/wiki/For-Schleife",
   "CONTROLS_FOR_INPUT_FROM_TO_BY": "von %1 bis %2 mit %3",
-  "CONTROLS_FOR_INPUT_WITH": "Zähle mit",
+  "CONTROLS_FOR_INPUT_WITH": "Zähle",
   "CONTROLS_FOR_TOOLTIP": "Lasse die Variable %1 die Werte von einem Startwert bis zu einem Zielwert annehmen und führe für jeden Wert eine Anweisung aus.",
   "CONTROLS_IF_ELSEIF_TOOLTIP": "Füge dem Wenn-Baustein eine Bedingung hinzu.",
   "CONTROLS_IF_ELSE_TOOLTIP": "Füge eine letzte mögliche Option zu dem \"Wenn\"-Baustein hinzu.",

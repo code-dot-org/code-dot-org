@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/tables_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class TablesTest < MiniTest::Unit::TestCase
+class TablesTest < Minitest::Test
 
   def test_create_read_update_delete
     init_apis
@@ -50,6 +50,27 @@ class TablesTest < MiniTest::Unit::TestCase
     delete_channel
   end
 
+  def test_export
+    init_apis
+    create_channel
+
+    csv_filename = File.expand_path('../roster.csv', __FILE__)
+    import(csv_filename)
+
+    result_body = export().body.split("\n")
+    original_body = File.read(csv_filename).split("\n")
+
+    result_columns = result_body[0]
+    original_columns = original_body[0]
+
+    result_first_row = result_body[1]
+    original_first_row = original_body[1]
+
+    assert_equal result_columns, "id,#{original_columns}"
+    assert_equal result_first_row, "1,#{original_first_row}"
+
+    delete_channel
+  end
   # Methods below this line are test utilities, not actual tests
   private
 
@@ -92,5 +113,9 @@ class TablesTest < MiniTest::Unit::TestCase
   def import(csv_filename)
     import_file = Rack::Test::UploadedFile.new csv_filename, "text/csv"
     @tables.post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
+  end
+
+  def export()
+    @tables.get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
   end
 end

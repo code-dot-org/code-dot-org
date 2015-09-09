@@ -12,3 +12,12 @@ answer 'A packet of data that uses 32-bit addresses'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- protocol: A well-known set of rules and standards used to communicate
+- packet: A chunk of information that gets sent on the internet
+- Internet Protocol: The required structure of a packet to be sent on the internet
+- IPv4 packet: A packet of data that uses 32-bit addresses
+
+MARKDOWN

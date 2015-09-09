@@ -17,7 +17,7 @@
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "true",
+    "impressive": "false",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

@@ -149,7 +149,7 @@
           'Bee: Nested Loops2': 'Ong: Các vòng lồng 2'
           'Bee: Debugging2': 'Ong: sửa lỗi 2'
           'Artist: Patterns': 'Nghệ sĩ: mẫu'
-          Songwriting: Songwriting
+          Songwriting: Sáng tác nhạc
           description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
           description_short: Khóa học 3 là kháo học sau khóa học 2.
         playlab:
@@ -243,7 +243,7 @@
           description: A selection of Course 4 levels for usability testing.
           Variables: Các biến
           For Loops: Cho vòng lặp
-          Binary: Binary
+          Binary: Nhị phân
         potus:
           title: special
           description_short: special
@@ -254,7 +254,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: Nhị phân
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -1259,7 +1259,7 @@
           Getting Loopy: Tạo vòng lặp
           The Big Event: Sự kiện lớn
           Binary Bracelets: Vòng đeo tay nhị phân
-          Songwriting: Songwriting
+          Songwriting: Sáng tác nhạc
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1269,3 +1269,18 @@
             all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
             for grades 3-8.
           description_audience: Ages 7-13
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules

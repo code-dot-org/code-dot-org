@@ -255,7 +255,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 350px; }
   #visualizationColumn.responsive {
     max-width: 350px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 350px; }
   #codeWorkspace {
     left: 350px; }
@@ -282,7 +282,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 300px; }
   #visualizationColumn.responsive {
     max-width: 300px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 300px; }
   #codeWorkspace {
     left: 300px; }
@@ -309,7 +309,7 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 250px; }
   #visualizationColumn.responsive {
     max-width: 250px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 250px; }
   #codeWorkspace {
     left: 250px; }
@@ -336,9 +336,9 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   #visualizationColumn.responsive {
     max-width: 200px; }
-  .small-footer.responsive {
+  .small-footer-base.responsive {
     max-width: 200px; }
-    .small-footer.responsive small {
+    .small-footer-base.responsive small {
       float: left; }
   #codeWorkspace {
     left: 200px; }

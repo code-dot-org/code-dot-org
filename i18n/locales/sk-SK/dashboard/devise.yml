@@ -20,7 +20,7 @@ sk:
       reset_password_instructions:
         subject: Code.org reset password instructions
       unlock_instructions:
-        subject: Unlock Instructions
+        subject: Odomknúť inštrukcie
     omniauth_callbacks:
       failure: 'Could not authenticate you from %{kind} because "%{reason}".'
       success: 'Successfully authenticated from %{kind} account.'

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -359,6 +361,8 @@
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -433,9 +437,9 @@
     choose_next_course: Experimenta um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
+    title: Aprende no Code Studio
+    description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
+      com código.
   gender:
     male: Masculino
     female: Feminino
@@ -444,24 +448,30 @@
     student: Aluno
     teacher: Professor
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Agradecemos aos <a href="https://code.org/about/donors">doadores</a>,
+      <a href="https://code.org/about/partners">parceiros</a>, à <a href="https://code.org/about/team">nossa
+      equipa</a>, aos produtores dos vídeos e aos <a href="https://code.org/about/advisors">professores</a>
+      pelo apoio na criação do Code Studio.
     help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar este tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       Todos os direitos reservados.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. Todos os direitos reservados.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
+      e a Hora de Código&reg; são marcas registadas do Code.org.'
     copyright: Copyright
     more: Mais
     feedback: Fornecer feedback
     translate: Ajuda-nos a traduzir para o teu idioma
     support: Suporte
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Termos
     privacy: Política de privacidade
     secure: Versão segura
@@ -615,8 +625,8 @@
   dialog:
     ok: OK
     startover_title: Tens a certeza de que pretendes recomeçar?
-    startover_body: This will reset the puzzle to its start state and reset all the
-      data you've added or changed.
+    startover_body: Esta ação irá repor o teu puzzle ao estado inicial e repor todos
+      os dados que adicionaste ou alteraste.
     startover_ok: Recomeçar
     startover_cancel: Cancelar
   time:

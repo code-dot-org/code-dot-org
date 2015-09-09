@@ -98,6 +98,18 @@ class TablesApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
+  # GET /v3/export-(shared|user)-tables/<channel-id>/table-name
+  #
+  # Exports a csv file from a table where the first row is the column names
+  # and additional rows are the column values.
+  #
+  get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :csv
+
+    return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
+  end
+
   #
   # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
   #

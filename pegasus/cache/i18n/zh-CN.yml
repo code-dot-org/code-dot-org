@@ -165,6 +165,7 @@
   homepage_action_text_learn: 开始学习
   homepage_action_text_signpetition: 在请愿书上签名
   homepage_signpetition_dropdown: 签署我们请愿 &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org和大学理事会是一个以增加电脑科学的多样性的联盟。
   homepage_banner_text_link: 了解更多
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
@@ -458,6 +459,8 @@
   educator_notes: 教育家笔记
   how_to_teach_hoc: 如何教授一小代码
   more_resources_educators: 给教师和教育工作者们的更多资源
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: 参与者
   teachers_notes: 老师的笔记
   teachers_notes_hoc: 教师：请阅读这些重要的教育者说明

@@ -194,6 +194,7 @@ uk-UA:
   homepage_action_text_learn: Початок навчання
   homepage_action_text_signpetition: Підписати петицію
   homepage_signpetition_dropdown: 'Підписати нашу петицію &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення різноманітності в інформатиці.
   homepage_banner_text_link: Дізнайтеся більше
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -466,6 +467,7 @@ uk-UA:
   educator_notes: Інформація для вчителя
   how_to_teach_hoc: 'Як викладати "Годину коду"'
   more_resources_educators: Більше ресурсів для вчителів та освітян
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: учасники
   teachers_notes: Інформація для вчителя
   teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'

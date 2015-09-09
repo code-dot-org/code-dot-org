@@ -66,19 +66,19 @@
   enter_valid_age: Vinsamlegast veldu gildan aldur
   enter_valid_email: Vinsamlega sláðu inn gilt netfang
   get_a_certificate_message: Við sendum þér viðurkenningarskjal og upplýsingar um
-    hvernig þú getur haldið áfram að læra <a href='/learn'>eftir Klukkustund kóðunar</a>
+    hvernig þú getur haldið áfram að <a href='/learn'>Læra umfram klukkustund</a>
   get_a_certificate_message_after: Smelltu á skírteinið til að hala það niður eða
     prenta það. Haltu svo áfram með <a href='http://studio.code.org'>önnur námskeið
-    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>læra eftir
-    Klukkustund kóðunar</a>.
+    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram
+    klukkustund</a>.
   thanks_for_submitting: Takk fyrir þátttökuna!
   if_you_enjoyed: Ef þér fannst gaman að læra þetta, hvernig væri að fá vini þína
     til að prófa líka! Við viljum að allur heimurinn læri.
   personalize_certificate: Gerðu viðurkenningarskjalið persónulegra
   share_achievement: Deildu árangrinum þínum
   beyond_hour_message: Haltu áfram með <a href='http://studio.code.org'>önnur námskeið
-    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>læra eftir
-    Klukkustund kóðunar</a>.
+    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram
+    klukkustund</a>.
   leaderboards_for_hoc: Topplisti fyrir Klukkustund kóðunar.
   support_url: http://support.code.org/
   country: Land
@@ -123,7 +123,7 @@
     úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast
     nánar.
   learn_hoc: Lærðu í Klukkustund kóðunar
-  beyond_hoc: Eftir Klukkustund kóðunar
+  beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
   girl: Stelpa
   boy: Strákur
@@ -212,6 +212,7 @@
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: Skrifaðu undir áskorun okkar &#x25BE;
+  homepage_diversity_pledge: Vinna fjölbreytniheitið
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka
     fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
@@ -548,6 +549,8 @@
   educator_notes: Minnispunktar leiðbeinenda
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
+  beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond
+    an Hour)? Sjá viðmiðin og umsóknarformið.
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'

@@ -1201,9 +1201,9 @@
         образуват окръжност от 360 градуса.  '
       Course 4 Artist 8_instruction: Начертайте това слънце като повторите целият
         блок от код 12 пъти.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим
+        да я изградите без да даваме блокове, за да започнете! \r Съвет: има 3 триъгълника
+        в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
       Course 4 Artist 9_instruction: 'Повторете този дизайн 10 пъти и се уверете,
         че ще се завъртате между всяка фигура, от която е съставен. Ето един съвет
         на колко градуса трябва да се завъртате: Колко е 360 делено на 10?'
@@ -1286,8 +1286,15 @@
         спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от
         предходната. Можете ли да попълните липсващите блокове, за да завършите тази
         страхотна картина?
+      Course 4 Artist For Loops 8a_instruction: Най-малката линия от тази квадратна
+        спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от
+        предходната. Можете ли да попълните липсващите блокове, за да завършите тази
+        страхотна картина?
       Course 4 Artist For Loops 9_instruction: Можете ли да направите спирала? Преместете
         се напред от 1 до 75 пиксела, като увеличавате с 1 пиксел всеки път.
+      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
+        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
+        Click here."
       Course 4 Artist For Loops inspire_instruction: "Свободна игра за вдъхновение:
         Вече сте научили всичко, което трябва да знаете за да направите модел като
         този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно.
@@ -1489,9 +1496,11 @@
         "стъпка" и всеки път, когато цикъла се повтаря, водещата променлива нараства
         със "стъпката". Опитайте се да съберете нектара от цветята, като използвате
         стъпка от 2.
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+      Course 4 Bee Loops 5 NEW_instruction: Пъхнете тези блокове в цикъл, за да съберете
+        нектар от всяко цвете.
+      Course 4 Bee Loops 5a NEW_instruction: Сега използвайте цикли, за да помогнете
+        на пчелата да събере всичкия нектар по пътя си към кошера с възможно по-малко
+        блокове.  Когато стигне там, не забравяйте да направите мед!
       Course 4 Bee Params 1_instruction: Използвайте функцията " вземи нектар 3",
         която кара пчелата да завива, да се придвижва и взима нектара и да се върне
         в изходна позиция. Напишете последователността за събирането на нектар като
@@ -2480,6 +2489,10 @@
         от всяко цвете.
       NEW Course 4 Bee For Loops 10_instruction: Използвайте вашата променлива за  "брояч"
         на повторенията да контролира колко далеч да се движи хоризонтално.
+      NEW Course 4 Bee For Loops 10a_instruction: 'Готови ли сте за предизвикателството?  Използвайте
+        това, което сте научили за циклите и се опитайте да реши този проблем. Запомнете:
+        Вие може да пробвате Вашето решение няколко пъти, преди да разберете всички
+        последователни стъпки.'
       NEW Course 4 Bee For Loops 11_instruction: Можете ли да използвате променливата
         на цикъла за контрол на движението и събирането на нектар?
       NEW Course 4 Bee For Loops 2_instruction: Добавете код, необходим за да се уверите,
@@ -2489,7 +2502,7 @@
         Всичкият код, който ни трябва е там, погледнете как той е обединен и след
         това щракнете върху "Старт", за да видите как работи. '
       NEW Course 4 Bee For Loops 4 4_instruction: 'Можете ли да помогнете на пчелата
-        в събирането на останалата част от меда, ползвайки това за повторение? '
+        в събирането на останалата част от мед, ползвайки това за повторение? '
       NEW Course 4 Bee For Loops 4_instruction: 'Замени??? в цикъла с най-голямото
         количество нектар, който пчелите трябва да съберат. '
       NEW Course 4 Bee For Loops 5 5_instruction: Можа ли да разбереш как се използва
@@ -2543,6 +2556,41 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2569,6 +2617,70 @@
       PDK5 Loops 3_instruction: Ето още една загадка за практикуване на цикли. Какво
         става, ако използвате блок за повторение за изпълнение на код, който Ви е
         предоставен в работната област 4 пъти?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: Ракетата се изстреля, пътувайки с 15 метра в
         секунда... натиснете "Старт", за да видите как това текстово описание изглежда
         като анимация.

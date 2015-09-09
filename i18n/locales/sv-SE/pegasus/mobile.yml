@@ -181,6 +181,7 @@ sv-SE:
   homepage_action_text_learn: 'Börja lära '
   homepage_action_text_signpetition: Skriv på uppropet
   homepage_signpetition_dropdown: 'Underteckna vår namninsamling &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org och College Board bildar en allians för att förbättra mångfalden i datavetenskap.
   homepage_banner_text_link: Lär dig mer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -451,6 +452,7 @@ sv-SE:
   educator_notes: Pedagog anteckningar
   how_to_teach_hoc: Hur man undervisar med en Timme av Kod
   more_resources_educators: Mer resurser för lärare och utbildare
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: deltagare
   teachers_notes: Lärarens anteckningar
   teachers_notes_hoc: 'Lärare: Läs viktiga lärar- anteckningar här'
