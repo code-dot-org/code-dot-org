@@ -1,42 +1,14 @@
-<% if @country != 'us' %>
-- <a href="<%= hoc_uri('/resources/country-resources') %>"><%= hoc_s(:resources_country_resources)%></a>
-<br />
-<% end %>
-<% if @country == 'ie' %>
-- <a href="<%= hoc_uri('/resources/how-to-ireland') %>">How to get started in Ireland</a>
-<br/>
-<% end %>
-- <a href="<%= hoc_uri('/resources/how-to') %>"><%= hoc_s(:resources_how_to)%></a>
-<br/>
-<% if @country == 'us' %>
-- <a href="<%= hoc_uri('/resources/how-to-events') %>"><%= hoc_s(:resources_how_to_events)%></a>
-<br />
-<% end %>
-- <a href="<%= hoc_uri('/resources#handouts') %>"><%= hoc_s(:resources_handouts)%></a>
-<br/>
-- <a href="<%= hoc_uri('/resources#videos') %>"><%= hoc_s(:resources_videos)%></a>
-<br/>
-- <a href="<%= hoc_uri('/resources#posters') %>"><%= hoc_s(:resources_posters)%></a>
-<br/>
-- <a href="<%= hoc_uri('/resources#social') %>"><%= hoc_s(:resources_social)%></a>
-<br/>
-<% if @country != 'uk' %>
-- <a href="<%= hoc_uri('/resources#banners') %>"><%= hoc_s(:resources_banners)%></a>
-<br/>
-<% end %>
-- <a href="<%= hoc_uri('/resources#sample-emails') %>"><%= hoc_s(:resources_emails)%></a>
-<br/>
-<% if @country != 'uk' %>
-- <a href="<%= hoc_uri('/resources/stats') %>"><%= hoc_s(:resources_stats)%></a>
-<br />
-<% end %>
-- <a href="<%= hoc_uri('/resources/press-kit') %>"><%= hoc_s(:resources_press_kit)%></a>
-<% if @country == 'us' %>
-- <a href="<%= hoc_uri('/resources/how-to-districts') %>"><%= hoc_s(:resources_how_to_districts)%></a>
-<br />
-<% end %>
-<% if @country == 'us' %>
-- <a href="<%= hoc_uri('/resources/how-to-public-officials') %>"><%= hoc_s(:resources_how_to_officials)%></a>
-<br />
-<% end %>
+- <a href="<%= resolve_url('/resources') %>"><%= hoc_s(:nav_back_to_resources)%></a>
+- <a href="<%= resolve_url('/resources#handouts') %>"><%= hoc_s(:resources_one_pager)%></a>
+- <a href="<%= resolve_url('/resources#handouts') %>"><%= hoc_s(:resources_brochure)%></a>
+- <a href="<%= resolve_url('/resources#videos') %>"><%= hoc_s(:resources_videos)%></a>
+- <a href="<%= resolve_url('/resources#posters') %>"><%= hoc_s(:resources_posters)%></a>
+- <a href="<%= resolve_url('/resources#banners') %>"><%= hoc_s(:resources_banners)%></a>
+- <a href="<%= resolve_url('/resources#sample-emails') %>"><%= hoc_s(:resources_emails)%></a>
+- <a href="<%= resolve_url('/resources/stats') %>"><%= hoc_s(:resources_stats)%></a>
+- <a href="<%= resolve_url('/resources/press-kit') %>"><%= hoc_s(:resources_press_kit)%></a>
 
+<!-- 
+# Include this when blurb about HoC logo is ready
+- <a href="<%= resolve_url('/resources#logo') %>"><%= hoc_s(:resources_logo)%></a> 
+-->
