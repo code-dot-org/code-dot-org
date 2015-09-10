@@ -51,7 +51,12 @@ style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-b
 </div>
 <br>
 
-**Classroom supplies, free of charge:**
+**Start with an Hour of Code**
+
+This Dec 7-13 host an [Hour of Code](https://hourofcode.com) for your class and win cool prizes. It’s a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Sign up your classroom today at hourofcode.com.
+ Tutorials for all ages, featuring Frozen and Angry Birds, are available in 40 languages. No experience needed. Try tutorials
+
+**Classroom supplies, at no cost:**
 
 Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3. It will also help us improve our K-5 Professional Development program.
 

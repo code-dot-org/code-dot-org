@@ -20,7 +20,12 @@ Thank you for signing up to attend a Code.org K-5 workshop.
 
 1. Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. 
 
-2. Update your name in your Code Studio account settings to be the name you want to appear on your PD completion certificate.
+2. Update your name in your Code Studio account settings to be the name you want to appear on your PD completion certificate. To do so: 
+	- Log into your account
+	- Click the organge block in the upper right hand corner that says "Hi Your Name" 
+	- Select "My account" 
+	- Change your "Display name" 
+	- Click "Update"
 
 3. If you have any food allergies, please bring your own meal or eat responsibly. 
 
