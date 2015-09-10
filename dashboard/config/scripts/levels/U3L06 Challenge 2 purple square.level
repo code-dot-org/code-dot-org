@@ -8,31 +8,19 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
       "turnRight": null,
       "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
       "penUp": null,
       "penDown": null,
       "penWidth": null,
-      "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "functionParams_none": null,
-      "callMyFunction": null
+      "penColor": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "This time we're going to learn a little bit about changing the turtle's pen. Read through the documentation for penWidth() and penColor(), and then draw the purple square as shown.",
+    "instructions": "Read the documentation for penColor() and penWidth() before using them to draw the blue square.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.0",
+    "slider_speed": "0.9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -48,8 +36,18 @@
     "app_width": "320",
     "app_height": "480",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge2.png",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "###Color and Width\r\n\r\nTwo powerful new commands have been added to the block palette, `penColor()` and `penWidth()` . \r\n\r\n**Read the documentation:** Read through the documentation for these commands to learn how you can change the size and color of the pen your turtle uses to draw. `penColor()` in particular can be used in many different ways. Don't worry, you'll get a lot of opportunities to practice!\r\n\r\n**Draw the square:** Use these functions to draw the thick blue square shown below.\r\n\r\n![](https://images.code.org/6ed36a408e568a0410f10d017550843f-image-1441904430698.png)",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>
