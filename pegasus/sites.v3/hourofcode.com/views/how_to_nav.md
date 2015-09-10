@@ -1,4 +1,4 @@
-<% if @country == 'us' %>
+<% if @country ==  'us' %>
 - <a href="<%= hoc_uri('/resources/how-to') %>"><%= hoc_s(:for_educators)%></a>
 <br/>
 - <a href="<%= hoc_uri('/resources/how-to-after-school') %>"><%= hoc_s(:for_after_school)%></a>
