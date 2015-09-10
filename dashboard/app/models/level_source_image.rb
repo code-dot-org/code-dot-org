@@ -10,37 +10,42 @@ class LevelSourceImage < ActiveRecord::Base
     return false if CDO.disable_s3_image_uploads
     return false if image.blank?
 
-    # upload original image
-    unless AWS::S3.upload_to_bucket('cdo-art', s3_filename, image, no_random: true)
-      return false
-    end
+    return false unless upload_original_image(image)
 
-    # create the framed image
     if level_source.level.game.app == Game::ARTIST
-      if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
-        image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
-      else
-        image_filename = "app/assets/images/blank_sharing_drawing.png"
-      end
-
-      begin
-        framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                               :foreground_blob => image).to_blob
-      rescue Magick::ImageMagickError # something wrong with the image
-        return false
-      end
-
-      unless AWS::S3.upload_to_bucket('cdo-art', s3_framed_filename, framed_image, no_random: true)
-        return false
-      end
+      return false unless upload_framed_image(image)
     end
 
     self.save
   end
 
-  def s3?
-    true
+  S3_BUCKET = 'cdo-art'
+
+  def upload_image(filename, image)
+    AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
   end
+
+  def upload_original_image(image)
+    upload_image(s3_filename, image)
+  end
+
+  def upload_framed_image(image)
+    if level_source.level.try(:skin) == 'anna' || level_source.level.try(:skin) == 'elsa'
+      frame_image_filename = "app/assets/images/blank_sharing_drawing_#{level_source.level.skin}.png"
+    else
+      frame_image_filename = "app/assets/images/blank_sharing_drawing.png"
+    end
+
+    begin
+      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
+                                             :foreground_blob => image).to_blob
+    rescue Magick::ImageMagickError # something wrong with the image
+      return false
+    end
+
+    upload_image(s3_framed_filename, framed_image)
+  end
+
 
   def LevelSourceImage.hashify_filename(plain)
     [Digest::MD5.hexdigest(plain), plain].join('=')
