@@ -146,8 +146,8 @@ function drawGraph(ctx, exportImage, updateControls) {
 
   var bitsPerPix = 1;
   if (options.version == '1') {
-    image_w = widthText.value;
-    image_h = heightText.value;
+    image_w = getPositiveValue(widthText);
+    image_h = getPositiveValue(heightText);
   } else {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
     image_w = binToInt(readByte(binCode, 0));
@@ -167,7 +167,7 @@ function drawGraph(ctx, exportImage, updateControls) {
       binCode = binCode.substring(8, binCode.length);
 
       // Update pixel format indicator.
-      var bitsPerPixel = parseInt(bitsPerPixelText.value);
+      var bitsPerPixel = getPositiveValue(bitsPerPixelText);
       if (hexMode && bitsPerPixel % 4 !== 0) {
         pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
       } else {
@@ -229,8 +229,8 @@ function drawGraph(ctx, exportImage, updateControls) {
 function formatBitDisplay() {
 
   var theData = pixel_data.value;
-  var chunksPerLine = parseInt(widthText.value);
-  var chunkSize = parseInt(bitsPerPixelText.value);
+  var chunksPerLine = getPositiveValue(widthText);
+  var chunkSize = getPositiveValue(bitsPerPixelText);
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
@@ -438,9 +438,9 @@ function changeVal(elementID) {
 
 function setSliders() {
   // Make sure slider value is at least 1
-  heightRange.value = heightText.value >= 1 ? heightText.value : 1;
-  widthRange.value = widthText.value >= 1 ? widthText.value : 1;
-  bitsPerPixelRange.value = bitsPerPixelText.value >= 1 ? bitsPerPixelText.value : 1;
+  heightRange.value = getPositiveValue(heightText);
+  widthRange.value = getPositiveValue(widthText);
+  bitsPerPixelRange.value = getPositiveValue(bitsPerPixelText);
 
   if (options.version != '1') {
     updateBinaryDataToMatchSliders();
@@ -450,22 +450,26 @@ function setSliders() {
 }
 
 function setMinTextValues() {
-  if (heightText.value < 1) {
-    heightText.value = 1;
-  }
-  if (widthText.value < 1) {
-    widthText.value = 1;
-  }
-  if (bitsPerPixelText.value < 1) {
-    bitsPerPixelText.value = 1;
-  }
+  heightText.value = getPositiveValue(heightText);
+  widthText.value = getPositiveValue(widthText);
+  bitsPerPixelText.value = getPositiveValue(bitsPerPixelText);
+}
+
+/**
+ * @param element {Element}
+ * @returns element's numerical value if it represents a positive integer,
+ * or 1 if it is non-positive or non-numerical.
+ */
+function getPositiveValue(element) {
+  var value = parseInt(element.value, 10);
+  return value >= 1 ? value : 1;
 }
 
 function updateBinaryDataToMatchSliders() {
 
-  var heightByte = pad(parseInt(heightRange.value).toString(2), 8, "0");
-  var widthByte = pad(parseInt(widthRange.value).toString(2), 8, "0");
-  var bppByte = pad(parseInt(bitsPerPixelRange.value).toString(2), 8, "0");
+  var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
+  var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
+  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
 
