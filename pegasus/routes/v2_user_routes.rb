@@ -1,13 +1,11 @@
 get '/v2/user' do
   only_for 'code.org'
   dont_cache
-  forbidden! unless dashboard_user
+  forbidden! unless current_user
   content_type :json
-  result = dashboard_user.slice_keys(:id, :name, :admin)
-  result[:owned_sections] = DASHBOARD_DB[:sections].
-      select(:id).
-      where(user_id: dashboard_user_id).
-      to_a
+  result = current_user.slice_keys(:id, :name, :admin)
+  result[:owned_sections] = dashboard_db[:sections].
+      select(:id).where(user_id: current_user_id).all
   JSON.pretty_generate(result)
 end
 

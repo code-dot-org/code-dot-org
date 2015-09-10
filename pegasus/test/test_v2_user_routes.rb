@@ -1,14 +1,9 @@
 # Tests for the routes in v2_user_routes.rb
 
-# Set up fake database first
-# see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
-require 'sequel'
-DASHBOARD_DB = Sequel.connect "mock://mysql" unless defined? DASHBOARD_DB
-DASHBOARD_DB.server_version = 50616
-
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
+require 'sequel'
 require_relative '../router'
 
 ENV['RACK_ENV'] = 'test'
@@ -21,13 +16,10 @@ class V2UserRoutesTest < Minitest::Test
       @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
     end
 
-    after do
-      clear_fake_database
-    end
-
     describe 'get /v2/user' do
 
       it 'returns 403 "Forbidden" when not signed in' do
+        with_role nil
         @pegasus.get '/v2/user'
         assert_equal 403, @pegasus.last_response.status
       end
@@ -81,30 +73,26 @@ class V2UserRoutesTest < Minitest::Test
     # TEACHER).  The result should be pulled in through the mock database.
     # @param [Hash] role
     def with_role(role)
-      Sinatra::Request.any_instance.stubs(:user_id).returns(role[:id])
+      Documents.any_instance.stubs(:current_user_id).returns(role.nil? ? nil : role[:id])
+      Documents.any_instance.stubs(:current_user).returns(role)
     end
 
     # Overrides the current database with a procedure that, given a query,
     # will return results appropriate to our test suite.
     def use_fake_database
-      DASHBOARD_DB.fetch = Proc.new do |query|
+      # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
+      fake_db = Sequel.connect 'mock://mysql'
+      fake_db.server_version = 50616
+      fake_db.fetch = Proc.new do |query|
         case query
-          when /SELECT \* FROM `users` WHERE \(`id` = #{STUDENT[:id]}\)/ then STUDENT
-          when /SELECT \* FROM `users` WHERE \(`id` = #{TEACHER[:id]}\)/ then TEACHER
-          when /SELECT \* FROM `users` WHERE \(`id` = #{ADMIN[:id]}\)/ then ADMIN
           when /SELECT `id` FROM `sections` WHERE \(`user_id` = #{TEACHER[:id]}\)/ then
             TEACHER_SECTIONS.map do |section| section.slice(:id) end
           else nil
         end
       end
-    end
 
-    # Put the fake database back in a state where it will return no rows
-    # no matter what query you send it.
-    def clear_fake_database
-      DASHBOARD_DB.fetch = nil
+      Documents.any_instance.stubs(:dashboard_db).returns(fake_db)
     end
-
 
     #
     # Test Role: Student
