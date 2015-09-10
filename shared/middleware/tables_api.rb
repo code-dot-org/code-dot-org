@@ -51,6 +51,17 @@ class TablesApi < Sinatra::Base
   end
 
   #
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
+  #
+  # Deletes a table
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
+    dont_cache
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    no_content
+  end
+
+  #
   # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>/delete
   #
   # This mapping exists for older browsers that don't support the DELETE verb.

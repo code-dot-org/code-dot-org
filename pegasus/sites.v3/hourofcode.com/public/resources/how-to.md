@@ -1,7 +1,7 @@
 ---
 title: <%= hoc_s(:title_how_to) %>
 layout: wide
-nav: resources_nav
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>
@@ -16,7 +16,7 @@ nav: resources_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](http://code.org/learn) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.*
+We’ll host a variety of [fun, hour-long tutorials]resolve_url("https://code.org/learn") for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
 
 **All Hour of Code tutorials:**
 
