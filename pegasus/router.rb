@@ -14,6 +14,7 @@ require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require_relative 'helper_mixins/dashboard_session'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -32,6 +33,7 @@ def http_vary_add_type(vary,type)
 end
 
 class Documents < Sinatra::Base
+  include DashboardSession
 
   def self.get_head_or_post(url,&block)
     get(url,&block)
@@ -309,7 +311,7 @@ class Documents < Sinatra::Base
     document path
   end
 
-  helpers do
+  helpers(DashboardSession) do
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
