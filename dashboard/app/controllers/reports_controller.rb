@@ -220,6 +220,10 @@ SQL
 
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
       totals = ga_data.data.totals_for_all_results
+      totals.each do |metric, count|
+        output_data[metric] ||= {}
+        
+      end
       output_data['ga:totalEvents']["Total#{key}"] = totals['ga:totalEvents']
       output_data['ga:uniqueEvents']["Unique#{key}"] = totals['ga:uniqueEvents']
       output_data['ga:avgEventvalue']["Avg#{key}"] = totals['ga:avgEventValue']
