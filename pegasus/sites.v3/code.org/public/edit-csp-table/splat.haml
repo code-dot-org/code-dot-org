@@ -82,7 +82,7 @@ angular: recordsApp
 
     $scope.addColumn = function() {
       if ($scope.newColumnName == '') return;
-      $scope.columns.push($scope.newColumnName);
+      $scope.columns.push(makeColumn($scope.newColumnName));
       $scope.newColumnName = '';
     }
 
@@ -156,7 +156,13 @@ angular: recordsApp
     }
 
   }]);
-
+  function makeColumn(name) {
+    return {
+      id: name,
+      name: name,
+      editing: false,
+    }
+  }
   function getColumns(records) {
     var columns = [];
     var column_names = [];
@@ -166,12 +172,7 @@ angular: recordsApp
         var prop = props[j];
         if (prop != 'id' && column_names.indexOf(prop) == -1) {
           column_names.push(prop);
-          var column = {
-            name: prop,
-            editing: false,
-            id: prop,
-          };
-          columns.push(column);
+          columns.push(makeColumn(prop));
         }
       }
     }
