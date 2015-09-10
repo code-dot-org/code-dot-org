@@ -1,6 +1,6 @@
 - <a href="<%= resolve_url('/resources') %>"><%= hoc_s(:nav_back_to_resources)%></a>
-- <a href="<%= resolve_url('/resources/promote#handouts') %>"><%= hoc_s(:resources_one_pager)%></a>
-- <a href="<%= resolve_url('/resources/promote#handouts') %>"><%= hoc_s(:resources_brochure)%></a>
+- <a href="<%= resolve_url('/resources/promote#onepager') %>"><%= hoc_s(:resources_one_pager)%></a>
+- <a href="<%= resolve_url('/resources/promote#brochure') %>"><%= hoc_s(:resources_brochure)%></a>
 - <a href="<%= resolve_url('/resources/promote#videos') %>"><%= hoc_s(:resources_videos)%></a>
 - <a href="<%= resolve_url('/resources/promote#posters') %>"><%= hoc_s(:resources_posters)%></a>
 - <a href="<%= resolve_url('/resources/promote#banners') %>"><%= hoc_s(:resources_banners)%></a>
