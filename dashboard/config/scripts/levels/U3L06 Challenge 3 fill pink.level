@@ -8,31 +8,20 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
       "dot": null,
       "turnRight": null,
       "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
       "penUp": null,
       "penDown": null,
       "penWidth": null,
-      "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "functionParams_none": null,
-      "callMyFunction": null
+      "penColor": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Now let's try to fill in the entire background of the screen. To make it a little easier for you, we can tell you the color we chose is one of the 140 named colors.  If you don't know what the named colors are, take a closer look at the documentation for penColor() again. Hint: you need to use dot().",
+    "instructions": "Fill in the background of the screen with your favorite color. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.0",
+    "slider_speed": "0.9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -47,14 +36,18 @@
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge3.png",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
-    "markdown_instructions": "Now let's try to fill in the entire background of the screen. To make it a little easier for you, we can tell you the color we chose is one of the 140 named colors.  If you don't know what the named colors are, take a closer look at the documentation for penColor() again. Hint: you need to use dot().\r\n\r\n![](https://images.code.org/bc364a5bb28f1d98d0682c0f16e3a2ed-image-1436480662423.png)",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "###Making Dots\r\nNow let's try to fill in the entire background of the screen. To help you we've given you a new command `dot()`.\r\n\r\n**Read the documentation:** Read the documentation for this new command\r\n\r\n**Fill the background:** Get some more practice using `penColor()` and use `dot()` to fill the background with your favorite color. If you need to, return to the documentation for `penColor()`.\r\n\r\n![](https://images.code.org/bc364a5bb28f1d98d0682c0f16e3a2ed-image-1436480662423.png)",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "encrypted_examples": [
+
+    ],
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>
