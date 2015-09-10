@@ -1,7 +1,7 @@
 name 'U3L04 Free Response Wrap Up'
-title 'Creating Procedures Part 2: Wrap Up'
+title 'Free Response: Abstraction to Manage Complexity'
 
 
 markdown <<MARKDOWN
-Explain why there can be several versions of problem abstractions—both levels of abstraction and functions – for the same problem.
+In the Create Performance Task you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3 by 3 square problem and explain how it helps manage the complexity of your program.
 MARKDOWN
