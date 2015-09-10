@@ -43,7 +43,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+    get_bucket_impl(endpoint).new(storage_id('user')).list(encrypted_channel_id).to_json
   end
 
   #
@@ -65,7 +65,7 @@ class FilesApi < Sinatra::Base
     not_found if type.empty?
     content_type type
 
-    get_bucket_impl(endpoint).new.get(encrypted_channel_id, filename, request.GET['version']) || not_found
+    get_bucket_impl(endpoint).new(storage_id('user')).get(encrypted_channel_id, filename, request.GET['version']) || not_found
   end
 
   #
@@ -78,7 +78,7 @@ class FilesApi < Sinatra::Base
 
     encrypted_src_channel_id = request.GET['src']
     bad_request if encrypted_src_channel_id.empty?
-    get_bucket_impl(endpoint).new.copy_files(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
+    get_bucket_impl(endpoint).new(storage_id('user')).copy_files(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
   end
 
   #
@@ -100,7 +100,7 @@ class FilesApi < Sinatra::Base
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
 
-    response = get_bucket_impl(endpoint).new.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
+    response = get_bucket_impl(endpoint).new(storage_id('user')).create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
     category = mime_type.split('/').first
@@ -114,7 +114,7 @@ class FilesApi < Sinatra::Base
   #
   delete %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
-    get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
+    get_bucket_impl(endpoint).new(storage_id('user')).delete(encrypted_channel_id, filename)
     no_content
   end
 
@@ -128,7 +128,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    SourceBucket.new.list_versions(encrypted_channel_id, filename).to_json
+    SourceBucket.new(storage_id('user')).list_versions(encrypted_channel_id, filename).to_json
   end
 
   #
@@ -141,6 +141,6 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    SourceBucket.new(storage_id('user')).restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
   end
 end
