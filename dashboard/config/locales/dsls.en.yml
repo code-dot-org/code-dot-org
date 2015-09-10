@@ -238,6 +238,7 @@ en:
       ECSPD U2 Challenge Submission: {}
       ECSPD U2 Challenges: {}
       ECSPD U2 D 1-2: {}
+      ECSPD U2 D 1-2 Forum Q: {}
       ECSPD U2 D 10-12 Intro: {}
       ECSPD U2 D 13-14 Intro: {}
       ECSPD U2 D 15-16 Intro: {}
@@ -246,6 +247,7 @@ en:
       ECSPD U2 D 3: {}
       ECSPD U2 D 4-6: {}
       ECSPD U2 D 7-9 Intro: {}
+      ECSPD U2 D3 Forum Q: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
       ECSPD U3 D 14 Intro: {}
@@ -3830,12 +3832,14 @@ en:
         'Reflection: Why functions?': 'Reflection: Why functions?'
       U3L04 Assessment1:
         'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
+        'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
       U3L04 Free Response Getting Started:
         'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L04 Free Response Wrap Up:
         'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
+        'Free Response: Abstraction to Manage Complexity': 'Free Response: Abstraction to Manage Complexity'
       U3L05 Assessment2:
         Programming Efficiency Question 2: Programming Efficiency Question 2
       U3L05 Assessment3:
