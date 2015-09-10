@@ -9,6 +9,6 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Answers will vary but should include these concepts:
 
-- 
-- 
+- routing messages to a specific address rather than broadcasting the message reduces the number of people who can automatically see the message
+- addressed traffic is more secure than broadcasted, but if the router security is compromised someone other than the intended recipient could read the message. 
 MARKDOWN
