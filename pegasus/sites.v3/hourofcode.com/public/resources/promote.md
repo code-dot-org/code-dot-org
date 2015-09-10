@@ -6,21 +6,23 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-<div class="row">
-    <h1 class="col-sm-12"><%= hoc_s(:promote_title) %></h1>
-</div>
-
-<br/>
+# Promote the Hour of Code
 
 ## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
-<a id="handouts"></a>
-## Use this handout to spread the word
-<a href="<%= localized_file('/files/hoc-one-pager.pdf') %>"><img src="<%= localized_file('/images/fit-250/one-pager.png') %>"></a>
+<a id="onepager"></a>
+<div style="position:relative; padding: 10px; float:left; width: 49%;">
+	<h2>Spread the word with this one page handout</h2>
+	<a href="<%= localized_file('/files/hoc-one-pager.pdf') %>"><img src="<%= localized_file('/images/fit-250/one-pager.png') %>"></a>
+</div>
 
-## Give this handout to teachers and schools
-<a href="<%= localized_file('/files/schools-handout.pdf') %>"><img src="<%= localized_file('/images/fit-250/schools-handout.png') %>"></a>
+<a id="brochure"></a>
+<div style="position:relative; padding: 10px; float:left; width: 49%;">
+	<h2>Give this brochure to teachers and schools</h2>
+	<a href="<%= localized_file('/files/schools-handout.pdf') %>"><img src="<%= localized_file('/images/fit-350/schools-handout.png') %>"></a>
+</div>
 
+<div style='clear:both'></div>
 
 <a id="videos"></a>
 ## Show these videos to inspire students
