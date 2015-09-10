@@ -435,8 +435,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    assert LevelSourceImage.last.s3?
-
     assert_response :success
 
     expected_response = build_expected_response(
