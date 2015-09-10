@@ -51,6 +51,37 @@ var decimalToBinary = DataConverters.decimalToBinary;
 var asciiToBinary = DataConverters.asciiToBinary;
 
 /**
+ * Type for tructured access to jQuery-wrapped DOM elements.  Two layers deep;
+ * can be used for quick access to one of the fields in the packet editor grid
+ * by referencing via row and column.
+ *
+ * Map keys at the first layer correspond to NetSimConstants.EncodingType.
+ * Map keys at the second layer correspond to Packet.HeaderType, plus the
+ *   'message' field.
+ *
+ * Usage:
+ *   map.binary.fromAddress
+ *   map['binary']['fromAddress']
+ *   map[EncodingType.BINARY][Packet.HeaderType.FROM_ADDRESS]
+ *
+ * @typedef {Object} UIMap
+ * @property {UIRowMap} a_and_b
+ * @property {UIRowMap} binary
+ * @property {UIRowMap} hexadecimal
+ * @property {UIRowMap} decimal
+ * @property {UIRowMap} ascii
+ */
+
+/**
+ * @typedef {Object} UIRowMap
+ * @property {jQuery} toAddress
+ * @property {jQuery} fromAddress
+ * @property {jQuery} packetIndex
+ * @property {jQuery} packetCount
+ * @property {jQuery} message
+ */
+
+/**
  * Generator and controller for message sending view.
  * @param {Object} initialConfig
  * @param {MessageGranularity} initialConfig.messageGranularity
@@ -295,6 +326,18 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @private
    */
   this.lastBitSentTime_ = undefined;
+
+  /**
+   * Map of bound UI elements manipulated by this editor.  Provides quick
+   * access to input elements in the editor grid.  See type notes for usage.
+   *
+   * Populated dynamically in `bindElements_` during `render`.  May not include
+   * all fields, as we try to optimize and omit fields not enabled in the level.
+   *
+   * @type {UIMap}
+   * @private
+   */
+  this.ui_ = {};
   
   this.render();
 };
@@ -636,9 +679,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
 
   this.getEnabledRowTypes_().forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
-    var rowUIKey = rowType.typeName + 'UI';
-    this[rowUIKey] = {};
-    var rowFields = this[rowUIKey];
+    this.ui_[rowType.typeName] = {};
+    var rowFields = this.ui_[rowType.typeName];
 
     // We attach focus (sometimes) to clear the field watermark, if present
     // We attach keypress to block certain characters
@@ -740,14 +782,14 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
 
       if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
         liveFields.push({
-          inputElement: this.a_and_bUI[fieldName],
+          inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
           newValue: binaryToAB(fieldBinary).substr(truncatedBits)
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.BINARY)) {
         liveFields.push({
-          inputElement: this.binaryUI[fieldName],
+          inputElement: this.ui_[EncodingType.BINARY][fieldName],
           newValue: fieldBinary.substr(truncatedBits)
         });
       }
@@ -755,7 +797,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
         var truncatedHexDigits = Math.floor(truncatedBits / 4);
         liveFields.push({
-          inputElement: this.hexadecimalUI[fieldName],
+          inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
           newValue: binaryToHex(fieldBinary).substr(truncatedHexDigits)
         });
       }
@@ -763,35 +805,35 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
       // We're past this field - it should be blank
       if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
         liveFields.push({
-          inputElement: this.a_and_bUI[fieldName],
+          inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
           newValue: ''
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.BINARY)) {
         liveFields.push({
-          inputElement: this.binaryUI[fieldName],
+          inputElement: this.ui_[EncodingType.BINARY][fieldName],
           newValue: ''
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
         liveFields.push({
-          inputElement: this.hexadecimalUI[fieldName],
+          inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
           newValue: ''
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
         liveFields.push({
-          inputElement: this.decimalUI[fieldName],
+          inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
           newValue: ''
         });
       }
 
       if (this.isEncodingEnabled_(EncodingType.ASCII)) {
         liveFields.push({
-          inputElement: this.asciiUI[fieldName],
+          inputElement: this.ui_[EncodingType.ASCII][fieldName],
           newValue: ''
         });
       }
@@ -808,7 +850,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
 
   if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
     liveFields.push({
-      inputElement: this.a_and_bUI.message,
+      inputElement: this.ui_[EncodingType.A_AND_B].message,
       newValue: formatAB(binaryToAB(bodyBinary).substr(truncatedBits),
           chunkSize, -truncatedBits),
       watermark: netsimMsg.a_and_b()
@@ -817,7 +859,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
 
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
-      inputElement: this.binaryUI.message,
+      inputElement: this.ui_[EncodingType.BINARY].message,
       newValue: formatBinary(bodyBinary.substr(truncatedBits), chunkSize,
           -truncatedBits),
       watermark: netsimMsg.binary()
@@ -827,7 +869,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
   if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
     var truncatedHexDigits = Math.floor(truncatedBits / 4);
     liveFields.push({
-      inputElement: this.hexadecimalUI.message,
+      inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
       newValue: formatHex(binaryToHex(bodyBinary).substr(truncatedHexDigits),
           chunkSize, -truncatedHexDigits),
       watermark: netsimMsg.hexadecimal()
@@ -836,7 +878,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
 
   if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
     liveFields.push({
-      inputElement: this.decimalUI.message,
+      inputElement: this.ui_[EncodingType.DECIMAL].message,
       newValue: alignDecimal(binaryToDecimal(partialBinaryAtChunkSize, chunkSize)),
       watermark: netsimMsg.decimal()
     });
@@ -844,7 +886,7 @@ NetSimPacketEditor.prototype.updateForAnimation_ = function () {
 
   if (this.isEncodingEnabled_(EncodingType.ASCII)) {
     liveFields.push({
-      inputElement: this.asciiUI.message,
+      inputElement: this.ui_[EncodingType.ASCII].message,
       newValue: binaryToAscii(partialBinaryAtChunkSize, chunkSize),
       watermark: netsimMsg.ascii()
     });
@@ -915,35 +957,35 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
     if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
       liveFields.push({
-        inputElement: this.a_and_bUI[fieldName],
+        inputElement: this.ui_[EncodingType.A_AND_B][fieldName],
         newValue: abConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.BINARY)) {
       liveFields.push({
-        inputElement: this.binaryUI[fieldName],
+        inputElement: this.ui_[EncodingType.BINARY][fieldName],
         newValue: binaryConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
       liveFields.push({
-        inputElement: this.hexadecimalUI[fieldName],
+        inputElement: this.ui_[EncodingType.HEXADECIMAL][fieldName],
         newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
       liveFields.push({
-        inputElement: this.decimalUI[fieldName],
+        inputElement: this.ui_[EncodingType.DECIMAL][fieldName],
         newValue: decimalConverter(this[fieldName], fieldWidth)
       });
     }
 
     if (this.isEncodingEnabled_(EncodingType.ASCII)) {
       liveFields.push({
-        inputElement: this.asciiUI[fieldName],
+        inputElement: this.ui_[EncodingType.ASCII][fieldName],
         newValue: asciiConverter(this[fieldName], fieldWidth)
       });
     }
@@ -951,7 +993,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
     liveFields.push({
-      inputElement: this.a_and_bUI.message,
+      inputElement: this.ui_[EncodingType.A_AND_B].message,
       newValue: formatAB(binaryToAB(this.message), chunkSize),
       watermark: netsimMsg.a_and_b()
     });
@@ -959,7 +1001,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.BINARY)) {
     liveFields.push({
-      inputElement: this.binaryUI.message,
+      inputElement: this.ui_[EncodingType.BINARY].message,
       newValue: formatBinary(this.message, chunkSize),
       watermark: netsimMsg.binary()
     });
@@ -967,7 +1009,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
     liveFields.push({
-      inputElement: this.hexadecimalUI.message,
+      inputElement: this.ui_[EncodingType.HEXADECIMAL].message,
       newValue: formatHex(binaryToHex(this.message), chunkSize),
       watermark: netsimMsg.hexadecimal()
     });
@@ -975,7 +1017,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
     liveFields.push({
-      inputElement: this.decimalUI.message,
+      inputElement: this.ui_[EncodingType.DECIMAL].message,
       newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
       watermark: netsimMsg.decimal()
     });
@@ -983,7 +1025,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
 
   if (this.isEncodingEnabled_(EncodingType.ASCII)) {
     liveFields.push({
-      inputElement: this.asciiUI.message,
+      inputElement: this.ui_[EncodingType.ASCII].message,
       newValue: binaryToAscii(this.message, chunkSize),
       watermark: netsimMsg.ascii()
     });
