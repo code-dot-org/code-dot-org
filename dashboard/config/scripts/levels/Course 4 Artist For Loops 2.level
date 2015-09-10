@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "video_key": "C4_for_loops"
+    "video_key": "C4_for_loops_no_bee",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>

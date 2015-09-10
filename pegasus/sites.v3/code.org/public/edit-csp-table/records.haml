@@ -26,10 +26,7 @@ content-type: text/ng-template
   }
 
   .level-buttons {
-    margin: 20px 5px;
-  }
-  #table-actions {
-    margin-bottom: 20px;
+    margin: 10px 0;
   }
   #import-actions {
     float: left;
@@ -41,11 +38,13 @@ content-type: text/ng-template
   #add-actions {
     float: right;
   }
+  #export-csv {
+    float: right;
+  }
 %div
   %h2
     Viewing table: {{tableName}}
-  %br
-  %div#table-actions
+  %div.clearfix.level-buttons
     %div#import-actions
       %span
         %button.btn.btn-primary{"ng-hide" => "importing", "ng-click" => "importing = true"}
@@ -63,7 +62,6 @@ content-type: text/ng-template
         %input{"ng-model" => "newColumnName", "placeholder" => "Column name"}
         %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
         %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
-  %br
   %table.records
     %colgroup
       %col{width: "200"}
@@ -102,9 +100,12 @@ content-type: text/ng-template
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteRecord(record)"} Delete
+  %div.level-buttons
+    %a#export-csv.btn.btn-link{href: "{{'/v3/export-shared-tables/' + channelId + '/' + tableName}}"}
+      Export as CSV
+    %button.btn.btn-danger{"ng-click" => "deleteTable()", "ng-hide" => "deletingTable"} Delete table
+    %button.btn.btn-danger.disabled{"ng-show" => "deletingTable"} Deleting...
 
-  %a{href: "{{'/v3/export-shared-tables/' + channelId + '/' + tableName}}"}
-    Export as CSV
   %h3 Debug view of table:
   %pre{"ng-model" => "records"}
     {{ records | json }}
