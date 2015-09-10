@@ -101,14 +101,55 @@ class AssetsTest < Minitest::Test
     assert @assets.last_response.bad_request?
   end
 
+  def test_assets_auth
+    owner_channel_id = create_channel
+
+    non_owner_assets = Rack::Test::Session.new(Rack::MockSession.new(FilesApi, "studio.code.org"))
+
+    filename = 'dog.jpg'
+    body = 'stub-image-contents'
+    content_type = 'image/jpeg'
+
+    @assets.put("/v3/assets/#{owner_channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type)
+    assert @assets.last_response.successful?, 'Owner can add a file'
+
+    non_owner_assets.get "/v3/assets/#{owner_channel_id}/#{filename}"
+    assert non_owner_assets.last_response.successful?, 'Non-owner can read a file'
+
+    non_owner_assets.put("/v3/assets/#{owner_channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type)
+    assert !non_owner_assets.last_response.successful?, 'Non-owner cannot write a file'
+
+    non_owner_assets.delete("/v3/assets/#{owner_channel_id}/#{filename}", body, 'CONTENT_TYPE' => content_type)
+    assert !non_owner_assets.last_response.successful?, 'Non-owner cannot delete a file'
+
+    # other_channel_id isn't owned by either user of the assets API.
+    other_channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    other_channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    other_channel_id = other_channels.last_response.location.split('/').last
+
+    copy_all(other_channel_id, owner_channel_id)
+    assert @assets.last_response.successful?, 'User who owns the destination channel can copy files.'
+
+    copy_all(owner_channel_id, other_channel_id)
+    assert @assets.last_response.not_found?, 'User who does not own the destination channel cannot copy files.'
+
+    delete(owner_channel_id, filename)
+
+    other_channels.delete "/v3/channels/#{other_channel_id}"
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
   def init_apis
-    # The Assets API does not *currently* need to share a cookie jar with the Channels API,
-    # but it may once we restrict put, delete and list operations to the channel owner.
     @channels ||= Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @assets ||= Rack::Test::Session.new(Rack::MockSession.new(FilesApi, "studio.code.org"))
+
+    # Make sure the assets api has the same storage id cookie used by the channels api.
+    @channels.get '/v3/channels'
+    cookies = @channels.last_response.headers['Set-Cookie']
+    assets_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
+    assets_mock_session.cookie_jar.merge(cookies)
+    @assets ||= Rack::Test::Session.new(assets_mock_session)
   end
 
   def create_channel
