@@ -1,7 +1,4 @@
 class FrequencyAnalysis < Widget
-  serialized_attrs %w(
-    version
-  )
 
   before_validation do
     self.href = 'frequency/frequency.html'
