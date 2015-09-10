@@ -92,12 +92,8 @@ exports.formatBinary = function (binaryString, chunkSize, offset) {
 
   var binary = exports.minifyBinary(binaryString);
 
-  var firstChunkLength = offset % chunkSize;
-  if (firstChunkLength < 0) {
-    firstChunkLength += chunkSize;
-  }
-
   var chunks = [];
+  var firstChunkLength = utils.mod(offset, chunkSize);
   if (firstChunkLength > 0) {
     chunks.push(binary.substr(0, firstChunkLength));
   }
@@ -149,12 +145,8 @@ exports.formatHex = function (hexString, chunkSize, offset) {
   var hexChunkSize = chunkSize / 4;
   var hex = exports.minifyHex(hexString);
 
-  var firstChunkLength = offset % hexChunkSize;
-  if (firstChunkLength < 0) {
-    firstChunkLength += hexChunkSize;
-  }
-
   var chunks = [];
+  var firstChunkLength = utils.mod(offset, hexChunkSize);
   if (firstChunkLength > 0) {
     chunks.push(hex.substr(0, firstChunkLength));
   }
