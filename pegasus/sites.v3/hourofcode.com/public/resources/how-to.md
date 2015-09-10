@@ -1,7 +1,7 @@
 ---
 title: <%= hoc_s(:title_how_to) %>
 layout: wide
-nav: resources_nav
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>
@@ -16,7 +16,7 @@ nav: resources_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](http://code.org/learn) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.*
+We’ll host a variety of [fun, hour-long tutorials]resolve_url("https://code.org/learn") for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
 
 **All Hour of Code tutorials:**
 
@@ -86,5 +86,8 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 <% end %>
+
+## What comes after the Hour of Code?
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
 
 <%= view :signup_button %>

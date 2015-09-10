@@ -9,6 +9,11 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
+
+<br/>
+
+<%= view :resources_banner %>
+
 ## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts"></a>
