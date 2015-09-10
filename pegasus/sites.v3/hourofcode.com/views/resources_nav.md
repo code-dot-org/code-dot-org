@@ -1,10 +1,10 @@
 - <a href="<%= resolve_url('/resources') %>"><%= hoc_s(:nav_back_to_resources)%></a>
-- <a href="<%= resolve_url('/resources#handouts') %>"><%= hoc_s(:resources_one_pager)%></a>
-- <a href="<%= resolve_url('/resources#handouts') %>"><%= hoc_s(:resources_brochure)%></a>
-- <a href="<%= resolve_url('/resources#videos') %>"><%= hoc_s(:resources_videos)%></a>
-- <a href="<%= resolve_url('/resources#posters') %>"><%= hoc_s(:resources_posters)%></a>
-- <a href="<%= resolve_url('/resources#banners') %>"><%= hoc_s(:resources_banners)%></a>
-- <a href="<%= resolve_url('/resources#sample-emails') %>"><%= hoc_s(:resources_emails)%></a>
+- <a href="<%= resolve_url('/resources/promote#handouts') %>"><%= hoc_s(:resources_one_pager)%></a>
+- <a href="<%= resolve_url('/resources/promote#handouts') %>"><%= hoc_s(:resources_brochure)%></a>
+- <a href="<%= resolve_url('/resources/promote#videos') %>"><%= hoc_s(:resources_videos)%></a>
+- <a href="<%= resolve_url('/resources/promote#posters') %>"><%= hoc_s(:resources_posters)%></a>
+- <a href="<%= resolve_url('/resources/promote#banners') %>"><%= hoc_s(:resources_banners)%></a>
+- <a href="<%= resolve_url('/resources/promote#sample-emails') %>"><%= hoc_s(:resources_emails)%></a>
 - <a href="<%= resolve_url('/resources/stats') %>"><%= hoc_s(:resources_stats)%></a>
 - <a href="<%= resolve_url('/resources/press-kit') %>"><%= hoc_s(:resources_press_kit)%></a>
 
