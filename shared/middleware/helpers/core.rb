@@ -32,7 +32,7 @@ def not_found()
 end
 
 def too_large()
-  halt(413, "Request entity too large\n")
+  halt(413, "Payload too large\n")
 end
 
 def unsupported_media_type()
