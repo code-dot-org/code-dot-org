@@ -90,6 +90,21 @@ describe("DataConverters", function () {
       assertThrows(RangeError, formatAB.bind(null, '', 0));
       assertThrows(RangeError, formatAB.bind(null, '', -1));
     });
+
+    it ("respects optional 'offset' argument", function () {
+      var rawABs = "AAAABBBBAAAABBBB";
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, -5));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, -4));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, -3));
+      assertEqual('AA AABB BBAA AABB BB', formatAB(rawABs, 4, -2));
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, -1));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, 0));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, 1));
+      assertEqual('AA AABB BBAA AABB BB', formatAB(rawABs, 4, 2));
+      assertEqual('AAA ABBB BAAA ABBB B', formatAB(rawABs, 4, 3));
+      assertEqual('AAAA BBBB AAAA BBBB', formatAB(rawABs, 4, 4));
+      assertEqual('A AAAB BBBA AAAB BBB', formatAB(rawABs, 4, 5));
+    });
   });
 
   describe("abToInt", function () {
@@ -220,6 +235,21 @@ describe("DataConverters", function () {
       assertThrows(RangeError, formatBinary.bind(null, '', 0));
       assertThrows(RangeError, formatBinary.bind(null, '', -1));
     });
+
+    it ("respects optional 'offset' argument", function () {
+      var rawBinary = "1111000011110000";
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, -5));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, -4));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, -3));
+      assertEqual('11 1100 0011 1100 00', formatBinary(rawBinary, 4, -2));
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, -1));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, 0));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, 1));
+      assertEqual('11 1100 0011 1100 00', formatBinary(rawBinary, 4, 2));
+      assertEqual('111 1000 0111 1000 0', formatBinary(rawBinary, 4, 3));
+      assertEqual('1111 0000 1111 0000', formatBinary(rawBinary, 4, 4));
+      assertEqual('1 1110 0001 1110 000', formatBinary(rawBinary, 4, 5));
+    });
   });
 
   describe("formatHex", function() {
@@ -257,6 +287,41 @@ describe("DataConverters", function () {
     it ("throws an exception when chunk size is zero or less", function () {
       assertThrows(RangeError, formatHex.bind(null, '', 0));
       assertThrows(RangeError, formatHex.bind(null, '', -1));
+    });
+
+    it ("respects optional 'offset' argument at aligned chunk sizes", function () {
+      var rawBinary = "ABCDEF";
+      // At 8 bits
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, -3));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, -2));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, -1));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, 0));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, 1));
+      assertEqual('AB CD EF', formatHex(rawBinary, 8, 2));
+      assertEqual('A BC DE F', formatHex(rawBinary, 8, 3));
+
+      // At 12 bits
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, -4));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, -3));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, -2));
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, -1));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, 0));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, 1));
+      assertEqual('AB CDE F', formatHex(rawBinary, 12, 2));
+      assertEqual('ABC DEF', formatHex(rawBinary, 12, 3));
+      assertEqual('A BCD EF', formatHex(rawBinary, 12, 4));
+    });
+
+    it ("ignores 'offset' at nonaligned chunk sizes", function () {
+      var rawBinary = "ABCDEF";
+      // At 5 bits
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -3));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -2));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, -1));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 0));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 1));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 2));
+      assertEqual('ABCDEF', formatHex(rawBinary, 5, 3));
     });
   });
 

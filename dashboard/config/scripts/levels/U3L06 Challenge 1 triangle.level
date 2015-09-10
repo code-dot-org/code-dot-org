@@ -8,31 +8,16 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
-      "moveTo": null,
-      "dot": null,
       "turnRight": null,
       "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
       "penUp": null,
-      "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "show": null,
-      "hide": null,
-      "speed": null,
-      "functionParams_none": null,
-      "callMyFunction": null
+      "penDown": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Check out the extended Turtle palette now made available to you. These new commands accept parameters, allowing you to specify precisely how the function operates rather than only being able to move or turn a predetermined amount. Make use of these functions to draw the triangle as shown.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": "0.0",
+    "slider_speed": "0.9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -47,9 +32,19 @@
     "free_play": "true",
     "app_width": "320",
     "app_height": "480",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge1.png"
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "###Using Documentation and Some New Commands\r\n\r\nCheck it out! Now you have new versions of `moveForward()` and `turnLeft()` as well as a new function you've probably been waiting for `turnRight()` . You can read about how to use these commands by hovering your mouse over the command in the block palette. If you want to see some more examples of the command in action click \"See examples\". This will take you to more detailed documentation of the command.\r\n\r\n![](https://images.code.org/c4c0e72419049f624867765263cf142c-image-1441903345023.gif)\r\n\r\n**Read the documentation**: Check out the documentation for one of the new commands shown here.\r\n\r\n**Draw the triangle**: Using these new commands draw a triangle with sides of length 100.\r\n\r\n![](https://images.code.org/0207568ff82b0571fa6757081330749d-image-1441901783815.png)",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "instructions": "Read the documentation for one of these commands. Then use them to create a triangle with sides 100 pixels long. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>
