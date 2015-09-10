@@ -217,18 +217,12 @@ SQL
       if params[:filter]
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
-      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-      if ga_data.data.contains_sampled_data
-        raise ArgumentError, 'Google Analytics response contains sampled data, aborting.'
-      end
 
-      ga_data.data.rows.each do |r|
-        label = r[0]
-        output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1].to_f
-        output_data[label]["Unique#{key}"] = r[2].to_f
-        output_data[label]["Avg#{key}"] = r[3].to_f
-      end
+      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+      totals = ga_data.data.totals_for_all_results
+      output_data['ga:totalEvents']["Total#{key}"] = totals['ga:totalEvents']
+      output_data['ga:uniqueEvents']["Unique#{key}"] = totals['ga:uniqueEvents']
+      output_data['ga:avgEventvalue']["Avg#{key}"] = totals['ga:avgEventValue']
     end
     output_data.each_key do |key|
       output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
