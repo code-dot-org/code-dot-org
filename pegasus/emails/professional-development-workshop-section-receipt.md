@@ -73,7 +73,7 @@ Attached to this email, you will also find a personalized certificate acknowledg
 Thanks again for your support,
 
 Hadi Partovi<br/>
-Founder, Code.org
+Founder, Code.org 
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
