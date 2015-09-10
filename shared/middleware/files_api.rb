@@ -5,11 +5,11 @@ require 'sinatra/base'
 class FilesApi < Sinatra::Base
 
   def max_file_size
-    5000000 # 5 MB
+    5_000_000 # 5 MB
   end
 
   def max_app_size
-    2000000000 # 2 GB
+    2_000_000_000 # 2 GB
   end
 
   def get_bucket_impl(endpoint)
