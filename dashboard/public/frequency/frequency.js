@@ -58,11 +58,11 @@ var ENGLISH = {
  * components
  *
  * @param {!Object} options
- * @param {!JQuery} options.chart_container - the DOM element into which
+ * @param {!jQuery} options.chart_container - the DOM element into which
  *                  we will render the bar chart
- * @param {!JQuery} options.text_input - the DOM element from which we
+ * @param {!jQuery} options.text_input - the DOM element from which we
  *                  will read user input
- * @param {!JQuery} options.text_output - the DOM element into which we
+ * @param {!jQuery} options.text_output - the DOM element into which we
  *                  will write generated output
  * @constructor
  */
@@ -81,10 +81,10 @@ var BarGraph = function (options) {
   /** @type {D3.selection} */
   this.container = d3.select(options.chart_container.get(0));
 
-  /** @type {JQuery} */
+  /** @type {jQuery} */
   this.text_input = options.text_input;
 
-  /** @type {JQuery} */
+  /** @type {jQuery} */
   this.text_output = options.text_output;
 
   this.text_input.on("input", this.processPlainText.bind(this));
