@@ -32,25 +32,6 @@ var ENGLISH = {
   Z: 0.00074
 };
 
-// Debounce function, courtesy of
-// http://davidwalsh.name/function-debounce
-// Currently unused.
-var debounce = function (func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-
 /**
  * @typedef {Object} UserData
  * @property {string} letter - the single uppercase alphabetical
@@ -166,7 +147,7 @@ var BarGraph = function (options) {
 };
 
 /**
- * Getter that calculates the height of the graph, taking into acount
+ * Getter that calculates the height of the graph, taking into account
  * margins for UI elements.
  * @returns {number} The height of the graph
  */
@@ -175,7 +156,7 @@ BarGraph.prototype.getHeight = function () {
 };
 
 /**
- * Getter that calculates the width of the graph, taking into acount
+ * Getter that calculates the width of the graph, taking into account
  * margins for UI elements.
  * @returns {number} The width of the graph
  */
@@ -186,7 +167,7 @@ BarGraph.prototype.getWidth = function () {
 /**
  * @typedef {Object} ZippedData
  * @property {user} UserData
- * @property {english} Englishdata
+ * @property {english} EnglishData
  */
 
 /**
@@ -221,7 +202,7 @@ BarGraph.prototype.getSubstitutionMap = function () {
   return this.user_data.reduce(function (map, d, i) {
     map[d.letter] = {
       letter: this.english_data[i].letter,
-      locked: this.user_data[i].locked,
+      locked: this.user_data[i].locked
     };
     return map;
   }.bind(this), {});
@@ -471,7 +452,6 @@ BarGraph.prototype.createDragBehavior = function () {
     /* move the source */
     var source = this.svg.select("#userletter-" + d.user.letter);
     var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
-    var originx = this.userLetterScale(d.user.letter);
     var x = parseInt(coords[0]) + d3.event.dx;
     var y = parseInt(coords[1]) + d3.event.dy;
     source.attr("transform", "translate(" + x + "," + y + ")");
