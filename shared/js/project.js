@@ -152,7 +152,9 @@ var projects = module.exports = {
    *   the project.
    */
   hideBecauseAbusive: function () {
-    if (!this.exceedsAbuseThreshold()) {
+    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
       return false;
     }
 
