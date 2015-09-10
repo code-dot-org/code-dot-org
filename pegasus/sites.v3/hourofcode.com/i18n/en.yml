@@ -154,6 +154,15 @@
   prizes_nav_terms: "Terms and Conditions"
   prizes_nav_faq: "FAQ"
 
+  nav_back_to_resources: "Back to Resources"
+
+  how_to_nav_educators: "For educators"
+  how_to_nav_after_school: "For after school"
+  how_to_nav_parents: "For parents"
+  how_to_nav_public_officials: "For public officials"
+  how_to_nav_districts: "For districts"
+  how_to_nav_assemblies: "For school assemblies"
+
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
@@ -309,15 +318,23 @@
   resources_how_to_districts: How-to guide for districts
   resources_how_to_officials: How-to guide for public officials
   resources_handouts: Handouts to spread the word
-  resources_videos: Videos
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Posters
-  resources_social: Social
-  resources_social: Social
-  resources_banners: Banners
+  resources_videos: Videos
+  resources_banners: Social media banners
   resources_emails: Sample emails
-  resources_stats: Useful stats and blurbs
+  resources_logo: Hour of Code logo
+  resources_stats: Stats and blurbs
   resources_press_kit: Press Kit
+  resources_social: Social
   resources_country_resources: Country Specific Resources
+
+  promote_title: "Promote the Hour of Code"
+  resources_banner_promote_text: "Promote"
+  resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
+  resources_banner_howto_text: "How-to"
+  resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
 
   title_country_resources: Country Specific Resources
   title_how_to_districts: Hour of Code How-To for Districts
