@@ -10,6 +10,14 @@ class BucketHelper
     @s3 = Aws::S3::Client.new
   end
 
+  def app_size(encrypted_channel_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    prefix = s3_path owner_id, channel_id
+    @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
+      fileinfo.size
+    end.reduce(:+).to_i
+  end
+
   def list(encrypted_channel_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, channel_id
