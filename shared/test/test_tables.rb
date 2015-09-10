@@ -50,6 +50,37 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_rename_column
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    rename_column('name', 'first_name')
+    records = read_records()
+
+    assert_equal records[0]['first_name'], 'trevor'
+    assert_equal records[1]['name'], nil
+
+  end
+
+  def test_delete_column
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    delete_column('age')
+
+    records = read_records()
+    assert_equal records[0]['age'], nil
+    assert_equal records[1]['age'], nil
+
+    delete_channel
+  end
+
   def test_delete
     init_apis
     create_channel
@@ -135,6 +166,14 @@ class TablesTest < Minitest::Test
 
   def export()
     @tables.get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
+  def delete_column(column)
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{column}"
+  end
+
+  def rename_column(old, new)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
   end
 
   def delete_table()
