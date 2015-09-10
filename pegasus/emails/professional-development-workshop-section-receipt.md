@@ -53,8 +53,8 @@ style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-b
 
 **Start with an Hour of Code**
 
-This Dec 7-13 host an [Hour of Code](https://hourofcode.com) for your class and win cool prizes. It’s a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Sign up your classroom today at hourofcode.com.
- Tutorials for all ages, featuring Frozen and Angry Birds, are available in 40 languages. No experience needed. Try tutorials
+This Dec 7-13 host an [Hour of Code](https://hourofcode.com) for your class and win cool prizes. It’s a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Tutorials for all ages, featuring Frozen and Angry Birds, are available in 40 languages. No experience needed. [Try tutorials](https://code.org/learn) and [sign up](https://hourofcode.com) your classroom at hourofcode.com.
+<br>
 
 **Classroom supplies, at no cost:**
 
@@ -64,7 +64,11 @@ Attached to this email, you will also find a personalized certificate acknowledg
 
 **Need more support?**
 
-Check out our [online workshop](https://code.org/educate/professional-development-online), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
+- Refresh your skills before you teach. Check out our [online workshop](https://code.org/educate/professional-development-online).
+- Meet us online. Attend one of our [online monthly meetings](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
+- Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/). 
+- See our [FAQ](http://support.code.org/). 
+- Or [contact us](http://code.org/contact).
 
 Thanks again for your support,
 
