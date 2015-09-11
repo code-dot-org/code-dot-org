@@ -63,6 +63,14 @@ Snacks
 <br/>
 Water
 
+| Class code |	Date | Name|
+|--------- | -- | ------|
+|**58160** | 10/24/2015 | CS4All CSP Phase 3 PD for 1st quarter|
+|**58161** | 12/12/2015	 | CS4All CSP Phase 3 PD for 2nd quarter|
+|**58162** | 2/6/2016 | CS4All CSP Phase 3 PD for 3rd quarter|
+|**58163** | 3/19/2016 | CS4All CSP Phase 3 PD for 4th quarter|
+
+
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
@@ -120,6 +128,15 @@ Curriculum guide
 Snacks
 <br/>
 Water
+<br/>
+<br/>
+
+|Class code | Date | Name|
+|--------- | --- | ------|
+|**58165** | 10/17/2015 | CS4All ECS Phase 3 PD for 1st quarter|
+|**58169** | 11/21/2015 | CS4All ECS Phase 3 PD for 2nd quarter|
+|**58170** | 1/23/2016 | CS4All ECS Phase 3 PD for 3rd quarter|
+|**58171** | 4/30/2016 | CS4All ECS Phase 3 PD for 4th quarter|
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -169,6 +186,14 @@ Curriculum guide
 Snacks
 <br/>
 Water
+<br/>
+<br/>
+
+|Class name | Date | Name |
+|---------- | ---- | ---- |
+|**58175** | 10/24/2015 | CS4All CS in Algebra Phase 3 PD for 1st semester|
+|**58176** | 4/30/2016 | CS4All CS in Algebra Phase 3 PD for 2nd semester|
+
 
 [**Back to the top**](#top)
 
@@ -215,7 +240,13 @@ Curriculum guide
 Snacks
 <br/>
 Water
+<br/>
+<br/>
 
+|Course Code | Dates | Name|
+|----------- | ----- | ----|
+|**58177** | 10/17/2015 | CS4All CS in Science Phase 3 PD for 1st semester|
+|**58178** | 1/23/2016 | CS4All CS in Science Phase 3 PD for 2nd semester|
 
 [**Back to the top**](#top)
 

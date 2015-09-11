@@ -20,7 +20,15 @@ This is a friendly reminder that your Code.org workshop is coming up soon!
 **If you can’t make it:** please [cancel your registration](<%= cancel_link %>) in advance so other teachers may take your spot.
 
 ### How to prepare for your workshop
-Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. Review the following [introductory course materials](http://code.org/educate/k5/introPD). These will give you a head start into the course materials to be covered and maximizing learning time during the in-person workshop.
+1. Sign up for a [teacher account](http://learn.code.org/users/sign_up?user%5Buser_type%5D=teacher) at Code.org if you don’t already have one. 
+
+2. Update your name in your Code Studio account settings to be the name you want to appear on your PD completion certificate. To do so: 
+	- Log into your account
+	- Click the organge block in the upper right hand corner that says "Hi Your Name" 
+	- Select "My account" 
+	- Change your "Display name" 
+	- Click "Update"
+
 
 **Technology Requirements:** This workshop requires you bring your own technology. Review [this page](https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-) for more information regarding compatible operating systems and browsers.
 

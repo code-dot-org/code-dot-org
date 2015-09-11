@@ -68,8 +68,7 @@ class HomeControllerTest < ActionController::TestCase
     5.times do
       create :gallery_activity,
         user: @user,
-        autosaved: true,
-        activity: create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::ARTIST)))
+        autosaved: true
     end
     sign_in @user
   end

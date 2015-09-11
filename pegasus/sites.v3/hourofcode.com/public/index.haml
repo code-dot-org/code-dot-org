@@ -34,6 +34,7 @@ social:
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
+%link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
 /[if lt IE 9]
@@ -86,11 +87,15 @@ social:
               %h4
                 =hoc_s(:front_join_us_heading)
               =hoc_s(:front_join_us_description_short)
-            #joinustext{style: "font-size: 18px; font-weight: 500; padding-top:20px;"}
-              %div{style: "width: 100%; text-align: center"}
-                %a#joinbutton{onclick: "adjustScroll('hocsignupform')", target: "_blank", style: "text-decoration:none"}
-                  %button{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:front_join_us_button)
+            %div.ctabuttongroup
+              %div#signuptext.ctatext
+                %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform')", target: "_blank"}
+                  %button.ctabutton
+                    =hoc_s(:front_join_us_sign_up)
+              %div#tryittext.ctatext
+                %a#tryitbutton.ctabuttonatag{href: resolve_url('https://code.org/learn')}
+                  %button.ctabutton
+                    =hoc_s(:front_join_us_try)
 
 
             #remainder{style: "text-align:center; margin-top: 15px;"}

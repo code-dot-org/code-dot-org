@@ -40,6 +40,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -72,6 +75,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;
@@ -106,6 +112,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -139,6 +148,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -171,6 +183,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;

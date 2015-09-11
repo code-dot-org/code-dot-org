@@ -5,7 +5,9 @@ get '/v2/user' do
   content_type :json
   result = current_user.slice_keys(:id, :name, :admin)
   result[:owned_sections] = Dashboard::db[:sections].
-      select(:id).where(user_id: current_user_id).all
+      select(:id).
+      where(user_id: current_user_id).
+      all
   JSON.pretty_generate(result)
 end
 

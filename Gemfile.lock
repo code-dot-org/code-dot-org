@@ -55,6 +55,9 @@ GEM
     acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.3.8)
+    annotate (2.6.10)
+      activerecord (>= 3.2, <= 4.3)
+      rake (~> 10.4)
     ansi (1.5.0)
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
@@ -472,6 +475,7 @@ DEPENDENCIES
   active_model_serializers!
   active_record_query_trace
   acts_as_list
+  annotate (~> 2.6.6)
   aws-sdk (~> 2)
   better_errors
   binding_of_caller
