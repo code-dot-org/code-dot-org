@@ -9,8 +9,8 @@ nav: how_to_nav
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Sign up
-- Sign up to host an [Hour of Code](http://hourofcode.com) during Dec 7-13. 
-- Promote your [Hour of Code](http://hourofcode.com/resources) and encourage others to host.
+- Sign up to host an <a href="<%= resolve_url('/') %>">Hour of Code</a> during Dec 7-13. 
+- Promote your <a href="<%= resolve_url('/resources') %>">Hour of Code</a> and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
