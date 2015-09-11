@@ -1,5 +1,6 @@
 name 'U3L02 Student Lesson Introduction'
 title 'Programming with Simple Commands - Getting Started'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 02 - Programming with Simple Commands
