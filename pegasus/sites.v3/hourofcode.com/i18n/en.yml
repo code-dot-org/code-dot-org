@@ -200,6 +200,7 @@
   front_join_us_sign_up: "Sign up"
   front_join_us_host: "Host it"
   front_join_us_support: "Support it"
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
 
   signup_header: 'Organize an Hour of Code during campaign_date, and register it here.'
   signup_name_label: 'Your name'
