@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: concepts
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  video_id   :integer
+#
+# Indexes
+#
+#  index_concepts_on_video_id  (video_id)
+#
+
 # A Concept contains a set of Levels
 # A Video can be associated with a Concept
 # Trophies are awarded based on percentage completion of Concepts
