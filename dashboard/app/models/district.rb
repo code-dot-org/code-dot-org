@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: districts
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  location   :string(255)
+#  contact_id :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_districts_on_contact_id  (contact_id)
+#  index_districts_on_name        (name)
+#
+
 class District < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :users, through: :districts_users

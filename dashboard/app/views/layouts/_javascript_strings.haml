@@ -1,0 +1,60 @@
+-# A set of strings taken from dashboard's I18n that are used by our JS. We
+-# can't just do this in .erb files in the assets directory, since those get
+-# precompiled and end up English only.
+-# A better longer term solution may be to use something like the i18n-js gem
+
+:javascript
+  window.dashboard = window.dashboard || {};
+  (function () {
+    // subset of the string table used in JS. not this only supports strings
+    // that don't use params
+    var strs = {
+      less: "#{I18n.t('less')}",
+      more: "#{I18n.t('more')}",
+      beta: "#{I18n.t('beta')}",
+      project: {
+        share_title: "#{I18n.t('project.share_title')}",
+        share_copy_link: "#{I18n.t('project.share_copy_link')}",
+        close: "#{I18n.t('project.close')}",
+        click_to_remix: "#{I18n.t('project.click_to_remix')}",
+        remix: "#{I18n.t('project.remix')}",
+        share: "#{I18n.t('project.share')}",
+        rename: "#{I18n.t('project.rename')}",
+        save: "#{I18n.t('project.save')}",
+        my_projects: "#{I18n.t('project.my_projects')}",
+        more: "#{I18n.t('project.more')}",
+        delete: "#{I18n.t('project.delete')}",
+        new: "#{I18n.t('project.new')}",
+        cancel: "#{I18n.t('project.cancel')}",
+        delete_confirm_title: "#{I18n.t('project.delete_confirm_title')}",
+        delete_confirm_text: "#{I18n.t('project.delete_confirm_text')}",
+        edit_project: "#{I18n.t('project.edit_project')}",
+        abuse: {
+          tos: "#{I18n.t('project.abuse.tos')}",
+          contact_us: "#{I18n.t('project.abuse.contact_us')}",
+          go_to_code_studio: "#{I18n.t('project.abuse.go_to_code_studio')}"
+        }
+      }
+    };
+
+    window.dashboard.i18n = {
+      /**
+       * Mimics dashboard's I18n.t, getting a string from the hierarchy
+       * @param {string} selector Selector the desired string, i.e. "project.abuse.tos"
+       */
+      t: function (selector) {
+        var hierarchy = selector.split('.');
+        var current = strs;
+        hierarchy.forEach(function(item) {
+          current = current[item];
+          if (!current) {
+            throw new Error('i18n failed to find string: ' + selector);
+          }
+        });
+        if (typeof(current) !== 'string') {
+          throw new Error('i18n not a leaf: ' + selector);
+        }
+        return current;
+      }
+    };
+  })();

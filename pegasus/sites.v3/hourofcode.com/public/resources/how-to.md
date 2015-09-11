@@ -16,7 +16,7 @@ nav: how_to_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials]resolve_url("https://code.org/learn") for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
+We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>">fun, hour-long tutorials</a> for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
 
 **All Hour of Code tutorials:**
 
@@ -74,10 +74,43 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - Students can see all tutorials and try another Hour of Code activity at <a href="<%= resolve_url('https://code.org/learn') %>"><%= resolve_url('code.org/learn') %></a>
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
+[col-33]
+
+<img src="/images/highschoolgirls.jpeg"width="250"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/group_ar.jpg"width="300"/></a>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 ## 7) Celebrate
 - <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[col-33]
+
+<img src="/images/celebrate2.jpeg"width="250"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/highlight-certificates.jpg"width="260"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/boy-certificate.jpg"width="300"/></a>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 ## Other Hour of Code resources for educators:
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
