@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: level_sources
+#
+#  id         :integer          not null, primary key
+#  level_id   :integer
+#  md5        :string(32)       not null
+#  data       :string(20000)    not null
+#  created_at :datetime
+#  updated_at :datetime
+#  hidden     :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_level_sources_on_level_id_and_md5  (level_id,md5)
+#
+
 require 'digest/md5'
 
 # A specific solution attempt for a specific level
