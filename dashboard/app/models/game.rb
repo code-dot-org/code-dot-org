@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  app            :string(255)
+#  intro_video_id :integer
+#
+# Indexes
+#
+#  index_games_on_intro_video_id  (intro_video_id)
+#
+
 # An ordered set of levels associated with a single app, e.g. Farmer2
 # also associates an intro video
 
@@ -66,6 +82,10 @@ class Game < ActiveRecord::Base
 
   def self.vigenere
     @@game_vigenere ||= find_by_name("Vigenere")
+  end
+
+  def self.frequency_analysis
+    @@game_frequency_analysis ||= find_by_name("Frequency Analysis")
   end
 
   def unplugged?
@@ -166,6 +186,7 @@ class Game < ActiveRecord::Base
         TextCompression:text_compression
         Odometer:odometer
         Vigenere:vigenere
+        FrequencyAnalysis:frequency_analysis
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

@@ -875,6 +875,7 @@ en:
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
+          Frequency: Frequency
           Text Compression: Text Compression
           Pixelation: Pixelation
           Multi2: Multi2
@@ -1136,6 +1137,11 @@ en:
           description_short: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher
           Vigenere: Vigenere
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
         algebraPD3a:
           title: Computer Science in Algebra PD
           description_short: CS in Algebra blended online school year study
@@ -1151,6 +1157,11 @@ en:
           Welcome Back!: Welcome Back!
           The TLO: The TLO
           Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
         ECSPD3-Unit2:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
