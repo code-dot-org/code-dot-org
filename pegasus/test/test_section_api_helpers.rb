@@ -2,12 +2,7 @@ require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 require_relative '../src/env'
 require 'mocha/mini_test'
-
-# mock the database connection
-# see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
 require 'sequel'
-DASHBOARD_DB = Sequel.connect "mock://mysql" unless defined? DASHBOARD_DB
-DASHBOARD_DB.server_version = 50616
 
 # stuff we're testing
 require_relative '../helpers/section_api_helpers'
@@ -19,8 +14,10 @@ end
 class SectionApiHelperTest < Minitest::Test
   describe DashboardSection do
     before do
-      DASHBOARD_DB.fetch = {}
-      DASHBOARD_DB.sqls.clear
+      # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
+      @fake_db = Sequel.connect "mock://mysql"
+      @fake_db.server_version = 50616
+      Dashboard.stubs(:db).returns(@fake_db)
     end
 
     describe 'valid grades' do
@@ -40,7 +37,7 @@ class SectionApiHelperTest < Minitest::Test
     describe 'valid courses' do
       before do
         # mock scripts (the first query to the db gets the scripts)
-        DASHBOARD_DB.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}]
+        @fake_db.fetch = [{id: 1, name: 'Foo', hidden: '0'}, {id: 3, name: 'Bar', hidden: '0'}]
       end
 
       it 'accepts valid course_ids' do
@@ -61,7 +58,7 @@ class SectionApiHelperTest < Minitest::Test
                   user: {id: 15, user_type: 'teacher'}
                  }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z]{6}', DATE, DATE\)), remove_dates(DASHBOARD_DB.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
 
       it 'creates a row in the database with name' do
@@ -70,7 +67,7 @@ class SectionApiHelperTest < Minitest::Test
                   name: 'My cool section'
                  }
         DashboardSection.create(params)
-        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z]{6}', DATE, DATE\)), remove_dates(DASHBOARD_DB.sqls.first)
+        assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
 
     end
