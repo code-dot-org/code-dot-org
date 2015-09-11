@@ -30,8 +30,8 @@ class ApplicationController < ActionController::Base
   # pp='off' will disable it; any other value will enable it.
   before_filter :maybe_enable_profiler
   def maybe_enable_profiler
-    ENV['RACK_MINI_PROFILER'] = (params['pp'] == 'off') ? 'off' : 'on'
-    puts ENV['RACK_MINI_PROFILER']
+    pp = params['pp']
+    ENV['RACK_MINI_PROFILER'] = (pp == 'off') ? 'off' : 'on' if pp
   end
 
   def reset_session_endpoint
