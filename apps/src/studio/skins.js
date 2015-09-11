@@ -212,7 +212,7 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item1': 12,
     'item_walk_item2': 12,
     'item_walk_item3': 15,
-    'item_walk_item4': 8
+    'item_walk_item4': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -331,10 +331,10 @@ function loadHoc2015(skin, assetUrl) {
   skin.projectileChoices = [];
 
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_item1"'],
-    [msg.itemItem2(), '"item_item2"'],
-    [msg.itemItem3(), '"item_item3"'],
-    [msg.itemItem4(), '"item_item4"'],
+    [msg.itemItem1(), '"item_walk_item1"'],
+    [msg.itemItem2(), '"item_walk_item2"'],
+    [msg.itemItem3(), '"item_walk_item3"'],
+    [msg.itemItem4(), '"item_walk_item4"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 

@@ -22,6 +22,7 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
+  STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
   MAZE = 'maze'
@@ -30,6 +31,10 @@ class Game < ActiveRecord::Base
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.studio_ec
+    @@game_custom_studio ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist
@@ -77,11 +82,11 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def flappy?
