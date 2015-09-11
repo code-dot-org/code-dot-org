@@ -32,7 +32,9 @@ class ApplicationController < ActionController::Base
     before_filter :maybe_enable_profiler
     def maybe_enable_profiler
       pp = params['pp']
-      ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on' if pp
+      if pp
+        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+      end
     end
   end
 

@@ -4,8 +4,8 @@ if Rails.env.development?
   # Configure the rack mini-profiler, which displays a on-page breakdown of the
   # time spent rendering the page including details on the SQL queries run.
 
-  # Display the mini-profiler on the right side of the page so that it is likely
-  # to overlap important content.
+  # Display the mini-profiler on the right side of the page so that it is less
+  # likely to overlap important content.
   Rack::MiniProfiler.config.position = 'right'
 
   # This callback is run for each page to determine whether to enable the
