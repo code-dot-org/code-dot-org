@@ -17,6 +17,9 @@ window.dashboard.AbuseError = (function (React) {
       textStyle: React.PropTypes.object
     },
     render: function () {
+      // It's only OK to use dangerouslySetInnerHTML as long as we're not
+      // populating it with user input. In our case, we're setting it using
+      // our i18n strings
       return (
         <div className={this.props.className} style={this.props.style}>
           <p style={this.props.textStyle}
