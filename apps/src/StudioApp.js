@@ -14,7 +14,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
-var Alert = require('./templates/Alert.jsx');
+var Alert = require('./templates/alert.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
