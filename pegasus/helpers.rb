@@ -9,7 +9,7 @@ end
 
 def authentication_required!(url=request.url)
   dont_cache
-  return if dashboard_user
+  return if dashboard_user_object
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 
@@ -30,7 +30,7 @@ def form_error!(e)
 end
 
 def have_permission?(permission)
-  return false unless user = dashboard_user
+  return false unless (user = dashboard_user)
 
   permission = permission.to_s.strip.downcase
   case permission

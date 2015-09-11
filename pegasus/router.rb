@@ -151,8 +151,8 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user
-        forbidden! unless dashboard_user[:admin]
+        not_authorized! unless dashboard_user_object
+        forbidden! unless dashboard_user_object.admin?
       end
       pass
     end
@@ -322,6 +322,12 @@ class Documents < Sinatra::Base
     # @returns [Hash]
     def dashboard_user
       @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+    end
+
+    # Get the current dashboard user wrapped in a helper
+    # @returns [Dashboard::User] or nil if not signed in
+    def dashboard_user_object
+      @dashboard_user_object ||= Dashboard::User.get(dashboard_user_id)
     end
 
     # Get the current dashboard user ID
