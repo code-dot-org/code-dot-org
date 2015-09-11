@@ -11,8 +11,8 @@ if Rails.env.development?
   # This callback is run for each page to determine whether to enable the
   # mini-profiler. It is enabled only in development and only if the
   # RACK_MINI_PROFILER environment variable is 'on'. This can be done either by
-  # setting an environment variable prior or to running the server, or by hitting
-  # a page with a "pp=on" query string parameter and then refreshing the page.
+  # setting the environment variable prior to running the server, or by hitting
+  # a page with a "pp=enabled" query string parameter and then refreshing the page.
   Rack::MiniProfiler.config.pre_authorize_cb = lambda {|env|
     ENV['RACK_MINI_PROFILER'] == 'on'
   }
