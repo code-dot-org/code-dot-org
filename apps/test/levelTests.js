@@ -44,7 +44,9 @@ describe('Level tests', function() {
       i18n: {
         t: function (selector) { return selector; }
       },
-      // TODO - could pull from shared?
+      // Right now we're just faking some of our dashboard project interactions.
+      // If this becomes insufficient, we might be able to require the project.js
+      // file from shared here.
       project: {
         getCurrentId: function () { return 'fake_id'; },
         exceedsAbuseThreshold: function () { return false; },
