@@ -44,3 +44,14 @@
 #learn-tabs .nav-tabs>li.active>a:active {
   color: #ff8b02;
 }
+.learn-hoc-banner {
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+#hoc-sign-up {
+  margin-top: 0px;
+}
+#hoc-teacher-guide {
+  margin-top: 20px;
+}

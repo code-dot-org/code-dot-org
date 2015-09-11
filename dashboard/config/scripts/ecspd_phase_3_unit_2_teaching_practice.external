@@ -2,6 +2,15 @@ name 'ECSPD Phase 3 - Unit 2 - Teaching Practice'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit Teaching Practice 
-## in this unit we will focus on X as a teaching practice
+# Unit 2 - Teaching Practice: Growth Mindset
+Growth Mindset was a term developed by Carol Dweck.
+Take a few minutes to watch the video below and think about how Growth Mindset applies to computer science and especially to a problem solving unit.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hiiEeMN7vbQ" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Try YouTube](https://www.youtube.com/watch?v=hiiEeMN7vbQ).*
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

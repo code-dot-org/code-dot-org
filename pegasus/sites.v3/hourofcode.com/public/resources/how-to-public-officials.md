@@ -1,7 +1,7 @@
 ---
 title: <%= hoc_s(:title_how_to_officials) %>
 layout: wide
-nav: resources_nav
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>

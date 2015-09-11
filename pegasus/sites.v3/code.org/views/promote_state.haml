@@ -86,7 +86,7 @@
     =data[:text_t]
 
 %button{onclick: "return adjustScroll('tools-section')"}
-  Take Action
+  Take action
 
 -if data[:action_text_s] && data[:action_url_s]
   %a{href: data[:action_url_s], target: '_blank'}
@@ -95,7 +95,7 @@
 - else
   %a{href: data[:action_url_s], target: '_blank'}
     %button{class: 'state-petition-btn', style: 'visibility: hidden'}
-      Sign Petition
+      Sign petition
 
 #changeorg{style: 'display: none;'}
   %b#title
@@ -104,7 +104,7 @@
   %br
   %br
   %a{href: petition_url, target: '_blank'}
-    %button{:class=>'state-petition-btn'} Sign Petition
+    %button{:class=>'state-petition-btn'} Sign petition
 %br
 %br
 

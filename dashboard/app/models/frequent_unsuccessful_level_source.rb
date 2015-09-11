@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: frequent_unsuccessful_level_sources
+#
+#  id              :integer          not null, primary key
+#  level_source_id :integer          not null
+#  active          :boolean          default(FALSE), not null
+#  level_id        :integer          not null
+#  num_of_attempts :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 # Collects all LevelSources with large number of attempts, for entry into the crowdsourced hints system
 class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
   belongs_to :level_source
