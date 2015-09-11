@@ -19,5 +19,6 @@
 %div{style: "clear:both"}
 
 - if @country != 'us' 
-  %button= hoc_s(:resources_country_resources).gsub("Country", HOC_COUNTRIES[@country]['full_name'])
+  %a{:href => resolve_url('/resources/country-resources')}
+    %button= hoc_s(:resources_country_resources).gsub("Country", HOC_COUNTRIES[@country]['full_name'])
 
