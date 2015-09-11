@@ -1950,6 +1950,13 @@ $modal-no-icon-gap: 22px;
   }
 }
 
+.exclamation-abuse {
+  a, a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
 /* Buttons from apps */
 
 button {

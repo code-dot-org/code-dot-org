@@ -1,5 +1,6 @@
 name 'U3L01 Student Lesson Introduction'
 title 'Why Programming and Programming Languages?'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 01 - The Need for Programming Languages

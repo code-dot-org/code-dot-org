@@ -1,5 +1,4 @@
 // TODO (brent) - way too many globals
-// TODO (brent) - I wonder if we should sub-namespace dashboard
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');

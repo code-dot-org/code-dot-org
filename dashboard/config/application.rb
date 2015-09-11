@@ -92,7 +92,6 @@ module Dashboard
       editor/blockly_editor.js
       editor/embedded_markdown_editor.js
       levels/*
-      react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff

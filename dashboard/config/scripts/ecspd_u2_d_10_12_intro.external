@@ -4,20 +4,21 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 10-12: 
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 88.
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=88" target="_blank">Access a Digital Copy of the Lesson >></a>
 
+![](https://images.code.org/8801563a07934949969863d42599d1cd-image-1441930285640.53.30 PM.png)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
+1. Students will understand how to write numbers in binary.
 
-1. Key Concept 2 (<i>example</i>)
+1. Students will be able to explain why binary numbers are important in computer sicence.  
 
 #### Common Difficulties
 
-Explain common difficulties
+Binary is a tricky topic and students may not fully understand it even after a couple days. 
 
 #### PD Outline
 
@@ -25,25 +26,29 @@ The following outline lists the topics covered on each level of this stage. <i>T
 
 1. Overview
 
-1. Companion Media Resource
-
-1. Suggested Assessment
-
-1. Additional Resources
-
-1. Teaching Strategies
+1. Widget
 
 1. Forum
 
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
 
-#### All Resources for This Lesson
+### All Resources for This Lesson
 
-* <a href="LINK" target="_blank">NAME</a>
+#### Teacher Supports
+
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=88"target="_blank"> U2 Day 10-12 Lesson Plan</a>
+* <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4fmVYcmp0bkhXM3V4SEh6dlRyVnRrMnlGelgzVzI4WkZjNWFiUUJjaUZpbVU" target="_blank"> U2 Day 10-12 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-10-12-general-q-a/1770/1"target="_blank"> U2 Day 10-12 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-10-12-pd-discussion-topic/1778/1"target="_blank"> U2 Day 10-12 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-10-12-lesson-resources/1794/1"target="_blank"> U2 Day 10-12 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-10-12-assessment/1786/1"target="_blank"> U2 Day 10-12 Assessment Forum</a>
+
+#### Supplies
+* <a href="http://csunplugged.org/binary-numbers/" target="_blank"> CSUnplugged: Count the Dots - Binary Numbers</a>
 
 
 Let's examine some important sections of this lesson. To get started, click "Continue" below. 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN

@@ -968,6 +968,8 @@ Applab.init = function(config) {
       Blockly.SNAP_RADIUS *= Applab.scale.snapRadius;
     }
     drawDiv();
+
+    studioApp.alertIfAbusiveProject('#codeWorkspace');
   };
 
   config.afterEditorReady = function() {

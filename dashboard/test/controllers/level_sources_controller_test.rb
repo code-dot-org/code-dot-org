@@ -100,18 +100,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
     AWS::S3.expects(:upload_to_bucket).returns(true).twice
   end
 
-  test "generate image for artist from db" do
-    artist_level = create :level, game: create(:game, app: Game::ARTIST)
-    level_source = create :level_source, level: artist_level
-    level_source_image = create :level_source_image, level_source: level_source
-
-    expect_s3_upload
-
-    get :generate_image, id: level_source.id
-
-    assert_redirected_to level_source_image.s3_framed_url
-  end
-
   test "generate image for artist in s3" do
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
@@ -122,36 +110,12 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_redirected_to level_source_image.s3_framed_url
   end
 
-  test "original image for artist" do
-    artist_level = create :level, game: create(:game, app: Game::ARTIST)
-    level_source = create :level_source, level: artist_level
-    level_source_image = create :level_source_image, level_source: level_source
-
-    expect_s3_upload
-
-    get :original_image, id: level_source.id
-
-    assert_redirected_to level_source_image.s3_url
-  end
-
   test "original image for artist in s3" do
     artist_level = create :level, game: create(:game, app: Game::ARTIST)
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
 
     get :original_image, id: level_source.id
-
-    assert_redirected_to level_source_image.s3_url
-  end
-
-  test "generate image for playlab" do
-    playlab_level = create :level, game: create(:game, app: Game::PLAYLAB)
-    level_source = create :level_source, level: playlab_level
-    level_source_image = create :level_source_image, level_source: level_source
-
-    expect_s3_upload
-
-    get :generate_image, id: level_source.id
 
     assert_redirected_to level_source_image.s3_url
   end
