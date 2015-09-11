@@ -110,4 +110,24 @@ class ChannelsTest < Minitest::Test
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 123, response['abc']
   end
+
+  def test_abuse
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+
+    post "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+
+    get "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+    assert_equal 10, JSON.parse(last_response.body)['abuseScore']
+
+    delete "/v3/channels/#{channel_id}/abuse"
+    assert last_response.unauthorized?
+  end
+
 end
