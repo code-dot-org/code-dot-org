@@ -1,14 +1,11 @@
 require 'cdo/user_helpers'
-# TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
-module Dashboard
-  def self.admin?(user_id)
-    !!DASHBOARD_DB[:users].where(id: user_id, admin: true).first
-  end
-end
+require_relative '../helper_modules/dashboard'
 
+# TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
+
   def self.fetch_user_students(user_id)
-    DASHBOARD_DB[:users].
+    Dashboard::db[:users].
       join(:followers, :student_user_id=>:users__id).
       select(*fields).
       where(followers__user_id: user_id).

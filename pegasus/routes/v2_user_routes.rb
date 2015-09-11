@@ -4,7 +4,7 @@ get '/v2/user' do
   forbidden! unless current_user
   content_type :json
   result = current_user.slice_keys(:id, :name, :admin)
-  result[:owned_sections] = dashboard_db[:sections].
+  result[:owned_sections] = Dashboard::db[:sections].
       select(:id).where(user_id: current_user_id).all
   JSON.pretty_generate(result)
 end
@@ -13,7 +13,7 @@ get '/v2/students' do
   only_for 'code.org'
   dont_cache
   content_type :json
-  JSON.pretty_generate(DashboardStudent.fetch_user_students(dashboard_user_id))
+  JSON.pretty_generate(DashboardStudent.fetch_user_students(current_user_id))
 end
 
 get '/v2/students/:id' do |id|
