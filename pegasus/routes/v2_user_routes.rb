@@ -19,7 +19,7 @@ end
 get '/v2/students/:id' do |id|
   only_for 'code.org'
   dont_cache
-  forbidden! unless student = DashboardStudent.fetch_if_allowed(id, dashboard_user_id)
+  forbidden! unless student = DashboardStudent.fetch_if_allowed(id, current_user_id)
   content_type :json
   JSON.pretty_generate(student.to_hash)
 end
