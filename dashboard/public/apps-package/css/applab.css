@@ -286,10 +286,13 @@ img#turtleImage {
 #debug-area {
   position: absolute;
   bottom: 0;
-  height: 156px;
+  height: 120px;
   left: 0;
   right: 0;
   max-height: calc(50% - 16px) !important; }
+
+#codeTextbox.pin_bottom {
+  bottom: 120px; }
 
 #debug-area-header {
   position: absolute;
