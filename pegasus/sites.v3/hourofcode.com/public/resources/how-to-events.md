@@ -12,13 +12,13 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## 1) Prepare for your event
 - Determine a venue, date and time
-- Send <a href="<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>">a letter</a> to invite your local mayor, congressman, governor, or influential business person to speak.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our <a href="<%= hoc_uri('/resources/press-kit') %>">press kit</a> for help.
+- Send <a href="<%= resolve_url('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>">a letter</a> to invite your local mayor, congressman, governor, or influential business person to speak.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our <a href="<%= resolve_url('/resources/press-kit') %>">press kit</a> for help.
 
 ## 2) During your event
 
-- Kick off your event with one of our <a href="<%= hoc_uri('/resources#videos') %>">inspirational videos</a>.
-- Give an intro overviewing the importance of computer science, using these <a href="<%= hoc_uri('/resources/stats') %>">stats and infographics</a>. 
+- Kick off your event with one of our <a href="<%= resolve_url('/resources#videos') %>">inspirational videos</a>.
+- Give an intro overviewing the importance of computer science, using these <a href="<%= resolve_url('/resources/stats') %>">stats and infographics</a>. 
 	<br/>
 	<br/>
 - Other event ideas:
