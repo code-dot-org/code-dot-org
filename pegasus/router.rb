@@ -320,13 +320,13 @@ class Documents < Sinatra::Base
 
     # Get the current dashboard user record
     # @returns [Hash]
-    def current_user
-      @dashboard_user ||= Dashboard::db[:users][id: current_user_id]
+    def dashboard_user
+      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
     end
 
     # Get the current dashboard user ID
     # @returns [Integer]
-    def current_user_id
+    def dashboard_user_id
       request.user_id
     end
 

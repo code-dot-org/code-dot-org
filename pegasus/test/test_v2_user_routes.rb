@@ -143,7 +143,7 @@ class V2UserRoutesTest < Minitest::Test
     # TEACHER).  The result should be pulled in through the mock database.
     # @param [Hash] role
     def with_role(role)
-      Documents.any_instance.stubs(:current_user_id).returns(role.nil? ? nil : role[:id])
+      Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
     end
 
     # Overrides the current database with a procedure that, given a query,

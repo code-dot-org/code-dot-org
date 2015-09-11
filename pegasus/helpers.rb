@@ -17,14 +17,6 @@ def dont_cache()
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
-def dashboard_user()
-  @dashboard_user ||= DASHBOARD_DB[:users][id: dashboard_user_id]
-end
-
-def dashboard_user_id()
-  request.user_id
-end
-
 def canonical_hostname(domain)
   CDO.canonical_hostname(domain)
 end
