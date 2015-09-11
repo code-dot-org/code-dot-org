@@ -57,7 +57,7 @@ Room 407<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
-Free parking is available in the lots adjacent to the conference center.
+[Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -118,7 +118,7 @@ Room 415<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
-Free parking is available in the lots adjacent to the conference center.
+[Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -172,7 +172,7 @@ Room 402<br/>
 315 Cleveland Avenue<br/>
 Columbus, OH 43215
 
-Free parking is available in the lots adjacent to the conference center.
+[Free Parking Pass](/files/Ohio-parking-pass.pdf) is available in the [lots adjacent](/files/ohio-lot27-s.pdf) to the conference center.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
