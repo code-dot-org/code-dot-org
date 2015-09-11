@@ -6,3 +6,7 @@ markdown <<MARKDOWN
 Why does a router keep track of the cost to a destination through multiple routers instead of only the fastest one?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Should a line go down a router will want to know what the next best option for sending a packet might be. Keeping track of multiple connections allows a router to be flexible as the condition of a network changes.
+MARKDOWN

@@ -37,10 +37,7 @@
     <start_blocks>
       <xml>
         <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-            <arg name="length"/>
-            <arg name="sides"/>
-          </mutation>
+          <mutation/>
           <title name="NAME">draw a spiral edge</title>
           <statement name="STACK">
             <block type="draw_move" inline="true">
@@ -73,11 +70,8 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a spiral edge">
-                    <arg name="length"/>
-                    <arg name="sides"/>
-                  </mutation>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a spiral edge"/>
                 </block>
               </statement>
               <next>
@@ -107,11 +101,8 @@
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="procedures_callnoreturn" inline="false">
-                          <mutation name="draw a spiral edge">
-                            <arg name="length"/>
-                            <arg name="sides"/>
-                          </mutation>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="draw a spiral edge"/>
                         </block>
                       </statement>
                       <next>
@@ -149,11 +140,8 @@
                                     </block>
                                   </value>
                                   <statement name="DO">
-                                    <block type="procedures_callnoreturn" inline="false">
-                                      <mutation name="draw a spiral edge">
-                                        <arg name="length"/>
-                                        <arg name="sides"/>
-                                      </mutation>
+                                    <block type="procedures_callnoreturn">
+                                      <mutation name="draw a spiral edge"/>
                                     </block>
                                   </statement>
                                 </block>
