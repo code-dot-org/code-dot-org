@@ -1407,7 +1407,7 @@ Applab.showSubmitConfirmation = function() {
 
 Applab.onPuzzleSubmit = function() {
   Applab.showSubmitConfirmation();
-}
+};
 
 Applab.onPuzzleComplete = function(submit) {
   // Submit all results as success / freePlay
