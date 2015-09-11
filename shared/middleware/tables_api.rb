@@ -50,6 +50,34 @@ class TablesApi < Sinatra::Base
     no_content
   end
 
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Deletes a column by name.
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    if column_name.empty?
+      halt 400, {}, "Column name cannot be empty"
+    end
+
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
+    no_content
+  end
+
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Updates a column name.
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    new_name = request.GET['new_name']
+    if new_name.empty?
+      halt 400, {}, "New column name cannot be empty"
+    end
+    TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    no_content
+  end
+
   #
   # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
@@ -102,9 +130,11 @@ class TablesApi < Sinatra::Base
     content_type :json
     value.to_json
   end
+
   patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
+
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
@@ -165,6 +195,7 @@ class TablesApi < Sinatra::Base
     # deleting the old records only after all validity checks have passed.
     table.delete_all()
 
+    # TODO: This should probably be a bulk insert
     records.each do |record|
       table.insert(record, request.ip)
     end
