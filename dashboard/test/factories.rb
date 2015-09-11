@@ -102,6 +102,7 @@ FactoryGirl.define do
   end
 
   factory :maze, :parent => Level, :class => Maze do
+    skin 'birds'
   end
 
   factory :applab, :parent => Level, :class => Applab do
