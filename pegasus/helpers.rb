@@ -40,7 +40,7 @@ def have_permission?(permission)
     return user[:user_type] == 'teacher'
   end
 
-  !!DASHBOARD_DB[:user_permissions].where(user_id: user[:id]).and(permission: permission).first
+  !!Dashboard::db[:user_permissions].where(user_id: user[:id]).and(permission: permission).first
 end
 
 def no_content!()
