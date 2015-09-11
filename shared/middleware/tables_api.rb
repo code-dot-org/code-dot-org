@@ -51,6 +51,17 @@ class TablesApi < Sinatra::Base
   end
 
   #
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
+  #
+  # Deletes a table
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
+    dont_cache
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    no_content
+  end
+
+  #
   # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>/delete
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
@@ -96,6 +107,18 @@ class TablesApi < Sinatra::Base
   end
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+
+  # GET /v3/export-(shared|user)-tables/<channel-id>/table-name
+  #
+  # Exports a csv file from a table where the first row is the column names
+  # and additional rows are the column values.
+  #
+  get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :csv
+
+    return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
   end
 
   #

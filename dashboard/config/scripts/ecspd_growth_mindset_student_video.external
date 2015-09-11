@@ -1,0 +1,13 @@
+name 'ECSPD Growth Mindset Student Video'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Growth Mindset Student Facing Video
+This video could be a great resource to share with your students about growth mindset as you start this unit.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JC82Il2cjqA" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Try YouTube](https://www.youtube.com/embed/JC82Il2cjqA).*
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
