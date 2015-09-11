@@ -1,6 +1,6 @@
 /* global $ */
 
-var React = require('React');
+var React = require('react');
 
 /**
  * Simple boot-strapped style alert.
