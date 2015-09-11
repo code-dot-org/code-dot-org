@@ -38,6 +38,26 @@ module Dashboard
       !!@row[:admin]
     end
 
+    # @returns [Boolean] true if user is a teacher
+    def teacher?
+      @row[:user_type] == 'teacher'
+    end
+
+    # @param [String|Symbol] permission
+    # @returns [Boolean] true if user has the named permission
+    def has_permission?(permission)
+      permission = permission.to_s.strip.downcase
+      case permission
+        when 'admin' then admin?
+        when 'teacher' then teacher?
+        else
+          !!Dashboard::db[:user_permissions].
+              where(user_id: id).
+              and(permission: permission).
+              first
+      end
+    end
+
     # @returns [Hash] dashboard DB row for this user as a hash
     def to_hash()
       @row.to_hash

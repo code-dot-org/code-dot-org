@@ -1,3 +1,4 @@
+require 'active_support'
 require 'sequel'
 
 #
@@ -8,10 +9,22 @@ module FakeDashboard
   #
   # Fake Data: Users
   #
-  STUDENT = {id: 14, name: 'Sally Student', admin: false, hidden: '0'}
-  TEACHER = {id: 15, name: 'Terry Teacher', admin: false, hidden: '0'}
-  ADMIN = {id: 16, name: 'Alice Admin', admin: true, hidden: '0'}
-  USERS = [STUDENT, TEACHER, ADMIN]
+  STUDENT = {id: 14, name: 'Sally Student', user_type: 'student', admin: false, hidden: '0'}
+  TEACHER = {id: 15, name: 'Terry Teacher', user_type: 'teacher', admin: false, hidden: '0'}
+  ADMIN = {id: 16, name: 'Alice Admin', user_type: 'teacher', admin: true, hidden: '0'}
+  FACILITATOR = {id: 17, name: 'Fran Facilitator', user_type: 'teacher', admin: false, hidden: '0'}
+  USERS = [STUDENT, TEACHER, ADMIN, FACILITATOR]
+
+  #
+  # Fake Data; User Permissions
+  #
+  USER_PERMISSIONS = [
+      {user_id: FACILITATOR[:id], permission: 'facilitator'}
+  ]
+  # Possible permissions include
+  #   create_professional_development_workshop
+  #   district_contact
+  #   facilitator
 
   #
   # Fake Data: Sections
@@ -54,6 +67,9 @@ module FakeDashboard
 
         when /SELECT \* FROM `users` WHERE \(\(`id` = (\d+)\) AND \(`admin` IS TRUE\)\)/
           USERS.detect {|x| x[:id] == $1.to_i and x[:admin] }
+
+        when /SELECT \* FROM `user_permissions` WHERE \(\(`user_id` = (\d+)\) AND \(`permission` = '([^']*)'\)\)/
+          USER_PERMISSIONS.find_all {|x| x[:user_id] == $1.to_i and x[:permission] == $2 }
 
         when /SELECT `id` FROM `sections` WHERE \(`user_id` = #{TEACHER[:id]}\)/
           TEACHER_SECTIONS.map { |section| section.slice(:id) }
