@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: trophies
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  image_name :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_trophies_on_name  (name) UNIQUE
+#
+
 # Trophies are awarded based on percentage completion of Concepts
 class Trophy < ActiveRecord::Base
   include Seeded
