@@ -874,6 +874,7 @@ en:
           description: All the level types for UI testing
           description_short: All the level types for UI testing
           Odometer: Odometer
+          Vigenere: Vigenere
           Frequency: Frequency
           Text Compression: Text Compression
           Pixelation: Pixelation
@@ -1131,6 +1132,11 @@ en:
           description_short: Short course designed for informal learning
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_audience: Ages 7-13
+        vigenere:
+          title: Vigenere Cipher Widget
+          description_short: Vigenere Cipher Widget
+          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting messages using a Vigenere Cipher
+          Vigenere: Vigenere
         frequency:
           title: Frequency Analysis Widget
           description_short: Frequency Analysis Widget
