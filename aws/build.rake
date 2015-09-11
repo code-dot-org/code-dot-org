@@ -191,7 +191,7 @@ def stop_frontend(name, host, log_path)
   #   order to stop Dashboard and Pegasus first would drain the user connections before stopping
   #   which can take a minutes. The Load Balancer has health-checks that will pull the instances
   #   out of rotation and those checks can be directed at either varnish itself, the services through
-  #   varnish, or the services directly. So, changing the order here means evalulating whether or not
+  #   varnish, or the services directly. So, changing the order here means evalulating whether or no  t
   #   the ELB health-checks make sense to begin diverting traffic at the right time (vs. returning 503s)
   command = [
     'sudo service varnish stop',
