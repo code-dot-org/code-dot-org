@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -14,6 +14,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/alert.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1964,3 +1965,54 @@ function rectFromElementBoundingBox(element) {
   rect.setAttribute('height', bbox.height);
   return rect;
 }
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assumed to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
+};
+
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (dashboard.project.exceedsAbuseThreshold()) {
+    this.displayAlert(parentSelector, {
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+        }
+      }),
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};

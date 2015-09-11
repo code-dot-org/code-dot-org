@@ -16,4 +16,6 @@ Answers:
 
 - One cannot solve using frequency analysis directly.
 - Long keys create exponential growth possibilities.
+
+Note that a Caesar cipher relies upon an alphabetic shift
 MARKDOWN

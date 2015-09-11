@@ -166,6 +166,7 @@ en:
       ECSPD Challenge Intro: {}
       ECSPD Find Learning Strategy: {}
       ECSPD Growth Mindset Student Video: {}
+      ECSPD Linear vs Binary Search Video: {}
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -246,8 +247,11 @@ en:
       ECSPD U2 D 18-21 Intro: {}
       ECSPD U2 D 3: {}
       ECSPD U2 D 4-6: {}
+      ECSPD U2 D 4-6 Forum Q: {}
       ECSPD U2 D 7-9 Intro: {}
       ECSPD U2 D3 Forum Q: {}
+      ECSPD U2 Day 10-12 Forum Q: {}
+      ECSPD U2 Day 13-14 Forum Q: {}
       ECSPD U3 D 1-2 Intro: {}
       ECSPD U3 D 11-13 Intro: {}
       ECSPD U3 D 14 Intro: {}
@@ -278,6 +282,7 @@ en:
       ECSPD Unit 2 Lesson Overview: {}
       ECSPD What Is Problem Solving: {}
       ECSPD What is the Challenge: {}
+      ECSPD Why Binary - The Internet Video: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -807,6 +812,79 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U4L01 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L02 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L03 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L04 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L05 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L06 JSON Object Method: {}
+      U4L06 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L07 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L08 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L09 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L13 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L15 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L16 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L17 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L18 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L19 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L20 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L21 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L22 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L23 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L24 Student Lesson Introduction:
+        description here: description here
+        title: title
       a bit about pixels:
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
@@ -1692,6 +1770,19 @@ en:
         What are the values of the variables a, b and c after all of the code has executed?: What are the values of the variables a, b and c after all of the code has executed?
         description here: description here
         title: title
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        The JSON object being stored: The JSON object being stored
+        The code run once the data is stored: The code run once the data is stored
+        The column name for the data stored: The column name for the data stored
+        The data stored in the table: The data stored in the table
+        The name of the button: The name of the button
+        The name of the table: The name of the table
       parts of contract:
         (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
@@ -2797,7 +2888,7 @@ en:
         Computers are faster than humans.: Computers are faster than humans.
         Computers are smarter than humans.: Computers are smarter than humans.
         The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
-        They are not - humans are better as breaking Vigenere encryptions than computers.: They are not - humans are better as breaking Vigenere encryptions than computers.
+        They are not - humans are better at breaking Vigenere encryptions than computers.: They are not - humans are better at breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
       U2L15 Assessment4:
         8 random characters that include numbers and punctuation: 8 random characters that include numbers and punctuation
@@ -2829,7 +2920,7 @@ en:
         '17': '17'
         '4': '4'
         Modulo Multiple Choice: Modulo Multiple Choice
-        What is 13 MOD 17?: What is 13 MOD 17?
+        'What is 13 MOD 17? ': 'What is 13 MOD 17? '
       'U2L19 mutlichoice ':
         '0': '0'
         '1.5': '1.5'
@@ -2886,20 +2977,12 @@ en:
         Once defined, a function can be called many times from different parts of a program: Once defined, a function can be called many times from different parts of a program
         Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
-        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
         'Multiple Choice: Functions and Top Down Design': 'Multiple Choice: Functions and Top Down Design'
-        The name of program it was originally designed for: The name of program it was originally designed for
-        The name of the function: The name of the function
-        The post-state: The post-state
-        The pre-state: The pre-state
         Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem: Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem
         Top Down Design leads to programs which feature multiple layers of abstraction: Top Down Design leads to programs which feature multiple layers of abstraction
         Top Down Design relies upon identifying sub-problems of a larger problem: Top Down Design relies upon identifying sub-problems of a larger problem
         Two programmers solving the same problem using Top Down Design should arrive at identical programs: Two programmers solving the same problem using Top Down Design should arrive at identical programs
-        What it does: What it does
         Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
-        ? Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
-        : Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
         Writing functions helps manage complexity in a program: Writing functions helps manage complexity in a program
       U3L06 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
@@ -3095,6 +3178,32 @@ en:
         'Arrays: Question 3': 'Arrays: Question 3'
         Cannot be determined: Cannot be determined
         There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
+      U4L06 Assessment 1:
+        Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.: Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.
+        array: array
+        string: string
+        table: table
+        variable: variable
+      U4L06 Assessment 2:
+        ' Each record of data is kept in its own': ' Each record of data is kept in its own'
+        column: column
+        row: row
+      U4L06 Assessment 3:
+        ' Each attribute for a record of data is kept in a': ' Each attribute for a record of data is kept in a'
+        column: column
+        row: row
+      U4L06 Assessment 4:
+        '  In AppLab, when inserting a new row in a table a callback function is used:': '  In AppLab, when inserting a new row in a table a callback function is used:'
+        to allow for corrections in the inserted row.: to allow for corrections in the inserted row.
+        to identify the user of the app.: to identify the user of the app.
+        to notify when the data has been stored.: to notify when the data has been stored.
+        to secure the data.: to secure the data.
+      U4L06 Reflection Q 1:
+        Question: Question
+        blank: blank
+        default value: default value
+        random: random
+        the old data is deleted: the old data is deleted
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -3477,6 +3586,9 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       CSPPD2 PT activity: {}
       CSPPD2 share protocol: {}
+      ECSPD Fence post Q1: {}
+      ECSPD Handshake Q1:
+        Enter answer here: Enter answer here
       ECSPD Online U1D1-2 Assessment 1:
         What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:

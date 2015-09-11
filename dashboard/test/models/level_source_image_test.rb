@@ -20,10 +20,21 @@ class LevelSourceTest < ActiveSupport::TestCase
     level_source_image.save_to_s3(@good_image)
   end
 
-  test "no save to s3 for bad image" do
-    expect_no_s3_upload
+  test "save to s3 twice for artist level image" do
+    expect_s3_upload.twice # once for the original image, 2nd time for framed image
 
-    level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
+    artist_level = Artist.first
+    level_source = create :level_source, level: artist_level
+    level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
+    level_source_image.save_to_s3(@good_image)
+  end
+
+  test "don't save framed image to s3 for bad artist level image" do
+    expect_s3_upload.once # once for the original image
+
+    artist_level = Artist.first
+    level_source = create :level_source, level: artist_level
+    level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
     level_source_image.save_to_s3(@bad_image)
   end
 
