@@ -153,14 +153,20 @@ class DashboardSection
     @row = row
   end
 
-  @@valid_login_types = %w(word picture email)
-  def self.valid_login_type?(login_type)
-    @@valid_login_types.include? login_type
+  def self.valid_login_types
+    %w(word picture email)
   end
 
-  @@valid_grades = ['K'] + (1..12).collect(&:to_s) + ['Other']
+  def self.valid_login_type?(login_type)
+    valid_login_types.include? login_type
+  end
+
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
+
   def self.valid_grade?(grade)
-    @@valid_grades.include? grade
+    valid_grades.include? grade
   end
 
   @@valid_course_cache = nil
