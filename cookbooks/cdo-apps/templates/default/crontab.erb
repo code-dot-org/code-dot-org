@@ -53,15 +53,13 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev@code.org'
-
-    # cronjob at:'*/60 * * * *', do:dashboard_dir('bin','scheduled_ops_emails')
-
     cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev@code.org'
   end
 
   if node.chef_environment == 'production'
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
     cronjob at:'@daily', do:deploy_dir('bin', 'send_workshop_reminder_emails')
+    cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
     cronjob at:'@daily', do:deploy_dir('bin', 'update-hoc-map')
   end

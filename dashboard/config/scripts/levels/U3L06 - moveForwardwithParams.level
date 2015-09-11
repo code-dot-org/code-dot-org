@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-10T15:39:48.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null
+    },
+    "edit_code": true,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions": "Move the turtle off the screen using a single command. (Click to see full instructions)",
+    "markdown_instructions": "###Challenge\r\nThe turtle that you have used so far in this class have always worked the same way. `moveForward()` moved the turtle exactly 25 pixels. `turnLeft()` turned the turtle to the left exactly 90 degrees. Today we are going to see many functions that **accept numbers** so the can move the turtle differing amounts.\r\n\r\n**Get the turtle off the screen**: Run this program to see this new type of command in action. Then see if you can **change the code** to move the turtle off the screen **using a single command**.",
+    "start_blocks": "moveForward(100);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,14 +1,17 @@
 ---
 title: <%= hoc_s(:title_resources) %>
 layout: wide
-nav: resources_nav
+nav: promote_nav
 ---
 
 <%= view :signup_button %>
 
 <div class="row">
-    <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
+    <h1 class="col-sm-12"><%= hoc_s(:promote_title) %></h1>
 </div>
+
+<br/>
+
 ## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts"></a>

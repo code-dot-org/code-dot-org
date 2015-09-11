@@ -2,5 +2,10 @@ name 'ECSPD Teaching Strategies Intro'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Teaching Strategies
-## A section explaining to teachers why this stage is here and what it will cover
+
+### Overview
+
+In each part of the Phase 3 Online PD we will discuss a teaching strategy that is relevant to the content of that unit. These topics may be something you have seen before. If that is the case, your challenge is to come up with ideas of how best to implement it in these new lessons. If the practice is new to you, we encourage you to give it a try.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

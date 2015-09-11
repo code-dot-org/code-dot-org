@@ -1,0 +1,9 @@
+name 'U3L03 - multiselect - properties of functions'
+title 'Choose Two - Things about functions'
+
+question 'Chose the two (2) statements that are true about functions'
+
+right 'Meaningful function names help <em>people</em> better understand programs.'
+wrong 'Meaningful function names help <em>computers</em> better understand programs.'
+wrong 'Functions in programming are useful mathematical tools for doing complex computations.'
+right 'Functions in programming are a named grouping of programming instructions.'
