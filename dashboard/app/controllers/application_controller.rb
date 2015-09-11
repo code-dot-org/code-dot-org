@@ -26,12 +26,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
-  # pp='off' will disable it; any other value will enable it.
-  before_filter :maybe_enable_profiler
-  def maybe_enable_profiler
-    pp = params['pp']
-    ENV['RACK_MINI_PROFILER'] = (pp == 'off') ? 'off' : 'on' if pp
+  if Rails.env.development?
+    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
+    # pp='off' will disable it; any other value will enable it.
+    before_filter :maybe_enable_profiler
+    def maybe_enable_profiler
+      pp = params['pp']
+      ENV['RACK_MINI_PROFILER'] = (pp == 'off') ? 'off' : 'on' if pp
+    end
   end
 
   def reset_session_endpoint
