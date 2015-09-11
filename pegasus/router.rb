@@ -289,6 +289,9 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @locals[:header]['content-type']
+      response.headers['Content-Type'] = @locals[:header]['content-type']
+    end
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
