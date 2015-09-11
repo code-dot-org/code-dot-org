@@ -62,9 +62,11 @@ Green journal<br/>
 Snacks
 <br/>
 Water
+<br/>
+<br/>
 
-| Class code |	Date | Name|
-|--------- | -- | ------|
+|Class code | Date | Name |
+|---------- | ---- | ---- |
 |**58160** | 10/24/2015 | CS4All CSP Phase 3 PD for 1st quarter|
 |**58161** | 12/12/2015	 | CS4All CSP Phase 3 PD for 2nd quarter|
 |**58162** | 2/6/2016 | CS4All CSP Phase 3 PD for 3rd quarter|

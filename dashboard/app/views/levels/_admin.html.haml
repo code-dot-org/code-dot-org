@@ -35,4 +35,8 @@
           as
           = link_to build_script_level_path(script_level), build_script_level_path(script_level)
     %br/
+    %div.admin-abuse{ :style => "display: none" }
+      Abuse score:
+      %span.admin-abuse-score
+      = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
     .project_admin
