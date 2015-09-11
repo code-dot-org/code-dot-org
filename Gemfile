@@ -46,6 +46,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
+  gem 'sqlite3'
   gem 'timecop'
 
   # for ui testing
