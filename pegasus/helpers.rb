@@ -9,7 +9,7 @@ end
 
 def authentication_required!(url=request.url)
   dont_cache
-  return if dashboard_user_object
+  return if dashboard_user_helper
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 

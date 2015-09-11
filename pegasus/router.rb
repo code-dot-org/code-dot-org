@@ -151,8 +151,8 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user_object
-        forbidden! unless dashboard_user_object.admin?
+        not_authorized! unless dashboard_user_helper
+        forbidden! unless dashboard_user_helper.admin?
       end
       pass
     end
@@ -320,14 +320,18 @@ class Documents < Sinatra::Base
 
     # Get the current dashboard user record
     # @returns [Hash]
+    #
+    # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
       @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
     end
 
     # Get the current dashboard user wrapped in a helper
     # @returns [Dashboard::User] or nil if not signed in
-    def dashboard_user_object
-      @dashboard_user_object ||= Dashboard::User.get(dashboard_user_id)
+    #
+    # TODO: When we are using this everywhere, rename to just `dashboard_user`
+    def dashboard_user_helper
+      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
     end
 
     # Get the current dashboard user ID
