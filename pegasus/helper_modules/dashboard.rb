@@ -78,6 +78,12 @@ module Dashboard
       end
     end
 
+    def followed_by?(other_user_id)
+      !!Dashboard::db[:followers].
+          where(student_user_id: other_user_id, user_id: id).
+          first
+    end
+
     def owned_sections
       Dashboard::db[:sections].select(:id).where(user_id: id).all
     end

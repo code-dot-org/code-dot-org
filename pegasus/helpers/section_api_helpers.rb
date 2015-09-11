@@ -44,9 +44,8 @@ class DashboardStudent
 
     id = id_or_ids
 
-    return unless Dashboard::db[:followers].
-      where(student_user_id: id,
-            user_id: dashboard_user_id).first || Dashboard::admin?(dashboard_user_id)
+    user = Dashboard::User.get(dashboard_user_id)
+    return unless user && (user.followed_by?(id) || user.admin?)
 
     row = Dashboard::db[:users].
       left_outer_join(:secret_pictures, id: :secret_picture_id).
