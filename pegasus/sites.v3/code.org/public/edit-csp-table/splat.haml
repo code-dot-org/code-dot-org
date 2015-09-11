@@ -157,6 +157,13 @@ angular: recordsApp
 
   }]);
   function makeColumn(name) {
+    /*
+    We need to keep to references to the name for the case of
+    renaming the column.  id represents the name of the column
+    in the current data model.  name gets updated by the
+    angularjs data binding during rename and gets updated after
+    column name changes are commited.
+    */
     return {
       id: name,
       name: name,
