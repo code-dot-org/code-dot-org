@@ -12,13 +12,13 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## 1) Prepare for your event
 - Determine a venue, date and time
-- Send <a href="<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>">a letter</a> to invite your local mayor, congressman, governor, or influential business person to speak.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our <a href="<%= hoc_uri('/resources/press-kit') %>">press kit</a> for help.
+- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our <a href="<%= resolve_url('/resources/press-kit') %>">press kit</a> for help.
 
 ## 2) During your event
 
-- Kick off your event with one of our <a href="<%= hoc_uri('/resources#videos') %>">inspirational videos</a>.
-- Give an intro overviewing the importance of computer science, using these <a href="<%= hoc_uri('/resources/stats') %>">stats and infographics</a>. 
+- Kick off your event with one of our <a href="<%= resolve_url('/resources#videos') %>">inspirational videos</a>.
+- Give an intro overviewing the importance of computer science, using these <a href="<%= resolve_url('/resources/stats') %>">stats and infographics</a>. 
 	<br/>
 	<br/>
 - Other event ideas:
@@ -47,8 +47,8 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 |Time | Action |
 |------------ | ------------- | 
-|10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos) | 
-|10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](/resources/stats) | 
+|10:00 - 10:05 am | Open with one of our <a href="<%= resolve_url('/resources#videos') %>">inspirational vidoes</a> | 
+|10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these <a href="<%= resolve_url('/resources/stats') %>">stats and infographics</a> | 
 |10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.  | 
 |10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.  | 
 |10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers. | 
