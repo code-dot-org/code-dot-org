@@ -5713,7 +5713,7 @@ function installWhenRun(blockly, skin, isK1) {
 }
 
 },{"./locale":"/home/ubuntu/staging/apps/build/js/locale.js"}],"/home/ubuntu/staging/apps/build/js/StudioApp.js":[function(require,module,exports){
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -5729,6 +5729,7 @@ var url = require('url');
 var FeedbackUtils = require('./feedback');
 var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/alert.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -7680,7 +7681,58 @@ function rectFromElementBoundingBox(element) {
   return rect;
 }
 
-},{"./ResizeSensor":"/home/ubuntu/staging/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./constants.js":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/staging/apps/build/js/feedback.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/VersionHistory.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx","./templates/builder.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js","react":"/home/ubuntu/staging/apps/node_modules/react/react.js","url":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assumed to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
+};
+
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (dashboard.project.exceedsAbuseThreshold()) {
+    this.displayAlert(parentSelector, {
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+        }
+      }),
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};
+
+},{"./ResizeSensor":"/home/ubuntu/staging/apps/build/js/ResizeSensor.js","./acemode/mode-javascript_codeorg":"/home/ubuntu/staging/apps/build/js/acemode/mode-javascript_codeorg.js","./blockTooltips/DropletTooltipManager":"/home/ubuntu/staging/apps/build/js/blockTooltips/DropletTooltipManager.js","./block_utils":"/home/ubuntu/staging/apps/build/js/block_utils.js","./constants.js":"/home/ubuntu/staging/apps/build/js/constants.js","./dom":"/home/ubuntu/staging/apps/build/js/dom.js","./dropletUtils":"/home/ubuntu/staging/apps/build/js/dropletUtils.js","./feedback":"/home/ubuntu/staging/apps/build/js/feedback.js","./locale":"/home/ubuntu/staging/apps/build/js/locale.js","./templates/VersionHistory.jsx":"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx","./templates/alert.jsx":"/home/ubuntu/staging/apps/build/js/templates/alert.jsx","./templates/builder.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/builder.html.ejs","./templates/buttons.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/buttons.html.ejs","./templates/instructions.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/instructions.html.ejs","./templates/learn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/learn.html.ejs","./templates/makeYourOwn.html.ejs":"/home/ubuntu/staging/apps/build/js/templates/makeYourOwn.html.ejs","./utils":"/home/ubuntu/staging/apps/build/js/utils.js","./xml":"/home/ubuntu/staging/apps/build/js/xml.js","react":"/home/ubuntu/staging/apps/node_modules/react/react.js","url":"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js"}],"/home/ubuntu/staging/apps/node_modules/browserify/node_modules/url/url.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9184,7 +9236,47 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx":[function(require,module,exports){
+},{"ejs":"/home/ubuntu/staging/apps/node_modules/ejs/lib/ejs.js"}],"/home/ubuntu/staging/apps/build/js/templates/alert.jsx":[function(require,module,exports){
+/* global $ */
+
+var React = require('react');
+
+/**
+ * Simple boot-strapped style alert.
+ */
+module.exports = React.createClass({displayName: "exports",
+  propTypes: {
+    body: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element
+    ]).isRequired,
+    className: React.PropTypes.string,
+    style: React.PropTypes.object,
+    onClose: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var style = $.extend({}, {
+      position: 'absolute',
+      zIndex: 1000
+    }, this.props.style);
+
+    return (
+      React.createElement("div", {style: style}, 
+        React.createElement("div", {className: "alert fade in " + (this.props.className || '')}, 
+          React.createElement("button", {type: "button", 
+            className: "alert-button close", 
+            style: { margin: 0}}, 
+            React.createElement("span", {onClick: this.props.onClose}, "×")
+          ), 
+          this.props.body
+        )
+      )
+    );
+  }
+});
+
+},{"react":"/home/ubuntu/staging/apps/node_modules/react/react.js"}],"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx":[function(require,module,exports){
 var React = require('react');
 var VersionRow = require('./VersionRow.jsx');
 var sourcesApi = require('../clientApi').sources;

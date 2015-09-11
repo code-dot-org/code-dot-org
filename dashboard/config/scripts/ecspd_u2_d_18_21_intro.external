@@ -4,20 +4,19 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 18-21: 
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 97.
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=97" target="_blank">Access a Digital Copy of the Lesson >></a>
 
+![](https://images.code.org/3ed7a2968097ce2d7e6e01aeba4043f9-image-1441935712528.54.34 PM.png)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+1. Students demonstrate their problem solving abilities by applying problem solving to a new context. 
 
 #### Common Difficulties
 
-Explain common difficulties
+The last lesson was about a graph problem. However the minimal spanning tree is different than this problem often referred to as the Traveling Salesman Problem. Students will need to look carefully at those differences as they go through the problem solving process.
 
 #### PD Outline
 
@@ -25,25 +24,27 @@ The following outline lists the topics covered on each level of this stage. <i>T
 
 1. Overview
 
-1. Companion Media Resource
 
-1. Suggested Assessment
+### All Resources for This Lesson
 
-1. Additional Resources
+#### Teacher Supports
 
-1. Teaching Strategies
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=97"target="_blank"> U2 Day 18-21 Lesson Plan</a>
+* <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4fldMUTRXRWxGeWM4WGIzb080MURkWUpNbmdWU3FLb2ZoX3pYN1Njd1h2STg" target="_blank"> U2 Day 18-21 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-18-21-general-q-a/1774/1"target="_blank"> U2 Day 18-21 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-18-21-pd-discussion-topic/1782/1"target="_blank"> U2 Day 18-21 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-18-21-lesson-resources/1798/1"target="_blank"> U2 Day 18-21 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-18-21-assessment/1790/1"target="_blank"> U2 Day 18-21 Assessment Forum</a>
 
-1. Forum
-
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
-
-#### All Resources for This Lesson
-
-* <a href="LINK" target="_blank">NAME</a>
+#### Supplies
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=98" target="_blank"> Final Project</a>
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=99" target="_blank"> Final Project Rubric</a>
+* <a href="https://drive.google.com/open?id=1wEmmSDJ2hYck6zce7RRA_8yAGUuyGhdiwblua45x0D8" target="_blank"> Student After School Data Collection Sheet</a>
 
 
 Let's examine some important sections of this lesson. To get started, click "Continue" below. 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN

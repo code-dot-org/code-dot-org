@@ -4,25 +4,24 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 7-9: 
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 86.
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=86" target="_blank">Access a Digital Copy of the Lesson >></a>
 
+![](https://images.code.org/b83c17e379f947d90d9d2db66d440ceb-image-1441929378692.53.17 PM.png)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
+1. Teach students to problem solve in the context of a standard design tool. 
 
-1. Key Concept 2 (<i>example</i>)
 
 #### Common Difficulties
 
-Cornrow lesson - the tools is a real sticking point here and the point of the lesson is very unclear
-Tools does not save
-Add spreadsheet as a way of “saving” work
-Should we be using these math terms or can we make the language more friendly - or teach the terms?
-geometric skit to teach the terms
+Many teachers struggle with connecting this lesson to the rest of the curriculum. There is a large history component to the lesson which is meant to set the stage for using the tool. 
 
+The tool itself is a real sticking point. The tool is difficult for many people to use.  There are some high level math terms in the tool which you may want to review with students before they use it. The tool also does not save. *Suggestion: Make a spreadsheet in which students can record the work they do in the tool incase they need to spend more than one day on it.
+
+**Remember:** The point of this lesson is to teach students to problem solve in the context of a standard design tool. Plan this lesson accordingly.
 
 #### PD Outline
 
@@ -30,25 +29,26 @@ The following outline lists the topics covered on each level of this stage. <i>T
 
 1. Overview
 
-1. Companion Media Resource
 
-1. Suggested Assessment
 
-1. Additional Resources
+### All Resources for This Lesson
 
-1. Teaching Strategies
+#### Teacher Supports
 
-1. Forum
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=86"target="_blank"> U2 Day 7-9 Lesson Plan</a>
+* <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4fml4ZjFFZEQwNHU0Z1Fzb3ZhWmhRNl9nU2tuam80Y2FxdjZ1aFZHb3lSRnM" target="_blank"> U2 Day 7-9 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-7-9-general-q-a/1769/1"target="_blank"> U2 Day 7-9 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-7-9-pd-discussion-topic/1777/1"target="_blank"> U2 Day 7-9 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-7-9-lesson-resources/1793/1"target="_blank"> U2 Day 7-9 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-7-9-assessment/1785/1"target="_blank"> U2 Day 7-9 Assessment Forum</a>
 
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
-
-#### All Resources for This Lesson
-
-* <a href="LINK" target="_blank">NAME</a>
+#### Supplies
+* <a href="http://csdt.rpi.edu/african/CORNROW_CURVES/index.htm" target="_blank"> CSDT Cornrow Curves</a>
 
 
 Let's examine some important sections of this lesson. To get started, click "Continue" below. 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN
