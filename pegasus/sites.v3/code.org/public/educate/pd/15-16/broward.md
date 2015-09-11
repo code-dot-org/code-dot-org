@@ -53,8 +53,11 @@ Breakfast and lunch will be served.
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
-Room TBD<br/>
+Carl Desantis Building <br/>
+Room 1047<br/>
 Fort Lauderdale, FL 33314
+
+Free parking is available near the building with your [parking pass](/files/broward-nsu-parking-pass.pdf). 
 
 
 **What to bring to Phase 3 quarterly sessions:**

@@ -112,6 +112,10 @@ def codeorg_url()
   end
 end
 
+def chapter_partner?
+  return %w(al ar br eu italia ro sg uk za).include?(@country)
+end
+
 def resolve_url(url)
   if url.downcase.include? "code.org"
     partner_page = HOC_COUNTRIES[@country]['partner_page']
