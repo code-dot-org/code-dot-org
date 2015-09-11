@@ -7,15 +7,15 @@
       %li
         %b=hoc_s(:front_join_us_teacher)
         =hoc_s(:front_join_us_inspire)
-        %a{href:hoc_uri('/resources/how-to')}
+        %a{href:resolve_url('/resources/how-to')}
           =hoc_s(:front_join_us_inspire_link)
       %li
         %b=hoc_s(:front_join_us_parent)
-        %a{href:hoc_uri('/resources')}
+        %a{href:resolve_url('/resources')}
           =hoc_s(:front_join_us_ask_link)
         =hoc_s(:front_join_us_ask)
       %li
-        %a{href:hoc_uri('/resources')}
+        %a{href:resolve_url('/resources')}
           =hoc_s(:front_join_us_help_promote)
       -if chapter_partner?
         %li=hoc_s(:front_join_us_more_info).gsub('code.org', resolve_url('code.org'))

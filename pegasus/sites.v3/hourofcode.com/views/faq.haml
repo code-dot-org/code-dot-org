@@ -15,13 +15,13 @@
 %div= hoc_s(:hoc_faq_why_cs_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
 %h2= hoc_s(:hoc_faq_how_participate_q)
-%div= hoc_s(:hoc_faq_how_participate_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to'))
+%div= hoc_s(:hoc_faq_how_participate_a).gsub(/target-resources-how-to/, resolve_url('/resources/how-to'))
 
 %h2= hoc_s(:hoc_faq_behind_hoc_q)
 %div= hoc_s(:hoc_faq_behind_hoc_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
 %h2= hoc_s(:hoc_faq_host_q)
-%div= hoc_s(:hoc_faq_host_a).gsub(/target-resources-how-to/, hoc_uri('/resources/how-to')).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
+%div= hoc_s(:hoc_faq_host_a).gsub(/target-resources-how-to/, resolve_url('/resources/how-to')).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
 %h2= hoc_s(:hoc_faq_need_computers_q)
 %div= hoc_s(:hoc_faq_need_computers_a)
@@ -31,7 +31,7 @@
   %div= hoc_s(:hoc_faq_international_a).gsub(/\/resources/, resolve_url('/resources'))
 
 %h2= hoc_s(:hoc_faq_tutorial_q)
-%div= hoc_s(:hoc_faq_tutorial_a).gsub(/target-tutorial-guidelines/, hoc_uri('/tutorial-guidelines'))
+%div= hoc_s(:hoc_faq_tutorial_a).gsub(/target-tutorial-guidelines/, resolve_url('/tutorial-guidelines'))
 
 %h2= hoc_s(:hoc_faq_account_q)
 %div= hoc_s(:hoc_faq_account_a).gsub(/http:\/\/code.org\/learn\/beyond/, resolve_url('http://code.org/learn/beyond'))
