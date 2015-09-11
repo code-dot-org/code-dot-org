@@ -1,5 +1,6 @@
 name 'U3L03 Student Lesson Introduction'
 title 'Creating Procedures Part 1'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 03 - Creating Functions Part 1
