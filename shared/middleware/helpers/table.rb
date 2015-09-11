@@ -30,6 +30,31 @@ class Table
     items.delete
   end
 
+  def rename_column(old_name, new_name, ip_address)
+    items.each do |r|
+      # We want to preserve the order of the columns so creating
+      # a new hash is required.
+      new_value = {}
+      value = JSON.load(r[:value])
+      value.each do |k, v|
+        if k == old_name
+          new_value[new_name] = v
+        else
+          new_value[k] = v
+        end
+      end
+      update(r[:row_id], new_value, ip_address)
+    end
+  end
+
+  def delete_column(column_name, ip_address)
+    items.each do |r|
+      value = JSON.load(r[:value])
+      value.delete(column_name)
+      update(r[:row_id], value, ip_address)
+    end
+  end
+
   def fetch(id)
     row = items.where(row_id: id).first
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
@@ -238,6 +263,31 @@ class DynamoTable
     { "row_id" => { value: id, comparison_operator: 'NE', } }
   end
 
+  def rename_column(old_name, new_name, ip_address)
+    items.each do |r|
+      # We want to preserve the order of the columns so creating
+      # a new hash is required.
+      new_value = {}
+      value = JSON.load(r['value'])
+      value.each do |k, v|
+        if k == old_name
+          new_value[new_name] = v
+        else
+          new_value[k] = v
+        end
+      end
+      update(r['row_id'], new_value, ip_address)
+    end
+  end
+
+  def delete_column(column_name, ip_address)
+    items.each do |r|
+      value = JSON.load(r['value'])
+      value.delete(column_name)
+      update(r['row_id'], value, ip_address)
+    end
+  end
+
   def update(id, value, ip_address)
     begin
       db.put_item(
@@ -260,7 +310,7 @@ class DynamoTable
     value.merge(id: id)
   end
 
-  def to_a()
+  def items()
     last_evaluated_key = nil
 
     [].tap do |results|
@@ -278,12 +328,16 @@ class DynamoTable
         ).first
 
         page[:items].each do |item|
-          results << value_from_row(item)
+          results << item
         end
 
         last_evaluated_key = page[:last_evaluated_key]
       end while last_evaluated_key
     end
+  end
+
+  def to_a()
+    return items.map { |i| value_from_row(i) }
   end
 
   def to_csv()
