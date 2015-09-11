@@ -20,6 +20,7 @@ var paused = true;
 // DOM elements
 var plaintext_input, keyword_input, vigenere_table;
 var plaintext_display, keyword_display, ciphertext_display;
+var play_button, pause_button;
 
 $(document).ready(function () {
   plaintext_input = $("#plaintext-input");
@@ -29,20 +30,23 @@ $(document).ready(function () {
   keyword_display = $("#keyword-display");
   ciphertext_display = $("#ciphertext-display");
 
+  play_button = $("#action-toggle button[title=play]");
+  pause_button = $("#action-toggle button[title=pause]");
+
   vigenere_table = $("#vigenere-table");
 
   renderVigenereTable();
 
   cleanInput(plaintext_input);
   cleanInput(keyword_input);
-  setup();
 
-  $("#mode-toggle button").on("input change click", function (changeEvent) {
+  $("#mode-toggle button").on("click", function (changeEvent) {
     var mode = changeEvent.target.value;
     IS_ENCRYPTING = (mode === 'encrypt');
-    pause();
     restart();
   });
+
+  $("#mode-toggle button[value=encrypt]").click();
 });
 
 function renderVigenereTable () {
@@ -244,11 +248,13 @@ function setTimer (ms) {
 function pause () {
   clearTimer();
   paused = true;
+  pause_button.button('toggle');
 }
 
 function play () {
   setTimerFromSlider();
   paused = false;
+  play_button.button('toggle');
 }
 
 function restart () {
