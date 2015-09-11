@@ -67,6 +67,18 @@ class V2UserRoutesTest < Minitest::Test
 
     end
 
+    # Keys included in each student object returned by the /v2/students endpoint
+    V2_STUDENTS_KEY_LIST = [:id, :name, :username, :email, :hashed_email, :gender,
+                            :birthday, :prize_earned, :total_lines, :secret_words,
+                            :total_lines]
+    def expected_v2_students_hash_for(user)
+      {}.tap do |expect|
+        V2_STUDENTS_KEY_LIST.each do |key|
+          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+        end
+      end
+    end
+
     describe 'GET /v2/students' do
       it 'returns empty array when not signed in' do
         with_role nil
@@ -86,13 +98,19 @@ class V2UserRoutesTest < Minitest::Test
         with_role FakeDashboard::TEACHER
         @pegasus.get '/v2/students'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal([
-                         {
-                             'id' => FakeDashboard::STUDENT[:id],
-                             'name' => FakeDashboard::STUDENT[:name]
-                         }
-                     ],
+        assert_equal([expected_v2_students_hash_for(FakeDashboard::STUDENT)],
                      JSON.parse(@pegasus.last_response.body))
+      end
+    end
+
+    V2_STUDENTS_ID_KEY_LIST = V2_STUDENTS_KEY_LIST.dup.concat [:secret_picture_name,
+                                                               :secret_picture_path,
+                                                               :age]
+    def expected_v2_students_id_hash_for(user)
+      {}.tap do |expect|
+        V2_STUDENTS_ID_KEY_LIST.each do |key|
+          expect[key.to_s] = user.has_key?(key) ? user[key] : nil
+        end
       end
     end
 
@@ -113,11 +131,7 @@ class V2UserRoutesTest < Minitest::Test
         with_role FakeDashboard::TEACHER
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::STUDENT[:id],
-                         'name' => FakeDashboard::STUDENT[:name],
-                         'age' => nil
-                     },
+        assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
                      JSON.parse(@pegasus.last_response.body))
       end
 
@@ -125,11 +139,7 @@ class V2UserRoutesTest < Minitest::Test
         with_role FakeDashboard::ADMIN
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
-        assert_equal({
-                         'id' => FakeDashboard::STUDENT[:id],
-                         'name' => FakeDashboard::STUDENT[:name],
-                         'age' => nil
-                     },
+        assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
                      JSON.parse(@pegasus.last_response.body))
       end
     end
