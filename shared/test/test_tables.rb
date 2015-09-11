@@ -63,6 +63,7 @@ class TablesTest < Minitest::Test
     assert_equal records[0]['first_name'], 'trevor'
     assert_equal records[1]['name'], nil
 
+    delete_channel
   end
 
   def test_delete_column
