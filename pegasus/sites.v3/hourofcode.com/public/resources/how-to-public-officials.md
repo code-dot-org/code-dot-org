@@ -14,7 +14,7 @@ nav: how_to_nav
 
 2. **Host an Hour of Code event.** See our <a href="<%= resolve_url('/resources/how-to-event') %>">event how-to guide</a> for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation. 
 
-3. **Attend an event during Computer Science Education Week (Dec 7-13).** <a href="<%= resolve_url('/events') %>">Find classrooms and schools</a> participating in your district, city or state. 
+3. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** <a href="<%= resolve_url('/events') %>">Find classrooms and schools</a> participating in your district, city or state. 
 
 4. **Issue a proclamation or resolution.** See this <a href="<%= resolve_url('resources/proclamation') %>">sample resolution</a> supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 

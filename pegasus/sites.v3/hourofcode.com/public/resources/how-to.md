@@ -9,14 +9,14 @@ nav: how_to_nav
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Sign up
-- Sign up to host an <a href="<%= resolve_url('/') %>">Hour of Code</a> during Dec 7-13. 
+- Sign up to host an <a href="<%= resolve_url('/') %>">Hour of Code</a> during <%= campaign_date('short') %>.
 - Promote your <a href="<%= resolve_url('/resources') %>">Hour of Code</a> and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>">fun, hour-long tutorials</a> for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
+We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>">fun, hour-long tutorials</a> for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
 
 **All Hour of Code tutorials:**
 
