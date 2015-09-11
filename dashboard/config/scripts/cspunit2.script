@@ -76,7 +76,6 @@ level 'U2L8 Student Lesson Introduction'
 assessment 'U2L08 Assessment 0'
 assessment 'U2L08 Assessment 1'
 assessment 'U2L08 Free Response 1'
-assessment 'U2L08 Free Response 2'
 assessment 'U2L08 Free Response 3'
 
 # 9
@@ -130,12 +129,10 @@ assessment 'U2L14 Assessment4'
 # 15
 stage 'Encryption Algorithms'
 level 'U2L15 Student Lesson Introduction'
-assessment 'U2L15 Free Response Getting Started'
 assessment 'U2L15 Assessment1'
 assessment 'U2L15 Assessment2'
 assessment 'U2L15 Assessment3'
 assessment 'U2L15 Assessment4'
-assessment 'U2L15 Free Response Wrap Up'
 
 #NOTE TO EVERYBODY -- Lessons 16-19 stage names do not match the lesson
 #Go by the stage number instead of the name.  Verify it's right by looking at /s/cspunit2
@@ -170,8 +167,8 @@ level 'U2L18 Free Response Assessment 3'
 stage 'Public Key Crypto'
 level 'U2L19 Student Lesson Introduction'
 assessment 'U2L19 Free Response Getting Started'
-assessment 'U2L19 multichoice 13 MOD 17'
 assessment 'U2L19 mutlichoice 20 mod 15'
+assessment 'U2L19 multichoice 13 MOD 17'
 assessment 'U2L19 Assessment'
 assessment 'U2L19 Free Response Wrap Up'
 

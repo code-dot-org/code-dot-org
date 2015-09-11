@@ -4,20 +4,19 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 2 Day 15-16: 
 
-First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page ???.
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 94.
 
-<a href="LINK" target="_blank">Access a Digital Copy of the Lesson >></a>
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=94" target="_blank">Access a Digital Copy of the Lesson >></a>
 
+![](https://images.code.org/acc0d782b7ccc4e374d7c9624642139e-image-1441933931106.53.57 PM.png)
 
 #### Key Concepts
 
-1. Key Concept (<i>example</i>)
-
-1. Key Concept 2 (<i>example</i>)
+1. Students will look at different methods to sort items and compare the benefits of different ways of sorting.
 
 #### Common Difficulties
 
-Explain common difficulties
+
 
 #### PD Outline
 
@@ -25,25 +24,27 @@ The following outline lists the topics covered on each level of this stage. <i>T
 
 1. Overview
 
-1. Companion Media Resource
 
-1. Suggested Assessment
+### All Resources for This Lesson
 
-1. Additional Resources
+#### Teacher Resources
 
-1. Teaching Strategies
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=94"target="_blank"> U2 Day 15-16 Lesson Plan</a>
+* <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4fjlmNmhuemcyeld2WUVIaW0zX1lzOFVEaHNVbjNzSDlzb05xb2xld3ZSRlU" target="_blank"> U2 Day 15-16 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-15-16-general-q-a/1772/1"target="_blank"> U2 Day 15-16 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-15-16-pd-discussion-topic/1780/1"target="_blank"> U2 Day 15-16 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-15-16-lesson-resources/1796/1"target="_blank"> U2 Day 15-16 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-15-16-assessment/1788/1"target="_blank"> U2 Day 15-16 Assessment Forum</a>
 
-1. Forum
+#### Supplies
 
->**Note:** This activity was led by one of your facilitators on the first day of the workshop, but it was not planned by one of the participant teaching groups. 
+* <a href="http://csunplugged.org/sorting-algorithms/" target="_blank">CS Unplugged: Lightest and Heaviest - Sorting Algorithms</a>
 
-#### All Resources for This Lesson
-
-* <a href="LINK" target="_blank">NAME</a>
 
 
 Let's examine some important sections of this lesson. To get started, click "Continue" below. 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN
