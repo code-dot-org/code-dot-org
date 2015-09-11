@@ -4,6 +4,8 @@ layout: wide
 nav: promote_nav
 ---
 
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
+
 <%= view :signup_button %>
 
 # Promote the Hour of Code
