@@ -328,7 +328,7 @@ var projects = module.exports = {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      sourceAndHtml ={
+      sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
         html: this.sourceHandler.getLevelHtml()
       };
