@@ -19,6 +19,16 @@ class CachingTest < ActionDispatch::IntegrationTest
     ActiveRecord::Base.connection.disconnect!
   end
 
+  test "should get /hoc/1" do
+    get '/hoc/1'
+    assert_response :success
+
+    no_database
+
+    get '/hoc/1'
+    assert_response :success
+  end
+
   test "should get /s/frozen" do
     get '/s/frozen'
     assert_response :success
@@ -82,6 +92,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
+
 
   #
   # We do not yet cache hints so turning hints back on makes this test fail.
