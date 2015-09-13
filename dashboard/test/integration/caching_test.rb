@@ -93,7 +93,6 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response 200
   end
 
-
   #
   # We do not yet cache hints so turning hints back on makes this test fail.
   #
