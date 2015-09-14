@@ -156,7 +156,7 @@ gem 'rubocop', '~> 0.29.1', require: false, group: [:development, :staging]
 gem 'haml_lint', require: false, group: [:development, :staging]
 
 # Reduce volume of production logs
-gem 'lograge', group: [:production]
+gem 'lograge'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
