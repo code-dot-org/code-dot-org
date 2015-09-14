@@ -124,7 +124,14 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, JSON.parse(request.body.read), request.ip)
+    new_value =  JSON.parse(request.body.read)
+
+    if new_value.has_key? 'id' and new_value['id'].to_i != id.to_i
+      halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
+    end
+    new_value.delete('id')
+
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
     dont_cache
     content_type :json
