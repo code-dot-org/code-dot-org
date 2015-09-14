@@ -6,6 +6,7 @@ Sequel.migration do
   up do
     HipChat.log 'Moving <b>channel</b> sources to S3...'
     FILE_NAME = 'main.json'
+    source_bucket = SourceBucket.new
 
     # For each channel with a level(Source|Html) and no migratedToS3 flag, create a new S3 record and set migratedToS3.
     batch_update do |row|
@@ -21,7 +22,7 @@ Sequel.migration do
           source: value['levelSource'],
           html: value['levelHtml']
         }.to_json
-        SourceBucket.new.create_or_replace channel, FILE_NAME, body
+        source_bucket.create_or_replace channel, FILE_NAME, body
         value['migratedToS3'] = true
         from(:storage_apps).where(id: row[:id]).update(value: value.to_json)
       end
@@ -49,7 +50,7 @@ def batch_update
   offset = 0
   batch_size = 1000
   loop do
-    batch = from(:storage_apps).offset(offset).limit(batch_size)
+    batch = from(:storage_apps).order(:id).offset(offset).limit(batch_size)
     break if batch.count == 0
     batch.each do |row|
       yield row
