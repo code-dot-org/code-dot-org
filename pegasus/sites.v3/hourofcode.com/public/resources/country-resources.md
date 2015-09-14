@@ -22,7 +22,7 @@ nav: promote_nav
 <a href="<%= localized_file('/files/corporations.pdf') %>"><img width="500" height="300" src="<%= localized_file('/images/corporations.png') %>"></a>
 
 ## 1) Try the tutorials:
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
 **All Hour of Code tutorials:**
 
