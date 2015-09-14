@@ -256,7 +256,7 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   onSuccess();
 };
 
-AppStorage.initializeTable = function (jsonData, overwrite, onSuccess, onError) {
+AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
@@ -278,7 +278,7 @@ var handleInitializeTable = function (onSuccess, onError) {
   }
 
   if (this.status != 200) {
-    onError('error initializing table: unexpected http status ' + this.status);
+    onError && onError('error populating tables: unexpected http status ' + this.status);
   }
-  onSuccess();
+  onSuccess && onSuccess();
 };
