@@ -46,7 +46,8 @@ window.dashboard.footer = (function () {
         menuItems: React.PropTypes.arrayOf(
           React.PropTypes.shape({
             text: React.PropTypes.string.isRequired,
-            link: React.PropTypes.string.isRequired
+            link: React.PropTypes.string.isRequired,
+            type: React.PropTypes.oneOf(['copyright', 'reportAbuse'])
           })
         ).isRequired,
         className: React.PropTypes.string
@@ -77,8 +78,9 @@ window.dashboard.footer = (function () {
       minimizeOnClickAnywhere: function (event) {
         // The first time we click anywhere, hide any open children
         $(document.body).one('click', function (event) {
-          // menu copyright has its own click handler
-          if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
+          // a couple of our menu items have their own click handlers
+          if (event.target === React.findDOMNode(this.refs.menuCopyright) ||
+              event.target === React.findDOMNode(this.refs.menuReportAbuse)) {
             return;
           }
 
@@ -122,6 +124,13 @@ window.dashboard.footer = (function () {
       clickMenuCopyright: function (event) {
         this.setState({ menuState: MenuState.COPYRIGHT });
         this.minimizeOnClickAnywhere();
+      },
+
+      clickMenuReportAbuse: function (event) {
+        // we do this in our click handler because at load time we don't yet
+        // have an id
+        window.open('https://support.code.org/hc/en-us/requests/new' +
+          '?&abuseChannelId=' + dashboard.project.getCurrentId(), '_blank');
       },
 
       clickBaseMenu: function () {
@@ -212,11 +221,18 @@ window.dashboard.footer = (function () {
 
       renderMoreMenu: function (styles) {
         var menuItemElements = this.props.menuItems.map(function (item, index) {
+          var ref, onClick;
+          if (item.type === 'copyright') {
+            ref = 'menuCopyright';
+            onClick = this.clickMenuCopyright;
+          } else if (item.type === 'reportAbuse') {
+            ref = 'menuReportAbuse';
+            onClick = this.clickMenuReportAbuse;
+          }
+
           return (
             <li key={index} style={styles.listItem}>
-            <a href={item.link}
-              ref={item.copyright ? "menuCopyright" : undefined}
-              onClick={item.copyright ? this.clickMenuCopyright : undefined}>
+            <a href={item.link} ref={ref} onClick={onClick}>
               {item.text}
             </a>
             </li>

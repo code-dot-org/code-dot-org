@@ -332,7 +332,8 @@ function renderFooterInSharedGame() {
   var menuItems = [
     {
       text: applabMsg.reportAbuse(),
-      link: 'https://support.code.org/hc/en-us/requests/new?&reportAbuse=true'
+      link: '#',
+      type: 'reportAbuse'
     },
     {
       text: applabMsg.makeMyOwnApp(),
@@ -345,7 +346,7 @@ function renderFooterInSharedGame() {
     {
       text: applabMsg.copyright(),
       link: '#',
-      copyright: true
+      type: 'copyright'
     },
     {
       text: applabMsg.privacyPolicy(),
