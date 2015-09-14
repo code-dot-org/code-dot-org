@@ -1,5 +1,7 @@
-var message1 = "Srryvat zl jnl guebhtu gur qnexarff Thvqrq ol n orngvat urneg V pna g gryy jurer gur wbhearl jvyy raq Ohg V xabj jurer gb fgneg Gurl gryy zr V z gbb lbhat gb haqrefgnaq Gurl fnl V z pnhtug hc va n qernz Jryy yvsr jvyy cnff zr ol vs V qba g bcra hc zl rlrf Jryy gung f svar ol zr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V gevrq pneelvat gur jrvtug bs gur jbeyq Ohg V bayl unir gjb unaqf Ubcr V trg gur punapr gb geniry gur jbeyq Ohg V qba g unir nal cynaf Jvfu gung V pbhyq fgnl sberire guvf lbhat Abg nsenvq gb pybfr zl rlrf Yvsr f n tnzr znqr sbe rirelbar Naq ybir vf gur cevmr Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg V qvqa g xabj V jnf ybfg Fb jnxr zr hc jura vg f nyy bire Jura V z jvfre naq V z byqre Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa g xabj V jnf ybfg";
-var message2 = "Ej aeotj pbba zdlxu ftlj E a lqkvj jk plu Pvrpterb ptb p tbdb ukv zlr jlhb lflu E a l tkj led qlcckkr E zkvcn ok jk pmlzb Fejt jtb led cehb E nkr j zldb qlqu qu jtb flu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tbdb zkab qln rbfp jlchero jtep lrn jtlj Ublt oewb ab lcc ukv okj nkr j tkcn qlzh Ublt fbcc E ptkvcn mdkqlqcu fldr ukv E cc qb svpj yerb Ublt rk kyybrpb jk ukv nkr j flpjb ukvd jeab Tbdb p ftu Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Tlmmu qdero ab nkfr Zlr j rkjtero qdero ab nkfr Ckwb ep jkk tlmmu jk qdero ab nkfr Zlr j rkjtero qdero ab nkfr E plen Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb l dkka fejtkvj l dkky Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb tlmmerbpp ep jtb jdvjt Qbzlvpb E a tlmmu Zclm lckro ey ukv hrkf ftlj tlmmerbpp ep jk ukv Qbzlvpb E a tlmmu Zclm lckro ey ukv ybbc cehb jtlj p ftlj ukv flrrl nk";
+var messages = {
+  'Sample Message (easy)': "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg.",
+  'Sample Message (hard)': "Rh nrpzh jvvn txmgk czmh R'n musbh hs jmk Jbljzrlv jzv'j zvxv, ksb tml hmev mcmk R'n m zsh mrx umwwssl, R tsbwf ps hs jimtv Crhz hzv mrx, wrev R fsl'h tmxv umuk uk hzv cmk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zvxv tsnv umf lvcj hmwerlp hzrj mlf hzmh Kvmz, prav nv mww ksb psh, fsl'h zswf umte Kvmz, cvww R jzsbwf ixsumuwk cmxl ksb R'ww uv ybjh orlv Kvmz, ls soovljv hs ksb fsl'h cmjhv ksbx hrnv Zvxv'j czk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zmiik, uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs"
+};
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var LETTERS = ALPHABET.split('');
@@ -525,10 +527,38 @@ BarGraph.prototype.refreshDragBehavior = function () {
  */
 BarGraph.prototype.buildSVG = function () {
 
+  var legend = this.svg.selectAll(".legend")
+    .data([{
+      label: 'Standard English',
+      id: 'english'
+    }, {
+      label: 'Input Message',
+      id: 'user'
+    }])
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", this.getWidth() - 18)
+    .attr("width", 18)
+    .attr("height", 18)
+    .attr("class", function(d) { return d.id; });
+
+  //legend.append("a")
+    //.attr("xlink:href", "http://example.com/link/")
+    //.append("text")
+  legend.append("text")
+    .attr("x", this.getWidth() - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.label; });
+
   this.svg.append("g")
     .attr({
       "class": "x axis",
       "transform": "translate(0," + (this.getHeight() + 24) + ")"
+      //"transform": "translate(0," + (this.getHeight() - 4) + ")"
     })
     .call(this.xAxis)
     .selectAll("text")
@@ -541,6 +571,7 @@ BarGraph.prototype.buildSVG = function () {
     .attr({
       "class": "x1 axis",
       "transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (this.getHeight() - 6) + ")"
+      //"transform": "translate(" + this.userLetterScale.rangeBand() / 2 + "," + (this.getHeight() + 24) + ")"
     })
     .selectAll('g')
     .data(this.getZippedData())
@@ -752,8 +783,9 @@ BarGraph.prototype.render = function () {
 
   this.yScale.domain([0, d3.max(data, function (d) {
     var maxValue = Math.max(d.english.frequency, d.user.frequency);
+    return maxValue;
     // Round to the nearest 10%
-    return Math.ceil(maxValue * 10) / 10;
+    //return Math.ceil(maxValue * 10) / 10;
   })]);
 
   this.svg.select(".y.axis")
@@ -797,6 +829,15 @@ BarGraph.prototype.render = function () {
   return true;
 };
 
+var messageSelect;
+
+function addMessageOption (id, text) {
+  var option = document.createElement("option");
+  option.value = id;
+  option.text = (text) ? text.substring(0, 24) + " ..." : id;
+  messageSelect.append(option);
+}
+
 $(document).ready(function () {
   var bg = new BarGraph({
     text_input: $("#input"),
@@ -804,6 +845,41 @@ $(document).ready(function () {
     chart_container: $("#d3chart")
   });
   bg.render();
+
+  messageSelect = $("#messages");
+
+  Object.keys(messages).forEach(function(id) {
+    addMessageOption(id);
+  });
+
+  messageSelect.change(function () {
+    var message = messages[this.selectedOptions[0].value];
+    $('#input').val(message).trigger('input');
+  });
+
+  $('#custom-message').click(function () {
+    var dialog = new Dialog({
+      header: '<p class="dialog-title">Enter your own text</p>',
+      body: '<div>' +
+        '<textarea style="width: 100%;" placeholder="Write or paste your text here." rows="7"></textarea>' +
+        '<button id="continue-button">Add</button>' +
+        '</div>'
+    });
+
+    var dialog_div = $(dialog.div);
+    dialog.show();
+
+    dialog_div.find('#continue-button').click(function() {
+      var text = dialog_div.find("textarea").val();
+      var id = Object.keys(messages).length + 1;
+      messages[id] = text;
+
+      addMessageOption(id, 'Custom: ' + text);
+
+      $('#input').val(text).trigger('input');
+      dialog.hide();
+    });
+  });
 
   /*
    *$(window).on('resize', debounce(function () {
@@ -834,14 +910,6 @@ $(document).ready(function () {
   $(".reset-simulation").click(function () {
     $("#shiftAmt").val(0);
     bg.shift(0);
-  });
-
-  $(".load-message#easy").click(function () {
-    $('#input').val(message1).trigger('input');
-  });
-
-  $(".load-message#hard").click(function () {
-    $('#input').val(message2).trigger('input');
   });
 
   $("#fillRand").click(bg.randomize.bind(bg));

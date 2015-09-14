@@ -7,10 +7,15 @@
 <div class="container-fluid" style="max-width: 1280px">
 
   <div class="row-fluid" id="top-buttons">
-    <div class="pull-left">
-      <button class="btn load-message" id="easy">Load message (easy)</button>
-      <button class="btn load-message" id="hard">Load message (hard)</button>
+
+    <div class="form-inline pull-left">
+      <label for="messages" class="">Message:</label>
+      <select id="messages" class="input-small">
+        <option selected disabled hidden value=''></option>
+      </select>
+      <button id="custom-message" class="btn">Write your own</button>
     </div>
+
     <div class="pull-right form-inline">
       <label>Sort:</label>
       <div class="btn-group" id="sort-toggle" data-toggle="buttons-radio">
@@ -18,16 +23,17 @@
         <button type="button" class="btn btn-info" value="frequency">By %</button>
       </div>
     </div>
+    <div class="offset4"><h4><a href="https://en.wikipedia.org/wiki/Letter_frequency">Letter Frequencies</a></h4></div>
   </div>
 
 
   <div class="row-fluid">
     <div class="span4">
-      <div class="row-fluid">
+      <div class="row-fluid" style="display:none">
         <textarea class="text-container" id="input">hello there I'm some text</textarea>
       </div>
       <div class="row-fluid">
-        <div class="text-container uneditable-input" id='output'></div>
+        <div class="text-container uneditable-input" id='output' style="height: 500px"></div>
       </div>
     </div>
     <div class="span8">
