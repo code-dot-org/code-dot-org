@@ -246,6 +246,7 @@ Collidable.prototype.roamGrid = function(type) {
       var hasWall = !atEdge && 
                     ((Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL) ||
                      (Studio.walls !== null && 
+                      Studio.getSkin()[Studio.walls] &&
                       Studio.getSkin()[Studio.walls][candidate.gridY][candidate.gridX]));
       if (atEdge || hasWall || candidate.score === 0) {
         candidates.splice(i, 1);
