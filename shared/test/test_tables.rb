@@ -47,7 +47,7 @@ class TablesTest < Minitest::Test
     }
 
     # Test basic populating
-    populate_table(data1, 1)
+    populate_table(data1, true)
 
     @table_name = 'table1'
     records = read_records
@@ -62,7 +62,7 @@ class TablesTest < Minitest::Test
     assert_equal records.length, 2
 
     # Test overwrite off
-    populate_table(data2, 0)
+    populate_table(data2, false)
     @table_name = 'table1'
     records = read_records
 
@@ -70,7 +70,7 @@ class TablesTest < Minitest::Test
     assert_equal records.length, 2
 
     # Test overwrite on
-    populate_table(data2, 1)
+    populate_table(data2, true)
     @table_name = 'table1'
     records = read_records
 
@@ -194,7 +194,9 @@ class TablesTest < Minitest::Test
   end
 
   def populate_table(data, overwrite)
-    @tables.post "/v3/shared-tables/#{@channel_id}?overwrite=#{overwrite}", JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    url = "/v3/shared-tables/#{@channel_id}"
+    url += "?overwrite=1" if overwrite
+    @tables.post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
 
 end
