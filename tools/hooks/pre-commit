@@ -1,0 +1,2 @@
+#!/bin/sh
+ruby .git/hooks/lint.rb

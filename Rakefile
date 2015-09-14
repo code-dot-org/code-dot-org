@@ -32,6 +32,26 @@ namespace :lint do
 end
 task lint: ['lint:all']
 
+namespace :hooks do
+  files = [
+      'lint.rb',
+      'pre-commit'
+  ]
+  git_path = ".git/hooks"
+  task :install do
+    files.each do |f|
+      path = File.expand_path("../tools/hooks/#{f}", __FILE__)
+      system "ln -s #{path} #{git_path}/#{f}"
+    end
+  end
+
+  task :clean do
+    files.each do |f|
+      system "rm #{git_path}/#{f}"
+    end
+  end
+end
+
 ##################################################################################################
 ##
 ##
