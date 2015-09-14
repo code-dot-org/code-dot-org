@@ -6,16 +6,12 @@
     %ul{:style=>"line-height:28px"}
       %li
         %b=hoc_s(:front_join_us_teacher)
-        =hoc_s(:front_join_us_inspire)
-        %a{href:resolve_url('/resources/how-to')}
-          =hoc_s(:front_join_us_inspire_link)
+        =hoc_s(:front_join_us_teacher_link).gsub('/resources/how-to', resolve_url('/resources/how-to'))
       %li
         %b=hoc_s(:front_join_us_parent)
-        %a{href:resolve_url('/resources')}
-          =hoc_s(:front_join_us_ask_link)
-        =hoc_s(:front_join_us_ask)
+        =hoc_s(:front_join_us_parent_link).gsub('/resources/promote#sample-emails', resolve_url('/resources/promote#sample-emails'))
       %li
-        %a{href:resolve_url('/resources')}
-          =hoc_s(:front_join_us_help_promote)
+        %b=hoc_s(:front_join_us_computer_science)
+        =hoc_s(:front_join_us_spread_word).gsub('/resources/promote', resolve_url('/resources/promote'))
       -if chapter_partner?
         %li=hoc_s(:front_join_us_more_info).gsub('code.org', resolve_url('code.org'))
