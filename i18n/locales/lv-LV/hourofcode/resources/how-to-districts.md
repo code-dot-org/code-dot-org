@@ -18,4 +18,4 @@ title: "Programmēšanas stundas" vadlīnijas rajoniem layout: wide nav: resourc
 
   5. **Vadi "Programmēšanas stundu" savā skolā.** Apskati mūsu [pasākuma vadlīnijas](<%= hoc_uri('/resources/how-to-events') %>), kur atradīsi dažādus atbalsta materiālus.
 
-  6. **Vairāk [balvas](<%= hoc_uri('/prizes') %>) KATRAM organizatoram.** Katrs izglītības darbinieks, kas iesaistīties, iegūs pateicības balvu. 100 klases laimēs video zvanu ar īpašiem viesiem. Dalībnieku starpā ir Bils Geitss, Šerila Sandberga, Eštons Katčers un citi. Tāpat katrā rajonā viena skola iegūs $10,000 vērtu tehnoloģiju aprīkojumu savai skolai!
+  6. **Vairāk [balvas](<%= hoc_uri('/prizes') %>) KATRAM organizatoram.** Katrs izglītības darbinieks, kas iesaistīties, iegūs pateicības balvu. Tāpat katrā rajonā viena skola iegūs $10,000 vērtu tehnoloģiju aprīkojumu savai skolai!

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'Opravte prosím nasledujúce chyby:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -348,6 +350,8 @@
       viewing_solution: Prehliadnuť riešenie
       try_it_yourself: Skúste to sami
       section: Sekcia
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'E-mailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša e-mailová adresa %{email} nebola potvrdená:'
@@ -398,6 +402,7 @@
     local_school: miestna škola
     online: Online
     see_details: Pozri detaily
+    view_course: View Course
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
       v odmenách tried.'
     tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
@@ -415,7 +420,12 @@
     heading_legacy: <h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>
     your_gallery: Galéria
     no_primary_course: Vyskúšajte kurz v Štúdiu kódu
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Muž
     female: Žena
@@ -424,16 +434,30 @@
     student: Študent
     teacher: Učiteľ
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Inžinieri z Google, Microsoft, Facebook a Twitter pomoholi vytvoriť
       tento tutoriál.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009-2014 Rovio zábava S.r.o. Všetky
       práva vyhradené. <br/> Rastliny vs zombie&trade; & &copy; 2014 Electronic Arts
       Inc Všetky práva vyhradené.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Poháňaný službami Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Viac
     feedback: Poskytnúť spätnú väzbu
     translate: Pomôžte nám preložiť do Vášho jazyka
     support: Podpora
     support_url: http://support.code.org/
+    tos_short: Terms
     tos: Podmienky
     privacy: Zásady ochrany súkromia
     secure: Bezpečná verzia
@@ -451,12 +475,6 @@
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Skryť toto upozornenie
     working:
       header: Pracujeme na podpore pre Váš prehliadač.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -586,6 +604,11 @@
     open_response_body: Ďakujeme za Vašu reakciu!
   dialog:
     ok: ok
+    startover_title: Naozaj chceš začať odznova?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Začať odznova
+    startover_cancel: Zrušiť
   time:
     hour: 1 hodina
     day: deň

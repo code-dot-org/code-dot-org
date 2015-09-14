@@ -18,4 +18,4 @@ title: Hour of Code How-To for Districts layout: wide nav: resources_nav
 
   5. **Accueillir un événement local Hour of Code.** Lisez notre [event how to guide](<%= hoc_uri('/resources/how-to-events') %>) pour voir un exemple de déroulement d'un show, un kit de sensibilisation ou d'autres contenus.
 
-  6. **Plus de [prix](<%= hoc_uri('/prizes') %>) pour CHAQUE organisateur.** Chaque éducateur participant recevra des cadeaux de remerciements. 100 salles de classe gagneront des meetings électroniques avec des conférenciers spéciaux. Parmi les participants : Bill Gates, Sheryl Sandberg, Ashton Kutcher et plus encore). Et dans chaque état, une école participante gagnera 10.000$ de matériel technologique au profit de son école !
+  6. **Plus de [prix](<%= hoc_uri('/prizes') %>) pour CHAQUE organisateur.** Chaque éducateur participant recevra des cadeaux de remerciements. Et dans chaque état, une école participante gagnera 10.000$ de matériel technologique au profit de son école !

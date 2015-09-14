@@ -22,7 +22,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Write the function _sales_ which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie is sold at $1.50)."
+    "markdown_instructions": "Write the function `sales` which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie is sold at $1.50).",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

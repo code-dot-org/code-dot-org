@@ -41,16 +41,22 @@ class ProjectsController < ApplicationController
 
   def show
     sharing = params[:share] == true
+    readonly = params[:readonly] == true
     level_view_options(
         hide_source: sharing,
-        share: sharing
+        share: sharing,
+        hide_design_mode: sharing || readonly,
+        hide_view_data_button: sharing || readonly
     )
     view_options(
-        readonly_workspace: sharing || params[:readonly],
+        readonly_workspace: sharing || readonly,
         full_width: true,
-        no_footer: !@game.has_footer?,
         callouts: [],
-        no_padding: browser.mobile? && @game.share_mobile_fullscreen?
+        no_padding: browser.mobile? && @game.share_mobile_fullscreen?,
+        # for sharing pages, the app will display the footer inside the playspace instead
+        no_footer: sharing && @game.owns_footer_for_share?,
+        small_footer: (@game.uses_small_footer? || enable_scrolling?),
+        has_i18n: @game.has_i18n?
     )
     render 'levels/show'
   end
@@ -59,6 +65,7 @@ class ProjectsController < ApplicationController
     if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
+    return if redirect_applab_under_13(@level)
     show
   end
 
@@ -68,7 +75,8 @@ class ProjectsController < ApplicationController
     end
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
-    AssetBucket.new.copy_assets src_channel_id, new_channel_id
+    AssetBucket.new.copy_files src_channel_id, new_channel_id
+    SourceBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 

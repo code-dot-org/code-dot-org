@@ -53,6 +53,14 @@ body {
   font-style: normal;
 }
 
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -93,6 +101,15 @@ em {
 strong em,
 em strong {
   font-family: $gotham-extra-bold-italics;
+}
+
+a.video_link {
+  /* IE9 CSS hack */
+  max-width: 100%\9;
+}
+
+img.video_thumbnail {
+  width: 183px;
 }
 
 .center {
@@ -259,7 +276,7 @@ $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer, #copyright-flyout, #more-menu {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
   color: $light_gray;
   font-size: 14px;
@@ -285,16 +302,23 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    background-color: $dark-charcoal;
+    a {
+      &:hover {
+        color: $lightest_gray
+      }
+    }
+  }
 }
 
-.small-footer {
+.small-footer-base {
   position: absolute;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
   padding-left: $codeApp-left-margin;
-  padding-top: 3px;
-  padding-bottom: 3px;
 
   /*
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
@@ -355,17 +379,29 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+
+  .dark & {
+    & > li > a {
+      &:hover {
+        background-color: $lightest_gray;
+        color: $dark_charcoal;
+      }
+    }
+  }
 }
 
-/* All three major components of .small-footer are stacked: */
+/* All three major components of .small-footer are stacked:
+   Need to have this reasonably, high since some of our elements (such as
+   applab editor) have higher values
+*/
 #more-menu {
-  z-index: 1;
+  z-index: 998;
 }
 #copyright-flyout {
-  z-index: 2;
+  z-index: 999;
 }
-.small-footer {
-  z-index: 3;
+.small-footer-base {
+  z-index: 1000;
 }
 
 #locale {
@@ -418,6 +454,9 @@ $default-modal-width: 640px;
 
   &#block-documentation-lightbox {
     width: 80% !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -426,10 +465,8 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    // make dialog auto-center regardless of width
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    width: $default-modal-width;
+    margin-left: -($default-modal-width / 2);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -845,6 +882,14 @@ input.header_input {
   bottom: 10px;
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
     top: 10px;
+  }
+
+  &.embed_hidesource {
+    position: relative;
+    top: 0px;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
   }
 }
 
@@ -1506,6 +1551,35 @@ a.download-video {
   }
 }
 
+.external,
+.text-match {
+  #markdown.teacher {
+    max-width: 800px;
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold; font-weight: normal;
+      color: white;
+      background: $cyan;
+      margin: 0;
+    }
+  }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
@@ -1627,9 +1701,10 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: 35%;
     }
   }
+  $multi-left-margin: 50px;
   .answers {
     float: left;
-    margin-left:50px;
+    margin-left: $multi-left-margin;
     @media #{$information-phone-narrow} {
     }
     @media #{$information-phone-wide} {
@@ -1640,7 +1715,11 @@ $information-desktop: "only screen and (min-width: 1024px)";
     @media #{$information-desktop} {
       width: 55%;
     }
+    &.question-content-blank {
+      width: calc(100% - #{$multi-left-margin});
+    }
     .multi-question {
+      width: 90%;
       font-size: 17px;
     }
   }
@@ -1669,7 +1748,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     float: left;
-    width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
@@ -1677,6 +1755,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-label {
     display: inline-block;
+    text-align: left;
     float: left;
     label {
       font-size: 15px;
@@ -1721,19 +1800,13 @@ $modal-no-icon-gap: 22px;
     display: block;
     margin: 0px auto 6px;
     position: relative;
-    left: -50px;
     z-index: -1;
   }
 
-  .unindentContent {
-    position: relative;
-    left: -50px;
-  }
-
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid
@@ -1877,6 +1950,13 @@ $modal-no-icon-gap: 22px;
   }
 }
 
+.exclamation-abuse {
+  a, a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
 /* Buttons from apps */
 
 button {
@@ -1946,4 +2026,61 @@ button.notext {
 .example-image {
   @include bottom-shadow;
   @include rounded-border;
+}
+
+/*
+ * The following responsive styles are designed to match behavior
+ * with the vizualizationColumn and visualizationEditor styles
+ * defined in apps/style/common.scss, so that the columns in the
+ * header line up with the columns below them.
+ */
+
+$width: 400px;
+#visualizationColumnHeader {
+  max-width: $width;
+  float: left;
+}
+#visualizationEditorHeader {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $width: 200px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
 }

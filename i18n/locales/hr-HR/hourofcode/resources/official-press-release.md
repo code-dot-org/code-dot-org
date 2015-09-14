@@ -30,9 +30,7 @@ kontaktirajte: [**Kontakt**]
 [**UZORAK TEKSTA ZA KONTEKST:**]   
 Računala su posvuda, ali manje škola predaju računarstvo nego prije 10 godina. Djevojke i studenti druge boje kože su vrlo zapostavljeni u učenju o računarstvu. Dobra vijest je da to mijenjamo na bolje. Sat Kodiranja način da svim studentima pružimo pristup obrazovanju o računarstvu sa kvalitetnim računalom.
 
-Tijekom tjedna računalne znanosti prošle godine, 15 milijuna studenata se okušalo na Satu Kodiranja. Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-
-Ove godine Sat Kodiranja pokret ima za cilj 100 milijuna studenata.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. Predsjednik Obama, Shakira i Ashton Kutcher svi su započeli Sat Koriranja vidore zapisima. Preko 100 partnera okupilo se kako bi podržali ovaj događaj.
 
 [**UMETAK CITAT GLASNOGOVORNIKA, PRIMJERA:**]   
 "Moramo potaknuti i prihvatiti zanimanje naših studenata u računarstvu," rekao je [**Umetnuti ime**]. "Svaki učenik zaslužuje priliku učiti o informatici i računarstvu kako bi imao pristup najboljim karijerama 21. stoljeća."

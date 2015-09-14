@@ -4,8 +4,14 @@ Feature: Using the Internet Simulator Lobby
   The internet simulator lets students experiment with a simulated network environment, connecting
   to one another through our system and sending data back and forth with different encodings.
 
+  Scenario: First user in bit-sending mode can reach lobby
+    Given I load netsim in bit-sending mode
+    And I enter the netsim name "Erin"
+    And I wait until element ".netsim-lobby-panel" is visible
+    Then element ".netsim-lobby-panel" contains text "Erin"
+
   Scenario: When not logged in, can connect to a router
-    Given I load netsim
+    Given I load netsim in DNS mode
     Then element "#netsim-lobby-name" is visible
     And element "#netsim-lobby-name" is enabled
     And element "#netsim-lobby-set-name-button" is visible

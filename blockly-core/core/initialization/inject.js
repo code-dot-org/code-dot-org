@@ -134,14 +134,9 @@ Blockly.parseOptions_ = function(options) {
       grayOutUndeletableBlocks = false;
     }
   }
-  if (tree && !hasCategories) {
-    // Scrollbars are not compatible with a non-flyout toolbox.
-    hasScrollbars = false;
-  } else {
-    hasScrollbars = options['scrollbars'];
-    if (hasScrollbars === undefined) {
-      hasScrollbars = false;
-    }
+  if (options['scrollbars']) {
+    options['hasVerticalScrollbars'] = true;
+    options['hasHorizontalScrollbars'] = true;
   }
   return {
     RTL: !!options['rtl'],
@@ -152,7 +147,9 @@ Blockly.parseOptions_ = function(options) {
       return './' + path;
     },
     hasCategories: hasCategories,
-    hasScrollbars: hasScrollbars,
+    hasHorizontalScrollbars: options['hasHorizontalScrollbars'],
+    hasVerticalScrollbars: options['hasVerticalScrollbars'],
+    customSimpleDialog: options['customSimpleDialog'],
     hasTrashcan: hasTrashcan,
     varsInGlobals: options['varsInGlobals'] || false,
     languageTree: tree,
@@ -163,7 +160,8 @@ Blockly.parseOptions_ = function(options) {
     disableExamples: options['disableExamples'] || false,
     defaultNumExampleBlocks: options['defaultNumExampleBlocks'] || 0,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks,
-    editBlocks: options['editBlocks'] || false
+    editBlocks: options['editBlocks'] || false,
+    showExampleTestButtons: options['showExampleTestButtons'] || false
   };
 };
 

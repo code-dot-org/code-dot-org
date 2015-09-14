@@ -22,7 +22,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Using the two functions we just wrote, write the function _profit_, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them."
+    "markdown_instructions": "Using the two functions we just wrote, write the function `profit`, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

@@ -768,22 +768,50 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
  * confirms they want to clear the puzzle.
  */
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
-      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+  this.showSimpleDialog(Dialog, {
+    headerText: msg.clearPuzzleConfirmHeader(),
+    bodyText: msg.clearPuzzleConfirm(),
+    confirmText: msg.clearPuzzle(),
+    cancelText: msg.dialogCancel(),
+    onConfirm: callback,
+    onCancel: null
+  });
+};
+
+/**
+ * Shows a simple dialog that has a header, body, continue button, and cancel
+ * button
+ * @param {object} options Configurable options.
+ * @param {string} headerText Text for header portion
+ * @param {string} bodyText Text for body portion
+ * @param {string} cancelText Text for cancel button
+ * @param {string} confirmText Text for confirm button
+ * @param {function} [onConfirm] Function to be called after clicking confirm
+ * @param {function} [onCancel] Function to be called after clicking cancel
+ */
+FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = '';
+  if (options.headerText) {
+    contentDiv.innerHTML += '<p class="dialog-title">' + options.headerText + '</p>';
+  }
+  if (options.bodyText) {
+    contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
+  }
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
-      clearPuzzle: true,
-      cancel: true
+      confirmText: options.confirmText,
+      cancelText: options.cancelText,
+      cancelButtonClass: options.cancelButtonClass
     }
   });
-  codeDiv.appendChild(buttons);
+  contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
     Dialog: Dialog,
-    contentDiv: codeDiv,
+    contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
   });
@@ -791,14 +819,19 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
+      if (options.onCancel) {
+        options.onCancel();
+      }
       dialog.hide();
     });
   }
 
-  var clearPuzzleButton = buttons.querySelector('#continue-button');
-  if (clearPuzzleButton) {
-    dom.addClickTouchEvent(clearPuzzleButton, function() {
-      callback();
+  var confirmButton = buttons.querySelector('#confirm-button');
+  if (confirmButton) {
+    dom.addClickTouchEvent(confirmButton, function() {
+      if (options.onConfirm) {
+        options.onConfirm();
+      }
       dialog.hide();
     });
   }
@@ -844,17 +877,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
  */
 FeedbackUtils.prototype.getEmptyContainerBlock_ = function() {
   var blocks = Blockly.mainBlockSpace.getAllBlocks();
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    for (var j = 0; j < block.inputList.length; j++) {
-      var input = block.inputList[j];
-      if (input.type == Blockly.NEXT_STATEMENT &&
-          !input.connection.targetConnection) {
-        return block;
-      }
-    }
-  }
-  return null;
+  return Blockly.findEmptyContainerBlock(blocks);
 };
 
 /**
@@ -879,6 +902,31 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
   // This is where to add checks if you want a different TestResult
   // for "controls_for_counter" blocks, for example.
   return TestResults.EMPTY_BLOCK_FAIL;
+};
+
+/**
+ * Throws errors with descriptive messages when example call or result blocks
+ * don't exist or have unfilled functional inputs.
+ * @param {Blockly.Block} callBlock
+ * @param {Blockly.Block} resultBlock
+ */
+FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (callBlock,
+    resultBlock) {
+  if (!callBlock) {
+    throw new Error('Invalid Call Block');
+  }
+
+  if (!resultBlock) {
+    throw new Error('Invalid Result Block');
+  }
+
+  if (resultBlock.hasUnfilledFunctionalInput()) {
+    throw new Error('Result has unfilled inputs');
+  }
+
+  if (callBlock.hasUnfilledFunctionalInput()) {
+    throw new Error('Call has unfilled inputs');
+  }
 };
 
 /**
@@ -1004,8 +1052,9 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
     if (topBlocks[i].type === 'functional_definition') {
       continue;
     }
-    // None of our top level blocks should have a previous connection.
-    if (topBlocks[i].previousConnection) {
+    // None of our top level blocks should have a previous or output connection
+    // (they should only have a next)
+    if (topBlocks[i].previousConnection || topBlocks[i].outputConnection) {
       return true;
     }
   }
@@ -1082,6 +1131,14 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 /**
  * Show a modal dialog without an icon.
  * @param {Object} options
+ * @param {Dialog} options.Dialog
+ * @param {string} options.icon
+ * @param {HTMLElement} options.contentDiv
+ * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.scrollContent
+ * @param {function} options.onHidden
+ * @param {string} options.id
+ * @param {HTMLElement} options.header
  */
 FeedbackUtils.prototype.createModalDialog = function(options) {
   var modalBody = document.createElement('div');

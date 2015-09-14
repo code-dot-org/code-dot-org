@@ -48,22 +48,22 @@ en:
         Write a contract for the text function: Write a contract for the text function
         text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
+        Eval Contracts 4.solution_blocks, 350: Eval Contracts 4.solution_blocks, 350
         Scale Contract: Scale Contract
         Write a contract for the scale function: Write a contract for the scale function
         scale|Image|Number|Image: scale|Image|Number|Image
       Eval Contracts B:
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
+        Eval Contracts A.solution_blocks, 300: Eval Contracts A.solution_blocks, 300
         Star Contract: Star Contract
         Write a contract for the star function: Write a contract for the star function
         star|Image|Number|String|String: star|Image|Number|String|String
       Eval Contracts D:
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
+        Eval Contracts C.solution_blocks, 350: Eval Contracts C.solution_blocks, 350
         Rotate Contract: Rotate Contract
         Write a contract for the rotate function: Write a contract for the rotate function
         rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts F:
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
+        Eval Contracts E.solution_blocks, 300: Eval Contracts E.solution_blocks, 300
         Text Contract: Text Contract
         Write a contract for the text function: Write a contract for the text function
         text|Image|String|Number|String: text|Image|String|Number|String
@@ -161,9 +161,12 @@ en:
         title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
-      Code Logo v3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        title: title
+      ECS Phase 3 Overview: {}
+      ECS Phase 3 Welcome: {}
+      ECSPD Challenge Intro: {}
+      ECSPD Find Learning Strategy: {}
+      ECSPD Growth Mindset Student Video: {}
+      ECSPD Linear vs Binary Search Video: {}
       ECSPD Online U1D1-2:
         Unit 1 Day 1-2: Unit 1 Day 1-2
         description here: description here
@@ -222,7 +225,64 @@ en:
         ECSPD PD details: ECSPD PD details
       ECSPD PD overview:
         ECS PD Overview: ECS PD Overview
+      ECSPD Phase 3 - Unit 2 - Teaching Practice: {}
+      ECSPD Phase 3 - Unit 3 - Teaching Practice: {}
+      ECSPD Phase 3 - Unit 4 - Teaching Practice: {}
+      ECSPD Pick Challenge: {}
+      ECSPD Problem Solving Strategies: {}
+      ECSPD Real Life Problem Solving: {}
+      ECSPD Teaching Strategies Intro: {}
       ECSPD U1Conclusion: {}
+      ECSPD U2 Challenge Plan:
+        description here: description here
+        title: title
+      ECSPD U2 Challenge Submission: {}
+      ECSPD U2 Challenges: {}
+      ECSPD U2 D 1-2: {}
+      ECSPD U2 D 1-2 Forum Q: {}
+      ECSPD U2 D 10-12 Intro: {}
+      ECSPD U2 D 13-14 Intro: {}
+      ECSPD U2 D 15-16 Intro: {}
+      ECSPD U2 D 17 Intro: {}
+      ECSPD U2 D 18-21 Intro: {}
+      ECSPD U2 D 3: {}
+      ECSPD U2 D 4-6: {}
+      ECSPD U2 D 4-6 Forum Q: {}
+      ECSPD U2 D 7-9 Intro: {}
+      ECSPD U2 D3 Forum Q: {}
+      ECSPD U2 Day 10-12 Forum Q: {}
+      ECSPD U2 Day 13-14 Forum Q: {}
+      ECSPD U3 D 1-2 Intro: {}
+      ECSPD U3 D 11-13 Intro: {}
+      ECSPD U3 D 14 Intro: {}
+      ECSPD U3 D 15-16 Intro: {}
+      ECSPD U3 D 17-19 Intro: {}
+      ECSPD U3 D 20-21 Intro: {}
+      ECSPD U3 D 22-25 Intro: {}
+      ECSPD U3 D 3-4 Intro: {}
+      ECSPD U3 D 5 Intro: {}
+      ECSPD U3 D 6-7 Intro: {}
+      ECSPD U3 D 8-10 Intro: {}
+      ECSPD U4 D 1 Intro: {}
+      ECSPD U4 D 10-13 Intro: {}
+      ECSPD U4 D 14 Intro: {}
+      ECSPD U4 D 15 Intro: {}
+      ECSPD U4 D 16-17 Intro: {}
+      ECSPD U4 D 18 Intro: {}
+      ECSPD U4 D 19 Intro: {}
+      ECSPD U4 D 2-3 Intro: {}
+      ECSPD U4 D 20-23 Intro: {}
+      ECSPD U4 D 24 Intro: {}
+      ECSPD U4 D 25-30 Intro: {}
+      ECSPD U4 D 4 Intro: {}
+      ECSPD U4 D 5-6 Intro: {}
+      ECSPD U4 D 7-8 Intro: {}
+      ECSPD U4 D 9 Intro: {}
+      ECSPD Unit 2 Intro: {}
+      ECSPD Unit 2 Lesson Overview: {}
+      ECSPD What Is Problem Solving: {}
+      ECSPD What is the Challenge: {}
+      ECSPD Why Binary - The Internet Video: {}
       ECSPD curriculum overview:
         ECS Curriculum Overview: ECS Curriculum Overview
         Overview of Curriculum: Overview of Curriculum
@@ -275,15 +335,25 @@ en:
       Equity Welcome: {}
       External level test (will):
         first computer program: first computer program
+      Forum-ECSPD-Unit 2-Teaching Practice: {}
+      Forum-ECSPD-Unit 3-Teaching Practice: {}
+      Forum-ECSPD-Unit 4-Teaching Practice: {}
       Hour of Code test content: {}
+      Internet Simulator Setup:
+        Internet Simulator Setup: Internet Simulator Setup
+        description here: description here
+      Internet Simulator Setup 2:
+        description here: description here
+        title: title
+      Internet Simulator Setup 3:
+        Internet Simulator Setup 3: Internet Simulator Setup 3
+        description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
-      Mixing Colors:
-        description here: description here
-        title: title
+      Lesson Prep Final: {}
       OPD-K5 About: {}
       OPD-K5 Assessment: {}
       OPD-K5 CS: {}
@@ -335,11 +405,10 @@ en:
       OPD-K5 Younger Grades: {}
       OPD-K5 Your Plan: {}
       OPD-Stage3Start: {}
-      Odometer:
-        Odometer: Odometer
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Big Game: {}
       PDAlg Cirlces of Eval:
         Circles of Evaluation: Circles of Evaluation
       PDAlg Culture: {}
@@ -350,6 +419,7 @@ en:
       PDAlg Dashboard 1: {}
       PDAlg Dashboard 2: {}
       PDAlg Dashboard 3: {}
+      PDAlg Design Recipe Updates: {}
       PDAlg Details:
         CS in Algebra PD Details: CS in Algebra PD Details
       PDAlg End of P1:
@@ -364,6 +434,9 @@ en:
         Welcome to the next phase!: Welcome to the next phase!
       PDAlg Post Survey:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Prep Sandbox: {}
+      PDAlg Prep a Lesson: {}
+      PDAlg Projects: {}
       PDAlg Puzzle Tips: {}
       PDAlg Puzzles Pre: {}
       PDAlg Scope:
@@ -374,8 +447,7 @@ en:
       PDAlg Teacher Introduction:
         Introduce yourself: Introduce yourself
       PDAlg Teacher Plan: {}
-      PDAlg big game:
-        Introduction to the Big Game: Introduction to the Big Game
+      PDAlg Updates Tweaks: {}
       PDAlg bootstrap:
         From Bootstrap to CS in Algebra: From Bootstrap to CS in Algebra
       PDAlg circles to blocks:
@@ -453,41 +525,11 @@ en:
         Unplugged intro: Unplugged intro
       PDK5 Why K5 CS:
         Why teach computer science in elementary school?: Why teach computer science in elementary school?
-      Pixelation - Hadi Emoji:
-        Pixelation - Hadi Emoji: Pixelation - Hadi Emoji
-        description here: description here
-      Pixelation - Lesson 14 - Fix bit offset:
-        Pixelation - Lesson 14 - Fix bit offset: Pixelation - Lesson 14 - Fix bit offset
-      Pixelation - Lesson 14 - Fix bit offset v.2:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
-      Pixelation - Lesson 14 - Fix the error:
-        Pixelation - Lesson 14 - Fix bit offset v.2: Pixelation - Lesson 14 - Fix bit offset v.2
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
       Pixelation - Lesson 14 - Instructions one bit error:
         'Lesson 14 - Task 2: fix the error': 'Lesson 14 - Task 2: fix the error'
-        description here: description here
-      Pixelation - Lesson 14 - Make the Letter A:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B and W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 14 - Make your own B&W Image:
-        description here: description here
-        title: title
-      Pixelation - Lesson 15 - Color Free Play:
-        Pixelation - Lesson 15 - Color Free Play: Pixelation - Lesson 15 - Color Free Play
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades:
-        Pixelation - Lesson 15 - Color Shades: Pixelation - Lesson 15 - Color Shades
-        description here: description here
-      Pixelation - Lesson 15 - Color Shades 4x4:
-        Pixelation - Lesson 15 - Color Shades 4x4: Pixelation - Lesson 15 - Color Shades 4x4
-        description here: description here
-      Pixelation - Lesson 15 - Complete 3-bit color:
-        Pixelation - Lesson 15 - Complete 3-bit color: Pixelation - Lesson 15 - Complete 3-bit color
         description here: description here
       Pixelation - Lesson 15 - Favicon Instructions:
         Pixelation - Lesson 15 - Favicon Instructions: Pixelation - Lesson 15 - Favicon Instructions
@@ -515,41 +557,18 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
-      Pixelation 1:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 1: Pixelation 1
-      Pixelation 2:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 2: Pixelation 2
-      Pixelation 3:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 3: Pixelation 3
-      Pixelation 3 Bit Colors:
-        description here: description here
-        title: title
-      Pixelation 4:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4 - Baker test of External level -- NOT REAL: Pixelation 4 - Baker test of External level -- NOT REAL
-      Pixelation 4x4 Empty:
-        Create images with bits and bytes.: Create images with bits and bytes.
-        Pixelation 4x4 Empty: Pixelation 4x4 Empty
-      Pixelation Bee:
-        description here: description here
-        title: title
-      Pixelation Flappy:
-        description here: description here
-        title: title
+      TLO intro:
+        Introduction to the TLO: Introduction to the TLO
+      TLO practical:
+        TLO in Practice: TLO in Practice
       Test External Markdown:
         Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      Text Compression 1:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression 1: Text Compression 1
-      Text Compression Peter Piper:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        Text Compression Peter Piper: Text Compression Peter Piper
+      U1L1 Innovation - Video:
+        Impact of Innovation - Video: Impact of Innovation - Video
+        description here: description here
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
@@ -565,9 +584,6 @@ en:
       U1L13 Student Lesson Summary:
         description here: description here
         title: title
-      U1L13 Text Compression:
-        Compress text by identifying repeated patterns.: Compress text by identifying repeated patterns.
-        U1L13 Text Compression: U1L13 Text Compression
       U1L14 Student Lesson Summary:
         description here: description here
         title: title
@@ -610,6 +626,12 @@ en:
       U1L9 Student Lesson Introduction:
         description here: description here
         title: title
+      U2 Encryption and Public Keys - Video:
+        'The Internet: Encryption and Public Keys - Video': 'The Internet: Encryption and Public Keys - Video'
+        description here: description here
+      'U2 The Internet: Cybersecurity and Crime - Video':
+        'The Internet: Cybersecurity and Crime - Video': 'The Internet: Cybersecurity and Crime - Video'
+        description here: description here
       U2L1 Student Lesson Introduction:
         description here: description here
         title: title
@@ -634,7 +656,7 @@ en:
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
-        Public Key Crypto: Public Key Crypto
+        Public Key Encryption: Public Key Encryption
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
@@ -645,7 +667,7 @@ en:
         IP/DNS Video: IP/DNS Video
         'Internet: IP/DNS': 'Internet: IP/DNS'
       U2L4 Student Lesson Introduction:
-        U2L04 Routers and Addresses: U2L04 Routers and Addresses
+        U2L04 Routers and Redundancy: U2L04 Routers and Redundancy
       U2L5 Packets and Reliability - Video:
         'The Internet: Packets, Routers, and Reliability - Video': 'The Internet: Packets, Routers, and Reliability - Video'
         description here: description here
@@ -766,6 +788,8 @@ en:
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
       U3L24 Conditionals Lecture: {}
+      U3L24 Debugging Lecture: {}
+      U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
       U3L25 Student Lesson Introduction:
@@ -773,7 +797,7 @@ en:
       U3L26 Student Lesson Introduction:
         Strings and Substrings: Strings and Substrings
       U3L27 Student Lesson Introduction:
-        Chatbot Challenge: Chatbot Challenge
+        Digital Assistant Challenge: Digital Assistant Challenge
       U3L28 Student Lesson Introduction:
         While Loop Basics: While Loop Basics
       U3L29 Student Lesson Introduction:
@@ -788,6 +812,79 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      U4L01 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L02 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L03 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L04 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L05 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L06 JSON Object Method: {}
+      U4L06 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L07 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L08 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L09 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L11 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L13 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L15 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L16 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L17 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L18 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L19 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L20 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L21 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L22 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L23 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L24 Student Lesson Introduction:
+        description here: description here
+        title: title
       a bit about pixels:
         kevin systrom pixel video: kevin systrom pixel video
         pixel video: pixel video
@@ -971,6 +1068,19 @@ en:
         Phase 3 Module 3: Phase 3 Module 3
       sciPD3 resource module4:
         Phase 3 Module 4: Phase 3 Module 4
+      sciPD3pre1 challenge: {}
+      sciPD3pre1 intro:
+        Intro to Phase 3 Online: Intro to Phase 3 Online
+        Prepare for P3 In-Person: Prepare for P3 In-Person
+      sciPD3pre1 prep:
+        Prepare to teach your peers a module: Prepare to teach your peers a module
+        Preparing Your TLO: Preparing Your TLO
+      sciPD3pre1 remember:
+        Looking Back to P2: Looking Back to P2
+        Refreshing yourself on the module that you will be teaching: Refreshing yourself on the module that you will be teaching
+      sciPD3pre1 thanks:
+        Thank You: Thank You
+        Thanks for your time: Thanks for your time
       sciencePD2b remixing:
         Remixing in StarLogo Nova: Remixing in StarLogo Nova
       test demo level:
@@ -1196,6 +1306,15 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECSPD Growth Mindset Reflection Q:
+        Fixed Mindset: Fixed Mindset
+        Fixed vs Growth Mindset: Fixed vs Growth Mindset
+        Grade given to students when they haven't passed a class: Grade given to students when they haven't passed a class
+        Growth Mindset: Growth Mindset
+        'Match the description to the appropriate values ': 'Match the description to the appropriate values '
+        Not Yet: Not Yet
+        Result of praising intelligence: Result of praising intelligence
+        Result of praising process: Result of praising process
       ECSPD Online U1D10 Assessment 1:
         Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions drawn from the data will be limited by the (relatively) small amount of data.
         ? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
@@ -1496,11 +1615,11 @@ en:
         What is an unplugged activity?: What is an unplugged activity?
       U1L16 - Matching File Compression Types:
         BMP: BMP
+        Compressed Files - Lossless: Compressed Files - Lossless
         Compressed Image - Lossless: Compressed Image - Lossless
         Compressed Image - Lossless (256 color limit): Compressed Image - Lossless (256 color limit)
         Compressed Image - Lossy: Compressed Image - Lossy
         Compressed Sound - Lossy: Compressed Sound - Lossy
-        Compressed Text - Lossless: Compressed Text - Lossless
         GIF: GIF
         JPEG: JPEG
         MP3: MP3
@@ -1510,7 +1629,6 @@ en:
         Uncompressed Sound: Uncompressed Sound
         WAV: WAV
         ZIP: ZIP
-        description here: description here
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -1563,6 +1681,30 @@ en:
         Random Substitution Cipher: Random Substitution Cipher
         TEMVVU WIITAQIQTHRLY: TEMVVU WIITAQIQTHRLY
         Vigenere Cipher: Vigenere Cipher
+      U2L17 - Vocabulary matching:
+        ' <br>Brute force': ' <br>Brute force'
+        <br>Computationally hard: <br>Computationally hard
+        <br>Heuristic: <br>Heuristic
+        <br>One Way Function: <br>One Way Function
+        A problem that requires an unreasonable amount of time to solve, even for many computers: A problem that requires an unreasonable amount of time to solve, even for many computers
+        An algorithm that is easy to run but results in output that is hard or impossible to reverse: An algorithm that is easy to run but results in output that is hard or impossible to reverse
+        Assessment 2 - Matching: Assessment 2 - Matching
+        Rules or an algorithm for finding an approximate solution: Rules or an algorithm for finding an approximate solution
+        Trying every possible solution to a problem to find the answer<br><br><br>: Trying every possible solution to a problem to find the answer<br><br><br>
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - Assessment 1: Asymmetric Encryption - Assessment 1
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why **asymmetric** encryption is useful
+      U2L18 Match terms to cups and beans analogy:
+        A sealed cup of beans that Alice puts on the table: A sealed cup of beans that Alice puts on the table
+        Alice dumping the beans out of the cup and counting off her original number: Alice dumping the beans out of the cup and counting off her original number
+        Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity: Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity
+        Bob adding beans to the cup: Bob adding beans to the cup
+        Decrypting a message: Decrypting a message
+        Encrypting a message: Encrypting a message
+        Private key: Private key
+        Public key: Public key
+        The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
       U2L3 Assessment:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
@@ -1637,6 +1779,19 @@ en:
         What are the values of the variables a, b and c after all of the code has executed?: What are the values of the variables a, b and c after all of the code has executed?
         description here: description here
         title: title
+      U4L06 Create Record Id Matching Q:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        The JSON object being stored: The JSON object being stored
+        The code run once the data is stored: The code run once the data is stored
+        The column name for the data stored: The column name for the data stored
+        The data stored in the table: The data stored in the table
+        The name of the button: The name of the button
+        The name of the table: The name of the table
       parts of contract:
         (yearbook-picture "Sally" 1992): (yearbook-picture "Sally" 1992)
         Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
@@ -2091,17 +2246,18 @@ en:
         title: title
         wrong answer: wrong answer
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Multiple Choice
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Multiple Choice
         Which blocks draw the square?: Which blocks draw the square?
@@ -2288,6 +2444,22 @@ en:
         What should g(2) return?: What should g(2) return?
         g(y) = y + 3: g(y) = y + 3
         y: y
+      Multi Horizontal Scroll Test:
+        12 bits: 12 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time (Assume that all other keys are ignored in this question).
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -2463,8 +2635,9 @@ en:
         5 bits: 5 bits
         6 bits: 6 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
-        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?
       U1L10 Assessment 2:
+        12 bits: 12 bits
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -2480,13 +2653,12 @@ en:
 
           How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
-        15 bits: 15 bits
-        21 bits: 21 bits
+        16 bits: 16 bits
+        24 bits: 24 bits
         3 bits: 3 bits
-        30 bits: 30 bits
+        32 bits: 32 bits
         8 bits: 8 bits
-        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
-        How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
+        'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
@@ -2567,8 +2739,8 @@ en:
         heuristic: heuristic
         protocol: protocol
       U2L02 Assessment 4:
-        Cell Number: Cell Number
         From: From
+        Grid Coordinates: Grid Coordinates
         'The Need For Addressing: Assessment 2': 'The Need For Addressing: Assessment 2'
         Time: Time
         To: To
@@ -2633,11 +2805,11 @@ en:
       U2L07 Assessment2:
         A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.: A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.
         ? |-
-          Both minimum spanning tree algorithm you learned and the
+          Both the minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         : |-
-          Both minimum spanning tree algorithm you learned and the
+          Both the minimum spanning tree algorithm you learned and the
           shortest path algorithm you learned used a "greedy" approach,
           choosing the smallest edge first or vertex with the smallest distance value first.
         Question 2: Question 2
@@ -2648,8 +2820,8 @@ en:
         Question 3: Question 3
         The algorithm is correct.: The algorithm is correct.
         The algorithm is efficient.: The algorithm is efficient.
+        The algorithm is short.: The algorithm is short.
         The algorithm is understandable.: The algorithm is understandable.
-        The algorithm short: The algorithm short
         Which of the following is NOT something we are concerned with when we write an algorithm?: Which of the following is NOT something we are concerned with when we write an algorithm?
       U2L08 Assessment 1:
         '11': '11'
@@ -2657,23 +2829,21 @@ en:
         '6': '6'
         '8': '8'
         '9': '9'
-        ? Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
-        : Here is another router network. The table displays the current state of the router table for router A. Take the role of a new router, Z, that has just been connected to the network through router A. You have just compared router tables with router A. Based on your current knowledge as router Z, what is the cost of the most efficient way to send traffic to router E?
         Router Table Assessment: Router Table Assessment
       U2L09 Assessment1:
         ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
         : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
-        It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
         'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
-        There are too few IP addresses to meet the current demand.: There are too few IP addresses to meet the current demand.
-        When an IP address changes, it is impossible to locate a computer until the owner announces the change.: When an IP address changes, it is impossible to locate a computer until the owner announces the change.
-        When someone new joins the Internet they must inform everyone else of the new IP address: When someone new joins the Internet they must inform everyone else of the new IP address
       U2L10 Assessment1:
+        A. Redundancy: A. Redundancy
         Assessment Question 1: Assessment Question 1
-        Government control: Government control
-        Hierarchy: Hierarchy
-        Multiple servers: Multiple servers
-        Redundancy: Redundancy
+        B. Hierarchy: B. Hierarchy
+        C. Multiple servers: C. Multiple servers
+        D. Government control: D. Government control
         What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
       U2L10 Assessment2:
         Assessment Question 2: Assessment Question 2
@@ -2684,18 +2854,18 @@ en:
         What is a disadvantage of the open standard of addressing used by the internet? (Pick 2): What is a disadvantage of the open standard of addressing used by the internet? (Pick 2)
       U2L11 Assessment 1:
         'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
-        HTTP is considered to be a high level protocol because: HTTP is considered to be a high level protocol because
-        HTTP messages can be either a requests or responses: HTTP messages can be either a requests or responses
-        HTTP requests are encoded using higher frequency radio waves: HTTP requests are encoded using higher frequency radio waves
-        HTTP requests are given higher priority for fast delivery when being routed on the Internet: HTTP requests are given higher priority for fast delivery when being routed on the Internet
-        HTTP requests make use of abstractions provided by lower level protocols: HTTP requests make use of abstractions provided by lower level protocols
+        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
+        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
+        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
+        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
       U2L11 Assessment 2:
-        An HTTP request is sent from a client to request access to data stored on a server: An HTTP request is sent from a client to request access to data stored on a server
-        An HTTP response code is only used when a server could not fulfill a request: An HTTP response code is only used when a server could not fulfill a request
-        'Choose Two: Choose the two true statements about HTTP.': 'Choose Two: Choose the two true statements about HTTP.'
+        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
+        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
+        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
         Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
         'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
-        HTTP requests and responses have identical formats: HTTP requests and responses have identical formats
+        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
       U2L13 Assessment3:
         A secret word only know by Caesar.: A secret word only know by Caesar.
         'Assessment: Question 2': 'Assessment: Question 2'
@@ -2727,7 +2897,7 @@ en:
         Computers are faster than humans.: Computers are faster than humans.
         Computers are smarter than humans.: Computers are smarter than humans.
         The Vigenere was originally designed by a computer.: The Vigenere was originally designed by a computer.
-        They are not - humans are better as breaking Vigenere encryptions than computers.: They are not - humans are better as breaking Vigenere encryptions than computers.
+        They are not - humans are better at breaking Vigenere encryptions than computers.: They are not - humans are better at breaking Vigenere encryptions than computers.
         Why are computers better than humans at breaking encryptions such as the Vigenere?: Why are computers better than humans at breaking encryptions such as the Vigenere?
       U2L15 Assessment4:
         8 random characters that include numbers and punctuation: 8 random characters that include numbers and punctuation
@@ -2737,12 +2907,51 @@ en:
         A word from the dictionary: A word from the dictionary
         'Assessment: Question 4': 'Assessment: Question 4'
         'Which makes for a password that is harder to crack:': 'Which makes for a password that is harder to crack:'
+      U2L17 - One Way functions Def MC:
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        One-Way Functions: One-Way Functions
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L17 Free Responses Assessment 1:
+        Assessment 1: Assessment 1
+        Easy to create and easy to solve: Easy to create and easy to solve
+        Easy to create and hard to solve: Easy to create and hard to solve
+        Hard to create and easy to solve: Hard to create and easy to solve
+        Hard to create and hard to solve: Hard to create and hard to solve
+        Select the best answer.: Select the best answer.
+        Which of the following correctly defines a one-way function?: Which of the following correctly defines a one-way function?
+      U2L19 multichoice 13 MOD 17:
+        '0': '0'
+        1 4/13: 1 4/13
+        '13': '13'
+        '17': '17'
+        '4': '4'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        'What is 13 MOD 17? ': 'What is 13 MOD 17? '
+      'U2L19 mutlichoice ':
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
+      U2L19 mutlichoice 20 mod 15:
+        '0': '0'
+        '1.5': '1.5'
+        '15': '15'
+        '20': '20'
+        '5': '5'
+        Modulo Multiple Choice: Modulo Multiple Choice
+        What is 20 MOD 15?: What is 20 MOD 15?
       U2L3 Assessment 2:
         12 users: 12 users
         32 users: 32 users
         6 users: 6 users
         64 users: 64 users
-        How many users would an fixed-length IP address system using 6 bits support?: How many users would an fixed-length IP address system using 6 bits support?
+        How many users would a fixed-length IP address system using 6 bits support?: How many users would a fixed-length IP address system using 6 bits support?
         'Invent an Addressing Protocol: Question 1': 'Invent an Addressing Protocol: Question 1'
       U2L3 Assessment 3:
         ? 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
@@ -2761,43 +2970,43 @@ en:
         Spread 1 slice with jelly: Spread 1 slice with jelly
         Spread 1 slice with peanut butter: Spread 1 slice with peanut butter
         Why Programming? Question 2: Why Programming? Question 2
+      U3L03 - multiselect - properties of functions:
+        Choose Two - Things about functions: Choose Two - Things about functions
+        Chose the two (2) statements that are true about functions: Chose the two (2) statements that are true about functions
+        Functions in programming are a named grouping of programming instructions.: Functions in programming are a named grouping of programming instructions.
+        Functions in programming are useful mathematical tools for doing complex computations.: Functions in programming are useful mathematical tools for doing complex computations.
+        Meaningful function names help <em>computers</em> better understand programs.: Meaningful function names help <em>computers</em> better understand programs.
+        Meaningful function names help <em>people</em> better understand programs.: Meaningful function names help <em>people</em> better understand programs.
       U3L03 Assessment:
-        'Creating Procedures Part 1: Assessment': 'Creating Procedures Part 1: Assessment'
-        It is easier to divide the work among several programmers.: It is easier to divide the work among several programmers.
-        Logical names make the program code more intuitive/understandable.: Logical names make the program code more intuitive/understandable.
-        The "spoken-language style" makes errors more logically recognizable.: The "spoken-language style" makes errors more logically recognizable.
-        There are fewer lines in the program to debug.: There are fewer lines in the program to debug.
-        They create shorter algorithms that sound like spoken language.: They create shorter algorithms that sound like spoken language.
-        They reduce the level of program abstraction.: They reduce the level of program abstraction.
-        Which of the following is NOT an advantage of using well-designed procedures and functions?: Which of the following is NOT an advantage of using well-designed procedures and functions?
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer: Functions cannot make calls to other functions written by the same programmer
+        Functions help break a problem into logical chunks: Functions help break a problem into logical chunks
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Multiple Choice - Things about functions: Multiple Choice - Things about functions
+        Once defined, a function can be called many times from different parts of a program: Once defined, a function can be called many times from different parts of a program
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
       U3L04 Assessment2:
-        'Creating Procedures Part 2: Question 2': 'Creating Procedures Part 2: Question 2'
-        The name of program it was originally designed for: The name of program it was originally designed for
-        The name of the function: The name of the function
-        The post-state: The post-state
-        The pre-state: The pre-state
-        What it does: What it does
-        ? Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
-        : Which of the following would be the LEAST IMPORTANT detail to provide to a programmer who wanted to use a function that you created?
+        'Multiple Choice: Functions and Top Down Design': 'Multiple Choice: Functions and Top Down Design'
+        Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem: Top Down Design assists in identifying the layers of functions that will be used to solve a programming problem
+        Top Down Design leads to programs which feature multiple layers of abstraction: Top Down Design leads to programs which feature multiple layers of abstraction
+        Top Down Design relies upon identifying sub-problems of a larger problem: Top Down Design relies upon identifying sub-problems of a larger problem
+        Two programmers solving the same problem using Top Down Design should arrive at identical programs: Two programmers solving the same problem using Top Down Design should arrive at identical programs
+        Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
+        Writing functions helps manage complexity in a program: Writing functions helps manage complexity in a program
       U3L06 Assessment2:
-        APIs and Parameters Question 3: APIs and Parameters Question 3
-        Left(45): Left(45)
-        Left(90): Left(90)
-        ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
-        : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
-        forward100( ): forward100( )
-        forward283( ): forward283( )
-        forward50( ): forward50( )
+        A way to give input to a function that controls how the function runs: A way to give input to a function that controls how the function runs
+        What's a function parameter: What's a function parameter
+        para-meter -- a measure of the distance between a function's conception and implementation: para-meter -- a measure of the distance between a function's conception and implementation
+        wrong choice 2: wrong choice 2
+        wrong choice 3: wrong choice 3
+        wrong choice 4: wrong choice 4
       U3L06-API-multichoice:
-        APIs and Parameters Question 1: APIs and Parameters Question 1
-        Auto-correct common programming errors: Auto-correct common programming errors
-        Explain the functionality of a programming statements: Explain the functionality of a programming statements
-        List the commands and functions of a programming language: List the commands and functions of a programming language
-        Select the best answer: Select the best answer
-        Show examples of programming statements: Show examples of programming statements
-        Simplify complex programming tasks: Simplify complex programming tasks
-        To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
-        What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
+        Abstract Parameter Interface: Abstract Parameter Interface
+        Abstract Programming Inheritance: Abstract Programming Inheritance
+        Application Program Interface: Application Program Interface
+        Applied Power Implementation: Applied Power Implementation
+        Artificial Parameter Intelligence: Artificial Parameter Intelligence
+        What's an API?: What's an API?
       U3L07 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
         Left(45): Left(45)
@@ -2973,6 +3182,32 @@ en:
         'Arrays: Question 3': 'Arrays: Question 3'
         Cannot be determined: Cannot be determined
         There are 20 elements in an array. What is the index of the last element?: There are 20 elements in an array. What is the index of the last element?
+      U4L06 Assessment 1:
+        Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.: Data about multiple items each with the same attributes should be kept in what format to enable searching and analysis.
+        array: array
+        string: string
+        table: table
+        variable: variable
+      U4L06 Assessment 2:
+        ' Each record of data is kept in its own': ' Each record of data is kept in its own'
+        column: column
+        row: row
+      U4L06 Assessment 3:
+        ' Each attribute for a record of data is kept in a': ' Each attribute for a record of data is kept in a'
+        column: column
+        row: row
+      U4L06 Assessment 4:
+        '  In AppLab, when inserting a new row in a table a callback function is used:': '  In AppLab, when inserting a new row in a table a callback function is used:'
+        to allow for corrections in the inserted row.: to allow for corrections in the inserted row.
+        to identify the user of the app.: to identify the user of the app.
+        to notify when the data has been stored.: to notify when the data has been stored.
+        to secure the data.: to secure the data.
+      U4L06 Reflection Q 1:
+        Question: Question
+        blank: blank
+        default value: default value
+        random: random
+        the old data is deleted: the old data is deleted
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -3230,11 +3465,26 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
+        (((1 < X) & (X < 5)) || ((8 < X) & (X < 10))): (((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))
+        (((1 < X) && (X < 5)) || ((8 < X) && (X < 10))): (((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))
+        (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))): (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))
+        (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))): (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))
+        (((1 < X) and (X < 5)) or ((8 < X) and (X < 10))): (((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))
         (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
         (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < X) & (X < 5) || (8 < X) & (X < 10)): ((1 < X) & (X < 5) || (8 < X) & (X < 10))
+        ((1 < X) & (X < 5)) || ((8 < X) & (X < 10)): ((1 < X) & (X < 5)) || ((8 < X) & (X < 10))
+        ((1 < X) && (X < 5) || (8 < X) && (X < 10)): ((1 < X) && (X < 5) || (8 < X) && (X < 10))
+        ((1 < X) && (X < 5)) || ((8 < X) && (X < 10)): ((1 < X) && (X < 5)) || ((8 < X) && (X < 10))
+        ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10)): ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))
+        ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)): ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))
+        ((1 < X) And (X < 5) Or (8 < X) And (X < 10)): ((1 < X) And (X < 5) Or (8 < X) And (X < 10))
+        ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)): ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))
+        ((1 < X) and (X < 5) or (8 < X) and (X < 10)): ((1 < X) and (X < 5) or (8 < X) and (X < 10))
+        ((1 < X) and (X < 5)) or ((8 < X) and (X < 10)): ((1 < X) and (X < 5)) or ((8 < X) and (X < 10))
         ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
         ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
         ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
@@ -3245,6 +3495,15 @@ en:
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
         ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8 < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
+        (1 < X < 5) OR (8 < X < 10): (1 < X < 5) OR (8 < X < 10)
+        (1 < X < 5) Or (8 < X < 10): (1 < X < 5) Or (8 < X < 10)
+        (1 < X < 5) or (8 < X < 10): (1 < X < 5) or (8 < X < 10)
+        (1 < X < 5) || (8 < X < 10): (1 < X < 5) || (8 < X < 10)
+        (1 < X) & (X < 5) || (8 < X) & (X < 10): (1 < X) & (X < 5) || (8 < X) & (X < 10)
+        (1 < X) && (X < 5) || (8 < X) && (X < 10): (1 < X) && (X < 5) || (8 < X) && (X < 10)
+        (1 < X) AND (X < 5) OR (8 < X) AND (X < 10): (1 < X) AND (X < 5) OR (8 < X) AND (X < 10)
+        (1 < X) And (X < 5) Or (8 < X) And (X < 10): (1 < X) And (X < 5) Or (8 < X) And (X < 10)
+        (1 < X) and (X < 5) or (8 < X) and (X < 10): (1 < X) and (X < 5) or (8 < X) and (X < 10)
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
@@ -3331,6 +3590,9 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       CSPPD2 PT activity: {}
       CSPPD2 share protocol: {}
+      ECSPD Fence post Q1: {}
+      ECSPD Handshake Q1:
+        Enter answer here: Enter answer here
       ECSPD Online U1D1-2 Assessment 1:
         What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:
@@ -3372,6 +3634,7 @@ en:
       ECSPD Online U1Reflection: {}
       ECSPD PD goals:
         Documenting Your PD Goals: Documenting Your PD Goals
+      ECSPD Personal Problem Solving Strategies: {}
       ECSPD course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       ECSPD impact in program:
@@ -3395,6 +3658,7 @@ en:
         In my classroom, I want to...: In my classroom, I want to...
       PDAlg DR Text 1:
         Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?: Here's the same contract from the last page. What could you ask this student to help them identify and correct their error?
+      PDAlg Prep on Paper: {}
       PDAlg course goals:
         Documenting Your Course Goals: Documenting Your Course Goals
       PDK5 Challenges:
@@ -3470,6 +3734,10 @@ en:
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
+        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 Assess Text Compression amount:
+        Is this a good compression rate?: Is this a good compression rate?
       U1L13 Assessment 1:
         Why Compress?: Why Compress?
       U1L13 Assessment 2:
@@ -3532,13 +3800,12 @@ en:
         'Getting Started: Sending Numbers ': 'Getting Started: Sending Numbers '
         Respond to the following question.: Respond to the following question.
       U1L8 Free Response Reflection:
-        Complete the Sending Numbers Rubric and then respond to the following prompt.: Complete the Sending Numbers Rubric and then respond to the following prompt.
         'Reflection: Sending Numbers ': 'Reflection: Sending Numbers '
       U1L8 Free Response2:
         How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
-        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+        'Reflection: Real-World Numbers ': 'Reflection: Real-World Numbers '
       U2L01 Assessment 4: {}
       U2L02 Assessment 5:
         Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?
@@ -3561,9 +3828,11 @@ en:
         Enter your reflection here.: Enter your reflection here.
         'Packets: Reflection': 'Packets: Reflection'
       U2L07 Assessment4:
+        '43': '43'
         Question 4: Question 4
       U2L07 Assessment5:
         Question 5: Question 5
+      U2L08 Assessment 0: {}
       U2L08 Free Response 1:
         'Router Table: Reflection': 'Router Table: Reflection'
       U2L08 Free Response 2:
@@ -3604,36 +3873,55 @@ en:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
       U2L15 Free Response Wrap Up:
         'Encryption Algorithms: Wrap Up': 'Encryption Algorithms: Wrap Up'
+      U2L16 Free Response Assessment 3:
+        Assessment 3: Assessment 3
+        Enter answer here: Enter answer here
+        Why are computationally-hard problems important in encryption strategies?: Why are computationally-hard problems important in encryption strategies?
+      U2L16 Free Response assessment 2:
+        Lesson 16 - Assessment 2: Lesson 16 - Assessment 2
+        What do people do who need solutions to large computationally-hard problems?: What do people do who need solutions to large computationally-hard problems?
+      U2L16 Free response assessment 1:
+        Lesson 16 - Assessment 1: Lesson 16 - Assessment 1
+        What does "computationally hard" mean?: What does "computationally hard" mean?
       U2L17 Assessment 1:
         Assessment Question 1: Assessment Question 1
         Describe what it means for a problem to be "computationally hard.": Describe what it means for a problem to be "computationally hard."
       U2L17 Assessment 2:
         Assessment Question 2: Assessment Question 2
-        How are computationally hard problems related to encryption?: How are computationally hard problems related to encryption?
+        What strategies do people use to solve large computationally-hard problems?: What strategies do people use to solve large computationally-hard problems?
       U2L17 Free Response Getting Started:
         'Hard Problems: Getting Started': 'Hard Problems: Getting Started'
-        ? List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
-        : List two problems that you think computers can not solve? What are the characteristics of problems that are "hard" for computers?
+        What kinds of problems do you think are "computationally hard"?: What kinds of problems do you think are "computationally hard"?
       U2L17 Free Response Wrap Up:
         'Hard Problems: Wrap Up': 'Hard Problems: Wrap Up'
         ? If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
         : If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?
       U2L18 Assessment:
-        'Assessment: Question': 'Assessment: Question'
+        Reflection: Reflection
+      U2L18 FR why is asymmetric encryption useful:
+        Asymmetric Encryption - why is it useful?: Asymmetric Encryption - why is it useful?
+      U2L18 Free Response Assessment 1:
+        Asymmetric Encryption Assessment 1: Asymmetric Encryption Assessment 1
+        ? In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+        : In symmetric encryption the same key is used to encrypt and decrypt a message. In asymmetric encryption different keys are used to encrypt and decrypt. Give at least one reason why asymmetric encryption is useful
+      U2L18 Free Response Assessment 3:
+        Asymmetric Encryption Assessment 3: Asymmetric Encryption Assessment 3
+        List other examples of one-way functions. Can you think of a one-way function in real life?: List other examples of one-way functions. Can you think of a one-way function in real life?
       U2L18 Free Response Getting Started:
-        'One Way Functions: Getting Started': 'One Way Functions: Getting Started'
+        Assessment 3: Assessment 3
       U2L18 Free Response Wrap Up:
         'One Way Functions: Wrap Up': 'One Way Functions: Wrap Up'
       U2L19 Assessment:
-        'Assessment: Question': 'Assessment: Question'
+        'Assessment: Modulo and one-way functions': 'Assessment: Modulo and one-way functions'
       U2L19 Free Response Getting Started:
-        'Public Key Crypto: Getting Started': 'Public Key Crypto: Getting Started'
+        'Public Key Crypto: The Modulo Operation': 'Public Key Crypto: The Modulo Operation'
       U2L19 Free Response Wrap Up:
-        'Public Key Crypto: Wrap Up': 'Public Key Crypto: Wrap Up'
+        'Public Key Crypto: Why is it safe?': 'Public Key Crypto: Why is it safe?'
+      U2L20 - Free Response - exploited technology: {}
       U2L20 Free Response Getting Started:
         'Security and Hacking: Getting Started': 'Security and Hacking: Getting Started'
-      U2L20 Free Response Wrap Up:
-        'Security and Hacking: Wrap Up': 'Security and Hacking: Wrap Up'
+      U2L20 Free Response Wrap Up: {}
+      U2L20 Free Response Wrap Up 2: {}
       U2L3 Assessment 4:
         'Inventing an Addressing Protocol: Question 3': 'Inventing an Addressing Protocol: Question 3'
         Why does it not make sense for users to be identified by their real names on the Internet?: Why does it not make sense for users to be identified by their real names on the Internet?
@@ -3646,17 +3934,17 @@ en:
       U2L9 Free Response Getting Started:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3L01 Assessment1:
-        Why Programming? Question 1: Why Programming? Question 1
+        Free Response: Free Response
       U3L01 Assessment3:
-        Why Programming? Question 3: Why Programming? Question 3
+        Free Response: Free Response
       U3L01 Free Response Getting Started:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       U3L01 Free Response Wrap Up:
         Why Programming? Wrap Up: Why Programming? Wrap Up
       U3L02 Assessment:
-        Assessment Question: Assessment Question
+        What does efficiency mean in programming?: What does efficiency mean in programming?
       U3L02 Free Response Getting Started:
-        'Programming with Simple Commands: Getting Started': 'Programming with Simple Commands: Getting Started'
+        'Programming with Simple Commands: Why limit to 4?': 'Programming with Simple Commands: Why limit to 4?'
       U3L02 Free Response Wrap Up:
         'Programming with Simple Commands: Wrap Up': 'Programming with Simple Commands: Wrap Up'
       U3L03 Free Response Getting Started:
@@ -3664,15 +3952,15 @@ en:
       U3L03 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L03 Free Response Wrap Up:
-        Creating Procedures Part 1 Wrap Up: Creating Procedures Part 1 Wrap Up
+        'Reflection: Why functions?': 'Reflection: Why functions?'
       U3L04 Assessment1:
-        'Creating Procedures Part 1: Question 1': 'Creating Procedures Part 1: Question 1'
+        'Free Response: Top-Down Design': 'Free Response: Top-Down Design'
       U3L04 Free Response Getting Started:
         'Creating Procedures Part 2: Getting Started': 'Creating Procedures Part 2: Getting Started'
       U3L04 Free Response Reflection:
         Free Response Reflection: Free Response Reflection
       U3L04 Free Response Wrap Up:
-        'Creating Procedures Part 2: Wrap Up': 'Creating Procedures Part 2: Wrap Up'
+        'Free Response: Abstraction to Manage Complexity': 'Free Response: Abstraction to Manage Complexity'
       U3L05 Assessment2:
         Programming Efficiency Question 2: Programming Efficiency Question 2
       U3L05 Assessment3:
@@ -3684,7 +3972,7 @@ en:
       U3L05 Free Response Reflection:
         'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
       U3L06 Assessment:
-        APIs and Parameters Question 2: APIs and Parameters Question 2
+        'Free Response: Function Parameters': 'Free Response: Function Parameters'
       U3L06 Free Response Getting Started:
         APIs and Function Parameters: APIs and Function Parameters
       U3L06 Free Response Reflection:
@@ -3767,10 +4055,18 @@ en:
         NLP Getting Started: NLP Getting Started
       U3L23 Free Response Wrap Up:
         Natural Language Processing: Natural Language Processing
+      U3L23 Free Response Wrap Up 2:
+        Natural Language Processing: Natural Language Processing
       U3L24 Assessment 3:
-        Question 3: Question 3
+        Prove it works!: Prove it works!
       U3L25 Assessment:
         'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
+      U3L25 Free Response 1:
+        'String and Substring: Assessment 3': 'String and Substring: Assessment 3'
+      U3L25 Free Response 2:
+        'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
+      U3L25 Free Response 3:
+        'String and Substring: Assessment 4': 'String and Substring: Assessment 4'
       U3L25 Free Response Getting Started:
         'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
       U3L25 Free Response Wrap Up:
@@ -3778,15 +4074,15 @@ en:
       U3L26 Free Response Getting Started:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
-        'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
+        'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
       U3L27 Assessment1:
-        Chatbot Challenge Reflection 1: Chatbot Challenge Reflection 1
+        Digital Assistant Reflection 1: Digital Assistant Reflection 1
       U3L27 Assessment2:
-        Chatbot Challenge Reflection 2: Chatbot Challenge Reflection 2
+        Digital Assistant Reflection 2: Digital Assistant Reflection 2
       U3L27 Assessment3:
-        'Chatbot Challenge Reflection 3 ': 'Chatbot Challenge Reflection 3 '
+        'Digital Assistant Reflection 3 ': 'Digital Assistant Reflection 3 '
       U3L27 Free Response Getting Started:
-        Chatbot Challenge Getting Started: Chatbot Challenge Getting Started
+        'Digital Assistant: Getting Started': 'Digital Assistant: Getting Started'
       U3L28 Free Response Getting Started:
         'While Loops Basics: Getting Started': 'While Loops Basics: Getting Started'
       U3L28 Free Response Wrap Up:

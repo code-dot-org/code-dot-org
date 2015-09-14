@@ -7,3 +7,12 @@ wrong 'Packets travelling across the Internet take a standardized amount of time
 right 'TCP ensures messages can be reliably transmitted across the Internet'
 wrong 'TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission'
 right 'TCP must account for the fact that packets may not arrive at a destination computer in the intended order'
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- B. TCP ensures messages can be reliably transmitted across the Internet.
+- D. TCP must account for the fact that packets may not arrive at a destination computer in the intended order
+
+ 
+MARKDOWN

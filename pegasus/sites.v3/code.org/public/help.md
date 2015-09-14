@@ -6,7 +6,7 @@ title: How to help
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.
 
-[<button>Join us</button>](http://code.org/learn)
+[<button>Join us</button>](https://hourofcode.com)
 
 ## Make a generous donation
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
@@ -27,6 +27,16 @@ Petition your state to allow computer science to count towards math or science h
 Volunteers have translated our tutorials in over 34 languages. Help us continue to expand our tutorials for students around the world!
 
 [<button>Translate tutorials</button>](/translate)
+
+## Buy a CODE hat or t-shirt
+Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
+
+<br/>
+![Code.org Cap](/images//fit-160/swag7.jpg)
+![Code.org T-shirt](/images//fit-160/swag10.jpg)
+![Code.org Stickers](/images//fit-160/swag8.jpg)
+
+[<button>Shop</button>](/shop)
 
 ---
 <a name="engineer"></a>

@@ -13,7 +13,7 @@
   * Информирайте медиите две седмици преди вашето събитие по електронната поща. Следете по имейл и телефон, ако не получите първоначален отговор.
   * Попитайте дали е възможно в училището да се правят снимки и дали може те да се споделят онлайн.
   * Пишете за инициативата на началната страница на вашия сайт и в училищния вестник. Публикувате информация за събитието и снимки на учебната дейност.
-  * На Facebook и Twitter споделете актуализации на вашите планове, обявете вашите събития и публикувайте снимки по време на седмицата 8-14 декември. Използвайте hashtag **#HourOfCode** за да може Code.org да види и да популяризира събитията ви.
+  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 7-13. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Стъпка по стъпка ръководство:
 
@@ -49,11 +49,11 @@
 
 **За повече информация и предложения, можете да използвате нашите материали**
 
-"Часът на кодирането има за цел да демитологизира програмирането и да покаже, че компютърните науки не са ракетостроене, и всеки може да научи основите," казва Хади Партови, основател и главен изпълнителен директор на Code.org. "В една седмица, миналата година, 15 милиона ученици пробваха Часът на кодирането. Сега, нашата цел е да достигнем до 100 милиона по целия свят, за да докажем, че търсенето и предлагането на обучение по компютърни науки в 21 век не познава граници."
+"Часът на кодирането има за цел да демитологизира програмирането и да покаже, че компютърните науки не са ракетостроене, и всеки може да научи основите," казва Хади Партови, основател и главен изпълнителен директор на Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **За Code.org**
 
-Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броят на заетите жени и социално слабите ученици в програмирането. Неговата визия е, че всеки ученик във всяко училище трябва да има възможност да изучава компютърно програмиране. След стартирането през 2013 г., Code.org организира кампанията Часът на кодирането и въвлече милиони ученици в компютърните науки- партнирайки си с повече от 30 публични училища от райони в цялата страна, както и стартира Студиото по кодиране, онлайн обучителна платформа с отворен код за всички възрасти. За повече информация, моля посетете: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Неговата визия е, че всеки ученик във всяко училище трябва да има възможност да изучава компютърно програмиране. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. За повече информация, моля посетете: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
 
   
 Открийте още ресурси и примерни имейли <a href = "< % = hoc_uri('/resources') % >" > тук</a>.

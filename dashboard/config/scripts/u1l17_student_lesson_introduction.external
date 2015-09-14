@@ -4,11 +4,11 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 17 - Practice PT: Encode a Complex Thing
+## Unit 1: Lesson 17 - Encode a Complex Thing
 # Background
 
 
-Throughout this unit you have learned a sequence of increasingly complex encodings of information, with higher level encodings like images and formatted text making use of lower level encodings like binary numbers, ASCII characters, and even lower still the bits themselves. When creating a binary encoding scheme, we do not always have to consider the actual bits. When we say a pixel is composed of three numbers, it is not actually important that those numbers are encoded in bits, just that there exists some way to represent numbers. This practice of temporarily ignoring details which are unnecessary for the problem at hand is referred to as abstraction, and is the source of the complex computational systems we use everyday. Making use of this tool it is possible to encode practically any object, system, event, or idea. For this project you will be designing your own encoding and responding to associated reflection questions. This project serves both as a review of the material covered in the first unit, and as a practice AP Performance Task in antiticpation of the two you will complete later this year.
+Throughout this unit you have learned a sequence of increasingly complex encodings of information, with higher level encodings like images and formatted text making use of lower level encodings like binary numbers, ASCII characters, and even lower still the bits themselves. When creating a binary encoding scheme, we do not always have to consider the actual bits. When we say a pixel is composed of three numbers, it is not actually important that those numbers are encoded in bits, just that there exists some way to represent numbers. This practice of temporarily ignoring details which are unnecessary for the problem at hand is referred to as abstraction, and is the source of the complex computational systems we use everyday. Making use of this tool it is possible to encode practically any object, system, event, or idea. For this project you will be designing your own encoding and responding to associated reflection questions. This project serves both as a review of the material covered in the first unit, and as a practice AP Performance Task in anticipation of the two you will complete later this year.
 
 # Vocabulary
 
@@ -29,3 +29,17 @@ Throughout this unit you have learned a sequence of increasingly complex encodin
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+
+
+
+
+
+
+
+
+
+
+
+
+

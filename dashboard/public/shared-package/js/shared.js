@@ -91,16 +91,38 @@ function wrapExistingClipPaths() {
 }
 
 },{}],2:[function(require,module,exports){
+/**
+ * @file Helper API object that wraps asynchronous calls to our data APIs.
+ */
 /* global $ */
 
+/**
+ * Standard callback form for asynchronous operations, popularized by Node.
+ * @typedef {function} NodeStyleCallback
+ * @param {Error|null} error - null if the async operation was successful.
+ * @param {*} result - return value for async operation.
+ */
+
+/**
+ * @name ClientApi
+ */
 var base = {
+  /**
+   * Base URL for target API.
+   * @type {string}
+   */
   api_base_url: "/v3/channels",
 
+  /**
+   * Request all collections.
+   * @param {NodeStyleCallback} callback - Expected result is an array of
+   *        collection objects.
+   */
   all: function(callback) {
     $.ajax({
       url: this.api_base_url,
       type: "get",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
@@ -109,6 +131,12 @@ var base = {
     });
   },
 
+  /**
+   * Insert a collection.
+   * @param {Object} value - collection contents, must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is the created
+   *        collection object (which will include an assigned 'id' key).
+   */
   create: function(value, callback) {
     $.ajax({
       url: this.api_base_url,
@@ -123,11 +151,16 @@ var base = {
     });
   },
 
+  /**
+   * Remove a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
   delete: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id + "/delete",
       type: "post",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
@@ -136,6 +169,12 @@ var base = {
     });
   },
 
+  /**
+   * Retrieve a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is the requested
+   *        collection object.
+   */
   fetch: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -149,6 +188,13 @@ var base = {
     });
   },
 
+  /**
+   * Change the contents of a collection.
+   * @param {number} id - The collection identifier.
+   * @param {Object} value - The new collection contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
   update: function(id, value, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -163,9 +209,14 @@ var base = {
     });
   },
 
-  // Copy to the destination collection, since we expect the destination
-  // to be empty. A true rest API would replace the destination collection:
-  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+  /**
+   * Copy to the destination collection, since we expect the destination
+   * to be empty. A true rest API would replace the destination collection:
+   * @see https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+   * @param {*} src - Source collection identifier.
+   * @param {*} dest - Destination collection identifier.
+   * @param {NodeStyleCallback} callback
+   */
   copyAll: function(src, dest, callback) {
     $.ajax({
       url: this.api_base_url + "/" + dest + '?src=' + src,
@@ -176,583 +227,47 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  /**
+   * Change the contents of an asset or source file.
+   * @param {number} id - The collection identifier.
+   * @param {String} value - The new file contents.
+   * @param {String} filename - The name of the file to create or update.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  put: function(id, value, filename, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/" + filename,
+      type: "put",
+      contentType: "application/json; charset=utf-8",
+      data: value
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
 
 module.exports = {
+  /**
+   * Create a ClientApi instance with the given base URL.
+   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
+   * @returns {ClientApi}
+   */
   create: function (url) {
     return $.extend({}, base, {
-      api_base_url: url,
+      api_base_url: url
     });
   }
 };
 
 },{}],3:[function(require,module,exports){
-/* global dashboard, appOptions, $ */
-
-// Attempts to lookup the name in the digest hash, or returns the name if not found.
-function tryDigest(name) {
-  return (window.digestManifest || {})[name] || name;
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param name The name of the module to load.
- * @param cacheBust{Boolean?} If true, append a random query string to bypass the
- *   cache.
- * @returns {Function}
- */
-function loadSource(name, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    var param = cacheBust ? '?' + Math.random() : '';
-    document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
-
-// Loads the given app stylesheet.
-function loadStyle(name) {
-  $('body').append($('<link>', {
-    rel: 'stylesheet',
-    type: 'text/css',
-    href: appOptions.baseUrl + 'css/' + name + '.css'
-  }));
-}
-
-module.exports = function (callback) {
-  loadStyle('common');
-  loadStyle(appOptions.app);
-  var promise = loadSource('manifest', true)();
-  if (appOptions.droplet) {
-    loadStyle('droplet/droplet.min');
-    loadStyle('tooltipster/tooltipster.min');
-    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource('ace/ace'))
-        .then(loadSource('ace/mode-javascript'))
-        .then(loadSource('ace/ext-language_tools'))
-        .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'));
-  } else {
-    promise = promise.then(loadSource('blockly'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource(appOptions.locale + '/blockly_locale'));
-  }
-
-  if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load);
-  }
-
-  promise.then(loadSource('common' + appOptions.pretty))
-      .then(loadSource(appOptions.locale + '/common_locale'))
-      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
-      .then(loadSource(appOptions.app + appOptions.pretty))
-      .then(callback);
-};
-
-},{}],4:[function(require,module,exports){
-/* global dashboard, appOptions, $, trackEvent, Applab, Blockly */
-
-// Attempt to save projects every 30 seconds
-var AUTOSAVE_INTERVAL = 30 * 1000;
-var hasProjectChanged = false;
-
-var assets = require('./clientApi').create('/v3/assets');
-var channels = require('./clientApi').create('/v3/channels');
-
-var events = {
-  // Fired when run state changes or we enter/exit design mode
-  appModeChanged: 'appModeChanged',
-  appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
-};
-
-/**
- * Helper for when we split our pathname by /. channel_id and action may end up
- * being undefined.
- * Example paths:
- * /projects/applab
- * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
- * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
- */
-var PathPart = {
-  START: 0,
-  PROJECTS: 1,
-  APP: 2,
-  CHANNEL_ID: 3,
-  ACTION: 4
-};
-
-/**
- * @typedef {Object} ProjectInstance
- * @property {string} id
- * @property {string} name
- * @property {string} levelHtml
- * @property {string} levelSource
- * hidden // unclear when this ever gets set
- * @property {boolean} isOwner Populated by our update/create callback.
- * @property {string} updatedAt String representation of a Date. Populated by
- *   out update/create callback
- * @property {string} level Path where this particular app type is hosted
- */
-var current;
-var isEditing = false;
-
-var projects = module.exports = {
-  /**
-   * @returns {string} id of the current project, or undefined if we don't have
-   *   a current project.
-   */
-  getCurrentId: function () {
-    if (!current) {
-      return;
-    }
-    return current.id;
-  },
-
-  /**
-   * @returns {string} name of the current project, or undefined if we don't have
-   *   a current project
-   */
-  getCurrentName: function () {
-    if (!current) {
-      return;
-    }
-    return current.name;
-  },
-
-  getCurrentTimestamp: function () {
-    if (!current) {
-      return;
-    }
-    return current.updatedAt;
-  },
-
-  /**
-   * @returns {boolean} true if we're editing
-   */
-  isEditing: function () {
-    return isEditing;
-  },
-
-  init: function () {
-    if (redirectFromHashUrl() || redirectEditView()) {
-      return;
-    }
-
-    if (appOptions.level.isProjectLevel || current) {
-      if (current && current.levelHtml) {
-        appOptions.level.levelHtml = current.levelHtml;
-      }
-
-      if (isEditing) {
-        if (current) {
-          if (current.levelSource) {
-            appOptions.level.lastAttempt = current.levelSource;
-          }
-        } else {
-          current = {
-            name: 'My Project'
-          };
-        }
-
-        $(window).on(events.appModeChanged, function(event, callback) {
-          this.save(callback);
-        }.bind(this));
-
-        // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on(events.appInitialized, function () {
-          // Get the initial app code as a baseline
-          current.levelSource = getEditorSource();
-        }.bind(this));
-        $(window).on(events.workspaceChange, function () {
-          hasProjectChanged = true;
-        });
-        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
-
-        if (!current.hidden) {
-          if (current.isOwner || !parsePath().channelId) {
-            dashboard.header.showProjectHeader();
-          } else {
-            // Viewing someone else's project - set share mode
-            dashboard.header.showMinimalProjectHeader();
-          }
-        }
-      } else if (current) {
-        appOptions.level.lastAttempt = current.levelSource;
-        dashboard.header.showMinimalProjectHeader();
-      }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
-      current = {
-        name: 'Untitled Project'
-      };
-      dashboard.header.showMinimalProjectHeader();
-    }
-    if (appOptions.noPadding) {
-      $(".full_container").css({"padding":"0px"});
-    }
-  },
-  getCurrentApp: function () {
-    switch (appOptions.app) {
-      case 'applab':
-        return 'applab';
-      case 'turtle':
-        return 'artist';
-      case 'calc':
-        return 'calc';
-      case 'eval':
-        return 'eval';
-      case 'studio':
-        if (appOptions.level.useContractEditor) {
-          return 'algebra_game';
-        }
-        return 'playlab';
-    }
-  },
-  appToProjectUrl: function () {
-    return '/projects/' + projects.getCurrentApp();
-  },
-  /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
-   * @param {string?} source Optional source to be provided, saving us another
-   *   call to getEditorSource
-   * @param {function} callback Fucntion to be called after saving
-   */
-  save: function(source, callback) {
-    if (arguments.length === 1) {
-      // If no source is provided, the only argument is our callback and we
-      // ask for the source ourselves
-      callback = arguments[0];
-      source = getEditorSource();
-    }
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-    var channelId = current.id;
-    current.levelSource = source;
-    current.levelHtml = getLevelHtml();
-    current.level = this.appToProjectUrl();
-
-    if (channelId && current.isOwner) {
-      channels.update(channelId, current, function (err, data) {
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
-      }.bind(this));
-    } else {
-      channels.create(current, function (err, data) {
-        this.updateCurrentData_(err, data, true);
-        executeCallback(callback, data);
-      }.bind(this));
-    }
-  },
-  updateCurrentData_: function (err, data, isNewChannel) {
-    if (err) {
-      $('.project_updated_at').text('Error saving project');  // TODO i18n
-      return;
-    }
-
-    current = data;
-    if (isNewChannel) {
-      // We have a new channel, meaning either we had no channel before, or
-      // we've changed channels. If we aren't at a /projects/<appname> link,
-      // always do a redirect (i.e. we're remix from inside a script)
-      if (isEditing && parsePath().appName) {
-        if (location.hash || !window.history.pushState) {
-          // We're using a hash route or don't support replace state. Use our hash
-          // based route to ensure we don't have a page load.
-          location.href = current.level + '#' + current.id + '/edit';
-        } else {
-          window.history.pushState(null, document.title, this.getPathName('edit'));
-        }
-      } else {
-        // We're on a share page, and got a new channel id. Always do a redirect
-        location.href = this.getPathName('edit');
-      }
-    }
-    dashboard.header.updateTimestamp();
-  },
-  /**
-   * Autosave the code if things have changed
-   */
-  autosave_: function () {
-    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-    if (current.levelSource === undefined) {
-      return;
-    }
-    // `getEditorSource()` is expensive for Blockly so only call
-    // after `workspaceChange` has fired
-    if (!appOptions.droplet && !hasProjectChanged) {
-      return;
-    }
-
-    var source = getEditorSource();
-    var html = getLevelHtml();
-
-    if (current.levelSource === source && current.levelHtml === html) {
-      hasProjectChanged = false;
-      return;
-    }
-
-    this.save(source, function () {
-      hasProjectChanged = false;
-    });
-  },
-  /**
-   * Renames and saves the project.
-   */
-  rename: function(newName, callback) {
-    current.name = newName;
-    this.save(callback);
-  },
-  /**
-   * Creates a copy of the project, gives it the provided name, and sets the
-   * copy as the current project.
-   */
-  copy: function(newName, callback) {
-    var srcChannel = current.id;
-    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
-    delete current.id;
-    delete current.hidden;
-    current.name = newName;
-    this.save(wrappedCallback);
-  },
-  copyAssets: function (srcChannel, callback) {
-    if (!srcChannel) {
-      executeCallback(callback);
-      return;
-    }
-    var destChannel = current.id;
-    assets.copyAll(srcChannel, destChannel, function(err) {
-      if (err) {
-        $('.project_updated_at').text('Error copying files');  // TODO i18n
-        return;
-      }
-      executeCallback(callback);
-    });
-  },
-  serverSideRemix: function() {
-    if (current && !current.name) {
-      if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        current.name = 'Big Game Template';
-      } else if (projects.appToProjectUrl() === '/projects/applab') {
-        current.name = 'My Project';
-      }
-    }
-    function redirectToRemix() {
-      location.href = projects.getPathName('remix');
-    }
-    // If the user is the owner, save before remixing on the server.
-    if (current.isOwner) {
-      projects.save(redirectToRemix);
-    } else {
-      redirectToRemix();
-    }
-  },
-  delete: function(callback) {
-    var channelId = current.id;
-    if (channelId) {
-      channels.delete(channelId, function(err, data) {
-        executeCallback(callback, data);
-      });
-    } else {
-      executeCallback(callback, false);
-    }
-  },
-  /**
-   * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
-   */
-  load: function () {
-    var deferred;
-    if (appOptions.level.isProjectLevel) {
-      if (redirectFromHashUrl() || redirectEditView()) {
-        return;
-      }
-      var pathInfo = parsePath();
-
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
-          isEditing = true;
-        } else {
-          $('#betainfo').hide();
-        }
-
-        // Load the project ID, if one exists
-        deferred = new $.Deferred();
-        channels.fetch(pathInfo.channelId, function (err, data) {
-          if (err) {
-            // Project not found, redirect to the new project experience.
-            location.href = location.pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1).join('/');
-          } else {
-            current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            deferred.resolve();
-          }
-        });
-        return deferred;
-      } else {
-        isEditing = true;
-      }
-    } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
-      // this is an embedded project
-      isEditing = true;
-      deferred = new $.Deferred();
-      channels.fetch(appOptions.channel, function(err, data) {
-        if (err) {
-          deferred.reject();
-        } else {
-          current = data;
-          dashboard.header.showProjectLevelHeader();
-          deferred.resolve();
-        }
-      });
-      return deferred;
-    }
-  },
-
-  getPathName: function (action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
-    if (action) {
-      pathName += '/' + action;
-    }
-    return pathName;
-  }
-};
-
-/**
- * Only execute the given argument if it is a function.
- * @param callback
- */
-function executeCallback(callback, data) {
-  if (typeof callback === 'function') {
-    callback(data);
-  }
-}
-
-/**
- * @returns {string} The serialized level source from the editor.
- */
-function getEditorSource() {
-  var source;
-  if (window.Blockly) {
-    // If we're readOnly, source hasn't changed at all
-    source = Blockly.readOnly ? current.levelSource :
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-  } else {
-    source = window.Applab && Applab.getCode();
-  }
-  return source;
-}
-
-function getLevelHtml() {
-  return window.Applab && Applab.getHtml();
-}
-
-/**
- * If the current user is the owner, we want to redirect from the readonly
- * /view route to /edit. If they are not the owner, we want to redirect from
- * /edit to /view
- */
-function redirectEditView() {
-  var parseInfo = parsePath();
-  if (!parseInfo.action) {
-    return;
-  }
-  var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
-    // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
-    appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
-    // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
-    appOptions.readonlyWorkspace = true;
-  }
-
-  // PushState to the new Url if we can, otherwise do nothing.
-  if (newUrl && newUrl !== location.href && window.history.pushState) {
-    window.history.pushState({modified: true}, document.title, newUrl);
-  }
-  return false;
-}
-
-/**
- * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
- * @returns {boolean} True if we did an actual redirect
- */
-function redirectFromHashUrl() {
-  var newUrl = location.href.replace('#', '/');
-  if (newUrl === location.href) {
-    // Nothing changed
-    return false;
-  }
-
-  var pathInfo = parsePath();
-  location.href = newUrl;
-  return true;
-}
-
-/**
- * Extracts the channelId/action from the pathname, accounting for the fact
- * that we may have hash based route or not
- */
-function parsePath() {
-  var pathname = location.pathname;
-
-  // We have a hash based route. Replace the hash with a slash, and append to
-  // our existing path
-  if (location.hash) {
-    pathname += location.hash.replace('#', '/');
-  }
-
-  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
-      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
-    return {
-      appName: null,
-      channelId: null,
-      action: null,
-    };
-  }
-
-  return {
-    appName: pathname.split('/')[PathPart.APP],
-    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
-    action: pathname.split('/')[PathPart.ACTION]
-  };
-}
-
-},{"./clientApi":2}],5:[function(require,module,exports){
-/* global ga */
-
-var userTimings = {};
-
-module.exports = {
-  startTiming: function (category, variable, label) {
-    var key = category + variable + label;
-    userTimings[key] = new Date().getTime();
-  },
-
-  stopTiming: function (category, variable, label) {
-    var key = category + variable + label;
-    var endTime = new Date().getTime();
-    var startTime = userTimings[key];
-    var timeElapsed = endTime - startTime;
-    ga('send', 'timing', category, variable, timeElapsed, label);
-  }
-};
-
-},{}],6:[function(require,module,exports){
 // TODO (brent) - way too many globals
-// TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -765,7 +280,8 @@ window.apps = {
   load: loadApp,
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
-  setup: function () {
+  // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+  setupApp: function (appOptions) {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
@@ -787,6 +303,7 @@ window.apps = {
         }
         if (appOptions.level.projectTemplateLevelName) {
           $('#clear-puzzle-header').hide();
+          $('#versions-header').show();
         }
         $(document).trigger('appInitialized');
       },
@@ -870,11 +387,822 @@ window.apps = {
       }
     })(appOptions.level);
   },
+
+  // Set up projects, skipping blockly-specific steps. Designed for use
+  // by levels of type "external".
+  setupProjectsExternal: function() {
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+
+    dashboard.project = project;
+  },
+
+  // Define blockly/droplet-specific callbacks for projects to access
+  // level source, HTML and headers.
+  // TODO(dave): Extract blockly-specific handler code into _blockly.html.haml.
+  sourceHandler: {
+    setInitialLevelHtml: function (levelHtml) {
+      appOptions.level.levelHtml = levelHtml;
+    },
+    getLevelHtml: function () {
+      return window.Applab && Applab.getHtml();
+    },
+    setInitialLevelSource: function (levelSource) {
+      appOptions.level.lastAttempt = levelSource;
+    },
+    getLevelSource: function (currentLevelSource) {
+      var source;
+      if (window.Blockly) {
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.readOnly ? currentLevelSource :
+          Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+      } else {
+        source = window.Applab && Applab.getCode();
+      }
+      return source;
+    },
+  },
+
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init();
+    dashboard.project.init(window.apps.sourceHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };
 
-},{"./chrome34Fix":1,"./loadApp":3,"./project":4,"./timing":5}]},{},[6]);
+},{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
+/* global dashboard, appOptions, $ */
+
+var renderAbusive = require('./renderAbusive');
+
+// Attempts to lookup the name in the digest hash, or returns the name if not found.
+function tryDigest(name) {
+  return (window.digestManifest || {})[name] || name;
+}
+
+/**
+ * Returns a function which returns a $.Deferred instance. When executed, the
+ * function loads the given app script.
+ * @param name The name of the module to load.
+ * @param cacheBust{Boolean?} If true, append a random query string to bypass the
+ *   cache.
+ * @returns {Function}
+ */
+function loadSource(name, cacheBust) {
+  return function () {
+    var deferred = new $.Deferred();
+    var param = cacheBust ? '?' + Math.random() : '';
+    document.body.appendChild($('<script>', {
+      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
+    }).on('load', function () {
+      deferred.resolve();
+    })[0]);
+    return deferred;
+  };
+}
+
+// Loads the given app stylesheet.
+function loadStyle(name) {
+  $('body').append($('<link>', {
+    rel: 'stylesheet',
+    type: 'text/css',
+    href: appOptions.baseUrl + 'css/' + name + '.css'
+  }));
+}
+
+module.exports = function (callback) {
+  loadStyle('common');
+  loadStyle(appOptions.app);
+  var promise = loadSource('manifest', true)();
+  if (appOptions.droplet) {
+    loadStyle('droplet/droplet.min');
+    loadStyle('tooltipster/tooltipster.min');
+    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
+        .then(loadSource('marked/marked'))
+        .then(loadSource('ace/ace'))
+        .then(loadSource('ace/mode-javascript'))
+        .then(loadSource('ace/ext-language_tools'))
+        .then(loadSource('droplet/droplet-full'))
+        .then(loadSource('tooltipster/jquery.tooltipster'));
+  } else {
+    promise = promise.then(loadSource('blockly'))
+        .then(loadSource('marked/marked'))
+        .then(loadSource(appOptions.locale + '/blockly_locale'));
+  }
+
+  if (window.dashboard && dashboard.project) {
+    promise = promise.then(dashboard.project.load)
+        .then(function () {
+          if (dashboard.project.hideBecauseAbusive()) {
+            renderAbusive();
+            return $.Deferred().reject();
+          }
+        });
+  }
+
+  promise.then(loadSource('common' + appOptions.pretty))
+      .then(loadSource(appOptions.locale + '/common_locale'))
+      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
+      .then(loadSource(appOptions.app + appOptions.pretty))
+      .then(callback);
+};
+
+},{"./renderAbusive":6}],5:[function(require,module,exports){
+/* global dashboard, appOptions, $, trackEvent */
+
+// Attempt to save projects every 30 seconds
+var AUTOSAVE_INTERVAL = 30 * 1000;
+
+var ABUSE_THRESHOLD = 10;
+
+var hasProjectChanged = false;
+
+var assets = require('./clientApi').create('/v3/assets');
+var sources = require('./clientApi').create('/v3/sources');
+var channels = require('./clientApi').create('/v3/channels');
+
+// Name of the packed source file
+var SOURCE_FILE = 'main.json';
+
+function packSourceFile() {
+  return JSON.stringify({
+    source: current.levelSource,
+    html: current.levelHtml
+  });
+}
+
+function unpackSourceFile(data) {
+  current.levelSource = data.source;
+  current.html = data.html;
+}
+
+var events = {
+  // Fired when run state changes or we enter/exit design mode
+  appModeChanged: 'appModeChanged',
+  appInitialized: 'appInitialized',
+  workspaceChange: 'workspaceChange'
+};
+
+/**
+ * Helper for when we split our pathname by /. channel_id and action may end up
+ * being undefined.
+ * Example paths:
+ * /projects/applab
+ * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
+ * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
+ */
+var PathPart = {
+  START: 0,
+  PROJECTS: 1,
+  APP: 2,
+  CHANNEL_ID: 3,
+  ACTION: 4
+};
+
+/**
+ * @typedef {Object} ProjectInstance
+ * @property {string} id
+ * @property {string} name
+ * @property {string} levelHtml
+ * @property {string} levelSource
+ * hidden // unclear when this ever gets set
+ * @property {boolean} isOwner Populated by our update/create callback.
+ * @property {string} updatedAt String representation of a Date. Populated by
+ *   out update/create callback
+ * @property {string} level Path where this particular app type is hosted
+ */
+var current;
+var currentSourceVersionId;
+var isEditing = false;
+
+var projects = module.exports = {
+  /**
+   * @returns {string} id of the current project, or undefined if we don't have
+   *   a current project.
+   */
+  getCurrentId: function () {
+    if (!current) {
+      return;
+    }
+    return current.id;
+  },
+
+  /**
+   * @returns {string} name of the current project, or undefined if we don't have
+   *   a current project
+   */
+  getCurrentName: function () {
+    if (!current) {
+      return;
+    }
+    return current.name;
+  },
+
+  getCurrentTimestamp: function () {
+    if (!current) {
+      return;
+    }
+    return current.updatedAt;
+  },
+
+  /**
+   * @returns {number}
+   */
+  getAbuseScore: function () {
+    return current ? current.abuseScore : 0;
+  },
+
+  /**
+   * Sets abuse score to zero, saves the project, and reloads the page
+   */
+  adminResetAbuseScore: function () {
+    // TODO (brent) - right now this is pretty low security. anyone could
+    // enter the javascript console and call this. eventually, we want some sort
+    // of protected API call we can make
+    if (this.getAbuseScore() === 0) {
+      return;
+    }
+    current.abuseScore = 0;
+    var sourceAndHtml = {
+      source: current.levelSource,
+      html: current.levelHtml
+    };
+    this.save(sourceAndHtml, function () {
+      location.reload();
+    });
+  },
+
+  /**
+   * @returns {boolean} true if we're frozen
+   */
+  isFrozen: function () {
+    if (!current) {
+      return;
+    }
+    return current.frozen;
+  },
+
+  /**
+   * @returns {boolean}
+   */
+  isOwner: function () {
+    return current && current.isOwner;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
+  exceedsAbuseThreshold: function () {
+    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+  },
+
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecauseAbusive: function () {
+    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
+  },
+
+  //////////////////////////////////////////////////////////////////////
+  // Properties and callbacks. These are all candidates for being extracted
+  // as configuration parameters which are passed in by the caller.
+  //////////////////////////////////////////////////////////////////////
+
+  // TODO(dave): extract isAutosaveEnabled and any boolean helper
+  // functions below to become properties on appOptions.project.
+  // Projects behavior should ultimately be fully configurable by
+  // properties on appOptions.project, rather than reaching out
+  // into global state to make decisions.
+
+  /**
+   * @returns {boolean} true if we're editing
+   */
+  isEditing: function () {
+    return isEditing;
+  },
+
+  // Whether the current level is a project level (i.e. at the /projects url).
+  isProjectLevel: function() {
+    return (appOptions.level && appOptions.level.isProjectLevel);
+  },
+
+  shouldUpdateHeaders: function() {
+    return !appOptions.isExternalProjectLevel;
+  },
+
+  showProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectHeader();
+    }
+  },
+
+  /**
+   * Updates the contents of the admin box for admins. We have no knolwedge
+   * here whether we're an admin, and depend on dashboard getting this right.
+   */
+  showAdmin: function() {
+    dashboard.admin.showProjectAdmin();
+  },
+
+  showMinimalProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showMinimalProjectHeader();
+    }
+  },
+
+  showProjectLevelHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectLevelHeader();
+    }
+  },
+
+  //////////////////////////////////////////////////////////////////////
+  // End of properties and callbacks.
+  //////////////////////////////////////////////////////////////////////
+
+  /**
+   *
+   * @param {Object} sourceHandler Object containing callbacks provided by caller.
+   * @param {Function} sourceHandler.setInitialLevelHtml
+   * @param {Function} sourceHandler.getLevelHtml
+   * @param {Function} sourceHandler.setInitialLevelSource
+   * @param {Function} sourceHandler.getLevelSource
+   */
+  init: function (sourceHandler) {
+    this.sourceHandler = sourceHandler;
+    if (redirectFromHashUrl() || redirectEditView()) {
+      return;
+    }
+
+    if (this.isProjectLevel() || current) {
+      if (current && current.levelHtml) {
+        sourceHandler.setInitialLevelHtml(current.levelHtml);
+      }
+
+      if (isEditing) {
+        if (current) {
+          if (current.levelSource) {
+            sourceHandler.setInitialLevelSource(current.levelSource);
+          }
+        } else {
+          current = {
+            name: 'My Project'
+          };
+        }
+
+        $(window).on(events.appModeChanged, function(event, callback) {
+          this.save(callback);
+        }.bind(this));
+
+        // Autosave every AUTOSAVE_INTERVAL milliseconds
+        $(window).on(events.appInitialized, function () {
+          // Get the initial app code as a baseline
+          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
+        }.bind(this));
+        $(window).on(events.workspaceChange, function () {
+          hasProjectChanged = true;
+        });
+        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
+
+        if (!current.hidden) {
+          if (current.isOwner || !parsePath().channelId) {
+            this.showProjectHeader();
+          } else {
+            // Viewing someone else's project - set share mode
+            this.showMinimalProjectHeader();
+          }
+        }
+      } else if (current) {
+        this.sourceHandler.setInitialLevelSource(current.levelSource);
+        this.showMinimalProjectHeader();
+      }
+    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
+      current = {
+        name: 'Untitled Project'
+      };
+      this.showMinimalProjectHeader();
+    }
+    if (appOptions.noPadding) {
+      $(".full_container").css({"padding":"0px"});
+    }
+
+    this.showAdmin();
+  },
+  projectChanged: function() {
+    hasProjectChanged = true;
+  },
+  getCurrentApp: function () {
+    switch (appOptions.app) {
+      case 'applab':
+        return 'applab';
+      case 'turtle':
+        return 'artist';
+      case 'calc':
+        return 'calc';
+      case 'eval':
+        return 'eval';
+      case 'studio':
+        if (appOptions.level.useContractEditor) {
+          return 'algebra_game';
+        }
+        return 'playlab';
+    }
+  },
+  appToProjectUrl: function () {
+    return '/projects/' + projects.getCurrentApp();
+  },
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
+   *   call to sourceHandler.getLevelSource
+   * @param {function} callback Function to be called after saving
+   */
+  save: function(sourceAndHtml, callback) {
+    if (arguments.length < 2) {
+      // If no source is provided, the only argument is our callback and we
+      // ask for the source ourselves
+      callback = arguments[0];
+      sourceAndHtml = {
+        source: this.sourceHandler.getLevelSource(),
+        html: this.sourceHandler.getLevelHtml()
+      };
+    }
+
+    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+    var channelId = current.id;
+    if (current.levelHtml && !sourceAndHtml.html) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
+    current.levelSource = sourceAndHtml.source;
+    current.levelHtml = sourceAndHtml.html;
+    current.level = this.appToProjectUrl();
+
+    if (channelId && current.isOwner) {
+      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      sources.put(channelId, packSourceFile(), filename, function (err, response) {
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+        channels.update(channelId, current, function (err, data) {
+          this.updateCurrentData_(err, data, false);
+          executeCallback(callback, data);
+        }.bind(this));
+      }.bind(this));
+    } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
+      channels.create(current, function (err, data) {
+        this.updateCurrentData_(err, data, true);
+        executeCallback(callback, data);
+      }.bind(this));
+    }
+  },
+  updateCurrentData_: function (err, data, isNewChannel) {
+    if (err) {
+      $('.project_updated_at').text('Error saving project');  // TODO i18n
+      return;
+    }
+
+    current = data;
+    if (isNewChannel) {
+      // We have a new channel, meaning either we had no channel before, or
+      // we've changed channels. If we aren't at a /projects/<appname> link,
+      // always do a redirect (i.e. we're remix from inside a script)
+      if (isEditing && parsePath().appName) {
+        if (window.history.pushState) {
+          window.history.pushState(null, document.title, this.getPathName('edit'));
+        }
+      } else {
+        // We're on a share page, and got a new channel id. Always do a redirect
+        location.href = this.getPathName('edit');
+      }
+    }
+    dashboard.header.updateTimestamp();
+  },
+  /**
+   * Autosave the code if things have changed
+   */
+  autosave_: function () {
+    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
+    if (current.levelSource === undefined) {
+      return;
+    }
+    // `getLevelSource()` is expensive for Blockly so only call
+    // after `workspaceChange` has fired
+    if (!appOptions.droplet && !hasProjectChanged) {
+      return;
+    }
+
+    var source = this.sourceHandler.getLevelSource();
+    var html = this.sourceHandler.getLevelHtml();
+
+    if (current.levelSource === source && current.levelHtml === html) {
+      hasProjectChanged = false;
+      return;
+    }
+
+    this.save({source: source, html: html}, function () {
+      hasProjectChanged = false;
+    });
+  },
+  /**
+   * Renames and saves the project.
+   */
+  rename: function(newName, callback) {
+    current.name = newName;
+    this.save(callback);
+  },
+  /**
+   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   */
+  freeze: function(callback) {
+    current.frozen = true;
+    current.hidden = true;
+    this.save(function(data) {
+      executeCallback(callback, data);
+      redirectEditView();
+    });
+  },
+  /**
+   * Creates a copy of the project, gives it the provided name, and sets the
+   * copy as the current project.
+   */
+  copy: function(newName, callback) {
+    var srcChannel = current.id;
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
+    delete current.id;
+    delete current.hidden;
+    current.name = newName;
+    this.save(wrappedCallback);
+  },
+  copyAssets: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
+    var destChannel = current.id;
+    assets.copyAll(srcChannel, destChannel, function(err) {
+      if (err) {
+        $('.project_updated_at').text('Error copying files');  // TODO i18n
+        return;
+      }
+      executeCallback(callback);
+    });
+  },
+  serverSideRemix: function() {
+    if (current && !current.name) {
+      if (projects.appToProjectUrl() === '/projects/algebra_game') {
+        current.name = 'Big Game Template';
+      } else if (projects.appToProjectUrl() === '/projects/applab') {
+        current.name = 'My Project';
+      }
+    }
+    function redirectToRemix() {
+      location.href = projects.getPathName('remix');
+    }
+    // If the user is the owner, save before remixing on the server.
+    if (current.isOwner) {
+      projects.save(redirectToRemix);
+    } else {
+      redirectToRemix();
+    }
+  },
+  delete: function(callback) {
+    var channelId = current.id;
+    if (channelId) {
+      channels.delete(channelId, function(err, data) {
+        executeCallback(callback, data);
+      });
+    } else {
+      executeCallback(callback, false);
+    }
+  },
+  /**
+   * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
+   */
+  load: function () {
+    var deferred;
+    if (projects.isProjectLevel()) {
+      if (redirectFromHashUrl() || redirectEditView()) {
+        return;
+      }
+      var pathInfo = parsePath();
+
+      if (pathInfo.channelId) {
+        if (pathInfo.action === 'edit') {
+          isEditing = true;
+        } else {
+          $('#betainfo').hide();
+        }
+
+        // Load the project ID, if one exists
+        deferred = new $.Deferred();
+        channels.fetch(pathInfo.channelId, function (err, data) {
+          if (err) {
+            // Project not found, redirect to the new project experience.
+            location.href = location.pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1).join('/');
+          } else {
+            fetchSource(data, function () {
+              if (current.isOwner && pathInfo.action === 'view') {
+                isEditing = true;
+              }
+              deferred.resolve();
+            });
+          }
+        });
+        return deferred;
+      } else {
+        isEditing = true;
+      }
+    } else if (appOptions.isChannelBacked) {
+      isEditing = true;
+      deferred = new $.Deferred();
+      channels.fetch(appOptions.channel, function(err, data) {
+        if (err) {
+          deferred.reject();
+        } else {
+          fetchSource(data, function () {
+            projects.showProjectLevelHeader();
+            deferred.resolve();
+          });
+        }
+      });
+      return deferred;
+    }
+  },
+
+  getPathName: function (action) {
+    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+    if (action) {
+      pathName += '/' + action;
+    }
+    return pathName;
+  }
+};
+
+function fetchSource(data, callback) {
+  current = data;
+  if (data.migratedToS3) {
+    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      unpackSourceFile(data);
+      callback();
+    });
+  } else {
+    callback();
+  }
+}
+
+/**
+ * Only execute the given argument if it is a function.
+ * @param callback
+ */
+function executeCallback(callback, data) {
+  if (typeof callback === 'function') {
+    callback(data);
+  }
+}
+
+/**
+ * is the current project (if any) editable by the logged in user (if any)?
+ */
+function isEditable() {
+  return (current && current.isOwner && !current.frozen);
+}
+
+/**
+ * If the current user is the owner, we want to redirect from the readonly
+ * /view route to /edit. If they are not the owner, we want to redirect from
+ * /edit to /view
+ */
+function redirectEditView() {
+  var parseInfo = parsePath();
+  if (!parseInfo.action) {
+    return;
+  }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
+  var newUrl;
+  if (parseInfo.action === 'view' && isEditable()) {
+    // Redirect to /edit without a readonly workspace
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
+    appOptions.readonlyWorkspace = false;
+  } else if (parseInfo.action === 'edit' && !isEditable()) {
+    // Redirect to /view with a readonly workspace
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
+    appOptions.readonlyWorkspace = true;
+  }
+
+  // PushState to the new Url if we can, otherwise do nothing.
+  if (newUrl && newUrl !== location.href && window.history.pushState) {
+    window.history.pushState({modified: true}, document.title, newUrl);
+  }
+  return false;
+}
+
+/**
+ * Does a hard redirect if we end up with a hash based projects url. This can
+ * happen on IE9, when we save a new project for hte first time.
+ * @returns {boolean} True if we did an actual redirect
+ */
+function redirectFromHashUrl() {
+  var newUrl = location.href.replace('#', '/');
+  if (newUrl === location.href) {
+    // Nothing changed
+    return false;
+  }
+
+  var pathInfo = parsePath();
+  location.href = newUrl;
+  return true;
+}
+
+/**
+ * Extracts the channelId/action from the pathname, accounting for the fact
+ * that we may have hash based route or not
+ */
+function parsePath() {
+  var pathname = location.pathname;
+
+  // We have a hash based route. Replace the hash with a slash, and append to
+  // our existing path
+  if (location.hash) {
+    pathname += location.hash.replace('#', '/');
+  }
+
+  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
+      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
+    return {
+      appName: null,
+      channelId: null,
+      action: null,
+    };
+  }
+
+  return {
+    appName: pathname.split('/')[PathPart.APP],
+    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
+    action: pathname.split('/')[PathPart.ACTION]
+  };
+}
+
+},{"./clientApi":2}],6:[function(require,module,exports){
+/* global dashboard, React */
+
+/**
+ * Renders our AbuseExclamation component, and potentially updates admin box
+ */
+module.exports = function () {
+  React.render(React.createElement(window.dashboard.AbuseExclamation, {
+    i18n: {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+      edit_project: window.dashboard.i18n.t('project.edit_project'),
+      go_to_code_studio: window.dashboard.i18n.t('project.abuse.go_to_code_studio')
+    },
+    isOwner: dashboard.project.isOwner()
+  }), document.getElementById('codeApp'));
+
+  // update admin box (if it exists) with abuse info
+  dashboard.admin.showProjectAdmin();
+};
+
+},{}],7:[function(require,module,exports){
+/* global ga */
+
+var userTimings = {};
+
+module.exports = {
+  startTiming: function (category, variable, label) {
+    var key = category + variable + label;
+    userTimings[key] = new Date().getTime();
+  },
+
+  stopTiming: function (category, variable, label) {
+    var key = category + variable + label;
+    var endTime = new Date().getTime();
+    var startTime = userTimings[key];
+    var timeElapsed = endTime - startTime;
+    ga('send', 'timing', category, variable, timeElapsed, label);
+  }
+};
+
+},{}]},{},[3]);

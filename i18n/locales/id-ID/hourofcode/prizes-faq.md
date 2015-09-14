@@ -20,7 +20,7 @@ Ya! Sekolah pribadi dan independen memenuhi syarat sama seperti sekolah umum unt
 
 ## Dapatkah sekolah non-AS memenangkan hadiah video chat?
 
-Tidak, karena logistik kami tidak dapat menawarkan hadiah video chatting ke sekolah-sekolah di luar Amerika Serikat dan Kanada. Semua penyelenggara internasional **berhak** menerima Dropbox ruang atau Skype kredit.
+Tidak, karena logistik kami tidak dapat menawarkan hadiah video chatting ke sekolah-sekolah di luar Amerika Serikat dan Kanada.
 
 ## Mengapa hadiah perangkat keras senilai $10.000 hanya tersedia untuk sekolah umum?
 
@@ -32,16 +32,16 @@ Karena kekurangan staff, Code.org tidak mampu untuk menagani logistik untuk hadi
 
 ## Kapan batas waktu untuk mengajukan permohonan untuk hadiah perangkat keras?
 
-Untuk memenuhi syarat, sekolah anda harus terdaftar dalam Hour of Code serta menyelesaikan  sebelum 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.</p> 
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Kapan batas waktu untuk memenangkan tech chat?
 
-Untuk memenuhi syarat, Anda harus mendaftarkan kelas anda untuk Hour of Code sebelum 14 November 2014. Kelas akan memenangkan percakapan video dengan seorang selebriti. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Kelas akan memenangkan percakapan video dengan seorang selebriti. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Kapan saya akan diberitahu jika sekolah atau kelas saya memenagkan hadiah?
 
-Untuk memenuhi syarat, sekolah anda harus terdaftar dalam Hour of Code serta menyelesaikan  sebelum 14 November 2014. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.</p> 
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## Jika sekolah saya tidak dapat melakukan Hour of Code selama Computer Science Education Week (Desember 8-14), dapatkah saya masih memenuhi syarat untuk hadiah?
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
-Ya, hanya pastikan untuk menyerahkan rencana logistik yang menguraikan bagaimana sekolah anda melakukan kegiatan pada waktunya dan mendaftar untuk Hour of Code sebelum 14 November.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.

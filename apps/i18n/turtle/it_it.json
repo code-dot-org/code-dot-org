@@ -21,8 +21,6 @@
   "degrees": "gradi",
   "depth": "profondità",
   "dots": "pixel",
-  "drawASquare": "disegna un quadrato",
-  "drawATriangle": "disegna un triangolo",
   "drawACircle": "disegna un cerchio",
   "drawAFlower": "disegna un fiore",
   "drawAHexagon": "disegna un esagono",
@@ -33,8 +31,10 @@
   "drawARocket": "disegna un razzo",
   "drawASnowflake": "disegna un fiocco di neve",
   "drawASnowman": "disegna un pupazzo di neve",
+  "drawASquare": "disegna un quadrato",
   "drawAStar": "disegna una stella",
   "drawATree": "disegna un albero",
+  "drawATriangle": "disegna un triangolo",
   "drawUpperWave": "disegna un'onda in alto",
   "drawLowerWave": "disegna un'onda in basso",
   "drawStamp": "disegna il timbro",
@@ -58,7 +58,7 @@
   "moveNorthTooltip": "Sposta l'artista verso nord.",
   "moveSouthTooltip": "Sposta l'artista verso sud.",
   "moveWestTooltip": "Sposta l'artista verso ovest.",
-  "moveTooltip": "Sposta l'artista in avanti o all'indietro della quantita di pixel specificata.",
+  "moveTooltip": "Sposta l'artista in avanti o all'indietro della quantità di pixel specificata.",
   "notBlackColour": "Devi impostare un colore diverso dal nero per questo esercizio.",
   "numBlocksNeeded": "Questo esercizio può essere risolto con %1 blocchi.  Tu ne hai usati %2.",
   "penDown": "Abbassa la matita",
@@ -80,5 +80,6 @@
   "turnTooltip": "Gira l'artista a sinistra o a destra della quantità di gradi specificata.",
   "turtleVisibilityTooltip": "Rende l'artista visibile o invisibile.",
   "widthTooltip": "Cambia la larghezza della matita.",
-  "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1."
+  "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1.",
+  "setAlpha": "set alpha"
 }

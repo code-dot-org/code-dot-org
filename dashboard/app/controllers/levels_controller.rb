@@ -25,8 +25,8 @@ class LevelsController < ApplicationController
   def show
     view_options(
         full_width: true,
-        no_footer: !@game.has_footer?,
-        small_footer: @game.uses_small_footer?
+        small_footer: @game.uses_small_footer? || enable_scrolling?,
+        has_i18n: @game.has_i18n?
     )
   end
 
@@ -34,10 +34,6 @@ class LevelsController < ApplicationController
   def edit
     if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
-    end
-    if @level.is_a? DSLDefined
-      @filename = @level.filename
-      @dsl_file = File.read(@filename) if @filename && File.exist?(@filename)
     end
   end
 
@@ -236,8 +232,11 @@ class LevelsController < ApplicationController
       :level_num,
       :user,
       :dsl_text,
+      :encrypted,
+      {poems: []},
       {concept_ids: []},
-      {soft_buttons: []}
+      {soft_buttons: []},
+      {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select

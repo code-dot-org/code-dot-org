@@ -5,20 +5,14 @@ title: Professional Development Workshops
 # Professional Development Workshops
 
 <%
-  from, to = nil
-  if params[:from] && params[:to]
-    from = Chronic.parse(params[:from])
-    to = Chronic.parse(params[:to])
-  end  
-
-  rows = generate_professional_development_workshop_payment_report(from, to)
+  rows = generate_professional_development_workshop_payment_report(params[:from], params[:to])
 %>
 
 ## Filter by date:
 
 <form>
-  From: <input type="text" name="from" value="<%= params[:from] ? URI.escape(params[:from]) : '' %>"/>
-  To: <input type="text" name="to" value="<%= params[:to] ? URI.escape(params[:to]) : '' %>"/>
+  From: <input type="text" name="from" value="<%= params[:from] %>"/>
+  To: <input type="text" name="to" value="<%= params[:to] %>"/>
   <input type="submit"/>
 </form>
 

@@ -1,5 +1,5 @@
 var React = require('react');
-var AssetsApi = require('./clientApi');
+var assetsApi = require('../../clientApi').assets;
 
 var defaultIcons = {
   image: 'fa fa-picture-o',
@@ -18,7 +18,7 @@ var defaultIcons = {
 function getThumbnail(type, name) {
   switch (type) {
     case 'image':
-      var src = AssetsApi.basePath(name);
+      var src = assetsApi.basePath(name);
       var assetThumbnailStyle = {
         width: 'auto',
         maxWidth: '100%',
@@ -82,7 +82,7 @@ module.exports = React.createClass({
     this.setState({action: 'deleting', actionText: ''});
 
     // TODO: Use Dave's client api when it's finished.
-    AssetsApi.ajax('DELETE', this.props.name, this.props.onDelete, function () {
+    assetsApi.ajax('DELETE', this.props.name, this.props.onDelete, function () {
       this.setState({action: 'confirming delete',
           actionText: 'Error deleting file.'});
     }.bind(this));
@@ -100,7 +100,7 @@ module.exports = React.createClass({
 
     switch (this.state.action) {
       case 'normal':
-        var src = AssetsApi.basePath(this.props.name);
+        var src = assetsApi.basePath(this.props.name);
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}

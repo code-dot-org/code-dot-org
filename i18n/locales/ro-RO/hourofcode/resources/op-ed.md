@@ -1,19 +1,19 @@
 * * *
 
-titlu: Model de acordare de sprijin pentru Saptamana Informaticii in Educatie si Ora de Cod dispunere: larga nav: resources_nav
+titlu: Model de acordare de sprijin pentru Saptamana Informaticii in Educatie si Ora de Programare dispunere: larga nav: resources_nav
 
 * * *
 
-### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Informaticii in Educatie si scopurile sale care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
+### Mai jos se gaseste un model de acordare de sprinjin pentru Saptamana Informaticii in Educatie si scopurile sale, care poate fi folosit de stat, legislatorii locali, liderii de afaceri etc.
 
   
 
 
 Mergi la http://code.org/promote pentru a gasi informatii specifice despre informatica.
 
-**Titlu: Utilizarea computerului…La Locurile de Munca**
+**Titlu: Utilizarea computerului la Locurile de Munca**
 
-**De [NAME] si [CO-AUTORI PRECUM PEDAGOG, INSPECTOR SAU LIDER DE AFACERI]**
+**De [NUME] si [CO-AUTORI PRECUM PEDAGOG, INSPECTOR SAU LIDER DE AFACERI]**
 
 Computerele sunt peste tot. Sunt in buzunarele noastre. Pe peretii nostri. In masinile noastr. Sunt un element indispensabil al infrastructurii noastre. De la retelele electrice, la semafoare, pana la functionarea pietelor noastre financiare. Si toate aceste computere au un lucru in comun. Ele depind de partea de programare pentru a le dicta ce sa execute.
 
@@ -33,12 +33,12 @@ Trebuie să facem niște schimbări.
 
 **[OPȚIONAL PENTRU STATELE ÎN CARE ACEST LUCRU SE APLICĂ]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+O schimbare pozitiva ar fi sa permita cursuri riguroase de stiinta computerului si programare pentru a satisface cerinta unor licee de matematica sau stiinte. In **[INTRODUCETI STAT]**, studierea stiintei computerului este electiva. Avand in vedere cerintele academice, elevii nu isi pot permite sa ia cursuri de stiinta calculatorului elective. Si prin aceasta schimbare vom aduce un mare impact. In statele in care cursurile de stiinta computerului conteaza la cerintele de absolvire, cursurile sunt cu 50% mai mari si rata participarii minoritatilor este mai mare decat in statele in care aceasta meterie este considereata electiva.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+De asemenea, ar trebui sa lucram cu elevi aflati la o varsta frageda, pentru a le putea trezi interesul in stiinta computer-ului si programare. Copiii noştri nu ar trebui să ştie doar cum să utilizeze aplicaţii şi jocuri video-acestia ar trebui sa stie cum sa le creeze. Copiii pot învăţa elementele de bază de programare încă din clasa a doua.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Trebuie sa recrutam mai multi profesori de stiinta compuerului si sa incurajam dezvoltarea profesionala in domeniul lor. Astăzi, există multe resurse online, care pot ajuta profesorii sa acceseze si sa fie la curent cu cea mai noua tehnologie pentru elevii lor.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+Potrivit Biroului de statistică a muncii, până în 2020, avor fi disponibile 9,2 milioane de locuri de muncă în domenii STEM. Jumătate din aceste locuri de muncă-4,6 milioane — vor fi in IT si tehnologie. Si stiinta calculatorului este intr-o continua crestere a cunostintelor fundamentale ale secolului 21. Cine va ocupa aceste locuri de munca disponibile daca elevilor nu le este data oportunitatea de a aduna aceste abilitati necesare?
 
-This week, December 8–15, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit <http://hourofcode.com> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+This week, December 7–13, is Computer Science Education Week. In scolile din **[STATUL]**, elevii vor participa la un eveniment national marca Hour of Code, demistificand ideea stiintei computerului si speram ca va fi stimulat apetitul lor de cunoastere si vor invata mai multe. Eu ma voi alatura lor si va invit si pe voi sa va alaturati. Toata lumea ar trebui sa invete cum sa programeze. Vizitati <http://hourofcode.com> pentru a afla mai multe si pentru a incepe. Sprijiniti eforturile noastre pentru a aduce stiinta computerelor si programarea in cat mai multe scoli din **[ORASUL]**.

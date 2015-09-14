@@ -38,8 +38,7 @@
     "min_workspace_height": "1500",
     "open_function_definition": "distance",
     "disable_examples": "false",
-    "markdown_instructions": "Let's fix this _distance_ function so our collision detection works properly.\r\n\r\nUse the Distance Formula, so the distance function returns the distance between the player's center coordinates (px, py) and another sprite's center coordinates (cx, cy).\r\n\r\nWe've provided a working _line-length_ function to help you out.",
-    "maze_data": null
+    "markdown_instructions": "Let's fix this _distance_ function so our collision detection works properly.\r\n\r\nUse the Distance Formula, so the distance function returns the distance between the player's center coordinates (px, py) and another sprite's center coordinates (cx, cy).\r\n\r\nWe've provided a working _line-length_ function to help you out."
   }
 }]]></config>
   <blocks/>

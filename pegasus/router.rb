@@ -130,6 +130,10 @@ class Documents < Sinatra::Base
       end
     end
 
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << File.join(request.site, 'i18n')
+    end
+
     @locals = {header: {}}
   end
 
@@ -186,6 +190,7 @@ class Documents < Sinatra::Base
       path = resolve_image File.join(dirname, basename)
     end
     pass unless path # No match at any resolution.
+    last_modified(File.mtime(path))
 
     if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
       # No [useful] modifications to make, return the original.
@@ -252,7 +257,14 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map{|i| IO.read(i)}.join("\n\n")
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    css
   end
 
   # rubocop:disable Lint/Eval
@@ -276,6 +288,9 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @locals[:header]['content-type']
+      response.headers['Content-Type'] = @locals[:header]['content-type']
+    end
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
@@ -357,6 +372,7 @@ class Documents < Sinatra::Base
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
+
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         return path if File.file?(path)
@@ -429,7 +445,7 @@ class Documents < Sinatra::Base
         cache_file = cache_dir('fetch', request.site, request.path_info)
         unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
           FileUtils.mkdir_p File.dirname(cache_file)
-          IO.write(cache_file, Net::HTTP.get(URI(url)))
+          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
         end
         pass unless File.file?(cache_file)
 
@@ -455,7 +471,7 @@ class Documents < Sinatra::Base
         }
       else
         metadata = {
-          'og:site_name'      => 'Code.org',
+          'og:site_name'      => 'Code.org'
         }
       end
 

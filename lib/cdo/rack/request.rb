@@ -35,7 +35,7 @@ module Rack
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = %w(studio learn i18n al ar br italia ro eu uk za).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
+        domains = %w(studio learn i18n al ar br italia ro sg eu uk za).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end

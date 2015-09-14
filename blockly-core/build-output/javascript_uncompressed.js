@@ -709,8 +709,8 @@ Blockly.JavaScript.procedural_to_functional_call = function() {
 };
 Blockly.JavaScript.functionalExamples = {};
 Blockly.JavaScript.functional_example = function() {
-  var a = Blockly.JavaScript.valueToCode(this, "EXPECTED", Blockly.JavaScript.ORDER_NONE) || "null", b = Blockly.JavaScript.valueToCode(this, "ACTUAL", Blockly.JavaScript.ORDER_NONE) || "null";
-  return"(" + a + " == " + b + ")"
+  var a = Blockly.JavaScript.statementToCode(this, "EXPECTED", Blockly.JavaScript.ORDER_NONE) || "null", b = Blockly.JavaScript.statementToCode(this, "ACTUAL", Blockly.JavaScript.ORDER_NONE) || "null";
+  return["(" + a + " == " + b + ")", 0]
 };
 Blockly.JavaScript.functionalParameters = {};
 Blockly.JavaScript.functional_parameters_get = function() {

@@ -25,7 +25,7 @@ applabTurtle.getTurtleContext = function () {
     turtleImage.id = 'turtleImage';
     applabTurtle.updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
-    divApplab.appendChild(turtleImage);
+    Applab.activeScreen().appendChild(turtleImage);
   }
 
   return canvas.getContext("2d");
@@ -50,4 +50,3 @@ applabTurtle.turtleSetVisibility = function (visible) {
   var turtleImage = document.getElementById('turtleImage');
   turtleImage.style.visibility = visible ? 'visible' : 'hidden';
 };
-

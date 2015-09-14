@@ -2,7 +2,6 @@
 
 = render partial: 'shared/angular'
 
-%script{src: "/shared/js/angularProjects.js"}
+%script{src: asset_path('angularProjects.js') }
 
 %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
-

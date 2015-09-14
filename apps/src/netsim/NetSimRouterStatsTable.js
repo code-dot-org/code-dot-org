@@ -15,7 +15,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html.ejs');
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimLogEntry = require('./NetSimLogEntry');
 
 /**
@@ -217,8 +217,8 @@ NetSimRouterStatsTable.prototype.getLocalizedUptime = function () {
     secondsUptime = Math.floor(millisecondsUptime / MILLIS_PER_SECOND);
   }
   return hoursUptime.toString() +
-      ':' + netsimUtils.zeroPadLeft(minutesUptime, 2) +
-      ':' + netsimUtils.zeroPadLeft(secondsUptime, 2);
+      ':' + NetSimUtils.zeroPadLeft(minutesUptime, 2) +
+      ':' + NetSimUtils.zeroPadLeft(secondsUptime, 2);
 };
 
 /**

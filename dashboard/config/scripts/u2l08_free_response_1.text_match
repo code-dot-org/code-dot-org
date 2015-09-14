@@ -5,3 +5,12 @@ title 'Router Table: Reflection'
 markdown <<MARKDOWN
 How is creating a router table similar to finding the shortest path in a graph?  How is it different?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but will likely include the following concepts:
+
+- A router table allows a router to know which of its direct connections to use to most efficiently route a message.
+- In creating a router table an algorithm is used in order to determine shortest paths in a graph.
+- When finding a shortest path we assume that an individual or individual router can see the entire network.
+- When creating a router table many routers can only see their direct connections and must work together in order to build the router table.
+MARKDOWN

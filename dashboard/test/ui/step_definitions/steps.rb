@@ -22,7 +22,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60)
+  wait = Selenium::WebDriver::Wait.new(timeout: 5.minutes)
   wait.until { @browser.find_element(selection_criteria) }
 end
 
@@ -197,6 +197,13 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    Then I wait to see a ".dialog-title"
+    And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
   element_has_i18n_text(selector, language, locKey)
 end
@@ -336,20 +343,24 @@ def encrypted_cookie(user)
 end
 
 def log_in_as(user)
-  params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user)}
+  params = {
+    name: "_learn_session_#{Rails.env}",
+    value: encrypted_cookie(user)
+  }
+  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
 end
 
 Given(/^I am a teacher$/) do
   @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
-    teacher.name = "Test teacher"
+    teacher.name = "TestTeacher Teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
     teacher.age = 40
@@ -359,7 +370,7 @@ end
 
 Given(/^I am a student$/) do
   @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = "Test student"
+    user.name = "TestStudent Student"
     user.password = SecureRandom.base64
     user.user_type = 'student'
     user.age = 16
@@ -429,4 +440,8 @@ Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")
   classes.include?(className).should eq false
+end
+
+Then /^there is no horizontal scrollbar$/ do
+  @browser.execute_script('return document.documentElement.scrollWidth <= document.documentElement.clientWidth').should eq true
 end

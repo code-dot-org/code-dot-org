@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest, dashboard */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -12,7 +12,9 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
+var React = require('react');
+var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/alert.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -33,6 +35,22 @@ var ENGLISH_LOCALE = 'en_us';
  */
 var MAX_PHONE_WIDTH = 500;
 
+/**
+ * HACK Alert. We're currently using two different copies of React - one in
+ * dashboard, and another in apps. This can get us into trouble in that the
+ * first element each of them serialize will have a reactid of .0. We get around
+ * this for now by pre-creating/serializing100 elements (i.e. reserving those
+ * ids for dashboard to use)
+ * A better long term approach would be to either get dashboard and apps to
+ * share a copy of React, or to have dashboard prerender its components (calling
+ * renderToString using a server-copy of react results in random reactids)
+ */
+(function reserveDashboardReactIds() {
+  var element = React.createElement("div");
+  for (var i = 0; i < 100; i++) {
+    React.renderToString(element);
+  }
+})();
 
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
@@ -241,7 +259,12 @@ StudioApp.prototype.init = function(config) {
   if (showCode && this.enableShowCode) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
-        var result = this.editor.toggleBlocks();
+        var result;
+        try {
+          result = this.editor.toggleBlocks();
+        } catch (err) {
+          result = {error: err};
+        }
         if (result && result.error) {
           // TODO (cpirich) We could extract error.loc to determine where the
           // error occurred and highlight that error
@@ -313,9 +336,6 @@ StudioApp.prototype.init = function(config) {
 
   var orientationHandler = function() {
     window.scrollTo(0, 0);  // Browsers like to mess with scroll on rotate.
-    var rotateContainer = document.getElementById('rotateContainer');
-    rotateContainer.style.width = window.innerWidth + 'px';
-    rotateContainer.style.height = window.innerHeight + 'px';
   };
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
@@ -371,6 +391,10 @@ StudioApp.prototype.init = function(config) {
 
   if (this.isUsingBlockly()) {
     this.handleUsingBlockly_(config);
+  } else {
+    // handleUsingBlockly_ already does an onResize. We still want that goodness
+    // if we're not blockly
+    this.onResize();
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -417,7 +441,41 @@ StudioApp.prototype.init = function(config) {
     }).bind(this));
   }
 
-  smallFooterUtils.bindHandlers();
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function() {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: this.Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'showVersionsModal'
+      });
+      React.render(React.createElement(VersionHistory, {}), codeDiv);
+
+      dialog.show();
+    }).bind(this));
+  }
+
+  if (this.isUsingBlockly() && Blockly.contractEditor) {
+    Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
+      this.feedback_.showSimpleDialog(this.Dialog, {
+        headerText: undefined,
+        bodyText: msg.examplesFailedOnClose(),
+        cancelText: msg.ignore(),
+        confirmText: msg.tryAgain(),
+        onConfirm: null,
+        onCancel: function () {
+          Blockly.contractEditor.hideIfOpen();
+        }
+      });
+
+      // return true to indicate to blockly-core that we'll own closing the
+      // contract editor
+      return true;
+    }.bind(this));
+  }
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -614,7 +672,9 @@ StudioApp.prototype.inject = function(div, options) {
     assetUrl: this.assetUrl,
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
-    trashcan: true
+    trashcan: true,
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
+        this.Dialog)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
@@ -727,10 +787,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
-  return this.feedback_.createModalDialog(options);
-};
-
-StudioApp.prototype.createModalDialog = function(options) {
+  options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
 
@@ -791,7 +848,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
@@ -860,7 +916,7 @@ function resizePinnedBelowVisualizationArea() {
 
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
   if (visualization) {
@@ -891,8 +947,6 @@ function resizePinnedBelowVisualizationArea() {
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
@@ -968,7 +1022,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -976,7 +1030,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
     // the small print should float right.  Otherwise, it should float left.
     var languageSelector = smallFooter.querySelector('form');
     var smallPrint = smallFooter.querySelector('small');
-    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    if (languageSelector && smallPrint.offsetTop === languageSelector.offsetTop) {
       smallPrint.style.float = 'right';
     } else {
       smallPrint.style.float = 'left';
@@ -1080,7 +1134,6 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: builderDetails,
     icon: this.icon
   });
@@ -1327,8 +1380,11 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
+
     if (config.pinWorkspaceToBottom) {
-      document.body.style.overflow = "hidden";
+      var bodyElement = document.body;
+      bodyElement.style.overflow = "hidden";
+      bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
       visualizationColumn.className = visualizationColumn.className + " pin_bottom";
       codeWorkspace.className = codeWorkspace.className + " pin_bottom";
@@ -1347,6 +1403,7 @@ StudioApp.prototype.configureDom = function (config) {
   }
 
   if (config.embed && config.hideSource) {
+    container.className = container.className + " embed_hidesource";
     visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
   }
 
@@ -1354,7 +1411,7 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
-    var smallFooter = document.querySelector(".small-footer");
+    var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
     if (smallFooter) {
       smallFooter.className += " responsive";
     }
@@ -1484,8 +1541,15 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   this.resizeToolboxHeader();
 
   if (options.startBlocks) {
-    // Don't pass CRLF pairs to droplet until they fix CR handling:
-    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+
+    try {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    } catch (err) {
+      // catch errors without blowing up entirely. we may still not be in a
+      // great state
+      console.error(err.message);
+    }
     // Reset droplet Undo stack:
     this.editor.clearUndoStack();
     // Reset ace Undo stack:
@@ -1607,8 +1671,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
+    hasVerticalScrollbars: config.hasVerticalScrollbars,
+    hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    readOnly: utils.valueOr(config.readonlyWorkspace, false)
+    readOnly: utils.valueOr(config.readonlyWorkspace, false),
+    showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
@@ -1699,13 +1766,36 @@ StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
  *   if there isn't one.
  */
 StudioApp.prototype.getUnfilledFunctionalBlock = function () {
+  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
+    return rootBlock.type !== 'functional_example';
+  });
+};
+
+/**
+ * @returns {Block} The first example block that has an unfilled input, or
+ *   undefined if there isn't one. Ignores example blocks that don't have a
+ *   call portion, as these are considered invalid.
+ */
+StudioApp.prototype.getUnfilledFunctionalExample = function () {
+  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
+    if (rootBlock.type !== 'functional_example') {
+      return false;
+    }
+    var actual = rootBlock.getInputTargetBlock('ACTUAL');
+    return actual && actual.getTitleValue('NAME');
+  });
+};
+
+/**
+ * @param {function} filter Run against root block in chain. Returns true if
+ *   this is a block we care about
+ */
+StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
   Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
-
-    // Allow example blocks to have unfilled inputs
-    if (rootBlock.type === 'functional_example') {
+    if (!filter(rootBlock)) {
       return false;
     }
 
@@ -1716,6 +1806,43 @@ StudioApp.prototype.getUnfilledFunctionalBlock = function () {
   });
 
   return unfilledBlock;
+};
+
+/**
+ * @returns {string} The name of a function that doesn't have any examples, or
+ *   undefined if all have at least one.
+ */
+StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
+  var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    return block.type === 'functional_definition' && !block.isVariable();
+  }).map(function (definitionBlock) {
+    return definitionBlock.getProcedureInfo().name;
+  });
+
+  var exampleNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    if (block.type !== 'functional_example') {
+      return false;
+    }
+
+    // Only care about functional_examples that have an ACTUAL input (i.e. it's
+    // clear which function they're for
+    var actual = block.getInputTargetBlock('ACTUAL');
+    return actual && actual.getTitleValue('NAME');
+  }).map(function (exampleBlock) {
+    return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+  });
+
+  var definitionWithLessThanTwoExamples;
+  definitionNames.forEach(function (def) {
+    var definitionExamples = exampleNames.filter(function(example) {
+      return def === example;
+    });
+
+    if (definitionExamples.length < 2) {
+      definitionWithLessThanTwoExamples = def;
+    }
+  });
+  return definitionWithLessThanTwoExamples;
 };
 
 /**
@@ -1748,6 +1875,44 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
   } else {
     return msg.emptyBlockInFunction({name: procedureInfo.name});
   }
+};
+
+/**
+ * Looks for failing examples, and updates the result text for them if they're
+ * open in the contract editor
+ * @param {function} failureChecker Apps example tester that takes in an example
+ *   block, and outputs a failure string (or null if success)
+ * @returns {string} Name of block containing first failing example we found, or
+ *   empty string if no failures.
+ */
+StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var failure = failureChecker(exampleBlock, false);
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
+
+    if (failure) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+  });
+  return failingBlockName;
+};
+
+/**
+ * @returns {boolean} True if we have a function or variable named "" (empty string)
+ */
+StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
+  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+    if (block.type !== 'functional_definition') {
+      return false;
+    }
+
+    return !(block.getProcedureInfo().name);
+  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
@@ -1800,3 +1965,54 @@ function rectFromElementBoundingBox(element) {
   rect.setAttribute('height', bbox.height);
   return rect;
 }
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assumed to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
+};
+
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (dashboard.project.exceedsAbuseThreshold()) {
+    this.displayAlert(parentSelector, {
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+        }
+      }),
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};

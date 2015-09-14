@@ -6,7 +6,7 @@ title: "Programmēšanas stundas" vadlīnijas layout: wide nav: resources_nav
 
 # "Programmēšanas stundas" vadlīnijas
 
-Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. decembris), lai veicinātu datorzinātņu popularitāti un iedvesmotu vēl vairāk studentus to izmēģināt. Jebkurš var organizēt "Programmēšanas stundu" jebkurā vietā.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Sagatavojaties savam pasākumam
 
@@ -23,7 +23,6 @@ Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. d
   * Citas idejas pasākumam: 
       * Uzaicini vietējo uzņēmēju, lai tas pastāstītu par savu darbu, kas saistās ar datorzinātnēm
       * Uzaicini vietējo politiķi un lūdzu skolēniem mācīt viņam vai viņai, kā programmēt
-      * Noskaties vienu jautājumu un atbilžu sesijām ar vienu no "Programmēšanas stundas" vēstniekiem. Tās visas būs ierakstītas un publicētas Code.org YouTube lapā. Šī gada dalībnieku starpā ir Bils Geitss, Šerila Sandberga, Eštons Kačers un citi!
       * Liec skolēnu grupai demonstrēt programmēšanas aktivitātes bez datora
       * Liec grupai skolēniem mācīt skolas direktoram vai grupai skolotāju programmēt
       * Ja tavā skolā jau māca datorzinātnes, palūdz skolēniem demonstrēt savus darbus
@@ -37,7 +36,7 @@ Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. d
 
 **Notikums:** Skolas mēroga Datorzinātņu izglītības nedēļas uzsākšanas pasākums
 
-**Datums:** 8. decembris (Datorzinātņu izglītības nedēļas sākums)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Laiks:** Skolas dienas laikā. Ieteicams rīta pusē. Vidējais laiks - 1 stunda.
 
@@ -47,72 +46,11 @@ Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. d
 
 ## Pasākuma norise
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Laiks
-    </th>
-    
-    <th style="width:800px">
-      Darbība
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05
-    </td>
-    
-    <td>
-      Sāc ar <a href="http://hourofcode.com/us/resources#videos">iedvesmojošu video</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Direktors sniedz nelielu ieskatu par datorzinātņu nozīmi. Izmanto šos <a href="/resources/stats">infografikus</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Sāc ar <a href="http://hourofcode.com/us/resources#videos">iedvesmojošu video</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Īpaši viesi stāsta par sevi un kā tehnoloģijas un datorzinātne spēlē nozīmīgu lomu viņu ikdienas dzīvē.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Skolēni veic "Programmēšanas stundas" demonstrāciju skolai. Negaidīti liec viņiem mācīt programmēšanu direktoram, politiķiem vai citiem studentiem.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Skolēni vada programmēšanas aktivitātes bez datora un stāsta kā datorzinātnes var iemācīt bez datoru palīdzības.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Skolotājs, kas palīdzēja "Programmēšanas stundas" norisē, sniedz nobeiguma vārdus.
-  </td>
-</table>
+| Laiks            | Darbība                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
+| 10:05 - 10:15 am | Direktors sniedz nelielu ieskatu par datorzinātņu nozīmi. Izmanto šos [infografikus](/resources/stats)                   |
+| 10:15 - 10:30 am | Īpaši viesi stāsta par sevi un kā tehnoloģijas un datorzinātne spēlē nozīmīgu lomu viņu ikdienas dzīvē.                  |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
+| 10:40 - 11:00 am | Skolēni vada programmēšanas aktivitātes bez datora un stāsta kā datorzinātnes var iemācīt bez datoru palīdzības.         |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |

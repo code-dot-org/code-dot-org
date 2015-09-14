@@ -40,6 +40,12 @@ module LevelsHelper
     headers['Location'].split('/').last
   end
 
+  def readonly_view_options
+    level_view_options skip_instructions_popup: true
+    view_options readonly_workspace: true
+    view_options callouts: []
+  end
+
   def set_channel
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
@@ -55,7 +61,7 @@ module LevelsHelper
       # we have to load the channel here.
 
       channel_token = ChannelToken.find_by(level: host_level, user: @user)
-      view_options readonly_workspace: true, callouts: []
+      readonly_view_options
     else
       # If `create` fails because it was beat by a competing request, a second
       # `find_by` should succeed.
@@ -74,6 +80,8 @@ module LevelsHelper
   end
 
   def select_and_track_autoplay_video
+    return if @level.try(:autoplay_blocked_by_level?)
+
     seen_videos = session[:videos_seen] || Set.new
     autoplay_video = nil
 
@@ -105,7 +113,7 @@ module LevelsHelper
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if I18n.locale == 'en-us' || callout_text.nil?
+      if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
       else
         callout_hash['localized_text'] = callout_text
@@ -116,8 +124,7 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
-    # Provide the channel for templated and applab levels.
-    set_channel if @level.project_template_level || @level.game == Game.applab
+    set_channel if @level.channel_backed?
 
     callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
@@ -126,11 +133,48 @@ module LevelsHelper
       callouts: callouts
     )
 
-    return blockly_options if @level.is_a? Blockly
-    Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
+    # External project levels are any levels of type 'external' which use
+    # the projects code to save and load the user's progress on that level.
+    view_options(is_external_project_level: true) if @level.is_a? Pixelation
+
+    view_options(is_channel_backed: true) if @level.channel_backed?
+
+    if @level.is_a? Blockly
+      blockly_options
+    elsif @level.is_a? DSLDefined
+      dsl_defined_options
+    elsif @level.is_a? Widget
+      widget_options
+    else
+      # currently, all levels are Blockly or DSLDefined except for Unplugged
+      view_options.camelize_keys
+    end
   end
 
-  # Code for generating the blockly options hash
+  # Options hash for Widget
+  def widget_options
+    app_options = {}
+    app_options[:level] ||= {}
+    app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  # Options hash for DSLDefined
+  def dsl_defined_options
+    app_options = {}
+
+    level_options = app_options[:level] ||= Hash.new
+
+    level_options[:lastAttempt] = @last_attempt
+    level_options.merge! @level.properties.camelize_keys
+
+    app_options.merge! view_options.camelize_keys
+
+    app_options
+  end
+
+  # Options hash for Blockly
   def blockly_options
     l = @level
     throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
@@ -142,7 +186,7 @@ module LevelsHelper
     # Fetch localized strings
     if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+      unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else
@@ -165,7 +209,6 @@ module LevelsHelper
 
     # LevelSource-dependent options
     app_options[:level_source_id] = @level_source.id if @level_source
-    app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
 
     # Edit blocks-dependent options
     if level_view_options[:edit_blocks]
@@ -173,6 +216,8 @@ module LevelsHelper
       level_options['edit_blocks'] = level_view_options[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
       level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['embed'] = false
+      level_options['hideSource'] = false
     end
 
     if @level.game.uses_pusher?
@@ -193,8 +238,8 @@ module LevelsHelper
     level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
-    level_options.merge!(Hash[level_overrides.map{|key, value|[key.to_s.camelize(:lower), value]}])
-    app_options.merge!(Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}])
+    level_options.merge! level_overrides.camelize_keys
+    app_options.merge! view_options.camelize_keys
 
     # Move these values up to the app_options hash
     %w(hideSource share noPadding embed).each do |key|
@@ -209,6 +254,9 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
+    app_options[:showExampleTestButtons] = true if enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
@@ -219,6 +267,19 @@ module LevelsHelper
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
+
+    if @game and @game.owns_footer_for_share?
+      # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
+      # deal with params
+      app_options[:copyrightStrings] = {
+        :thank_you => URI.escape(I18n.t('footer.thank_you')),
+        :help_from_html => I18n.t('footer.help_from_html'),
+        :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        :powered_by_aws => I18n.t('footer.powered_by_aws'),
+        :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      }
+    end
 
     app_options
   end
@@ -232,6 +293,8 @@ module LevelsHelper
     embed
     share
     hide_source
+    hide_design_mode
+    hide_view_data_button
   )
   # Sets custom level options to be used by the view layer. The option hash is frozen once read.
   def level_view_options(opts = nil)
@@ -345,5 +408,23 @@ module LevelsHelper
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+  end
+
+  def enable_scrolling?
+    @level.is_a?(Blockly)
+  end
+
+  def enable_examples?
+    @level.is_a?(Blockly)
+  end
+
+  # If this is a restricted level (i.e. applab) and user is under 13, redirect with a flash alert
+  def redirect_applab_under_13(level)
+    return unless level.game == Game.applab
+
+    if current_user && current_user.under_13?
+      redirect_to '/', :flash => { :alert => I18n.t("errors.messages.too_young") }
+      return true
+    end
   end
 end

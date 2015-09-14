@@ -35,6 +35,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
@@ -123,7 +125,7 @@
           </mutation>
           <title name="NAME">jump</title>
           <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" inline="true">
+            <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false" movable="false">
               <title name="DIR">1</title>
               <value name="SPRITE">
                 <block type="math_number">
@@ -136,7 +138,7 @@
                 </block>
               </value>
               <next>
-                <block type="studio_moveDistanceParamsSprite" inline="true">
+                <block type="studio_moveDistanceParamsSprite" inline="true" deletable="false" movable="false">
                   <title name="DIR">4</title>
                   <value name="SPRITE">
                     <block type="math_number">

@@ -13,6 +13,36 @@
   bottom: 0;
   left: 0;
   right: 0; }
+  #netsim .netsim-alert-container {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 450px;
+    margin-left: -225px;
+    z-index: 99999; }
+  #netsim .alert {
+    border-radius: 5px;
+    transition-duration: 1s; }
+    #netsim .alert.netsim-alert {
+      margin-bottom: 5px; }
+    #netsim .alert.alert-info {
+      color: #4d575f;
+      background-color: #d9eff7;
+      border-color: #59b9dc; }
+    #netsim .alert.alert-warn {
+      color: #4d575f;
+      background-color: #fff2d9;
+      border-color: #ffc459; }
+    #netsim .alert.alert-success {
+      color: #4d575f;
+      background-color: #f5f5dc;
+      border-color: #d1d567; }
+    #netsim .alert.alert-error {
+      color: #4d575f;
+      background-color: #ffcccc;
+      border-color: #ff3333; }
+  #netsim .netsim-alert-button {
+    margin: 0; }
   #netsim #router-log-modal {
     display: none;
     width: 90%;
@@ -30,6 +60,11 @@
       -ms-user-select: text;
       -khtml-user-select: text;
       user-select: text; }
+    #netsim #router-log-modal .log-browser-limit-message {
+      padding: 0.5em;
+      text-align: center;
+      font-style: italic;
+      color: #5b6770; }
   #netsim #netsim-disconnected {
     display: block;
     position: relative;
@@ -37,12 +72,15 @@
     height: 100%;
     margin: auto;
     overflow-y: auto; }
+    #netsim #netsim-disconnected #netsim-scrolling-lobby {
+      overflow-y: auto; }
   #netsim #netsim-leftcol {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     width: 320px;
+    overflow-x: hidden;
     overflow-y: auto; }
     #netsim #netsim-leftcol > .column-width-limiter {
       width: 300px; }
@@ -232,6 +270,8 @@
     margin-left: calc(30% + 1em); }
   #netsim .netsim-lobby-panel table {
     margin-bottom: 1em; }
+    #netsim .netsim-lobby-panel table.nomargin {
+      margin-bottom: 0; }
     #netsim .netsim-lobby-panel table img {
       height: 14px;
       vertical-align: text-top; }
@@ -274,7 +314,7 @@
     padding: 0; }
     #netsim div.netsim-panel h1 {
       margin: 0;
-      padding: 0.3em 0.5em;
+      padding: 0.3em;
       font-family: "Gotham 4r", sans-serif;
       font-size: 110%;
       font-weight: bold;
@@ -288,6 +328,8 @@
         padding-top: 2px; }
         #netsim div.netsim-panel h1 .panel-controls .netsim-button {
           margin-left: 3px; }
+      #netsim div.netsim-panel h1 .pad-left {
+        padding-left: 0.2em; }
     #netsim div.netsim-panel div.panel-body {
       background-color: white;
       border-left: solid darkgray 1px;

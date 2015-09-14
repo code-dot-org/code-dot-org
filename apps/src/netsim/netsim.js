@@ -17,17 +17,18 @@
 /* global -Blockly */
 /* global $ */
 /* global sendReport */
+/* global confirm */
 'use strict';
 
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimAlert = require('./NetSimAlert');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
@@ -42,11 +43,11 @@ var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
 
-var DnsMode = netsimConstants.DnsMode;
-var MessageGranularity = netsimConstants.MessageGranularity;
+var DnsMode = NetSimConstants.DnsMode;
+var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.
@@ -59,7 +60,7 @@ var NetSim = module.exports = function () {
   this.skin = null;
 
   /**
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    */
   this.level = {};
 
@@ -166,7 +167,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * Called on page load.
  * @param {Object} config
  * @param {Object} config.skin
- * @param {netsimLevelConfiguration} config.level
+ * @param {NetSimLevelConfiguration} config.level
  * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
@@ -178,11 +179,13 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootControllers(this.studioApp_, this);
+  NetSimGlobals.setRootControllers(this.studioApp_, this);
 
   // Remove icon from all NetSim instructions dialogs
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   /**
    * Skin for the loaded level
@@ -192,9 +195,9 @@ NetSim.prototype.init = function(config) {
 
   /**
    * Configuration for the loaded level
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    */
-  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
+  this.level = NetSimUtils.scrubLevelConfiguration_(config.level);
 
   /**
    * Current operating environment, used to drive certain configuration.
@@ -244,7 +247,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUserName_(this.currentUser_);
+    this.initWithUser_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -305,7 +308,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -344,11 +347,10 @@ NetSim.prototype.initWithUserName_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  if (this.level.showLogBrowserButton) {
-    this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
-  }
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
+  this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
+      this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -472,7 +474,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
+  this.shard_ = new NetSimShard(shardID, NetSimGlobals.getPubSubConfig());
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);
@@ -490,11 +492,15 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
   NetSimLocalClientNode.create(this.shard_, displayName, function (err, node) {
     if (err) {
       logger.error("Failed to create client node; " + err.message);
+      NetSimAlert.error(i18n.createMyClientNodeError());
       onComplete(err, null);
       return;
     }
 
-    node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
+    node.setLostConnectionCallback(function () {
+      NetSimAlert.warn(i18n.alertConnectionReset());
+      this.disconnectFromShard();
+    }.bind(this));
     node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
     onComplete(err, node);
   }.bind(this));
@@ -541,6 +547,8 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
     }
 
     this.myNode = null;
+    this.shard_.disconnect();
+    this.shard_ = null;
     this.shardChange.notifyObservers(null, null);
     onComplete(err, result);
   }.bind(this));
@@ -935,7 +943,7 @@ function resizeLeftColumnToSitAboveFooter() {
     return;
   }
 
-  var smallFooter = document.querySelector('.small-footer');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var bottom = 0;
   if (smallFooter) {
@@ -949,31 +957,30 @@ function resizeLeftColumnToSitAboveFooter() {
   pinnedLeftColumn.style.bottom = bottom + 'px';
 }
 
-function resizeFooterToLeftColumnWidth() {
+function resizeFooterToFitToLeftOfContent() {
   var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
-  var smallFooter = document.querySelector('.small-footer');
-  if (!(leftColumn && smallFooter) || !$(leftColumn).is(':visible')) {
+  var instructions = document.querySelector('.instructions');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+
+  if (!smallFooter) {
     return;
   }
 
-  smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+  var padding = parseInt(window.getComputedStyle(smallFooter)["padding-left"]);
 
-  // If the small print and language selector are on the same line,
-  // the small print should float right.  Otherwise, it should float left.
-  var languageSelector = smallFooter.querySelector('form');
-  var smallPrint = smallFooter.querySelector('small');
-  if (smallPrint.offsetTop === languageSelector.offsetTop) {
-    smallPrint.style.float = 'right';
-  } else {
-    smallPrint.style.float = 'left';
+  var boundingWidth;
+  if (leftColumn && $(leftColumn).is(':visible')) {
+    boundingWidth = leftColumn.getBoundingClientRect().right;
+  } else if (instructions && $(instructions).is(':visible')) {
+    boundingWidth = instructions.getBoundingClientRect().right;
   }
+
+  smallFooter.style.maxWidth = (boundingWidth) ? (boundingWidth - padding) + 'px' : null;
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
-  resizeFooterToLeftColumnWidth();
+  resizeFooterToFitToLeftOfContent();
   resizeLeftColumnToSitAboveFooter();
-  smallFooterUtils.repositionCopyrightFlyout();
-  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 /**
@@ -993,31 +1000,19 @@ NetSim.onResizeOverride_ = function() {
 };
 
 /**
+ * Passthrough to local "static" netsimDebounceResizeFooter method
+ */
+NetSim.prototype.debouncedResizeFooter = function () {
+  netsimDebouncedResizeFooter();
+};
+
+/**
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
-      shareLink;
-
-  isConnected = false;
-  clientStatus = i18n.disconnected();
-  if (this.myNode) {
-    clientStatus = 'In Lobby';
-    myHostname = this.myNode.getHostname();
-    if (this.myNode.myWire) {
-      myAddress = this.myNode.myWire.localAddress;
-    }
-  }
-
   if (this.isConnectedToRemote()) {
-    isConnected = true;
-    clientStatus = i18n.connected();
-    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
-  }
+    var myAddress = this.myNode.getAddress();
 
-  shareLink = this.lobby_.getShareLink();
-
-  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1028,12 +1023,10 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        isConnected: isConnected,
-        statusString: clientStatus,
-        myHostname: myHostname,
+        myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
-        remoteNodeName: remoteNodeName,
-        shareLink: shareLink
+        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
+        shareLink: this.lobby_.getShareLink()
       });
     }
   } else {
@@ -1140,6 +1133,7 @@ NetSim.prototype.onRouterConnect_ = function (router) {
   this.onRouterStateChange_(router);
   this.onRouterStatsChange_(router);
   this.setRouterLogData(router.getLog());
+  this.routerLogModal_.setRouter(router);
 };
 
 /**
@@ -1152,6 +1146,7 @@ NetSim.prototype.onRouterDisconnect_ = function () {
   this.setRouterMemoryInUse_(0);
   this.setRouterDataRate_(0);
   this.setRouterLogData([]);
+  this.routerLogModal_.setRouter(null);
 };
 
 /**
@@ -1247,6 +1242,10 @@ NetSim.prototype.updateLayout = function () {
 
   netsimDebouncedResizeFooter();
 
+  if (this.lobby_) {
+    this.lobby_.updateLayout();
+  }
+
   if (!rightColumn.is(':visible')) {
     return;
   }
@@ -1279,6 +1278,10 @@ NetSim.prototype.updateLayout = function () {
  * button.  Should mark the level as complete and navigate to the next level.
  */
 NetSim.prototype.completeLevelAndContinue = function () {
+  if (this.isConnectedToRemote() && !confirm(i18n.onBeforeUnloadWarning())) {
+    return;
+  }
+
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
@@ -1306,4 +1309,20 @@ NetSim.prototype.completeLevelAndContinue = function () {
       }
     }.bind(this)
   });
+};
+
+/**
+ * Attempt to reset the simulation shard, kicking all users out and resetting
+ * all data.
+ */
+NetSim.prototype.resetShard = function () {
+  if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
+    this.shard_.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
+        return;
+      }
+    }.bind(this));
+  }
 };

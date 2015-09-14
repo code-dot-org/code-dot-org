@@ -2,3 +2,12 @@ name 'U2L17 Free Response Wrap Up'
 title 'Hard Problems: Wrap Up'
 content1 'If the TSP is unsolvable for finding an exact solution, how do you think package delivery companies optimize their delivery routes?'
 
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but will likely include these concepts:
+
+- Trial and error
+- Driver experience and previous delivery route records
+- Mapping software
+- Problem solving that involves not only distances, but traffic congestion, time of day, construction, etc. (elements of a heuristic)
+MARKDOWN

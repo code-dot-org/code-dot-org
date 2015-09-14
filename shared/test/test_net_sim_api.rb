@@ -7,14 +7,14 @@ require_relative 'spy_pub_sub_api'
 
 ENV['RACK_ENV'] = 'test'
 
-class NetSimApiTest < Minitest::Unit::TestCase
+class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
+    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, 'studio.code.org'))
     @shard_id = '_testShard2'
     @table_name = TABLE_NAMES[:node]
 
@@ -24,8 +24,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     # Always use a fake Redis.
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
-    # Every test should start with an empty table
-    assert read_records.first.nil?, "Table did not begin empty"
+    # Every test should start with an empty table.
+    assert read_records.first.nil?, 'Table did not begin empty'
   end
 
   def test_create_read_update_delete
@@ -43,13 +43,108 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
+    update_record_response = update_record(record_id, {name: 'alice', id: record_id, age: 8})
+    assert_equal 8, JSON.parse(update_record_response.body)['age']
     record = read_records.first
     assert_equal 8, record['age']
+
+    # Test fetching starting from a minimum row id.
+    # Add a another row to make thing slightly more interesting.
+    create_record({name: 'bob'})
+
+    url = "/v3/netsim/#{@shard_id}/#{@table_name}"
+    records = read_records_for_url(url + "@#{record_id}")
+
+    assert_equal 2, records.length
+    assert_equal 'alice', records[0]['name']
+    assert_equal 'bob', records[1]['name']
+    record_id2 = records[1]['id']
+
+    records = read_records_for_url(url + "@#{record_id2}")
+    assert_equal 1, records.length
+    assert_equal 'bob', records[0]['name']
+
+    records = read_records_for_url(url + "@#{record_id2 + 1}")
+    assert_equal 0, records.length
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    delete_record(record_id2 || 2)
+    assert read_records.first.nil?, 'Table was not empty'
   end
+
+  def test_create_multiple_records
+    created_ids = []
+    # Sending any number of records as an array should result in an
+    # array being returned
+    record_create_response = create_record([{name: 'alice', age: 7, male: false}])
+    assert record_create_response.is_a?(Array)
+    assert_equal 1, record_create_response.length
+    assert_equal 1, read_records.length
+    created_ids.push(record_create_response[0]['id'])
+
+    # Sending a record as a hash should result in a hash being returned
+    record_create_response = create_record({name: 'fred', age: 12, male: true})
+    assert record_create_response.is_a?(Hash)
+    assert_equal 2, read_records.length
+    created_ids.push(record_create_response['id'])
+
+    # Sending several records should result in them all being inserted
+    record_create_response = create_record([
+      {name: 'nancy', age: 9, male: false},
+      {name: 'drew', age: 11, male: true}
+    ])
+    assert record_create_response.is_a?(Array)
+    assert_equal 2, record_create_response.length
+    assert_equal 4, read_records.length
+    created_ids.push(record_create_response[0]['id'])
+    created_ids.push(record_create_response[1]['id'])
+
+    # sending an empty array should be a no-op
+    record_create_response = create_record([])
+    assert record_create_response.is_a?(Array)
+    assert_equal 0, record_create_response.length
+    assert_equal 4, read_records.length
+
+    # sending a value that is neither an array nor a hash should fail
+    create_record(1)
+    assert_equal 400, @net_sim_api.last_response.status
+    assert_equal 4, read_records.length
+
+    # sending an array containing a value that is neither an array nor a
+    # hash should fail
+    create_record([1])
+    assert_equal 400, @net_sim_api.last_response.status
+    assert_equal 4, read_records.length
+  ensure
+    created_ids.each { |id| delete_record(id) }
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_read_multiple_tables
+    t1_row1 = create_record({name: 'rec1_1'}, 'table1')
+    t1_row2 = create_record({name: 'rec1_2'}, 'table1')
+    create_record({name: 'rec2_1'}, 'table2')
+    t2_row2 = create_record({name: 'rec2_2'}, 'table2')
+    create_record({name: 'rec3_1'}, 'table3')
+
+    @net_sim_api.get "/v3/netsim/#{@shard_id}?t[]=table1&t[]=table2@2&t[]=table3@2"
+    assert_equal 200, @net_sim_api.last_response.status
+
+    result = JSON.parse(@net_sim_api.last_response.body)
+    assert_equal(
+        {'table1' => {'rows' => [t1_row1, t1_row2]},
+         'table2' => {'rows' => [t2_row2]},
+         'table3' => {'rows' => []}},
+        result)
+  end
+
+  def test_read_no_tables
+    # Test that request no tables from a shard returns no results.
+    @net_sim_api.get "/v3/netsim/#{@shard_id}"
+    assert_equal 200, @net_sim_api.last_response.status
+    assert_equal({}, JSON.parse(@net_sim_api.last_response.body))
+  end
+
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
@@ -59,13 +154,24 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 400, record_create_response.status
 
     # Verify that no record was created
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_get_400_on_inserting_orphaned_message
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
-    assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
-    assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
+    assert_equal 400, @net_sim_api.last_response.status, 'Orphaned message not created'
+    assert_equal 0, read_records(TABLE_NAMES[:message]).count, 'Created no messages'
+  end
+
+  def test_get_400_on_inserting_duplicate_wire
+    # The first one works
+    create_wire(1, 2)
+    assert_equal 201, @net_sim_api.last_response.status, 'Wire creation request failed'
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Initial wire was not created'
+
+    create_wire(1, 2)
+    assert_equal 400, @net_sim_api.last_response.status, 'Duplicate wire request did not fail'
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Duplicate wire was created'
   end
 
   def test_get_400_on_bad_json_update
@@ -84,7 +190,47 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 7, record['age']
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  def test_get_404_on_updating_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_update_response = update_record(1, {id: 1, age: 8})
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 404, record_update_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
+  ensure
+    delete_record(1)
+    assert read_records.first.nil?, 'Table was not empty'
+  end
+
+  # Because calling delete on a missing object results in the desired
+  # state anyway, we return a success code in this case - but no invalidation
+  # should be produced.
+  def test_get_204_on_deleting_missing_record
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform otherwise valid update on missing row
+    record_delete_response = delete_record(1)
+
+    # Verify that the UPDATE response is a 404 NOT FOUND
+    assert_equal 204, record_delete_response.status
+
+    # Verify that no invalidations were published
+    assert_equal 0, test_spy.publish_history.length
+
+    # Verify that no record was created
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_no_publish_on_read
@@ -110,7 +256,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.first[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_update
@@ -128,7 +274,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_publish_on_delete
@@ -144,12 +290,36 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal @shard_id, test_spy.publish_history.last[:channel]
     assert_equal @table_name, test_spy.publish_history.last[:event]
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
-    assert_equal record_id, test_spy.publish_history.last[:data][:id]
+    assert_equal [record_id], test_spy.publish_history.last[:data][:ids]
   ensure
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
-  def test_node_delete_cascades_to_node_wires
+  def test_node_delete_cascades_to_node_wires_delete_one_delete_verb
+    node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_one_post_verb
+    node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}/delete"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_many_delete_verb
+    node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_many_post_verb
+    node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?id[]=#{node_id}"
+    end
+  end
+
+  def node_delete_cascades_to_node_wires
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -162,14 +332,14 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
     assert_equal 3, read_records(TABLE_NAMES[:wire]).count, "Didn't create 3 wires"
 
-    delete_node(node_a['id'])
+    yield(node_a['id']) # Delete Node A using method provided by caller
+    assert_equal 204, @net_sim_api.last_response.status
 
     # Assert nodeA is gone
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert wire AB and CA are gone
     assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
-    assert !record_exists(TABLE_NAMES[:wire], wire_ca['id'])
 
     # Assert node B and C are still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -184,11 +354,35 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_wire(wire_ab['id'])
     delete_wire(wire_ca['id'])
     delete_wire(wire_bc['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
   end
 
-  def test_node_delete_cascades_to_messages
+  def test_node_delete_cascades_to_messages_delete_one_delete_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_one_post_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}/delete"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_many_delete_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_many_post_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?id[]=#{node_id}"
+    end
+  end
+
+  def node_delete_cascades_to_messages
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -199,7 +393,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 2, read_records(TABLE_NAMES[:node]).count, "Didn't create 2 nodes"
     assert_equal 2, read_records(TABLE_NAMES[:message]).count, "Didn't create 2 messages"
 
-    delete_node(node_a['id'])
+    yield(node_a['id'])
 
     # Assert nodeA is gone
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
@@ -217,8 +411,164 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_node(node_b['id'])
     delete_message(message_a_to_b['id'])
     delete_message(message_b_to_a['id'])
-    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
-    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
+  end
+
+  def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
+    many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
+      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
+    end
+  end
+
+  def test_many_node_delete_cascading_generates_minimum_invalidations_via_post
+    many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
+      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
+    end
+  end
+
+  def many_node_delete_cascading_generates_minimum_invalidations
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
+
+    wire_ab = create_wire(node_a['id'], node_b['id'])
+    wire_ac = create_wire(node_a['id'], node_c['id'])
+    wire_ba = create_wire(node_b['id'], node_a['id'])
+    wire_bc = create_wire(node_b['id'], node_c['id'])
+    wire_ca = create_wire(node_c['id'], node_a['id'])
+    wire_cb = create_wire(node_c['id'], node_b['id'])
+
+    message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message2_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+    message2_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+    assert_equal 6, read_records(TABLE_NAMES[:wire]).count, "Didn't create 6 wires"
+    assert_equal 4, read_records(TABLE_NAMES[:message]).count, "Didn't create 4 messages"
+
+    # Set up spy to count invalidations published by JUST the delete operation
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform cascading multi-delete
+    yield([node_a['id'], node_b['id']])
+
+    # Assert nodes A and B are gone, but C is still there.
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert record_exists(TABLE_NAMES[:node], node_c['id'])
+
+    # Assert all wires and messages are gone
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
+
+    # Even though we just deleted ten rows, there should only be three
+    # published invalidations, because three tables were affected
+    assert_equal(3, test_spy.publish_history.length)
+
+    # In fact, the invalidations produce a very complete account of what was done.
+    assert_equal(test_spy.publish_history[0],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:wire],
+                  data: {action: 'delete',
+                         ids: [wire_ab['id'],
+                               wire_ac['id'],
+                               wire_ba['id'],
+                               wire_bc['id'],
+                               wire_ca['id'],
+                               wire_cb['id']]}})
+
+    assert_equal(test_spy.publish_history[1],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:message],
+                  data: {action: 'delete',
+                         ids: [message_a_to_b['id'],
+                               message2_a_to_b['id'],
+                               message_b_to_a['id'],
+                               message2_b_to_a['id']]}})
+
+    assert_equal(test_spy.publish_history[2],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:node],
+                  data: {action: 'delete',
+                         ids: [node_a['id'],
+                               node_b['id']]}})
+
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    delete_wire(wire_ab['id'])
+    delete_wire(wire_ac['id'])
+    delete_wire(wire_ba['id'])
+    delete_wire(wire_bc['id'])
+    delete_wire(wire_ca['id'])
+    delete_wire(wire_cb['id'])
+    delete_message(message_a_to_b['id'])
+    delete_message(message2_a_to_b['id'])
+    delete_message(message_b_to_a['id'])
+    delete_message(message2_b_to_a['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, 'Wire table was not empty'
+    assert read_records(TABLE_NAMES[:message]).first.nil?, 'Message table was not empty'
+  end
+
+  def test_parse_table_map_from_query_string
+    assert_equal({'lobby' => 1, 'n' => 20, 'orders' => 100},
+                 parse_table_map_from_query_string('t[]=lobby@1&t[]=n@20&t[]=orders@100&ignored=foo'))
+
+    assert_equal({'n' => 0},
+                 parse_table_map_from_query_string('t[]=n'),
+                 'Unspecified version numbers should default to 0')
+
+    assert_equal({'n' => 0},
+                 parse_table_map_from_query_string('t[]=n@a'),
+                 'Invalid version numbers should default to 0')
+
+    assert_equal({}, parse_table_map_from_query_string(''))
+  end
+
+  def test_delete_many_delete_verb
+    perform_test_delete_many do |query_string|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
+    end
+  end
+
+  def test_delete_many_post_verb
+    perform_test_delete_many do |query_string|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
+    end
+  end
+
+  def perform_test_delete_many
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+
+    query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
+    yield query_string # Performs delete using block provided by caller
+    assert_equal 204, @net_sim_api.last_response.status
+
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_c['id'])
+
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, 'Node table was not empty'
+  end
+
+  def test_parse_ids_from_query_string
+    assert_equal([1, 3, 5], parse_ids_from_query_string('id[]=1&id[]=3&id[]=5'))
+    assert_equal([2], parse_ids_from_query_string('id[]=nonsense&id[]=2'),
+                 'Nonnumeric IDs should be ignored')
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -268,13 +618,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def read_records(table_name = @table_name)
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}"
+    read_records_for_url("/v3/netsim/#{@shard_id}/#{table_name}")
+  end
+
+  def read_records_for_url(url)
+    @net_sim_api.get url
     JSON.parse(@net_sim_api.last_response.body)
   end
 
   def update_record(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
+    @net_sim_api.last_response
   end
 
   def update_record_malformed(id, record)

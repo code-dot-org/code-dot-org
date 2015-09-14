@@ -359,26 +359,25 @@ ar:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: مرحباً، اسمي لِندسي وأنا عارضة أزياء وممثلة وأبرمج التطبيقات الخاصة بي. هيا نبرمج معاً لننضم إلى آنا وإلسا فر رحلتهما لاكتشاف سحر وجمال الجليد.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: سنقوم بإنشاء ندفات الثلج والأشكال المختلفة بينما نتزلج على الجليد ونصنع شتاء عجائب يمكنكم مشاركته مع أصدقائكم.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: خلال الساعة القادمة، سنتعلّم أساسيات البرمجة. عادةً ما تكون البرمجة التقليدية من خلال النص، ولكن سنقوم باستخدام بلوكلي، وهو استخدام الكتل المرئية التي يمكنكم سحبها وإفلاتها لكتابة البرامج. هكذا يتعلّم الطلاب الأساسيات، حتى في الجامعات لكن في الحقيقة لا زلتم تكتبون التعليمات البرمجية.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: البرنامج هو عبارة عن مجموعة من الإرشادات التي تخبر الكمبيوتر ما يجب فعله. دعونا نكتب تعليمات برمجية، أو برنامج، ليساعد إلسا في إنشاء خط بسيط. سوف نستخدم هذا في وقت لاحق لإنشاء أنماط أكثر تعقيداً.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: تنقسم الشاشة إلى ثلاثة أجزاء رئيسية. على اليسار، يوجد السطح الجليدي حيث يجب تشغيل برنامجك. وتتم كتابة التعليمات الخاصة بكل مستوى تحت سطحها تماماً.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: أما المساحة الوسطى، فهي علبة الأدوات، وكل من هذه القطع البرمجية هي أعمال من الممكن لآنا وإلسا القيام بها.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'المساحة البيضاء على اليمين تُسَمّى مساحة العمل، وهنا سنقوم ببناء برنامجنا. للتحرك على سطح الجليد، سنقوم باستخدام القطعة البرمجية "تقدم للأمام".'
       8:
         image: notes/frozen1_8.jpg
         text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'

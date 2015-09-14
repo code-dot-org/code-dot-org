@@ -52,6 +52,12 @@ Blockly.BlockSvg = function(block) {
   this.svgGroup_ = Blockly.createSvgElement('g', options, null);
 
   this.initChildren();
+
+  /**
+   * Configurable lookup table of input widths
+   * @type {{string, number}}
+   */
+  this.forcedInputWidths = {};
 };
 
 Blockly.BlockSvg.prototype.initChildren = function () {
@@ -545,8 +551,11 @@ Blockly.BlockSvg.prototype.removeSpotlight = function() {
 /**
  * Render the block.
  * Lays out and reflows a block based on its contents and settings.
+ * @param {boolean} selfOnly - whether to render only this block and NOT also
+ * its parents which in turn would trigger a window resize event. Defaults to
+ * false.
  */
-Blockly.BlockSvg.prototype.render = function() {
+Blockly.BlockSvg.prototype.render = function(selfOnly) {
   this.block_.rendered = true;
 
   var cursorX = oppositeIfRTL(BS.SEP_SPACE_X);
@@ -562,13 +571,15 @@ Blockly.BlockSvg.prototype.render = function() {
   var inputRows = this.renderCompute_(cursorX);
   this.renderDraw_(cursorX, inputRows);
 
-  // Render all blocks above this one (propagate a reflow).
-  var parentBlock = this.block_.getParent();
-  if (parentBlock) {
-    parentBlock.render();
-  } else {
-    // Top-most block.  Fire an event to allow scrollbars to resize.
-    Blockly.fireUiEvent(window, 'resize');
+  if (!selfOnly) {
+    // Render all blocks above this one (propagate a reflow).
+    var parentBlock = this.block_.getParent();
+    if (parentBlock) {
+      parentBlock.render();
+    } else {
+      // Top-most block.  Fire an event to allow scrollbars to resize.
+      Blockly.fireUiEvent(window, 'resize');
+    }
   }
 };
 
@@ -704,7 +715,7 @@ Blockly.BlockSvg.prototype.renderCompute_ = function(iconWidth) {
   for (i = 0; currentRow = inputRows[i]; i++) {
     if (currentRow.type === INLINE_ROW) {
       inputRows.rightEdge = Math.max(inputRows.rightEdge,
-        widthInlineRow(currentRow));
+        this.widthInlineRow(currentRow));
     }
   }
 
@@ -783,14 +794,14 @@ function inputTitleRenderSize (input, iconWidth) {
 /**
  * Given a row, calculates the width, including padding, from the set of inputs
  */
-function widthInlineRow(row) {
+Blockly.BlockSvg.prototype.widthInlineRow = function (row) {
   var width = BS.SEP_SPACE_X;
   for (var i = 0, input; input = row[i]; i++) {
-    width += input.renderWidth + BS.SEP_SPACE_X;
+    width += BS.SEP_SPACE_X + this.inputWidthToOccupy_(input);
   }
 
   return width;
-}
+};
 
 /**
  * Draw the path of the block.
@@ -988,6 +999,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInputValue_ = function (renderInfo,
   inputRows, rowIndex, connectionsXY) {
   var connectionX, connectionY;
   // External input.
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   var titleX = renderInfo.curX;
@@ -1054,6 +1066,7 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
   inputRows, rowIndex, connectionsXY) {
   var connectionX, connectionY;
   // Nested statement.
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   if (rowIndex === 0) {
@@ -1132,7 +1145,9 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   // out how much space they will take up, so that we can center the set of them.
   if (row[0].type === Blockly.FUNCTIONAL_INPUT) {
     var widths = BS.SEP_SPACE_X * (row.length - 1);
-    row.forEach(function (input) { widths += input.renderWidth; } );
+    row.forEach(function (input) {
+      widths += this.inputWidthToOccupy_(input);
+    }, this);
     if (inputRows.rightEdge > widths && align === Blockly.ALIGN_CENTRE) {
       renderInfo.curX = (inputRows.rightEdge - widths) / 2;
     }
@@ -1181,10 +1196,10 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
         renderInfo.highlightInline.push('l', (BS.TAB_WIDTH * 0.42) + ',-1.8');
       }
       // Create inline input connection.
-      connectionX = connectionsXY.x + oppositeIfRTL(renderInfo.curX + BS.TAB_WIDTH -
+      var connectionX = connectionsXY.x + oppositeIfRTL(renderInfo.curX + BS.TAB_WIDTH -
         BS.SEP_SPACE_X - input.renderWidth + 1);
 
-      connectionY = connectionsXY.y + renderInfo.curY + BS.INLINE_PADDING_Y;
+      var connectionY = connectionsXY.y + renderInfo.curY + BS.INLINE_PADDING_Y;
       input.connection.moveTo(connectionX, connectionY);
       if (input.connection.targetConnection) {
         input.connection.tighten_();
@@ -1193,6 +1208,7 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
       hasFunctionalInput = true;
 
       this.renderDrawRightInlineFunctional_(renderInfo, input, connectionsXY);
+
     } else if (input.type != Blockly.DUMMY_INPUT) {
       renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
     }
@@ -1209,6 +1225,15 @@ Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputR
   if (Blockly.RTL) {
     renderInfo.highlight.push('v', row.height - 2);
   }
+};
+
+/**
+ * Given an input, returns the amount of space it should occupy
+ * @param {Blockly.Input} input
+ * @returns {number}
+ */
+Blockly.BlockSvg.prototype.inputWidthToOccupy_ = function (input) {
+  return input.renderWidth + (input.extraSpace || 0);
 };
 
 /**

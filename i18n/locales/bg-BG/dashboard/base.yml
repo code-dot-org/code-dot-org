@@ -2,6 +2,7 @@ bg:
   errors:
     messages:
       not_saved: 'Коригирайте следните грешки:'
+      too_young: Това съдържание има възрастови ограничения и не е достъпно за по-малките ученици
   activerecord:
     errors:
       messages:
@@ -304,6 +305,8 @@ bg:
       viewing_solution: Показване на решението
       try_it_yourself: Опитайте сами
       section: Раздел
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -343,10 +346,11 @@ bg:
     student_progress: Вашият учебен прогрес
     student_stats: 'Вие сте спечелил %{trophy_count} от %{trophy_max}  трофеи.'
     student_left_off: 'Където сте спрели:'
-    student_finished: 'Вие приключите всички уроци, изберете друг клас %{online_link} или %{local_school_link}'
+    student_finished: 'Като приключите всички уроци, изберете друг клас %{online_link} или %{local_school_link}'
     local_school: местно училище
     online: онлайн
     see_details: Вижте детайли
+    view_course: Виж курса
     prize_info: 'Награди за участие (САЩ държавно училище само учители): до $1000 в класната стая награди.'
     tryfirst: 'Или можете да пробвате първо и по-късно да се регистрирате:'
     trynow: Опитайте сега
@@ -356,12 +360,16 @@ bg:
     try_beta_courses: Ново! Опитайте нашите бета курсове за K-5 ученици
     use_as_teacher: Използвайте този сайт като учител
     heading_hoc2014: '<h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>'
-    heading_elementary: '<h2>20 часа курсове за</h2><h1>Начинаещи (всички възрасти)</h1>'
+    heading_elementary: '<h2>20 часа курсове за</h2><h1>Въведение на компютърните науки (всички възрасти)</h1>'
     heading_apps: '<h2>Забавление за</h2><h1>Всеки</h1>'
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>всички възрасти</h1>'
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
+    choose_next_course: Опитайте курс като си изберете един от тези по-долу
     print_certificate: Печат на сертификат
+  share:
+    title: Обучавайте се в Code Studio
+    description: Всеки може да учи компютърни науки. Програмирай игри, приложения и изкуство с код.
   gender:
     male: Мъж
     female: Жена
@@ -370,13 +378,20 @@ bg:
     student: Ученик
     teacher: Учител
   footer:
+    thank_you: 'Благодарим на нашите <a href="https://code.org/about/donors"> дарители</a>, <a href="https://code.org/about/partners"> партньори</a>, нашия <a href="https://code.org/about/team"> разширен екип</a>, нашите видео гласове и нашите <a href="https://code.org/about/advisors"> образователни съветници</a> за подкрепата им в създаването на Code Studio.'
     help_from_html: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на този урок.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Всички права запазени. <br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Всички права запазени.'
+    help_from_html_old: Инженери от Google, Microsoft, Facebook и Twitter помогнаха за създаването на тези материали.
+    art_from_html: 'Ice Age&#8482; &amp; &copy;%{current_year} 20th Century Fox. Всички права запазени. <br /> Angry Birds&#8482; &amp;&copy; 2009-%{current_year} Rovio Entertainment Ltd. Всички права запазени. < br / > Plants vs. Zombies&#8482; &amp;&copy; %{current_year} Electronic Arts Inc. Всички права запазени'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Всички права са запазени.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Всички права са запазени'
     powered_by_aws: Създадено с Amazon Web Services
+    trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, the CODE logo и Hour of Code&reg; са търговски марки на Code.org.'
+    copyright: Авторско право
+    more: Повече
     feedback: Обратна връзка
     translate: Помогнете ни да преведем на вашия език
     support: Поддръжка
     support_url: http://support.code.org
+    tos_short: Условия
     tos: Термини
     privacy: Защита на личните данни
     secure: Защитената версия
@@ -394,10 +409,6 @@ bg:
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
   compatability:
-    https:
-      header: Моля, активирате HTTPS за Code.org.
-      message: "За да увеличим сигурността, ние превключите на HTTPS  %{https_date}. Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'> Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org."
-      hide_this_warning: Скрий предупреждението
     working:
       header: Ние работим по поддръжката на вашия браузър.
       message: "Code.org използва модерни уеб технологии. Това прави сайта по-бърз при зареждане. Вашият браузър не поддържа всички предвидени функции и е възможно да възникнат проблеми при използването на тази част на сайта. Помогнете ни <a href='%{report_issue_url}'> като ни уведомите за всички проблеми, които сте открили</a>. Можете също да <a href='%{supported_browsers_url}'> надстроите браузъра си до поддържаната версия</a>."
@@ -504,6 +515,10 @@ bg:
     open_response_body: Благодаря за вашия отговор!
   dialog:
     ok: OK
+    startover_title: Наистина ли искате да започнете отначало?
+    startover_body: Това ще рестартира пъзела в начално състояние и ще изтрие всички блокове, които сте добавили или променили.
+    startover_ok: Стартиране отначало
+    startover_cancel: Отмени
   time:
     hour: 1 час
     day: ден

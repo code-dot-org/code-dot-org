@@ -180,8 +180,11 @@ nl-NL:
   homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
   homepage_signpetition_dropdown: 'Teken onze petitie &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org en de College Board vormen een alliantie ter verbetering van de diversiteit in de informatica.
   homepage_banner_text_link: Leer meer
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Leer meer
   homepage_slot_text_title_hoc: Een Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -286,7 +289,7 @@ nl-NL:
   dashboard_k5_courses_desc: 'Deze cursussen mengen de online zelfsturende online cursussen op eigen tempo, met de "unplugged" activiteiten die geen computer nodig hebben. elke cursus bestaat uit 20 lessen die als een blok kunnen worden ingezet, of welke kunnen uitgesmeerd over meerdere semesters.'
   dashboard_middle_courses: 20-uur durende middelbare school cursussen
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: Een jaar durend Middelbare School vak
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Informatica in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
@@ -362,10 +365,10 @@ nl-NL:
   dashboard_students_reset_password: Wachtwoord resetten
   dashboard_students_share_section: 'Delen van de inlogpagina van de groep met uw leerlingen:'
   dashboard_students_print_info: Print de kaarten met inloggegevens van uw leerlingen.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Geheime foto
   dashboard_students_secret_picture: Geheime Foto
   dashboard_students_reset_picture: 'U kan  op elk moment de geheime afbeelding van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe geheime afbeelding zal worden gegenereerd welke  gebruikt moet worden wanneer ze inloggen.'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Geheim woord
   dashboard_students_secret_word: Wachtwoord
   dashboard_students_reset_word: |
     U kan op elk moment de wachtwoord van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe 
@@ -378,15 +381,15 @@ nl-NL:
   dashboard_curriculum_k5_title: K-5 Educator Resources
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_lesson_plans: Les plan
   dashboard_view_all_lesson_plans: Bekijk alle lesplannen
   dashboard_course1: 'Cursus 1:'
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: 'Cursus 4 (bèta): '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Basisschool Curriculum overzicht
-  dashboard_overview: Overview
+  dashboard_overview: Overzicht
   dashboard_sequence: Rij
   dashboard_framework: Framework
   dashboard_standards: Normen
@@ -398,9 +401,9 @@ nl-NL:
   dashboard_student_worksheet: leerlingen werkblad
   dashboard_teacher_worksheet: leraren werkblad
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csins: 'Computerwetenschap in de wetenschap:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_ecs: 'ICT ontdekken:'
   dashboard_grade_k: K
   dashboard_grade_other: Anders
   dashboard_login_word: Woord
@@ -428,7 +431,7 @@ nl-NL:
   dashboard_sections_password_account_creation: Student-gemaakte wachtwoord
   dashboard_sections_login_type_explanation: 'Deze tabel helpt  met het verklaren welke log-in typen, <b>foto, woord, of e-mail</b> u zou willen kiezen voor uw groep.'
   dashboard_faq: Veelgestelde Vragen
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: K-5 Veelgestelde vragen
   code_hoc_coming: 'Het Uur Code is hier - van 8 -14 december!'
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   learn_more: Leer meer
@@ -451,6 +454,7 @@ nl-NL:
   educator_notes: Opvoeder notities
   how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: Deelnemers
   teachers_notes: "Leraar-nota's"
   teachers_notes_hoc: "Leerkrachten: Lees belangrijke nota's voor leerkrachten hier"

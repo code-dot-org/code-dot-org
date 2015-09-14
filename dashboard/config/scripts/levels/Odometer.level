@@ -1,13 +1,12 @@
-<External>
+<Odometer>
   <config><![CDATA[{
-  "game_id": 43,
-  "created_at": "2015-05-05T22:57:20.000Z",
+  "game_id": 46,
+  "created_at": "2015-08-25T16:30:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
   "properties": {
     "href": "odometer/odometer.html",
-    "options": {
-      "skip_dialog": true
-    },
-    "title": "Odometer"
+    "skip_dialog": true
   }
 }]]></config>
-</External>
+</Odometer>

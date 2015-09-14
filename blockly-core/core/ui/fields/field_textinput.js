@@ -141,6 +141,10 @@ Blockly.FieldTextInput.prototype.onHtmlInputChange_ = function(e) {
   if (e.keyCode == 13) {
     // Enter
     Blockly.WidgetDiv.hide();
+    // In IE9 (for some reason) the run button is getting focus at some point
+    // after this, and then handling the enter event it thinks it got. Instead
+    // let's prevent default so that this doesn't happen.
+    e.preventDefault();
   } else if (e.keyCode == 27) {
     // Esc
     this.setText(htmlInput.defaultValue);

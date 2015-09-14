@@ -12,44 +12,32 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Благодаря за регистрирането ви като домакин на Часът на кодирането събитие!
+# Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
 
-**Всеки** организатор на Часът на кодирането ще получи 10 GB Dropbox пространство или $10 на Skype кредит като благодарност. [подробности](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
 
-## Разпространи новината
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+
+## Разпространете новината
 
 Кажете на приятелите си за #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
+## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
-## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-[ Изпратете този имейл](<%= hoc_uri('/resources#email') %>) или [ това изложение](/resources/hoc-one-pager.pdf) на своя директор.
+## Предложете на вашия работодател да се включи в инициативата
 
-<% else %>
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-## 2. Попитайте във вашето училище, дали предлага участие в Часът на кодирането
-
-[ Изпратете този имейл](<% = hoc_uri('/resources#email') % >) или да дайте [ това изложение](/resources/hoc-one-pager.pdf) това изложение</a> на своя директор.
-
-<% end %>
-
-## 3. Направете щедро дарение
-
-[Станете спонсор чрез нашата crowdfunding кампания.](http://<%= codeorg_url() %>/donate) За да предоставим обучение на 100 милиона деца, имаме нужда от вашата подкрепа. Ние току-що стартирахме [най-голямата образователна crowdfunding кампания](http://<%= codeorg_url() %>/donate) в историята. *Всеки* долар предоставен на [donors](http://<%= codeorg_url() %>/about/donors), ще удвои на въздействието си.
-
-## 3. Посъветвайте се с вашия работодател за възможно включване
-
-[ Изпратете този имейл](<%= hoc_uri('/resources#email') %>) на вашия ръководител или изпълнителен директор. Или [ му дайте това изложение](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 4. Насърчете включването в Часът на кодирането в рамките на вашата общност
+## Рекламирайте "Час на Кодиране " във вашата Община
 
 Ангажирайте локална група — момчета или момичета от скаутски клуб, църковна общност, университет, група на ветерани или синдикат. Можете да промотирате Часът на кодирането на "block party" във вашия квартал.
 
-## 5 Ангажирайте местната власт в подкрепа на Часът на Кодирането
+## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
 
-[ изпратете този имейл](<%= hoc_uri('/resources#politicians') %>) на кмета, Общинския съвет или училищното настоятелство. Или [ да им дайте това изложение](http://hourofcode.com/resources/hoc-one-pager.pdf) и ги поканете да посетят вашето училище.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

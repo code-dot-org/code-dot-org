@@ -29,7 +29,7 @@ pd_scripts.each do |script|
       level_hash = {}
       stage.script_levels.map(&:level).each do |level|
         progress = level_progress[level.id]
-        level_hash[level.id.to_s] = progress.try(:[], :status) == 'perfect' ? '1' : '0'
+        level_hash[level.id.to_s] = %w(perfect passed).include?(progress.try(:[], :status)) ? '1' : '0'
       end
       row.merge!(level_hash)
       row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})

@@ -15,11 +15,11 @@
 'use strict';
 
 var markup = require('./NetSimDnsTab.html.ejs');
-var DnsMode = require('./netsimConstants').DnsMode;
+var DnsMode = require('./NetSimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for "DNS" tab.
@@ -74,7 +74,7 @@ var NetSimDnsTab = module.exports = function (rootDiv, dnsModeChangeCallback,
  * Fill the root div with new elements reflecting the current state
  */
 NetSimDnsTab.prototype.render = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   var renderedMarkup = $(markup({
     level: levelConfig

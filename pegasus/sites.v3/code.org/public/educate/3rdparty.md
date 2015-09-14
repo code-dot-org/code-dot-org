@@ -46,10 +46,12 @@ nav: educate_nav
 | [CodeHS](https://codehs.com) | Year-long Introduction to Computer Science FREE and AP Computer Science in Java. Pro version is $2000/section/year | Online PD for teaching intro computer science, 30-40 hour course, $1000/teacher |
 | [Code.org](/educate) | Exploring Computer Science intro course and Computer Science Principles, a pilot course with an AP exam coming in 2016, FREE | In-person and online workshops available to partner districts, FREE, 50% of teacher stipends covered by Code.org |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
+| [Mobile CSP](http://www.mobile-csp.org/) | Year-long Computer Science Principles course, materials available online, FREE | Online, regional in-person offered in CT, MA, NH and CA (others may be available), FREE, stipends available|
 | [NMSI](http://www.nms.org/) | Year-long AP CS Principles/AP CS A course, FREE| In-person summer training + 4 days of PD throughout the year. One-on-one mentoring available to partner schools, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-computer-science/pltw-computer-science-curriculum) | 3 courses, $2000/school | 5 or 10-day in-person training, $1200 or $2400, depending on course |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [TEALS](http://www.tealsk12.org/schools/) | 3 courses, including AP CS A, FREE | Program implemented by TEALS volunteers, $5000 |
+
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>

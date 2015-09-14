@@ -6,7 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  if (!Studio.__hacked) {\r\n    Studio.__hacked = true;\r\n    Studio.customLogic.constructor.prototype.handleUpdatePlayer_ = function (key) {\r\n      var playerSprite = this.studio_.sprite[this.playerSpriteIndex];\r\n\r\n      // sprite.y is the top. get the center\r\n      var centerY = playerSprite.y + playerSprite.height / 2;\r\n\r\n      // invert Y\r\n      var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;\r\n\r\n      var newUserSpaceY = this.update_player(key, userSpaceY);\r\n\r\n      // reinvertY\r\n      playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;\r\n      playerSprite.dir = 0;\r\n      \r\n    };\r\n  }\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[16,16,16,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
@@ -37,9 +36,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "step_speed": "50",
-    "custom_game_type": "Big Game",
+    "custom_game_type": "Ninja Cat",
     "disable_examples": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>

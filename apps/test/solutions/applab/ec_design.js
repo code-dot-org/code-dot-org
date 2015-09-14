@@ -55,17 +55,17 @@ module.exports = {
         img.onload = function () {
           // There's no guarantee that we hit this onload after the onload in
           // designMode.js, so the styles won't always be set immediately.
-          // Instead, wait until the level starts to do our validation
+          // Instead, wait until the next tick
 
           // add a completion on timeout since this is a freeplay level
-          testUtils.runOnAppTick(Applab, 2, function () {
+          setTimeout(function () {
             assert.equal(buttonElement.style.backgroundImage, 'url(' + assetUrl + ')');
             assert.equal(buttonElement.style.width, '200px');
             assert.equal(buttonElement.style.height, '113px');
             assert.equal(buttonElement.style.backgroundSize, '200px 113px');
 
             Applab.onPuzzleComplete();
-          });
+          }, 1);
         };
         img.onerror = function (err) {
           assert(false, err.message);

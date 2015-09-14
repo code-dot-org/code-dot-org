@@ -14,7 +14,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Paldies, ka uzņēmies vadīt "Programmēšanas stundu"!
 
-**Katrs** "Programmēšanas stundas" organizators pateicībā saņems 10 GB vietas Dropbox vai $10 Skype kredīta. [Sīkāk](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Dalies ar informāciju
 
@@ -22,34 +24,20 @@ Pastāsti saviem draugiem par "Programmēšanas stundu".
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Lūdz visai skolai piedalīties "Programmēšanas stundā"
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Lai iesaistītos, jautā savam darba devējam
 
-## 2. Lūdz visai skolai piedalīties "Programmēšanas stundā"
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Nosūti šo e-pastu](<%= hoc_uri('/resources#email') %>) vai iesniedz[šo reklāmlapu](/resources/hoc-one-pager.pdf) šo reklāmlapu</a> direktoram.
-
-<% end %>
-
-## 3. Veic dāsnu ziedojumu
-
-[ Ziedo mūsu kampaņai.](http://<%= codeorg_url() %>/ziedo) Lai apmācītu 100 miljonus bērnu, mums ir nepieciešams tavs atbalsts. Mēs tikko sākām [lielāko izglītības kampaņu](http://<%= codeorg_url() %>/donate) vēsturē. 
-
-## 4. Aiciniet savu darba devēju iesaistīties
-
-[Nosūtiet šo e-pastu](<%= hoc_uri('/resources#email') %>) priekšniekam vai uzņēmuma vadītājam. Iesniedziet [šo reklāmlapu](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Popularizē "Programmēšanas stundu" savā kopienā
+## 4. Uzslavē "Programmēšanas stundu" savā kopienā
 
 Iesaisti vietējās organizācijas - baznīcas, universitāšu vai veterānu kopienas/organizācijas. Tāpat vari arī vadīt "Programmēšanas stundu" kaimiņiem.
 
-## 6. Lūdziet vietējām amatpersonām atbalstīt "Programmēšanas stundu"
+## 5. Jautājiet ievēlētajai amatpersonai, lai atbalsta "Programmēšanas stundu"
 
-[Nosūtiet šo e-pastu](<%= hoc_uri('/resources#politicians') %>) deputātiem, pilsētu padomēm vai skolu padomēm. [Iedodiet šo reklāmlapu](http://hourofcode.com/resources/hoc-one-pager.pdf) un uzaiciniet viņus apmeklēt Jūsu skolu.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

@@ -1,4 +1,5 @@
 require 'cdo/db'
+require_relative 'email_validator'
 require 'mail'
 require 'openssl'
 require 'base64'
@@ -47,7 +48,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}"
+        logger.info "Registered new message template '#{name}' as #{id}" if logger
       end
 
       return path
@@ -98,16 +99,9 @@ module Poste2
   @@url_cache = {}
   @@message_id_cache = {}
 
+  # Returns true if address is a valid email address.
   def self.email_address?(address)
-    email = Mail::Address.new(address)
-    return false unless email.address == address
-    return false unless email.domain # Must have a domain
-    # A valid domain must have dot_atom_text elements size > 1; user@localhost is excluded
-    # treetop must respond to domain; we exclude valid email values like <user@localhost.com>
-    return false unless (email.__send__(:tree).domain.dot_atom_text.elements.size > 1)
-    true
-  rescue
-    false
+    EmailValidator::email_address?(address)
   end
 
   def self.find_or_create_url(href)
@@ -210,6 +204,7 @@ module Poste2
 
   class DeliveryMethod
 
+    ALLOWED_SENDERS = Set.new ['pd@code.org', 'noreply@code.org']
     def initialize(settings)
     end
 
@@ -217,7 +212,7 @@ module Poste2
       content_type = mail.header['Content-Type'].to_s
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
       sender = mail.from.first
-      raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org'
+      raise ArgumentError, "Unsupported sender: #{sender}" unless ALLOWED_SENDERS.include?(sender)
 
       subject = mail.subject.to_s
       body = mail.body.to_s

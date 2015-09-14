@@ -8,6 +8,9 @@ html[dir='rtl'] div#codeWorkspace {
 
 #codeApp {
   height: 600px; }
+  #codeApp.pin_bottom {
+    height: initial;
+    bottom: 25px; }
 
 /* Sprited icons. */
 .icon21 {

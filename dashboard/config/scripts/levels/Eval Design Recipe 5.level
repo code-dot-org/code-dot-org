@@ -24,8 +24,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Using the Design Recipe, write a function _striped-flag_ that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
-    "disable_examples": "false"
+    "markdown_instructions": "Write a function `striped-flag` that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "disable_examples": "false",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>
@@ -188,7 +189,7 @@
           <block type="functional_logical_not"/>
           <block type="functional_boolean"/>
         </category>
-        <category name="Cond">
+        <category name="Conditionals">
           <block type="functional_cond"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>

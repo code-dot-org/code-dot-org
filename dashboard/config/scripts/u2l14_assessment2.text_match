@@ -2,3 +2,10 @@ name 'U2L14 Assessment2'
 title 'Assessment: Question 3'
 content1 'Using the Vigenere cipher, does the length of the key matter? 
 For example, if one key is length 5 and another is 20, does one produce a “better” encrypted message than the other, or is it basically the same? Yes or no? Explain your reasoning.'
+teacher_markdown <<MARKDOWN
+Answers will vary, but may include these concepts:
+
+- Yes in general the longer the key the "better" the encryption
+- It is harder to find patterns in a longer key
+- A key is better when it does not have repeating letters used (ex. AAAAA would not be a good key)
+MARKDOWN

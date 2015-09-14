@@ -5,3 +5,9 @@ title 'Assessment: Question 1'
 markdown <<MARKDOWN
 What is a Caesar cipher?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- A Caesar cipher is a type of substitution encoding in which each letter in the message is replaced by a letter at a fixed position down the alphabet. Each letter might be shifted 3 places; a = d, b = e, c = f.
+MARKDOWN

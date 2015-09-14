@@ -4,8 +4,13 @@ question 'Why are computers better than humans at breaking encryptions such as t
 wrong 'Computers are smarter than humans.'
 right 'Computers are faster than humans.'
 wrong 'The Vigenere was originally designed by a computer.'
-wrong 'They are not - humans are better as breaking Vigenere encryptions than computers.'
+wrong 'They are not - humans are better at breaking Vigenere encryptions than computers.'
 
 markdown <<MARKDOWN
 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Computers are faster than humans.
 MARKDOWN

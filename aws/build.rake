@@ -209,7 +209,7 @@ end
 def upgrade_frontend(name, host)
   commands = [
     'cd production',
-    'git pull',
+    'git pull --ff-only',
     'rake build',
   ]
   command = commands.join(' && ')
@@ -242,15 +242,6 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
 
     # If I'm daemon, do some additional work:
     if rack_env?(:production) && CDO.daemon
-      # BUGBUG: Laurel added this here. It probably belongs in the top-level Rakefile as these values
-      #   should be seeded to memcached prior to restarting the Dashboard service which will already
-      #   have happened by this moment. In practice, no traffic hits Daemon so this isn't critical, but
-      #   should be addressed.
-      Dir.chdir(dashboard_dir) do
-        HipChat.log "Putting <b>dashboard</b> scripts in memcached..."
-        RakeUtils.rake 'seed:script_cache_to_memcached'
-      end
-
       # Update the front-end instances, in parallel, but not all at once. When the infrstracture is
       # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
       # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.
@@ -325,7 +316,7 @@ task :dashboard_browserstack_ui_tests do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '-p', '10', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '-p', '90', '--auto_retry', '--html'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -343,7 +334,7 @@ task :dashboard_eyes_ui_tests do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome33Win7', '-d', 'test-studio.code.org', '--eyes', '--html', '--auto_retry'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'Chrome44Win7', '-d', 'test-studio.code.org', '--eyes', '--html', '--auto_retry', '-f', 'features/applab.feature,features/contractEditor.feature,features/eyes.feature', '-p', '3'
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message

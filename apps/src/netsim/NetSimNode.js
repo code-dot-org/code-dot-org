@@ -112,6 +112,14 @@ NetSimNode.prototype.getStatus = function () {
 };
 
 /**
+ * Whether or not this node can accept any more connections
+ * @returns {boolean}
+ */
+NetSimNode.prototype.isFull = function () {
+  throw new Error('isFull method is not implemented');
+};
+
+/**
  * Establish a connection between this node and another node,
  * by creating a wire between them, and verifying that the remote node
  * can accept the connection.
@@ -124,23 +132,37 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
   onComplete = onComplete || function () {};
 
   var self = this;
-  NetSimWire.create(this.shard_, this.entityID, otherNode.entityID, function (err, wire) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
+  NetSimWire.create(this.shard_,
+      this.makeWireRowForConnectingTo(otherNode),
+      function (err, wire) {
+        if (err) {
+          onComplete(err, null);
+          return;
+        }
 
-    otherNode.acceptConnection(self, function (err, isAccepted) {
-      if (err || !isAccepted) {
-        wire.destroy(function () {
-          onComplete(new Error('Connection rejected.'), null);
+        otherNode.acceptConnection(self, function (err, isAccepted) {
+          if (err || !isAccepted) {
+            wire.destroy(function () {
+              onComplete(new Error('Connection rejected: ' + err.message), null);
+            });
+            return;
+          }
+
+          onComplete(null, wire);
         });
-        return;
-      }
+      });
+};
 
-      onComplete(null, wire);
-    });
-  });
+/**
+ * Create an appropriate initial wire row for connecting to the given node.
+ * @param {!NetSimNode} otherNode
+ * @returns {WireRow}
+ */
+NetSimNode.prototype.makeWireRowForConnectingTo = function (otherNode) {
+  return {
+    localNodeID: this.entityID,
+    remoteNodeID: otherNode.entityID
+  };
 };
 
 /**

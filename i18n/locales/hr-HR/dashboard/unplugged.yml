@@ -161,7 +161,7 @@ hr:
         desc: 'Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.'
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
+        title: For Petlja Zabava
         desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:

@@ -5,278 +5,158 @@ títol: Recursos maquetació: àmplia nav: recursos_nav
 * * *
 
 <div class="row">
-  <h1 class="col-sm-6">
-    Recursos
+  <h1 class="col-sm-12">
+    Resources (2015 resources coming soon)
   </h1>
 </div>
 
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/resources/how-to') %>)
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+<a id="handouts"></a>
 
-<% else %>
+## Utilitza aquest fulletó per córrer la veu
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
-<% end %>
+## Dona aquest fulletó al professorat i als centres
 
-<a id="handouts"></p> 
+[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
-<h2>
-  Use this handout to spread the word
-</h2>
+<a id="videos"></a>
 
-<p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="imatge" /></a>
-</p>
+## Mostra aquests vídeos per animar als alumnes
 
-<h2>
-  Give this handout to teachers and schools
-</h2>
-
-<p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="imatge" /></a>
-</p>
-
-<p>
-  <a id="videos"></p> 
-  
-  <h2>
-    Show these videos to inspire students
-  </h2>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>El que la majoria d'escoles no ensenyen (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>L'Hora del Codi és aquí - Qualsevol pot aprendre</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama sobre la informàtica</strong></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Qualsevol pot aprendre (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
   <p>
-    <a id="posters"></p> 
-    
-    <h2>
-      Hang these posters in your school
-    </h2>
-    
-    <p>
-      <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="imatge" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="imatge" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="imatge" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="imatge" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="imatge" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="imatge" /></a>
-    </p>
-    
-    <p>
-      <a id="banners"></a>
-    </p>
-    
-    <h2>
-      Feature these banners on your website
-    </h2>
-    
-    <p>
-      <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    
-    <p>
-      <a id="social"></a>
-    </p>
-    
-    <h2>
-      Post these on social media
-    </h2>
-    
-    <p>
-      <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    
-    <p>
-      <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="imatge" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    </p>
-    
-    <p>
-      <a id="sample-emails"></a>
-    </p>
-    
-    <h2>
-      Send these emails to help promote the Hour of Code
-    </h2>
-    
-    <p>
-      <a id="email"></a>
-    </p>
-    
-    <h2>
-      Ask your school, employer or friends to sign up:
-    </h2>
-    
-    <p>
-      Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. If you heard about the Hour of Code last year, you might know it made history. En una setmana, 15 milions d'estudiants provaren la informàtica!
-    </p>
-    
-    <p>
-      Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-    </p>
-    
-    <p>
-      This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
-    </p>
-    
-    <p>
-      Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
-    </p>
-    
-    <p>
-      Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
-    </p>
-    
-    <p>
-      <a id="media-pitch"></a>
-    </p>
-    
-    <h2>
-      Convida als mitjans de comunicació a assistir al teu esdeveniment:
-    </h2>
-    
-    <p>
-      <strong>Línia d'assumpte:</strong> L'escola local s'uneix a la missió d'introduir 100m estudiants a la informàtica
-    </p>
-    
-    <p>
-      Els ordinadors són a pertot arreu, però menys escoles ensenyen informàtica que 10 anys enrere. Les nenes i les minories són severament subrepresentades. La bona notícia és, estem en el camí de canviar-ho.
-    </p>
-    
-    <p>
-      L'any passat, 15 milions d'estudiants van provar la Informàtica en una setmana! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-    </p>
-    
-    <p>
-      Ara el moviment l'Hora del Codi aspira a 100 milions d'estudiants.
-    </p>
-    
-    <p>
-      És per això que cadascun dels [nombre X] estudiants de [nom de l'escola] s'estan unint al esdeveniment d'aprenentatge més gran de la història: L'Hora de Codi, durant desembre 8-14.
-    </p>
-    
-    <p>
-      Us convidem a assistir al acte inaugural i veure els nens començar l'activitat el [DATA].
-    </p>
-    
-    <p>
-      L'Hora del Codi, organitzat per l'associació sense ànim de lucre Code.org i més de 100 d'altres, és una declaració de que la generació actual d'estudiants estan preparats per aprendre les habilitats crítiques per l'èxit al segle XXI. Si us plau, uneix-te.
-    </p>
-    
-    <p>
-      <strong>Contacte:</strong> [EL TEU NOM], [CÀRREC], mòbil: 212-555-5555
-    </p>
-    
-    <p>
-      <strong>Quan:</strong> [Data i hora del teu esdeveniment]
-    </p>
-    
-    <p>
-      <strong>On:</strong> [Adreces i indicacions]
-    </p>
-    
-    <p>
-      Espero que estem en contacte.
-    </p>
-    
-    <p>
-      <a id="parents"></a>
-    </p>
-    
-    <h2>
-      Digues als pares sobre l'esdeveniment de la vostra escola:
-    </h2>
-    
-    <p>
-      Benvolguts pares,
-    </p>
-    
-    <p>
-      Vivim en un món envoltat de tecnologia. I sabem que qualsevol que sigui el camp que els alumnes escullin per entrar en l'edat adulta, la seva capacitat per tenir èxit cada vegada més dependrà de la comprensió de tinguin sobre com funciona la tecnologia. Però només una petita part de nosaltres estem aprenent Ciències de la Computació, i ara hi ha menys estudiants que fa una dècada.
-    </p>
-    
-    <p>
-      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
-    </p>
-    
-    <p>
-      La nostre Hora del Codi és una declaració de que [nom de l'escola] està disposada a ensenyar aquestes habilitats fonamentals del segle XXI. Per continuar oferint activitats de programació als vostres estudiants, volem fer molt gran el nostre event de l'Hora del Codi. T'animo a ser voluntari, arribar als mitjans de comunicació locals, compartir les notícies en les teves xarxes social i considerar col·laborar en altres esdeveniments de l'Hora del Codi a la teva comunitat.
-    </p>
-    
-    <p>
-      Aquesta és una oportunitat per canviar el futur de l'educació a [NOM CIUTAT/POBLE].
-    </p>
-    
-    <p>
-      Mira http://hourofcode.com/es/ca per a més detalls, i ajuda a córrer la veu.
-    </p>
-    
-    <p>
-      Atentament,
-    </p>
-    
-    <p>
-      El teu director
-    </p>
-    
-    <p>
-      <a id="politicians"></a>
-    </p>
-    
-    <h2>
-      Invite a local politician to your school's event:
-    </h2>
-    
-    <p>
-      Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-    </p>
-    
-    <p>
-      Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-    </p>
-    
-    <p>
-      És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 8-14). L'any passat, 15 milions d'estudiants provaren la informàtica en una setmana. Aquest any, estem reunint estudiants d'arreu del món per arribar a 100 milions d'estudiants!
-    </p>
-    
-    <p>
-      I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
-    </p>
-    
-    <p>
-      Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-    </p>
-    
-    <p>
-      Sincerely, [NAME], [TITLE]
-    </p>
+    <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>El que la majoria d'escoles no ensenyen (5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
+
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>L'Hora del Codi és aquí - Qualsevol pot aprendre</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
+
+<div style='clear:both'>
+</div>
+
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>President Obama sobre la informàtica</strong></a>
+  </p>
+</div>
+
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Qualsevol pot aprendre (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
+
+<div style="float:left; padding:10px">
+</div>
+
+<div style='clear:both'>
+</div>
+
+<a id="posters"></a>
+
+## Penjar aquests cartells a la teva escola
+
+[![imatge](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![imatge](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![imatge](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![imatge](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![imatge](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![imatge](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![imatge](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![imatge](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
+
+<a id="banners"></a>
+
+## Posa aquests banners al teu lloc web
+
+[![imatge](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="social"></a>
+
+## Publica-ho als mitjans de comunicació
+
+[![imatge](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+[![imatge](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![imatge](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="sample-emails"></a>
+
+## Envia aquests correus per ajudar a promoure l'Hora del Codi
+
+<a id="email"></a>
+
+## Demana a l'escola, empresaris o amics que s'inscriguin:
+
+Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! i Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+
+Corre la veu. Acull un esdeveniment. Demana a una escola local que s'inscrigui. O prova l'Hora del Codi tu mateix -- tothom pot beneficiar-se de aprendre les bases.
+
+Get started at http://hourofcode.com/<%= @country %>
+
+<a id="media-pitch"></a>
+
+## Convida als mitjans de comunicació a assistir al teu esdeveniment:
+
+**Subject line:** Local school joins mission to introduce students to computer science
+
+Els ordinadors són a pertot arreu, però menys escoles ensenyen informàtica que 10 anys enrere. Les nenes i les minories són severament subrepresentades. La bona notícia és, estem en el camí de canviar-ho.
+
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! i Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
+
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
+
+Us convidem a assistir al acte inaugural i veure els nens començar l'activitat el [DATA].
+
+L'Hora del Codi, organitzat per l'associació sense ànim de lucre Code.org i més de 100 d'altres, és una declaració de que la generació actual d'estudiants estan preparats per aprendre les habilitats crítiques per l'èxit al segle XXI. Si us plau, uneix-te.
+
+**Contacte:** [EL TEU NOM], [CÀRREC], mòbil: 212-555-5555
+
+**Quan:** [Data i hora del teu esdeveniment]
+
+**On:** [Adreces i indicacions]
+
+Espero que estem en contacte.
+
+<a id="parents"></a>
+
+## Digues als pares sobre l'esdeveniment de la vostra escola:
+
+Benvolguts pares,
+
+Vivim en un món envoltat de tecnologia. I sabem que qualsevol que sigui el camp que els alumnes escullin per entrar en l'edat adulta, la seva capacitat per tenir èxit cada vegada més dependrà de la comprensió de tinguin sobre com funciona la tecnologia. Però només una petita part de nosaltres estem aprenent Ciències de la Computació, i ara hi ha menys estudiants que fa una dècada.
+
+És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+La nostre Hora del Codi és una declaració de que [nom de l'escola] està disposada a ensenyar aquestes habilitats fonamentals del segle XXI. Per continuar oferint activitats de programació als vostres estudiants, volem fer molt gran el nostre event de l'Hora del Codi. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+Aquesta és una oportunitat per canviar el futur de l'educació a [NOM CIUTAT/POBLE].
+
+Mira http://hourofcode.com/es/ca per a més detalls, i ajuda a córrer la veu.
+
+Atentament,
+
+El teu director
+
+<a id="politicians"></a>
+
+## Convida a un polític local a l'esdeveniment de la teva escola:
+
+Estimat [Alcalde/Governador/Representant/Senador COGNOM]:
+
+Sabia vostè que en l'economia actual, les feines de informàtica superen en nombre de 3 a 1 als estudiants que es graduen en aquest camp? I, que la informàtica es fonamental per a *qualsevol* indústria d'avui dia. Yet most of schools don’t teach it. A [NOM DE L'ESCOLA], estem tractant de canviar això.
+
+És per això que la nostra escola sencera s'uneix a l'esdeveniment d'aprenentatge més gran de la història: L'Hora del Codi, durant la setmana de les Ciències Informàtiques a l'Educació (Desembre 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+Em dirigeixo a vostè per convidar-lo a participar en el nostre esdeveniment de l'Hora del Codi i parlar en la Assemblea inaugural. Tindrà lloc el [DATA, HORA, LLOC], i farà una forta declaració de que [nom Estat o Ciutat] està disposat a ensenyar als nostres estudiants les habilitats crítiques del segle XXI. Volem garantir que els nostres alumnes són a l'avantguarda de la tecnologia del futur i no només per consumir-la.
+
+Si us plau, contacteu amb mi en [telèfon o adreça de correu electrònic]. Espero la seva resposta.
+
+Atentament,\[NAME\]\[TITLE\]

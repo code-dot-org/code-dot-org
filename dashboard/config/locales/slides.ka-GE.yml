@@ -3,16 +3,15 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Welcome to your first hour of code! Let's dive right into your first
-          taste of programming.
+        text: მოგესალმები კოდის პირველ საათზე! დროა, გავუგოთ გემო პროგრამირებას.
       2:
         image: notes/hoc1_2.jpg
-        text: We'll be using Blockly, a visual programming language where you drag
-          and drop blocks to write code.
+        text: ჩვენ გამოვიყენებთ ბლოკლის - პროგრამირების ვიზუალურ ენას, რომელშიც კოდის
+          საწერად გამოიყენება ბლოკები.
       3:
         image: notes/hoc1_3.jpg
-        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
-          a line of "real" code.
+        text: ძირითადად, კოდს წერენ ხოლმე, მაგრამ ბლოკლი ვიზუალური ენაა. ყოველი ბლოკი
+          "ნამდვილი" კოდის ერთ ხაზს შეესაბამება.
       4:
         image: notes/hoc1_4.jpg
         text: თქვენ ისწავლით კომპიუტერული მეცნიერების იმ საწყისებს, რომლებიც გამოიყენება
@@ -22,545 +21,527 @@
         text: პროგრამა არის ინსტრუქციების ერთობლიობა, რომელსაც ემორჩილება თქვენი კომპიუტერი.
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze
-          to hit a Green Pig.
+        text: შენი პირველი პროგრამის მიზანია მიაღწევინო გაბრაზებულ ჩიტს მწვანე გოჭამდე
+          ლაბირინთის გავლით.
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions
-          for each puzzle are below the maze.
+        text: მარცხენა მხარესაა ლაბირინთი, რომელშიც გაეშვება პროგრამა. ყოველი ამოცანის
+          დავალება ლაბირინთის ქვემოთაა მოცემული.
       8:
         image: notes/hoc1_8.jpg
-        text: The middle toolbox has the commands for the Angry Bird. You'll use these
-          to build your code.
+        text: ინსტრუმენტების შუა პანელი შეიცავს ბრძანებებს გაბრაზებული ჩიტის სამართავად.
+          კოდის დასაწერად ესენი უნდა გამოიყენო.
       9:
         image: notes/hoc1_9.jpg
-        text: On the right is your workspace where you'll drag blocks from the toolbox
-          to build your program. To delete a block, drag it to the trash in the corner.
+        text: მარჯვნივ განლაგებულია შენი სამუშაო ადგილი, სადაც პროგრამის შესაქმნელად
+          უნდა გადაიტანო ბლოკები ინსტრუმენტების პანელიდან. ბლოკის წასაშლელად გადაიტანე
+          ის ნაგვის ყუთში.
       10:
         image: notes/hoc1_10.jpg
-        text: Each block is one instruction. If you drag a "move forward" block to
-          your workspace and press "Run Program", the bird moves one space on the
-          maze.
+        text: ყოველი ბლოკი არის ერთი ბრძანება. თუ სამუშაო ადგილას დაგაიტან ბლოკს "მოძრაობა
+          წინ" და დააჭერ "კოდის გაშვებას", ჩიტი ლაბირინთში ერთი ნაბიჯით გადაადგილდება.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: ერთზე მეტი მოქმედების შესასრულებალად შეგიძლია ბევრი ბლოკი გადაიტანო
+          სამუშაო ადგილას და გადააბა ისინი ერთმანეთს. ჩიტი შეასრულებს ბრძანებებს ზემოდან
+          ქვემოთ თანმიმდევრობით.
       12:
         image: notes/hoc1_12.jpg
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
+        text: თუ პროგრამა უკვე გაუშვით, მაგრამ გინდათ რომ შეასწოროთ და თავიდან სცადოთ,
+          დააჭირეთ ღილაკს "თავიდან".
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: დროა ადგილი მივუჩინოთ ამ გოჭებს!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: ჰეი, მე ჯეი ერი ვარ! მრბოლელთა ყოველ გუნდს მოსაგებად სჭირდება პროგრამისტები.
+          ისინი ამუშავებენ მანქანის მონაცემებს მათ ასაჩქარებლად.
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: ამ თავსატეხებში, შენ იქნები მხატვარი, რომელიც ავლებს ხაზს თავისი კვალის
+          გასწვრივ.
       3:
         image: notes/stage5_3.jpg
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
+        text: ესაა ბლოკი "გადაადგილება 100 პიქსელით". პიქსელი არის უმცირესი წერტილი
+          შენს ეკრანზე.
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: ესაა ბლოკი "მობრუნება მარჯვნივ 90 გრადუსით". იგი მოაბრუნებს მხატვარს
+          ისევე, როგორც "მობრუნების" ბლოკი აბრუნებდა პერსონაჟებს ლაბირინთში.
       5:
         image: notes/stage5_5.jpg
-        text: Click on the arrow in either of these blocks to change the amount the
-          artist moves forward or turns. Play around to get familiar with these new
-          blocks.
+        text: დააჭირე ისარს რომელიმე ბლოკში და შეცვალე მხატვრის წინ მოძრაობებისა ან
+          მობრუნებების რაოდენობა. კარგად გაეცანი ამ ახალი ბლოკების შესაძლებლობებს.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
-          field completely flat to start planting crops.
+        text: ჰეი, მე პაოლა ვარ! ამ თავსატეხებში შენ ხარ ფერმერი რომელმაც ხორბლის
+          დასათესად უნდა მოასწოროს თავისი ყანა.
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
+        text: უნდა დაეხმარო და მოაშორებინო მიწის ყველა გროვა და შეავსებინო ყველა ორმო.
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: ახალი ბლოკი აშორებს გროვას ერთ პორცია მიწას და ყრის ერთ პორცია მიწას
+          ორმოში.
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
+        text: გროვები და ორმოები სხვადასხვა ზომისაა, ამიტომ უნდა აცნობო ფერმერს, რამდენჯერ
+          მოიქნიოს ნიჩაბი.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: ჰეი, მე ვარ ქეითი! პროგრამირებაში ერთ-ერთი ყველაზე მაგარი რამ ისაა,
+          რომ კომპიუტერული პროგრამა შეიძლება იყოს ინტერაქტიული.
       2:
         image: notes/flappy02.jpg
-        text: Any time somebody clicks or taps or types on a computer or phone, that
-          generates an EVENT, and there's some code that decides what to do when an
-          EVENT occurs.
+        text: ყოველჯერ, როცა ვინმე აჭერს რამე ღილაკს ან წერს რამეს კომპიუტერსა ან
+          ტელეფონში, ხდება მოვლენა და ყოველთვის არსებობს კოდი, რომელიც განსაზღვრავს,
+          რა ხდება მოვლენის შემდეგ.
       3:
         image: notes/flappy03.jpg
-        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse
-          is clicked, play a sound" '
+        text: 'მაგალითად, შეიძლება მოვლენების გადამმუშავებელი იყოს ასეთი: თუ ვინმე
+          დაკლიკავს მაუსით, უნდა გამოიცეს ხმა '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: გაგიგონია ოდესმე FlappyBird თამაში? მოვლენების გადამმუშავებლების მეშვეობით
+          ჩვენ ამ თამაშის საკუთარ ვერსიას შევქმნით!
       5:
         image: notes/flappy05.jpg
-        text: The code you'll write involves dragging and dropping blocks that represent
-          commands for the computer. Under the hood, each of these blocks is represented
-          by real code.
+        text: კოდი, რომელსაც შენ დაწერ, შეიცავს ბლოკებს ბრძანებებით. დაფარული ნაწილის
+          ქვეშ ყოველი ბლოკი ნამდვილი კოდია.
       6:
         image: notes/flappy06.jpg
-        text: 'If you take a look at the workspace, there are some green blocks that
-          are filled in for you - these are "event handlers" '
+        text: 'შეხედე სამუშაო სივრცეს - ხედავ რამდენიმე შევსებულ მწვანე ბლოკს? მოვლენებს
+          სწორედ ესენი დაამუშავებენ '
       7:
         image: notes/flappy07.jpg
-        text: If you want the bird to FLAP when you CLICK the mouse, you can do that
-          by attaching the "FLAP" block to the appropriate event handler, and now
-          in your game whenever you click the mouse, the bird will flap.
+        text: 'თუ გინდა, რომ ჩიტი ფრთებს იქნევდეს ყოველთვის, როცა მაუსს დაკლიკავ,
+          მიუმაგრე "აქნევის" ბლოკი შესაბამისი მოვლენის დამამუშავებელ ბლოკს: ახლა შენს
+          თამაშში, როცაც კი დაკლიკავ, ჩიტი აფრინდება.'
       8:
         image: notes/flappy08.jpg
-        text: In each puzzle of this activity we'll introduce new types of events
-          as green blocks on the workspace, and you can decide the appropriate blocks
-          to add in response to those events.
+        text: ყოველ თავსატეხში მოვლენების ახალ ტიპებს შემოვიტანთ და შენ მოგიწევს გადაწყვიტო,
+          რომელი ბლოკები შეიცავს ამ მოვლენების შესაბამის მოქმედებებს.
       9:
         image: notes/flappy09.jpg
-        text: When you see a drop down arrow like this, that means you can change
-          the settings - like what sound to play when flappy hits the ground.
+        text: როცა ასეთ დაშვებულ ისარს ხედავ, ეს ნიშნავს რომ შეგიძლია პარამეტრების
+          შეცვლა - მაგალითად, რომელი ხმა უნდა ისმოდეს როცა ჩიტი დავარდება ძირს.
       10:
         image: notes/flappy10.jpg
-        text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+        text: ბოლო თავსატეხში შენ შეძლებ შექმნა შენი საკუთარი თამაში და გაუზიარო ის
+          მეგობრებს. იხალისე!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer
-          to repeat any set of actions over and over, thousands or even billions of
-          times.
+        text: ჰეი, მე ვარ მარკი! მოდი, მეტი ვისწავლოთ ციკლებზე. ციკლების გამოყენებით
+          შენ აცნობებ კომპიუტერს რომ მოქმედებათა რაღაც ერთობა მიყოლებით უნდა გამეორდეს,
+          ათასჯერ ან თუნდაც მილიონჯერ.
       2:
         image: notes/hoc2_2.jpg
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get
-          to the pig.
+        text: ამ თავსატეხში გოჭის დასაჭერად ჩიტი წინ 5 ნაბიჯით უნდა გადაადგილდეს.
       3:
         image: notes/hoc2_3.jpg
-        text: We can use the new "repeat" block to help us out.
+        text: ახალი ბლოკი "გამეორება" ძალიან დაგვეხმარება ახლა.
       4:
         image: notes/hoc2_4.jpg
-        text: Instead of dragging out 5 "move forward" blocks...
+        text: იმის მაგივრად, რომ ხუთი "წინ გადაადგილების" ბლოკი დააწყო...
       5:
         image: notes/hoc2_5.jpg
-        text: We can put the "move forward" block inside the "repeat" block and write
-          a number in the block to tell it how many times to repeat.
+        text: შეგვიძლია ბლოკი "წინ გადაადგილება" ჩავსვათ "გამეორების" ბლოკის შიგნით
+          და ჩავწეროთ ბლოკში, რამდენჯერ უნდა გაიმეოროს მოქმედება.
       6:
         image: notes/hoc2_6.jpg
-        text: 'And this is important: you can put more than one command inside a "repeat"
-          block.'
+        text: 'და ეს მნიშვნელოვანია: გამეორების ბლოკში ერთზე მეტი ბრძანების ჩასმა
+          შეგიძლია.'
       7:
         image: notes/hoc2_7.jpg
-        text: Enjoy using your new "repeat" block!
+        text: გამოიყენე ახალი ბლოკი "გამეორება"!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: 'ჰეი, მე კრისი ვარ. სანამ მაიამი ჰითს შევუერთდებოდი, ჯორჯიას ტექ. უნიში
+          ვსწავლობთი ინფორმატიკას. მოდი, ვნახოთ, როგორია ჩვენი ახალი ბლოკი: "გაიმეორე,
+          სანამ".'
       2:
         image: notes/hoc3_2.jpg
-        text: What if we didn't know how far the bird had to move to get to the pig?
+        text: რა ვქნათ, თუ არ ვიცით, რამდენად შორს უნდა წავიდეთ ჩიტი რომ გოჭს მიწვდეს?
       3:
         image: notes/hoc3_3.jpg
-        text: If we put a "move forward" block inside the "repeat until" block, the
-          bird will move forward UNTIL it reaches the pig (or crashes into a wall).
+        text: თუ ბლოკს "მოძრაობა წინ" ჩავსვამთ ბლოკში "გაიმეორე, სანამ", ჩიტი იმოძრავებს
+          წინ, სანამ არ მიაღწევს გოჭამდე (ან შეეჩეხება კედელს).
       4:
         image: notes/hoc3_4.jpg
-        text: 'And this is important: just like before, we can put multiple blocks
-          inside the "repeat until" block, and they will all be repeated.'
+        text: 'მნიშვნელოვანია: ისევე, როგორც ადრე, "გაიმეორე, სამამ" ბლოკში ბევრი
+          ბლოკის ჩასმა შეიძლება და ისინი ყველა გამეორდება.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
-          This is how computers make decisions.'
+        text: ჰეი, მე ვარ ბილი! ვისწავლოთ ახალი მნიშვნელოვანი ცნება "თუ". ის ეხმარება
+          კომპიუტერს გადაწყვეტილებების მიღებაში.
       2:
         image: notes/hoc4_2.jpg
-        text: You use "If" statements yourself everday. Before you go outside each
-          morning, you say IF it's raining outside, I need to wear my jacket.
+        text: დააკვირდი, შენ თვითონაც ხშირად იყენებ "თუ"-ს გადაწყვეტილების მისაღებად.
+          მაგალითად, ყოველ დილით ფიქრობ "თუ გარეთ წვიმს, ქოლგას ავიღებ".
       3:
         image: notes/hoc4_3.jpg
-        text: We can tell the zombie to check IF there's path to the left, and if
-          he finds a path to the left, we can have him turn in that direction.
+        text: შეგვიძლია ვუთხრათ ზომბის, რომ შეამოწმოს, თუ არის მარცხნივ გზა, და თუ
+          არის, ვუბრძანოთ, რომ მოუხვიოს.
       4:
         image: notes/hoc4_4.jpg
-        text: To write the code for this, let's drag out our "if" block and put a
-          "turn left" block inside it.
+        text: 'დავწეროთ კოდი: გადავიტანოთ "თუ" ბლოკი და ჩავსვათ მასში ბლოკი "მოხვევა
+          მარცხნივ".'
       5:
         image: notes/hoc4_5.jpg
-        text: Now, if we put a "move forward" block above it and a "repeat" block
-          around everything, each time the zombie moves, he'll check if there's a
-          path to the left and turn. The "repeat" command is critical, to check for
-          a turn at every step.
+        text: ახლა, თუ ზემოთ ჩავსვამთ ბლოკს "მოძრაობა წინ" და გამეორების ბლოკს ყველაფრის
+          ირგვლივ, მოძრაობისას ზომი ყოველთვის შეამოწმებს, არის თუ არა მარცხნივ შესახვევი.
+          "გამეორება" ამ შემთხვევაში გადამწყვეტია, იმიტომ რომ ზომბიმ მოსახვევი ყოველ
+          ნაბიჯზე უნდა შეამოწმოს.
       6:
         image: notes/hoc4_6.jpg
-        text: If statements are really important in computer science. One of the first
-          programs I wrote was a tic-tac-toe game, and there was a If statement that
-          said IF the other person is about to win, block the spot that lets them
-          win.
+        text: '"თუ" დებულებები ძალიან მნიშვნელოვანია პროგრამირებაში. ერთ-ერთი პირველი
+          თამაში, რაც დავწერე იყო Tic-Tac-Toe, რომელიც შეიცავდა შემდეგ დებულებას:
+          "თუ სხვა მოთამაშე იგებს, დაბლოკე კვადრატი, რომლითაც შეუძლია მოგება".'
       7:
         image: notes/hoc4_7.jpg
-        text: Have fun using the "if" block!
+        text: გამოიეყენე ახალი "თუ" ბლოკი!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: ჰეი, მე მქვია სალონი. მე ვიყენებ ინფორმატიკას ჯანმრთელობისა და მედიცინის
+          პრობლემების გადასაწყვეტად. მოდი, გავიგოთ, რა არის "თუ/ სხვაგვარად" ბრძანება.
+          ის ჰგავს "თუ" ბლოკს, მაგრამ შეიცავს "სხვაგვარად" მოქმედების შესაძლებლობას.
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: თუ "წინ მოძრაობის" ბლოკს ჩავსვამ იქ, სადაც წერია "შესრულება" და "მარცხნივ
+          მოხვევას" იქ, სადაც წერია "სხვაგვარად", გამოვა, რომ ზომბიმ ორ შესაძლებლობას
+          შორის უნდა აირჩიოს. თუ წინ იქნება გზა, ზომბი იმოძრავებს წინ, და სხვა შემთხვევაში
+          (თუ წინ გზა არ არის), იგი მოუხვევს მარცხნივ.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: ისევე, როგორც "თუ" ბლოკი, "თუ/სხვაგვარად" ბლოკიც შეგვიძლია ჩავსვათ გამეორების
+          ბლოკში და ზომბი გააგრძელებს მოძრაობას და ორ ვარიანტს შორის არჩევას ყოველ
+          ნაბიჯზე.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: ახლა კი, მიიყვანე ეს ზომბი სადაც საჭიროა!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: '"თუ/სხვაგვარად" დებულება ასახვს ორ რამეს შორის არჩევანს. ვნახოთ, როგორ
+          შეიძლება მისი გამოყენება იმისთვის, რომ ჩვენს მეგობარ სკრატს დავეხმაროთ.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: ეს ბლოკი გამოიყურება ისევე, როგორც "თუ" ბლოკი, მაგრამ დამატებითი ფუნქცია
+          აქვს - სხვაგვარად მოქცევის შესაძლებლობა. თუ იქ, სადაც წერია "შესრულება"
+          ჩავსვამთ ბლოკს "მოძრაობა წინ" და იქ, სადაც წერია "სხვაგვარად" - "მარცხნივ
+          მოხვევას", გამოვა, რომ ციყვი სკრატი იმოძრავებს წინ სულ, როცა ეს შესაძლებელი
+          იქნება და თუ არა - მოუხვევს მარცხნივ.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: ასე ჩვენ ვამოწმებთ შესაძლებლობას და ვიღებთ გადაწყვეტილებას შედეგის საფუძველზე.
+          ისევე, როგორც "თუ", "თუ/სხვაგვარად" ბლოკიც შეიძლება ჩაისვას "გამეორების"
+          ბლოკში.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: ახლა დავეხმარეოთ ციყვ სკრატს მიაღწიოს ამ რკომდე!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hi, I'm Brina, an engineer at Instagram. A function is certain lines
-          of code that you want to use over and over again, so instead of writing
-          that code out everytime, you can just use one block.
+        text: ჰეი, მე ვარ ბრინა, ინსტაგრამის პროგრამისტი. ფუნქცია არის კოდის გარკვეული
+          ნაწილი, რომელიც ხშირად დაგჭირდებათ და ამიტომ მისი ყოველჯერ თავიდან დაწერის
+          მაგივრად თქვენ შეგიძლიათ უბრალოდ ერთი ბლოკი გამოიყენოთ.
       2:
         image: notes/stage13_2.jpg
-        text: We're going to learn how to define functions. Function definitions have
-          a star in the corner. The name of the function is written on the top line.
+        text: ახლა უნდა ვისწავლოთ ფუნქციების განსაზღვრა. ფუნქციის განსაზღვრებას კუთხეში
+          აქვს ვარსკვლავი, მისი სახელი კი ზედა ხაზში წერია.
       3:
         image: notes/stage13_3.jpg
-        text: The blocks that go inside the definition tell us what it does. So this
-          function definition is called "fill 5" and it's made up of a "repeat" block
-          and a "fill" block.
+        text: განსაზღვრებაში შემავალი ბლოკები აღწერენ ფუნქციის მოქმედებას. ამ ფუნქციას
+          ჰქვია "შეავსე 5" და ის შედგება ბლოკებისგან "შევსება" და "გამეორება".
       4:
         image: notes/stage13_4.jpg
-        text: The definition sits on the workspace, but our farmer won't run the function
-          until we drag out our "fill 5" function block from functions category.
+        text: განსაზღვრება უკვე სამუშაო სივრცეშია, მაგრამ ფერმერი არ შეასრულებს ფუნქციას,
+          სანამ ჩვენს "შეავსე 5" ბლოკს არ გადმოვიტანთ ფუნქციების კატეგორიიდან.
       5:
         image: notes/stage13_5.jpg
-        text: 'Let''s put the "fun" back in "FUNction!" '
+        text: 'იმედია, ფუნქციები გაამარტივებს თქვენს სწავლას! '
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: 'ჰეი, მე ვარ მაკინდი! დროა, გავეცნოთ ბლოკს "სანამ". '
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: ბლოკი "სანამ" გააკეთებს ყველაფერს, რაც მასშია ჩასმული, სანამ ზემოთ მოცმული
+          დებულება ჭეშმარიტი იქნება.
       3:
         image: notes/stage9_7.jpg
-        text: For example, if the farmer is standing on a pile, she will continue
-          to remove 1 shovelful WHILE there is still a pile beneath her.
+        text: მაგალიად, თუ ფერმერი დგას გროვის გვერდით, იგი გააგრძელებს თითო-თითო
+          ნიჩბის მოსმას, სანამ ეს გროვა ჯერ კიდევ არსებობს.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: ჰეი, მე ვარ ტრინა და მე პიქსარში ვმუშაობ. სხვადასხვა ფილმებზე მიმუშავია,
+          მაგალითად, შრეკზე.
       2:
         image: notes/stage11_2.jpg
-        text: This is our new "counter" loop. It will perform actions over and over
-          again and you can make the actions change slightly each time.
+        text: ეს არის ჩვენი ახალი ციკლი "მთვლელი". იგი გაიმეორებს მოქმედებებს უსასრულოდ
+          და თქვენ ასევე შეგიძლიათ ცოტ-ცოტა შეცვალოთ ეს მოქმედებები ყოველი გამეორებისას.
       3:
         image: notes/stage11_3.jpg
-        text: In this example, our "counter" loop says "count with counter from 50
-          to 90 by 10" and inside it, we have our "draw a square" block. Drag the
-          "counter" block from the "Variables" section into the "length" spot.
+        text: ამ მაგალითში, ციკლი "მთვლელი" გვეუბნება "დავითვლი მთვლელით 50-დან 90-მდე
+          ბიჯით 10" და მის შიგნით გვაქვს ბლოკი "დახატე კვადრატი". გამოიტანე ბლოკი
+          "მთვლელი" ცვლადების სექციიდან "სიგრძის" სლოტში.
       4:
         image: notes/stage11_4.jpg
-        text: This means our artist is going to draw a square that has 50 pixel length
-          sides, then it will add 10 to that and draw a square with 60 pixel length
-          sides. Then it will keep adding 10 and drawing squares until it reaches
-          90. So we'll have squares of 50, 60, 70, 80, and 90.
+        text: ეს ნიშნავს, რომ ჩვენი მხატვარი დახატვს კვადრატს გვერდით 50 პიქსელი,
+          მერე დაუმატებს 10-ს და დახატავს კვადრატს გვერდით 60 პიქსელი და ა. შ. ჯამში
+          გვექნება 5 კვადრატი, გვერდებით 50, 60, 70, 80 და 90 პიქსელი.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: ჰეი, მე ვარ ჯანეტი და მე ვარ პროგრამისტი ზინგაში.
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths
-          be different sizes?
+        text: დავუშვათ, გვინდა დავხატოთ რამდენიმე სამკუთხედი სხვადასხვა სიგრძის გვერდებით?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
+        text: შეგვიძლია დავწეროთ მთელი კოდი ხელით ან გამოვიყენოთ ფუნქცია შესაბამისი
+          პარამეტრებით.
       4:
         image: notes/stage15_4.jpg
-        text: To do this, click the blue star on the "draw a triangle" function definition.
-          Then drag "input name" into the "input" block.
+        text: დაკლიკე ცისფერ ვარსკვლავს ფუნქციაში "დახატე სამკუთხედი". შემდეგ გადაიტანე
+          "პარამეტრის სახელი" ბლოკში "პარამეტრი".
       5:
         image: notes/stage15_5.jpg
-        text: Then if you write "length" in the spot where it says "x" and press "Enter"
-          you'll create a length input for your function.
+        text: შემდეგ, თუ იქ, სადაც წერია X ჩაწერ "სიგრძეს" და დააჭერ შეყვანის ღილაკს,
+          ფუქნციაში შეიქმნება სიგრძის პარამეტრი.
       6:
         image: notes/stage15_6.jpg
-        text: Then click on the star. Now, you want to click on the variables category
-          and drag the "length" block into the "move forward" block of your function
-          definition. And drag away the old number block.
+        text: ახლა დააჭირე ვარსკვლავს, შემდეგ კატეგორიას "ცვლადები" და გადაიტანე ბლოკი
+          "სიგრძე" ბლოკში "მოძრაობა წინ". წინა რიცხვითი ბლოკი წაშალე.
       7:
         image: notes/stage15_7.jpg
-        text: To use your function with parameters, click on the functions category
-          and drag out your "draw a triangle with length" function.
+        text: ფუნქციის პარამეტრებით გამოსაყენებლად, გადადი კატეგორიაში ფუნქციები და
+          გამოიტანე ფუნქცია "სამკუთხედის დახატვა მოცემული სიგრძით".
       8:
         image: notes/stage15_8.jpg
-        text: Now you can use the math block to input different numbers to draw triangles
-          of different sizes.
+        text: ახალ შეგიძლია გამოიყენო ბლოკი "მათემატიკა" და შეიყვანო მასში სხვადასხვა
+          რიცხვები - ასე დახატავ სხვადასხვა ზომის სამკუთხედებს.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Congratulations! With the last puzzle you solved, you just wrote code
-          that can tell ANY robot how to find it's way through a non-branching maze
-          or tunnel of any length, whether it's a zombie, a bird, a mars rover, or
-          even a self-driving car.
+        text: გილოცავთ! ბოლო თავსატეხის ამოხსნისას შენ დაწერე კოდი, რომლითაც ნებისმიერი
+          რობოტი გააგნებს გზას ნებისმიერ ხაზოვან ლაბირინთში და ნებისმიერი სიგრძის
+          ტუნელში.
       2:
         image: notes/hoc6_2.jpg
-        text: The basic concepts you used are at the heart of every program or app
-          you'll ever try.  We learned about repeat loops, repeat until statements,
-          if statements, and if else statements.
+        text: ცნებები, რომელსაც იყენებდი არის ნებისმიერი პროგრამის ან აპლიკაციის ძირითადი
+          ნაწილი. ჩვენ ვისწავლეთ ციკლების გამეორება, გამეორება მიზნის მიღწევამდე,
+          თუ და თუ/სხვაგვარად დებულებები.
       3:
         image: notes/hoc6_3.jpg
-        text: If you liked your first hour of code, visit code.org to continue your
-          education into computer science! Once you complete our 20 hour course, you'll
-          have mastered the basics of programming, and can start learning how to write
-          phone apps, robot instructions, games, you name it.
+        text: თუ მოგეწონა კოდის შენი პირველი საათი, ეწვიე code.org-ს და გააგრძელე
+          პროგრამირების სწავლა. როცა დაასრულებ ჩვენს ოცსაათან კურსს, პროგრამირების
+          საფუძვლები სრულად გექნება გავლილი და შეძლებ დაიყო მობილური აპლიკაციების,
+          რობოტების ინსტრუქციების, თამაშების... ყველაფრის პროგრამირების სწავლა.
       4:
         image: notes/hoc6_4.jpg
-        text: 'Technology is changing everything we do and it doesn''t matter if you''re
-          young or old: programming is fun, it''s creative, and anyone can learn!'
+        text: 'ტექნოლოგიები ცვლის ყველაფერს და არა აქვს მნიშვნელობა, ახალგაზრდა ხარ
+          თუ აღარ: პროგრამირება სახალისოა, კრეატიული და მისი სწავლა ყველას შეუძლია!'
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Show notes coming soon!
+        text: ჩანაწერები მალე იქნება!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: ჰეი, მე მქვია ლინდსი. მე ვიგონებ და ვქმნი ჩემს საკუთარ აპლიკაციებს.
+          გამოვიყენოთ კოდი და შევუერთდეთ ანასა და ელზას მაგიისა და ყინულის სამყაროში.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: ციგურებზე სრიალისას შენ დახატავ სხვადსხვა ფიფქებსა და შემქნი ზამთრის
+          საოცრებათა ქვეყანას მერე კი მისი მეგობრებისთვის გაზიარება შეგეძლება.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: შემდეგი ერთი საათის განმავლობაში პროგრამირების საფუძვლებს დაეუფლები.
+          ჩვეულებრივ, პგორამირება ტექსტის წერას ნიშნავს, მაგრამ ჩვენ ვიყენებთ ბლოკლის
+          - ენას, რომელშიც საკმარისია ბლოკებით მანიპულირება. ასე სწავლობენ პროგრამირების
+          საფუძვლებს უნივერსიტეტების სტუდენტებიც კი. სინამდვილეში, შენ მაინც წერ კოდს.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: პროგრამა არის ინსტრუქციების ნაკრები, რომელიც აცნობებს კომპიუტერს, თუ
+          რა უნდა გააკეთოს მან. დავწეროთ კოდი ან პროგრამა, რომელიც დაეხმარება ელზას
+          მარტივი ხაზის გავლებაში. შემდეგ ამ კოდს უფრო რთული სახეების შესაქმნელად
+          გამოვიყენებთ.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: შენი ეკრანი სამ ძირითად ნაწილადაა დაყოფილი. მარცხნივ არის ყინულის მოედანი,
+          სადაც გაეშვება შენი პროგრამა. ყოველი დონის ინსტრუქციები ქვემოთ იქნება დაწერილი.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: ეს შუა ნაწილი არის ინსტრუმენტების პანელი და ყოველი ბლოკი არის მოქმედება,
+          რომლის შესრულება შეუძლიათ ელზასა და ანას.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: თეთრი სივრცე მარჯვნივ არის სამუშაო სივრცე - აქ დაიწერება ჩვენი პროგრამა.
+          მაგალითად, ყინულზე გადასაადგილებლად აქ გადმოვიტანთ "წინ მოძრაობის" ბლოკს.
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: ბლოკი "წინ გადაადგილება" განსაზვღულია, როგორც "გადაადგილება წინ 100
+          პიქსელით". რა მოხდება, თუ ამ კოდს გავუშვებთ? ელზა გადაადგილდება ჩვენს ეკრანზე
+          ზუსტად 100 პიქსელით. პიქსელი ეკრანის უმცირესი წერტილია.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: შემდეგი ბლოკი, რომელიც მოცემული გვაქვს ამ თავსატეხში განსაზღვრულია,
+          როგორც "90 გრადუსით მობრუნება". როცა ვიყენებთ ბლოკს "მარჯვნივ მობრუნება",
+          ელზა ტრიალდება გაკრვეული კუთხით. შეგიძლია სხვადასხვა მნიშვნელობები ჩაწერო
+          და ნახო, რა მოხდება. კუთხე იზომება ელზას წინ მდებარე გზიდან. მაგალითად,
+          ეს არის 90 გრადუსით მობრუნება, ეს კი - 120-ით.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: გახსოვდეს, პიქსელებისა და გრადუსების ზომა შეგიძლია ისრებით შეცვალო.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: ჰეი, მე ვარ პაოლა. იცი, კომპიუტერებს ძალიან კარგად გამოსდით მოქმედებების
+          გამეორება. შენ შეიძლება დათვლი ათამდე, ოცამდე ან ასამდე. მაგრამ კომპიუტერი
+          დათვლის მილიარდამდე, ტრილიონამდე. მას ეს არც მობეზრდება და არც ბევრ დროს
+          წაართმევს. თვლის, ხატვის - ნებისმიერი მოქმედების გამეორება კომპიუტერს დაუსრულებლად
+          შეუძლია.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: პროგრამირებაში ჩვენ ამას ვეძახით ციკლს. ციკლია, როდესაც შენი მოქმედება
+          დაუსრულებლად მეორდება. შემდეგ თავსატეხში შენი მიზანია დაახატინო ანას კვადრატი
+          "გამეორების" ბლოკის გამოყენებით.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: კოდის ნებისმიერი ბლოკი, რომელსაც "გამეორების" ბლოკში ჩასვამ, გამეორედება
+          იმდენჯერ, რამდენჯერაც შენ ეს გჭირდება.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: კვადრატის დასახაზად შეგიძლია გამოიყენო ოთხ-ოთხჯერ ბლოკები "მოძრაობა
+          წინ" და "მობრუნება მარჯვნივ". მაგრამ უფრო მარტივი იქნება ეს ორი ბლოკი თითო-თითოჯერ
+          გამოიყენო, შემდეგ კი 4-ჯერ გაამეორებინო კომპიუტერს იგივე მოძრაობა. ამისთვის
+          სამარისია ეს ბლოკები ჩასვა ბლოკში "გამეორება".
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: გახსოვდეს, რომ რა რიცხვსაც ჩაწერ ბლოკში "გამეორება", იმდენჯერ გამეორდება
+          ის მოქმედებები, რაც ბლოკის შიგნითაა მოთავსებული.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: ჰეი, მე ვარ კრის ბოში. მე პროფესიონალურად ვთამაშობ კალათბურთს, კოლეჯში
+          კი პროგრამირებას ვსწავლობდი.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: ახალი ბრძანებების განსაზღვრა პროგრამირების ძალიან მნიშვნელოვანი ნაწილია.
+          პროგრამირების ენების უმეტესობას სულ 100 სიტყვა და ბრძანება აქვს. ამ ერთეულების
+          გამოყენებით ახალი ბრძანებების შექმნა ნამდვილი ხელოვნებაა.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: როცა ერთხელ განუმარტავ კომპიუტერს როგორ უნდა შეასრულოს მოქმედებების
+          თანმიმდევრობა, შეგიძლია ამ ერთიან მოქმედებას რამე სახელი დაარქვა - ასე მისი
+          გამეორება მომავალში უფრო მარტივი იქნება. ამას ფუნქციის შექმნა ეწოდება.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: ჰეი, მე ვარ ჯესი. ფუნქციები გამოიყენება, როცა გვაქვს ქმედებათა ისეთი
+          ნაკრები, რომელიც გვინდა, რომ ხშირად გამოვიყენოთ. მაგალითად, შენ დაწერე კოდი
+          კვადრატის დასახატად.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'შეგიძლია განსაზღვრო ეს როგორც ფუნქცია და დაარქვა "კვადრატის დახატვა." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: ახლა გაქვს ახალი ბლოკი, რომელიც შეგიძლია გამოიყენო კვადრატების დასახატად.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: მარტივი ფიგურებით რთული ფორმების შექმნაა შესაძლებელი. შემდეგ თავსატეხში
+          კოდი, რომელიც წრის დასახარად დაწერე, ფუნქციის სახით გექნება მოცემული და
+          შეძლებ სხვადასხვა ზომის წრეების დახატვას. დაეხამრე ელზას თოვლზე ლამაზი და
+          რთული სახეების შექმნაში?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: აქამდე შენ ქმნიდი ანიმაციებს ან თამაშებს, რომლებიც ყოველი გაშვებისას
+          ერთსა და იმავეს აკეთებდნენ. ახლა შეგეძლება ნამდვილი ინტერაქტიული თამაშის
+          შექმნა.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: მოცემულია ბლოკები "როცა ისარი" და "მოთამაშის გადაადგილება". თუ ამ ბლოკებს
+          გააერთიანებ, შეძლებ ამოძრავო მოთამაშე ისრების გამოყენებით.
       3:
         image: notes/playlab_3.png
-        text: And there are some blocks that do stuff when actors collide or are clicked.
-          Check them out and have fun!
+        text: კიდევ გვაქვს ბლოკები, რომლებიც აქტიურდება, როცა პერსონაჟები ეჯახებიან
+          ერთმანეთს ან როცა მათზე ვაკლიკავთ. გამოიკვლიე, რისი გაკეთება შეგიძლია!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: 'თამაშებს თამაშების ლაბორატორიაში შევქმნით. კარგ თამაშში ყოველთვის არის
+          ისტორია და ყოველ ისტორიაში არსებობენ პერსონაჟები. ჩვენ ვისწავლით როგორ ავალაპარაკოთ,
+          ავამოძრავოთ და ერთმანეთში უერთიერთობა დავამყარებინოთ ჩვენს პერსონაჟებს:
+          ჯადოქრებს, უცხოპლანეტელბს და ცხოველებს. ამ ტუტორიალის დასრულების შემდეგ
+          შენ შეძლებ შექმნა შენი თამაში და გაუზიარო ის მეგობრებს.'
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: შენი ეკრანი სამ ძირითად ნაწილადაა დაყოფილი. მარცხნივ არის ყინულის მოედანი,
+          სადაც გაეშვება შენი პროგრამა. ყოველი დონის ინსტრუქციები ქვემოთ იქნება დაწერილი.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: შუაში არის ინსტრუმენტების პანელი - ყოველი ბლოკი არის კოდი. თეთრი სივრცე
+          მარჯვნივ არის სამუშაო სივრცე, სადაც დაიწერება ჩვენი პროგრამა.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: პირველ რიგში, ბლოკები უნდა მიემაგროს ნარინჯისფერ ბლოკს "როცა გაშვებულია".
+          რამდენიმე ბლოკის ერთად შეკვრა შეგიძლია - მიუახლოვე ისინი ერთმანეთს სანამ
+          არ გაჩნდება ყვითელი ხაზი და შემდეგ შეაერთე.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: პირველ თავსატეხში ჩვენი პერსონაჟი არის პინგვინი, რომელსაც უნდა ვასწავლოთ
+          მისალმება. ამისთვის ავიღოთ "თქმის" ბლოკი, მივუმაგროთ იგი გაშვების ბლოკს
+          და ჩავწეროთ მასში "სალამი". მაჯვნივ და მარცხნივ მოძრაობის ბლოკებით შეგვიძლია
+          გადავაადგილოთ კიდევაც ჩვენი პინგვინი. როცა ყველა ბლოკს დაალაგებ, გაუშვი
+          პროგრამა და ნახე, რა გამოგივიდა.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: დაიწყე პროგრამირება და ბოლოს შეძლება შექმნა შენი საკუთარი თამაში, ყველანაირი
+          პერსონაჟებით, რომელთაც შეეძლებათ ურთიერთობა, მხირულება ან მოწყენა, ქულების
+          დაგროვება და ცეცხლოვანი ბურთების სროლა - ერთმანეთის გაქრობაც კი. ყველაფერი
+          შენზეა დამოკიდებული.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: ახლა ისეთ რამეს ვისწავლით, რასაც პროგრამისტები ყოველ დღე იყენებენ -
+          მოვლენებს. მოვლენა აცნობებს შენს პროგრამას, რომ რაღაც უნდა დაუცადოს. როცა
+          ეს რაღაც - მოვლენა - მოხდება, პროგრამა გარკვეულ ქმედებას ახორციელებს.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: 'მოვლენა შეიძლება იყოს: მაუსის დაკლიკვა, ისრის ღილაკზე დაჭერა, ეკრანზე
+          შეხება.'
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: ახლა უნდა შევქმნათ კოსმოსური ბოტი, რომელიც მიესალმება დედამიწელებს,
+          როცა მასზე დაკლიკავენ. გამოიყენე ბლოკი "როცა დაკლიკავენ" და მიუმაგრე მას
+          ბლოკი "თქმა". როცა მოთამაშე დაკლიკავს ბოტს, მოხდება ყველაფერი, რაც მიმაგრებულია
+          ბლოკს "როცა დაკლიკავენ". ჰმ.. რა უნდა ათქმევინო შენს უცხოპლანეტელს?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: კიდევ გვაქვს ბლოკი "როცა ისარი". თუ ამ ბლოკს მოძრაობის ბლოკებს მიუმაგრებ,
+          შენი პერსონაჟი ზემოთ, ქვემოთ, მარჯვნივ ან მარცხნივ იმოძრავებს. ხედავ? შენი
+          თამაში უფრო და უფრო ინტერაქტიული ხდება.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: ეს არის ბლოკი "უსასრულოდ გამეორება". ყველაფერი, რასაც მასში ჩასვამ უსასრულოდ
+          გამეორედება თამაშის განმავლობაში.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: თუ გვინდა, რომ პერსონაჟმა რაღაც ქმედება მუდმივად შეასრულოს, მოთამაშის
+          ჩარევის გარეშე, ეს ქმედება "უსასრულოდ გამეორების" ბლოკში უნდა ჩავსვათ.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: შემდეგ თავსატეხში ჩვენი მიზანია დავეხმაროთ ჯადოქარს სამეფოს საზღვრების
+          დაზვერვაში - ანუ, მან უსასრულოდ უნდა იმოძრავოს მარჯვნივ და მარცხნივ. გამეორების
+          ფუნქციების კარგად შესწავლა უამრავ დროს დაგიზოგავს მომავალში, როცა შენს საკუთარ
+          თამაშს დაწერ.

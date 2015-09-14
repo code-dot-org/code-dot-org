@@ -876,7 +876,7 @@
           <block type="functional_string_equals" inline="false"/>
           <block type="functional_logical_and" inline="false"/>
         </category>
-        <category name="Cond"/>
+        <category name="Conditionals"/>
         <category name="Variables" custom="VARIABLE"/>
         <category name="Functions" custom="PROCEDURE">
           <block type="functional_logical_not" inline="false"/>

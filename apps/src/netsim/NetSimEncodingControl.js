@@ -16,14 +16,14 @@
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');
-var EncodingType = require('./netsimConstants').EncodingType;
+var EncodingType = require('./NetSimConstants').EncodingType;
 
 /**
  * Generator and controller for message encoding selector: A dropdown that
  * controls whether messages are displayed in some combination of binary, hex,
  * decimal, ascii, etc.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {function} changeEncodingCallback
  * @constructor
  */
@@ -37,7 +37,7 @@ var NetSimEncodingControl = module.exports = function (rootDiv, levelConfig,
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
@@ -121,4 +121,18 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   }
   rootElement.find(makeEncodingRowSelector(encodings)).show();
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
+};
+
+/**
+ * Static helper that converts a given array of encodings to an object
+ * mapping each encoding to `true`. Used for more efficient
+ * isEncodingEnabled checks
+ * @param {EncodingType[]} encodings
+ * @returns {Object.<EncodingType, boolean>}
+ */
+NetSimEncodingControl.encodingsAsHash = function (encodings) {
+  return encodings.reduce(function (hash, encoding) {
+    hash[encoding] = true;
+    return hash;
+  }, {});
 };

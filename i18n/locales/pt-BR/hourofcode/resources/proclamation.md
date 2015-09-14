@@ -37,11 +37,11 @@ Dado que a área da ciência da computação deve enfrentar obstáculos signific
 
 Dado que Grace Murray Hopper, uma das primeiras mulheres da área da ciência da computação, desenvolveu novas linguagens de programação e foi a pioneira nos padrões dos sistemas computacionais que constituíram o ponto de partida para muitos avanços da ciência da computação; e
 
-Dado que a semana de 8 de dezembro, em homenagem ao aniversário de Grace Hopper, foi designada como a "Semana da Educação em Ciência da Computação": fica, portanto,
+Dado que a semana de 7 de dezembro, em homenagem ao aniversário de Grace Hopper, foi designada como a "Semana da Educação em Ciência da Computação": fica, portanto,
 
 resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR] --
 
-(1) apoia a designação da Semana da Educação em Ciência da Computação (de 8 a 14 de dezembro de 2014);
+(1) apoia a designação da Semana da Educação em Ciência da Computação (de 7 a 13 de dezembro de 2015);
 
 (2) incentiva escolas, educadores, pais e legisladores a participar da Semana da Educação em Ciência da Computação, permitindo que seus alunos participem da Hora do Código;
 

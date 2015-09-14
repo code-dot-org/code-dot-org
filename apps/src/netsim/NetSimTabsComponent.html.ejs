@@ -1,8 +1,8 @@
 <%
   var i18n = require('./locale');
 
-  var shouldShowTab = require('./netsimUtils').shouldShowTab;
-  var NetSimTabType = require('./netsimConstants').NetSimTabType;
+  var shouldShowTab = require('./NetSimUtils').shouldShowTab;
+  var NetSimTabType = require('./NetSimConstants').NetSimTabType;
 
   var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
@@ -25,9 +25,7 @@
     <% } %>
   </ul>
   <% if (showInstructions) { %>
-    <div id="tab_instructions">
-      <button id="finished" class="btn btn-primary submitButton"><%= i18n.continueButton() %></button>
-    </div>
+    <div id="tab_instructions"></div>
   <% } %>
   <% if (showMyDevice) { %>
     <div id="tab_my_device"></div>

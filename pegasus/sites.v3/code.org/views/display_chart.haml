@@ -1,3 +1,5 @@
+- png ||= false
+
 %div{id: "chart_#{id}"}
 
 :javascript
@@ -15,8 +17,18 @@
       return;
     }
 
+    var chartDiv = document.getElementById("chart_#{id}");
+
     var data = response.getDataTable();
-    var chart = new google.visualization["#{type}"](document.getElementById("chart_#{id}"));
+    var chart = new google.visualization["#{type}"](chartDiv);
+
+    if ("#{png}" !== "false") {
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+      google.visualization.events.addListener(chart, 'ready', function () {
+        chartDiv.innerHTML = '<img src="' + chart.getImageURI() + '">';
+      });
+    }
+
     chart.draw(data, {width: "#{width}", height: "#{height}", is3D: true});
   }
 

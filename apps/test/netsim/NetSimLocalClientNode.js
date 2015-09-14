@@ -7,13 +7,15 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -21,9 +23,22 @@ var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
 
+  /**
+   * Synchronous router creation on shard for test
+   * @returns {NetSimRouterNode}
+   */
+  var makeRemoteRouter = function () {
+    var newRouter;
+    NetSimRouterNode.create(testShard, function (e, r) {
+      newRouter = r;
+    });
+    assert(newRouter !== undefined, "Failed to create a remote router.");
+    return newRouter;
+  };
+
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
 
@@ -36,6 +51,101 @@ describe("NetSimLocalClientNode", function () {
       testRemoteNode = node;
     });
     assert(undefined !== testRemoteNode, "Made a remote node");
+  });
+
+  describe ("onNodeTableChange_", function () {
+    var lostConnection;
+    beforeEach(function () {
+      testLocalNode.initializeSimulation(null, null);
+
+      // Set up testing for lost connection callback
+      lostConnection = false;
+      testLocalNode.setLostConnectionCallback(function () {
+        lostConnection = true;
+      });
+      assertEqual(false, lostConnection);
+    });
+
+    it ("detects when own row has gone away and calls lost connection callback", function () {
+      testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
+      testShard.nodeTable.refresh();
+      assertEqual(true, lostConnection);
+    });
+
+    it ("detects shard reset even when own ID has been reclaimed", function () {
+      // Reset fake remote table and repopulate first two rows.
+      testShard.nodeTable = NetSimTestUtils.overrideNetSimTableApi(testShard.nodeTable);
+      NetSimEntity.create(NetSimClientNode, testShard, function () { });
+      NetSimEntity.create(NetSimClientNode, testShard, function () { });
+
+      testShard.nodeTable.refresh();
+      assertEqual(true, lostConnection);
+    });
+  });
+
+  describe("onWireTableChange_", function () {
+    it ("detects when remote client disconnects, and removes local wire", function () {
+
+      var localWireRow, remoteWireRow;
+
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testLocalNode, function () {});
+
+      localWireRow = testLocalNode.getOutgoingWire().buildRow();
+      localWireRow.id = 1;
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+      remoteWireRow.id = 2;
+
+      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+
+      // Trigger onWireTableChange_ with both wires; the connection
+      // should be complete!
+      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
+      testLocalNode.onWireTableChange_();
+      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+
+      // Trigger onWireTableChange_ without the remoteWire; the
+      // connection should be broken
+      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
+      testLocalNode.onWireTableChange_();
+      assertEqual(testLocalNode.getOutgoingWire(), null);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+    });
+
+    it ("detects when attempted connection is rejected", function () {
+
+      var testThirdNode;
+      var localWireRow, remoteWireRow, thirdWireRow;
+
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
+        testThirdNode = node;
+      });
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testThirdNode, function () {});
+
+      localWireRow = testLocalNode.getOutgoingWire().buildRow();
+      localWireRow.id = 1;
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+      remoteWireRow.id = 2;
+
+      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
+      testLocalNode.onWireTableChange_();
+      var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
+      newLocalWireRow.id = 1;
+      assertEqual(newLocalWireRow, localWireRow);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+      testThirdNode.connectToNode(testRemoteNode, function () {});
+
+      thirdWireRow = testThirdNode.getOutgoingWire().buildRow();
+      thirdWireRow.id = 3;
+      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
+      testLocalNode.onWireTableChange_();
+      assertEqual(testLocalNode.getOutgoingWire(), null);
+
+    });
   });
 
   describe("sendMessage", function () {
@@ -72,7 +182,7 @@ describe("NetSimLocalClientNode", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('101001100101', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
@@ -84,7 +194,7 @@ describe("NetSimLocalClientNode", function () {
       var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('1010101010100101010', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
       assertEqual('1010101010100101010', message.payload);
@@ -186,6 +296,66 @@ describe("NetSimLocalClientNode", function () {
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
       assertEqual('constantine1', testLocalNode.getHostname());
+    });
+  });
+
+  describe("makeWireRowForConnectingTo", function () {
+    var wireRow;
+
+    describe("a router", function () {
+      var routerNode;
+
+      beforeEach(function () {
+        NetSimGlobals.setRandomSeed('fizzbusters');
+        routerNode = makeRemoteRouter();
+        wireRow = testLocalNode.makeWireRowForConnectingTo(routerNode);
+      });
+
+      it ("Sets localNodeID to own entity ID", function () {
+        assert.equal(testLocalNode.entityID, wireRow.localNodeID);
+      });
+
+      it ("Sets remoteNodeID to router entity ID", function () {
+        assert.equal(routerNode.entityID, wireRow.remoteNodeID);
+      });
+
+      it ("Gets a random local address from the router", function () {
+        // Pinned by 'setRandomSeed', above.
+        assert.equal('9', wireRow.localAddress);
+      });
+
+      it ("Sets remoteAddress to router's address", function () {
+        assert.equal(routerNode.getAddress(), wireRow.remoteAddress);
+      });
+
+      it ("Sets localHostname to own hostname", function () {
+        assert.equal(testLocalNode.getHostname(), wireRow.localHostname);
+      });
+
+      it ("Sets remoteHostname to router's hostname", function () {
+        assert.equal(routerNode.getHostname(), wireRow.remoteHostname);
+      });
+    });
+
+    describe("a client", function () {
+      beforeEach(function () {
+        wireRow = testLocalNode.makeWireRowForConnectingTo(testRemoteNode);
+      });
+
+      it ("Sets localNodeID to own entity ID", function () {
+        assert.equal(testLocalNode.entityID, wireRow.localNodeID);
+      });
+
+      it ("Sets remoteNodeID to remote entity ID", function () {
+        assert.equal(testRemoteNode.entityID, wireRow.remoteNodeID);
+      });
+
+      it ("Leaves remaining fields undefined", function () {
+        assert.equal(undefined, wireRow.localAddress);
+        assert.equal(undefined, wireRow.remoteAddress);
+        assert.equal(undefined, wireRow.localHostname);
+        assert.equal(undefined, wireRow.remoteHostname);
+      });
     });
   });
 

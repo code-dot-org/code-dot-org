@@ -1,243 +1,251 @@
 * * *
 
-crwdns19712:0crwdne19712:0
+crwdns44103:0crwdne44103:0
 
 * * *
 
-# crwdns19713:0crwdne19713:0
+# crwdns44104:0crwdne44104:0
 
-**crwdns20984:0crwdne20984:0**
+crwdns44105:0crwdne44105:0.
 
-crwdns21423:0crwdne21423:0[<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+crwdns44106:0crwdne44106:0 crwdns44107:0crwdne44107:0
 
-crwdns20986:0crwdne20986:0 crwdns20987:0crwdne20987:0
+  
+
+
+**crwdns44108:0crwdne44108:0.**
+
+crwdns44109:0crwdne44109:0 crwdns44110:0crwdne44110:0 crwdns44111:0crwdne44111:0
 
 <a id="top"></a>
 
-## crwdns19717:0crwdne19717:0
+## crwdns44112:0crwdne44112:0
 
-  * [crwdns19718:0crwdne19718:0](#inclusion)
-  * [crwdns19719:0crwdne19719:0](#guidelines)
-  * [crwdns19720:0crwdne19720:0](#submit)
-  * [crwdns19721:0crwdne19721:0](#design)
-  * [crwdns19722:0crwdne19722:0](#tm)
-  * [crwdns19723:0crwdne19723:0](#pixel)
-  * [crwdns19724:0crwdne19724:0](#promote)
-  * [crwdns19725:0crwdne19725:0](#disabilities)
+  * crwdns44113:0crwdne44113:0  
+    
+  * crwdns44114:0crwdne44114:0  
+    
+  * crwdns44115:0crwdne44115:0  
+    
+  * crwdns44116:0crwdne44116:0  
+    
+  * crwdns44117:0crwdne44117:0  
+    
+  * crwdns44118:0crwdne44118:0  
+    
+  * crwdns44119:0crwdne44119:0  
+    
+  * [crwdns44120:0crwdne44120:0](#disabilities)
 
 <a id="inclusion"></a>
 
-## crwdns19726:0crwdne19726:0
+## crwdns44121:0crwdne44121:0
 
-crwdns20988:0crwdne20988:0
+crwdns44122:0crwdne44122:0
 
-**crwdns20989:0crwdne20989:0**
+**crwdns44123:0crwdne44123:0**
 
-  * crwdns19729:0crwdne19729:0
-  * crwdns19730:0crwdne19730:0
-  * crwdns19731:0crwdne19731:0
-  * crwdns19732:0crwdne19732:0
-  * crwdns19733:0crwdne19733:0
-  * crwdns19734:0crwdne19734:0
-  * crwdns19735:0crwdne19735:0
-  * crwdns19736:0crwdne19736:0
+  * crwdns44124:0crwdne44124:0
+  * crwdns44125:0crwdne44125:0
+  * crwdns44126:0crwdne44126:0
+  * crwdns44127:0crwdne44127:0
+  * crwdns44128:0crwdne44128:0
+  * crwdns44129:0crwdne44129:0
+  * crwdns44130:0crwdne44130:0
+  * crwdns44131:0crwdne44131:0
+  * crwdns44132:0crwdne44132:0
+  * crwdns44133:0crwdne44133:0
+  * crwdns44134:0crwdne44134:0
 
-**crwdns20990:0crwdne20990:0**
+**crwdns44135:0crwdne44135:0**
 
-  * crwdns19738:0crwdne19738:0
-  * crwdns19739:0crwdne19739:0
-  * crwdns19740:0crwdne19740:0
-  * crwdns19741:0crwdne19741:0
-  * crwdns19742:0crwdne19742:0
-  * crwdns19743:0crwdne19743:0
+  * crwdns44136:0crwdne44136:0
+  * crwdns44137:0crwdne44137:0
+  * crwdns44138:0crwdne44138:0
+  * crwdns44139:0crwdne44139:0
+  * crwdns44140:0crwdne44140:0
+  * crwdns44141:0crwdne44141:0
+  * crwdns44142:0crwdne44142:0
 
-**crwdns20991:0crwdne20991:0**
+**crwdns44143:0crwdne44143:0**
 
-  * crwdns19745:0crwdne19745:0
-  * crwdns19746:0crwdne19746:0
-  * crwdns19747:0crwdne19747:0 
-  * crwdns19748:0crwdne19748:0
-  * crwdns19749:0crwdne19749:0
-  * crwdns19750:0crwdne19750:0
-  * crwdns19751:0crwdne19751:0
+  * crwdns44144:0crwdne44144:0
+  * crwdns44145:0crwdne44145:0 
+  * crwdns44146:0crwdne44146:0
+  * crwdns44147:0crwdne44147:0
+  * crwdns44148:0crwdne44148:0
+  * crwdns44149:0crwdne44149:0
 
-crwdns20992:0crwdne20992:0
+crwdns44150:0crwdne44150:0 crwdns44151:0crwdne44151:0 crwdns44152:0crwdne44152:0
 
-crwdns20993:0crwdne20993:0
-
-crwdns20994:0crwdne20994:0
-
-[**crwdns20995:0crwdne20995:0**](#top)
+[**crwdns44153:0crwdne44153:0**](#top)
 
 <a id="guidelines"></a>
 
-## crwdns19756:0crwdne19756:0
+## crwdns44154:0crwdne44154:0
 
-  * crwdns19757:0crwdne19757:0
-  * crwdns19758:0crwdne19758:0
-  * **crwdns19759:0crwdne19759:0** 
-      * crwdns19760:0crwdne19760:0
-      * crwdns19761:0crwdne19761:0
-      * crwdns19762:0crwdne19762:0
-  * **crwdns19763:0crwdne19763:0** 
-      * crwdns19764:0crwdne19764:0). 
-      * crwdns19765:0crwdne19765:0
-  * crwdns19766:0crwdne19766:0 crwdns19767:0crwdne19767:0 crwdns19768:0crwdne19768:0
+  * crwdns44155:0crwdne44155:0
+  * crwdns44156:0crwdne44156:0
+  * **crwdns44157:0crwdne44157:0** 
+      * crwdns44158:0crwdne44158:0
+      * crwdns44159:0crwdne44159:0
+      * crwdns44160:0crwdne44160:0
+  * **crwdns44161:0crwdne44161:0**crwdns44162:0crwdne44162:0 
+      * crwdns44163:0crwdne44163:0).
+      * crwdns44164:0crwdne44164:0
+  * crwdns44165:0crwdne44165:0 crwdns44166:0crwdne44166:0 crwdns44167:0crwdne44167:0
+  * crwdns44168:0crwdne44168:0 crwdns44169:0crwdne44169:0 crwdns44170:0crwdne44170:0 crwdns44171:0crwdne44171:0 
 
-[**crwdns20996:0crwdne20996:0**](#top)
+[**crwdns44172:0crwdne44172:0**](#top)
 
 <a id="submit"></a>
 
-## crwdns19770:0crwdne19770:0
+## crwdns44173:0crwdne44173:0
 
-crwdns20997:0crwdne20997:0
+crwdns44174:0crwdne44174:0
 
-**crwdns20998:0crwdne20998:0**
+**crwdns44175:0crwdne44175:0**
 
-  * crwdns19773:0crwdne19773:0
-  * crwdns19774:0crwdne19774:0 crwdns19775:0crwdne19775:0 crwdns19776:0crwdne19776:0
-  * crwdns19777:0crwdne19777:0
-  * crwdns19778:0crwdne19778:0
-  * crwdns19779:0crwdne19779:0
-  * crwdns19780:0crwdne19780:0
-  * crwdns19781:0crwdne19781:0 
-      * crwdns19782:0crwdne19782:0
-      * crwdns19783:0crwdne19783:0
-      * crwdns19784:0crwdne19784:0 crwdns19785:0crwdne19785:0 crwdns19786:0crwdne19786:0
-  * crwdns19787:0crwdne19787:0 
-      * **crwdns19788:0crwdne19788:0** 
-          * crwdns19789:0crwdne19789:0
-          * crwdns19790:0crwdne19790:0
-          * crwdns19791:0crwdne19791:0
-          * crwdns19792:0crwdne19792:0
-      * crwdns19793:0crwdne19793:0
-      * crwdns19794:0crwdne19794:0
-  * crwdns19795:0crwdne19795:0 
-      * crwdns19796:0crwdne19796:0
-      * crwdns19797:0crwdne19797:0
-      * ***crwdns19798:0crwdne19798:0*** 
-  * crwdns19799:0crwdne19799:0
-  * crwdns19800:0crwdne19800:0 [crwdns19801:0crwdne19801:0](http://csta.acm.org/Curriculum/sub/K12Standards.html) crwdns19802:0crwdne19802:0 
-      * crwdns19803:0crwdne19803:0
-      * crwdns19804:0crwdne19804:0
-      * crwdns19805:0crwdne19805:0
-      * crwdns19806:0crwdne19806:0
-  * crwdns19807:0crwdne19807:0 crwdns19808:0crwdne19808:0 crwdns19809:0crwdne19809:0
-  * crwdns19810:0crwdne19810:0 
-      * crwdns19811:0crwdne19811:0 crwdns19812:0crwdne19812:0 crwdns19813:0crwdne19813:0 crwdns19814:0crwdne19814:0 
-      * crwdns19815:0crwdne19815:0 [crwdns19816:0crwdne19816:0](http://code.org/api/hour/finish) crwdns19817:0crwdne19817:0 
-          * crwdns19818:0crwdne19818:0
-          * crwdns19819:0crwdne19819:0
-          * crwdns19820:0crwdne19820:0
-          * crwdns19821:0crwdne19821:0 
-  * ***crwdns19822:0crwdne19822:0*** crwdns19823:0crwdne19823:0 
-      * crwdns19824:0crwdne19824:0 
-          * crwdns19825:0crwdne19825:0
-          * crwdns19826:0crwdne19826:0
-          * crwdns19827:0crwdne19827:0
-          * crwdns19828:0crwdne19828:0
-          * crwdns19829:0crwdne19829:0
-      * crwdns19830:0crwdne19830:0 
-          * crwdns19831:0crwdne19831:0
+  * crwdns44176:0crwdne44176:0
+  * crwdns44177:0crwdne44177:0 crwdns44178:0crwdne44178:0 crwdns44179:0crwdne44179:0
+  * crwdns44180:0crwdne44180:0
+  * crwdns44181:0crwdne44181:0
+  * crwdns44182:0crwdne44182:0
+  * crwdns44183:0crwdne44183:0
+  * crwdns44184:0crwdne44184:0 
+      * crwdns44185:0crwdne44185:0
+      * crwdns44186:0crwdne44186:0
+      * crwdns44187:0crwdne44187:0 crwdns44188:0crwdne44188:0 crwdns44189:0crwdne44189:0
+  * crwdns44190:0crwdne44190:0 
+      * crwdns44191:0crwdne44191:0 
+          * crwdns44192:0crwdne44192:0
+          * crwdns44193:0crwdne44193:0
+          * crwdns44194:0crwdne44194:0
+          * crwdns44195:0crwdne44195:0
+      * crwdns44196:0crwdne44196:0
+      * crwdns44197:0crwdne44197:0
+  * crwdns44198:0crwdne44198:0 
+      * crwdns44199:0crwdne44199:0
+      * crwdns44200:0crwdne44200:0
+      * ***crwdns44201:0crwdne44201:0*** 
+  * crwdns44202:0crwdne44202:0
+  * crwdns44203:0crwdne44203:0 [crwdns44204:0crwdne44204:0](http://csta.acm.org/Curriculum/sub/K12Standards.html) crwdns44205:0crwdne44205:0 
+      * crwdns44206:0crwdne44206:0
+      * crwdns44207:0crwdne44207:0
+      * crwdns44208:0crwdne44208:0
+      * crwdns44209:0crwdne44209:0
+  * crwdns44210:0crwdne44210:0 crwdns44211:0crwdne44211:0 crwdns44212:0crwdne44212:0
+  * crwdns44213:0crwdne44213:0 
+      * crwdns44214:0crwdne44214:0 crwdns44215:0crwdne44215:0 crwdns44216:0crwdne44216:0 crwdns44217:0crwdne44217:0 
+      * crwdns44218:0crwdne44218:0 [crwdns44219:0crwdne44219:0](http://code.org/api/hour/finish) crwdns44220:0crwdne44220:0 
+          * crwdns44221:0crwdne44221:0
+          * crwdns44222:0crwdne44222:0
+          * crwdns44223:0crwdne44223:0
+          * crwdns44224:0crwdne44224:0 
+  * *crwdns44225:0crwdne44225:0* crwdns44226:0crwdne44226:0 
+      * crwdns44227:0crwdne44227:0 
+          * crwdns44228:0crwdne44228:0
+          * crwdns44229:0crwdne44229:0
+          * crwdns44230:0crwdne44230:0
+          * crwdns44231:0crwdne44231:0
+          * crwdns44232:0crwdne44232:0
+      * crwdns44233:0crwdne44233:0 
+          * crwdns44234:0crwdne44234:0
 
-[**crwdns20999:0crwdne20999:0**](#top)
+[**crwdns44235:0crwdne44235:0**](#top)
 
 <a id="design"></a>
 
-## crwdns19833:0crwdne19833:0
+## crwdns44236:0crwdne44236:0
 
-crwdns21000:0crwdne21000:0 crwdns21001:0crwdne21001:0 crwdns21002:0crwdne21002:0 crwdns21003:0crwdne21003:0 crwdns21004:0crwdne21004:0
+crwdns44237:0%20crwdnd44237:0%20Locrwdne44237:0 crwdns44238:0crwdne44238:0 crwdns44239:0crwdne44239:0 crwdns44240:0crwdne44240:0
 
-crwdns21005:0crwdne21005:0 crwdns21006:0crwdne21006:0
+crwdns44241:0crwdne44241:0 crwdns44242:0crwdne44242:0
 
-crwdns21007:0crwdne21007:0 crwdns21008:0crwdne21008:0 crwdns21009:0crwdne21009:0
+crwdns44243:0crwdne44243:0 crwdns44244:0crwdne44244:0 crwdns44245:0crwdne44245:0
 
-  * crwdns19844:0crwdne19844:0
-  * crwdns19845:0crwdne19845:0
-  * crwdns19846:0crwdne19846:0 
-  * crwdns19847:0crwdne19847:0
+  * crwdns44246:0crwdne44246:0
+  * crwdns44247:0crwdne44247:0
+  * crwdns44248:0crwdne44248:0 
+  * crwdns44249:0crwdne44249:0
 
-crwdns21010:0crwdne21010:0
+crwdns44250:0crwdne44250:0
 
-crwdns21011:0________crwdne21011:0 crwdns21012:0crwdne21012:0 crwdns21013:0crwdne21013:0 crwdns21014:0crwdne21014:0
+crwdns44251:0________crwdne44251:0 crwdns44252:0crwdne44252:0 crwdns44253:0crwdne44253:0 crwdns44254:0crwdne44254:0
 
-crwdns21015:0crwdne21015:0
+crwdns44255:0crwdne44255:0
 
-crwdns21016:0crwdne21016:0
+crwdns44256:0crwdne44256:0
 
-crwdns21017:0crwdne21017:0
+crwdns44257:0crwdne44257:0
 
-**crwdns21018:0crwdne21018:0.**
+crwdns44258:0crwdne44258:0
 
-crwdns21019:0crwdne21019:0
+  * crwdns44259:0crwdne44259:0
+  * crwdns44260:0crwdne44260:0 
+  * crwdns44261:0crwdne44261:0
 
-  * crwdns19858:0crwdne19858:0
-  * crwdns19859:0crwdne19859:0 
-  * crwdns19860:0crwdne19860:0
+crwdns44262:0crwdne44262:0
 
-crwdns21020:0crwdne21020:0
+  * crwdns44263:0crwdne44263:0
+  * crwdns44264:0crwdne44264:0
+  * crwdns44265:0crwdne44265:0
 
-  * crwdns19862:0crwdne19862:0
-  * crwdns19863:0crwdne19863:0
-  * crwdns19864:0crwdne19864:0
-
-[**crwdns21021:0crwdne21021:0**](#top)
+[**crwdns44266:0crwdne44266:0**](#top)
 
 <a id="tm"></a>
 
-## crwdns19866:0crwdne19866:0
+## crwdns44267:0crwdne44267:0
 
-crwdns21022:0crwdne21022:0
+crwdns44268:0crwdne44268:0
 
-crwdns21023:0crwdne21023:0 crwdns21024:0crwdne21024:0 crwdns21025:0crwdne21025:0
+crwdns44269:0crwdne44269:0 crwdns44270:0crwdne44270:0 crwdns44271:0crwdne44271:0
 
-  1. crwdns19871:0crwdne19871:0 crwdns19872:0crwdne19872:0 crwdns19873:0crwdne19873:0
-  2. crwdns19874:0crwdne19874:0
-  3. crwdns19875:0crwdne19875:0
+  1. crwdns44272:0crwdne44272:0 crwdns44273:0crwdne44273:0 crwdns44274:0crwdne44274:0
+  2. crwdns44275:0crwdne44275:0
+  3. crwdns44276:0crwdne44276:0
     
-    ***crwdns19876:0[csedweek.org]crwdnd19876:0[code.org]crwdne19876:0***
+    *crwdns44277:0[csedweek.org]crwdnd44277:0[code.org]crwdne44277:0*
 
-  4. crwdns19877:0crwdne19877:0
+  4. crwdns44278:0crwdne44278:0
 
-[**crwdns21026:0crwdne21026:0**](#top)
+[**crwdns44279:0crwdne44279:0**](#top)
 
 <a id="pixel"></a>
 
-## crwdns19879:0crwdne19879:0
+## crwdns44280:0crwdne44280:0
 
-crwdns21027:0crwdne21027:0 crwdns21028:0crwdne21028:0
+crwdns44281:0crwdne44281:0 crwdns44282:0crwdne44282:0
 
-crwdns21029:0crwdne21029:0 crwdns21030:0crwdne21030:0 crwdns21031:0crwdne21031:0
+crwdns44283:0crwdne44283:0 crwdns44284:0crwdne44284:0 crwdns44285:0crwdne44285:0
 
-crwdns21032:0crwdne21032:0
+crwdns44286:0crwdne44286:0
 
-***crwdns21033:0crwdne21033:0***
+crwdns44287:0crwdne44287:0
 
-**crwdns21034:0crwdne21034:0**
+crwdns44288:0crwdne44288:0
 
-crwdns21035:0crwdne21035:0
+crwdns44289:0crwdne44289:0
 
-crwdns21036:0crwdne21036:0
-
-[**crwdns21037:0crwdne21037:0**](#top)
+[**crwdns44290:0crwdne44290:0**](#top)
 
 <a id="promote"></a>
 
-## crwdns19891:0crwdne19891:0
+## crwdns44291:0crwdne44291:0
 
-crwdns21038:0crwdne21038:0 crwdns21039:0crwdne21039:0 crwdns21040:0crwdne21040:0 crwdns21041:0crwdne21041:0
+crwdns44292:0crwdne44292:0 crwdns44293:0crwdne44293:0 crwdns44294:0crwdne44294:0 crwdns44295:0crwdne44295:0
 
-  * crwdns19896:0crwdne19896:0
-  * crwdns19897:0crwdne19897:0
-  * crwdns19898:0crwdne19898:0
-  * crwdns19899:0crwdne19899:0
+  * crwdns44296:0crwdne44296:0
+  * crwdns44297:0crwdne44297:0
+  * crwdns44298:0crwdne44298:0
+  * crwdns44299:0crwdne44299:0
 
-[**crwdns21042:0crwdne21042:0**](#top)
+[**crwdns44300:0crwdne44300:0**](#top)
 
 <a id="disabilities"></a>
 
-## crwdns19901:0crwdne19901:0
+## crwdns44301:0crwdne44301:0
 
-crwdns21043:0crwdne21043:0 crwdns21044:0crwdne21044:0
+crwdns44302:0crwdne44302:0 crwdns44303:0crwdne44303:0
 
-[**crwdns21045:0crwdne21045:0**](#top)
+[**crwdns44304:0crwdne44304:0**](#top)

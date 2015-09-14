@@ -1,3 +1,5 @@
+/* global $ appOptions dashboard options */
+
 /**
  * Pixelation widget for visualizing image encoding.
  *
@@ -6,13 +8,13 @@
 
 var MAX_SIZE = 400;
 
-var pixel_format, pixel_data, canvas, ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange;
+var pixel_format, pixel_data, canvas, main_ctx, widthText, widthRange, heightText, heightRange, bitsPerPixelText, bitsPerPixelRange, image_w, image_h, sqSize;
 
 function pixelationInit() {
   pixel_format = document.querySelector('#pixel_format');
   pixel_data = document.querySelector("#pixel_data");
   canvas = document.querySelector("#canvas");
-  ctx = canvas.getContext("2d");
+  main_ctx = canvas.getContext("2d");
 
   widthText = document.getElementById("width");
   widthRange = document.getElementById("widthRange");
@@ -20,18 +22,103 @@ function pixelationInit() {
   heightRange = document.getElementById("heightRange");
   bitsPerPixelText = document.getElementById("bitsPerPixel");
   bitsPerPixelRange = document.getElementById("bitsPerPixelSlider");
+  startOver = document.getElementById("start_over");
+
+  if (appOptions.readonlyWorkspace) {
+    // Disable the parts of the UI that would modify the pixelation data.
+
+    pixel_data.setAttribute("readonly", "true");
+
+    widthText.setAttribute("disabled", "true");
+    widthRange.setAttribute("disabled", "true");
+    heightText.setAttribute("disabled", "true");
+    heightRange.setAttribute("disabled", "true");
+    bitsPerPixelText.setAttribute("disabled", "true");
+    bitsPerPixelRange.setAttribute("disabled", "true");
+    startOver.setAttribute("disabled", "true");
+  }
+
+  customizeStyles();
+  initProjects();
+}
+
+function customizeStyles() {
+  if (!window.options) {
+    // Default is version 3 (all features enabled).
+    window.options = {version: '3'};
+  }
+  if (options.version === '1') {
+    $('.hide_on_v1').hide();
+
+    // The layout is fundamentally different in version 1 than it is in other versions.
+    // Rearrange the DOM so that the visualization column sits at the top left.
+    var visualizationColumn = document.getElementById('visualizationColumn');
+    var visualizationEditorHeader = document.getElementById('visualizationEditorHeader');
+    visualizationColumn.parentNode.insertBefore(visualizationColumn, visualizationEditorHeader);
+  } else if (options.version === '2') {
+    $('.hide_on_v2').hide();
+    $('#height, #width').prop('readonly', true);
+  }
+  if (options.hex) {
+    $('input[name="binHex"][value="hex"]').prop('checked', true);
+  }
+  if (options.instructions) {
+    $('#below_viz_instructions').text(options.instructions).show();
+  }
+}
+
+function initProjects() {
+  // Initialize projects for save/load functionality if channel id is present.
+  if (appOptions.channel) {
+    window.apps.setupProjectsExternal();
+    var sourceHandler = {
+      setInitialLevelHtml: function (levelHtml) {},
+      getLevelHtml: function () {
+        return '';
+      },
+      setInitialLevelSource: function (levelSource) {
+        options.projectData = levelSource;
+      },
+      getLevelSource: function () {
+        return pixel_data.value.replace(/[ \n]/g, "");
+      }
+    };
+    dashboard.project.load().then(function() {
+      // Only enable saving if the initial load succeeds. This means new work
+      // will not be saved, but old work will not be erased and may become
+      // available by refreshing the page.
+      options.saveProject = dashboard.project.save.bind(dashboard.project);
+      options.projectChanged = dashboard.project.projectChanged;
+      window.dashboard.project.init(sourceHandler);
+    }).always(function() {
+      pixelationDisplay();
+    });
+  } else {
+    pixelationDisplay();
+  }
+}
+
+function pixelationDisplay() {
+  pixel_data.value = options.projectData || options.data;
+  drawGraph(null, false, true);
+  formatBitDisplay();
 }
 
 function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
 }
 
-function drawGraph() {
+function drawGraph(ctx, exportImage, updateControls) {
+  ctx = ctx || main_ctx;
   ctx.fillStyle = "#ccc";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
 
   var binCode = "";
   var hexMode = isHex();
+
+  // Save the cursor position before doing any manipulation of the textarea.
+  var cursorPosition = pixel_data.selectionStart;
+  var characterCount = pixel_data.value.length;
 
   // If the hex radio button is currently selected.
   if (hexMode) {
@@ -50,26 +137,37 @@ function drawGraph() {
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
-  var w, h, bitsPerPix = 1;
+  // Restore cursor position. This may steal the focus from other controls,
+  // so only do it if we know they should be updated.
+  if (updateControls) {
+    cursorPosition += (pixel_data.value.length - characterCount);
+    pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+  }
+
+  var bitsPerPix = 1;
   if (options.version == '1') {
-    w = widthText.value;
-    h = heightText.value;
+    image_w = getPositiveValue(widthText);
+    image_h = getPositiveValue(heightText);
   } else {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
-    w = binToInt(readByte(binCode, 0));
-    h = binToInt(readByte(binCode, 1));
-    widthText.value = widthRange.value = w;
-    heightText.value = heightRange.value = h;
+    image_w = binToInt(readByte(binCode, 0));
+    image_h = binToInt(readByte(binCode, 1));
+    if (updateControls) {
+      widthText.value = widthRange.value = image_w;
+      heightText.value = heightRange.value = image_h;
+    }
     binCode = binCode.substring(16, binCode.length);
 
     if (options.version != '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
-      bitsPerPixelText.value = bitsPerPix;
-      bitsPerPixelRange.value = bitsPerPix;
+      if (updateControls) {
+        bitsPerPixelText.value = bitsPerPix;
+        bitsPerPixelRange.value = bitsPerPix;
+      }
       binCode = binCode.substring(8, binCode.length);
 
       // Update pixel format indicator.
-      var bitsPerPixel = parseInt(bitsPerPixelText.value);
+      var bitsPerPixel = getPositiveValue(bitsPerPixelText);
       if (hexMode && bitsPerPixel % 4 !== 0) {
         pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
       } else {
@@ -93,14 +191,19 @@ function drawGraph() {
         }
       }
     }
+
+    // Don't trigger autosave when workspace is readonly.
+    if (!appOptions.readonlyWorkspace && options.projectChanged) {
+      options.projectChanged();
+    }
   }
 
   var colorNums = bitsToColors(binCode, bitsPerPix);
 
-  var sqSize = 1, fillSize = 1, offset = 0;
+  sqSize = 1, fillSize = 1, offset = 0;
   if (!document.querySelector('input#actual_size:checked')) {
     // Auto-size pixel borders and edge offsets.
-    sqSize = MAX_SIZE / Math.max(w, h);
+    sqSize = MAX_SIZE / Math.max(image_w, image_h);
     fillSize = sqSize * 0.95;
     offset = (sqSize - fillSize) / 2;
     if (sqSize - fillSize < 0.33) {
@@ -110,11 +213,14 @@ function drawGraph() {
   }
 
   // Draw image.
-  var left = Math.floor((MAX_SIZE - w * sqSize) / 2);
-  var top = Math.floor((MAX_SIZE - h * sqSize) / 2);
-  for (var y = 0; y < h; y++) {
-    for (var x = 0; x < w; x++) {
-      ctx.fillStyle = colorNums[(y * w) + x] || "#fdd";
+  var left = Math.floor((MAX_SIZE - image_w * sqSize) / 2);
+  var top = Math.floor((MAX_SIZE - image_h * sqSize) / 2);
+  if (exportImage) {
+    left = top = 0;
+  }
+  for (var y = 0; y < image_h; y++) {
+    for (var x = 0; x < image_w; x++) {
+      ctx.fillStyle = colorNums[(y * image_w) + x] || "#fdd";
       ctx.fillRect(left + x * sqSize + offset, top + y * sqSize + offset, fillSize, fillSize);
     }
   }
@@ -123,8 +229,8 @@ function drawGraph() {
 function formatBitDisplay() {
 
   var theData = pixel_data.value;
-  var chunksPerLine = parseInt(widthText.value);
-  var chunkSize = parseInt(bitsPerPixelText.value);
+  var chunksPerLine = getPositiveValue(widthText);
+  var chunkSize = getPositiveValue(bitsPerPixelText);
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
@@ -289,6 +395,9 @@ function binToInt(bits) {
  */
 function bitsToColors(bitString, bitsPerPixel) {
   var colorList = [];
+  if (!bitsPerPixel) {
+    return colorList;
+  }
 
   for (var i = 0; i < bitString.length; i += bitsPerPixel) {
     colorList.push(getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
@@ -323,14 +432,15 @@ function changeVal(elementID) {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
+  setMinTextValues();
   drawGraph();
 }
 
 function setSliders() {
-
-  heightRange.value = heightText.value;
-  widthRange.value = widthText.value;
-  bitsPerPixelRange.value = bitsPerPixelText.value;
+  // Make sure slider value is at least 1
+  heightRange.value = getPositiveValue(heightText);
+  widthRange.value = getPositiveValue(widthText);
+  bitsPerPixelRange.value = getPositiveValue(bitsPerPixelText);
 
   if (options.version != '1') {
     updateBinaryDataToMatchSliders();
@@ -339,11 +449,27 @@ function setSliders() {
   drawGraph();
 }
 
+function setMinTextValues() {
+  heightText.value = getPositiveValue(heightText);
+  widthText.value = getPositiveValue(widthText);
+  bitsPerPixelText.value = getPositiveValue(bitsPerPixelText);
+}
+
+/**
+ * @param element {Element}
+ * @returns element's numerical value if it represents a positive integer,
+ * or 1 if it is non-positive or non-numerical.
+ */
+function getPositiveValue(element) {
+  var value = parseInt(element.value, 10);
+  return value >= 1 ? value : 1;
+}
+
 function updateBinaryDataToMatchSliders() {
 
-  var heightByte = pad(parseInt(heightRange.value).toString(2), 8, "0");
-  var widthByte = pad(parseInt(widthRange.value).toString(2), 8, "0");
-  var bppByte = pad(parseInt(bitsPerPixelRange.value).toString(2), 8, "0");
+  var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
+  var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
+  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
 
@@ -378,7 +504,69 @@ function updateBinaryDataToMatchSliders() {
  */
 function showPNG() {
 
-  var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
+  var tempCanvas = document.createElement('canvas');
+  if (document.querySelector('input#actual_size:checked')) {
+    tempCanvas.width = image_w;
+    tempCanvas.height = image_h;
+  } else {
+    tempCanvas.width = image_w * sqSize;
+    tempCanvas.height = image_h * sqSize;
+  }
+  drawGraph(tempCanvas.getContext("2d"), true);
+  var w = window.open('', 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
+  w.document.write('<style>* { margin: 0; })</style>');
+  w.document.write('<img src="' + tempCanvas.toDataURL() + '">');
+  w.document.close();
+
+  if (!appOptions.readonlyWorkspace && options.saveProject) {
+    options.saveProject();
+  }
 }
+
+var finishedButton;
+function onFinishedButtonClick() {
+  finishedButton = $('#finished');
+  if (finishedButton.attr('disabled')) {
+    return;
+  }
+  finishedButton.attr('disabled', true);
+
+  if (!appOptions.readonlyWorkspace && options.saveProject) {
+    options.saveProject(onSaveProjectComplete);
+  } else {
+    dashboard.dialog.processResults(onComplete);
+  }
+}
+
+function onSaveProjectComplete() {
+  dashboard.dialog.processResults(onComplete);
+}
+
+/**
+ * Function to be called after processResults completes.
+ * @param {Boolean} willRedirect Whether the browser will redirect to another
+ *     location after this function completes.
+ */
+function onComplete(willRedirect) {
+  if (!willRedirect) {
+    finishedButton.attr('disabled', false);
+  }
+}
+
+/**
+ * Show a dialog prompting the user to confirm that they want to reset the
+ * level to its initial state, losing any of their own work on that level.
+ */
+function startOverClicked() {
+  dashboard.dialog.showStartOverDialog(startOverConfirmed);
+}
+
+function startOverConfirmed() {
+  pixel_data.value = options.data;
+  drawGraph(null, false, true);
+  formatBitDisplay();
+}
+
+pixelationInit();

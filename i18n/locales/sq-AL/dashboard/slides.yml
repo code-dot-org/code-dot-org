@@ -18,22 +18,22 @@ sq:
         text: Një program është një grumbull udhëzimesh që ndjek kompjuteri juaj.
       6:
         image: notes/hoc1_6.jpg
-        text: Qëllimi i programit tuaj të parë, është të çojë një Angry Bird ndërmjet një tuneli për të gjuajtur një Derrkuc të Gjelbër.
+        text: Qëllimi i programit tuaj të parë, është të çojë një Angry Bird ndërmjet një labiriniti për të gjuajtur një Derrkuc të Gjelbër.
       7:
         image: notes/hoc1_7.jpg
-        text: Ana e majtë është tuneli ku ekzekutohet programi juaj. Udhëzimet për çdo puzzle janë poshtë tunelit.
+        text: Ana e majtë është labirinti ku ekzekutohet programi juaj. Udhëzimet për çdo formues janë poshtë tunelit.
       8:
         image: notes/hoc1_8.jpg
         text: Toolbox-i i mesit ka komandat e Angry Bird. Ti do të përdorësh ato për të ndërtuar kodin tënd.
       9:
         image: notes/hoc1_9.jpg
-        text: Djathtas është vendi tënd i punës ku ti do lëvizësh blloqet nga toolboxi për të ndërtuar programin tënd. Për të fshirë një bllok, lëvize atë tek koshi në cep.
+        text: Djathtas është vendi yt i punës ku ti do lëvizësh blloqet nga toolboxi për të ndërtuar programin tënd. Për të fshirë një bllok, lëvize atë tek koshi në cep.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Çdo bllok është një udhëzim. Nëse ti lëviz një bllok "move forward" tek zona jote e punës dhe shtyp "Run Program", zogu do lëvizë një hapësirë në tunel.'
+        text: 'Çdo bllok është një udhëzim. Nëse ti lëviz një bllok "move forward" tek zona jote e punës dhe shtyp "Run Program", zogu do lëvizë një hapësirë në labirint.'
       11:
         image: notes/hoc1_11.jpg
-        text: Për të bërë më shumë se një veprim, ti mund të lëvizësh shumë blloqe tek zona jote e punës dhe bashkoji ato bashkë. Zogu do bëjë komandat nga lart poshtë.
+        text: Për të bërë më shumë se një veprim, ti mund të lëvizësh shumë blloqe tek zona jote e punës dhe bashkangjiti ato bashkë. Zogu do bëjë komandat nga lart poshtë.
       12:
         image: notes/hoc1_12.jpg
         text: 'Nëse ti ekzekuton një program dhe dëshiron ta rregullosh atë dhe ta përsërisësh, shtyp butonin "Reset".'
@@ -46,20 +46,20 @@ sq:
         text: Pëshëndetje! Unë jam JR! Çdo ekip garash makine ka nevojë shkencëtarë kompjuterash për të fituar. Ata analizojnë të dhëna nga makina për ta bërë atë të ecë më shpejt.
       2:
         image: notes/stage5_2.jpg
-        text: Në këto puzzle-a. ti do të jesh një artist që vizaton një vijë mbrapa atyre kudo që shkojnë ata.
+        text: Në këto puzzle-a ti do jesh një artist që vizaton një vijë mbrapa tyre kudo që ata shkojnë.
       3:
         image: notes/stage5_3.jpg
         text: 'Ky bllok thotë "move forward by 100 pixels". Pikselat janë pika vërtet të vogla në ekranin tënd.'
       4:
         image: notes/stage5_4.jpg
-        text: 'Ky bllok thotë "turn right by 90 degrees." Kjo do të kthejë artistin tënd në të njëjtën sasi si blloqet "turn" në puzzle-at maze.'
+        text: 'Ky bllok thotë "turn right by 90 degrees." Kjo do të kthejë artistin tënd në të njëjtën sasi si blloqet "turn" në formueset e labirintit.'
       5:
         image: notes/stage5_5.jpg
         text: Kliko tek shigjeta në secilën nga këto blloqe për të ndryshuar vlerën e artistit kur ecën përpara ose kthehet. Luaj për tu familjarizuar me këto blloqe të reja.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Përshëndetje, unë jam Paola! Në këto puzzle, ti je një fermer, i cili duhet të bëjë fushën komplet të sheshtë për të filluar mbjelljen e prodhimeve.
+        text: Përshëndetje, unë jam Paola! Në këto formues, ti je një fermer, i cili duhet të bëjë fushën komplet të sheshtë për të filluar mbjelljen e prodhimeve.
       2:
         image: notes/stage9_2.jpg
         text: Ti duhet ta ndihmosh atë të heqë të gjithë grumbujt me dhe dhe të mbushë të gjitha gropat.
@@ -90,7 +90,8 @@ sq:
         text: 'Nëse hedh një vështrim tek vendi jot i punës, ka disa blloqe të gjelbër që janë mbushur për ty - këto janë "event handlers" '
       7:
         image: notes/flappy07.jpg
-        text: 'Nëse do që zogu të PËRPLASET kur ti KLIKON mouse-in, ti mund ta bësh atë duke bashkuar bllokun "FLAP" tek event handler-i i përshtatshëm dhe tani në lojën tënde kurdo që ti klikon mouse-in, zogu do përplaset.'
+        text: |-
+          Nëse do që zogu të PËRPLASET kur ti KLIKON mouse-in, mund t'a bësh këtë duke bashkuar bllokun "FLAP" tek mbajtësi i duhur i eventit dhe tani në lojën tënde kurdo që ti klikon mousin, zogu do përplaset.
       8:
         image: notes/flappy08.jpg
         text: Në çdo puzzle të këtij aktiviteti ne do të prezantojmë tipe të reja eventesh si blloqe të gjelbra në vendin tënd të punës, dhe ti mund të vendosësh blloqet e përshtatshëm për ti shtuar në përgjigje të këtyre eventeve.
@@ -99,14 +100,14 @@ sq:
         text: 'Kur të shohësh një shigjetë drop down si kjo, kjo nënkupton që ti mund të ndryshosh konfigurimet - si për shembull çfarë muzike të luash kur flappy prek tokën.'
       10:
         image: notes/flappy10.jpg
-        text: Në puzzle përfundimtar, ti do të kesh mundësi të krijosh lojën tënde dhe ta ndash atë me shokët e tu. Bëfsh qejf!
+        text: Në formuesin përfundimtar, ti do të kesh mundësi të krijosh lojën tënde dhe ta ndash atë me shokët e tu. Bëfsh qejf!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
         text: Përshëndetje, unë jam Mark! Le të mësojmë rreth cikleve. Duke përdorur ciklet, ti mund ti thuash kompjuterit të përsërisë një grup veprimesh herë pas here, mijëra ose biliona herë.
       2:
         image: notes/hoc2_2.jpg
-        text: Në këtë puzzle, ne duam të bëjmë zogun që të ecë 5 hapësira përpara për të arritur derrkucin.
+        text: Në këtë formues, ne duam të bëjmë zogun që të ecë 5 hapësira përpara për të arritur derrkucin.
       3:
         image: notes/hoc2_3.jpg
         text: 'Ne mund të përdorim bllokun e ri "repeat" për të na ndihmuar.'
@@ -141,16 +142,16 @@ sq:
         text: 'Përshëndetje, unë jam Bill! Le të mësojmë një koncept bazë: deklaratat "If". Kjo është se si kompjuterat marrin vendime.'
       2:
         image: notes/hoc4_2.jpg
-        text: 'Ti i përdor deklaratat "If" vetes çdo ditë. Përpara se të dalësh çdo mëngjes, ti thua NËSE është duke rënë shi jashtë, unë duhet të vesh xhaketën time.'
+        text: 'Ti i përdor deklaratat "If" me veten tënde çdo ditë. Përpara se të dalësh çdo mëngjes, ti thua NËSE është duke rënë shi jashtë, unë duhet të vesh xhaketën time.'
       3:
         image: notes/hoc4_3.jpg
-        text: Ne mund ti themi zombie-t të kontrollojë NËSE ka rrugë nga e majta, dhe nëse gjen një rrugë majtas, ne mund ta bëjmë atë të kthehet në atë drejtim.
+        text: Ne mund ti themi zombit të kontrollojë NËSE ka rrugë nga e majta, dhe nëse gjen një rrugë majtas, ne mund ta bëjmë atë të kthehet në atë drejtim.
       4:
         image: notes/hoc4_4.jpg
         text: 'Për të shkruar kodin për këtë, le të zhvendosim bllokun tonë "if" dhe vendosim një bllok "turn left" brenda tij.'
       5:
         image: notes/hoc4_5.jpg
-        text: 'Tani, nëse ne vendosim një bllok "move forward" mbi atë dhe një bllok "repeat" për rreth çdo gjëje, çdo herë lëviz zombie, ai do të kontrollojë nëse ka rrugë majtas dhe kthehet. Komanda "repeat" është kritike, për të kontrolluar për një kthim në çdo hap.'
+        text: 'Tani, nëse ne vendosim një bllok "move forward" mbi atë dhe një bllok "repeat" për rreth çdo gjëje, çdo herë që zombi lëviz, ai do të kontrollojë nëse ka rrugë majtas dhe kthehet. Komanda "repeat" është kritike, për të kontrolluar për një kthim në çdo hap.'
       6:
         image: notes/hoc4_6.jpg
         text: Përcaktimet If janë shumë të rëndësishme në shkencën kompjuterike. Një nga programet e para që shkruajta ishte një lojë tic-tac-toe, dhe ishte një përcaktim If që thoshte NËSE personi tjetër po fiton, blloko vendin që le atë të fitojë.
@@ -163,13 +164,13 @@ sq:
         text: 'Përshëndetje, emri im është Saloni. Unë përdor shkencën kompjuterike për të ndihmuar në zgjidhjen e problemeve në shëndet dhe mjekësi. Le të mësojmë rreth bllokut "if else". Duket si blloku "if", por ka një pjesë shtesë në fund që thotë "else".'
       2:
         image: notes/hoc5_2.jpg
-        text: 'Nëse unë vendos një bllok "move forward" në vendin ku thotë "do" dhe një bllok "turn left" ku thotë "else" kjo do të thotë qe zombie do të zgjedhë ndërmjet dy mundësive. NËSE ka rrugë përpara, zombie do të ecë përpara, dhe PËRNDRYSHE (nëse nuk ka rrugë përpara), zombie do të kthehet majtas.'
+        text: 'Nëse unë vendos një bllok "move forward" në vendin ku thotë "do" dhe një bllok "turn left" ku thotë "else" kjo do të thotë qe zombi do të zgjedhë ndërmjet dy mundësive. NËSE ka rrugë përpara, zombi do të ecë përpara, dhe PËRNDRYSHE (nëse nuk ka rrugë përpara), zombi do të kthehet majtas.'
       3:
         image: notes/hoc5_3.jpg
-        text: 'Si blloku "if", ne mund të vendosim blloqet "if else" brenda një blloku "repeat" në mënyrë që zombiet të vazhdojnë lëvizjen dhe blloku "if else" do të vazhdojë të kontrollojë nëse ka për tu kthyer diku.'
+        text: 'Si blloku "if", ne mund të vendosim blloqet "if else" brenda një blloku "repeat" në mënyrë që zombi të vazhdojë lëvizjen dhe blloku "if else" do të vazhdojë të kontrollojë nëse ka për tu kthyer diku.'
       4:
         image: notes/hoc5_4.jpg
-        text: Tani, ço zombiet aty ku atyre ju takon!
+        text: Tani, çoni zombit aty ku duhet të jenë!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -195,7 +196,7 @@ sq:
         text: 'Blloqet që shkojnë brenda përcaktimit na thotë cfarë të bëjmë. Kështu që përcaktimi i funksionit quhet "mbush 5" dhe përbëhet nga blloku "repeat" dhe blloku "fill".'
       4:
         image: notes/stage13_4.jpg
-        text: 'Pëcaktimi qëndron në zonën tënde të punës, por fermeri ynë nuk e ekzekuton funksionin derisa ne të lëvizim bllokun e funksionit tonë "fill 5" nga kategoria funksioneve.'
+        text: 'Pëcaktimi qëndron në zonën tënde të punës, por fermeri ynë nuk e ekzekuton funksionin derisa ne të zhvendosim bllokun e funksionit tonë "fill 5" nga kategoria funksioneve.'
       5:
         image: notes/stage13_5.jpg
         text: |-
@@ -203,8 +204,7 @@ sq:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: |-
-          Hi, I'm Makinde! Let's learn about the "while block."
+        text: 'Përshëndetje, unë jam Makinde! Le të mësojmë rreth "blloqeve të bardha". '
       2:
         image: notes/stage9_6.jpg
         text: 'Blloku "while" do bëjë gjithçka që ti vendos brenda atij PËR SA KOHË që përcaktimi lart është I VËRTETË.'
@@ -217,10 +217,10 @@ sq:
         text: Përshëndetje, unë jam Trina dhe punoj për Pixar. Kam punuar në shumë filma, duke përfshirë Shrek.
       2:
         image: notes/stage11_2.jpg
-        text: 'Ky ështëcikli ynë i ri "counter". Do të kryejë veprime herë pas here dhe ti mund ti ndryshosh veprimet çdo herë nga pak.'
+        text: 'Ky është cikli ynë i ri "counter". Do të kryejë veprime herë pas here dhe ti mund ti ndryshosh veprimet çdo herë nga pak.'
       3:
         image: notes/stage11_3.jpg
-        text: 'Në këtë shembull, cikli jonë "counter" thotë "numëro me numëruesin nga 50 tek 90 me 10" dhe brenda tij ne kemi një bllok "draw a square". Lëviz bllokun "counter" nga pjesa "Variablave" në vendin e "gjatësisë".'
+        text: 'Në këtë shembull, cikli jonë "counter" thotë "numëro me numëruesin nga 50 tek 90 me 10" dhe brenda tij ne kemi një bllok "draw a square". Zhvendos bllokun "counter" nga pjesa "Variablave" në vendin e "gjatësisë".'
       4:
         image: notes/stage11_4.jpg
         text: Kjo nënkupton që artisti jonë do të vizatojë një katror që ka gjatësi brinjësh 50 piksela , më pas do të shtojë 10 tek ajo dhe do të vizatojë një katror me gjatësi brinjësh 60 piksela. Më pas do vazhdojë të shtojë nga 10 dhe të vizatojë katorrë derisa të arrijë 90. Kështu që ne do kemi katrorë 50, 60, 70, 80 dhe 90.
@@ -230,29 +230,29 @@ sq:
         text: Përshëndetje, unë jam Janete dhe jam inxhiniere tek Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: Po nëse ne duam të vizatojmë një grup trekëndorësh dhe ti kemi me madhësi të ndryshme?
+        text: Po nëse ne duam të vizatojmë një grup trekëndëshash dhe ti kemi me madhësi të ndryshme?
       3:
         image: notes/stage15_3.jpg
         text: Ne mund të shkruanim gjithe kodin me dorë ose ne mund të përdorim një funksion me parametra.
       4:
         image: notes/stage15_4.jpg
-        text: 'Për ta bërë këtë, kliko yllin blu në përcaktimin e funksionit "draw a triangle". Më pas, ço bllokun "input name" në bllokun "input".'
+        text: 'Për ta bërë këtë, kliko yllin blu në përcaktimin e funksionit "draw a triangle". Më pas, zhvendos bllokun "input name" në bllokun "input".'
       5:
         image: notes/stage15_5.jpg
         text: 'Më pas, nëse ti shkruan "gjatësi" në vendin ku thotë "x" dhe shtyp "Enter", ti do të krijosh një length input për funksionin tënd.'
       6:
         image: notes/stage15_6.jpg
-        text: 'Më pas kliko tek ylli. Tani, ti dëshiron të klikosh në kategorinë e variablave dhe të lëvizësh bllokun "gjatësi" në bllokun "move forward" të funksionit tënd.  Dhe hiq bllokun e numrit të vjetër.'
+        text: 'Më pas kliko tek ylli. Tani, ti dëshiron të klikosh në kategorinë e variablave dhe të zhvendosësh bllokun "length" në bllokun "move forward" të funksionit tënd. Dhe hiq bllokun e numrit të vjetër.'
       7:
         image: notes/stage15_7.jpg
-        text: 'Për të përdorur funksionin tënd me parametra, kliko në kategorinë e funksioneve dhe lëviz funksionin tënd " draw a triangle with length".'
+        text: 'Për të përdorur funksionin tënd me parametra, kliko në kategorinë e funksioneve dhe lëviz funksionin tënd "draw a triangle with length".'
       8:
         image: notes/stage15_8.jpg
-        text: Tani ti mund të përdorësh bllokun e matematikës për të futur numra të ndryshëm, që të vizatos trekëndorë me madhësi të ndryshme.
+        text: Tani ti mund të përdorësh bllokun e matematikës për të futur numra të ndryshëm, që të vizatos trekëndësha me madhësi të ndryshme.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Urime! Me puzlle-in e fundit që zgjidhe, ti sapo shkruajte kodin që mund ti thuash ÇDO pajisje se si të gjejë rrugën e tij midis një maze ose tuneli të pa-degëzuar të çdo gjatësie, edhe nëse është një zombie, një zog, një makinë marsi ose edhe një makinë që e nget vetë.
+        text: Urime! Me formuesin e fundit që zgjidhe, ti sapo shkruajte kodin që mund ti thuash ÇDO pajisje se si të gjejë rrugën e tij midis një labirinti ose tuneli të çdo gjatësie, edhe nëse është një zombi, një zog, një makinë marsi ose edhe një makinë që e nget vetë.
       2:
         image: notes/hoc6_2.jpg
         text: 'Konceptet bazë që ti përdore, janë zemra e çdo programi ose apliakcioni që ti do provosh gjithmonë.  Ne mësuam rreth cikleve përsërit, përcaktimeve pësërit derisa, përcaktimeve nëse dhe përcaktimeve if else.'
@@ -269,7 +269,7 @@ sq:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Përshëndetje, emri im është Lyndey. Unë modeloj, aktroj dhe shkruaj aplikacionet e mia. Le të përdorim kod për të lidhur Anna-n dhe Elsa-n ndërkohë që ato eksplorojnë magjinë dhe bukurinë e akullit.
+        text: Përshëndetje, emri im është Lyndey. Unë modeloj, aktroj dhe shkruaj aplikacionet e mia. Le të përdorim kod për të lidhur Anën dhe Elsën ndërkohë që ato eksplorojnë magjinë dhe bukurinë e akullit.
       2:
         image: notes/frozen1_2.jpg
         text: Ti do të krijosh flokë dëbore dhe modele ndërkohë që patinon dhe bën një magji dimërore që mund ta ndash më pas me shokët e tu.
@@ -293,7 +293,7 @@ sq:
         text: 'Këtu, blloku "Move forward" thotë, "move forward by 100 pixels." Kur ne shtypim "Run", çfarë ndodh? Elsa ecën përpara në një masë të caktuar në ekran, 100 piksela në fakt! Pikselat janë shumë katrorë të vegjël në ekranin e kompjuterit tënd.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'Blloku tjetër që ne kemi në këtë puzzle thotë "turn right by 90 degrees." Dhe kur ta përdorim këtë bllok "Turn Right", që bën Elsën të kthehet në një masë të caktuar. Mund të luash se sa larg do që të kthehet Elsa. Këndi matet nga rruga përpara Elsës. Kështu që ky është një kthim 90 gradësh. Dhe ky, është një kthim 120 gradësh.'
+        text: 'Blloku tjetër që ne kemi në këtë formues thotë "turn right by 90 degrees." Dhe kur ta përdorim këtë bllok "Turn Right", që bën Elsën të kthehet në një masë të caktuar. Mund të luash se sa larg do që të kthehet Elsa. Këndi matet nga rruga përpara Elsës. Kështu që ky është një kthim 90 gradësh. Dhe ky, është një kthim 120 gradësh.'
       10:
         image: notes/frozen1_10.jpg
         text: Kujtohu, ti mund të ndryshosh numrin e pikselave dhe gradët duke klikuar shigjetat anash tyre.
@@ -303,7 +303,7 @@ sq:
         text: Përshëndetje, unë jam Paola! Kompjuterat janë vërtet të mirë në përsëritjen e veprimeve. Ti mund të numërosh në 10, 20 ose 100. Por, një kompjuter mund të numërojë deri në biliona ose trilona. Nuk do mërzitet dhe do e bëjë për pak sekonda. Edhe nëse është duke numëruar ose vizatuar ose diçka tjetër--kompjuterat mund të përsërisin gjëra në qindra ose madje edhe biliona herë.
       2:
         image: notes/frozen2_2.jpg
-        text: 'Në programim, ne e quajmë këtë një cikël. Nj cikël është se si ti e përsërit kodin tënd herë pas here. Për puzzle-in tënd, çelsi jot është të ndihmosh Anna-n të krijojë një katror me bllokun "Repeat".'
+        text: 'Në programim, ne e quajmë këtë një cikël. Një cikël është se si ti e përsërit kodin tënd herë pas here. Për formuesin tënd, çelsi jot është të ndihmosh Anën të krijojë një katror me bllokun "Repeat".'
       3:
         image: notes/frozen2_3.jpg
         text: 'Çdo bllok kodi që ti fut brenda bllokut "Repeat" do të përsëritet në sekuencë, aq herë sa ti dëshiron.'
@@ -325,7 +325,7 @@ sq:
         text: Sapo ti i mëson një kompjuteri se si ta bëjë një veprim njëherë duke përdorur këtë sekuencë komandash, ti mund të bësh emrin tënd për atë veprim kështu që është e lehtë për ta përsëritur më vonë.
       4:
         image: notes/frozen3_4.jpg
-        text: Përshëndetje, unë jam Jess. Kur programon me blloqe, ti do të përdorësh funksionet if. Janë një grup veprimesh që ti do dëshirosh ti përdorësh shumë herë. Për shembull, ti ke shkruar kod për të krijuar një katror.
+        text: Përshëndetje, unë jam Jess. Kur programon me blloqe, ti do të përdorësh funksionet if. Janë një grup veprimesh që ti do dëshirosh ti përdorësh shumë herë. Për shembull, ti ke shkruar kodin për të krijuar një katror.
       5:
         image: notes/frozen3_5.jpg
         text: 'Ti mund të përcaktosh këtë si një funksion të quajtur "create a square." '
@@ -334,24 +334,24 @@ sq:
         text: Tani ke një bllok të ri që ti mund ta përdorësh disa herë për të krijuar katrorë të shumëfishtë.
       7:
         image: notes/frozen3_7.jpg
-        text: Shumë forma të thjeshta mund të përdoren për të krijuar modele shumë më të komplikuara. Në puzzle-in tjetër, kodi që ti sapo shkruajte për të bërë një rreth është i vlefshëm për ty si një funksion i ri që mund të bëjë rrathë të madhësive të ndryshme. A mund ta përdorësh atë për të ndihmuar Elsa-n të krijojë modele të ndërlikuara edhe të bukura në dëborë?
+        text: Shumë forma të thjeshta mund të përdoren për të krijuar modele shumë më të komplikuara. Në formuesin tjetër, kodi që ti sapo shkruajte për të bërë një rreth është i vlefshëm për ty si një funksion i ri që mund të bëjë rrathë të madhësive të ndryshme. A mund ta përdorësh atë për të ndihmuar Elsën të krijojë modele të ndërlikuara edhe të bukura në dëborë?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: Deri tani ti ke qënë duke bërë një animim ose një histori që bën të njëjtën gjë sa herë që ti ekzekuton atë. Tani ti mund të bësh një lojë interaktive që ti mund ta luash.
+        text: Deri tani ti ke qënë duke bërë një animim ose një histori që bën të njëjtën gjë sa herë që ti ekzekuton atë. Tani ti mund të bësh një lojë interaktive që mund ta luash.
       2:
         image: notes/playlab_2.png
-        text: 'Këtu është blloku "when arrow" dhe blloku "move actor." Ti mund ti vendosësh këto blloqe bashkë për të lëvizur aktorët rreth e rrotull me tastat e shigjetave.'
+        text: 'Këtu është blloku "when arrow" dhe blloku "move actor." Ti mund ti vendosësh këto blloqe bashkë për të lëvizur pjesmarrësit rreth e rrotull me tastat e shigjetave.'
       3:
         image: notes/playlab_3.png
         text: Dhe ka disa blloqe që bëjnë gjëra kur aktorët përplasen ose klikohen. Shikoji dhe argëtohu!
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: Ne do të krijojmë lojëra duke përdorur Play Lab. Lojrat e mira kanë një histori dhe çdo histori ka aktorë. Ne do të mësojmë si ti bëjmë aktorët tanë si magjistarë, alienë, dhe kafshë që flasin, të lëvizin dhe të bashkëveprojnë me njëri tjetrin. Në fund të këtij tutoriali, ti mund të ndërtosh një lojë dhe ta shpërndash me shokët e tu.
+        text: Ne do të krijojmë lojëra duke përdorur Play Lab. Lojrat e mira kanë një histori dhe çdo histori ka pjesmarrës. Ne do të mësojmë si ti bëjmë pjesmarrësit tanë si magjistarë, alienë, dhe kafshë që flasin, të lëvizin dhe të bashkëveprojnë me njëri-tjetrin. Në fund të këtij tutoriali, ti mund të ndërtosh një lojë dhe ta shpërndash me shokët e tu.
       2:
         image: notes/playlab_intro_2.png
-        text: Ekrani jot është ndarë në 3 pjesë kryesore. Në të majtë është hapsira e lojës ku do ekzekutohet programi jot. Udhëzimet për çdo nivel janë shkruar poshtë.
+        text: Ekrani jot është ndarë në 3 pjesë kryesore. Në të majtë është hapsira e lojës ku do ekzekutohet programi. Udhëzimet për çdo nivel janë shkruar poshtë.
       3:
         image: notes/playlab_intro_3.png
         text: Hapsira e mesit është toolboxi dhe secili nga këto blloqe është një pjesë kodi. Hapsira e bardhë djathtas quhet zona e punës dhe këtu ne do të ndërtojmë programin tonë.
@@ -363,7 +363,7 @@ sq:
         text: 'Në këtë puzzle të parë, aktori jonë është një pinguin dhe ne do ta bëjmë atë të thotë "Përshëndetje!" duke lëvizur bllokun, duke e lidhur atë me bllokun "when run" dhe duke shtypur "Përshëndetje." Ne, gjithashtu, mund të bëjmë pinguinin të lëvizë duke përdorur blloqet "move right" dhe "move left". Sapo ti ke vendosur blloqet në vend, shtyp butonin "Run" për të parë se çfarë ke programuar.'
       6:
         image: notes/playlab_intro_6.png
-        text: Fillo dhe deri në fund, ti do të kesh mundësinë të krijosh lojën tënde me të gjithë llojet e lojtarëve qëmund të bashkëveprojnë, të bëhen të lumutr ose të mërzitur, të shënosh pikë ose të hedhësh topa zjarri, ose madje edhe të zhdukësh secilin. Është e gjitha në dorën tënde dhe në lojën që ti dëshirosh të bësh.
+        text: Fillo dhe deri në fund, ti do të kesh mundësinë të krijosh lojën tënde me të gjithë llojet e lojtarëve që mund të bashkëveprojnë, të bëhen të lumtur ose të mërzitur, të shënosh pikë ose të hedhësh topa zjarri, ose madje edhe të zhdukësh secilin. Është e gjitha në dorën tënde dhe në lojën që ti dëshirosh të bësh.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
@@ -386,4 +386,4 @@ sq:
         text: 'Nëse ne duam një aktor të bëjë diçka në mënyrë të herë pas hershme, pa bërë asgjë lojtari, ne do të vendosim këto blloqe brenda bllokut "repeat forever".'
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: Në këtë puzzle-in tjetër, qëllimi jonë është të ndihmojmë magjistarin të patrullojë kufijtë e mbretërisë, majtas dhe djathtas vazhdimisht. Duke mësuar se si komandat repeat punojnë, do të ruajnë ty shumë kohë kur ti të ndërtosh lojën tënde.
+        text: Në këtë formues tjetër, qëllimi jonë është të ndihmojmë magjistarin të patrullojë kufijtë e mbretërisë, majtas dhe djathtas vazhdimisht. Duke mësuar se si komandat repeat punojnë, do të ruajnë ty shumë kohë kur ti të ndërtosh lojën tënde.

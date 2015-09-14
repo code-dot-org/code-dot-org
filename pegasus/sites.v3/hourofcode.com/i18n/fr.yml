@@ -1,20 +1,21 @@
 fr:
   site_name: HEURE de CODE
   language: Français
-  front_title: "Rejoignez le plus grand cours en ligne de l'Histoire, du 8 au 14 décembre 2014"
+  front_title: Join the largest learning event in history, Dec 7-13, 2015
   coming_soon: Prochainement
-  front_header_banner: "Rejoignez le plus grand cours en ligne de l'Histoire, du 8 au 14 décembre 2014"
+  campaign_date_start_short: 7 déc.
+  campaign_date_start_long: Le 7 décembre
+  campaign_date_short: 7-13 déc.
+  campaign_date_full: Du 7 au 13 décembre
+  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
   front_intro_default: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
+    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays. 
     Tout le monde peut organiser, depuis partout dans le monde, un événement une Heure de code. Un tutoriel est disponible dans plus de 30 langues.  <strong>Offert à tous de 4 à 104 ans.</strong>
-  front_intro_default_uk: |
-    Une Heure de Code est un mouvement mondial qui atteint plusieurs dizaines de millions d’élèves dans plus de 180 pays.
-    Tout le monde peut organiser un événement une Heure de code. Plus de 3M de personnes ont fait la première heure du Code au Royaume-Uni. Nous allons le doublé en décembre ! <strong>Aucune expérience nécessaire. Offert à tous de 4 à 104 ans.</strong>
   front_watch_video: Regardez la nouvelle vidéo
+  front_watch_regular_video: Regardez la vidéo
   header_menu_resources: Ressources
   header_menu_faq: Foire aux questions
   header_menu_prizes: Prix
-  header_menu_uk_code_org: uk.code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_bgca: Boys and Girls Club of America
@@ -28,6 +29,109 @@ fr:
   company_teachforall: Teach for All
   company_teachforamerica: Teach for America
   company_tntp: TNTP
+  company_abss: Alamance-Burlington School System
+  company_aldineisd: Aldine Independent School District
+  company_laalliance: Alliance College Ready Public Schools
+  company_asd: Arlington Public Schools
+  company_arlingtonpublicschools: Arlington Public Schools
+  company_bisd303: Bainbridge Island School District
+  company_beavertonschooldistrict: Beaverton School District
+  company_bellevuepublicschools: Bellevue Public Schools
+  company_blan: Blanchester Local Schools
+  company_bremertonschools: Bremerton School District
+  company_browardschools: Broward County Schools
+  company_cajonvalley: Cajon Valley School District
+  company_calistogajointunified: Calistoga Joint Unified School District
+  company_canalwinchesterschools: Canal Winchester Local Schools
+  company_canyonsdistrict: Canyons School District
+  company_centralunified: Central Unified School District
+  company_cvsd: Central Valley School District
+  company_ccboe: Charles County Public Schools
+  company_ChathamCountySchools: Chatham County Schools
+  company_chelmsfordpublicschooldistrict: Chelmsford School District
+  company_cheneysd: Cheney School District
+  company_chesterfieldschools: Chesterfield County Public Schools
+  company_cps: Chicago Public Schools
+  company_ccsd: Clark County School District
+  company_cloverparkschooldistrict: Clover Park School District
+  company_ccsoh: Columbus City School District
+  company_cresskillboe: Cresskill Public Schools
+  company_dallasisd: Dallas Independent School District
+  company_dpsk12: Denver Public Schools
+  company_dcsdk12: Douglas County Schools
+  company_dpsnc: Durham Public Schools
+  company_evsd: East Valley School District
+  company_eastonvilleschooldistrict: Eatonville School District
+  company_enumclawschooldistrict: Enumclaw School District
+  company_everettsd: Everette Public Schools
+  company_fsusd: Fairfield-Suisun Unified School District
+  company_fayettecountypublicschools: Fayette County Public Schools
+  company_forsythcountyschools: Forsyth County Schools
+  company_fcschools: Franklin County School
+  company_fpschools: Franklin Pierce School District
+  company_frederickcountypublicschools: Frederick County Public Schools
+  company_fultonschools: Fulton County Schools
+  company_vadoe: "Governor's School Programs"
+  company_gcs: Granville County Schools
+  company_gcisd: Grapevine-Colleyville ISD
+  company_greenupcountyschooldistrict: Greenup County Schools
+  company_gwinnettcountypublicschools: Gwinnett County Public Schools
+  company_HamptonCitySchools: Hampton City Schools
+  company_HanoverCountyPublicSchools: Hanover County Public Schools
+  company_HenricoCountyPublicSchools: Henrico County Public Schools
+  company_highlineschools: Highline School District
+  company_houstonisd: Houston Independent School District
+  company_hcpss: Howard County Public Schools
+  company_idla: Idaho Digital Learning Academy
+  company_janesvilleschooldistrict: Janesville School District
+  company_johnstoncountyschools: Johnston County Schools
+  company_lps: Lincoln Public School
+  company_littletonpublicschools: Littleton Public Schools
+  company_lausd: Los Angeles Unified School District
+  company_lcps: Louisa County Public Schools
+  company_lcsedu: Lynchburg City Schools
+  company_msvl: Marysville School District
+  company_dadeschools: Miami-Dade Public Schools
+  company_miltonps: Milton Public Schools
+  company_montgomeryschoolsmd: Montgomery County Public Schools
+  company_needhampublicschools: Needham Public Schools
+  company_NelsonCountyPublicSchools: Nelson County Public Schools
+  company_newalbanyschools: New Albany Plain Local Schools
+  company_newkentschools: New Kent County Public Schools
+  company_newarkcityschools: Newark City Schools
+  company_nnschools: Newport News Public Schools
+  company_newtonpublicschools: Newton Public Schools
+  company_nps: Norfolk Public Schools
+  company_nycdoe: NYC Department of Education
+  company_ohlsd: Oak Hills Local School District
+  company_oneclay: One Clay County School District
+  company_ocps: Orange County Schools
+  company_orangeusd: Orange Unified School District
+  company_pvusd: Paradise Valley Unified School District
+  company_PetersburgCityPublicSchools: Petersburg City Public Schools
+  company_pylusd: Placentia-Yorba Linda Union School District
+  company_PowhatanCountyPublicSchools: Powhatan County Public Schools
+  company_pgcps: Prince Georges County Public Schools
+  company_provocityschooldistrict: Provo Public Schools
+  company_reyn: Reynoldsburg City School District
+  company_RichmondPublicSchools: Richmond Public Schools
+  company_RockinghamCountySchools: Rockingham County Schools
+  company_svusd: Saddleback Valley Unified School District
+  company_sfusd: San Francisco Unified School District
+  company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
+  company_shorelineschools: Shoreline School District
+  company_spokaneschools: Spokane Public Schools
+  company_StaffordCountyPublicSchools: Stafford County Public Schools
+  company_strongnet: Strongsville School District
+  company_TukwilaSchoolDistrict: Tukwila School District
+  company_vermilionschools: Vermilion Local School District
+  company_walthampublicschools: Waltham Public Schools
+  company_warrencountyschools: Warren County Schools
+  company_WaynesboroPublicSchools: Waynesboro Public Schools
+  company_WellesleyPublicSchools: Wellesley Public Schools
+  company_wvsd208: West Valley School District
+  company_wuhsd: Whittier Union High School District
+  company_wcschools: Wilson County Schools
   prizes_all: Prix pour chaque organisateur
   prizes_every_organizer: "Chaque organisateur d'une heure de Code recevra un crédit Dropbox ou Skype pour le remercier"
   prizes_technology: Une école public des États Unis gagnera pour 10 000 $ de technologie
@@ -36,23 +140,32 @@ fr:
   prizes_brilliant: Une école de chaque province ou territoire recevra 2000$ pour un projet brillant
   prizes_actua: "15 écoles à travers le Canada recevront workshops STEM pratiques par l'un des membres d'Actua"
   prizes_details: Détails
-  whats_next_header: Quelle est la prochaine étape ?
-  whats_next_description: "Nous vous enverrons des matériels et conseils utiles pour votre événement. De nouveaux tutoriels 2014 sont à venir pour tous les navigateurs, smartphone - ou même sans ordinateur !  <a href='http://code.org/learn'>Essayez les tutoriels actuels </a>"
+  prizes_nav_dc: Mystery trip to Washington D.C.
+  prizes_nav_technology: $10,000 of technology for your school
+  prizes_nav_video_chat: Video chat with a tech titan
+  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
+  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  prizes_nav_actua: Actua workshop
+  prizes_nav_kids_code: Kids Code Jeunesse
+  prizes_nav_terms: "Conditions d'utilisation"
+  prizes_nav_faq: Foire aux questions
+  whats_next_header: Ensuite ?
+  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Comment piloter une Heure de Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promouvoir l'Heure de Code</a>"
-  n_have_learned_an_hoc: '<h1>#</h1><h3>a essayé une</h3><h2>HEURE de CODE</h2>'
+  n_have_learned_an_hoc: '<h1>Essayer une</h1><h2>Heure de Code</h2><h3># servie</h3>'
   anybody_can_learn: Tout le monde peut apprendre.
-  share_on_facebook: Partagez sur Facebook
-  share_on_twitter: Partagez sur Twitter
-  beyond_an_hour: Au-delà d'Une Heure de Code
   get_started: Commencer
+  beyond_an_hour: Après une Heure de Code
   register_now: Inscrivez-vous Maintenant
+  share_on_facebook: Partager sur Facebook
+  share_on_twitter: Partager sur Twitter
   front_join_us_heading: Une Heure de Code pour chaque élève.
   front_join_us_description: "L'informatique est une base fondamentale pour chaque élève. Aidez-nous à la faire découvrir à plus de 100 millions d'entre eux."
+  front_join_us_description_short: Computer science is a foundation for every student.
   front_join_us_button: Rejoignez-nous
   front_what_is_hoc: "Une Heure de Code, qu'est-ce que c'est?"
   front_join_us_header: "N'importe qui peut apprendre les bases, et y éprouver du plaisir !"
-  front_join_us_header_uk: Du 8 au 14 décembre, accueillez une Heure de Code pour montrer à tout le monde peut apprendre les bases et avoir du plaisir à coder!
   front_join_us_teacher: Êtes-vous enseignant?
   front_join_us_inspire: Inspirer les élèves avec
   front_join_us_inspire_link: une heure de Code dans la salle de classe.
@@ -70,7 +183,7 @@ fr:
   front_join_us_try: Essayez le
   front_join_us_host: Accueillez le
   front_join_us_support: Soutenez le
-  signup_header: 'Organiser un événement une heure de Code entre le 8 - 14 Déc et inscrivez-le ici.'
+  signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: Votre Nom
   signup_email_label: Votre e-mail
   signup_organization_name_label: "Nom de l'école ou de l'organisation"
@@ -83,6 +196,7 @@ fr:
   signup_send_posters_address_label: Adresse de mon école ou organisation
   signup_whole_school_flag_label: Cet événement est pour toute une école
   signup_your_event: Inscrire votre événement
+  signup_match_volunteer: Help me find a local software engineer to inspire my students
   signup_name_placeholder: Votre Nom
   signup_email_placeholder: vous@exemple.fr
   signup_organization_name_placeholder: 'exemple: Lycée Condorcet'
@@ -96,13 +210,14 @@ fr:
   signup_thank_you_header: Merci pour votre inscription pour accueillir un événement Une Heure de Code.
   signup_thank_you_message: Nous vous avons envoyé une confirmation par e-mail avec des informations pour vous aider à commencer.
   map_header: '# événements une Heure de Code dans le monde'
+  see_all_events: See all events
   map_header_company: '# par les organisateurs de la société'
   map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
+  map_search_search: Rechercher
+  map_search_reset: Réinitialiser
+  meta_tag_og_title: "L'Heure de Code est ici"
   meta_tag_og_description: Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. Âgés de 4 à 104 ans.
-  meta_tag_twitter_title: The Hour of Code is here
+  meta_tag_twitter_title: "L'Heure de Code est ici"
   meta_tag_twitter_description: Une Heure de Code est un mouvement mondial qui touche des dizaines de millions d’élèves dans plus de 180 pays et plus de 30 langues. Âgés de 4 à 104 ans.
   twitter_default_text: "J'y participe cette année #HourOfCode, et vous? @codeorg"
   hardware_prizes_form_name_label: Votre Nom
@@ -128,11 +243,11 @@ fr:
   hoc_faq_what_is_hoc_a: "L'heure de Code est une introduction d'une heure à l'informatique, conçue pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. <a href='http://code.org/learn'> Découvrez les tutoriels</a>."
   hoc_faq_last_year: Essayez les tutoriels
   hoc_faq_when_is_hoc_q: Quand se déroulera une Heure de Code?
-  hoc_faq_when_is_hoc_a: "N'importe qui peut accueillir une heure de Code à tout moment, mais l'objectif de la campagne de base est que des dizaines de millions d’élèves essayent une heure de Code entre le  8 et le 14 décembre 2014, à l'occasion de la <a href='http://csedweek.org'> Semaine de l'éducation des sciences informatiques</a>. Est-ce une <i>heure</i> spécifique ? Non. Vous pouvez faire l'heure de Code à tout moment au cours de cette semaine. (Et si vous ne pouvez pas le faire durant cette semaine, faite la la semaine d'avant ou d'après)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: "Pourquoi l'informatique?"
   hoc_faq_why_cs_a: "<i>Chaque</i> élève doit avoir la possibilité d'apprendre l'informatique. Il contribue à acquérir les compétences de résolution de problèmes, logique et créativité. En commençant tôt, les élèves auront les bases pour réussir dans n'importe quel carrière au XXIe siècle. Voir plus de statistiques sur <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: Comment participer à une Heure de Code?
-  hoc_faq_how_participate_a: "<a href='http://hourofcode.org'>Inscrivez-vous</a> afin d'organiser un événement Une Heure de Code et commencez à <a href='/resources/how-to'>planifier</a>. Vous pouvez organiser un événement Une Heure de Code à votre école ou dans votre communauté &mdash; comme dans un club parascolaire, un organisme à but non lucratif ou même au travail. Ou bien, tentez l'expérience vous-même dès le 8 déc."
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
   hoc_faq_behind_hoc_q: Qui est derrière une Heure de Code?
   hoc_faq_behind_hoc_a: "Une Heure de Code est organisée par <a href='http://code.org'>Code.org</a>, une association public a but non-lucrative, dédiée à la démocratisation de l'informatique, en la rendant disponible dans plus d'écoles, et en augmentant la participation des femmes et des élèves de couleur sous représentés. Une <a href='http://code.org/about/partners'>coalition sans précédente de partenaires</a> nous ont rejoint pour supporté une Heure de Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America et the College Board."
   hoc_faq_host_q: Je ne connais rien en programmation. Puis-je tout de même organiser un événement ?
@@ -140,7 +255,7 @@ fr:
   hoc_faq_need_computers_q: "Ais-je besoin d'un ordinateur pour chaque participant?"
   hoc_faq_need_computers_a: "Non. Nous proposons des tutoriels d'une Heure de Code sur PC, smatphones, tablets et certain qui demande aucune sorte d'ordinateur du tout! Vous pouvez vous joindre à où que vous soyer, quelque soit ce que vous avez. <p><i>Voici quelques possibilités:</i> <br> <ul> <li><b>Travailler en binôme.</b> Des recherches montre que les élèves apprennent mieux en <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programment à deux</a>, partageant un ordinateur et travaillant ensemble. Encouragez vos élèves à travailler en équipe. <li><b>Utilisez un vidéoprojecteur.</b> si vous avez un vidéoprojecteur ainsi qu'un ordinateur connecté à internet, votre groupe entier peut faire une Heure de Code ensemble. Regardez les portions de vidéos ensemble et a tour de rôle résolvez les puzzles et répondez aux questions. <li><b>En débranché.</b> Nous offrons des tutoriels qui ne nécessite pas d’ordinateur du tout. </ul>"
   hoc_faq_international_q: 'Je suis au <country>. Comment puis-je participer internationalement ?  '
-  hoc_faq_international_a: "Chacun peut organiser un événement Heure de Code, partout dans le monde. L'année dernière, des étudiants à l'échelle mondiale se sont réunis pour l'Heure de Code. Vous pouvez en savoir plus <a href='target-resources'>ici</a>."
+  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
   hoc_faq_tutorial_q: Comment je peu faire un tutoriel une Heure de Code?
   hoc_faq_tutorial_a: "Si vous êtes intéressé à devenir un facilitateur de nos tutoriels, <a href='targetHOC'> consultez nos instructions et lignes directrices</a>. Nous tenons à accueillir une variété d'options engageantes, mais le but principal demeure d'optimiser l'expérience pour les élèves et les enseignants qui sont débutant en informatique."
   hoc_faq_more_questions_q: Avez-vous toujours des questions?
@@ -153,32 +268,25 @@ fr:
   hoc_faq_frozen_a: "Il a maintenant été publié sur <a href='http://code.org/learn'> Code.org/learn</a>. Nous espérons qu'il vous plaira !"
   hoc_faq_high_school_q: Quelle activité faire avec des élèves du secondaire ?
   hoc_faq_high_school_a: "Pour tous les âges, nous vous recommandons d'essayer tout d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>, par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer un tutoriel plus avancé en JavaScript, par exemple Khan Academy ou CodeHS."
-  hoc_faq_more_questions_br_q: Outras dúvidas?
-  hoc_faq_more_questions_br_a: "Por favor visite nosso <a href='http://support.code.org'>forum de suporte</a> disponível apenas em inglês."
-  hoc_faq_what_is_hoc_uk_a: "The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. <a href='http://uk.code.org/learn'>Check out the tutorials</a>, and look out for new ones coming for the Hour of Code 2014."
-  hoc_faq_when_is_hoc_uk_a: "The Hour of Code will take place during December 8-14, 2014. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. The Hour of Code in the UK will happen at the same time as in the US where it is timed to celebrate the annual <a href='http://csedweek.org'>Computer Science Education Week.</a>"
-  hoc_faq_why_cs_uk_a: '<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path.'
-  hoc_faq_how_participate_uk_a: "Sign up to host an Hour of Code event <a href='http://hourofcode.com/uk'>here</a> and start planning. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 8 arrives."
-  hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
-  hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
-  stats_hoc_2013_heading: "Les statistiques incroyable de l'an dernier pour une Heure de Code. En une seule semaine:"
+  hoc_faq_count_hoc_q: How do you count Hours of Code?
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
   stats_hoc_2013_image_alt: "Statistiques d'une Heure de Code 2013"
   stats_growth: "Il a été les plus rapide a atteindre les 15 millions d'utilisateurs."
+  stats_i18n: Students are learning in 40 languages
   stats_tumblr: 'Tumblr : 3,5 ans'
   stats_facebook: 'Facebook: 3 ans'
   stats_twitter: 'Twitter : 2,5 ans'
   stats_pinterest: 'Pinterest: 2 ans'
   stats_instagram: 'Instagram : 14 mois'
   stats_hoc: 'Une Heure de Code: 5 jours'
-  stats_global: 15 millions d’élèves ont appris une Heure de Code.
-  stats_girls_more: "Plus de filles on essayé l'informatique que les 70 dernières années."
-  stats_girls_million: Plus de 10 millions de filles en 2013
+  stats_global: Over 100M students have tried an Hour of Code
+  stats_girls_more: More girls tried computer science than in the last 70 years
   stats_nina: '"Chaque jour, ont donné les mêmes résultats &mdash; 100 % engagement."-Nina Nichols Peery, enseignante'
   stats_student: |-
     "Je savais que c'était une chance <b>unique</b> ."-Mariana Alzate, élève de 5e
   stats_michael: |
     "Je n'ai<b>jamais</b> mes étudiants aussi excités pour apprendre" - Michael Clark, Professeur
-
+    
   resources_how_to: Guide pratique pour les enseignants
   resources_how_to_events: Guide pratique pour les évènements
   resources_how_to_districts: Guide pratique pour les districts
@@ -191,11 +299,13 @@ fr:
   resources_emails: Échantillons de courriels
   resources_stats: Présentation et statistiques utiles
   resources_press_kit: Dossier de presse
-  events_title: "Événements d'Une Heure de Code"
+  resources_country_resources: Country Specific Resources
+  events_title: "Tous les événements d'Une Heure de Code"
   events_nav_all: Tous les évenements
   events_nav_whole_schools: Toutes les écoles
   events_nav_special: Événements spéciaux
   events_nav_orgs: Organisations
+  events_all_old_title: All @year Hour of Code events
   events_all_title: "Tous les événements d'Une Heure de Code"
   events_whole_school_title: Écoles participant entièrement à Une Heure de Code
   events_special_title: "Événements spéciaux d'Une Heure de Code"

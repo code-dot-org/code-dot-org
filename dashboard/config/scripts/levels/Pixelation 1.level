@@ -1,16 +1,14 @@
-<External>
+<Pixelation>
   <config><![CDATA[{
-  "game_id": 43,
-  "created_at": "2015-02-12T01:17:19.000Z",
+  "game_id": 44,
+  "created_at": "2015-08-25T16:30:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
   "properties": {
+    "version": "1",
     "href": "pixelation/pixelation.html",
-    "options": {
-      "skip_dialog": true,
-      "version": "1"
-    },
-    "title": "Pixelation 1",
-    "content1": "Create images with bits and bytes."
-  },
-  "md5": "3092f5ecd1c7331495419336f6ae6ee7"
+    "video_key": "csp_pixelation_bw",
+    "skip_dialog": true
+  }
 }]]></config>
-</External>
+</Pixelation>

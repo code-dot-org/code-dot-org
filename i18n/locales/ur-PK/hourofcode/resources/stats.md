@@ -10,8 +10,8 @@
 
 ### اپنے اسکول میں کمپیوٹر سائنس لائیں ۔ کوڈ کی گھڑی کے ساتھ شروع کریں
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. ایک ہفتے میں 15 لاکھ طلباء نے کمپیوٹر سائنس کی کوشش کی! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+کمپیوٹر ہر جگہ ہیں لکن بہت کم اسکول دس سال پرانے کمپیوٹر سائنس سے مختلف پڑھاتے ہیں اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ اگر آپ نے گزشتہ سال [ گھنٹے کا کوڈ](<%= hoc_uri('/') %>) کے بارے میں سنا یے تو آپ یہ جانتے ہیں کۃ آپ نے تاریخ بنا دی ھے۔ In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [ گھنٹے کا کوڈ](<%= hoc_uri('/') %>) کمپیوٹر سائنس کے ایک گھنٹہ کا تعارف ہے، کوڈ دمیسٹیفی ڈیزائن کیا اور ھر کسی کو دکھایا کٰٰۃ ھر کوی بنیادی باتیں سیکھ سکتا ھے۔ [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
 
-## انفوگراپہاک ورژن:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>

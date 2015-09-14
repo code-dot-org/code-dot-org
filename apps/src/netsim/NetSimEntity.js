@@ -39,6 +39,12 @@ var NetSimEntity = module.exports = function (shard, entityRow) {
    * @type {number}
    */
   this.entityID = entityRow.id;
+
+  /**
+   * Node's UUID assigned when it was initially inserted into the table.
+   * @type {string}
+   */
+  this.uuid = entityRow.uuid;
 };
 
 /**
@@ -129,6 +135,7 @@ NetSimEntity.prototype.buildRow = function () {
  * calls onComplete when all entities have been destroyed and/or an error occurs.
  * @param {NetSimEntity[]} entities
  * @param {!NodeStyleCallback} onComplete
+ * @throws {Error} if all passed entities do not belong to the same table.
  */
 NetSimEntity.destroyEntities = function (entities, onComplete) {
   if (entities.length === 0) {
@@ -136,12 +143,13 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
     return;
   }
 
-  entities[0].destroy(function (err, result) {
-    if (err) {
-      onComplete(err, result);
-      return;
+  var table = entities[0].getTable();
+  var entityIDs = entities.map(function (entity) {
+    if (entity.getTable() !== table) {
+      throw new Error("destroyEntities requires all entities to be in the same table");
     }
+    return entity.entityID;
+  });
 
-    NetSimEntity.destroyEntities(entities.slice(1), onComplete);
-  }.bind(this));
+  table.deleteMany(entityIDs, onComplete);
 };

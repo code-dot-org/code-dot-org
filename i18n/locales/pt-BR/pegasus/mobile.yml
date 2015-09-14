@@ -47,7 +47,7 @@ pt-BR:
   get_a_certificate_of_achievement: Obter um certificado de conclusão
   enter_valid_age: Selecione uma idade válida
   enter_valid_email: Informe um endereço de email válido
-  get_a_certificate_message: "Vamos enviar-lhe um certificado e informações sobre como <a href='/learn/beyond'>aprender além de Uma Hora</a>"
+  get_a_certificate_message: "Enviaremos a você um certificado e informações sobre como <a href='/learn/beyond'>Aprender além da Hora do Código</a>"
   get_a_certificate_message_after: "Clique no certificado para baixá-lo ou imprimi-lo. Agora, faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   thanks_for_submitting: Obrigado por enviar!
   if_you_enjoyed: 'Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos que o mundo todo aprenda.'
@@ -88,7 +88,7 @@ pt-BR:
   petition_thankyou: Agradecemos por assinar a petição
   continue_learning_header: Continue aprendendo além da Hora do Código
   continue_learning_body: 'Existem muitas opções.  Você pode aprender on-line, ou em uma escola local, ou no acampamento de verão.'
-  learn_next_level: Continuar para o próximo nível
+  learn_next_level: Experimentar outro curso do Code Studio
   learn_online: Experimente outros cursos online
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
@@ -178,7 +178,7 @@ pt-BR:
     &ldquo;Esse programa manteve 100% dos meus alunos
     engajados, envolvidos e participando.&rdquo;
     Adam, professor
-  homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
+  homepage_hero_text_stat_loc: 2,5 milhões de garotas se inscreveram para aprender no Code Studio
   homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hour of Code
@@ -193,8 +193,11 @@ pt-BR:
   homepage_action_text_learn: Comece a aprender
   homepage_action_text_signpetition: Assine a petição
   homepage_signpetition_dropdown: 'Assinar nossa petição &#x25BE;'
+  homepage_diversity_pledge: Abrace a causa em favor da diversidade
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
@@ -211,7 +214,7 @@ pt-BR:
   homepage_slot_text_link_fullcurriculum: Veja nosso currículo completo
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_title_advocates: Apoiadores
-  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
+  homepage_slot_text_blurb_advocates: Apoie a diversidade na computação
   homepage_slot_text_link_stats: Veja as estatísticas
   homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Fazer uma doação
@@ -461,6 +464,7 @@ pt-BR:
   educator_notes: Observações do Educador
   how_to_teach_hoc: Como ensinar a Hora do Código
   more_resources_educators: Mais recursos para professores e educadores
+  beyond_submission: Quer enviar um tutorial para Além da Hora do Código? Veja os critérios e o formulário de envio.
   participants: participantes
   teachers_notes: Observações do Professor
   teachers_notes_hoc: 'Professores: leiam algumas notas importantes para educadores aqui'

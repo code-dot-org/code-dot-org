@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+ /* global $*/
+
 'use strict';
 
 var Calc = module.exports;
@@ -145,6 +147,8 @@ Calc.init = function(config) {
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -206,10 +210,60 @@ Calc.init = function(config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
+
+    if (Blockly.contractEditor) {
+      Blockly.contractEditor.registerTestHandler(getCalcExampleFailure);
+      Blockly.contractEditor.registerTestResetHandler(resetCalcExample);
+    }
   };
 
   studioApp.init(config);
 };
+
+/**
+ * @param {Blockly.Block}
+ * @param {boolean} [evaluateInPlayspace] True if this test should also show
+ *   evaluation in the play space
+ * @returns {string} Error string, or null if success
+ */
+function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
+  try {
+    var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+
+    var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
+    var actual = entireSet.evaluateWithExpression(actualEquation.expression);
+
+    var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
+    var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
+
+    var areEqual = expected.result.equals(actual.result);
+
+    if (evaluateInPlayspace) {
+      var tokenList = constructTokenList(expectedEquation, null);
+      if (!expected.err) {
+        tokenList.push(new Token(' = ', false));
+        tokenList.push(new Token(expected.result, !areEqual));
+      }
+      clearSvgExpression('answerExpression');
+      displayEquation('userExpression', null, tokenList, 0, 'errorToken');
+    }
+
+    return areEqual ? null : "Does not match definition";
+  } catch (error) {
+    // Most Calc error messages were not meant to be user facing.
+    return "Evaluation Failed.";
+  }
+}
+
+function resetCalcExample() {
+  clearSvgExpression('userExpression');
+  displayGoal(appState.targetSet);
+}
 
 /**
  * A few possible scenarios
@@ -288,7 +342,7 @@ Calc.resetButtonClick = function () {
 
   timeoutList.clearTimeouts();
 
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 };
 
 /**
@@ -663,7 +717,9 @@ Calc.execute = function() {
 function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+    testResult === TestResults.EXAMPLE_FAILED ||
+    testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
 
 /**
@@ -693,6 +749,13 @@ Calc.generateResults_ = function () {
     return;
   }
 
+  if (studioApp.hasEmptyFunctionOrVariableName()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    appState.message = commonMsg.unnamedFunction();
+    return;
+  }
+
   appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
   appState.failedInput = null;
 
@@ -711,11 +774,12 @@ Calc.generateResults_ = function () {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
+    appState = $.extend(appState, Calc.checkExamples_());
+
+    if (appState.result === null) {
+      appState = $.extend(appState,
+        Calc.evaluateResults_(appState.targetSet, appState.userSet));
+    }
   }
 
   // Override default message for LEVEL_INCOMPLETE_FAIL
@@ -726,14 +790,52 @@ Calc.generateResults_ = function () {
 };
 
 /**
+ * @returns {Object} set of appState to be merged by caller
+ */
+Calc.checkExamples_ = function () {
+  var outcome = {};
+  if (!level.examplesRequired) {
+    return outcome;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return outcome;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return outcome;
+  }
+
+  var failingBlockName = studioApp.checkForFailingExamples(getCalcExampleFailure);
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+  }
+
+  return outcome;
+};
+
+/**
  * If we have any functions or variables in our expression set, we don't support
  * animating evaluation.
  */
 function displayComplexUserExpressions() {
   var result;
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 
-  // Clone userSet, and we might make small changes to them (i.e. if we need to
+  // Clone userSet, as we might make small changes to them (i.e. if we need to
   // vary variables)
   var userSet = appState.userSet.clone();
   var targetSet = appState.targetSet;
@@ -898,12 +1000,18 @@ Calc.step = function (animationDepth) {
   }, stepSpeed);
 };
 
-function clearSvgUserExpression() {
-  var g = document.getElementById('userExpression');
-  // remove all existing children, in reverse order so that we don't have to
-  // worry about indexes changing
-  for (var i = g.childNodes.length - 1; i >= 0; i--) {
-    g.removeChild(g.childNodes[i]);
+/**
+ * Gets rid of all the children from the svg of the given id
+ * @param {id} string
+ */
+function clearSvgExpression(id) {
+  var g = document.getElementById(id);
+  if (!g) {
+    return;
+  }
+
+  while (g.lastChild) {
+    g.removeChild(g.lastChild);
   }
 }
 
@@ -928,7 +1036,7 @@ function animateUserExpression (maxNumSteps) {
     throw new Error("Can't animate if either user/target have functions/vars");
   }
 
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 
   var current = userExpression.clone();
   var previousExpression = current;
@@ -1026,6 +1134,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
  */
 function cloneNodeWithoutIds(elementId) {
   var clone = document.getElementById(elementId).cloneNode(true);
+  clone.removeAttribute("id");
   var descendants = clone.getElementsByTagName("*");
   for (var i = 0; i < descendants.length; i++) {
     var element = descendants[i];
@@ -1050,6 +1159,7 @@ function displayFeedback() {
   // Show svg in feedback dialog
   if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
+    appDiv.setAttribute('class', 'svgCalcFeedback');
   }
   var options = {
     app: 'calc',

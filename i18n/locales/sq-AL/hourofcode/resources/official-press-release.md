@@ -1,44 +1,42 @@
 * * *
 
-title: Hour of Code Press Release for Elected Officials layout: wide nav: resources_nav
+titulli: Ora e Kodimit njoftimi për shtyp për zyrtarët e zgjedhur plani: i gjerë nav: burime_nav
 
 * * *
 
-# Sample press release for elected officials
+# Shembulli i njoftimit për shtyp për zyrtarët e zgjedhur
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Për shtyp  
+**DATA**]  
+Kontakt: [**INFORMACIONET E KONTAKTIT**]  
   
 
 
-**
+** 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  DREJTOR/SENATOR/ANËTARËTEASAMBLES/PËRFAQËSUESIT/KRYETARIBASHKISË/ANËTARËTEKËSHILLIT[VENDOS EMRIN][PJESMARRJA NË ORËN E KODIMIT ME STUDENT LOKAL]</strong><br /> Komuniteti vjen së bashku për të rritur ndërgjegjësimin në lidhje me rëndësinë e edukimit të shkencave kompjuterike duke marr pjesë në Javën Edukative të Shkencave Kompjuterike
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**DATA**-[**VENDOS EMRIN**] bashkohu drejtorit dhe anëtarëve të fakultetit [**VENDOS EMRIN E SHKOLLËS**], liderat e biznesit dhe familjet lokale për [**EMRI EVENTIT**] të marrë pjesë në Orën e Kodimit si pjesë e Javës Edukative të Shkencave Kompjuterike. [VENDOS EMRIN] dhe anëtarët e komunitetit ishin ndër dhjetëra miliona njerëz rreth botës për të marrë pjesë në ngjarjen më të madhe të mësuarit në histori.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**VENDOS DETAJET E EVENTIT, PËRDOR GJUHË PËRSHKRUESE DHE TË MATSHME. PËR SHEMBULL:**]  
+"Daniels Run Shkolla fillore mbajti një Orë Kodimi në rrethin shkollor për të ekspozuar studentët e saj për shkenca kompjuterike. Më shumë se 700 studentë të të gjitha klasave bënë të paktë një Orë Kodimi. Dhe një duzinë prindërish dhe vullnetarësh nga komuniteti ndihmuan gjatë ditës dhe sollën fëmijët së bashku për një shfaqje që tregon pse shkenca kompjuterike ndikon në jetën e këtyre studentëve. "
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**TEKST SHEMBULL PËR KONTEKSTIN:**]  
+Kompjuterat janë kudo, por më pak shkolla shpjegojnë shkenca kompjuterike se 10 vjet më parë. Vajzat dhe studentët me ngjyrë janë pak të përfaqësuar. Lajmi mirë është se ne po e ndryshojmë këtë për mirë. Ora e Kodimit është një portë drejt sigurimit të të gjithë studentëve me akses në cilësi të lartë të arsimit në shkenca kompjuterike.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. Shkencat kompjuterike ishin në faqet kryesore të Google, MSN, Yahoo! dhe Disney-it. Presidenti Obama, Shakira dhe Ashton Kutcher promovuan Orën e Kodimit përmes videos. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dhe Disney-it. Presidenti Obama, Shakira dhe Ashton Kutcher promovuan Orën e Kodimit përmes videos. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje.
 
-This year the Hour of Code movement is aiming for 100 million students.
+[**VENDOS SHPREHJE NGA ZËDHËNSJA, SHEMBULLI MËPOSHTËM:**]  
+"Ne duhet të inkurajojmë dhe mbështesim interesin e studentëve në shkenca kompjuterike," tha[**VENDOS EMRIN**]. "Çdo student meriton shancin për të mësuar shkenca kompjuterike për të pasur karrierën më të mirë të shekullit të 21-të."
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**VENDOS MË SHUMË INFORMACIONE PËR EVENTIN TËND DHE/OSE ORGANIZATËN TËNDE**]
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**VENDOS SHPREHJE NGA NJË ORGANIZATË APO PERSON TJETËR QË KA MARRË PJESË NË EVENT**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
-
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Për më shumë informacion mbi [**EVENTI/PROGRAMI/ETJ**], VIZITO [**VENDOS WEBSITE-IN**] ose kontakto [**VENDOS INFORMACIONET E KONTAKTIT**]

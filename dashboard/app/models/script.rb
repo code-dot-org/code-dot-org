@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  wrapup_video_id :integer
+#  trophies        :boolean          default(FALSE), not null
+#  hidden          :boolean          default(FALSE), not null
+#  user_id         :integer
+#  login_required  :boolean          default(FALSE), not null
+#  properties      :text(65535)
+#
+# Indexes
+#
+#  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include Seeded
@@ -199,10 +220,12 @@ class Script < ActiveRecord::Base
     name == 'course1'
   end
 
+  def hide_solutions?
+    name == 'algebra'
+  end
+
   def banner_image
-    if k5_course?
-      "banner_#{name}_cropped.jpg"
-    elsif self.name == 'cspunit1'
+    if has_banner?
       "banner_#{name}_cropped.png"
     end
   end
@@ -220,11 +243,15 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3).include?(self.name)
+  end
+
+  def has_banner?
+    k5_course? || %w(cspunit1 cspunit2).include?(self.name)
   end
 
   def freeplay_links
-    if name == 'algebra'
+    if name.include?('algebra')
       ['calc', 'eval']
     else
       ['playlab', 'artist']

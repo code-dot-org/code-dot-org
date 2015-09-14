@@ -1,0 +1,62 @@
+name 'ECSPD U2 D 13-14 Intro'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 2 Day 13-14: 
+
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 90.
+
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=90" target="_blank">Access a Digital Copy of the Lesson >></a>
+
+
+#### Key Concepts
+
+1. Students will be able to explain linear search and use it for a specific problem. 
+
+1. Students will be able to explain binary search and use it for a specific problem.
+
+1. Students will be able to explain when to use binary and linear search.
+
+#### Common Difficulties
+
+One common issues sited by teachers is that the Tower Building Problem could be more relevant to students. In addition sometimes difficult to get students to see the most efficient solution.
+
+#### PD Outline
+
+The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
+
+1. Overview
+
+1. Companion Media Resource
+
+1. Suggested Assessment
+
+1. Additional Resources
+
+1. Teaching Strategies
+
+1. Forum
+
+
+### All Resources for This Lesson
+
+#### Teacher Supports
+
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=90" target="_blank">U2 Day 13-14 Lesson Plan</a>
+* <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4fm9OdnRORjFXWmdhMzF3RFlCemg1NXkxTHJqOVVhMXBWeUN3R3RNbkc0UXc" target="_blank"> U2 Day 13-14 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-13-14-general-q-a/1771/1"target="_blank"> U2 Day 13-14 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-13-14-pd-discussion-topic/1779/1"target="_blank"> U2 Day 13-14 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-13-14-lesson-resources/1795/1"target="_blank"> U2 Day 13-14 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-13-14-assessment/1787/1"target="_blank"> U2 Day 13-14 Assessment Forum</a>
+
+#### Supplies
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=92" target="_blank"> Tower Building Activity</a>
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=93" target="_blank"> Tower Building Sample Solutions</a>
+
+
+
+Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

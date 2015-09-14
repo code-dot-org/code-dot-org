@@ -152,7 +152,7 @@ namespace :seed do
   end
 
   task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
-    freq_cutoff = args[:freq_cutoff].to_i > 0 ? args[:freq_cutoff].to_i : 100
+    freq_cutoff = 1
     FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
   end
 
@@ -257,10 +257,10 @@ namespace :seed do
     SecretPicture.setup
   end
 
-  task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
-  task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :script_cache_to_cache, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
-  task script_cache_to_memcached: :environment do
+  task script_cache_to_cache: :environment do
     Script.script_cache_to_cache
   end
 end

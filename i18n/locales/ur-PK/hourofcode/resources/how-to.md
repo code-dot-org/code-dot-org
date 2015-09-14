@@ -4,25 +4,21 @@
 
 * * *
 
-# How to teach one Hour of Code
+# ایک گھنٹے کے کوڈ کو تعلیم دینے کا طریقہ
 
 ## 1) یہ نکات ویڈیو دیکھیں <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) اسباق کی کوشش کریں:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
-**All Hour of Code tutorials:**
+**تمام اسباق گھنٹے کا کوڈ:**
 
   * Require minimal prep-time for teachers
   * Are self-guided - allowing students to work at their own pace and skill-level
 
 [![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 3) اپنی گھڑی کو نقشے پر رجسٹر کریں
-
-[Make sure to sign up](<%= hoc_uri('/') %>). We'll send you helpful info as the Hour of Code nears, and you'll see your Hour of Code on our map of worldwide events.
-
-## 4) Plan your hardware needs - computers are optional
+## 3) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every child, and can even do the Hour of Code without a computer at all.
 
@@ -30,12 +26,12 @@ The best Hour of Code experience will be with Internet-connected computers. But 
   * **Preview the congrats page** to see what students will see when they finish. 
   * **Provide headphones for your class**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 5) Plan ahead based on your technology available
+## 4) Plan ahead based on your technology available
 
   * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-## 6) Inspire students - show them a video
+## 5) Inspire students - show them a video
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
@@ -43,20 +39,20 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014 video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**اپنے طالب علموں کی حوصلہ افزائی کریں - ان کو ایک مختصر انٹرو دے**
 
-Most kids don’t know what computer science is. Here are some ideas:
+زیادہ تر بچوں کو پتہ نہیں کہ کمپیوٹر سائنس کیا ہے ۔ کچھ تصورات یہ ہیں:
 
   * Explain it in a simple way that includes examples of applications that both boys and girls will care about (saving lives, helping people, connecting people, etc.).
   * Try: "Think about things in your everyday life that use computer science: a cell phone, a microwave, a computer, a traffic light… all of these things needed a computer scientist to help build them.”
   * Or: “Computer science is the art of blending human ideas and digital tools to increase our power. Computer scientists work in so many different areas: writing apps for phones, curing diseases, creating animated movies, working on social media, building robots that explore other planets and so much more."
   * See tips for getting girls interested in computer science [here](http://<%= codeorg_url() %>/girls). 
 
-## 7) Start your Hour of Code
+## 6) Start your Hour of Code
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. [hourofcode.com/co](http://hourofcode.com/co)
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
   * Tell students to visit the URL and start the tutorial.
 
 **When your students come across difficulties**
@@ -72,7 +68,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **How do I print certificates for my students?**
 
-Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). You can click on the certificate to print it. However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
+Each student gets a chance to get a certificate via email when they finish the [Code.org tutorials](http://studio.code.org). آپ اسے پرنٹ کرنے کے لیے سرٹیفیکیٹ / تصدیق نامہ پر کلک کر سکتے ہیں ۔ However, if you want to make new certificates for your students, visit our [Certificates](http://<%= codeorg_url() %>/certificates) page to print as many certificates as you like, in one fell swoop!
 
 **What comes after the Hour of Code?**
 

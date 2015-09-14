@@ -16,45 +16,24 @@ nav: pd2_nav
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CSP course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
+Milestone Complete!
 
-### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
-
-**Save the dates:**
-
-Monday, August 3, 2015 - Friday, August 7, 2015
-<br/>
-8:30am - 3:30pm
-<br />
-Breakfast and lunch will be served. 
-
-**Location**
-
-Loyola University - Water Tower Campus
-<br />
-Corboy Law Center
-<br />
-Room: Kasbeer Hall
-<br />
-25 E Pearson St
-<br />
-Chicago, IL 60611
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
 
-</br>
+**In-Person Workshop**
+
+Milestone Complete!
+
+**Online Study**
+
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
+
+
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CSP. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -70,20 +49,29 @@ Quarter 4: Saturday, March 19 , 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-
+<br/><br/>
 **Location**
 
 TBD
-
+<br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
-<br/>
+Green journal<br/>
 Snacks
 <br/>
 Water
+<br/>
+<br/>
+
+|Class code | Date | Name |
+|---------- | ---- | ---- |
+|**58160** | 10/24/2015 | CS4All CSP Phase 3 PD for 1st quarter|
+|**58161** | 12/12/2015	 | CS4All CSP Phase 3 PD for 2nd quarter|
+|**58162** | 2/6/2016 | CS4All CSP Phase 3 PD for 3rd quarter|
+|**58163** | 3/19/2016 | CS4All CSP Phase 3 PD for 4th quarter|
+
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -96,46 +84,18 @@ More info coming soon!
 
 ## Exploring Computer Science
 
-### Phase 1: Online Introduction (~2 hours) ###
+### Phase 1: Online Introduction (~2 hours)###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
-### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
+Milestone Complete!
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
-**Save the dates:**
+**In-Person Workshop**
 
-Monday, August 3, 2015 - Friday, August 7, 2015
-<br />
-Mon - Thurs: 8:30am - 3:30pm
-<br />
-Friday: 8:30am - 1:30pm
+Milestone Complete!
 
+**Online Study**
 
-Breakfast and lunch will be served. 
-
-**Location**
-<br />
-DePaul University 
-<br />
-College of Computing and Digital Media (CDM)
-<br />
-Room 924
-<br />
-243 S. Wabash Ave
-<br />
-Chicago, IL 60604
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
-
-</br>
-</br>
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 
@@ -155,20 +115,30 @@ Quarter 4: Saturday, April 30, 2016
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
-
+<br/><br/>
 **Location**
 
 TBD
-
+<br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+ECS green journal<br/>
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
+<br/>
+<br/>
+
+|Class code | Date | Name|
+|--------- | --- | ------|
+|**58165** | 10/17/2015 | CS4All ECS Phase 3 PD for 1st quarter|
+|**58169** | 11/21/2015 | CS4All ECS Phase 3 PD for 2nd quarter|
+|**58170** | 1/23/2016 | CS4All ECS Phase 3 PD for 3rd quarter|
+|**58171** | 4/30/2016 | CS4All ECS Phase 3 PD for 4th quarter|
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -183,45 +153,18 @@ More info coming soon!
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone Complete!
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-<br />
-**Save the dates:**
-<br />
-Monday, August 3, 2015 - Tuesday, August 4, 2015
-<br />
-8:00am - 4:00pm
-<br />
-<br />
-Breakfast and lunch will be served. 
+**In-Person Workshop**
 
-**Location**
-<br />
-Microsoft Technology Center
-<br />
-AON Center, Suite 200
-<br />
-Room: MPR 2
-<br />
-200 East Randolph Street
-<br />
-Chicago, IL 60601
-<br />
-<br />
+Milestone Complete!
 
-**What do I bring to Phase 2?**
+**Online Study**
 
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-
-</br>
-</br>
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
+
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 **Save the dates:**
 
@@ -229,9 +172,7 @@ Semester 1: Saturday, October 24, 2015
 
 Semester 2: Saturday, April 30, 2016 
 
-8:00am - 4:00pm
-</br>
-<br/>
+8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
 **Location**
@@ -240,13 +181,21 @@ TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
+<br/>
+<br/>
+
+|Class name | Date | Name |
+|---------- | ---- | ---- |
+|**58175** | 10/24/2015 | CS4All CS in Algebra Phase 3 PD for 1st semester|
+|**58176** | 4/30/2016 | CS4All CS in Algebra Phase 3 PD for 2nd semester|
+
 
 [**Back to the top**](#top)
 
@@ -254,47 +203,21 @@ Water
 
 ## CS in Science
 
-### Phase 1: Online Introduction (~2 hours) ###
+### Phase 1: Online Introduction (~2 hours)  ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
-### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
+Milestone Complete!
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
+**In-Person Workshop**
 
-**Save the dates:**
-<br />
-Wednesday, August 5, 2015 - Friday, August 7, 2015
-<br />
-8:00am - 4:00pm
+Milestone Complete!
 
-Breakfast and lunch will be served. 
+**Online Study**
 
-**Location**
-<br />
-Microsoft Technology Center
-<br />
-AON Center, Suite 200
-<br />
-Room: MPR 3
-<br />
-200 East Randolph Street
-<br />
-Chicago, IL 60601
-<br />
-<br />
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -303,25 +226,29 @@ Semester 1: Saturday, October 17, 2015
 
 Semester 2: Saturday, January 23, 2016 
 
-8:00am - 4:00pm
-</br>
-<br/>
+8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
-
+<br/><br/>
 **Location**
 
 TBD
-
+<br/><br/>
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
+<br/>
+<br/>
 
+|Course Code | Dates | Name|
+|----------- | ----- | ----|
+|**58177** | 10/17/2015 | CS4All CS in Science Phase 3 PD for 1st semester|
+|**58178** | 1/23/2016 | CS4All CS in Science Phase 3 PD for 2nd semester|
 
 [**Back to the top**](#top)
 

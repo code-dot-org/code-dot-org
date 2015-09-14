@@ -18,4 +18,4 @@ title: Hour of Code How-To for Districts layout: wide nav: resources_nav
 
   5. **Adakan Kegiatan Hour of Code tingkat distrik.** Lihat [panduan kegiatan](<%= hoc_uri('/resources/how-to-events') %>) kami untuk contoh, media outreach kit dan dukungan.
 
-  6. **Lebih banyak [hadiah](<%= hoc_uri('/prizes') %>) untuk SETIAP organizer.** Setiap partisipan guru akan mendapatkan hadiah terim kasih. 100 kelas akan memenangkan tech chatting dengan pembicara tamu khusus. Partisipan sudah termasuk Bill Gates, Sheryl Sandberg, Ashton Kutcher dan masih banyak lagi). Dan di setiap negara, satu sekolah yang berpartisipasi akan memenangkan teknologi senilai $10.000 untuk sekolah mereka!
+  6. **Lebih banyak [hadiah](<%= hoc_uri('/prizes') %>) untuk SETIAP organizer.** Setiap partisipan guru akan mendapatkan hadiah terim kasih. Dan di setiap negara, satu sekolah yang berpartisipasi akan memenangkan teknologi senilai $10.000 untuk sekolah mereka!

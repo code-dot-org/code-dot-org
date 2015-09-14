@@ -390,6 +390,8 @@ Blockly.Toolbox.TreeNode.prototype.onMouseDown = function(e) {
     this.select();
   }
   this.updateRow();
+
+  e.stopPropagation();
 };
 
 /**

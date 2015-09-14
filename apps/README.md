@@ -29,17 +29,17 @@ MOOC_DEV=1 grunt build
 1. To make your changes show up in dashboard, run the following after the first time you build blockly: [has this been replaced with locals.yml?]
   ```
   cd ../dashboard
-  bundle exec rake 'blockly:dev[../blockly]'
+  bundle exec rake 'blockly:dev[../apps]'
   cd ../apps
   ```
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of blockly (e.g. when switching branches or stashing changes). To check your symlink, run:
 ```
-> ls -l dashboard/public/blockly                                                                                    
+> ls -l dashboard/public/blockly
 ```
 and look for something like:
 ```
-lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
+lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
 ```
 If the symlink is in place, then when you run later builds of blockly, your results should show up in Dashboard.
 
@@ -109,6 +109,11 @@ it breaking in some jquery code before running tests (at which point you can go 
 
 ```
 grunt mochaTest --grep='testname' --debug
+```
+
+We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
+```
+grunt mochaTest --fast
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance

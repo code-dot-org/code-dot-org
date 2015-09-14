@@ -5,7 +5,7 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 15 - Encryption Algorithms
+## Unit 2: Lesson 15 - Keys and Passwords
 
 # Background
 
@@ -32,4 +32,8 @@ The more complicated a key is, the harder it is to crack. Encryption algorithms 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1i11VTWePbC77xWP1Rb_fiuD14Ykky4TjBkO15BTqm7Y" target="_blank">KEY: Reading Guide for Keys and Passwords</a>
 MARKDOWN

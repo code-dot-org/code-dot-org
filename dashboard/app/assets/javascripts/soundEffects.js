@@ -230,21 +230,24 @@ function isIE9() {
 }
 
 Sound.prototype.getPlayableFile = function () {
-  if (!window.Audio) {
-    return false;
-  }
+  // IE9 Running on Windows Server SKU can throw an exception on window.Audio
+  try {
+    if (!window.Audio) {
+      return false;
+    }
 
-  var audioTest = new window.Audio();
+    var audioTest = new window.Audio();
 
-  if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
-    return this.config.mp3;
-  }
-  if (this.config.hasOwnProperty('ogg') && audioTest.canPlayType('audio/ogg')) {
-    return this.config.ogg;
-  }
-  if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
-    return this.config.wav;
-  }
+    if (this.config.hasOwnProperty('mp3') && audioTest.canPlayType('audio/mp3')) {
+      return this.config.mp3;
+    }
+    if (this.config.hasOwnProperty('ogg') && audioTest.canPlayType('audio/ogg')) {
+      return this.config.ogg;
+    }
+    if (this.config.hasOwnProperty('wav') && audioTest.canPlayType('audio/wav')) {
+      return this.config.wav;
+    }
+  } catch(e) {};
 
   return false;
 };

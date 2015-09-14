@@ -14,7 +14,9 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 # ایک گھنٹے کے کوڈ کی میزبانی کے لئے شکریہ!
 
-**ہر** کوڈ تراشہ تنظیم کار کی گھڑی 10 GB ڈروپبون جگہ یا اسکائپ کریڈٹ 10 ڈالر شکریہ کے طور پر وصول کریں گے. [ تفصیلات](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. دوسروں تک بھجیں
 
@@ -22,34 +24,20 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[ یہ ای میل ارسال کرہں](<%= hoc_uri('/resources#email') %>) یا اپنے پرنسپل کو [یہ ہینڈ آؤٹ](/resources/hoc-one-pager.pdf) دیں ۔
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
-## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[ یہ ای میل ارسال](<%= hoc_uri('/resources#email') %>) یا دیں [یہ ہینڈ آؤٹ](/resources/hoc-one-pager.pdf) یہ ہینڈ آؤٹ </a> اپنے پرنسپل کو دیں ۔
-
-<% end %>
-
-## 3 ۔ ادار عطیہ دیں
-
-[ ہمارے کراوڈفنڈڈ کے مہم کو عطیہ دیں.](http://<%= codeorg_url() %>/donate) تاکہ آپ ھماری 100 ملین بچوں کو پڑھانے میں ھماری مدد کرسکیں۔ ہم نے ابھی تاریخ کے [ سب سے بڑے تعلیمی کراوڈفنڈڈ کی مہم](http://<%= codeorg_url() %>/donate)کا آغاز کیا ھے۔ *ہر* ڈالر مشابہ ہو [ عطیہ دہندگان](http://<%= codeorg_url() %>/متعلق/عطیہ دہندگان)، آپ کے اثرات کو دگنا کرنے کے لئے.
-
-## 4. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
-
-[ یہ ای میل بھیجیں](<%= hoc_uri('/resources#email') %>) آپنے منیجر، یا CEO ۔ یا [انہیں یہ ہینڈ آؤٹ دیں](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. آپنی کمیونٹی میں کوڈ کی گھڑی کو فروغ دیں۔
+## 4. آپنی کمیونٹی میں کوڈ کی گھڑی کو فروغ دیں۔
 
 ایک مقامی گروپ کو بھرتی کرنا — لڑکا/لڑکی اسکاؤٹس کلب، چرچ، یونیورسٹی، ویٹرنز گروپ یا مزدور یونین ۔ یا ایک گھنٹہ کا کوڈ "بلاک پارٹی" اپنے محلے میں کروئیں۔
 
-## 6. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
+## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-آپنے میئر، سٹی کونسل یا اسکول بورڈ کو [ یہ ای میل بھیجیں](<%= hoc_uri('/resources#politicians') %>)۔ یا [انہیں یہ ہینڈ آؤٹ دیں](http://hourofcode.com/resources/hoc-one-pager.pdf) اور انہیں اپنے سکول کا دورہ کرنے کی دعوت دیں۔
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

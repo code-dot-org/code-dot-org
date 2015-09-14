@@ -5,25 +5,25 @@ require 'test_helper'
 
 class DslTest < ActiveSupport::TestCase
   test 'remove property' do
-    # mock file so we don't actually write a file, twice for each "create_from_level_builder"
+    # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
     File.expects(:write).times(4)
 
     input_dsl = "
   name 'my_multi'
-  title 'g(y) = y + 3'
+  title 'g(y) = y + 2'
   question 'What is the name of this function?'
   content1 'content1'
   right 'g'
   wrong 'y'
-  wrong '3'
+  wrong '2'
   "
     input_dsl_without_content = "
   name 'my_multi'
-  title 'g(y) = y + 3'
+  title 'g(y) = y + 2'
   question 'What is the name of this function?'
   right 'g'
   wrong 'y'
-  wrong '3'
+  wrong '2'
   "
     level = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl})
 
@@ -34,7 +34,7 @@ class DslTest < ActiveSupport::TestCase
   end
 
   test 'name should not be modifiable' do
-    # mock file so we don't actually write a file, twice for "create_from_level_builder"
+    # mock file so we don't actually write a file, 2x for "create_from_level_builder"
     File.expects(:write).times(2)
 
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external'\ntitle 'test'"})
@@ -47,7 +47,7 @@ class DslTest < ActiveSupport::TestCase
   end
 
   test 'should set serialized_attributes' do
-    # mock file so we don't actually write a file, twice for "create_from_level_builder", twice for level.update
+    # mock file so we don't actually write a file, 2x for "create_from_level_builder", 2x for level.update
     File.expects(:write).times(4)
 
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external 2'"})
@@ -56,4 +56,45 @@ class DslTest < ActiveSupport::TestCase
     assert_equal 'abc', level.properties['title']
     assert_nil level.properties['name']
   end
+
+  test 'should encrypt when saving in levelbuilder and decrypt when parsing from file' do
+    # don't actually write a file, but check that we are writing the encrypted version
+    File.expects(:write).twice.with do |pathname, contents|
+      if pathname.basename.to_s == 'test_external_3.external'
+        # make sure we're encrypting the .external file
+        contents =~ /^encrypted/
+      else
+        # second write is the i18n strings .yml file, don't bother checking it
+        true
+      end
+    end
+
+    # first, create it in levelbuilder
+    dsl_text = <<DSL
+name 'test external 3'
+markdown 'regular old markdown'
+teacher_markdown 'visible to teachers only'
+DSL
+    level = External.create_from_level_builder({}, {encrypted: '1', dsl_text: dsl_text})
+    assert level.properties['encrypted']
+    assert level.encrypted
+    assert_equal 'visible to teachers only', level.properties['teacher_markdown']
+
+    encrypted_dsl_text = level.encrypted_dsl_text(dsl_text)
+
+    # remove the existing level so we can try to create it from the encrypted text (instead of updating)
+    level.destroy
+
+    # check parsed data
+    new_level_data, _ = External.parse(encrypted_dsl_text, 'text_external_3.external', 'test external 3')
+    assert new_level_data[:properties]['encrypted']
+    assert_equal 'visible to teachers only', new_level_data[:properties][:teacher_markdown]
+
+    # check created level
+    new_level = External.setup(new_level_data)
+    assert new_level.properties['encrypted']
+    assert_equal 'visible to teachers only', new_level.properties['teacher_markdown']
+    assert new_level.encrypted
+  end
+
 end

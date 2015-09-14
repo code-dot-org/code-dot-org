@@ -1,0 +1,51 @@
+name 'ECSPD U2 D 17 Intro'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 2 Day 17: 
+
+First, let's explore the first lesson in the curriculum. To begin, find your ECS your curriculum and open to page 96.
+
+<a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=96" target="_blank">Access a Digital Copy of the Lesson >></a>
+
+![](https://images.code.org/1c9599846068fdc2b1b085e8f52c12a2-image-1441934518806.54.22 PM.png)
+
+#### Key Concepts
+
+1. Students will learn how to demonstrate a problem as a graph.
+
+1. Students will be able to find the minimal spanning tree of a graph. 
+
+#### Common Difficulties
+
+
+
+#### PD Outline
+
+The following outline lists the topics covered on each level of this stage. <i>This online PD is intended to be a companion to the ECS curriculum. Have your book open as you go through the levels of this stage.</i>
+
+1. Overview
+
+
+### All Resources for This Lesson
+
+#### Teacher Supports
+
+* <a href="http://www.exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf#page=96" target="_blank">U2 Day 17 Lesson Plan</a>
+* <a href="http://csunplugged.org/minimal-spanning-trees/https://drive.google.com/open?id=0B2UNlnU_5Vg4fmJqWmNQVjd1cVEtb2VaekxiUzZGalpHWXRYa09rTGUxWk42RlJEWHZMbGM" target="_blank"> U2 Day 17 Resource Folder</a>
+* <a href="http://forum.code.org/t/u2-day-17-general-q-a/1773/1"target="_blank"> U2 Day 17 General Q and A Forum</a>
+* <a href="http://forum.code.org/t/u2-day-17-pd-discussion-topic/1781/1"target="_blank"> U2 Day 17 PD Discussion Topic Forum</a>
+* <a href="http://forum.code.org/t/u2-day-17-lesson-resources/1797/1"target="_blank"> U2 Day 17 Lesson Resources Forum</a>
+* <a href="http://forum.code.org/t/u2-day-17-assessment/1789/1"target="_blank"> U2 Day 17 Assessment Forum</a>
+
+#### Supplies
+* <a href="http://csunplugged.org/minimal-spanning-trees/" target="_blank"> CS Unplugged: The Muddy City</a>
+
+
+
+Let's examine some important sections of this lesson. To get started, click "Continue" below. 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

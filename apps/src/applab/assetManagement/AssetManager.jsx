@@ -1,5 +1,5 @@
 var React = require('react');
-var AssetsApi = require('./clientApi');
+var assetsApi = require('../../clientApi').assets;
 var AssetRow = require('./AssetRow.jsx');
 var assetListStore = require('./assetListStore');
 
@@ -31,7 +31,7 @@ module.exports = React.createClass({
 
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
-    AssetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
+    assetsApi.ajax('GET', '', this.onAssetListReceived, this.onAssetListFailure);
   },
 
   /**
@@ -79,7 +79,7 @@ module.exports = React.createClass({
     }
 
     // TODO: Use Dave's client api when it's finished.
-    AssetsApi.ajax('PUT', file.name, function (xhr) {
+    assetsApi.ajax('PUT', file.name, function (xhr) {
       assetListStore.add(JSON.parse(xhr.responseText));
       this.setState({
         assets: assetListStore.list(this.props.typeFilter),

@@ -2,9 +2,9 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 var Packet = require('@cdo/apps/netsim/Packet');
@@ -12,7 +12,7 @@ var Packet = require('@cdo/apps/netsim/Packet');
 describe("Packet.Encoder", function () {
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
   describe("address format bit widths", function () {

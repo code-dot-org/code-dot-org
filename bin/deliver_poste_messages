@@ -100,7 +100,7 @@ class Deliverer
 
   def initialize(params)
     @params = params.dup
-    @smtp = smtp_connect
+    @smtp = smtp_connect unless rack_env?(:development)
     @templates = {}
   end
 
@@ -109,11 +109,12 @@ class Deliverer
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
     encrypted_id = Poste.encrypt_id(delivery[:id])
     params = JSON.parse(delivery[:params])
+    unsubscribe_url = poste_url("/u/#{CGI::escape(encrypted_id)}")
 
     header, html, _ = load_template(message[:name]).render(params.merge({
       recipient: OpenStruct.new(recipient),
       encrypted_id: encrypted_id,
-      unsubscribe_link: poste_url("/u/#{encrypted_id}"),
+      unsubscribe_link: unsubscribe_url,
       tracking_pixel: poste_url("/o/#{encrypted_id}"),
     }))
 
@@ -132,6 +133,9 @@ class Deliverer
 
     subject = header['subject'].to_s.strip
     message.puts 'Subject: ' + subject unless subject.empty?
+
+    message.puts "X-Unsubscribe-Web: #{unsubscribe_url}"
+    message.puts "List-Unsubscribe: <#{unsubscribe_url}>"
 
     message.puts 'MIME-Version: 1.0'
 
@@ -165,7 +169,11 @@ class Deliverer
     message.puts ''
     message.puts "--#{marker}--"
 
-    @smtp.send_message message.string, from_address[:email], to_address[:email]
+    if !rack_env?(:development)
+      @smtp.send_message message.string, from_address[:email], to_address[:email]
+    else
+      puts(message.string)
+    end
   end
 
   private

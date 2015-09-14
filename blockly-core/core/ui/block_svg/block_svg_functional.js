@@ -16,6 +16,11 @@ Blockly.BlockSvgFunctional = function (block, options) {
   this.patternId_ = null; // updated when we set colour
   this.inputMarkers_ = {};
   this.inputClickTargets_ = {};
+  /**
+   * Input names to forced width spacing amount
+   * @type {{string, number}}
+   */
+  this.forcedInputSpacings = {};
 
   Blockly.BlockSvg.call(this, block);
 };
@@ -185,6 +190,9 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
 
   var inputSteps = [];
 
+  var forcedInputSpacing = this.forcedInputSpacings[input.name];
+  var inputWidthToTakeUp = forcedInputSpacing || input.renderWidth;
+
   inputSteps.push('M', inputTopLeft.x + ',' + inputTopLeft.y);
   inputSteps.push('h', notchStart);
   inputSteps.push(notchPaths.left);
@@ -210,7 +218,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
   this.inputClickTargets_[input.name].setAttribute('visibility',
     input.connection.targetConnection ? 'hidden' : 'visible');
 
-  renderInfo.curX += input.renderWidth + BS.SEP_SPACE_X;
+  renderInfo.curX += this.inputWidthToOccupy_(input) + BS.SEP_SPACE_X;
 
   // Create inline input connection.
   var connectionX = connectionsXY.x + inputTopLeft.x + BS.NOTCH_WIDTH;

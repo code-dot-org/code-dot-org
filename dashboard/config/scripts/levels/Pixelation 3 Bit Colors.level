@@ -1,17 +1,14 @@
-<External>
+<Pixelation>
   <config><![CDATA[{
-  "game_id": 43,
-  "created_at": "2015-03-02T23:53:04.000Z",
+  "game_id": 44,
+  "created_at": "2015-08-25T16:30:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
   "properties": {
+    "version": "3",
+    "data": "000001000000001000000011000111100010001",
     "href": "pixelation/pixelation.html",
-    "options": {
-      "skip_dialog": true,
-      "version": "3",
-      "data": "000001000000001000000011000111100010001"
-    },
-    "title": "title",
-    "content1": "description here"
-  },
-  "md5": "224daa951ecbea1390d9a4b9fcade3b5"
+    "skip_dialog": true
+  }
 }]]></config>
-</External>
+</Pixelation>

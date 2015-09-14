@@ -1,5 +1,5 @@
 
 
-# Haz que tu escuela entera participe
+# Haz que toda tu escuela participe
 
-Información sobre hacer que escuelas completas participen en la Hora de Programación irá aquí.
+La información sobre conseguir que escuelas completas participen en la Hora de Programación irá aquí.

@@ -59,6 +59,9 @@
     "arlingtonpublicschools": {
       "name": "Arlington Public Schools"
     },
+    "auhsd": {
+      "name": "Anaheim Union High School District"
+    },
     "bisd303": {
       "name": "Bainbridge Island School District"
     },
@@ -319,6 +322,9 @@
     },
     "shorelineschools": {
       "name": "Shoreline School District"
+    },
+    "sjusd": {
+      "name": "San Juan Unified School District"
     },
     "spokaneschools": {
       "name": "Spokane Public Schools"

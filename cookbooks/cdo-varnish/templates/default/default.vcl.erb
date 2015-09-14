@@ -353,29 +353,10 @@ sub vcl_recv
   if(req.http.Cookie) {
     cookie.parse(req.http.Cookie);
   }
-  # Filter https-related cookies from incoming request
-  if (cookie.isset("https_ok")) {
-    cookie.delete("https_ok");
-    set req.http.X-Https-Ok = "1";
-  }
-  if (cookie.isset("https-blocked")) {
-    cookie.delete("https-blocked");
-    set req.http.X-Https-Blocked = "1";
-  }
 
-  # Redirect http to https if 'https_ok' cookie is set
+  # Redirect http to https
   if(req.http.X-Forwarded-Proto !~ "(?i)https") {
-    if(req.http.X-Https-Ok == "1") {
-      error 751 "https://" + req.http.host + req.url;
-    }
-
-    # Render https-test page if neither 'https_ok' nor 'https-blocked' cookies are set
-    if(req.http.X-Https-Ok != "1" && req.http.X-Https-Blocked != "1" &&
-       req.url !~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$" &&
-       (req.http.Host ~ "studio.code.org" && req.url ~ "/(p|s|hoc|k8intro|editcode|2014|flappy|jigsaw)/")
-      ) {
-      error 752;
-    }
+    error 751 "https://" + req.http.host + req.url;
   }
 
   C{
@@ -553,8 +534,7 @@ sub vcl_fetch {
     req.url ~ "^/api/hour/begin/" ||
     req.url ~ "^/api/hour/begin_" ||
     req.url ~ "^/auth$" ||
-    req.url ~ "^/auth/" ||
-    req.url ~ "^/test-image.png"
+    req.url ~ "^/auth/"
   ) {
     # allow this route to always set cookies.
   } else if (req.url ~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$") {
@@ -584,12 +564,11 @@ sub vcl_fetch {
 }
 
 sub vcl_deliver {
-  # Add HTTP Strict Transport Security header and https_ok cookie to response
+  # Add 1-year HTTP Strict Transport Security header, to HTTPS responses only.
+  # "An HSTS Host MUST NOT include the STS header field in HTTP responses conveyed over non-secure transport."
+  # @see http://tools.ietf.org/html/rfc6797#section-7.2
   if (req.http.X-Forwarded-Proto ~ "(?i)https") {
-    set resp.http.Strict-Transport-Security = "max-age=2592000";
-    if(req.http.X-Https-Ok != "1") {
-      header.append(resp.http.Set-Cookie,"https_ok=1; Path=/; Expires=" + cookie.format_rfc1123(now, 60d) + "; HttpOnly");
-    }
+    set resp.http.Strict-Transport-Security = "max-age=31536000";
   }
 
   # Set a header to track a cache HIT/MISS.
@@ -611,11 +590,6 @@ sub vcl_hash {
     hash_data(server.ip);
   }
 
-  # Include scheme in hash. Once we always redirect to HTTPS, this can be removed
-  if (req.http.X-Forwarded-Proto) {
-    hash_data(req.http.X-Forwarded-Proto);
-  }
-
   return (hash);
 }
 
@@ -631,41 +605,6 @@ sub vcl_error {
     set obj.http.Location = obj.response;
     set obj.status = 301;
     return(deliver);
-  }
-
-  if(obj.status == 752) {
-    set obj.http.Content-Type = "text/html; charset=utf-8";
-    synthetic {"
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-Redirecting to <a href='https://code.org'>HTTPS</a>..
-<script type="text/javascript" src="/shared/js/url_test/url_test.js"></script>
-<script type='text/javascript'>
-  function setCookie(key, value, days) {
-    var expires = new Date();
-    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = key + '=' + value + '; path=/; expires=' + expires.toUTCString();
-  }
-
-  var testImage = 'https://' + window.location.hostname + '/test-image.png';
-  testImageAccess(testImage,
-      function () {
-        setCookie('https_ok', '1', 60);
-        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-      },
-      function () {
-        setCookie('https-blocked', '1', 1);
-        document.location.reload(true);
-      },
-      5000
-  );
-</script>
-</body>
-</html>
-"};
-  return (deliver);
   }
 
   # All other error codes get this error page

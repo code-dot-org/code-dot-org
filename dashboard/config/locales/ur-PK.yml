@@ -2,13 +2,15 @@
   errors:
     messages:
       not_saved: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
         blank: مطلوب ہے
     attributes:
       user:
-        name: Display Name
+        name: ڈسپلے نام
         email: Email
         username: یوزر کا نام
         password: پاس ورڈ
@@ -17,24 +19,24 @@
         locale: زبان
         age: عمر
         gender: Jinss
-        edit_header: Edit Account Details
+        edit_header: اکاؤنٹ کی تفصیلات میں ترمیم کیجیے
         error:
-          future: can't be in the future
+          future: مستقبل میں نہیں ہو سکتا
   hello: hello dunia
   welcome_back: خوش آمدید، %{name}
   submit: جمع کرائیں
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
+      label: 'ٹیچر شامل کریں:'
       placeholder: Section Code (ABCDEF)
-    submit: Add teacher
+    submit: استاد شامل کریں
   add_hint_form:
     placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
-    submit: Add hint
+    submit: اشارہ شامل کریں
   appname: Code.org
   stage: اسٹیج
-  stage_number: Stage %{number}
-  puzzle: Puzzle
+  stage_number: اسٹیج %{number}
+  puzzle: پزل(Puzzle)
   trophies: ٹرافیاں
   courses: کورسز
   of: of
@@ -46,18 +48,18 @@
     دیکھیے
   k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
   already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
-  demos: 'Admin: All Demos'
+  demos: 'ایڈمن: تمام demos'
   continue: Continue
   prize: انعام
   more_info: مزید معلومات
   auth:
-    sign_in_with: Sign in with %{provider}
+    sign_in_with: '%{provider} کے ساتھ sign in'
     signed_in: '!!Signed in'
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
+    signed_out: آپ<a href="%{url}">Code.org</a>سے sign out ہو چکے ہیں.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: Already signed up?
-    notyet_signedup: Haven't joined yet?
+    already_signedup: sign up کر چکے ہیں؟
+    notyet_signedup: ابھی جوائن نہیں کیا؟
     google_oauth2: گوگل اکاؤنٹ
     twitter: ٹوئٹر
     facebook: فیس بک
@@ -66,35 +68,36 @@
     need_confirmation: کنفرمیشن کی ہدایات موصول نہیں ہویں؟
     need_unlock: ' Unlock کی ہدایات موصول نہیں ہویں؟  '
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: اپنی کارکردگی جاننے کے لئے sign up کریں. آپ کا ای میل آپ کو
-      login کرنے اور password  جاننے میں آپکی  مدد کرے گا .مزید معلومات کے لئے دیکھئے،
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: اب تک %{count} طالبعلم جوائن کر چکے ہیں.
+    teacher_count: اب تک %{count} اساتذہ جوائن کر چکے ہیں.
+    overview_student: اپنی کارکردگی جاننے کے لئے sign up کریں. login کرنے اور password
+      جاننے کے لئے اپنا ای میل استعمال کریں. مزید معلومات کے لئے دیکھئے <a href="http://code.org/privacy">Privacy
+      Policy</a>.
+    overview_teacher: اپنی جماعت کو کمپیوٹر سائنس پڑھانے کے لئے sign up کریں.<p/>
+      آپ اپنے طالبعلموں کو شامل کر کے انکی پراگریس بھی جان سکتے ہیں.
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
     teacher_educator_guide: اساتذہ کے لئے ہدایت نامہ دیکھئے
-    teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    teacher_pitch: Code.org کے لئے استاد کا سائن اپ
+    teacher_title: استاد کا سائن اپ
+    student_pitch: Code.org پرطالبعلم کا سائن اپ
+    student_title: طالبعلم کا سائن اپ
+    school_name: اسکول کا نام (اختیاری)
+    school_address: اسکول کا ایڈریس (اختیاری)
+    address_placeholder: پتا، شہر، صوبہ، پوسٹ کوڈ
+    gender: جنس (اختیاری)
+    birthday: تاریخ پیدائش (اختیاری)
     age: عمر
-    user_type: Are you a student or teacher?
+    user_type: آپ استاد ہیں یا طالبعلم؟
     submit: Sign up
-    teacher: Are you a teacher?
+    teacher: کیا آپ استاد ہیں؟
     valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
+    invalid_username: username کم از کم ٥ حروف کا ہونا چاہیے
+    taken_username: یہ username کسی اور کے استعمال میں ہے
+    valid_password: تصدیق شدہ پاس ورڈ!
+    invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
+    mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
@@ -102,17 +105,16 @@
       allows us to contact them.
     teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>.
-    additional_information: We need some additional information to continue signing
-      you up.
+    additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
   signin_form:
-    title: Have an account already? Sign in
-    login: Email or username
+    title: ' کیا آپ پہلے ہی اکاؤنٹ بنا چکے ہیں؟ sign in کیجیے'
+    login: Email یا username
     password: پاس ورڈ
-    remember: Remember me
+    remember: مجھے یاد رکھیے
     submit: Sign in
   signin:
-    try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_heading: کیا آپ بغیرsign up کے کوڈنگ کرنا چاہتے ہیں؟
+    try_hoc: سب سے پہلے ایک گھنٹہ Hour of Code کھیل کر دیکھیں
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
     welcome: Welcome to %{section_name}
@@ -152,10 +154,10 @@
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
       blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      cant_join_own_section: ہم معذرت خواہ ہیں، آپ اپنے سیکشن میں داخل نہیں ہو سکتے.
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: Code.org پر %{teacher_name} کی کلاس میں شامل ہو جائیے!
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as
           your student.'
@@ -164,15 +166,15 @@
           your teacher.'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: آپ اس شخص کے اعداد و شمار نہیں دیکھ سکتے
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'Provider:'
     code: 'Code:'
     redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
-    donorschoose_how_to: How to use your code
+    donorschoose_register: DonorsChoose.org پر ٹیچر کے طور پر رجسٹر کریں
+    donorschoose_project: پروجیکٹ پوسٹ کریں
+    donorschoose_how_to: آپکے کوڈ کے استعمال کا طریقہ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
@@ -352,6 +354,8 @@
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -402,6 +406,7 @@
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -420,7 +425,12 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Male
     female: Female
@@ -429,16 +439,30 @@
     student: Talib-e-ilm
     teacher: Teacher
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: More
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
@@ -456,12 +480,6 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -592,6 +610,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
+    startover_title: Are you sure you want to start over?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: Start Over
+    startover_cancel: Cancel
   time:
     hour: 1 hour
     day: day

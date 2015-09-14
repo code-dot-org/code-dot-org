@@ -27,17 +27,17 @@ Considerando que todos los estudiantes merecen una preparación cuidadosa en ens
 
 Considerando que la enseñanza de las Ciencias de informática tiene desafíos para direccionar , incluyendo las clases de ciencia de computación hacia los requisitos de graduación de la secundaria y proveer desarrollo profesional para maestros de Ciencias de la computación;
 
-Considerando que participan en la Hora del Código en la semana de ciencias de computación educacional puede servir para desmitificar el campo de la informática y alentar a más estudiantes a tomar estudios de Ciencias de la computación;
+Considerando que participan en la hora de código en la semana de ciencias de computación educacional puede servir para desmitificar el campo de la informática y alentar a más estudiantes a tomar estudios de Ciencias de la computación;
 
 Mientras que el campo de la informática tiene acciones importantes barreras que direccionar, que incluye atraer más la participación de mujeres y minorías subrepresentadas a todos los niveles y ramas;
 
 Mientras que Grace Murray Hopper, una de las primeras mujeres en el campo de la informática, ingeniería de nuevos lenguajes de programación y pionera en las normas de los sistemas informáticos que sentaron las bases para muchos adelantos en informática; y
 
-Considerando que la semana del 8 de diciembre, en honor al cumpleaños de Grace Hopper, se designa como 'semana de Ciencias de la computación Educacional': ahora, por lo tanto, ya sea
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resuelta, que la [casa o Senado, Estado, Condado, Ciudad o junta escolar]...
 
-(1) apoya la designación de la semana de ciencias de la computación educacional (7-13 de diciembre de 2014);
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 (2) anima a las escuelas, educadores, padres y legisladores a participar en la semana de la ciencias de computación educacional permitir a sus estudiantes a participar en la hora del código;
 

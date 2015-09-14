@@ -19,7 +19,7 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"run\",\"callout_text\":\"Hit \\\"Run\\\" to try your program\",\"element_id\":\"#runButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":7,\"y\":null},\"my\":\"bottom left\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"move_elsa_forward\",\"callout_text\":\"Drag a \\\"Move Forward\\\" block and snap it below the \\\"When Run\\\" block to make Elsa move forward\",\"element_id\":\"#move_forward_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"run\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to try your program!\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"move_elsa_forward\",\r\n  \"callout_text\": \"Drag a \\\"Move Forward\\\" block and snap it below the \\\"When Run\\\" block to make Elsa move forward\",\r\n  \"element_id\": \"#move_forward_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "ideal": "2",
     "embed": "false",
     "disable_sharing": "false",

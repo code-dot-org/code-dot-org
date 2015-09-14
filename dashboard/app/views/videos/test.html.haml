@@ -87,7 +87,7 @@
   videoInfo['enable_fallback'] = true;
   videoInfo['src'] = videoInfo['src'].replace('#{Video.youtube_base_url}', 'https://www.youtube.com');
 
-  $('#video-container').append(createVideoWithFallback(videoInfo, 600, 400));
+  createVideoWithFallback($('#video-container'), videoInfo, 600, 400);
 
   var fakingYouTubeBlocked = "#{params.has_key?(:force_youtube_fallback) ? 'Faking YouTube blocked' : ''}";
   $('.blockedStatus').css('color', 'green');

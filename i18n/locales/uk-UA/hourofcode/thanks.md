@@ -14,42 +14,30 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Дякуємо за реєстрацію заходу в межах Години коду!
 
-**КОЖЕН** організатор заходів Години коду отримає 10 GB простору на Dropbox або $10 кредиту Skype в якості подяки. [Детальніше](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Поширюйте інформацію
 
-Розкажіть своїм друзям про #HourOfCode.
+Розкажіть друзям про Годину коду #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Запропонуйте взяти участь у Годині коду всій школі
 
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або [цей буклет](/resources/hoc-one-pager.pdf) своєму директору.
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. Попросіть про участь свою адміністрацію
 
-## 2. Запропонуйте взяти участь у Годині коду всій школі
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) або передайте [цей ](/resources/hoc-one-pager.pdf) буклет</a> своєму директору.
-
-<% end %>
-
-## 3. Зробіть пожертву
-
-[Зробіть внесок у нашу краудфандингову кампанію.](http://<%= codeorg_url() %>/donate) Щоб навчити 100 мільйонів учнів, нам потрібна підтримка. Ми запустили [найбільшу краудсорсингову кампанію](http://<%= codeorg_url() %>/donate) в історії. *Кожен* долар пожертв подвоять [спонсори](http://<%= codeorg_url() %>/about/donors), збільшуючи ваш внесок.
-
-## 4. Попросіть про участь свою адміністрацію
-
-[Надішліть цього листа](<%= hoc_uri('/resources#email') %>) своєму керівникові чи директору. Або [передайте їм буклет](http://hourofcode.com/resources/hoc-one-pager.pdf).
-
-## 5. Сприяйте Годині коду у свій спільноті
+## 4. Сприяйте Годині коду у свій спільноті
 
 Залучайте місцеву спільноту - клуб пластунів, церкву, університет, ветеранський клуб чи профспілку. Або проведіть вечірку Години коду для своїх сусідів.
 
-## 6. Зверніться до місцевих депутатів по підтримку Години коду
+## 5. Зверніться до місцевих депутатів по підтримку Години коду
 
-[Надішліть цього листа](<%= hoc_uri('/resources#politicians') %>) міському голові, місцевій або шкільній раді. Або [передайте буклет](http://hourofcode.com/resources/hoc-one-pager.pdf) та запросіть відвідати школу.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

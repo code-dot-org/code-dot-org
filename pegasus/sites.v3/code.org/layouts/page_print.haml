@@ -2,5 +2,7 @@
 %html
   %head
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/common.css'}
+    - if header['chart']
+      %script{src:'https://www.google.com/jsapi'}
   %body
     = body

@@ -2,6 +2,8 @@
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
+      too_young: This content has age restrictions in place and is not available for
+        younger students
   activerecord:
     errors:
       messages:
@@ -52,38 +54,36 @@
   auth:
     sign_in_with: ลงทะเบียนด้วย %{provider}
     signed_in: ลงชื่อเข้าใช้
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.
+    sign_out_of: คุณใช้ %{provider} ในการเข้าสู่ระบบ <a href="%{url}">คลิกที่นี่</a>เพื่อลงชื่อออกจาก%{provider}.
     already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
     notyet_signedup: สมัครใช้งานหรือยัง?
-    google_oauth2: Google Account
+    google_oauth2: บัญชี Google
     twitter: ทวิตเตอร์
     facebook: เฟซบุค
-    windowslive: Microsoft Account
+    windowslive: บัญชี Microsoft
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: '%{count} นักเรียนได้ลงทะเบียนไว้แล้ว'
+    teacher_count: ครู %{count} ได้ลงทะเบียนไว้แล้ว
+    overview_student: สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ อีเมล์ของคุณส่วนใหญ่ไว้เพื่อให้คุณสามารถเข้าสู่ระบบ
+      และ สำหรับการกู้คืนรหัสผ่าน สำหรับข้อมูลเพิ่มเติม ดู<a href="http://code.org/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา
+    overview_teacher: สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยลงนามในบัญชี. <p/> คุณจะสามารถเพิ่มนักเรียนของคุณ
+      และติดตามความคืบหน้าของพวกเขา
     no_signup_message: คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง
       ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ
     teacher_educator_guide: ดูคำแนะนำสำหรับผู้ฝึกสอน
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: คุณครูสมัคร Code.org
     teacher_title: สมัครเป็นครู
     student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
     student_title: สมัครเป็นนักเรียน
     school_name: ชื่อโรงเรียน (ถ้ามี)
     school_address: ที่อยู่โรงเรียน (ถ้ามี)
     address_placeholder: ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    gender: เพศ (เลือกได้)
+    birthday: วันเกิด (ปล่อยว่างไว้ได้)
     age: อายุ
     user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
@@ -91,20 +91,17 @@
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
     taken_username: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
-    valid_password: Valid password!
+    valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: ฉันยอมรับ <a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>
+      ของ Code.org ถ้าฉันอายุต่ำกว่า 13 ปี ฉันยืนยัน โดยการส่งแบบฟอร์มนี้ที่มีสิทธิ์ของผู้ปกครองเพื่อการใช้บริการ
+      Code.org <br/> สำหรับผู้ที่อายุต่ำกว่า 13 ที่อยู่อีเมล์จะไม่ถูกเก็บไว้ในแบบฟอร์มที่ช่วยให้เราสามารถติดต่อ
+    teacher_terms: ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ
+      Code.org
+    additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
   signin_form:
-    title: Have an account already? Sign in
+    title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล หรือ ชื่อผู้ใช้งาน
     password: รหัสผ่าน
     remember: จำฉัน
@@ -114,10 +111,10 @@
     try_hoc: ลอง  Hour of Code ก่อนเป็นอันดับแรก
     try_20hours: ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: ยินดีต้อนรับสู่ %{section_name}
+    name: เลือกชื่อของคุณ
+    picture: หารูปภาพลับ
+    words: ป้อนคำศัพท์ลับของคุณ
     login: เข้าสู่ระบบ
   password:
     reset_form:
@@ -147,41 +144,39 @@
       signed_in: กรุณาออกจากระบบก่อนดำเนินการ
       username_not_found: ไม่พบ %{username} ในชื่อผู้ใช้งาน
       username_in_use: '%{username} ถูกใช้ไปแล้วกรุณาเลือกชื่ออื่น'
-      no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
-        Please ask them to sign up here and then try adding them again
-      section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: Please enter a section code
-      cant_join_own_section: Sorry, you can't join your own section.
+      no_teacher: ไม่พบผู้ใดลงนาม ด้วย '%{teacher_email_or_code}' ลองถามพวกเขาเพื่อลงทะเบียนที่นี่
+        และลองเพิ่มอีกครั้งหนื่ง
+      section_not_found: ไม่พบส่วนที่มีโค้ด '%{section_code}'
+      blank_code: กรุณาใส่รหัสเซคชั่น
+      cant_join_own_section: ขออภัย คุณไม่สามารถร่วมเซคชั่นของคุณเอง
     mail:
       invite_student:
-        subject: Join a class with %{teacher_name} at Code.org!
+        subject: เข้าร่วมชั้นเรียนกับ %{teacher_name} ใน Code.org
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as
-          your student.'
+        subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as
-          your teacher.'
+        subject: 'การแจ้งเตือน Code.org: ครู %{teacher_name} ไม่เป็นอาจารย์ของคุณ'
   reports:
     error:
-      access_denied: You don't have access to this person's stats
+      access_denied: คุณไม่สามารถเข้าถึงสถิติของบุคคลนี้
   redeem_prizes:
-    title: 'Redeem Prizes: %{name}'
-    provider: 'Provider:'
-    code: 'Code:'
-    redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    title: 'แลกของรางวัล: %{name}'
+    provider: 'ผู้ให้บริการ:'
+    code: 'โปรแกรม:'
+    redeem_header: 'เพื่อแลก:'
+    donorschoose_register: ลงทะเบียนในชื่อของอาจารย์ใน DonorsChoose.org
     donorschoose_project: ส่งโครงงาน
     donorschoose_how_to: วิธีการใช้โค้ดของคุณ
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
-    error_us_only: The prize offer is only valid for U.S. users.
-    error_not_earned: You have not yet earned this prize.
-    error_already_redeemed: Your prize has already been redeemed.
-    no_prizes_available: We're sorry, but we currently have no prizes available.
-    teacher_info_required: 'Teacher prizes require school name and address information:'
-    teacher_email_required: 'Teacher prizes require a confirmed email address:'
+    success: แลกของรางวัลเสร็จเรียบร้อย รับรหัสด้านล่าง
+    error: ไม่สามารถแลกของรางวัลได้ โปรดลองอีกครั้ง
+    error_us_only: รางวัลนี้สำหรับผู้ใช้ในสหรัฐฯ เท่านั้น
+    error_not_earned: คุณได้ไม่ยังได้รับรางวัลนี้
+    error_already_redeemed: แลกของรางวัลไปแล้ว
+    no_prizes_available: ขออภัย แต่ขณะนี้เราไม่มีรางวัลเหลือเลย
+    teacher_info_required: 'รางวัลสำหรับครูผู้สอนจำเป็นต้องมีข้อมูลชื่อและที่อยู่โรงเรียน:'
+    teacher_email_required: 'รางวัลสำหรับครูผู้สอนต้องมีอีเมล์ยืนยัน:'
     confirm:
-      title: Please Confirm
+      title: โปรดยืนยัน
       'no': ไม่ใช่
       'yes': ใช่
       msg: Are you sure you want to claim the %{prize_name} prize?
@@ -351,6 +346,8 @@
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
+      example: Example Solution
+      example_with_number: Example Solution %{solution_number}
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -401,6 +398,7 @@
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -419,7 +417,12 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with
+      code.
   gender:
     male: Male
     female: Female
@@ -428,16 +431,30 @@
     student: นักเรียน
     teacher: ครู
   footer:
+    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
+      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
+      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
+      advisors</a> for their support in creating Code Studio.
     help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create this tutorial.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
+      create these materials.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
       Arts Inc. All Rights Reserved.
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: เพิ่มเติม
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Terms
     privacy: Privacy Policy
     secure: Secure Version
@@ -455,12 +472,6 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -591,6 +602,11 @@
     open_response_body: Thanks for your response!
   dialog:
     ok: ตกลง
+    startover_title: คุณจะเริ่มต้นใหม่จริงๆหรือ ?
+    startover_body: This will reset the puzzle to its start state and reset all the
+      data you've added or changed.
+    startover_ok: เริ่มใหม่
+    startover_cancel: ยกเลิก
   time:
     hour: 1 hour
     day: day

@@ -203,8 +203,6 @@
   img {
     box-sizing: content-box;
     float: right;
-    height: 100%;
-    width: auto;
   }
 
   .imgspan {
@@ -298,6 +296,18 @@
   }
   .printcertificate {
     background-color: $cyan;
+    color: white;
+  }
+  .continuelight {
+    background-color: $light_yellow;
+    color: white;
+  }
+  .trynowlight {
+    background-color: $light_green;
+    color: white;
+  }
+  .printcertificatelight {
+    background-color: $light_cyan;
     color: white;
   }
 }

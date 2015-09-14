@@ -22,10 +22,10 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown">
+            <block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="3-10">3</title>
               <next>
-                <block type="controls_repeat_dropdown">
+                <block type="controls_repeat_simplified_dropdown">
                   <title name="TIMES" config="3-10">3</title>
                 </block>
               </next>

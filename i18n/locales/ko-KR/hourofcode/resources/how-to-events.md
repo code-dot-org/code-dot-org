@@ -6,7 +6,7 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 # Hour of Code 이벤트 가이드
 
-컴퓨터과학교육주간(Computer Science Education Week)(12월8일-14일) 동안에 Hour of Code 이벤트를 조직/운영해 주시면서 컴퓨터과학(정보과학) 분야에 대해서 알리고 더 많은 학생들이 경험해 볼 수 있도록 도와주세요. 누구나 어디서나 Hour of Code 이벤트를 조직/운영할 수 있습니다.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) 이벤트 준비하기
 
@@ -23,7 +23,6 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
   * 다른 이벤트 아이디어들: 
       * 지역 유명 업체의 대표를 초청해서 컴퓨터과학 분야와 얼마나 연관되어있는지 이야기해 볼 수 있도록 하세요.
       * 지역 정치인을 초대해서 학생들과 함께 코드를 작성해도록 해보세요.
-      * Hour of Code 홍보대사 중 한 분과 함께하는 Q&A 세션 중 하나를 시청해 보세요. Code.org의 유투브(YouTube) 페이지에서 녹화되어 공유될 것입니다. 올해에는 빌 게이츠(Bill Gates), 셰릴 샌드버그(Sheryl Sandberg), 애쉬튼 거쳐(Ashton Kutcher) 등이 함께 할 예정입니다!
       * 컴퓨터과학 언플러그드 활동을 학생들과 직접 시연해 보세요.
       * 한 학생들 그룹이나, 한 교사들 그룹에게 코드를 작성하는 방법을 가르쳐보세요.
       * 만약, 여러분의 학교에서 이미 컴퓨터과학(정보과학) 교과를 가르치고 있다면, 학생들과 시범 프로젝트를 진행해 보세요.
@@ -37,7 +36,7 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 **이벤트:** 학교 전체 행사로서 컴퓨터과학교육주간 킥오프 과정
 
-**날짜:** 12월8일(컴퓨터과학교육주간 시작일)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **시간:** 학교 일과 중. 아침-점심 사이 시간. 대략 1시간 정도.
 
@@ -47,72 +46,11 @@ title: Hour of Code Event How-To layout: wide nav: resources_nav
 
 ## 이벤트 일정
 
-<table>
-  <tr>
-    <th style="width:200px">
-      시간
-    </th>
-    
-    <th style="width:800px">
-      내용
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      <a href="http://hourofcode.com/us/resources#videos">영감을 주는 동영상들</a>중 하나를 시청한다.
-    </td>
-  </tr>
-  
-  <td>
-    10:05-11:15 am
-  </td>
-  
-  <td>
-    교장선생님이 컴퓨터과학(정보과학)의 중요성을 간단히 살펴보면서 설명하는 인트로로 시작한다. <a href="/resources/stats">통계 및 인포그래픽자료들</a>을 활용한다..
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    <a href="http://hourofcode.com/us/resources#videos">영감을 주는 동영상들</a>중 하나를 시청한다.
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    학교 전체를 위해 학생들이 Hour of Code 의 데모를 시연한다. 재미있는 이벤트로 학생들이 교장, 정치인, 다른 학생들을 가르쳐 주도록 한다.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.
-  </td>
-</table>
+| 시간               | 내용                                                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
+| 10:05 - 10:15 am | 교장선생님이 컴퓨터과학(정보과학)의 중요성을 간단히 살펴보면서 설명하는 인트로로 시작한다. [통계 및 인포그래픽자료들](/resources/stats)을 활용한다.                              |
+| 10:15 - 10:30 am | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                        |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
+| 10:40 - 11:00 am | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |

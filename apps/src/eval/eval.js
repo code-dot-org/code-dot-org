@@ -82,6 +82,8 @@ Eval.init = function(config) {
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -155,10 +157,89 @@ Eval.init = function(config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
+
+    if (Blockly.contractEditor) {
+      Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
+      Blockly.contractEditor.registerTestResetHandler(resetExampleDisplay);
+    }
   };
 
   studioApp.init(config);
 };
+
+/**
+ * @param {Blockly.Block}
+ * @param {boolean} [evaluateInPlayspace] True if this test should also show
+ *   evaluation in the play space
+ * @returns {string} Error string, or null if success
+ */
+function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
+  if (evaluateInPlayspace) {
+    studioApp.resetButtonClick();
+    Eval.resetButtonClick();
+    Eval.clearCanvasWithID('user');
+  }
+
+  clearTestCanvases();
+  displayCallAndExample();
+
+  var failure;
+  try {
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+    var actualDrawer = getDrawableFromBlock(actualBlock);
+    var expectedDrawer = getDrawableFromBlock(expectedBlock);
+
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+
+    if (!actualDrawer || actualDrawer instanceof CustomEvalError) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedDrawer || expectedDrawer instanceof CustomEvalError) {
+      throw new Error('Invalid Result Block');
+    }
+
+    actualDrawer.draw(document.getElementById("test-call"));
+    expectedDrawer.draw(document.getElementById("test-result"));
+
+    failure = canvasesMatch('test-call', 'test-result') ? null :
+      "Does not match definition";
+
+  } catch (error) {
+    failure = "Execution error: " + error.message;
+  }
+
+  if (evaluateInPlayspace) {
+    showOnlyExample();
+  } else {
+    resetExampleDisplay();
+  }
+  return failure;
+}
+
+function clearTestCanvases() {
+  Eval.clearCanvasWithID("test-call");
+  Eval.clearCanvasWithID("test-result");
+}
+
+function resetExampleDisplay() {
+  document.getElementById('answer').style.display = 'block';
+  document.getElementById('test-call').style.display = 'none';
+  document.getElementById('test-result').style.display = 'none';
+}
+
+function showOnlyExample() {
+  document.getElementById('answer').style.display = 'none';
+  document.getElementById('test-call').style.display = 'none';
+  document.getElementById('test-result').style.display = 'block';
+}
+
+function displayCallAndExample() {
+  document.getElementById('answer').style.display = 'none';
+  document.getElementById('test-call').style.display = 'block';
+  document.getElementById('test-result').style.display = 'block';
+}
 
 /**
  * Click the run button.  Start the program.
@@ -170,18 +251,24 @@ Eval.runButtonClick = function() {
   Eval.execute();
 };
 
+Eval.clearCanvasWithID = function (canvasID) {
+  var element = document.getElementById(canvasID);
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+};
 /**
  * App specific reset button click logic.  studioApp.resetButtonClick will be
  * called first.
  */
 Eval.resetButtonClick = function () {
-  var user = document.getElementById('user');
-  while (user.firstChild) {
-    user.removeChild(user.firstChild);
-  }
-
+  resetExampleDisplay();
+  Eval.clearCanvasWithID('user');
   Eval.feedbackImage = null;
   Eval.encodedFeedbackImage = null;
+  Eval.result = ResultType.UNSET;
+  Eval.testResults = TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
 };
 
 /**
@@ -227,6 +314,17 @@ function evalCode (code) {
 function getDrawableFromBlockspace() {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_display', 'functional_definition']);
   var result = evalCode(code);
+  return result;
+}
+
+function getDrawableFromBlock(block) {
+  var definitionCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+  var blockCode = Blockly.Generator.blocksToCode('JavaScript', [block]);
+  var lines = blockCode.split('\n');
+  var lastLine = lines.slice(-1)[0];
+  var lastLineWithDisplay = "Eval.display(" + lastLine + ");";
+  var blockCodeDisplayed = lines.slice(0, -1).join('\n') + lastLineWithDisplay;
+  var result = evalCode(definitionCode + '; ' + blockCodeDisplayed);
   return result;
 }
 
@@ -342,7 +440,13 @@ Eval.execute = function() {
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  } else if (studioApp.hasEmptyFunctionOrVariableName()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    Eval.message = commonMsg.unnamedFunction();
   } else {
+    clearTestCanvases();
+    resetExampleDisplay();
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {
       userObject.draw(document.getElementById("user"));
@@ -362,9 +466,13 @@ Eval.execute = function() {
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
       Eval.message = evalMsg.wrongBooleanError();
     } else {
-      // We got an EvalImage back, compare it to our target
-      Eval.result = evaluateAnswer();
-      Eval.testResults = studioApp.getTestResults(Eval.result);
+      Eval.checkExamples_();
+
+      // Haven't run into any errors. Do our actual comparison
+      if (Eval.result === ResultType.UNSET) {
+        Eval.result = canvasesMatch('user', 'answer');
+        Eval.testResults = studioApp.getTestResults(Eval.result);
+      }
 
       if (level.freePlay) {
         Eval.result = true;
@@ -405,6 +513,41 @@ Eval.execute = function() {
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
+Eval.checkExamples_ = function (resetPlayspace) {
+  if (!level.examplesRequired) {
+    return;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutTwoExamples();
+  if (exampleless) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return;
+  }
+
+  var failingBlockName = studioApp.checkForFailingExamples(getEvalExampleFailure);
+  if (failingBlockName) {
+    // Clear user canvas, as this is meant to be a pre-execution failure
+    Eval.clearCanvasWithID('user');
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+    Eval.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+    return;
+  }
+};
+
 /**
  * Calling outerHTML on svg elements in safari does not work. Instead we stick
  * it inside a div and get that div's inner html.
@@ -430,13 +573,19 @@ function imageDataForSvg(elementId) {
   return ctx.getImageData(0, 0, Eval.CANVAS_WIDTH, Eval.CANVAS_HEIGHT);
 }
 
-function evaluateAnswer() {
+/**
+ * Compares the contents of two SVG elements by id
+ * @param {string} canvasA ID of canvas
+ * @param {string} canvasB ID of canvas
+ * @returns {boolean}
+ */
+function canvasesMatch(canvasA, canvasB) {
   // Compare the solution and user canvas
-  var userImageData = imageDataForSvg('user');
-  var solutionImageData = imageDataForSvg('answer');
+  var imageDataA = imageDataForSvg(canvasA);
+  var imageDataB = imageDataForSvg(canvasB);
 
-  for (var i = 0; i < userImageData.data.length; i++) {
-    if (0 !== Math.abs(userImageData.data[i] - solutionImageData.data[i])) {
+  for (var i = 0; i < imageDataA.data.length; i++) {
+    if (0 !== Math.abs(imageDataA.data[i] - imageDataB.data[i])) {
       return false;
     }
   }
@@ -448,9 +597,18 @@ function evaluateAnswer() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  var tryAgainText;
+  if (Eval.result === ResultType.UNSET) {
+    // This can happen if we hit reset before our dialog popped up.
+    return;
+  }
+
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
+
+  var tryAgainText;
+  if (level.freePlay) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
 
   var options = {
     app: 'eval',
@@ -458,7 +616,7 @@ var displayFeedback = function(response) {
     feedbackType: Eval.testResults,
     response: response,
     level: level,
-    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    tryAgainText: tryAgainText,
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery

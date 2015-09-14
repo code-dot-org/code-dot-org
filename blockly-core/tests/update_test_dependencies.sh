@@ -10,6 +10,6 @@
   --root_with_prefix="../generators/javascript ../../../generators/javascript" \
   --root_with_prefix="../msg ../../../msg" \
   --path_with_depspath="../generators/javascript.js ../../../generators/javascript.js" \
-  --path_with_depspath="./test_requires.js ../../../tests/test_requires.js" \
+  --path_with_depspath="./test_requires_and_utils.js ../../../tests/test_requires_and_utils.js" \
   --path_with_depspath="./playground_requires.js ../../../tests/playground_requires.js" \
    > test_dependency_map.js

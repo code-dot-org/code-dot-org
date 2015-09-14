@@ -8,6 +8,11 @@ module.exports = {
     var files = require('../solutions/**/*.js', {hash: 'path'});
     var testCollections = [];
     Object.keys(files).forEach(function (file) {
+      // Setting that allows us to ignore particular level files
+      if (window.__ignoreSolutionsRegex &&
+          window.__ignoreSolutionsRegex.test(file)) {
+        return;
+      }
       testCollections.push({path: file, data: files[file]});
     });
 

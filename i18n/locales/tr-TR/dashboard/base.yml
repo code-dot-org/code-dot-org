@@ -2,6 +2,7 @@ tr:
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -305,6 +306,8 @@ tr:
       viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
       section: Bölüm
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -348,6 +351,7 @@ tr:
     local_school: Yerel okul
     online: Online
     see_details: Ayrıntılara bakınız
+    view_course: Kursu İncele
     prize_info: "Katılım ödülleri (yalnızca ABD devlet okulu öğretmenleri için): 1,000$ 'a kadar sınıf ödülleri."
     tryfirst: 'Ya da önce deneyin, sonra üye olun:'
     trynow: Şimdi dene
@@ -362,7 +366,11 @@ tr:
     heading_legacy: '<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>'
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Sertifikayı Yazdır
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Erkek
     female: Kadın
@@ -371,13 +379,20 @@ tr:
     student: öğrenci
     teacher: Öğretmen
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: "Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin yardımıyla oluşturuldu."
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Tüm hakları saklıdır.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Daha Fazla
     feedback: Geri besleme sağla
     translate: Kendi dilinize çevirmemiz için bize yardım edin
     support: Destek
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Şartlar
     privacy: Gizlilik Politikası
     secure: Güvenli sürüm
@@ -395,10 +410,6 @@ tr:
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Bu uyarıyı gizle
     working:
       header: Tarayıcı desteği üzerinde çalışıyoruz.
       message: "Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının daha hızlı olmasını sağlar. Tarayıcınız ihtiyaç duyduğumuz özellikleri desteklemiyorsa sitemizi kullanırken bazı problemler ile karşılaşabilirsiniz. Bulduğunuz herhangi bir hatayı <a href='%{report_issue_url}'>hata bildir</a>i kullanarak bize bildirin. Ayrıca tarayıcınızı da <a href='%{supported_browsers_url}'>desteklenen bir versiyon</a> ile güncelleyebilirsiniz."
@@ -505,6 +516,10 @@ tr:
     open_response_body: cevabınız için teşekkürler!
   dialog:
     ok: TAMAM
+    startover_title: Baştan başlamak istediğinizden emin misiniz?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Baştan Başla
+    startover_cancel: İptal
   time:
     hour: 1 saat
     day: gün
@@ -574,7 +589,9 @@ tr:
     name: İsim
     updated: Güncellendi
     project_type: Proje türü
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
+    help_text: |
+      Uygulama oluştur'a tıklayın veya Yeni bir oyun labaratuvarı veya sanatçı projesi çizin. 
+      Geri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz.
     need_help: Başlarken yardıma mı ihtiyacınız var?
     really_delete: Silinsin mi?
     delete_yes: Evet
@@ -588,4 +605,4 @@ tr:
     remix: |
       karıştır.
       
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"

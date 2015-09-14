@@ -55,14 +55,14 @@ Students will:
 
 ### For the Student
 
-- [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf)
-- [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf)
+- [Mad Glibs Abstraction Worksheet](Activity5-MadGlibs.pdf)
+- [Abstraction Assessment Worksheet](Assessment5-MadGlibs.pdf)
 - Pens/Pencils
 
 ### For the Teacher
 
-- Print one [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf) per student
-- Print one [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf)
+- Print one [Mad Glibs Abstraction Worksheet](Activity5-MadGlibs.pdf) per student
+- Print one [Abstraction Assessment Worksheet](Assessment5-MadGlibs.pdf)
 - Provide student with paper, pens & pencils
 
 
@@ -124,8 +124,8 @@ Ask the class to give you some examples of other places that they may naturally 
 
 
 ## Activity: Mad Glibs (20 min)
-### <a name="Activity1"></a>4) [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf)
-The next step is to pass out a “fill-in-the-blank” story (see the [Mad Glibs Abstraction Worksheet](Activity6-MadGlibs.pdf) for a copy to print out) . Let them know that this started as a specific story about one thing, but we used abstraction to turn some of the specific words into blanks, and now the story can be about lots of things. Ask them what they can make their story about.
+### <a name="Activity1"></a>4) [Mad Glibs Abstraction Worksheet](Activity5-MadGlibs.pdf)
+The next step is to pass out a “fill-in-the-blank” story (see the [Mad Glibs Abstraction Worksheet](Activity5-MadGlibs.pdf) for a copy to print out) . Let them know that this started as a specific story about one thing, but we used abstraction to turn some of the specific words into blanks, and now the story can be about lots of things. Ask them what they can make their story about.
 
 ![](story.png)
 
@@ -148,7 +148,7 @@ You can choose to do these as a class, or have the students discuss with an elbo
 
 
 ## Assessment (10 min)
-### <a name="Assessment"></a>7) [Abstraction Assessment Worksheet](Assessment6-MadGlibs.pdf) <br/><br/>
+### <a name="Assessment"></a>7) [Abstraction Assessment Worksheet](Assessment5-MadGlibs.pdf) <br/><br/>
 
 
 ## Extended Learning 

@@ -7,7 +7,7 @@ goog.provide('Blockly.ContractEditorSectionView');
 /** @const */ var DARK_GRAY_HEX = '#898989';
 /** @const */ var YELLOW_HEX = '#ffa400';
 /** @const */ var HIGHLIGHT_BOX_WIDTH = 10; //px
-/** @const */ var DEFAULT_HEADER_HEIGHT = 50; //px
+/** @const */ var DEFAULT_HEADER_HEIGHT = 25; //px
 
 /**
  * Header with a block below it
@@ -49,6 +49,10 @@ Blockly.ContractEditorSectionView = function (canvas, opt_options) {
   });
   this.collapsed_ = false;
   this.showHeader_ = true;
+};
+
+Blockly.ContractEditorSectionView.prototype.setHeaderColor = function (colorHex) {
+  this.header_.setColor(colorHex)
 };
 
 Blockly.ContractEditorSectionView.prototype.textForCurrentState_ = function () {
@@ -104,6 +108,7 @@ Blockly.ContractEditorSectionView.prototype.toggleCollapse = function () {
  */
 Blockly.ContractEditorSectionView.prototype.setCollapsed = function (isCollapsed) {
   this.collapsed_ = isCollapsed;
+  this.header_.showSeparator(isCollapsed);
   if (this.onCollapseCallback_) {
     this.onCollapseCallback_(this.collapsed_);
   }

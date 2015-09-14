@@ -66,8 +66,8 @@
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
-  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować
-    naukę po tej godzinie (One Hour)</a>
+  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>kontynuować
+    naukę poza Godziną Kodowania</a>
   get_a_certificate_message_after: Kliknij na świadectwie, aby je pobrać lub wydrukować.
     Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>,
     lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną
@@ -112,10 +112,10 @@
   used_infrequent_updates: Stosowane tylko dla rzadkich aktualizacji
   privacy_practices_children: Zobacz nasze zasady ochrony prywatności dla dzieci
   petition_thankyou: Dziękujemy za podpisanie petycji
-  continue_learning_header: Kontynuuj naukę poza One Hour
+  continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
-  learn_next_level: Przejdź na następny poziom
+  learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
   hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
@@ -123,7 +123,7 @@
   twitter_teach_cs: Dlaczego więcej szkół nie uczy informatyki? Możemy to zmienić.
     http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
-  beyond_hoc: Poza One Hour
+  beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
   girl: Dziewczyna
   boy: Chłopiec
@@ -191,7 +191,7 @@
     nauczyciel\n"
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
     \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
-  homepage_hero_text_stat_loc: '#loc linii kodu napisanych przez uczniów'
+  homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
   homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
@@ -206,9 +206,13 @@
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
+  homepage_diversity_pledge: Weź zastaw różnorodności
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -225,7 +229,7 @@
   homepage_slot_text_link_fullcurriculum: Zobacz nasz pełny program nauczania
   homepage_slot_text_link_pd: Rozwój zawodowy
   homepage_slot_text_title_advocates: Zwolennicy
-  homepage_slot_text_blurb_advocates: Wesprzyj naszą pracę
+  homepage_slot_text_blurb_advocates: Wspieraj różnorodność w informatyce
   homepage_slot_text_link_stats: Zobacz statystyki
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
@@ -546,6 +550,8 @@
   educator_notes: Notatki nauczyciela
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
+  beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
+    Zobacz kryteria i formularz zgłoszenia.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -1076,7 +1082,7 @@
   kodable_beyond_longdescription: Kodable jest grą z własnym przewodnikiem na iPada,
     która przybliża dzieciom 5+ podstawy programowania. Dobrze, jeśli nauczyciel lub
     rodzic są w pobliżu, ale nie jest to konieczne.
-  scratchjr_beyond_longdescription: ScratchJr jest wprowadzającym językiem programowania,
+  scratchjr_beyond_longdescription: ScratchJr jest językiem programowania dla początkujących,
     który umożliwia młodym dzieciom tworzyć własne interaktywne opowiadania i gry.
     Dzieci składają razem bloki graficznego programowania, aby postacie poruszały
     się, skakały, tańczyły i śpiewały

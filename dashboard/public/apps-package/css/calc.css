@@ -35,3 +35,8 @@
 
 #answerExpression {
   fill: #3c3c3c; }
+
+.svgCalcFeedback {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }

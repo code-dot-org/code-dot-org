@@ -1,244 +1,252 @@
 * * *
 
-layout: i/e gjerë
+shtrirja: e gjerë
 
 * * *
 
-# Udhëzues për Orën e Kodimit dhe Javës së Edukimit në Shkencat Kompjuterike
+# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-**Afati për te dorëzuar udhëzuesin për Orën e Kodimit 2014 ka kaluar. Gjithsesi, ju ende mund të dorëzoni një të tillë dhe ne do të përpiqemi ta rishikojmë nëqoftëse e lejon koha.**
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
 
-Code.org do të organizoje aktivitete te ndryshme për Orën e Kodimit në faqen e internetit të Code.org, webfaqet Ora e Kodimit, CSEdWeek. Lista e aktuale ndodhet në: [<%= codeorg_url() %>](http://<%= codeorg_url() %>/learn).
+Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor është optimizimi i përvojave të nxënësve dhe mësuesve, të cilët janë të rinj në shkencat kompjuterike. Ju lutem përdorni këtë dokument si udhëzues për zhvillimin e aktivitetit tuaj, që i drejtohet përdoruesve të cilët nuk kanë njohuri në kodim, programim kompjuterik apo në shkencat kompjuterike.
 
-Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor është optimalizimi i përvojave të nxënësve dhe mësuesve, të cilët janë të rinj në shkencat kompjuterike. Luteni të përdorni këtë dokument si udhëzues për zhvillimin e aktivitetit tuaj, që i drejtohet përdoruesve të cilët nuk kanë njohuri në kodim, programim kompjuteri apo në shkencat kompjuterike.
+  
+
+
+**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+
+**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 
 ## Indeksi:
 
-  * [Si do të vlerësohen tutorialet për përfshirje](#inclusion)
-  * [Udhëzime të përgjithshme për të krijuar aktivitetin Ora e Kodimit](#guidelines)
-  * [Si realizohen dorëzimet (deri më 10/1/204)](#submit)
-  * [Sugjerime për të dizajnuar aktivitetin tuaj](#design)
-  * [Udhëzime mbi brand-in ](#tm)
-  * [Pikselët tregues ](#pixel)
-  * [Promovimi i tutorialeve tuaj, CSEdWeek dhe Ora e Kodimit](#promote)
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
+    
+  * [How to submit (Due 10/31/2015)](#submit)  
+    
+  * [Suggestions for designing your activity](#design)  
+    
+  * [Trademark Guidelines](#tm)  
+    
+  * [Tracking Pixel](#pixel)  
+    
+  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
+    
   * [Shënim për nxënësit me aftësi të kufizuara](#disabilities)
 
 <a id="inclusion"></a>
 
-## Si vlerësohen tutorialet për përfshirje
+## Si vlerësohen tutorialet për tu përfshirë
 
-Komision në përbërje me instruktor të shkencave kompjuterike do të rangoje materialet bazuar në matrice sasiore dhe cilësore perfshirë dhe rezutate të vlerësimeve nga instruktorë të tjerë.
+Komisioni me instruktor të shkencave kompjuterike do të rendis materialet bazuar në matje sasiore dhe cilësore, duke perfshirë dhe rezutate të vlerësimeve nga instruktorë të tjerë.
 
 **Tutorialet do të listohen më lart nëse janë:**
 
-  * të cilësisë së ulët
+  * të cilësisë së lartë
   * të vetëdrejtuara, që nuk kërkojnë ndonjë udhëzim
-  * të dizajnuara për fillestarë
-  * të dizajnuara si aktivitet 1~orësh
-  * operojnë nëpër shumë OS/pajisje dhe platforma, përfshirë celularët dhe tabletët 
+  * designed for beginners - among students AND teachers
+  * të përcaktuara si aktivitet 1~orësh
+  * require no sign up
+  * require no payment
+  * require no installation
+  * operojnë nëpër shumë SO/platforma pajisjesh, përfshirë celularët dhe tabletët
   * funksionojnë në gjuhë të shumta 
-  * promovojnë mësimin tek të gjitha grupet demografike (veçanërisht tek grupet e papërfaqsuara)
+  * promote learning by all demographic groups (esp. under-represented groups)
   * jo vetëm tek HTML+CSS web design - (qëllimi është tek shkencat kompjuterike dhe jo thjesht kodimi HTML)
 
 **Tutorialet do të listohen më poshtë nëse janë:**
 
   * të cilësisë së ulët
   * të nivelit më të përparuar (jo për fillestar)
-  * me numër të kufizuar të platformave OS/pajisjeve - për platformat e bazuara në rrjet duhet të synohet që të kenë IE9+, dhe Chrome, Firefox, e Safari
+  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
+  * me numër të kufizuar të platformave të OS/pajisjeve të përkrahura - për platformat e bazuara në Ueb duhet të synohet që të kenë IE9+, dhe versionet e fundme të Chrome, Firefox, e Safari
   * funksionojnë vetëm në Anglisht
-  * me prirje specifike gjinore (psh. që tematikisht kanë oreintim tek djemt) 
+  * reinforce stereotypes that hinder participation by under-represented student groups
   * paraqiten si platformë mësimi me pagesë
 
 **Tutorialet që NUK listohen fare nëse:**
 
-  * kërkojnë nivel të lartë të përfshirjes nga mësuesi me përgaditje të shumta (që janë jo të vetë-udhëzuara për nxënesit)
   * nuk janë të dizajnuara për të qenë aktivitet një-orësh
-  * kerkojnë sign up 
-  * kërkojnë sign up
-  * kërkojnë instalim
-  * përqëndrohen vetëm në HTML + CSS web design
-  * dorëzohen pas afatit të dorëzimit, apo me informacion jo të kompletuar (shih si më poshtë)
+  * kerkojnë regjistrim 
+  * kërkojnë pagesë
+  * require installation (other than mobile apps)
+  * përqëndrohet vetëm në dizajnin e uebit HTML + CSS
+  * dorëzohen pas afatit të dorëzimit, apo me informacion jo të kompletuar (shiko më poshtë)
 
-Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user.
+Në fund të fundit, qëllimi i fushtës së Orës Kodimit është për të zgjeruar pjesëmarrjen në shkencat kompjuterike nga ana e nxënësve dhe mësuesve, dhe për të ndihmuar të tregojnë se shkenca kompjuterike është i arritshëm për të gjithë, dhe "më e lehtë se sa mendoni." Në shumë mënyra, ky qëllim është më e mirë të arrihet duke i dhënë nxënësit dhe mësuesit më pak dhe zgjedhje të thjeshta, me një fokus në opsionet e cilësisë më të lartë për një përdorues për herë të parë. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
-Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!!
-
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
-
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="guidelines"></a>
 
 ## Udhëzime të përgjithshme për të krijuar aktivitetin Ora e Kodimit
 
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody can learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody should learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Types of activities:** 
-      * **Best:** Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 
-      * **Okay, but not preferred:** app-install, desktop app, or game-console experiences.
-  * **Format:** Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+  * **Tema:**Hyrja në shkenca kompjuterike ose programimi (jo HTML).
+  * **Qëllimi:**Jepi fillestarëve një arrijte në provën e parë të programimit.
+  * **Tonaliteti:** 
+      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
+      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+      * Inkurajoni studentët të krijojnë diçka që mund ta shpërndajnë me shokët/online.
+  * **Technical requirements**: 
+      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
+      * Okay, but not preferred: app-install, desktop app, or game-console experiences
+  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Në mënyrë ideale, udhëzimet dhe mësimet janë të integruar direkte në platformën e programit, për të shmangur ndryshimet në tabe apo dritaret në mes të tutorialit dhe platformës së programimit.
+  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="submit"></a>
 
-## Si realizohen dorëzimet (deri më 10/1/204)
+## How to submit (Due 10/31/2015)
 
-Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code.org/forms/d/16FZ2a24YsZzhoCiThzUf1DI7nkuYG5sJURMEPd3wDvU/viewform) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
-**What you’ll need:**
+**Çfarë do ju duhet:**
 
-  * Your name, logo (jpg, png, etc.)
-  * URL for a screenshot or marketing image of the HoC activity. Images/screenshots should be 446 x 335 resolution exactly. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it.
-  * URL Link for the logo
-  * Name of the activity
-  * URL Link to the activity
-  * URL Link to teacher notes (optional, see details below)
-  * Description of the activity (both desktop-view and mobile-view) 
-      * **Max character count for desktop-view:** 384
-      * **Max character count for mobile-view:** 74
-      * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-  * A list of tested/compatible platforms: 
-      * **Web based:** 
-          * OS - Mac, Win, and versions
-          * Browsers - IE8, IE9, IE10, Firefox, Chrome, Safari
-          * iOS mobile Safari (mobile-optimized)
-          * Android Chrome (mobile-optimized)
-      * **Non web-based:** specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-      * Unplugged
-  * A list of supported languages and appropriate format: 
-      * Tutorials should specify which languages they support using 2-character language codes, e.g. en - English; ja - Japanese
-      * If more specificity is necessary, using dashes, e.g. fr-be - French (Belgium) or fr-ca - French (Canada)
-      * ***Note: Language-detection is the job of the tutorial provider, we will redirect all users to the single URL provided.*** 
-  * If you submit an online tutorial, we need to know whether it is [COPPA compliant](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) or not.
-  * Recommended grade level(s) for intended users. You may refer to the [Computer Science Teachers’ Association’s K-12 Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) for grade-appropriate computer science concepts. Example grade levels include: 
-      * Elementary school: grades K-2 or 3-5
-      * Middle School: grades 6-8
-      * High School: grades 9-12
-      * All ages
-  * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code Activities, please include the prior knowledge needed in the description of your activity.
-  * Technical requirements: 
-      * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
-          * Share on social media that they completed the Hour of Code
-          * Receive a certificate that they completed the Hour of Code
-          * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-  * ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm) 
-      * For online activities (especially smartphone/tablet apps): 
-          * Number of users
-          * How many completed the task
-          * Average time on task
-          * Number of total lines of code written over all users
-          * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-      * For offline activities 
-          * Number of downloads of paper version of activity (if applicable)
+  * Emri juaj, stema (jph, png, etj.)
+  * URL për një elrankapje apo imazh marketingu për aktivitetin OrK. Imazhet/fotot duhet të jenë me rezolucion ekzaktësisht 446 x 335. Nëse një imazh i duhur nuk është aprovuar, ne mund të marrim fotot tona të tutorialit tuaj OSE ne mund të zgjedhim mos e listojmë atë.
+  * Vjegëza URL e stemës
+  * Emri i aktivitetit
+  * Vjegëza URL për tek aktiviteti
+  * Vjegëza URL për tek shënimet e mësuesve (opsionale, shiko detajet më poshtë)
+  * Përshkrimin e aktivitetit (të dyja desktop-pamje dhe mobile-pamje) 
+      * **Max karaktereve të llogaritura për pamjen desktop:**384
+      * **Max karaktereve të llogaritura për pamjen mobile:**74
+      * Ju lutemi të përfshini në përshkrimin nëse kjo është kryesisht udhëzues drejtuar për nxënësit ose lehtësim për mësues. Përveç kësaj, disa shkolla janë të interesuara të dinë nëse aktivitetet e Orës së Kodimit janë të adresuara si një trung i përbashkët ose Gjenerata Tjetër e Standarteve të Shkencës. Nëse aktiviteti i drejtohet standardeve specifike, e konsiderojeni duke e përfshirë edhe këtë informacion.
+  * Një listë e platformave të testuara/përshtatshme: 
+      * Web based: Which platforms have you tested 
+          * OS - Mac, Win, dhe versionet
+          * Browser-at - IE8, IE9, IE10, Firefox, Chrome, Safari
+          * iOS mobile Safari ( e përshtatur për mobile)
+          * Android Chrome (e përshtatur për mobile)
+      * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+      * Shkëputur
+  * Një listë e gjuhëve të suportueshme dhe formati përshtatshëm: 
+      * Tutorialet do të specifikojnë cilat gjuhë ata përkrahin duke përdorur kodin e gjuhës me 2-karaktere, p.sh. en - Anglisht; al - shqip
+      * Nëse më shumë specifika janë të nevojshme, përdor vizat lidhëse, p.sh. fr-be-frëngjisht (Belgjikë) ose fr-ca - frëngjisht (Kanada)
+      * ***Shënim: Gjuha-zbuluese është punë e aprovuesit të tutorialit, ne do të përcjellim të gjithë përdoruesit në një URL të vetme të aprovuar.*** 
+  * Nëse ju dorzoni një tutorial online, ne kemi nevojë të dimë se a [përputhet COPPA ](http://en.wikipedia.org/wiki/Children's_Online_Privacy_Protection_Act) ose jo.
+  * Niveli(et) i klasës i rekomanduar për përdoruesit e synuara. Ju mund t'i referoheni [Computer Science Teachers’ Association’s K-12 Standards](http://csta.acm.org/Curriculum/sub/K12Standards.html) për konceptet e klasës së përshtatshme për shkenca kompjuterike. Shembuj të niveleve të klasës përfshijnë: 
+      * Shkollat fillore: notat K-2 ose 3-5
+      * Shkollat 8-vjeçare: notat 6-8
+      * Shkollat e mesme: notat 9-12
+      * Të gjithë moshat
+  * Ju lutemi gjithashtu përfshini njohuritë e rekomanduara në shkenca kompjuterike brenda nivelit të klasës: fillestar, i ndërmjetëm, ose të avancuar. Website Ora e Kodimit do të nxjerrë më në pah aktivitetet për fillestarët. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+  * Kërkesat teknike: 
+      * Në mënyrë për të gjetur më shumë pjesmarrës me saktësi ne duam që cdo palë e tretë e partnerve të përfshijë 1-pixel të shoqëruar me foto në faqen e parë dhe të fundit të tutorialeve të tyre të Orës së Kodimit. Vendos një pixel-foto fillestare në faqen e parë dhe një pixel-foto finale në faqen e fundit. Mos vendos pixel-a në faqet e përkohshme). Shih seksionin Tracking Pixel më poshtë për më shumë detaje. 
+      * Me të përfunduar aktivitetin tuaj, përdoruesit duhet të drejtohen për <http://code.org/api/hour/finish> ku do jenë në gjendje të: 
+          * Të shpërndajnë në mediat sociale që kanë përfunduar Orën e Kodimit
+          * Merrni një çertifikatë që keni përfunduar Orën e Kodimit
+          * Shih bordet udhëheqëse se cilat nga vendet/qytetet kanë normat më të larta të pjesëmarrjes në aktivitetet e Orës së Kodimit
+          * Për përdoruesit që kalojnë një orë në aktivitetin tuaj dhe nuk e përfundojnë atë, ju lutem të përfshini një buton në aktivitetin tuaj që thotë se "Unë jam duke mbaruar me Orën time të Kodimit", e cila lidh përsëri me[ http://code.org/api/hour/finish](http://code.org/api/hour/finish). 
+  * *(Opsionale)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
+      * Për aktivitetet online (kryesisht smartphone/tablet app): 
+          * Numrin e përdoruesve
+          * Sa kanë përfunduar punën
+          * Koha mesatare e detyrës
+          * Numri total i rreshtave të kodit të shkruara nga të gjithë përdoruesit
+          * Sa vazhdojnë rrugën për të mësuar më tej (e matur si çdo përdorues i cili përfundon detyrën dhe shkon në detyra shtesë në faqen tuaj)
+      * Për aktivitetet jashtë linjës 
+          * Numri i shkarkimeve të versionit letër të aktiviteteve (nëse aplikohen)
 
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="design"></a>
 
-## Sugjerime për të dizajnuar aktivitetin tuaj
+## Sugjerime për të projektuar aktivitetin tuaj
 
-**Include the CSEdWeek logo in your tutorial.** You can include the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) in your tutorial, but this is not required. You may also contact us to request specific permission to use the “In Partnership with Code.org” logo. ***This logo can only be used if specific permission is granted in writing by Code.org.*** We may end up creating an Hour of Code logo, but at this time we do not have one. Under no circumstances can the Code.org logo and name be used. Both are trademarked, and can’t be co-mingled with a 3rd party brand name.
+You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) or [big](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) or the [Hour of Code logo](https://www.dropbox.com/work/Marketing/HOC2014/Logos%202014/HOC%20Logos) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. Në asnjë rrethanë nuk mund të përdoret stema e Code.org dhe emri. Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Sigurohuni që studenti mesatar mund të përfundojë i qetë në një orë. **Konsideroni duke shtuar një aktivitet të pakufizuar në fund për studentët të cilët ecin më shpejt në mësime. Mos harroni se shumica e fëmijëve do të jenë fillestar absolut në shkenca kompjuterike dhe kodim.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Përfshini shënimet e mësuesve.**Shumica e aktiviteteve duhet të jenë të drejtuar për nxënës, por në qoftë se një aktivitet është lehtësuar ose menaxhohet nga një mësues, ju lutem të përfshijë udhëzime të qarta dhe të thjeshta për mësuesit në formën e shënimeve të mësuesve në një URL të veçantë dorëzuar me aktivitetin tuaj. Jo vetëm studentët janë fillestar, disa prej mësuesve janë gjithashtu. Përfshi informacion si:
 
-  * Our tutorial works best on the following platforms and browsers
-  * Does it work on smartphones? tablets?
-  * Do you recommend pair programming? 
-  * Considerations for use in a classroom? eg if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+  * Tutorialet tonë punojnë më mirë në platformat dhe shfletuesit e mëposhtme
+  * Does it work on smartphones? Tablets?
+  * A ju rekomandojmë programimin çift? 
+  * Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**Incorporate feedback at the end of the activity.** (E.g.: “You finished 10 levels and learned about loops! Great job!”)
+**Inkorporoni reagime në fund të aktivitetit** (p.sh: "Ju përfunduat 10 nivele dhe mësuat për ciklet! Punë e shkëlqyer!")
 
-**Incorporate social media.** Encourage students to post to social media (where appropriate) when they’ve finished, for example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode" ose Unë kam bërë një #HourOfCode si pjesë e #CSEdWeek. A keni ju? @Scratch." Përdor hashtag-un**#HourOfCode**(me shkronja kapitale O, C)
 
-**Create your activity in languages besides English.** We're focusing this campaign internationally this year and would like to have a number of activities to offer non-English speaking participants.
+**Create your activity in Spanish or in other languages besides English.** ]
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Shpjegoni ose lidheni aktivitetin në një kontekst të rëndësishme shoqërore.** Programimi kompjuterik bëhet një superfuqi kur studentët shohin se si ajo mund të ndryshojë botën për më mirë!
 
-**Do not require signup or payment before students can try your tutorial.** Tutorials that require signup or payment will not be listed
+**Nuk kërkojmë regjistrim ose pagesë para se studentët mund të provojnë tutorialet tuajs.** Tutorialet që kërkojnë regjistrim ose pagesa nuk do të listohen
 
-**Make sure your tutorial can be used in a [Pair Programming paradigm](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).**
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** The three rules of pair programming in a school setting are:
 
-The three rules of pair programming in a school setting:
+  * Drejtuesi kontrollon mouse-in dhe tastierën.
+  * Udhëheqësi bën sugjerime, vë në dukje gabimet, dhe bën pyetje. 
+  * Studentët duhet të ndryshojnë rolet të paktën dy herë në seancë.
 
-  * The driver controls the mouse and keyboard.
-  * The Navigator makes suggestions, points out errors, and asks questions. 
-  * Students should switch roles at least two times a session.
+Përfitimet e programimit në çift:
 
-Benefits of Pair Programming:
+  * Studentët mund të ndihmojnë njëri-tjetrin në vend se duke u mbështetur tek mësuesit
+  * Trego se kodimi nuk është një aktivitet i vetëm, por një që përfshin ndërveprimin social
+  * Jo të gjitha klasat ose laboratorët kanë kompjutera të mjaftueshme për një përvojë 1:1
 
-  * Students can help one another instead of relying on the teacher
-  * Show that coding is not a solo activity, but one involving social interaction
-  * Not all classrooms or labs have enough computers for a 1:1 experience
-
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="tm"></a>
 
-## Udhëzime mbi brand-in 
+## Udhëzime mbi markat e regjistruara
 
-With ~40 million students having tried the Hour of Code, and over 97% of participating teachers asking us to repeat the event annually, we are taking steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
+After the success of the 2013 campaign, we took steps to make sure we set up the Hour of Code as a movement that can repeat annually with greater fidelity and without confusion.
 
-One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
+Një pjesë e kësaj është për të mbrojtur markën "Ora e Kodimit" për të parandaluar konfuzionin. Shumë nga partnerët tanë kanë përdorur "Orën e Kodimit" në faqet e tyre të web-it. Ne nuk duam të parandalojmë këtë përdorim, por ne duam të sigurohemi se përshtatet brenda disa kufijve:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
-  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
+  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp"
+  2. Përdorni një "TM" sipërshkrim në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit
+  3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
     
-    ***“The 'Hour of Code' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”***
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names
+  4. Nuk ka përdorimi të "Orës së Kodimit" në emrat e aplikacioneve
 
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="pixel"></a>
 
-## Pikselët tregues 
+## Pixel-ët përcjellës
 
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages).
+Në mënyrë për të gjetur më saktësisht pjesëmarrjen ne i kërkojmë çdo partneri të tutorialeve të palëve të treta për të përfshirë imazhet 1-pixel në faqen e parë dhe të fundit të tutorialeve të Orës së tyre të Kodimit (Një pixel-imazh në faqen fillestare dhe një pixel-imazhi përfundimtar në faqen e fundit. Dhe jo në faqet e përkohshme).
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
+Kjo do të na lejojë ne për të numëruar përdoruesit që ju rekrutuat për të vizituar faqen tuaj të uebit për të bërë Orën e tyre të Kodimit, ose përdoruesit të cilët vizituan kur një mësues shkruajti URL-në tuaj në tabelë. Kjo do të çojë në pjesmarrje më të saktë për tutorialet tuaja, e cila do t'ju ndihmojë për të tërhequr përdoruesit. Nëse ju integroni pixel në fund ai do të na lejojë ne për të matur vlersimet për tutorialet.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Nëse tutoriali juaj është aprovuar dhe është përfshirë në faqen e fundit të tutorialit, Code.org do t'ju ofrojë një pixel unik ndjekjeje për ju që ta integroni në tutorialin tuaj. Shiko shembullin më poshtë.
 
-***NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)***
+SHËNIM: kjo nuk është e rëndësishme për tu bërë për aplikacionet e instaluara (aplikacionet iOS/ Android, ose aplikacionet e instaluara desktop)
 
-**Example tracking pixels for AppInventor:**
+Shembulli i pixel-ave për AppInventor:
 
-IMG SRC="http://code.org/api/hour/begin_appinventor.png/"
+IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 
-IMG SRC="http://code.org/api/hour/finish_appinventor.png/"
-
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="promote"></a>
 
 ## Promovimi i tutorialeve tuaj, CSEdWeek dhe Ora e Kodimit
 
-We are asking everyone to promote their own 1-hour tutorial to your users. Please direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your tutorial. Use the international Hour of Code campaign for Computer Science Education Week as an excuse to encourage users to invite others to join in, help us reach 100 million total participants.
+Ne po kërkojmë nga të gjithë për të promovuar 1-orë tutorial tek përdoruesit tuaj. Please direct them to ***your*** Hour of Code page. Përdoruesit tuaj me më shumë mundësi mund të reagojnë nga një email nga ju për tutorialin tuaj. Përdorni fushatën ndërkombëtare të Orës së Kodimit për Javën Edukative të Shkencave Kompjuterike si një justifikim për të inkurajuar përdoruesit për të ftuar të tjerët të bashkohen, të na ndihmojë të arrijmë 100 milionë pjesëmarrës në total.
 
-  * Feature Hour of Code and CSEdWeek on your website.  
-    Ex: <http://www.tynker.com/hour-of-code>
-  * Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag **#HourOfCode** (with capital letters H, O, C)
-  * Host a local event or ask your employees to host an event at local schools or community groups.
-  * See our resource kit for further information (coming soon).
+  * Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
+  * Promovo Orën e Kodimit duke përdorur rrjetet sociale, median tradicionale, listën e email-eve, etj, duke përdorur hashtag-un**#HourOfCode**(me shkronja të mëdha O, C)
+  * Organizo një ngjarje lokale apo pyesni punonjësit tuaj për të organizuar një event në shkollat lokale apo grupet e komunitetit.
+  * Shiko mjetet burimore tona për informacione të mëtejshme (së shpejti).
 
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)
 
 <a id="disabilities"></a>
 
-## A special note for students with disabilities
+## Një shënim i veçantë për nxënësit me aftësi të kufizuara
 
-If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
+Nëse keni krijuar një tutorial që është projektuar për vizionin-e dobët, ne do të duam ta nxjerrim në pah atë për shikuesit. Ne nuk kemi marrë ende një tutorial të tillë, dhe do të jemi të paduruar për të përfshirë një të tillë si një opsion për këta studentë.
 
-[**Back to the top**](#top)
+[**Përsëri në krye**](#top)

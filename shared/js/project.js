@@ -1,11 +1,30 @@
-/* global dashboard, appOptions, $, trackEvent, Applab, Blockly */
+/* global dashboard, appOptions, $, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
+
+var ABUSE_THRESHOLD = 10;
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
+
+// Name of the packed source file
+var SOURCE_FILE = 'main.json';
+
+function packSourceFile() {
+  return JSON.stringify({
+    source: current.levelSource,
+    html: current.levelHtml
+  });
+}
+
+function unpackSourceFile(data) {
+  current.levelSource = data.source;
+  current.html = data.html;
+}
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -43,6 +62,7 @@ var PathPart = {
  * @property {string} level Path where this particular app type is hosted
  */
 var current;
+var currentSourceVersionId;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -76,26 +96,158 @@ var projects = module.exports = {
   },
 
   /**
+   * @returns {number}
+   */
+  getAbuseScore: function () {
+    return current ? current.abuseScore : 0;
+  },
+
+  /**
+   * Sets abuse score to zero, saves the project, and reloads the page
+   */
+  adminResetAbuseScore: function () {
+    // TODO (brent) - right now this is pretty low security. anyone could
+    // enter the javascript console and call this. eventually, we want some sort
+    // of protected API call we can make
+    if (this.getAbuseScore() === 0) {
+      return;
+    }
+    current.abuseScore = 0;
+    var sourceAndHtml = {
+      source: current.levelSource,
+      html: current.levelHtml
+    };
+    this.save(sourceAndHtml, function () {
+      location.reload();
+    });
+  },
+
+  /**
+   * @returns {boolean} true if we're frozen
+   */
+  isFrozen: function () {
+    if (!current) {
+      return;
+    }
+    return current.frozen;
+  },
+
+  /**
+   * @returns {boolean}
+   */
+  isOwner: function () {
+    return current && current.isOwner;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
+  exceedsAbuseThreshold: function () {
+    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+  },
+
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecauseAbusive: function () {
+    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
+  },
+
+  //////////////////////////////////////////////////////////////////////
+  // Properties and callbacks. These are all candidates for being extracted
+  // as configuration parameters which are passed in by the caller.
+  //////////////////////////////////////////////////////////////////////
+
+  // TODO(dave): extract isAutosaveEnabled and any boolean helper
+  // functions below to become properties on appOptions.project.
+  // Projects behavior should ultimately be fully configurable by
+  // properties on appOptions.project, rather than reaching out
+  // into global state to make decisions.
+
+  /**
    * @returns {boolean} true if we're editing
    */
   isEditing: function () {
     return isEditing;
   },
 
-  init: function () {
+  // Whether the current level is a project level (i.e. at the /projects url).
+  isProjectLevel: function() {
+    return (appOptions.level && appOptions.level.isProjectLevel);
+  },
+
+  shouldUpdateHeaders: function() {
+    return !appOptions.isExternalProjectLevel;
+  },
+
+  showProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectHeader();
+    }
+  },
+
+  /**
+   * Updates the contents of the admin box for admins. We have no knolwedge
+   * here whether we're an admin, and depend on dashboard getting this right.
+   */
+  showAdmin: function() {
+    dashboard.admin.showProjectAdmin();
+  },
+
+  showMinimalProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showMinimalProjectHeader();
+    }
+  },
+
+  showProjectLevelHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectLevelHeader();
+    }
+  },
+
+  //////////////////////////////////////////////////////////////////////
+  // End of properties and callbacks.
+  //////////////////////////////////////////////////////////////////////
+
+  /**
+   *
+   * @param {Object} sourceHandler Object containing callbacks provided by caller.
+   * @param {Function} sourceHandler.setInitialLevelHtml
+   * @param {Function} sourceHandler.getLevelHtml
+   * @param {Function} sourceHandler.setInitialLevelSource
+   * @param {Function} sourceHandler.getLevelSource
+   */
+  init: function (sourceHandler) {
+    this.sourceHandler = sourceHandler;
     if (redirectFromHashUrl() || redirectEditView()) {
       return;
     }
 
-    if (appOptions.level.isProjectLevel || current) {
+    if (this.isProjectLevel() || current) {
       if (current && current.levelHtml) {
-        appOptions.level.levelHtml = current.levelHtml;
+        sourceHandler.setInitialLevelHtml(current.levelHtml);
       }
 
       if (isEditing) {
         if (current) {
           if (current.levelSource) {
-            appOptions.level.lastAttempt = current.levelSource;
+            sourceHandler.setInitialLevelSource(current.levelSource);
           }
         } else {
           current = {
@@ -110,7 +262,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = getEditorSource();
+          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -119,25 +271,30 @@ var projects = module.exports = {
 
         if (!current.hidden) {
           if (current.isOwner || !parsePath().channelId) {
-            dashboard.header.showProjectHeader();
+            this.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
-            dashboard.header.showMinimalProjectHeader();
+            this.showMinimalProjectHeader();
           }
         }
       } else if (current) {
-        appOptions.level.lastAttempt = current.levelSource;
-        dashboard.header.showMinimalProjectHeader();
+        this.sourceHandler.setInitialLevelSource(current.levelSource);
+        this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
         name: 'Untitled Project'
       };
-      dashboard.header.showMinimalProjectHeader();
+      this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
     }
+
+    this.showAdmin();
+  },
+  projectChanged: function() {
+    hasProjectChanged = true;
   },
   getCurrentApp: function () {
     switch (appOptions.app) {
@@ -162,29 +319,43 @@ var projects = module.exports = {
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
-   * @param {string?} source Optional source to be provided, saving us another
-   *   call to getEditorSource
-   * @param {function} callback Fucntion to be called after saving
+   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
+   *   call to sourceHandler.getLevelSource
+   * @param {function} callback Function to be called after saving
    */
-  save: function(source, callback) {
-    if (arguments.length === 1) {
+  save: function(sourceAndHtml, callback) {
+    if (arguments.length < 2) {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      source = getEditorSource();
+      sourceAndHtml = {
+        source: this.sourceHandler.getLevelSource(),
+        html: this.sourceHandler.getLevelHtml()
+      };
     }
+
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    current.levelSource = source;
-    current.levelHtml = getLevelHtml();
+    if (current.levelHtml && !sourceAndHtml.html) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
+    current.levelSource = sourceAndHtml.source;
+    current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
-      channels.update(channelId, current, function (err, data) {
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      sources.put(channelId, packSourceFile(), filename, function (err, response) {
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+        channels.update(channelId, current, function (err, data) {
+          this.updateCurrentData_(err, data, false);
+          executeCallback(callback, data);
+        }.bind(this));
       }.bind(this));
     } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
       channels.create(current, function (err, data) {
         this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);
@@ -203,11 +374,7 @@ var projects = module.exports = {
       // we've changed channels. If we aren't at a /projects/<appname> link,
       // always do a redirect (i.e. we're remix from inside a script)
       if (isEditing && parsePath().appName) {
-        if (location.hash || !window.history.pushState) {
-          // We're using a hash route or don't support replace state. Use our hash
-          // based route to ensure we don't have a page load.
-          location.href = current.level + '#' + current.id + '/edit';
-        } else {
+        if (window.history.pushState) {
           window.history.pushState(null, document.title, this.getPathName('edit'));
         }
       } else {
@@ -225,21 +392,21 @@ var projects = module.exports = {
     if (current.levelSource === undefined) {
       return;
     }
-    // `getEditorSource()` is expensive for Blockly so only call
+    // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
       return;
     }
 
-    var source = getEditorSource();
-    var html = getLevelHtml();
+    var source = this.sourceHandler.getLevelSource();
+    var html = this.sourceHandler.getLevelHtml();
 
     if (current.levelSource === source && current.levelHtml === html) {
       hasProjectChanged = false;
       return;
     }
 
-    this.save(source, function () {
+    this.save({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },
@@ -249,6 +416,17 @@ var projects = module.exports = {
   rename: function(newName, callback) {
     current.name = newName;
     this.save(callback);
+  },
+  /**
+   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   */
+  freeze: function(callback) {
+    current.frozen = true;
+    current.hidden = true;
+    this.save(function(data) {
+      executeCallback(callback, data);
+      redirectEditView();
+    });
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
@@ -309,7 +487,7 @@ var projects = module.exports = {
    */
   load: function () {
     var deferred;
-    if (appOptions.level.isProjectLevel) {
+    if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         return;
       }
@@ -330,28 +508,29 @@ var projects = module.exports = {
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            deferred.resolve();
+            fetchSource(data, function () {
+              if (current.isOwner && pathInfo.action === 'view') {
+                isEditing = true;
+              }
+              deferred.resolve();
+            });
           }
         });
         return deferred;
       } else {
         isEditing = true;
       }
-    } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
-      // this is an embedded project
+    } else if (appOptions.isChannelBacked) {
       isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
         } else {
-          current = data;
-          dashboard.header.showProjectLevelHeader();
-          deferred.resolve();
+          fetchSource(data, function () {
+            projects.showProjectLevelHeader();
+            deferred.resolve();
+          });
         }
       });
       return deferred;
@@ -367,6 +546,18 @@ var projects = module.exports = {
   }
 };
 
+function fetchSource(data, callback) {
+  current = data;
+  if (data.migratedToS3) {
+    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      unpackSourceFile(data);
+      callback();
+    });
+  } else {
+    callback();
+  }
+}
+
 /**
  * Only execute the given argument if it is a function.
  * @param callback
@@ -378,22 +569,10 @@ function executeCallback(callback, data) {
 }
 
 /**
- * @returns {string} The serialized level source from the editor.
+ * is the current project (if any) editable by the logged in user (if any)?
  */
-function getEditorSource() {
-  var source;
-  if (window.Blockly) {
-    // If we're readOnly, source hasn't changed at all
-    source = Blockly.readOnly ? current.levelSource :
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-  } else {
-    source = window.Applab && Applab.getCode();
-  }
-  return source;
-}
-
-function getLevelHtml() {
-  return window.Applab && Applab.getHtml();
+function isEditable() {
+  return (current && current.isOwner && !current.frozen);
 }
 
 /**
@@ -406,14 +585,18 @@ function redirectEditView() {
   if (!parseInfo.action) {
     return;
   }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
   var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
+  if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+  } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
   }
 

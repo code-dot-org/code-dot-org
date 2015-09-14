@@ -64,7 +64,7 @@
   "removePile": "usuń stos",
   "removeStack": "usuń stos {shovelfuls} stosów",
   "removeSquare": "usuń kwadrat",
-  "repeatCarefullyError": "Aby to rozwiązać, pomyśl uważnie o układzie dwóch ruchów i jednego obrotu umieszczając ten układ w bloku Powtórz (repeat). W porządku, jeśli na końcu będzie dodatkowy obrót.",
+  "repeatCarefullyError": "Aby to rozwiązać, pomyśl uważnie o układzie dwóch ruchów i jednego obrotu umieszczając ten układ w bloku \"powtórz\". W porządku jest, jeśli na końcu będzie dodatkowy obrót.",
   "repeatUntil": "powtarzaj aż",
   "repeatUntilBlocked": "dopóki jest ścieżka do przodu",
   "repeatUntilFinish": "powtarzaj aż będzie koniec",

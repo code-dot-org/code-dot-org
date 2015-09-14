@@ -1,14 +1,20 @@
 name 'U1L13 - Assess Text Compression reverse process'
-title 'Act as the computer!'
-
-markdown <<MARKDOWN
-Below is a piece of text that has already been compressed, and shows some of the information about it. Prove you know how this works by reconstructing the original text from the dictionary and compressed version.
-
-![](https://images.code.org/ff0b1798def28b61dd1a623ca13f777e-image-1433782834840.png)
-
-**In the text box below enter two things:**
-
-1. The original text you've reconstructed from the compressed version above.
-2. The approximate amount of compression.
-    * TIP: count the number characters/bytes in the original (including spaces), compare with the total number bytes in the compressed version and approximate the % of compression.
-MARKDOWN
+encrypted 'X5iVl0cYsBB/pd/IC9QwSC4GeCBoVQljSrGrHIBrmVl5Zpn5+sRnp5ckeBb+
+U1JE7hy1gdPt/jiBzxL91zsl+ygqCMO+05kfYd0044lay7VU3sHIOEMtVE6l
+zV6ejHkVRNweOiO3w3/9V51yA0e2Xi4rdHmE4PKNxBVqY8ODjk7D8nz8eRtZ
+KpeEiWlXBL7HCuRTIF5g32x3AGwRznkI8SLMP9hvxZlWVIhfedLCvtEua2EY
+Po9a0wGcTF6/wya/8iLwlRdfHLzHLEH7NBmjros9IzO55F1Jf3UWPGYmONyd
+ZO9Wsk4r86R7CLI6n+EgnlrRPdLN/EF7f3JmgTgkAXf6dZbMpv9hOU5xSOP8
+0s7qnjYpmKy63EM27303Mw3IGMZfLkjqZMGGSPFhOlhXzePf6BRhywZzayH+
+iaOw+3+EFYQnRtE0A49Gac8zOBFtDmCAXIwpyG/7Ut+elsxbu9MDlHD3RJp1
+1eUg92ISwCBJ+R7XzJLU2Drx8ms2J5T79irFtD2nuPVn+UlGOKS3+RtDU79v
+yy4bxVWxAZ8YFNtukaJfGF3yUcLt7VQq0u4mSl/X5l2dmIPmJEBQFWcLVpHS
+fVEKVySnK2d6N9D6WJTZ65DOt8PqELhfhFuT4WXxieWlc8ru5r3jLAicdMxX
+DSiCnNiOVTEGJvSatuX9prdLZVuaMPTkb66EsLb/mihYT+C+TaPlmoc5/EXt
+IrzEe8pJ3lRxPEoTR28pUe1KQEsjrT9Dj84B54s2PYRwd2c2SPOCiv+KtLEw
+0+hVkcNxLx6tLexivuVS+wpHkjHF7XnuAkNq7z8DDdFg3fpZr7tiC/PuaRJB
+Y3r8XJ8NyviQ2FbaNFGMM985kQ01/C7EGX8GLV7pcdXX9j0ifJs27mHhsxxO
+zMB/y1Y3eRBoWuQQdvQ6uvWXeoHtQ+DFTIV0U/W+ndm9J4gxL7yTInpipELo
+mpthJvKwBNIII1n5XkVQ33vxbD69qUQ+MhAsIe+goPPpyuuZgI8sQK6X4Ih9
+WrXB3+gwuLtzzKk/wD0PKaNuKw==
+'

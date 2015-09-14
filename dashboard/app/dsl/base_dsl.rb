@@ -7,13 +7,24 @@ class BaseDSL
     @name = text
   end
 
+  def encrypted(text)
+    @hash['encrypted'] = '1'
+    begin
+      instance_eval(Encryption::decrypt_object(text))
+    rescue OpenSSL::Cipher::CipherError
+      puts "warning: level #{@name} is encrypted, skipping"
+      return
+    end
+  end
+
   # returns 'xyz' from 'XyzDSL' subclasses
   def prefix()
     self.class.to_s.tap{|s|s.slice!('DSL')}.underscore
   end
 
   def self.parse_file(filename, name=nil)
-    parse(File.read(filename), filename, name)
+    text = File.read(filename)
+    parse(text, filename, name)
   end
 
   def self.parse(str, filename, name=nil)
@@ -41,7 +52,7 @@ class BaseDSL
 
   def self.boolean(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_boolean(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Boolean.new.type_cast_from_database(val)
     end
   end
 
@@ -53,7 +64,7 @@ class BaseDSL
 
   def self.integer(name)
     define_method(name) do |val|
-      instance_variable_set "@#{name}", ActiveRecord::ConnectionAdapters::Column::value_to_integer(val)
+      instance_variable_set "@#{name}", ActiveRecord::Type::Integer.new.type_cast_from_database(val)
     end
   end
 end

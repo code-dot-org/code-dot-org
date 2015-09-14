@@ -3,7 +3,7 @@ title: Privacy Policy
 ---
 
 # Privacy Policy
-Effective Date: December 5, 2014 
+Date of Last Revision: August 3, 2015 
 
 ## About Code.org
 Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
@@ -48,6 +48,9 @@ Email Address | Optional if account created by teacher or parent</br><br>Mandato
 Gender | Optional | This information is only used in aggregate, to measure the total % of students that are male or female, to track our progress towards reducing the gender gap in computer science.
 Age (*Not* birthdate) | Mandatory | To understand the developmental stage of students to offer an age-appropriate experience for each student. We use this field to ensure we don’t store email information for students with age < 13. We collect ages (eg 16), as opposed to birthdates (eg Feb 13, 1998)
 Any phone number | Optional | Users aged 13 or older can choose to share their app, art, or other code creations to a phone. To do this, they are asked to provide a phone number (their own or someone else’s). Code.org uses a 3rd party service ([Twilio](https://www.twilio.com/)) to send a pre-written text message to this number.  Code.org does not store any record of the number, however the phone number and message will be stored by Twilio and may also be stored by the phone service provider.
+Custom photos, sounds, and/or videos | Optional | Users aged 13 or older can choose to upload custom photos, sounds, and videos to the Code Studio platform to use within applications that they create.  These files are not used by Code.org for any purpose other than within the applications created by such users.
+Messages sent within the “Internet Simulator” | Optional | The [“Internet Simulator”](/internetsimulator) is a tool developed by Code.org for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Contents of messages sent by students using the tool can be accessed by the recipient, and are not accessed or used by Code.org for any purpose other than in this educational tool.
+Written comments in response to curricular/educational prompts within the Code Studio platform | Optional | Within some of our courses, students in a classroom are prompted to answer a question. Their answers are shared with any teacher with whom the student is affiliated on Code Studio, and are not used by Code.org for any other purpose.
 
 <br>
  
@@ -106,17 +109,27 @@ Code.org does not allow advertising on our Website, and we do not have the abili
 
 Certain capabilities linked from the Code.org Website may be implemented by third parties who collect data. For example, donations to Code.org are processed via a third party who collects and may store the payment instrument. Support messages or posts to our public forum for teachers are processed by a third party site which may allow users to create profiles, post messages, and upload photos. Other third party websites, such as the Code.org [Facebook page](https://www.facebook.com/Code.org) and [Twitter page](https://twitter.com/codeorg), may be co-branded with our name or logo. Use of these third-party services are completely optional to Users, typically meant only for adults, and governed by the privacy policy of these third parties.  We encourage you to review the privacy policy at the third parties for details about how they may collect, store and use your Personal Information.
 
+## Uploading custom content
+Student and teacher profiles can NOT be customized with a photo.
+
+As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
+
+## Message sending between users
+Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool. 
+
+In some courses, students are asked to provide written responses or reflections to prompts within the Code Studio platform. These written responses are accessible by any teacher that the student is currently affiliated with on Code Studio.
+
+In addition, Users may send messages to Code.org for customer support requests.
+
+Other than the above, the Website supports no other form of messaging among Users.
 
 ## Information we do NOT collect
-The Code.org Website does not offer private messaging among students, or between students and teachers. The only messaging that Users may engage in on the Website involves customer support requests.
-
-The Code Studio platform does not provide Users a mechanism to upload photos. In particular, student and teacher profiles can NOT be customized with a photo.
 
 Code.org does not directly collect or store payment instruments. Donations to Code.org or purchases of t-shirts from the Code.org store are processed via third parties, and although Code.org receives a receipt for donations (for tax purposes), we never receive the payment instrument (such as credit card or wallet information). 
 
 ## Children under the age 13
 
-The Code Studio learning platform is designed to be used by Users of all ages, including children under the age of 13 with the involvement of their school, teacher, parent or legal guardian. Certain features are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users. 
+The Code Studio learning platform is designed to be used by Users of all ages, including children under the age of 13 with the involvement of their school, teacher, parent or legal guardian. Certain features, especially features that involve uploading custom media files or sending messages, are disabled or inaccessible to accounts created by children under the age of 13, in order to provide greater protection to those Users. 
 
 When children under the age of 13 create accounts on Code Studio, Code.org does not store the email address provided by those Users in a retrievable format.  Instead, we immediately create and store only a hashed version of the email address (which cannot be converted back into the original address), and use it only for the purposes of login and password recovery.
 
@@ -169,11 +182,11 @@ In certain occasions, Code.org may work with third parties (such as universities
 
 ### We will share data when required by law
 
-Code.org may also disclose User Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. In some cases, we may make such disclosures without first providing notice to Users.
+Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. In some cases, we may make such disclosures without first providing notice to Users.
 
 ### We may share data when necessary or appropriate to protect Code.org or others
 
-Code.org may disclose Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
+Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
 ### We may share data in the context of a change of business, including a merger or acquisition
 

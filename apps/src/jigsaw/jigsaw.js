@@ -86,29 +86,24 @@ var loadLevel = function() {
 };
 
 var drawMap = function() {
-  var i, x, y, k, tile;
-
   // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   visualizationResizeBar.style.display = 'none';
 
-  // account for toolbox if there
-  var toolboxWidth = -Blockly.mainBlockSpace.getMetrics().viewLeft;
-
   if (level.ghost) {
-    var svg = document.querySelectorAll(".blocklySvg")[0];
-    var image = Blockly.createSvgElement('rect', {
+    var blockCanvas = Blockly.mainBlockSpace.getCanvas();
+    Blockly.createSvgElement('rect', {
       fill: "url(#pat_" + level.id + "A)",
       "fill-opacity": "0.2",
       width: level.image.width,
       height: level.image.height,
-      transform: "translate(" + (toolboxWidth + level.ghost.x) + ", " +
+      transform: "translate(" + level.ghost.x + ", " +
         level.ghost.y + ")"
+    }, blockCanvas, {
+      beforeExisting: true
     });
-    // we want it to be first, so it's behind everything
-    svg.insertBefore(image, svg.childNodes[0]);
   }
 };
 

@@ -4,9 +4,9 @@ title: Hour of Code イベントの手引き layout: wide nav: resources_nav
 
 * * *
 
-# Hour of Code イベント案内
+# Hour of Code イベントの案内
 
-コンピューターサイエンス教育週間（12月8日-14日）にHour of Codeのイベントを主催してください。コンピューターサイエンスを盛り上げ、より多くの生徒に取り組んでもらいましょう。Hour of Codeのイベントは誰でも、どこでも実施することができます。
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) イベントの準備
 
@@ -23,7 +23,6 @@ title: Hour of Code イベントの手引き layout: wide nav: resources_nav
   * その他の案: 
       * コンピューターサイエンスに関わる内容でディスカッションをしてもらうべく地域のリーダーを招待する
       * 地域の政治家を招待して、生徒が先生役となり、その政治家にコーディングを教えてみる
-      * Hour of Code アンバサダーのQ&Aのビデオを見る ビデオは全て録画され、Code.orgのYouTubeのページにアップされます。 今年は、ビル ・ ゲイツ、シェリル ・ サンドバーグ、アシュトン ・ カッチャーが参加しています！
       * 生徒のグループに、オフラインアクティビティのデモを行ってもらいます
       * 校長や先生を対象に、コードのしかたを生徒のグループに教えさせます。
       * 既にコンピューターサイエンスを教えているのであれば、生徒にプロジェクトのデモをしてもらいます。
@@ -37,7 +36,7 @@ title: Hour of Code イベントの手引き layout: wide nav: resources_nav
 
 **イベント:** コンピュータサイエンス教育週間開始の学校集会
 
-**日程:** 12月8日 (コンピューターサイエンス教育週間の開始日)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **時間:** 授業時間中、午前半ばが望ましいでしょう。所要時間約1時間です。
 
@@ -47,72 +46,11 @@ title: Hour of Code イベントの手引き layout: wide nav: resources_nav
 
 ## 式次第
 
-<table>
-  <tr>
-    <th style="width:200px">
-      時刻
-    </th>
-    
-    <th style="width:800px">
-      内容
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      午前10:00-10:05
-    </td>
-    
-    <td>
-      <a href="http://hourofcode.com/us/resources#videos">素晴らしいビデオ</a>で開幕します
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    校長によるコンピューターサイエンス重要性の紹介。<a href="/resources/stats">統計情報や説明用画像</a>を利用してください。.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    <a href="http://hourofcode.com/us/resources#videos">素晴らしいビデオ</a>で開幕します
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Hour of Codeのデモを生徒にしてもらいます。校長先生、政治家、ほかの生徒へ教えてもらいます。
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    このイベントを主催した先生によるまとめの言葉
-  </td>
-</table>
+| 時刻               | 内容                                                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
+| 10:05 - 10:15 am | 校長によるコンピューターサイエンス重要性の紹介。[統計情報や説明用画像](/resources/stats)を利用してください。                                                         |
+| 10:15 - 10:30 am | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                                                  |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
+| 10:40 - 11:00 am | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                     |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |

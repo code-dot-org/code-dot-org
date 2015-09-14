@@ -34,6 +34,6 @@ skin 'studio'
 level 'blockly:StudioEC:ec_sandbox'
 
 stage 'Play Lab 2015'
-skin 'infinity'
+skin 'hoc2015'
 level 'blockly:StudioEC:hoc2015_1'
 level 'blockly:StudioEC:hoc2015_2'

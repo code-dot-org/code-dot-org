@@ -292,6 +292,19 @@ en:
           "Unit 1: Sending Bits": crwdns35330:0crwdne35330:0
           "Unit 2: Routing and DNS": crwdns35331:0crwdne35331:0
           Internet Simulator Templates: crwdns35332:0crwdne35332:0
+          Overview and Setup Instructions: crwdns43491:0crwdne43491:0
+          "Peer to Peer: Sending Bits on a Shared Wire": crwdns43492:0crwdne43492:0
+          "Peer to Peer: Sending Numbers": crwdns43493:0crwdne43493:0
+          "Peer to Peer: Sending Ascii": crwdns43494:0crwdne43494:0
+          Broadcasting messages: crwdns43495:0crwdne43495:0
+          Routers and addresses: crwdns43496:0crwdne43496:0
+          Packets and Reliability: crwdns43497:0crwdne43497:0
+          Manual DNS: crwdns43498:0crwdne43498:0
+          Automatic DNS node: crwdns43499:0crwdne43499:0
+          Internet Simulator Freeplay: crwdns43500:0crwdne43500:0
+          Peer to Peer - Sending Bits on a Shared Wire: crwdns43501:0crwdne43501:0
+          Peer to Peer - Sending Numbers: crwdns43502:0crwdne43502:0
+          Peer to Peer - Sending Ascii: crwdns43503:0crwdne43503:0
         pixelation:
           title: crwdns34820:0crwdne34820:0
           description: crwdns34821:0crwdne34821:0
@@ -444,6 +457,11 @@ en:
           Encoding Color Images: crwdns36525:0crwdne36525:0
           Lossy Compression and File Formats: crwdns41851:0crwdne41851:0
           "Practice PT: Encode a Complex Thing": crwdns42115:0crwdne42115:0
+          Bytes and File Sizes: crwdns43515:0crwdne43515:0
+          Personal Innovations: crwdns43516:0crwdne43516:0
+          Sending Complex Messages: crwdns43517:0crwdne43517:0
+          Sending Binary Messages with the Internet Simulator: crwdns43518:0crwdne43518:0
+          Encode a Complex Thing: crwdns43519:0crwdne43519:0
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
@@ -613,6 +631,10 @@ en:
           "Scene Design Part 1: Plan": crwdns39076:0crwdne39076:0
           "Scene Design Part 2: Code": crwdns39077:0crwdne39077:0
           "Scene Design Part 3: Reflect": crwdns39078:0crwdne39078:0
+          Natural Language Processing: crwdns43504:0crwdne43504:0
+          Chained and Nested Conditionals: crwdns43505:0crwdne43505:0
+          Intelligent Personal Assistant Challenge: crwdns43506:0crwdne43506:0
+          Digital Assistant Challenge: crwdns43520:0crwdne43520:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -796,6 +818,13 @@ en:
           Security and Hacking in the Real World: crwdns41623:0crwdne41623:0
           Packets and Making a Reliable Internet: crwdns41852:0crwdne41852:0
           Routers and Redundancy: crwdns42116:0crwdne42116:0
+          The Internet is for Everyone: crwdns45316:0crwdne45316:0
+          How Routers Learn: crwdns45317:0crwdne45317:0
+          HTTP and Abstraction on the Internet: crwdns45318:0crwdne45318:0
+          Global Impacts of the Internet: crwdns45319:0crwdne45319:0
+          The Need for Encryption: crwdns45320:0crwdne45320:0
+          Keys and Passwords: crwdns45321:0crwdne45321:0
+          Public Key Encryption: crwdns45322:0crwdne45322:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -1057,3 +1086,42 @@ en:
           Practice PT: crwdns43446:0crwdne43446:0
           Ramping Up: crwdns43447:0crwdne43447:0
           Wrap Up and Next Steps: crwdns43448:0crwdne43448:0
+        odometer:
+          title: crwdns43521:0crwdne43521:0
+          description_short: crwdns43522:0crwdne43522:0
+          description: crwdns43523:0crwdne43523:0
+          Odometer Widget: crwdns43524:0crwdne43524:0
+        asUnplugged:
+          title: crwdns45323:0crwdne45323:0
+          description_short: crwdns45324:0crwdne45324:0
+          description: crwdns45325:0crwdne45325:0
+          description_audience: crwdns45326:0crwdne45326:0
+          Happy Maps: crwdns45327:0crwdne45327:0
+          Move it, Move it: crwdns45328:0crwdne45328:0
+          "Real-life Algorithms: Plant a Seed": crwdns45329:0crwdne45329:0
+          Graph Paper Programming: crwdns45330:0crwdne45330:0
+          Building a Foundation: crwdns45331:0crwdne45331:0
+          Getting Loopy: crwdns45332:0crwdne45332:0
+          The Big Event: crwdns45333:0crwdne45333:0
+          Binary Bracelets: crwdns45334:0crwdne45334:0
+          Songwriting: crwdns45335:0crwdne45335:0
+        afterschool1:
+          title: crwdns45336:0crwdne45336:0
+          description_short: crwdns45337:0crwdne45337:0
+          description: crwdns45338:0crwdne45338:0
+          description_audience: crwdns45339:0crwdne45339:0
+        algebraPD3a:
+          title: crwdns45359:0crwdne45359:0
+          description_short: crwdns45360:0crwdne45360:0
+          description: crwdns45361:0crwdne45361:0
+          Updates - Tweaks and Polish: crwdns45362:0crwdne45362:0
+          Updates - The Big Game and Projects: crwdns45363:0crwdne45363:0
+          Updates - The Design Recipe: crwdns45364:0crwdne45364:0
+          Lesson Prep: crwdns45365:0crwdne45365:0
+        sciencePD3_pre1:
+          title: crwdns45385:0crwdne45385:0
+          description_short: crwdns45386:0crwdne45386:0
+          description: crwdns45387:0crwdne45387:0
+          Welcome Back!: crwdns45388:0crwdne45388:0
+          The TLO: crwdns45389:0crwdne45389:0
+          Prep With Your Modules: crwdns45390:0crwdne45390:0

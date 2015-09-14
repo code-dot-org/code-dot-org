@@ -6,7 +6,7 @@ Kodlama saati etkinlik rehperi
 
 # Kodlama saati etkinlik rehberi
 
-Bilgisayar bilimleri eğitim haftasını (Aralik 8 -14) kutlamak ve daha fazla öğrenciye ilham vermek icin kodlama saati etkinliği düzenleyin. Herkes, her yerde kodlama saati etkinliği organize edebilir.
+Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Etkinliğiniz icin hazırlık yapın
 
@@ -23,21 +23,20 @@ Bilgisayar bilimleri eğitim haftasını (Aralik 8 -14) kutlamak ve daha fazla �
   * Dİğer etkinlik fikirleri: 
       * Yerel bir endüstri liderini bilgisayar bilimi içeren işi hakkında tartışmak için davet edin
       * Yerel bir politikacıyı davet edin ve öğrencileriniz nasıl kodlanacağını öğretsin
-      * Kodlama Saati büyükelçilerinden biri ile Q&A oturumlarından birini izleyin. Tamamı kaydedilecek ve Code.org'un YouTube sayfasında yer alacaktır. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+      * Bağlantısız etkinlik için bir grup öğrenci edinin
+      * Kodlama prensiplerini öğretmek için bir grup öğrenci yada öğretmen edinin
+      * Eğer okulnuzda halahazırda bilgisayar bilimi öğretiliyorsa, onlara demo projeler yaptırın
 
 ## 3) Nasıl geçtiğini paylaşın
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Etkinliklerinizi facebook ve twitter da paylaşın 
+  * **#HourofCode** haştagini kullanın
 
 ## Örnek Etkinlik Planı
 
 **Etkinlik:** Okul çapında Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
 
-**Tarih:** 8 Aralık (Bilgisayar Bilimi Eğitim Haftası başlangıcı)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Zaman:** Ders saatleri boyunca. Sabahın erken saatleri tercih sebebidir. Yaklaşık 1 saat.
 
@@ -47,72 +46,11 @@ Bilgisayar bilimleri eğitim haftasını (Aralik 8 -14) kutlamak ve daha fazla �
 
 ## Run of Show
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Saat
-    </th>
-    
-    <th style="width:800px">
-      Etkinlik
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Teacher who help bring the school-wide event gives closing remarks.
-  </td>
-</table>
+| Saat             | Etkinlik                                                                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](/resources/stats)         |
+| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives. |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.              |
+| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                   |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                     |

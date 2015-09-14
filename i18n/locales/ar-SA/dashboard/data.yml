@@ -31,10 +31,10 @@ ar:
           desc: تحرير التعليمات البرمجية (بيتا)
           MazeEC: المرحلة 1
         2014 Levels:
-          desc: ترتد (بيتا)
+          desc: لعبة الارتداد (بيتا)
           Bounce: المرحلة 1
         Builder Levels:
-          desc: المستخدم انشأ اللغز (بيتا)
+          desc: الألغاز التي أنشأها المستخدم (بيتا)
           Custom: المرحلة 1
         Flappy Levels:
           desc: الطائر المرفرف
@@ -52,11 +52,11 @@ ar:
           ArtistEC: المرحلة 3
           StudioEC: المرحلة 4
         events:
-          desc: ترتد (بيتا)
+          desc: لعبة الارتداد (بيتا)
           Bounce: المرحلة 1
           Studio: المرحلة 2
         builder:
-          desc: المستخدم انشأ اللغز (بيتا)
+          desc: الألغاز التي أنشأها المستخدم (بيتا)
           Custom: المرحلة 1
         flappy:
           desc: الطائر المرفرف
@@ -68,7 +68,7 @@ ar:
           desc: المتاهة (بيتا)
           MazeStep: خطوة المرحلة
         wordsearch:
-          desc: هجاء نحلة (بيتا)
+          desc: 'مسابقة الهجاء (بيتا - تجريبي)'
           WordSearch: المرحلة 1
     game:
       name:
@@ -98,13 +98,13 @@ ar:
         Flappy: الطائر المرفرف
         Jigsaw: بانوراما
         MazeStep: وضع خطوة المتاهة
-        Wordsearch: البحث
-        Webapp: App Lab
+        Wordsearch: البحث عن كلمة
+        Webapp: مختبر التطبيق
         ArtistEC: الاعب
         TextMatch: تطابق النص
         StudioEC: مختبر اللعب
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: مختبر التطبيق
+        NetSim: محاكاة الإنترنت
     trophy:
       name:
         Bronze: برونزية
@@ -123,7 +123,7 @@ ar:
         parameters: الدوال والمعاملات
     level:
       instructions:
-        maze_2_2: 'هل يمكنك مساعدتي في القبض على الخنزير المشاغب؟ ركّب زوجين من المقطع البرمجي  "تقدّم للأمام" معا واضغط على "تشغيل" لمساعدتي على الوصول هناك. '
+        maze_2_2: 'هل يمكنك مساعدتي في القبض على الخنزير المشاغب؟ ركّب زوجين من المربعات البرمجية "تقدّم للأمام" معا واضغط على "تشغيل" لمساعدتي على الوصول هناك. '
         maze_2_1: هذا المخلوق الاخضر يزعج ريشي. ساعدني في العثور عليه!
         maze_2_2_5: تتبع المسار و قودني إلى المخلوق الاخضر المضحك. تجنب مادة تي أن تي، والا سيطير الريش!
         maze_2_3: ارشدني الى الشر الاخضر (تجنب من مادة تي ان تي)
@@ -131,7 +131,7 @@ ar:
         maze_2_5: هناك طريقة تمكنني بها من الوصول الى المخلوق الاخضر باستخدام اثنين من القطع فقط، فهل يمكنك معرفتها؟
         maze_2_6: حاول توصيلي الى المتطفل الاخضر باستخدام ثلاث قطع.
         maze_2_7: 'ساعدني في أبعاد هذا المخلوق الاخضر باستخدام أقل عدد من القطع. حاول استخدام اكثر من قطعة "اكرر مرات" .'
-        maze_2_8: 'عندما يكون المقطع البرمجي رمادي اللّون، هذا يعني أنه لا يمكنك حذفه. حلّ هذا اللغز باستخدام كتلة "كرر" للتكرار 3 مرات. حاول وضع هذه المقاطع الثلاث داخل المقطع البرمجي الرمادي "كرّر" : تقدّم للأمام، تقدّم للأمام، إتّجه.'
+        maze_2_8: 'عندما يكون المربع البرمجي رمادي اللّون، هذا يعني أنه لا يمكنك حذفه. حلّ هذا اللغز باستخدام المربع البرمجي "تكرار" للتكرار 3 مرات. حاول وضع هذه المربعات البرمجية الثلاث داخل المربع البرمجي الرمادي "تكرار": تحرين، تحريك، توجه.'
         maze_2_9: 'حسناً، جرب القطعة الجديدة "أكرر حتى"- فإنه سيتم تكرارها حتى تصل الى المخلوق الاخضر.'
         maze_2_10: 'حسناً، مرة واحدة أخرى للتدريب - ايمكنك حل هذا اللغز باستخدامك 4 قطع فقط؟'
         maze_2_11: عزيزي الأنسان. أنا الزومبي. أنا جائع. ... ويجب علي .... الوصول ... لزهرة عباد الشمس...... أيمكنك أن توصلني إلي هناك بإستخدامك 5 قطع فقط؟
@@ -203,7 +203,7 @@ ar:
         turtle_3_5: 'الآن أنشئ داله جديدة وهي "ارسم بيت" واستخدمه لإيواء أثنين من القطط. تلميح: أنشئ داله جديدة بإستخدامك قطعة "القيام بشيء ما"، و أكتب نصك الخاص لتسمية القطعة.'
         turtle_3_6: 'بإستخدام "ارسم مربع" كمثال، أضف مدخلاً يسمى  "طول" إلى "ارسم مثلث". ثم، أرسم مثلثات بأحجام مختلفة . (تلميح : اضغط على النجمة لتضيف المدخل الى الدالة )'
         turtle_3_7: 'اضف مدخل يسمى "طول" لـ"رسم بيت" من اجل بناء بيت كبير لايواء الفيل (بحدود اطوالها 150 بكسل)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'قم بتعديل "رسم بيت" كي ينتهي المطاف في الزاوية اليمنى السفلى بعد رسم منزل جديد. استخدم هذه الدالة المعدّلة لرسم ثلاثة منازل.'
         turtle_3_9: 'بأمكانك إعادة إنشاء الدالة "ارسم بيت" دون مساعدة؟ جرب المحاولة، ومن ثم أرسم صفً من المنازل.'
         turtle_3_10: لقد تعلمت الكثير! الآن استخدم ما تعلمت لرسم ما تشاء. حاول رسم نجمة، أو شكل حلزوني، أو ندفة ثلج فخمة.
         maze_karel_debug_seq_1: مرحبا بكم في تصحيح الأخطاء! لا يعمل الكود الخاص بي بشكل صحيح. بأمكانك تحديد أين توجد المشكلة و إصلاحها بحيث يمكنني أن أجعل حقلي مسطح و جاهزً للزراعة؟
@@ -246,7 +246,7 @@ ar:
         flappy_6: انظر إذا كنت يمكن لا يزال يسجل نقطة بعد إجراء فلابي رفرف أما كمية أصغر أو أكبر.
         flappy_7: 'بعد ذلك، حاول تغيير المشهد عن طريق إرفاق قطعة أخرى إلى قطعة "عند تشغيل".'
         flappy_8: يمكنك تعيين صور في أي وقت وليس فقط عند بدء تشغيل اللعبة. حاول إعداد مشهد عشوائي عندما تحدث أحداث أخرى، على سبيل المثال، عند تمرير عقبة.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
+        flappy_9: لخلط الأمور، عندما الارتطام بعقبة، بدلاً من إنهاء اللعبة جرب إعادة تعيين النتيجة مرة أخرى إلى 0.
         flappy_11: أنشئ لعبة Flappy الخاصة بك . يمكنك تغيير جميع المرئيات وجميع القواعد ، و حتى الجاذبية . عند الانتهاء من ذلك، انقر فوق مشاركة للسماح للأصدقاء بتجريب اللعبة الخاصة بك على هواتفهم .
         flappy_k1_1: لعبة الطائر
         flappy_k1_2: 'إرفاق كتلة إلى "عندما انقر" كتلة، ثم اضغط على "تشغيل". انقر أو اضغط على الشاشة لنقل الطائر إلى الهدف.'
@@ -259,7 +259,7 @@ ar:
         flappy_k1_7: لنرى ما اذا كان بإمكانك تسجيل نقاط متعددة لجعلها تتجاوز العقبة
         flappy_k1_8: 'بعد ذلك، حاول تغيير المشهد عن طريق إرفاق قطعة أخرى إلى قطعة "عند تشغيل".'
         flappy_k1_9: 'حاول تغيير اللاعب بإرفاق قطعة "تعيين اللاعب" إلى قطعة "عند التشغيل".'
-        jigsaw_1: انقر فوق الكتلة
+        jigsaw_1: انقر فوق مربع البرمجة
         jigsaw_2: اسحب الكتلة إلى الهدف
         jigsaw_3: ترتيب الكتل لتشكيل الصورة
         jigsaw_4: ترتيب الكتل لتشكيل الصورة
@@ -328,7 +328,7 @@ ar:
         maze_wordsearch_k_15: 'حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "فوق"'
         maze_wordsearch_k_16: 'حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "أسفل"'
         maze_wordsearch_k_20: 'هذا اختبار ! حركني طريقاً واحداً , ثم آخر لتهجئة الكلمة "قصة"'
-        applab_ec_simple: Create your app by using the blocks in the toolbox.
+        applab_ec_simple: إنشاء التطبيق الخاص بك باستخدام المربعات البرمجية في علبة الأدوات.
         turtle_ec_1_2: 'الآن، ارسم مربعا. ملاحظة: استخدم لونك المفضل بانتقاء فإنه في كتلة "penColor" الجديدة.'
         turtle_ec_1_10: 'يمكنك جعلها! الآن، رسم أي شيء تريده. بعض المرح الأفكار: الشكل عصا، ندفة الثلج، أو دوامة. كما حاول كتلة "penWidth" الجديدة. استمتع!'
         studio_ec_sandbox: 'إنشاء الخاصة بك اللعبة. عند الانتهاء من ذلك، انقر فوق "إنهاء" للسماح للأصدقاء تجربة اللعبة الخاصة بك على الهواتف الخاصة بهم.'
@@ -374,8 +374,8 @@ ar:
         C1_maze_loops: حلقات المتاهة
         C1_playlab_storytelling: 'مختبر اللعب - أنشئ قصة'
         C1_planting_seed: زراعة بذرة
-        C1_building_foundation: بناء قاعدة
-        C1_going_places_safely: الذهاب للأماكن بأمان
+        C1_building_foundation: بناء الأساس
+        C1_going_places_safely: التنقّل بأمان
         C2_maze_intro: مقدمة حول المتاهة
         C2_artist_intro: مقدمة حول الرسام
         C2_zuck_repeat_loop: حلقات المتاهة
@@ -407,15 +407,15 @@ ar:
         C3_computational_thinking: التفكير الحاسوبي
         C3_dice_race: سباق الزهر
         C3_internet: الإنترنت
-        C3_crowdsourcing: التعهيد الجماعي
+        C3_crowdsourcing: حشد المصادر
         C3_functional_suncatchers: سونكاتشيرس الوظيفية
         C3_songwriting_with_parameters: تأليف الأغاني مع المعلمات
         C4_intro: مقدمة
-        C4_loops_zombie: الجمل التكرارية
+        C4_loops_zombie: الحلقات
         C4_bee_conditional: النحل الشرطية
         C4_variables_artist: المتغيرات-الفنان
         C4_variables_playlab: 'المتغيرات - مختبر اللعب'
-        C4_for_loops: For Loops
+        C4_for_loops: للحلقات
         C4_math_artist: برمجة الفنان مع الرياضيات
         C4_function_edit: تغيير الدوال
         C4_function_create: إضافة الدوال
@@ -424,60 +424,60 @@ ar:
         C4_unplugged_algorithms: خوارزميات مع Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: المتغيرات في مغلفات
-        C4_unplugged_forloops: For Loops
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_forloops: للحلقات
+        C4_unplugged_parameters: تأليف الأغاني مع المعلمات
         C4_unplugged_binary: ثنائي
-        frozen_intro: تفديم ساعة البرمجة
+        frozen_intro: تقديم ساعة من البرمجة
         frozen_loops: مقدمة للحلقات
         frozen_functions: تقديم للدوال
-        playlab_intro: مقدمة لمختبر Play اللعب
+        playlab_intro: مقدمة لمختبر اللعب
         playlab_events: أحداث مختبر اللعب
-        playlab_repeat_forever: تشغيل مختبر تكرار
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_pixelation_color_1: 'Color pixelation widget - Part 1'
-        csp_pixelation_color_2: 'Color pixelation widget - Part 2'
-        csp_pixelation_color_3: 'Color pixelation widget - Part 3'
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
-        csp_textcompression: Text compression widget
-        csp_internetsimulator_1: 'Internet Simulator - Part 1'
-        csp_internetsimulator_2: 'Internet Simulator - Part 2'
-        csp_internetsimulator_3: 'Internet Simulator - Part 3'
-        alg_1_intro: 'CS in Algebra - Introduction'
-        alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
-        alg_3_pemdas: 'CS in Algebra - Order of Operations'
-        alg_4_data_types: 'CS in Algebra - Data Types'
-        alg_5_contracts: 'CS in Algebra - Contracts'
-        alg_6_variables: 'CS in Algebra - Variables'
-        alg_7_function: 'CS in Algebra - Functions'
-        alg_8_design_recipe: 'CS in Algebra - Design Recipe'
-        alg_9_booleans: 'CS in Algebra - Booleans'
-        alg_10_conditionals: 'CS in Algebra - Conditionals'
-        alg_11_coordinate_plane: 'CS in Algebra - Coordinate Plane'
-        alg_12_biggame_variables: 'CS in Algebra - Big Game Variables'
-        alg_13_biggame_animation: 'CS in Algebra - Big Game Animation'
-        alg_14_biggame_booleans: 'CS in Algebra - Big Game Booleans'
-        alg_15_biggame_update_player: 'CS in Algebra - Big Game Update Player'
-        alg_16_biggame_collision_detection: 'CS in Algebra - Big Game Collision Detection'
-        alg_17_sambat_compound_booleans: 'CS in Algebra - Compound Booleans'
+        playlab_repeat_forever: 'مختبر الألعاب - تكرار إلى الأبد'
+        tutorial_puzzle_challenge: تحدي درس البانوراما
+        infinity_playlab_intro: 'مختبر اللعب - المقدمة'
+        infinity_playlab_events: 'مختبر اللعب - الأحداث'
+        infinity_playlab_repeat_forever: 'مختبر الألعاب - تكرار إلى الأبد'
+        csp_concept_rgb: بعض المعلومات عن البكسل
+        csp_pixelation_color_1: 'برنامج بكسل الألوان - الجزء 1'
+        csp_pixelation_color_2: 'برنامج بكسل الألوان - الجزء 2'
+        csp_pixelation_color_3: 'برنامج بكسل الألوان - الجزء 3'
+        csp_pixelation_bw: برنامج بكسل الأبيض والأسود
+        csp_U1L14_tipstricks: الوحدة 1 الدرس 14 نصائح وتلاميح المعلمين
+        csp_textcompression: برنامج ضغط النص
+        csp_internetsimulator_1: 'محاكي الإنترنت - الجزء 1'
+        csp_internetsimulator_2: 'محاكي الإنترنت - الجزء 2'
+        csp_internetsimulator_3: 'محاكي الإنترنت - الجزء 3'
+        alg_1_intro: 'CS في الجبر - مقدمة'
+        alg_2_eval_block: 'CS في الجبر - مربعات البرمجة للتقييم'
+        alg_3_pemdas: 'CS في الجبر - ترتيب العمليات'
+        alg_4_data_types: 'CS في الجبر - أنواع البيانات'
+        alg_5_contracts: 'CS في الجبر - العقود'
+        alg_6_variables: 'CS في الجبر - المتغيرات'
+        alg_7_function: 'CS في الجبر - الدالات'
+        alg_8_design_recipe: 'CS في الجبر - خطط التصميم'
+        alg_9_booleans: 'CS في الجبر - Booleans'
+        alg_10_conditionals: 'CS في الجبر - عوامل شرطية'
+        alg_11_coordinate_plane: 'CS في الجبر - مستوى الاحداثيات'
+        alg_12_biggame_variables: 'CS في الجبر - متغيرات اللعبة الكبيرة'
+        alg_13_biggame_animation: 'CS في الجبر - تحريك اللعبة الكبيرة'
+        alg_14_biggame_booleans: 'CS في الجبر - Booleans اللعبة الكبيرة'
+        alg_15_biggame_update_player: 'CS في الجبر - تحديث اللاعب للعبة الكبيرة'
+        alg_16_biggame_collision_detection: 'CS في الجبر - اكتشاف الارتطام للعبة الكبيرة'
+        alg_17_sambat_compound_booleans: 'CS في الجبر - Booleans معقّد'
     callout:
       text:
         drag_blocks: 'اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر'
         run: 'انقر على "نفذ" لتجربة برنامجك'
         watch_again: انقر هنا لمشاهدة الفيديو مرة أخرى
-        gray_block_explanation: القطع باللون الرمادي لا يمكن حذفها . حل يمكنك حل اللغز بأي حال ؟
-        show_code_explanation: انقر هنا لمشاهدة التعليمات البرمجية للبرنامج التي قمت بها
+        gray_block_explanation: المربعات البرمجية باللون الرمادي لا يمكن حذفها . هل يمكنك حل اللغز بأي حال؟
+        show_code_explanation: انقر هنا لمشاهدة التعليمات البرمجية للبرنامج الذي قمت به
         instructions_repeat_explanation: الإرشادات لكل لغز تتكرر هنا
         category_explanation: لديك كل نفس الكتل ولكن لقد تم الآن ترتيبها في فئات
         set_sprite_image: 'إرفاق كتلة "تعيين الفاعل للصورة" لكتلة "عندما يبدأ قصة" لتمكين عنصر فاعل لهذه القصة'
-        studio_say_text: اكتب ما تريد الممثل الخاص بك أن أقول داخل هذه الأقوال
-        jigsaw_click: انقر فوق هذه الكتلة!
-        move_elsa_forward: 'إسحب الكتلة "تقدم إلى الأمام"  و ركّبها تحت القطعة "عند التّشغيل" لجعل إلزا تتقدم إلى الأمام'
-        turn_elsa: 'إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور.العدد الموجود في القائمة يحدد الزاوية التي ستستديرها'
+        studio_say_text: اكتب ما تريد الممثل الخاص بك أن يقول داخل هذه الأقواس
+        jigsaw_click: انقر فوق مربع البرمجة هذا!
+        move_elsa_forward: 'اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة "عند التشغيل" لجعل إلسا تتقدم إلى الأمام'
+        turn_elsa: 'إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور. العدد الموجود في القائمة يحدد الزاوية التي ستستدرها'
         replace_questions: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد'
         replace_questions_degree: 'إستخدم القائمة لتغيير العلامات "؟؟؟" بالدرجة الصحيحة للاستدارة'
         repeat_blocks: 'إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل'
@@ -487,10 +487,10 @@ ar:
         degrees_per_side: قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات.
         set_sides: 'تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.'
         set_length: 'تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        which_equation: أي معادلة تجعل كل جانب أقصر للأشكال التي لها جوانب أكثر؟
         get_nectar: 'استخدام الكتلة الجديدة "الحصول على رحيق".'
         actions_category: 'أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.'
-        draw_square_hint: 'تلميح: استخدام حلقة مربعة كنت للتو في لغز آخر.'
+        draw_square_hint: 'تلميح: استخدم الحلقة المربعة التي قمت بإنجازها في اللغز الأخير.'
         edit_function: انقر هنا لتحرير وظيفتك.
         create_function: 'انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر "إنشاء مهمة".'
         house_hint: موافق إذا كانت الصورة لا تبدو وكأنها منزل حتى الآن. سيتم إصلاحه في اللغز القادم.
@@ -503,36 +503,35 @@ ar:
         frozen_circle_function_with_parameter_circle: 'إستخدم القطعة "إنشاء دائرة" و غيّر الحجم.'
         frozen_snowflake_branch: 'إستخدم قطعة "إنشاء فرع رقاقة الثلج"'
         frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
+        playlab_drag_say: 'اسحب مربع البرمجة "قول" إلى هنا واكتب "مرحبا"'
         playlab_use_twice: استخدم هذه القطعة مرتين و تذكر أن تغير رقم الشخصية
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
-        change_here: Make your change here
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
+        playlab_move_girl: 'استخدام مربع برمجة "تحريك إلى اليمين" لنقل "فتاة كرة المضرب"'
+        playlab_play_sound: 'إضافة مربع برمجة "تشغيل صوت" هنا'
+        playlab_arrow_keys: تذكر أن تستخدم هذه لنقل الساحرة بعد النقر فوق تشغيل
+        playlab_add_move: 'إضافة مربع برمجة "تحريك" داخل مربع برمجة التكرار'
+        playlab_add_score: أضف مربعات البرمجة للنتيجة هنا
+        playlab_add_blocks: أضف مربعات البرمجة الخاصة بك هنا
+        set_variable: سحب مربع برمجة رقم إلى هنا لتعيين المتغير الخاص بك
+        place_variable: سحب المتغير الخاص بك داخل مربع الترجمة هذا
+        bee_for_loop: سحب إلى هنا أكبر رقم من الرحيق الذي تريد للنحل جمعه
+        place_counter_variable: سحب متغير العداد داخل مربع البرمجة هذا
+        function_editor_draw_square: 'هذا هو تعريف الدالة الخاصة بك. تشتغل مربعات البرمجة هذه كل مرة تستخدم فيها مربع ترجمة "ارسم مربع"'
+        change_here: قم بتغييرك هنا
+        write_draw_square_function: اسحب مربعات البرمجة التي ترسم مربع من علبة الأدوات إلى هنا
+        write_draw_triangle_function: اسحب مربعات البرمجة التي ترسم مثلث من علبة الأدوات إلى هنا
+        edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك
+        add_and_drag_parameter: اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن ثم اسحبه إلى تعريف الدالة الخاصة بك
+        fill_in_actor: إملأ ؟؟؟ بالأرقام التي تتوافق مع كل ممثل (1 و 2 و 3)
+        repeat: ضع مربعات برمجة داخل الحلقة لتكرار الأوامر
+        if_bee_nectar: 'استخدام مربع برمجة "إذا كان" لتقرير إذا كان على النحل الحصول على الرحيق'
+        if_else_bee: 'استخدام مربع برمجة "إذا كان وإلا" كي تحصل النحلة على الرحيق من الزهرة وتصنع العسل إن لم تكن زهرة'
+        repeat_full_circle: أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة كاملة
+        place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
+        arrows_move_actor: استخدم الأسهم لتحريك الفنان
         right_arrow_fireball: استخدم السهم الايمن لإطلاق الكرات النارية
         name_function: اكتب اسم دالتك هنا
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: إضافة مربع برمجة تنقّل هنا
+        Infinity_move_directions_callout: أي من مربعات البرمجة ستجعل بايماكس يتنقل إلى أعلى عند الضغط على السهم لأعلى؟
+        Infinity_move_directions_callout_arrow: استخدم هذه الأسهم للتوجيه
+        Infinity_move_collide_callout: تشغيل صوت عند حدوث هذا الحدث.
+        Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا

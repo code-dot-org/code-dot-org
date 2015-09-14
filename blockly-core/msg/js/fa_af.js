@@ -3,6 +3,7 @@ Blockly.Msg.ADD = "اضافه کردن";
 Blockly.Msg.ADD_COMMENT = "اضافه کردن نظر";
 Blockly.Msg.ADD_PARAMETER = "اضافه کردن پارامتر";
 Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر مقدار:";
+Blockly.Msg.CLOSE = "ببند";
 Blockly.Msg.COLLAPSE_ALL = "جمع کردن بلوک ها";
 Blockly.Msg.COLLAPSE_BLOCK = "جمع کردن بلوک";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "رنگ 1";
@@ -22,6 +23,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "قرمز";
 Blockly.Msg.COLOUR_RGB_TITLE = "رنگ آمیزی با";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "یک رنگ با ترکیب مقدار مشخص شده از قرمز، سبز،و آبی ایجاد کنید. همه مقادیر باید بین 0 و 100 باشند.";
+Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "Warning! Are you sure you want to delete %1?";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "دستور العمل طرح";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks";
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "از حلقه خارج شو";
@@ -62,6 +64,8 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مق�
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کن";
+Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "Define the function below and try again.";
+Blockly.Msg.DELETE = "پاک کردن";
 Blockly.Msg.DELETE_BLOCK = "حذف بلوک";
 Blockly.Msg.DELETE_PARAMETER = "حذف پارامتر...";
 Blockly.Msg.DELETE_PARAMETER_TITLE = "با این کار همه رخدادهای پارامتر  '%1' حذف خواهد شد. مطمئنی؟";
@@ -94,6 +98,7 @@ Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغیر";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
 Blockly.Msg.HELP = "راهنما";
 Blockly.Msg.INLINE_INPUTS = "ورودی‌های درون خطی";
+Blockly.Msg.KEEP = "Keep";
 Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "http://fa.wikipedia.org/wiki/لیست_پیوندی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "ایجاد فهرست خالی";
 Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "فهرستی با طول 0 را بر می‌گرداند، که حاوی هیچ داده ای نیست";
@@ -178,7 +183,7 @@ Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "اگر هر دو ورودی با یکد
 Blockly.Msg.LOGIC_NEGATE_HELPURL = "http://code.google.com/p/blockly/wiki/Not";
 Blockly.Msg.LOGIC_NEGATE_TITLE = "1% نه";
 Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برابر مقدار بولین not بود، مقدار بولین true را برگردان. اگر ورودی برابر مقدار بولین false بود مقدار بولین true را برگردان.";
-Blockly.Msg.LOGIC_NULL = "خالی";
+Blockly.Msg.LOGIC_NULL = "تهی";
 Blockly.Msg.LOGIC_NULL_HELPURL = "http://en.wikipedia.org/wiki/Nullable_type";
 Blockly.Msg.LOGIC_NULL_TOOLTIP = "مقدار خالی را باز میگرداند.";
 Blockly.Msg.LOGIC_OPERATION_AND = "و";
@@ -247,7 +252,7 @@ Blockly.Msg.MATH_RANDOM_INT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88
 Blockly.Msg.MATH_RANDOM_INT_TITLE = "عدد صحیح تصادفی بین %1 تا %2";
 Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "یک عدد تصادفی بین دو مقدار مشخص‌شده به صورت بسته باز می‌گرداند.";
 Blockly.Msg.MATH_ROUND_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%D9%88%DB%8C%D9%87_%28%D8%B9%D9%84%D9%88%D9%85_%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87%29";
-Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "رند";
+Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "گردکردن";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDDOWN = "قطع کردن";
 Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "تقریب به بالا";
 Blockly.Msg.MATH_ROUND_TOOLTIP = "گردکردن یک عدد به بالا یا پایین.";
@@ -307,7 +312,6 @@ Blockly.Msg.RENAME_PARAMETER = "پارامتر را تغییر نام دهید..
 Blockly.Msg.RENAME_PARAMETER_TITLE = "نام تمام پارامترهای '%1' را تغییر بده به:";
 Blockly.Msg.RENAME_VARIABLE = "تغییر نام متغیر...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "تغییر نام همهٔ متغیرهای «%1» به:";
-Blockly.Msg.SAVE_AND_CLOSE = "ذخیره و بستن";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "الحاق متن";
 Blockly.Msg.TEXT_APPEND_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Text_modification";
 Blockly.Msg.TEXT_APPEND_TO = "به";

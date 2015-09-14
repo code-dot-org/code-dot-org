@@ -1,17 +1,14 @@
 name 'a bit about pixels'
-title 'pixel video'
-description 'kevin systrom pixel video'
-css 'unplugged' 
-markdown <<MARKDOWN
-## Video: A Little Bit About Pixels
-
-<iframe width="853" height="480" src="https://www.youtube.com/embed/15aqFQQVBWU?rel=0" frameborder="0" allowfullscreen></iframe>
-
-<br>
-
-**[Can't see the video? Click here.](http://videos.code.org/2015/csp/concept_rgb.mp4)**
-
-<br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'ouU3/7GNObRVzJUB3b2bcCA7TPJLLesoHoLhFQNOhbnyj6w6VIyw6DqU117D
+esMzcwsECkR4SFzq2cnJB+WT8dsrtM8TLrX9yjkROIkAViCLzF1BP/Kn6K4r
+U5T02sbMfE2wTGSwXpL4K/imnLuUFq6HQ2EdTTgOhRPaG/mqI6ktyYB+oQlD
+X8RQSVW/SYLvAkGSUYNKJf5udlesSMeazguE06ViB7eVXyJTnhuWzIlzyhaN
+PeJ/Pg/q9O8tnBDG2voxAObEan4m+bpG1Yk5wgcXkafydKhRvb+o9zi26EF4
+QgqEgtPk2Btl7Cn1C2lM/QxxRlKGAW9cPv4gutcVAdTDzsfsPR0YM9HCjeSZ
+nbuk069KWP+lVZclYer4KlsCIaBMGo+DIPFS8s8gdLCDU7/pUnDgt99Et8bQ
+zgYmLMYBRH1NMemEilIlW9PomjR8dYuErD1nygkhHXpg3uUFKPlOoetf63i5
+Cq4YRjYHAknm/3Atr98lDxvuSUJSnM7PRFxDxty+0TKavtN9165dVYkx6KR8
+jJmQOsTTyk8GpX0RSFLrOCLhulelMyZIKj7Vq+epusx0xV1ej84JgZ+5qgnJ
+CtbqAWFAZ7dsrcF70CHvpmkLVw8VsAsT5EWjDXPFsc7eRclvt4KK2OJKuHKA
+P0xB2PIIMUm2ehKn0YJRhgY=
+'

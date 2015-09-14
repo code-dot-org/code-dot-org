@@ -18,4 +18,4 @@ Naslov: Čas kodiranja upute za četvrti izgled: široki nav: resources_nav
 
   5. **Ugostite lokalni Čas kodiranja.** Pgledajte naš [ vodič za organizovanje događaja](<%= hoc_uri('/resources/how-to-events') %>) kao primjer organizacije programa, promocije u medijima i ostale podrške.
 
-  6. **Više [ nagrada](<%= hoc_uri('/prizes') %>) za SVAKOG organizatora.** Svaki učitelj koji sudjeluje će dobiti darove zahvale. 100 učionica će osvojiti razgovor o tehnologiji sa posebnim gostima. Sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i drugi). U svakoj saveznoj državi, jedan će razred osvojiti tehnologiju u vrijednosti 10 hiljada dolara za svoju školu!
+  6. **Više [ nagrada](<%= hoc_uri('/prizes') %>) za SVAKOG organizatora.** Svaki učitelj koji sudjeluje će dobiti darove zahvale. U svakoj saveznoj državi, jedan će razred osvojiti tehnologiju u vrijednosti 10 hiljada dolara za svoju školu!

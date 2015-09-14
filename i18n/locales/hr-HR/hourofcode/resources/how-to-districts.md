@@ -18,4 +18,4 @@ Naslov: Sat Kodiranja upute za četvrti izgled: široki nav: resources_nav
 
   5. **Ugostite lokalni Sat Kodiranja.** Vidjeti naše [ objašnjenje o vođenju događaja](<%= hoc_uri('/resources/how-to-events') %>) za primjer vođenja događaja ,obavještenje medija i ostalu podršku.
 
-  6. **Više [ nagrada](<%= hoc_uri('/prizes') %>) za SVAKOG organizatora.** Svaka učitelj koji sudjeluje će primiti darove zahvale. 100 učionica će osvojiti razgovore o tehnologiji sa posebnim gostima. Sudionici su Bill Gates, Sheryl Sandberg, Ashton Kutcher i više). U svakoj saveznoj državi, jedan će razred osvojiti tehnologiju u vrijednosti 10 tisuća dolara za svoju školu!
+  6. **Više [ nagrada](<%= hoc_uri('/prizes') %>) za SVAKOG organizatora.** Svaka učitelj koji sudjeluje će primiti darove zahvale. U svakoj saveznoj državi, jedan će razred osvojiti tehnologiju u vrijednosti 10 tisuća dolara za svoju školu!

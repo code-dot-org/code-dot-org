@@ -64,7 +64,8 @@ function loadInfinity(skin, assetUrl) {
   skin.fadeExplosion = true;
   skin.timePerExplosionFrame = 100;
 
-  skin.projectileSpriteWidth = 70;
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
   skin.projectileSpriteHeight = 70;
 
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
@@ -181,6 +182,159 @@ function loadInfinity(skin, assetUrl) {
     [msg.itemCherry(), '"item_cherry"'],
     [msg.itemIce(), '"item_ice"'],
     [msg.itemDuck(), '"item_duck"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
+}
+
+function loadHoc2015(skin, assetUrl) {
+  skin.preloadAssets = true;
+
+  skin.defaultBackground = 'background3';
+  skin.projectileFrames = 10;
+  skin.itemFrames = 10;
+
+  // NOTE: all class names should be unique.  eventhandler naming won't work
+  // if we name a projectile class 'left' for example.
+  skin.ProjectileClassNames = [
+  ];
+
+  skin.specialProjectileFrames = {
+  };
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_walk_item1',
+    'item_walk_item2',
+    'item_walk_item3',
+    'item_walk_item4'
+  ];
+
+  skin.specialItemFrames = {
+    'item_walk_item1': 12,
+    'item_walk_item2': 12,
+    'item_walk_item3': 15,
+    'item_walk_item4': 12
+  };
+
+  skin.explosion = skin.assetUrl('vanish.png');
+  skin.explosionFrames = 17;
+
+  // Dimensions of a rectangle in collidable center from which projectiles begin.
+  skin.projectileSpriteWidth  = 70;
+  skin.projectileSpriteHeight = 70;
+
+  // Dimensions of a rectangle in collidable center in which item collisions occur.
+  skin.itemCollisionRectWidth  = 50;
+  skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
+
+  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
+  // For isometric-style rendering, this would normally be the feet.
+  skin.wallCollisionRectOffsetX = 0;
+  skin.wallCollisionRectOffsetY = 24;
+  skin.wallCollisionRectWidth  = 30;
+  skin.wallCollisionRectHeight = 20;
+
+  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -30;
+  skin.gridSpriteRenderOffsetY = -40;
+
+  skin.avatarList = ['character1', 'character2'];
+  skin.avatarList.forEach(function (name) {
+    skin[name] = {
+      sprite: skin.assetUrl('avatar_' + name + '.png'),
+      walk: skin.assetUrl('walk_' + name + '.png'),
+      dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
+      frameCounts: {
+        normal: 1,
+        animation: 0,
+        turns: 8,
+        emotions: 0,
+        walk: name == 'character1' ? 1 : 8
+      },
+      timePerFrame: 100
+    };
+  });
+
+  skin.preventProjectileLoop = function (className) {
+    return className === '';
+  };
+
+  skin.preventItemLoop = function (className) {
+    return className === 'item_character1';
+  };
+
+  // TODO: Create actual item choices
+  skin.item_walk_item1 = skin.assetUrl('walk_item1.png');
+  skin.item_walk_item2 = skin.assetUrl('walk_item2.png');
+  skin.item_walk_item3 = skin.assetUrl('walk_item3.png');
+  skin.item_walk_item4 = skin.assetUrl('walk_item4.png');
+
+
+  skin.background1 = {
+    background: skin.assetUrl('background_background1.jpg'),
+    tiles: skin.assetUrl('tiles_background1.png')
+  };
+  skin.background2 = {
+    background: skin.assetUrl('background_background2.jpg'),
+    tiles: skin.assetUrl('tiles_background2.png')
+  };
+  skin.background3 = {
+    background: skin.assetUrl('background_background3.jpg'),
+    tiles: skin.assetUrl('tiles_background3.png')
+  };
+
+  skin.border = 
+    [[1, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], 
+     [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
+  skin.maze = 
+    [[1, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0,0, 0], [0, 0, 1, 0, 1, 0, 0, 0],
+     [0, 0, 1, 0,0,0,0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0, 0, 1]];
+  skin.maze2 = 
+    [[0, 0, 0, 0, 0, 0, 0, 0], 
+     [0, 1, 1, 1, 0, 1, 1, 0], 
+     [0, 1, 0, 0, 0, 0, 1, 0], 
+     [0, 1, 0, 1, 1, 0, 1, 0],
+     [0, 1, 0, 1, 1, 0, 1, 0], 
+     [0, 1, 0, 0, 0, 0, 1, 0], 
+     [0, 1, 1, 1, 0, 1, 1, 0], 
+     [0, 0, 0, 0, 0, 0, 0, 0]];
+
+  // These are used by blocks.js to customize our dropdown blocks across skins
+  skin.backgroundChoices = [
+    [msg.setBackgroundRandom(), RANDOM_VALUE],
+    [msg.setBackgroundBackground1(), '"background1"'],
+    [msg.setBackgroundBackground2(), '"background2"'],
+    [msg.setBackgroundBackground3(), '"background3"']
+    ];
+
+  skin.backgroundChoicesK1 = [
+    [skin.background1.background, '"background1"'],
+    [skin.background2.background, '"background2"'],
+    [skin.background3.background, '"background3"'],
+    [skin.randomPurpleIcon, RANDOM_VALUE],
+    ];
+
+  skin.spriteChoices = [
+    [msg.setSpriteHidden(), HIDDEN_VALUE],
+    [msg.setSpriteRandom(), RANDOM_VALUE],
+    [msg.setSpriteCharacter1(), '"character1"'],
+    [msg.setSpriteCharacter2(), '"character2"']];
+
+  skin.projectileChoices = [];
+
+  skin.itemChoices = [
+    [msg.itemItem1(), '"item_walk_item1"'],
+    [msg.itemItem2(), '"item_walk_item2"'],
+    [msg.itemItem3(), '"item_walk_item3"'],
+    [msg.itemItem4(), '"item_walk_item4"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
@@ -435,6 +589,9 @@ exports.load = function(assetUrl, id) {
   switch (skin.id) {
     case 'infinity':
       loadInfinity(skin, assetUrl);
+      break;
+    case 'hoc2015':
+      loadHoc2015(skin, assetUrl);
       break;
     case 'studio':
       loadStudio(skin, assetUrl);

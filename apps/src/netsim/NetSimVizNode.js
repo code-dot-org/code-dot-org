@@ -14,14 +14,14 @@
 'use strict';
 
 require('../utils');
-var netsimConstants = require('./netsimConstants');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var NetSimConstants = require('./NetSimConstants');
+var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
-var DnsMode = netsimConstants.DnsMode;
+var DnsMode = NetSimConstants.DnsMode;
 
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The narrowest that a text bubble is allowed to be.
@@ -45,23 +45,30 @@ var TEXT_PADDING_X = 20;
 var TEXT_PADDING_Y = 10;
 
 /**
+ * @param {boolean} useBackgroundAnimation - changes the behavior of this node
+ *        when it's in the background layer.
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizNode = module.exports = function () {
+var NetSimVizNode = module.exports = function (useBackgroundAnimation) {
   NetSimVizElement.call(this);
 
   /**
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.address_ = undefined;
 
   /**
-   * @type {DnsMode}
-   * @private
+   * @private {DnsMode}
    */
   this.dnsMode_ = undefined;
+
+  /**
+   * Whether to start or update any tweens while the node is in the background
+   * layer.
+   * @private {boolean}
+   */
+  this.useBackgroundAnimation_ = useBackgroundAnimation;
 
   /**
    * @type {boolean}
@@ -129,8 +136,12 @@ var NetSimVizNode = module.exports = function () {
       .appendTo(this.addressGroup_);
 
   // Set an initial default tween for zooming in from nothing.
-  this.snapToScale(0);
-  this.tweenToScale(0.5, 800, tweens.easeOutElastic);
+  if (this.useBackgroundAnimation_) {
+    this.snapToScale(0);
+    this.tweenToScale(0.5, 800, tweens.easeOutElastic);
+  } else {
+    this.snapToScale(0.5);
+  }
 };
 NetSimVizNode.inherits(NetSimVizElement);
 
@@ -203,7 +214,10 @@ NetSimVizNode.prototype.kill = function () {
  */
 NetSimVizNode.prototype.tick = function (clock) {
   NetSimVizNode.superPrototype.tick.call(this, clock);
-  if (!this.isForeground && this.tweens_.length === 0) {
+
+  // Trigger a new drift if we're in the background and the last one finished.
+  if (this.useBackgroundAnimation_ && !this.isForeground &&
+      this.tweens_.length === 0) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
@@ -238,8 +252,10 @@ NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   this.tweens_.length = 0;
   if (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);
-  } else {
+  } else if (this.useBackgroundAnimation_) {
     this.tweenToScale(0.5, 600, tweens.easeOutElastic);
+  } else {
+    this.snapToScale(0.5);
   }
 };
 
@@ -268,7 +284,7 @@ NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 NetSimVizNode.prototype.updateAddressDisplay = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   // If we are never assigned an address, don't try to show one.
   // In broadcast mode we will be assigned addresses but never use them, so

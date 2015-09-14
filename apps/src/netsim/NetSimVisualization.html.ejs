@@ -1,0 +1,30 @@
+<%
+/**
+ * Whether the blurred background layer should be visible.
+ * @name showBackground
+ * @type {boolean}
+ */
+%>
+<svg version="1.1" width="298" height="298" xmlns="http://www.w3.org/2000/svg">
+
+  <% if (showBackground) { %>
+    <filter id="backgroundBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+      <feComponentTransfer>
+        <feFuncA slope="0.5" type="linear"></feFuncA>
+      </feComponentTransfer>
+    </filter>
+  <% } %>
+
+  <g id="centered-group" transform="translate(150,150)">
+    <g id="background-group"
+       <% if (showBackground) { %>
+         filter="url(#backgroundBlur)"
+       <% } else { %>
+         visibility="hidden"
+       <% } %>
+        ></g>
+
+    <g id="foreground-group"></g>
+  </g>
+</svg>

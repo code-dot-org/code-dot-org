@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -22,6 +44,8 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
+    instructions
+    markdown_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -186,6 +210,13 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Returns whether this level is backed by a channel, whose id may
+  # be passed to the client, typically to save and load user progress
+  # on that level.
+  def channel_backed?
+    self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
+  end
+
   def key
     if level_num == 'custom'
       name
@@ -194,6 +225,9 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Project template levels are used to persist use progress
+  # across multiple levels, using a single level name as the
+  # storage key for that user.
   def project_template_level
     return nil if self.try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)

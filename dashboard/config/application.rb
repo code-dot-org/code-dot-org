@@ -6,7 +6,7 @@ require 'rails/all'
 require 'cdo/geocoder'
 require 'cdo/properties'
 require 'varnish_environment'
-require 'assets_api'
+require 'files_api'
 require 'channels_api'
 require 'properties_api'
 require 'tables_api'
@@ -24,8 +24,8 @@ module Dashboard
   class Application < Rails::Application
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, AssetsApi
-    config.middleware.insert_after AssetsApi, ChannelsApi
+    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
@@ -80,15 +80,18 @@ module Dashboard
     cache_bust_path = Rails.root.join('.cache_bust')
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
+    config.assets.paths << Rails.root.join('./public/shared/js')
     config.assets.paths << Rails.root.join('../shared/css')
     config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
+      angularProjects.js
+      shared.js
+      shared.min.js
       editor/blockly_editor.css
       editor/blockly_editor.js
       editor/embedded_markdown_editor.js
       levels/*
-      react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
@@ -96,5 +99,8 @@ module Dashboard
     config.react.variant = :development
     config.react.addons = true
     config.autoload_paths << Rails.root.join('lib')
+
+    # use https://(*-)studio.code.org urls in mails
+    config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
   end
 end

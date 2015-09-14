@@ -8,7 +8,11 @@ MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.ne
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 
-# deal with some ordering issues -- sometimes environment is loaded before test_helper and sometimes after
+# deal with some ordering issues -- sometimes environment is loaded
+# before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
+# but running unit tests in the test env for developers only sets
+# RAILS ENV. We fix it above but we need to reload some stuff...
+
 CDO.rack_env = "test" if defined? CDO
 Rails.application.reload_routes! if defined? Rails
 
@@ -16,9 +20,12 @@ require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 
+Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
+Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
+
 require 'rails/test_help'
 
-require "mocha/test_unit"
+require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false#
@@ -27,9 +34,9 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
-
     # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
+    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
 
     set_env :test
 
@@ -37,8 +44,6 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
-
-    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -64,7 +69,7 @@ class ActiveSupport::TestCase
   # some s3 helpers/mocks
   def expect_s3_upload
     CDO.disable_s3_image_uploads = false
-    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+    AWS::S3.expects(:upload_to_bucket).returns(true)
   end
 
   def expect_s3_upload_failure
@@ -156,16 +161,18 @@ class ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
     request.env['cdo.locale'] = 'en-US'
   end
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    strict = true
-    xml = (@response.content_type =~ /xml$/)
-
-    @html_document ||= HTML::Document.new(@response.body, strict, xml)
+    @html_document ||= if @response.content_type === Mime::XML
+                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
+                       else
+                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
+                       end
   end
 
   def assert_redirected_to_sign_in
@@ -262,5 +269,22 @@ class ActionController::TestCase
       assert_select 'meta[content="yes"][name="apple-mobile-web-app-capable"]'
       assert_select 'meta[content="black-translucent"][name="apple-mobile-web-app-status-bar-style"]'
     end
+  end
+end
+
+class ActionDispatch::IntegrationTest
+  setup do
+    https!
+  end
+end
+
+# Evaluates the given block temporarily setting the global locale to the specified locale.
+def with_locale(locale)
+  old_locale = I18n.locale
+  begin
+    I18n.locale = locale
+    yield
+  ensure
+    I18n.locale = old_locale
   end
 end

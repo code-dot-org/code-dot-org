@@ -1,30 +1,43 @@
 name 'U1L15 Student Lesson Summary'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-markdown <<MARKDOWN
-## Unit 1: Lesson 15 - Encoding Color Images
-# Background
-
-Humans can perceive millions of different colors. If we wish to encode color images we will need a system to represent this huge variety of color. Along the way we will need to develop a new number system to enable humans to more easily read and write large amounts of binary information.
-
-# Vocabulary
-* Hexadecimal Number System: a number system consisting of 16 distinct symbols which can be placed in each place value, 0-9, and A-F.
-
-# Lesson 
-
-* Video: A Little Bit About Pixels
-* Using the hexadecimal number system
-* Creating color images with the Pixelation Tool
-* Design your personal favicon
- 
-# Resources 
-
-* Video Guide: <a href= "https://drive.google.com/open?id=1PwH2nRfWH-3CmkL2IxC0Le2DdRcDmsR8McMFe-ktol4&authuser=0" target="_blank">A Little Bit About Pixels</a>
-* Activity Guide: <a href= "https://drive.google.com/open?id=12EVGBWX7C2Ak7GT7Gbbp-WxDtHFK4hALX0PASc7prMw&authuser=0" target="_blank">Encoding Color Images</a>
-* Project Guide Guide: <a href= "https://drive.google.com/open?id=1kIiOf-cFxS4bzF4ulEDAsjLejAOvTbUKiOXhmE3cJgM&authuser=0" target="_blank">Personal Favicon</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted '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
+'

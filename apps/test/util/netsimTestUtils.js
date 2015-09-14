@@ -1,10 +1,12 @@
+/* global $ */
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 
-var _ = require('@cdo/apps/utils').getLodash();
+var utils = require('@cdo/apps/utils');
+var _ = utils.getLodash();
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var levels = require('@cdo/apps/netsim/levels');
 
 /**
@@ -17,8 +19,8 @@ var levels = require('@cdo/apps/netsim/levels');
  */
 exports.assertTableSize = function (shard, tableName, size) {
   var rowCount;
-  shard[tableName].readAll(function (err, rows) {
-    rowCount = rows.length;
+  shard[tableName].refresh(function () {
+    rowCount = shard[tableName].readAll().length;
   });
   assert(rowCount === size, "Expected table '" + tableName +
       "' to contain " + size + " rows, but it had " + rowCount +
@@ -30,29 +32,39 @@ exports.assertTableSize = function (shard, tableName, size) {
  * accessing the server API.
  * @param {NetSimTable} netsimTable
  */
-exports.overrideClientApi = function (netsimTable) {
+exports.overrideNetSimTableApi = function (netsimTable) {
   var table = fakeStorageTable();
 
   // send client api calls through our fake storage table
-  netsimTable.clientApi_ = {
+  netsimTable.api_ = {
     remoteTable: table,
-    all: function (callback) {
+    allRows: function (callback) {
       return table.readAll(callback);
     },
-    fetch: function (id, callback) {
+    allRowsFromID: function (id, callback) {
+      return table.readAllFromID(id, callback);
+    },
+    fetchRow: function (id, callback) {
       return table.read(id, callback);
     },
-    create: function (value, callback) {
-      return table.create(value, callback);
+    createRow: function (value, callback) {
+      if (Array.isArray(value)) {
+        return table.multiCreate(value, callback);
+      } else {
+        return table.create(value, callback);
+      }
     },
-    update: function (id, value, callback) {
+    updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
     },
-    delete: function (id, callback) {
-      return table.delete(id, callback);
+    deleteRows: function (ids, callback) {
+      return table.deleteMany(ids, callback);
     },
     log: function () {
       return table.log();
+    },
+    clearLog: function () {
+      table.clearLog();
     }
   };
 
@@ -84,6 +96,18 @@ var fakeStorageTable = function () {
      * @param {!number} id
      * @param {!NodeStyleCallback} callback
      */
+    readAllFromID: function (id, callback) {
+      log_ += 'readAllFromID[' + id + ']';
+
+      callback(null, tableData_.filter(function (row) {
+        return row.id >= id;
+      }));
+    },
+
+    /**
+     * @param {!number} id
+     * @param {!NodeStyleCallback} callback
+     */
     read: function (id, callback) {
       log_ += 'read[' + id + ']';
 
@@ -104,10 +128,27 @@ var fakeStorageTable = function () {
       log_ += 'create[' + JSON.stringify(value) + ']';
 
       value.id = rowIndex_;
+      value.uuid = utils.createUuid();
       rowIndex_++;
       tableData_.push(value);
 
       callback(null, value);
+    },
+
+    /**
+     * @param {!Object[]} values
+     * @param {!NodeStyleCallback} callback
+     */
+    multiCreate: function (values, callback) {
+      values.forEach(function (value) {
+        log_ += 'create[' + JSON.stringify(value) + ']';
+
+        value.id = rowIndex_;
+        rowIndex_++;
+        tableData_.push(value);
+      });
+
+      callback(null, values);
     },
 
     /**
@@ -121,6 +162,7 @@ var fakeStorageTable = function () {
       value.id = id;
       for (var i = 0; i < tableData_.length; i++) {
         if (tableData_[i].id === id) {
+          value.uuid = tableData_[i].uuid;
           tableData_[i] = value;
           callback(null, null);
           return;
@@ -131,21 +173,31 @@ var fakeStorageTable = function () {
     },
 
     /**
-     * @param {!number} id
+     * @param {!number[]} ids
      * @param {!NodeStyleCallback} callback
      */
-    delete: function (id, callback) {
-      log_ += 'delete[' + id + ']';
+    deleteMany: function (ids, callback) {
+      log_ += 'delete[' + ids.join(',') + ']';
 
-      for (var i = 0; i < tableData_.length; i++) {
-        if (tableData_[i].id === id) {
+      var matchesAnyDeleteID = function (row) {
+        return ids.some(function (id) {
+          return row.id === id;
+        });
+      };
+
+      var deleteCount = 0;
+      for (var i = tableData_.length - 1; i >= 0; i--) {
+        if (matchesAnyDeleteID(tableData_[i])) {
           tableData_.splice(i, 1);
-          callback(null, null);
-          return;
+          deleteCount++;
         }
       }
 
-      callback(new Error('Not Found'), null);
+      if (deleteCount > 0) {
+        callback(null, null);
+      } else {
+        callback(new Error('Not Found'), null);
+      }
     },
 
     /**
@@ -157,6 +209,11 @@ var fakeStorageTable = function () {
       }
 
       return log_;
+    },
+
+    /** Reset test log to empty */
+    clearLog: function () {
+      log_ = '';
     }
   };
 };
@@ -168,16 +225,32 @@ exports.fakeShard = function () {
   /* jshint unused:false */
   /** @implements {PubSubChannel} */
   var fakeChannel = {
-    subscribe: function (eventName, callback) {}
+    subscribe: function (eventName, callback) {},
+    unsubscribe: function (eventName, callback) {}
   };
   /* jshint unused:true */
 
+  // In tests we normally disable delays, coalescing and jitter so that they
+  // run fast and predictably.  See specific NetSimTable tests covering the
+  // behavior of these parameters.
+  var defaultTestTableConfig = {
+    minimumDelayBeforeRefresh: 0,
+    maximumJitterDelay: 0,
+    minimumDelayBetweenRefreshes: 0
+  };
+
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
-    wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
-    messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
-    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log')),
-    heartbeatTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'heartbeat')),
+    nodeTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'node', defaultTestTableConfig)),
+    wireTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'wire', defaultTestTableConfig)),
+    messageTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'message', defaultTestTableConfig)),
+    logTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'log',
+            $.extend({}, defaultTestTableConfig, {
+              useIncrementalRefresh: true
+            })))
   };
 };
 
@@ -188,7 +261,7 @@ exports.initializeGlobalsToDefaultValues = function () {
   NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
   // Deep clone level so that changes we make to it for testing don't bleed
   // into other tests.
-  netsimGlobals.setRootControllers({}, {
+  NetSimGlobals.setRootControllers({}, {
     level: _.clone(levels.custom, true)
   });
 };

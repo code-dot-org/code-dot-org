@@ -115,14 +115,14 @@ Blockly.Bubble.ANCHOR_RADIUS = 8;
 
 /**
  * Wrapper function called when a mouseUp occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {BindData}
  * @private
  */
 Blockly.Bubble.onMouseUpWrapper_ = null;
 
 /**
  * Wrapper function called when a mouseMove occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {BindData}
  * @private
  */
 Blockly.Bubble.onMouseMoveWrapper_ = null;
@@ -255,7 +255,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
   if (Blockly.isRightButton(e)) {
     // Right-click.
     return;
-  } else if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
+  } else if (Blockly.isTargetInput(e)) {
     // When focused on an HTML text input widget, don't trap any events.
     return;
   }
@@ -390,7 +390,7 @@ Blockly.Bubble.prototype.layoutBubble_ = function() {
   var relativeLeft = -this.width_ / 4;
   var relativeTop = -this.height_ - Blockly.BlockSvg.MIN_BLOCK_Y;
   // Prevent the bubble from being offscreen.
-  if (this.blockSpace_.scrollbar) {
+  if (this.blockSpace_.scrollbarPair) {
     // Fetch the blockSpace's metrics, if they exist.
     var metrics = this.blockSpace_.getMetrics();
     if (this.anchorX_ + relativeLeft <

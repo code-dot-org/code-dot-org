@@ -24,6 +24,7 @@ OneDay = 24 * OneHour
 
 ExcludedBrowsers = [
   'bingbot',
+  'Camino',
   'Chrome Frame',
   'Epiphany',
   'Googlebot',
@@ -55,7 +56,8 @@ HardLevelAttemptsPerHour = {
   1110 => 10,
   1430 => 10,
   1434 => 10,
-  1441 => 10
+  1441 => 10,
+  3301 => 20
 }
 
 MinimumAttemptsPerHour = 10

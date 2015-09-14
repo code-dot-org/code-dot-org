@@ -732,8 +732,11 @@
             <title name="VAL">true</title>
           </block>
         </category>
-        <category name="Cond">
-          <block type="functional_cond" inline="false"/>
+        <category name="Conditionals">
+          <block type="functional_cond_number" inline="false"/>
+          <block type="functional_cond_string" inline="false"/>
+          <block type="functional_cond_image" inline="false"/>
+          <block type="functional_cond_boolean" inline="false"/>
         </category>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
         <category name="Functions" custom="PROCEDURE"/>

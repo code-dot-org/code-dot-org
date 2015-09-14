@@ -7,9 +7,10 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
 
+var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -20,28 +21,27 @@ var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode'
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
-var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
-var DnsMode = netsimConstants.DnsMode;
-var EncodingType = netsimConstants.EncodingType;
+var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var DnsMode = NetSimConstants.DnsMode;
+var EncodingType = NetSimConstants.EncodingType;
 
 describe("NetSimVisualization", function () {
   
   var testShard, alphaNode, betaNode, deltaNode, gammaNode, router,
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
 
+  beforeEach(function () {
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
+  });
+
   /**
-   * Creates an svg placeholder so that NetSimVisualization's foreground
-   * and background searches work
+   * Creates a div placeholder for the NetSimVisualization to render
+   * its SVG element within.
    * @returns {jQuery}
    */
-  var makeSVGElement = function () {
-    return $("<svg version=\"1.1\" width=\"298\" height=\"298\" xmlns=\"http://www.w3.org/2000/svg\">" +
-        "<g id=\"centered-group\">" +
-          "<g id=\"background-group\"></g>" +
-          "<g id=\"foreground-group\"></g>" +
-        "</g>" +
-      "</svg>");
+  var makeRootDiv = function () {
+    return $("<div>");
   };
 
   /**
@@ -79,7 +79,10 @@ describe("NetSimVisualization", function () {
    */
   var makeRemoteWire = function (localVizNode, remoteVizNode, elements) {
     var newWire;
-    NetSimWire.create(testShard, localVizNode.getCorrespondingEntityID(), remoteVizNode.getCorrespondingEntityID(), function (e, w) {
+    NetSimWire.create(testShard, {
+      localNodeID: localVizNode.getCorrespondingEntityId(),
+      remoteNodeID: remoteVizNode.getCorrespondingEntityId()
+    }, function (e, w) {
       newWire = w;
     });
     assert(newWire !== undefined, "Failed to create a remote wire.");
@@ -89,16 +92,83 @@ describe("NetSimVisualization", function () {
   var getVizNodeByEntityID_ = function (_type, id) {
     return this.filter(function(element){
       return element instanceof NetSimVizNode &&
-          element.getCorrespondingEntityID &&
-          element.getCorrespondingEntityID() === id;
+          element.getCorrespondingEntityId &&
+          element.getCorrespondingEntityId() === id;
     })[0];
   };
+
+  function createNode(shard, name) {
+    var newNode;
+    NetSimLocalClientNode.create(shard, name, function (e, n) {
+      newNode = n;
+    });
+    assert(newNode !== undefined, "Failed to create a client.");
+    return newNode;
+  }
+
+  it("does not mismap elements across shard reset", function () {
+    // Fake NetSim
+    var netsim = new NetSim();
+    netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
+
+    // Connect to shard
+    testShard = fakeShard();
+    var oldNode1 = createNode(testShard, 'myNode');
+    netSimVis.setShard(testShard);
+    netSimVis.setLocalNode(oldNode1);
+
+    // Make a couple more nodes.  Now that we've called `setShard` the
+    // visualization should automatically detect these nodes and create
+    // corresponding VizElements in its elements_ collection.
+    var oldNode2 = createNode(testShard, 'node2');
+    var oldNode3 = createNode(testShard, 'node3');
+
+    // Make sure the visualization now includes all three nodes.
+    assert.equal(3, netSimVis.elements_.length);
+
+    // Introduce a new shard, with new data
+    var testShard2 = fakeShard();
+    var newNode1 = createNode(testShard2, 'newNode');
+    netSimVis.setShard(testShard2);
+    netSimVis.setLocalNode(newNode1);
+    var newNode2 = createNode(testShard2, 'newNode2');
+
+    // Verify: Nodes on new shard have same IDs, different uuids.
+    assert.equal(oldNode1.entityID, newNode1.entityID);
+    assert.notEqual(oldNode1.uuid, newNode1.uuid);
+    assert.equal(oldNode2.entityID, newNode2.entityID);
+    assert.notEqual(oldNode2.uuid, newNode2.uuid);
+
+    // We now have 4 elements:
+    // 1. oldNode2 (dying but not gone)
+    // 2. oldNode3 (dying but not gone)
+    // 3. newNode1
+    // 4. newNode2
+    // Note that oldNode1 _is_ actually gone, because it was designated as the
+    // "local" client node before, and the `setLocalNode` operation replaces
+    // the existing "local" node in the visualization.
+    assert.equal(4, netSimVis.elements_.length);
+    assert.equal(2, netSimVis.elements_.filter(function (element) {
+      return element.isDying();
+    }).length);
+
+    // Render long enough for the "dying" animations on oldNode2 and oldNode3
+    // to finish.
+    netSimVis.render({time: 1});
+    netSimVis.render({time: 1000000});
+    // Tick to clean up the now-dead nodes.
+    netSimVis.tick({time: 1});
+
+    // Only the two live nodes remain
+    assert.equal(2, netSimVis.elements_.length);
+    assert(netSimVis.elements_[0].representsEntity(newNode1));
+    assert(netSimVis.elements_[1].representsEntity(newNode2));
+  });
 
   describe("broadcast mode", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
-      netsimGlobals.getLevelConfig().broadcastMode = true;
+      NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
 
@@ -116,7 +186,7 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire, gammaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
+      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
 
       netSimVis.setShard(testShard);
       netSimVis.elements_ = elements;
@@ -170,7 +240,6 @@ describe("NetSimVisualization", function () {
   describe("router network with peripheral connection", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
       testShard = fakeShard();
 
       alphaNode = makeRemoteClient('alpha');
@@ -185,7 +254,8 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
+      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
+      netSimVis.setShard(testShard);
       netSimVis.elements_ = elements;
       netSimVis.localNode = alphaNode;
     });
@@ -254,13 +324,13 @@ describe("NetSimVisualization", function () {
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.readAll(function (_, data) {
-          netSimVis.onNodeTableChange_(data);
+        testShard.nodeTable.refresh(function () {
+          netSimVis.onNodeTableChange_();
         });
 
         // Check that newly created node has correct DNS mode.
         var gammaNode = netSimVis.getElementByEntityID(NetSimVizSimulationNode,
-            newNode.getCorrespondingEntityID());
+            newNode.getCorrespondingEntityId());
         assert.equal(DnsMode.AUTOMATIC, gammaNode.dnsMode_);
       });
 
@@ -293,8 +363,8 @@ describe("NetSimVisualization", function () {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.readAll(function (_, data) {
-          netSimVis.onWireTableChange_(data);
+        testShard.wireTable.refresh(function () {
+          netSimVis.onWireTableChange_();
         });
 
         // Check that newly created wire has the encodings we originally set.

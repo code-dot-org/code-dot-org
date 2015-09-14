@@ -2,6 +2,7 @@ bs:
   errors:
     messages:
       not_saved: 'Ispravi ove greške:'
+      too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
@@ -303,6 +304,8 @@ bs:
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Odjeljenje
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -346,6 +349,7 @@ bs:
     local_school: lokalna škola
     online: online
     see_details: Vidi detalje
+    view_course: View Course
     prize_info: 'Nagrade za sudjelovanje (samo za američke učitelje): do 1.000 dolara u učioničkim nagradama.'
     tryfirst: 'Ili, možete to prvo isprobati, a kasnije se prijaviti:'
     trynow: Probaj sad
@@ -359,8 +363,12 @@ bs:
     heading_apps: '<h2>Zabava za</h2><h1>sve</h1>'
     heading_legacy: '<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  share:
+    title: Learn on Code Studio
+    description: Anyone can learn computer science. Make games, apps and art with code.
   gender:
     male: Muško
     female: Žensko
@@ -369,13 +377,20 @@ bs:
     student: Učenik
     teacher: Učitelj
   footer:
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su pomogli napraviti ovaj tutorijal.
+    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
     art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Sva prava pridržana.'
+    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
     powered_by_aws: Potpomognuto sa Amazon Web Services
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: Copyright
+    more: Više
     feedback: Pošalji povratne informacije
     translate: Pomozi nam prevesti na vaš jezik
     support: Podrška
     support_url: http://support.code.org
+    tos_short: Terms
     tos: Uvjeti
     privacy: Pravila Privatnosti
     secure: Sigurna Verzija
@@ -393,10 +408,6 @@ bs:
     autoplay_option: Automatska reprodukcija videozapisa
     download: Preuzimanje Videa
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Sakrij ovo upozorenje
     working:
       header: Radimo na podršci za tvoj web preglednik.
       message: "Code.org koristi moderne web tehnologije. To čini ovu web stranicu bržom. Tvoj preglednik ne podržava sva potrebna svojstva i mogu se pojaviti problemi dok koristiš ovaj dio web stranice. Pomozi nam <a href='%{report_issue_url}'> sa izvještavanjem o problemima na koje si naišao</a>. Također, možeš <a href='%{supported_browsers_url}'>nadograditi svoj preglednik na podržanu verziju</a>."
@@ -503,6 +514,10 @@ bs:
     open_response_body: Thanks for your response!
   dialog:
     ok: U redu
+    startover_title: Jesi li siguran/na da želiš početi iznova?
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: Počni Ponovo
+    startover_cancel: Poništi
   time:
     hour: 1 sat
     day: dan

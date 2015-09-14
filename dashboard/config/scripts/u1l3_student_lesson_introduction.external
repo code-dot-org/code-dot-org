@@ -5,7 +5,7 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 1: Lesson 3 - Sending More Complex Messages
+## Unit 1: Lesson 3 - Sending Complex Messages
 
 # Background
 As you discussed in your previous class, information is a fairly abstract concept. To send information, we need to encode it in some way; in other words, we need to turn it into something physical that the receiver could recognize. The information you sent with your devices was binary because it could only take one of two states. We call this type of information a bit, which is short for "binary digit." This means that in the last class, you were using your devices to encode bits. That was pretty convenient, since the messages you were sending were <i>also</i> binary. Today, you will consider how to communicate information that may have more than two states.
@@ -26,3 +26,5 @@ As you discussed in your previous class, information is a fairly abstract concep
 
 
 MARKDOWN
+
+

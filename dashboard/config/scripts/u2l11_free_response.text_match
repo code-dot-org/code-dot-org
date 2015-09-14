@@ -4,3 +4,11 @@ content1 ''
 markdown <<MARKDOWN
 The definition of HTTP makes use of the ASCII character set without reference to how these characters are encoded. Explain why this is an example of abstraction.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but will likely include the following concepts:
+
+Abstraction involves removing details and generalizing functionality. This applies to the protocols that make up the different functions of the Internet because each is able to "assume" that certain functionality already exists (i.e. the details of that functionality are abstracted away) and doesn't need to account for it explicitly.
+
+For example, the Internet Protocol doesn't need to worry about how bits are actually transmitted via wires, fiber obtics cables, or wifi -- it can just solve the problem of delivering fixed-size packets of information via the Internet. The HTTP protocol can similarly assume that the details of what binary values map to which characters is a problem that's been already solved by the ASCII protocol. So long as the receiver of an HTTP request understands the ASCII protocol, then the HTTP protocol can focus on what it was designed to do, namely requesting and receiving files across the Internet.
+MARKDOWN

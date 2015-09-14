@@ -37,11 +37,11 @@
 
 格蕾丝·穆雷·赫柏，计算机科学领域的女性第一人，设计新的语言程序并开创计算机系统的标准，为计算机科学的诸多发展奠定基础；
 
-这周的十二月八日，为了纪念格蕾丝·赫柏的生日特被定为‘计算机科学教育周’：就在现在开始
+Whereas the week of December 7, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 如此，[众议院或参议院，州，县，市，校董事会]--
 
-（1）支持计算机科学教育周（12月8日至14日，2014年）的称号；
+(1) supports the designation of Computer Science Education Week (December 7-13, 2015);
 
 （2）鼓励学校，教育工作者，家长和决策者参加计算机科学教育周，让他们的学生参与编程一小时；
 

@@ -4,8 +4,7 @@ Background:
   Given I am on "http://learn.code.org/reset_session"
   Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
-  And I wait for 2 seconds
-  Then element ".dialog-title" has text "Puzzle 15 of 20"
+  Then I wait to see a dialog titled "Puzzle 15 of 20"
   And element ".modal-content p:nth-child(2)" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
   And element "#prompt" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 

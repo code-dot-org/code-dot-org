@@ -1,5 +1,25 @@
+require 'tzinfo'
+
+def parse_date(date_string)
+  return nil if date_string.nil?
+
+  time = Chronic.parse(date_string)
+  return nil if time.nil?
+
+  date = time.to_date
+
+  # midnight pacific time
+  tz = TZInfo::Timezone.get('US/Pacific')
+  tz.local_to_utc(Time.utc(date.year, date.month, date.day))
+end
+
 def generate_professional_development_workshop_payment_report(from=nil, to=nil)
   # generate a report to be used for paying affiliates
+
+  if from && to
+    from = parse_date(from)
+    to = parse_date(to)
+  end
 
   DB[:forms].where(kind: "ProfessionalDevelopmentWorkshop").map do |row|
     data = JSON.parse(row[:data]) rescue {}

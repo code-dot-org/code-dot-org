@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Studio < Grid
   serialized_attrs %w(
     first_sprite_index
@@ -19,9 +41,11 @@ class Studio < Grid
     complete_on_success_condition_not_goals
     input_output_table
     code_functions
+    sort_draw_order
     wall_map_collisions
     block_moving_into_walls
     grid_aligned_movement
+    item_grid_aligned_movement
     remove_items_when_actor_collides
     slow_js_execution_factor
     marker_height
@@ -36,7 +60,7 @@ class Studio < Grid
 
   # List of possible skins, the first is used as a default.
   def self.skins
-    ['studio', 'infinity']
+    ['studio', 'infinity', 'hoc2015']
   end
 
   def self.default_success_condition

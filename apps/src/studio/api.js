@@ -14,6 +14,10 @@ exports.setBackground = function (id, value) {
   Studio.queueCmd(id, 'setBackground', {'value': value});
 };
 
+exports.setWalls = function (id, value) {
+  Studio.queueCmd(id, 'setWalls', {'value': value});
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,
@@ -121,6 +125,26 @@ exports.addItemsToScene = function(id, className, number) {
   Studio.queueCmd(id, 'addItemsToScene', {
     'className': className,
     'number': number
+  });
+};
+
+exports.setItemAction = function(id, itemIndex, type) {
+  Studio.queueCmd(id, 'setItemAction', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
+exports.setItemActivity = function(id, itemIndex, type) {
+  Studio.queueCmd(id, 'setItemActivity', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
+exports.showDebugInfo = function(value) {
+  Studio.queueCmd(null, 'showDebugInfo', {
+    'value': value
   });
 };
 

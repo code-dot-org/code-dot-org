@@ -14,7 +14,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Hour of Codeのイベント主催への登録にご協力頂き大変ありがとうございます！
 
-**全ての** Hour of Code の主催者は、Dropboxの10 GB容量 か $10 のSkype creditを感謝のしるしとして受領頂けます。 [詳細](<%= hoc_uri('/prizes') %>)
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. みんなに広めましょう
 
@@ -22,34 +24,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-<% if @country == 'us' %>
-
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[このメール](<%= hoc_uri('/resources#email') %>) もしくは [この資料を](/resources/hoc-one-pager.pdf) 校長先生に送ってください。
+[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-<% else %>
+## 3. 雇用主にも参加するよう聞いてみてください。
 
-## 2. Hour of Codeを主催するよう学校と交渉しましょう。
-
-[このメールを送るか](<%= hoc_uri('/resources#email') %>) もしくは、[この資料を](/resources/hoc-one-pager.pdf) </a>校長に渡してください。
-
-<% end %>
-
-## 3. 寄付のお願い
-
-[クラウドファンディングキャンペーンへの寄付をお願いします](http://<%= codeorg_url() %>/donate) 1億人の生徒に教えるためにはあなたのサポートが必要です。 私たちは、[教育に関する最大規模のクラウドファンディングキャンペーン](http://<%= codeorg_url() %>/donate) を立ち上げたばかりです。 *全ての*あなたの1ドルに対して [我々も同額の寄付をするので](http://<%= codeorg_url() %>/about/donors)インパクトは2倍になります。
-
-## 4. 雇用主にも参加するよう聞いてみてください。
-
-あなたのマネージャーやCEOに[このメールを送って](<%= hoc_uri('/resources#email') %>) [この資料を渡してください](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
 
 ## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
 ボーイスカウト/ガールスカウト、教会、大学、退役軍人のグループ、労働組合など地域のグループにも募集をかけます。もしくは、近所でHour of Code地域の集いを主催してください。
 
-## 6. Hour of Codeを支援してもらえるよう地元の議員に聞いてみましょう。
+## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
 
-[このメールを](<%= hoc_uri('/resources#politicians') %>) 市長、市議会、教育委員会に送ってください。 もしくは、[この資料を渡して](http://hourofcode.com/resources/hoc-one-pager.pdf)あなたの学校に招待してください。
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>

@@ -14,7 +14,9 @@ Dashboard::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   if CDO.memcached_hosts.present?
-    config.cache_store = :mem_cache_store, CDO.memcached_hosts
+    config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
+      value_max_bytes: 1024 * 1024 * 64
+    }
   else
     config.cache_store = :memory_store, { size: 64.megabytes }
   end
@@ -26,7 +28,7 @@ Dashboard::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.static_cache_control = "public, max-age=86400"
 
   # Compress JavaScripts and CSS.
@@ -67,7 +69,6 @@ Dashboard::Application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { host: 'learn.code.org' }
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

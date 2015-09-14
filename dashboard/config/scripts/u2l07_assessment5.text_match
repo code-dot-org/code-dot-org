@@ -4,3 +4,9 @@ title 'Question 5'
 markdown <<MARKDOWN
 When analyzing algorithms why doesn't the amount of real time (clock time) tell us very much about the algorithm's "efficiency"?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Because computers are all different, the same algorithm will run with different amounts of real time on different machines.  Instead we care about how much work, how many “things” the algorithm makes the computer do.  
+MARKDOWN
