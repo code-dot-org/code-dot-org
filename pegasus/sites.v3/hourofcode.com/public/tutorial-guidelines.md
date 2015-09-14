@@ -35,13 +35,24 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 	
 ## New for 2015: two formats of activites: self-guided or *lesson-plan*
 
-Now that tens of thousands of educators have tried the Hour of Code more than once, we believe many of these teachers will invest the time to prepare a more creative, less one-dimensional activity for their students. To help these teachers, we'd like to curate one-hour lesson-plans for teachers who want to play a more active role in guiding their Hour of Code.	
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.	
 
-**Teacher-Led (Lesson-plan) Format _(NEW)_**: Unlike past years, we're adding a new format for tutorials that  follow a traditional lesson plan form rather than a guided-puzzle game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We'd love to see you submit **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to learn enough C.S. to guide an Hour of Code activity that is unique to their field. 
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas  _(NEW)_**: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
 
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. These activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
 
-Note: On student-facing pages we'll list teacher-led activities below the self-guided ones, but we'll specifically call them out on pages or emails meant for educators. 
+Examples: 
+
+- [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+- [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+- [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+<br/><br/>
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+
+Note: On student-facing pages we'll list teacher-led activities _below_ the self-guided ones, but we'll specifically call them out on pages or emails meant for educators. 
 
 ## General guidelines for creating an Hour of Code activity
 
