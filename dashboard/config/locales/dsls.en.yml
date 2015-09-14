@@ -1306,6 +1306,15 @@ en:
         Match each character with its correct coordinate!: Match each character with its correct coordinate!
         Ninjacat: Ninjacat
         Ruby: Ruby
+      ECSPD Growth Mindset Reflection Q:
+        Fixed Mindset: Fixed Mindset
+        Fixed vs Growth Mindset: Fixed vs Growth Mindset
+        Grade given to students when they haven't passed a class: Grade given to students when they haven't passed a class
+        Growth Mindset: Growth Mindset
+        'Match the description to the appropriate values ': 'Match the description to the appropriate values '
+        Not Yet: Not Yet
+        Result of praising intelligence: Result of praising intelligence
+        Result of praising process: Result of praising process
       ECSPD Online U1D10 Assessment 1:
         Conclusions drawn from the data will be limited by the (relatively) small amount of data.: Conclusions drawn from the data will be limited by the (relatively) small amount of data.
         ? Difficult for a computer to draw conclusions. Not easily converted to a graph or data set. Difficult to compare empirically or quantitatively with similar representations of data.
@@ -2985,16 +2994,29 @@ en:
         Which of the following statements about writing functions and Top Down Design is NOT true?: Which of the following statements about writing functions and Top Down Design is NOT true?
         Writing functions helps manage complexity in a program: Writing functions helps manage complexity in a program
       U3L06 Assessment2:
+        A way to give input to a function that controls how the function runs: A way to give input to a function that controls how the function runs
         APIs and Parameters Question 3: APIs and Parameters Question 3
         Left(45): Left(45)
         Left(90): Left(90)
         ? Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
         : Parameterized functions allow for flexible code. They also prevent redundant code. Which two of these functions illustrate non-redundancy?
+        What's a function parameter: What's a function parameter
+        Whats a function parameter: Whats a function parameter
         forward100( ): forward100( )
         forward283( ): forward283( )
         forward50( ): forward50( )
+        para-meter -- a measure of the distance between a function's conception and implementation: para-meter -- a measure of the distance between a function's conception and implementation
+        wrong choice 2: wrong choice 2
+        wrong choice 3: wrong choice 3
+        wrong choice 4: wrong choice 4
       U3L06-API-multichoice:
         APIs and Parameters Question 1: APIs and Parameters Question 1
+        Abstract Parameter Interface: Abstract Parameter Interface
+        Abstract Programming Inheritance: Abstract Programming Inheritance
+        Abstract Programming Inheritance --  The idea that abstractions in languages get 'passed down' in newer versions: Abstract Programming Inheritance --  The idea that abstractions in languages get 'passed down' in newer versions
+        Application Program Interface: Application Program Interface
+        Applied Power Implementation: Applied Power Implementation
+        Artificial Parameter Intelligence: Artificial Parameter Intelligence
         Auto-correct common programming errors: Auto-correct common programming errors
         Explain the functionality of a programming statements: Explain the functionality of a programming statements
         List the commands and functions of a programming language: List the commands and functions of a programming language
@@ -3003,6 +3025,7 @@ en:
         Simplify complex programming tasks: Simplify complex programming tasks
         To avoid having to memorize all of the language commands: To avoid having to memorize all of the language commands
         What is NOT the purpose of an API in a programming language?: What is NOT the purpose of an API in a programming language?
+        What's an API?: What's an API?
       U3L07 Assessment2:
         APIs and Parameters Question 3: APIs and Parameters Question 3
         Left(45): Left(45)
@@ -3969,6 +3992,7 @@ en:
         'Programming Efficiency: Reflection': 'Programming Efficiency: Reflection'
       U3L06 Assessment:
         APIs and Parameters Question 2: APIs and Parameters Question 2
+        'Free Response: Function Parameters': 'Free Response: Function Parameters'
       U3L06 Free Response Getting Started:
         APIs and Function Parameters: APIs and Function Parameters
       U3L06 Free Response Reflection:
