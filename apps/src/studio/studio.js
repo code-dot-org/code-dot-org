@@ -161,6 +161,8 @@ var SCORE_TEXT_Y_POSITION = 60; // bottom of text
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
+var DELAY_COMPLETION_TIME = 2000;
+
 var twitterOptions = {
   text: studioMsg.shareStudioTwitter(),
   hashtag: "StudioCode"
@@ -854,8 +856,20 @@ Studio.onTick = function() {
 
   sortDrawOrder();
 
-  if (checkFinished()) {
-    Studio.onPuzzleComplete();
+  if (!Studio.succeeded && checkFinished()) {
+    Studio.succeeded = true;
+    Studio.succeededTime = new Date().getTime();
+  }
+
+  if (Studio.succeeded) {
+    if (level.delayCompletion) {
+      var currentTime = new Date().getTime();
+      if (currentTime > Studio.succeededTime + DELAY_COMPLETION_TIME) {
+        Studio.onPuzzleComplete();
+      }
+    } else {
+      Studio.onPuzzleComplete();
+    }
   }
 };
 
@@ -1733,6 +1747,9 @@ Studio.reset = function(first) {
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
+
+  // Reset whether level has succeeded.
+  Studio.succeeded = false;
 };
 
 /**
