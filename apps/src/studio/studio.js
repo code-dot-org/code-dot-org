@@ -1193,7 +1193,7 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
       if ((Studio.map[row][col] & SquareType.WALL) || 
-          (Studio.walls !== null && skin[Studio.walls][row][col])) {
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -2417,7 +2417,8 @@ Studio.drawMapTiles = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col])) {
+      if (mapVal & SquareType.WALL ||
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
         Studio.drawWallTile(svg, row, col);
       }
     }
