@@ -32,6 +32,58 @@ class TablesTest < Minitest::Test
     delete_channel
   end
 
+  def test_populate
+    init_apis
+    create_channel
+
+    data1 = {
+      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
+      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+    }
+
+    data2 = {
+      'table1' => [{'city'=> 'SFO'}, {'city'=>'SEA'}],
+      'table2' => [{'state'=> 'CA', 'country'=> 'USA'}, {'state'=>'MT', 'country'=> 'USA'}],
+    }
+
+    # Test basic populating
+    populate_table(data1, 1)
+
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['name'], 'trevor'
+    assert_equal records.length, 2
+
+    @table_name = 'table2'
+    records = read_records
+
+    assert_equal records.first['word'], 'cow'
+    assert_equal records.length, 2
+
+    # Test overwrite off
+    populate_table(data2, 0)
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['name'], 'trevor'
+    assert_equal records.length, 2
+
+    # Test overwrite on
+    populate_table(data2, 1)
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['city'], 'SFO'
+
+    @table_name = 'table2'
+    records = read_records
+
+    assert_equal records.last['country'], 'USA'
+
+    delete_channel
+  end
+
   def test_import
     init_apis
     create_channel
@@ -139,6 +191,10 @@ class TablesTest < Minitest::Test
 
   def delete_table()
     @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
+  def populate_table(data, overwrite)
+    @tables.post "/v3/shared-tables/#{@channel_id}?overwrite=#{overwrite}", JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
   end
 
 end

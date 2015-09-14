@@ -16,6 +16,10 @@ class Table
     @table = PEGASUS_DB[:app_tables]
   end
 
+  def exists?()
+    return @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).length == 1
+  end
+
   def items()
     @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name)
   end
@@ -208,6 +212,10 @@ class DynamoTable
     end
 
     value.merge(id: row_id)
+  end
+
+  def exists?()
+    return next_id > 1
   end
 
   def next_id()
