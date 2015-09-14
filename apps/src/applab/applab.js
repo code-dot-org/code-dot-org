@@ -940,6 +940,9 @@ Applab.isRunning = function () {
  * @param {boolean} first True if an opening animation is to be played.
  */
 Applab.reset = function(first) {
+  AppStorage.initializeTable(level.dataTables, AppStorage.initialized, function (){}, function (){});
+  AppStorage.initialized = true;
+
   var i;
   Applab.clearEventHandlersKillTickLoop();
 

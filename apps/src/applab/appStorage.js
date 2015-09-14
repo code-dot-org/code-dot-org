@@ -255,3 +255,30 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   }
   onSuccess();
 };
+
+AppStorage.initializeTable = function (jsonData, overwrite, onSuccess, onError) {
+  if (!jsonData || !jsonData.length) {
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handleInitializeTable.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId();
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
+
+var handleInitializeTable = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    onError('error initializing table: unexpected http status ' + this.status);
+  }
+  onSuccess();
+};
