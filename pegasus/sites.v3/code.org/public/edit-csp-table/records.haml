@@ -115,7 +115,7 @@ content-type: text/ng-template
         %span{"ng-hide" => "record.editing"}
           {{ record[column.id] }}
         %span{"ng-show" => "record.editing"}
-          %input{"ng-model" => "record[column.name]", type: "text"}/
+          %input{"ng-model" => "record[column.id]", type: "text"}/
       %td
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save

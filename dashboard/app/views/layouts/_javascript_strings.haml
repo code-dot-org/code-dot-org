@@ -5,7 +5,7 @@
 
 :ruby
   def escape_t(key)
-    I18n.t(key).gsub(/"/, '\"')
+    escape_javascript(I18n.t(key))
   end
 
 :javascript
