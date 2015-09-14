@@ -185,7 +185,7 @@ class TablesApi < Sinatra::Base
     begin
       json_data = JSON.parse(request.body.read)
     rescue => e
-      msg = "The json file could not be loaded: #{e.mssage}"
+      msg = "The json file could not be loaded: #{e.message}"
       halt 400, {}, msg
     end
 
