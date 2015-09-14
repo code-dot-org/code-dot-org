@@ -65,10 +65,9 @@ level 'U3L06 Challenge 6 squiggles'
 level 'U3L06 Challenge 5 overlapping circles'
 level 'U3L06 Challenge 7 smiley face'
 level 'U3L06 Challenge 8 make your own'
+assessment 'U3L06 Assessment2'
 assessment 'U3L06-API-multichoice'
 assessment 'U3L06 Assessment'
-assessment 'U3L06 Assessment2'
-assessment 'U3L06 Free Response Wrap Up'
 
 #7
 stage 'Looping and Random Numbers'

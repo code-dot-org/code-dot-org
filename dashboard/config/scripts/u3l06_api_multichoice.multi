@@ -1,15 +1,24 @@
 name 'U3L06-API-multichoice'
-title 'APIs and Parameters Question 1'
-description 'Select the best answer'
-question 'What is NOT the purpose of an API in a programming language?'
-wrong 'List the commands and functions of a programming language'
-wrong 'Explain the functionality of a programming statements'
-wrong 'To avoid having to memorize all of the language commands'
-wrong 'Show examples of programming statements'
-right 'Auto-correct common programming errors'
-wrong 'Simplify complex programming tasks'
+title 'What\'s an API?'
+wrong 'Abstract Programming Inheritance'
+wrong 'Artificial Parameter Intelligence'
+right 'Application Program Interface'
+wrong 'Applied Power Implementation'
+wrong 'Abstract Parameter Interface'
 
 markdown <<MARKDOWN
+Read the definitions provided below and then choose the best answer.
+
+- **Abstract Programming Inheritance** --  The idea that abstractions in languages get ‘passed down’ in newer versions
+
+- **Artificial Parameter Intelligence** -- The idea that function parameters should be intelligent enough to "know" what you want as a programmer
+
+- **Application Program Interface** -- a well-documented library of functions provided in a programming language that helps to simplify complex programming tasks.
+
+- **Applied Power Implementation**
+
+- **Abstract Parameter Interface**
+
 
 
 

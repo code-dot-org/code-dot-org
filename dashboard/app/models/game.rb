@@ -80,6 +80,10 @@ class Game < ActiveRecord::Base
     @@game_odometer ||= find_by_name("Odometer")
   end
 
+  def self.vigenere
+    @@game_vigenere ||= find_by_name("Vigenere")
+  end
+
   def self.frequency_analysis
     @@game_frequency_analysis ||= find_by_name("Frequency Analysis")
   end
@@ -182,6 +186,7 @@ class Game < ActiveRecord::Base
         TextCompression:text_compression
         Odometer:odometer
         FrequencyAnalysis:frequency_analysis
+        Vigenere:vigenere
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
