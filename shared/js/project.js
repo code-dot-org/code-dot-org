@@ -63,6 +63,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+var currentAbuseScore = 0;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -99,7 +100,7 @@ var projects = module.exports = {
    * @returns {number}
    */
   getAbuseScore: function () {
-    return current ? current.abuseScore : 0;
+    return currentAbuseScore;
   },
 
   /**
@@ -109,17 +110,10 @@ var projects = module.exports = {
     // TODO (brent) - right now this is pretty low security. anyone could
     // enter the javascript console and call this. eventually, we want some sort
     // of protected API call we can make
-    if (this.getAbuseScore() === 0) {
+    if (currentAbuseScore === 0) {
       return;
     }
-    current.abuseScore = 0;
-    var sourceAndHtml = {
-      source: current.levelSource,
-      html: current.levelHtml
-    };
-    this.save(sourceAndHtml, function () {
-      location.reload();
-    });
+    // TODO - api call
   },
 
   /**
@@ -144,7 +138,7 @@ var projects = module.exports = {
    *   exceed our threshold
    */
   exceedsAbuseThreshold: function () {
-    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+    return !!(currentAbuseScore >= ABUSE_THRESHOLD);
   },
 
   /**
@@ -492,6 +486,8 @@ var projects = module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
+    // TODO - also fetch abuse score
+
     var deferred;
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
@@ -520,6 +516,7 @@ var projects = module.exports = {
               }
               deferred.resolve();
             });
+            fetchAbuseScore();
           }
         });
         return deferred;
@@ -537,6 +534,7 @@ var projects = module.exports = {
             projects.showProjectLevelHeader();
             deferred.resolve();
           });
+          fetchAbuseScore();
         }
       });
       return deferred;
@@ -562,6 +560,19 @@ function fetchSource(data, callback) {
   } else {
     callback();
   }
+}
+
+// TODO - might make more sense to integrate this with the UI differently now?
+function fetchAbuseScore() {
+  channels.fetch(current.id + '/abuse', function (err, data) {
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+    currentAbuseScore = data.abuseScore;
+    console.log('abuse: ' + currentAbuseScore); // TODO - get rid of 
+  });
 }
 
 /**

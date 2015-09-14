@@ -111,11 +111,56 @@ var addPrivacyPolicyTosToFooter = function () {
 };
 
 /**
+ * Validates our report abuse form. Alerts about error if there is one.
+ * @returns {boolean} false if The form is not valid
+ */
+var validateReportAbuseForm = function () {
+  if ($("#request_anonymous_requester_email").val() === "") {
+    alert("Please provide an email address");
+    return false;
+  }
+
+  if ($("#request_custom_fields_24024923").val() === "") {
+    alert('Please specify an age');
+    return false;
+  }
+
+  if ($("#request_custom_fields_27739408").val() === "") {
+    alert('Please answer how this content violates the Terms of Service');
+    return false;
+  }
+
+  if ($("#request_description").val() === "") {
+    alert('Please fill in the Message field');
+    return false;
+  }
+  return true;
+};
+
+/**
+ * POSTS to our server, incrementing the abuse score
+ */
+var incrementAbuseScore = function () {
+  // TODO - how do we keep this in sync with our codebase?
+  // TODO - point at prod
+  $.ajax({
+    url: "http://localhost:3000/v3/channels/" + $.QueryString["abuseChannelId"] + "/abuse",
+    type: "post",
+    contentType: "application/json; charset=utf-8"
+  }).done(function(data, result) {
+    console.log('done');
+  }).fail(function(request, status, error) {
+    // TODO - what should actually happen on error
+    var err = new Error('status: ' + status + '; error: ' + error);
+  });
+};
+
+/**
  * Handle the case where we want a slighly different form for reporting abuse
  */
 var populateReportAbuseForm = function () {
-  var reportAbuse = $.QueryString["reportAbuse"];
-  if (reportAbuse !== "true") {
+  var abuseChannelId = $.QueryString["abuseChannelId"];
+  if (abuseChannelId === undefined) {
     return;
   }
 
@@ -142,34 +187,20 @@ var populateReportAbuseForm = function () {
   $("#new_request").on('submit', function () {
     // We can't depend on server side validation, as it clears our query params
     // Instead, validate required fields here
-    if ($("#request_anonymous_requester_email").val() === "") {
-      alert("Please provide an email address");
+    if (!validateReportAbuseForm()) {
       return false;
     }
 
-    if ($("#request_custom_fields_24024923").val() === "") {
-      alert('Please specify an age');
-      return false;
-    }
-
-    if ($("#request_custom_fields_27739408").val() === "") {
-      alert('Please answer how this content violates the Terms of Service');
-      return false;
-    }
-
-    if ($("#request_description").val() === "") {
-      alert('Please fill in the Message field');
-      return false;
-    }
-
-    // extract channel id
     // post to increment score
+    incrementAbuseScore();
+
+    alert('temp blocking submission for test purposes');
+    return false;
   });
 };
 // TODO dont include in what ends up on zendesk
 populateReportAbuseForm();
 addPrivacyPolicyTosToFooter();
-
 
 
 // populate the fields when the page is ready
