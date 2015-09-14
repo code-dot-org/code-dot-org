@@ -261,7 +261,7 @@ AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handleInitializeTable.bind(req, onSuccess, onError);
+  req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
   var url = '/v3/shared-tables/' + AppStorage.getChannelId();
   if (overwrite) {
     url += "?overwrite=1";
@@ -271,7 +271,7 @@ AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
   req.send(jsonData);
 };
 
-var handleInitializeTable = function (onSuccess, onError) {
+var handlePopulateTable = function (onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
