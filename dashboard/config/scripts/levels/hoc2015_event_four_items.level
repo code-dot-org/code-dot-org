@@ -1,4 +1,4 @@
-<Studio>
+<StudioEC>
   <config><![CDATA[{
   "game_id": 39,
   "created_at": "2015-01-20T02:25:10.000Z",
@@ -8,6 +8,7 @@
     "edit_code": true,
     "skin": "hoc2015",
     "background": "background2",
+    "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
       "moveEast": null,
       "moveWest": null,
@@ -18,6 +19,7 @@
       "whenUp": null,
       "whenDown": null
     },
+    "start_blocks": "function whenLeft() {\n  __;\n}\nfunction whenRight() {\n  __;\n}\nfunction whenUp() {\n  __;\n}\nfunction whenDown() {\n  __;\n}",
 
     "sort_draw_order": true,
     "wall_map_collisions": true,
@@ -63,4 +65,4 @@
   }
 }]]></config>
   <blocks/>
-</Studio>
+</StudioEC>
