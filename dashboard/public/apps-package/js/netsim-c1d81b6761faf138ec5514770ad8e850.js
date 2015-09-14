@@ -9474,9 +9474,26 @@ NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
     isUnread: this.hasUnreadMessages_,
     markAsReadCallback: this.updateUnreadCount.bind(this)
   });
-  newPacket.getRoot().hide();
+
   newPacket.getRoot().prependTo(this.scrollArea_);
-  newPacket.getRoot().slideDown(MESSAGE_SLIDE_IN_DURATION_MS);
+
+  var scrollTop = this.scrollArea_.scrollTop();
+
+  if (scrollTop === 0) {
+    // If scrolled to the top, animate a pretty slidedown
+    newPacket.getRoot().hide();
+    newPacket.getRoot().slideDown(MESSAGE_SLIDE_IN_DURATION_MS);
+  } else {
+    // If we're somewhere in the middle of the messages, scroll "down"
+    // to maintain our place relative to the messages we're looking at
+
+    // Scrolling only takes the bottom margin into account, not top
+    var packetHeight = newPacket.getRoot().outerHeight() +
+        parseInt(newPacket.getRoot().css('marginBottom'));
+
+    this.scrollArea_.scrollTop(scrollTop + packetHeight);
+  }
+
   this.packets_.unshift(newPacket);
 
   this.updateUnreadCount();
