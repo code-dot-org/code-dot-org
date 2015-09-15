@@ -202,4 +202,35 @@ class TablesApi < Sinatra::Base
 
     redirect "#{table_url}"
   end
+
+  #
+  # POST /v3/(shared|user)-tables/<channel-id>
+  #
+  # Populates tables from passed in json in the following format
+  #   {
+  #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
+  #     'table_2': [{'city': 'SF', 'people': 6}, ...],
+  #   }
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
+    begin
+      json_data = JSON.parse(request.body.read)
+    rescue => e
+      msg = "The json file could not be loaded: #{e.message}"
+      halt 400, {}, msg
+    end
+
+    overwrite = request.GET['overwrite'] == '1'
+    json_data.keys.each do |table_name|
+      table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      if table.exists? and !overwrite
+        next
+      end
+
+      table.delete_all()
+      json_data[table_name].each do |record|
+        table.insert(record, request.ip)
+      end
+    end
+  end
 end

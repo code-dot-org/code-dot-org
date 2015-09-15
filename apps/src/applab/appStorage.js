@@ -255,3 +255,42 @@ var handleDeleteRecord = function(tableName, record, onSuccess, onError) {
   }
   onSuccess();
 };
+
+/**
+ * Populates a channel with table data for one or more tables
+ * @param {string} jsonData The json data that represents the tables in the format of:
+ *   {
+ *     "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+ *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+ *   }
+ * @param {bool} overwrite Whether to overwrite a table if it already exists.
+ * @param {function()} onSuccess Function to call on success.
+ * @param {function(string)} onError Function to call with an error message
+ *    in case of failure.
+ */
+AppStorage.populateTable = function (jsonData, overwrite, onSuccess, onError) {
+  if (!jsonData || !jsonData.length) {
+    return;
+  }
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = handlePopulateTable.bind(req, onSuccess, onError);
+  var url = '/v3/shared-tables/' + AppStorage.getChannelId();
+  if (overwrite) {
+    url += "?overwrite=1";
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  req.send(jsonData);
+};
+
+var handlePopulateTable = function (onSuccess, onError) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status != 200) {
+    onError && onError('error populating tables: unexpected http status ' + this.status);
+  }
+  onSuccess && onSuccess();
+};
