@@ -1,8 +1,10 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Dejstva in uporabna statistika
 
@@ -10,8 +12,10 @@ title: Blurbs and Stats layout: wide nav: resources_nav
 
 ### Začnite z računalništvom na vaši šoli. Začnite z Uro za kodo
 
-Čeprav so računalniki povsod, računalništvo uči manj šol kot pred 10 leti. Dobra novica je, da smo na proti, da to spremenimo. Če ste slišali za [Uro za kodo](<%= hoc_uri('/') %>) lani, morda veste, da je spremenila zgodovino. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [Ura za kodo](<%= hoc_uri('/') %>) je enourni tečaj osnov računalništva, ki je namenjen preprosti predstavitvi kode in obljublja, da se lahko vsakdo naučiti osnov programiranja. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
+Čeprav so računalniki povsod, računalništvo uči manj šol kot pred 10 leti. Dobra novica je, da smo na proti, da to spremenimo. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
 ## Infographics
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

@@ -1,0 +1,13 @@
+name 'ECSPD What is the Challenge'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+What is the Challenge?
+Why do this challenge?
+When does it need to be done?
+
+Way to work specifically on lessons to prepare
+benefit from other teachers work
+Way to find/create resources
+Directly benefits your teaching
+
+MARKDOWN

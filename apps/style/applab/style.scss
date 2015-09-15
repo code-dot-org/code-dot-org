@@ -40,6 +40,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -72,6 +75,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;
@@ -106,6 +112,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -139,6 +148,9 @@ div#visualizationResizeBar {
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
   }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
   div#codeWorkspace {
     left: $width;
   }
@@ -171,6 +183,9 @@ div#visualizationResizeBar {
   }
   div#visualizationColumn.responsive.with_padding {
     max-width: $colWidth;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
   }
   div#codeWorkspace {
     left: $width;
@@ -275,13 +290,19 @@ img#turtleImage {
   opacity: 1;
 }
 
+$debug-area-initial-height: 120px;
 #debug-area {
   position: absolute;
   bottom: 0;
-  height: 156px;
+  height: $debug-area-initial-height;
   left: 0;
   right: 0;
   max-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+}
+
+// Make sure the workspace default lines up with the debug area default
+#codeTextbox.pin_bottom {
+  bottom: $debug-area-initial-height;
 }
 
 #debug-area-header {

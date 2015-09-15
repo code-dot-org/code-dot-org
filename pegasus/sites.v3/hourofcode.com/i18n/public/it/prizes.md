@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -8,7 +14,7 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% else %>
 
-# 2015 prizes coming soon!
+# I premi 2015 stanno per arrivare!
 
 **Every** educator who organizes an Hour of Code event is eligible to receive a prize. Check back for updates in fall 2015.
 
@@ -97,3 +103,5 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 ## Ulteriori domande riguardo i premi? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

@@ -1,9 +1,13 @@
 * * *
 
-عنوان: قدرداني طرح: پهن
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # از شما متشكريم
 
-كل مدرسه براي برنده شدن لپ‌تاپ‌ (و يا ابزار فناوري به ارزش 10،000 دلار آمريكا) شركت داده شديد.
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

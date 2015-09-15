@@ -1,8 +1,10 @@
 * * *
 
-Название: Партнеры
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Главные Партнеры и Корпоративные Спонсоры
 
@@ -37,3 +39,5 @@
 # Еще партнеры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

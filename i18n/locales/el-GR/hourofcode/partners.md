@@ -1,8 +1,10 @@
 * * *
 
-τίτλος: Συνεργάτες
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Κύριοι Συνεργάτες και Εταιρικοί Υποστηρικτές
 
@@ -37,3 +39,5 @@
 # Άλλοι Συνεργάτες
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

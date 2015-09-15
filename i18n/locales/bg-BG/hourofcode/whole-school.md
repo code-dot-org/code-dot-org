@@ -1,9 +1,13 @@
 * * *
 
-оформление: широк
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Нека цялото училище да участва
 
-Информация за участието на цели училища в Часа на кодирането ще се появява тук.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

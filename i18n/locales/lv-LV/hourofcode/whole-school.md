@@ -1,9 +1,13 @@
 * * *
 
-izkārtojums: plats
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Piesaki dalībai visu skolu
 
-Informācija par visu skolu dalību "Programmēšanas stundā" būs izvietota šeit.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

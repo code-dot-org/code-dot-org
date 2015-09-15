@@ -9,5 +9,7 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Answers will vary but should include the following concepts:
 
-- 
+- Routers never have a view of the entire network on which they are operating
+- Routers can observe the traffic along wires for the routers to which they are directly connected
+- Routers can learn how best to route packets by sharing information they've collected about traffic in the network. They collect this information either from observing their direct connections or by receiving information about other parts of the network from other routers.
 MARKDOWN

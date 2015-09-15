@@ -1,8 +1,10 @@
 * * *
 
-title: kit para divulgação na mídia layout: wide nav: resources_nav
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 ## Como atrair a mídia para sua Hora do Código
 
@@ -20,10 +22,10 @@ title: kit para divulgação na mídia layout: wide nav: resources_nav
 **1. Planeje seu evento**
 
   * Planeje a abertura da Hora do Código.
-  * Envie [uma carta](<%= hoc_uri('/resources/#sample-emails') %>) para os pais dos alunos e peça para eles ajudarem na divulgação.
-  * Envie [uma carta](<%= hoc_uri('/resources/#sample-emails') %>) convidando seu prefeito, deputado, governador ou empresário influente para participar e falar com seus alunos.
+  * Envie [uma carta](<%= resolve_url('/resources/#sample-emails') %>) para os pais dos alunos e peça para eles ajudarem na divulgação.
+  * Envie [uma carta](<%= resolve_url('/resources/#sample-emails') %>) convidando seu prefeito, deputado, governador ou empresário influente para participar e falar com seus alunos.
   * Organize atividades em grupo (por exemplo, uma demonstração de atividade de programação "offline") ou mostre atividades criadas e conduzidas pelos alunos.
-  * Mostre o [vídeo da Hora do Código](<%= hoc_uri('/') %>) da Code.org ou um [destes vídeos](<%= hoc_uri('/resources#videos') %>) como forma de incentivo.
+  * Mostre o [vídeo da Hora do Código](<%= resolve_url('/') %>) da Code.org ou um [destes vídeos](<%= resolve_url('/resources#videos') %>) como forma de incentivo.
 
 **2. Identifique jornalistas específicos da região que cubram eventos locais ou sobre educação.**
 
@@ -33,7 +35,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= hoc_uri('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 
@@ -53,7 +55,9 @@ Na China, todos os alunos estudam a ciência da computação para concluir o ens
 
 **Sobre a Code.org**
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org é apoiada por doações filantrópicas de corporações, fundações e indivíduos generosos, incluindo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outras. Para obter mais informações, visite: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também à minorias sociais, empoderando, por exemplo, mulheres e negros à participação nesta área. Sua visão é de que todos os alunos, de todas as escolas, devem ter a oportunidade de aprender a programar. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org é apoiada por doações filantrópicas de corporações, fundações e indivíduos generosos, incluindo Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network e outras. Para obter mais informações, visite: <<%= resolve_url('https://code.org') %>>.
 
   
-Encontre mais recursos e exemplos de e-mail [aqui](<%= hoc_uri('/resources') %>).
+Encontre mais recursos e exemplos de e-mail [aqui](<%= resolve_url('/resources') %>).
+
+<%= view :signup_button %>

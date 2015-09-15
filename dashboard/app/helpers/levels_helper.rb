@@ -135,7 +135,7 @@ module LevelsHelper
 
     # External project levels are any levels of type 'external' which use
     # the projects code to save and load the user's progress on that level.
-    view_options(is_external_project_level: true) if @level.pixelation?
+    view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
@@ -275,6 +275,8 @@ module LevelsHelper
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if @game and @game.owns_footer_for_share?
+      # TODO (brent) - these would ideally also go in _javascript_strings.html right now, but it can't
+      # deal with params
       app_options[:copyrightStrings] = {
         :thank_you => URI.escape(I18n.t('footer.thank_you')),
         :help_from_html => I18n.t('footer.help_from_html'),

@@ -4,6 +4,8 @@ titulli: Kushtet e Përdorimit
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Kushtet e Shërbimit
 
 Last Revised: December 5, 2014
@@ -20,25 +22,25 @@ Këto Kushte janë subjekte për të ndryshuar. Ju keni rënë dakord për t'u k
 
 Shumë shërbime mund të drejtohen tek udhëzimet shtesë të postuara, rregullat ose kushtet e përdorimit ("**Kushtet Shtesë**”) dhe përdorimit tuaj të kaq shërbimeve do të jetë i kushtëzuar në marrveshjen me Kushtet Shtesë. Nëse ka ndonjë konflikt midis këtyre Kushteve dhe Kushteve shtesë, Kushtet shtesë do të kontrollojnë për atë Shërbim, përveç rastit nëse Kushtet Shtesë theksojnë se këto Kushte duhet të kontrrollojnë.
 
-### Fëmijët nën moshën 13 vjeç
+### Children Under Age 13
 
 Ne kemi marrë masa për të ulur mbledhjen e të dhënave personale nga përdoruesit nën moshën 13 vjeç siç shpjegohet në Code.org [Politikat e Privatësisë](http://code.org/privacy). Nëse jeni nën moshën 13 vjeç, ne ju inkurajojmë ju që të merrni miratimin e prindit ose kujdestarit ligjor para se të krijoni një llogari në Code.org. Code.org lejon përfaqësues të caktuara të shkollave, të tillë si mësuesit, administratorët, këshilltarët, dhe edukatorë të tjerë (një "**Edukator**") që të lidhen me studentët përmes Shërbimeve në mënyrë që t'ju sigurojnë tutoriale, arsimore dhe shërbime të ngjashme. Nëse ju jeni një Edukator, ju mund të regjistroni llogaritë në Shërbime për një ose më shumë nga studentët tuaj.
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### Llogaria juaj
+### Your Account
 
 Nëse keni krijuar një llogari për Shërbimet, ju jeni përgjegjës për sigurinë e llogarisë tuaj dhe për mbajtjen e fjalëkalimit tuaj të sigurtë. Nëse ju jeni duke përdorur një llogari të caktuar për ju nga një Edukator, Edukatori juaj mund të jetë në gjendje të hyj dhe të çaktivizojë llogarinë tuaj.
 
 Code.org mund t'ju lejojë për të regjistruar një llogari për Shërbimet përmes disa shërbimeve të palëve të treta të rrjeteve sociale, të tilla si lidhjen me Facebook-un dhe Google ("**Shërbime të autorizuara**"). Duke u regjistruar për shërbimet duke përdorur një shërbim të autorizuar, ju pranoni që Code.org mund të ketë akses në informacionin e llogarisë tuaj nga shërbimi i autorizuar dhe ju pranoni të gjitha kushtet e përdorimit të tij në lidhje me përdorimin tuaj të Shërbimeve nëpërmjet shërbimit të autorizuar. Ju jeni përgjegjës vetëm për ndërveprimet tuaja me Shërbimin e autorizuar.
 
-### Privatësia
+### Privacy
 
 Privatësia juaj është e rëndësishme për ne. [Politika e Privatësisë](http://code.org/privacy) e Code.org shpjegon se si ne i trajtojmë të dhënat tuaja personale dhe është e përfshirë në këto Kushte nga referenca. Ju lutem lexoni Politikat e Privatësisë të Code.org me kujdes për informacione në lidhje me mbledhjen, përdorimin dhe zbulimin e informacionit tuaj personal.
 
 Nëse ju jeni një student që përdorni një llogari të regjistruar nga një edukator ose të lidhur me një edukator, ju pranoni që Code.org mund të zbulojë informacionin tuaj tek Edukatorët që janë të lidhur me llogarinë tuaj. Nëse ju jeni një Edukator, ju pranoni të mos ndani informacionin e studentëve që merrni nga Code.org me askënd tjetër përveç agjentëve të autorizuar të klasës, shkollës, ose institucioni tjetë arsimor që ju përfaqësoni.
 
-### Përmbajtja e përdoruesve të gjeneruar - Menaxhimi; Liçensë; Përfaqësimet dhe Garancitë
+### User Generated Content - Management; License Grant; Representations and Warranties
 
 Code.org tani apo në të ardhmen mund të lejojë ju dhe përdoruesit e tjerë të postoni kod kompjuterik (duke përfshirë kodin burim dhe objekt), informacion, tekst, grafikë, shënime, pyetje, komente, vlerësime, imazhe dhe video ose komunikime të tjera (bashkërisht, "**Përmbajtja Përdoruesit**") për Shërbimet. Ti kupto që për çdo arsye Përmbajtja e Përdoruesit është e publikuar, Code.org nuk garanton asnjë konfidencialitet me respekt të çdo përmbajtjeje.
 
@@ -52,17 +54,17 @@ By submitting or distributing User Content through the Services or directly to C
 
 Përveç kësaj, duke dorëzuar ose shpërndarë Përmbajtjen e Përdoruesit përmes Shërbimeve, ju me anë të kësaj i jepni çdo përdoruesi të Shërbimeve një liçensë joekskluzive për të hyr dhe përdorur Përmbajtjen tuaj të Përdoruesit.
 
-### Rishfaqja e Përmbajtjes së Përdoruesit dhe Garancitë
+### User Content Representations and Warranties
 
 Ju jeni përgjegjës vetëm për Përmbajtjen e Përdoruesit që postoni te Shërbimet dhe pasojat e postimit apo publikimit të tyre. Duke ngarkuar, dorëzuar, krijuar, apo publikuar Përmbajtjen tuaj të Përdoruesit tek Shërbimet, ju paraqisni dhe garantoni që: (1) ju jeni krijues dhe pronar i Përmbajtjes tuaj të Përdoruesit dhe që ju keni autoritetin për të përdorur ose patur liçensat e nevojshme, të drejtat, pëlqimet, dhe lejet për të publikuar Përmbajtjen e Përdoruesit që keni paraqitur; (2) Përmbajtja juaj e Përdoruesit nuk ka dhe nuk do të mund të: (a) cënojë, shkeli, ose shpërdoroj ndonjë të drejtë palës së tretë, duke përfshirë çdo të drejtë autori, markë tregtare, patentë, sekret tregtar, të drejte morale, të drejtën e jetës private, e drejta e publicitetit, ose ndonjë pronë tjetër intelektuale ose e drejtë e pronarit ose (b) shpifje, diskretitim, ose të dhunojë të drejtën e privatësisë, publicitetit apo të drejta të tjera pronësie të ndonjë personi tjetër; (3) Përmbajtja juaj e përdoruesit nuk përmban asnjë nga viruset, reklamues, vjedhës së të dhënave, krimb, apo kod tjetër me qëllime të keqija.
 
-### Kufizimet e Përmbajtjes dhe Përdorimit të Shërbimeve
+### Restrictions on Content and Use of the Services
 
 Ne rezervojmë të drejtën në çdo kohë (por nuk do të ketë obligim) për të fshirë apo refuzuar për të shpërndarë çdo Përmbajtje të Përdopruesit në faqen e web-it dhe të pezullojë ose të përfundojë përdoruesit, pa detyrim për ju. Ne gjithashtu rezervojmë të drejtën për të hyrë, lexuar, ruajtur, dhe zbuluar çdo informacion që ne besojmë është e nevojshme të (i) të plotësojë çdo ligj, rregullore, proces ligjor ose kërkesë qeveritar të zbatueshme, (ii) zbatoj Kushtet, duke përfshirë edhe hetimin e shkeljeve të mundshme të ligjit, (iii) zbulojë, parandalojë, ose përndryshe të trajtojë mashtrimin, sigurinë apo çështjet teknike, (iv) përgjigjet kërkesave mbështetëse të përdoruesit, ose (v) të mbrojë të drejtat, pronën apo sigurinë e Code.org, përdoruesit e tij dhe publikun.
 
 Nuk guxon të bësh secilën nga vijimi përgjatë aksesimit ose përdorimit të shërbimeve (i) aksesimi, ngatërrimi me, ose përdorimi i hapësirave jo publike të Shërbimeve, kompjuterëve të Code.org, ose shpërndarjen teknike të sistemeve të ofruesve të Code.org; (ii) hetimi, skanimi ose testimi i cënueshmërisë se çfarëdo sistemi se rrjeti ose thyerja ose zaptimi i çfarëdo mase të autentikimit të sigurit; (iii) aksesimi ose këkrimi ose tentativa për akses ose kërkim të Shërbimeve me çfarëdo mjeti (të automatizuar ose ndryshe) ndryshe nga ndërfaqësi publik tanishëm dhe i gatshëm janë të ofruara nga Code.og (dhe vetem në zbatim të atyre termeve dhe kushteve), veteëm nëse ju jeni lejuar në mënyrë të veçantë që të veproni ashtu në një marrëveshje të ndarë me Code.org (VËREJTJE: zvarritja e Shërbimit është e lejueshme nëse bëhet në pajtueshmëri me provizionet e skedarit robots.txt, megjithatë, prishja e Shërbimeve pa lejen paraprake të Code.org është e ndaluar në mënyrë eksluzive); (iv) dërgimi i ndonjë headerit të informacionit të paketës, ose në ndonjë pjesë të informatave të headerit në çfarëdo postë elektronike, ose postim, ose në një mënyrë të përdorimit të Shërbimeve duke dërguar informata të ndryshuara, mashtruese, ose informatës identifikuese të falsifikuar të burimit; ose (v) interferimi me ose ndërprerja (ose tentativa për të bërë një gjë të tillë), aksesimi në cilindo përdoruese, host ose rrjet duke përfshire, pa kufizime, ngacmimi ose ngacmimet, dërgimi i virusëve, mbingarkimit, përmbytje, dërgimi i postës së padëshiruar, bombardimi postar i Shërbimeve, ose skriptimi i krijimit të përmbajtjes në mënyrë të tillë që të inteferojë me ose të krijoj një barrë të padrejtë te Shërbimet.
 
-### Liçensa juaj për të përdorur Videot, Tutorialet, Të dhënat dhe API e Code.org
+### Your License to Use Code.org Videos, Tutorials, Data, and APIs
 
 [Videoteka](http://youtube.com/user/CodeOrg) e Code.org-së mund të shpërndahet lirisht në kushtet që (1) videot janë të rishpërndara AS-IS, (duke përdorur video playerat e duhur ose Shkarko linkun NËSE është i aprovuar) nga Code.org. (2) videot nuk janë të bashkuara, (3) videot janë përdorur për qëllime mësimore të shkencave kompjuterike, dhe (4) videot nuk përbëjnë një paraqitje të ndonjë marke të një palëve të 3-ta, shërbimi apo produkti dhe (5) nëse akseson të rishpërndash Përmbajtjen apo Shërbimet është falas.
 
@@ -78,7 +80,7 @@ Të tjera përveç videove dhe veprat e artit të përmendura më sipër, të gj
 
 Çdo e dhënë e ofruara nga Bordi i Konferencave, çfarëdo qoftë është dhënë "siç është" pa garanci , dhe është e mbrojtur nga ligjet e Shteteve të Bashkuara dhe ndërkombëtare të së drejtës së autorit. Të dhënat e paraqitura janë dhënë vetëm për qëllime informuese dhe mund të aksesohen, shqyrtohen, publikohen, dhe/ose përdoren në përshtatje dhe me lejen e Bordit të Konferencave duke u përputhur me Kushtet e Përdorimit të shfaqura në [www.conference- board.org ](http://www.conference-board.org). Këto të dhëna nuk mund të ekstraktohen për përdorim në një bazë të dhënash, e përdorur për të krijuar një punë të derivuar, ose ndryshe keqpërdoret me çdo mjet, pa shprehur me shkrim leje nga Bordi i Konferencave, përveç që ju mund të shfrytëzoni përdorimin e kufizuar jo-komercial në përputhje me Panairin e Perdorimit nën Seksionin 107 i Aktit të djretës së kopjes të 1976. Conference Board® dhe The Conference Board Help Wanted OnLine® janë marka të regjistruara të The Conference Board. Bordi Konferencave rezervon të gjitha të drejtat për markat tregtare të saj. Informacione të tjera në lidhje me The Conference Board Help Wanted OnLine® mund të gjenden [këtu](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Politikat e të drejtës së autorit
+### Copyright Policy
 
 Code.org respekton të drejtat e pronës intelektuale të të tjerëve dhe pret që përdoruesit e shërbimeve të bëjnë të njëjtën gjë. Ne do të përgjigjemi për njoftimet e shkeljes së pretenduar të të drejtave të autorit që përputhen me ligjin në fuqi dhe janë të ofruara siç duhet për ne. Nëse besoni se puna juaj është kopjuar në një mënyrë që përbën shkelje të së drejtës së autorit, ju lutemi të na jepni informacionin e mëposhtëm: (i) një nënshkrim fizik ose elektronik i autorit ose një person i autorizuar për të vepruar në emër të tyre; (ii) identifikimi i punës që mendohet të jetë shkelur; (iii) Identifikimi i materialit që është pretenduar të jetë cenuar ose të jetë subjekt i veprimtarisë së cënuar që duhet të hiqet ose aksesi në të cilat duhet të kufizohet, si dhe informacioni i mjaftueshme për të na lejuar për të gjetur materialin; (iv) informacionin e kontaktit tuaj, duke përfshirë adresën tuaj, numrin e telefonit, dhe një adresë email-i; (v) një deklaratë nga ju që ju keni një mirë besim se përdorimi i materialit nuk është i autorizuar nga autori, agjenti i tij, apo nga ligji; dhe (vi) një deklaratë se informacioni në njoftim është i saktë, dhe, nën dënimin e dëshmisë së rreme, që ju jeni i autorizuar për të vepruar në emër të pronarit.
 
@@ -88,7 +90,7 @@ Code.org respekton të drejtat e pronës intelektuale të të tjerëve dhe pret 
 
 Ne rezervojmë të drejtën për të hequr përmbajtje të pretenduara që janë cënuar pa njoftim paraprak, në bazë të linjës sonë, dhe pa detyrim për ju. Në rrethana të përshtatshme, Code.org gjithashtu do të pezullojë llogarinë e përdoruesit në qoftë se përdoruesi është i vendosur të jetë një shkelës i vazhdueshëm. Për të raportuar një shkelje të së drejtës së autorit, ju lutem na kontaktoni ne. Agjenti ynë për njoftimin e pretendimeve për shkeljen e të drejtës së autorit mund të kontaktohet duke dërguar një email në copyright@code.org.
 
-### Të Drejtat e Pronësisë Intelektuale Të Code.org, dhe Liçensa Juaj Për Të Përdorur Shërbimet
+### Code.org Intellectual Property Rights, and Your License to Use the Services
 
 Të gjitha të drejtat, titulli, dhe interesi për Shërbimet (duke përjashtuar Përmbajtjen e ofruar nga përdoruesit), janë dhe do të mbeten pronë ekskluzive e Code.org dhe liçensuesit të saj. Shërbimet janë të mbrojtura nga e drejta e autorit, marka tregtare, patenta dhe ligjet e tjera të Shteteve të Bashkuara. Përmbajtja, informacioni, të dhënat, kodi, dhe materialet që lidhen me Shërbimet ("**Përmbajtja**") janë të mbrojtura nga pronësia intelektuale dhe ligje të tjera. Ju duhet të pajtoheni me të gjitha ligjet e tilla dhe të drejtat e autorit në fuqi, markë tregtare ose shënimeve apo kufizime të tjera ligjore. Asgjë nga Kushtet nuk ju jep të drejtën për të përdorur emrin Code.org apo ndonjë nga markat tregtare, logot, emrat e domain-eve, dhe karakteristika të tjera dalluese të markës së Code.org. Çdo reagim, komente, apo sugjerime ju mund të siguroni në lidhje me Code.org, ose Shërbimet është plotësisht vullnetar dhe ne do të jemi të lirë të përdorim reagime të tilla, komente apo sugjerim si ne ta shohim të arsyeshme dhe pa asnjë detyrim për ju.
 
@@ -100,15 +102,15 @@ Stema e CODE® është një markë e regjistruar e Code.org. Ju mund ta përdorn
 
 Code.org nuk përfaqëson ose të garantojë që këto Sherbime do të jenë pa gabime, pa viruse apo komponentë të tjerë të dëmshme, ose se difektet do të korrigjohen. Ne nuk përfaqësojmë apo garantojmë që informacioni në dispozicion përmes Shërbimeve do të jetë i saktë, në kohë apo ndryshe i besueshëm. Ne mund të bëjmë ndryshime në karakteristika, funksionalitete ose përmbajtjen e Shërbimeve në çdo kohë. Ne rezervojmë të drejtën në bazë të linjës sonë të redaktojmë dhe fshijmë çdo material, informacion ose materiale të tjera të vëna në dispozicion si pjesë e Shërbimeve.
 
-### Code.org dhe Forumet e Suportit
+### Code.org Store and Support Forums
 
 Dyqanit Code.org dhe formuet e suportit të Code.org janë drejtuar nga palë të treta. Ju lutem lexoni Marrëveshjen e Përdoruesit dhe Politikat e Privatësisë për këto vende veç e veç para se të bleni një objekt nga dyqani Code.org ose para se të postoni një pyetje apo përgjigje në forumet e suportit. Duke hyrë në dyqanin dhe forumet mbështetëse të Code.org, ju pranoni ti përmbaheni marrëveshjes përkatëse të përdoruesit dhe politikave të privatësisë së këtyre palëve të treta.
 
-### Udhëheqësit vullnetarë
+### Volunteer mentors
 
 Code.org inkurajon inxhinierët software të dalin vullnetarë si mentorë për të ndihmuar mësuesit në shkenca kompjuterike. Code.org jep informacion në lidhje me këto vullnetarë potencial pa ndonjë garanci, referencë, apo sfond. Nëse ju jeni një Edukator i cili zgjedh të kërkojë ndihmën e një vullnetari me burim nëpërmjet bazës së të dhënave të Code.org-së, kjo është tërësisht përgjegjësia juaj të kontrollosh referencat ose të kryesh verifikimet e dokumentacionit. Code.org nuk jep asnjë garanci ose informacione përveç aftësisë për të kontaktuar një vullnetar potencial, dhe të gjitha përgjegjësitë për çdo përdorim të vullnetarëve qëndrojnë vetëm me ju. Code.org nuk garanton saktësinë ose plotësinë e çdo informacioni të dhënë nga vullnetarët dhe ne as nuk miratojmë, as nuk jemi përgjegjës për saktësinë ose besueshmërinë e ndonjë opinioni, këshille, apo deklarate të bërë nga ndonjë palë tjetër përveç Code.org. Në asnjë rrethanë nuk është Code.org përgjegjës për ndonjë humbje ose dëmtim që rezulton nga besimi i ndonjë personi në informacioni apo përmbajtje të tjera të postuara tek Shërbimet apo transmetuar nga të tjerët.
 
-### Garancia, Donacionet dhe Pagesat
+### Pledges, Donations and Payments
 
 A. Garancia dhe Donacionet. Nëse ju bëni një garanci apo donacion në këtë website, Ju pranoni të paguani të gjitha garancitë dhe donacionet e specifikuara.
 
@@ -116,7 +118,7 @@ B. Metodat e pagesave. Code.org do të ngarkojë garancinë ose donacionin që j
 
 C. Autorizimi i Kartës së Kreditit. Në qoftë se ju përdorni një kartë krediti për të paguar për çdo garanci ose dhurim që lidhet me faqen e web-it, Ju do t'ju kërkohet që ti siguroni Code.org një numër karte krediti nga një emetues që ne e pranojmë. Code.org mund të kërkojë para-autorizimin e llogarisë së kartës tuaj të kreditit për të verifikuar nëse karta juaj e krediti është e vlefshme dhe/ose ka fondet e nevojshme apo kredit në dispozicion për të mbuluar garancinë apo donacionin tuaj. Këto para-autorizime do të reduktojnë bilancin tuaj në dispozicion për shumën e autorizimit derisa ajo është lëshuar apo pajtuar me pagesën aktuale. Ju lutemi te kontaktoni emetuesin e kartës tuaj të kreditit në qoftë se ju keni pyetje shtesë në lidhje kur një sasi e autorizuar do të hiqet nga deklarata juaj.
 
-### Mohimet dhe Kufizimet e Përgjegjësisë
+### Disclaimers and Limitations of Liability
 
 Ju lutemi lexoni këtë seksion me kujdes meqënëse kufizon përgjegjësinë e Code.org dhe prindërit, degët, filialet, kompanitë e lidhura, zyrtarët, drejtorët, punonjësit, agjentët, përfaqësues, partnerët, dhe liçensuesit (kolektivisht, "Subjektet e Code.org"). Secili nga paragrafët më poshtë vlen deri në masën maksimale të lejuar sipas ligjit në fuqi. Disa juridiksione nuk lejojnë mohimin e garancive të nënkuptuara ose kufizimin e përgjegjësisë në kontratat, dhe si rezultat përmbajtja e këtij neni nuk mund të zbatohet për ju. Asgjë në këtë seksion nuk ka për qëllim të kufizojë ndonjë të drejtë që mund të keni të cilat nuk mund të jenë të kufizuara në mënyrë të ligjshme.
 
@@ -136,7 +138,7 @@ DERI NË NIVELIN MAKSIMAL TË LEJUAR NGA LIGJI NË FUQI, SUBJEKTET E CODE.ORG DO
 
 DISA SHTETE OSE AUTORITETE NUK LEJOJNË PËRJASHTIMIN E GARANCIVE TË NËNKUPTUARA KËSHTUQË PËRJASHTIMET E MESIPERME NUK MUND TË PËRDOREN TEK JU.
 
-### Kushtet e përgjithshme
+### General Terms
 
 #### A. Heqja dorë dhe e pjesëshme
 

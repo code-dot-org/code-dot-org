@@ -80,5 +80,6 @@
   "turnTooltip": "Sanatçı sağa ya da sola derece belirtilen açıda döndürür.",
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin genişliğini değiştirir.",
-  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
+  "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir.",
+  "setAlpha": "set alpha"
 }

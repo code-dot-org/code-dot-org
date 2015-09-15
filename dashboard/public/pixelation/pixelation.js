@@ -37,13 +37,78 @@ function pixelationInit() {
     bitsPerPixelRange.setAttribute("disabled", "true");
     startOver.setAttribute("disabled", "true");
   }
+
+  customizeStyles();
+  initProjects();
+}
+
+function customizeStyles() {
+  if (!window.options) {
+    // Default is version 3 (all features enabled).
+    window.options = {version: '3'};
+  }
+  if (options.version === '1') {
+    $('.hide_on_v1').hide();
+
+    // The layout is fundamentally different in version 1 than it is in other versions.
+    // Rearrange the DOM so that the visualization column sits at the top left.
+    var visualizationColumn = document.getElementById('visualizationColumn');
+    var visualizationEditorHeader = document.getElementById('visualizationEditorHeader');
+    visualizationColumn.parentNode.insertBefore(visualizationColumn, visualizationEditorHeader);
+  } else if (options.version === '2') {
+    $('.hide_on_v2').hide();
+    $('#height, #width').prop('readonly', true);
+  }
+  if (options.hex) {
+    $('input[name="binHex"][value="hex"]').prop('checked', true);
+  }
+  if (options.instructions) {
+    $('#below_viz_instructions').text(options.instructions).show();
+  }
+}
+
+function initProjects() {
+  // Initialize projects for save/load functionality if channel id is present.
+  if (appOptions.channel) {
+    window.apps.setupProjectsExternal();
+    var sourceHandler = {
+      setInitialLevelHtml: function (levelHtml) {},
+      getLevelHtml: function () {
+        return '';
+      },
+      setInitialLevelSource: function (levelSource) {
+        options.projectData = levelSource;
+      },
+      getLevelSource: function () {
+        return pixel_data.value.replace(/[ \n]/g, "");
+      }
+    };
+    dashboard.project.load().then(function() {
+      // Only enable saving if the initial load succeeds. This means new work
+      // will not be saved, but old work will not be erased and may become
+      // available by refreshing the page.
+      options.saveProject = dashboard.project.save.bind(dashboard.project);
+      options.projectChanged = dashboard.project.projectChanged;
+      window.dashboard.project.init(sourceHandler);
+    }).always(function() {
+      pixelationDisplay();
+    });
+  } else {
+    pixelationDisplay();
+  }
+}
+
+function pixelationDisplay() {
+  pixel_data.value = options.projectData || options.data;
+  drawGraph(null, false, true);
+  formatBitDisplay();
 }
 
 function isHex() {
   return "hex" == document.querySelector('input[name="binHex"]:checked').value;
 }
 
-function drawGraph(ctx, exportImage) {
+function drawGraph(ctx, exportImage, updateControls) {
   ctx = ctx || main_ctx;
   ctx.fillStyle = "#ccc";
   ctx.fillRect(0, 0, MAX_SIZE, MAX_SIZE);
@@ -72,30 +137,37 @@ function drawGraph(ctx, exportImage) {
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
 
-  // Restore cursor position.
-  cursorPosition += (pixel_data.value.length - characterCount);
-  pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+  // Restore cursor position. This may steal the focus from other controls,
+  // so only do it if we know they should be updated.
+  if (updateControls) {
+    cursorPosition += (pixel_data.value.length - characterCount);
+    pixel_data.setSelectionRange(cursorPosition, cursorPosition);
+  }
 
   var bitsPerPix = 1;
   if (options.version == '1') {
-    image_w = widthText.value;
-    image_h = heightText.value;
+    image_w = getPositiveValue(widthText);
+    image_h = getPositiveValue(heightText);
   } else {
     // Read width, height out of the bit string (where width is given in byte 0, height in byte 1).
     image_w = binToInt(readByte(binCode, 0));
     image_h = binToInt(readByte(binCode, 1));
-    widthText.value = widthRange.value = image_w;
-    heightText.value = heightRange.value = image_h;
+    if (updateControls) {
+      widthText.value = widthRange.value = image_w;
+      heightText.value = heightRange.value = image_h;
+    }
     binCode = binCode.substring(16, binCode.length);
 
     if (options.version != '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
-      bitsPerPixelText.value = bitsPerPix;
-      bitsPerPixelRange.value = bitsPerPix;
+      if (updateControls) {
+        bitsPerPixelText.value = bitsPerPix;
+        bitsPerPixelRange.value = bitsPerPix;
+      }
       binCode = binCode.substring(8, binCode.length);
 
       // Update pixel format indicator.
-      var bitsPerPixel = parseInt(bitsPerPixelText.value);
+      var bitsPerPixel = getPositiveValue(bitsPerPixelText);
       if (hexMode && bitsPerPixel % 4 !== 0) {
         pixel_format.innerHTML = '<span class="unknown">' + pad('', Math.ceil(bitsPerPixel / 4), '-') + '</span>';
       } else {
@@ -157,8 +229,8 @@ function drawGraph(ctx, exportImage) {
 function formatBitDisplay() {
 
   var theData = pixel_data.value;
-  var chunksPerLine = parseInt(widthText.value);
-  var chunkSize = parseInt(bitsPerPixelText.value);
+  var chunksPerLine = getPositiveValue(widthText);
+  var chunkSize = getPositiveValue(bitsPerPixelText);
 
   // If in binary mode.
   var newBits = formatBits(theData, chunkSize, chunksPerLine);
@@ -323,6 +395,9 @@ function binToInt(bits) {
  */
 function bitsToColors(bitString, bitsPerPixel) {
   var colorList = [];
+  if (!bitsPerPixel) {
+    return colorList;
+  }
 
   for (var i = 0; i < bitString.length; i += bitsPerPixel) {
     colorList.push(getColorVal(bitString.substring(i, i + bitsPerPixel), bitsPerPixel));
@@ -357,14 +432,15 @@ function changeVal(elementID) {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
+  setMinTextValues();
   drawGraph();
 }
 
 function setSliders() {
-
-  heightRange.value = heightText.value;
-  widthRange.value = widthText.value;
-  bitsPerPixelRange.value = bitsPerPixelText.value;
+  // Make sure slider value is at least 1
+  heightRange.value = getPositiveValue(heightText);
+  widthRange.value = getPositiveValue(widthText);
+  bitsPerPixelRange.value = getPositiveValue(bitsPerPixelText);
 
   if (options.version != '1') {
     updateBinaryDataToMatchSliders();
@@ -373,11 +449,27 @@ function setSliders() {
   drawGraph();
 }
 
+function setMinTextValues() {
+  heightText.value = getPositiveValue(heightText);
+  widthText.value = getPositiveValue(widthText);
+  bitsPerPixelText.value = getPositiveValue(bitsPerPixelText);
+}
+
+/**
+ * @param element {Element}
+ * @returns element's numerical value if it represents a positive integer,
+ * or 1 if it is non-positive or non-numerical.
+ */
+function getPositiveValue(element) {
+  var value = parseInt(element.value, 10);
+  return value >= 1 ? value : 1;
+}
+
 function updateBinaryDataToMatchSliders() {
 
-  var heightByte = pad(parseInt(heightRange.value).toString(2), 8, "0");
-  var widthByte = pad(parseInt(widthRange.value).toString(2), 8, "0");
-  var bppByte = pad(parseInt(bitsPerPixelRange.value).toString(2), 8, "0");
+  var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
+  var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
+  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
 
@@ -473,6 +565,8 @@ function startOverClicked() {
 
 function startOverConfirmed() {
   pixel_data.value = options.data;
-  drawGraph();
+  drawGraph(null, false, true);
   formatBitDisplay();
 }
+
+pixelationInit();

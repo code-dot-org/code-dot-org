@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  wrapup_video_id :integer
+#  trophies        :boolean          default(FALSE), not null
+#  hidden          :boolean          default(FALSE), not null
+#  user_id         :integer
+#  login_required  :boolean          default(FALSE), not null
+#  properties      :text(65535)
+#
+# Indexes
+#
+#  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include Seeded
@@ -173,7 +194,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
     self.script_levels[chapter - 1] # order is by chapter
   end
 
