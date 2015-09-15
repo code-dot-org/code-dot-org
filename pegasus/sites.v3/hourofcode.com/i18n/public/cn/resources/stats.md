@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # 导语和可用数据
 
@@ -6,8 +12,10 @@
 
 ### 以编程一小时开启你学校的计算机科学
 
-计算机无处不在，但是和10年前相比，教计算机科学的学校却更少了。 好消息是，我们正在着手改变现状。 如果你听说过去年的[编程一小时](<%= hoc_uri('/') %>) ，就可能知道它创造了历史。 In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [编程一小时](<%= hoc_uri('/') %>)就是介绍计算机科学一小时，旨在揭秘程序并表明它是任何人都可以学习的基础知识。 [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
+计算机无处不在，但是和10前相比，教计算机科学的学校却更少了。 好消息是，我们正在着手改变现状。 If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
 ## Infographics
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

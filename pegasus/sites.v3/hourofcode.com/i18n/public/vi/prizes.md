@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -56,11 +62,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## Lucky Schools won an Actua Workshop {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Các thành viên Actua cung cấp các hội thảo về khoa học, công nghệ, kỹ thuật, và toán học (STEM). Chúng được kết nối với chương tình học cấp tỉnh và vùng lãnh thổ cho các sinh viên chương trình 12 năm. Những kinh nghiệm trong lớp học đã được cung cấp bởi các sinh viên tiêu biểu được đào tạo và có đam mê trong STEM. Các giáo viên có thể hi vọng những minh chứng tuyệt vời, các bài thực hành tương tác và rất nhiều niềm vui STEM cho sinh viên của họ! Xin chú ý rằng hội thảo trong lớp học có thể thay đổi ở vùng cao và nông thôn.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-[Actua](http://actua.ca/) là dẫn đầu của Canada trong nghiên cứu, công nghệ, kỹ thuật và tiếp cận toán học. Mỗi năm Actua đạt hơn 225,000 bạn trẻ tham gia trong hơn 500 cộng đồng thông qua các chương trình "phá vỡ rào cản".
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**Xin chúc mừng các trường dành chiến thắng trong năm 2014!**
+**Congratulations to the 2014 winners!**
 
 | Trường                            | Thành phố   | Thành viên mạng lưới Actua      |
 | --------------------------------- | ----------- | ------------------------------- |
@@ -90,10 +96,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) là ứng dụng điều khiển bóng robot thay đổi phương pháp học cho học sinh. Được tài trợ bởi [SPRK lessons](http://www.gosphero.com/education/), những robot này giúp cho trẻ em biết cách làm chủ lập trình một cách thú vị trong khi rèn luyện các kĩ năng trong toán học và khoa học. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Những câu hỏi xung quanh giải thưởng? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

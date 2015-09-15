@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -56,11 +62,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## Lucky Schools won an Actua Workshop {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Anëtarët Actua japin shkencë, teknologji, inxhinieri dhe matematikë (STEM) seminare që janë të lidhura me programin mësimor provincial dhe territorial të mësuarit për studentët e K-12 . Këto përvoja në klasë janë dorëzuar nga studentë të diplomuar shumë mirë në STEM. Mësuesit mund të presin demonstrime emocionuese, eksperimente interaktive dhe shumë argëtim STEM për nxënësit e tyre! Ju lutem vini re se në klasë disponueshmëria e punishtes mund të ndryshojnë në komunitetet e largëta dhe rurale.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-[Actua](http://actua.ca/)është lider i Kanadasë në Shkencë, Teknologji, Inxhinieri, dhe Matematike. Çdo vit Actua arrin mbi 225.000 të rinj në mbi 500 komunitete përmes programeve penges - thyese.
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**Urime për fituesit e 2014!**
+**Congratulations to the 2014 winners!**
 
 | Shkollë                         | Qyteti      | Anëtarët e rrjetit Actua        |
 | ------------------------------- | ----------- | ------------------------------- |
@@ -90,10 +96,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/)është app i kontrolluar robotik duke ndryshuar mënyrën sesi nxënësit mësojnë. Mundësuar nga [mësimet SPRK](http://www.gosphero.com/education/), këto robot të rrumbullakët i japin fëmijëve një kurs argëtimi në programim ndërsa mprehin aftësitë e tyre në matematikë dhe shkencë. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Më shumë pyetje mbi çmimet? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

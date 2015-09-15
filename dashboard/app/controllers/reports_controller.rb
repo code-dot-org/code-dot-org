@@ -209,6 +209,8 @@ SQL
     @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
     @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
+    @is_sampled = false
+
     output_data = {}
     %w(Attempt Success).each do |key|
       dimension = 'ga:eventLabel'
@@ -218,9 +220,8 @@ SQL
         filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
       ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-      if ga_data.data.contains_sampled_data
-        raise ArgumentError, 'Google Analytics response contains sampled data, aborting.'
-      end
+
+      @is_sampled ||= ga_data.data.contains_sampled_data
 
       ga_data.data.rows.each do |r|
         label = r[0]
