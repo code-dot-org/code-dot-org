@@ -645,10 +645,10 @@ NetSimRouterNode.getMaximumRoutersPerShard = function () {
   // the second-to-last address part.
   var addressFormatParts = getAddressFormatParts();
   if (addressFormatParts.length >= 2) {
-    return Math.min(NetSimGlobals.getMaxRouters(),
+    return Math.min(NetSimGlobals.getGlobalMaxRouters(),
         Math.pow(2, addressFormatParts.reverse()[1]));
   }
-  return NetSimGlobals.getMaxRouters();
+  return NetSimGlobals.getGlobalMaxRouters();
 };
 
 /**

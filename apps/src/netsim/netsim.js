@@ -223,7 +223,7 @@ NetSim.prototype.init = function(config) {
    * may be lower if bounded by addressable space.
    * @type {number}
    */
-  this.maxRouters = config.netsimMaxRouters;
+  this.globalMaxRouters = config.netsimMaxRouters;
 
   /**
    * Configuration for reporting level completion

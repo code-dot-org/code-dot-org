@@ -263,6 +263,6 @@ exports.initializeGlobalsToDefaultValues = function () {
   // into other tests.
   NetSimGlobals.setRootControllers({}, {
     level: _.clone(levels.custom, true),
-    maxRouters: 20
+    globalMaxRouters: 20
   });
 };

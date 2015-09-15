@@ -88,8 +88,8 @@ module.exports = {
   /**
    * @returns {number}
    */
-  getMaxRouters: function () {
-    return netsim_.maxRouters;
+  getGlobalMaxRouters: function () {
+    return netsim_.globalMaxRouters;
   },
 
   /**
