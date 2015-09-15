@@ -590,70 +590,94 @@ class NetSimApiTest < Minitest::Test
     assert_equal(400, @net_sim_api.last_response.status)
   end
 
-  def test_limit_shard_to_20_routers
-    20.times do
+  def test_limit_shard_routers_to_max_routers
+    CDO.netsim_max_routers.times do
       create_node(type: NODE_TYPES[:router])
       assert_equal 201, @net_sim_api.last_response.status
     end
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We want the 21st node to fail
     create_node(type: NODE_TYPES[:router])
-    assert_equal 400, @net_sim_api.last_response.status, "Went over router limit!"
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Went over router limit!"
+    assert_equal(400, @net_sim_api.last_response.status,
+                 "Went over router limit!")
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Went over router limit!")
   end
 
-  def test_do_not_limit_shard_to_20_clients
-    20.times do
+  def test_do_not_limit_shard_clients_to_max_routers
+    CDO.netsim_max_routers.times do
       create_node(type: NODE_TYPES[:client])
       assert_equal 201, @net_sim_api.last_response.status
     end
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We want the 21st node to fail
     create_node(type: NODE_TYPES[:client])
-    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 21st client"
-    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 21st client"
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 21st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 21st client")
   end
 
-  def test_having_20_routers_should_not_limit_clients
-    20.times do
+  def test_having_max_routers_should_not_limit_clients
+    CDO.netsim_max_routers.times do
       create_node(type: NODE_TYPES[:router])
       assert_equal 201, @net_sim_api.last_response.status
     end
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+    assert_equal CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes"
 
     # We are out of router spaces, but adding a client should be okay
     create_node(type: NODE_TYPES[:client])
-    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 1st client"
-    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 1st client"
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st client")
   end
 
-  def test_having_20_clients_should_not_limit_routers
-    20.times do
+  def test_having_max_routers_of_clients_should_not_limit_routers
+    CDO.netsim_max_routers.times do
       create_node(type: NODE_TYPES[:client])
       assert_equal 201, @net_sim_api.last_response.status
     end
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We should still be able to add a router
     create_node(type: NODE_TYPES[:router])
-    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 1st router"
-    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 1st router"
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st router")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st router")
   end
 
-  def test_having_20_routers_on_one_shard_does_not_limit_another
-    20.times do
+  def test_having_max_routers_on_one_shard_does_not_limit_another
+    CDO.netsim_max_routers.times do
       create_node(type: NODE_TYPES[:router])
       assert_equal 201, @net_sim_api.last_response.status
     end
-    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We should still be able to add a router on another shard
     @shard_id = '_testShard3'
     create_node(type: NODE_TYPES[:router])
-    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed router on another shard"
-    assert_equal 1, read_records(TABLE_NAMES[:node]).count, "Should have allowed router on another shard"
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed router on another shard")
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed router on another shard")
   end
 
   # Methods below this point are test utilities, not actual tests
