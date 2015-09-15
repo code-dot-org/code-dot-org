@@ -7,8 +7,7 @@ require_relative '../config/environment'
 
 puts "Starting"
 
-mazes = Level.all.select { |x| x.is_a? Maze }
-mazes_without_step = mazes.select{|x| x.step_mode == 0}
+mazes_without_step = Maze.all.select{|x| x.step_mode == 0}
 puts "Found #{mazes_without_step.length} levels to update"
 
 mazes_without_step.each do |m|
