@@ -79,8 +79,7 @@ window.dashboard.footer = (function () {
         // The first time we click anywhere, hide any open children
         $(document.body).one('click', function (event) {
           // a couple of our menu items have their own click handlers
-          if (event.target === React.findDOMNode(this.refs.menuCopyright) ||
-              event.target === React.findDOMNode(this.refs.menuReportAbuse)) {
+          if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
             return;
           }
 
@@ -124,13 +123,6 @@ window.dashboard.footer = (function () {
       clickMenuCopyright: function (event) {
         this.setState({ menuState: MenuState.COPYRIGHT });
         this.minimizeOnClickAnywhere();
-      },
-
-      clickMenuReportAbuse: function (event) {
-        // we do this in our click handler because at load time we don't yet
-        // have an id
-        window.open('https://support.code.org/hc/en-us/requests/new' +
-          '?&abuseChannelId=' + dashboard.project.getCurrentId(), '_blank');
       },
 
       clickBaseMenu: function () {
@@ -225,14 +217,11 @@ window.dashboard.footer = (function () {
           if (item.type === 'copyright') {
             ref = 'menuCopyright';
             onClick = this.clickMenuCopyright;
-          } else if (item.type === 'reportAbuse') {
-            ref = 'menuReportAbuse';
-            onClick = this.clickMenuReportAbuse;
           }
 
           return (
             <li key={index} style={styles.listItem}>
-            <a href={item.link} ref={ref} onClick={onClick}>
+            <a href={item.link} ref={ref} onClick={onClick} target="_blank">
               {item.text}
             </a>
             </li>
