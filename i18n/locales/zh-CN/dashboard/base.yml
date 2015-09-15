@@ -599,4 +599,9 @@ zh:
     delete_confirm_text: 您的项目将从我的项目列表中永久删除。任何人将不再能够通过您已共享的链接查看您的项目。
     view_all: 查看我的项目
     remix: 混合
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: 'Click "Remix" to spin-off your own version!'
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio

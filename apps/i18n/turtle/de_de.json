@@ -65,6 +65,7 @@
   "penTooltip": "Hebt oder senkt den Stift um das Zeichnen zu starten oder zu beenden.",
   "penUp": "Stift anheben",
   "reinfFeedbackMsg": "Dein Bild ist fertig! Arbeite weiter daran oder gehe zur nächsten Aufgabe.",
+  "setAlpha": "set alpha",
   "setColour": "Farbe festlegen",
   "setPattern": "Muster einstellen",
   "setWidth": "Breite festlegen",
@@ -80,6 +81,5 @@
   "turnTooltip": "Dreht den Künstler nach links oder rechts um den angegebenen Winkel.",
   "turtleVisibilityTooltip": "Macht den Künstler sichtbar oder unsichtbar.",
   "widthTooltip": "Ändert die Breite des Stiftes.",
-  "wrongColour": "Ihr Bild hat die falsche Farbe. In dieser Aufgabe muss es %1 sein.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Ihr Bild hat die falsche Farbe. In dieser Aufgabe muss es %1 sein."
 }
