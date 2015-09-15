@@ -4,3 +4,7 @@ title 'Assessment: Modulo and one-way functions'
 markdown <<MARKDOWN
 Explain how modulo acts as a one-way function?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A one way function is a function that is easy to perform in one direction but difficult to reverse. For example, it is quite easy to multiply two numbers together but it is harder to figure out which numbers were multiplied if all you have is the final multiplied value. Modulo acts in the same way because it is easy to apply the modulo operator to a number (it's essentially just the remainder after a division problem) but much harder or even impossible to figure out which value was originally mod-ed. Student responses need only reference the fact that it is easy to apply the modulo operator but difficult to reverse it.
+MARKDOWN
