@@ -85,12 +85,10 @@ var BarGraph = function (options) {
   this.container = d3.select(options.chart_container.get(0));
 
   /** @type {jQuery} */
-  this.text_input = options.text_input;
-
-  /** @type {jQuery} */
   this.text_output = options.text_output;
 
-  this.text_input.on("input", this.processPlainText.bind(this));
+  /** @type {string} */
+  this.message = options.message;
 
   /** @type {Array.UserData} */
   this.message_data = LETTERS.map(function (letter) {
@@ -158,6 +156,57 @@ var BarGraph = function (options) {
   this.drag = this.createDragBehavior();
 
   this.buildSVG();
+
+  if (this.message) {
+    this.setMessage(this.message);
+  }
+};
+
+/**
+ * Static method for sorting two Message or SubstitutionData items
+ * alphabetically.
+ * @param {MessageData|SubstitutionData} a
+ * @param {MessageData|SubstitutionData} b
+ * @returns {number} comparator
+ */
+BarGraph.alphabeticSort = function (a, b) {
+  //return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
+  return (a.letter.charCodeAt() - b.letter.charCodeAt());
+};
+
+/**
+ * Static method for sorting two Message or SubstitutionData items
+ * by relative frequency. Ties are broken alphabetically.
+ * @param {MessageData|SubstitutionData} a
+ * @param {MessageData|SubstitutionData} b
+ * @returns {number} comparator
+ */
+BarGraph.frequencySort = function (a, b) {
+  // we do b-a rather than a-b because the values we're examining
+  // are < 1
+  var delta = (b.frequency - a.frequency);
+
+  // If the two letters happen to have the exact same frequency,
+  // order them (arbitrarily) alphabetically
+  return (delta === 0) ? BarGraph.alphabeticSort(a, b) : delta;
+};
+
+/**
+ * Setter for new messages. Updates this.message_data, rerenders the
+ * graph, and updates the output.
+ *
+ * @param {string} message
+ */
+BarGraph.prototype.setMessage = function (message) {
+  this.message = message;
+
+  // Update this.message_data to reflect frequency changes
+  var frequency_map = this.buildMessageFrequencyMap();
+  this.message_data.forEach(function (d) {
+    d.frequency = frequency_map[d.letter];
+  });
+  this.render();
+  this.processSubstitutions();
 };
 
 /**
@@ -233,20 +282,10 @@ BarGraph.prototype.getReverseSubstitutionMap = function (override) {
 };
 
 /**
- * Helper method to process changes to user input. First updates the
- * user frequency graph, then updates the output.
- */
-BarGraph.prototype.processPlainText = function () {
-  this.updateMessageDataFromInput();
-  this.processSubstitutions();
-};
-
-/**
- * Method to populate the output based on the input and the user-defined
+ * Populates the output based on this.message and the user-defined
  * substitutions
  */
 BarGraph.prototype.processSubstitutions = function () {
-  var input = this.text_input.val();
 
   /* this version preserves punctuation and special characters from the
    * input in the output. If we want to strip them:
@@ -255,7 +294,7 @@ BarGraph.prototype.processSubstitutions = function () {
 
   var substMap = this.getSubstitutionMap();
 
-  var output = input.split('').map(function (letter) {
+  var output = this.message.split('').map(function (letter) {
 
     var substitution;
     if (substMap[letter]) {
@@ -283,12 +322,12 @@ BarGraph.prototype.processSubstitutions = function () {
 };
 
 /**
- * Builds a mapping from letters in the input to relative frequencies
+ * Builds a mapping from letters in this.message to relative frequencies
  * from 0 to 1
- * @returns {Object} { user_letter: count, ... }
+ * @returns {Object} { message_letter: count, ... }
  */
-BarGraph.prototype.buildInputFrequencyMap = function () {
-  var inputString = this.text_input.val().replace(/[^A-Za-z]/g, "").toUpperCase();
+BarGraph.prototype.buildMessageFrequencyMap = function () {
+  var inputString = this.message.replace(/[^A-Za-z]/g, "").toUpperCase();
   var totalCharCount = inputString.length;
 
   // Create a zeroed-out frequency map.
@@ -318,17 +357,11 @@ BarGraph.prototype.buildInputFrequencyMap = function () {
 };
 
 /**
- * Updates this.message_data to reflect frequency changes
+ * Returns a transformation translation for the given draggable letter.
+ *
+ * @param {SubstitutionData} d
  */
-BarGraph.prototype.updateMessageDataFromInput = function () {
-  var frequency_map = this.buildInputFrequencyMap();
-  this.message_data.forEach(function (d) {
-    d.frequency = frequency_map[d.letter];
-  });
-  this.render();
-};
-
-BarGraph.prototype.positionDragLetter = function (d, i) {
+BarGraph.prototype.positionDragLetter = function (d) {
   var x, y;
   if (d.substitution.locked) {
     x = this.substitutionLetterScale(d.substitution.letter);
@@ -942,24 +975,22 @@ BarGraph.prototype.render = function () {
   return true;
 };
 
-var messageSelect;
-
-function addMessageOption (id, text) {
-  var option = document.createElement("option");
-  option.value = id;
-  option.text = (text) ? text.substring(0, 24) + " ..." : id;
-  messageSelect.append(option);
-}
-
 $(document).ready(function () {
   var bg = new BarGraph({
-    text_input: $("#input"),
+    message: "hello there I'm some text",
     text_output: $("#output"),
     chart_container: $("#d3chart")
   });
   bg.render();
 
-  messageSelect = $("#messages");
+  var messageSelect = $("#messages");
+
+  function addMessageOption (id, text) {
+    var option = document.createElement("option");
+    option.value = id;
+    option.text = (text) ? text.substring(0, 24) + " ..." : id;
+    messageSelect.append(option);
+  }
 
   Object.keys(messages).forEach(function(id) {
     addMessageOption(id);
@@ -967,7 +998,7 @@ $(document).ready(function () {
 
   messageSelect.change(function () {
     var message = messages[this.selectedOptions[0].value];
-    $('#input').val(message).trigger('input');
+    bg.setMessage(message);
   });
 
   $('#custom-message').click(function () {
@@ -988,21 +1019,12 @@ $(document).ready(function () {
       messages[id] = text;
 
       addMessageOption(id, 'Custom: ' + text);
-
-      $('#input').val(text).trigger('input');
+      bg.setMessage(text);
       dialog.hide();
     });
   });
 
-  /*
-   *$(window).on('resize', debounce(function () {
-   *  bg.resize();
-   *  bg.createScales();
-   *  bg.render();
-   *}, 200));
-   */
-
-  $("#shift-left").on("click", function () {
+  $("#shift-left").click(function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) - 1;
     shiftAmt = shiftAmt % 26;
     if (shiftAmt < 0) shiftAmt += 26;
@@ -1011,7 +1033,7 @@ $(document).ready(function () {
     }
   });
 
-  $("#shift-right").on("click", function () {
+  $("#shift-right").click(function () {
     var shiftAmt = parseInt($("#shiftAmt").val()) + 1;
     shiftAmt = shiftAmt % 26;
     if (shiftAmt < 0) shiftAmt += 26;
@@ -1026,15 +1048,12 @@ $(document).ready(function () {
   });
 
   $("#fill-rand").click(bg.randomize.bind(bg));
-
   $("#order-substitutions").click(bg.sortSubstitutions.bind(bg));
+  $("#sort-toggle button").click(bg.handleSortChange.bind(bg));
 
-  $("#sort-toggle button").on("change input click", bg.handleSortChange.bind(bg));
-
+  // When we switch back to shift mode, force an alphabetic order
   $("a[href=#shift]").click(function(){
     $("#sort-toggle button[value=alphabetic]").trigger('click');
-    //bg.sortMessageData(BarGraph.alphabeticSort);
   });
 
-  bg.processPlainText();
 });
