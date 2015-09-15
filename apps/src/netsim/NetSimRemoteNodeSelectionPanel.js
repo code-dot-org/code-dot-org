@@ -23,6 +23,7 @@ var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
+var NetSimRouterNode = require('./NetSimRouterNode');
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work
@@ -348,7 +349,9 @@ NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
     return false;
   }
 
-  return this.nodesOnShard_.filter(function (node) {
+  var routerLimit = NetSimRouterNode.getMaximumRoutersPerShard();
+  var routerCount = this.nodesOnShard_.filter(function (node) {
         return NodeType.ROUTER === node.getNodeType();
-      }).length < NetSimGlobals.getMaxRouters();
+      }).length;
+  return routerCount < routerLimit;
 };
