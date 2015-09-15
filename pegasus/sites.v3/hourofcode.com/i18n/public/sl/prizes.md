@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -90,10 +96,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) je robotska žoga, ki se usmerja s pomočjo mobilne aplikacije, in ki spremeni način, kako se učenci učijo. is the app-controlled robotic ball changing the way students learn. Zahvaljujoč [vajam SPRK](http://www.gosphero.com/education/) ti okrogli robotki nudijo otrokom zabaven in hiter uvod v programiranje in hkrati krepijo njihove matematične veščine in naravoslovno znanje. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Več vprašanj o nagradah? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

@@ -1,19 +1,25 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Čas kodiranja vodič događaja
 
-Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Pripremite se za vaš događaj
 
   * Odredite mjesto, datum i vrijeme
-  * Pošaljite [ pismo](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) da pozovete vašeg lokalnog gradonačelnika, parlamentarce, ministre ili utjecajne poslovne ljude da održe govore.
-  * Pozovite medije npr. lokalnu televizijsku kuću, novine, obrazovne/tech blogere. Vidjeti naš [ press kit](<%= hoc_uri('/resources/press-kit') %>) za pomoć.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Tokom događaja
 
-  * Započnite događaj s jednim od naših [ inspirativnih videa](<%= hoc_uri('/resources#videos') %>).
-  * Dajte uvod o važnosti računalne znanosti, koristeći [ statistike i infografiku](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Druge ideje za događaj: 
@@ -30,23 +36,25 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## Primjer plana događaja
 
-**Događaj:** U svim školama neka započnu skupine sedmica obrazovanja iz Informatičke nauke
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 7th (start of Computer Science Education Week)
 
-**Vrijeme:** Tokom školskog dana. Najbolje sredinom jutra. Trajanje 1 sat.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Lokacija:** Školska sala za priredbe (zbornica, svečana sala, kantina)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## Program
 
-| Vrijeme          | Radnja                                                                                                                    |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                    |
-| 10:05 - 10:15 am | Direktor daje uvod o važnost informatike. Pomoću ove [statistike i infografike](/resources/stats)                         |
-| 10:15 - 10:30 am | Specijalni gost razgovarao o svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.    |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.  |
-| 10:40 - 11:00 am | Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se informatika može izvoditi bez korištenja računala. |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                         |
+| Vrijeme          | Radnja                                                                                                                                              |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Specijalni gost razgovarao o svojoj prošlosti i kako tehnologija i računarstvo igra važnu ulogu u svakodnevnom životu.                              |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Studenti pokazuju ogledni primjerak isključeni sa mreže o tome kako se informatika može izvoditi bez korištenja računala.                           |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>
