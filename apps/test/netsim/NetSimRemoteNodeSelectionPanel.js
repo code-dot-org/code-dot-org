@@ -52,7 +52,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
 
     beforeEach(function () {
       NetSimGlobals.getLevelConfig().showAddRouterButton = true;
-      MAX_ROUTERS = NetSimGlobals.getMaxRouters();
+      MAX_ROUTERS = NetSimGlobals.getGlobalMaxRouters();
     });
 
     it ("true in empty shard (with default test setup)", function () {
