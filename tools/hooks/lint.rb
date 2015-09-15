@@ -38,7 +38,7 @@ end
 
 modified_files = get_modified_files()
 puts "\nFound #{modified_files.length} modified files", "-" * 30
-p modified_files
+puts modified_files
 
 jshint_files = filter_grunt_jshint(modified_files)
 puts "\nRunning #{jshint_files.length} files through grunt jshint", "-" * 30
