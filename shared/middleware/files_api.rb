@@ -4,12 +4,14 @@ require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
 
-  def max_file_size
-    5_000_000 # 5 MB
+  MAX_FILE_SIZE = 5_000_000 # 5 MB
+  def self.max_file_size
+    MAX_FILE_SIZE
   end
 
-  def max_app_size
-    2_000_000_000 # 2 GB
+  MAX_APP_SIZE = 2_000_000_000 # 2 GB
+  def self.max_app_size
+    MAX_APP_SIZE
   end
 
   def get_bucket_impl(endpoint)
@@ -93,7 +95,7 @@ class FilesApi < Sinatra::Base
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     not_authorized unless owner_id == storage_id('user')
 
-    too_large unless body.length < max_file_size
+    too_large unless body.length < FilesApi::max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -105,7 +107,7 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
-    forbidden unless app_size + body.length < max_app_size
+    forbidden unless app_size + body.length < FilesApi::max_app_size
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
