@@ -3,18 +3,7 @@ APPS_DIR = "#{REPO_DIR}/apps"
 
 def get_modified_files
   Dir.chdir REPO_DIR
-  cmd = "git diff --cached --name-only"
-  output = `#{cmd}`
-
-  modified_paths = []
-  modified_prefix = ['A', 'M', 'AM']
-  output.split("\n").each do |line|
-    line = line.strip().split(" ")
-    if modified_prefix.member?(line[0])
-      modified_paths << "#{REPO_DIR}/#{line[1]}"
-    end
-  end
-  return modified_paths
+  `git diff --cached --name-only`.split('\n')
 end
 
 def filter_grunt_jshint(modified_files)
