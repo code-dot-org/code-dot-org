@@ -4,9 +4,11 @@ Titel: Privacy Policy
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Privacybeleid
 
-Date of Last Revision: August 3, 2015
+Datum van laatste aanpassing: 3 augustus 2015
 
 ## Over Code.org
 
@@ -202,7 +204,7 @@ We may publish anonymized information about student performance on our tutorials
 
 In bepaalde gevallen kan Code.org werken met derden (zoals universiteiten) ter verbetering van onze diensten of aanbiedingen. We may disclose automatically collected and other aggregate non-personal information to authorized partners to conduct research on online education or assist in understanding the usage, viewing, and demographic patterns for certain programs, content, services, promotions, and/or functionality on the Website.
 
-### We zullen gegevens delen wanneer vereist door de wet
+### We will share data when required by law
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. In some cases, we may make such disclosures without first providing notice to Users.
 
@@ -216,7 +218,7 @@ In the event that Code.org is acquired by, combined or merged with another entit
 
 ## Onze benadering van beveiliging van gegevens
 
-### Veiligheid van de website is belangrijk voor u, en voor ons
+### Website security is important to you, and to us
 
 To protect your privacy and security, we take reasonable steps to verify your identity before granting you account access or making corrections to your Personal Information. Because some schools block SSL-secures web sites, Code.org allows access with or without SSL protection, at the direction of those schools. If you would like an SSL encrypted connection in or to encrypt the data that you input while using the Website, use the HTTPS protocol by visiting https://code.org/.
 
@@ -226,15 +228,15 @@ Code.org uses certain physical, managerial, and technical safeguards designed to
 
 If we learn of a data security incident that compromises or appears to compromise your Personal Information, then we will attempt to notify you electronically so that you can take appropriate protective steps.
 
-### Internationale bezoekers
+### International visitors
 
 Onze website is gehost op servers in de Verenigde Staten. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
-### Gebruiksvoorwaarden en kennisgevingen
+### Conditions of Use and Notices
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### Een opmerking voor inwoners van Californië:
+### A Note to California Residents:
 
 We do not disclose any personal information to third parties for marketing purposes. For additional information about our privacy practices, or to review and request to have deleted any personal information you have shared with us, please send a request to http://code.org/contact.
 

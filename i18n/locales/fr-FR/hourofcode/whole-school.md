@@ -1,9 +1,13 @@
 * * *
 
-affichage: large
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Incite toute ton école à participer
 
-Les infos sur comment encourager des écoles entières à participer à l'Heure de Code seront ici.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

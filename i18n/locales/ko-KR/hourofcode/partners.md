@@ -1,8 +1,10 @@
 * * *
 
-title: Partners
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # 주요 파트너와 기업 서포터즈
 
@@ -37,3 +39,5 @@ title: Partners
 # 이외 파트너
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

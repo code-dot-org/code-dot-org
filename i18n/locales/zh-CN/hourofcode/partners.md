@@ -1,8 +1,10 @@
 * * *
 
-标题：合作伙伴
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # 主要合作伙伴及赞助商
 
@@ -37,3 +39,5 @@
 # 其他合作伙伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

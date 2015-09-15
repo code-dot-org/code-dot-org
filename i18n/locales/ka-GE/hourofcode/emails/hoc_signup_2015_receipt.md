@@ -6,17 +6,17 @@
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Thanks for signing up to host an Hour of Code!
+# მადლობა კოდის საათზე დარეგისტრირებისთვის!
 
 <% if @country == 'la' || @country == 'br' || @country == 'ar' %> თქვენ შესაძლოს ხდით ლათინოამერიკელი სტუდენტებისთვის კოდის საათში ჩართვას, რასაც შეუძლია *მათი დარჩენილი ცხოვრების შეცვლა*, ოქტომბრის განმავლობაში. 5-11. <% else %> თქვენ შესაძლოს ხდით მოსწავლეებისთვის მთელს მსოფლიოში კოდის საათში ჩართვას, რასაც შეუძლია *მათი დარჩენილი ცხოვრების შეცვლა*, დეკემბრის განმავლობაში. 7-13. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+პრიზების, ახალი ტუტორიალებისა და სხვა საინტერესო სიახლეების შესახებ ყოველთვის შეგატყობინებთ. გაინტერესებთ, ახლა რა შეიძლება, გააკეთოთ?
 
-## 1. Spread the word
+## 1. გაავრცელეთ ხმა
 
-Tell your friends about the #HourOfCode.
+მოუყევით თქვენს მეგობრებს #HourOfCode-ის შესახებ.
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის საათის ჩატარება
 
 [გაუგზავნეთ ეს წერილი](http://<%= hostname %>/resources#email) თქვენს დირექტორს.
 

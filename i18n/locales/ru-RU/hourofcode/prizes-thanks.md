@@ -1,9 +1,13 @@
 * * *
 
-Название: Благодарим вас: широкий
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Благодарим вас
 
-Вся ваша школа теперь введена в список, чтобы выиграть класс-комплект ноутбуков (или $ 10000 для других электронных устройств для усовершенствованию процесса обучения информатике).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

@@ -4,6 +4,8 @@ title: Məxfilik siyasəti
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Məxfilik siyasəti
 
 Date of Last Revision: August 3, 2015
@@ -230,7 +232,7 @@ If we learn of a data security incident that compromises or appears to compromis
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
-### İstifadə şərtləri və bildirişlər
+### Conditions of Use and Notices
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 

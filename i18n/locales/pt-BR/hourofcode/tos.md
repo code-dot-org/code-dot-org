@@ -4,11 +4,13 @@ título: Termos de serviço
 
 * * *
 
+### O documento legal vinculativo é em inglês, e pode ser encontrado [aqui](https://code.org/tos). O texto abaixo é uma tradução.
+
 # Termos de serviço
 
 Última revisão: 5 de dezembro de 2014
 
-A Code.org é uma organização 501(c)(3) sem fins lucrativos (“Code.org”). Nossa missão é oferecer a todos os alunos a oportunidade de aprender a ciência da computação. Como parte dessa missão, a Code.org opera os sites da Web localizados em <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, outros sites, informações, textos, currículos, vídeos, gráficos, fotos, APIs, notificações de e-mail, além de outros materiais e produtos e serviços relacionados (os “**Serviços**”), inclusive a plataforma de tutoriais em <http://studio.code.org> (“**Code Studio**”).
+A Code.org é uma organização sem fins lucrativos (“Code.org”). Nossa missão é oferecer a todos os alunos a oportunidade de aprender a ciência da computação. Como parte dessa missão, a Code.org opera os sites da Web localizados em <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, outros sites, informações, textos, currículos, vídeos, gráficos, fotos, APIs, notificações de e-mail, além de outros materiais e produtos e serviços relacionados (os “**Serviços**”), inclusive a plataforma de tutoriais em <http://studio.code.org> (“**Code Studio**”).
 
 Leia esses Termos de serviço (“**Termos**”) atenciosamente antes de acessar ou utilizar os Serviços. Acessar ou utilizar qualquer parte dos Serviços, ou ainda, clicar nos botões "Eu concordo" ou "Registrar" disponibilizados para você significa que você aceita ser vinculado a esses Termos, sem exceções.
 
@@ -24,7 +26,7 @@ Alguns Serviços podem estar sujeitos a diretrizes, regras ou termos de serviço
 
 Nós tomamos algumas medidas a fim de minimizar a coleta de dados pessoais de Usuários menores de 13 anos, conforme explicado na [política de privacidade](http://code.org/privacy) da Code.org. Se você tem menos de 13 anos, nós o orientamos a obter a aprovação dos seus pais ou tutor legal antes de criar uma conta na Code.org. A Code.org permite que alguns representantes de escolas e distritos escolares, como professores, administradores, orientadores e outros educadores (“**Educador**”) se conectem com alunos por meio dos Serviços, para fornecer tutoriais, atividades educativas e outros serviços semelhantes. Se você é um Educador, é possível registrar contas nos Serviços para um ou mais de um dos seus alunos.
 
-Se você é um educador e registra uma conta para um aluno com menos de 13 anos (uma “**criança**”), você representa e garante que você ou a organização educacional para a qual você trabalha tem permissão para registrar a criança em serviços educacionais, como a Code.org, que coletam algumas informações pessoais da criança para uso e benefício da escola, e não para outros propósitos comerciais. Além disso, você concorda com os termos em nome da organização educacional para a qual você trabalha.
+Se você é um educador e registra uma conta para um aluno com menos de 13 anos (uma “**Criança**”), você representa e garante que você ou a organização educacional para a qual você trabalha tem permissão para registrar a Criança em serviços educacionais, como a Code.org, que coletam algumas informações pessoais da Criança para uso e benefício da escola, e não para outros propósitos comerciais. Além disso, você concorda com os termos em nome da organização educacional para a qual você trabalha.
 
 ### Sua conta
 
@@ -48,7 +50,7 @@ A Code.org pode, mas não é obrigada a, monitorar ou revisar quaisquer Serviço
 
 Os usuários podem incluir links que direcionam para websites de terceiros no Conteúdo do Usuário, contanto que o conteúdo desses websites não viole esses Termos. Clicar em tais links é de sua responsabilidade exclusiva. A Code.org não é responsável pela disponibilidade ou pelo conteúdo dos websites vinculados, inclusive anúncios publicitários, produtos ou outros materiais neles contidos.
 
-Ao enviar ou distribuir conteúdo de usuário através dos serviços ou diretamente para a equipe da Code.org, pelo presente documento você concede à Code.org o direito e licença internacionais, não exclusivos, transferíveis, atribuíveis, totalmente quitados, livres de direitos autorais, perpétuos e irrevogáveis para hospedar, transferir, exibir, executar, reproduzir, modificar, distribuir e redistribuir, adaptar, preparar trabalhos derivativos, utilizar, fazer, ter feito, importar e explorar seu conteúdo de usuário, de acordo com todos os direitos de propriedade intelectual aqui definidos, na íntegra ou em partes, em quaisquer formatos de mídia e por meio de quaisquer canais de mídia (conhecidos atualmente ou futuramente desenvolvidos).
+Ao enviar ou distribuir Conteúdo de Usuário por meio dos Serviços ou diretamente para a equipe da Code.org, pelo presente documento você concede à Code.org o direito e licença internacionais, não exclusivos, transferíveis, atribuíveis, totalmente quitados, livres de direitos autorais, perpétuos e irrevogáveis para hospedar, transferir, exibir, executar, reproduzir, modificar, distribuir e redistribuir, adaptar, preparar trabalhos derivativos, utilizar, fazer, ter feito, importar e explorar seu Conteúdo de Usuário, de acordo com todos os direitos de propriedade intelectual aqui definidos, na íntegra ou em partes, em quaisquer formatos de mídia e por meio de quaisquer canais de mídia (conhecidos atualmente ou futuramente desenvolvidos).
 
 Além disso, ao enviar ou distribuir o Conteúdo do Usuário por meio dos Serviços, pelo presente documento você concede a todos os usuários dos Serviços uma licença não exclusiva para acessar e utilizar seu Conteúdo do Usuário.
 
@@ -118,7 +120,7 @@ C. Autorização de cartão de crédito. Se usar um cartão de crédito para pag
 
 ### Aviso de isenção de responsabilidade e limitações de responsabilidade
 
-Leia esta seção atenciosamente, uma vez que ela limita a responsabilidade da Code.org e de suas matrizes, subsidiárias, afiliadas, empresas relacionadas, executivos, diretores, funcionários, agentes, representantes, parceiros e licenciadores (coletivamente, "Entidades da Code.org"). Todas as subseções abaixo aplicam-se apenas até o limite máximo permitido pela lei aplicável. Algumas jurisdições não permitem o aviso de isenção de responsabilidade de garantias implícitas ou a limitação de responsabilidade em contratos e, consequentemente, os conteúdos desta seção talvez não se apliquem a você. Nenhuma informação desta seção visa limitar quaisquer de seus direitos que não possam ser legalmente limitados.
+Leia esta seção com atenção, uma vez que ela limita a responsabilidade da Code.org e de suas matrizes, subsidiárias, afiliadas, empresas relacionadas, executivos, diretores, funcionários, agentes, representantes, parceiros e licenciadores (coletivamente, "Entidades da Code.org"). Todas as subseções abaixo aplicam-se apenas até o limite máximo permitido pela lei aplicável. Algumas jurisdições não permitem o aviso de isenção de responsabilidade de garantias implícitas ou a limitação de responsabilidade em contratos e, consequentemente, os conteúdos desta seção talvez não se apliquem a você. Nenhuma informação desta seção visa a limitar quaisquer de seus direitos que não possam ser legalmente limitados.
 
 #### A. Os Serviços são disponibilizados "EXATAMENTE COMO SÃO"
 
@@ -140,7 +142,7 @@ ALGUNS ESTADOS E OUTRAS JURISDIÇÕES NÃO PERMITEM A EXCLUSÃO DE GARANTIAS IMP
 
 #### A. Renúncia e possibilidade de desvinculação
 
-O não cumprimento de qualquer direito ou provisão desses Termos por parte da Code.org não será considerado uma renúncia de tal direito ou provisão. Caso qualquer provisão desses Termos sejam considerados inválidos ou impraticáveis, essa provisão será limitada ou eliminada ao menor limite necessário, e as provisões restantes desses Termos serão mantidas efetivas e em pleno vigor.
+O não cumprimento de qualquer direito ou provisão desses Termos por parte da Code.org não será considerado uma renúncia de tal direito ou provisão. Caso qualquer provisão desses Termos seja considerada inválida ou impraticável, essa provisão será limitada ou eliminada ao menor limite necessário, e as provisões restantes desses Termos serão mantidas efetivas e em pleno vigor.
 
 #### B. Lei e jurisdição aplicáveis
 
