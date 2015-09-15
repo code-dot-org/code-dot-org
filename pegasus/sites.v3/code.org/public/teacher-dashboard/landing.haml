@@ -76,7 +76,10 @@ theme: none
       %h1{style: 'margin-bottom: 0px'}= I18n.t('dashboard_landing_available_title')
       %h2= I18n.t('dashboard_hoc_courses')
       = I18n.t('dashboard_hoc_courses_desc')
-    %br/  
+      %div{style: 'float:right; margin-right:30px; margin-top:-8px;'}
+        %a{:href=>'https://hourofcode.com'}
+          %button= I18n.t('learn_more')
+    %br/
     %div{"ng-include"=>"", src: "'/dashboardapi/hoc_courses/'"}
     .coursesheader
       %h2= I18n.t('dashboard_k5_courses')
