@@ -69,22 +69,6 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/(assets|sources)/<dest-channel-id>?src=<src-channel-id>
-  #
-  # Copy all files from one channel to another. Return metadata of copied files.
-  #
-  put %r{/v3/(assets|sources)/([^/]+)$} do |endpoint, encrypted_dest_channel_id|
-    dont_cache
-
-    dest_owner_id, _ = storage_decrypt_channel_id(encrypted_dest_channel_id)
-    not_authorized unless dest_owner_id == storage_id('user')
-
-    encrypted_src_channel_id = request.GET['src']
-    bad_request if encrypted_src_channel_id.empty?
-    get_bucket_impl(endpoint).new.copy_files(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
-  end
-
-  #
   # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
