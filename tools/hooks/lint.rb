@@ -20,20 +20,17 @@ end
 
 def run_rubocop(files)
   Dir.chdir REPO_DIR
-  cmd = "rubocop #{files.join(" ")}"
-  system cmd
+  system "rubocop #{files.join(" ")}"
 end
 
 def run_jshint(files)
   Dir.chdir APPS_DIR
-  cmd = "grunt jshint:files --files #{files.join(",")}"
-  system cmd
+  system "grunt jshint:files --files #{files.join(",")}"
 end
 
 def run_haml(files)
   Dir.chdir REPO_DIR
-  cmd = "haml-lint #{files.join(" ")}"
-  system cmd
+  system "haml-lint #{files.join(" ")}"
 end
 
 modified_files = get_modified_files()
