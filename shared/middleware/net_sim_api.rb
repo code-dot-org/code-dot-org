@@ -278,7 +278,7 @@ class NetSimApi < Sinatra::Base
         select{|x| x['type'] == NODE_TYPES[:router]}.
         count
 
-    router_count < 20
+    router_count < CDO.netsim_max_routers
   end
 
   # @param [String] shard_id - The shard we're checking validation on.
