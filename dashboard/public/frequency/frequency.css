@@ -24,10 +24,10 @@
 .letter:hover .english {
   fill: #1f6377;
 }
-.letter .user, .legend .user {
+.letter .message, .legend .message {
   fill: #ffa400;
 }
-.letter:hover .user {
+.letter:hover .message {
   fill: #b37300;
 }
 
@@ -54,8 +54,8 @@
   shape-rendering: crispEdges;
 }
 
-.axis .english {
-  fill: #2f96b4;
+.axis .message {
+  fill: #ffa400;
   font-weight: bolder;
   font-size: 14px;
 }
@@ -70,21 +70,21 @@
 }
 
 .axis .dragletter .dragtarget {
-  fill: #ffa400;
-  stroke: #b37300;
+  fill: #0094ca;
+  stroke: #002F40;
 }
 .axis .dragletter:hover .dragtarget {
-  fill: #b37300;
+  fill: #002F40;
 }
-.axis .dragletter .user {
+.axis .dragletter .substitution {
   fill: white;
   font-size: 12px;
 }
 .axis .dragletter line {
-  stroke: #b37300;
+  stroke: #002F40;
 }
 .axis .dragletter:hover line {
-  stroke: #ffa400;
+  stroke: #0094ca;
 }
 
 .outline {
@@ -170,6 +170,6 @@
   color: rgb(85, 85, 85);
 }
 .text-container#output span.unlocked {
-  background-color: #a6daed;
+  background-color: #ffe0a6;
 }
 
