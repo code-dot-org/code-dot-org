@@ -3,7 +3,7 @@ APPS_DIR = "#{REPO_DIR}/apps"
 
 def get_modified_files
   Dir.chdir REPO_DIR
-  `git diff --cached --name-only`.split('\n').map(&:chomp)
+  `git diff --cached --name-only`.split("\n").map(&:chomp)
 end
 
 def filter_grunt_jshint(modified_files)
