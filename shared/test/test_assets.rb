@@ -128,45 +128,30 @@ class AssetsTest < Minitest::Test
   end
 
   def test_assets_quota
-    def FilesApi.max_file_size
-      5
+    FilesApi.stub(:max_file_size, 5) do
+      FilesApi.stub(:max_app_size, 10) do
+        channel_id = create_channel(@channels)
+
+        put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
+        assert @assets.last_response.client_error?, "Error when file is larger than max file size."
+
+        put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
+        assert @assets.last_response.successful?, "First small file upload is successful."
+
+        put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
+        assert @assets.last_response.successful?, "Second small file upload is successful."
+
+        put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
+        assert @assets.last_response.client_error?, "Error when exceeding max app size."
+
+        delete(@assets, channel_id, "file2.jpg")
+        delete(@assets, channel_id, "file3.jpg")
+
+        assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
+
+        delete_channel(@channels, channel_id)
+      end
     end
-    def FilesApi.max_app_size
-      10
-    end
-
-    channel_id = create_channel(@channels)
-
-    put(@assets, channel_id, "file1.jpg", "1234567890ABC", 'image/jpeg')
-    assert @assets.last_response.client_error?, "Error when file is larger than max file size."
-
-    put(@assets, channel_id, "file2.jpg", "1234", 'image/jpeg')
-    assert @assets.last_response.successful?, "First small file upload is successful."
-
-    put(@assets, channel_id, "file3.jpg", "5678", 'image/jpeg')
-    assert @assets.last_response.successful?, "Second small file upload is successful."
-
-    put(@assets, channel_id, "file4.jpg", "ABCD", 'image/jpeg')
-    assert @assets.last_response.client_error?, "Error when exceeding max app size."
-
-    delete(@assets, channel_id, "file2.jpg")
-    delete(@assets, channel_id, "file3.jpg")
-
-    def FilesApi.max_file_size
-      FilesApi::MAX_FILE_SIZE
-    end
-    def FilesApi.max_app_size
-      FilesApi::MAX_APP_SIZE
-    end
-
-    put(@assets, channel_id, "file5.jpg", "abcdefghijklmnopqrstuvwxyz", 'image/jpeg')
-    assert @assets.last_response.successful?, "Test restores original max app and file sizes."
-
-    delete(@assets, channel_id, "file5.jpg")
-
-    assert (JSON.parse(list(@assets, channel_id)).length == 0), "No unexpected assets were written to storage."
-
-    delete_channel(@channels, channel_id)
   end
 
   # Methods below this line are test utilities, not actual tests
