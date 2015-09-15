@@ -351,7 +351,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
 
   var routerLimit = NetSimRouterNode.getMaximumRoutersPerShard();
   var routerCount = this.nodesOnShard_.filter(function (node) {
-        return NodeType.ROUTER === node.getNodeType();
-      }).length;
+    return NodeType.ROUTER === node.getNodeType();
+  }).length;
   return routerCount < routerLimit;
 };

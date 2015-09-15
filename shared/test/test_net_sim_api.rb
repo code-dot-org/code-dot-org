@@ -617,7 +617,7 @@ class NetSimApiTest < Minitest::Test
                  read_records(TABLE_NAMES[:node]).count,
                  "Didn't create #{CDO.netsim_max_routers} nodes")
 
-    # We want the 21st node to fail
+    # We want the 21st node to succeed
     create_node(type: NODE_TYPES[:client])
     assert_equal(201, @net_sim_api.last_response.status,
                  "Should have allowed 21st client")
