@@ -1,71 +1,129 @@
+* * *
 
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Cómo enseñar una Hora de Código
 
-## 1) Mira este video de "Cómo hacer" <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) Prueba los tutoriales:
+## 1) Sign up
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
+
+## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 3) Choose a tutorial:
+
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
 
 **Todos los tutoriales de la Hora de Código:**
 
-  * Requieren un tiempo de preparación mínimo para los profesores
+  * Require minimal prep-time for teachers
   * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Plan your hardware needs - computers are optional
+## 4) Plan your technology needs - computers are optional
 
-Para la mejor experiencia de la Hora de Código necesita computadoras conectadas a Internet. Pero no necesita una computadora por cada estudiante, y también se puede realizar la Hora de Código sin computadoras.
+The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
 
-  * **Pruebe los tutoriales en las computadoras o dispositivos de los estudiantes.** Cerciórese que los tutoriales funcionen correctamente (con audio y video).
-  * **Previsualice la página de felicitaciones** para ver lo que los estudiantes verán al terminar. 
-  * **Proporcione audífonos para su clase**, o pida a los alumnos que lleven los suyos; si el tutorial que selecciones funciona mejor con sonido.
-
-## 4) Plan ahead based on your technology available
-
-  * **¿No tiene dispositivos suficientes?** use [programación en parejas](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cuando los estudiantes trabajan en pares, se ayudan el uno al otro y dependen menos del profesor. Además se dan cuenta que en las ciencias computacionales se puede ser sociable y trabajar en equipo.
+  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
+  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
 
-## 5) Inspire students - show them a video
+![](/images/group_ipad.jpg)</a>
 
-Muestran a los estudiantes un video inspiracional para dar comienzo a la Hora de Código. Ejemplos:
+## 5) Inspire students to start your Hour of Code
+
+**Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.**
+
+**Show an inspirational video:**
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * El vídeo de lanzamiento de [la Hora de Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Código 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Código 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Emociona a los estudiantes - Dales una introducción corta**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-La mayoría de los jóvenes no saben qué es ciencia de la computación. Aquí tienes algunas ideas:
+  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+  * As a class, list things that use code in everyday life.
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-  * Explica en una forma sencilla que incluya ejemplos de aplicaciones que les interesen tanto a chicos como a chicas (salvar vidas, ayudar a la gente, conectar personas, etc).
-  * Prueba decir: "Piensa acerca de cosas en la vida diaria que usan Ciencias de la Computación: un teléfono celular, un microondas, una computadora, un semáforo... Todas esas cosas necesitan un profesional en Ciencias de la Computación para ayudar a construirlas."
-  * O: "Las Ciencias de la Computación son el arte de combinar ideas humanas y herramientas digitales para incrementar nuestro poder. Los expertos en informática trabajan en muchas áreas diferentes: escriben aplicaciones para teléfonos, curan enfermedades, crean películas animadas, trabajan en redes sociales, construyen robots que exploran otros planetas y muchas cosas más."
-  * Ver consejos para interesar a las chicas en Ciencias de la Computación [Aquí](http://<%= codeorg_url() %>/chicas). 
+**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Empieza tu hora de código
+## 6) Code!
 
-**Dirige a los estudiantes a la actividad**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
-  * Indica a los estudiantes que visiten la URL e inicien el tutorial.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
-**Cuando tus estudiantes se topan con dificultades**
+**When your students come across difficulties it's okay to respond:**
 
-  * Indica a los estudiantes, "Pregunta a 3 personas, luego a mi". Pregunta a 3 compañeros y si ellos no conocen la respuesta entonces pregunta al profesor.
-  * Alienta a los estudiantes y dales refuerzos positivos: "Lo estás haciendo muy bien, sigue intentando."
-  * Está bien responder: "No sé. Encontremos la respuesta juntos." Si no puedes resolver un problema úsalo como una buena lección para toda la clase: "La tecnología no siempre funciona como queremos. Todos juntos somos una comunidad de aprendizaje". Y: "Aprender a programar es como aprender un nuevo idioma, no serás fluido enseguida."
+  * “I don’t know. Let’s figure this out together.”
+  * “Technology doesn’t always work out the way we want.”
+  * “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**¿Qué hacer si un estudiante termina antes?**
+**What to do if a student finishes early?**
 
-  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Código en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
-**¿Cómo imprimo certificados para mis estudiantes?**
+[col-33]
 
-Cada estudiante tiene la oportunidad de obtener un certificado por correo electrónico al terminan los [tutoriales Code.org](http://studio.code.org). Puedes hacer clic en el certificado para imprimirlo. Sin embargo, si quieres hacer certificados nuevos para tus estudiantes visita nuestra página [Certificados](http://<%= codeorg_url() %>/certificates) para imprimir todos los certificados que quieras, de una sola vez!
+![](/images/highschoolgirls.jpeg)</a>
 
-**¿Qué viene después de la Hora de Código?**
+[/col-33]
 
-La Hora del Código es sólo el primer paso en un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. <% if @country == 'uk' %> La Hora del Código es sólo el primer paso en un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. Para seguir este viaje, [anima a tus niños a aprender en línea](http://uk.code.org/learn/beyond). < % else %> Para seguir este viaje, busca recursos adicionales para educadores [aquí](http://<%= codeorg_url() %>/educate). O anima a tus hijos a aprender más [en línea](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+[col-33]
+
+![](/images/group_ar.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## 7) Celebrate
+
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[col-33]
+
+![](/images/celebrate2.jpeg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/highlight-certificates.jpg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/boy-certificate.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## Other Hour of Code resources for educators:
+
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
+  * Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
+  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+
+## What comes after the Hour of Code?
+
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

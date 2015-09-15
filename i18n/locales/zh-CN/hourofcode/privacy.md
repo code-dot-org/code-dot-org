@@ -4,6 +4,8 @@
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # 隐私政策
 
 Date of Last Revision: August 3, 2015

@@ -4,6 +4,8 @@ titulli: Politika e Privatësisë
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Politika e Privatësisë
 
 Date of Last Revision: August 3, 2015
@@ -174,67 +176,67 @@ Ne nuk japim me qira ose shesim Informacionin Personal që ne mbledhim nga përd
 
 Në veçanti, ne nuk e ndajmë asnjë informacion personal që ju aprovoni me donatorët apo sponsorët tanë (përveç "Raportimit Publik" të raporteve anonime siç përshkruhet më poshtë).
 
-### Ne mund të ndajmë të dhëna të arritjeve të nxënësve me shkollën ose rrethin tuaj shkollor
+### We may share student achievement data with your school or school district
 
 Nëse përdorimi juaj i faqes së web-it të Code.org është në kontekstin e një partneriteti me shkollën tuaj ose rrethin shkollor, ne mund të lejojmë shkollën ose rrethin shkollor për të hyrë në të njëjtin raporti progresi të studentëve që është ndarë gjithashtu edhe me mësuesin(t) tuaj.
 
-### Ne mund të ndajmë informacionin e kontaktit të mësuesit me trajnuesit
+### We may share teacher contact information with training facilitators
 
 Pjesë e programit tonë arsimor është që të ofrojë seminare për zhvillimin profesional për të përgatitur mësuesit të ofrojnë kurse në shkenca kompjuterike. Nëse ju jeni një mësues që merrni pjesë në një nga këto seminare, emri dhe kontakti juaj i informacionit do të ndahen me trajnuesit e seminarit.
 
-### Ne mund të shpërndajmë të dhëna në rrjetet sociale me kërkesën tuaj
+### We may share data with social networks at your request
 
 Disa nga përdoruesit tanë zgjedhin të postojnë krijimet e tyre me kod në rrjetet sociale. Ky funksionalitet është krejtësisht opsional. Kur ne postojmë përmbajtje në rrjetet sociale, përmbajtja aktuale e postuar është tërësisht në kontrollin tuaj, dhe kurrë nuk e postojmë automatikisht në emrin tuaj. Në mënyrë tipike kjo përmbajtje përfshin vetëm kodin (aplikacion ose animacion ose lojë ose të tjera), që ju keni shkruajtur, e postuar së bashku me ndonjë vërejtje që ju mund të zgjidhni për të shtuar në të.
 
-### Ne mund të ndajmë informacion të kufizuar kur ju të na kontaktoni për mbështetje
+### We may share limited information when you contact us for support
 
 Kur ju të na kontaktoni me një kërkesë mbështetje, ju mund të aprovoni Informacion Personal, i cili është i shpërndarë me një përfaqësues suporti të Code.org në mënyrë që të përpunojë kërkesën tuaj. Përfaqësuesit mbështetës të Code.org janë ose të punësuar ose kontraktorët e pavarura të Code.org, dhe gjithmonë do të kenë nënshkruar një kontratë që kërkon mbrojtjendhe jo të zbulojë informacionin konfidencial përfshi Informacionin Personal të Përdoruesit, dhe ta përdori atë vetëm në kontekstin e zgjidhjes së kërkesave mbështetëse të produktit.
 
-### Kur ju jeni zgjedhur për t'u publikuar në faqen tonë
+### When you are chosen to be profiled on our site
 
 Code.org promovon një student javore dhe një mësues mujor, së bashku me çmime. Këto profile dhe dëshmi të ngjashme publikohen gjithmonë me lejen e studentit pjesëmarrës apo mësuesit dhe, nëse është e aplikueshme, prindi i tyre ose kujdestari ligjor, ose mësues, dhe mund të përfshijnë Informacion Personal të tilla si emri, foto ose video të personit duke e profilizuar.
 
-### Raportimi publik mbi Përdorimin dhe Performancën e Studentit
+### Public Reporting on Student Use and Performance
 
 Ne mund të publikojmë informacione anonime në lidhje me performancën e nxënësve në tutorialet tona dhe faqet e web-it, megjithatë, ne nuk ndajmë kurrë publikisht Informacionin tuaj Personal në këto raporte. Të dhënat në lidhje me performancën e studentëve do të mbeten anonime, por të agreguara, të dhëna anonime mbi popullsi të mëdha të studentëve mund të raportohen nga kritere demografike siç janë mosha, lokacioni i përgjithshëm, gjinia, përkatësia etnike, dhe statusi socio-ekonomik.
 
-### Ne mund të ndajmë të dhëna anonime ose agregate për të përmirësuar shërbimet tona dhe të mësojmë më shumë për përdoruesit tanë
+### We may share anonymous or aggregate data to improve our services and learn more about our Users
 
 Në raste të caktuara, Code.org mund të punojë me palët e treta (të tilla si universitetet) për të përmirësuar shërbimet ose ofertat tona. Ne mund të zbulojmë automatikisht duke mbledhur dhe informacione të tjera agregat jo-personale të partnerëve të autorizuar për të kryer hulumtime në arsimin online ose të ndihmojmë në të kuptuarit e përdorimit, duke e parë, dhe modelet demografike për programe të caktuara, përmbajtjen, shërbimet, promovime, dhe/ose funksionalitetin në Website.
 
-### Ne do të ndajmë të dhëna kur kërkohet nga ligji
+### We will share data when required by law
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. Në disa raste, ne mund zbulojmë informacione të tilla pa i dhënë një njoftim për përdoruesit.
 
-### Ne mund të ndajmë të dhëna kur është e nevojshme për të mbrojtur Code.org ose të tjerë
+### We may share data when necessary or appropriate to protect Code.org or others
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### Ne mund të ndajmë të dhëna në kontekstin e një ndryshimi të biznesit, duke përfshirë një shkrirje ose blerje
+### We may share data in the context of a change of business, including a merger or acquisition
 
 Në rast se Code.org është fituar, kombinuar ose u bashkua me një njësi ekonomike tjetër, ne mund të transferojmë apo të caktojmë Informacionin Personal që kemi mbledhur nga përdoruesit si pjesë e shkrirjes, blerjes, shitjes, ose ndryshimi tjetër të kontrollit. Premtimi ynë për ju është që ndonjë Informacion Personal që ne kemi mbledhur nga Përdoruesit do të ruhen nën të njëjtin nivel të sigurisë dhe privatësisë siç është ofruar nga ky Njoftimi i Privatësisë.
 
 ## Trajtimi ynë pë sigurinë e të dhënave
 
-### Siguria e faqes së Web-it është e rëndësishme si për ju dhe për ne
+### Website security is important to you, and to us
 
 Për të mbrojtur privatësinë tuaj dhe sigurinë, ne bëjmë hapa të arsyeshme për të verifikuar identitetin tuaj para dhënies së aksesit në llogari ose duke bërë korrigjimet për të dhënat tuaja personale. Për shkak se disa shkolla bllokojnë uebfaqet e siguruara me SSL, Code.org lejon akses me ose pa mbrojtje SSL, në drejtimin e këtyre shkollave. Nëse dëshironi një lidhje SSL të enkriptuar ose të enkriptosh të dhënat që ju vendosni ndërsa jeni duke përdorur faqen e web-it, përdorin protokollin HTTPS duke vizituar https://code.org/.
 
-### Ne përpiqemi për të siguruar se faqja jonë e Web-it dhe informacioni i dërgouar tek ne janë të sigurtë, por nuk ka masa sigurie të përsosura
+### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
 Code.org përdor aftësi fizike të caktuar, menaxheriale, dhe masa mbrojtëse teknike të dizajnuara për të ruajtur integritetin dhe sigurinë e informacionit tuaj personal dhe informacione të tjera që kanë lidhje me faqen e Web-it. Megjithatë, ne nuk mundemi të sigurojmë sigurinë e ndonjë ose të gjithë Informacionit Personal dhe informacione të tjera që ju keni transmetuar te Code.org, dhe ju e bëni këtë duke marr rrezikun tuaj. Pasi të kemi marrë një dërgesë të informacionit, Code.org bën përpjekje të arsyeshme për të siguruar sigurinë e sistemeve tona. Megjithatë, ju lutem vini re se kjo nuk është një garanci që Informacion i tillë Personal nuk mund të aksesohet, zbulohet, ndryshohet apo shkatërrohet nga ndonjë shkelje fizike, teknike.
 
 Nëse ne mësojmë nga një incident i sigurisë së të dhënave që komprometon Informacionin tuaj Personal, atëherë ne do të përpiqemi t'ju njoftojmë ju në mënyrë elektronike në mënyrë që ju mund të merrni masat e duhura mbrojtëse.
 
-### Vizitorët ndërkombëtarë
+### International visitors
 
 Faqja jonë e Web-it është përdorur dhe menaxhuar në serverat e vendosura brenda Shteteve të Bashkuara. Në qoftë se ju vendosni të përdorni uebfaqen tonë nga Bashkimi Evropian ose rajone të tjera të botës me ligjet që rregullojnë mbledhjen dhe përdorimin e të dhënave që dallojnë nga ligjet e SHBA, atëherë ju pranoni dhe pajtoheni që ju jeni duke transferuar Informacionin tuaj Personal jashtë rajoneve të Shteteve të Bashkuara dhe që, duke aprovuar Informacionin tuaj Personal ne faqen e web-it, ju miratoni për këtë transferim.
 
-### Kushtet e përdorimit dhe Njoftimet
+### Conditions of Use and Notices
 
 Nëse ju vendosni të vizitoni Code.org, vizita juaj dhe çdo mosmarrëveshje mbi privatësinë është subjekt i Njoftimit të Privatësisë dhe Kushtet tona të Marrëveshjes së Shërbimit, duke përfshirë kufizimet në dëme, arbitrimin e mosmarrëveshjeve, zbatimi i ligjit të Shtetit të Washingtonit dhe për të gjitha mosmarrëveshjet në Seattle, Washington.
 
-### Një shënim për banorët e Kalifornisë:
+### A Note to California Residents:
 
 Ne nuk zbulojmë ndonjë informacion personale për palët e treta për qëllime marketingu. Për informata shtesë në lidhje me praktikat e privatësisë, ose për të rishikuar dhe për të bërë kërkesë për të fshirë çdo informacion personal që ju keni ndarë me ne, ju lutem dërgoni një kërkesë në http://code.org/contact.
 

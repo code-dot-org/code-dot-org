@@ -4,6 +4,8 @@ title: Conditions d'utilisation
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Conditions d'utilisation
 
 Last Revised: December 5, 2014

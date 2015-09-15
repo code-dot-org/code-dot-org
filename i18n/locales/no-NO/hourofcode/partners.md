@@ -1,8 +1,10 @@
 * * *
 
-title: Samarbeidspartnere
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Store organisasjoner og bedrifter som støtter oss
 
@@ -37,3 +39,5 @@ title: Samarbeidspartnere
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

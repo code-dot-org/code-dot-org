@@ -1,23 +1,25 @@
 * * *
 
-titulli: Ora e Kodimit Event Si-Tek layout: gjerë nav: resources_nav
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Guida e eventit Ora e Kodimit
 
-Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Përgatitu për eventin tënd
 
   * Përcakto një vend, datë dhe kohë
-  * Dërgo[ një letër](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) për të ftuar kryetarin e bashkisë, kongresmen, qeveritar, ose persona me ndikim në biznes për të folur.
-  * Fto mediat/shtypin. p.sh stacionin lokal të lajmeve, gazeta, blogerët e edukimit/teknologjisë. Shiko [ mjetet e shtypit](<%= hoc_uri('/resources/press-kit') %>) për ndihmë.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Gjatë eventit tënd
 
-  * Fillo eventin tënd me një nga [videot inspiruese](<%= hoc_uri('/resources#videos') %>) tona.
-  * Jep një hyrje të përgjithshme për rëndësinë e shkencave kompjuterike, duke përdorur këto [ statistika dhe diagrame](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Ide të tjera për eventin: 
@@ -34,13 +36,13 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## Shembull i Planit të Event-it
 
-**Event:** Asamblea e nisjes së gjithë shkolla në Javën Edukative të Shkencave Kompjuterike
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 7th (start of Computer Science Education Week)
 
-**Koha:** Gjatë ditës së shkollës. Mesdita preferohet për eventin. Afërsisht 1 orë.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Vendi:** Salla e mbledhjeve (p.sh teatri, palestra, kafeneja)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -48,9 +50,11 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 | Koha             | Veprimet                                                                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                                        |
-| 10:05 - 10:15 am | Drejtori jep një hyrje që e pasqyron rëndësinë e shkencave kompjuterike. Përdor këto [ statistika dhe diagrame](/resources/stats)                             |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                          |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)           |
 | 10:15 - 10:30 am | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                      |
 | 10:40 - 11:00 am | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                             |
+
+<%= view :signup_button %>

@@ -1,9 +1,13 @@
 * * *
 
-título: Obrigado formato: amplo
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Obrigado
 
-A tua escola inteira está neste momento habilitada a ganhar um conjunto de portáteis para uma sala de aulas (ou em alternativa, 10000 dólares noutros equipamentos informáticos).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

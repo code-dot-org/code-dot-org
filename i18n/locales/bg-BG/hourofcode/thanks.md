@@ -1,6 +1,6 @@
 * * *
 
-Заглавие: Благодаря, че регистрирахте събитие Часът на кодирането! оформление: широк
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide
 
 social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc" Hide context | Edit context Paragraph text XPath: /p[2]
 
@@ -12,11 +12,13 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
+<%= view :signup_button %>
+
 # Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Ние ще се свържем с вас за награди, нови уроци и други вълнуващи актуализации през есента. И така, какво можете да направите сега?
 
 ## Разпространете новината
 
@@ -26,18 +28,20 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
 ## Предложете на вашия работодател да се включи в инициативата
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
+[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
 
 ## Рекламирайте "Час на Кодиране " във вашата Община
 
-Ангажирайте локална група — момчета или момичета от скаутски клуб, църковна общност, университет, група на ветерани или синдикат. Можете да промотирате Часът на кодирането на "block party" във вашия квартал.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
+
+<%= view :signup_button %>
