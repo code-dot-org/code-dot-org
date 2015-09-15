@@ -4,6 +4,8 @@ title: Privacy Policy
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # מדיניות הפרטיות
 
 Date of Last Revision: August 3, 2015

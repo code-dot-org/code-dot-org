@@ -1,16 +1,18 @@
 * * *
 
-title: Prizes Terms layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Gewinne - Allgemeine Geschäftsbedingungen
 
 ## Dropbox-Speicher oder Skype-Guthaben:
 
-Die 10 GB Speicherplatz bei Dropbox oder das 10$ Guthaben sind beschränkt auf K-12 Dozenten, Ausbilder in Horten oder Bildungseinrichtungen. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. Wenn Deine gesamte Schule an einer Hour of Code teilnimmt, muss sich jeder veranstaltende Lehrer separat registrieren.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
 Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
@@ -31,3 +33,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

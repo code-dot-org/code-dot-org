@@ -1,8 +1,10 @@
 * * *
 
-title: Tərəfdaşlar
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Əsas tərəfdaşlar və korporativ sponsorlar
 
@@ -37,3 +39,5 @@ title: Tərəfdaşlar
 # Digər tərəfdaşlar
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

@@ -1,16 +1,18 @@
 * * *
 
-title: Prizes Terms layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Præmier - vilkår og betingelser
 
 ## Dropbox lagerplads eller Skype-kredit:
 
-10 GB lagerplads på Dropbox eller $10 Skype-kredit er begrænset til undervisere i grundskole eller på ungdomsuddannelser, instruktører i fritidsskoler eller andre uddannelsesinstitutioner. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Kun een præmie per arrangør. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-For at kunne modtage en præmie, skal man være registreret som arrangør af Hour of Code. Hvis hele skolen deltager i Hour of Code, skal hver lærer registrere sig som arrangør for at være kvalificeret til at modtage en præmie.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
 Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
@@ -18,16 +20,18 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 ## Video-chat med en gæste-taler:
 
-Denne præmie er begrænset til klasser i USA og Canada (K-12). To qualify, sign up your classroom by November 2, 2015. Code.org vil vælge de vindende klasser, og give et tidspunkt til web-chat og aftale med lærerne om de tekniske detaljer. Hele din skole behøver ikke at ansøge om at kvalificere sig til denne præmie. Både offentlige og private skoler har mulighed for at vinde.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Et klassesæt af bærbare computere (eller for $10.000 anden teknologi):
 
-Præmien er desværre begrænset til offentlige K-12 amerikanske skoler. To qualify, your entire school must register for the Hour of Code by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
 
-For lige at præcisere, så er dette ikke et lotteri eller en konkurrence, der involverer at man tager nogle chancer.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) der er ingen finansielle indsats eller risiko forbundet med at deltage - alle skole eller klasser kan deltage, uden nogen form for betaling til Code.org eller nogen anden organisation
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) vinderne bliver kun valgt blandt skoler, hvor hele klassen (eller skolen) deltager i Hour of Code, som omfatter en test af elevernes og lærernes kollektive færdigheder.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

@@ -1,12 +1,14 @@
 * * *
 
-title: Prizes layout: wide
+title: <%= hoc_s(:title_prizes) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
-# Prizes for every organizer
+# Prizes for every organiser
 
 Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
 
@@ -101,3 +103,5 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 ## More questions about prizes? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

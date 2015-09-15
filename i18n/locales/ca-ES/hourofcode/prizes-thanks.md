@@ -1,9 +1,13 @@
 * * *
 
-títol: Gràcies maquetació: àmplia
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Gràcies
 
-Tota la teva escola s'ha inscrit ara en el sorteig d'un conjunt de computadores portàtils per a l'aula (o 10.000 dòlars per altres tecnologies).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

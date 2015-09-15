@@ -1,8 +1,10 @@
 * * *
 
-Titlu: Parteneri
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Sponsori majori si susținători Corporate
 
@@ -37,3 +39,5 @@ Titlu: Parteneri
 # Alți parteneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

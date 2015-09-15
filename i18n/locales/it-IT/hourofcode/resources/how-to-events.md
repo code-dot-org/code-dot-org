@@ -1,23 +1,25 @@
 * * *
 
-title: Come preparare un Evento dell'Ora del Codice layout: wide nav: resources_nav
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Guida alla creazione di eventi per l'Ora del Codice
 
-Organizza un evento per l'Ora del Codice durante la Settimana di Educazione Informatica (Dicembre, dal 7 al 13) per celebrare l'informatica e permettere a tanti studenti di provarla. Chiunque e dovunque può organizzare un evento.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Prepara il tuo evento
 
   * Stabilisci un periodo, data e ora
-  * Manda [una lettera](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) per invitare il sindaco, autorità locali, uomini di governo o industriali a partecipare.
-  * Invita la stampa, ad esempio giornalisti, blogger... Guarda il nostro [kit stampa](<%= hoc_uri('/resources/press-kit') %>) per aiutarti.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Durante l'evento
 
-  * Dai inizio all'evento utilizzando uno dei nostri [video ispirativi](<%= hoc_uri('/resources#videos') %>).
-  * Introduci l'importanza dell'informatica utilizzando queste [statistiche e infografiche](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Altre idee per l'evento: 
@@ -34,13 +36,13 @@ Organizza un evento per l'Ora del Codice durante la Settimana di Educazione Info
 
 ## Esempio di evento organizzato
 
-**Evento:** Assemblea per l'inizio della settimana dell'educazione informatica
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Data:** 7 Dicembre (inizio della settimana di Educazione Informatica)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Tempo:** Durante la giornata scolastica, preferibilmente a metà mattina. Durata 1 ora circa.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Luogo:** Aula Magna (teatro, palestra, aula)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -48,9 +50,11 @@ Organizza un evento per l'Ora del Codice durante la Settimana di Educazione Info
 
 | Ora              | Evento                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Inizia con uno dei nostri [video](http://hourofcode.com/us/resources#videos)                                                                                                                         |
-| 10:05 - 10:15 am | Introduzione alla giornata da parte del dirigente sull'importanza dell'informatica. Utilizzo di [statistiche e infografiche](/resources/stats)                                                       |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                                                                 |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                                                  |
 | 10:15 - 10:30 am | Intervento degli ospiti che racconteranno le loro esperienze e come tecnologia e informatica abbiano un ruolo nella vita quotidiana.                                                                 |
 | 10:30 - 10:40 am | Gli studenti terranno una dimostrazione di Ora del Codice al resto della scuola. Cambio di parti: lasciate che siano loro ad insegnare al dirigente, ai rappresentanti politici o agli altri alunni. |
 | 10:40 - 11:00 am | Dimostrazioni degli studenti di un'attività informatica realizzabile senza l'uso del computer.                                                                                                       |
 | 11:00 - 11:05 am | L'insegnante che ha aiutato ad organizzare l'evento terrà il discorso conclusivo.                                                                                                                    |
+
+<%= view :signup_button %>

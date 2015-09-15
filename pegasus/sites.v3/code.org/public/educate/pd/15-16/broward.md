@@ -76,7 +76,7 @@ More info coming soon!
 
 [**Back to the top**](#top)
 
-<a id="ecs"></a>
+<a id="algebra"></a>
 
 ## CS in Algebra ##
 
@@ -111,8 +111,11 @@ Breakfast and lunch will be served.
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
-Room TBD<br/>
+Carl Desantis Building<br/>
+Room 1049<br/>
 Fort Lauderdale, FL 33314
+
+Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -127,7 +130,7 @@ Water
 
 [**Back to the top**](#top)
 
-<a id="ecs"></a>
+<a id="science"></a>
 
 ## CS in Science ##
 
@@ -163,9 +166,11 @@ Breakfast and lunch will be served.
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
-Room TBD<br/>
+Carl Desantis Building
+Room 1047<br/>
 Fort Lauderdale, FL 33314
 
+Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).
 
 **What to bring to Phase 3 biyearly sessions:**
 

@@ -1,8 +1,10 @@
 * * *
 
-crwdns44619:0crwdne44619:0
+crwdns48167:0crwdne48167:0
 
 * * *
+
+<%= view :signup_button %>
 
 # crwdns44620:0crwdne44620:0
 
@@ -10,8 +12,10 @@ crwdns44619:0crwdne44619:0
 
 ### crwdns44622:0crwdne44622:0
 
-crwdns44623:0crwdne44623:0 crwdns44624:0crwdne44624:0 crwdns44625:0crwdne44625:0 crwdns44626:0crwdne44626:0 crwdns44627:0crwdne44627:0 crwdns44628:0crwdne44628:0 crwdns44629:0crwdne44629:0 crwdns44630:0crwdne44630:0
+crwdns47851:0crwdne47851:0 crwdns47852:0crwdne47852:0 crwdns48168:0crwdne48168:0 crwdns47854:0crwdne47854:0 crwdns47855:0crwdne47855:0 crwdns48169:0crwdne48169:0 crwdns48170:0crwdne48170:0 crwdns48171:0crwdne48171:0<%= @country %>
 
 ## crwdns44631:0crwdne44631:0
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

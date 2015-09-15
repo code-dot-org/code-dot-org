@@ -1,6 +1,6 @@
 * * *
 
-Feladó: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Tárgy: "Köszönöm, hogy bemutatod a Kódolás Óráját az osztályteremben!" litmus_tracking_id: "5g5lyi1a"
+Feladó: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" Tárgy: "Köszönjük, hogy jelentkeztél a Kódolás Órája megtartására!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -8,7 +8,7 @@ Feladó: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x
 
 # Köszönjük hogy jelentkezett egy Hour of Code óra megtartására!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Általad is sok Latin amerikai diáknak van lehetősége kipróbálni a Kódolás Óráját, ami akár *meg is változtathatja az életüket*. Időpontja: október 5-11. <% else %> Általad is sok diáknak a Földön van lehetősége kipróbálni a Kódolás Óráját, ami akár *meg is változtathatja az életüket.* Időpontja: december 7-13. <% end %>
 
 We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
@@ -18,15 +18,15 @@ Tell your friends about the #HourOfCode.
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a te iskolád igazgatójának a pontos részletekkel.
 
 ## 3. Kérd meg a munkáltatódat, hogy vegyetek részt
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Küldd el ezt az e-mailt](http://<%= hostname %>/resources#email) a főnöködnek, vagy a vállalat igazgatójának a pontos részletekkel.
 
-## 4. Promote the Hour of Code in your community
+## 4. Hirdesd a Kódolás Óráját a saját közösségedben
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Keress meg egy egyesületet - sport klubbot, templomi társaságot, munkatársaidat vagy tanulótársaidat. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
 
 ## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
 
