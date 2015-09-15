@@ -24,3 +24,16 @@
 .category-header {
   font-family: 'Gotham 5r', sans-serif;
 }
+
+.category-button {
+  background-color: #a69bc1;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Gotham 4r', sans-serif;
+  margin: 5px 0px;
+  padding: 8px;
+}
+
+.category-link:hover {
+  text-decoration: none;
+}
