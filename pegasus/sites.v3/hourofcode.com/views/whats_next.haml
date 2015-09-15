@@ -3,6 +3,4 @@
   %ul{:style=>"line-height:28px"}
     %li=hoc_s(:whats_next_how_to).gsub('/resources/how-to', resolve_url('/resources/how-to'))
     %li=hoc_s(:whats_next_how_to_promote).gsub('/resources/promote', resolve_url('/resources/promote'))
-  %div{:style=>'text-align:center'}
-    %a{href: resolve_url('https://code.org/learn')}
-      %button=hoc_s(:whats_next_try_button)
+    %li=hoc_s(:whats_next_try).gsub('https://code.org/learn', resolve_url('https://code.org/learn'))
