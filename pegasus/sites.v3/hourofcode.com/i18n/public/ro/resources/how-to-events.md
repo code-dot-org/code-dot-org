@@ -1,19 +1,25 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Ghidul de organizare a unui eveniment Hour of Code
 
-Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Pregăteşte-te pentru eveniment
 
   * Stabileste un loc, o dată şi o ora
-  * Trimite [ un e-mail](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) pentru a invita primarul, oameni de afaceri influenţi sau alte personalităţi din zonă să vorbească.
-  * Invită mass-media şi presa locală. Pentru ajutor, a se vedea [ kit presă](<%= hoc_uri('/resources/press-kit') %>).
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) în timpul evenimentului
 
-  * Incepe evenimentul cu unul dintre [ filmele noastre](<%= hoc_uri('/resources#videos') %>).
-  * Fa o introducere prin care sa prezinti importanţa informaticii, folosind aceste [ statistici şi grafice](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Alte idei de eveniment: 
@@ -30,23 +36,25 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## Exemplu de plan pentru eveniment
 
-**Eveniment:** Saptamana Informaticii in Educatie, program desfasurat la nivelul intregii scoli
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 7th (start of Computer Science Education Week)
 
-**Desfasurare:** In timpul zilelor de scoala. Evenimentele organizate dimineata sunt preferate. Desfasurarea dureaza aproximativ o ora.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Locatie:** O sala din scoala(de exemplu amfiteatrul, sala de sport, sala de mese)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## Desfasurarea evenimentului
 
-| Orar             | Activitati                                                                                                                                    |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                        |
-| 10:05 - 10:15 am | Directorul scolii ofera un discurs privind importanta informaticii. Se vor folosi aceste [statistici si grafice](/resources/stats)            |
-| 10:15 - 10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                          |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                      |
-| 10:40 - 11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul. |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                             |
+| Orar             | Activitati                                                                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                                |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

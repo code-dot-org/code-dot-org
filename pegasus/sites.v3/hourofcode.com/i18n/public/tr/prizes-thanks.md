@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Teşekkür ederiz
 
-Okul olarak, bir sınıf için yeterli dizüstü bilgisayarlar (veya 10.000 $ değerinde diğer teknolojiler) kazanmak için giriş yaptınız.
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

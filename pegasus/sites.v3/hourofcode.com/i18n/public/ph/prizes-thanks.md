@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Salamat sa iyo
 
-Ang buong paaralan ay kasali na sa maaring manalo ng Laptop para sa klase (o $10,000 para sa mga gamit sa technology).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>
