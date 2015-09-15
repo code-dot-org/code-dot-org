@@ -112,7 +112,7 @@ class TablesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    redirect "/v3/#{endpoint}-tables/#{channel_id}/#{table_name}/#{value[:id]}", 301
+    redirect "/v3/#{endpoint}-tables/#{channel_id}/#{table_name}/#{value['id']}", 301
   end
 
   #
