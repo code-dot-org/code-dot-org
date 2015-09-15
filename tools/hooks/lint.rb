@@ -3,7 +3,7 @@ APPS_DIR = "#{REPO_DIR}/apps"
 
 def get_modified_files
   Dir.chdir REPO_DIR
-  cmd = "git diff --staged --name-only"
+  cmd = "git diff --cached --name-only"
   output = `#{cmd}`
 
   modified_paths = []
