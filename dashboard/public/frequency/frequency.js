@@ -36,24 +36,24 @@ var ENGLISH = {
 };
 
 /**
- * @typedef {Object} UserData
+ * @typedef {Object} MessageData
  * @property {string} letter - the single uppercase alphabetical
  *                    character this data point represents
  * @property {number} frequency - a value between 0 and 1 representing
  *                    the relative frequency of this character in the
- *                    user input.
- * @property {boolean} locked - whether or not this value has been
- *                     bound (semi-) permanently to a corresponding
- *                     english letter
+ *                    input message.
  */
 
 /**
- * @typedef {Object} EnglishData
+ * @typedef {Object} SubstitutionData
  * @property {string} letter - the single uppercase alphabetical
  *                    character this data point represents
  * @property {number} frequency - a value between 0 and 1 representing
  *                    the relative frequency of this character in
  *                    standard english
+ * @property {boolean} locked - whether or not this value has been
+ *                     bound (semi-) permanently to a corresponding
+ *                     message letter
  */
 
 /**
@@ -63,10 +63,9 @@ var ENGLISH = {
  * @param {!Object} options
  * @param {!jQuery} options.chart_container - the DOM element into which
  *                  we will render the bar chart
- * @param {!jQuery} options.text_input - the DOM element from which we
- *                  will read user input
  * @param {!jQuery} options.text_output - the DOM element into which we
  *                  will write generated output
+ * @param {string} options.message - the initial message to process
  * @constructor
  */
 var BarGraph = function (options) {
@@ -77,7 +76,7 @@ var BarGraph = function (options) {
   this.margin = {
     top: 45,
     right: 0,
-    bottom: 100,
+    middle: 100,
     left: 40
   };
 
@@ -90,7 +89,7 @@ var BarGraph = function (options) {
   /** @type {string} */
   this.message = options.message;
 
-  /** @type {Array.UserData} */
+  /** @type {Array.MessageData} */
   this.message_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
@@ -98,7 +97,7 @@ var BarGraph = function (options) {
     };
   });
 
-  /** @type {Array.EnglishData} */
+  /** @type {Array.SubstitutionData} */
   this.substitution_data = LETTERS.map(function (letter) {
     return {
       letter: letter,
@@ -145,7 +144,7 @@ var BarGraph = function (options) {
   /** @type {D3.selection} */
   this.svg = this.container.append("svg").attr({
       "width": this.getWidth() + this.margin.left + this.margin.right,
-      "height": this.getHeight()*2 + this.margin.top + this.margin.bottom
+      "height": this.getHeight()*2 + this.margin.top + this.margin.middle
     });
 
   /** @type {D3.selection} */
@@ -210,12 +209,34 @@ BarGraph.prototype.setMessage = function (message) {
 };
 
 /**
+ * Getter to retrieve the bars on the top half of the graph. Can pass in
+ * an alternate SVG element to select from
+ *
+ * @param {D3.selection} root
+ */
+BarGraph.prototype.getTopBars = function (root) {
+  root = root || this.graph;
+  return root.select('.topbars').selectAll('.letter');
+};
+
+/**
+ * Getter to retrieve the bars on the bottom half of the graph. Can pass in
+ * an alternate SVG element to select from
+ *
+ * @param {D3.selection} root
+ */
+BarGraph.prototype.getBottomBars = function (root) {
+  root = root || this.graph;
+  return root.select('.bottombars').selectAll('.letter');
+};
+
+/**
  * Getter that calculates the height of the graph, taking into account
  * margins for UI elements.
  * @returns {number} The height of the graph
  */
 BarGraph.prototype.getHeight = function () {
-  return (this.container.property("offsetHeight") - this.margin.top - this.margin.bottom)/2;
+  return (this.container.property("offsetHeight") - this.margin.top - this.margin.middle)/2;
 };
 
 /**
@@ -229,14 +250,20 @@ BarGraph.prototype.getWidth = function () {
 
 /**
  * @typedef {Object} ZippedData
- * @property {user} UserData
- * @property {english} EnglishData
+ * @property {message} MessageData
+ * @property {substitution} SubstitutionData
  */
 
 /**
  * Getter that combines the two authoritative data sources
  * (this.user_data and this.english_data) into a single list. Used to
  * render the bars.
+ *
+ * May pass in a substitution_data override and get zipped data using
+ * that, instead. Used by the dragging interface to render the temporary
+ * graph.
+ *
+ * @param {Array.SubstitutionData} override
  * @returns {Array.ZippedData}
  */
 BarGraph.prototype.getZippedData = function (override) {
@@ -250,14 +277,17 @@ BarGraph.prototype.getZippedData = function (override) {
 };
 
 /**
- * Getter that examines both User and English data in the current order
- * to return a mapping from User Data to English Data, with awareness of
- * which points are locked and which are not.
+ * Getter that examines both Message and Substitution data in the
+ * current order to return a mapping from Message to Substitution of
+ * ONLY those substitutions that are locked.
+ *
+ * May pass in a substitution_data override and get the map using
+ * that, instead. Used by the dragging interface to render the temporary
+ * graph.
+ *
+ * @param {Array.SubstitutionData} override
  * @returns {Object}  {
- *                      user_letter: {
- *                        letter: english_letter,
- *                        locked: boolean
- *                      },
+ *                      message_letter: SubstitutionData,
  *                      ...
  *                    }
  */
@@ -271,6 +301,21 @@ BarGraph.prototype.getSubstitutionMap = function (override) {
   }.bind(this), {});
 };
 
+/**
+ * Getter that examines both Message and Substitution data in the
+ * current order to return a mapping from Substitution to Message of
+ * ONLY those substitutions that are locked
+ *
+ * May pass in a substitution_data override and get the map using
+ * that, instead. Used by the dragging interface to render the temporary
+ * graph.
+ *
+ * @param {Array.SubstitutionData} override
+ * @returns {Object}  {
+ *                      substitutions_letter: MessageData,
+ *                      ...
+ *                    }
+ */
 BarGraph.prototype.getReverseSubstitutionMap = function (override) {
   var substitution_data = override || this.substitution_data;
   return substitution_data.reduce(function (map, d, i) {
@@ -433,49 +478,42 @@ BarGraph.prototype.reorder = function () {
 
 };
 
-BarGraph.alphabeticSort = function (a, b) {
-  //return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
-  return (a.letter.charCodeAt() - b.letter.charCodeAt());
-};
-BarGraph.frequencySort = function (a, b) {
-  // we do b-a rather than a-b because the values we're examining
-  // are < 1
-  var delta = (b.frequency - a.frequency);
-
-  // If the two letters happen to have the exact same frequency,
-  // order them (arbitrarily) alphabetically
-  return (delta === 0) ? BarGraph.alphabeticSort(a, b) : delta;
-};
-
 /**
  * Event handler for a button.click event intended to toggle the sorting
- * of the English data between A-Z ordering and Frequency ordering.
- * Sorts both this.english_data and this.user_data while preserving the
- * mapping between them.
- * @param {event} changeEvent
+ * of the Message data between A-Z ordering and Frequency ordering.
+ * @param {event} change_event
  */
-BarGraph.prototype.handleSortChange = function (changeEvent) {
-  var sortFun;
-  var sortType = changeEvent.target.value;
+BarGraph.prototype.handleSortChange = function (change_event) {
+  var sort_function;
+  var sortType = change_event.target.value;
   if (sortType === "alphabetic") {
-    sortFun = BarGraph.alphabeticSort;
+    sort_function = BarGraph.alphabeticSort;
   } else if (sortType === "frequency") {
-    sortFun = BarGraph.frequencySort;
+    sort_function = BarGraph.frequencySort;
   } else {
     return;
   }
-  this.sortMessageData(sortFun);
+  this.sortMessageData(sort_function);
 };
 
-BarGraph.prototype.sortMessageData = function (sortFun) {
+/**
+ * Sorts both this.message_data and this.substitution_data by the given
+ * funtction while preserving the mapping between them.
+ *
+ * @param {function} sort_function
+ */
+BarGraph.prototype.sortMessageData = function (sort_function) {
+
   // cache the message -> substitution mapping
+  // Note that we don't use this.getSubstitutionMap here, as that
+  // ignores unlocked substitutions
   var substMap = this.message_data.reduce(function (map, d, i) {
       map[d.letter] = this.substitution_data[i];
     return map;
   }.bind(this), {});
 
   // reorder the english data
-  this.message_data = this.message_data.sort(sortFun);
+  this.message_data = this.message_data.sort(sort_function);
 
   // reorder users based on the preserved mapping
   this.substitution_data = this.message_data.map(function (d) {
@@ -487,11 +525,11 @@ BarGraph.prototype.sortMessageData = function (sortFun) {
 
 
 /**
- * Generates a drag behavior intended to be used on the user letters so
- * the user can swap two of them at a time to create a substitution
- * mapping. Takes locked letters into account, animates the proposed
- * swap while dragging is happening, and finalizes the swap once
- * dragging stops.
+ * Generates a drag behavior intended to be used on the substitution
+ * letters so the user can assign, unassign, or swap substitutions.
+ * Takes locked letters into account, animates the proposed change while
+ * dragging is happening, and finalizes the change once dragging stops.
+ *
  * @returns {D3.behavior}
  */
 BarGraph.prototype.createDragBehavior = function () {
@@ -534,8 +572,7 @@ BarGraph.prototype.createDragBehavior = function () {
     this.graph.classed("dragging", true);
 
     /* find the source */
-    // we can't trust the index passed to this function, because it
-    // doesn't count the locked letters.
+    // we can't trust the index passed to this function
     var i = this.substitutionLetterScale.domain().indexOf(d.substitution.letter);
 
     /* move the source */
@@ -556,13 +593,13 @@ BarGraph.prototype.createDragBehavior = function () {
     for (j = 0; xPos > (leftEdges[j] + width); j++) {}
     j = Math.min(j, leftEdges.length - 1);
 
-    // if the target destination is locked, do nothing.
-    if (this.substitution_data[j].locked === true) {
-      //return;
-    }
+    // 28 is how far down the "unlocked" letters are translated. If the
+    // dragged letter is more than halfway into that range, consider
+    // this to be a "lock" action. Otherwise, an "unlock"
+    var cutoff = 28 + sourceHeight/2;
+    if (d3.event.y > cutoff) {
 
-    if (d3.event.y > 40) {
-
+      // unlock the carried letter
       substitution_data_swapped = this.substitution_data;
       substitution_data_swapped[i].locked = false;
 
@@ -576,7 +613,8 @@ BarGraph.prototype.createDragBehavior = function () {
 
     } else {
 
-      /* swap em! */
+      // swap the carried letter and the target letter, and lock the
+      // carried letter into place
       substitution_data_swapped = this.substitution_data.map(function (d, index, substitution_data) {
         if (index == i) return substitution_data[j];
         else if (index == j) return substitution_data[i];
@@ -595,12 +633,13 @@ BarGraph.prototype.createDragBehavior = function () {
       });
     }
 
+    /* re-size the bars */
+
     var zipped_data = this.getZippedData(substitution_data_swapped);
     var substMap = this.getReverseSubstitutionMap(substitution_data_swapped);
 
-    /* re-size the letters */
     /* note: this seems pretty inefficient. We're binding all the data
-     * for all the letters and resizing everything, and we're doing it
+     * for all the bars and resizing everything, and we're doing it
      * for nearly every pixel moved. I'm sure with just a little more
      * work, we can resize only the bars we care about.
      */
@@ -633,11 +672,11 @@ BarGraph.prototype.createDragBehavior = function () {
 
 /**
  * Clears any existing drag behavior, and reapplies this.drag to the
- * unlocked draggable letters
+ * draggable letters
  */
 BarGraph.prototype.refreshDragBehavior = function () {
   this.graph.select('.x1.axis').selectAll('.dragletter').on(".drag", null);
-  this.graph.select('.x1.axis').selectAll('.dragletter:not(.locked)').call(this.drag);
+  this.graph.select('.x1.axis').selectAll('.dragletter').call(this.drag);
 };
 
 /**
@@ -821,6 +860,9 @@ BarGraph.prototype.buildSVG = function () {
 
 };
 
+/**
+ * Resets and unlocks all substutions
+ */
 BarGraph.prototype.reset = function () {
   this.substitution_data.forEach(function(d){
     d.locked = false;
@@ -830,14 +872,16 @@ BarGraph.prototype.reset = function () {
 };
 
 /**
- * Reorders this.user_data to represent a shifted alphabetic ordering.
- * If the user has locked any letters, confirms with the user then
- * clears the locks.
- * @param {number} amt - amount to shift by
+ * Reorders this.substitution_data to represent a shifted alphabetic
+ * ordering.  If the user has locked any letters, checks to see if the
+ * locked letters represent an alphabetic shift. If not, confirms with
+ * the user before reordering
+ *
+ * @param {number} shift_amount - amount to shift by
  * @returns {boolean} whether the shift was successful. Should only be
  *                    true if the user canceled out of the confirmation
  */
-BarGraph.prototype.shift = function (amt) {
+BarGraph.prototype.shift = function (shift_amount) {
   var some_locked = this.substitution_data.some(function (d) {
     return d.locked;
   });
@@ -860,13 +904,17 @@ BarGraph.prototype.shift = function (amt) {
     d.locked = true;
   });
 
+  // NOTE we take into account here that the message data could be
+  // either alphabetically- or frequency-sorted. We might want to
+  // disallow shifting when the message data is frequency-sorted, in
+  // which case this could be simplified.
+
   // first, sort substitution data alphabetically
   var sorted = this.substitution_data.sort(BarGraph.alphabeticSort);
 
-  // then, realign it with message data. Note that message data might be
-  // either alphabetically- or frequency-sorted
+  // then, realign it with message data.
   this.substitution_data = this.message_data.map(function (message) {
-    var i = (LETTERS.indexOf(message.letter) + 26 - amt) % 26;
+    var i = (LETTERS.indexOf(message.letter) + 26 - shift_amount) % 26;
     return sorted[i];
   });
 
@@ -889,6 +937,11 @@ BarGraph.prototype.randomize = function () {
   this.reorder();
 };
 
+/**
+ * Sorts this.substitution_data by frequency
+ *
+ * @param {function} sort_function
+ */
 BarGraph.prototype.sortSubstitutions = function () {
   this.substitutions_data = this.substitution_data.sort(BarGraph.frequencySort);
 
@@ -897,16 +950,6 @@ BarGraph.prototype.sortSubstitutions = function () {
   });
 
   this.reorder();
-};
-
-BarGraph.prototype.getTopBars = function (root) {
-  root = root || this.graph;
-  return root.select('.topbars').selectAll('.letter');
-};
-
-BarGraph.prototype.getBottomBars = function (root) {
-  root = root || this.graph;
-  return root.select('.bottombars').selectAll('.letter');
 };
 
 /**
