@@ -370,9 +370,9 @@ dashboard.header.showProjectHeader = function () {
     e.preventDefault(); // Don't change the hash.
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
         + '<div id="confirm-delete" class="modal-content">'
-        + '<p class="dialog-title">' + dasboard.i18n.t('project.delete_confirm_title') + '</p>'
-        + '<p>' + dasboard.i18n.t('project.delete_confirm_text') + '</p>'
-        + '<button id="again-button">' + dasboard.i18n.t('project.cancel') + '</button>'
+        + '<p class="dialog-title">' + dashboard.i18n.t('project.delete_confirm_title') + '</p>'
+        + '<p>' + dashboard.i18n.t('project.delete_confirm_text') + '</p>'
+        + '<button id="again-button">' + dashboard.i18n.t('project.cancel') + '</button>'
         + '<button id="continue-button" style="float: right">' + dashboard.i18n.t('project.delete') + '</button></div>'
     });
     dialog.show();
