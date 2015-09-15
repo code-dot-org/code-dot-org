@@ -29,6 +29,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Stage2', script.script_levels[3].stage.name
   end
 
+  test 'find by name uses cache' do
+    # Make sure that find_by_name returns the cached script.
+    script = Script.find_by_name('flappy')
+    assert script.equal?(Script.get_from_cache('flappy'))
+    assert_equal 'flappy', script.name
+  end
+
   test 'should not change Script[Level] ID when reseeding' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]

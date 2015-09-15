@@ -142,6 +142,10 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
+  def self.find_by_name(name)
+    self.get_from_cache(name) || super(name)
+  end
+
   def self.get_from_cache(id)
     if !Rails.env.levelbuilder? && self.script_cache[id.to_s]
       self.script_cache[id.to_s]
