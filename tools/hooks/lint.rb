@@ -7,15 +7,15 @@ def get_modified_files
 end
 
 def filter_grunt_jshint(modified_files)
-  return modified_files.select { |f| f.start_with?(APPS_DIR) and f.end_with?(".js") }
+  modified_files.select { |f| f.start_with?(APPS_DIR) and f.end_with?(".js") }
 end
 
 def filter_rubicop(modified_files)
-  return modified_files.select { |f| f.end_with?(".rb") }
+  modified_files.select { |f| f.end_with?(".rb") }
 end
 
 def filter_haml(modified_files)
-  return modified_files.select { |f| f.end_with?(".haml") }
+  modified_files.select { |f| f.end_with?(".haml") }
 end
 
 def run_rubocop(files)
