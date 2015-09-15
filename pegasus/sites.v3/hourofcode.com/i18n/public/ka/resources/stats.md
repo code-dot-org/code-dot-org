@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # რეკლამები და სასარგებლო სტატისტიკა
 
@@ -6,8 +12,10 @@
 
 ### შეიტანე კომპიუტერული მეცნიერება შენს სკოლაში. დაიწყე კოდის საათით
 
-კომპიუტერები ყველგანაა, მაგრამ ნაკლები სკოლა ასწავლის კომპიუტერულ მეცნიერებას ვიდრე 10 წლის წინ. Good news is, we’re on our way to change this. თუ გაიგე [კოდის საათის შესახებ](<%= hoc_uri('/') %>) წინა წელს, ალბათ უკვე იცი, რომ მან ისტორიაზე გავლენა იქონია. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [კოდის საათი](<%= hoc_uri('/') %>) არის ერთსაათიანი შესავალი კომპიუტერულ მეცნიერებაში, შექმნილი კოდის შესახებ მისტიკის გასაქრობად და იმის საჩვენებლად, რომ ნებისმიერს შეუძლია საფუძვლების სწავლა. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
+კომპიუტერები ყველგანაა, მაგრამ ნაკლები სკოლა ასწავლის კომპიუტერულ მეცნიერებას ვიდრე 10 წლის წინ. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. პირველ კოდის საათში, 15 მილიონმა მოსწავლემ სცადა კომპიუტერული მეცნიერება. შარშან, ეს რიცხვი 60 მილიონ მოსწავლემდე გაიზარდა! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographics
+## ინფოგრაფიკა
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

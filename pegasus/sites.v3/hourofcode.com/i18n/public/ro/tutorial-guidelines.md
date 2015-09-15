@@ -1,8 +1,14 @@
+* * *
 
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
 
 Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt începători în ceea ce priveste informatica. Vă rugăm să folosiţi acest document ca și ghid pentru organizarea activității, orientată către utilizatorul care nu are nici o experiență în informatică, programare sau tehnologia calculatorului.
 
@@ -17,11 +23,11 @@ Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul princip
 
 ## Cuprins:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
   * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
     
-  * [How to submit (Due 10/31/2015)](#submit)  
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [How to submit (Due 10/15/2015)](#submit)  
     
   * [Suggestions for designing your activity](#design)  
     
@@ -33,6 +39,42 @@ Ne dorim sa găzduim o varietate de elemente interactive, dar obiectivul princip
     
   * [O notă pentru elevii cu dizabilități](#disabilities)
 
+<a id="guidelines"></a>
+
+## New for 2015: two formats of activites: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+
+Examples:
+
+  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+  
+  
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea exterienței prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## Recomandări generale pentru a organiza o activitate Hour of Code
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * Încurajează elevii să creeze ceva care pot fi distribuit prietenilor/online.
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**La începutul paginii**](#top)
+
 <a id="inclusion"></a>
 
 ## Cum vor fi evaluate tutorialele pentru includere
@@ -42,7 +84,6 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
 **Tutorialul va avea punctaj mai mare dacă este:**
 
   * de înaltă calitate
-  * ușor de înteles, nu are nevoie de instrucţiuni
   * designed for beginners - among students AND teachers
   * conceput pentru ~ o 1 oră de activitate
   * nu necesită înregistrare
@@ -57,7 +98,6 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
 
   * slab calitativ
   * adresat unui nivel avansat (dacă exclude începatorii)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * funcționează pe un număr limitat de platforme, sisteme operare sau dispozitive - pentru platformele Web ar trebui să urmărească funcționarea pe următoarele browsere: IE9 +, şi cele mai recente Chrome, Firefox şi Safari
   * funcționează doar în limba engleză
   * reinforce stereotypes that hinder participation by under-represented student groups
@@ -72,31 +112,15 @@ Un comitet de profesori din domeniul informaticii vor nota tutorialele, pe baza 
   * se concentrează numai pe HTML + CSS web design
   * sunt transmise după termenul limită de depunere, sau cu informaţii incomplete (a se vedea mai jos)
 
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
 În cele din urmă, scopul campaniei Hour of Code este să marească numărul elevilor, studenților si profesorilor participanți, interesați de tehnologia computerelor, să arate ca programarea și tehnologia computerelor este accesibilă tuturor şi "mai uşoară decât se crede". În multe privinţe, acest obiectiv este realizat mai bine oferindu-le elevilor şi profesorilor opţiuni mai puţine, mai simple, însă cu accent pe cel mai înalt nivel de calitate pentru un utilizator începător. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**La începutul paginii**](#top)
-
-<a id="guidelines"></a>
-
-## Recomandări generale pentru a organiza o activitate Hour of Code
-
-  * **Subiect:** Introducere in tehnologia computerelor sau programare (nu HTML).
-  * **Obiectiv:** Oferă începatorilor o prima exeriență accesibilă cu programarea.
-  * **Tonul:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * Încurajează elevii să creeze ceva care pot fi distribuit prietenilor/online.
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. În mod ideal, instrucţiunile şi tutorialele sunt integrate direct în platformă, pentru a evita întreruperea exterienței prin navigarea între tab-uri sau ferestre între tutorial şi platformă.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**La începutul paginii**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 
 Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
@@ -133,11 +157,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Vă rugăm să includeţi, de asemenea, cunoștințele despre computer recomandate în funcție de nivel: începător, intermediar sau avansat. Site-ul Hour of Code va evidenţia mai vizibil activităţile pentru incepatori. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Cerințe tehnice: 
       * Pentru a urmări mai corect participarea, ne dorim ca fiecare tutorial realizat de un partener, să includă imagini urmărire de 1 pixel pe prima şi ultima pagină a tutorialului realizat pentru Hour of Code. Plasați un pixel inițial pe pagina de start şi un pixel final în ultima pagina. Nu aşezaţi pixeli în pagini intermediare). Consultaţi secţiunea Tracking Pixel mai jos pentru mai multe detalii. 
-      * La terminarea activității, utilizatorii ar trebui să fie direcționați către <http://code.org/api/hour/finish> unde vor putea să: 
+      * La terminarea activității, utilizatorii ar trebui să fie direcționați către [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> unde vor putea să: 
           * Share-uiasca pe rețelele sociale că au finalizat Hour of Code
           * Primească un certificat de participare/finalizare a Hour of Code
           * Vadă clasamentele cu țările/orașele cea mai mare rată de participare în activităţi Hour of Code
-          * Pentru utilizatorii care petrec în cadrul activității dumneavoastră dar nu o finalizează, vă rugăm să includeţi un buton care spune "Am terminat Hour of Code" care duce la <http://code.org/api/hour/finish>, de asemenea. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
   * *(Opţional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Pentru activităţile online (în special aplicații smartphone/tablete): 
           * Numărul de utilizatori
@@ -246,3 +270,5 @@ Recomandăm tuturor să-și promoveze singuri propriile tutoriale de 1-oră util
 Dacă creaţi un tutorial care este proiectat pentru vision-impaired, ne-ar plăcea să-l evidenţiaţi pentru telespectatorii cu cititoare de ecran. Noi nu au primit încă un astfel de tutorial, şi ar fi dornici să includem unul ca o opţiune pentru acesti elevi.
 
 [**La începutul paginii**](#top)
+
+<%= view :signup_button %>

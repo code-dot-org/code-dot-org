@@ -1,19 +1,25 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Керівництво з проведення заходу Години коду
 
-Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Підготуйтесь до заходу
 
   * Визначте місце, дату та час проведення
-  * Надішліть [листа](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) із запрошенням місцевих політиків, депутатів, бізнесменів чи інших впливових людей.
-  * Запросіть медіа та пресу, наприклад, місцеві новини, газету, освітніх чи технічних блогерів. Перегляньте [прес-кіт](<%= hoc_uri('/resources/press-kit') %>) для детальнішої інформації.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Проведіть захід
 
-  * Розпочніть захід одним із наших [натхненних відео-роликів](<%= hoc_uri('/resources#videos') %>).
-  * Проведіть вступ, наголошуючи на важливості інформатики, використовуючи [статистику та інфографіку](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Інші корисні ідеї: 
@@ -30,23 +36,25 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## Приклад плану заходу
 
-**Захід:** Шкільні збори, присвячені початку тижня інформатики
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 7th (start of Computer Science Education Week)
 
-**Час:** Протягом уроків. Краще у першій половині навчального дня. Тривалість близько 1 години.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Місце проведення:** Актовий зал школи (хол, спортзал, їдальня)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## План подій
 
-| Час              | Подія                                                                                                                                   |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                                  |
-| 10:05 - 10:15 am | Директор проголошує вступне слово, підкреслюючи важливість інформатики. Можна використати [статистику та інфографіку](/resources/stats) |
-| 10:15 - 10:30 am | Запрошені гості розповідають про свою освіту та заняття, та про значення технологій та інформатики у їхньому житті.                     |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                |
-| 10:40 - 11:00 am | Учні беруть участь у безмашинній вправі та демонструють вивчення інформатики без комп'ютерів.                                           |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                       |
+| Час              | Подія                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Запрошені гості розповідають про свою освіту та заняття, та про значення технологій та інформатики у їхньому житті.                                 |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Учні беруть участь у безмашинній вправі та демонструють вивчення інформатики без комп'ютерів.                                                       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

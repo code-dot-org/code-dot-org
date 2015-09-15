@@ -1,8 +1,14 @@
+* * *
 
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
 
 Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer. Mohon gunakan dokumen ini untuk memandu kreativitas kegiatan anda, untuk ditujukan kepada pengguna yang tidak punya latar belakang dalam pengkodean, program komputer, dan ilmu komputer.
 
@@ -17,11 +23,11 @@ Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adal
 
 ## Indeks:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
   * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
     
-  * [How to submit (Due 10/31/2015)](#submit)  
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [How to submit (Due 10/15/2015)](#submit)  
     
   * [Suggestions for designing your activity](#design)  
     
@@ -33,6 +39,42 @@ Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adal
     
   * [Catatan untuk pelajar penyandang cacat](#disabilities)
 
+<a id="guidelines"></a>
+
+## New for 2015: two formats of activites: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+
+Examples:
+
+  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+  
+  
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Idealnya, instruksi dan tutorial harus terintegrasi dengan platform pemrograman, supaya tidak perlu berpindah tab atau jendela antara tutorial dan platform pemrograman.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## Panduan umum untuk menciptakan kegiatan dari Hour of Code
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * Berikan dorongan kepada para pelajar untuk membuat sesuatu yang dapat dibagikan bersama teman-teman/secara daring(online).
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**Kembali ke atas**](#top)
+
 <a id="inclusion"></a>
 
 ## Bagaimana tutorial akan dievaluasi untuk disertakan
@@ -42,7 +84,6 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
 **Tutorial akan dicantumkan lebih tingggi jika:**
 
   * kualitas tinggi
-  * mandiri, tidak perlu instruksi
   * designed for beginners - among students AND teachers
   * Dirancang sebagai kegiatan ~ 1 jam
   * tidak perlu mendaftar
@@ -57,7 +98,6 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
 
   * kualitas rendah
   * tingkat mengajar yang lebih lanjut (bukan untuk pemula)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * memiliki keterbatasan pada dukungan platform perangkat keras atau sistem operasi - untuk platform berbasis web anda harus menggunakan browser: IE9+, dan Chrome, Firefox dan Safari terbaru
   * hanya tersedia dalam bahasa inggris
   * reinforce stereotypes that hinder participation by under-represented student groups
@@ -72,31 +112,15 @@ Sekelompok komite pendidik ilmu komputer akan memberikan peringkat berdasarkan u
   * difokuskan hanya pada desain web HTML + CSS
   * dimasukkan setelah batas waktu penyerahan, atau dengan informasi yang tidak lengkap (lihat dibawah)
 
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
 Tujuan utama dari Hour of Code adalah untuk menyebarluaskan partisipasi pelajar dan guru dalam ilmu komputer, dan untuk membantu menunjukkan bahwa ilmu komputer dapat diakses oleh semua orang, dan "lebih mudah daripada yang Anda pikirkan." Dalam banyak hal, tujuan ini lebih baik dicapai dengan memberikan beberapa pilihan yang lebih sedikit dan sederhana, dengan fokus pada pilihan berkualitas tertinggi untuk pengguna pemula. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**Kembali ke atas**](#top)
-
-<a id="guidelines"></a>
-
-## Panduan umum untuk menciptakan kegiatan dari Hour of Code
-
-  * **Subject:** Pengenalan ilmu komputer atau pemrograman (bukan HTML).
-  * **Tujuan:** Memberikan pemula akses bagaimana rasanya membuat program.
-  * **Nada:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * Berikan dorongan kepada para pelajar untuk membuat sesuatu yang dapat dibagikan bersama teman-teman/secara daring(online).
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Idealnya, instruksi dan tutorial harus terintegrasi dengan platform pemrograman, supaya tidak perlu berpindah tab atau jendela antara tutorial dan platform pemrograman.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**Kembali ke atas**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 
 Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
@@ -133,11 +157,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Diharapkan juga untuk menyertakan pengetahuan ilmu komputer yang direkomendasi untuk tingkatan: Pemula, Menengah atau Lanjutan. Website Hour of Code akan menyoroti aktivitas untuk pemula yang paling mencolok. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Persyaratan teknis: 
       * Untuk lebih akurat dalam melacak peserta kami ingin setiap mitra kelompok pihak ketiga untuk menyertakan 1-pixel gambar pelacak pada setiap awal dan dan akhir dari tutorial Hour of Code. Tempatkan gambar-piksel mulai pada halaman pertaman dan gambar-piksel selesai pada halaman terakhir. Tidak boleh menempatkan piksel pada pertengahan halaman). Lihat Piksel pelacakan pada bagian bawah untuk rincian. 
-      * Setelah menyelesaikan aktivitas anda, pengguna harus diarahkan ke <http://code.org/api/hour/finish> dimana mereka dapat: 
+      * Setelah menyelesaikan aktivitas anda, pengguna harus diarahkan ke [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> dimana mereka dapat: 
           * Bagikan pada media sosial bahwa mereka telah menyelesaikan Hour of Code
           * Menerima sertifikat bahwa mereka telah menyelesaikan Hour of Code
           * Lihat papan peringkat tetang negara/kota yang memiliki tingkat partisipasi tertinggi dalam aktivitas Hour of Code
-          * Untuk pengguna yang telah menghabiskan waktu untuk mengikuti aktivitas anda dan tidak menyelesaikannya, dimohon agar anda menempatkan tombol yang mengatakan "Saya telah selesai dengan Hour of Code" yang berisi link menuju <http://code.org/api/hour/finish>. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
   * *(Opsional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Untuk aktivitas online (terutama aplikasi ponsel pintar/tablet): 
           * Jumlah pengguna
@@ -246,3 +270,5 @@ Kami minta agar setiap orang mempromosikan tutorial satu jam mereka kepada para 
 Jika Anda membuat sebuah tutorial yang dirancang untuk ganguan-penglihatan, kami akan senang untuk menyorotnya untuk pemirsa dengan pembaca layar. Kami belum menerima sebuah tutorial seperti itu, dan akan bersemangat untuk memasukkan sebagai salah satu pilihan untuk para pelajar.
 
 [**Kembali ke atas**](#top)
+
+<%= view :signup_button %>

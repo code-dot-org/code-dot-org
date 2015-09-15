@@ -1,4 +1,10 @@
+* * *
 
+title: Privacy Policy
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # 개인정보보호정책
 

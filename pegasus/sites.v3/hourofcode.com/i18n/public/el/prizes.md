@@ -1,16 +1,22 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
 # Βραβεία για κάθε διοργανωτή
 
-Κάθε εκπαιδευτικός που φιλοξενεί μια ώρα κώδικα για μαθητές λαμβάνει 10 GB χώρου στο Dropbox ως ευχαριστήριο δώρο!
+Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank you gift!
 
 <% else %>
 
 # Τα βραβεία του 2015 έρχονται!
 
-**Κάθε** εκπαιδευτικός που διοργανώνει μια εκδήλωση για την Ώρα του Κώδικα πληρεί τις προϋποθέσεις για να λάβει ένα βραβείο. Ελέγχετε τακτικά για ενημερώσεις το φθινόπωρο του 2015.
+**Every** educator who organizes an Hour of Code event is eligible to receive a prize. Check back for updates in fall 2015.
 
 <% end %>
 
@@ -20,11 +26,11 @@
 
 ## Κάθε διοργανωτής κέρδισε ένα ευχαριστήριο δώρο {#gift_code}
 
-Κάθε εκπαιδευτικός που διοργάνωσε μια Ώρα του Κώδικα για μαθητές έλαβε 10 GB χώρου στο Dropbox ή 10$ σε μονάδες ομιλίας Skype ως ευχαριστήριο δώρο!
+Every educator who hosted an Hour of Code for students received 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 ## 51 σχολεία κέρδισαν ένα σετ φορητών υπολογιστών για τάξη (ή 10.000$ σε τεχνολογικό εξοπλισμό)
 
-Ένα τυχερό σχολείο σε ***κάθε*** πολιτεία των Η.Π.Α. (+ Ουάσινγκτον) κέρδισε 10.000$ σε τεχνολογικό εξοπλισμό. [**Δείτε τους περσινούς νικητές**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
+One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 worth of technology. [**See last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
 <% end %>
 
@@ -32,7 +38,7 @@
 
 ## 20 τυχερά τμήματα κέρδισαν μια βιντεο-κλήση με ένα διακεκριμένο ομιλητή! {#video_chat}
 
-20 τυχερά τμήματα κλήθηκαν να συμμετάσχουν σε μια βιντεο-κλήση για να γιορτάσουν την Ώρα του Κώδικα. Οι μαθητές συνομίλησαν με ηγέτες της τεχνολογίας όπως ο [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), ιδρυτής του Skype και του Kazaa και η [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), συνιδρυτής και Διευθύνων Σύμβουλος της Moonfruit.
+20 lucky classrooms were be invited to join a video chat to celebrate the Hour of Code. Students chatted with tech leaders like [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), the founder of Skype and Kazaa and [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), co-founder and CEO of Moonfruit.
 
 <% end %>
 
@@ -40,7 +46,7 @@
 
 ## 100 τμήματα κέρδισαν μια βιντεο-κλήση με έναν διακεκριμένο ομιλητή! {#video_chat}
 
-100 τυχερά τμήματα συμμετείχαν σε ζωντανή βιντεο-κλήση με ερωτήσεις και απαντήσεις από Τιτάνες της τεχνολογίας και δημοσιότητες που αγαπούν την τεχνολογία. Οι μαθητές έθεσαν ερωτήσεις και συζήτησαν με αυτά τα συναρπαστικά πρότυπα ανθρώπων ως εισαγωγή για την Ώρα του Κώδικα.
+100 lucky classrooms participated in live video Q&As with tech titans and tech-loving celebrities. Students asked questions and chatted with these exciting role models to kick off the Hour of Code.
 
 ### Παρακολουθήστε τις περσινές βιντεο-κλήσεις με διασημότητες:
 
@@ -52,15 +58,15 @@
 
 ## Το πρόγραμμα της Brilliant αξίας $2000 {#brilliant_project}
 
-Η εταιρεία [Brilliant Labs](http://brilliantlabs.com/hourofcode) πρόσφερε τους απαραίτητους πόρους, μέχρι του ποσού των 2000 δολαρίων, για την υλοποίηση ενός μαθησιακού προγράμματος που είναι μαθητοκεντρικό και το οποίο βασίζεται στην τεχνολογία και στην πρακτική άσκηση των μαθητών μέσα στην τάξη, σε κάθε επαρχία και κάθε περιοχή (σημείωση: εκτός του Quebec). Για περισσότερες λεπτομέρειες, όρους και προϋποθέσεις, παρακαλούμε επισκεφθείτε το [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
+[Brilliant Labs](http://brilliantlabs.com/hourofcode) provided the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). For more details, terms and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
 ## Τυχερά σχολεία κέρδισαν εργαστηριακά μαθήματα από την εταιρεία Actua {#actua_workshop}
 
-15 τυχερά σχολεία σε όλο τον Καναδά είχαν μια ευκαιρία-δώρο για 2 σεμινάρια πρακτικής άσκησης, σε θεματολογία γύρω από την Επιστήμη, την Τεχνολογία, την Μηχανική των Υπολογιστών και τα Μαθηματικά, ειδομένα ως μια ενιαία εκπαιδευτική κατηγορία (STEM), από ένα μέλος εκ των[ 33 μελών του δικτύου](http://www.actua.ca/about-members/) Actua. Τα μέλη της Actua παραδίδουν εργαστηριακά μαθήματα στους τομείς της Επιστήμης, της Τεχνολογίας, της Μηχανικής των Υπολογιστών και των Μαθηματικών (STEM) και τα οποία συνδέονται με περιβαλλοντικά προγράμματα για μαθητές Δημοτικού. Αυτές οι εμπειρίες που αποκτούνται μέσα στην τάξη, παραδίδονται από προπτυχιακούς φοιτητές που έχουν πάθος, έχουν υψηλή εκπαίδευση και αποτελούν πρότυπα φοιτητών στους τομείς του STEM. Οι εκπαιδευτικοί μπορούν να αναμένουν συναρπαστικές επιδείξεις, διαδραστικά πειράματα και πολύ χαρά για τους μαθητές τους, στα πλαίσια αυτών των δραστηριοτήτων στον τομέα των STEM! Παρακαλούμε σημειώσετε ότι η διαθεσιμότητα αυτών των εργαστηρίων που διενεργούνται στην τάξη μπορεί να ποικίλουν σε απομακρυσμένες και αγροτικές περιοχές.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-Η [Actua](http://actua.ca/) είναι ο ηγέτης του Καναδά στην Επιστήμη, την Τεχνολογία, την Μηχανική των Υπολογιστών και τα Μαθηματικά (STEM). Κάθε χρόνο η Actua προσεγγίζει πάνω από 225.000 νέους σε πάνω από 500 περιοχές, μέσω του προγράμματός της για την εξάλειψη των εμποδίων της πρόσβασης της νεολαίας στον προγραμματισμό.
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**Συγχαρητήρια στους νικητές του 2014!**
+**Congratulations to the 2014 winners!**
 
 | Σχολείο                         | Πόλη        | Μέλος του δικτύου της Actua     |
 | ------------------------------- | ----------- | ------------------------------- |
@@ -82,7 +88,7 @@
 
 ## H MKO Kids Code Jeunesse βοήθησε στην υποστήριξη τμημάτων σε ολόκληρο τον Καναδά! {#kids_code}
 
-Ο Οργανισμός [ Kids Code Jeunesse](http://www.kidscodejeunesse.org) παρείχε εκπαιδευμένους εθελοντές σε προγράμματα προγραμματισμού υπολογιστών για να στηρίξουν εκπαιδευτικούς στην διδακτική της πληροφορικής. Η Kids Code Jeunesse είναι ένας Καναδικός Μη Κερδοσκοπικός Οργανισμός με στόχο να παρέχει σε κάθε παιδί την ευκαιρία να μάθει να προγραμματίζει, και σε κάθε εκπαιδευτικό την ευκαιρία να μάθει πως να διδάξει τον προγραμματισμό υπολογιστών στην τάξη.
+[Kids Code Jeunesse](http://www.kidscodejeunesse.org) provided trained computer programming volunteers to support teachers in computer science education. Kids Code Jeunesse is a Canadian not-for-profit aimed at providing every child with the opportunity to learn to code and every teacher the opportunity to learn how to teach computer programming in the classroom.
 
 <% end %>
 
@@ -90,10 +96,12 @@
 
 ## 100 τμήματα κέρδισαν ένα σετ από προγραμματιζόμενα ρομπότ {#programmable_robots}
 
-Ο [Sphero](http://www.gosphero.com/) είναι μια ρομποτική μπάλα που ελέγχεται από μια εφαρμογή, η οποία αλλάζει το τρόπο που οι μαθητές μαθαίνουν. Υποβοηθούμενα από τα [SPRK μαθήματα](http://www.gosphero.com/education/), αυτά τα στρογγυλά ρομπότ δίνουν στα παιδιά ένα διασκεδαστικό αρχικό μάθημα στον προγραμματισμό, ακονίζοντας παράλληλα τις δεξιότητές τους στα μαθηματικά και τις επιστήμες. Η Sphero μοίρασε 100 σετ τάξης – κάθε ένα περιείχε 5 ρομπότ. Κάθε τάξη (δημόσια ή ιδιωτική) στις ΗΠΑ ή τον Καναδά ήταν πιθανή για να κερδίσει αυτό το βραβείο.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Έχετε περισσότερες ερωτήσεις για τα βραβεία; {#more_questions}
 
-Κοιτάξτε τους Όρους και τις Προϋποθέσεις μας</a> ή επισκεφθείτε το φόρουμ μας για να δείτε τις [Συχνές Ερωτήσεις](http://support.code.org) και θέστε τις δικές σας.
+Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

@@ -1,12 +1,18 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Nagrade - pojmovi i postavke
 
 ## Prostor na Dropbox-u ili Skype kredit:
 
-10 GB prostora na Dropbox ili $10 Skype kredit su ograničeni za K-12 fakultete, nastavnike školskih klubova i organizacije obrazovanja. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Ograniči jedno otkupljenje po organizatoru. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Svaki organizator se mora registrirati za Sat programiranja kako bi dobio prostor na Dropbox ili Skype kredit. Ako cijela škola sudjeluje na Satu programiranja, svaki edukator se zasebno mora registrirati kao organizator kako bi se kvalificirao.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
 Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
@@ -18,7 +24,7 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign u
 
 ## Skup klasa za prijenosna računala (ili $10,000 za druge tehnologije):
 
-Nagrada ograničena za javne SAD K-12 škole. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Jedna škola u svakoj državi SAD-a će dobiti računala za cijelu učionicu. Code.org will select and notify winners via email by December 1, 2015.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Jedna škola u svakoj državi SAD-a će dobiti računala za cijelu učionicu. Code.org will select and notify winners via email by December 1, 2015.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 
@@ -27,3 +33,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>
