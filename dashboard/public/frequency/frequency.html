@@ -6,58 +6,59 @@
 
 <div class="container-fluid" style="max-width: 1280px">
 
-  <div class="row-fluid" id="top-buttons">
-
-    <div class="form-inline pull-left">
-      <label for="messages" class="">Message:</label>
-      <select id="messages" class="input-small">
-        <option selected disabled hidden value=''></option>
-      </select>
-      <button id="custom-message" class="btn">Write your own</button>
-    </div>
-
-    <div class="pull-right form-inline">
-      <label>Sort:</label>
-      <div class="btn-group" id="sort-toggle" data-toggle="buttons-radio">
-        <button type="button" class="btn btn-info active" value="alphabetic">A to Z</button>
-        <button type="button" class="btn btn-info" value="frequency">By %</button>
-      </div>
-    </div>
-    <div class="offset4"><h4><a href="https://en.wikipedia.org/wiki/Letter_frequency">Letter Frequencies</a></h4></div>
-  </div>
-
-
   <div class="row-fluid">
+
     <div class="span4">
+      <div class="row-fluid" id="top-buttons">
+        <div class="form-inline pull-left">
+          <label for="messages" class="">Message:</label>
+          <select id="messages" class="input-small">
+            <option selected disabled hidden value=''></option>
+          </select>
+          <button id="custom-message" class="btn">Write your own</button>
+        </div>
+      </div>
       <div class="row-fluid" style="display:none">
         <textarea class="text-container" id="input">hello there I'm some text</textarea>
       </div>
       <div class="row-fluid">
-        <div class="text-container uneditable-input" id='output' style="height: 500px"></div>
+        <div class="text-container uneditable-input" id='output'></div>
       </div>
     </div>
+
     <div class="span8">
       <div id="d3chart" class="control-group">
       </div>
 
-      <div class="controls">
-        <div class="btn-group" id="controls-toggle" data-toggle="buttons-radio" style="margin-bottom: 10px">
-          <button type="button" class="btn btn-primary active" value="shift">Shift</button>
-          <button type="button" class="btn btn-primary" value="random">Random</button>
-        </div>
+      <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#shift" data-toggle="tab">Shift</a></li>
+        <li><a href="#random" data-toggle="tab">Random</a></li>
+      </ul>
 
-        <div class="controls-mode" id="mode-random" style="display:none">
-          <p>Manually reorder everything</p>
-            <button id="fillRand" class="btn btn-primary">Randomize substitutions</button>
-            <button class="btn btn-primary inline reset-simulation">Clear substitutions</button>
-        </div>
-
-        <div class="controls-mode form-inline" id="mode-shift">
+      <div class="tab-content">
+        <div class="tab-pane active form-inline" id="shift">
           <p>Shift the alphabet left or right</p>
             <a class="btn btn-small" id="shift-left"><i class="fa fa-caret-left"></i></a>
             <input type="text" id="shiftAmt" value="0" style="width:20px; text-align: center;">
             <a class="btn btn-small" id="shift-right"><i class="fa fa-caret-right"></i></a>
-            <button class="btn btn-primary inline reset-simulation">Reset</button>
+            <button class="btn btn-info inline reset-simulation">Reset</button>
+        </div>
+
+        <div class="tab-pane form-inline" id="random">
+          <p>Manually reorder everything</p>
+
+          <label>Substitutions:</label>
+          <div class="btn-group">
+            <button id="fill-rand" class="btn btn-info">Randomize</button>
+            <button id="order-substitutions" class="btn btn-info">By %</button>
+            <button class="btn btn-info reset-simulation">Reset</button>
+          </div>
+
+          <label>Originals:</label>
+          <div class="btn-group" id="sort-toggle" data-toggle="buttons-radio">
+            <button type="button" class="btn btn-primary active" value="alphabetic">A to Z</button>
+            <button type="button" class="btn btn-primary" value="frequency">By %</button>
+          </div>
         </div>
       </div>
 

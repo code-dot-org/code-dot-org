@@ -1,6 +1,7 @@
 var messages = {
   'Sample Message (easy)': "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg.",
-  'Sample Message (hard)': "Rh nrpzh jvvn txmgk czmh R'n musbh hs jmk Jbljzrlv jzv'j zvxv, ksb tml hmev mcmk R'n m zsh mrx umwwssl, R tsbwf ps hs jimtv Crhz hzv mrx, wrev R fsl'h tmxv umuk uk hzv cmk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zvxv tsnv umf lvcj hmwerlp hzrj mlf hzmh Kvmz, prav nv mww ksb psh, fsl'h zswf umte Kvmz, cvww R jzsbwf ixsumuwk cmxl ksb R'ww uv ybjh orlv Kvmz, ls soovljv hs ksb fsl'h cmjhv ksbx hrnv Zvxv'j czk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zmiik, uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs"
+  //'Sample Message (hard)': "Rh nrpzh jvvn txmgk czmh R'n musbh hs jmk Jbljzrlv jzv'j zvxv, ksb tml hmev mcmk R'n m zsh mrx umwwssl, R tsbwf ps hs jimtv Crhz hzv mrx, wrev R fsl'h tmxv umuk uk hzv cmk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zvxv tsnv umf lvcj hmwerlp hzrj mlf hzmh Kvmz, prav nv mww ksb psh, fsl'h zswf umte Kvmz, cvww R jzsbwf ixsumuwk cmxl ksb R'ww uv ybjh orlv Kvmz, ls soovljv hs ksb fsl'h cmjhv ksbx hrnv Zvxv'j czk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zmiik, uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs"
+  'Sample Message (hard)': "Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly. Udevkvym krva pk p jvakpycg un dulmrbi yvygki-kou svbbvuy svbga va py lkkgdbi vyavmyvnvcpyk bvkkbg eblg mdggy qbpygk oruag pqg-jgacgyjgj bvng nudsa pdg au pspzvymbi qdvsvkvwg krpk krgi akvbb krvyt jvmvkpb opkcrga pdg p qdgkki ygpk vjgp. Krva qbpygk rpa - ud dpkrgd rpj - p qduebgs, orvcr opa krva: suak un krg qguqbg uy vk ogdg lyrpqqi nud qdgkki slcr un krg kvsg. Spyi aublkvuya ogdg almmgakgj nud krva qduebgs, elk suak un krgag ogdg bpdmgbi cuycgdygj ovkr krg suwgsgyka un aspbb mdggy qvgcga un qpqgd, orvcr va ujj egcplag uy krg orubg vk opay'k krg aspbb mdggy qvgcga un qpqgd krpk ogdg lyrpqqi. Pyj au krg qduebgs dgspvygj; buka un krg qguqbg ogdg sgpy, pyj suak un krgs ogdg svagdpebg, gwgy krg uyga ovkr jvmvkpb opkcrga. Spyi ogdg vycdgpavymbi un krg uqvyvuy krpk krgi'j pbb spjg p evm svakptg vy cusvym juoy ndus krg kdgga vy krg nvdak qbpcg. Pyj ausg apvj krpk gwgy krg kdgga rpj eggy p epj suwg, pyj krpk yu uyg arulbj gwgd rpwg bgnk krg ucgpya. Pyj krgy, uyg Krldajpi, ygpdbi kou krulapyj igpda pnkgd uyg spy rpj eggy ypvbgj ku p kdgg nud apivym ruo mdgpk vk oulbj eg ku eg yvcg ku qguqbg nud p crpymg, uyg mvdb avkkvym uy rgd uoy vy p aspbb cpng vy Dvctspyaoudkr aljjgybi dgpbvzgj orpk vk opa krpk rpj eggy muvym oduym pbb krva kvsg, pyj arg nvypbbi tygo ruo krg oudbj culbj eg spjg p muuj pyj rpqqi qbpcg. Krva kvsg vk opa dvmrk, vk oulbj oudt, pyj yu uyg oulbj rpwg ku mgk ypvbgj ku pyikrvym. Apjbi, ruogwgd, egnudg arg culbj mgk ku p qruyg ku kgbb pyiuyg peulk vk, p kgddvebi aklqvj cpkpakduqrg ucclddgj, pyj krg vjgp opa buak nudgwgd. Krva va yuk rgd akudi. Elk vk va krg akudi un krpk kgddvebg aklqvj cpkpakduqrg pyj ausg un vka cuyagxlgycga. Vk va pbau krg akudi un p euut, p euut cpbbgj Krg Rvkcr Rvtgd'a Mlvjg ku krg Mpbpfi - yuk py Gpdkr euut, ygwgd qlebvargj uy Gpdkr, pyj lykvb krg kgddvebg cpkpakduqrg ucclddgj, ygwgd aggy ud rgpdj un ei pyi Gpdkrspy. Ygwgdkrgbgaa, p orubbi dgspdtpebg euut."
 };
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -74,7 +75,7 @@ var BarGraph = function (options) {
 
   /** @type {Object} */
   this.margin = {
-    top: 10,
+    top: 45,
     right: 0,
     bottom: 100,
     left: 40
@@ -147,7 +148,10 @@ var BarGraph = function (options) {
   this.svg = this.container.append("svg").attr({
       "width": this.getWidth() + this.margin.left + this.margin.right,
       "height": this.getHeight()*2 + this.margin.top + this.margin.bottom
-    }).append("g")
+    });
+
+  /** @type {D3.selection} */
+  this.graph = this.svg.append("g")
     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
   /** @type {D3.behavior} */
@@ -354,7 +358,7 @@ BarGraph.prototype.reorder = function () {
   this.processSubstitutions();
 
   /* animate rearranging the elements */
-  var transition = this.svg.transition().duration(750);
+  var transition = this.graph.transition().duration(750);
 
   this.getTopBars(transition)
     .attr("transform", function (d) {
@@ -376,7 +380,7 @@ BarGraph.prototype.reorder = function () {
             this.messageLetterScale(b.message.letter);
       }.bind(this));
 
-    this.svg.selectAll(".dragletter")
+    this.graph.selectAll(".dragletter")
       .sort(function (a, b) {
         return this.substitutionLetterScale(a.substitution.letter) -
             this.substitutionLetterScale(b.substitution.letter);
@@ -396,6 +400,20 @@ BarGraph.prototype.reorder = function () {
 
 };
 
+BarGraph.alphabeticSort = function (a, b) {
+  //return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
+  return (a.letter.charCodeAt() - b.letter.charCodeAt());
+};
+BarGraph.frequencySort = function (a, b) {
+  // we do b-a rather than a-b because the values we're examining
+  // are < 1
+  var delta = (b.frequency - a.frequency);
+
+  // If the two letters happen to have the exact same frequency,
+  // order them (arbitrarily) alphabetically
+  return (delta === 0) ? BarGraph.alphabeticSort(a, b) : delta;
+};
+
 /**
  * Event handler for a button.click event intended to toggle the sorting
  * of the English data between A-Z ordering and Frequency ordering.
@@ -406,23 +424,22 @@ BarGraph.prototype.reorder = function () {
 BarGraph.prototype.handleSortChange = function (changeEvent) {
   var sortFun;
   var sortType = changeEvent.target.value;
-
   if (sortType === "alphabetic") {
-    sortFun = function (a, b) {
-      return (a.letter.charCodeAt() - b.letter.charCodeAt());
-    };
+    sortFun = BarGraph.alphabeticSort;
   } else if (sortType === "frequency") {
-    sortFun = function (a, b) {
-      // we do b-a rather than a-b because the values we're examining
-      // are < 1
-      return (b.frequency - a.frequency);
-    };
+    sortFun = BarGraph.frequencySort;
   } else {
     return;
   }
+  this.sortMessageData(sortFun);
+};
 
+BarGraph.prototype.sortMessageData = function (sortFun) {
   // cache the message -> substitution mapping
-  var substMap = this.getSubstitutionMap();
+  var substMap = this.message_data.reduce(function (map, d, i) {
+      map[d.letter] = this.substitution_data[i];
+    return map;
+  }.bind(this), {});
 
   // reorder the english data
   this.message_data = this.message_data.sort(sortFun);
@@ -435,6 +452,7 @@ BarGraph.prototype.handleSortChange = function (changeEvent) {
   this.reorder();
 };
 
+
 /**
  * Generates a drag behavior intended to be used on the user letters so
  * the user can swap two of them at a time to create a substitution
@@ -446,13 +464,13 @@ BarGraph.prototype.handleSortChange = function (changeEvent) {
 BarGraph.prototype.createDragBehavior = function () {
   var drag = d3.behavior.drag();
 
-  var bar_outline = this.svg.append("rect")
+  var bar_outline = this.graph.append("rect")
     .attr("class", "outline bar")
     .attr("visibility", "hidden")
     .attr("height", this.getHeight())
     .attr("width", this.messageLetterScale.rangeBand());
 
-  var letter_outline = this.svg.append("rect")
+  var letter_outline = this.graph.append("rect")
     .attr("class", "outline letter")
     .attr("visibility", "hidden")
     .attr("height", 24)
@@ -463,14 +481,14 @@ BarGraph.prototype.createDragBehavior = function () {
   drag.on('dragend', function () {
     bar_outline.attr("visibility", "hidden");
     letter_outline.attr("visibility", "hidden");
-    this.svg.classed("dragging", false);
+    this.graph.classed("dragging", false);
     if (substitution_data_swapped) {
       this.substitution_data = substitution_data_swapped;
 
       this.substitutionLetterScale.domain(this.substitution_data.map(function (d) {
         return d.letter;
       }));
-      this.svg.selectAll(".dragletter")
+      this.graph.selectAll(".dragletter")
         .attr("transform", this.positionDragLetter.bind(this));
 
       this.reorder();
@@ -480,7 +498,7 @@ BarGraph.prototype.createDragBehavior = function () {
 
   drag.on('drag', function (d) {
 
-    this.svg.classed("dragging", true);
+    this.graph.classed("dragging", true);
 
     /* find the source */
     // we can't trust the index passed to this function, because it
@@ -488,11 +506,9 @@ BarGraph.prototype.createDragBehavior = function () {
     var i = this.substitutionLetterScale.domain().indexOf(d.substitution.letter);
 
     /* move the source */
-    var source = this.svg.select("#substitutionletter-" + d.substitution.letter);
-    var coords = source.attr("transform").replace(/[A-Za-z()]/g, '').split(',');
-    var x = parseInt(coords[0]) + d3.event.dx;
-    var y = parseInt(coords[1]) + d3.event.dy;
-    source.attr("transform", "translate(" + x + "," + y + ")");
+    var source = this.graph.select("#substitutionletter-" + d.substitution.letter);
+    var sourceHeight = source.node().getBBox().height;
+    source.attr("transform", "translate(" + d3.event.x + "," + (d3.event.y-sourceHeight) + ")");
 
     /* find the target */
     var xPos = d3.event.x;
@@ -509,27 +525,42 @@ BarGraph.prototype.createDragBehavior = function () {
 
     // if the target destination is locked, do nothing.
     if (this.substitution_data[j].locked === true) {
-      return;
+      //return;
     }
 
-    /* move the outlines */
-    bar_outline.attr({
-      "visibility": "visible",
-      "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + ",0)"
-    });
-    letter_outline.attr({
-      "visibility": "visible",
-      "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + "," + (this.getHeight()+26) + ")"
-    });
+    if (d3.event.y > 40) {
 
-    /* swap em! */
-    substitution_data_swapped = this.substitution_data.map(function (d, index, substitution_data) {
-      if (index == i) return substitution_data[j];
-      else if (index == j) return substitution_data[i];
-      else return d;
-    });
+      substitution_data_swapped = this.substitution_data;
+      substitution_data_swapped[i].locked = false;
 
-    substitution_data_swapped[j].locked = true;
+      letter_outline.attr({
+        "visibility": "visible",
+        "transform": "translate(" + (this.messageLetterScale(this.substitution_data[i].letter) + 0.5) + "," + (this.getHeight()+54) + ")"
+      });
+      bar_outline.attr({
+        "visibility": "hidden",
+      });
+
+    } else {
+
+      /* swap em! */
+      substitution_data_swapped = this.substitution_data.map(function (d, index, substitution_data) {
+        if (index == i) return substitution_data[j];
+        else if (index == j) return substitution_data[i];
+        else return d;
+      });
+
+      substitution_data_swapped[j].locked = true;
+
+      letter_outline.attr({
+        "visibility": "visible",
+        "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + "," + (this.getHeight()+26) + ")"
+      });
+      bar_outline.attr({
+        "visibility": "visible",
+        "transform": "translate(" + (this.substitutionLetterScale(this.substitution_data[j].letter) + 0.5) + ",0)"
+      });
+    }
 
     var zipped_data = this.getZippedData(substitution_data_swapped);
     var substMap = this.getReverseSubstitutionMap(substitution_data_swapped);
@@ -572,8 +603,8 @@ BarGraph.prototype.createDragBehavior = function () {
  * unlocked draggable letters
  */
 BarGraph.prototype.refreshDragBehavior = function () {
-  this.svg.select('.x1.axis').selectAll('.dragletter').on(".drag", null);
-  this.svg.select('.x1.axis').selectAll('.dragletter:not(.locked)').call(this.drag);
+  this.graph.select('.x1.axis').selectAll('.dragletter').on(".drag", null);
+  this.graph.select('.x1.axis').selectAll('.dragletter:not(.locked)').call(this.drag);
 };
 
 /**
@@ -583,6 +614,12 @@ BarGraph.prototype.refreshDragBehavior = function () {
  * hopefully be replaced by some cleaner markup processor.
  */
 BarGraph.prototype.buildSVG = function () {
+
+  this.svg.append('g')
+    .append('text')
+    .text("Letter Frequencies")
+    .attr("dy", "1em")
+    .style("font-size", "17.5px");
 
   var legend = this.svg.selectAll(".legend")
     .data([{
@@ -594,7 +631,10 @@ BarGraph.prototype.buildSVG = function () {
     }])
     .enter().append("g")
     .attr("class", "legend")
-    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    .attr("transform", function(d, i) {
+      var offset = (i * 20); 
+      return "translate(0," + offset + ")";
+    });
 
   legend.append("rect")
     .attr("x", this.getWidth() - 18)
@@ -608,7 +648,7 @@ BarGraph.prototype.buildSVG = function () {
     .attr("dy", ".35em")
     .text(function(d) { return d.label; });
 
-  this.svg.append("g")
+  this.graph.append("g")
     .attr({
       "class": "x axis",
       "transform": "translate(0," + this.getHeight() + ")"
@@ -617,7 +657,7 @@ BarGraph.prototype.buildSVG = function () {
     .selectAll("text")
     .attr('class', "message");
 
-  var substitutionLetters = this.svg.append("g")
+  var substitutionLetters = this.graph.append("g")
     .attr({
       "class": "x1 axis",
       "transform": "translate(" + this.substitutionLetterScale.rangeBand() / 2 + "," + (this.getHeight() + 16) + ")"
@@ -656,7 +696,7 @@ BarGraph.prototype.buildSVG = function () {
       return d.substitution.letter;
     });
 
-  this.svg.append("g")
+  this.graph.append("g")
     .attr("class", "y top axis")
     .call(this.yTopAxis)
     .append("text")
@@ -668,7 +708,7 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Frequency");
 
-  this.svg.append("g")
+  this.graph.append("g")
     .attr("class", "y bottom axis")
     .attr("transform", "translate(0," + (this.getHeight() + 90) + ")")
     .call(this.yBottomAxis)
@@ -682,7 +722,7 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Frequency");
 
-  this.svg.select(".x.axis")
+  this.graph.select(".x.axis")
     .append("text")
     .attr({
       "y": 10,
@@ -692,7 +732,7 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Original:");
 
-  this.svg.select(".x1.axis")
+  this.graph.select(".x1.axis")
     .append("text")
     .attr({
       "y": 16,
@@ -702,7 +742,7 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Maps to:");
 
-  this.svg.append("g")
+  this.graph.append("g")
     .attr("class", "topbars")
     .selectAll(".letter")
     .data(this.getZippedData())
@@ -725,7 +765,7 @@ BarGraph.prototype.buildSVG = function () {
       return this.frequencyTopScale(i);
     }.bind(this));
 
-  this.svg.append("g")
+  this.graph.append("g")
     .attr("class", "bottombars")
     .selectAll(".letter")
     .data(this.message_data)
@@ -787,12 +827,8 @@ BarGraph.prototype.shift = function (amt) {
     d.locked = true;
   });
 
-  //this.render();
-
   // first, sort substitution data alphabetically
-  var sorted = this.substitution_data.sort(function (a, b) {
-    return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
-  });
+  var sorted = this.substitution_data.sort(BarGraph.alphabeticSort);
 
   // then, realign it with message data. Note that message data might be
   // either alphabetically- or frequency-sorted
@@ -820,13 +856,23 @@ BarGraph.prototype.randomize = function () {
   this.reorder();
 };
 
+BarGraph.prototype.sortSubstitutions = function () {
+  this.substitutions_data = this.substitution_data.sort(BarGraph.frequencySort);
+
+  this.substitution_data.forEach(function (d) {
+    d.locked = true;
+  });
+
+  this.reorder();
+};
+
 BarGraph.prototype.getTopBars = function (root) {
-  root = root || this.svg;
+  root = root || this.graph;
   return root.select('.topbars').selectAll('.letter');
 };
 
 BarGraph.prototype.getBottomBars = function (root) {
-  root = root || this.svg;
+  root = root || this.graph;
   return root.select('.bottombars').selectAll('.letter');
 };
 
@@ -848,18 +894,18 @@ BarGraph.prototype.render = function () {
   this.yTopScale.domain([0, ymax]);
   this.yBottomScale.domain([0, ymax]);
 
-  this.svg.select(".y.top.axis")
+  this.graph.select(".y.top.axis")
     .call(this.yTopAxis);
-  this.svg.select(".y.bottom.axis")
+  this.graph.select(".y.bottom.axis")
     .call(this.yBottomAxis);
 
-  this.svg.select(".x.axis")
+  this.graph.select(".x.axis")
     .call(this.xAxis);
 
-  this.svg.select(".x1.axis")
+  this.graph.select(".x1.axis")
     .data(data);
 
-  this.svg.selectAll(".dragletter")
+  this.graph.selectAll(".dragletter")
     .attr("id", function (d, i) {
       return "substitutionletter-" + d.substitution.letter;
     })
@@ -979,16 +1025,16 @@ $(document).ready(function () {
     bg.reset();
   });
 
-  $("#fillRand").click(bg.randomize.bind(bg));
+  $("#fill-rand").click(bg.randomize.bind(bg));
+
+  $("#order-substitutions").click(bg.sortSubstitutions.bind(bg));
 
   $("#sort-toggle button").on("change input click", bg.handleSortChange.bind(bg));
 
-  $("#controls-toggle button").on("change input click", function (changeEvent) {
-    var controlType = changeEvent.target.value;
-    $(".controls-mode").hide();
-    $(".controls-mode#mode-" + controlType).show();
+  $("a[href=#shift]").click(function(){
+    $("#sort-toggle button[value=alphabetic]").trigger('click');
+    //bg.sortMessageData(BarGraph.alphabeticSort);
   });
-  $("#controls-toggle button#shift").trigger('click');
 
   bg.processPlainText();
 });
