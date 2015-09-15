@@ -130,7 +130,7 @@ class AssetsTest < Minitest::Test
     assert @assets.last_response.successful?, 'User who owns the destination channel can copy files.'
 
     copy_all(@assets, owner_channel_id, other_channel_id)
-    assert @assets.last_response.not_found?, 'User who does not own the destination channel cannot copy files.'
+    assert !@assets.last_response.successful?, 'User who does not own the destination channel cannot copy files.'
 
     delete(@assets, owner_channel_id, filename)
 
