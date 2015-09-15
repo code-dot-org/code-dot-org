@@ -10,6 +10,7 @@ ENV['RACK_ENV'] = 'test'
 class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
+  NODE_TYPES = NetSimApi::NODE_TYPES
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
@@ -31,7 +32,7 @@ class NetSimApiTest < Minitest::Test
   def test_create_read_update_delete
     # Verify that the CREATE response body and READ response bodies
     # both return the correct record values
-    record_create_response = create_record({name: 'alice', age: 7, male: false})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'alice', age: 7, male: false})
     record_get_response = read_records.first
     assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
     assert_equal 'alice', record_get_response['name']
@@ -50,7 +51,7 @@ class NetSimApiTest < Minitest::Test
 
     # Test fetching starting from a minimum row id.
     # Add a another row to make thing slightly more interesting.
-    create_record({name: 'bob'})
+    create_record({type: NODE_TYPES[:client], name: 'bob'})
 
     url = "/v3/netsim/#{@shard_id}/#{@table_name}"
     records = read_records_for_url(url + "@#{record_id}")
@@ -76,22 +77,22 @@ class NetSimApiTest < Minitest::Test
     created_ids = []
     # Sending any number of records as an array should result in an
     # array being returned
-    record_create_response = create_record([{name: 'alice', age: 7, male: false}])
+    record_create_response = create_record([{type: NODE_TYPES[:client], name: 'alice', age: 7, male: false}])
     assert record_create_response.is_a?(Array)
     assert_equal 1, record_create_response.length
     assert_equal 1, read_records.length
     created_ids.push(record_create_response[0]['id'])
 
     # Sending a record as a hash should result in a hash being returned
-    record_create_response = create_record({name: 'fred', age: 12, male: true})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'fred', age: 12, male: true})
     assert record_create_response.is_a?(Hash)
     assert_equal 2, read_records.length
     created_ids.push(record_create_response['id'])
 
     # Sending several records should result in them all being inserted
     record_create_response = create_record([
-      {name: 'nancy', age: 9, male: false},
-      {name: 'drew', age: 11, male: true}
+      {type: NODE_TYPES[:client], name: 'nancy', age: 9, male: false},
+      {type: NODE_TYPES[:client], name: 'drew', age: 11, male: true}
     ])
     assert record_create_response.is_a?(Array)
     assert_equal 2, record_create_response.length
@@ -121,11 +122,11 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_read_multiple_tables
-    t1_row1 = create_record({name: 'rec1_1'}, 'table1')
-    t1_row2 = create_record({name: 'rec1_2'}, 'table1')
-    create_record({name: 'rec2_1'}, 'table2')
-    t2_row2 = create_record({name: 'rec2_2'}, 'table2')
-    create_record({name: 'rec3_1'}, 'table3')
+    t1_row1 = create_record({type: NODE_TYPES[:client], name: 'rec1_1'}, 'table1')
+    t1_row2 = create_record({type: NODE_TYPES[:client], name: 'rec1_2'}, 'table1')
+    create_record({type: NODE_TYPES[:client], name: 'rec2_1'}, 'table2')
+    t2_row2 = create_record({type: NODE_TYPES[:client], name: 'rec2_2'}, 'table2')
+    create_record({type: NODE_TYPES[:client], name: 'rec3_1'}, 'table3')
 
     @net_sim_api.get "/v3/netsim/#{@shard_id}?t[]=table1&t[]=table2@2&t[]=table3@2"
     assert_equal 200, @net_sim_api.last_response.status
@@ -176,7 +177,7 @@ class NetSimApiTest < Minitest::Test
 
   def test_get_400_on_bad_json_update
     # Create a record correctly
-    record_create_response = create_record({name: 'charles', age: 7, male: false})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'charles', age: 7, male: false})
     record_id = record_create_response['id'].to_i
 
     # Send malformed JSON with an UPDATE operation
@@ -246,7 +247,7 @@ class NetSimApiTest < Minitest::Test
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name: 'dave', age: 7, male: false})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'dave', age: 7, male: false})
     record_id = record_create_response['id'].to_i
 
     assert_equal 1, test_spy.publish_history.length
@@ -263,7 +264,7 @@ class NetSimApiTest < Minitest::Test
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name: 'eliza', age: 7, male: false})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'eliza', age: 7, male: false})
     record_id = record_create_response['id'].to_i
     update_record(record_id, {id: record_id, age: 8})
 
@@ -281,7 +282,7 @@ class NetSimApiTest < Minitest::Test
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name: 'franklin', age: 7, male: false})
+    record_create_response = create_record({type: NODE_TYPES[:client], name: 'franklin', age: 7, male: false})
 
     record_id = record_create_response['id'].to_i
     delete_record(record_id)
@@ -321,9 +322,9 @@ class NetSimApiTest < Minitest::Test
 
   def node_delete_cascades_to_node_wires
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_node(type: NODE_TYPES[:client], name: 'nodeA')
+    node_b = create_node(type: NODE_TYPES[:client], name: 'nodeB')
+    node_c = create_node(type: NODE_TYPES[:client], name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ca = create_wire(node_c['id'], node_a['id'])
@@ -384,8 +385,8 @@ class NetSimApiTest < Minitest::Test
 
   def node_delete_cascades_to_messages
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
+    node_a = create_node(type: NODE_TYPES[:client], name: 'nodeA')
+    node_b = create_node(type: NODE_TYPES[:client], name: 'nodeB')
 
     message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
@@ -430,9 +431,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def many_node_delete_cascading_generates_minimum_invalidations
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_node(type: NODE_TYPES[:client], name: 'nodeA')
+    node_b = create_node(type: NODE_TYPES[:client], name: 'nodeB')
+    node_c = create_node(type: NODE_TYPES[:client], name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ac = create_wire(node_a['id'], node_c['id'])
@@ -545,9 +546,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def perform_test_delete_many
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_node(type: NODE_TYPES[:client], name: 'nodeA')
+    node_b = create_node(type: NODE_TYPES[:client], name: 'nodeB')
+    node_c = create_node(type: NODE_TYPES[:client], name: 'nodeC')
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
     query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
@@ -569,6 +570,90 @@ class NetSimApiTest < Minitest::Test
     assert_equal([1, 3, 5], parse_ids_from_query_string('id[]=1&id[]=3&id[]=5'))
     assert_equal([2], parse_ids_from_query_string('id[]=nonsense&id[]=2'),
                  'Nonnumeric IDs should be ignored')
+  end
+
+  def test_can_only_insert_known_node_types
+    # Allow client nodes
+    create_node(type: NODE_TYPES[:client])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Allow router nodes
+    create_node(type: NODE_TYPES[:router])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Reject nodes with other "types"
+    create_node(type: 'some_random_type')
+    assert_equal(400, @net_sim_api.last_response.status)
+
+    # Reject nodes with no type
+    create_node({})
+    assert_equal(400, @net_sim_api.last_response.status)
+  end
+
+  def test_limit_shard_to_20_routers
+    20.times do
+      create_node(type: NODE_TYPES[:router])
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+
+    # We want the 21st node to fail
+    create_node(type: NODE_TYPES[:router])
+    assert_equal 400, @net_sim_api.last_response.status, "Went over router limit!"
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Went over router limit!"
+  end
+
+  def test_do_not_limit_shard_to_20_clients
+    20.times do
+      create_node(type: NODE_TYPES[:client])
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+
+    # We want the 21st node to fail
+    create_node(type: NODE_TYPES[:client])
+    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 21st client"
+    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 21st client"
+  end
+
+  def test_having_20_routers_should_not_limit_clients
+    20.times do
+      create_node(type: NODE_TYPES[:router])
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+
+    # We are out of router spaces, but adding a client should be okay
+    create_node(type: NODE_TYPES[:client])
+    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 1st client"
+    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 1st client"
+  end
+
+  def test_having_20_clients_should_not_limit_routers
+    20.times do
+      create_node(type: NODE_TYPES[:client])
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+
+    # We should still be able to add a router
+    create_node(type: NODE_TYPES[:router])
+    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed 1st router"
+    assert_equal 21, read_records(TABLE_NAMES[:node]).count, "Should have allowed 1st router"
+  end
+
+  def test_having_20_routers_on_one_shard_does_not_limit_another
+    20.times do
+      create_node(type: NODE_TYPES[:router])
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal 20, read_records(TABLE_NAMES[:node]).count, "Didn't create 20 nodes"
+
+    # We should still be able to add a router on another shard
+    @shard_id = '_testShard3'
+    create_node(type: NODE_TYPES[:router])
+    assert_equal 201, @net_sim_api.last_response.status, "Should have allowed router on another shard"
+    assert_equal 1, read_records(TABLE_NAMES[:node]).count, "Should have allowed router on another shard"
   end
 
   # Methods below this point are test utilities, not actual tests
