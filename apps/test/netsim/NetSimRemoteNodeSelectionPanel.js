@@ -78,9 +78,9 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
 
     // A single-part address imposes no limit on the number of addressable
     // routers, so the global limit is used.
-    describe("with address format '4'", function () {
+    describe("with address format 'X'", function () {
       beforeEach(function () {
-        NetSimGlobals.getLevelConfig().addressFormat = '4';
+        NetSimGlobals.getLevelConfig().addressFormat = '1';
       });
 
       it ("true if current router count is below the global limit", function () {
@@ -101,9 +101,9 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     });
 
     // The two-bit router part imposes a limit of four addressable routers.
-    describe ("with address format '2.8'", function () {
+    describe ("with address format '2.X'", function () {
       beforeEach(function () {
-        NetSimGlobals.getLevelConfig().addressFormat = '2.2';
+        NetSimGlobals.getLevelConfig().addressFormat = '2.1';
       });
 
       it ("true if current router count is below the addressable space of 4", function () {
@@ -118,9 +118,9 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     });
 
     // The four-bit router part imposes a limit of sixteen addressable routers.
-    describe ("with address format '1.2.4.3'", function () {
+    describe ("with address format 'X.X.4.X'", function () {
       beforeEach(function () {
-        NetSimGlobals.getLevelConfig().addressFormat = '4.4';
+        NetSimGlobals.getLevelConfig().addressFormat = '1.1.4.1';
       });
 
       it ("true if current router count is below the addressable space of 16", function () {
@@ -137,9 +137,9 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     // The eight-bit router part imposes a limit of 256 addressable routers.
     // However, this is larger than our global router maximum, so we are still
     // limited by the global maximum.
-    describe ("with address format '8.8'", function () {
+    describe ("with address format '8.X'", function () {
       beforeEach(function () {
-        NetSimGlobals.getLevelConfig().addressFormat = '8.8';
+        NetSimGlobals.getLevelConfig().addressFormat = '8.1';
       });
 
       it ("true if current router count is below the global maximum", function () {
