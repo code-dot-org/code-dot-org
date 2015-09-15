@@ -1,8 +1,10 @@
 * * *
 
-title: Prêmios layout: wide
+title: <%= hoc_s(:title_prizes) %> layout: wide
 
 * * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -101,3 +103,5 @@ A [Kids Code Jeunesse](http://www.kidscodejeunesse.org) forneceu voluntários em
 ## Mais perguntas sobre os prêmios? {#more_questions}
 
 Confira nossos Termos e condições</a> ou visite nosso fórum para ver as [Perguntas frequentes](http://support.code.org) e faça suas perguntas.
+
+<%= view :signup_button %>

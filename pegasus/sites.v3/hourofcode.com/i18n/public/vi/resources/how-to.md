@@ -1,71 +1,129 @@
+* * *
 
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Cách dạy một người về Hour of Code
 
-## 1) Xem video hướng dẫn sau <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) thử các hướng dẫn:
+## 1) Sign up
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
+
+## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 3) Choose a tutorial:
+
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
 
 **Tất cả những khóa học Hour of Code:**
 
-  * Cần thời gian chuẩn bị ít nhất cho giáo viên
+  * Require minimal prep-time for teachers
   * Tự điều khiển -cho phép sinh viên làm theo tiến độ và mức kỹ năng mỗi người
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Plan your hardware needs - computers are optional
+## 4) Plan your technology needs - computers are optional
 
-Hour of Code sẽ cần có các máy tính có kết nối internet, nhưng không đòi hỏi mỗi người phải có 1 máy, và có thể học ngay trên các thiết bị smart phone, tablet.
+The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
 
-  * ** Test trên máy tính và thiết bị của học sinh** đảm bảo chúng hoạt động tốt (với cả âm thanh và video).
-  * **Xem trước trang thông báo kết quả** để xem những gì học sinh sẽ thấy khi hoàn thành. 
-  * ** trang bị tai nghe cho lớp học**, hoặc yêu cầu học sinh mang theo tai nghe nếu khóa học bạn chọn hướng dẫn bằng âm thanh.
-
-## 4) Plan ahead based on your technology available
-
-  * **Nếu không đủ thiết bị** học bằng cách [ ghép đôi](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Khi học sinh học theo nhóm, chúng sẽ giúp đỡ nhau và sẽ ít phải nhờ tới giáo viên hơn. Chúng cũng sẽ thấy rằng khoa học máy tính có tính xã hội ,hợp tác.
+  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
+  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **Nếu có kết nối internet chậm** hãy chiếu video lên máy chiếu để mọi người có thể xem cùng lúc. Hoặc thực hành với các khóa học không cần mạng/khóa học offline.
 
-## 5) Inspire students - show them a video
+![](/images/group_ipad.jpg)</a>
 
-Cho sinh viên một video cảm hứng để kick off Hour of Cord . Ví dụ:
+## 5) Inspire students to start your Hour of Code
+
+**Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.**
+
+**Show an inspirational video:**
 
   * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [video khởi động Hour of Cord 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw), hoặc các < % nếu @country == 'anh' %> [ video Hour of cord 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) < % khác %> [ video](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) video Hour of Cord 2014 <% end %>
   * [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Làm học sinh thích thú - đưa chúng xem bài giới thiệu ngắn**
+**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-Hầu hết bọn trẻ chưa biết khoa học máy tính là gì. Đây là một vài gợi ý:
+  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+  * As a class, list things that use code in everyday life.
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-  * Giải thích một cách đơn giản, đưa ra các ví dụ về các ứng dụng mà chúng hay quan tâm (ứng dụng kết nối mọi người, ứng dụng học tập, ứng dụng giải trí , v.v).
-  * Cố gắng :"Nghĩ về những thứ trong cuộc sống hằng ngày sử dụng tới khoa học máy tính: điện thoại, lò vi sóng, máy vi tính, đèn giao thông... những thứ đều cần tới sự góp sức của khoa học máy tính."
-  * Hoặc: "khoa học máy tính là nghệ thuật của sự kết hợp những ý tưởng và các công cụ kỹ thuật số để tăng sức mạnh của con người. Khoa học máy tính xuất hiện ở rất nhiều lĩnh vực: tạo ứng dụng trên điện thoại di động, chữa bệnh, tạo các bộ phim hoạt hình, giúp tạo ra các robot có thể khám phá các hành tinh mới và rất nhiều thứ khác."
-  * Vài mẹo nhỏ để tạo sự thích thú với môn học này cho các bé gái <a
+**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Start your Hour of Code
+## 6) Code!
 
-**Dẫn dắt học sinh tới các hoạt động**
+**Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
-  * Bảo học sinh truy cập URL và bắt đầu bài hướng dẫn.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
-**Khi học sinh đương đầu với các thử thách**
+**When your students come across difficulties it's okay to respond:**
 
-  * Nói với học sinh, "Hỏi 3 người rồi hãy hỏi tôi". Hỏi ba người bạn, nếu họ không trả lời được, thì hãy hỏi giáo viên.
-  * Khuyến khích học sinh và đưa ra động viên tích cực : "Bạn rất tuyệt, tiếp tục làm đi."
-  * Có thể trả lời học sinh: "tôi không biết. Hãy cùng nhau tìm ra giải pháp."nếu bạn không thể chỉ ra vấn đề, tận dụng nó như một bài học tốt cho lớp học: "Phần mềm đôi khi không làm theo cách mà bạn mong muốn. Cùng nhau, chúng tôi là một cộng đồng học tập." Và: " học lập trình giống học một ngôn ngữ mới; bạn sẽ không thông thạo ngay lập tức."
+  * “I don’t know. Let’s figure this out together.”
+  * “Technology doesn’t always work out the way we want.”
+  * “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**Làm gì nếu một học sinh học xong sớm?**
+**What to do if a student finishes early?**
 
-  * học sinh có thể xem tất cả các khóa học và thử một hoạt động Hour of Code khác tại [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * Hoặc, yêu cầu học sinh học xong sớm giúp những bạn khác đang gặp khó khăn với các hoạt động.
 
-**Làm thế nào để in chứng chỉ cho học sinh?**
+[col-33]
 
-Mỗi học sinh có một cơ hội để nhận một chứng nhận qua email khi họ hoàn thành [hướng dẫn Code.org](http://studio.code.org). Bạn có thể click chọn "certificatie" để in. Tuy nhiên, nếu bạn muốn làm giấy chứng nhận mới cho học sinh, hãy truy cập [ giấy chứng nhận](http://<%= codeorg_url() %>/ giấy chứng nhận) để in giấy chứng nhận theo yêu cầu của bạn !
+![](/images/highschoolgirls.jpeg)</a>
 
-**Tiếp theo Hour of Code sẽ là gì?**
+[/col-33]
 
-Hour of Cord là chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và cách để tạo các ứng dụng phần mềm. < % if @country == 'vi' %> Hour of Code chỉ là bước đầu tiên vào một cuộc hành trình để tìm hiểu thêm về cách hoạt động của công nghệ và làm thế nào để tạo các ứng dụng phần mềm. Để tiếp tục cuộc hành trình này, [khuyến khích con em của bạn tìm hiểu trực tuyến](http://uk.code.org/learn/beyond). < % khác %> để tiếp tục cuộc hành trình này, tìm nguồn tài nguyên bổ sung cho giáo dục [ ở đây](http://<%= codeorg_url() %>/ giáo dục). Hoặc khuyến khích con em của bạn tìm hiểu [ trực tuyến](http://<%= codeorg_url() %>/học/ngoài). <% end %>
+[col-33]
+
+![](/images/group_ar.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## 7) Celebrate
+
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[col-33]
+
+![](/images/celebrate2.jpeg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/highlight-certificates.jpg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/boy-certificate.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## Other Hour of Code resources for educators:
+
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
+  * Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
+  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+
+## What comes after the Hour of Code?
+
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

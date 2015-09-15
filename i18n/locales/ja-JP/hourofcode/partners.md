@@ -1,8 +1,10 @@
 * * *
 
-タイトル: パートナー
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # 主要なパートナーと協賛企業
 
@@ -37,3 +39,5 @@
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

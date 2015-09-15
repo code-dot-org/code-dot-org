@@ -1,75 +1,129 @@
 * * *
 
-crwdns44411:0crwdne44411:0
+crwdns48129:0crwdne48129:0
 
 * * *
 
+<%= view :signup_button %>
+
 # crwdns44412:0crwdne44412:0
 
-## crwdns44413:0crwdne44413:0 <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## crwdns44414:0crwdne44414:0
+## crwdns46225:0crwdne46225:0
 
-crwdns44415:0crwdne44415:0
+  * crwdns48130:0crwdne48130:0 <%= campaign_date('short') %>.
+  * crwdns48131:0crwdne48131:0
 
-**crwdns44416:0crwdne44416:0**
+## crwdns46228:0crwdne46228:0 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## crwdns46229:0crwdne46229:0
 
-  * crwdns44417:0crwdne44417:0
-  * crwdns44418:0crwdne44418:0
+crwdns48132:0crwdne48132:0 crwdns48133:0crwdne48133:0
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+**crwdns46232:0crwdne46232:0**
 
-## crwdns44419:0crwdne44419:0
+  * crwdns46233:0crwdne46233:0
+  * crwdns46234:0crwdne46234:0
 
-crwdns44420:0crwdne44420:0
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-  * crwdns44421:0crwdne44421:0
-  * crwdns44422:0crwdne44422:0 
-  * crwdns44423:0crwdne44423:0
+## crwdns46235:0crwdne46235:0
 
-## crwdns44424:0crwdne44424:0
+crwdns46236:0crwdne46236:0
 
-  * crwdns44425:0crwdne44425:0 crwdns44426:0crwdne44426:0 crwdns44427:0crwdne44427:0
-  * crwdns44428:0crwdne44428:0
+  * crwdns46237:0crwdne46237:0
+  * crwdns46238:0crwdne46238:0
+  * crwdns46239:0crwdne46239:0 crwdns46240:0crwdne46240:0 crwdns46241:0crwdne46241:0
+  * crwdns46242:0crwdne46242:0
 
-## crwdns44429:0crwdne44429:0
+![](/images/group_ipad.jpg)</a>
 
-crwdns44430:0crwdne44430:0
+## crwdns46243:0crwdne46243:0
+
+**crwdns46244:0crwdne46244:0**
+
+**crwdns46245:0crwdne46245:0**
 
   * crwdns44431:0crwdne44431:0
   * crwdns44432:0crwdne44432:0 <% end %>
   * [crwdns44433:0crwdne44433:0](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * crwdns46246:0crwdne46246:0.
 
-**crwdns44434:0crwdne44434:0**
+**crwdns46247:0crwdne46247:0**
 
-crwdns44435:0crwdne44435:0
+  * crwdns46248:0crwdne46248:0
+  * crwdns46249:0crwdne46249:0
+  * crwdns48134:0crwdne48134:0.
 
-  * crwdns44436:0crwdne44436:0
-  * crwdns44437:0crwdne44437:0
-  * crwdns44438:0crwdne44438:0 crwdns44439:0crwdne44439:0
-  * crwdns44440:0crwdne44440:0. 
+crwdns46251:0crwdne46251:0
 
-## crwdns44441:0crwdne44441:0
+## crwdns46252:0crwdne46252:0
 
-**crwdns44442:0crwdne44442:0**
+**crwdns46253:0crwdne46253:0**
 
-  * crwdns44443:0crwdne44443:0 
-  * crwdns44444:0crwdne44444:0
+  * crwdns48135:0crwdne48135:0 
 
-**crwdns44445:0crwdne44445:0**
+**crwdns46254:0crwdne46254:0**
 
-  * crwdns44446:0crwdne44446:0
-  * crwdns44447:0crwdne44447:0
-  * crwdns44448:0crwdne44448:0 crwdns44449:0crwdne44449:0 crwdns44450:0crwdne44450:0
+  * crwdns46255:0crwdne46255:0
+  * crwdns46256:0crwdne46256:0
+  * crwdns46257:0crwdne46257:0
 
-**crwdns44451:0crwdne44451:0**
+**crwdns46258:0crwdne46258:0**
 
-  * crwdns44452:0crwdne44452:0
+  * crwdns48136:0crwdne48136:0[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * crwdns44453:0crwdne44453:0
 
-**crwdns44454:0crwdne44454:0**
+crwdns48137:0[col-33]crwdne48137:0
 
-crwdns44455:0crwdne44455:0 crwdns44456:0crwdne44456:0 crwdns44457:0crwdne44457:0
+![](/images/highschoolgirls.jpeg)</a>
 
-**crwdns44458:0crwdne44458:0**
+crwdns48138:0[/col-33]crwdne48138:0
 
-crwdns44459:0crwdne44459:0 crwdns44460:0crwdne44460:0 crwdns44461:0crwdne44461:0 crwdns44462:0crwdne44462:0 crwdns44463:0crwdne44463:0 <% end %>
+crwdns48139:0[col-33]crwdne48139:0
+
+![](/images/group_ar.jpg)</a>
+
+crwdns48140:0[/col-33]crwdne48140:0
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## crwdns46259:0crwdne46259:0
+
+  * crwdns48141:0crwdne48141:0
+  * crwdns46261:0crwdne46261:0
+
+crwdns48142:0[col-33]crwdne48142:0
+
+![](/images/celebrate2.jpeg)</a>
+
+crwdns48143:0[/col-33]crwdne48143:0
+
+crwdns48144:0[col-33]crwdne48144:0
+
+![](/images/highlight-certificates.jpg)</a>
+
+crwdns48145:0[/col-33]crwdne48145:0
+
+crwdns48146:0[col-33]crwdne48146:0
+
+![](/images/boy-certificate.jpg)</a>
+
+crwdns48147:0[/col-33]crwdne48147:0
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## crwdns46262:0crwdne46262:0
+
+  * crwdns46263:0crwdne46263:0 
+  * crwdns46264:0crwdne46264:0.
+  * crwdns48148:0crwdne48148:0 <% if @country == 'us' %>
+  * crwdns48149:0crwdne48149:0 <% end %>
+
+## crwdns48150:0crwdne48150:0
+
+crwdns48151:0crwdne48151:0 crwdns48152:0crwdne48152:0 crwdns48153:0crwdne48153:0.
+
+<%= view :signup_button %>

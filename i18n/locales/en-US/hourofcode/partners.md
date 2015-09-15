@@ -1,8 +1,10 @@
 * * *
 
-crwdns43843:0crwdne43843:0
+crwdns45411:0crwdne45411:0<%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # crwdns43844:0crwdne43844:0
 
@@ -37,3 +39,5 @@ crwdns43843:0crwdne43843:0
 # crwdns43849:0crwdne43849:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

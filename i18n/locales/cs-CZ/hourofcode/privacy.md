@@ -4,6 +4,8 @@ nadpis: Ochrana osobních údajů
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Zásady ochrany osobních údajů
 
 Date of Last Revision: August 3, 2015
