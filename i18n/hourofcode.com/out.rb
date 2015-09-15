@@ -131,44 +131,11 @@ languages.each_pair do |name, codes|
     i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/*.md"]
     i18n_dir.each do |file|
       FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/#{File.basename(file)}")
-      puts File.basename(file)
     end
 
     i18n_dir = Dir["../locales/#{codes[locale_index]}/hourofcode/resources/*.md"]
     i18n_dir.each do |file|
       FileUtils.cp(file, hoc_path + "/public/#{codes[code_index]}/resources/#{File.basename(file)}")
-      puts File.basename(file)
     end
   end
-end
-
-
-
-#########################################################################################
-##                                                                                     ##
-## clean up crowdin markdown errors                                                    ##
-##                                                                                     ##
-#########################################################################################
-
-puts "Fixing crowdin markdown errors..."
-# remove all metadata
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
-  File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/m, ""))
-end
-
-# remove broken social tags from thanks.md
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
-  File.write(file, File.read(file).gsub(/<% facebook.+?\%>/m, ""))
-end
-
-# add social tags to thanks.md
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
-  File.write(file, '<% facebook = {:u=>"http://#{request.host}/us"}
-                      twitter = {:url=>"http://hourofcode.com", :related=>"codeorg", :hashtags=>"", :text=>hoc_s(:twitter_default_text)}
-                      twitter[:hashtags] = "HourOfCode" unless hoc_s(:twitter_default_text).include? "#HourOfCode" %>' + File.read(file))
-end
-
-# add metadata to resources.md
-Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources.md").each do |file|
-  File.write(file, "---\nlayout: wide\nnav: resources_nav\n---" + File.read(file))
 end
