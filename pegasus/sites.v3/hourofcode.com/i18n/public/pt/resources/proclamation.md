@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 ### Veja abaixo um exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e às suas metas, que pode ser usado pelos responsáveis pela legislação estadual e local.
 
@@ -33,11 +39,11 @@ Dado que a área da ciência da computação deve enfrentar obstáculos signific
 
 Dado que Grace Murray Hopper, uma das primeiras mulheres da área da ciência da computação, desenvolveu novas linguagens de programação e foi a pioneira nos padrões dos sistemas computacionais que constituíram o ponto de partida para muitos avanços da ciência da computação; e
 
-Dado que a semana de 7 de dezembro, em homenagem ao aniversário de Grace Hopper, foi designada como a "Semana da Educação em Ciência da Computação": fica, portanto,
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR] --
 
-(1) apoia a designação da Semana da Educação em Ciência da Computação (de 7 a 13 de dezembro de 2015);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
 (2) incentiva escolas, educadores, pais e legisladores a participar da Semana da Educação em Ciência da Computação, permitindo que seus alunos participem da Hora do Código;
 
@@ -46,3 +52,5 @@ resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR
 (4) incentiva legisladores a remover os obstáculos que impedem que as aulas de ciência da computação sejam consideradas como créditos de ciências ou matemática para os requisitos de graduação;
 
 (5) incentiva oportunidades, entre elas os programas existentes de ciência da computação para representantes do sexo feminino e das minorias sociais.
+
+<%= view :signup_button %>

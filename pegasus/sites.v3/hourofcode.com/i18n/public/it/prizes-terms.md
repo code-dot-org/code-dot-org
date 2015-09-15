@@ -1,12 +1,18 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Premi - Termini e condizioni di partecipazione
 
 ## Spazio su Dropbox o credito Skype:
 
-I 10 GB di spazio su Dropbox o i 10$ di credito Skype sono riservati a studenti di scuole elementari, medie o superiori, educatori di sostegno e agenzie educative. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Ogni organizzatore può ricevere un solo premio. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Per poter ricevere il credito Skype o lo spazio Dropbox è necessario che l'organizzatore si sia registrato per l'Ora del Codice . Se tutta la vostra scuola partecipa all'Ora del Codice, è necessario che ogni educatore si registrarsi singolarmente come organizzatore.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
 Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
@@ -18,7 +24,7 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign u
 
 ## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org selezionerà i vincitori e li avviserà via email entro il 1° dicembre 2015.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 
@@ -27,3 +33,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

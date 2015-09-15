@@ -223,6 +223,20 @@ namespace :install do
     end
   end
 
+  task :hooks do
+    files = [
+      'lint.rb',
+      'pre-commit'
+    ]
+    git_path = ".git/hooks"
+
+    files.each do |f|
+      path = File.expand_path("../tools/hooks/#{f}", __FILE__)
+      system "ln -s #{path} #{git_path}/#{f}"
+    end
+  end
+
+
   task :apps do
     if rack_env?(:development) && !CDO.chef_managed
       if OS.linux?

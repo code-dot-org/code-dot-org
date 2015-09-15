@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -56,11 +62,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## Lucky Schools won an Actua Workshop {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). 通過實際成員提供科學、 技術、 工程和數學 (STEM) 講習班，為 K 12 學生連接到省和領土的學習課程。 這些在課堂經驗接受很多的熱情，受過高度訓練的本科學生的角色模型。 教師可以期望學生有令人興奮的示威遊行、 互動式實驗等很多好玩的! 請注意，在教室工作間可能在遠端和農村社區中可能會發生變化。
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-[通過實際](http://actua.ca/) 是加拿大領先的科學、 技術、 工程和數學外展。 每年通過實際達到超過 225,000 青年在超過 500 個社區通過其與打破障礙程式設計。
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**為 2014年優勝者祝賀!**
+**Congratulations to the 2014 winners!**
 
 | 學校             | 城市     | 通過實際網路成員       |
 | -------------- | ------ | -------------- |
@@ -90,10 +96,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) 是應用程式控制的機器人球轉變學生學習方式。 由[ SPRK lessons](http://www.gosphero.com/education/)驅動，這些圓形機器人帶給孩子一個有趣的程式設計速成課程，同時磨練他們的數學和科學技能。 Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## 更多關於獎勵的問題嗎？ {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>
