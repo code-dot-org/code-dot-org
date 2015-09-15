@@ -337,3 +337,18 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
   var sectionID = parseInt(matches[1], 10);
   return this.user_.ownsSection(sectionID);
 };
+
+/**
+ * @returns {boolean} TRUE if it's currently possible to add a new router.
+ *          Drives whether the "Add Router" button should be displayed.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
+  var levelConfig = NetSimGlobals.getLevelConfig();
+  if (this.hasOutgoingRequest() || !levelConfig.showAddRouterButton) {
+    return false;
+  }
+
+  return this.nodesOnShard_.filter(function (node) {
+        return NodeType.ROUTER === node.getNodeType();
+      }).length < NetSimGlobals.getMaxRouters();
+};

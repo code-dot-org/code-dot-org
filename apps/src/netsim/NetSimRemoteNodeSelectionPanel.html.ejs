@@ -254,7 +254,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
 
       var buttons = [];
 
-      if (!controller.hasOutgoingRequest() && levelConfig.showAddRouterButton) {
+      if (controller.canAddRouter()) {
         var buttonText = levelConfig.broadcastMode ? i18n.addRoom() : i18n.addRouter();
         buttons.push(buttonMarkup(
             buttonText,
