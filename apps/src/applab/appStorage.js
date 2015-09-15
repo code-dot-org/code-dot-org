@@ -290,7 +290,12 @@ var handlePopulateTable = function (onSuccess, onError) {
   }
 
   if (this.status != 200) {
-    onError && onError('error populating tables: unexpected http status ' + this.status);
+    if (onError) {
+      onError('error populating tables: unexpected http status ' + this.status);
+    }
+    return;
   }
-  onSuccess && onSuccess();
+  if (onSuccess) {
+    onSuccess();
+  }
 };
