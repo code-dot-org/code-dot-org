@@ -1,8 +1,14 @@
+* * *
 
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 ## Hoe je de aandacht van de media trekt voor je Uur Code-evenement
 
-*Voor vragen van pers en media, neem contact op met <press@code.org>*
+*For all press and media inquiries, contact <press@code.org>*
 
 ### Belangrijke Tips
 
@@ -13,43 +19,45 @@
 
 ### Stappenplan:
 
-**1. Plan je evenement**
+**1. Plan your event**
 
   * Plan een bijeenkomst om het Uur Code af te trappen.
-  * Stuur [ een brief](<%= hoc_uri('/resources/#sample-emails') %>) naar de ouders. Vraag hun om reclame te maken.
-  * Verzend [ een brief](<%= hoc_uri('/resources/#sample-emails') %>)aan uw burgemeester, gouverneur, of invloedrijke ondernemer om hen uit te nodigen om dit evenement bij te wonen en te spreken met uw leerlingen.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organiseer groepsactiviteiten (zoals een demonstratie van een 'unplugged'-programmeeractiviteit), of laat door deelnemers gemaakte en geleide activiteiten zien.
-  * Toon Code.org de [ Uur Code video](<%= hoc_uri('/') %>) of één van [ deze](<%= hoc_uri('/resources#videos') %>) om te inspireren.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/resources#videos') %>) to inspire.
 
-**2. Vind journalisten die onderwijs- of lokale evenementen verslaan.**
+**2. Identify specific local reporters that cover education or local events.**
 
-Denk aan de lokale kranten, TV- of radiostations of blogs.
+Think a local newspaper, TV station, radio station or blog.
 
-Kijk online of je contactinformatie kan vinden voor journalisten. Kun je deze niet vinden, bel de publicatie, of mail naar een algemeen adres en vraag of je mail doorgestuurd kan worden naar de juiste journalist.
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
 
-**3. Neem contact op met lokale media**
+**3. Contact local media**
 
-De beste manier om contact op te nemen is per mail. Deze moet kort zijn en overbrengen waarom dit evenement voor anderen interessant is? Voorzie contactinformatie (een GSM-nummer) voor wie er naar de eventlocatie komt. **Zie een [ voorbeeld email naar de media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
 
-**4. Bereid je voor om vragen te beantwoorden over je evenement. Voorbeelden:**
+**4. Prepare to field questions about your school event. Here are some examples:**
 
-*Waarom doet jouw school mee aan Hour of Code?*
+*Why is your school doing an Hour of Code?*
 
-We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is een kans voor ons allemaal om te zien wat informatica inhoudt.
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek toont ook aan dat kinderen programmeerconcepten snappen nog voor ze kunnen lezen en schrijven. Hun hersenen staan op jonge leeftijd open voor programmeertalen, net zoals met vreemde talen.
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
 
-*Waarom is dit belangrijk?*
+*Why is this important?*
 
-In China krijgen alle leerlingen informatica om te slagen voor hun middelbare school. In de westerse wereld wordt het op 90% van de scholen niet eens gegeven. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen.
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
 
-**Meer details en een citaat dat je kunt gebruiken in materialen**
+**More details and a quote you can use in materials**
 
-"Het Uur Code is ontworpen om code te ontrafelen en te laten zien dat informatica geen rocket-science is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **Over Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Zijn visie is dat elke student in elke school moet de kans krijgen om te leren programmeren van computers. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. Voor meer informatie, bezoek: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: <<%= resolve_url('https://code.org') %>>.
 
   
-Voor meer matriaal en voorbeeld e-mails klik[ hier](<%= hoc_uri('/resources') %>).
+Find more resources and sample emails [here](<%= resolve_url('/resources') %>).
+
+<%= view :signup_button %>

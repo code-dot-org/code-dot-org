@@ -1,0 +1,13 @@
+name 'ECSPD Pick Challenge'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Preparing for the Challenge
+
+** Now that you have seen the overview of all the lessons you will pick your challenge from the list and then prepare to complete it. **
+
+### Overview of Challenge Prep
+- Pick your challenge from the list on the next page
+- Look at the calendar and plan due dates 
+- Find a buddy to work with 
+- Submit it on the forum
+MARKDOWN

@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Gracias
 
-Toda su escuela ha entrado a participar en el sorteo de computadores portátiles (o el equivalente a $10,000 dólares en otras tecnologías).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

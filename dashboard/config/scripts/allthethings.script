@@ -72,6 +72,7 @@ level 'U1L4 NetSim SendAB'
 level 'U2L5 NetSim Classroom Internet'
 level 'U2L7 NetSim Need for Packets'
 level 'U2L10 NetSim Automatic DNS'
+level 'NetSim_Superuser'
 
 stage 'Odometer'
 level 'Odometer'
