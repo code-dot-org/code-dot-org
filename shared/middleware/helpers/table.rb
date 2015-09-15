@@ -62,7 +62,7 @@ class Table
   def fetch(id)
     row = items.where(row_id: id).first
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
-    JSON.load(row[:value]).merge(id: row[:row_id])
+    JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
   def insert(value, ip_address)
@@ -84,7 +84,7 @@ class Table
       raise
     end
 
-    JSON.load(row[:value]).merge(id: row[:row_id])
+    JSON.load(row[:value]).merge('id' => row[:row_id])
   end
 
   def next_id()
@@ -100,7 +100,7 @@ class Table
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
 
-    JSON.load(row[:value]).merge(id: id)
+    JSON.load(row[:value]).merge('id' => id)
   end
 
   def to_a()
@@ -236,7 +236,7 @@ class DynamoTable
       retry
     end
 
-    value.merge(id: row_id)
+    value.merge('id' => row_id)
   end
 
   def exists?()
@@ -315,7 +315,7 @@ class DynamoTable
       raise NotFound, "row `#{id}` not found in `#{@table_name}` table"
     end
 
-    value.merge(id: id)
+    value.merge('id' => id)
   end
 
   def items()
@@ -349,11 +349,11 @@ class DynamoTable
   end
 
   def to_csv()
-    return table_to_csv(to_a, column_order: [:id])
+    return table_to_csv(to_a, column_order: ['id'])
   end
 
   def value_from_row(row)
-    JSON.load(row['value']).merge(id: row['row_id'].to_i)
+    JSON.load(row['value']).merge('id' => row['row_id'].to_i)
   end
 
   def self.table_names(channel_id)
