@@ -3,7 +3,7 @@
 #
 class SourceBucket < BucketHelper
 
-  def initialize(storage_id)
-    super CDO.sources_s3_bucket, CDO.sources_s3_directory, storage_id
+  def initialize
+    super CDO.sources_s3_bucket, CDO.sources_s3_directory
   end
 end

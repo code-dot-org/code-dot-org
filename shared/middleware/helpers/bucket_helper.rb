@@ -1,17 +1,11 @@
-require 'sinatra/base'
-
 #
 # BucketHelper
 #
 class BucketHelper
 
-  class NotFound < Sinatra::NotFound
-  end
-
-  def initialize(bucket, base_dir, storage_id)
+  def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
-    @storage_id = storage_id
 
     params = {region: 'us-east-1'}
     if CDO.s3_access_key_id && CDO.s3_secret_access_key
@@ -44,7 +38,6 @@ class BucketHelper
   def copy_files(src_channel, dest_channel)
     src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
-    raise NotFound, "channel `#{dest_channel_id}` not found in your storage" unless dest_owner_id == @storage_id
 
     src_prefix = s3_path src_owner_id, src_channel_id
     @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
@@ -62,7 +55,6 @@ class BucketHelper
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner_id == @storage_id
 
     key = s3_path owner_id, channel_id, filename
     response = @s3.put_object(bucket: @bucket, key: key, body: body)
@@ -75,7 +67,6 @@ class BucketHelper
 
   def delete(encrypted_channel_id, filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner_id == @storage_id
     key = s3_path owner_id, channel_id, filename
 
     @s3.delete_object(bucket: @bucket, key: key)
@@ -98,7 +89,6 @@ class BucketHelper
   # (All intermediate versions are preserved.)
   def restore_previous_version(encrypted_channel_id, filename, version_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner_id == @storage_id
     key = s3_path owner_id, channel_id, filename
 
     @s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
