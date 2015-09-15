@@ -1,19 +1,25 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Οδηγός πραγματοποίησης εκδήλωσης για την Ώρα του Κώδικα
 
-Φιλοξενήστε μια εκδήλωση για την Ώρα του Κώδικα κατά τη διάρκεια της εβδομάδας για την Επιστήμη των Υπολογιστών (8-14 Δεκ) για να γιορτάσετε την Επιστήμη των Υπολογιστών και να εμπνεύσετε και άλλα παιδιά να συμμετάσχουν. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Προετοιμασίες για την εκδήλωσή σας
 
   * Προσδιορίστε τον χώρο, την ημέρα και την ώρα
-  * Αποστείλετε [ ένα γράμμα](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) με το οποίο θα προσκαλείτε τον διευθυντή του σχολείου σας, τον Δήμαρχο της πόλης σας, έναν βουλευτή, έναν υπουργό, ή ένα πρόσωπο με επιρροή στις επιχειρήσεις.
-  * Προσκαλέστε τον τύπο/μέσα μαζικής ενημέρωσης (π.χ. τοπικούς ραδιοσταθμούς, εφημερίδες, κανάλια τηλεόρασης, μπλόγκερς με θέματα εκπαιδευτικά ή/και τεχνολογίας). Δες το [ Κιτ Ενημέρωσης](<%= hoc_uri('/resources/press-kit') %>) για βοήθεια.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Κατά τη διάρκεια της εκδήλωσης
 
-  * Ξεκίνησε την εκδήλωση με ένα από τα [ εμπνευσμένα μας βίντεο](<%= hoc_uri('/resources#videos') %>).
-  * Κάνε μια εισαγωγή τονίζοντας την σπουδαιότητα της Επιστήμης των Υπολογιστών, με την χρήση αυτών των [στατιστικών και εικόνων](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Άλλες ιδέες για την εκδήλωση: 
@@ -30,13 +36,13 @@
 
 ## Ενδεικτικό πρόγραμμα εκδήλωσης
 
-**Εκδήλωση:** Συνάντηση Ενημέρωσης για την Επιστήμη των Υπολογιστών για όλο το σχολείο
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Ημερομηνία:** 7η Δεκεμβρίου (έναρξη της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Χρόνος:** Κατά τη διάρκεια της σχολικής ημέρας. Προτιμούνται πρωινές-μεσημεριανές ώρες. Περίπου 1 ώρα.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Τοποθεσία:** Αίθουσα τελετών του σχολείου (π.χ. θέατρο, γυμναστήριο, καφετέρια)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
@@ -44,9 +50,11 @@
 
 | Ώρα             | Δράσεις                                                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 π.μ | Εισαγωγή με ένα από τα [ εμπνευσμένα βίντεό μας ](http://hourofcode.com/us/resources#videos)                                                                               |
-| 10:05-10:15 π.μ | Ο διευθυντής κάνει μια εισαγωγή για την σημασία της Επιστήμης των Υπολογιστών. Χρησιμοποίησε αυτά τα [ στατιστικά και τις εικόνες](/resources/stats)                       |
+| 10:00-10:05 π.μ | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                                       |
+| 10:05-10:15 π.μ | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                        |
 | 10:15-10:30 π.μ | Ειδικοί προσκεκλημένοι για να μιλήσουν για τους υπόβαθρό τους και πώς η τεχνολογία και η επιστήμη των υπολογιστών διαδραματίζει σημαντικό ρόλο στην καθημερινότητά τους.   |
 | 10:30-10:40 π.μ | Οι μαθητές κάνουν μια επίδειξη της Ώρας του Κώδικα για το σχολείο. Διασκεδαστική παραλλαγή: βάλτε τους να διδάξουν τον Διευθυντή, έναν πολιτικό ή άλλους μαθητές.          |
 | 10:40-11:00 π.μ | Οι μαθητές κάνουν επίδειξη μιας δραστηριότητας χωρίς σύνδεση και δείχνουν πως μπορεί να γίνει εκμάθηση της επιστήμης των υπολογιστών χωρίς να χρησιμοποιηθούν υπολογιστές. |
 | 11:00-11:05 π.μ | Ο εκπαιδευτικός που βοήθησε να πραγματοποιηθεί η εκδήλωση για όλο το σχολείο, αναφέρει μερικά πράγματα γι αυτήν κλείνοντας την εκδήλωση.                                   |
+
+<%= view :signup_button %>

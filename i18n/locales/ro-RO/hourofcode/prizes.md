@@ -1,8 +1,10 @@
 * * *
 
-title: Premii layout: wide
+title: <%= hoc_s(:title_prizes) %> layout: wide
 
 * * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -60,11 +62,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## Lucky Schools won an Actua Workshop {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Membrii Actua ofera workshop-uri in stiinta, tehnologie, inginerie si matematica (STEM) ce sunt conectate cu curriculum-ul de invatare provincial si teritorial al elevilor. Aceste experienţe în clasă sunt livrate de catre modele de urmat pasionate si bine-pregatite in STEM. Profesorii se pot aştepta la i demonstraţii interesante, experimente interactive si o mulţime de distracţie STEM pentru elevii lor! Vă rugăm să reţineţi că disponibilitatea de atelier de lucru în clasă pot varia în comunităţile rurale şi la distanţă.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-Actua este liderul Canadei in stiinta, tehnologie, si matematica. În fiecare an Actua ajunge la peste 225,000 de tineri din peste 500 de comunităţi prin progrsamarea lor ce rupe barierele.
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**Felicitări câştigătorilor din 2014!**
+**Congratulations to the 2014 winners!**
 
 | Scoala                        | Oraş              | Membru retea Actua              |
 | ----------------------------- | ----------------- | ------------------------------- |
@@ -94,10 +96,12 @@ Actua este liderul Canadei in stiinta, tehnologie, si matematica. În fiecare an
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) este mingea robotica ce schimba modul de abordare al elevilor de a invata; aceasta este controlata prin aplicatie. Realizat de [SPRK lessons](http://www.gosphero.com/education/), acesti roboti ofera copiilor un curs distractiv de programare in timp ce le dezvolta abilitatile in matematica si stiinta. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Mai multe întrebări despre premii? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

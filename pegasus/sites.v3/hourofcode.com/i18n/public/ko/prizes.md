@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -56,11 +62,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## Lucky Schools won an Actua Workshop {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). 액튜아 멤버들은 과학, 컴퓨터과학기술, 공학, 수학(STEM) 워크숍을 제공하며, 지역/구역의 K-12 학생들의 교육과정과 연관됩니다. 이러한 교실내 학습 경험들은 열정적이며, STEM 모델 수업들에 대해서 잘 훈련된 대학생들에 의해 진행 됩니다. 선생님들은 멋지고 신기한 시범 데모, 인터랙티브 실험들과 같은 STEM 교수학습을, 학생들과 함께 진행할 수 있습니다. 교실내 워크숍은 원격 또는 지역 커뮤니티에 의해서 다양하게 진행될 수 있습니다.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-[액튜아](http://actua.ca/)는 캐나다의 과학, 컴퓨터과학기술, 공학, 수학의 첨단분야들을 이끌어가고 있는 리더들입니다. 매년 액튜아는 장벽을 허무는 프로그래밍을 통해 500개 이상의 커뮤니티에서 225,000명 이상의 청소년들에게 다가갑니다.
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**2014년 수상자 모두 축하합니다!**
+**Congratulations to the 2014 winners!**
 
 | School                          | City        | Actua Network Member            |
 | ------------------------------- | ----------- | ------------------------------- |
@@ -90,10 +96,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 100 classrooms won a set of programmable robots {#programmable_robots}
 
-[Sphero](http://www.gosphero.com/) 는 앱으로 움직일 수 있는 로봇 공 입니다. [SPRK 레슨들](http://www.gosphero.com/education/)로, 이 둥그런 로봇들은 아이들에게 재미있는 프로그래밍 문제해결 과정을 경험하게 하고, 그과정에서 수학/과학 능력을 향상시킬 수 있습니다. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## 상품들에 대한 더 많은 궁금한 사항들? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

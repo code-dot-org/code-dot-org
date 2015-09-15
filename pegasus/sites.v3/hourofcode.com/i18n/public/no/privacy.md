@@ -1,4 +1,10 @@
+* * *
 
+tittel: Personvern
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Personvern
 

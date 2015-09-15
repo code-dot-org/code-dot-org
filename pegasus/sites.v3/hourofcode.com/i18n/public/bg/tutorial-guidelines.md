@@ -1,8 +1,14 @@
+* * *
 
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
 
 Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост. Моля, използвайте това ръководство, което ще ви насочи по създаването на вашата дейност, предназначено е за потребителя, който е без знания в програмирането и компютърните науки.
 
@@ -17,11 +23,11 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## Списък:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
   * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
     
-  * [How to submit (Due 10/31/2015)](#submit)  
+  * [How tutorials will be evaluated for inclusion](#inclusion)  
+    
+  * [How to submit (Due 10/15/2015)](#submit)  
     
   * [Suggestions for designing your activity](#design)  
     
@@ -33,6 +39,42 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
     
   * [Напътствия за работа със СОП ученици](#disabilities)
 
+<a id="guidelines"></a>
+
+## New for 2015: two formats of activites: self-guided or *lesson-plan*
+
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+
+**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+
+You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+
+Examples:
+
+  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
+  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>How can I submit my own lesson plan?</button>](#submit)
+
+  
+  
+**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. В идеалния случай инструкциите и ръководствата трябва да са интегрирани директно в платформата за програмиране, за да се избегне смяната на прозорците между урока и платформата.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## Общи насоки за създаване на дейности за Часът на кодирането
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * Насърчават учениците да създават нещо, което могат да споделят с приятели/онлайн.
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**Обратно към началото**](#top)
+
 <a id="inclusion"></a>
 
 ## Как и кои от уроците ще бъдат включени
@@ -42,7 +84,6 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 **Уроците ще заемат по-високо място, ако са:**
 
   * с високо качество
-  * самостоятелни, не изискват никакви инструкции
   * designed for beginners - among students AND teachers
   * проектирани като ~ 1 час дейност
   * не изискват регистрация
@@ -57,7 +98,6 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
   * с ниско качество
   * на по-високо ниво (не за начинаещи)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * имат ограничен брой поддържани ОС платформи и устройства - за уеб базирано използване, трябва да поддържат следните браузъри: IE9 + и най-новите версии на Chrome, Firefox и Safari
   * са само на английски
   * reinforce stereotypes that hinder participation by under-represented student groups
@@ -72,31 +112,15 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
   * съсредоточени са само върху HTML + CSS уеб дизайн
   * са подадени след срока за представяне, или с непълна информация (виж по-долу)
 
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
 В крайна сметка, целта на кампанията Часът на кодирането е да насърчи запознаването с компютърните науки на ученици и учители и да покаже, че компютърните науки са достъпни за всички и "по-лесни, отколкото си мислите." В много отношения тази цел по-добре се постига чрез даване на ученици и учители по-малко и по-прости решения, с акцент върху висококачествени уроци за начинаещи потребители. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**Обратно към началото**](#top)
-
-<a id="guidelines"></a>
-
-## Общи насоки за създаване на дейности за Часът на кодирането
-
-  * **Предмет:** Увод в компютърните науки или програмирането (не HTML).
-  * **Цел:** Да даде на начинаещите достъпни първи опити в програмирането.
-  * **Идея:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * Насърчават учениците да създават нещо, което могат да споделят с приятели/онлайн.
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. В идеалния случай инструкциите и ръководствата трябва да са интегрирани директно в платформата за програмиране, за да се избегне смяната на прозорците между урока и платформата.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**Обратно към началото**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 
 Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
 
@@ -133,11 +157,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Моля също да се включват препоръчителни знания и умения по компютърни науки в рамките на ниво или клас: начинаещ, напреднал или експерт. Сайтът на Часът на кодирането ще предпочете дейности за начинаещи, пред всички останали. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Технически изисквания: 
       * За да следим по-точно участниците, искаме партньорите ни да включат 1-pixel tracking картинка на първата и последната страница на уроците. Поставете първата pixel-картинка на началната страница, а втората на последната страница. Не поставяйте пиксел картинките на междинните страници). Вижте Tracking Pixel раздела по-долу за повече подробности. 
-      * При завършване на вашата дейност, потребителите трябва да бъдат насочени към <http://code.org/api/hour/finish> където те ще бъдат в състояние да: 
+      * При завършване на вашата дейност, потребителите трябва да бъдат насочени към [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> където те ще бъдат в състояние да: 
           * Споделят в социални медии, че са завършили Часът на кодирането
           * Получат сертификат, че са завършили Часът на кодирането
           * Вижте класациите кои държави/градове са с най-високи нива на участие в дейности от Часът на кодирането
-          * За потребителите, които ще опитат дейностите на Часът на кодирането, но няма да го завършат, включете бутон на вашата дейност, който да се казва "Аз съм приключих с моя час на кодирането" и да препраща обратно към [ http://code.org/api/hour/finish](http://code.org/api/hour/finish). 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
   * *(не е задължително)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * За онлайн дейности (особено смартфон/таблет приложения): 
           * Брой потребители
@@ -246,3 +270,5 @@ IMG SRC = <http://code.org/api/hour/finish_appinventor.png>
 Ако създавате уроци, предназначени за незрящи, ще се радваме да го маркирате за участници с екранни четци. Ние все още не са получавали такива уроци и ще бъдем нетърпеливи да се включим един като опция за тези ученици.
 
 [**Обратно към началото**](#top)
+
+<%= view :signup_button %>

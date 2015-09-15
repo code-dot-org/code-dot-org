@@ -147,6 +147,13 @@ da:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_nav_terms: Vilkår og betingelser
   prizes_nav_faq: FAQ
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Hvordan du kan arrangere en Hour of Code</a>"
@@ -179,8 +186,10 @@ da:
   front_join_us_teachers: Lærere
   front_join_us_everyone: Enhver
   front_join_us_try: Prøv det
+  front_join_us_sign_up: Registrér dig
   front_join_us_host: Arranger selv
   front_join_us_support: Støt os
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: Dit navn
   signup_email_label: Din email
@@ -241,11 +250,11 @@ da:
   hoc_faq_what_is_hoc_a: "Hour of Code er een times introduktion til at programmere, designed for at afmystificere kode og vise at alle kan lære det grundlæggende. <a href='http://code.org/learn'>Prøv selv øvelserne</a>."
   hoc_faq_last_year: Prøv øvelserne
   hoc_faq_when_is_hoc_q: Hvornår er Hour of Code?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Hvorfor programmering?
   hoc_faq_why_cs_a: "<i>Alle</i> elever bør have mulighed for at lære at programmere. Det hjælper til med at træne problemløsning, logik og kreativitet. Ved at starte tidligt, får eleverne et fundament for succes i et hvilket som helst karriereforløb i det 21. århundrede. Se mere baggrund og statistik på <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Hvordan kan jeg deltage i Hour of Code?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hvem står bag Hour of Code?
   hoc_faq_behind_hoc_a: "Hour of Code er organiseret af <a href='http://code.org'>Code.org</a>, en offentlig frivillig organisation dedikeret til at øge deltagelse i datalogi og programmering ved at gøre det tilgængelig i flere skoler, øge andelen af piger og kvinder, og elever fra etniske minoriteter. En  <a href='http://code.org/about/partners'>stor koalition af partnere</a> er gået sammen for at støtte Hour of Code. Den inkluderer bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske «College Board»."
   hoc_faq_host_q: Jeg ved ikke noget om at programmere. Kan jeg stadig være arrangør?
@@ -258,14 +267,14 @@ da:
   hoc_faq_tutorial_a: "Hvis du er interesseret i at blive øvelsespartner, <a href='target-tutorial-guidelines'>så tjek vores retningslinjer og instruktioner</a>. Vi ønsker at tilbyde mange muligheder, men hovedformålet er at elever og lærere som slet ikke kender til programmering skal få den bedst mulige oplevelse."
   hoc_faq_more_questions_q: Flere spørgsmål?
   hoc_faq_more_questions_a: "Prøv at finde svaret i vores <a href='http://support.code.org'>support-forum</a>."
-  hoc_faq_scratch_q: Jeg bruger Scratch til Hour of Code, men hvad nu hvis mine elever har iPads i stedet for bærbare computere?
-  hoc_faq_scratch_a: "Scratch kan ikke køre på tablets. Hvis du har yngre elever, kan de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_account_q: Behøver elever at logge på med en konto?
   hoc_faq_account_a: "Nej. Der kræves ingen form for registrering eller login, for at elever kan deltage i Hour of Code. De fleste af de <a href='http://code.org/learn/beyond'>udvidede kurser</a> kræver at der oprettes konti, så man kan følge elevernes status og fremdrift."
   hoc_faq_frozen_q: Hvor er øvelsen med Anna og Elsa?
   hoc_faq_frozen_a: "Den er nu offentliggjort på <a href='http://code.org/learn'> Code.org/learn</a>. Vi håber du vil synes om den!"
   hoc_faq_high_school_q: Hvilken aktivitet skal jeg bruge til gymnasieelever?
   hoc_faq_high_school_a: "Uanset alder, anbefaler vi først at prøve en af begynder-øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, for eksempel øvelsen med Angry Birds eller Anna og Elsa fra Frozen. En gymnasieelev kan ofte gennemføre en af disse på 30 minutter og kan derefter prøve en mere avanceret øvelse i JavaScript, som for eksempel Khan Academy eller CodeHS."
+  hoc_faq_scratch_q: Jeg bruger Scratch til Hour of Code, men hvad nu hvis mine elever har iPads i stedet for bærbare computere?
+  hoc_faq_scratch_a: "Scratch kan ikke køre på tablets. Hvis du har yngre elever, kan de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_count_hoc_q: Hvordan tælles antallet af Hours of Code?
   hoc_faq_count_hoc_a: "Optællingen giver ikke et nøjagtigt mål for deltagelse. Fordi vi ikke kræver at eleverne er logget ind eller registreret kan det ske at nogle elever bliver talt to gange mens elever der par-programmerer for eksempel kun bliver talt en gang. Læs flere detaljer om målingen<a href='http://code.org/loc'> her</a>."
   stats_hoc_2013_image_alt: Statistik fra Hour of Code 2013
@@ -287,14 +296,49 @@ da:
   resources_how_to_districts: Guide til lokalområder
   resources_how_to_officials: Guide for offentligt ansatte
   resources_handouts: Handouts til at sprede budskabet
-  resources_videos: Videoer
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Plakater
-  resources_social: Sociale medier
+  resources_videos: Videoer
   resources_banners: Bannere
   resources_emails: Eksempler på mails
+  resources_logo: Hour of Code logo
   resources_stats: Nyttig statistik og annoncering
   resources_press_kit: Presse-kit
+  resources_social: Sociale medier
   resources_country_resources: Country Specific Resources
+  resources_stickers: Stickers
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  videos_title: Vis disse videoer for at inspirere elever
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: Præsident Obama om programmering
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_officials: Guide for offentligt ansatte
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Presse-kit
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Partnere
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Tak
+  title_prizes: Præmier
+  title_resources: Ressourcer
+  title_signup_thanks: Tak fordi du vil arrangere Hour of Code!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
   events_title: Alle Hour of Code begivenheder
   events_nav_all: Alle begivenheder
   events_nav_whole_schools: Skoler

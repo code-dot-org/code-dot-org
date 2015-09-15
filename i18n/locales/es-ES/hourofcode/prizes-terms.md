@@ -1,33 +1,37 @@
 * * *
 
-title: Premios Términos layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Premios - términos y condiciones
 
 ## Espacio de Dropbox o crédito de Skype:
 
-Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limitado a un regalo por organizador. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Cada organizador debe registrarse en la Hora de Programación, para poder recibir el espacio de Dropbox o el crédito de Skype. Si toda tu escuela participa en la Hora de Programación, cada educador debe registrarse individualmente como organizador para calificar.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org se comunicará con los organizadores después de la Hora de Programación (Diciembre 8-14) parar dar instrucciones de como redimir el espacio de Dropbox o el crédito de Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Video chat con un orador invitado:
 
-Este premio está limitado a las aulas K-12 en los Estados Unidos y Canadá únicamente. Para participar inscribe a tu clase antes del 14 de Noviembre de 2014. Code.org seleccionará los grupos ganadores, asignará el horario para la conversación y trabajará con el profesor competente establecer los detalles de la tecnología a usar. No es necesario que toda tu escuela se inscriba para concursar por este premio. Escuelas públicas como privadas son elegibles para ganar.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Paquete de laptops (ó $10,000 para otras tecnologías):
 
-El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para competir toda la escuela deberá registarse para la Hora de Código antes del 16 de noviembre de 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
-Debemos aclarar, esto no es una lotería o un concurso de azar.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) No hay ningún interés o riesgo financiero en la aplicación, cualquier escuela puede participar, sin tener que realizar ningún pago a Code.org o ninguna otra organización
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) Los ganadores se seleccionarán únicamente entre las escuelas donde toda una clase (o escuela) participe en una Hora de Código, lo cual implica un reto a las habilidades colectivas de estudiantes y profesores.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

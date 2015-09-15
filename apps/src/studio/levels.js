@@ -1456,17 +1456,17 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
   ],
   'codeFunctions': {
     // Play Lab
-    "setSprite": null,
-    "setBackground": null,
-    "move": null,
-    "playSound": null,
-    "changeScore": null,
-    "setSpritePosition": null,
-    "setSpriteSpeed": null,
-    "setSpriteEmotion": null,
-    "throwProjectile": null,
-    "vanish": null,
-    "onEvent": null,
+    "setSprite": { 'category': 'Play Lab' },
+    "setBackground": { 'category': 'Play Lab' },
+    "move": { 'category': 'Play Lab' },
+    "playSound": { 'category': 'Play Lab' },
+    "changeScore": { 'category': 'Play Lab' },
+    "setSpritePosition": { 'category': 'Play Lab' },
+    "setSpriteSpeed": { 'category': 'Play Lab' },
+    "setSpriteEmotion": { 'category': 'Play Lab' },
+    "throwProjectile": { 'category': 'Play Lab' },
+    "vanish": { 'category': 'Play Lab' },
+    "onEvent": { 'category': 'Play Lab' },
 
     // Control
     "forLoop_i_0_4": null,
@@ -1530,10 +1530,10 @@ levels.hoc2015_1 = {
   'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": {'category': '' },
-    "moveWest": {'category': '' },
-    "moveNorth": {'category': '' },
-    "moveSouth": {'category': '' },
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
   },
 };
 
@@ -1560,9 +1560,9 @@ levels.hoc2015_2 = {
   'markerWidth': 50,
   'codeFunctions': {
     // Play Lab
-    "moveEast": {'category': '' },
-    "moveWest": {'category': '' },
-    "moveNorth": {'category': '' },
-    "moveSouth": {'category': '' },
+    "moveEast": null,
+    "moveWest": null,
+    "moveNorth": null,
+    "moveSouth": null,
   },
 };

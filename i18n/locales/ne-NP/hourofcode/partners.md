@@ -1,8 +1,10 @@
 * * *
 
-शीर्षक: साझेदारहरू
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # मुख्य साझेदारहरू र सहयोगी समर्थकहरू
 
@@ -37,3 +39,5 @@
 # Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

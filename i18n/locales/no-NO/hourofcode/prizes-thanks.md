@@ -1,9 +1,13 @@
 * * *
 
-title: Takk layout: wide
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Tusen takk
 
-Hele skolen din er nå inn for å vinne et sett med bærbare datamaskiner (eller $10,000 for annen teknoogi).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>
