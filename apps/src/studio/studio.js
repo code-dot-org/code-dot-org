@@ -2367,19 +2367,21 @@ Studio.clearDebugRects = function() {
 };
 
 
-Studio.drawWallTile = function (svg, row, col) {
+Studio.drawWallTile = function (svg, row, col, doubleSize) {
   var srcRow = Math.floor(Math.random() * 4);
   var srcCol = Math.floor(Math.random() * 4);
 
   var tiles = background && skin[background].tiles ? skin[background].tiles : skin.tiles;
+
+  var multiplySize = doubleSize ? 2 : 1;
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
   clipPath.setAttribute('id', clipId);
   clipPath.setAttribute('class', 'tile_clip');
   var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('width', Studio.SQUARE_SIZE);
-  rect.setAttribute('height', Studio.SQUARE_SIZE);
+  rect.setAttribute('width', multiplySize * Studio.SQUARE_SIZE);
+  rect.setAttribute('height', multiplySize * Studio.SQUARE_SIZE);
   rect.setAttribute('x', col * Studio.SQUARE_SIZE);
   rect.setAttribute('y', row * Studio.SQUARE_SIZE);
   clipPath.appendChild(rect);
@@ -2389,10 +2391,10 @@ Studio.drawWallTile = function (svg, row, col) {
   var tileId = 'tile_' + (uniqueId++);
   tile.setAttribute('id', tileId);
   tile.setAttribute('class', 'tile');
-  tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('x', (col-srcCol) * Studio.SQUARE_SIZE);
-  tile.setAttribute('y', (row-srcRow) * Studio.SQUARE_SIZE);
+  tile.setAttribute('width', multiplySize * 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('height', multiplySize * 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('x', col * Studio.SQUARE_SIZE - multiplySize * srcCol * Studio.SQUARE_SIZE);
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE - multiplySize * srcRow * Studio.SQUARE_SIZE); 
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
@@ -2430,12 +2432,44 @@ Studio.createLevelItems = function (svg) {
   }
 };
 
+Studio.isWallTile = function(row, col) {
+  if (row < 0 || row >= Studio.ROWS || col < 0 || col >= Studio.COLS) {
+    return false;
+  }
+
+  return (Studio.map[row][col] & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col]));
+}
+
 Studio.drawMapTiles = function (svg) {
+  var tilesDrawn = new Array();
   for (var row = 0; row < Studio.ROWS; row++) {
+    tilesDrawn[row] = new Array();
     for (var col = 0; col < Studio.COLS; col++) {
+      tilesDrawn[row][col] = false;
+    }
+  }
+
+  for (row = 0; row < Studio.ROWS; row++) {
+    for (col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col])) {
-        Studio.drawWallTile(svg, row, col);
+      if (Studio.isWallTile(row, col)) {
+        // Skip if we've already drawn a large tile that covers this square.
+        if (tilesDrawn[row][col]) {
+          continue;
+        }
+
+        var largeTile = false;
+        // We might be able to draw a large tile here.
+        if (Studio.isWallTile(row, col+1) &&
+            Studio.isWallTile(row+1, col) &&
+            Studio.isWallTile(row+1, col+1)) {
+          largeTile = true;
+          tilesDrawn[row][col] = true;
+          tilesDrawn[row][col+1] = true;
+          tilesDrawn[row+1][col] = true;
+          tilesDrawn[row+1][col+1] = true;
+        }
+        Studio.drawWallTile(svg, row, col, largeTile);
       }
     }
   }
