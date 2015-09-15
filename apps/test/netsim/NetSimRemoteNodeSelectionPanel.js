@@ -76,21 +76,84 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       assert(!panel.canAddRouter());
     });
 
-    it ("true if current router count is below the strict limit", function () {
-      var panel = panelWithNodes(makeRouters(MAX_ROUTERS - 1));
-      assert(panel.canAddRouter());
+    // A single-part address imposes no limit on the number of addressable
+    // routers, so the global limit is used.
+    describe("with address format '4'", function () {
+      beforeEach(function () {
+        NetSimGlobals.getLevelConfig().addressFormat = '4';
+      });
+
+      it ("true if current router count is below the global limit", function () {
+        var panel = panelWithNodes(makeRouters(MAX_ROUTERS - 1));
+        assert(panel.canAddRouter());
+      });
+
+      it ("false if current router count is at/beyond the global limit", function () {
+        var panel = panelWithNodes(makeRouters(MAX_ROUTERS));
+        assert(!panel.canAddRouter());
+      });
+
+      it ("true if current client count is at/beyond the global router limit", function () {
+        var panel = panelWithNodes(makeClients(MAX_ROUTERS));
+        assert(panel.canAddRouter());
+      });
+
     });
 
-    it ("false if current router count is at/beyond the strict limit", function () {
-      var panel = panelWithNodes(makeRouters(MAX_ROUTERS));
-      assert(!panel.canAddRouter());
+    // The two-bit router part imposes a limit of four addressable routers.
+    describe ("with address format '2.8'", function () {
+      beforeEach(function () {
+        NetSimGlobals.getLevelConfig().addressFormat = '2.2';
+      });
+
+      it ("true if current router count is below the addressable space of 4", function () {
+        var panel = panelWithNodes(makeRouters(3));
+        assert(panel.canAddRouter());
+      });
+
+      it ("true if current router count is at/above the addressable space of 4", function () {
+        var panel = panelWithNodes(makeRouters(4));
+        assert(!panel.canAddRouter());
+      });
     });
 
-    it ("true if current client count is at/beyond the strict router limit", function () {
-      var panel = panelWithNodes(makeClients(MAX_ROUTERS));
-      assert(panel.canAddRouter());
+    // The four-bit router part imposes a limit of sixteen addressable routers.
+    describe ("with address format '1.2.4.3'", function () {
+      beforeEach(function () {
+        NetSimGlobals.getLevelConfig().addressFormat = '4.4';
+      });
+
+      it ("true if current router count is below the addressable space of 16", function () {
+        var panel = panelWithNodes(makeRouters(15));
+        assert(panel.canAddRouter());
+      });
+
+      it ("true if current router count is at/above the addressable space of 16", function () {
+        var panel = panelWithNodes(makeRouters(16));
+        assert(!panel.canAddRouter());
+      });
     });
 
+    // The eight-bit router part imposes a limit of 256 addressable routers.
+    // However, this is larger than our global router maximum, so we are still
+    // limited by the global maximum.
+    describe ("with address format '8.8'", function () {
+      beforeEach(function () {
+        NetSimGlobals.getLevelConfig().addressFormat = '8.8';
+      });
+
+      it ("true if current router count is below the global maximum", function () {
+        assert(MAX_ROUTERS < 256);
+        var panel = panelWithNodes(makeRouters(MAX_ROUTERS - 1));
+        assert(panel.canAddRouter());
+      });
+
+      it ("true if current router count is at/above the global maximum", function () {
+        assert(MAX_ROUTERS < 256);
+        var panel = panelWithNodes(makeRouters(MAX_ROUTERS));
+        assert(!panel.canAddRouter());
+      });
+    });
   });
 
   describe("canCurrentUserResetShard", function () {
