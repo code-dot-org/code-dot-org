@@ -3,6 +3,7 @@ require 'rack/test'
 require File.expand_path '../../../deployment', __FILE__
 require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
+require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
@@ -80,7 +81,7 @@ class AssetsTest < Minitest::Test
 
     put(@assets, src_channel_id, image_filename, image_body, 'image/jpeg')
     put(@assets, src_channel_id, sound_filename, sound_body, 'audio/mpeg')
-    copy_file_infos = JSON.parse(copy_all(@assets, src_channel_id, dest_channel_id))
+    copy_file_infos = JSON.parse(copy_all(src_channel_id, dest_channel_id))
     dest_file_infos = JSON.parse(list(@assets, dest_channel_id))
 
     assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
@@ -94,11 +95,6 @@ class AssetsTest < Minitest::Test
     delete(@assets, dest_channel_id, sound_filename)
     delete_channel(@channels, src_channel_id)
     delete_channel(@channels, dest_channel_id)
-  end
-
-  def test_copy_all_with_no_src
-    copy_all(@assets, nil, create_channel(@channels))
-    assert @assets.last_response.bad_request?
   end
 
   def test_assets_auth
@@ -125,12 +121,6 @@ class AssetsTest < Minitest::Test
     # other_channel_id isn't owned by either user of the assets API.
     other_channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     other_channel_id = create_channel(other_channels)
-
-    copy_all(@assets, other_channel_id, owner_channel_id)
-    assert @assets.last_response.successful?, 'User who owns the destination channel can copy files.'
-
-    copy_all(@assets, owner_channel_id, other_channel_id)
-    assert !@assets.last_response.successful?, 'User who does not own the destination channel cannot copy files.'
 
     delete(@assets, owner_channel_id, filename)
 
@@ -190,8 +180,8 @@ class AssetsTest < Minitest::Test
     assets.delete "/v3/assets/#{channel_id}/#{filename}"
   end
 
-  def copy_all(assets, src_channel_id, dest_channel_id)
-    assets.put("/v3/assets/#{dest_channel_id}?src=#{src_channel_id}").body
+  def copy_all(src_channel_id, dest_channel_id)
+    AssetBucket.new.copy_files(src_channel_id, dest_channel_id).to_json
   end
 
   def assert_fileinfo_equal(expected, actual)
