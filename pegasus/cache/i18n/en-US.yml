@@ -289,6 +289,7 @@
   dashboard_landing_more_tutorials_desc: "There are more tutorials <a href=\"/learn/beyond\">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!"
   dashboard_hoc_courses: "The Hour of Code for All Ages"
   dashboard_hoc_courses_desc: "Try any of these shorter 1 hour tutorials with your students!"
+  dashboard_hoc_courses_desc_and_cta: "Try these short, one-hour tutorials with your students. <a href=\"https://hourofcode.com\">Join the Hour of Code movement</a> during Computer Science Education Week."
   dashboard_k5_courses: "20-Hour Courses for K-5"
   dashboard_k5_courses_desc: "These courses blend online, self-guided and self-paced tutorials with \"unplugged\" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href=\"/professional-development-workshops\">Find one near you!</a>"
   dashboard_middle_courses: "20-Hour Middle School Courses"
