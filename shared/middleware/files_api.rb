@@ -3,15 +3,12 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
-
-  MAX_FILE_SIZE = 5_000_000 # 5 MB
   def self.max_file_size
-    MAX_FILE_SIZE
+    5_000_000 # 5 MB
   end
 
-  MAX_APP_SIZE = 2_000_000_000 # 2 GB
   def self.max_app_size
-    MAX_APP_SIZE
+    2_000_000_000 # 2 GB
   end
 
   def get_bucket_impl(endpoint)
