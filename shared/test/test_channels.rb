@@ -128,6 +128,8 @@ class ChannelsTest < Minitest::Test
 
     delete "/v3/channels/#{channel_id}/abuse"
     assert last_response.unauthorized?
+
+    # TODO - make sure delete works for admins
   end
 
 end

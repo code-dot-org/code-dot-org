@@ -47,7 +47,8 @@ window.dashboard.footer = (function () {
           React.PropTypes.shape({
             text: React.PropTypes.string.isRequired,
             link: React.PropTypes.string.isRequired,
-            type: React.PropTypes.oneOf(['copyright', 'reportAbuse'])
+            copyright: React.PropTypes.bool,
+            newWindow: React.PropTypes.bool
           })
         ).isRequired,
         className: React.PropTypes.string
@@ -78,7 +79,7 @@ window.dashboard.footer = (function () {
       minimizeOnClickAnywhere: function (event) {
         // The first time we click anywhere, hide any open children
         $(document.body).one('click', function (event) {
-          // a couple of our menu items have their own click handlers
+          // menu copyright has its own click handler
           if (event.target === React.findDOMNode(this.refs.menuCopyright)) {
             return;
           }
@@ -213,15 +214,12 @@ window.dashboard.footer = (function () {
 
       renderMoreMenu: function (styles) {
         var menuItemElements = this.props.menuItems.map(function (item, index) {
-          var ref, onClick;
-          if (item.type === 'copyright') {
-            ref = 'menuCopyright';
-            onClick = this.clickMenuCopyright;
-          }
-
           return (
             <li key={index} style={styles.listItem}>
-            <a href={item.link} ref={ref} onClick={onClick} target="_blank">
+            <a href={item.link}
+                ref={item.copyright ? "menuCopyright" : undefined}
+                target={item.newWindow ? "_blank" : undefined}
+                onClick={item.copyright ? this.clickMenuCopyright : undefined}>
               {item.text}
             </a>
             </li>

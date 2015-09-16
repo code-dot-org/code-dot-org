@@ -194,8 +194,8 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-  post '/zendesk_report_abuse', :to => 'zendesk_ticket#report_abuse'
-  get '/report_abuse', :to => 'zendesk_ticket#report_abuse_form'
+  post '/zendesk_report_abuse', :to => 'abuse_report#report_abuse'
+  get '/report_abuse', :to => 'abuse_report#report_abuse_form'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 

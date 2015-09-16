@@ -6,6 +6,10 @@ window.dashboard = window.dashboard || {};
  * in our smaller alert in apps.
  */
 window.dashboard.ReportAbuseForm = (function (React) {
+  var INPUT_WIDTH = 500;
+  // dropdown width is wider so that it still lines up with inputs (which have
+  // padding)
+  var DROPDOWN_WIDTH = 514;
 
   /**
    * A dropdown with the set of ages we use across our site (4-20, 21+)
@@ -16,7 +20,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
     },
 
     render: function () {
-      var style = $.extend({}, {width :500}, this.props.style);
+      var style = $.extend({}, {width: DROPDOWN_WIDTH}, this.props.style);
 
       var ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14',
         '15', '16', '17', '18', '19', '20', '21+'];
@@ -85,7 +89,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           <input type="hidden" name="name" value={this.props.name}/>
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>Email</div>
-            <input type="text" style={{width: 500}} defaultValue={this.props.email} name="email" ref="email"/>
+            <input type="text" style={{width: INPUT_WIDTH}} defaultValue={this.props.email} name="email" ref="email"/>
           </div>
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
@@ -94,10 +98,10 @@ window.dashboard.ReportAbuseForm = (function (React) {
           </div>
 
           <div>Abusive URL</div>
-          <input type="text" readOnly style={{width: 500}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
+          <input type="text" readOnly style={{width: INPUT_WIDTH}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
           <div>How does this content violate the <a href="https://code.org/tos" target="_blank">Terms of Service</a>?</div>
-          <select style={{width: 500}} name="abuse_type" ref="abuseType">
+          <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuseType">
             <option value=""></option>
             <option value="harassment">Threats, cyberbullying, harassement</option>
             <option value="offensive">Offensive content</option>
@@ -106,7 +110,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           </select>
 
           <div>Please provide as much detail as possible regarding the content you are reporting.</div>
-          <textarea style={{width: 500, height: 100}} name="abuse_detail" ref="abuseDetail"/>
+          <textarea style={{width: INPUT_WIDTH, height: 100}} name="abuse_detail" ref="abuseDetail"/>
 
           <div>
             By submitting this information, you acknowledge it will be handled in accordance with the terms of the
