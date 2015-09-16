@@ -10,3 +10,7 @@ wrong 'E'
 markdown <<MARKDOWN
 ![](https://images.code.org/2d5c475328b50e7da1414b59e8c40aab-image-1433977200543.png)
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer: A
+MARKDOWN

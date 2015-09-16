@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
-# Pierakstiet savu skolu, lai piedalītos
+* * *
 
-Informācija par visu skolu piedališanos "Programmēšanas stunda" būs izvietota šeit.
+<%= view :signup_button %>
+
+# Piesaki dalībai visu skolu
+
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

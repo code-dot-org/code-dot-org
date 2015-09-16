@@ -1,17 +1,21 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
-[<button style="float: right; margin-top: 50px">Înscrieţi-vă evenimentul</button>](/#join)
+* * *
+
+<%= view :signup_button %>
 
 # Rezumate si statistici utile
 
-## Use this short blurb in newsletters
+## Folosiți acest scurt rezumat în buletinel de știri
 
-### Adu informatica in scoala ta. Incepe cu Hour of Code
+### Aduceți informatica în școala dvs. Începeți cu Ora de Programare/Ora de Cod
 
-Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale de a schimba acest lucru. Dacă aţi auzit despre [ Hour of Code ](<%= hoc_uri('/') %>) . anul trecut, sigur stiti ca a facut istorie. Intr-o singură saptamână, 15 milioane de elevi au incercat programarea! [ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectat să desluseasca limbajul de cod şi arată că oricine poate învăţa elementele de bază. [ Inscrie-te ](<%= hoc_uri('/') %>) pentru a găzdui un eveniment Hour of Code intre 8 si 14 decembrie în timpul Saptamanii de Educatie de Informatica şi ajuta-ne sa ajungem la 100 de milioane de studenţi până la sfârşitul anului. Add your school to the map, go to <http://hourofcode.com>
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Vestea bună e că suntem pe cale să schimbăm acest lucru. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![imagine](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
 
-<a style="display: block" href="/#join"><button style="float: right;">Înscrieţi-vă evenimentul</button></a>
+<%= view :signup_button %>

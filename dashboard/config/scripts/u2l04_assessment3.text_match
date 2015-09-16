@@ -4,3 +4,10 @@ title 'Routers and Redundancy: Question 5'
 markdown <<MARKDOWN
 Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but should include thee following:
+
+- no, you cannot know the exact path a message will take, because the most efficient route between two computers can and will change depending on which other routers are online and how much traffic is going through them at the time the message is being sent. 
+
+MARKDOWN

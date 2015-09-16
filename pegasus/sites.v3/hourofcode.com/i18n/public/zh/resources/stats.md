@@ -1,17 +1,21 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
-[<button style="float: right; margin-top: 50px">註冊您的活動</button>](/#join)
+* * *
 
-# 導語和有用的統計資訊
+<%= view :signup_button %>
 
-## Use this short blurb in newsletters
+# 引言和有用的統計資訊
+
+## 在新聞稿中使用這則引言
 
 ### 把電腦科學帶進您的學校。從Hour of Code開始!
 
-電腦無處不在但教電腦科學的學校比 10 年前還少。 好消息是我們正在改變此狀況。 如果您去年聽說過 [ Hour of Code](<%= hoc_uri('/') %>) ，你可能知道它已創造了歷史。 在一周內 1500 萬學生嘗試體驗了電腦科學 ！ [ Hour of Code](<%= hoc_uri('/') %>) 是項一小時的電腦科學活動，旨在揭開程式碼的神秘面紗並說明它是任何人都可以學習的基礎知識入門。 在此[ 註冊](<%= hoc_uri('/') %>) 以便在12 月 8-14日的電腦科學教育週期間辦理Hour of Code活動，協助在今年年底前達到 1 億學生參與的目標。 Add your school to the map, go to <http://hourofcode.com>
+電腦無處不在但教電腦科學的學校比 10 年前還少。 好消息是我們正在改變此狀況。 If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
 
-<a style="display: block" href="/#join"><button style="float: right;">註冊您的活動</button></a>
+<%= view :signup_button %>

@@ -1,59 +1,63 @@
+* * *
 
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
+* * *
 
+<%= view :signup_button %>
 
 ## Πώς να προσελκύσεις τα ΜΜΕ στην εκδήλωσή σου για την Ώρα του Κώδικα
 
 *For all press and media inquiries, contact <press@code.org>*
 
-### Βασικές συμβουλές
+### Βασικές Συμβουλές
 
   * Προσέγγισε τα ΜΜΕ δύο εβδομάδες πριν την εκδήλωση με email. Αν δεν λάβεις απάντηση, προσπάθησε ξανά με e-mail ή τηλεφωνικά.
   * Ζήτησε από έναν εργαζόμενο στο σχολείο ή κάποιον εθελοντή να τραβήξει φωτογραφίες που θα μοιραστείς online ή θα στείλεις στον τύπο.
   * Γράψε για την Ώρα του Κώδικα τόσο στην αρχική σελίδα του ιστοχώρου σου, όσο και στη σχολική εφημερίδα. Δημοσίευσε τις λεπτομέρειες της εκδήλωσης και φωτογραφίες από τις δραστηριότητες των μαθητών.
-  * Στο Facebook και το Twitter, μοιράσου τις ανανεώσεις των σχεδίων σου, ανακοίνωσε τις εκδηλώσεις και δημοσίευσε φωτογραφίες κατά τη διάρκεια της εβδομάδας 8-14 Δεκεμβρίου. Χρησιμοποίησε το hashtag **#HourOfCode**, ώστε το Code.org να δει και να τα προβάλλει τις δραστηριότητές σου.
+  * Στο Facebook και το Twitter, μοιράσου τις ενημερώσεις των σχεδίων σου, ανακοίνωσε τις εκδηλώσεις και δημοσίευσε φωτογραφίες κατά τη διάρκεια της εβδομάδας 7-13 Δεκεμβρίου. Χρησιμοποίησε το hashtag **#HourOfCode**, ώστε το Code.org να δει και να τα προβάλλει τις δραστηριότητές σου.
 
 ### Οδηγός Βήμα προς Βήμα:
 
-**1. Σχεδίασε την εκδήλωσή σου**
+**1. Plan your event**
 
   * Σχεδίασε μια συγκέντρωση για να ξεκινήσεις την Ώρα του Κώδικα.
-  * Στείλε ένα [γράμμα](<%= hoc_uri('/resources/#sample-emails') %>) στους γονείς. Ζήτα τους να κοινοποιήσουν.
-  * Στείλε ένα [γράμμα](<%= hoc_uri('/resources/#sample-emails') %>) στον τοπικό δήμαρχο, κυβερνήτη ή έναν ισχυρό επιχιρηματία με σκοπό να έρθει και να μιλήσει στους μαθητές.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Οργάνωσε ομαδικές δραστηριότητες (όπως μια προγραμματιστική δραστηριότητα χωρίς τη χρήση υπολογιστή), ή πρόβαλλε δραστηριότητες που οργάνωσαν και υλοποιούν οι μαθητές σου.
-  * Δείξε το [Βίντεο της ώρας του κωδικά](<%= hoc_uri('/') %>) η ένα από  για να εμπνεύσεις </li> </ul> 
-    
-    **2. Βρεις ποιοι τοπικοί δημοσιογράφοι καλύπτουν τα εκπαιδευτικά και τις τοπικές εκδηλώσεις.**
-    
-    Σκέψου μια τοπική εφημερίδα, έναν τηλεοπτικό σταθμό, έναν ραδιοφωνικό σταθμό ή ένα blog.
-    
-    Ψάξε στο διαδίκτυο για να βρεις τα στοιχεία επικοινωνίας του δημοσιογράφου. Εάν δεν μπορείς να τα βρεις, τηλεφώνησε στον εκδότη για να τα ζητήσεις, ή στείλε ένα e-mail ζητώντας να προωθηθεί στον κατάλληλο δημοσιογράφο.
-    
-    **3. Επικοινώνησε με τα τοπικά μέσα ενημέρωσης**
-    
-    Ο καλύτερος τρόπος για να προσεγγίσεις τα ΜΜΕ είναι το e-mail. Θα πρέπει να είναι σύντομο και να περιγράφει γλαφυρά: γιατί πρέπει ο κόσμος να μάθει για αυτή την εκδήλωση; Να συμπεριλάβεις πληροφορίες επικοινωνίας (και αριθμό κινητού τηλεφώνου) για όσους θα είναι στην εκδήλωση. **Δες ένα[ πρότυπο για την ενημέρωση των Μέσων Μαζικής Ενημέρωσης](<%= hoc_uri('/resources#sample-emails') %>):**
-    
-    **4. Προετοιμάσου για να απαντήσεις σε ερωτήσεις για την σχολική εκδήλωσή σου. Ακολουθούν μερικά παραδείγματα:**
-    
-    *Γιατί συμμετέχει το σχολείο σου στην Ώρα του Κώδικα;*
-    
-    Ενώ όλοι μας γνωρίζουμε ότι είναι σημαντικό για τους μαθητές να μάθουν πώς να ενεργούν στον σημερινό τεχνολογικά κορεσμένο κόσμο, πολλοί εκπαιδευτές δεν είναι έμπειροι στην επιστήμη των υπολογιστών και δεν γνωρίζουν από πού να αρχίσουν. Αυτήν η εκδήλωση είναι μια ευκαιρία για όλους μας να καταλάβουμε τον σκοπό της επιστήμης των υπολογιστών.
-    
-    Ελπίζουμε ότι θα προκαλέσει το ενδιαφέρον των μαθητών να συνεχίσουν να μαθαίνουν. Έρευνα δείχνει ότι τα παιδιά καταλαβαίνουν έννοιες του προγραμματισμού πριν μάθουν να διαβάζουν και να γράφουν. Στην πραγματικότητα, το μυαλό τους σε μικρές ηλικίες είναι πιο δεκτικό στις γλώσσες προγραμματισμού, όπως ακριβώς συμβαίνει και με τις ξένες γλώσσες.
-    
-    *Γιατί είναι τόσο σημαντικό;*
-    
-    Στην Κίνα, κάθε μαθητής χρειάζεται την Πληροφορική για να αποφοιτήσει από το Λύκειο. Στις Ηνωμένες Πολιτείες το 90% των σχολείων δεν την διδάσκει καν. Ήρθε η ώρα να προλάβουμε τον 21 αιώνα. Γνωρίζουμε ότι, ανεξάρτητα από το τι θα κάνουν οι μαθητές μας όταν μεγαλώσουν, αν θα ασχοληθούν με την ιατρική, με επιχειρήσεις, την πολιτική ή τις τέχνες, αν γνωρίζουν πώς να δημιουργήσουν τεχνολογία, θα έχουν την αυτοπεποίθηση και την τεχνογνωσία να πετύχουν.
-    
-    **Περισσότερες λεπτομέρειες και ένα απόσπασμα που μπορείς να χρησιμοποιήσεις στο υλικό σου**
-    
-    «Η Ώρα του Κώδικα έχει σχεδιαστεί με σκοπό να απομυθοποιήσει τον προγραμματισμό και να δείξει ότι η Πληροφορική δεν είναι απλησίαστη, οποιοσδήποτε μπορεί να μάθει τα βασικά», είπε ο Hadi Partovi, ιδρυτής και διεθύνων σύμβουλος του Code.org. «Πέρυσι, σε μια εβδομάδα, 15 εκατομμύρια μαθητές δοκίμασαν μια Ώρα Κώδικα. Τώρα στοχεύουμε σε 100 εκατομμύρια παγκοσμίως, για να αποδείξουμε ότι η απαίτηση για εκπαίδευση σχετική με την επιστήμη των υπολογιστών του 21ου αιώνα, διασχίζει όλα τα σύνορα και δεν έχει όρια.»
-    
-    **Περί του Code.org**
-    
-    Το Code.org® είναι μία δημόσια μη κερδοσκοπική οργάνωση, αφιερωμένη στην εξάπλωση της συμμετοχής στην επιστήμη της πληροφορικής και ιδιαίτερα στην αύξηση της συμμετοχής των γυναικών και των μαθητών από διαφορετικές φυλές που δεν εκπροσωπούνται επαρκώς. Το όραμά της είναι ότι κάθε ένας μαθητής σε οποιοδήποτε σχολείο πρέπει να έχει τη δυνατότητα να μάθει προγραμματισμό υπολογιστών. Μετά την ίδρυση το 2013, το Code.org οργάνωσε την εκστρατεία για την Ώρα του Κώδικα - που έχει εισαγάγει εκατομμύρια μαθητών στην επιστήμη των υπολογιστών - συνεργάζεται με περισσότερα απο 30 σχολικές περιφέρειες σε εθνικό επίπεδο και έχει ενεργοποιήσει το Code Studio, μια ανοικτού κώδικα πλατφόρμα διαδικτυακής εκπαίδευσης για όλες τις ηλικίες. Για περισσότερες πληροφορίες, παρακαλούμε επισκεφθείτε: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
-    
-      
-    Βρείτε περισσότερους πόρους και email [ εδώ](<%= hoc_uri('/resources') %>).
-    
-    
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/resources#videos') %>) to inspire.
+
+**2. Identify specific local reporters that cover education or local events.**
+
+Think a local newspaper, TV station, radio station or blog.
+
+Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+
+**3. Contact local media**
+
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
+
+**4. Prepare to field questions about your school event. Here are some examples:**
+
+*Why is your school doing an Hour of Code?*
+
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+
+We hope it’ll spark interest in students to keep learning. Research also shows that kids pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+
+*Why is this important?*
+
+In China, every students takes computer science to graduate high school. In the U.S., 90 percent of schools don’t even teach it. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them the confidence and know-how to succeed.
+
+**More details and a quote you can use in materials**
+
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+
+**Περί του Code.org**
+
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: <<%= resolve_url('https://code.org') %>>.
+
+  
+Find more resources and sample emails [here](<%= resolve_url('/resources') %>).
+
+<%= view :signup_button %>

@@ -6,3 +6,11 @@ Knowing what you know now about frequency analysis, would you feel comfortable s
 
 Why or why not?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary, but may include these concepts:
+
+- Students should not feel comfortable sending their password over the internet using a substitution cipher.
+- With a frequency analysis tool substitution cipher is very easy to crack
+- Someone would likely be able to figure out the password fairly quickly
+MARKDOWN

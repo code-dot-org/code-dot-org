@@ -1,3 +1,42 @@
 name 'U2L02 Assessment 5'
 title 'The Need For Addressing: Assessment 3'
 content1 'Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?'
+teacher_markdown <<MARKDOWN
+Answers might include: 
+
+- Broadcast mode: we can see all other moves in plain text.
+- Even with a protocol, it is hard for human to identify and reply to appropriate messages quickly.
+- We do not know who a message actually came from.
+
+MARKDOWN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,5 +3,12 @@ title 'Packets: Reflection'
 content1 ''
 placeholder 'Enter your reflection here.'
 markdown <<MARKDOWN
-In your own words, what were the primary challenges you needed to overcome in today’s challenge? How do these challenges mirror actual challenges encountered on the Internet?
+In your own words, what were the primary obstacles you needed to overcome in today’s challenge? How do these obstacles mirror actual problems encountered on the Internet?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers will vary but will likely include these concepts:
+
+* **Packets had a maximum size.** If the information being sent was more than the required size, then the data got cut off. On the Internet, there is a maximum packet size that devices much respect in order to have the packet be properly routed. 
+* **Some percentage of packets were dropped no matter what,** which meant that it could never be assumed that the receiver got some or all of the message. This includes the original message, as well as the acknowledgements being sent back by the original message recipient. On the Internet, because bits are sent via physical infrastructure such as copper wires or fiber optic cable, physical disruption (earthquake, wire being cut, etc.) can interfere with transmission. Additionally, if a router doesn't have enough memory to hold all the packets it is processing, it can drop packets. 
 MARKDOWN

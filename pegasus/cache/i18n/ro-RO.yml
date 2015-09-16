@@ -61,6 +61,10 @@
   thank_you_: Mulţumesc!
   congratulations: Felicitări!
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: Obţine un certificat de realizare
   enter_valid_age: Te rugăm selectează o vârstă validă
   enter_valid_email: Te rugăm să introduci o adresă de email validă
@@ -76,7 +80,7 @@
   share_achievement: Distribuie realizarea personală
   beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
     ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
-    mai mult de O Oră</a>.
+    dincolo de O Oră</a>.
   leaderboards_for_hoc: Clasamentele pentru Ora de Cod.
   support_url: http://support.code.org/
   country: Ţară
@@ -209,6 +213,7 @@
   homepage_action_text_learn: Începe învăţarea
   homepage_action_text_signpetition: Semnează petiția
   homepage_signpetition_dropdown: Sunt de acord &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org şi College Board formează o alianţă pentru a
     îmbunătăţi diversitatea în informatică.
   homepage_banner_text_link: Află mai mult
@@ -334,6 +339,9 @@
   dashboard_hoc_courses: Ora De Cod pentru toate vârstele
   dashboard_hoc_courses_desc: Încearcă oricare din aceste tutoriale, mai scurte de-o
     oră, cu elevii tăi!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: Cursuri de 20 de ore pentru clasele primare
   dashboard_k5_courses_desc: Aceste cursuri combină tutoriale cu ritm propriu si ghidate
     pe individ cu activități de tip "unplugged" care nu necesită folosirea calculatorului.
@@ -535,6 +543,11 @@
   code_hoc_coming: 'Ora de cod este aici: 8-14 decembrie!'
   code_sign_up: Înscrie-te pentru a participa la săptămâna de educație în informatică
   learn_more: Află mai mult
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: Inregistrează-te
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Încearcă noile noastre tutoriale ale Orei de Cod
   hoc2014_try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
   hoc2014_try_scrat: Păsări Supărate, PvZ şi Veverița Scrat
@@ -555,6 +568,8 @@
   educator_notes: Notițe pentru educatori
   how_to_teach_hoc: Cum să predai o Oră de Cod
   more_resources_educators: Mai multe resurse pentru profesori și educatori
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: participanți
   teachers_notes: Notițele profesorului
   teachers_notes_hoc: 'Profesori: Citiţi notițele importante pentru educator aici'

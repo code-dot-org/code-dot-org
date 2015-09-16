@@ -2,11 +2,16 @@ name 'U2L10 Assessment1'
 title 'Assessment Question 1'
 
 question 'What feature of DNS and IP allow the internet to scale?'
-wrong 'Redundancy'
-right 'Hierarchy'
-wrong 'Multiple servers' 
-wrong 'Government control'
+wrong 'A. Redundancy'
+right 'B. Hierarchy'
+wrong 'C. Multiple servers' 
+wrong 'D. Government control'
 
 markdown <<MARKDOWN
 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer: 
+
+- B. Hierarchy
 MARKDOWN

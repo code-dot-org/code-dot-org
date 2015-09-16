@@ -98,6 +98,8 @@ var EdgeClassNames = [
 var level;
 var skin;
 
+var background = null;
+
 /**
  * Milliseconds between each animation frame.
  */
@@ -167,6 +169,7 @@ var twitterOptions = {
 function loadLevel() {
   // Load maps.
   Studio.map = level.map;
+  Studio.walls = null;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
   Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
@@ -263,7 +266,7 @@ var drawMap = function () {
     tile.setAttribute('width', Studio.MAZE_WIDTH);
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
-    svg.appendChild(tile);
+    svg.appendChild(tile); 
   }
 
   if (level.coordinateGridBackground) {
@@ -684,6 +687,15 @@ function sortDrawOrder() {
     itemsArray.push(sprite);
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
+  }
+
+  // Add tiles.
+  var tiles = $(".tile");
+  for (i = 0; i < tiles.length; i++) {
+    var tile = {};
+    tile.element = tiles[i];
+    tile.y = tiles[i].getAttribute('y');
+    itemsArray.push(tile);
   }
 
   itemsArray = _.sortBy(itemsArray, 'y');
@@ -1180,7 +1192,8 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
-      if (Studio.map[row][col] & SquareType.WALL) {
+      if ((Studio.map[row][col] & SquareType.WALL) || 
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -1375,6 +1388,7 @@ Studio.init = function(config) {
   Studio.items = [];
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts = [];
+  Studio.tickIntervalId = null;
 
   Studio.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1578,8 +1592,9 @@ Studio.clearEventHandlersKillTickLoop = function() {
   });
   Studio.eventHandlers = [];
   Studio.perExecutionTimeouts.forEach(function (timeout) {
-    clearInterval(timeout);
+    clearTimeout(timeout);
   });
+  clearInterval(Studio.tickIntervalId);
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
@@ -1713,6 +1728,8 @@ Studio.reset = function(first) {
     finishClipRect.setAttribute('x', Studio.spriteGoals_[i].x);
     finishClipRect.setAttribute('y', Studio.spriteGoals_[i].y);
   }
+  
+  sortDrawOrder();  
 
   // A little flag for script-based code to consume.
   Studio.levelRestarted = true;
@@ -1728,13 +1745,7 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    if (!actualBlock) {
-      throw new Error('Invalid Call Block');
-    }
-
-    if (!expectedBlock) {
-      throw new Error('Invalid Result Block');
-    }
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
@@ -1776,7 +1787,10 @@ Studio.runButtonClick = function() {
   if (level.freePlay && !level.isProjectLevel &&
       (!studioApp.hideSource || level.showFinish)) {
     var shareCell = document.getElementById('share-cell');
-    shareCell.className = 'share-cell-enabled';
+    if (shareCell.className !== 'share-cell-enabled') {
+      shareCell.className = 'share-cell-enabled';
+      studioApp.onResize();
+    }
   }
 
   if (level.showZeroScore) {
@@ -2141,7 +2155,7 @@ Studio.execute = function() {
   }
 
   Studio.perExecutionTimeouts = [];
-  Studio.perExecutionTimeouts.push(window.setInterval(Studio.onTick, Studio.scale.stepSpeed));
+  Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
 };
 
 Studio.feedbackImage = '';
@@ -2340,9 +2354,12 @@ Studio.drawWallTile = function (svg, row, col) {
   var srcRow = Math.floor(Math.random() * 4);
   var srcCol = Math.floor(Math.random() * 4);
 
+  var tiles = background && skin[background].tiles ? skin[background].tiles : skin.tiles;
+
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
   clipPath.setAttribute('id', clipId);
+  clipPath.setAttribute('class', 'tile_clip');
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', Studio.SQUARE_SIZE);
   rect.setAttribute('height', Studio.SQUARE_SIZE);
@@ -2354,12 +2371,12 @@ Studio.drawWallTile = function (svg, row, col) {
   var tile = document.createElementNS(SVG_NS, 'image');
   var tileId = 'tile_' + (uniqueId++);
   tile.setAttribute('id', tileId);
+  tile.setAttribute('class', 'tile');
   tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
   tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
   tile.setAttribute('x', (col-srcCol) * Studio.SQUARE_SIZE);
   tile.setAttribute('y', (row-srcRow) * Studio.SQUARE_SIZE);
-  tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skin.tiles);
+  tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
   svg.appendChild(tile);
 
   tile.setAttribute('clip-path', 'url(#' + clipId + ')');
@@ -2400,7 +2417,8 @@ Studio.drawMapTiles = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL) {
+      if (mapVal & SquareType.WALL ||
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
         Studio.drawWallTile(svg, row, col);
       }
     }
@@ -2639,6 +2657,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setBackground(cmd.opts);
       break;
+    case 'setWalls':
+      studioApp.highlight(cmd.id);
+      Studio.setWalls(cmd.opts);
+      break;    
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
@@ -2757,6 +2779,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setItemAction(cmd.opts);
       break;
+    case 'setItemActivity':
+      studioApp.highlight(cmd.id);
+      Studio.setItemActivity(cmd.opts);
+      break;
     case 'showDebugInfo':
       studioApp.highlight(cmd.id);
       Studio.showDebugInfo(cmd.opts);
@@ -2816,7 +2842,6 @@ Studio.addItemsToScene = function (opts) {
       loop: true,
       x: pos.x,
       y: pos.y,
-      animationFrames: 12,
       width: 100,
       height: 100
     };
@@ -2852,7 +2877,19 @@ Studio.setItemAction = function (opts) {
   }
 
   if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
-      item.roamGrid(opts.type);
+    item.roamGrid(opts.type);
+  }
+};
+
+Studio.setItemActivity = function (opts) {
+  var item = Studio.items[opts.itemIndex];
+
+  if (!item) {
+    return;
+  }
+
+  if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+    item.setActivity(opts.type);
   }
 };
 
@@ -2967,9 +3004,43 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
-  var element = document.getElementById('background');
-  element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skin[opts.value].background);
+  if (opts.value !== background) {
+    background = opts.value;
+
+    var element = document.getElementById('background');
+    element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin[background].background);
+
+    // Draw the tiles (again) now that we know which background we're using.
+    if (level.wallMapCollisions) {
+      $(".tile_clip").remove();
+      $(".tile").remove();
+      var svg = document.getElementById('svgStudio');
+      Studio.drawMapTiles(svg);
+
+      sortDrawOrder();  
+    }
+  }
+};
+
+Studio.setWalls = function (opts) {
+  if (!level.wallMapCollisions) {
+    return;
+  }
+
+  if (opts.value === Studio.walls) {
+    return;
+  }
+
+  Studio.walls = opts.value;
+
+  // Draw the tiles (again) that we know which background we're using.
+  $(".tile_clip").remove();
+  $(".tile").remove();
+  var svg = document.getElementById('svgStudio');
+  Studio.drawMapTiles(svg);
+
+  sortDrawOrder();  
 };
 
 /**
@@ -3500,8 +3571,13 @@ function executeItemCollision(src, target) {
 }
 
 function executeItemUpdate(item, itemIndex) {
+  // Part 1: execute student-provided code.
   var prefix = 'whenItemUpdated-' + item.className;
   callHandler(prefix, undefined, [itemIndex]);
+
+  // Part 2: execute item movement every frame here, with a default that
+  // can be overriden by the student calling setItemActivity.
+  item.roamGrid("roamGrid");
 }
 
 /**
@@ -3612,6 +3688,9 @@ Studio.getPlayspaceBoundaries = function(sprite)
   return boundaries;
 };
 
+Studio.getSkin = function() {
+  return skin;
+};
 
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];

@@ -152,7 +152,7 @@ namespace :seed do
   end
 
   task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
-    freq_cutoff = args[:freq_cutoff].to_i > 0 ? args[:freq_cutoff].to_i : 100
+    freq_cutoff = 1
     FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
   end
 

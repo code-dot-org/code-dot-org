@@ -1,43 +1,51 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_faq) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Награди - често задавани въпроси
 
 ## Дали трябва да е регистрирано цялото училище за да спечели $10,000 за хардуер?
 
-Да. Цялото училище трябва да участва за да бъдете допуснати да участвате за спечелване на наградата, но само един човек трябва да се регистрира и подаде формуляра за кандидатстване за хардуерна награда [тук](<%= hoc_uri('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
 
 ## Трябва ли цялото училище да се регистрира за спечелване на чат със специален гост?
 
-Всяка класна стая (от публично или частно училище) има право да спечели тази награда. Не е нужно цялото училище да се регистрира.
+Any classroom (public or private school) is eligible to win this prize. Your whole school need not apply.
 
 ## Може ли частни училища да спечелят наградата видео чат?
 
-Да! Частни и независими училища също имат право, заедно с държавните училища да спечелят награди, видео чат.
+Yes! Private and independent schools are eligible along with public schools to win the video chat prizes.
 
 ## Може ли училища извън САЩ да спечелят наградата видео чат?
 
-Не, за съжаление, тъй като логистиката ни не е в състояние да предложи награда за видео чат на училища извън САЩ и Канада. Всички международни организатори **са** имат право да получават Dropbox пространство или Skype кредит.
+No, unfortunately, because of logistics we are unable to offer the video chat prize to schools outside of the U.S. and Canada.
 
 ## Защо $10,000 хардуерната награда е достъпна само за държавни училища?
 
-Ще се радваме да помогнем на учителите в държавни и частни училища, но за сега, става дума за логистика. Ние си партнираме с [ DonorsChoose.org](http://donorschoose.org), които управляват финансирането на класните стаи, спечелили хардуерна награда, те работят само с обществени К-12 училища. Според DonorsChoose.org организацията достъп до по-точни и последователни данни има само за държавните училища.
+We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with [DonorsChoose.org](http://donorschoose.org) to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose.org, the organization is better able to access consistent and accurate data that's available for public schools.
 
-## Аз съм извън Съединените щати. Мога ли да се класирам за награди?
+## Аз съм извън САЩ. Мога ли да спечеля награда?
 
-Поради малкото постоянен персонал, Code.org не е в състояние да се справи с логистиката и управлението на международни награди. Поради това хората извън САЩ не могат да се класират за наградите.
+Due to a small full-time staff, Code.org is unable to handle the logistics of administering international prizes. Because of this people outside the US are unable to qualify for prizes.
 
-## Кога е крайният срок за кандидатстване за хардуерна награда?
+## Кога е крайният срок за кандидатстване за наградата за хардуер?
 
-За да се класирате, цялото училище трябва да е регистрирано за Часът на кодирането, както и да попълните [формуляр за кандидатстване за хардуер](<%= hoc_uri('/prizes') %>) до 14 ноември 2014 г. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Едно училище във всеки щат на САЩ ще получи набор от компютри за един клас. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
 
-## Кога е крайният срок за спечелване на чата?
+## Кога е крайният срок за спечелване на tech чата?
 
-За да се възползвате, трябва да се регистрирате за часът на кодирането от 14 ноември 2014 г. Класните стаи ще спечелят видео чат със знаменитост. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
+To qualify, you must register your classroom for the Hour of Code by November 2, 2015. Classrooms will win a video chat with a celebrity. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
 
 ## Кога ще бъда уведомен ако моето училище или класната стая печели награда?
 
-За да се класирате, цялото училище трябва да е регистрирано за Часът на кодирането, както и да сте попълнили [формуляр за кандидатстване за хардуер](<%= hoc_uri('/prizes') %>) до 14 ноември 2014 г. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2014.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org ще избере и уведоми спечелилите по електронната поща до 1 декември 2015.
 
-## Ако цялото училище не може да направи Часът на кодирането по време на CSEW (декември 8-14), все още ли ще отговаряме на изискванията за награди?
+## Ако моето училище не може да организира Час програмиране по време на Седмицата на образованието по Компютърни науки (8-14 декември), мога ли все пак да спечеля награда?
 
-Да, просто не забравяйте да представите план с логистика, който обяснява как е планирано цялото училище да вземе участие и да се регистрирате за Часът на кодирането до 14 ноември.
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.
+
+<%= view :signup_button %>

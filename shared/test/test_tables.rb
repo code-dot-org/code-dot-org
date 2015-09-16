@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/tables_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class TablesTest < MiniTest::Unit::TestCase
+class TablesTest < Minitest::Test
 
   def test_create_read_update_delete
     init_apis
@@ -32,6 +32,58 @@ class TablesTest < MiniTest::Unit::TestCase
     delete_channel
   end
 
+  def test_populate
+    init_apis
+    create_channel
+
+    data1 = {
+      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
+      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+    }
+
+    data2 = {
+      'table1' => [{'city'=> 'SFO'}, {'city'=>'SEA'}],
+      'table2' => [{'state'=> 'CA', 'country'=> 'USA'}, {'state'=>'MT', 'country'=> 'USA'}],
+    }
+
+    # Test basic populating
+    populate_table(data1, true)
+
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['name'], 'trevor'
+    assert_equal records.length, 2
+
+    @table_name = 'table2'
+    records = read_records
+
+    assert_equal records.first['word'], 'cow'
+    assert_equal records.length, 2
+
+    # Test overwrite off
+    populate_table(data2, false)
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['name'], 'trevor'
+    assert_equal records.length, 2
+
+    # Test overwrite on
+    populate_table(data2, true)
+    @table_name = 'table1'
+    records = read_records
+
+    assert_equal records.first['city'], 'SFO'
+
+    @table_name = 'table2'
+    records = read_records
+
+    assert_equal records.last['country'], 'USA'
+
+    delete_channel
+  end
+
   def test_import
     init_apis
     create_channel
@@ -50,6 +102,77 @@ class TablesTest < MiniTest::Unit::TestCase
     delete_channel
   end
 
+  def test_rename_column
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    rename_column('name', 'first_name')
+    records = read_records()
+
+    assert_equal records[0]['first_name'], 'trevor'
+    assert_equal records[1]['name'], nil
+
+    delete_channel
+  end
+
+  def test_delete_column
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    delete_column('age')
+
+    records = read_records()
+    assert_equal records[0]['age'], nil
+    assert_equal records[1]['age'], nil
+
+    delete_channel
+  end
+
+  def test_delete
+    init_apis
+    create_channel
+
+    create_record(name: 'trevor', age: 30)
+    create_record(name: 'mitra', age: 29)
+
+    records = read_records
+    assert_equal records.length, 2
+
+    delete_table
+
+    records = read_records
+
+    assert_equal records.length, 0
+    delete_channel
+  end
+
+  def test_export
+    init_apis
+    create_channel
+
+    csv_filename = File.expand_path('../roster.csv', __FILE__)
+    import(csv_filename)
+
+    result_body = export().body.split("\n")
+    original_body = File.read(csv_filename).split("\n")
+
+    result_columns = result_body[0]
+    original_columns = original_body[0]
+
+    result_first_row = result_body[1]
+    original_first_row = original_body[1]
+
+    assert_equal result_columns, "id,#{original_columns}"
+    assert_equal result_first_row, "1,#{original_first_row}"
+
+    delete_channel
+  end
   # Methods below this line are test utilities, not actual tests
   private
 
@@ -93,4 +216,27 @@ class TablesTest < MiniTest::Unit::TestCase
     import_file = Rack::Test::UploadedFile.new csv_filename, "text/csv"
     @tables.post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
   end
+
+  def export()
+    @tables.get "/v3/export-shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
+  def delete_column(column)
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{column}"
+  end
+
+  def rename_column(old, new)
+    @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
+  end
+
+  def delete_table()
+    @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
+  end
+
+  def populate_table(data, overwrite)
+    url = "/v3/shared-tables/#{@channel_id}"
+    url += "?overwrite=1" if overwrite
+    @tables.post url, JSON.generate(data), 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+  end
+
 end

@@ -5,3 +5,8 @@ wrong 'heuristic'
 wrong 'algorithm'
 right 'protocol'
 wrong 'encoding'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- protocol
+MARKDOWN

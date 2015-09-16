@@ -21,8 +21,6 @@
 .field
   = f.label :permitted_errors, 'Permitted errors (default 150)'
   = f.number_field :permitted_errors, :value => @level.permitted_errors
-:css
-  textarea { width: 100% }
 .field
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
   = f.text_area :predraw_blocks, placeholder: 'Predraw Blocks', rows: 4, value: @level.pretty_block('predraw')

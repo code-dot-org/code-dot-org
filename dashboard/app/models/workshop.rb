@@ -1,5 +1,24 @@
+# == Schema Information
+#
+# Table name: workshops
+#
+#  id           :integer          not null, primary key
+#  name         :string(255)
+#  program_type :string(255)      not null
+#  location     :string(255)
+#  instructions :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  phase        :text(65535)
+#
+# Indexes
+#
+#  index_workshops_on_name          (name)
+#  index_workshops_on_program_type  (program_type)
+#
+
 class Workshop < ActiveRecord::Base
-  PROGRAM_TYPES = %w(1 2 3 4 5)
+  PROGRAM_TYPES = %w(1 2 3 4 5 6)
 
   validates_inclusion_of :program_type, in: PROGRAM_TYPES, on: :create
   # A Workshop has multiple well defined Time Segments (eg. each morning/afternoon of a workshop is a separate time segment)
@@ -56,10 +75,10 @@ class Workshop < ActiveRecord::Base
           recipient_list.each do |recipient|
             if workshop.segments.first.start.to_date == Date.today
               logger.debug("Sending exit survey info to #{recipient.email}")
-              OpsMailer.exit_survey_information(workshop, recipient).deliver
+              OpsMailer.exit_survey_information(workshop, recipient).deliver_now
             else
               logger.debug("Sending email reminder to #{recipient.email}")
-              OpsMailer.workshop_reminder(workshop, recipient).deliver
+              OpsMailer.workshop_reminder(workshop, recipient).deliver_now
             end
           end
         end

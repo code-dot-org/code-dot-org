@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 ## Как да привлечете вниманието на медиите към вашето Часът на кодирането събитие
 
@@ -9,17 +15,17 @@
   * Информирайте медиите две седмици преди вашето събитие по електронната поща. Следете по имейл и телефон, ако не получите първоначален отговор.
   * Попитайте дали е възможно в училището да се правят снимки и дали може те да се споделят онлайн.
   * Пишете за инициативата на началната страница на вашия сайт и в училищния вестник. Публикувате информация за събитието и снимки на учебната дейност.
-  * На Facebook и Twitter споделете актуализации на вашите планове, обявете вашите събития и публикувайте снимки по време на седмицата 8-14 декември. Използвайте hashtag **#HourOfCode** за да може Code.org да види и да популяризира събитията ви.
+  * Споделете обновените си планове във Facebook и Twitter обявете вашите събития и публикувайте снимки по време на седмицата 8-14 декември. Използвайте hashtag **#HourOfCode** за да може Code.org да види и да популяризира събитията ви.
 
 ### Стъпка по стъпка ръководство:
 
 **1. Plan your event**
 
   * План и програма на събитието.
-  * Изпратете <a href = "< % = hoc_uri('/resources/#sample-emails') % >" > писмо</a> на родителите. Помолете ги за популяризиране на събитието.
-  * Изпратете <a href = "< % = hoc_uri('/resources/#sample-emails') % >" > писмо</a> за да поканите вашия местен кмет, конгресмен, управител или влиятелен бизнесмен да присъства и да говори на учениците ви.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
+  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Организирайте групови дейности (като демонстриране на "unplugged" уроците без компютър), или покажете създадени от учениците дейности и ги оставете сами да ги представят.
-  * Покажете Code.org <a href = "< % = hoc_uri('/') % >" > Часът на кодирането видео</a> или едно от <a href = "< % = hoc_uri('/resources#videos') % >" > тези</a> за вдъхновение.
+  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/resources#videos') %>) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 
@@ -29,7 +35,7 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **3. Contact local media**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= hoc_uri('/resources#sample-emails') %>):**
+The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
 
 **4. Prepare to field questions about your school event. Here are some examples:**
 
@@ -45,11 +51,13 @@ In China, every students takes computer science to graduate high school. In the 
 
 **More details and a quote you can use in materials**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "In one week last year, 15 million students tried an Hour of Code. Now we're aiming for 100 million worldwide to prove that the demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"The Hour of Code is designed to demystify code and show that computer science is not rocket-science, anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **За Code.org**
 
-Code.org® is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign — which has introduced millions of students to computer science — partnered with more than 30 public school districts nationwide, and launched Code Studio, an open-source, online learning platform for all ages. For more information, please visit: [<%= codeorg_url() %>](http://<%= codeorg_url() %>).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: <<%= resolve_url('https://code.org') %>>.
 
   
-Find more resources and sample emails [here](<%= hoc_uri('/resources') %>).
+Find more resources and sample emails [here](<%= resolve_url('/resources') %>).
+
+<%= view :signup_button %>

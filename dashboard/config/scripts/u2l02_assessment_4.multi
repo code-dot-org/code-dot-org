@@ -5,3 +5,9 @@ wrong 'Grid Coordinates'
 wrong 'From'
 wrong 'To'
 right 'Time'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Time
+MARKDOWN

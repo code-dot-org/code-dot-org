@@ -1,17 +1,21 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
-[<button style="float: right; margin-top: 50px">Registrer arrangement ditt</button>](/#join)
+* * *
+
+<%= view :signup_button %>
 
 # Fakta og nyttig statistikk
 
-## Use this short blurb in newsletters
+## Bruk denne kortversjonen i nyhetsbrev
 
 ### Bring datavitskap til skulen. Start med ei kodetime
 
-Datamaskiner er overalt, men færre skular underviser i programmering no enn for 10 år sidan. Den gode nyheita er at me arbeider for å endre dette. Dersom du høyrde om [«>Kodetimen](<%= hoc_uri('/') %>«>kodetimen</a> i fjor, veit du kanskje at den skapte historie. På ei veke forsøkte 15 millionar elevar seg på programmering! <a href=) er ein timelang introduksjon til informatikk, laga for å avmystifisere programmering og vise at alle kan lære det grunnleggjande. [Meld deg](<%= hoc_uri('/') %>) som arrangør av ein kodetime under datavitskapsveka 8. - 14. desember og medverk til at vi når ut til 100 millionar elevar innan utgangen av året. Add your school to the map, go to <http://hourofcode.com>
+Datamaskiner er overalt, men færre skular underviser i programmering no enn for 10 år sidan. Den gode nyheita er at me arbeider for å endre dette. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![Bilete](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
 
-<a style="display: block" href="/#join"><button style="float: right;">Registrer arrangement ditt</button></a>
+<%= view :signup_button %>

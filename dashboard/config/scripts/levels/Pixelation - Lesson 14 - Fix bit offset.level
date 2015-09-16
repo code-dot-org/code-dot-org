@@ -1,0 +1,16 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2015-08-25T16:30:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. That extra bit bumps all of the other bits down the line which makes the logo look messed up. Hunt down the extra bit and remove it to fix the Code.org logo.",
+    "markdown_instructions": "# Oh no! An image got messed up during transmission!\n\n<img src = \"https://images.code.org/1f78b53ad4892dc8f9b50111fce35c7e-image-1439474859998.17.43 PM.png\" align=right width=200 hspace=20>\n\n**The problem:** A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. <br>That extra bit bumps all of the other bits down the line which makes the logo look messed up.\n<br>**Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. \n<br>**HINT:** One bit early on would make it look like many bits were out of order. \n",
+    "version": "2",
+    "data": "0000 1011\n0000 1011\n1 0 0 0 0 0 0 0 0 0 1 \n0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 1 1 1 0 0 0 0 \n0 0 0 1 0 0 0 0 0 0 0 \n0 0 1 0 1 0 0 0 0 0 0 \n0 0 0 0 1 0 0 0 0 0 0 \n0 0 0 0 0 1 1 1 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 \n0 1 0 0 0 0 0 0 0 0 0 \n1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true
+  }
+}]]></config>
+</Pixelation>

@@ -1,17 +1,21 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
-[<button style="float: right; margin-top: 50px">Zarejestruj swoje wydarzenie</button>](/#join)
+* * *
+
+<%= view :signup_button %>
 
 # Notki reklamowe i przydatne statystyki
 
-## Use this short blurb in newsletters
+## Użyj tej krótkiej notki w biuletynach
 
 ### Wprowadź informatykę do swojej szkoły. Zacznij z Hour of Code
 
-Komputery są wszędzie, ale obecnie mniej szkół uczy informatyki niż nawet 10 lat temu. Dobrą wiadomością jest to, że jesteśmy na drodze, aby to zmienić. Jeśli słyszałeś o [ Hour of Code](<%= hoc_uri('/') %>) w zeszłym roku, możesz wiedzieć, że przeszedł do historii. W jednym tygodniu, 15 milionów uczniów wypróbowało informatykę! [ Hour of Code](<%= hoc_uri('/') %>) jest godzinnym wstępem do informatyki, mający na celu wyjaśnienie kodu, i pokazanie że każdy może nauczyć się podstaw. [ Zarejestruj się](<%= hoc_uri('/') %>) by zorganizować własny Hour of Code między 8 - 14 grudnia w trakcie trwania Tygodnia edukacji informatycznej i pomóż osiągnąć pułap 100 miliona uczniów pod koniec tego roku. Add your school to the map, go to <http://hourofcode.com>
+Komputery są wszędzie, ale obecnie mniej szkół uczy informatyki niż nawet 10 lat temu. Dobrą wiadomością jest to, że jesteśmy na drodze, aby to zmienić. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
 
-<a style="display: block" href="/#join"><button style="float: right;">Zarejestruj swoje wydarzenie</button></a>
+<%= view :signup_button %>

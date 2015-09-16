@@ -8,6 +8,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   setup do
     @student = create :student
+    @young_student = create :young_student
     @teacher = create :teacher
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
@@ -125,6 +126,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should not have autoplay video when noautoplay param is set' do
     level_with_autoplay_video = create(:script_level, :with_autoplay_video)
     get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1', noautoplay: 'true'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_nil assigns(:view_options)[:autoplay_video]
+  end
+
+  test 'should have autoplay video when never_autoplay_video is false on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_false)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1',  id: '1'
+    assert_response :success
+    assert_not_empty assigns(:level).related_videos
+    assert_not_nil assigns(:view_options)[:autoplay_video]
+  end
+
+  test 'should not have autoplay video when never_autoplay_video is true on level' do
+    level_with_autoplay_video = create(:script_level, :never_autoplay_video_true)
+    get :show, script_id: level_with_autoplay_video.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
@@ -344,7 +361,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
-      assert_select "[href=?]", /.*#{unplugged_curriculum_path_start}.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)
@@ -484,25 +501,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     set_env :production
     get :show, script_id: Script::HOC_NAME, chapter: 1
 
-    assert_select 'img[src=//code.org/api/hour/begin_hourofcode.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
   end
 
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_frozen.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
   end
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FLAPPY_NAME, chapter: 1
-    assert_select 'img[src=//code.org/api/hour/begin_flappy.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
   end
 
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::PLAYLAB_NAME, stage_id: 1, id: 1
-    assert_select 'img[src=//code.org/api/hour/begin_playlab.png]'
+    assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
   end
 
   test 'no report bug link for 20 hour' do
@@ -589,6 +606,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal @section, assigns(:section)
     assert_equal @student, assigns(:user)
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
   test 'shows expanded teacher panel when section is chosen but student is not' do
@@ -655,6 +676,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel' # showing teacher panel
     assert_select '.teacher-panel.hidden', 0 # not hidden
+
+    assert_equal true, assigns(:view_options)[:readonly_workspace]
+    assert_equal true, assigns(:level_view_options)[:skip_instructions_popup]
+    assert_equal [], assigns(:view_options)[:callouts]
   end
 
 
@@ -666,6 +691,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true
 
     assert_response :forbidden
+  end
+
+  test 'under 13 gets redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    sign_in @young_student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_redirected_to '/'
+  end
+
+  test 'over 13 does not get redirected when trying to access applab' do
+    sl = ScriptLevel.find_by_script_id_and_level_id(Script.find_by_name('allthethings'), Level.find_by_key('U3L2 Using Simple Commands'))
+
+    sign_in @student
+
+    get :show, script_id: sl.script, stage_id: sl.stage, id: sl
+
+    assert_response :success
   end
 
 end

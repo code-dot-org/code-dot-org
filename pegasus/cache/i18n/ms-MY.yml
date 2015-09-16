@@ -61,6 +61,10 @@
   congratulations: Tahniah!
   congratulations_on_completing_hoc: Tahniah kerana telah menyiapkan satu Hour of
     Code
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: Dapatkan sijil pencapaian
   enter_valid_age: Please select a valid age
   enter_valid_email: Sila masukkan alamat email yang sah
@@ -216,12 +220,13 @@
   homepage_action_text_learn: Start learning today
   homepage_action_text_signpetition: Tandatangan petisyen
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_link: Ketahui lebih lanjut
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more
+  homepage_banner_privacy_link: Ketahui lebih lanjut
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
@@ -333,6 +338,9 @@
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
@@ -521,6 +529,11 @@
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Ketahui lebih lanjut
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: Mendaftar
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Cuba tutorial 1 Jam Pengaturcaraan yang baru dari kami
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
@@ -540,6 +553,8 @@
   educator_notes: Nota pendidik
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: peserta
   teachers_notes: Nota Guru
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
