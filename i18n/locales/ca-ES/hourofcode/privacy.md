@@ -4,6 +4,8 @@ Títol: política de privacitat
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Política de privacitat
 
 Date of Last Revision: August 3, 2015

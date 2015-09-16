@@ -1,10 +1,12 @@
 * * *
 
-عنوان: پارٹنرز
+title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# اہم شراکت دار اور کارپوریٹ ساتھیوں
+<%= view :signup_button %>
+
+# اہم شراکت دار اور کارپوریٹ سپورٹرز
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
@@ -22,7 +24,7 @@
 
 * * *
 
-# سبق شراکت دار
+# سبق کےشراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
@@ -37,3 +39,5 @@
 # اضافی پارٹنرز
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

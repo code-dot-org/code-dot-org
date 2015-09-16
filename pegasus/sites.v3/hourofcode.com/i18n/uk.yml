@@ -1,6 +1,6 @@
 uk:
   site_name: Година Коду
-  language: Українською
+  language: Українська
   front_title: Join the largest learning event in history, Dec 7-13, 2015
   coming_soon: Незабаром
   campaign_date_start_short: Dec. 7
@@ -147,6 +147,13 @@ uk:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_nav_terms: Правила та умови використання
   prizes_nav_faq: Часті питання
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Як провести Годину коду</a>"
@@ -179,8 +186,10 @@ uk:
   front_join_us_teachers: Вчителі
   front_join_us_everyone: Усі
   front_join_us_try: Спробуйте
+  front_join_us_sign_up: Реєстрація
   front_join_us_host: Проведіть
   front_join_us_support: Підтримайте
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: "Ваше ім'я"
   signup_email_label: Ваша скринька
@@ -241,11 +250,11 @@ uk:
   hoc_faq_what_is_hoc_a: "Година коду є одно-годинним вступом до інформатики, призначеним для демістифікації програмування, а також демонстрації того, що кожен може опанувати його основи. <a href='http://code.org/learn'>Перегляньте підручники</a>."
   hoc_faq_last_year: Спробуйте підручники
   hoc_faq_when_is_hoc_q: Коли відбувається Година коду?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Чому інформатика?
   hoc_faq_why_cs_a: "<i>Кожен</i> учень повинен мати можливість вивчати інформатику. Вона допомагає розвивати навички розв'язання задач, логіку та творчість. Розпочинаючи вивчення рано, учні отримують основу для успіху в будь-якій кар'єрі 21 століття. Ознайомтеся зі статистикою <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Як взяти участь у Годині коду?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Хто стоїть за Годиною коду?
   hoc_faq_behind_hoc_a: "Година коду проводиться громадською неприбутковою організацією <a href='http://code.org'>Code.org</a>, яка має на меті поширення інформатики у школах, а також залучення більшої кількості жінок та національних меншин до цієї галузі. Вони зібрали <a href='http://code.org/about/partners'>безпрецедентну коаліцію партнерів</a> для проведення Години коду &mdash; включно із Microsoft, Apple, Amazon, Boys and Girls Clubs of America та College Board."
   hoc_faq_host_q: Я нічого не знаю про програмування. Я все-таки можу організувати захід?
@@ -258,16 +267,16 @@ uk:
   hoc_faq_tutorial_a: "Якщо ви зацікавлені у створенні власного підручника, <a href='target-tutorial-guidelines'>ознайомтесь із нашими рекомендаціями та інструкціями</a>. Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці."
   hoc_faq_more_questions_q: Все ще маєте питання?
   hoc_faq_more_questions_a: "Спробуйте знайти відповідь на <a href='http://support.code.org'>форумі</a>."
-  hoc_faq_scratch_q: Я провожу Годину коду на Scratch, але що робити, якщо мої учні мають iPad, а не ноутбуки?
-  hoc_faq_scratch_a: "Scratch не працює на планшетах. Для молодших учнів можна скористатись програмою ScratchJR для iPad. Серед підручників на <a href='http://code.org/learn'>Code.org/learn</a>, можна знайти такі, що підійдуть для iPad - від Code.org, Tynker, Lightbot, чи CodeSpark."
   hoc_faq_account_q: Учням потрібно реєструвати облікові записи?
   hoc_faq_account_a: "Ні, для учнів не потрібна реєстрація чи вхід в обліковий запис для Години коду. Більшість <a href='http://code.org/learn/beyond'>подальших курсів</a> вимагають реєстрації для відстеження успішності користувачів."
   hoc_faq_frozen_q: Де підручник з Анною та Ельзою?
   hoc_faq_frozen_a: "Він опублікований на <a href='http://code.org/learn'>Code.org/learn</a>. Сподіваємося, вам сподобається!"
   hoc_faq_high_school_q: Які вправи слід виконувати з учнями середньої школи?
   hoc_faq_high_school_a: "Незалежно від віку, ми рекомендуємо спробувати вступну вправу для початківців з <a href='http://code.org/learn'>Code.org/learn</a>: підручники проходження лабіринту зі Злими птахами чи малювання з Анною та Ельзою. Старші учні повинні завершити ці вправи за 30 хвилин, після чого вони можуть перейти до складніших завдань з використанням JavaScript, наприклад, KhanAcademy чи CodeHS."
+  hoc_faq_scratch_q: Я провожу Годину коду на Scratch, але що робити, якщо мої учні мають iPad, а не ноутбуки?
+  hoc_faq_scratch_a: "Scratch не працює на планшетах. Для молодших учнів можна скористатись програмою ScratchJR для iPad. Серед підручників на <a href='http://code.org/learn'>Code.org/learn</a>, можна знайти такі, що підійдуть для iPad - від Code.org, Tynker, Lightbot, чи CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Статистика Години Коду 2013 року
   stats_growth: Це було найшвидшим залученням 15 мільйонів користувачів.
   stats_i18n: Students are learning in 40 languages
@@ -287,14 +296,49 @@ uk:
   resources_how_to_districts: Керівництво для районів
   resources_how_to_officials: Керівництво для органів влади
   resources_handouts: Супровідні матеріали для поширення
-  resources_videos: Відео
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Плакати
-  resources_social: Соціальні мережі
+  resources_videos: Відео
   resources_banners: Банери
   resources_emails: Зразки листів
+  resources_logo: Hour of Code logo
   resources_stats: Корисна статистика та реклама
   resources_press_kit: Прес-кіт
+  resources_social: Соціальні мережі
   resources_country_resources: Country Specific Resources
+  resources_stickers: Stickers
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  videos_title: Покажіть ці відео, щоб надихати учнів
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: Президент Обама про інформатику
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_officials: Керівництво для органів влади
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Прес-кіт
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Партнери
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Дякуємо
+  title_prizes: Призи
+  title_resources: Ресурси
+  title_signup_thanks: Дякуємо за реєстрацію заходу в межах Години коду!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
   events_title: Всі заходи Години коду
   events_nav_all: Всі заходи
   events_nav_whole_schools: Цілі школи

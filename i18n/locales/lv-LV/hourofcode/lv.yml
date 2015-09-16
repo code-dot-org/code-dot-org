@@ -1,6 +1,6 @@
 lv:
   site_name: PROGRAMMĒŠANAS STUNDA
-  language: Latviešu valoda
+  language: Latviešu
   front_title: Join the largest learning event in history, Dec 7-13, 2015
   coming_soon: Drīzumā
   campaign_date_start_short: Dec. 7
@@ -147,6 +147,13 @@ lv:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_nav_terms: Terms and Conditions
   prizes_nav_faq: Biežāk uzdotie jautājumi
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: |-
@@ -181,8 +188,10 @@ lv:
   front_join_us_teachers: Skolotāji
   front_join_us_everyone: Visi
   front_join_us_try: Pamēģini
+  front_join_us_sign_up: Pievienoties
   front_join_us_host: Noorganizēt to
   front_join_us_support: Atbalsti to
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: Jūsu vārds
   signup_email_label: Tavs E-pasts
@@ -243,11 +252,11 @@ lv:
   hoc_faq_what_is_hoc_a: "Programmēšanas stunda ir vienu stundu garš ievads datorzinībās, kas paredzēts, lai kodēšana kļūtu pieejamāka visiem un pierādītu, ka pamatus var iemācīties ikviens. <a href='http://code.org/learn'>Skati pamācības!</a>"
   hoc_faq_last_year: Izmēģini pamācības
   hoc_faq_when_is_hoc_q: 'Kad ir "Programmēšanas stunda"?'
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Kas ir datorzinātnes?
   hoc_faq_why_cs_a: "<i>Katram</i>skolniekam vajadzētu būt iespējai mācīties datorzinātnes. Tas palīdz attīstīt problēmu risināšans spējas, loģiku un kreativitāti. Sākot ātri skolniekiem būs pamats panākumiem 21. gadsimta karjeras kāpnēs.. Skatīt sīkāku statistiku <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: 'Kā lai es piedalos "Programmēšanas stunda"?'
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: 'Kas atbild par "Programmēšanas stunda"?'
   hoc_faq_behind_hoc_a: |-
     "Programmēšanas stundu" organizē <a href='http://code.org'>Code.org</a>, publiska bez peļņas organizācija, kas par savu mēŗķi ir padarījusi, datorzinātņu popularizēšanu, padarīšanu to par pieejamu vairāk skolās un palielināt sieviešu skaitu datorzinātnēs. <a href='http://code.org/about/partners'>Nepārstāvētu partneru koalīcija </a>ir sanākusi kopā, lai atbalstītu "Programmēšanas stundu", &mdash; ieskaitot Microsoft.
@@ -263,16 +272,16 @@ lv:
   hoc_faq_tutorial_a: "Ja esat ieinteresēti kļūt par apmācības partneri, <a href='target-tutorial-guidelines'>apskatiet musu vadlīnijas un instrukcijas</a>. Mēs vēlētos uzņemties dažādas iesaistīšanās iespējas, bet galvenai mērķis is optimizēt skolēnu pieredzi un skolotājus kuri nav pazīstami ar datorzinātni."
   hoc_faq_more_questions_q: Vai ir vēl jautājumi?
   hoc_faq_more_questions_a: "Mēģiniet atrast atbildi mūsu <a href='http://support.code.org'>support forum</a>."
-  hoc_faq_scratch_q: Es programmēšanas stundā izmantoju Scratch, bet ko darīt, ja mani skolēni vairāk izmanto iPad nevis datorus?
-  hoc_faq_scratch_a: "Scratch nestrādā planšetdatoros. Ja skolēni ir mazi, tad variet uz iPad uzstādīt ScratchJr. Ja pameklēsi pamācības <a href='http://code.org/learn'>code.org</a>,atradīsi citas piemērotas iPad - code.org, Tynker, Lightbot vai CodeSpark."
   hoc_faq_account_q: Vai skolēniem jāpiesakās, izmantojot kontu?
   hoc_faq_account_a: "Nē. Lai izmēģinātu Programmēšanas stundu, skolēniem nav jāreģistrējas vai jāpieslēdzas. Daļa <a href='http://code.org/learn/beyond'>pašmācības kursu</a> var pieprasīt profila izveidošanu, lai saglabātu iesākto."
   hoc_faq_frozen_q: Kur ir pamācība ar Annu un Elzu?
   hoc_faq_frozen_a: "Tā ir publicēta <a href='http://code.org/learn'>Code.org/learn</a>. Mēs ceram, ka tev patiks!"
   hoc_faq_high_school_q: Kādas nodarbības būtu piemērotas vidusskolēniem?
   hoc_faq_high_school_a: "Neskatoties uz vecumu, iesakām izmēģināt kādu no iesācēju pamācībām <a href='http://code.org/learn'>Code.org/learn</a>, lai iesāktu, piemēram, pamācību ar pikatjiem putniem vai Annu un Elzu. Vidusskolēniem tās varētu aizņemt 30 minūtes, un tad viņi var pamēģināt sarežģītākas pamācības JavaScript, piemēram, Khan Academy vai CodeHS."
+  hoc_faq_scratch_q: Es programmēšanas stundā izmantoju Scratch, bet ko darīt, ja mani skolēni vairāk izmanto iPad nevis datorus?
+  hoc_faq_scratch_a: "Scratch nestrādā planšetdatoros. Ja skolēni ir mazi, tad variet uz iPad uzstādīt ScratchJr. Ja pameklēsi pamācības <a href='http://code.org/learn'>code.org</a>,atradīsi citas piemērotas iPad - code.org, Tynker, Lightbot vai CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 'Statistika no 2013. gada "Programmēšanas stundas"'
   stats_growth: Tas sasniedza 15 miljonus lietotājus visātrāk.
   stats_i18n: Students are learning in 40 languages
@@ -292,14 +301,49 @@ lv:
   resources_how_to_districts: Vadlīnijas rajoniem
   resources_how_to_officials: Vadlīnijas amatpersonām
   resources_handouts: Izdales materiāli, lai dalītos informācijā
-  resources_videos: Video
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Plakāti
-  resources_social: Sociālie
+  resources_videos: Video
   resources_banners: Plakāti
   resources_emails: Vēstuļu paraugi
+  resources_logo: Hour of Code logo
   resources_stats: Noderīga statistika
   resources_press_kit: Komplekts medijiem
+  resources_social: Sociālie
   resources_country_resources: Country Specific Resources
+  resources_stickers: Stickers
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  videos_title: Parādiet šos video lai iedvesmotu skolēnus
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: Prezidents Baraks Obama runā par datorzinātnēm
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_officials: Vadlīnijas amatpersonām
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Komplekts medijiem
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Partneri
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Paldies
+  title_prizes: Balvas
+  title_resources: Resursi
+  title_signup_thanks: 'Paldies, ka uzņēmies vadīt "Programmēšanas stundu"!'
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
   events_title: 'Visi "Programmēšanas stunda" pasākumi'
   events_nav_all: Visi pasākumi
   events_nav_whole_schools: Visa skola

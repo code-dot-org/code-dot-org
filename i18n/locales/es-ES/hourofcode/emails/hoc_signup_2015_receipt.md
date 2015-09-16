@@ -8,7 +8,7 @@ De: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Puedes hacer posible para los estudiantes de América Latina obtener una hora de código que puede *cambiar el resto de sus vidas*. Durante Octubre 5-11 Puedes hacer posible para que los estudiantes de todo el mundo obtener una hora de código que puede *cambiar el resto de sus vidas*, durante Diciembre 7-13. <% end %>
 
 Estaremos en contacto para informar acerca de premios, nuevos tutoriales y otras novedades interesantes en otoño. Así que, ¿qué puedes hacer ahora?
 
@@ -20,13 +20,13 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 [Envía este email](http://<%= hostname %>/resources#email) a tu director.
 
-## 3. Pregunta a tu empleador para estar involucrado
+## 3. Pregunta a tu empresa que se involucre
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Envía este e-mail](http://<%= hostname %>/resources#email) a tu jefe o CEO.
 
 ## 4. Promociona la Hora del Código en tu comunidad
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+Recluta a un grupo local - scouts clubs de chicos/chicas, iglesia, universidad, grupo de veteranos o sindicato. O una hora de código en la "fiesta de cuadra" de tu vecindario. [Envía este e-mail](http://<%= hostname %>/resources#email).
 
 ## 5. Pídele a un funcionario electo local que apoye la Hora del Código.
 

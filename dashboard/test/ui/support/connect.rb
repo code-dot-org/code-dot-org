@@ -32,17 +32,17 @@ else
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  p "Capabilities: #{capabilities.inspect}"
+  puts "Capabilities: #{capabilities.inspect}"
 
-  Time.now.tap do |start_time|
+  Time.now.to_i.tap do |start_time|
     browser = Selenium::WebDriver.for(:remote,
                                       url: url,
                                       desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    p "Got browser in #{Time.now - start_time}s"
+                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 2.minutes}) # iOS takes more time
+    puts "Got browser in #{Time.now.to_i - start_time}s"
   end
 
-  p "Browser: #{browser}"
+  puts "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']

@@ -1,18 +1,20 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 * * *
+
+<%= view :signup_button %>
 
 # Prêmios - Perguntas frequentes
 
 ## Toda a sua escola precisa se envolver para ganhar US$10.000 em hardware?
 
-Sim. Toda a sua escola precisa participar para poder concorrer ao prêmio, mas uma só pessoa precisa se registrar e enviar o formulário de inscrição do Prêmio de Hardware [aqui](<%= hoc_uri('/prizes') %>).
+Sim. Toda a sua escola precisa participar para poder concorrer ao prêmio, mas uma só pessoa precisa se registrar e enviar o formulário de inscrição do Prêmio de Hardware [aqui](<%= resolve_url('/prizes') %>).
 
 ## Toda a sua escola precisa se envolver para ganhar um chat sobre tecnologia?
 
-Qualquer sala de aula (de escola pública ou privada) pode concorrer a este prêmio. Não é necessário que a escola inteira se inscreva.
+Qualquer sala de aula (pública ou particular) pode concorrer a este prêmio. Não é preciso que toda a sua escola se inscreva.
 
 ## As escolas particulares podem ganhar o prêmio de chat com vídeo?
 
@@ -32,16 +34,18 @@ Como temos uma equipe pequena, apesar de trabalhar em tempo integral, a Code.org
 
 ## Qual é o prazo para se inscrever para o prêmio de hardware?
 
-Para concorrer, toda a sua escola deve se cadastrar na Hora do Código, além de preencher o [Formulário de inscrição de hardware](<%= hoc_uri('/prizes') %>) até 16 de novembro de 2015. Uma escola de cada Estado dos EUA receberá um conjunto de computadores para a sala de aula. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
+Para concorrer, toda a sua escola deve se cadastrar na Hora do Código, além de preencher o [Formulário de inscrição de hardware](<%= resolve_url('/prizes') %>) até 16 de novembro de 2015. Uma escola de cada Estado dos EUA receberá um conjunto de computadores para a sala de aula. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
 
 ## Qual é o prazo para concorrer ao bate-papo sobre tecnologia?
 
-Para concorrer, cadastre sua turma na Hora do Código até o dia 2 de novembro de 2015. As turmas ganharão um chat com vídeo com uma celebridade. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
+Para concorrer, cadastre sua turma na Hora do Código até o dia 2 de novembro de 2015. As turmas ganharão um chat de vídeo com uma celebridade. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
 
 ## Quando serei notificado se minha escola ou sala de aula ganhar um prêmio?
 
-Para concorrer, toda a sua escola deve se cadastrar na Hora do Código, além de preencher o [Formulário de inscrição de hardware](<%= hoc_uri('/prizes') %>) até 16 de novembro de 2015. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
+Para concorrer, toda a sua escola deve se cadastrar na Hora do Código, além de preencher o [Formulário de inscrição de hardware](<%= resolve_url('/prizes') %>) até 16 de novembro de 2015. A Code.org vai selecionar e notificar os vencedores por e-mail, em 1º de dezembro de 2015.
 
 ## Se apenas parte da minha escola conseguir fazer a Hora do Código durante a Semana da Educação em Ciência da Computação (de 7 a 13 de dezembro), ainda poderei concorrer aos prêmios?
 
 Sim, só não se esqueça de apresentar um plano de logística que descreva de que maneira toda a sua escola está participando, utilizando um período razoável de tempo, e de se inscrever para a Hora do Código até 16 de novembro.
+
+<%= view :signup_button %>

@@ -4,6 +4,8 @@ Titel: Datenschutzerklärung
 
 * * *
 
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+
 # Datenschutzerklärung
 
 Date of Last Revision: August 3, 2015
@@ -14,7 +16,7 @@ Code.org® is a non-profit dedicated to expanding participation in computer scie
 
 Please read this Privacy Policy (“**Privacy Notice**”) carefully before accessing or using the Website.
 
-## Code.org Privacy Principles
+## Code.org Datenschutzgrundsätze
 
 Our Privacy Notice is fueled by our commitment to the following Privacy Principles:
 
@@ -86,7 +88,7 @@ Districts that use [Clever](https://clever.com/) as an Authentication Service ca
 
 Under a student's control, they can dissociate or associate themselves with as many teachers as they want, (and those teachers get access to the student's course progress and display name but not their email address). Teachers who create User accounts on behalf of students can reset their “secret word” or “secret picture” (for young children who can’t read) for as long as the student leaves the teacher in control of the account.
 
-## Information from Authentication Services like Facebook or Google
+## Informationen von Authentifizierungsdiensten wie Facebook oder Google
 
 If you decide to register for Code Studio through an Authentication Service (such as Facebook Connect or Google Accounts), you give Code.org the permission to store and use information already associated with your Authentication Service consistent with this Privacy Notice and the table above.
 
@@ -106,7 +108,7 @@ Lastly, for teachers, educators, and partners who participate in our computer sc
 
 We may collect and store information about your location to provide you with educational experiences or email updates that are tailored for your region. The location information we have access to may include (1) your ZIP or postal code, if you provide one to us (2) the approximate geographic region your computer or mobile device is located in, as determined from your IP address. You may be able to change the settings on your computer or mobile device to prevent it from providing us with such IP information. (3) your school or classroom location, if you (as a teacher) provide it to us, in order to allow us (with your permission) to display the classroom location on a map or in search results for parents looking for schools that teach computer science. Code.org does not request or collect your exact GPS location, and your billing and shipping addresses are not used for these purposes.
 
-## Information from Other Sources
+## Informationen von anderen Quellen
 
 In certain situations, we may obtain information, including Personal Information, from third parties or sources other than the Website. For example, if you donate to Code.org via PayPal, we may obtain your name and mailing address to send a thank you note. If we combine or associate information from other sources with Personal Information that we collect through the Website, we will treat the combined information as Personal Information in accordance with this Privacy Notice. Your sharing of Personal Information with those third parties will also be subject to their privacy policies.
 
@@ -128,13 +130,13 @@ Code.org does not allow advertising on our Website, and we do not have the abili
 
 Certain capabilities linked from the Code.org Website may be implemented by third parties who collect data. For example, donations to Code.org are processed via a third party who collects and may store the payment instrument. Support messages or posts to our public forum for teachers are processed by a third party site which may allow users to create profiles, post messages, and upload photos. Other third party websites, such as the Code.org [Facebook page](https://www.facebook.com/Code.org) and [Twitter page](https://twitter.com/codeorg), may be co-branded with our name or logo. Use of these third-party services are completely optional to Users, typically meant only for adults, and governed by the privacy policy of these third parties. We encourage you to review the privacy policy at the third parties for details about how they may collect, store and use your Personal Information.
 
-## Uploading custom content
+## Hochladen von benutzerdefinierten Inhalten
 
 Student and teacher profiles can NOT be customized with a photo.
 
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
-## Message sending between users
+## Senden von Nachrichten zwischen Benutzern
 
 Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool.
 
@@ -226,15 +228,15 @@ Code.org uses certain physical, managerial, and technical safeguards designed to
 
 If we learn of a data security incident that compromises or appears to compromise your Personal Information, then we will attempt to notify you electronically so that you can take appropriate protective steps.
 
-### Internationale Besucher
+### International visitors
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
-### Nutzungsbedingungen und Hinweise
+### Conditions of Use and Notices
 
 If you choose to visit Code.org, your visit and any dispute over privacy is subject to this Privacy Notice and our Terms of Service Agreement, including limitations on damages, arbitration of disputes, application of the law of the State of Washington and venue for all disputes in Seattle, Washington.
 
-### Ein Hinweis für Einwohner Kaliforniens:
+### A Note to California Residents:
 
 We do not disclose any personal information to third parties for marketing purposes. For additional information about our privacy practices, or to review and request to have deleted any personal information you have shared with us, please send a request to http://code.org/contact.
 

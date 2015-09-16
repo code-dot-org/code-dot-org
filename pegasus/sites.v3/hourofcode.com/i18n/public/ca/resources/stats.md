@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # Publicitat i estadístiques útils
 
@@ -6,8 +12,10 @@
 
 ### Apropa la informàtica a la teva escola. Comença amb una Hora de Codi
 
-Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. Si has sentit a parlar de la [ Hora del Codi](<%= hoc_uri('/') %>) l'any passat, potser saps que ha fet història. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! La [">Sign up](<%= hoc_uri('/') %>«> Hora de Codi</a> és una introducció d'una hora a informàtica, dissenyat per desmitificar el codi i demostrar que qualsevol pot aprendre els bàsics. <a href=) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com>
+Els ordinadors són pertot arreu, però menys escoles ensenyen computació que 10 anys enrere. La bona notícia és, estem en el camí de canviar això. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
 ## Infographics
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

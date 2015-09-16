@@ -285,7 +285,7 @@
         desc: Design Recipe lesson description
         video: alg_8_design_recipe
       Booleans:
-        title: Boolean Değerleri
+        title: Boolean ve mantık
         desc: Booleans lesson description
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:

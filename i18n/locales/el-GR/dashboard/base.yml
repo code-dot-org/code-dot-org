@@ -604,3 +604,8 @@ el:
     view_all: Δείξε τα Έργα μου
     remix: Μιξάρισμα
     click_to_remix: "Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!"
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio

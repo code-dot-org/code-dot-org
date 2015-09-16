@@ -1,8 +1,10 @@
 * * *
 
-title: Partnerji
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Glavni partnerji in podporniki
 
@@ -37,3 +39,5 @@ title: Partnerji
 # Dodatni partnerji
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

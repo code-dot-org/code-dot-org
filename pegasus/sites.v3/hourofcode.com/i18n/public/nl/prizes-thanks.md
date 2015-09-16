@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Bedankt
 
-Je hele school doet nu mee om een klaslokaal vol laptops (of $10.000 aan andere technologie) te winnen.
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

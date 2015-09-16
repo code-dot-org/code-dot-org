@@ -1,16 +1,18 @@
 * * *
 
-title: Prizes Terms layout: wide nav: resources_nav
+tytuł: < % = hoc_s(:Nagrody - regulamin) %> Układ: szeroki nav: resources_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Nagrody - regulamin
 
-## Przestrzeń dyskowa Dropbox lub środki Skype:
+## Przestrzeń dyskowa Dropbox lub kredyt na Skype:
 
-10 GB miejsca na Dropbox lub 10 dolarów środków Skype są ograniczone do szkół, prowadzących kółka zainteresowań i organizacji edukacyjnych. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Dostępny jest tylko jeden kod na organizatora. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Każdy organizator musi się zarejestrować na Hour of Code, aby otrzymać przestrzeń dyskową Dropbox lub środki na koncie Skype. Jeśli cała szkoła uczestniczy w Hour of Code, każdy nauczyciel musi indywidualnie zarejestrować się jako organizator, aby się zakwalifikować do zdobycia nagrody.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
 Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
@@ -31,3 +33,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

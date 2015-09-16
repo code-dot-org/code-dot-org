@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_whole_school) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Reúne a tua escola e participa
 
-Detalhes sobre como ajudar as escolas a participarem na Hora de Código estão disponíveis aqui.
+Information about getting whole schools to participate in the Hour of Code will go here.
+
+<%= view :signup_button %>

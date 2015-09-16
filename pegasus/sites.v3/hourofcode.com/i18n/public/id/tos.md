@@ -1,4 +1,10 @@
+* * *
 
+Judul: Persyaratan Layanan
+
+* * *
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Persyaratan Layanan
 
@@ -16,11 +22,11 @@ Syarat-syarat ini dapat berubah. Anda setuju untuk terikat oleh perubahan jika A
 
 Beberapa Layanan mungkin akan dikenakan tambahan panduan tertulis, peraturan atau Ketentuan Layanan ("**Persyaratan tambahan**") dan penggunaan Anda atas layanan tersebut akan mensyaratkan persetujuan Anda atas syarat-syarat tambahan. Jika terdapat pertentangan antara persyaratan dan persyaratan tambahan, persyaratan tambahan akan mengontrol untuk layanan itu, kecuali persyaratan tambahan secara tegas menyatakan bahwa istilah-istilah ini akan mengontrol.
 
-### Anak di bawah usia 13
+### Children Under Age 13
 
 Kami mengambil langkah untuk meminimalkan pengumpulan data pribadi dari pengguna di bawah umur 13 tahun seperti yang dijelaskan dalam Code.org [kebijakan privasi](http://code.org/privacy). Jika Anda berada di bawah usia 13 tahun, kami mendorong Anda untuk mendapatkan persetujuan dari orang tua atau wali sebelum membuat akun pada Code.org. Code.org memungkinkan perwakilan distrik sekolah tertentu dan sekolah-sekolah, seperti guru, administrator, konselor dan pendidik lainnya ("**pendidik**") untuk menghubungkan dengan siswa melalui Layanan untuk memberikan panduan, pendidikan dan serupanya. Jika Anda seorang pendidik, Anda dapat mendaftar akun layanan untuk satu atau lebih dari siswa Anda.
 
-If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
+Jika Anda seorang pendidik dan Anda mendaftarkan seorang siswa di bawah usia 13 ("**anak**"), maka Anda menjamin bahwa Anda atau organisasi pendidikan dimana Anda bekerja memiliki izin untuk mendaftarkan anak untuk pelayanan pendidikan, seperti Code.org, yang mengumpulkan beberapa informasi pribadi anak untuk dimanfaatkan untuk keperluan sekolah dan tidak untuk keperluan komersial lain. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
 ### Your Account
 

@@ -1,6 +1,6 @@
 * * *
 
-title: Σας ευχαριστούμε για την εγγραφή σας! διάταξη: ευρεία
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide
 
 "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
 
@@ -12,9 +12,11 @@ title: Σας ευχαριστούμε για την εγγραφή σας! δι
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
+<%= view :signup_button %>
+
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-Δίνεις τη δυνατότητα σε μαθητές από όλο τον κόσμο να μάθουν μία Ώρα Κώδικα η οποία μπορεί * να αλλάξει την υπόλοιπη ζωή τους * κατά τη διάρκεια της εβδομάδας 7-13 Δεκεμβρίου.
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
 
 Θα είμαστε σε επαφή για βραβεία, νέα σεμινάρια και άλλες συναρπαστικές ενημερώσεις το φθινόπωρο. Έτσι, τι μπορείς να κάνεις τώρα;
 
@@ -26,18 +28,20 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## Ζήτησε από όλο το σχολείο σου να προσφέρει την Ώρα του Κώδικα
 
-[ Στείλτε αυτό το email](<%= hoc_uri('/resources#email') %>) στον διευθυντή σας για να ενθαρρύνει κάθε τάξη στο σχολείο σας να εγγραφεί.
+[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
 ## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 
-[ Στείλετε αυτό το email](<%= hoc_uri('/resources#email') %>) στον Προϊστάμενο ή τον Διευθύνοντα Σύμβουλο.
+[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
 
 ## 4. Προώθησε την Ώρα Κώδικα στην κοινότητά σου
 
-Επιστράτευσε έναν τοπικό σύλλογο — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ένωση εργαζομένων. Ή διοργάνωσε μια Ώρα του Κώδικα για το τη γειτονιάς σου.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
 ## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
 
-[ Στείλτε αυτό το email](<%= hoc_uri('/resources#politicians') %>) στον Δήμαρχο, το Δημοτικό Συμβούλιο, ή τη Σχολική Επιτροπή και καλέστε τους να επισκεφτούν το σχολείο σας, για την Ώρα του Κώδικα.
+[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
+
+<%= view :signup_button %>
