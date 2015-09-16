@@ -5,14 +5,14 @@ embedded_layout: simple_embedded
 
 [name]
 
-## checkbox_josh(id, checked)
+## getText_josh(id)
 
 [/name]
 
 
 [category]
 
-Category: UI Controls
+Category: Variables
 
 [/category]
 
@@ -20,10 +20,7 @@ Category: UI Controls
 
 [short_description]
 
-Creates a checkbox with the specified `id`.
-The initial state of the checkbox (checked/unchecked) is determined by the `checked` (true/false) parameter.
-
-**Note:** The Checkbox can also be used in design mode.
+The substring method returns a specified section of a string, from a user-defined beginning and endpoint (not including the endpoint).
 
 [/short_description]
 
@@ -36,7 +33,7 @@ ____________________________________________________
 
 
 <pre>
-checkbox("checkbox1", true);
+getText(button1);
 </pre>
 
 [/example]
