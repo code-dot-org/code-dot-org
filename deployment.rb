@@ -34,6 +34,7 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
@@ -89,8 +90,7 @@ def load_configuration()
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret',
     'videos_s3_bucket'            => 'videos.code.org',
-    'videos_url'                  => '//videos.code.org',
-    'aws_region'                  => 'us-east-1'
+    'videos_url'                  => '//videos.code.org'
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
