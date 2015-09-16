@@ -6,7 +6,10 @@ var sourcesApi = require('../clientApi').sources;
  * A component for viewing project version history.
  */
 module.exports = React.createClass({
-  propTypes: {},
+  propTypes: {
+    handleClearPuzzle: React.PropTypes.func.isRequired,
+    handleCloseDialog: React.PropTypes.func.isRequired
+  },
 
   /**
    * @returns {{statusMessage: string, versions: (null|{
@@ -18,7 +21,8 @@ module.exports = React.createClass({
   getInitialState: function () {
     return {
       versions: null,
-      statusMessage: ''
+      statusMessage: '',
+      confirmingClearPuzzle: false
     };
   },
 
@@ -62,10 +66,31 @@ module.exports = React.createClass({
     this.setState({versions: null});
   },
 
+  onConfirmClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: true});
+  },
+
+  onCancelClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: false});
+  },
+
+  onClearPuzzle: function () {
+    this.props.handleClearPuzzle();
+    this.props.handleCloseDialog();
+  },
+
   render: function () {
     var versionList;
+    if (this.state.confirmingClearPuzzle) {
+      versionList = (
+        <div>
+          <p>Are you sure you want to clear all Big Game progress&#63;</p>
+          <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
+          <button id="again-button" onClick={this.onCancelClearPuzzle}>Cancel</button>
+        </div>
+      );
     // If `this.state.versions` is null, the versions are still loading.
-    if (this.state.versions === null) {
+    } else if (this.state.versions === null) {
       versionList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
@@ -84,7 +109,17 @@ module.exports = React.createClass({
           <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
-              {rows}
+                {rows}
+                <tr>
+                  <td>
+                    <p>Default Big Game</p>
+                  </td>
+                  <td width="250" style={{textAlign: 'right'}}>
+                  <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
+                    Delete Progress
+                  </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
