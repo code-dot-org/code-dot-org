@@ -332,7 +332,8 @@ function renderFooterInSharedGame() {
   var menuItems = [
     {
       text: applabMsg.reportAbuse(),
-      link: '/report_abuse'
+      link: '/report_abuse',
+      newWindow: true
     },
     {
       text: applabMsg.makeMyOwnApp(),
@@ -345,11 +346,12 @@ function renderFooterInSharedGame() {
     {
       text: applabMsg.copyright(),
       link: '#',
-      type: 'copyright'
+      copyright: true
     },
     {
       text: applabMsg.privacyPolicy(),
-      link: 'https://code.org/privacy'
+      link: 'https://code.org/privacy',
+      newWindow: true
     }
   ];
   if (dom.isMobile()) {

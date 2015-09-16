@@ -1,25 +1,24 @@
 require 'json'
 require 'httparty'
 
-# TODO -  better name?
-class ZendeskTicketController < ApplicationController
+class AbuseReportController < ApplicationController
   def report_abuse
     response = HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
       headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
       body: {
         :ticket => {
           :requester => {
-            :name => (params[:name] == '' ? 'anonymous' : params[:name]),
+            :name => (params[:name] == '' ? params[:email] : params[:name]),
             :email => params[:email]
           },
-          :subject => 'Abuse Reported (Brent Testing)', # TODO - remove Brent Testing
+          :subject => 'Abuse Reported',
           :comment => {
             :body => ["URL: #{params[:abuse_url]}",
               "abuse type: #{params[:abuse_type]}",
               "user detail:",
               "#{params[:abuse_detail]}"].join("\n")
           },
-          :tags => (['infringment'] if params[:abuse_type] == 'infringement')
+          :tags => (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
         }
       }.to_json,
       basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
