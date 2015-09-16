@@ -1486,11 +1486,12 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.hideDesignModeToggle = function () {
-  return !!level.hideDesignMode;
+  return !!level.hideDesignMode || studioApp.share;
 };
 
 Applab.hideViewDataButton = function () {
-  return !!level.hideViewDataButton;
+  var isEditing = window.dashboard && window.dashboard.project.isEditing();
+  return !!level.hideDesignMode || studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {
