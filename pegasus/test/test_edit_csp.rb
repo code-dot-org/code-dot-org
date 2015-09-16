@@ -1,5 +1,7 @@
 require 'test/unit'
 require 'rack/test'
+# Removing this require eliminates constant "previous definition" warnings,
+# but breaks this test.
 require_relative '../router'
 
 ENV['RACK_ENV'] = 'test'
