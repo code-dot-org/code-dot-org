@@ -497,7 +497,7 @@ BarGraph.prototype.sortMessageData = function (sort_function) {
   // Note that we don't use this.getSubstitutionMap here, as that
   // ignores unlocked substitutions
   var substMap = this.message_data.reduce(function (map, d, i) {
-      map[d.letter] = this.substitution_data[i];
+    map[d.letter] = this.substitution_data[i];
     return map;
   }.bind(this), {});
 
@@ -596,9 +596,7 @@ BarGraph.prototype.createDragBehavior = function () {
         "visibility": "visible",
         "transform": "translate(" + (this.messageLetterScale(this.substitution_data[i].letter) + 0.5) + "," + (this.getHeight()+54) + ")"
       });
-      bar_outline.attr({
-        "visibility": "hidden",
-      });
+      bar_outline.attr("visibility", "hidden");
 
     } else {
 
@@ -744,7 +742,7 @@ BarGraph.prototype.buildSVG = function () {
       "transform": "rotate(-90)",
       "y": 6,
       "dy": ".71em",
-      "class": "graphlabel",
+      "class": "graphlabel"
     })
     .text("Frequency");
 
@@ -758,7 +756,7 @@ BarGraph.prototype.buildSVG = function () {
       "transform": "rotate(-90) translate(-" + this.getHeight() + ",0)",
       "y": 6,
       "dy": ".71em",
-      "class": "graphlabel",
+      "class": "graphlabel"
     })
     .text("Frequency");
 
@@ -768,7 +766,7 @@ BarGraph.prototype.buildSVG = function () {
       "y": 10,
       "x": 6,
       "dy": ".71em",
-      "class": "graphlabel",
+      "class": "graphlabel"
     })
     .text("Original:");
 
@@ -778,7 +776,7 @@ BarGraph.prototype.buildSVG = function () {
       "y": 16,
       "x": -5,
       "dy": ".71em",
-      "class": "graphlabel",
+      "class": "graphlabel"
     })
     .text("Maps to:");
 
@@ -829,7 +827,7 @@ BarGraph.prototype.buildSVG = function () {
 };
 
 /**
- * Unlocks all substutions
+ * Unlocks all substitutions
  */
 BarGraph.prototype.reset = function () {
   this.substitution_data.forEach(function(d){
@@ -840,7 +838,7 @@ BarGraph.prototype.reset = function () {
 };
 
 /**
- * Locks all substutions
+ * Locks all substitutions
  */
 BarGraph.prototype.assignAllSubstitutions = function () {
   this.substitution_data.forEach(function (d) {
@@ -940,7 +938,7 @@ BarGraph.prototype.sortSubstitutions = function () {
   if (!this.confirmSortOkay()) {
     return;
   }
-  this.substitutions_data = this.substitution_data.sort(BarGraph.frequencySort);
+  this.substitution_data.sort(BarGraph.frequencySort);
   this.postSubstitutionSort();
 };
 
@@ -951,7 +949,7 @@ BarGraph.prototype.alphabetizeSubstitutions = function () {
   if (!this.confirmSortOkay()) {
     return;
   }
-  this.substitutions_data = this.substitution_data.sort(BarGraph.alphabeticSort);
+  this.substitution_data.sort(BarGraph.alphabeticSort);
   this.postSubstitutionSort();
 };
 
