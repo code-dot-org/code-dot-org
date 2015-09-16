@@ -25,7 +25,8 @@ if (!window.dashboard) {
  */
 dashboard.buildHeader = function (stageData, progressData, currentLevelId, userId, sectionId) {
   stageData = stageData || {};
-  progressData = progressData || {};
+
+  progressData = progressData || localStorage.progressData || {};
   levelProgress = progressData.levels || {};
 
   $('.header_text').first().text(stageData.title);
