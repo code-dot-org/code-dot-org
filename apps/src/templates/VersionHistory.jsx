@@ -84,7 +84,7 @@ module.exports = React.createClass({
     if (this.state.confirmingClearPuzzle) {
       versionList = (
         <div>
-          <p>Are you sure you want to clear all Big Game progress&#63;</p>
+          <p>Are you sure you want to clear all progress for this level&#63;</p>
           <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
           <button id="again-button" onClick={this.onCancelClearPuzzle}>Cancel</button>
         </div>
@@ -112,7 +112,7 @@ module.exports = React.createClass({
                 {rows}
                 <tr>
                   <td>
-                    <p>Default Big Game</p>
+                    <p>Default version</p>
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                   <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
