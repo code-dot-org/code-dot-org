@@ -59,8 +59,10 @@ Before do
   @browser = browser
   @browser.manage.delete_all_cookies
 
-  @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+  unless ENV['TEST_LOCAL'] == 'true'
+    @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+    puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+  end
 end
 
 def log_result(result)
