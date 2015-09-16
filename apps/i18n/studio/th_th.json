@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "สัมผัสขอบบน",
   "whenUp": "เมื่อกดลูกศรขึ้น",
   "whenUpTooltip": "ทำคำสั่งด้านล่างเมื่อมีการกดปุ่มขึ้น.",
-  "yes": "ใช่"
+  "yes": "ใช่",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

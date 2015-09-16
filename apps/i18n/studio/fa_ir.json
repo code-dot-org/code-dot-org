@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "تماس داشتن با لبه ی بالا",
   "whenUp": "هنگام زدن جهت بالا",
   "whenUpTooltip": "اجرای عملیات زیر هنگامیکه کلید جهت بالا زده می‌شود.",
-  "yes": "بله"
+  "yes": "بله",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }
