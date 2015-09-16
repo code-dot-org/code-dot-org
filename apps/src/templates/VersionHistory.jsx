@@ -1,3 +1,4 @@
+/* global dashboard */
 var React = require('react');
 var VersionRow = require('./VersionRow.jsx');
 var sourcesApi = require('../clientApi').sources;
@@ -76,13 +77,14 @@ module.exports = React.createClass({
 
   onClearPuzzle: function () {
     this.props.handleClearPuzzle();
+    dashboard.project.save();
     this.props.handleCloseDialog();
   },
 
   render: function () {
-    var versionList;
+    var body;
     if (this.state.confirmingClearPuzzle) {
-      versionList = (
+      body = (
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
           <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
@@ -91,7 +93,7 @@ module.exports = React.createClass({
       );
     // If `this.state.versions` is null, the versions are still loading.
     } else if (this.state.versions === null) {
-      versionList = (
+      body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
         </div>
@@ -104,7 +106,7 @@ module.exports = React.createClass({
           onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
       }.bind(this));
 
-      versionList = (
+      body = (
         <div>
           <div style={{maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
@@ -112,7 +114,7 @@ module.exports = React.createClass({
                 {rows}
                 <tr>
                   <td>
-                    <p>Default version</p>
+                    <p style={{margin: 0}}>Initial version</p>
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                   <button className="btn-danger" onClick={this.onConfirmClearPuzzle} style={{float: 'right'}}>
@@ -130,7 +132,7 @@ module.exports = React.createClass({
     return (
       <div className="modal-content" style={{margin: 0}}>
         <p className="dialog-title">Version History</p>
-        {versionList}
+        {body}
         {this.state.statusMessage}
       </div>
     );
