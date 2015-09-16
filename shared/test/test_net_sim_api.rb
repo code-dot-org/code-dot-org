@@ -10,13 +10,14 @@ ENV['RACK_ENV'] = 'test'
 class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
+  NODE_TYPES = NetSimApi::NODE_TYPES
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, 'studio.code.org'))
     @shard_id = '_testShard2'
-    @table_name = TABLE_NAMES[:node]
+    @table_name = 'test'
 
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
@@ -321,9 +322,9 @@ class NetSimApiTest < Minitest::Test
 
   def node_delete_cascades_to_node_wires
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ca = create_wire(node_c['id'], node_a['id'])
@@ -384,8 +385,8 @@ class NetSimApiTest < Minitest::Test
 
   def node_delete_cascades_to_messages
 
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
 
     message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
@@ -430,9 +431,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def many_node_delete_cascading_generates_minimum_invalidations
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ac = create_wire(node_a['id'], node_c['id'])
@@ -545,9 +546,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def perform_test_delete_many
-    node_a = create_node({name: 'nodeA'})
-    node_b = create_node({name: 'nodeB'})
-    node_c = create_node({name: 'nodeC'})
+    node_a = create_client_node(name: 'nodeA')
+    node_b = create_client_node(name: 'nodeB')
+    node_c = create_client_node(name: 'nodeC')
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
     query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
@@ -571,6 +572,114 @@ class NetSimApiTest < Minitest::Test
                  'Nonnumeric IDs should be ignored')
   end
 
+  def test_can_only_insert_known_node_types
+    # Allow client nodes
+    create_node({}, NODE_TYPES[:client])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Allow router nodes
+    create_node({}, NODE_TYPES[:router])
+    assert_equal(201, @net_sim_api.last_response.status)
+
+    # Reject nodes with other "types"
+    create_node({}, 'some_random_type')
+    assert_equal(400, @net_sim_api.last_response.status)
+
+    # Reject nodes with no type
+    create_node({})
+    assert_equal(400, @net_sim_api.last_response.status)
+  end
+
+  def test_limit_shard_routers_to_max_routers
+    CDO.netsim_max_routers.times do
+      create_router_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We want the 21st node to fail
+    create_router_node
+    assert_equal(400, @net_sim_api.last_response.status,
+                 "Went over router limit!")
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Went over router limit!")
+  end
+
+  def test_do_not_limit_shard_clients_to_max_routers
+    CDO.netsim_max_routers.times do
+      create_client_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We want the 21st node to succeed
+    create_client_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 21st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 21st client")
+  end
+
+  def test_having_max_routers_should_not_limit_clients
+    CDO.netsim_max_routers.times do
+      create_router_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes"
+
+    # We are out of router spaces, but adding a client should be okay
+    create_client_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st client")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st client")
+  end
+
+  def test_having_max_routers_of_clients_should_not_limit_routers
+    CDO.netsim_max_routers.times do
+      create_client_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We should still be able to add a router
+    create_router_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed 1st router")
+    assert_equal(CDO.netsim_max_routers + 1,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed 1st router")
+  end
+
+  def test_having_max_routers_on_one_shard_does_not_limit_another
+    CDO.netsim_max_routers.times do
+      create_router_node
+      assert_equal 201, @net_sim_api.last_response.status
+    end
+    assert_equal(CDO.netsim_max_routers,
+                 read_records(TABLE_NAMES[:node]).count,
+                 "Didn't create #{CDO.netsim_max_routers} nodes")
+
+    # We should still be able to add a router on another shard
+    @shard_id = '_testShard3'
+    create_router_node
+    assert_equal(201, @net_sim_api.last_response.status,
+                 "Should have allowed router on another shard")
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 "Should have allowed router on another shard")
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
 
@@ -579,8 +688,17 @@ class NetSimApiTest < Minitest::Test
     200 == @net_sim_api.last_response.status
   end
 
-  def create_node(record)
+  def create_node(record, node_type = nil)
+    record[:type] = node_type unless node_type.nil?
     create_record record, TABLE_NAMES[:node]
+  end
+
+  def create_client_node(record = {})
+    create_node(record, NODE_TYPES[:client])
+  end
+
+  def create_router_node(record = {})
+    create_node(record, NODE_TYPES[:router])
   end
 
   def delete_node(id)
