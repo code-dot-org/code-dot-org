@@ -55,11 +55,29 @@ window.dashboard.ReportAbuseForm = (function (React) {
     },
 
     handleSubmit: function () {
-      // TODO - validate form
+      if (React.findDOMNode(this.refs.email).value === '') {
+        alert('Please provide an email address');
+        return false;
+      }
+
+      if (React.findDOMNode(this.refs.age).value === '') {
+        alert('Please specify an age');
+        return false;
+      }
+
+      if (React.findDOMNode(this.refs.abuseType).value === '') {
+        alert('Please answer how this content violates the Terms of Service');
+        return false;
+      }
+
+      if (React.findDOMNode(this.refs.abuseDetail).value === '') {
+        alert('Please provide details regarding the content you are reporting');
+        return false;
+      }
+      return true;
     },
 
     render: function () {
-      // TODO - i18n
       return (
         <form action="/zendesk_report_abuse" method="post">
           <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
@@ -67,19 +85,19 @@ window.dashboard.ReportAbuseForm = (function (React) {
           <input type="hidden" name="name" value={this.props.name}/>
           <div style={{display: this.props.email ? 'none' : 'block'}}>
             <div>Email</div>
-            <input type="text" style={{width: 500}} defaultValue={this.props.email} name="email"/>
+            <input type="text" style={{width: 500}} defaultValue={this.props.email} name="email" ref="email"/>
           </div>
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
             <div>Age</div>
-            <AgeDropdown age={this.props.age}/>
+            <AgeDropdown age={this.props.age} ref="age"/>
           </div>
 
           <div>Abusive URL</div>
           <input type="text" readOnly style={{width: 500}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
           <div>How does this content violate the <a href="https://code.org/tos" target="_blank">Terms of Service</a>?</div>
-          <select style={{width: 500}} name="abuse_type">
+          <select style={{width: 500}} name="abuse_type" ref="abuseType">
             <option value=""></option>
             <option value="harassment">Threats, cyberbullying, harassement</option>
             <option value="offensive">Offensive content</option>
@@ -88,7 +106,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           </select>
 
           <div>Please provide as much detail as possible regarding the content you are reporting.</div>
-          <textarea style={{width: 500, height: 100}} name="abuse_detail"/>
+          <textarea style={{width: 500, height: 100}} name="abuse_detail" ref="abuseDetail"/>
 
           <div>
             By submitting this information, you acknowledge it will be handled in accordance with the terms of the
