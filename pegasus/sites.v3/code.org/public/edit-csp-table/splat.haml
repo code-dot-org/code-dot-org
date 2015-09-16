@@ -7,9 +7,7 @@ angular: recordsApp
 -channel_id = request.splat_path_info[1..-1].split('/').first
 -table_name = request.splat_path_info[1..-1].split('/').last
 -api_base_url = "/v3/shared-tables/#{channel_id}/#{table_name}"
-
--owner_id, _ = storage_decrypt_channel_id(channel_id)
--not_authorized! unless owner_id == storage_id('user')
+-not_authorized! unless owns_channel? channel_id
 
 %div{"ng-app" => "recordsApp", "ng-view" => ""}
 

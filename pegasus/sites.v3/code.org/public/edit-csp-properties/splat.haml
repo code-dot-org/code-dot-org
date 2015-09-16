@@ -6,9 +6,7 @@ angular: propertiesApp
 
 -channel_id = request.splat_path_info[1..-1]
 -api_base_url = "/v3/shared-properties/#{channel_id}"
-
--owner_id, _ = storage_decrypt_channel_id(channel_id)
--not_authorized! unless owner_id == storage_id('user')
+-not_authorized! unless owns_channel? channel_id
 
 %div{"ng-app" => "propertiesApp", "ng-view" => ""}
 
