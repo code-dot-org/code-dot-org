@@ -665,6 +665,8 @@
         C4_variables_artist: Zmienne - Artysta
         C4_variables_playlab: Zmienne - Play Lab
         C4_for_loops: Pętle dla (for)
+        C4_for_loops_bee: Pętle "dla" (for)
+        C4_for_loops_no_bee: Pętle "dla" (for)
         C4_math_artist: Programowanie Artysty z pomocą matematyki
         C4_function_edit: Edytowanie Funkcji
         C4_function_create: Tworzenie Funkcji
@@ -693,6 +695,7 @@
         csp_pixelation_bw: Czarno-biały pikselowy gadżet
         csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
         csp_textcompression: Gadżet do kompresji tekstu
+        csp_textcompression_new: Gadżet do kompresji tekstu
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

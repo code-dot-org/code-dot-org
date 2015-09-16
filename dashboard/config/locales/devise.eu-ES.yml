@@ -75,20 +75,20 @@
       invitation_token_invalid: The invitation token provided is not valid!
       updated: Your password was set successfully. You are now signed in.
       no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      invitation_removed: Zure gonbidapena ezabatua izan da.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Gonbidapena bidali
+        submit_button: Gonbidapen bat bidali
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Zure pasahitza ezarri ezazu
+        submit_button: Nere pasahitza ezarri
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
+        subject: Gonbidapenaren jarraibideak
+        hello: Kaixo %{email}
         someone_invited_you: Someone has invited you to %{url}, you can accept it
           through the link below.
-        accept: Accept invitation
+        accept: Gonbidapena onartu
         ignore: If you don't want to accept the invitation, please ignore this email.<br
           />Your account won't be created until you access the link above and set
           your password.

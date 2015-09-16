@@ -305,8 +305,8 @@ bg:
       viewing_solution: Показване на решението
       try_it_yourself: Опитайте сами
       section: Раздел
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Примерно решение
+      example_with_number: 'Примерно решение %{solution_number}'
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -601,3 +601,8 @@ bg:
     view_all: Изтриването на вашия проект ще го премахне завинаги от списъка ви с проекти. Всеки, с който сте споделили връзката към проект или проекти, няма да може да ги вижда.
     remix: Ремикс
     click_to_remix: 'Щракнете върху "Ремикс", за да създадете  собствена версия!'
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio

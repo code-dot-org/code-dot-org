@@ -65,6 +65,7 @@
   "penTooltip": "листа лјубителја оловке, да почну или престану цртати.",
   "penUp": "Узми оловку",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
+  "setAlpha": "set alpha",
   "setColour": "постави боју",
   "setPattern": "set pattern",
   "setWidth": "постави ширину",
@@ -80,6 +81,5 @@
   "turnTooltip": "Закреће уметника улево или удесно за одређени број степени.",
   "turtleVisibilityTooltip": "Чини уметника видлјивим или невидлјивим.",
   "widthTooltip": "Менја ширину оловке.",
-  "wrongColour": "Ваша је слика погрешне боје. За пузлу, мора бити %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Ваша је слика погрешне боје. За пузлу, мора бити %1."
 }

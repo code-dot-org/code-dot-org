@@ -65,6 +65,7 @@
   "penTooltip": "Podiže ili spušta olovku da bi počeo ili prestao crtati.",
   "penUp": "podigni olovku",
   "reinfFeedbackMsg": "Evo vašeg crteža! Nastavite raditi na njemu ili prijeđite na idući zadatak.",
+  "setAlpha": "set alpha",
   "setColour": "postavi boju",
   "setPattern": "postavi uzorak",
   "setWidth": "postavi širinu",
@@ -80,6 +81,5 @@
   "turnTooltip": "Okreće crtača lijevo ili desno za zadani broj stupnjeva.",
   "turtleVisibilityTooltip": "Pokazuje ili skriva crtača.",
   "widthTooltip": "Mijenja širinu traga olovke.",
-  "wrongColour": "Tvoja slika je pogrešne boje. U ovom zadatku treba biti boja %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Tvoja slika je pogrešne boje. U ovom zadatku treba biti boja %1."
 }
