@@ -113,7 +113,7 @@ class AssetsTest < Minitest::Test
     assert non_owner_assets.last_response.successful?, 'Non-owner can read a file'
 
     put(non_owner_assets, owner_channel_id, filename, body, content_type)
-    assert !non_owner_assets.last_response.successful?, 'Non-owner cannot write a file'
+    assert non_owner_assets.last_response.client_error?, 'Non-owner cannot write a file'
 
     delete(non_owner_assets, owner_channel_id, filename)
     assert !non_owner_assets.last_response.successful?, 'Non-owner cannot delete a file'
