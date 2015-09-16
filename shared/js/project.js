@@ -107,13 +107,16 @@ var projects = module.exports = {
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore: function () {
-    // TODO (brent) - right now this is pretty low security. anyone could
-    // enter the javascript console and call this. eventually, we want some sort
-    // of protected API call we can make
-    if (currentAbuseScore === 0) {
+    var id = this.getCurrentId();
+    if (!id) {
       return;
     }
-    // TODO - api call
+    channels.delete(id + '/abuse', function (err, result) {
+      if (err) {
+        throw err;
+      }
+      $('.admin-abuse-score').text(0);
+    });
   },
 
   /**
@@ -486,8 +489,6 @@ var projects = module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    // TODO - also fetch abuse score
-
     var deferred;
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
@@ -571,7 +572,7 @@ function fetchAbuseScore() {
       throw err;
     }
     currentAbuseScore = data.abuseScore;
-    console.log('abuse: ' + currentAbuseScore); // TODO - get rid of 
+    console.log('abuse: ' + currentAbuseScore); // TODO - get rid of
   });
 }
 

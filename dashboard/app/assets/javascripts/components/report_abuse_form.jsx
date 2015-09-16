@@ -49,7 +49,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
      * @returns {string} Channel id, or undefined if we can't get one.
      */
     getChannelId: function () {
-      var match = /.*\/projects\/[^\/]*\/([^\/]*)\//.exec(this.props.abuseUrl);
+      var match = /.*\/projects\/[^\/]+\/([^\/]+)\//.exec(this.props.abuseUrl);
       console.log(match && match[1]);
       return match && match[1];
     },
@@ -78,7 +78,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           <div>Abusive URL</div>
           <input type="text" readOnly style={{width: 500}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
-          <div>How does this content violate the <a href="code.org/tos">Terms of Service</a>?</div>
+          <div>How does this content violate the <a href="https://code.org/tos" target="_blank">Terms of Service</a>?</div>
           <select style={{width: 500}} name="abuse_type">
             <option value=""></option>
             <option value="harassment">Threats, cyberbullying, harassement</option>
@@ -92,9 +92,9 @@ window.dashboard.ReportAbuseForm = (function (React) {
 
           <div>
             By submitting this information, you acknowledge it will be handled in accordance with the terms of the
-            {" "}<a href="code.org/privacy">Privacy Policy</a>{" "}
+            {" "}<a href="https://code.org/privacy" target="_blank">Privacy Policy</a>{" "}
             and the
-            {" "}<a href='code.org/tos'>Terms of Service</a>{" "}
+            {" "}<a href='https://code.org/tos' target="_blank">Terms of Service</a>{" "}
           </div>
 
           <button onClick={this.handleSubmit}>

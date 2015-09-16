@@ -12,7 +12,7 @@ class ZendeskTicketController < ApplicationController
             :name => (params[:name] == '' ? 'anonymous' : params[:name]),
             :email => params[:email]
           },
-          :subject => 'Abuse Reported (Brent Testing)',
+          :subject => 'Abuse Reported (Brent Testing)', # TODO - remove Brent Testing
           :comment => {
             :body => ["URL: #{params[:abuse_url]}",
               "abuse type: #{params[:abuse_type]}",
@@ -25,7 +25,16 @@ class ZendeskTicketController < ApplicationController
       # TODO - hide secret
       basic_auth: { username: 'dev@code.org/token', password: 'secret'})
 
-    # TODO - also post to our abuse service
+    if params[:channel_id] != ""
+      channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
+
+      result = ChannelsApi.call(
+        'REQUEST_METHOD' => 'POST',
+        'PATH_INFO' => channels_path,
+        'REQUEST_PATH' => channels_path,
+        'CONTENT_TYPE' => 'application/json;charset=utf-8',
+        'rack.input' => StringIO.new({}.to_json))
+    end
 
     redirect_to "https://support.code.org"
   end
