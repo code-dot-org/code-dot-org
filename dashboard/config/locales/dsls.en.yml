@@ -1076,7 +1076,6 @@ en:
         Introduction to Phase 2: Introduction to Phase 2
       sciPD2b reflection:
         Reflection on Phase 2: Reflection on Phase 2
-        description here: description here
       sciPD3 end:
         Thank You!: Thank You!
       sciPD3 implement1:
@@ -3053,15 +3052,11 @@ en:
         forward50( ): forward50( )
       U3L08 Assessment1:
         'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
-        'Functions with Parameters: Question 1': 'Functions with Parameters: Question 1'
         Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
         Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
-        Parameters generalize the solution of a specific problem.: Parameters generalize the solution of a specific problem.
         Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
-        Parameters need not be provided to a function in any particular order.: Parameters need not be provided to a function in any particular order.
         Select the two true statements about functions with parameters: Select the two true statements about functions with parameters
         Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
-        Which of the following are true?: Which of the following are true?
       U3L08 Assessment3:
         'Functions with Parameters: Question 3': 'Functions with Parameters: Question 3'
         There is an error in one line of the following code. What line is it in?: There is an error in one line of the following code. What line is it in?
