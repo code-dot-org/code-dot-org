@@ -559,6 +559,7 @@ function extendHandleClearPuzzle() {
   studioApp.handleClearPuzzle = function (config) {
     orig(config);
     Applab.setLevelHtml(config.level.startHtml || '');
+    AppStorage.populateTable(level.dataTables, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 }
@@ -705,7 +706,7 @@ Applab.init = function(config) {
   // Applab.initMinimal();
 
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
-
+  AppStorage.populateTable(level.dataTables, false); // overwrite = false
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -1486,11 +1487,12 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.hideDesignModeToggle = function () {
-  return !!level.hideDesignMode;
+  return !!level.hideDesignMode || !!studioApp.share;
 };
 
 Applab.hideViewDataButton = function () {
-  return !!level.hideViewDataButton;
+  var isEditing = window.dashboard && window.dashboard.project.isEditing();
+  return !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {

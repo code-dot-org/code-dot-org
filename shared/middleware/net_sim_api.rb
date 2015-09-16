@@ -16,6 +16,11 @@ class NetSimApi < Sinatra::Base
       log: 'l'
   }
 
+  NODE_TYPES = {
+      client: 'client',
+      router: 'router'
+  }
+
   helpers do
     %w{
       core.rb
@@ -235,11 +240,11 @@ class NetSimApi < Sinatra::Base
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [String] table_name - The table we're validating for
   # @param [Hash] value - The value we're validating
-  # @return [Boolean] Currently only validates messages by passing
-  #         through to message_valid?. Return true for all other tables
-  #         as long as the value is a Hash.
+  # @return [Boolean] True if the new value appears to be well-formed.
   def value_valid?(shard_id, table_name, value)
     case table_name
+    when TABLE_NAMES[:node]
+      node_valid?(shard_id, value)
     when TABLE_NAMES[:message]
       message_valid?(shard_id, value)
     when TABLE_NAMES[:wire]
@@ -247,6 +252,33 @@ class NetSimApi < Sinatra::Base
     else
       value.is_a?(Hash)
     end
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on.
+  # @param [Hash] node - The new node we are validating
+  # @return [Boolean] true if the new node appears to be well-formed.
+  #         Currently also makes sure adding the node would not exceed a
+  #         hard limit on the number of routers per shard.
+  def node_valid?(shard_id, node)
+    return false unless node.is_a? Hash
+    case node['type']
+      when NODE_TYPES[:router] then router_valid?(shard_id, node)
+      when NODE_TYPES[:client] then true
+      else false
+    end
+  end
+
+  # @param [String] shard_id - The shard we're checking validation on
+  # @param [Hash] router - The new router we are validating
+  # @return [Boolean] True if adding the router will not exceed our hard
+  #         limit on routers per shard.
+  def router_valid?(shard_id, router)
+    router_count = get_table(shard_id, TABLE_NAMES[:node]).
+        to_a.
+        select{|x| x['type'] == NODE_TYPES[:router]}.
+        count
+
+    router_count < CDO.netsim_max_routers
   end
 
   # @param [String] shard_id - The shard we're checking validation on.

@@ -8,49 +8,20 @@
     "skin": "applab",
     "code_functions": {
       "moveForward": null,
-      "moveBackward": null,
-      "move": null,
       "moveTo": null,
-      "dot": null,
       "turnRight": null,
       "turnLeft": null,
-      "turnTo": null,
-      "arcRight": null,
-      "arcLeft": null,
       "penUp": null,
       "penDown": null,
-      "penWidth": null,
-      "penColor": null,
-      "penRGB": {
-        "params": [
-          "",
-          "",
-          "",
-          ""
-        ],
-        "paletteParams": [
-          "r",
-          "g",
-          "b",
-          "a"
-        ]
-      },
-      "show": null,
-      "hide": null,
-      "speed": null,
       "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null
+      "callMyFunction": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
+    "encrypted_examples": "n8EmCm42Cyjgk1EC9Tk6OcdE9gVfEEjLJ4WU2FXFavgOe7RbVehiWYPlfUuq\nJkfA\n",
     "embed": "false",
-    "instructions": "Change the code at top to make use of the drawSquare() command. (Click to see full instructions)",
-    "markdown_instructions": "#Create Your First Function with Parameters\r\n\r\nWe're going to start with a very simple example of how to create a **function that accepts a parameter**. We've included three functions in this program. The first two, `drawBigSquare()` and `drawSmallSquare` , do not accept parameters. `drawSquare()` does accept a single parameter called `size`. We'll want to change our code to make use of `drawSquare()` .\r\n\r\n- **Explore** the code to see how the function with parameters was created\r\n- **Change** the function calls at the top to `drawSquare()` with the correct values provided to the parameter\r\n- **Delete** `drawBigSquare()` and `drawSmallSquare()`\r\n- **Run** your program to ensure it still works",
-    "start_blocks": "penUp();\r\nmoveTo(100,150);\r\ndrawBigSquare();\r\nmoveTo(20,300);\r\ndrawSmallSquare();\r\n\r\nfunction drawSquare(size){\r\n  penDown();\r\n  moveForward(size);\r\n  turnRight();\r\n  moveForward(size);\r\n  turnRight();\r\n  moveForward(size);\r\n  turnRight();\r\n  moveForward(size);\r\n  turnRight();\r\n  penUp();\r\n}\r\n\r\nfunction drawBigSquare(){\r\n  penDown();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  penUp();\r\n}\r\n\r\nfunction drawSmallSquare(){\r\n  penDown();\r\n  moveForward(25);\r\n  turnRight();\r\n  moveForward(25);\r\n  turnRight();\r\n  moveForward(25);\r\n  turnRight();\r\n  moveForward(25);\r\n  turnRight();\r\n  penUp();\r\n}\r\n",
+    "instructions": "Write drawSmallSquare() to draw a 25px square. (Click to see full instructions)",
+    "markdown_instructions": "# Duplicating functions\r\n\r\nThis program draws two squares, a big one and a small one. The function definition for `drawBigSquare()` is written but `drawSmallSquare()` is empty.\r\n\r\n**Write** `drawSmallSquare()` to draw a square with sides 25 pixels long.\r\n\r\n**Run the code** to match the image below\r\n\r\n**Hint:** Copy-Paste might be a useful approach here!\r\n\r\n![](https://images.code.org/b1cf1767df98f6b7eacdc8a10c5674a7-image-1442417274907.26.34 AM.png)",
+    "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawBigSquare();\r\nmoveTo(100,350);\r\ndrawSmallSquare();\r\n\r\nfunction drawSmallSquare(){\r\n\r\n}\r\n\r\nfunction drawBigSquare(){\r\n  penDown();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

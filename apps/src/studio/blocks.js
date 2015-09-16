@@ -305,6 +305,21 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_whenSpriteClicked = generator.studio_eventHandlerPrologue;
 
+  blockly.Blocks.studio_whenTouchItem = {
+    // Block to handle event when sprite is clicked.
+    helpUrl: '',
+    init: function() {
+      this.setHSV(140, 1.00, 0.74);
+      this.appendDummyInput()
+        .appendTitle(msg.whenTouchItem());
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenTouchItemTooltip());
+    }
+  };
+
+  generator.studio_whenTouchItem = generator.studio_eventHandlerPrologue;
+
   blockly.Blocks.studio_whenSpriteCollided = {
     // Block to handle event when sprite collides with another sprite.
     helpUrl: '',
@@ -1315,6 +1330,56 @@ exports.install = function(blockly, blockInstallOptions) {
       value: backgroundValue,
       ctx: this,
       name: 'setBackground'});
+  };
+
+  /**
+   * setWalls
+   */
+  blockly.Blocks.studio_setWalls = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      this.VALUES = skin.wallChoices;
+
+      var dropdown = new blockly.FieldDropdown(skin.wallChoices);
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      dropdown.setValue('"' + skin.defaultWalls + '"');
+      
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setWallsTooltip());
+    }
+  };
+
+  blockly.Blocks.studio_setWallsParam = {
+    helpUrl: '',
+    init: function() {
+      this.setHSV(312, 0.32, 0.62);
+      this.VALUES = skin.wallChoices;
+
+      this.appendDummyInput()
+        .appendTitle(msg.setWalls());
+      this.appendValueInput('VALUE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setWallsTooltip());
+    }
+  };
+
+  generator.studio_setWalls = function() {
+    return generateSetterCode({ctx: this, name: 'setWalls'});
+  };
+  generator.studio_setWallsParam = function () {
+    var wallValue = blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_NONE);
+
+    return generateSetterCode({
+      value: wallValue,
+      ctx: this,
+      name: 'setWalls'});
   };
 
   /**

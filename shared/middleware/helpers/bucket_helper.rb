@@ -7,11 +7,7 @@ class BucketHelper
     @bucket = bucket
     @base_dir = base_dir
 
-    params = {region: 'us-east-1'}
-    if CDO.s3_access_key_id && CDO.s3_secret_access_key
-      params[:credentials] = Aws::Credentials.new(CDO.s3_access_key_id, CDO.s3_secret_access_key)
-    end
-    @s3 = Aws::S3::Client.new(params)
+    @s3 = Aws::S3::Client.new
   end
 
   def list(encrypted_channel_id)
