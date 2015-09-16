@@ -10,7 +10,7 @@
     "background": "background2",
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
-      "setSprite": null,
+      "setCharacter": null,
       "setBackground": null,
       "playSound": null,
       "addItemsToScene": null,
