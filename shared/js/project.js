@@ -594,10 +594,12 @@ function redirectEditView() {
     // Redirect to /edit without a readonly workspace
     newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
+    isEditing = true;
   } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
     newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
+    isEditing = false;
   }
 
   // PushState to the new Url if we can, otherwise do nothing.
