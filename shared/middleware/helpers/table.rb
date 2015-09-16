@@ -140,11 +140,7 @@ class DynamoTable
   end
 
   def db
-    @@dynamo_db ||= Aws::DynamoDB::Client.new(
-      region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id,
-      secret_access_key: CDO.s3_secret_access_key,
-    )
+    @@dynamo_db ||= Aws::DynamoDB::Client.new
   end
 
   def delete(id)
@@ -357,11 +353,7 @@ class DynamoTable
   end
 
   def self.table_names(channel_id)
-    @dynamo_db ||= Aws::DynamoDB::Client.new(
-      region: 'us-east-1',
-      access_key_id: CDO.s3_access_key_id,
-      secret_access_key: CDO.s3_secret_access_key,
-    )
+    @dynamo_db ||= Aws::DynamoDB::Client.new
     last_evaluated_key = nil
     results = {}
     begin
