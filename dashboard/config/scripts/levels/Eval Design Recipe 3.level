@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "The design recipe for wide-rect already has a contract and one example. Can you write a second example and then complete the definition. The wide-rect function should produce a rectangle of given color that is twice as wide as it is high.",
+    "instructions": "The Design Recipe for wide-rect already has a contract and one example. Can you write a second example and then complete the definition? The wide-rect function should produce a rectangle of given color that is twice as wide as it is high.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -27,8 +27,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The design recipe for `wide-rect` already has a contract and one example. Can you write a second example and then complete the definition. The `wide-rect` function should produce a rectangle of given color that is twice as wide as it is high.",
-    "examples_required": "true"
+    "markdown_instructions": "The Design Recipe for `wide-rect` already has a contract and one example. Can you write a second example and then complete the definition? The `wide-rect` function should produce a rectangle of given color that is twice as wide as it is high.",
+    "examples_required": "true",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
