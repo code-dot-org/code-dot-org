@@ -112,6 +112,9 @@ var BarGraph = function (options) {
   this.messageLetterScale = letterScale.copy().domain(LETTERS);
 
   /** @type {D3.scale} */
+  this.englishLetterScale = letterScale.copy().domain(LETTERS);
+
+  /** @type {D3.scale} */
   this.substitutionLetterScale = letterScale.copy().domain(LETTERS);
 
   /** @type {D3.scale} */
@@ -412,7 +415,7 @@ BarGraph.prototype.positionDragLetter = function (d) {
     x = this.substitutionLetterScale(d.substitution.letter);
     y = 0;
   } else {
-    x = this.messageLetterScale(d.substitution.letter);
+    x = this.englishLetterScale(d.substitution.letter);
     y = 28;
   }
   return "translate(" + x + "," + y + ")";
@@ -423,8 +426,6 @@ BarGraph.prototype.positionDragLetter = function (d) {
  * Called by handleSortChange, shift, randomize, and drag.
  */
 BarGraph.prototype.reorder = function () {
-
-  this.getTopBars().data(this.getZippedData());
 
   /* reorder the domains */
   this.messageLetterScale.domain(this.message_data.map(function (d) {
@@ -438,11 +439,6 @@ BarGraph.prototype.reorder = function () {
   /* animate rearranging the elements */
   var transition = this.graph.transition().duration(750);
 
-  this.getTopBars(transition)
-    .attr("transform", function (d) {
-      return "translate(" + this.messageLetterScale(d.message.letter) + "," + this.getHeight() + ") scale(1, -1)";
-    }.bind(this));
-
   transition.selectAll(".dragletter")
     .attr("transform", this.positionDragLetter.bind(this));
 
@@ -450,13 +446,6 @@ BarGraph.prototype.reorder = function () {
     .call(this.xAxis);
 
   transition.each("end", function () {
-
-    /* resort the elements in the DOM */
-    this.getTopBars()
-      .sort(function (a, b) {
-        return this.messageLetterScale(a.message.letter) -
-            this.messageLetterScale(b.message.letter);
-      }.bind(this));
 
     this.graph.selectAll(".dragletter")
       .sort(function (a, b) {
@@ -634,36 +623,15 @@ BarGraph.prototype.createDragBehavior = function () {
     }
 
     /* re-size the bars */
-
-    var zipped_data = this.getZippedData(substitution_data_swapped);
-    var substMap = this.getReverseSubstitutionMap(substitution_data_swapped);
-
     /* note: this seems pretty inefficient. We're binding all the data
      * for all the bars and resizing everything, and we're doing it
      * for nearly every pixel moved. I'm sure with just a little more
      * work, we can resize only the bars we care about.
      */
-    this.getTopBars().data(zipped_data);
-    this.getTopBars().selectAll("rect")
-      .data(function (d) {
-        return [
-          d.message,
-          (d.substitution.locked) ? d.substitution : { frequency: 0 }
-        ];
-      })
-      .attr("height", function (d, i) {
-        return this.getHeight() - this.yTopScale(d.frequency);
-      }.bind(this));
 
-    this.getBottomBars().data(zipped_data);
-    this.getBottomBars().selectAll("rect")
-      .data(function (d) {
-        var frequency = (substMap[d.message.letter]) ? 0 : ENGLISH[d.message.letter];
-        return [{frequency: frequency}];
-      })
-      .attr("height", function (d) {
-        return this.getHeight() - this.yTopScale(d.frequency);
-      }.bind(this));
+    var zipped_data = this.getZippedData(substitution_data_swapped);
+    this.resizeTopBars(zipped_data);
+    this.resizeBottomBars(zipped_data);
 
   }.bind(this));
 
@@ -844,7 +812,7 @@ BarGraph.prototype.buildSVG = function () {
     .enter().append("g")
     .attr("class", "letter")
     .attr("transform", function (d) {
-      return "translate(" + this.messageLetterScale(d.letter) + "," + (this.getHeight()+90) + ")";
+      return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight()+90) + ")";
     }.bind(this));
 
   this.getBottomBars().selectAll("rect")
@@ -861,11 +829,22 @@ BarGraph.prototype.buildSVG = function () {
 };
 
 /**
- * Resets and unlocks all substutions
+ * Unlocks all substutions
  */
 BarGraph.prototype.reset = function () {
   this.substitution_data.forEach(function(d){
     d.locked = false;
+  });
+  this.reorder();
+  this.render();
+};
+
+/**
+ * Locks all substutions
+ */
+BarGraph.prototype.assignAllSubstitutions = function () {
+  this.substitution_data.forEach(function (d) {
+    d.locked = true;
   });
   this.reorder();
   this.render();
@@ -924,31 +903,66 @@ BarGraph.prototype.shift = function (shift_amount) {
 };
 
 /**
+ * If any substitutions have been locked, confirms with the user before
+ * sorting
+ *
+ * @returns {boolean} true if it's okay to sort
+ */
+BarGraph.prototype.confirmSortOkay = function () {
+  var some_locked = this.substitution_data.some(function (d) {
+    return d.locked;
+  });
+
+  if (some_locked) {
+    if (!confirm("This will rearrange your assigned substitutions. Is that okay?")) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+/**
  * Randomizes this.substitution_data.
  */
 BarGraph.prototype.randomize = function () {
-
+  if (!this.confirmSortOkay()) {
+    return;
+  }
   d3.shuffle(this.substitution_data);
-
-  this.substitution_data.forEach(function (d) {
-    d.locked = true;
-  });
-
-  this.reorder();
+  this.postSubstitutionSort();
 };
 
 /**
  * Sorts this.substitution_data by frequency
- *
- * @param {function} sort_function
  */
 BarGraph.prototype.sortSubstitutions = function () {
+  if (!this.confirmSortOkay()) {
+    return;
+  }
   this.substitutions_data = this.substitution_data.sort(BarGraph.frequencySort);
+  this.postSubstitutionSort();
+};
 
-  this.substitution_data.forEach(function (d) {
-    d.locked = true;
-  });
+/**
+ * Sorts this.substitution_data alphabetically
+ */
+BarGraph.prototype.alphabetizeSubstitutions = function () {
+  if (!this.confirmSortOkay()) {
+    return;
+  }
+  this.substitutions_data = this.substitution_data.sort(BarGraph.alphabeticSort);
+  this.postSubstitutionSort();
+};
 
+/**
+ * sorts this.englishLetterScale in response to sorting
+ * substitution_data, then reorders
+ */
+BarGraph.prototype.postSubstitutionSort = function () {
+  this.englishLetterScale.domain(this.substitution_data.map(function (d) {
+    return d.letter;
+  }));
   this.reorder();
 };
 
@@ -990,8 +1004,15 @@ BarGraph.prototype.render = function () {
       return this.substitutionLetterScale(a.substitution.letter) - this.substitutionLetterScale(b.substitution.letter);
     }.bind(this));
 
-  this.getTopBars().data(data);
+  this.resizeTopBars(data);
+  this.resizeBottomBars(data);
 
+  return true;
+};
+
+BarGraph.prototype.resizeTopBars = function (data) {
+  data = data || this.getZippedData();
+  this.getTopBars().data(data);
   this.getTopBars().selectAll("rect")
     .data(function (d) {
       return [
@@ -999,23 +1020,31 @@ BarGraph.prototype.render = function () {
         (d.substitution.locked) ? d.substitution : { frequency: 0 }
       ];
     })
-    .attr("height", function (d) {
+    .attr("height", function (d, i) {
       return this.getHeight() - this.yTopScale(d.frequency);
     }.bind(this));
+};
+
+BarGraph.prototype.resizeBottomBars = function (data) {
+  data = data || this.getZippedData();
 
   var substMap = this.getReverseSubstitutionMap();
 
   this.getBottomBars().data(data);
   this.getBottomBars().selectAll("rect")
-    .data(function (d) {
-      var frequency = (substMap[d.message.letter]) ? 0 : ENGLISH[d.message.letter];
-      return [{frequency: frequency}];
-    })
+    .data(function (d, i) {
+      var letter = this.englishLetterScale.domain()[i];
+
+      if (substMap[letter]) {
+        return [{frequency: 0}];
+      } else {
+        return [{frequency: ENGLISH[letter]}];
+      }
+
+    }.bind(this))
     .attr("height", function (d) {
       return this.getHeight() - this.yTopScale(d.frequency);
     }.bind(this));
-
-  return true;
 };
 
 $(document).ready(function () {
@@ -1092,6 +1121,8 @@ $(document).ready(function () {
 
   $("#fill-rand").click(bg.randomize.bind(bg));
   $("#order-substitutions").click(bg.sortSubstitutions.bind(bg));
+  $("#alpha-substitutions").click(bg.alphabetizeSubstitutions.bind(bg));
+  $("#assign-all").click(bg.assignAllSubstitutions.bind(bg));
   $("#sort-toggle button").click(bg.handleSortChange.bind(bg));
 
   // When we switch back to shift mode, force an alphabetic order

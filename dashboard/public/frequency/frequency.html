@@ -44,14 +44,17 @@
         <div class="tab-pane form-inline" id="random">
           <p>Manually reorder everything</p>
 
-          <label>Substitutions:</label>
+          <label>Sort substitutions:</label>
           <div class="btn-group">
-            <button id="fill-rand" class="btn btn-info">Randomize</button>
+            <button id="fill-rand" class="btn btn-info">Random</button>
+            <button id="alpha-substitutions" class="btn btn-info">A to Z</button>
             <button id="order-substitutions" class="btn btn-info">By %</button>
-            <button class="btn btn-info reset-simulation">Reset</button>
           </div>
 
-          <label>Originals:</label>
+          <button class="btn btn-info reset-simulation">Reset</button>
+          <button id="assign-all" class="btn btn-info">Assign</button>
+
+          <label>Sort originals:</label>
           <div class="btn-group" id="sort-toggle" data-toggle="buttons-radio">
             <button type="button" class="btn btn-primary active" value="alphabetic">A to Z</button>
             <button type="button" class="btn btn-primary" value="frequency">By %</button>
