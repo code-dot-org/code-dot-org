@@ -37,8 +37,10 @@ Breakfast and lunch will be served.
 
 North Point High School
 <br/>
-Room TBD<br/>
+Room 325<br/>
 2500 Davis Rd<br/> Waldorf, MD 20603
+
+Free parking is available in front of the building, and also in the lot near the track.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -73,13 +75,10 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 
@@ -101,7 +100,9 @@ Breakfast and lunch will be served.
 Davis Middle School<br/> 
 Room M106<br/>
 2495 Davis Road<br/> Waldorf, MD 20603<br/>
-<br/>
+
+Free parking is located in front of the building.
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger
@@ -124,13 +125,9 @@ Water
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -152,7 +149,9 @@ Breakfast and lunch will be served.
 North Point High School<br/>
 Room 325<br/>
 2500 Davis Road<br/> 
-Waldorf, MD 20603<br/><br/>
+Waldorf, MD 20603
+
+Free parking is available in front of the building, and also in the lot near the track.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
