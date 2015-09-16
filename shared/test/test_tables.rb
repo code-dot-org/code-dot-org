@@ -15,14 +15,14 @@ class TablesTest < Minitest::Test
 
     assert read_records.first.nil?
 
-    record_id = create_record({name: 'alice', age: 7, male: false})
+    record_id = create_record({'name' => 'alice', 'age' => 7, 'male' => false})
     record = read_records.first
     assert_equal record_id.to_i, record['id'].to_i
     assert_equal 'alice', record['name']
     assert_equal 7, record['age']
     assert_equal false, record['male']
 
-    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
+    assert_equal 8, update_record(record_id, {'id' => record_id, 'age' => 8})['age']
     record = read_records.first
     assert_equal 8, record['age']
 
@@ -89,7 +89,7 @@ class TablesTest < Minitest::Test
     create_channel
 
     # this record should not appear in the output
-    create_record(name: 'eve', age: 9)
+    create_record('name' => 'eve', 'age' => 9)
 
     csv_filename = File.expand_path('../roster.csv', __FILE__)
     import(csv_filename)
@@ -106,8 +106,8 @@ class TablesTest < Minitest::Test
     init_apis
     create_channel
 
-    create_record(name: 'trevor', age: 30)
-    create_record(name: 'mitra', age: 29)
+    create_record('name' => 'trevor', 'age' => 30)
+    create_record('name' => 'mitra', 'age' => 29)
 
     rename_column('name', 'first_name')
     records = read_records()
@@ -122,8 +122,8 @@ class TablesTest < Minitest::Test
     init_apis
     create_channel
 
-    create_record(name: 'trevor', age: 30)
-    create_record(name: 'mitra', age: 29)
+    create_record('name' => 'trevor', 'age' => 30)
+    create_record('name' => 'mitra', 'age' => 29)
 
     delete_column('age')
 
@@ -138,8 +138,8 @@ class TablesTest < Minitest::Test
     init_apis
     create_channel
 
-    create_record(name: 'trevor', age: 30)
-    create_record(name: 'mitra', age: 29)
+    create_record('name' => 'trevor', 'age' => 30)
+    create_record('name' => 'mitra', 'age' => 29)
 
     records = read_records
     assert_equal records.length, 2
