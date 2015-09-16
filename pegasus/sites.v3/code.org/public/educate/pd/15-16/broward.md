@@ -20,13 +20,7 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**In-Person Workshop**
-
 Milestone Complete!
-
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -57,7 +51,7 @@ Carl Desantis Building <br/>
 Room 1047<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/broward-nsu-parking-pass.pdf). 
+Free parking is available near the building with your [parking pass](/files/broward-9-26-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -86,13 +80,7 @@ More info coming soon!
 Milestone complete! 
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)  ###
-**In-Person Workshop**
-
 Milestone Complete!
-
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
@@ -107,7 +95,7 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**Location**
+**September 19th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -115,7 +103,7 @@ Carl Desantis Building<br/>
 Room 1049<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).
+Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -141,13 +129,8 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**In-Person Workshop**
 
 Milestone Complete!
-
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
@@ -162,7 +145,7 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**Location**
+**September 19th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
@@ -170,7 +153,7 @@ Carl Desantis Building
 Room 1047<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).
+Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 **What to bring to Phase 3 biyearly sessions:**
 
@@ -196,13 +179,10 @@ Water
 Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
-**In-Person Workshop**
+
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)###
 
@@ -224,12 +204,15 @@ Quarter 4: Saturday, April 23, 2016
 Breakfast and lunch will be served.
 
 
-**Location**
+**September 19th Location**
 
 NOVA Southeastern University<br/>
 3301 College Ave<br/>
-Room TBD<br/>
+Carl Desantis Building<br/>
+Room 1048<br/>
 Fort Lauderdale, FL 33314
+
+Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
