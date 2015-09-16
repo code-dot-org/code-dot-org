@@ -273,12 +273,15 @@ class NetSimApi < Sinatra::Base
   # @return [Boolean] True if adding the router will not exceed our hard
   #         limit on routers per shard.
   def router_valid?(shard_id, router)
-    router_count = get_table(shard_id, TABLE_NAMES[:node]).
-        to_a.
-        select{|x| x['type'] == NODE_TYPES[:router]}.
-        count
+    return false unless router.has_key?('routerNumber')
+    existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
+        to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
-    router_count < CDO.netsim_max_routers
+    # Check for routerNumber collisions
+    return false if existing_routers.any?{|x| x['routerNumber'] == router['routerNumber']}
+
+    # Check for router count limit
+    existing_routers.count < CDO.netsim_max_routers
   end
 
   # @param [String] shard_id - The shard we're checking validation on.

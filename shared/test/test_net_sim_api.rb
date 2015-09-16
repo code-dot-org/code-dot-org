@@ -578,7 +578,7 @@ class NetSimApiTest < Minitest::Test
     assert_equal(201, @net_sim_api.last_response.status)
 
     # Allow router nodes
-    create_node({}, NODE_TYPES[:router])
+    create_node({'routerNumber' => 1}, NODE_TYPES[:router])
     assert_equal(201, @net_sim_api.last_response.status)
 
     # Reject nodes with other "types"
@@ -591,8 +591,8 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_limit_shard_routers_to_max_routers
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal(CDO.netsim_max_routers,
@@ -600,7 +600,7 @@ class NetSimApiTest < Minitest::Test
                  "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We want the 21st node to fail
-    create_router_node
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(400, @net_sim_api.last_response.status,
                  "Went over router limit!")
     assert_equal(CDO.netsim_max_routers,
@@ -627,8 +627,8 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_having_max_routers_should_not_limit_clients
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal CDO.netsim_max_routers,
@@ -654,7 +654,7 @@ class NetSimApiTest < Minitest::Test
                  "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We should still be able to add a router
-    create_router_node
+    create_router_node('routerNumber' => 1)
     assert_equal(201, @net_sim_api.last_response.status,
                  "Should have allowed 1st router")
     assert_equal(CDO.netsim_max_routers + 1,
@@ -663,8 +663,8 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_having_max_routers_on_one_shard_does_not_limit_another
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal(CDO.netsim_max_routers,
@@ -673,11 +673,44 @@ class NetSimApiTest < Minitest::Test
 
     # We should still be able to add a router on another shard
     @shard_id = '_testShard3'
-    create_router_node
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(201, @net_sim_api.last_response.status,
-                 "Should have allowed router on another shard")
+                 'Should have allowed router on another shard')
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
-                 "Should have allowed router on another shard")
+                 'Should have allowed router on another shard')
+  end
+
+  def test_reject_routers_without_router_number
+    create_router_node({})
+    assert_equal(400, @net_sim_api.last_response.status, "Allowed malformed router row")
+  end
+
+  def test_reject_routers_causing_router_number_collision
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    # Should return 400 BAD REQUEST when a routerNumber collision is detected
+    # TODO: Should we use 409 CONFLICT instead?
+    create_router_node('routerNumber' => 1)
+    assert_equal(400, @net_sim_api.last_response.status,
+                 'Should have rejected duplicate routerNumber')
+
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with one node.')
+  end
+
+  def test_allow_routers_with_different_router_numbers
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    create_router_node('routerNumber' => 2)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed ot insert second router.')
+
+    assert_equal(2, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with two nodes.')
   end
 
   # Methods below this point are test utilities, not actual tests
