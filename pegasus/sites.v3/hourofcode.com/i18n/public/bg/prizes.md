@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -8,21 +14,21 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 
 <% else %>
 
-# 2015 prizes coming soon!
+# Очаквайте скоро наградите за 2015 г!
 
 **Every** educator who organizes an Hour of Code event is eligible to receive a prize. Check back for updates in fall 2015.
 
 <% end %>
 
-# 2014 Hour of Code Prizes
+# 2014 Час на кода награди
 
 <% if @country == 'us' || @country == 'ca' || @country == 'uk' %>
 
-## Every organizer won a thank you gift {#gift_code}
+## Всеки организатор спечели подарък като благодарност {#gift_code}
 
 Every educator who hosted an Hour of Code for students received 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
-## 51 schools won a class-set of laptops (or $10,000 for other technology)
+## 51 щастливи училища ще спечелят набор от преносими компютри (или $10,000 за други технологии)
 
 One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 worth of technology. [**See last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
@@ -38,11 +44,11 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 <% if @country == 'us' %>
 
-## 100 classrooms won a video chat with a guest speaker! {#video_chat}
+## 100 класни стаи ще спечелят видео конферентна връзка със специален гост! {#video_chat}
 
 100 lucky classrooms participated in live video Q&As with tech titans and tech-loving celebrities. Students asked questions and chatted with these exciting role models to kick off the Hour of Code.
 
-### Watch last year's celebrity video chats:
+### Гледайте миналогодишните видео чатове със знаменитости:
 
 <%= view :video_chat_speakers %>
 
@@ -54,13 +60,13 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 [Brilliant Labs](http://brilliantlabs.com/hourofcode) provided the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). For more details, terms and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-## Lucky Schools won an Actua Workshop {#actua_workshop}
+## Щастливи училища ще спечелят Actua семинар {#actua_workshop}
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Членовете на Actua организират научни, технологични, инженерингови и математически (STEM) работилници, които са свързани с изискванията на учебната програма за К-12 ученици. Тези експерименти в класната стая са доставени от амбициозни, изпробвани с ученицит ролеви модели в STEM. Учителите могат да очакват интересни демонстрации, интерактивни експерименти и много STEM забави за своите сученици! Моля, обърнете внимание, че наличността на семинари в класната стая могат да варират в отдалечените и селските общности.
+15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
-[ Actua](http://actua.ca/) е лидер за Канада в науката, технологията, инженерингът и математиката. Всяка година Actua достига до над 225,000 младежи в над 500 общности като разчупва бариерата за програмирането.
+[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
 
-**Поздравления за победителите от 2014!**
+**Congratulations to the 2014 winners!**
 
 | Училище                         | град        | Член Actua мрежата              |
 | ------------------------------- | ----------- | ------------------------------- |
@@ -80,7 +86,7 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 | Garden Creek School             | Fredericton | Worlds UNBound                  |
 | Armbrae Academy                 | Халифакс    | SuperNOVA                       |
 
-## Kids Code Jeunesse helped support classrooms across Canada! {#kids_code}
+## Kids Code Jeunesse помогна и подкрепи класни стаи в Канада! {#kids_code}
 
 [Kids Code Jeunesse](http://www.kidscodejeunesse.org) provided trained computer programming volunteers to support teachers in computer science education. Kids Code Jeunesse is a Canadian not-for-profit aimed at providing every child with the opportunity to learn to code and every teacher the opportunity to learn how to teach computer programming in the classroom.
 
@@ -88,12 +94,14 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## 100 classrooms won a set of programmable robots {#programmable_robots}
+## 100 класни стаи, печелят набор от програмируеми роботи {#programmable_robots}
 
-[ Sphero](http://www.gosphero.com/) е ап контролиран робот топката, който променя начинът, по който учениците учат. Подкрепени от [ SPRK уроците](http://www.gosphero.com/education/), тези кръгли роботи ще дадат на децата забавен курс по програмиране при използване на техните умения по математика и наука. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
 ## Повече въпроси за наградите? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

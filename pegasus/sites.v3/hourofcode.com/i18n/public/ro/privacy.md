@@ -1,4 +1,10 @@
+* * *
 
+Titlu: Politica de confidenţialitate
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politică de Confidenţialitate
 
@@ -170,67 +176,67 @@ Nu închiriem sau vindem informațiile personale colectate de la utilizatori, ni
 
 În mod particular, nu vom dezvălui informații cu caracter personal cu donatorii și sponsorii noștri.
 
-### Putem partaja informațiile de achiziții ale elevului cu școala dvs. sau cu districtul şcolar
+### We may share student achievement data with your school or school district
 
 În cazul în care utilizarea site-ului Code.org se încadrează într-un parteneriat cu școala dvs. sau cu districtul şcolar, putem permite şcolii sau districtului şcolar să acceseze acelaşi raport de progres al elevului, care este, de asemenea, partajat cu profesorii dumneavoastră.
 
-### Putem partaja profesorului informaţiile de contact cu formatori
+### We may share teacher contact information with training facilitators
 
 Parte a programului nostru educaţional este de a oferi ateliere de dezvoltare profesională pentru a pregăti cadre didactice care să oferr cursuri de informatică. Dacă sunteţi un profesor care participă la unul dintre aceste ateliere de lucru, numele şi informaţiile de contact vor fi partajate cu formatorul care conduce workshop-ul.
 
-### Este posibil să împărtășim informații cu rețele sociale la cererea ta
+### We may share data with social networks at your request
 
 O parte din utilizatorii noștri aleg să posteze ceea ce au creat în Social Media. Această funcționalitate este opțională. Ceea ce se postează pe rețelele sociale este în întregime la latitudinea dumneavoastră - conținutul nu se postează niciodată automat în numele dumneavoastră. În general, acest conținut include doar codul (aplicația, animația, jocul etc.) pe care l-ai scris, postat alături de mesajul suplimentar pe care dorești să-l adaugi.
 
-### Este posibil să împărtășim informații cu caracter confidențial atunci când ne contactezi pentru suport
+### We may share limited information when you contact us for support
 
 Atunci când ne contactezi cu o cerere pentru suport, este posibil să ne oferi informații cu caracter personal - acestea vor fi transmise unui reprezentant ro.code.org care te va asista. Reprezentanții ro.code.org sunt angajați sau colaboratori ro.code.org care au semnat un contract de confidențialitate ce îi obligă să protejeze și să nu divulge informații cu caracter personal și să le folosească doar în scopul de a rezolva cererea.
 
-### Când sunteți ales să vi se afișeze profilul pe site-ul nostru
+### When you are chosen to be profiled on our site
 
 Code.org promovează Elevul săptămânii și Profesorul lunii, cu premii. Aceste profile şi mărturii similare sunt întotdeauna publicate cu permisiunea elevilor sau profesorilor participanți şi, dacă este cazul, părinte sau tutorele lor legal, sau profesor şi pot include informații personale precum numele, chipul şi foto sau video cu persoana respectivă.
 
-### Raportare publică a utilizării și performanțelor elevului
+### Public Reporting on Student Use and Performance
 
 Putem publica informații anonimizate despre performanțele elevilor cu tutorialele și site-urile noastre, totuși, nu vom divulga niciodată informații personale în aceste rapoarte. Datele despre performanțele elevilor vor rămâne anonimizate, dar vor fi agregate cu alte date anonimizate din întreaga populașie școlară pentru a realiza rapoarte demografice pe criterii precum vârsta, localizarea generală, genul, etnia și statutul socio-economic.
 
-### Putem partaja informații anonime sau agregate pentru a îmbunătăți serviciile noastre și pentru a afla mai multe despre utilizatorii noștri
+### We may share anonymous or aggregate data to improve our services and learn more about our Users
 
 Cu anumite ocazii, Code.org poate lucra cu terți (cum ar fi universități) pentru a îmbunătăţi serviciile sau ofertele noastre. Am putea dezvălui date colectate automat şi alte informații agregate pentru a autoriza partenerii să desfăşoare activităţi de cercetare în educația online sau pentru a ajuta în înţelegerea modului de utilizare, vizualizarea şi modelele demografice pentru anumite programe, conţinut, servicii, promoții sau/și funcţionalitatea site-ului.
 
-### Vom divulga informații atunci când o va cere legea
+### We will share data when required by law
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. În anumite cazuri este posibil să facem aceste dezvăluiri fără notificarea prealabilă a utilizatorilor.
 
-### Este posibil să dezvăluim informații atunci când este nevoie pentru a proteja utilizatorii ro.code.org sau alte persoane.
+### We may share data when necessary or appropriate to protect Code.org or others
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### Putem partaja date în contextul de unei schimbări de afaceri, inclusiv o fuziune sau achiziție
+### We may share data in the context of a change of business, including a merger or acquisition
 
 În cazul în care Code.org este preluat de, combinat sau fuzionează cu o altă entitate, ne putem transfera sau atribui informaţiile personale pe care le-am colectat de la utilizatori ca o parte din această fuziune, achiziţie, vânzare, sau altă formă de control. Promisiunea noastră către dvs. este că orice informaţie personală pe care am colectat-o de la utilizatori va fi protejată la același nivel de siguranță și confidențialitate ca și cel oferit de acest aviz de confidențialitate.
 
 ## Abordarea noastră cu privire la securitatea datelor
 
-### Securitatea website-ului este importantă pentru tine și pentru noi
+### Website security is important to you, and to us
 
 Pentru a-ți proteja intimitatea și securitatea, acționăm pentru a verifica identitatea ta înainte de a-ți oferi acces la cont sau posibilitatea de a modifica informațiile tale personale. Întrucât unele școli blochează website-urile securizate prin SSL, ro.code.org acordă acces cu sau fără protecția SSL, la indicația școlilor respective. Dacă doriţi o conexiune criptată SSL criptatăsau dacă doriți să criptați datele pe care le introduceți în timpul folosirii site-ului, utilizaţi protocolul HTTPS, vizitând https://code.org/.
 
-### Încercăm să ne asigurăm de faptul că website-ul și informațiile pe care ni le trimiteți sunt în siguranță, dar nicio măsură de securitate nu este perfectă
+### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
 Code.org folosește anumite garanţii fizice, manageriale şi tehnice menite să păstreze integritatea şi securitatea informaţiilor dumneavoastră personale şi alte informaţii pe care le menţinem prin conexiunea cu site-ul. Cu toate acestea, nu putem asigura sau garanta securitatea oricăror sau tuturor informaţiilor personale şi a altor informaţii pe care le veţi transmite către Code.org şi o faceți pe propriul risc. Odată primită informația de la utilizatori, ro.code.org realizează eforturile necesare pentru a asigura securitatea sistemelor noastre. Cu toate acestea, luați în considerare că aceasta nu este o garanție a faptului că informațiile cu caracter personal nu vor putea fi accesate, dezvăluite, modificate sau distruse prin înlăturarea tuturor sistemelor noastre de siguranță.
 
 Dacă avem la cunoștință despre un incident de securitate care compromite sau pare să compromită informațiile dumneavoastră personale, vom încerca să vă trimitem o notificare electronică pentru ca dumneavoastră să puteți face pașii necesari pentru a vă proteja.
 
-### Vizitatori internaționali
+### International visitors
 
 Site-ul nostru este operat şi gestionat pe servere situate în Statele Unite. Dacă alegeţi să utilizaţi site-ul nostru din Uniunea Europeană sau din alte regiuni ale lumii cu legi care reglementează colectarea și utilizarea de date, care diferă de legislaţia Statelor Unite, atunci confirmaţi şi acceptaţi faptul că le transferaţi informaţiile personale în afara regiunii Statelor Unite şi că, prin furnizarea de informaţii personale pe site, sunteţi de acord cu acest transfer.
 
-### Condiţii de utilizare şi notificări
+### Conditions of Use and Notices
 
 Dacă alegeţi să vizitați Code.org, vizita dvs. și orice dispută asupra vieţii private face obiectul Avizului de Confidențialitate şi al acordului privind Termenii Serviciului nostru, inclusiv limitările de daune, arbitraj a litigiilor, aplicarea legii din statul Washington şi locul de întâlnire pentru toate litigiile este în Seattle, Washington.
 
-### Notă pentru rezidenții din California:
+### A Note to California Residents:
 
 Nu divulgăm informaţii personale către terţe părţi pentru scopuri de marketing. Pentru informaţii suplimentare despre practicile noastre de confidenţialitate, sau de revizuire şi cerere de ştergere a informaţiilor personale pe care le-ați împărtăşit cu noi, vă rugăm să trimiteţi o solicitare la http://code.org/contact.
 

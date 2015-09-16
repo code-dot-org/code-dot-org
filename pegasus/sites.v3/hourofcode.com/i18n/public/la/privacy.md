@@ -1,4 +1,10 @@
+* * *
 
+titulo: Política de Privacidad
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Política de Privacidad
 
@@ -170,67 +176,67 @@ Nosotros no alquilamos o vendemos información Personal que obtenemos de los usu
 
 En particular, nosotros no compartimos ninguna información Personal que proporcionas con nuestros donantes o patrocinadores (que no sea el "informe público" de informes anónimos como se describe a continuación).
 
-### Podemos compartir datos del logro estudiantil con su escuela o distrito escolar
+### We may share student achievement data with your school or school district
 
 Si usted uso del sitio web Code.org en el contexto de una asociación con su escuela o distrito escolar, nos podemos permitir que la escuela o el distrito escolar para acceder al informe del progreso del estudiante mismo que también se comparte con su maestro(s).
 
-### Podemos compartir información de contacto de maestro con facilitadores de capacitación
+### We may share teacher contact information with training facilitators
 
 Parte de nuestro programa educativo es ofrecer talleres de desarrollo profesional para preparar maestros y ofrecer cursos de ciencia de computación. Si eres un profesor participando en uno de estos talleres, su nombre e información de contacto serán compartidos con el facilitador principal del taller.
 
-### Podemos compartir datos con las redes sociales a su petición
+### We may share data with social networks at your request
 
 Algunos de nuestros usuarios eligen publicar sus creaciones-código con las redes sociales. Esta funcionalidad es completamente opcional. Cuando publicamos contenido a las redes sociales, el contenido publicado es totalmente a su control y nunca publicada automáticamente en su nombre. Este contenido incluye típicamente solamente el código (app o animación o juego u otro) que escribiste, publicado junto con otros comentarios usted puede optar por agregar a ella.
 
-### Podemos compartir información limitada cuando usted nos contacte para soporte
+### We may share limited information when you contact us for support
 
 Cuando se comunique con nosotros con una solicitud de apoyo, usted puede proporcionar información Personal, que es compartida con un representante de soporte Code.org para procesar su solicitud. Code.org soporta representantes son empleados o contratistas independientes de Code.org y siempre habrá firmado un contrato que les exige proteger y no divulgar la información confidencial, incluyendo información Personal de los usuarios y utilizarlo solamente el contexto de la resolución de sus solicitudes de soporte de producto.
 
-### Cuando usted es elegido para ser un perfil de nuestro sitio
+### When you are chosen to be profiled on our site
 
 Code.org promueve un estudiante semanal de la semana y una maestra del mes, junto con premios mensual. Estos perfiles y testimonios similares se publican siempre con el permiso de los participantes estudiantes o profesores y, si procede, sus padres o tutor legal o maestro y pueden incluir información Personal como el nombre, imagen y foto o video de la persona que se perfila.
 
-### Informes sobre el rendimiento y uso público
+### Public Reporting on Student Use and Performance
 
 Nosotros podemos publicar información anónima sobre el rendimiento estudiantil en nuestros tutoriales y sitios web, sin embargo, nunca públicamente divulgaremos su información Personal de estos informes. Datos sobre el rendimiento estudiantil se mantendrán anónimos, pero pueden presentarse datos agregados y anónimos sobre grandes poblaciones de estudiantes por criterios demográficos tales como edad, ubicación general, género, etnicidad y estatus socioeconómico.
 
-### Podemos compartir datos anónimos o agregados para mejorar nuestros servicios y aprender más acerca de nuestros usuarios
+### We may share anonymous or aggregate data to improve our services and learn more about our Users
 
 En ciertas ocasiones, Code.org puede trabajar con terceras partes (por ejemplo, universidades) para mejorar nuestros servicios u ofertas. Podemos divulgar automáticamente recolectada y otra información no-personal agregada a socios autorizados a realizar una investigación sobre la educación en línea o ayudar a comprender el uso, visualización y patrones demográficos para ciertos programas, contenidos, servicios, promociones, y/o funcionalidad en el sitio Web.
 
-### Compartiremos datos cuando sea requerido por la ley
+### We will share data when required by law
 
 Code.org may also disclose User data including Personal Information if required to do so by law, or if we have a good-faith belief that such action is necessary to comply with local, state, federal, international, or other applicable laws or respond to a court order, judicial or other government order, subpoena, or warrant, or administrative request. En algunos casos, podemos hacer dichas divulgaciones sin primer aviso proporcionando a los usuarios.
 
-### Podemos compartir datos cuando sea necesario o apropiado para proteger a Code.org u otros
+### We may share data when necessary or appropriate to protect Code.org or others
 
 Code.org may disclose User data including Personal Information that we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Code.org from fraudulent, abusive, or unlawful uses; to investigate and defend ourselves against any third-party claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Website; or to protect the rights, property, or personal safety of Code.org, our Users, or others.
 
-### Podemos compartir datos en el contexto de un cambio de negocio, incluyendo una fusión o adquisición
+### We may share data in the context of a change of business, including a merger or acquisition
 
 En caso de que Code.org adquirida por, combinada o fusionada con otra entidad, podemos transferir o asignar la información Personal que hemos recogido de los usuarios como parte de dicha fusión, adquisición, venta o cambio de control. Nuestra promesa a usted es que cualquier información Personal que hemos recopilado de usuarios podría ser salvaguardado bajo el mismo nivel de seguridad y privacidad que otorga este aviso de privacidad.
 
 ## Nuestro enfoque de seguridad de datos
 
-### Sitio web la seguridad es importante para ti y para nosotros
+### Website security is important to you, and to us
 
 Para proteger su privacidad y seguridad, tomamos pasos razonables para verificar su identidad antes de otorgarle acceso a la cuenta o hacer correcciones a su información Personal. Dado que algunas escuelas bloquean sitios web SSL-asegura, Code.org permite el acceso con o sin protección SSL, bajo la dirección de las escuelas. Si usted desea un SSL cifrada en conexión o para cifrar los datos de entrada mientras usa el sitio web, utiliza el protocolo HTTPS visitando https://code.org/.
 
-### Tratamos de garantizar que nuestro sitio web y la información enviada a nosotros sean seguros, pero medidas de seguridad no son perfectas
+### We try to ensure that our Website and information sent to us are safe, but no security measures are perfect
 
 Code.org utiliza ciertas salvaguardias físicas, administrativas y técnicas destinadas a preservar la integridad y seguridad de su información Personal y otra información que mantenemos en relación con el sitio Web. No podemos, sin embargo, asegurar o garantizar la seguridad de cualquiera o todos los datos personales y otra información que usted transmita al Code.org, y lo hace bajo su propio riesgo. Una vez que recibamos su transmisión de información, Code.org hace los esfuerzos comercialmente razonables para garantizar la seguridad de nuestros sistemas. Sin embargo, tenga en cuenta que esto no es una garantía de que dicha información Personal puede no ser accedida, divulgada, alterada o destruida por el incumplimiento de cualquiera de nuestras medidas de seguridad físicas, técnicas o gerenciales.
 
 Si nos enteramos de un incidente de seguridad de datos que compromete o no parece comprometer su información Personal, entonces intentaremos notificarle electrónicamente para que usted puede tomar medidas de protección adecuadas.
 
-### Visitantes internacionales
+### International visitors
 
 Nuestro sitio web es operado y administrado en servidores ubicados en los Estados Unidos. Si usted decide utilizar nuestro sitio web de la Unión Europea o de otras regiones del mundo con las leyes que rigen la recopilación y el uso que difieren de la ley de Estados Unidos, entonces usted reconoce y acepta que está transfiriendo su información Personal fuera de esas regiones a los Estados Unidos y que, al proporcionar su información Personal en el sitio web, usted da su consentimiento a esa transferencia.
 
-### Condiciones de Uso y Avisos
+### Conditions of Use and Notices
 
 Si usted decide visitar Code.org, su visita y cualquier disputa sobre privacidad está sujeta a este aviso de privacidad y nuestros términos de acuerdo de servicio, incluidas las limitaciones sobre daños, arbitraje de disputas, aplicación de la ley del estado de Washington y lugar de celebración para todos los litigios en Seattle, Washington.
 
-### Una nota para los Residentes de California:
+### A Note to California Residents:
 
 No revelamos ninguna información personal a terceros para propósitos de mercadotecnia. Para obtener información adicional acerca de nuestras prácticas de privacidad o revisión y solicitud para borrar cualquier información personal que ha compartido con nosotros, por favor envíe una solicitud a http://code.org/contact.
 

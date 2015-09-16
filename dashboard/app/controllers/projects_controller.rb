@@ -45,8 +45,6 @@ class ProjectsController < ApplicationController
     level_view_options(
         hide_source: sharing,
         share: sharing,
-        hide_design_mode: sharing || readonly,
-        hide_view_data_button: sharing || readonly
     )
     view_options(
         readonly_workspace: sharing || readonly,

@@ -37,8 +37,12 @@ nav: educate_nav
 </table>
 
 <br/>
+### Resources
 
-<strong>You can view all of the lessons in Unit 1 through <a href = "http://bit.ly/csp-unit1" target="_blank">this Google Drive folder</a></strong>
+<ul>
+<li> You can view all of the lessons in Unit 1 through <strong><a href = "http://bit.ly/csp-unit1" target="_blank">this Google Drive folder</a></strong></li>
+<li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong> </li>
+</ul>
 
 <br/><br/>
 

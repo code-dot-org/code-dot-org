@@ -23,8 +23,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Free Play: We've provided a function that fills your screen with _my-image_. Change _my-image_ to see what patterns you can make.",
-    "disable_examples": "false"
+    "markdown_instructions": "Free Play: We've provided a function that fills your screen with `my-image`. Change `my-image` to see what patterns you can make.",
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

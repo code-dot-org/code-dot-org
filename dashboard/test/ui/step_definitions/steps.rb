@@ -1,5 +1,7 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
+DEFAULT_WAIT_TIMEOUT = 2.minutes
+
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
     url = url.
@@ -22,7 +24,7 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(timeout: 5.minutes)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.find_element(selection_criteria) }
 end
 
@@ -40,12 +42,12 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
 end
 
@@ -325,10 +327,7 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
 end
 
 def encrypted_cookie(user)
-  key_generator = ActiveSupport::KeyGenerator.new(
-      CDO.dashboard_secret_key_base,
-      iterations: 1000
-    )
+  key_generator = ActiveSupport::KeyGenerator.new(CDO.dashboard_secret_key_base, iterations: 1000)
 
   encryptor = ActiveSupport::MessageEncryptor.new(
     key_generator.generate_key('encrypted cookie'),
@@ -404,7 +403,7 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
