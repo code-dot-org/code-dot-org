@@ -49,7 +49,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
      * @returns {string} Channel id, or undefined if we can't get one.
      */
     getChannelId: function () {
-      var match = /.*\/projects\/[^\/]+\/([^\/]+)\//.exec(this.props.abuseUrl);
+      var match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(this.props.abuseUrl);
       console.log(match && match[1]);
       return match && match[1];
     },

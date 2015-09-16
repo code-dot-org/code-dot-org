@@ -22,13 +22,12 @@ class ZendeskTicketController < ApplicationController
           :tags => (['infringment'] if params[:abuse_type] == 'infringement')
         }
       }.to_json,
-      # TODO - hide secret
-      basic_auth: { username: 'dev@code.org/token', password: 'secret'})
+      basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
 
     if params[:channel_id] != ""
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
 
-      result = ChannelsApi.call(
+      ChannelsApi.call(
         'REQUEST_METHOD' => 'POST',
         'PATH_INFO' => channels_path,
         'REQUEST_PATH' => channels_path,
