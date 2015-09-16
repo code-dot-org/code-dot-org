@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "ακουμπά την επάνω άκρη",
   "whenUp": "όταν πατηθεί το επάνω βέλος",
   "whenUpTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν πατηθεί το πλήκτρο πάνω βέλος.",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

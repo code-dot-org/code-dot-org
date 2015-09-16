@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "chạm vào mép trên",
   "whenUp": "Khi mũi tên chỉ lên trên",
   "whenUpTooltip": "Thực hiện các thao tác dưới đây khi chìa khoá mũi tên chỉ lên bật.",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

@@ -100,7 +100,6 @@ The LAB Miami<br/>
 Miami, FL 33127
 
 
-Free parking is available in the lot next to the building.
 
 
 **What to bring to Phase 3 bi-yearly sessions:**

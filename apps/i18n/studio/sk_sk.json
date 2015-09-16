@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "dotýka sa horného okraja",
   "whenUp": "keď šípka nahor",
   "whenUpTooltip": "Vykonať akcie nižšie pri stlačení šípky hore.",
-  "yes": "Áno"
+  "yes": "Áno",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

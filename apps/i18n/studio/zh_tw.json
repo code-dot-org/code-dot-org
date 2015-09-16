@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "接觸上邊邊緣",
   "whenUp": "當＂上方向鍵＂",
   "whenUpTooltip": "當按下＂上方向鍵＂，就會執行動作",
-  "yes": "是"
+  "yes": "是",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

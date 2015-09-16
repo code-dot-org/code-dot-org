@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "toca a borda superior",
   "whenUp": "quando a seta para cima estiver pressionada",
   "whenUpTooltip": "Execute as ações abaixo quando a tecla com a seta para cima estiver pressionada.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

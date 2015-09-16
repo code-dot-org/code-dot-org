@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "dotyka górnej krawędzi",
   "whenUp": "kiedy strzałka w górę",
   "whenUpTooltip": "Wykonaj poniższe czynności, kiedy naciśnięty zostaje klawisz strzałki w górę.",
-  "yes": "Tak"
+  "yes": "Tak",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

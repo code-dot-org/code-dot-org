@@ -34,6 +34,7 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
@@ -107,6 +108,11 @@ def load_configuration()
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
     config['pegasus_db_writer']   ||= config['db_writer'] + config['pegasus_db_name']
+
+    # Set AWS SDK environment variables from provided config.
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
 
