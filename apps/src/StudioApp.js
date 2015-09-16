@@ -805,7 +805,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     renderedMarkdown = marked(level.markdownInstructions);
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text';
+    headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
     if (!this.icon) {
       headerElement.className += ' no-modal-icon';
