@@ -80,7 +80,7 @@ module.exports = React.createClass({
     this.props.handleClearPuzzle();
     dashboard.project.save(function () {
       location.reload();
-    });
+    }, true);
   },
 
   render: function () {
