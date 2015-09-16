@@ -25,6 +25,8 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
     dont_cache
     content_type :json
+    owner_id, _ = storage_decrypt_channel_id(channel_id)
+    not_authorized unless owner_id == storage_id('user')
     PropertyType.new(channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
