@@ -38,7 +38,7 @@ else
     browser = Selenium::WebDriver.for(:remote,
                                       url: url,
                                       desired_capabilities: capabilities,
-                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 2.minutes}) # iOS takes more time
+                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
     puts "Got browser in #{Time.now.to_i - start_time}s"
   end
 
