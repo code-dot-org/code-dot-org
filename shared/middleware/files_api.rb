@@ -3,6 +3,13 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 
 class FilesApi < Sinatra::Base
+  def self.max_file_size
+    5_000_000 # 5 MB
+  end
+
+  def self.max_app_size
+    2_000_000_000 # 2 GB
+  end
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -77,11 +84,15 @@ class FilesApi < Sinatra::Base
     dont_cache
 
     # read the entire request before considering rejecting it, otherwise varnish
-    # may return a 503 instead of whatever status code we specify.
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
     body = request.body.read
 
     owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     not_authorized unless owner_id == storage_id('user')
+
+    too_large unless body.length < FilesApi::max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -91,7 +102,10 @@ class FilesApi < Sinatra::Base
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
 
-    response = get_bucket_impl(endpoint).new.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
+    buckets = get_bucket_impl(endpoint).new
+    app_size = buckets.app_size(encrypted_channel_id)
+    forbidden unless app_size + body.length < FilesApi::max_app_size
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
     category = mime_type.split('/').first

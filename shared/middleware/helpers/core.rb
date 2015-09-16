@@ -23,8 +23,16 @@ def not_authorized()
   halt(401, "Not authorized\n")
 end
 
+def forbidden()
+  halt(403, "Forbidden\n")
+end
+
 def not_found()
   halt(404, "Not found\n")
+end
+
+def too_large()
+  halt(413, "Payload too large\n")
 end
 
 def unsupported_media_type()
