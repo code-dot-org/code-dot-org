@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'json'
 
 class PropertiesApi < Sinatra::Base
 
@@ -72,6 +73,39 @@ class PropertiesApi < Sinatra::Base
     dont_cache
     content_type :json
     value.to_json
+  end
+
+  #
+  # POST /v3/(shared|user)-properties/<channel-id>
+  #
+  # Multi-set  values from request body
+  #
+  post %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
+    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
+    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    begin
+      json_data = JSON.parse(request.body.read)
+    rescue => e
+      msg = "The json could not be loaded: #{e.message}"
+      halt 400, {}, msg
+    end
+
+    overwrite = request.GET['overwrite'] == '1'
+
+    bag = PropertyType.new(channel_id, storage_id(endpoint))
+    json_data.each do |k, v|
+      if !overwrite
+        begin
+          bag.get(k)
+          next
+        rescue PropertyType::NotFound
+          # The value is not set
+        end
+      end
+      bag.set(k, v, request.ip)
+    end
+    dont_cache
   end
 
   #
