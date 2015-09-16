@@ -11,16 +11,14 @@
     "textModeAtStart": true,
     "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
-      "setSprite": null,
+      "setCharacter": null,
       "setBackground": null,
-      "setSpritePosition": null,
-      "setSpriteSpeed": null,
+      "setCharacterSpeed": null,
       "setWalls": null,
       "playSound": null,
       "addItemsToScene": null,
       "setItemActivity": null,
       "changeScore": null,
-      "vanish": null,
 
       "moveEast": null,
       "moveWest": null,

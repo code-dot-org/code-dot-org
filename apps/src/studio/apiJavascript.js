@@ -29,6 +29,23 @@ exports.setSpriteSpeed = function (spriteIndex, value) {
   });
 };
 
+// setCharacter and setCharacterSpeed are wrappers to setSprite and
+// setSpriteSpeed that always pass 0 for the spriteIndex (used by hoc2015)
+
+exports.setCharacter = function (value) {
+  Studio.queueCmd(null, 'setSprite', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
+exports.setCharacterSpeed = function (value) {
+  Studio.queueCmd(null, 'setSpriteSpeed', {
+    'spriteIndex': 0,
+    'value': value
+  });
+};
+
 /*
 exports.setSpriteSize = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSpriteSize', {
