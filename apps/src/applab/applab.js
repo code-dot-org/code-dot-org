@@ -332,8 +332,7 @@ function renderFooterInSharedGame() {
   var menuItems = [
     {
       text: applabMsg.reportAbuse(),
-      link: '#',
-      type: 'reportAbuse'
+      link: '/report_abuse'
     },
     {
       text: applabMsg.makeMyOwnApp(),

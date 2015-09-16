@@ -168,4 +168,7 @@ class ChannelsApi < Sinatra::Base
     value = StorageApps.new(storage_id('user')).reset_abuse(id)
     {:abuseScore => value }.to_json
   end
+  post %r{/v3/channels/([^/]+)/abuse/delete$} do |id|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+  end
 end
