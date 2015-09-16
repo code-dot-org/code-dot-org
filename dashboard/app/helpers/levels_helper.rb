@@ -225,6 +225,10 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
+    if @level.is_a? NetSim
+      app_options['netsimMaxRouters'] = CDO.netsim_max_routers
+    end
+
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]

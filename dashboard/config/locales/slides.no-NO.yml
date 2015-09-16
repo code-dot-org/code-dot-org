@@ -119,7 +119,7 @@
       7:
         image: notes/flappy07.jpg
         text: Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester
-          du "FLAKS" blokken til den riktige hendelsesbehandleren og fuglen vil flakse
+          du "FLAKS"-blokken til den riktige hendelsesbehandleren og fuglen vil flakse
           hver gang du klikker med musen.
       8:
         image: notes/flappy08.jpg

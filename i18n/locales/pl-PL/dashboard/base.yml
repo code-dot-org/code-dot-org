@@ -307,8 +307,8 @@ pl:
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
       section: Sekcja
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
+      example: Przykładowe rozwiązanie
+      example_with_number: 'Przykładowe rozwiązanie %{solution_number}'
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -603,3 +603,8 @@ pl:
     view_all: Zobacz Moje Projekty
     remix: Remix
     click_to_remix: "Kliknij 'Remix', żeby utworzyć swoją wersję!"
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio
