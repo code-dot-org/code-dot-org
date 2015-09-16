@@ -8,8 +8,7 @@ var sourcesApi = require('../clientApi').sources;
  */
 module.exports = React.createClass({
   propTypes: {
-    handleClearPuzzle: React.PropTypes.func.isRequired,
-    handleCloseDialog: React.PropTypes.func.isRequired
+    handleClearPuzzle: React.PropTypes.func.isRequired
   },
 
   /**
@@ -23,6 +22,7 @@ module.exports = React.createClass({
     return {
       versions: null,
       statusMessage: '',
+      showSpinner: true,
       confirmingClearPuzzle: false
     };
   },
@@ -38,7 +38,7 @@ module.exports = React.createClass({
    * @param xhr
    */
   onVersionListReceived: function (xhr) {
-    this.setState({versions: JSON.parse(xhr.responseText)});
+    this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
   },
 
   /**
@@ -64,7 +64,7 @@ module.exports = React.createClass({
     sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
 
     // Show the spinner.
-    this.setState({versions: null});
+    this.setState({showSpinner: true});
   },
 
   onConfirmClearPuzzle: function () {
@@ -76,26 +76,27 @@ module.exports = React.createClass({
   },
 
   onClearPuzzle: function () {
+    this.setState({showSpinner: true});
     this.props.handleClearPuzzle();
-    dashboard.project.save();
-    this.props.handleCloseDialog();
+    dashboard.project.save(function () {
+      location.reload();
+    });
   },
 
   render: function () {
     var body;
-    if (this.state.confirmingClearPuzzle) {
+    if (this.state.showSpinner) {
+      body = (
+          <div style={{margin: '1em 0', textAlign: 'center'}}>
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+          </div>
+      );
+    } else if (this.state.confirmingClearPuzzle) {
       body = (
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
           <button id="confirm-button" style={{float: 'right'}} onClick={this.onClearPuzzle}>Start Over</button>
           <button id="again-button" onClick={this.onCancelClearPuzzle}>Cancel</button>
-        </div>
-      );
-    // If `this.state.versions` is null, the versions are still loading.
-    } else if (this.state.versions === null) {
-      body = (
-        <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
         </div>
       );
     } else {

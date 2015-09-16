@@ -453,10 +453,7 @@ StudioApp.prototype.init = function(config) {
         id: 'showVersionsModal'
       });
       React.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
-        handleCloseDialog: function () {
-          dialog.hide();
-        }
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
       }), codeDiv);
 
       dialog.show();
