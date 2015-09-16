@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
 
   # this is needed to avoid devise breaking on email param
   before_filter :configure_permitted_parameters, if: :devise_controller?
-  before_filter :verify_params_before_cancan_loads_model
 
   around_filter :with_locale
 
@@ -27,17 +26,21 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  if Rails.env.development?
+    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
+    # pp='disabled' will disable it; any other value will enable it.
+    before_filter :maybe_enable_profiler
+    def maybe_enable_profiler
+      pp = params['pp']
+      if pp
+        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+      end
+    end
+  end
+
   def reset_session_endpoint
     reset_session
     render text: "OK"
-  end
-
-# we need the following to fix a problem with the interaction between CanCan and strong_parameters
-# https://github.com/ryanb/cancan/issues/835
-  def verify_params_before_cancan_loads_model
-    resource = controller_name.singularize.to_sym
-    method = "#{resource}_params"
-    params[resource] &&= send(method) if respond_to?(method, true)
   end
 
   rescue_from CanCan::AccessDenied do
@@ -68,6 +71,12 @@ class ApplicationController < ActionController::Base
       format.html { render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error }
       format.all { head :internal_server_error}
     end
+  end
+
+  def prevent_caching
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
   protected

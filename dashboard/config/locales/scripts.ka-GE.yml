@@ -13,7 +13,7 @@
           description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'ლაბირინთი: მწკრივი'
+          'Maze: Sequence': 'ლაბირინთი: თანმიმდევრობა'
           'Maze: Debugging': 'ლაბირინთი: ბაგების გამოსწორება'
           'Artist 1: Intro': 'მხატვარი 1: შესავალი'
           Artists 2: მხატვრები 2
@@ -40,18 +40,18 @@
             ამოცანების ამოხსნის და რთულ დავალებებზე მუშაობის უნარებს. კურსის ბოლოს
             მოსწავლეები ქმნიან თავიანთ თამაშს ან ისტორიას, რომელთა გაზიარება შეეძლებათ.
             რეკოენდებულია K-1 კლასებისთვის.
-          'Bee: Sequence': 'ფუტკარი: მწკრივი'
-          'Artist: Sequence': 'მხატვარი: მწკრივი'
+          'Bee: Sequence': 'ფუტკარი: თანმიმდევრობა'
+          'Artist: Sequence': 'მხატვარი: თანმიმდევრობა'
           'Artist: Shapes': 'მხატვარი: ფორმები'
           'Maze: Loops': 'ლაბირინთი: ციკლები'
           'Bee: Loops': 'ფუტკარი: ციკლები'
           'Studio: Create a Story': 'თამაშების ლაბორატორია: ისტორიის შექმნა'
           'Artist: Loops': 'მხატვარი: ციკლები'
-          description_audience: 4-დან 6-მდე წლები
+          description_audience: ასაკი 4-დან 6-მდე
           description_short: კურსი 1 შექმნილია ადრეული მკითხველებისთვის.
         course2:
           The Maze: ლაბირინთი
-          Suzi: Suzi
+          Suzi: სიუზი
           The Artist: მხატვარი
           Artist Debugging: მხატვრის ბაგების გამოსწორება
           Bounce: ხტუნვა
@@ -74,23 +74,23 @@
           Conditionals: პირობები
           Binary Bracelets: ორობითი სამაჯურები
           The Big Event: დიდი მოვლენა
-          Your Digital Footprint: შენი ციფრული ნაკვალევი
+          Your Digital Footprint: თქვენი ციფრული ნაკვალევი
           description: კურსი 2 შექმნილია მოსწავლეებისთვის, რომელთაც შეუძლიათ კითხვა
             და არ აქვთ გამოცდილება პროგრამირებაში. ამ კურსში მოსწავლეები შექმნიან
             ამოცანების ამომხსნელ პროგრამებს და განავითარებენ ინტერაქტიულ თამაშებს
             ან ისტორიებს, რომელთა გაზიარება შეეძლებათ. რეკომენდებულია 2-5 კლასებისთვის.
-          'Maze: Sequence': 'ლაბირინთი: მწკრივი'
-          'Artist: Sequence': 'მხატვარი: მწკრივი'
+          'Maze: Sequence': 'ლაბირინთი: თანმიმდევრობა'
+          'Artist: Sequence': 'მხატვარი: თანმიმდევრობა'
           'Maze: Loops': 'ლაბირინთი: ციკლები'
           'Artist: Loops': 'მხატვარი: ციკლები'
           'Bee: Loops': 'ფუტკარი: ციკლები'
           'Bee: Debugging': 'ფუტკარი: ბაგების გამოსწორება'
           'Artist: Debugging': 'მხატვარი: ბაგების გამოსწორება'
           'Bee: Conditionals': 'ფუტკარი: პირობითი ბრძანებები'
-          'Artist: Sequence2': 'მხატვარი: მწკრივი2'
-          'Maze: Sequence2': 'ლაბირინთი: მწკრივი2'
+          'Artist: Sequence2': 'მხატვარი: თანმიმდევრობა2'
+          'Maze: Sequence2': 'ლაბირინთი: თანმიმდევრობა2'
           'Artist: Nested Loops': 'მხატვარი: ჩასმული ციკლები'
-          description_audience: 6-18 წლის
+          description_audience: ასაკი 6-18
           description_short: კურსი 2 შექმნილია მოსწავლეებისთვის, რომელთაც კითხვა შეუძლიათ.
         course3:
           The Maze: ლაბირინთი
@@ -116,13 +116,13 @@
           Internet: ინტერნეტი
           Crowdsourcing: ქრაუდსორსინგი
           Digital Citizenship: ციფრული მოქალაქეობა
-          Farmer - While Loops: ფერმერი - While ციკლები
+          Farmer - While Loops: ფერმერი - "სანამ" ციკლები
           description: კურსი 3 შექმნილია მოსწავლეებისთვის, რომელთაც გაიარეს კურსი
-            2. მოსწავლეები უფრო ღრმად გაერევიან წინა კურსებში წამოჭრილ პროგრამირების
+            2. მოსწავლეები უფრო ღრმად გაერკვევიან წინა კურსებში წამოჭრილ პროგრამირების
             საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის
             ბოლოს მოსწავლეები ქმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება
             ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის.
-          'Studio: Create a Game': 'თამაშების ლაბორატორია: შექმენი თამაში'
+          'Studio: Create a Game': 'თამაშების ლაბორატორია: შექმენით თამაში'
           Maze: ლაბირინთი
           Artist: მხატვარი
           'Artist: Functions': 'მხატვარი: ფუნქციები'
@@ -130,7 +130,7 @@
           'Bee: Conditionals': 'ფუტკარი: პირობითი ბრძანებები'
           'Maze: Conditionals': 'ლაბირინთი: პირობითი ბრძანებები'
           'Artist: Nested Loops': 'მხატვარი: ჩასმული ციკლები'
-          'Farmer: While Loops': ფერმერი - While ციკლები
+          'Farmer: While Loops': ფერმერი - "სანამ" ციკლები
           'Bee: Nested Loops': 'ფუტკარი: ჩასმული ციკლები'
           'Bee: Debugging': 'ფუტკარი: ბაგების გამოსწორება'
           Maze2: ლაბირინთი2
@@ -149,20 +149,20 @@
           description_short: კურსი 3 არის კურსი 2-ის გაგრძელება.
         playlab:
           title: თამაშების ლაბორატორია
-          description: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+          description: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
           Play Lab: თამაშების ლაბორატორია
-          description_short: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+          description_short: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
         artist:
           title: მხატვარი
-          description: დახატე მაგარი სურათები და შექმენი დიზაინები მხატვართან ერთად!
+          description: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
           Artist: მხატვარი
-          description_short: დახატე მაგარი სურათები და შექმენი დიზაინები მხატვართან
+          description_short: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან
             ერთად!
         hourofcode:
           Maze: ლაბირინთი
           title: კოდის ერთი საათი
-          description: სცადე კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და
-            Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ს Scrat-თან ერთად!
+          description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ის და
+            Plants vs. Zombies-ის პერსონაჟებსა და Ice Age-ის Scrat-თან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
         frozen:
@@ -217,12 +217,12 @@
           description: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები
             2 და 3.
           Course 4 Prerequisite: კურსი 4-ის პრერეკვიზიტი
-          'Maze: Sequence': 'ლაბირინთი: მწკრივი'
-          'Artist: Sequence': 'მხატვარი: მწკრივი'
+          'Maze: Sequence': 'ლაბირინთი: თანმიმდევრობა'
+          'Artist: Sequence': 'მხატვარი: თანმიმდევრობა'
           'Artist: Loops': 'მხატვარი: ციკლები'
           'Bee: Conditionals': 'ფუტკარი: პირობითი ბრძანებები'
           'Artist: Nested Loops': 'მხატვარი: ჩასმული ციკლები'
-          'Farmer: While Loops': ფერმერი - While ციკლები
+          'Farmer: While Loops': ფერმერი - "სანამ" ციკლები
           'Bee: Nested Loops': 'ფუტკარი: ჩასმული ციკლები'
           'Artist: Functions': 'მხატვარი: ფუნქციები'
           'Bee: Debugging': 'ფუტკარი: ბაგების გამოსწორება'
@@ -407,12 +407,12 @@
           title: Flappy კოდი
           description: გინდა, შენი საკუთარი თამაში დაწერო 10 წუთში? ნახეთ ჩვენი ტუტორიალი
             "Flappy Code"!
-          description_short: დაწერე შენი Flappy თამაში 10 წუთზე ნაკლებში!
+          description_short: დაწერეთ თქვენი Flappy თამაში 10 წუთზე ნაკლებში!
           Flappy Code: Flappy კოდი
         jigsaw:
           title: ფაზლი
-          description: სცადეთ ჩვენი პაზლის გაკვეთილი
-          description_short: სცადეთ ჩვენი პაზლის გაკვეთილი
+          description: სცადეთ ჩვენი პაზლის ტუტორიალი
+          description_short: სცადეთ ჩვენი პაზლის ტუტორიალი
           Jigsaw: ფაზლი
         step:
           title: ნაბიჯი
@@ -421,7 +421,7 @@
           Step: ნაბიჯი
         Hour of Code:
           title: კოდის ერთი საათი 2013
-          description: სცადეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ისა
+          description: გაიარეთ კომპიუტერული მეცნიერების საფუძვლები Angry Birds-ისა
             და Plants vs Zombies-ის პერსონაჟებთან ერთად!
           description_short: სცადეთ კომპიუტერული მეცნიერების საფუძვლები მრავალ სახალისო
             პერსონაჟთან ერთად!
@@ -463,12 +463,12 @@
           description: მცირე შეჯამება მოსწავლეებისთვის, რომლებსაც არ გაუვლიათ კურსები
             2 და 3.
           Course 4 Prerequisite: კურსი 4-ის პრერეკვიზიტი
-          'Maze: Sequence': 'ლაბირინთი: მწკრივი'
-          'Artist: Sequence': 'მხატვარი: მწკრივი'
+          'Maze: Sequence': 'ლაბირინთი: თანმიმდევრობა'
+          'Artist: Sequence': 'მხატვარი: თანმიმდევრობა'
           'Artist: Loops': 'მხატვარი: ციკლები'
           'Bee: Conditionals': 'ფუტკარი: პირობითი ბრძანებები'
           'Artist: Nested Loops': 'მხატვარი: ჩასმული ციკლები'
-          'Farmer: While Loops': ფერმერი - While ციკლები
+          'Farmer: While Loops': ფერმერი - "სანამ" ციკლები
           'Bee: Nested Loops': 'ფუტკარი: ჩასმული ციკლები'
           'Artist: Functions': 'მხატვარი: ფუნქციები'
           'Bee: Debugging': 'ფუტკარი: ბაგების გამოსწორება'
@@ -520,7 +520,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'გაკვეთილი კომპიუტერის გარეშე:
             ვიდეო თამაშები და საკოორდინატო სიბრტყეები'
           'Calc: Evaluation Blocks': 'კალკულატორი: შეფასების ბლოკები'
-          'Eval: Strings and Images': 'შეფასება: String-ები და სურათები'
+          'Eval: Strings and Images': 'შეფასება: ხაზები და სურათები'
           'Unplugged: Contracts': 'გაკვეთილი კომპიუტერის გარეშე: კონტრაქტები'
           'Eval: Writing Contracts': 'შეფასება: კონტრაქტების წერა'
           'Calc: Defining Variables': 'კალკულატორი: ცვლადების განსაზღვრა'
@@ -533,10 +533,13 @@
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'თამაშების ლაბორატორია: ანიმაცია (დიდი
             თამაში)'
-          'Unplugged: Booleans': 'გაკვეთილი კომპიუტერის გარეშე: Boolean-ები'
-          'Eval: Boolean Operators': 'შეფასება: Boolean ოპერატორები'
-          'Play Lab: Booleans': 'თამაშების ლაბორატორია: Boolean-ები'
-          'Play Lab: Boolean (Big Game)': 'თამაშების ლაბორატორია: Boolean (დიდი თამაში)'
+          'Unplugged: Booleans': 'გაკვეთილი კომპიუტერის გარეშე: ბულის ტიპის მონაცემები
+            (ლოგიკური ოპერატორები)'
+          'Eval: Boolean Operators': 'შეფასება: ბულის ტიპის (ლოგიკური) ოპერატორები'
+          'Play Lab: Booleans': 'თამაშების ლაბორატორია: ბულის ტიპის მონაცემები (ლოგიკური
+            ოპერატორები)'
+          'Play Lab: Boolean (Big Game)': 'თამაშების ლაბორატორია: ბულის ტიპის მონაცემები(დიდი
+            თამაში)'
           'Unplugged: Conditionals and Piecewise Functions': 'გაკვეთილი კომპიუტერის
             გარეშე: პირობითი ბრძანებები და ნაწილობითი ფუნქციები'
           'Eval: Conditionals': 'შეფასება: პირობითი ბრძანებები'
@@ -551,7 +554,7 @@
           Simple Function Definition: Simple Function Definition
           The Design Recipe: დიზაინის რეცეპტი
           Your Game - Animation: Your Game - Animation
-          Booleans: Boolean-ები
+          Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: პირობითი ბრძანებები და ნაწილობითი
@@ -574,7 +577,7 @@
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Boolean-ები
+          Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -923,7 +926,7 @@
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: დიზაინის რეცეპტი
           Big Game - Animation: Big Game - Animation
-          Booleans: Boolean-ები
+          Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -954,6 +957,8 @@
           description: All the level types for UI testing
           description_short: All the level types for UI testing
           Odometer: Odometer
+          Vigenere: Vigenere
+          Frequency: Frequency
           Text Compression: Text Compression
           Pixelation: Pixelation
           Multi2: Multi2
@@ -971,7 +976,7 @@
           Defining Variables: ცვლადების განსაზღვრა
           Defining Functions: ფუნქციების განსაზღვრა
           Rocket-Height: Rocket-Height
-          Booleans: Boolean-ები
+          Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
           'Eval: Conditionals': 'შეფასება: პირობითი ბრძანებები'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1073,10 +1078,12 @@
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: კოდის საათი 2015
-          description_short: გამოიყენე თამაშების ლაბორატორია ისტორიის ან თამაშის შესაქმნელად.
-          description: გამოიყენე თამაშების ლაბორატორია ისტორიის ან თამაშის შესაქმნელად.
+          title: კოდის ერთი საათი 2015
+          description_short: გამოიყენეთ თამაშების ლაბორატორია ისტორიის ან თამაშის
+            შესაქმნელად.
+          description: გამოიყენეთ თამაშების ლაბორატორია ისტორიის ან თამაშის შესაქმნელად.
           Hour of Code: კოდის ერთი საათი
+          Hour of Code 2015: კოდის ერთი საათი 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'ფაზა 2 Online: ფუნქციური პროგრამირების ალგებრის სწავლა'
@@ -1090,7 +1097,7 @@
           Defining Variables: ცვლადების განსაზღვრა
           Defining Functions: ფუნქციების განსაზღვრა
           Rocket-Height: Rocket-Height
-          Booleans: Boolean-ები
+          Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
           'Eval: Conditionals': 'შეფასება: პირობითი ბრძანებები'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1256,3 +1263,166 @@
             all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended
             for grades 3-8.
           description_audience: Ages 7-13
+        vigenere:
+          title: Vigenere Cipher Widget
+          description_short: Vigenere Cipher Widget
+          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
+            messages using a Vigenere Cipher
+          Vigenere: Vigenere
+        frequency:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        algebraPD3a:
+          title: Computer Science in Algebra PD
+          description_short: CS in Algebra blended online school year study
+          description: CS in Algebra blended online school year study
+          Updates - Tweaks and Polish: Updates - Tweaks and Polish
+          Updates - The Big Game and Projects: Updates - The Big Game and Projects
+          Updates - The Design Recipe: Updates - The Design Recipe
+          Lesson Prep: Lesson Prep
+        sciencePD3_pre1:
+          title: Computer Science in Science PD Phase 3 Before 1st In-Person
+          description_short: Phase 3 Blended Summer Study Pre 1
+          description: Phase 3 Blended Summer Study (Segment One)
+          Welcome Back!: Welcome Back!
+          The TLO: The TLO
+          Prep With Your Modules: Prep With Your Modules
+        frequency_analysis:
+          title: Frequency Analysis Widget
+          description_short: Frequency Analysis Widget
+          description: Use the Frequency Analysis Widget to analyze letter frequencies
+            in an input text compared to expected frequencies for standard English.
+            Use that comparison to explore cracking Shift and Substitution Ciphers.
+          Frequency Analysis: Frequency Analysis
+        ECSPD3-Unit2:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Teaching Strategies: Teaching Strategies
+          Unit 2 Overview: Unit 2 Overview
+          Problem Solving: Problem Solving
+          Introduction to the Unit 2 Challenge: Introduction to the Unit 2 Challenge
+          Day 1-2 Solving Community Problems with Data: Day 1-2 Solving Community
+            Problems with Data
+          'Day 3 Intro To Problem Solving: Candy Bar Activity': 'Day 3 Intro To Problem
+            Solving: Candy Bar Activity'
+          'Day 4-6 Strategies in Problem Solving: Handshake Activity': 'Day 4-6 Strategies
+            in Problem Solving: Handshake Activity'
+          'Day 7-9 Problem Solving: Cornrow Curves': 'Day 7-9 Problem Solving: Cornrow
+            Curves'
+          Day 10-12 Binary Number Systems: Day 10-12 Binary Number Systems
+          'Day 13-14 Linear and Binary Search: Tower Building Activity': 'Day 13-14
+            Linear and Binary Search: Tower Building Activity'
+          Day 15-16 Sorting Algorithms: Day 15-16 Sorting Algorithms
+          'Day 17 Minimal Spanning Trees: Muddy City': 'Day 17 Minimal Spanning Trees:
+            Muddy City'
+          Day 18-21 Final Project: Day 18-21 Final Project
+          Unit 2 Challenge Planning & Creation: Unit 2 Challenge Planning & Creation
+        ECSPD3-Unit3:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Teaching Strategies: Teaching Strategies
+          Unit 3 Overview: Unit 3 Overview
+          Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
+          Unit 3 Challenge Planning & Creation: Unit 3 Challenge Planning & Creation
+          Day 1-2 Online Experiences: Day 1-2 Online Experiences
+          Day 3-4 HTML- Paragraph and Header Tags: Day 3-4 HTML- Paragraph and Header
+            Tags
+          Day 5 HTML - Strong and EM Tags: Day 5 HTML - Strong and EM Tags
+          Day 6-7 HTML -Images: Day 6-7 HTML -Images
+          Day 8-10 Introduction to CSS: Day 8-10 Introduction to CSS
+          Day 11-13 Separating HTML and CSS: Day 11-13 Separating HTML and CSS
+          'Day 14 HTML: Links': 'Day 14 HTML: Links'
+          'Day 15-16 HTML and CSS: Tables, Lists,  Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists,  Menus'
+          'Day 17-19 HTML and CSS: Create own webpage': 'Day 17-19 HTML and CSS: Create
+            own webpage'
+          'Day 20-21 HTML and CSS: Adding Enhancements to Site': 'Day 20-21 HTML and
+            CSS: Adding Enhancements to Site'
+          Day 22-25 Final Project: Day 22-25 Final Project
+          'Day 15-16 HTML and CSS: Tables, Lists, Menus': 'Day 15-16 HTML and CSS:
+            Tables, Lists, Menus'
+        ECSPD3-Unit4:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Teaching Strategies: Teaching Strategies
+          Unit 4 Overview: Unit 4 Overview
+          Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
+          Unit 4 Challenge Planning & Creation: Unit 4 Challenge Planning & Creation
+          'Day 1 Scratch: Intro': 'Day 1 Scratch: Intro'
+          'Day 2-3 Scratch: Name Project': 'Day 2-3 Scratch: Name Project'
+          'Day 4 Scratch: Creating Dialogue': 'Day 4 Scratch: Creating Dialogue'
+          'Day 5-6 Scratch: Moving Sprites': 'Day 5-6 Scratch: Moving Sprites'
+          'Day 7-8 Scratch: Event Driven Programming': 'Day 7-8 Scratch: Event Driven
+            Programming'
+          Day 9 Broadcasting Role Play: Day 9 Broadcasting Role Play
+          'Day 10-13 Scratch: Broadcasting': 'Day 10-13 Scratch: Broadcasting'
+          'Day 14 Scratch: Variables': 'Day 14 Scratch: Variables'
+          'Day 15 Scratch: Conditionals': 'Day 15 Scratch: Conditionals'
+          'Day 16-17 Scratch: AND OR and Randomness': 'Day 16-17 Scratch: AND OR and
+            Randomness'
+          'Day 18 Scratch: Rock Paper Scissors': 'Day 18 Scratch: Rock Paper Scissors'
+          'Day 19 Scratch: Timer': 'Day 19 Scratch: Timer'
+          'Day 20-23 Scratch: Timing Game': 'Day 20-23 Scratch: Timing Game'
+          'Day 24 Scratch: Games': 'Day 24 Scratch: Games'
+          Day 25-30 Final Project: Day 25-30 Final Project
+        ECSPD3-Unit5:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Teaching Strategies: Teaching Strategies
+          Unit 5 Overview: Unit 5 Overview
+          Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
+          Unit 5 Challenge Planning & Creation: Unit 5 Challenge Planning & Creation
+        ECSPD3-Unit6:
+          title: 'Exploring Computer Science PD: Academic Year Development'
+          description_short: Academic Year Development
+          description: Academic Year Development
+          Welcome!: კეთილი იყოს თქვენი მობრძანება!
+          Teaching Strategies: Teaching Strategies
+          Unit 6 Overview: Unit 6 Overview
+          Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
+          Unit 6 Challenge Planning & Creation: Unit 6 Challenge Planning & Creation
+        cspunit4draft:
+          title: CS Principles Unit 4 - Data
+          description_short: Data
+          description: |
+            Collect, analyze, and extract knowledge from data by programming and
+            building apps. Process data imported from other sources and also pull
+            data from live data APIs.
+          Data is the Secret Ingredient: Data is the Secret Ingredient
+          Finding Data: Finding Data
+          Building Apps Using Structured Data: Building Apps Using Structured Data
+          'Data App Part 1: Brainstorm': 'Data App Part 1: Brainstorm'
+          APIs and Access to Large Data Sets: APIs and Access to Large Data Sets
+          Structuring Data with JSON: Structuring Data with JSON
+          'Data App Part 2: Data Design': 'Data App Part 2: Data Design'
+          'Data App Part 3: Code': 'Data App Part 3: Code'
+          Identifying People with Data: Identifying People with Data
+          Collecting Personal Information: Collecting Personal Information
+          Privacy Policy: კონფიდენციალურობის პოლიტიკა
+          'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
+          'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
+          'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
+          Reading Data: Reading Data
+          Sorting: Sorting
+          Searching: Searching
+          'Data App Part 6: Sort and Search': 'Data App Part 6: Sort and Search'
+          'Data App Part 7: Read Data': 'Data App Part 7: Read Data'
+          What Data Can Tell Us: What Data Can Tell Us
+          Interpreting Data from Different Perspectives: Interpreting Data from Different
+            Perspectives
+          Visualizations in the Real World: Visualizations in the Real World
+          'Data App Part 8: Visualize Data': 'Data App Part 8: Visualize Data'
+          'Data App Part 9: Reflect': 'Data App Part 9: Reflect'
+          'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'

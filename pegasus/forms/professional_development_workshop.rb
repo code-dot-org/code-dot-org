@@ -3,7 +3,7 @@ require 'cdo/activity_constants'
 require 'cdo/aws/s3'
 
 class ProfessionalDevelopmentWorkshop
-  MINIMUM_ATTENDEE_LEVELS_COUNT = 15
+  MINIMUM_ATTENDEE_LEVELS_COUNT = 10
 
   def self.normalize(data)
     result = {}

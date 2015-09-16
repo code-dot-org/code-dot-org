@@ -13,7 +13,7 @@
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
   %p.fact{style: "color: #ddd"}
-    (growing at <b>#{data[:growth_vs_average_f]}x</b> the state average)
+    (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
     %strong.figure
@@ -76,7 +76,7 @@
       count computer science for credit towards high school graduation!
   - else
     %p
-      #{statename} is one of #{credit_count} states where students
+      #{statename} is one of #{no_credit_count} states where students
       %strong
         can't
       count computer science for credit towards high school graduation.
@@ -86,7 +86,7 @@
     =data[:text_t]
 
 %button{onclick: "return adjustScroll('tools-section')"}
-  Take Action
+  Take action
 
 -if data[:action_text_s] && data[:action_url_s]
   %a{href: data[:action_url_s], target: '_blank'}
@@ -95,7 +95,7 @@
 - else
   %a{href: data[:action_url_s], target: '_blank'}
     %button{class: 'state-petition-btn', style: 'visibility: hidden'}
-      Sign Petition
+      Sign petition
 
 #changeorg{style: 'display: none;'}
   %b#title
@@ -104,7 +104,7 @@
   %br
   %br
   %a{href: petition_url, target: '_blank'}
-    %button{:class=>'state-petition-btn'} Sign Petition
+    %button{:class=>'state-petition-btn'} Sign petition
 %br
 %br
 

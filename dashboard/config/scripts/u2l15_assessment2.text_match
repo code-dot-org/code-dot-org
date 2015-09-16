@@ -4,3 +4,9 @@ title 'Assessment: Question 2'
 markdown <<MARKDOWN
 What problems exist with encryption schemes such as the Vigenere cipher even when strong encryption keys are used?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers may vary, but may include the following:
+
+- with computation, text encrypted with a vigenere cipher can be cracked. even when strong keys are used, there are strategies and techniques, like looking for short words that are commonly used (such as: the, be, to of and), which will show up as patterns in the encoded text with a long enough body of text. 
+MARKDOWN

@@ -65,6 +65,7 @@
   "penTooltip": "펜을 올려 선을 그리지 않거나, 펜을 내려 선을 그립니다.",
   "penUp": "펜 올리기",
   "reinfFeedbackMsg": "만든 그림이 여기 있습니다! 계속 하거나 다음 퍼즐로 이동하세요!",
+  "setAlpha": "set alpha",
   "setColour": "색 설정:",
   "setPattern": "패턴 설정",
   "setWidth": "set width",

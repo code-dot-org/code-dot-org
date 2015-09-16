@@ -1,8 +1,10 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # 안내 및 유용한 통계자료들
 
@@ -10,8 +12,10 @@ title: Blurbs and Stats layout: wide nav: resources_nav
 
 ### 여러분의 학교에 컴퓨터과학(정보과학) 수업을 가져가 보세요. Hour of Code 로 시작하면 됩니다.
 
-컴퓨터는 모든 곳에 있지만, 10년전 보다도 더 적은 학교들에서만 컴퓨터과학(정보과학)을 교육합니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다. 작년에 [Hour of Code](<%= hoc_uri('/') %>) 에 대해서 들어보셨다면, 처음 시작되었던 이유들을 들어보셨을 것입니다. 단지 1주일 동안에, 1천5백만 명에 달하는 학생들이 컴퓨터과학(정보과학)을 경험하였습니다! [Hour of Code](<%= hoc_uri('/') %>)는 컴퓨터과학(정보과학)에 대한 1시간짜리 소개 과정으로서, 코드에 대해서 쉽게 설명하고 누구나 그 기초/개념/원리들을 쉽게 배울 수 있다는 것을 보여줄 수 있도록 설계되었습니다. [등록하세요.](<%= hoc_uri('/') %>) 12월8일-14일 동안 진행되는 컴퓨터과학교육주간(Computer Science Education Week) 부터 시작해서 올해 말까지 1억명의 학생들이 함께 배울 수 있도록 도와주세요. 여러분의 학교를 행사 지도에 추가하시려면, <http://hourofcode.com>를 방문하세요.
+컴퓨터는 모든 곳에 있지만, 10년전 보다도 더 적은 학교들에서만 컴퓨터과학(정보과학)을 교육합니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## 인포그래픽 버전:
+## Infographics
 
-![image](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
+
+<%= view :signup_button %>

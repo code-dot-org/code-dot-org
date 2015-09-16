@@ -16,6 +16,11 @@
 /* global $ */
 'use strict';
 
+/**
+ * @typedef {Object} Section
+ * @property {number} id - Section's numeric identifier in Dashboard.
+ */
+
 // TODO (bbuchanan): This whole file should go away when we have a shared
 //                   Javascript User object that can be available on page load.
 
@@ -48,6 +53,21 @@ var DashboardUser = module.exports = function () {
    * @type {string}
    */
   this.name = "";
+
+  /**
+   * Whether the user is a site admin.
+   * NOTE: This should only be used in a convenience/display sense; anything
+   *       requiring actual security should be authenticated through the server,
+   *       and not depend on client code.
+   * @type {boolean}
+   */
+  this.isAdmin = false;
+
+  /**
+   * List of sections owned by this user.
+   * @type {Section[]}
+   */
+  this.ownedSections = [];
 };
 
 /**
@@ -91,6 +111,8 @@ DashboardUser.getCurrentUser = function () {
 DashboardUser.prototype.initialize = function (data) {
   this.id = data.id;
   this.name = data.name;
+  this.isAdmin = (data.admin === true);
+  this.ownedSections = data.owned_sections;
   this.isSignedIn = data.isSignedIn !== false;
   this.isReady = true;
 
@@ -112,4 +134,15 @@ DashboardUser.prototype.whenReady = function (callback) {
   } else {
     this.whenReadyCallbacks_.push(callback);
   }
+};
+
+/**
+ * Check whether the current user owns the section with the given section ID.
+ * @param {number} sectionID
+ * @returns {boolean}
+ */
+DashboardUser.prototype.ownsSection = function (sectionID) {
+  return this.ownedSections.some(function (section) {
+    return section.id === sectionID;
+  });
 };

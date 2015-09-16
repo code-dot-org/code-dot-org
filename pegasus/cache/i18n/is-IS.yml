@@ -62,23 +62,27 @@
   thank_you_: Takk fyrir!
   congratulations: Til hamingju!
   congratulations_on_completing_hoc: Til hamingju með að ljúka Klukkustund kóðunar
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: Fáðu viðurkenningarskjal
   enter_valid_age: Vinsamlegast veldu gildan aldur
   enter_valid_email: Vinsamlega sláðu inn gilt netfang
   get_a_certificate_message: Við sendum þér viðurkenningarskjal og upplýsingar um
-    hvernig þú getur haldið áfram að læra <a href='/learn'>eftir Klukkustund kóðunar</a>
+    hvernig þú getur haldið áfram að <a href='/learn'>Læra umfram klukkustund</a>
   get_a_certificate_message_after: Smelltu á skírteinið til að hala það niður eða
     prenta það. Haltu svo áfram með <a href='http://studio.code.org'>önnur námskeið
-    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>læra eftir
-    Klukkustund kóðunar</a>.
+    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram
+    klukkustund</a>.
   thanks_for_submitting: Takk fyrir þátttökuna!
   if_you_enjoyed: Ef þér fannst gaman að læra þetta, hvernig væri að fá vini þína
     til að prófa líka! Við viljum að allur heimurinn læri.
   personalize_certificate: Gerðu viðurkenningarskjalið persónulegra
   share_achievement: Deildu árangrinum þínum
   beyond_hour_message: Haltu áfram með <a href='http://studio.code.org'>önnur námskeið
-    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>læra eftir
-    Klukkustund kóðunar</a>.
+    okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram
+    klukkustund</a>.
   leaderboards_for_hoc: Topplisti fyrir Klukkustund kóðunar.
   support_url: http://support.code.org/
   country: Land
@@ -123,7 +127,7 @@
     úr því. http://youtu.be/nKIu9yen5nc. Heimsæktu http://code.org/ til að fræðast
     nánar.
   learn_hoc: Lærðu í Klukkustund kóðunar
-  beyond_hoc: Eftir Klukkustund kóðunar
+  beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
   girl: Stelpa
   boy: Strákur
@@ -212,12 +216,13 @@
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: Skrifaðu undir áskorun okkar &#x25BE;
+  homepage_diversity_pledge: Vinna fjölbreytniheitið
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka
     fjölbreytni í tölvunarfræði.
   homepage_banner_text_link: Læra meira
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Læra meira
+  homepage_banner_privacy_link: Nánar
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
@@ -332,6 +337,9 @@
   dashboard_hoc_courses: Klukkstund kóðunar fyrir alla aldurshópa
   dashboard_hoc_courses_desc: Prófaðu eitthvað af þessum styttri stöku kennslustundum
     með nemendum þínum!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: 20 tíma námskeið fyrir 5-11 ára
   dashboard_k5_courses_desc: Þessi námskeið nota netæfingar, sem leiða nemendur áfram
     á þeirra hraða, ásamt "ótengdum" æfingum sem þurfa ekki aðgang að tölvu. Hvert
@@ -528,6 +536,11 @@
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Nánar
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: Skráning
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Prófaðu nýja kennsluefnið fyrir Klukkustund kóðunar
   hoc2014_try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
@@ -548,6 +561,8 @@
   educator_notes: Minnispunktar leiðbeinenda
   how_to_teach_hoc: Hvernig á að kenna Klukkustund kóðunar
   more_resources_educators: Fleiri tilföng fyrir kennara og leiðbeinendur
+  beyond_submission: Viltu leggja inn kennslueiningu fyrir Umfram klukkustund (Beyond
+    an Hour)? Sjá viðmiðin og umsóknarformið.
   participants: þátttakendur
   teachers_notes: Minnispunktar kennara
   teachers_notes_hoc: 'Kennarar: Hér eru mikilvægar ábendingar fyrir kennara'

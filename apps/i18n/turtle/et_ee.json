@@ -65,6 +65,7 @@
   "penTooltip": "tõstab või langetab pliiatsi joonistamise alustamiseks või lõpetamiseks.",
   "penUp": "pliiats üles",
   "reinfFeedbackMsg": "Siin on sinu joonistus! Jätka selle kallal töötamist või alusta järgmise ülesandega.",
+  "setAlpha": "set alpha",
   "setColour": "vali värv",
   "setPattern": "vali muster",
   "setWidth": "vali laius",

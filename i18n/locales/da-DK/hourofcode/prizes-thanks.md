@@ -1,9 +1,13 @@
 * * *
 
-title: Tak layout: wide
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Tak
 
-Hele din skole er nu med i konkurrencen om at vinde et klassesæt af bærbare computere (eller for $10.000 andet it-udstyr). Gælder pt ikke danske skoler.
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

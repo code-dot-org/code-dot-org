@@ -867,6 +867,8 @@ en:
           description: crwdns38997:0crwdne38997:0
           description_short: crwdns43272:0crwdne43272:0
           Odometer: crwdns38998:0crwdne38998:0
+          Vigenere: crwdns48409:0crwdne48409:0
+          Frequency: crwdns48410:0crwdne48410:0
           Text Compression: crwdns38999:0crwdne38999:0
           Pixelation: crwdns39000:0crwdne39000:0
           Multi2: crwdns41853:0crwdne41853:0
@@ -971,6 +973,7 @@ en:
           description_short: crwdns41873:0crwdne41873:0
           description: crwdns41874:0crwdne41874:0
           Hour of Code: crwdns41875:0crwdne41875:0
+          Hour of Code 2015: crwdns48411:0crwdne48411:0
         algebraPD2:
           title: crwdns42133:0crwdne42133:0
           description: crwdns42134:0crwdne42134:0
@@ -1110,3 +1113,144 @@ en:
           description_short: crwdns45337:0crwdne45337:0
           description: crwdns45338:0crwdne45338:0
           description_audience: crwdns45339:0crwdne45339:0
+        vigenere:
+          title: crwdns48412:0crwdne48412:0
+          description_short: crwdns48413:0crwdne48413:0
+          description: crwdns48414:0crwdne48414:0
+          Vigenere: crwdns48415:0crwdne48415:0
+        frequency:
+          title: crwdns48416:0crwdne48416:0
+          description_short: crwdns48417:0crwdne48417:0
+          description: crwdns48418:0crwdne48418:0
+          Frequency Analysis: crwdns48419:0crwdne48419:0
+        algebraPD3a:
+          title: crwdns45359:0crwdne45359:0
+          description_short: crwdns45360:0crwdne45360:0
+          description: crwdns45361:0crwdne45361:0
+          Updates - Tweaks and Polish: crwdns45362:0crwdne45362:0
+          Updates - The Big Game and Projects: crwdns45363:0crwdne45363:0
+          Updates - The Design Recipe: crwdns45364:0crwdne45364:0
+          Lesson Prep: crwdns45365:0crwdne45365:0
+        sciencePD3_pre1:
+          title: crwdns45385:0crwdne45385:0
+          description_short: crwdns45386:0crwdne45386:0
+          description: crwdns45387:0crwdne45387:0
+          Welcome Back!: crwdns45388:0crwdne45388:0
+          The TLO: crwdns45389:0crwdne45389:0
+          Prep With Your Modules: crwdns45390:0crwdne45390:0
+        frequency_analysis:
+          title: crwdns48420:0crwdne48420:0
+          description_short: crwdns48421:0crwdne48421:0
+          description: crwdns48422:0crwdne48422:0
+          Frequency Analysis: crwdns48423:0crwdne48423:0
+        ECSPD3-Unit2:
+          title: crwdns48424:0crwdne48424:0
+          description_short: crwdns48425:0crwdne48425:0
+          description: crwdns48426:0crwdne48426:0
+          Welcome!: crwdns48427:0crwdne48427:0
+          Teaching Strategies: crwdns48428:0crwdne48428:0
+          Unit 2 Overview: crwdns48429:0crwdne48429:0
+          Problem Solving: crwdns48430:0crwdne48430:0
+          Introduction to the Unit 2 Challenge: crwdns48431:0crwdne48431:0
+          Day 1-2 Solving Community Problems with Data: crwdns48432:0crwdne48432:0
+          "Day 3 Intro To Problem Solving: Candy Bar Activity": crwdns48433:0crwdne48433:0
+          "Day 4-6 Strategies in Problem Solving: Handshake Activity": crwdns48434:0crwdne48434:0
+          "Day 7-9 Problem Solving: Cornrow Curves": crwdns48435:0crwdne48435:0
+          Day 10-12 Binary Number Systems: crwdns48436:0crwdne48436:0
+          "Day 13-14 Linear and Binary Search: Tower Building Activity": crwdns48437:0crwdne48437:0
+          Day 15-16 Sorting Algorithms: crwdns48438:0crwdne48438:0
+          "Day 17 Minimal Spanning Trees: Muddy City": crwdns48439:0crwdne48439:0
+          Day 18-21 Final Project: crwdns48440:0crwdne48440:0
+          Unit 2 Challenge Planning & Creation: crwdns48441:0crwdne48441:0
+        ECSPD3-Unit3:
+          title: crwdns48442:0crwdne48442:0
+          description_short: crwdns48443:0crwdne48443:0
+          description: crwdns48444:0crwdne48444:0
+          Welcome!: crwdns48445:0crwdne48445:0
+          Teaching Strategies: crwdns48446:0crwdne48446:0
+          Unit 3 Overview: crwdns48447:0crwdne48447:0
+          Introduction to the Unit 3 Challenge: crwdns48448:0crwdne48448:0
+          Unit 3 Challenge Planning & Creation: crwdns48449:0crwdne48449:0
+          Day 1-2 Online Experiences: crwdns48450:0crwdne48450:0
+          Day 3-4 HTML- Paragraph and Header Tags: crwdns48451:0crwdne48451:0
+          Day 5 HTML - Strong and EM Tags: crwdns48452:0crwdne48452:0
+          Day 6-7 HTML -Images: crwdns48453:0crwdne48453:0
+          Day 8-10 Introduction to CSS: crwdns48454:0crwdne48454:0
+          Day 11-13 Separating HTML and CSS: crwdns48455:0crwdne48455:0
+          "Day 14 HTML: Links": crwdns48456:0crwdne48456:0
+          "Day 15-16 HTML and CSS: Tables, Lists,  Menus": crwdns48457:0crwdne48457:0
+          "Day 17-19 HTML and CSS: Create own webpage": crwdns48458:0crwdne48458:0
+          "Day 20-21 HTML and CSS: Adding Enhancements to Site": crwdns48459:0crwdne48459:0
+          Day 22-25 Final Project: crwdns48460:0crwdne48460:0
+          "Day 15-16 HTML and CSS: Tables, Lists, Menus": crwdns48461:0crwdne48461:0
+        ECSPD3-Unit4:
+          title: crwdns48462:0crwdne48462:0
+          description_short: crwdns48463:0crwdne48463:0
+          description: crwdns48464:0crwdne48464:0
+          Welcome!: crwdns48465:0crwdne48465:0
+          Teaching Strategies: crwdns48466:0crwdne48466:0
+          Unit 4 Overview: crwdns48467:0crwdne48467:0
+          Introduction to the Unit 4 Challenge: crwdns48468:0crwdne48468:0
+          Unit 4 Challenge Planning & Creation: crwdns48469:0crwdne48469:0
+          "Day 1 Scratch: Intro": crwdns48470:0crwdne48470:0
+          "Day 2-3 Scratch: Name Project": crwdns48471:0crwdne48471:0
+          "Day 4 Scratch: Creating Dialogue": crwdns48472:0crwdne48472:0
+          "Day 5-6 Scratch: Moving Sprites": crwdns48473:0crwdne48473:0
+          "Day 7-8 Scratch: Event Driven Programming": crwdns48474:0crwdne48474:0
+          Day 9 Broadcasting Role Play: crwdns48475:0crwdne48475:0
+          "Day 10-13 Scratch: Broadcasting": crwdns48476:0crwdne48476:0
+          "Day 14 Scratch: Variables": crwdns48477:0crwdne48477:0
+          "Day 15 Scratch: Conditionals": crwdns48478:0crwdne48478:0
+          "Day 16-17 Scratch: AND OR and Randomness": crwdns48479:0crwdne48479:0
+          "Day 18 Scratch: Rock Paper Scissors": crwdns48480:0crwdne48480:0
+          "Day 19 Scratch: Timer": crwdns48481:0crwdne48481:0
+          "Day 20-23 Scratch: Timing Game": crwdns48482:0crwdne48482:0
+          "Day 24 Scratch: Games": crwdns48483:0crwdne48483:0
+          Day 25-30 Final Project: crwdns48484:0crwdne48484:0
+        ECSPD3-Unit5:
+          title: crwdns48485:0crwdne48485:0
+          description_short: crwdns48486:0crwdne48486:0
+          description: crwdns48487:0crwdne48487:0
+          Welcome!: crwdns48488:0crwdne48488:0
+          Teaching Strategies: crwdns48489:0crwdne48489:0
+          Unit 5 Overview: crwdns48490:0crwdne48490:0
+          Introduction to the Unit 5 Challenge: crwdns48491:0crwdne48491:0
+          Unit 5 Challenge Planning & Creation: crwdns48492:0crwdne48492:0
+        ECSPD3-Unit6:
+          title: crwdns48493:0crwdne48493:0
+          description_short: crwdns48494:0crwdne48494:0
+          description: crwdns48495:0crwdne48495:0
+          Welcome!: crwdns48496:0crwdne48496:0
+          Teaching Strategies: crwdns48497:0crwdne48497:0
+          Unit 6 Overview: crwdns48498:0crwdne48498:0
+          Introduction to the Unit 6 Challenge: crwdns48499:0crwdne48499:0
+          Unit 6 Challenge Planning & Creation: crwdns48500:0crwdne48500:0
+        cspunit4draft:
+          title: crwdns48501:0crwdne48501:0
+          description_short: crwdns48502:0crwdne48502:0
+          description: crwdns48503:0crwdne48503:0
+          Data is the Secret Ingredient: crwdns48504:0crwdne48504:0
+          Finding Data: crwdns48505:0crwdne48505:0
+          Building Apps Using Structured Data: crwdns48506:0crwdne48506:0
+          "Data App Part 1: Brainstorm": crwdns48507:0crwdne48507:0
+          APIs and Access to Large Data Sets: crwdns48508:0crwdne48508:0
+          Structuring Data with JSON: crwdns48509:0crwdne48509:0
+          "Data App Part 2: Data Design": crwdns48510:0crwdne48510:0
+          "Data App Part 3: Code": crwdns48511:0crwdne48511:0
+          Identifying People with Data: crwdns48512:0crwdne48512:0
+          Collecting Personal Information: crwdns48513:0crwdne48513:0
+          Privacy Policy: crwdns48514:0crwdne48514:0
+          "Debate: Privacy vs. Utility": crwdns48515:0crwdne48515:0
+          "Data App Part 4: App Permissions": crwdns48516:0crwdne48516:0
+          "Data App Part 5: Clean Data": crwdns48517:0crwdne48517:0
+          Reading Data: crwdns48518:0crwdne48518:0
+          Sorting: crwdns48519:0crwdne48519:0
+          Searching: crwdns48520:0crwdne48520:0
+          "Data App Part 6: Sort and Search": crwdns48521:0crwdne48521:0
+          "Data App Part 7: Read Data": crwdns48522:0crwdne48522:0
+          What Data Can Tell Us: crwdns48523:0crwdne48523:0
+          Interpreting Data from Different Perspectives: crwdns48524:0crwdne48524:0
+          Visualizations in the Real World: crwdns48525:0crwdne48525:0
+          "Data App Part 8: Visualize Data": crwdns48526:0crwdne48526:0
+          "Data App Part 9: Reflect": crwdns48527:0crwdne48527:0
+          "Debate: Privacy vs Utility": crwdns48528:0crwdne48528:0

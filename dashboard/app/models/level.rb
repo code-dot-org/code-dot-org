@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -22,6 +44,8 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
+    instructions
+    markdown_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -186,18 +210,11 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # Returns true if this is a pixelation level.
-  def pixelation?
-    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
-    # eliminating this fragile test of 'href'.
-    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
-  end
-
   # Returns whether this level is backed by a channel, whose id may
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    self.project_template_level || self.game == Game.applab || self.pixelation?
+    self.project_template_level || self.game == Game.applab || self.is_a?(Pixelation)
   end
 
   def key

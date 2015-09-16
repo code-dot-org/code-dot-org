@@ -1,0 +1,18 @@
+name 'ECSPD U2 Challenges'
+
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+### Challenge Options:
+
+* Day 7-9: CSDT Cornrow Braiding
+* Day 10-12: Binary
+* Day 13-14: Linear and Binary Search (Tower Building) 
+* Day 15-16: Sorting 
+* Day 17: Minimal Spanning Trees
+* Day 18-21: Unit Final Project
+
+Once you have decided which lesson you are going to work on post it to the Forum:
+
+### >> <a href="http://forum.code.org/t/u2-challenge-decisions/2098" target="_blank"> Share your Challenge Choice on the Forum</a>
+
+MARKDOWN

@@ -21,7 +21,7 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 
 [Introduction](#GetStarted) <br/>
 
-### **Activity: Play Lab Create a Game**
+### **Activity: Play Lab: Create a Game**
 
 [Play Lab: Create a Game](#Activity)
 
@@ -36,7 +36,7 @@ Building on the previous Play Lab activity, students will add deeper interactivi
 ### Students will:
 
 - Identify actions that correlate to input events
-- Create an animated, interactive story using sequence, loops, and event-handlers
+- Create an animated, interactive game using sequence, loops, and event-handlers
 - Share a creative artifact with other students
 
 [/together]

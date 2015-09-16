@@ -10,3 +10,9 @@ wrong 'Hierarchy'
 markdown <<MARKDOWN
 
 MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- Censorship
+- Spoofing
+MARKDOWN

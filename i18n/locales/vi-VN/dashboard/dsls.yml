@@ -11,7 +11,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: Ghép tổ hợp phím với các bước nhảy phù hợp.
         Matching: Phù hợp với/ khớp với / Chính xác với
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -32,7 +32,7 @@ vi:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Nối hình với chương trình phù hợp.
         Matching: Phù hợp với/ khớp với / Chính xác với
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -42,10 +42,10 @@ vi:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Kéo các khối vào vị trí phù hợp.
         Instructions: lời chỉ đẫn
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match: Nối Mê Cung
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -53,7 +53,7 @@ vi:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Match the grid to the program
+        Match the grid to the program: Nối chương trình với hình phù hợp
         Matching: Phù hợp với/ khớp với / Chính xác với
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -64,8 +64,8 @@ vi:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Artist Loops Matching One
-        Match the loop to the shape: Match the loop to the shape
+        Artist Loops Matching One: 'Nghệ sĩ cùng vòng lặp: Bài nối chương trình với hình phù hợp số 1'
+        Match the loop to the shape: Nối vòng lặp với hình phù hợp
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -75,8 +75,8 @@ vi:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Artist Matching
-        Match the shape with the blocks that complete it.: Match the shape with the blocks that complete it.
+        Artist Matching: Nối vói nghệ sĩ phù hợp
+        Match the shape with the blocks that complete it.: Nối hình với khối phù hợp.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -89,7 +89,7 @@ vi:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Bounce Matching
-        Match the events with the actions: Match the events with the actions
+        Match the events with the actions: Nối sự kiện với hành động phù hợp
         Matching: Phù hợp với/ khớp với / Chính xác với
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -98,8 +98,8 @@ vi:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy Matching One
-        Match the events with the actions: Match the events with the actions
+        Flappy Matching One: 'Nối Flappy Bird - Phần 1'
+        Match the events with the actions: Nối sự kiện với hành động phù hợp
         Matching: Phù hợp với/ khớp với / Chính xác với
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
@@ -108,18 +108,18 @@ vi:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match One: Maze Match One
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match One: 'Nối các mê cung - Phần 1'
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
         <h4>3)</h4>: '<h4>3)</h4>'
         <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Thêm số xúc xắc Người chơi 1 vừa tung vào tổng số điểm</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>So sánh điểm số của tất cả các người chơi để xem ai thắng</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>Người chơi 1 gieo xúc xắc</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>Đặt điểm người chơi 1 bằng 0</h4>'
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 'Nối những bước của trò "Đua xúc xắc" sao cho chúng xuất hiện lần lượt từ đầu đến cuối như trong thuật toán.'
         Matching: Phù hợp với/ khớp với / Chính xác với
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -152,18 +152,18 @@ vi:
         /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Kéo các khối vào vị trí phù hợp.
         Instructions: lời chỉ đẫn
-        Match the puzzles to the blocks: Match the puzzles to the blocks
-        Maze Match: Maze Match
+        Match the puzzles to the blocks: Nối các câu đố với các khối phù hợp
+        Maze Match: Nối Mê Cung
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
-        <br/><br/>next to: '<br/><br/>next to'
-        Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
+        <br/><br/>above: '<br/> <br/> trên'
+        <br/><br/>below: '<br/> <br/> dưới'
+        <br/><br/>next to: '<br/> <br/> bên cạnh'
+        Is the square next to, above, or below the ball?: Hình vuông ở bên cạnh, trên, hay dưới quả bóng?
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -174,7 +174,7 @@ vi:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Nối các hình cùng loại.
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -185,7 +185,7 @@ vi:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        Match the shapes based on type.: Match the shapes based on type.
+        Match the shapes based on type.: Nối các hình cùng loại.
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
@@ -194,7 +194,7 @@ vi:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: Match the code to the stairs it draws.
+        Match the code to the stairs it draws.: Nối khối lệnh với bậc thang nó đã vẽ.
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
@@ -205,7 +205,7 @@ vi:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Match the blocks
+        Match the blocks: Nối các khối
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -215,7 +215,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Match the button combination to the dance moves.
+        Match the button combination to the dance moves.: Ghép tổ hợp phím với các bước nhảy phù hợp.
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -224,7 +224,7 @@ vi:
         /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
-        Match the blocks: Match the blocks
+        Match the blocks: Nối các khối
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
@@ -233,7 +233,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
+        Match the Map to the arrow that gets the Flurb to the treasure: Nối bản đồ với mũi tên phù hợp để bạn Flurb có thể đi đến kho báu
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -245,9 +245,9 @@ vi:
         /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
-        Drag the blocks to match.: Drag the blocks to match.
+        Drag the blocks to match.: Kéo các khối vào vị trí phù hợp.
         Instructions: lời chỉ đẫn
-        Match the puzzles and blocks: Match the puzzles and blocks
+        Match the puzzles and blocks: Nối câu đố với khối lệnh phù hợp
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -256,7 +256,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Nối bản đồ với thuật toán thích hợp để Flurb đi đến được bông hoa.
         Matching: Phù hợp với/ khớp với / Chính xác với
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -286,19 +286,19 @@ vi:
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
+        Choose an algorithm for the image provided.: Chọn thuật toán cho hình đã cho sẵn.
         Multiple Choice: Nhiều lựa chọn
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Bắt đầu với một hình vuông <br/> đặt một hình bình hành trên hình vuông <br/> đặt một tam giác bên phải của hình bình hành'
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Bắt đầu với một hình vuông <br/> đặt một hình tam giác trên hình vuông <br/> đặt một tam giác bên dưới hình vuông'
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Bắt đầu với một hình vuông <br/> đặt một tam giác bên dưới hình vuông <br/> đặt một hình bình hành bên phải của tam giác'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Bắt đầu với một hình vuông <br/> đặt một tam giác bên phải của hình vuông <br/> đặt một hình bình hành dưới đây hình vuông <br/> đặt tam giác bên phải của hình bình hành'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Nhiều lựa chọn
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Bắt đầu với một hình tam giác <br/> đặt một hình vuông bên dưới khu vực tam giác <br/> đặt một tam giác bên dưới hình vuông'
         Which image does <em>not</em> follow this algorithm?: 'Hiện hình ảnh nào <em>không</em> làm theo thuật toán này?'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -357,45 +357,45 @@ vi:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
-        Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
+        Artist Debugging Multiple Choice One: 'Nghệ sĩ - Gỡ lỗi: Chọn đáp án đúng - Phần 1'
         Why won't this circle go all the way around?: Tại sao sẽ không vòng tròn này đi tất cả các con đường xung quanh?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice One: Artist Functions Multiple Choice One
-        Pick the correct blocks to draw this image using the given functions: Pick the correct blocks to draw this image using the given functions
+        Artist Functions Multiple Choice One: 'Nghệ sĩ - Hàm: Chọn đáp án đúng - Phần 1'
+        Pick the correct blocks to draw this image using the given functions: Chọn khối lệnh đúng để vẽ hình này sử dụng nhữ hàm đã cho
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this loop?: Which shape is made by this loop?
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        Which shape is made by this loop?: Hình nào tạo bởi vòng lặp này?
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which shape is made by this program?: Which shape is made by this program?
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        Which shape is made by this program?: Hình nào tạo bởi chương trình này?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
-        Bee Conditionals Multiple Choice One: Bee Conditionals Multiple Choice One
-        Which comparison below is true?: Which comparison below is true?
+        Bee Conditionals Multiple Choice One: 'Ong - Cấu trúc rẽ nhánh: Chọn đáp án đúng - Phần 1'
+        Which comparison below is true?: So sánh nào đúng?
       2-3 bee conditionals multi 2:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: 'Ong - Cấu trúc rẽ nhánh: Chọn đáp án đúng - Phần 2'
         Choose the best blocks.: Chọn các khối tốt nhất.
       2-3 bee conditionals multi 3:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
@@ -403,7 +403,7 @@ vi:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500
-        Bee Conditionals Multiple Choice Two: Bee Conditionals Multiple Choice Two
+        Bee Conditionals Multiple Choice Two: 'Ong - Cấu trúc rẽ nhánh: Chọn đáp án đúng - Phần 2'
         Choose the best blocks.: Chọn các khối tốt nhất.
       2-3 bee loops multi 1:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
@@ -411,23 +411,23 @@ vi:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
-        Bee Loops Multiple Choice One: Bee Loops Multiple Choice One
-        Which blocks collect all of the nectar?: Which blocks collect all of the nectar?
+        Bee Loops Multiple Choice One: 'Ong - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        Which blocks collect all of the nectar?: Khối lệnh nào sẽ thu thập hết mật ong?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Maze Multiple Choice One: Maze Multiple Choice One
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Maze Multiple Choice One: 'Mê cung: Chọn đáp án đúng - Phần 1'
+        Which set of blocks is the correct answer?: Khối lệnh nào đúng?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
+        Baking cookies: Nướng bánh qui
         Banana: Quả chuối
         Brushing your teeth: Chải răng của bạn
         Multiple Choice: Nhiều lựa chọn
-        Shopping from a grocery list: Shopping from a grocery list
-        Which one of these items is hardest to describe an algorithm for?: Which one of these items is hardest to describe an algorithm for?
+        Shopping from a grocery list: Mua sắm theo danh sách
+        Which one of these items is hardest to describe an algorithm for?: Đâu không phải là một ví dụ về thuật toán trong đời sống hàng ngày?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene là một thành phố _____.
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
@@ -441,14 +441,14 @@ vi:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: Nhiều lựa chọn
-        Which of these pictures best represents crowdsourcing?: Which of these pictures best represents crowdsourcing?
+        Which of these pictures best represents crowdsourcing?: Ảnh nào sau đây đặc trưng cho crowdsourcing?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Chải tóc
         Cleaning your room: Dọn phòng
         Eating your dessert: Thưởng thức bữa tráng miệng
         Multiple Choice: Nhiều lựa chọn
         Washing your face: Rửa mặt
-        Which one of these activities would be best for practicing crowdsourcing?: Which one of these activities would be best for practicing crowdsourcing?
+        Which one of these activities would be best for practicing crowdsourcing?: Hoạt động nào có thể dễ dàng áp dụng crowdsourcing nhất?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Nhiều lựa chọn
         Which piece of information listed below is okay to share on the internet?: Phần thông tin nào được liệt ra ở dưới là ổn để chia sẻ trên mạng internet?
@@ -493,37 +493,37 @@ vi:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        Which function creates a rectangle that can change its size?: Which function creates a rectangle that can change its size?
+        Artist Functions Multiple Choice: 'Nghệ sĩ - Hàm: Chọn đáp án đúng'
+        Which function creates a rectangle that can change its size?: Hàm nào tạo ra hình chữ nhật mà có thể thay đổi kích thước?
       4-5 artist loops multi 1:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500
-        Artist Loops Multiple Choice: Artist Loops Multiple Choice
-        Which blocks will create the design?: Which blocks will create the design?
+        Artist Loops Multiple Choice: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        Which blocks will create the design?: Khối nào sẽ vẽ đúng ra hình này?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
-        Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        Artist Functions Multiple Choice: 'Nghệ sĩ - Hàm: Chọn đáp án đúng'
+        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Chọn vòng lặp tạo ra dãy số: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
-        Which blocks draw a rectangle with a perimeter of 100?: Which blocks draw a rectangle with a perimeter of 100?
+        Artist Multiple Choice: 'Nghệ sĩ: Chọn đáp án đúng'
+        Which blocks draw a rectangle with a perimeter of 100?: Khối nào vẽ một hình chữ nhật có chu vi 100 pixels?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
-        Artist Multiple Choice: Artist Multiple Choice
-        Which drawing is symmetric?: Which drawing is symmetric?
+        Artist Multiple Choice: 'Nghệ sĩ: Chọn đáp án đúng'
+        Which drawing is symmetric?: Hình vẽ nào là đối xứng?
       4-5 bee conditionals multi 1:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
@@ -531,8 +531,8 @@ vi:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
+        1: :Một bông hoa tím có thể có 3,2 hoặc một nhị hoa, nhưng bạn không thể biết được chính xác nó có bao nhiêu. Khối nào sau đây kiểm tra và lấy đúng số nhị hoa trong mỗi bông hoa tím?
+        Bee Conditionals Multiple Choice: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
         Choose the best blocks.: Chọn các khối tốt nhất.
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
@@ -541,32 +541,32 @@ vi:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
-        Bee Debug Multiple Choice: Bee Debug Multiple Choice
-        Which version of the function will work?: Which version of the function will work?
+        Bee Debug Multiple Choice: 'Ong - Gỡ Lỗi: Chọn đáp án đúng'
+        Which version of the function will work?: Hàm nào sẽ hoạt động?
       4-5 bee loops multi 1:
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
-        Bee Loops Multiple Choice: Bee Loops Multiple Choice
-        Which blocks will solve the puzzle?: Which blocks will solve the puzzle?
+        Bee Loops Multiple Choice: 'Ong - Vòng lặp: Chọn câu trả lời đúng'
+        Which blocks will solve the puzzle?: Khối nào sẽ giải quyết các câu đố?
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500
-        Famer Loops Multiple Choice: Famer Loops Multiple Choice
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Famer Loops Multiple Choice: 'Nông dân - Vòng lặp: Chọn đáp án đúng'
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
       4-5 maze conditionals multi 1:
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Maze Conditionals Multiple Choice: Maze Conditionals Multiple Choice
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Maze Conditionals Multiple Choice: 'Mê cung - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
@@ -574,7 +574,7 @@ vi:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
         Maze Multiple Choice: Mê cung nhiều sự lựa chọn
-        Which blocks solve the puzzle?: Which blocks solve the puzzle?
+        Which blocks solve the puzzle?: Những khối nào giải quyết câu đố này?
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: '3 - 7'
@@ -643,7 +643,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Nhiều lựa chọn
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Con vật nào để lại dấu chân kỹ thuật số làm nó <strong>không an toàn nhất</strong> so với các con vật còn lại?'
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png

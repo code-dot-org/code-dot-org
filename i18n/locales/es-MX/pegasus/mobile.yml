@@ -44,6 +44,9 @@ es-MX:
   thank_you_: ¡Gracias!
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
   enter_valid_age: Por favor, selecciona una edad válida
   enter_valid_email: Por favor ingresa un correo electrónico válido
@@ -169,10 +172,11 @@ es-MX:
   homepage_action_text_learn: Empieza a aprender
   homepage_action_text_signpetition: Firmá la petición
   homepage_signpetition_dropdown: 'Firma nuestra petición &#x25BE;'
+  homepage_diversity_pledge: Toma la promesa de diversidad
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar la diversidad en Ciencias de la computación.
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Aprende más
+  homepage_banner_privacy_link: Aprenda más
   homepage_slot_text_title_hoc: Hora del código
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -272,6 +276,7 @@ es-MX:
   dashboard_landing_more_tutorials_desc: 'Hay más tutoriales <a href="/learn/beyond"> ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas web, a hacer tu propia app o explora otros lenguajes como C++, Ruby o Python!'
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: Prueba alguno de estos tutoriales de menos de 1 hora con tus alumnos!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: Curso de 20 horas para K-5
   dashboard_k5_courses_desc: 'Estos cursos en línea, mezclan tutoriales autoguiados y a realizar a su propio ritmo con actividades  que no requieren el uso de un ordenador. Cada curso consta de aproximadamente 20 lecciones que pueden ser implementadas como una unidad o a lo largo de un semestre. Pueden participar incluso alumnos en edad preescolar que no sepan leer. Para ayudarte a empenzar, ofrecemos talleres de desarrollo profesional de alta calidad  en los Estados Unidos de forma gratuita. <a href="/professional-development-workshops">Encuentra uno cerca!</a>'
   dashboard_middle_courses: Cursos de 20 horas para secundaria
@@ -420,6 +425,10 @@ es-MX:
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Registrarse
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Pruebe nuestros nuevos tutoriales de la Hora del Código
   hoc2014_try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
   hoc2014_try_scrat: Scrat, PvZ y Angry Birds
@@ -439,6 +448,7 @@ es-MX:
   educator_notes: Notas del educador
   how_to_teach_hoc: 'Cómo enseñar  una "Hora de código"'
   more_resources_educators: Más recursos para profesores y educadores
+  beyond_submission: ¿Desea entregar un tutorial despues de una hora? Ver los criterios y formulario de entrega.
   participants: participantes
   teachers_notes: Notas del profesor
   teachers_notes_hoc: 'Profesores: Leer las notas importantes del educador aquí'

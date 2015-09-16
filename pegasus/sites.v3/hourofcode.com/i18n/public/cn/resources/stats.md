@@ -1,16 +1,21 @@
+* * *
 
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
+* * *
 
+<%= view :signup_button %>
 
 # 导语和可用数据
 
-## Use this short blurb in newsletters
+## 在简讯中使用这则导语
 
 ### 以编程一小时开启你学校的计算机科学
 
-计算机无处不在，但是和10前相比，教计算机科学的学校却更少了。 好消息是，我们正在着手改变现状。 如果你听说过去年的 [编程一小时](<%= hoc_uri('/') %>) ，就可能知道它创造了历史。 在一星期内，1500万的学生尝试过计算机科学！ [编程一小时](<%= hoc_uri('/') %>)就是介绍计算机科学一小时，旨在揭秘程序并表明它是任何人都可以学习的基础知识。 在十二月8-14日计算机科学教育周间[注册](<%= hoc_uri('/') %>)来组织编程一小时，争取在年末参与的学生达到1亿。 Add your school to the map, go to <http://hourofcode.com>
+计算机无处不在，但是和10前相比，教计算机科学的学校却更少了。 好消息是，我们正在着手改变现状。 If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![图片](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
 
+<%= view :signup_button %>

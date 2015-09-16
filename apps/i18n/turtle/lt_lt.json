@@ -65,6 +65,7 @@
   "penTooltip": "Pakelia arba nuleidžia pieštuką, kad pradėtų arba sustotų piešti.",
   "penUp": "pakelk pieštuką",
   "reinfFeedbackMsg": "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio.",
+  "setAlpha": "set alpha",
   "setColour": "spalva =",
   "setPattern": "šablonas = ",
   "setWidth": "plotis = ",

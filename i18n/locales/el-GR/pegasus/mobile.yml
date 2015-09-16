@@ -44,6 +44,9 @@ el-GR:
   thank_you_: Ευχαριστούμε!
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: 'Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"'
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
   enter_valid_age: Παρακαλώ επιλέξτε μια έγκυρη ηλικία
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
@@ -158,6 +161,7 @@ el-GR:
     Υπογράψτε την συλλογή υπογραφών
     
   homepage_signpetition_dropdown: 'Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Το Code.org και το Συμβούλιο Κολλεγίων σχηματίζουν μία συμμαχία για τη βελτίωση της ποικιλομορφίας στην επιστήμη των υπολογιστών.
   homepage_banner_text_link: Μάθετε περισσότερα
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -261,6 +265,7 @@ el-GR:
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: 20-Hour Middle School Courses
@@ -409,6 +414,10 @@ el-GR:
   code_hoc_coming: 'Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!'
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής εβδομάδας για την Επιστήμη της Πληροφορικής
   learn_more: Μάθετε περισσότερα
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Εγγραφή
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: 'Δοκιμάστε τα νέα βοηθήματα εκμάθησης για την "Ώρα του Κώδικα"'
   hoc2014_try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική μορφή
   hoc2014_try_scrat: Angry Birds, PvZ και Scrat
@@ -428,6 +437,7 @@ el-GR:
   educator_notes: Σημειώσεις επιμορφωτή
   how_to_teach_hoc: Πώς να διδάξετε μια ώρα του κώδικα
   more_resources_educators: Περισσότεροι πόροι για τους εκπαιδευτικούς και τους επιμορφωτές
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: συμμετέχοντες
   teachers_notes: Σημειώσεις εκπαιδευτικού
   teachers_notes_hoc: 'Δάσκαλοι: Δείτε εδώ σημαντικές σημειώσεις για εκπαιδευτικούς'

@@ -1,33 +1,37 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Hadiah - syarat dan ketentuan
 
 ## Ruang Dropbox atau Kredit Skype:
 
-10 GB Ruang Dropbox atau $10 Kredit Skype terbatas untuk sekolah K-12, guru pembimbing ekstrakurikuler, dan organisasi pendidikan. 10 GB ruang bebas hanya bisa ditambahkan pada akun Dropbox yang telah ada. Hanya dibatasi 1 bonus untuk setiap organisasi.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Setiap penyelenggara harus mendaftar untuk Hour of Code untuk mendapatkan Ruang Dropbox atau Kredit Skype. Jika sekolahmu berpartisipasi dalam Hour of Code, setiap guru harus mendaftar secara individual untuk memenuhi syarat.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org akan menghubungi penyelenggara setelah Hour of Code (Dec. 8-14) untuk memberikan instruksi untuk mendapatkan bonus Ruang Dropbox atau Kredit Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Percakapan video dengan seorang pembicara tamu:
 
-Hadiah terbatas hanya pada kelas K-12 di U.S dan Kanada. Untuk memenuhi syarat, daftarkan kelas anda sebelum 14 November 2014. Code.org akan secara acak memilih pemenang dari setiap sekolah, menyediakan waktu untuk web chat dan bekerja dengan guru yang bersangkutan untuk mengatur teknologi yang diperlukan. Seluruh isi sekolah Anda tidak perlu mengajukan permohonan untuk memenuhi syarat untuk hadiah ini. Sekolah Umum dan swasta layak untuk menjadi pemenang.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Satu set laptop untuk kelas (atau teknologi lain yang bernilai $10,000):
 
-Hadiah terbatas untuk sekolah publik K-12 U.S. Untuk memenuhi syarat, sekolah anda harus mendaftar untuk jam kode sebelum 14 November 2014. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org akan memilih dan memberitahukan pemenang melalui email paling lambat tanggal 1 Desember 2014.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Satu sekolah di setiap negara bagian di U.S. akan menerima satu set komputer untuk kelas. Code.org will select and notify winners via email by December 1, 2015.
 
-Untuk memperjelas, ini bukanlah undian atau kontes melibatkan kesempatan murni.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) Tidak resiko atau taruhan yang terlibat dalam pendaftaran - setiap sekolah atau kelas dapat berpartisipasi, tanpa pembayaran kepada Code.org atau organisasi lain
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) Pemenang hanya akan ditunjuk diantara kelas (atau sekolah) yang ikut serta dalam Hour of Code, yang melibatkan tes keterampilan kolektif pelajar dan guru.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

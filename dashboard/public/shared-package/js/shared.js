@@ -267,7 +267,6 @@ module.exports = {
 
 },{}],3:[function(require,module,exports){
 // TODO (brent) - way too many globals
-// TODO (brent) - I wonder if we should sub-namespace dashboard
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
@@ -282,7 +281,7 @@ window.apps = {
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
   // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
-  setupBlockly: function () {
+  setupApp: function (appOptions) {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
@@ -432,8 +431,10 @@ window.apps = {
   }
 };
 
-},{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":6}],4:[function(require,module,exports){
+},{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":7}],4:[function(require,module,exports){
 /* global dashboard, appOptions, $ */
+
+var renderAbusive = require('./renderAbusive');
 
 // Attempts to lookup the name in the digest hash, or returns the name if not found.
 function tryDigest(name) {
@@ -491,7 +492,13 @@ module.exports = function (callback) {
   }
 
   if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load);
+    promise = promise.then(dashboard.project.load)
+        .then(function () {
+          if (dashboard.project.hideBecauseAbusive()) {
+            renderAbusive();
+            return $.Deferred().reject();
+          }
+        });
   }
 
   promise.then(loadSource('common' + appOptions.pretty))
@@ -501,11 +508,14 @@ module.exports = function (callback) {
       .then(callback);
 };
 
-},{}],5:[function(require,module,exports){
+},{"./renderAbusive":6}],5:[function(require,module,exports){
 /* global dashboard, appOptions, $, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
+
+var ABUSE_THRESHOLD = 10;
+
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
@@ -596,6 +606,79 @@ var projects = module.exports = {
     return current.updatedAt;
   },
 
+  /**
+   * @returns {number}
+   */
+  getAbuseScore: function () {
+    return current ? current.abuseScore : 0;
+  },
+
+  /**
+   * Sets abuse score to zero, saves the project, and reloads the page
+   */
+  adminResetAbuseScore: function () {
+    // TODO (brent) - right now this is pretty low security. anyone could
+    // enter the javascript console and call this. eventually, we want some sort
+    // of protected API call we can make
+    if (this.getAbuseScore() === 0) {
+      return;
+    }
+    current.abuseScore = 0;
+    var sourceAndHtml = {
+      source: current.levelSource,
+      html: current.levelHtml
+    };
+    this.save(sourceAndHtml, function () {
+      location.reload();
+    });
+  },
+
+  /**
+   * @returns {boolean} true if we're frozen
+   */
+  isFrozen: function () {
+    if (!current) {
+      return;
+    }
+    return current.frozen;
+  },
+
+  /**
+   * @returns {boolean}
+   */
+  isOwner: function () {
+    return current && current.isOwner;
+  },
+
+  /**
+   * @returns {boolean} true if project has been reported enough times to
+   *   exceed our threshold
+   */
+  exceedsAbuseThreshold: function () {
+    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+  },
+
+  /**
+   * @return {boolean} true if we should show our abuse box instead of showing
+   *   the project.
+   */
+  hideBecauseAbusive: function () {
+    if (!this.exceedsAbuseThreshold() || appOptions.scriptId) {
+      // Never want to hide when in the context of a script, as this will always
+      // either be me or my teacher viewing my last submission
+      return false;
+    }
+
+    // When owners edit a project, we don't want to hide it entirely. Instead,
+    // we'll load the project and show them a small alert
+    var pageAction = parsePath().action;
+    if (this.isOwner() && (pageAction === 'edit' || pageAction === 'view')) {
+      return false;
+    }
+
+    return true;
+  },
+
   //////////////////////////////////////////////////////////////////////
   // Properties and callbacks. These are all candidates for being extracted
   // as configuration parameters which are passed in by the caller.
@@ -627,6 +710,14 @@ var projects = module.exports = {
     if (this.shouldUpdateHeaders()) {
       dashboard.header.showProjectHeader();
     }
+  },
+
+  /**
+   * Updates the contents of the admin box for admins. We have no knolwedge
+   * here whether we're an admin, and depend on dashboard getting this right.
+   */
+  showAdmin: function() {
+    dashboard.admin.showProjectAdmin();
   },
 
   showMinimalProjectHeader: function() {
@@ -710,6 +801,8 @@ var projects = module.exports = {
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
     }
+
+    this.showAdmin();
   },
   projectChanged: function() {
     hasProjectChanged = true;
@@ -737,21 +830,29 @@ var projects = module.exports = {
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
-   * @param {string?} source Optional source to be provided, saving us another
+   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
    *   call to sourceHandler.getLevelSource
    * @param {function} callback Function to be called after saving
    */
-  save: function(source, callback) {
+  save: function(sourceAndHtml, callback) {
     if (arguments.length < 2) {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      source = this.sourceHandler.getLevelSource();
+      sourceAndHtml = {
+        source: this.sourceHandler.getLevelSource(),
+        html: this.sourceHandler.getLevelHtml()
+      };
     }
+
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    current.levelSource = source;
-    current.levelHtml = this.sourceHandler.getLevelHtml();
+    if (current.levelHtml && !sourceAndHtml.html) {
+      throw new Error('Attempting to blow away existing levelHtml');
+    }
+
+    current.levelSource = sourceAndHtml.source;
+    current.levelHtml = sourceAndHtml.html;
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -816,7 +917,7 @@ var projects = module.exports = {
       return;
     }
 
-    this.save(source, function () {
+    this.save({source: source, html: html}, function () {
       hasProjectChanged = false;
     });
   },
@@ -826,6 +927,17 @@ var projects = module.exports = {
   rename: function(newName, callback) {
     current.name = newName;
     this.save(callback);
+  },
+  /**
+   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   */
+  freeze: function(callback) {
+    current.frozen = true;
+    current.hidden = true;
+    this.save(function(data) {
+      executeCallback(callback, data);
+      redirectEditView();
+    });
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
@@ -968,6 +1080,13 @@ function executeCallback(callback, data) {
 }
 
 /**
+ * is the current project (if any) editable by the logged in user (if any)?
+ */
+function isEditable() {
+  return (current && current.isOwner && !current.frozen);
+}
+
+/**
  * If the current user is the owner, we want to redirect from the readonly
  * /view route to /edit. If they are not the owner, we want to redirect from
  * /edit to /view
@@ -977,14 +1096,18 @@ function redirectEditView() {
   if (!parseInfo.action) {
     return;
   }
+  // don't do any redirecting if we havent loaded a channel yet
+  if (!current) {
+    return;
+  }
   var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
+  if (parseInfo.action === 'view' && isEditable()) {
     // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+  } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
+    newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
   }
 
@@ -1042,6 +1165,27 @@ function parsePath() {
 }
 
 },{"./clientApi":2}],6:[function(require,module,exports){
+/* global dashboard, React */
+
+/**
+ * Renders our AbuseExclamation component, and potentially updates admin box
+ */
+module.exports = function () {
+  React.render(React.createElement(window.dashboard.AbuseExclamation, {
+    i18n: {
+      tos: window.dashboard.i18n.t('project.abuse.tos'),
+      contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+      edit_project: window.dashboard.i18n.t('project.edit_project'),
+      go_to_code_studio: window.dashboard.i18n.t('project.abuse.go_to_code_studio')
+    },
+    isOwner: dashboard.project.isOwner()
+  }), document.getElementById('codeApp'));
+
+  // update admin box (if it exists) with abuse info
+  dashboard.admin.showProjectAdmin();
+};
+
+},{}],7:[function(require,module,exports){
 /* global ga */
 
 var userTimings = {};

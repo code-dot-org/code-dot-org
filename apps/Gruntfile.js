@@ -291,15 +291,18 @@ APPS.forEach(function (app) {
 });
 
 // Use command-line tools to run browserify (faster/more stable this way)
-var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
+  '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
   '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 
+var fastMochaTest = process.argv.indexOf('--fast') !== -1;
+
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
-  mochaTest: 'node test/util/runTests.js --color'
+  watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
+  mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 
 var ext = envOptions.dev ? 'uncompressed' : 'compressed';
@@ -416,7 +419,8 @@ config.jshint = {
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
     '!src/applab/colpick.js'
-  ]
+  ],
+  some: [], // This gets dynamically populated in the register task
 };
 
 config.strip_code = {
@@ -516,6 +520,14 @@ module.exports = function(grunt) {
     'express:server',
     'concurrent:watch'
   ]);
+
+  grunt.registerTask('jshint:files', function () {
+    if (grunt.option('files')) {
+      var files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    }
+    grunt.task.run('jshint:some');
+  });
 
   grunt.registerTask('mochaTest', ['exec:mochaTest']);
 

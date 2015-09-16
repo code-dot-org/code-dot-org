@@ -45,6 +45,9 @@ sv-SE:
   thank_you_: Tack!
   congratulations: Grattis!
   congratulations_on_completing_hoc: Grattis, du har klarat kodtimmen
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Få ett certifikat om prestationen
   enter_valid_age: Please select a valid age
   enter_valid_email: Ange en giltig e-postadress
@@ -181,6 +184,7 @@ sv-SE:
   homepage_action_text_learn: 'Börja lära '
   homepage_action_text_signpetition: Skriv på uppropet
   homepage_signpetition_dropdown: 'Underteckna vår namninsamling &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org och College Board bildar en allians för att förbättra mångfalden i datavetenskap.
   homepage_banner_text_link: Lär dig mer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -284,6 +288,7 @@ sv-SE:
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: 20-Hour Middle School Courses
@@ -432,6 +437,10 @@ sv-SE:
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: 'Registrera dig för att kunna delta i CS utbildnings- vecka'
   learn_more: Lär dig mer
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Registrera dig
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Prova våra nya Hour of Code övningar
   hoc2014_try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
   hoc2014_try_scrat: Angry Birds, PvZ och Scrat
@@ -451,6 +460,7 @@ sv-SE:
   educator_notes: Pedagog anteckningar
   how_to_teach_hoc: Hur man undervisar med en Timme av Kod
   more_resources_educators: Mer resurser för lärare och utbildare
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: deltagare
   teachers_notes: Lärarens anteckningar
   teachers_notes_hoc: 'Lärare: Läs viktiga lärar- anteckningar här'

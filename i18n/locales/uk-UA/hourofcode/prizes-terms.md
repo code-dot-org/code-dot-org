@@ -1,33 +1,37 @@
 * * *
 
-title: Керівництво для організацій layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Призи - умови отримання
 
 ## Простір Dropbox або кредити Skype:
 
-10 Гб простору Dropbox або кредит $10 у Skype призначені для вчителів, вихователів для позашкільних клубів та освітніх організацій. 10 Гб вільного місця слід додати до існуючого облікового запису Dropbox. Організатор може отримати лише один такий приз.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Кожен організатор повинен зареєструвати Годину коду для того, щоб отримати призовий простір Dropbox або кредит Skype. Якщо участь братиме уся школа, кожному вчителю потрібно реєструватись окремо.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org зв'яжеться з організаторами після Години коду (8-14 грудня) і надасть інструкції щодо отримання простору Dropbox або кредиту Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Відео-чат із запрошеним оратором:
 
-Приз призначено для шкіл США та Канади. Щоб претендувати на приз, зареєструйте весь ваш клас до 14 листопада 2014 року. Code.org випадковим чином обере школи-переможці, надасть часові інтервали для веб-чату та узгодить технологічні деталі з відповідним вчителем. Щоб претендувати на приз, не потрібно реєструвати всю школу. Приз можуть отримати як для державні, так і приватні школи.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Клас ноутбуків (або іншої техніки вартістю $10,000):
 
-Приз призначений лише для державних 12-річних шкіл США. Щоб претендувати на приз, зареєструйте всю вашу школу до 14 листопада 2014 року. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org проведе вибір і повідомить переможців електронною поштою до 1 грудня 2014 року.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Одна школа у кожному зі штатів США виграє комп'ютерний клас. Code.org will select and notify winners via email by December 1, 2015.
 
-Уточнимо - це не розіграш чи лотерея.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) Беручи участь ви не берете на себе фінансових зобов'язань - участь може взяти будь-яка школа, без жодних платежів на користь Code.org чи інших організацій
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) Переможців обиратимуть з-поміж шкіл, котрі зареєструють всіх своїх учнів для участі в Годині коду, а також пройдуть колективне тестування навичок як учнів, так і вчителів.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

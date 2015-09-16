@@ -1,33 +1,37 @@
 * * *
 
-Cilat janë udhëzimet për Organizata
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
 
-# Shpërblime- termat dhe kushtet
+<%= view :signup_button %>
+
+# Shpërblime - termat dhe kushtet
 
 ## Hapësira per Dropbox apo Skype
 
-Hapësira 10GB e Dropbox apo vlera 10$ ne Skype është e kufizuar për shkollat deri ne klase te 12-të, mësimdhënësit, grupet rinore të shkolles dhe organizatat shkollore. Hapësira e lirë prej 10 GB duhet të shtohet në llogarine egzistuese të Dropbox. çdo organizator ka vetëm një mundësi përmirësimi. 
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-çdo organizator duhet të regjistrohet në Orën e Kodimit për të siguruar hapësirë në DropBox ose në Skype. Nëse shkolla juaj është pjesëmarrëse e Orës së Kodimit, çdo institucion mësimor duhet të regjistrohet për tu kualifikuar si organizator.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org do të kontaktoj çdo organizator pas seancave të Orës së Kodimit (Dhjetor 8-14) me udhëzimet rikuperimin e hapësires në Dropbox dhe Skype.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Komunikim përmes videos me mysafirin e ftuar:
 
-Shpërblime të dedikuara vetëm për nxenesit deri në klasë të 12-të në SHBA dhe Kanada. Për t'u kualifikuar, regjistro klasën tuaj jo më larg se 14 nëntor, 2014. Code.org do të përzgjedh klasën fituese, përcaktoje kohën kur të realizohet komunikim përmes web-it, dhe do të koordinojë mësimdhënësit për të përcaktuar detajet tjera teknologjike. Jo e gjithë shkolla juaj duhet të aplikoje për te kandiduar për shpërblim. Si shkollat publike dhe ato private kualifikohen për të fituar shpërblim.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Set laptop për klase (ose $10,000 për mjete tjera teknologjike):
 
-Shpërblim i dedikuar vetëm për shkollat Amerikane deri në klasë të 12-të. Për t'u kualifikuar, shkolla juaj duhet të regjistrohet për Orën e Kodimit jo më larg se 14 nëntor, 2014. Një shkollë nga cdo shtet në SHBA do të marrë/fitojë një set kompjuterash. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, më 1 dhjetor 2014.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Një shkollë nga cdo shtet në SHBA do të marrë një bashkësi klasash të kompjuterëve. Code.org will select and notify winners via email by December 1, 2015.
 
-Sa për sqarim, kjo nuk është një garë apo kompeticion që bazohet vetëm në fat.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) aplikimi juaj nuk ngerthen ndonje rrezik financiarë - çdo shkollë apo klasë mund të marr pjesë pa pagesë tek Code.org ose organizata te ndryshme
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) Fituesit përzgjidhen vetëm nga shkollat ku e gjithë klasa ka qenë pjesëmarrëse në Orën e Kodimit, në të cilën përfshihen testet e nxënesve' dhe mësuesve' në vlerësimin e aftësive kolektive.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

@@ -1,39 +1,43 @@
 * * *
 
-crwdns20252:0crwdne20252:0
+crwdns45411:0crwdne45411:0<%= hoc_s(:title_partners) %>
 
 * * *
 
-# crwdns20253:0crwdne20253:0
+<%= view :signup_button %>
+
+# crwdns43844:0crwdne43844:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# crwdns23786:0crwdne23786:0
+# crwdns43845:0crwdne43845:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# crwdns23787:0crwdne23787:0
+# crwdns43846:0crwdne43846:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# crwdns23788:0crwdne23788:0
+# crwdns43847:0crwdne43847:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# crwdns23789:0crwdne23789:0
+# crwdns43848:0crwdne43848:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# crwdns23790:0crwdne23790:0
+# crwdns43849:0crwdne43849:0
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

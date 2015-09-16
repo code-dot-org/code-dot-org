@@ -1,29 +1,30 @@
 * * *
 
-title: Захід Години коду - як провести layout: wide nav: resources_nav
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Керівництво з проведення заходу Години коду
 
-Проведіть Годину коду протягом тижня інформатики (8-14 грудня), відзначте цю галузь та заохотьте учнів спробувати себе у ній. Кожен, в будь-якому місці може організувати захід Години коду.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Підготуйтесь до заходу
 
   * Визначте місце, дату та час проведення
-  * Надішліть [листа](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) із запрошенням місцевих політиків, депутатів, бізнесменів чи інших впливових людей.
-  * Запросіть медіа та пресу, наприклад, місцеві новини, газету, освітніх чи технічних блогерів. Перегляньте [прес-кіт](<%= hoc_uri('/resources/press-kit') %>) для детальнішої інформації.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Проведіть захід
 
-  * Розпочніть захід одним із наших [натхненних відео-роликів](<%= hoc_uri('/resources#videos') %>).
-  * Проведіть вступ, наголошуючи на важливості інформатики, використовуючи [статистику та інфографіку](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Інші корисні ідеї: 
       * Запросіть представника індустрії для того, щоб дізнатися, як у його сфері залучена інформатика
       * Запросіть місцевого політика, якого навчать програмувати ваші учні
-      * Перегляньте одну із відео-сесій із послом Години коду. Всі вони будуть записані та викладені на сторінці YouTube Code.org. Цьогорічні учасники: Біл Гейтс, Шеріл Сендберг, Ештон Катчер та інші!
       * Продемонструйте безмашинну вправу групою учнів
       * Доручіть учням навчити програмуванню директора чи групу вчителів
       * Якщо у школі вже вивчається інформатика, проведіть демонстрацію виконаних проектів
@@ -35,84 +36,25 @@ title: Захід Години коду - як провести layout: wide nav
 
 ## Приклад плану заходу
 
-**Захід:** Шкільні збори, присвячені початку тижня інформатики
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Дата:** 8 грудня (початок тижня інформатики)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Час:** Протягом уроків. Краще у першій половині навчального дня. Тривалість близько 1 години.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Місце проведення:** Актовий зал школи (хол, спортзал, їдальня)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## План подій
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Час
-    </th>
-    
-    <th style="width:800px">
-      Подія
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 ранку
-    </td>
-    
-    <td>
-      Початок заходу із <a href="http://hourofcode.com/us/resources#videos">натхненним відео-роликом</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:06-11:15 ранку
-  </td>
-  
-  <td>
-    Директор проголошує вступне слово, підкреслюючи важливість інформатики. Можна використати <a href="/resources/stats">статистику та інфографіку</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 ранку
-  </td>
-  
-  <td>
-    Показ <a href="http://hourofcode.com/us/resources#videos">відео-роликів</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 ранку
-  </td>
-  
-  <td>
-    Запрошені гості розповідають про свою освіту та заняття, та про значення технологій та інформатики у їхньому житті.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 ранку
-  </td>
-  
-  <td>
-    Учні проводять демонстрацію Години коду. Спробуйте помінятись ролями - учні навчають вчителів, директора, гостей чи інших учнів.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 ранку
-  </td>
-  
-  <td>
-    Учні беруть участь у безмашинній вправі та демонструють вивчення інформатики без комп'ютерів.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 ранку
-  </td>
-  
-  <td>
-    Вчителі, котрі відповідали за проведення зборів, підсумовують захід.
-  </td>
-</table>
+| Час              | Подія                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Запрошені гості розповідають про свою освіту та заняття, та про значення технологій та інформатики у їхньому житті.                                 |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Учні беруть участь у безмашинній вправі та демонструють вивчення інформатики без комп'ютерів.                                                       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

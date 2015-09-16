@@ -1,29 +1,30 @@
 * * *
 
-title: "Programmēšanas stundas" vadlīnijas layout: wide nav: resources_nav
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # "Programmēšanas stundas" vadlīnijas
 
-Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. decembris), lai veicinātu datorzinātņu popularitāti un iedvesmotu vēl vairāk studentus to izmēģināt. Jebkurš var organizēt "Programmēšanas stundu" jebkurā vietā.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Sagatavojaties savam pasākumam
 
   * Nosakiet vietu, datumu un laiku
-  * Nosūtiet [uzaicinājumu](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) vietējiem deputātiem, amatpersonām vai ietekmīgiem uzņēmējiem, lai aicinātu tos teiktu uzrunu.
-  * Ielūdziet medijus, piemēram, vietēju ziņu raidījumu, avīzi vai tehnoloģiju žurnālistus. Apskati mūsu [sagatavotos materiālus](<%= hoc_uri('/resources/press-kit') %>).
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Pasākuma laikā
 
-  * Sāc "Programmēšanas stundu" ar vienu no mūsu [iedvesmojošajiem video](<%= hoc_uri('/resources#videos') %>).
-  * Sniedz nelielu ievadu par datorzinātņu nozīmi, izmantojot vienu no šiem [infografikiem](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Citas idejas pasākumam: 
       * Uzaicini vietējo uzņēmēju, lai tas pastāstītu par savu darbu, kas saistās ar datorzinātnēm
       * Uzaicini vietējo politiķi un lūdzu skolēniem mācīt viņam vai viņai, kā programmēt
-      * Noskaties vienu jautājumu un atbilžu sesijām ar vienu no "Programmēšanas stundas" vēstniekiem. Tās visas būs ierakstītas un publicētas Code.org YouTube lapā. Šī gada dalībnieku starpā ir Bils Geitss, Šerila Sandberga, Eštons Kačers un citi!
       * Liec skolēnu grupai demonstrēt programmēšanas aktivitātes bez datora
       * Liec grupai skolēniem mācīt skolas direktoram vai grupai skolotāju programmēt
       * Ja tavā skolā jau māca datorzinātnes, palūdz skolēniem demonstrēt savus darbus
@@ -35,84 +36,25 @@ Vadi "Programmēšanas stundu" Datorzinātņu izglītības nedēļā (8. - 14. d
 
 ## Piemēram "Programmēšanas stundas" plānam
 
-**Notikums:** Skolas mēroga Datorzinātņu izglītības nedēļas uzsākšanas pasākums
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Datums:** 8. decembris (Datorzinātņu izglītības nedēļas sākums)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Laiks:** Skolas dienas laikā. Ieteicams rīta pusē. Vidējais laiks - 1 stunda.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Vieta:** Plaša telpa (piemēram, teātris, kafejnīca)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## Pasākuma norise
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Laiks
-    </th>
-    
-    <th style="width:800px">
-      Darbība
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05
-    </td>
-    
-    <td>
-      Sāc ar <a href="http://hourofcode.com/us/resources#videos">iedvesmojošu video</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15 am
-  </td>
-  
-  <td>
-    Direktors sniedz nelielu ieskatu par datorzinātņu nozīmi. Izmanto šos <a href="/resources/stats">infografikus</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17 am
-  </td>
-  
-  <td>
-    Sāc ar <a href="http://hourofcode.com/us/resources#videos">iedvesmojošu video</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30 am
-  </td>
-  
-  <td>
-    Īpaši viesi stāsta par sevi un kā tehnoloģijas un datorzinātne spēlē nozīmīgu lomu viņu ikdienas dzīvē.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40 am
-  </td>
-  
-  <td>
-    Skolēni veic "Programmēšanas stundas" demonstrāciju skolai. Negaidīti liec viņiem mācīt programmēšanu direktoram, politiķiem vai citiem studentiem.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00 pm
-  </td>
-  
-  <td>
-    Skolēni vada programmēšanas aktivitātes bez datora un stāsta kā datorzinātnes var iemācīt bez datoru palīdzības.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05 pm
-  </td>
-  
-  <td>
-    Skolotājs, kas palīdzēja "Programmēšanas stundas" norisē, sniedz nobeiguma vārdus.
-  </td>
-</table>
+| Laiks            | Darbība                                                                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Īpaši viesi stāsta par sevi un kā tehnoloģijas un datorzinātne spēlē nozīmīgu lomu viņu ikdienas dzīvē.                                             |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Skolēni vada programmēšanas aktivitātes bez datora un stāsta kā datorzinātnes var iemācīt bez datoru palīdzības.                                    |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

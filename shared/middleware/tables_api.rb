@@ -50,6 +50,45 @@ class TablesApi < Sinatra::Base
     no_content
   end
 
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Deletes a column by name.
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    if column_name.empty?
+      halt 400, {}, "Column name cannot be empty"
+    end
+
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
+    no_content
+  end
+
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Updates a column name.
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    new_name = request.GET['new_name']
+    if new_name.empty?
+      halt 400, {}, "New column name cannot be empty"
+    end
+    TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    no_content
+  end
+
+  #
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
+  #
+  # Deletes a table
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
+    dont_cache
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    no_content
+  end
+
   #
   # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/<row-id>/delete
   #
@@ -91,11 +130,25 @@ class TablesApi < Sinatra::Base
     content_type :json
     value.to_json
   end
+
   patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
+
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+
+  # GET /v3/export-(shared|user)-tables/<channel-id>/table-name
+  #
+  # Exports a csv file from a table where the first row is the column names
+  # and additional rows are the column values.
+  #
+  get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :csv
+
+    return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
   end
 
   #
@@ -142,10 +195,42 @@ class TablesApi < Sinatra::Base
     # deleting the old records only after all validity checks have passed.
     table.delete_all()
 
+    # TODO: This should probably be a bulk insert
     records.each do |record|
       table.insert(record, request.ip)
     end
 
     redirect "#{table_url}"
+  end
+
+  #
+  # POST /v3/(shared|user)-tables/<channel-id>
+  #
+  # Populates tables from passed in json in the following format
+  #   {
+  #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
+  #     'table_2': [{'city': 'SF', 'people': 6}, ...],
+  #   }
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
+    begin
+      json_data = JSON.parse(request.body.read)
+    rescue => e
+      msg = "The json file could not be loaded: #{e.message}"
+      halt 400, {}, msg
+    end
+
+    overwrite = request.GET['overwrite'] == '1'
+    json_data.keys.each do |table_name|
+      table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      if table.exists? and !overwrite
+        next
+      end
+
+      table.delete_all()
+      json_data[table_name].each do |record|
+        table.insert(record, request.ip)
+      end
+    end
   end
 end

@@ -44,6 +44,9 @@ fa-AF:
   thank_you_: با سپاس!
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
   enter_valid_age: لطفا یک سن معتبر انتخاب کنید
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
@@ -181,10 +184,11 @@ fa-AF:
   homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
+  homepage_diversity_pledge: پیمان احترام و برابری نژاد ها را بپذیرید
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع علوم کامپیوتر را بهبود ببخشند.
-  homepage_banner_text_link: بیشتر بیاموزید
+  homepage_banner_text_link: بیشتر یاد بگیرید
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: بیشتر بیاموزید
+  homepage_banner_privacy_link: بیشتر یاد بگیرید
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -284,6 +288,7 @@ fa-AF:
   dashboard_landing_more_tutorials_desc: 'آموزش های بیشتری وجود دارند که <a href="/learn/beyond">توسط مشارکت کنندگان ما ارائه شده اند.</a> برنامه نویسی با استفاده از روبات ها، ساختن صفحات وب و ساختن برنامه شخصی خودتان را یاد بگیرید و در زبان های دیگری مثل C++، Ruby، و Python کاوش کنید.'
   dashboard_hoc_courses: ساعت کدنویسی برای همه سنین
   dashboard_hoc_courses_desc: این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین کنید!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: دوره های 20 ساعته برای پیش دبستانی
   dashboard_k5_courses_desc: 'این دوره ها شامل آموزشی های آنلاین، خود هدایت گر و متناسب با پیشرفت خود به همراه فعالیت های "غیر متصل" است که اصلا به هیچ کامپیوتری احتیاج ندارد. هر دوره شامل حدودا 20 درس است که ممکن است به عنوان یک واحد یا در طول دوره ی یک ترم اجرا شود. حتی کودکستانی ها و کودکانی که خواندن بلد نیستند می توانند شرکت کنند. به منظور کمک به شما برای شروع، ما کارگاه های توسعه ی حرفه ای با کیفیت بالا و مجانی در آمریکا ارائه می کنیم. <a href="/professional-development-workshops"> یکی نزدیکتان پیدا کنید!</a>'
   dashboard_middle_courses: دوره های 20 ساعته برای راهنمایی
@@ -432,6 +437,10 @@ fa-AF:
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: ثبت نام
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید
   hoc2014_try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
   hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
@@ -451,6 +460,7 @@ fa-AF:
   educator_notes: یادداشت های آموزگار
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
+  beyond_submission: می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد و فرم ثبت را ببینید.
   participants: شرکت کنندگان
   teachers_notes: یادداشت های معلم
   teachers_notes_hoc: 'معلم ها: نکته های مهم آموزگار را اینجا بخوانید'

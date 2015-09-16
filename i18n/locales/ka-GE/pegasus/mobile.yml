@@ -44,6 +44,9 @@ ka-GE:
   thank_you_: მადლობა!
   congratulations: გილოცავ!
   congratulations_on_completing_hoc: გილოცავ! კოდის ერთი საათი დასრულებულია
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: მიიღე სერტიფიკატი
   enter_valid_age: აირჩიეთ რეალური ასაკი
   enter_valid_email: შეიყვანეთ რეალური ელ. ფოსტის მისამართი
@@ -155,6 +158,7 @@ ka-GE:
   homepage_action_text_learn: დაიწყე სწავლა
   homepage_action_text_signpetition: მოაწერე ხელი პეტიციას
   homepage_signpetition_dropdown: 'ვეთანხმები პეტიციას &#x25BE;'
+  homepage_diversity_pledge: აიგე საწინდარი მრავალფეროვნება
   homepage_banner_text_main: Code.org და კოლეჯის საბჭო გაერთიანდნენ ინფორმატიკის მრავალფეროვნების მხარდასაჭერად.
   homepage_banner_text_link: გაიგე მეტი
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -258,6 +262,7 @@ ka-GE:
   dashboard_landing_more_tutorials_desc: 'მისაწვდომია კიდევ რამდენიმე სხვა კურსი <a href="/learn/beyond">ჩვენი პარტნიორებისგან.</a> ისწავლე რობოტების დაპროგრამება, ვებ-გვერდების შექმნა, დაწერე საკუთარი აპლიკაცია ან გაეცანი სხვა ენებს, მაგალითად C++, Ruby ან Python!'
   dashboard_hoc_courses: კოდის ერთი საათი ნებისმიერი ასაკისთვის
   dashboard_hoc_courses_desc: სცადეთ ეს მოკლე ერთსაათიანი გაკვეთილები თქვენს მოსწავლეებთან ერთად!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: ოცსაათიანი კურსი K-5
   dashboard_k5_courses_desc: 'ამ კურსებში გაერთიანებულია ონლაინ-ტუტორიალები და ისეთი აქტივობები, რომელთაც საერთოდ არ სჭირდებათ კომპიუტერი. ყოველი კურსი დაახლოებით 20 გაკვეთილისგან შედგება და მათი გავლა შეიძლება ერთიანად ან მთელი სემესტრის განმავლობაში. მონაწილეობის მიღება სკალმდელი ასაკის ბავშვებსაც შეუძლიათ. იმისთვის, რომ დაგეხმაროთ დაწყებაში, აშშ-ში უმაღლესი ხარისხის კურსებს უფასოდ გთავაზობთ.<a href="/professional-development-workshops">ნახე, რომელი ტარდება შენთან ახლოს!</a>'
   dashboard_middle_courses: ოცსაათიანი საშუალო სკოლის კურსები
@@ -406,6 +411,10 @@ ka-GE:
   code_hoc_coming: 'გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!'
   code_sign_up: დარეგისტრირდი და მიიღე მონაწილეობა CS განათლების კვირეულში
   learn_more: გაიგე მეტი
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: რეგისტრაცია
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: ნახე ჩვენი ახალი კოდის ერთი საათის გაკვეთილები
   hoc2014_try_new_tutorial: 'ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია'
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
@@ -425,6 +434,7 @@ ka-GE:
   educator_notes: მასწავლებლის ჩანაწერები
   how_to_teach_hoc: როგორ გავუძღვეთ კოდის ერთ საათს
   more_resources_educators: მეტი რესურსი მასწავლებლებისთვის
+  beyond_submission: გინდა სამეურვეო-ს გადაცემა საათის განმავლობაში? შეხედეთ კრიტერიუმებს და გადმოცემის ფორმას.
   participants: მონაწილეები
   teachers_notes: მასწავლებლის ჩანაწერები
   teachers_notes_hoc: 'მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ'
@@ -592,7 +602,7 @@ ka-GE:
   projguts_shortdescription: სცადე მოდელირება და სიმულაცია ქვა/ქაღალდი/მაკრატლის გამოყენებით
   hourofcode_shortdescription: შემავსებელი ახალი code.org/hoc
   frozen_shortdescription: გამოიყენე კოდი და შეუერთდი ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
-  playlab_shortdescription: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+  playlab_shortdescription: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
   codeorg_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   codeintl_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -820,4 +830,4 @@ ka-GE:
   sphero_beyond_longdescription: 'არა აქვს მნიშვნელობა, მშობელი ხართ თუ მასწავლებელი: SPRK გაკვეთილებით თქვენი ბავშვები სწრაფად და ხალისიანად ისწავლიან რობოტების პროგრამირებას და განავითარებენ მათემატიკის თავიანთ უნარებს.'
   compatibility_https_header: ჩართე HTTPS Code.org-ისთვის.
   compatibility_https_message: "უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის."
-  compatibility_https_hide_this_warning: ამ გაფრთხილების გათიშვა
+  compatibility_https_hide_this_warning: გაფრთხილების გათიშვა

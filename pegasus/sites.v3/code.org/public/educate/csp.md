@@ -11,9 +11,9 @@ The College Board has proposed a new course called AP® Computer Science Princip
 Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
 
 ## Code.org's CS Principles Curriculum
-Check back often as batches of lessons will be released on a rolling basis from now until Summer 2015 when the entire curriculum will be publicly available. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/mjMLCpXz3eo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/S1vFrz4NETg" frameborder="0" allowfullscreen></iframe>
 
 ### <a name="features"></a>Features
 
@@ -32,9 +32,11 @@ Check back often.  The video library is growing every week!
 
 <iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/CfczKEzp4kY" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/i8TTdaEkBiw" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://www.youtube.com/embed/xOJTUuw62v4" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/6RBM1aM1IKw" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/JJ1S9Y31vgQ" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -61,10 +63,10 @@ Several documents describe the overarching themes and direction of the course.
 ## <a name="lessons"></a>Lessons
 
 
-| Link| Unit Description |
+| Link | Unit Description |
 | :------------------:|-----------|
 |  [![binary magic](csp/images/thumb_binaryMagic.png "Unit 1")](/educate/csp/unit1) [Unit 1](/educate/csp/unit1) | **Digital Information** What can be represented with a single bit and how do we get a single bit of information from one place to another? This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. Topics include: the digital representation of information - numbers, text, images, and communication protocols |
-|*Coming Soon*| **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography and other security and hacking concerns. Topics include: encryption, security, computationally hard problems, and internet protocols|
+|  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 2")](/educate/csp/unit2) [Unit 2](/educate/csp/unit2)  | **The Internet** Students continue to work together to invent solutions and protocols to many of the problems that arise in the structure and function of the Internet. Topics include the Internet Protocol, DNS, TCP/IP, cryptography, computationally hard problems, and other security and hacking concerns.
 |*Coming Soon*| **Programming** Students learn the fundamentals programming constructs of JavaScript by solving problems with “turtle graphics.”  Then move on to programming simple event driven apps.  An emphasis is placed on enabling students to solve problems and write code in teams. |
 |*Coming Soon*| **Data** Students continue programming and building web apps, now with a view towards data: processing it with algorithms, and the implications of storing data collected from and by others on the web.  Students explore “big data” by making queries against a data analysis api.|
 |*Coming Soon*| **Explore and Create** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create.|
@@ -85,7 +87,7 @@ Unit completion is driven primarily by our professional development schedule. Un
 As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
 
 * Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
-* Unit 2 - Target Aug. 31
+* Unit 2 - Target Aug. 31 - **done!** see [Unit 2](/educate/csp/unit2)
 * Unit 3 - Target Early Fall (Sept/Oct)
 * Unit 4 - Target Mid Fall (Oct/Nov)
 

@@ -4,286 +4,158 @@ nav: resources_nav
 ---
 
 <div class="row">
-  <h1 class="col-sm-6">
-    Ресурси
+  <h1 class="col-sm-12">
+    Resources (2015 resources coming soon)
   </h1>
-  
-  <div class="col-sm-6 button-container centered">
-    <a href="<%= hoc_uri('/#join') %>"><button class="signup-button">Зареєструйте свій захід</button></a>
-  </div>
 </div>
 
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/resources/how-to') %>)
 
-## Hosting an Hour of Code in Ireland? [See the how-to guide](<%= hoc_uri('/resources/how-to-ireland') %>)
+<a id="handouts"></a>
 
-<% else %>
+## Поширюйте інформацію у цьому буклеті
 
-## Hosting an Hour of Code? [See the how-to guide](<%= hoc_uri('/resources/how-to') %>)
+[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
-<% end %>
+## Передайте цю роздруківку вчителям та школам
 
-<a id="handouts"></p> 
+[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
-<h2>
-  Use this handout to spread the word
-</h2>
+<a id="videos"></a>
 
-<p>
-  <a href="/files/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="image" /></a>
-</p>
+## Покажіть ці відео, щоб надихати учнів
 
-<h2>
-  Give this handout to teachers and schools
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Те, чому не вчать у більшості шкіл (5 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/schools-handout.pdf"><img src="/images/fit-250/schools-handout.png" alt="image" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Настала Година коду - навчитись може кожен</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="videos"></p> 
-  
-  <h2>
-    Show these videos to inspire students
-  </h2>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Те, чому не вчать у більшості шкіл (5 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>Настала Година коду - навчитись може кожен</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама про інформатику</strong></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
-    <p>
-      <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Навчитись може кожен (1 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
-    </p>
-  </div>
-  
-  <div style="float:left; padding:10px">
-  </div>
-  
-  <div style='clear:both'>
-  </div>
-  
-<p>
-<a id="posters"></p> 
+<div style='clear:both'>
+</div>
 
-<h2>
-  Hang these posters in your school
-</h2>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Президент Обама про інформатику</strong></a>
+  </p>
+</div>
 
-<p>
-  <a href="/files/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="image" /></a> <a href="/files/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="image" /></a> <a href="/files/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="image" /></a> <a href="/files/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="image" /></a> <a href="/files/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="image" /></a> <a href="/files/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="image" /></a>
-</p>
+<div style="float:left; padding:10px">
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <p>
+    <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Навчитись може кожен (1 хв)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
+  </p>
+</div>
 
-<p>
-  <a id="banners"></a>
-</p>
+<div style="float:left; padding:10px">
+</div>
 
-<h2>
-  Feature these banners on your website
-</h2>
+<div style='clear:both'>
+</div>
 
-<p>
-  <a href="/images/banner1.jpg"><img src="/images/fit-250/banner1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner3.jpg"><img src="/images/fit-250/banner3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/banner5.jpg"><img src="/images/fit-500/banner5.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="posters"></a>
 
-<p>
-  <a id="social"></a>
-</p>
+## Повісьте плакати у школі
 
-<h2>
-  Post these on social media
-</h2>
+[![image](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![image](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![image](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![image](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![image](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![image](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![image](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![image](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
-<p>
-  <a href="/images/social-1.jpg"><img src="/images/fit-250/social-1.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-2.jpg"><img src="/images/fit-250/social-2.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/social-3.jpg"><img src="/images/fit-250/social-3.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+<a id="banners"></a>
 
-<p>
-  <a href="/images/mark.jpg"><img src="/images/fit-250/mark.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/susan.jpg"><img src="/images/fit-250/susan.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/chris.jpg"><img src="/images/fit-250/chris.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/marissa.jpg"><img src="/images/fit-250/marissa.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/images/ashton.jpg"><img src="/images/fit-250/ashton.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/image/barack.jpg"><img src="/images/fit-250/barack.jpg" alt="image" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
+## Розмістіть банери на своєму сайті
 
-<p>
-  <a id="sample-emails"></a>
-</p>
+[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<h2>
-  Send these emails to help promote the Hour of Code
-</h2>
+<a id="social"></a>
 
-<p>
-  <a id="email"></a>
-</p>
+## Розмістіть у соціальних мережах
 
-<h2>
-  Ask your school, employer or friends to sign up:
-</h2>
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. If you heard about the Hour of Code last year, you might know it made history. Лише за один тиждень 15 мільйонів учнів познайомились з інформатикою!
-</p>
+[![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p>
-  Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+<a id="sample-emails"></a>
 
-<p>
-  This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2014. Please get involved with an Hour of Code event during Computer Science Education Week, December 8-14, 2014.
-</p>
+## Розішліть ці листи, щоб поширити інформацію про Годину коду
 
-<p>
-  Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
-</p>
+<a id="email"></a>
 
-<p>
-  Help us reach 100 million students by the end of the year! Get started at http://hourofcode.com/<%= @country %>
-</p>
+## Запросіть підписатись свою школу, працедавця чи друзів:
 
-<p>
-  <a id="media-pitch"></a>
-</p>
+Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Хорошою новиною є те, що ми можемо це змінити. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-<h2>
-  Invite media to attend your event:
-</h2>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! та Діснею. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>Subject line:</strong> Local school joins mission to introduce 100m students to computer science
-</p>
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-<p>
-  Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
-</p>
+Поширюйте інформацію. Проведіть захід. Запросіть місцеву школу приєднатися. Або спробуйте Годину коду самі - кожен може вивчити основи.
 
-<p>
-  In one week last year, 15 million students tried computer science! Computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+Get started at http://hourofcode.com/<%= @country %>
 
-<p>
-  Now the Hour of Code movement is aiming for 100 million students.
-</p>
+<a id="media-pitch"></a>
 
-<p>
-  That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 8-14.
-</p>
+## Запросіть ЗМІ на свій захід:
 
-<p>
-  I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
-</p>
+**Subject line:** Local school joins mission to introduce students to computer science
 
-<p>
-  The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a statement that today’s generation of students are ready to learn critical skills for 21st century success. Please join us.
-</p>
+Комп'ютери поширені повсюдно, але все менше шкіл викладають інформатику, аніж 10 років тому. Дівчатка та національні меншини представлені у галузі надто мало. Хороша новина полягає у тому, що ми можемо це змінити.
 
-<p>
-  <strong>Contact:</strong> [YOUR NAME], [TITLE], cell: (212) 555-5555
-</p>
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! та Діснею. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-<p>
-  <strong>When:</strong> [DATE and TIME of your event]
-</p>
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
-<p>
-  <strong>Where:</strong> [ADDRESS and DIRECTIONS]
-</p>
+Я хочу запросити Вас відвідати наші вступні збори і побачити, як діти починають роботу [DATE].
 
-<p>
-  I look forward to being in touch.
-</p>
+Година коду, що проводиться некомерційною організацією Code.org і більш як сотнею інших, є доказом того, що нинішнє покоління учнів готове вчитися необхідним навичкам для успіху в 21-му столітті. Приєднуйтеся.
 
-<p>
-  <a id="parents"></a>
-</p>
+**Контакт:** [YOUR NAME], [TITLE], тел.: (212) 555-5555
 
-<h2>
-  Tell parents about your school's event:
-</h2>
+**Коли:** [Дата і час Вашого заходу]
 
-<p>
-  Dear Parents,
-</p>
+**Де:** [Адреса і вказівки з добирання]
 
-<p>
-  We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
-</p>
+Якщо є питання, будь ласка, звертайтесь.
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="parents"></a>
 
-<p>
-  Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
-</p>
+## Повідомте батьків про заходи у вашій школі:
 
-<p>
-  This is a chance to change the future of education in [TOWN/CITY NAME].
-</p>
+Шановні батьки,
 
-<p>
-  See http://hourofcode.com/<%= @country %> for details, and help spread the word.
-</p>
+Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх залежатиме від розуміння принципів роботи цих технологій. Але лише невеликий відсоток з нас вивчають інформатику і це менше, ніж десять років тому.
 
-<p>
-  Sincerely,
-</p>
+Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (8-14 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-<p>
-  Your principal
-</p>
+Наша Година коду є доказом того, що [Назва школи] готова навчати цих базових навичок 21го століття. Щоб продовжити вивчення програмування з нашими учнями, ми хочемо посилити важливість заходів Години коду. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-<p>
-  <a id="politicians"></a>
-</p>
+Це шанс змінити майбутнє освіти в [місто].
 
-<h2>
-  Invite a local politician to your school's event:
-</h2>
+Див http://hourofcode.com/<%= @country %> для детальнішої інформації та поширення її.
 
-<p>
-  Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-</p>
+З повагою,
 
-<p>
-  Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for <em>every</em> industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
-</p>
+Директор
 
-<p>
-  That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 8-14). Last year, 15 million students tried computer science in one week. This year, we're joining students worldwide to reach 100 million students!
-</p>
+<a id="politicians"></a>
 
-<p>
-  I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future--not just consuming it.
-</p>
+## Запросіть місцевих політиків на захід у Вашій школі:
 
-<p>
-  Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-</p>
+Шановний [Прізвище мера, депутата, губернатора]:
 
-<p>
-  Sincerely, [NAME], [TITLE]
-</p>
+Чи знаєте ви, що в умовах сучасної економіки, робочих місць у сфері інформаційних технологій утричі більше, ніж студентів-випускників? А інформатика сьогодні є основоположною для *усіх* сфер діяльності. Yet most of schools don’t teach it. Ми, у школі [SCHOOL NAME], намагаємося це змінити.
 
-<p>
-  <a style="display: block" href="<%= hoc_uri('/#join') %>"><button style="float: right;">Зареєструйте свій захід</button></a>
-</p>
+Тому вся наша школа приєднується до найбільшої освітньої події в історії: Години коду, протягом тижня інформатики (8-14 7-13). More than 100 million students worldwide have already tried an Hour of Code.
+
+Я хочу запросити Вас взяти участь в нашому заході Години коду і виступити на вступних зборах. Вони відбудуться [Дата, Час, Місце], і ми хотіли б наголосити, що [Місто] готове навчати учнів критичним навичкам 21-го століття. Ми хочемо, щоб переконатися, що наші перебувають в авангарді створення технологій майбутнього – а не просто їх споживання.
+
+Будь ласка, зв'яжіться зі мною за [номер телефону чи електронна адреса]. Чекатиму Вашої відповіді.
+
+З повагою, [NAME], [TITLE]

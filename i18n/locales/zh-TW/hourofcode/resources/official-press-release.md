@@ -1,10 +1,12 @@
 * * *
 
-title: Hour of Code Press Release for Elected Officials layout: wide nav: resources_nav
+title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-# Sample press release for elected officials
+<%= view :signup_button %>
+
+# 當選官員的新聞稿草稿
 
 For Immediate Release  
 [**DATE**]  
@@ -30,9 +32,7 @@ Contact: [**CONTACT INFORMATION**]
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-During Computer Science Education Week last year, 15 million students tried the Hour of Code. 去年，此活動曾出現在許多大網站的首頁上，如Google、MSN、雅虎、 與迪士尼。 美國總統歐巴馬,哥倫比亞流行歌手夏奇拉和美國演員艾希頓·庫奇， 都一起用影片為Hour of Code 活動揭開序幕。 100 多個夥伴共同支援此運動。
-
-This year the Hour of Code movement is aiming for 100 million students.
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! 與迪士尼。 President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
 “We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
@@ -42,3 +42,9 @@ This year the Hour of Code movement is aiming for 100 million students.
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

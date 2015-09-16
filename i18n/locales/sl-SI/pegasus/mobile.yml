@@ -44,6 +44,9 @@ sl-SI:
   thank_you_: Hvala!
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
   enter_valid_age: Prosimo, izberite veljavno starost
   enter_valid_email: Vnesite veljaven email naslov
@@ -187,6 +190,7 @@ sl-SI:
   homepage_action_text_learn: Začni z učenjem
   homepage_action_text_signpetition: Podpiši peticijo
   homepage_signpetition_dropdown: 'Strinjam se &#x25BE;'
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju raznolikosti računalništva.
   homepage_banner_text_link: Več o tem
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
@@ -290,6 +294,7 @@ sl-SI:
   dashboard_landing_more_tutorials_desc: 'Naši partnerji <a href="/learn/beyond"> ponujajo še več vaj. .</a> Naučite se programirati z roboti, ustvariti spletno stran, izdelati svojo aplikacijo ali raziskujte programske jezike kot so C++, Ruby ali Python!'
   dashboard_hoc_courses: Ura za kodo za vse starosti
   dashboard_hoc_courses_desc: Skupaj z učenci poglejte nekaj krajših, enournih, poučnih prikazov!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20-urni tečaji za osnovnošolce do 5. razreda
   dashboard_k5_courses_desc: 'Ti tečaji združujejo spletne vaje, pri katerih si sami prilagajate tempo in čas, z "izštekanimi" aktivnostmi, za katere sploh ne potrebujete računalnika. Vsak tečaj je sestavljen iz 20 lekcij, ki se lahko izvajajo skupaj, naenkrat ali tekom celega semestra. Sodelujejo lahko celo predšolski otroci, ki še ne znajo brati. Za lažji začetek vam ponujamo visoko kakovostne strokovne delavnice, ki so po celih ZDA brezplačne. <a href="/professional-development-workshops">Poiščite takšno, ki je blizu vas!</a>'
   dashboard_middle_courses: 20-urni tečaji za srednje šole
@@ -438,6 +443,10 @@ sl-SI:
   code_hoc_coming: 'Ura za kodo je tu - 8. do 14. december!'
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   learn_more: Več o tem
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Prijava
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Poskusite naše nove vaje Ure Za Kodo
   hoc2014_try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
   hoc2014_try_scrat: Angry Birds, PvZ in Scrat
@@ -457,6 +466,7 @@ sl-SI:
   educator_notes: Zapiski učitelja
   how_to_teach_hoc: Kako poučevati Uro za kodo
   more_resources_educators: Več virov za učitelje in vzgojitelje
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria and submission form.
   participants: udeleženci
   teachers_notes: Zapiski učitelja
   teachers_notes_hoc: 'Učitelji: Preberite pomembne opombe za pedagoge tukaj'

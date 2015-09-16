@@ -1,17 +1,21 @@
 * * *
 
-title: Blurbs and Stats layout: wide nav: resources_nav
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Presentasjon og nyttig statistikk
 
-## Use this short blurb in newsletters
+## Bruk denne korte teksten i nyhetsbrevet.
 
 ### Ta informatikk til skolen din. Start med kodetimen. 
 
-Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. Good news is, we’re on our way to change this. If you heard about the [Hour of Code](<%= hoc_uri('/') %>) last year, you might know it made history. In one week, 15 million students tried computer science! The [Hour of Code](<%= hoc_uri('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= hoc_uri('/') %>) to host an Hour of Code this December 8-14 during Computer Science Education Week and help reach 100 million students by the end of the year. Add your school to the map, go to <http://hourofcode.com>
+Datamaskiner er overalt, men færre skoler underviser i informatikk nå enn for 10 år siden. De gode nyhetene er at vi jobber for å endre dette. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Infographic version:
+## Infographics
 
-![bilde](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
+
+<%= view :signup_button %>

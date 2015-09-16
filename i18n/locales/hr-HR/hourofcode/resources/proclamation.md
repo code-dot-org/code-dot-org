@@ -1,15 +1,17 @@
 * * *
 
-Naslov: Uzorak Op-ed podrške tjednu računarstva i Satu Kodiranja izgled: široki nav: resources_nav
+title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 ### Ispod je primjer podrške tjednu računarskog obrazovanja i njegovim ciljevima za državne i lokalne zakonodavce.
 
   
-[Kuća, Senat, država, županija ili grad Odluka ili PROGLAS ###] – Budući da tjedan računarstva naglašava ključnu ulogu koju informatika ima u preobrazovanju našega društva i kako znanost omogućuje inovacije i stvara ekonomske prilike;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[ REZOLUCIJA KUĆE ILI SENATA ###]
+[HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
@@ -37,11 +39,11 @@ Whereas the field of computer science has significant equity barriers to address
 
 Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of December 8, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) supports the designation of Computer Science Education Week (December 8-14, 2014);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
@@ -50,3 +52,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

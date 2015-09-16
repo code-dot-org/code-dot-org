@@ -1,29 +1,30 @@
 * * *
 
-Titel: Hour of Code - Hvordan gør jeg? layout: bred nav: resources_nav
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Hour of Code event guide
 
-Være vært for et Hour of Code arrangement under Computer Science Education Week (8.-14. dec.) for at fejre programmering og for at inspirere flere elever til at prøve det. Alle kan organisere en Hour of Code begivenhed.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) Forbered dit arrangement
 
   * Bestem sted, dato og tidspunkt
-  * Send [ et brev](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) for at invitere din lokale borgmester, kommunalpolitiker, folketingsmedlem eller indflydelsesrige forretningspersoner til at holde en tale.
-  * Invitere medier/presse. dvs. lokale nyhedsstation, aviser, uddannelses/it- bloggere. Se vores [ presse kit](<%= hoc_uri('/resources/press-kit') %>) for at få hjælp.
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) Under dit arrangement
 
-  * Ved dit Kick-off kan du bruge en af vores [ inspirerende videoer](<%= hoc_uri('/resources#videos') %>).
-  * Give et oplæg om betydningen af programmering, ved hjælp af disse [ statistikker og grafik](<%= hoc_uri('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * Andre event ideer: 
       * Invitere en lokal industrileder til at fortælle om hvordan programmering indgår i hans eller hendes arbejde
       * Invitere en lokalpolitiker og få eleverne til at lære ham eller hende hvordan man koder
-      * Se en af Q & A-sessions med en Hour of Code ambassadør. De vil alle blive filmet og lagt på Code.org's YouTube side. Dette års deltagere omfatter Bill Gates, Sheryl Sandberg, Ashton Kutcher og mange flere!
       * Få en gruppe af elever til at demonstrere en unplugged øvelse
       * Få en gruppe af elever til at lære skolelederen, eller en gruppe af lærere, hvordan man kode
       * Hvis din skole allerede underviser i kodning, så få eleverne til at vise deres projekter
@@ -35,84 +36,25 @@ Være vært for et Hour of Code arrangement under Computer Science Education Wee
 
 ## Eksempel på arrangementsplan
 
-**Event:** Skole med Computer Science Education Week kick-off arrangementer
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Dato:** Den 8. december (starten af Computer Science Education Week)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
-**Tid:** I løbet af skoledagen. Formiddags begivenheder. Ca. 1 time.
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Beliggenhed:** Skolens festsal (fx teater, gym, cafeteria)   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## Kør et Show
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Tidspunkt
-    </th>
-    
-    <th style="width:800px">
-      Hændelse
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05
-    </td>
-    
-    <td>
-      Se en af vores <a href="http://hourofcode.com/us/resources#videos">inspirerende videoer</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-10:15
-  </td>
-  
-  <td>
-    Skolelederen giver en tale om betydningen af programmering. Brug disse <a href="/resources/stats">statistik og infografik</a>.
-  </td></tr> 
-  
-  <td>
-    10:15-10:17
-  </td>
-  
-  <td>
-    Se en af vores <a href="http://hourofcode.com/us/resources#videos">inspirerende videoer</a>
-  </td></tr> 
-  
-  <td>
-    10:17-10:30
-  </td>
-  
-  <td>
-    Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.
-  </td></tr> 
-  
-  <td>
-    10:30-10:40
-  </td>
-  
-  <td>
-    Eleverne gennemfører en Hour of Code demonstration for skolen. En sjov variation kunne være, at få dem til at underviser politikere eller andre elever.
-  </td></tr> 
-  
-  <td>
-    10:40-11:00
-  </td>
-  
-  <td>
-    Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.
-  </td></tr> 
-  
-  <td>
-    11:00-11:05
-  </td>
-  
-  <td>
-    Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.
-  </td>
-</table>
+| Tidspunkt   | Hændelse                                                                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                      |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)       |
+| 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                     |
+| 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever. |
+| 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                |
+| 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                            |
+
+<%= view :signup_button %>

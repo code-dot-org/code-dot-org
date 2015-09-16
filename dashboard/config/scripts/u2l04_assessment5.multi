@@ -9,3 +9,9 @@ wrong 'Your router receives all the traffic of the Internet and delivers to your
 wrong 'There is one router which receives and redirects all the traffic of the Internet.'
 right 'A packet travelling between two computers on the Internet may be rerouted many times along the way.'
 right 'A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.'
+teacher_markdown <<MARKDOWN
+Answers:
+
+- D: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+- E: A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+MARKDOWN

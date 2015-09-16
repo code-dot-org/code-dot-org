@@ -636,6 +636,8 @@
         C4_variables_artist: Breytur - Listamaður
         C4_variables_playlab: Breytur - Leikjasmiðja
         C4_for_loops: Frá lykkjur
+        C4_for_loops_bee: Frá lykkjur
+        C4_for_loops_no_bee: Frá lykkjur
         C4_math_artist: Forritun listamanns með stærðfræði
         C4_function_edit: Breyting falla
         C4_function_create: Gerð falla
@@ -665,6 +667,7 @@
         csp_U1L14_tipstricks: Ráð & refabrögð kennara fyrir 1. kafla, kennslustund
           14
         csp_textcompression: Textaþjöppunargræja
+        csp_textcompression_new: Textaþjöppunargræja
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

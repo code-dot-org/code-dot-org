@@ -1,11 +1,18 @@
 name 'U3L02 Assessment'
-title 'Assessment Question'
+title 'What does efficiency mean in programming?'
 
 
 markdown <<MARKDOWN
-Define efficiency from the perspective of drawing with “building blocks” in AppLab. 
+This lesson introduced the notion of "efficiency" in programming, and that it might mean different things at different times.  Think of an example *outside* of computer science in which you have heard the term “efficiency” and compare it to the ways we talked about efficiency in programming.  
 
-List two examples outside of computer science in which you have heard the term “efficiency” described or rated. 
+In which ways is the meaning of "efficiency" the same? In which ways is it different?
+MARKDOWN
 
-How are the non-CS examples of efficiency similar in meaning to your definition of efficiency in creating code to draw images?
+teacher_markdown <<MARKDOWN
+Efficiency definition: achieving some desired outcome while minimizing wasted effort or resources.
+Note that depending on the context, the resources or effort may take many different forms
+Other examples may include fuel efficiency in cars, energy efficiency in appliances or light bulbs, or even apartments.
+
+The description of similarities might include the idea of how much one is getting (amount/size of the image compared to mpg or hours of operation or living space) for the expenditure of resources (lines of code compared to fuel or electricity or rent).
+
 MARKDOWN

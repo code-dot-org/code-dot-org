@@ -324,8 +324,9 @@
           ένα παραλληλόγραμμο δεξιά του τριγώνου
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Ξεκίνα με ένα τατράγωνο<br/>Βάλε ένα τρίγωνο δεξιά από το τετράγωνο<br/>Βάλε
+          ένα παραλληλόγραμμο δεξιά από το τετράγωνο<br/>Βάλε το τρίγωνο δεξιά από
+          το παραλληλόγραμμο
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

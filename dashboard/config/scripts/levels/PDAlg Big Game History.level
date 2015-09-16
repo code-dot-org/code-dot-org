@@ -1,0 +1,47 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2015-08-24T21:44:54.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "embed": "false",
+    "instructions": "Now that you've played through a Big Game level you should see a new entry in your history. Click the Version History button and you should see at least one version. Each time you go back to a Big Game level you'll get a new record in your version history that you can revert back to.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "true",
+    "default_num_example_blocks": "2",
+    "project_template_level_name": "Big Game Template",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "true",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "generate_function_pass_blocks": "true",
+    "callout_json": "[]",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "custom_game_type": "Big Game",
+    "min_workspace_height": "1500",
+    "disable_examples": "false",
+    "markdown_instructions": "Now that you've played through a Big Game level you should see a new entry in your history. Click the _Version History_ button and you should see at least one version. Each time you go back to a Big Game level you'll get a new record in your version history that you can revert back to.\r\n\r\nMake sure to click _Run_ and _Finish_ to move on to the next puzzle.",
+    "examples_required": "false",
+    "maze_data": null
+  }
+}]]></config>
+  <blocks/>
+</Studio>

@@ -825,8 +825,8 @@
         Complete the onscreen? function so that it
         checks whether both safe-left? and safe-right? are true.
       Big Game Booleans 5_instruction: |
-        At this point your danger should run across
-        the screen from right to left, your target should run across from left to
+        At this point your Danger should run across
+        the screen from right to left, your Targer should run across from left to
         right, and they should both return to the opposite side, repeatedly. Take
         a minute to make sure your game is working like you want it to, and then click
         Finish to move on.
@@ -1186,17 +1186,19 @@
         są kwiatami, upewniaj się więc, że nektar jest zbierany tylko z kwiatów.
       Course 4 Artist 1_instruction: 'Pomóż mi ukończyć rysowanie mojego pudełka.
         (Każda linia ma długość 200 pikseli) '
-      Course 4 Artist 10_instruction: 'To czas na zabawę! Baw się rysując cokolwiek
-        chcesz. '
-      Course 4 Artist 11_instruction: 'Czas na wyzwanie! Oto propozycja, która używa
-        tylko tych bloków, które już poznałeś. Czy możesz spróbować odtworzyć ją bez
-        żadnych dodatkowych informacji? Wskazówka: Nie bój się popełniać błędów i
-        próbować, nie oczekuj, że wszystko będzie doskonałe za pierwszym podejściem.'
-      Course 4 Artist 12_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego,
-        co musisz wiedzieć, aby utworzyć podobny wzorek! Jeśli ten obraz inspiruje
-        Cię, to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według
-        własnego pomysłu.\r\n\n\r\nJeśli chcesz wiedzieć, jak powstał nasz wzorek,
-        to odwiedź stronę https://studio.code.org/c/105671120/edit."
+      Course 4 Artist 10_instruction: "Kliknij tutaj, aby ponownie zobaczyć wskazówki!
+        \r\n\r\nTutaj jest kod ciekawego kształtu. Co się dzieje, gdy go powtórzysz?
+        Zauważ, że suma skrętów przy rysowaniu tego kształtu wynosi 420 stopni. Oznacza
+        to, że gdy twój artysta wykona rysunek, to będzie skierowany w innym kierunku
+        niż wtedy, gdy zaczynał rysować. Ten nowy kierunek jest dokładnie 60 stopni
+        w prawo od kierunku, w którym zaczynał."
+      Course 4 Artist 11_instruction: Czas na wyzwanie! Oto kompozycja, która używa
+        tylko tych bloków, które już poznałeś. Czy mógłbyś określić, jak została utworzona?
+        Nie bój się popełniać błędów i próbować. Nie oczekuj, że wszystko będzie doskonałe
+        za pierwszym razem. Kliknij tutaj, jeśli chcesz zobaczyć więcej wskazówek!
+      Course 4 Artist 12_instruction: "Czy potrzebujesz ponownie spojrzeć na inspirującą
+        kompozycję lub na wskazówkę? Kliknij tutaj!\r\n\r\nW przeciwnym razie wykonaj
+        własną kompozycję!"
       Course 4 Artist 13_instruction: Nadal grasz? Tutaj jest czyste płótno, na którym
         możesz zaprojektować cokolwiek chcesz!
       Course 4 Artist 2_instruction: Czy potrafisz powtórzyć ten kod, aby pomalować
@@ -1217,9 +1219,10 @@
         wypełnia obrót o 360 stopni.  '
       Course 4 Artist 8_instruction: Narysuj to słońce powtarzając ten blok kodu 12
         razy.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Czy pamiętasz ten kształt?  Teraz chcemy zachęcić
+        Cię do utworzenia tego samego kształtu, ale nie dajemy Ci żadnych bloków,
+        abyś mógł zacząć! \r Wskazówka: Mamy 3 trójkąty w rotacji w zakresie 360 stopni...
+        ile razy ma 3 mieści się 360?"
       Course 4 Artist 9_instruction: 'Powtórz ten wzór 10 razy i bądź pewien, że skręcasz
         między każdymi dwoma kształtami. Oto wskazówka, ile ma wynosić skręt: ile
         wynosi 360 podzielone przez 10?'
@@ -1252,11 +1255,12 @@
         długości 50 pikseli. Wskazówka: Użyj bloku "powtórz".'
       Course 4 Artist For Loops 10_instruction: Czas dowolnej zabawy! Ciesz się rysując
         cokolwiek chcesz za pomocą bloków, których nauczyłeś się używać
-      Course 4 Artist For Loops 11_instruction: 'Czy pamiętasz, kiedy użyliśmy zmiennej
-        do kontroli liczby boków? Ten wzór zaczyna się od trójkąta i dodawany jest
-        jeden bok, aż zostaje narysowany dziesięciokąt foremny (z 10 bokami). Każdy
-        bok powinien mieć 100 pikseli długości. Wskazówka: 360 podzielone przez liczbę
-        boków na rysunku jest liczbą stopni, o którą trzeba skręcić.'
+      Course 4 Artist For Loops 11_instruction: 'Czy pamiętasz, gdy na Poziomie 6
+        użyliśmy zmiennej do kontroli liczby boków w kształcie? Teraz wykonamy to
+        samo ze zmienną "counter" (licznik). Ten wzór zaczyna się od trójkąta i dodawany
+        jest jeden bok, aż zostaje narysowany dziesięciokąt foremny (z 10 bokami).
+        Każdy bok powinien mieć 100 pikseli długości. Wskazówka: 360 podzielone przez
+        liczbę boków na rysunku jest liczbą stopni, o którą trzeba skręcić.'
       Course 4 Artist For Loops 11a_instruction: "Połączmy to wszystko razem! Korzystając
         z tego, co wiesz o pętli \"dla\" i \"licznika\" (counter), utwórz ten rysunek,
         na którym każdy kształt ma dwa więcej boki niż poprzedni.  Upewnij się, że
@@ -1272,41 +1276,46 @@
         gdy jest ich więcej? Zamiast posuwać się do przodu o ustaloną wielkość, spróbuj
         przesuwać się do przodu o (100/licznik) pikseli.
       Course 4 Artist For Loops 14_instruction: Jeśli skręcisz trochę więcej lub trochę
-        mniej, to otrzymasz zgrabny kształt. Spróbuj skręcić o 89 stopni, aby utworzyć
-        tę skręcaną spiralę kwadratową.
-      Course 4 Artist For Loops 15_instruction: 'Czas na zabawę: Spróbuj wykonać własne
-        rysunki za pomocą pętli "dla". Dodaliśmy kilka podstawowych zmiennych, byś
-        mógł je użyć.'
-      Course 4 Artist For Loops 2_instruction: 'Umieściliśmy kod do rysowania trójkąta
-        wewnątrz pętli, która liczy od 50 do 100 co 10. Przejrzyj ten kod a następnie
-        kliknij na "Uruchom", by zobaczyć go w akcji. '
-      Course 4 Artist For Loops 3_instruction: Najmniejszy trójkąt ma boki o długości
-        20 pikseli, największy ma boki o długości 200 pikseli, i każdy trójkąt ma
-        boki o 20 pikseli większe niż poprzedni trójkąt. Popraw pętlę "dla", by rysować
-        te trójkąty.
-      Course 4 Artist For Loops 4_instruction: Użyj pętli "dla", by narysować te kwadraty.
-        Najmniejszy ma bok o długości 50 pikseli, największy ma bok o długości 300
-        pikseli, i każdy kwadrat ma bok o 25 pikseli dłuższy niż poprzedni kwadrat.
-        Daję Ci niemal cały potrzebny kod - brakuje tylko jednego bloku, którego?
+        mniej, to otrzymasz zgrabny kształt. Wykorzystaj kod z poprzedniej łamigłówki,
+        ale skręcić o 89 stopni, aby utworzyć tę skręcaną spiralę kwadratową.
+      Course 4 Artist For Loops 15_instruction: "Czas na zabawę: Spróbuj wykonać własne
+        rysunki za pomocą pętli \"dla\". Dodaliśmy kilka podstawowych zmiennych, byś
+        mógł je użyć.\r\n\r\nZauważ, że jest tak wiele bloków w przyborniku, że musimy
+        je ponownie pogrupować w kategorie.  Kliknij na poszczególne kategorie, by
+        odkryć wszystkie bloki, które możesz użyć."
+      Course 4 Artist For Loops 2_instruction: Umieściliśmy kod do rysowania trójkąta
+        wewnątrz pętli, która liczy od 50 do 100 co 10. Przejrzyj ten kod zanim klikniesz
+        na "Uruchom".
+      Course 4 Artist For Loops 3_instruction: |
+        Skorzystaj z poprzedniej łamigłówki, by wykonać tę. Najmniejszy trójkąt ma boki o długości 20 pikseli, największy ma boki o długości 200 pikseli, i każdy trójkąt ma boki o 20 pikseli większe niż poprzedni trójkąt.
+      Course 4 Artist For Loops 4_instruction: 'Jak wykorzystasz to, czego nauczyłeś
+        się, by narysować te kwadraty? Pierwszy ma boki o długości 15 pikseli, a boki
+        największego mają długość 300 pikseli, i każdy kwadrat ma bok o 15 pikseli
+        dłuższy niż poprzedni. '
       Course 4 Artist For Loops 5_instruction: 'Dobrze wykonałeś ostatnią łamigłówkę!
         Użyj ponownie tego bloku zmiennej "counter" (licznik), by narysować ten fajny
         obrazek. '
       Course 4 Artist For Loops 6_instruction: Dobra zabawa! Spróbuj użyć pętli "dla",
         by narysować powiększający się wzór własnego pomysłu.
       Course 4 Artist For Loops 7_instruction: Co się stanie, jeśli usuniesz blok
-        "powtórz 3" z tego algorytmu, pozostawiając bloki "idź" i "skręć" w pętli
-        "dla"? W tym spiralnym trójkącie każdy bok jest o 20 pikseli dłuższy niż poprzedni.
-      Course 4 Artist For Loops 8_instruction: Najkrótsza linia w tej kwadratowej
-        spirali ma długość 10 pikseli, najdłuższa - 200 pikseli, i każda linia jest
-        o 10 pikseli dłuższa niż poprzednia. Czy mógłbyś uzupełnić brakujące bloki,
-        by ukończyć ten niesamowity rysunek?
+        "powtórz 3" z tego algorytmu, pozostawiając bloki "idź" i "skręć" w pętli?
+        W tym spiralnym trójkącie każdy bok jest o 20 pikseli dłuższy niż poprzedni.
+      Course 4 Artist For Loops 8_instruction: "Tylko jedna niewielka zmiana kodu
+        ostatniego obrazu spowoduje utworzenie tego obrazu. Czy mógłbyś określić,
+        co to za zmiana?\r\n\r\nWskazówka: Powinieneś coś usunąć!"
+      Course 4 Artist For Loops 8a_instruction: Tylko jedna niewielka zmiana kodu
+        ostatniego obrazu spowoduje utworzenie tego obrazu. Czy mógłbyś określić,
+        co to za zmiana?
       Course 4 Artist For Loops 9_instruction: Czy potrafisz wykonać spiralę? Idź
         do przodu od 1 do 75 pikseli, zwiększając krok o 1 piksel za każdym razem.
+      Course 4 Artist For Loops Challenge_instruction: "Czy potrafisz skorzystać z
+        tego, czego nauczyłeś się, by utworzyć ten obraz? \r \r Jeśli potrzebujesz
+        wskazówki, to kliknij tutaj."
       Course 4 Artist For Loops inspire_instruction: "Dowolne inspiracje: Nauczyłeś
         się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten
         obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie,
-        utwórz coś według własnego pomysłu.\r\n\r\nJeśli chcesz wiedzieć, jak powstał
-        nasz wzór, odwiedź stronę https://studio.code.org/c/106387604."
+        utwórz coś według własnego pomysłu.\r\n\r\nJeśli potrzebujesz wskazówki, to
+        kliknij tutaj."
       Course 4 Artist Functions 1_instruction: Czy potrafisz za pomocą pętli narysować
         kwadrat, który ma bok o długości 100 pikseli?
       Course 4 Artist Functions 10_instruction: Który blok musisz dodać, aby otrzymać
@@ -1355,10 +1364,14 @@
       Course 4 Artist Functions 9_instruction: Daliśmy Ci większość kodu, aby utworzyć
         funkcję. Jednak wydaje się, że czegoś brakuje. Czy potrafisz zakończyć tworzenie
         tego bloku funkcji?
-      Course 4 Artist Inspire_instruction: "Dowolne inspiracje: Nauczyłeś się\nwszystkiego
-        co było potrzebne, żeby stworzyć taki właśnie wzorek! Jeśli ten obrazek Cię\ninspiruje,
-        spróbuj stworzyć podobny. Ewentualnie, możesz utworzyć coś samemu.\r\n\n\r\nChcesz
-        wiedzieć jak został stworzony nasz  wzorek? Zobacz tutaj https://studio.code.org/c/105765376/edit."
+      Course 4 Artist Functions inspire_instruction: "Dowolne inspiracje: Nauczyłeś
+        się wszystkiego, co musisz wiedzieć, aby utworzyć podobną kompozycję! Jeśli
+        ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie,
+        utwórz coś według własnego pomysłu.\r\n\r\nJeśli chcesz wiedzieć, jak powstał
+        nasz wzór, odwiedź nasze rozwiązanie https://studio.code.org/c/106387801."
+      Course 4 Artist Inspire_instruction: "Czy potrzebujesz ponownie spojrzeć na
+        inspirującą kompozycję lub na wskazówkę? Kliknij tutaj!\r\n\r\nW przeciwnym
+        razie wykonaj własną kompozycję!"
       Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o
         boku 50 pikseli
       Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych
@@ -1416,61 +1429,67 @@
         "sides" (boki) do narysowania każdego trójkąta? Przejrzyj kod i za każdym
         razem, gdy widzisz liczbę 3, zastąp ją przez zmienną "sides" (boki). Pamiętaj,
         aby użyć bloku "przypisz sides wartość".
-      Course 4 Artist Vars 11_instruction: Tutaj jest ten sam algorytm, który otrzymaliśmy
-        dla poprzedniej łamigłówki - jaką powinieneś ustawić wartość zmiennej "sides"
-        (boki), aby otrzymać ten rysunek kwadratów?
+      Course 4 Artist Vars 11_instruction: Tutaj jest bardziej skomplikowany kod wykorzystujący
+        pojęcia z ostatniej łamigłówki - co należy przypisać zmiennej "sides" (boki),
+        aby narysować tę kompozycję złożoną z kwadratów?
       Course 4 Artist Vars 12_instruction: Ustawmy wartość zmiennej "sides" (boki)
         na 5. Im więcej boków dodamy do tego algorytmu, tym większy otrzymamy rysunek!
         Mamy teraz nową zmienną o nazwie "length" (długość) i możemy jej użyć wszędzie
         tam, gdzie mamy "iść do przodu." Ustaw wartość zmiennej "length" na 75 dla
         tego kształtu.
-      Course 4 Artist Vars 13_instruction: Im więcej boków ma kształt, tym krótsze
-        powinny być boki, by cały rysunek zmieścił się na ekranie. Zamiast ręcznie
-        ustawiać wartość zmiennej "length" (długość), użyjmy zmiennej "sides" (boki)
-        i bloku matematycznego, aby ustalić wartość zmiennej "length". Wybierz właściwe
-        równanie z przybornika, aby ustalić wartość zmiennej "length", a także uaktualnij
-        zmienną "sides".
-      Course 4 Artist Vars 14_instruction: 'Czas na zabawę: Sprawdź, teraz Twój algorytm
+      Course 4 Artist Vars 13_instruction: "Im więcej boków ma kształt, tym krótsze
+        powinny być boki, by cały rysunek zmieścił się na ekranie.\n\r\nZbudujmy algorytm
+        tworzenia przepięknej kompozycji, ale zamiast ręcznie ustawiać wartość zmiennej
+        \"length\" (długość), użyjmy bloku matematycznego ze zmienną \"sides\" (boki),
+        aby mieć pewność, że każdy kształt dokładnie pasuje.\r\nJeśli potrzebujesz
+        pomocy, kliknij tutaj."
+      Course 4 Artist Vars 14_instruction: "Czas na zabawę: Sprawdź, teraz Twój algorytm
         jest zagnieżdżony w dodatkowej pętli. Poeksperymentuj ze zmianą wartości dwóch
-        zmiennych, by rysować fajne wzorki.'
-      Course 4 Artist Vars 2_instruction: Zamiast "idź do przodu o 100," blok "idź"
-        odwołuje się teraz do zmiennej "length" (długość). Czy mógłbyś ustawić wartość
-        zmiennej "length" na 150, by narysować ten nowy trójkąt?
+        zmiennych, by rysować fajne wzorki.\r\n\r\nBy uzyskać więcej efektów, pobaw
+        się kolorami! Użyj losowych kolorów wewnątrz pętli, by zobaczyć, jak zmieniają
+        Twój obrazek."
+      Course 4 Artist Vars 2_instruction: Zamiast bloku "idź do przodu o 150," blok
+        "idź" odwołuje się teraz do zmiennej "length" (długość). Czy mógłbyś ustawić
+        wartość zmiennej "length" na 150, by narysować ten nowy trójkąt?
       Course 4 Artist Vars 3_instruction: 'Tutaj jest pętla, która rysuje kwadrat,
         ale czegoś brakuje. Czy mógłbyś ją naprawić tak, aby używała zmiennej "length"
         (długość) do określania, jaka powinna być długość każdego boku? '
       Course 4 Artist Vars 4_instruction: Teraz chcę utworzyć prostokąt, który jest
-        dwa razy wyższy niż szeroki. Mamy zmienną o nazwie "width" (szerokość), której
-        wartość jest ustawiona na 100. Czy mógłbyś użyć bloków matematycznych, by
-        ukończyć kod?
+        dwa razy wyższy niż szeroki. Mamy zmienną o nazwie "width" (szerokość), która
+        ma mieć wartość 100. Czy mógłbyś użyć bloków matematycznych, by ukończyć ten
+        kod?
       Course 4 Artist Vars 5_instruction: Użyj zmiennej "sides" (boki), by kontrolować
         liczbę przebiegów pętli.
-      Course 4 Artist Vars 6_instruction: "Dodaliśmy zmienną \"sides\" (boki), której
-        wartość ustaliliśmy na 4. Czy potrafisz użyć tej zmiennej \"sides\" (wraz
-        z blokiem matematycznym), aby zapewnić, że jest wykonywany odpowiedni skręt
-        przy rysowaniu kwadratu? \r\n\r\nWskazówka: \nAby narysować regularny wielokąt,
-        należy obracać się o 360/sides za każdym razem."
-      Course 4 Artist Vars 7_instruction: Czy potrafisz zmodyfikować zmienną "sides"
-        (boki), by mi pomóc narysować ten sześciokąt?
+      Course 4 Artist Vars 6_instruction: "Tutaj jest kod, który może posłużyć do
+        narysowania dowolnego regularnego wielokąta. Pojawiła się nowa zmienna o nazwie
+        \"sides\" (boki), która ma wartość 4. Czy potrafisz użyć tej zmiennej \"sides\"
+        (wraz z blokiem matematycznym), aby zapewnić, że jest wykonywany odpowiedni
+        skręt bez względu na liczbę boków w wielokącie?\r\n\r\nKliknij tutaj, aby
+        wrócić na podpowiedź!"
+      Course 4 Artist Vars 7_instruction: "Skorzystaj z tego, czego dowiedziałeś się
+        w poprzedniej łamigłówce, aby utworzyć ten sześciokąt używając zmiennej \"sides\"
+        (boki).\r\n\r\nZorientuj się, jak mógłbyś zmienić jedną wartość, by narysować
+        trójkąt, kwadrat, pięciokąt lub ośmiokąt."
       Course 4 Artist Vars 8_instruction: 'Czas na zabawę: Poeksperymentuj z liczbę
         boków tego kształtu. Czy potrafisz zmienić algorytm tak, aby całkowity rozmiar
         kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Możesz
-        użyć bloków matematycznych (w dwóch miejscach, 360 dzielone przez "sides") '
+        użyć bloków matematycznych (360 dzielone przez "sides") w dwóch miejscach.'
       Course 4 Artist Vars 9_instruction: Zmodyfikuj ten algorytm, by rysując trójkąt
         używał zmiennej "sides" (boki) zamiast ustalonej liczby. Zastąp liczbę 3 zmienną
         "sides" i użyj bloku "przypisz sides wartość".
       Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat,
-        czy plaster miodu. Sprawdź najpierw, czy to jest kwiat czy plaster miodu,
-        a następnie zbierz nektar, gdy jest to kwiat. '
-      Course 4 Bee 2_instruction: Sprawdź każdy obiekt, czy jest to kwiat. Jeśli tak,
-        to zbierz nektar, a w przeciwnym razie zignoruj go!
+        czy plaster miodu. Najpierw, użyj bloku "jeśli", by sprawdź, czy to jest kwiat
+        czy plaster miodu. Następnie, zbierz nektar, jeśli jest to kwiat. '
+      Course 4 Bee 2_instruction: Użyj bloku "jeśli-w przeciwnym razie", aby sprawdź
+        każdy obiekt, czy jest to kwiat czy plaster miodu. Jeśli jest to kwiat, to
+        zbierz nektar, a w przeciwnym razie zrób miód!
       Course 4 Bee 3_instruction: Nieznany obiekt jest kwiatem lub plastrem miodu.
-        Użyj bloku "jeśli-w przeciwnym razie" by zebrać nektar, jeśli jest to kwiat,
-        w przeciwnym razie zrób miód (gdyż jest to plaster miodu).
+        Tym razem użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli jest
+        to kwiat, w przeciwnym razie zrób miód (gdyż jest to plaster miodu).
       Course 4 Bee 4_instruction: Ten fioletowy kwiat może mieć 3, 2 lub 1 nektaru.
         Tutaj, blok "jeśli-w przeciwnym razie" jest połączony z innym blokiem "jeśli-w
-        przeciwnym razie", by utworzyć blok "jeśli-w przeciwnym razie/jeśli-w przeciwnym
-        razie". Ukończ rozwiązanie, by zebrać nieznaną ilość nektaru.
+        przeciwnym razie", by utworzyć instrukcję "jeśli-w przeciwnym razie/jeśli-w
+        przeciwnym razie". Ukończ rozwiązanie, by zebrać nieznaną ilość nektaru.
       Course 4 Bee 5_instruction: Ten fioletowy kwiat może mieć 3, 2 lub 1 nektary.
         Dodaj blok "jeśli-w przeciwnym razie", aby utworzyć blok "jeśli-w przeciwnym
         razie/jeśli-w przeciwnym razie". Uzupełnij rozwiązanie, aby zebrać nieznaną
@@ -1508,9 +1527,12 @@
       Course 4 Bee For Loops 9_instruction: Ostatnia liczba w Twojej pętli "licz z"
         ma nazwę "przyrost", i za każdym obrotem pętli licznik pętli zmienia się o
         ten "przyrost". Spróbuj zebrać te kwiaty używając przyrostu o wartości 2.
-      Course 4 Bee Loops 5 NEW_instruction: |
-        Put these blocks into a loop to collect
-        nectar from each flower.
+      Course 4 Bee Loops 5 NEW_instruction: Tutaj są trzy kwiaty. Czy potrafisz znaleźć
+        układ instrukcji, które trzeba powtórzyć 3 razy, aby zebrać nektar z użyciem
+        możliwie najmniejszej liczby bloków?
+      Course 4 Bee Loops 5a NEW_instruction: Teraz użyj pętli, aby pomóc pszczółce
+        zebrać cały nektar na jej drodze do plastra miodu, z jak najmniejszą liczbą
+        bloków. Gdy tam dotrze, nie zapomnij by zrobiła miód!
       Course 4 Bee Params 1_instruction: Użyj funkcji "get 3 nectar" (zbierz 3 nektary),
         w której pszczółka skręca, porusza się i zbiera nektar, a następnie wraca
         do początkowej lokalizacji. Zbierz cały nektar używając sekwencji funkcji
@@ -1621,13 +1643,14 @@
         z parametrem \"points\" (punkty). \r\n\r\nEdytuj tę funkcję tak, że parametr
         \"points\" jest dodawany do zmiennej \"player_points\" (punkty gracza). \r\n\r\nPostaraj
         się, by pies (Dog) zdobył 10 punktów przed przejściem do następnej łamigłówki. "
-      Course 4 Play Lab Vars 1_instruction: Nie musisz pisać żadnego kodu, wystarczy
-        nacisnąć "Uruchom", aby zagrać! W tej grze jesteś psem (Dog), który stara
-        się zebrać więcej flag niż kot (Cat). Użyj strzałki w dół do poruszania psa.
-        Naciśnij przycisk "Zakończ", po zakończeniu gry.
+      Course 4 Play Lab Vars 1_instruction: Tym razem nie musisz pisać żadnego kodu,
+        wystarczy nacisnąć "Uruchom", aby zagrać! W tej grze jesteś psem (Dog), który
+        stara się zebrać więcej flag niż kot (Cat). Użyj strzałki w dół do poruszania
+        psa. Naciśnij przycisk "Zakończ", po zakończeniu gry.
       Course 4 Play Lab Vars 2_instruction: Wyścig w poprzedniej łamigłówce nie był
-        zbyt uczciwy! Zmień wartość "dog_speed" (prędkość psa), aby być pewnym, że
-        możesz zebrać więcej flag niż kot. Kto pierwszy zbierze 10 flag wygrywa!
+        zbyt uczciwy! Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym,
+        że możesz zebrać więcej flag niż kot. Wygrywa ten, kto pierwszy zbierze 10
+        flag!
       Course 4 Play Lab Vars 3_instruction: Oto nowy rodzaj gry! Używaj strzałek w
         lewo i w prawo, aby się przesunąć, i strzałki do góry, aby podskoczyć. Spróbuj,
         czy potrafisz zebrać wszystkie flagi.
@@ -1635,23 +1658,25 @@
         do ustalenia, jak wysoko pies może podskoczyć. Zaktualizuj wartość zmiennej
         "height" (wysokość) tak, że pies podskakuje wystarczająco wysoko, aby dosięgnąć
         wszystkich flag. Wskazówka: nowe flagi są na wysokości 200 pikseli.'
-      Course 4 Play Lab Vars 5_instruction: 'Zbudujmy grę! Najpierw potrzebujemy wynik.
-        Użyj bloku "przypisz points wartość", by ustawić wynik na 10. '
+      Course 4 Play Lab Vars 5_instruction: 'Zbudujmy grę! Najpierw potrzebujemy wyniku.
+        Zmodyfikuj kod z poprzedniej łamigłówki, aby ustawić wynik na 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: Spoko, mamy zmienną na wynik,
         ale jak z niej skorzystać? A co jeśli zwiększysz zmienną wynik za każdym razem,
         gdy trafisz przeciwnika? Użyj zdarzenia "kiedy postać 2 dotyka czegoś", by
         uaktualnić wynik, gdy pocisk trafi kota. Możesz zwiększyć wartość wyniku (points)
         przypisując points = points + 1. Aby ukończyć tę grę, otrzymaj wynik równy
         10 (powiększając go co jeden!).
-      Course 4 Play Lab Vars 6_instruction: Jak powinniśmy zdobywać punkty w naszej
-        grze? Dodaj 1 do zmiennej "points" za każdym razem, gdy pies trafi kota. Użyj
-        zdarzenia "kiedy postać 2 dotyka czegoś", by uaktualnić wynik, Możesz zwiększyć
-        wartość wyniku (points) przypisując "points = points + 1". Aby ukończyć tę
-        grę, otrzymaj wynik równy 10 (powiększając go co jeden!).
+      Course 4 Play Lab Vars 6_instruction: "Użyj strzałki w prawo, aby strzelać sercami.
+        \r \r \nJak powinniśmy zdobywać punkty w naszej grze? Dodaj 1 do zmiennej
+        \"points\" za każdym razem, gdy pies trafi kota sercem. Użyj zdarzenia \"kiedy
+        postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
+        (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
+        wynik równy 10 (powiększając go co jeden!)."
       Course 4 Play Lab Vars 7_instruction: Ładnie, teraz spowodujmy, że ta gra nie
-        jest zbyt łatwa - za każdym razem, gdy pies (postać 1) zostaje trafiony, powinieneś
-        stracić punkt. Zacznij z 10 punktami, aby nie było to zbyt trudne. Do ukończenia
-        tej łamigłówki, niech Twój wynik zmniejszy się od 10 do 0.
+        jest zbyt łatwa - za każdym razem, gdy pies (postać 1) zostaje trafiony żółtymi
+        sercami przez kota (postać 2) powinieneś stracić punkt. Zacznij z 10 punktami,
+        aby nie było to zbyt trudne. Do ukończenia tej łamigłówki, niech Twój wynik
+        zmniejszy się od 10 do 0.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: OK, ostatnia już rzecz dla tej
         gry - tak ustawmy, by gracz mógł wygrać (lub przegrać). Użyj pętli "powtarzaj
         w nieskończoność" (forever) do sprawdzania wyniku (score) - jeśli wynik jest
@@ -1663,10 +1688,14 @@
         wyniku (score) - jeśli wynik jest większy niż 20, to powoduj, że wróg (Kot)
         znika. Jeśli wynik jest mniejszy od 0, to powoduj, że gracz (Pies) znika.
         Kliknij przycisk "Zakończ", gdy gra działa, jak chcesz go.
-      Course 4 Play Lab Vars 9_instruction: 'Czas na zabawę! Mamy tutaj wszystkie
-        zmienne, których używaliśmy, jak również kilka dodatkowych, gdybyś ich potrzebował.
-        Utwórz grę lub historyjkę, która korzysta z tych zmiennych. Wskazówka: przewiń
-        ekran do dołu, aby zobaczyć wszystkie polecenia w polu roboczym.'
+      Course 4 Play Lab Vars 9_instruction: "Czas na zabawę! Mamy tutaj wszystkie
+        zmienne, których używaliśmy na tym etapie, jak również kilka dodatkowych,
+        gdyby były potrzebne. \r\n\r\nMamy teraz w przyborniku tak wiele bloków, że
+        powinny być uporządkowane. Każdy z nich przydzieliliśmy więc do odpowiedniej
+        kategorii. Poświęć trochę czasu, by poznać, jakie bloki są dostępne. Gdy już
+        przejrzysz wszystko, utwórz grę lub historyjkę, która korzysta z powtórzeń,
+        zmiennych i zdarzeń. \r\n\r\nWskazówka: przewiń ekran do dołu, aby zobaczyć
+        wszystkie polecenia w polu roboczym."
       Course 4 Play Lab Vars_instruction: OK, ostatnia już rzecz dla tej gry - tak
         ustawmy, by gracz mógł wygrać (lub przegrać). Użyj pętli "powtarzaj w nieskończoność"
         (forever) do sprawdzania wyniku (score) - jeśli wynik jest większy niż 20,
@@ -1684,17 +1713,47 @@
         pomocna, ale wciąż liczymy liniowo (każda liczba jest w takiej samej odległości
         od poprzedniej). A co zrobić, jeśli chcielibyśmy liczyć wykładniczo? Bez zmiany
         ustawień w tej pętli, czy potrafisz liczyć 1, 4, 9, 16, 25... (kolejne kwadraty)?
+      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom
+        Stage 7 together with your \"counter\" variable to make some magic happen.
+        \  \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".
+        \ Set the \"increment\"\nvariable to 10 at the beginning of your code to see
+        what happens."
       Course 4 Play Labs For Loops 5_instruction: W poprzedniej łamigłówce liczyliśmy
         kwadraty kolejnych liczb. Spróbuj zamienić "counter ^ 2" na "counter ^ 3",
         aby liczyć sześciany kolejnych liczb (1, 8, 27, 64, 125, 216, 343...)
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime
+        keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable
+        will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you
+        click Dog, the increment increases by 2?  Click the forward arrow\nto run
+        the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach
+        one."
       Course 4 Play Labs For Loops 6_instruction: Przypomnij sobie, że liczba pierwsza
         to liczba całkowita, która dzieli się tylko przez siebie i przez 1. Użyj funkcji
         "is_prime" (czy to liczba pierwsza), by wypowiadać tylko liczb pierwsze miedzy
         1 a 100.
+      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith
+        our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto
+        the mix.  Can you change the code so that \"increment\" goes up by two\neach
+        time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
       Course 4 Play Labs For Loops 7_instruction: 'Czy mógłbyś użyć pętli "dla", aby
         mi pomóc wypowiedzieć ciąg: 1, 4, 7, 10, 13, 16, 19, 22, 25?'
-      Course 4 Play Labs For Loops 8_instruction: 'Jaka pętla "dla" spowoduje, że
-        powiem: 19, 27, 35, 43, 51?'
+      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif
+        we start counting how many times we can click The Wizard before Dog gets\nto
+        30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked
+        the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor
+        now.\r\n\r\nDog will start counting when you click \"Run\"."
+      Course 4 Play Labs For Loops 8_instruction: "Teraz pomóż postaciom poruszać
+        się, gdy liczą.  \r \r Pies powinien poruszać się i liczyć co 2 (counter +
+        2) za każdym razem.  Kot będzie przemieszczał się i liczył mnożąc przez 2
+        (counter * 2) za każdym razem. Pingwin będzie przemieszczał się i podnosił
+        do potęgi 2 (counter ^ 2) za każdym razem.  Kto pierwszy dojdzie do swoich
+        flag?"
+      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring
+        back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1)
+        Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard
+        is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
+        by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
+        times, the game is over."
       Course 4 Variables Assessment_instruction: Czy mógłbyś utworzyć ten obraz używając
         zmiennej dla boków? Każda linia powinna mieć długość 50 pikseli.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
@@ -1702,6 +1761,9 @@
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
+      ECSPD Binary Odometer_instruction: |
+        This is another resource you could use
+        with your students.
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
         compare different values, returning either true or false. Click "Run" to
@@ -1994,12 +2056,62 @@
       frozen square snowflake_instruction: Czy potrafisz narysować śnieżynkę używając
         bloku "powtórz", powtarzając tworzenie kwadratu 10 razy i bloku "skręć" aby
         obrócić się o 36 stopni po każdym kwadracie?
+      hoc2015_event_add_items_instruction: |
+        Now you create the game. Use the addItemsToScene
+        command to choose how many items are in the game.
+      hoc2015_event_add_items_2_instruction: |
+        Add more items. This time, try using
+        code mode instead of blocks. Don’t forget to type “quotes” around the item
+        name.
+      hoc2015_event_choose_character_instruction: |
+        Customize your game by choosing
+        your character. Let’s switch back to block mode. To set a value, just click
+        the drop down on the block.
+      hoc2015_event_four_items_instruction: |
+        Now the items are all over the screen.
+        Can you make your character walk in any direction so he can collect all the
+        items?
+      hoc2015_event_free_instruction: Now you can make and share anything you like.
+      hoc2015_event_move_items_instruction: |
+        This game would be more fun if the items
+        moved. Use setItemActivity to make the items move around. Then, capture them!
+      hoc2015_event_points_instruction: |
+        Let’s add points. Give yourself some points
+        when you touch an item. Can you score 10 points?
+      hoc2015_event_random_items_instruction: |
+        We can change settings at any point.
+        Change the items to a new random movement every time you catch one.
+      hoc2015_event_two_items_instruction: |
+        Drag the move commands into the whenUp
+        and whenDown functions.  Then, click the arrows to move the character to get
+        the items.
       hoc2015_free_instruction: Hiro to "postać 1". Użyj bloku "idź" do przeniesienia
         Hiro, aby dotknął Baymax.
       hoc2015_intro_instruction: Hiro to "postać 1". Użyj bloku "idź" do przeniesienia
         Hiro, aby dotknął Baymax.
       hoc2015_maze_instruction: Hiro to "postać 1". Użyj bloku "idź" do przeniesienia
         Hiro, aby dotknął Baymax.
+      hoc2015_move_cross_instruction: |
+        Type or drag the blocks to get both items
+        to the destination.
+      hoc2015_move_down_instruction: |
+        Hiro is "actor 1".  Use the Move block to
+        move Hiro right to touch Baymax.
+      hoc2015_move_item_destination_instruction: |
+        I see another item behind that
+        obstacle. Can you bring it back to the destination?
+      hoc2015_move_item_destination_2_instruction: |
+        Drag the code blocks into the
+        workspace to help the character reach the destination.
+      hoc2015_move_item_destination_3_instruction: |
+        Try typing the commands to get
+        the item to our destination. Don’t forget to end with ();
+      hoc2015_move_right_instruction: |
+        Help me program the character to get the item
+        and bring it to the destination. Stack a couple moveEast(); commands and then
+        hit Run to make him go.
+      hoc2015_move_twice_instruction: We need the items. Help me get them all!
+      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
       hoc2015_random_instruction: Hiro to "postać 1". Użyj bloku "idź" do przeniesienia
         Hiro, aby dotknął Baymax.
       hoc2015_sandbox_instruction: Hiro to "postać 1". Użyj bloku "idź" do przeniesienia
@@ -2423,10 +2535,10 @@
       NEW Course 4 Artist Functions 9_instruction: Jaki blok musisz dodać, aby uzyskać
         trójkąt umieszczony na kwadracie?
       NEW Course 4 Artist Functions inspire_instruction: "Dowolne inspiracje: Nauczyłeś
-        się wszystkiego, co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten
-        obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie,
+        się wszystkiego, co musisz wiedzieć, aby utworzyć podobną kompozycję! Jeśli
+        ten obraz Cię inspiruje, to spróbuj utworzyć coś podobnego. W przeciwnym razie,
         utwórz coś według własnego pomysłu.\r\n\r\nJeśli chcesz wiedzieć, jak powstał
-        nasz wzór, odwiedź nasze rozwiązanie."
+        nasz wzór, odwiedź nasze rozwiązanie https://studio.code.org/c/106387801."
       New Course 4 Artist Functions Level 4_instruction: Użyj funkcji "draw a square"
         (narysuj kwadrat) do narysowania tego wzoru.
       NEW Course 4 Artist Params 1_instruction: Zdefiniuj funkcję do rysowania kwadratu
@@ -2483,10 +2595,8 @@
       NEW Course 4 Artist Vars 1.5_instruction: 'Przejrzyj ten kod. Czy widzisz, jak
         bloki "przypisz length " (set length) i "length" (długość) współpracują ze
         sobą? Kliknij na "Uruchom", aby zobaczyć je w akcji. '
-      NEW Course 4 Artist Vars 12_instruction: Zmodyfikuj ten algorytm, aby rysując
-        pięciokąt używał zmiennej "sides" (boki) zamiast ustalonej liczby. Zastąp
-        liczbę 5 zmienną "sides" i użyj bloku "przypisz sides wartość" (set sides
-        to).
+      NEW Course 4 Artist Vars 12_instruction: Zmodyfikuj algorytm z poprzedniej łamigłówki
+        i utwórz pięciokąt o bokach długości 150.
       NEW Course 4 Artist Vars 2.5_instruction: 'Przejrzyj ten kod. Czy widzisz, jak
         bloki "przypisz length " (set length) i "length" (długość) współpracują ze
         sobą? Kliknij na "Uruchom", aby zobaczyć je w akcji. '
@@ -2498,12 +2608,19 @@
       NEW Course 4 Artist Vars 4_instruction: 'Spróbuj ponownie. Czy mógłbyś ustawić
         wartość zmiennej "length" (długość), aby utworzyć ten fajny wzór z sześciokątów?
         Wskazówka: Jest ona wielokrotnością 10.'
-      NEW Course 4 Artist Vars 6_instruction: Czy mógłbyś mi pomóc narysować ten fajny
-        wzór przenosząc blok ze zmienną "length" (długość) w odpowiednie miejsca?
+      NEW Course 4 Artist Vars 6_instruction: "Narysuj ten wzór przenosząc blok ze
+        zmienną \"length\" (długość) w odpowiednie miejsca, a następnie ustalając
+        odpowiednią wartość tej zmiennej. (Wskazówka: jest to wielokrotnością 10).
+        \ \r \r Zauważ, wartość długości została ustalona raz, a kod używa odpowiedniej
+        wartości wszędzie. \r \r \r\n"
       NEW Course 4 Bee For Loops 1_instruction: Użyj pętli, by zebrać cały nektar
         z każdego kwiatka.
       NEW Course 4 Bee For Loops 10_instruction: Użyj zmiennej "counter" (licznik)
         w pętli "licz z", by kontrolować, jak daleko iść w kierunku poziomym.
+      NEW Course 4 Bee For Loops 10a_instruction: 'Gotowi na wyzwanie?  Korzystając
+        z tego, czego nauczyliście się o pętlach, spróbujcie rozwiązać ten problem.
+        Pamiętajcie: Możecie uruchomiać swoje rozwiązanie wiele razy, aż poznacie
+        wszystko, co potrzeba.'
       NEW Course 4 Bee For Loops 11_instruction: Czy mógłbyś użyć zmiennej w pętli,
         aby kontrolować ruchu i zbieranie nektaru?
       NEW Course 4 Bee For Loops 2_instruction: Dodaj kod, aby być pewnym, że pszczółka
@@ -2513,8 +2630,9 @@
         jest to znacznie łatwiejsze! Cały kod, jaki potrzebujesz, jest tutaj, zobacz,
         jak został utworzony a następnie kliknij przycisk "Uruchom", aby zobaczyć,
         jak to działa. '
-      NEW Course 4 Bee For Loops 4 4_instruction: 'Czy mógłbyś pomóc pszczółce zebrać
-        cały nektar używając tej pętli? '
+      NEW Course 4 Bee For Loops 4 4_instruction: Teraz musimy przejść do przodu "counter"
+        (licznik) razy, następnie zebrać nektar "counter" (licznik) razy.  Czy mógłbyś
+        użyć dwóch pętli "powtórz", by rozwiązać ten problem?
       NEW Course 4 Bee For Loops 4_instruction: 'Zastąp ??? w pętli "dla", aby pszczółka
         zebrała największą ilość nektaru. '
       NEW Course 4 Bee For Loops 5 5_instruction: Czy nie masz już dość używania pętli
@@ -2526,13 +2644,15 @@
         "przyrost", i za każdym obrotem pętli "counter" (licznik) zmienia się o ten
         przyrost. Spróbuj zebrać cały nektar z tych kwiatów używając przyrostu o wartości
         2.
-      NEW Course 4 Bee For Loops 7_instruction: |
-        Czy nie masz już dość używania pętli "dla"? Ta jest podobna do poprzedniej, ale teraz masz zebrać 2, 4, 6, 8, 10 nektary.
-      NEW Course 4 Bee For Loops 8_instruction: "Co zrobisz, jeśli usuniemy pewne
-        bloki? Czy potrafisz na powrót je dodać, aby pszczółka zebrała cały nektar?\r\nPamiętaj:
-        Jeśli Twoja pętla liczy do góry, to przyrost jest dodawany do \"counter\"
-        (licznika) w każdej pętli. Jaki powinien być przyrost, aby zebrać 3, 6, 9
-        nektary? \r\n"
+      NEW Course 4 Bee For Loops 7_instruction: "Teraz połączmy zmienną \"counter\"
+        (licznik) z blokiem matematycznym! Jak użyjesz zmiennej \"counter\" (licznik),
+        aby przejść przez ten ogród z możliwie najmniejszą liczbą bloków? Co trzeba
+        zrobić, aby zebrać 3, 6, 9, 12, 15 nektarów tym razem? Tajemnica tkwi w zmiennej
+        \"counter\" (licznik)! \r \r Pamiętaj: Jeśli Twoja pętla liczy do przodu,
+        to przyrost jest dodawany do zmiennej \"counter\" (licznik) w każdym obrocie
+        pętli."
+      NEW Course 4 Bee For Loops 8_instruction: "Masz teraz to! Jaki powinien być
+        przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów? \r\n"
       NEW Course 4 Bee For Loops 9_instruction: Jeśli Twoja pętla odlicza do dołu,
         to przyrost jest odejmowany od licznika w każdej pętli. Jaki powinien być
         przyrost, aby zebrać 9, potem 6, a następnie 3 nektary?
@@ -2569,6 +2689,41 @@
         and then figuring out how it works. You can use the arrow keys to move the
         ninja up and down - try to catch the unicorn and avoid the dragon! When you
         think you've figured out how the game works, click "Finish"
+      PDAlg Big Game History_instruction: |
+        Now that you've played through a Big
+        Game level you should see a new entry in your history. Click the Version History
+        button and you should see at least one version. Each time you go back to a
+        Big Game level you'll get a new record in your version history that you can
+        revert back to.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game."
+      PDAlg Design Recipe Delete_instruction: |
+        Click the delete button to get rid
+        of this function, then try creating and deleting a few of your own.
+      PDAlg Design Recipe Examples_instruction: |
+        The definition in this Design Recipe
+        doesn't match both examples. Test each example to see which is failing, and
+        then fix the definition to match.
+      PDAlg Design Recipe Required_instruction: |
+        Complete the Design Recipe for the
+        "eggs" function, making sure to create and test your examples.
+      PDAlg Updates Cond_instruction: |
+        When you went to PD in the summer, the Conditional
+        block that you were introduced to was black and allowed any data type to be
+        used. This proved to be confusing, given that every other function we've
+        seen always produces the same type of data. To help make conditionals clearer
+        and more consistent we've replaced the single black block with a separate
+        block for each data type.
+      PDAlg Updates Errors_instruction: |
+        Run the provided program and use the error
+        messages to try and track down the bugs.
+      PDAlg Updates Space_instruction: |
+        Making use of limited programming space (especially
+        on small screens) is challenging with a block based language. To help with
+        this we've added a few features. Experiment with this provided code to see
+        how the space can be manipulated to deal with larger programs.
       PDK5 Conditionals 1_instruction: |
         Purple flowers may have either 1 or 0 nectar,
         but you don't know which one! Be careful not to collect nectar from a purple
@@ -2596,6 +2751,70 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
+      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
+        Something happened
+        to the bits in this image! Find the error and fix it! Hint: a few extra bits
+        were added. You should only need to remove some bits.
+      Pixelation - Lesson 14 - Fix bit offset_instruction: |
+        A single extra bit was
+        inserted into the stream of bits that make up the C of the Code.org logo.
+        That extra bit bumps all of the other bits down the line which makes the logo
+        look messed up. Hunt down the extra bit and remove it to fix the Code.org
+        logo.
+      Pixelation - Lesson 14 - Fix the error_instruction: |
+        Something happened to
+        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
+        added.  You should only need to remove some bits.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: |
+        Make a 3x5 letter
+        'A'. The widget is setup with the incorrect dimensions. Your first task
+        is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then
+        start entering pixel data.
+      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
+        Now make
+        your own image! We've started you off with a 10x10 canvas but you can make
+        it whatever size you want. Happy pixeling!
+      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
+        Now make your
+        own image! We've started you off with a 10x10 canvas but you can make it
+        whatever size you want.  Happy pixeling!
+      Pixelation - Lesson 15 - Color Free Play_instruction: |
+        Requirements: The icon
+        must be 16x16 pixels. You must use the Pixelation Widget to encode the bits
+        of color information. The image must be encoded with at least 12 bits per
+        pixel.
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: |
+        We start you out with
+        the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid
+        with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill
+        with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4
+        - shades of gray.
+      Pixelation - Lesson 15 - Color Shades_instruction: |
+        We start you out with the
+        row of shades of red that Maddie created in the video. Experiment with 6-bit
+        color by filling in the bottom row of the image with shades of a different
+        color. Here is an example with some shades of blue. Try your own color!
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: |
+        We start you with
+        the 4x2 image Maddie was creating, but we've left out the last two squares.
+        Finish off the image by figuring out which two colors are missing and encode
+        them.
+      Pixelation 2_instruction: |
+        Something happened to the bits in this image!  Find
+        error and fix it!
+      Pixelation 4x4 Empty_instruction: |
+        The width and height are now encoded in
+        the pixel data. Can you figure out how to adjust the dimensions?
+      Pixelation Bee_instruction: |
+        This larger image of a bee encodes color with
+        12 bits per pixel, but viewing in hex makes it easier to see the color of
+        each pixel. If you switch to binary mode - hold on to your hat - it's a lot
+        of bits. Here's another mind-blowing thing to try: slide the bits per pixel
+        up to 24 bits per pixel. What happens? Can you explain this behavior?
+      Pixelation Flappy_instruction: |
+        Here is a bigger image at 9 bits per pixel.
+        With 9 bits per pixel you can express 512 different colors. Click through
+        to see the next image which is even more sophisticated, but easier to understand.
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
@@ -2739,6 +2958,11 @@
         kwadrat przy użyciu bloków "skręć w prawo" i "idź do przodu". Każdy bok powinien
         mieć długość 100 pikseli.
       Test Play Lab_instruction: This is a test play lab level.
+      Text Compression 1_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -2749,6 +2973,11 @@
         Work with a partner or in a small
         team to develop a protocol that allows you to send formatted text. See the
         worksheet handed out by your teacher for more detailed instructions!
+      U1L13 Text Compression_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
         you to use Internet Simulator to relay a message. See the worksheet\nfor more
         detailed instructions.  \n"
@@ -2757,6 +2986,9 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        Send messages with your
+        classmates (Click to see full instructions)
       U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
         Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
         6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
@@ -2798,6 +3030,11 @@
         the right event handler to the right button. (Interestingly, the incorrect
         program does work, but exhibits some bizarre behavior.  We'll discuss this
         more in the next lesson.  Make the buttons work correctly for now).
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
+        see full instructions)"
+      U3L03 - draw step_instruction: |
+        Write the drawStep function. (Click to see
+        full instructions)
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -2808,24 +3045,29 @@
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Write the turnAround() function
-        and use it to make the turtle move as depicted.
-      U3L03 define turnRight and draw a rectangle_instruction: "Create a turnRight()\nfunction
-        and draw a rectangle twice as tall as it is wide by having the turtle\nnavigate
-        clockwise to draw the rectangle. \n"
+        Define a function called turnAround()
+        and call it to make the turtle move as depicted. (Click to see full instructions)
+      U3L03 define turnRight and draw a rectangle_instruction: |
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
       U3L03 Draw a T using turnAround_instruction: |
-        The turnAround function is now
-        provided for you in the code.  Use the turnAround() function to draw a T as
-        depicted.
-      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously
-        to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another
-        tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with
-        other movement made between calls.  HINT: you might want\nto make another
-        function that handles drawing one side of the diamond. "
+        Draw a plus sign using the provided
+        version of turnAround().  (Click to see full instructions)
+      U3L03 draw diamond_instruction: |
+        Create a function called drawDiamond() that
+        makes use of your previous work to draw the complete diamond. (Click to see
+        full instructions)
       U3L03 Three Steps_instruction: |
-        Draw 3 "steps" moving up and to the right.  Notice
-        the pattern in the movement. You should define a function called drawStep()
-        which draws one of the steps, and then call it 3 times to achieve the effect.
+        Define a function called drawSide() which draws
+        three steps and moves the turtle to prepare for the next side (Click to see
+        full instructions)
+      U3L04 - 3 by 3 with functions_instruction: |
+        Make the 3 by 3 square as efficiently
+        as you can. (Click to see full instructions)
+      U3L04 - snowflake_instruction: |
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
       U3L04 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -2851,50 +3093,34 @@
         NOTE: This is a very challenging problem.  You may need to play with it for
         a while and tweak it.  You might also consider using pencil and paper to sketch
         your ideas.
+      U3L06 - moveForwardwithParams_instruction: |
+        Use a single command to move the
+        turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Check out the extended Turtle palette
-        now made available to you. These new commands accept parameters, allowing
-        you to specify precisely how the function operates rather than only being
-        able to move or turn a predetermined amount. Make use of these functions to
-        draw the triangle as shown.
+        Read the documentation for one of
+        these commands. Then use them to create a triangle with sides 100 pixels long.
+        (Click to see full instructions)
       U3L06 Challenge 2 purple square_instruction: |
-        This time we're going to learn
-        a little bit about changing the turtle's pen. Read through the documentation
-        for penWidth() and penColor(), and then draw the purple square as shown.
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
       U3L06 Challenge 3 fill pink_instruction: |
-        Now let's try to fill in the entire
-        background of the screen. To make it a little easier for you, we can tell
-        you the color we chose is one of the 140 named colors.  If you don't know
-        what the named colors are, take a closer look at the documentation for penColor()
-        again. Hint: you need to use dot().
+        Fill in the background of the screen
+        with your favorite color. (Click to see full instructions)
       U3L06 Challenge 4 bullseye_instruction: |
-        Let's try this out one more time.
-        This time the colors are NOT named colors - you need to use the hex-color
-        number to set the color.  So that you're not randomly guessing, we'll give
-        you a hint -- each of the colors shown in the target image is one of these
-        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  You might be able to guess correctly if you apply what you know about
-        RGB colors.
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
       U3L06 Challenge 5 overlapping circles_instruction: |
         This image is created just
         using dot() and penColor() but, how are we going to get those circles to be
         transparent?  If you haven't gotten the hint yet: check out the documentation!
-      U3L06 Challenge 6 squiggles_instruction: |
-        Next we're going to be adding some
-        curves to our drawing. Read the documentation for the "arc" commands and
-        then draw the squiggles as shown. To make things easier here's a hint: all
-        the parameters are multiples of 10, and the colors are from the following
-        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 6 squiggles_instruction: "Read the documentation for the \"arcLeft\"\nand
+        \"arcRight\" commands and then draw the squiggles as shown. \n"
       U3L06 Challenge 7 smiley face_instruction: |
-        To make this smiley face you'll
-        need to look at the documentation for the move() command and then use it with
-        the others you've learned.  You can make reasonable guesses about the colors.
+        Use turnTo() and moveTo() to help
+        draw a smiley face. (Click to see full instructions)
       U3L06 Challenge 8 make your own_instruction: |
-        Use the tools you've learned
-        today to create a drawing of your own creation. If you have time, challenge
-        your friends to see if they can duplicate your image.  We'll show you the
-        drawing we made for ourselves.  You can try to duplicate that if you want
-        to, otherwise, have fun making your own!
+        Create a drawing of your own.
+        (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
         Free Play!  Use what you learned
         from loops and random to make your own little scene.  Have fun.
@@ -2905,6 +3131,9 @@
         and moon.  All of the effects are clever applications of turtle dots,\nlines,
         and colors.  To get started, follow the series of steps suggested in\nthe
         accompanying worksheet. \n"
+      U3L08 - drawSquaresWithParams_instruction: |
+        Change the code at top to make
+        use of the drawSquare() command. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
@@ -3282,4 +3511,39 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location. (Click to show full instructions)
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
+        run the app and click the button. Run it multiple times with different\nnames!
+        Watch the console and use the ‘View Data” button to see how the table\nis
+        updated. As you play around make sure you can explain the purpose of each\nof
+        the circled parts of the diagram.\r\n\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none
+        we started. Add a text label to collect the users name and use that as\nthe
+        data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes
+        and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 3_instruction: |
+        We want to improve the user experience.
+        Once they have submitted their data for storage, it would be nice to clear
+        the textbox.  Update your app to clear the textbox after the data is stored.
+      U4L06 Data Storage 4_instruction: |
+        Add a label and drop down box, to your app
+        and save the data to your JSON object and add it to your table. Make sure
+        to reset the dropdown after the data is stored.
+      U4L06 Data Storage 5_instruction: "Add a couple radio buttons or checkboxes\nto
+        our app. Then find a way to collect the data from those. \n"
+      U4L06 Data Storage 6_instruction: " Use one of the getTime() and getUserId()\nblocks
+        to collect additional data. \n"
+      U4L06 Data Storage 7_instruction: |
+        Add a second screen to the sample app we
+        have been building to capture an image from a user. Return to screen 1 after
+        the JSON object has been stored in the table.
+      U4L15 Read Data 1_instruction: |
+        Run the level and see what happens. Then edit
+        the code to make it print a different column of information.
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether
+        all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like
+        <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin
+        the array\r\n\r\n"
+      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
+        display your sentence."
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

@@ -1,33 +1,37 @@
 * * *
 
-title: How-to Guide for Organisations layout: wide nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Nagrade - pravila i uvjeti
 
 ## Dropbox pohrana ili Skype kredit:
 
-10 GB Dropbox pohrane ili 10 dolara Skype kredita mogu osvojiti samo K-12 učilišta, edukatori u klubovima vanškolskih aktivnosti i obrazovne ustanove. 10 GB pohrane mora biti nadodano na već postojeći Dropbox račun. Ograničavamo jednu ponudu za jednog organizatora.
+The 10 GB of Dropbox space or $10 of Skype credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limit one redemption per organizer. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
 
-Svaki organizator mora se registrirati za Sat Kodiranja kako bi primio Dropbox pohranu ili kredit za Skype. Ukoliko cijela škola sudjeluje u Satu Kodiranja, svaki edukator mora se osobno registrirati kao organizator kako bi se kvalificirao za nagrade.
+Every organizer must register for the Hour of Code in order to receive the Dropbox space or Skype credit. If your entire school participates in the Hour of Code, each educator must individually register as an organizer to qualify.
 
-Code.org kontaktirat će organizatore nakon Sata Kodiranja (od 8-og do 14-tog prosinca) da bi im pružio upute za preuzimanje Dropbox pohrane ili Skype kredita.
+Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
 
 <% if @country == 'us' %>
 
 ## Video zapis sa gostujućim govornikom:
 
-Ova nagrada je ograničena samo na osnovne škole u SAD-u i Kanadi. Da biste se kvalificirali, prijavite svoju školu najkasnije do 14-tog studenog 2014. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## Komplet računala za razred (ili tehnologija u vrijednosti 10 tisuća dolara):
 
-Nagrada je ograničena na javne K-12 škole u SAD-u. To qualify, your entire school must register for the Hour of Code by November 14, 2014. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2014.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Jedna škola u svakoj saveznoj državi SAD-a primit će komplet računala za razred. Code.org will select and notify winners via email by December 1, 2015.
 
-Da pojasnimo, ovo nije nagrdna igra niti takmičenje gdje vam treba puka sreća.
+To clarify, this is not a sweepstakes or a contest involving pure chance.
 
-1) Nemate nikakavih financijskih rizika koji bi proizašli iz vaše prijave - bilo koja škola ili razred može sudjelovati, bez ikakvog plaćanja ka Code.org ili bilo kojoj drugoj organizaciji
+1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
 
-2) Pobjednici će biti odabrani samo između onih škola u kojima cijeli razred (ili cijela škola) sudjeluje u Satu Kodiranja, što uključuje kolektivni test sposobnosti učenika i učitelja.
+2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

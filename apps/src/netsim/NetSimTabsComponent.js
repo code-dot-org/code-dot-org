@@ -167,14 +167,9 @@ NetSimTabsComponent.prototype.render = function () {
   });
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
-    var continueButton = this.rootDiv_.find('#tab_instructions button').first();
-    instructionsArea.insertBefore(continueButton);
-    referenceArea.insertBefore(continueButton);
-    this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
-      if (!$(jQueryEvent.target).is(':disabled')) {
-        NetSimGlobals.completeLevelAndContinue();
-      }
-    });
+    var instructionsTab = this.rootDiv_.find('#tab_instructions').first();
+    instructionsArea.appendTo(instructionsTab);
+    referenceArea.appendTo(instructionsTab);
   }
 
   if (shouldShowTab(levelConfig, NetSimTabType.MY_DEVICE)) {

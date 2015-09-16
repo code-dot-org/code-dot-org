@@ -12,6 +12,7 @@
 var path = require('path');
 var assert = require('chai').assert;
 var $ = require('jquery');
+var sinon = require('sinon');
 require('jquery-ui');
 
 var testUtils = require('./util/testUtils');
@@ -32,12 +33,26 @@ function loadSource(src) {
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
+  var clock, tickInterval;
 
   before(function(done) {
     this.timeout(15000);
 
     window.jQuery = $;
     window.$ = $;
+    window.dashboard = $.extend(window.dashboard, {
+      i18n: {
+        t: function (selector) { return selector; }
+      },
+      // Right now we're just faking some of our dashboard project interactions.
+      // If this becomes insufficient, we might be able to require the project.js
+      // file from shared here.
+      project: {
+        getCurrentId: function () { return 'fake_id'; },
+        exceedsAbuseThreshold: function () { return false; },
+        isEditing: function () { return true; }
+      }
+    });
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
@@ -54,6 +69,13 @@ describe('Level tests', function() {
   });
 
   beforeEach(function () {
+    tickInterval = window.setInterval(function () {
+      if (clock) {
+        clock.tick(100); // fake 1000 ms for every real 1ms
+      }
+    }, 1);
+    clock = sinon.useFakeTimers();
+
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();
 
@@ -87,6 +109,8 @@ describe('Level tests', function() {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    clock.restore();
+    clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (studioApp.editor && studioApp.editor.aceEditor &&
         studioApp.editor.aceEditor.session &&

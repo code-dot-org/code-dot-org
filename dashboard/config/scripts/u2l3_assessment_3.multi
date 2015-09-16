@@ -5,3 +5,8 @@ right 'hierarchy'
 wrong 'abstraction'
 wrong 'protocol'
 wrong 'packet'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- hierarchy
+MARKDOWN

@@ -1,8 +1,10 @@
 * * *
 
-Заглавие: Бюлетини и статистика оформление: широка nav: resources_nav
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Отзиви и полезна статистика
 
@@ -10,8 +12,10 @@
 
 ### Въведете компютърните науки във вашето училище. Започнете с един Час на кодирането
 
-Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. Ако сте чували за <a href = "< % = hoc_uri('/') % >">за часът на кодирането</a> миналата година, може би знаете, че ние влезнахме в историята. Само за една седмица 15 милиона ученици опитаха компютърните науки с нас! [ Часът на кодирането](<%= hoc_uri('/') %>) е един час Въведение в компютърните науки, предназначен да демистифицира програмирането и да се покаже, че всички могат да научат основите. [ Регистрирайте](<%= hoc_uri('/') %>) събитие този декември 8-14 по време на Седмицата на компютърните науки в образованието и ни помогнете да достигнем до 100 милиона ученици до края на годината. Добавете училището си на картата, отидете на [ http://hourofcode.com](http://hourofcode.com)
+Компютрите са навсякъде, но в малко училища се изучават компютърни науки. Добрата новина е, че ние сме на път да променим това. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
-## Инфографика:
+## Инфомационни графики
 
-![изображение](http://code.org/images/fit-8000/Code.org_infographic.png)
+<%= view :stats_carousel %>
+
+<%= view :signup_button %>

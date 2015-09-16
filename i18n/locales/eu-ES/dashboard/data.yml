@@ -321,13 +321,13 @@ eu:
         studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
         studio_k1_4: 'Make the dog move to the cat and the cat say "hello" when he gets there.'
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
+        studio_k1_6: Sortu ezazu zure istorioa! Mugi itzazu txakurra eta katua eta gauzak esan ditzaten lortu ezazu.
         maze_wordsearch_k_1: Mugi nazazu EKIALDEA hitza letreiatzeko
         maze_wordsearch_k_2: Mugi nazazu HEGOALDEA hitza letreiatzeko
         maze_wordsearch_k_3: Mugi nazazu MENDEBALDEA hitza letreiatzeko
-        maze_wordsearch_k_4: Move me to spell the word NORTH
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
+        maze_wordsearch_k_4: Mugi nazazu iparralde hitza letratzeko
+        maze_wordsearch_k_6: Mugi nazazu lehenik ekialdera eta ondoren hegoaldera SALTO hitza letratzeko
+        maze_wordsearch_k_9: Mugi nazazu alde batetara, eta ondoren bestera KODE hitza letratzeko
         maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
         maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
         maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
@@ -414,15 +414,17 @@ eu:
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: Sarrera
         C4_loops_zombie: Itzuliak
         C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 'Variables - Artist'
+        C4_variables_artist: 'Aldagaiak - Artista'
         C4_variables_playlab: 'Variables - Play Lab'
         C4_for_loops: For Loops
+        C4_for_loops_bee: For Loops
+        C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_function_create: Funtzioak sortzen
         C4_function_parameters: Parametrodun funtzioak
         C4_conditionals: Baldintzak
         C4_unplugged_algorithms: Algorithms with Tangrams
@@ -430,7 +432,7 @@ eu:
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Bitarra
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
@@ -448,6 +450,7 @@ eu:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'

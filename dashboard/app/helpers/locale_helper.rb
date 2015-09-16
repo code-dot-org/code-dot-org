@@ -80,4 +80,10 @@ module LocaleHelper
     Dashboard::Application::LOCALES[locale.to_s].fetch(:webfonts, true)
   end
 
+  def i18n_dropdown
+    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
+      (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
+    end
+  end
+
 end

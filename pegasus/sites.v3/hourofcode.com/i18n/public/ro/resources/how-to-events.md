@@ -1,39 +1,44 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
-# Hour of Code event guide
+* * *
 
-Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+<%= view :signup_button %>
 
-## 1) Prepare for your event
+# Ghidul de organizare a unui eveniment Hour of Code
 
-  * Determine a venue, date and time
-  * Send [a letter](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= hoc_uri('/resources/press-kit') %>) for help.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
-## 2) During your event
+## 1) Pregăteşte-te pentru eveniment
 
-  * Kick off your event with one of our [inspirational videos](<%= hoc_uri('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= hoc_uri('/resources/stats') %>).   
+  * Stabileste un loc, o dată şi o ora
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+
+## 2) în timpul evenimentului
+
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Watch one of the Q&A sessions with an Hour of Code ambassador. They will all be recorded and on Code.org’s YouTube page. This year’s participants include Bill Gates, Sheryl Sandberg, Ashton Kutcher and more!
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Alte idei de eveniment: 
+      * Invita un lider din industria locală, pentru a discuta despre felul in care informatica il ajuta in munca sa
+      * Invita un politician local şi lasa elevii sa-l înveţe cum să implementeze un cod
+      * Desemneaza un grup de elevi care sa sustina o activitate in care sa nu fie utilizate computere
+      * Desemneaza un grup de elevi care sa invete directorul scolii sau un grup de profesori cum sa implementeze coduri
+      * Daca in scoala ta se preda deja informatica, desemneaza elevi care sa sustina proiecte
 
-## 3) Share how it went
+## 3) Impartaseste cum a decurs
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Distribuie fotografii ale evenimentului tau pe Facebook si Twitter. 
+  * Foloseste eticheta **#OradeProgramare**
 
-## Example Event Plan
+## Exemplu de plan pentru eveniment
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec 8th (start of Computer Science Education Week)
+**Date:** Dec 7th (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -41,74 +46,15 @@ Host an Hour of Code event during Computer Science Education Week (Dec 8-14) to 
   
 
 
-## Run of Show
+## Desfasurarea evenimentului
 
-<table>
-  <tr>
-    <th style="width:200px">
-      Time
-    </th>
-    
-    <th style="width:800px">
-      Action
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      10:00-10:05 am
-    </td>
-    
-    <td>
-      Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-    </td>
-  </tr>
-  
-  <td>
-    10:05-11:15 am
-  </td>
-  
-  <td>
-    Principal gives an intro overviewing the importance of computer science. Use these <a href="/resources/stats">stats and infographics</a>.
-  </td></tr> 
-  
-  <td>
-    11:15-11:17 am
-  </td>
-  
-  <td>
-    Open with one of our <a href="http://hourofcode.com/us/resources#videos">inspirational videos</a>
-  </td></tr> 
-  
-  <td>
-    11:17-11:30 am
-  </td>
-  
-  <td>
-    Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.
-  </td></tr> 
-  
-  <td>
-    11:30-11:40 am
-  </td>
-  
-  <td>
-    Students do an Hour of Code demo for the school. Fun twist- have them teach the principal, politician or other students.
-  </td></tr> 
-  
-  <td>
-    11:40-12:00 pm
-  </td>
-  
-  <td>
-    Students demo an unplugged activity and how computer science can be taught without using computers.
-  </td></tr> 
-  
-  <td>
-    12:00-12:05 pm
-  </td>
-  
-  <td>
-    Teacher who help bring the school-wide event gives closing remarks.
-  </td>
-</table>
+| Orar             | Activitati                                                                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                                |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

@@ -5,11 +5,11 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 17 - Algorithms Detour - Hard Problems TSP
+## Unit 2: Lesson 16 - Hard Problems - The Traveling Salesperson Problem
 
 # Background
 
-The traveling salesman problem is a classic “computationally hard” computer science problem that has many applications in the real world. Whether it is a mailperson delivering letters to everyone in a neighborhood or you picking up all of your friends for a party, the task is to find the shortest – most optimal – route possible. It’s harder than it sounds! In fact, there is no perfect algorithm for all instances of the problem. And as the problem grows, a brute force strategy requires an unreasonable amount of time to solve. 
+The traveling salesperson problem is a classic “computationally hard” computer science problem that has many applications in the real world. Whether it is a mailperson delivering letters to everyone in a neighborhood or you picking up all of your friends for a party, the task is to find the shortest – most optimal – route possible. It’s harder than it sounds! In fact, there is no perfect algorithm for all instances of the problem. And as the problem grows, a brute force strategy requires an unreasonable amount of time to solve. 
 
 # Vocabulary
 
@@ -17,14 +17,14 @@ The traveling salesman problem is a classic “computationally hard” computer 
 
 # Lesson
 
-* Determine the “best” route for a Traveling Salesman Problem map
+* Determine the “best” route for a Traveling Salesperson Problem map
 * Discuss strategies for finding the shortest possible route.
 * Discover how the size of the problem complicates the solution
 
 
 # Resources
 
-* Activity Guide: <a href="https://docs.google.com/document/d/1hSuSothXeTbKRRZeXx8CSL-DXl6BmnKzDnIYdM_lpDA" target="_blank">The Traveling Salesman Problem</a>
+* Activity Guide: <a href="https://docs.google.com/document/d/1hSuSothXeTbKRRZeXx8CSL-DXl6BmnKzDnIYdM_lpDA" target="_blank">The Traveling Salesperson Problem</a>
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

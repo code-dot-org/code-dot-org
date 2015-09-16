@@ -62,6 +62,10 @@
   thank_you_: আপনাকে ধন্যবাদ!
   congratulations: অভিনন্দন !
   congratulations_on_completing_hoc: আওয়ার অব কোড সম্পন্ন  করার জন্য অভিনন্দন।
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: আপনার প্রশংসাপত্র গ্রহণ করুন
   enter_valid_age: Please select a valid age
   enter_valid_email: অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।
@@ -201,6 +205,7 @@
   homepage_action_text_learn: শেখা শুরু করুন।
   homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
   homepage_signpetition_dropdown: ▾ একমত;
+  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org
     ও কলেজ বোর্ড গঠন করে।
   homepage_banner_text_link: আরও জানুন
@@ -323,6 +328,9 @@
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
@@ -510,6 +518,11 @@
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: আরও জানুন
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: সাইন আপ
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, এবং Scrat
@@ -529,6 +542,8 @@
   educator_notes: Educator Notes
   how_to_teach_hoc: How to Teach an Hour of Code
   more_resources_educators: More resources for teachers and educators
+  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
+    and submission form.
   participants: অংশগ্রহণকারী
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'

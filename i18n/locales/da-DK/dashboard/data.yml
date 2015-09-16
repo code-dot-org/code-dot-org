@@ -416,6 +416,8 @@ da:
         C4_variables_artist: 'Variable - Kunstner'
         C4_variables_playlab: 'Variable - Play Lab'
         C4_for_loops: For Loops
+        C4_for_loops_bee: For Loops
+        C4_for_loops_no_bee: For Loops
         C4_math_artist: Programmering af Kunstneren med matematik
         C4_function_edit: Redigering af funktioner
         C4_function_create: Oprettelse af funktioner
@@ -444,6 +446,7 @@ da:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
