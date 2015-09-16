@@ -175,6 +175,7 @@ exports.load = function(assetUrl, id) {
   skin.movePegmanAnimationSpeedScale = 1;
   skin.look = '#FFF';
   skin.background = skin.assetUrl('background.png');
+  skin.tiles = skin.assetUrl('tiles.png');
   skin.pegmanHeight = 52;
   skin.pegmanWidth = 49;
   skin.pegmanYOffset = 0;
