@@ -90,7 +90,7 @@
         text: 'Hvis du tar en titt på arbeidsområdet, er det noen grønne blokker som er fylt ut for deg - dette er "hendelsesbehandlinger" '
       7:
         image: notes/flappy07.jpg
-        text: 'Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester du "FLAKS" blokken til den riktige hendelsesbehandleren og fuglen vil flakse hver gang du klikker med musen.'
+        text: 'Hvis du vil at fuglen skal FLAKSE når du KLIKKER med musen, så fester du "FLAKS"-blokken til den riktige hendelsesbehandleren og fuglen vil flakse hver gang du klikker med musen.'
       8:
         image: notes/flappy08.jpg
         text: I hver oppgave i denne aktiviteten vil vi introdusere nye typer hendelser som grønne blokker i arbeidsområdet, og du kan bestemme de relevante blokkene å legge til i respons til de hendelsene.

@@ -65,6 +65,7 @@
   "penTooltip": "Lyfter eller sænker blyanten for at starte eller stoppe tegning.",
   "penUp": "blyant op",
   "reinfFeedbackMsg": "Her er din tegning! Fortsæt med at arbejde på den eller gå videre til næste opgave.",
+  "setAlpha": "set alpha",
   "setColour": "sæt farve",
   "setPattern": "juster mønster",
   "setWidth": "indstil bredde",
@@ -80,6 +81,5 @@
   "turnTooltip": "Drejer figuren  til venstre eller højre med det angivne antal grader.",
   "turtleVisibilityTooltip": "Gør kunstneren synlig eller usynlig.",
   "widthTooltip": "Ændrer bredden på blyanten.",
-  "wrongColour": "Dit billede har den forkerte farve.  Til denne opgave skal det være %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Dit billede har den forkerte farve.  Til denne opgave skal det være %1."
 }

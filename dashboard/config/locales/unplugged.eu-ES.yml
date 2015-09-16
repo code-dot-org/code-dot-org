@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Baldintzak
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -120,7 +120,7 @@
           through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Mugitu, mugitu
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
@@ -283,7 +283,7 @@
         desc: Design Recipe lesson description
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans
+        title: Boolearrak eta logika
         desc: Booleans lesson description
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:

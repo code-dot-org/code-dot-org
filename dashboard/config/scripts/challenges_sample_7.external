@@ -1,0 +1,55 @@
+name 'challenges sample 7'
+title 'Life Science Challenges'
+description 'Give these a try'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/challenges.css">
+
+<div class="challengeSet">
+<h3>Physical Science Challenge 2</h3>
+<br/>
+Choose a challenge and complete it in StarLogo Nova.  
+<br/>
+<br/>
+	<div class="challengeRow">
+    	<div class="easy">
+        	<strong>Easy</strong>
+            <br/><br/>
+            Create a model such that precipitate falls to the bottom of Spaceland
+            <br/><br/>
+            <i>Details: Change movement of the silver nitrate with set heading</i>
+        </div>
+    	<div class="medium">
+        	<strong>Medium</strong>
+            <br/><br/>
+            Change your model such that precipitate falls to the bottom of Spaceland, somewhat forming a pile
+            <br/><br/>
+            <i>Details: Change movement of the silver nitrate with set heading, have them separate from each other with detection</i>
+        </div>
+    	<div class="hard">
+        	<strong>Hard</strong>
+            <br/><br/>
+				Create a model in 3D so that copper pipe is vertical, agents move with a wiggle in Z but do not go below Spaceland nor above a Z of 30
+            <br/><br/>
+            <i>Details: Invisible agent is created to take camera (add Z coordinates to setup), use conditionals</i>
+        </div>
+    </div>
+    <br/><br/>
+    Choose your challenge and complete in StarLogo Nova.  When you're finished, make your project public and share the link in our Professional Learning Community.  Make sure to include:  
+    
+    <ol>
+      <li>Which challenge question did you chose, and why?</li>
+      <li>URL for public link.</li>
+      <li>What did you struggle with most?</li>
+      <li>Is there anything else you still need help with?</li>
+    </ol>
+
+<a href="http://forum.code.org/t/physical-science-challenge-2/2135" target="_new"><button>
+	Share your project >>
+</button></a>
+<br/><br/>
+
+When you're done sharing your project, click below to move on to the next challenge.
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+</div>
+MARKDOWN

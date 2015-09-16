@@ -3,7 +3,7 @@
     script:
       name:
         20-hour:
-          desc: K-8 학생들에 대한 컴퓨터과학 기초 코스
+          desc: 유치원-중2(K-8) 학생들을 위한, 컴퓨터과학(Computer Science, 정보과학)
           Unplug1: 1 단계
           Maze: 2 단계
           Unplug2: 3 단계
@@ -494,6 +494,8 @@
         C4_variables_artist: 변수 - 예술가
         C4_variables_playlab: 변수 - 플레이 랩
         C4_for_loops: 반복을 위한
+        C4_for_loops_bee: 반복을 위한
+        C4_for_loops_no_bee: 반복을 위한
         C4_math_artist: 수학 예술가 프로그래밍
         C4_function_edit: 함수 수정하기
         C4_function_create: 함수 만들기
@@ -522,6 +524,7 @@
         csp_pixelation_bw: 흑백 픽셀 위젯
         csp_U1L14_tipstricks: 유닛 1 레슨 14 교사 팁 & 트릭
         csp_textcompression: 텍스트 압축 도구
+        csp_textcompression_new: 텍스트 압축 도구
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

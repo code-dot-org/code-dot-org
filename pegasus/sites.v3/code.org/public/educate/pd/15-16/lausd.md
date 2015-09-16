@@ -38,7 +38,7 @@ Breakfast and lunch will be served.
 931 N Highland Avenue<br/>
 Los Angeles, CA, 90038<br/>
 
-Free parking available in lot around the back of the building surrounded by a wooden fence. 
+Free parking available in lot behind the building. Click [here](/images/9-dots-parking-map.png) for a map. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -120,13 +120,11 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -173,13 +171,11 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study   (3 days in-person & ~8 hours online) 
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)
 

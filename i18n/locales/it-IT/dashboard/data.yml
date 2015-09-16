@@ -440,6 +440,8 @@ it:
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
         C4_for_loops: Cicli con Contatore
+        C4_for_loops_bee: Cicli con Contatore
+        C4_for_loops_no_bee: Cicli con Contatore
         C4_math_artist: "Programmazione de L'Artista con la matematica"
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
@@ -468,6 +470,7 @@ it:
         csp_pixelation_bw: Bianco e nero pixelation widget
         csp_U1L14_tipstricks: "Unità 1 Lezione 14 consigli per l'insegnante"
         csp_textcompression: Widget di compressione del testo
+        csp_textcompression_new: Widget di compressione del testo
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'

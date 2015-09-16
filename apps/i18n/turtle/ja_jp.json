@@ -65,6 +65,7 @@
   "penTooltip": "鉛筆を持ち上げたり、下げたりして、描くのを始めたり、止めたりします。",
   "penUp": "鉛筆を持ち上げる",
   "reinfFeedbackMsg": "絵が描けましたね！別の絵を描いてもいいですし、次のパズルに進んでもいいですよ。",
+  "setAlpha": "set alpha",
   "setColour": "色を設定",
   "setPattern": "模様を設定",
   "setWidth": "幅を設定",
@@ -80,6 +81,5 @@
   "turnTooltip": "指定した角度でアーティストを左まはた右に向ける",
   "turtleVisibilityTooltip": "アーティストを表示または非表示",
   "widthTooltip": "鉛筆の幅を変更",
-  "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。",
-  "setAlpha": "set alpha"
+  "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。"
 }

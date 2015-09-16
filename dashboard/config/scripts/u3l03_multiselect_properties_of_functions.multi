@@ -1,6 +1,6 @@
 name 'U3L03 - multiselect - properties of functions'
 title 'Choose Two - Things about functions'
-
+type 'multi2'
 question 'Chose the two (2) statements that are true about functions'
 
 right 'Meaningful function names help <em>people</em> better understand programs.'

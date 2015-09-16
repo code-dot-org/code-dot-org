@@ -2,7 +2,7 @@ id:
   errors:
     messages:
       not_saved: 'Mohon Perbaiki kesalahan berikut:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Konten berikut ini terbatas untuk usia tertentu dan tidak diperuntukkan bagi anak kecil
   activerecord:
     errors:
       messages:
@@ -520,7 +520,7 @@ id:
     ok: Oke!
     startover_title: Apakah Anda yakin Anda ingin memulai dari awal?
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: Memulai ulang
+    startover_ok: Memulai kembali
     startover_cancel: Batal
   time:
     hour: 1 jam
@@ -604,3 +604,8 @@ id:
     view_all: Lihat proyek saya
     remix: Remix
     click_to_remix: "Klik 'Remix' untuk mematikan putaran versi Anda sendiri!"
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio
