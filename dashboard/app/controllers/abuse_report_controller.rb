@@ -3,7 +3,7 @@ require 'httparty'
 
 class AbuseReportController < ApplicationController
   def report_abuse
-    response = HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
+    HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
       headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
       body: {
         :ticket => {
