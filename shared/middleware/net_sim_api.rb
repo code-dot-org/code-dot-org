@@ -209,7 +209,7 @@ class NetSimApi < Sinatra::Base
     begin
       body = JSON.parse(request.body.read)
     rescue JSON::ParserError
-      json_bad_request
+      json_bad_request(details: INSERT_ERRORS[:malformed])
     end
 
     # Determine whether or not we are performing a multi-insert and
