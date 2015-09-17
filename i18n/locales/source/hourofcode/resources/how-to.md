@@ -87,9 +87,10 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 [/col-33]
 
 <p style="clear:both">&nbsp;</p>
-
+	
 ## 7) Celebrate
 - <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
+- <a href="<%= resolve_url('/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -121,6 +122,6 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <% end %>
 
 ## What comes after the Hour of Code?
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
 
 <%= view :signup_button %>
