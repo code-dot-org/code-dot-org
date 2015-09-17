@@ -21,7 +21,7 @@ class NetSimApi < Sinatra::Base
       router: 'router'
   }
 
-  INSERT_ERRORS = {
+  VALIDATION_ERRORS = {
       malformed: 'malformed',
       conflict: 'conflict',
       limit_reached: 'limit_reached'
@@ -209,7 +209,7 @@ class NetSimApi < Sinatra::Base
     begin
       body = JSON.parse(request.body.read)
     rescue JSON::ParserError
-      json_bad_request(INSERT_ERRORS[:malformed])
+      json_bad_request(VALIDATION_ERRORS[:malformed])
     end
 
     # Determine whether or not we are performing a multi-insert and
@@ -246,7 +246,7 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] value - The value we're validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_one(shard_id, table_name, value)
-    return INSERT_ERRORS[:malformed] unless value.is_a? Hash
+    return VALIDATION_ERRORS[:malformed] unless value.is_a? Hash
     case table_name
       when TABLE_NAMES[:node]
         validate_node(shard_id, value)
@@ -266,7 +266,7 @@ class NetSimApi < Sinatra::Base
     case node['type']
       when NODE_TYPES[:router] then validate_router(shard_id, node)
       when NODE_TYPES[:client] then nil
-      else INSERT_ERRORS[:malformed]
+      else VALIDATION_ERRORS[:malformed]
     end
   end
 
@@ -276,13 +276,13 @@ class NetSimApi < Sinatra::Base
   # @param [Hash] router - The new router we are validating
   # @return [String] a validation error, or nil if no problems were found
   def validate_router(shard_id, router)
-    return INSERT_ERRORS[:malformed] unless router.has_key?('routerNumber')
+    return VALIDATION_ERRORS[:malformed] unless router.has_key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
         to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
     # Check for routerNumber collisions and router limits
-    return INSERT_ERRORS[:limit_reached] unless existing_routers.count < CDO.netsim_max_routers
-    return INSERT_ERRORS[:conflict] if existing_routers.any? {|x| x['routerNumber'] == router['routerNumber']}
+    return VALIDATION_ERRORS[:limit_reached] unless existing_routers.count < CDO.netsim_max_routers
+    return VALIDATION_ERRORS[:conflict] if existing_routers.any? {|x| x['routerNumber'] == router['routerNumber']}
     nil
   end
 
@@ -298,7 +298,7 @@ class NetSimApi < Sinatra::Base
       node['id'] == message['simulatedBy']
     end
 
-    return INSERT_ERRORS[:conflict] unless node_exists
+    return VALIDATION_ERRORS[:conflict] unless node_exists
     nil
   end
 
@@ -311,7 +311,7 @@ class NetSimApi < Sinatra::Base
     wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
       stored_wire['localNodeID'] == wire['localNodeID'] and stored_wire['remoteNodeID'] == wire['remoteNodeID']
     end
-    return INSERT_ERRORS[:conflict] if wire_already_exists
+    return VALIDATION_ERRORS[:conflict] if wire_already_exists
     nil
   end
 

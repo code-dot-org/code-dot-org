@@ -11,7 +11,7 @@ class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
   NODE_TYPES = NetSimApi::NODE_TYPES
-  INSERT_ERRORS = NetSimApi::INSERT_ERRORS
+  VALIDATION_ERRORS = NetSimApi::VALIDATION_ERRORS
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
@@ -116,7 +116,7 @@ class NetSimApiTest < Minitest::Test
     # hash should fail
     create_record([1])
     assert_equal 400, @net_sim_api.last_response.status
-    assert_equal [INSERT_ERRORS[:malformed]], last_error_details
+    assert_equal [VALIDATION_ERRORS[:malformed]], last_error_details
     assert_equal 4, read_records.length
   ensure
     created_ids.each { |id| delete_record(id) }
@@ -155,7 +155,7 @@ class NetSimApiTest < Minitest::Test
 
     # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_create_response.status
-    assert_equal INSERT_ERRORS[:malformed], last_error_details
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
 
     # Verify that no record was created
     assert read_records.first.nil?, 'Table was not empty'
@@ -164,7 +164,7 @@ class NetSimApiTest < Minitest::Test
   def test_get_400_on_inserting_orphaned_message
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
     assert_equal 400, @net_sim_api.last_response.status, 'Orphaned message not created'
-    assert_equal INSERT_ERRORS[:conflict], last_error_details
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
     assert_equal 0, read_records(TABLE_NAMES[:message]).count, 'Created no messages'
   end
 
@@ -176,7 +176,7 @@ class NetSimApiTest < Minitest::Test
 
     create_wire(1, 2)
     assert_equal 400, @net_sim_api.last_response.status, 'Duplicate wire request did not fail'
-    assert_equal INSERT_ERRORS[:conflict], last_error_details
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
     assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Duplicate wire was created'
   end
 
@@ -589,12 +589,12 @@ class NetSimApiTest < Minitest::Test
     # Reject nodes with other "types"
     create_node({}, 'some_random_type')
     assert_equal(400, @net_sim_api.last_response.status)
-    assert_equal INSERT_ERRORS[:malformed], last_error_details
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
 
     # Reject nodes with no type
     create_node({})
     assert_equal(400, @net_sim_api.last_response.status)
-    assert_equal INSERT_ERRORS[:malformed], last_error_details
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
   end
 
   def test_limit_shard_routers_to_max_routers
@@ -610,7 +610,7 @@ class NetSimApiTest < Minitest::Test
     create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(400, @net_sim_api.last_response.status,
                  "Went over router limit!")
-    assert_equal(INSERT_ERRORS[:limit_reached], last_error_details)
+    assert_equal(VALIDATION_ERRORS[:limit_reached], last_error_details)
     assert_equal(CDO.netsim_max_routers,
                  read_records(TABLE_NAMES[:node]).count,
                  "Went over router limit!")
@@ -691,7 +691,7 @@ class NetSimApiTest < Minitest::Test
   def test_reject_routers_without_router_number
     create_router_node({})
     assert_equal(400, @net_sim_api.last_response.status, "Allowed malformed router row")
-    assert_equal(INSERT_ERRORS[:malformed], last_error_details)
+    assert_equal(VALIDATION_ERRORS[:malformed], last_error_details)
   end
 
   def test_reject_routers_causing_router_number_collision
@@ -703,7 +703,7 @@ class NetSimApiTest < Minitest::Test
     create_router_node('routerNumber' => 1)
     assert_equal(400, @net_sim_api.last_response.status,
                  'Should have rejected duplicate routerNumber')
-    assert_equal(INSERT_ERRORS[:conflict], last_error_details)
+    assert_equal(VALIDATION_ERRORS[:conflict], last_error_details)
 
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
                  'Expected to end up with one node.')
