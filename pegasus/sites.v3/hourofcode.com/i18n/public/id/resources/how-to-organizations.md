@@ -1,8 +1,8 @@
-* * *
+---
 
 title: <%= hoc_s(:title_how_to_organizations) %> layout: wide nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 

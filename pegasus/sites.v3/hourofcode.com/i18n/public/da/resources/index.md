@@ -1,8 +1,8 @@
-* * *
+---
 
 title: <%= hoc_s(:title_resources) %> layout: wide
 
-* * *
+---
 
 # Hour of Code Resources
 

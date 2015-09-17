@@ -1,8 +1,8 @@
-* * *
+---
 
 title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
-* * *
+---
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>

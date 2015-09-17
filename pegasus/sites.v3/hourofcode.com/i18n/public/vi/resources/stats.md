@@ -1,8 +1,8 @@
-* * *
+---
 
 title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
