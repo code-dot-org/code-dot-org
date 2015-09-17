@@ -1,4 +1,10 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # جوایز - شرایط و ضوابط
 
@@ -14,7 +20,7 @@ Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide i
 
 ## چت تصویری با مهمان سخنران :
 
-محدودیت جایزه تنها به K-12 کلاس درس در ایالات متحده و کانادا داده میشود. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
+Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
 
 ## کلاس مجموعه ای از لپ تاپ ها (یا 10.000 دلار برای فن آوری دیگر):
 
@@ -27,3 +33,5 @@ To clarify, this is not a sweepstakes or a contest involving pure chance.
 2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
 
 <% end %>
+
+<%= view :signup_button %>

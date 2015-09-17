@@ -1,75 +1,129 @@
 * * *
 
-სათაური: ინსტრუქციები გამოსახულება: ფართო ნავიგაცია: resources_nav
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # როგორ ვასწავლოთ კოდის ერთი საათის ფარგლებში
 
-## 1) უყურეთ ამ ვიდეოს <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
-## 2) ნახეთ ტუტორიალები:
+## 1) დარეგისტრირდით
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
+
+## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
+## 3) აირჩიეთ ტუტორიალი:
+
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
   * მასწავლებლისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Plan your hardware needs - computers are optional
+## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-საუკეთესო გამოცდილებას კომპიუტერებითა და ინტერნეტით აღჭურვილ კლასში მიიღებთ, თუმცა თქვენ არ გჭირდებათ კომპიუტერი ყოველი ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
+საუკეთესო გამოცდილებას კომპიუტერებითა და ინტერნეტით აღჭურვილ კლასში მიიღებთ, თუმცა თქვენ **არ** გჭირდებათ კომპიუტერი ყოველი ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
-  * ** გატესტეთ ტუტორიალების მუშაობა მოსწავლეების კომპიუტერებზე.** დარმწუნდით, რომ ვიდეო ჩანს და ხმა ისმის.
-  * **გაცანით მილოცვის გვერდს** და გაიგეთ, რას ნახავენ მოსწავლეები როცა დაასრულებენ ტუტორიალს. 
-  * **არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა**, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
-
-## 4) Plan ahead based on your technology available
-
-  * **არ გაქვს საკმარისი მოწყობილობა?** გამოიყენეთ [პროგრამირება წყვილებში](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და მასწავლებლისგან ნაკლებ ყურადღებას მოითხოვენ. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
+  * გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან დევაისებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
+  * არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფ, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
+  * **არ გაქვთ საკმარისი რაოდენობის მოწყობილობები?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
   * **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ ოფლაინ-ტუტორიალები.
 
-## 5) Inspire students - show them a video
+![](/images/group_ipad.jpg)</a>
 
-აჩვენეთ მოსწავლეებს ჩვენი ერთ-ერთი ვიდეო კოდის ერთი საათის ენერგიულად დასაწყებად. მაგალითად:
+## 5) მოანდომეთ მოსწავლეებს მიიღონ მონაწილეობა კოდის თქვენს ერთ საათში
+
+**დაიწყეთ თქვენი ღონისძიება მოსწავლეებთან იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა.**
+
+**აჩვენე შთამაგონებელი ვიდეო:**
 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [2013 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw) ან <% if @country == 'uk' %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * ნახეთ მეტი შთამაგონებელი ვიდეო [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**დააინტერესეთ თქვენი მოსწავლეები - აჩვენეთ, რასთან აქვთ საქმე**
+**არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენ და თქვენი მოსწავლეები თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება წარადგინოთ კოდის ერთი საათის აქტივობა:**
 
-ბავშვების უმეტესობამ არ იცის, რა არის ინფორმატიკა. აი, რამდენიმე იდეა:
+  * ახსენი როგორ გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე, ისეთი მაგალითების მოიშველიეთ, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება ( ესეუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, ადამიანების ერთმანეთთან დაკავშირებაზე და ა. შ.).
+  * კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-  * ახსენით მარტივად, აჩვენეთ ბევრი მაგალითი ინფორმატიკისა და ისეთი თემების კავშირისა, რაც ყველასთვის მნიშვნელოვანია (სიცოცხლის გადარჩენა, ადამიანების დახმარება, ადამიანების გაერთიანება და დაკავშირება და ა. შ.).
-  * სცადეთ ასე: "იფიქრეთ ყველა იმ საგანზე თქვენს ყოველდღიურ ცხოვრებაში, რომლებიც იყენებენ ინფორმატიკას: მობილური ტელეფონი, მიკროტალღური ღუმელი, კომპიუტერი, შუქნიშანი... ყველა ამ მოწყობილობის აწყობას სჭირდება პროგრამისტი."
-  * ან: "ინფორმატიკა არის ჩვენი იდეებისა და ციფრული ტექნოლოგიების გაერთიანება. პროგრამისტი უამრავ სფეროში შეიძლება, მუშაობდეს: წეროს აპლიკაციები მობილურებისთვის, განკურნოს დაავადებები, შექმნას ანიმირებული ფილმები, იმუშაოს სოციალურ ქსელებში, შექმნას რობოტები, რომლებიც უცხო პლანეტებს გამოიკვლევენ და ა. შ."
-  * [აქ ](http://<%= codeorg_url() %>/girls) შეგიძლიათ ნახოთ, როგორ დააინტერესოთ პროგრამირებით გოგონები. 
+** გინდათ მეტი იდეა? ** გაეცანით ჩვენი გამოცდილი მასწავლებლების [ სწავლების საუკეთესო პრაქტიკებს ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466).
 
-## 6) Start your Hour of Code
+## 6) დაწერეთ კოდი!
 
 **აუხსენით ბავშვებს, რა უნდა გააკეთონ**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
-  * უთხარით მოსწავლეებს გადავიდენენ ბმულზე და დაიწყონ ტუტორიალი.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
-**თუ მოსწავლეებს რამე სირთულეები ექმნებათ**
+**როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ თქვენ უპასუხებთ:**
 
-  * დაადგინეთ შემდეგი წესი: მოსწავლემ ჯერ 3 კლასელს უნდა ჰკითხოს და მოგმართოთ თქვენ მხოლოდ მაშინ, თუ მათ ვერ გასცეს პასუხი.
-  * ყოველთვის გაამხნევეთ მოსწავლეები, მაგალითად: "ვფიქრობ, რომ მაინც კარგად გამოგდის, არ დანებდე."
-  * არაუშავს, თუ გულახდილად ეტყვით, რომ არ იცით. შესთავაზეთ ერთად იპოვოთ გამოსავალი. "მაგრამ, თუ ვერ გადავჭრით პრობლემას, ესეც კარგი გაკვეთილი იქნება: ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა." ან "პროგრამირების სწავლა ენის სწავლას ჰგავს. შეუძლებელია, დაუყოვნებლივ დაიწყო უცხო ენაზე გამართულად ლაპარაკი."
+  * "არ ვიცი. მოდი ერთად ვიპოვოთ გამოსავალი"
+  * ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
+  * "პროგრამის სწავლა უცხო ენის სწავლას გავს; შეუძლებელია დაუყოვნებლის დაიწყოთ გამართულად საუბარი."
 
 **რა ვქნათ, თუ მოსწავლემ მალე დაამთავრა?**
 
-  * მოსწავლეებისთვის ყველა ტუტორიალია ღია და მას შეუძლია რომელიმე სხვა სცადოს გვერდზე [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * ან მას შეუძლია დაეხმაროს იმ კლასელებს, ვისაც გაუჭირდა დავალებების შესრულება.
 
-**როგორ ამოვბეჭდო სერტიფიკატები ჩემი სტუდენტებისთვის?**
+[col-33]
 
-[Code.org-ის ტუტორიალის](http://studio.code.org) დასარულებისთანავე ყოველი მოსწავლე მიიღებს სერტიფიკატს ელ.ფოსტაზე. მის ამოსაბეჭდათ საკმარისია დააკლიკოთ. თუმცა თუ თქვენი მოსწავლეებისთვის ახალი სერტიფიკატების გაკეთება გინდათ, ეწვიეთ ჩვენს გვერდს [სერტიფიკატები](http://<%= codeorg_url() %>/certificates) და ამობეჭდეთ, რამდენიც გინდათ!
+![](/images/highschoolgirls.jpeg)</a>
 
-**რა ხდება კოდის ერთი საათის შემდეგ?**
+[/col-33]
 
-კოდის ერთი საათი პრგამირების სწავლის ერთი პატარა ეტაპია. <% if @country == 'uk' %> კოდის ერთი საათი პრგამირების სწავლის ერთი პატარა ეტაპია. თქვენს მოსწავლეებს შეუძლიათ [ონლაინ გააგრძელონ სწავლა](http://uk.code.org/learn/beyond). <% else %> მასწავლებლისთვის დაამტებითი მასალების პოვნა შეგიძლიათ[აქ](http://<%= codeorg_url() %>/educate). ან შეტყობინეთ ბავშვებს, რომ მათ შეუძლიათ გააგრძელონ სწავლა [ონლაინ](http://<%= codeorg_url() %>/learn/beyond). <% end %>
+[col-33]
+
+![](/images/group_ar.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## 7) აღნიშნეთ
+
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
+
+[col-33]
+
+![](/images/celebrate2.jpeg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/highlight-certificates.jpg)</a>
+
+[/col-33]
+
+[col-33]
+
+![](/images/boy-certificate.jpg)</a>
+
+[/col-33]
+
+<p style="clear:both">
+  &nbsp;
+</p>
+
+## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის:
+
+  * მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის მასწავლებლებისგან. 
+  * დაესწარით ჩვენს [კოდის ერთი საათისთვის მასწავლებლების მოსამზადებელ ვებინარს](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+  * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
+  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+
+## What comes after the Hour of Code?
+
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

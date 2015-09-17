@@ -149,6 +149,13 @@ fr:
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_nav_terms: "Conditions d'utilisation"
   prizes_nav_faq: Foire aux questions
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
   whats_next_header: Ensuite ?
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Comment piloter une Heure de Code</a>"
@@ -181,8 +188,10 @@ fr:
   front_join_us_teachers: Enseignants
   front_join_us_everyone: Tout le monde
   front_join_us_try: Essayez le
+  front_join_us_sign_up: Validez
   front_join_us_host: Accueillez le
   front_join_us_support: Soutenez le
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: Votre Nom
   signup_email_label: Votre e-mail
@@ -243,11 +252,11 @@ fr:
   hoc_faq_what_is_hoc_a: "L'heure de Code est une introduction d'une heure à l'informatique, conçue pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. <a href='http://code.org/learn'> Découvrez les tutoriels</a>."
   hoc_faq_last_year: Essayez les tutoriels
   hoc_faq_when_is_hoc_q: Quand se déroulera une Heure de Code?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: "Pourquoi l'informatique?"
   hoc_faq_why_cs_a: "<i>Chaque</i> élève doit avoir la possibilité d'apprendre l'informatique. Il contribue à acquérir les compétences de résolution de problèmes, logique et créativité. En commençant tôt, les élèves auront les bases pour réussir dans n'importe quel carrière au XXIe siècle. Voir plus de statistiques sur <a href='http://code.org'> Code.org</a>."
   hoc_faq_how_participate_q: Comment participer à une Heure de Code?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Qui est derrière une Heure de Code?
   hoc_faq_behind_hoc_a: "Une Heure de Code est organisée par <a href='http://code.org'>Code.org</a>, une association public a but non-lucrative, dédiée à la démocratisation de l'informatique, en la rendant disponible dans plus d'écoles, et en augmentant la participation des femmes et des élèves de couleur sous représentés. Une <a href='http://code.org/about/partners'>coalition sans précédente de partenaires</a> nous ont rejoint pour supporté une Heure de Code, too &mdash; including Microsoft, Apple, Amazon, Boys and Girls Clubs of America et the College Board."
   hoc_faq_host_q: Je ne connais rien en programmation. Puis-je tout de même organiser un événement ?
@@ -260,16 +269,16 @@ fr:
   hoc_faq_tutorial_a: "Si vous êtes intéressé à devenir un facilitateur de nos tutoriels, <a href='targetHOC'> consultez nos instructions et lignes directrices</a>. Nous tenons à accueillir une variété d'options engageantes, mais le but principal demeure d'optimiser l'expérience pour les élèves et les enseignants qui sont débutant en informatique."
   hoc_faq_more_questions_q: Avez-vous toujours des questions?
   hoc_faq_more_questions_a: "Trouver une réponse dans notre <a href='http://support.code.org'>forum de support</a>."
-  hoc_faq_scratch_q: "J'utilise Scratch pour l'Heure de code, mais que faire si mes élèves ont des iPads plutôt que des ordinateurs portables ?"
-  hoc_faq_scratch_a: "Scratch ne fonctionne pas sur les tablettes. Si vos élèves sont jeunes, ils peuvent utiliser l'application iPad ScratchJR (pour les lecteurs débtants). En consultant les tutoriels sur <a href='http://code.org/learn'> Code.org/learn</a>, vous y trouverez d'autres tutoriels qui fonctionnent sur iPad: Code.org, Tynker, Lightbot ou CodeSpark."
   hoc_faq_account_q: Les étudiants doivent-ils se connecter en utilisant un compte ?
   hoc_faq_account_a: "Non. Absolument aucune inscription ou authentification n'est nécessaire pour que des élèves essaient l'heure de Code. La plupart des <a href='http://code.org/learn/beyond'>cours avancés</a> nécessite en revanche la création d'un compte pour enregistrer des progrès de l'élève."
   hoc_faq_frozen_q: Où est le tutoriel avec Anna et Elsa ?
   hoc_faq_frozen_a: "Il a maintenant été publié sur <a href='http://code.org/learn'> Code.org/learn</a>. Nous espérons qu'il vous plaira !"
   hoc_faq_high_school_q: Quelle activité faire avec des élèves du secondaire ?
   hoc_faq_high_school_a: "Pour tous les âges, nous vous recommandons d'essayer tout d'abord un des tutoriels pour débutants sur <a href='http://code.org/learn'> Code.org/learn</a>, par exemple le tutoriel avec Angry Birds ou Anna et Elsa. Un élève du secondaire doit être en mesure de terminer l'un d'entre eux en 30 minutes et peut alors essayer un tutoriel plus avancé en JavaScript, par exemple Khan Academy ou CodeHS."
+  hoc_faq_scratch_q: "J'utilise Scratch pour l'Heure de code, mais que faire si mes élèves ont des iPads plutôt que des ordinateurs portables ?"
+  hoc_faq_scratch_a: "Scratch ne fonctionne pas sur les tablettes. Si vos élèves sont jeunes, ils peuvent utiliser l'application iPad ScratchJR (pour les lecteurs débtants). En consultant les tutoriels sur <a href='http://code.org/learn'> Code.org/learn</a>, vous y trouverez d'autres tutoriels qui fonctionnent sur iPad: Code.org, Tynker, Lightbot ou CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: "Statistiques d'une Heure de Code 2013"
   stats_growth: "Il a été les plus rapide a atteindre les 15 millions d'utilisateurs."
   stats_i18n: Students are learning in 40 languages
@@ -292,14 +301,49 @@ fr:
   resources_how_to_districts: Guide pratique pour les districts
   resources_how_to_officials: Guide pratique pour les officiels
   resources_handouts: Documents pour passer le message
-  resources_videos: Vidéos
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Affiches
-  resources_social: Réseaux sociaux
+  resources_videos: Vidéos
   resources_banners: Bannières
   resources_emails: Échantillons de courriels
+  resources_logo: Hour of Code logo
   resources_stats: Présentation et statistiques utiles
   resources_press_kit: Dossier de presse
+  resources_social: Réseaux sociaux
   resources_country_resources: Country Specific Resources
+  resources_stickers: Stickers
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  videos_title: Montrer ces vidéos pour inspirer les élèves
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: "Le président Obama sur l'informatique"
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_officials: Guide pratique pour les officiels
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Dossier de presse
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Partenaires
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Merci
+  title_prizes: Prix
+  title_resources: Ressources
+  title_signup_thanks: Merci de vous être inscrit pour organiser une Heure de Code!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
   events_title: "Tous les événements d'Une Heure de Code"
   events_nav_all: Tous les évenements
   events_nav_whole_schools: Toutes les écoles

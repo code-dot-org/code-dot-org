@@ -65,6 +65,7 @@
   "penTooltip":"使用\"下筆\"或\"停筆\"來開始或停止繪畫動作。",
   "penUp":"停筆",
   "reinfFeedbackMsg":"這是您的繪圖 ！繼續努力或者開始下一個謎題。",
+  "setAlpha":"set alpha",
   "setColour":"設定顏色",
   "setPattern":"設定模式",
   "setWidth":"設定寬度",

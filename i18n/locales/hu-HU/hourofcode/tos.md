@@ -4,6 +4,8 @@ Cím: Szolgáltatási feltételek
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Szolgáltatási feltételek
 
 Last Revised: December 5, 2014

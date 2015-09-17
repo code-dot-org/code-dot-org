@@ -1,8 +1,10 @@
 * * *
 
-כותרת: שותפים
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # שותפים עיקריים ותומכים עסקיים
 
@@ -37,3 +39,5 @@
 # שותפים נוספים
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

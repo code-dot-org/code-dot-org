@@ -10,7 +10,7 @@ De: "Hadi Partovi (Code.org) Gracias por registrarse para patrocinar la Hora de 
 
 <% if @country == 'la' || @country == 'br' || @country == 'ar' %> Usted hace posible que estudiantes a lo largo de Latinoamérica aprendan una Hora de Código que puede cambiar el resto de sus vidas durante octubre. 5 al 11. <% else %> Usted hace posible que estudiantes alrededor del mundo aprendan una Hora de Código que puede *cambiar el resto de sus vidas*, durante diciembre. Xpath: /p[3]. 7 al 13. <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Estaremos en contacto para informar acerca de premios, nuevos tutoriales y otras novedades interesantes en otoño. Así que, ¿qué puedes hacer ahora?
 
 ## 1. Corre la voz
 

@@ -1,9 +1,13 @@
 * * *
 
-τίτλος: Ευχαριστούμε διάταξη: ευρεία
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
 
 * * *
 
+<%= view :signup_button %>
+
 # Ευχαριστούμε
 
-Όλο το σχολείο σας έχει καταχωρηθεί για να κερδίσει φορητούς υπολογιστές (ή 10.000$ για τεχνολογικό εξοπλισμό).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

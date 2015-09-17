@@ -603,3 +603,8 @@ da:
     view_all: Se Mine Projekter
     remix: Bland igen
     click_to_remix: "Klik 'Bland igen' oprette et spin-off i din egen version!"
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio

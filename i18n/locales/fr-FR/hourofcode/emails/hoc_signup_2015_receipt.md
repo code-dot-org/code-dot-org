@@ -8,7 +8,7 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 # Merci de vous être inscrit pour organiser une Heure de Code!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. Vous permettez à des étudiants tout autour du monde d'avoir une Heure de Code qui peut *changer le reste de leur vie*, entre le 7 et 13 décembre. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Vous donnez la possibilité à des étudiants à travers l'Amérique latine d'apprendre Une Heure de Code qui peut *changer le reste de leurs vies*, en Octobre. du 5 au 11. Vous permettez à des étudiants tout autour du monde d'avoir une Heure de Code qui peut *changer le reste de leur vie*, entre le 7 et 13 décembre. du 7 au 13. <% end %>
 
 We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
@@ -18,11 +18,11 @@ Parlez de #HourOfCode à vos amis.
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[Envoyer ce mail](http://<%= hostname %>/resources#email) à votre principal.
 
 ## 3. Demandez à votre employeur de s'impliquer
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Envoyer ce mail](http://<%= hostname %>/resources#email) à votre responsable.
 
 ## 4. Faites la promotion d'une Heure de Code dans votre communauté
 
@@ -30,7 +30,7 @@ Constituez un groupe local - dans votre église ou votre université, la maison 
 
 ## 5. Demandez à un élu local de soutenir l'Heure de Code
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[Envoyer ce mail](http://<%= hostname %>/resources#politicians) à votre maire, au conseil municipal et invitez-les à visiter votre école.
 
 * * *
 

@@ -1,8 +1,10 @@
 * * *
 
-標題： 合作夥伴
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # 主要合作夥伴和企業的贊助者
 
@@ -37,3 +39,5 @@
 # 更多的夥伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

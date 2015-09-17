@@ -1,8 +1,10 @@
 * * *
 
-tiêu đề: Đối Tác
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Đối tác chính và những nhà tài trợ
 
@@ -37,3 +39,5 @@ tiêu đề: Đối Tác
 # Các đối tác khác
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

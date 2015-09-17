@@ -1248,10 +1248,10 @@
       Course 4 Artist 10_instruction: 'C''est l''heure de jouer! Amuse-toi à dessiner
         ce que tu souhaites. '
       Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it?  Feel free to use trial and error. You are not expected to
-        get it perfect the first time.  Want to see more hints?  Click here!
+        Maintenant à vous de relever un défi !  Voici un modèle qui
+        utilise uniquement les blocs que vous avez déjà été montré.  Pouvez vous trouver un moyen
+        de le recréer?  N'hésitez d'y aller par essaie-erreur. Il n'y pas nécessaire de
+        l'avoir parfait la première fois.  Vous désiré plus de conseils?  Cliquez ici!
       Course 4 Artist 12_instruction: "Tu veux revoir les suggestions de design ou
         les conseils ? Clique ici !\r\n\r\nSinon, fais ton propre design !"
       Course 4 Artist 13_instruction: Encore envie de jouer ?  Voici une page vierge
@@ -1275,9 +1275,10 @@
         les 10 triangles font en totale une rotation de 360 degrés.'
       Course 4 Artist 8_instruction: Dessinez ce soleil en faisant une boucle de tout
         ce bloc de code 12 fois.
-      Course 4 Artist 8a_instruction: "Remember this shape?  Now we're going to\nlet
-        you build it without giving you any blocks to start!\r\nHint: There are\n3
-        triangles within the 360 degree rotation...how many times does 3 go into\n360?"
+      Course 4 Artist 8a_instruction: "Vous vous souvenez de cette forme?  Maintenant,
+        nous allons\nvous laisser le construire sans vous donner tous les blocs au
+        départ! \r\nIndice: Il y a\n3 triangles dans la rotation de 360 degrés...
+        combien de fois 3 va dans\n360?"
       Course 4 Artist 9_instruction: 'Faites une boucle de 10 fois avec ce modèle
         et veillez à tourner entre chaque forme tracée. Voici un indice pour combien
         vous devez tourner : ce qui est de 360 divisé par 10 ?'
@@ -1318,11 +1319,11 @@
         décagone (10 côtés). Chaque côté doit mesurer 100 pixels de long. Astuce :
         360 divisé par le nombre de côtés de la forme est le nombre de degré que tu
         dois utiliser pour tourner à chaque fois.'
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
-        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
-        shape has two more sides than the last.  Make sure that each side is\n10 times
-        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
-        code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: "Nous allons tout mettre ensemble!
+        \ Avec\nvotre connaissance des boucles « for » et le « compteur », créez ce
+        dessin où\nchaque forme possède deux côtés plus que la précédente.  S'assurer
+        que chaque côté est\n10 fois en longeur que le nombre de côtés du polygone.\r\n\r\nTrès
+        peu\ndu code vous a été donné."
       Course 4 Artist For Loops 12_instruction: 'Ça avait l''air assez cool, mais
         maintenant je voudrais dessiner chaque forme à côté de la précédente. Cette
         fois chaque côté est de 20 pixels. Utilise un bloc de saut pour sauter en
@@ -1367,13 +1368,13 @@
         cette magnifique image ?
       Course 4 Artist For Loops 9_instruction: Sais-tu dessiner une spirale ? Avance
         d'1 pixel à la fois, de 1 à 75.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse
-        all of the things you've learned to create this image?\r\n\r\nNeed a\nhint?
-        Click here."
-      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nNeed a hint? Click here."
+      Course 4 Artist For Loops Challenge_instruction: "Savez-vous comment\nutiliser
+        tout ce que vous avez appris afin de créer cette image?\r\n\r\nBesoin d'un
+        conseil? Cliquez ici."
+      Course 4 Artist For Loops inspire_instruction: "À vous de jouer : Vous\nsavez
+        maintenant tout ce que vous devez savoir pour faire un modèle comme ceci!
+        Si cette\nphoto vous inspire, essayer d'en faire une similaire. Sinon, créer
+        quelque chose\nde tous les vôtres.\r\n\r\nBesoin d'un conseil? Cliquez ici."
       Course 4 Artist Functions 1_instruction: Peux-tu dessiner un carré qui a 100
         pixels de côté en utilisant une boucle ?
       Course 4 Artist Functions 10_instruction: De quel bloc as-tu besoin d'ajouter
@@ -1423,8 +1424,11 @@
       Course 4 Artist Functions 9_instruction: Nous vous avons donné presque tout
         le code pour créer une fonction. Cependant, il semble manquer quelque chose.
         Pouvez-vous terminer ce bloc fonction ?
-      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign
-        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
+      Course 4 Artist Functions inspire_instruction: |
+        Click here to see the inspiration
+        picture again.
+      Course 4 Artist Inspire_instruction: "Vous voulez un deuxième coup d'oeil au\nmodèle
+        ou des conseils?  Cliquez ici!\r\n\r\nSinon, fabriquer un des vôtres!"
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine
         un carré de côté 50 pixels
       Course 4 Artist Params 10_instruction: 'Vous pouvez appeler des fonctions à
@@ -1583,9 +1587,9 @@
       Course 4 Bee Loops 5 NEW_instruction: Met ces blocs dans une boucle afin de
         recueillir le nectar de chaque fleur.
       Course 4 Bee Loops 5a NEW_instruction: |
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+        Maintenant, utilisez des boucles pour aider l'abeille recueillir
+        tout le nectar sur son chemin vers le nid d'abeilles avec aussi peu de blocs que possible.  Quand
+        vous y arrivez, n'oubliez pas de faire du miel !
       Course 4 Bee Params 1_instruction: |
         Utilise la fonction "collecte 3 le nectar" qui fait tourner, se déplacer pour collecter le nectar et revenir à son point de départ.
         Ecrit une séquence pour collecter tout le nectar en utilisant "collecte 3 le nectar".
@@ -1758,18 +1762,44 @@
         du précédent). Que se passerait-il si je comptais de façon exponentielle ?
         Sans modifier les paramètres dans cette boucle, peux-tu compter 1, 4, 9, 16,
         25... (compteur au carré) ?
+      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom
+        Stage 7 together with your \"counter\" variable to make some magic happen.
+        \  \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".
+        \ Set the \"increment\"\nvariable to 10 at the beginning of your code to see
+        what happens."
       Course 4 Play Labs For Loops 5_instruction: À l'étape précédente, nous avons
         créé un compteur qui prend le carré de chaque nombre. Essaie de remplacer
         "compteur ^ 2" par "counter ^ 3" pour prendre le cube de chaque nombre (1,
         8, 27, 64, 125, 216, 343...)
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime
+        keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable
+        will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you
+        click Dog, the increment increases by 2?  Click the forward arrow\nto run
+        the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach
+        one."
       Course 4 Play Labs For Loops 6_instruction: Tu te souviens qu'un nombre premier
         est un nombre entier qui n'est divisible que par lui-même. Utilise la fonction
         "est_nombrepremier" pour enoncer seulement les nombres premiers de 1 à 100.
+      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith
+        our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto
+        the mix.  Can you change the code so that \"increment\" goes up by two\neach
+        time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
       Course 4 Play Labs For Loops 7_instruction: Pourrais-tu utiliser une boucle
         « Répéter » pour m'aider à dire la séquence 1, 4, 7, 10, 13, 16, 19, 22, 25
         ?
+      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif
+        we start counting how many times we can click The Wizard before Dog gets\nto
+        30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked
+        the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor
+        now.\r\n\r\nDog will start counting when you click \"Run\"."
       Course 4 Play Labs For Loops 8_instruction: Quelle boucle « Répéter » me ferais
         dire 19, 27, 35, 43, 51 ?
+      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring
+        back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1)
+        Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard
+        is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
+        by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
+        times, the game is over."
       Course 4 Variables Assessment_instruction: Peux-tu créer cette image en utilisant
         une variable pour les côtés ? Chaque ligne doit faire 50 pixels de long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
@@ -1777,6 +1807,9 @@
         to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig."
+      ECSPD Binary Odometer_instruction: |
+        This is another resource you could use
+        with your students.
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
         compare different values, returning either true or false. Click "Run" to
@@ -2074,12 +2107,62 @@
       frozen square snowflake_instruction: Peux-tu créer un flocon de neige en utilisant
         le bloc « Répéter » pour faire un carré 10 fois et le bloc « Tourner » pour
         tourner de 36 degrés entre chaque carré ?
+      hoc2015_event_add_items_instruction: |
+        Now you create the game. Use the addItemsToScene
+        command to choose how many items are in the game.
+      hoc2015_event_add_items_2_instruction: |
+        Add more items. This time, try using
+        code mode instead of blocks. Don’t forget to type “quotes” around the item
+        name.
+      hoc2015_event_choose_character_instruction: |
+        Customize your game by choosing
+        your character. Let’s switch back to block mode. To set a value, just click
+        the drop down on the block.
+      hoc2015_event_four_items_instruction: |
+        Now the items are all over the screen.
+        Can you make your character walk in any direction so he can collect all the
+        items?
+      hoc2015_event_free_instruction: Now you can make and share anything you like.
+      hoc2015_event_move_items_instruction: |
+        This game would be more fun if the items
+        moved. Use setItemActivity to make the items move around. Then, capture them!
+      hoc2015_event_points_instruction: |
+        Let’s add points. Give yourself some points
+        when you touch an item. Can you score 10 points?
+      hoc2015_event_random_items_instruction: |
+        We can change settings at any point.
+        Change the items to a new random movement every time you catch one.
+      hoc2015_event_two_items_instruction: |
+        Drag the move commands into the whenUp
+        and whenDown functions.  Then, click the arrows to move the character to get
+        the items.
       hoc2015_free_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour
         déplacer Hiro vers la droite afin de toucher Baymax.
       hoc2015_intro_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer"
         pour déplacer Hiro vers la droite afin de toucher Baymax.
       hoc2015_maze_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer" pour
         déplacer Hiro vers la droite afin de toucher Baymax.
+      hoc2015_move_cross_instruction: |
+        Type or drag the blocks to get both items
+        to the destination.
+      hoc2015_move_down_instruction: |
+        Hiro is "actor 1".  Use the Move block to
+        move Hiro right to touch Baymax.
+      hoc2015_move_item_destination_instruction: |
+        I see another item behind that
+        obstacle. Can you bring it back to the destination?
+      hoc2015_move_item_destination_2_instruction: |
+        Drag the code blocks into the
+        workspace to help the character reach the destination.
+      hoc2015_move_item_destination_3_instruction: |
+        Try typing the commands to get
+        the item to our destination. Don’t forget to end with ();
+      hoc2015_move_right_instruction: |
+        Help me program the character to get the item
+        and bring it to the destination. Stack a couple moveEast(); commands and then
+        hit Run to make him go.
+      hoc2015_move_twice_instruction: We need the items. Help me get them all!
+      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
       hoc2015_random_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer"
         pour déplacer Hiro vers la droite afin de toucher Baymax.
       hoc2015_sandbox_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer"
@@ -2517,11 +2600,9 @@
         Peux-tu modifier la fonction pour dessiner le triangle ?
       NEW Course 4 Artist Functions 9_instruction: Quel bloc dois-tu ajouter pour
         que le triangle soit placé au-dessus du carré?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've
-        now learned everything you need to know to make a pattern like this!\nIf this
-        picture inspires you, try to make something similar. Otherwise, create\nsomething
-        all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
-        Visit https://studio.code.org/c/106387801 for the solution."
+      NEW Course 4 Artist Functions inspire_instruction: |
+        Click here to see the inspiration
+        picture again.
       New Course 4 Artist Functions Level 4_instruction: Sers-toi de la fonction "draw
         a square" pour dessiner ce motif.
       NEW Course 4 Artist Params 1_instruction: Nous allons définir cette fonction
@@ -2574,8 +2655,7 @@
       NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
         learned everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530
-        for the solution."
+        your own.\r\n \r\nWant to know how our inspiration pattern was made? "
       NEW Course 4 Artist Vars 1.5_instruction: 'Regarde ce code, peux-tu voir comment
         les blocs "définir la longueur" et "longueur" travaillent ensemble ? Clique
         sur "exécuter" pour les voir en action. '
@@ -2939,6 +3019,11 @@
         allons essayer de faire un simple carré à l'aide du bloc tourner à droite
         et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long.
       Test Play Lab_instruction: This is a test play lab level.
+      Text Compression 1_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -2949,6 +3034,11 @@
         Work with a partner or in a small
         team to develop a protocol that allows you to send formatted text. See the
         worksheet handed out by your teacher for more detailed instructions!
+      U1L13 Text Compression_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
         you to use Internet Simulator to relay a message. See the worksheet\nfor more
         detailed instructions.  \n"
@@ -2957,6 +3047,9 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        Send messages with your
+        classmates (Click to see full instructions)
       U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
         Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
         6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
@@ -2998,6 +3091,11 @@
         the right event handler to the right button. (Interestingly, the incorrect
         program does work, but exhibits some bizarre behavior.  We'll discuss this
         more in the next lesson.  Make the buttons work correctly for now).
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
+        see full instructions)"
+      U3L03 - draw step_instruction: |
+        Write the drawStep function. (Click to see
+        full instructions)
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -3008,24 +3106,29 @@
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Write the turnAround() function
-        and use it to make the turtle move as depicted.
-      U3L03 define turnRight and draw a rectangle_instruction: "Create a turnRight()\nfunction
-        and draw a rectangle twice as tall as it is wide by having the turtle\nnavigate
-        clockwise to draw the rectangle. \n"
+        Define a function called turnAround()
+        and call it to make the turtle move as depicted. (Click to see full instructions)
+      U3L03 define turnRight and draw a rectangle_instruction: |
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
       U3L03 Draw a T using turnAround_instruction: |
-        The turnAround function is now
-        provided for you in the code.  Use the turnAround() function to draw a T as
-        depicted.
-      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously
-        to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another
-        tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with
-        other movement made between calls.  HINT: you might want\nto make another
-        function that handles drawing one side of the diamond. "
+        Draw a plus sign using the provided
+        version of turnAround().  (Click to see full instructions)
+      U3L03 draw diamond_instruction: |
+        Create a function called drawDiamond() that
+        makes use of your previous work to draw the complete diamond. (Click to see
+        full instructions)
       U3L03 Three Steps_instruction: |
-        Draw 3 "steps" moving up and to the right.  Notice
-        the pattern in the movement. You should define a function called drawStep()
-        which draws one of the steps, and then call it 3 times to achieve the effect.
+        Define a function called drawSide() which draws
+        three steps and moves the turtle to prepare for the next side (Click to see
+        full instructions)
+      U3L04 - 3 by 3 with functions_instruction: |
+        Make the 3 by 3 square as efficiently
+        as you can. (Click to see full instructions)
+      U3L04 - snowflake_instruction: |
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
       U3L04 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -3051,50 +3154,34 @@
         NOTE: This is a very challenging problem.  You may need to play with it for
         a while and tweak it.  You might also consider using pencil and paper to sketch
         your ideas.
+      U3L06 - moveForwardwithParams_instruction: |
+        Use a single command to move the
+        turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Check out the extended Turtle palette
-        now made available to you. These new commands accept parameters, allowing
-        you to specify precisely how the function operates rather than only being
-        able to move or turn a predetermined amount. Make use of these functions to
-        draw the triangle as shown.
+        Read the documentation for one of
+        these commands. Then use them to create a triangle with sides 100 pixels long.
+        (Click to see full instructions)
       U3L06 Challenge 2 purple square_instruction: |
-        This time we're going to learn
-        a little bit about changing the turtle's pen. Read through the documentation
-        for penWidth() and penColor(), and then draw the purple square as shown.
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
       U3L06 Challenge 3 fill pink_instruction: |
-        Now let's try to fill in the entire
-        background of the screen. To make it a little easier for you, we can tell
-        you the color we chose is one of the 140 named colors.  If you don't know
-        what the named colors are, take a closer look at the documentation for penColor()
-        again. Hint: you need to use dot().
+        Fill in the background of the screen
+        with your favorite color. (Click to see full instructions)
       U3L06 Challenge 4 bullseye_instruction: |
-        Let's try this out one more time.
-        This time the colors are NOT named colors - you need to use the hex-color
-        number to set the color.  So that you're not randomly guessing, we'll give
-        you a hint -- each of the colors shown in the target image is one of these
-        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  You might be able to guess correctly if you apply what you know about
-        RGB colors.
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
       U3L06 Challenge 5 overlapping circles_instruction: |
         This image is created just
         using dot() and penColor() but, how are we going to get those circles to be
         transparent?  If you haven't gotten the hint yet: check out the documentation!
-      U3L06 Challenge 6 squiggles_instruction: |
-        Next we're going to be adding some
-        curves to our drawing. Read the documentation for the "arc" commands and
-        then draw the squiggles as shown. To make things easier here's a hint: all
-        the parameters are multiples of 10, and the colors are from the following
-        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+      U3L06 Challenge 6 squiggles_instruction: "Read the documentation for the \"arcLeft\"\nand
+        \"arcRight\" commands and then draw the squiggles as shown. \n"
       U3L06 Challenge 7 smiley face_instruction: |
-        To make this smiley face you'll
-        need to look at the documentation for the move() command and then use it with
-        the others you've learned.  You can make reasonable guesses about the colors.
+        Use turnTo() and moveTo() to help
+        draw a smiley face. (Click to see full instructions)
       U3L06 Challenge 8 make your own_instruction: |
-        Use the tools you've learned
-        today to create a drawing of your own creation. If you have time, challenge
-        your friends to see if they can duplicate your image.  We'll show you the
-        drawing we made for ourselves.  You can try to duplicate that if you want
-        to, otherwise, have fun making your own!
+        Create a drawing of your own.
+        (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
         Free Play!  Use what you learned
         from loops and random to make your own little scene.  Have fun.
@@ -3105,6 +3192,9 @@
         and moon.  All of the effects are clever applications of turtle dots,\nlines,
         and colors.  To get started, follow the series of steps suggested in\nthe
         accompanying worksheet. \n"
+      U3L08 - drawSquaresWithParams_instruction: |
+        Change the code at top to make
+        use of the drawSquare() command. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
@@ -3482,4 +3572,39 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location. (Click to show full instructions)
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
+        run the app and click the button. Run it multiple times with different\nnames!
+        Watch the console and use the ‘View Data” button to see how the table\nis
+        updated. As you play around make sure you can explain the purpose of each\nof
+        the circled parts of the diagram.\r\n\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none
+        we started. Add a text label to collect the users name and use that as\nthe
+        data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes
+        and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 3_instruction: |
+        We want to improve the user experience.
+        Once they have submitted their data for storage, it would be nice to clear
+        the textbox.  Update your app to clear the textbox after the data is stored.
+      U4L06 Data Storage 4_instruction: |
+        Add a label and drop down box, to your app
+        and save the data to your JSON object and add it to your table. Make sure
+        to reset the dropdown after the data is stored.
+      U4L06 Data Storage 5_instruction: "Add a couple radio buttons or checkboxes\nto
+        our app. Then find a way to collect the data from those. \n"
+      U4L06 Data Storage 6_instruction: " Use one of the getTime() and getUserId()\nblocks
+        to collect additional data. \n"
+      U4L06 Data Storage 7_instruction: |
+        Add a second screen to the sample app we
+        have been building to capture an image from a user. Return to screen 1 after
+        the JSON object has been stored in the table.
+      U4L15 Read Data 1_instruction: |
+        Run the level and see what happens. Then edit
+        the code to make it print a different column of information.
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether
+        all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like
+        <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin
+        the array\r\n\r\n"
+      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
+        display your sentence."
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

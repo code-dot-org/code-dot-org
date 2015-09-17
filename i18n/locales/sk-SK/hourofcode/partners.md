@@ -1,8 +1,10 @@
 * * *
 
-názov: Partneri
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Hlavní partneri a podporujúce spoločnosti
 
@@ -37,3 +39,5 @@ názov: Partneri
 # Ostatní partneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

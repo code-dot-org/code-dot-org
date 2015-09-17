@@ -1,8 +1,10 @@
 * * *
 
-titre: Prix affichage: large
+title: <%= hoc_s(:title_prizes) %> layout: wide
 
 * * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -101,3 +103,5 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 ## Plus de questions sur les prix ? {#more_questions}
 
 Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+
+<%= view :signup_button %>

@@ -5,7 +5,7 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 19 - Public Key Encryption
+## Unit 2: Lesson 19 - Public Key Cryptography
 
 # Background
 
@@ -15,15 +15,15 @@ The modulo operation (or "clock arithmetic" as we call it in the lesson) is a re
 
 # Vocabulary
 
-Modulus - the "clock size" 
+**Modulus** - the "clock size" 
 
-Modulo (or "mod") - the name of the mathematical operation.  Modulo gives the remainder from dividing two numbers.  For example: 17 MOD 13 is 4.
+**Modulo (or "mod")** - the name of the mathematical operation.  Modulo gives the remainder from dividing two numbers.  For example: 17 MOD 13 is 4.
 
-Asymmetric encryption: a type of cryptographic based on algorithms that require two keys – one of which is secret (or private) and one of which is public (freely known to others).
+**Asymmetric encryption:** a type of cryptographic based on algorithms that require two keys – one of which is secret (or private) and one of which is public (freely known to others).
 
-Public key: a value that can be used to encrypt a message. However, only when combined with a mathematically-related private key, can the message be decrypted. 
+**Public key:** a value that can be used to encrypt a message. However, only when combined with a mathematically-related private key, can the message be decrypted. 
 
-Private key: the complementary key to a public key that is used to decrypt a message.
+**Private key:** the complementary key to a public key that is used to decrypt a message.
 
 
 # Lesson
@@ -36,11 +36,7 @@ Private key: the complementary key to a public key that is used to decrypt a mes
 
 # Resources
 
-* Activity Guide: <a href="https://docs.google.com/document/d/1YHlfPoCagPufJWVbwGczxU5IyWrK16qvBveYLzU58DI" target="_blank">Worksheet - Bob's Public Key/Encryption Algorithm</a> 
-
-- Stuff below is old?? junk?? 
-
-* Activity Guide: <a href="https://docs.google.com/document/d/1rcXn-3B0JWY3ifeZkhVB3OFHNYClsY80LCIVIOOpExs" target="_blank">Public Key Crytography</a>
+* Activity Guide: <a href="https://docs.google.com/document/d/1rcXn-3B0JWY3ifeZkhVB3OFHNYClsY80LCIVIOOpExs" target="_blank">Public Key Cryptography</a>
 * Widget: <a href="https://studio.code.org/projects/applab/eM58hKG7dxjrupZH1Pm91Q" target="_top">Public Key Crypto Widget</a>
 * Optional: <a href="https://docs.google.com/document/d/1d6mEbpykWsFKP2PAC5cj7ak_ouoPrwhMcFpYf7xd_Yw" target="_top">Handout: How Does Public Key Crypto Really Work?</a>
 
@@ -50,7 +46,6 @@ Private key: the complementary key to a public key that is used to decrypt a mes
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-* <a href="https://docs.google.com/document/d/1LkJp4qO8r5rY8qiI5mpwQ72C0VSahbgHETVKyJdRmDg" target="_blank">KEY: Worksheet -  Bob’s Public Key/Encryption Algorithm</a>
 
 
 

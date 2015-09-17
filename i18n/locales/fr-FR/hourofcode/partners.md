@@ -1,8 +1,10 @@
 * * *
 
-titre: partenaires
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Principaux partenaires et Supporters corporatifs
 
@@ -37,3 +39,5 @@ titre: partenaires
 # Autres partenaires
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

@@ -1,14 +1,16 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 * * *
+
+<%= view :signup_button %>
 
 # პრიზები - ხშირად დასმული კითხვები
 
 ## აუცილებელია მთელმა სკოლამ იმონაწილეოს $10,000 დოლარის hardware-ში მოსაგებად?
 
-დიახ, შენმა სკოლამ უნდა იმონაწილეოს რათა პრიზის კანდიდატად განიხილებოდეს, მაგრამ საკმარისია მხოლოდ ერთი ადამიანი დარეგისტრირდეს და გაგზავნოს Hardware-ს პრიზიშ აპლიკაცია [აქედან](<%= hoc_uri('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
 
 ## აუცილებელია მთელმა სკოლამ იმონაწილეოს ტექ-ჩატის მოსაგებად?
 
@@ -20,7 +22,7 @@ layout: wide
 
 ## შესაძლებელია არა-ამერიკულმა სკოლებმა მოიგონ ვიდეო ჩათის პრიზი?
 
-არა, სამწუხაროდ, ლოჯისტიკის გამო ცვენ არ შეგვიძლია ამერიკის შეერთებულ შტატებსა და კანადას გარეთ მყოფ სკოლებს ვიდეო ჩათის პრიზი შევთავაზოთ.
+არა, სამწუხაროდ, ლოჯისტიკის გამო ჩვენ არ შეგვიძლია ამერიკის შეერთებულ შტატებსა და კანადას გარეთ მყოფ სკოლებს ვიდეო ჩათის პრიზი შევთავაზოთ.
 
 ## რატომ არის წვდომა $10,000 hardware პრიზზე მხოლოდ საჯარო სკოლებში?
 
@@ -32,16 +34,18 @@ layout: wide
 
 ## როდის არის hardware-ს პრიზისთვის აპლიკაციის გაგზავნის ბოლო ვადა?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. აშშ-ს ყოველი შტატის ერთი სკოლა მთელი კლასისთვის მიიღებს კომპიუტერებს. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
 
 ## როდისაა ტექ-ჩატის პრიზის მოგებისთვის უფლების მოპოვების უკანასკნელი ვადა?
 
-To qualify, you must register your classroom for the Hour of Code by November 2, 2015. კლასები ვიდეო ჩატებს ცნობილ სახესთან ერთად მოიგებენ. Code.org will select and notify winners via email by December 1, 2015.
+იმისთვის, რომ კანდიდატად განიხილებოდე, უნდა დაარეგისტრირო შენი კლასი კოდის საათზე 2015 წლის 2 ნოემბრამდე. კლასები ვიდეო ჩატებს ცნობილ სახესთან ერთად მოიგებენ. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
 
 ## როდის შევიტყობ მოიგო თუ არა ჩემმა სკოლამ ან კლასმა პრიზი?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= hoc_uri('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+## თუ ჩემი მთელი სკოლა ვერ იმონაწილევებს კოდის საათში კომპიუეტრული მეცნიერების განათლების კვირისას (დეკ. 7-13), შეიძლება მაინც მქონდეს პრიზის მოგების უფლება?
 
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.
+დიახ, უბრალოდ დარწმუნდი რომ გაგზავნილი გექნება ლოჯისტიკის გეგმა, რომელიც ნათელს გახდის თუ როგორ მონაწილეობს მთელი შენი სკოლა გარკვეული დროის განმავლობაში და დარეგისტრირდი კოდის საათზე 16 ნოემბრამდე.
+
+<%= view :signup_button %>

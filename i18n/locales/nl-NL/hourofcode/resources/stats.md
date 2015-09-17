@@ -1,8 +1,10 @@
 * * *
 
-title: Flapteksten en nuttige Stats layout: wide nav: resources_nav
+title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Flapteksten en nuttige Stats
 
@@ -10,8 +12,10 @@ title: Flapteksten en nuttige Stats layout: wide nav: resources_nav
 
 ### Breng informatica naar je school. Start met een Uur Code
 
-Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. Als je vorig jaar over het gehoord hebt, dan weet je dat het geschiedenis heeft geschreven. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! [">Sign up](<%= hoc_uri('/') %>Een Uur Code</a> is een één uur durende introductie tot informatica, om aan te tonen dat programmeren niet zo moeilijk is en iedereen de basis kan aanleren. <a href=) to host an Hour of Code this December 7-13 during Computer Science Education Week. To add your school to the map, go to <http://hourofcode.com></p> 
+Computers zijn overal, maar minder scholen doceren informatica dan 10 jaar geleden. Het goede nieuws is, we zijn op weg om dit te veranderen. If you heard about the [Hour of Code](<%= resolve_url('/') %>) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](<%= resolve_url('/') %>) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](<%= resolve_url('/') %>) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
 
 ## Infographics
 
 <%= view :stats_carousel %>
+
+<%= view :signup_button %>

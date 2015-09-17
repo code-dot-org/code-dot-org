@@ -4,6 +4,8 @@ título: Política de privacidade
 
 * * *
 
+### O documento legal vinculativo é em inglês, e pode ser encontrado [aqui](https://code.org/privacy). O texto abaixo é uma tradução.
+
 # Política de Privacidade
 
 Data da última revisão: 3 de agosto de 2015

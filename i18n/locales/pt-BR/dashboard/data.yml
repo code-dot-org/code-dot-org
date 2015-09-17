@@ -416,6 +416,8 @@ pt-BR:
         C4_variables_artist: 'Variáveis - Artista'
         C4_variables_playlab: 'Variáveis - Laboratório'
         C4_for_loops: Laços for
+        C4_for_loops_bee: Laços for
+        C4_for_loops_no_bee: Laços for
         C4_math_artist: Programação do Artista com matemática
         C4_function_edit: Editando funções
         C4_function_create: Criando funções
@@ -444,6 +446,7 @@ pt-BR:
         csp_pixelation_bw: Widget de pixelização em preto e branco
         csp_U1L14_tipstricks: 'Unidade 1 - Lição 14 - Dicas e truques de professores'
         csp_textcompression: Widget de compressão de texto
+        csp_textcompression_new: Widget de compressão de texto
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'

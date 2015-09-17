@@ -65,6 +65,7 @@
   "penTooltip": "Lève ou baisse le crayon, pour dessiner ou arrêter de dessiner.",
   "penUp": "lever le crayon",
   "reinfFeedbackMsg": "Voici votre dessin ! Continuez à travailler dessus, ou allez à la prochaine énigme.",
+  "setAlpha": "set alpha",
   "setColour": "choisir la couleur",
   "setPattern": "Définissez le modèle",
   "setWidth": "Régler la largeur",
@@ -80,6 +81,5 @@
   "turnTooltip": "Tourne l'artiste à gauche ou à droite du nombre de degrés indiqué.",
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie l'épaisseur du tracé.",
-  "wrongColour": "Votre image n'est pas de la bonne couleur. Pour cette énigme, elle doit être %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Votre image n'est pas de la bonne couleur. Pour cette énigme, elle doit être %1."
 }
