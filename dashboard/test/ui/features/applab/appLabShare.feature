@@ -8,6 +8,9 @@ Feature: App Lab Share
     And I am on "http://learn.code.org/projects/applab"
     And I rotate to landscape
     And element "#runButton" is visible
+    And element "#codeModeButton" is visible
+    And element "#designModeButton" is visible
+    And element "#viewDataButton" is visible
 
   @no_mobile
   Scenario: App Lab Share
@@ -30,3 +33,6 @@ Feature: App Lab Share
     And I wait until element "#resetButton" is visible
     And I wait until element "#divApplab > .screen > button#hello" is visible
     And element "#divApplab > .screen > button#hello" contains text "world"
+    And element "#codeModeButton" is hidden
+    And element "#designModeButton" is hidden
+    And element "#viewDataButton" is hidden
