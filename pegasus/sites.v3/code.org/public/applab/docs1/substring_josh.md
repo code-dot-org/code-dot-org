@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## getText_josh(id)
+## substring(id)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Variables
 
 [short_description]
 
-The substring method returns a specified section of a string, from a user-defined beginning and endpoint (not including the endpoint).
+The substring method returns a specified section of a string, from a user-defined beginning and endpoint (not including the endpoint). This doesn't change the original string, but instead outputs a new string which is contained within the original.
 
 [/short_description]
 
@@ -33,7 +33,7 @@ ____________________________________________________
 
 
 <pre>
-getText(button1);
+string1.substring(start,end);
 </pre>
 
 [/example]
@@ -44,13 +44,33 @@ ____________________________________________________
 
 **Basic Example**
 
-Getting the state of a checkbox:
+Pulling from the middle of a string:
 
 <pre>
-checkbox("checkbox1", true);                // Create a checked checkbox with id checkbox1
-var isChecked = getChecked("checkbox1");    // isChecked will be assigned the boolean value true
+var str1 = "The lazy red dog");        // Define a string
+var substr1 = str1.substring(4,12);    // output only the string's characters from index 4 to 12
 
-console.log("The value of isChecked is " + isChecked);
+console.log(substr1);                  // this will output "lazy red"
+</pre>
+
+If you only give one argument to substring(), it will begin at the specified position and extract the rest:
+
+<pre>
+var str = "Hello world!";
+var substr = str.substring(6);
+
+console.log(substr);                    // this will output "world!"
+
+</pre>
+
+If the start index is greater than the end index, it will swap the two arguments:
+
+<pre>
+var str = "What's going on?";
+var substr = str.substring(8,1);
+
+console.log(substr);                   // this will output "hat's g"
+
 </pre>
 
 [/example]
@@ -91,7 +111,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-checkbox(id, checked);
+substring(num,num);
 </pre>
 
 [/syntax]
@@ -102,15 +122,15 @@ checkbox(id, checked);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | String | Yes | A unique identifier for the checkbox. The id is used for referencing the created checkbox. For example, getting the checkbox's state (checked/unchecked).  |
-| checked | Boolean | No | Indicates the initial state (checked/unchecked) of the checkbox. Default value: `false`.  |
+| num | int | Yes | A start point for the substring  |
+| num | int | No | Indicates the end point for the substring extraction. Only 1 argument is required.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value.
+Returns a string value.
 
 [/returns]
 
@@ -118,7 +138,7 @@ No return value.
 
 ### Tips
 
-The checkbox can also be used in design mode.
+If the start index is less than 0, it will start extracting from index point 0 (the beginning of the string).
 
 [/tips]
 

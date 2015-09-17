@@ -21,6 +21,9 @@ assessment 'U3L02 Free Response Wrap Up'
 
 #3
 stage 'Creating Procedures - Part 1'
+
+
+stage 'Creating Functions'
 level 'U3L03 Student Lesson Introduction'
 level 'U3L03 Define and use turnAround'
 level 'U3L03 Draw a T using turnAround'
@@ -33,8 +36,12 @@ assessment 'U3L03 - multiselect - properties of functions'
 assessment 'U3L03 Assessment'
 assessment 'U3L03 Free Response Wrap Up'
 
+
 #4
 stage 'Creating Procedures - Part 2'
+
+
+stage 'Functions and Top-Down Design'
 level 'u3L04 Student Lesson Introduction'
 level 'U3L04 - snowflake'
 level 'U3L04 - 3 by 3 with functions'
@@ -82,6 +89,7 @@ assessment 'U3L07 Free Response Reflection'
 stage 'Creating functions with Parameters'
 level 'U3L08 Student Lesson Introduction'
 level 'U3L08 - drawSquaresWithParams'
+level 'U3L08 - drawSquareWithParam'
 level 'U3L08 - starFish'
 level 'U3L08 - seaGrass'
 level 'U3L08 - fish'
