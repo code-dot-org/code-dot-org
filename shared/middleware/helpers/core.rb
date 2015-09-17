@@ -14,9 +14,9 @@ def bad_request()
   halt(400, "Bad Request\n")
 end
 
-def json_bad_request()
+def json_bad_request(additional_info = {})
   content_type :json
-  halt(400, { error: "Bad Request" }.to_json)
+  halt(400, { error: "Bad Request" }.merge(additional_info).to_json)
 end
 
 def not_authorized()

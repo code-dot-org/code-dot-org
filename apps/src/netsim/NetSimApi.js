@@ -15,6 +15,8 @@
 /* global $ */
 'use strict';
 
+require('../utils'); // provide Function.prototype.inherits
+
 /**
  * @type {string}
  * @const
@@ -101,8 +103,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
@@ -120,8 +121,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
+      callback(new NetSimApiError(request), null);
     });
   },
 
@@ -152,8 +152,7 @@ var tableApi = {
     }).done(function(body, text) {
       callback(null, body);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -179,8 +178,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   },
 
@@ -198,8 +196,7 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
+      callback(new NetSimApiError(request), undefined);
     });
   },
 
@@ -218,11 +215,50 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
+      callback(new NetSimApiError(request), false);
     });
   }
 };
+
+/**
+ * Special error type for failed server requests, which tries to extract
+ * additional error information from the server's response.
+ * @param {jqXHR} request
+ * @constructor
+ * @extends Error
+ */
+function NetSimApiError(request) {
+  /** @type {string} */
+  this.name = 'NetSimApiError';
+
+  /** @type {string} */
+  this.message = 'Request failed';
+
+  /** @type {string} */
+  this.stack = (new Error()).stack;
+
+  /**
+   * Additional error information returned by the server, which can drive
+   * specific responses by the client.
+   * @type {string|Array}
+   */
+  this.details = undefined;
+
+  // Attempt to extract additional information from the request object
+  if (request) {
+    this.message = 'status: ' + request.status + '; error: ' + request.statusText;
+    try {
+      var responseJson = JSON.parse(request.responseText);
+      if (responseJson.details) {
+        this.details = responseJson.details;
+        this.message += '; details: ' + JSON.stringify(this.details);
+      }
+    } catch (e) {
+      this.details = null;
+    }
+  }
+}
+NetSimApiError.inherits(Error);
 
 module.exports = {
   /**

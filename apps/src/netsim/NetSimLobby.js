@@ -343,7 +343,11 @@ NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err) {
     if (err) {
       logger.error("Unable to create router: " + err.message);
-      NetSimAlert.error(i18n.addRouterToLobbyError());
+      if (err.details === 'limit_reached') {
+        NetSimAlert.warn(i18n.routerLimitReachedError());
+      } else if (err.details !== 'conflict') {
+        NetSimAlert.error(i18n.addRouterToLobbyError());
+      }
     }
   }.bind(this));
 };
