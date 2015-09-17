@@ -412,6 +412,8 @@ nn:
         C4_variables_artist: 'Variablar - Kunstnar'
         C4_variables_playlab: 'Variablar - Spelelaboratorie'
         C4_for_loops: For-løkker
+        C4_for_loops_bee: For-løkker
+        C4_for_loops_no_bee: For-løkker
         C4_math_artist: Programmer Kunstnaren med Matte
         C4_function_edit: Redigeringsfunksjonar
         C4_function_create: Lag Funksjonar
@@ -440,6 +442,7 @@ nn:
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: 'Unit 1 Lesson 14 Teacher Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'

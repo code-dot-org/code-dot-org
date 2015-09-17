@@ -219,6 +219,13 @@ NetSim.prototype.init = function(config) {
   this.pusherApplicationKey = config.pusherApplicationKey;
 
   /**
+   * The strict maximum number of routers per shard.  Note the real maximum
+   * may be lower if bounded by addressable space.
+   * @type {number}
+   */
+  this.globalMaxRouters = config.netsimMaxRouters;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */

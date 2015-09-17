@@ -23,7 +23,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use the _star_ function to produce a solid red star with a 60 pixel radius"
+    "markdown_instructions": "Use the `star` function to produce a solid red star with a 60 pixel radius",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

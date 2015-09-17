@@ -41,6 +41,8 @@
     "custom_game_type": "Rocket Height",
     "examples_required": "true",
     "disable_examples": "false",
+    "markdown_instructions": "Awesome, now can you update that function so that our rocket moves more quickly? Make sure to update the purpose statement, examples, and function definition to launch a rocket at 40 meters per second.",
+    "never_autoplay_video": "false",
     "maze_data": null
   }
 }]]></config>

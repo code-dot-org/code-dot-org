@@ -412,6 +412,8 @@ en:
         C4_variables_artist: crwdns25652:0crwdne25652:0
         C4_variables_playlab: crwdns25653:0crwdne25653:0
         C4_for_loops: crwdns24821:0crwdne24821:0
+        C4_for_loops_bee: crwdns48362:0crwdne48362:0
+        C4_for_loops_no_bee: crwdns48363:0crwdne48363:0
         C4_math_artist: crwdns25654:0crwdne25654:0
         C4_function_edit: crwdns25655:0crwdne25655:0
         C4_function_create: crwdns25656:0crwdne25656:0
@@ -440,6 +442,7 @@ en:
         csp_pixelation_bw: crwdns36231:0crwdne36231:0
         csp_U1L14_tipstricks: crwdns36232:0crwdne36232:0
         csp_textcompression: crwdns36303:0crwdne36303:0
+        csp_textcompression_new: crwdns48364:0crwdne48364:0
         csp_internetsimulator_1: crwdns41507:0crwdne41507:0
         csp_internetsimulator_2: crwdns41508:0crwdne41508:0
         csp_internetsimulator_3: crwdns41899:0crwdne41899:0

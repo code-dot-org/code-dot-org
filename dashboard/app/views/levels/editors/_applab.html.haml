@@ -53,3 +53,33 @@
       = text_field_tag "level[examples][]", example
   - 5.times do
     = text_field_tag "level[examples][]"
+
+.field
+  = f.label 'Table Data'
+  You can copy the data array from the debug view of code.org/edit-csp-table/
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        {
+          "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
+          "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
+        }
+  = f.text_area 'data_tables', placeholder: 'Insert JSON Data', rows: 4, value: @level.data_tables or ''
+  :javascript
+    codeMirror('data_tables', 'javascript');
+
+.field
+  = f.label 'Key-Value Data'
+  You can copy the data array from the debug view of code.org/edit-csp-properties/
+  %pre
+    = preserve do
+      :escaped
+        Example:
+        {
+          "click_count": 5,
+          "button_color": "blue"
+        }
+  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
+  :javascript
+    codeMirror('data_properties', 'javascript');
