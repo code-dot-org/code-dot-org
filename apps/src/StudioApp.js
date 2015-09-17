@@ -452,7 +452,9 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {}), codeDiv);
+      React.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
 
       dialog.show();
     }).bind(this));
@@ -2005,7 +2007,7 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {
           tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
         }
       }),
       style: {
