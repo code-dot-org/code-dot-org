@@ -16,7 +16,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 - Require minimal prep-time for organizers
 - Are self-guided - allowing students to work at their own pace and skill-level
 
-<a href="http://<%=codeorg_url() %>/learn"><img src="http://<%= codeorg_url() %>/images/tutorials.png"></a>
+<a href="<%= resolve_url('https://code.org/learn') %>"><img src="<%= resolve_url('https://code.org/images/tutorials.png') %>"></a>
 
 
 ## 2) Plan your hardware needs - computers are optional
