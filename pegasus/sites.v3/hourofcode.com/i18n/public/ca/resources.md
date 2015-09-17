@@ -15,11 +15,11 @@ nav: resources_nav
 
 ## Utilitza aquest fulletó per córrer la veu
 
-[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
+[![](<%= localized_image('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
 ## Dona aquest fulletó al professorat i als centres
 
-[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
+[![](<%= localized_image('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
 <a id="videos"></a>
 
