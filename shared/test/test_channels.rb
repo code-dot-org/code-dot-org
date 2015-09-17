@@ -132,4 +132,20 @@ class ChannelsTest < Minitest::Test
     # Ideally we would also test that deleting abuse works when we're an admin
     # but don't currently have a way to simulate admin from tests
   end
+
+  def test_abuse_frozen
+    post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+
+    post "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+
+    get "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+    assert_equal 0, JSON.parse(last_response.body)['abuseScore']
+  end
 end
