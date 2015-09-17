@@ -21,7 +21,7 @@ Choose a challenge and complete it in StarLogo Nova.
     	<div class="medium">
         	<strong>Medium</strong>
             <br/><br/>
-            Rather than 3 new copper hydrate breeds, use a trait to count number of collisions between copper hydrate and water that then causes the copper hydrate agent change from turquoise (1 count) to sky blue (2 counts) to blue (3 counts)
+            To make the solution appear to change to blue...Rather than 3 new copper hydrate breeds, use the color trait and nested logic (if and if/else statements) in the collision block for water & copper nitrate to change the color from cyan to sky blue to blue
             <br/><br/>
             <i>Details: Create a new trait that is then incremented with each collision between copper hydrate and water</i>
         </div>
