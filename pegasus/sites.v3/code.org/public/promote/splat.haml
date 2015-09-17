@@ -94,14 +94,10 @@ social:
 
 :javascript
   var petition;
-  var promote;
   $(document).ready()
   {
     if (petitionIncluded) {
       petition = new Petition();
-    }
-    if (promoteIncluded) {
-      promote = new Promote();
     }
     if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").show();
