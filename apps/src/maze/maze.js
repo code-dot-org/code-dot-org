@@ -94,6 +94,9 @@ var loadLevel = function() {
     Maze.scale[key] = level.scale[key];
   }
 
+  if (level.fastGetNectarAnimation) {
+    skin.actionSpeedScale.nectar = 0.5;
+  }
   // Measure maze dimensions and set sizes.
   // ROWS: Number of tiles down.
   Maze.ROWS = Maze.map.length;
