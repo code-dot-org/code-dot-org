@@ -169,7 +169,12 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   NetSimUtils.makeContinueButton(this);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
-  this.addRouterButton_.click(this.addRouterCallback_);
+  this.addRouterButton_.click(function () {
+    if (!this.addRouterButton_.is('[disabled]')) {
+      this.addRouterButton_.attr('disabled', true);
+      this.addRouterCallback_();
+    }
+  }.bind(this));
 
   this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
   this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
