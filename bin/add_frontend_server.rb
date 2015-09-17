@@ -12,7 +12,7 @@ frontend_instances = instances.reservations.map do |reservation|
   reservation.instances.select{|instance| instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
 end
 
-frontend_instances.delete([])
+frontend_instances.flatten!
 
 instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution| instance_distribution[instance.placement.availability_zone] += 1}
 determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
