@@ -131,7 +131,7 @@ def localized_file(path)
 end
 
 def localized_image(path)
-  File.join('/', @language, path)
+  File.join('/', @country, @language, path)
 end
 
 def campaign_date(format)
