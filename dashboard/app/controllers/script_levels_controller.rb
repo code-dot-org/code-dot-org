@@ -3,13 +3,6 @@ class ScriptLevelsController < ApplicationController
   include LevelsHelper
   include UsersHelper
 
-  # Maximum time that level pages from #show can be cached for non-signed in users.
-  # Pages for signed in users are never cached.
-  MAX_CACHE_AGE_SECONDS = 600.seconds
-
-  # Define
-  before_filter :prevent_caching, :except => :show
-
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
@@ -29,16 +22,6 @@ class ScriptLevelsController < ApplicationController
   end
 
   def show
-    # Set caching headers
-    if current_user
-      prevent_caching  # Never cache for logged in users.
-    else
-      # Cache the shown level for up to MAX_CACHE_AGE_SECONDS seconds
-      # for logged out users.
-      expires_in MAX_CACHE_AGE_SECONDS, public: true
-      response.last_modified = Time.now - MAX_CACHE_AGE_SECONDS
-    end
-
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
@@ -63,6 +46,8 @@ class ScriptLevelsController < ApplicationController
          user_agent: request.user_agent,
          locale: locale) if @script_level.level.finishable?
   end
+
+  private
 
   def next_script_level
     user_or_session_level || @script.starting_level
@@ -160,7 +145,6 @@ class ScriptLevelsController < ApplicationController
       success: milestone_response(script_level: @script_level, solved?: true),
       failure: milestone_response(script_level: @script_level, solved?: false)
     }
-
     render 'levels/show', formats: [:html]
   end
 end
