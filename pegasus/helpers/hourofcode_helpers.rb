@@ -124,10 +124,7 @@ def resolve_url(url)
 end
 
 def localized_file(path)
-  localized_path = File.join('/', @language, path)
-  return localized_path if resolve_static('public', localized_path)
-
-  return path
+  return File.join('/', @language, path)
 end
 
 def campaign_date(format)
