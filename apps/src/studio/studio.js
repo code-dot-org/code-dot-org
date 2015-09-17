@@ -161,8 +161,6 @@ var SCORE_TEXT_Y_POSITION = 60; // bottom of text
 
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
-var DELAY_COMPLETION_TIME = 2000;
-
 var twitterOptions = {
   text: studioMsg.shareStudioTwitter(),
   hashtag: "StudioCode"
@@ -864,7 +862,7 @@ Studio.onTick = function() {
   if (Studio.succeeded) {
     if (level.delayCompletion) {
       var currentTime = new Date().getTime();
-      if (currentTime > Studio.succeededTime + DELAY_COMPLETION_TIME) {
+      if (currentTime > Studio.succeededTime + level.delayCompletion) {
         Studio.onPuzzleComplete();
       }
     } else {
