@@ -25,7 +25,7 @@ ERB_TASKS = [
   end
 end
 
-task :default => ERB_TASKS
+task default: ERB_TASKS
 
 task :clean do
   ERB_TASKS.select{|i| File.file?(i)}.each{|i| rm(i)}

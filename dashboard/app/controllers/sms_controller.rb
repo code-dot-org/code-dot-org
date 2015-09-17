@@ -25,9 +25,9 @@ class SmsController < ApplicationController
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     @client.messages.create(
-      :from => SMS_FROM,
-      :to => phone,
-      :body => "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
+      from: SMS_FROM,
+      to: phone,
+      body: "Check this out on Code Studio: #{link}. (reply STOP to stop receiving this)"
     )
     render status: :ok, nothing: true
   end

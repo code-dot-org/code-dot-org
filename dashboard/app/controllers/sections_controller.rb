@@ -18,7 +18,7 @@ class SectionsController < ApplicationController
     if @section.login_type == Section::LOGIN_TYPE_PICTURE &&
         user.secret_picture_id.present? &&
         user.secret_picture_id == params[:secret_picture_id].to_i
-      sign_in user, :bypass => true
+      sign_in user, bypass: true
       user.update_tracked_fields!(request)
       redirect_to_section_script and return
     end
@@ -26,7 +26,7 @@ class SectionsController < ApplicationController
     if @section.login_type == Section::LOGIN_TYPE_WORD &&
         user.secret_words.present? &&
         user.secret_words == params[:secret_words]
-      sign_in user, :bypass => true
+      sign_in user, bypass: true
       user.update_tracked_fields!(request)
       redirect_to_section_script and return
     end

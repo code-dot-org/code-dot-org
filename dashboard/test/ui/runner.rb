@@ -102,7 +102,7 @@ $suite_fail_count = 0
 $failures = []
 
 if $options.local
-  $browsers = [{:browser => "local"}]
+  $browsers = [{browser: "local"}]
 end
 
 if $options.config
@@ -170,7 +170,7 @@ end
 features = $options.feature || Dir.glob('features/*.feature')
 browser_features = $browsers.product features
 
-Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
+Parallel.map(browser_features, in_processes: $options.parallel_limit) do |browser, feature|
   feature_name = feature.gsub('features/', '').gsub('.feature', '')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')

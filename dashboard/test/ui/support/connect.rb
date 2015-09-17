@@ -4,7 +4,7 @@ $browser_configs = JSON.load(open("browsers.json"))
 
 if ENV['TEST_LOCAL'] == 'true'
   # This drives a local installation of ChromeDriver running on port 9515, instead of BrowserStack.
-  browser = Selenium::WebDriver.for :chrome, :url=>"http://127.0.0.1:9515"
+  browser = Selenium::WebDriver.for :chrome, url: "http://127.0.0.1:9515"
 
   if ENV['MAXIMIZE_LOCAL'] == 'true'
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")

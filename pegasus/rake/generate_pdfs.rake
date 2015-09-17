@@ -38,4 +38,4 @@ all_outfiles = [].tap do |all_outfiles|
   end
 end
 
-task :default => all_outfiles
+task default: all_outfiles

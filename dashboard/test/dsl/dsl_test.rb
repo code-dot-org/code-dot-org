@@ -14,14 +14,14 @@ level 'Level 4'
 level 'Level 5'
 "
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    expected = {:id=>nil, :stages=>[
-        {:stage=>"Stage1", :levels=>[{:name=>"Level 1", :stage=>"Stage1"},
-                                     {:name=>"Level 2", :stage=>"Stage1"},
-                                     {:name=>"Level 3", :stage=>"Stage1"}]},
-        {:stage=>"Stage2", :levels=>[{:name=>"Level 4", :stage=>"Stage2"},
-                                     {:name=>"Level 5", :stage=>"Stage2"}]}],
-                :hidden=>true, :trophies=>false, :wrapup_video=>nil,
-                :login_required=>false, :pd=>false}
+    expected = {id: nil, stages: [
+        {stage: "Stage1", levels: [{name: "Level 1", stage: "Stage1"},
+                                     {name: "Level 2", stage: "Stage1"},
+                                     {name: "Level 3", stage: "Stage1"}]},
+        {stage: "Stage2", levels: [{name: "Level 4", stage: "Stage2"},
+                                     {name: "Level 5", stage: "Stage2"}]}],
+                hidden: true, trophies: false, wrapup_video: nil,
+                login_required: false, pd: false}
 
     i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
         'Stage1'=>'Stage1',

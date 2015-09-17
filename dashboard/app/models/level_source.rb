@@ -25,7 +25,7 @@ class LevelSource < ActiveRecord::Base
 
   has_many :activities
 
-  validates_length_of :data, :maximum => 20000
+  validates_length_of :data, maximum: 20000
 
   # This string used to sometimes appear in program XML.
   # We now strip it out, but it remains in some old LevelSource.data.

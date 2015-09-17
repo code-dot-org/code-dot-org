@@ -5,7 +5,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test_fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map { |n| create(:level, :name => "Level #{n}", :game => @game) }
+    @levels = (1..5).map { |n| create(:level, name: "Level #{n}", game: @game) }
   end
 
   test 'login required setting in script file' do
@@ -98,9 +98,9 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should not create two scripts with same name' do
-    create(:script, :name => 'script')
+    create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
-      create(:script, :name => 'Script')
+      create(:script, name: 'Script')
     end
     assert_equal 'Validation failed: Name has already been taken', raise.message
   end

@@ -34,4 +34,4 @@ Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
   all_output_files << fetchfile_path
 end
 
-task :default => all_output_files
+task default: all_output_files

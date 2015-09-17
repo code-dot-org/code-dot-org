@@ -9,7 +9,7 @@ namespace :db do
     true
   end
 
-  task :setup_or_migrate => [:environment, :load_config] do
+  task setup_or_migrate: [:environment, :load_config] do
     if database_exists?
       Rake::Task["db:migrate"].invoke
     else

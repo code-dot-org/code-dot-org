@@ -33,7 +33,7 @@ class LevelSourceHintsController < ApplicationController
       if @level_source_hint.update(level_source_hint_params)
         # A frequent_unsuccessful_level_source should be active if there are no
         # selected hints for it, and inactive if there are any selected hints.
-        fuls = FrequentUnsuccessfulLevelSource.where(:level_source_id => @level_source_hint.level_source_id)
+        fuls = FrequentUnsuccessfulLevelSource.where(level_source_id: @level_source_hint.level_source_id)
         if fuls.count > 0
           if params[:status] == LevelSourceHint::STATUS_SELECTED
             # Set the associated frequent_unsuccessful_level_source to be inactive.
@@ -85,8 +85,8 @@ class LevelSourceHintsController < ApplicationController
     @prev_path = add_pop_hint_path(idx - 1)
     while unsuccessful_level_sources.length > idx
       @level_source_id = unsuccessful_level_sources.at(idx).level_source_id
-      if LevelSourceHint.where(:user_id => current_user.id,
-                               :level_source_id => @level_source_id).count > 0
+      if LevelSourceHint.where(user_id: current_user.id,
+                               level_source_id: @level_source_id).count > 0
         idx += 1
       else
         break

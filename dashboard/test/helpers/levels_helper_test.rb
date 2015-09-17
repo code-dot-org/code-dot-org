@@ -12,7 +12,7 @@ class LevelsHelperTest < ActionView::TestCase
   include LocaleHelper
 
   setup do
-    @maze_data = {:game_id=>25, :user_id => 1, :name=>"__bob4", :level_num=>"custom", :skin=>"birds", :instructions=>"sdfdfs"}
+    @maze_data = {game_id: 25, user_id: 1, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs"}
     @level = Maze.create(@maze_data)
 
     def request

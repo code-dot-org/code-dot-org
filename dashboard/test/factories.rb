@@ -45,7 +45,7 @@ FactoryGirl.define do
     app "maze"
   end
 
-  factory :level, :class => Blockly do
+  factory :level, class: Blockly do
     sequence(:name) { |n| "Level_#{n}" }
     sequence(:level_num) {|n| "1_2_#{n}" }
 
@@ -89,22 +89,22 @@ FactoryGirl.define do
     end
   end
 
-  factory :unplugged, :parent => Level, :class => Unplugged do
+  factory :unplugged, parent: Level, class: Unplugged do
     game {create(:game, app: "unplug")}
   end
 
-  factory :match, :parent => Level, :class => Match do
+  factory :match, parent: Level, class: Match do
     game {create(:game, app: "match")}
     properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
-  factory :artist, :parent => Level, :class => Artist do
+  factory :artist, parent: Level, class: Artist do
   end
 
-  factory :maze, :parent => Level, :class => Maze do
+  factory :maze, parent: Level, class: Maze do
   end
 
-  factory :applab, :parent => Level, :class => Applab do
+  factory :applab, parent: Level, class: Applab do
     game {Game.applab}
   end
 

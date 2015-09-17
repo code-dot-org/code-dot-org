@@ -194,10 +194,10 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :build => ['build:all']
+task build: ['build:all']
 
 
 
@@ -297,10 +297,10 @@ namespace :install do
   tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :install => ['install:all']
+task install: ['install:all']
 
 task :default do
   puts 'List of valid commands:'
