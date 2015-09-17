@@ -15,11 +15,11 @@ nav: resources_nav
 
 ## Uporabite ta letak in povejte drugim
 
-[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
+[![](<%= localized_image('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
 ## Izročite ta letak učiteljem in šolam
 
-[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
+[![](<%= localized_image('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
 <a id="videos"></a>
 

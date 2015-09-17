@@ -15,11 +15,11 @@ nav: resources_nav
 
 ## Поширюйте інформацію у цьому буклеті
 
-[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
+[![](<%= localized_image('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
 ## Передайте цю роздруківку вчителям та школам
 
-[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
+[![](<%= localized_image('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
 <a id="videos"></a>
 
