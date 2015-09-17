@@ -23,7 +23,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
   * Require minimal prep-time for organizers
   * Are self-guided - allowing kids to work at their own pace and skill-level
 
-[![](/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -49,7 +49,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **It’s okay if you are both brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, change the world, connect people, etc).
+  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people, etc).
   * List things that use code in everyday life.
   * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
@@ -59,7 +59,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
 **When someone comes across difficulties it's okay to respond:**
 

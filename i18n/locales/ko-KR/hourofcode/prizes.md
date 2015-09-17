@@ -102,6 +102,6 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 ## 상품들에 대한 더 많은 궁금한 사항들? {#more_questions}
 
-Check out our Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+Check out our [Terms and Conditions](<%= resolve_url('https://code.org/tos') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
 <%= view :signup_button %>

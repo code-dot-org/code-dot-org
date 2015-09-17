@@ -23,7 +23,7 @@ crwdns48179:0crwdne48179:0 crwdns48180:0crwdne48180:0
   * crwdns48182:0crwdne48182:0
   * crwdns48183:0crwdne48183:0
 
-[![](/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## crwdns48184:0crwdne48184:0
 
@@ -49,7 +49,7 @@ crwdns48185:0crwdne48185:0
 
 **crwdns48199:0crwdne48199:0**
 
-  * crwdns48200:0crwdne48200:0
+  * crwdns48604:0crwdne48604:0
   * crwdns48201:0crwdne48201:0
   * crwdns48202:0crwdne48202:0.
 
@@ -59,7 +59,7 @@ crwdns48203:0crwdne48203:0
 
 **crwdns48205:0crwdne48205:0**
 
-  * crwdns48206:0crwdne48206:0 
+  * crwdns48805:0crwdne48805:0 
 
 **crwdns48207:0crwdne48207:0**
 
