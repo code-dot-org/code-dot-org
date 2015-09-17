@@ -15,7 +15,7 @@
 /* global $ */
 'use strict';
 
-require('../utils'); // provide Function.prototype.inherits
+var NetSimApiError = require('./NetSimApiError');
 
 /**
  * @type {string}
@@ -219,46 +219,6 @@ var tableApi = {
     });
   }
 };
-
-/**
- * Special error type for failed server requests, which tries to extract
- * additional error information from the server's response.
- * @param {jqXHR} request
- * @constructor
- * @extends Error
- */
-function NetSimApiError(request) {
-  /** @type {string} */
-  this.name = 'NetSimApiError';
-
-  /** @type {string} */
-  this.message = 'Request failed';
-
-  /** @type {string} */
-  this.stack = (new Error()).stack;
-
-  /**
-   * Additional error information returned by the server, which can drive
-   * specific responses by the client.
-   * @type {string|Array}
-   */
-  this.details = undefined;
-
-  // Attempt to extract additional information from the request object
-  if (request) {
-    this.message = 'status: ' + request.status + '; error: ' + request.statusText;
-    try {
-      var responseJson = JSON.parse(request.responseText);
-      if (responseJson.details) {
-        this.details = responseJson.details;
-        this.message += '; details: ' + JSON.stringify(this.details);
-      }
-    } catch (e) {
-      this.details = null;
-    }
-  }
-}
-NetSimApiError.inherits(Error);
 
 module.exports = {
   /**

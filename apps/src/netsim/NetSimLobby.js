@@ -24,6 +24,7 @@ var i18n = require('./locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
+var NetSimApiError = require('./NetSimApiError');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
@@ -342,11 +343,26 @@ NetSimLobby.prototype.doesShardContainRouter = function () {
 NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err) {
     if (err) {
-      logger.error("Unable to create router: " + err.message);
-      if (err.details === 'limit_reached') {
-        NetSimAlert.warn(i18n.routerLimitReachedError());
-      } else if (err.details !== 'conflict') {
-        NetSimAlert.error(i18n.addRouterToLobbyError());
+      var InsertError = NetSimApiError.InsertError;
+      switch (err.details) {
+        case InsertError.CONFLICT:
+          // Another router with the same routerNumber already exists.
+          // Ignore this; to the user it looks like it worked!
+          logger.warn('Did not create router; ' +
+              'Another user created a router at the same time.');
+          break;
+
+        case InsertError.LIMIT_REACHED:
+          // The server's router limit has been reached.
+          // Usually the client will remove the "Add Router" button first.
+          logger.warn('Did not create router; Router limit reached.');
+          NetSimAlert.warn(i18n.routerLimitReachedError());
+          break;
+
+        default:
+          // Malformed row or some other unexpected error.
+          logger.error("Unable to create router: " + err.message);
+          NetSimAlert.error(i18n.addRouterToLobbyError());
       }
     }
   }.bind(this));
