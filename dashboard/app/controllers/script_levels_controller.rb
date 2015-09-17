@@ -80,7 +80,7 @@ class ScriptLevelsController < ApplicationController
   def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (session_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+          (session_level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 

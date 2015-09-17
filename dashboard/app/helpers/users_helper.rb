@@ -12,10 +12,12 @@ module UsersHelper
     session[:lines] = session_lines + added_lines
   end
 
-  # Resets session progress for all levels and line completed, for testing only.
-  def session_reset_progress_for_test
-    session[:lines] = 0
-    session[:progress] = {}
+  # Resets all user session state (level progress, lines of code, videos seen, etc.) for tests.
+  def session_reset_for_test
+    session[:lines] = nil
+    session[:progress] = nil
+    session[:callouts_seen] = nil
+    session[:videos_seen] = nil
   end
 
     # Returns the progress value for the given level_id, or 0 if there
@@ -49,24 +51,35 @@ module UsersHelper
     session[:scripts] || []
   end
 
-  # Returns a read-only set of the videos seen in the current user session.
+  # Returns a read-only set of the videos seen in the current user session,
+  # for tests only.
   # @return Set<String>
-  def session_videos_seen
+  def session_videos_seen_for_test
     session[:videos_seen] || Set.new
   end
 
-  def session_set_videos_seen(videos_seen)
-    session[:videos_seen] = videos_seen
-  end
-
-    # Adds video_key to the set of videos seen in the current user session.
+  # Adds video_key to the set of videos seen in the current user session.
   # @param [String] video_key
-  # @return Boolean
   def session_add_video_seen(video_key)
     (session[:videos_seen] ||= Set.new).add(video_key)
   end
 
-  # Returns true if the video with the given key has been seen by the current user session.
+  # Adds video_key to the set of videos seen in the current user session.
+  # @param [String] video_key
+  # @return Boolean
+  def session_video_seen?(video_key)
+    s = session[:videos_seen]
+    s && s.include?(video_key)
+  end
+
+  # Returns if at least one video has been seen in the current user session.
+  # For testing only
+  # @return Boolean
+  def session_videos_seen_for_test?
+    !session[:videos_seen].nil?
+  end
+
+    # Returns true if the video with the given key has been seen by the current user session.
   # @param [String] callout_key
   # @return Boolean
   def session_callout_seen?(callout_key)
@@ -76,7 +89,7 @@ module UsersHelper
 
   # Adds callout_key to the set of callouts seen in the current user session.
   def session_add_callout_seen(callout_key)
-    (session[:callouts_seen] ||= Set.new).add(video_key)
+    (session[:callouts_seen] ||= Set.new).add(callout_key)
   end
 
   # Summarize the current user's progress within a certain script.

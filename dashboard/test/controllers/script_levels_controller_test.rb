@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
-
-  include LevelsHelper # test the levels helper stuff here because it has to do w/ routes...
+  include UsersHelper  # For user session state accessors.
+  include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
   setup do
@@ -25,7 +25,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
-    session_reset_progress
+    session_reset_for_test
   end
 
   test 'should show script level for twenty hour' do
@@ -155,11 +155,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert_empty session_videos_seen
+    assert !session_videos_seen_for_test?
 
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
     assert_nil assigns(:view_options)[:autoplay_video]
-    assert_not_empty session_videos_seen
+    assert session_videos_seen_for_test?
 
     @controller = ScriptLevelsController.new
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
@@ -168,9 +168,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "shouldn't show autoplay video when already seen" do
     non_legacy_script_level = create(:script_level, :with_autoplay_video)
-    seen = Set.new
-    seen.add(non_legacy_script_level.level.video_key)
-    session_set_videos_seen(seen)
+    session_add_video_seen(non_legacy_script_level.level.video_key)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
