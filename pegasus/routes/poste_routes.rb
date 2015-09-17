@@ -63,7 +63,20 @@ post '/v2/poste/send-message' do
   template_params = JSON.parse(params[:params]) unless params[:params].to_s.empty?
   template_params ||= {}
 
+  recipients_csv = CSV.parse(params[:recipients_file][:tempfile].read, {headers: true})
+
   recipients = params[:recipients].to_s.split(/[\n,;]/).map(&:strip)
+
+  recipients_csv.each do |recipient|
+    recipients << recipient["email"]
+  end
+
+  if params[:template_file]
+    DB[:poste_messages].insert(
+      name: params[:template_file][:filename],
+      template_file: params[:template_file][:tempfile].read
+    )
+  end
 
   recipients.each do |email|
     recipient = Poste2.ensure_recipient(email, ip_address: request.ip)
