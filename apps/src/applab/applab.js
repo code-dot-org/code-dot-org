@@ -560,7 +560,7 @@ function extendHandleClearPuzzle() {
     orig(config);
     Applab.setLevelHtml(config.level.startHtml || '');
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
-    AppStorage.populateKv(level.dataKv, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 }
@@ -708,7 +708,7 @@ Applab.init = function(config) {
 
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
-  AppStorage.populateKv(level.dataKv, false); // overwrite = false
+  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
