@@ -1,7 +1,6 @@
 -data = DB[:cdo_state_promote].where(state_code_s:state).first
 -pass if data.nil?
 -statename = us_state_name_from_code(state)
--no_credit_count = no_credit_count()
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %p#state-title
@@ -19,15 +18,6 @@
     %strong.figure
       =format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
-
--# This block of content might be used in the future. If confused, ask Amy Hirotaka or Katie Hendrickson about their
--# plans for the /promote page.
-
--#%p.fact{style: "margin-bottom: 18px"}
--#  -unless data[:count_schools_teach_cs] == 0
--#    %strong.figure
--#      =format_integer_with_commas(data[:count_schools_teach_cs_i])
--#    schools teach computer science
 
 %div.fact{style: "margin-left:20px;"}
   - if data[:cs_counts_t] == "No"
@@ -64,29 +54,6 @@
     %a{href: "/files/states/#{state}.pdf", target: '_blank'}<
       Download #{statename} fact-sheet
       %img{:src=>"/images/download.png", width: "35px", style: 'margin-top:-5px'}
-
--# This block of content might be used in the future. If confused, ask Amy Hirotaka or Katie Hendrickson about their
--# plans for the /promote page.
-
--#- if statename == "Washington DC"
--#  %p
--#    In #{statename} students
--#    %strong
--#      can
--#    count computer science for credit towards high school graduation!
--#- else
--#  - if data[:cs_counts_t] == "Yes"
--#    %p
--#      #{statename} is one of #{credit_count} states where students
--#      %strong
--#        can
--#      count computer science for credit towards high school graduation!
--#  - else
--#    %p
--#      #{statename} is one of #{no_credit_count} states where students
--#      %strong
--#        can't
--#      count computer science for credit towards high school graduation.
 
 -if data[:text_t]
   %p
