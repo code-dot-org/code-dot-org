@@ -1,6 +1,7 @@
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
+  include UsersHelper
 
   # Maximum time that level pages from #show can be cached for non-signed in users.
   # Pages for signed in users are never cached.
@@ -75,17 +76,12 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # Attempts to find the next level for this session and script
+  # Attempts to find the next unpassed level for this session and script
   def find_next_level_for_session(script)
-    session_progress = session[:progress] || {}
-
-    script.script_levels.each do |sl|
-      next unless sl.valid_progression_level?
-      passed_level = session_progress.fetch(sl.level_id, -1) < Activity::MINIMUM_PASS_RESULT
-      return sl if passed_level
+    script.script_levels.detect do |sl|
+      sl.valid_progression_level? &&
+          (session_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
     end
-
-    nil
   end
 
   def load_script_level
