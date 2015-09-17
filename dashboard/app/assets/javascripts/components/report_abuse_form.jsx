@@ -108,7 +108,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           {/* we dangerouslySetInnerHTML because our string has html in it*/ }
           <div dangerouslySetInnerHTML={{
             __html: i18n.t('project.abuse.report_abuse_form.abuse_type.question', {
-              link_start: '<a href="http://code.org/tos" target="_blank">',
+              link_start: '<a href="https://code.org/tos" target="_blank">',
               link_end: '</a>'
             })}}/>
           <select style={{width: DROPDOWN_WIDTH}} name="abuse_type" ref="abuse_type">
@@ -125,8 +125,8 @@ window.dashboard.ReportAbuseForm = (function (React) {
           {/* we dangerouslySetInnerHTML because our string has html in it*/ }
           <div dangerouslySetInnerHTML={{
             __html: i18n.t('project.abuse.report_abuse_form.acknowledge', {
-              link_start_privacy: '<a href="http://code.org/privacy" target="_blank">',
-              link_start_tos: '<a href="http://code.org/tos" target="_blank">',
+              link_start_privacy: '<a href="https://code.org/privacy" target="_blank">',
+              link_start_tos: '<a href="https://code.org/tos" target="_blank">',
               link_end: '</a>'
             })}}/>
           <button onClick={this.handleSubmit}>
