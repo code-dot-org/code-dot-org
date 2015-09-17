@@ -120,7 +120,13 @@ class Documents < Sinatra::Base
     @config = settings.configs[request.site]
     @header = {}
 
-    @dirs = [request.site]
+    @dirs = []
+
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << [File.join(request.site, 'i18n')]
+    end
+
+    @dirs << request.site
 
     if @config
       base = @config[:base]
@@ -128,10 +134,6 @@ class Documents < Sinatra::Base
         @dirs << base
         base = settings.configs[base][:base]
       end
-    end
-
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
-      @dirs << File.join(request.site, 'i18n')
     end
 
     @locals = {header: {}}
