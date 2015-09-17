@@ -139,3 +139,17 @@ languages.each_pair do |name, codes|
     end
   end
 end
+
+
+
+#########################################################################################
+##                                                                                     ##
+## clean up crowdin markdown errors                                                    ##
+##                                                                                     ##
+#########################################################################################
+
+puts "Fixing crowdin markdown errors..."
+# remove all metadata
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
+end
