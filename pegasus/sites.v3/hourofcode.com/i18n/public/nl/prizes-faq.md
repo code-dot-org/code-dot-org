@@ -1,8 +1,8 @@
-* * *
+---
 
 title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
