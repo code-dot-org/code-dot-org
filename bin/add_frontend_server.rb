@@ -8,20 +8,19 @@ ec2client = Aws::EC2::Client.new
 instances = ec2client.describe_instances
 
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
-frontend_instances = []
-
-instances.reservations.each do |reservation|
-  frontends_for_reservation = reservation.instances.select{|instance| instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
-  frontend_instances << frontends_for_reservation unless frontends_for_reservation.size == 0
+frontend_instances = instances.reservations.map do |reservation|
+  reservation.instances.select{|instance| instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
 end
 
-instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution| instance_distribution[instance.placement.availability_zone] += 1}
+frontend_instances.delete([])
 
-determined_instance_zone = instance_distribution.select { |_, v| v == instance_distribution.values.min }.keys[0]
+instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution| instance_distribution[instance.placement.availability_zone] += 1}
+determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
 
 puts "Using underscaled instance zone #{determined_instance_zone}"
 
-instance_name = 'frontend-' + determined_instance_zone[-1, 1] + (instance_distribution[determined_instance_zone] + 1).to_s
+instance_name = "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 1).to_s}"
+
 puts "Naming instance #{instance_name}"
 
 run_instance_response = ec2client.run_instances ({
@@ -51,29 +50,37 @@ run_instance_response = ec2client.run_instances ({
                                                 })
 
 instance_id = run_instance_response.instances[0].instance_id
+
 puts "Looking for instance id  #{instance_id}"
 
 started_at = Time.now
 ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
-  if Time.now - started_at > MAX_WAIT_TIME
-    puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
-    exit(1);
+  waiting.max_attempts = nil
+
+  waiting.before_wait do |attempts, response|
+    if Time.now - started_at > MAX_WAIT_TIME
+      puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
+      exit(1);
+    end
   end
 end
 
-puts "Instance #{instance_id} is now running"
+puts "Instance #{instance_id} is now running, waiting for status checks to complete"
 
 started_at = Time.now
 
 ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
-  if Time.now - started_at > MAX_WAIT_TIME
-    puts "Instance #{instance_id} was created but has not passed status checks. Giving up - check the EC2 console and see if there's an error."
-    exit(1);
+  waiting.max_attempts = nil
+
+  waiting.before_wait do |attempts, response|
+    if Time.now - started_at > MAX_WAIT_TIME
+      puts "Instance #{instance_id} was created but has not passed status checks. Giving up - check the EC2 console and see if there's an error."
+      exit(1);
+    end
   end
 end
 
 puts "Instance #{instance_id} is okay and can be added to load balancers"
-
 
 #Tag the instance with a name
 ec2client.create_tags({
@@ -86,7 +93,7 @@ ec2client.create_tags({
                           ],
                       })
 
-puts "Created instance #{instance_id}"
+puts "Created instance #{instance_id} with name #{instance_name}"
 
 private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
 
