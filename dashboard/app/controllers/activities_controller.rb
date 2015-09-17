@@ -166,14 +166,16 @@ class ActivitiesController < ApplicationController
 
     # Update count of total lines written if they passed the test.
     lines = params[:lines].to_i
-    test_passing = Activity.passing?(test_result)
-    if test_passing
-      session_add_lines(lines) if lines > 0
-      @new_level_completed = true if !Activity.passing?(old_result)
+    if lines > 0 && Activity.passing?(test_result)
+      session_add_lines(lines)
     end
 
+    @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+
     # track scripts
-    session_add_script(@script_level.script_id) if @script_level.try(:script).try(:id)
+    if @script_level.try(:script).try(:id)
+      session_add_script(@script_level.script_id)
+    end
   end
 
   def trophy_check(user)

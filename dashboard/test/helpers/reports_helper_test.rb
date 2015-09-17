@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ReportsHelperTest < ActionView::TestCase
+  include UsersHelper
 
   setup do
     @user = create(:user)
