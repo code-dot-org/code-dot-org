@@ -28,9 +28,9 @@ Choose a challenge and complete it in StarLogo Nova.
     	<div class="hard">
         	<strong>Hard</strong>
             <br/><br/>
-				Create a model in 3D so that copper pipe is vertical, agents move with a wiggle in Z but do not go below Spaceland nor above a Z of 30
+				Make your model such that there is a slider for the amount of initial water and that a minimum amount of water is required in order for the mixing to occur.  The silver nitrate starts at the bottom and only moves if there is sufficient water for the reaction.
             <br/><br/>
-            <i>Details: Invisible agent is created to take camera (add Z coordinates to setup), use conditionals</i>
+            <i>Details: In the setup add a slider where water is created and in the 'add silver nitrate' setup have the silver nitrate start at the bottom of Spaceland.  In the silver nitrate tab, use logic to check for a minimum amount of water before it can move.</i>
         </div>
     </div>
     <br/><br/>

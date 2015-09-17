@@ -6,9 +6,9 @@ nav: educate_nav
 # Computer Science Principles #
 
 ## <a name="whatis"></a>What is CS Principles?
-The College Board has proposed a new course called AP® Computer Science Principles.  This  course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and performance-based assessments.
+In fall 2016, the College Board will launch its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
-Find more information about the College Board CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/)
+For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
 ## Code.org's CS Principles Curriculum
 Check back often as batches of lessons will be released on a rolling basis. The resources will be distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).

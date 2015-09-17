@@ -6167,7 +6167,9 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {}), codeDiv);
+      React.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
 
       dialog.show();
     }).bind(this));
@@ -7720,7 +7722,7 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
       body: React.createElement(dashboard.AbuseError, {
         i18n: {
           tos: window.dashboard.i18n.t('project.abuse.tos'),
-          contact_us: window.dashboard.i18n.t('project.abuse.contact_us'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
         }
       }),
       style: {
@@ -9277,6 +9279,7 @@ module.exports = React.createClass({displayName: "exports",
 });
 
 },{"react":"/home/ubuntu/staging/apps/node_modules/react/react.js"}],"/home/ubuntu/staging/apps/build/js/templates/VersionHistory.jsx":[function(require,module,exports){
+/* global dashboard */
 var React = require('react');
 var VersionRow = require('./VersionRow.jsx');
 var sourcesApi = require('../clientApi').sources;
@@ -9285,7 +9288,9 @@ var sourcesApi = require('../clientApi').sources;
  * A component for viewing project version history.
  */
 module.exports = React.createClass({displayName: "exports",
-  propTypes: {},
+  propTypes: {
+    handleClearPuzzle: React.PropTypes.func.isRequired
+  },
 
   /**
    * @returns {{statusMessage: string, versions: (null|{
@@ -9297,7 +9302,9 @@ module.exports = React.createClass({displayName: "exports",
   getInitialState: function () {
     return {
       versions: null,
-      statusMessage: ''
+      statusMessage: '',
+      showSpinner: true,
+      confirmingClearPuzzle: false
     };
   },
 
@@ -9312,7 +9319,7 @@ module.exports = React.createClass({displayName: "exports",
    * @param xhr
    */
   onVersionListReceived: function (xhr) {
-    this.setState({versions: JSON.parse(xhr.responseText)});
+    this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
   },
 
   /**
@@ -9338,16 +9345,39 @@ module.exports = React.createClass({displayName: "exports",
     sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
 
     // Show the spinner.
-    this.setState({versions: null});
+    this.setState({showSpinner: true});
+  },
+
+  onConfirmClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: true});
+  },
+
+  onCancelClearPuzzle: function () {
+    this.setState({confirmingClearPuzzle: false});
+  },
+
+  onClearPuzzle: function () {
+    this.setState({showSpinner: true});
+    this.props.handleClearPuzzle();
+    dashboard.project.save(function () {
+      location.reload();
+    }, true);
   },
 
   render: function () {
-    var versionList;
-    // If `this.state.versions` is null, the versions are still loading.
-    if (this.state.versions === null) {
-      versionList = (
-        React.createElement("div", {style: {margin: '1em 0', textAlign: 'center'}}, 
-          React.createElement("i", {className: "fa fa-spinner fa-spin", style: {fontSize: '32px'}})
+    var body;
+    if (this.state.showSpinner) {
+      body = (
+          React.createElement("div", {style: {margin: '1em 0', textAlign: 'center'}}, 
+            React.createElement("i", {className: "fa fa-spinner fa-spin", style: {fontSize: '32px'}})
+          )
+      );
+    } else if (this.state.confirmingClearPuzzle) {
+      body = (
+        React.createElement("div", null, 
+          React.createElement("p", null, "Are you sure you want to clear all progress for this level?"), 
+          React.createElement("button", {id: "confirm-button", style: {float: 'right'}, onClick: this.onClearPuzzle}, "Start Over"), 
+          React.createElement("button", {id: "again-button", onClick: this.onCancelClearPuzzle}, "Cancel")
         )
       );
     } else {
@@ -9358,12 +9388,22 @@ module.exports = React.createClass({displayName: "exports",
           onChoose: this.onChooseVersion.bind(this, version.versionId)});
       }.bind(this));
 
-      versionList = (
+      body = (
         React.createElement("div", null, 
           React.createElement("div", {style: {maxHeight: '330px', overflowX: 'scroll', margin: '1em 0'}}, 
             React.createElement("table", {style: {width: '100%'}}, 
               React.createElement("tbody", null, 
-              rows
+                rows, 
+                React.createElement("tr", null, 
+                  React.createElement("td", null, 
+                    React.createElement("p", {style: {margin: 0}}, "Initial version")
+                  ), 
+                  React.createElement("td", {width: "250", style: {textAlign: 'right'}}, 
+                  React.createElement("button", {className: "btn-danger", onClick: this.onConfirmClearPuzzle, style: {float: 'right'}}, 
+                    "Delete Progress"
+                  )
+                  )
+                )
               )
             )
           )
@@ -9374,7 +9414,7 @@ module.exports = React.createClass({displayName: "exports",
     return (
       React.createElement("div", {className: "modal-content", style: {margin: 0}}, 
         React.createElement("p", {className: "dialog-title"}, "Version History"), 
-        versionList, 
+        body, 
         this.state.statusMessage
       )
     );
