@@ -15,11 +15,11 @@ nav: resources_nav
 
 ## शब्दलाई विभाजन गर्न यो हाते पुस्तिकाको प्रयोग गर्नुहोस्
 
-[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
+[![](<%= localized_image('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
 ## यो हाते पुस्तिका शिक्षक र विद्यालयहरूलाई दिनुहोस्
 
-[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
+[![](<%= localized_image('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
 <a id="videos"></a>
 
