@@ -515,9 +515,10 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              deferred.resolve();
+              fetchAbuseScore(function () {
+                deferred.resolve();
+              });
             });
-            fetchAbuseScore();
           }
         });
         return deferred;
@@ -533,9 +534,10 @@ var projects = module.exports = {
         } else {
           fetchSource(data, function () {
             projects.showProjectLevelHeader();
-            deferred.resolve();
+            fetchAbuseScore(function () {
+              deferred.resolve();
+            });
           });
-          fetchAbuseScore();
         }
       });
       return deferred;
@@ -563,8 +565,7 @@ function fetchSource(data, callback) {
   }
 }
 
-// TODO - might make more sense to integrate this with the UI differently now?
-function fetchAbuseScore() {
+function fetchAbuseScore(callback) {
   channels.fetch(current.id + '/abuse', function (err, data) {
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
@@ -572,7 +573,7 @@ function fetchAbuseScore() {
       throw err;
     }
     currentAbuseScore = data.abuseScore;
-    console.log('abuse: ' + currentAbuseScore); // TODO - get rid of
+    callback();
   });
 }
 
