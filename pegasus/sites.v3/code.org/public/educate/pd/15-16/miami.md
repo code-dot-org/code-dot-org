@@ -101,6 +101,7 @@ Miami, FL 33127
 
 
 
+
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger

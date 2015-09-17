@@ -90,7 +90,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 	
 ## 7) Celebrate
 - <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
-- <a href="<%= resolve_url('https://staging.hourofcode.com/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
+- <a href="<%= resolve_url('/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

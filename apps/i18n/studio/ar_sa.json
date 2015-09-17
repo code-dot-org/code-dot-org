@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "يلمس الحافة العليا",
   "whenUp": "عند الضغط على السهم لاعلى",
   "whenUpTooltip": "تنفيذ الإجراءات أدناه عند الضغط على مفتاح سهم لأعلى.",
-  "yes": "نعم"
+  "yes": "نعم",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

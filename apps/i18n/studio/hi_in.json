@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "touches top edge",
   "whenUp": "जब ऊपर तीर",
   "whenUpTooltip": "जब ऊपर तीर दबाया जाएे तो नीचे दिये गएे कार्यों का संचालन करे।",
-  "yes": "Yes"
+  "yes": "Yes",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

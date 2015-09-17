@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "торкається верхнього краю",
   "whenUp": "коли стрілка Вгору",
   "whenUpTooltip": "Виконати дії, подані нижче, при натисненні клавіші стрілка вгору.",
-  "yes": "Так"
+  "yes": "Так",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

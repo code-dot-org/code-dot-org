@@ -4,7 +4,7 @@ require 'rack/test'
 
 require_relative '../../lib/cdo/email_validator'
 
-class EmailValidatorTest < Minitest::Unit::TestCase
+class EmailValidatorTest < Minitest::Test
 
   def test_valid_addresses
     valid_addresses = [

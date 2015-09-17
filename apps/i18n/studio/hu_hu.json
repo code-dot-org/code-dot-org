@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "felső  szegély érintése",
   "whenUp": "Ha van felfelé nyíl",
   "whenUpTooltip": "Végrehajtja az alábbi parancsokat, ha a felfelé nyilat megnyomják.",
-  "yes": "Igen"
+  "yes": "Igen",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }

@@ -429,5 +429,14 @@
   "whenSpriteCollidedWithTopEdge": "докосва горния ръб",
   "whenUp": "когато стрелка нагоре",
   "whenUpTooltip": "Изпълнява действията по-долу когато е натисната стрелка нагоре.",
-  "yes": "Да"
+  "yes": "Да",
+  "setWalls": "set walls",
+  "setWallsHidden": "set hidden walls",
+  "setWallsRandom": "set random walls",
+  "setWallsBorder": "set border walls",
+  "setWallsMaze": "set maze walls",
+  "setWallsMaze2": "set maze2 walls",
+  "setWallsTooltip": "Changes the walls in the scene",
+  "whenTouchItem": "when item touched",
+  "whenTouchItemTooltip": "Execute the actions below when the actor touches an item."
 }
