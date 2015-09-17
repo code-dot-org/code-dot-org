@@ -26,6 +26,9 @@ blockquote{
 p{
 	margin: 0 0 15px 15px;
 }
+i{
+	color: #FFA400;
+}
 ul{
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -83,7 +86,7 @@ button{
 }
 .easy{
     box-shadow: 10px 10px 5px #888888;
-	width:27%;
+	width:25%;
 	display: table-cell;
 	background:#f7f4de;
 	float:left;
@@ -94,7 +97,7 @@ button{
 }
 .medium{
     box-shadow: 10px 10px 5px #888888;
-	width:27%;
+	width:25%;
 	display: table-cell;
 	background:#fff5e0;
 	float:left;
@@ -107,7 +110,7 @@ button{
 }
 .hard{
     box-shadow: 10px 10px 5px #888888;
-	width:27%;
+	width:25%;
 	display: table-cell;
 	background:#fff1dc;
 	float:left;
@@ -115,7 +118,5 @@ button{
 	padding:25px;
 	margin-right:15px;
 	min-height:250px;
-
-
 }
 

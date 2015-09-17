@@ -7,7 +7,7 @@ ar-SA:
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
   n_have_learned_an_hoc: '<h1>جرّب</h1><h2>ساعة من البرمجة</h2><h3># تم حلّها</h3>'
-  anybody_can_learn: اي شخص بأستطاعته التعلم.
+  anybody_can_learn: بإمكان أي شخص أن يتعلم.
   learn_now: تعلم الآن
   petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة لتعلم علوم الحاسوب
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
@@ -40,10 +40,13 @@ ar-SA:
   all_ages: كل الاعمار
   beginner: مبتدئ
   n_participants: '# المشاركين'
-  go: أذهب
+  go: إبدأ
   thank_you_: شكرا لك!
   congratulations: تهانينا!
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
   enter_valid_age: يرجى إختيار عمر صحيح
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
@@ -163,9 +166,9 @@ ar-SA:
   homepage_banner_text_main: Code.org ومجلس الكلية يشكل تحالفا لتحسين التنوع في علوم الكمبيوتر.
   homepage_banner_text_link: اعرف المزيد
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: اعرف المزيد
+  homepage_banner_privacy_link: أعرف المزيد
   homepage_slot_text_title_hoc: ساعة من البرمجة
-  homepage_slot_text_blurb_hoc: أي أحد يستطيع أن يتعلم. ابدأ اليوم
+  homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: 'جرب ساعة من البرمجة - "Hour of Code"'
   homepage_slot_text_link_host: استضافة ساعة البرمجة
   homepage_slot_text_link_hocserved: '#  خدمة قدمت'
@@ -263,6 +266,7 @@ ar-SA:
   dashboard_landing_more_tutorials_desc: 'هناك المزيد من الدروس <a href="/learn/beyond">المقدمة من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.'
   dashboard_hoc_courses: ساعة البرمجة لجميع الأعمار
   dashboard_hoc_courses_desc: قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20 ساعة من الدروس لأطفال
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية
@@ -413,6 +417,10 @@ ar-SA:
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   learn_more: أعرف المزيد
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: تسجيل
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
   hoc2014_try_new_tutorial: 'جرب درس ساعة من البرمجة الجديد في "بيتا - التجريبي"'
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
@@ -441,7 +449,7 @@ ar-SA:
   older_systems: الدروس التي تعمل على أنظمة قديمة
   older_systems_subheading: 'هذه يجب أن تعمل على المتصفّحات القديمة. للوصول إلى جميع الدروس، يجب تحيين <a href="http://browsehappy.com/" target="_blank"> متصفح الويب .</a>'
   mobile_devices: دروس للأجهزة المحمولة
-  frozen_name: برمج مع آنا و إليسا
+  frozen_name: برمج مع آنا و إلسا
   codeorg_name: اكتب برنامجك الاول
   codeintl_name: اكتب برنامجك الاول
   thinkersmithspanish_name: Mis Amigos Roboticos
@@ -639,7 +647,7 @@ ar-SA:
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up. A teacher should explain the game, then students program a partner to complete a simple obstacle course. '
   projguts_longdescription: 'هذا النشاط "غير موصول" يساعد الطلاب على تعلم صناعة النماذج والمحاكاة وذلك من خلال لعب مجموعة من الطلاب نسخ مختلفة من اللعبة المعروفة "الصخور/الورق/المقص"، ثم نلاحظ النتائج  من مختلف التجارب.'
   hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: دعونا نستخدام التعليمات البرمجية لنشارك آنا وإليسا حال استكشافهم لسحر وجمال الجليد، سوف تصنع رقاقات الثلج و تزحلقك لتترك تلك الخطوط على الجليد ورائك لتصنع بذلك أرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
+  frozen_longdescription: هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف سحر وجمال الجليد. سوف تصنع ندفات الثلج والرسومات على الجليد عندما تتزلج عليه وأرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
   playlab_longdescription: 'تخيّل قصة أو إصنع لعبة مع "مختبر اللعب"! جعل الحيوانات، القراصنة، الكسالى، النينجا، و شخصيّات اخرى تتحرك، تصدر الأصوات، تسجل نقاط، و تطلق الكرات النّارية !'
   codeorg_beyond_name: 'مقدمة "علوم الحاسوب" (روضة لصف ثامن)'
   khan_beyond_name: تعلم برمجة الحاسوب
@@ -811,7 +819,7 @@ ar-SA:
   edx_beyond_longdescription: "CS50x is Harvard College's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest course."
   coursera_beyond_longdescription: "Stanford's CS 101 class taught by Nick Parlante (FREE!). CS101 teaches the essential ideas of Computer Science for a zero-prior-experience audience. Play and experiment with short bits of code to bring to life to the power and limitations of computers. CS101 also provides a general background on computers today: what is a computer, what is hardware, what is software, what is the internet. No previous experience is required other than the ability to use a web browser."
   udacity_beyond_longdescription: In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. Beginners are welcome! At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own. This course will prepare you to move on to intermediate-level computing courses.
-  teachingtree_beyond_longdescription: '"TeachingTree" هي منصة مفتوحة تتيح لأي شخص تنظيم المحتوى التعليمي. هدفنا هو وصول الطلاب بسرعة للقطات الدقيقة التي يحتاجونها من أجل معرفة المفاهيم الفردية. يشجع الجميع للمساعدة بإضافة أشرطة الفيديو أو وضع علامات المفاهيم.'
+  teachingtree_beyond_longdescription: '"TeachingTree" هي منصة مفتوحة تتيح لأي شخص تنظيم المحتوى التعليمي. هدفنا هو وصول الطلاب بسرعة إلى اللقطات المطلوبة والتي يحتاجونها من أجل معرفة المفاهيم الفردية. نطلب من الجميع المساعدة بإضافة أشرطة الفيديو أو وضع علامات المفاهيم.'
   kodu_beyond_longdescription: Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5.
   cargobot_beyond_longdescription: Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.
   kidsruby_beyond_longdescription: 'إستمتع وبرمج الألعاب أو إختراق الواجب المنزلي الخاصة بك باستخدام روبي! فقط خبر أهلك أو المدرس كنت تعلم البرمجة روبي ...؛). مجانا ويعمل على أي جهاز حاسوب. [ملاحظة: مطلوب تنزيل برنامج على الحاسوب]'

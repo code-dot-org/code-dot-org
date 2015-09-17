@@ -363,8 +363,8 @@
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: Solução do Exemplo
+      example_with_number: Solução do Exemplo %{solution_number}
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -729,3 +729,10 @@
     view_all: Visualizar meus projetos
     remix: Remix
     click_to_remix: Clique em "Remix" para fazer sua própria versão!
+    edit_project: Edit Project
+    abuse:
+      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
+        of Service</a> and cannot be shared with others.
+      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
+        us.</a>
+      go_to_code_studio: Go to Code Studio

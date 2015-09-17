@@ -21,3 +21,35 @@
   padding: 20px 4px 0px 4px;
 }
 
+.category-header {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.category-button {
+  background-color: #5b6770;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Gotham 4r', sans-serif;
+  margin: 5px 0px;
+  padding: 8px;
+}
+
+.purple-background {
+  background-color: #7665a0;
+}
+
+.cyan-background {
+  background-color: #0094ca;
+}
+
+.green-background {
+  background-color: #b9bf15;
+}
+
+.teal-background {
+  background-color: #00adbc;
+}
+
+.category-link:hover {
+  text-decoration: none;
+}

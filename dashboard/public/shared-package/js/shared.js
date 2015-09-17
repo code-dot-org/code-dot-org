@@ -831,18 +831,24 @@ var projects = module.exports = {
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {object?} sourceAndHtml Optional source to be provided, saving us another
-   *   call to sourceHandler.getLevelSource
-   * @param {function} callback Function to be called after saving
+   *   call to `sourceHandler.getLevelSource`.
+   * @param {function} callback Function to be called after saving.
+   * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
-  save: function(sourceAndHtml, callback) {
-    if (arguments.length < 2) {
-      // If no source is provided, the only argument is our callback and we
-      // ask for the source ourselves
+  save: function(sourceAndHtml, callback, forceNewVersion) {
+    if (typeof arguments[0] === 'function' || !sourceAndHtml) {
+      // If no source is provided, shift the arguments and ask for the source
+      // ourselves.
       callback = arguments[0];
+      forceNewVersion = arguments[1];
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
         html: this.sourceHandler.getLevelHtml()
       };
+    }
+
+    if (forceNewVersion) {
+      currentSourceVersionId = null;
     }
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
@@ -1105,10 +1111,12 @@ function redirectEditView() {
     // Redirect to /edit without a readonly workspace
     newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/view/, '$1/edit');
     appOptions.readonlyWorkspace = false;
+    isEditing = true;
   } else if (parseInfo.action === 'edit' && !isEditable()) {
     // Redirect to /view with a readonly workspace
     newUrl = location.href.replace(/(\/projects\/[^/]+\/[^/]+)\/edit/, '$1/view');
     appOptions.readonlyWorkspace = true;
+    isEditing = false;
   }
 
   // PushState to the new Url if we can, otherwise do nothing.

@@ -639,6 +639,8 @@
         C4_variables_artist: متغیرها - هنرمند
         C4_variables_playlab: متغیرها - آزمایشگاه بازی
         C4_for_loops: حلقه های "برای"
+        C4_for_loops_bee: حلقه های "برای"
+        C4_for_loops_no_bee: حلقه های "برای"
         C4_math_artist: برنامه نویسی هنرمند با ریاضی
         C4_function_edit: ویرایش تابع ها
         C4_function_create: ساختن تابع ها
@@ -667,6 +669,7 @@
         csp_pixelation_bw: نرم افزار پیکسل کردن سیاه و سفید
         csp_U1L14_tipstricks: توصیه ها و ترفند های معلم واحد 1 درس 14
         csp_textcompression: نرم افزار فشرده سازی متن
+        csp_textcompression_new: نرم افزار فشرده سازی متن
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -719,28 +722,30 @@
           را داخلش قرار دهید
         snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده
           کنید!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each
-          angle in degrees.
-        set_sides: Use this block to set "sides" to the number needed to complete
-          the puzzle.
-        set_length: Use this block to set "length" to the correct value.
-        which_equation: Which equation makes each side shorter for shapes with more
-          sides?
-        get_nectar: Use the new "get nectar" block.
-        actions_category: The tool box got a new look! The "Actions" blocks are in
-          here now.
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: Click here to open the "Functions" flyout, then click the
-          "Create a Function" button.
-        house_hint: It's ok if the picture doesn't look like a house yet. We will
-          fix it in the next puzzle.
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction
-          the Bee will turn to get the nectar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
-        length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را
+          به درجه بدست آورید.
+        set_sides: از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده
+          کنید.
+        set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
+        which_equation: کدام معادله هر ضلع را برای شکل هایی با اضلاع بیشتر کوتاهتر
+          می کند?
+        get_nectar: از بلوک جدید "شهد را بگیر" استفاده کن.
+        actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا
+          اینجا هستند.
+        draw_square_hint: 'راهنمایی: از حلقه ی مربع که به تازگی در معمای قبلی درست
+          کردید استفاده کنید.'
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه
+          ی "یک تابع بساز" را کلیک کنید.
+        house_hint: اشکالی ندارد اگر تصویر هنوز مثل یک خانه به نظر نمی رسد. در معمای
+          بعدی درستش می کنیم.
+        edit_draw_square: از این دکمه برای ویرایش تابع و اضافه کردن حلقه استفاده کنید.
+        edit_get_nectar: از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور
+          برای گرفتن شهد می چرخد را تغییر دهید.
+        logic_category: منوی "logic" را برای پیدا کردن بلوک "if/else" باز کنید.
+        length_parameter: می توانید این تابع را به روز کنید به طوری که از ورودی "طول"
+          استفاده کند?
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
         frozen_circle_function_in_circle_turn: Don't forget to turn after creating
           each circle.
         frozen_circle_function_with_parameter_circle: Use the "create a circle" block

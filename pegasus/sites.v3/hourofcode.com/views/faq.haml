@@ -12,7 +12,7 @@
 %div= hoc_s(:hoc_faq_when_is_hoc_a).gsub(/%{campaign_date}/, campaign_date('full'))
 
 %h2= hoc_s(:hoc_faq_why_cs_q)
-%div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_why_cs_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
 
 %h2= hoc_s(:hoc_faq_how_participate_q)
 %div= hoc_s(:hoc_faq_how_participate_a).gsub('/resources/how-to', resolve_url('/resources/how-to')).gsub(/%{campaign_date}/, campaign_date('start-short'))
@@ -40,10 +40,10 @@
 %div= hoc_s(:hoc_faq_frozen_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_high_school_q)
-%div= hoc_s(:hoc_faq_high_school_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_high_school_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
 
 %h2= hoc_s(:hoc_faq_scratch_q)
-%div= hoc_s(:hoc_faq_scratch_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_scratch_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
 
 %h2= hoc_s(:hoc_faq_count_hoc_q)
 %div= hoc_s(:hoc_faq_count_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
