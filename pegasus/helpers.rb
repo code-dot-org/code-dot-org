@@ -1,4 +1,5 @@
 require 'cdo/aws/s3'
+require_relative '../shared/middleware/helpers/storage_id'
 
 def avatar_image(name,width=320)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
@@ -11,6 +12,11 @@ def authentication_required!(url=request.url)
   dont_cache
   return if dashboard_user
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
+end
+
+def owns_channel?(encrypted_channel_id)
+  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  owner_storage_id == storage_id('user')
 end
 
 def dont_cache()
