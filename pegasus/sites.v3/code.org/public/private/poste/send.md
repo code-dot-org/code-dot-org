@@ -13,7 +13,7 @@
       <th>Recipients</th>
       <td><textarea name="recipients"></textarea></td>
     </tr>
-
+    
     <tr>
       <th>Recipients CSV</th>
       <td><input type="file" name="recipients_file" /></td>
