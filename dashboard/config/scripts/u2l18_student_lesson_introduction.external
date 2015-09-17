@@ -13,7 +13,7 @@ A “one-way function” is the computational version of a secret recipe: a func
 
 # Vocabulary
 
-one-way function: a process that is easy to follow for any given input, but yields an output that is hard to turn back to the original input. Brute force is typically required to solve is the key is unknown.
+**One-way Function:** a process that is easy to follow for any given input, but yields an output that is hard to turn back to the original input. Brute force is typically required to solve is the key is unknown.
 
 # Lesson
 

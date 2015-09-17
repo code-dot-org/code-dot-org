@@ -1,4 +1,10 @@
+* * *
 
+Titolo: informativa sulla privacy
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Informativa sulla privacy
 

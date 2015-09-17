@@ -721,10 +721,12 @@ Studio.callApiCode = function (name, func) {
 
 Studio.onTick = function() {
   Studio.tickCount++;
+  var i;
 
   Studio.clearDebugRects();
 
-  var animationOnlyFrame = false;
+  var animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
+  Studio.yieldThisTick = false;
 
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
@@ -733,20 +735,17 @@ Studio.onTick = function() {
   if (Studio.tickCount === 1) {
     callHandler('whenGameStarts');
   }
-  Studio.executeQueue('whenGameStarts');
-
-  if (Studio.JSInterpreter) {
-    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
-  }
-
-  callHandler('repeatForever');
-  Studio.executeQueue('repeatForever');
-
-  for (var i = 0; i < Studio.spriteCount; i++) {
-    Studio.executeQueue('whenSpriteClicked-' + i);
-  }
 
   if (!animationOnlyFrame) {
+    Studio.executeQueue('whenGameStarts');
+
+    callHandler('repeatForever');
+    Studio.executeQueue('repeatForever');
+
+    for (i = 0; i < Studio.spriteCount; i++) {
+      Studio.executeQueue('whenSpriteClicked-' + i);
+    }
+
     // Run key event handlers for any keys that are down:
     for (var key in KeyCodes) {
       if (Studio.keyState[KeyCodes[key]] &&
@@ -812,15 +811,17 @@ Studio.onTick = function() {
     Studio.executeQueue('when-up');
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
+
+    updateItems();
+
+    checkForCollisions();
   }
-
-  updateItems();
-
-  checkForCollisions();
 
   if (Studio.JSInterpreter && !animationOnlyFrame) {
     Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
   }
+
+  var spritesNeedMoreAnimationFrames = false;
 
   for (i = 0; i < Studio.spriteCount; i++) {
     if (!animationOnlyFrame) {
@@ -846,11 +847,19 @@ Studio.onTick = function() {
     // Display sprite:
     Studio.displaySprite(i, isWalking);
 
+    var sprite = Studio.sprite[i];
+    if (level.gridAlignedMovement &&
+        (sprite.x !== sprite.displayX || sprite.y !== sprite.displayY)) {
+      spritesNeedMoreAnimationFrames = true;
+    }
+
     Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
   }
 
-  performItemOrProjectileMoves(Studio.projectiles);
-  performItemOrProjectileMoves(Studio.items);
+  if (!animationOnlyFrame) {
+    performItemOrProjectileMoves(Studio.projectiles);
+    performItemOrProjectileMoves(Studio.items);
+  }
 
   sortDrawOrder();
 
@@ -865,7 +874,7 @@ Studio.onTick = function() {
       if (currentTime > Studio.succeededTime + level.delayCompletion) {
         Studio.onPuzzleComplete();
       }
-    } else {
+    } else if (!spritesNeedMoreAnimationFrames) {
       Studio.onPuzzleComplete();
     }
   }
@@ -1205,7 +1214,7 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
       if ((Studio.map[row][col] & SquareType.WALL) || 
-          (Studio.walls !== null && skin[Studio.walls][row][col])) {
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -2133,6 +2142,11 @@ Studio.execute = function() {
                                     'VALUE',
                                     ['left', 'right', 'up', 'down']);
     registerHandlers(handlers, 'studio_repeatForever', 'repeatForever');
+    registerHandlers(handlers,
+                     'studio_whenTouchItem',
+                     'whenSpriteCollided-' +
+                       (Studio.protagonistSpriteIndex || 0) +
+                       '-any_item');
     registerHandlersWithSingleSpriteParam(handlers,
                                     'studio_whenSpriteClicked',
                                     'whenSpriteClicked',
@@ -2450,6 +2464,7 @@ Studio.drawMapTiles = function (svg) {
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
+<<<<<<< HEAD
       if (Studio.isWallTile(row, col)) {
         // Skip if we've already drawn a large tile that covers this square.
         if (tilesDrawn[row][col]) {
@@ -2468,6 +2483,11 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
         Studio.drawWallTile(svg, row, col, largeTile);
+=======
+      if (mapVal & SquareType.WALL ||
+          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
+        Studio.drawWallTile(svg, row, col);
+>>>>>>> staging
       }
     }
   }
@@ -2675,14 +2695,26 @@ Studio.queueCmd = function (id, name, opts) {
   }
 };
 
-Studio.executeQueue = function (name) {
+//
+// Execute an entire command queue (specified with the name parameter)
+//
+// If Studio.yieldThisTick is true, execution of commands will stop
+//
+
+Studio.executeQueue = function (name, oneOnly) {
   Studio.eventHandlers.forEach(function (handler) {
+    if (Studio.yieldThisTick) {
+      return;
+    }
     if (handler.name === name && handler.cmdQueue.length) {
       for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
         if (Studio.callCmd(cmd)) {
           // Command executed immediately, remove from queue and continue
           handler.cmdQueue.shift();
         } else {
+          break;
+        }
+        if (Studio.yieldThisTick) {
           break;
         }
       }
@@ -3790,8 +3822,11 @@ Studio.moveSingle = function (opts) {
       }
       break;
   }
-  if (level.gridAlignedMovement && Studio.JSInterpreter) {
-    Studio.JSInterpreter.yield();
+  if (level.gridAlignedMovement) {
+    Studio.yieldThisTick = true;
+    if (Studio.JSInterpreter) {
+      Studio.JSInterpreter.yield();
+    }
   }
 };
 

@@ -4,3 +4,13 @@ title 'Public Key Crypto: Why is it safe?'
 markdown <<MARKDOWN
 Describe to a person who knows nothing about encryption why public key encryption is secure and is hard to crack.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students responses will vary but will like touch on the following ideas:
+
+- Public key encryption is built on top of one way functions, functions that are easy to do but hard to reverse
+- The functions used for public key encryption have two separate keys, a public one which allows for encrypting a message and a private one which allows for decrypting.
+- Since only the person a message is intended for has the private key, only they can decrypt a message
+- The functions used cannot be cracked by even the fastest computers available today in any reasonable amount of time.
+- Since the protocol for encryption is public, we (or other computer scientists) can test it ourselves and confirm its security. So far it seems that public key encryption techniques are truly secure.
+MARKDOWN

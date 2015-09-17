@@ -1,4 +1,4 @@
-<Studio>
+<StudioEC>
   <config><![CDATA[{
   "game_id": 39,
   "created_at": "2015-01-20T02:25:10.000Z",
@@ -10,16 +10,13 @@
     "background": "background3",
     "code_functions": {
       // Play Lab
-      "setSprite": null,
+      "setCharacter": null,
       "setBackground": null,
       "move": null,
       "playSound": null,
       "changeScore": null,
-      "setSpritePosition": null,
-      "setSpriteSpeed": null,
-      "setSpriteEmotion": null,
+      "setCharacterSpeed": null,
       "throwProjectile": null,
-      "vanish": null,
       "onEvent": null,
 
       // Control
@@ -109,4 +106,4 @@
   }
 }]]></config>
   <blocks/>
-</Studio>
+</StudioEC>

@@ -13,12 +13,12 @@ One of the more common (and interesting) fields investigated in computer science
 
 # Vocabulary
 
-* <b>Graph</b>: a diagram that shows the nodes and edges of a problem
-* <b>Node</b>: sometimes called a vertex; typically represented as a labeled circle
-* <b>Edge</b>: a line connecting two nodes
-* <b>Cost</b>: sometimes called the weight; the number associated with an edge that indicates distance, time, or economic cost 
-* <b>Cycle</b>: a set of edges that, begin at one node and can be followed through other nodes back where you started
-* <b>Tree</b>: a set of edges that connects nodes together in a way that does not form a cycle
+* **Graph**: a diagram that shows the nodes and edges of a problem
+* **Node**: sometimes called a vertex; typically represented as a labeled circle
+* **Edge**: a line connecting two nodes
+* **Cost**: sometimes called the weight; the number associated with an edge that indicates distance, time, or economic cost 
+* **Cycle**: a set of edges that, begin at one node and can be followed through other nodes back where you started
+* **Tree**: a set of edges that connects nodes together in a way that does not form a cycle
 
 
 # Lesson

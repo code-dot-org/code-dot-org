@@ -1,4 +1,4 @@
-<Studio>
+<StudioEC>
   <config><![CDATA[{
   "game_id": 39,
   "created_at": "2015-01-20T02:25:10.000Z",
@@ -8,14 +8,12 @@
     "edit_code": true,
     "skin": "hoc2015",
     "background": "background2",
+    "softButtons": "[\"leftButton\", \"rightButton\", \"downButton\", \"upButton\"]",
     "code_functions": {
-      // Play Lab
-      "setSprite": null,
+      "setCharacter": null,
       "setBackground": null,
       "playSound": null,
-
       "addItemsToScene": null,
-
       "moveEast": null,
       "moveWest": null,
       "moveNorth": null,
@@ -25,6 +23,7 @@
       "whenUp": null,
       "whenDown": null
     },
+    "start_blocks": "function whenLeft() {\n  moveWest();\n}\nfunction whenRight() {\n  moveEast();\n}\nfunction whenUp() {\n  moveNorth();\n}\nfunction whenDown() {\n  moveSouth();\n}",
 
     "sort_draw_order": true,
     "wall_map_collisions": true,
@@ -71,4 +70,4 @@
   }
 }]]></config>
   <blocks/>
-</Studio>
+</StudioEC>

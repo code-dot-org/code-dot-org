@@ -16,11 +16,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person workshop####
 Milestone Complete! 
-
-#### Online Study ####
- <b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
  
@@ -42,13 +38,15 @@ Quarter 4: Saturday, April 2, 2016
 Breakfast and lunch will be served.
 
 
-<b>September 19th Location</b><br/>
+**September 19th Location**
+
 IDLP Building<br/>
 Room 118<br/>
 3950 Pecos-McLeod Interconnect<br/>
 Las Vegas, NV 89121
-<br/> 
-<br/>
+
+Free parking is located in front of the building.
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger

@@ -23,6 +23,7 @@ var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./NetSimConstants').NodeType;
 var NetSimGlobals = require('./NetSimGlobals');
 var NetSimUtils = require('./NetSimUtils');
+var NetSimRouterNode = require('./NetSimRouterNode');
 
 /**
  * Apply a very small debounce to lobby buttons to avoid doing extra work
@@ -336,4 +337,21 @@ NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function () 
   // matches[1] is the first capture group (\d+), the numeric section ID.
   var sectionID = parseInt(matches[1], 10);
   return this.user_.ownsSection(sectionID);
+};
+
+/**
+ * @returns {boolean} TRUE if it's currently possible to add a new router.
+ *          Drives whether the "Add Router" button should be displayed.
+ */
+NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
+  var levelConfig = NetSimGlobals.getLevelConfig();
+  if (this.hasOutgoingRequest() || !levelConfig.showAddRouterButton) {
+    return false;
+  }
+
+  var routerLimit = NetSimRouterNode.getMaximumRoutersPerShard();
+  var routerCount = this.nodesOnShard_.filter(function (node) {
+    return NodeType.ROUTER === node.getNodeType();
+  }).length;
+  return routerCount < routerLimit;
 };

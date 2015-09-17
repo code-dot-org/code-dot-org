@@ -189,6 +189,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'background3';
+  skin.defaultWalls = 'maze2';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -212,7 +213,7 @@ function loadHoc2015(skin, assetUrl) {
     'item_walk_item1': 12,
     'item_walk_item2': 12,
     'item_walk_item3': 15,
-    'item_walk_item4': 8
+    'item_walk_item4': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -308,6 +309,14 @@ function loadHoc2015(skin, assetUrl) {
      [0, 0, 0, 0, 0, 0, 0, 0]];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
+  skin.wallChoices = [
+    [msg.setWallsHidden(), HIDDEN_VALUE],
+    [msg.setWallsRandom(), RANDOM_VALUE],
+    [msg.setWallsBorder(), '"border"'],
+    [msg.setWallsMaze(), '"maze"'],
+    [msg.setWallsMaze2(), '"maze2"']
+    ];
+
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     [msg.setBackgroundBackground1(), '"background1"'],
@@ -331,10 +340,10 @@ function loadHoc2015(skin, assetUrl) {
   skin.projectileChoices = [];
 
   skin.itemChoices = [
-    [msg.itemItem1(), '"item_item1"'],
-    [msg.itemItem2(), '"item_item2"'],
-    [msg.itemItem3(), '"item_item3"'],
-    [msg.itemItem4(), '"item_item4"'],
+    [msg.itemItem1(), '"item_walk_item1"'],
+    [msg.itemItem2(), '"item_walk_item2"'],
+    [msg.itemItem3(), '"item_walk_item3"'],
+    [msg.itemItem4(), '"item_walk_item4"'],
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
