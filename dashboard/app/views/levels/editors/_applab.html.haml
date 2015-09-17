@@ -80,6 +80,6 @@
           "click_count": 5,
           "button_color": "blue"
         }
-  = f.text_area 'data_kv', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_kv or ''
+  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
-    codeMirror('data_kv', 'javascript');
+    codeMirror('data_properties', 'javascript');

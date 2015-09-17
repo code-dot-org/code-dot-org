@@ -301,7 +301,7 @@ var handlePopulateTable = function (onSuccess, onError) {
 };
 
 /**
- * Populates the channel kv store with initial data
+ * Populates the key/value store with initial data
  * @param {string} jsonData The json data that represents the tables in the format of:
  *   {
  *     "click_count": 5,
@@ -312,12 +312,13 @@ var handlePopulateTable = function (onSuccess, onError) {
  * @param {function(string)} onError Function to call with an error message
  *    in case of failure.
  */
-AppStorage.populateKv = function (jsonData, overwrite, onSuccess, onError) {
+AppStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
   var req = new XMLHttpRequest();
-  req.onreadystatechange = handlePopulateKv.bind(req, onSuccess, onError);
+
+  req.onreadystatechange = handlePopulateKeyValue.bind(req, onSuccess, onError);
   var url = '/v3/shared-properties/' + AppStorage.getChannelId();
 
   if (overwrite) {
@@ -328,7 +329,7 @@ AppStorage.populateKv = function (jsonData, overwrite, onSuccess, onError) {
   req.send(jsonData);
 };
 
-var handlePopulateKv = function (onSuccess, onError) {
+var handlePopulateKeyValue = function (onSuccess, onError) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
