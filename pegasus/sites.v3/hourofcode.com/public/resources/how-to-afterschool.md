@@ -23,7 +23,7 @@ We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>"
 - Require minimal prep-time for organizers
 - Are self-guided - allowing kids to work at their own pace and skill-level
 
-<a href="http://<%=codeorg_url() %>/learn"><img src="/images/tutorials.png"width="700"/></a>
+<a href="<%= resolve_url('https://code.org/learn') %>"><img src="/images/tutorials.png"width="700"/></a>
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -60,7 +60,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **Direct participants to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. 
+- Write the tutorial link on a whiteboard. Find the link listed on the <a href="<%= resolve_url('https://code.org/learn') %>">information for your selected tutorial</a> under the number of participants. 
 
 **When someone comes across difficulties it's okay to respond:**
 

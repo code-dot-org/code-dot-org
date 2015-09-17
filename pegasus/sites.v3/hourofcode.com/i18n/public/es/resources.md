@@ -1,6 +1,6 @@
 ---
 layout: wide
-nav: resources_nav
+nav: promote_nav
 ---
 
 <div class="row">
@@ -15,25 +15,25 @@ nav: resources_nav
 
 ## Use este folleto para correr la voz
 
-[![](<%= localized_file('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
+[![](<%= localized_image('/images/fit-250/one-pager.png') %>)](<%= localized_file('/files/hoc-one-pager.pdf') %>)
 
 ## Entrega este volante a maestros y escuelas
 
-[![](<%= localized_file('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
+[![](<%= localized_image('/images/fit-250/schools-handout.png') %>)](<%= localized_file('/files/schools-handout.pdf') %>)
 
 <a id="videos"></a>
 
 ## Muestra estos vídeos para inspirar a los estudiantes
 
 <div style="float:left; padding:10px">
-  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
   <p>
     <a href="https://www.youtube.com/watch?v=nKIu9yen5nc"><strong>Lo que la mayoria de las escuelas no te enseñan(5 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
   </p>
 </div>
 
 <div style="float:left; padding:10px">
-  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
   <p>
     <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>La Hora de Código está aquí - Cualquiera pueden aprender</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
   </p>
@@ -43,14 +43,14 @@ nav: resources_nav
 </div>
 
 <div style="float:left; padding:10px">
-  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
   <p>
     <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>Presidente Obama en las ciencias de la computación</strong></a>
   </p>
 </div>
 
 <div style="float:left; padding:10px">
-  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>  
+  <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
   <p>
     <a href="https://www.youtube.com/watch?qYZF6oIZtfc"><strong>Cualquiera puede aprender (1 min)</strong></a> <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
   </p>
