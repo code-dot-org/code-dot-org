@@ -94,14 +94,11 @@ class PropertiesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
 
     bag = PropertyType.new(channel_id, storage_id(endpoint))
+    bag_hash = nil
     json_data.each do |k, v|
       if !overwrite
-        begin
-          bag.get(k)
-          next
-        rescue PropertyType::NotFound
-          # The value is not set
-        end
+        bag_hash ||= bag.to_hash
+        next if bag_hash.has_key? k
       end
       bag.set(k, v, request.ip)
     end
