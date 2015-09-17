@@ -189,6 +189,7 @@ function loadHoc2015(skin, assetUrl) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'background3';
+  skin.defaultWalls = 'maze2';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
@@ -308,6 +309,14 @@ function loadHoc2015(skin, assetUrl) {
      [0, 0, 0, 0, 0, 0, 0, 0]];
 
   // These are used by blocks.js to customize our dropdown blocks across skins
+  skin.wallChoices = [
+    [msg.setWallsHidden(), HIDDEN_VALUE],
+    [msg.setWallsRandom(), RANDOM_VALUE],
+    [msg.setWallsBorder(), '"border"'],
+    [msg.setWallsMaze(), '"maze"'],
+    [msg.setWallsMaze2(), '"maze2"']
+    ];
+
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
     [msg.setBackgroundBackground1(), '"background1"'],

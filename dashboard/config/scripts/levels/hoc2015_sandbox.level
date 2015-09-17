@@ -10,16 +10,13 @@
     "background": "icy",
     "code_functions": {
       // Play Lab
-      "setSprite": null,
+      "setCharacter": null,
       "setBackground": null,
       "move": null,
       "playSound": null,
       "changeScore": null,
-      "setSpritePosition": null,
-      "setSpriteSpeed": null,
-      "setSpriteEmotion": null,
+      "setCharacterSpeed": null,
       "throwProjectile": null,
-      "vanish": null,
       "onEvent": null,
 
       // Control

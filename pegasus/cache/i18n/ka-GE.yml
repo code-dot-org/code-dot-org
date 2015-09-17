@@ -59,6 +59,10 @@
   thank_you_: მადლობა!
   congratulations: გილოცავ!
   congratulations_on_completing_hoc: გილოცავ! კოდის ერთი საათი დასრულებულია
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: მიიღე სერტიფიკატი
   enter_valid_age: აირჩიეთ რეალური ასაკი
   enter_valid_email: შეიყვანეთ რეალური ელ. ფოსტის მისამართი
@@ -323,6 +327,9 @@
   dashboard_hoc_courses: კოდის ერთი საათი ნებისმიერი ასაკისთვის
   dashboard_hoc_courses_desc: სცადეთ ეს მოკლე ერთსაათიანი გაკვეთილები თქვენს მოსწავლეებთან
     ერთად!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: ოცსაათიანი კურსი K-5
   dashboard_k5_courses_desc: ამ კურსებში გაერთიანებულია ონლაინ-ტუტორიალები და ისეთი
     აქტივობები, რომელთაც საერთოდ არ სჭირდებათ კომპიუტერი. ყოველი კურსი დაახლოებით
@@ -516,6 +523,11 @@
   code_hoc_coming: გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!
   code_sign_up: დარეგისტრირდი და მიიღე მონაწილეობა CS განათლების კვირეულში
   learn_more: გაიგე მეტი
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: რეგისტრაცია
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: ნახე ჩვენი ახალი კოდის ერთი საათის გაკვეთილები
   hoc2014_try_new_tutorial: ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია
   hoc2014_try_scrat: Angry Birds, PvZ და Scrat
@@ -723,7 +735,7 @@
   hourofcode_shortdescription: შემავსებელი ახალი code.org/hoc
   frozen_shortdescription: გამოიყენე კოდი და შეუერთდი ანასა და ელზას ყინულის მაგიის
     აღმოჩენაში.
-  playlab_shortdescription: შექმენი ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
+  playlab_shortdescription: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
   codeorg_longdescription: ისწავლე ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავს ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლე გამეორების ციკლები,
@@ -1165,4 +1177,4 @@
   compatibility_https_message: უსაფრთხოების დონის ასამაღლებლად %{https_date} გადავდივართ
     HTTPS -ზე. ამ თარიღის შემდეგ Code.org-ზე ვეღარ შემოხვალთ. <a href='%{it_requirements_url}'>დააჭირეთ
     აქ</a> და გაიგეთ, როგორ ჩართოთ HTTPS Code.org-ისთვის.
-  compatibility_https_hide_this_warning: ამ გაფრთხილების გათიშვა
+  compatibility_https_hide_this_warning: გაფრთხილების გათიშვა
