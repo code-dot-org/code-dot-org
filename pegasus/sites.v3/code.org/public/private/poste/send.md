@@ -1,6 +1,4 @@
-<% template = DB[:poste_messages].where(name: 'Andre').first %>
-    
-<%= view :breadcrumbs, trail: [{text: 'Dashboard', url:'/poste'}, {text:'Test Mail'}] %>
+    <%= view :breadcrumbs, trail: [{text: 'Dashboard', url:'/poste'}, {text:'Test Mail'}] %>
 
 ## Send Test Message
 
@@ -28,7 +26,3 @@
       <td><input type="submit"/></td>
   <table>
 </form>
-
-<h1>
-  <%= template %>
-</h1>
