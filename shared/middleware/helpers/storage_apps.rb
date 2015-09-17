@@ -65,7 +65,7 @@ class StorageApps
   end
 
   def get_abuse(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -74,7 +74,7 @@ class StorageApps
   end
 
   def increment_abuse(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -88,7 +88,7 @@ class StorageApps
   end
 
   def reset_abuse(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
