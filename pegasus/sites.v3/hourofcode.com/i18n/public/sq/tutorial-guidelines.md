@@ -1,14 +1,14 @@
 * * *
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+titulli: <%= hoc_s(:title_tutorial_guidelines) %> shtrirje: e gjerë
 
 * * *
 
 <%= view :signup_button %>
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+# Udhëzime tutoriali për Orën e Kodimit dhe Javës së Arsimimit në Shkencat Kompjuterike
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.Org do të jetë nikoq i disa aktiviteteve të Orës së Kodimit në Code.org, Orën e Kodimit dhe website-in CSEdWeek. Lista aktuale është në<<%= resolve_url('https://code.org/learn') %>>.
 
 Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor është optimizimi i përvojave të nxënësve dhe mësuesve, të cilët janë të rinj në shkencat kompjuterike. Ju lutem përdorni këtë dokument si udhëzues për zhvillimin e aktivitetit tuaj, që i drejtohet përdoruesve të cilët nuk kanë njohuri në kodim, programim kompjuterik apo në shkencat kompjuterike.
 
