@@ -209,25 +209,18 @@ class NetSimApi < Sinatra::Base
     begin
       body = JSON.parse(request.body.read)
     rescue JSON::ParserError
-      json_bad_request(details: INSERT_ERRORS[:malformed])
+      json_bad_request(INSERT_ERRORS[:malformed])
     end
 
     # Determine whether or not we are performing a multi-insert and
     # normalize our request body into an array of values
-    if body.is_a?(Array)
-      multi_insert = true
-      values = body
-    elsif body.is_a?(Hash)
-      multi_insert = false
-      values = [body]
-    else
-      json_bad_request
-    end
+    multi_insert = body.is_a?(Array)
+    values = multi_insert ? body : [body]
 
     validation_errors = validate_all(shard_id, table_name, values)
     unless validation_errors.none?
       error_details = multi_insert ? validation_errors : validation_errors.first
-      json_bad_request(details: error_details)
+      json_bad_request(error_details)
     end
 
     # If we get all the way down here without errors, insert everything
