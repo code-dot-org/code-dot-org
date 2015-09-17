@@ -3,47 +3,19 @@ require_relative '../deployment'
 
 MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typically this takes a couple minutes
 
-Aws.config.update({
-                      region: CDO.aws_region,
-                      credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key),
-                  })
-
 ec2client = Aws::EC2::Client.new
 
 instances = ec2client.describe_instances
 
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
-instance_distribution = Hash.new(0)
+frontend_instances = []
 
 instances.reservations.each do |reservation|
-  reservation.instances.each do |instance|
-    unless instance.state.name == 'running'
-      next
-    end
-
-    is_frontend = true
-
-    instance.tags.each do |tag|
-      if tag.key == 'Name' and not tag.value.include? 'frontend'
-        is_frontend = false
-        break
-      end
-    end
-
-    unless is_frontend
-      next
-    end
-
-    availability_zone = instance.placement.availability_zone
-    if instance_distribution.has_key?(availability_zone)
-      instance_distribution[availability_zone] += 1
-    else
-      instance_distribution[availability_zone] = 1
-    end
-  end
+  frontends_for_reservation = reservation.instances.select{|instance| instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
+  frontend_instances << frontends_for_reservation unless frontends_for_reservation.size == 0
 end
 
-puts "Current availability zone distribution #{instance_distribution}"
+instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution| instance_distribution[instance.placement.availability_zone] += 1}
 
 determined_instance_zone = instance_distribution.select { |_, v| v == instance_distribution.values.min }.keys[0]
 
@@ -59,7 +31,7 @@ run_instance_response = ec2client.run_instances ({
                                                     image_id: 'ami-d05e75b8',  #Image ID for ubuntu instance we use
                                                     instance_type: 'c3.8xlarge',
                                                     monitoring: {
-                                                        enabled:true
+                                                        enabled: true
                                                     },
                                                     disable_api_termination: true, #Prevent against accidental termination
                                                     placement: {
@@ -80,27 +52,28 @@ run_instance_response = ec2client.run_instances ({
 
 instance_id = run_instance_response.instances[0].instance_id
 puts "Looking for instance id  #{instance_id}"
-time_waited = 0
 
-while time_waited < MAX_WAIT_TIME
-  time_waited += 5
-  sleep(5)
-  puts 'Checking for instance creation'
-  instance_status_response = ec2client.describe_instance_status({instance_ids:[instance_id]})
-
-  unless instance_status_response.instance_statuses.empty?
-    instance_state = instance_status_response.instance_statuses[0].instance_state.name
-    puts "Instance ID #{instance_id} is now #{instance_state}"
-    if instance_state == 'running'
-      break
-    end
+started_at = Time.now
+ec2client.wait_until(:instance_running, instance_ids: [instance_id]) do |waiting|
+  if Time.now - started_at > MAX_WAIT_TIME
+    puts "Instance #{instance_id} still not created. Giving up - check the EC2 console and see if there's an error."
+    exit(1);
   end
 end
 
-unless instance_state == 'running'
-  puts "Unable to create instance after waiting #{time_waited} seconds"
-  exit(1)
+puts "Instance #{instance_id} is now running"
+
+started_at = Time.now
+
+ec2client.wait_until(:instance_status_ok, instance_ids: [instance_id]) do |waiting|
+  if Time.now - started_at > MAX_WAIT_TIME
+    puts "Instance #{instance_id} was created but has not passed status checks. Giving up - check the EC2 console and see if there's an error."
+    exit(1);
+  end
 end
+
+puts "Instance #{instance_id} is okay and can be added to load balancers"
+
 
 #Tag the instance with a name
 ec2client.create_tags({
