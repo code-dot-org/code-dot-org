@@ -45,9 +45,9 @@ var NetSimApiError = module.exports = function (request) {
   if (request) {
     this.message = 'status: ' + request.status + '; error: ' + request.statusText;
     try {
-      var responseJson = JSON.parse(request.responseText);
-      if (responseJson.details) {
-        this.details = responseJson.details;
+      var response = JSON.parse(request.responseText);
+      if (response.details) {
+        this.details = response.details;
         this.message += '; details: ' + JSON.stringify(this.details);
       }
     } catch (e) {
@@ -61,7 +61,7 @@ NetSimApiError.inherits(Error);
  * Ways that a row insert operation can fail via NetSimApi.
  * @enum {string}
  */
-NetSimApiError.InsertError = {
+NetSimApiError.ValidationError = {
   MALFORMED: 'malformed',
   CONFLICT: 'conflict',
   LIMIT_REACHED: 'limit_reached'

@@ -343,16 +343,16 @@ NetSimLobby.prototype.doesShardContainRouter = function () {
 NetSimLobby.prototype.addRouterToLobby = function () {
   NetSimRouterNode.create(this.shard_, function (err) {
     if (err) {
-      var InsertError = NetSimApiError.InsertError;
+      var ValidationError = NetSimApiError.ValidationError;
       switch (err.details) {
-        case InsertError.CONFLICT:
+        case ValidationError.CONFLICT:
           // Another router with the same routerNumber already exists.
           // Ignore this; to the user it looks like it worked!
           logger.warn('Did not create router; ' +
               'Another user created a router at the same time.');
           break;
 
-        case InsertError.LIMIT_REACHED:
+        case ValidationError.LIMIT_REACHED:
           // The server's router limit has been reached.
           // Usually the client will remove the "Add Router" button first.
           logger.warn('Did not create router; Router limit reached.');
