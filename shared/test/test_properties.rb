@@ -7,17 +7,16 @@ require File.expand_path '../../middleware/properties_api', __FILE__
 ENV['RACK_ENV'] = 'test'
 
 class PropertiesTest < Minitest::Test
+  def setup
+    init_apis
+    create_channel
+  end
 
-  def init_api
-    # The Properties API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
+  def teardown
+    delete_channel
   end
 
   def test_get_set_delete
-    init_api
-    create_channel
-
     key = '_testKey'
     value_string = "one".to_json
     value_num = 2.to_json
@@ -36,14 +35,22 @@ class PropertiesTest < Minitest::Test
 
     get_key_value(key)
     assert @properties.last_response.not_found?
+  end
 
-    delete_channel
+  def test_auth
+    set_key_value('k', 'v'.to_json)
+    assert JSON.parse(list(@properties, @channel_id)).length == 1, "Owner can list all properties."
+
+    # This mock of the PropertiesApi does not share cookies with @channels.
+    other_properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
+
+    list(other_properties, @channel_id)
+    assert other_properties.last_response.unauthorized?, "Non-owner cannot list all properties."
+
+    delete_key_value('k')
   end
 
   def test_multiset
-    init_api
-    create_channel
-
     # Basic multi-setting
     data = {
       'a' => 1,
@@ -71,12 +78,21 @@ class PropertiesTest < Minitest::Test
     data2.each do |k, v|
       assert_equal v.to_json, get_key_value(k)
     end
-
-    delete_channel
   end
 
   # Methods below this line are test utilities, not actual tests
   private
+
+  def init_apis
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+
+    # Make sure the properties api has the same storage id cookie used by the channels api.
+    @channels.get '/v3/channels'
+    cookies = @channels.last_response.headers['Set-Cookie']
+    properties_mock_session = Rack::MockSession.new(PropertiesApi, "studio.code.org")
+    properties_mock_session.cookie_jar.merge(cookies)
+    @properties = Rack::Test::Session.new(properties_mock_session)
+  end
 
   def create_channel
     @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -100,6 +116,10 @@ class PropertiesTest < Minitest::Test
   def delete_key_value(key)
     @properties.delete "/v3/shared-properties/#{@channel_id}/#{key}"
     assert @properties.last_response.successful?
+  end
+
+  def list(properties, channel_id)
+    properties.get("/v3/shared-properties/#{channel_id}").body
   end
 
   def multiset(values, overwrite)
