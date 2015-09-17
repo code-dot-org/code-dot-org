@@ -51,17 +51,17 @@ social:
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
 
-  .fullwidthimage#fullwidth0{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/fistbump.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 70% 20%"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/fistbump.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 70% 20%"}
 
-  .fullwidthimage#fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl2.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl2.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  .fullwidthimage#fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/malala_2x.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 20%"}
+  #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/malala_2x.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 20%"}
 
-  .fullwidthimage#fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  .fullwidthimage#fullwidth4{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy5_2x.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 10%;"}
+  #fullwidth4{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy5_2x.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 10%;"}
 
-  .fullwidthimage#fullwidth5{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/nba_cares.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+  #fullwidth5{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/nba_cares.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
 
   #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 
@@ -73,10 +73,14 @@ social:
     .container
       .row
         .col-sm-6.col-xs-12.col-md-7
-          #leftbox{style: "position:relative; margin-top:60px; padding-bottom:20px"}
-            #leftvideo{style: "width: 100%;"}
-              = view :index_video
-              %div{style:"clear:both"}
+          %div{style: "height: 380px;"}
+            #leftbox
+              #leftvideo{style: "width: 100%;"}
+                = view :index_video
+                %div{style:"clear:both"}
+              #leftbutton.visible-xs
+                %h1.front-header-banner.watch-video=hoc_s(:front_watch_regular_video)
+                %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer"}
         .col-sm-6.col-xs-12.col-md-4
           #textbacking
             %div.front-header-banner{style: "color:white; margin-top:0px;"}
@@ -91,8 +95,8 @@ social:
                 %a#tryitbutton.ctabuttonatag{href: resolve_url('https://code.org/learn')}
                   %button.ctabutton
                     =hoc_s(:front_join_us_try)
-            #remainder{style: "text-align:center; margin-top: 15px;"}
-              %div{onclick: "return startVideo();", style: "color:white; cursor:pointer; font-size: 16px;"}
+            #remainder.hidden-xs{style: "text-align:center; margin-top: 15px;"}
+              %div.watch-video-small{onclick: "return startVideo();"}
                 =hoc_s(:front_watch_regular_video)
                 %img{src: "/images/play-button.png", width: "25", onclick: "return startVideo();", style: "cursor: pointer"}
 
