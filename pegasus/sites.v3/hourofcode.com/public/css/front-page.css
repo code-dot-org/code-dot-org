@@ -4,6 +4,7 @@
   height: 40px;
   padding-left: 30px;
   padding-right: 30px;
+  margin: 5px 0px;
 }
 
 .ctabuttonatag {
@@ -60,4 +61,37 @@
   border-radius: 5px;
   padding: 10px;
   text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
+}
+
+.watch-video {
+  color:white;
+  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1);
+  margin-top: 0px;
+  margin-bottom:10px;
+  padding:20px
+}
+
+#leftbutton {
+  position:absolute;
+  left:0;
+  top:0;
+  text-align:center;
+  width:100%;
+}
+
+#leftbox {
+  position:relative;
+  margin-top:60px;
+  padding-bottom:20px;
+  height: 300px;
+}
+
+#leftvideo {
+  width: 100%;
+}
+
+.watch-video-small {
+  color:white;
+  cursor:pointer;
+  font-size: 16px;
 }
