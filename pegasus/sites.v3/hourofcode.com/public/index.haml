@@ -1,7 +1,7 @@
 ---
 layout: wide_index
 theme: responsive
-title: "<%= hoc_s(:front_title) %>"
+title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short')) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
