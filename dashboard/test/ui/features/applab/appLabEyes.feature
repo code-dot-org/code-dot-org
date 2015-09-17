@@ -1,5 +1,5 @@
 @eyes
-Feature: Applab Stuff
+Feature: App Lab Eyes
 
 @dashboard_db_access
 Scenario: Button shows up on top of canvas
