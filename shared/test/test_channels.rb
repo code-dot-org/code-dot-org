@@ -129,7 +129,8 @@ class ChannelsTest < Minitest::Test
     delete "/v3/channels/#{channel_id}/abuse"
     assert last_response.unauthorized?
 
-    # TODO - make sure delete works for admins
+    # Idealy we would also test that deleting abuse works when we're an admin
+    # but don't currently have a way to simulate admin from tests
   end
 
 end
