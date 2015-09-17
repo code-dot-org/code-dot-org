@@ -71,13 +71,6 @@ post '/v2/poste/send-message' do
     recipients << recipient["email"]
   end
 
-  if params[:template_file]
-    DB[:poste_messages].insert(
-      name: params[:template_file][:filename],
-      template_file: params[:template_file][:tempfile].read
-    )
-  end
-
   recipients.each do |email|
     recipient = Poste2.ensure_recipient(email, ip_address: request.ip)
     Poste2.send_message(template, recipient, template_params)
