@@ -23,7 +23,7 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "learn.code.org"
 
-    get :set_locale, :return_to => "http://blahblah", :locale => "es-ES"
+    get :set_locale, return_to: "http://blahblah", locale: "es-ES"
 
     assert_equal "es-ES", cookies[:language_]
 
@@ -38,14 +38,14 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "learn.code.org"
 
-    get :set_locale, :return_to => ["blah"], :locale => "es-ES"
+    get :set_locale, return_to: ["blah"], locale: "es-ES"
 
     assert_redirected_to '["blah"]'
   end
 
   test "if return_to in set_locale is nil redirects to homepage" do
     request.host = "learn.code.org"
-    get :set_locale, :return_to => nil, :locale => "es-ES"
+    get :set_locale, return_to: nil, locale: "es-ES"
     assert_redirected_to '/'
   end
 

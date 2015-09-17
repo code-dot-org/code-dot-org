@@ -18,10 +18,10 @@ class ReportsControllerTest < ActionController::TestCase
     @script_level2.move_to_bottom
 
     @teacher = create(:teacher)
-    @teacher_section = create(:section, :user => @teacher)
+    @teacher_section = create(:section, user: @teacher)
 
     @student = create(:user)
-    @follower = Follower.create(:section => @teacher_section, :user => @teacher, :student_user => @student)
+    @follower = Follower.create(section: @teacher_section, user: @teacher, student_user: @student)
 
     @other_student = create(:user)
   end
@@ -31,13 +31,13 @@ class ReportsControllerTest < ActionController::TestCase
   end
 
   test "should get user_stats" do
-    get :user_stats, :user_id => @not_admin.id
+    get :user_stats, user_id: @not_admin.id
     assert_response :success
   end
 
   test "should not get user_stats if not signed in" do
     sign_out @admin
-    get :user_stats, :user_id => @not_admin.id
+    get :user_stats, user_id: @not_admin.id
 
     assert_redirected_to_sign_in
   end
@@ -45,7 +45,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should get user_stats for yourself if not admin" do
     sign_in @not_admin
 
-    get :user_stats, :user_id => @not_admin.id
+    get :user_stats, user_id: @not_admin.id
 
     assert_response :success
   end
@@ -53,7 +53,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should get user_stats for students if teacher" do
     sign_in @teacher
 
-    get :user_stats, :user_id => @student.id
+    get :user_stats, user_id: @student.id
 
     assert_response :success
   end
@@ -61,7 +61,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should not get user_stats for other users if not admin" do
     sign_in create(:user)
 
-    get :user_stats, :user_id => @not_admin.id
+    get :user_stats, user_id: @not_admin.id
 
     assert_response :forbidden
   end
@@ -156,13 +156,13 @@ class ReportsControllerTest < ActionController::TestCase
 
 
   test "should get usage" do
-    get :usage, :user_id => @not_admin.id
+    get :usage, user_id: @not_admin.id
     assert_response :success
   end
 
   test "should not get usage if not signed in" do
     sign_out @admin
-    get :usage, :user_id => @not_admin.id
+    get :usage, user_id: @not_admin.id
 
     assert_redirected_to_sign_in
   end
@@ -170,7 +170,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should get usage for yourself if not admin" do
     sign_in @not_admin
 
-    get :usage, :user_id => @not_admin.id
+    get :usage, user_id: @not_admin.id
 
     assert_response :success
   end
@@ -179,7 +179,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should get usage for students if teacher" do
     sign_in @teacher
 
-    get :usage, :user_id => @student.id
+    get :usage, user_id: @student.id
 
     assert_response :success
   end
@@ -187,7 +187,7 @@ class ReportsControllerTest < ActionController::TestCase
   test "should not get usage for other users if not admin or teacher" do
     sign_in create(:user)
 
-    get :usage, :user_id => @not_admin.id
+    get :usage, user_id: @not_admin.id
 
     assert_response :forbidden
   end
@@ -257,19 +257,19 @@ class ReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_stats
 
   test "should get level_stats" do
-    get :level_stats, {:level_id => create(:level).id}
+    get :level_stats, {level_id: create(:level).id}
     assert_response :success
   end
 
   test "should not get level_stats if not admin" do
     sign_in @not_admin
-    get :level_stats, {:level_id => create(:level).id}
+    get :level_stats, {level_id: create(:level).id}
     assert_response :forbidden
   end
 
   test "should not get level_stats if not signed in" do
     sign_out @admin
-    get :level_stats, {:level_id => create(:level).id}
+    get :level_stats, {level_id: create(:level).id}
 
     assert_redirected_to_sign_in
   end
@@ -277,21 +277,21 @@ class ReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :assume_identity_form
 
   test "should assume_identity" do
-    post :assume_identity, {:user_id => @not_admin.id}
+    post :assume_identity, {user_id: @not_admin.id}
     assert_redirected_to '/'
 
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first
   end
 
   test "should assume_identity by username" do
-    post :assume_identity, {:user_id => @not_admin.username}
+    post :assume_identity, {user_id: @not_admin.username}
     assert_redirected_to '/'
 
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first
   end
 
   test "should assume_identity by email" do
-    post :assume_identity, {:user_id => @not_admin.email}
+    post :assume_identity, {user_id: @not_admin.email}
     assert_redirected_to '/'
 
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first
@@ -302,14 +302,14 @@ class ReportsControllerTest < ActionController::TestCase
     email = 'someone_under13@somewhere.xx'
     user = create :user, age: 12, email: email
 
-    post :assume_identity, {:user_id => email}
+    post :assume_identity, {user_id: email}
     assert_redirected_to '/'
 
     assert_equal user.id, session['warden.user.user.key'].first.first
   end
 
   test "should assume_identity error if not found" do
-    post :assume_identity, {:user_id => 'asdkhaskdj'}
+    post :assume_identity, {user_id: 'asdkhaskdj'}
 
     assert_response :success
 
@@ -318,38 +318,38 @@ class ReportsControllerTest < ActionController::TestCase
 
   test "should not assume_identity if not admin" do
     sign_in @not_admin
-    post :assume_identity, {:user_id => @admin.id}
+    post :assume_identity, {user_id: @admin.id}
     assert_response :forbidden
     assert_equal @not_admin.id, session['warden.user.user.key'].first.first # no change
   end
 
   test "should not assume_identity if not signed in" do
     sign_out @admin
-    post :assume_identity, {:user_id => @admin.id}
+    post :assume_identity, {user_id: @admin.id}
 
     assert_redirected_to_sign_in
   end
 
   test "should lookup_section" do
-    post :lookup_section, {:section_code => @teacher_section.code}
+    post :lookup_section, {section_code: @teacher_section.code}
     assert_select '#section_owner', 'Owner: ' + @teacher.email
   end
 
   test "should lookup_section error if not found" do
-    post :lookup_section, {:section_code => 'ZZZZ'}
+    post :lookup_section, {section_code: 'ZZZZ'}
     assert_response :success
     assert_select '.container .alert-danger', 'Section code not found'
   end
 
   test "should not lookup_section if not admin" do
     sign_in @not_admin
-    post :lookup_section, {:section_code => @teacher_section.code}
+    post :lookup_section, {section_code: @teacher_section.code}
     assert_response :forbidden
   end
 
   test "should not lookup_section if not signed in" do
     sign_out @admin
-    post :lookup_section, {:section_code => @teacher_section.code}
+    post :lookup_section, {section_code: @teacher_section.code}
     assert_redirected_to_sign_in
   end
 

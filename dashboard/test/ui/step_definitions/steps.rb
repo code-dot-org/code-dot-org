@@ -23,7 +23,7 @@ Given /^I am on "([^"]*)"$/ do |url|
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
-  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.find_element(selection_criteria) }
 end
@@ -37,7 +37,7 @@ When /^I close the dialog$/ do
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
-  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   @browser.find_element(selection_criteria)
 end
 

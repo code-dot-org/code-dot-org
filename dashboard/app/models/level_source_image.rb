@@ -52,8 +52,8 @@ class LevelSourceImage < ActiveRecord::Base
     end
 
     begin
-      framed_image = ImageLib::overlay_image(:background_url => Rails.root.join(frame_image_filename),
-                                             :foreground_blob => image).to_blob
+      framed_image = ImageLib::overlay_image(background_url: Rails.root.join(frame_image_filename),
+                                             foreground_blob: image).to_blob
     rescue Magick::ImageMagickError # something wrong with the image
       return false
     end

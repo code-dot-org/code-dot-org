@@ -60,11 +60,11 @@ class ScriptDSL < BaseDSL
 
   def level(name, properties = {})
     @levels << {
-      :name => name,
-      :stage => @stage,
-      :skin => @skin,
-      :concepts => @concepts.join(','),
-      :video_key => @video_key_for_next_level
+      name: name,
+      stage: @stage,
+      skin: @skin,
+      concepts: @concepts.join(','),
+      video_key: @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
     @video_key_for_next_level = nil
   end

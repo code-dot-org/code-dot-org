@@ -61,26 +61,26 @@ SQL
 
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
-      @teacher_count = User.where(:user_type => 'teacher').count
+      @teacher_count = User.where(user_type: 'teacher').count
       @student_count = @user_count - @teacher_count
       @users_with_teachers = Follower.distinct.count(:student_user_id)
       @users_with_email = User.where('email <> ""').count
       @users_with_confirmed_email = User.where('confirmed_at IS NOT NULL').count
-      @girls = User.where(:gender => 'f').count
-      @boys = User.where(:gender => 'm').count
+      @girls = User.where(gender: 'f').count
+      @boys = User.where(gender: 'm').count
 
       @prizes_redeemed = Prize.where('user_id IS NOT NULL').group(:prize_provider).count
       @prizes_available = Prize.where('user_id IS NULL').group(:prize_provider).count
 
-      @student_prizes_earned = User.where(:prize_earned => true).count
+      @student_prizes_earned = User.where(prize_earned: true).count
       @student_prizes_redeemed = Prize.where('user_id IS NOT NULL').count
       @student_prizes_available = Prize.where('user_id IS NULL').count
 
-      @teacher_prizes_earned = User.where(:teacher_prize_earned => true).count
+      @teacher_prizes_earned = User.where(teacher_prize_earned: true).count
       @teacher_prizes_redeemed = TeacherPrize.where('user_id IS NOT NULL').count
       @teacher_prizes_available = TeacherPrize.where('user_id IS NULL').count
 
-      @teacher_bonus_prizes_earned = User.where(:teacher_bonus_prize_earned => true).count
+      @teacher_bonus_prizes_earned = User.where(teacher_bonus_prize_earned: true).count
       @teacher_bonus_prizes_redeemed = TeacherBonusPrize.where('user_id IS NOT NULL').count
       @teacher_bonus_prizes_available = TeacherBonusPrize.where('user_id IS NULL').count
     end
@@ -118,11 +118,11 @@ SQL
 
     @level = Level.find(params[:level_id])
 
-    best_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    passing_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    finished_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    unsuccessful_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    all_but_best_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
+    best_code_map = Hash.new{|h,k| h[k] = {level_source_id: k, count: 0, popular: false} }
+    passing_code_map = Hash.new{|h,k| h[k] = {level_source_id: k, count: 0, popular: false} }
+    finished_code_map = Hash.new{|h,k| h[k] = {level_source_id: k, count: 0, popular: false} }
+    unsuccessful_code_map = Hash.new{|h,k| h[k] = {level_source_id: k, count: 0, popular: false} }
+    all_but_best_code_map = Hash.new{|h,k| h[k] = {level_source_id: k, count: 0, popular: false} }
 
     Activity.all.where(['level_id = ?', @level.id]).order('id desc').limit(10000).each do |activity|
       # Do not process activity records with nil level_source_id
@@ -179,12 +179,12 @@ SQL
   def assume_identity
     authorize! :manage, :all
 
-    user = User.where(:id => params[:user_id]).first
-    user ||= User.where(:username => params[:user_id]).first
+    user = User.where(id: params[:user_id]).first
+    user ||= User.where(username: params[:user_id]).first
     user ||= User.find_by_email_or_hashed_email params[:user_id]
 
     if user
-      sign_in user, :bypass => true
+      sign_in user, bypass: true
       redirect_to '/'
     else
       flash[:alert] = 'User not found'

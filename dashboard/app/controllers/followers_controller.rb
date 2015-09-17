@@ -69,9 +69,9 @@ class FollowersController < ApplicationController
         redirect_to root_path, alert: I18n.t('follower.error.cant_join_own_section') and return
       end
 
-      follower_same_user_teacher = current_user.followeds.where(:user_id => @section.user_id).first
+      follower_same_user_teacher = current_user.followeds.where(user_id: @section.user_id).first
       if follower_same_user_teacher.present?
-        follower_same_user_teacher.update_attributes!(:section_id => @section.id)
+        follower_same_user_teacher.update_attributes!(section_id: @section.id)
       else
         Follower.create!(user_id: @section.user_id, student_user: current_user, section: @section)
       end

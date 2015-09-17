@@ -16,15 +16,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script = Script.twenty_hour_script
     @script_level = @script.script_levels.fifth
 
-    @custom_script = create(:script, :name => 'laurel')
+    @custom_script = create(:script, name: 'laurel')
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', position: 1)
     @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', position: 2)
     @custom_s1_l1 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_1, :position => 1)
+                           stage: @custom_stage_1, position: 1)
     @custom_s2_l1 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_2, :position => 1)
+                           stage: @custom_stage_2, position: 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_2, :position => 2)
+                           stage: @custom_stage_2, position: 2)
   end
 
   test 'should show script level for twenty hour' do
@@ -153,7 +153,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # The video would get autoplayed on the next level if not tracked as seen
     script = create(:script)
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
-    level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
+    level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, position: 1)
     assert_nil session[:videos_seen]
 
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
@@ -257,7 +257,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "next redirects to first non-unplugged level for custom scripts" do
-    custom_script = create(:script, :name => 'coolscript')
+    custom_script = create(:script, name: 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
     plugged_stage = create(:stage, script: custom_script, name: 'plugged stage', position: 2)
@@ -270,21 +270,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "next when logged in redirects to first non-unplugged non-finished level" do
     sign_in @student
 
-    custom_script = create(:script, :name => 'coolscript')
+    custom_script = create(:script, name: 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
-    first_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 1)
+    first_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 1)
     UserLevel.create(user: @student, level: first_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    second_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 2)
+    second_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 2)
     UserLevel.create(user: @student, level: second_level.level, script: custom_script, attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 3)
-    last_level = create(:script_level, script: custom_script, stage: custom_stage_1, :position => 4)
+    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, position: 3)
+    last_level = create(:script_level, script: custom_script, stage: custom_stage_1, position: 4)
 
     get :next, script_id: 'coolscript'
     assert_redirected_to "/s/coolscript/stage/#{last_level.stage.position}/puzzle/#{last_level.position}"
   end
 
   test "next skips entire unplugged stage" do
-    custom_script = create(:script, :name => 'coolscript')
+    custom_script = create(:script, name: 'coolscript')
     unplugged_stage = create(:stage, script: custom_script, name: 'unplugged stage', position: 1)
     create(:script_level, level: create(:unplugged), script: custom_script, stage: unplugged_stage, position: 1)
     create(:script_level, script: custom_script, stage: unplugged_stage, position: 2)
@@ -297,9 +297,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "next when only unplugged level goes back to home" do
-    custom_script = create(:script, :name => 'coolscript')
+    custom_script = create(:script, name: 'coolscript')
     custom_stage_1 = create(:stage, script: custom_script, name: 'neat stage', position: 1)
-    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, :position => 1)
+    create(:script_level, level: create(:unplugged), script: custom_script, stage: custom_stage_1, position: 1)
 
     assert_raises RuntimeError do
       get :next, script_id: 'coolscript'

@@ -165,12 +165,6 @@ Style/EmptyLinesAroundModuleBody:
 Style/FirstParameterIndentation:
   Enabled: false
 
-# Offense count: 465
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/HashSyntax:
-  Enabled: false
-
 # Offense count: 11
 # Cop supports --auto-correct.
 Style/IndentArray:

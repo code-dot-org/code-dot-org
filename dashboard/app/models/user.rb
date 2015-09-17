@@ -117,7 +117,7 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
-  belongs_to :invited_by, :polymorphic => true
+  belongs_to :invited_by, polymorphic: true
 
   # TODO: I think we actually want to do this
   # you can be associated with distrits through cohorts

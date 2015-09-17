@@ -9,7 +9,7 @@ end
 class DashboardStudent
   def self.fetch_user_students(user_id)
     DASHBOARD_DB[:users].
-      join(:followers, :student_user_id=>:users__id).
+      join(:followers, student_user_id: :users__id).
       select(*fields).
       where(followers__user_id: user_id).
       all
@@ -254,7 +254,7 @@ class DashboardSection
     # get all the students passwords when we get the list of sections)
 
     return nil unless row = DASHBOARD_DB[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__id: id).
       first
@@ -266,7 +266,7 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = DASHBOARD_DB[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__id: id).
       first
@@ -278,7 +278,7 @@ class DashboardSection
 
   def self.fetch_user_sections(user_id)
     DASHBOARD_DB[:sections].
-      join(:users, :id=>:user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(user_id: user_id).
       map{|row| self.new(row).to_owner_hash}
@@ -287,8 +287,8 @@ class DashboardSection
   def self.fetch_student_sections(student_id)
     DASHBOARD_DB[:sections].
       select(*fields).
-      join(:followers, :section_id=>:id).
-      join(:users, :id=>:student_user_id).
+      join(:followers, section_id: :id).
+      join(:users, id: :student_user_id).
       where(student_user_id: student_id).
       map{|row| self.new(row).to_member_hash}
   end

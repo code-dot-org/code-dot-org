@@ -55,13 +55,13 @@ Dashboard::Application.routes.draw do
   get '/s/4-5(/*all)', to: redirect('/s/course3')
 
   resources :level_source_hints
-  get '/add_hint/:level_source_id', :to => 'level_source_hints#add_hint', as: 'add_hint'
-  get '/show_hints/:level_source_id', :to => 'level_source_hints#show_hints', as: 'show_hints'
-  get '/add_pop_hint/:idx', :to => 'level_source_hints#add_pop_hint', as: 'add_pop_hint'
-  get '/show_pop_hints/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints', as: 'show_pop_hints'
-  get '/add_pop_hint_per_level/:level_id/:idx', :to => 'level_source_hints#add_pop_hint_per_level', as: 'add_pop_hint_per_level'
-  get '/show_pop_hints_per_level/:level_id/:idx(/:restriction)', :to => 'level_source_hints#show_pop_hints_per_level', as: 'show_pop_hints_per_level'
-  get '/add_hint_access', :to => 'level_source_hints#add_hint_access', as: 'add_hint_access'
+  get '/add_hint/:level_source_id', to: 'level_source_hints#add_hint', as: 'add_hint'
+  get '/show_hints/:level_source_id', to: 'level_source_hints#show_hints', as: 'show_hints'
+  get '/add_pop_hint/:idx', to: 'level_source_hints#add_pop_hint', as: 'add_pop_hint'
+  get '/show_pop_hints/:idx(/:restriction)', to: 'level_source_hints#show_pop_hints', as: 'show_pop_hints'
+  get '/add_pop_hint_per_level/:level_id/:idx', to: 'level_source_hints#add_pop_hint_per_level', as: 'add_pop_hint_per_level'
+  get '/show_pop_hints_per_level/:level_id/:idx(/:restriction)', to: 'level_source_hints#show_pop_hints_per_level', as: 'show_pop_hints_per_level'
+  get '/add_hint_access', to: 'level_source_hints#add_hint_access', as: 'add_hint_access'
 
   resources :frequent_unsuccessful_level_sources, only: [:index]
 
@@ -77,7 +77,7 @@ Dashboard::Application.routes.draw do
   }
   get 'discourse/sso' => 'discourse_sso#sso'
 
-  root :to => "home#index"
+  root to: "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/admin/debug', to: 'home#debug'
@@ -167,8 +167,8 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join/:section_code', to: 'followers#student_register', as: 'student_register'
 
-  post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
-  post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
+  post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
+  post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
 
   get '/admin/pd_progress(/:script)', to: 'reports#pd_progress', as: 'pd_progress'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'reports#level_completions', as: 'level_completions'

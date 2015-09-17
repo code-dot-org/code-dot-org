@@ -129,7 +129,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by a build script.
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', platforms: :ruby
 
 gem 'jwt' # single signon for zendesk
 

@@ -20,12 +20,12 @@ class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
     @game2level2 = create :level, game_id: @game2.id
 
     @level_sources_data = [
-        { :level => @game1level1, :passing => 3, :failing => 5,
-          :hints => FrequentUnsuccessfulLevelSource::MAXIMUM_ACTIVE_HINT_COUNT },
-        { :level => @game1level2, :passing => 6, :failing => 2 },
-        { :level => @game2level1, :passing => 0, :failing => 10,
-          :hints => FrequentUnsuccessfulLevelSource::MAXIMUM_ACTIVE_HINT_COUNT + 1 },
-        { :level => @game2level2, :passing => 0, :failing => 11 }
+        { level: @game1level1, passing: 3, failing: 5,
+          hints: FrequentUnsuccessfulLevelSource::MAXIMUM_ACTIVE_HINT_COUNT },
+        { level: @game1level2, passing: 6, failing: 2 },
+        { level: @game2level1, passing: 0, failing: 10,
+          hints: FrequentUnsuccessfulLevelSource::MAXIMUM_ACTIVE_HINT_COUNT + 1 },
+        { level: @game2level2, passing: 0, failing: 11 }
     ]
     @level_sources = @level_sources_data.map { |x|
       level_source = create :level_source, level_id: x[:level].id
@@ -62,14 +62,14 @@ class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
     FrequentUnsuccessfulLevelSource.populate(2, @game1.name)
     assert_equal 2, FrequentUnsuccessfulLevelSource.count
 
-    fuls1 = FrequentUnsuccessfulLevelSource.where(:level_id => @game1level1.id).
+    fuls1 = FrequentUnsuccessfulLevelSource.where(level_id: @game1level1.id).
         first
     assert_not_nil fuls1
     assert_equal @level_sources_data[0][:level], fuls1.level
     assert_equal @level_sources_data[0][:failing], fuls1.num_of_attempts
     assert fuls1.active  # More hints should be solicited.
 
-    fuls2 = FrequentUnsuccessfulLevelSource.where(:level_id => @game1level2.id).
+    fuls2 = FrequentUnsuccessfulLevelSource.where(level_id: @game1level2.id).
         first
     assert_not_nil fuls2
     assert_equal @level_sources_data[1][:level], fuls2.level
@@ -83,14 +83,14 @@ class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
     FrequentUnsuccessfulLevelSource.populate(10, nil) # all games
     assert_equal 2, FrequentUnsuccessfulLevelSource.count
 
-    fuls1 = FrequentUnsuccessfulLevelSource.where(:level_id => @game2level1).
+    fuls1 = FrequentUnsuccessfulLevelSource.where(level_id: @game2level1).
         first
     assert_equal @level_sources[2], fuls1.level_source
     assert_equal @level_sources_data[2][:level], fuls1.level
     assert_equal @level_sources_data[2][:failing], fuls1.num_of_attempts
     assert !fuls1.active  # No more hints should be solicited.
 
-    fuls2 = FrequentUnsuccessfulLevelSource.where(:level_id => @game2level2).
+    fuls2 = FrequentUnsuccessfulLevelSource.where(level_id: @game2level2).
         first
     assert_equal @level_sources[3], fuls2.level_source
     assert_equal @level_sources_data[3][:level], fuls2.level
@@ -117,7 +117,7 @@ class FrequentUnsuccessfulLevelSourceTest < ActiveSupport::TestCase
     # All level_sources should match, since freq_cutoff is 1.
     assert_equal @level_sources.size,  FrequentUnsuccessfulLevelSource.count
     # All of these should be active.
-    assert_equal 0, FrequentUnsuccessfulLevelSource.where(:active => false).
+    assert_equal 0, FrequentUnsuccessfulLevelSource.where(active: false).
         count
   end
 end
