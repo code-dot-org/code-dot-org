@@ -691,10 +691,11 @@ class NetSimApiTest < Minitest::Test
                  'Failed to insert first router.')
 
     # Should return 400 BAD REQUEST when a routerNumber collision is detected
-    # TODO: Should we use 409 CONFLICT instead?
     create_router_node('routerNumber' => 1)
     assert_equal(400, @net_sim_api.last_response.status,
                  'Should have rejected duplicate routerNumber')
+    assert_equal({'error' => 'Bad Request', 'details' => 'conflict'},
+                 JSON.parse(@net_sim_api.last_response.body))
 
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
                  'Expected to end up with one node.')
