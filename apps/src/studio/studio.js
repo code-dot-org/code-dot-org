@@ -2450,21 +2450,21 @@ Studio.isWallTile = function(row, col) {
   }
 
   return (Studio.map[row][col] & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col]));
-}
+};
 
 Studio.drawMapTiles = function (svg) {
-  var tilesDrawn = new Array();
-  for (var row = 0; row < Studio.ROWS; row++) {
-    tilesDrawn[row] = new Array();
-    for (var col = 0; col < Studio.COLS; col++) {
+  var row, col;
+
+  var tilesDrawn = [];
+  for (row = 0; row < Studio.ROWS; row++) {
+    tilesDrawn[row] = [];
+    for (col = 0; col < Studio.COLS; col++) {
       tilesDrawn[row][col] = false;
     }
   }
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
-      var mapVal = Studio.map[row][col];
-<<<<<<< HEAD
       if (Studio.isWallTile(row, col)) {
         // Skip if we've already drawn a large tile that covers this square.
         if (tilesDrawn[row][col]) {
@@ -2472,7 +2472,9 @@ Studio.drawMapTiles = function (svg) {
         }
 
         var largeTile = false;
-        // We might be able to draw a large tile here.
+
+        // If we can draw a large tile here, then do so, and make sure
+        // we won't draw any more tiles where it extends over.
         if (Studio.isWallTile(row, col+1) &&
             Studio.isWallTile(row+1, col) &&
             Studio.isWallTile(row+1, col+1)) {
@@ -2482,12 +2484,8 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col] = true;
           tilesDrawn[row+1][col+1] = true;
         }
+
         Studio.drawWallTile(svg, row, col, largeTile);
-=======
-      if (mapVal & SquareType.WALL ||
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
-        Studio.drawWallTile(svg, row, col);
->>>>>>> staging
       }
     }
   }
