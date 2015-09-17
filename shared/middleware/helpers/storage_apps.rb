@@ -79,7 +79,7 @@ class StorageApps
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    new_score = row[:abuse_score] + 10
+    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : 10)
 
     update_count = @table.where(id: id).exclude(state: 'deleted').update({ abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0

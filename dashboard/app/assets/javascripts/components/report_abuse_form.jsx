@@ -103,7 +103,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
           </div>
 
           <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
-          <input type="text" readOnly style={{width: INPUT_WIDTH}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
+          <input type="text" readOnly={!!this.props.abuseUrl} style={{width: INPUT_WIDTH}} defaultValue={this.props.abuseUrl} name="abuse_url"/>
 
           {/* we dangerouslySetInnerHTML because our string has html in it*/ }
           <div dangerouslySetInnerHTML={{
