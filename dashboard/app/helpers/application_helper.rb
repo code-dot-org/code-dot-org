@@ -46,7 +46,7 @@ module ApplicationHelper
   end
 
   def activity_css_class(result)
-    if result.nil?
+    if result.nil? || result <= 0
       'not_tried'
     elsif result >= Activity::SUBMITTED_RESULT
       'submitted'
@@ -63,8 +63,8 @@ module ApplicationHelper
     result =
       if user
         script_level.try(:user_level).try(:best_result)
-      elsif session_progress(script_level.level_id) > 0
-        session_progress(script_level.level_id)
+      elsif
+        session_level_progress(script_level.level_id)
       end
     activity_css_class(result)
   end
