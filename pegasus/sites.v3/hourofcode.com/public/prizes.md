@@ -30,3 +30,5 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) will win $10,00
 Check back for updates in fall 2015.
 
 ## More prizes coming soon!
+
+[See terms and conditions](/prizes-terms)
