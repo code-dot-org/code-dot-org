@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
+title: <%= hoc_s(:title_country_resources) %>
+layout: wide
+nav: promote_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -21,7 +23,7 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 
 ## Use this handout to recruit corporations
 
-[<img width="500" height="300" src="<%= localized_file('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Try the tutorials:
 

@@ -47,6 +47,9 @@ var CONFIGS = {
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
+    actionSpeedScale: {
+      nectar: 1,
+    },
     pegmanYOffset: 0,
     tileSheetWidth: 5,
     pegmanHeight: 50,
@@ -175,6 +178,7 @@ exports.load = function(assetUrl, id) {
   skin.movePegmanAnimationSpeedScale = 1;
   skin.look = '#FFF';
   skin.background = skin.assetUrl('background.png');
+  skin.tiles = skin.assetUrl('tiles.png');
   skin.pegmanHeight = 52;
   skin.pegmanWidth = 49;
   skin.pegmanYOffset = 0;

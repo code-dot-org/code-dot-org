@@ -1,8 +1,8 @@
-* * *
+---
 
 title: Privacy Policy
 
-* * *
+---
 
 ### この法的文書は英語で書かれた[こちらの文書](https://code.org/privacy)の翻訳版です。
 
