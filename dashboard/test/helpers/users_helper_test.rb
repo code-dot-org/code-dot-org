@@ -26,7 +26,7 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 20, session_level_progress(10)
   end
 
-  def test_summarize_user_progress
+  def test_summarize_user_progress_and_percent_complete
     script = Script.twenty_hour_script
     level1 = script.script_levels[1].level
     session_set_level_progress level1.id, 100
@@ -37,9 +37,14 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({
       :linesOfCode => 42,
       :linesOfCodeText => 'Total lines of code: 42',
-      :levels => {2425 => {:status=>'perfect'},
-                  2427 => {:status=>'passed'}}},
+      :levels => {level1.id => {:status=>'perfect'},
+                  level3.id => {:status=>'passed'}}},
       summarize_user_progress(script, nil))
+
+    assert_equal [0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                  0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+                 percent_complete(script, nil)
+    assert_in_delta 0.0183, percent_complete_total(script, nil)
   end
 
   def test_session_scripts
