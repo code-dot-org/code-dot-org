@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
+title: <%= hoc_s(:title_country_resources) %>
+layout: wide
+nav: promote_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -59,7 +61,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Additional resources coming soon!
+# Burime shtesë vinë së shpejti!
 
 <% end %>
 

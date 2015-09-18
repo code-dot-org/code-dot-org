@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 ## აუცილებელია მთელმა სკოლამ იმონაწილეოს $10,000 დოლარის hardware-ში მოსაგებად?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes') %).
 
 ## აუცილებელია მთელმა სკოლამ იმონაწილეოს ტექ-ჩატის მოსაგებად?
 
@@ -34,7 +34,7 @@ Yes. Your whole school has to participate to be eligible for the prize but only 
 
 ## როდის არის hardware-ს პრიზისთვის აპლიკაციის გაგზავნის ბოლო ვადა?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. აშშ-ს ყოველი შტატის ერთი სკოლა მთელი კლასისთვის მიიღებს კომპიუტერებს. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. აშშ-ს ყოველი შტატის ერთი სკოლა მთელი კლასისთვის მიიღებს კომპიუტერებს. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
 
 ## როდისაა ტექ-ჩატის პრიზის მოგებისთვის უფლების მოპოვების უკანასკნელი ვადა?
 
@@ -42,7 +42,7 @@ To qualify, your entire school must register for the Hour of Code as well as com
 
 ## როდის შევიტყობ მოიგო თუ არა ჩემმა სკოლამ ან კლასმა პრიზი?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Code.org გამარჯვებულებს 2015 წლის 1 დეკემბრისთვის აირჩევს და დაუკავშირდება.
 
 ## თუ ჩემი მთელი სკოლა ვერ იმონაწილევებს კოდის საათში კომპიუეტრული მეცნიერების განათლების კვირისას (დეკ. 7-13), შეიძლება მაინც მქონდეს პრიზის მოგების უფლება?
 
