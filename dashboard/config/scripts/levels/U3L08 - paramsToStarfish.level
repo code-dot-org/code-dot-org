@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-09-15T19:49:44.000Z",
+  "created_at": "2015-09-18T19:49:45.774Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -126,36 +126,7 @@
       "callMyFunction_n": null,
       "return": null
     },
-    "edit_code": true,
-    "encrypted_examples": "3EcNOIphNLcB+2PODo2/YG2pNpwBxtAeGTuFvrVxAmyE0gb2EApVq/W6h8uY\ngCtH\n",
-    "embed": "false",
-    "instructions": "Add an extra fish, starfish, and piece of sea grass to the image. Look at, but don't change, the functions that create them. (Click to see full instructions)",
-    "markdown_instructions": "# Under the Sea\r\n\r\nIn the next several levels you will be working to improve the **same program** that draws an under the sea image. Your code will be pulled forward as you receive new instructions.\r\n\r\n**Read through ** the program here to understand what it does.\r\n\r\n**Add function calls ** to the top of the program so that there are now **two fish, two starfish, and two pieces of sea grass** in the image. Place them wherever you like.\r\n\r\n**Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
-    "is_k1": "false",
-    "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
-    "disable_param_editing": "true",
-    "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
-    "use_contract_editor": "false",
-    "contract_highlight": "false",
-    "contract_collapse": "false",
-    "examples_highlight": "false",
-    "examples_collapse": "false",
-    "examples_required": "false",
-    "definition_highlight": "false",
-    "definition_collapse": "false",
-    "disable_examples": "false",
-    "project_template_level_name": "U3L08 - underTheSeaTemplate",
-    "free_play": "true",
-    "app_width": "320",
-    "app_height": "480",
-    "show_turtle_before_run": "true",
-    "autocomplete_palette_apis_only": "true",
-    "text_mode_at_start": "false",
-    "design_mode_at_start": "false",
-    "hide_design_mode": "true",
-    "beginner_mode": "false"
+    "edit_code": true
   }
 }]]></config>
   <blocks/>
