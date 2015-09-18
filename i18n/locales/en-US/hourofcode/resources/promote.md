@@ -35,82 +35,88 @@ crwdns48275:0crwdne48275:0
 
 [![crwdns48295:0crwdne48295:0](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns48296:0crwdne48296:0](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns48297:0crwdne48297:0](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns48298:0crwdne48298:0](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns48299:0crwdne48299:0](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![crwdns48300:0crwdne48300:0](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
+<a id="stickers"></a>
+
+## crwdns48622:0crwdne48622:0
+
+[![crwdns48623:0crwdne48623:0](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+
 <a id="sample-emails"></a>
 
-## crwdns48301:0crwdne48301:0
+## crwdns48624:0crwdne48624:0
 
 <a id="email"></a>
 
-## crwdns48302:0crwdne48302:0
+## crwdns48625:0crwdne48625:0
 
-crwdns48303:0crwdne48303:0 crwdns48304:0crwdne48304:0 crwdns48305:0crwdne48305:0 crwdns48306:0crwdne48306:0
+crwdns48626:0crwdne48626:0 crwdns48627:0crwdne48627:0 crwdns48628:0crwdne48628:0 crwdns48629:0crwdne48629:0
 
-crwdns48307:0crwdne48307:0 crwdns48308:0crwdne48308:0 crwdns48309:0crwdne48309:0 crwdns48310:0crwdne48310:0
+crwdns48630:0crwdne48630:0 crwdns48631:0crwdne48631:0 crwdns48632:0crwdne48632:0 crwdns48633:0crwdne48633:0
 
-crwdns48311:0crwdne48311:0<%= campaign_date('full') %>.
+crwdns48634:0crwdne48634:0<%= campaign_date('full') %>.
 
-crwdns48312:0crwdne48312:0
+crwdns48635:0crwdne48635:0
 
-crwdns48313:0crwdne48313:0<%= @country %>
+crwdns48636:0crwdne48636:0<%= @country %>
 
 <a id="media-pitch"></a>
 
-## crwdns48314:0crwdne48314:0
+## crwdns48637:0crwdne48637:0
 
-crwdns48315:0crwdne48315:0
+crwdns48638:0crwdne48638:0
 
-crwdns48316:0crwdne48316:0
+crwdns48639:0crwdne48639:0
 
-crwdns48317:0crwdne48317:0 crwdns48318:0crwdne48318:0 crwdns48319:0crwdne48319:0 crwdns48320:0crwdne48320:0
+crwdns48640:0crwdne48640:0 crwdns48641:0crwdne48641:0 crwdns48642:0crwdne48642:0 crwdns48643:0crwdne48643:0
 
-crwdns48321:0crwdne48321:0
+crwdns48644:0crwdne48644:0
 
-crwdns48322:0[DATE]crwdne48322:0
+crwdns48645:0[DATE]crwdne48645:0
 
-crwdns48323:0crwdne48323:0 crwdns48324:0crwdne48324:0
+crwdns48646:0crwdne48646:0 crwdns48647:0crwdne48647:0
 
-crwdns48325:0[TITLE]crwdne48325:0
+crwdns48648:0[TITLE]crwdne48648:0
 
-crwdns48326:0crwdne48326:0
+crwdns48649:0crwdne48649:0
 
-crwdns48327:0crwdne48327:0
+crwdns48650:0crwdne48650:0
 
-crwdns48328:0crwdne48328:0
+crwdns48651:0crwdne48651:0
 
 <a id="parents"></a>
 
-## crwdns48329:0crwdne48329:0
+## crwdns48652:0crwdne48652:0
 
-crwdns48330:0crwdne48330:0
+crwdns48653:0crwdne48653:0
 
-crwdns48331:0crwdne48331:0 crwdns48332:0crwdne48332:0 crwdns48333:0crwdne48333:0
+crwdns48654:0crwdne48654:0 crwdns48655:0crwdne48655:0 crwdns48656:0crwdne48656:0
 
-crwdns48334:0crwdne48334:0 crwdns48335:0crwdne48335:0 crwdns48336:0crwdne48336:0
+crwdns48657:0crwdne48657:0 crwdns48658:0crwdne48658:0 crwdns48659:0crwdne48659:0
 
-crwdns48337:0crwdne48337:0 crwdns48338:0crwdne48338:0 crwdns48339:0crwdne48339:0
+crwdns48660:0crwdne48660:0 crwdns48661:0crwdne48661:0 crwdns48662:0crwdne48662:0
 
-crwdns48340:0crwdne48340:0
+crwdns48663:0crwdne48663:0
 
-crwdns48341:0crwdne48341:0
+crwdns48664:0crwdne48664:0
 
-crwdns48342:0crwdne48342:0
+crwdns48665:0crwdne48665:0
 
-crwdns48343:0crwdne48343:0
+crwdns48666:0crwdne48666:0
 
 <a id="politicians"></a>
 
-## crwdns48344:0crwdne48344:0
+## crwdns48667:0crwdne48667:0
 
-crwdns48345:0crwdne48345:0
+crwdns48668:0crwdne48668:0
 
-crwdns48346:0crwdne48346:0 crwdns48347:0crwdne48347:0 crwdns48348:0crwdne48348:0 crwdns48349:0crwdne48349:0
+crwdns48669:0crwdne48669:0 crwdns48670:0crwdne48670:0 crwdns48671:0crwdne48671:0 crwdns48672:0crwdne48672:0
 
-crwdns48350:0crwdne48350:0 crwdns48351:0crwdne48351:0 crwdns48352:0crwdne48352:0
+crwdns48673:0crwdne48673:0 crwdns48674:0crwdne48674:0 crwdns48675:0crwdne48675:0
 
-crwdns48353:0crwdne48353:0 crwdns48354:0crwdne48354:0 crwdns48355:0crwdne48355:0
+crwdns48676:0crwdne48676:0 crwdns48677:0crwdne48677:0 crwdns48678:0crwdne48678:0
 
-crwdns48356:0crwdne48356:0
+crwdns48679:0crwdne48679:0
 
-crwdns48357:0[NAME]crwdnd48357:0[TITLE]crwdne48357:0
+crwdns48680:0[NAME]crwdnd48680:0[TITLE]crwdne48680:0
 
 <%= view :signup_button %>

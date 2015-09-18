@@ -24,7 +24,7 @@
 ZERO_DIRT_ITEM = 98
 
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation
 
   # List of possible skins, the first is used as a default.
   def self.skins

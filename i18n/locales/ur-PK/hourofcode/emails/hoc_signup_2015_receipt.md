@@ -1,6 +1,6 @@
 * * *
 
-سے: "ہادی پارٹووا (Code.org) [hadi_partovi @&#99; ode.org](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" موضوع: "ایک گھنٹے کا کوڈ کی میزبانی کے لئے دستخط کے لیے شکریہ!" litmus_tracking_id: "5g5lyi1a"
+from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)" موضوع: "آور آف کوڈ کی میزبانی کے لئے سائن اپ کرنے کا شکریہ!" litmus_tracking_id: "5g5lyi1a"
 
 * * *
 
@@ -8,9 +8,9 @@
 
 # ایک گھنٹے کے کوڈ کی میزبانی کے لئے شکریہ!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> آپ لاطینی امریکا کے طلبا کے لئے ایک "آور آف کوڈ" سیکھنے کوممکن بنا رہے ہیں* جو انکی آنے والی زندگی میں تبدیلی لا سکتا ہے*،اکتوبر۔ ٥ تا ١١۔ <% else %> آپ دنیا بھر کے طلبا کے لئے ایک "آور آف کوڈ" سیکھنے کوممکن بنا رہے ہیں *جو انکی آنے والی زندگی میں تبدیلی لا سکتا ہے*۔ ٧ تا ١٣۔ <% end %>
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+ہم انعامات، نۓ اسباق اور دوسری دلچسپ معلومات کے تبادلے کے حوالے سے اکتوبر تا نومبر کے دوران رابطے کریں گے۔ تو ابھی آپ کیا کر سکتے ہیں؟
 
 ## 1. دوسروں تک بھجیں
 
@@ -18,19 +18,19 @@ We'll be in touch about prizes, new tutorials and other exciting updates in the 
 
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[Send this email](http://<%= hostname %>/resources#email) to your principal.
+[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے پرنسپل کو۔
 
 ## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 
-[Send this email](http://<%= hostname %>/resources#email) to your manager, or the CEO.
+[بھیجئے یہ ای میل](http://<%= hostname %>/resources#email) اپنے مینیجر، یا سی۔ای۔او۔ کو۔
 
-## 4. Promote the Hour of Code in your community
+## ٤۔ اپنی کمیونٹی میں" آور آف کوڈ" کو فروغ دیں
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](http://<%= hostname %>/resources#email).
+ایک مقامی گروپ کو بھرتی کریں، جیسے کے لڑکے یا لڑکیوں کے سکاؤٹس کلب، چرچ، یونیورسٹی، سابق فوجیوں کے گروپ یا مزدور یونین. یا اپنے پڑوس کے لئے آور آف کوڈ "بلاک پارٹی" کی میزبانی کریں۔ [یہ ای میل بھیجئے](http://<%= hostname %>/resources#email).
 
 ## 5. کوڈ کی گھڑی کی حمایت کرنے کے لئے ایک مقامی منتخب اہلکار سے کہیں/پوچھیں۔
 
-[Send this email](http://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+[یہ ای میل بھیجئے](http://<%= hostname %>/resources#politicians)اپنے شہر کے ناظم، سٹی کونسل، یا اسکول بورڈ کو اور انھیں اپنے اسکول کا دورہ کرنے کے لئے مدعو کریں۔
 
 * * *
 

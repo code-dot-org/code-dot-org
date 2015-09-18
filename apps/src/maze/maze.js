@@ -94,6 +94,9 @@ var loadLevel = function() {
     Maze.scale[key] = level.scale[key];
   }
 
+  if (level.fastGetNectarAnimation) {
+    skin.actionSpeedScale.nectar = 0.5;
+  }
   // Measure maze dimensions and set sizes.
   // ROWS: Number of tiles down.
   Maze.ROWS = Maze.map.length;
@@ -519,7 +522,7 @@ Maze.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
-  
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -1137,7 +1140,6 @@ Maze.execute = function(stepMode) {
   // Speeding up specific levels
   var scaledStepSpeed = stepSpeed * Maze.scale.stepSpeed *
   skin.movePegmanAnimationSpeedScale;
-
   timeoutList.setTimeout(function () {
     Maze.scheduleAnimations(stepMode);
   }, scaledStepSpeed);
@@ -1153,7 +1155,6 @@ Maze.scheduleAnimations = function (singleStep) {
 
   var timePerAction = stepSpeed * Maze.scale.stepSpeed *
     skin.movePegmanAnimationSpeedScale;
-
   // get a flat list of actions we want to schedule
   var actions = Maze.executionInfo.getActions(singleStep);
 
@@ -1170,9 +1171,14 @@ Maze.scheduleAnimations = function (singleStep) {
     }
 
     animateAction(actions[index], singleStep, timePerAction);
+
+    var command = actions[index] && actions[index].command;
+    var timeModifier = (skin.actionSpeedScale && skin.actionSpeedScale[command]) || 1;
+    var timeForThisAction = Math.round(timePerAction * timeModifier);
+
     timeoutList.setTimeout(function() {
       scheduleSingleAnimation(index + 1);
-    }, timePerAction);
+    }, timeForThisAction);
   }
 
   // Once animations are complete, we want to reenable the step button if we

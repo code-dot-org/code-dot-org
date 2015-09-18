@@ -130,6 +130,10 @@ def localized_file(path)
   return path
 end
 
+def localized_image(path)
+  File.join('/', @country, @language, path)
+end
+
 def campaign_date(format)
   case format
   when "start-short"

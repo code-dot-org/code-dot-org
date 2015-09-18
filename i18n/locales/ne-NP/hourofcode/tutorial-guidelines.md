@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 हामी आकर्षक विकल्प को एक किसिम पाहुना गर्न चाहन्छु , तर मुख्य लक्ष्य कम्प्युटर विज्ञान लागि नयाँ हो , जो विद्यार्थी र शिक्षकहरू लागि अनुभव अनुकूलन गर्न छ । कृपया यो कागजातलाई तपाइँको क्रियाकलापको सिर्जनामा मार्गदर्शन गर्न, कोडिङ, कम्प्युटर प्रोगामिङ्, र कम्प्युटर विज्ञानको पृष्ठभूमि नभएका प्रयोगकर्तामा लक्षित गर्न प्रयोग गर्नुहोस्।
 
@@ -23,20 +23,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## सूचकांक:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [ट्यूटोरियल समावेशीकरणका लागि मूल्यांकन कसरी गरिनेछ](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [क्रियाकलाब डिजाइनका लागि सुझाव](#design)
+  * [ट्रेडमार्क दिशानिर्देश](#tm)
+  * [ट्रयाकिङ् पिक्सेल](#pixel)
+  * [आफ्नो ट्यूटोरियलको प्रवर्द्धन गर्ने](#promote)
   * [अपाङ्गता भएका विद्यार्थीहरूको लागि एक नोट](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * कृपया सिफारिश गरिएका कम्प्युटर विज्ञान ज्ञानको ग्रेड स्तर: सुरु गर्ने, मध्यवर्ती, वा उन्नतका भित्र पनि सामेल छ। Hour of Code को वेबसाइटले सुरु गर्नेहरूको लागि सबै भन्दा प्रमुख रूपले गतिविधिहरूलाई हाइलाइट गर्नेछ। If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * प्राविधिक आवश्यकताहरू: 
       * हामीले तिनिहरूको Hour of Code को अभ्यासहरूलाई पहिलो र अन्तिम पृष्ठमा 1 -पिक्सेल ट्रयाकिङ् छविहरूमा समावेश गर्ने राम्रोसँग सहभागीतालाई ट्रयाक गर्ने क्रममा प्रत्येक तेस्रो पाट्रीको अभ्यासगत साझेदारहरू चाहन्छौँ। सुरुको पृष्ठमा सुरु गर्ने पिक्सेल-छवि र अन्तिम पृष्ठमा अन्तिम पिक्सेलको-छविलाई राख्नुहोस्। पिक्सलहरूलाई अन्तरिम पृष्ठहरूमा नराख्नुहोस्)। थप विवरणहरूको लागि तलमा ट्रयाकिङ् पिक्सेलको चयन हेर्नुहोस्। 
-      * तपाइँको गतिविधि सकाउन, प्रयोगकर्ताहरूलाई [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> मा प्रतक्ष्य गरिनुपर्छ जहाँ तिनिहरू निम्न लिखित कार्य गर्न सक्षम हुनेछन्: 
+      * तपाइँको गतिविधि सकाउन, प्रयोगकर्ताहरूलाई [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * तिनिहरूले सकाउने Hour of Code को सामाजिक मिडियामा साझा गर्न
           * तिनिहरूले सकाउने Hour of Code को प्रमाणपत्र प्राप्त गर्न
           * कुन देसहरू/सहरहरूको Hour of Code को गतिविधिहरूमा बढी दरले सहभागी छन् भन्ने बारेमा लिडरबोर्डहरू हेर्नुहोस्
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(वैकल्पिक)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * अनलाइन गतिविधिहरूको लागि (विशेष रूपले स्मार्टफोन/ट्याबलेटको एपहरू): 
           * प्रयोगकर्ताहरूको संख्या
