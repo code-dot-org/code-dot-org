@@ -8,6 +8,8 @@ Dashboard::Application.routes.draw do
     redirect CDO.code_org_url('/teacher-dashboard')
   end
 
+  resources :user_levels, only: [:update]
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST

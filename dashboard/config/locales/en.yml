@@ -332,6 +332,8 @@ en:
       section: 'Section'
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
+      submitted_on: 'Submitted on %{date}'
+      unsubmit: 'Unsubmit'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
