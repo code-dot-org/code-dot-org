@@ -9,7 +9,7 @@ layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Бихме искали да има разнообразие от възможности за ангажиране, но основната цел е да се оптимизира опитът на учениците и учителите, за които компютърните науки са новост. Моля, използвайте това ръководство, което ще ви насочи по създаването на вашата дейност, предназначено е за потребителя, който е без знания в програмирането и компютърните науки.
 
@@ -151,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Моля също да се включват препоръчителни знания и умения по компютърни науки в рамките на ниво или клас: начинаещ, напреднал или експерт. Сайтът на Часът на кодирането ще предпочете дейности за начинаещи, пред всички останали. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Технически изисквания: 
       * За да следим по-точно участниците, искаме партньорите ни да включат 1-pixel tracking картинка на първата и последната страница на уроците. Поставете първата pixel-картинка на началната страница, а втората на последната страница. Не поставяйте пиксел картинките на междинните страници). Вижте Tracking Pixel раздела по-долу за повече подробности. 
-      * При завършване на вашата дейност, потребителите трябва да бъдат насочени към [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * При завършване на вашата дейност, потребителите трябва да бъдат насочени към [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Споделят в социални медии, че са завършили Часът на кодирането
           * Получат сертификат, че са завършили Часът на кодирането
           * Вижте класациите кои държави/градове са с най-високи нива на участие в дейности от Часът на кодирането
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(не е задължително)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * За онлайн дейности (особено смартфон/таблет приложения): 
           * Брой потребители

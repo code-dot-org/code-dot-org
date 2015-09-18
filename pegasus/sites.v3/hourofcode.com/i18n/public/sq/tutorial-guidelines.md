@@ -9,7 +9,7 @@ shtrirje: e gjerë
 
 # Udhëzime tutoriali për Orën e Kodimit dhe Javës së Arsimimit në Shkencat Kompjuterike
 
-Code.Org do të jetë nikoq i disa aktiviteteve të Orës së Kodimit në Code.org, Orën e Kodimit dhe website-in CSEdWeek. Lista aktuale është në[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.Org do të jetë nikoq i disa aktiviteteve të Orës së Kodimit në Code.org, Orën e Kodimit dhe website-in CSEdWeek. Lista aktuale është në[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor është optimizimi i përvojave të nxënësve dhe mësuesve, të cilët janë të rinj në shkencat kompjuterike. Ju lutem përdorni këtë dokument si udhëzues për zhvillimin e aktivitetit tuaj, që i drejtohet përdoruesve të cilët nuk kanë njohuri në kodim, programim kompjuterik apo në shkencat kompjuterike.
 
@@ -151,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Ju lutemi gjithashtu përfshini njohuritë e rekomanduara në shkenca kompjuterike brenda nivelit të klasës: fillestar, i ndërmjetëm, ose të avancuar. Website Ora e Kodimit do të nxjerrë më në pah aktivitetet për fillestarët. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Kërkesat teknike: 
       * Në mënyrë për të gjetur më shumë pjesmarrës me saktësi ne duam që cdo palë e tretë e partnerve të përfshijë 1-pixel të shoqëruar me foto në faqen e parë dhe të fundit të tutorialeve të tyre të Orës së Kodimit. Vendos një pixel-foto fillestare në faqen e parë dhe një pixel-foto finale në faqen e fundit. Mos vendos pixel-a në faqet e përkohshme). Shih seksionin Tracking Pixel më poshtë për më shumë detaje. 
-      * Me të përfunduar aktivitetin tuaj, përdoruesit duhet të drejtohen për [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * Me të përfunduar aktivitetin tuaj, përdoruesit duhet të drejtohen për [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Të shpërndajnë në mediat sociale që kanë përfunduar Orën e Kodimit
           * Merrni një çertifikatë që keni përfunduar Orën e Kodimit
           * Shih bordet udhëheqëse se cilat nga vendet/qytetet kanë normat më të larta të pjesëmarrjes në aktivitetet e Orës së Kodimit
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(Opsionale)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Për aktivitetet online (kryesisht smartphone/tablet app): 
           * Numrin e përdoruesve

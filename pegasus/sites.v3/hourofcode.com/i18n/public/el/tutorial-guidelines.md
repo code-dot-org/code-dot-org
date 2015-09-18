@@ -9,7 +9,7 @@ layout: wide
 
 # Οδηγός σεναρίων εκμάθησης για την Ώρα του Κώδικα και την Εκπαιδευτική Εβδομάδα Πληροφορικής (CsedWeek)
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Θα θέλαμε να φιλοξενήσουμε ποικιλία ελκτυστικών δραστηριοτήτων, αλλά ο πρωταρχικός σκοπός είναι να βελτιώσουμε την εμπειρία των μαθητών και των δασκάλων που είναι νέοι στην επιστήμη των υπολογιστών. Χρησιμοποιήστε το παρών έγγραφο σαν οδηγό της δικής σας δραστηριότητας, στοχεύοντας σε χρήστες που δεν έχουν εμπειρία στη δημιουργία κώδικα, τον προγραμματισμό και την επιστήμη των υπολογιστών.
 
@@ -151,11 +151,11 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * Παρακαλούμε συμπεριλάβετε επίσης την προτεινόμενη εμπειρία στην επιστήμη των υπολογιστών: Αρχάριοι, Μέτριοι, Προχωρημένοι. Η ιστοσελίδα της Ώρας του Κώδικα θα επισημάνει τις δραστηριότητες για Αρχαρίους σε πιο περίοπτη θέση. Εάν επιθυμείτε να προετοιμάσετε Δραστηριότητες για την Ώρα του Κώδικα Μέτριου και Προχωρημένου επιπέδου, παρακαλούμε να συμπεριλάβετε τις προαπαιτούμενες γνώσεις που χρειάζονται στην περιγραφή της δραστηριότητάς σας.
   * Τεχνικές απαιτήσεις: 
       * Για να μπορούμε να προσδιορίσουμε με ακρίβεια τις συμμετοχές, θέλουμε κάθε δημιουργός να συμπεριλαμβάνει εικόνες ανίχνευσης 1 εικονοστοιχείου στην πρώτη και στην τελευταία σελίδα του οδηγού εκμάθησης για την Ώρα του Κώδικα. Τοποθετήστε μια μια αρχική εικόνα 1 εικονοστοιχείου στην αρχική σελίδα και μια τελική εικόνα μια στην τελική σελίδα. Μην τοποθετείτε pixel στις ενδιάμεσες σελίδες. Ανατρέξτε παρακάτω στην ενότητα "Εικονοστοιχείο Ανίχνευσης" για περισσότερες πληροφορίες. 
-      * Ολοκληρώνοντας τη δραστηριότητα, οι χρήστες πρέπει να κατευθύνονται στην σελίδα [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * Ολοκληρώνοντας τη δραστηριότητα, οι χρήστες πρέπει να κατευθύνονται στην σελίδα [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Προβάλλουν στα μέσα κοινωνικής δικτύωσης το γεγονός ότι ολοκλήρωσαν μια Ώρα του Κώδικα
           * Λάβουν ένα πιστοποιητικό για την ολοκλήρωση της Ώρας του Κώδικα
           * Δουν τους πίνακες χωρών/πόλεων με τις περισσότερες συμμετοχές στις δραστηριότητες της Ώρας του Κώδικα
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(Προαιρετικά)* Η διαδικασία θα συνεχιστεί με ένα ηλεκτρονικό ερωτηματολόγιο/φόρμα όπου θα ζητείται μια αναφορά των παρακάτω μετρήσεων για την εβδομάδα από 8 Δεκεμβρίου, 12:01μμ έως και 14 Δεκεμβρίου 11:59πμ 
       * Για online δραστηριότητες (ειδικά για εφαρμογές smartphones/tablets): 
           * Αριθμός χρηστών
