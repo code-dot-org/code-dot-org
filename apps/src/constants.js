@@ -44,6 +44,7 @@ exports.TestResults = {
 
   // start using negative values, since we consider >= 20 to be "solved"
   EMPTY_FUNCTION_NAME: -1,       // We have a variable or function with the name ""
+  NESTED_FOR_SAME_VARIABLE: -2,
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
