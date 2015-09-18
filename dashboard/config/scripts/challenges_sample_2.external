@@ -1,0 +1,55 @@
+name 'challenges sample 2'
+title 'Sample Challenges'
+description 'Give these a try'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/challenges.css">
+
+<div class="challengeSet">
+<h3>Earth Science Challenge 2</h3>
+<br/>
+Choose a challenge and complete it in StarLogo Nova.  
+<br/>
+<br/>
+	<div class="challengeRow">
+    	<div class="easy">
+        	<strong>Easy</strong>
+            <br/><br/>
+            Install a deeper or more shallow pump
+            <br/><br/>
+            <i>Details: Cut and paste code, change location values in setup loop</i>
+        </div>
+    	<div class="medium">
+        	<strong>Medium</strong>
+            <br/><br/>
+            Create an impermeable layer (i.e. asphalt)
+            <br/><br/>
+            <i>Details: Use terrain color to indicate a layer where the water just stays there for a time and evaporates, does not infiltrate into the ground</i>
+        </div>
+    	<div class="hard">
+        	<strong>Hard</strong>
+            <br/><br/>
+				 Create new soil layers to represent clay, sand, and gravel
+            <br/><br/>
+            <i>Details: Add new colors to the ground layer with new behaviors (slower or faster) to represent how the water percolates through different substrates</i>
+        </div>
+    </div>
+    <br/><br/>
+    Choose your challenge and complete in StarLogo Nova.  When you're finished, make your project public and share the link in our Professional Learning Community.  Make sure to include:  
+    
+    <ol>
+      <li>Which challenge question did you chose, and why?</li>
+      <li>URL for public link.</li>
+      <li>What did you struggle with most?</li>
+      <li>Is there anything else you still need help with?</li>
+    </ol>
+
+<a href="http://forum.code.org/t/earth-science-challenge-2/2125" target="_new"><button>
+	Share your project >>
+</button></a>
+<br/><br/>
+
+When you're done sharing your project, click below to move on to the next challenge.
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+</div>
+MARKDOWN

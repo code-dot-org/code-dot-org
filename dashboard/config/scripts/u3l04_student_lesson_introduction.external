@@ -1,5 +1,6 @@
 name 'u3L04 Student Lesson Introduction'
 title 'Creating Procedures Part 2'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 04 - Functions and Top-Down Design
@@ -17,7 +18,7 @@ Large problems can be “abstracted” into sub-problems. Sometimes even the sub
 * Learn about top-down design
 * Practice top-down design on a small problem
 * Program a solution to that problem
-* Revisit the 3x3 grid problem and consider using functions to solve it more efficiently.v
+* Revisit the 3x3 grid problem and consider using functions to solve it more efficiently.
   
 
 

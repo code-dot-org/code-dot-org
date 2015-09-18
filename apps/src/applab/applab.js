@@ -559,6 +559,8 @@ function extendHandleClearPuzzle() {
   studioApp.handleClearPuzzle = function (config) {
     orig(config);
     Applab.setLevelHtml(config.level.startHtml || '');
+    AppStorage.populateTable(level.dataTables, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 }
@@ -656,6 +658,8 @@ Applab.init = function(config) {
       Blockly.SNAP_RADIUS *= Applab.scale.snapRadius;
     }
     drawDiv();
+
+    studioApp.alertIfAbusiveProject('#codeWorkspace');
   };
 
   config.afterEditorReady = function() {
@@ -703,7 +707,8 @@ Applab.init = function(config) {
   // Applab.initMinimal();
 
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
-
+  AppStorage.populateTable(level.dataTables, false); // overwrite = false
+  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -783,18 +788,6 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
-    }
-
-    // This button and handler duplicate a button in DesignToggleRow.jsx
-    // and should be removed once that component is no longer hidden from
-    // regular users.
-    var viewDataButton = document.getElementById('temporaryViewDataButton');
-    if (viewDataButton) {
-      // Simulate a run button click, to load the channel id.
-      var viewDataClick = studioApp.runButtonClickWrapper.bind(
-          studioApp, Applab.onViewData);
-      var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
-      dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
     // Prevent the backspace key from navigating back. Make sure it's still
@@ -1496,11 +1489,12 @@ Applab.startInDesignMode = function () {
 };
 
 Applab.hideDesignModeToggle = function () {
-  return !!level.hideDesignMode;
+  return !!level.hideDesignMode || !!studioApp.share;
 };
 
 Applab.hideViewDataButton = function () {
-  return !!level.hideViewDataButton;
+  var isEditing = window.dashboard && window.dashboard.project.isEditing();
+  return !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {

@@ -1,5 +1,13 @@
+* * *
 
+title: <%= hoc_s(:title_prizes_thanks) %> layout: wide
+
+* * *
+
+<%= view :signup_button %>
 
 # Hvala vam
 
-Vaša je cijela škola sada prijavljena da osvoji komplet računala za razred (ili tehnologiju u vrijednosti 10 tisuća dolara).
+Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology).
+
+<%= view :signup_button %>

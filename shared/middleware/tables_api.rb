@@ -50,6 +50,34 @@ class TablesApi < Sinatra::Base
     no_content
   end
 
+  # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Deletes a column by name.
+  #
+  delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    if column_name.empty?
+      halt 400, {}, "Column name cannot be empty"
+    end
+
+    TableType.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
+    no_content
+  end
+
+  # POST /v3/(shared|user)-tables/<channel-id>/<table-name>/column/<column-name>
+  #
+  # Updates a column name.
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/column/([^/]+)} do |endpoint, channel_id, table_name, column_name|
+    dont_cache
+    new_name = request.GET['new_name']
+    if new_name.empty?
+      halt 400, {}, "New column name cannot be empty"
+    end
+    TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    no_content
+  end
+
   #
   # DELETE /v3/(shared|user)-tables/<channel-id>/<table-name>
   #
@@ -84,7 +112,7 @@ class TablesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    redirect "/v3/#{endpoint}-tables/#{channel_id}/#{table_name}/#{value[:id]}", 301
+    redirect "/v3/#{endpoint}-tables/#{channel_id}/#{table_name}/#{value['id']}", 301
   end
 
   #
@@ -96,15 +124,24 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, JSON.parse(request.body.read), request.ip)
+    new_value =  JSON.parse(request.body.read)
+
+    if new_value.has_key? 'id' and new_value['id'].to_i != id.to_i
+      halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
+    end
+    new_value.delete('id')
+
+    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
     dont_cache
     content_type :json
     value.to_json
   end
+
   patch %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
+
   put %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
@@ -165,10 +202,42 @@ class TablesApi < Sinatra::Base
     # deleting the old records only after all validity checks have passed.
     table.delete_all()
 
+    # TODO: This should probably be a bulk insert
     records.each do |record|
       table.insert(record, request.ip)
     end
 
     redirect "#{table_url}"
+  end
+
+  #
+  # POST /v3/(shared|user)-tables/<channel-id>
+  #
+  # Populates tables from passed in json in the following format
+  #   {
+  #     'table_1': [{'name': 'trevor', 'age': 30}, ...],
+  #     'table_2': [{'city': 'SF', 'people': 6}, ...],
+  #   }
+  #
+  post %r{/v3/(shared|user)-tables/([^/]+)$} do |endpoint, channel_id|
+    begin
+      json_data = JSON.parse(request.body.read)
+    rescue => e
+      msg = "The json file could not be loaded: #{e.message}"
+      halt 400, {}, msg
+    end
+
+    overwrite = request.GET['overwrite'] == '1'
+    json_data.keys.each do |table_name|
+      table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      if table.exists? and !overwrite
+        next
+      end
+
+      table.delete_all()
+      json_data[table_name].each do |record|
+        table.insert(record, request.ip)
+      end
+    end
   end
 end

@@ -32,17 +32,17 @@ else
   capabilities[:name] = ENV['TEST_RUN_NAME']
   capabilities[:build] = ENV['BUILD']
 
-  p "Capabilities: #{capabilities.inspect}"
+  puts "Capabilities: #{capabilities.inspect}"
 
-  Time.now.tap do |start_time|
+  Time.now.to_i.tap do |start_time|
     browser = Selenium::WebDriver.for(:remote,
                                       url: url,
                                       desired_capabilities: capabilities,
                                       http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    p "Got browser in #{Time.now - start_time}s"
+    puts "Got browser in #{Time.now.to_i - start_time}s"
   end
 
-  p "Browser: #{browser}"
+  puts "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -59,8 +59,10 @@ Before do
   @browser = browser
   @browser.manage.delete_all_cookies
 
-  @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+  unless ENV['TEST_LOCAL'] == 'true'
+    @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+    puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+  end
 end
 
 def log_result(result)

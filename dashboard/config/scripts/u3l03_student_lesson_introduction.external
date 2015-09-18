@@ -1,5 +1,6 @@
 name 'U3L03 Student Lesson Introduction'
 title 'Creating Procedures Part 1'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 03 - Creating Functions Part 1
@@ -8,7 +9,7 @@ markdown <<MARKDOWN
 
 All programming languages allow a programmer to create new commands for the computer to run.  These new commands are called **functions** in JavaScript (the generic term is 'procedures').  When you **define** a function you give a name a set of actions you want the computer to perform.  When you **call** a function you are telling the computer to run (or execute) that set of actions.
 
-Procedures/functions are a way of “naming” chunks of code, that you can call (execute) as many times as needed. Procedures/function are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger logical chunks, making it much easier to design and reason about a program.
+Procedures/functions are a way of “naming” chunks of code, that you can call (execute) as many times as needed. Procedures/functions are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger logical chunks, making it much easier to design and reason about a program.
 
 # Lesson
 
