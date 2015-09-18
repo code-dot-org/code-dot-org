@@ -59,10 +59,10 @@ module ApplicationHelper
     end
   end
 
-  def level_info(user, script_level)
+  def level_info(user, script_level, user_levels)
     result =
       if user
-        script_level.try(:user_level).try(:best_result)
+        user_levels[script_level.level_id].try(:best_result)
       elsif session[:progress] && session[:progress][script_level.level_id]
         session[:progress][script_level.level_id]
       end
