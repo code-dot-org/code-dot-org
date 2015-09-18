@@ -153,7 +153,7 @@ Carl Desantis Building
 Room 1047<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 **What to bring to Phase 3 biyearly sessions:**
 
@@ -212,7 +212,7 @@ Carl Desantis Building<br/>
 Room 1048<br/>
 Fort Lauderdale, FL 33314
 
-Free parking is available near the building with your [parking pass](/files/nsu-parking-pass-9-19-15.pdf).  You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
