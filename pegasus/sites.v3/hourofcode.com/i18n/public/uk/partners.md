@@ -1,66 +1,42 @@
----
+* * *
 
 title: <%= hoc_s(:title_partners) %>
 
----
+* * *
 
 <%= view :signup_button %>
 
-<% if @country == 'la' %>
-
-# Latin America Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Australia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# United Kingdom Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-# Major Partners and Corporate Supporters
+# Основні партнери та корпоративні прихильники
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
----
+* * *
 
-# Major Promotional Partners
+# Основні рекламні партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
----
+* * *
 
-# International Partners
+# Міжнародні партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
----
+* * *
 
-# Tutorial Partners
+# Автори підручників
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
----
+* * *
 
-# Infrastructure partners and tools
+# Партнери з інфраструктури та інструментів
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
----
+* * *
 
-# Additional Partners
+# Додаткові партнери
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

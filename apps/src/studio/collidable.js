@@ -31,7 +31,7 @@ var Collidable = function (opts) {
   this.gridX = undefined;
   this.gridY = undefined;
 
-  this.activity = "none";
+  this.activity = undefined;
 
   for (var prop in opts) {
     this[prop] = opts[prop];
@@ -121,6 +121,7 @@ Collidable.prototype.setActivity = function(type) {
   this.activity = type;
 };
 
+
 /**
  * This function should be called every frame, and moves the item around.
  * It moves the item smoothly, but between fixed points on the grid.
@@ -129,11 +130,14 @@ Collidable.prototype.setActivity = function(type) {
  * It generally evalutes all possible destination locations, prioritizes
  * the best possible moves, and chooses randomly between evenly-scored
  * options.
+ *  
+ * @param type The type of roaming: "roamgrid", "fleeGrid" or "chaseGrid"
  */
-Collidable.prototype.update = function () {
+Collidable.prototype.roamGrid = function(type) {
 
-  if (this.activity === 'none') {
-    return;
+  // Do we have a set activity for this item?  If so, use it.
+  if (this.activity !== undefined) {
+    type = this.activity;
   }
   
   // Do we have an active location in grid coords?  If not, determine it.
@@ -190,9 +194,9 @@ Collidable.prototype.update = function () {
         candidate = {gridX: candidateX, gridY: candidateY};
         candidate.score = 0;
 
-        if (this.activity === "patrol") {
+        if (type == "roamGrid") {
           candidate.score ++;
-        } else if (this.activity === "chase") {
+        } else if (type == "chaseGrid") {
           if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
             candidate.score += 2;
           } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
@@ -207,7 +211,7 @@ Collidable.prototype.update = function () {
           } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
             candidate.score ++;
           }
-        } else if (this.activity === "flee") {
+        } else if (type == "fleeGrid") {
           candidate.score = 1;
           if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
             candidate.score ++;

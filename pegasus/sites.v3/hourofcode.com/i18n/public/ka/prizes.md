@@ -1,9 +1,8 @@
----
+* * *
 
-title: <%= hoc_s(:title_prizes) %>
-layout: wide
+title: <%= hoc_s(:title_prizes) %> layout: wide
 
----
+* * *
 
 <%= view :signup_button %>
 
@@ -23,9 +22,9 @@ layout: wide
 
 # 2014 წლის კოდის ერთი საათის პრიზები
 
-<% if @country == 'us' || @country == 'ca' || @country == 'uk' %> <a id="gift_code"></a>
+<% if @country == 'us' || @country == 'ca' || @country == 'uk' %>
 
-## Every organizer won a thank you gift
+## ყოველმა ორგანიზატორმა მოიგო სამადლობელი საჩუქარი {#gift_code}
 
 ყოველმა პედაგოგმა, რომელმაც ორგანიზება გაუწია კოდის ერთ საათს თავისი მოსწავლეებისთვის, მადლობის ნიშნად მიიღო Dropbox ადგილის 10GB ან 10 დოლარის Skype კრედიტები!
 
@@ -37,21 +36,17 @@ layout: wide
 
 <% if @country == 'uk' %>
 
-<a id="video_chat"></a>
+## 20-მა იღბლიანმა კლასმა მოიგო ვიდეოჩატი მოწვეულ სტუმართან! {#video_chat}
 
-## 20 lucky classrooms won a video chat with a guest speaker!
-
-20 lucky classrooms were be invited to join a video chat to celebrate the Hour of Code. Students chatted with tech leaders like [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), the founder of Skype and Kazaa and [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), co-founder and CEO of Moonfruit.
+20 იღბლიან კლასთან ერთად კოდის ერთი საათი ვიდეოჩატით აღვნიშნეთ. მოსწავლეები გაესაუბრნენ ისეთ ტექ ლიდერებს, როგორებიცაა [ნიკლას ზენსტრომი](https://www.youtube.com/watch?v=28Uiam6mFeI), Skype და Kazaa-ს დამფუძნებელი, [ვენდი ტანი](https://www.youtube.com/watch?v=Xzh54UPe4qg), Moonfruit-ის თანადამფუძნებელი და CEO.
 
 <% end %>
 
 <% if @country == 'us' %>
 
-<a id="video_chat"></a>
+## 100-მა იღბლიანმა კლასმა მოიგო ვიდეოჩატი მოწვეულ სტუმართან! {#video_chat}
 
-## 100 classrooms won a video chat with a guest speaker!
-
-100 lucky classrooms participated in live video Q&As with tech titans and tech-loving celebrities. Students asked questions and chatted with these exciting role models to kick off the Hour of Code.
+100-მა იღბლიანმა კლასმა მონაწილეობა მიიღო კითხვა-პასუხის ფორმატის ვიდეოჩატში, რომელეც ტექ სფეროს სპეციალისტებისა და მოყვარული სნობილი სახეების მონაწილეობით ჩატარდა. მოსწავლეები სვამდნენ კითხვებს და ესაუბრებოდნენ როლ-მოდელებს პროგრამირების მნიშვნელობის შესახებ.
 
 ### უყურეთ შარშანდელ ვიდეოჩატებს:
 
@@ -61,21 +56,17 @@ layout: wide
 
 <% if @country == 'ca' %>
 
-<a id="brilliant_project"></a>
+## 2000 დოლარიანი არაჩვეულებრივი პროექტი {#brilliant_project}
 
-## $2000 Brilliant Project
+[Brilliant Labs](http://brilliantlabs.com/hourofcode) მოგვაწოდა საჭირო რესურსები, მათ შორის 2000 დოლარი იმისთვის, რომ ყოველ ტერიტორიაზე (კვებეკის გარდა) თითქო კლასსში განხორციელდეს ტექნოლოგიებზე დაფუძნებული, მოსწავლეებზე ორიენტირებული სასწავლო პროექტი. მეტი ინფორმაციისვის წესებისა და პირობების შესხებ, ეწვიეთ გვერდს [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-[Brilliant Labs](http://brilliantlabs.com/hourofcode) provided the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). For more details, terms and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
+## იღბლიანმა სკოლებმა კი Actua-ს უორქშოპი მოიგეს {#actua_workshop}
 
-<a id="actua_workshop"></a>
+კანადაში 15-მა იღბლიანმა სკოლამ მოიგო ორ-ორი STEM უორქშოპი, რომლებიც Actua-ს [წარმომადგენლებმა](http://www.actua.ca/about-members/) ჩაატარეს. Actua-ს წევრები ატარებენ უორქშოფებს მეცნიერებაზე, ტექნოლოგიებზე, პროგრამირებასა და მათემატიკაზე (STEM), რომლებიც შეესაბამება K-12 მოსწავლეების სასკოლო კურიკულუმებს. უორქშოპების წამყვანები არიან ასევე მოსწავლეები, კარგად მომზადებული და, რაც მთავარია, საქმეზე შეყვარებულები - რაც მათ მშვენიერ როლ-მოდელად აყალიბებს. რას უნდა მოელოდოთ? საინტერესო დემონსტრაციებს, ინტერაქტიურ ექსპერიმენტებსა დაუამრავ ხალისს! მინიშნება: უორქშოპების მისაწვდომობა შეიძლება იცვლებოდეს მოშორებით მდებარე და სოფლის ტერიტორიებზე.
 
-## Lucky Schools won an Actua Workshop
+[Actua](http://actua.ca/) არის ლიდერი კანადაში მესნიერების, ტექნოლოგიების, პროგრამირებისა და მათემატიკის გავრცელების სფეროში. ყოველ წელს Actua 225 000-ზე მეტ ახალგაზრდას აზიარებს მეცნირებას.
 
-15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
-
-[Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
-
-**Congratulations to the 2014 winners!**
+**ვულოცავთ 2014 წლის გამარჯვებულებს!**
 
 | სკოლა                          | ქალაქი       | Actua ქსელის წევრი              |
 | ------------------------------ | ------------ | ------------------------------- |
@@ -95,28 +86,22 @@ layout: wide
 | ბერძნული სკოლა გარდენი         | ფრედერიკტონი | Worlds UNBound                  |
 | Armbrae Academy                | ჰალიფაქსი    | SuperNOVA                       |
 
-<a id="kids_code"></a>
+## Kids Code Jeunesse დაგვეხმარა კლასების უზრუნვეყოფაში კანადის მასშტაბით! {#kids_code}
 
-## Kids Code Jeunesse helped support classrooms across Canada!
-
-[Kids Code Jeunesse](http://www.kidscodejeunesse.org) provided trained computer programming volunteers to support teachers in computer science education. Kids Code Jeunesse is a Canadian not-for-profit aimed at providing every child with the opportunity to learn to code and every teacher the opportunity to learn how to teach computer programming in the classroom.
+[Kids Code Jeunesse](http://www.kidscodejeunesse.org) გაწვრთნილი მოხალისე პროგრამისტები ეხმარებოდნენ მასწავლებლებს კომპიუტერული განათლების გავრცელებაში. Kids Code Jeunesse არის კანადური არამომგებიანი ორგანიზაცია, რომლის მიზანია მისცეს ყოველ ბავშვს შესაძლებლობა ისწავლოს პროგრამირება და ყოველ მასწავლებელს - შესაძლებლობა გაიგოს, როგორ ასწავლოს პროგრამირება კლასში.
 
 <% end %>
 
 <% if @country == 'us' || @country == 'ca' %>
 
-<a id="programmable_robots"></a>
+## 100-მა კლასმა მოიგო პროგრამირებადი რობოტების წყობა {#programmable_robots}
 
-## 100 classrooms won a set of programmable robots
-
-[Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
+[Sphero](http://www.gosphero.com/) არის აპლიკაციით კონტროლირებადი ბურთი რომელიც, ცვლის ბავშვების სწავლების მეთოდს. [SPRK lessons](http://www.gosphero.com/education/) დამსახურებით ამ მრგვალი რობოტებით ბავშვები გაეცნენ პროგრამირებას და დახვეწეს თავიანთი მათემატიკისა და მეცნიერების უნარები. Sphero-მ გასცა 100 ნაკკრები ყოველი კლასისთვის - თითოში 5 რობოტით. კანადასა და აშშ-ში ნებისმიერ კლასს (საჯაროსა თუ კერძოს) შეეძლო ამ პრიზის მოგება.
 
 <% end %>
 
-<a id="more_questions"></a>
+## დაგრჩათ რამე კითხვები პრიზებთან დაკავშირებით? {#more_questions}
 
-## More questions about prizes?
-
-Check out our [Terms and Conditions](<%= resolve_url('https://code.org/tos') %>) or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
+გაეცანით ჩვენს წესებსა და პირობებს</a> ან ეწვიეთ ფორუმს, სადაც გაეცნობით [ხშირად დასმულ კითხვებს](http://support.code.org) და დასვამთ თქვენსას.
 
 <%= view :signup_button %>

@@ -1,6 +1,6 @@
 * * *
 
-title: <%= hoc_s(:title_prizes_terms) %> layout: wide
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: resources_nav
 
 * * *
 
@@ -24,7 +24,7 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign u
 
 ## Set laptop për klase (ose $10,000 për mjete tjera teknologjike):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Një shkollë nga çdo shtet në ShBA do të marrë një set kompjuterash për klasa. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
+Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Një shkollë nga cdo shtet në SHBA do të marrë një bashkësi klasash të kompjuterëve. Code.org will select and notify winners via email by December 1, 2015.
 
 To clarify, this is not a sweepstakes or a contest involving pure chance.
 

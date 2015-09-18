@@ -98,6 +98,8 @@ var EdgeClassNames = [
 var level;
 var skin;
 
+var background = null;
+
 /**
  * Milliseconds between each animation frame.
  */
@@ -255,25 +257,21 @@ var drawMap = function () {
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.width = Studio.MAZE_WIDTH + 'px';
 
-  var backgroundLayer = document.createElementNS(SVG_NS, 'g');
-  backgroundLayer.setAttribute('id', 'backgroundLayer');
-  svg.appendChild(backgroundLayer);
-
   if (skin.background) {
     var tile = document.createElementNS(SVG_NS, 'image');
     tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                        skin[Studio.background].background);
+                        skin.background);
     tile.setAttribute('id', 'background');
     tile.setAttribute('height', Studio.MAZE_HEIGHT);
     tile.setAttribute('width', Studio.MAZE_WIDTH);
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
-    backgroundLayer.appendChild(tile);
+    svg.appendChild(tile); 
   }
 
   if (level.coordinateGridBackground) {
     studioApp.createCoordinateGridBackground({
-      svg: 'backgroundLayer',
+      svg: 'svgStudio',
       origin: 0,
       firstLabel: 100,
       lastLabel: 300,
@@ -281,12 +279,8 @@ var drawMap = function () {
     });
   }
 
-  var spriteLayer = document.createElementNS(SVG_NS, 'g');
-  spriteLayer.setAttribute('id', 'spriteLayer');
-  svg.appendChild(spriteLayer);
-
   if (level.wallMapCollisions) {
-    Studio.drawMapTiles();
+    Studio.drawMapTiles(svg);
   }
 
   if (Studio.spriteStart_) {
@@ -298,26 +292,26 @@ var drawMap = function () {
       var spriteClipRect = document.createElementNS(SVG_NS, 'rect');
       spriteClipRect.setAttribute('id', 'spriteClipRect' + i);
       spriteClip.appendChild(spriteClipRect);
-      spriteLayer.appendChild(spriteClip);
+      svg.appendChild(spriteClip);
 
       // Add sprite (not setting href, height, or width until displaySprite).
       var spriteIcon = document.createElementNS(SVG_NS, 'image');
       spriteIcon.setAttribute('id', 'sprite' + i);
       spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
-      spriteLayer.appendChild(spriteIcon);
+      svg.appendChild(spriteIcon);
 
       // Add support for walking spritesheet.
       var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
       spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
       spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
-      spriteLayer.appendChild(spriteWalkIcon);
+      svg.appendChild(spriteWalkIcon);
 
       var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
       spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
       var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
       spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
       spriteWalkClip.appendChild(spriteWalkClipRect);
-      spriteLayer.appendChild(spriteWalkClip);
+      svg.appendChild(spriteWalkClip);
 
       dom.addMouseDownTouchEvent(spriteIcon,
         delegate(this, Studio.onSpriteClicked, i));
@@ -665,7 +659,7 @@ function sortDrawOrder() {
     return;
   }
 
-  var spriteLayer = document.getElementById('spriteLayer');
+  var svg = document.getElementById('svgStudio');
 
   var itemsArray = [];
 
@@ -695,10 +689,19 @@ function sortDrawOrder() {
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
   }
 
+  // Add tiles.
+  var tiles = $(".tile");
+  for (i = 0; i < tiles.length; i++) {
+    var tile = {};
+    tile.element = tiles[i];
+    tile.y = tiles[i].getAttribute('y');
+    itemsArray.push(tile);
+  }
+
   itemsArray = _.sortBy(itemsArray, 'y');
 
   for (i = 0; i < itemsArray.length; ++i) {
-    spriteLayer.appendChild(itemsArray[i].element);
+    svg.appendChild(itemsArray[i].element);
   }
 }
 
@@ -1115,12 +1118,12 @@ function createItemEdgeCollisionHandler (item) {
   };
 }
 
-/* Calls each item's update function
+/* Calls each item's update function (if/when provided by student).
  */
 function updateItems () {
   for (var i = 0; i < Studio.items.length; i++) {
     var item = Studio.items[i];
-    item.update();
+    executeItemUpdate(item, i);
   }
 }
 
@@ -1407,8 +1410,6 @@ Studio.init = function(config) {
 
   loadLevel();
 
-  Studio.background = getDefaultBackgroundName();
-
   if (Studio.customLogic) {
     // We don't want icons in instructions for our custom logic base games
     skin.staticAvatar = null;
@@ -1615,18 +1616,6 @@ Studio.clearEventHandlersKillTickLoop = function() {
   resetItemOrProjectileList(Studio.items);
 };
 
-
-/**
- * Return the name (can be dereferenced as skin[name]) of the default background
- * (1st priority is to force to grid if specified by the level, the 2nd priority
- * is to honor the level-specific background value, the 3rd priority is to
- * fall back to the skin's value, which is also used for the blockly block).
- */
-function getDefaultBackgroundName() {
-  return level.coordinateGridBackground ? 'grid' :
-          (level.background || skin.defaultBackground);
-}
-
 /**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
@@ -1666,7 +1655,11 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Studio.setBackground({value: getDefaultBackgroundName()});
+  if (level.coordinateGridBackground) {
+    Studio.setBackground({value: 'grid'});
+  } else {
+    Studio.setBackground({value: level.background || skin.defaultBackground});
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -2375,8 +2368,7 @@ Studio.drawWallTile = function (svg, row, col) {
   var srcRow = Math.floor(Math.random() * 4);
   var srcCol = Math.floor(Math.random() * 4);
 
-  var tiles = Studio.background && skin[Studio.background].tiles ?
-                skin[Studio.background].tiles : skin.tiles;
+  var tiles = background && skin[background].tiles ? skin[background].tiles : skin.tiles;
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
@@ -2435,14 +2427,13 @@ Studio.createLevelItems = function (svg) {
   }
 };
 
-Studio.drawMapTiles = function () {
-  var spriteLayer = document.getElementById('backgroundLayer');
+Studio.drawMapTiles = function (svg) {
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
       var mapVal = Studio.map[row][col];
       if (mapVal & SquareType.WALL ||
           (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
-        Studio.drawWallTile(spriteLayer, row, col);
+        Studio.drawWallTile(svg, row, col);
       }
     }
   }
@@ -2810,6 +2801,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.addItemsToScene(cmd.opts);
       break;
+    case 'setItemAction':
+      studioApp.highlight(cmd.id);
+      Studio.setItemAction(cmd.opts);
+      break;
     case 'setItemActivity':
       studioApp.highlight(cmd.id);
       Studio.setItemActivity(cmd.opts);
@@ -2873,7 +2868,6 @@ Studio.addItemsToScene = function (opts) {
       loop: true,
       x: pos.x,
       y: pos.y,
-      activity: 'patrol',
       width: 100,
       height: 100
     };
@@ -2896,19 +2890,32 @@ Studio.addItemsToScene = function (opts) {
       }
     }
 
-    item.createElement(document.getElementById('spriteLayer'));
+    item.createElement(document.getElementById('svgStudio'));
     Studio.items.push(item);
   }
 };
 
+Studio.setItemAction = function (opts) {
+  var item = Studio.items[opts.itemIndex];
+
+  if (!item) {
+    return;
+  }
+
+  if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+    item.roamGrid(opts.type);
+  }
+};
+
 Studio.setItemActivity = function (opts) {
-  if (opts.type === "patrol" || opts.type === "chase" ||
-      opts.type === "flee" || opts.type === "none") {
-    Studio.items.forEach(function (item) {
-      if (item.className === opts.className) {
-        item.setActivity(opts.type);
-      }
-    });
+  var item = Studio.items[opts.itemIndex];
+
+  if (!item) {
+    return;
+  }
+
+  if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+    item.setActivity(opts.type);
   }
 };
 
@@ -3023,18 +3030,19 @@ Studio.setScoreText = function (opts) {
 };
 
 Studio.setBackground = function (opts) {
-  if (opts.value !== Studio.background) {
-    Studio.background = opts.value;
+  if (opts.value !== background) {
+    background = opts.value;
 
     var element = document.getElementById('background');
     element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin[Studio.background].background);
+      skin[background].background);
 
     // Draw the tiles (again) now that we know which background we're using.
     if (level.wallMapCollisions) {
       $(".tile_clip").remove();
       $(".tile").remove();
-      Studio.drawMapTiles();
+      var svg = document.getElementById('svgStudio');
+      Studio.drawMapTiles(svg);
 
       sortDrawOrder();  
     }
@@ -3055,7 +3063,8 @@ Studio.setWalls = function (opts) {
   // Draw the tiles (again) that we know which background we're using.
   $(".tile_clip").remove();
   $(".tile").remove();
-  Studio.drawMapTiles();
+  var svg = document.getElementById('svgStudio');
+  Studio.drawMapTiles(svg);
 
   sortDrawOrder();  
 };
@@ -3585,6 +3594,16 @@ function executeItemCollision(src, target) {
   if (isEdgeClass(target)) {
     Studio.executeQueue(prefix + 'any_edge');
   }
+}
+
+function executeItemUpdate(item, itemIndex) {
+  // Part 1: execute student-provided code.
+  var prefix = 'whenItemUpdated-' + item.className;
+  callHandler(prefix, undefined, [itemIndex]);
+
+  // Part 2: execute item movement every frame here, with a default that
+  // can be overriden by the student calling setItemActivity.
+  item.roamGrid("roamGrid");
 }
 
 /**

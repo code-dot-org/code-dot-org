@@ -10,20 +10,20 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 ## 1) დარეგისტრირდით
 
-  * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](%= resolve_url('/resources') %) and encourage others to host.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
 
 ## 2) უყურეთ ამ "როგორ უნდა" ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) აირჩიეთ ტუტორიალი:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
   * მასწავლებლისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
@@ -34,7 +34,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
   * **არ გაქვთ საკმარისი რაოდენობის მოწყობილობები?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
   * **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ ოფლაინ-ტუტორიალები.
 
-![](/images/fit-350/group_ipad.jpg)
+![](/images/group_ipad.jpg)</a>
 
 ## 5) მოანდომეთ მოსწავლეებს მიიღონ მონაწილეობა კოდის თქვენს ერთ საათში
 
@@ -59,7 +59,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **აუხსენით ბავშვებს, რა უნდა გააკეთონ**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
 **როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ თქვენ უპასუხებთ:**
 
@@ -69,18 +69,18 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **რა ვქნათ, თუ მოსწავლემ მალე დაამთავრა?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * ან მას შეუძლია დაეხმაროს იმ კლასელებს, ვისაც გაუჭირდა დავალებების შესრულება.
 
 [col-33]
 
-![](/images/fit-250/highschoolgirls.jpeg)
+![](/images/highschoolgirls.jpeg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-300/group_ar.jpg)
+![](/images/group_ar.jpg)</a>
 
 [/col-33]
 
@@ -90,25 +90,24 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## 7) აღნიშნეთ
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers for your students.
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
+![](/images/celebrate2.jpeg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-260/highlight-certificates.jpg)
+![](/images/highlight-certificates.jpg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/boy-certificate.jpg)</a>
 
 [/col-33]
 
@@ -125,6 +124,6 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>

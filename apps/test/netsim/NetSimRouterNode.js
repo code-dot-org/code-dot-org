@@ -33,7 +33,9 @@ var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 describe("NetSimRouterNode", function () {
-  var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder;
+  var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder,
+      routerA, routerB, routerC, routerD, routerE, routerF,
+      clientA, clientB, clientC;
 
   /**
    * Concise router creation for test
@@ -255,14 +257,22 @@ describe("NetSimRouterNode", function () {
         packetHeaderSpec);
 
     testShard = fakeShard();
+
+    routerA = makeRemoteRouter();
+    routerB = makeRemoteRouter();
+    routerC = makeRemoteRouter();
+    routerD = makeRemoteRouter();
+    routerE = makeRemoteRouter();
+    routerF = makeRemoteRouter();
+
+    clientA = makeRemoteClient('clientA');
+    clientB = makeRemoteClient('clientB');
+    clientC = makeRemoteClient('clientC');
   });
 
   it("has expected row structure and default values", function () {
     var router = new NetSimRouterNode(testShard);
     var row = router.buildRow();
-
-    assertOwnProperty(row, 'routerNumber');
-    assertEqual(row.routerNumber, undefined);
 
     assertOwnProperty(row, 'creationTime');
     assertWithinRange(row.creationTime, Date.now(), 10);
@@ -285,11 +295,6 @@ describe("NetSimRouterNode", function () {
 
   describe("constructing from a table row", function () {
     var routerFromRow;
-
-    it ("routerNumber", function () {
-      routerFromRow = makeLocalRouter({ routerNumber: 42 });
-      assertEqual(42, routerFromRow.routerNumber);
-    });
 
     it ("creationTime", function () {
       routerFromRow = makeLocalRouter({ creationTime: 42 });
@@ -334,10 +339,8 @@ describe("NetSimRouterNode", function () {
 
   describe("static method get", function () {
     var err, result, routerID;
-    var routerA;
 
     beforeEach(function () {
-      routerA = makeRemoteRouter();
       err = undefined;
       result = undefined;
       routerID = 0;
@@ -369,12 +372,6 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("getConnections", function () {
-    var routerA;
-
-    beforeEach(function () {
-      routerA = makeRemoteRouter();
-    });
-
     it ("returns an empty array when no wires are present", function () {
       var wires = routerA.getConnections();
       assert(Array.isArray(wires));
@@ -423,12 +420,6 @@ describe("NetSimRouterNode", function () {
    */
   var CONNECTION_LIMIT = 6;
   describe("acceptConnection", function () {
-    var routerA;
-
-    beforeEach(function () {
-      routerA = makeRemoteRouter();
-    });
-
     it ("accepts connection if total connections are at or below limit", function () {
       for (var wireID = routerA.entityID + 1;
            wireID < routerA.entityID + CONNECTION_LIMIT + 1;
@@ -497,42 +488,8 @@ describe("NetSimRouterNode", function () {
     });
   });
 
-  it ("numbers created routers in sequence, starting with 1", function () {
-    var newRouter;
-    for (var i = 0; i < 128; i++) {
-      newRouter = makeRemoteRouter();
-      assertEqual(i + 1, newRouter.getRouterNumber());
-    }
-  });
-
-  it ("numbers routers in sequence in spite of creating client nodes", function () {
-    var newRouter, newClient;
-
-    // Start with a client, since this is the typical scenario on a new shard.
-    newClient = makeRemoteClient();
-    assertEqual(1, newClient.entityID);
-
-    // The new client probably adds a router.
-    // The new router does not get entity ID 1, but it does get router ID 1.
-    newRouter = makeRemoteRouter();
-    assertEqual(1, newRouter.getRouterNumber());
-    assertEqual(2, newRouter.entityID);
-
-    // Make another router, make sure it's router #2
-    newRouter = makeRemoteRouter();
-    assertEqual(2, newRouter.getRouterNumber());
-
-    // Make another client
-    newClient = makeRemoteClient();
-    assertEqual(4, newClient.entityID);
-
-    // Make another router, make sure it's router #3
-    newRouter = makeRemoteRouter();
-    assertEqual(3, newRouter.getRouterNumber());
-  });
-
   describe("address assignment rules", function () {
-    var routerA;
+    var wire1, wire2, wire3;
 
     function makeWire(nodeIDOffset) {
       var newWire;
@@ -546,18 +503,16 @@ describe("NetSimRouterNode", function () {
     }
 
     beforeEach(function () {
-      routerA = makeRemoteRouter();
+      wire1 = makeWire(1);
+      wire2 = makeWire(2);
+      wire3 = makeWire(3);
+
+      assertTableSize(testShard, 'wireTable', 3);
     });
 
     describe("getting addresses", function () {
-      var wire1, wire2, wire3;
-
       beforeEach(function () {
         NetSimGlobals.setRandomSeed('address assignment test');
-        wire1 = makeWire(1);
-        wire2 = makeWire(2);
-        wire3 = makeWire(3);
-        assertTableSize(testShard, 'wireTable', 3);
       });
 
       describe("in simple four-bit format", function () {
@@ -612,23 +567,14 @@ describe("NetSimRouterNode", function () {
     });
 
     describe("keeping multipart addresses within addressable space", function () {
-      var routerB, routerC, routerD, routerE;
-
-      beforeEach(function () {
-        routerB = makeRemoteRouter();
-        routerC = makeRemoteRouter();
-        routerD = makeRemoteRouter();
-        routerE = makeRemoteRouter();
-      });
-
       it ("leaves router number unchanged for one-part addresses", function () {
+        // Four possible router addresses
         setAddressFormat('4');
 
         var newRouter;
         for (var i = 0; i < 128; i++) {
           newRouter = makeRemoteRouter();
-          assertEqual(newRouter.routerNumber, newRouter.getRouterNumber());
-          assertEqual("0", newRouter.getAddress());
+          assertEqual(newRouter.entityID, newRouter.getRouterNumber());
         }
       });
 
@@ -636,22 +582,22 @@ describe("NetSimRouterNode", function () {
         // Four possible router addresses
         setAddressFormat('2.8');
 
-        // Initial node starts at routerNumber 1
-        assertEqual(1, routerA.routerNumber);
+        // Initial node starts at entityID 1
+        assertEqual(1, routerA.entityID);
         assertEqual(1, routerA.getRouterNumber());
 
-        assertEqual(2, routerB.routerNumber);
+        assertEqual(2, routerB.entityID);
         assertEqual(2, routerB.getRouterNumber());
 
-        assertEqual(3, routerC.routerNumber);
+        assertEqual(3, routerC.entityID);
         assertEqual(3, routerC.getRouterNumber());
 
         // At 4 (our assignable space) router number wraps to zero
-        assertEqual(4, routerD.routerNumber);
+        assertEqual(4, routerD.entityID);
         assertEqual(0, routerD.getRouterNumber());
 
         // Collisions are possible
-        assertEqual(5, routerE.routerNumber);
+        assertEqual(5, routerE.entityID);
         assertEqual(1, routerE.getRouterNumber());
       });
 
@@ -659,26 +605,26 @@ describe("NetSimRouterNode", function () {
         // Four possible router addresses
         setAddressFormat('2.8');
 
-        // Initial node starts at routerNumber 1
-        assertEqual(1, routerA.routerNumber);
+        // Initial node starts at entityID 1
+        assertEqual(1, routerA.entityID);
         assertEqual("Router 1", routerA.getDisplayName());
         assertEqual("1.0", routerA.getAddress());
 
-        assertEqual(2, routerB.routerNumber);
+        assertEqual(2, routerB.entityID);
         assertEqual("Router 2", routerB.getDisplayName());
         assertEqual("2.0", routerB.getAddress());
 
-        assertEqual(3, routerC.routerNumber);
+        assertEqual(3, routerC.entityID);
         assertEqual("Router 3", routerC.getDisplayName());
         assertEqual("3.0", routerC.getAddress());
 
         // At 4 (our assignable space) router number and address wrap to zero
-        assertEqual(4, routerD.routerNumber);
+        assertEqual(4, routerD.entityID);
         assertEqual("Router 0", routerD.getDisplayName());
         assertEqual("0.0", routerD.getAddress());
 
         // Collisions are possible
-        assertEqual(5, routerE.routerNumber);
+        assertEqual(5, routerE.entityID);
         assertEqual("Router 1", routerE.getDisplayName());
         assertEqual("1.0", routerE.getAddress());
       });
@@ -784,9 +730,6 @@ describe("NetSimRouterNode", function () {
   });
 
   it ("still simulates/routes after connect-disconnect-connect cycle", function () {
-    var routerA = makeRemoteRouter();
-    var clientA = makeRemoteClient();
-
     NetSimGlobals.getLevelConfig().automaticReceive = true;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
@@ -814,13 +757,7 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("message routing rules", function () {
-    var routerA, clientA, clientB;
-
     beforeEach(function () {
-      routerA = makeRemoteRouter();
-      clientA = makeRemoteClient();
-      clientB = makeRemoteClient();
-
       // Manually connect nodes
       clientA.initializeSimulation(null, null);
       clientA.connectToRouter(routerA);
@@ -912,11 +849,8 @@ describe("NetSimRouterNode", function () {
 
 
     describe ("broadcast mode", function () {
-      var clientC;
 
       beforeEach(function () {
-        clientC = makeRemoteClient();
-
         // Put level in broadcast mode
         NetSimGlobals.getLevelConfig().broadcastMode = true;
 
@@ -1655,15 +1589,7 @@ describe("NetSimRouterNode", function () {
   });
 
   describe("routing to other routers", function () {
-    var routerA, routerB;
-    var clientA, clientB;
-
     beforeEach(function () {
-      routerA = makeRemoteRouter();
-      routerB = makeRemoteRouter();
-      clientA = makeRemoteClient();
-      clientB = makeRemoteClient();
-
       setAddressFormat('4.4');
       NetSimGlobals.getLevelConfig().connectedRouters = true;
 
@@ -1807,7 +1733,6 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make one extra hop", function () {
-      var routerC = makeRemoteRouter();
       NetSimGlobals.getLevelConfig().minimumExtraHops = 1;
       NetSimGlobals.getLevelConfig().maximumExtraHops = 1;
 
@@ -1815,6 +1740,9 @@ describe("NetSimRouterNode", function () {
       routerA.setBandwidth(50);
       routerB.setBandwidth(50);
       routerC.setBandwidth(25);
+      routerD.destroy(); // We only want three routers in this test.
+      routerE.destroy();
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1862,7 +1790,6 @@ describe("NetSimRouterNode", function () {
       NetSimGlobals.setRandomSeed('two-hops');
 
       // Introduce another router so there's space for two extra hops.
-      var routerC = makeRemoteRouter();
       var routerD = makeRemoteRouter();
 
       // This test reads better with slower routing.
@@ -1870,6 +1797,8 @@ describe("NetSimRouterNode", function () {
       routerB.setBandwidth(50);
       routerC.setBandwidth(25);
       routerD.setBandwidth(25);
+      routerE.destroy(); // Only use four routers
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1925,15 +1854,6 @@ describe("NetSimRouterNode", function () {
 
 
     describe ("extra hop randomization", function () {
-      var routerC, routerD, routerE, routerF;
-
-      beforeEach(function () {
-        routerC = makeRemoteRouter();
-        routerD = makeRemoteRouter();
-        routerE = makeRemoteRouter();
-        routerF = makeRemoteRouter();
-      });
-
       var sendFromAToB = function () {
         var packetBinary = encoder.concatenateBinary(
             encoder.makeBinaryHeaders({
@@ -2003,12 +1923,13 @@ describe("NetSimRouterNode", function () {
       NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
       NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
 
-      var routerC = makeRemoteRouter();
-
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
       routerB.setBandwidth(50);
       routerC.setBandwidth(25);
+      routerD.destroy(); // Only use three routers in this example
+      routerE.destroy();
+      routerF.destroy();
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
