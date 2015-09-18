@@ -519,6 +519,8 @@ Blockly.Blocks.controls_for = {init:function() {
   c.setAttribute("type", "variables_get");
   b.callback = Blockly.ContextMenu.callbackFactory(this, c);
   a.push(b)
+}, domToMutation:function(a) {
+  "default_var" === a.getAttribute("name") && (a = Blockly.Variables.generateUniqueNameFromBase_(a.childNodes[0].data), this.setTitleValue(a, "VAR"))
 }};
 Blockly.Blocks.controls_forEach = {init:function() {
   this.setHelpUrl(Blockly.Msg.CONTROLS_FOREACH_HELPURL);
