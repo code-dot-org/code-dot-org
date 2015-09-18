@@ -1,8 +1,8 @@
-* * *
+---
 
 العنوان: شروط الخدمة
 
-* * *
+---
 
 ### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
