@@ -16,6 +16,14 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 11, session_lines
   end
 
+  def test_session_lines_migration
+    # Verify that session[:lines] is correctly migrated in cookies[:lines]
+    session[:lines] = 37
+    assert_equal 37, session_lines
+    assert_nil session[:lines]
+    assert_equal "37", cookies[:lines]
+  end
+
   def test_session_level_progress
     assert session_levels_progress_is_empty_for_test
     assert_equal 0, session_level_progress(10)
@@ -24,6 +32,14 @@ class UsersHelperTest < ActionView::TestCase
     session_set_level_progress(11, 25)
     assert_equal 25, session_level_progress(11)
     assert_equal 20, session_level_progress(10)
+  end
+
+  def test_session_level_progress_migration
+    # Verify that session[:lines] is correctly migrated in cookies[:lines]
+    session[:progress] = {1 => 100}
+    assert_equal 100, session_level_progress(1)
+    assert_nil session[:progress]
+    assert_equal JSON.generate({"1" => 100}), cookies[:progress]
   end
 
   def test_summarize_user_progress_and_percent_complete
