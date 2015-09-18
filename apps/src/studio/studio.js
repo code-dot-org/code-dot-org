@@ -3110,8 +3110,52 @@ Studio.setWalls = function (opts) {
   $(".tile").remove();
   Studio.drawMapTiles();
 
-  sortDrawOrder();  
+  Studio.fixSpriteLocation();
+
+  sortDrawOrder();
 };
+
+/**
+ * A call to setWalls might place a wall on top of the sprite.  In that case,
+ * find a new nearby location for the sprite that doesn't have a wall.
+ */
+Studio.fixSpriteLocation = function () {
+  if (level.wallMapCollisions && level.blockMovingIntoWalls) {
+    var spriteIndex = 0;
+    var sprite = Studio.sprite[spriteIndex];
+    var xPos = getNextPosition(spriteIndex, false, false);
+    var yPos = getNextPosition(spriteIndex, true, false);
+
+    if (Studio.willSpriteTouchWall(sprite, xPos, yPos)) {
+
+      // Let's assume that one of the surrounding 8 squares is available.
+
+      var xCenter = xPos + sprite.width / 2;
+      var yCenter = yPos + sprite.height / 2;
+
+      var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
+      var yGrid = Math.floor(yCenter / Studio.SQUARE_SIZE);
+
+      var minRow = Math.max(yGrid - 1, 0);
+      var maxRow = Math.min(yGrid + 1, Studio.ROWS - 1);
+      var minCol = Math.max(xGrid - 1, 0);
+      var maxCol = Math.min(xGrid + 1, Studio.COLS - 1);
+
+      for (var row = minRow; row <= maxRow; row++) {
+        for (var col = minCol; col <= maxCol; col++) {
+          if (! Studio.isWallTile(row, col)) {
+            sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2;
+            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2;
+            sprite.dir = Direction.NONE;
+            console.log(xGrid, yGrid, row, col, sprite.x, sprite.y);
+            return;
+          }
+        }
+      }
+    }
+  };
+};
+
 
 /**
  * Sets an actor to be a specific sprite, or alternatively to be hidden.
