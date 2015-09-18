@@ -419,9 +419,9 @@ class User < ActiveRecord::Base
 
   def levels_from_script(script)
     ul_map = user_levels_by_level(script)
-    q = script.script_levels.order(:position)
+    sls = script.script_levels.sort { |a, b| a.position <=> b.position }
 
-    q.each do |sl|
+    sls.each do |sl|
       sl.user_level = ul_map[sl.level_id]
     end
   end
