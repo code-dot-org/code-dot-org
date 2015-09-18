@@ -14,14 +14,9 @@ def bad_request()
   halt(400, "Bad Request\n")
 end
 
-# Stops processing the current request
-# Returns status 400 BAD_REQUEST
-# Optionally adds additional details to a JSON response body
-def json_bad_request(details = nil)
+def json_bad_request()
   content_type :json
-  body = { error: 'Bad Request' }
-  body.merge!(details: details) unless details.nil?
-  halt(400, body.to_json)
+  halt(400, { error: "Bad Request" }.to_json)
 end
 
 def not_authorized()

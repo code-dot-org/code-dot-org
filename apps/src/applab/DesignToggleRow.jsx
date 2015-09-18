@@ -99,7 +99,7 @@ module.exports = React.createClass({
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
     var hidden = {
-      display: 'none'
+      visibility: 'hidden'
     };
 
     var showDataButtonStyle = $.extend(

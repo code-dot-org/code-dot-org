@@ -105,7 +105,6 @@
         </block>
         <block type="studio_whenTouchItem"/>
         <block type="studio_addItems"/>
-        <block type="studio_setItemActivity"/>
         <block type="studio_setSprite"/>
         <block type="studio_setSpriteSpeed"/>
         <block type="studio_setBackground"/>

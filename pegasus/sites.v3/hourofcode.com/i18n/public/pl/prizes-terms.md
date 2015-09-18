@@ -1,9 +1,8 @@
----
+* * *
 
-title: <%= hoc_s(:title_prizes_terms) %>
-layout: wide
+tytuł: < % = hoc_s(:Nagrody - regulamin) %> Układ: szeroki nav: resources_nav
 
----
+* * *
 
 <%= view :signup_button %>
 

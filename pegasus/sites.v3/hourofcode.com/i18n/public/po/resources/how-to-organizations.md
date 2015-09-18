@@ -1,16 +1,14 @@
----
 
-title: <%= hoc_s(:title_how_to_organizations) %>
-layout: wide
-nav: how_to_nav
 
----
+<div class="row">
+  <h1 class="col-sm-6">
+    Como ensinar uma Hour of Code
+  </h1>
+</div>
 
-<%= view :signup_button %>
+</div>
 
-# Bring the Hour of Code to your company
-
-## 1) Try the tutorials:
+## 1) Experimenta os tutoriais:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
@@ -19,9 +17,9 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
   * Require minimal prep-time for organizers
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-[![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)
+[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planeie o hardware de que vai necessitar - os computadores são opcionais
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
@@ -43,5 +41,3 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
-
-<%= view :signup_button %>
