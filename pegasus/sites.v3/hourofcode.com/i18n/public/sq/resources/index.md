@@ -1,6 +1,7 @@
 ---
 
-title: <%= hoc_s(:title_resources) %> layout: wide
+title: <%= hoc_s(:title_resources) %>
+layout: wide
 
 ---
 
