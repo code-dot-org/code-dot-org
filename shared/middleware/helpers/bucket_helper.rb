@@ -7,11 +7,13 @@ class BucketHelper
     @bucket = bucket
     @base_dir = base_dir
 
-    params = {region: 'us-east-1'}
-    if CDO.s3_access_key_id && CDO.s3_secret_access_key
-      params[:credentials] = Aws::Credentials.new(CDO.s3_access_key_id, CDO.s3_secret_access_key)
-    end
-    @s3 = Aws::S3::Client.new(params)
+    @s3 = Aws::S3::Client.new
+  end
+
+  def app_size(encrypted_channel_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    prefix = s3_path owner_id, channel_id
+    @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map(&:size).reduce(:+).to_i
   end
 
   def list(encrypted_channel_id)

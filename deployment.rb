@@ -34,6 +34,7 @@ def load_configuration()
 
   {
     'app_servers'                 => {},
+    'aws_region'                  => 'us-east-1',
     'build_apps'                  => false,
     'build_blockly_core'          => false,
     'build_dashboard'             => true,
@@ -56,6 +57,8 @@ def load_configuration()
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'netsim_max_routers'          => 20,
+    'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
@@ -83,7 +86,6 @@ def load_configuration()
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
     'sources_s3_directory'        => rack_env == :production ? 'sources' : "sources_#{rack_env}",
-    'netsim_shard_expiry_seconds' => 7200,
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -106,6 +108,11 @@ def load_configuration()
     config['dashboard_db_writer'] ||= config['db_writer'] + config['dashboard_db_name']
     config['pegasus_db_reader']   ||= config['db_reader'] + config['pegasus_db_name']
     config['pegasus_db_writer']   ||= config['db_writer'] + config['pegasus_db_name']
+
+    # Set AWS SDK environment variables from provided config.
+    ENV['AWS_ACCESS_KEY_ID'] ||= config['aws_access_key'] || config['s3_access_key_id']
+    ENV['AWS_SECRET_ACCESS_KEY'] ||= config['aws_secret_key'] || config['s3_secret_access_key']
+    ENV['AWS_DEFAULT_REGION'] ||= config['aws_region']
   end
 end
 

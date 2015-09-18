@@ -1,7 +1,7 @@
 name 'U2L16 Free Response Assessment 3'
 title 'Assessment 3'
 content1 'Why are computationally-hard problems important in encryption strategies?'
-answer 'Enter answer here'
+placeholder 'Enter answer here'
 
 teacher_markdown <<MARKDOWN
 Answer:

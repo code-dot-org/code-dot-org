@@ -589,6 +589,25 @@ NetSimRouterNode.prototype.getDisplayName = function () {
 };
 
 /**
+ * Given the level address format string (e.g. "4.4.4.4") which it pulls from
+ * globals, returns an array of the parsed lengths of each format part in order
+ * (e.g. [4, 4, 4, 4]).
+ * @returns {number[]}
+ */
+function getAddressFormatParts() {
+  return NetSimGlobals
+      .getLevelConfig()
+      .addressFormat
+      .split(/\D+/)
+      .filter(function (part) {
+        return part.length > 0;
+      })
+      .map(function (part) {
+        return parseInt(part, 10);
+      });
+}
+
+/**
  * Helper that prevents the router's display number or address from being beyond
  * the representable size of the the router part in the address format (if
  * two-part addresses are being used).
@@ -598,20 +617,38 @@ NetSimRouterNode.prototype.getDisplayName = function () {
  * @returns {number}
  */
 NetSimRouterNode.prototype.getRouterNumber = function () {
-  var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
   // If two or more parts, limit our router number to the maximum value of
   // the second-to-last address part.
-  var addressFormatParts = addressFormat.split(/\D+/).filter(function (part) {
-    return part.length > 0;
-  }).map(function (part) {
-    return parseInt(part, 10);
-  }).reverse();
-
+  var addressFormatParts = getAddressFormatParts();
   if (addressFormatParts.length >= 2) {
-    var assignableAddressValues = Math.pow(2, addressFormatParts[1]);
+    var assignableAddressValues = Math.pow(2, addressFormatParts.reverse()[1]);
     return this.entityID % assignableAddressValues;
   }
   return this.entityID;
+};
+
+/**
+ * Get the maximum number of routers that will be allowed on the shard.
+ * In most levels this is a strict global value (probably 20).
+ * In levels using an address format with two or more parts the second-to-last
+ * part determines the addressable space for routers, and the max routers
+ * will be the minimum of the global max and the addressable space.
+ *
+ * @example If the global max routers is 20, but the address format is 4.4,
+ *          we can only address 16 routers (less than 20) so 16 is our max
+ *          routers per shard value.
+ *
+ * @returns {number}
+ */
+NetSimRouterNode.getMaximumRoutersPerShard = function () {
+  // If two or more parts, limit our routers to the maximum value of
+  // the second-to-last address part.
+  var addressFormatParts = getAddressFormatParts();
+  if (addressFormatParts.length >= 2) {
+    return Math.min(NetSimGlobals.getGlobalMaxRouters(),
+        Math.pow(2, addressFormatParts.reverse()[1]));
+  }
+  return NetSimGlobals.getGlobalMaxRouters();
 };
 
 /**

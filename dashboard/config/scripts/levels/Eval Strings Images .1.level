@@ -24,7 +24,10 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "video_key": "alg_4_data_types",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "So far we've only dealt with a single type of data, Numbers. Another type of data is a String, which is any combination of letters, numbers, or other characters wrapped in quotation marks. Run the String \"Hello, world!\" and see what happens.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
