@@ -1,7 +1,7 @@
 require 'json'
 require 'httparty'
 
-class AbuseReportController < ApplicationController
+class ReportAbuseController < ApplicationController
   def report_abuse
     HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
       headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
@@ -23,7 +23,7 @@ class AbuseReportController < ApplicationController
       }.to_json,
       basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
 
-    if params[:channel_id] != ""
+    unless params[:channel_id].blank?
       channels_path = "/v3/channels/#{params[:channel_id]}/abuse"
 
       ChannelsApi.call(
@@ -38,6 +38,11 @@ class AbuseReportController < ApplicationController
   end
 
   def report_abuse_form
-    render 'projects/abuse'
+    @react_props = {
+      csrfToken: form_authenticity_token,
+      name: (current_user.name unless current_user.nil?),
+      email: (current_user.email unless current_user.nil?),
+      age: (current_user.age unless current_user.nil?),
+    }
   end
 end

@@ -2,17 +2,9 @@
 
 #report-abuse-form
 
-:ruby
-  reactProps = {
-    csrfToken: form_authenticity_token,
-    name: (current_user.name unless current_user.nil?),
-    email: (current_user.email unless current_user.nil?),
-    age: (current_user.age unless current_user.nil?),
-  }
-
 :javascript
   $(document).ready(function () {
-    var props = #{reactProps.to_json};
+    var props = #{@react_props.to_json};
     props.abuseUrl = document.referrer;
     props.i18n = window.dashboard.i18n;
     React.render(
