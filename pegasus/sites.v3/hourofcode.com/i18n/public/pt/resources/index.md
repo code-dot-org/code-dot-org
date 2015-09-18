@@ -16,9 +16,9 @@ twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '
 
 # Junte-se a nós
 
-## 1. Sign up to host
+## 1. Cadastre-se para sediar
 
-Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
+Qualquer pessoa, em qualquer lugar, pode sediar uma Hora do Código. [Cadastre-se](<%= resolve_url('/') %>) para receber atualizações e se qualificar para os prêmios.   
 
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
@@ -31,15 +31,15 @@ Conte para seus amigos sobre a #HoraDoCodigo.
 
 ## 3. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
+[Envie esse e-mail](<%= resolve_url('/resources/promote#sample-emails') %>) para o seu diretor e incentive todas as salas de aula de sua escola a se cadastrarem.
 
 ## 4. Peça para seu empregador participar
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
+[Envie esse e-mail](<%= resolve_url('/resources/promote#sample-emails') %>) para seu gerente ou CEO.
 
 ## 5. Promova a Hora do Código em sua comunidade
 
-[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Ou sedie uma "festa" da Hora do Código na sua vizinhança.
+[Recrute um grupo da região](<%= resolve_url('/resources/promote#sample-emails') %>)— clube de escoteiros, igreja, universidade, grupo de veteranos ou sindicato. Ou sedie uma "festa" da Hora do Código na sua vizinhança.
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
