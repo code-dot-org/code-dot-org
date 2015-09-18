@@ -11,6 +11,7 @@ class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
   NODE_TYPES = NetSimApi::NODE_TYPES
+  VALIDATION_ERRORS = NetSimApi::VALIDATION_ERRORS
 
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
@@ -115,6 +116,7 @@ class NetSimApiTest < Minitest::Test
     # hash should fail
     create_record([1])
     assert_equal 400, @net_sim_api.last_response.status
+    assert_equal [VALIDATION_ERRORS[:malformed]], last_error_details
     assert_equal 4, read_records.length
   ensure
     created_ids.each { |id| delete_record(id) }
@@ -153,6 +155,7 @@ class NetSimApiTest < Minitest::Test
 
     # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_create_response.status
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
 
     # Verify that no record was created
     assert read_records.first.nil?, 'Table was not empty'
@@ -161,6 +164,7 @@ class NetSimApiTest < Minitest::Test
   def test_get_400_on_inserting_orphaned_message
     create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
     assert_equal 400, @net_sim_api.last_response.status, 'Orphaned message not created'
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
     assert_equal 0, read_records(TABLE_NAMES[:message]).count, 'Created no messages'
   end
 
@@ -172,6 +176,7 @@ class NetSimApiTest < Minitest::Test
 
     create_wire(1, 2)
     assert_equal 400, @net_sim_api.last_response.status, 'Duplicate wire request did not fail'
+    assert_equal VALIDATION_ERRORS[:conflict], last_error_details
     assert_equal 1, read_records(TABLE_NAMES[:wire]).count, 'Duplicate wire was created'
   end
 
@@ -578,21 +583,23 @@ class NetSimApiTest < Minitest::Test
     assert_equal(201, @net_sim_api.last_response.status)
 
     # Allow router nodes
-    create_node({}, NODE_TYPES[:router])
+    create_node({'routerNumber' => 1}, NODE_TYPES[:router])
     assert_equal(201, @net_sim_api.last_response.status)
 
     # Reject nodes with other "types"
     create_node({}, 'some_random_type')
     assert_equal(400, @net_sim_api.last_response.status)
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
 
     # Reject nodes with no type
     create_node({})
     assert_equal(400, @net_sim_api.last_response.status)
+    assert_equal VALIDATION_ERRORS[:malformed], last_error_details
   end
 
   def test_limit_shard_routers_to_max_routers
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal(CDO.netsim_max_routers,
@@ -600,9 +607,10 @@ class NetSimApiTest < Minitest::Test
                  "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We want the 21st node to fail
-    create_router_node
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(400, @net_sim_api.last_response.status,
                  "Went over router limit!")
+    assert_equal(VALIDATION_ERRORS[:limit_reached], last_error_details)
     assert_equal(CDO.netsim_max_routers,
                  read_records(TABLE_NAMES[:node]).count,
                  "Went over router limit!")
@@ -627,8 +635,8 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_having_max_routers_should_not_limit_clients
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal CDO.netsim_max_routers,
@@ -654,7 +662,7 @@ class NetSimApiTest < Minitest::Test
                  "Didn't create #{CDO.netsim_max_routers} nodes")
 
     # We should still be able to add a router
-    create_router_node
+    create_router_node('routerNumber' => 1)
     assert_equal(201, @net_sim_api.last_response.status,
                  "Should have allowed 1st router")
     assert_equal(CDO.netsim_max_routers + 1,
@@ -663,8 +671,8 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_having_max_routers_on_one_shard_does_not_limit_another
-    CDO.netsim_max_routers.times do
-      create_router_node
+    CDO.netsim_max_routers.times do |i|
+      create_router_node('routerNumber' => i)
       assert_equal 201, @net_sim_api.last_response.status
     end
     assert_equal(CDO.netsim_max_routers,
@@ -673,11 +681,45 @@ class NetSimApiTest < Minitest::Test
 
     # We should still be able to add a router on another shard
     @shard_id = '_testShard3'
-    create_router_node
+    create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(201, @net_sim_api.last_response.status,
-                 "Should have allowed router on another shard")
+                 'Should have allowed router on another shard')
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
-                 "Should have allowed router on another shard")
+                 'Should have allowed router on another shard')
+  end
+
+  def test_reject_routers_without_router_number
+    create_router_node({})
+    assert_equal(400, @net_sim_api.last_response.status, "Allowed malformed router row")
+    assert_equal(VALIDATION_ERRORS[:malformed], last_error_details)
+  end
+
+  def test_reject_routers_causing_router_number_collision
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    # Should return 400 BAD REQUEST when a routerNumber collision is detected
+    create_router_node('routerNumber' => 1)
+    assert_equal(400, @net_sim_api.last_response.status,
+                 'Should have rejected duplicate routerNumber')
+    assert_equal(VALIDATION_ERRORS[:conflict], last_error_details)
+
+    assert_equal(1, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with one node.')
+  end
+
+  def test_allow_routers_with_different_router_numbers
+    create_router_node('routerNumber' => 1)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert first router.')
+
+    create_router_node('routerNumber' => 2)
+    assert_equal(201, @net_sim_api.last_response.status,
+                 'Failed to insert second router.')
+
+    assert_equal(2, read_records(TABLE_NAMES[:node]).count,
+                 'Expected to end up with two nodes.')
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -757,6 +799,10 @@ class NetSimApiTest < Minitest::Test
   def delete_record(id, table_name = @table_name)
     @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{table_name}/#{id}"
     @net_sim_api.last_response
+  end
+
+  def last_error_details
+    JSON.parse(@net_sim_api.last_response.body)['details']
   end
 
 end

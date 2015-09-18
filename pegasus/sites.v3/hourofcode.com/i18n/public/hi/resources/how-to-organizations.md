@@ -1,14 +1,16 @@
+---
 
+title: <%= hoc_s(:title_how_to_organizations) %>
+layout: wide
+nav: how_to_nav
 
-<div class="row">
-  <h1 class="col-sm-6">
-    एक घंटा कोड का कैसे पढ़ानेकी तकनीक
-  </h1>
-</div>
+---
 
-</div>
+<%= view :signup_button %>
 
-## १) हमारी अभ्यासिका देखे:
+# Bring the Hour of Code to your company
+
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
@@ -17,7 +19,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
   * Require minimal prep-time for organizers
   * छात्र स्वअध्ययन से अपनी गतिसे काम कर सकते है
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 2) Plan your hardware needs - computers are optional
 
@@ -41,3 +43,5 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
+
+<%= view :signup_button %>
