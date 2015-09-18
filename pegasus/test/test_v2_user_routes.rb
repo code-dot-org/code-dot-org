@@ -3,10 +3,8 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
-require_relative '../router'
 require_relative 'fixtures/fake_dashboard'
-
-ENV['RACK_ENV'] = 'test'
+require_relative 'fixtures/mock_pegasus'
 
 class V2UserRoutesTest < Minitest::Test
   describe 'User Routes' do
@@ -153,20 +151,4 @@ class V2UserRoutesTest < Minitest::Test
     end
 
   end
-end
-
-# Wrapper for the Pegasus "Documents" app that sets necessary environment
-# variables for this test.
-class MockPegasus
-  def initialize(app=nil, params={})
-    @app = Documents.new(app)
-  end
-
-  def call(env)
-    # Not sure why, but it seems necessary to set HTTP_HOST for Pegasus to find
-    # the appropriate routes.
-    env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
-    @app.call(env)
-  end
-
 end
