@@ -1,4 +1,5 @@
 module UsersHelper
+  include ApplicationHelper
 
   # Returns the number of lines written in the current user session.
   # return [Integer]
@@ -25,7 +26,8 @@ module UsersHelper
   # @param [Integer] level_id
   # return [Integer]
   def session_level_progress(level_id)
-    (session[:progress] ||= {}).fetch(level_id, 0)
+    s = session[:progress]
+    s ? s.fetch(level_id.to_i, 0) : 0
   end
 
   def session_levels_progress_is_empty_for_test
@@ -36,19 +38,21 @@ module UsersHelper
   # @param [Integer] level_id
   # @param [Integer] progress
   def session_set_level_progress(level_id, progress)
-    (session[:progress] ||= {})[level_id] = progress.to_i
+    (session[:progress] ||= {})[level_id] = progress
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
   # @param [Integer] script_id
   def session_add_script(script_id)
-    (session[:scripts] ||= []).unshift(script_id.to_i).uniq
+    (session[:scripts] ||= Set.new).add(script_id.to_i)
   end
 
-  # Returns an array of ids of the scripts completed in the current session
+  # Returns an array of ids of the scripts completed in the current session.
+  # Callers should not mutate the array.
   # @return [Array<Integer>]
   def session_scripts
-    session[:scripts] || []
+    s = session[:scripts]
+    s ? s.to_a : []
   end
 
   # Returns a read-only set of the videos seen in the current user session,
