@@ -1,8 +1,9 @@
-* * *
+---
 
-title: <%= hoc_s(:title_whole_school) %> layout: wide
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
