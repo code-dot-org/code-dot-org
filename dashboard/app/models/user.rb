@@ -417,13 +417,9 @@ class User < ActiveRecord::Base
                         level_id: script_level.level_id)
   end
 
-  def levels_from_script(script, stage = nil)
+  def levels_from_script(script)
     ul_map = user_levels_by_level(script)
-    q = script.script_levels.includes(:level, :script, :stage).order(:position)
-
-    if stage
-      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
-    end
+    q = script.script_levels.order(:position)
 
     q.each do |sl|
       sl.user_level = ul_map[sl.level_id]
