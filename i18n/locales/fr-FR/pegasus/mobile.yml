@@ -48,6 +48,9 @@ fr-FR:
   thank_you_: Merci !
   congratulations: Félicitations!
   congratulations_on_completing_hoc: Félicitations, tu as terminé une Heure de Code !
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Obtenir un certificat de réussite
   enter_valid_age: Veuillez sélectionner un âge valide
   enter_valid_email: Veuillez saisir une adresse de messagerie valide
@@ -178,7 +181,7 @@ fr-FR:
   homepage_banner_text_main: Code.org et le College Board sont devenus partenaires pour améliorer la diversité en informatique.
   homepage_banner_text_link: Pour en savoir plus
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
-  homepage_banner_privacy_link: Pour en savoir plus
+  homepage_banner_privacy_link: En savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
   homepage_slot_text_link_hoc: "Essayez l'Heure de Code"
@@ -279,6 +282,7 @@ fr-FR:
     Il y a d'autres tutoriels <a href="/learn/beyond"> offerts par nos partenaires.</a> Apprendre à programmer avec des robots, créer des pages web, votre propre application ou explorer d'autres langages tels que C++, Ruby ou Python !
   dashboard_hoc_courses: "L'heure du Code pour tous les âges"
   dashboard_hoc_courses_desc: "Essayez l'un de ces tutoriels plus courts (1 heure) avec vos élèves !"
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20 heures de cours de Grande Section à CM2
   dashboard_k5_courses_desc: |-
     Ces cours fondent en ligne, tutoriels autoguidés à votre rythme avec des activités "unplugged" (sans ordinateur). Chaque cours se compose d'environ 20 leçons qui peuvent être mises en œuvre comme une seule unité ou au cours d'un semestre. Même les jeunes lecteurs de Grande Section (école maternelle) peuvent participer. Pour vous aider à démarrer, nous proposons des ateliers de perfectionnement professionnel de haute qualité aux États-Unis gratuitement. <a href="/professional-development-workshops"> en trouver un près de chez vous!</a>
@@ -430,6 +434,10 @@ fr-FR:
   code_hoc_coming: "L'Heure de Code est ici — du 8 au 14 décembre !"
   code_sign_up: "Enregistre-toi pour participer à la Semaine de l'Éducation de l'Informatique"
   learn_more: En savoir plus
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: S’inscrire
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Essaie nos nouvelles Heures de Code
   hoc2014_try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
   hoc2014_try_scrat: Angry Birds, PvZ, et Scrat

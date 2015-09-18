@@ -648,6 +648,8 @@
         C4_variables_artist: Змінні - Художник
         C4_variables_playlab: Змінні - Ігрова лабораторія
         C4_for_loops: Цикли For
+        C4_for_loops_bee: Цикли For
+        C4_for_loops_no_bee: Цикли For
         C4_math_artist: Програмування Художника з математикою
         C4_function_edit: Редагування функцій
         C4_function_create: Створення функцій
@@ -676,6 +678,7 @@
         csp_pixelation_bw: Інструмент пікселізації чорного і білого
         csp_U1L14_tipstricks: 'Модуль 1, урок 14: поради для вчителів'
         csp_textcompression: Віджет стиснення тексту
+        csp_textcompression_new: Віджет стиснення тексту
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

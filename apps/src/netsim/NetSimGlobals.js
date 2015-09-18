@@ -86,6 +86,13 @@ module.exports = {
   },
 
   /**
+   * @returns {number}
+   */
+  getGlobalMaxRouters: function () {
+    return netsim_.globalMaxRouters;
+  },
+
+  /**
    * @returns {function}
    */
   getAssetUrlFunction: function () {

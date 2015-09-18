@@ -666,6 +666,8 @@
         C4_variables_artist: Változók - művész
         C4_variables_playlab: Változók - Játéklabor
         C4_for_loops: Számláló ciklusok
+        C4_for_loops_bee: Számláló ciklusok
+        C4_for_loops_no_bee: Számláló ciklusok
         C4_math_artist: A művész programozása matematikával
         C4_function_edit: Függvények szerkesztése
         C4_function_create: Függvények létrehozása
@@ -694,6 +696,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

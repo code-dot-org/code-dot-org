@@ -639,6 +639,8 @@
         C4_variables_artist: Varijable - Umjetnik
         C4_variables_playlab: Varijable - Laboratorij Igara
         C4_for_loops: Od-Do-Za Petlje
+        C4_for_loops_bee: Od-Do-Za Petlje
+        C4_for_loops_no_bee: Od-Do-Za Petlje
         C4_math_artist: Programiranje Umjetnika koristeći Matematiku
         C4_function_edit: Uređivanje Funkcija
         C4_function_create: Kreiranje Funkcija
@@ -667,6 +669,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

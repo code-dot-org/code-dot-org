@@ -1,4 +1,5 @@
 require 'cdo/aws/s3'
+require_relative '../shared/middleware/helpers/storage_id'
 
 def avatar_image(name,width=320)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')

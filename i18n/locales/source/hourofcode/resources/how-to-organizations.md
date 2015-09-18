@@ -1,15 +1,13 @@
 ---
 title: <%= hoc_s(:title_how_to_organizations) %>
 layout: wide
-nav: resources_nav
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>
 
-<div class="row">
-    <h1 class="col-sm-6">How to teach one Hour of Code</h1>
-    </div>
-</div>
+# Bring the Hour of Code to your company
+
 ## 1) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 

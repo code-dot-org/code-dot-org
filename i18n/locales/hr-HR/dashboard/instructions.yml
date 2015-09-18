@@ -1577,6 +1577,9 @@ hr:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Functions inspire_instruction: |
+        Click here to see the inspiration
+        picture again.
       Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
@@ -1958,24 +1961,32 @@ hr:
         helpful, but we're still counting linearly (each number is the same distance
         from the last) What if I wanted to count exponentially? Without changing the
         settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
+      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
         count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
         function to speak out only the prime numbers from 1 to 100.
+      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto the mix.  Can you change the code so that \"increment\" goes up by two\neach time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
       Course 4 Play Labs For Loops 7_instruction: |
         Could you use a for loop to help
         me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
+      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\r\n\r\nDog will start counting when you click \"Run\"."
       Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.  \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir flag first?"
+      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1) Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
       Course 4 Variables Assessment_instruction: |
         Can you create this image using
         a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
+      ECSPD Binary Odometer_instruction: |
+        This is another resource you could use
+        with your students.
       Eval Booleans 1_instruction: |
         Boolean operators (like >, <, =) allow us to
         compare different values, returning either true or false. Click "Run" to
@@ -2276,15 +2287,63 @@ hr:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
-      hoc2015_free_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
+      hoc2015_event_add_items_instruction: |
+        Now you create the game. Use the addItemsToScene
+        command to choose how many items are in the game.
+      hoc2015_event_add_items_2_instruction: |
+        Add more items. This time, try using
+        code mode instead of blocks. Don’t forget to type “quotes” around the item
+        name.
+      hoc2015_event_choose_character_instruction: |
+        Customize your game by choosing
+        your character. Let’s switch back to block mode. To set a value, just click
+        the drop down on the block.
+      hoc2015_event_four_items_instruction: |
+        Now the items are all over the screen.
+        Can you make your character walk in any direction so he can collect all the
+        items?
+      hoc2015_event_free_instruction: Now you can make and share anything you like.
+      hoc2015_event_move_items_instruction: |
+        This game would be more fun if the items
+        moved. Use setItemActivity to make the items move around. Then, capture them!
+      hoc2015_event_points_instruction: |
+        Let’s add points. Give yourself some points
+        when you touch an item. Can you score 10 points?
+      hoc2015_event_random_items_instruction: |
+        We can change settings at any point.
+        Change the items to a new random movement every time you catch one.
+      hoc2015_event_two_items_instruction: |
+        Drag the move commands into the whenUp
+        and whenDown functions.  Then, click the arrows to move the character to get
+        the items.
+      hoc2015_free_instruction: Make something.
       hoc2015_intro_instruction: |
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
       hoc2015_maze_instruction: |
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
+      hoc2015_move_cross_instruction: |
+        Type or drag the blocks to get both items
+        to the destination.
+      hoc2015_move_down_instruction: |
+        Hiro is "actor 1".  Use the Move block to
+        move Hiro right to touch Baymax.
+      hoc2015_move_item_destination_instruction: |
+        I see another item behind that
+        obstacle. Can you bring it back to the destination?
+      hoc2015_move_item_destination_2_instruction: |
+        Drag the code blocks into the
+        workspace to help the character reach the destination.
+      hoc2015_move_item_destination_3_instruction: |
+        Try typing the commands to get
+        the item to our destination. Don’t forget to end with ();
+      hoc2015_move_right_instruction: |
+        Help me program the character to get the item
+        and bring it to the destination. Stack a couple moveEast(); commands and then
+        hit Run to make him go.
+      hoc2015_move_twice_instruction: We need the items. Help me get them all!
+      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
       hoc2015_random_instruction: |
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
@@ -2685,15 +2744,11 @@ hr:
         as a project that you can return to at any time.
       NEW Course 4 Artist Functions 1_instruction: |
         Can you draw a square that is
-        100 pixels in length, using a loop?
+        100 pixels in length, using a repeat loop?
       NEW Course 4 Artist Functions 10_instruction: |
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: |
-        We have a new function called
-        "draw a line of squares." Feel free to take a look inside the function block
-        to see how we built it. Click on "Run" when your are ready for the next
-        puzzle.
+      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction called \"draw a line of squares\" that draws six squares all in a\nrow.  Can you build this function using the \"draw a square 40\" function\nthat we've already created?\r\n"
       NEW Course 4 Artist Functions 12_instruction: |
         Use the "draw a line of squares"
         function from the last puzzle to draw this pattern."
@@ -2701,13 +2756,15 @@ hr:
         Can you draw a star shape using
         the "draw a line of squares" function? Hint: Each iteration, you'll have
         to move forward a certain number of pixels and turn 144 degrees.
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 14_instruction: 'Free-play time! '
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
       NEW Course 4 Artist Functions 3_instruction: |
         Here is a new type of Block.
-        It is called a "Function block." Click "Run" to see what it can do. 
+        It is called a "Function" block. Click "edit" then fill it with the code
+        for drawing a square with 100 pixel sides. When you're done editing the function,
+        click "Close" to go back to your program.
       NEW Course 4 Artist Functions 4_instruction: |
         Use the "draw a square" function
         to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
@@ -2722,17 +2779,18 @@ hr:
       NEW Course 4 Artist Functions 7_instruction: |
         Are you getting the hang of how
         to use function blocks? Let's modify this square so that it is 200 pixels
-        in size. Hint: click on "edit" to change the size of the "draw a square"
-        function editor. Remember to click on "save and close" to get out of the
-        function editor. 
+        in size. Hint: click on "edit" to enter the "draw a square" function editor.
+        Remember to click on "Close" to get out of the function editor. 
       NEW Course 4 Artist Functions 8_instruction: |
-        We have given you most of the
-        code to create a function, but there seems to be something missing. Can you
-        edit the function definition to draw the triangle?
+        We have created a new function
+        for you called "draw a triangle".  Can you edit the function definition
+        to draw a triangle with 100 pixel sides?
       NEW Course 4 Artist Functions 9_instruction: |
-        Which block do you need to add
-        to get the triangle to sit on top of the square?
-      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit https://studio.code.org/c/106387801 for the solution."
+        Can you solve this by adding
+        only one block?
+      NEW Course 4 Artist Functions inspire_instruction: |
+        Click here to see the inspiration
+        picture again.
       New Course 4 Artist Functions Level 4_instruction: |
         Use the "draw a square"
         function to draw this pattern.
@@ -2755,19 +2813,20 @@ hr:
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
         to add a "sides" parameter. Remember the angle to turn for a given shape
-        is 360 divided by the number of sides it has. Hint: These are the lengths
-        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
-        the square is 50 pixels.
+        is 360 divided by the number of sides it has. Hint: The overall size of each
+        shape is 200 pixels. Do you remember the equation to make shapes the same
+        size when they have a different number of sides?
       NEW Course 4 Artist Params 14_instruction: |
-        Can you recreate these shapes?
-        Drag the "length" parameter into the function definition. 
+        Edit "draw a spiral edge" to
+        use parameters and recreate these shapes.
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
+        Play with the pen width to see how different your drawings look!
       NEW Course 4 Artist Params 2_instruction: |
         Create a “draw a triangle" function
         with 50 pixels sides from scratch
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n5 triangles in a row. Hint: each triangle is 30 pixels apart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -2792,7 +2851,7 @@ hr:
         definition of "draw a square" and add a parameter. It should take a length
         parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
         pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? "
       NEW Course 4 Artist Vars 1.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
@@ -3183,6 +3242,11 @@ hr:
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
+      Text Compression 1_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3193,6 +3257,11 @@ hr:
         Work with a partner or in a small
         team to develop a protocol that allows you to send formatted text. See the
         worksheet handed out by your teacher for more detailed instructions!
+      U1L13 Text Compression_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L4 NetSim SendAB_instruction: |
         Develop, document, and test a protocol that
         allows you to use Internet Simulator to relay a message. See the worksheet
@@ -3202,6 +3271,9 @@ hr:
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        Send messages with your
+        classmates (Click to see full instructions)
       U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
@@ -3230,6 +3302,10 @@ hr:
         the right event handler to the right button. (Interestingly, the incorrect
         program does work, but exhibits some bizarre behavior.  We'll discuss this
         more in the next lesson.  Make the buttons work correctly for now).
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw step_instruction: |
+        Write the drawStep function. (Click to see
+        full instructions)
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -3240,21 +3316,29 @@ hr:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Write the turnAround() function
-        and use it to make the turtle move as depicted.
+        Define a function called turnAround()
+        and call it to make the turtle move as depicted. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
-        Create a turnRight()
-        function and draw a rectangle twice as tall as it is wide by having the turtle
-        navigate clockwise to draw the rectangle. 
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
       U3L03 Draw a T using turnAround_instruction: |
-        The turnAround function is now
-        provided for you in the code.  Use the turnAround() function to draw a T as
-        depicted.
-      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with other movement made between calls.  HINT: you might want\nto make another function that handles drawing one side of the diamond. "
+        Draw a plus sign using the provided
+        version of turnAround().  (Click to see full instructions)
+      U3L03 draw diamond_instruction: |
+        Create a function called drawDiamond() that
+        makes use of your previous work to draw the complete diamond. (Click to see
+        full instructions)
       U3L03 Three Steps_instruction: |
-        Draw 3 "steps" moving up and to the right.  Notice
-        the pattern in the movement. You should define a function called drawStep()
-        which draws one of the steps, and then call it 3 times to achieve the effect.
+        Define a function called drawSide() which draws
+        three steps and moves the turtle to prepare for the next side (Click to see
+        full instructions)
+      U3L04 - 3 by 3 with functions_instruction: |
+        Make the 3 by 3 square as efficiently
+        as you can. (Click to see full instructions)
+      U3L04 - snowflake_instruction: |
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
       U3L04 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -3280,50 +3364,35 @@ hr:
         NOTE: This is a very challenging problem.  You may need to play with it for
         a while and tweak it.  You might also consider using pencil and paper to sketch
         your ideas.
+      U3L06 - moveForwardwithParams_instruction: |
+        Use a single command to move the
+        turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Check out the extended Turtle palette
-        now made available to you. These new commands accept parameters, allowing
-        you to specify precisely how the function operates rather than only being
-        able to move or turn a predetermined amount. Make use of these functions to
-        draw the triangle as shown.
+        Read the documentation for one of
+        these commands. Then use them to create a triangle with sides 100 pixels long.
+        (Click to see full instructions)
       U3L06 Challenge 2 purple square_instruction: |
-        This time we're going to learn
-        a little bit about changing the turtle's pen. Read through the documentation
-        for penWidth() and penColor(), and then draw the purple square as shown.
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
       U3L06 Challenge 3 fill pink_instruction: |
-        Now let's try to fill in the entire
-        background of the screen. To make it a little easier for you, we can tell
-        you the color we chose is one of the 140 named colors.  If you don't know
-        what the named colors are, take a closer look at the documentation for penColor()
-        again. Hint: you need to use dot().
+        Fill in the background of the screen
+        with your favorite color. (Click to see full instructions)
       U3L06 Challenge 4 bullseye_instruction: |
-        Let's try this out one more time.
-        This time the colors are NOT named colors - you need to use the hex-color
-        number to set the color.  So that you're not randomly guessing, we'll give
-        you a hint -- each of the colors shown in the target image is one of these
-        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  You might be able to guess correctly if you apply what you know about
-        RGB colors.
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
       U3L06 Challenge 5 overlapping circles_instruction: |
         This image is created just
         using dot() and penColor() but, how are we going to get those circles to be
         transparent?  If you haven't gotten the hint yet: check out the documentation!
       U3L06 Challenge 6 squiggles_instruction: |
-        Next we're going to be adding some
-        curves to our drawing. Read the documentation for the "arc" commands and
-        then draw the squiggles as shown. To make things easier here's a hint: all
-        the parameters are multiples of 10, and the colors are from the following
-        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+        Read the documentation for the "arcLeft"
+        and "arcRight" commands and then draw the squiggles as shown. 
       U3L06 Challenge 7 smiley face_instruction: |
-        To make this smiley face you'll
-        need to look at the documentation for the move() command and then use it with
-        the others you've learned.  You can make reasonable guesses about the colors.
+        Use turnTo() and moveTo() to help
+        draw a smiley face. (Click to see full instructions)
       U3L06 Challenge 8 make your own_instruction: |
-        Use the tools you've learned
-        today to create a drawing of your own creation. If you have time, challenge
-        your friends to see if they can duplicate your image.  We'll show you the
-        drawing we made for ourselves.  You can try to duplicate that if you want
-        to, otherwise, have fun making your own!
+        Create a drawing of your own.
+        (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
         Free Play!  Use what you learned
         from loops and random to make your own little scene.  Have fun.
@@ -3335,6 +3404,9 @@ hr:
         grass, and moon.  All of the effects are clever applications of turtle dots,
         lines, and colors.  To get started, follow the series of steps suggested in
         the accompanying worksheet. 
+      U3L08 - drawSquaresWithParams_instruction: |
+        Change the code at top to make
+        use of the drawSquare() command. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
@@ -3668,4 +3740,30 @@ hr:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location. (Click to show full instructions)
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 3_instruction: |
+        We want to improve the user experience.
+        Once they have submitted their data for storage, it would be nice to clear
+        the textbox.  Update your app to clear the textbox after the data is stored.
+      U4L06 Data Storage 4_instruction: |
+        Add a label and drop down box, to your app
+        and save the data to your JSON object and add it to your table. Make sure
+        to reset the dropdown after the data is stored.
+      U4L06 Data Storage 5_instruction: |
+        Add a couple radio buttons or checkboxes
+        to our app. Then find a way to collect the data from those. 
+      U4L06 Data Storage 6_instruction: |2
+         Use one of the getTime() and getUserId()
+        blocks to collect additional data. 
+      U4L06 Data Storage 7_instruction: |
+        Add a second screen to the sample app we
+        have been building to capture an image from a user. Return to screen 1 after
+        the JSON object has been stored in the table.
+      U4L15 Read Data 1_instruction: |
+        Run the level and see what happens. Then edit
+        the code to make it print a different column of information.
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
+      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

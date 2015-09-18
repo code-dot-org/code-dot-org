@@ -606,3 +606,8 @@ zh:
     view_all: 查看我的專案
     remix: 混音
     click_to_remix: 點擊「混音」，創造自己的版本！
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Go to Code Studio

@@ -37,6 +37,8 @@ class Applab < Blockly
     start_html
     encrypted_examples
     submittable
+    data_tables
+    data_properties
   )
 
   # List of possible skins, the first is used as a default.

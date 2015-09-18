@@ -44,6 +44,9 @@ no-NO:
   thank_you_: Takk!
   congratulations: Gratulerer!
   congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen
+  congratulations_on_completing_course: 'Congratulations on completing %{course}'
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
   enter_valid_age: Vennligst velg en gyldig alder
   enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
@@ -280,6 +283,7 @@ no-NO:
   dashboard_landing_more_tutorials_desc: 'Det finnes flere opplæringsprogrammer <a href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter, lage nettsider, lage din egen applikasjon eller utforske andre språk som C++, Ruby eller Python!'
   dashboard_hoc_courses: Kodetimen for alle aldersgrupper
   dashboard_hoc_courses_desc: Prøv hvilken som helst av disse korte, én times lange opplæringsprogrammene med studentene dine!
+  dashboard_hoc_courses_desc_and_cta: 'Try these short, one-hour tutorials with your students. <a href="https://hourofcode.com">Join the Hour of Code movement</a> during Computer Science Education Week.'
   dashboard_k5_courses: 20-timers kurs for K-5
   dashboard_k5_courses_desc: 'Disse kursene blander selvstyrte opplæringsprogram med "uinnpluggede" aktiviteter som ikke krever en datamaskin i det hele tatt. Hvert kurs består av omtrent 20 leksjoner som kan implementeres som én enhet eller spres utover et helt semester. Til og med barnehagealdrede før-lesere kan delta. For å hjelpe deg med å starte, tilbyr vi profesjonelle utviklingsverksted av høy kvalitet rundt om USA helt gratis. <a href="/professional-development-workshops">Finn et nært deg!</a>'
   dashboard_middle_courses: 20-timers midtskolekurs
@@ -428,6 +432,10 @@ no-NO:
   code_hoc_coming: 'Kodetimen er her - 8. til 14. desember!'
   code_sign_up: Registrer deg for å delta under CS Education Week
   learn_more: Lær mer
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
+  learn_sign_up_button: Meld deg på
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Prøv våre nye Kodetime-øvinger
   hoc2014_try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat

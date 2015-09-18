@@ -65,6 +65,7 @@
   "penTooltip":"Přiloží či odloží tužku a začne či přestane kreslit.",
   "penUp":"odložit tužku",
   "reinfFeedbackMsg":"Tady je tvoje kresba! Můžeš na ní dál pracovat nebo pokračovat k další hádance.",
+  "setAlpha":"set alpha",
   "setColour":"nastav barvu",
   "setPattern":"nastavit vzorek",
   "setWidth":"nastav šířku",

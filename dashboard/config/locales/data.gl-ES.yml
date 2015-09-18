@@ -677,6 +677,8 @@
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Laboratorio de juego
         C4_for_loops: Bucles Para
+        C4_for_loops_bee: For Loops
+        C4_for_loops_no_bee: For Loops
         C4_math_artist: Programando al Artista con matemáticas
         C4_function_edit: Editando funciones
         C4_function_create: Creando funciones
@@ -705,6 +707,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

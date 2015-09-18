@@ -2,7 +2,7 @@
   errors:
     messages:
       not_saved: 'الرجاء تصحيح الأخطاء التالية:'
-      too_young: هذا المحتوى يخضع لقيود سن و غير متاح للطلاب الاصغر سناً
+      too_young: هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً
   activerecord:
     errors:
       messages:
@@ -346,8 +346,8 @@
       viewing_solution: عرض الحلول
       try_it_yourself: جربها بنفسك
       section: القسم
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
+      example: مثال الحل
+      example_with_number: مثال الحل %{solution_number}
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
@@ -441,9 +441,9 @@
       الحقوق محفوظة.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة
-    art_from_html_old: طيور غاضبون &#8482; &amp; © 2009--%{current_year} Rovio ريفو
-      للترفيه جميع الحقوق محفوظة-< br/> النباتات مضد الزومبيز &#8482; &amp; © %{current_year}
-      الكترونيك آرتس جميع الحقوق محفوظة
+    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp;
+      &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
       of Code&reg; هما علامات تجارية لـ Code.org.'
@@ -694,3 +694,10 @@
     view_all: عرض مشاريعي
     remix: إعادة المزج
     click_to_remix: انقر فوق 'إعادة المزج' لعرض نسخة معدلة خاصة بك!
+    edit_project: Edit Project
+    abuse:
+      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
+        of Service</a> and cannot be shared with others.
+      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
+        us.</a>
+      go_to_code_studio: Go to Code Studio
