@@ -42,7 +42,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# International Partners
+# Parceiros internacionais
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 

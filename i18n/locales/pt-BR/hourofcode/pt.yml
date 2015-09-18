@@ -154,14 +154,14 @@ pt:
   how_to_nav_public_officials: Para funcionários públicos
   how_to_nav_districts: Para cidades
   how_to_nav_assemblies: Para a escola toda
-  how_to_nav_organizations: For organizations
+  how_to_nav_organizations: Para Organizações
   whats_next_header: O que vem depois?
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Como fazer uma Hora do Código</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Divulgue a Hora do Código</a>"
   whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
-  whats_next_try_button: Try tutorials
+  whats_next_try: "<a href='http://code.org/learn'>Experimente os tutoriais</a>"
+  whats_next_try_button: Experimente os tutoriais
   n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora de Código</h2><h3># served</h3>'
   anybody_can_learn: Qualquer um pode aprender.
   get_started: Começar
@@ -178,14 +178,14 @@ pt:
   front_join_us_teacher: Você é professor?
   front_join_us_inspire: Inspire seus alunos com
   front_join_us_inspire_link: uma Hora do Código em sua sala de aula.
-  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
+  front_join_us_teacher_link: Inspire seus alunos com uma Hora do Código em sua sala de aula
   front_join_us_parent: Você é pai?
   front_join_us_ask_link: Peça para sua escola
   front_join_us_ask: sediar um evento da Hora do Código.
   front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Você simplesmente é apaixonado por ciência da computação?
   front_join_us_spread: Espalhe a notícia.
-  front_join_us_spread_word: Spread the word in your community
+  front_join_us_spread_word: Divulgue o evento em sua comunidade
   front_join_us_organize: Ou organize seu próprio evento da Hora do Código.
   front_join_us_how_to_run: Apresentamos aqui como organizar uma Hora do Código
   front_join_us_help_promote: Ajude a promover a Hora do Código
@@ -197,7 +197,7 @@ pt:
   front_join_us_host: Promova
   front_join_us_support: Apoie
   front_join_us_more_info: "Para obter mais informações, visite: <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: For more information, please visit code.org
+  front_join_us_code_info: 'Para obter mais informações, visite: code.org'
   signup_header: 'Organize uma Hora do Código durante %{campaign_date} e registre-a aqui.'
   signup_name_label: Seu nome
   signup_email_label: Seu e-mail
@@ -343,6 +343,7 @@ pt:
   title_prizes_terms: 'Prêmios - termos e condições'
   title_prizes_thanks: Obrigado
   title_prizes: Prêmios
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Recursos
   title_signup_thanks: Obrigado por se inscrever para sediar a Hora do Código!
   title_tutorial_guidelines: Orientações sobre tutoriais

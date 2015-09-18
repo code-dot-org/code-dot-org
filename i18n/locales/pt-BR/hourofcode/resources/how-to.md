@@ -16,14 +16,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
 
-Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *Novos tutoriais estão a caminho para dar início à Hora do Código antes de <%= campaign_date('full') %>.* [Experimente os tutoriais atuais.](<%=  resolve_url()
+Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
 
 **Todos os tutoriais da Hora do Código:**
 
   * Exigem um tempo mínimo de preparação dos professores
   * São autoexplicativos, o que permite que os alunos trabalhem em seu próprio ritmo e nível de habilidade
 
-[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
 ## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
 
@@ -34,7 +34,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
   * **Não tem dispositivos suficientes?** Use a [programação em duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando os alunos trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor. Eles também verão que a ciência da computação é uma atividade social e colaborativa.
   * **Tem baixa largura de banda?** Programe-se para mostrar os vídeos para a classe toda, assim os alunos não terão de fazer o download individualmente. Outra opção é trabalhar com os tutoriais offline.
 
-![](/images/group_ipad.jpg)</a>
+![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Comece a Hora do Código inspirando os estudantes
 
@@ -74,13 +74,13 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 [col-33]
 
-![](/images/highschoolgirls.jpeg)</a>
+![](/images/fit-250/highschoolgirls.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/group_ar.jpg)</a>
+![](/images/fit-300/group_ar.jpg)
 
 [/col-33]
 
@@ -96,19 +96,19 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 [col-33]
 
-![](/images/celebrate2.jpeg)</a>
+![](/images/fit-250/celebrate2.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/highlight-certificates.jpg)</a>
+![](/images/fit-260/highlight-certificates.jpg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/boy-certificate.jpg)</a>
+![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
