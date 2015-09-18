@@ -813,7 +813,7 @@ Applab.getCode = function () {
 Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
-  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+  if (Applab.isInDesignMode() && !Applab.isRunning() || Applab.levelHtml === '') {
     designMode.serializeToLevelHtml();
   }
   return Applab.levelHtml;
