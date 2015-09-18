@@ -127,9 +127,16 @@ exports.addItemsToScene = function(className, number) {
   });
 };
 
-exports.setItemActivity = function(className, type) {
+exports.setItemAction = function(itemIndex, type) {
+  Studio.queueCmd(null, 'setItemAction', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
+exports.setItemActivity = function(itemIndex, type) {
   Studio.queueCmd(null, 'setItemActivity', {
-    'className': className,
+    'itemIndex': itemIndex,
     'type': type
   });
 };

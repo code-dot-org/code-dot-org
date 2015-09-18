@@ -384,20 +384,7 @@ end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
-  if key.start_with?(':')
-    element.send_keys(make_symbol_if_colon(key))
-  else
-    # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
-    key.split('').each do |k|
-      if k == '('
-        element.send_keys :shift, 9
-      elsif k == ')'
-        element.send_keys :shift, 0
-      else
-        element.send_keys k
-      end
-    end
-  end
+  element.send_keys(make_symbol_if_colon(key))
 end
 
 def make_symbol_if_colon(key)

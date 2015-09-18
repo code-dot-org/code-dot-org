@@ -25,7 +25,6 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
     dont_cache
     content_type :json
-    not_authorized unless owns_channel? channel_id
     PropertyType.new(channel_id, storage_id(endpoint)).to_hash.to_json
   end
 

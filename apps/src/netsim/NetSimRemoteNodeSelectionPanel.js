@@ -46,7 +46,6 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @param {NetSimNode[]} options.incomingConnectionNodes
  * @param {NetSimNode} options.remoteNode - null if not attempting to connect
  * @param {number} options.myNodeID
- * @param {boolean} options.disableControls
  *
  * @param {Object} callbacks
  * @param {function} callbacks.addRouterCallback
@@ -96,40 +95,37 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
    */
   this.myNodeID_ = options.myNodeID;
 
-  function buttonDebounce(callback) {
-    return _.debounce(callback, BUTTON_DEBOUNCE_DURATION_MS, {
-      leading: true,
-      trailing: false
-    });
-  }
-
   /**
    * Handler for "Add Router" button
    * @type {function}
    * @private
    */
-  this.addRouterCallback_ = buttonDebounce(callbacks.addRouterCallback);
+  this.addRouterCallback_ = _.debounce(callbacks.addRouterCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for cancel button (backs out of non-mutual connection)
    * @type {function}
    * @private
    */
-  this.cancelButtonCallback_ = buttonDebounce(callbacks.cancelButtonCallback);
+  this.cancelButtonCallback_ = _.debounce(callbacks.cancelButtonCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for "join" button next to each connectable node.
    * @type {function}
    * @private
    */
-  this.joinButtonCallback_ = buttonDebounce(callbacks.joinButtonCallback);
+  this.joinButtonCallback_ = _.debounce(callbacks.joinButtonCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   /**
    * Handler for "reset shard" button click.
    * @type {function}
    * @private
    */
-  this.resetShardCallback_ = buttonDebounce(callbacks.resetShardCallback);
+  this.resetShardCallback_ = _.debounce(callbacks.resetShardCallback,
+      BUTTON_DEBOUNCE_DURATION_MS);
 
   // Initial render
   NetSimPanel.call(this, rootDiv, {
@@ -137,10 +133,6 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
     panelTitle: this.getLocalizedPanelTitle(),
     userToggleable: false
   });
-
-  if (options.disableControls) {
-    this.disableEverything();
-  }
 };
 NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
 
@@ -177,28 +169,13 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   NetSimUtils.makeContinueButton(this);
 
   this.addRouterButton_ = this.getBody().find('#netsim-lobby-add-router');
-  this.addRouterButton_.click(unlessDisabled(this.addRouterCallback_));
+  this.addRouterButton_.click(this.addRouterCallback_);
 
-  this.getBody().find('.join-button').click(
-      unlessDisabled(this.onJoinClick_.bind(this)));
-  this.getBody().find('.accept-button').click(
-      unlessDisabled(this.onJoinClick_.bind(this)));
-  this.getBody().find('.cancel-button').click(
-      unlessDisabled(this.cancelButtonCallback_));
+  this.getBody().find('.join-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.accept-button').click(this.onJoinClick_.bind(this));
+  this.getBody().find('.cancel-button').click(this.cancelButtonCallback_);
 };
 
-/**
- * Wrap the provided callback in a check to make sure the target is not disabled.
- * @param {function} callback
- * @returns {function}
- */
-function unlessDisabled(callback) {
-  return function (jQueryEvent) {
-    if (!$(jQueryEvent.target).is('[disabled]')) {
-      callback(jQueryEvent);
-    }
-  };
-}
 
 /**
  * Updates the layout of the markup, usually in response to a window
@@ -270,6 +247,11 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = functio
  */
 NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   var target = $(jQueryEvent.target);
+  if (target.is('[disabled]')) {
+    return;
+  }
+  target.attr('disabled', 'disabled');
+
   var nodeID = target.data('nodeId');
   var clickedNode = _.find(this.nodesOnShard_, function (node) {
     return node.entityID === nodeID;
@@ -372,20 +354,4 @@ NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
     return NodeType.ROUTER === node.getNodeType();
   }).length;
   return routerCount < routerLimit;
-};
-
-/**
- * Disable all of the buttons within the panel (does not apply to panel-header
- * buttons!)
- */
-NetSimRemoteNodeSelectionPanel.prototype.disableEverything = function () {
-  this.getBody().find('.netsim-button').attr('disabled', true);
-};
-
-/**
- * Enable all of the buttons within the panel (does not apply to panel-header
- * buttons!)
- */
-NetSimRemoteNodeSelectionPanel.prototype.enableEverything = function () {
-  this.getBody().find('.netsim-button').removeAttr('disabled');
 };

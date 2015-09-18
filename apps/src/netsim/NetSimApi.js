@@ -15,8 +15,6 @@
 /* global $ */
 'use strict';
 
-var NetSimApiError = require('./NetSimApiError');
-
 /**
  * @type {string}
  * @const
@@ -103,7 +101,8 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), null);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
     });
   },
 
@@ -121,7 +120,8 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), null);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
     });
   },
 
@@ -152,7 +152,8 @@ var tableApi = {
     }).done(function(body, text) {
       callback(null, body);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -178,7 +179,8 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   },
 
@@ -196,7 +198,8 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -215,7 +218,8 @@ var tableApi = {
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
-      callback(new NetSimApiError(request), false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   }
 };

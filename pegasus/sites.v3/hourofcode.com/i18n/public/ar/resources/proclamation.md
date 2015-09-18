@@ -1,10 +1,8 @@
----
+* * *
 
-title: <%= hoc_s(:title_proclamation) %>
-layout: wide
-nav: promote_nav
+title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
----
+* * *
 
 <%= view :signup_button %>
 

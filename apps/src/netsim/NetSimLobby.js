@@ -24,7 +24,6 @@ var i18n = require('./locale');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimAlert = require('./NetSimAlert');
-var NetSimApiError = require('./NetSimApiError');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
@@ -150,13 +149,6 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
    */
   this.remoteNode_ = null;
 
-  /**
-   * Allows multiple methods to have a 'disable' lock on the lobby.
-   * @type {Object}
-   * @private
-   */
-  this.disableEverythingKeys_ = {};
-
   // Figure out the list of user sections, which requires an async request
   // and re-render if the user is signed in.
   if (options.user.isSignedIn) {
@@ -189,8 +181,7 @@ NetSimLobby.prototype.render = function () {
         {
           displayName: this.displayName_,
           shardChoices: this.shardChoices_,
-          selectedShardID: this.selectedShardID_,
-          disableControls: this.isEverythingDisabled()
+          selectedShardID: this.selectedShardID_
         },
         {
           setNameCallback: this.setDisplayName.bind(this),
@@ -209,8 +200,7 @@ NetSimLobby.prototype.render = function () {
           nodesOnShard: this.nodesOnShard_,
           incomingConnectionNodes: this.incomingConnectionNodes_,
           remoteNode: this.remoteNode_,
-          myNodeID: this.myNode_.entityID,
-          disableControls: this.isEverythingDisabled()
+          myNodeID: this.myNode_.entityID
         },
         {
           addRouterCallback: this.addRouterToLobby.bind(this),
@@ -350,72 +340,12 @@ NetSimLobby.prototype.doesShardContainRouter = function () {
  * UI elements.
  */
 NetSimLobby.prototype.addRouterToLobby = function () {
-  var enableCallback = this.disableEverything();
   NetSimRouterNode.create(this.shard_, function (err) {
-    enableCallback();
     if (err) {
-      var ValidationError = NetSimApiError.ValidationError;
-      switch (err.details) {
-        case ValidationError.CONFLICT:
-          // Another router with the same routerNumber already exists.
-          // Ignore this; to the user it looks like it worked!
-          logger.warn('Did not create router; ' +
-              'Another user created a router at the same time.');
-          break;
-
-        case ValidationError.LIMIT_REACHED:
-          // The server's router limit has been reached.
-          // Usually the client will remove the "Add Router" button first.
-          logger.warn('Did not create router; Router limit reached.');
-          NetSimAlert.warn(i18n.routerLimitReachedError());
-          break;
-
-        default:
-          // Malformed row or some other unexpected error.
-          logger.error("Unable to create router: " + err.message);
-          NetSimAlert.error(i18n.addRouterToLobbyError());
-      }
+      logger.error("Unable to create router: " + err.message);
+      NetSimAlert.error(i18n.addRouterToLobbyError());
     }
   }.bind(this));
-};
-
-/**
- * @returns {boolean} TRUE if anything has requested the whole lobby to be
- *          disabled, false otherwise.
- */
-NetSimLobby.prototype.isEverythingDisabled = function () {
-  return Object.keys(this.disableEverythingKeys_).length > 0;
-};
-
-/**
- * Disable all of the lobby controls together.
- * @returns {function} Callback for re-enabling the lobby.
- */
-NetSimLobby.prototype.disableEverything = function () {
-  var requestKey = utils.createUuid();
-  this.disableEverythingKeys_[requestKey] = true;
-
-  if (this.nodeSelectionPanel_) {
-    this.nodeSelectionPanel_.disableEverything();
-  }
-
-  // Return an 'enable' callback
-  return this.enableEverything_.bind(this, requestKey);
-};
-
-/**
- * Release a 'disable-hold' on the lobby and re-enable the lobby controls if
- * it was the last such disable-hold.
- * @param {!string} key - a unique identifier for this particular disable request.
- * @private
- */
-NetSimLobby.prototype.enableEverything_ = function (key) {
-  delete this.disableEverythingKeys_[key];
-  if (!this.isEverythingDisabled()) {
-    if (this.nodeSelectionPanel_) {
-      this.nodeSelectionPanel_.enableEverything();
-    }
-  }
 };
 
 /**
@@ -423,11 +353,10 @@ NetSimLobby.prototype.enableEverything_ = function (key) {
  * @param {NetSimClientNode|NetSimRouterNode} nodeToJoin
  */
 NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
-  var enableCallback = this.disableEverything();
   if (nodeToJoin instanceof NetSimRouterNode) {
-    this.netsim_.connectToRouter(nodeToJoin.entityID, enableCallback);
+    this.netsim_.connectToRouter(nodeToJoin.entityID);
   } else if (nodeToJoin instanceof NetSimClientNode) {
-    this.myNode_.connectToClient(nodeToJoin, enableCallback);
+    this.myNode_.connectToClient(nodeToJoin, function () {});
   }
 };
 
@@ -437,8 +366,7 @@ NetSimLobby.prototype.onJoinButtonClick_ = function (nodeToJoin) {
  * @private
  */
 NetSimLobby.prototype.onCancelButtonClick_ = function () {
-  var enableCallback = this.disableEverything();
-  this.netsim_.disconnectFromRemote(enableCallback);
+  this.netsim_.disconnectFromRemote();
 };
 
 /**
