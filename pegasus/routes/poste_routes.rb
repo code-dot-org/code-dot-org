@@ -64,6 +64,7 @@ post '/v2/poste/send-message' do
   template_params ||= {}
 
   recipients = params[:recipients].to_s.split(/[\n,;]/).map(&:strip)
+
   if params[:recipients_file]
     if params[:recipients_file][:type] == "text/csv"
       recipients_csv = CSV.parse(params[:recipients_file][:tempfile].read, {headers: true})
