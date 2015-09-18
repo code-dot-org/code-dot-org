@@ -221,6 +221,12 @@ Blockly.Variables.generateUniqueName = function(baseName) {
   return newName;
 };
 
+/**
+ * Given a base name, attempts to find an unused variable using that baseName
+ * followed by an integer. For example, if given "counter1", it will look at
+ * counter1, then counter2, then counter3, etc.
+ * @param {string} baseName
+ */
 Blockly.Variables.generateUniqueNameFromBase_ = function(baseName) {
   var variableList = Blockly.Variables.allVariables();
   if (variableList.indexOf(baseName) === -1) {
