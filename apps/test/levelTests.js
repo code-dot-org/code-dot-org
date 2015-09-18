@@ -15,6 +15,47 @@ var $ = require('jquery');
 var sinon = require('sinon');
 require('jquery-ui');
 
+// Anatomy of a level test collection. The example itself is uncommented so
+// that you get the benefits of editor syntax highlighting
+var example = {
+  // app name
+  app: "turtle",
+  // name of the level file within the app directory. will almost always be levels
+  levelFile: "levels",
+  // id of the level within the levels file
+  levelId: "5_5",
+  // a complete level defintion, can be used instead of levelFile/levelId
+  levelDefinition: {},
+  // a set of tests
+  tests: [
+    {
+      description: 'Text describing this test',
+      // this is passed to report
+      expected: {
+        result: true, // expected result value
+        testResult: 10 // expected testResult value
+      },
+      // a function that returns a level definition on demand. this allows for
+      // per test level definitions (dont need a collection levelId/levelDefinition
+      // if taking this approach)
+      delayLoadLevelDefinition: function () {},
+
+      // xml to be used for startBlocks. set to string 'startBlocks' if you want
+      // to use the xml from the level itself
+      xml: '',
+      customValidator: function (assert) {
+        // optional function called at puzzle finish (i.e. when BlocklyApps.report
+        // is called.
+        return true; // test fails if it returns false
+      },
+      runBeforeClick: function (assert) {
+        // optional function called after puzzle loads, but before execution
+        // starts
+      }
+    }
+  ]
+};
+
 var testUtils = require('./util/testUtils');
 testUtils.setupLocales();
 
