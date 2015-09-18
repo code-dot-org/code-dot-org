@@ -62,17 +62,15 @@ def hoc_canonicalized_i18n_path(uri)
   @language = @user_language || country_language || hoc_detect_language()
 
   canonical_urls = [File.join(["/#{(@company or @country)}/#{@language}",path].select{|i|!i.nil_or_empty?})]
+  canonical_urls << File.join(["/#{(@company or @country)}",path].select{|i|!i.nil_or_empty?}) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last
   end
 
   # We no longer want the country to be part of the path we use to search:
-  _, search_uri = uri.split('/', 2)
-  search_uri = File.join('/', search_uri)
-
-  path = uri if resolve_document(search_uri)
-
+  search_uri = File.join('/', [@language, path].compact)
+  return search_uri if resolve_document(search_uri)
   return "/#{path}"
 end
 
@@ -130,6 +128,10 @@ def localized_file(path)
   return localized_path if resolve_static('public', localized_path)
 
   return path
+end
+
+def localized_image(path)
+  File.join('/', @country, @language, path)
 end
 
 def campaign_date(format)

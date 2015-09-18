@@ -1,12 +1,14 @@
+---
 
+title: <%= hoc_s(:title_how_to_organizations) %>
+layout: wide
+nav: how_to_nav
 
-<div class="row">
-  <h1 class="col-sm-6">
-    როგორ ვასწავლოთ კოდის ერთი საათის ფარგლებში
-  </h1>
-</div>
+---
 
-</div>
+<%= view :signup_button %>
+
+# Bring the Hour of Code to your company
 
 ## 1) Try the tutorials:
 
@@ -17,27 +19,29 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
   * Require minimal prep-time for organizers
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * ** გატესტეთ ტუტორიალების მუშაობა მოსწავლეების კომპიუტერებზე.** დარმწუნდით, რომ ვიდეო ჩანს და ხმა ისმის.
-  * **გაცანით მილოცვის გვერდს** და გაიგეთ, რას ნახავენ მოსწავლეები როცა დაასრულებენ ტუტორიალს. 
+  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
+  * **Preview the congrats page** to see what students will see when they finish. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Plan ahead based on your technology available
 
-  * **არ გაქვს საკმარისი მოწყობილობა?** გამოიყენეთ [პროგრამირება წყვილებში](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
   * **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ ოფლაინ-ტუტორიალები.
 
 ## 4) Inspire students - show them a video
 
-აჩვენეთ მოსწავლეებს ჩვენი ერთ-ერთი ვიდეო კოდის ერთი საათის ენერგიულად დასაწყებად. მაგალითად:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [2013 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw) ან <% if @country == 'uk' %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [2014 წლის კოდის ერთი საათის პრომო-ვიდეო](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**დააინტერესეთ თქვენი მოსწავლეები - აჩვენეთ, რასთან აქვთ საქმე**
+**Get your students excited - give them a short intro**
+
+<%= view :signup_button %>

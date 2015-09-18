@@ -11,7 +11,7 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
   
 
 
-კომპიუტერულ მეცნიერებაზე სპეციფიკური ინფორმაციის მოსაპოვებლად გადადით გვერდზე http://code.org/promote.
+Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
 **სათაური: პროგრამირება... სამუშაო ადგილები იქმნება აქ**
 
