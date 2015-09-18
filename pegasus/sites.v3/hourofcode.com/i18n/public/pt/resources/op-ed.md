@@ -13,7 +13,7 @@ nav: promote_nav
   
 
 
-Acesse http://code.org/promote para encontrar informações específicas do Estado sobre a ciência da computação.
+Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
 **Título: Computação… onde estão as vagas de trabalho**
 

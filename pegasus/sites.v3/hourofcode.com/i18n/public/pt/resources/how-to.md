@@ -61,7 +61,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 **Direcione os alunos para a atividade**
 
-  * Escreva o link para o tutorial em uma lousa. Encontre o link apresentado nas [informações para seu tutorial selecionado](<%= resolve_url('https://code.org/learn') %>) abaixo do número de participantes. 
+  * Escreva o link para o tutorial em uma lousa. Encontre o link apresentado nas [informações para seu tutorial selecionado](%= resolve_url('https://code.org/learn') %) abaixo do número de participantes.
 
 **Quando seus alunos tiverem dificuldades, não tem problema responder:**
 
@@ -71,7 +71,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 **O que fazer se um aluno terminar mais cedo?**
 
-  * Os alunos podem ver todos os tutoriais e participar de outra atividade da Hora do Código em [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Os alunos podem ver todos os tutoriais e participar de outra atividade da Hora do Código em [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
   * Ou, peça aos alunos que terminarem mais cedo para ajudar os colegas que estão tendo problemas com a atividade.
 
 [col-33]
@@ -93,7 +93,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers for your students.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]

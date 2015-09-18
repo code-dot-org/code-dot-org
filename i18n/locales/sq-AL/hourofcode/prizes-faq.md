@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 ## A duhet e gjithë shkolla juaj të futet për të fituar $10,000 në hardware?
 
-Po. Gjithë shkolla juaj duhet të marri pjesë që të jetë e pranueshme për çmimin, por vetëm një person ka nevojë që të regjistrohet dhe të paraqesë formularin e aplikimit Shpërblime Hardware [këtu](<%= hoc_uri('/prizes') %>).
+Po. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes') %).
 
 ## A duhet e gjithë shkolla juaj të futet për të fituar një teknologji chat?
 
@@ -34,7 +34,7 @@ Për shkak të një stafi të vogël me kohë të plotë, Code.org nuk është n
 
 ## Kur është afati i fundit për të aplikuar për çmimin e hardware-it?
 
-Për t'u kualifikuar, gjithë shkolla juaj duhet të regjistrohet për Orën e Kodimit si dhe të plotësojë [Formularin e Aplikimit Hardware](<%= hoc_uri('/prizes') %>) nga 14 nëntor 2014. Një shkollë nga çdo shtet në ShBA do të marrë një set kompjuterash për klasa. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Një shkollë nga çdo shtet në ShBA do të marrë një set kompjuterash për klasa. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
 
 ## Kur është afati i fundit për të aplikuar për çmimin e chat-it teknologjik?
 
@@ -42,7 +42,7 @@ Për tu kualifikuar, duhet ta regjistrosh klasën tuaj për Orën e Kodimit nga 
 
 ## Kur do të njoftohem nëse shkolla apo klasa ime ka fituar ndonjë çmim?
 
-Për t'u kualifikuar, gjithë shkolla juaj duhet të regjistrohet për Orën e Kodimit si dhe të plotësojë [Formularin e Aplikimit Hardware](<%= hoc_uri('/prizes') %>) nga 14 nëntor 2014. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Code.org do të përzgjedh dhe do të njoftojë fituesit përmes email-it, në 1 dhjetor 2015.
 
 ## Nëse shkolla ime nuk mund të bëjë Orën e Kodimit gjatë Javës Edukative të Shkencave Kompjuterike (Dhj. 8-14), a mundemi të kualifikohemi për shpërblimet?
 

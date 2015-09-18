@@ -60,7 +60,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="<%= resolve_url('https://code.org/learn') %>">information for your selected tutorial</a> under the number of participants. 
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -71,7 +71,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at <a href="<%= resolve_url('https://code.org/learn') %>"><%= resolve_url('code.org/learn') %></a>
+- Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]
@@ -89,8 +89,8 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <p style="clear:both">&nbsp;</p>
 	
 ## 7) Celebrate
-- <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
-- <a href="<%= resolve_url('/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
+- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

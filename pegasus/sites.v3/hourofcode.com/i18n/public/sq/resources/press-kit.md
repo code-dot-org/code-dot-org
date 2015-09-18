@@ -24,10 +24,10 @@ nav: promote_nav
 **1. Planifiko eventin tënd**
 
   * Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
-  * Dërgo [letër](<%= hoc_uri('/resources/#sample-emails') %>) prindërve. Kërkoni nga ata të shpërndajnë fjalën.
-  * Dërgo [letër](<%= hoc_uri('/resources/#sample-emails') %>) për të ftuar kryetarin e komunës, kongresmenët, guvernatorin, apo një biznesmeni me ndikim për të marrë pjesë dhe folur studentëve tuaj.
+  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
-  * Paraqit [Videon Ora e Kodimit](<%= hoc_uri('/') %>) të Code.org apo njërën nga [këto](<%= hoc_uri('/resources#videos') %>) për motivacion.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/resources#videos') %) to inspire.
 
 **2. Identifiko gazetarë specifik lokale që mbulojnë arsimin apo ngjarjet lokale.**
 
@@ -37,7 +37,7 @@ Kërko online për të gjetur informacionin e kontaktit për një reporter. Nës
 
 **3. Kontakto mediat lokale**
 
-Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **Shiko një [shembull të prezentimit bindës në media](<%= hoc_uri('/resources#sample-emails') %>):**
+Mënyra më e mirë për të kontaktuar është përmes email-it. Duhet të jetë shkurt dhe të komunikojë: pse duhet njerëzit e tjerë të interesohen për këtë event? Përfshi informacionet e kontaktit (pershirë një numër telefoni) për atë që do jetë në faqen e eventit. **See a [sample pitch to media](%= resolve_url('/resources#sample-emails') %):**
 
 **4. Përgatitu për pyetjet për ngjarjen tënde të shkollës. Këtu janë disa shembuj:**
 
@@ -57,9 +57,9 @@ Në Kinë, secili nxënës mëson lëndë të shkencave kompjuterike deri në sh
 
 **Rreth Code.org**
 
-Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rris pjesëmarrjen e femrave dhe nxënësit e pakpërfaqësuar me ngjyrë. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione filantropike nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. Për më shumë informacion, ju lutem vizitoni: <<%= resolve_url('https://code.org') %>>.
+Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rris pjesëmarrjen e femrave dhe nxënësit e pakpërfaqësuar me ngjyrë. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione filantropike nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. Për më shumë informacion, ju lutem vizitoni: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Gjeni më shumë burime dhe shembuj emaili [këtu](<%= hoc_uri('/resources') %>).
+Find more resources and sample emails [here](%= resolve_url('/resources') %).
 
 <%= view :signup_button %>

@@ -59,7 +59,7 @@ crwdns46251:0crwdne46251:0
 
 **crwdns46253:0crwdne46253:0**
 
-  * crwdns48135:0crwdne48135:0 
+  * crwdns48901:0crwdne48901:0
 
 **crwdns46254:0crwdne46254:0**
 
@@ -69,7 +69,7 @@ crwdns46251:0crwdne46251:0
 
 **crwdns46258:0crwdne46258:0**
 
-  * crwdns48136:0crwdne48136:0[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * crwdns48136:0crwdne48136:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
   * crwdns44453:0crwdne44453:0
 
 crwdns48137:0[col-33]crwdne48137:0
@@ -90,8 +90,8 @@ crwdns48140:0[/col-33]crwdne48140:0
 
 ## crwdns46259:0crwdne46259:0
 
-  * crwdns48141:0crwdne48141:0
-  * crwdns48605:0crwdne48605:0
+  * crwdns48902:0crwdne48902:0
+  * crwdns48903:0crwdne48903:0
   * crwdns48606:0crwdne48606:0
 
 crwdns48142:0[col-33]crwdne48142:0

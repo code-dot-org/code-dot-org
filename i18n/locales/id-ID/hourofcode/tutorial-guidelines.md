@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adalah mengoptimalkan pengalaman para murid dan guru yang awam akan ilmu komputer. Mohon gunakan dokumen ini untuk memandu kreativitas kegiatan anda, untuk ditujukan kepada pengguna yang tidak punya latar belakang dalam pengkodean, program komputer, dan ilmu komputer.
 
@@ -23,20 +23,13 @@ Kami ingin menghelat berbagai pilihan yang menarik, namun tujuan utama kami adal
 
 ## Indeks:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Bagaimana tutorial akan dievaluasi untuk disertakan](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Saran untuk merancang aktivitas Anda](#design)
+  * [Pedoman Merek Dagang](#tm)
+  * [Pelacakan Pixel](#pixel)
+  * [Promosikan tutorial-tutorial, CSEdWeek dan Hour of Code anda](#promote)
   * [Catatan untuk pelajar penyandang cacat](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Diharapkan juga untuk menyertakan pengetahuan ilmu komputer yang direkomendasi untuk tingkatan: Pemula, Menengah atau Lanjutan. Website Hour of Code akan menyoroti aktivitas untuk pemula yang paling mencolok. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Persyaratan teknis: 
       * Untuk lebih akurat dalam melacak peserta kami ingin setiap mitra kelompok pihak ketiga untuk menyertakan 1-pixel gambar pelacak pada setiap awal dan dan akhir dari tutorial Hour of Code. Tempatkan gambar-piksel mulai pada halaman pertaman dan gambar-piksel selesai pada halaman terakhir. Tidak boleh menempatkan piksel pada pertengahan halaman). Lihat Piksel pelacakan pada bagian bawah untuk rincian. 
-      * Setelah menyelesaikan aktivitas anda, pengguna harus diarahkan ke [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> dimana mereka dapat: 
+      * Setelah menyelesaikan aktivitas anda, pengguna harus diarahkan ke [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Bagikan pada media sosial bahwa mereka telah menyelesaikan Hour of Code
           * Menerima sertifikat bahwa mereka telah menyelesaikan Hour of Code
           * Lihat papan peringkat tetang negara/kota yang memiliki tingkat partisipasi tertinggi dalam aktivitas Hour of Code
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Opsional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Untuk aktivitas online (terutama aplikasi ponsel pintar/tablet): 
           * Jumlah pengguna
