@@ -171,3 +171,8 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.m
   puts file
   File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
 end
+
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+end
