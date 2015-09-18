@@ -1,10 +1,13 @@
 require 'active_support'
+require 'active_record'
 require 'sequel'
 
 #
 # Provides a fake Dashboard database with some fake data to test against.
 #
 module FakeDashboard
+  DATABASE_FILENAME = './fake_dashboard_for_tests.db'
+  @@fake_db = nil
 
   #
   # Fake Data: Users
@@ -43,78 +46,62 @@ module FakeDashboard
 
   # Overrides the current database with a procedure that, given a query,
   # will return results appropriate to our test suite.
+  #
+  # If you will be modifying the database in your test, you should isolate your
+  # test with a transaction so the changes do not affect other tests (unfortuantely
+  # we cannot make this automatic yet):
+  #
+  #   db.transaction(:rollback => :always) do
+  #     ...test stuff here...
+  #   end
+  #
+  # @returns [Sequel::Database] fake database handle
   def self.use_fake_database
-    fake_db = Sequel.sqlite
+    create_fake_dashboard_db if @@fake_db.nil?
+    Dashboard.stubs(:db).returns(@@fake_db)
+    @@fake_db
+  end
 
-    fake_db.create_table :users do
-      primary_key :id
-      String :email
-      String :encrypted_password
-      String :reset_password_token
-      DateTime :reset_password_sent_at
-      DateTime :remember_created_at
-      Integer :sign_in_count
-      DateTime :current_sign_in_at
-      DateTime :last_sign_in_at
-      String :username
-      Boolean :admin
-      String :gender
-      String :name
-      Date :birthday
-      String :user_type
-      Integer :total_lines
-      Integer :prize_earned
-      Integer :secret_picture_id
-      String :hashed_email
-      String :secret_words
+  # Lazy-creates sqlite database using Dashboard's real ActiveRecord schema,
+  # and populates it with some simple test data.
+  # We might want to extract the test data to individual tests in the future,
+  # or provide an explicit way to request certain test-data setups.
+  def self.create_fake_dashboard_db
+    @@fake_db = Sequel.sqlite(DATABASE_FILENAME)
+
+    ActiveRecord::Migration.suppress_messages do
+      ActiveRecord::Base::establish_connection(
+          adapter: 'sqlite3',
+          database: DATABASE_FILENAME
+      )
+
+      require_relative('../../../dashboard/db/schema')
     end
+
     USERS.each do |user|
-      new_id = fake_db[:users].insert(user)
-      user.merge! fake_db[:users][id: new_id]
+      new_id = @@fake_db[:users].insert(user)
+      user.merge! @@fake_db[:users][id: new_id]
     end
 
-    fake_db.create_table :user_permissions do
-      primary_key :id
-      Integer :user_id
-      String :permission
-    end
     USER_PERMISSIONS.each do |perm|
-      new_id = fake_db[:user_permissions].insert(perm)
-      perm.merge! fake_db[:user_permissions][id: new_id]
+      new_id = @@fake_db[:user_permissions].insert(perm)
+      perm.merge! @@fake_db[:user_permissions][id: new_id]
     end
 
-    fake_db.create_table :followers do
-      primary_key :id
-      Integer :user_id
-      Integer :student_user_id
-      Integer :section_id
-    end
     FOLLOWERS.each do |follower|
-      new_id = fake_db[:followers].insert(follower)
-      follower.merge! fake_db[:followers][id: new_id]
+      new_id = @@fake_db[:followers].insert(follower)
+      follower.merge! @@fake_db[:followers][id: new_id]
     end
 
-    fake_db.create_table :sections do
-      primary_key :id
-      Integer :user_id
-      String :name
-      String :code
-      Integer :script_id
-      String :grade
-      String :admin_code
-      String :login_type
-    end
     TEACHER_SECTIONS.each do |section|
-      new_id = fake_db[:sections].insert(section)
-      section.merge! fake_db[:sections][id: new_id]
+      new_id = @@fake_db[:sections].insert(section)
+      section.merge! @@fake_db[:sections][id: new_id]
     end
+  end
 
-    fake_db.create_table :secret_pictures do
-      primary_key :id
-      String :name
-      String :path
-    end
-
-    Dashboard.stubs(:db).returns(fake_db)
+  # Remove the sqlite3 database file from the filesystem.
+  # Should be called after all tests have run; possibly from a post-test task
+  def self.destroy_fake_dashboard_db
+    File.delete(DATABASE_FILENAME) if File.exists?(DATABASE_FILENAME)
   end
 end
