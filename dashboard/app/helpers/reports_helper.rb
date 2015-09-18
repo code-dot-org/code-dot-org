@@ -16,7 +16,7 @@ module ReportsHelper
     if params[:user]
       result = params[:user_level].best_result if params[:user_level] && params[:user_level].best_result
     else
-      result = session_level_progress(params[:level_id])
+      result = session_level_progress(params[:level_id].to_i)
     end
 
     result >= Activity::MINIMUM_PASS_RESULT
