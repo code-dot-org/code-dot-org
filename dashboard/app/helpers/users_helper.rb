@@ -7,24 +7,23 @@ module UsersHelper
   def session_lines
     # Migrate old session line count if needed.
     if session[:lines]
-      cookies[:lines] = session[:lines]
+      cookies[:lines] = session[:lines].to_s
       session[:lines] = nil
     end
-
-    cookies[:lines] || 0
+    (cookies[:lines] || 0).to_i
   end
 
   # Add additional lines completed in the given session.
   # @param [Integer] added_lines
   def session_add_lines(added_lines)
-    cookies.permanent[:lines] = session_lines + added_lines
+    cookies.permanent[:lines] = (session_lines + added_lines).to_s
   end
 
   # Resets all user session state (level progress, lines of code, videos seen,
   # etc.) for tests.
   def session_reset_for_test
-    cookies[:lines] = session[:lines] = nil
-    cookies[:progress] = session[:progress] = nil
+    cookies.permanent[:lines] = session[:lines] = nil
+    cookies.permanent[:progress] = session[:progress] = nil
     session[:callouts_seen] = nil
     session[:videos_seen] = nil
   end
@@ -44,7 +43,6 @@ module UsersHelper
         # fall through to return the empty hash.
       end
     end
-
     return {}
   end
   private :session_progress_hash
@@ -63,7 +61,7 @@ module UsersHelper
   def session_set_level_progress(level_id, progress_value)
     progress_hash = session_progress_hash
     progress_hash[level_id.to_s] = progress_value
-    cookies[:progress] = JSON.generate(progress_hash)
+    cookies.permanent[:progress] = JSON.generate(progress_hash)
   end
 
   # Returns true if there has been no progress in completing levels for
