@@ -26,8 +26,7 @@ module UsersHelper
   # @param [Integer] level_id
   # return [Integer]
   def session_level_progress(level_id)
-    s = session[:progress]
-    s ? s.fetch(level_id.to_i, 0) : 0
+    (session[:progress] || {}).fetch(level_id.to_i, 0)
   end
 
   def session_levels_progress_is_empty_for_test
@@ -38,13 +37,15 @@ module UsersHelper
   # @param [Integer] level_id
   # @param [Integer] progress
   def session_set_level_progress(level_id, progress)
-    (session[:progress] ||= {})[level_id] = progress
+    session[:progress] ||= {}
+    session[:progress][level_id.to_i] = progress
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
   # @param [Integer] script_id
   def session_add_script(script_id)
-    (session[:scripts] ||= Set.new).add(script_id.to_i)
+    session[:scripts] ||= Set.new
+    session[:scripts].add(script_id.to_i)
   end
 
   # Returns an array of ids of the scripts completed in the current session.
@@ -93,7 +94,8 @@ module UsersHelper
 
   # Adds callout_key to the set of callouts seen in the current user session.
   def session_add_callout_seen(callout_key)
-    (session[:callouts_seen] ||= Set.new).add(callout_key)
+    session[:callouts_seen] ||= Set.new
+    session[:callouts_seen].add(callout_key)
   end
 
   # Summarize the current user's progress within a certain script.
