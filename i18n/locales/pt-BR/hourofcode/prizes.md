@@ -22,9 +22,9 @@ Todos os educadores que sediarem uma Hora do Código para estudantes recebem 10 
 
 # Prêmios da Hora do Código de 2014
 
-<% if @country == 'us' || @country == 'ca' || @country == 'uk' %>
+<% if @country == 'us' || @country == 'ca' || @country == 'uk' %> <a id="gift_code"></a>
 
-## Todos os organizadores ganharam um presente de agradecimento {#gift_code}
+## Todos os organizadores ganharam um presente de agradecimento
 
 Todos os educadores que sediaram uma Hora do Código para estudantes receberam 10 GB de espaço no Dropbox ou US$10 de crédito no Skype, como forma de agradecimento!
 
@@ -36,7 +36,9 @@ Uma escola sorteada de ***cada*** Estado dos EUA (e de Washington D.C.) ganhou o
 
 <% if @country == 'uk' %>
 
-## Ao todo, 20 turmas sortudas ganharam um chat de vídeo com um convidado especial! {#video_chat}
+<a id="video_chat"></a>
+
+## Ao todo, 20 turmas sortudas ganharam um chat de vídeo com um convidado especial!
 
 Ao todo, 20 turmas sortudas foram convidadas a participar de um chat com vídeo para celebrar a Hora do Código. Os alunos conversaram com líderes em tecnologia, como [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), o fundador do Skype e do Kazaa, e [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), cofundador e CEO da Moonfruit.
 
@@ -44,7 +46,9 @@ Ao todo, 20 turmas sortudas foram convidadas a participar de um chat com vídeo 
 
 <% if @country == 'us' %>
 
-## Ao todo, 100 salas de aula ganharam um chat com vídeo com um convidado especial! {#video_chat}
+<a id="video_chat"></a>
+
+## Ao todo, 100 salas de aula ganharam um chat com vídeo com um convidado especial!
 
 Dentre as salas de aula participantes, 100 participaram de uma sessão de vídeo de Perguntas e Respostas em tempo real com gênios da tecnologia e as celebridades adeptas dessa ciência. Os alunos fizeram perguntas e conversaram com esses ídolos para dar início à Hora do Código.
 
@@ -56,11 +60,15 @@ Dentre as salas de aula participantes, 100 participaram de uma sessão de vídeo
 
 <% if @country == 'ca' %>
 
-## Projeto Brilhante de US$2.000 {#brilliant_project}
+<a id="brilliant_project"></a>
+
+## Projeto Brilhante de US$2.000
 
 O [Brilliant Labs](http://brilliantlabs.com/hourofcode) forneceu os recursos necessários, no valor máximo de US$2.000,00, para implementar um projeto de aprendizado prático, voltado para o aluno e baseado em tecnologia, para uma sala de aula de cada distrito e região (exceto Quebec). Para saber mais detalhes, termos e condições, visite o site [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-## As escolas sorteadas ganharam uma oficina da Actua {#actua_workshop}
+<a id="actua_workshop"></a>
+
+## As escolas sorteadas ganharam uma oficina da Actua
 
 Dentre as escolas do Canadá, as 15 sorteadas ganharam 2 oficinas práticas das áreas de Ciência, Tecnologia, Engenharia e Matemática (STEM, na sigla em inglês), oferecidas por um dos [33 membros da rede](http://www.actua.ca/about-members/) Actua. Os membros da Actua oferecem oficinas de STEM associadas a um currículo regional e territorial para alunos do Ensino Fundamental e Médio. Essas experiências em sala de aula são oferecidas por alunos-modelo, altamente capacitados e motivados, formados em cursos de STEM. Os professores podem contar com demonstrações empolgantes, experiências interativas e muita diversão de STEM para seus alunos! Observe que a disponibilidade para as oficinas em sala de aula pode variar em comunidades de localidades remotas ou rurais.
 
@@ -86,7 +94,9 @@ Dentre as escolas do Canadá, as 15 sorteadas ganharam 2 oficinas práticas das 
 | Garden Creek School             | Fredericton | Worlds UNBound                  |
 | Armbrae Academy                 | Halifax     | SuperNOVA                       |
 
-## A Kids Code Jeunesse deu apoio às salas de aula em todo o Canadá! {#kids_code}
+<a id="kids_code"></a>
+
+## A Kids Code Jeunesse deu apoio às salas de aula em todo o Canadá!
 
 A [Kids Code Jeunesse](http://www.kidscodejeunesse.org) forneceu voluntários em programação treinados para dar apoio aos professores no ensino de ciência da computação. A Kids Code Jeunesse é uma organização canadense sem fins lucrativos destinada a proporcionar, a todas as crianças, a oportunidade de aprender a programar e, aos professores, a oportunidade de aprender como ensinar a programação na sala de aula.
 
@@ -94,14 +104,18 @@ A [Kids Code Jeunesse](http://www.kidscodejeunesse.org) forneceu voluntários em
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## Das salas de aula participantes, 100 ganharam um conjunto de robôs programáveis {#programmable_robots}
+<a id="programmable_robots"></a>
+
+## Das salas de aula participantes, 100 ganharam um conjunto de robôs programáveis
 
 [Sphero](http://www.gosphero.com/) é a bola robótica controlada por aplicativo que está mudando a forma como os alunos aprendem. Baseados nas [lições do SPRK](http://www.gosphero.com/education/), esses robôs redondinhos dão às crianças um curso superdivertido sobre programação, desenvolvendo, ao mesmo tempo, suas habilidades em matemática e ciências. A Sphero deu 100 kits para salas de aulas – cada um deles com 5 robôs. Qualquer sala de aula (pública ou privada) dos EUA ou do Canadá pôde concorrer a este prêmio.
 
 <% end %>
 
-## Mais perguntas sobre os prêmios? {#more_questions}
+<a id="more_questions"></a>
 
-Confira nossos Termos e condições</a> ou visite nosso fórum para ver as [Perguntas frequentes](http://support.code.org) e faça suas perguntas.
+## Mais perguntas sobre os prêmios?
+
+Confira os [Termos e Condições](<%= resolve_url('https://code.org/tos') %>) ou visite nosso fórum [Tire suas dúvidas](http://support.code.org) e faça suas perguntas.
 
 <%= view :signup_button %>

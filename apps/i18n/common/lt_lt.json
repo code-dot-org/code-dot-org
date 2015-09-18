@@ -220,5 +220,6 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: "
+  "workspaceHeaderShort": "Darbo laukas: ",
+  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
 }

@@ -20,27 +20,34 @@ You're making it possible for students all around the world to learn one Hour of
 
 Ние ще се свържем с вас за награди, нови уроци и други вълнуващи актуализации през есента. И така, какво можете да направите сега?
 
-## Разпространете новината
+## 1. Sign up to host
+
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
+
+
+[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+
+## 2. Spread the word
 
 Кажете на приятелите си за #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
+## 3. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
 
-## Предложете на вашия работодател да се включи в инициативата
+## 4. Ask your employer to get involved
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
 
-## Рекламирайте "Час на Кодиране " във вашата Община
+## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Или станете домакин часът на кода "block party" за вашия квартал.
 
-## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
+## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
 
