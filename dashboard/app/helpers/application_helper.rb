@@ -61,11 +61,11 @@ module ApplicationHelper
 
   def level_info(user, script_level)
     result =
-      if user
-        script_level.try(:user_level).try(:best_result)
-      elsif
-        session_level_progress(script_level.level_id)
-      end
+        if user
+          script_level.try(:user_level).try(:best_result)
+        else
+          session_level_progress(script_level.level_id.to_i)
+        end
     activity_css_class(result)
   end
 
