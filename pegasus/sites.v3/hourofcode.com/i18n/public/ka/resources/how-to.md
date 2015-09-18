@@ -61,7 +61,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **აუხსენით ბავშვებს, რა უნდა გააკეთონ**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
 
 **როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ თქვენ უპასუხებთ:**
 
@@ -71,7 +71,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **რა ვქნათ, თუ მოსწავლემ მალე დაამთავრა?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
   * ან მას შეუძლია დაეხმაროს იმ კლასელებს, ვისაც გაუჭირდა დავალებების შესრულება.
 
 [col-33]
@@ -92,8 +92,8 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## 7) აღნიშნეთ
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
+  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers for your students.
   * გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 [col-33]
