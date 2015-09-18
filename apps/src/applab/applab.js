@@ -107,6 +107,7 @@ var defaultAppWidth = 400;
 var defaultAppHeight = 400;
 
 function loadLevel() {
+  Applab.hideDesignMode = level.hideDesignMode;
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
@@ -512,7 +513,14 @@ Applab.getHtml = function () {
 };
 
 Applab.setLevelHtml = function (html) {
-  Applab.levelHtml = designMode.addScreenIfNecessary(html);
+  if (html === '') {
+    if (window.dashboard) {
+      dashboard.project.clearHtml();
+    }
+    Applab.levelHtml = '';
+  } else {
+    Applab.levelHtml = designMode.addScreenIfNecessary(html);
+  }
 };
 
 Applab.onTick = function() {
@@ -711,6 +719,15 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
+  // Ignore the user's levelHtml for levels without design mode. levelHtml
+  // should never be present on such levels, however some levels do
+  // have levelHtml stored due to a previous bug. HTML set by levelbuilder
+  // is stored in startHtml, not levelHtml.
+  // TODO(dave): remove this check once design mode content is separated
+  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
+  if (level.hideDesignMode) {
+    level.levelHtml = '';
+  }
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
   AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
