@@ -1,6 +1,8 @@
 ---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
 ---
 

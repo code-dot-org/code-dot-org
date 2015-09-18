@@ -149,7 +149,19 @@ end
 #########################################################################################
 
 puts "Fixing crowdin markdown errors..."
-# remove all metadata
+# replace * * * with ---
 Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
   File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
+end
+
+# fix metadata to be multiline
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  metadata_pattern = /(\---[^---]*\---)/m
+  metadata_matches = File.read(file).match metadata_pattern
+  if metadata_matches
+    original_metadata = metadata_matches.captures.first
+    fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
+    File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
+  end
 end

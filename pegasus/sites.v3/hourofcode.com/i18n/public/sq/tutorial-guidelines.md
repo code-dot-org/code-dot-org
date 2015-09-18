@@ -1,6 +1,7 @@
 ---
 
-titulli: <%= hoc_s(:title_tutorial_guidelines) %> shtrirje: e gjerë
+titulli: <%= hoc_s(:title_tutorial_guidelines) %>
+shtrirje: e gjerë
 
 ---
 
