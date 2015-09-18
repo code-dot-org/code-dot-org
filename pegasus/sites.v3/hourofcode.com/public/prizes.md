@@ -22,7 +22,8 @@ Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox 
 # 2014 Hour of Code Prizes
 
 <% if @country ==  'us' || @country == 'ca' || @country == 'uk' %>
-<h2 id="gift_code">Every organizer won a thank you gift</h2>
+<a id="gift_code"></a>
+## Every organizer won a thank you gift
 Every educator who hosted an Hour of Code for students received 10 GB of Dropbox space or $10 Skype credit as a thank you gift!
 
 ## 51 schools won a class-set of laptops (or $10,000 for other technology)
@@ -33,14 +34,16 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
  
 <% if @country == 'uk' %>
 
-<h2 id="video_chat">20 lucky classrooms won a video chat with a guest speaker!</h2>
+<a id="video_chat"></a>
+## 20 lucky classrooms won a video chat with a guest speaker!
 20 lucky classrooms were be invited to join a video chat to celebrate the Hour of Code. Students chatted with tech leaders like [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), the founder of Skype and Kazaa and [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), co-founder and CEO of Moonfruit.
 
 <% end %>
 
 <% if @country ==  'us' %>
 
-<h2 id="video_chat">100 classrooms won a video chat with a guest speaker!</h2>
+<a id="video_chat"></a>
+## 100 classrooms won a video chat with a guest speaker!
 
 100 lucky classrooms participated in live video Q&As with tech titans and tech-loving celebrities. Students asked questions and chatted with these exciting role models to kick off the Hour of Code.
 
@@ -51,10 +54,12 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 <% if @country == 'ca' %>
 
-<h2 id="brilliant_project">$2000 Brilliant Project</h2>
+<a id="brilliant_project"></a>
+## $2000 Brilliant Project
 [Brilliant Labs](http://brilliantlabs.com/hourofcode) provided the resources necessary, up to a value of $2000.00, to implement a technology based, hands on, student centric learning project to one classroom in each province and territory (note: with the exception of Quebec). For more details, terms and conditions, please visit [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
 
-<h2 id="actua_workshop">Lucky Schools won an Actua Workshop</h2>
+<a id="actua_workshop"></a>
+## Lucky Schools won an Actua Workshop
 15 lucky schools across Canada were gifted 2 hands-on STEM workshops delivered by one of Actua's [33 Network Members](http://www.actua.ca/about-members/). Actua members deliver science, technology, engineering, and math (STEM) workshops that are connected to provincial and territorial learning curriculum for K-12 students. These in-classroom experiences are delivered by passionate, highly-trained undergraduate student role models in STEM. Teachers can expect exciting demonstrations, interactive experiments and a lot of STEM fun for their students! Please note that in-classroom workshop availability may vary in remote and rural communities.
 
 [Actua](http://actua.ca/) is Canada’s leader in Science, Technology, Engineering, and Math Outreach. Each year Actua reaches over 225,000 youth in over 500 communities through its barrier-breaking programming.
@@ -79,7 +84,8 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 |Garden Creek School|Fredericton|Worlds UNBound|
 |Armbrae Academy|Halifax|SuperNOVA|
 
-<h2 id="kids_code">Kids Code Jeunesse helped support classrooms across Canada!</h2>
+<a id="kids_code"></a>
+## Kids Code Jeunesse helped support classrooms across Canada!
 
 [Kids Code Jeunesse](http://www.kidscodejeunesse.org) provided trained computer programming volunteers to support teachers in computer science education. Kids Code Jeunesse is a Canadian not-for-profit aimed at providing every child with the opportunity to learn to code and every teacher the opportunity to learn how to teach computer programming in the classroom.
 
@@ -87,12 +93,14 @@ One lucky school in ***every*** U.S. state (and Washington D.C.) won $10,000 wor
 
 <% if @country ==  'us' || @country == 'ca' %>
 
-<h2 id="programmable_robots">100 classrooms won a set of programmable robots</h2>
+<a id="programmable_robots"></a>
+## 100 classrooms won a set of programmable robots
 [Sphero](http://www.gosphero.com/) is the app-controlled robotic ball changing the way students learn. Powered by [SPRK lessons](http://www.gosphero.com/education/), these round robots give kids a fun crash course in programming while sharpening their skills in math and science. Sphero gave away 100 classroom sets – each including 5 robots. Any classroom (public or private) within the U.S. or Canada was eligible to win this prize.
 
 <% end %>
 
-<h2 id="more_questions">More questions about prizes?</h2>
+<a id="more_questions"></a>
+## More questions about prizes?
 
 Check out our <a href="<%= resolve_url('https://code.org/tos') %>">Terms and Conditions</a> or visit our forum to see [FAQs](http://support.code.org) and ask your questions.
 
