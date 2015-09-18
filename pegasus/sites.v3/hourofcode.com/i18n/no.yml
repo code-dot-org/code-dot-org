@@ -147,6 +147,13 @@
   prizes_nav_kids_code: Kids Code Jeunesse
   prizes_nav_terms: Terms and Conditions
   prizes_nav_faq: Spørsmål og Svar
+  nav_back_to_resources: Back to Resources
+  how_to_nav_educators: For educators
+  how_to_nav_after_school: For after school
+  how_to_nav_parents: For parents
+  how_to_nav_public_officials: For public officials
+  how_to_nav_districts: For districts
+  how_to_nav_assemblies: For school assemblies
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hvordan kjøre Kodetimen</a>"
@@ -179,8 +186,10 @@
   front_join_us_teachers: lærere
   front_join_us_everyone: enhver
   front_join_us_try: Prøv
+  front_join_us_sign_up: Register deg
   front_join_us_host: Arranger
   front_join_us_support: Støtt
+  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   signup_header: Organize an Hour of Code during campaign_date, and register it here.
   signup_name_label: Ditt navn
   signup_email_label: E-post
@@ -241,11 +250,11 @@
   hoc_faq_what_is_hoc_a: "Kodetimen er en timelang introduksjon til informatikk, utformet for å avmystifisere programmering og vise at alle kan lære det grunnleggende. <a href='http://code.org/learn'> Se lekskjonene</a>."
   hoc_faq_last_year: Prøv leksjonene
   hoc_faq_when_is_hoc_q: Når er kodetimen?
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during %{campaign_date}, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
   hoc_faq_why_cs_q: Hvorfor datavitenskap?
   hoc_faq_why_cs_a: "<i>Hver</i> student burde få muligheten til å lære datavitenskap. Det hjelper til med å trene problemløsningsferdigheter, logikk og kreativitet. Med å starte tidlig, får studentene et fundament for suksess i et hvilket som helst 21-århundre karriereløp. Se flere statistikker på <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: Hvordan kan jeg delta i kodetimen?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/resources/how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hvem står bak Kodetimen?
   hoc_faq_behind_hoc_a: "Kodetimen er organisert av <a href='http://code.org'>Code.org</a>, en offentlig frivillig organisasjon dedikert til å ekspandere deltagelse i datavitenskap ved å gjøre det tilgjengelig i flere skoler, øke andelen kvinnelige deltagere og underrepresenterte studenter med farge. En  <a href='http://code.org/about/partners'>stor koalisjon av partnere</a> har kommet sammen for å støtte Kodetimen, som inkluderer bl.a. Microsoft, Apple, Amazon, Boys and Girls Clubs of America og det amerikanske «College Board»."
   hoc_faq_host_q: Jeg vet ikke noe om koding. Kan jeg fortsatt være vert for en Kodetime?
@@ -258,16 +267,16 @@
   hoc_faq_tutorial_a: "Hvis du er interessert i å bli en veiledningspartner, <a href='target-tutorial-guidelines'>sjekk ut våre rettningslinjer og instruksjoner</a>. Vi ønsker å arrangere mange muligheter, men hovedmålet er at studenter og lærere som er helt nye til datavitenskap skal få den best mulige opplevelsen."
   hoc_faq_more_questions_q: Har du fortsatt flere spørsmål?
   hoc_faq_more_questions_a: "Prøv å finn et svar i vårt <a href='http://support.code.org'>støtte forum</a>."
-  hoc_faq_scratch_q: Jeg bruker Scrathc i Kodetimen, men hva hvis elevene mine har nettbrett i stedet for bærbare datamaskiner?
-  hoc_faq_scratch_a: "Scratch kjører på nettbrett. Hvis elevene er små, kan de bruke appen ScratchJR (for de som kan lese). Hvis du ser på oversikten på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finne andre leksoner som fungerer på nettbrett - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_account_q: Må elevene logge på med en konto?
   hoc_faq_account_a: "Nei. Registrering eller innlogging er ikke nødvendig for at elevene skal får å prøve Kodetimen. De fleste <a href='http://code.org/learn/beyond'>fortsettelse-kursene</a> krever oppretting av en konto for å ta vare på elevens framgang."
   hoc_faq_frozen_q: Hvor er leksjonen med Anna og Elsa?
   hoc_faq_frozen_a: "Det er nå publisert på <a href='http://code.org/learn'> Code.org/learn</a>. Vi håper du liker den!"
   hoc_faq_high_school_q: Hvilke aktiviteter bør jeg gjøre med elver i vidergående skole?
   hoc_faq_high_school_a: "For alle aldersgrupper, anbefaler vi at du prøver en av nybegynner-leksjonene  på <a href='http://code.org/learn'>Code.org/learn</a> som leksjonene med Angry Birds eller  Anna og Elsa. En elev i videregående vil klare å fullføre en av disse på en halv time og kan deretter prøve en mer avansert leksjon i JavaScript, slik som Khan Academy eller CodeHS."
+  hoc_faq_scratch_q: Jeg bruker Scrathc i Kodetimen, men hva hvis elevene mine har nettbrett i stedet for bærbare datamaskiner?
+  hoc_faq_scratch_a: "Scratch kjører på nettbrett. Hvis elevene er små, kan de bruke appen ScratchJR (for de som kan lese). Hvis du ser på oversikten på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finne andre leksoner som fungerer på nettbrett - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Statestikk fra kodetimen i 2013
   stats_growth: Det var den raskeste til å nå 15 millioner brukere.
   stats_i18n: Students are learning in 40 languages
@@ -287,14 +296,49 @@
   resources_how_to_districts: How-to guide for distrikter
   resources_how_to_officials: How-to guide for offentlige tjenestemenn
   resources_handouts: Flyere du kan bruke til å spre ordet
-  resources_videos: Videoer
+  resources_one_pager: One-page handout
+  resources_brochure: Brochure
   resources_posters: Plakater
-  resources_social: Sosialt
+  resources_videos: Videoer
   resources_banners: Bannere
   resources_emails: Eksempelepost
+  resources_logo: Hour of Code logo
   resources_stats: Nyttig statistikk og presentasjon
   resources_press_kit: Pressepakke
+  resources_social: Sosialt
   resources_country_resources: Country Specific Resources
+  resources_stickers: Stickers
+  resources_banner_promote_text: Promote
+  resources_banner_promote_button: Encourage others to sign up with brochures, inspirational posters and social media banners.
+  resources_banner_howto_text: How-to
+  resources_banner_howto_button: Resources for educators, parents and districts to host an Hour of Code.
+  handouts_onepager: Spread the word with this one page handout
+  handouts_brochure: Give this brochure to teachers and schools
+  videos_title: Vis disse videoene for å inspirere elevene
+  videos_what_most_schools_dont_teach: "What Most Schools Don't Teach (5 min)"
+  videos_hoc_2014: 'Hour of Code is Here - Anybody Can Learn'
+  videos_obama_cs: President Obama om datavitenskap
+  videos_anybody_can_learn: Anybody Can Learn (1 min)
+  title_country_resources: Country Specific Resources
+  title_how_to_districts: Hour of Code How-To for Districts
+  title_how_to_events: Hour of Code Event How-To
+  title_how_to_organizations: 'How to host an Hour of Code - Organizations'
+  title_how_to_officials: How-to guide for offentlige tjenestemenn
+  title_how_to: How-to Guide
+  title_press_release: Hour of Code Press Release for Elected Officials
+  title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+  title_press_kit: Pressepakke
+  title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+  title_stats: Blurbs and Stats
+  title_partners: Partnere
+  title_prizes_faq: Prizes FAQ
+  title_prizes_terms: Prizes Terms
+  title_prizes_thanks: Tusen takk
+  title_prizes: Premier
+  title_resources: Ressurser
+  title_signup_thanks: Takk for at du meldte deg på som vert for Kodetimen!
+  title_tutorial_guidelines: Tutorial Guidelines
+  title_whole_school: Whole School Participation
   events_title: Mange timer med koding
   events_nav_all: Alle aktiviteter
   events_nav_whole_schools: Hele Skoler

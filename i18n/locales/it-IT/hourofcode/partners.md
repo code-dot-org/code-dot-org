@@ -1,8 +1,10 @@
 * * *
 
-title: Partner
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Principali Partner e Aziende Sostenitrici
 
@@ -37,3 +39,5 @@ title: Partner
 # Ulteriori Partner
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

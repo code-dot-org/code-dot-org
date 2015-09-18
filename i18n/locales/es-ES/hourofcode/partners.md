@@ -1,8 +1,10 @@
 * * *
 
-title: Socios
+title: <%= hoc_s(:title_partners) %>
 
 * * *
+
+<%= view :signup_button %>
 
 # Socios Principales y Benefactores Corporativos
 
@@ -37,3 +39,5 @@ title: Socios
 # Socios adicionales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

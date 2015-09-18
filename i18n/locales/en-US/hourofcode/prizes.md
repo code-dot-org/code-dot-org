@@ -1,20 +1,22 @@
 * * *
 
-crwdns43906:0crwdne43906:0
+crwdns47035:0crwdne47035:0
 
 * * *
+
+<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
 # crwdns43907:0crwdne43907:0
 
-crwdns43908:0crwdne43908:0
+crwdns47036:0crwdne47036:0
 
 <% else %>
 
 # crwdns43909:0crwdne43909:0
 
-crwdns43910:0crwdne43910:0
+crwdns47037:0crwdne47037:0
 
 <% end %>
 
@@ -24,11 +26,11 @@ crwdns43910:0crwdne43910:0
 
 ## crwdns43912:0crwdne43912:0 {#gift_code}
 
-crwdns43913:0crwdne43913:0
+crwdns47038:0crwdne47038:0
 
 ## crwdns43914:0crwdne43914:0
 
-crwdns43915:0crwdne43915:0 crwdns43916:0crwdne43916:0
+crwdns47039:0crwdne47039:0 crwdns47040:0crwdne47040:0
 
 <% end %>
 
@@ -36,7 +38,7 @@ crwdns43915:0crwdne43915:0 crwdns43916:0crwdne43916:0
 
 ## crwdns43917:0crwdne43917:0 {#video_chat}
 
-crwdns43918:0crwdne43918:0 crwdns43919:0crwdne43919:0
+crwdns47041:0crwdne47041:0 crwdns47042:0crwdne47042:0
 
 <% end %>
 
@@ -44,7 +46,7 @@ crwdns43918:0crwdne43918:0 crwdns43919:0crwdne43919:0
 
 ## crwdns43920:0crwdne43920:0 {#video_chat}
 
-crwdns43921:0crwdne43921:0 crwdns43922:0crwdne43922:0
+crwdns47043:0crwdne47043:0 crwdns47044:0crwdne47044:0
 
 ### crwdns43923:0crwdne43923:0
 
@@ -56,15 +58,15 @@ crwdns43921:0crwdne43921:0 crwdns43922:0crwdne43922:0
 
 ## crwdns43924:0crwdne43924:0 {#brilliant_project}
 
-crwdns43925:0crwdne43925:0 crwdns43926:0crwdne43926:0.
+crwdns47045:0crwdne47045:0 crwdns47046:0crwdne47046:0.
 
 ## crwdns43927:0crwdne43927:0 {#actua_workshop}
 
-crwdns43928:0crwdne43928:0 crwdns43929:0crwdne43929:0 crwdns43930:0crwdne43930:0 crwdns43931:0crwdne43931:0 crwdns43932:0crwdne43932:0
+crwdns47047:0crwdne47047:0 crwdns47048:0crwdne47048:0 crwdns47049:0crwdne47049:0 crwdns47050:0crwdne47050:0 crwdns47051:0crwdne47051:0
 
-crwdns43933:0crwdne43933:0 crwdns43934:0crwdne43934:0
+crwdns47052:0crwdne47052:0 crwdns47053:0crwdne47053:0
 
-**crwdns43935:0crwdne43935:0**
+**crwdns47054:0crwdne47054:0**
 
 | crwdns43936:0crwdne43936:0 | crwdns43937:0crwdne43937:0 | crwdns43938:0crwdne43938:0 |
 | -------------------------- | -------------------------- | -------------------------- |
@@ -86,7 +88,7 @@ crwdns43933:0crwdne43933:0 crwdns43934:0crwdne43934:0
 
 ## crwdns43984:0crwdne43984:0 {#kids_code}
 
-crwdns43985:0crwdne43985:0 crwdns43986:0crwdne43986:0
+crwdns47055:0crwdne47055:0 crwdns47056:0crwdne47056:0
 
 <% end %>
 
@@ -94,10 +96,12 @@ crwdns43985:0crwdne43985:0 crwdns43986:0crwdne43986:0
 
 ## crwdns43987:0crwdne43987:0 {#programmable_robots}
 
-crwdns43988:0crwdne43988:0 crwdns43989:0crwdne43989:0 crwdns43990:0crwdne43990:0 crwdns43991:0crwdne43991:0
+crwdns47057:0crwdne47057:0 crwdns47058:0crwdne47058:0 crwdns47059:0crwdne47059:0 crwdns47060:0crwdne47060:0
 
 <% end %>
 
 ## crwdns43992:0crwdne43992:0 {#more_questions}
 
-crwdns43993:0crwdne43993:0
+crwdns47061:0crwdne47061:0
+
+<%= view :signup_button %>

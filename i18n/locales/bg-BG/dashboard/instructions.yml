@@ -277,7 +277,7 @@ bg:
         the unknown amount of nectar.
       4-5 Bee Conditionals 6_instruction: Това лилаво цвете може да има 3, 2 или 1 нектар. Тук ако-иначе блок е комбиниран с друг ако-иначе блок, за да създадете ако, иначе-ако, иначе блок. Завършете решението, за да съберете неизвестното количество нектар.
       4-5 Bee Conditionals 7_instruction: 'Не забравяйте, че лилавите цветя може да имат 3, 2 или 1 нектар. Допълнете функцията "провери лилаво цвете" и я използвайте, за да се съберете всичкия нектар от цветята.'
-      4-5 Bee Conditionals 8_instruction: 'Напиши функция вътре в блока, наречен "провери цвете прави мед." Твоята функция трябва да провери колко нектар има лилавото цвете и да го събере - върви напред и след това направи мед.'
+      4-5 Bee Conditionals 8_instruction: 'Напиши функция вътре в блока, наречен "провери цвете, прави мед." Твоята функция трябва да провери колко нектар има лилавото цвете и да го събере - върви напред и след това направи мед.'
       4-5 Bee Conditionals Assessment 1_instruction: |
         Оценяване: Този код е грешен.
         Изпълни функцията "вземи нектар или прави мед", а след това я извикай, за да събереш всичкия нектар и мед. Не забравяй, че лилавите цветя може да имат 3, 2 или 1 нектари.
@@ -697,20 +697,20 @@ bg:
       Course 2 Bee Loops 4_instruction: Какво става ако повторите тази последователност три пъти? Не забравяйте да направите мед в края!
       Course 2 Maze Loops 1_instruction: Можеш ли да ме заведеш до прасето с 5 блока?
       Course 4 2_instruction: Пчелата иска нектар точно сега. Не забравяйте, не всички обекти са цветя, така че проверете цветята за събиране на нектар.
-      Course 4 Artist 1_instruction: 'Помогнете ми да завърша моята кутия. (Всеки ред е дълъг 300 пиксела) '
-      Course 4 Artist 10_instruction: 'Сега е време за импровизации! Забавлявайте се и направете това, което Ви харесва. '
+      Course 4 Artist 1_instruction: 'Помогнете ми да завърша моята кутия. (Всеки ред е дълъг 200 пиксела) '
+      Course 4 Artist 10_instruction: "Щракнете тук, за да видите съветите отново! \r \r Тук е кодът за създаване на интересна форма.  Какво се случва, когато го повтаряте?   При завоите в тази форма се добавят до 420 градуса, което означава, че когато вашият художник  прави чертеж, той ще бъде е с различна посока от първоначалната.  Тази нова посока е точно 60 градуса вдясно от мястото, където сте започнали."
       Course 4 Artist 11_instruction: 'Сега е време за  предизвикателство!  Ето един дизайн, който използва само блокове, които вече са показали.  Можеш ли да разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет: Чувствай се свободен да пробваш колкото е нужно. Не е задължително да успееш от  първия път.'
-      Course 4 Artist 12_instruction: "Вдъхнови се за свободна игра: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. От друга страна, можете да създаде нещо свое. \r \r Искате ли да знаете как е направен нашия вдъхновяващ модел? Щракнете върху синята стрелка вдясно и след това щракнете върху бутона \"Вижте решението\"."
+      Course 4 Artist 12_instruction: "Искате ли втори поглед на как да създадете вдъхновен дизайн или съвети?  Щракнете тук! \r \r Или направете собствен дизайн!"
       Course 4 Artist 13_instruction: 'Искате ли още да поиграете?  Ето чисто платно, където можете да проектирате каквото искате!'
       Course 4 Artist 2_instruction: Можете ли да повторите този код, за да очертаете сивите контури на квадрата?
       Course 4 Artist 20_instruction: 'Искате ли още да поиграете?  Ето чисто платно, където можете да проектирате каквото искате!'
       Course 4 Artist 3_instruction: 'Добре, опитайте се да разберете какво ще стане ако стартирате този код (или натиснете "Старт", за да го пробвате). След това го повторете достатъчно пъти, за да завършите чертежа.'
       Course 4 Artist 4_instruction: 'Колко градуса има една окръжност?  Попълнете блокът за повторение с такова число, че да се създаде кръг от цветове.'
       Course 4 Artist 5_instruction: 'Начертайте другата половина на този дизайн така, че да е симетричен. Триъгълниците са равностранни и с дължина  на страната 50 пиксела.'
-      Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане.'
+      Course 4 Artist 6_instruction: 'Попълнете кода, за да начертаете тези триъгълници. Съвет: 3 триъгълници за 360 градуса завъртане. Колко пъти 3 се съдържа в 360?'
       Course 4 Artist 7_instruction: 'Сега, внесете този цикъл в друг, за да начертаете 10 триъгълници.  Това се нарича вложен цикъл.  Съвет: Всички 10 триъгълници образуват окръжност от 360 градуса.  '
-      Course 4 Artist 8_instruction: Начертайте това слънце като повторите целият блок от код 12 пъти.
-      Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим да я изградите без да даваме блокове, за да започнете! \r Съвет: има 3 триъгълника в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
+      Course 4 Artist 8_instruction: Начертайте това слънце като повторите целия блок от код 12 пъти.
+      Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим да я изградите без да даваме предварително блокове! \r Съвет: има 3 триъгълника в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
       Course 4 Artist 9_instruction: 'Повторете този дизайн 10 пъти и се уверете, че ще се завъртате между всяка фигура, от която е съставен. Ето един съвет на колко градуса трябва да се завъртате: Колко е 360 делено на 10?'
       Course 4 Artist Binary 1_instruction: 'Това е функция, която взема двоичен низ от 1 и 0 и възлага на художника да се движи отляво надясно и отгоре надолу, като попълва квадратчета, когато вижда 1 и ги прескача, когато  вижда 0. Изпълнете този код, за да видите как художникът използва бинарния код, за да изготви този модел.'
       Course 4 Artist Binary 2_instruction: Кои от тези двоични низове трябва да повторите 8 пъти, за да изготвите това изображение?
@@ -736,18 +736,18 @@ bg:
       Course 4 Artist For Loops 12_instruction: 'Това изглеждаше много готино, но сега бих искал да начертаем още фигури до последната. Този път, всяка страна е 20 пиксела. Използвайте "скок" блок за да  скачате напред 40 пиксела след всяка фигура. '
       Course 4 Artist For Loops 13_instruction: 'Хммм, тези фигури стават все по -големи всеки път! Но, не решихме ли тази задача с използване на променливи? Как да използваме променливата "брояч", за да умалим страните на многоъгълника? Вместо да се премествате напред на точна величина, опитайте да разделите  величината първо на 100 пиксела.'
       Course 4 Artist For Loops 14_instruction: 'Ако, когато чертаете фигура,  завъртите малко повече или по-малко от обикновено, ще получите фигура близка до оригиналната .Опитайте да завъртите на 89 градуса, за да получите тази сложна спирала.'
-      Course 4 Artist For Loops 15_instruction: 'Свободно чертане: Опитайте да начертаете нещо като използвате функцията за цикли. Добавихме няколко общи променливи, които може да използвате.'
+      Course 4 Artist For Loops 15_instruction: "Свободна игра: Опитайте да направите чертежи като използвате \"за цикли\". Ние добавихме няколко общи променливи за вас, за да ги използвате. \r \r Вече има толкова много блокове в инструментариума, че ние трябва да ги организирате по категории отново.  Щракнете за да се открият всички блокове, които можете да използвате в това ниво."
       Course 4 Artist For Loops 2_instruction: 'Сложих кода за изчертаване на триъгълника вътре във функцията за цикли, която брои от 50 до 100 през десет. Разгледайте кода и натиснете "Старт", когато сте готови да видите как работи. '
       Course 4 Artist For Loops 3_instruction: Страните на малкия триъгълник имат 20 пиксела дължина, а на най-големия 200 пиксела и всеки триъгълник е с 20 пиксела по-голям от предходния. Актуализирайте цикъла, за да начертаете тези триъгълници.
-      Course 4 Artist For Loops 4_instruction: Използвайте цикли, за да начертаете квадратчета. Най-малкото е 50 пиксела, а най-голямото е 300 пиксела, като всеки квадрат е с 25 пиксела по-голям от предходния. Дал съм ви почти целия код -един блок липсва, кой ?
+      Course 4 Artist For Loops 4_instruction: 'Как ще промените това, което сте научили за да начертаете тези квадрати? Те започват от 15 пиксела дължина, най-големият е дълъг 300 пиксела, и всеки квадрат е по-голям от последния с 15 пиксела. '
       Course 4 Artist For Loops 5_instruction: 'Свършихте добра работа с последния пъзел. Нека да използваме блока за променливата "брояч" отново, за да нарисуваме тази страхотна картина. '
       Course 4 Artist For Loops 6_instruction: Свободно чертане! Използвайки цикъл, опитайте да начертаете уголемяваща се фигура по собствен дизайн.
       Course 4 Artist For Loops 7_instruction: 'Какво ще стане, ако премахнете "Повтори 3" от алгоритъма, а оставите блоковете "премести" и " завий" ? В тази спирала от триъгълници всяка от страните е 20 пиксела по-дълга от предишната.'
-      Course 4 Artist For Loops 8_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да попълните липсващите блокове, за да завършите тази страхотна картина?
-      Course 4 Artist For Loops 8a_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да попълните липсващите блокове, за да завършите тази страхотна картина?
+      Course 4 Artist For Loops 8_instruction: "Само една малка промяна на кода от последното изображение, може да създаде тази рисунка. Можете ли да разберете каква е промяната? \r \rСъвет: Вие трябва да премахнете нещо!"
+      Course 4 Artist For Loops 8a_instruction: "Само една малка промяна на кода от последното изображение, може да създаде тази рисунка. Можете ли да разберете каква е промяната? \r \rСъвет: Вие трябва да премахнете нещо?"
       Course 4 Artist For Loops 9_instruction: Можете ли да направите спирала? Преместете се напред от 1 до 75 пиксела, като увеличавате с 1 пиксел всеки път.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
-      Course 4 Artist For Loops inspire_instruction: "Свободна игра за вдъхновение: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. Или създайте нещо сами. \r \r Искате да знаете как е направен моделът ни за вдъхновение? Посетете https://studio.code.org/c/106387604 за решението."
+      Course 4 Artist For Loops Challenge_instruction: "Можете ли да разберете как да използвате всички неща, за да се създадете това изображение? \r \r Трябва ли Ви съвет? Щракнете тук."
+      Course 4 Artist For Loops inspire_instruction: "Свободна игра за вдъхновение: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. Или създайте нещо сами. \r \r Искате да знаете как е направен моделът ни за вдъхновение? Щракнете тук."
       Course 4 Artist Functions 1_instruction: Можете ли да начертаете квадрат със страни 100 пиксела дълги, използвайки цикъл?
       Course 4 Artist Functions 10_instruction: Кой блок трябва да използвате, за да поставите триъгълника върху квадрата?
       Course 4 Artist Functions 11_instruction: 'Проверете този код, който изчертава куб- можете ли да го поместите във функцията, наречена" начертай Куб"'
@@ -764,7 +764,8 @@ bg:
       Course 4 Artist Functions 7_instruction: Можете ли да чертаете линия от квадратчета с помощта на квадратна функция? Всеки квадрат е 40 пиксела дължина.
       Course 4 Artist Functions 8_instruction: 'Разбрахте ли как се използва блока "функция"? Нека да променим квадрата на 200 пиксела. Съвет: щракнете на "Редактиране", за да промените размера в блока "начертай квадрат". Не забравяйте да  щракнете на "запиши и затвори", за да излезете от менюто за редактиране на функции. '
       Course 4 Artist Functions 9_instruction: Направили сме по-голямата част от кода за създаване на функция. Обаче, има нещо което липсва. Можете ли да допълните този функционален блок?
-      Course 4 Artist Inspire_instruction: "Вдъхнови се за свободна игра: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. От друга страна, можете да създаде нещо свое. \r \r Искате ли да знаете как е направен нашия вдъхновяващ модел? Щракнете върху синята стрелка вдясно и след това щракнете върху бутона \"Вижте решението\"."
+      Course 4 Artist Functions inspire_instruction: "Свободна игра за вдъхновение: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. Или създайте нещо сами. \r \r Искате да знаете как е направен моделът ни за вдъхновение? Посетете за решението."
+      Course 4 Artist Inspire_instruction: "Искате ли втори поглед на как да създадете вдъхновен дизайн или съвети?  Щракнете тук! \r \r Или направете собствен дизайн!"
       Course 4 Artist Params 1_instruction: Да редактираме функцията, която изчертава квадрат със страни 50 пиксела
       Course 4 Artist Params 10_instruction: |-
         Можете да извикате функция която се намира в друга функция! Използвайте функция "фигура' и начертайте 3 къщи, всяка с 20 пиксела по-голяма от предходната, като първата е 50 пиксела. Помогнете си, като използвате цикъл "брояч" . 
@@ -805,20 +806,20 @@ bg:
       Course 4 Artist Vars 10_instruction: |
         Ето алгоритъм, който ще начертае триъгълник от по-малки триъгълници.
         Можеш ли да го промениш (модифицираш) така, че да използва променливата "страни", начертавайки всеки триъгълник? Прегледай кода и всеки път, когато видиш числото 3, замени го с променливата "страни". Не забравяй да използваш блокчето "задай страни".
-      Course 4 Artist Vars 11_instruction: 'Това е  алгоритъма, който използвахме в последния пъзел- какво число трябва да напишете в блока "страни", за да начертаете тази картина от квадрати?'
+      Course 4 Artist Vars 11_instruction: 'Тук е по-сложен код с помощта на същите понятия от последната загадка - какво трябва да зададете в променлива "страни" да за да се начертае тази картина, направена от квадрати?'
       Course 4 Artist Vars 12_instruction: 'Да зададем 5 на променливата в блок "страни". Колкото повече страни добавяме, толкова по голям модел ще получим. Да добавим нова променлива "дължина", и я използваме там където имаме блок "премести напред". Задайте стойност на променливата в блока "дължина" 75.'
       Course 4 Artist Vars 13_instruction: 'Колкото повече страни има фигурата, толкова по-къси трябва да са на дължина, за да може цялата фигура да се побере на екрана. Вместо да задаваме всеки път дължината, да използваме променлива и математическа формула. Използвайте правилното уравнение от кутията с инструменти, за да зададете стойност на променливата в блок "дължина" и актуализирайте блока"страни".'
       Course 4 Artist Vars 14_instruction: 'Свободна игра: Вижте, сега вашият алгоритъм е поставен в още един цикъл. Експериментирайте, за да начертаете нови модели като променяте стойностите на двете променливи.'
-      Course 4 Artist Vars 2_instruction: 'Блокът "премести напред с 100" е заменен с променливата в блок "дължина". Можете ли да ѝ зададете стойност 150 и начертаете нов триъгълник?'
+      Course 4 Artist Vars 2_instruction: 'Блокът "премести напред със 150" е заменен с променливата в блок "дължина". Можете ли да ѝ зададете стойност 150 и да начертаете нов триъгълник?'
       Course 4 Artist Vars 3_instruction: 'Това е цикъл за изчертаване на квадрат, но нещо липсва. Можете ли да го поправите, за да използва променливата "дължина" и да определите дължината на всяка страна.'
       Course 4 Artist Vars 4_instruction: 'Искам да направя правоъгълник, два пъти по- висок отколкото широк. Имаме променливата "ширина" със стойност 100. Можете ли да използвате математическите блокове, за да завършите кода?'
       Course 4 Artist Vars 5_instruction: 'Използвайте променливата "страни" за контролиране повторенията на цикъла.'
-      Course 4 Artist Vars 6_instruction: 'Хмм, опитах да променя променливата "страни" на 4 в кода от последната загадка, но тя все още чертае триъгълник. Можете ли да използвате променливата "страни" (заедно с математическия блок), за да сте сигурни, че се обръщам нужното количество пъти? Съвет: 360, разделен на броя на страните ще ви даде броя градуси за завъртане.'
-      Course 4 Artist Vars 7_instruction: 'Променете променливата "страни" и ми помогнете да начертая този шестоъгълник.'
-      Course 4 Artist Vars 8_instruction: 'Свободна игра:Експериментирайте със страните на фигурата. Можете ли да промените алгоритъма, така че големината на фигурата да е постоянна независимо от броя на страните? Помощ: Може да използвате математическите  блокове (на две места разделете 360 на блока "страни") '
+      Course 4 Artist Vars 6_instruction: "Ето код, който може да изчертае всеки правилен многоъгълник. Имаме нова променлива, наречена \"страни\", която е настроена на 4. Можете ли да използвате променливата \"страни\" (заедно с математическият блок) за да се въведе нужното количество страни за многоъгълника? \r \r Кликнете тук да се върнете към съвета!"
+      Course 4 Artist Vars 7_instruction: "Използвайте това, което научихте през последния пъзел, за да създадете този шестоъгълник с използване на променливата \"страни\". \r \r Виждате ли как с промяна само на една стойност можете да нарисувате триъгълник, квадрат, петоъгълник или осмоъгълник?"
+      Course 4 Artist Vars 8_instruction: 'Свободна игра: Експериментирайте със страните на фигурата. Можете ли да промените алгоритъма, така че големината на фигурата да е постоянна независимо от броя на страните? Помощ: Може да използвате математическите блокове (на две места разделете 360 на блока "страни").'
       Course 4 Artist Vars 9_instruction: 'Променете алгоритъма, така че да използва променливата "страни" вместо статично число за начертаване на триъгълник. Заместете числото 3 със "страни" и използвайте блока "задай страните".'
       Course 4 Bee 1_instruction: 'Пчелата не може да прецени дали това е цвете или медена пита. Провери първо дали е цвете или пита, и вземи нектар, ако е цвете. '
-      Course 4 Bee 2_instruction: Проверете всеки обект, за да видите дали това е цвете. Ако е така, съберете нектар... в противен случай, можете да го игнорирате!
+      Course 4 Bee 2_instruction: 'Използвайте "Ако/иначе" блок, за да проверите всеки обект, за да видите дали това е цвете или медена пита. Ако е цвете, съберете нектар... в противен случай, направете мед!'
       Course 4 Bee 3_instruction: Неизвестния обект е или цвете или медена пита. Използвай блока Ако-Иначе, за да вземеш нектар ако е цвете, иначе направи мед ( защото това значи че е медена пита).
       Course 4 Bee 4_instruction: Това лилаво цвете може да има 3, 2 или 1 нектар. Тук ако-иначе блокът е комбиниран с друг ако-иначе блок, за да създаде ако, иначе-ако, иначе блок. Завършете решението, за да съберете неизвестното количество нектар.
       Course 4 Bee 5_instruction: Това лилаво цвете може да има 3, 2 или 1 нектар. Добави Ако-иначе блок да се създадем ако, ако-иначе, иначе блок. Довършете решението за събиране на неизвестен брой нектар.
@@ -835,8 +836,8 @@ bg:
       Course 4 Bee For Loops 7_instruction: 'Използвайте променливата "брояч" от "за цикъл", за да контролирате колко далече да отидете хоризонтално.'
       Course 4 Bee For Loops 8_instruction: Можете ли да използвате променливи в цикъла, за да контролирате преместването и събирането на нектара?
       Course 4 Bee For Loops 9_instruction: 'Последното число от  "за цикъл" се нарича "стъпка" и всеки път, когато цикъла се повтаря, водещата променлива нараства със "стъпката". Опитайте се да съберете нектара от цветята, като използвате стъпка от 2.'
-      Course 4 Bee Loops 5 NEW_instruction: Пъхнете тези блокове в цикъл, за да съберете нектар от всяко цвете.
-      Course 4 Bee Loops 5a NEW_instruction: 'Сега използвайте цикли, за да помогнете на пчелата да събере всичкия нектар по пътя си към кошера с възможно по-малко блокове.  Когато стигне там, не забравяйте да направите мед!'
+      Course 4 Bee Loops 5 NEW_instruction: Тук има три цветя. Можете ли да намерите модел на инструкции, който трябва да се повтори 3 пъти, за да събере нектара с най-малък брой блокове?
+      Course 4 Bee Loops 5a NEW_instruction: 'Сега, използвайте цикли, за да помогнете на пчелата да събере всичкия нектар по пътя си към кошера с възможно по-малко блокове.  Когато стигне там, не забравяйте да направите мед!'
       Course 4 Bee Params 1_instruction: 'Използвайте функцията " вземи нектар 3", която кара пчелата да завива, да се придвижва и взима нектара и да се върне в изходна позиция. Напишете последователността за събирането на нектар като използвате "вземи нектар 3"'
       Course 4 Bee Params 2_instruction: 'Променете функцията "вземи нектар 3" така, че да ме премести надясно, вместо наляво.'
       Course 4 Bee Params 3 (copy 1)_instruction: 'Сега, цветята са от двете страни! Може би, трябва да използвате параметър, за да използвате една функция и за двете страни. Добавих параметъра " посока" към функцията. Ако параметъра  в "посока" е равен на 0, трябва да завия наляво, ако е равен на 1, трябва да завия надясно.'
@@ -850,7 +851,7 @@ bg:
       Course 4 Bee Params 6_instruction: 'Няма ли да е по добре, ако можехме да съберем целия нектар с една функция? Опитайте се да добавите нов параметър "нектари", за да контролирате количеството на събрания нектар. Вероятно, ще искате да преименувате функцията!'
       Course 4 Bee Params 7 (copy 1)_instruction: Опитайте да използвате новата функция и да съберете целия нектар.
       Course 4 Bee Params 7_instruction: Опитайте се да използвате новата функция, за да съберете целия нектар.
-      Course 4 Bee Params 8_instruction: Ох, сега трябва да се справим и с меда! Как можете да актуализирате вашата функция, за да вземете нектар или направите мед.
+      Course 4 Bee Params 8_instruction: 'Предизвикателство: Сега има мед, с ко трябва да се справим! Пренапишете функцията да вземе и единиците мед  и броя на единиците нектар.  Как ще използвате тези номера, за да решите какво трябва да направите?'
       Course 4 Bee Params Ex_instruction: Опитайте се да използвате новата функция, за да съберете целия нектар.
       Course 4 Binary 1_instruction: Това е функция, която използва двоична бройна система, съставена от числата 1 и 0, и инструктира фермера да се движи отляво надясно и отдолу нагоре, обръщайки квадратите със 0. Активирайте предоставения код, за да видите как фермера използва двоичната система, за да начертае картина.
       Course 4 Binary 2_instruction: 'Кой двоичен код може да повторите 8 пъти, за да начертаете тази картина? Помощ: числото "1"  запълва дупка.'
@@ -869,11 +870,8 @@ bg:
       Course 4 Maze 6_instruction: Можеш ли да решиш този пъзел, с помощта на възможно най-малък брой блокове?
       Course 4 Play Lab For Loops 2_instruction: Този път, нека да опитаме да преброим нечетните числа от 1 до 100.
       Course 4 Play Lab Params 1_instruction: 'Това е функция, наречена "скок", която кара вашия герой да скочи 100 пиксела. Използвайте я, за да съберете знамената.'
-      Course 4 Play Lab Params 10_instruction: |
-        Добавихме функция за вас. Програмирайте вашата игра да отвори фyнкцията  "едно ниво по- нагоре" ако " играча има >10 точки". Ако преминете 4-то ниво, може да се преместите на следващия пъзел.
-        
-      Course 4 Play Lab Params 2_instruction: |-
-        Сега, знамената са високи за достигане! Нека сложим нов параметър към нашата функция "скок", наречен "височина'. Стрелката нагоре трябва да скочи 200 пиксела, но стрелката надолу ще скача 100 пиксела. Щракнете на "редактирай" във функцията 'скок" и промени така, че да използва параметъра за височина вместо просто да скача 100 пиксела.
+      Course 4 Play Lab Params 10_instruction: "Добавихме функция за вас.  \r\n\rПрограмирайте вашата игра да отвори фyнкцията  \"едно ниво по- нагоре\" ако \" играча има >10 точки\".  \r\n\rАко преминете 4-то ниво, може да се преместите на следващия пъзел. "
+      Course 4 Play Lab Params 2_instruction: "Сега, знамената са високи за достигане! Нека сложим нов параметър към нашата функция \"скок\", наречен \"височина'.\r\n\r Стрелката нагоре трябва да скочи 200 пиксела, но стрелката надолу ще скача 100 пиксела. Щракнете на \"редактирай\" във функцията 'скок\" и промени така, че да използва параметъра за височина вместо просто да скача 100 пиксела.\r\n\r Съвет: Трябва да кликнеш на \"редактиране\" във функцията за \"скок\" и да я актуализираш, за да използва параметър \"височина\"."
       Course 4 Play Lab Params 3_instruction: |-
         Хайде да добавим нов параметър във функцията "скок", така че да я използваме с други актьори. Всеки актьор е представен с номер, започващ от 1. Редактирайте функцията 'скок" така, че да включва параметъра "актьор". 
       Course 4 Play Lab Params 4_instruction: |
@@ -905,16 +903,24 @@ bg:
       Course 4 Play Labs For Loops 2_instruction: Този път, нека да опитаме да преброим нечетните числа от 1 до 100.
       Course 4 Play Labs For Loops 3_instruction: Ако броим с по големи числа ще преброим много повече за същото време. Опитайте да направите кучето да брои от 10 до 1000 , през 10.
       Course 4 Play Labs For Loops 4_instruction: 'Нарастването на стъпката  е полезно, но ние все още броим линейно ( всяко число е на еднаква дистанция от предходното. Виж Линейна Алгебра/математика) . Какво ще стане, ако например, започнем да броим експоненциално? Без да променяме настройките на функцията за цикличност, можете ли да броите  1,4,9,16,25....( в квадратно броене)?'
+      Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
       Course 4 Play Labs For Loops 5_instruction: 'В предишното ниво използвахме броене на втора степен. Опитайте да броите на трета степен като промените "counter^2" със "counter^3", за да изброите третата степен на всяко число ( 1,8,27,64,125,216,343..)'
+      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: 'Може би си спомняте, че просто число е всяко число което се дели на себе си и на едно. Използвайте функцията "е_просто число", за да покажете само простите числа от 1 до 100.'
+      Course 4 Play Labs For Loops 6a_instruction: "Dog will still keep time by counting\nwith our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto the mix.  Can you change the code so that \"increment\" goes up by two\neach time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
       Course 4 Play Labs For Loops 7_instruction: "Можете ли да използвате функцията  'за цикъл' и да ми помогнете да разбера тази последователност 1,4,7,10,13,16,19,22,25?"
+      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif we start counting how many times we can click The Wizard before Dog gets\nto 30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor now.\r\n\r\nDog will start counting when you click \"Run\"."
       Course 4 Play Labs For Loops 8_instruction: |
         Коя функция ще изрази тази последователност?
         19,27,35,43,51?
+      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1) Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard is clicked at least 10 times before Dog counts to 30, raise\n\"increment\" by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10 times, the game is over."
       Course 4 Variables Assessment_instruction: Можете ли да създадете това изображение като използвате променлива за страни? Всеки ред трябва да бъде с дължина 50 пиксела.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
+      ECSPD Binary Odometer_instruction: |
+        This is another resource you could use
+        with your students.
       Eval Booleans 1_instruction: 'Булевите оператори (като >, <, =) ни позволяват да сравняваме различни стойности, връщайки "истина" или "лъжа". Щракнете върху "Старт", за да видите как този израз дава резултат.'
       Eval Booleans 2_instruction: |
         Can you set the values so that this expression
@@ -1163,9 +1169,59 @@ bg:
       frozen square loop 3x_instruction: Нека създадем три квадрата, като след всеки се завъртаме под ъгъл от 120 градуса.
       frozen square loop_instruction: 'Здравейте, аз съм Анна от Арендел! Нека направим квадрат с блок за повторение, който ни позволява да ползваме по-малко блокове. Колко пъти (?) трябва да повторим действието в  блока за повторение за да начертаем квадрат?'
       frozen square snowflake_instruction: 'Можете ли да създадете снежинка с помощта на  блок за повторение? Повторете квадрата 10 пъти и се завъртайте на 36 градуса между всеки квадрат.'
+      hoc2015_event_add_items_instruction: |
+        Now you create the game. Use the addItemsToScene
+        command to choose how many items are in the game.
+      hoc2015_event_add_items_2_instruction: |
+        Add more items. This time, try using
+        code mode instead of blocks. Don’t forget to type “quotes” around the item
+        name.
+      hoc2015_event_choose_character_instruction: |
+        Customize your game by choosing
+        your character. Let’s switch back to block mode. To set a value, just click
+        the drop down on the block.
+      hoc2015_event_four_items_instruction: |
+        Now the items are all over the screen.
+        Can you make your character walk in any direction so he can collect all the
+        items?
+      hoc2015_event_free_instruction: Now you can make and share anything you like.
+      hoc2015_event_move_items_instruction: |
+        This game would be more fun if the items
+        moved. Use setItemActivity to make the items move around. Then, capture them!
+      hoc2015_event_points_instruction: |
+        Let’s add points. Give yourself some points
+        when you touch an item. Can you score 10 points?
+      hoc2015_event_random_items_instruction: |
+        We can change settings at any point.
+        Change the items to a new random movement every time you catch one.
+      hoc2015_event_two_items_instruction: |
+        Drag the move commands into the whenUp
+        and whenDown functions.  Then, click the arrows to move the character to get
+        the items.
       hoc2015_free_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_intro_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_maze_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
+      hoc2015_move_cross_instruction: |
+        Type or drag the blocks to get both items
+        to the destination.
+      hoc2015_move_down_instruction: |
+        Hiro is "actor 1".  Use the Move block to
+        move Hiro right to touch Baymax.
+      hoc2015_move_item_destination_instruction: |
+        I see another item behind that
+        obstacle. Can you bring it back to the destination?
+      hoc2015_move_item_destination_2_instruction: |
+        Drag the code blocks into the
+        workspace to help the character reach the destination.
+      hoc2015_move_item_destination_3_instruction: |
+        Try typing the commands to get
+        the item to our destination. Don’t forget to end with ();
+      hoc2015_move_right_instruction: |
+        Help me program the character to get the item
+        and bring it to the destination. Stack a couple moveEast(); commands and then
+        hit Run to make him go.
+      hoc2015_move_twice_instruction: We need the items. Help me get them all!
+      hoc2015_move_two_items_instruction: We need the items. Help me get them all!
       hoc2015_random_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_sandbox_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
       hoc2015_square_instruction: 'Хиро е "актьор 1".  Използвайте блок за движение, за да преместите Хиро надясно и той да докосне Баумакс.'
@@ -1776,6 +1832,11 @@ bg:
       Standalone_Artist_9_instruction: Сега, върви напред и направи картина, каквато искаш! Дори имаш празна функция, която може да направи каквото си поискаш!
       Standalone_Artist_v2_instruction: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
       Test Play Lab_instruction: This is a test play lab level.
+      Text Compression 1_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -1786,12 +1847,20 @@ bg:
         Work with a partner or in a small
         team to develop a protocol that allows you to send formatted text. See the
         worksheet handed out by your teacher for more detailed instructions!
+      U1L13 Text Compression_instruction: |
+        Look for patterns (repeated words or phrases)
+        in the text. Enter the patterns you see into the dictionary on the right.
+        As you type entries into the dictionary, the symbol for the entry is inserted
+        into the text in place of the pattern.
       U1L4 NetSim SendAB_instruction: Изпратете съобщение чрез задаване на (кода на) щата/държавата за свързване до точка А или точка Б.
       U1L8 NetSim numbers no decimal_instruction: Default instructions
       U1L8 NetSim numbers with decimal_instruction: |
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      U2L04 - NetSim Routers with Addresses_instruction: |
+        Send messages with your
+        classmates (Click to see full instructions)
       U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
         In this version of the Internet Simulator,
@@ -1820,6 +1889,10 @@ bg:
         the right event handler to the right button. (Interestingly, the incorrect
         program does work, but exhibits some bizarre behavior.  We'll discuss this
         more in the next lesson.  Make the buttons work correctly for now).
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto see full instructions)"
+      U3L03 - draw step_instruction: |
+        Write the drawStep function. (Click to see
+        full instructions)
       U3L03 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -1830,21 +1903,29 @@ bg:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Write the turnAround() function
-        and use it to make the turtle move as depicted.
+        Define a function called turnAround()
+        and call it to make the turtle move as depicted. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
-        Create a turnRight()
-        function and draw a rectangle twice as tall as it is wide by having the turtle
-        navigate clockwise to draw the rectangle. 
+        Define a function
+        called right() that turns the turtle to the right. Then use this function
+        to draw a rectangle, as shown below. (Click to see full instructions)
       U3L03 Draw a T using turnAround_instruction: |
-        The turnAround function is now
-        provided for you in the code.  Use the turnAround() function to draw a T as
-        depicted.
-      U3L03 draw diamond_instruction: "Use any and all of the functions you wrote\npreviously to make a 'diamond' shape as shown in the image.\r\n\r\nNOTE:\nthis is another tricky one.  The 4 sides of the diamond are made by drawing\nthree steps with other movement made between calls.  HINT: you might want\nto make another function that handles drawing one side of the diamond. "
+        Draw a plus sign using the provided
+        version of turnAround().  (Click to see full instructions)
+      U3L03 draw diamond_instruction: |
+        Create a function called drawDiamond() that
+        makes use of your previous work to draw the complete diamond. (Click to see
+        full instructions)
       U3L03 Three Steps_instruction: |
-        Draw 3 "steps" moving up and to the right.  Notice
-        the pattern in the movement. You should define a function called drawStep()
-        which draws one of the steps, and then call it 3 times to achieve the effect.
+        Define a function called drawSide() which draws
+        three steps and moves the turtle to prepare for the next side (Click to see
+        full instructions)
+      U3L04 - 3 by 3 with functions_instruction: |
+        Make the 3 by 3 square as efficiently
+        as you can. (Click to see full instructions)
+      U3L04 - snowflake_instruction: |
+        Create the design by breaking it down into
+        layers of functions. (Click to see full instructions)
       U3L04 choose your own drawing_instruction: |
         Now choose your own!  Pick one
         of the three drawings shown here and attempt to create it on your own, making
@@ -1870,50 +1951,35 @@ bg:
         NOTE: This is a very challenging problem.  You may need to play with it for
         a while and tweak it.  You might also consider using pencil and paper to sketch
         your ideas.
+      U3L06 - moveForwardwithParams_instruction: |
+        Use a single command to move the
+        turtle to the edge of the screen. (Click to see full instructions)
       U3L06 Challenge 1 triangle_instruction: |
-        Check out the extended Turtle palette
-        now made available to you. These new commands accept parameters, allowing
-        you to specify precisely how the function operates rather than only being
-        able to move or turn a predetermined amount. Make use of these functions to
-        draw the triangle as shown.
+        Read the documentation for one of
+        these commands. Then use them to create a triangle with sides 100 pixels long.
+        (Click to see full instructions)
       U3L06 Challenge 2 purple square_instruction: |
-        This time we're going to learn
-        a little bit about changing the turtle's pen. Read through the documentation
-        for penWidth() and penColor(), and then draw the purple square as shown.
+        Read the documentation for penColor()
+        and penWidth() before using them to draw the blue square.
       U3L06 Challenge 3 fill pink_instruction: |
-        Now let's try to fill in the entire
-        background of the screen. To make it a little easier for you, we can tell
-        you the color we chose is one of the 140 named colors.  If you don't know
-        what the named colors are, take a closer look at the documentation for penColor()
-        again. Hint: you need to use dot().
+        Fill in the background of the screen
+        with your favorite color. (Click to see full instructions)
       U3L06 Challenge 4 bullseye_instruction: |
-        Let's try this out one more time.
-        This time the colors are NOT named colors - you need to use the hex-color
-        number to set the color.  So that you're not randomly guessing, we'll give
-        you a hint -- each of the colors shown in the target image is one of these
-        one of the five in the following list:  #00ABDC, #CC4400, #1188CC, #006699,
-        #11CC00  You might be able to guess correctly if you apply what you know about
-        RGB colors.
+        Create the bullseye using hexadecimal
+        colors and dot(). (Click to see full instructions)
       U3L06 Challenge 5 overlapping circles_instruction: |
         This image is created just
         using dot() and penColor() but, how are we going to get those circles to be
         transparent?  If you haven't gotten the hint yet: check out the documentation!
       U3L06 Challenge 6 squiggles_instruction: |
-        Next we're going to be adding some
-        curves to our drawing. Read the documentation for the "arc" commands and
-        then draw the squiggles as shown. To make things easier here's a hint: all
-        the parameters are multiples of 10, and the colors are from the following
-        list of named colors: PowderBlue, lightBlue, Indigo, Purple, Magenta.
+        Read the documentation for the "arcLeft"
+        and "arcRight" commands and then draw the squiggles as shown. 
       U3L06 Challenge 7 smiley face_instruction: |
-        To make this smiley face you'll
-        need to look at the documentation for the move() command and then use it with
-        the others you've learned.  You can make reasonable guesses about the colors.
+        Use turnTo() and moveTo() to help
+        draw a smiley face. (Click to see full instructions)
       U3L06 Challenge 8 make your own_instruction: |
-        Use the tools you've learned
-        today to create a drawing of your own creation. If you have time, challenge
-        your friends to see if they can duplicate your image.  We'll show you the
-        drawing we made for ourselves.  You can try to duplicate that if you want
-        to, otherwise, have fun making your own!
+        Create a drawing of your own.
+        (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
         Free Play!  Use what you learned
         from loops and random to make your own little scene.  Have fun.
@@ -1925,6 +1991,9 @@ bg:
         grass, and moon.  All of the effects are clever applications of turtle dots,
         lines, and colors.  To get started, follow the series of steps suggested in
         the accompanying worksheet. 
+      U3L08 - drawSquaresWithParams_instruction: |
+        Change the code at top to make
+        use of the drawSquare() command. (Click to see full instructions)
       U3L08 - Enchantment Under the Sea_instruction: |
         You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
@@ -2252,4 +2321,30 @@ bg:
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location. (Click to show full instructions)
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
+      U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
+      U4L06 Data Storage 3_instruction: |
+        We want to improve the user experience.
+        Once they have submitted their data for storage, it would be nice to clear
+        the textbox.  Update your app to clear the textbox after the data is stored.
+      U4L06 Data Storage 4_instruction: |
+        Add a label and drop down box, to your app
+        and save the data to your JSON object and add it to your table. Make sure
+        to reset the dropdown after the data is stored.
+      U4L06 Data Storage 5_instruction: |
+        Add a couple radio buttons or checkboxes
+        to our app. Then find a way to collect the data from those. 
+      U4L06 Data Storage 6_instruction: |2
+         Use one of the getTime() and getUserId()
+        blocks to collect additional data. 
+      U4L06 Data Storage 7_instruction: |
+        Add a second screen to the sample app we
+        have been building to capture an image from a user. Return to screen 1 after
+        the JSON object has been stored in the table.
+      U4L15 Read Data 1_instruction: |
+        Run the level and see what happens. Then edit
+        the code to make it print a different column of information.
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
+      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
       XML Scratchpad_instruction: Използвай това тестово ниво за да вземеш xml-а за unit тестове

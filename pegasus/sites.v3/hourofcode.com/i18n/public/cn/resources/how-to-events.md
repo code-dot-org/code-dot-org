@@ -1,19 +1,25 @@
+* * *
 
+title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+
+* * *
+
+<%= view :signup_button %>
 
 # 编程一小时活动指南
 
-Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
 
 ## 1) 你的活动准备
 
   * 确定地点，日期和时间
-  * 写[信](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>)，邀请当地的市长，众议员，州长，或是有影响力的商业人士来讲话。
-  * 邀请媒体/记者，如本地新闻台，报纸，教育/科技博客。请参阅我们的[新闻资料袋](<%= hoc_uri('/resources/press-kit') %>)寻求帮助。
+  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
 
 ## 2) 活动期间
 
-  * 用我们其中一个[励志视频](<%= hoc_uri('/resources#videos') %>)开启你的活动.
-  * 给出一个计算机科学重要性的前瞻，使用这些[数据和信息图表](<%= hoc_uri('/resources/stats') %>)。   
+  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
       
     
   * 其他活动构思： 
@@ -30,23 +36,25 @@ Host an Hour of Code event during Computer Science Education Week (Dec 7-13) to 
 
 ## 活动计划示例
 
-**活动:**开启学校范围内的计算机科学教育周集会
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** Dec 7th (start of Computer Science Education Week)
 
-**时间:**上学日的某天，活动首选上午，约1小时。
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**地点：**学校礼堂（如剧院，体育馆，食堂）   
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
   
 
 
 ## 流程演示
 
-| 时间               | 活动                                                                                                                       |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](http://hourofcode.com/us/resources#videos)                                   |
-| 10:05 - 10:15 am | 校长展望计算机科学的重要性，使用这些[数据和信息图表](/resources/stats)                                                                            |
-| 10:15 - 10:30 am | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                  |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students. |
-| 10:40 - 11:00 am | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                       |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                        |
+| 时间               | 活动                                                                                                                                                  |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
+| 10:15 - 10:30 am | 特邀嘉宾谈谈他们的背景以及科技和计算机科学如何在他们的日常生活中起到重要作用。                                                                                                             |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
+| 10:40 - 11:00 am | 学生演示不插电活动，如何在没有计算机的情况下也可以教大家计算机科学。                                                                                                                  |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+
+<%= view :signup_button %>

@@ -26,7 +26,7 @@
   "dialogOK":"ठीक है",
   "directionEastLetter":"E",
   "directionNorthLetter":"N",
-  "directionSouthLetter":"S",
+  "directionSouthLetter":"S\nS",
   "directionWestLetter":"W",
   "dropletBlock_addOperator_description":"Add two numbers",
   "dropletBlock_addOperator_signatureOverride":"Add operator",

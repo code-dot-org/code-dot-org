@@ -65,6 +65,7 @@
   "penTooltip": "Přiloží či odloží tužku a začne či přestane kreslit.",
   "penUp": "odložit tužku",
   "reinfFeedbackMsg": "Tady je tvoje kresba! Můžeš na ní dál pracovat nebo pokračovat k další hádance.",
+  "setAlpha": "set alpha",
   "setColour": "nastav barvu",
   "setPattern": "nastavit vzorek",
   "setWidth": "nastav šířku",
@@ -80,6 +81,5 @@
   "turnTooltip": "Otočí malíře vlevo či vpravo o zadaný počet stupňů.",
   "turtleVisibilityTooltip": "Zviditelní či skryje malíře.",
   "widthTooltip": "Změní tloušťku tužky.",
-  "wrongColour": "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1."
 }

@@ -1,7 +1,7 @@
 ---
 title: <%= hoc_s(:title_how_to) %>
 layout: wide
-nav: resources_nav
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>
@@ -9,21 +9,21 @@ nav: resources_nav
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Sign up
-- Sign up to host an [Hour of Code](http://hourofcode.com) during Dec 7-13. 
-- Promote your [Hour of Code](http://hourofcode.com/resources) and encourage others to host.
+- Sign up to host an <a href="<%= resolve_url('/') %>">Hour of Code</a> during <%= campaign_date('short') %>.
+- Promote your <a href="<%= resolve_url('/resources') %>">Hour of Code</a> and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of [fun, hour-long tutorials](http://code.org/learn) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.*
+We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>">fun, hour-long tutorials</a> for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
 
 **All Hour of Code tutorials:**
 
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
 
-<a href="http://<%=codeorg_url() %>/learn"><img src="/images/tutorials.png"width="700"/></a>
+<a href="<%= resolve_url('https://code.org/learn') %>"><img src="/images/tutorials.png"width="700"/></a>
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -50,7 +50,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](https://code.org/girls).
+- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
 
 **Want more teaching ideas?** 
 Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators. 
@@ -60,7 +60,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="http://<%= codeorg_url() %>/learn">information for your selected tutorial</a> under the number of participants. 
+- Write the tutorial link on a whiteboard. Find the link listed on the <a href="<%= resolve_url('https://code.org/learn') %>">information for your selected tutorial</a> under the number of participants. 
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -71,18 +71,57 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at <a href="http://<%= codeorg_url() %>/learn"><%= codeorg_url() %>/learn</a>
+- Students can see all tutorials and try another Hour of Code activity at <a href="<%= resolve_url('https://code.org/learn') %>"><%= resolve_url('code.org/learn') %></a>
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
+[col-33]
 
+<img src="/images/highschoolgirls.jpeg"width="250"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/group_ar.jpg"width="300"/></a>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+	
 ## 7) Celebrate
-- [Print certificates](https://code.org/certificates) for your students. 
+- <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
+- <a href="<%= resolve_url('/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[col-33]
+
+<img src="/images/celebrate2.jpeg"width="250"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/highlight-certificates.jpg"width="260"/></a>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/boy-certificate.jpg"width="300"/></a>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
 
 ## Other Hour of Code resources for educators:
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
 - Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/hoc) to get advice, insight and support from other educators.
+- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
+<% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+<% end %>
+
+## What comes after the Hour of Code?
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
 
 <%= view :signup_button %>

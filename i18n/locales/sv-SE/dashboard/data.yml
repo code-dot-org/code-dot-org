@@ -412,6 +412,8 @@ sv:
         C4_variables_artist: 'Variabler - Konstnär'
         C4_variables_playlab: 'Variabler - Play Lab'
         C4_for_loops: "'För' loopar"
+        C4_for_loops_bee: "'För' loopar"
+        C4_for_loops_no_bee: "'För' loopar"
         C4_math_artist: Programmera Konstnären med matematik
         C4_function_edit: Redigera funktioner
         C4_function_create: Skapa funktioner
@@ -440,6 +442,7 @@ sv:
         csp_pixelation_bw: Svart och vit pixelerings widget
         csp_U1L14_tipstricks: 'Enhet 1 lektion 14 Lärare Tips & Tricks'
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'

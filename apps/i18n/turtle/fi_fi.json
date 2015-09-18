@@ -65,6 +65,7 @@
   "penTooltip": "Nostaa tai laskee kynän, aloittaakseen tai lopettaakseen piirtämisen.",
   "penUp": "kynä ylös",
   "reinfFeedbackMsg": "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään.",
+  "setAlpha": "set alpha",
   "setColour": "aseta väri",
   "setPattern": "määritä malli",
   "setWidth": "aseta leveys",
@@ -80,6 +81,5 @@
   "turnTooltip": "Kääntää taiteilijaa vasemmalle tai oikealle annetun astemäärän.",
   "turtleVisibilityTooltip": "Tekee taiteilijasta näkyvän tai näkymättömän.",
   "widthTooltip": "Muuttaa kynän paksuutta.",
-  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1.",
-  "setAlpha": "set alpha"
+  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1."
 }

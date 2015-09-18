@@ -16,4 +16,6 @@ MARKDOWN
 
 teacher_markdown <<MARKDOWN
 Answer: 9
+
+Note that it will currently take router A 6ms to send a message to router C. With the additional cost of 3ms to send a message from Z to A, the total cost of the trip is 9ms.
 MARKDOWN

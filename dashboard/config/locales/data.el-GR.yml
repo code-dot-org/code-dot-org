@@ -709,6 +709,8 @@
         C4_variables_artist: Μεταβλητές - Καλλιτέχνης
         C4_variables_playlab: Μεταβλητές - Εργαστήριο παιχνιδιού
         C4_for_loops: Βρόχοι Για
+        C4_for_loops_bee: Βρόχοι Για
+        C4_for_loops_no_bee: Βρόχοι Για
         C4_math_artist: Προγραμματίζουμε τον Καλλιτέχνη χρησιμοποιώντας Μαθηματικά
         C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
         C4_function_create: Δημιουργούμε Συναρτήσεις
@@ -737,6 +739,7 @@
         csp_pixelation_bw: Βοήθημα Ασπρόμαυρης εικονοστοιχειοποίησης
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
         csp_textcompression: Εργαλείο συμπίεσης κειμένου
+        csp_textcompression_new: Εργαλείο συμπίεσης κειμένου
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3

@@ -38,6 +38,7 @@ class Game < ActiveRecord::Base
   FLAPPY = 'flappy'
   BOUNCE = 'bounce'
   PLAYLAB = STUDIO = 'studio'
+  STUDIO_EC = 'StudioEC'
   APPLAB = WEBAPP = 'applab'
   NETSIM = 'netsim'
   MAZE = 'maze'
@@ -46,6 +47,10 @@ class Game < ActiveRecord::Base
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
+  end
+
+  def self.studio_ec
+    @@game_custom_studio ||= find_by_name("StudioEC")
   end
 
   def self.custom_artist
@@ -80,6 +85,10 @@ class Game < ActiveRecord::Base
     @@game_odometer ||= find_by_name("Odometer")
   end
 
+  def self.vigenere
+    @@game_vigenere ||= find_by_name("Vigenere")
+  end
+
   def self.frequency_analysis
     @@game_frequency_analysis ||= find_by_name("Frequency Analysis")
   end
@@ -97,11 +106,11 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def share_mobile_fullscreen?
-    app == FLAPPY || app == BOUNCE || app == STUDIO || app == APPLAB
+    app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB
   end
 
   def flappy?
@@ -182,6 +191,7 @@ class Game < ActiveRecord::Base
         TextCompression:text_compression
         Odometer:odometer
         FrequencyAnalysis:frequency_analysis
+        Vigenere:vigenere
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

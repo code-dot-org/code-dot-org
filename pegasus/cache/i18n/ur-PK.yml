@@ -57,6 +57,10 @@
   thank_you_: Shukarya!
   congratulations: Mubarik ho!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_course: Congratulations on completing %{course}
+  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
+    tutorial</a>.
   get_a_certificate_of_achievement: Get a certificate of achievement
   enter_valid_age: Please select a valid age
   enter_valid_email: Spna sahi Email address ka indraj kijiye
@@ -154,40 +158,46 @@
   homepage_hero_text_malala: |
     &ldquo;میں دنیا کی تمام لڑکیوں کو ایک Hour of Code مکمّل کرنے کا چیلنج دیتی ہوں&rdquo;
     ملالا، نوبل پیس پرائز انعام یافتہ
-  homepage_hero_text_susan: '&ldquo;اگر آپ ٹیکنالوجی کو بدل سکتے ہیں تو اپ دنیا کو
-    بدل سکتے ہیں.&rdquo; سوسن - سی ای و یو ٹیوب'
+  homepage_hero_text_susan: |
+    &ldquo;اگر آپ ٹیکنالوجی تبدیل کر سکتے ہیں, آپ دنیا تبدیل کر سکتے ہیں&rdquo;
+    سوسن، سی -ای -او یو ٹیوب
   homepage_hero_text_fistbump: |
-    &ldquo;اپنے فون پر صرف کھیلو نہیں بلکہ اسے پروگرام کرو.&rdquo;
+    &ldquo;اپنے فون پر صرف کھیلو نہیں بلکہ اسے پروگرام کرو۔&rdquo;
     پریذیڈنٹ بارک اوباما
-  homepage_hero_text_sheryl: '&ldquo;لڑکیوں سمیت; &mdash;ہمارے تمام بچوں&mdash; کو
-    ضرورت ہے کمپیوٹر سائنس &rdquo;سیکھنے کا موقع فراہم کرنے کی. شیریل - سی-او-او فیس
-    بک'
+  homepage_hero_text_sheryl: |
+    &ldquo;لڑکیوں سمیت; &mdash;ہمارے تمام بچوں&mdash; کو ضرورت ہے کمپیوٹر سائنس سیکھنے کا موقع فراہم کرنے کی۔&rdquo;
+    شیریل - سی-او-او فیس بک
   homepage_hero_text_satya: |
-    &ldquo;کمپیوٹر سائنس دنیا کے بہترین مواقع پیدا کرنے کی صلاحیت رکھتا ہے&rdquo;
+    &ldquo;کمپیوٹر سائنس دنیا کے بہترین مواقع پیدا کرنے کی صلاحیت رکھتا ہے.&rdquo;
     ستیا، سی-ای-او مائیکروسافٹ
   homepage_hero_text_bosh: |
-    &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں. &rdquo;
+    &ldquo;اگر آپ کوڈ کر سکتے ہیں، تو آپ اپنی زندگی کے راستے کا انتخاب کر سکتے ہیں۔ &rdquo;
     کرس بوش
-  homepage_hero_text_student1: '&ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات
-    قابلے ذکر ہے کے بہت ہی مزیدار ہے.&rdquo; لونا, ساتوی جماعت'
-  homepage_hero_text_student2: '&ldquo;میں نے اپنے بچوں کو پڑھائی کے بارے میں کبھی
-    بھی اتناخوش نہیں دیکھا،&rdquo; استاد مایکل۔'
-  homepage_hero_text_student3: '&ldquo;کومپوترساینس ایک ایسا شعبہہ ہے جس میں تمہیں
-    پتہ نہیں چلےگا کہ تمہیں وہ پسند ائیگا یہ نہیں جب تک کہ تم اس کو جانے کی کوشیش
-    نہیں کرو گے۔ &rdquo;جئیکسن، چھٹی کلاس۔'
-  homepage_hero_text_student4: '&ldquo;تم پروگرامنگ کے ساتھ وہ سب کچھ کر سکتے ہو تمہارے
-    دماغ میںں آے مایا، دوسری جماعت. &rdquo'
+  homepage_hero_text_student1: |
+    &ldquo;اس ہنر نے میرا مستقبل بدل دیا ہے. اور یہ بات قابل ذکر ہے کے یہ بہت ہی مزیدار ہے.&rdquo;
+     لونا, ساتویں جماعت
+  homepage_hero_text_student2: |
+    &ldquo;میں نے اپنے بچوں کو سیکھنے کے لئے کبھی بھی اتنا پرجوش نہیں دیکھا۔&rdquo;
+     مایکل، استاد
+  homepage_hero_text_student3: |
+    &ldquo;کمپیوٹر سائنس ایک ایسا شعبہہ ہے جسکو سیکھے بغیر اندازہ نہیں ہو سکتا کہ یہ آپ کو پسند ہے یا نہیں.&rdquo;
+    جیکسن،چھٹی جماعت
+  homepage_hero_text_student4: |
+    &ldquo;تم پروگرامنگ کے ساتھ وہ سب کچھ کر سکتے ہو تمہارے دماغ میںں آۓ۔&rdquo;
+     مایا، دوسری جماعت
   homepage_hero_text_student5: '&ldquo;کمپیوٹر سائنس کسی اور کے لئے نہیں، یہ تمھارے
     لئے ہیں ابھی اسی وقت، &ldquo;استاد گرالڈو'
-  homepage_hero_text_teacher1: کوڈنگ لوگوں میں پریرتا تخلیقی صلاحیت اور جدت پیدا کرتی
-    ہے جس کی ضرورت ہر شعبے می ہے ،استاد فلوریسا
-  homepage_hero_text_teacher2: اس پروگرام نے میرے سو فیصد طلبہ کو مصروف اور ملوث رکھا،
-    استاد آدم
-  homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس واقت داجل ہیں۔
-  homepage_hero_text_stat_students: '#student_count طلبہ اس وقت کوڈ سٹوڈیو پر ہے'
+  homepage_hero_text_teacher1: |
+    &ldquo;کوڈنگ لوگوں میں فکری اور تخلیقی صلاحیتیں اور جدت پیدا کرتی ہے،&mdash; جس کی ضرورت ہر شعبے میں ہے۔&rdquo;
+    فلوریسا، استاد
+  homepage_hero_text_teacher2: |
+    &ldquo;اس پروگرام نے میرے سو فیصد طلبہ کو مصروف مشغول رکھا۔&rdquo;
+    آدم, استاد
+  homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس وقت داخل ہیں۔
+  homepage_hero_text_stat_students: '#student_count طلبہ کے اکاؤنٹس کوڈ سٹوڈیو پر'
   homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: اینا اور ایلسا کے ساتھ فروزین۔
+  homepage_slot_text_frozen: اینا اور ایلسا کے ساتھ فروزن۔
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_course4: Course 4
@@ -196,7 +206,7 @@
   homepage_action_text_codevideo: ویڈیو دیکھے
   homepage_action_text_teachervideo: ویڈیو دیکھے
   homepage_action_text_learn: سیکھنا شروع کریں
-  homepage_action_text_signpetition: درخواست پر دستخت کریں
+  homepage_action_text_signpetition: درخواست پر دستخط کریں
   homepage_signpetition_dropdown: میں اتفاق کرتا ہوں &#x25BE;
   homepage_diversity_pledge: کوڈ کو پھیلانے کا عہد کریں
   homepage_banner_text_main: Code.org اور کالج بورڈ کی کمپیوٹر سائنس کے پھیلاؤ کے
@@ -216,14 +226,14 @@
   homepage_slot_text_link_local: مقامی کلاس ڈھونڈیں
   homepage_slot_text_link_othercourses: دوسرے آن لائن کورس
   homepage_slot_text_title_educators: ماہرین تعلیم
-  homepage_slot_text_blurb_educators: اپنے طالبعلموں کو پڑھیے
-  homepage_slot_text_link_k5: پانچویں جماعت کے لئے کورسز
+  homepage_slot_text_blurb_educators: اپنے طالبعلموں کو پڑھایے
+  homepage_slot_text_link_k5: پانچویں جماعت تک کے لئے کورسز
   homepage_slot_text_link_fullcurriculum: ہمارا مکمل نصاب دیکھیں
   homepage_slot_text_link_pd: پیشہ ورانہ ترقی
   homepage_slot_text_title_advocates: وکلاء
   homepage_slot_text_blurb_advocates: کمپیوٹر سائنس کے پھیلاؤ میں مدد کریں
   homepage_slot_text_link_stats: اعدادوشمار دیکھیں
-  homepage_slot_text_link_buy: شامل ہو جاؤ
+  homepage_slot_text_link_buy: شامل ہو جایئے
   homepage_slot_text_link_donate: عطیہ کریں
   homepage_header_codestudio: کوڈ اسٹوڈیو طالبعلموں کی تخلیقات
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
@@ -315,6 +325,9 @@
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
+  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
+    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
+    during Computer Science Education Week.
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
@@ -502,6 +515,11 @@
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   learn_more: Learn More
+  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
+    Education Week
+  learn_sign_up_button: Sign up
+  learn_educator_resources_description: Learn how to teach an Hour of Code
+  learn_educator_resources_button: Educator resources
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat

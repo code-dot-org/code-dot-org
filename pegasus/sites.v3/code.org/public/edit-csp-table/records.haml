@@ -12,6 +12,9 @@ content-type: text/ng-template
     th {
       padding: 10px;
       text-align: left;
+      input {
+        color: #333;
+      }
     }
     td {
       padding: 10px;
@@ -24,7 +27,17 @@ content-type: text/ng-template
       font-size: 1.5em;
     }
   }
+  .dropdown {
+    float: right;
 
+    li:before {
+      content:none;
+    }
+    li {
+      padding: 0;
+      text-indent: 0;
+    }
+  }
   .level-buttons {
     margin: 10px 0;
   }
@@ -63,10 +76,6 @@ content-type: text/ng-template
         %button.btn.btn-primary{"ng-click" => "addColumn()"} Add column
         %button.btn.btn-primary{"ng-click" => "newRecord.editing = true", "ng-hide" => "newRecord.editing"} Add row
   %table.records
-    %colgroup
-      %col{width: "200"}
-      %col{"ng-repeat" => "column in columns", width: "200"}
-      %col{width: "250"}
     %tr
       %th
         %a{href: "", "ng-click" => "order = 'id'; reverse=!reverse"}
@@ -74,16 +83,27 @@ content-type: text/ng-template
           %i.fa.fa-caret-down{"ng-show" => "order == 'id' && reverse == true"}
           %i.fa.fa-caret-up{"ng-show" => "order == 'id' && reverse == false"}
       %th{"ng-repeat" => "column in columns"}
-        %a{href: "", "ng-click" => "$parent.order = column; $parent.reverse = !$parent.reverse"}
-          {{column}}
-          %i.fa.fa-caret-down{"ng-show" => "$parent.order == column && $parent.reverse == true"}
-          %i.fa.fa-caret-up{"ng-show" => "$parent.order == column && $parent.reverse == false"}
+        %a{href: "", "ng-hide" => "column.editing", "ng-click" => "$parent.order = column.name; $parent.reverse = !$parent.reverse"}
+          {{column.name}}
+
+        %span{"ng-show" => "column.editing"}
+          %form{"ng-submit" => "renameColumn(column)"}
+            %input{"ng-model" => "column.name", type: "text"}
+
+        %div.dropdown{"ng-hide" => "column.editing"}
+          %a.dropdown-toggle{"data-toggle" => "dropdown"}
+            %i.fa.fa-caret-down
+          %ul.dropdown-menu.dropdown-menu-right
+            %li
+              %a.btn.btn-link{"ng-click" => "column.editing = true"} Rename Column
+            %li
+              %a.btn.btn-link{"ng-click" => "deleteColumn(column)"} Delete Column
       %th
     %tr
       %td
       %td{"ng-repeat" => "column in columns"}
         %span{"ng-show" => "newRecord.editing"}
-          %input{"ng-model" => "newRecord[column]", type: "text"}/
+          %input{"ng-model" => "newRecord[column.id]", type: "text"}/
       %td
         %button.btn.btn-primary{"ng-click" => "saveNewRecord()", "ng-show" => "newRecord.editing"} Save
         %button.btn.btn-danger{"ng-click" => "deleteNewRecord()", "ng-show" => "newRecord.editing"} Delete
@@ -93,9 +113,9 @@ content-type: text/ng-template
           {{ record.id }}
       %td{"ng-repeat" => "column in columns"}
         %span{"ng-hide" => "record.editing"}
-          {{ record[column] }}
+          {{ record[column.id] }}
         %span{"ng-show" => "record.editing"}
-          %input{"ng-model" => "record[column]", type: "text"}/
+          %input{"ng-model" => "record[column.id]", type: "text"}/
       %td
         %button.btn.btn-default{"ng-click" => "record.editing = true", "ng-hide" => "record.editing"} Edit
         %button.btn.btn-primary{"ng-click" => "saveRecord(record)", "ng-show" => "record.editing"} Save

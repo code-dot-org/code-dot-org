@@ -10,6 +10,8 @@
   Filter
   %input#filter
 %a#dateUpdate{style: 'display: none'} Update
+%h2
+  #samplingMessage{style: 'color: red; display: none'} CAUTION: Data is sampled.
 %h2 #{link_to 'Download CSV', {:format => :csv }}
 #completionTable
 :css
@@ -35,6 +37,9 @@
     to.change(function() {
       updateDate();
     });
+    if(#{ @is_sampled }) {
+      $('#samplingMessage').show();
+    }
   });
   function updateDate() {
     var href = basePage + '/' + $('#dateFrom').val() + '/' + $('#dateTo').val();

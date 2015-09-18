@@ -419,7 +419,8 @@ config.jshint = {
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
     '!src/applab/colpick.js'
-  ]
+  ],
+  some: [], // This gets dynamically populated in the register task
 };
 
 config.strip_code = {
@@ -520,9 +521,17 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('jshint:files', function () {
+    if (grunt.option('files')) {
+      var files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    }
+    grunt.task.run('jshint:some');
+  });
+
   grunt.registerTask('mochaTest', ['exec:mochaTest']);
 
-  grunt.registerTask('test', ['jshint', 'mochaTest']);
+  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

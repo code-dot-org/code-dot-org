@@ -1,4 +1,10 @@
+* * *
 
+title: Privacy Policy
+
+* * *
+
+### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Integritetspolicy
 
@@ -222,7 +228,7 @@ Code.org uses certain physical, managerial, and technical safeguards designed to
 
 If we learn of a data security incident that compromises or appears to compromise your Personal Information, then we will attempt to notify you electronically so that you can take appropriate protective steps.
 
-### Internationella besökare
+### International visitors
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 

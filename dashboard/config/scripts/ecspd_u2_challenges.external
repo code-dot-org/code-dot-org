@@ -2,22 +2,17 @@ name 'ECSPD U2 Challenges'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-Description
-Challenges - look through a lesson - do it - show products and give advice to teachers - create an extension activity or alternative activity 
-make a video demo of some part of the lesson - take a look at the teaching tips video - take a look at a concept demo video - take a look at programming demo video
-make extension activity idea
-explain to other teachers the important things you learned about doing this lesson
-extra resources that would be helpful?
-Unit 2 is all about problem solving - how do you make problem solving the focus of this lesson
+### Challenge Options:
 
+* Day 7-9: CSDT Cornrow Braiding
+* Day 10-12: Binary
+* Day 13-14: Linear and Binary Search (Tower Building) 
+* Day 15-16: Sorting 
+* Day 17: Minimal Spanning Trees
+* Day 18-21: Unit Final Project
 
-Pick a Challenge
-List of topics
-Binary and Linear Search Lesson
-Unit Final Project
-Binary
-Sorting Lesson
-Cornrow Braiding
-Pick one and submit somewhere
+Once you have decided which lesson you are going to work on post it to the Forum:
+
+### >> <a href="http://forum.code.org/t/u2-challenge-decisions/2098" target="_blank"> Share your Challenge Choice on the Forum</a>
 
 MARKDOWN

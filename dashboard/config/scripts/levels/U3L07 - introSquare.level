@@ -1,0 +1,49 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-16T02:48:24.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "turnLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "forLoop_i_0_4": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "Y0KVjpIVnrHBZ9d3TIvgfPYUmwZSFOIEnty9hmHVWMPWh2EiXn41Jv/TWCui\nwcEE\n",
+    "embed": "false",
+    "instructions": "Use a loop to draw a square. (Click to see full instructions)",
+    "markdown_instructions": "# Getting started with loops\r\n\r\nA **loop** is a set of commands that a computer is instructed to run over and over, or \"loops\" through. \r\n\r\nYou can now create loops in App Lab using the `for` command which has been added to the toolbox. A `for` command is followed by curly braces `{ }` . Just like a function definition the commands that are placed within those curly braces are a part of the loop. There is a single opening in the `for` block that allows you to choose how many times in a row you'd like to repeat these commands. We call each repeat of the commands a single **iteration**.\r\n\r\n**Read the documentation: ** You'll want to read the documentation for this block, especially if you're curious about the rest of the syntax you'll see included `for(var i = 0; i < 4; i++)` . In time you will understand everything happening in that command, but for now it is fine to mentally treat it as a \"repeat\" block with a single opening to indicate the number of repetitions.\r\n\r\n**Draw a square: ** To make things simple start by drawing a single square using the `for` block. You should be able to do it much more efficiently than the 8 commands it would've required you to write previously.\r\n\r\n![](https://images.code.org/5dfab9a3df4dc0df8a858655933eb9ad-image-1442374182752.29.32 PM.png)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

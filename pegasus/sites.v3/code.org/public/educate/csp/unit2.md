@@ -35,6 +35,13 @@ nav: educate_nav
 		</td>
 </tr>
 </table>
+<br/>
+### Resources
+
+<ul>
+<li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong> </li>
+</ul>
+
 <br/><br/>
 
 | Lesson Description| Lesson Plan | 

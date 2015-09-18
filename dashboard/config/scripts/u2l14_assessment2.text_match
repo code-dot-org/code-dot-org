@@ -5,5 +5,7 @@ For example, if one key is length 5 and another is 20, does one produce a “bet
 teacher_markdown <<MARKDOWN
 Answers will vary, but may include these concepts:
 
-- 
+- Yes in general the longer the key the "better" the encryption
+- It is harder to find patterns in a longer key
+- A key is better when it does not have repeating letters used (ex. AAAAA would not be a good key)
 MARKDOWN

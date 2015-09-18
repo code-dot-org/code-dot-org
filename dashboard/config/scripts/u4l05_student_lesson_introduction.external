@@ -1,0 +1,29 @@
+name 'U4L05 Student Lesson Introduction'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Unit 4: Lesson XX - Title of lesson here
+
+# Background
+
+Background goes here
+
+# Vocabulary
+* **Word 1:** Definition 1
+* **Word 2:** Definition 2 
+
+# Lesson
+
+* Activity description 1
+* Activity description 2
+
+# Resources
+
+* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
+* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
