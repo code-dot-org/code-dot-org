@@ -1,14 +1,16 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Guia de evento da Hora do Código
 
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Sedie um evento da Hora do Código durante a Semana da Educação em Ciência da Computação (<%= campaign_date('short') %>) para celebrar a ciência da computação e incentivar mais alunos a conhecê-la. Qualquer um, em qualquer lugar, pode organizar um evento da Hora do Código.
 
 ## 1) Prepare-se para seu evento
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Hora          | Ação                                                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 - 10h05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                           |
-| 10h05 - 10h15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)            |
+| 10h00 - 10h05 | Comece com um de nossos [vídeos inspiradores](<%= resolve_url('/resources#videos') %>)                                                                         |
+| 10h05 - 10h15 | Faça uma introdução falando sobre a importância da ciência da computação. Use estes [infográficos e estatísticas](<%= resolve_url('/resources/stats') %>)      |
 | 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
 | 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos. |
 | 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade offline para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                 |

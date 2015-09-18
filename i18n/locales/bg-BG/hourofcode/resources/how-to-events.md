@@ -14,12 +14,12 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
   * Определяне на място, дата и час
   * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/resources/press-kit') %) for help.
 
 ## 2) по време на вашето събитие
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/resources#videos') %).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/resources/stats') %).   
       
     
   * Други идеи за събитието: 
@@ -48,13 +48,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Старт на шоуто
 
-| Време         | Изпълнение                                                                                                                                          |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
-| 10:15 - 10:30 | Специален гост ще говори за себе си и как технологиите и компютърните науки играят важна роля в ежедневния му живот.                                |
-| 10:30 - 10:40 | Учениците правят часът на кодирането в училище. Забавен обрат-накарайте ги да обучат директора, политик или други ученици.                          |
-| 10:40 - 11:00 | Учениците демонстрират ънплъгд дейност и как може да се преподават компютърни науки без използване на компютри.                                     |
-| 11:00 - 11:05 | Учителят, който организира събитието в училище казва заключителни думи.                                                                             |
+| Време         | Изпълнение                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/resources#videos') %)                                                                |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/resources/stats') %) |
+| 10:15 - 10:30 | Специален гост ще говори за себе си и как технологиите и компютърните науки играят важна роля в ежедневния му живот.                              |
+| 10:30 - 10:40 | Учениците правят часът на кодирането в училище. Забавен обрат-накарайте ги да обучат директора, политик или други ученици.                        |
+| 10:40 - 11:00 | Учениците демонстрират ънплъгд дейност и как може да се преподават компютърни науки без използване на компютри.                                   |
+| 11:00 - 11:05 | Учителят, който организира събитието в училище казва заключителни думи.                                                                           |
 
 <%= view :signup_button %>

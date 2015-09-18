@@ -6,6 +6,30 @@ title: <%= hoc_s(:title_partners) %>
 
 <%= view :signup_button %>
 
+<% if @country == 'la' %>
+
+# Partnerët Latino-Amerikan
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
+
+<% end %>
+
+<% if @country == 'au' %>
+
+# Partnerët Australian
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'uk' %>
+
+# United Kingdom Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
+
+<% end %>
+
 # Partnerët Kryesor dhe Korporatat Mbështetëse
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
@@ -24,13 +48,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-# Partnerët E Tutorialëve
+# Partnerët e Tutorialeve
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Partnerët E Infrastrukturës dhe mjetet
+# Partnerët e infrastrukturës dhe mjetet
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

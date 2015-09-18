@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Ми б хотіли організувати різноманітні зацікавлюючі заходи, але основною метою є оптимізація досвіду для учнів та вчителів, котрі є новачками в інформатиці. Скористайтесь цим документом в якості шаблону для своїх заходів, спрямованих на користувачів, котрі не мають досвіду вивчення програмування та інформатики.
 
@@ -23,20 +23,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## Зміст:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Як буде оцінено підручники](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Пропозиції для розробки заходів](#design)
+  * [Рекомендації щодо торгової марки](#tm)
+  * [Точка стеження](#pixel)
+  * [Сприяння підручникам, тижню інформатики та Годині коду](#promote)
   * [Примітка для учнів з особливими потребами](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Будь ласка, вкажіть рекомендований попередній рівень знань з інформатики: Початківець, Аматор чи Експерт. Сайт Години коду першочергово висвітлюватиме завдання для Початківців. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Технічні вимоги: 
       * Для того, щоб точніше відстежувати участь, ми хочемо, щоб кожен партнер-розробник підручника, розмістив 1-піксельне зображення для відстеження у свою першу та останню вправу. Розмістіть однопіксельне зображення на початку першої та в кінці останньої сторінки. Не розміщуйте пікселів на проміжних сторінках). Перегляньте розділ Піксель відстеження нижче для із детальнішою інформацією. 
-      * Після завершення Вашої діяльності, користувачів потрібно направити [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> де вони зможуть: 
+      * Після завершення Вашої діяльності, користувачів потрібно направити [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Поділитися у соціальних мережах тим, що вони завершили Годину коду
           * Отримати сертифікат про завершення Годину коду
           * Переглянути таблицю лідерів країн/міст, з яких найбільше учасників виконали Годину коду
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Необов'язково)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Для онлайнових завдань (особливо для смартфонів та планшетів): 
           * Кількість користувачів

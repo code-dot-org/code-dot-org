@@ -9,21 +9,21 @@ nav: how_to_nav
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Sign up
-- Sign up to host an <a href="<%= resolve_url('/') %>">Hour of Code</a> during <%= campaign_date('short') %>.
-- Promote your <a href="<%= resolve_url('/resources') %>">Hour of Code</a> and encourage others to host.
+- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+- Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 
 ## 3) Choose a tutorial:
-We’ll host a variety of <a href="<%= resolve_url('https://code.org/learn') %>">fun, hour-long tutorials</a> for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* <a href="<%=  resolve_url("https://code.org/learn") %>">Try current tutorials.</a>
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
 
 **All Hour of Code tutorials:**
 
 - Require minimal prep-time for teachers
 - Are self-guided - allowing students to work at their own pace and skill-level
 
-<a href="<%= resolve_url('https://code.org/learn') %>"><img src="/images/tutorials.png"width="700"/></a>
+[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -34,7 +34,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 - **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-<img src="/images/group_ipad.jpg"width="350"/></a>
+<img src="/images/fit-350/group_ipad.jpg">
 
 ## 5) Inspire students to start your Hour of Code
 **Kick off your Hour of Code by inspiring students and discussing how computer science impacts every part of our lives.** 
@@ -60,7 +60,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the <a href="<%= resolve_url('https://code.org/learn') %>">information for your selected tutorial</a> under the number of participants. 
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -71,43 +71,43 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at <a href="<%= resolve_url('https://code.org/learn') %>"><%= resolve_url('code.org/learn') %></a>
+- Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]
 
-<img src="/images/highschoolgirls.jpeg"width="250"/></a>
+<img src="/images/fit-250/highschoolgirls.jpeg"/>
 
 [/col-33]
 
 [col-33]
 
-<img src="/images/group_ar.jpg"width="300"/></a>
+<img src="/images/fit-300/group_ar.jpg"/>
 
 [/col-33]
 
 <p style="clear:both">&nbsp;</p>
 	
 ## 7) Celebrate
-- <a href="<%= resolve_url('https://code.org/certificates') %>">Print certificates</a> for your students.
-- <a href="<%= resolve_url('/resources/promote#stickers') %>">Print "I did an Hour of Code!"</a> stickers for your students.
+- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
-<img src="/images/celebrate2.jpeg"width="250"/></a>
+<img src="/images/fit-250/celebrate2.jpeg"/>
 
 [/col-33]
 
 [col-33]
 
-<img src="/images/highlight-certificates.jpg"width="260"/></a>
+<img src="/images/fit-260/highlight-certificates.jpg"/>
 
 [/col-33]
 
 [col-33]
 
-<img src="/images/boy-certificate.jpg"width="300"/></a>
+<img src="/images/fit-300/boy-certificate.jpg"/>
 
 [/col-33]
 
@@ -122,6 +122,6 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 <% end %>
 
 ## What comes after the Hour of Code?
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, <a href="<%= resolve_url('https://code.org/learn/beyond') %>">encourage your children to learn online</a>.
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>

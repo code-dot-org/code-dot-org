@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # როგორ შევქმნათ ტუტორიალები კოდის ერთი საათისა™ და კომპიუტერული მეცნიერებების საგანმანათლებლო კვირეულის ფარგლებში
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 ჩვენი უმთავრესი მიზანია ოპტიმალური პირობები შევქმნათ იმ მოსწავლეებისა და მასწავლებლებისთვის, ვინც პირველად გაცენობა ინფორმატიკას. დაგეგმეთ თქვენი აქტივობები პროგრამირებასა და ინფორმატიკაში აბსოლუტურად გამოუცდელი მოსწავლეების გათვალისწინებით.
 
@@ -23,20 +23,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## სარჩევი:
 
-  * [კოდის ერთი საათის™ აქტივობების შექმნის ზოგადი ინსტრუქცია](#guidelines)  
-    
-  * [როგორ შეფასდება ტუტორიალის ინკლუზიურობა](#inclusion)  
-    
-  * [წარდგენის წესები (ვადა: 10/15/2015)](#submit)  
-    
-  * [რჩევები აქტივობებთან დაკავშირებით](#design)  
-    
-  * [სავაჭრო ნიშნის გამოყენების წესები](#tm)  
-    
-  * [პიქსელ–კონტროლი](#pixel)  
-    
-  * [თქვენი ტუტორიალების, CSEd კვირეულისა და კოდის ერთი საათის პოპულარიზაცია](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [როგორ შეფასდება ტუტორიალის ინკლუზიურობა](#inclusion)
+  * [წარდგენის წესები (ვადა: 10/15/2015)](#submit)
+  * [რჩევები აქტივობებთან დაკავშირებით](#design)
+  * [სავაჭრო ნიშნის გამოყენების წესები](#tm)
+  * [პიქსელ–კონტროლი](#pixel)
+  * [თქვენი ტუტორიალების, CSEd კვირეულისა და კოდის ერთი საათის პოპულარიზაცია](#promote)
   * [მინიშნებები შშმ მოსწავლეებისთვის](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
   * გთხოვთ ასევე გაითვალისწინოთ კომპიუტერული მეცნიერების რეკომენდებული ცოდნა კლასის დონეებისთვის: დამწყები, საშუალო ან მოწინავე. კოდის საათის ვებგვერდი ყველაზე მკაფიოდ დამწყებების აქტივობებს გაუსვამს ხაზს. თუ გსურთ კოდის საათი™-ს საშუალო და მოწინავე აქტივობების მომზადება, გთხოვთ გაითვალისწინოთ თქვენი აქტივობისთვის საჭირო ადრეული ცოდნა.
   * ტექნიკური საჭიროებები: 
       * იმისთვის, რომ უფრო ზუსტად ვადევნოთ თვალი მონაწილეობას, გვსურს ყოველ მესამე საერთო გაკვეთილის პარტნიორს თავისი კოდის საათის პირველ და ბოლო გვერდებზე 1-პიქსელიანი სამეთვალყურეო სურათი ჰქონდეს. მოათავსეთ საწყისი პიქსელ-სურათი საწყის გვერდზე და საბოლოო პიქსელ-სურათი საბოლოო გვერდზე. არ მოათავსოთ პიქსელები შუალედურ გვერდებზე). იხილეთ სამეთვალყურეო პიქსელის სექცია ქვემოთ მეტი დეტალისთვის. 
-      * აქტივობის დასრულებისას, მომხმარებლები უნდა გადამისამართდნენ [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> სადაც მათ შეეძლებათ: 
+      * აქტივობის დასრულებისას, მომხმარებლები უნდა გადამისამართდნენ [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * გააზიარეთ სოციალურ მედიაზე რომ მათ დაასრულეს კოდის საათი
           * მიიღეთ სერთიფიკატი, რომ მათ დაასრულეს კოდის საათი
           * იხილეთ ლიდერთა დაფა იმის შესახებ, თუ რომელი ქვეყნებს/ქალაქებს აქვთ მონაწილეობის უმაღლესი მაჩვენებელი კოდის საათის აქტივობებში
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(ნებაყოფლობითი)* ჩვენ განვაგრძობთ ონლაინ გამოკითხვით/ფორმით, სადაც მოთხოვნილი იქნება მომდევნო აქტივობის მეტრიკის ანგარიში ერთი კვირისთვის, 7 დეკემბრის 12:01-დან 13 დეკემბრის 1:59-მდე) 
       * ონლაინ აქტივობებისთვის (განსაკუთრებით სმარტფონების/პლანშეტების აპლიკაციებისთვის): 
           * მომხმარებლების რაოდენობა

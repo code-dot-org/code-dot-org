@@ -1,6 +1,6 @@
 * * *
 
-tytuł: < % = hoc_s(:Nagrody - regulamin) %> Układ: szeroki nav: resources_nav
+title: <%= hoc_s(:title_prizes_terms) %> layout: wide
 
 * * *
 
