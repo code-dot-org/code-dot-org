@@ -1,3 +1,5 @@
+/* global dashboard */
+
 window.dashboard = window.dashboard || {};
 
 /**
@@ -46,7 +48,7 @@ window.dashboard.ReportAbuseForm = (function (React) {
       abuseUrl: React.PropTypes.string.isRequired,
       name: React.PropTypes.string,
       email: React.PropTypes.string,
-      age: React.PropTypes.string,
+      age: React.PropTypes.string
     },
 
     /**

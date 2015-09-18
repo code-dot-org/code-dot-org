@@ -141,7 +141,7 @@ var projects = module.exports = {
    *   exceed our threshold
    */
   exceedsAbuseThreshold: function () {
-    return !!(currentAbuseScore >= ABUSE_THRESHOLD);
+    return currentAbuseScore >= ABUSE_THRESHOLD;
   },
 
   /**
