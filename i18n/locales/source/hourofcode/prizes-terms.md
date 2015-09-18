@@ -1,6 +1,7 @@
 ---
 title: <%= hoc_s(:title_prizes_terms) %>
 layout: wide
+nav: resources_nav
 ---
 
 <%= view :signup_button %>

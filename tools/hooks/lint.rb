@@ -20,7 +20,7 @@ end
 
 def run_rubocop(files)
   Dir.chdir REPO_DIR
-  system "bundle exec rubocop #{files.join(" ")}"
+  system "rubocop #{files.join(" ")}"
 end
 
 def run_jshint(files)
@@ -30,7 +30,7 @@ end
 
 def run_haml(files)
   Dir.chdir REPO_DIR
-  system "bundle exec haml-lint #{files.join(" ")}"
+  system "haml-lint #{files.join(" ")}"
 end
 
 modified_files = get_modified_files()

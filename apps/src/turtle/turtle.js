@@ -719,8 +719,7 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks() ||
-      this.studioApp_.hasDuplicateVariablesInForLoops()) {
+  if (this.studioApp_.hasExtraTopBlocks()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
     return;
