@@ -47,16 +47,16 @@ module UsersHelper
   # Adds 'script' to the set of scripts completed for the current session.
   # @param [Integer] script_id
   def session_add_script(script_id)
-    session[:scripts] ||= Set.new
-    session[:scripts].add(script_id.to_i)
+    scripts = session_scripts
+    scripts << script_id.to_i unless scripts.include?(script_id)
+    session[:scripts] = scripts
   end
 
   # Returns an array of ids of the scripts completed in the current session.
   # Callers should not mutate the array.
   # @return [Array<Integer>]
   def session_scripts
-    s = session[:scripts]
-    s ? s.to_a : []
+    session[:scripts] || []
   end
 
   # Returns a read-only set of the videos seen in the current user session,
