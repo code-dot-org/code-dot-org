@@ -13,7 +13,8 @@ module UsersHelper
     session[:lines] = session_lines + added_lines
   end
 
-  # Resets all user session state (level progress, lines of code, videos seen, etc.) for tests.
+  # Resets all user session state (level progress, lines of code, videos seen,
+  # etc.) for tests.
   def session_reset_for_test
     session[:lines] = nil
     session[:progress] = nil
@@ -21,7 +22,7 @@ module UsersHelper
     session[:videos_seen] = nil
   end
 
-    # Returns the progress value for the given level_id, or 0 if there
+  # Returns the progress value for the given level_id, or 0 if there
   # has been no progress.
   # @param [Integer] level_id
   # return [Integer]
@@ -29,16 +30,18 @@ module UsersHelper
     (session[:progress] || {}).fetch(level_id.to_i, 0)
   end
 
-  def session_levels_progress_is_empty_for_test
-    !session[:progress] || session[:progress].empty?
-  end
-
-    # Sets the progress for the given level_id for the current session.
+  # Sets the progress for the given level_id for the current session.
   # @param [Integer] level_id
   # @param [Integer] progress
   def session_set_level_progress(level_id, progress)
     session[:progress] ||= {}
     session[:progress][level_id.to_i] = progress
+  end
+
+  # Returns true if there has been no progress in completing levels for
+  # the current session.
+  def session_levels_progress_is_empty_for_test
+    !session[:progress] || session[:progress].empty?
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
@@ -84,7 +87,8 @@ module UsersHelper
     !session[:videos_seen].nil?
   end
 
-    # Returns true if the video with the given key has been seen by the current user session.
+  # Returns true if the video with the given key has been seen by the
+  # current user session.
   # @param [String] callout_key
   # @return Boolean
   def session_callout_seen?(callout_key)
