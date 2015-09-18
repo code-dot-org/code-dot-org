@@ -1,7 +1,5 @@
 require_relative '../../router'
 
-ENV['RACK_ENV'] = 'test'
-
 # Wrapper for the Pegasus "Documents" app that sets necessary environment
 # variables for testing requests against it.
 class MockPegasus
