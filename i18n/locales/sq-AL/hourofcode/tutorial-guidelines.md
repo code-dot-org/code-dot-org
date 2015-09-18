@@ -15,9 +15,9 @@ Do të donim të organizonim një sërë aktivitetesh, por qëllimi kryesor ësh
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**Pasi të lexosh udhëzimet, mund të dorëzosh tutorialin tënd përmes Orës sonë të Kodimit[ faqes sonë të Paraqitjes së Veprimtarisë](http://goo.gl/forms/6GSklaO9Oa).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+** E RE:** Ndryshe nga vitet e shkuara, planifikojmë të paraqesim një tjetër format për "mësues udhëheqës" në Aktivitet e Orës së Kodimit. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
 
 <a id="top"></a>
 

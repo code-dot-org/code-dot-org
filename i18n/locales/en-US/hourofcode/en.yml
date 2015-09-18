@@ -1,7 +1,7 @@
 en-US:
   site_name: crwdns43528:0crwdne43528:0
   language: crwdns43529:0crwdne43529:0
-  front_title: crwdns48581:0crwdne48581:0
+  front_title: 'crwdns48581:0%{campaign_date}crwdne48581:0'
   coming_soon: crwdns43531:0crwdne43531:0
   campaign_date_start_short: crwdns43532:0crwdne43532:0
   campaign_date_start_long: crwdns43533:0crwdne43533:0
@@ -198,7 +198,7 @@ en-US:
   front_join_us_support: crwdns43709:0crwdne43709:0
   front_join_us_more_info: crwdns47867:0crwdne47867:0
   front_join_us_code_info: crwdns48590:0crwdne48590:0
-  signup_header: crwdns48583:0crwdne48583:0
+  signup_header: 'crwdns48583:0%{campaign_date}crwdne48583:0'
   signup_name_label: crwdns43711:0crwdne43711:0
   signup_email_label: crwdns43712:0crwdne43712:0
   signup_organization_name_label: crwdns43713:0crwdne43713:0

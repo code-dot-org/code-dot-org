@@ -10,23 +10,23 @@ nav: how_to_nav
 
 # Bring the Hour of Code to your company
 
-## 1) Try the tutorials:
+## 1) Incercati tutorialele:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **כל התרגולים לשעה אחת של קוד:**
 
-  * Require minimal prep-time for organizers
+  * Cele ce impun un timp minim de pregatire pentru organizatori
   * הדרכה עצמית - מאפשר לתלמידים לעבוד בקצב שלהם ובהתאם לרמת היכולת שלהם
 
 [![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planuieste de ce dispozitive ai nevoie
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Cea mai buna experienta Hour of Code are loc atunci cand ai la dispozitie calculatoare onectate la internet. Dar nu este necesar sa ai cate un calculator pentru fiecare elev, ci poti organiza o Ora de Programare faca niciun calculator.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
+  * **Testeaza tutorialele pe calculatoarele elevilor tutorials.** Asigurati-va ca functioneaza bine (cu sunet si video)).
+  * **Vedeti pagina multumiri**pentru a vizualiza ceea ce elevii vad cand termina tutorialul. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Plan ahead based on your technology available
