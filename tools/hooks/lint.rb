@@ -20,7 +20,7 @@ end
 
 def run_rubocop(files)
   Dir.chdir REPO_DIR
-  system "rubocop #{files.join(" ")}"
+  system "bundle exec rubocop #{files.join(" ")}"
 end
 
 def run_jshint(files)
