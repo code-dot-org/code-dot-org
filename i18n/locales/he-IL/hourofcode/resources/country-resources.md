@@ -8,38 +8,38 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 <% if @country == 'la' %>
 
-# Recursos
+# Resurse
 
-## Vídeos <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
+## Vídeo-uri  <iframe width="560" height="315" src="https://www.youtube.com/embed/HrBh2165KjE" frameborder="0" allowfullscreen></iframe>
 <
 
-p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del Código en Argentina (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
+p>[**De ce toti ar trebui sa invete sa programeze? Participa la Ora de Programare in Romania (5 min)**](https://www.youtube.com/watch?v=HrBh2165KjE)
 
 <% elsif @country == 'uk' %>
 
-# How-to Guide for Organizations
+# Ghidul pentru Organizatii
 
-## Use this handout to recruit corporations
+## Utilizati acest ghid pentru a recruta corporatii
 
-[<img width="500" height="300" src="<%= localized_file('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
 
-## 1) Try the tutorials:
+## 1) Incercati tutorialele:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Vom avea la dispozitie o varietate noua de tutoriale distractive, create de catre o varietate de parteneri. Noile tutoriale vor veni sa darame vechea campanie Hour of Code <%= campaign_date('full') %>.
 
-**כל התרגולים לשעה אחת של קוד:**
+**Toate tutorialele Hour of Code:**
 
-  * Require minimal prep-time for organizers
-  * הדרכה עצמית - מאפשר לתלמידים לעבוד בקצב שלהם ובהתאם לרמת היכולת שלהם
+  * Cele ce impun un timp minim de pregatire pentru organizatori
+  * Sunt auto-didacte si le permit elevilor sa lucreze la nivelul lor
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
 
-## 2) Plan your hardware needs - computers are optional
+## 2) Planuieste de ce dispozitive ai nevoie
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Cea mai buna experienta Hour of Code are loc atunci cand ai la dispozitie calculatoare onectate la internet. Dar nu este necesar sa ai cate un calculator pentru fiecare elev, ci poti organiza o Ora de Programare faca niciun calculator.
 
-  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
-  * **Preview the congrats page** to see what students will see when they finish. 
+  * **Testeaza tutorialele pe calculatoarele elevilor tutorials.** Asigurati-va ca functioneaza bine (cu sunet si video)).
+  * **Vedeti pagina multumiri**pentru a vizualiza ceea ce elevii vad cand termina tutorialul. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
 ## 3) Plan ahead based on your technology available

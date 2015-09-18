@@ -18,29 +18,36 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Va tinem la curent cu detalii privind premiile, noile tutoriale si alte noutati din aceasta toamna-iarna. Deci, ce ati putea face acum?
 
-## 1. הפיצו את השמועה
+## 1. Sign up to host
 
-ספר לחבריך על #HourOfCode.
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
+
+
+[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+
+## 2. Spread the word
+
+Spune prietenilor tai despre #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. לשאול את בית הספר שלך להציע "שעה של קוד" לתלמידים
+## 3. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
 
-## 3. Ask your employer to get involved
+## 4. Ask your employer to get involved
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
 
-## 4. Promote Hour of Code within your community
+## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Sau poti organiza o petrecere Hour of Code pentru cartierul tau.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
 

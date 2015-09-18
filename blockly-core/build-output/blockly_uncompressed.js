@@ -16189,6 +16189,12 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.minFlyoutWidth_ = 0;
   var firstBlock = xmlList && xmlList[0];
   if(firstBlock === Blockly.Variables.NAME_TYPE) {
+    for(var i = 1, xml;xml = xmlList[i];i++) {
+      if(xml.tagName && xml.tagName.toUpperCase() === "BLOCK") {
+        blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
+        gaps.push(margin * 3)
+      }
+    }
     Blockly.Variables.flyoutCategory(blocks, gaps, margin, this.blockSpace_)
   }else {
     if(firstBlock === Blockly.Procedures.NAME_TYPE) {
@@ -16208,7 +16214,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
         })
       }else {
         for(var i = 0, xml;xml = xmlList[i];i++) {
-          if(xml.tagName && xml.tagName.toUpperCase() == "BLOCK") {
+          if(xml.tagName && xml.tagName.toUpperCase() === "BLOCK") {
             blocks.push(Blockly.Xml.domToBlock(this.blockSpace_, xml));
             gaps.push(margin * 3)
           }
@@ -19034,7 +19040,10 @@ Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, blockSpace) {
     }
   }
 };
-Blockly.Variables.generateUniqueName = function() {
+Blockly.Variables.generateUniqueName = function(baseName) {
+  if(baseName) {
+    return Blockly.Variables.generateUniqueNameFromBase_(baseName)
+  }
   var variableList = Blockly.Variables.allVariables();
   var newName = "";
   if(variableList.length) {
@@ -19070,6 +19079,24 @@ Blockly.Variables.generateUniqueName = function() {
     newName = "i"
   }
   return newName
+};
+Blockly.Variables.generateUniqueNameFromBase_ = function(baseName) {
+  var variableList = Blockly.Variables.allVariables();
+  if(variableList.indexOf(baseName) === -1) {
+    return baseName
+  }
+  var num = 1;
+  var match = /^([^\d]*)(\d+)$/.exec(baseName);
+  if(match) {
+    baseName = match[1];
+    num = parseInt(match[2], 10) + 1
+  }
+  do {
+    var newName = baseName + num.toString();
+    if(variableList.indexOf(newName) === -1) {
+      return newName
+    }
+  }while(num++)
 };
 goog.provide("Blockly.FieldVariable");
 goog.require("Blockly.FieldDropdown");

@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -10,20 +12,20 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 ## 1) Sign up
 
-  * Sign up to host an [Hour of Code](http://hourofcode.com) during Dec 7-13. 
-  * Promote your [Hour of Code](http://hourofcode.com/resources) and encourage others to host.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
 
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before December 7-13.* [">Try current tutorials.](<%=  resolve_url()
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
 
 **Всички уроци на Часът на кодирането:**
 
   * Require minimal prep-time for organizers
   * Are self-guided - allowing kids to work at their own pace and skill-level
 
-[![](/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -34,7 +36,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When kids partner up, they help each other and rely less on the organizer. They’ll also see that computer science is social and collaborative.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so everyone isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
-![](/images/group_ipad.jpg)</a>
+![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Inspire participants to start your Hour of Code
 
@@ -49,7 +51,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **It’s okay if you are both brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, change the world, connect people, etc).
+  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people, etc).
   * List things that use code in everyday life.
   * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
@@ -59,7 +61,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](http://<%= codeorg_url() %>/learn) under the number of participants. 
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -69,18 +71,18 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **What to do if someone finishes early?**
 
-  * Encourage him or her to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * Or, ask those who finish early to help others who are having trouble with the activity.
 
 [col-33]
 
-![](/images/highschoolgirls.jpeg)</a>
+![](/images/fit-250/highschoolgirls.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/group_ar.jpg)</a>
+![](/images/fit-300/group_ar.jpg)
 
 [/col-33]
 
@@ -91,23 +93,24 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 ## 7) Celebrate
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
-![](/images/celebrate2.jpeg)</a>
+![](/images/fit-250/celebrate2.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/highlight-certificates.jpg)</a>
+![](/images/fit-260/highlight-certificates.jpg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/boy-certificate.jpg)</a>
+![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -124,6 +127,6 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>

@@ -1,7 +1,7 @@
 ---
 layout: wide_index
 theme: responsive
-title: "<%= hoc_s(:front_title) %>"
+title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short')) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
   "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
@@ -51,17 +51,17 @@ social:
 
 #top{style: "position:relative; /*height: #{imageheight}px; */ width:100%; overflow:hidden"}
 
-  #fullwidth0{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/fistbump.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 70% 20%"}
+  #fullwidth0{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url(#{localized_image('/images/fistbump.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 1; background-position: 70% 20%"}
 
-  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl2.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth1{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url(#{localized_image('/images/girl2.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
   #fullwidth2{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/malala.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 20%"}
 
-  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/girl-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
+  #fullwidth3{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url(#{localized_image('/images/girl-learning.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 50% 50%"}
 
-  #fullwidth4{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url('/images/kids-learning.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
+  #fullwidth4{style: "z-index: -5; position:absolute; left:0; top: 0; background-image: url(#{localized_image('/images/kids-learning.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 30% 40%"}
 
-  #fullwidth5{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url('/images/boy-certificate.jpg'); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
+  #fullwidth5{style: "z-index: -5; position:absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/boy-certificate.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height:100%; opacity: 0; background-position: 40% 50%"}
 
   #fullwidth{style: "/*position:absolute; left:0; top: 0; */width: 100%; /*height:#{imageheight}px*/"}
 

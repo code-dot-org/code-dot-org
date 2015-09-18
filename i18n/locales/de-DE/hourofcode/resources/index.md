@@ -4,38 +4,43 @@ title: <%= hoc_s(:title_resources) %> layout: wide
 
 * * *
 
+# Hour of Code Resources
+
 <% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 <%= view :resources_banner %>
 
-# Danke, dass Du Dich als Veranstalter für eine Hour of Code angemeldet hast!
+# Join Us
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
+## 1. Sign up to host
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
 
-## 1. Weitersagen
+
+[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+
+## 2. Spread the word
 
 Erzähl deinen Freunden von #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Frage deine Schule eine Hour of Code anzubieten
+## 3. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
 
-## 3. Frage deinen Arbeitgeber sich zu engagieren
+## 4. Ask your employer to get involved
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
 
-## 4. Stelle die Hour of Code deinen Freunden vor
+## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Oder hoste eine Hour of Code "Block Party" für in deiner Nachbarschaft.
 
-## 5. Frage eine öffentliche Stelle ob sie die Hour of Code unterstützen möchte
+## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view :signup_button %>

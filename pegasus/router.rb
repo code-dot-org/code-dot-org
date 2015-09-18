@@ -203,6 +203,7 @@ class Documents < Sinatra::Base
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '_2x'
 
+    path = nil
     if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
       path = resolve_image File.join(@language, dirname, basename)
     end
