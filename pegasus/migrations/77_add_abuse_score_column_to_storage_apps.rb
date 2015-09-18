@@ -3,7 +3,6 @@ Sequel.migration do
     add_column :storage_apps, :abuse_score, Integer
 
     batch_update do |row|
-      # Set :created_at.
       from(:storage_apps).where(id: row[:id]).update(abuse_score: 0)
     end
   end

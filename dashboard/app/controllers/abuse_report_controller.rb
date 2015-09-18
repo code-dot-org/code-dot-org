@@ -6,19 +6,19 @@ class AbuseReportController < ApplicationController
     HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
       headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
       body: {
-        :ticket => {
-          :requester => {
-            :name => (params[:name] == '' ? params[:email] : params[:name]),
-            :email => params[:email]
+        ticket: {
+          requester: {
+            name: (params[:name] == '' ? params[:email] : params[:name]),
+            email: params[:email]
           },
-          :subject => 'Abuse Reported',
-          :comment => {
-            :body => ["URL: #{params[:abuse_url]}",
+          subject: 'Abuse Reported',
+          comment: {
+            body: ["URL: #{params[:abuse_url]}",
               "abuse type: #{params[:abuse_type]}",
               "user detail:",
               "#{params[:abuse_detail]}"].join("\n")
           },
-          :tags => (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
+          tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
         }
       }.to_json,
       basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
@@ -30,8 +30,8 @@ class AbuseReportController < ApplicationController
         'REQUEST_METHOD' => 'POST',
         'PATH_INFO' => channels_path,
         'REQUEST_PATH' => channels_path,
-        'CONTENT_TYPE' => 'application/json;charset=utf-8',
-        'rack.input' => StringIO.new({}.to_json))
+        'rack.input' => StringIO.new({}.to_json)
+        )
     end
 
     redirect_to "https://support.code.org"
