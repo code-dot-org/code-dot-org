@@ -220,6 +220,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "när startat",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

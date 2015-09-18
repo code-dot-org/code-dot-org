@@ -220,6 +220,5 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "محیط کار: "
 }

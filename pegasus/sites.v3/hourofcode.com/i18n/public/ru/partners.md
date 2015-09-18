@@ -1,66 +1,42 @@
----
+* * *
 
 title: <%= hoc_s(:title_partners) %>
 
----
+* * *
 
 <%= view :signup_button %>
 
-<% if @country == 'la' %>
-
-# Latin America Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Australia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# United Kingdom Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-# Major Partners and Corporate Supporters
+# Главные Партнеры и Корпоративные Спонсоры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
----
+* * *
 
-# Major Promotional Partners
+# Главные рекламные партнеры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
----
+* * *
 
-# International Partners
+# Международные партнеры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
----
+* * *
 
-# Tutorial Partners
+# Партнеры по учебным материалам
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
----
+* * *
 
-# Infrastructure partners and tools
+# Промышленные партнеры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
----
+* * *
 
-# Additional Partners
+# Еще партнеры
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

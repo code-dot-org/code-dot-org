@@ -20,34 +20,27 @@ You're making it possible for students all around the world to learn one Hour of
 
 We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
-## 1. Sign up to host
-
-Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
-
-
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
-
-## 2. Spread the word
+## 1. Spre budskapet
 
 Fortell vennene dine om #Kodetimen.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
+[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-## 4. Ask your employer to get involved
+## 3. Spør arbeidsgiveren din om å bidra
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
+[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
 
-## 5. Promote Hour of Code within your community
+## 4. Promoter Kodetimen i ditt lokalsamfunn
 
-[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Eller arranger en Hour of Code i nabolaget ditt.
+Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
 

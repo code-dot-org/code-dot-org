@@ -485,45 +485,6 @@ exports.install = function(blockly, blockInstallOptions) {
         (numParam || '1') + ');\n';
   };
 
-  blockly.Blocks.studio_setItemActivity = {
-    // Block for setting the activity type on a class of items.
-    helpUrl: '',
-    init: function() {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.activityChoices), 'TYPE');
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.itemChoices), 'VALUE');
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.setActivityTooltip());
-    }
-  };
-
-  generator.studio_setItemActivity = function() {
-    // Generate JavaScript for adding items to a scene.
-    var allValues = skin.itemChoices.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var valParam = this.getTitleValue('VALUE');
-    if (valParam === 'random') {
-      valParam = 'Studio.random([' + allValues + '])';
-    }
-    var allTypes = skin.activityChoices.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var typeParam = this.getTitleValue('TYPE');
-    if (typeParam === 'random') {
-      typeParam = 'Studio.random([' + allTypes + '])';
-    }
-
-    return 'Studio.setItemActivity(\'block_id_' + this.id +
-        '\', ' +
-        valParam + ', ' +
-        typeParam + ');\n';
-  };
-
   blockly.Blocks.studio_throw = {
     // Block for throwing a projectile from a sprite.
     helpUrl: '',

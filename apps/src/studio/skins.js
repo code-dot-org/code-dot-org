@@ -594,14 +594,6 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
 
-  skin.activityChoices = [
-    [msg.setActivityRandom(), RANDOM_VALUE],
-    [msg.setActivityPatrol(), '"patrol"'],
-    [msg.setActivityChase(), '"chase"'],
-    [msg.setActivityFlee(), '"flee"'],
-    [msg.setActivityNone(), '"none"'],
-    ];
-
   // take care of items specific to skins
   switch (skin.id) {
     case 'infinity':

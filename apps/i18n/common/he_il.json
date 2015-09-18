@@ -220,6 +220,5 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "מתי לרוץ",
-  "workspaceHeaderShort": "סביבת העבודה: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "סביבת העבודה: "
 }

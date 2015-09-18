@@ -220,6 +220,5 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui käib",
-  "workspaceHeaderShort": "Tööruum: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Tööruum: "
 }

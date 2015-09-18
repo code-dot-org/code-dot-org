@@ -220,6 +220,5 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "während der Ausführung",
-  "workspaceHeaderShort": "Arbeitsbereich: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Arbeitsbereich: "
 }

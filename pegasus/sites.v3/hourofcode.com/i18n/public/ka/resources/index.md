@@ -1,48 +1,41 @@
----
+* * *
 
-title: <%= hoc_s(:title_resources) %>
-layout: wide
+title: <%= hoc_s(:title_resources) %> layout: wide
 
----
-
-# Hour of Code Resources
+* * *
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 <%= view :resources_banner %>
 
-# Join Us
+# მადლობა კოდის საათზე დარეგისტრირებისთვის!
 
-## 1. Sign up to host
+თქვენ შესაძლოს ხდით მოსწავლეებისთვის მთელს მსოფლიოში კოდის საათში ჩართვას, რასაც შეუძლია *მათი დარჩენილი ცხოვრების შეცვლა*, დეკემბრის განმავლობაში <%= campaign_date('full') %>.
 
-Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to recieve updates and qualify for prizes.   
+პრიზების, ახალი ტუტორიალებისა და სხვა საინტერესო სიახლეების შესახებ ყოველთვის შეგატყობინებთ. გაინტერესებთ, ახლა რა შეიძლება, გააკეთოთ?
 
-
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
-
-## 2. Spread the word
+## 1. გაავრცელეთ ხმა
 
 მოუყევით თქვენს მეგობრებს #HourOfCode-ის შესახებ.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის საათის ჩატარება
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your principal to encourage every classroom at your school to sign up.
+[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
 
-## 4. Ask your employer to get involved
+## 3. მიმართეთ თქვენს დამსაქმებელს რომ იმონაწილეოს
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your manager or the CEO.
+[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
 
-## 5. Promote Hour of Code within your community
+## 4. მოყევით კოდის საათის შესახებ თქვენს საზოგადოებაში
 
-[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. ან ჩაატარეთ კოდის საათის "ბლოკის წვეულება" თქვენს მიდამოში.
+დაარეგისტრირეთ ადგილობრივი ჯგუფი — ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, უნივერსიტეტების ჯგუფი ან მშრომელთა გაერთიანება. ან ჩაატარეთ კოდის საათის "უბნის წვეულება" თქვენი სამეზობლოსთვის.
 
-## 6. Ask a local elected official to support the Hour of Code
+## 5. მიმართეთ თქვენს ადგილობრივ ოფიციალური თანამდებობის პირს, მხარი დაუჭიროს კოდის საათს
 
-[Send this email](%= resolve_url('/resources/promote#sample-emails') %) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view :signup_button %>

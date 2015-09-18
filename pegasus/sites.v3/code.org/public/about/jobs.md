@@ -7,17 +7,46 @@ nav: about_nav
 
 **We are currently hiring for:**
 
+- [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
-- [Operations Coordinator  (Events) ](#opscoord)
-
-
-**No current positions, but always accepting great resumes:**
-
+- [Operations Coordinator](#opscoord)
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
 
 
+## <a name="reg-PM" href="#reg-PM">District Manager (Seattle, New York City)</a>
+
+**Job Summary:** 
+
+Code.org is recruiting for District Managers in New York City and Seattle to support Code.org’s Education team through the development, implementation, and maintenance of Code.org’s partnership model with school districts. This is a full-time, salaried position. 
+
+Responsibilities of the position include:
+
+- Recruiting school districts for potential Code.org educational partnerships 
+- Managing all partnership implementation activities with  district personnel
+- Marketing and supporting Code.org's program in the region
+
+**Skills and Qualifications:**
+
+- At least a Bachelor's degree, preferably in Education or Computer Science
+- Demonstrated ability to pitch the Code.org educational model to individuals across the full school district spectrum (superintendent to teacher) and close the agreement 
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
+- Advanced organization and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+ 
+Additional desired strengths include:
+
+- Experience working with local school districts in a project implementation capacity
+- For New York District, established relationship or prior experience with the Department of Education   
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+
+Must be a self-starter, multi-tasker, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Ability and willingness to travel up to 25% of the time is required.
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
 
@@ -50,7 +79,7 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
-Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development events across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
+Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
 
 - Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
 - Drafting communications to stakeholders, responding to requests for information, distributing materials externally
@@ -81,7 +110,7 @@ Code.org is building interactive tutorials for computer science courses starting
 **Skills and Qualifications:**
 
 - A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
+- Minimum of 3-5 years of experience as a software engineer working on Web sites or services
 - Deep expertise in either JavaScript or Ruby preferred 
 - Experience with startup culture preferred 
 
