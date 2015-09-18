@@ -27,7 +27,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to
 
 [<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
 
-## 2. Spread the word
+## 2. Divulgue
 
 Conte para seus amigos sobre a #HoraDoCodigo.
 
@@ -41,13 +41,13 @@ Conte para seus amigos sobre a #HoraDoCodigo.
 
 [Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your manager or the CEO.
 
-## 5. Promote Hour of Code within your community
+## 5. Promova a Hora do Código em sua comunidade
 
 [Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group or labor union. Ou sedie uma "festa" da Hora do Código na sua vizinhança.
 
 ## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Envie este e-mail](<%= resolve_url('/resources/promote#sample-emails') %>) para seu prefeito, Câmara Municipal ou conselho escolar e convide-os para visitar sua escola durante a Hora do Código.
 
 <%= view 'popup_window.js' %>
 

@@ -12,7 +12,7 @@ nav: how_to_nav
 
 ## 1) Try the tutorials:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+Teremos uma grande variedade de tutoriais divertidos de uma hora de duração, criados por diversos parceiros. Novos tutoriais estão a caminho para dar início à Hora do Código antes de 7-13 de dezembro.
 
 **Todos os tutoriais da Hora do Código:**
 

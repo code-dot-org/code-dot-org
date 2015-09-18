@@ -10,20 +10,20 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 ## 1) Sign up
 
-  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
+  * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](%= resolve_url('/resources') %) and encourage others to host.
 
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
 
 **모든 Hour of Code 튜토리얼들은:**
 
   * Require minimal prep-time for teachers
   * 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -34,7 +34,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **통신 속도가 느리다면?** 교실 앞에서 비디오를 보여주면, 학생들 모두가 비디오를 다운로드 받으면서 보지 않아도 됩니다. 아니면, 오프라인용 언플러그드 활동을 활용해 보세요. 
 
-![](/images/group_ipad.jpg)</a>
+![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Inspire students to start your Hour of Code
 
@@ -74,13 +74,13 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 [col-33]
 
-![](/images/highschoolgirls.jpeg)</a>
+![](/images/fit-250/highschoolgirls.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/group_ar.jpg)</a>
+![](/images/fit-300/group_ar.jpg)
 
 [/col-33]
 
@@ -96,19 +96,19 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 [col-33]
 
-![](/images/celebrate2.jpeg)</a>
+![](/images/fit-250/celebrate2.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/highlight-certificates.jpg)</a>
+![](/images/fit-260/highlight-certificates.jpg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/boy-certificate.jpg)</a>
+![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -125,6 +125,6 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](%= resolve_url('https://code.org/learn/beyond') %).
 
 <%= view :signup_button %>
