@@ -526,7 +526,7 @@ Applab.onTick = function() {
   }
 
   if (checkFinished()) {
-    Applab.onPuzzleComplete();
+    Applab.onPuzzleFinish();
   }
 };
 
@@ -769,7 +769,7 @@ Applab.init = function(config) {
 
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+    dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
   }
 
   var submitButton = document.getElementById('submitButton');
@@ -1368,8 +1368,8 @@ Applab.showSubmitConfirmation = function() {
   var buttons = document.createElement('div');
   buttons.innerHTML = require('../templates/buttons.html.ejs')({
     data: {
-      ok: true,
-      cancel: true
+      confirmText: commonMsg.dialogOK(),
+      cancelText: commonMsg.dialogCancel()
     }
   });
   contentDiv.appendChild(buttons);
@@ -1377,7 +1377,7 @@ Applab.showSubmitConfirmation = function() {
   var dialog = studioApp.createModalDialog({
     Dialog: Dialog,
     contentDiv: contentDiv,
-    defaultBtnSelector: '#ok-button'
+    defaultBtnSelector: '#confirm-button'
   });
 
   var cancelButton = buttons.querySelector('#again-button');
@@ -1387,9 +1387,9 @@ Applab.showSubmitConfirmation = function() {
     });
   }
 
-  var okButton = buttons.querySelector('#ok-button');
-  if (okButton) {
-    dom.addClickTouchEvent(okButton, function() {
+  var confirmButton = buttons.querySelector('#confirm-button');
+  if (confirmButton) {
+    dom.addClickTouchEvent(confirmButton, function() {
       Applab.onPuzzleComplete(true);
       dialog.hide();
     });
@@ -1401,6 +1401,10 @@ Applab.showSubmitConfirmation = function() {
 Applab.onPuzzleSubmit = function() {
   Applab.showSubmitConfirmation();
 };
+
+Applab.onPuzzleFinish = function() {
+  Applab.onPuzzleComplete(false); // complete without submitting
+}
 
 Applab.onPuzzleComplete = function(submit) {
   // Submit all results as success / freePlay
