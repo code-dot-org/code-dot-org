@@ -21,7 +21,7 @@ class UsersHelperTest < ActionView::TestCase
     session[:lines] = 37
     assert_equal 37, session_lines
     assert_nil session[:lines]
-    assert_equal "37", cookies[:lines]
+    assert_equal '37', cookies[:lines]
   end
 
   def test_session_level_progress
@@ -39,7 +39,7 @@ class UsersHelperTest < ActionView::TestCase
     session[:progress] = {1 => 100}
     assert_equal 100, session_level_progress(1)
     assert_nil session[:progress]
-    assert_equal JSON.generate({"1" => 100}), cookies[:progress]
+    assert_equal JSON.generate({'1' => 100}), cookies[:progress]
   end
 
   def test_summarize_user_progress_and_percent_complete
