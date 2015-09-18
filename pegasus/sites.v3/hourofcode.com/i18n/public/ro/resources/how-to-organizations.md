@@ -1,14 +1,16 @@
+---
 
+title: <%= hoc_s(:title_how_to_organizations) %>
+layout: wide
+nav: how_to_nav
 
-<div class="row">
-  <h1 class="col-sm-6">
-    Cum sa inveti o Ora de Programare
-  </h1>
-</div>
+---
 
-</div>
+<%= view :signup_button %>
 
-## 1) Încercaţi Tutorialele:
+# Bring the Hour of Code to your company
+
+## 1) Try the tutorials:
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
@@ -17,27 +19,29 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
   * Require minimal prep-time for organizers
   * Sunt auto-ghidate - permit elevilor să lucreze individual, în ritmul şi nivelul de pregatire propriu
 
-[![](http://<%= codeorg_url() %>/images/tutorials.png)](http://<%=codeorg_url() %>/learn)
+[![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)
 
-## 2) Planificati nevoile dumneavoastră hardware - calculatoarele sunt optionale
+## 2) Plan your hardware needs - computers are optional
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Testeaza tutorialele pe computerele sau dispozitivele disponibile.** Asiguraţi-vă că acestea funcţionează corect (cu sunet şi video).
-  * **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină. 
+  * **Test tutorials on student computers or devices.** Make sure they work properly (with sound and video).
+  * **Preview the congrats page** to see what students will see when they finish. 
   * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-## 3) Fa-ți planul in funcție de tehnologia disponibilă
+## 3) Plan ahead based on your technology available
 
-  * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Don't have enough devices?** Use [pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
   * **Conexiune lentă la internet?** Proiectează videclipurile pentru toată clasa, astfel elevii nu vor mai descarca videoclipurile individual. Sau încercaţi tutorialele locale.
 
-## 4) Inspira elevii - Arată-le un video
+## 4) Inspire students - show them a video
 
-Aratati-le elevilor un video inspirational pentru a excela in cadrul Hour of Code. Exemple:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Videoclipul de lansare [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) sau <% if @country == 'uk' %> [Hour of Code 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [Hour of Code 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Entuziasmeaza-ti elevii - ofera-le o scurta introducere**
+**Get your students excited - give them a short intro**
+
+<%= view :signup_button %>

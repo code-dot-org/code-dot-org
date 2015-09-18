@@ -1,8 +1,8 @@
-* * *
+---
 
 tytuł: < % = hoc_s(:title_whole_school) %> Układ: szeroki
 
-* * *
+---
 
 <%= view :signup_button %>
 
