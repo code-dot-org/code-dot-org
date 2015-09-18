@@ -65,6 +65,18 @@ post '/v2/poste/send-message' do
 
   recipients = params[:recipients].to_s.split(/[\n,;]/).map(&:strip)
 
+  if params[:recipients_file]
+    if params[:recipients_file][:type] == "text/csv"
+      recipients_csv = CSV.parse(params[:recipients_file][:tempfile].read, {headers: true})
+      if recipients_csv.headers.include?('email')
+        recipients += recipients_csv.map {|recipient| recipient["email"]}
+      else
+        return 'Invalid CSV. Make sure it has an "email" column'
+      end
+    else
+      return 'Invalid file. Make sure it is of type text/csv.'
+    end
+  end
   recipients.each do |email|
     recipient = Poste2.ensure_recipient(email, ip_address: request.ip)
     Poste2.send_message(template, recipient, template_params)
