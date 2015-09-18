@@ -6,61 +6,37 @@ title: <%= hoc_s(:title_partners) %>
 
 <%= view :signup_button %>
 
-<% if @country == 'la' %>
-
-# Latin America Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Australia Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# United Kingdom Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-# Major Partners and Corporate Supporters
+# Hauptsächliche Partner und Unterstützer
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Promotional Partners
+# Hauptsächliche Werbepartner
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# Internationale Partner
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# Lernprogramm-Partner
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure partners and tools
+# Infrastruktur-Partner und Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Weitere Partner
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

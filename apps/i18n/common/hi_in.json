@@ -220,6 +220,5 @@
   "watchVideo": "ये वीडियो देखें",
   "when": "कब",
   "whenRun": "जब चलाएँ",
-  "workspaceHeaderShort": "Workspace: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Workspace: "
 }

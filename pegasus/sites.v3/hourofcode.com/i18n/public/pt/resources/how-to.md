@@ -1,10 +1,8 @@
----
+* * *
 
-title: <%= hoc_s(:title_how_to) %>
-layout: wide
-nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
----
+* * *
 
 <%= view :signup_button %>
 
@@ -12,20 +10,20 @@ nav: how_to_nav
 
 ## 1) Cadastre-se
 
-  * Cadastre-se para sediar uma [Hora de Código](<%= resolve_url('/') %>) durante <%= campaign_date('short') %>.
-  * Promova seu evento da [Hora do Código](<%= resolve_url('/resources') %>) e incentive outras pessoas a organizarem eventos também.
+  * Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
+  * Promote your [Hour of Code](<%= resolve_url('/resources') %>) and encourage others to host.
 
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
 
-Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
 
 **Todos os tutoriais da Hora do Código:**
 
   * Exigem um tempo mínimo de preparação dos professores
   * São autoexplicativos, o que permite que os alunos trabalhem em seu próprio ritmo e nível de habilidade
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
 
@@ -36,7 +34,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
   * **Não tem dispositivos suficientes?** Use a [programação em duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando os alunos trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor. Eles também verão que a ciência da computação é uma atividade social e colaborativa.
   * **Tem baixa largura de banda?** Programe-se para mostrar os vídeos para a classe toda, assim os alunos não terão de fazer o download individualmente. Outra opção é trabalhar com os tutoriais offline.
 
-![](/images/fit-350/group_ipad.jpg)
+![](/images/group_ipad.jpg)</a>
 
 ## 5) Comece a Hora do Código inspirando os estudantes
 
@@ -53,7 +51,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
   * Explique de que forma a tecnologia interfere em nossas vidas, use exemplos que sensibilizem tanto meninos como meninas (por exemplo, salvar vidas, ajudar as pessoas, conectar as pessoas etc.).
   * Em uma atividade com a turma toda, monte uma lista com as coisas que usam a programação na vida cotidiana.
-  * Veja algumas dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
+  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Quer mais idéias de ensino?** Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de educadores experientes.
 
@@ -61,7 +59,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 **Direcione os alunos para a atividade**
 
-  * Escreva o link para o tutorial em uma lousa. Encontre o link apresentado nas [informações para seu tutorial selecionado](%= resolve_url('https://code.org/learn') %) abaixo do número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
 
 **Quando seus alunos tiverem dificuldades, não tem problema responder:**
 
@@ -71,18 +69,18 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 **O que fazer se um aluno terminar mais cedo?**
 
-  * Os alunos podem ver todos os tutoriais e participar de outra atividade da Hora do Código em [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
   * Ou, peça aos alunos que terminarem mais cedo para ajudar os colegas que estão tendo problemas com a atividade.
 
 [col-33]
 
-![](/images/fit-250/highschoolgirls.jpeg)
+![](/images/highschoolgirls.jpeg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-300/group_ar.jpg)
+![](/images/group_ar.jpg)</a>
 
 [/col-33]
 
@@ -92,25 +90,24 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## 7) Comemore
 
-  * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/resources/promote#stickers') %) stickers for your students.
+  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
 
-![](/images/fit-250/celebrate2.jpeg)
+![](/images/celebrate2.jpeg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-260/highlight-certificates.jpg)
+![](/images/highlight-certificates.jpg)</a>
 
 [/col-33]
 
 [col-33]
 
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/boy-certificate.jpg)</a>
 
 [/col-33]
 
@@ -127,6 +124,6 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 
 ## O que vem depois da Hora do Código?
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nesta jornada, [incentive seus filhos a aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>

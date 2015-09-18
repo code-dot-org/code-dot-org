@@ -22,9 +22,9 @@ crwdns47037:0crwdne47037:0
 
 # crwdns43911:0crwdne43911:0
 
-<% if @country == 'us' || @country == 'ca' || @country == 'uk' %> <a id="gift_code"></a>
+<% if @country == 'us' || @country == 'ca' || @country == 'uk' %>
 
-## crwdns48823:0crwdne48823:0
+## crwdns43912:0crwdne43912:0 {#gift_code}
 
 crwdns47038:0crwdne47038:0
 
@@ -36,21 +36,17 @@ crwdns47039:0crwdne47039:0 crwdns47040:0crwdne47040:0
 
 <% if @country == 'uk' %>
 
-<a id="video_chat"></a>
+## crwdns43917:0crwdne43917:0 {#video_chat}
 
-## crwdns48824:0crwdne48824:0
-
-crwdns48825:0crwdne48825:0 crwdns48826:0crwdne48826:0
+crwdns47041:0crwdne47041:0 crwdns47042:0crwdne47042:0
 
 <% end %>
 
 <% if @country == 'us' %>
 
-<a id="video_chat"></a>
+## crwdns43920:0crwdne43920:0 {#video_chat}
 
-## crwdns48827:0crwdne48827:0
-
-crwdns48828:0crwdne48828:0 crwdns48829:0crwdne48829:0
+crwdns47043:0crwdne47043:0 crwdns47044:0crwdne47044:0
 
 ### crwdns43923:0crwdne43923:0
 
@@ -60,21 +56,17 @@ crwdns48828:0crwdne48828:0 crwdns48829:0crwdne48829:0
 
 <% if @country == 'ca' %>
 
-<a id="brilliant_project"></a>
+## crwdns43924:0crwdne43924:0 {#brilliant_project}
 
-## crwdns48830:0crwdne48830:0
+crwdns47045:0crwdne47045:0 crwdns47046:0crwdne47046:0.
 
-crwdns48831:0crwdne48831:0 crwdns48832:0crwdne48832:0.
+## crwdns43927:0crwdne43927:0 {#actua_workshop}
 
-<a id="actua_workshop"></a>
+crwdns47047:0crwdne47047:0 crwdns47048:0crwdne47048:0 crwdns47049:0crwdne47049:0 crwdns47050:0crwdne47050:0 crwdns47051:0crwdne47051:0
 
-## crwdns48833:0crwdne48833:0
+crwdns47052:0crwdne47052:0 crwdns47053:0crwdne47053:0
 
-crwdns48834:0crwdne48834:0 crwdns48835:0crwdne48835:0 crwdns48836:0crwdne48836:0 crwdns48837:0crwdne48837:0 crwdns48838:0crwdne48838:0
-
-crwdns48839:0crwdne48839:0 crwdns48840:0crwdne48840:0
-
-**crwdns48841:0crwdne48841:0**
+**crwdns47054:0crwdne47054:0**
 
 | crwdns43936:0crwdne43936:0 | crwdns43937:0crwdne43937:0 | crwdns43938:0crwdne43938:0 |
 | -------------------------- | -------------------------- | -------------------------- |
@@ -94,28 +86,22 @@ crwdns48839:0crwdne48839:0 crwdns48840:0crwdne48840:0
 | crwdns43978:0crwdne43978:0 | crwdns43979:0crwdne43979:0 | crwdns43980:0crwdne43980:0 |
 | crwdns43981:0crwdne43981:0 | crwdns43982:0crwdne43982:0 | crwdns43983:0crwdne43983:0 |
 
-<a id="kids_code"></a>
+## crwdns43984:0crwdne43984:0 {#kids_code}
 
-## crwdns48842:0crwdne48842:0
-
-crwdns48843:0crwdne48843:0 crwdns48844:0crwdne48844:0
+crwdns47055:0crwdne47055:0 crwdns47056:0crwdne47056:0
 
 <% end %>
 
 <% if @country == 'us' || @country == 'ca' %>
 
-<a id="programmable_robots"></a>
+## crwdns43987:0crwdne43987:0 {#programmable_robots}
 
-## crwdns48845:0crwdne48845:0
-
-crwdns48846:0crwdne48846:0 crwdns48847:0crwdne48847:0 crwdns48848:0crwdne48848:0 crwdns48849:0crwdne48849:0
+crwdns47057:0crwdne47057:0 crwdns47058:0crwdne47058:0 crwdns47059:0crwdne47059:0 crwdns47060:0crwdne47060:0
 
 <% end %>
 
-<a id="more_questions"></a>
+## crwdns43992:0crwdne43992:0 {#more_questions}
 
-## crwdns48850:0crwdne48850:0
-
-crwdns48851:0crwdne48851:0
+crwdns47061:0crwdne47061:0
 
 <%= view :signup_button %>

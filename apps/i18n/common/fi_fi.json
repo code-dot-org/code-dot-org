@@ -220,6 +220,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Työtila: "
 }

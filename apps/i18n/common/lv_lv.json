@@ -220,6 +220,5 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: ",
-  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
+  "workspaceHeaderShort": "Darba virsma: "
 }
