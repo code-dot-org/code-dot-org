@@ -9,7 +9,8 @@ layout: wide
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'KodSaatı,HourOfCode' unless hoc_s(:twitter_default_text).include? '#KodSaatı' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+twitter[:hashtags] = 'KodSaatı,HourOfCode' unless hoc_s(:twitter_default_text).include? '#KodSaatı' %>
 
 <%= view :resources_banner %>
 
