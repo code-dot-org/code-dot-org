@@ -22,7 +22,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 **כל התרגולים לשעה אחת של קוד:**
 
-  * Require minimal prep-time for organizers
+  * Cele ce impun un timp minim de pregatire pentru organizatori
   * Are self-guided - allowing kids to work at their own pace and skill-level
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)

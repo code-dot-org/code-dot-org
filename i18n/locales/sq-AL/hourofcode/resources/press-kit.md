@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. Planifiko eventin tënd**
 
   * Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
-  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to parents. Ask them to spread the word.
-  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Dërgo [letër](<%= hoc_uri('/resources/#sample-emails') %>) prindërve. Kërkoni nga ata të shpërndajnë fjalën.
+  * Dërgo [letër](<%= hoc_uri('/resources/#sample-emails') %>) për të ftuar kryetarin e komunës, kongresmenët, guvernatorin, apo një biznesmeni me ndikim për të marrë pjesë dhe folur studentëve tuaj.
   * Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
-  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/resources#videos') %) to inspire.
+  * Paraqit [Videon Ora e Kodimit](<%= hoc_uri('/') %>) të Code.org apo njërën nga [këto](<%= hoc_uri('/resources#videos') %>) për motivacion.
 
 **2. Identifiko gazetarë specifik lokale që mbulojnë arsimin apo ngjarjet lokale.**
 
@@ -58,6 +58,6 @@ Në Kinë, secili nxënës mëson lëndë të shkencave kompjuterike deri në sh
 Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rris pjesëmarrjen e femrave dhe nxënësit e pakpërfaqësuar me ngjyrë. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione filantropike nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. Për më shumë informacion, ju lutem vizitoni: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Find more resources and sample emails [here](%= resolve_url('/resources') %).
+Gjeni më shumë burime dhe shembuj emaili [këtu](<%= hoc_uri('/resources') %>).
 
 <%= view :signup_button %>

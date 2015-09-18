@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_organizations) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Bring the Hour of Code to your company
+# Leve a Hora do Código para a sua empresa
 
 ## 1) Try the tutorials:
 

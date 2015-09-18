@@ -51,7 +51,7 @@ nav: promote_nav
 
 ## Ask your school, employer or friends to sign up:
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 

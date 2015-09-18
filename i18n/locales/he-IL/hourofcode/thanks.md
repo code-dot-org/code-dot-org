@@ -18,7 +18,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Va tinem la curent cu detalii privind premiile, noile tutoriale si alte noutati din aceasta toamna-iarna. Deci, ce ati putea face acum?
 
 ## 1. Sign up to host
 
@@ -29,7 +29,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to r
 
 ## 2. Spread the word
 
-ספר לחבריך על #HourOfCode.
+Spune prietenilor tai despre #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -43,7 +43,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](%= resolve_url('/') %) to r
 
 ## 5. Promote Hour of Code within your community
 
-[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](%= resolve_url('/resources/promote#sample-emails') %)— boy/girl scouts club, church, university, veterans group or labor union. Sau poti organiza o petrecere Hour of Code pentru cartierul tau.
 
 ## 6. Ask a local elected official to support the Hour of Code
 

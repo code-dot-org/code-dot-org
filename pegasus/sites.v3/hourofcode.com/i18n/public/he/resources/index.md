@@ -25,7 +25,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to
 
 ## 2. Spread the word
 
-ספר לחבריך על #HourOfCode.
+Spune prietenilor tai despre #HourOfCode.
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -39,7 +39,7 @@ Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to
 
 ## 5. Promote Hour of Code within your community
 
-[Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group or labor union. Sau poti organiza o petrecere Hour of Code pentru cartierul tau.
 
 ## 6. Ask a local elected official to support the Hour of Code
 
