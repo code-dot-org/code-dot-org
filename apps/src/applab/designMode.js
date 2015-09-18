@@ -376,6 +376,11 @@ designMode.onInsertEvent = function(code) {
 };
 
 designMode.serializeToLevelHtml = function () {
+  // TODO(dave): remove this check once design mode content is separated
+  // from divApplab: https://www.pivotaltracker.com/story/show/103544608
+  if (Applab.hideDesignMode) {
+    return;
+  }
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
   var madeUndraggable = makeUndraggable(divApplab.children().children());
