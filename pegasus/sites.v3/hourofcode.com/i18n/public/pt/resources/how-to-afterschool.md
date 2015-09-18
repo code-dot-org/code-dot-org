@@ -18,7 +18,7 @@ nav: how_to_nav
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
 
-Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
+Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>) para alunos de todas as idades, criados por diversos parceiros. *Novos tutoriais estão a caminho para dar início à Hora do Código antes de <%= campaign_date('full') %>.* [Experimente os tutoriais atuais.](<%= resolve_url("https://code.org/learn") %>)
 
 **Todos os tutoriais da Hora do Código:**
 
@@ -93,7 +93,7 @@ Para uma melhor experiência com a Hora do Código, o ideal são computadores co
 ## 7) Comemore
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seus alunos.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
+  * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/resources/promote#stickers') %>) para seus alunos.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
