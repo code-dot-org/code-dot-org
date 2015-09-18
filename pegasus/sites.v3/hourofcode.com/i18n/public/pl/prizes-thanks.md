@@ -1,8 +1,8 @@
-* * *
+---
 
 tytuł: < % = hoc_s(:Dziękujemy) %> Układ: szeroki
 
-* * *
+---
 
 <%= view :signup_button %>
 

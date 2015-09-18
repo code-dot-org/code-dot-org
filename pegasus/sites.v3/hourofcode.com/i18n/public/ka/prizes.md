@@ -1,8 +1,9 @@
-* * *
+---
 
-title: <%= hoc_s(:title_prizes) %> layout: wide
+title: <%= hoc_s(:title_prizes) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -102,6 +103,6 @@ title: <%= hoc_s(:title_prizes) %> layout: wide
 
 ## დაგრჩათ რამე კითხვები პრიზებთან დაკავშირებით? {#more_questions}
 
-გაეცანით ჩვენს წესებსა და პირობებს</a> ან ეწვიეთ ფორუმს, სადაც გაეცნობით [ხშირად დასმულ კითხვებს](http://support.code.org) და დასვამთ თქვენსას.
+შეამოწმეთ ჩვენი [ხშირად დასმული კითხვები](<%= resolve_url('https://code.org/tos') %>წესები და პირობები</a>ან ეწვიეთ ფორუმს, რათა ნახოთ <a href=) და იკითხოთ, რაც გაინტერესებთ.
 
 <%= view :signup_button %>
