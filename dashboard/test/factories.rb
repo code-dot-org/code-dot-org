@@ -17,7 +17,10 @@ FactoryGirl.define do
       birthday Date.new(1980, 03, 14)
       factory :facilitator do
         name 'Facilitator Person'
-        permission 'facilitator'
+        after(:create) do |facilitator|
+          facilitator.permission = 'facilitator'
+          facilitator.save
+        end
       end
       factory :district_contact do
         name 'District Contact Person'
@@ -260,8 +263,8 @@ FactoryGirl.define do
 
   factory :segment do
     workshop
-    start Time.now.to_i
-    self.send(:end, Time.now.to_i + 1.day)
+    start DateTime.now.utc
+    self.send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
