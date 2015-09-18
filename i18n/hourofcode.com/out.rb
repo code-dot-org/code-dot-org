@@ -165,3 +165,9 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |f
     File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
   end
 end
+
+# fix twitter tags
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+end
