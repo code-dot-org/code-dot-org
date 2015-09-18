@@ -8,7 +8,7 @@ De: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Puedes hacer posible para los estudiantes de América Latina obtener una hora de código que puede *cambiar el resto de sus vidas*. Durante Octubre 5-11 Puedes hacer posible para que los estudiantes de todo el mundo obtener una hora de código que puede *cambiar el resto de sus vidas*, durante Diciembre 7-13. <% end %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Puedes hacer posible que los estudiantes de América Latina aprendan una hora de código que puede *cambiar el resto de sus vidas*. durante octubre. 5-11 Puedes hacer posible que los estudiantes de todo el mundo aprendan una hora de código que puede *cambiar el resto de sus vidas*, durante diciembre. 7-13. <% end %>
 
 Estaremos en contacto para informar acerca de premios, nuevos tutoriales y otras novedades interesantes en otoño. Así que, ¿qué puedes hacer ahora?
 
@@ -26,7 +26,7 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 ## 4. Promociona la Hora del Código en tu comunidad
 
-Recluta a un grupo local - scouts clubs de chicos/chicas, iglesia, universidad, grupo de veteranos o sindicato. O una hora de código en la "fiesta de cuadra" de tu vecindario. [Envía este e-mail](http://<%= hostname %>/resources#email).
+Recluta a un grupo local - clubs de scouts de chicos/chicas, iglesia, universidad, grupo de veteranos o sindicato. O alberga una hora de código en la "fiesta de barrio" de tu vecindario. [Envía este e-mail](http://<%= hostname %>/resources#email).
 
 ## 5. Pídele a un funcionario electo local que apoye la Hora del Código.
 

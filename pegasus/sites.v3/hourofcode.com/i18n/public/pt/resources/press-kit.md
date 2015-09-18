@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -35,7 +37,7 @@ Procure na Internet informações de contato de jornalistas. Se não conseguir e
 
 **3. Entre em contato com a mídia local**
 
-A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
+A melhor maneira de realizar este contato é por e-mail. Ele deve ser breve e objetivo: por que outras pessoas devem se interessar por este evento? Inclua as informações de contato (entre elas, o número de um telefone celular) de quem estará no local do evento. **Veja um [exemplo de abordagem à mídia](<%= resolve_url('/resources#sample-emails') %>):**
 
 **4. Prepare-se para receber perguntas sobre o evento da sua escola. Veja os exemplos a seguir:**
 

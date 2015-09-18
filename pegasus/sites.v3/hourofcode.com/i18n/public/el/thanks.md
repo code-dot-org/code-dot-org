@@ -1,4 +1,4 @@
-* * *
+---
 
 title: <%= hoc_s(:title_signup_thanks) %> layout: wide
 
@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_signup_thanks) %> layout: wide
 
 "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
 
-* * *
+---
 
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -20,27 +20,34 @@ You're making it possible for students all around the world to learn one Hour of
 
 Θα είμαστε σε επαφή για βραβεία, νέα σεμινάρια και άλλες συναρπαστικές ενημερώσεις το φθινόπωρο. Έτσι, τι μπορείς να κάνεις τώρα;
 
-## 1. Διάδωσέ το
+## 1. Sign up to host
+
+Anyone, anywhere can host an Hour of Code. [Sign up](<%= resolve_url('/') %>) to recieve updates and qualify for prizes.   
+
+
+[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+
+## 2. Spread the word
 
 Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## Ζήτησε από όλο το σχολείο σου να προσφέρει την Ώρα του Κώδικα
+## 3. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your principal to encourage every classroom at your school to sign up.
 
-## Ζήτησε από τον εργοδότη σου να συμμετάσχει
+## 4. Ask your employer to get involved
 
-[Send this email](<%= resolve_url('/resources#email') %>) to your manager or the CEO.
+[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your manager or the CEO.
 
-## 4. Προώθησε την Ώρα Κώδικα στην κοινότητά σου
+## 5. Promote Hour of Code within your community
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Recruit a local group](<%= resolve_url('/resources/promote#sample-emails') %>)— boy/girl scouts club, church, university, veterans group or labor union. Ή φιλοξένησε μια Ώρα του Κώδικα "διασκέδασης με block" για τη γειτονιά σου.
 
-## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+## 6. Ask a local elected official to support the Hour of Code
 
-[Send this email](<%= resolve_url('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Send this email](<%= resolve_url('/resources/promote#sample-emails') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
 
 <%= view 'popup_window.js' %>
 

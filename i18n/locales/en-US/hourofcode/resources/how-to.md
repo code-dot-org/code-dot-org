@@ -91,7 +91,8 @@ crwdns48140:0[/col-33]crwdne48140:0
 ## crwdns46259:0crwdne46259:0
 
   * crwdns48141:0crwdne48141:0
-  * crwdns46261:0crwdne46261:0
+  * crwdns48605:0crwdne48605:0
+  * crwdns48606:0crwdne48606:0
 
 crwdns48142:0[col-33]crwdne48142:0
 
@@ -124,6 +125,6 @@ crwdns48147:0[/col-33]crwdne48147:0
 
 ## crwdns48150:0crwdne48150:0
 
-crwdns48151:0crwdne48151:0 crwdns48152:0crwdne48152:0 crwdns48153:0crwdne48153:0.
+crwdns48151:0crwdne48151:0 crwdns48607:0crwdne48607:0.
 
 <%= view :signup_button %>

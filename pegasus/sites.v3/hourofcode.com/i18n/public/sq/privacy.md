@@ -1,18 +1,18 @@
-* * *
+---
 
 titulli: Politika e Privatësisë
 
-* * *
+---
 
 ### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Politika e Privatësisë
 
-Date of Last Revision: August 3, 2015
+Data e Rishikimit të fundit: Gusht 3, 2015
 
 ## Rreth Code.org
 
-Code.org® është organizatë jo-fitimprurëse, e vendosur për të zgjeruar pjesmarrjen ne shkencat kompjuterike duke e bërë te arritshme në sa më shumë shkolla, dhe duke rritur pjesmarrjen e grave dhe studentëve të pa përfaqësuar me ngjyre.
+Code.org® është organizatë jofitimprurëse, e vendosur për të zgjeruar pjesmarrjen ne shkencat kompjuterike duke e bërë te arritshme në sa më shumë shkolla, dhe duke rritur pjesmarrjen e grave dhe studentëve të pa përfaqësuar me ngjyre.
 
 Ju lutem lexojeni këtë Politikën e Privatësisë (“**Shënim Mbi Privatësinë **”) me kujdes përpara se të aksesoni ose përdorni faqen e webit.
 
@@ -29,7 +29,7 @@ Shenimi jonë i Privatësisë merr jetë nga zotimi jonë mbi Parimet e Privatë
 
 ## Lajmërimi Privatësisë
 
-Ne jemi të angazhuar për krijimin e një mjedisi të qetë dhe të sigurt për nxënësit e të gjitha moshave në web faqet tona të vendosura këtu<http://code.org>,<http://csedweek.org>,<http://computinginthecore.org>,<http://hourofcode.com>, web faqe të tjera, ndërfaqe e aplikacionit ("API" jonë), dhe shërbime online (bashkarisht, "Website-i" jonë). Visitors and users of the Website and participants in our education programs are referred to individually as “User” and collectively as “Users”. Si një organizatë jo-për-fitimprurëse, 501 (c)(3), ne përdorim të dhënat që marrim vetëm për aq sa ndihmojnë misionin tonë për të siguruar një edukim të madhe të shkencave kompjuterike për çdo student që e dëshiron atë. Ne jemi themeluar si një organizatë jo-fitimprurëse kështu që një motiv për-përfitim nuk do të ndërhyjë me misionin tonë për të siguruar një burim arsimore të besuar.
+Ne jemi të angazhuar për krijimin e një mjedisi të qetë dhe të sigurt për nxënësit e të gjitha moshave në web faqet tona të vendosura këtu<http://code.org>,<http://csedweek.org>,<http://computinginthecore.org>,<http://hourofcode.com>, web faqe të tjera, ndërfaqe e aplikacionit ("API" jonë), dhe shërbime online (bashkarisht, "Website-i" jonë). Vizitorët dhe përdoruesit e Faqes së Internetit dhe pjesëmarrësit në programin tonë edukativ referohen individualisht si "Përdorues" dhe kolektivisht si "Përdoruesit". Si një organizatë jo-për-fitimprurëse, 501 (c)(3), ne përdorim të dhënat që marrim vetëm për aq sa ndihmojnë misionin tonë për të siguruar një edukim të madhe të shkencave kompjuterike për çdo student që e dëshiron atë. Ne jemi themeluar si një organizatë jo-fitimprurëse kështu që një motiv për-përfitim nuk do të ndërhyjë me misionin tonë për të siguruar një burim arsimore të besuar.
 
 Our Privacy Notice describes what information we gather from our Users, how we use that information, and what we do to protect it. Përdorimin juaj i faqes së Web-it dhe çdo informacion që ju aprovoni në faqen e Web-it janë subjekt i kushteve të këtij Njoftimi për Privatësinë, që është inkorporuar dhe në subjektin tonë të Kushteve të Përdorimit. Çdo term me germa kapitale i përdorur por jo i përcaktuar brenda këtij Njoftimi për Privatësinë kanë kuptimin e dhënë në [Kushtet e Përdorimit](http://code.org/tos). Duke vizituar ose duke përdorur faqen tonë të Web-it, ju jepni pëlqimin për praktikat e përshkruara në këtë Njoftim për Privatësinë.
 
