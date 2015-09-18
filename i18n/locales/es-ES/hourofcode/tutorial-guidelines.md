@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Guía para los tutoriales de la Hora de Programación y la semana educativa de Ciencias Computacionales
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objetivo principal es optimizar la experiencia de los estudiantes y profesores que son nuevos en las Ciencias de la Computación. Por favor usa este documento como guía para la creación de tu actividad, diseñada para usuarios sin experiencia alguna en programación ni Ciencias de la Computación.
 
@@ -23,20 +23,13 @@ Nos gustaría ofrecer una amplia variedad de opciones atractivas, pero el objeti
 
 ## Índice:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Cómo serán evaluadas las tutorías en cuánto a inclusión](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Sugerencias para diseñar tu actividad](#design)
+  * [Guía de Marca Registrada](#tm)
+  * [Rastrear un Pixel](#pixel)
+  * [Promocionar tus tutoriales, CSEdWeek, y Hora de Programación](#promote)
   * [Una nota para estudiantes con discapacidades](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Por favor incluye también nivel de conocimiento en computación requerido dentro del grado: Principiante, Intermedio o Avanzado. El sitio web de la Hora de Programación destacará principalmente actividades para Principiantes. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Requisitos técnicos: 
       * Con el fin de realizar un seguimiento más preciso de la participación, queremos que todos las terceras partes asociadas con las tutorías incluyan imágenes de seguimiento de 1 píxel en la primera y la última páginas de sus tutorías para la Hora de Programación. Coloca una imagen-pixel inicial en la página de inicio y una final en la última página. No coloques los pixeles en las páginas intermedias). Consulte la sección de Seguimiento de Pixel abajo para más detalles. 
-      * Al finalizar tu actividad, los usuarios deben ser dirigidos a [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> donde podrán: 
+      * Al finalizar tu actividad, los usuarios deben ser dirigidos a [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Compartir en las redes sociales que completaron la Hora del Programación
           * Recibir un certificado que dice que completaron la Hora de Programación
           * Ver tablas con los países/ciudades que tienen las mayores tasas de participación en las actividades de la Hora de Programación
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Opcional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Para actividades en línea (especialmente aplicaciones para smartphone/tablet): 
           * Número de usuarios

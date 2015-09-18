@@ -9,7 +9,7 @@ layout: wide
 
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
-A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em <<%= resolve_url('https://code.org/learn') %>>.
+A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação. Use este documento para orientá-lo na criação de sua atividade, a qual deve ser direcionada para o usuário que não tem nenhuma experiência em codificação, programação de computadores e ciência da computação.
 
@@ -24,20 +24,13 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 ## Índice
 
-  * [Diretrizes gerais para criar uma atividade da Hora do Código](#guidelines)  
-    
-  * [Como os tutoriais serão avaliados para inclusão](#inclusion)  
-    
-  * [Como enviar (até 15/10/2015)](#submit)  
-    
-  * [Sugestões para desenvolver sua atividade](#design)  
-    
-  * [Diretrizes da marca](#tm)  
-    
-  * [Pixel de rastreamento](#pixel)  
-    
-  * [Promovendo seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código](#promote)  
-    
+  * [Diretrizes gerais para criação de uma atividade da Hora do Código](#guidelines)
+  * [Como os tutoriais serão avaliados para inclusão](#inclusion)
+  * [Como enviar (até 15/10/2015)](#submit)
+  * [Sugestões para criação de sua atividade](#design)
+  * [Orientações sobre marcas registradas](#tm)
+  * [Pixel de rastreamento](#pixel)
+  * [Promova seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código](#promote)
   * [Aviso para estudantes com necessidades especiais](#disabilities)
 
 <a id="guidelines"></a>
@@ -158,11 +151,11 @@ Visite a [Página de envio de atividade da Hora do Código](http://goo.gl/forms/
   * Informe, também, o nível de conhecimento exigido em ciência da computação dentro do nível: iniciante, intermediário ou avançado. O site da Hora do Código dará maior destaque às atividades para iniciantes. Se você quiser preparar atividades intermediárias e avançadas para a Hora do Código, informe o conhecimento prévio necessário na descrição de sua atividade.
   * Requisitos técnicos: 
       * Para fazer um acompanhamento mais rigoroso da participação, queremos que todos os parceiros que atuam na elaboração de tutoriais incluam imagens de rastreamento de 1 pixel na primeira e última página de seus tutoriais da Hora do Código. Coloque uma imagem de 1 pixel na página inicial e uma na última página. (Não coloque pixels em páginas intermediárias). Veja a seção de rastreamento de pixels abaixo para mais detalhes. 
-      * Após terminarem suas atividades, os usuários devem ser redirecionados para [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> onde poderão: 
+      * Após terminarem suas atividades, os usuários devem ser redirecionados para [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Compartilhar nas mídias sociais que participaram da Hora do Código
           * Receber um certificado de que completaram a Hora do Código
           * Ver a classificação dos países/cidades com maiores taxas de participação em atividades da Hora do Código
-          * Para os usuários que passarem uma hora na atividade e não conseguirem concluí-la, inclua um botão em sua atividade, dizendo: "Terminei minha Hora do Código". Esse botão também deve levá-los de volta para [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %>. 
+          * Para os usuários que passarem uma hora na atividade e não conseguirem concluí-la, inclua um botão em sua atividade, dizendo: "Terminei minha Hora do Código". Esse botão também deve levá-los de volta para [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('http://code.org/api/hour/finish') %>). 
   * *(Opcional)* Faremos o acompanhamento com um link de pesquisa/formulário on-line, solicitando um relatório com as seguintes métricas de atividade da semana (das 12h01 de 7 de dezembro até as 23h59 de 13 de dezembro) 
       * Para atividades on-line (especialmente aplicativos para smartphone/tablet): 
           * Número de usuários
