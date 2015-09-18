@@ -1,47 +1,75 @@
 module UsersHelper
   include ApplicationHelper
 
+  # TODO (phil): Once all of the frontends are running the new code,
   # Returns the number of lines written in the current user session.
   # return [Integer]
   def session_lines
-    session[:lines] || 0
+    # Migrate old session line count if needed.
+    if session[:lines]
+      cookies[:lines] = session[:lines]
+      session[:lines] = nil
+    end
+
+    cookies[:lines] || 0
   end
 
-  # Add additional lines completed in the given session
+  # Add additional lines completed in the given session.
   # @param [Integer] added_lines
   def session_add_lines(added_lines)
-    session[:lines] = session_lines + added_lines
+    cookies.permanent[:lines] = session_lines + added_lines
   end
 
   # Resets all user session state (level progress, lines of code, videos seen,
   # etc.) for tests.
   def session_reset_for_test
-    session[:lines] = nil
-    session[:progress] = nil
+    cookies[:lines] = session[:lines] = nil
+    cookies[:progress] = session[:progress] = nil
     session[:callouts_seen] = nil
     session[:videos_seen] = nil
   end
+
+  def session_progress_hash
+    # Migrates session[:progress] to cookies if needed.
+    if session[:progress]
+      cookies.permanent[:progress] = JSON.generate(session[:progress])
+      session[:progress] = nil
+    end
+
+    progress_json = cookies[:progress]
+    if progress_json
+      begin
+        return JSON.parse(progress_json)
+      rescue JSON::ParserError
+        # fall through to return the empty hash.
+      end
+    end
+
+    return {}
+  end
+  private :session_progress_hash
 
   # Returns the progress value for the given level_id, or 0 if there
   # has been no progress.
   # @param [Integer] level_id
   # return [Integer]
   def session_level_progress(level_id)
-    (session[:progress] || {}).fetch(level_id.to_i, 0)
+    session_progress_hash.fetch(level_id.to_s, 0)
   end
 
   # Sets the progress for the given level_id for the current session.
   # @param [Integer] level_id
-  # @param [Integer] progress
-  def session_set_level_progress(level_id, progress)
-    session[:progress] ||= {}
-    session[:progress][level_id.to_i] = progress
+  # @param [Integer] progress_value
+  def session_set_level_progress(level_id, progress_value)
+    progress_hash = session_progress_hash
+    progress_hash[level_id.to_s] = progress_value
+    cookies[:progress] = JSON.generate(progress_hash)
   end
 
   # Returns true if there has been no progress in completing levels for
   # the current session.
   def session_levels_progress_is_empty_for_test
-    !session[:progress] || session[:progress].empty?
+    session_progress_hash.empty?
   end
 
   # Adds 'script' to the set of scripts completed for the current session.
