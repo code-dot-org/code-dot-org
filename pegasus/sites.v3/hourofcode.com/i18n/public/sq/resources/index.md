@@ -5,7 +5,7 @@ layout: wide
 
 ---
 
-# Hour of Code Resources
+# Burimet e Orës së Kodimit
 
 <% facebook = {:u=>"http://#{request.host}/al"}
 
@@ -13,7 +13,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 <%= view :resources_banner %>
 
-# Join Us
+# Bashkohu me ne
 
 ## 1. Sign up to host
 
