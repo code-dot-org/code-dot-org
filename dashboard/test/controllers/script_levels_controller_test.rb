@@ -25,7 +25,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
-    session_reset_for_test
+    session_reset
   end
 
   test 'should show script level for twenty hour' do
