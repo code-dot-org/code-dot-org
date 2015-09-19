@@ -81,6 +81,9 @@ studioApp.setCheckForEmptyBlocks(true);
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
+// For proxying non-https assets
+var MEDIA_PROXY = 'https://studio.code.org/media?u=';
+
 // Default Scalings
 Applab.scale = {
   'snapRadius': 1,
@@ -1332,10 +1335,17 @@ Applab.onCodeModeButton = function() {
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
+ *
+ * If the filename is external and non-https, route it through the MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
+
+  if (/^http:\/\//.test(filename)) {
+    return MEDIA_PROXY + encodeURIComponent(filename);
+  }
+
   filename = filename || '';
   if (filename.indexOf('/') !== -1) {
     return filename;
