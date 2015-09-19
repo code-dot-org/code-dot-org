@@ -5,7 +5,7 @@ class UsersHelperTest < ActionView::TestCase
   include UsersHelper
 
   setup do
-    session_reset_for_test
+    session_reset
   end
 
   def test_session_lines

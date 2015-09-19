@@ -20,8 +20,8 @@ module UsersHelper
   end
 
   # Resets all user session state (level progress, lines of code, videos seen,
-  # etc.) for tests.
-  def session_reset_for_test
+  # etc.) for non-signed in users.
+  def session_reset
     cookies.permanent[:lines] = session[:lines] = nil
     cookies.permanent[:progress] = session[:progress] = nil
     session[:callouts_seen] = nil
