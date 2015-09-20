@@ -1,28 +1,24 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'rack/test'
-# Removing this require eliminates constant "previous definition" warnings,
-# but breaks this test.
-require_relative '../router'
+require 'mocha/mini_test'
+require_relative 'fixtures/mock_pegasus'
 
-ENV['RACK_ENV'] = 'test'
+class EditCspTest < Minitest::Test
 
-class EditCspTest < Test::Unit::TestCase
-  include Rack::Test::Methods
-
-  def app
-    Documents
+  def setup
+    @pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
   end
 
   def test_edit_csp
     dummy_channel_id = storage_encrypt_channel_id(1, 1)
 
-    get "/edit-csp-app/#{dummy_channel_id}"
-    assert last_response.unauthorized?, "Unauthenticated user can't view edit-csp-app."
+    @pegasus.get "/edit-csp-app/#{dummy_channel_id}"
+    assert @pegasus.last_response.unauthorized?, "Unauthenticated user can't view edit-csp-app."
 
-    get "/edit-csp-table/#{dummy_channel_id}/mytable"
-    assert last_response.unauthorized?, "Unauthenticated user can't view edit-csp-table."
+    @pegasus.get "/edit-csp-table/#{dummy_channel_id}/mytable"
+    assert @pegasus.last_response.unauthorized?, "Unauthenticated user can't view edit-csp-table."
 
-    get "/edit-csp-properties/#{dummy_channel_id}"
-    assert last_response.unauthorized?, "Unauthenticated user can't view edit-csp-properties."
+    @pegasus.get "/edit-csp-properties/#{dummy_channel_id}"
+    assert @pegasus.last_response.unauthorized?, "Unauthenticated user can't view edit-csp-properties."
   end
 end
