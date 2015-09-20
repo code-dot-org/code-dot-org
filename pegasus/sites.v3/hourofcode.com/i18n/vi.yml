@@ -1,14 +1,14 @@
 vi:
   site_name: THỜI ĐIỂM của MÃ LẬP TRÌNH
   language: Tiếng Việt
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Sẽ diễn ra sớm thôi/ Quay lại sớm thôi
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh, sinh viên trên 180+ quốc gia. Bất cứ ai, bất cứ đâu đều có thể tổ chức sự kiện Giờ Mã. Một giờ hướng dẫn có sẵn trong hơn 30 ngôn ngữ. Không cần kinh nghiệm. <strong>Độ tuổi từ 4 đến 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Xem video mới
   front_watch_regular_video: Watch the video
   header_menu_resources: Nguồn xây dựng
@@ -154,10 +154,14 @@ vi:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "a href='http://hourofcode.com/resources/how-to' làm thế nào để chạy Hour of Code"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> đẩy mạnh Hour of Code"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>'
   anybody_can_learn: Bất cứ ai cũng có thể tìm hiểu.
   get_started: Bắt đầu
@@ -174,11 +178,14 @@ vi:
   front_join_us_teacher: Bạn có phải là một giáo viên?
   front_join_us_inspire: Truyền cảm hứng cho học sinh
   front_join_us_inspire_link: một Hour of Code trong lớp học.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Bạn có phải là cha/mẹ?
   front_join_us_ask_link: Đề nghị trường học của bạn
   front_join_us_ask: để tổ chức một Giờ Mã.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: mới yêu khoa học máy tính?
   front_join_us_spread: truyền bá khắp thế giới
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Hoặc tự bạn tổ chức sự kiện Giờ Mã.
   front_join_us_how_to_run: Đây là cách để bắt đầu một Giờ Mã
   front_join_us_help_promote: Giúp quảng bá Giờ Mã
@@ -190,7 +197,8 @@ vi:
   front_join_us_host: Tổ chức nó
   front_join_us_support: Hỗ trợ nó
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Tên của bạn
   signup_email_label: Email của bạn
   signup_organization_name_label: Tên trường hoặc tổ chức bạn đang học hoặc làm việc
@@ -338,6 +346,7 @@ vi:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Chân thành cám ơn
   title_prizes: Phần thưởng
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Nguồn xây dựng
   title_signup_thanks: Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

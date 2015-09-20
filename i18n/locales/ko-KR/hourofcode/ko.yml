@@ -8,7 +8,7 @@ ko:
   campaign_date_short: 12월 7일-13일
   campaign_date_full: 12월 7일-13일
   front_header_banner: '2015년 12월 7일- 12월 13일, 역사상 가장 큰 학습 이벤트에 참여하세요.'
-  front_intro_default: 'Hour of Code 행사는 전세계 180 개국 이상에서 수 천 만의 학생들과 함께 하기 위한 국제적 운동입니다. 누구나 어디에서나 Hour of Code 이벤트를 조직해서 운영할 수 있습니다. One-hour(1시간짜리) 튜토리얼이 30개 이상의 언어로 제공됩니다. 어떠한 경험도 필요하지 않습니다. <strong> 4세부터 104세까지.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 동영상 보기
   front_watch_regular_video: 비디오를 시청하세요.
   header_menu_resources: 각종 자료
@@ -154,10 +154,14 @@ ko:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: 다음은?
   whats_next_description: "여러분의 이벤트에 도움이 될 팁과 자료를 보내드립니다. 모든 인터넷 브라우저와 스마트폰에서 사용할 수 있는, 2015년 새로운 튜토리얼을 곧 제공합니다. <a href='http://code.org/learn'>현재 튜토리얼 실행하기 </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hour of Code 행사 진행방법</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Hour of Code 행사 지원하기</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>시도해보세요!</h1> <h2>Hour of Code</h2> <h3># 개 제공 중</h3>'
   anybody_can_learn: 누구나 배울 수 있습니다.
   get_started: 시작
@@ -174,11 +178,14 @@ ko:
   front_join_us_teacher: 선생님이신가요?
   front_join_us_inspire: 학생들의 열정을 자극해 주세요.
   front_join_us_inspire_link: 교실에서의 Hour of Code
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: 부모님이신가요?
   front_join_us_ask_link: 학교에 요청하세요.
   front_join_us_ask: Hour of Code 행사를 열 수 있도록.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: 그냥 컴퓨터과학(정보과학)이 좋은가요?
   front_join_us_spread: 전세계로 널리 퍼트려주세요.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: 아니면, Hour of Code 이벤트를 직접 열고 운영해 보세요.
   front_join_us_how_to_run: Hour of Code 를 하는 방법입니다.
   front_join_us_help_promote: Hour of Code 행사 진행을 도와주세요.
@@ -190,7 +197,8 @@ ko:
   front_join_us_host: 운영하기
   front_join_us_support: 도움주기
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: campaign_date 동안 Hour of Code를 구성해서, 여기 등록하세요.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 이름
   signup_email_label: 이메일
   signup_organization_name_label: 학교/소속
@@ -337,6 +345,7 @@ ko:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: 감사합니다.
   title_prizes: 상품
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: 각종 자료
   title_signup_thanks: Hour of Code! 행사를 개최하는데 가입해 주셔서 감사합니다.
   title_tutorial_guidelines: Tutorial Guidelines

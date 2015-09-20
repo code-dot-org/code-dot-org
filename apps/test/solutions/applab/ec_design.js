@@ -244,7 +244,9 @@ module.exports = {
             "levelHtml has added button");
 
           // hit clear, and click through confirmation dialog
-          // TODO - disable temporarily
+          // TODO - this seems to cause intermittent failures for some reason.
+          // disableing for now
+          
           // $("#clear-puzzle-header").click();
           // assert.equal($("#continue-button").is(':visible'), true);
           // $("#continue-button").click();

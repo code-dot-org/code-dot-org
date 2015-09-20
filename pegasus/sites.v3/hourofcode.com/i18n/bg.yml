@@ -8,7 +8,7 @@ bg:
   campaign_date_short: Декември 7-13
   campaign_date_full: Декември 7-13
   front_header_banner: Присъединете се към най-голямото обучение събитие в историята, 7-13 декември 2015 г.
-  front_intro_default: 'Часът на кодирането е глобално движение достигнало до десетки милиони  ученици от 180+ страни. Всеки, навсякъде, може да организира Часът на кодирането. Уроците са на разположение на над 30 езика. Не е необходим предварителен опит. <strong>Възраст от 4-104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Гледайте новото видео
   front_watch_regular_video: Гледай видеото
   header_menu_resources: Ресурси
@@ -154,10 +154,14 @@ bg:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: Какво следва?
   whats_next_description: "Ние ще ви изпратим материали и полезни съвети за вашето събитие. Нови уроци за 2015 очаквайте скоро за всеки браузър, смартфон- или дори без компютър! <a href='http://code.org/learn'> Опитайте текущите уроци</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Как да стартирате Часът на кодирането</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Промотирайте Часът на кодирането</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Опитайте</h1> <h2>Един час кодиране</h2> <h3># помага</h3>'
   anybody_can_learn: Всеки може да се научи.
   get_started: Начало
@@ -174,11 +178,14 @@ bg:
   front_join_us_teacher: Вие учител ли сте?
   front_join_us_inspire: Вдъхновете учениците с
   front_join_us_inspire_link: Часът на кодирането в класната стая.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Вие родител ли сте?
   front_join_us_ask_link: Попитайте в местното училище
   front_join_us_ask: дали организират Часът на кодирането.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Просто обичате компютърните науки?
   front_join_us_spread: Разпространение на новината.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Или организирайте Часът на кодирането сами.
   front_join_us_how_to_run: Ето как можете да стартирате Часът на кодирането
   front_join_us_help_promote: Помогнете ни да популяризираме Часът на кодирането
@@ -190,7 +197,8 @@ bg:
   front_join_us_host: Организирайте го
   front_join_us_support: Подкрепете го
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Организирайте един час кодиране по време на campaign_date и го регистрирайте тук.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Вашето име
   signup_email_label: Вашият имейл
   signup_organization_name_label: Име на училище или организация
@@ -336,6 +344,7 @@ bg:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Благодаря
   title_prizes: Награди
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ресурси
   title_signup_thanks: Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
   title_tutorial_guidelines: Tutorial Guidelines

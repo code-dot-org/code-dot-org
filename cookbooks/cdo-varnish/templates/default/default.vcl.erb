@@ -266,26 +266,6 @@ director dashboard round-robin {
 <% end %>
 }
 
-# api.change.org
-backend api_change_org_4 {
-  .host = "104.16.4.13";
-  .port = "80";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-backend api_change_org_5 {
-  .host = "104.16.5.13";
-  .port = "80";
-  .connect_timeout = 600s;
-  .first_byte_timeout = 600s;
-  .between_bytes_timeout = 600s;
-}
-director api_change_org round-robin {
-  { .backend = api_change_org_4; }
-  { .backend = api_change_org_5; }
-}
-
 # Respond to incoming requests.
 sub vcl_recv
 {
@@ -397,13 +377,6 @@ end
     set req.url = regsub(req.url, "^/dashboardapi/", "/api/");
     return(pass);
   }
-  else if (req.url ~ "^/api/change.org/")
-  {
-    set req.backend = api_change_org;
-    set req.http.host = "api.change.org";
-    set req.url = regsub(req.url, "^/api/change.org/", "/");
-    return(pass);
-  }
   else
   {
     set req.backend = default;
@@ -443,7 +416,7 @@ end
   }
 
   # Always cache the following file types for all users.
-  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) ) {
+  if( (req.url ~ "(?i)\.(cur|pdf|png|gif|jpeg|jpg|ico|mp3|swf|css|js)(\?[a-z0-9]+)?$") && (!(req.url ~ "^/api/")) && (req.request != "PUT") ) {
     unset req.http.Cookie;
   }
 

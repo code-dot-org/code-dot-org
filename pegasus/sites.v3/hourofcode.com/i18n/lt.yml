@@ -1,14 +1,14 @@
 lt:
   site_name: PROGRAMAVIMO VALANDA
   language: Lietuvių
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Coming Soon
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: '"Programavimo valanda" yra globali iniciatyva, kurioje dalyvauja dešimtys milijonų vaikų iš 180+ šalių. Bet kas bet kur gali organizuoti "Programavimo valandos" renginį. Užduotys yra išverstos į 30 kalbų. Dalyviams nereikia turėti jokios programavimo patirties. <strong>Amžius gali būti nuo 4 iki 104 :)</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Peržiūrėti naują vaizdo įrašą '
   front_watch_regular_video: Watch the video
   header_menu_resources: Mokomieji ištekliai
@@ -154,12 +154,16 @@ lt:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: |-
     <a href='http://hourofcode.com/resources/how-to'>Kaip vykdyti "Programavimo valandos" renginį</a>
   whats_next_promote: |-
     <a href='http://hourofcode.com/resources'>Skleiskite "Programavimo valandos" idėją</a>
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Bet kas gali išmokti.
   get_started: Start
@@ -176,11 +180,14 @@ lt:
   front_join_us_teacher: Ar esate mokytoja(s)?
   front_join_us_inspire: 'Įkvėpkite moksleivius su '
   front_join_us_inspire_link: '"Programavimo valanda" klasėje'
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Ar jūs tėvas/mama?
   front_join_us_ask_link: Ask your local school
   front_join_us_ask: to host an Hour of Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Just love computer science?
   front_join_us_spread: Spread the word.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Or organize an Hour of Code event yourself.
   front_join_us_how_to_run: 'Štai kaip vykdyti "Programavimo valandą"'
   front_join_us_help_promote: 'Padėkite populiarinti "Programavimo valandą"'
@@ -192,7 +199,8 @@ lt:
   front_join_us_host: Organizuokite
   front_join_us_support: Paremkite
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Jūsų vardas
   signup_email_label: El. paštas
   signup_organization_name_label: Mokyklos ar organizacijos pavadinimas
@@ -272,13 +280,13 @@ lt:
   hoc_faq_account_q: Ar moksleiviai turi būti prisiregistravę?
   hoc_faq_account_a: "Ne, čia nebūtina jokia registracija. Tik norintiems dalyvauti <a href='http://code.org/learn/beyond'>kituose kursuose</a>, reikia registruotis, kad būtų išsaugoma, kas jau padaryta."
   hoc_faq_frozen_q: Where is the tutorial with Anna and Elsa?
-  hoc_faq_frozen_a: "It is now published on <a href='http://%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
+  hoc_faq_frozen_a: "It is now published on <a href='%{codeorg_url}/learn'>the tutorials page</a>. We hope you enjoy it!"
   hoc_faq_high_school_q: Which activity should I do with high school students?
-  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
+  hoc_faq_high_school_a: "Across all ages, we recommend trying one of the beginner tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS."
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students have iPads rather than laptops?
-  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='http://%{codeorg_url}/learn'>%{codeorg_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
+  hoc_faq_scratch_a: "Scratch doesn't run on tablets. If your students are young, they can use the ScratchJR iPad app (for early-readers). If you look at the tutorials on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   stats_growth: Mūsų svetainė greičiausiai pasiekė 15 mln. žmonių.
   stats_i18n: Students are learning in 40 languages
@@ -337,6 +345,7 @@ lt:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Thank you
   title_prizes: Prizai
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Mokomieji ištekliai
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

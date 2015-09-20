@@ -3,6 +3,7 @@
 - <a href="<%= resolve_url('/resources/how-to-public-officials') %>"><%= hoc_s(:how_to_nav_public_officials)%></a>
 - <a href="<%= resolve_url('/resources/how-to-districts') %>"><%= hoc_s(:how_to_nav_districts)%></a>
 - <a href="<%= resolve_url('/resources/how-to-events') %>"><%= hoc_s(:how_to_nav_assemblies)%></a>
+- <a href="<%= resolve_url('/resources/how-to-organizations') %>"><%= hoc_s(:how_to_nav_organizations)%></a>
 
 <!-- 
 # Order should be educators, after school, parents, officials, districts, assemblies. Add in after school and parents
