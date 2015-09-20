@@ -21,8 +21,8 @@ Dashboard::Application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :memory_store
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.raise_delivery_errors = true
+#  config.action_mailer.delivery_method = :smtp
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true

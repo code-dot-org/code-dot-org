@@ -45,7 +45,15 @@ var omitOutgoingRequestTargets = function (node) {
  * @returns {RowMetadata}
  */
 var nodeToRowMetadata = function (node) {
-  var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
+  var displayName = node.getDisplayName();
+  var sortKey = displayName;
+  var classes = ['user-row'];
+
+  if (node.getNodeType() === NodeType.ROUTER) {
+    // Sort routers by left-padded router number (looks like natural sort)
+    sortKey = ('000' + node.routerNumber).slice(-3);
+    classes = ['router-row'];
+  }
 
   if (controller.isMyNode(node)) {
     classes.push('own-row');
@@ -53,8 +61,9 @@ var nodeToRowMetadata = function (node) {
 
   return {
     nodeID: node.entityID,
+    sortKey: sortKey,
     classAttr: classes.join(' '),
-    displayName: node.getDisplayName(),
+    displayName: displayName,
     hostname: node.getHostname(),
     status: node.getStatus(),
     isFull: node.isFull(),
@@ -68,8 +77,8 @@ var nodeToRowMetadata = function (node) {
  * @param {RowMetadata} b
  * @returns {number}
  */
-var displayNameSort = function (a, b) {
-  return (a.displayName > b.displayName) ? 1 : -1;
+var lobbySort = function (a, b) {
+  return (a.sortKey > b.sortKey) ? 1 : -1;
 };
 
 var lobbyRows = nodesOnShard
@@ -77,13 +86,13 @@ var lobbyRows = nodesOnShard
     .filter(omitIncomingConnectionNodes)
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
-    .sort(displayNameSort);
+    .sort(lobbySort);
 
 var requestRows = incomingConnectionNodes
     .filter(controller.shouldShowNode.bind(controller))
     .filter(omitOutgoingRequestTargets)
     .map(nodeToRowMetadata)
-    .sort(displayNameSort);
+    .sort(lobbySort);
 
 var outgoingRequestRows = (remoteNode ? [ remoteNode ] : [])
     .filter(controller.shouldShowNode.bind(controller))

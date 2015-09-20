@@ -4,7 +4,8 @@ content1 'In symmetric encryption the same key is used to encrypt and decrypt a 
 
 
 teacher_markdown <<MARKDOWN
-Answers may vary, but should include the following concepts:
+Answers may vary, but could include the following concept:
 
--
+- The use of asymmetric keys allows for people who haven't agreed in advance on a key to build one without having to share it in secret. 
+
 MARKDOWN
