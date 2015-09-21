@@ -215,7 +215,7 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
 end
 
 Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
-  element_has_attribute(selector, attribute, expectedText)
+  element_has_attribute(selector, attribute, replace_hostname(expectedText))
 end
 
 # The second regex encodes that ids should not contain spaces or quotes.

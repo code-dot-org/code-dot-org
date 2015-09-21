@@ -47,4 +47,4 @@ Feature: App Lab Scenarios
     And I press keys "image('test123', 'http://example.com')" for element ".ace_text-input"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://studio.code.org/media?u=http%3A%2F%2Fexample.com"
+    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "//studio.code.org/media?u=http%3A%2F%2Fexample.com"
