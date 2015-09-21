@@ -31,5 +31,3 @@ Learn the basic concepts of Computer Science with drag and drop programming. Thi
 - [Hour of Code: How-To Guide for Educators](https://hourofcode.com/us/en/resources/how-to)
 - [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-
-<button>[Back to Hour of Code](http://hourofcode.com)</button>
