@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;

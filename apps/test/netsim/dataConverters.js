@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
@@ -86,8 +85,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when chunk size is zero or less", function () {
-      assertThrows(RangeError, formatAB.bind(null, '', 0));
-      assertThrows(RangeError, formatAB.bind(null, '', -1));
+      assert.throws(formatAB.bind(null, '', 0), RangeError);
+      assert.throws(formatAB.bind(null, '', -1), RangeError);
     });
 
     it("respects optional 'offset' argument", function () {
@@ -160,8 +159,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when width of zero or less is requested", function () {
-      assertThrows(RangeError, intToAB.bind(null, 10, 0));
-      assertThrows(RangeError, intToAB.bind(null, 10, -1));
+      assert.throws(intToAB.bind(null, 10, 0), RangeError);
+      assert.throws(intToAB.bind(null, 10, -1), RangeError);
     });
   });
 
@@ -231,8 +230,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when chunk size is zero or less", function () {
-      assertThrows(RangeError, formatBinary.bind(null, '', 0));
-      assertThrows(RangeError, formatBinary.bind(null, '', -1));
+      assert.throws(formatBinary.bind(null, '', 0), RangeError);
+      assert.throws(formatBinary.bind(null, '', -1), RangeError);
     });
 
     it("respects optional 'offset' argument", function () {
@@ -284,8 +283,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when chunk size is zero or less", function () {
-      assertThrows(RangeError, formatHex.bind(null, '', 0));
-      assertThrows(RangeError, formatHex.bind(null, '', -1));
+      assert.throws(formatHex.bind(null, '', 0), RangeError);
+      assert.throws(formatHex.bind(null, '', -1), RangeError);
     });
 
     it("respects optional 'offset' argument at aligned chunk sizes", function () {
@@ -396,8 +395,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when width of zero or less is requested", function () {
-      assertThrows(RangeError, intToBinary.bind(null, 10, 0));
-      assertThrows(RangeError, intToBinary.bind(null, 10, -1));
+      assert.throws(intToBinary.bind(null, 10, 0), RangeError);
+      assert.throws(intToBinary.bind(null, 10, -1), RangeError);
     });
   });
 
@@ -460,8 +459,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when width of zero or less is requested", function () {
-      assertThrows(RangeError, intToHex.bind(null, 15, 0));
-      assertThrows(RangeError, intToHex.bind(null, 15, -1));
+      assert.throws(intToHex.bind(null, 15, 0), RangeError);
+      assert.throws(intToHex.bind(null, 15, -1), RangeError);
     });
   });
 
@@ -648,8 +647,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when byteSize of zero or less is requested", function () {
-      assertThrows(RangeError, asciiToBinary.bind(null, 'a', 0));
-      assertThrows(RangeError, asciiToBinary.bind(null, 'a', -1));
+      assert.throws(asciiToBinary.bind(null, 'a', 0), RangeError);
+      assert.throws(asciiToBinary.bind(null, 'a', -1), RangeError);
     });
   });
 
@@ -691,8 +690,8 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when byteSize of zero or less is requested", function () {
-      assertThrows(RangeError, binaryToAscii.bind(null, '01100001', 0));
-      assertThrows(RangeError, binaryToAscii.bind(null, '01100001', -1));
+      assert.throws(binaryToAscii.bind(null, '01100001', 0), RangeError);
+      assert.throws(binaryToAscii.bind(null, '01100001', -1), RangeError);
     });
   });
 
@@ -720,7 +719,7 @@ describe("DataConverters", function () {
     });
 
     it("throws an exception when given a non-binary String", function () {
-      assertThrows(TypeError, binaryToBase64.bind(null, 'some non-binary String'));
+      assert.throws(binaryToBase64.bind(null, 'some non-binary String'), TypeError);
     });
 
     it("zero-pads on right when binary length doesn't divide into byteSize", function () {
@@ -816,7 +815,7 @@ describe("DataConverters", function () {
   describe("base64ToBinary", function () {
     var base64ToBinary = DataConverters.base64ToBinary;
     it("throws an exception when given a non-base64-encoded String", function () {
-      assertThrows(TypeError, base64ToBinary.bind(null, 'some non-base64 String'));
+      assert.throws(base64ToBinary.bind(null, 'some non-base64 String'), TypeError);
     });
   });
 

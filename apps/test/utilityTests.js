@@ -7,7 +7,6 @@ var utils = require('@cdo/apps/utils');
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 var _ = require('lodash');
 var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
@@ -31,15 +30,15 @@ describe("String.prototype.repeat", function () {
   });
 
   it ("throws RangeError when given a negative count", function () {
-    assertThrows(RangeError, function () {
+    assert.throws(function () {
       'a'.repeat(-1);
-    });
+    }, RangeError);
   });
 
   it ("throws RangeError when given an infinity count", function () {
-    assertThrows(RangeError, function () {
+    assert.throws(function () {
       'a'.repeat(Infinity);
-    });
+    }, RangeError);
   });
 
   // Note: Was going to text maximum output string length, but implementation

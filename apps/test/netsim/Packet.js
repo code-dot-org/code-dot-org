@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -64,12 +63,12 @@ describe("Packet.Encoder", function () {
         "and an address field is present", function () {
       var packetCountBits = 4;
       var headerFields = [ "toAddress" ];
-      assertThrows(Error, function () {
+      assert.throws(function () {
         var format = new Packet.Encoder("", packetCountBits, headerFields);
-      });
-      assertThrows(Error, function () {
+      }, Error);
+      assert.throws(function () {
         var format = new Packet.Encoder("a.b.c", packetCountBits, headerFields);
-      });
+      }, Error);
     });
 
     it("ignores addressFormat when no address field is present", function () {
@@ -82,12 +81,12 @@ describe("Packet.Encoder", function () {
     it("throws on construction if packetCountBitWidth is zero and packet " +
         " fields are present", function () {
       var addressFormat = "4";
-      assertThrows(Error, function () {
+      assert.throws(function () {
         var format = new Packet.Encoder(addressFormat, 0, ["packetIndex"]);
-      });
-      assertThrows(Error, function () {
+      }, Error);
+      assert.throws(function () {
         var format = new Packet.Encoder(addressFormat, 0, ["packetCount"]);
-      });
+      }, Error);
     });
 
     it("ignores zero packetCountBitWidth if no packet fields are used", function () {
@@ -108,20 +107,20 @@ describe("Packet.Encoder", function () {
     it("throws if unknown header field type is passed", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
-      assertThrows(Error, function () {
+      assert.throws(function () {
         var format = new Packet.Encoder(addressFormat, packetFieldWidth, ["otherField"]);
-      });
+      }, Error);
     });
 
     it("throws if a valid field shows up multiple times", function () {
       var addressFormat = '4';
       var packetFieldWidth = 4;
-      assertThrows(Error, function () {
+      assert.throws(function () {
         var format = new Packet.Encoder(addressFormat, packetFieldWidth, [
           "packetIndex",
           "packetIndex"
         ]);
-      });
+      }, Error);
     });
 
     it("allows different valid fields together in the header", function () {
@@ -264,9 +263,9 @@ describe("Packet.Encoder", function () {
 
       var format = new Packet.Encoder('8', 0, ['toAddress']);
 
-      assertThrows(Error, function () {
+      assert.throws(function () {
         format.getHeader('fromAddress', packet);
-      });
+      }, Error);
     });
 
     it("returns zeroes when getting a key that is beyond the binary length", function () {

@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeStorageTable = NetSimTestUtils.fakeStorageTable;
 
@@ -50,13 +49,13 @@ describe("NetSimTable", function () {
   });
 
   it("throws if constructed with missing arguments", function () {
-    assertThrows(TypeError, function () {
+    assert.throws(function () {
       var _ = new NetSimTable('just-one-argument');
-    });
+    }, TypeError);
 
-    assertThrows(TypeError, function () {
+    assert.throws(function () {
       var _ = new NetSimTable('just-two', 'arguments');
-    });
+    }, TypeError);
   });
 
   describe("throws if constructed with invalid options", function () {
@@ -79,62 +78,62 @@ describe("NetSimTable", function () {
       });
 
       it("rejects numbers", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: 45.302
           });
-        });
-        assertThrows(TypeError, function () {
+        }, TypeError);
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: -88
           });
-        });
+        }, TypeError);
       });
 
       it("rejects `null`", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: null
           });
-        });
+        }, TypeError);
       });
 
       it("rejects strings", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: "twenty hours"
           });
-        });
+        }, TypeError);
       });
 
       it("rejects objects", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: {}
           });
-        });
+        }, TypeError);
       });
 
       it("rejects Infinities", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: Infinity
           });
-        });
+        }, TypeError);
 
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: -Infinity
           });
-        });
+        }, TypeError);
       });
 
       it("rejects NaN", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: NaN
           });
-        });
+        }, TypeError);
       });
     });
     
@@ -156,57 +155,57 @@ describe("NetSimTable", function () {
       });
 
       it("rejects negative numbers", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: -88
           });
-        });
+        }, TypeError);
       });
 
       it("rejects `null`", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: null
           });
-        });
+        }, TypeError);
       });
 
       it("rejects strings", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: "twenty hours"
           });
-        });
+        }, TypeError);
       });
 
       it("rejects objects", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: {}
           });
-        });
+        }, TypeError);
       });
 
       it("rejects Infinities", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: Infinity
           });
-        });
+        }, TypeError);
 
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: -Infinity
           });
-        });
+        }, TypeError);
       });
 
       it("rejects NaN", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: NaN
           });
-        });
+        }, TypeError);
       });
     });
 
@@ -228,57 +227,57 @@ describe("NetSimTable", function () {
       });
 
       it("rejects negative numbers", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: -88
           });
-        });
+        }, TypeError);
       });
 
       it("rejects `null`", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: null
           });
-        });
+        }, TypeError);
       });
 
       it("rejects strings", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: "twenty hours"
           });
-        });
+        }, TypeError);
       });
 
       it("rejects objects", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: {}
           });
-        });
+        }, TypeError);
       });
 
       it("rejects Infinities", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: Infinity
           });
-        });
+        }, TypeError);
 
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: -Infinity
           });
-        });
+        }, TypeError);
       });
 
       it("rejects NaN", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: NaN
           });
-        });
+        }, TypeError);
       });
     });
 
@@ -300,57 +299,57 @@ describe("NetSimTable", function () {
       });
 
       it("rejects negative numbers", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: -88
           });
-        });
+        }, TypeError);
       });
 
       it("rejects `null`", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: null
           });
-        });
+        }, TypeError);
       });
 
       it("rejects strings", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: "twenty hours"
           });
-        });
+        }, TypeError);
       });
 
       it("rejects objects", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: {}
           });
-        });
+        }, TypeError);
       });
 
       it("rejects Infinities", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: Infinity
           });
-        });
+        }, TypeError);
 
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: -Infinity
           });
-        });
+        }, TypeError);
       });
 
       it("rejects NaN", function () {
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: NaN
           });
-        });
+        }, TypeError);
       });
     });
   });
