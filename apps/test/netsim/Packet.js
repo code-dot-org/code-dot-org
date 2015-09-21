@@ -1,10 +1,16 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var Packet = require('@cdo/apps/netsim/Packet');
 
 describe("Packet.Encoder", function () {
@@ -58,6 +64,7 @@ describe("Packet.Encoder", function () {
   });
 
   describe("format validation", function () {
+    /* jshint unused: false */
 
     it("throws on construction if addressFormat in interpreted as zero-length " +
         "and an address field is present", function () {
@@ -131,6 +138,8 @@ describe("Packet.Encoder", function () {
         "packetCount"
       ]);
     });
+
+    /* jshint unused: true */
   });
 
   describe("constructing binary from data", function () {

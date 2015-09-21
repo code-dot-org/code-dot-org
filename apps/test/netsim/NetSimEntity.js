@@ -1,17 +1,24 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
+
+var assert = testUtils.assert;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimEntity", function () {
   it("default entityID is undefined", function () {

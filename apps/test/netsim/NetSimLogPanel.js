@@ -1,18 +1,21 @@
 /** @file Tests for NetSimLogPanel */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
 /* global $, describe, beforeEach, it */
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
-
-/** binary to ascii */
-function to_a(binary) {
-  return DataConverters.binaryToAscii(binary, 8);
-}
 
 /** ascii to binary */
 function to_b(ascii) {

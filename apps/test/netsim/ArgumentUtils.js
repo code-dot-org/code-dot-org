@@ -1,6 +1,15 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
 describe("ArgumentUtils", function () {
@@ -35,34 +44,34 @@ describe("ArgumentUtils", function () {
   describe("extendOptionsObject", function () {
 
     it("is valid to pass empty object", function () {
-      var _ = ArgumentUtils.extendOptionsObject({});
+      ArgumentUtils.extendOptionsObject({});
     });
 
     it("is valid to pass undefined", function () {
-      var _ = ArgumentUtils.extendOptionsObject(undefined);
+      ArgumentUtils.extendOptionsObject(undefined);
     });
 
     it("throws TypeError if passed null", function () {
       assert.throws(function () {
-        var _ = ArgumentUtils.extendOptionsObject(null);
+        ArgumentUtils.extendOptionsObject(null);
       }, TypeError);
     });
 
     it("throws TypeError if passed non-object", function () {
       assert.throws(function () {
-        var _ = ArgumentUtils.extendOptionsObject("string");
+        ArgumentUtils.extendOptionsObject("string");
       }, TypeError);
 
       assert.throws(function () {
-        var _ = ArgumentUtils.extendOptionsObject(15); // number
+        ArgumentUtils.extendOptionsObject(15); // number
       }, TypeError);
 
       assert.throws(function () {
-        var _ = ArgumentUtils.extendOptionsObject(true); // boolean
+        ArgumentUtils.extendOptionsObject(true); // boolean
       }, TypeError);
 
       assert.throws(function () {
-        var _ = ArgumentUtils.extendOptionsObject(NaN); // Not-a-number
+        ArgumentUtils.extendOptionsObject(NaN); // Not-a-number
       }, TypeError);
     });
 
@@ -93,7 +102,7 @@ describe("ArgumentUtils", function () {
     it("throws Error if extending would overwrite existing 'get' property", function () {
       assert.throws(function () {
         var originalOptions = { get: 1 };
-        var _ = ArgumentUtils.extendOptionsObject(originalOptions);
+        ArgumentUtils.extendOptionsObject(originalOptions);
       }, Error);
     });
 

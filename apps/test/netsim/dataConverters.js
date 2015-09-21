@@ -1,6 +1,15 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, it */
 
+var assert = require('../util/testUtils').assert;
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 describe("DataConverters", function () {
@@ -706,8 +715,8 @@ describe("DataConverters", function () {
      * @param {Base64Payload} right
      */
     var assertBase64NotEqual = function (left, right) {
-      var stringsEqual = (left.string == right.string);
-      var lensEqual = (left.len == right.len);
+      var stringsEqual = (left.string === right.string);
+      var lensEqual = (left.len === right.len);
       assert(!(stringsEqual && lensEqual), "Expected " + JSON.stringify(left) + " and " +
         JSON.stringify(right) + " to be not equal, but they are");
     };

@@ -1,15 +1,24 @@
 /** @file Tests for NetSimRouterLogModal */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
 /* global $, describe, beforeEach, it */
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assert = testUtils.assert;
 
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
+
+var assert = require('../util/testUtils').assert;
+var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimRouterLogModal", function () {
 
