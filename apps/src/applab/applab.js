@@ -1332,17 +1332,20 @@ Applab.onCodeModeButton = function() {
   }
 };
 
+var HTTP_REGEXP = new RegExp('^http://');
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
  *
- * If the filename is external and non-https, route it through the MEDIA_PROXY.
+ * If the filename URL is absolute and non-https, route it through the
+ * MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
-  if (/^http:\/\//.test(filename)) {
+  if (HTTP_REGEXP.test(filename)) {
     return MEDIA_PROXY + encodeURIComponent(filename);
   }
 
