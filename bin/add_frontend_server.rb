@@ -55,7 +55,7 @@ instances = ec2client.describe_instances
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
 frontend_instances = instances.reservations.map do |reservation|
   reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
- end
+end
 
 frontend_instances.flatten!
 
