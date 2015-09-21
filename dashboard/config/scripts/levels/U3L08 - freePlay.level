@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-09-15T20:58:31.000Z",
+  "created_at": "2015-09-18T21:21:30.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -127,13 +127,16 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": "GPXFnF+1wV0v9rwXPd0VYlBfXKUCc+LQo4fBvFOBPV05iBekTaW0yMm3cBn2\noDoi\n",
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
-    "instructions": "Add a parameter to drawFish() that changes the size of the fish drawn. (Click to see full instructions)",
-    "markdown_instructions": "# Adding parameters to functions: drawSeaGrass()\r\n\r\nLet's update our `drawFish()` function to accept a parameter. Currently `drawFish()` can only draw a fish of size 30.\r\n\r\n**Add a parameter** to the function definition for `drawFish()` that allows you to control its size (Note: the pen width is important here). Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawFish()` and change the size of the fish in your image.\r\n\r\n![](https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55 PM.png)",
+    "instructions": "Keep adding to your image by making more calls to your new functions with parameters. (Click to see full instructions)",
+    "markdown_instructions": "# Keep going!\r\n\r\nAt this point you've seen how parameters can help **generalize the behavior of a function** to perform a variety of tasks, not just one. This will prove to be a very useful skill as we continue to develop as programmers.\r\n\r\nFor now, **keep adding to your drawing**. Make more function calls and see if you can continue to use **random numbers** to add variety to your drawings.\r\n\r\n![](https://images.code.org/514994b00554eac86c2a762177b77493-image-1442611547075.58.11 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
+    "slider_speed": "1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
