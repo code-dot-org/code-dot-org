@@ -6,8 +6,8 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "x": "60",
-    "y": "150",
+    "x": "90",
+    "y": "175",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -41,25 +41,108 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
+        <category name="Actions">
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveBackward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnRight</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnLeft</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn" inline="false">
+            <mutation name="draw a shape">
+              <arg name="length"/>
+              <arg name="sides"/>
+            </mutation>
+          </block>
+          <block type="procedures_defnoreturn" uservisible="false">
+            <mutation>
+              <arg name="length"/>
+              <arg name="sides"/>
+              <description>draw a shape function block with length and sides parameters</description>
+            </mutation>
+            <title name="NAME">draw a shape</title>
+            <statement name="STACK">
+              <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <value name="TIMES">
+                  <block type="parameters_get" uservisible="false">
+                    <title name="VAR">sides</title>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="draw_move" inline="true" uservisible="false">
+                    <title name="DIR">moveForward</title>
+                    <value name="VALUE">
+                      <block type="parameters_get" uservisible="false">
+                        <title name="VAR">length</title>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="draw_turn" inline="true" uservisible="false">
+                        <title name="DIR">turnRight</title>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" inline="true" uservisible="false">
+                            <title name="OP">DIVIDE</title>
+                            <value name="A">
+                              <block type="math_number" uservisible="false">
+                                <title name="NUM">360</title>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="parameters_get" uservisible="false">
+                                <title name="VAR">sides</title>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -70,31 +153,40 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
-              <statement name="DO">
+            <block type="draw_width" inline="false">
+              <value name="WIDTH">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">6</title>
+                  <title name="TIMES">3</title>
                   <statement name="DO">
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">40</title>
+                    <block type="controls_repeat">
+                      <title name="TIMES">6</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">30</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">60</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
                       <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">60</title>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">90</title>
                         </block>
                       </next>
                     </block>
                   </statement>
-                  <next>
-                    <block type="jump_by_constant">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE">120</title>
-                    </block>
-                  </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>
