@@ -1,3 +1,5 @@
+/* global $ */
+
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
@@ -38,7 +40,7 @@ var levelDefinition = {
   "instructions": "Draw a square ABOVE and to the RIGHT of the starting location. (Click to show full instructions)",
   "calloutJson": "[]",
   "aniGifURL": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
-  "showTurtleBeforeRun": false,
+  "showTurtleBeforeRun": true,
   "autocompletePaletteApisOnly": true,
   "textModeAtStart": false,
   "designModeAtStart": false,
@@ -48,88 +50,53 @@ var levelDefinition = {
   "puzzle_number": 3,
   "stage_total": 7,
   "noPadding": null,
-  "lastAttempt": "moveForward();\n",
+  "lastAttempt": "",
   "levelHtml": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"divApplab\" class=\"appModern\" tabindex=\"1\" style=\"width: 200px; height: 200px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 200px; width: 200px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
-  "id": "custom"
+  "id": "custom",
 };
 
-function dragApplabBlock() {
-  var start = { x: 532, y: 165 };
-  var end = { x: 850, y: 150 };
 
-  var mousedown = new MouseEvent('mousedown', {
-    which: 1,
-    clientX: start.x,
-    clientY: start.y
-  });
 
-  var drag = new MouseEvent('mousemove', {
-    which: 0,
-    bubbles: true,
-    cancelable: false,
-    clientX: end.x,
-    clientY: end.y
-  });
+/**
+ * Simulates dragging the nth block in the toolbox into the canvas at line
+ * targetIndex (assumes all blocks are size 30).
+ * @param {number} blockIndex Nth block in toolbox
+ * @param {number} targetIndex Nth line in target
+ */
+function dragToolboxBlock(blockIndex, targetIndex) {
+  var start = {
+    x: $(".droplet-palette-canvas").eq(0).offset().left + 10,
+    y: $(".droplet-palette-canvas").eq(0).offset().top + 10 +
+      blockIndex * 30
+  };
+  var end = {
+    x: $(".droplet-main-canvas").eq(0).offset().left,
+    y: $(".droplet-main-canvas").eq(0).offset().top +
+      targetIndex * 30
+  };
 
-  var mouseup = new MouseEvent('mousedown', {
-    which: 1,
-    bubbles: true,
-    cancelable: true,
-    clientX: end.x,
-    clientY: end.y
-  });
+  var mousedown = testUtils.createMouseEvent('mousedown', start.x, start.y);
+  var drag = testUtils.createMouseEvent('mousemove', end.x, end.y);
+  var mouseup = testUtils.createMouseEvent('mouseup', end.x, end.y);
 
   $(".droplet-drag-cover")[0].dispatchEvent(mousedown);
   $(".droplet-drag-cover")[0].dispatchEvent(drag);
-  // $(".droplet-drag-cover")[0].dispatchEvent(mouseup);
+  $(".droplet-drag-cover")[0].dispatchEvent(mouseup);
 }
 
-function foo () {
-  function mouseEvent(type, sx, sy, cx, cy) {
-    var evt;
-    var e = {
-      bubbles: true,
-      cancelable: (type != "mousemove"),
-      view: window,
-      detail: 0,
-      screenX: sx,
-      screenY: sy,
-      clientX: cx,
-      clientY: cy,
-      ctrlKey: false,
-      altKey: false,
-      shiftKey: false,
-      metaKey: false,
-      button: 0,
-      relatedTarget: undefined
-    };
-    if (typeof( document.createEvent ) == "function") {
-      evt = document.createEvent("MouseEvents");
-      evt.initMouseEvent(type,
-        e.bubbles, e.cancelable, e.view, e.detail,
-        e.screenX, e.screenY, e.clientX, e.clientY,
-        e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
-        e.button, document.body.parentNode);
-    } else if (document.createEventObject) {
-      evt = document.createEventObject();
-      for (prop in e) {
-      evt[prop] = e[prop];
+// Extract a list of those pixels that are actually filled
+function getColoredPixels(imageData, width, height) {
+  var list = [];
+  for (var y = 0; y < 400; y++) {
+    for (var x = 0; x < 400; x++) {
+      // we only care about the alpha bit
+      var index = (y * 400 + x) * 4 + 3;
+      if (imageData.data[index] !== 0) {
+        list.push([x, y]);
+      }
     }
-      evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
-    }
-    return evt;
   }
-  function dispatchEvent (el, evt) {
-    if (el.dispatchEvent) {
-      el.dispatchEvent(evt);
-    } else if (el.fireEvent) {
-      el.fireEvent('on' + type, evt);
-    }
-    return evt;
-  }
-
-  var evt = mouseEvent("mousemove", 540, 176, 540, 176);
-  dispatchEvent($(".droplet-drag-cover")[0], evt);
+  return list;
 }
 
 module.exports = {
@@ -142,12 +109,66 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-        // room to add tests here
+        var moveForward = 0;
+        var turnLeft = 1;
+
+        var nextIndex = 0;
+        function appendToolboxBlock(blockIndex) {
+          dragToolboxBlock(blockIndex, nextIndex++);
+        }
+
+        appendToolboxBlock(moveForward);
+        assert.equal(Applab.getCode(), 'moveForward();\n');
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(moveForward);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(moveForward);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(turnLeft);
+        appendToolboxBlock(moveForward);
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function () {
+        testUtils.runOnAppTick(Applab, 10, function () {
+          var imageData = document.getElementById('turtleCanvas')
+            .getContext('2d').getImageData(0, 0, 400, 400);
+
+          var pixels = getColoredPixels(imageData, 400, 400);
+
+          var expectedPixels = [];
+          var x, y;
+          for (x = 100; x <= 124; x++) {
+            expectedPixels.push([x, 74]);
+          }
+          for (x = 99; x <= 125; x++) {
+            expectedPixels.push([x, 75]);
+          }
+          for (y = 76; y <= 98; y++) {
+            expectedPixels.push([99, y]);
+            expectedPixels.push([100, y]);
+            expectedPixels.push([124, y]);
+            expectedPixels.push([125, y]);
+          }
+          for (x = 99; x <= 125; x++) {
+            expectedPixels.push([x, 99]);
+          }
+          for (x = 100; x <= 124; x++) {
+            expectedPixels.push([x, 100]);
+          }
+          assert.deepEqual(pixels, expectedPixels);
+
           Applab.onPuzzleComplete();
-        }, 1);
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
       },
       expected: {
         result: true,

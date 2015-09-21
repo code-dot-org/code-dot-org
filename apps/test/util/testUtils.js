@@ -214,7 +214,7 @@ exports.debugMode = function () {
 
 /**
  * jQuery.simulate was having issues in phantom, so I decided to roll my own
- * drag simulation. May belong in a util file.
+ * drag simulation.
  * @param {string} type ElementType to be dragged in
  * @param {number} left Horizontal offset from top left of visualization to drop at
  * @param {number} top Vertical offset from top left of visualization to drop at
@@ -239,4 +239,46 @@ exports.dragToVisualization = function (type, left, top) {
   element.trigger(mousedown);
   $(document).trigger(drag);
   $(document).trigger(mouseup);
+};
+
+/**
+ * From: http://marcgrabanski.com/simulating-mouse-click-events-in-javascript
+ * Creates a mouse event of the given type with the given clientX/clientY
+ * @param {string} type
+ * @param {number} clientX
+ * @param {number} clientY
+ */
+exports.createMouseEvent = function mouseEvent(type, clientX, clientY) {
+  var evt;
+  var e = {
+    bubbles: true,
+    cancelable: (type != "mousemove"),
+    view: window,
+    detail: 0,
+    screenX: undefined,
+    screenY: undefined,
+    clientX: clientX,
+    clientY: clientY,
+    ctrlKey: false,
+    altKey: false,
+    shiftKey: false,
+    metaKey: false,
+    button: 0,
+    relatedTarget: undefined
+  };
+  if (typeof( document.createEvent ) == "function") {
+    evt = document.createEvent("MouseEvents");
+    evt.initMouseEvent(type,
+      e.bubbles, e.cancelable, e.view, e.detail,
+      e.screenX, e.screenY, e.clientX, e.clientY,
+      e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
+      e.button, document.body.parentNode);
+  } else if (document.createEventObject) {
+    evt = document.createEventObject();
+    for (var prop in e) {
+      evt[prop] = e[prop];
+    }
+    evt.button = { 0:1, 1:4, 2:2 }[evt.button] || evt.button;
+  }
+  return evt;
 };
