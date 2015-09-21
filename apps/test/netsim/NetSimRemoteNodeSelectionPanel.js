@@ -101,7 +101,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     });
 
     // The two-bit router part imposes a limit of four addressable routers.
-    describe ("with address format '2.X'", function () {
+    describe("with address format '2.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '2.1';
       });
@@ -118,7 +118,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     });
 
     // The four-bit router part imposes a limit of sixteen addressable routers.
-    describe ("with address format 'X.X.4.X'", function () {
+    describe("with address format 'X.X.4.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '1.1.4.1';
       });
@@ -137,7 +137,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
     // The eight-bit router part imposes a limit of 256 addressable routers.
     // However, this is larger than our global router maximum, so we are still
     // limited by the global maximum.
-    describe ("with address format '8.X'", function () {
+    describe("with address format '8.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '8.1';
       });
@@ -167,7 +167,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       assert.equal(false, panel.canCurrentUserResetShard());
     });
 
-    describe ("for admin", function () {
+    describe("for admin", function () {
       var adminUser;
 
       beforeEach(function () {
@@ -192,7 +192,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       });
     });
 
-    describe ("for teacher", function () {
+    describe("for teacher", function () {
       var teacherUser;
 
       beforeEach(function () {
@@ -224,7 +224,7 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       });
     });
 
-    describe ("for student", function () {
+    describe("for student", function () {
       var studentUser;
 
       beforeEach(function () {

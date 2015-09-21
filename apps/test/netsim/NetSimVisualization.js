@@ -305,7 +305,7 @@ describe("NetSimVisualization", function () {
       assert.isFalse(deltaWire.isForeground);
     });
 
-    describe ("DNS Mode", function () {
+    describe("DNS Mode", function () {
 
       it("updates all viznodes when DNS mode changes", function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
@@ -336,7 +336,7 @@ describe("NetSimVisualization", function () {
 
     });
 
-    describe ("Encodings", function () {
+    describe("Encodings", function () {
       var DECIMAL_ONLY = [EncodingType.DECIMAL];
       var BINARY_AND_ASCII = [EncodingType.BINARY, EncodingType.ASCII];
 

@@ -60,8 +60,8 @@ describe("NetSimTable", function () {
     });
   });
 
-  describe ("throws if constructed with invalid options", function () {
-    describe ("useIncrementalRefresh", function () {
+  describe("throws if constructed with invalid options", function () {
+    describe("useIncrementalRefresh", function () {
       it("accepts `undefined`, defaults to false", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           useIncrementalRefresh: undefined
@@ -139,7 +139,7 @@ describe("NetSimTable", function () {
       });
     });
     
-    describe ("minimumDelayBeforeRefresh", function () {
+    describe("minimumDelayBeforeRefresh", function () {
       it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBeforeRefresh: undefined
@@ -211,7 +211,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    describe ("maximumJitterDelay", function () {
+    describe("maximumJitterDelay", function () {
       it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           maximumJitterDelay: undefined
@@ -283,7 +283,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    describe ("minimumDelayBetweenRefreshes", function () {
+    describe("minimumDelayBetweenRefreshes", function () {
       it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBetweenRefreshes: undefined
@@ -506,7 +506,7 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'readAll');
   });
 
-  describe ("initial delay coalescing", function () {
+  describe("initial delay coalescing", function () {
     beforeEach(function () {
       // Re-enable 50ms before-refresh delay to coalesce messages
       netsimTable.setMinimumDelayBeforeRefresh(50);
@@ -567,7 +567,7 @@ describe("NetSimTable", function () {
     });
   });
 
-  describe ("refresh throttling", function () {
+  describe("refresh throttling", function () {
     beforeEach(function () {
       // Re-enable 50ms refreshTable_ throttle to test throttling feature
       netsimTable.setMinimumDelayBetweenRefreshes(50);
@@ -641,7 +641,7 @@ describe("NetSimTable", function () {
     });
   });
 
-  describe ("refresh jitter", function () {
+  describe("refresh jitter", function () {
     beforeEach(function () {
       // Re-enable 50ms jitter to test random refresh delays.
       netsimTable.setMaximumJitterDelay(50);
@@ -699,7 +699,7 @@ describe("NetSimTable", function () {
     });
   });
 
-  describe ("incremental update", function () {
+  describe("incremental update", function () {
 
     beforeEach(function () {
       // New table configured for incremental refresh

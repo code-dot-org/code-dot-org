@@ -45,7 +45,7 @@ describe("NetSimMessage", function () {
     assertEqual(message.visitedNodeIDs, []);
   });
 
-  describe ("isValid static check", function () {
+  describe("isValid static check", function () {
     it("is minimally valid with a payload", function () {
       assert(!NetSimMessage.isValid({}));
       assert(NetSimMessage.isValid({ payload: '' }));
