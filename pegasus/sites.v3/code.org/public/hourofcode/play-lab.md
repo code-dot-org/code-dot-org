@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Teacher Resources - Play Lab
 nav: hoc_teacher_resources_nav
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Play Lab: An Hour of Code Tutorial
 
-<center><iframe width="600" height="337" src="https://www.youtube.com/embed/VQ4lo6Huylc" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/c-Qz1mc3A-I" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 
@@ -13,7 +13,7 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Make a Flappy Game](/files/hoc-flappy-lp.pdf)
+- [Play Lab](/files/hoc-playlab-lp.pdf)
 
 ### Extension Activities:
 
@@ -32,12 +32,12 @@ nav: hoc_teacher_resources_nav
 
 ## Overview
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
 
 **Recommended Age Range:** 4-104
 
 **Technology Requirements:** Modern browsers, smartphones + tablets
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/playlab/reset"><button>Try the tutorial</button></a>
 
 [/col-50]
