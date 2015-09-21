@@ -45,7 +45,7 @@
     "free_play": "true",
     "app_width": "200",
     "app_height": "200",
-    "instructions": "Draw a square ABOVE and to the RIGHT of the starting location. (Click to show full instructions)",
+    "instructions": "Draw a square to the front and to the right of the starting location. (Click to show full instructions)",
     "callout_json": "[]",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-rightSquare.png",
     "show_turtle_before_run": "true",
