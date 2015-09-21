@@ -32,6 +32,7 @@ def execute_ssh_on_channel(channel, command, exit_error_string)
 end
 
 options = {}
+username = Etc.getlogin
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
@@ -43,11 +44,7 @@ end.parse!
 
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
 
-puts 'Type in your password for gateway.code.org'
-password = STDIN.noecho(&:gets).chomp
-username = Etc.getlogin
-
-Net::SSH.start('gateway.code.org', username, :password => password) do |ssh|
+Net::SSH.start('gateway.code.org', username) do |ssh|
   puts ssh.exec!('echo \'Verifying connection to gateway\'')
 end
 
@@ -72,7 +69,7 @@ instance_name = "frontend-#{determined_instance_zone[-1, 1] + (instance_count + 
 
 puts "Naming instance #{instance_name}, verifying that the name is okay"
 
-Net::SSH.start('gateway.code.org', username, :password => password) do |ssh|
+Net::SSH.start('gateway.code.org', username) do |ssh|
   node_list = ssh.exec!("knife node list | egrep \'^#{instance_name}$\'")
 
   unless node_list.nil?
@@ -168,11 +165,11 @@ puts "Private DNS name #{private_dns_name}"
 
 puts 'Writing new configuration file'
 
-Net::SSH.start('gateway.code.org', username, :password => password) do |ssh|
+Net::SSH.start('gateway.code.org', username) do |ssh|
   ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config")
 end
 
-Net::SCP.download!('gateway.code.org', username, '/tmp/old_knife_config', '/tmp/knife_config', :ssh => { :password => password })
+Net::SCP.download!('gateway.code.org', username, '/tmp/old_knife_config', '/tmp/knife_config')
 
 configuration_json = JSON.parse(File.read('/tmp/knife_config'))
 configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
@@ -182,10 +179,10 @@ File.open('/tmp/new_knife_config.json', 'w') do |f|
   f.write(JSON.dump(configuration_json))
 end
 
-Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', '/tmp/new_knife_config.json', :ssh => { :password => password })
+Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', '/tmp/new_knife_config.json')
 puts 'New configuration file written.'
 
-Net::SSH.start('gateway.code.org', username, :password => password) do |ssh|
+Net::SSH.start('gateway.code.org', username) do |ssh|
 
   ssh.open_channel do |ch|
     execute_ssh_on_channel(ch,
