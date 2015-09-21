@@ -15,7 +15,7 @@ class ScaryChangeDetector
         when 'M'
           @modified << filename
         when 'D'
-          @modified << filename
+          @deleted << filename
         end
       end
     end
