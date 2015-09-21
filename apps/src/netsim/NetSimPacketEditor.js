@@ -9,6 +9,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -482,7 +483,7 @@ var removeWatermark = function (focusEvent) {
  * @returns {boolean} true iff the given event represents a clean enter
  */
 var isUnmodifiedEnterPress = function (jqueryEvent) {
-  return (jqueryEvent.keyCode == KeyCodes.ENTER &&
+  return (jqueryEvent.keyCode === KeyCodes.ENTER &&
       !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
