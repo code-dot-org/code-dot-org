@@ -5827,7 +5827,7 @@ NetSimSendPanel.prototype.render = function () {
       .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
       .find('#set-wire-button')
-      .click(this.onSetWireButtonPress_.bind(this));
+      .click(this.onSendEventTriggered_.bind(this));
 
   // Note: At some point, we might want to replace this with something
   // that nicely re-renders the contents of this.packets_... for now,
@@ -6012,20 +6012,19 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
     return;
   }
 
-  this.beginSendingPackets_();
+  var level = NetSimGlobals.getLevelConfig();
+  if (level.messageGranularity === MessageGranularity.PACKETS) {
+    this.beginSendingPackets_();
+  } else if (level.messageGranularity === MessageGranularity.BITS) {
+    this.sendOneBit_();
+  }
 };
 
 /**
  * Send a single bit, manually 'setting the wire state'.
- * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
-  var thisButton = $(jQueryEvent.target);
-  if (thisButton.is('[disabled]')) {
-    return;
-  }
-
+NetSimSendPanel.prototype.sendOneBit_ = function () {
   var myNode = this.netsim_.myNode;
   if (!myNode) {
     throw new Error("Tried to set wire state when no connection is established.");
@@ -7391,6 +7390,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -7826,9 +7826,13 @@ NetSimPacketEditor.prototype.tick = function (clock) {
   }
 
   // How many characters should be consumed this tick?
-  var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
   var msPerBit = 1000 * (1 / this.bitRate_);
-  var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  var maxBitsToSendThisTick = Infinity;
+  if (msPerBit > 0) {
+    var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
+    maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  }
+
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
     this.sendAnimationIndex_ += maxBitsToSendThisTick;
@@ -7860,7 +7864,8 @@ var removeWatermark = function (focusEvent) {
  * @returns {boolean} true iff the given event represents a clean enter
  */
 var isUnmodifiedEnterPress = function (jqueryEvent) {
-  return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
+  return (jqueryEvent.keyCode === KeyCodes.ENTER &&
+      !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
 /**
