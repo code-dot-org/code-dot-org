@@ -22,7 +22,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "This `or` block returns *true* if either of its parameters is *true*. Otherwise, if both parameters are *false* it will return *false*. Set the y variable to a value that will cause this expression to return *false*.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
