@@ -394,7 +394,7 @@ studioApp.setCheckForEmptyBlocks(true);
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
 // For proxying non-https assets
-var MEDIA_PROXY = 'https://studio.code.org/media?u=';
+var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // Default Scalings
 Applab.scale = {
