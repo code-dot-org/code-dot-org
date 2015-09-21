@@ -50,7 +50,7 @@ describe("NetSimTable", function () {
     });
   });
 
-  it ("throws if constructed with missing arguments", function () {
+  it("throws if constructed with missing arguments", function () {
     assertThrows(TypeError, function () {
       var _ = new NetSimTable('just-one-argument');
     });
@@ -62,14 +62,14 @@ describe("NetSimTable", function () {
 
   describe ("throws if constructed with invalid options", function () {
     describe ("useIncrementalRefresh", function () {
-      it ("accepts `undefined`, defaults to false", function () {
+      it("accepts `undefined`, defaults to false", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           useIncrementalRefresh: undefined
         });
         assertEqual(false, _.useIncrementalRefresh_);
       });
 
-      it ("accepts booelan values", function () {
+      it("accepts booelan values", function () {
         var _a = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           useIncrementalRefresh: true
         });
@@ -79,7 +79,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects numbers", function () {
+      it("rejects numbers", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: 45.302
@@ -92,7 +92,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects `null`", function () {
+      it("rejects `null`", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: null
@@ -100,7 +100,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects strings", function () {
+      it("rejects strings", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: "twenty hours"
@@ -108,7 +108,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects objects", function () {
+      it("rejects objects", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: {}
@@ -116,7 +116,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects Infinities", function () {
+      it("rejects Infinities", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: Infinity
@@ -130,7 +130,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects NaN", function () {
+      it("rejects NaN", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             useIncrementalRefresh: NaN
@@ -140,13 +140,13 @@ describe("NetSimTable", function () {
     });
     
     describe ("minimumDelayBeforeRefresh", function () {
-      it ("accepts `undefined`", function () {
+      it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBeforeRefresh: undefined
         });
       });
 
-      it ("accepts ordinary numbers > 0", function () {
+      it("accepts ordinary numbers > 0", function () {
         var _a = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBeforeRefresh: 50.354
         });
@@ -156,7 +156,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects negative numbers", function () {
+      it("rejects negative numbers", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: -88
@@ -164,7 +164,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects `null`", function () {
+      it("rejects `null`", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: null
@@ -172,7 +172,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects strings", function () {
+      it("rejects strings", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: "twenty hours"
@@ -180,7 +180,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects objects", function () {
+      it("rejects objects", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: {}
@@ -188,7 +188,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects Infinities", function () {
+      it("rejects Infinities", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: Infinity
@@ -202,7 +202,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects NaN", function () {
+      it("rejects NaN", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBeforeRefresh: NaN
@@ -212,13 +212,13 @@ describe("NetSimTable", function () {
     });
 
     describe ("maximumJitterDelay", function () {
-      it ("accepts `undefined`", function () {
+      it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           maximumJitterDelay: undefined
         });
       });
 
-      it ("accepts ordinary numbers > 0", function () {
+      it("accepts ordinary numbers > 0", function () {
         var _a = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           maximumJitterDelay: 50.354
         });
@@ -228,7 +228,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects negative numbers", function () {
+      it("rejects negative numbers", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: -88
@@ -236,7 +236,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects `null`", function () {
+      it("rejects `null`", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: null
@@ -244,7 +244,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects strings", function () {
+      it("rejects strings", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: "twenty hours"
@@ -252,7 +252,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects objects", function () {
+      it("rejects objects", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: {}
@@ -260,7 +260,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects Infinities", function () {
+      it("rejects Infinities", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: Infinity
@@ -274,7 +274,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects NaN", function () {
+      it("rejects NaN", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             maximumJitterDelay: NaN
@@ -284,13 +284,13 @@ describe("NetSimTable", function () {
     });
 
     describe ("minimumDelayBetweenRefreshes", function () {
-      it ("accepts `undefined`", function () {
+      it("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBetweenRefreshes: undefined
         });
       });
 
-      it ("accepts ordinary numbers > 0", function () {
+      it("accepts ordinary numbers > 0", function () {
         var _a = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           minimumDelayBetweenRefreshes: 50.354
         });
@@ -300,7 +300,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects negative numbers", function () {
+      it("rejects negative numbers", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: -88
@@ -308,7 +308,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects `null`", function () {
+      it("rejects `null`", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: null
@@ -316,7 +316,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects strings", function () {
+      it("rejects strings", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: "twenty hours"
@@ -324,7 +324,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects objects", function () {
+      it("rejects objects", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: {}
@@ -332,7 +332,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects Infinities", function () {
+      it("rejects Infinities", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: Infinity
@@ -346,7 +346,7 @@ describe("NetSimTable", function () {
         });
       });
 
-      it ("rejects NaN", function () {
+      it("rejects NaN", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
             minimumDelayBetweenRefreshes: NaN
@@ -356,12 +356,12 @@ describe("NetSimTable", function () {
     });
   });
 
-  it ("calls readAll on the API table", function () {
+  it("calls readAll on the API table", function () {
     netsimTable.refresh(callback);
     assertEqual(apiTable.log(), 'readAll');
   });
 
-  it ("can give back all rows in local cache with readAll", function () {
+  it("can give back all rows in local cache with readAll", function () {
     netsimTable.create({}, callback);
     netsimTable.create({}, callback);
     netsimTable.create({}, callback);
@@ -371,7 +371,7 @@ describe("NetSimTable", function () {
     assertEqual(5, rows.length);
   });
 
-  it ("can give back a subset of rows with readAllFromID", function () {
+  it("can give back a subset of rows with readAllFromID", function () {
     netsimTable.create({type: 'old'}, callback);
     netsimTable.create({type: 'old'}, callback);
     netsimTable.create({type: 'old'}, callback);
@@ -384,37 +384,37 @@ describe("NetSimTable", function () {
     });
   });
 
-  it ("calls read on the API table", function () {
+  it("calls read on the API table", function () {
     netsimTable.read(1, callback);
     assertEqual(apiTable.log(), 'read[1]');
   });
 
-  it ("calls create on the API table", function () {
+  it("calls create on the API table", function () {
     netsimTable.create({}, callback);
     assertEqual(apiTable.log(), 'create[{}]');
   });
 
-  it ("calls multiCreate on the API table", function () {
+  it("calls multiCreate on the API table", function () {
     netsimTable.multiCreate([{order:'first'}, {order:'second'}], callback);
     assertEqual(apiTable.log(), 'create[{"order":"first"}]create[{"order":"second"}]');
   });
 
-  it ("calls update on the API table", function () {
+  it("calls update on the API table", function () {
     netsimTable.update(1, {}, callback);
     assertEqual(apiTable.log(), 'update[1, {}]');
   });
 
-  it ("calls delete on the API table", function () {
+  it("calls delete on the API table", function () {
     netsimTable.delete(1, callback);
     assertEqual(apiTable.log(), 'delete[1]');
   });
 
-  it ("calls deleteRows on the API table", function () {
+  it("calls deleteRows on the API table", function () {
     netsimTable.deleteMany([1, 2], callback);
     assertEqual(apiTable.log(), 'delete[1,2]');
   });
 
-  it ("notifies on refresh if any remote row changed", function () {
+  it("notifies on refresh if any remote row changed", function () {
     netsimTable.create({data: "A"}, callback);
 
     notified = false;
@@ -429,7 +429,7 @@ describe("NetSimTable", function () {
     assertEqual(notified, true);
   });
 
-  it ("notifies on read if the requested remote row changed", function () {
+  it("notifies on read if the requested remote row changed", function () {
     netsimTable.create({data: "A"}, callback);
 
     notified = false;
@@ -444,13 +444,13 @@ describe("NetSimTable", function () {
     assertEqual(notified, true);
   });
 
-  it ("notifies on every create", function () {
+  it("notifies on every create", function () {
     notified = false;
     netsimTable.create({}, callback);
     assertEqual(notified, true);
   });
 
-  it ("notifies on update if the cache row changed", function () {
+  it("notifies on update if the cache row changed", function () {
     netsimTable.create({data: "A"}, callback);
 
     notified = false;
@@ -462,7 +462,7 @@ describe("NetSimTable", function () {
     assertEqual(notified, true);
   });
 
-  it ("notifies on delete when row was previously in cache", function () {
+  it("notifies on delete when row was previously in cache", function () {
     notified = false;
     netsimTable.delete(1, callback);
     assertEqual(notified, false);
@@ -474,7 +474,7 @@ describe("NetSimTable", function () {
     assertEqual(notified, true);
   });
 
-  it ("notifies once on deleteMany operation if anything was deleted", function () {
+  it("notifies once on deleteMany operation if anything was deleted", function () {
     notifyCount = 0;
     netsimTable.deleteMany([1, 2, 3], callback);
     assertEqual(notifyCount, 0);
@@ -490,7 +490,7 @@ describe("NetSimTable", function () {
     assertEqual(notifyCount, 1);
   });
 
-  it ("polls table on tick", function () {
+  it("polls table on tick", function () {
     // Initial tick always triggers a poll event.
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
@@ -512,7 +512,7 @@ describe("NetSimTable", function () {
       netsimTable.setMinimumDelayBeforeRefresh(50);
     });
 
-    it ("does not read until minimum delay passes", function (testDone) {
+    it("does not read until minimum delay passes", function (testDone) {
       netsimTable.refreshTable_(callback);
       assertEqual('', apiTable.log());
       delayTest(50, testDone, function () {
@@ -521,7 +521,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("coalesces multiple rapid requests", function (testDone) {
+    it("coalesces multiple rapid requests", function (testDone) {
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
       netsimTable.refreshTable_(callback);
@@ -548,7 +548,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("does not coalesce if requests are far enough apart", function (testDone) {
+    it("does not coalesce if requests are far enough apart", function (testDone) {
       netsimTable.refreshTable_(callback);
       delayTest(50, testDone, function () {
         assertEqual('readAll', apiTable.log());
@@ -573,19 +573,19 @@ describe("NetSimTable", function () {
       netsimTable.setMinimumDelayBetweenRefreshes(50);
     });
 
-    it ("still reads immediately on first request", function () {
+    it("still reads immediately on first request", function () {
       netsimTable.refreshTable_(callback);
       assertEqual(apiTable.log(), 'readAll');
     });
 
-    it ("coalesces multiple rapid requests", function () {
+    it("coalesces multiple rapid requests", function () {
       for (var i = 0; i < 5; i++) {
         netsimTable.refreshTable_(callback);
       }
       assertEqual(apiTable.log(), 'readAll');
     });
 
-    it ("does not issue trailing request when only one request occurred", function (testDone) {
+    it("does not issue trailing request when only one request occurred", function (testDone) {
       netsimTable.refreshTable_(callback);
       delayTest(50, testDone, function () {
         assertEqual(apiTable.log(), 'readAll');
@@ -593,7 +593,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("issues trailing request when multiple requests occurred", function (testDone) {
+    it("issues trailing request when multiple requests occurred", function (testDone) {
       for (var i = 0; i < 5; i++) {
         netsimTable.refreshTable_(callback);
       }
@@ -608,7 +608,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("throttles requests", function (testDone) {
+    it("throttles requests", function (testDone) {
       assertEqual('', apiTable.log());
       delayTest(10, testDone, function () {
 
@@ -647,7 +647,7 @@ describe("NetSimTable", function () {
       netsimTable.setMaximumJitterDelay(50);
     });
 
-    it ("waits a random amount of time before reading on each request", function (testDone) {
+    it("waits a random amount of time before reading on each request", function (testDone) {
       NetSimGlobals.setRandomSeed('Jitter test 1');
       // With this seed, the refresh fires sometime between 30-40ms.
 
@@ -662,7 +662,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("second example (different random seed)", function (testDone) {
+    it("second example (different random seed)", function (testDone) {
       NetSimGlobals.setRandomSeed('Jitter test 2');
       // With this seed, the refresh fires almost immediately - in under 10 ms.
 
@@ -675,7 +675,7 @@ describe("NetSimTable", function () {
       });
     });
 
-    it ("recalculated for every refresh", function (testDone) {
+    it("recalculated for every refresh", function (testDone) {
       NetSimGlobals.setRandomSeed('Jitter test 3');
       // Without request coalescing, we start two requests at the same time,
       // but they will actually fire with different random delays.
@@ -715,7 +715,7 @@ describe("NetSimTable", function () {
       apiTable = netsimTable.api_.remoteTable;
     });
 
-    it ("Initially requests from row 1", function () {
+    it("Initially requests from row 1", function () {
       assertEqual('', apiTable.log());
       netsimTable.refreshTable_(callback);
       assertEqual('readAllFromID[1]', apiTable.log());
@@ -728,7 +728,7 @@ describe("NetSimTable", function () {
       assertEqual('readAllFromID[1]', apiTable.log());
     });
 
-    it ("Requests from beyond most recent row received in refresh", function () {
+    it("Requests from beyond most recent row received in refresh", function () {
       var row1, row2, row3, row4;
       netsimTable.create({}, function (err, result) { row1 = result; });
       netsimTable.create({}, function (err, result) { row2 = result; });

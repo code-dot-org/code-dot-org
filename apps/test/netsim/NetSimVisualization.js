@@ -307,7 +307,7 @@ describe("NetSimVisualization", function () {
 
     describe ("DNS Mode", function () {
 
-      it ("updates all viznodes when DNS mode changes", function () {
+      it("updates all viznodes when DNS mode changes", function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         assert.equal(DnsMode.AUTOMATIC, alphaNode.dnsMode_);
         assert.equal(DnsMode.AUTOMATIC, betaNode.dnsMode_);
@@ -319,7 +319,7 @@ describe("NetSimVisualization", function () {
         assert.equal(DnsMode.MANUAL, deltaNode.dnsMode_);
       });
 
-      it ("creates new viznodes with the current DNS mode", function () {
+      it("creates new viznodes with the current DNS mode", function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         var newNode = makeRemoteClient('gamma');
 
@@ -340,7 +340,7 @@ describe("NetSimVisualization", function () {
       var DECIMAL_ONLY = [EncodingType.DECIMAL];
       var BINARY_AND_ASCII = [EncodingType.BINARY, EncodingType.ASCII];
 
-      it ("updates all vizwires when encodings change", function () {
+      it("updates all vizwires when encodings change", function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
         assert.sameMembers(DECIMAL_ONLY, alphaWire.encodings_);
         assert.sameMembers(DECIMAL_ONLY, betaWire.encodings_);
@@ -352,7 +352,7 @@ describe("NetSimVisualization", function () {
         assert.sameMembers(BINARY_AND_ASCII, deltaWire.encodings_);
       });
 
-      it ("creates new vizwires with the current encodings", function () {
+      it("creates new vizwires with the current encodings", function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
 
         // Confirm that delta has no reciprocal wires.

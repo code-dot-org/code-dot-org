@@ -16,30 +16,30 @@ var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 
 describe("NetSimEntity", function () {
-  it ("default entityID is undefined", function () {
+  it("default entityID is undefined", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertEqual(entity.entityID, undefined);
   });
 
-  it ("doesn't implement getTable", function () {
+  it("doesn't implement getTable", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertThrows(Error, function () {
       entity.getTable();
     });
   });
 
-  it ("buildRow method produces empty object", function () {
+  it("buildRow method produces empty object", function () {
     var entity = new NetSimEntity(undefined, undefined);
     assertEqual(entity.buildRow(), {});
   });
 
-  it ("disallows static creation on base type", function () {
+  it("disallows static creation on base type", function () {
     assertThrows(Error, function () {
       NetSimEntity.create(NetSimEntity, undefined, function () {});
     });
   });
 
-  it ("disallows static fetch of base type", function () {
+  it("disallows static fetch of base type", function () {
     assertThrows(Error, function () {
       NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
     });
@@ -52,7 +52,7 @@ describe("NetSimEntity", function () {
       testShard = fakeShard();
     });
 
-    it ("creates and returns an entity fo the correct type", function () {
+    it("creates and returns an entity fo the correct type", function () {
       assertTableSize(testShard, 'nodeTable', 0);
 
       var entity;
@@ -73,7 +73,7 @@ describe("NetSimEntity", function () {
       testShard = fakeShard();
     });
 
-    it ("returns null if entity is not found", function () {
+    it("returns null if entity is not found", function () {
       var entity;
       NetSimEntity.get(NetSimClientNode, 15, testShard, function (err, foundEntity) {
         entity = foundEntity;
@@ -81,7 +81,7 @@ describe("NetSimEntity", function () {
       assert(null === entity, "Should return null when entity not found, returned " + entity);
     });
 
-    it ("returns entity of correct type, if found", function () {
+    it("returns entity of correct type, if found", function () {
       var clientNodeID;
       NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         clientNodeID = newNode.entityID;
@@ -104,7 +104,7 @@ describe("NetSimEntity", function () {
       testShard = fakeShard();
     });
 
-    it ("returns immediate success for empty message list", function () {
+    it("returns immediate success for empty message list", function () {
       var success = false;
       NetSimEntity.destroyEntities([], function (err) {
         success = (err === null);
@@ -112,7 +112,7 @@ describe("NetSimEntity", function () {
       assert(success, "Called callback with null error");
     });
 
-    it ("deletes all entities passed to it", function () {
+    it("deletes all entities passed to it", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function () {});
       NetSimEntity.create(NetSimClientNode, testShard, function () {});
       NetSimEntity.create(NetSimClientNode, testShard, function () {});

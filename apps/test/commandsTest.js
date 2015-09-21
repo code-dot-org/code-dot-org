@@ -15,14 +15,14 @@ describe("Command", function () {
     command = new Command();
   });
 
-  it ("begins neither started nor finished", function () {
+  it("begins neither started nor finished", function () {
     assert(!command.isStarted(), "Command should not be started");
     assert(!command.isFinished(), "Command should not be finished");
     assert(!command.succeeded(), "Command should not be successful");
     assert(!command.failed(), "Command should not be a failure");
   });
 
-  it ("After begin() is started but not finished", function () {
+  it("After begin() is started but not finished", function () {
     command.begin();
     assert(command.isStarted(), "Command should be started");
     assert(!command.isFinished(), "Command should not be finished");
@@ -30,7 +30,7 @@ describe("Command", function () {
     assert(!command.failed(), "Command should not be a failure");
   });
 
-  it ("After succeed() is started and finished but not a failure", function () {
+  it("After succeed() is started and finished but not a failure", function () {
     command.begin();
     command.succeed();
     assert(command.isStarted(), "Command should be started");
@@ -39,7 +39,7 @@ describe("Command", function () {
     assert(!command.failed(), "Command should not be a failure");
   });
 
-  it ("After fail() is started and finished but not successful", function () {
+  it("After fail() is started and finished but not successful", function () {
     command.begin();
     command.fail();
     assert(command.isStarted(), "Command should be started");
@@ -48,17 +48,17 @@ describe("Command", function () {
     assert(command.failed(), "Command should be a failure");
   });
 
-  it ("Cannot succeed before begin()", function () {
+  it("Cannot succeed before begin()", function () {
     assert(!command.isStarted());
     assertThrows(Error, command.succeed.bind(command));
   });
 
-  it ("Cannot fail before begin()", function () {
+  it("Cannot fail before begin()", function () {
     assert(!command.isStarted());
     assertThrows(Error, command.fail.bind(command));
   });
 
-  it ("Calls onBegin_ when starting", function () {
+  it("Calls onBegin_ when starting", function () {
     var called = false;
     command.onBegin_ = function () {
       called = true;
@@ -67,7 +67,7 @@ describe("Command", function () {
     assert(called);
   });
 
-  it ("Calls onEnd_ when succeeding", function () {
+  it("Calls onEnd_ when succeeding", function () {
     var called = false;
     command.onEnd_ = function () {
       called = true;
@@ -77,7 +77,7 @@ describe("Command", function () {
     assert(called);
   });
 
-  it ("Calls onEnd_ when failing", function () {
+  it("Calls onEnd_ when failing", function () {
     var called = false;
     command.onEnd_ = function () {
       called = true;
@@ -139,11 +139,11 @@ describe("CommandSequence", function () {
     sequence = new CommandSequence([]);
   });
 
-  it ("is a Command", function () {
+  it("is a Command", function () {
     assert(sequence instanceof Command, "CommandSequence is a Command");
   });
 
-  it ("succeeds immediately on begin when command list is empty", function () {
+  it("succeeds immediately on begin when command list is empty", function () {
     assert(!sequence.isStarted());
     assert(!sequence.isFinished());
     sequence.begin();
@@ -152,7 +152,7 @@ describe("CommandSequence", function () {
     assert(sequence.succeeded());
   });
 
-  it ("runs commands in order, on tick, after started", function () {
+  it("runs commands in order, on tick, after started", function () {
     sequence = new CommandSequence([
         new LogCommand('A'),
         new LogCommand('B'),
@@ -174,7 +174,7 @@ describe("CommandSequence", function () {
     assert(sequence.isFinished());
   });
 
-  it ("Succeeds if all of its commands succeed", function () {
+  it("Succeeds if all of its commands succeed", function () {
     sequence = new CommandSequence([
         new LogCommand('A'),
         new LogCommand('B'),
@@ -187,7 +187,7 @@ describe("CommandSequence", function () {
     assert(sequence.succeeded());
   });
 
-  it ("Fails and stops sequence if any command fails", function () {
+  it("Fails and stops sequence if any command fails", function () {
     sequence = new CommandSequence([
         new LogCommand('A'),
         new LogCommand('B'),
@@ -201,7 +201,7 @@ describe("CommandSequence", function () {
     assert(sequence.failed(), 'The sequence should fail');
   });
 
-  it ("Succeeds only on tick after its last command succeeds", function () {
+  it("Succeeds only on tick after its last command succeeds", function () {
     var commandC = new ManualLogCommand('C');
     sequence = new CommandSequence([
         new LogCommand('A'),
@@ -224,7 +224,7 @@ describe("CommandSequence", function () {
     assert(sequence.succeeded());
   });
 
-  it ("calls each command on tick after the last one is finished", function () {
+  it("calls each command on tick after the last one is finished", function () {
     var i;
     var commandA = new ManualLogCommand('A');
     var commandB = new ManualLogCommand('B');
@@ -264,7 +264,7 @@ describe("CommandSequence", function () {
     assert(commandC.isStarted());
   });
 
-  it ("can be nested, but requires multiple ticks to complete", function () {
+  it("can be nested, but requires multiple ticks to complete", function () {
     sequence = new CommandSequence([
         new CommandSequence([
             new LogCommand('A'),

@@ -60,15 +60,15 @@ describe("NetSimVizSimulationNode", function () {
       vizElement = new NetSimVizSimulationNode(simEntity);
     });
 
-    it ("is a VizElement", function () {
+    it("is a VizElement", function () {
       assert(vizElement instanceof NetSimVizElement);
     });
 
-    it ("is a VizNode", function () {
+    it("is a VizNode", function () {
       assert(vizElement instanceof NetSimVizNode);
     });
 
-    it ("has default properties", function () {
+    it("has default properties", function () {
       assertEqual(undefined, vizElement.correspondingNodeID_);
       assertEqual(undefined, vizElement.autoDnsAddress);
     });
@@ -80,33 +80,33 @@ describe("NetSimVizSimulationNode", function () {
       vizElement = new NetSimVizSimulationNode(simEntity);
     });
 
-    it ("captures the client's node ID", function () {
+    it("captures the client's node ID", function () {
       assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityId());
     });
 
-    it ("shows the client's display name (by default)", function () {
+    it("shows the client's display name (by default)", function () {
       assertEqual('Jonathan', vizElement.displayName_.text());
     });
 
-    it ("shows the client's hostname when level expects it", function () {
+    it("shows the client's hostname when level expects it", function () {
       NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('jonathan1', vizElement.displayName_.text());
     });
 
-    it ("knows it's not a router", function () {
+    it("knows it's not a router", function () {
       assertEqual(false, vizElement.isRouter);
     });
 
-    it ("does not cache an auto-dns address", function () {
+    it("does not cache an auto-dns address", function () {
       assertEqual(undefined, vizElement.autoDnsAddress);
     });
 
-    it ("does not assume it's the local node (must be told explicitly)", function () {
+    it("does not assume it's the local node (must be told explicitly)", function () {
       assertEqual(false, vizElement.isLocalNode);
     });
 
-    it ("does not assume it's the DNS node (must be told explicitly)", function () {
+    it("does not assume it's the DNS node (must be told explicitly)", function () {
       assertEqual(false, vizElement.isDnsNode);
     });
   });
@@ -117,42 +117,42 @@ describe("NetSimVizSimulationNode", function () {
       vizElement = new NetSimVizSimulationNode(simEntity);
     });
 
-    it ("captures the router's node ID", function () {
+    it("captures the router's node ID", function () {
       assertEqual(simEntity.entityID, vizElement.getCorrespondingEntityId());
     });
 
-    it ("shows the router's display name (by default)", function () {
+    it("shows the router's display name (by default)", function () {
       assertEqual('Router 1', vizElement.displayName_.text());
     });
 
-    it ("shows the router's hostname when level expects it", function () {
+    it("shows the router's hostname when level expects it", function () {
       NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('router1', vizElement.displayName_.text());
     });
 
-    it ("knows it's a router", function () {
+    it("knows it's a router", function () {
       assertEqual(true, vizElement.isRouter);
     });
 
-    it ("caches an auto-dns address", function () {
+    it("caches an auto-dns address", function () {
       assertEqual('15', vizElement.autoDnsAddress);
     });
 
-    it ("is not the local node or dns node)", function () {
+    it("is not the local node or dns node)", function () {
       assertEqual(false, vizElement.isLocalNode);
       assertEqual(false, vizElement.isDnsNode);
     });
 
-    it ("adds the 'router-node' class to its root element", function () {
+    it("adds the 'router-node' class to its root element", function () {
       assertEqual(true, vizElement.getRoot().is('.router-node'));
     });
 
-    it ("is visible by default", function () {
+    it("is visible by default", function () {
       assertEqual('', vizElement.getRoot().css('display'));
     });
 
-    it ("is hidden in broadcast mode", function () {
+    it("is hidden in broadcast mode", function () {
       NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('none', vizElement.getRoot().css('display'));

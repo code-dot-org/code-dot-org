@@ -81,15 +81,15 @@ describe("NetSimVizSimulationWire", function () {
       vizWire = new NetSimVizSimulationWire(simWire, getVizNodeByEntityID);
     });
 
-    it ("is a VizElement", function () {
+    it("is a VizElement", function () {
       assert(vizWire instanceof NetSimVizElement);
     });
 
-    it ("is a VizWire", function () {
+    it("is a VizWire", function () {
       assert(vizWire instanceof NetSimVizWire);
     });
 
-    it ("has default properties", function () {
+    it("has default properties", function () {
       assertEqual(0, vizWire.textPosX_);
       assertEqual(0, vizWire.textPosY_);
       assertEqual([], vizWire.encodings_);
@@ -98,7 +98,7 @@ describe("NetSimVizSimulationWire", function () {
       assert(vizRemoteNode === vizWire.remoteVizNode);
     });
 
-    it ("sets addresses on its endpoints", function () {
+    it("sets addresses on its endpoints", function () {
       assertEqual(undefined, vizLocalNode.address_);
       assertEqual(undefined, vizRemoteNode.address_);
       simWire.localAddress = 'boo';
@@ -108,7 +108,7 @@ describe("NetSimVizSimulationWire", function () {
       assertEqual('hiss', vizRemoteNode.address_);
     });
 
-    it ("is hidden in broadcast mode", function () {
+    it("is hidden in broadcast mode", function () {
       NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizWire.configureFrom(simWire);
       assertEqual('none', vizWire.getRoot().css('display'));

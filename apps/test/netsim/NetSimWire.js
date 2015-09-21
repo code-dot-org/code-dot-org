@@ -16,12 +16,12 @@ describe("NetSimWire", function () {
     wireTable = testShard.wireTable;
   });
 
-  it ("uses the wire table", function () {
+  it("uses the wire table", function () {
     var wire = new NetSimWire(testShard);
     assert(wire.getTable() === testShard.wireTable);
   });
 
-  it ("has expected row structure and default values", function () {
+  it("has expected row structure and default values", function () {
     var wire = new NetSimWire(testShard);
     var row = wire.buildRow();
 
@@ -45,7 +45,7 @@ describe("NetSimWire", function () {
   });
 
   describe("static method create", function () {
-    it ("adds an entry to the wire table", function () {
+    it("adds an entry to the wire table", function () {
       assertTableSize(testShard, 'wireTable', 0);
 
       NetSimWire.create(testShard, {
@@ -56,7 +56,7 @@ describe("NetSimWire", function () {
       assertTableSize(testShard, 'wireTable', 1);
     });
 
-    it ("immediately initializes entry with endpoints", function () {
+    it("immediately initializes entry with endpoints", function () {
       NetSimWire.create(testShard, {
         localNodeID: 1,
         remoteNodeID: 2
@@ -68,7 +68,7 @@ describe("NetSimWire", function () {
       });
     });
 
-    it ("Returns a NetSimWire to its callback", function () {
+    it("Returns a NetSimWire to its callback", function () {
       NetSimWire.create(testShard, {
         localNodeID: 0,
         remoteNodeID: 0
@@ -78,7 +78,7 @@ describe("NetSimWire", function () {
     });
   });
 
-  it ("can be instatiated from remote row", function () {
+  it("can be instatiated from remote row", function () {
     var testRow;
 
     // Create a wire row in remote table
@@ -104,7 +104,7 @@ describe("NetSimWire", function () {
     assertEqual(wire.remoteHostname, 'you');
   });
 
-  it ("can be removed from the remote table with destroy()", function () {
+  it("can be removed from the remote table with destroy()", function () {
     var testRow;
 
     // Create a wire row in remote table

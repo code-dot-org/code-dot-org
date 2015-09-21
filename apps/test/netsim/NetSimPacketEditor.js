@@ -30,7 +30,7 @@ describe("NetSimPacketEditor", function () {
     rootDiv = editor.getRoot();
   });
 
-  it ("only renders enabled encodings", function () {
+  it("only renders enabled encodings", function () {
     var message = "test message";
     var binaryMessage = DataConverters.asciiToBinary(message, 8);
     editor.message = binaryMessage;

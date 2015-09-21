@@ -26,11 +26,11 @@ describe("NetSimVizWire", function () {
       vizWire = new NetSimVizWire(localVizNode, remoteVizNode);
     });
 
-    it ("is a VizElement", function () {
+    it("is a VizElement", function () {
       assert(vizWire instanceof NetSimVizElement);
     });
 
-    it ("has default properties", function () {
+    it("has default properties", function () {
       assertEqual(0, vizWire.textPosX_);
       assertEqual(0, vizWire.textPosY_);
       assertEqual([], vizWire.encodings_);
@@ -38,7 +38,7 @@ describe("NetSimVizWire", function () {
       assert(remoteVizNode === vizWire.remoteVizNode);
     });
 
-    it ("immediately creates SVG elements", function () {
+    it("immediately creates SVG elements", function () {
       var root = vizWire.getRoot();
       assertEqual('[object SVGGElement]', root[0].toString());
 
