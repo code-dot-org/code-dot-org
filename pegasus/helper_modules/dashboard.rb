@@ -11,7 +11,6 @@ module Dashboard
     DASHBOARD_DB
   end
 
-
   def self.admin?(user_id)
     !!db[:users].where(id: user_id, admin: true).first
   end
