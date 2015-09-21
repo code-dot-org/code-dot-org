@@ -143,43 +143,6 @@ exports.assertWithinRange = function (left, right, maxDelta) {
 };
 
 /**
- * Checks that executing certain code results in an exception of the
- * exact given type being thrown.  Produces usable output when assertions
- * fail.
- *
- * @param {function} exceptionType - constructor for the exception type you
- *        expect to be generated.  Cannot be an ancestor of the exception
- *        type; assertThrows(Error, function () { throw new TypeError(); });
- *        will fail.
- * @param {function} fn - Function expected to generate an exception. Receives
- *        no arguments, not expected to return a value.
- *
- * @example Passing assertion
- * assertThrows(Error, function () { throw new Error(); });
- *
- * @example Failing assertion
- * // Will produce output "Didn't throw!"
- * assertThrows(TypeError, function () { });
- *
- * @example Failing assertion
- * // Will produce output "Threw Error, expected TypeError; exception: {}"
- * assertThrows(TypeError, function () { throw new Error(); });
- */
-exports.assertThrows = function (exceptionType, fn) {
-  var x;
-  try {
-    fn();
-  } catch (e) {
-    x = e;
-  }
-  assert(x !== undefined, "Didn't throw!");
-  assert(x.constructor === exceptionType,
-      "Threw " + x.constructor.name +
-      ", expected " + exceptionType.name +
-      "; exception: " + x.message);
-};
-
-/**
  * Checks that an object has a property with the given name, independent
  * of its prototype.
  *

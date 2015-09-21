@@ -1,6 +1,5 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 
 var utils = require('@cdo/apps/utils');
 var commands = require('@cdo/apps/commands');
@@ -49,12 +48,12 @@ describe("Command", function () {
 
   it("Cannot succeed before begin()", function () {
     assert(!command.isStarted());
-    assertThrows(Error, command.succeed.bind(command));
+    assert.throws(command.succeed.bind(command), Error);
   });
 
   it("Cannot fail before begin()", function () {
     assert(!command.isStarted());
-    assertThrows(Error, command.fail.bind(command));
+    assert.throws(command.fail.bind(command), Error);
   });
 
   it("Calls onBegin_ when starting", function () {

@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
@@ -8,9 +7,9 @@ describe("ArgumentUtils", function () {
 
   describe("validateRequired", function () {
     it("throws TypeError if argument is undefined", function () {
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         ArgumentUtils.validateRequired(undefined, 'any old argument');
-      });
+      }, TypeError);
     });
 
     it("by default allows anything but undefined through", function () {
@@ -27,9 +26,9 @@ describe("ArgumentUtils", function () {
     it("throws TypeError if validator method doesn't return TRUE", function () {
       var validator = function (x) { return x < 3; };
       ArgumentUtils.validateRequired(2, 'just right', validator);
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         ArgumentUtils.validateRequired(3, 'too high!', validator);
-      });
+      }, TypeError);
     });
   });
 
@@ -44,27 +43,27 @@ describe("ArgumentUtils", function () {
     });
 
     it("throws TypeError if passed null", function () {
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         var _ = ArgumentUtils.extendOptionsObject(null);
-      });
+      }, TypeError);
     });
 
     it("throws TypeError if passed non-object", function () {
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         var _ = ArgumentUtils.extendOptionsObject("string");
-      });
+      }, TypeError);
 
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         var _ = ArgumentUtils.extendOptionsObject(15); // number
-      });
+      }, TypeError);
 
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         var _ = ArgumentUtils.extendOptionsObject(true); // boolean
-      });
+      }, TypeError);
 
-      assertThrows(TypeError, function () {
+      assert.throws(function () {
         var _ = ArgumentUtils.extendOptionsObject(NaN); // Not-a-number
-      });
+      }, TypeError);
     });
 
     it("retains members of original options object", function () {
@@ -92,10 +91,10 @@ describe("ArgumentUtils", function () {
     });
 
     it("throws Error if extending would overwrite existing 'get' property", function () {
-      assertThrows(Error, function () {
+      assert.throws(function () {
         var originalOptions = { get: 1 };
         var _ = ArgumentUtils.extendOptionsObject(originalOptions);
-      });
+      }, Error);
     });
 
     describe('get()', function () {
@@ -120,9 +119,9 @@ describe("ArgumentUtils", function () {
         var validator = function (x) { return x < 3; };
         assert.equal(1, options.get('a', validator));
         assert.equal(2, options.get('b', validator));
-        assertThrows(TypeError, function () {
+        assert.throws(function () {
           options.get('c', validator);
-        });
+        }, TypeError);
         assert.equal(undefined, options.get('d', validator));
       });
 

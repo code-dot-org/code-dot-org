@@ -6,7 +6,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertThrows = testUtils.assertThrows;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -22,9 +21,9 @@ describe("NetSimEntity", function () {
 
   it("doesn't implement getTable", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assertThrows(Error, function () {
+    assert.throws(function () {
       entity.getTable();
-    });
+    }, Error);
   });
 
   it("buildRow method produces empty object", function () {
@@ -33,15 +32,15 @@ describe("NetSimEntity", function () {
   });
 
   it("disallows static creation on base type", function () {
-    assertThrows(Error, function () {
+    assert.throws(function () {
       NetSimEntity.create(NetSimEntity, undefined, function () {});
-    });
+    }, Error);
   });
 
   it("disallows static fetch of base type", function () {
-    assertThrows(Error, function () {
+    assert.throws(function () {
       NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
-    });
+    }, Error);
   });
 
   describe("static create()", function () {
