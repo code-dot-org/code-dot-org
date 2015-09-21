@@ -531,7 +531,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('mochaTest', ['exec:mochaTest']);
 
-  grunt.registerTask('test', ['jshint', 'mochaTest']);
+  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

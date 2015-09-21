@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_districts) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -14,7 +16,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   2. ** Magbigay ng isang plano ng sample logistik para sa mga paaralan. </> Ibahagi ang sample logistik plan sa mga paaralan upang mabigyan sila ng ideya ng kung paano upang ayusin ang buong partisipasyon ng paaralan. Ito ay napaka-dali tulad ng paggawa nito sa bawat klase ng matematika, homeroom, o sa loob ng bawat linggo sa computer lab. They can submit their own plan for a chance to win $10,000 in hardware at [http://hourofcode.com/prizes](<%= resolve_url('/prizes') %>).</p></li> 
     
-      * ** Ibahagi sa social media. </> I-post sa  Facebook </> o  Twitter </> . Or share one of these inspirational [pictures and quotes](<%= resolve_url('/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/resources/stats') %>)).</p></li> 
+      * ** Ibahagi sa social media. </> I-post sa  Facebook </> o  Twitter </> . Or share one of these inspirational [pictures and quotes](<%= resolve_url('/resources#social') %>) from world leaders, or [stats](<%= resolve_url('/resources/stats') %>).</p></li> 
         
           * **Promote on your district’s homepage.** Add one of these [banners](<%= resolve_url('/resources#banners') %>) to your district’s website to let visitors know about your participation. Link it to [Hour of Code](<%= resolve_url('/') %>).
         

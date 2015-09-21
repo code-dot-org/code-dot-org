@@ -40,7 +40,7 @@ module.exports = {
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
-        var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
+        var assetUrl = '//localhost:8001/apps/static/flappy_promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
@@ -59,7 +59,7 @@ module.exports = {
 
           // add a completion on timeout since this is a freeplay level
           setTimeout(function () {
-            assert.equal(buttonElement.style.backgroundImage, 'url(' + assetUrl + ')');
+            assert.equal(buttonElement.style.backgroundImage, 'url(http:' + assetUrl + ')');
             assert.equal(buttonElement.style.width, '200px');
             assert.equal(buttonElement.style.height, '113px');
             assert.equal(buttonElement.style.backgroundSize, '200px 113px');
@@ -244,7 +244,9 @@ module.exports = {
             "levelHtml has added button");
 
           // hit clear, and click through confirmation dialog
-          // TODO - disable temporarily
+          // TODO - this seems to cause intermittent failures for some reason.
+          // disableing for now
+          
           // $("#clear-puzzle-header").click();
           // assert.equal($("#continue-button").is(':visible'), true);
           // $("#continue-button").click();
