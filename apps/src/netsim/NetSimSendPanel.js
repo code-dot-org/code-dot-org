@@ -419,7 +419,12 @@ NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
     return;
   }
 
-  this.beginSendingPackets_();
+  var level = NetSimGlobals.getLevelConfig();
+  if (level.messageGranularity === MessageGranularity.PACKETS) {
+    this.beginSendingPackets_();
+  } else if (level.messageGranularity === MessageGranularity.BITS) {
+  this.onSetWireButtonPress_(jQueryEvent);
+  }
 };
 
 /**
