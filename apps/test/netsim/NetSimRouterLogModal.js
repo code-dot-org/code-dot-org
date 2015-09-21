@@ -29,23 +29,23 @@ describe ("NetSimRouterLogModal", function () {
       modal = new NetSimRouterLogModal(rootDiv);
     });
 
-    it ("defaults to logging all if it can", function () {
+    it("defaults to logging all if it can", function () {
       assert.equal(true, modal.isAllRouterLogMode_);
     });
 
-    it ("defaults to logging one if it has to", function () {
+    it("defaults to logging one if it has to", function () {
       levelConfig.connectedRouters = false;
       modal.setRouter(router);
       assert.equal(false, modal.isAllRouterLogMode_);
     });
 
-    it ("detects a local router", function () {
+    it("detects a local router", function () {
       assert.equal(false, modal.hasLocalRouter_());
       modal.setRouter(router);
       assert.equal(true, modal.hasLocalRouter_());
     });
 
-    it ("detects if it can log all routers", function () {
+    it("detects if it can log all routers", function () {
       assert.equal(true, modal.canLogAllRouters_());
       modal.setRouter(router);
       levelConfig.connectedRouters = true;
@@ -54,7 +54,7 @@ describe ("NetSimRouterLogModal", function () {
       assert.equal(false, modal.canLogAllRouters_());
     });
 
-    it ("detects if it can switch between modes", function () {
+    it("detects if it can switch between modes", function () {
       assert.equal(false, modal.canToggleRouterLogMode_());
       modal.setRouter(router);
       levelConfig.connectedRouters = true;
@@ -88,7 +88,7 @@ describe ("NetSimRouterLogModal", function () {
           function () {});
     }
 
-    it ("does nothing when not visible", function () {
+    it("does nothing when not visible", function () {
       // Hide modal, so it should ignore updates
       modal.onHide_();
 
@@ -96,19 +96,19 @@ describe ("NetSimRouterLogModal", function () {
       assert.equal(0, rootDiv.find('tbody tr').length);
     });
 
-    it ("when visible, adds rows to empty table", function () {
+    it("when visible, adds rows to empty table", function () {
       insertLog('a');
       insertLog('b');
       insertLog('c');
       assert.equal(3, rootDiv.find('tbody tr').length);
     });
 
-    it ("does nothing when no new rows are added to empty table", function () {
+    it("does nothing when no new rows are added to empty table", function () {
       modal.renderNewLogEntries_([]);
       assert.equal(0, rootDiv.find('tbody tr').length);
     });
 
-    it ("does nothing when no new rows are added to nonempty table", function () {
+    it("does nothing when no new rows are added to nonempty table", function () {
       // Add some starter rows
       insertLog('a');
       insertLog('b');
@@ -133,19 +133,19 @@ describe ("NetSimRouterLogModal", function () {
         assert.equal('bdf', rootDiv.find('tbody tr td.message').text());
       });
 
-      it ("when inserting at the begnning", function () {
+      it("when inserting at the begnning", function () {
         insertLog('a');
         assert.equal(4, rootDiv.find('tbody tr').length);
         assert.equal('abdf', rootDiv.find('tbody tr td.message').text());
       });
 
-      it ("when inserting at the end", function () {
+      it("when inserting at the end", function () {
         insertLog('g');
         assert.equal(4, rootDiv.find('tbody tr').length);
         assert.equal('bdfg', rootDiv.find('tbody tr td.message').text());
       });
 
-      it ("when inserting in the middle", function () {
+      it("when inserting in the middle", function () {
         insertLog('c');
         assert.equal(4, rootDiv.find('tbody tr').length);
         assert.equal('bcdf', rootDiv.find('tbody tr td.message').text());
@@ -154,7 +154,7 @@ describe ("NetSimRouterLogModal", function () {
         assert.equal('bcdef', rootDiv.find('tbody tr td.message').text());
       });
 
-      it ("in reverse sorting order", function () {
+      it("in reverse sorting order", function () {
         // Second click reverses sort order
         modal.onSortHeaderClick_('message');
         assert.equal('fdb', rootDiv.find('tbody tr td.message').text());

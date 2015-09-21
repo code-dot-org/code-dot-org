@@ -24,11 +24,11 @@ describe("NetSimVizNode", function () {
       vizNode = new NetSimVizNode();
     });
 
-    it ("is a VizElement", function () {
+    it("is a VizElement", function () {
       assert(vizNode instanceof NetSimVizElement);
     });
 
-    it ("has default properties", function () {
+    it("has default properties", function () {
       assertEqual(undefined, vizNode.address_);
       assertEqual(undefined, vizNode.dnsMode_);
       assertEqual(false, vizNode.isRouter);
@@ -36,7 +36,7 @@ describe("NetSimVizNode", function () {
       assertEqual(false, vizNode.isDnsNode);
     });
 
-    it ("immediately creates SVG elements", function () {
+    it("immediately creates SVG elements", function () {
       var root = vizNode.getRoot();
       assertEqual('[object SVGGElement]', root[0].toString());
 

@@ -23,7 +23,7 @@ describe("NetSimVizElement", function () {
       vizElement = new NetSimVizElement();
     });
 
-    it ("has default properties", function () {
+    it("has default properties", function () {
       assertEqual(0, vizElement.posX);
       assertEqual(0, vizElement.posY);
       assertEqual(1, vizElement.scale);
@@ -32,7 +32,7 @@ describe("NetSimVizElement", function () {
       assertEqual(false, vizElement.isDead());
     });
 
-    it ("immediately creates SVG root element", function () {
+    it("immediately creates SVG root element", function () {
       var root = vizElement.getRoot();
       assertEqual('[object SVGGElement]', root[0].toString());
     });

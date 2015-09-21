@@ -25,7 +25,7 @@ describe("NetSimUtils", function () {
       assertEqual('NaN', serializeNumber(NaN));
     });
 
-    it ("turns undefined into a string", function () {
+    it("turns undefined into a string", function () {
       assertEqual('undefined', serializeNumber(undefined));
     });
 
@@ -70,21 +70,21 @@ describe("NetSimUtils", function () {
       assertEqual(val, resultValue);
     };
 
-    it ("preserves Infinities", function () {
+    it("preserves Infinities", function () {
       roundTripTest(Infinity);
       roundTripTest(-Infinity);
     });
 
-    it ("preserves NaN", function () {
+    it("preserves NaN", function () {
       roundTripTest(NaN);
     });
 
-    it ("preserves numbers", function () {
+    it("preserves numbers", function () {
       roundTripTest(42);
       roundTripTest(Math.PI);
     });
 
-    it ("preserves empty values", function () {
+    it("preserves empty values", function () {
       roundTripTest(null);
       roundTripTest(undefined);
     });
@@ -93,11 +93,11 @@ describe("NetSimUtils", function () {
   describe("scrubHeaderSpecForBackwardsCompatibility", function () {
     var scrubHeaderSpecForBackwardsCompatibility = NetSimUtils.scrubHeaderSpecForBackwardsCompatibility;
 
-    it ("is a no-op for empty array", function () {
+    it("is a no-op for empty array", function () {
       assertEqual([], scrubHeaderSpecForBackwardsCompatibility([]));
     });
 
-    it ("is a no-op for new format", function () {
+    it("is a no-op for new format", function () {
       assertEqual(['toAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               ['toAddress']));
@@ -111,7 +111,7 @@ describe("NetSimUtils", function () {
               ['toAddress', 'fromAddress', 'packetCount', 'packetIndex']));
     });
 
-    it ("converts old format to new format", function () {
+    it("converts old format to new format", function () {
       assertEqual(['toAddress'],
           scrubHeaderSpecForBackwardsCompatibility(
               [

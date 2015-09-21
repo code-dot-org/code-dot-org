@@ -18,12 +18,12 @@ describe("NetSimMessage", function () {
     messageTable = testShard.messageTable;
   });
 
-  it ("uses the message table", function () {
+  it("uses the message table", function () {
     var message = new NetSimMessage(testShard);
     assert(message.getTable() === testShard.messageTable);
   });
 
-  it ("implements MessageData", function () {
+  it("implements MessageData", function () {
     var message = new NetSimMessage(testShard);
 
     assertOwnProperty(message, 'fromNodeID');
@@ -46,17 +46,17 @@ describe("NetSimMessage", function () {
   });
 
   describe ("isValid static check", function () {
-    it ("is minimally valid with a payload", function () {
+    it("is minimally valid with a payload", function () {
       assert(!NetSimMessage.isValid({}));
       assert(NetSimMessage.isValid({ payload: '' }));
     });
 
-    it ("passes given a default-constructed NetSimMessage", function () {
+    it("passes given a default-constructed NetSimMessage", function () {
       assert(NetSimMessage.isValid(new NetSimMessage()));
     });
   });
 
-  it ("converts MessageRow.base64Payload to local binary payload", function () {
+  it("converts MessageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
       toNodeID: 2,
@@ -71,7 +71,7 @@ describe("NetSimMessage", function () {
     assertEqual(message.payload, "1001001");
   });
 
-  it ("gracefully converts a malformed base64Payload to empty string", function () {
+  it("gracefully converts a malformed base64Payload to empty string", function () {
     var message = new NetSimMessage(testShard, {
       base64Payload: {
         string: "totally not a base64 string",
@@ -82,7 +82,7 @@ describe("NetSimMessage", function () {
   });
 
   describe("static method send", function () {
-    it ("adds an entry to the message table", function () {
+    it("adds an entry to the message table", function () {
       messageTable.refresh(function (err, rows) {
         assert(rows.length === 0, "Table is empty");
       });
@@ -94,7 +94,7 @@ describe("NetSimMessage", function () {
       });
     });
 
-    it ("Puts row values in remote table", function () {
+    it("Puts row values in remote table", function () {
       var fromNodeID = 1;
       var toNodeID = 2;
       var simulatedBy = 2;
@@ -128,13 +128,13 @@ describe("NetSimMessage", function () {
       });
     });
 
-    it ("Returns no error to its callback when successful", function () {
+    it("Returns no error to its callback when successful", function () {
       NetSimMessage.send(testShard, { payload: '' }, function (err) {
         assert(err === null, "Error is null on success");
       });
     });
 
-    it ("Returns error to its callback when given a non-binary String as a payload", function () {
+    it("Returns error to its callback when given a non-binary String as a payload", function () {
       var returnedError;
       NetSimMessage.send(testShard, {
         fromNodeID: 1,
@@ -150,7 +150,7 @@ describe("NetSimMessage", function () {
     });
   });
 
-  it ("can be instatiated from remote row", function () {
+  it("can be instatiated from remote row", function () {
     var testRow;
 
     // Create a message row in remote table
@@ -180,7 +180,7 @@ describe("NetSimMessage", function () {
     assertEqual(message.visitedNodeIDs, [4]);
   });
 
-  it ("can be removed from the remote table with destroy()", function () {
+  it("can be removed from the remote table with destroy()", function () {
     var testRow;
 
     // Create a message row in remote table
@@ -202,7 +202,7 @@ describe("NetSimMessage", function () {
   });
 
   describe("destroyEntities on messages", function () {
-    it ("deletes all messages passed to it", function () {
+    it("deletes all messages passed to it", function () {
       NetSimMessage.send(
           testShard,
           {
@@ -248,7 +248,7 @@ describe("NetSimMessage", function () {
 
   describe("MessageRow", function () {
 
-    it ("has expected row structure and default values", function () {
+    it("has expected row structure and default values", function () {
       var message = new NetSimMessage(testShard);
       var row = message.buildRow();
 
@@ -274,7 +274,7 @@ describe("NetSimMessage", function () {
       assertEqual(row.visitedNodeIDs, []);
     });
 
-    it ("converts local binary payload to base64 before creating row", function () {
+    it("converts local binary payload to base64 before creating row", function () {
       var base64Payload = {
         string: "kg==",
         len: 7

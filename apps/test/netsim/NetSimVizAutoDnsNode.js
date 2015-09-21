@@ -29,37 +29,37 @@ describe("NetSimVizAutoDnsNode", function () {
       vizElement = new NetSimVizAutoDnsNode();
     });
 
-    it ("is a VizElement", function () {
+    it("is a VizElement", function () {
       assert(vizElement instanceof NetSimVizElement);
     });
 
-    it ("is a VizNode", function () {
+    it("is a VizNode", function () {
       assert(vizElement instanceof NetSimVizNode);
     });
 
-    it ("uses a DNS display name (by default)", function () {
+    it("uses a DNS display name (by default)", function () {
       assertEqual('DNS', vizElement.displayName_.text());
     });
 
-    it ("uses a dns hostname when level expects it", function () {
+    it("uses a dns hostname when level expects it", function () {
       NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizAutoDnsNode();
       assertEqual('dns', vizElement.displayName_.text());
     });
 
-    it ("knows it's not a router", function () {
+    it("knows it's not a router", function () {
       assertEqual(false, vizElement.isRouter);
     });
 
-    it ("knows it's not a local node", function () {
+    it("knows it's not a local node", function () {
       assertEqual(false, vizElement.isLocalNode);
     });
 
-    it ("knows it is a DNS node", function () {
+    it("knows it is a DNS node", function () {
       assertEqual(true, vizElement.isDnsNode);
     });
 
-    it ("adds the 'auto-dns-node' class to its root element", function () {
+    it("adds the 'auto-dns-node' class to its root element", function () {
       assertEqual(true, vizElement.getRoot().is('.auto-dns-node'));
     });
   });

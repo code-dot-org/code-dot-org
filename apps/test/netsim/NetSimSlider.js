@@ -16,7 +16,7 @@ describe("NetSimSlider", function () {
       slider = new NetSimSlider(null, {});
     });
 
-    it ("value round-trip is identity within slider range", function () {
+    it("value round-trip is identity within slider range", function () {
       // Default range is 0-100
       assertEqual(0, roundTrip(0));
       assertEqual(1, roundTrip(1));
@@ -25,7 +25,7 @@ describe("NetSimSlider", function () {
       assertEqual(100, roundTrip(100));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Default range is 0-100
       assertEqual(0, roundTrip(-1));
       assertEqual(0, roundTrip(-100));
@@ -46,7 +46,7 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("value round-trip is identity within slider range", function () {
+    it("value round-trip is identity within slider range", function () {
       // Range is 100-0
       assertEqual(100, roundTrip(100));
       assertEqual(99, roundTrip(99));
@@ -55,7 +55,7 @@ describe("NetSimSlider", function () {
       assertEqual(0, roundTrip(0));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Range is 100-0
       assertEqual(100, roundTrip(101));
       assertEqual(100, roundTrip(500));
@@ -77,7 +77,7 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("value round-trip is identity within slider range", function () {
+    it("value round-trip is identity within slider range", function () {
       assertEqual(0, roundTrip(0));
       assertEqual(1, roundTrip(1));
       assertEqual(42, roundTrip(42));
@@ -85,7 +85,7 @@ describe("NetSimSlider", function () {
       assertEqual(100, roundTrip(100));
     });
 
-    it ("clamps values to infinities outside of range", function () {
+    it("clamps values to infinities outside of range", function () {
       assertEqual(-Infinity, roundTrip(-1));
       assertEqual(-Infinity, roundTrip(-100));
       assertEqual(-Infinity, roundTrip(-Infinity));
@@ -97,7 +97,7 @@ describe("NetSimSlider", function () {
   });
 
   describe("bad configurations", function () {
-    it ("throws when initialized with noninteger step values", function () {
+    it("throws when initialized with noninteger step values", function () {
       assertThrows(Error, function () {
         slider = new NetSimSlider(null, { step: 0.1 });
       });
@@ -107,7 +107,7 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("throws when initialized with a zero step value", function () {
+    it("throws when initialized with a zero step value", function () {
       assertThrows(Error, function () {
         slider = new NetSimSlider(null, { step: 0 });
       });
@@ -122,7 +122,7 @@ describe("NetSimSlider.DecimalPrecisionSlider", function () {
     return slider.sliderPositionToValue(slider.valueToSliderPosition(val));
   };
 
-  it ("has default precision of 2 decimal places", function () {
+  it("has default precision of 2 decimal places", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.1 });
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.01 });
     assertThrows(Error, function () {
@@ -130,7 +130,7 @@ describe("NetSimSlider.DecimalPrecisionSlider", function () {
     });
   });
 
-  it ("can be constructed with greater precision", function () {
+  it("can be constructed with greater precision", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.001 });
     assertThrows(Error, function () {
       slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.0001 });
@@ -173,7 +173,7 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       slider = new LogarithmicSlider(null, {});
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
+    it("value round-trip is identity for 2^x values within slider range", function () {
       // Default range is 1-100
       assertEqual(2, roundTrip(2));
       assertEqual(4, roundTrip(4));
@@ -183,7 +183,7 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(64, roundTrip(64));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value", function () {
+    it("value round-trip rounds down to nearest 2^x value", function () {
       // Default range is 1-100
       assertEqual(2, roundTrip(3));
       assertEqual(4, roundTrip(7));
@@ -193,13 +193,13 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(64, roundTrip(99));
     });
 
-    it ("value round-trip is identity for min and max values", function () {
+    it("value round-trip is identity for min and max values", function () {
       // Default range is 1-100
       assertEqual(1, roundTrip(1));
       assertEqual(100, roundTrip(100));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Default range is 1-100
       assertEqual(1, roundTrip(-1));
       assertEqual(1, roundTrip(-100));
@@ -210,7 +210,7 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(100, roundTrip(Infinity));
     });
 
-    it ("values are powers of two of the slider positions", function () {
+    it("values are powers of two of the slider positions", function () {
       assertEqual(1, slider.sliderPositionToValue(0));
       assertEqual(2, slider.sliderPositionToValue(1));
       assertEqual(4, slider.sliderPositionToValue(2));
@@ -220,7 +220,7 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(64, slider.sliderPositionToValue(6));
     });
 
-    it ("values are clamped at extreme slider positions", function () {
+    it("values are clamped at extreme slider positions", function () {
       assertEqual(1, slider.sliderPositionToValue(-1));
       assertEqual(100, slider.sliderPositionToValue(7));
     });
@@ -238,22 +238,22 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
+    it("value round-trip is identity for 2^x values within slider range", function () {
       assertEqual(32, roundTrip(32));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value or miniumum", function () {
+    it("value round-trip rounds down to nearest 2^x value or miniumum", function () {
       assertEqual(16, roundTrip(31));
       assertEqual(32, roundTrip(63));
     });
 
-    it ("value round-trip is identity for exact min and max values", function () {
+    it("value round-trip is identity for exact min and max values", function () {
       // Default range is 1-100
       assertEqual(16, roundTrip(16));
       assertEqual(64, roundTrip(64));
     });
 
-    it ("clamps values to infinities outside of range", function () {
+    it("clamps values to infinities outside of range", function () {
       assertEqual(-Infinity, roundTrip(15));
       assertEqual(-Infinity, roundTrip(-100));
       assertEqual(-Infinity, roundTrip(-Infinity));
@@ -276,24 +276,24 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
+    it("value round-trip is identity for 2^x values within slider range", function () {
       assertEqual(32, roundTrip(32));
       assertEqual(64, roundTrip(64));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value or miniumum", function () {
+    it("value round-trip rounds down to nearest 2^x value or miniumum", function () {
       assertEqual(25, roundTrip(31));
       assertEqual(32, roundTrip(63));
       assertEqual(64, roundTrip(74));
     });
 
-    it ("value round-trip is identity for exact min and max values", function () {
+    it("value round-trip is identity for exact min and max values", function () {
       // Default range is 1-100
       assertEqual(25, roundTrip(25));
       assertEqual(75, roundTrip(75));
     });
 
-    it ("clamps values to infinities outside of range", function () {
+    it("clamps values to infinities outside of range", function () {
       assertEqual(-Infinity, roundTrip(24));
       assertEqual(-Infinity, roundTrip(-100));
       assertEqual(-Infinity, roundTrip(-Infinity));
@@ -315,24 +315,24 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 10^x values within slider range", function () {
+    it("value round-trip is identity for 10^x values within slider range", function () {
       assertEqual(10, roundTrip(10));
       assertEqual(100, roundTrip(100));
       assertEqual(1000, roundTrip(1000));
     });
 
-    it ("value round-trip rounds down to nearest 10^x value or minimum", function () {
+    it("value round-trip rounds down to nearest 10^x value or minimum", function () {
       assertEqual(8, roundTrip(9));
       assertEqual(10, roundTrip(99));
       assertEqual(100, roundTrip(999));
     });
 
-    it ("value round-trip is identity for min and max values", function () {
+    it("value round-trip is identity for min and max values", function () {
       assertEqual(8, roundTrip(8));
       assertEqual(1024, roundTrip(1024));
     });
 
-    it ("clamps values to range", function () {
+    it("clamps values to range", function () {
       assertEqual(8, roundTrip(7));
       assertEqual(8, roundTrip(-100));
       assertEqual(8, roundTrip(-Infinity));
@@ -342,13 +342,13 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       assertEqual(1024, roundTrip(Infinity));
     });
 
-    it ("values are powers of ten of the slider positions", function () {
+    it("values are powers of ten of the slider positions", function () {
       assertEqual(10, slider.sliderPositionToValue(1));
       assertEqual(100, slider.sliderPositionToValue(2));
       assertEqual(1000, slider.sliderPositionToValue(3));
     });
 
-    it ("values are clamped at extreme slider positions", function () {
+    it("values are clamped at extreme slider positions", function () {
       assertEqual(8, slider.sliderPositionToValue(0));
       assertEqual(1024, slider.sliderPositionToValue(4));
     });

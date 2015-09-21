@@ -21,12 +21,12 @@ describe("NetSimLogEntry", function () {
     testShard = fakeShard();
   });
 
-  it ("uses the logEntry table", function () {
+  it("uses the logEntry table", function () {
     var logEntry = new NetSimLogEntry(testShard);
     assert(logEntry.getTable() === testShard.logTable, "Using wrong table");
   });
 
-  it ("has expected row structure and default values", function () {
+  it("has expected row structure and default values", function () {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
@@ -46,7 +46,7 @@ describe("NetSimLogEntry", function () {
     assertWithinRange(row.timestamp, Date.now(), 10);
   });
 
-  it ("initializes from row", function () {
+  it("initializes from row", function () {
     var row = {
       id: 1,
       nodeID: 42,
@@ -66,7 +66,7 @@ describe("NetSimLogEntry", function () {
     assertEqual(logEntry.timestamp, 52000);
   });
 
-  it ("gracefully converts a malformed base64Payload to empty string", function () {
+  it("gracefully converts a malformed base64Payload to empty string", function () {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
         string: "totally not a base64 string",
@@ -77,7 +77,7 @@ describe("NetSimLogEntry", function () {
   });
 
   describe("static method create", function () {
-    it ("adds an entry to the log table", function () {
+    it("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
       NetSimLogEntry.create(testShard, null, '10100101', null, function () {});
@@ -85,7 +85,7 @@ describe("NetSimLogEntry", function () {
       assertTableSize(testShard, 'logTable', 1);
     });
 
-    it ("Puts row values in remote table", function () {
+    it("Puts row values in remote table", function () {
       var nodeID = 1;
       var binary = '1001010100101';
       var status = NetSimLogEntry.LogStatus.SUCCESS;
@@ -102,7 +102,7 @@ describe("NetSimLogEntry", function () {
       });
     });
 
-    it ("Returns log and no error on success", function () {
+    it("Returns log and no error on success", function () {
       NetSimLogEntry.create(testShard, null, '10101010', null, function (err, result) {
         assert(err === null, "Error is null on success");
         assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
@@ -110,7 +110,7 @@ describe("NetSimLogEntry", function () {
     });
   });
 
-  it ("can be removed from the remote table with destroy()", function () {
+  it("can be removed from the remote table with destroy()", function () {
     var testRow;
 
     // Create a logEntry row in remote table
@@ -128,7 +128,7 @@ describe("NetSimLogEntry", function () {
     assertTableSize(testShard, 'logTable', 0);
   });
 
-  it ("can extract binary data based on standard format", function () {
+  it("can extract binary data based on standard format", function () {
     NetSimGlobals.getLevelConfig().addressFormat = '4';
     NetSimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
