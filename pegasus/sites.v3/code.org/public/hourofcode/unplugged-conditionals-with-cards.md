@@ -1,5 +1,6 @@
 ---
 title: Teacher Resources - Conditionals with Cards
+nav: hoc_teacher_resources_nav
 ---
 
 # Conditionals With Cards: An Hour of Code Tutorial

@@ -1,5 +1,6 @@
 ---
 title: Teacher Resources - Playlab
+nav: hoc_teacher_resources_nav
 ---
 
 # Playlab: An Hour of Code Tutorial

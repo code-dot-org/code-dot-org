@@ -1,5 +1,6 @@
 ---
 title: Teacher Resources - Make a Flappy Game
+nav: hoc_teacher_resources_nav
 ---
 
 # Make a Flappy Game
