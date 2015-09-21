@@ -39,7 +39,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "app_width": "320",
-    "app_height": "480",
+    "app_height": "450",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -47,10 +47,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

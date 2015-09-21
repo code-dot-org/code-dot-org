@@ -7,9 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "start_blocks": "function drawStep(){\r\n  \r\n}\r\n\r\nfunction right(){\r\n  turnLeft();\r\n  turnLeft();\r\n  turnLeft();\r\n}",
     "is_k1": "false",
@@ -29,7 +26,7 @@
     "disable_examples": "false",
     "free_play": "true",
     "app_width": "320",
-    "app_height": "480",
+    "app_height": "450",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
