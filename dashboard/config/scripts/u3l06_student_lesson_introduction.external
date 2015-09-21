@@ -6,15 +6,15 @@ markdown <<MARKDOWN
 
 # Background
 
-An **API** (Application Programm Interface) is a collection of commands that can be used in a programming language to carry out a variety of processes. These commands are the “interface” that the programmer will use to build applications in that language. 
+An **API** (Application Programming Interface) is a collection of commands that can be used in a programming language to carry out a variety of processes. These commands are the “interface” that the programmer will use to build applications in that language. 
 
-Some functions have **parmeters** which accept input as a way to better control, and generalize, the behavior of a function.
+Some functions have **parameters** which accept input as a way to better control, and generalize, the behavior of a function.
 
 # Vocabulary
 
 * API
 * API documentation
-* Parmeters
+* Parameters
 
 # Lesson
 
@@ -23,7 +23,7 @@ Some functions have **parmeters** which accept input as a way to better control,
 * Create more complex drawings using the API functions and parameters. 
 
 # Resources
-* Activity: In code studio.  Click Continue.
+* Activity: In Code Studio.  Click Continue.
 </a>
 
 

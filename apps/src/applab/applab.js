@@ -81,6 +81,9 @@ studioApp.setCheckForEmptyBlocks(true);
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 10000;
 
+// For proxying non-https assets
+var MEDIA_PROXY = '//' + location.host + '/media?u=';
+
 // Default Scalings
 Applab.scale = {
   'snapRadius': 1,
@@ -501,7 +504,7 @@ Applab.getCode = function () {
 Applab.getHtml = function () {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
-  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+  if (Applab.isInDesignMode() && !Applab.isRunning() || Applab.levelHtml === '') {
     designMode.serializeToLevelHtml();
   }
   return Applab.levelHtml;
@@ -560,6 +563,7 @@ function extendHandleClearPuzzle() {
     orig(config);
     Applab.setLevelHtml(config.level.startHtml || '');
     AppStorage.populateTable(level.dataTables, true); // overwrite = true
+    AppStorage.populateKeyValue(level.dataProperties, true); // overwrite = true
     studioApp.resetButtonClick();
   };
 }
@@ -707,6 +711,7 @@ Applab.init = function(config) {
 
   Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
   AppStorage.populateTable(level.dataTables, false); // overwrite = false
+  AppStorage.populateKeyValue(level.dataProperties, false); // overwrite = false
   studioApp.init(config);
 
   var viz = document.getElementById('visualization');
@@ -1327,13 +1332,23 @@ Applab.onCodeModeButton = function() {
   }
 };
 
+var HTTP_REGEXP = new RegExp('^http://');
+
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
+ *
+ * If the filename URL is absolute and non-https, route it through the
+ * MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
+
+  if (HTTP_REGEXP.test(filename)) {
+    return MEDIA_PROXY + encodeURIComponent(filename);
+  }
+
   filename = filename || '';
   if (filename.indexOf('/') !== -1) {
     return filename;
@@ -1492,7 +1507,7 @@ Applab.hideDesignModeToggle = function () {
 
 Applab.hideViewDataButton = function () {
   var isEditing = window.dashboard && window.dashboard.project.isEditing();
-  return !!level.hideDesignMode || !!studioApp.share || !isEditing;
+  return !!level.hideViewDataButton || !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {

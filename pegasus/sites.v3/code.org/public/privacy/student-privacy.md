@@ -11,7 +11,7 @@ Software and technology are everywhere - in our computers, in our pockets, in ou
 
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a *blended learning model*, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
-This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles. 
+This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles.
 
 <img src="/images/privacy-student-image1.png" width="33%"/>
 <img src="/images/privacy-student-image2.png" width="33%"/>
@@ -32,13 +32,13 @@ This format helps nurture creativity, problem solving, collaboration, and logic 
 
 ### Student login - for access outside the classroom
 
-Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, we have created Code Studio accounts for each student. 
+Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, we have created Code Studio accounts for each student.
 
 ## Protecting student privacy
 
-Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy.  In particular, **participation in this course doesn’t require sharing any private student information online**. The online course requests the student’s display name, which can be represented as an alias (eg “John S” or “Cool coder”).  
+Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy.  In particular, **participation in this course doesn’t require sharing any private student information online**. The online course requests the student’s display name, which can be represented as an alias (eg “John S” or “Cool coder”).
 
-The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at http://code.org/privacy. 
+The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at http://code.org/privacy.
 
 ### Data that is required for participation in the course:
 
@@ -50,8 +50,8 @@ The list below summarizes what student data is stored and protected by Code.org,
 ### Optional data:
 
 - Gender (to summarize aggregate participation by females and males)
-- Student email (to allow password-reset, and to send students new coursework when available). 
-- Note: if a student creates an account directly (without a parent or teacher), the email address is required to enable password-reset. To further protect the privacy of children under 13, their email addresses are converted by Code.org into a “hashed” sate, meaning that they are replaced with a series of numbers and cannot be converted back to the original email address.
+- Student email (to allow password-reset, and to send students new coursework when available).
+- Note: if a student creates an account directly (without a parent or teacher), the email address is required to enable password-reset. To further protect the privacy of children under 13, their email addresses are converted by Code.org into a “hashed” state, meaning that they are replaced with a series of numbers and cannot be converted back to the original email address.
 
 For more information on Code.org and Code Studio, visit http://code.org.
 

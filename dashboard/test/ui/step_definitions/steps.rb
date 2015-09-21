@@ -214,6 +214,10 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
   element_contains_text(selector, expectedText)
 end
 
+Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|\\.)*)"$/ do |selector, attribute, expectedText|
+  element_has_attribute(selector, attribute, replace_hostname(expectedText))
+end
+
 # The second regex encodes that ids should not contain spaces or quotes.
 # While this is stricter than HTML5, it is looser than HTML4.
 Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
@@ -384,7 +388,20 @@ end
 
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
-  element.send_keys(make_symbol_if_colon(key))
+  if key.start_with?(':')
+    element.send_keys(make_symbol_if_colon(key))
+  else
+    # Workaround for Firefox, see https://code.google.com/p/selenium/issues/detail?id=6822
+    key.split('').each do |k|
+      if k == '('
+        element.send_keys :shift, 9
+      elsif k == ')'
+        element.send_keys :shift, 0
+      else
+        element.send_keys k
+      end
+    end
+  end
 end
 
 def make_symbol_if_colon(key)
