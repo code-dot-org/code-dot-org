@@ -83,3 +83,7 @@
   = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
     codeMirror('data_properties', 'javascript');
+
+.field
+  = f.label 'Hide View Data Button'
+  = boolean_check_box f, :hide_view_data_button
