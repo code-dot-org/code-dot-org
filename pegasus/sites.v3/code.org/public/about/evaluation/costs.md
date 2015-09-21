@@ -35,9 +35,9 @@ These costs are very important to measure, because if we think about training te
 
 ## Comparables
 
-By comparison, most computer science PD efforts in high school cost between $10,000 - $20,000 per teacher. We achieve lower costs because of the scale we operate at (because we amortize our fixed costs across a much larger number of teachers), and also because this is something we pay very close attention to.
+By comparison, most computer science PD efforts in high school cost **between $10,000 - $20,000 per teacher**. We achieve lower costs because of the scale we operate at (because we amortize our fixed costs across a much larger number of teachers), and also because this is something we pay very close attention to.
 
-As another comparison, most after-school STEM programs cost $500 - $1,000 per student. We achieve significantly lower costs because we are incorporating computer science into the school curriculum, which means that we do not need to pay for teacher salaries, building facilities, or technology devices.
+As another comparison, most after-school STEM programs cost **$500 - $1,000 per student**. We achieve significantly lower costs because we are incorporating computer science into the school curriculum, which means that we do not need to pay for teacher salaries, building facilities, or technology devices.
 
 ## Notes on methodology
 
