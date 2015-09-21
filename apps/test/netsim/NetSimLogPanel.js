@@ -50,7 +50,7 @@ describe("NetSimLogPanel", function () {
     assert(newHtml.length > initialHtml.length);
   });
 
-  describe ("logging", function () {
+  describe("logging", function () {
     var scrollArea;
     beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {

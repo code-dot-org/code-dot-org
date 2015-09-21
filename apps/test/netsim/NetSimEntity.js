@@ -45,7 +45,7 @@ describe("NetSimEntity", function () {
     });
   });
 
-  describe ("static create()", function () {
+  describe("static create()", function () {
     var testShard;
 
     beforeEach(function () {
@@ -66,7 +66,7 @@ describe("NetSimEntity", function () {
     });
   });
 
-  describe ("static get()", function () {
+  describe("static get()", function () {
     var testShard;
 
     beforeEach(function () {

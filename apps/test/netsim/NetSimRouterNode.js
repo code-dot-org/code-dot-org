@@ -911,7 +911,7 @@ describe("NetSimRouterNode", function () {
     });
 
 
-    describe ("broadcast mode", function () {
+    describe("broadcast mode", function () {
       var clientC;
 
       beforeEach(function () {
@@ -1434,7 +1434,7 @@ describe("NetSimRouterNode", function () {
 
     });
 
-    describe ("Random drop chance", function () {
+    describe("Random drop chance", function () {
       var sendMessageOfSize = function (messageSizeBits) {
         var headers = encoder.makeBinaryHeaders({
           toAddress: clientB.getAddress(),
@@ -1924,7 +1924,7 @@ describe("NetSimRouterNode", function () {
     });
 
 
-    describe ("extra hop randomization", function () {
+    describe("extra hop randomization", function () {
       var routerC, routerD, routerE, routerF;
 
       beforeEach(function () {
@@ -2052,7 +2052,7 @@ describe("NetSimRouterNode", function () {
       assertFirstMessageProperty('visitedNodeIDs', [routerA.entityID, routerC.entityID, routerB.entityID]);
     });
 
-    describe ("full-shard Auto-DNS", function () {
+    describe("full-shard Auto-DNS", function () {
 
       var sendToAutoDnsA = function (fromNode, asciiPayload) {
         var headers = encoder.makeBinaryHeaders({

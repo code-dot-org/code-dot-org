@@ -11,13 +11,13 @@ var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
-describe ("NetSimRouterLogModal", function () {
+describe("NetSimRouterLogModal", function () {
 
   beforeEach (function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
-  describe ("Log Mode", function () {
+  describe("Log Mode", function () {
     var modal, rootDiv, testShard, router, levelConfig;
 
     beforeEach(function () {
@@ -65,7 +65,7 @@ describe ("NetSimRouterLogModal", function () {
 
   });
 
-  describe ("Partial DOM updates", function () {
+  describe("Partial DOM updates", function () {
     var testShard, rootDiv, modal;
 
     beforeEach (function () {
@@ -120,7 +120,7 @@ describe ("NetSimRouterLogModal", function () {
       assert.equal(3, rootDiv.find('tbody tr').length);
     });
 
-    describe ("preserves sorting order", function () {
+    describe("preserves sorting order", function () {
       beforeEach (function () {
         insertLog('b');
         insertLog('f');

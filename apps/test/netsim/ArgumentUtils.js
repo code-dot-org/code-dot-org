@@ -5,9 +5,9 @@ var assertThrows = testUtils.assertThrows;
 
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
-describe ("ArgumentUtils", function () {
+describe("ArgumentUtils", function () {
 
-  describe ("validateRequired", function () {
+  describe("validateRequired", function () {
     it("throws TypeError if argument is undefined", function () {
       assertThrows(TypeError, function () {
         ArgumentUtils.validateRequired(undefined, 'any old argument');
@@ -34,7 +34,7 @@ describe ("ArgumentUtils", function () {
     });
   });
 
-  describe ("extendOptionsObject", function () {
+  describe("extendOptionsObject", function () {
 
     it("is valid to pass empty object", function () {
       var _ = ArgumentUtils.extendOptionsObject({});
@@ -99,7 +99,7 @@ describe ("ArgumentUtils", function () {
       });
     });
 
-    describe ('get()', function () {
+    describe('get()', function () {
       var originalOptions, options;
 
       beforeEach (function () {
@@ -153,7 +153,7 @@ describe ("ArgumentUtils", function () {
 
   });
 
-  describe ("isPositiveNoninfiniteNumber", function () {
+  describe("isPositiveNoninfiniteNumber", function () {
     var isValid = ArgumentUtils.isPositiveNoninfiniteNumber;
 
     it("accepts zero, but not less", function () {
@@ -197,7 +197,7 @@ describe ("ArgumentUtils", function () {
     });
   });
 
-  describe ("isBoolean", function () {
+  describe("isBoolean", function () {
     var isValid = ArgumentUtils.isBoolean;
 
     it("accepts booleans", function () {
@@ -242,7 +242,7 @@ describe ("ArgumentUtils", function () {
     });
   });
 
-  describe ("isString", function () {
+  describe("isString", function () {
     var isValid = ArgumentUtils.isString;
 
     it("accepts strings", function () {

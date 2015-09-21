@@ -53,7 +53,7 @@ describe("NetSimLocalClientNode", function () {
     assert(undefined !== testRemoteNode, "Made a remote node");
   });
 
-  describe ("onNodeTableChange_", function () {
+  describe("onNodeTableChange_", function () {
     var lostConnection;
     beforeEach(function () {
       testLocalNode.initializeSimulation(null, null);
