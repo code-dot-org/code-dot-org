@@ -16,7 +16,7 @@ Feature: App Lab Scenarios
   @no_mobile
   Scenario: App Lab Share
 
-    # Create an app with a "hello world" button.
+    # Create an app with a "hello world" button (omitting closing paren for auto-correct).
     Then I press "show-code-header"
     And I wait to see Droplet text mode
     And I press keys "button('hello', 'world" for element ".ace_text-input"
@@ -44,8 +44,7 @@ Feature: App Lab Scenarios
     # Create an app with an http image.
     Then I press "show-code-header"
     And I wait to see Droplet text mode
-    And I press keys "image('test123', 'http://example.com" for element ".ace_text-input"
+    And I press keys "image('test123', 'http://example.com')" for element ".ace_text-input"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123[src=\'https://studio.code.org/media?u=http%3A%2F%2Fexample.com\']" is visible
-    And I press "resetButton"
+    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://studio.code.org/media?u=http%3A%2F%2Fexample.com"
