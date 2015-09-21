@@ -54,9 +54,8 @@ instances = ec2client.describe_instances
 
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
 frontend_instances = instances.reservations.map do |reservation|
-  reservation.instances.select{|instance| instance.state.code == 16 && instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
-  #Code 16 = Instance running as per documentation - http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstanceStatus.html
-end
+  reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
+ end
 
 frontend_instances.flatten!
 
