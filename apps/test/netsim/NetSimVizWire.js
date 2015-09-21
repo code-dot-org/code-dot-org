@@ -33,8 +33,8 @@ describe("NetSimVizWire", function () {
     });
 
     it("has default properties", function () {
-      assert.equal(0, vizWire.textPosX_);
-      assert.equal(0, vizWire.textPosY_);
+      assert.strictEqual(0, vizWire.textPosX_);
+      assert.strictEqual(0, vizWire.textPosY_);
       assert.deepEqual([], vizWire.encodings_);
       assert(localVizNode === vizWire.localVizNode);
       assert(remoteVizNode === vizWire.remoteVizNode);
