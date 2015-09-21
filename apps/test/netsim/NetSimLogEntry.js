@@ -1,15 +1,27 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
+
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
-var assertOwnProperty = testUtils.assertOwnProperty;
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
-var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
+var Packet = require('@cdo/apps/netsim/Packet');
+
+var assert = testUtils.assert;
+var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var binaryToBase64 = DataConverters.binaryToBase64;
 var base64ToBinary = DataConverters.base64ToBinary;
+var binaryToBase64 = DataConverters.binaryToBase64;
+var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimLogEntry", function () {
   var testShard;

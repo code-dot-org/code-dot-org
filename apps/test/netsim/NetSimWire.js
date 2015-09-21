@@ -1,11 +1,22 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
+
 var testUtils = require('../util/testUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
 var assert = testUtils.assert;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
-
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimWire", function () {
   var testShard, wireTable;

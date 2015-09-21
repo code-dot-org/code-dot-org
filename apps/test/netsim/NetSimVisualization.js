@@ -1,30 +1,33 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
-/* global $ */
+/* global $, describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-
-var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSim = require('@cdo/apps/netsim/netsim');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
-var NetSimVizWire = require('@cdo/apps/netsim/NetSimVizWire');
-var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
-var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
-
+var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
+var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
+var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var assert = testUtils.assert;
 var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimVisualization", function () {
   
@@ -121,7 +124,7 @@ describe("NetSimVisualization", function () {
     // visualization should automatically detect these nodes and create
     // corresponding VizElements in its elements_ collection.
     var oldNode2 = createNode(testShard, 'node2');
-    var oldNode3 = createNode(testShard, 'node3');
+    createNode(testShard, 'node3');
 
     // Make sure the visualization now includes all three nodes.
     assert.equal(3, netSimVis.elements_.length);

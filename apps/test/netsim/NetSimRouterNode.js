@@ -1,34 +1,39 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
+/* global describe, beforeEach, it */
 
-var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
-var assertOwnProperty = testUtils.assertOwnProperty;
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
 var _ = require('lodash');
-
+var testUtils = require('../util/testUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var utils = require('@cdo/apps/utils');
-
-var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
+var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
-var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
-var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
-var addressStringToBinary = DataConverters.addressStringToBinary;
+
 var asciiToBinary = DataConverters.asciiToBinary;
-var DnsMode = NetSimConstants.DnsMode;
+var assert = testUtils.assert;
+var assertOwnProperty = testUtils.assertOwnProperty;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var DnsMode = NetSimConstants.DnsMode;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimRouterNode", function () {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder;

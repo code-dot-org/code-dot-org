@@ -1,12 +1,23 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
-var assertOwnProperty = testUtils.assertOwnProperty;
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var testUtils = require('../util/testUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+
+var assert = testUtils.assert;
+var assertOwnProperty = testUtils.assertOwnProperty;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimMessage", function () {
   var testShard, messageTable;

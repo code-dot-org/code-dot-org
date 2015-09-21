@@ -1,15 +1,16 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -17,7 +18,12 @@ var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var assert = testUtils.assert;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
@@ -150,7 +156,7 @@ describe("NetSimLocalClientNode", function () {
   describe("sendMessage", function () {
     it("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessage('101010010101', function (e, r) {
+      testLocalNode.sendMessage('101010010101', function (e) {
         error = e;
       });
       assert(error instanceof Error);
@@ -212,7 +218,7 @@ describe("NetSimLocalClientNode", function () {
 
     it("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessages(payloads, function (e, r) {
+      testLocalNode.sendMessages(payloads, function (e) {
         error = e;
       });
       assert(error instanceof Error);

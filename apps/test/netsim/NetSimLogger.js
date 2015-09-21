@@ -1,8 +1,19 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, it */
+
+var assert = require('../util/testUtils').assert;
+var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 
 // Simple console that only has 'log' method
-var OldConsole = function () {
+var oldConsole = function () {
   var that = {
     transcript: ""
   };
@@ -15,8 +26,8 @@ var OldConsole = function () {
 };
 
 // Modern console with log, info, warn, error methods.
-var ModernConsole = function () {
-  var that = OldConsole();
+var modernConsole = function () {
+  var that = oldConsole();
 
   that.log = function (msg) {
     that.transcript += "LOG:" + msg + "\n";
@@ -43,7 +54,6 @@ var warnMsg =  "Then he picked himself up";
 var errorMsg = "And went to lunch.";
 
 describe("NetSimLogger", function () {
-  var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
   var LogLevel = NetSimLogger.LogLevel;
 
   it("is a complete no-op with no console defined", function () {
@@ -58,7 +68,7 @@ describe("NetSimLogger", function () {
   });
 
   it("pipes all output to 'log' on older consoles", function () {
-    var fauxConsole = OldConsole();
+    var fauxConsole = oldConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.info(infoMsg);
@@ -73,7 +83,7 @@ describe("NetSimLogger", function () {
   });
 
   it("directs output on modern consoles", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.info(infoMsg);
@@ -88,7 +98,7 @@ describe("NetSimLogger", function () {
   });
 
   it("log method defaults to INFO", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(logMsg);
@@ -96,7 +106,7 @@ describe("NetSimLogger", function () {
   });
 
   it("log method respects info, error, warn settings", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(infoMsg, LogLevel.INFO);
@@ -112,7 +122,7 @@ describe("NetSimLogger", function () {
   });
 
   it("log method uses LOG endpoint for bad LogLevel argument", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(logMsg, 42);
@@ -120,7 +130,7 @@ describe("NetSimLogger", function () {
   });
 
   it("Shows all messages at VERBOSE log level", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.info(infoMsg);
@@ -135,7 +145,7 @@ describe("NetSimLogger", function () {
   });
 
   it("Shows all messages at INFO log level", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.INFO);
 
     logger.info(infoMsg);
@@ -150,7 +160,7 @@ describe("NetSimLogger", function () {
   });
 
   it("Omits info messages at WARN log level", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.WARN);
 
     logger.info(infoMsg);
@@ -164,7 +174,7 @@ describe("NetSimLogger", function () {
   });
 
   it("Omits info and warn messages at ERROR log level", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.ERROR);
 
     logger.info(infoMsg);
@@ -177,7 +187,7 @@ describe("NetSimLogger", function () {
   });
 
   it("Omits all messages at NONE log level", function () {
-    var fauxConsole = ModernConsole();
+    var fauxConsole = modernConsole();
     var logger = new NetSimLogger(fauxConsole, LogLevel.NONE);
 
     logger.info(infoMsg);

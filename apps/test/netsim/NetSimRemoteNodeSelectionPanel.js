@@ -1,9 +1,17 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
 /* global $, describe, beforeEach, it */
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimRemoteNodeSelectionPanel = require('@cdo/apps/netsim/NetSimRemoteNodeSelectionPanel');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');

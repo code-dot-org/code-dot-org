@@ -1,6 +1,15 @@
-var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe("NetSimSlider", function () {

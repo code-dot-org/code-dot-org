@@ -1,6 +1,16 @@
-var testUtils = require('../util/testUtils');
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
+
+var assert = require('../util/testUtils').assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
 describe("NetSimUtils", function () {
