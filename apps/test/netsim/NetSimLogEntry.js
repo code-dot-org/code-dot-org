@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
@@ -42,7 +41,7 @@ describe("NetSimLogEntry", function () {
     assert.equal(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
     assertOwnProperty(row, 'timestamp');
-    assertWithinRange(row.timestamp, Date.now(), 10);
+    assert.closeTo(row.timestamp, Date.now(), 10);
   });
 
   it("initializes from row", function () {
@@ -97,7 +96,7 @@ describe("NetSimLogEntry", function () {
         assert.equal(row.nodeID, nodeID);
         assert.equal(rowBinary, binary);
         assert.equal(row.status, status);
-        assertWithinRange(row.timestamp, Date.now(), 10);
+        assert.closeTo(row.timestamp, Date.now(), 10);
       });
     });
 
