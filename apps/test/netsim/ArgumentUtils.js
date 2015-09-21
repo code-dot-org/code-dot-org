@@ -102,7 +102,7 @@ describe("ArgumentUtils", function () {
     describe('get()', function () {
       var originalOptions, options;
 
-      beforeEach (function () {
+      beforeEach(function () {
         originalOptions = { a: 1, b: 2, c: 3 };
         options = ArgumentUtils.extendOptionsObject(originalOptions);
       });

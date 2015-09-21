@@ -13,7 +13,7 @@ var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 describe("NetSimRouterLogModal", function () {
 
-  beforeEach (function () {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
@@ -68,7 +68,7 @@ describe("NetSimRouterLogModal", function () {
   describe("Partial DOM updates", function () {
     var testShard, rootDiv, modal;
 
-    beforeEach (function () {
+    beforeEach(function () {
       testShard = fakeShard();
       rootDiv = $(document.createElement('div'));
       modal = new NetSimRouterLogModal(rootDiv);
@@ -121,7 +121,7 @@ describe("NetSimRouterLogModal", function () {
     });
 
     describe("preserves sorting order", function () {
-      beforeEach (function () {
+      beforeEach(function () {
         insertLog('b');
         insertLog('f');
         insertLog('d');
