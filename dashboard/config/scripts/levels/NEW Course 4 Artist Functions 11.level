@@ -77,6 +77,38 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true" uservisible="false">
+          <mutation>
+            <description>draw a square of size 40 pixels</description>
+          </mutation>
+          <title name="NAME">draw a square 40</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_width" inline="false">
+                  <value name="WIDTH">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">40</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
         <block type="jump" inline="true">
           <title name="DIR">jumpForward</title>
           <value name="VALUE">
@@ -98,29 +130,6 @@
         <block type="procedures_callnoreturn">
           <mutation name="draw a square 40"/>
         </block>
-        <block type="procedures_defnoreturn" editable="false" uservisible="false" usercreated="true">
-          <mutation>
-            <description>draw a square of size 40 pixels</description>
-          </mutation>
-          <title name="NAME">draw a square 40</title>
-          <statement name="STACK">
-            <block type="controls_repeat" uservisible="false">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="draw_move_by_constant" uservisible="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">40</title>
-                  <next>
-                    <block type="draw_turn_by_constant" uservisible="false">
-                      <title name="DIR">turnLeft</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -132,43 +141,52 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false" usercreated="false">
-          <mutation>
-            <description>Draw a square with sides 40 pixels long</description>
-          </mutation>
-          <title name="NAME">draw a square 40</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">40</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">90</title>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="draw a line of squares"/>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
+          <mutation>
+            <description>Draw a square with sides 40 pixels long</description>
+          </mutation>
+          <title name="NAME">draw a square 40</title>
+          <statement name="STACK">
+            <block type="draw_width" inline="false">
+              <value name="WIDTH">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">40</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
         <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation/>
