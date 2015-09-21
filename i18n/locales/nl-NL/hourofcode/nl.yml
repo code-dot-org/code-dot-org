@@ -1,14 +1,14 @@
 nl:
   site_name: Uur Code
   language: Nederlands
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Binnenkort Beschikbaar
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Het Uur Code is een wereldwijde beweging die tientallen miljoenen leerlingen in 180+ landen bereikt. Iedereen kan overal kan een Uur Code-evenement organiseren. Er zijn één uur durende opdrachten in meer dan 30 talen. Geen ervaring nodig. <strong>Leeftijd: 4 t/m 104 jaar.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Bekijk de nieuwe video
   front_watch_regular_video: Watch the video
   header_menu_resources: Middelen
@@ -154,10 +154,14 @@ nl:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hoe doe je een HOUR of CODE</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promoot de HOUR of CODE</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Probeer eens</h1><h2>Uur Code</h2><h3># bediend</h3>'
   anybody_can_learn: Iedereen kan leren.
   get_started: START
@@ -174,11 +178,14 @@ nl:
   front_join_us_teacher: Bent u een leraar?
   front_join_us_inspire: Inspireer leerlingen met
   front_join_us_inspire_link: een HOUR of CODE in de klas.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Bent u een ouder?
   front_join_us_ask_link: Vraag uw lokale school
   front_join_us_ask: voor het organiseren van een Uur Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Hou je gewoon van informatica?
   front_join_us_spread: Vertel het verder.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: "Of organiseer zelf een 'Uur Code'-evenement."
   front_join_us_how_to_run: "Hier leer je hoe je een 'Uur Code'-evenement kunt begeleiden"
   front_join_us_help_promote: Help het Uur Code te promoten
@@ -190,7 +197,8 @@ nl:
   front_join_us_host: Organiseer het
   front_join_us_support: Ondersteun het
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Je naam
   signup_email_label: Je email
   signup_organization_name_label: Naam van school of organisatie
@@ -335,6 +343,7 @@ nl:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Bedankt
   title_prizes: Prijzen
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Middelen
   title_signup_thanks: Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
   title_tutorial_guidelines: Tutorial Guidelines

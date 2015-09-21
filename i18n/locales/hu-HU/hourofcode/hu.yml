@@ -1,14 +1,14 @@
 hu:
   site_name: Kódolás Órája
   language: Magyar
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Hamarosan
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'A Kódolás órája egy több mint 180 országra kiterjedt, diákok tízmillióit elérő globális mozgalom. Bárki bárhol szervezhet Kódolás órája rendezvényt. Az egy órás oktatóanyagok több, mint 30 nyelven érhetők el. Nincs szükség tapasztalatra. <strong>4-től 104 éves korig.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Nézd meg az új videót
   front_watch_regular_video: Watch the video
   header_menu_resources: Segédlet
@@ -154,10 +154,14 @@ hu:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hogyan vezess le egy Kódolás Órája eseményt</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Népszerűsítsd a Kódolás Óráját</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Bárki megtanulhatja.
   get_started: Start
@@ -174,11 +178,14 @@ hu:
   front_join_us_teacher: Tanár vagy?
   front_join_us_inspire: Inspiráld a diákjaidat
   front_join_us_inspire_link: egy Kódolás Órával.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Szülő vagy?
   front_join_us_ask_link: Kérd meg a helyi iskola vezetőit
   front_join_us_ask: hogy tartsanak egy Hour of Code rendezvényt.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Egyszerűen csak szereted a számítástechnikát?
   front_join_us_spread: Terjeszd az igét.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Vagy szervezz egy Kódolás Óráját Te magad!
   front_join_us_how_to_run: Itt található a Hour of Code óra megtartásához szükséges információ
   front_join_us_help_promote: Segíts népszerűsíteni a Hour of Code-ot
@@ -190,7 +197,8 @@ hu:
   front_join_us_host: Legyél a házigazda
   front_join_us_support: Támogasd
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Név
   signup_email_label: E-mail
   signup_organization_name_label: Iskola vagy szervezet neve
@@ -280,7 +288,7 @@ hu:
   hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak iPadjük van, és nem laptopjuk?
   hoc_faq_scratch_a: "A Scratch nem fut tableteken. Ha a diákjaid fiatalok, akkor használhatják a ScratchJR iPad alkalmazást (kezdő olvasóknak szánt verzió). A <a href='http://code.org/learn'>Code.org/tanulás</a> címen található oktatóanyagok között találhatsz olyanokat, amelyek működnek iPaden is - például a Code.org, Tynker, Lightbot vagy a CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
   stats_i18n: Students are learning in 40 languages
@@ -339,6 +347,7 @@ hu:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Thank you
   title_prizes: Díjak
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Segédlet
   title_signup_thanks: Köszönjük hogy jelentkezett egy Hour of Code óra megtartására!
   title_tutorial_guidelines: Tutorial Guidelines

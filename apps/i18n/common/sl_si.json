@@ -220,5 +220,6 @@
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: "
+  "workspaceHeaderShort": "Delovni prostor: ",
+  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
 }

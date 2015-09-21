@@ -1,14 +1,14 @@
 lv:
   site_name: PROGRAMMĒŠANAS STUNDA
   language: Latviešu
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Drīzumā
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: '"Programmēšas stunda" ir starptautiska kustība, kurā piedalās desmitiem miljonu skolēnu vairāk nekā 180 valstīs. Jebkurš un jebkur var organizēt "Programēšans stundas" pasākumu. Vienas stundas pamācība ir pieejama vairāk nekā 30 valodās. Iepriekšēja pieredze nav nepieciešama. <strong>Vecums no 4 līdz 104 gadiem.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Apskaties jauno video
   front_watch_regular_video: Watch the video
   header_menu_resources: Resursi
@@ -154,12 +154,16 @@ lv:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: |-
     <a href='http://hourofcode.com/resources/how-to'>Kā vadīt "Programmēšanas stundu"</a>
   whats_next_promote: |-
     <a href='http://hourofcode.com/resources'>Reklamēt "Programmēšanas stundu"</a>
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Jebkurš var iemācīties.
   get_started: Start
@@ -176,11 +180,14 @@ lv:
   front_join_us_teacher: Vai tu es skolotājs?
   front_join_us_inspire: Iedvesmo skolēnus ar
   front_join_us_inspire_link: '"Programmēšanas stundu" klasē.'
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Vai jūs esat vecāks?
   front_join_us_ask_link: Pajautā savai vietējai skolai
   front_join_us_ask: 'organizēt "Programēšanas stunda".'
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Tev patīk datorzinātnes?
   front_join_us_spread: Izplati informāciju tālāk.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: 'Vai organizē "Programmēšanas stunda" pasākumu pats.'
   front_join_us_how_to_run: 'Šeit ir aprakstīts, kā novadīt "Programmēšanas stunda"'
   front_join_us_help_promote: 'Palīdzi reklamēt "Programmēšanas stunda"'
@@ -192,7 +199,8 @@ lv:
   front_join_us_host: Noorganizēt to
   front_join_us_support: Atbalsti to
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Jūsu vārds
   signup_email_label: Tavs E-pasts
   signup_organization_name_label: Skolas vai organizācijas nosaukums
@@ -281,7 +289,7 @@ lv:
   hoc_faq_scratch_q: Es programmēšanas stundā izmantoju Scratch, bet ko darīt, ja mani skolēni vairāk izmanto iPad nevis datorus?
   hoc_faq_scratch_a: "Scratch nestrādā planšetdatoros. Ja skolēni ir mazi, tad variet uz iPad uzstādīt ScratchJr. Ja pameklēsi pamācības <a href='http://code.org/learn'>code.org</a>,atradīsi citas piemērotas iPad - code.org, Tynker, Lightbot vai CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 'Statistika no 2013. gada "Programmēšanas stundas"'
   stats_growth: Tas sasniedza 15 miljonus lietotājus visātrāk.
   stats_i18n: Students are learning in 40 languages
@@ -340,6 +348,7 @@ lv:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Paldies
   title_prizes: Balvas
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Resursi
   title_signup_thanks: 'Paldies, ka uzņēmies vadīt "Programmēšanas stundu"!'
   title_tutorial_guidelines: Tutorial Guidelines

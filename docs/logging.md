@@ -49,7 +49,7 @@ When terminating an application instance it's import to make sure all of the log
 
 ## Log Analysis: Counting Lines of Code
 
-`bin/count-lines-of-code-from-milestone-logs` is a template for performing log analysis. It is also what we use to analize the `milestone.log[-YYYYMMDD.gz]` files to count lines of code.
+`bin/count-lines-of-code-from-milestone-logs` is a template for performing log analysis. It is also what we use to analyze the `milestone.log[-YYYYMMDD.gz]` files to count lines of code.
 
 ### Usage
 

@@ -220,5 +220,6 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: "
+  "workspaceHeaderShort": "Munkaterület: ",
+  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops."
 }

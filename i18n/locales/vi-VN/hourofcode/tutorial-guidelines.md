@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Chúng tôi muốn đưa ra một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là để tối ưu hóa trải nghiệm cho sinh học sinh và giáo viên - những người mới với tin học. Xin vui lòng sử dụng tài liệu này để chỉ dẫn cho sự sáng tạo của bạn, nhắm mục tiêu đến người dùng chưa tiếp xúc với việc mã nguồn, lập trình máy tính và tin học.
 
@@ -23,20 +23,13 @@ Chúng tôi muốn đưa ra một loạt các lựa chọn hấp dẫn, nhưng m
 
 ## Mục lục:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Làm thế nào hướng dẫn sẽ được đánh giá để đưa vào](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Gợi ý cho việc thiết kế các hoạt động của bạn](#design)
+  * [Nguyên tắc thương hiệu](#tm)
+  * [Theo dõi Pixel](#pixel)
+  * [Tăng hiệu quả của các hướng dẫn, CSEdWeek, và Giờ Lập Trình của bạn](#promote)
   * [Một lưu ý cho các sinh viên Khuyết tật](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Xin vui lòng cũng bao gồm các kiến thức khoa học được đề nghị máy tính trong lớp cấp độ: sơ cấp, Trung cấp, hoặc nâng cao. Giờ của mã trang web sẽ đánh dấu hoạt động cho người mới bắt đầu nổi bật nhất. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Yêu cầu kỹ thuật: 
       * Để chính xác hơn theo dõi sự tham gia, chúng tôi muốn mỗi đối tác hướng dẫn bên thứ ba để bao gồm các hình ảnh 1-pixel theo dõi trên trang đầu tiên và cuối cùng của hướng dẫn giờ của mã của họ. Nơi xuất phát điểm ảnh, hình ảnh trên trang bắt đầu và một điểm ảnh hình ảnh cuối cùng trên trang cuối cùng. Không đặt điểm ảnh trên tạm thời trang). Xem phần theo dõi Pixel dưới đây để biết thêm chi tiết. 
-      * Sau khi kết thúc hoạt động của bạn, người dùng nên được hướng dẫn đến [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> nơi họ sẽ có thể: 
+      * Sau khi kết thúc hoạt động của bạn, người dùng nên được hướng dẫn đến [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Chia sẻ trên xã hội truyền thông rằng họ hoàn thành giờ mã
           * Nhận được một giấy chứng nhận rằng họ hoàn thành giờ mã
           * Xem các ban lãnh đạo về những quốc gia/thành phố có tỷ lệ tham gia cao nhất trong giờ mã hoạt động
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Tùy ý)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Cho hoạt động trực tuyến (đặc biệt là các ứng dụng điện thoại thông minh/máy tính bảng): 
           * Số lượng người dùng

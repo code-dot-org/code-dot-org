@@ -8,7 +8,7 @@ pl:
   campaign_date_short: 7-13 grudnia
   campaign_date_full: 7-13 grudnia
   front_header_banner: Dołącz do największej akcji edukacyjnej w historii, 7-13 grudnia 2015
-  front_intro_default: 'Godzina Kodowania jest globalną akcją w której udział biorą dziesiątki milionów uczniów z ponad 180 krajów. Nieważne kim jesteś ani skąd pochodzisz, każdy może zostać organizatorem Godziny Kodowania. Jednogodzinne samouczki są dostępne w ponad 30 językach. Nie jest wymagane wcześniejsze doświadczenie. <strong>Godzina kodowania jest dostępna dla wszystkich w wieku od 4 do 104 lat.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Obejrzyj nowy film
   front_watch_regular_video: Obejrzyj wideo
   header_menu_resources: Materiały
@@ -154,10 +154,14 @@ pl:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Jak przeprowadzić Godzinę kodowania?</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promuj Godzinę kodowania</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Każdy może się nauczyć.
   get_started: Start
@@ -174,11 +178,14 @@ pl:
   front_join_us_teacher: Jesteś nauczycielem?
   front_join_us_inspire: Inspire students with
   front_join_us_inspire_link: Godzina kodowania w klasie.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Jesteś rodzicem?
   front_join_us_ask_link: Poproś swoją szkołę
   front_join_us_ask: o współorganizowanie Godziny Kodowania.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Jesteś miłośnikiem informatyki?
   front_join_us_spread: Opowiadaj o nas.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Lub sam/sama zorganizuj Godzinę kodowania.
   front_join_us_how_to_run: Oto jak zostać współorganizatorem Godziny kodowania
   front_join_us_help_promote: Pomóż promować akcję
@@ -190,7 +197,8 @@ pl:
   front_join_us_host: Zostań gospodarzem
   front_join_us_support: Udziel wsparcia
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Twoje imię i nazwisko
   signup_email_label: Twój adres e-mail
   signup_organization_name_label: Nazwa szkoły lub organizacji
@@ -276,7 +284,7 @@ pl:
   hoc_faq_scratch_q: Podczas godziny kodowania używam Scratcha, ale co jeśli moi uczniowie używają iPadów zamiast laptopów?
   hoc_faq_scratch_a: "Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących czytelników). Jeśli spojrzysz na poradniki na <a href='http://code.org/learn'>Code.org/learn</a>, możesz znaleźć inne poradniki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot lub CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
   stats_i18n: Students are learning in 40 languages
@@ -335,6 +343,7 @@ pl:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Dziękujemy
   title_prizes: Nagrody
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Materiały
   title_signup_thanks: Dziękujemy za rejestrację jako organizator Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

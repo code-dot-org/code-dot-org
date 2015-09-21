@@ -1,14 +1,15 @@
-* * *
+---
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 우리는 다양하면서도 매력적인 활동들을 제공하고 싶습니다만, 가장 중요한 목표는 컴퓨터과학(정보과학)을 처음 배우게 되는 학생들과 선생님들의 학습경험과 효과를 최대화 하는 것입니다. 이 문서를 활용하세요. 코딩, 컴퓨터프로그래밍, 컴퓨터과학(정보과학)에 대해 전혀 알지 못하는 사람들을 대상으로하는 여러가지 활동들을 만들어내는 가이드로서 활용하면 됩니다.
 
@@ -23,20 +24,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## 목차:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [최종적으로 완성되어 포함될 튜토리얼은 어떻게 평가 되는가?](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [활동을 설계하는데 도움이되는 제안사항들](#design)
+  * [트레이드마크(상표) 가이드라인](#tm)
+  * [트랙킹 픽셀(Tracking Pixel)](#pixel)
+  * [자신이 만든 튜토리얼, CSEdWeek, Hour of Code 활성화하기](#promote)
   * [장애를 가진 학생을 위한 참고사항](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * 학년 수준과 함께 권장되는 컴퓨터과학(정보과학) 수준도 포함시켜주세요: 초급, 중급, 고급 Hour of Code 웹사이트는 초보자를 위한 활동들을 가장 두드러지게 강조하여 보여줄 것입니다. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * 기술적 요구사항들: 
       * 참여상황을 보다 정확하게 추적할 수 있도록 모든 서드파티 튜토리얼 파트너들은 Hour of Code 튜토리얼의 첫페이지와 마지막 페이지에 1픽셀짜리 트랙킹 이미지들을 포함시켜줄 것을 당부합니다. 시작 픽셀이미지를 첫페이지에 삽입하고, 마지막페이지에 마지막 픽셀이미지를 삽입해주세요. 중간페이지에 픽셀이미지를 삽입하지 말아 주세요. 보다 자세한 사항들은 아래의 트랙킹 픽셀 부분을 살펴보세요. 
-      * 튜토리얼의 과정을 모두 끝내고 나서 모든 사용자들은 다음의 URL 주소로 안내되어야 합니다. [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> 이 페이지를 통해서: 
+      * 튜토리얼의 과정을 모두 끝내고 나서 모든 사용자들은 다음의 URL 주소로 안내되어야 합니다. [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Hour of Code를 완료한 상황을 소셜네트워크로 공유할 수 있습니다.
           * Hour of Code 완료 인증서를 받을 수 있습니다.
           * Hour of Code 활동을 가장 많이 참여하는 순의 지역/도시 랭킹을 볼 수 있습니다.
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(선택 사항)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * 온라인 활동과 관련하여(특히 스마트폰/태블릿 앱): 
           * 참여자 수

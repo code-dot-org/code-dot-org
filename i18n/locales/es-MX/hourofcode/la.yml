@@ -1,14 +1,14 @@
 la:
   site_name: HORA del CÓDIGO
   language: Español (Latinoamérica)
-  front_title: Únete al evento de aprendizaje más grande de la historia, del 7 al 13 de diciembre
+  front_title: 'Únete al evento de aprendizaje más grande en la historia, %{campaign_date}, 2015'
   coming_soon: Próximamente
   campaign_date_start_short: Dic. 7
   campaign_date_start_long: 7 de diciembre
   campaign_date_short: Dic. 7-13
   campaign_date_full: Del 7 al 13 de diciembre
   front_header_banner: Únete al evento de aprendizaje más grande de la historia, del 7 al 13 de diciembre
-  front_intro_default: 'La Hora del Código es un movimiento global, que llega a decenas de millones de estudiantes en más de 180 países. Cualquier persona, en cualquier lugar puede organizar un evento Hora del Código. Tutoriales de una hora están disponibles en más de 30 idiomas. No se necesita experiencia. <strong>Para edades entre 4 y 104 años.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Mira el nuevo vídeo
   front_watch_regular_video: Ver el vídeo
   header_menu_resources: Recursos
@@ -154,10 +154,14 @@ la:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: ¿Qué puedo hacer?
   whats_next_description: "Te enviaremos materiales e instrucciones para organizar tu evento. Los nuevos turoriales de 2015 estarán disponibles pronto para cualquier navegador web, teléfono móvil o incluso si no tienes ordenador. <a href='http://code.org/learn'>Accede a los tutoriales actuales</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Cómo hacer una hora de código</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promueve la Hora de Código</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Intenta una</h1><h2>Hora de Codigo</h2><h3># servido</h3>'
   anybody_can_learn: Cualquier persona puede aprender.
   get_started: Inicio
@@ -174,11 +178,14 @@ la:
   front_join_us_teacher: ¿Eres profesor?
   front_join_us_inspire: Motiva a los estudiantes con
   front_join_us_inspire_link: una Hora de Código en el aula.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: '¿Eres  madre o padre?'
   front_join_us_ask_link: Pregunta en tu colegio o instituto
   front_join_us_ask: 'para que organicen una "Hora de Código".'
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: ¿Simplemente te gustan las ciencias de la computación?
   front_join_us_spread: '"Difunde la idea".'
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: 'U organiza un evento de "Una hora de programación" tú mismo.'
   front_join_us_how_to_run: Aquí podrás ver cómo organizar una hora de código
   front_join_us_help_promote: 'Ayuda a promover "La hora de Código"'
@@ -189,8 +196,9 @@ la:
   front_join_us_sign_up: Suscribirme
   front_join_us_host: Organiza
   front_join_us_support: Apóyala
-  front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organiza una hora de código del 7 al 13 de diciembre y regístrate. ¡Gana un premio por participar!
+  front_join_us_more_info: "Para más información, por favor visite <a href='https://code.org'>code.org</a>."
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organiza una hora de código del %{campaign_date} y regístrate. ¡Gana un premio por participar.'
   signup_name_label: Tu nombre
   signup_email_label: Tu e-mail
   signup_organization_name_label: Nombre del colegio, instituto u organización
@@ -253,11 +261,11 @@ la:
   hoc_faq_last_year: Prueba los tutoriales.
   hoc_faq_when_is_hoc_q: ¿Cuándo es la Hora del Código?
   hoc_faq_when_is_hoc_a: |-
-    Cualquiera puede organizar "Una Hora del Código" en cualquier momento, pero el objetivo de esta campaña popular es que decenas de millones de estudiantes prueben "Una Hora del Código" entre el 7 y el 13 de diciembre de 2015, en celebración de la <a href='http://csedweek.org'>Semana Educativa de las Ciencias de la Computación</a>. ¿Se trata de una <i>hora</i> específica? No. Puedes celebrar "Una Hora del Código" en cualquier momento de esa semana. (Y si no puedes hacerlo durante dicha semana hazlo una antes o una después).
+    Cualquiera puede organizar "Una Hora del Código" en cualquier momento, pero el objetivo de esta campaña popular es que decenas de millones de estudiantes prueben "Una Hora del Código" entre el %{campaign_date} de 2015, en celebración de la <a href='http://csedweek.org'>Semana Educativa de las Ciencias de la Computación</a>. ¿Se trata de una <i>hora</i> específica? No. Puedes celebrar "Una Hora del Código" en cualquier momento de esa semana. (Y si no puedes hacerlo durante dicha semana hazlo una antes o una después).
   hoc_faq_why_cs_q: ¿Por qué Ciencias de la computación?
   hoc_faq_why_cs_a: "<i>Todos</i> los estudiantes deben tener la oportunidad de aprender Ciencias de la Computación. Ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Introducir a los estudiantes de forma temprana en las ciencias de la computación, les permitirá disponer de conocimientos imprescindibles en el s.XXI; fundamentales sea cual sea su futuro desarrollo profesional. Ver más estadísticas en <a href='http://code.org'>Code.org</a>."
   hoc_faq_how_participate_q: ¿Cómo puedo participar en la Hora del Código?
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Comienza a planificar aquí</a> revisando nuestra guía de cómo hacerlo. Podrás organizar un evento de la Hora del Código en tu colegio, instituto o en tu comunidad &mdash; por ejemplo, en un taller extraescolar, en una organización sin ánimo de lucro o, en tu lugar de trabajo. Simplemente, pruébalo cuando llegue el 7 de diciembre."
+  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Comienza a planificar aquí</a> revisando nuestra guía de cómo hacerlo. Podrás organizar un evento de la Hora del Código en tu colegio, instituto o en tu comunidad &mdash; por ejemplo, en un taller extraescolar, en una organización sin ánimo de lucro o, en tu lugar de trabajo. Simplemente, pruébalo cuando llegue el %{campaign_date}."
   hoc_faq_behind_hoc_q: ¿Quién está detrás de la Hora de Programación?
   hoc_faq_behind_hoc_a: "La Hora del Código está organizada por <a href='http://code.org'>Code.org</a>, una organización pública sin fines de lucro (501c3) dedicada a promover las Ciencias de la Computación en escuelas e institutos, con una especial atención en incrementar el número de mujeres y estudiantes de colectivos minoritarios que aprenden a programar. Una <a href='http://code.org/about/partners'>coalición sin precedentes de socios</a> se ha reunido para apoyar la Hora del Código, también &mdash; incluyendo Microsoft, Apple, Amazon, Boys y Girls Clubs of America y College Board."
   hoc_faq_host_q: No sé nada acerca de programación. ¿Aún así puedo organizar un evento?
@@ -338,6 +346,7 @@ la:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Gracias
   title_prizes: Premios
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Recursos
   title_signup_thanks: ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
   title_tutorial_guidelines: Tutorial Guidelines

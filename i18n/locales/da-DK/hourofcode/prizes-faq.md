@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 ## Skal hele din skole deltage, for at vinde for $10.000 i hardware?
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes') %).
 
 ## Skal hele skolen deltage for at vinde en tech-chat?
 
@@ -34,7 +34,7 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## Hvornår er fristen for at tilmelde sig hardware-prisen?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. En skole, fra hver af de amerikanske stater, vil modtage en klassesæt computere. Code.org will select and notify winners via email by December 1, 2015.
 
 ## Hvornår er fristen for at være berettiget til at vinde en it-chat?
 
@@ -42,7 +42,7 @@ To qualify, you must register your classroom for the Hour of Code by November 2,
 
 ## Hvornår får jeg besked, hvis min skole eller klasse vinder en præmie?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 

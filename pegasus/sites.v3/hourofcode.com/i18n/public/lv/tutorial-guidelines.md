@@ -1,14 +1,15 @@
-* * *
+---
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Mēs vēlētos, lai iegūstat daudz aizraujošas iespējas, taču svarīgākais ir palielināt pieredzi skolēniem un skolotājiem, kam datorzinātne ir kas jauns. Lūdzu izmanto šo dokumentu tā, lai jūsu veiktās darbības būtu vērstas uz tiem, kuriem nav priekšzināšanu kodēšanā, programmēšanā un datorzinātnēs.
 
@@ -23,20 +24,13 @@ Mēs vēlētos, lai iegūstat daudz aizraujošas iespējas, taču svarīgākais 
 
 ## Indekss:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Kā apmācibas tiks novērtētas](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Ieteikumi, lai konstruētu jūsu darbības](#design)
+  * [Preču zīmes vadlīnijas](#tm)
+  * [Enkura punkts](#pixel)
+  * [Veiciniet savu mācību laiku datorzinātnes un izglītības nedēļā un "Programmēšanas stundā"](#promote)
   * [Piezīmes studentiem ar nepilnībām](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Lūdzu iekļaut ieteicamās zināšanu līmeni datoru zinātnē: iesācējs, vidēja līmeņa vai augsta līmeņa. "Programmēšanas stundas" mājas lapā tiks uzsvērtas darbības iesācējiem. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tehniskās prasības: 
       * Lai precīzāk izsekotu līdzdalību, mēs vēlamies katru trešo personu apmācību partneriem iekļaut sekošanas attēlus 1 pikseļa izmērā savu "Programmēšanas stundu" apmācību pirmajā un pēdējā lappusē. Novietojiet sākuma pikseļa attēlu sākumlapā un gala pikseļa attēlu beigu lapā. Nenovietojiet pikseļus uz pagaidu lapām). Skatiet sīkāku informāciju sadaļā par pikseļu izsekošanu. 
-      * Upon finishing your activity, users should be directed to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> where they will be able to: 
+      * Upon finishing your activity, users should be directed to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Share on social media that they completed the Hour of Code
           * Receive a certificate that they completed the Hour of Code
           * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(Optional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For online activities (especially smartphone/tablet apps): 
           * Number of users

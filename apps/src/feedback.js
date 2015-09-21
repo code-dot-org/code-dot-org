@@ -447,6 +447,9 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
         message = options.level.missingBlocksErrorMsg ||
             msg.missingBlocksErrorMsg();
         break;
+      case TestResults.NESTED_FOR_SAME_VARIABLE:
+        message = msg.nestedForSameVariable();
+        break;
 
       // Success.
       case TestResults.ALL_PASS:
@@ -1088,6 +1091,9 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
   }
   if (!options.allowTopBlocks && this.hasExtraTopBlocks()) {
     return TestResults.EXTRA_TOP_BLOCKS_FAIL;
+  }
+  if (this.studioApp_.hasDuplicateVariablesInForLoops()) {
+    return TestResults.NESTED_FOR_SAME_VARIABLE;
   }
   if (Blockly.useContractEditor || Blockly.useModalFunctionEditor) {
     if (this.hasUnusedParam_()) {

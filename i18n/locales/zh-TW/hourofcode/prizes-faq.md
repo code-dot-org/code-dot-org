@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 ## 是否全校都需要參加才能贏得價值 $10,000 美元的硬體呢？
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes') %).
 
 ## 是否全校都需要參加才能贏得科技聊天嗎？
 
@@ -34,7 +34,7 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## 硬件獎申請的截止日期是什麼時候?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
 
 ## 有資格贏取技術聊天的截止日期是什麼時候?
 
@@ -42,7 +42,7 @@ To qualify, you must register your classroom for the Hour of Code by November 2,
 
 ## 如果我的學校或教室贏得獎品，會何時通知？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 
