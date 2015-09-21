@@ -3,16 +3,28 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Forum for Unit 2 Day 4-6
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+### Welcome to the Course > Exploring the lesson
 
-Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+<br>
+<br>
+Let's start by checking out the first lesson from Unit 1, where students think about computing innovations that impact their lives. Read on below for the first page of the lesson, which provides an overview. You can [access the full lesson here,](https://docs.google.com/document/d/1nWrpzSNPgx_D7Q7rm2j4UdCB26ggyXaeta-MWr9zYPs/edit) or see the [entire unit on Code Studio](https://studio.code.org/s/cspunit1/). 
+<br><br>
 
-> Question: This lesson is about working on creating visuals to help the problem solving process.  What is your favorite visual problem solving technique? Give a visual to go with your writing.
+>#### Reflect
+While you read over the lesson, think about what you already know about CS Principles-- the goals of the course, the topics covered, the lessons you've already seen.  **How will this lesson help set your students up to think about the topics in this course?** 
+<br><br>
+>If you want to see more details about the lesson, head over the the [full lesson plan](https://docs.google.com/document/d/1nWrpzSNPgx_D7Q7rm2j4UdCB26ggyXaeta-MWr9zYPs/edit).
 
-### <strong><a href="http://forum.code.org/t/u2-day-4-6-pd-discussion-topic/1776"target="_blank"> U2 Day 4-6 PD Discussion Topic</a></strong> 
+<br>
+On the next page you'll have space to ask questions and talk about the lesson.  
+<br><br> 
 
-After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+<object src="http://staging.code.org/ecs#page=34" width="100%" height="700">
+    <embed src="http://staging.code.org/ecs#page=34"  width="100%" height="700">
+    </embed>
+</object>
 
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 MARKDOWN

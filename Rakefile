@@ -225,7 +225,6 @@ namespace :install do
 
   task :hooks do
     files = [
-      'lint.rb',
       'pre-commit'
     ]
     git_path = ".git/hooks"
