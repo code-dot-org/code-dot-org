@@ -8,6 +8,10 @@ require 'etc'
 
 MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typically this takes a couple minutes
 
+# Executes an arbitrary command on an ssh channel, prints the output to console, bails out if the command fails
+# channel: ssh channel that you get from open_channel
+# command: Command to execute on the remote host
+# exit_error_string: Error message to throw if the command exits with something other than 1
 def execute_ssh_on_channel(channel, command, exit_error_string)
   channel.exec(command) do |ch|
     ch.on_data do |_, data|
@@ -20,8 +24,7 @@ def execute_ssh_on_channel(channel, command, exit_error_string)
 
     ch.on_request 'exit-status' do |_, data|
       if data.read_long != 0
-        puts exit_error_string
-        exit(1)
+        throw exit_error_string
       end
     end
   end
@@ -55,6 +58,7 @@ instances = ec2client.describe_instances
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
 frontend_instances = instances.reservations.map do |reservation|
   reservation.instances.select{|instance| instance.state.code == 16 && instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
+  #Code 16 = Instance running as per documentation - http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-DescribeInstanceStatus.html
 end
 
 frontend_instances.flatten!
@@ -70,10 +74,17 @@ puts "Naming instance #{instance_name}, verifying that the name is okay"
 
 Net::SSH.start('gateway.code.org', username, :password => password) do |ssh|
   node_list = ssh.exec!("knife node list | egrep \'^#{instance_name}$\'")
-  throw 'Node name is currently in use. This should never happen - see if the host exists in EC2' unless node_list.nil?
+
+  unless node_list.nil?
+    throw 'Node name is currently in use. This should never happen - see if the host exists in EC2'
+  end
 
   client_list = ssh.exec!("knife client list | egrep \'^#{instance_name}$\'")
-  throw 'Client name is in use and is likely stale. Please log into gateway and delete the client, then rerun this command' unless client_list.nil?
+
+  unless client_list.nil?
+    throw 'Client name is in use and is likely stale. Please log into gateway and delete the client, then rerun this command'
+  end
+
 end
 
 puts "Name #{instance_name} is okay, creating frontend server"
@@ -164,7 +175,7 @@ end
 Net::SCP.download!('gateway.code.org', username, '/tmp/old_knife_config', '/tmp/knife_config', :ssh => { :password => password })
 
 configuration_json = JSON.parse(File.read('/tmp/knife_config'))
-configuration_json['override_attributes']['cdo-secrets']['app_servers'] = {} if configuration_json['override_attributes']['cdo-secrets']['app_servers'].nil?
+configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
 configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_name] = private_dns_name
 
 File.open('/tmp/new_knife_config.json', 'w') do |f|
