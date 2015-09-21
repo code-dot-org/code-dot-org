@@ -30,7 +30,7 @@ class ReportAbuseController < ApplicationController
         'REQUEST_METHOD' => 'POST',
         'PATH_INFO' => channels_path,
         'REQUEST_PATH' => channels_path,
-        'rack.input' => StringIO.new({}.to_json)
+        'rack.input' => StringIO.new()
         )
     end
 
