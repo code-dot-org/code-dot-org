@@ -9,8 +9,6 @@ class ScaryChangeDetector
     Dir.chdir REPO_DIR do
       `git diff --cached --name-status`.split("\n").each do |change|
         type, filename = change.split("\t")
-        p type
-        p filename
         case type
         when 'A'
           @added << filename
