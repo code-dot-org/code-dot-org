@@ -35,5 +35,16 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </required_blocks>
   </blocks>
 </Artist>
