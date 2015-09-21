@@ -1806,7 +1806,7 @@ Applab.hideDesignModeToggle = function () {
 
 Applab.hideViewDataButton = function () {
   var isEditing = window.dashboard && window.dashboard.project.isEditing();
-  return !!level.hideDesignMode || !!studioApp.share || !isEditing;
+  return !!level.hideViewDataButton || !!level.hideDesignMode || !!studioApp.share || !isEditing;
 };
 
 Applab.isInDesignMode = function () {
