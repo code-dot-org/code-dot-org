@@ -12,7 +12,7 @@ module Dashboard
   end
 
   def self.admin?(user_id)
-    !!db[:users].where(id: user_id, admin: true).first
+    !!db[:users][id: user_id, admin: true]
   end
 
   class User
@@ -24,7 +24,8 @@ module Dashboard
 
     # @returns [User] for given user_id, or nil if not found in database
     def self.get(user_id)
-      return nil unless (row = Dashboard::db[:users][id: user_id])
+      row = Dashboard::db[:users][id: user_id]
+      return nil unless row
       Dashboard::User.new(row)
     end
 
@@ -49,11 +50,7 @@ module Dashboard
       case permission
         when 'admin' then admin?
         when 'teacher' then teacher?
-        else
-          !!Dashboard::db[:user_permissions].
-              where(user_id: id).
-              and(permission: permission).
-              first
+        else !!Dashboard::db[:user_permissions][user_id: id, permission: permission]
       end
     end
 
