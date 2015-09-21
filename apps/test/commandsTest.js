@@ -1,6 +1,5 @@
 var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
 var utils = require('@cdo/apps/utils');
@@ -158,19 +157,19 @@ describe("CommandSequence", function () {
         new LogCommand('B'),
         new LogCommand('C')
     ]);
-    assertEqual(sequence.commandList_.length, 3);
-    assertEqual(sequenceLog, '');
+    assert.equal(sequence.commandList_.length, 3);
+    assert.equal(sequenceLog, '');
 
     sequence.tick();
     assert(!sequence.isStarted());
-    assertEqual(sequenceLog, '');
+    assert.equal(sequenceLog, '');
 
     sequence.begin();
     assert(sequence.isStarted());
-    assertEqual(sequenceLog, '');
+    assert.equal(sequenceLog, '');
 
     sequence.tick();
-    assertEqual(sequenceLog, 'ABC');
+    assert.equal(sequenceLog, 'ABC');
     assert(sequence.isFinished());
   });
 
@@ -183,7 +182,7 @@ describe("CommandSequence", function () {
 
     sequence.begin();
     sequence.tick();
-    assertEqual(sequenceLog, 'ABC');
+    assert.equal(sequenceLog, 'ABC');
     assert(sequence.succeeded());
   });
 
@@ -197,7 +196,7 @@ describe("CommandSequence", function () {
 
     sequence.begin();
     sequence.tick();
-    assertEqual(sequenceLog, 'AB');
+    assert.equal(sequenceLog, 'AB');
     assert(sequence.failed(), 'The sequence should fail');
   });
 
@@ -211,7 +210,7 @@ describe("CommandSequence", function () {
 
     sequence.begin();
     sequence.tick();
-    assertEqual(sequenceLog, 'ABC');
+    assert.equal(sequenceLog, 'ABC');
     assert(!commandC.isFinished());
     assert(!sequence.isFinished());
 
@@ -238,7 +237,7 @@ describe("CommandSequence", function () {
     for (i = 0; i < 5; i++){
       sequence.tick();
     }
-    assertEqual(sequenceLog, 'A');
+    assert.equal(sequenceLog, 'A');
     assert(commandA.isStarted());
     assert(!commandB.isStarted(), "Command B hasn't started yet.");
     assert(!commandC.isStarted(), "Command C hasn't started yet.");
@@ -248,7 +247,7 @@ describe("CommandSequence", function () {
     assert(!commandB.isStarted());
 
     sequence.tick();
-    assertEqual(sequenceLog, 'AB');
+    assert.equal(sequenceLog, 'AB');
     assert(commandA.isFinished());
     assert(commandB.isStarted());
     assert(!commandC.isStarted(), "Command C hasn't started yet.");
@@ -258,7 +257,7 @@ describe("CommandSequence", function () {
     assert(!commandC.isStarted());
 
     sequence.tick();
-    assertEqual(sequenceLog, 'ABC');
+    assert.equal(sequenceLog, 'ABC');
     assert(commandA.isFinished());
     assert(commandB.isStarted());
     assert(commandC.isStarted());
@@ -282,16 +281,16 @@ describe("CommandSequence", function () {
 
     sequence.begin();
     sequence.tick();
-    assertEqual(sequenceLog, '');
+    assert.equal(sequenceLog, '');
 
     sequence.tick();
-    assertEqual(sequenceLog, 'ABC');
+    assert.equal(sequenceLog, 'ABC');
 
     sequence.tick();
-    assertEqual(sequenceLog, 'ABCD');
+    assert.equal(sequenceLog, 'ABCD');
 
     sequence.tick();
-    assertEqual(sequenceLog, 'ABCDEF');
+    assert.equal(sequenceLog, 'ABCDEF');
   });
 
 });

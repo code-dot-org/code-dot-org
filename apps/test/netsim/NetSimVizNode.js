@@ -7,7 +7,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -29,32 +28,32 @@ describe("NetSimVizNode", function () {
     });
 
     it("has default properties", function () {
-      assertEqual(undefined, vizNode.address_);
-      assertEqual(undefined, vizNode.dnsMode_);
-      assertEqual(false, vizNode.isRouter);
-      assertEqual(false, vizNode.isLocalNode);
-      assertEqual(false, vizNode.isDnsNode);
+      assert.equal(undefined, vizNode.address_);
+      assert.equal(undefined, vizNode.dnsMode_);
+      assert.equal(false, vizNode.isRouter);
+      assert.equal(false, vizNode.isLocalNode);
+      assert.equal(false, vizNode.isDnsNode);
     });
 
     it("immediately creates SVG elements", function () {
       var root = vizNode.getRoot();
-      assertEqual('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGGElement]', root[0].toString());
 
       var rootChildren = root.children();
-      assertEqual(3, rootChildren.length);
+      assert.equal(3, rootChildren.length);
 
       var circle = rootChildren[0];
-      assertEqual('[object SVGCircleElement]', circle.toString());
+      assert.equal('[object SVGCircleElement]', circle.toString());
 
       var nameGroup = rootChildren[1];
-      assertEqual('[object SVGGElement]', nameGroup.toString());
+      assert.equal('[object SVGGElement]', nameGroup.toString());
       var nameChildren = $(nameGroup).children();
-      assertEqual(2, nameChildren.length);
+      assert.equal(2, nameChildren.length);
 
       var addressGroup = rootChildren[2];
-      assertEqual('[object SVGGElement]', addressGroup.toString());
+      assert.equal('[object SVGGElement]', addressGroup.toString());
       var addressChildren = $(addressGroup).children();
-      assertEqual(2, addressChildren.length);
+      assert.equal(2, addressChildren.length);
     });
   });
 

@@ -7,7 +7,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -31,28 +30,28 @@ describe("NetSimVizWire", function () {
     });
 
     it("has default properties", function () {
-      assertEqual(0, vizWire.textPosX_);
-      assertEqual(0, vizWire.textPosY_);
-      assertEqual([], vizWire.encodings_);
+      assert.equal(0, vizWire.textPosX_);
+      assert.equal(0, vizWire.textPosY_);
+      assert.deepEqual([], vizWire.encodings_);
       assert(localVizNode === vizWire.localVizNode);
       assert(remoteVizNode === vizWire.remoteVizNode);
     });
 
     it("immediately creates SVG elements", function () {
       var root = vizWire.getRoot();
-      assertEqual('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGGElement]', root[0].toString());
 
       var rootChildren = root.children();
-      assertEqual(3, rootChildren.length);
+      assert.equal(3, rootChildren.length);
 
       var line = rootChildren[0];
-      assertEqual('[object SVGPathElement]', line.toString());
+      assert.equal('[object SVGPathElement]', line.toString());
 
       var questionMark = rootChildren[1];
-      assertEqual('[object SVGTextElement]', questionMark.toString());
+      assert.equal('[object SVGTextElement]', questionMark.toString());
 
       var textBit = rootChildren[2];
-      assertEqual('[object SVGTextElement]', textBit.toString());
+      assert.equal('[object SVGTextElement]', textBit.toString());
     });
   });
 

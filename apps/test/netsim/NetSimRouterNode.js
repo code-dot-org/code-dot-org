@@ -6,7 +6,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var assertWithinRange = testUtils.assertWithinRange;
 var NetSimTestUtils = require('../util/netsimTestUtils');
@@ -262,25 +261,25 @@ describe("NetSimRouterNode", function () {
     var row = router.buildRow();
 
     assertOwnProperty(row, 'routerNumber');
-    assertEqual(row.routerNumber, undefined);
+    assert.equal(row.routerNumber, undefined);
 
     assertOwnProperty(row, 'creationTime');
     assertWithinRange(row.creationTime, Date.now(), 10);
 
     assertOwnProperty(row, 'dnsMode');
-    assertEqual(row.dnsMode, DnsMode.NONE);
+    assert.equal(row.dnsMode, DnsMode.NONE);
 
     assertOwnProperty(row, 'dnsNodeID');
-    assertEqual(row.dnsNodeID, undefined);
+    assert.equal(row.dnsNodeID, undefined);
 
     assertOwnProperty(row, 'bandwidth');
-    assertEqual(row.bandwidth, 'Infinity');
+    assert.equal(row.bandwidth, 'Infinity');
 
     assertOwnProperty(row, 'memory');
-    assertEqual(row.memory, 'Infinity');
+    assert.equal(row.memory, 'Infinity');
 
     assertOwnProperty(row, 'randomDropChance');
-    assertEqual(row.randomDropChance, 0);
+    assert.equal(row.randomDropChance, 0);
   });
 
   describe("constructing from a table row", function () {
@@ -288,7 +287,7 @@ describe("NetSimRouterNode", function () {
 
     it("routerNumber", function () {
       routerFromRow = makeLocalRouter({ routerNumber: 42 });
-      assertEqual(42, routerFromRow.routerNumber);
+      assert.equal(42, routerFromRow.routerNumber);
     });
 
     it("creationTime", function () {
@@ -298,37 +297,37 @@ describe("NetSimRouterNode", function () {
 
     it("dnsMode", function () {
       routerFromRow = makeLocalRouter({ dnsMode: DnsMode.AUTOMATIC });
-      assertEqual(DnsMode.AUTOMATIC, routerFromRow.dnsMode);
+      assert.equal(DnsMode.AUTOMATIC, routerFromRow.dnsMode);
     });
 
     it("dnsNodeID", function () {
       routerFromRow = makeLocalRouter({ dnsNodeID: 42 });
-      assertEqual(42, routerFromRow.dnsNodeID);
+      assert.equal(42, routerFromRow.dnsNodeID);
     });
 
     it("bandwidth", function () {
       routerFromRow = makeLocalRouter({ bandwidth: 1024 });
-      assertEqual(1024, routerFromRow.bandwidth);
+      assert.equal(1024, routerFromRow.bandwidth);
 
       // Special case: Bandwidth should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
       routerFromRow = makeLocalRouter({ bandwidth: 'Infinity' });
-      assertEqual(Infinity, routerFromRow.bandwidth);
+      assert.equal(Infinity, routerFromRow.bandwidth);
     });
 
     it("memory", function () {
       routerFromRow = makeLocalRouter({ memory: 1024 });
-      assertEqual(1024, routerFromRow.memory);
+      assert.equal(1024, routerFromRow.memory);
 
       // Special case: Memory should be able to serialize in Infinity
       // from the string 'Infinity' in the database.
       routerFromRow = makeLocalRouter({ memory: 'Infinity' });
-      assertEqual(Infinity, routerFromRow.memory);
+      assert.equal(Infinity, routerFromRow.memory);
     });
 
     it("randomDropChance", function () {
       routerFromRow = makeLocalRouter({ randomDropChance: 0.1 });
-      assertEqual(0.1, routerFromRow.randomDropChance);
+      assert.equal(0.1, routerFromRow.randomDropChance);
     });
   });
 
@@ -349,9 +348,9 @@ describe("NetSimRouterNode", function () {
         result = _result;
       });
 
-      assertEqual(null, result);
+      assert.equal(null, result);
       assert(err instanceof Error, "Returned an error object");
-      assertEqual('Not Found', err.message);
+      assert.equal('Not Found', err.message);
     });
 
     it("returns null for error and a NetSimRouterNode when router is found", function () {
@@ -362,9 +361,9 @@ describe("NetSimRouterNode", function () {
         result = _result;
       });
 
-      assertEqual(null, err);
+      assert.equal(null, err);
       assert(result instanceof NetSimRouterNode);
-      assertEqual(routerID, result.entityID);
+      assert.equal(routerID, result.entityID);
     });
   });
 
@@ -378,7 +377,7 @@ describe("NetSimRouterNode", function () {
     it("returns an empty array when no wires are present", function () {
       var wires = routerA.getConnections();
       assert(Array.isArray(wires));
-      assertEqual(wires.length, 0);
+      assert.equal(wires.length, 0);
     });
 
     it("returns wires that have a remote end attached to the router", function () {
@@ -386,7 +385,7 @@ describe("NetSimRouterNode", function () {
             localNodeID: 0,
             remoteNodeID: routerA.entityID
           }, function () {});
-      assertEqual(1, routerA.getConnections().length);
+      assert.equal(1, routerA.getConnections().length);
     });
 
     it("returns NetSimWire objects", function () {
@@ -410,8 +409,8 @@ describe("NetSimRouterNode", function () {
           }, function () {});
 
       // Only get the one wire back.
-      assertEqual(1, routerA.getConnections().length);
-      assertEqual('theRightOne', routerA.getConnections()[0].localHostname);
+      assert.equal(1, routerA.getConnections().length);
+      assert.equal('theRightOne', routerA.getConnections()[0].localHostname);
     });
   });
 
@@ -446,7 +445,7 @@ describe("NetSimRouterNode", function () {
         accepted = isAccepted;
       });
 
-      assertEqual(true, accepted);
+      assert.equal(true, accepted);
     });
 
     it("rejects connection if total connections are beyond limit", function () {
@@ -466,7 +465,7 @@ describe("NetSimRouterNode", function () {
         accepted = isAccepted;
       });
 
-      assertEqual(false, accepted);
+      assert.equal(false, accepted);
       assert(error instanceof Error);
       assert.equal('Too many connections.', error.message);
     });
@@ -501,7 +500,7 @@ describe("NetSimRouterNode", function () {
     var newRouter;
     for (var i = 0; i < 128; i++) {
       newRouter = makeRemoteRouter();
-      assertEqual(i + 1, newRouter.getRouterNumber());
+      assert.equal(i + 1, newRouter.getRouterNumber());
     }
   });
 
@@ -510,25 +509,25 @@ describe("NetSimRouterNode", function () {
 
     // Start with a client, since this is the typical scenario on a new shard.
     newClient = makeRemoteClient();
-    assertEqual(1, newClient.entityID);
+    assert.equal(1, newClient.entityID);
 
     // The new client probably adds a router.
     // The new router does not get entity ID 1, but it does get router ID 1.
     newRouter = makeRemoteRouter();
-    assertEqual(1, newRouter.getRouterNumber());
-    assertEqual(2, newRouter.entityID);
+    assert.equal(1, newRouter.getRouterNumber());
+    assert.equal(2, newRouter.entityID);
 
     // Make another router, make sure it's router #2
     newRouter = makeRemoteRouter();
-    assertEqual(2, newRouter.getRouterNumber());
+    assert.equal(2, newRouter.getRouterNumber());
 
     // Make another client
     newClient = makeRemoteClient();
-    assertEqual(4, newClient.entityID);
+    assert.equal(4, newClient.entityID);
 
     // Make another router, make sure it's router #3
     newRouter = makeRemoteRouter();
-    assertEqual(3, newRouter.getRouterNumber());
+    assert.equal(3, newRouter.getRouterNumber());
   });
 
   describe("address assignment rules", function () {
@@ -566,13 +565,13 @@ describe("NetSimRouterNode", function () {
         });
 
         it("creates single-number addresses when using single-number address format", function () {
-          assertEqual('11', routerA.getRandomAvailableClientAddress());
-          assertEqual('1', routerA.getRandomAvailableClientAddress());
-          assertEqual('3', routerA.getRandomAvailableClientAddress());
+          assert.equal('11', routerA.getRandomAvailableClientAddress());
+          assert.equal('1', routerA.getRandomAvailableClientAddress());
+          assert.equal('3', routerA.getRandomAvailableClientAddress());
         });
 
         it("sets own address as zero", function () {
-          assertEqual('0', routerA.getAddress());
+          assert.equal('0', routerA.getAddress());
         });
       });
 
@@ -582,13 +581,13 @@ describe("NetSimRouterNode", function () {
         });
 
         it("creates two-part addresses where the first part is the router number", function () {
-          assertEqual(routerA.entityID + '.11', routerA.getRandomAvailableClientAddress());
-          assertEqual(routerA.entityID + '.1', routerA.getRandomAvailableClientAddress());
-          assertEqual(routerA.entityID + '.3', routerA.getRandomAvailableClientAddress());
+          assert.equal(routerA.entityID + '.11', routerA.getRandomAvailableClientAddress());
+          assert.equal(routerA.entityID + '.1', routerA.getRandomAvailableClientAddress());
+          assert.equal(routerA.entityID + '.3', routerA.getRandomAvailableClientAddress());
         });
 
         it("sets own address as router#.0", function () {
-          assertEqual(routerA.entityID + '.0', routerA.getAddress());
+          assert.equal(routerA.entityID + '.0', routerA.getAddress());
         });
       });
 
@@ -600,13 +599,13 @@ describe("NetSimRouterNode", function () {
         it("uses zeros for all except last two parts", function () {
           // You get higher random addresses here, because of the larger
           // addressable space.
-          assertEqual('0.0.' + routerA.entityID + '.200', routerA.getRandomAvailableClientAddress());
-          assertEqual('0.0.' + routerA.entityID + '.7', routerA.getRandomAvailableClientAddress());
-          assertEqual('0.0.' + routerA.entityID + '.43', routerA.getRandomAvailableClientAddress());
+          assert.equal('0.0.' + routerA.entityID + '.200', routerA.getRandomAvailableClientAddress());
+          assert.equal('0.0.' + routerA.entityID + '.7', routerA.getRandomAvailableClientAddress());
+          assert.equal('0.0.' + routerA.entityID + '.43', routerA.getRandomAvailableClientAddress());
         });
 
         it("sets own address as 0.0.router#.0", function () {
-          assertEqual('0.0.' + routerA.entityID + '.0', routerA.getAddress());
+          assert.equal('0.0.' + routerA.entityID + '.0', routerA.getAddress());
         });
       });
     });
@@ -627,8 +626,8 @@ describe("NetSimRouterNode", function () {
         var newRouter;
         for (var i = 0; i < 128; i++) {
           newRouter = makeRemoteRouter();
-          assertEqual(newRouter.routerNumber, newRouter.getRouterNumber());
-          assertEqual("0", newRouter.getAddress());
+          assert.equal(newRouter.routerNumber, newRouter.getRouterNumber());
+          assert.equal("0", newRouter.getAddress());
         }
       });
 
@@ -637,22 +636,22 @@ describe("NetSimRouterNode", function () {
         setAddressFormat('2.8');
 
         // Initial node starts at routerNumber 1
-        assertEqual(1, routerA.routerNumber);
-        assertEqual(1, routerA.getRouterNumber());
+        assert.equal(1, routerA.routerNumber);
+        assert.equal(1, routerA.getRouterNumber());
 
-        assertEqual(2, routerB.routerNumber);
-        assertEqual(2, routerB.getRouterNumber());
+        assert.equal(2, routerB.routerNumber);
+        assert.equal(2, routerB.getRouterNumber());
 
-        assertEqual(3, routerC.routerNumber);
-        assertEqual(3, routerC.getRouterNumber());
+        assert.equal(3, routerC.routerNumber);
+        assert.equal(3, routerC.getRouterNumber());
 
         // At 4 (our assignable space) router number wraps to zero
-        assertEqual(4, routerD.routerNumber);
-        assertEqual(0, routerD.getRouterNumber());
+        assert.equal(4, routerD.routerNumber);
+        assert.equal(0, routerD.getRouterNumber());
 
         // Collisions are possible
-        assertEqual(5, routerE.routerNumber);
-        assertEqual(1, routerE.getRouterNumber());
+        assert.equal(5, routerE.routerNumber);
+        assert.equal(1, routerE.getRouterNumber());
       });
 
       it("Wraps router names/IDs to match the router number", function () {
@@ -660,27 +659,27 @@ describe("NetSimRouterNode", function () {
         setAddressFormat('2.8');
 
         // Initial node starts at routerNumber 1
-        assertEqual(1, routerA.routerNumber);
-        assertEqual("Router 1", routerA.getDisplayName());
-        assertEqual("1.0", routerA.getAddress());
+        assert.equal(1, routerA.routerNumber);
+        assert.equal("Router 1", routerA.getDisplayName());
+        assert.equal("1.0", routerA.getAddress());
 
-        assertEqual(2, routerB.routerNumber);
-        assertEqual("Router 2", routerB.getDisplayName());
-        assertEqual("2.0", routerB.getAddress());
+        assert.equal(2, routerB.routerNumber);
+        assert.equal("Router 2", routerB.getDisplayName());
+        assert.equal("2.0", routerB.getAddress());
 
-        assertEqual(3, routerC.routerNumber);
-        assertEqual("Router 3", routerC.getDisplayName());
-        assertEqual("3.0", routerC.getAddress());
+        assert.equal(3, routerC.routerNumber);
+        assert.equal("Router 3", routerC.getDisplayName());
+        assert.equal("3.0", routerC.getAddress());
 
         // At 4 (our assignable space) router number and address wrap to zero
-        assertEqual(4, routerD.routerNumber);
-        assertEqual("Router 0", routerD.getDisplayName());
-        assertEqual("0.0", routerD.getAddress());
+        assert.equal(4, routerD.routerNumber);
+        assert.equal("Router 0", routerD.getDisplayName());
+        assert.equal("0.0", routerD.getAddress());
 
         // Collisions are possible
-        assertEqual(5, routerE.routerNumber);
-        assertEqual("Router 1", routerE.getDisplayName());
-        assertEqual("1.0", routerE.getAddress());
+        assert.equal(5, routerE.routerNumber);
+        assert.equal("Router 1", routerE.getDisplayName());
+        assert.equal("1.0", routerE.getAddress());
       });
     });
 
@@ -800,7 +799,7 @@ describe("NetSimRouterNode", function () {
       var payload = encoder.concatenateBinary(headers, new Date().getTime().toString(2));
       forClient.sendMessage(payload, function () {});
       time = tickUntilLogsStabilize(forClient, time);
-      assertEqual(payload, fakeReceivedLog.getLatest());
+      assert.equal(payload, fakeReceivedLog.getLatest());
     };
 
     clientA.connectToRouter(routerA);
@@ -834,8 +833,8 @@ describe("NetSimRouterNode", function () {
       routerA.initializeSimulation(clientA.entityID);
 
       var addressTable = routerA.getAddressTable();
-      assertEqual(addressTable.length, 2);
-      assertEqual(addressTable[0].isLocal, true);
+      assert.equal(addressTable.length, 2);
+      assert.equal(addressTable[0].isLocal, true);
 
       // Make sure router initial time is zero
       routerA.tick({time: 0});
@@ -1411,11 +1410,11 @@ describe("NetSimRouterNode", function () {
       it("getMemoryInUse() reports correct memory usage", function () {
         routerA.setMemory(Infinity);
         assertRouterQueueSize(0);
-        assertEqual(0, routerA.getMemoryInUse());
+        assert.equal(0, routerA.getMemoryInUse());
 
         sendMessageOfSize(64 * 8);
         assertRouterQueueSize(64 * 8);
-        assertEqual(64 * 8, routerA.getMemoryInUse());
+        assert.equal(64 * 8, routerA.getMemoryInUse());
 
         sendMessageOfSize(8);
         sendMessageOfSize(8);
@@ -1424,12 +1423,12 @@ describe("NetSimRouterNode", function () {
         sendMessageOfSize(8);
         sendMessageOfSize(8);
         assertRouterQueueSize(70 * 8);
-        assertEqual(70 * 8, routerA.getMemoryInUse());
+        assert.equal(70 * 8, routerA.getMemoryInUse());
 
         routerA.setMemory(32 * 8);
         assertHowManyDropped(1);
         assertRouterQueueSize(6 * 8);
-        assertEqual(6 * 8, routerA.getMemoryInUse());
+        assert.equal(6 * 8, routerA.getMemoryInUse());
       });
 
     });
@@ -1468,8 +1467,8 @@ describe("NetSimRouterNode", function () {
         // Establish time baseline of zero
         routerA.tick({time: 0});
         assertTableSize(testShard, 'logTable', 0);
-        assertEqual(Infinity, routerA.bandwidth);
-        assertEqual(Infinity, routerA.memory);
+        assert.equal(Infinity, routerA.bandwidth);
+        assert.equal(Infinity, routerA.memory);
       });
 
       it("zero chance drops nothing", function () {
@@ -1589,14 +1588,14 @@ describe("NetSimRouterNode", function () {
         // Still, no routing has occurred
         assertTableSize(testShard, 'logTable', 0);
         assertTableSize(testShard, 'messageTable', 1);
-        assertEqual(originalMessages, getRows('messageTable'));
+        assert.deepEqual(originalMessages, getRows('messageTable'));
 
         routerA.tick({time: 2});
 
         // Nothing happens when remote node is not being simulated
         assertTableSize(testShard, 'logTable', 0);
         assertTableSize(testShard, 'messageTable', 1);
-        assertEqual(originalMessages, getRows('messageTable'));
+        assert.deepEqual(originalMessages, getRows('messageTable'));
       });
 
       it("produces a usage message for any badly-formed request", function () {
@@ -1702,9 +1701,9 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 1);
       var logRow = getLatestRow('logTable');
       var log = new NetSimLogEntry(testShard, logRow);
-      assertEqual(routerA.entityID, logRow.nodeID);
-      assertEqual(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
-      assertEqual(packetBinary, log.binary);
+      assert.equal(routerA.entityID, logRow.nodeID);
+      assert.equal(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
+      assert.equal(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
@@ -1738,9 +1737,9 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
       log = new NetSimLogEntry(testShard, logRow);
-      assertEqual(routerA.entityID, logRow.nodeID);
-      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, log.binary);
+      assert.equal(routerA.entityID, logRow.nodeID);
+      assert.equal(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assert.equal(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1750,9 +1749,9 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
       log = new NetSimLogEntry(testShard, logRow);
-      assertEqual(routerB.entityID, logRow.nodeID);
-      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, log.binary);
+      assert.equal(routerB.entityID, logRow.nodeID);
+      assert.equal(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assert.equal(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
@@ -1786,9 +1785,9 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
       log = new NetSimLogEntry(testShard, logRow);
-      assertEqual(routerA.entityID, logRow.nodeID);
-      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, log.binary);
+      assert.equal(routerA.entityID, logRow.nodeID);
+      assert.equal(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assert.equal(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1798,9 +1797,9 @@ describe("NetSimRouterNode", function () {
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
       log = new NetSimLogEntry(testShard, logRow);
-      assertEqual(routerB.entityID, logRow.nodeID);
-      assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, log.binary);
+      assert.equal(routerB.entityID, logRow.nodeID);
+      assert.equal(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
+      assert.equal(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);

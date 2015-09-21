@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimTestUtils = require('../util/netsimTestUtils');
@@ -27,22 +26,22 @@ describe("NetSimMessage", function () {
     var message = new NetSimMessage(testShard);
 
     assertOwnProperty(message, 'fromNodeID');
-    assertEqual(message.fromNodeID, undefined);
+    assert.equal(message.fromNodeID, undefined);
 
     assertOwnProperty(message, 'toNodeID');
-    assertEqual(message.toNodeID, undefined);
+    assert.equal(message.toNodeID, undefined);
 
     assertOwnProperty(message, 'simulatedBy');
-    assertEqual(message.simulatedBy, undefined);
+    assert.equal(message.simulatedBy, undefined);
 
     assertOwnProperty(message, 'payload');
-    assertEqual(message.payload, "");
+    assert.equal(message.payload, "");
 
     assertOwnProperty(message, 'extraHopsRemaining');
-    assertEqual(message.extraHopsRemaining, 0);
+    assert.equal(message.extraHopsRemaining, 0);
 
     assertOwnProperty(message, 'visitedNodeIDs');
-    assertEqual(message.visitedNodeIDs, []);
+    assert.deepEqual(message.visitedNodeIDs, []);
   });
 
   describe("isValid static check", function () {
@@ -68,7 +67,7 @@ describe("NetSimMessage", function () {
       extraHopsRemaining: 3,
       visitedNodeIDs: [4]
     });
-    assertEqual(message.payload, "1001001");
+    assert.equal(message.payload, "1001001");
   });
 
   it("gracefully converts a malformed base64Payload to empty string", function () {
@@ -78,7 +77,7 @@ describe("NetSimMessage", function () {
         len: 7
       },
     });
-    assertEqual(message.payload, '');
+    assert.equal(message.payload, '');
   });
 
   describe("static method send", function () {
@@ -119,12 +118,12 @@ describe("NetSimMessage", function () {
 
       messageTable.refresh(function (err, rows) {
         var row = rows[0];
-        assertEqual(row.fromNodeID, fromNodeID);
-        assertEqual(row.toNodeID, toNodeID);
-        assertEqual(row.simulatedBy, simulatedBy);
-        assertEqual(row.base64Payload, base64Payload);
-        assertEqual(row.extraHopsRemaining, extraHopsRemaining);
-        assertEqual(row.visitedNodeIDs, visitedNodeIDs);
+        assert.equal(row.fromNodeID, fromNodeID);
+        assert.equal(row.toNodeID, toNodeID);
+        assert.equal(row.simulatedBy, simulatedBy);
+        assert.deepEqual(row.base64Payload, base64Payload);
+        assert.equal(row.extraHopsRemaining, extraHopsRemaining);
+        assert.deepEqual(row.visitedNodeIDs, visitedNodeIDs);
       });
     });
 
@@ -172,12 +171,12 @@ describe("NetSimMessage", function () {
 
     // Instantiate message
     var message = new NetSimMessage(testShard, testRow);
-    assertEqual(message.fromNodeID, 1);
-    assertEqual(message.toNodeID, 2);
-    assertEqual(message.simulatedBy, 2);
-    assertEqual(message.payload, '1001001');
-    assertEqual(message.extraHopsRemaining, 3);
-    assertEqual(message.visitedNodeIDs, [4]);
+    assert.equal(message.fromNodeID, 1);
+    assert.equal(message.toNodeID, 2);
+    assert.equal(message.simulatedBy, 2);
+    assert.equal(message.payload, '1001001');
+    assert.equal(message.extraHopsRemaining, 3);
+    assert.deepEqual(message.visitedNodeIDs, [4]);
   });
 
   it("can be removed from the remote table with destroy()", function () {
@@ -198,7 +197,7 @@ describe("NetSimMessage", function () {
     messageTable.refresh(function (err, rows) {
       rowCount = rows.length;
     });
-    assertEqual(rowCount, 0);
+    assert.equal(rowCount, 0);
   });
 
   describe("destroyEntities on messages", function () {
@@ -238,7 +237,7 @@ describe("NetSimMessage", function () {
           return new NetSimMessage(testShard, row);
         });
       });
-      assertEqual(3, messages.length);
+      assert.equal(3, messages.length);
       assert(messages[0] instanceof NetSimMessage);
 
       NetSimEntity.destroyEntities(messages, function () {});
@@ -253,25 +252,25 @@ describe("NetSimMessage", function () {
       var row = message.buildRow();
 
       assertOwnProperty(row, 'fromNodeID');
-      assertEqual(row.fromNodeID, undefined);
+      assert.equal(row.fromNodeID, undefined);
 
       assertOwnProperty(row, 'toNodeID');
-      assertEqual(row.toNodeID, undefined);
+      assert.equal(row.toNodeID, undefined);
 
       assertOwnProperty(row, 'simulatedBy');
-      assertEqual(row.simulatedBy, undefined);
+      assert.equal(row.simulatedBy, undefined);
 
       assertOwnProperty(row, 'base64Payload');
-      assertEqual(row.base64Payload, {
+      assert.deepEqual(row.base64Payload, {
         string: "",
         len: 0
       });
 
       assertOwnProperty(row, 'extraHopsRemaining');
-      assertEqual(row.extraHopsRemaining, 0);
+      assert.equal(row.extraHopsRemaining, 0);
 
       assertOwnProperty(row, 'visitedNodeIDs');
-      assertEqual(row.visitedNodeIDs, []);
+      assert.deepEqual(row.visitedNodeIDs, []);
     });
 
     it("converts local binary payload to base64 before creating row", function () {
@@ -288,8 +287,8 @@ describe("NetSimMessage", function () {
         visitedNodeIDs: [4]
       });
       var row = message.buildRow();
-      assertEqual(row.base64Payload.string, base64Payload.string);
-      assertEqual(row.base64Payload.len, base64Payload.len);
+      assert.equal(row.base64Payload.string, base64Payload.string);
+      assert.equal(row.base64Payload.len, base64Payload.len);
     });
 
 
