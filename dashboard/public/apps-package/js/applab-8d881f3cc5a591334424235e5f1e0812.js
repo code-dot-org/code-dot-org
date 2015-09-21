@@ -646,6 +646,11 @@ function renderFooterInSharedGame() {
 
   var menuItems = [
     {
+      text: applabMsg.reportAbuse(),
+      link: '/report_abuse',
+      newWindow: true
+    },
+    {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab'
     },
@@ -653,11 +658,6 @@ function renderFooterInSharedGame() {
       text: commonMsg.openWorkspace(),
       link: location.href + '/view'
     },
-    // Disabled until we do the work to support abuse reporting
-    // {
-    //   text: applabMsg.reportAbuse(),
-    //   link: '#'
-    // },
     {
       text: applabMsg.copyright(),
       link: '#',
@@ -665,7 +665,8 @@ function renderFooterInSharedGame() {
     },
     {
       text: applabMsg.privacyPolicy(),
-      link: 'https://code.org/privacy'
+      link: 'https://code.org/privacy',
+      newWindow: true
     }
   ];
   if (dom.isMobile()) {
