@@ -31,7 +31,7 @@ describe("NetSimSendPanel", function () {
   var testShard, localNode, remoteNode;
   var panel, rootDiv, stubNetSim;
 
-  beforeEach (function () {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     NetSimGlobals.getLevelConfig().defaultEnabledEncodings = ['binary'];
 
@@ -60,39 +60,39 @@ describe("NetSimSendPanel", function () {
     };
   });
 
-  describe ("in single-bit mode", function () {
-    beforeEach (function () {
+  describe("in single-bit mode", function () {
+    beforeEach(function () {
       NetSimGlobals.getLevelConfig().messageGranularity = MessageGranularity.BITS;
       panel = new NetSimSendPanel(rootDiv, NetSimGlobals.getLevelConfig(), stubNetSim);
     });
 
-    it ("sends a single bit on 'Set Wire' button click", function () {
+    it("sends a single bit on 'Set Wire' button click", function () {
       panel.packets_[0].setPacketBinary('1000');
       panel.getBody().find('#set-wire-button').click();
       assert.equal('000', panel.packets_[0].getPacketBinary());
     });
 
-    it ("sends a single bit on pressing enter", function () {
+    it("sends a single bit on pressing enter", function () {
       panel.packets_[0].setPacketBinary('1000');
       simulateEnterKeyPress(rootDiv.find('textarea.message'));
       assert.equal('000', panel.packets_[0].getPacketBinary());
     });
   });
 
-  describe ("in packet mode", function () {
-    beforeEach (function () {
+  describe("in packet mode", function () {
+    beforeEach(function () {
       NetSimGlobals.getLevelConfig().messageGranularity = MessageGranularity.PACKETS;
       panel = new NetSimSendPanel(rootDiv, NetSimGlobals.getLevelConfig(), stubNetSim);
     });
 
-    it ("sends all packets on 'Send' button click", function () {
+    it("sends all packets on 'Send' button click", function () {
       panel.packets_[0].setPacketBinary('1000');
       panel.getBody().find('#send-button').click();
       panel.tick({time:0});
       assert.equal('', panel.packets_[0].getPacketBinary());
     });
 
-    it ("sends all packets on pressing enter", function () {
+    it("sends all packets on pressing enter", function () {
       panel.packets_[0].setPacketBinary('1000');
       simulateEnterKeyPress(rootDiv.find('textarea.message'));
       panel.tick({time:0});
