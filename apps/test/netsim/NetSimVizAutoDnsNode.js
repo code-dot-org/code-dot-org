@@ -7,7 +7,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -38,29 +37,29 @@ describe("NetSimVizAutoDnsNode", function () {
     });
 
     it("uses a DNS display name (by default)", function () {
-      assertEqual('DNS', vizElement.displayName_.text());
+      assert.equal('DNS', vizElement.displayName_.text());
     });
 
     it("uses a dns hostname when level expects it", function () {
       NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizAutoDnsNode();
-      assertEqual('dns', vizElement.displayName_.text());
+      assert.equal('dns', vizElement.displayName_.text());
     });
 
     it("knows it's not a router", function () {
-      assertEqual(false, vizElement.isRouter);
+      assert.equal(false, vizElement.isRouter);
     });
 
     it("knows it's not a local node", function () {
-      assertEqual(false, vizElement.isLocalNode);
+      assert.equal(false, vizElement.isLocalNode);
     });
 
     it("knows it is a DNS node", function () {
-      assertEqual(true, vizElement.isDnsNode);
+      assert.equal(true, vizElement.isDnsNode);
     });
 
     it("adds the 'auto-dns-node' class to its root element", function () {
-      assertEqual(true, vizElement.getRoot().is('.auto-dns-node'));
+      assert.equal(true, vizElement.getRoot().is('.auto-dns-node'));
     });
   });
 

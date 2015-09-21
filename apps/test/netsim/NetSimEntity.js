@@ -6,7 +6,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
@@ -18,7 +17,7 @@ var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 describe("NetSimEntity", function () {
   it("default entityID is undefined", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assertEqual(entity.entityID, undefined);
+    assert.equal(entity.entityID, undefined);
   });
 
   it("doesn't implement getTable", function () {
@@ -30,7 +29,7 @@ describe("NetSimEntity", function () {
 
   it("buildRow method produces empty object", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assertEqual(entity.buildRow(), {});
+    assert.deepEqual(entity.buildRow(), {});
   });
 
   it("disallows static creation on base type", function () {
@@ -93,7 +92,7 @@ describe("NetSimEntity", function () {
         entity = foundEntity;
       });
       assert(entity instanceof NetSimClientNode, "Expect to create correct entity type");
-      assertEqual(entity.entityID, clientNodeID);
+      assert.equal(entity.entityID, clientNodeID);
     });
   });
 
@@ -122,7 +121,7 @@ describe("NetSimEntity", function () {
       var nodes = testShard.nodeTable.readAll().map(function (row) {
         return new NetSimClientNode(testShard, row);
       });
-      assertEqual(3, nodes.length);
+      assert.equal(3, nodes.length);
       assert(nodes[0] instanceof NetSimClientNode);
 
       NetSimEntity.destroyEntities(nodes, function () {});

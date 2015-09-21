@@ -7,7 +7,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -24,17 +23,17 @@ describe("NetSimVizElement", function () {
     });
 
     it("has default properties", function () {
-      assertEqual(0, vizElement.posX);
-      assertEqual(0, vizElement.posY);
-      assertEqual(1, vizElement.scale);
-      assertEqual([], vizElement.tweens_);
-      assertEqual(false, vizElement.isDying());
-      assertEqual(false, vizElement.isDead());
+      assert.equal(0, vizElement.posX);
+      assert.equal(0, vizElement.posY);
+      assert.equal(1, vizElement.scale);
+      assert.deepEqual([], vizElement.tweens_);
+      assert.equal(false, vizElement.isDying());
+      assert.equal(false, vizElement.isDead());
     });
 
     it("immediately creates SVG root element", function () {
       var root = vizElement.getRoot();
-      assertEqual('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGGElement]', root[0].toString());
     });
   });
 

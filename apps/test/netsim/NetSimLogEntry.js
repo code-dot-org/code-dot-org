@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
@@ -31,16 +30,16 @@ describe("NetSimLogEntry", function () {
     var row = logEntry.buildRow();
 
     assertOwnProperty(row, 'nodeID');
-    assertEqual(row.nodeID, undefined);
+    assert.equal(row.nodeID, undefined);
 
     assertOwnProperty(row, 'base64Binary');
     assertOwnProperty(row.base64Binary, 'string');
-    assertEqual(row.base64Binary.string, '');
+    assert.equal(row.base64Binary.string, '');
     assertOwnProperty(row.base64Binary, 'len');
-    assertEqual(row.base64Binary.len, 0);
+    assert.equal(row.base64Binary.len, 0);
 
     assertOwnProperty(row, 'status');
-    assertEqual(row.status, NetSimLogEntry.LogStatus.SUCCESS);
+    assert.equal(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
     assertOwnProperty(row, 'timestamp');
     assertWithinRange(row.timestamp, Date.now(), 10);
@@ -59,11 +58,11 @@ describe("NetSimLogEntry", function () {
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
-    assertEqual(logEntry.entityID, 1);
-    assertEqual(logEntry.nodeID, 42);
-    assertEqual(logEntry.binary, '1001001');
-    assertEqual(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
-    assertEqual(logEntry.timestamp, 52000);
+    assert.equal(logEntry.entityID, 1);
+    assert.equal(logEntry.nodeID, 42);
+    assert.equal(logEntry.binary, '1001001');
+    assert.equal(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
+    assert.equal(logEntry.timestamp, 52000);
   });
 
   it("gracefully converts a malformed base64Payload to empty string", function () {
@@ -73,7 +72,7 @@ describe("NetSimLogEntry", function () {
         len: 7
       },
     });
-    assertEqual(logEntry.binary, '');
+    assert.equal(logEntry.binary, '');
   });
 
   describe("static method create", function () {
@@ -95,9 +94,9 @@ describe("NetSimLogEntry", function () {
       testShard.logTable.refresh(function (err, rows) {
         var row = rows[0];
         var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
-        assertEqual(row.nodeID, nodeID);
-        assertEqual(rowBinary, binary);
-        assertEqual(row.status, status);
+        assert.equal(row.nodeID, nodeID);
+        assert.equal(rowBinary, binary);
+        assert.equal(row.status, status);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
@@ -139,11 +138,11 @@ describe("NetSimLogEntry", function () {
       Packet.HeaderType.PACKET_INDEX,
       Packet.HeaderType.PACKET_COUNT
     ]);
-    assertEqual('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
-    assertEqual('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
-    assertEqual('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
-    assertEqual('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
-    assertEqual('01010110', logEntry.getMessageBinary());
+    assert.equal('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
+    assert.equal('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
+    assert.equal('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
+    assert.equal('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
+    assert.equal('01010110', logEntry.getMessageBinary());
   });
 
 });

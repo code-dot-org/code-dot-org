@@ -132,17 +132,6 @@ exports.runOnAppTick = function (app, tick, fn) {
 };
 
 /**
- * Deep equality check of two values with more useful assertion failure
- * message.  Depends on lodash isEqual.
- * @param {*} left
- * @param {*} right
- */
-exports.assertEqual = function (left, right) {
-  assert(_.isEqual(left, right),
-      JSON.stringify(left) + ' equals ' + JSON.stringify(right));
-};
-
-/**
  * Check that two numbers are close, within a given threshold.
  * @param {number} left
  * @param {number} right

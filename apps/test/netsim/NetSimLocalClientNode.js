@@ -6,7 +6,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -63,13 +62,13 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.setLostConnectionCallback(function () {
         lostConnection = true;
       });
-      assertEqual(false, lostConnection);
+      assert.equal(false, lostConnection);
     });
 
     it("detects when own row has gone away and calls lost connection callback", function () {
       testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
       testShard.nodeTable.refresh();
-      assertEqual(true, lostConnection);
+      assert.equal(true, lostConnection);
     });
 
     it("detects shard reset even when own ID has been reclaimed", function () {
@@ -79,7 +78,7 @@ describe("NetSimLocalClientNode", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function () { });
 
       testShard.nodeTable.refresh();
-      assertEqual(true, lostConnection);
+      assert.equal(true, lostConnection);
     });
   });
 
@@ -96,21 +95,21 @@ describe("NetSimLocalClientNode", function () {
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
       remoteWireRow.id = 2;
 
-      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
-      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+      assert.equal(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assert.equal(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
 
       // Trigger onWireTableChange_ with both wires; the connection
       // should be complete!
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+      assert.deepEqual(testLocalNode.myRemoteClient, testRemoteNode);
 
       // Trigger onWireTableChange_ without the remoteWire; the
       // connection should be broken
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.getOutgoingWire(), null);
-      assertEqual(testLocalNode.myRemoteClient, null);
+      assert.equal(testLocalNode.getOutgoingWire(), null);
+      assert.equal(testLocalNode.myRemoteClient, null);
 
     });
 
@@ -134,8 +133,8 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.onWireTableChange_();
       var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
       newLocalWireRow.id = 1;
-      assertEqual(newLocalWireRow, localWireRow);
-      assertEqual(testLocalNode.myRemoteClient, null);
+      assert.deepEqual(newLocalWireRow, localWireRow);
+      assert.equal(testLocalNode.myRemoteClient, null);
 
       testThirdNode.connectToNode(testRemoteNode, function () {});
 
@@ -143,7 +142,7 @@ describe("NetSimLocalClientNode", function () {
       thirdWireRow.id = 3;
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.getOutgoingWire(), null);
+      assert.equal(testLocalNode.getOutgoingWire(), null);
 
     });
   });
@@ -155,7 +154,7 @@ describe("NetSimLocalClientNode", function () {
         error = e;
       });
       assert(error instanceof Error);
-      assertEqual(error.message, 'Cannot send message; not connected.');
+      assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
 
@@ -174,8 +173,8 @@ describe("NetSimLocalClientNode", function () {
         err = e;
         result = r;
       });
-      assertEqual(null, err);
-      assertEqual(undefined, result);
+      assert.equal(null, err);
+      assert.equal(undefined, result);
     });
 
     it("Generated message has correct from/to node IDs", function () {
@@ -186,8 +185,8 @@ describe("NetSimLocalClientNode", function () {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
-      assertEqual(fromNodeID, testLocalNode.entityID);
-      assertEqual(toNodeID, testRemoteNode.entityID);
+      assert.equal(fromNodeID, testLocalNode.entityID);
+      assert.equal(toNodeID, testRemoteNode.entityID);
     });
 
     it("Generated message has correct payload", function () {
@@ -197,7 +196,7 @@ describe("NetSimLocalClientNode", function () {
       testShard.messageTable.refresh(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
-      assertEqual('1010101010100101010', message.payload);
+      assert.equal('1010101010100101010', message.payload);
     });
   });
 
@@ -217,7 +216,7 @@ describe("NetSimLocalClientNode", function () {
         error = e;
       });
       assert(error instanceof Error);
-      assertEqual(error.message, 'Cannot send message; not connected.');
+      assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
 
@@ -227,8 +226,8 @@ describe("NetSimLocalClientNode", function () {
         error = e;
         result = r;
       });
-      assertEqual(null, error);
-      assertEqual(undefined, result);
+      assert.equal(null, error);
+      assert.equal(undefined, result);
     });
 
     it("puts all of the payloads into the message table", function () {
@@ -241,61 +240,61 @@ describe("NetSimLocalClientNode", function () {
   describe("getShortDisplayName", function () {
     it("reflects no change for names below 10 characters", function () {
       testLocalNode.displayName_ = 'Sam';
-      assertEqual('Sam', testLocalNode.getShortDisplayName());
+      assert.equal('Sam', testLocalNode.getShortDisplayName());
 
       testLocalNode.displayName_ = 'Sam Well';
-      assertEqual('Sam Well', testLocalNode.getShortDisplayName());
+      assert.equal('Sam Well', testLocalNode.getShortDisplayName());
 
       // Note: spaces preserved for short names
       testLocalNode.displayName_ = 'Samuel 999';
-      assertEqual('Samuel 999', testLocalNode.getShortDisplayName());
+      assert.equal('Samuel 999', testLocalNode.getShortDisplayName());
     });
 
     it("uses first word for names longer than 10 characters", function () {
       // Even short first names used, as long as whole name is > 10
       testLocalNode.displayName_ = 'A Modest Proposal';
-      assertEqual('A', testLocalNode.getShortDisplayName());
+      assert.equal('A', testLocalNode.getShortDisplayName());
 
       // Ordinary case
       testLocalNode.displayName_ = 'Jonathan Swift';
-      assertEqual('Jonathan', testLocalNode.getShortDisplayName());
+      assert.equal('Jonathan', testLocalNode.getShortDisplayName());
 
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
-      assertEqual('Constantine', testLocalNode.getShortDisplayName());
+      assert.equal('Constantine', testLocalNode.getShortDisplayName());
     });
   });
 
   describe("getHostname", function () {
     it("is a transformation of the short display name and node ID", function () {
-      assertEqual(1, testLocalNode.entityID);
+      assert.equal(1, testLocalNode.entityID);
       testLocalNode.displayName_ = 'Sam';
-      assertEqual('sam1', testLocalNode.getHostname());
+      assert.equal('sam1', testLocalNode.getHostname());
     });
 
     it("strips spaces, preserves digits", function () {
-      assertEqual(1, testLocalNode.entityID);
+      assert.equal(1, testLocalNode.entityID);
       testLocalNode.displayName_ = 'Sam Well';
-      assertEqual('samwell1', testLocalNode.getHostname());
+      assert.equal('samwell1', testLocalNode.getHostname());
 
       // Note: spaces preserved for short names
       testLocalNode.displayName_ = 'Samuel 999';
-      assertEqual('samuel9991', testLocalNode.getHostname());
+      assert.equal('samuel9991', testLocalNode.getHostname());
     });
 
     it("abbreviates with short-name rules", function () {
-      assertEqual(1, testLocalNode.entityID);
+      assert.equal(1, testLocalNode.entityID);
       // Even short first names used, as long as whole name is > 10
       testLocalNode.displayName_ = 'A Modest Proposal';
-      assertEqual('a1', testLocalNode.getHostname());
+      assert.equal('a1', testLocalNode.getHostname());
 
       // Ordinary case
       testLocalNode.displayName_ = 'Jonathan Swift';
-      assertEqual('jonathan1', testLocalNode.getHostname());
+      assert.equal('jonathan1', testLocalNode.getHostname());
 
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
-      assertEqual('constantine1', testLocalNode.getHostname());
+      assert.equal('constantine1', testLocalNode.getHostname());
     });
   });
 

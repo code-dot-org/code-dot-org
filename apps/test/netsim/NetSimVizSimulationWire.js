@@ -7,7 +7,6 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -90,28 +89,28 @@ describe("NetSimVizSimulationWire", function () {
     });
 
     it("has default properties", function () {
-      assertEqual(0, vizWire.textPosX_);
-      assertEqual(0, vizWire.textPosY_);
-      assertEqual([], vizWire.encodings_);
-      assertEqual(simWire.entityID, vizWire.getCorrespondingEntityId());
+      assert.equal(0, vizWire.textPosX_);
+      assert.equal(0, vizWire.textPosY_);
+      assert.deepEqual([], vizWire.encodings_);
+      assert.equal(simWire.entityID, vizWire.getCorrespondingEntityId());
       assert(vizLocalNode === vizWire.localVizNode);
       assert(vizRemoteNode === vizWire.remoteVizNode);
     });
 
     it("sets addresses on its endpoints", function () {
-      assertEqual(undefined, vizLocalNode.address_);
-      assertEqual(undefined, vizRemoteNode.address_);
+      assert.equal(undefined, vizLocalNode.address_);
+      assert.equal(undefined, vizRemoteNode.address_);
       simWire.localAddress = 'boo';
       simWire.remoteAddress = 'hiss';
       vizWire.configureFrom(simWire);
-      assertEqual('boo', vizLocalNode.address_);
-      assertEqual('hiss', vizRemoteNode.address_);
+      assert.equal('boo', vizLocalNode.address_);
+      assert.equal('hiss', vizRemoteNode.address_);
     });
 
     it("is hidden in broadcast mode", function () {
       NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizWire.configureFrom(simWire);
-      assertEqual('none', vizWire.getRoot().css('display'));
+      assert.equal('none', vizWire.getRoot().css('display'));
     });
   });
 

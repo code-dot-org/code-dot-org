@@ -1,6 +1,5 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
@@ -26,22 +25,22 @@ describe("NetSimWire", function () {
     var row = wire.buildRow();
 
     assertOwnProperty(row, 'localNodeID');
-    assertEqual(row.localNodeID, undefined);
+    assert.equal(row.localNodeID, undefined);
 
     assertOwnProperty(row, 'remoteNodeID');
-    assertEqual(row.remoteNodeID, undefined);
+    assert.equal(row.remoteNodeID, undefined);
 
     assertOwnProperty(row, 'localAddress');
-    assertEqual(row.localAddress, undefined);
+    assert.equal(row.localAddress, undefined);
 
     assertOwnProperty(row, 'remoteAddress');
-    assertEqual(row.remoteAddress, undefined);
+    assert.equal(row.remoteAddress, undefined);
 
     assertOwnProperty(row, 'localHostname');
-    assertEqual(row.localHostname, undefined);
+    assert.equal(row.localHostname, undefined);
 
     assertOwnProperty(row, 'remoteHostname');
-    assertEqual(row.remoteHostname, undefined);
+    assert.equal(row.remoteHostname, undefined);
   });
 
   describe("static method create", function () {
@@ -63,8 +62,8 @@ describe("NetSimWire", function () {
       }, function () {});
 
       wireTable.refresh(function (err, rows) {
-        assertEqual(rows[0].localNodeID, 1);
-        assertEqual(rows[0].remoteNodeID, 2);
+        assert.equal(rows[0].localNodeID, 1);
+        assert.equal(rows[0].remoteNodeID, 2);
       });
     });
 
@@ -96,12 +95,12 @@ describe("NetSimWire", function () {
 
     // Instantiate wire
     var wire = new NetSimWire(testShard, testRow);
-    assertEqual(wire.localNodeID, 1);
-    assertEqual(wire.remoteNodeID, 2);
-    assertEqual(wire.localAddress, 3);
-    assertEqual(wire.remoteAddress, 4);
-    assertEqual(wire.localHostname, 'me');
-    assertEqual(wire.remoteHostname, 'you');
+    assert.equal(wire.localNodeID, 1);
+    assert.equal(wire.remoteNodeID, 2);
+    assert.equal(wire.localAddress, 3);
+    assert.equal(wire.remoteAddress, 4);
+    assert.equal(wire.localHostname, 'me');
+    assert.equal(wire.remoteHostname, 'you');
   });
 
   it("can be removed from the remote table with destroy()", function () {
