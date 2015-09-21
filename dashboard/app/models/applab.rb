@@ -38,6 +38,7 @@ class Applab < Blockly
     encrypted_examples
     data_tables
     data_properties
+    hide_view_data_button
   )
 
   # List of possible skins, the first is used as a default.
