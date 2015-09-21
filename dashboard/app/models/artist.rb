@@ -121,6 +121,13 @@ class Artist < Blockly
           <block type="colour_random"></block>
         </value>
       </block>
+      <block id="alpha" type="alpha">
+        <value name="VALUE">
+          <block type="math_number_dropdown">
+            <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+          </block>
+        </value>
+      </block>
     </category>
     <category name="Category">
       <block type="category"></block>
