@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Teacher Resources - Write your first computer program
 nav: hoc_teacher_resources_nav
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Write your first computer program: An Hour of Code Tutorial
 
-<center><iframe width="600" height="337" src="https://www.youtube.com/embed/VQ4lo6Huylc" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="600" height="337" src="https://www.youtube.com/embed/bQilo5ecSX4" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 
@@ -13,7 +13,7 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Make a Flappy Game](/files/hoc-flappy-lp.pdf)
+- [Write your first computer program](/files/hoc-maze-lp.pdf)
 
 ### Extension Activities:
 
@@ -32,12 +32,12 @@ nav: hoc_teacher_resources_nav
 
 ## Overview
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
 
 **Recommended Age Range:** 4-104
 
 **Technology Requirements:** Modern browsers, smartphones + tablets
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
 
 [/col-50]
