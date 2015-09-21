@@ -715,9 +715,7 @@ describe("DataConverters", function () {
      * @param {Base64Payload} right
      */
     var assertBase64NotEqual = function (left, right) {
-      var stringsEqual = (left.string === right.string);
-      var lensEqual = (left.len === right.len);
-      assert(!(stringsEqual && lensEqual), "Expected " + JSON.stringify(left) + " and " +
+      assert.notDeepEqual(left, right, "Expected " + JSON.stringify(left) + " and " +
         JSON.stringify(right) + " to be not equal, but they are");
     };
 
