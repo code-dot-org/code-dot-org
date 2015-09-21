@@ -1,14 +1,14 @@
 tr:
   site_name: Kodlama Saati
   language: Türkçe
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Çok Yakında
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: "Kodlama Saati 180'den fazla ülkede gerçekleşen 10 milyonlarca öğrenciye ulaşmış küresel bir harekettir. Herkes dünyanın herhangi bir yerinde herhangi bir Kodlama Saati etkinliğini organize edebilir. Bir saatlik dersler 30'dan fazla dile çevrilmiştir. <strong>4'ten 104 yaşına kadar herkes için.</strong>"
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Yeni videoyu izleyin
   front_watch_regular_video: Watch the video
   header_menu_resources: Kaynaklar
@@ -154,10 +154,14 @@ tr:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Bir Kodlama Saati nasıl çalıştırılır</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Kodlama Saatini Tanıtın</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Deneyin</h1><h2>Kodlama Saatini</h2><h3># kez</h3>'
   anybody_can_learn: Herkes öğrenebilir.
   get_started: Başla
@@ -174,11 +178,14 @@ tr:
   front_join_us_teacher: Öğretmen misiniz?
   front_join_us_inspire: Öğrencilerinize sınıfta
   front_join_us_inspire_link: bir Kodlama Saati ile ilham verin.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Bir ebeveyn misiniz?
   front_join_us_ask_link: Yerel bir okuldan
   front_join_us_ask: bir Kodlama Saatine ev sahipliği yapmasını isteyin.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Sadece bilgisayar bilimini mi seviyorsunuz?
   front_join_us_spread: Herkese duyurun.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Veya kendiniz bir Kodlama Saati organize edin.
   front_join_us_how_to_run: İşte bir Kodlama Saati böyle yapılır
   front_join_us_help_promote: Kodlama Saatini tanıtmamıza yardımcı olun
@@ -190,7 +197,8 @@ tr:
   front_join_us_host: Ev sahipliği yapın
   front_join_us_support: Destekleyin
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: İsminiz
   signup_email_label: E-Posta
   signup_organization_name_label: Okul veya kuruluşun ismi
@@ -335,6 +343,7 @@ tr:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Teşekkür ederiz
   title_prizes: Ödüller
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Kaynaklar
   title_signup_thanks: Bir Kodlama Saatine ev sahipliği yapmak için kaydolduğunuz için teşekkürler!
   title_tutorial_guidelines: Tutorial Guidelines

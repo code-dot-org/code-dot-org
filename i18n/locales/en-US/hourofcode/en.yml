@@ -1,14 +1,14 @@
 en-US:
   site_name: crwdns43528:0crwdne43528:0
   language: crwdns43529:0crwdne43529:0
-  front_title: crwdns43530:0crwdne43530:0
+  front_title: 'crwdns48581:0%{campaign_date}crwdne48581:0'
   coming_soon: crwdns43531:0crwdne43531:0
   campaign_date_start_short: crwdns43532:0crwdne43532:0
   campaign_date_start_long: crwdns43533:0crwdne43533:0
   campaign_date_short: crwdns43534:0crwdne43534:0
   campaign_date_full: crwdns43535:0crwdne43535:0
   front_header_banner: crwdns43536:0crwdne43536:0
-  front_intro_default: crwdns43537:0crwdne43537:0
+  front_intro_default: crwdns48582:0crwdne48582:0
   front_watch_video: crwdns43538:0crwdne43538:0
   front_watch_regular_video: crwdns43539:0crwdne43539:0
   header_menu_resources: crwdns43540:0crwdne43540:0
@@ -154,10 +154,14 @@ en-US:
   how_to_nav_public_officials: crwdns47863:0crwdne47863:0
   how_to_nav_districts: crwdns47864:0crwdne47864:0
   how_to_nav_assemblies: crwdns47865:0crwdne47865:0
+  how_to_nav_organizations: crwdns48794:0crwdne48794:0
   whats_next_header: crwdns43676:0crwdne43676:0
   whats_next_description: crwdns43677:0crwdne43677:0
   whats_next_how_to: crwdns43678:0crwdne43678:0
   whats_next_promote: crwdns43679:0crwdne43679:0
+  whats_next_how_to_promote: crwdns48584:0crwdne48584:0
+  whats_next_try: crwdns48585:0crwdne48585:0
+  whats_next_try_button: crwdns48586:0crwdne48586:0
   n_have_learned_an_hoc: crwdns43680:0crwdne43680:0
   anybody_can_learn: crwdns43681:0crwdne43681:0
   get_started: crwdns43682:0crwdne43682:0
@@ -174,11 +178,14 @@ en-US:
   front_join_us_teacher: crwdns43693:0crwdne43693:0
   front_join_us_inspire: crwdns43694:0crwdne43694:0
   front_join_us_inspire_link: crwdns43695:0crwdne43695:0
+  front_join_us_teacher_link: crwdns48587:0crwdne48587:0
   front_join_us_parent: crwdns43696:0crwdne43696:0
   front_join_us_ask_link: crwdns43697:0crwdne43697:0
   front_join_us_ask: crwdns43698:0crwdne43698:0
+  front_join_us_parent_link: crwdns48588:0crwdne48588:0
   front_join_us_computer_science: crwdns43699:0crwdne43699:0
   front_join_us_spread: crwdns43700:0crwdne43700:0
+  front_join_us_spread_word: crwdns48589:0crwdne48589:0
   front_join_us_organize: crwdns43701:0crwdne43701:0
   front_join_us_how_to_run: crwdns43702:0crwdne43702:0
   front_join_us_help_promote: crwdns43703:0crwdne43703:0
@@ -190,7 +197,8 @@ en-US:
   front_join_us_host: crwdns43708:0crwdne43708:0
   front_join_us_support: crwdns43709:0crwdne43709:0
   front_join_us_more_info: crwdns47867:0crwdne47867:0
-  signup_header: crwdns43710:0crwdne43710:0
+  front_join_us_code_info: crwdns48590:0crwdne48590:0
+  signup_header: 'crwdns48583:0%{campaign_date}crwdne48583:0'
   signup_name_label: crwdns43711:0crwdne43711:0
   signup_email_label: crwdns43712:0crwdne43712:0
   signup_organization_name_label: crwdns43713:0crwdne43713:0
@@ -252,7 +260,7 @@ en-US:
   hoc_faq_when_is_hoc_q: crwdns43769:0crwdne43769:0
   hoc_faq_when_is_hoc_a: 'crwdns43770:0%{campaign_date}crwdne43770:0'
   hoc_faq_why_cs_q: crwdns43771:0crwdne43771:0
-  hoc_faq_why_cs_a: 'crwdns43772:0%{codeorg_url}crwdnd43772:0%{codeorg_url}crwdne43772:0'
+  hoc_faq_why_cs_a: 'crwdns43772:0%{codeorg_url}crwdnd43772:0%{partner_url}crwdne43772:0'
   hoc_faq_how_participate_q: crwdns43773:0crwdne43773:0
   hoc_faq_how_participate_a: 'crwdns43774:0%{campaign_date}crwdne43774:0'
   hoc_faq_behind_hoc_q: crwdns43775:0crwdne43775:0
@@ -272,9 +280,9 @@ en-US:
   hoc_faq_frozen_q: crwdns43791:0crwdne43791:0
   hoc_faq_frozen_a: 'crwdns43792:0%{codeorg_url}crwdne43792:0'
   hoc_faq_high_school_q: crwdns43793:0crwdne43793:0
-  hoc_faq_high_school_a: 'crwdns43794:0%{codeorg_url}crwdnd43794:0%{codeorg_url}crwdne43794:0'
+  hoc_faq_high_school_a: 'crwdns43794:0%{codeorg_url}crwdnd43794:0%{partner_url}crwdne43794:0'
   hoc_faq_scratch_q: crwdns43787:0crwdne43787:0
-  hoc_faq_scratch_a: 'crwdns43788:0%{codeorg_url}crwdnd43788:0%{codeorg_url}crwdne43788:0'
+  hoc_faq_scratch_a: 'crwdns43788:0%{codeorg_url}crwdnd43788:0%{partner_url}crwdne43788:0'
   hoc_faq_count_hoc_q: crwdns43795:0crwdne43795:0
   hoc_faq_count_hoc_a: 'crwdns43796:0%{codeorg_url}crwdne43796:0'
   stats_hoc_2013_image_alt: crwdns43797:0crwdne43797:0
@@ -335,6 +343,7 @@ en-US:
   title_prizes_terms: crwdns45404:0crwdne45404:0
   title_prizes_thanks: crwdns45405:0crwdne45405:0
   title_prizes: crwdns45406:0crwdne45406:0
+  title_hardware_prize_form: crwdns48813:0crwdne48813:0
   title_resources: crwdns45407:0crwdne45407:0
   title_signup_thanks: crwdns45408:0crwdne45408:0
   title_tutorial_guidelines: crwdns45409:0crwdne45409:0

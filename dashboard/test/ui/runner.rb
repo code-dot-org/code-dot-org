@@ -167,18 +167,17 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-features = $options.feature || Dir.glob('features/*.feature')
+features = $options.feature || Dir.glob('features/**/*.feature')
 browser_features = $browsers.product features
 
 Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |browser, feature|
-  feature_name = feature.gsub('features/', '').gsub('.feature', '')
+  feature_name = feature.gsub('features/', '').gsub('.feature', '').gsub('/', '_')
   browser_name = browser['name'] || 'UnknownBrowser'
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
     HipChat.log message, color: 'yellow'
-    HipChat.developers message, color: 'yellow' if CDO.hip_chat_logging
     next
   end
 

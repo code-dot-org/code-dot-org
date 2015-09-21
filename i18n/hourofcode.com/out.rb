@@ -139,3 +139,60 @@ languages.each_pair do |name, codes|
     end
   end
 end
+
+
+
+#########################################################################################
+##                                                                                     ##
+## clean up crowdin markdown errors                                                    ##
+##                                                                                     ##
+#########################################################################################
+
+puts "Fixing crowdin markdown errors..."
+# replace * * * with ---
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
+end
+
+# fix metadata to be multiline
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  metadata_pattern = /(\---[^---]*\---)/m
+  metadata_matches = File.read(file).match metadata_pattern
+  if metadata_matches
+    original_metadata = metadata_matches.captures.first
+    fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
+    File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
+  end
+end
+
+# fix twitter tags
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/resources/index.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+end
+
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\stwitter\[:hashtags]/, "\ntwitter\[:hashtags]"))
+end
+
+# fix social media metadata
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
+  puts file
+  social_media_metada = "---\ntitle: <%= hoc_s(:title_signup_thanks) %>\nlayout: wide\nsocial:
+'og:title': '<%= hoc_s(:meta_tag_og_title) %>'\n'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
+'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'\n'og:image:width': 1705\n'og:image:height': 949
+'og:url': 'http://<%=request.host%>'\n'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'\n'twitter:card': player
+'twitter:site': '@codeorg'\n'twitter:url': 'http://<%=request.host%>'\n'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
+'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'\n'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
+'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
+'twitter:player:width': 1920\n'twitter:player:height': 1080\n---"
+  File.write(file, File.read(file).gsub(/^---[^---].*---/m, social_media_metada))
+end
+
+# fix embedded ruby in markdown
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
+end

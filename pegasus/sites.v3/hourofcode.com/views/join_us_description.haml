@@ -2,20 +2,19 @@
   #calltoaction
     %h2{:style=>"margin-top: 0px"}
       =hoc_s(:front_join_us_header)
-  #calltoaction
-    %ul{:style=>"line-height:28px"}
-      %li
-        %b=hoc_s(:front_join_us_teacher)
-        =hoc_s(:front_join_us_inspire)
-        %a{href:resolve_url('/resources/how-to')}
-          =hoc_s(:front_join_us_inspire_link)
-      %li
-        %b=hoc_s(:front_join_us_parent)
-        %a{href:resolve_url('/resources/promote#sample-emails')}
-          =hoc_s(:front_join_us_ask_link)
-        =hoc_s(:front_join_us_ask)
-      %li
-        %a{href:resolve_url('/resources')}
-          =hoc_s(:front_join_us_help_promote)
-      -if chapter_partner?
-        %li=hoc_s(:front_join_us_more_info).gsub('code.org', resolve_url('code.org'))
+    %a.category-link{:href=>resolve_url('/resources/how-to')}
+      %div.category-button.cyan-background
+        %b.category-header=hoc_s(:front_join_us_teacher)
+        %span=hoc_s(:front_join_us_teacher_link)
+    %a.category-link{:href=>resolve_url('/resources/promote#sample-emails')}
+      %div.category-button.purple-background
+        %b.category-header=hoc_s(:front_join_us_parent)
+        %span=hoc_s(:front_join_us_parent_link)
+    %a.category-link{:href=>resolve_url('/resources/promote')}
+      %div.category-button.green-background
+        %b.category-header=hoc_s(:front_join_us_computer_science)
+        %span=hoc_s(:front_join_us_spread_word)
+    -if chapter_partner?
+      %a.category-link{:href=>resolve_url('https://code.org')}
+        %div.category-button.teal-background
+          %span=hoc_s(:front_join_us_code_info).gsub('code.org', resolve_url('code.org'))

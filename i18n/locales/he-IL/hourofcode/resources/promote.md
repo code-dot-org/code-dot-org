@@ -35,6 +35,12 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [![image](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
+<a id="stickers"></a>
+
+## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
+
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+
 <a id="sample-emails"></a>
 
 ## Send these emails to help promote the Hour of Code
@@ -43,7 +49,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Ask your school, employer or friends to sign up:
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computerele sunt peste tot, dar predau informatica mai puţine şcoli decât acum 10 ani. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 

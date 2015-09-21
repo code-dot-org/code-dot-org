@@ -19,7 +19,7 @@ nav: promote_nav
 # How-to Guide for Organizations
 
 ## Use this handout to recruit corporations
-<a href="<%= localized_file('/files/corporations.pdf') %>"><img width="500" height="300" src="<%= localized_file('/images/corporations.png') %>"></a>
+<a href="<%= localized_file('/files/corporations.pdf') %>"><img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>"></a>
 
 ## 1) Try the tutorials:
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.

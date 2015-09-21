@@ -44,13 +44,13 @@ ____________________________________________________
 
 **Basic Example**
 
-Getting the state of a checkbox:
+Pull the text from a specified button or radio button:
 
 <pre>
-checkbox("checkbox1", true);                // Create a checked checkbox with id checkbox1
-var isChecked = getChecked("checkbox1");    // isChecked will be assigned the boolean value true
-
-console.log("The value of isChecked is " + isChecked);
+button("button12", "this here is a button");        // define a button
+textLabel("label9", "Here's a label");              // define a text label
+console.log(getText("button12"));                   // this will print "this here is a button"           
+console.log(getText("label9"));                     // this will print "Here's a label"
 </pre>
 
 [/example]
@@ -91,7 +91,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-checkbox(id, checked);
+getText(id);
 </pre>
 
 [/syntax]
@@ -102,15 +102,14 @@ checkbox(id, checked);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | String | Yes | A unique identifier for the checkbox. The id is used for referencing the created checkbox. For example, getting the checkbox's state (checked/unchecked).  |
-| checked | Boolean | No | Indicates the initial state (checked/unchecked) of the checkbox. Default value: `false`.  |
+| id | String | Yes | an element (such as a button or label or image name) with associated text that will return said text with getText(id).
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value.
+Returns a string value.
 
 [/returns]
 

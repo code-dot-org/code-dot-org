@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_officials) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -22,13 +24,13 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
   6. **Διάδοσέ το.** [Διάδοσε το βίντεο της Ώρας του Κώδικα στο Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) και [ανάφερε την υποστήριξή του στο Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Ανάρτησε φωτογραφίες των εκδηλώσεων ή βίντεο δικό σου και άλλων ενηλίκων που εξασκούνται στην Ώρα του Κώδικα. Χρησιμοποίησε το hashtag **#HourOfCode** ώστε η Code.org (@code.org) να μπορεί να δει και να προωθήσει την υποστήριξη. Ή, χρησιμοποίησε κάποιο από τα παρακάτων δείγματα tweets:
     
-      * Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-      * Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>).   
+      * Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>
+      * Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode <% if @country != 'us' %> [https://hourofcode.com/<%= @country %>](<%= resolve_url('/') %>) <% else %> [https://hourofcode.com](<%= resolve_url('/') %>) <% end %>   
           
         
 
   7. **Issue a press release.** [Use this sample](<%= resolve_url('/resources/official-press-release') %>) as a guide.
 
-  8. **Connect locally.** Visit <<%= resolve_url('https://code.org/promote') %>> to learn more about computer science education in your state. Υπόγραψε την επιστολή εκεί και θα λάβεις ενημερώσεις από την Code.org σχετικά με τις προσπάθειες σε τοπικό, πολιτειακό και ομοσπονδιακό επίπεδο.
+  8. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Υπόγραψε την επιστολή εκεί και θα λάβεις ενημερώσεις από την Code.org σχετικά με τις προσπάθειες σε τοπικό, πολιτειακό και ομοσπονδιακό επίπεδο.
 
 <%= view :signup_button %>
