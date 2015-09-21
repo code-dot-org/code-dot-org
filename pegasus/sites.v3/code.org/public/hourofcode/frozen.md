@@ -1,5 +1,6 @@
 ---
 title: Teacher Resources - Code with Anna and Elsa
+nav: hoc_teacher_resources_nav
 ---
 
 # Code with Anna and Elsa

@@ -1,5 +1,6 @@
 ---
 title: Teacher Resources - Write your first computer program
+nav: hoc_teacher_resources_nav
 ---
 
 # Write your first computer program: An Hour of Code tutorial
