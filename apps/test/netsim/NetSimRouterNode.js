@@ -7,7 +7,6 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var assertWithinRange = testUtils.assertWithinRange;
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
@@ -264,7 +263,7 @@ describe("NetSimRouterNode", function () {
     assert.equal(row.routerNumber, undefined);
 
     assertOwnProperty(row, 'creationTime');
-    assertWithinRange(row.creationTime, Date.now(), 10);
+    assert.closeTo(row.creationTime, Date.now(), 10);
 
     assertOwnProperty(row, 'dnsMode');
     assert.equal(row.dnsMode, DnsMode.NONE);
@@ -292,7 +291,7 @@ describe("NetSimRouterNode", function () {
 
     it("creationTime", function () {
       routerFromRow = makeLocalRouter({ creationTime: 42 });
-      assertWithinRange(routerFromRow.creationTime, 42, 10);
+      assert.closeTo(routerFromRow.creationTime, 42, 10);
     });
 
     it("dnsMode", function () {
