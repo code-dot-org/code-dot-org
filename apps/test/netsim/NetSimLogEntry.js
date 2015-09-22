@@ -17,7 +17,6 @@ var NetSimTestUtils = require('../util/netsimTestUtils');
 var Packet = require('@cdo/apps/netsim/Packet');
 
 var assert = testUtils.assert;
-var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
@@ -33,26 +32,26 @@ describe("NetSimLogEntry", function () {
 
   it("uses the logEntry table", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    assert(logEntry.getTable() === testShard.logTable, "Using wrong table");
+    assert.strictEqual(logEntry.getTable(), testShard.logTable, "Using wrong table");
   });
 
   it("has expected row structure and default values", function () {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
-    assertOwnProperty(row, 'nodeID');
-    assert.equal(row.nodeID, undefined);
+    assert(row.hasOwnProperty('nodeID'));
+    assert.isUndefined(row.nodeID);
 
-    assertOwnProperty(row, 'base64Binary');
-    assertOwnProperty(row.base64Binary, 'string');
-    assert.equal(row.base64Binary.string, '');
-    assertOwnProperty(row.base64Binary, 'len');
-    assert.equal(row.base64Binary.len, 0);
+    assert.property(row, 'base64Binary');
+    assert.property(row.base64Binary, 'string');
+    assert.strictEqual(row.base64Binary.string, '');
+    assert.property(row.base64Binary, 'len');
+    assert.strictEqual(row.base64Binary.len, 0);
 
-    assertOwnProperty(row, 'status');
+    assert.property(row, 'status');
     assert.equal(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
-    assertOwnProperty(row, 'timestamp');
+    assert.property(row, 'timestamp');
     assert.closeTo(row.timestamp, Date.now(), 10);
   });
 
@@ -114,8 +113,8 @@ describe("NetSimLogEntry", function () {
 
     it("Returns log and no error on success", function () {
       NetSimLogEntry.create(testShard, null, '10101010', null, function (err, result) {
-        assert(err === null, "Error is null on success");
-        assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
+        assert.isNull(err, "Error is null on success");
+        assert.instanceOf(result, NetSimLogEntry, "Result is a NetSimLogEntry");
       });
     });
   });
@@ -127,7 +126,7 @@ describe("NetSimLogEntry", function () {
     testShard.logTable.create({}, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
     assertTableSize(testShard, 'logTable', 1);
 
     // Call destroy()
