@@ -6,8 +6,6 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-<%= view :signup_button %>
-
 # Promote the Hour of Code
 
 ## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>

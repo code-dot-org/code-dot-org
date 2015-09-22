@@ -1,4 +1,4 @@
-- <a href="<%= resolve_url('/resources') %>"><%= hoc_s(:nav_back_to_resources)%></a>
+<div style="padding: 20px 0px 0px 25px;" >How to guides</div>
 - <a href="<%= resolve_url('/resources/how-to') %>"><%= hoc_s(:how_to_nav_educators)%></a>
 - <a href="<%= resolve_url('/resources/how-to-public-officials') %>"><%= hoc_s(:how_to_nav_public_officials)%></a>
 - <a href="<%= resolve_url('/resources/how-to-districts') %>"><%= hoc_s(:how_to_nav_districts)%></a>
