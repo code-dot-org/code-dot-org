@@ -28,7 +28,7 @@ theme: none
 
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "responses" ? "active tab" : "tab"'}
-        %a{'ng-href' => "#/sections/{{section.id}}/responses"} All Responses
+        %a{'ng-href' => "#/sections/{{section.id}}/responses"}= I18n.t('dashboard_navigation_view_text_responses')
 
       %li{'ng-show' => 'section && section.students.length > 0 && ! editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
