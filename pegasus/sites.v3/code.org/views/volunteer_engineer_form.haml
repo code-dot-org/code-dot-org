@@ -71,6 +71,12 @@
           %option{value: key, selected: (location_flexibility_ss||[]).include?(key)}= label
 
   .form-group
+    .checkbox
+      %label
+        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: "1"}/
+        I’m interested in volunteering after the Hour of Code
+
+  .form-group
     %label.control-label{for: "volunteer-languages"} Code languages I'm familiar with
     %div
       %select#volunteer-languages.form-control{name: "languages_ss[]", type: "select", required: false, multiple: true}
