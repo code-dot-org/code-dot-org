@@ -197,6 +197,7 @@
   front_join_us_computer_science: 'Just love computer science?'
   front_join_us_spread: 'Spread the word.'
   front_join_us_spread_word: "Spread the word in your community"
+  front_join_us_spread_word_work: "Spread the word in your community or workplace"
   front_join_us_organize: 'Or organize an Hour of Code event yourself.'
   front_join_us_how_to_run: "Here's how to run an Hour of Code"
   front_join_us_help_promote: "Help promote the Hour of Code"
@@ -209,6 +210,7 @@
   front_join_us_support: "Support it"
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "For more information, please visit code.org"
+  front_join_us_n_students_served: "# students served"
 
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'

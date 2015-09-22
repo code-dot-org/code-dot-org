@@ -9,14 +9,14 @@ This page contains numerous resources to assist in advocacy. You can find links 
 ## Code.org blog posts
 ### Miscellanous
 
-* Which occupations drive "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas)?
+* Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas)
 * What [percent of STEM](http://blog.code.org/post/89267280803/stem) should be Computer Science?
 * Is learning computer science linked to [improved learning](http://blog.code.org/post/125429946375/cs-other-subjects)  in other subjects?
 
 
 ### Diversity
 
-* [Maryland](http://blog.code.org/post/121123281798/md)  moves to increase diversity in computer science
+* [Maryland](http://blog.code.org/post/121123281798/md) makes a simple policy change to boost diversity in computer science
 * Reporting on [our efforts](http://blog.code.org/post/98856300118/diversity) to increase diversity in computer science
 * Code.org's [team diversity](http://blog.code.org/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
 

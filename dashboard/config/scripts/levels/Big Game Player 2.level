@@ -41,7 +41,9 @@
       "upButton"
     ],
     "disable_examples": "false",
-    "markdown_instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly.\r\n\r\nComputers read keypresses as numeric key codes - the up arrow is **38** and the down arrow is **40**. You can lookup other key codes in your student workbook.\r\n\r\nEdit the _update-player_ function so the player moves up when the up arrow (keycode 38) is pressed, and moves down (keycode 40) when the down arrow is pressed.",
+    "markdown_instructions": "To move the player up and down, we'll need to use a conditional block to figure out which key is pressed and respond accordingly.\r\n\r\nComputers read keypresses as numeric key codes - the up arrow is **38** and the down arrow is **40**. You can lookup other key codes in your student workbook.\r\n\r\nEdit the `update-player` function so the player moves up when the up arrow (keycode 38) is pressed, and moves down (keycode 40) when the down arrow is pressed.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>

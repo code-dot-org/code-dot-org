@@ -38,14 +38,15 @@ Quarter 4: Saturday, April 2, 2016
 Breakfast and lunch will be served.
 
 
-**September 19th Location**
+**November 21st Location**
 
-IDLP Building<br/>
-Room 118<br/>
-3950 Pecos-McLeod Interconnect<br/>
-Las Vegas, NV 89121
+Innevation Center<br/>
+3rd Floor<br/>
+Collaboration Station<br/>
+6795 S Edmond St<br/>
+Las Vegas, NV 89118
 
-Free parking is located in front of the building.
+Free parking is located in front of the building. Please park in Visitor Parking.
 
 **What to bring to Phase 3 quarterly sessions:**
 
