@@ -1,0 +1,56 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-17T21:30:58.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "turnLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "uh0JuvFxhkLQrHkc5MNkb3DfqsNeL3JiEbf/2bI+KRURWVpMvR265LW9NmVz\n2fz0\n",
+    "embed": "false",
+    "instructions": "Call drawSquare() to complete the drawing of two squares. (Click to see full instructions)",
+    "markdown_instructions": "# Calling functions with multiple parameters\r\n\r\nWe've already called many functions with multiple parameters but it can still be helpful to see an example of how it will look when you've defined those functions yourself.\r\n\r\n**Look at the function definition** for `drawSquare()` . Notice in particular how **multiple parameters are separated by commas** in the definition.\r\n\r\n![](https://images.code.org/a9c29d49444af73851d34445c686e3ba-image-1442526639409.50.19 PM.png)\r\n\r\n**Call** `drawSquare()` in the spaces above to complete the image. Don't worry about exact value, but the larger square should have thinner lines.\r\n\r\n![](https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38 PM.png)",
+    "start_blocks": "penUp();\r\nmoveTo(150,150);\r\n\r\nmoveTo(250,300);\r\n\r\n\r\nfunction drawSquare(size, width){\r\n  penDown();\r\n  penWidth(width);\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  turnLeft();\r\n  moveForward(size);\r\n  penUp();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

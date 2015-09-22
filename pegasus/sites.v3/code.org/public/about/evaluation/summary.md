@@ -13,6 +13,7 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 - [What do teachers take away from Code.org professional development?](#pd)
 - [How successful have our district partnerships been in driving short- and long-term outcomes in each region?](#partners)
 - [What learning outcomes have Code.org students achieved?](#outcomes)
+- [How much do Code.org programs cost?](#costs)
 - [How does learning Computer Science impact learning other subjects?](#learning)
 - [What next steps can Code.org take to improve our programs?](#nextsteps)
 
@@ -85,6 +86,14 @@ Overall, Code Studio course participation is high, and basic measures of learnin
 <br><br>
 
 [<button>Learn more</button>](/about/evaluation/outcomes)<br /><br/>
+
+---
+
+## <a name="costs" href="#costs">How much do Code.org programs cost?</a>
+
+Our first cohort of teachers finished a complete 24-month cycle of district partnership and teacher professional development, allowing Code.org to calculate our all-in cost per teacher, and to estimate our cost per student impacted.
+
+[<button>Learn more</button>](/about/evaluation/costs)<br /><br/>
 
 ---
 

@@ -14,11 +14,6 @@ def authentication_required!(url=request.url)
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?return_to=#{url}"), 302)
 end
 
-def owns_channel?(encrypted_channel_id)
-  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-  owner_storage_id == storage_id('user')
-end
-
 def dont_cache()
   cache_control(:private, :must_revalidate, max_age: 0)
 end

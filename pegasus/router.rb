@@ -159,6 +159,29 @@ class Documents < Sinatra::Base
     end
   end
 
+  # Static files
+  get '*' do |uri|
+    pass unless path = resolve_static('public', uri)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    send_file(path)
+  end
+
+  get '/style.css' do
+    content_type :css
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    css
+  end
+
+  # rubocop:disable Lint/Eval
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
+  # rubocop:enable Lint/Eval
+
   # Manipulated images
   get "/images/*" do |path|
     path = File.join('/images', path)
@@ -179,7 +202,11 @@ class Documents < Sinatra::Base
     # Assume we are returning the same resolution as we're reading.
     retina_in = retina_out = basename[-3..-1] == '_2x'
 
-    path = resolve_image File.join(dirname, basename)
+    path = nil
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      path = resolve_image File.join(@language, dirname, basename)
+    end
+    path ||= resolve_image File.join(dirname, basename)
     unless path
       # Didn't find a match at this resolution, look for a match at the other resolution.
       if retina_out
@@ -249,29 +276,6 @@ class Documents < Sinatra::Base
     cache_control :public, :must_revalidate, max_age: settings.image_max_age
     image.to_blob
   end
-
-  # Static files
-  get '*' do |uri|
-    pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
-    send_file(path)
-  end
-
-  get '/style.css' do
-    content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3',request.site,'/styles/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
-    last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
-    css
-  end
-
-  # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
-  # rubocop:enable Lint/Eval
 
   # Documents
   get_head_or_post '*' do |uri|

@@ -1,18 +1,13 @@
 ---
 title: Teacher Resources - Code with Anna and Elsa
+nav: hoc_teacher_resources_nav
 ---
 
-# Code with Anna and Elsa
+# Code with Anna and Elsa: An Hour of Code Tutorial
 
-## Overview
+<center><iframe width="600" height="337" src="https://www.youtube.com/embed/H1-paxNG4kw" frameborder="0" allowfullscreen></iframe></center>
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
-
-**Recommended Age Range:** 8+
-
-**Technology Requirements:** Modern browsers + tablets
-
-<iframe width="600" height="337" src="https://www.youtube.com/embed/H1-paxNG4kw" frameborder="0" allowfullscreen></iframe>
+[col-50]
 
 ## Teacher Resources
 
@@ -32,4 +27,18 @@ Let's use code to join Anna and Elsa as they explore the magic and beauty of ice
 - [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
-<button>[Back to Hour of Code](http://hourofcode.com)</button>
+[/col-50]
+
+[col-50]
+
+## Overview
+
+Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+
+**Recommended Age Range:** 8+
+
+**Technology Requirements:** Modern browsers + tablets
+
+<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+
+[/col-50]

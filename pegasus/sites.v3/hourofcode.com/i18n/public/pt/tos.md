@@ -1,8 +1,8 @@
-* * *
+---
 
 título: Termos de serviço
 
-* * *
+---
 
 ### O documento legal vinculativo é em inglês, e pode ser encontrado [aqui](https://code.org/tos). O texto abaixo é uma tradução.
 

@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## substring(id)
+## substring(int, int)
 
 [/name]
 
@@ -84,21 +84,7 @@ ____________________________________________________
 Many websites have a registration page where users are asked to accept the terms of service by checking a checkbox.
 
 <pre>
-checkbox("checkbox1", false);
-textLabel("label1", "I accept the terms of service");
 
-button("button1", "Register");                            // Create a "Register" button.
-
-onEvent("button1", "click", function(){                   // Whenever the "Register" button is clicked ...
-
-  var acceptedTermsOfService = getChecked("checkbox1");   // Get a boolean indicating whether the checkbox is checked or not.
-
-  if(acceptedTermsOfService){                             // Based on the boolean, write a message to the screen.
-    write("OK");
-  } else {
-    write("You must accept the terms of service");
-  }
-});
 </pre>
 
 

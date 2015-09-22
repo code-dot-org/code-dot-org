@@ -34,9 +34,18 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Who do I inform if I have a schedule conflict?**
 
-Please e-mail pd@code.org and your district contact if you have a conflict with an in-person PD date.
+Please email pd@code.org and your district contact if you have a conflict with an in-person PD date. Unfortunately, you can't make up the workshop. We recommend that you connect with a colleague to catch up on important concepts. You can do this locally or through your nation-wide forum of CS teachers. Visit your program's forum below: 
 
-The Code.org policy on teacher attendance can be found in your program welcome kit below.
+[Computer Science Principles](forum.code.org/c/csp)
+<br/>
+[Exploring Computer Science](forum.code.org/c/ecs)
+<br/>
+[Computer Science in Algebra](forum.code.org/c/cs-in-algebra)
+<br/>
+[Computer Science in Science](forum.code.org/c/cs-in-science)
+<br/>
+
+The Code.org attendance policy can be found in your program welcome kit below.
 
 [Computer Science Principles](code.org/welcome-csp)
 <br/>
