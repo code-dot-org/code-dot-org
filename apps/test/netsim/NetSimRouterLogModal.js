@@ -39,37 +39,37 @@ describe("NetSimRouterLogModal", function () {
     });
 
     it("defaults to logging all if it can", function () {
-      assert.equal(true, modal.isAllRouterLogMode_);
+      assert.isTrue(modal.isAllRouterLogMode_);
     });
 
     it("defaults to logging one if it has to", function () {
       levelConfig.connectedRouters = false;
       modal.setRouter(router);
-      assert.equal(false, modal.isAllRouterLogMode_);
+      assert.isFalse(modal.isAllRouterLogMode_);
     });
 
     it("detects a local router", function () {
-      assert.equal(false, modal.hasLocalRouter_());
+      assert.isFalse(modal.hasLocalRouter_());
       modal.setRouter(router);
-      assert.equal(true, modal.hasLocalRouter_());
+      assert.isTrue(modal.hasLocalRouter_());
     });
 
     it("detects if it can log all routers", function () {
-      assert.equal(true, modal.canLogAllRouters_());
+      assert.isTrue(modal.canLogAllRouters_());
       modal.setRouter(router);
       levelConfig.connectedRouters = true;
-      assert.equal(true, modal.canLogAllRouters_());
+      assert.isTrue(modal.canLogAllRouters_());
       levelConfig.connectedRouters = false;
-      assert.equal(false, modal.canLogAllRouters_());
+      assert.isFalse(modal.canLogAllRouters_());
     });
 
     it("detects if it can switch between modes", function () {
-      assert.equal(false, modal.canToggleRouterLogMode_());
+      assert.isFalse(modal.canToggleRouterLogMode_());
       modal.setRouter(router);
       levelConfig.connectedRouters = true;
-      assert.equal(true, modal.canToggleRouterLogMode_());
+      assert.isTrue(modal.canToggleRouterLogMode_());
       levelConfig.connectedRouters = false;
-      assert.equal(false, modal.canToggleRouterLogMode_());
+      assert.isFalse(modal.canToggleRouterLogMode_());
     });
 
   });

@@ -36,22 +36,22 @@ describe("NetSimWire", function () {
     var row = wire.buildRow();
 
     assertOwnProperty(row, 'localNodeID');
-    assert.equal(row.localNodeID, undefined);
+    assert.isUndefined(row.localNodeID);
 
     assertOwnProperty(row, 'remoteNodeID');
-    assert.equal(row.remoteNodeID, undefined);
+    assert.isUndefined(row.remoteNodeID);
 
     assertOwnProperty(row, 'localAddress');
-    assert.equal(row.localAddress, undefined);
+    assert.isUndefined(row.localAddress);
 
     assertOwnProperty(row, 'remoteAddress');
-    assert.equal(row.remoteAddress, undefined);
+    assert.isUndefined(row.remoteAddress);
 
     assertOwnProperty(row, 'localHostname');
-    assert.equal(row.localHostname, undefined);
+    assert.isUndefined(row.localHostname);
 
     assertOwnProperty(row, 'remoteHostname');
-    assert.equal(row.remoteHostname, undefined);
+    assert.isUndefined(row.remoteHostname);
   });
 
   describe("static method create", function () {
@@ -83,7 +83,7 @@ describe("NetSimWire", function () {
         localNodeID: 0,
         remoteNodeID: 0
       }, function (err, result) {
-        assert(result instanceof NetSimWire, "Result is a NetSimWire");
+        assert.instanceOf(result, NetSimWire, "Result is a NetSimWire");
       });
     });
   });
@@ -102,7 +102,7 @@ describe("NetSimWire", function () {
     }, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
 
     // Instantiate wire
     var wire = new NetSimWire(testShard, testRow);
@@ -121,7 +121,7 @@ describe("NetSimWire", function () {
     wireTable.create({}, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
 
     // Call destroy()
     var wire = new NetSimWire(testShard, testRow);

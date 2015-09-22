@@ -30,8 +30,8 @@ describe("NetSimVizElement", function () {
       assert.equal(0, vizElement.posY);
       assert.equal(1, vizElement.scale);
       assert.deepEqual([], vizElement.tweens_);
-      assert.equal(false, vizElement.isDying());
-      assert.equal(false, vizElement.isDead());
+      assert.isFalse(vizElement.isDying());
+      assert.isFalse(vizElement.isDead());
     });
 
     it("immediately creates SVG root element", function () {

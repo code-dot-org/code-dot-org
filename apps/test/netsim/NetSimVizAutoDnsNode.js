@@ -33,11 +33,11 @@ describe("NetSimVizAutoDnsNode", function () {
     });
 
     it("is a VizElement", function () {
-      assert(vizElement instanceof NetSimVizElement);
+      assert.instanceOf(vizElement, NetSimVizElement);
     });
 
     it("is a VizNode", function () {
-      assert(vizElement instanceof NetSimVizNode);
+      assert.instanceOf(vizElement, NetSimVizNode);
     });
 
     it("uses a DNS display name (by default)", function () {
@@ -51,19 +51,19 @@ describe("NetSimVizAutoDnsNode", function () {
     });
 
     it("knows it's not a router", function () {
-      assert.equal(false, vizElement.isRouter);
+      assert.isFalse(vizElement.isRouter);
     });
 
     it("knows it's not a local node", function () {
-      assert.equal(false, vizElement.isLocalNode);
+      assert.isFalse(vizElement.isLocalNode);
     });
 
     it("knows it is a DNS node", function () {
-      assert.equal(true, vizElement.isDnsNode);
+      assert.isTrue(vizElement.isDnsNode);
     });
 
     it("adds the 'auto-dns-node' class to its root element", function () {
-      assert.equal(true, vizElement.getRoot().is('.auto-dns-node'));
+      assert.isTrue(vizElement.getRoot().is('.auto-dns-node'));
     });
   });
 

@@ -38,7 +38,7 @@ describe("NetSimVizSimulationWire", function () {
     NetSimLocalClientNode.create(shard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return newClient;
   };
 
@@ -56,7 +56,7 @@ describe("NetSimVizSimulationWire", function () {
     }, function (e, w) {
       newWire = w;
     });
-    assert(newWire !== undefined, "Failed to create a remote wire.");
+    assert.isDefined(newWire, "Failed to create a remote wire.");
     return newWire;
   };
 
@@ -85,25 +85,25 @@ describe("NetSimVizSimulationWire", function () {
     });
 
     it("is a VizElement", function () {
-      assert(vizWire instanceof NetSimVizElement);
+      assert.instanceOf(vizWire, NetSimVizElement);
     });
 
     it("is a VizWire", function () {
-      assert(vizWire instanceof NetSimVizWire);
+      assert.instanceOf(vizWire, NetSimVizWire);
     });
 
     it("has default properties", function () {
-      assert.equal(0, vizWire.textPosX_);
-      assert.equal(0, vizWire.textPosY_);
+      assert.strictEqual(0, vizWire.textPosX_);
+      assert.strictEqual(0, vizWire.textPosY_);
       assert.deepEqual([], vizWire.encodings_);
-      assert.equal(simWire.entityID, vizWire.getCorrespondingEntityId());
-      assert(vizLocalNode === vizWire.localVizNode);
-      assert(vizRemoteNode === vizWire.remoteVizNode);
+      assert.strictEqual(simWire.entityID, vizWire.getCorrespondingEntityId());
+      assert.strictEqual(vizLocalNode, vizWire.localVizNode);
+      assert.strictEqual(vizRemoteNode, vizWire.remoteVizNode);
     });
 
     it("sets addresses on its endpoints", function () {
-      assert.equal(undefined, vizLocalNode.address_);
-      assert.equal(undefined, vizRemoteNode.address_);
+      assert.isUndefined(vizLocalNode.address_);
+      assert.isUndefined(vizRemoteNode.address_);
       simWire.localAddress = 'boo';
       simWire.remoteAddress = 'hiss';
       vizWire.configureFrom(simWire);

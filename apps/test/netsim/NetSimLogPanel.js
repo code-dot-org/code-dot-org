@@ -37,12 +37,12 @@ describe("NetSimLogPanel", function () {
 
   it("is open by default", function () {
     panel = new NetSimLogPanel(rootDiv, {});
-    assert.equal(false, panel.isMinimized());
+    assert.isFalse(panel.isMinimized());
   });
 
   it("can be configured to be closed on creation", function () {
     panel = new NetSimLogPanel(rootDiv, { isMinimized: true });
-    assert.equal(true, panel.isMinimized());
+    assert.isTrue(panel.isMinimized());
   });
 
   it("renders body on construction", function () {

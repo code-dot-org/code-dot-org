@@ -75,7 +75,7 @@ describe("NetSimTable", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
           useIncrementalRefresh: undefined
         });
-        assert.equal(false, _.useIncrementalRefresh_);
+        assert.isFalse(_.useIncrementalRefresh_);
       });
 
       it("accepts booelan values", function () {
@@ -429,14 +429,14 @@ describe("NetSimTable", function () {
 
     notified = false;
     netsimTable.refresh(callback);
-    assert.equal(notified, false);
+    assert.isFalse(notified);
 
     // Remote update - doesn't hit our caches
     apiTable.update(1, {data: "B"}, callback);
 
     notified = false;
     netsimTable.refresh(callback);
-    assert.equal(notified, true);
+    assert.isTrue(notified);
   });
 
   it("notifies on read if the requested remote row changed", function () {
@@ -444,20 +444,20 @@ describe("NetSimTable", function () {
 
     notified = false;
     netsimTable.read(1, callback);
-    assert.equal(notified, false);
+    assert.isFalse(notified);
 
     // Remote update - doesn't hit our caches
     apiTable.update(1, {data: "B"}, callback);
 
     notified = false;
     netsimTable.read(1, callback);
-    assert.equal(notified, true);
+    assert.isTrue(notified);
   });
 
   it("notifies on every create", function () {
     notified = false;
     netsimTable.create({}, callback);
-    assert.equal(notified, true);
+    assert.isTrue(notified);
   });
 
   it("notifies on update if the cache row changed", function () {
@@ -465,23 +465,23 @@ describe("NetSimTable", function () {
 
     notified = false;
     netsimTable.update(1, {data: "A"}, callback);
-    assert.equal(notified, false);
+    assert.isFalse(notified);
 
     notified = false;
     netsimTable.update(1, {data: "B"}, callback);
-    assert.equal(notified, true);
+    assert.isTrue(notified);
   });
 
   it("notifies on delete when row was previously in cache", function () {
     notified = false;
     netsimTable.delete(1, callback);
-    assert.equal(notified, false);
+    assert.isFalse(notified);
 
     netsimTable.create({}, callback);
 
     notified = false;
     netsimTable.delete(1, callback);
-    assert.equal(notified, true);
+    assert.isTrue(notified);
   });
 
   it("notifies once on deleteMany operation if anything was deleted", function () {

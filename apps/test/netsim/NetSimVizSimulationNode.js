@@ -36,7 +36,7 @@ describe("NetSimVizSimulationNode", function () {
     NetSimLocalClientNode.create(shard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return newClient;
   };
 
@@ -49,7 +49,7 @@ describe("NetSimVizSimulationNode", function () {
     NetSimRouterNode.create(shard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return newRouter;
   };
 
@@ -65,16 +65,16 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it("is a VizElement", function () {
-      assert(vizElement instanceof NetSimVizElement);
+      assert.instanceOf(vizElement, NetSimVizElement);
     });
 
     it("is a VizNode", function () {
-      assert(vizElement instanceof NetSimVizNode);
+      assert.instanceOf(vizElement, NetSimVizNode);
     });
 
     it("has default properties", function () {
-      assert.equal(undefined, vizElement.correspondingNodeID_);
-      assert.equal(undefined, vizElement.autoDnsAddress);
+      assert.isUndefined(vizElement.correspondingNodeID_);
+      assert.isUndefined(vizElement.autoDnsAddress);
     });
   });
 
@@ -99,7 +99,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it("knows it's not a router", function () {
-      assert.equal(false, vizElement.isRouter);
+      assert.isFalse(vizElement.isRouter);
     });
 
     it("does not cache an auto-dns address", function () {
@@ -107,11 +107,11 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it("does not assume it's the local node (must be told explicitly)", function () {
-      assert.equal(false, vizElement.isLocalNode);
+      assert.isFalse(vizElement.isLocalNode);
     });
 
     it("does not assume it's the DNS node (must be told explicitly)", function () {
-      assert.equal(false, vizElement.isDnsNode);
+      assert.isFalse(vizElement.isDnsNode);
     });
   });
 
@@ -136,7 +136,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it("knows it's a router", function () {
-      assert.equal(true, vizElement.isRouter);
+      assert.isTrue(vizElement.isRouter);
     });
 
     it("caches an auto-dns address", function () {
@@ -144,12 +144,12 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it("is not the local node or dns node)", function () {
-      assert.equal(false, vizElement.isLocalNode);
-      assert.equal(false, vizElement.isDnsNode);
+      assert.isFalse(vizElement.isLocalNode);
+      assert.isFalse(vizElement.isDnsNode);
     });
 
     it("adds the 'router-node' class to its root element", function () {
-      assert.equal(true, vizElement.getRoot().is('.router-node'));
+      assert.isTrue(vizElement.getRoot().is('.router-node'));
     });
 
     it("is visible by default", function () {

@@ -56,7 +56,7 @@ describe("NetSimRouterNode", function () {
     NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return newRouter;
   };
 
@@ -70,7 +70,7 @@ describe("NetSimRouterNode", function () {
     NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return newClient;
   };
 
@@ -265,25 +265,25 @@ describe("NetSimRouterNode", function () {
     var row = router.buildRow();
 
     assertOwnProperty(row, 'routerNumber');
-    assert.equal(row.routerNumber, undefined);
+    assert.isUndefined(row.routerNumber);
 
     assertOwnProperty(row, 'creationTime');
     assert.closeTo(row.creationTime, Date.now(), 10);
 
     assertOwnProperty(row, 'dnsMode');
-    assert.equal(row.dnsMode, DnsMode.NONE);
+    assert.strictEqual(row.dnsMode, DnsMode.NONE);
 
     assertOwnProperty(row, 'dnsNodeID');
-    assert.equal(row.dnsNodeID, undefined);
+    assert.isUndefined(row.dnsNodeID);
 
     assertOwnProperty(row, 'bandwidth');
-    assert.equal(row.bandwidth, 'Infinity');
+    assert.strictEqual(row.bandwidth, 'Infinity');
 
     assertOwnProperty(row, 'memory');
-    assert.equal(row.memory, 'Infinity');
+    assert.strictEqual(row.memory, 'Infinity');
 
     assertOwnProperty(row, 'randomDropChance');
-    assert.equal(row.randomDropChance, 0);
+    assert.strictEqual(row.randomDropChance, 0);
   });
 
   describe("constructing from a table row", function () {
@@ -380,8 +380,8 @@ describe("NetSimRouterNode", function () {
 
     it("returns an empty array when no wires are present", function () {
       var wires = routerA.getConnections();
-      assert(Array.isArray(wires));
-      assert.equal(wires.length, 0);
+      assert.isArray(wires);
+      assert.strictEqual(wires.length, 0);
     });
 
     it("returns wires that have a remote end attached to the router", function () {
@@ -397,7 +397,7 @@ describe("NetSimRouterNode", function () {
             localNodeID: 0,
             remoteNodeID: routerA.entityID
           }, function () {});
-      assert(routerA.getConnections()[0] instanceof NetSimWire, "Got a NetSimWire back");
+      assert.instanceOf(routerA.getConnections()[0], NetSimWire, "Got a NetSimWire back");
     });
 
     it("skips wires that aren't connected to the router", function () {
@@ -449,7 +449,7 @@ describe("NetSimRouterNode", function () {
         accepted = isAccepted;
       });
 
-      assert.equal(true, accepted);
+      assert.isTrue(accepted);
     });
 
     it("rejects connection if total connections are beyond limit", function () {
@@ -469,9 +469,9 @@ describe("NetSimRouterNode", function () {
         accepted = isAccepted;
       });
 
-      assert.equal(false, accepted);
-      assert(error instanceof Error);
-      assert.equal('Too many connections.', error.message);
+      assert.isFalse(accepted);
+      assert.instanceOf(error, Error);
+      assert.equal(error.message, 'Too many connections.');
     });
 
     it("rejects connection if an address collision exists", function () {
@@ -494,9 +494,9 @@ describe("NetSimRouterNode", function () {
         error = err;
         accepted = isAccepted;
       });
-      assert.equal(false, accepted);
-      assert(error instanceof Error);
-      assert.equal('Address collision detected.', error.message);
+      assert.isFalse(accepted);
+      assert.instanceOf(error, Error);
+      assert.equal(error.message, 'Address collision detected.');
     });
   });
 
