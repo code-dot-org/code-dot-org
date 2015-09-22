@@ -9,7 +9,7 @@
     "skin": "pvz",
     "instructions": "Ok, this is similar, but slightly different. Can you do it in only five blocks?",
     "start_direction": "1",
-    "step_mode": 0
+    "step_mode": 1
   }
 }]]></config>
   <blocks>
