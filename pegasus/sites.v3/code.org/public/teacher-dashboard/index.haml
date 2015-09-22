@@ -135,7 +135,7 @@ angular: teacherDashboard
                                        function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
-    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
     $scope.sections = sectionsService.query();
 
@@ -200,7 +200,7 @@ angular: teacherDashboard
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.course_id = parseInt($routeParams.courseid);
-    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
     $scope.progress = sectionsService.studentProgress({id: $routeParams.sectionid, studentId: $routeParams.studentid});
 
@@ -439,7 +439,7 @@ angular: teacherDashboard
     $scope.progressLoadedFirst = false;
     $scope.progressLoaded = false;
 
-    $scope.course_list = #{DashboardSection::VALID_COURSES.to_json};
+    $scope.course_list = #{DashboardSection::valid_courses.to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
