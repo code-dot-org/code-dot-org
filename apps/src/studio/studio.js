@@ -372,6 +372,17 @@ var drawMap = function () {
   score.setAttribute('visibility', 'hidden');
   svg.appendChild(score);
 
+  if (level.floatingScore) {
+    var floatingScore = document.createElementNS(SVG_NS, 'text');
+    floatingScore.setAttribute('id', 'floatingScore');
+    floatingScore.setAttribute('class', 'studio-floating-score');
+    floatingScore.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    floatingScore.setAttribute('y', SCORE_TEXT_Y_POSITION);
+    floatingScore.appendChild(document.createTextNode(''));
+    floatingScore.setAttribute('visibility', 'hidden');
+    svg.appendChild(floatingScore);
+  }
+
   var titleScreenTitle = document.createElementNS(SVG_NS, 'text');
   titleScreenTitle.setAttribute('id', 'titleScreenTitle');
   titleScreenTitle.setAttribute('class', 'studio-ts-title');
@@ -857,6 +868,8 @@ Studio.onTick = function() {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
+
+  Studio.updateFloatingScore();
 
   sortDrawOrder();
 
@@ -2385,15 +2398,33 @@ Studio.clearDebugRects = function() {
   $(".debugRect").remove();
 };
 
+Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
+  var srcRow, srcCol;
 
-Studio.drawWallTile = function (svg, row, col, doubleSize) {
-  var srcRow = Math.floor(Math.random() * 4);
-  var srcCol = Math.floor(Math.random() * 4);
+  if (wallTile) {
+    srcRow = Math.floor(wallTile / 10);
+    srcCol = wallTile % 10;
+  } else {
+    srcRow = Math.floor(Math.random() * 4);
+    srcCol = Math.floor(Math.random() * 4);
+  }
+
+  var multiplySize;
+
+  if (skin.enlargeWallTiles && 
+      srcRow >= skin.enlargeWallTiles.minRow &&
+      srcRow <= skin.enlargeWallTiles.maxRow &&
+      srcCol >= skin.enlargeWallTiles.minCol &&
+      srcCol <= skin.enlargeWallTiles.maxCol) {
+    multiplySize = 1.4;
+  } else if (largeTile) {
+    multiplySize = 2;
+  } else {
+    multiplySize = 1;
+  }
 
   var tiles = Studio.background && skin[Studio.background].tiles ?
                 skin[Studio.background].tiles : skin.tiles;
-
-  var multiplySize = doubleSize ? 2 : 1;
 
   var clipPath = document.createElementNS(SVG_NS, 'clipPath');
   var clipId = 'tile_clippath_' + uniqueId;
@@ -2411,8 +2442,8 @@ Studio.drawWallTile = function (svg, row, col, doubleSize) {
   var tileId = 'tile_' + (uniqueId++);
   tile.setAttribute('id', tileId);
   tile.setAttribute('class', 'tile');
-  tile.setAttribute('width', multiplySize * 4 * Studio.SQUARE_SIZE);
-  tile.setAttribute('height', multiplySize * 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('width', multiplySize * 8 * Studio.SQUARE_SIZE);
+  tile.setAttribute('height', multiplySize * 8 * Studio.SQUARE_SIZE);
   tile.setAttribute('x', col * Studio.SQUARE_SIZE - multiplySize * srcCol * Studio.SQUARE_SIZE);
   tile.setAttribute('y', row * Studio.SQUARE_SIZE - multiplySize * srcRow * Studio.SQUARE_SIZE); 
   tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', tiles);
@@ -2457,7 +2488,15 @@ Studio.isWallTile = function(row, col) {
     return false;
   }
 
-  return (Studio.map[row][col] & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls][row][col]));
+  return (Studio.map[row][col] & SquareType.WALL || (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col]));
+};
+
+Studio.getWallTile = function(row, col) {
+  if (Studio.walls !== null) {
+    return skin[Studio.walls][row][col];
+  } else if (Studio.map[row][col] & SquareType.WALL) {
+    return 1;
+  }
 };
 
 Studio.drawMapTiles = function (svg) {
@@ -2471,7 +2510,7 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('backgroundLayer');
+  var spriteLayer = document.getElementById('spriteLayer');
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -2495,7 +2534,9 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(spriteLayer, row, col, largeTile);
+        var wallTile = Studio.getWallTile(row, col);
+
+        Studio.drawWallTile(spriteLayer, row, col, largeTile, wallTile);
       }
     }
   }
@@ -2670,6 +2711,36 @@ Studio.displayScore = function() {
   }
   score.setAttribute('visibility', 'visible');
 };
+
+Studio.displayFloatingScore = function(changeValue) {
+  if (!level.floatingScore) {
+    return;
+  }
+
+  var sprite = Studio.sprite[0];
+  var floatingScore = document.getElementById('floatingScore');
+  floatingScore.textContent = changeValue > 0 ? ("+" + changeValue) : changeValue;
+  floatingScore.setAttribute('x', sprite.x + sprite.width/2);
+  floatingScore.setAttribute('y', sprite.y + sprite.height/2);
+  floatingScore.setAttribute('opacity', 1);
+  floatingScore.setAttribute('visibility', 'visible');  
+}
+
+Studio.updateFloatingScore = function() {
+  if (!level.floatingScore) {
+    return;
+  }
+
+  var floatingScore = document.getElementById('floatingScore');
+  var y = floatingScore.getAttribute('y');
+  var opacity = floatingScore.getAttribute('opacity');
+  if (opacity > 0) {
+    opacity -= 0.025;
+    floatingScore.setAttribute('opacity', opacity);
+  }
+  y -= 2;
+  floatingScore.setAttribute('y', y);
+}
 
 Studio.showCoordinates = function() {
   var sprite = Studio.sprite[Studio.protagonistSpriteIndex || 0];
@@ -3068,6 +3139,7 @@ Studio.setSpriteSize = function (opts) {
 Studio.changeScore = function (opts) {
   Studio.playerScore += Number(opts.value);
   Studio.displayScore();
+  Studio.displayFloatingScore(opts.value);
 };
 
 Studio.setScoreText = function (opts) {
@@ -3100,12 +3172,13 @@ Studio.setWalls = function (opts) {
   }
 
   if (opts.value === Studio.walls) {
+    Studio.fixSpriteLocation();
     return;
   }
 
   Studio.walls = opts.value;
 
-  // Draw the tiles (again) that we know which background we're using.
+  // Draw the tiles (again) now that we know which background we're using.
   $(".tile_clip").remove();
   $(".tile").remove();
   Studio.drawMapTiles();
@@ -3145,7 +3218,7 @@ Studio.fixSpriteLocation = function () {
         for (var col = minCol; col <= maxCol; col++) {
           if (! Studio.isWallTile(row, col)) {
             sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2;
-            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2;
+            sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 - 4;
             sprite.dir = Direction.NONE;
             console.log(xGrid, yGrid, row, col, sprite.x, sprite.y);
             return;
