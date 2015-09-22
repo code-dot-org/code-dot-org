@@ -12,27 +12,31 @@ MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typic
 # channel: ssh channel that you get from open_channel
 # command: Command to execute on the remote host
 # exit_error_string: Error message to throw if the command exits with something other than 1
-def execute_ssh_on_channel(channel, command, exit_error_string)
-  channel.exec(command) do |ch|
-    ch.on_data do |_, data|
-      $stdout.print data
-    end
+def execute_ssh_on_channel(ssh, command, exit_error_string)
+  ssh.open_channel do |channel|
+    channel.exec(command) do |ch|
+      ch.on_data do |_, data|
+        $stdout.print data
+      end
 
-    ch.on_extended_data do |_, _, data|
-      $stderr.print data
-    end
+      ch.on_extended_data do |_, _, data|
+        $stderr.print data
+      end
 
-    ch.on_request 'exit-status' do |_, data|
-      if data.read_long != 0
-        throw exit_error_string
+      ch.on_request 'exit-status' do |_, data|
+        if data.read_long != 0
+          throw exit_error_string
+        end
       end
     end
   end
 
+  ssh.loop
 end
 
 options = {}
 username = Etc.getlogin
+
 
 OptionParser.new do |opts|
   opts.on('-e', '--environment ENVIRONMENT', 'Environment to add frontend to') do |env|
@@ -41,6 +45,10 @@ OptionParser.new do |opts|
 
   opts.on('-h', '--help', 'Print this') { puts options; exit }
 end.parse!
+
+unless ['production', 'adhoc'].include?(options['environment'])
+  throw 'Environments other than production are currently unsupported'
+end
 
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
 
@@ -156,21 +164,21 @@ ec2client.create_tags({
                           ],
                       })
 
-puts "Created instance #{instance_id} with name #{instance_name}"
 
 private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
-
-puts "Private DNS name #{private_dns_name}"
+puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
 
 puts 'Writing new configuration file'
 
+file_suffix = rand(100000000)
+
 Net::SSH.start('gateway.code.org', username) do |ssh|
-  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config")
+  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config#{file_suffix}")
 end
 
-Net::SCP.download!('gateway.code.org', username, '/tmp/old_knife_config', '/tmp/knife_config')
+Net::SCP.download!('gateway.code.org', username, "/tmp/old_knife_config#{file_suffix}", "/tmp/knife_config#{file_suffix}")
 
-configuration_json = JSON.parse(File.read('/tmp/knife_config'))
+configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
 configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
 configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_name] = private_dns_name
 
@@ -178,26 +186,14 @@ File.open('/tmp/new_knife_config.json', 'w') do |f|
   f.write(JSON.dump(configuration_json))
 end
 
-Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', '/tmp/new_knife_config.json')
-puts 'New configuration file written.'
+Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
+puts 'New configuration file uploaded, now loading it.'
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
+  execute_ssh_on_channel(ssh,
+                         "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
+                         "Unable to update environment #{options['environment']}")
+  puts 'Done executing! Cleaning up!'
 
-  ssh.open_channel do |ch|
-    execute_ssh_on_channel(ch,
-                           "knife environment from file /tmp/new_knife_config.json",
-                           'Unable to edit the configuration from file - log into gateway and look at the config file generated')
-    ch.exec('rm /tmp/old_knife_config')
-    ch.exec('rm /tmp/new_knife_config.json')
-
-    # Commented out for now - bootstrapping will still be done manually
-    #
-    # execute_ssh_on_channel(ch,
-    #                        "knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]",
-    #                        "Unable to bootstrap instance #{instance_name} - log into gateway and retry bootstrapping.")
-    #
-    # execute_ssh_on_channel(ch,
-    #                        "ssh production-daemon 'sudo chef-client'",
-    #                        'Unable to run chef-client on production daemon')
-  end
+  ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
