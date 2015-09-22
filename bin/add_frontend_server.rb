@@ -170,8 +170,7 @@ ec2client.create_tags({
                       })
 
 
-private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0]
-                       .private_dns_name
+private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
 puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
 
 puts 'Writing new configuration file'
