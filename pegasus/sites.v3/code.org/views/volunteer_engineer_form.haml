@@ -54,15 +54,6 @@
       %input#volunteer-location.form-control{name: "location_s", placeholder: "ZIP code, city and state/country, or street address", type: "text", required: true, value: location_s}/
 
   .form-group
-    %label.control-label{for: "volunteer-time-commitment"} Time commitment
-    %span.form-required-field *
-    %div
-      %select#volunteer-time-commitment.form-control{name: "time_commitment_s", type: "select", required: false}
-        %option{selected: time_commitment_s.nil_or_empty?, value: ""}
-        -VolunteerEngineerSubmission.commitments.each_pair do |key,label|
-          %option{value: key, selected: key == time_commitment_s}= label
-
-  .form-group
     %label.control-label{for: "volunteer-location-flexibility"} I can help during the Hour of Code by... (select all that apply)
     %div
       %select#volunteer-location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", required: false, multiple: true}
@@ -75,6 +66,14 @@
       %label
         %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: "1"}/
         I’m interested in volunteering after the Hour of Code
+
+  .form-group{style: "display: none;"}
+    %label.control-label{for: "volunteer-time-commitment"} Time commitment after the Hour of Code
+    %div
+      %select#volunteer-time-commitment.form-control{name: "time_commitment_s", type: "select", required: false}
+        %option{selected: time_commitment_s.nil_or_empty?, value: ""}
+        -VolunteerEngineerSubmission.commitments.each_pair do |key,label|
+          %option{value: key, selected: key == time_commitment_s}= label
 
   .form-group
     %label.control-label{for: "volunteer-languages"} Code languages I'm familiar with
@@ -154,6 +153,14 @@
         $('#volunteer-languages-other-wrapper').hide();
       }
     }).triggerHandler('change');
+
+    $('#volunteer-after-hoc').change(function() {
+      if($(this).is(':checked')) {
+        $('#volunteer-time-commitment').closest('.form-group').slideDown();
+      } else {
+        $('#volunteer-time-commitment').closest('.form-group').slideUp();
+      }
+    });
   });
 
 :javascript
