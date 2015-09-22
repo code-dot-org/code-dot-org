@@ -12,7 +12,7 @@ class ScriptLevelsController < ApplicationController
     # delete the session if the user is not signed in
     # and start them at the beginning of the script.
     # If the user is signed in, continue normally
-    reset_session unless current_user
+    client_state.reset unless current_user
     redirect_to(build_script_level_path(@script.starting_level)) and return
   end
 

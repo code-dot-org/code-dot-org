@@ -64,7 +64,7 @@ module ApplicationHelper
         if user
           script_level.try(:user_level).try(:best_result)
         else
-          session_level_progress(script_level.level_id.to_i)
+          client_state.level_progress(script_level.level_id.to_i)
         end
     activity_css_class(result)
   end
