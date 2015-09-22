@@ -23,7 +23,12 @@
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
+-SOLR = Solr::Server.new(host:CDO.solr_server)
+-num_teachers = SOLR.query(q:"kind_s:\"HocSignup2015\" && match_volunteer_flag_b:true").getResults().getNumFound();
+
 %h1 Volunteer for the Hour of Code
+%h3{style: 'color: #00adbc; font-size: 1.125em;'}
+  = "#{format_integer_with_commas(num_teachers)} teachers have signed up for the Hour of Code and would like a volunteer to help them."
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   %p.form-intro-text Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.
   #error-message{style: 'display: none'}
