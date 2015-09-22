@@ -13,7 +13,7 @@ module.exports = React.createClass({
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
-    isApplabRunning: React.PropTypes.bool.isRequired
+    isDimmed: React.PropTypes.bool.isRequired
   },
 
   render: function() {
@@ -49,7 +49,7 @@ module.exports = React.createClass({
 
     var transparencyLayer;
     // Slightly gray everything while running
-    if (this.props.isApplabRunning) {
+    if (this.props.isDimmed) {
       transparencyLayer = (
         <div style={styles.transparent}/>
       );
