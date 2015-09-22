@@ -190,3 +190,9 @@ Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each 
 'twitter:player:width': 1920\n'twitter:player:height': 1080\n---"
   File.write(file, File.read(file).gsub(/^---[^---].*---/m, social_media_metada))
 end
+
+# fix embedded ruby in markdown
+Dir.glob("../../pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  puts file
+  File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
+end

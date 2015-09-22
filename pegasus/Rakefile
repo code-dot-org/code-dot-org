@@ -1,6 +1,9 @@
 require_relative 'src/env'
 
-def there_can_be_only_one(pidfile)
+SECONDS_TO_WAIT = 60
+TIMES_TO_TRY = 5
+
+def check_pidfile(pidfile, tries)
   if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
@@ -17,8 +20,18 @@ def there_can_be_only_one(pidfile)
       exists = true
       raise
     end
-    raise StandardError.new("There can be only one #{pidfile} (#{oldpid}) on #{CDO.name} (#{rack_env}) \n#{ps}") if exists
+    if tries <= 0
+      raise StandardError.new("There can be only one #{pidfile} (#{oldpid}) on #{CDO.name} (#{rack_env}) \n#{ps}") if exists
+    else
+      puts "found a competing rake, waiting #{SECONDS_TO_WAIT}s"
+      sleep(SECONDS_TO_WAIT)
+      check_pidfile(pidfile, tries - 1)
+    end
   end
+end
+
+def there_can_be_only_one(pidfile)
+  check_pidfile(pidfile, TIMES_TO_TRY)
   File.open(pidfile, "w") { |f| f.puts $$ }
   at_exit { File.unlink(pidfile) }
 end

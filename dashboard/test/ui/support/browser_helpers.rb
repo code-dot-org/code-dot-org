@@ -22,6 +22,12 @@ module BrowserHelpers
     id.should eq expectedId
   end
 
+  def element_has_attribute(selector, attribute, expectedText)
+    expectedText.gsub!('\"', '"')
+    text = @browser.execute_script("return $(\"#{selector}\").attr(\"#{attribute}\");")
+    text.should eq expectedText
+  end
+
   def generate_generic_drag_code(fromSelector, toSelector, target_dx, target_dy)
     "var drag_dx = $(\"#{toSelector}\").position().left - $(\"#{fromSelector}\").position().left;" +
         "var drag_dy = $(\"#{toSelector}\").position().top  - $(\"#{fromSelector}\").position().top;" +

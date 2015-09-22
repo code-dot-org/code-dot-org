@@ -60,12 +60,12 @@ var base = {
 
   /**
    * Remove a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    */
-  delete: function(id, callback) {
+  delete: function(childPath, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id + "/delete",
+      url: this.api_base_url + "/" + childPath + "/delete",
       type: "post",
       dataType: "json"
     }).done(function(data, text) {
@@ -78,13 +78,13 @@ var base = {
 
   /**
    * Retrieve a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is the requested
    *        collection object.
    */
-  fetch: function(id, callback) {
+  fetch: function(childPath, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.api_base_url + "/" + childPath,
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
@@ -97,14 +97,14 @@ var base = {
 
   /**
    * Change the contents of a collection.
-   * @param {number} id - The collection identifier.
+   * @param {string} childPath The path underneath api_base_url
    * @param {Object} value - The new collection contents.
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  update: function(id, value, callback) {
+  update: function(childPath, value, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.api_base_url + "/" + childPath,
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
