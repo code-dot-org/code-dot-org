@@ -4,7 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
-/* global $ */
+/* global $, Dialog */
 /* global dashboard */
 
 'use strict';
@@ -530,7 +530,7 @@ Applab.onTick = function() {
   }
 
   if (checkFinished()) {
-    Applab.onPuzzleComplete();
+    Applab.onPuzzleFinish();
   }
 };
 
@@ -617,7 +617,8 @@ Applab.init = function(config) {
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: studioApp.assetUrl,
     showSlider: showSlider,
-    finishButton: !level.isProjectLevel
+    finishButton: (!level.isProjectLevel && !level.submittable),
+    submitButton: level.submittable
   });
   var extraControlsRow = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
@@ -772,7 +773,12 @@ Applab.init = function(config) {
 
   var finishButton = document.getElementById('finishButton');
   if (finishButton) {
-    dom.addClickTouchEvent(finishButton, Applab.onPuzzleComplete);
+    dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
+  }
+
+  var submitButton = document.getElementById('submitButton');
+  if (submitButton) {
+    dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
   }
 
   if (level.editCode) {
@@ -1129,6 +1135,10 @@ var displayFeedback = function() {
   }
 };
 
+Applab.onSubmitComplete = function(response) {
+  window.location.href = response.redirect;
+};
+
 /**
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
@@ -1369,13 +1379,69 @@ Applab.maybeAddAssetPathPrefix = function (filename) {
   return '/v3/assets/' + channelId + '/'  + filename;
 };
 
-Applab.onPuzzleComplete = function() {
+Applab.showSubmitConfirmation = function() {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = '<p class="dialog-title">' + commonMsg.submitYourProject() + '</p>' +
+      '<p>' + commonMsg.submitYourProjectConfirm() + '</p>';
+
+  var buttons = document.createElement('div');
+  buttons.innerHTML = require('../templates/buttons.html.ejs')({
+    data: {
+      confirmText: commonMsg.dialogOK(),
+      cancelText: commonMsg.dialogCancel()
+    }
+  });
+  contentDiv.appendChild(buttons);
+
+  var dialog = studioApp.createModalDialog({
+    Dialog: Dialog,
+    contentDiv: contentDiv,
+    defaultBtnSelector: '#confirm-button'
+  });
+
+  var cancelButton = buttons.querySelector('#again-button');
+  if (cancelButton) {
+    dom.addClickTouchEvent(cancelButton, function() {
+      dialog.hide();
+    });
+  }
+
+  var confirmButton = buttons.querySelector('#confirm-button');
+  if (confirmButton) {
+    dom.addClickTouchEvent(confirmButton, function() {
+      Applab.onPuzzleComplete(true);
+      dialog.hide();
+    });
+  }
+
+  dialog.show();
+};
+
+Applab.onPuzzleSubmit = function() {
+  Applab.showSubmitConfirmation();
+};
+
+Applab.onPuzzleFinish = function() {
+  Applab.onPuzzleComplete(false); // complete without submitting
+}
+
+Applab.onPuzzleComplete = function(submit) {
   // Submit all results as success / freePlay
   Applab.result = ResultType.SUCCESS;
-  Applab.testResults = TestResults.FREE_PLAY;
+  if (submit) {
+    Applab.testResults = TestResults.SUBMITTED;
+  } else {
+    Applab.testResults = TestResults.FREE_PLAY;
+  }
 
   // Stop everything on screen
   Applab.clearEventHandlersKillTickLoop();
+
+  if (Applab.testResults >= TestResults.FREE_PLAY) {
+    studioApp.playAudio('win');
+  } else {
+    studioApp.playAudio('failure');
+  }
 
   var program;
 
@@ -1402,7 +1468,7 @@ Applab.onPuzzleComplete = function() {
       testResult: Applab.testResults,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
-      onComplete: Applab.onReportComplete
+      onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)
     });
   };
 
