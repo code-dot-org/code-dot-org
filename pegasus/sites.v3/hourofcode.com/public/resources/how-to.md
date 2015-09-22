@@ -4,8 +4,6 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
-
 <h1>How to teach one Hour of Code</h1>
 
 ## 1) Sign up
