@@ -7,6 +7,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -54,7 +55,7 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
  *                   loaded and available
  */
 NetSimAlert.isBootstrapAlertLoaded_ = function () {
-  return (typeof $().alert == 'function');
+  return (typeof $().alert === 'function');
 };
 
 /**
