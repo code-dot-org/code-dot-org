@@ -95,3 +95,9 @@
   cursor: pointer;
   font-size: 16px;
 }
+
+.students-served {
+  font-size: 16px;
+  line-height: 16px;
+  padding-bottom: 15px;
+}
