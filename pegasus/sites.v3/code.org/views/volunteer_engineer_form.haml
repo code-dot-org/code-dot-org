@@ -59,6 +59,13 @@
           %option{value: key, selected: key == experience_s}= label
 
   .form-group
+    %label.control-label{for: "volunteer-location"} Location
+    %span.form-required-field *
+    %p If you enter your exact address we won't share it, just show you as a pin on map.
+    %div
+      %input#volunteer-location.form-control{name: "location_s", placeholder: "ZIP code, city and state/country, or street address", type: "text", required: true, value: location_s}/
+
+  .form-group
     %label.control-label{for: "volunteer-location-flexibility"} I can help during the Hour of Code by... (select all that apply)
     %span.form-required-field *
     %div
@@ -107,22 +114,13 @@
     %div
       %input#volunteer-email.form-control{name: "email_s", placeholder: "Email address", type: "text", required: true, value: email_s}/
 
-  .form-group
-    %label.control-label{for: "volunteer-location"} Location
-    %span.form-required-field *
-    %p You will be represented as a pin on the map, but exact address will never be shared.
-    %div
-      %input#volunteer-location.form-control{name: "location_s", placeholder: "ZIP code, city and state/country, or street address", type: "text", required: true, value: location_s}/
-  
-  %hr
   %br
-
   .form-group
     %p You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers.
     %div
       %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
-        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, checked: allow_contact_b}
-          I agree that teachers can contact me for volunteer opportunities
+        %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: 1, required: false, checked: true}
+          I agree that teachers can contact me for volunteer opportunities (Note: your email address won't be shared)
 
   .form-group
     %button#btn-submit.btn.btn-default{type: "submit"} Submit
