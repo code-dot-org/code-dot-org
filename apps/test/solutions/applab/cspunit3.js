@@ -4,6 +4,10 @@ var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
 
+/**
+ * This is based off of the currently version of U3L2_TurtleSquare_right.level,
+ * which lives at /s/cspunit3/stage/2/puzzle/3
+ */
 var levelDefinition = {
   "freePlay": true,
   "editCode": true,
@@ -109,6 +113,7 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
+        // Paramaterless moveForward. Moves 25 pixels by default
         var moveForward = 0;
         var turnLeft = 1;
 
