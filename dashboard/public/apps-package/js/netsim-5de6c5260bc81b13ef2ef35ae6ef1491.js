@@ -37,6 +37,7 @@ exports.load = function (assetUrl, id) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -1735,6 +1736,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -2727,6 +2729,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -2839,6 +2842,7 @@ NetSimVizSimulationWire.prototype.kill = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3175,6 +3179,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3288,6 +3293,7 @@ NetSimVizSimulationNode.prototype.kill = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3332,6 +3338,7 @@ NetSimVizAutoDnsNode.inherits(NetSimVizNode);
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3640,6 +3647,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3908,6 +3916,7 @@ NetSimVizElement.prototype.snapToScale = function (newScale) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -3946,7 +3955,7 @@ exports.easeOutElastic = function (t, b, c, d) {
   if (t===0) {
     return b;
   }
-  if ((t/=d)==1) {
+  if ((t/=d)===1) {
     return b+c;
   }
   if (!p) {
@@ -4178,6 +4187,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -4503,6 +4513,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -4610,6 +4621,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -4795,6 +4807,7 @@ NetSimShard.prototype.onPubSubEvent_ = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -4916,6 +4929,7 @@ PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -5019,6 +5033,7 @@ PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 4,
@@ -5602,6 +5617,7 @@ NetSimTable.prototype.onPubSubEvent_ = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -6209,6 +6225,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -6415,6 +6432,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -6756,6 +6774,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -7309,6 +7328,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -8715,6 +8735,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -8926,6 +8947,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -9016,6 +9038,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -9225,6 +9248,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -9286,6 +9310,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -9468,7 +9493,7 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
 
   var packetAlreadyInLog = this.packets_.some(function (packet) {
-    return packet.packetID == packetID;
+    return packet.packetID === packetID;
   });
 
   if (packetAlreadyInLog) {
@@ -9956,6 +9981,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -10477,8 +10503,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
     }.bind(this));
     isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
         wireRows.some(function (row) {
-          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
-              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
+          return row.remoteNodeID === myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID === myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;
     if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
       NetSimAlert.info(i18n.alertConnectionRefused());
@@ -10666,6 +10692,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -11270,6 +11297,7 @@ NetSimLobby.prototype.getShareLink = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -11480,6 +11508,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -12154,6 +12183,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -12212,6 +12242,7 @@ NetSimNodeFactory.nodeFromRow = function (shard, nodeRow) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -12529,7 +12560,7 @@ NetSimRouterNode.inherits(NetSimNode);
 NetSimRouterNode.create = function (shard, onComplete) {
   var nextRouterNumber = 1;
   shard.nodeTable.readAll().forEach(function (node) {
-    if (NodeType.ROUTER == node.type && node.routerNumber >= nextRouterNumber) {
+    if (NodeType.ROUTER === node.type && node.routerNumber >= nextRouterNumber) {
       nextRouterNumber = node.routerNumber + 1;
     }
   });
@@ -14038,6 +14069,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -14234,6 +14266,7 @@ NetSimMessage.prototype.buildRow = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 5,
@@ -17661,6 +17694,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -18026,6 +18060,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -18152,6 +18187,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -18293,6 +18329,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -18414,6 +18451,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -18503,6 +18541,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -18642,6 +18681,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -18823,6 +18863,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -18966,6 +19007,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -19125,6 +19167,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -19190,6 +19233,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -19249,6 +19293,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -19498,6 +19543,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -19722,6 +19768,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -19945,6 +19992,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -20002,6 +20050,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -20522,6 +20571,7 @@ return buf.join('');
  newcap: true,
  nonew: true,
  shadow: false,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -20768,6 +20818,7 @@ module.exports = {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -20838,6 +20889,7 @@ NetSimApiError.ValidationError = {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -20885,7 +20937,7 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
  *                   loaded and available
  */
 NetSimAlert.isBootstrapAlertLoaded_ = function () {
-  return (typeof $().alert == 'function');
+  return (typeof $().alert === 'function');
 };
 
 /**
@@ -20998,6 +21050,7 @@ return buf.join('');
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -21605,6 +21658,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -22009,6 +22063,7 @@ module.exports = window.blockly.netsim_locale;
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -22170,6 +22225,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -43353,6 +43409,7 @@ if (module && module.exports) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -43509,6 +43566,7 @@ exports.PacketUIColumnType = {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -43659,6 +43717,7 @@ DashboardUser.prototype.ownsSection = function (sectionID) {
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 4,
