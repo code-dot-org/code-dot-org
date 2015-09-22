@@ -5,10 +5,10 @@
 
   - if header['nav']
     .row
-      .col-sm-9
-        = body
       .col-sm-3{style: "margin-top:50px;"}
         = view(header['nav'])
+      .col-sm-9
+        = body
   - else
     = body
 
