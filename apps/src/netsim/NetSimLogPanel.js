@@ -12,6 +12,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -194,7 +195,7 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
 
   var packetAlreadyInLog = this.packets_.some(function (packet) {
-    return packet.packetID == packetID;
+    return packet.packetID === packetID;
   });
 
   if (packetAlreadyInLog) {
