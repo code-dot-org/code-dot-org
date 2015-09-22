@@ -6,15 +6,15 @@ title: <%= hoc_s(:title_how_to_organizations) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Bring the Hour of Code to your company
+# Sillni Orën e Kodimit në kompanin tuaj
 
-## 1) Try the tutorials:
+## 1) Provoji tutorialet:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
+Ne ofrojmë argëtim, tutoriale 1 orëshe për studentët e të gjitha moshave, krijuar nga partnerët tanë. Tutorialet të reja janë duke ardhur së shpejti për të filluar Orën e Kodimit -në 7-13 Dhjetor.
 
 **Të gjitha tutorialet e Orës së Kodimit:**
 
-  * Require minimal prep-time for organizers
+  * Kërkojnë një përgatitje kohore minimale për organizatorët
   * Janë vetë-udhëzuese - duke iu lejuar studentëve të punojnë konform ritmit të punës dhe nivelit të shkathtësive që kanë
 
 [![](<%= resolve_url('https://code.org/images/tutorials.png') %>)](<%= resolve_url('https://code.org/learn') %>)

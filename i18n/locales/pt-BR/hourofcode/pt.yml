@@ -159,7 +159,7 @@ pt:
   whats_next_description: "Enviaremos materiais e dicas para seu evento. Novos tutoriais para 2015 estarão disponíveis em breve para qualquer navegador, smartphone ou até mesmo para fazer offline! <a href='http://code.org/learn'>Experimente nossos tutoriais</a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Como fazer uma Hora do Código</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Divulgue a Hora do Código</a>"
-  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>Como promover a Hora do Código</a>"
   whats_next_try: "<a href='http://code.org/learn'>Experimente os tutoriais</a>"
   whats_next_try_button: Experimente os tutoriais
   n_have_learned_an_hoc: '<h1>Experimente uma</h1><h2>Hora de Código</h2><h3># served</h3>'
@@ -182,7 +182,7 @@ pt:
   front_join_us_parent: Você é pai?
   front_join_us_ask_link: Peça para sua escola
   front_join_us_ask: sediar um evento da Hora do Código.
-  front_join_us_parent_link: Ask your local school to host an Hour of Code
+  front_join_us_parent_link: Peça para a sua escola sediar uma Hora do Código
   front_join_us_computer_science: Você simplesmente é apaixonado por ciência da computação?
   front_join_us_spread: Espalhe a notícia.
   front_join_us_spread_word: Divulgue o evento em sua comunidade
@@ -343,7 +343,7 @@ pt:
   title_prizes_terms: 'Prêmios - termos e condições'
   title_prizes_thanks: Obrigado
   title_prizes: Prêmios
-  title_hardware_prize_form: Sign up for Hardware Prizes
+  title_hardware_prize_form: Cadastre-se para ganhar prêmios em hardware
   title_resources: Recursos
   title_signup_thanks: Obrigado por se inscrever para sediar a Hora do Código!
   title_tutorial_guidelines: Orientações sobre tutoriais

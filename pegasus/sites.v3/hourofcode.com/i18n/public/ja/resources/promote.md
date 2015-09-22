@@ -21,7 +21,7 @@ nav: promote_nav
 
 ## あなたの学校にこのポスターを貼ってください。
 
-[![画像](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![画像](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![画像](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![画像](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![画像](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![画像](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![画像](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![画像](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
+<%= view :promote_posters %>
 
 <a id="banners"></a>
 

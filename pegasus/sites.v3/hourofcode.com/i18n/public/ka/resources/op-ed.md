@@ -13,7 +13,7 @@ nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
 
 **სათაური: პროგრამირება... სამუშაო ადგილები იქმნება აქ**
 

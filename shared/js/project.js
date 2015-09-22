@@ -63,6 +63,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+var currentAbuseScore = 0;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -99,26 +100,22 @@ var projects = module.exports = {
    * @returns {number}
    */
   getAbuseScore: function () {
-    return current ? current.abuseScore : 0;
+    return currentAbuseScore;
   },
 
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore: function () {
-    // TODO (brent) - right now this is pretty low security. anyone could
-    // enter the javascript console and call this. eventually, we want some sort
-    // of protected API call we can make
-    if (this.getAbuseScore() === 0) {
+    var id = this.getCurrentId();
+    if (!id) {
       return;
     }
-    current.abuseScore = 0;
-    var sourceAndHtml = {
-      source: current.levelSource,
-      html: current.levelHtml
-    };
-    this.save(sourceAndHtml, function () {
-      location.reload();
+    channels.delete(id + '/abuse', function (err, result) {
+      if (err) {
+        throw err;
+      }
+      $('.admin-abuse-score').text(0);
     });
   },
 
@@ -144,7 +141,7 @@ var projects = module.exports = {
    *   exceed our threshold
    */
   exceedsAbuseThreshold: function () {
-    return !!(current && current.abuseScore && current.abuseScore >= ABUSE_THRESHOLD);
+    return currentAbuseScore >= ABUSE_THRESHOLD;
   },
 
   /**
@@ -518,7 +515,9 @@ var projects = module.exports = {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
-              deferred.resolve();
+              fetchAbuseScore(function () {
+                deferred.resolve();
+              });
             });
           }
         });
@@ -535,7 +534,9 @@ var projects = module.exports = {
         } else {
           fetchSource(data, function () {
             projects.showProjectLevelHeader();
-            deferred.resolve();
+            fetchAbuseScore(function () {
+              deferred.resolve();
+            });
           });
         }
       });
@@ -562,6 +563,18 @@ function fetchSource(data, callback) {
   } else {
     callback();
   }
+}
+
+function fetchAbuseScore(callback) {
+  channels.fetch(current.id + '/abuse', function (err, data) {
+    currentAbuseScore = (data && data.abuseScore) || currentAbuseScore;
+    callback();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
 }
 
 /**

@@ -9,7 +9,7 @@ layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Rádi bychom nabídli různé zajímavé možnosti, ale naším hlavním cílem je zaujmout žáky bez zkušeností v informatice a také jejich učitele. Prosím, použij tento text jako průvodce vytvořením své aktivity, zaměřené na uživatele bez zkušeností s programováním a informatikou.
 
@@ -151,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Uveďte též doporučené znalosti informatiky podle úrovně vzdělání: začátečník, pokročilý nebo expert. Webová stránka Hodiny kódu zdůrazňuje především aktivity pro začátečníky. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Technické požadavky: 
       * Pro přesnější sledování účasti, chceme, aby každý výukový program od třetí partnerské strany měl na první a poslední stránce výukového programu jedno-pixelové sledovací obrázky. Umístěte výchozí pixelový obrázek na úvodní stránku a koncový pixelový obrázek na poslední stránku. Neumísťujte pixely na vnitřní stránky). Více podorbností naleznete v části Sledování Pixelů níže. 
-      * Po dokončení vaší činnosti, by uživatelé měli být přesměrováni na [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
+      * Po dokončení vaší činnosti, by uživatelé měli být přesměrováni na [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Sdílet na sociálních sítích, že dokončili aktivitu Hodiny kódu
           * Získat certifikát o dokončení aktivity Hodiny kódu
           * Podívat se na žebříčky o tom, které země/města mají nejvyšší míru účasti v aktivitách Hodiny kódu
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(nepovinné)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Pro online aktivity (zejména smartfounové/tabletové aplikace): 
           * Počet uživatelů
