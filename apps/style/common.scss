@@ -271,7 +271,8 @@ html[dir='rtl'] #codeWorkspace {
   .ace_scroller, { // droplet code view
     background-color: rgba(0, 0, 0, 0.1);
   }
-  // #design-mode-container manages this from within the react component
+  // Note: We do something similar in our DesignModeBox React component's
+  // transparency layer. These two should be kept in sync as much as possible
 }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {

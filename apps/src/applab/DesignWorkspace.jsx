@@ -12,7 +12,7 @@ module.exports = React.createClass({
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
-    isApplabRunning: React.PropTypes.bool.isRequired
+    isDimmed: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function() {
@@ -41,7 +41,7 @@ module.exports = React.createClass({
         onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
         isToolboxVisible={this.state.isToolboxVisible}
-        isApplabRunning={this.props.isApplabRunning} />
+        isDimmed={this.props.isDimmed} />
     </div>;
   }
 });

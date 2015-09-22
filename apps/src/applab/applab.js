@@ -1244,7 +1244,6 @@ Applab.execute = function() {
   Applab.running = true;
   $('#headers').addClass('readonly');
   $('#codeWorkspace').addClass('readonly');
-  // TODO - only if designing?
   designMode.renderDesignWorkspace();
   queueOnTick();
 };
