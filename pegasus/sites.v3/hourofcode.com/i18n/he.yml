@@ -230,9 +230,9 @@ he:
   map_search_placeholder: 'לחיפוש אירועים של "שעה של קוד"'
   map_search_search: חיפוש
   map_search_reset: לאפס
-  meta_tag_og_title: '"שעה של הקוד" הוא כאן'
+  meta_tag_og_title: 'שעה של הקוד הוא כאן'
   meta_tag_og_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
-  meta_tag_twitter_title: '"שעה של הקוד" הוא כאן'
+  meta_tag_twitter_title: 'שעה של הקוד הוא כאן'
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: 'אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg'
   hardware_prizes_form_name_label: שמך
