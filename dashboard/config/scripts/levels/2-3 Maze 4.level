@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Guide me to the green evilness! (Watch out for TNT)",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "6"
