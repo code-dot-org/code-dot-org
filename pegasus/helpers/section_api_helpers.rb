@@ -109,9 +109,9 @@ class DashboardStudent
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
 
-  @@valid_genders = %w(m f)
+  VALID_GENDERS = %w(m f)
   def self.valid_gender?(gender)
-    @@valid_genders.include?(gender)
+    VALID_GENDERS.include?(gender)
   end
 
   def self.age_to_birthday(age)
@@ -140,10 +140,10 @@ class DashboardStudent
     Dashboard::db[:secret_words].first(id: random_id)[:word]
   end
 
-  @@pepper = CDO.dashboard_devise_pepper
-  @@stretches = 10
+  PEPPER = CDO.dashboard_devise_pepper
+  STRETCHES = 10
   def self.encrypt_password(password)
-    BCrypt::Password.create("#{password}#{@@pepper}", cost: @@stretches).to_s
+    BCrypt::Password.create("#{password}#{PEPPER}", cost: STRETCHES).to_s
   end
 end
 
