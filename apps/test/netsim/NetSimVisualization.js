@@ -57,7 +57,7 @@ describe("NetSimVisualization", function () {
     NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return new NetSimVizSimulationNode(newClient);
   };
 
@@ -70,7 +70,7 @@ describe("NetSimVisualization", function () {
     NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return new NetSimVizSimulationNode(newRouter);
   };
 
@@ -88,7 +88,7 @@ describe("NetSimVisualization", function () {
     }, function (e, w) {
       newWire = w;
     });
-    assert(newWire !== undefined, "Failed to create a remote wire.");
+    assert.isDefined(newWire, "Failed to create a remote wire.");
     return new NetSimVizSimulationWire(newWire, getVizNodeByEntityID_.bind(elements));
   };
 
@@ -105,7 +105,7 @@ describe("NetSimVisualization", function () {
     NetSimLocalClientNode.create(shard, name, function (e, n) {
       newNode = n;
     });
-    assert(newNode !== undefined, "Failed to create a client.");
+    assert.isDefined(newNode, "Failed to create a client.");
     return newNode;
   }
 

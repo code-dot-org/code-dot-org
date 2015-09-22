@@ -29,26 +29,26 @@ describe("NetSimMessage", function () {
 
   it("uses the message table", function () {
     var message = new NetSimMessage(testShard);
-    assert(message.getTable() === testShard.messageTable);
+    assert.strictEqual(message.getTable(), testShard.messageTable);
   });
 
   it("implements MessageData", function () {
     var message = new NetSimMessage(testShard);
 
     assertOwnProperty(message, 'fromNodeID');
-    assert.equal(message.fromNodeID, undefined);
+    assert.isUndefined(message.fromNodeID);
 
     assertOwnProperty(message, 'toNodeID');
-    assert.equal(message.toNodeID, undefined);
+    assert.isUndefined(message.toNodeID);
 
     assertOwnProperty(message, 'simulatedBy');
-    assert.equal(message.simulatedBy, undefined);
+    assert.isUndefined(message.simulatedBy);
 
     assertOwnProperty(message, 'payload');
-    assert.equal(message.payload, "");
+    assert.strictEqual(message.payload, "");
 
     assertOwnProperty(message, 'extraHopsRemaining');
-    assert.equal(message.extraHopsRemaining, 0);
+    assert.strictEqual(message.extraHopsRemaining, 0);
 
     assertOwnProperty(message, 'visitedNodeIDs');
     assert.deepEqual(message.visitedNodeIDs, []);
@@ -56,12 +56,12 @@ describe("NetSimMessage", function () {
 
   describe("isValid static check", function () {
     it("is minimally valid with a payload", function () {
-      assert(!NetSimMessage.isValid({}));
-      assert(NetSimMessage.isValid({ payload: '' }));
+      assert.isFalse(NetSimMessage.isValid({}));
+      assert.isTrue(NetSimMessage.isValid({ payload: '' }));
     });
 
     it("passes given a default-constructed NetSimMessage", function () {
-      assert(NetSimMessage.isValid(new NetSimMessage()));
+      assert.isTrue(NetSimMessage.isValid(new NetSimMessage()));
     });
   });
 
@@ -87,19 +87,19 @@ describe("NetSimMessage", function () {
         len: 7
       },
     });
-    assert.equal(message.payload, '');
+    assert.strictEqual(message.payload, '');
   });
 
   describe("static method send", function () {
     it("adds an entry to the message table", function () {
       messageTable.refresh(function (err, rows) {
-        assert(rows.length === 0, "Table is empty");
+        assert.strictEqual(rows.length, 0, "Table is empty");
       });
 
       NetSimMessage.send(testShard, { payload: '' }, function () {});
 
       messageTable.refresh(function (err, rows) {
-        assert(rows.length === 1, "Table has one row");
+        assert.strictEqual(rows.length, 1, "Table has one row");
       });
     });
 
@@ -139,7 +139,7 @@ describe("NetSimMessage", function () {
 
     it("Returns no error to its callback when successful", function () {
       NetSimMessage.send(testShard, { payload: '' }, function (err) {
-        assert(err === null, "Error is null on success");
+        assert.isNull(err, "Error is null on success");
       });
     });
 
@@ -155,7 +155,7 @@ describe("NetSimMessage", function () {
       }, function (err) {
         returnedError = err;
       });
-      assert(returnedError instanceof TypeError, "Did not return expected TypeError");
+      assert.instanceOf(returnedError, TypeError, "Did not return expected TypeError");
     });
   });
 
@@ -177,7 +177,7 @@ describe("NetSimMessage", function () {
     }, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
 
     // Instantiate message
     var message = new NetSimMessage(testShard, testRow);
@@ -196,7 +196,7 @@ describe("NetSimMessage", function () {
     messageTable.create({}, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
 
     // Call destroy()
     var message = new NetSimMessage(testShard, testRow);
@@ -207,7 +207,7 @@ describe("NetSimMessage", function () {
     messageTable.refresh(function (err, rows) {
       rowCount = rows.length;
     });
-    assert.equal(rowCount, 0);
+    assert.strictEqual(rowCount, 0);
   });
 
   describe("destroyEntities on messages", function () {
@@ -248,7 +248,7 @@ describe("NetSimMessage", function () {
         });
       });
       assert.equal(3, messages.length);
-      assert(messages[0] instanceof NetSimMessage);
+      assert.instanceOf(messages[0], NetSimMessage);
 
       NetSimEntity.destroyEntities(messages, function () {});
       assertTableSize(testShard, 'messageTable', 0);
@@ -262,13 +262,13 @@ describe("NetSimMessage", function () {
       var row = message.buildRow();
 
       assertOwnProperty(row, 'fromNodeID');
-      assert.equal(row.fromNodeID, undefined);
+      assert.isUndefined(row.fromNodeID);
 
       assertOwnProperty(row, 'toNodeID');
-      assert.equal(row.toNodeID, undefined);
+      assert.isUndefined(row.toNodeID);
 
       assertOwnProperty(row, 'simulatedBy');
-      assert.equal(row.simulatedBy, undefined);
+      assert.isUndefined(row.simulatedBy);
 
       assertOwnProperty(row, 'base64Payload');
       assert.deepEqual(row.base64Payload, {
@@ -277,7 +277,7 @@ describe("NetSimMessage", function () {
       });
 
       assertOwnProperty(row, 'extraHopsRemaining');
-      assert.equal(row.extraHopsRemaining, 0);
+      assert.strictEqual(row.extraHopsRemaining, 0);
 
       assertOwnProperty(row, 'visitedNodeIDs');
       assert.deepEqual(row.visitedNodeIDs, []);

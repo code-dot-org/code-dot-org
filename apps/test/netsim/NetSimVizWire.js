@@ -29,15 +29,15 @@ describe("NetSimVizWire", function () {
     });
 
     it("is a VizElement", function () {
-      assert(vizWire instanceof NetSimVizElement);
+      assert.instanceOf(vizWire, NetSimVizElement);
     });
 
     it("has default properties", function () {
       assert.strictEqual(0, vizWire.textPosX_);
       assert.strictEqual(0, vizWire.textPosY_);
       assert.deepEqual([], vizWire.encodings_);
-      assert(localVizNode === vizWire.localVizNode);
-      assert(remoteVizNode === vizWire.remoteVizNode);
+      assert.strictEqual(localVizNode, vizWire.localVizNode);
+      assert.strictEqual(remoteVizNode, vizWire.remoteVizNode);
     });
 
     it("immediately creates SVG elements", function () {

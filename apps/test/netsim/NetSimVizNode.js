@@ -27,15 +27,15 @@ describe("NetSimVizNode", function () {
     });
 
     it("is a VizElement", function () {
-      assert(vizNode instanceof NetSimVizElement);
+      assert.instanceOf(vizNode, NetSimVizElement);
     });
 
     it("has default properties", function () {
-      assert.equal(undefined, vizNode.address_);
-      assert.equal(undefined, vizNode.dnsMode_);
-      assert.equal(false, vizNode.isRouter);
-      assert.equal(false, vizNode.isLocalNode);
-      assert.equal(false, vizNode.isDnsNode);
+      assert.isUndefined(vizNode.address_);
+      assert.isUndefined(vizNode.dnsMode_);
+      assert.isFalse(vizNode.isRouter);
+      assert.isFalse(vizNode.isLocalNode);
+      assert.isFalse(vizNode.isDnsNode);
     });
 
     it("immediately creates SVG elements", function () {
