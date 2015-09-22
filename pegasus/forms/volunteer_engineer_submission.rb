@@ -56,8 +56,7 @@ class VolunteerEngineerSubmission
   def self.locations()
     @locations ||= locations_with_i18n_labels(
       'onsite',
-      'remote',
-      'curriculum',
+      'remote'
     )
   end
 
