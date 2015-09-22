@@ -13,13 +13,21 @@ theme: none
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
       %th.manage-th
-        %a{href: ""} Level 1
+        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
       %th.manage-th
-        %a{href: ""} Level 2
+        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
     %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
       %td
         %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
       %td
-        Student's answer to Level 1
+        1
       %td
-        Student's answer to Level 2
+        2
+      %td
+        The question
+      %td
+        The response
