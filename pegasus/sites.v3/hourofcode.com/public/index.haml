@@ -86,6 +86,8 @@ social:
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
               %h4
                 =hoc_s(:front_join_us_heading)
+              %div.students-served
+                =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
             %div.ctabuttongroup
               %div#signuptext.ctatext
                 %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform');", target: "_blank"}
