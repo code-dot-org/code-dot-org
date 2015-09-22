@@ -76,20 +76,6 @@
           %option{value: key, selected: key == time_commitment_s}= label
 
   .form-group
-    %label.control-label{for: "volunteer-languages"} Code languages I'm familiar with
-    %div
-      %select#volunteer-languages.form-control{name: "languages_ss[]", type: "select", required: false, multiple: true}
-        %option{selected: languages_ss.nil_or_empty?, value: ""}
-        -ClassSubmission.languages.each do |label|
-          %option{value: label, selected: (languages_ss||[]).select{|i| i.downcase == label.downcase}.first}= label
-        %option#volunteer-languages-other-option{value: 'Other', selected: (languages_ss||[]).select{|i| i.downcase == 'other'}.first} Other language(s)
-    %div{id: 'volunteer-languages-other-wrapper', style: 'display: none;'}
-      %label.control-label{for: "volunteer-languages-other"}<
-        %em{style: 'font-weight: normal;'} Other languages (comma-separated)
-      %div
-        %input#volunteer-languages-other.form-control{name: "languages_other_ss", placeholder: "Other languages (comma-separated)", type: "text", value: CSV.generate_line(languages_other_ss || [])}/
-
-  .form-group
     %label.control-label{for: "volunteer-experience"} Experience level
     %div
       %select#volunteer-experience.form-control{name: "experience_s", type: "select", required: false}
@@ -113,17 +99,6 @@
     %label.control-label{for: "volunteer-facebook"} Facebook profile URL
     %div
       %input#volunteer-facebook.form-control{name: "facebook_s", placeholder: "https://www.facebook.com/your_name", type: "text", required: false, value: facebook_s}/
-  .form-group
-    %label.control-label{for: "volunteer-skype"} Skype ID
-    %div
-      %input#volunteer-skype.form-control{name: "skype_s", placeholder: "skype_user", type: "text", required: false, value: skype_s}/
-  .form-group
-    %label.control-label{for: "volunteer-helpouts"} Google Helpouts URL
-    %div
-      %input#volunteer-helpouts.form-control{name: "helpouts_s", placeholder: "http://helpouts.google.com/12345/ls/6789", type: "text", required: false, value: helpouts_s}/
-    %p
-      You can choose 'office hours' to provide online mentorship.
-      %a{href: 'http://helpouts.google.com/'} More info
 
   .form-group
     %h3{style: 'color: #00adbc; font-size: 1.125em;'} Allow local teachers to contact me (without sharing my email or address)

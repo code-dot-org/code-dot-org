@@ -12,7 +12,7 @@ class VolunteerEngineerSubmission
     result[:time_commitment_s] = nil_if_empty data[:time_commitment_s]
     result[:languages_ss] = nil_if_empty data[:languages_ss]
     if result[:languages_ss].class != FieldError && (result[:languages_ss]||[]).include?('other')
-      result[:languages_other_ss] = required stripped csv_multivalue data[:languages_other_ss]
+      result[:languages_other_ss] = stripped csv_multivalue data[:languages_other_ss]
     end
     result[:experience_s] = nil_if_empty data[:experience_s]
     result[:description_s] = nil_if_empty data[:description_s]
