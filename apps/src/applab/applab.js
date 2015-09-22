@@ -901,6 +901,8 @@ Applab.onMouseUpDebugResizeBar = function (event) {
 Applab.clearEventHandlersKillTickLoop = function() {
   Applab.whenRunFunc = null;
   Applab.running = false;
+  $('#headers').removeClass('readonly');
+  $('#codeWorkspace').removeClass('readonly');
   Applab.tickCount = 0;
 
   var spinner = document.getElementById('running-spinner');
@@ -1240,6 +1242,10 @@ Applab.execute = function() {
   divApplab.firstChild.focus();
 
   Applab.running = true;
+  $('#headers').addClass('readonly');
+  $('#codeWorkspace').addClass('readonly');
+  // TODO - only if designing?
+  designMode.renderDesignWorkspace();
   queueOnTick();
 };
 
