@@ -9,6 +9,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -444,9 +445,13 @@ NetSimPacketEditor.prototype.tick = function (clock) {
   }
 
   // How many characters should be consumed this tick?
-  var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
   var msPerBit = 1000 * (1 / this.bitRate_);
-  var maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  var maxBitsToSendThisTick = Infinity;
+  if (msPerBit > 0) {
+    var msSinceLastBitConsumed = clock.time - this.lastBitSentTime_;
+    maxBitsToSendThisTick = Math.floor(msSinceLastBitConsumed / msPerBit);
+  }
+
   if (maxBitsToSendThisTick > 0) {
     this.lastBitSentTime_ = clock.time;
     this.sendAnimationIndex_ += maxBitsToSendThisTick;
@@ -478,7 +483,8 @@ var removeWatermark = function (focusEvent) {
  * @returns {boolean} true iff the given event represents a clean enter
  */
 var isUnmodifiedEnterPress = function (jqueryEvent) {
-  return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
+  return (jqueryEvent.keyCode === KeyCodes.ENTER &&
+      !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
 /**
