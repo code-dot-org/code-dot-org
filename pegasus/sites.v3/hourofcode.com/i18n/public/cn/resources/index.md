@@ -7,10 +7,10 @@ layout: wide
 
 # Hour of Code Resources
 
-<% 脸书网 = {:u=>"http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %> - 编程一小时
+twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 <%= view :resources_banner %>
 

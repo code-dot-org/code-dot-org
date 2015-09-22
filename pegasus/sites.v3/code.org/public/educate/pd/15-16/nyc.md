@@ -153,7 +153,7 @@ Breakfast and lunch will be served.
 **Location**
 
 Executive Conference Center<br/>
-8th Floor
+8th Floor<br/>
 1601 Broadway<br/>
 New York, NY 10019<br/>
 
