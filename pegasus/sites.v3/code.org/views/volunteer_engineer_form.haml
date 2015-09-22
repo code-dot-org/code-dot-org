@@ -1,4 +1,5 @@
 -name_s ||= nil
+-headline_s ||= nil
 -email_s ||= nil
 -location_s ||= nil
 -time_commitment_s ||= nil
@@ -45,7 +46,7 @@
     %label.control-label{for: "volunteer-headline"} Headline
     %span.form-required-field *
     %div
-      %input#volunteer-headline.form-control{name: "headline_s", placeholder: "Title, Company", type: "text", required: true}/
+      %input#volunteer-headline.form-control{name: "headline_s", placeholder: "Title, Company", type: "text", required: true, value: headline_s}/
 
   .form-group
     %label.control-label{for: "volunteer-experience"} Experience level
