@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   end
 
   def reset_session_endpoint
-    reset_session
+    client_state.reset
     render text: "OK"
   end
 
