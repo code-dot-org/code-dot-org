@@ -24,7 +24,8 @@ var ElementType = {
   TEXT_AREA: 'TEXT_AREA',
   IMAGE: 'IMAGE',
   CANVAS: 'CANVAS',
-  SCREEN: 'SCREEN'
+  SCREEN: 'SCREEN',
+  CHART: 'CHART'
 };
 
 var elements = {};
@@ -38,6 +39,7 @@ elements[ElementType.TEXT_AREA] = require('./textarea.jsx');
 elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
 elements[ElementType.SCREEN] = require('./screen.jsx');
+elements[ElementType.CHART] = require('./chart.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -126,6 +128,8 @@ module.exports = {
       case 'div':
         if ($(element).hasClass('screen')) {
           return ElementType.SCREEN;
+        } else if ($(element).hasClass('chart')) {
+          return ElementType.CHART;
         }
         return ElementType.TEXT_AREA;
       case 'img':

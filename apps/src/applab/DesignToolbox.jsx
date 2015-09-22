@@ -77,6 +77,11 @@ module.exports = React.createClass({
             desc={'Text Area'}
             elementType={'TEXT_AREA'}
             handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'chart.png'}
+            desc={'Chart'}
+            elementType={'CHART'}
+            handleDragStart={this.props.handleDragStart} />
       </div>
     );
   }
