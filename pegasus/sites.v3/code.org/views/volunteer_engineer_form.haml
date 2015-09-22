@@ -63,7 +63,7 @@
           %option{value: key, selected: key == time_commitment_s}= label
 
   .form-group
-    %label.control-label{for: "volunteer-location-flexibility"} Location flexibility (select all that apply)
+    %label.control-label{for: "volunteer-location-flexibility"} I can help during the Hour of Code by... (select all that apply)
     %div
       %select#volunteer-location-flexibility.form-control{name: "location_flexibility_ss[]", type: "select", required: false, multiple: true}
         %option{selected: location_flexibility_ss.nil_or_empty?, value: ""}
