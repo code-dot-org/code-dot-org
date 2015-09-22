@@ -74,7 +74,7 @@ describe("DataConverters", function () {
     var formatAB = DataConverters.formatAB;
 
     it("is identity for empty string", function () {
-      assert.equal('', formatAB(''));
+      assert.strictEqual(formatAB(''), '');
     });
 
     it("splits the string at the given chunk size", function () {
@@ -122,9 +122,9 @@ describe("DataConverters", function () {
     });
 
     it("interprets As and Bs as a single number regardless of length", function () {
-      assert.equal(0, abToInt('A'));
-      assert.equal(0, abToInt('AAAAAAAA'));
-      assert.equal(32768, abToInt('BAAAAAAAAAAAAAAA'));
+      assert.strictEqual(abToInt('A'), 0);
+      assert.strictEqual(abToInt('AAAAAAAA'), 0);
+      assert.strictEqual(abToInt('BAAAAAAAAAAAAAAA'), 32768);
     });
 
     it("minifies and cleans input before converting", function () {
@@ -177,17 +177,17 @@ describe("DataConverters", function () {
     var abToBinary = DataConverters.abToBinary;
 
     it("converts empty string to empty string", function () {
-      assert.equal('', abToBinary(''));
+      assert.strictEqual(abToBinary(''), '');
     });
 
     it("converts an a or an A into a zero", function () {
-      assert.equal('0', abToBinary('A'));
-      assert.equal('0', abToBinary('a'));
+      assert.strictEqual(abToBinary('A'), '0');
+      assert.strictEqual(abToBinary('a'), '0');
     });
 
     it("converts a b or a B into a one", function () {
-      assert.equal('1', abToBinary('B'));
-      assert.equal('1', abToBinary('b'));
+      assert.strictEqual(abToBinary('B'), '1');
+      assert.strictEqual(abToBinary('b'), '1');
     });
 
     it("minifies and cleans", function () {
@@ -199,15 +199,15 @@ describe("DataConverters", function () {
     var binaryToAB = DataConverters.binaryToAB;
 
     it("converts empty string to empty string", function () {
-      assert.equal('', binaryToAB(''));
+      assert.strictEqual(binaryToAB(''), '');
     });
 
     it("converts a zero into an A", function () {
-      assert.equal('A', binaryToAB('0'));
+      assert.strictEqual(binaryToAB('0'), 'A');
     });
 
     it("converts a one into a B", function () {
-      assert.equal('B', binaryToAB('1'));
+      assert.strictEqual(binaryToAB('1'), 'B');
     });
 
     it("cleans binary before parsing", function () {
@@ -219,7 +219,7 @@ describe("DataConverters", function () {
     var formatBinary = DataConverters.formatBinary;
 
     it("is identity for empty string", function () {
-      assert.equal('', formatBinary(''));
+      assert.strictEqual(formatBinary(''), '');
     });
 
     it("splits the binary string at given chunk size", function () {
@@ -263,7 +263,7 @@ describe("DataConverters", function () {
     var formatHex = DataConverters.formatHex;
 
     it("is identity for empty string", function () {
-      assert.equal('', formatHex(''));
+      assert.strictEqual(formatHex(''), '');
     });
 
     it("splits the hex string at given binary chunk size", function () {
@@ -336,7 +336,7 @@ describe("DataConverters", function () {
     var alignDecimal = DataConverters.alignDecimal;
 
     it("is identity for empty string", function () {
-      assert.equal('', alignDecimal(''));
+      assert.strictEqual(alignDecimal(''), '');
     });
 
     it("puts final digits of all numbers at equal distances apart", function () {
@@ -358,9 +358,9 @@ describe("DataConverters", function () {
     });
 
     it("interprets binary as a single number regardless of length", function () {
-      assert.equal(0, binaryToInt('0'));
-      assert.equal(0, binaryToInt('00000000'));
-      assert.equal(32768, binaryToInt('1000000000000000'));
+      assert.strictEqual(binaryToInt('0'), 0);
+      assert.strictEqual(binaryToInt('00000000'), 0);
+      assert.strictEqual(binaryToInt('1000000000000000'), 32768);
     });
 
     it("minifies and cleans input before converting", function () {
@@ -432,39 +432,39 @@ describe("DataConverters", function () {
 
     it("converts a number to its hex representation", function () {
       var width = 4;
-      assert.equal('0000', intToHex(0, width));
-      assert.equal('0008', intToHex(8, width));
-      assert.equal('0014', intToHex(20, width));
-      assert.equal('04B0', intToHex(1200, width));
+      assert.strictEqual(intToHex(0, width), '0000');
+      assert.strictEqual(intToHex(8, width), '0008');
+      assert.strictEqual(intToHex(20, width), '0014');
+      assert.strictEqual(intToHex(1200, width), '04B0');
     });
 
     it("gives hex with uppercase letters", function () {
       var width = 1;
-      assert.equal('A', intToHex(10, width));
-      assert.equal('B', intToHex(11, width));
-      assert.equal('C', intToHex(12, width));
-      assert.equal('D', intToHex(13, width));
-      assert.equal('E', intToHex(14, width));
-      assert.equal('F', intToHex(15, width));
+      assert.strictEqual(intToHex(10, width), 'A');
+      assert.strictEqual(intToHex(11, width), 'B');
+      assert.strictEqual(intToHex(12, width), 'C');
+      assert.strictEqual(intToHex(13, width), 'D');
+      assert.strictEqual(intToHex(14, width), 'E');
+      assert.strictEqual(intToHex(15, width), 'F');
     });
 
     it("can give hex of different widths, left-padding with zeroes", function () {
       var number = 245;
-      assert.equal('F5', intToHex(number, 2));
-      assert.equal('0F5', intToHex(number, 3));
-      assert.equal('00F5', intToHex(number, 4));
+      assert.strictEqual(intToHex(number, 2), 'F5');
+      assert.strictEqual(intToHex(number, 3), '0F5');
+      assert.strictEqual(intToHex(number, 4), '00F5');
     });
 
     it("drops leftmost nibbles when overflowing given width", function () {
       // Non-overflow case:
-      assert.equal('00', intToHex(0, 2));
-      assert.equal('01', intToHex(1, 2));
-      assert.equal('02', intToHex(2, 2));
+      assert.strictEqual(intToHex(0, 2), '00');
+      assert.strictEqual(intToHex(1, 2), '01');
+      assert.strictEqual(intToHex(2, 2), '02');
 
       // Overflow case:
-      assert.equal('00', intToHex(256, 2));
-      assert.equal('01', intToHex(257, 2));
-      assert.equal('02', intToHex(258, 2));
+      assert.strictEqual(intToHex(256, 2), '00');
+      assert.strictEqual(intToHex(257, 2), '01');
+      assert.strictEqual(intToHex(258, 2), '02');
     });
 
     it("throws an exception when width of zero or less is requested", function () {
@@ -583,7 +583,7 @@ describe("DataConverters", function () {
     var binaryToDecimal = DataConverters.binaryToDecimal;
 
     it("converts empty string to empty string", function () {
-      assert.equal('', binaryToDecimal('', 8));
+      assert.strictEqual(binaryToDecimal('', 8), '');
     });
 
     it("produces correct numbers for binary", function () {
@@ -622,7 +622,7 @@ describe("DataConverters", function () {
     var asciiToBinary = DataConverters.asciiToBinary;
 
     it("converts empty string to empty string", function () {
-      assert.equal('', asciiToBinary('', 8));
+      assert.strictEqual(asciiToBinary('', 8), '');
     });
 
     it("produces correct binary for characters", function () {
@@ -665,7 +665,7 @@ describe("DataConverters", function () {
     var binaryToAscii = DataConverters.binaryToAscii;
 
     it("converts empty string to empty string", function () {
-      assert.equal('', binaryToAscii('', 8));
+      assert.strictEqual(binaryToAscii('', 8), '');
     });
 
     it("produces correct characters for binary", function () {
@@ -721,8 +721,8 @@ describe("DataConverters", function () {
 
     it("converts empty string to empty string with length 0", function () {
       var b64 = binaryToBase64('');
-      assert.equal('', b64.string);
-      assert.equal(0, b64.len);
+      assert.strictEqual(b64.string, '');
+      assert.strictEqual(b64.len, 0);
     });
 
     it("throws an exception when given a non-binary String", function () {
@@ -831,7 +831,7 @@ describe("DataConverters", function () {
     var ipv4 = '8.8.8.8';
 
     it("converts empty string to empty string", function () {
-      assert.equal('', binaryToAddressString('', ipv4));
+      assert.strictEqual(binaryToAddressString('', ipv4), '');
     });
 
     it("renders correctly formatted addresses", function () {
@@ -889,7 +889,7 @@ describe("DataConverters", function () {
 
     it("converts empty string to empty string", function () {
       var addressFormat = '4.4';
-      assert.equal('', addressStringToBinary('', addressFormat));
+      assert.strictEqual(addressStringToBinary('', addressFormat), '');
     });
 
     it("produces correct binary for the given address", function () {
@@ -953,7 +953,7 @@ describe("DataConverters", function () {
     var formatBinaryForAddressHeader = DataConverters.formatBinaryForAddressHeader;
 
     it("is identity for empty string", function () {
-      assert.equal('', formatBinaryForAddressHeader('', ''));
+      assert.strictEqual(formatBinaryForAddressHeader('', ''), '');
     });
 
     it("splits the binary string in the right places", function () {
