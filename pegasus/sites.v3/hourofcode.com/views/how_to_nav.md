@@ -5,6 +5,8 @@
 - <a href="<%= resolve_url('/resources/how-to-events') %>"><%= hoc_s(:how_to_nav_assemblies)%></a>
 - <a href="<%= resolve_url('/resources/how-to-organizations') %>"><%= hoc_s(:how_to_nav_organizations)%></a>
 
+<%= view :resources_nav %>
+
 <!-- 
 # Order should be educators, after school, parents, officials, districts, assemblies. Add in after school and parents
 # when these pages are ready

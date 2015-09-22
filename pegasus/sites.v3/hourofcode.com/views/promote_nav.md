@@ -8,6 +8,8 @@
 - <a href="<%= resolve_url('/resources/stats') %>"><%= hoc_s(:resources_stats)%></a>
 - <a href="<%= resolve_url('/resources/press-kit') %>"><%= hoc_s(:resources_press_kit)%></a>
 
+<%= view :resources_nav %>
+
 <!-- 
 # Include this when blurb about HoC logo is ready
 - <a href="<%= resolve_url('/resources#logo') %>"><%= hoc_s(:resources_logo)%></a> 
