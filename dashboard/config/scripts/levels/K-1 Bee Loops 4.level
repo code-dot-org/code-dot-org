@@ -11,7 +11,7 @@
     "skin": "bee",
     "instructions": "Use loops to get the nectar, make honey, and to move!",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "nectar_goal": "3",
     "honey_goal": "3",

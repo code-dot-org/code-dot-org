@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly! Hint: He's South of me.",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "true",
     "skip_instructions_popup": "true",
     "ideal": "8"

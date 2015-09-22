@@ -25,9 +25,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "1",
-    "step_mode": "0",
-    "flower_type": "redWithNectar",
-    "maze_data": null
+    "step_mode": 1,
+    "flower_type": "redWithNectar"
   }
 }]]></config>
   <blocks>

@@ -14,7 +14,7 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": 1,
     "nectar_goal": "10",
     "flower_type": "redWithNectar",
     "ideal": "42",
