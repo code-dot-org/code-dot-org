@@ -17,6 +17,10 @@ FactoryGirl.define do
       birthday Date.new(1980, 03, 14)
       factory :facilitator do
         name 'Facilitator Person'
+        after(:create) do |facilitator|
+          facilitator.permission = 'facilitator'
+          facilitator.save
+        end
       end
       factory :district_contact do
         name 'District Contact Person'
@@ -31,7 +35,7 @@ FactoryGirl.define do
 
     factory :young_student do
       user_type User::TYPE_STUDENT
-      birthday Date.today - 10.years
+      birthday Time.zone.today - 10.years
     end
   end
 
@@ -102,6 +106,7 @@ FactoryGirl.define do
   end
 
   factory :maze, :parent => Level, :class => Maze do
+    skin 'birds'
   end
 
   factory :applab, :parent => Level, :class => Applab do
@@ -220,6 +225,7 @@ FactoryGirl.define do
 
   factory :user_level do
     user {create :student}
+    level {create :applab}
   end
 
   factory :user_script do
@@ -248,12 +254,8 @@ FactoryGirl.define do
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
-    facilitators {[
-      create(:facilitator).tap{|f| f.permission = 'facilitator'}
-    ]}
-    cohorts {[
-        create(:cohort)
-    ]}
+    facilitators {[create(:facilitator)]}
+    cohorts {[create(:cohort)]}
     after :create do |workshop, _|
       create_list :segment, 1, workshop: workshop
     end
@@ -261,8 +263,8 @@ FactoryGirl.define do
 
   factory :segment do
     workshop
-    start DateTime.now
-    self.send(:end, DateTime.now + 1.day)
+    start DateTime.now.utc
+    self.send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
