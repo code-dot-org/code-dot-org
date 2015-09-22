@@ -1,0 +1,25 @@
+---
+layout: none
+theme: none
+---
+
+%div{style: "padding-left:20px"}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
+    %colgroup
+      %col{width: "200"}/
+      %col{width: "100"}/
+      %col{width: "100"}/
+    %tr
+      %th.manage-th
+        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+      %th.manage-th
+        %a{href: ""} Level 1
+      %th.manage-th
+        %a{href: ""} Level 2
+    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
+      %td
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
+      %td
+        Student's answer to Level 1
+      %td
+        Student's answer to Level 2
