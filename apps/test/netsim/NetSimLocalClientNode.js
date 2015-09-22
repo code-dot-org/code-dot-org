@@ -1,16 +1,16 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -18,7 +18,12 @@ var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var assert = testUtils.assert;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimLocalClientNode", function () {
   var testShard, testLocalNode, testRemoteNode;
@@ -32,7 +37,7 @@ describe("NetSimLocalClientNode", function () {
     NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return newRouter;
   };
 
@@ -45,15 +50,15 @@ describe("NetSimLocalClientNode", function () {
     NetSimLocalClientNode.create(testShard, "testLocalNode", function (err, node) {
       testLocalNode = node;
     });
-    assert(undefined !== testLocalNode, "Made a local node");
+    assert.isDefined(testLocalNode, "Made a local node");
 
     NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
       testRemoteNode = node;
     });
-    assert(undefined !== testRemoteNode, "Made a remote node");
+    assert.isDefined(testRemoteNode, "Made a remote node");
   });
 
-  describe ("onNodeTableChange_", function () {
+  describe("onNodeTableChange_", function () {
     var lostConnection;
     beforeEach(function () {
       testLocalNode.initializeSimulation(null, null);
@@ -63,28 +68,28 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.setLostConnectionCallback(function () {
         lostConnection = true;
       });
-      assertEqual(false, lostConnection);
+      assert.isFalse(lostConnection);
     });
 
-    it ("detects when own row has gone away and calls lost connection callback", function () {
+    it("detects when own row has gone away and calls lost connection callback", function () {
       testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
       testShard.nodeTable.refresh();
-      assertEqual(true, lostConnection);
+      assert.isTrue(lostConnection);
     });
 
-    it ("detects shard reset even when own ID has been reclaimed", function () {
+    it("detects shard reset even when own ID has been reclaimed", function () {
       // Reset fake remote table and repopulate first two rows.
       testShard.nodeTable = NetSimTestUtils.overrideNetSimTableApi(testShard.nodeTable);
       NetSimEntity.create(NetSimClientNode, testShard, function () { });
       NetSimEntity.create(NetSimClientNode, testShard, function () { });
 
       testShard.nodeTable.refresh();
-      assertEqual(true, lostConnection);
+      assert.isTrue(lostConnection);
     });
   });
 
   describe("onWireTableChange_", function () {
-    it ("detects when remote client disconnects, and removes local wire", function () {
+    it("detects when remote client disconnects, and removes local wire", function () {
 
       var localWireRow, remoteWireRow;
 
@@ -96,25 +101,25 @@ describe("NetSimLocalClientNode", function () {
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
       remoteWireRow.id = 2;
 
-      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
-      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+      assert.equal(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assert.equal(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
 
       // Trigger onWireTableChange_ with both wires; the connection
       // should be complete!
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+      assert.deepEqual(testLocalNode.myRemoteClient, testRemoteNode);
 
       // Trigger onWireTableChange_ without the remoteWire; the
       // connection should be broken
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.getOutgoingWire(), null);
-      assertEqual(testLocalNode.myRemoteClient, null);
+      assert.isNull(testLocalNode.getOutgoingWire());
+      assert.isNull(testLocalNode.myRemoteClient);
 
     });
 
-    it ("detects when attempted connection is rejected", function () {
+    it("detects when attempted connection is rejected", function () {
 
       var testThirdNode;
       var localWireRow, remoteWireRow, thirdWireRow;
@@ -134,8 +139,8 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.onWireTableChange_();
       var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
       newLocalWireRow.id = 1;
-      assertEqual(newLocalWireRow, localWireRow);
-      assertEqual(testLocalNode.myRemoteClient, null);
+      assert.deepEqual(newLocalWireRow, localWireRow);
+      assert.isNull(testLocalNode.myRemoteClient);
 
       testThirdNode.connectToNode(testRemoteNode, function () {});
 
@@ -143,29 +148,29 @@ describe("NetSimLocalClientNode", function () {
       thirdWireRow.id = 3;
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
       testLocalNode.onWireTableChange_();
-      assertEqual(testLocalNode.getOutgoingWire(), null);
+      assert.isNull(testLocalNode.getOutgoingWire());
 
     });
   });
 
   describe("sendMessage", function () {
-    it ("fails with error when not connected", function () {
+    it("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessage('101010010101', function (e, r) {
+      testLocalNode.sendMessage('101010010101', function (e) {
         error = e;
       });
-      assert(error instanceof Error);
-      assertEqual(error.message, 'Cannot send message; not connected.');
+      assert.instanceOf(error, Error);
+      assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
 
-    it ("puts the message in the messages table", function () {
+    it("puts the message in the messages table", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('10101010101', function () {});
       assertTableSize(testShard, 'messageTable', 1);
     });
 
-    it ("callback has undefined result, even on success", function () {
+    it("callback has undefined result, even on success", function () {
       // Init to non-success values to make sure they get set.
       var err = true;
       var result = true;
@@ -174,11 +179,11 @@ describe("NetSimLocalClientNode", function () {
         err = e;
         result = r;
       });
-      assertEqual(null, err);
-      assertEqual(undefined, result);
+      assert.isNull(err);
+      assert.isUndefined(result);
     });
 
-    it ("Generated message has correct from/to node IDs", function () {
+    it("Generated message has correct from/to node IDs", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('101001100101', function () {});
@@ -186,18 +191,18 @@ describe("NetSimLocalClientNode", function () {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
-      assertEqual(fromNodeID, testLocalNode.entityID);
-      assertEqual(toNodeID, testRemoteNode.entityID);
+      assert.equal(fromNodeID, testLocalNode.entityID);
+      assert.equal(toNodeID, testRemoteNode.entityID);
     });
 
-    it ("Generated message has correct payload", function () {
+    it("Generated message has correct payload", function () {
       var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('1010101010100101010', function () {});
       testShard.messageTable.refresh(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
-      assertEqual('1010101010100101010', message.payload);
+      assert.equal('1010101010100101010', message.payload);
     });
   });
 
@@ -211,27 +216,27 @@ describe("NetSimLocalClientNode", function () {
       '1110100110'
     ];
 
-    it ("fails with error when not connected", function () {
+    it("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessages(payloads, function (e, r) {
+      testLocalNode.sendMessages(payloads, function (e) {
         error = e;
       });
-      assert(error instanceof Error);
-      assertEqual(error.message, 'Cannot send message; not connected.');
+      assert.instanceOf(error, Error);
+      assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
 
-    it ("succeeds immediately with empty payload", function () {
+    it("succeeds immediately with empty payload", function () {
       var error, result;
       testLocalNode.sendMessages([], function (e, r) {
         error = e;
         result = r;
       });
-      assertEqual(null, error);
-      assertEqual(undefined, result);
+      assert.isNull(error);
+      assert.isUndefined(result);
     });
 
-    it ("puts all of the payloads into the message table", function () {
+    it("puts all of the payloads into the message table", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessages(payloads, function () {});
       assertTableSize(testShard, 'messageTable', payloads.length);
@@ -239,63 +244,63 @@ describe("NetSimLocalClientNode", function () {
   });
 
   describe("getShortDisplayName", function () {
-    it ("reflects no change for names below 10 characters", function () {
+    it("reflects no change for names below 10 characters", function () {
       testLocalNode.displayName_ = 'Sam';
-      assertEqual('Sam', testLocalNode.getShortDisplayName());
+      assert.equal('Sam', testLocalNode.getShortDisplayName());
 
       testLocalNode.displayName_ = 'Sam Well';
-      assertEqual('Sam Well', testLocalNode.getShortDisplayName());
+      assert.equal('Sam Well', testLocalNode.getShortDisplayName());
 
       // Note: spaces preserved for short names
       testLocalNode.displayName_ = 'Samuel 999';
-      assertEqual('Samuel 999', testLocalNode.getShortDisplayName());
+      assert.equal('Samuel 999', testLocalNode.getShortDisplayName());
     });
 
-    it ("uses first word for names longer than 10 characters", function () {
+    it("uses first word for names longer than 10 characters", function () {
       // Even short first names used, as long as whole name is > 10
       testLocalNode.displayName_ = 'A Modest Proposal';
-      assertEqual('A', testLocalNode.getShortDisplayName());
+      assert.equal('A', testLocalNode.getShortDisplayName());
 
       // Ordinary case
       testLocalNode.displayName_ = 'Jonathan Swift';
-      assertEqual('Jonathan', testLocalNode.getShortDisplayName());
+      assert.equal('Jonathan', testLocalNode.getShortDisplayName());
 
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
-      assertEqual('Constantine', testLocalNode.getShortDisplayName());
+      assert.equal('Constantine', testLocalNode.getShortDisplayName());
     });
   });
 
   describe("getHostname", function () {
-    it ("is a transformation of the short display name and node ID", function () {
-      assertEqual(1, testLocalNode.entityID);
+    it("is a transformation of the short display name and node ID", function () {
+      assert.equal(1, testLocalNode.entityID);
       testLocalNode.displayName_ = 'Sam';
-      assertEqual('sam1', testLocalNode.getHostname());
+      assert.equal('sam1', testLocalNode.getHostname());
     });
 
-    it ("strips spaces, preserves digits", function () {
-      assertEqual(1, testLocalNode.entityID);
+    it("strips spaces, preserves digits", function () {
+      assert.equal(1, testLocalNode.entityID);
       testLocalNode.displayName_ = 'Sam Well';
-      assertEqual('samwell1', testLocalNode.getHostname());
+      assert.equal('samwell1', testLocalNode.getHostname());
 
       // Note: spaces preserved for short names
       testLocalNode.displayName_ = 'Samuel 999';
-      assertEqual('samuel9991', testLocalNode.getHostname());
+      assert.equal('samuel9991', testLocalNode.getHostname());
     });
 
-    it ("abbreviates with short-name rules", function () {
-      assertEqual(1, testLocalNode.entityID);
+    it("abbreviates with short-name rules", function () {
+      assert.equal(1, testLocalNode.entityID);
       // Even short first names used, as long as whole name is > 10
       testLocalNode.displayName_ = 'A Modest Proposal';
-      assertEqual('a1', testLocalNode.getHostname());
+      assert.equal('a1', testLocalNode.getHostname());
 
       // Ordinary case
       testLocalNode.displayName_ = 'Jonathan Swift';
-      assertEqual('jonathan1', testLocalNode.getHostname());
+      assert.equal('jonathan1', testLocalNode.getHostname());
 
       // First name longer than 10 characters
       testLocalNode.displayName_ = 'Constantine Rey';
-      assertEqual('constantine1', testLocalNode.getHostname());
+      assert.equal('constantine1', testLocalNode.getHostname());
     });
   });
 
@@ -311,28 +316,28 @@ describe("NetSimLocalClientNode", function () {
         wireRow = testLocalNode.makeWireRowForConnectingTo(routerNode);
       });
 
-      it ("Sets localNodeID to own entity ID", function () {
+      it("Sets localNodeID to own entity ID", function () {
         assert.equal(testLocalNode.entityID, wireRow.localNodeID);
       });
 
-      it ("Sets remoteNodeID to router entity ID", function () {
+      it("Sets remoteNodeID to router entity ID", function () {
         assert.equal(routerNode.entityID, wireRow.remoteNodeID);
       });
 
-      it ("Gets a random local address from the router", function () {
+      it("Gets a random local address from the router", function () {
         // Pinned by 'setRandomSeed', above.
         assert.equal('9', wireRow.localAddress);
       });
 
-      it ("Sets remoteAddress to router's address", function () {
+      it("Sets remoteAddress to router's address", function () {
         assert.equal(routerNode.getAddress(), wireRow.remoteAddress);
       });
 
-      it ("Sets localHostname to own hostname", function () {
+      it("Sets localHostname to own hostname", function () {
         assert.equal(testLocalNode.getHostname(), wireRow.localHostname);
       });
 
-      it ("Sets remoteHostname to router's hostname", function () {
+      it("Sets remoteHostname to router's hostname", function () {
         assert.equal(routerNode.getHostname(), wireRow.remoteHostname);
       });
     });
@@ -342,19 +347,19 @@ describe("NetSimLocalClientNode", function () {
         wireRow = testLocalNode.makeWireRowForConnectingTo(testRemoteNode);
       });
 
-      it ("Sets localNodeID to own entity ID", function () {
+      it("Sets localNodeID to own entity ID", function () {
         assert.equal(testLocalNode.entityID, wireRow.localNodeID);
       });
 
-      it ("Sets remoteNodeID to remote entity ID", function () {
+      it("Sets remoteNodeID to remote entity ID", function () {
         assert.equal(testRemoteNode.entityID, wireRow.remoteNodeID);
       });
 
-      it ("Leaves remaining fields undefined", function () {
-        assert.equal(undefined, wireRow.localAddress);
-        assert.equal(undefined, wireRow.remoteAddress);
-        assert.equal(undefined, wireRow.localHostname);
-        assert.equal(undefined, wireRow.remoteHostname);
+      it("Leaves remaining fields undefined", function () {
+        assert.isUndefined(wireRow.localAddress);
+        assert.isUndefined(wireRow.remoteAddress);
+        assert.isUndefined(wireRow.localHostname);
+        assert.isUndefined(wireRow.remoteHostname);
       });
     });
   });

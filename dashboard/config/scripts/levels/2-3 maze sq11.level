@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Get me to the pig! What blocks got repeated?",
     "start_direction": "1",
-    "step_mode": 0
+    "step_mode": 1
   }
 }]]></config>
   <blocks/>

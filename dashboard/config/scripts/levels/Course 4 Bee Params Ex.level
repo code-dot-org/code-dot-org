@@ -14,7 +14,7 @@
     "disable_param_editing": "false",
     "disable_variable_editing": "true",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": 1,
     "nectar_goal": "56",
     "flower_type": "redWithNectar",
     "ideal": "42",
@@ -29,8 +29,7 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
