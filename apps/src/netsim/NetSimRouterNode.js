@@ -8,6 +8,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -325,7 +326,7 @@ NetSimRouterNode.inherits(NetSimNode);
 NetSimRouterNode.create = function (shard, onComplete) {
   var nextRouterNumber = 1;
   shard.nodeTable.readAll().forEach(function (node) {
-    if (NodeType.ROUTER == node.type && node.routerNumber >= nextRouterNumber) {
+    if (NodeType.ROUTER === node.type && node.routerNumber >= nextRouterNumber) {
       nextRouterNumber = node.routerNumber + 1;
     }
   });
