@@ -86,6 +86,8 @@ social:
             %div.front-header-banner{style: "color: white; margin-top: 0px;"}
               %h4
                 =hoc_s(:front_join_us_heading)
+              %div.students-served
+                =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
             %div.ctabuttongroup
               %div#signuptext.ctatext
                 %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('hocsignupform');", target: "_blank"}
@@ -152,7 +154,7 @@ social:
       %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-8
-      %img{src: "/images/fill-800x543/highlight-selfie.jpg", style: "width: 100%;"}
+      %img{src: localized_image("/images/fill-800x543/highlight-selfie.jpg"), style: "width: 100%;"}
 
   .gap{style: "height:30px"}
 
@@ -196,7 +198,7 @@ social:
         .col-md-6
           =view :signup_form
         .col-md-1
-        .col-md-5{:style=> 'padding: 20px;'}
+        .col-md-5
           =view :join_us_description
           =view :whats_next
 

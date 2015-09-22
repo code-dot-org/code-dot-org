@@ -7,6 +7,7 @@
  newcap: true,
  nonew: true,
  shadow: false,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
