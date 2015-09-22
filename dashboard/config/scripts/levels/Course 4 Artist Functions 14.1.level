@@ -277,6 +277,35 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a line of octagons"/>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">180</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveBackward</title>
+                          <title name="VALUE">20</title>
+                          <next>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="draw a line of octagons"/>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <title name="NAME">jump upper right</title>
@@ -315,24 +344,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="draw a line of octagons"/>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnRight</title>
-                  <title name="VALUE">180</title>
-                  <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="draw a line of octagons"/>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
