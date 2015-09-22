@@ -1,14 +1,14 @@
 "no":
   site_name: Kodetimen
   language: Norsk
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Kommer snart
   campaign_date_start_short: 7. Des
   campaign_date_start_long: 7. Desember
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Kodetimen er en global bevegelse som når ut til et titalls millioner studendter i over 180 land. Hvem som helst kan organisere en kodetime hvor som helst. Timeslange veiledninger er tilgjengelig på over 30 språk. Det trengs ingen erfaring. <strong>Alder: fra 4 til 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Se den nye videoen
   front_watch_regular_video: Se videoen
   header_menu_resources: Ressurser
@@ -154,10 +154,14 @@
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Hvordan kjøre Kodetimen</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promotere Kodetimen</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Alle kan lære.
   get_started: Start
@@ -174,11 +178,14 @@
   front_join_us_teacher: Er du en lærer?
   front_join_us_inspire: Inspirér elevene med
   front_join_us_inspire_link: en Kodetime i klasserommet.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Er du en forelder?
   front_join_us_ask_link: Be din skole om
   front_join_us_ask: å arrangere en kodetime.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Er du begeistret for datavitenskap?
   front_join_us_spread: Spre ordet.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Eller arranger en kodetime selv.
   front_join_us_how_to_run: Les hvordan du kan arrangere en kodetime
   front_join_us_help_promote: Hjelp oss å fremme kodetimen
@@ -190,7 +197,8 @@
   front_join_us_host: Arranger
   front_join_us_support: Støtt
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Ditt navn
   signup_email_label: E-post
   signup_organization_name_label: Skole eller organisasjon
@@ -276,7 +284,7 @@
   hoc_faq_scratch_q: Jeg bruker Scrathc i Kodetimen, men hva hvis elevene mine har nettbrett i stedet for bærbare datamaskiner?
   hoc_faq_scratch_a: "Scratch kjører på nettbrett. Hvis elevene er små, kan de bruke appen ScratchJR (for de som kan lese). Hvis du ser på oversikten på <a href='http://code.org/learn'> Code.org/learn</a>, kan du finne andre leksoner som fungerer på nettbrett - fra Code.org, Tynker, Lightbot eller CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Statestikk fra kodetimen i 2013
   stats_growth: Det var den raskeste til å nå 15 millioner brukere.
   stats_i18n: Students are learning in 40 languages
@@ -335,6 +343,7 @@
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Tusen takk
   title_prizes: Premier
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ressurser
   title_signup_thanks: Takk for at du meldte deg på som vert for Kodetimen!
   title_tutorial_guidelines: Tutorial Guidelines

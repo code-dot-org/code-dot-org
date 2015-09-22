@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Çeşitli birleştirici etkinliğe ev sahipliği yapmak istiyoruz, ancak birincil amacımız bilgisayar bilimine yeni olan öğrenci ve öğretmenlerin deneyimlerini iyileştirmektir. Lütfen bu belge yardımıyla aktivitenizin oluşumunu yönlendirin; hiçbir kodlama, bilgisayar programlama ve bilgisayar bilimi geçmişi olmayan bir kitleye hitap ettiğinizi unutmayın.
 
@@ -23,20 +23,13 @@ Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour
 
 ## İçindekiler:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Öğreticilerin eğitime dahil edilmesi için değerlendirilme yolu](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Aktivitenizi tasarlamak için öneriler](#design)
+  * [Marka patenti ile ilgili bilgiler](#tm)
+  * [Takip Pikseli](#pixel)
+  * [Öğreticilerinizi desteklemek, Bilgisayar Bilimi Eğitimi Haftası ve Kodlama Saati](#promote)
   * [Engelli öğrenciler için küçük bir not](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Lütfen önerilen bilgisayar bilimi bilgi düzeyini seçilen seviyede belirtin: Başlangıç, Orta veya İleri. Kodlama Saati websitesi Başlangıç seviyesi aktivitelerini göze çarpacak şekilde renklendirecektir. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Teknik gereklilikler: 
       * Daha net bir şekilde katılımı takip edebilmek için, her üçüncü parti öğretici ortağının Kodlama Saati öğreticilerinin başına ve sonuna 1-piksel takip görüntüsü yerleştirmelerini istiyoruz. Başlangıç sayfasına bir başlangıç piksel-görüntüsü ve son sayfaya da son bir piksel-görüntüsü yerleştirin. Ara sayfalara piksel yerleştirmeyin. Daha fazla detay için Takip Pikseli bölümüne göz atın. 
-      * Aktiviteyi bitirirken, kullanıcılar [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> sayfasına yönlendirilmelidirler. Bu sayfada aşağıda sıralananları yapabilirler: 
+      * Aktiviteyi bitirirken, kullanıcılar [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Kodlama Saatini bitirdiklerini sosyal medyada paylaşabilirler
           * Kodlama Saatini bitirdiklerine dair bir sertifika alabilirler
           * Hangi ülkelerin/şehirlerin Kodlama Saatinde en yüksek katılım oranlarına sahip olduğunu görebilirler
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Tercihe bağlı)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Çevrimiçi aktiviteler için (özellikle akıllı telefon/tablet uygulamaları): 
           * Kullanıcı sayısı

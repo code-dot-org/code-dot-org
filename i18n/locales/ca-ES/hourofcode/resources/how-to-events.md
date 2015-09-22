@@ -14,12 +14,12 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
   * Determina un lloc, data i hora
   * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/resources/press-kit') %) for help.
 
 ## 2) Durant l'esdeveniment
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
+  * Kick off your event with one of our [inspirational videos](%= resolve_url('/resources#videos') %).
+  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/resources/stats') %).   
       
     
   * Altres idees per a l'esdeveniment: 
@@ -48,13 +48,13 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 ## Programa
 
-| Hora             | Acció                                                                                                                                               |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>) |
-| 10:15 - 10:30 am | Xerrades de convidats per parlar dels seus antecedents i com la tecnologia i la informàtica té un paper important en la seva vida quotidiana.       |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                            |
-| 10:40 - 11:00 am | Els estudiants mostres una activitat desendollada i com es pot ensenyarinformàtica sense utilitzar ordinadors.                                      |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                   |
+| Hora             | Acció                                                                                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/resources#videos') %)                                                                |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/resources/stats') %) |
+| 10:15 - 10:30 am | Xerrades de convidats per parlar dels seus antecedents i com la tecnologia i la informàtica té un paper important en la seva vida quotidiana.     |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                          |
+| 10:40 - 11:00 am | Els estudiants mostres una activitat desendollada i com es pot ensenyarinformàtica sense utilitzar ordinadors.                                    |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                 |
 
 <%= view :signup_button %>

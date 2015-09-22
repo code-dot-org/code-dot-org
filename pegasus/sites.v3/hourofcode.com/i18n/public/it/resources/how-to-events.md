@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Ora              | Evento                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                                                                 |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                                                  |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                                                                   |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)                                                    |
 | 10:15 - 10:30 am | Intervento degli ospiti che racconteranno le loro esperienze e come tecnologia e informatica abbiano un ruolo nella vita quotidiana.                                                                 |
 | 10:30 - 10:40 am | Gli studenti terranno una dimostrazione di Ora del Codice al resto della scuola. Cambio di parti: lasciate che siano loro ad insegnare al dirigente, ai rappresentanti politici o agli altri alunni. |
 | 10:40 - 11:00 am | Dimostrazioni degli studenti di un'attività informatica realizzabile senza l'uso del computer.                                                                                                       |

@@ -8,7 +8,7 @@ id:
   campaign_date_short: 7-13 Desember
   campaign_date_full: 7-13 Desember
   front_header_banner: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal 8-14 Desember 2014
-  front_intro_default: 'Hour of Code adalah gerakan mendunia yang merengkuh puluhan juta pelajar dari 180+ negara. Setiap orang, di mana saja, dapat mengadakan acara Hour of Code. Tersedia tutorial-tutorial berdurasi satu jam dalam 30 bahasa. Tak perlu pengalaman. <strong>Usia 4 sampai 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Tonton video terbaru
   front_watch_regular_video: Tontonlah video
   header_menu_resources: Sumber daya
@@ -154,10 +154,14 @@ id:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Cara menjalankan Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promosikan Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Coba</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Siapa pun bisa belajar.
   get_started: Mulai
@@ -174,11 +178,14 @@ id:
   front_join_us_teacher: Apaka anda guru?
   front_join_us_inspire: Menginspirasi murid dengan
   front_join_us_inspire_link: Hour of Code di dalam kelas.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Apakah Anda orang tua?
   front_join_us_ask_link: Mintalah kepada sekolah di wilayah setempat
   front_join_us_ask: untuk menyelenggarakan Hour of Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Hanya mencintai ilmu komputer?
   front_join_us_spread: Sebarkan pada dunia.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Atau kelola acara Hour of Code Anda sendiri.
   front_join_us_how_to_run: Berikut adalah cara untuk menyelengarakan Hour of Code
   front_join_us_help_promote: Bantulah mempromosikan Hour of Code
@@ -190,7 +197,8 @@ id:
   front_join_us_host: Adakanlah
   front_join_us_support: Dukunglah
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Nama anda
   signup_email_label: Email Anda
   signup_organization_name_label: Nama sekolah atau organisasi
@@ -338,6 +346,7 @@ id:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Terima kasih
   title_prizes: Hadiah
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Sumber daya
   title_signup_thanks: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

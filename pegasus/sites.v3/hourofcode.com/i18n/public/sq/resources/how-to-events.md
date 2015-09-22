@@ -1,25 +1,27 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Guida e eventit Ora e Kodimit
 
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event.
+Organizo eventin Ora e Kodimit gjatë Javës Edukative të Shkencave Kompjuterike (<%= campaign_date('short') %>) për të festuar shkencat kompjuterike dhe frymëzo më shumë student ta provojnë atë. Kushdo, kudo mund të organizojë një event Ore Kodimi.
 
 ## 1) Përgatitu për eventin tënd
 
   * Përcakto një vend, datë dhe kohë
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/resources/press-kit') %>) for help.
+  * Dërgo [një letër](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) për të ftuar kryetarin e Bashkisë, deputetët, qeveritarët, ose persona me ndikim në biznes për të folur.
+  * Fto mediat/shtypin. p.sh stacionin lokal të lajmeve, gazeta, blogerët e edukimit/teknologjisë. Shiko [ mjetet e shtypit](<%= hoc_uri('/resources/press-kit') %>) për ndihmë.
 
 ## 2) Gjatë eventit tënd
 
-  * Kick off your event with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/resources/stats') %>).   
+  * Fillo eventin tënd me një nga [videot inspiruese](<%= hoc_uri('/resources#videos') %>).
+  * Jep një hyrje të përgjithshme për rëndësinë e shkencave kompjuterike, duke përdorur këto [ statistika dhe diagrame](<%= hoc_uri('/resources/stats') %>).   
       
     
   * Ide të tjera për eventin: 
@@ -29,32 +31,32 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
       * Ke një grup studentësh që të mësojnë drejtorin apo një grup mësuesish si të kodojnë
       * Nëse shkolla jote tashmë shpjegon shkenca kompjuterike, ke projekte demo të studentëve
 
-## 3) Shfaqe se si eci
+## 3) Shpërndaje se si eci
 
   * Shpërnda foto të eventit tënd në Facebook dhe Twitter. 
   * Përdor hashtag-un **#HourofCode**
 
 ## Shembull i Planit të Event-it
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Event:** Asamblea e nisjes së gjithë shkolla në Javën Edukative të Shkencave Kompjuterike
 
-**Date:** Dec 7th (start of Computer Science Education Week)
+**Data:** 8-të Dhj (fillimi i Javes Edukative të Shkencave Kompjuterike)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Koha:** Gjatë ditës së shkollës. Mesdita preferohet për eventin. Afërsisht 1 orë.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Vendi:** Salla e mbledhjeve (p.sh teatri, palestra, kafeneja)   
   
 
 
 ## Fillimi i shfaqjes
 
-| Koha             | Veprimet                                                                                                                                                      |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                          |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)           |
-| 10:15 - 10:30 am | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                                      |
-| 10:40 - 11:00 am | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                             |
+| Koha                   | Veprimet                                                                                                                                                      |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 paradite | Hapja me një nga [videot tona inspiruese](<%= resolve_url('/resources#videos') %>)                                                                              |
+| 10:05 - 10:15 paradite | Drejtori jep një hyrje që e pasqyron rëndësinë e shkencave kompjuterike. Përdor këto [ statistika dhe diagrame](<%= resolve_url('/resources/stats') %>)         |
+| 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
+| 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |
+| 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
+| 11:00 - 11:05 paradite | Mësuesit që ndihmojnë në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                  |
 
 <%= view :signup_button %>

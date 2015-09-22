@@ -27,23 +27,6 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
 * [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
 
-## Disney Infinity Play Lab
-* [Introduction](http://amara.org/en/videos/SIhQst12ka1L/info/disney-infinity-play-lab-intro/)
-* [Events](http://amara.org/en/videos/P4syLLr3joJI/info/disney-infinity-play-lab-events/)
-* [Repeat Forever](http://amara.org/en/videos/hexczH6nduwt/info/disney-infinity-play-lab-repeat/)
-
-## Other tutorial videos
-* [Play Lab Introduction](http://amara.org/en/videos/VKgG3K3YVk9M/info/play-lab-intro-video/)
-* [Play Lab Events](http://amara.org/en/videos/doW6obfLQvlH/info/play-lab-hour-of-code-events/)
-* [Play Lab Repeat Forever](http://amara.org/en/videos/IU4g3gxJaBfh/info/play-lab-hour-of-code-repeat-forever-block/)
-* [Code your own Flappy game](http://amara.org/en/videos/UBzP2oOtjEYe/info/code-your-own-flappy-game/)
-* [Makinde Adeagbo teaches while loops](http://amara.org/en/videos/ojDu3tZfHlHN/info/makinde-adeagbo-teaches-while-loops/)
-* [Janete Perez explains functions with parameters](http://amara.org/en/videos/QJEFTa8YN1ZR/info/janete-perez-explains-functions-with-parameters/)
-* [Paola Mejia introduces the farmer level](http://amara.org/en/videos/bqaOlkldr6cw/info/paola-mejia-introduces-the-farmer-level/)
-* [JR Hildebrand introduces the artist level](http://amara.org/en/videos/0rqdXW3t5fgc/info/jr-hildebrand-introduces-the-artist-level/)
-* [Brina Lee teaches functions](http://amara.org/en/videos/I0rQG2WFdkx9/info/brina-lee-teaches-functions/)
-* [Trina Roy teaches counter loops](http://amara.org/en/videos/yDs0YaE9cv2D/info/trina-roy-teaches-counter-loops/)
-
 ## Social
 * [The Hour of Code 2015](http://amara.org/en/videos/3AzjwLw6zyAV/info/the-hour-of-code-2015/)
 * [What Most schools Don't Teach](http://amara.org/en/videos/ZuVc6mobngWz/info/what-most-schools-dont-teach/)
@@ -53,6 +36,25 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [President Obama does the Hour of Code](http://amara.org/en/videos/TC5deIQmfUan/info/president-obama-does-the-hour-of-code/)
 * [President Obama calls on America](http://amara.org/en/videos/HuSjzut36AWC/info/president-obama-calls-on-every-american-to-learn-code/)
 * [Anybody can learn - 60 second teaser](http://amara.org/en/videos/eCMj3Krr59Ft/info/codeorg-60-second-teaser/)
+
+## Computer Science Principles 
+* [Images, Pixels and RGB](https://amara.org/en/videos/AbDLi3dtmbyE/info/instagrams-kevin-systrom-explains-pixels-and-how-filters-work/)
+* [The Internet: Wires, Cables, & Wifi](https://amara.org/en/videos/VtezxPhFAsoQ/info/the-internet-wires-cables-wifi/)
+* [The Internet: IP Addresses and DNS](https://amara.org/en/videos/nY9IOAcrhpNX/info/the-internet-ip-addresses-and-dns/)
+* [The Internet: Packets, Routing and Reliability](https://amara.org/en/videos/hBYvPxk4Qcn0/info/the-internet-packets-routing-and-reliability/)
+* [The Internet: Encryption & Public Keys](https://amara.org/en/videos/aCTRoFJokQ2N/info/the-internet-encryption-public-keys/)
+* [The Internet: Cybersecurity & Crime](https://amara.org/en/videos/w0BLT5Syrkh5/info/the-internet-cybersecurity-crime/)
+
+## Disney Infinity Play Lab
+* [Introduction](http://amara.org/en/videos/SIhQst12ka1L/info/disney-infinity-play-lab-intro/)
+* [Events](http://amara.org/en/videos/P4syLLr3joJI/info/disney-infinity-play-lab-events/)
+* [Repeat Forever](http://amara.org/en/videos/hexczH6nduwt/info/disney-infinity-play-lab-repeat/)
+
+## Play Lab and Flappy
+* [Play Lab Introduction](http://amara.org/en/videos/VKgG3K3YVk9M/info/play-lab-intro-video/)
+* [Play Lab Events](http://amara.org/en/videos/doW6obfLQvlH/info/play-lab-hour-of-code-events/)
+* [Play Lab Repeat Forever](http://amara.org/en/videos/IU4g3gxJaBfh/info/play-lab-hour-of-code-repeat-forever-block/)
+* [Code your own Flappy game](http://amara.org/en/videos/UBzP2oOtjEYe/info/code-your-own-flappy-game/)
 
 ## Unplugged Activities
 * [What is Computer Science?](http://amara.org/en/videos/z4RreIjZTsMq/info/what-is-computer-science-unplugged-activity/)
@@ -67,6 +69,14 @@ Watch the [demo video](/files/amara.swf) in full screen.
 * [Relay Programming](http://amara.org/en/videos/VU7rcWTLbihs/info/relay-programming-unplugged-activity/)
 * [Conditionals](http://amara.org/en/videos/JXjDttGuw0Uu/info/conditionals-unplugged-activity/)
 * [Functions](http://amara.org/en/videos/vyiogue6sztj/info/functions-unplugged-activity/)
+
+## Accelerated Course
+* [Makinde Adeagbo teaches while loops](http://amara.org/en/videos/ojDu3tZfHlHN/info/makinde-adeagbo-teaches-while-loops/)
+* [Janete Perez explains functions with parameters](http://amara.org/en/videos/QJEFTa8YN1ZR/info/janete-perez-explains-functions-with-parameters/)
+* [Paola Mejia introduces the farmer level](http://amara.org/en/videos/bqaOlkldr6cw/info/paola-mejia-introduces-the-farmer-level/)
+* [JR Hildebrand introduces the artist level](http://amara.org/en/videos/0rqdXW3t5fgc/info/jr-hildebrand-introduces-the-artist-level/)
+* [Brina Lee teaches functions](http://amara.org/en/videos/I0rQG2WFdkx9/info/brina-lee-teaches-functions/)
+* [Trina Roy teaches counter loops](http://amara.org/en/videos/yDs0YaE9cv2D/info/trina-roy-teaches-counter-loops/)
 
 ## Course 1
 * [The Big Event](https://www.amara.org/en/videos/tvzFUWGBWfW8/info/unplugged-the-big-event/)

@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | დრო           | რა ხდება                                                                                                                                             |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                 |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)  |
+| 10:00 - 10:05 | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                   |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)    |
 | 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.             |
 | 10:30 - 10:40 | მოსწავლეები ატარებენ კოდის ერთი საათის პრეზენტაციას. მინიშნება: მათ შეუძლიათ ასწავლონ პროგრამირება სკოლის დირექტორს, პოლიტიკოსს ან სხვა მოსწავლეებს. |
 | 10:40 - 11:00 | მოსწავლეები ყვებიან იმაზე, როგორ შეიძლება ვასწავლოთ ინფორმატიკა კომპიუტერების გარეშე და აჩვენებენ სამაგალითო აქტივობას.                              |

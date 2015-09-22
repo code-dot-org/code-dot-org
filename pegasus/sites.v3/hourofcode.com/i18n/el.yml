@@ -8,7 +8,7 @@ el:
   campaign_date_short: '7 - 13 Δεκεμβρίου'
   campaign_date_full: '7 - 13 Δεκεμβρίου'
   front_header_banner: Λάβετε μέρος στην μεγαλύτερη στην ιστορία εκδήλωση για την μάθηση, 7-13 Δεκεμβρίου, 2015
-  front_intro_default: 'H ώρα του κώδικα είναι ένα παγκόσμιο κίνημα που φθάνει σε  δεκάδες εκατομμύρια μαθητές σε 180+ χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του Κώδικα. Ωριαία μαθήματα είναι διαθέσιμα σε πάνω από 30 γλώσσες. Δεν χρειάζεται καμία εμπειρία. <strong>Για ηλικίες από 4 έως 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Δες το νέο βίντεο
   front_watch_regular_video: Δείτε το βίντεο
   header_menu_resources: Πόροι
@@ -154,10 +154,14 @@ el:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: Τι υπάρχει στη συνέχεια;
   whats_next_description: "Θα σας στείλουμε υλικό και χρήσιμες συμβουλές για την εκδήλωσή σας. Νέοι οδηγοί για το 2015 έρχονται σύντομα για οποιονδήποτε φυλλομετρητή, για smartphone - ακόμη οδηγοί χωρίς υπολογιστή! <a href='http://code.org/learn'>Δοκιμάστε τους υπάρχοντες οδηγούς </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Πώς να διοργανώσετε μια Ώρα του κώδικα</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Προωθήστε την Ώρα του κώδικα</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>'
   anybody_can_learn: Όλοι μπορούν να μάθουν.
   get_started: Έναρξη
@@ -174,11 +178,14 @@ el:
   front_join_us_teacher: Είσαι Εκπαιδευτικός;
   front_join_us_inspire: Εμπνεύστε τους μαθητές με
   front_join_us_inspire_link: μια Ώρα του κώδικα στην τάξη.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Είσαι γονέας;
   front_join_us_ask_link: 'Ζητήστε από  το τοπικό σχολείο'
   front_join_us_ask: να φιλοξενήσει μια Ώρα του Κώδικα.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Αγαπάς απλά την επιστήμη των υπολογιστών;
   front_join_us_spread: Διάδωσέ το.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Η οργάνωσε εσύ μια εκδήλωση για την Ώρα του Κώδικα.
   front_join_us_how_to_run: Ορίστε κάποιες οδηγίες για το πώς να «τρέξεις» μια Ώρα του Κώδικα
   front_join_us_help_promote: Βοήθησε στην προώθηση της Ώρας του Κώδικα
@@ -190,7 +197,8 @@ el:
   front_join_us_host: Φιλοξένησέ το
   front_join_us_support: Υποστήριξέ το
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Οργανώστε μία Ώρα του Κώδικα στις campaign_date, και εγγράψτε την εδώ.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Το όνομά σας
   signup_email_label: Το email σας
   signup_organization_name_label: Όνομα σχολείου ή του οργανισμού
@@ -335,6 +343,7 @@ el:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Ευχαριστούμε
   title_prizes: Βραβεία
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Πόροι
   title_signup_thanks: Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
   title_tutorial_guidelines: Tutorial Guidelines

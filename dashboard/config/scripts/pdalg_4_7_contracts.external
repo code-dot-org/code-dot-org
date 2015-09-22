@@ -1,0 +1,27 @@
+name 'PDAlg 4-7 Contracts'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+### Lessons 4-7 > Contracts
+
+Like the Circles of Evaluation, Contracts serve to help clarify student thinking and understanding. A student who can effectively compose a contract for any given function demonstrates an understanding of how that function is to be used (but not necessarily the relationship between its domain and range). This is again a place where some students will feel they can get by just fine without writing down contracts, but will likely get bitten down the road when they encounter functions more complicated than they can solve without support. Push your students to document contracts and you'll save yourself pain down the road as you can direct them to their contract logs to answer questions.
+
+#### Supplemental Worksheets
+
+- [Completing Partial Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/complete-coe-from-arith1.html)
+- [Completing Partial Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/complete-coe-from-arith2.html)
+- [Creating Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/arith-to-coe1.html)
+- [Creating Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/arith-to-coe2.html)
+- [Converting Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/coe-to-arith1.html)
+- [Converting Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/coe-to-arith2.html)
+<br><br>
+These worksheets are just the tip of the iceberg - if you've put together any supplemental materials for teaching the Circles of Evaluation in your classroom, share them with the rest of us on the forum.
+
+<a href="http://forum.code.org/c/cs-in-algebra" target="blank"><button class="plc">Share Your Supplements >></button></a><br>
+
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -1,14 +1,14 @@
 ru:
   site_name: Час Кода
   language: Русский
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Скоро
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Час Программирования - это глобальное движение, которое охватывает десятки миллионов студентов и учеников в более, чем 180 странах. Каждый, в любой стране, может стать организатором Часа Программирования. Уроки продолжительностью в час доступны более чем на 30 языках. Не требуется никаких предварительных знаний.<strong>Возраст от 4 от 104 лет.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Смотреть новое видео
   front_watch_regular_video: Watch the video
   header_menu_resources: Ресурсы
@@ -154,10 +154,14 @@ ru:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> Как запустить Час Программирования</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> Продвигайте Час Программирования</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Все могут научиться.
   get_started: Start
@@ -174,11 +178,14 @@ ru:
   front_join_us_teacher: 'Вы - учитель?'
   front_join_us_inspire: Заинтересуте студентов
   front_join_us_inspire_link: Часом Программирования.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: 'Вы - родитель?'
   front_join_us_ask_link: Попросите школу, где учатся ваши дети,
   front_join_us_ask: провести Час Программирования.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Просто любите информатику?
   front_join_us_spread: Расскажите о событии.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Или станьте организатором Часа Программирования.
   front_join_us_how_to_run: Как провести Час Программирования
   front_join_us_help_promote: Помогите продвижению Часа Программирования
@@ -190,7 +197,8 @@ ru:
   front_join_us_host: Станьте организатором
   front_join_us_support: Поддержите
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Ваше имя
   signup_email_label: Ваш адрес эл.почты
   signup_organization_name_label: Название школы или организации
@@ -276,7 +284,7 @@ ru:
   hoc_faq_scratch_q: Я использую систему Scratch для проведения Часа Программирования, что если у моих учеников будут iPad-ы, а не ноутбуки?
   hoc_faq_scratch_a: "Scratch не портирован на планшеты. Если вы обучаете детей, они могут использовать приложение для iPad, ScratchjR (для юных слушателей). Если вы посмотрите материалы на <a href='http://code.org/learn'>Code.org/learn</a>, то сможете найти обучающие курсы. работающие на iPad - от Code.org, Tynker, Lightbot, or CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: Статистика с Часа Кода 2013 года
   stats_growth: Мероприятие, быстрее других набравшее 15 миллионов пользователей.
   stats_i18n: Students are learning in 40 languages
@@ -335,6 +343,7 @@ ru:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Благодарим вас
   title_prizes: Призы
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Ресурсы
   title_signup_thanks: Спасибо за регистрацию на проведение Часа Кода!
   title_tutorial_guidelines: Tutorial Guidelines
