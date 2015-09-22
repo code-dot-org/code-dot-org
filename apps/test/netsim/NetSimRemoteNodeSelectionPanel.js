@@ -1,9 +1,17 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
 /* global $, describe, beforeEach, it */
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimRemoteNodeSelectionPanel = require('@cdo/apps/netsim/NetSimRemoteNodeSelectionPanel');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -55,25 +63,25 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       MAX_ROUTERS = NetSimGlobals.getGlobalMaxRouters();
     });
 
-    it ("true in empty shard (with default test setup)", function () {
+    it("true in empty shard (with default test setup)", function () {
       var panel = panelWithNodes([]);
-      assert(panel.canAddRouter());
+      assert.isTrue(panel.canAddRouter());
     });
 
-    it ("false if level.showAddRouterButton is false", function () {
+    it("false if level.showAddRouterButton is false", function () {
       NetSimGlobals.getLevelConfig().showAddRouterButton = false;
       var panel = panelWithNodes([]);
-      assert(!panel.canAddRouter());
+      assert.isFalse(panel.canAddRouter());
     });
 
-    it ("false with an outgoing connection request", function () {
+    it("false with an outgoing connection request", function () {
       var nodes = makeClients(3);
       var panel = new NetSimRemoteNodeSelectionPanel(rootDiv, {
         nodesOnShard: nodes,
         remoteNode: nodes[0],
         incomingConnectionNodes: []
       }, emptyCallbacks);
-      assert(!panel.canAddRouter());
+      assert.isFalse(panel.canAddRouter());
     });
 
     // A single-part address imposes no limit on the number of addressable
@@ -83,75 +91,75 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
         NetSimGlobals.getLevelConfig().addressFormat = '1';
       });
 
-      it ("true if current router count is below the global limit", function () {
+      it("true if current router count is below the global limit", function () {
         var panel = panelWithNodes(makeRouters(MAX_ROUTERS - 1));
-        assert(panel.canAddRouter());
+        assert.isTrue(panel.canAddRouter());
       });
 
-      it ("false if current router count is at/beyond the global limit", function () {
+      it("false if current router count is at/beyond the global limit", function () {
         var panel = panelWithNodes(makeRouters(MAX_ROUTERS));
-        assert(!panel.canAddRouter());
+        assert.isFalse(panel.canAddRouter());
       });
 
-      it ("true if current client count is at/beyond the global router limit", function () {
+      it("true if current client count is at/beyond the global router limit", function () {
         var panel = panelWithNodes(makeClients(MAX_ROUTERS));
-        assert(panel.canAddRouter());
+        assert.isTrue(panel.canAddRouter());
       });
 
     });
 
     // The two-bit router part imposes a limit of four addressable routers.
-    describe ("with address format '2.X'", function () {
+    describe("with address format '2.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '2.1';
       });
 
-      it ("true if current router count is below the addressable space of 4", function () {
+      it("true if current router count is below the addressable space of 4", function () {
         var panel = panelWithNodes(makeRouters(3));
-        assert(panel.canAddRouter());
+        assert.isTrue(panel.canAddRouter());
       });
 
-      it ("true if current router count is at/above the addressable space of 4", function () {
+      it("true if current router count is at/above the addressable space of 4", function () {
         var panel = panelWithNodes(makeRouters(4));
-        assert(!panel.canAddRouter());
+        assert.isFalse(panel.canAddRouter());
       });
     });
 
     // The four-bit router part imposes a limit of sixteen addressable routers.
-    describe ("with address format 'X.X.4.X'", function () {
+    describe("with address format 'X.X.4.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '1.1.4.1';
       });
 
-      it ("true if current router count is below the addressable space of 16", function () {
+      it("true if current router count is below the addressable space of 16", function () {
         var panel = panelWithNodes(makeRouters(15));
-        assert(panel.canAddRouter());
+        assert.isTrue(panel.canAddRouter());
       });
 
-      it ("true if current router count is at/above the addressable space of 16", function () {
+      it("true if current router count is at/above the addressable space of 16", function () {
         var panel = panelWithNodes(makeRouters(16));
-        assert(!panel.canAddRouter());
+        assert.isFalse(panel.canAddRouter());
       });
     });
 
     // The eight-bit router part imposes a limit of 256 addressable routers.
     // However, this is larger than our global router maximum, so we are still
     // limited by the global maximum.
-    describe ("with address format '8.X'", function () {
+    describe("with address format '8.X'", function () {
       beforeEach(function () {
         NetSimGlobals.getLevelConfig().addressFormat = '8.1';
       });
 
-      it ("true if current router count is below the global maximum", function () {
+      it("true if current router count is below the global maximum", function () {
         assert(MAX_ROUTERS < 256);
         var panel = panelWithNodes(makeRouters(MAX_ROUTERS - 1));
-        assert(panel.canAddRouter());
+        assert.isTrue(panel.canAddRouter());
       });
 
-      it ("true if current router count is at/above the global maximum", function () {
+      it("true if current router count is at/above the global maximum", function () {
         assert(MAX_ROUTERS < 256);
         var panel = panelWithNodes(makeRouters(MAX_ROUTERS));
-        assert(!panel.canAddRouter());
+        assert.isFalse(panel.canAddRouter());
       });
     });
   });
@@ -163,11 +171,11 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
       panel = panelWithNodes([]);
     });
 
-    it ("false if no user detected", function () {
-      assert.equal(false, panel.canCurrentUserResetShard());
+    it("false if no user detected", function () {
+      assert.isFalse(panel.canCurrentUserResetShard());
     });
 
-    describe ("for admin", function () {
+    describe("for admin", function () {
       var adminUser;
 
       beforeEach(function () {
@@ -176,23 +184,23 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
         panel.user_ = adminUser;
       });
 
-      it ("true with no shard ID", function () {
+      it("true with no shard ID", function () {
         panel.shardID_ = undefined;
-        assert.equal(true, panel.canCurrentUserResetShard());
+        assert.isTrue(panel.canCurrentUserResetShard());
       });
 
-      it ("true with numeric shard ID", function () {
+      it("true with numeric shard ID", function () {
         panel.shardID_ = 'anyoldshardname_42';
-        assert.equal(true, panel.canCurrentUserResetShard());
+        assert.isTrue(panel.canCurrentUserResetShard());
       });
 
-      it ("true with word shard ID", function () {
+      it("true with word shard ID", function () {
         panel.shardID_ = 'anyoldshardname_test';
-        assert.equal(true, panel.canCurrentUserResetShard());
+        assert.isTrue(panel.canCurrentUserResetShard());
       });
     });
 
-    describe ("for teacher", function () {
+    describe("for teacher", function () {
       var teacherUser;
 
       beforeEach(function () {
@@ -202,29 +210,29 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
         panel.user_ = teacherUser;
       });
 
-      it ("true if user owns section", function () {
+      it("true if user owns section", function () {
         panel.shardID_ = 'anyoldshardname_42';
-        assert.equal(true, panel.canCurrentUserResetShard());
+        assert.isTrue(panel.canCurrentUserResetShard());
 
         panel.shardID_ = 'someothershardname_43';
-        assert.equal(true, panel.canCurrentUserResetShard());
+        assert.isTrue(panel.canCurrentUserResetShard());
       });
 
-      it ("false if user does not own section", function () {
+      it("false if user does not own section", function () {
         panel.shardID_ = 'anyoldshardname_44';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
 
         panel.shardID_ = 'someothershardname_45';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
       });
 
-      it ("false with word (non-section) shard IDs", function () {
+      it("false with word (non-section) shard IDs", function () {
         panel.shardID_ = 'customshard_test';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
       });
     });
 
-    describe ("for student", function () {
+    describe("for student", function () {
       var studentUser;
 
       beforeEach(function () {
@@ -234,23 +242,23 @@ describe("NetSimRemoteNodeSelectionPanel", function () {
         panel.user_ = studentUser;
       });
 
-      it ("false for numeric (section) shard IDs", function () {
+      it("false for numeric (section) shard IDs", function () {
         panel.shardID_ = 'anyoldshardname_42';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
 
         panel.shardID_ = 'someothershardname_43';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
 
         panel.shardID_ = 'anyoldshardname_44';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
 
         panel.shardID_ = 'someothershardname_45';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
       });
 
-      it ("false with word (non-section) shard IDs", function () {
+      it("false with word (non-section) shard IDs", function () {
         panel.shardID_ = 'customshard_test';
-        assert.equal(false, panel.canCurrentUserResetShard());
+        assert.isFalse(panel.canCurrentUserResetShard());
       });
     });
 

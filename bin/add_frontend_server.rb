@@ -9,26 +9,33 @@ require 'etc'
 MAX_WAIT_TIME = 600 #Wait no longer than 10 minutes for instance creation. Typically this takes a couple minutes
 
 # Executes an arbitrary command on an ssh channel, prints the output to console, bails out if the command fails
-# channel: ssh channel that you get from open_channel
+# ssh: ssh channel from Net::SSH start
 # command: Command to execute on the remote host
 # exit_error_string: Error message to throw if the command exits with something other than 1
-def execute_ssh_on_channel(channel, command, exit_error_string)
-  channel.exec(command) do |ch|
-    ch.on_data do |_, data|
-      $stdout.print data
-    end
+#
+# Your invocation would look something like
+# Net::SSH.start(hostname, username) do |ssh|
+#   execute_ssh_on_channel(ssh, 'what to do', 'oh no something happened')
+# end
+def execute_ssh_on_channel(ssh, command, exit_error_string)
+  ssh.open_channel do |channel|
+    channel.exec(command) do |ch|
+      ch.on_data do |_, data|
+        $stdout.print data
+      end
 
-    ch.on_extended_data do |_, _, data|
-      $stderr.print data
-    end
+      ch.on_extended_data do |_, _, data|
+        $stderr.print data
+      end
 
-    ch.on_request 'exit-status' do |_, data|
-      if data.read_long != 0
-        throw exit_error_string
+      ch.on_request 'exit-status' do |_, data|
+        if data.read_long != 0
+          throw exit_error_string
+        end
       end
     end
   end
-
+  ssh.loop
 end
 
 options = {}
@@ -42,10 +49,14 @@ OptionParser.new do |opts|
   opts.on('-h', '--help', 'Print this') { puts options; exit }
 end.parse!
 
+unless ['production'].include?(options['environment'])
+  throw 'Environments other than production are currently unsupported'
+end
+
 raise OptionParser::MissingArgument, 'Environment is required' if options['environment'].nil?
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
-  puts ssh.exec!('echo \'Verifying connection to gateway\'')
+  puts ssh.exec!('echo "Verifying connection to gateway"')
 end
 
 ec2client = Aws::EC2::Client.new
@@ -54,12 +65,14 @@ instances = ec2client.describe_instances
 
 #Determine distribution of availability zones, pick the one that has the least capacity among frontend instances
 frontend_instances = instances.reservations.map do |reservation|
-  reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key == 'Name' && tag.value.include?('frontend')}}
+  reservation.instances.select{|instance| instance.state.name == 'running' && instance.tags.detect{|tag| tag.key ==
+      'Name' && tag.value.include?('frontend')}}
 end
 
 frontend_instances.flatten!
 
-instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution| instance_distribution[instance.placement.availability_zone] += 1}
+instance_distribution = frontend_instances.each_with_object(Hash.new(0)){|(instance, _), instance_distribution|
+  instance_distribution[instance.placement.availability_zone] += 1}
 determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
 
 puts "Using underscaled instance zone #{determined_instance_zone}"
@@ -78,7 +91,7 @@ Net::SSH.start('gateway.code.org', username) do |ssh|
   client_list = ssh.exec!("knife client list | egrep \'^#{instance_name}$\'")
 
   unless client_list.nil?
-    throw 'Client name is in use and is likely stale. Please log into gateway and delete the client, then rerun this command'
+    throw 'Client name is in use and is likely stale. Log into gateway and delete the client, then rerun this command'
   end
 
 end
@@ -95,7 +108,7 @@ run_instance_response = ec2client.run_instances ({
                                                     monitoring: {
                                                         enabled: true
                                                     },
-                                                    disable_api_termination: true, #Prevent against accidental termination
+                                                    disable_api_termination: true, #Prevent against api termination
                                                     placement: {
                                                         availability_zone: determined_instance_zone
                                                     },
@@ -156,21 +169,22 @@ ec2client.create_tags({
                           ],
                       })
 
-puts "Created instance #{instance_id} with name #{instance_name}"
 
 private_dns_name = ec2client.describe_instances({instance_ids: [instance_id],}).reservations[0].instances[0].private_dns_name
-
-puts "Private DNS name #{private_dns_name}"
+puts "Created instance #{instance_id} with name #{instance_name} and private dns name #{private_dns_name}"
 
 puts 'Writing new configuration file'
 
+file_suffix = rand(100000000)
+
 Net::SSH.start('gateway.code.org', username) do |ssh|
-  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config")
+  ssh.exec!("knife environment show #{options['environment']} -F json > /tmp/old_knife_config#{file_suffix}")
 end
 
-Net::SCP.download!('gateway.code.org', username, '/tmp/old_knife_config', '/tmp/knife_config')
+Net::SCP.download!('gateway.code.org', username, "/tmp/old_knife_config#{file_suffix}",
+                   "/tmp/knife_config#{file_suffix}")
 
-configuration_json = JSON.parse(File.read('/tmp/knife_config'))
+configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
 configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
 configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_name] = private_dns_name
 
@@ -178,26 +192,14 @@ File.open('/tmp/new_knife_config.json', 'w') do |f|
   f.write(JSON.dump(configuration_json))
 end
 
-Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', '/tmp/new_knife_config.json')
-puts 'New configuration file written.'
+Net::SCP.upload!('gateway.code.org', username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
+puts 'New configuration file uploaded, now loading it.'
 
 Net::SSH.start('gateway.code.org', username) do |ssh|
+  execute_ssh_on_channel(ssh,
+                         "knife environment from file /tmp/new_knife_config#{file_suffix}.json",
+                         "Unable to update environment #{options['environment']}")
+  puts 'Done executing! Cleaning up!'
 
-  ssh.open_channel do |ch|
-    execute_ssh_on_channel(ch,
-                           "knife environment from file /tmp/new_knife_config.json",
-                           'Unable to edit the configuration from file - log into gateway and look at the config file generated')
-    ch.exec('rm /tmp/old_knife_config')
-    ch.exec('rm /tmp/new_knife_config.json')
-
-    # Commented out for now - bootstrapping will still be done manually
-    #
-    # execute_ssh_on_channel(ch,
-    #                        "knife bootstrap #{private_dns_name} -x ubuntu --sudo -E production -N #{instance_name} -r role[front-end]",
-    #                        "Unable to bootstrap instance #{instance_name} - log into gateway and retry bootstrapping.")
-    #
-    # execute_ssh_on_channel(ch,
-    #                        "ssh production-daemon 'sudo chef-client'",
-    #                        'Unable to run chef-client on production daemon')
-  end
+  ssh.exec!("rm /tmp/*#{file_suffix}*")
 end
