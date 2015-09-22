@@ -7,9 +7,9 @@ class VolunteerEngineerSubmission
     result[:headline_s] = required stripped data[:headline_s]
     result[:email_s] = required email_address data[:email_s]
     result[:location_s] = required stripped data[:location_s]
-    result[:time_commitment_s] = required data[:time_commitment_s]
     result[:location_flexibility_ss] = nil_if_empty data[:location_flexibility_ss]
     result[:volunteer_after_hoc_b] = nil_if_empty data[:volunteer_after_hoc_b]
+    result[:time_commitment_s] = nil_if_empty data[:time_commitment_s]
     result[:languages_ss] = nil_if_empty data[:languages_ss]
     if result[:languages_ss].class != FieldError && (result[:languages_ss]||[]).include?('other')
       result[:languages_other_ss] = required stripped csv_multivalue data[:languages_other_ss]
