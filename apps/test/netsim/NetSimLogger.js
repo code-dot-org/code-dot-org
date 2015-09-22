@@ -64,7 +64,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript === undefined);
+    assert.isUndefined(fauxConsole.transcript);
   });
 
   it("pipes all output to 'log' on older consoles", function () {
@@ -75,7 +75,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "LOG:" + infoMsg + "\n" +
         "LOG:" + warnMsg + "\n" +
         "LOG:" + errorMsg + "\n"
@@ -90,7 +90,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "INFO:" + infoMsg + "\n" +
         "WARN:" + warnMsg + "\n" +
         "ERROR:" + errorMsg + "\n"
@@ -102,7 +102,7 @@ describe("NetSimLogger", function () {
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(logMsg);
-    assert(fauxConsole.transcript === "INFO:" + logMsg + "\n");
+    assert.equal(fauxConsole.transcript, "INFO:" + logMsg + "\n");
   });
 
   it("log method respects info, error, warn settings", function () {
@@ -110,15 +110,15 @@ describe("NetSimLogger", function () {
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(infoMsg, LogLevel.INFO);
-    assert(fauxConsole.transcript === "INFO:" + infoMsg + "\n");
+    assert.equal(fauxConsole.transcript, "INFO:" + infoMsg + "\n");
 
     fauxConsole.transcript = "";
     logger.log(warnMsg, LogLevel.WARN);
-    assert(fauxConsole.transcript === "WARN:" + warnMsg + "\n");
+    assert.equal(fauxConsole.transcript, "WARN:" + warnMsg + "\n");
 
     fauxConsole.transcript = "";
     logger.log(errorMsg, LogLevel.ERROR);
-    assert(fauxConsole.transcript === "ERROR:" + errorMsg + "\n");
+    assert.equal(fauxConsole.transcript, "ERROR:" + errorMsg + "\n");
   });
 
   it("log method uses LOG endpoint for bad LogLevel argument", function () {
@@ -126,7 +126,7 @@ describe("NetSimLogger", function () {
     var logger = new NetSimLogger(fauxConsole, LogLevel.VERBOSE);
 
     logger.log(logMsg, 42);
-    assert(fauxConsole.transcript === "LOG:" + logMsg + "\n");
+    assert.equal(fauxConsole.transcript, "LOG:" + logMsg + "\n");
   });
 
   it("Shows all messages at VERBOSE log level", function () {
@@ -137,7 +137,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "INFO:" + infoMsg + "\n" +
         "WARN:" + warnMsg + "\n" +
         "ERROR:" + errorMsg + "\n"
@@ -152,7 +152,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "INFO:" + infoMsg + "\n" +
         "WARN:" + warnMsg + "\n" +
         "ERROR:" + errorMsg + "\n"
@@ -167,7 +167,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "WARN:" + warnMsg + "\n" +
         "ERROR:" + errorMsg + "\n"
     );
@@ -181,7 +181,7 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript ===
+    assert.equal(fauxConsole.transcript,
         "ERROR:" + errorMsg + "\n"
     );
   });
@@ -194,6 +194,6 @@ describe("NetSimLogger", function () {
     logger.warn(warnMsg);
     logger.error(errorMsg);
 
-    assert(fauxConsole.transcript === "");
+    assert.strictEqual(fauxConsole.transcript, "");
   });
 });
