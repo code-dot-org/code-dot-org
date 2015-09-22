@@ -14,7 +14,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "start_direction": "1",
-    "step_mode": "0"
+    "step_mode": 1
   }
 }]]></config>
   <blocks>
