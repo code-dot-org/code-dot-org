@@ -37,7 +37,7 @@ describe("NetSimLocalClientNode", function () {
     NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return newRouter;
   };
 
@@ -50,12 +50,12 @@ describe("NetSimLocalClientNode", function () {
     NetSimLocalClientNode.create(testShard, "testLocalNode", function (err, node) {
       testLocalNode = node;
     });
-    assert(undefined !== testLocalNode, "Made a local node");
+    assert.isDefined(testLocalNode, "Made a local node");
 
     NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
       testRemoteNode = node;
     });
-    assert(undefined !== testRemoteNode, "Made a remote node");
+    assert.isDefined(testRemoteNode, "Made a remote node");
   });
 
   describe("onNodeTableChange_", function () {
@@ -68,13 +68,13 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.setLostConnectionCallback(function () {
         lostConnection = true;
       });
-      assert.equal(false, lostConnection);
+      assert.isFalse(lostConnection);
     });
 
     it("detects when own row has gone away and calls lost connection callback", function () {
       testShard.nodeTable.api_.remoteTable.deleteMany([testLocalNode.entityID], function () {});
       testShard.nodeTable.refresh();
-      assert.equal(true, lostConnection);
+      assert.isTrue(lostConnection);
     });
 
     it("detects shard reset even when own ID has been reclaimed", function () {
@@ -84,7 +84,7 @@ describe("NetSimLocalClientNode", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function () { });
 
       testShard.nodeTable.refresh();
-      assert.equal(true, lostConnection);
+      assert.isTrue(lostConnection);
     });
   });
 
@@ -114,8 +114,8 @@ describe("NetSimLocalClientNode", function () {
       // connection should be broken
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
       testLocalNode.onWireTableChange_();
-      assert.equal(testLocalNode.getOutgoingWire(), null);
-      assert.equal(testLocalNode.myRemoteClient, null);
+      assert.isNull(testLocalNode.getOutgoingWire());
+      assert.isNull(testLocalNode.myRemoteClient);
 
     });
 
@@ -140,7 +140,7 @@ describe("NetSimLocalClientNode", function () {
       var newLocalWireRow = testLocalNode.getOutgoingWire().buildRow();
       newLocalWireRow.id = 1;
       assert.deepEqual(newLocalWireRow, localWireRow);
-      assert.equal(testLocalNode.myRemoteClient, null);
+      assert.isNull(testLocalNode.myRemoteClient);
 
       testThirdNode.connectToNode(testRemoteNode, function () {});
 
@@ -148,7 +148,7 @@ describe("NetSimLocalClientNode", function () {
       thirdWireRow.id = 3;
       testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
       testLocalNode.onWireTableChange_();
-      assert.equal(testLocalNode.getOutgoingWire(), null);
+      assert.isNull(testLocalNode.getOutgoingWire());
 
     });
   });
@@ -159,7 +159,7 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.sendMessage('101010010101', function (e) {
         error = e;
       });
-      assert(error instanceof Error);
+      assert.instanceOf(error, Error);
       assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
@@ -179,8 +179,8 @@ describe("NetSimLocalClientNode", function () {
         err = e;
         result = r;
       });
-      assert.equal(null, err);
-      assert.equal(undefined, result);
+      assert.isNull(err);
+      assert.isUndefined(result);
     });
 
     it("Generated message has correct from/to node IDs", function () {
@@ -221,7 +221,7 @@ describe("NetSimLocalClientNode", function () {
       testLocalNode.sendMessages(payloads, function (e) {
         error = e;
       });
-      assert(error instanceof Error);
+      assert.instanceOf(error, Error);
       assert.equal(error.message, 'Cannot send message; not connected.');
       assertTableSize(testShard, 'messageTable', 0);
     });
@@ -232,8 +232,8 @@ describe("NetSimLocalClientNode", function () {
         error = e;
         result = r;
       });
-      assert.equal(null, error);
-      assert.equal(undefined, result);
+      assert.isNull(error);
+      assert.isUndefined(result);
     });
 
     it("puts all of the payloads into the message table", function () {
@@ -356,10 +356,10 @@ describe("NetSimLocalClientNode", function () {
       });
 
       it("Leaves remaining fields undefined", function () {
-        assert.equal(undefined, wireRow.localAddress);
-        assert.equal(undefined, wireRow.remoteAddress);
-        assert.equal(undefined, wireRow.localHostname);
-        assert.equal(undefined, wireRow.remoteHostname);
+        assert.isUndefined(wireRow.localAddress);
+        assert.isUndefined(wireRow.remoteAddress);
+        assert.isUndefined(wireRow.localHostname);
+        assert.isUndefined(wireRow.remoteHostname);
       });
     });
   });
