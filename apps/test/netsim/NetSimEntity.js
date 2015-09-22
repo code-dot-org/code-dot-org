@@ -23,7 +23,7 @@ testUtils.setupLocale('netsim');
 describe("NetSimEntity", function () {
   it("default entityID is undefined", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assert.equal(entity.entityID, undefined);
+    assert.isUndefined(entity.entityID);
   });
 
   it("doesn't implement getTable", function () {
@@ -64,8 +64,8 @@ describe("NetSimEntity", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         entity = newNode;
       });
-      assert(entity !== undefined);
-      assert(entity instanceof NetSimClientNode);
+      assert.isDefined(entity);
+      assert.instanceOf(entity, NetSimClientNode);
       assertTableSize(testShard, 'nodeTable', 1);
 
     });
@@ -83,7 +83,7 @@ describe("NetSimEntity", function () {
       NetSimEntity.get(NetSimClientNode, 15, testShard, function (err, foundEntity) {
         entity = foundEntity;
       });
-      assert(null === entity, "Should return null when entity not found, returned " + entity);
+      assert.isNull(entity, "Should return null when entity not found, returned " + entity);
     });
 
     it("returns entity of correct type, if found", function () {
@@ -91,13 +91,13 @@ describe("NetSimEntity", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         clientNodeID = newNode.entityID;
       });
-      assert(clientNodeID !== undefined, "Expected a client node ID");
+      assert.isDefined(clientNodeID, "Expected a client node ID");
 
       var entity;
       NetSimEntity.get(NetSimClientNode, clientNodeID, testShard, function (err, foundEntity) {
         entity = foundEntity;
       });
-      assert(entity instanceof NetSimClientNode, "Expect to create correct entity type");
+      assert.instanceOf(entity, NetSimClientNode, "Expect to create correct entity type");
       assert.equal(entity.entityID, clientNodeID);
     });
   });
@@ -127,8 +127,8 @@ describe("NetSimEntity", function () {
       var nodes = testShard.nodeTable.readAll().map(function (row) {
         return new NetSimClientNode(testShard, row);
       });
-      assert.equal(3, nodes.length);
-      assert(nodes[0] instanceof NetSimClientNode);
+      assert.equal(nodes.length, 3);
+      assert.instanceOf(nodes[0], NetSimClientNode);
 
       NetSimEntity.destroyEntities(nodes, function () {});
       assertTableSize(testShard, 'nodeTable', 0);
