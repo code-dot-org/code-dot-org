@@ -152,7 +152,8 @@ Breakfast and lunch will be served.
 
 **Location**
 
-AMA New York Executive Conference Center<br/>
+Executive Conference Center<br/>
+8th Floor
 1601 Broadway<br/>
 New York, NY 10019<br/>
 

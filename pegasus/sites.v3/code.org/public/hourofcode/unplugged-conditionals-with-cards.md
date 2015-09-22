@@ -13,7 +13,7 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Conditionals with Cards](/files/ConditionalsHOC.pdf)
+- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
 - Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
 
 ### Extension Activities:
