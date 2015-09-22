@@ -23,16 +23,22 @@
 /[if lt IE 9]
   %script{src: "/js/es5-shim.min.js"}
 
-%h1 Software engineers: Help local teachers as a volunteer / mentor
+%h1 Volunteer for the Hour of Code
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
-  %p.form-intro-text Please enter the following information if you’re interested in hearing about local volunteer opportunities. Fields marked with a <span class="required-field-marker">*</span> are required.
+  %p.form-intro-text Please enter the following information if you are a computer science student or software professional, and you’re interested in helping local teachers for the Hour of Code. Fields marked with a <span class="form-required-field">*</span> are required.
   #error-message{style: 'display: none'}
 
   .form-group
     %label.control-label{for: "volunteer-name"} Name
     %span.form-required-field *
     %div
-      %input#volunteer-name.form-control{name: "name_s", placeholder: "Name", type: "text", required: true, value: name_s}/
+      %input#volunteer-name.form-control{name: "name_s", placeholder: "Full Name", type: "text", required: true, value: name_s}/
+
+  .form-group
+    %label.control-label{for: "volunteer-headline"} Headline
+    %span.form-required-field *
+    %div
+      %input#volunteer-headline.form-control{name: "headline_s", placeholder: "Title, Company", type: "text", required: true}/
 
   .form-group
     %label.control-label{for: "volunteer-email"} Email address

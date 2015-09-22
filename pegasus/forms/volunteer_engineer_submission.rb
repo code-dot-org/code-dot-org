@@ -4,6 +4,7 @@ class VolunteerEngineerSubmission
     result = {}
 
     result[:name_s] = required stripped data[:name_s]
+    result[:headline_s] = required stripped data[:headline_s]
     result[:email_s] = required email_address data[:email_s]
     result[:location_s] = required stripped data[:location_s]
     result[:time_commitment_s] = required data[:time_commitment_s]
