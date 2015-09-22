@@ -8,18 +8,10 @@ markdown <<MARKDOWN
 
 Like the Circles of Evaluation, Contracts serve to help clarify student thinking and understanding. A student who can effectively compose a contract for any given function demonstrates an understanding of how that function is to be used (but not necessarily the relationship between its domain and range). This is again a place where some students will feel they can get by just fine without writing down contracts, but will likely get bitten down the road when they encounter functions more complicated than they can solve without support. Push your students to document contracts and you'll save yourself pain down the road as you can direct them to their contract logs to answer questions.
 
-#### Supplemental Worksheets
+#### Keep a Communal Contract Log
 
-- [Completing Partial Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/complete-coe-from-arith1.html)
-- [Completing Partial Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/complete-coe-from-arith2.html)
-- [Creating Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/arith-to-coe1.html)
-- [Creating Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/arith-to-coe2.html)
-- [Converting Circles of Evaluation 1](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/coe-to-arith1.html)
-- [Converting Circles of Evaluation 2](http://www.bootstrapworld.org/materials/fall2015/courses/bs1/units/unit1/exercises/Order-of-Operations/coe-to-arith2.html)
-<br><br>
-These worksheets are just the tip of the iceberg - if you've put together any supplemental materials for teaching the Circles of Evaluation in your classroom, share them with the rest of us on the forum.
+One way to help to help remind students to keep up their contract logs, and to provide additional support for students working through the Design Recipe is to keep a large poster Contract Log on your wall. Use this as a place to document contracts from functions students encounter both in your own text book as well as when programming to strengthen the connection between math and CS for students.
 
-<a href="http://forum.code.org/c/cs-in-algebra" target="blank"><button class="plc">Share Your Supplements >></button></a><br>
 
 <br><br>
 
