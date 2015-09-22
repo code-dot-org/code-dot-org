@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "At this point you've programmed a video game with a moving target and danger, both of which return to the screen once they've left, and a player that responds to keyboard input. Click run to see how your game is currently working, and then we'll dig into the final missing piece - collision detection!",
+    "instructions": "At this point you've programmed a video game with a moving Target and Danger, both of which return to the screen once they've left, and a Player that responds to keyboard input. Click \"Run\" to see how your game is currently working, and then we'll dig into the final missing piece - collision detection!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,7 +36,11 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "video_key": "alg_16_biggame_collision_detection",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "At this point you've programmed a video game with a moving Target and Danger, both of which return to the screen once they've left, and a Player that responds to keyboard input. Click \"Run\" to see how your game is currently working, and then we'll dig into the final missing piece - collision detection!",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>

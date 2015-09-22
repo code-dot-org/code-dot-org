@@ -10,6 +10,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -531,8 +532,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
     }.bind(this));
     isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
         wireRows.some(function (row) {
-          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
-              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
+          return row.remoteNodeID === myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID === myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;
     if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
       NetSimAlert.info(i18n.alertConnectionRefused());

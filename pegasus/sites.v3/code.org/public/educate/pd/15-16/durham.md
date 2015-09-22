@@ -17,13 +17,9 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 

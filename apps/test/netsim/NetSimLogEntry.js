@@ -1,17 +1,26 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
+
 var testUtils = require('../util/testUtils');
-var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
-var assertWithinRange = testUtils.assertWithinRange;
-var assertOwnProperty = testUtils.assertOwnProperty;
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
-var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
+var Packet = require('@cdo/apps/netsim/Packet');
+
+var assert = testUtils.assert;
 var assertTableSize = NetSimTestUtils.assertTableSize;
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var binaryToBase64 = DataConverters.binaryToBase64;
 var base64ToBinary = DataConverters.base64ToBinary;
+var binaryToBase64 = DataConverters.binaryToBase64;
+var fakeShard = NetSimTestUtils.fakeShard;
 
 describe("NetSimLogEntry", function () {
   var testShard;
@@ -21,32 +30,32 @@ describe("NetSimLogEntry", function () {
     testShard = fakeShard();
   });
 
-  it ("uses the logEntry table", function () {
+  it("uses the logEntry table", function () {
     var logEntry = new NetSimLogEntry(testShard);
-    assert(logEntry.getTable() === testShard.logTable, "Using wrong table");
+    assert.strictEqual(logEntry.getTable(), testShard.logTable, "Using wrong table");
   });
 
-  it ("has expected row structure and default values", function () {
+  it("has expected row structure and default values", function () {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
-    assertOwnProperty(row, 'nodeID');
-    assertEqual(row.nodeID, undefined);
+    assert(row.hasOwnProperty('nodeID'));
+    assert.isUndefined(row.nodeID);
 
-    assertOwnProperty(row, 'base64Binary');
-    assertOwnProperty(row.base64Binary, 'string');
-    assertEqual(row.base64Binary.string, '');
-    assertOwnProperty(row.base64Binary, 'len');
-    assertEqual(row.base64Binary.len, 0);
+    assert.property(row, 'base64Binary');
+    assert.property(row.base64Binary, 'string');
+    assert.strictEqual(row.base64Binary.string, '');
+    assert.property(row.base64Binary, 'len');
+    assert.strictEqual(row.base64Binary.len, 0);
 
-    assertOwnProperty(row, 'status');
-    assertEqual(row.status, NetSimLogEntry.LogStatus.SUCCESS);
+    assert.property(row, 'status');
+    assert.equal(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
-    assertOwnProperty(row, 'timestamp');
-    assertWithinRange(row.timestamp, Date.now(), 10);
+    assert.property(row, 'timestamp');
+    assert.closeTo(row.timestamp, Date.now(), 10);
   });
 
-  it ("initializes from row", function () {
+  it("initializes from row", function () {
     var row = {
       id: 1,
       nodeID: 42,
@@ -59,25 +68,25 @@ describe("NetSimLogEntry", function () {
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
-    assertEqual(logEntry.entityID, 1);
-    assertEqual(logEntry.nodeID, 42);
-    assertEqual(logEntry.binary, '1001001');
-    assertEqual(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
-    assertEqual(logEntry.timestamp, 52000);
+    assert.equal(logEntry.entityID, 1);
+    assert.equal(logEntry.nodeID, 42);
+    assert.equal(logEntry.binary, '1001001');
+    assert.equal(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
+    assert.equal(logEntry.timestamp, 52000);
   });
 
-  it ("gracefully converts a malformed base64Payload to empty string", function () {
+  it("gracefully converts a malformed base64Payload to empty string", function () {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
         string: "totally not a base64 string",
         len: 7
       },
     });
-    assertEqual(logEntry.binary, '');
+    assert.equal(logEntry.binary, '');
   });
 
   describe("static method create", function () {
-    it ("adds an entry to the log table", function () {
+    it("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
       NetSimLogEntry.create(testShard, null, '10100101', null, function () {});
@@ -85,7 +94,7 @@ describe("NetSimLogEntry", function () {
       assertTableSize(testShard, 'logTable', 1);
     });
 
-    it ("Puts row values in remote table", function () {
+    it("Puts row values in remote table", function () {
       var nodeID = 1;
       var binary = '1001010100101';
       var status = NetSimLogEntry.LogStatus.SUCCESS;
@@ -95,29 +104,29 @@ describe("NetSimLogEntry", function () {
       testShard.logTable.refresh(function (err, rows) {
         var row = rows[0];
         var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
-        assertEqual(row.nodeID, nodeID);
-        assertEqual(rowBinary, binary);
-        assertEqual(row.status, status);
-        assertWithinRange(row.timestamp, Date.now(), 10);
+        assert.equal(row.nodeID, nodeID);
+        assert.equal(rowBinary, binary);
+        assert.equal(row.status, status);
+        assert.closeTo(row.timestamp, Date.now(), 10);
       });
     });
 
-    it ("Returns log and no error on success", function () {
+    it("Returns log and no error on success", function () {
       NetSimLogEntry.create(testShard, null, '10101010', null, function (err, result) {
-        assert(err === null, "Error is null on success");
-        assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
+        assert.isNull(err, "Error is null on success");
+        assert.instanceOf(result, NetSimLogEntry, "Result is a NetSimLogEntry");
       });
     });
   });
 
-  it ("can be removed from the remote table with destroy()", function () {
+  it("can be removed from the remote table with destroy()", function () {
     var testRow;
 
     // Create a logEntry row in remote table
     testShard.logTable.create({}, function (err, row) {
       testRow = row;
     });
-    assert(testRow !== undefined, "Failed to create test row");
+    assert.isDefined(testRow, "Failed to create test row");
     assertTableSize(testShard, 'logTable', 1);
 
     // Call destroy()
@@ -128,7 +137,7 @@ describe("NetSimLogEntry", function () {
     assertTableSize(testShard, 'logTable', 0);
   });
 
-  it ("can extract binary data based on standard format", function () {
+  it("can extract binary data based on standard format", function () {
     NetSimGlobals.getLevelConfig().addressFormat = '4';
     NetSimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
@@ -139,11 +148,11 @@ describe("NetSimLogEntry", function () {
       Packet.HeaderType.PACKET_INDEX,
       Packet.HeaderType.PACKET_COUNT
     ]);
-    assertEqual('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
-    assertEqual('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
-    assertEqual('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
-    assertEqual('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
-    assertEqual('01010110', logEntry.getMessageBinary());
+    assert.equal('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));
+    assert.equal('2', logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS));
+    assert.equal('3', logEntry.getHeaderField(Packet.HeaderType.PACKET_INDEX));
+    assert.equal('4', logEntry.getHeaderField(Packet.HeaderType.PACKET_COUNT));
+    assert.equal('01010110', logEntry.getMessageBinary());
   });
 
 });
