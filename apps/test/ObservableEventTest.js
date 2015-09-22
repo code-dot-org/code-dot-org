@@ -14,7 +14,7 @@ describe("ObservableEvent", function () {
   });
 
   describe("Registration and call ordering", function () {
-    it ("calls registered functions in order of registration", function () {
+    it("calls registered functions in order of registration", function () {
       eventA.register(funcX);
       eventA.register(funcX);
       eventA.register(funcY);
@@ -26,7 +26,7 @@ describe("ObservableEvent", function () {
       assert(log === "XXYXY");
     });
 
-    it ("does not share functions between events", function () {
+    it("does not share functions between events", function () {
       eventA.register(funcX);
       eventB.register(funcY);
 
@@ -35,7 +35,7 @@ describe("ObservableEvent", function () {
       assert(log === "X");
     });
 
-    it ("can be fired multiple times", function () {
+    it("can be fired multiple times", function () {
       eventA.register(funcX);
       eventA.register(funcX);
       eventA.register(funcY);
@@ -59,7 +59,7 @@ describe("ObservableEvent", function () {
       key3 = eventA.register(funcX);
     });
 
-    it ("returns a frozen key", function () {
+    it("returns a frozen key", function () {
       assert(Object.isFrozen(key2));
 
       // Modifying a frozen key will either fail silently,
@@ -74,20 +74,20 @@ describe("ObservableEvent", function () {
           "Returned keys must be frozen.");
     });
 
-    it ("can be unregistered with given key", function () {
+    it("can be unregistered with given key", function () {
       eventA.unregister(key1);
       eventA.notifyObservers();
       assert(log === "YX");
     });
 
-    it ("creates unique keys for different entries of the same function", function () {
+    it("creates unique keys for different entries of the same function", function () {
       eventA.unregister(key3);
       eventA.notifyObservers();
       assert(log === "XY");
     });
   });
 
-  it ("respects binding `this` to the function passed into register", function () {
+  it("respects binding `this` to the function passed into register", function () {
     var observerA = { log: "" };
     var observerB = { log: "" };
     var funcUsesThis = function () {
@@ -106,7 +106,7 @@ describe("ObservableEvent", function () {
   });
 
 
-  it ("passes arguments through to observers", function () {
+  it("passes arguments through to observers", function () {
     var funcWithArg = function (note) {
       log += note;
     };
