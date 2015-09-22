@@ -1,6 +1,7 @@
 ---
 layout: none
 theme: none
+content-type: text/ng-template
 ---
 
 %div
@@ -20,7 +21,7 @@ theme: none
       %dd {{student.name}}
     %dl{"ng-if" => "section.login_type === 'picture'"}
       %dt= I18n.t('dashboard_students_secret_picture_title')
-      %dd  
+      %dd
         %img{"ng-src" => "/images/{{student.secret_picture_path}}",
              alt: "{{student.secret_picture_name}}",
              title: "{{student.secret_picture_name}}",
