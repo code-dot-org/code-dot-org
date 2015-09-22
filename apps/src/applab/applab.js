@@ -1616,28 +1616,73 @@ Applab.getAssetDropdown = function (typeFilter) {
 /**
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
- * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @param {string} [filterSelector] Optional selector to filter for.
  * @returns {Array}
  */
-Applab.getIdDropdown = function (tagFilter) {
-  var elements = $('#divApplab').children().toArray().concat(
-      $('#divApplab').children().children().toArray());
-
-  var filteredIds = [];
-  elements.forEach(function (element) {
-    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
-      filteredIds.push(element.id);
-    }
-  });
-  filteredIds.sort();
-
-  return filteredIds.map(function(id) {
-    return {
-      text: quote(id),
-      display: quote(id)
-    };
-  });
+Applab.getIdDropdown = function (filterSelector) {
+  return Applab.getIdDropdownFromDom_($(document), filterSelector);
 };
+
+/**
+ * Internal version of getIdDropdownFromDom_, which takes a documentRoot
+ * argument to remove its global dependency and make it testable.
+ * @param {jQuery} documentRoot
+ * @param {string} filterSelector
+ * @returns {Array}
+ * @private
+ */
+Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
+  var divApplabChildren = documentRoot.find('#divApplab').children();
+  var elements = divApplabChildren.toArray().concat(
+      divApplabChildren.children().toArray());
+
+  return elements
+      .filter(makeElementFilterFunction(filterSelector))
+      .sort(function (elementA, elementB) {
+        return elementA.id < elementB.id ? -1 : 1;
+      })
+      .map(function (element) {
+        return {
+          text: quote(element.id),
+          display: quote(element.id)
+        };
+      });
+};
+
+/**
+ * @param {string} [selector] - A simple selector.  Can select by #elementId,
+ *        .class-name, or TAGNAME.  If omitted, returned filter function will
+ *        include everything.
+ * @returns {function(Element)}
+ */
+function makeElementFilterFunction(selector) {
+  var needle;
+  if (/^#/.test(selector)) {
+    // Test element ID
+    needle = selector.substr(1);
+    return function (element) {
+      return element.id === needle;
+    };
+  } else if (/^\./.test(selector)) {
+    // Test element class
+    // We wrap the class name in word boundaries to prevent partial-matches
+    // e.g.
+    needle = selector.substr(1);
+    return function (element) {
+      return element.className.split(/\s/).indexOf(needle) !== -1;
+    };
+  } else if ('string' === typeof(selector)) {
+    // Test element tagname
+    return function (element) {
+      return element.tagName.toUpperCase() === selector.toUpperCase();
+    };
+  }
+
+  // By default, include everything
+  return function () {
+    return true;
+  };
+}
 
 /**
  * @returns {HTMLElement} The first "screen" that isn't hidden.
