@@ -36,8 +36,7 @@ ____________________________________________________
 
 This example creates an image of the Code.org logo and two buttons. Clicking on the appropriate button will either hide or show the logo.
 
-
-```
+<pre>
 image("logo", "http://code.org/images/logo.png"); // creates the Code.org logo
 
 button("hideButton", "Hide logo"); // creates the hide logo button
@@ -51,7 +50,7 @@ onEvent("showButton", "click", function(event) { // when the show button is clic
   showElement("logo");
 });
 
-```
+</pre>
 
 [/example]
 
@@ -63,8 +62,7 @@ ____________________________________________________
 
 This example creates an image of the Code.org logo that blinks.
 
-
-```
+<pre>
 image("logo", "http://code.org/images/logo.png"); // create an image of the Code.org logo
 
 setInterval(function() { // create an interval timer that will hide the Code.org logo
@@ -77,7 +75,7 @@ setInterval(function() { // create an interval timer that will hide the Code.org
   }, 500); // Set the delay to 500 milliseconds (0.5 seconds)
 
 }, 1000); // Set the interval to 1000 milliseconds (1 second)
-```
+</pre>
 
 [/example]
 
@@ -86,10 +84,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 showElement(id);
-```
+</pre>
 
 [/syntax]
 

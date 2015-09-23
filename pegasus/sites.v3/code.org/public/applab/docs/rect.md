@@ -33,11 +33,10 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw first
 rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
-```
+</pre>
 
 [/example]
 
@@ -45,12 +44,11 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw first
 setFillColor("red"); //Set the fill color of future drawn shapes
 rect(50, 50, 100, 200); //Draw a 100x200 pixel rectangle at x:50 y:50 on the screen
-```
+</pre>
 
 
 [/example]
@@ -60,10 +58,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 rect(x, y, width, height);
-```
+</pre>
 
 [/syntax]
 
