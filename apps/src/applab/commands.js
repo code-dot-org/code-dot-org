@@ -3,6 +3,7 @@
 var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
+var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
@@ -1391,25 +1392,25 @@ applabCommands.getUserId = function (opts) {
 
 applabCommands.drawChart = function (opts) {
   apiValidateType(opts, 'drawChart', 'chartId', opts.chartId, 'string');
-  apiValidateType(opts, 'drawChart', 'table', opts.tableName, 'string');
   apiValidateType(opts, 'drawChart', 'chartType', opts.chartType, 'string');
+  apiValidateType(opts, 'drawChart', 'tableName', opts.tableName, 'string');
   apiValidateType(opts, 'drawChart', 'columns', opts.columns, 'array');
+  apiValidateType(opts, 'drawChart', 'options', opts.chartOptions, 'object', OPTIONAL);
   apiValidateType(opts, 'drawChart', 'callback', opts.callback, 'function', OPTIONAL);
-  apiValidateType(opts, 'drawChart', 'chartOptions', opts.chartOptions, 'object', OPTIONAL);
 
   // Validate chart with given ID exists
   apiValidateDomIdExistence(opts, 'drawChart', 'chartId', opts.chartId, true);
 
-
-  // Validate table with given name exists (later!)
-
-  // Validate given chartType is valid
-  var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-  var errorString = 'Unsupported chartType "' + opts.chartType + '" in call to drawChart().';
-  outputError(errorString, ErrorLevel.WARNING, line);
+  // Validate given chartType is valid (should this be inside ChartApi?
+  if (!ChartApi.supportsType(opts.chartType)) {
+    var line = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
+    var errorString = 'Unsupported chartType "' + opts.chartType + '" in call to drawChart().';
+    outputError(errorString, ErrorLevel.WARNING, line);
+  }
 
   // Validate known options (maybe?)
 
-  outputApplabConsole('drawChart()');
+  var chartApi = new ChartApi();
+  chartApi.drawChart(opts.chartId, opts.chartType, opts.tableName, opts.columns, function() {}, function () {});
   return true;
 };
