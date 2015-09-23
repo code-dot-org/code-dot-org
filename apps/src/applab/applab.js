@@ -907,8 +907,8 @@ Applab.onMouseUpDebugResizeBar = function (event) {
 Applab.clearEventHandlersKillTickLoop = function() {
   Applab.whenRunFunc = null;
   Applab.running = false;
-  $('#headers').removeClass('readonly');
-  $('#codeWorkspace').removeClass('readonly');
+  $('#headers').removeClass('dimmed');
+  $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
 
   var spinner = document.getElementById('running-spinner');
@@ -1252,8 +1252,8 @@ Applab.execute = function() {
   divApplab.firstChild.focus();
 
   Applab.running = true;
-  $('#headers').addClass('readonly');
-  $('#codeWorkspace').addClass('readonly');
+  $('#headers').addClass('dimmed');
+  $('#codeWorkspace').addClass('dimmed');
   designMode.renderDesignWorkspace();
   queueOnTick();
 };
