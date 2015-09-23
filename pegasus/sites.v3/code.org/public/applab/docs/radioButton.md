@@ -114,7 +114,7 @@ onEvent("favorite","click", function(event) {
     var radioIDs = ["Red","Blue","Green","Orange"];
     var index = 0;
     // Loop through radio buttons until one is checked
-    while (index &lt; radioIDs.length && !getChecked(radioIDs[index])) {
+    while (index < radioIDs.length && !getChecked(radioIDs[index])) {
       index++;
     }
     // Log the checked button
