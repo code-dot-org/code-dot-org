@@ -54,7 +54,7 @@ class ClientState
 
   # Returns true if there has been no progress in completing levels for
   # the current session.
-  def levels_progress_is_empty_for_test
+  def level_progress_is_empty_for_test
     !session[:progress] || session[:progress].empty?
   end
 
