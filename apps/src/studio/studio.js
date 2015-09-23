@@ -1195,6 +1195,14 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
   return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
 };
 
+Studio.getWallValue = function (row, col) {
+  if (Studio.walls) {
+    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  } else {
+    return Studio.map[row][col] & constants.WallAnyMask;
+  }
+};
+
 /**
  * Test to see if a collidable will be touching a wall given particular X/Y
  * position coordinates (center)
@@ -1223,8 +1231,7 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
-      if ((Studio.map[row][col] & SquareType.WALL) || 
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
+      if (Studio.getWallValue(row, col)) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -1691,6 +1698,8 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
+  Studio.background = null;
+  Studio.walls = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -2398,15 +2407,22 @@ Studio.clearDebugRects = function() {
   $(".debugRect").remove();
 };
 
-Studio.drawWallTile = function (svg, row, col, largeTile, wallTile) {
+Studio.drawWallTile = function (svg, wallVal, row, col, largeTile) {
   var srcRow, srcCol;
-
-  if (wallTile) {
-    srcRow = Math.floor(wallTile / 10);
-    srcCol = wallTile % 10;
+  if (wallVal == SquareType.WALL) {
+    // use a random coordinate
+    // TODO (cpirich): these should probably be chosen once at level load time
+    // and we should allow the level/skin to set specific row/col max values
+    // to ensure that reasonable tiles are chosen at random
+    srcRow = Math.floor(Math.random() * constants.WallRandomCoordMax);
+    // Since [0,0] is not a valid wall tile, ensure that we avoid column zero
+    // when row zero was chosen at random
+    srcCol = srcRow ?
+                Math.floor(Math.random() * constants.WallRandomCoordMax) :
+                1 + Math.floor(Math.random() * (constants.WallRandomCoordMax - 1));
   } else {
-    srcRow = Math.floor(Math.random() * 4);
-    srcCol = Math.floor(Math.random() * 4);
+    srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
+    srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
   }
 
   // We might end up scaling this piece a little.  In that case, it's likely
@@ -2514,7 +2530,7 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('spriteLayer');
+  var spriteLayer = document.getElementById('backgroundLayer');
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -2538,9 +2554,9 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        var wallTile = Studio.getWallTile(row, col);
+        var wallVal = Studio.getWallValue(row, col);
 
-        Studio.drawWallTile(spriteLayer, row, col, largeTile, wallTile);
+        Studio.drawWallTile(spriteLayer, wallVal, row, col, largeTile);
       }
     }
   }
@@ -3175,6 +3191,11 @@ Studio.setWalls = function (opts) {
     return;
   }
 
+  // Treat 'default' as resetting to the level's map (Studio.walls = null)
+  if (opts.value === 'default') {
+    opts.value = null;
+  }
+
   if (opts.value === Studio.walls) {
     Studio.fixSpriteLocation();
     return;
@@ -3224,7 +3245,7 @@ Studio.fixSpriteLocation = function () {
             sprite.x = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col - sprite.width / 2;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 - 4;
             sprite.dir = Direction.NONE;
-            console.log(xGrid, yGrid, row, col, sprite.x, sprite.y);
+
             return;
           }
         }

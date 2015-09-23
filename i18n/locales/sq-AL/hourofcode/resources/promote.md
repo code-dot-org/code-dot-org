@@ -37,7 +37,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
+## Printo këto ngjitëse për t'ua dhënë studentëve të tu
 
 [![Foto](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 

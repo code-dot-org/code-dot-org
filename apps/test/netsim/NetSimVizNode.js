@@ -1,19 +1,21 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
-/* global $ */
+/* global $, describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
+
+var assert = testUtils.assert;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimVizNode", function () {
 
@@ -24,37 +26,37 @@ describe("NetSimVizNode", function () {
       vizNode = new NetSimVizNode();
     });
 
-    it ("is a VizElement", function () {
-      assert(vizNode instanceof NetSimVizElement);
+    it("is a VizElement", function () {
+      assert.instanceOf(vizNode, NetSimVizElement);
     });
 
-    it ("has default properties", function () {
-      assertEqual(undefined, vizNode.address_);
-      assertEqual(undefined, vizNode.dnsMode_);
-      assertEqual(false, vizNode.isRouter);
-      assertEqual(false, vizNode.isLocalNode);
-      assertEqual(false, vizNode.isDnsNode);
+    it("has default properties", function () {
+      assert.isUndefined(vizNode.address_);
+      assert.isUndefined(vizNode.dnsMode_);
+      assert.isFalse(vizNode.isRouter);
+      assert.isFalse(vizNode.isLocalNode);
+      assert.isFalse(vizNode.isDnsNode);
     });
 
-    it ("immediately creates SVG elements", function () {
+    it("immediately creates SVG elements", function () {
       var root = vizNode.getRoot();
-      assertEqual('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGGElement]', root[0].toString());
 
       var rootChildren = root.children();
-      assertEqual(3, rootChildren.length);
+      assert.equal(3, rootChildren.length);
 
       var circle = rootChildren[0];
-      assertEqual('[object SVGCircleElement]', circle.toString());
+      assert.equal('[object SVGCircleElement]', circle.toString());
 
       var nameGroup = rootChildren[1];
-      assertEqual('[object SVGGElement]', nameGroup.toString());
+      assert.equal('[object SVGGElement]', nameGroup.toString());
       var nameChildren = $(nameGroup).children();
-      assertEqual(2, nameChildren.length);
+      assert.equal(2, nameChildren.length);
 
       var addressGroup = rootChildren[2];
-      assertEqual('[object SVGGElement]', addressGroup.toString());
+      assert.equal('[object SVGGElement]', addressGroup.toString());
       var addressChildren = $(addressGroup).children();
-      assertEqual(2, addressChildren.length);
+      assert.equal(2, addressChildren.length);
     });
   });
 

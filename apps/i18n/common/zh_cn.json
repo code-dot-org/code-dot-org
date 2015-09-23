@@ -220,5 +220,11 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域"
+  "workspaceHeaderShort": "工作区域",
+  "dropletBlock_declareNoAssign_x_description": "Declares a variable with the given name after 'var'",
+  "dropletBlock_declareNoAssign_x_signatureOverride": "Declare a variable",
+  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
+  "submit": "Submit",
+  "submitYourProject": "Submit your project",
+  "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?"
 }

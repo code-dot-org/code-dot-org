@@ -1,7 +1,7 @@
 et:
   site_name: KOODI TUND
   language: Eesti
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Coming Soon
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
@@ -198,7 +198,7 @@ et:
   front_join_us_support: Toeta
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: For more information, please visit code.org
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Sinu nimi
   signup_email_label: Your email
   signup_organization_name_label: Kooli või organisatsiooni nimi

@@ -90,6 +90,7 @@
   "roomStatusNoConnections": "Up to {maximumClients} people may join.",
   "roomNumberX": "Room {x}",
   "router": "Router",
+  "routerLimitReachedError": "Router limit reached.",
   "routerStatus": "Connected to {connectedClients}.  Room for {remainingSpace} more.",
   "routerStatusFull": "Connected to {connectedClients}. No more room.",
   "routerStatusNoConnections": "Nobody connected yet.  Connect up to {maximumClients} people.",

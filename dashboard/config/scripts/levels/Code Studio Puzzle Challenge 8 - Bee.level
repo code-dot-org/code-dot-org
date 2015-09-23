@@ -17,7 +17,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "nectar_goal": "0",
     "honey_goal": "1",
     "flower_type": "redWithNectar",

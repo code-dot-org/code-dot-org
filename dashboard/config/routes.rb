@@ -8,6 +8,8 @@ Dashboard::Application.routes.draw do
     redirect CDO.code_org_url('/teacher-dashboard')
   end
 
+  resources :user_levels, only: [:update]
+
   resources :gallery_activities, path: '/gallery' do
     collection do
       get 'art', to: 'gallery_activities#index', app: Game::ARTIST
@@ -193,6 +195,9 @@ Dashboard::Application.routes.draw do
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
+
+  post '/report_abuse', :to => 'report_abuse#report_abuse'
+  get '/report_abuse', :to => 'report_abuse#report_abuse_form'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 

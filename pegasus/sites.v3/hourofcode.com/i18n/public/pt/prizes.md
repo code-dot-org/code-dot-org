@@ -15,108 +15,20 @@ Todos os educadores que sediarem uma Hora do Código para estudantes recebem 10 
 
 <% else %>
 
-# Os prêmios de 2015 serão anunciados em breve!
-
-**Todo** educador que organizar um evento da Hora do Código pode receber um prêmio. Aguarde atualizações a partir de setembro de 2015.
-
-<% end %>
-
-# Prêmios da Hora do Código de 2014
-
-<% if @country == 'us' || @country == 'ca' || @country == 'uk' %> <a id="gift_code"></a>
-
-## Todos os organizadores ganharam um presente de agradecimento
-
-Todos os educadores que sediaram uma Hora do Código para estudantes receberam 10 GB de espaço no Dropbox ou US$10 de crédito no Skype, como forma de agradecimento!
-
-## 51 escolas ganharam kits de laptops para as salas de aula (ou o equivalente a US$10.000 em recursos tecnológicos)
-
-Uma escola sorteada de ***cada*** Estado dos EUA (e de Washington D.C.) ganhou o equivalente a US$10.000 em recursos tecnológicos. [**Veja os vencedores do ano passado**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-<a id="video_chat"></a>
-
-## Ao todo, 20 turmas sortudas ganharam um chat de vídeo com um convidado especial!
-
-Ao todo, 20 turmas sortudas foram convidadas a participar de um chat com vídeo para celebrar a Hora do Código. Os alunos conversaram com líderes em tecnologia, como [Niklas Zennström](https://www.youtube.com/watch?v=28Uiam6mFeI), o fundador do Skype e do Kazaa, e [Wendy Tan](https://www.youtube.com/watch?v=Xzh54UPe4qg), cofundador e CEO da Moonfruit.
+# 2015 prizes
 
 <% end %>
 
 <% if @country == 'us' %>
 
-<a id="video_chat"></a>
+## 51 schools will win a class-set of laptops (or $10,000 for other technology)
 
-## Ao todo, 100 salas de aula ganharam um chat com vídeo com um convidado especial!
-
-Dentre as salas de aula participantes, 100 participaram de uma sessão de vídeo de Perguntas e Respostas em tempo real com gênios da tecnologia e as celebridades adeptas dessa ciência. Os alunos fizeram perguntas e conversaram com esses ídolos para dar início à Hora do Código.
-
-### Assista aos chats com vídeo do ano passado:
-
-<%= view :video_chat_speakers %>
+One lucky school in ***every*** U.S. state (and Washington D.C.) will win $10,000 worth of technology. [**See last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners)
 
 <% end %>
 
-<% if @country == 'ca' %>
+## **Every** educator who organizes an Hour of Code event is eligible to receive a prize.
 
-<a id="brilliant_project"></a>
+Check back for updates in fall 2015.
 
-## Projeto Brilhante de US$2.000
-
-O [Brilliant Labs](http://brilliantlabs.com/hourofcode) forneceu os recursos necessários, no valor máximo de US$2.000,00, para implementar um projeto de aprendizado prático, voltado para o aluno e baseado em tecnologia, para uma sala de aula de cada distrito e região (exceto Quebec). Para saber mais detalhes, termos e condições, visite o site [brilliantlabs.com/hourofcode](http://brilliantlabs.com/hourofcode).
-
-<a id="actua_workshop"></a>
-
-## As escolas sorteadas ganharam uma oficina da Actua
-
-Dentre as escolas do Canadá, as 15 sorteadas ganharam 2 oficinas práticas das áreas de Ciência, Tecnologia, Engenharia e Matemática (STEM, na sigla em inglês), oferecidas por um dos [33 membros da rede](http://www.actua.ca/about-members/) Actua. Os membros da Actua oferecem oficinas de STEM associadas a um currículo regional e territorial para alunos do Ensino Fundamental e Médio. Essas experiências em sala de aula são oferecidas por alunos-modelo, altamente capacitados e motivados, formados em cursos de STEM. Os professores podem contar com demonstrações empolgantes, experiências interativas e muita diversão de STEM para seus alunos! Observe que a disponibilidade para as oficinas em sala de aula pode variar em comunidades de localidades remotas ou rurais.
-
-[Actua](http://actua.ca/) é a líder canadense em acesso à Ciência, Tecnologia, Engenharia e Matemática. Todos os anos, a Actua atinge mais de 225 mil jovens de mais de 500 comunidades, por meio de sua programação sem fronteiras.
-
-**Parabéns aos vencedores de 2014!**
-
-| Instituição                     | Cidade      | Membro da Rede Actua            |
-| ------------------------------- | ----------- | ------------------------------- |
-| Spencer Middle School           | Victoria    | Science Venture                 |
-| Malcolm Tweddle School          | Edmonton    | DiscoverE                       |
-| Britannia Elementary            | Vancouver   | GEERing Up                      |
-| Captain John Palliser           | Calgary     | Minds in Motion                 |
-| St. Josaphat School             | Regina      | EYES                            |
-| Bishop Roborecki School         | Saskatoon   | SCI-FI                          |
-| Dalhousie Elementary School     | Winnipeg    | WISE Kid-Netic Energy           |
-| Hillfield Strathallan College   | Hamilton    | Venture Engineering and Science |
-| Byron Northview Public School   | Londres     | Discovery Western               |
-| Stanley Public School           | Toronto     | Science Explorations            |
-| Ottawa Catholic School Board    | Ottawa      | Virtual Ventures                |
-| École Arc-en-Ciel               | Montreal    | Folie Technique                 |
-| Saint Vincent Elementary School | Laval       | Musee Armand Frappier           |
-| Garden Creek School             | Fredericton | Worlds UNBound                  |
-| Armbrae Academy                 | Halifax     | SuperNOVA                       |
-
-<a id="kids_code"></a>
-
-## A Kids Code Jeunesse deu apoio às salas de aula em todo o Canadá!
-
-A [Kids Code Jeunesse](http://www.kidscodejeunesse.org) forneceu voluntários em programação treinados para dar apoio aos professores no ensino de ciência da computação. A Kids Code Jeunesse é uma organização canadense sem fins lucrativos destinada a proporcionar, a todas as crianças, a oportunidade de aprender a programar e, aos professores, a oportunidade de aprender como ensinar a programação na sala de aula.
-
-<% end %>
-
-<% if @country == 'us' || @country == 'ca' %>
-
-<a id="programmable_robots"></a>
-
-## Das salas de aula participantes, 100 ganharam um conjunto de robôs programáveis
-
-[Sphero](http://www.gosphero.com/) é a bola robótica controlada por aplicativo que está mudando a forma como os alunos aprendem. Baseados nas [lições do SPRK](http://www.gosphero.com/education/), esses robôs redondinhos dão às crianças um curso superdivertido sobre programação, desenvolvendo, ao mesmo tempo, suas habilidades em matemática e ciências. A Sphero deu 100 kits para salas de aulas – cada um deles com 5 robôs. Qualquer sala de aula (pública ou privada) dos EUA ou do Canadá pôde concorrer a este prêmio.
-
-<% end %>
-
-<a id="more_questions"></a>
-
-## Mais perguntas sobre os prêmios?
-
-Confira os [Termos e Condições](<%= resolve_url('https://code.org/tos') %>) ou visite nosso fórum [Tire suas dúvidas](http://support.code.org) e faça suas perguntas.
-
-<%= view :signup_button %>
+## More prizes coming soon!

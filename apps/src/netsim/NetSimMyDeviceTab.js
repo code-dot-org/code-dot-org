@@ -7,6 +7,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200

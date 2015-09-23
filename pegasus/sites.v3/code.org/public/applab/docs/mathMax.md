@@ -33,10 +33,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 var a = Math.max(5,-2); //Get the greater of two values and store it in variable a
 console.log(a); //Print the value of variable a to the debugging console, in this case "5"
-</pre>
+```
 
 [/example]
 
@@ -45,10 +46,11 @@ ____________________________________________________
 [example]
 
 We can also use `Math.max` with multiple parameters.
-<pre>
+
+```
 var a = Math.max(5, 0, 21.5, 13, -2); //Get the maximum of five values and store it in variable a
 console.log(a); //Print the value of variable a to the debugging console, in this case "21.5"
-</pre>
+```
 
 [/example]
 
@@ -57,7 +59,8 @@ ____________________________________________________
 [example]
 
 In this more advanced example, we generate random values between 0 and 100, and keep track of the highest of them.
-<pre>
+
+```
 var maximum = 0; // Initialize the maximum at the lowest possible value
 for (var i = 0; i < 4; i++) { //Generate four random values
   var y = randomNumber(0, 100); //Get a random number between 0 and 100 and store it in variable y
@@ -65,7 +68,7 @@ for (var i = 0; i < 4; i++) { //Generate four random values
   maximum = Math.max(maximum, y) //If the number is greater than our current maximum, it's the new maximum
   console.log("The current maximum is " + maximum); //Print the value of maximum to the debugging console
 }
-</pre>
+```
 
 
 [/example]
@@ -75,9 +78,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 Math.max(n1, n2,..., nX);
-</pre>
+```
 
 [/syntax]
 
