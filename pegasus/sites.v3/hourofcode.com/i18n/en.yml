@@ -343,8 +343,8 @@
   resources_stickers: Stickers
   resources_how_to_guides: 'How-to guides'
   resources_promote: 'Promote'
-  resources_nav_tutorials: 'Try tutorials'
-  resources_nav_promote: 'Promotional materials'
+  resources_nav_tutorials: 'Try the tutorials'
+  resources_nav_promote: 'Spread the word'
   resources_nav_spread_word: 'How to get involved'
 
   resources_banner_promote_text: "Promote"
