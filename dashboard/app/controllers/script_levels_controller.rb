@@ -1,7 +1,6 @@
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include UsersHelper
 
   before_filter :prevent_caching
 
@@ -9,10 +8,15 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
 
-    # delete the session if the user is not signed in
+    # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
-    # If the user is signed in, continue normally
-    session_reset unless current_user
+
+    # If the user is signed in, continue normally.
+    unless current_user
+      client_state.reset
+      reset_session
+    end
+
     redirect_to(build_script_level_path(@script.starting_level)) and return
   end
 
@@ -67,7 +71,7 @@ class ScriptLevelsController < ApplicationController
   def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (session_level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+          (client_state.level_progress(sl.level_id) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -84,18 +88,25 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
+    # never load solutions for Jigsaw
     return if @level.game.name == 'Jigsaw'
 
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
+      # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
       level_source = @ideal_level_source
       readonly_view_options
     elsif @user && current_user && @user != current_user
+      # load other user's solution for teachers viewing their students' solution
       level_source = @user.last_attempt(@level).try(:level_source)
       readonly_view_options
     elsif current_user
-      # Set start blocks to the user's previous attempt at this puzzle.
+      # load user's previous attempt at this puzzle.
       level_source = current_user.last_attempt(@level).try(:level_source)
+
+      if current_user.user_level_for(@script_level).try(:submitted?)
+        readonly_view_options
+      end
     end
 
     level_source.try(:replace_old_when_run_blocks)

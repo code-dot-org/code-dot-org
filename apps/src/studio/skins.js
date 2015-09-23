@@ -314,7 +314,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setWallsRandom(), RANDOM_VALUE],
     [msg.setWallsBorder(), '"border"'],
     [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"']
+    [msg.setWallsMaze2(), '"maze2"'],
+    [msg.setWallsDefault(), '"default"']
     ];
 
   skin.backgroundChoices = [
@@ -593,6 +594,14 @@ exports.load = function(assetUrl, id) {
   skin.dropdownThumbnailWidth = 50;
   skin.dropdownThumbnailHeight = 50;
   skin.preloadAssets = true;
+
+  skin.activityChoices = [
+    [msg.setActivityRandom(), RANDOM_VALUE],
+    [msg.setActivityPatrol(), '"patrol"'],
+    [msg.setActivityChase(), '"chase"'],
+    [msg.setActivityFlee(), '"flee"'],
+    [msg.setActivityNone(), '"none"'],
+    ];
 
   // take care of items specific to skins
   switch (skin.id) {

@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_prizes_faq) %> layout: wide
 
 ## 1万ドル相当のハードウェアの懸賞に申し込むには学校全体での参加が必要ですか？
 
-Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](<%= resolve_url('/prizes') %>).
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes') %).
 
 ## ビデオチャット賞に申し込むには、学校全体での参加が必要ですか？
 
@@ -34,7 +34,7 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## ハードウェア賞への応募締切はいつですか？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org will select and notify winners via email by December 1, 2015.
 
 ## ビデオチャット賞の応募締切はいつですか？
 
@@ -42,7 +42,7 @@ To qualify, you must register your classroom for the Hour of Code by November 2,
 
 ## 受賞の結果はいつ通知されますか？
 
-To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](<%= resolve_url('/prizes') %>) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the [Hardware Application form](%= resolve_url('/prizes') %) by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
 ## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
 

@@ -66,7 +66,7 @@ class ActivitiesController < ApplicationController
     total_lines = if current_user && current_user.total_lines
                     current_user.total_lines
                   else
-                    session_lines
+                    client_state.lines
                   end
 
     render json: milestone_response(script_level: @script_level,
@@ -159,22 +159,22 @@ class ActivitiesController < ApplicationController
   def track_progress_in_session
     # hash of level_id => test_result
     test_result = params[:testResult].to_i
-    old_result = session_level_progress(@level.id)
+    old_result = client_state.level_progress(@level.id)
     if test_result > old_result
-      session_set_level_progress(@level.id, test_result)
+      client_state.set_level_progress(@level.id, test_result)
     end
 
     # Update count of total lines written if they passed the test.
     lines = params[:lines].to_i
     if lines > 0 && Activity.passing?(test_result)
-      session_add_lines(lines)
+      client_state.add_lines(lines)
     end
 
     @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
 
     # track scripts
     if @script_level.try(:script).try(:id)
-      session_add_script(@script_level.script_id)
+      client_state.add_script(@script_level.script_id)
     end
   end
 

@@ -1,14 +1,14 @@
 af:
   site_name: یک ساعت کد
   language: دريلو
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: بزودی
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: '"ساعت کد نويسي" يك حركت جهاني در راستاي رسيدن به ده ها ميليون دانش آموز در بيش از ١٨٠ كشور است. هركس در هرجاي دنيا مي تواند يك رويداد "ساعت كدنويسي" را ترتيب دهد. برنامه هاي آموزشي يكساعته در بيش از ٣٠ زبان قابل دسترسي مي باشد. هیچ تجربه اي مورد نیاز نيست. <strong>سنین ٤ تا ١٠٤ سال.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: ويدیوي جديد را ببينيد
   front_watch_regular_video: Watch the video
   header_menu_resources: منابع
@@ -154,10 +154,14 @@ af:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> چگونه یک ساعت کدزدن را برگزار کنیم </a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> یک ساعت کدزدن را ارتقا دهید </a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>یک</h1><h2> ساعت کدنویسی را امتحان کنید</h2><h3># قابل استفاده</h3>'
   anybody_can_learn: هر کس می تواند یاد بگیرد.
   get_started: شروع کنید
@@ -174,11 +178,14 @@ af:
   front_join_us_teacher: آيا معلم هستيد؟
   front_join_us_inspire: به دانش آموزان با
   front_join_us_inspire_link: یک ساعت کدزدن در کلاس الهام بدهید.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: آيا شما مادر يا پدر هستيد؟
   front_join_us_ask_link: از مکتب محل خویش درخواست كنيد
   front_join_us_ask: 'تا برگزار كننده يك "ساعت كدنويسي" باشد.'
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: فقط عاشق کمپیوتر ساینس هستيد؟
   front_join_us_spread: این صحبت ها را نشر دهید.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: 'يا خودتان يك "ساعت كدنويسي" را ترتيب دهيد.'
   front_join_us_how_to_run: 'چگونگي اجراي يك "ساعت كد نويسي"'
   front_join_us_help_promote: 'كمك به ترويج "ساعت كدنويسي"'
@@ -190,7 +197,8 @@ af:
   front_join_us_host: برگزار کنید
   front_join_us_support: حمايت کنید
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: اسم شما
   signup_email_label: ایمیل شما
   signup_organization_name_label: نام مکتب و یا مركز
@@ -277,7 +285,7 @@ af:
   hoc_faq_scratch_q: من برای ساعت کدنویسی از Scratch استفاده میکنم، اما اگر دانش آموزانم به جای لپ تاپ از آی پد استفاده کنند چه می شود?
   hoc_faq_scratch_a: "Scratch روی تبلت اجرا نمی شود. اگر دانش آموزانتان کم سن هستند، می توانند از برنامه ی ScratchJR برای آی پد استفاده کنند (برای خوانندگان جدید). اگر شما به آموزش ها در <a href='http://code.org/learn'> Code.org/learn</a>، نگاه کنید می توانید آموزش های دیگری که روی آی پد اجرا می شود پیدا کنید - از Code.org، Tynker، Lightbot، یا CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: آماري از ساعت كدنويسي در سال 2013
   stats_growth: سريع‌ترين در رسيدن به 15 ميليون كاربر.
   stats_i18n: Students are learning in 40 languages
@@ -336,6 +344,7 @@ af:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: از شما متشكريم
   title_prizes: جوایز
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: منابع
   title_signup_thanks: با تشکر برای ورود به میزباني ساعت کدنويسي!
   title_tutorial_guidelines: Tutorial Guidelines

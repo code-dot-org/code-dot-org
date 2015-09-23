@@ -24,7 +24,7 @@
     "coordinate_grid_background": "false",
     "video_key": "alg_9_booleans",
     "disable_examples": "false",
-    "markdown_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either `true` or `false`. Click \"Run\" to see how this expression evaluates.",
+    "markdown_instructions": "Boolean operators (like >, <, =) allow us to compare different values, returning either *true* or *false*. Click \"Run\" to see how this expression evaluates.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

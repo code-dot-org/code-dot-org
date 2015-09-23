@@ -91,6 +91,7 @@ standardConfig.blocks = [
 
   // Variables
   {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
+  {'func': 'declareNoAssign_x', 'block': 'var x;', 'category': 'Variables' },
   {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
   {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
   {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },

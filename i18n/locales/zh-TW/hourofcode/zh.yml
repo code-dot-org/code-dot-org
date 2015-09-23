@@ -1,14 +1,14 @@
 zh:
   site_name: 一小時程式設計
   language: 繁體字
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: 敬請期待
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: '一小時程式設計是一個全球性的活動，觸及數千萬個來自180 多個國家的學生。任何人，在任何地方都可以舉行一小時編程活動。一小時的教程可用於超過 30 種語言。不需要任何經驗。 <strong>由 4 歲到 104 歲 </strong>。'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 觀看新的影片
   front_watch_regular_video: Watch the video
   header_menu_resources: 資源
@@ -154,10 +154,14 @@ zh:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>如何辦一場 Hour of Code 活動</a>"
   whats_next_promote: "<a href='HTTP://hourofcode.com/resources'> 推廣Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>嘗試</h1><h2>小時的代碼</h2><h3>#服務</h3>'
   anybody_can_learn: 任何人皆可學習。
   get_started: 開始
@@ -174,11 +178,14 @@ zh:
   front_join_us_teacher: 您是老師嗎？
   front_join_us_inspire: 激勵學生用
   front_join_us_inspire_link: 教室裡的一個Hour of Code活動。
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: 您是家長嗎？
   front_join_us_ask_link: 詢問你當地的學校
   front_join_us_ask: 舉辦一場Hour of Code活動
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: 只是喜愛電腦科學嗎？
   front_join_us_spread: 傳播訊息。
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: 或是自己組織一個ㄧ小時程式設計活動。
   front_join_us_how_to_run: 下面將教你如何主持一場Hour of Code活動
   front_join_us_help_promote: 幫忙宣傳Hour of Code
@@ -190,7 +197,8 @@ zh:
   front_join_us_host: 舉辦教學
   front_join_us_support: 支援
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 您的姓名
   signup_email_label: 您的電子信箱
   signup_organization_name_label: 學校或組織名稱
@@ -335,6 +343,7 @@ zh:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: 謝謝
   title_prizes: 獎勵
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: 資源
   title_signup_thanks: 謝謝您報名舉辦Hour of Code!
   title_tutorial_guidelines: Tutorial Guidelines

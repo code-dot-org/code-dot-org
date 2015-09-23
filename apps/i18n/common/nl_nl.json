@@ -220,5 +220,11 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: "
+  "workspaceHeaderShort": "Werkplaats: ",
+  "dropletBlock_declareNoAssign_x_description": "Declares a variable with the given name after 'var'",
+  "dropletBlock_declareNoAssign_x_signatureOverride": "Declare a variable",
+  "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
+  "submit": "Submit",
+  "submitYourProject": "Submit your project",
+  "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?"
 }

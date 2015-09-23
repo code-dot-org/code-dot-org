@@ -1,4 +1,4 @@
-= console if Rails.env.development? && (cookies[:dbg] ||= params[:dbg])
+= console if @use_web_console
 - script = local_assigns[:script] || Script.twenty_hour_script
 - script_level = local_assigns[:script_level]
 - level = local_assigns[:level]

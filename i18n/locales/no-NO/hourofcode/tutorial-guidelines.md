@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Vi ønsker å arrangere flere forskjellige engasjerende muligheter, men hovedmålet er å gi studenter og lærere som er nye til datavitenskap en best mulig opplevelese. Vennligst bruk dette dokumentet for å veilede deg i utviklingen av din aktivitet, hvis målgruppe er brukere som har ingen bakgrunn i koden, programmering eller datavitenskap.
 
@@ -23,20 +23,13 @@ Vi ønsker å arrangere flere forskjellige engasjerende muligheter, men hovedmå
 
 ## Innhold:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Hvordan en gjennomgang vil bli vurdert for inkludering](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Forslag til utforming av din aktivitet](#design)
+  * [Retningslinjer for varemerker](#tm)
+  * [Sporingspiksel](#pixel)
+  * [Markedsføre dine gjennomganger, IT-utdanningsuka og Kodetimen](#promote)
   * [Litt informasjon for elever med funksjonshemminger](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Ta også med hvilke forkunnskaper i data som er forutsatt på det aktuelle klassetrinnet: nybegynner, middels eller avansert. Kodetimens nettsted kommer til å gi aktivitetene for nybegynnere den mest fremtredende plassen. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniske krav: 
       * For å kunne spore deltagelsen nøyaktig, skal alle tredjeparts-aktiviter ha med et 1-piksel bilde på første og siste siden av instruksjonene. Plasser et start 1-pixel-bilde på startsiden og et slutt 1-pixel-bilde på siste side. Ikke plasser noen piksler på mellomliggende sider). Se seksjonen om pixler for sporing nedenfor for mer informasjon. 
-      * Når din aktivitet avsluttes, skal brukere linkes til [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> hvor de vil få mulighet til å: 
+      * Når din aktivitet avsluttes, skal brukere linkes til [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Dele på sosiale medier at de fullført Kodetimen
           * Motta et sertifikat som bevis for fullført Kodetime
           * Se resultatlister over hvilek land/byer som har de høyeste tallene for deltakelse i aktiviteter i Kodetimen
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Valgfritt)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For aktiviteter på nettet (spesielt apper for smarttelefoner og nettbrett): 
           * Antall brukere

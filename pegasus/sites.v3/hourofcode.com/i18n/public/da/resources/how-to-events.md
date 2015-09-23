@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to_events) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -50,8 +52,8 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 
 | Tidspunkt   | Hændelse                                                                                                                                                  |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational vidoes](<%= resolve_url('/resources#videos') %>)                                                                      |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)       |
+| 10:00-10:05 | Open with one of our [inspirational videos](<%= resolve_url('/resources#videos') %>)                                                                        |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/resources/stats') %>)         |
 | 10:15-10:30 | Særlige gæstetalere der fortæller om deres baggrund og hvordan teknologi og computer science spiller en vigtig rolle i deres hverdag.                     |
 | 10:30-10:40 | Elever demonstrerer Hour of Code for resten af skolen. Måske er det endnu sjovere hvis de instruerer skolelederen, en lokal politiker eller andre elever. |
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                                |

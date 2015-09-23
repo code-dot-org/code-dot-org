@@ -156,6 +156,7 @@ namespace :build do
           RakeUtils.rake 'db:migrate'
         rescue => e
           HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+          raise e
         end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
@@ -163,6 +164,7 @@ namespace :build do
           RakeUtils.rake 'seed:migrate'
         rescue => e
           HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+          raise e
         end
       end
 
@@ -225,7 +227,6 @@ namespace :install do
 
   task :hooks do
     files = [
-      'lint.rb',
       'pre-commit'
     ]
     git_path = ".git/hooks"

@@ -25,7 +25,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                            stage: @custom_stage_2, :position => 1)
     @custom_s2_l2 = create(:script_level, script: @custom_script,
                            stage: @custom_stage_2, :position => 2)
-    session_reset
+    client_state.reset
   end
 
   test 'should show script level for twenty hour' do
@@ -155,11 +155,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     stage = create(:stage, script: script, name: 'Testing Stage 1', position: 1)
     level_with_autoplay_video = create(:script_level, :with_autoplay_video, script: script, stage: stage, :position => 1)
-    assert !session_videos_seen_for_test?
+    assert !client_state.videos_seen_for_test?
 
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1', noautoplay: 'true'
     assert_nil assigns(:view_options)[:autoplay_video]
-    assert session_videos_seen_for_test?
+    assert client_state.videos_seen_for_test?
 
     @controller = ScriptLevelsController.new
     get :show, script_id: level_with_autoplay_video.script, stage_id: stage.position, id: '1'
@@ -168,7 +168,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "shouldn't show autoplay video when already seen" do
     non_legacy_script_level = create(:script_level, :with_autoplay_video)
-    session_add_video_seen(non_legacy_script_level.level.video_key)
+    client_state.add_video_seen(non_legacy_script_level.level.video_key)
     get :show, script_id: non_legacy_script_level.script, stage_id: '1', id: '1'
     assert_response :success
     assert_not_empty assigns(:level).related_videos
@@ -374,13 +374,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    session_set_level_progress(5, 10)
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: Script::HOC_NAME
 
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
-    assert session_levels_progress_is_empty_for_test
+    assert client_state.levels_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 
@@ -400,12 +400,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    session_set_level_progress(5, 10)
+    client_state.set_level_progress(5, 10)
 
     get :reset, script_id: 'laurel'
     assert_redirected_to "/s/laurel/stage/1/puzzle/1"
 
-    assert session_levels_progress_is_empty_for_test
+    assert client_state.levels_progress_is_empty_for_test
     assert !session['warden.user.user.key']
   end
 

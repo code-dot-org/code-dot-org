@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
+title: <%= hoc_s(:title_resources) %>
+layout: wide
+nav: promote_nav
 
-* * *
+---
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
@@ -19,7 +21,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## あなたの学校にこのポスターを貼ってください。
 
-[![画像](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf) [![画像](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf) [![画像](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf) [![画像](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf) [![画像](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf) [![画像](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf) [![画像](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf) [![画像](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
+<%= view :promote_posters %>
 
 <a id="banners"></a>
 
@@ -34,6 +36,12 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![画像](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![画像](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![画像](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="stickers"></a>
+
+## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)
+
+[![画像](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 

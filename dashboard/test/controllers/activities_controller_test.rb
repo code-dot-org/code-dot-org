@@ -9,7 +9,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   include Mocha::API
 
   setup do
+<<<<<<< HEAD
     session_reset
+=======
+    client_state.reset
+>>>>>>> user_session_helpers
 
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -232,10 +236,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 100, session_level_progress(@script_level.level_id)
+    assert_equal 100, client_state.level_progress(@script_level.level_id)
 
     # don't count it in session either
-    assert_equal 1000, session_lines
+    assert_equal 1000, client_state.lines
 
     # pretend it succeeded
     assert_response :success
@@ -644,10 +648,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 100, session_level_progress(@script_level.level_id)
+    assert_equal 100, client_state.level_progress(@script_level.level_id)
 
     # record the total lines of code in session
-    assert_equal 20, session_lines
+    assert_equal 20, client_state.lines
 
     assert_response :success
 
@@ -661,8 +665,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    session_set_level_progress(@script_level_prev.level_id, 50)
-    session_add_lines(10)
+    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -677,11 +681,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 50, session_level_progress(@script_level_prev.level_id)
-    assert_equal 100, session_level_progress(@script_level.level_id)
+    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
+    assert_equal 100, client_state.level_progress(@script_level.level_id)
 
     # record the total lines of code in session
-    assert_equal 30, session_lines
+    assert_equal 30, client_state.lines
 
     assert_response :success
 
@@ -694,7 +698,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "anonymous milestone not passing" do
     sign_out @user
 
-    session_add_lines(10)
+    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -706,10 +710,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 0, session_level_progress(@script_level.level_id)
+    assert_equal 0, client_state.level_progress(@script_level.level_id)
 
     # lines in session does not change
-    assert_equal 10, session_lines
+    assert_equal 10, client_state.lines
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
@@ -719,8 +723,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    session_set_level_progress(@script_level_prev.level_id, 50)
-    session_add_lines(10)
+    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -737,11 +741,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 50, session_level_progress(@script_level_prev.level_id)
-    assert_equal 100, session_level_progress(@script_level.level_id)
+    assert_equal 50, client_state.level_progress(@script_level_prev.level_id)
+    assert_equal 100, client_state.level_progress(@script_level.level_id)
 
     # record the total lines of code in session
-    assert_equal 30, session_lines
+    assert_equal 30, client_state.lines
 
     assert_response :success
 
@@ -755,8 +759,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    session_set_level_progress(@script_level_prev.level_id, 50)
-    session_add_lines(10)
+    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone

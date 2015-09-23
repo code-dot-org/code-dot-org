@@ -1,7 +1,7 @@
 state_code_s!,cs_jobs_i,growth_vs_average_f,cs_graduates_i,count_schools_teach_cs_i,job_student_gap_i,cs_counts_t,cs_teacher_cert_s,cs_standards_s,text_t,petition_url_t,action_url_s,action_text_s
 AK,692,2.8,15,5,-677,No,No,No,,,,
 AL,4093,3.4,450,26,-3643,Yes,No,No,,,,
-AR,1836,3,250,19,-1586,No,No,No,,,http://congressweb.com/Code/14,Add your support
+AR,1836,3,250,19,-1586,Yes,No,No,,,http://congressweb.com/Code/14,Add your support
 AZ,10553,3,401,33,-10152,Yes,Yes,No,,,,
 CA,80766,3.9,2921,311,-77845,Yes,No,No,,,,
 CO,15525,2.8,489,69,-15036,No,No,No,,,,

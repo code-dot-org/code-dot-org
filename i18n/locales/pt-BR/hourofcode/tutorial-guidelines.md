@@ -8,7 +8,7 @@ title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 # Diretrizes para os tutoriais da Hora do Código e Semana da Educação em Ciência da Computação
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+A Code.org disponibilizará uma variedade de atividades da Hora do Código nos sites da Code.org, Hora do Código e Semana da Educação em Ciência da Computação. A lista atual pode ser encontrada em [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal é melhorar a experiência de alunos e professores que são novos no campo da ciência da computação. Use este documento para orientá-lo na criação de sua atividade, a qual deve ser direcionada para o usuário que não tem nenhuma experiência em codificação, programação de computadores e ciência da computação.
 
@@ -23,57 +23,50 @@ Gostaríamos de disponibilizar uma variedade de opções atrativas, mas nosso ob
 
 ## Índice
 
-  * [Diretrizes gerais para criar uma atividade da Hora do Código](#guidelines)  
-    
-  * [Como os tutoriais serão avaliados para inclusão](#inclusion)  
-    
-  * [Como enviar (até 15/10/2015)](#submit)  
-    
-  * [Sugestões para desenvolver sua atividade](#design)  
-    
-  * [Diretrizes da marca](#tm)  
-    
-  * [Pixel de rastreamento](#pixel)  
-    
-  * [Promovendo seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código](#promote)  
-    
+  * [Diretrizes gerais para criação de uma atividade da Hora do Código](#guidelines)
+  * [Como os tutoriais serão avaliados para inclusão](#inclusion)
+  * [Como enviar (até 15/10/2015)](#submit)
+  * [Sugestões para criação de sua atividade](#design)
+  * [Orientações sobre marcas registradas](#tm)
+  * [Pixel de rastreamento](#pixel)
+  * [Promova seus tutoriais, a Semana da Educação em Ciência da Computação e a Hora do Código](#promote)
   * [Aviso para estudantes com necessidades especiais](#disabilities)
 
 <a id="guidelines"></a>
 
-## New for 2015: two formats of activites: self-guided or *lesson-plan*
+## Novidades para 2015: haverá dois formatos de atividades: autoexplicativas ou *plano de aula*
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative, less one-size-fits-all activities that teach the basics of computer science. To help teachers find inspiration, we'd like to collect and curate one-hour "Teacher-Led" lesson and activity plans for Hour of Code veterans. We will continue promoting the "Self-guided" format as well.
+Agora que dezenas de milhares de educadores experimentaram a Hora do Código, muitas salas de aula estão prontas para atividades mais criativas e menos padronizadas para o ensino dos fundamentos da ciência da computação. Para ajudar os professores a se inspirarem, gostaríamos de reunir e organizar planos de aula e de atividades de uma hora "Conduzidas por Professor" para quem já tem experiência com a Hora do Código. Continuaremos oferecendo o formato "autoexplicativo" também.
 
-**Submit a Teacher-Led Lesson Plan, ideally for different subject areas *(NEW)***: Do you have an engaging or unique idea for an Hour of Code lesson? Some educators may prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science. We would love to collect **one-hour lesson plans designed for different subject areas**. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. This can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+**Enviar um plano de aula Conduzida por Professor, para diferentes áreas *(NOVO)***: você tem uma ideia estimulante ou única para uma aula da Hora do Código? Alguns educadores podem preferir fazer atividades da Hora do Código no formato de aula tradicional, ao invés de uma experiência interativa de jogo. Se corretamente elaboradas, as atividades mais abertas podem mostrar melhor a natureza criativa de ciência da computação. Nós adoraríamos receber **planos de aula de uma hora projetados para diferentes áreas**. Por exemplo, um plano de aula de uma hora para o ensino de programação em uma aula de geometria. Ou um exercício para preencher as lacunas de um texto para aula de Português. Ou uma atividade criativa de elaboração de um quiz para aula de história. Isso pode ajudar a chamar professores de outras áreas para orientar uma atividade da Hora do Código que é voltada para sua área, ao mesmo tempo em que demonstra como a CC pode influenciar e fortalecer diferentes áreas.
 
-You can start with this [empty template](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) for your lesson plan.
+Você pode começar com este [modelo vazio](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) para seu plano de aula.
 
-Examples:
+Exemplos:
 
-  * [Mirror Images (an activity for an art teacher)](https://csedweek.org/csteacher/mirrorimages.pdf)
-  * [An arduino activity for a physics teacher](https://csedweek.org/csteacher/arduino.pdf)
-  * [A history of technology activity for a history teacher](https://csedweek.org/csteacher/besttechnology.pdf)
+  * [Imagens refletidas (atividade para professor de educação artística)](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [Uma atividade de arduino para professores de física](https://csedweek.org/csteacher/arduino.pdf)
+  * [Uma história da atividade da tecnologia para professores de história](https://csedweek.org/csteacher/besttechnology.pdf)
 
-[<button>How can I submit my own lesson plan?</button>](#submit)
+[<button>Como posso enviar meu próprio plano de aula?</button>](#submit)
 
   
   
-**Student-led (Self-Guided) Format**: The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. As instruções e os tutoriais devem ser, de preferência, diretamente integrados à plataforma de programação, para evitar a necessidade de transição entre abas e janelas do tutorial e da plataforma de programação.
+**Formato orientado ao aluno (autoexplicativo)**: a Hora do Código original alcançou seu sucesso principalmente graças aos tutoriais e aulas autoexplicativos, que são opcionalmente facilitados pelo professor. Há várias opções, mas se você quiser criar uma nova, essas atividades devem ser desenvolvidas de forma que sejam divertidas para um aluno realizá-las sozinho, ou em uma sala de aula cujo professor tenha preparo e conhecimentos mínimos em ciência da computação. Elas devem fornecer orientações aos alunos, em oposição a um desafio aberto de uma hora. As instruções e os tutoriais devem ser, de preferência, diretamente integrados à plataforma de programação, para evitar a necessidade de transição entre abas e janelas do tutorial e da plataforma de programação.
 
-Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+Observação: nas páginas voltadas aos alunos, vamos listar as atividades conduzidas pelos professores *abaixo* das autoexplicativas, mas vamos citá-las especificamente em páginas ou e-mails voltados aos educadores.
 
 ## Diretrizes gerais para criação de uma atividade da Hora do Código
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+O objetivo da Hora do Código é dar uma amostra da ciência da computação ou da programação (não HTML) para quem está começando. O tom deve ser:
 
-  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * A ciência da computação não é apenas para gênios. Independentemente da idade, gênero ou raça: todos *podem* aprender!
   * A ciência da computação está ligada a uma variedade de áreas e interesses. Todos *deveriam* aprender!
   * Incentive os alunos a criarem algo que possa ser compartilhado com amigos/on-line.
 
-**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+**Requisitos técnicos**: devido à grande variedade das configurações tecnológicas das escolas e salas de aula, as melhores atividades são baseadas na web ou em um smartphone, mas também há atividades offline que ensinam os conceitos da ciência da computação sem usar um computador (acesse <http://csunplugged.com/>). As atividades que exigem a instalação de um aplicativo, o uso de um desktop ou de um video game são permitidas, mas não são ideais.
 
-[**Voltar ao topo**](#top)
+[**Voltar ao início**](#top)
 
 <a id="inclusion"></a>
 
@@ -92,7 +85,7 @@ Uma comissão de professores de ciência da computação classificará os tutori
   * Operam em diversas plataformas de SO/dispositivos, inclusive telefones celulares e tablets
   * Operam em diferentes idiomas
   * Promovem o aprendizado em todos os grupos demográficos (especialmente grupos sub-representados)
-  * Não são voltados apenas para projeto de websites HTML+CSS (nosso objetivo é a ciência da computação, e não apenas codificação HTML)
+  * Não são voltados apenas para projeto de websites HTML+CSS (nosso objetivo é a ciência da computação, e não apenas programação HTML)
 
 **Os tutoriais terão classificação mais baixa na lista se apresentarem as seguintes características:**
 
@@ -112,7 +105,7 @@ Uma comissão de professores de ciência da computação classificará os tutori
   * Forem direcionados apenas a projetos de websites HTML + CSS
   * Forem enviados após o prazo de inscrição, ou com informações incompletas (ver abaixo)
 
-**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+**Se seu tutorial for orientado ao aluno:** Tutoriais orientados ao aluno precisam ser autoexplicativos, e não devem exigir conhecimentos em ciência da computação ou preparação significantes por parte dos professores
 
 Fundamentalmente, o objetivo da campanha Hora do Código é ampliar a participação de alunos e professores em ciência da computação, e ajudar a mostrar que essa ciência é acessível a todos, e "mais fácil do que se imagina". De diferentes formas, alunos e professores atingem melhor esta meta quando há menos opções e elas são mais simples, com foco em opções da mais alta qualidade para um usuário de primeira viagem. Observe também que as campanhas da Hora do Código de 2013 e 2014 foram um sucesso que atingiu mais de 120 milhões de alunos, e o resultado das pesquisas de opinião foi quase unanimemente positivo por parte dos professores e alunos participantes. Por esse motivo, acreditamos que as listas existentes são muito boas. Buscamos aumentar o número de tutoriais na lista da Hora do Código não para ampliar as opções, mas para continuar a aumentar a qualidade (ou as novidades) para os alunos, ou expandir as opções para não falantes da língua inglesa, devido à natureza global da campanha de 2015.
 
@@ -135,7 +128,7 @@ Visite a [Página de envio de atividade da Hora do Código](http://goo.gl/forms/
   * Descrição da atividade (visualizações em desktop e em telefone celular) 
       * **Contagem máxima de caracteres para visualização em desktop:** 384
       * **Contagem máxima de caracteres para visualização em telefone celular:** 74
-      * Na descrição, informe se a atividade é principalmente autodidata ou se exige o auxílio de um professor. Além disso, algumas escolas querem saber se as atividades da Hora do Código atendem aos padrões Common Core ou Next Generation Science. Se a atividade aborda padrões específicos, considere incluir essa informação.
+      * Na descrição, informe se a atividade é principalmente autoexplicativa ou se exige o auxílio de um professor. Além disso, algumas escolas querem saber se as atividades da Hora do Código atendem aos padrões Common Core ou Next Generation Science. Se a atividade aborda padrões específicos, considere incluir essa informação.
   * Uma lista de plataformas testadas/compatíveis: 
       * Baseadas na web: quais plataformas você testou 
           * SO - Mac, Win e versões
@@ -157,11 +150,11 @@ Visite a [Página de envio de atividade da Hora do Código](http://goo.gl/forms/
   * Informe, também, o nível de conhecimento exigido em ciência da computação dentro do nível: iniciante, intermediário ou avançado. O site da Hora do Código dará maior destaque às atividades para iniciantes. Se você quiser preparar atividades intermediárias e avançadas para a Hora do Código, informe o conhecimento prévio necessário na descrição de sua atividade.
   * Requisitos técnicos: 
       * Para fazer um acompanhamento mais rigoroso da participação, queremos que todos os parceiros que atuam na elaboração de tutoriais incluam imagens de rastreamento de 1 pixel na primeira e última página de seus tutoriais da Hora do Código. Coloque uma imagem de 1 pixel na página inicial e uma na última página. (Não coloque pixels em páginas intermediárias). Veja a seção de rastreamento de pixels abaixo para mais detalhes. 
-      * Após terminarem suas atividades, os usuários devem ser redirecionados para [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> onde poderão: 
+      * Após terminarem suas atividades, os usuários devem ser redirecionados para [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) onde poderão: 
           * Compartilhar nas mídias sociais que participaram da Hora do Código
           * Receber um certificado de que completaram a Hora do Código
           * Ver a classificação dos países/cidades com maiores taxas de participação em atividades da Hora do Código
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * Para os usuários que passarem uma hora na atividade e não conseguirem concluí-la, inclua um botão em sua atividade, dizendo: "Terminei minha Hora do Código". Esse botão também deve levá-los de volta para [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('http://code.org/api/hour/finish') %>). 
   * *(Opcional)* Faremos o acompanhamento com um link de pesquisa/formulário on-line, solicitando um relatório com as seguintes métricas de atividade da semana (das 12h01 de 7 de dezembro até as 23h59 de 13 de dezembro) 
       * Para atividades on-line (especialmente aplicativos para smartphone/tablet): 
           * Número de usuários
@@ -189,7 +182,7 @@ Você pode incluir o logotipo da Semana da Educação em Ciência da Computaçã
   * É recomendável programação em duplas? 
   * Existe alguma consideração para uso em sala de aula? Por exemplo, se houver vídeos, oriente os professores a mostrar os vídeos em uma tela projetada para todos verem juntos
 
-**Incorpore feedback ao final da atividade.** (Por exemplo: "você terminou 10 níveis e aprendeu sobre loops! Ótimo trabalho!")
+**Incorpore feedback ao final da atividade.** (Por exemplo: "você terminou 10 níveis e aprendeu sobre laços! Ótimo trabalho!")
 
 **Incentive os alunos a postarem nas redes sociais (nos locais apropriados) quando eles terminarem.** Por exemplo “Eu fiz uma Hora do Código com ________. E você? #HoraDoCodigo" ou "Eu fiz uma #HoraDoCodigo como parte da #SemEduCC. E você? @Scratch". Use a hashtag **#HoraDoCodigo** (com letras maiúsculas H, D, C)
 
@@ -207,7 +200,7 @@ Você pode incluir o logotipo da Semana da Educação em Ciência da Computaçã
 
 Benefícios da programação em duplas:
 
-  * Os alunos podem ajudar um ao outro em vez de depender do professor
+  * Os alunos podem ajudar uns aos outros em vez de depender do professor
   * É possível mostrar que a programação não é uma atividade individual, mas que envolve interação social
   * Nem todas as salas de aula ou laboratórios têm computadores suficientes para uma experiência de 1:1
 

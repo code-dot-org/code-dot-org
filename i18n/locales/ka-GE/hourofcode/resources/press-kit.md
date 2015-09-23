@@ -22,10 +22,10 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 **1. დაგეგმეთ ღონისძიება**
 
   * დაგეგმეთ, ვინ მიიღებს მონაწილეობას კოდის ერთი საათის გახსნაში.
-  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/resources/#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to parents. Ask them to spread the word.
+  * Send [a letter](%= resolve_url('/resources/#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
   * დაგეგმეთ ჯგუფური აქტივობები (მაგალითად, ოფლაინ-პროგრამირების აქტივობები) ან აჩვენეთ მოსწავლეების მიერ შექმნილი პროგრამები.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/resources#videos') %>) to inspire.
+  * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/resources#videos') %) to inspire.
 
 **2. გაიგეთ, ადგილობრივი ჟურნალისტებიდან ვინ არის დაინტერესებული საგანმანათლებლო ან ადგილობრივი ღონისძიებებით.**
 
@@ -35,7 +35,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **3. დაუკავშირდით ადგილობრივ მედია-საშუალებებს**
 
-კავშირის დამყარების საკუთესო გზა ელ. ფოსტა არის. წერილი უნდა იყოს მოკლე და მკაფიოდ ხსნიდეს: რატომ არის ეს ღონისძიება მნიშვნელოვანი სხვებისთვის? დაურთეთ საკონტაქტო ინფორმაცია (ტელეფონის ნომრის ჩათვლით) თქვენი და იმათი, ვინც ღონისძიებას დაესწრება. **See a [sample pitch to media](<%= resolve_url('/resources#sample-emails') %>):**
+კავშირის დამყარების საკუთესო გზა ელ. ფოსტა არის. წერილი უნდა იყოს მოკლე და მკაფიოდ ხსნიდეს: რატომ არის ეს ღონისძიება მნიშვნელოვანი სხვებისთვის? დაურთეთ საკონტაქტო ინფორმაცია (ტელეფონის ნომრის ჩათვლით) თქვენი და იმათი, ვინც ღონისძიებას დაესწრება. **See a [sample pitch to media](%= resolve_url('/resources#sample-emails') %):**
 
 **4. მოემზადეთ თქვენი სასკოლო ღონისძიების შესახებ კითხვებზე პასუხის გასაცემად. მოყვანილია მაგალითები:**
 
@@ -55,9 +55,9 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 **Code.org-ის შესახებ**
 
-Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. ჩვენი ხედვა ასეთია: ყოველ სკოლაში ყოველ მოსწავლეს უნდა შეეძლოს ისწავლოს პროგრამირება. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის საათის კამპანია შექმნა – რომელმაც კომპიუტერული 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო რაიონთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org არსებობს კორპორაციების, ორგანიზაციებისა და ცალკეული პიროვნებების ფილანტროპული შემოწირულობის ხარჯზე. მათ შორისაა Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network და სხვა. მეტი ინფორმაციისთვის ეწვიეთ: <<%= resolve_url('https://code.org') %>>.
+Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. ჩვენი ხედვა ასეთია: ყოველ სკოლაში ყოველ მოსწავლეს უნდა შეეძლოს ისწავლოს პროგრამირება. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის საათის კამპანია შექმნა – რომელმაც კომპიუტერული 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო რაიონთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org არსებობს კორპორაციების, ორგანიზაციებისა და ცალკეული პიროვნებების ფილანტროპული შემოწირულობის ხარჯზე. მათ შორისაა Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network და სხვა. მეტი ინფორმაციისთვის ეწვიეთ: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Find more resources and sample emails [here](<%= resolve_url('/resources') %>).
+Find more resources and sample emails [here](%= resolve_url('/resources') %).
 
 <%= view :signup_button %>

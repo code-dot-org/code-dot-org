@@ -1,14 +1,14 @@
 sl:
   site_name: Ura za kodo
   language: Slovenščina
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: Coming Soon
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'Ura za kodo je globalno gibanje, ki dosega desetine milijonov učencev, dijakov in študentov v več kot 180 državah. Kdorkoli in kjerkoli lahko organizira svoj dogodek Ura za kodo. Enourni tečaji so na voljo v več kot 30 jezikih. Brez obveznega predznanja. <strong>Za vse med 4 in 104 leti.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: Oglejte si novi video
   front_watch_regular_video: Watch the video
   header_menu_resources: Viri
@@ -154,11 +154,15 @@ sl:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: |-
     <a href='http://hourofcode.com/resources/how-to'>Kako zaženiti "Hour of Code"</a>
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promoviraj Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: Vsakdo se lahko nauči.
   get_started: Start
@@ -175,11 +179,14 @@ sl:
   front_join_us_teacher: Ali ste učitelj?
   front_join_us_inspire: Navduši učence z
   front_join_us_inspire_link: Hour of Code v učilnici.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: Ali ste starš?
   front_join_us_ask_link: Vprašajte vaše šolo
   front_join_us_ask: da organizira dogodek Ura za kodo.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: Ste računalniški navdušenec?
   front_join_us_spread: Razširi besedo.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: Ali organizirajte dogodek sami.
   front_join_us_how_to_run: Kako lahko organizirate vaš dogodek Ura za kodo
   front_join_us_help_promote: Pomagajte nam promovirati projekt Ura za kodo
@@ -191,7 +198,8 @@ sl:
   front_join_us_host: Organizirajte
   front_join_us_support: Podprite
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: Vaše ime
   signup_email_label: Vaš email
   signup_organization_name_label: Ime šole ali organizacije
@@ -277,7 +285,7 @@ sl:
   hoc_faq_scratch_q: Za Uro za kodo delam Scratch, ampak kaj, ko imajo moji učenci iPade namesto prenosnikov?
   hoc_faq_scratch_a: "Scratch ne deluje na tablicah. Če so vaši učenci mladi, lahko uporabljajo ScratchJR iPad app (za prvo triado). Če pogledate  na <a href='http://code.org/learn'> Code.org/learn</a>, lahko najdete druge vaje, ki delujejo na iPadih - Code.org, Tynker, Lightbot ali CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 'Statistika Ure za kodo 2013 '
   stats_growth: To je najhitrejša storitev, ki je prišla do 15 milijonov uporabnikov.
   stats_i18n: Students are learning in 40 languages
@@ -336,6 +344,7 @@ sl:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Hvala
   title_prizes: Nagrade
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: Viri
   title_signup_thanks: Hvala, ker ste se prijavili kot gostitelj Ure za kodo!
   title_tutorial_guidelines: Tutorial Guidelines

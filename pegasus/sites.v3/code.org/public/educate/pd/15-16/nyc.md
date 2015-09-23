@@ -18,13 +18,7 @@ nav: pd2_nav
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 Teachers from Broward, Florida will attend PD in Broward. Please visit the [Broward CSP page](/educate/pd/15-16/broward)  for your workshop dates and details.
@@ -79,13 +73,7 @@ More info coming soon!
 
 Milestone Complete!
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -139,15 +127,7 @@ More info coming soon!
 Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-
-#### In-person Workshop####
-
 Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
-
 ### Phase 2: Blended Learning Institute (2 days in-person) ###
 
 
@@ -172,7 +152,12 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Executive Conference Center<br/>
+8th Floor<br/>
+1601 Broadway<br/>
+New York, NY 10019<br/>
+
+The entrance to the building is on 48th street, to the left of the Hersey's Store in Times Square. For more details, [click here](http://www.amaconferencecenter.org/new-york-directions-maps.htm).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

@@ -1,14 +1,14 @@
 he:
   site_name: HOUR of CODE
   language: עברית
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  front_title: 'Join the largest learning event in history, %{campaign_date}, 2015'
   coming_soon: בקרוב
   campaign_date_start_short: Dec. 7
   campaign_date_start_long: December 7
   campaign_date_short: Dec. 7-13
   campaign_date_full: December 7-13
   front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: 'שעה של קוד היא תנועה עולמית הנגישה לעשרות מיליוני סטודנטים במעל 180 מדינות. כל אחד, בכל מקום יכול לארגן אירוע עבור שעה של קוד. הדרכות של שעה זמינות ביותר מ-30 שפות. אין צורך בניסיון קודם. <strong>גילאים 4 עד 104.</strong>'
+  front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 40 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: צפה בסרטון החדש
   front_watch_regular_video: Watch the video
   header_menu_resources: מקורות
@@ -154,10 +154,14 @@ he:
   how_to_nav_public_officials: For public officials
   how_to_nav_districts: For districts
   how_to_nav_assemblies: For school assemblies
+  how_to_nav_organizations: For organizations
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'> כיצד להפעיל Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'> לקדם את Hour of Code</a>"
+  whats_next_how_to_promote: "<a href='/resources/promote'>How to promote the Hour of Code</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try_button: Try tutorials
   n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
   anybody_can_learn: כל אחד יכול ללמוד.
   get_started: Start
@@ -174,11 +178,14 @@ he:
   front_join_us_teacher: האם אתה מורה ?
   front_join_us_inspire: השראה את הסטודנטים בעזרת
   front_join_us_inspire_link: Hour of Code בכיתה.
+  front_join_us_teacher_link: Inspire students with an Hour of Code in the classroom
   front_join_us_parent: האם אתה הורה?
   front_join_us_ask_link: תבקש מבית הספר המקומי שלך
   front_join_us_ask: לארח את Hour of Code.
+  front_join_us_parent_link: Ask your local school to host an Hour of Code
   front_join_us_computer_science: אוהב מדעי המחשב?
   front_join_us_spread: .תפיץ את זה בעולם.
+  front_join_us_spread_word: Spread the word in your community
   front_join_us_organize: או לארגן אירוע Hour of Code בעצמך.
   front_join_us_how_to_run: מידע אודות איך להפעיל Hour of Code
   front_join_us_help_promote: לסייע בקידום Hour of Code
@@ -190,7 +197,8 @@ he:
   front_join_us_host: תארח אותו
   front_join_us_support: תתמוך בו
   front_join_us_more_info: "For more information, please visit <a href='https://code.org'>code.org</a>."
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_code_info: For more information, please visit code.org
+  signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: שמך
   signup_email_label: 'הדוא"ל שלך'
   signup_organization_name_label: שם בית הספר או הארגון
@@ -222,9 +230,9 @@ he:
   map_search_placeholder: 'לחיפוש אירועים של "שעה של קוד"'
   map_search_search: חיפוש
   map_search_reset: לאפס
-  meta_tag_og_title: '"שעה של הקוד" הוא כאן'
+  meta_tag_og_title: 'שעה של הקוד הוא כאן'
   meta_tag_og_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
-  meta_tag_twitter_title: '"שעה של הקוד" הוא כאן'
+  meta_tag_twitter_title: 'שעה של הקוד הוא כאן'
   meta_tag_twitter_description: 'Hour of Code הוא תנועה עולמית מגיעה לעשרות מיליוני תלמידים ב 180+ מדינות, מ- 30 שפות. גילאי 4 עד 104.'
   twitter_default_text: 'אני משתתפת בתערוכה של השנה #HourOfCode, האם אתה? @codeorg'
   hardware_prizes_form_name_label: שמך
@@ -279,7 +287,7 @@ he:
   hoc_faq_scratch_q: 'אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads ולא מחשבים ניידים?'
   hoc_faq_scratch_a: "Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'> Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker, Lightbot או CodeSpark."
   hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://%{codeorg_url}/loc'>here</a>."
+  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='%{codeorg_url}/loc'>here</a>."
   stats_hoc_2013_image_alt: 'סטטיסטיקה של  Hour of Code 2013'
   stats_growth: זה היה המהיר ביותר להגיע 15 מיליון משתמשים.
   stats_i18n: Students are learning in 40 languages
@@ -338,6 +346,7 @@ he:
   title_prizes_terms: Prizes Terms
   title_prizes_thanks: Thank you
   title_prizes: פרסים
+  title_hardware_prize_form: Sign up for Hardware Prizes
   title_resources: מקורות
   title_signup_thanks: 'תודה שנרשמת לארח את "שעה של קוד"!'
   title_tutorial_guidelines: Tutorial Guidelines

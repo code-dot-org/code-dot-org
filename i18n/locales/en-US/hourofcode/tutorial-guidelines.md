@@ -8,7 +8,7 @@ crwdns47140:0crwdne47140:0
 
 # crwdns44104:0crwdne44104:0
 
-crwdns47890:0crwdne47890:0<<%= resolve_url('https://code.org/learn') %>>.
+crwdns47890:0crwdne47890:0[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
 
 crwdns47142:0crwdne47142:0 crwdns47143:0crwdne47143:0
 
@@ -23,20 +23,13 @@ crwdns47145:0crwdne47145:0 crwdns47146:0crwdne47146:0 crwdns47147:0crwdne47147:0
 
 ## crwdns44112:0crwdne44112:0
 
-  * crwdns47891:0crwdne47891:0  
-    
-  * crwdns47892:0crwdne47892:0  
-    
-  * crwdns47148:0crwdne47148:0  
-    
-  * crwdns44116:0crwdne44116:0  
-    
-  * crwdns44117:0crwdne44117:0  
-    
-  * crwdns44118:0crwdne44118:0  
-    
-  * crwdns44119:0crwdne44119:0  
-    
+  * [crwdns48857:0crwdne48857:0](#guidelines)
+  * [crwdns48858:0crwdne48858:0](#inclusion)
+  * [crwdns48859:0crwdne48859:0](#submit)
+  * [crwdns48860:0crwdne48860:0](#design)
+  * [crwdns48861:0crwdne48861:0](#tm)
+  * [crwdns48862:0crwdne48862:0](#pixel)
+  * [crwdns48863:0crwdne48863:0](#promote)
   * [crwdns44120:0crwdne44120:0](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +150,11 @@ crwdns47956:0crwdne47956:0
   * crwdns47992:0crwdne47992:0 crwdns47993:0crwdne47993:0 crwdns47994:0crwdne47994:0
   * crwdns47995:0crwdne47995:0 
       * crwdns47996:0crwdne47996:0 crwdns47997:0crwdne47997:0 crwdns47998:0crwdne47998:0 crwdns47999:0crwdne47999:0 
-      * crwdns48000:0crwdne48000:0 [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> crwdns48001:0crwdne48001:0 
+      * crwdns48000:0crwdne48000:0 [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) crwdns48864:0crwdne48864:0 
           * crwdns48002:0crwdne48002:0
           * crwdns48003:0crwdne48003:0
           * crwdns48004:0crwdne48004:0
-          * crwdns48005:0crwdne48005:0 
+          * crwdns48865:0crwdne48865:0 
   * *crwdns48006:0crwdne48006:0* crwdns48007:0crwdne48007:0 
       * crwdns48008:0crwdne48008:0 
           * crwdns48009:0crwdne48009:0

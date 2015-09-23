@@ -1,6 +1,7 @@
 module UsersHelper
   include ApplicationHelper
 
+<<<<<<< HEAD
   # TODO (phil): Once all of the frontends are running the new code,
   # Returns the number of lines written in the current user session.
   # return [Integer]
@@ -77,64 +78,19 @@ module UsersHelper
     scripts << script_id.to_i unless scripts.include?(script_id)
     session[:scripts] = scripts
   end
+=======
+>>>>>>> user_session_helpers
 
-  # Returns an array of ids of the scripts completed in the current session.
-  # Callers should not mutate the array.
-  # @return [Array<Integer>]
-  def session_scripts
-    session[:scripts] || []
-  end
-
-  # Returns a read-only set of the videos seen in the current user session,
-  # for tests only.
-  # @return Set<String>
-  def session_videos_seen_for_test
-    session[:videos_seen] || Set.new
-  end
-
-  # Adds video_key to the set of videos seen in the current user session.
-  # @param [String] video_key
-  def session_add_video_seen(video_key)
-    (session[:videos_seen] ||= Set.new).add(video_key)
-  end
-
-  # Adds video_key to the set of videos seen in the current user session.
-  # @param [String] video_key
-  # @return Boolean
-  def session_video_seen?(video_key)
-    s = session[:videos_seen]
-    s && s.include?(video_key)
-  end
-
-  # Returns if at least one video has been seen in the current user session.
-  # For testing only
-  # @return Boolean
-  def session_videos_seen_for_test?
-    !session[:videos_seen].nil?
-  end
-
-  # Returns true if the video with the given key has been seen by the
-  # current user session.
-  # @param [String] callout_key
-  # @return Boolean
-  def session_callout_seen?(callout_key)
-    c = session[:callouts_seen]
-    c && c.include?(callout_key)
-  end
-
-  # Adds callout_key to the set of callouts seen in the current user session.
-  def session_add_callout_seen(callout_key)
-    session[:callouts_seen] ||= Set.new
-    session[:callouts_seen].add(callout_key)
-  end
 
   # Summarize the current user's progress within a certain script.
   def summarize_user_progress(script, user = current_user)
     user_data = {}
+    uls = {}
+    script_levels = script.script_levels
     if user
       lines = user.total_lines
-      script_levels = user.levels_from_script(script)
 
+      uls = user.user_levels_by_level(script)
       user_data[:disableSocialShare] = true if user.under_13?
 
       if script.trophies
@@ -150,7 +106,7 @@ module UsersHelper
         end
       end
     else
-      lines = session_lines
+      lines = client_state.lines
       script_levels = script.script_levels
     end
 
@@ -161,9 +117,9 @@ module UsersHelper
 
     user_data[:levels] = {}
     script_levels.each do |sl|
-      completion_status = level_info(user, sl)
+      completion_status = level_info(user, sl, uls)
       if completion_status != 'not_tried'
-        user_data[:levels][sl.level.id] = {
+        user_data[:levels][sl.level_id] = {
           status: completion_status
           # More info could go in here...
         }
