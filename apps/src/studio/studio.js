@@ -1170,6 +1170,14 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
   return Studio.willCollidableTouchWall(sprite, xCenter, yCenter);
 };
 
+Studio.getWallValue = function (row, col) {
+  if (Studio.walls) {
+    return skin[Studio.walls] ? (skin[Studio.walls][row][col] << constants.WallCoordsShift): 0;
+  } else {
+    return Studio.map[row][col] & constants.WallAnyMask;
+  }
+};
+
 /**
  * Test to see if a collidable will be touching a wall given particular X/Y
  * position coordinates (center)
@@ -1198,8 +1206,7 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
     for (var row = Math.max(0, iYGrid - rowsOffset);
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
-      if ((Studio.map[row][col] & SquareType.WALL) || 
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
+      if (Studio.getWallValue(row, col)) {
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -1666,6 +1673,8 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
+  Studio.background = null;
+  Studio.walls = null;
   Studio.setBackground({value: getDefaultBackgroundName()});
 
   // Reset currentCmdQueue and various counts:
@@ -2371,9 +2380,23 @@ Studio.clearDebugRects = function() {
 };
 
 
-Studio.drawWallTile = function (svg, row, col) {
-  var srcRow = Math.floor(Math.random() * 4);
-  var srcCol = Math.floor(Math.random() * 4);
+Studio.drawWallTile = function (svg, wallVal, row, col) {
+  var srcRow, srcCol;
+  if (wallVal == SquareType.WALL) {
+    // use a random coordinate
+    // TODO (cpirich): these should probably be chosen once at level load time
+    // and we should allow the level/skin to set specific row/col max values
+    // to ensure that reasonable tiles are chosen at random
+    srcRow = Math.floor(Math.random() * constants.WallCoordMax);
+    // Since [0,0] is not a valid wall tile, ensure that we avoid column zero
+    // when row zero was chosen at random
+    srcCol = srcRow ?
+                Math.floor(Math.random() * constants.WallCoordMax) :
+                1 + Math.floor(Math.random() * (constants.WallCoordMax - 1));
+  } else {
+    srcRow = (wallVal & constants.WallCoordRowMask) >> constants.WallCoordRowShift;
+    srcCol = (wallVal & constants.WallCoordColMask) >> constants.WallCoordColShift;
+  }
 
   var tiles = Studio.background && skin[Studio.background].tiles ?
                 skin[Studio.background].tiles : skin.tiles;
@@ -2439,10 +2462,9 @@ Studio.drawMapTiles = function () {
   var spriteLayer = document.getElementById('backgroundLayer');
   for (var row = 0; row < Studio.ROWS; row++) {
     for (var col = 0; col < Studio.COLS; col++) {
-      var mapVal = Studio.map[row][col];
-      if (mapVal & SquareType.WALL ||
-          (Studio.walls !== null && skin[Studio.walls] && skin[Studio.walls][row][col])) {
-        Studio.drawWallTile(spriteLayer, row, col);
+      var wallVal = Studio.getWallValue(row, col);
+      if (wallVal) {
+        Studio.drawWallTile(spriteLayer, wallVal, row, col);
       }
     }
   }
@@ -3046,6 +3068,11 @@ Studio.setWalls = function (opts) {
     return;
   }
 
+  // Treat 'default' as resetting to the level's map (Studio.walls = null)
+  if (opts.value === 'default') {
+    opts.value = null;
+  }
+
   if (opts.value === Studio.walls) {
     return;
   }
@@ -3056,8 +3083,6 @@ Studio.setWalls = function (opts) {
   $(".tile_clip").remove();
   $(".tile").remove();
   Studio.drawMapTiles();
-
-  sortDrawOrder();  
 };
 
 /**
