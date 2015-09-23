@@ -18,14 +18,7 @@ nav: promote_nav
 <a id="posters"></a>
 ## Hang these posters in your school
 
-[![image](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf)
-[![image](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf)
-[![image](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf)
-[![image](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
-[![image](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf)
-[![image](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf)
-[![image](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf)
-[![image](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
+<%= view :promote_posters %>
 
 <a id="banners"></a>
 ## Feature these banners on your website
@@ -45,6 +38,10 @@ nav: promote_nav
 [![image](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 [![image](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="logo"></a>
+## Use the Hour of Code logo to spread the word
+[![image](/images/fit-200/hour-of-code-logo.png)](/images/images/hour-of-code-logo.png)
 
 <a id="stickers"></a>
 ## Print these stickers to give to your students (Stickers are 1" diameter, 63 per sheet)

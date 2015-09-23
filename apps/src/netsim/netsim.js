@@ -9,6 +9,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -620,12 +621,13 @@ NetSim.prototype.getConnectedRouter = function () {
  * Establish a connection between the local client and the given
  * simulated router.
  * @param {number} routerID
+ * @param {NodeStyleCallback} onComplete
  */
-NetSim.prototype.connectToRouter = function (routerID) {
+NetSim.prototype.connectToRouter = function (routerID, onComplete) {
   if (this.isConnectedToRemote()) {
     // Disconnect and try to connect again when we're done.
     logger.warn("Auto-disconnecting from previous router.");
-    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID));
+    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID, onComplete));
     return;
   }
 
@@ -634,6 +636,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
     if (err) {
       logger.warn('Failed to find router with ID ' + routerID + '; ' +
           err.message);
+      onComplete(err);
       return;
     }
 
@@ -642,6 +645,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
         logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
             err.message);
       }
+      onComplete(err, router);
     });
   });
 };

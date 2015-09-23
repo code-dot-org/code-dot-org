@@ -1,5 +1,6 @@
 name 'U3L06 Student Lesson Introduction'
 title 'APIs and Function Parameters'
+css 'unplugged'
 
 markdown <<MARKDOWN
 ## Unit 3: Lesson 06 - APIs and Function Parameters 
@@ -22,8 +23,6 @@ Some functions have **parameters** which accept input as a way to better control
 * Explore the AppLab API to learn to use new commands.
 * Create more complex drawings using the API functions and parameters. 
 
-# Resources
-* Activity: In Code Studio.  Click Continue.
 </a>
 
 

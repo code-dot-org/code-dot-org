@@ -1,13 +1,15 @@
+require 'open3'
+
 REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
 
 def get_modified_files
   Dir.chdir REPO_DIR
-  `git diff --cached --name-only`.split("\n").map(&:chomp)
+  `git diff --cached --name-only --diff-filter AM`.split("\n").map(&:chomp).map { |x| File.expand_path("../../../#{x}", __FILE__)}
 end
 
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| f.start_with?(APPS_DIR) and f.end_with?(".js") }
+  modified_files.select { |f| f.end_with?(".js") }
 end
 
 def filter_rubocop(modified_files)
@@ -18,36 +20,43 @@ def filter_haml(modified_files)
   modified_files.select { |f| f.end_with?(".haml") }
 end
 
+def run(cmd, working_dir)
+  Dir.chdir working_dir
+  stdout, stderr, status = Open3.capture3(cmd)
+  return stdout, stderr, status
+end
+
 def run_rubocop(files)
-  Dir.chdir REPO_DIR
-  system "rubocop #{files.join(" ")}"
+  run("bundle exec rubocop #{files.join(" ")}", REPO_DIR)
 end
 
 def run_jshint(files)
-  Dir.chdir APPS_DIR
-  system "grunt jshint:files --files #{files.join(",")}"
+  run("grunt jshint:files --files #{files.join(",")}", APPS_DIR)
 end
 
 def run_haml(files)
-  Dir.chdir REPO_DIR
-  system "haml-lint #{files.join(" ")}"
+  run("bundle exec haml-lint #{files.join(" ")}", REPO_DIR)
 end
 
-modified_files = get_modified_files()
-puts "\nFound #{modified_files.length} modified files", "-" * 30
-puts modified_files
+def lint_failure(output)
+  puts output
+  raise "Lint failed"
+end
 
-jshint_files = filter_grunt_jshint(modified_files)
-puts "\nRunning #{jshint_files.length} files through grunt jshint", "-" * 30
-puts jshint_files
-raise "JSHint failed" unless jshint_files.empty? or run_jshint(jshint_files)
+def do_linting()
+  modified_files = get_modified_files()
+  todo = {
+    Object.method(:run_haml) => filter_haml(modified_files),
+    Object.method(:run_jshint) => filter_grunt_jshint(modified_files),
+    Object.method(:run_rubocop) => filter_rubocop(modified_files)
+  }
 
-ruby_files = filter_rubocop(modified_files)
-puts "\nRunning #{ruby_files.length} through rubocop", "-" * 30
-puts ruby_files
-raise "Rubocop failed" unless ruby_files.empty? or run_rubocop(ruby_files)
+  todo.each do |func, files|
+    if files.length > 0
+      stdout, stderr, status = func.call(files)
+      lint_failure(stdout + stderr) unless status.success?
+    end
+  end
+end
 
-haml_files = filter_haml(modified_files)
-puts "\nRunning #{haml_files.length} through haml-lint", "-" * 30
-puts haml_files
-raise "Haml-lint failed" unless haml_files.empty? or run_haml(haml_files)
+do_linting()

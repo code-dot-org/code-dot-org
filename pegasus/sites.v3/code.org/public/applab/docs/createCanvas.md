@@ -43,10 +43,11 @@ ____________________________________________________
 
 This example creates a canvas as big as the window and draws a rectangle into it at position x:0 y:0.
 
-<pre>
+
+```
 createCanvas(); //Create a canvas on which to draw
 rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle in the top left corner
-</pre>
+```
 
 [/example]
 
@@ -55,11 +56,12 @@ ____________________________________________________
 
 This example demonstrates that coordinates used for drawing are relative to the top left corner of the canvas. In this code block, a canvas is created with an id, and then moved to position (50, 50). Drawing a rectangle at (0, 0) puts the top left corner of the rectangle at position (50, 50) in the window.
 
-<pre>
+
+```
 createCanvas("canvas"); //Create a canvas on which to draw
 setPosition("canvas", 50, 50); //Move the canvas to x:50 y:50 of the window
 rect(0, 0, 100, 100); //Draw a rectangle in the top left corner of the canvas
-</pre>
+```
 
 
 [/example]
@@ -70,10 +72,11 @@ ____________________________________________________
 
 This example demonstrates what happens when drawing outside the bounds of the canvas. Here, the width and height parameters are provided to `createCanvas` to make it smaller than the window. The rectangle drawn is bigger than the canvas, so only part of the rectangle is visible.
 
-<pre>
+
+```
 createCanvas("canvas", 50, 50); //Create a 50x50 pixel canvas on which to draw
 rect(0, 0, 100, 100); //Draw a 100x100 pixel rectangle, but only part of it is visible
-</pre>
+```
 
 
 [/example]
@@ -84,13 +87,14 @@ ____________________________________________________
 
 This example demonstrates that drawing only occurs within the bounds of the canvas. Here, the canvas is 200x200 pixels and positioned inside the window. Three circles are drawn, but two of them extend beyond the bounds of the canvas so they appear as semi-circles even though there is enough room for them in the window.
 
-<pre>
+
+```
 createCanvas("canvas", 200, 200); //Create a 200x200 pixel canvas on which to draw
 setPosition("canvas", 60, 0); //Move the canvas toward the center of the window
 circle(0, 100, 50); //Draw a circle centered on the left edge of the canvas
 circle(100, 100, 50); // Draw a circle centered in the middle of the canvas
 circle(200, 100, 50); // Draw a circle centered on the right edge of the canvas
-</pre>
+```
 
 [/example]
 
@@ -99,9 +103,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 createCanvas(canvasId, width, height);
-</pre>
+```
 
 [/syntax]
 

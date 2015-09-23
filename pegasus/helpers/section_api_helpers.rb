@@ -1,14 +1,11 @@
 require 'cdo/user_helpers'
-# TODO -- remove this and change the APIs below to check logged in user instead of passing in a user id
-module Dashboard
-  def self.admin?(user_id)
-    !!DASHBOARD_DB[:users].where(id: user_id, admin: true).first
-  end
-end
+require_relative '../helper_modules/dashboard'
 
+# TODO -- change the APIs below to check logged in user instead of passing in a user id
 class DashboardStudent
+
   def self.fetch_user_students(user_id)
-    DASHBOARD_DB[:users].
+    Dashboard::db[:users].
       join(:followers, :student_user_id=>:users__id).
       select(*fields).
       where(followers__user_id: user_id).
@@ -24,7 +21,7 @@ class DashboardStudent
 
     created_at = DateTime.now
 
-    row = DASHBOARD_DB[:users].insert({
+    row = Dashboard::db[:users].insert({
       name: name,
       user_type: 'student',
       provider: 'sponsored',
@@ -32,7 +29,7 @@ class DashboardStudent
       birthday: params[:birthday],
       created_at: created_at,
       updated_at: created_at,
-      username: UserHelpers.generate_username(DASHBOARD_DB[:users], name)
+      username: UserHelpers.generate_username(Dashboard::db[:users], name)
     }.merge(random_secrets))
     return nil unless row
 
@@ -47,11 +44,10 @@ class DashboardStudent
 
     id = id_or_ids
 
-    return unless DASHBOARD_DB[:followers].
-      where(student_user_id: id,
-            user_id: dashboard_user_id).first || Dashboard::admin?(dashboard_user_id)
+    user = Dashboard::User.get(dashboard_user_id)
+    return unless user && (user.followed_by?(id) || user.admin?)
 
-    row = DASHBOARD_DB[:users].
+    row = Dashboard::db[:users].
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
              :secret_pictures__name___secret_picture_name,
@@ -65,7 +61,7 @@ class DashboardStudent
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
-    return unless DASHBOARD_DB[:followers].
+    return unless Dashboard::db[:followers].
       where(student_user_id: params[:id],
             user_id: dashboard_user_id)
 
@@ -77,7 +73,7 @@ class DashboardStudent
     # TODO only save birthday if age changed
     fields.merge!(random_secrets) if params[:secrets].to_s == 'reset'
 
-    rows_updated = DASHBOARD_DB[:users].
+    rows_updated = Dashboard::db[:users].
       where(id: params[:id]).
       update(fields)
     return nil unless rows_updated > 0
@@ -108,7 +104,7 @@ class DashboardStudent
   end
 
   def self.completed_levels(user_id)
-    DASHBOARD_DB[:user_levels].
+    Dashboard::db[:user_levels].
       where(user_id: user_id).
       and("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}")
   end
@@ -132,7 +128,7 @@ class DashboardStudent
   end
 
   def self.random_secret_picture_id
-    SecureRandom.random_number(DASHBOARD_DB[:secret_pictures].count) + 1
+    SecureRandom.random_number(Dashboard::db[:secret_pictures].count) + 1
   end
 
   def self.random_secret_words
@@ -140,13 +136,12 @@ class DashboardStudent
   end
 
   def self.random_secret_word
-    random_id = SecureRandom.random_number(DASHBOARD_DB[:secret_words].count) + 1
-    DASHBOARD_DB[:secret_words].first(id: random_id)[:word]
+    random_id = SecureRandom.random_number(Dashboard::db[:secret_words].count) + 1
+    Dashboard::db[:secret_words].first(id: random_id)[:word]
   end
 
   PEPPER = CDO.dashboard_devise_pepper
   STRETCHES = 10
-
   def self.encrypt_password(password)
     BCrypt::Password.create("#{password}#{PEPPER}", cost: STRETCHES).to_s
   end
@@ -158,35 +153,44 @@ class DashboardSection
     @row = row
   end
 
-  VALID_LOGIN_TYPES = %w(word picture email)
+  def self.valid_login_types
+    %w(word picture email)
+  end
 
   def self.valid_login_type?(login_type)
-    VALID_LOGIN_TYPES.include? login_type
+    valid_login_types.include? login_type
   end
 
-  VALID_GRADES = ['K'] + (1..12).collect(&:to_s) + ['Other']
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
 
   def self.valid_grade?(grade)
-    VALID_GRADES.include? grade
+    valid_grades.include? grade
   end
 
-  def self.load_valid_courses
-    return {} unless (DASHBOARD_DB[:scripts].count rescue nil) # don't crash when loading environment before database has been created
-    Hash[
-         DASHBOARD_DB[:scripts].
+  @@valid_course_cache = nil
+  def self.valid_courses
+    # only do this query once because in prod we only change courses
+    # when deploying (technically this isn't true since we are in
+    # pegasus and courses are owned by dashboard...)
+    return @@valid_course_cache unless @@valid_course_cache.nil?
+
+    # don't crash when loading environment before database has been created
+    return {} unless (Dashboard::db[:scripts].count rescue nil)
+
+    # cache result if we have to actually run the query
+    @@valid_course_cache = Hash[
+         Dashboard::db[:scripts].
            where("hidden = 0").
            select(:id, :name).
            all.
            map { |c| [c[:id], c[:name]]}
         ]
   end
-  VALID_COURSES = load_valid_courses
-  # only do this query once because in prod we only change courses
-  # when deploying (technically this isn't true since we are in
-  # pegasus and courses are owned by dashboard...)
 
   def self.valid_course_id?(course_id)
-    VALID_COURSES[course_id.to_i]
+    valid_courses[course_id.to_i]
   end
 
   def self.random_letter
@@ -217,7 +221,7 @@ class DashboardSection
     row = nil
     tries = 0
     begin
-      row = DASHBOARD_DB[:sections].insert({
+      row = Dashboard::db[:sections].insert({
         user_id: params[:user][:id],
         name: name,
         login_type: params[:login_type],
@@ -237,12 +241,12 @@ class DashboardSection
   end
 
   def self.delete_if_owner(id, user_id)
-    row = DASHBOARD_DB[:sections].where(id: id).and(user_id: user_id).first
+    row = Dashboard::db[:sections].where(id: id).and(user_id: user_id).first
     return nil unless row
 
-    DASHBOARD_DB.transaction do
-      DASHBOARD_DB[:followers].where(section_id: id).delete
-      DASHBOARD_DB[:sections].where(id: id).delete
+    Dashboard::db.transaction do
+      Dashboard::db[:followers].where(section_id: id).delete
+      Dashboard::db[:sections].where(id: id).delete
     end
 
     row
@@ -253,7 +257,7 @@ class DashboardSection
     # recursion is getting a bit out of control (eg. you don't want to
     # get all the students passwords when we get the list of sections)
 
-    return nil unless row = DASHBOARD_DB[:sections].
+    return nil unless row = Dashboard::db[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
       where(sections__id: id).
@@ -265,7 +269,7 @@ class DashboardSection
   end
 
   def self.fetch_if_teacher(id, user_id)
-    return nil unless row = DASHBOARD_DB[:sections].
+    return nil unless row = Dashboard::db[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
       where(sections__id: id).
@@ -277,7 +281,7 @@ class DashboardSection
   end
 
   def self.fetch_user_sections(user_id)
-    DASHBOARD_DB[:sections].
+    Dashboard::db[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
       where(user_id: user_id).
@@ -285,7 +289,7 @@ class DashboardSection
   end
 
   def self.fetch_student_sections(student_id)
-    DASHBOARD_DB[:sections].
+    Dashboard::db[:sections].
       select(*fields).
       join(:followers, :section_id=>:id).
       join(:users, :id=>:student_user_id).
@@ -297,7 +301,7 @@ class DashboardSection
     return nil unless student_id = student[:id] || DashboardStudent::create(student)
 
     created_at = DateTime.now
-    DASHBOARD_DB[:followers].insert({
+    Dashboard::db[:followers].insert({
       user_id: @row[:teacher_id],
       student_user_id: student_id,
       section_id: @row[:id],
@@ -316,7 +320,7 @@ class DashboardSection
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = DASHBOARD_DB[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
+    rows_deleted = Dashboard::db[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
     rows_deleted > 0
   end
 
@@ -329,7 +333,7 @@ class DashboardSection
   end
 
   def students()
-    @students ||= DASHBOARD_DB[:followers].
+    @students ||= Dashboard::db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(Sequel.as(:student_user_id, :id),
@@ -358,7 +362,7 @@ class DashboardSection
   end
 
   def course
-    @course ||= DASHBOARD_DB[:scripts].
+    @course ||= Dashboard::db[:scripts].
       where(id: @row[:script_id]).
       select(:id, :name).
       first
@@ -398,7 +402,7 @@ class DashboardSection
       DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
     end
 
-    rows_updated = DASHBOARD_DB[:sections].
+    rows_updated = Dashboard::db[:sections].
       where(id: section_id).
       and(user_id: user_id).
       update(fields)
@@ -424,10 +428,10 @@ end
 class DashboardUserScript
   def self.assign_script_to_section(script_id, section_id)
     # create userscripts for users that don't have one yet
-    DASHBOARD_DB[:user_scripts].
+    Dashboard::db[:user_scripts].
       insert_ignore.
       import([:user_id, :script_id],
-             DASHBOARD_DB[:followers].
+             Dashboard::db[:followers].
                select(:student_user_id, script_id.to_s).
                where(section_id: section_id))
   end
@@ -435,7 +439,7 @@ class DashboardUserScript
   def self.assign_script_to_users(script_id, user_ids)
     return if user_ids.empty?
     # create userscripts for users that don't have one yet
-    DASHBOARD_DB[:user_scripts].
+    Dashboard::db[:user_scripts].
       insert_ignore.
       import([:user_id, :script_id], user_ids.zip([script_id] * user_ids.count))
   end

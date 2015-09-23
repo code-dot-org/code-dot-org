@@ -22,7 +22,6 @@ assessment 'U3L02 Free Response Wrap Up'
 #3
 stage 'Creating Procedures - Part 1'
 
-
 stage 'Creating Functions'
 level 'U3L03 Student Lesson Introduction'
 level 'U3L03 Define and use turnAround'
@@ -40,7 +39,6 @@ assessment 'U3L03 Free Response Wrap Up'
 #4
 stage 'Creating Procedures - Part 2'
 
-
 stage 'Functions and Top-Down Design'
 level 'u3L04 Student Lesson Introduction'
 level 'U3L04 - snowflake'
@@ -49,18 +47,11 @@ assessment 'U3L04 Assessment1'
 assessment 'U3L04 Assessment2'
 assessment 'U3L04 Free Response Wrap Up'
 
-#5
+#5 (deprecated)
 stage 'Layers of Abstraction and Programming Efficiency'
-level 'U3L05 Student Lesson Introduction'
-assessment 'U3L05 Free Response Getting Started'
-level 'U3L05_3x3GridEfficiencyChallenge'
-assessment 'U3L05 Assessment1'
-assessment 'U3L05 Assessment2'
-assessment 'U3L05 Assessment3'
-assessment 'U3L05 Assessment4'
-assessment 'U3L05 Free Response Reflection'
 
-#6
+
+#5 (used to be 6)
 stage 'APIs and Function Parameters'
 level 'U3L06 Student Lesson Introduction'
 level 'U3L06 - moveForwardwithParams'
@@ -76,27 +67,41 @@ assessment 'U3L06 Assessment2'
 assessment 'U3L06-API-multichoice'
 assessment 'U3L06 Assessment'
 
-#7
-stage 'Looping and Random Numbers'
-level 'U3L07 Student Lesson Introduction'
-level 'U3L07 - introSquare'
-level 'U3L07 - randomSquare'
-level 'U3L07 - Starry Night Starter Code'
-level 'U3L07 - Free Play Loops and Random'
-assessment 'U3L07 Free Response Reflection'
-
-#8
+#6 (used to be 8)
 stage 'Creating functions with Parameters'
 level 'U3L08 Student Lesson Introduction'
-level 'U3L08 - drawSquaresWithParams'
 level 'U3L08 - drawSquareWithParam'
-level 'U3L08 - starFish'
+level 'U3L07 - createTriangleParam'
+level 'U3L08 - squareTwoParams'
+level 'U3L08 - createTwoParamTriangle'
+level 'U3L08 - introUnderTheSea'
+level 'U3L08 - paramsToStarfish'
 level 'U3L08 - seaGrass'
 level 'U3L08 - fish'
 level 'U3L08 - multiParamFish'
 level 'U3L08 - randomInput'
+level 'U3L08 - freePlay'
 assessment 'U3L08 Assessment1'
 assessment 'U3L08 Assessment2'
+
+
+
+#7 
+stage 'Looping and Random Numbers'
+level 'U3L07 Student Lesson Introduction'
+level 'U3L07 - introSquare'
+level 'U3L07 - randomSquare'
+level 'U3L07 - callingFunctionsInLoops'
+level 'U3L07 - loopsWithRandom'
+level 'U3L07 - topDownDesign'
+level 'U3L07 - bubbles'
+level 'U3L07 - fish'
+level 'U3L07 - seaStar'
+level 'U3L07 - seaGrass'
+level 'U3L07 - sunBeams'
+level 'U3L07 - Free Play Loops and Random'
+assessment 'U3L07 Free Response Reflection'
+
 
 #9
 stage 'Scene Design Part 1: Plan'
