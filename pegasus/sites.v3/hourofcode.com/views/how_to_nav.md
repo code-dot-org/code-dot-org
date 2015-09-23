@@ -1,5 +1,5 @@
 <div class="resources-navigation">
-	<div class="nav-header">How to guides</div>
+	<div class="nav-header"><%= hoc_s(:resources_how_to_guides)%></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/how-to') %>"><%= hoc_s(:how_to_nav_educators)%></a></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/how-to/how-to-public-officials') %>"><%= hoc_s(:how_to_nav_public_officials)%></a></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/how-to/how-to-districts') %>"><%= hoc_s(:how_to_nav_districts)%></a></div>

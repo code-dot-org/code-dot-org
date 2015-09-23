@@ -1,5 +1,5 @@
 <div class="resources-navigation">
-	<div class="nav-header">Promote</div>
+	<div class="nav-header"><%= hoc_s(:resources_promote)%></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/promote#onepager') %>"><%= hoc_s(:resources_one_pager)%></a></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/promote#brochure') %>"><%= hoc_s(:resources_brochure)%></a></div>
 	<div class="nav-item"><a class="nav-link" href="<%= resolve_url('/promote#videos') %>"><%= hoc_s(:resources_videos)%></a></div>
