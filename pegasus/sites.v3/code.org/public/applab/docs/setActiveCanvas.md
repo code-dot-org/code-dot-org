@@ -41,7 +41,8 @@ In this example, two canvas elements are created with ids "canvas1" and "canvas2
 
 **Note**: Changing the stroke width and color did not affect canvas2.
 
-<pre>
+
+```
 createCanvas("canvas1");    //Create a canvas on which to draw
 createCanvas("canvas2");    //Create a second canvas
 setStrokeWidth(10);
@@ -50,7 +51,7 @@ setFillColor("yellow");
 circle(160, 240, 50);       //Draw a yellow-filled circle on canvas1
 setActiveCanvas("canvas2");
 rect(90, 170, 140, 140);    //Draw an unfilled, black square on canvas2
-</pre>
+```
 
 [/example]
 
@@ -59,7 +60,8 @@ ____________________________________________________
 
 Here, a smiley face is drawn using two canvases. The first is a full-screen canvas on which the head and eyes are drawn. The second canvas is smaller and placed where the mouth should go. Since drawing only occurs within the bounds of a canvas, the circle drawn on the second canvas is cut off, or clipped, so that only the portion inside the canvas is visible.
 
-<pre>
+
+```
 createCanvas();         //Create a canvas on which to draw. It is active by default.
 setFillColor("yellow");
 circle(160, 240, 100);  //Draw a big, yellow circle for a head
@@ -72,7 +74,7 @@ setActiveCanvas("mouth");       //Activate the second canvas
 setPosition("mouth", 100, 260); //Move the second canvas to x:100 y:260
 setStrokeWidth(15);
 circle(60, -15, 50);    //Draw a circle with its center outside the canvas bounds
-</pre>
+```
 
 [/example]
 
@@ -85,7 +87,8 @@ Each canvas can have its drawing covered by any canvas created after it.
 
 Here, the blue lines are on the front canvas, so they cover both red and green. The red lines are on the middle canvas, so they are covered by the front (blue), but not by the back canvas (red).
 
-<pre>
+
+```
 createCanvas("back");
 createCanvas("middle");
 createCanvas("front");
@@ -107,7 +110,7 @@ setStrokeWidth(30);
 setStrokeColor("green");
 line(200, 30, 200, 230);
 line(30, 200, 230, 200);
-</pre>
+```
 
 [/example]
 
@@ -116,9 +119,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setActiveCanvas(id);
-</pre>
+```
 
 [/syntax]
 

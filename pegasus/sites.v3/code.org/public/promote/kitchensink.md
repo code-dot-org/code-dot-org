@@ -16,7 +16,7 @@ This page contains numerous resources to assist in advocacy. You can find links 
 
 ### Diversity
 
-* [Maryland](http://blog.code.org/post/121123281798/md) makes a simple policy change to boost diversity in computer science
+* [Maryland makes a simple policy change to boost diversity in computer science](http://blog.code.org/post/121123281798/md) 
 * Reporting on [our efforts](http://blog.code.org/post/98856300118/diversity) to increase diversity in computer science
 * Code.org's [team diversity](http://blog.code.org/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
 
