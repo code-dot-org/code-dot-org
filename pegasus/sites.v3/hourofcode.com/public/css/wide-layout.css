@@ -36,12 +36,11 @@
 	font-size: 16px;
 	color: white;
 	padding-bottom: 10px;
-	text-align: center;
 	border-radius: 5px;
 }
 
 .resources-navigation .nav-item {
-	padding: 4px 0px;
+	padding: 4px 15px;
 }
 
 .resources-navigation .nav-link {
@@ -58,4 +57,5 @@
 	border-top-right-radius: 5px;
 	margin-bottom: 6px;
 	font-family: 'Gotham 7r', sans-serif;
+	text-align: center;
 }
