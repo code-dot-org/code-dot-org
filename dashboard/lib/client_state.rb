@@ -13,7 +13,6 @@ class ClientState
 
   # Resets all client state (level progress, lines of code, videos seen, etc.)
   def reset
-    # Also reset unencrypted cookies in case we are in a rolled-back state.
     cookies[:lines] = nil
     cookies[:progress] = nil
     session[:videos_seen] = nil
@@ -31,7 +30,7 @@ class ClientState
   # @param [Integer] added_lines
   def add_lines(added_lines)
     migrate_cookies
-    cookies.permanent[:lines] = (session_lines + added_lines).to_s
+    cookies.permanent[:lines] = (lines + added_lines).to_s
   end
 
   # Returns the progress value for the given level_id, or 0 if there
@@ -46,11 +45,10 @@ class ClientState
   # Sets the progress for the given level_id for the current session.
   # @param [Integer] level_id
   # @param [Integer] progress
-  def set_level_progress(level_id, progress)
+  def set_level_progress(level_id, progress_value)
     migrate_cookies
-    progress_hash = progress_hash
-    progress_hash[level_id.to_s] = progress_value
-    cookies.permanent[:progress] = JSON.generate(progress_hash)
+    updated_progress = progress_hash.merge({level_id.to_s => progress_value})
+    cookies.permanent[:progress] = JSON.generate(updated_progress)
   end
 
   # Returns true if there has been no progress in completing levels for
