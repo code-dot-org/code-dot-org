@@ -33,13 +33,14 @@ ____________________________________________________
 
 The following block of code declares and invokes a function named `sayHello`. The function prints the message `Hello, coder!` to the console.
 
-<pre>
+
+```
 function sayHello() {
   console.log('Hello, coder!');
 }
 
 sayHello();
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -48,7 +49,8 @@ ____________________________________________________
 
 The following block of code declares and invokes a function named `getFortune`. The function returns a random string from an Array of three strings.
 
-<pre>
+
+```
 function getFortune() {
   // Declare an Array of strings
   var predictions = [
@@ -74,7 +76,7 @@ for (var i = 0; i < 6; i++) {
   var fortune = getFortune();
   console.log(fortune);
 }
-</pre>
+```
 
 [/example]
 
@@ -83,9 +85,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 var retval = callMyFunction();
-</pre>
+```
 
 [/syntax]
 
