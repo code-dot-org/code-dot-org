@@ -155,8 +155,7 @@ div.droplet-palette-group-header-selected.orange {
   min-height: calc(50% - 16px) !important; }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
-  bottom: 156px; }
+  border: 1px solid #ddd; }
 
 html[dir='rtl'] #codeWorkspace {
   right: 400px;
