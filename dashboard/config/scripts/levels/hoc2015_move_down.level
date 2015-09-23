@@ -21,7 +21,7 @@
     "grid_aligned_movement": true,
     "item_grid_aligned_movement": true,
     "slow_js_execution_factor": 10,
-    "remove_items_when_actor_collides": false,
+    "remove_items_when_actor_collides": true,
     "markerHeight": 50,
     "markerWidth": 50,
 
