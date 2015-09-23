@@ -693,7 +693,8 @@ input[type="radio"] {
   -ms-user-select: none;
   user-select: none; }
 
-.readonly #headers {
+.readonly #headers,
+.readonly #design-headers {
   background-color: #5b6770; }
 
 #headers {
