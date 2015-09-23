@@ -69,8 +69,7 @@ ____________________________________________________
 
 In this example with turtles we show the main part of the program at the top.  It shows that you can provide the definition of the function, in this case the square() function, anywhere in the code regardless of where you "call it" or use it from.
 
-
-```
+<pre>
 square();
 turnRight();
 square();
@@ -85,22 +84,21 @@ function square(){
 	moveForward();
 	turnLeft();
 }
-```
+</pre>
 [/example]
 
 [example]
 
 The following block of code declares and invokes a function named `sayFortune`. The function returns a simple message.
 
-
-```
+<pre>
 function sayFortune() {
     return "Code wins";
 }
 
 var fortune = sayFortune();
 console.log(fortune);
-```
+</pre>
 
 [/example]
 
@@ -110,8 +108,7 @@ ____________________________________________________
 
 The following block of code declares and invokes a function named `getRandomNumbers`. The function computes five random numbers between zero and one hundred.
 
-
-```
+<pre>
 function getRandomNumbers() {
     var count = 5; // declare how many random numbers to generate
     var nums = new Array(count); // create an empty Array to store the random numbers
@@ -125,7 +122,7 @@ function getRandomNumbers() {
 
 var randoms = getRandomNumbers();
 console.log(randoms);
-```
+</pre>
 
 [/example]
 
@@ -134,12 +131,11 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 function functionName() {
     // function body
 }
-```
+</pre>
 
 [/syntax]
 

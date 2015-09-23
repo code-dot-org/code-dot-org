@@ -37,8 +37,7 @@ The following block of code declares an Array named `randoms`. The while loop ex
 Each iteration of the loop computes a random number and appends the value to the Array.
 After the loop terminates, the contents of the Array is printed to the console.
 
-
-```
+<pre>
 var randoms = [];
 while (randoms.length < 10) {
     var num = randomNumber(0, 100);
@@ -46,7 +45,7 @@ while (randoms.length < 10) {
 }
 
 console.log(randoms);
-```
+</pre>
 
 [/example]
 ____________________________________________________
@@ -59,8 +58,7 @@ The while loop iterates through each index of the Array and sets the value at th
 to a random number between 0 and 100.
 After the loop terminates, the numbers are printed to the console.
 
-
-```
+<pre>
 var numbers = new Array(10);
 var index = 0;
 while (index < numbers.length) {
@@ -70,7 +68,7 @@ while (index < numbers.length) {
 }
 
 console.log(numbers); // print the Array of numbers to the console.
-```
+</pre>
 
 [/example]
 
@@ -79,12 +77,11 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 while (condition) {
     statement
 }
-```
+</pre>
 
 [/syntax]
 

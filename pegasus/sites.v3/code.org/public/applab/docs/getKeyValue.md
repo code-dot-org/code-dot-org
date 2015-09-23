@@ -37,8 +37,7 @@ ____________________________________________________
 
 **How to access a key's value:** When calling `getKeyValue`, the callback function that is called when the remote data storage call finishes is passed the value as a parameter.
 
-
-```
+<pre>
 setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app's key/value data storage
   console.log("highScore stored");
 
@@ -48,7 +47,7 @@ setKeyValue("highScore", 100 , function () { //Store "highScore": 100 in the app
   });
 
 });
-```
+</pre>
 
 [/example]
 
@@ -58,15 +57,14 @@ ____________________________________________________
 
 **If the key doesn't exist:** When calling `getKeyValue` on a key that doesn't exist in storage, the value returned in the callback will be `undefined`
 
-
-```
+<pre>
   //Get value of key 'testKey'. Since 'testKey' was never set, the value will be undefined
   getKeyValue("testKey", function (value) {
     if(value === undefined){ //Check if the value at key 'testKey' exists
       console.log("testKey doesn't exist");
     }
   });
-```
+</pre>
 
 [/example]
 
@@ -76,8 +74,7 @@ ____________________________________________________
 
 In this more detailed example, a random number between 1 and 100 is generated every time the app runs. The program checks whether the random number that was generated is bigger than the value stored in persistent key/value storage. If it is, then it updates the saved value. Try running this example multiple times and view the key/value data to see `biggestNumber` update.
 
-
-```
+<pre>
 var random = randomNumber(1, 100); //Generate a random number
 /*Get current value of "biggestNum". The data comes back asynchronously and is stored in 'value' */
 getKeyValue("biggestNum", function (value) {
@@ -89,7 +86,7 @@ getKeyValue("biggestNum", function (value) {
   }
 });
 
-```
+</pre>
 
 [/example]
 
@@ -98,13 +95,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 getKeyValue(key, function(value){
     //callback function code goes here
     //Parameter 'value' stores the value
   });
-```
+</pre>
 
 [/syntax]
 
