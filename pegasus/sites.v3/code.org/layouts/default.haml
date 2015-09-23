@@ -22,7 +22,8 @@
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'
-      =body
+      = preserve do
+        =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature
@@ -45,7 +46,9 @@
         -if header['rightbar']
           -contentWidth -= 180
 
-        %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}= body
+        %div{:style=>"width: #{contentWidth}px; float: left; margin: 0; padding: 0;"}
+          = preserve do
+            = body
 
         -if header['rightbar']
           %div{:style=>'width: 140px; margin-left: 40px; float: left;'}
