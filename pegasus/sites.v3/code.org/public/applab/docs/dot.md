@@ -31,11 +31,10 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 dot(5);     //  Draws a radius 5 pixel dot
 hide();     // Hide the turtle so we can actually see the dot
-```
+</pre>
 
 [/example]
 
@@ -43,10 +42,9 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 dot(150);   // Draws a really big dot
-```
+</pre>
 
 [/example]
 
@@ -54,15 +52,14 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 // Draw a lot of random dots!
 penUp();        // We only want dots, no lines
 while (true) {  // Loop forever
   moveTo(randomNumber(320), randomNumber(480)); // Jump to a random position on the display
   dot(randomNumber(1, 10));                     // draw a random sized dot there
 }
-```
+</pre>
 
 [/example]
 
@@ -71,10 +68,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 dot(radius);
-```
+</pre>
 
 [/syntax]
 

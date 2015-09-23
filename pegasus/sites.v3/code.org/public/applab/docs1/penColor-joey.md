@@ -37,11 +37,10 @@ ____________________________________________________
 
 **Example 1**
 
-
-```
+<pre>
 penColor("cyan");   // sets the color of the trail drawn behind the turtle to cyan
 moveForward(100);   // moves the turtle forward by 100 pixels
-```
+</pre>
 
 [/example]
 
@@ -53,8 +52,7 @@ ____________________________________________________
 
 This demonstrates all 4 ways to give a color to the penColor() function.
 
-
-```
+<pre>
 penColor("chartreuse");     		 // sets the color using a string
 moveForward(50);            	 	 // moves the turtle forward 50 pixels
 
@@ -67,7 +65,7 @@ moveForward(50);              		 // moves the turtle forward 50 pixels
 penColor("rgba(127, 255, 0, 0.5)"); // sets the color using a rgba value, the last value is amount
 									 //   of transparency, a percentage between 0.0 and 1.0
 moveForward(50);              		 // moves the turtle forward 50 pixels
-```
+</pre>
 
 [/example]
 
@@ -77,13 +75,12 @@ ____________________________________________________
 
 **Example 3**
 
-
-```
+<pre>
 var c = (prompt("Enter a color"));  // prompts the user for a color
 penColor(c);                        // sets the color of trail drawn behind the turtle to the color
                                     // the user entered
 moveForward(100);                   // moves the turtle forward by 100 pixels
-```
+</pre>
 
 
 [/example]
@@ -96,8 +93,7 @@ ____________________________________________________
 
 This program draws a circle figure out of lines. It cycles through the colors every time it turns. Here we use **4** colors, so we say penColor(colors[i%**4**]).
 
-
-```
+<pre>
 var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
 for (var i = 0; i < 360; i++) {                     // loops 360 times
   penColor(colors[i%4]);                            // sets the color of the turtles trail
@@ -106,7 +102,7 @@ for (var i = 0; i < 360; i++) {                     // loops 360 times
   moveBackward(100);                                // moves the turtle backward by 100 pixels
   turnRight(1);                                     // turns the turtle 1 pixel to the right
 }
-```
+</pre>
 
 
 [/example]
@@ -117,10 +113,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 penColor(color);
-```
+</pre>
 
 [/syntax]
 
