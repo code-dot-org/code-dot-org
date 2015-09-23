@@ -36,7 +36,8 @@ ____________________________________________________
 
 **Read all records from a table** After creating a record in the table, we can read all records back from the table and display the column values to the screen. To retrieve all records, an empty object is passed as the `searchTerms` parameter. Click 'View Data' in App Lab to see the stored data.
 
-<pre>
+
+```
 //Create a single record in the table
 createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
@@ -49,7 +50,7 @@ createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
 });
 
-</pre>
+```
 
 [/example]
 
@@ -59,7 +60,8 @@ ____________________________________________________
 
 **Search for records** Similar the example above, we can request a subset of records to be returned using the `searchTerms` parameter. `searchTerms` can be used to find exact matches on one or more columns of a record. Click 'View Data' in App Lab to see the stored data.
 
-<pre>
+
+```
 //Create a single record in the table
 createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
@@ -72,7 +74,7 @@ createRecord("fav_foods", {name:"Sally", age:16, food:"avocado"}, function() {
 
 });
 
-</pre>
+```
 
 [/example]
 
@@ -81,11 +83,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 readRecords(tableName, searchTerms, function(records){
     //callback function code goes here
   });
-</pre>
+```
 
 [/syntax]
 

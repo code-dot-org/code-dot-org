@@ -36,6 +36,7 @@ class Applab < Blockly
     beginner_mode
     start_html
     encrypted_examples
+    submittable
     data_tables
     data_properties
     hide_view_data_button

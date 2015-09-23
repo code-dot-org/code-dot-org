@@ -41,12 +41,13 @@ ____________________________________________________
 
 This example draws two parallel lines in different colors.
 
-<pre>
+
+```
 createCanvas(); //Create a canvas on which to draw
 line(120, 50, 200, 50); //Draw a horizontal black line
 setStrokeColor("red");
 line(120, 75, 200, 75); //Draw a horizontal red line
-</pre>
+```
 
 [/example]
 
@@ -56,7 +57,8 @@ ____________________________________________________
 
 This example draws a purple stick figure standing on green grass. It demonstrates how setting the color affects all subsequent lines and shapes drawn, until the color is changed.
 
-<pre>
+
+```
 createCanvas("canvas", 320, 480); //Create a canvas on which to draw
 setStrokeWidth(3);
 setStrokeColor("purple"); // "purple" is the name for "#800080"
@@ -68,7 +70,7 @@ line(40, 130, 280, 130);
 setStrokeColor("green"); // "green" is the name for "#008000"
 setStrokeWidth(10);
 line(0, 425, 320, 425);
-</pre>
+```
 
 [/example]
 ____________________________________________________
@@ -76,9 +78,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 setStrokeColor(color)
-</pre>
+```
 
 [/syntax]
 

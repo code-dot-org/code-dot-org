@@ -141,7 +141,11 @@ Breakfast and lunch will be served.
 
 **Location**
 
-TBD
+Ryan Professional Development Center<br/>
+Building A<br/>
+Room PL9<br/>
+4001 Hardy Street<br/>
+Houston, TX 77009
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
