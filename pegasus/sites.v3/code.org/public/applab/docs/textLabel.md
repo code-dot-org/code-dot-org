@@ -31,11 +31,12 @@ ____________________________________________________
 
 [example]
 
-<pre>
+
+```
 // Create a label for the text box
 textLabel("YourNameLabel","Enter your name:", "YourName");
 textInput("YourName","");
-</pre>
+```
 
 [/example]
 
@@ -44,7 +45,8 @@ ____________________________________________________
 [example]
 
 **Demonstrate a label for each of the input types**
-<pre>
+
+```
 textLabel("textInputLabel","Text Input:", "textInputCtrl");
 textInput("textInputCtrl","");
 write("&lt;br>");
@@ -62,7 +64,7 @@ textLabel("radioLabel2","Radio 2","radioCtrl2");
 write("&lt;br>");
 radioButton("radioCtrl3","false","radioGroup");
 textLabel("radioLabel3","Radio 3","radioCtrl3");
-</pre>
+```
 
 [/example]
 
@@ -71,9 +73,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 textLabel(labelId, text, forId)
-</pre>
+```
 
 [/syntax]
 
