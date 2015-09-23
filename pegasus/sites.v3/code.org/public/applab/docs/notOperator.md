@@ -33,7 +33,8 @@ ____________________________________________________
 The following block of code declares a function `IsWorkingHours` that returns true between 9am and 5pm and false otherwise. The variable `timeOff` is assigned the result of invoking and negating the function.
 A conditional is used to print an appropriate message to the console.
 
-<pre>
+
+```
 function IsWorkingHours() {
     var now = new Date(); // get the current date and time
     var hours = now.getHours(); // get the current hour
@@ -51,7 +52,7 @@ if (timeOff) {
 } else {
     console.log('get to work');
 }
-</pre>
+```
 
 [/example]
 
@@ -60,9 +61,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 !expression
-</pre>
+```
 
 [/syntax]
 
