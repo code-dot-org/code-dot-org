@@ -77,7 +77,7 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|

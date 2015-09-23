@@ -1,3 +1,4 @@
+/*global $,CodeMirror*/
 $(function() {
   $('pre').each(function() {
     var preElement = $(this);
@@ -29,7 +30,9 @@ function dedent(str, pattern) {
   var indent = getIndent(str);
   var reg;
 
-  if (indent === 0) return str;
+  if (indent === 0) {
+    return str;
+  }
 
   if (typeof pattern === 'string') {
     reg = new RegExp('^' + pattern, 'gm');
