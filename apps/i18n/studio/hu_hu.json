@@ -436,6 +436,8 @@
   "setActivityFlee": "set activity to flee for",
   "setActivityNone": "set activity to none for",
   "setActivityTooltip": "Sets the activity for a set of items",
+  "setItemSpeedSet": "set type",
+  "setItemSpeedTooltip": "Sets the speed for a set of items",
   "setWalls": "set walls",
   "setWallsHidden": "set hidden walls",
   "setWallsRandom": "set random walls",

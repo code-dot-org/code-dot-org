@@ -198,8 +198,11 @@ exports.Emotions = {
 // scale the collision bounding box to make it so they need to overlap a touch:
 exports.FINISH_COLLIDE_DISTANCE_SCALING = 0.75;
 exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
-exports.DEFAULT_SPRITE_SPEED = 5;
+
+exports.DEFAULT_SPRITE_SPEED = exports.SpriteSpeed.NORMAL;
 exports.DEFAULT_SPRITE_SIZE = 1;
+
+exports.DEFAULT_ITEM_SPEED = exports.SpriteSpeed.SLOW;
 
 /**
  * The types of squares in the maze, which is represented
