@@ -267,6 +267,11 @@ module LevelsHelper
     }
     level_options[:lastAttempt] = @last_attempt
 
+    if current_user.nil? || current_user.teachers.empty?
+      # only students with teachers should be able to submit
+      level_options['submittable'] = false
+    end
+
     # Request-dependent option
     app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request

@@ -5,7 +5,7 @@ module.exports.blocks = [
   {func: 'setCharacter', parent: api, category: '', params: ['"character1"'], dropdown: { 0: [ '"character1"', '"character2"' ] } },
   {func: 'setCharacterSpeed', parent: api, category: '', params: ["8"], dropdown: { 0: [ "2", "3", "5", "8", "12" ] } },
   {func: 'setBackground', parent: api, category: '', params: ['"background3"'], dropdown: { 0: [ '"background1"', '"background2"', '"background3"' ] } },
-  {func: 'setWalls', parent: api, category: '', params: ['"maze2"'], dropdown: { 0: [ '"border"', '"maze"', '"maze2"', '"hidden"' ] } },
+  {func: 'setWalls', parent: api, category: '', params: ['"maze2"'], dropdown: { 0: [ '"border"', '"maze"', '"maze2"', '"default"', '"hidden"' ] } },
   {func: 'moveEast', parent: api, category: '', },
   {func: 'moveWest', parent: api, category: '', },
   {func: 'moveNorth', parent: api, category: '', },
