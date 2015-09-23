@@ -34,12 +34,9 @@
       "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "instructions": "Use Top Down Design to identify the major components you would divide this image into in order to program it yourself. (Click to see full instructions)",
-    "markdown_instructions": "# Top Down Design\r\n\r\nIn this level you will **not do any programming**. Instead, check out the complex version of the \"Under th Sea\" scene you drew in the previous lesson. You now have all the skills you need to recreate this digital scene.\r\n\r\nThis image has a great deal of complexity, but we have already seen how **Top Down Design** can help break down complex tasks into more manageable chunks. Working either alone or with a parter use this strategy to help plan your approach. Recall that this is an informal process but generally the steps are:\r\n\r\n* **Break** your task into smaller logical chunks\r\n* **Create** functions with descriptive and meaningful names to each chunk\r\n* If you can easily begin writing the code of those functions, do so. Otherwise **further divide** your task, again assigning the portions their own well-named function.\r\n\r\n# To Do\r\n\r\n* In App Lab or on a separate sheet of paper, **outline** the basic components you would divide this image into\r\n* Compare notes with a partner\r\n\r\n![](https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53 AM.png)",
+    "instructions": "Get comfortable with the structure of this program, then move on to the next exercise. (Click to see full instructions)",
+    "markdown_instructions": "# Top Down Design\r\n\r\nLook at this complex version of the \"Under the Sea\" scene you drew in the previous lesson. **You now have all the skills you need to recreate this digital scene.**\r\n\r\n![](https://images.code.org/b4379f51db96b8b1c921de2579e16357-image-1443011791766.21.53 AM.png)\r\n\r\nWe will use **Top-Down Design** to help mangage the complexity of drawing this image. The starter code you will be provided already has broken the problem into multiple levels.\r\n\r\n# Overview of Program Structure\r\n\r\n**High Level Function Calls** These read almost like a story of how you will draw the image. There's one function for every major component of the scene.\r\n\r\n![](https://images.code.org/7a5c0d7899dca95604d9ce3f2aa0e74a-image-1443018594789.29.43 AM.png)\r\n\r\n**High Level Function Definitions:** These are **currently empty**. You will be writing these to draw many copies of each component in the scene by using **loops**.\r\n\r\n![](https://images.code.org/1782d088206fede56df1e93482d35faa-image-1443019051470.37.20 AM.png)\r\n\r\n**Low Level Functions:** These draw single elements of the scene. They are typically written for you already.\r\n\r\n![](https://images.code.org/bb081efc86641155eae5f4d363e3ccf4-image-1443019108814.38.22 AM.png)\r\n\r\n\r\n# To Do\r\n\r\n* Review the structure of the code in this level\r\n* Run the code to familiarize yourself with what it currently draws\r\n* When you are ready to do so, move on!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -65,7 +62,12 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "hide_view_data_button": "true"
+    "hide_view_data_button": "true",
+    "encrypted_examples": [
+
+    ],
+    "submittable": "false",
+    "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate"
   }
 }]]></config>
   <blocks/>
