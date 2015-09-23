@@ -1423,7 +1423,7 @@ Applab.onPuzzleSubmit = function() {
 
 Applab.onPuzzleFinish = function() {
   Applab.onPuzzleComplete(false); // complete without submitting
-}
+};
 
 Applab.onPuzzleComplete = function(submit) {
   // Submit all results as success / freePlay
