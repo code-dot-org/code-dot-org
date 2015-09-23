@@ -13,6 +13,7 @@ module.exports = React.createClass({
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
+    isDimmed: React.PropTypes.bool.isRequired
   },
 
   render: function() {
@@ -36,8 +37,23 @@ module.exports = React.createClass({
         right: 0,
         boxSizing: 'border-box',
         padding: 10
+      },
+      transparent: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        position: 'relative',
+        zIndex: 1
       }
     };
+
+    var transparencyLayer;
+    // Slightly gray everything while running
+    if (this.props.isDimmed) {
+      transparencyLayer = (
+        <div style={styles.transparent}/>
+      );
+    }
 
     return (
       <div id="design-mode-container" style={styles.container}>
@@ -52,6 +68,7 @@ module.exports = React.createClass({
             onDelete={this.props.onDelete}
             onInsertEvent={this.props.onInsertEvent}/>
         </div>
+        {transparencyLayer}
       </div>
     );
   }

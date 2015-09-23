@@ -314,7 +314,8 @@ function loadHoc2015(skin, assetUrl) {
     [msg.setWallsRandom(), RANDOM_VALUE],
     [msg.setWallsBorder(), '"border"'],
     [msg.setWallsMaze(), '"maze"'],
-    [msg.setWallsMaze2(), '"maze2"']
+    [msg.setWallsMaze2(), '"maze2"'],
+    [msg.setWallsDefault(), '"default"']
     ];
 
   skin.backgroundChoices = [
