@@ -1889,11 +1889,6 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
-      unique level name here:
-        Answer 1: Answer 1
-        Question: Question
-        description here: description here
-        title: title
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
