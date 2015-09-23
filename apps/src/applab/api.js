@@ -531,13 +531,13 @@ exports.removeItem = function (array, index) {
                            'index': index });
 };
 
-exports.drawChart = function (chartId, tableName, chartType, columns, callback, chartOptions) {
+exports.drawChart = function (chartId, chartType, tableName, columns, options, callback) {
   return Applab.executeCmd(null,
                           'drawChart',
                           {'chartId': chartId,
-                           'tableName': tableName,
                            'chartType': chartType,
+                           'tableName': tableName,
                            'columns': columns,
-                           'callback': callback,
-                           'chartOptions': chartOptions });
+                           'options': options,
+                           'callback': callback });
 };
