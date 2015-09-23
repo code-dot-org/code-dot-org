@@ -127,7 +127,7 @@ class ApplicationHelperTest < ActionView::TestCase
     session[:progress] = {1 => 100}
     assert_equal 100, client_state.level_progress(1)
     assert_equal '{"1":100}', cookies[:progress]
-    assert_nil sessions[:progress]
+    assert_nil session[:progress]
   end
 
   test 'client state scripts' do
