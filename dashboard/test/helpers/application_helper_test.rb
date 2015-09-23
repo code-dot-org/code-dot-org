@@ -25,33 +25,18 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 20, client_state.level_progress(10)
   end
 
-
-  # Make sure that we correctly access and back-migrate future
-  # versions of the client state, as would happen if we roll back from a future
-  # version.
+  # Make sure that we correctly migrate and access session state
+  # from past versions of the code.
   def test_client_state_migration
-    client_state.add_lines 37
-    client_state.set_level_progress 1, 100
-
-    # Verify that the session state before migration is as expected
-    assert_equal 37, session[:lines]
-    assert_equal({1 => 100}, session[:progress])
-
-    # Verify the expected state after the (future) migration
-    client_state.send(:migrate_cookies_for_test)
+    session[:lines] = 37
+    assert_equal 37, client_state.lines
     assert_equal '37', cookies[:lines]
     assert_nil session[:lines]
-    assert_equal('{"1":100}', cookies[:progress])
 
-    # Call the accessors. Make sure that we get the expected values and
-    # that state is migrated back to the session cookie.
-    assert_equal 37, client_state.lines
-    assert_equal 37, session[:lines]
-    assert_nil cookies[:lines]
-
+    session[:progress] = {1 => 100}
     assert_equal 100, client_state.level_progress(1)
-    assert_equal({1 => 100}, session[:progress])
-    assert_nil cookies[:progress]
+    assert_equal '{"1":100}', cookies[:progress]
+    assert_nil sessions[:progress]
   end
 
   def test_client_state_scripts
