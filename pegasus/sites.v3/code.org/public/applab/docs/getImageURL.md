@@ -34,7 +34,8 @@ ____________________________________________________
 
 Add the Code.org logo to the screen
 
-<pre>
+
+```
 // add the Code.org logo to the screen from the url
 image("logo", "http://code.org/images/logo.png");
 
@@ -44,7 +45,7 @@ var imageURL = getImageURL("logo");
 
 // output the contents of the variable ("http://code.org/images/logo.png") to the console
 console.log(imageURL);
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 Click the button to change the character image on the screen from the dog to the bee and back again.
 Use getImageURL to determine which character is currently displayed.
 
-<pre>
+
+```
 // use variables to store the ids for the image and button elements
 var imageId = "character";
 var buttonId = "changeButton";
@@ -91,7 +93,7 @@ onEvent(buttonId, "click", function(event) {
     setImageURL(imageId, dogImageURL);
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -100,9 +102,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 getImageURL(imageId);
-</pre>
+```
 
 [/syntax]
 
@@ -127,7 +130,8 @@ Returns the first url matching the provided id.
 
 ### Tips
 - getImageURL("id") returns the first URL that matches the provided id.
-<pre>
+
+```
 var dogImageURL = "http://studio.code.org/blockly/media/skins/applab/static_avatar.png";
 var beeImageURL = "http://studio.code.org/blockly/media/skins/bee/static_avatar.png";
 
@@ -142,7 +146,7 @@ var url = getImageURL("image");
 
 // output the contents of the variable ("http://studio.code.org/blockly/media/skins/applab/static_avatar.png") to the console
 console.log(url);
-</pre>
+```
 
 [/tips]
 

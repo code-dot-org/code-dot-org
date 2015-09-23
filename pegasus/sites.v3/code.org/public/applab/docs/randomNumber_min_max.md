@@ -36,15 +36,17 @@ ____________________________________________________
 **Example 1**
 
 turtle example
-<pre>
+
+```
 moveForward(randomNumber(25, 150));
-</pre>
+```
 
 console example
-<pre>
+
+```
 console.log(randomNumber(5, 20));       // generates a pseudorandom number in the range 5 to 20 (inclusive)
                                         //    and then prints it to the console
-</pre>
+```
 
 [/example]
 
@@ -55,21 +57,23 @@ ____________________________________________________
 **Example 2**
 
 Turtle example.  Do a "random walk" of 25 steps, turning a random number of degrees after each step.
-<pre>
+
+```
 for (var i = 0; i < 25; i++) {
   moveForward(25);
   turnRight(randomNumber(-90, 90));
 }
-</pre>
+```
 
 This example prints out 5 pseudorandom numbers in the range -10 to 10 to the console.
 
-<pre>
+
+```
 for (var i = 0; i < 5; i++) {           // repeats the code inside of this block 5 times
   console.log(randomNumber(-10, 10));   // calculates a pseudorandom number in the range -10 to 10
                                         //    and then prints it to the console
 }
-</pre>
+```
 
 [/example]
 
@@ -81,7 +85,8 @@ ____________________________________________________
 
 This example asks the user for a number and then draws that number of bird images on the screen in random locations.
 
-<pre>
+
+```
 textLabel("birds_label", "How many birds would you like to create?"); // creates a text label for the number
                                                                       // of birds input
 
@@ -117,7 +122,7 @@ function moveFromText(event) {                                        // creates
 onEvent("birds_input", "change", moveFromText);                       // when the user moves from the
                                                                       // text box, the function moveFromText
                                                                       // will be called
-</pre>
+```
 
 
 [/example]
@@ -127,9 +132,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 randomNumber(min, max);
-</pre>
+```
 
 [/syntax]
 
