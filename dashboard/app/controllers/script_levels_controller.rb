@@ -10,7 +10,6 @@ class ScriptLevelsController < ApplicationController
 
     # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
-
     # If the user is signed in, continue normally.
     unless current_user
       client_state.reset
