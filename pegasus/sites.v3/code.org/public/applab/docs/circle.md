@@ -45,11 +45,10 @@ ____________________________________________________
 
 This example demonstrates how to draw a circle in the middle of the window. If the window is 320x480 pixels, then the center of the window is at x:160 y:240.
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 circle(160, 240, 100); //Draw a circle centered in the window
-```
+</pre>
 
 [/example]
 
@@ -59,12 +58,11 @@ ____________________________________________________
 
 This example demonstrates how to change the color of the circle, using [`setStrokeColor`]().
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeColor("red"); //Change the active color for drawing lines and shapes
 circle(160, 240, 100); //Draw a circle centered in the window
-```
+</pre>
 
 [/example]
 
@@ -74,12 +72,11 @@ ____________________________________________________
 
 This example demonstrates how to draw a filled circle, using [`setFillColor`]().
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setFillColor("red"); //Change the active color for filling circles and rectangles
 circle(160, 240, 100); //Draw a filled circle centered in the window
-```
+</pre>
 
 [/example]
 
@@ -89,12 +86,11 @@ ____________________________________________________
 
 This example demonstrates how to change the thickness of the circle border using [`setStrokeWidth`]().
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeWidth(20); //Change the thickness of lines to be drawn
 circle(160, 240, 100); //Draw a circle with a thick border
-```
+</pre>
 
 [/example]
 
@@ -104,8 +100,7 @@ ____________________________________________________
 
 This example draws two circles at the same location and with the same radius. The first circle has a thick stroke width and the second has a thin stroke width. The resulting image shows how a thicker stroke increases the outer radius of the circle.
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setStrokeWidth(40); //Change the thickness of lines to be drawn
 setStrokeColor("lightblue");
@@ -113,7 +108,7 @@ circle(160, 240, 100); //Draw a circle with a thick border
 setStrokeWidth(1); //Change the thickness of lines to be drawn
 setStrokeColor("black");
 circle(160, 240, 100); //Draw the same circle with narrow border
-```
+</pre>
 
 [/example]
 
@@ -123,8 +118,7 @@ ____________________________________________________
 
 This example shows the difference between drawing a filled circle filled with white pixels and a circle filled with transparent pixels.
 
-
-```
+<pre>
 createCanvas(); //Create a canvas on which to draw
 setFillColor("white"); //Fill shapes with white pixels
 circle(100, 100, 50);
@@ -133,7 +127,7 @@ setStrokeColor("red")
 setFillColor("transparent"); //Do not fill shapes
 circle(200, 100, 50);
 circle(200, 150, 50); //Draw an unfilled circle overlapping the first
-```
+</pre>
 
 [/example]
 
@@ -142,10 +136,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 circle(centerX, centerY, radius)
-```
+</pre>
 
 [/syntax]
 

@@ -354,7 +354,7 @@ GEM
       railties (>= 4.2.0, < 5)
     retriable (1.4.1)
     retryable (1.3.5)
-    rmagick (2.13.4)
+    rmagick (2.15.4)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)

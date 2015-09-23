@@ -90,9 +90,6 @@
       "callMyFunction_n": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -111,7 +108,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "app_width": "320",
-    "app_height": "450",
+    "app_height": "480",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",

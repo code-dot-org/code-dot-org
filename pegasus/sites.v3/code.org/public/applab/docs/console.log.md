@@ -33,10 +33,9 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 console.log("It's Alive!") // Let's you know your code is running
-```
+</pre>
 
 [/example]
 
@@ -44,27 +43,25 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 // I'm thinking of a number between 0 and 10
 var myRandomNumber = randomNumber(10)
 console.log("My random number is: " + myRandomNumber)
-```
+</pre>
 
 [/example]
 
 ____________________________________________________
 [example]
 
-
-```
+<pre>
 // Display the true/false state of a checkbox
 checkbox("myCheckbox", false);
 textLabel("myLabel", "Click on or off", "myCheckbox");
 onEvent("myCheckbox", "click", function(event) {
   console.log("Checkbox is: " + getChecked("myCheckbox"));
 });
-```
+</pre>
 
 [/example]
 
@@ -73,10 +70,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 console.log(message)
-```
+</pre>
 
 [/syntax]
 

@@ -31,10 +31,9 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 moveBackward(); //Moves back 25 pixels (default)
-```
+</pre>
 
 [/example]
 
@@ -42,10 +41,9 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 moveBackward(200); //Moves the turtle south 200 pixels
-```
+</pre>
 
 [/example]
 
@@ -53,15 +51,14 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 // Draw a dot in front of and behind the turtle
 moveForward(50);	// Move ahead
 dot(10);			// Draw a big dot
 moveBackward(100);	// Move back to 50 pixel behind the starting point
 dot(10);			// Draw another big dot
 moveForward(50);	// Move back to the start
-```
+</pre>
 
 [/example]
 
@@ -69,8 +66,7 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 // Parallel park the turtle
 createCanvas("id", 320, 480);	// Create a canvas for drawing
 setFillColor("yellow");			// Draw the yellow car
@@ -84,7 +80,7 @@ turnLeft(45);					// and turn into the spot
 moveBackward(75);				// Back in
 turnRight(45);					// Straighten out
 moveForward();  				// Pull into the center of the spot
-```
+</pre>
 
 [/example]
 
@@ -93,10 +89,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 moveBackward(pixels);
-```
+</pre>
 
 [/syntax]
 

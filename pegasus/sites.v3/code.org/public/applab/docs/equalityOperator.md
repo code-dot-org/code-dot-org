@@ -33,8 +33,7 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 var x = 5;
 if(x == 5)
 {
@@ -45,7 +44,7 @@ else
   console.log("not equivalent")
 }
 
-```
+</pre>
 
 [/example]
 
@@ -53,8 +52,7 @@ ____________________________________________________
 
 [example]
 
-
-```
+<pre>
 var x = 5;
 var trueOrFalse = (x==5)
 console.log("Expression was " + trueOrFalse)
@@ -67,15 +65,14 @@ else
   console.log("not equivalent")
 }
 
-```
+</pre>
 
 [/example]
 
 ____________________________________________________
 [example]
 
-
-```
+<pre>
 var x = 5;
 var y = 5;
 if(x == y)
@@ -86,15 +83,14 @@ else
 {
   console.log("not equivalent")
 }
-```
+</pre>
 
 [/example]
 
 ____________________________________________________
 [example]
 
-
-```
+<pre>
 var x = 5;
 var y = "5";
 if(x == y)
@@ -105,15 +101,14 @@ else
 {
   console.log("not equivalent")
 }
-```
+</pre>
 
 [/example]
 
 ____________________________________________________
 [example]
 
-
-```
+<pre>
 var x = 5;
 var y = "five";
 if(x == y)
@@ -124,7 +119,7 @@ else
 {
   console.log("not equivalent")
 }
-```
+</pre>
 
 [/example]
 
@@ -133,10 +128,9 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-
-```
+<pre>
 x == y
-```
+</pre>
 
 [/syntax]
 
