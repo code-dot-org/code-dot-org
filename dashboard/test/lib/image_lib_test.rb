@@ -30,7 +30,6 @@ private
   end
 
   def test_image_list(name)
-    # Note that we
     Magick::ImageList.new(test_image_path(name))
   end
 
