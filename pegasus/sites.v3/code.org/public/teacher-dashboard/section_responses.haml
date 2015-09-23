@@ -4,6 +4,16 @@ theme: none
 content-type: text/ng-template
 ---
 
+%br/
+
+.loading{'ng-hide' => 'progressLoadedFirst'}
+  = I18n.t('dashboard_landing_loading')
+
+%div{'ng-show' => 'progressLoadedFirst'}
+  View progress in:
+  %select{"ng-model" => "course_id", "ng-options"=>"k*1 as v for (k, v) in course_list", 'ng-change' => 'changeCourse(course_id)'}
+
+%br/
 
 %div{style: "padding-left:20px"}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
@@ -22,14 +32,14 @@ content-type: text/ng-template
         %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
-    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
+    %tr{"ng-repeat" => "response in responses | orderBy:order", "ng-form" => "form"}
       %td
-        %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
+        %a{"ng-href" => "#/sections/{{section.id}}/student/{{response.student.id}}"} {{response.student.name}}
       %td
-        1
+        {{response.stage}}
       %td
-        2
+        {{response.puzzle}}
       %td
-        The question
+        {{response.question}}
       %td
-        The response
+        {{response.response}}
