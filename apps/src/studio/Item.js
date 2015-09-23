@@ -17,7 +17,7 @@ var Item = function (options) {
 
   this.height = options.height || 50;
   this.width = options.width || 50;
-  this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+  this.speed = options.speed || constants.DEFAULT_ITEM_SPEED;
 
   this.currentFrame_ = 0;
   this.animator_ = window.setInterval(function () {
