@@ -162,9 +162,10 @@ Collidable.prototype.update = function () {
   // Has the item reached its destination grid position?
   // (There is a small margin of error to allow for per-update movements greater
   // than a single pixel.)
+  var speed = utils.valueOr(this.speed, 0);
   if (this.destGridX !== undefined &&
-      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) < 3 &&
-       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) < 3)) {
+      (Math.abs(this.x - (this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed &&
+       Math.abs(this.y - (this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE)) <= speed)) {
     this.gridX = this.destGridX;
     this.gridY = this.destGridY;
     reachedDestinationGridPosition = true;
@@ -247,11 +248,7 @@ Collidable.prototype.update = function () {
       var candidate = candidates[i];
       var atEdge = candidate.gridX < 0 || candidate.gridX >= Studio.COLS ||
                    candidate.gridY < 0 || candidate.gridY >= Studio.ROWS;
-      var hasWall = !atEdge && 
-                    ((Studio.map[candidate.gridY][candidate.gridX] & SquareType.WALL) ||
-                     (Studio.walls !== null && 
-                      Studio.getSkin()[Studio.walls] &&
-                      Studio.getSkin()[Studio.walls][candidate.gridY][candidate.gridX]));
+      var hasWall = !atEdge && Studio.getWallValue(candidate.gridY, candidate.gridX);
       if (atEdge || hasWall || candidate.score === 0) {
         candidates.splice(i, 1);
       }

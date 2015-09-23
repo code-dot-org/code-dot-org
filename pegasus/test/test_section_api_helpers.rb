@@ -3,6 +3,7 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require 'mocha/mini_test'
 require 'sequel'
+require_relative '../helpers/section_api_helpers'
 
 # 'section_api_helpers.rb' gets implicitly included
 
