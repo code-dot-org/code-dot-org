@@ -8,6 +8,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
@@ -95,12 +96,12 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.sortDescending_ = true;
 
   /**
-  * Whether we are currently in "All-Router" mode or dealing with a
-  * single router. Initializes to true iff we are currently capable of
-  * logging all routers
-  * @private {boolean}
-  */
-  this.isAllRouterLogMode_ = this.canLogAllRouters_();
+   * Whether we are currently in "All-Router" mode or dealing with a
+   * single router.  Always initializes to true because we never initialize
+   * connected to a single router.
+   * @private {boolean}
+   */
+  this.isAllRouterLogMode_ = true;
 
   this.render();
 };
@@ -391,7 +392,7 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
  */
 NetSimRouterLogModal.prototype.setRouter = function (router) {
   this.router_ = router;
-  this.isAllRouterLogMode_ = this.canLogAllRouters_();
+  this.isAllRouterLogMode_ = !this.hasLocalRouter_();
   this.render();
 };
 

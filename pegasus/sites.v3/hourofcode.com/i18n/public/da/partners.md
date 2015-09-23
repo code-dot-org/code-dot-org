@@ -1,42 +1,66 @@
-* * *
+---
 
 title: <%= hoc_s(:title_partners) %>
 
-* * *
+---
 
 <%= view :signup_button %>
 
-# Primære partnere og virksomheder som støtter os
+<% if @country == 'la' %>
+
+# Latin America Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
+
+<% end %>
+
+<% if @country == 'au' %>
+
+# Australia Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
+
+<% end %>
+
+<% if @country == 'uk' %>
+
+# United Kingdom Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
+
+<% end %>
+
+# Major Partners and Corporate Supporters
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
-* * *
+---
 
-# Primære markedsføringspartnere
+# Major Promotional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
-* * *
+---
 
-# Internationale partnere
+# International Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
-* * *
+---
 
-# Øvelses-partnere
+# Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
-* * *
+---
 
-# Infrastruktur partnere og værktøjer
+# Infrastructure partners and tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
-* * *
+---
 
-# Øvrige partnere
+# Additional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

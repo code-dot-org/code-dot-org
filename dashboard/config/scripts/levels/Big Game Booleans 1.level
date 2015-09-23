@@ -10,7 +10,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click run to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
+    "instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click \"Run\" to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -36,7 +36,11 @@
     "definition_collapse": "false",
     "custom_game_type": "Big Game",
     "video_key": "alg_14_biggame_booleans",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "When you last worked on your game we got our target and danger sprites to fly across the screen, but they never come back. Click \"Run\" to see how your game is currently working, and then click finish and we'll work on making those sprites reappear on screen after they've left.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>

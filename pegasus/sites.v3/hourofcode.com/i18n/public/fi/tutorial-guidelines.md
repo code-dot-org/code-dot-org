@@ -1,14 +1,15 @@
-* * *
+---
 
-title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %>
+layout: wide
 
-* * *
+---
 
 <%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <<%= resolve_url('https://code.org/learn') %>>.
+Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
 
 Haluamme pitää monia mielnkiintoisia aktiviteetteja, mutta pääpaino on kokemuksen optimointi FI ja opettajille, joilla ei ole paljoa kokemusta tietotekniikasta. Käytä tätä dokumenttia ohjataksesi oman toimintasi luomista, suunnattuna käyttäjälle, jolla ei ole aikaisempaa kokemusta koodaamisesta, ohjelmoinnista ja tietotekniikasta.
 
@@ -23,20 +24,13 @@ Haluamme pitää monia mielnkiintoisia aktiviteetteja, mutta pääpaino on kokem
 
 ## Indeksi:
 
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [How to submit (Due 10/15/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
+  * [General guidelines for creating an Hour of Code™ activity](#guidelines)
+  * [Miten oppitunnit tullaan arvioimaan lisäämistä varten](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Ehdotuksia aktiviteetin suunnitteluun](#design)
+  * [Tavaramerkkisäännöt](#tm)
+  * [Pikselin seuraaminen](#pixel)
+  * [Omien oppaittesi, Tietotekniikan opetusviikon ja Koodaustunnin mainostaminen](#promote)
   * [Huom. Kehitysvammaiset oppilaat](#disabilities)
 
 <a id="guidelines"></a>
@@ -157,11 +151,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Sisällytä myös suositeltu tietotekniikkatietämys luokkatasolla: alkeistaso, keskitaso tai edistynyt taso. Koodaustunti-sivusto korostaa aloittelijoille tarkoitetut oppitunnit kaikista näkyvimmin. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Tekniset edellytykset: 
       * Tarkemman osallistumisen seuraamisen kannalta haluamme jokaisen kolmannen osapuolen opaskumppanien sisällyttävän yhden kuvapisteen seurantakuvat ensimmäiselle ja viimeiselle sivulle Koodaustunti-oppaissaan. Sijoita aloittava kuvapistekuva aloitussivulle ja viimeinen kuvapistekuva lopetussivulle. Älä sijoita kuvapisteitä välivaihesivuille. Katso Seurantakuvapiste-osio alla lisätietoja varten. 
-      * Kun käyttäjät saavat oppituntisi tehtyä, heidät tulisi ohjata sivulle: [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> missä heidän tulisi pystyä: 
+      * Kun käyttäjät saavat oppituntisi tehtyä, heidät tulisi ohjata sivulle: [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) where they will be able to: 
           * Jakamaan tieto sosiaalisen mediaan siitä, että he suorittivat Koodaustunnin
           * Saada todistus siitä, että he suorittivat Koodaustunnin
           * Nähdä pistetaulukot siitä, mitkä maat/kaupungit johtavat Koodaustuntiin osallistumisessa
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [](<%= resolve_url('http://code.org/api/hour/finish') %>) <%= resolve_url('http://code.org/api/hour/finish') %> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](<%= resolve_url('https://code.org/api/hour/finish') %>) as well. 
   * *(Valinnainen)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * Verkkotoiminnasta (erityisesti älypuhelin/tablettisovellukset): 
           * Käyttäjien määrä

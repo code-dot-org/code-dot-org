@@ -54,11 +54,11 @@ theme: none
       %td
         %span{"ng-hide" => "section.editing"} {{section.login_type}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.login_type", "ng-options"=>"value for value in #{DashboardSection::VALID_LOGIN_TYPES.inspect}"}
+          %select{"ng-model" => "section.login_type", "ng-options"=>"value for value in #{DashboardSection::valid_login_types.inspect}"}
       %td
         %span{"ng-hide" => "section.editing"} {{section.grade}}
         %span{"ng-show" => "section.editing"}
-          %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::VALID_GRADES.inspect}"}
+          %select{"ng-model" => "section.grade", "ng-options"=>"value for value in #{DashboardSection::valid_grades.inspect}"}
       %td
         %span{"ng-hide" => "section.editing"} {{course_list[section.course.id]}}
         %span{"ng-show" => "section.editing"}

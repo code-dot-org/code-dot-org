@@ -1,30 +1,33 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
-/* global $ */
+/* global $, describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-
-var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSim = require('@cdo/apps/netsim/netsim');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
-var NetSimVizWire = require('@cdo/apps/netsim/NetSimVizWire');
-var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
-var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
-
+var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
+var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
+var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
+var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
+var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+
+var assert = testUtils.assert;
 var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimVisualization", function () {
   
@@ -54,7 +57,7 @@ describe("NetSimVisualization", function () {
     NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return new NetSimVizSimulationNode(newClient);
   };
 
@@ -67,7 +70,7 @@ describe("NetSimVisualization", function () {
     NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
-    assert(newRouter !== undefined, "Failed to create a remote router.");
+    assert.isDefined(newRouter, "Failed to create a remote router.");
     return new NetSimVizSimulationNode(newRouter);
   };
 
@@ -85,7 +88,7 @@ describe("NetSimVisualization", function () {
     }, function (e, w) {
       newWire = w;
     });
-    assert(newWire !== undefined, "Failed to create a remote wire.");
+    assert.isDefined(newWire, "Failed to create a remote wire.");
     return new NetSimVizSimulationWire(newWire, getVizNodeByEntityID_.bind(elements));
   };
 
@@ -102,7 +105,7 @@ describe("NetSimVisualization", function () {
     NetSimLocalClientNode.create(shard, name, function (e, n) {
       newNode = n;
     });
-    assert(newNode !== undefined, "Failed to create a client.");
+    assert.isDefined(newNode, "Failed to create a client.");
     return newNode;
   }
 
@@ -121,7 +124,7 @@ describe("NetSimVisualization", function () {
     // visualization should automatically detect these nodes and create
     // corresponding VizElements in its elements_ collection.
     var oldNode2 = createNode(testShard, 'node2');
-    var oldNode3 = createNode(testShard, 'node3');
+    createNode(testShard, 'node3');
 
     // Make sure the visualization now includes all three nodes.
     assert.equal(3, netSimVis.elements_.length);
@@ -305,9 +308,9 @@ describe("NetSimVisualization", function () {
       assert.isFalse(deltaWire.isForeground);
     });
 
-    describe ("DNS Mode", function () {
+    describe("DNS Mode", function () {
 
-      it ("updates all viznodes when DNS mode changes", function () {
+      it("updates all viznodes when DNS mode changes", function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         assert.equal(DnsMode.AUTOMATIC, alphaNode.dnsMode_);
         assert.equal(DnsMode.AUTOMATIC, betaNode.dnsMode_);
@@ -319,7 +322,7 @@ describe("NetSimVisualization", function () {
         assert.equal(DnsMode.MANUAL, deltaNode.dnsMode_);
       });
 
-      it ("creates new viznodes with the current DNS mode", function () {
+      it("creates new viznodes with the current DNS mode", function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         var newNode = makeRemoteClient('gamma');
 
@@ -336,11 +339,11 @@ describe("NetSimVisualization", function () {
 
     });
 
-    describe ("Encodings", function () {
+    describe("Encodings", function () {
       var DECIMAL_ONLY = [EncodingType.DECIMAL];
       var BINARY_AND_ASCII = [EncodingType.BINARY, EncodingType.ASCII];
 
-      it ("updates all vizwires when encodings change", function () {
+      it("updates all vizwires when encodings change", function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
         assert.sameMembers(DECIMAL_ONLY, alphaWire.encodings_);
         assert.sameMembers(DECIMAL_ONLY, betaWire.encodings_);
@@ -352,7 +355,7 @@ describe("NetSimVisualization", function () {
         assert.sameMembers(BINARY_AND_ASCII, deltaWire.encodings_);
       });
 
-      it ("creates new vizwires with the current encodings", function () {
+      it("creates new vizwires with the current encodings", function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
 
         // Confirm that delta has no reciprocal wires.

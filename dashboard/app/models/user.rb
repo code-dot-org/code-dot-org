@@ -417,19 +417,6 @@ class User < ActiveRecord::Base
                         level_id: script_level.level_id)
   end
 
-  def levels_from_script(script, stage = nil)
-    ul_map = user_levels_by_level(script)
-    q = script.script_levels.includes(:level, :script, :stage).order(:position)
-
-    if stage
-      q = q.where(['stages.id = :stage_id', {stage_id: stage}]).references(:stage)
-    end
-
-    q.each do |sl|
-      sl.user_level = ul_map[sl.level_id]
-    end
-  end
-
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
@@ -742,8 +729,9 @@ SQL
     Script.all.each do |script|
       retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
-        levels_from_script(script).each do |sl|
-          ul = sl.user_level
+        ul_map = user_levels_by_level(script)
+        script.script_levels.each do |sl|
+          ul = ul_map[sl.level_id]
           next unless ul
           # is this the first level we started?
           user_script.started_at = ul.created_at if

@@ -1,8 +1,10 @@
-* * *
+---
 
-title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %>
+layout: wide
+nav: how_to_nav
 
-* * *
+---
 
 <%= view :signup_button %>
 
@@ -16,14 +18,14 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [">Try current tutorials.](<%=  resolve_url()
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](<%= resolve_url("https://code.org/learn") %>)
 
 **Todos los tutoriales de la Hora de Código:**
 
   * Require minimal prep-time for teachers
   * Son de auto aprendizaje, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
 
-[![](/images/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
 ## 4) Plan your technology needs - computers are optional
 
@@ -34,7 +36,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
   * **¿Tiene un ancho de banda limitado?** Muestre los videos al frente del salón de clase, para evitar que cada estudiante descargue el video. O pruebe con los tutoriales desconectados/fuera de línea.
 
-![](/images/group_ipad.jpg)</a>
+![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Inspire students to start your Hour of Code
 
@@ -59,7 +61,7 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants. 
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -74,13 +76,13 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 [col-33]
 
-![](/images/highschoolgirls.jpeg)</a>
+![](/images/fit-250/highschoolgirls.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/group_ar.jpg)</a>
+![](/images/fit-300/group_ar.jpg)
 
 [/col-33]
 
@@ -91,23 +93,24 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 ## 7) Celebrate
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * [Print "I did an Hour of Code!"](<%= resolve_url('/resources/promote#stickers') %>) stickers for your students.
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
 
-![](/images/celebrate2.jpeg)</a>
+![](/images/fit-250/celebrate2.jpeg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/highlight-certificates.jpg)</a>
+![](/images/fit-260/highlight-certificates.jpg)
 
 [/col-33]
 
 [col-33]
 
-![](/images/boy-certificate.jpg)</a>
+![](/images/fit-300/boy-certificate.jpg)
 
 [/col-33]
 
@@ -124,6 +127,6 @@ The best Hour of Code experience will be with Internet-connected computers. You 
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
 <%= view :signup_button %>
